@@ -1,0 +1,84 @@
+@import 'styles/vars.scss';
+
+.default-check-collapse {
+    margin-bottom: 1.5rem;
+
+    .card-header {
+        position: relative;
+        min-height: 2.5rem;
+        height: auto;
+        margin-bottom: 0;
+        line-height: 2.5rem;
+        background-color: #eeeeee;
+        cursor: pointer;
+
+        .no-select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid $color-gray;
+            background-color: transparent;
+        }
+
+        .custom-control {
+            padding-left: 2rem;
+            margin-bottom: 0;
+
+            .invalid-feedback {
+                display: none;
+            }
+        }
+
+        .custom-control-label {
+            &::before, &::after {
+                top: 0.675rem;
+            }
+        }
+    }
+
+    .collapse:not(.show) {
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .default-check-collapse-wrap {
+        padding-top: 1.25rem;
+        padding-bottom: 1px;
+    }
+
+    &.parent .default-check-collapse-wrap {
+        padding-left: 2rem;
+    }
+
+    &.search-collapse .default-check-collapse-wrap {
+        padding-top: 0;
+
+        .search-form {
+            border-top: 0;
+            padding-top: 1.5rem;
+        }
+    }
+
+    &.default-check-collapse-open > .card-header {
+        .icon-accordion_up {
+            display: block;
+        }
+
+        .icon-accordion_down {
+            display: none;
+        }
+    }
+
+    &.default-check-collapse-disabled > .card-header {
+        color: $color-disabled;
+        cursor: not-allowed;
+    }
+
+    &.default-check-collapse-errors > .card-header {
+        color: $color-invalid;
+    }
+}

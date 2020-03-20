@@ -1,0 +1,46 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "elementi": [
+            {
+                "cod_area_finanza": "ZAR",
+                "cod_isin_strumento": "09821309821330981",
+                "descrizione_strumento": "S. AFRICAN RAND",
+                "divisa_strumento": "ZAR",
+                "codice_tipo_strumento": "14",
+                "descrizione_tipo_strumento": "LIQUIDITA",
+                "cod_macro_asset_class": "CSH",
+                "descrizione_macro_asset_class": "CASH",
+                "cod_micro_asset_class": "BOOBT",
+                "descrizione_micro_asset_class": "Cash Other",
+                "cod_emittente": "GEN_ISS",
+                "descrizione_emittente": "Generic Issuers",
+                "flag_prodotto_evidenza": null
+            },
+            {
+                "cod_area_finanza": "V_BP_PCT_EUR_T_6M",
+                "cod_isin_strumento": null,
+                "descrizione_strumento": "PCT-TITOLI STATO. Scad. 6 mesi",
+                "divisa_strumento": "EUR",
+                "codice_tipo_strumento": "12",
+                "descrizione_tipo_strumento": "PRONTI CONTRO TERMINE",
+                "cod_macro_asset_class": "CSH",
+                "descrizione_macro_asset_class": "CASH",
+                "cod_micro_asset_class": "BOEBT",
+                "descrizione_micro_asset_class": "Cash Euro",
+                "cod_emittente": "GEN_ISS",
+                "descrizione_emittente": "Generic Issuers",
+                "flag_prodotto_evidenza": null
+            }
+        ],
+        "paginazione": {
+            "start": 0,
+            "size": 1000
+        },
+        "totale_records": 116100
+    }
+}

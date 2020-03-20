@@ -1,0 +1,26 @@
+.hsb {
+    border:solid 1px #003366;width:48px;height:48px; float:left; margin:15px 0 0 15px;border-radius:24px; overflow:hidden; transition: all 0.3s;
+    .search-btn { float:right; cursor:pointer; height:48px;width:48px; text-align:center;line-height:45px; color:#003366;
+        &:hover,&:active {opacity:0.9;color:#003366;}
+        i {font-size:25px;font-style:normal;}
+        &.search-annulla {display:none; transition: all 0.6s; transform: rotate(-360deg);opacity:0}
+        &.search-go {display:none;}
+    }
+    .search-annulla {display:none;}
+    .form-control {
+        float:left; 
+        display:none; 
+        border:solid 1px #eee;margin: 4px 0 0 10px
+    }
+    select {width:130px; border: 0 none !important;}
+    input {width:220px}
+
+    &.opened {width: 420px;
+        .search-btn {cursor:pointer}
+        .form-control {display:inline-block; padding:0 5px}
+        .search-annulla {display:inline-block; transform: rotate(0deg);opacity:1}
+        .search-go {display:inline-block;}
+        .search-toggle {display:none;}
+    }
+
+}

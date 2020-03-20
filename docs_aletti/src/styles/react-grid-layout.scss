@@ -1,0 +1,19 @@
+@import 'vars.scss';
+
+.react-grid-layout {
+    box-sizing: border-box;
+}
+
+.react-grid-item {
+    border: 1px solid $color-gray;
+    &.react-grid-placeholder {
+        background-color: $color-gray;
+    }
+    .react-grid-draghandle {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #eee;
+        cursor: move;
+    }
+}

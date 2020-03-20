@@ -1,0 +1,69 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": null,
+    "bozzePromotori": [
+                {
+                    "id": 5,
+                    "codiceFiscale": "BNIPTR79S25E625J",
+                    "dataInserimento": 1579863316000,
+                    "dataUltimoAggiornamento": 1579949722000,
+                    "stato": "BOZZA",
+                    "provenienza": "CLIENTE",
+                    "intestazione": "CICCIO PASTICCIO, PLUTOTOPO",
+                    "promotore": "ES123456",
+                    "anagraficaBlob": {
+                    "type": "stepAnagrafica",
+                    "privacyletta": true,
+                    "promotore": "es4455",
+                    "numIntestatari": 1,
+                    "convenzione": "ciao",
+                    "promozione": "DDDD",
+                    "filiale": "via filiale 23",
+                    "intestatari": [
+                            {
+                            "nome": "pietro",
+                            "cognome": "bini",
+                            "nascita": 1574263328000,
+                            "sesso": "M",
+                            "codiceFiscale": "BNIPTR79S25E625J",
+                            "email": "pietro.bini@gmail.com",
+                            "prefisso": "0039",
+                            "telefono": "1233456789",
+                            "operatore": "tim",
+                            "privacyB1B2": true,
+                            "privacyB3B4": true,
+                            "privacyB5B6": true,
+                            "privacyB7B8": true,
+                            "privacyC1C2": true,
+                            "paeseNascita": "Italia",
+                            "provinciaNascita": "LI",
+                            "cittadinanza": "italiana",
+                            "comuneNascita": "VADA",
+                            "paeseResidenzaFiscale": "Italia",
+                            "tipoDocumento": "CARTA_IDENTITA",
+                            "numDocumento": "AN678",
+                            "dataRilascioRinnovo": 1574263328000,
+                            "dataScadenza": 1574263328000,
+                            "paeseRilascio": "Italia",
+                            "provinciaRilascio": "LI",
+                            "comuneRilascio": "VADA",
+                            "indirizzoResidenza": "via fiordalisi 3",
+                            "provinciaResidenza": "MI",
+                            "comuneResidenza": "MI",
+                            "capResidenza": "20146",
+                            "indirizzoDomicilio": "via fff 44",
+                            "provinciaDomicilio": "FF",
+                            "comuneDomicilio": "GGGGGG",
+                            "capDomicilio": "6789",
+                            "listDocuments": null
+                            }
+                            ]
+                         },
+                    "expirationDate": 1579949725000
+                }
+        ]
+}

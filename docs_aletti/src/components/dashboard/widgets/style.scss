@@ -1,0 +1,338 @@
+/* CSS Trasversale a tutti i widget */
+@import 'styles/vars.scss';
+
+/* Stili generici widgets*/
+.widget {width:33.3332%;padding:10px;
+    .widget-box {padding:10px;border:solid 1px #ccc; height:390px; width:100%;position:relative;background-color: #fff; overflow:hidden;
+
+     hr {width:100%;clear:both; border-top:solid 1px #ccc}
+
+      .handle {cursor:move;display:block;width:100%;
+           .widget-title {text-transform: uppercase;font-size:24px;color:#a7a5a5;display:inline-block;width:auto;font-weight:bold;cursor:pointer;z-index:2; height:30px;overflow:hidden;width:100%; padding-right:30px; white-space:nowrap;text-overflow:ellipsis;
+            &:hover {color:#000; text-decoration:none}
+            }
+      }
+
+      .widget-menu {position:absolute;top:0;right:0;z-index:10; padding:0;margin:0;
+          .opener {position:absolute;top:7px;right:10px;color:#ddd; cursor:pointer; font-size: 25px}
+          .widget-menu-ul {display: none; margin:0;padding:0; list-style-type:none; background:#fff;
+                border: solid 1px #999;
+                z-index: 2;
+                box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+                margin-top: 40px;
+                li {width:200px;padding:10px; cursor:pointer; border-top: solid 1px #ddd;
+                    &:first-child {border-top:0 none}
+                    &:hover {background-color:#eee}
+                    &.disabled {color:#ccc}
+                }
+          }
+          &.opened {
+              .opener {color:#000}
+              .widget-menu-ul {display:inline-block;}
+          }
+      }
+
+        .widget-body {height:330px;
+
+          .scrollable {height:305px;width:100%; overflow-y:auto; overflow-x:hidden}
+
+          /* Tabelle "legenda" */
+          table {
+            tr {
+              th {white-space:nowrap}
+              th, td {background: transparent;border: 0 none; border-left:solid 1px #ccc;
+                &:first-child {border-left: 0 none;padding-left:0}
+              }
+              th {font-weight:bold}
+              td {border-top:solid 1px #ccc;}
+            }
+          }
+        }
+
+        .widget-content-wrapper.has-date .widget-body {
+            height: 305px;
+
+        }
+
+    }
+
+    .agg-date {
+        position: absolute; 
+        bottom: 27px; 
+        left: 0; 
+        width: 100%;
+        float: none;
+        height: 23px;
+        text-align: center;
+        line-height: 25px;
+        color: #666;
+        background: #eee;
+        margin: 0 -10px;
+        font-size: 12px;
+        width: calc(100% + 20px);
+    }
+
+    .amcharts-pie-slice {cursor:pointer}
+
+    // declinazioni widget
+    .alert-wrap {width:50%; display:block;float:left;}
+
+    .el-box {margin:0 0 10px;height:90px;background-color:#f1f1f1; padding:10px; float:none; overflow:hidden;
+        span {display:inline-block;width:100%;
+          &.alert-numero {font-size:40px;font-weight:bold; line-height:40px;;width:50%}
+          &.alert-numero.rosso {float:right;color:#900;text-align:right}
+          &.alert-numero.giallo {float:left;color:#fc0;text-align:left}
+          &.alert-desc {font-size:13px;clear:both; line-height:14px; text-transform:uppercase}
+      }
+      .el-data {font-size:12px;color:#666;font-style:italic}
+      .el-titolo {font-weight: bold; font-size: 14px; white-space: nowrap;  overflow: hidden; width: 100%;text-overflow: ellipsis;
+        line-height: 16px;}
+
+    }
+
+    .mp-box-wrap {height:305px; width:100%;
+      .mp-left, .mp-right {width:48%;height:305px;position:relative;float:left;margin:0}
+      .mp-left {float:left}
+      .mp-right {float:right}
+      .mp-box {position:absolute;width:100%;height:200px; padding:10px; color:#999; background-color:#fff; text-align:left; cursor: pointer; border:solid 2px #ed1208;
+        span {width:100%;clear:both; display:inline-block;}
+        span.mp-number {font-size:120px;font-weight:bold; text-align:right}
+        &.plus {border-color:#00b800; bottom:0; text-align:right;
+            span.mp-number {text-align:left}
+        }
+      }
+    }
+
+    .world-map {background:transparent url("/bg_world_map.png") no-repeat center top; width:100%; height:305px;background-size: contain; position:relative;
+        .world-indice {position:absolute; background-color: rgba(0,0,0,0.8); color:#fff;padding: 0 5px;display:block;
+          &#europa {top:10%; left:40%}
+          &#america {top:15%; left:0}
+          &#asia {top:25%; left:60%}
+          .positivo {color:#00b800}
+          .neutro {color:#ccc}
+          .negativo {color:#ed1208}
+        }
+    }
+
+    &#agenda {
+        .noDisp {height:100%}
+        .DayPicker-Day {line-height:20px;width: 14.275%;
+          .day-app { clear:both;padding:0;display:inline-block;width:100%;
+            .dot {display:none;width:4px;height:4px;margin:1px;background-color:#ddd; border-radius:50%;
+                &.dot-Appointment {background-color:rgb(216, 150, 76)}
+                &.dot-Meeting {background-color:rgb(50, 131, 206)}
+                &.dot-Task {background-color:rgb(122, 172, 98)}
+            }
+
+          }
+          &.DayPicker-Day--Appointment {.dot-Appointment {display:inline-block}}
+          &.DayPicker-Day--Meeting  {.dot-Meeting {display:inline-block}}
+          &.DayPicker-Day--Task {.dot-Task {display:inline-block}}
+        }
+        .el-box {
+            .el-data {position:relative; padding-left:20px;font-size:14px;
+                .agenda-dot {width:16px;height:16px;background-color:#666;position:absolute;display:block;left:0;top:3px;border-radius:4px;
+                    &.Appointment {background-color:rgb(216, 150, 76)}
+                    &.Meeting {background-color:rgb(50, 131, 206)}
+                    &.Task {background-color:rgb(122, 172, 98)}
+                }
+            }
+        }
+      }
+
+    &#preferiti {
+          .horizontal-scroller {height:330px}
+    }
+
+    &#news {
+        .news-block {width:50%; padding-right:5px; float:left; overflow:hidden;
+            &.pari {float:right;padding-right:0;padding-left:5px}
+            .el-box {
+                padding:10px; overflow:hidden;height:160px;position:relative;
+                h3 {font-size:16px;font-weight:bold;padding:0;margin:0;line-height:16px;}
+                span {font-size:13px;padding:0;margin:0;line-height:16px;}
+                span.news-date {color:#ccc;font-size:12px;font-style:italic;position:absolute;bottom:10px; padding:0 10px;display:block;left:0}
+            }
+
+        }
+    }
+
+    /* Controvalore (con totali )*/
+    &#controvalore {
+        .scrollable {height:240px;}
+
+        .totali {
+            position:absolute; width:100%; bottom:60px; height:60px; border-top:solid 1px #ccc;padding:5px 5px;
+            .totale {width:50%;display:inline-block; padding: 0;
+                &.right {text-align:right;}
+                span {clear:both; display:block;}
+                .label {font-weight:bold;}
+            }
+        }
+    }
+
+
+    /* MODALITA' NASCOSTA */
+    &.hiddenmode {
+
+        .handle { .widget-title {
+            cursor:move;
+            &:hover {color:#a7a5a5}
+        } }
+
+        &#mp {
+            &.hiddenmode {
+                .mp-box {cursor:default}
+            }
+        }
+
+
+    }
+
+
+}
+
+#alert {
+    .alert-box {
+        width: 50%;
+        padding-right: 5px;
+        float: left;
+        &.right {padding-left:5px;padding-right:0;text-align:right;}
+        .el-box {
+            width:100%; cursor:pointer; float:left;
+        }
+    }
+}
+
+#proposte {
+    .el-box {cursor:pointer}
+    .scrollable {height:330px}
+    .proposte-box {width:50%;float:left;padding-right:5px;
+        &.right {padding-left:5px;padding-right:0;text-align:right;}
+    }
+    .proposta-numero {
+        font-size:30px;font-weight:bold
+    }
+    .proposta-desc {line-height:16px; text-transform:uppercase}
+}
+
+@media (min-width:1600px) {
+    .widget {
+        .right.base, .left.alternato {.el-box
+            {background-color:#fff;border:solid 2px #ddd}
+        }
+    }
+}
+
+
+/* Classi per oggetti trasversali */
+.noDisp {background:#f9f9f9;width:100%;height:100%;text-align:center; display:block; border-radius: 5px; padding:0 15px;position:relative;
+  span {color: #ccc;
+    top: calc(50% - 20px);
+    line-height: 17px;
+    font-size: 14px;
+    display: block;
+    clear: both;
+    left: 0;
+    padding: 0 10px;
+    position: absolute;
+    text-transform: uppercase;
+    }
+}
+
+.imposta-widget {width:100%;text-align:center; height:100%; padding-top:30px; color:#999; font-size:18px;}
+
+
+/* Portrait */
+@media (max-width:1599px) {
+    .widget {
+        .widget-box {height: 530px;
+            .widget-body .scrollable {
+                height:195px;
+            }
+        }
+        .serialchart {height:220px; width:100%}
+
+        &#alert {
+            .alert-box {
+                width: 100%;
+                padding:0;
+                text-align:left;
+            }
+            .scrollable {height:470px;}
+        }
+
+
+        &#mp {
+            .mp-box-wrap {
+                height:470px;
+                .mp-left, .mp-right {
+                    height:auto;
+                    position: relative;
+                    width: 100%;
+                    .mp-box {
+                        position:relative;
+                        margin-bottom:10px;
+                        height:230px;
+                    }
+                }
+            }
+        }
+
+        &#agenda {
+            .DayPicker-Day {line-height:16px}
+            .scrollable {height:210px !important}
+        }
+
+        &#news {
+            .news-block {width:100%; padding:0 !important}
+        }
+
+        &#mp, &#alert, &#preferiti, &#news, &#agenda {
+          .widget-body {height:470px}
+          .scrollable {height:470px}
+      }
+
+        &#preferiti {
+            .horizontal-scroller {height:470px}
+        }
+
+        &#controvalore {
+            .scrollable {height:130px;}
+
+            .totali {border-top:0 none;padding:0;
+                .totale {width:100%; border-top:solid 1px #ccc; padding:3px 0;
+                    &.right {text-align:left;}
+                    span {clear:both; display:inline-block;width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:18px;}
+                    .dato {text-align:right;}
+                }
+            }
+        }
+
+
+
+    }
+}
+
+/* Smartphone */
+@media (max-width:767px) {
+  .widget {width:100%}
+}
+
+/* Onboarding */
+.ban-conto {width:100%;display:block;text-align:center;font-size:40px; color:#fff;background-color:#ddd;margin:10px;padding:20px;
+    &:hover {color:#fff;text-decoration:none}
+}
+
+
+/* Modale appuntamenti */
+.appuntamento {
+    width:100%;padding:10px 0 20px 30px; border-top:solid 2px #eee;position:relative;
+    &:first-child {border-top:none}
+    .dot {display:block;position:absolute;top:13px;left:0; background:#999;width:20px;height:20px;border-radius:50%;
+        &.meeting {background-color:#00f}
+        &.appointment {background-color:#f00}
+    }
+    .orario { color:#999; font-style:italic;}
+    .titolo {font-weight:bold}
+}

@@ -1,0 +1,16 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        "ALBAREDO",
+        "ALBINA",
+        "ALTIVOLE",
+        "ANZANO",
+        "Livorno",
+        "ZERO BRANCO",
+        "ZOPPE"
+    ]
+}

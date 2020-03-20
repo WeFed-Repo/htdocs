@@ -1,0 +1,19 @@
+.form-group {
+    .custom-file-label {
+        height: calc(2.25rem + 2px);
+        padding-right: 75px;
+        border-radius: 0;
+        border-width: 0 0 1px 0;
+        border-color: #aaa;
+        line-height:  calc(2.25rem + 1px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .custom-file-input:focus ~ .custom-file-label {
+        box-shadow: none;
+    }
+    .custom-file-input ~ .custom-file-label::after {
+        content: "Sfoglia";
+    }
+}

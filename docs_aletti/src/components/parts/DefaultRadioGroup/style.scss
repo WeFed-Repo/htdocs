@@ -1,0 +1,70 @@
+@import "styles/vars.scss";
+
+.btn-group {
+    .btn:not(:disabled):not(.disabled), .btn:disabled, .btn.disabled {
+        border-color: #aaaaaa;
+        border-top: none;
+        border-right: none;
+        border-left: 1px solid #aaaaaa;
+        border-radius: 0;
+        line-height: 25px;
+        color: $color-text;
+        opacity: 1;
+
+        &:first-child {
+            border-left: none;
+            border-right: 1px solid #aaaaaa;
+        }
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+        &:hover, &:active, &:focus {
+            border-color: #aaaaaa;
+            box-shadow: none;
+            background-color: #aaaaaa;
+            color: #eee;
+        }
+
+        &.btn-primary {
+            border-color: #aaa;
+            box-shadow: none;
+            color: #fff;
+            background-color: $color-text;
+        }
+    }
+
+    .btn:disabled, .btn.disabled {
+        &, &:hover, &:active, &:focus {
+            background-color: #e9ecef;
+        }
+
+        &.btn-primary {
+            &, &:hover, &:active, &:focus {
+                color: #ffffff;
+                background-color: #aaaaaa;
+            }
+        }
+    }
+
+    &.invalid {
+        .btn:not(:disabled):not(.disabled), .btn:disabled, .btn.disabled,
+        .btn-primary:disabled, .btn-primary.disabled {
+            border-bottom-color: $color-invalid;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled) {
+            background-color: $color-invalid;
+        }
+    }
+
+    &.valid {
+        .btn:not(:disabled):not(.disabled), .btn:disabled, .btn.disabled,
+        .btn-primary:disabled, .btn-primary.disabled {
+            border-bottom-color: $color-valid;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled) {
+            background-color: $color-valid;
+        }
+    }
+}

@@ -1,0 +1,263 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "RISCHI_PORTAFOGLIO": [
+            {
+                "codice": "MERCATO",
+                "descrizione": "MERCATO"
+            },
+            {
+                "codice": "CREDITO",
+                "descrizione": "CREDITO"
+            },
+            {
+                "codice": "LIQUIDITA",
+                "descrizione": "LIQUIDITA"
+            },
+            {
+                "codice": "GRAYLIST",
+                "descrizione": "GRAY LIST"
+            }
+        ],
+        "PLUS_MINUS": [
+            {
+                "codice": "PLUS",
+                "descrizione": "PLUS"
+            },
+            {
+                "codice": "MINUS",
+                "descrizione": "MINUS"
+            },
+            {
+                "codice": "EQUALS",
+                "descrizione": "EQUALS"
+            }
+        ],
+        "CLIENTI_PATRIMONIO": [
+            {
+                "codice": "BASSO",
+                "descrizione": "minore di 100000"
+            },
+            {
+                "codice": "MEDIO_BASSO",
+                "descrizione": "fra 100000 e 500000 compreso"
+            },
+            {
+                "codice": "MEDIO_ALTO",
+                "descrizione": " fra 500000 e 800000 compreso"
+            },
+            {
+                "codice": "ALTO",
+                "descrizione": "maggior di 800000"
+            }
+        ],
+        "ALERT": [
+            {
+                "codice": "CONSISTENZA_LIQUIDITA",
+                "descrizione": "CONSISTENZA LIQUIDITA"
+            },
+            {
+                "codice": "TITOLI_SCADENZA",
+                "descrizione": "TITOLI SCADENZA"
+            },
+            {
+                "codice": "SCADENZA_MIFID",
+                "descrizione": "SCADENZA MIFID"
+            },
+            {
+                "codice": "SCADENZA_ADVER",
+                "descrizione": "SCADENZA ADVER"
+            },
+            {
+                "codice": "SCADENZA_DOCUMENTI",
+                "descrizione": "SCADENZA DOCUMENTI"
+            },
+            {
+                "codice": "COMPLEANNO",
+                "descrizione": "COMPLEANNO"
+            }
+        ],
+        "ASSETCLASS": [
+            {
+                "codice": "AMMINISTRATO",
+                "descrizione": "AMMINISTRATO"
+            },
+            {
+                "codice": "ASSICURATIVO",
+                "descrizione": "ASSICURATIVO"
+            },
+            {
+                "codice": "GESTITO",
+                "descrizione": "GESTITO"
+            },
+            {
+                "codice": "RACCOLTA_DIRETTA_A_TEMPO",
+                "descrizione": "RACCOLTA DIRETTA A TEMPO"
+            },
+            {
+                "codice": "RACCOLTA_DIRETTA",
+                "descrizione": "RACCOLTA DIRETTA'"
+            },
+            {
+                "codice": "ALTRO",
+                "descrizione": "ALTRO"
+            }
+        ],
+        "EMITTENTI_STRUMENTI": [
+            {
+                "codice": "GEN_ISS",
+                "descrizione": "Generic Issuers"
+            },
+            {
+                "codice": "031020000030000",
+                "descrizione": "BANCO BPM SPA"
+            },
+            {
+                "codice": "031020000031066",
+                "descrizione": "EUROVITA SPA"
+            },
+            {
+                "codice": "031020000003258",
+                "descrizione": "ANIMA SOCIETA' DI GESTIONE DEL  RISPARMIO PER AZIONI"
+            },
+            {
+                "codice": "031020000096342",
+                "descrizione": "ALETTI & C. BANCA DI INVESTIME NTO MOBILIARE S.P.A."
+            }
+        ],
+        "TIPI_STRUMENTI": [
+            {
+                "codice": "14",
+                "descrizione": "S. AFRICAN RAND"
+            },
+            {
+                "codice": "12",
+                "descrizione": "PCT-TITOLI STATO. Scad. 6 mesi"
+            },
+            {
+                "codice": "13",
+                "descrizione": "CERTIFICATO DI DEPOSITO IN DIVISA USD - Scad. 18 mesi"
+            },
+            {
+                "codice": "1",
+                "descrizione": "POLIZZA: BPN UNIT VELVET DIPENDENTI"
+            },
+            {
+                "codice": "999",
+                "descrizione": "POLIZZA: UNIT MILLENNIO PR. UNICO DIPENDENTI"
+            },
+            {
+                "codice": "2",
+                "descrizione": "TOP MANAGER: NUOVI ORIZZONTI VALUTE GLOBALI"
+            }
+        ],
+        "DIVISE_STRUMENTI": [
+            {
+                "codice": "ZAR",
+                "descrizione": "ZAR"
+            },
+            {
+                "codice": "EUR",
+                "descrizione": "EUR"
+            },
+            {
+                "codice": "USD",
+                "descrizione": "USD"
+            },
+            {
+                "codice": "SEK",
+                "descrizione": "SEK"
+            },
+            {
+                "codice": "NOK",
+                "descrizione": "NOK"
+            },
+            {
+                "codice": "JPY",
+                "descrizione": "JPY"
+            },
+            {
+                "codice": "GBP",
+                "descrizione": "GBP"
+            },
+            {
+                "codice": "DKK",
+                "descrizione": "DKK"
+            },
+            {
+                "codice": "CHF",
+                "descrizione": "CHF"
+            },
+            {
+                "codice": "CAD",
+                "descrizione": "CAD"
+            },
+            {
+                "codice": "AUD",
+                "descrizione": "AUD"
+            },
+            {
+                "codice": "TRY",
+                "descrizione": "TRY"
+            },
+            {
+                "codice": "THB",
+                "descrizione": "THB"
+            },
+            {
+                "codice": "RUB",
+                "descrizione": "RUB"
+            },
+            {
+                "codice": "PLN",
+                "descrizione": "PLN"
+            },
+            {
+                "codice": "NZD",
+                "descrizione": "NZD"
+            },
+            {
+                "codice": "MXN",
+                "descrizione": "MXN"
+            },
+            {
+                "codice": "ISK",
+                "descrizione": "ISK"
+            },
+            {
+                "codice": "ILS",
+                "descrizione": "ILS"
+            },
+            {
+                "codice": "HUF",
+                "descrizione": "HUF"
+            },
+            {
+                "codice": "HKD",
+                "descrizione": "HKD"
+            },
+            {
+                "codice": "CZK",
+                "descrizione": "CZK"
+            },
+            {
+                "codice": "CNY",
+                "descrizione": "CNY"
+            }
+        ],
+        "FLAG_SELL_EVIDENZA": [
+            {
+                "codice": "N",
+                "descrizione": "Non valorizzato"
+            },
+            {
+                "codice": "B",
+                "descrizione": "Buy"
+            }
+        ]
+    }
+}

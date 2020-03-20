@@ -1,0 +1,30 @@
+import '@babel/polyfill';
+import 'react-app-polyfill/ie11';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from 'reducers';
+import App from './App';
+import './index.css';
+// import registerServiceWorker from './registerServiceWorker';
+
+// Tool per fare il debug di Redux
+const composeEnhancers = composeWithDevTools({});
+
+const store = createStore(
+    rootReducer,
+    composeEnhancers(applyMiddleware(thunkMiddleware))
+);
+
+
+ReactDOM.render(
+    <Provider store={ store }>
+        <App/>
+    </Provider>,
+    document.getElementById('root')
+);
+
+// registerServiceWorker();

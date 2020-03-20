@@ -1,0 +1,10 @@
+@media print {
+    body.modal-open {
+        #root, .modal-backdrop, .modal-header .close, .btn-console {
+            display:none;
+        }
+        .modal-content {
+            border: 0;
+        }
+    }
+}

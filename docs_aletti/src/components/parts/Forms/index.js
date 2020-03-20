@@ -1,0 +1,622 @@
+/* Campi "standard" per i form */
+import React, { Component, Children } from 'react';
+import Functions from "components/functions";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+import getData from "functions/getData";
+import 'react-day-picker/lib/style.css';
+import moment from "moment";
+import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
+import 'moment/locale/it';
+import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import "./style.scss";
+
+// Funzione che gestisce i cambi dei vari campi
+let handleChange = function (component, e) {
+
+    let name = e.name ? e.name : e.target.name,
+        value = (typeof e.value !== "undefined") ? e.value : e.target.value;
+
+    // Assegna l'eventuale callBack, se possibile
+    let cbchange = (e.cbchange)? e.cbchange : function(){};
+
+    // Se esiste una maschera filtra il valore a monte
+    let mask = e.mask;
+    if(mask){
+       
+    }
+
+    // Stato del checkbox
+    if (e.target && e.target.type && e.target.type === "checkbox") {
+        let currValues = component.state[name].toString().split(",").filter((val) => { return val !== "" });
+        if (currValues.indexOf(value) >= 0) {
+            currValues = currValues.filter((val) => { return val !== value })
+        }
+        else {
+            currValues.push(value);
+        }
+        value = currValues.join(",");
+    }
+
+    // Appena il campo cambia rimuove il suo errore
+    let errors = component.state.errors;
+    if (errors[name]) delete errors[name];
+
+    // A seconda del tipo di campo che genera l'evento si comporta in modo differente, in modo da avere sempre l'aggiornamento dello stato corretto
+    component.setState(
+        {
+            [name]: value,
+            errors: errors
+        }, cbchange(value)
+    );
+}
+
+
+// ############################ Input "basici" ##############################
+class FormInput extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            type = (this.props.label) ? this.props.label : "text",
+            maxlength = (this.props.maxlength) ? this.props.maxlength : "255",
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value,
+            placeholder = this.props.placeholder,
+            cbchange = this.props.cbchange,
+            mask= this.props.mask;
+
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!output && <input disabled={this.props.disabled} type={type} maxLength={maxlength} name={this.props.name} placeholder={placeholder} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=mask;this.props.onChange(e)}} value={value} className="form-control" />}
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+
+}
+
+
+// ############################ Select ##############################
+class FormSelect extends Component {
+    
+    state={
+        isLoading: false,
+        options: (this.props.options)? this.props.options: [],
+        ajaxfilter: this.props.ajaxfilter
+    }
+    
+    constructor(props) {
+       super(props)
+       this.getAjaxOptions = this.getAjaxOptions.bind(this);
+    }
+
+ 
+    getAjaxOptions(ajaxoptions, ajaxfilter) {
+
+        // Seleziona l'url per la chiamata
+        const selectUrls = {
+            "nazioni" : {"svil": "/json_data/onboarding/selectNazioni.json", "prod": "/promotori/onboarding/rest/domini/nazioni/all"},
+            "nazioni_attive" : {"svil": "/json_data/onboarding/selectNazioni.json", "prod": "/promotori/onboarding/rest/domini/nazioni/active"},
+            "province": { "svil" : "/json_data/onboarding/selectProvince.json", "prod": "/promotori/onboarding/rest/domini/province/all"},
+            "province_attive": { "svil" : "/json_data/onboarding/selectProvince.json", "prod": "/promotori/onboarding/rest/domini/province/active"},
+            "comuni" : { "svil":"/json_data/onboarding/selectComuni.json?prov="+ ((this.props.ajaxfilter)?this.props.ajaxfilter : ""),  "prod": "/promotori/onboarding/rest/domini/comuni/"+ ((this.props.ajaxfilter)?this.props.ajaxfilter : "") + "/all"},
+            "comuni_attivi" : { "svil":"/json_data/onboarding/selectComuni.json?prov="+ ((this.props.ajaxfilter)?this.props.ajaxfilter : ""),  "prod": "/promotori/onboarding/rest/domini/comuni/"+ ((this.props.ajaxfilter)?this.props.ajaxfilter : "") + "/active"}
+        }
+        
+        this.setState({isLoading:true},
+            ()=>{
+                getData({
+                    url: selectUrls[this.props.ajaxoptions],
+                    method: "GET",
+                    success: (data)=>{
+                        // Converte i dati ricevuti tramite un remapping
+                        let  options = data.results && data.results.map((obj)=>{
+                            if (obj.code) {
+                                return({"value":obj.code,"text":obj.description})
+                            }
+                            else
+                            {
+                                return({"value":obj,"text":obj})
+                            }
+                        })
+
+                        this.setState({
+                            options:options,
+                            isLoading: false
+                        });
+
+                       
+                    }
+                })
+            }   
+        )
+
+    }
+
+    componentDidMount() {
+
+        // Se devono arrivare opzioni da una chiamata ajax, li raccoglie non appena monta l'oggetto
+        if(this.props.ajaxoptions && this.props.ajaxoptions !=="") {
+            
+            this.setState({isLoading:true},
+                ()=> {
+                   this.getAjaxOptions(this.props.ajaxoptions)
+                }    
+                );
+        }
+        else {
+            this.setState({
+                options: this.props.options
+            })
+        }
+
+    }
+
+    componentDidUpdate() {
+        if (this.props.ajaxoptions && this.props.ajaxoptions !== "" && this.props.ajaxfilter && this.props.ajaxfilter !=="") {
+        
+            if (this.state.ajaxfilter !== this.props.ajaxfilter) {
+                
+                this.setState({
+                    ajaxfilter: this.props.ajaxfilter
+                },()=>this.getAjaxOptions(this.props.ajaxoptions, this.props.ajaxfilter))
+                
+            }
+
+           
+        }
+        
+    }
+
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value,
+            placeholder = this.props.placeholder,
+            options = this.state.options,
+            cbchange = this.props.cbchange;
+
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "") + (this.state.isLoading? " loading":"")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!output && <select disabled={this.props.disabled} name={this.props.name} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}} value={value} className={"form-control"}>
+                    {placeholder && <option value="">{placeholder}</option>}
+                    {options && options.map(function (val, index) {
+                        return <option value={val.value} key={index}>{val.text}</option>
+                    })}
+                </select>}
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+    }
+}
+
+
+
+// ############################ Checkgroup ##############################
+class FormCheckgroup extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            name = this.props.name,
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value ? this.props.value : "",
+            options = this.props.options,
+            orientation = (this.props.orientation && this.props.orientation === "vertical") ? "vertical" : "horizontal",
+            cbchange = this.props.cbchange;
+
+        // ############################ Classi wrapper per checkgroup e radiogroup #######################
+        // A seconda del tipo di orientamento determina il wrapper
+        class FieldMainWrapper extends Component { render() { return (orientation === "vertical") ? <>{this.props.children}</> : <Row>{this.props.children}</Row>; } };
+        class FieldWrapper extends Component { render() { return (orientation === "vertical") ? <div className="checkgroup-vertical">{this.props.children}</div> : <Col>{this.props.children}</Col>; } };
+
+
+
+        return (
+            <div className={"form-group checkgroup " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!output &&
+                    <FieldMainWrapper>
+                        {options && options.map((obj, ind) => {
+                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                        })}
+                    </FieldMainWrapper>
+                }
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+}
+
+
+// ############################ Radiogroup ##############################
+class FormRadiogroup extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            name = this.props.name,
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value ? this.props.value : "",
+            options = this.props.options,
+            orientation = (this.props.orientation && this.props.orientation === "vertical") ? "vertical" : "horizontal",
+            cbchange = this.props.cbchange;
+
+        // ############################ Classi wrapper per checkgroup e radiogroup #######################
+        // A seconda del tipo di orientamento determina il wrapper
+        class FieldMainWrapper extends Component { render() { return (orientation === "vertical") ? <>{this.props.children}</> : <Row>{this.props.children}</Row>; } };
+        class FieldWrapper extends Component { render() { return (orientation === "vertical") ? <div className="checkgroup-vertical">{this.props.children}</div> : <Col>{this.props.children}</Col>; } };
+
+
+        return (
+            <div className={"form-group radiogroup " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!output &&
+                    <FieldMainWrapper>
+                        {options && options.map((obj, ind) => {
+                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                        })}
+                    </FieldMainWrapper>
+                }
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+}
+
+
+// ############################ Checkfile ##############################
+class FormCheckfile extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            name = this.props.name,
+            error = this.props.error,
+            value = this.props.value ? this.props.value : false,
+            cbchange = this.props.cbchange;
+
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!this.props.disabled && 
+                    <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange })}} href={this.props.fileurl} target="_blank">
+                        <i className="icon icon-file_pdf"></i>
+                        <span className="text">{this.props.filedescription}</span>
+                    </a>
+                }
+                {this.props.disabled &&
+                    <span className={"checkfile " + ((value) ? " clicked" : "")}>
+                        <i className="icon icon-file_pdf"></i>
+                        <span className="text">{this.props.filedescription}</span>
+                    </span>
+                }
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+}
+
+// ############################ File ##############################
+class FormFile extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalShow: false,
+            fileToTransfer: "",
+            fileLoading: false
+        }
+        this.fileUpload = this.fileUpload.bind(this);
+    }
+
+    // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
+    fileUpload() {
+
+        this.setState({ fileLoading: true },
+            () => {
+                // Qui farebbe la chiamata al file vero e proprio ed in "value" metterebbe l'id del file
+                this.props.onChange({ "name": this.props.name, "value": parseInt(Math.random() * 99999) ,"cbchange": this.props.cbchange})
+                this.setState({
+                    fileToTransfer: "",
+                    fileLoading: false,
+                    modalShow: false
+                })
+            }
+        )
+
+
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            error = this.props.error,
+            value = this.props.value
+
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                <Modal isOpen={this.state.modalShow}>
+                    <div className={(this.state.fileLoading) ? "loading" : ""}>
+                        <ModalHeader>{this.props.label}</ModalHeader>
+                        <ModalBody>
+                            <p>{value === "" ? "Seleziona un file da caricare" : "Seleziona un file con il quale sovrascrivere quello già caricato"}:</p>
+                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value }) }}></input>
+                        </ModalBody>
+                        <ModalFooter>
+                            <div className="btn-console">
+                                <div className="btn-console-left">
+                                    <Button onClick={() => this.setState({ modalShow: false, fileToTransfer: "" })}>Annulla</Button>
+                                </div>
+                                <div className="btn-console-right">
+                                    <Button color="primary" style={{ display: (this.state.fileToTransfer === "") ? "none" : "" }} onClick={this.fileUpload}>Carica il file</Button>
+                                </div>
+                            </div>
+                        </ModalFooter>
+                    </div>
+                </Modal>
+                <div className="file-upload">
+                    {value === "" && <span className="output">File non caricato</span>}
+                    {value !== "" && <span className="output">{value}</span>}
+                    <Button onClick={() => this.setState({ modalShow: true })}>{value !== "" ? "Cambia" : "Carica"}</Button>
+                </div>
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+
+}
+
+
+// ############################ Data (con datepicker e tutte le personalizzazioni dei vari selettori) ##################
+// Componente selettore per mese e anno nel day-picker
+class FormDateMonthSelector extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            sMonth: this.props.month.getMonth(),
+            sYear: this.props.month.getFullYear()
+        }
+        this.changeSel = this.changeSel.bind(this);
+    }
+
+    changeSel(e) {
+
+        this.setState({
+            [e.target.name]: Number(e.target.value)
+        }, () => {
+            this.props.changemonth(new Date([this.state.sYear, this.state.sMonth + 1]));
+        }
+        );
+    }
+
+    render() {
+
+        let dateFrom = this.props.datefrom,
+            dateTo = this.props.dateto,
+            cMonth = this.props.month;
+
+        let arrYears = [];
+        for (let year = Functions.textToDate(dateFrom).getFullYear(); year <= Functions.textToDate(dateTo).getFullYear(); year++) {
+            arrYears.push(year)
+        }
+
+        // Mostra solo i mesi necessari
+        let arrMonth = moment.months().map(function (month, index) {
+            return ({ text: month, value: index })
+        }).filter(function (monthObj) {
+
+            let fromMonth = moment(Functions.textToDate(dateFrom)).startOf("month").toDate();
+            let toMonth = moment(Functions.textToDate(dateTo)).endOf("month").toDate();
+            var checkMonth = new Date([cMonth.getFullYear(), monthObj.value + 1, 1]); // moment(Functions.textToDate(dateFrom))
+
+            return (checkMonth >= fromMonth && checkMonth <= toMonth);
+        });
+
+        return (
+
+            <div className="dayPicker-month-selector" role="heading">
+                <select className="mese" name="sMonth" value={this.state.sMonth} onChange={this.changeSel}>
+                    {
+                        arrMonth.map(function (monthObj) {
+                            return (<option value={monthObj.value} key={monthObj.value}>{monthObj.text}</option>)
+                        })
+                    }
+                </select>
+                <select className="anno" name="sYear" value={this.state.sYear} onChange={this.changeSel}>
+                    {
+                        arrYears.map(function (year) {
+                            return <option value={year} key={year}>{year}</option>
+                        })
+                    }
+                </select>
+            </div>
+
+        )
+
+    }
+}
+// Componente "campo" vero e proprio
+class FormDate extends Component {
+
+    constructor(props) {
+
+        super(props);
+        this.state = {
+            month: new Date()
+        }
+        this.changeMonth = this.changeMonth.bind(this);
+    };
+
+    componentDidMount() {
+        let dFrom = Functions.textToDate(this.props.dateFrom),
+            dTo = Functions.textToDate(this.props.dateTo),
+            defaultMonth = new Date();
+
+        if (dFrom && dFrom > defaultMonth) defaultMonth = dFrom;
+        if (dTo && dTo < defaultMonth) defaultMonth = dTo;
+        this.setState({
+            month: defaultMonth
+        })
+
+    }
+
+
+    changeMonth(month) {
+
+        this.setState({
+            month: month
+        })
+
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value,
+            dateFrom = this.props.dateFrom,
+            dateTo = this.props.dateTo,
+            placeholder = (this.props.placeholder) ? this.props.placeholder : "GG/MM/AAAA",
+            cbchange = this.props.cbchange;
+
+        /* Parametri e forzature addizionali */
+        let dFrom = Functions.textToDate(dateFrom),
+            dTo = Functions.textToDate(dateTo);
+
+        let defaultMonth = this.state.month;
+        if (dFrom && dFrom > defaultMonth) defaultMonth = dFrom;
+        if (dTo && dTo < defaultMonth) defaultMonth = dTo;
+
+        let dpProps = {
+            month: defaultMonth,
+            locale: 'it',
+            localeUtils: MomentLocaleUtils,
+            selectedDays: value && Functions.textToDate(value),
+            onMonthChange: this.changeMonth,
+            modifiers: {
+                sunday: {
+                    daysOfWeek: [0]
+                }
+            }
+        }
+
+
+        if (dateFrom) {
+            dpProps["fromMonth"] = dFrom;
+        }
+        if (dateTo) {
+            dpProps["toMonth"] = dTo;
+        }
+
+
+        // Inserisce i giorni disabilitati
+        var disabledDays = [];
+
+        // Mese "da"
+        if (dFrom) {
+            for (let day = 1; day < dFrom.getDate(); day++) {
+                let testDate = new Date([dFrom.getFullYear(), dFrom.getMonth() + 1, day])
+                if (testDate < dFrom) disabledDays.push(testDate);
+            }
+        }
+        if (dTo) {
+            for (let day = dTo.getDate(); day <= moment(dTo).endOf("month").toDate().getDate(); day++) {
+                let testDate = new Date([dTo.getFullYear(), dTo.getMonth() + 1, day])
+                if (testDate > dTo) disabledDays.push(testDate)
+            }
+        }
+        dpProps["disabledDays"] = disabledDays;
+
+        /* Crea il pannello di controllo con le select nel datepicker per le date */
+        if (dateFrom && dateTo) {
+            dpProps["captionElement"] = <FormDateMonthSelector datefrom={dateFrom} dateto={dateTo} key={this.state.month} month={this.state.month} changemonth={this.changeMonth}></FormDateMonthSelector>
+        }
+
+        return (
+
+            <div className={"form-group daypicker " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                {!output && <div className="daypicker-wrapper">
+                    <DayPickerInput
+                        value={value}
+                        onDayChange={(a, b, input) => {
+                            let inp = input.getInput();
+                            inp["cbchange"] = cbchange;
+                            this.props.onChange(inp)}
+                        }
+                        inputProps={{
+                            placeholder: placeholder,
+                            className: "form-control",
+                            name: this.props.name,
+                            readOnly: true,
+                            disabled: this.props.disabled
+                        }}
+                        formatDate={formatDate}
+                        format="DD/MM/YYYY"
+                        dayPickerProps={dpProps}
+                    ></DayPickerInput>
+                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , cbchange: cbchange})}>&#215;</div>}
+                </div>
+                }
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+    }
+}
+
+/* Esportazione degli oggetti */
+const Form = {
+    input: FormInput,
+    select: FormSelect,
+    checkgroup: FormCheckgroup,
+    radiogroup: FormRadiogroup,
+    checkfile: FormCheckfile,
+    file: FormFile,
+    date: FormDate,
+
+    /* Funzione generica per gestire gli onchange */
+    change: handleChange
+}
+export default Form 

@@ -1,0 +1,46 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "elementi": [
+            {
+                "codicePF": "ES05500",
+                "cliente": "POLVERARI MARIA, MILANO FRANCESCO, MILAN O ATTILIO",
+                "ndgAletti": "0310200001545283",
+                "quantita": 296.018,
+                "controvaloreCarico": 5739.999784815999,
+                "tipo_contratto": "PA",
+                "cod_dossier": "03102019330076650013001",
+                "descrizione_dossier": "Deposito Amministrato: 03102-01933-007-6650013-001",
+                "cod_area_finanza": "1040091",
+                "isin_code": "IT0001040093",
+                "titolo": "ANIMA AMERICA CL.A CUMULATIVO",
+                "divisa_strumento": "EUR",
+                "codice_tipo_strumento": "3",
+                "descrizione_tipo_strumento": "OICR",
+                "codice_tipo_dossier": "DTF",
+                "descrizione_tipo_dossier": "Depositi Titoli",
+                "codice_ente_emittente": "031020000003258",
+                "descrizione_ente_emittente": "ANIMA SOCIETA' DI GESTIONE DEL  RISPARMIO PER AZIONI",
+                "controvalore_divisa": 8159.440152,
+                "controvalore_eur": 8159.440152,
+                "prezzo_medio_carico": 19.390712,
+                "prezzo_mercato": 27.564,
+                "cambio_medio_carico": 1,
+                "cambio_mercato": 1,
+                "var_plus_minus": 0.42150531,
+                "plus_minus_eur": 2419.440367,
+                "data_scadenza": null,
+                "data_riferimento": "20191213"
+            }
+        ],
+        "paginazione": {
+            "start": 0,
+            "size": 1000
+        },
+        "totale_records": 1
+    }
+}

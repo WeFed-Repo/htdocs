@@ -1,0 +1,27 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        {
+            "id": 5,
+            "dataInserimento": 1579863316000,
+            "dataUltimoAggiornamento": 1579949722000,
+            "stato": "BOZZA",
+            "intestazione": "PIETRO BINI, CLAUDIO ROSSI",
+            "numIntestatari": 1,
+            "expirationDate": 1579949725000
+        },
+        {
+            "id": 4,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "BOZZA_VALIDATA",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        }
+    ]
+}

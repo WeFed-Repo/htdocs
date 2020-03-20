@@ -1,0 +1,339 @@
+{
+    "esito": {
+        "type": "OK"
+    },
+    "results": [
+        {
+            "code": "1",
+            "description": "Pubblica amministrazione e magistrati"
+        },
+        {
+            "code": "5",
+            "description": "Forze dell ordine/forze armate"
+        },
+        {
+            "code": "10",
+            "description": "Coltivazione prodotti agricoli e olio"
+        },
+        {
+            "code": "12",
+            "description": "Produzione vino"
+        },
+        {
+            "code": "14",
+            "description": "Allevamento, caccia, silvicoltura e pesca"
+        },
+        {
+            "code": "110",
+            "description": "Produzione prodotti energetici (carbone, petrolio, energia elettrica, gas, raccolta, depurazione e distribuzione acqua)"
+        },
+        {
+            "code": "210",
+            "description": "Produzione metalli"
+        },
+        {
+            "code": "230",
+            "description": "Produzione materiali da costruzione, vetro, ceramica, produzione, estrazione e ricerca di sali"
+        },
+        {
+            "code": "250",
+            "description": "Produzione prodotti chimici, farmaceutici, vernici, fibre artificiali e sintetiche"
+        },
+        {
+            "code": "320",
+            "description": "Produzione macchine agricole e industriali"
+        },
+        {
+            "code": "330",
+            "description": "Produzione macchine per ufficio, elaboratori, strumenti di precisione, ottica, orologi"
+        },
+        {
+            "code": "340",
+            "description": "Produzione materiale elettrico"
+        },
+        {
+            "code": "350",
+            "description": "Produzione mezzi di trasporto"
+        },
+        {
+            "code": "410",
+            "description": "Produzione di prodotti alimentari e prodotti a base di tabacco"
+        },
+        {
+            "code": "430",
+            "description": "Prodotti tessili, pelle, pellicce, abbigliamento"
+        },
+        {
+            "code": "440",
+            "description": "Produzione tappeti, tappezzerie"
+        },
+        {
+            "code": "450",
+            "description": "Produzione calzature"
+        },
+        {
+            "code": "460",
+            "description": "Produzione biancheria per la casa e arredamento"
+        },
+        {
+            "code": "463",
+            "description": "Carpenteria e costruzioni in legno, lavori in legno per edilizia"
+        },
+        {
+            "code": "467",
+            "description": "Produzione mobili in legno e giunco, materassi"
+        },
+        {
+            "code": "470",
+            "description": "Produzione, trasformazione carta e cartone"
+        },
+        {
+            "code": "473",
+            "description": "Prodotti stampa ed editoria"
+        },
+        {
+            "code": "480",
+            "description": "Produzione prodotti in gomma, plastica e pneumatici"
+        },
+        {
+            "code": "490",
+            "description": "Produzione legno, sughero"
+        },
+        {
+            "code": "491",
+            "description": "Produzione gioielli e oreficeria"
+        },
+        {
+            "code": "492",
+            "description": "Produzione strumenti musicali"
+        },
+        {
+            "code": "493",
+            "description": "Prodotti cinematografia e fotografia"
+        },
+        {
+            "code": "494",
+            "description": "Produzione giocattoli e articoli sportivi"
+        },
+        {
+            "code": "495",
+            "description": "Produzione penne, timbri e prodotti di cancelleria"
+        },
+        {
+            "code": "500",
+            "description": "Edilizia, opere pubbliche e demolizione immobili"
+        },
+        {
+            "code": "600",
+            "description": "Commercio combustibili, minerali, prodotti chimici e carburanti"
+        },
+        {
+            "code": "611",
+            "description": "Commercio materie prime agricole, animali vivi"
+        },
+        {
+            "code": "613",
+            "description": "Commercio legname e materiale da costruzione"
+        },
+        {
+            "code": "614",
+            "description": "Commercio macchine, attrezzature, veicoli"
+        },
+        {
+            "code": "615",
+            "description": "Commercio mobili, elettrodomestici, tv, casalinghi e ferramenta"
+        },
+        {
+            "code": "616",
+            "description": "Commercio prodotti tessili, abbigliamento, calzature"
+        },
+        {
+            "code": "617",
+            "description": "Commercio prodotti alimentari, bevande, tabacco"
+        },
+        {
+            "code": "618",
+            "description": "Commercio prodotti farmaceutici, cosmetici, profumi"
+        },
+        {
+            "code": "619",
+            "description": "Commercio altri prodotti non alimentari"
+        },
+        {
+            "code": "620",
+            "description": "Commercio materiale di recupero"
+        },
+        {
+            "code": "621",
+            "description": "Commercio orologi, gioielleria, argenteria"
+        },
+        {
+            "code": "630",
+            "description": "Servizi degli intermediari del commercio (agenti, rappresentanti e agenzie di mediazione del commercio)"
+        },
+        {
+            "code": "649",
+            "description": "Commercio antiquariato e oggetti d'arte"
+        },
+        {
+            "code": "653",
+            "description": "Commercio libri, giornali, cancelleria"
+        },
+        {
+            "code": "654",
+            "description": "Commercio armi e munizioni"
+        },
+        {
+            "code": "660",
+            "description": "Alberghi e pubblici esercizi"
+        },
+        {
+            "code": "671",
+            "description": "Riparazione auto, moto e biciclette"
+        },
+        {
+            "code": "672",
+            "description": "Riparazione calzature, articoli cuoio, elettrodomestici"
+        },
+        {
+            "code": "710",
+            "description": "Servizi ferroviari, tram, metro, autobus di linea"
+        },
+        {
+            "code": "722",
+            "description": "Servizi trasporti di persone e merci"
+        },
+        {
+            "code": "724",
+            "description": "Servizi per oleodotto e gasdotto"
+        },
+        {
+            "code": "731",
+            "description": "Servizi di custodia valori"
+        },
+        {
+            "code": "732",
+            "description": "Autotrasportatori di contante, titoli e valori c/ terzi"
+        },
+        {
+            "code": "740",
+            "description": "Servizi trasporti marittimi, cabotaggio, aerei"
+        },
+        {
+            "code": "760",
+            "description": "Servizi connessi ai trasporti (gestione porti, autostrade, stazioni di servizio, controllo e pesatura merci)"
+        },
+        {
+            "code": "771",
+            "description": "Agenzie viaggio e intermediari dei trasporti"
+        },
+        {
+            "code": "773",
+            "description": "Servizi di custodia e deposito"
+        },
+        {
+            "code": "790",
+            "description": "Servizi delle comunicazioni e professioni linguistiche, letterarie  (giornalisti, scrittori, ecc.)"
+        },
+        {
+            "code": "829",
+            "description": "Bancari"
+        },
+        {
+            "code": "830",
+            "description": "Servizi finanziari e assicurativi (consul. finanz. e assic., prom. finanz., agenti finanz., broker, mediat. cred. ecc.)"
+        },
+        {
+            "code": "831",
+            "description": "Servizi di consulenza tributaria, del lavoro, direzionale, organizzativa, tecnica, ecc."
+        },
+        {
+            "code": "832",
+            "description": "Professioni amministrativo/contabili (commercialisti, ragionieri, periti commerciali, amm.condominio, revisori, ecc)"
+        },
+        {
+            "code": "833",
+            "description": "Servizi di pubblicità"
+        },
+        {
+            "code": "834",
+            "description": "Servizi di affari immobiliari (agenti immobiliari)"
+        },
+        {
+            "code": "840",
+            "description": "Servizi di noleggio e locazione"
+        },
+        {
+            "code": "920",
+            "description": "Servizi disinfezione, pulizia e nettezza urbana"
+        },
+        {
+            "code": "930",
+            "description": "Servizi insegnamento"
+        },
+        {
+            "code": "940",
+            "description": "Servizi di ricerca e sviluppo"
+        },
+        {
+            "code": "950",
+            "description": "Servizi sanitari destinabili alla vendita"
+        },
+        {
+            "code": "960",
+            "description": "Servizi istituzioni sociali, delle associazioni professionali e delle organizzazioni economiche e sindacali"
+        },
+        {
+            "code": "970",
+            "description": "Servizi ricreativi e culturali(discoteche, circhi, luna park, ecc.)"
+        },
+        {
+            "code": "971",
+            "description": "Professioni sportive e artistiche"
+        },
+        {
+            "code": "972",
+            "description": "Sale corse, case da gioco"
+        },
+        {
+            "code": "981",
+            "description": "Servizi di lavanderia e tintoria"
+        },
+        {
+            "code": "982",
+            "description": "Servizi parrucchieri barbieri e istituti di bellezza"
+        },
+        {
+            "code": "983",
+            "description": "Servizi studi fotografici"
+        },
+        {
+            "code": "984",
+            "description": "Altri servizi personali non altrove classificati (servizi delle pompe funebri, di cremazione, di agenzie matrim., ecc.)"
+        },
+        {
+            "code": "990",
+            "description": "Professioni giuridico/legali (avvocati, notai)"
+        },
+        {
+            "code": "991",
+            "description": "Professioni tecnico/scientifiche (architetti, ingegneri, chimici, biologi, agronomi, periti, geometri, ecc.)"
+        },
+        {
+            "code": "992",
+            "description": "Professioni in discipline religiose e teologiche"
+        },
+        {
+            "code": "993",
+            "description": "Altri agenti, mediatori e consulenti non ancora classificati (es. agenti sportivi)"
+        },
+        {
+            "code": "994",
+            "description": "Badante"
+        },
+        {
+            "code": "999",
+            "description": "Altra attivita'"
+        }
+    ]
+}

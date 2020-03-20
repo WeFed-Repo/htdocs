@@ -1,0 +1,88 @@
+import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
+import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js";
+import { indexOf } from "lodash-es";
+
+export default  {
+
+    url: saveUrl.Anagrafica,
+    
+    data: (form,validazione) => {
+
+        console.log(form)
+
+        let val = (validazione)? validazione : false;
+
+        // Rimappa un nuovo oggetto con le varie risposte dell'Adever
+        let returnkv = (obj)=>{
+            let kwo = {};
+            kwo[""]="";
+            obj.forEach((val)=>{
+                kwo[val.value] = val.text;
+            })
+            return kwo;
+        }
+
+        let adever = {};
+        Object.keys(form.domini).filter((v)=>{return (v.indexOf("adever_")>=0)}).forEach((v)=>{
+            adever[v.toString()] = returnkv(form.domini[v]);
+        });
+
+        // Associa i vari "name" per le varie risposte (tramite l'oggetto adever) perchè il backend non puo' alterarle
+        form["field_sessionfirmeblob_naturascopo_0_nome"] = adever["adever_naturascopo"][form["field_sessionfirmeblob_naturascopo_0_id"]];
+        form["field_sessionfirmeblob_naturascopodeposito_0_nome"] = adever["adever_naturascopo"][form["field_sessionfirmeblob_naturascopodeposito_0_id"]];
+        
+        let adeverIds = [
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_professione_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_taesettore_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_fasciareddito_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_fasciapatrimonio_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_originereddito_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_originefondi_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_nazionalita_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_provincia_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_professione_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_taesettore_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_fasciareddito_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_fasciapatrimonio_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_originereddito_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_originefondi_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_nazionalita_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_provincia_0_id"
+        ]
+
+        // Assegna i nomi partendo dagli ID
+        adeverIds.forEach((v)=>{
+            // Determina il dominio da cui attingere
+            let dominio = "adever_" + v.replace("field_sessionfirmeblob_","").replace("intestatarifirme_0_","").replace("intestatarifirme_1_","").replace("listrispadever_","").replace("_0_id","");
+            form[v.replace("_0_id","_0_nome")] = adever[dominio][form[v]];
+            
+        })
+        
+        // Compone l'oggetto firme
+        let sFirme =  jsonFromFields(form)["sessionFirmeBlob"];
+        let firme =  {
+            "capitalizzazionePeriodica": [{"id":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"],"nome":"ALETTI_CAPITALIZZ_PERIODICA"}],
+            "intestatariFirme":sFirme["intestatariFirme"],
+            "naturaScopo": sFirme["naturaScopo"],
+            "naturaScopoDeposito": sFirme["naturaScopoDeposito"]
+        };
+
+        
+
+        // Oggetto "data" del form
+        let dataObj = {
+                "id": form.field_id,
+                "firme":firme,
+                "intestatarioCorrente": form.field_intestcorrente,
+                "stato": "ADEMPIMENTI_NORMATIVI"
+            }
+
+
+        console.log("------------------- OGGETTO DATA INVIATO --------------------");
+        console.log(dataObj);
+       
+        return dataObj;
+
+    }
+
+}

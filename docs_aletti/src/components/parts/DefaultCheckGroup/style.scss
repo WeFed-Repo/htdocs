@@ -1,0 +1,45 @@
+@import "styles/vars.scss";
+
+.defaultcheckgroup {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &.form-group {
+        height: auto;
+        min-height: 2.875rem;
+    }
+
+    & > label {
+        position: static;
+        top: auto;
+        left: auto;
+        margin-bottom: 0.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $color-text;
+    }
+
+    &.error {
+        margin-bottom: 20px;
+    }
+
+    .custom-checkbox.custom-control {
+        margin-bottom: 0.5rem;
+
+        label {
+            font-weight: 400;
+        }
+
+        &.disabled label {
+            &, &:before, &:after {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .custom-control-label, &.error .custom-control-label {
+        font-weight: 400;
+        color: $color-text;
+    }
+}

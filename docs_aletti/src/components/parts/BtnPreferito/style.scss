@@ -1,0 +1,23 @@
+.with-preferito {
+    position:relative; display:inline-block;min-height:35px; padding: 0 0 0 40px;
+    .btn.preferito {position:absolute;left:0; top:-3px}
+}
+
+.btn.preferito {
+    background:transparent; border-radius:3px; border:none; background:#ddd; width:30px;height:30px;outline:none !important;  box-shadow:none !important; color: #fff; padding:0; display:inline-block; line-height:26px; margin:0; min-width:auto;
+    &:hover,&:active {box-shadow:none !important; opacity:0.8}
+    .icon{
+        font-size:20px;
+        &.icon-star_fill {display:none}
+    }
+    &.on {color:#fc0 !important; background-color: #21557e;
+        .icon.icon-star_fill {display:inline-block}
+        .icon.icon-star {display:none}
+    }
+}
+
+/* Caso in tabella */
+table .btn.preferito {
+    line-height:30px;
+    .icon {font-size:22px}
+}

@@ -1,0 +1,41 @@
+{
+    "esito": {
+        "tipo": "OK"
+    },
+    "data": {
+      "data":
+      [
+          {
+          "id": 1,
+          "titolo": "Lorem ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+          "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+          "timestamp": 1281900800000
+        },
+          {
+          "id": 2,
+          "titolo": "Ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+          "abstract": "Lorem amet consectetur adipiscing elit summa cum laude",
+        "timestamp": 1281900800000
+        },
+        {
+        "id": 3,
+        "titolo": "Lorem ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+        "abstract": "Ipsum lorem amet consectetur adipiscing elit summa cum laude",
+        "timestamp": 1281900800000
+        },
+        {
+        "id": 4,
+        "titolo": "Dolor sit amet lorem sit amet lorem sit amet lorem",
+        "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+        "timestamp": 1281900800000
+        },
+        {
+        "id": 5,
+        "titolo": "Ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+        "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+        "timestamp": 1281900800000
+        }
+
+      ]
+    }
+}

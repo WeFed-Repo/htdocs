@@ -1,0 +1,75 @@
+{
+    "esito": {
+    "type": "OK",
+    "code": "200",
+    "description": null
+},
+"results": {
+"GPI": [
+    {
+        "filiale": "07113",
+        "description": "05094252201-CASH EURO",
+        "controvalore": 28900.78,
+        "divisa": "EUR",
+        "hasFido": false,
+        "saldoFido": null,
+        "hasBlocco": false,
+        "iban": null,
+        "abi": "03102",
+        "numeroConto": null
+    },
+    {
+        "filiale": "07113",
+        "description": "05094252201-CASH EURO",
+        "controvalore": 28900.78,
+        "divisa": "EUR",
+        "hasFido": false,
+        "saldoFido": null,
+        "hasBlocco": false,
+        "iban": null,
+        "abi": "03102",
+        "numeroConto": null
+    }
+],
+"CCO": [
+    {
+        "filiale": "07113",
+        "description": "0000001310",
+        "controvalore": 29663.1,
+        "divisa": "EUR",
+        "hasFido": true,
+        "saldoFido": 0,
+        "hasBlocco": false,
+        "iban": "IT55A0310211800000000001310",
+        "abi": "03102",
+        "numeroConto": "0000001310"
+    },
+    {
+        "filiale": "07115",
+        "description": "0000201310",
+        "controvalore": 289663.1,
+        "divisa": "EUR",
+        "hasFido": true,
+        "saldoFido": 0,
+        "hasBlocco": false,
+        "iban": "IT55A0310211900000000001319",
+        "abi": "03102",
+        "numeroConto": "0000001312"
+    }
+],
+"DTF": [
+        {
+        "filiale": "07113",
+        "description": "0218956-000",
+        "controvalore": 74376.12143,
+        "divisa": "EUR",
+        "hasFido": false,
+        "saldoFido": null,
+        "hasBlocco": false,
+        "iban": null,
+        "abi": "03102",
+        "numeroConto": "0218956"
+        }
+    ]
+}
+}

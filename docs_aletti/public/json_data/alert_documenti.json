@@ -1,0 +1,22 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "totali": {
+            "label": "SCADENZA_DOCUMENTI",
+            "records": 1,
+            "colore": "da definire"
+        },
+        "risultati": [
+            {
+                "ndgCode": 485918,
+                "intestazRidottaDes": "AUDAGNA GUIDO",
+                "documIdentificType": "CI",
+                "scadDocumDate": "26/04/2019"
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "esito": {
+    "type": "OK",
+    "code": "200",
+    "description": null
+},
+    "results": [
+        {
+            "dataRiferimento": "13/11/2018",
+            "tipologia": "Bonifico - ricevuta per beneficiario",
+            "importo": 600,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae0sG6wFZN_MaaImiYtJUe9Jd4OXY4gs_neyUzhV8-E8syD-8J/0"
+        },
+        {
+            "dataRiferimento": "21/09/2018",
+            "tipologia": "Bonifico - ricevuta per ordinante",
+            "importo": 110,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae05S-wFYbq5WaIjWR6ZUeqMMtOS8ygcznLXYwgl0wEM41Bu8L/1"
+        },
+        {
+            "dataRiferimento": "21/09/2018",
+            "tipologia": "Bonifico - ricevuta per beneficiario",
+            "importo": 500,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae3MPvxFYc_5aaczvM5ZUepMx5OS9jhM7nfSVm0V46F8xgBugK/2"
+        },
+        {
+            "dataRiferimento": "21/09/2018",
+            "tipologia": "Utenze e servizi - addebito",
+            "importo": 29.40,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae1cDpkwUbppCadj_NsJUepMJ_OS9hgsnnKnIw1lo4QcJkBuoH/3"
+        },
+        {
+            "dataRiferimento": "20/08/2018",
+            "tipologia": "Bonifico - ricevuta per beneficiario",
+            "importo": 450,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae3Ja5xlQb-pGaJ23OsJUe8JN_OXYy1MnnLSsxiww7QZ9mWegI/4"
+        },
+        {
+            "dataRiferimento": "14/08/2018",
+            "tipologia": "Documenti di Sintesi e Proposte di modifiche unilaterali",
+            "importo": null,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsaeh5Xuy1dCrpGaIT-f4pUeoscqOXZk15_neHcx1V5qH5luW7wG/5"
+        },
+        {
+            "dataRiferimento": "01/08/2018",
+            "tipologia": "Estratto conto",
+            "importo": null,
+            "linkPdf": "http://promotorisvi8web.webank.local/promotori/dashboard/rest/instadoc/getPdf/FvnV8pSFa7XduNsIioc-vgUHPDAvHsae15S6lFAYq8Wadmme45UeppMrOXYzg5_ndys3gV9tEcgyCbwJ/6"
+        }
+    ]
+}

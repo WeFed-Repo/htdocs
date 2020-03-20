@@ -1,0 +1,14 @@
+/* Stili di default delle modali */
+.modal {
+    .modal-dialog {
+        max-width: 900px;
+
+        &.modal-sm {
+            max-width: 600px;
+        }
+    }
+}
+
+body > div[tabindex="-1"]:last-child {
+    position: absolute !important;
+}

@@ -1,0 +1,155 @@
+@import 'vars.scss';
+@import 'font.scss';
+@import 'font_icomoon.scss';
+@import 'form.scss';
+@import 'table.scss';
+@import 'toast.scss';
+
+html, body {
+    font-family: $font-stack;
+    font-weight: $font-weight-regular;
+    font-size: 16px;
+
+    *:focus, *:active {
+        outline: 0 none
+    }
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* no release - Classe per materiale da nascondere nei rilasci */
+.no-release {
+    display: none !important
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-semi-bold;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: $color-secondary;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: $color-primary;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 1.125rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+.h2-sub {
+    margin: -1rem 0 1.5rem 0;
+    font-size: 1.25rem;
+    color: $color-gray;
+}
+
+strong, b {
+    font-weight: $font-weight-bold;
+}
+
+a {
+    color: $color-link;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+
+    &.active, &.active:hover {
+        color: $color-link-active;
+        cursor: default;
+    }
+}
+
+.note {
+    font-style: italic;
+    letter-spacing: 0.25px;
+    color: #888;
+}
+
+.horizontal-scroller {
+    max-width: 100%;
+    overflow-x: auto
+}
+
+h2.bordered-block-title {
+    margin-bottom: 10px;
+}
+
+.bordered-block {
+    border: solid 1px #ccc;
+    padding: 15px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.hidden {
+    display: none !important
+}
+
+.positivo {
+    color: $color-valid;
+}
+
+.negativo {
+    color: $color-invalid;
+}
+
+.alert {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.btn-console {
+    width:100%;height:auto;display:inline-block;
+    .btn {display:inline-block;}
+    .btn-console-right {float:right; text-align:right;
+        .btn {margin-left:10px;}
+    }
+    .btn-console-left {float:left; text-align:left;
+        .btn {margin-right:10px;}
+    }
+}
+
+// Stile provvisorio iframe
+.iframe-resp {
+       padding:10px;
+       background-color:#eee;
+       width:100%;
+       height:calc(100% - 200px);
+       display:inline-block;
+       position:relative;
+        a {
+            color:#000;
+            text-decoration:underline;
+        }
+
+}

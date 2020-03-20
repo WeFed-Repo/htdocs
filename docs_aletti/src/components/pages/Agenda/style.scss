@@ -1,0 +1,58 @@
+.agenda {
+    height: 100%;
+    .DayPicker-Caption {width: 100%; text-align:center; padding:0 50px;
+        select {display:inline-block;width:auto}    
+    }
+    .DayPicker-NavBar {width:100%;height:0px;position:absolute;overflow:visible;
+        .DayPicker-NavButton{
+            &.DayPicker-NavButton--prev {left:0}
+        } 
+    }
+}
+
+
+/* Datepicker fullpage */
+.fullpage .DayPicker {
+    font-size:30px;
+    width:100%;
+    .DayPicker-Month {
+        margin:0;
+        width:100%;
+        .DayPicker-Day {border:solid 1px #ddd}
+    }
+    .DayPicker-Day {vertical-align:top;width:14.285%; position:relative;padding:5px 10px 5px; padding-bottom:15px;
+        &.DayPicker-Day--today {background:#fff}
+        /* Oggetti sul giorno */
+        &:hover {background-color:#fff;}
+        .giorno {float:left;color:#555;font-weight:bold;font-size:50px; color:#666;line-height:50px; position:absolute; top:3px;left:5px}
+        .add {width:40px;height:40px; border-radius:50%;float:right; background:#fff;border:solid 2px #ccc;color:#ccc;cursor:pointer;line-height:35px;
+            &:hover {color:#999;border-color:#999}
+        }
+        .dateitems {border-top:solid 1px #ddd; clear:both; margin:10px 0 10px; float:left; clear:both; width:100%; font-size:14px; text-align:left; color:#000;
+            .item {width:100%;float:left; padding: 5px 0 5px 20px;position:relative; cursor:pointer; clear:both;
+                &:hover {background-color:#eee;}
+                .dot {display:block;width:15px;height:15px; position:absolute;top:7px;left:0;background-color:#ccc;
+                }
+                &.Appointment .dot {background-color:rgb(216, 150, 76)}
+                &.Meeting .dot {background-color:rgb(50, 131, 206)}
+                &.Task .dot {background-color:rgb(122, 172, 98)}
+                .time {clear:both;display:block;font-size:11px; color:#666}
+            }
+        }
+    }
+}
+
+.type-control {
+    float:left; width:auto;
+    .ctrl {display:inline-block;width:auto;margin: 0 20px 0 0; cursor:pointer;
+        .check {
+            width:40px;height:40px;display:inline-block; border:solid 3px #ccc;vertical-align:middle;margin: 0 10px 0 0;
+        }
+        &.Appointment span.check {background-color:rgb(216, 150, 76);border-color:rgb(216, 150, 76);}
+        &.Meeting span.check {background-color:rgb(50, 131, 206);border-color:rgb(50, 131, 206);}
+        &.Task span.check {background-color:rgb(96, 155, 69); border-color:rgb(96, 155, 69)}    
+        &.off .check{background:transparent !important}
+    }
+
+}
+

@@ -1,0 +1,88 @@
+.DayPicker {
+    /* Classi DayPicker generico */
+    background-color: #fff;
+    font-size: 14px;
+    .DayPicker-NavBar {
+        position: relative;
+        .DayPicker-NavButton {
+            position: absolute;
+            left: 5px;
+            z-index: 3;
+            top: 17px;
+            &.DayPicker-NavButton--next {
+                right: 5px;
+                left: auto
+            }
+        }
+    }
+    .DayPicker-Caption {
+        padding: 0;
+        div {
+            font-weight: bold;
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1
+        }
+        select {
+            display: inline-block;
+            width: auto;
+            padding-right: 25px;
+            &:first-child {
+                margin-right: 5px;
+            }
+        }
+    }
+    .DayPicker-Day--today {
+        background: #eee;
+        color: #000;
+        &:hover {
+            background-color: #ccc
+        }
+    }
+    .DayPicker-Day {
+        border-radius: 0;
+        &:hover {
+            background-color: #ddd
+        }
+    }
+
+    /* DayPicker inline */
+    &.inline {
+        width: 100%;
+        margin: 0;
+        .DayPicker-Caption {
+            margin: 0
+        }
+        .DayPicker-NavButton {
+            top: 7px
+        }
+        .DayPicker-Month {
+            padding: 0;
+            margin: 5px 0 0;
+            width: 100%
+        }
+        .DayPicker-Weekday {
+            padding: 0;
+        }
+        .DayPicker-Day {
+            padding: 0;
+            border: solid 1px #ddd
+        }
+    }
+
+    &.yearMonthSelect {
+        .DayPicker-NavButton {
+            top: 22px;
+        }
+        .DayPicker-NavButton--prev {
+            left: auto;
+            right: 5px;
+        }
+    }
+}
+
+.DayPickerInput-OverlayWrapper {
+    z-index:999
+}

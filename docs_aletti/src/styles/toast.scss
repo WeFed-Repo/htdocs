@@ -1,0 +1,30 @@
+/* React Toastify */
+.Toastify__toast-container--top-right {
+    top: 6rem;
+}
+.Toastify__close-button {
+    color: #333;
+}
+.Toastify__toast {
+    background: #eee;
+    color: #333;
+    font-size: 0.875rem;
+    border: solid 1px #999;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+.Toastify__toast--success {
+    border-top: 3px solid #07bc0c;
+}
+.Toastify__toast--error {
+    border-top: 3px solid #e74c3c;
+}
+.Toastify__toast--warning {
+    border-top: 3px solid #f1c40f;
+}
+.Toastify__toast--info {
+    border-top: 3px solid #3498db;
+}
+.Toastify__progress-bar {
+    height: 2px;
+    background-color: rgba(0, 0, 0, .3);
+}

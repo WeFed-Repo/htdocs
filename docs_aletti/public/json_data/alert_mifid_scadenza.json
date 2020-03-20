@@ -1,0 +1,26 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "totali": {
+            "label": "SCADENZA_MIFID",
+            "records": 4,
+            "colore": "da definire"
+        },
+        "risultati": [
+            {
+                "ndgCode": 485333,
+                "intestazRidottaDes": "LIR SRL",
+                "scadenzaMifidDate": "30/09/2018",
+                "tipoClienteDes": "Profess. Di diritto",
+                "codEsperienzaDes": "Medio Alta",
+                "rischioGrayAmm": 50,
+                "rischioCreditoAmm": 10.73,
+                "rischioMercatoAmm": 2.49
+            }
+        ]
+    }
+}

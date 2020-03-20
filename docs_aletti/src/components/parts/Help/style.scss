@@ -1,0 +1,20 @@
+.help {
+    .opener {
+        right:10px;top:5px;color:#ddd; position:absolute; cursor:pointer;
+        .icon {font-size:28px;}
+        &:hover {opacity:0.5}
+    };
+}
+.with-help {
+    position: relative;
+    .opener {
+        right: 0;
+        top: -5px;
+    }
+    &.bordered-block{
+        .opener {
+            right: 15px;
+            top: 5px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "response": {
+        "serverName": "app01svi8:backend-ws800",
+        "throwable": null,
+        "inError": false
+    }
+}

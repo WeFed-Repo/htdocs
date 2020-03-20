@@ -1,0 +1,16 @@
+.modal {
+    div.modal-header {
+        .dot {float:left;width:30px;height:30px;background:#ddd; margin-right:10px}
+        span.Appointment .dot {background-color:rgb(216, 150, 76)}
+        span.Meeting .dot {background-color:rgb(50, 131, 206)}
+        span.Task .dot {background-color:rgb(122, 172, 98)}
+    }
+    .btn-console {
+        padding: 15px 0 10px;
+    }
+
+    .DayPickerInput {width:100%;
+        input {padding:5px;cursor:pointer}
+        
+    }
+}

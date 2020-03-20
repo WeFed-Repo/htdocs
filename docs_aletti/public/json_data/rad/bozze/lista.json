@@ -1,0 +1,101 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "bozze": [
+            {
+                "id": "123",
+                "data": 1542668400000,
+                "cognome": "Rossi",
+                "nome": "Mario",
+                "intestatari": 1,
+                "tipo": "20",
+                "stato": "10",
+                "pdt": "20"
+            },
+            {
+                "id": "124",
+                "data": 1547161200000,
+                "cognome": "Bianchi",
+                "nome": "Antonio",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "11",
+                "pdt": "20"
+            },
+            {
+                "id": "125",
+                "data": 1551654000000,
+                "cognome": "Verdi",
+                "nome": "Chiara",
+                "intestatari": 1,
+                "tipo": "20",
+                "stato": "20",
+                "pdt": "20"
+            },
+            {
+                "id": "126",
+                "data": 1557957600000,
+                "cognome": "Esposito",
+                "nome": "Valeria",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "21",
+                "pdt": "20"
+            },
+            {
+                "id": "127",
+                "data": 1557957600000,
+                "cognome": "Fumagalli",
+                "nome": "Tommaso",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "22",
+                "pdt": "20"
+            },
+            {
+                "id": "128",
+                "data": 1557957600000,
+                "cognome": "Carulli",
+                "nome": "Riccardo",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "23",
+                "pdt": "20"
+            },
+            {
+                "id": "129",
+                "data": 1557957600000,
+                "cognome": "Ferrari",
+                "nome": "Maria",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "30",
+                "pdt": "20"
+            },
+            {
+                "id": "130",
+                "data": 1557957600000,
+                "cognome": "Romano",
+                "nome": "Romeo",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "40",
+                "pdt": "20"
+            },
+            {
+                "id": "131",
+                "data": 1557957600000,
+                "cognome": "Fontana",
+                "nome": "Laura",
+                "intestatari": 2,
+                "tipo": "20",
+                "stato": "50",
+                "pdt": "20"
+            }
+        ]
+    }
+}

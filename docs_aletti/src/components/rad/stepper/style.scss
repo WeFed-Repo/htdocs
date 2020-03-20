@@ -1,0 +1,63 @@
+@import "styles/vars.scss";
+
+.stepper {
+    position:relative;
+    height: 100%;
+    overflow: hidden;
+
+    .form-wrap {
+        width: 100%;
+        height: 100%;
+        padding: 20px 15px 0 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .form-footer-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 83px;
+        padding: 15px 0 0 80px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 15px);
+
+        .form-footer {
+            width: 100%;
+            height: 69px;
+            padding: 15px;
+            border-top: 1px solid #cccccc;
+        }
+    }
+
+    .stepper-info {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -400px;
+        z-index: 10;
+        width: 400px;
+        height: auto;
+        max-height: 100%;
+        padding: 15px;
+        border-left: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        overflow-y: scroll;
+        background-color: #ffffff;
+        transition-duration: 250ms;
+        &.open {
+            right: 0;
+        }
+    }
+
+    /* Dentro gli step */
+    .infocert_logo {
+        height: 75px;
+        margin-bottom: 1rem;
+        //noinspection CssUnknownTarget
+        background: url("~images/infocert_logo.png") no-repeat right 0;
+        background-size: 150px 75px;
+    }
+}

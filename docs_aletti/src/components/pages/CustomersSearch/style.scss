@@ -1,0 +1,55 @@
+.form-group {position:relative}
+.button-console {width:100%; padding: 0 0 20px;
+    .btn-primary {float:right;} 
+}
+
+.table-scroller {width:100%;position:relative;overflow-y:auto}
+
+table {
+    th,td {padding:10px}
+    th {
+        .sortable { cursor: pointer; white-space:nowrap;
+            .order-arrows{    color: #aaa;  display: inline-block; width: 30px;position: relative; height: 24px; top: -1px; background: transparent; text-align: center;
+                &::before {
+                    content: "\2191"; 
+                }
+                &::after {
+                    content: "\2193"; 
+                }
+            }
+            &.asc {
+                .order-arrows{
+                    &::before {color:#000}
+                }
+            }
+            &.desc {
+                .order-arrows{
+                    &::after {color:#000}
+                }
+            }
+        }
+        &.withexp {background-color:#ddd; text-align:center}
+       .opener {transform: rotate(180deg);transition: transform 0.4s;display:inline-block;width:30px;height:30px; background:#999; border-radius:50%; cursor:pointer; color:#fff;font-size:30px;text-align:center;line-height:26px;
+            &::before {content: "+"}
+       }
+       &.expanded {text-align:right;
+           .opener { transform:rotate(0);
+            &::before {content: "\2212"}
+            }
+        }
+    }   
+}
+
+.dettaglio-strumento {
+    border:solid 1px #ccc; background:#eee; padding: 15px; margin-bottom:25px;
+}
+
+.default-collapse-wrap {
+    form {margin-bottom:0}
+    .button-console {padding-bottom:0}
+}
+
+.row-wbutton {
+    .nav-back {float:right; height:35px}
+    padding-bottom:15px
+}

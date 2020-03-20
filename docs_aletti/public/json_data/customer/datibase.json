@@ -1,0 +1,96 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "anagraficaRidotta": "MASCIOCCHI GIANCARLO, MASCIOCCHI STEFANO",
+        "codiceFiscale": "BNCLSN48S61D612J",
+        "partitaIva": "",
+        "intResidenza": "BIANCHINI ALESSANDRA ",
+        "indirizzoResidenza": "VIA OTTORINO RESPIGHI 14",
+        "capResidenza": "50127",
+        "localitaResidenza": "FIRENZE",
+        "cointestatari": [
+            {"ndgAletti": "0310200001545060", "nominativo": "MASCIOCCHI GIANCARLO"},
+            {"ndgAletti": "0310200001545063", "nominativo": "MASCIOCCHI STEFANO"}
+        ],
+        "provinciaResidenza": "FI",
+        "dataCompleanno": "28/12/1951",
+        "nazioneResidenza": "",
+        "intCorrispondenza": "BIANCHINI ALESSANDRA ",
+        "indirizzoCorrispondenza": "VIA OTTORINO RESPIGHI 14",
+        "capCorrispondenza": "50127",
+        "localitaCorrispondenza": "FIRENZE",
+        "provinciaCorrispondenza": "FI",
+        "nazioneCorrispondenza": "",
+        "cellulare": "3398724831",
+        "telefonoCasa": "0571454525",
+        "telefonoUfficio": "05714545256",
+        "email": "MAMMINA48@VIRGILIO.IT",
+        "emailPec": "",
+        "alert": [
+            {
+                "data": "",
+                "description": "Mifid mancante"
+            },
+            {
+                "data": "22/11/2019",
+                "description": "Mifid in scadenza"
+            }
+        ],
+        "patrimonioTotale": {
+            "saldoContabile": 138652.12,
+            "titoliInPortafoglio": 3041580.8635520004
+        },
+        "profiloMifid": {
+            "classificazioneClienteCode": null,
+            "classificazioneClienteDescr": "AL DETTAGLIO",
+            "livelloDiEsperienzaCode": "MEDIA",
+            "livelloDiEsperienzaDescr": "MEDIO ALTA",
+            "dataScadenza": "11/12/2023"
+        },
+        "rischioPortafoglio": {
+            "APA": [
+                {
+                    "rischioAmmissibileMercato": 2.28,
+                    "rischioAmmissibileGrayList": 50.0,
+                    "rischioAmmissibileCredito": 12.82,
+                    "rischioAmmissibileLiquidita": "0 - 12 mesi: 40%; 1 - 3 anni: 30%; 3 - 5 anni: 20%; 5 - 10 anni: 10%; Oltre 10 anni: 0%",
+                    "rischioAttualeMercato": 0.51664528,
+                    "rischioAttualeGrayList": 17.52,
+                    "rischioAttualeCredito": 2.3500329,
+                    "rischioAttualeLiquidita": "0 - 12 mesi: 100%; 1 - 3 anni: 0%; 3 - 5 anni: 0%; 5 - 10 anni: 0%; Oltre 10 anni: 0%"
+                }
+            ],
+            "PA": [
+                {
+                    "rischioAmmissibileMercato": 2.28,
+                    "rischioAmmissibileGrayList": 50.0,
+                    "rischioAmmissibileCredito": 12.82,
+                    "rischioAmmissibileLiquidita": "0 - 12 mesi: 40%; 1 - 3 anni: 30%; 3 - 5 anni: 20%; 5 - 10 anni: 10%; Oltre 10 anni: 0%",
+                    "rischioAttualeMercato": 0.55080243,
+                    "rischioAttualeGrayList": 50.6,
+                    "rischioAttualeCredito": 4.83233046,
+                    "rischioAttualeLiquidita": "0 - 12 mesi: 100%; 1 - 3 anni: 0%; 3 - 5 anni: 0%; 5 - 10 anni: 0%; Oltre 10 anni: 0%"
+                }
+            ]
+        },
+        "assetClass": {
+            "AMMINISTRATO": 20.158752734087585,
+            "GESTITO": 74.75153464437756,
+            "RACCOLTA_DIRETTA": 5.089712621534844
+        },
+        "preferito": false,
+        "interessi": [
+            "Tecnologia",
+            "Musica",
+            "Sport"
+        ],
+        "relazioni": [
+            "Amica di Mario Rossi",
+            "Zia di Simona Verdi"
+        ]
+    }
+}

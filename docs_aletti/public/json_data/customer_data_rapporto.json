@@ -1,0 +1,10 @@
+{
+    "esito": {
+        "tipo": "OK"
+    },
+    "data": {
+            "iban": "IT98123912312989821389213",
+            "esempio":"Lorem ipsum dolor",
+            "saldo": 12319032.323
+        }
+}

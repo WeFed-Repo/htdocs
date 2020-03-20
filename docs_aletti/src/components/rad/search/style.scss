@@ -1,0 +1,18 @@
+.results {
+    .results-content {
+        position: relative;
+        min-height: 530px;
+    }
+    .icon-check-ok_table {
+        color: #80ff80;
+    }
+    .icon-error_table {
+        color: #ff8080;
+    }
+    .date {
+        white-space: nowrap;
+    }
+    .selected {
+        background-color: #ccc;
+    }
+}

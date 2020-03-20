@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "react-grid-layout.css",
+	"sources": [
+		"react-grid-layout.scss",
+		"vars.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,UAAU,GACzB;;AAED,AAAA,gBAAgB,CAAC;EACb,MAAM,EAAE,GAAG,CAAC,KAAK,CCCR,IAAI,GDUhB;EAZD,AAEI,gBAFY,AAEX,uBAAuB,CAAC;IACrB,gBAAgB,ECDX,IAAI,GDEZ;EAJL,AAKI,gBALY,CAKZ,sBAAsB,CAAC;IACnB,MAAM,EAAE,IAAI;IACZ,WAAW,EAAE,IAAI;IACjB,UAAU,EAAE,MAAM;IAClB,gBAAgB,EAAE,IAAI;IACtB,MAAM,EAAE,IAAI,GACf"
+}

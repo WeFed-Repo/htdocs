@@ -1,0 +1,19 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        {
+            "codice": "BASKET",
+            "descrizione": "Basket",
+            "nota": ""
+        },
+        {
+            "codice": "CALCIO",
+            "descrizione": "Calcio",
+            "nota": ""
+        }
+    ]
+}

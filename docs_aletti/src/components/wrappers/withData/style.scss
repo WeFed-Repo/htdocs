@@ -1,0 +1,10 @@
+.withprogress {
+    .form-group & {
+        height: 38px;
+        border-radius: 0;
+        .progress-bar {
+            height: 38px;
+            font-size: 14px;
+        }
+    }
+}

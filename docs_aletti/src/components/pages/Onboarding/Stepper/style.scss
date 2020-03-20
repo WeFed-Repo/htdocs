@@ -1,0 +1,40 @@
+.ob-stepper {
+    font-size:12px;
+    width:100%;display:inline-block;margin-bottom:20px;padding:0; border-collapse: collapse;
+    .steps-wrap {
+        display:inline-block;width:auto; margin-left:2px;
+    .steps {
+        .step {height:30px;display:inline-block; padding:0; overflow: visible;z-index:1; min-width:50px;
+            min-width:50px; text-align:center; position:relative; opacity:1; margin: 0 15px 0 0; opacity:0.3;
+            &::after {    z-index: 2;
+                display: inline-block;
+                background-color: #ccc;
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                content: "";
+                top: 5px;
+                right: -10px;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);}
+            span {color:#333;background:#ccc;height:30px; display:inline-block;padding:5px;position:relative;z-index:3;text-align:center;width:100%;}
+        &.corrente {
+            background:#ccc; opacity:1}
+        &.completo {opacity:1;
+                span, &::after {background:#7a9225;opacity:1;color:#fff}
+            }
+        &.conclusione {
+                margin-right:0;
+                &::after {display:none}
+            }
+            
+        }
+       
+    }
+    
+    .ob-owner {background:#ddd; font-weight:bold;padding:5px;text-transform:uppercase;padding:5px;text-align:center; line-height:14px; border-radius: 10px 10px 0 0;border-bottom:solid 2px #fff; border-collapse:collapse}
+    &.attivo .ob-owner {background: #7a9225;color:#fff}
+    }
+}

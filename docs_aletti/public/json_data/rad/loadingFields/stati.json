@@ -1,0 +1,1883 @@
+{
+  "esito": {
+    "type": "OK"
+  },
+  "results": [
+    {
+      "code": "676 ",
+      "description": "ABU DHABI",
+      "codeUic": 238,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "905 ",
+      "description": "AFGHANISTAN",
+      "codeUic": 2,
+      "codFisc": "Z200",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "846 ",
+      "description": "AFRICA DEL SUD OVEST - NAMIBIA",
+      "codeUic": 206,
+      "codFisc": "Z300",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "801 ",
+      "description": "AFRICA SPAGNOLA",
+      "codeUic": 246,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "677 ",
+      "description": "AJMAN",
+      "codeUic": 239,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "786 ",
+      "description": "ALAND ISOLE",
+      "codeUic": 292,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "658 ",
+      "description": "ALBANIA",
+      "codeUic": 87,
+      "codFisc": "Z100",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "803 ",
+      "description": "ALGERIA",
+      "codeUic": 3,
+      "codFisc": "Z301",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "955 ",
+      "description": "AMERICAN SAMOA",
+      "codeUic": 148,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "639 ",
+      "description": "ANDORRA",
+      "codeUic": 4,
+      "codFisc": "Z101",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "849 ",
+      "description": "ANGOLA",
+      "codeUic": 133,
+      "codFisc": "Z302",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "712 ",
+      "description": "ANGUILLA",
+      "codeUic": 209,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "739 ",
+      "description": "ANTIGUA E BARBUDA",
+      "codeUic": 197,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "908 ",
+      "description": "ARABIA SAUDITA",
+      "codeUic": 5,
+      "codFisc": "Z203",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "737 ",
+      "description": "ARGENTINA",
+      "codeUic": 6,
+      "codFisc": "Z600",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "781 ",
+      "description": "ARMENIA",
+      "codeUic": 266,
+      "codFisc": "Z252",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "641 ",
+      "description": "ARUBA",
+      "codeUic": 212,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "666 ",
+      "description": "ASCENSION",
+      "codeUic": 227,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "950 ",
+      "description": "AUSTRALIA",
+      "codeUic": 7,
+      "codFisc": "Z700",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "628 ",
+      "description": "AUSTRIA",
+      "codeUic": 8,
+      "codFisc": "Z102",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "780 ",
+      "description": "AZERBAIGIAN",
+      "codeUic": 268,
+      "codFisc": "Z253",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "815 ",
+      "description": "AZZORRE ISOLE",
+      "codeUic": 234,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "728 ",
+      "description": "BAHAMA",
+      "codeUic": 160,
+      "codFisc": "Z502",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "940 ",
+      "description": "BAHREIN",
+      "codeUic": 169,
+      "codFisc": "Z204",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "943 ",
+      "description": "BANGLADESH",
+      "codeUic": 130,
+      "codFisc": "Z249",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "718 ",
+      "description": "BARBADOS",
+      "codeUic": 118,
+      "codFisc": "Z522",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "602 ",
+      "description": "BELGIO",
+      "codeUic": 9,
+      "codFisc": "Z103",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "704 ",
+      "description": "BELIZE",
+      "codeUic": 198,
+      "codFisc": "Z512",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "822 ",
+      "description": "BENIN",
+      "codeUic": 158,
+      "codFisc": "Z314",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "729 ",
+      "description": "BERMUDA",
+      "codeUic": 207,
+      "codFisc": "Z400",
+      "flagCadTin": "N"
+    },
+    {
+      "code": "918 ",
+      "description": "BHUTAN",
+      "codeUic": 97,
+      "codFisc": "Z205",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "764 ",
+      "description": "BIELORUSSIA",
+      "codeUic": 264,
+      "codFisc": "Z139",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "734 ",
+      "description": "BOLIVIA",
+      "codeUic": 10,
+      "codFisc": "Z601",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "784 ",
+      "description": "BONAIRE SAINT EUSTATIUS AND SABA",
+      "codeUic": 295,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "694 ",
+      "description": "BOSNIA ERZEGOVINA",
+      "codeUic": 274,
+      "codFisc": "Z153",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "841 ",
+      "description": "BOTSWANA",
+      "codeUic": 98,
+      "codFisc": "Z358",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "732 ",
+      "description": "BRASILE",
+      "codeUic": 11,
+      "codFisc": "Z602",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "944 ",
+      "description": "BRUNEI DARUSSALAM",
+      "codeUic": 125,
+      "codFisc": "Z207",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "657 ",
+      "description": "BULGARIA",
+      "codeUic": 12,
+      "codFisc": "Z104",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "810 ",
+      "description": "BURKINA FASO",
+      "codeUic": 142,
+      "codFisc": "Z354",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "830 ",
+      "description": "BURUNDI",
+      "codeUic": 25,
+      "codFisc": "Z305",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "924 ",
+      "description": "CAMBOGIA (CAMPUCEA)",
+      "codeUic": 135,
+      "codFisc": "Z208",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "824 ",
+      "description": "CAMERUN",
+      "codeUic": 119,
+      "codFisc": "Z306",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "612 ",
+      "description": "CAMPIONE D'ITALIA",
+      "codeUic": 139,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "702 ",
+      "description": "CANADA",
+      "codeUic": 13,
+      "codFisc": "Z401",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "709 ",
+      "description": "CAYMAN ISOLE",
+      "codeUic": 211,
+      "codFisc": "Z530",
+      "flagCadTin": "N"
+    },
+    {
+      "code": "669 ",
+      "description": "CHAFARINAS",
+      "codeUic": 230,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "812 ",
+      "description": "CIAD",
+      "codeUic": 144,
+      "codFisc": "Z309",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "733 ",
+      "description": "CILE",
+      "codeUic": 15,
+      "codFisc": "Z603",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "939 ",
+      "description": "CIPRO",
+      "codeUic": 101,
+      "codFisc": "Z211",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "636 ",
+      "description": "CITTA DEL VATICANO",
+      "codeUic": 93,
+      "codFisc": "Z106",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "662 ",
+      "description": "CLIPPERTON",
+      "codeUic": 223,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "725 ",
+      "description": "COLOMBIA",
+      "codeUic": 17,
+      "codFisc": "Z604",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "858 ",
+      "description": "COMORE",
+      "codeUic": 176,
+      "codFisc": "Z310",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "829 ",
+      "description": "CONGO REPUBBLICA DEMOCRATICA",
+      "codeUic": 18,
+      "codFisc": "Z312",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "828 ",
+      "description": "CONGO REPUBBLICA POPOLARE",
+      "codeUic": 145,
+      "codFisc": "Z311",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "933 ",
+      "description": "COREA DEL NORD",
+      "codeUic": 74,
+      "codFisc": "Z214",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "934 ",
+      "description": "COREA DEL SUD",
+      "codeUic": 84,
+      "codFisc": "Z213",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "819 ",
+      "description": "COSTA D'AVORIO",
+      "codeUic": 146,
+      "codFisc": "Z313",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "716 ",
+      "description": "COSTARICA",
+      "codeUic": 19,
+      "codFisc": "Z503",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "761 ",
+      "description": "CROAZIA",
+      "codeUic": 261,
+      "codFisc": "Z149",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "719 ",
+      "description": "CUBA",
+      "codeUic": 20,
+      "codFisc": "Z504",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "785 ",
+      "description": "CURACAO",
+      "codeUic": 296,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "609 ",
+      "description": "DANIMARCA",
+      "codeUic": 21,
+      "codFisc": "Z107",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "708 ",
+      "description": "DOMINICA",
+      "codeUic": 192,
+      "codFisc": "Z526",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "678 ",
+      "description": "DUBAI",
+      "codeUic": 240,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "730 ",
+      "description": "ECUADOR",
+      "codeUic": 24,
+      "codFisc": "Z605",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "806 ",
+      "description": "EGITTO",
+      "codeUic": 23,
+      "codFisc": "Z336",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "714 ",
+      "description": "EL SALVADOR",
+      "codeUic": 64,
+      "codFisc": "Z506",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "848 ",
+      "description": "ERITREA",
+      "codeUic": 277,
+      "codFisc": "Z368",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "690 ",
+      "description": "ESTONIA",
+      "codeUic": 257,
+      "codFisc": "Z144",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "832 ",
+      "description": "ETIOPIA",
+      "codeUic": 26,
+      "codFisc": "Z315",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "615 ",
+      "description": "FALKLAND",
+      "codeUic": 190,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "929 ",
+      "description": "FILIPPINE",
+      "codeUic": 27,
+      "codFisc": "Z216",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "625 ",
+      "description": "FINLANDIA",
+      "codeUic": 28,
+      "codFisc": "Z109",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "601 ",
+      "description": "FRANCIA",
+      "codeUic": 29,
+      "codFisc": "Z110",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "679 ",
+      "description": "FUIJAYRAH",
+      "codeUic": 241,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "827 ",
+      "description": "GABON",
+      "codeUic": 157,
+      "codFisc": "Z316",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "814 ",
+      "description": "GAMBIA",
+      "codeUic": 164,
+      "codFisc": "Z317",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "767 ",
+      "description": "GEORGIA",
+      "codeUic": 267,
+      "codFisc": "Z254",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "820 ",
+      "description": "GHANA",
+      "codeUic": 112,
+      "codFisc": "Z318",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "741 ",
+      "description": "GIAMAICA",
+      "codeUic": 82,
+      "codFisc": "Z507",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "935 ",
+      "description": "GIAPPONE",
+      "codeUic": 88,
+      "codFisc": "Z219",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "611 ",
+      "description": "GIBILTERRA",
+      "codeUic": 102,
+      "codFisc": "Z113",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "859 ",
+      "description": "GIBUTI",
+      "codeUic": 113,
+      "codFisc": "Z361",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "907 ",
+      "description": "GIORDANIA",
+      "codeUic": 122,
+      "codFisc": "Z220",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "667 ",
+      "description": "GOUGH",
+      "codeUic": 228,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "632 ",
+      "description": "GRECIA",
+      "codeUic": 32,
+      "codFisc": "Z115",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "705 ",
+      "description": "GRENADA",
+      "codeUic": 156,
+      "codFisc": "Z524",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "703 ",
+      "description": "GROENLANDIA",
+      "codeUic": 200,
+      "codFisc": "Z402",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "643 ",
+      "description": "GUADALUPA",
+      "codeUic": 214,
+      "codFisc": "Z508",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "626 ",
+      "description": "GUAM",
+      "codeUic": 154,
+      "codFisc": "Z706",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "711 ",
+      "description": "GUATEMALA",
+      "codeUic": 33,
+      "codFisc": "Z509",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "740 ",
+      "description": "GUAYANA FRANCESE",
+      "codeUic": 123,
+      "codFisc": "Z607",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "617 ",
+      "description": "GUERNSEY C.I.",
+      "codeUic": 201,
+      "codFisc": "Z124",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "816 ",
+      "description": "GUINEA",
+      "codeUic": 137,
+      "codFisc": "Z319",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "851 ",
+      "description": "GUINEA BISSAU",
+      "codeUic": 185,
+      "codFisc": "Z320",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "826 ",
+      "description": "GUINEA EQUATORIALE",
+      "codeUic": 167,
+      "codFisc": "Z321",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "727 ",
+      "description": "GUYANA",
+      "codeUic": 159,
+      "codFisc": "Z606",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "720 ",
+      "description": "HAITI",
+      "codeUic": 34,
+      "codFisc": "Z510",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "788 ",
+      "description": "HEARD E MCDONALD ISOLE",
+      "codeUic": 284,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "713 ",
+      "description": "HONDURAS",
+      "codeUic": 35,
+      "codFisc": "Z511",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "945 ",
+      "description": "HONG KONG",
+      "codeUic": 103,
+      "codFisc": "Z221",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "916 ",
+      "description": "INDIA",
+      "codeUic": 114,
+      "codFisc": "Z222",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "927 ",
+      "description": "INDONESIA",
+      "codeUic": 129,
+      "codFisc": "Z223",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "904 ",
+      "description": "IRAN",
+      "codeUic": 39,
+      "codFisc": "Z224",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "903 ",
+      "description": "IRAQ",
+      "codeUic": 38,
+      "codFisc": "Z225",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "608 ",
+      "description": "IRLANDA",
+      "codeUic": 40,
+      "codFisc": "Z116",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "621 ",
+      "description": "ISLANDA",
+      "codeUic": 41,
+      "codFisc": "Z117",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "619 ",
+      "description": "ISOLA DI MAN",
+      "codeUic": 203,
+      "codFisc": "Z122",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "613 ",
+      "description": "ISOLE CANARIE",
+      "codeUic": 100,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "622 ",
+      "description": "ISOLE CAROLINE",
+      "codeUic": 256,
+      "codFisc": "Z701",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "685 ",
+      "description": "ISOLE CHAGOS",
+      "codeUic": 255,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "956 ",
+      "description": "ISOLE COOK",
+      "codeUic": 237,
+      "codFisc": "Z703",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "850 ",
+      "description": "ISOLE DEL CAPO VERDE",
+      "codeUic": 188,
+      "codFisc": "Z307",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "620 ",
+      "description": "ISOLE FAEROER",
+      "codeUic": 204,
+      "codFisc": "Z108",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "960 ",
+      "description": "ISOLE FIGI",
+      "codeUic": 161,
+      "codFisc": "Z704",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "646 ",
+      "description": "ISOLE MARSHALL",
+      "codeUic": 217,
+      "codFisc": "Z711",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "742 ",
+      "description": "ISOLE VERGINI BRITANNICHE",
+      "codeUic": 249,
+      "codFisc": "Z525",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "971 ",
+      "description": "ISOLE WAKE",
+      "codeUic": 178,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "906 ",
+      "description": "ISRAELE",
+      "codeUic": 182,
+      "codFisc": "Z226",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "86  ",
+      "description": "ITALIA",
+      "codeUic": 86,
+      "codFisc": "Z086",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "618 ",
+      "description": "JERSEY",
+      "codeUic": 202,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "769 ",
+      "description": "KAZAKISTAN",
+      "codeUic": 269,
+      "codFisc": "Z255",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "835 ",
+      "description": "KENYA",
+      "codeUic": 116,
+      "codFisc": "Z322",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "782 ",
+      "description": "KIRGHIZISTAN",
+      "codeUic": 270,
+      "codFisc": "Z256",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "966 ",
+      "description": "KIRIBATI",
+      "codeUic": 194,
+      "codFisc": "Z731",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "909 ",
+      "description": "KUWAIT",
+      "codeUic": 126,
+      "codFisc": "Z227",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "921 ",
+      "description": "LAOS",
+      "codeUic": 136,
+      "codFisc": "Z228",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "831 ",
+      "description": "LESOTHO",
+      "codeUic": 89,
+      "codFisc": "Z359",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "691 ",
+      "description": "LETTONIA",
+      "codeUic": 258,
+      "codFisc": "Z145",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "901 ",
+      "description": "LIBANO",
+      "codeUic": 95,
+      "codFisc": "Z229",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "818 ",
+      "description": "LIBERIA",
+      "codeUic": 44,
+      "codFisc": "Z325",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "805 ",
+      "description": "LIBIA",
+      "codeUic": 45,
+      "codFisc": "Z326",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "637 ",
+      "description": "LIECHTENSTEIN",
+      "codeUic": 90,
+      "codFisc": "Z119",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "692 ",
+      "description": "LITUANIA",
+      "codeUic": 259,
+      "codFisc": "Z146",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "603 ",
+      "description": "LUSSEMBURGO",
+      "codeUic": 92,
+      "codFisc": "Z120",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "930 ",
+      "description": "MACAO",
+      "codeUic": 59,
+      "codFisc": "Z231",
+      "flagCadTin": "N"
+    },
+    {
+      "code": "695 ",
+      "description": "MACEDONIA",
+      "codeUic": 278,
+      "codFisc": "Z148",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "840 ",
+      "description": "MADAGASCAR",
+      "codeUic": 104,
+      "codFisc": "Z327",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "674 ",
+      "description": "MADEIRA",
+      "codeUic": 235,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "839 ",
+      "description": "MALAWI",
+      "codeUic": 56,
+      "codFisc": "Z328",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "942 ",
+      "description": "MALAYSIA",
+      "codeUic": 106,
+      "codFisc": "Z247",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "928 ",
+      "description": "MALDIVE",
+      "codeUic": 127,
+      "codFisc": "Z232",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "809 ",
+      "description": "MALI",
+      "codeUic": 149,
+      "codFisc": "Z329",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "631 ",
+      "description": "MALTA",
+      "codeUic": 105,
+      "codFisc": "Z121",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "648 ",
+      "description": "MARIANNE (ISOLE)",
+      "codeUic": 219,
+      "codFisc": "Z710",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "802 ",
+      "description": "MAROCCO",
+      "codeUic": 107,
+      "codFisc": "Z330",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "642 ",
+      "description": "MARTINICA",
+      "codeUic": 213,
+      "codFisc": "Z513",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "808 ",
+      "description": "MAURITANIA",
+      "codeUic": 141,
+      "codFisc": "Z331",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "844 ",
+      "description": "MAURIZIO",
+      "codeUic": 128,
+      "codFisc": "Z332",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "665 ",
+      "description": "MAYOTTE",
+      "codeUic": 226,
+      "codFisc": "Z360",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "670 ",
+      "description": "MELILLA",
+      "codeUic": 231,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "710 ",
+      "description": "MESSICO",
+      "codeUic": 46,
+      "codFisc": "Z514",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "644 ",
+      "description": "MICRONESIA",
+      "codeUic": 215,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "634 ",
+      "description": "MIDWAY ISOLE",
+      "codeUic": 177,
+      "codFisc": "Z712",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "765 ",
+      "description": "MOLDAVIA",
+      "codeUic": 265,
+      "codFisc": "Z140",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "638 ",
+      "description": "MONACO",
+      "codeUic": 91,
+      "codFisc": "Z123",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "931 ",
+      "description": "MONGOLIA",
+      "codeUic": 110,
+      "codFisc": "Z233",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "698 ",
+      "description": "MONTENEGRO",
+      "codeUic": 290,
+      "codFisc": "Z159",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "635 ",
+      "description": "MONTSERRAT",
+      "codeUic": 208,
+      "codFisc": null,
+      "flagCadTin": "N"
+    },
+    {
+      "code": "852 ",
+      "description": "MOZAMBICO",
+      "codeUic": 134,
+      "codFisc": "Z333",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "919 ",
+      "description": "MYANMAR",
+      "codeUic": 83,
+      "codFisc": "Z206",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "961 ",
+      "description": "NAURU",
+      "codeUic": 109,
+      "codFisc": "Z713",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "937 ",
+      "description": "NEPAL",
+      "codeUic": 115,
+      "codFisc": "Z234",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "715 ",
+      "description": "NICARAGUA",
+      "codeUic": 47,
+      "codFisc": "Z515",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "811 ",
+      "description": "NIGER",
+      "codeUic": 150,
+      "codFisc": "Z334",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "823 ",
+      "description": "NIGERIA",
+      "codeUic": 117,
+      "codFisc": "Z335",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "633 ",
+      "description": "NIUE - SAVAGE",
+      "codeUic": 205,
+      "codFisc": "Z714",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "787 ",
+      "description": "NORFOLK ISOLE",
+      "codeUic": 285,
+      "codFisc": "Z715",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "623 ",
+      "description": "NORVEGIA",
+      "codeUic": 48,
+      "codFisc": "Z125",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "684 ",
+      "description": "NUOVA CALEDONIA",
+      "codeUic": 253,
+      "codFisc": "Z716",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "951 ",
+      "description": "NUOVA ZELANDA",
+      "codeUic": 49,
+      "codFisc": "Z719",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "952 ",
+      "description": "OCEANIA BRITANNICA",
+      "codeUic": 175,
+      "codFisc": "Z722",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "958 ",
+      "description": "OCEANIA DEGLI STATI UNITI",
+      "codeUic": 252,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "912 ",
+      "description": "OMAN",
+      "codeUic": 163,
+      "codFisc": "Z235",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "604 ",
+      "description": "PAESI BASSI O OLANDA",
+      "codeUic": 50,
+      "codFisc": "Z126",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "915 ",
+      "description": "PAKISTAN",
+      "codeUic": 36,
+      "codFisc": "Z236",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "279 ",
+      "description": "PALESTINA, TERRITORI AUTONOMI",
+      "codeUic": 279,
+      "codFisc": "Z161",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "717 ",
+      "description": "PANAMA",
+      "codeUic": 51,
+      "codFisc": "Z516",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "963 ",
+      "description": "PAPUA E NUOVA GUINEA",
+      "codeUic": 186,
+      "codFisc": "Z730",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "735 ",
+      "description": "PARAGUAY",
+      "codeUic": 52,
+      "codFisc": "Z610",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "671 ",
+      "description": "PENON DE ALHUCEMAS",
+      "codeUic": 232,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "672 ",
+      "description": "PENON DE VELEZ DE LA GOMERA",
+      "codeUic": 233,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "731 ",
+      "description": "PERU'",
+      "codeUic": 53,
+      "codFisc": "Z611",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "953 ",
+      "description": "POLINESIA FRANCESE",
+      "codeUic": 225,
+      "codFisc": "Z723",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "653 ",
+      "description": "POLONIA",
+      "codeUic": 54,
+      "codFisc": "Z127",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "629 ",
+      "description": "PORTOGALLO",
+      "codeUic": 55,
+      "codFisc": "Z128",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "649 ",
+      "description": "PORTORICO",
+      "codeUic": 220,
+      "codFisc": "Z518",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "941 ",
+      "description": "QATAR",
+      "codeUic": 168,
+      "codFisc": "Z237",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "680 ",
+      "description": "RAS EL KHAIMAN",
+      "codeUic": 242,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "607 ",
+      "description": "REGNO UNITO",
+      "codeUic": 31,
+      "codFisc": "Z114",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "936 ",
+      "description": "REP. CINA NAZ. (TAIWAN)",
+      "codeUic": 22,
+      "codFisc": "Z217",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "651 ",
+      "description": "REPUBBLICA CECA",
+      "codeUic": 275,
+      "codFisc": "Z156",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "825 ",
+      "description": "REPUBBLICA CENTRAFRICANA",
+      "codeUic": 143,
+      "codFisc": "Z308",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "775 ",
+      "description": "REPUBBLICA DEL KOSOVO",
+      "codeUic": 291,
+      "codFisc": "Z160",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "645 ",
+      "description": "REPUBBLICA DI PALAU",
+      "codeUic": 216,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "606 ",
+      "description": "REPUBBLICA DI SAN MARINO",
+      "codeUic": 37,
+      "codFisc": "Z130",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "721 ",
+      "description": "REPUBBLICA DOMINICANA",
+      "codeUic": 63,
+      "codFisc": "Z505",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "605 ",
+      "description": "REPUBBLICA FED.DI GERMANIA",
+      "codeUic": 94,
+      "codFisc": "Z112",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "932 ",
+      "description": "REPUBBLICA POPOLARE CINESE",
+      "codeUic": 16,
+      "codFisc": "Z210",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "843 ",
+      "description": "REPUBBLICA SUDAFRICANA",
+      "codeUic": 78,
+      "codFisc": "Z347",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "833 ",
+      "description": "REUNION",
+      "codeUic": 247,
+      "codFisc": "Z324",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "656 ",
+      "description": "ROMANIA",
+      "codeUic": 61,
+      "codFisc": "Z129",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "845 ",
+      "description": "RUANDA",
+      "codeUic": 151,
+      "codFisc": "Z338",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "762 ",
+      "description": "RUSSIA",
+      "codeUic": 262,
+      "codFisc": "Z154",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "860 ",
+      "description": "S.ELENA",
+      "codeUic": 254,
+      "codFisc": "Z340",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "614 ",
+      "description": "SAHARA OCCIDENTALE",
+      "codeUic": 166,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "790 ",
+      "description": "SAINT BARTHELEMY",
+      "codeUic": 293,
+      "codFisc": "Z110",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "706 ",
+      "description": "SAINT LUCIA",
+      "codeUic": 199,
+      "codFisc": "Z527",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "964 ",
+      "description": "SALOMONE",
+      "codeUic": 191,
+      "codFisc": "Z724",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "954 ",
+      "description": "SAMOA OCCIDENTALE",
+      "codeUic": 131,
+      "codFisc": "Z726",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "853 ",
+      "description": "SAO TOME' E PRINCIPE",
+      "codeUic": 187,
+      "codFisc": "Z341",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "854 ",
+      "description": "SEICELLE",
+      "codeUic": 189,
+      "codFisc": "Z342",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "813 ",
+      "description": "SENEGAL",
+      "codeUic": 152,
+      "codFisc": "Z343",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "697 ",
+      "description": "SERBIA",
+      "codeUic": 289,
+      "codFisc": "Z158",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "681 ",
+      "description": "SHARJAH",
+      "codeUic": 243,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "817 ",
+      "description": "SIERRA LEONE",
+      "codeUic": 153,
+      "codFisc": "Z344",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "926 ",
+      "description": "SINGAPORE",
+      "codeUic": 147,
+      "codFisc": "Z248",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "783 ",
+      "description": "SINT MAARTEN (DUTCH PART)",
+      "codeUic": 294,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "902 ",
+      "description": "SIRIA",
+      "codeUic": 65,
+      "codFisc": "Z240",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "652 ",
+      "description": "SLOVACCHIA",
+      "codeUic": 276,
+      "codFisc": "Z155",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "693 ",
+      "description": "SLOVENIA",
+      "codeUic": 260,
+      "codFisc": "Z150",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "834 ",
+      "description": "SOMALIA",
+      "codeUic": 66,
+      "codFisc": "Z345",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "630 ",
+      "description": "SPAGNA",
+      "codeUic": 67,
+      "codFisc": "Z131",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "917 ",
+      "description": "SRI LANKA",
+      "codeUic": 85,
+      "codFisc": "Z209",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "616 ",
+      "description": "ST. KITTS E NEVIS",
+      "codeUic": 195,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "661 ",
+      "description": "ST. MARTIN SETTENTRIONALE",
+      "codeUic": 222,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "683 ",
+      "description": "ST. PIERRE E MIQUELON",
+      "codeUic": 248,
+      "codFisc": "Z403",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "701 ",
+      "description": "STATI UNITI D'AMERICA",
+      "codeUic": 69,
+      "codFisc": "Z404",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "807 ",
+      "description": "SUDAN",
+      "codeUic": 70,
+      "codFisc": "Z348",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "738 ",
+      "description": "SURINAME",
+      "codeUic": 124,
+      "codFisc": "Z608",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "789 ",
+      "description": "SVALBARD E JAN MAYEN ISOLE",
+      "codeUic": 286,
+      "codFisc": "Z125",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "624 ",
+      "description": "SVEZIA",
+      "codeUic": 68,
+      "codFisc": "Z132",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "627 ",
+      "description": "SVIZZERA",
+      "codeUic": 71,
+      "codFisc": "Z133",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "847 ",
+      "description": "SWAZILAND - NGWANE",
+      "codeUic": 138,
+      "codFisc": "Z349",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "772 ",
+      "description": "TAGIKISTAN",
+      "codeUic": 272,
+      "codFisc": "Z257",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "837 ",
+      "description": "TANZANIA",
+      "codeUic": 57,
+      "codFisc": "Z357",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "861 ",
+      "description": "TERRIT.BRIT.OCC.",
+      "codeUic": 245,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "743 ",
+      "description": "TERRITORI FRANCESI DEL SUD",
+      "codeUic": 183,
+      "codFisc": "Z902",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "744 ",
+      "description": "TERRITORIO ANTARTICO BRITANNICO",
+      "codeUic": 180,
+      "codFisc": "Z901",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "920 ",
+      "description": "THAILANDIA",
+      "codeUic": 72,
+      "codFisc": "Z241",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "946 ",
+      "description": "TIMOR",
+      "codeUic": 287,
+      "codFisc": "Z242",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "821 ",
+      "description": "TOGO",
+      "codeUic": 155,
+      "codFisc": "Z351",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "675 ",
+      "description": "TOKELAU",
+      "codeUic": 236,
+      "codFisc": "Z727",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "962 ",
+      "description": "TONGA",
+      "codeUic": 162,
+      "codFisc": "Z728",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "723 ",
+      "description": "TRINIDAD E TOBAGO",
+      "codeUic": 120,
+      "codFisc": "Z612",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "668 ",
+      "description": "TRISTAN DE CUNHA",
+      "codeUic": 229,
+      "codFisc": null,
+      "flagCadTin": "S"
+    },
+    {
+      "code": "804 ",
+      "description": "TUNISIA",
+      "codeUic": 75,
+      "codFisc": "Z352",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "938 ",
+      "description": "TURCHIA",
+      "codeUic": 76,
+      "codFisc": "Z243",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "777 ",
+      "description": "TURKMENISTAN",
+      "codeUic": 273,
+      "codFisc": "Z258",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "640 ",
+      "description": "TURKS E CAICOS",
+      "codeUic": 210,
+      "codFisc": "Z519",
+      "flagCadTin": "N"
+    },
+    {
+      "code": "965 ",
+      "description": "TUVALU",
+      "codeUic": 193,
+      "codFisc": null,
+      "flagCadTin": "X"
+    },
+    {
+      "code": "763 ",
+      "description": "UCRAINA",
+      "codeUic": 263,
+      "codFisc": "Z138",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "836 ",
+      "description": "UGANDA",
+      "codeUic": 132,
+      "codFisc": "Z353",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "682 ",
+      "description": "UMM AL QAIWAIN",
+      "codeUic": 244,
+      "codFisc": "Z215",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "655 ",
+      "description": "UNGHERIA",
+      "codeUic": 77,
+      "codFisc": "Z134",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "736 ",
+      "description": "URUGUAY",
+      "codeUic": 80,
+      "codFisc": "Z613",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "778 ",
+      "description": "UZBEKISTAN",
+      "codeUic": 271,
+      "codFisc": "Z259",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "957 ",
+      "description": "VANUATU",
+      "codeUic": 121,
+      "codFisc": "Z733",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "726 ",
+      "description": "VENEZUELA",
+      "codeUic": 81,
+      "codFisc": "Z614",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "660 ",
+      "description": "VERGINI AMERICANE (ISOLE)",
+      "codeUic": 221,
+      "codFisc": "Z520",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "922 ",
+      "description": "VIETNAM",
+      "codeUic": 62,
+      "codFisc": "Z251",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "707 ",
+      "description": "VINCENT E GRENADINE",
+      "codeUic": 196,
+      "codFisc": "Z528",
+      "flagCadTin": "S"
+    },
+    {
+      "code": "647 ",
+      "description": "WALLIS E FUTUNA",
+      "codeUic": 218,
+      "codFisc": "Z729",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "913 ",
+      "description": "YEMEN",
+      "codeUic": 42,
+      "codFisc": "Z246",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "838 ",
+      "description": "ZAMBIA",
+      "codeUic": 58,
+      "codFisc": "Z355",
+      "flagCadTin": "X"
+    },
+    {
+      "code": "842 ",
+      "description": "ZIMBABWE",
+      "codeUic": 73,
+      "codFisc": "Z337",
+      "flagCadTin": "X"
+    }
+  ]
+}

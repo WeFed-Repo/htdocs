@@ -1,0 +1,132 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "listaMovimenti": [
+            {
+                "dataValuta": "15/03/2019",
+                "dataContabile": "17/03/2019",
+                "divisa": "EUR",
+                "importo": 600,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": 109,
+                "categoria": "In entrata",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "15/03/2019",
+                "dataContabile": "17/03/2019",
+                "divisa": "EUR",
+                "importo": -300,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito Sepa",
+                "categoria": "In uscita",
+                "idMovimento": 108,
+                "tipoMovimento": "Addebiti diretti Sepa"
+            },
+            {
+                "dataValuta": "14/03/2019",
+                "dataContabile": "15/03/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": 107,
+                "categoria": "In uscita",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "13/03/2019",
+                "dataContabile": "15/03/2019",
+                "divisa": "EUR",
+                "importo": -400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Pagamento utenze",
+                "idMovimento": 106,
+                "categoria": "In uscita",
+                "tipoMovimento": "Pagamenti"
+            },
+            {
+                "dataValuta": "05/03/2019",
+                "dataContabile": "07/03/2019",
+                "divisa": "EUR",
+                "importo": 600,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": 105,
+                "categoria": "In entrata",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "05/03/2019",
+                "dataContabile": "07/03/2019",
+                "divisa": "EUR",
+                "importo": -300,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito Sepa",
+                "categoria": "In uscita",
+                "idMovimento": 104,
+                "tipoMovimento": "Addebiti diretti Sepa"
+            },
+            {
+                "dataValuta": "04/03/2019",
+                "dataContabile": "05/03/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": 103,
+                "categoria": "In uscita",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "04/03/2019",
+                "dataContabile": "05/03/2019",
+                "divisa": "EUR",
+                "importo": 400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": 102,
+                "categoria": "In entrata",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "04/03/2019",
+                "dataContabile": "05/03/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": 101,
+                "categoria": "In uscita",
+                "tipoMovimento": "Bonifici"
+            },
+            {
+                "dataValuta": "03/03/2019",
+                "dataContabile": "05/03/2019",
+                "divisa": "EUR",
+                "importo": 400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito stipendio",
+                "idMovimento": 100,
+                "categoria": "In entrata",
+                "tipoMovimento": "Stipendio/pensione"
+            }
+        ],
+        "numMovLista": 1
+    }
+}

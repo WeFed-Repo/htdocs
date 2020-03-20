@@ -1,0 +1,102 @@
+{
+    "esito": {
+        "tipo": "OK"
+    },
+    "data": {
+            "preferito":true,
+            "id": 1,
+            "firstName": "Nome",
+            "lastName": "Cognome",
+            "id": "f827ccc5-0777-4842-999c-c76dafa1d3fd",
+            "lorem": "Lorem ipsum dolor",
+            "indirizzo": "Via Rossi,25",
+            "indirizzopreferito": "Via Bianchi, 16",
+            "telefono": "02.911.22.33",
+            "cellulare": "+39.333.32.21.302",
+            "email": "nome.cognome@sample.com",
+            "ndg":"30921903912A",
+            "patrimonio": {
+                "saldo": 99999999.99,
+                "portafoglio": 531209312.321
+            },
+            "asset": [
+                  {
+                    "id": 1,
+                    "tipologia": "Bond Corporate",
+                    "perc": 25
+                  },
+                  {
+                    "id": 2,
+                    "tipologia": "Bond Government",
+                    "perc": 25
+                  },
+                  {
+                    "id": 3,
+                    "tipologia": "Bond Other",
+                    "perc": 15
+                  },
+                  {
+                    "id": 4,
+                    "tipologia": "Bond",
+                    "perc": 15
+                  },
+                  {
+                    "id": 5,
+                    "tipologia": "Cash",
+                    "perc": 20
+                  }
+                ],
+              "rapporti":["APA - 3012930-12090128 - EUR","APA - 3012930-12090322 - EUR","PA - 3012930-12090321 - USD" ],
+
+              "prossimocontatto": [{
+                  "timestamp": 1556179880000,
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
+                }],
+
+              "prossimoappuntamento": [{
+                  "timestamp": 1556179880000,
+                  "desc": "Ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
+                }],
+
+              "alert": [
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
+                  },
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
+                  },
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Amet consectetur adipiscing elit summa cum laude"
+                  }
+              ],
+
+              "memo": [
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Ricordati dolor sit amet consectetur adipiscing elit summa cum laude"
+                  },
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Chiamare ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
+                  },
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Telefonare a consectetur adipiscing elit summa cum laude"
+                  },
+                  {
+                      "timestamp": 1556179880000,
+                      "desc": "Amet consectetur adipiscing elit summa cum laude"
+                  }
+              ],
+              "interessi": [
+                  "Musica lirica", "Sport acquatici", "Pesca sportiva d'altura", "Sci di fondo"
+              ],
+              "relazioni": [
+                  "Parente di Stefano Rossi","Amico di Renato Bianchi"
+              ]
+
+        }
+}

@@ -1,0 +1,39 @@
+{
+    "esito": {
+        "tipo": "OK"
+    },
+    "data": {
+        "data" : [
+          {
+            "id": "mifid",
+            "desc" : "Mifid in scadenza/scaduto",
+            "numero": 99
+          },
+          {
+            "id": "adever",
+            "desc" : "Adeguata verifica in scadenza/scaduta",
+            "numero": 991
+          },
+          {
+            "id": "titoli",
+            "desc" : "Titoli in scadenza/scaduti",
+            "numero": 98
+          },
+          {
+            "id": "greylist",
+            "desc" : "Grey list",
+            "numero": 99
+          },
+          {
+            "id": "documenti",
+            "desc" : "Documenti scaduti",
+            "numero": 75
+          },
+          {
+            "id": "liquidita",
+            "desc" : "Situazione contabile",
+            "numero": 14
+          }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+.input-group {
+    .input-group-append {
+        margin-left: 0;
+        border: 0;
+        .icon {
+            display: block;
+            width: 2rem;
+            line-height: 38px;
+            text-align: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}

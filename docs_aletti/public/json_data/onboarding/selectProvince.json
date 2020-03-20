@@ -1,0 +1,16 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        "AG",
+        "AL",
+        "AN",
+        "AO",
+        "VR",
+        "VT",
+        "VV"
+    ]
+}

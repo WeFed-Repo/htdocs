@@ -1,0 +1,17 @@
+.react-bootstrap-table {
+    margin-bottom: 1rem;
+    .table {
+        margin-bottom: 0;
+    }
+    th {
+        font-weight: 600;
+        background-color: #eee;
+        .caret-4-desc, .caret-4-asc, .order-4 {
+            position: relative;
+            top: -2px;
+            &:before {
+                margin-left: 8px;
+            }
+        }
+    }
+}

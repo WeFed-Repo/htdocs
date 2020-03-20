@@ -1,0 +1,246 @@
+{
+  "widget": ["rischio", "controvalore","raccolta","agenda","alert","mp","preferiti","indici","news"],
+  "data" : {
+    "rischio": {
+      "timestamp" : 1288000800000,
+      "data" : [
+            {
+                "id": 1,
+                "tiporischio": "Mercato",
+                "ncli": 51,
+                "color": "#cd82ad"
+            },
+            {
+                "id": 2,
+                "tiporischio": "Liquidita'",
+                "ncli": 66,
+                "color": "#67b7dc"
+            },
+            {
+                "id": 3,
+                "tiporischio": "Credito",
+                "ncli": 29,
+                "color": "#81b65e"
+            }
+        ]
+    },
+
+      "raccolta":  {
+        "timestamp" : 1488000999999,
+        "data" : [
+          {
+            "id": 1,
+            "tipologia": "Amministrato",
+            "perc": 52,
+            "color": "#67b7dc"
+          },
+          {
+            "id": 2,
+            "tipologia": "Fondi e Sicav",
+            "perc": 23,
+            "color": "#80b65d"
+          },
+          {
+            "id": 3,
+            "tipologia": "Assicurativo",
+            "perc": 10,
+            "color": "#fdd400"
+          },
+          {
+            "id": 4,
+            "tipologia": "GPM",
+            "perc": 9,
+            "color": "#cd82ad"
+          },
+          {
+            "id": 5,
+            "tipologia": "Raccolta diretta",
+            "perc": 7,
+            "color": "#cc4748"
+          }
+        ]
+      },
+
+      "controvalore": {
+          "timestamp" : 1508900999999,
+          "data" : [
+          {
+          "id":1,
+          "intervallo": "<250.000",
+          "perc": 8,
+          "color": "#cc4748"
+          },
+          {
+            "id":2,
+            "intervallo": "250.000-500.000",
+            "perc": 45,
+            "color": "#80b65d"
+          },
+          {
+            "id":3,
+            "intervallo": "500.000-1.000.000",
+            "perc": 29,
+            "color": "#67b7dc"
+          },
+          {
+              "id":4,
+              "intervallo": ">1.000.000",
+              "perc": 18,
+              "color": "#cd82ad"
+          }
+        ]
+      },
+
+      "alert" : {
+          "data" : [
+            {
+              "desc" : "Mifid",
+              "numero": 99
+            },
+            {
+              "desc" : "Lorem ipsum dolor sit amet",
+              "numero": 991
+            },
+            {
+              "desc" : "Dolor consectetur sum dolor sit amet",
+              "numero": 98
+            },
+            {
+              "desc" : "Lorem ipsum dolor sit amet",
+              "numero": 99
+            },
+            {
+              "desc" : "Lorem ipsum dolor sit amet",
+              "numero": 111
+            }
+          ]
+      },
+
+      "mp" : {
+          "minus":99,
+          "plus":91
+      },
+
+      "agenda" : {
+          "data":[
+          {
+            "id":1,
+            "timestamp" : 1288000800000,
+            "idtipo": "rosso",
+            "titolo": "Riunione con Lorem dolor amet ipsum"
+          },
+          {
+            "id":2,
+            "timestamp" : 1288900800000,
+            "idtipo": "blu",
+            "titolo": "Riunione con Lorem dolor amet ipsum"
+          },
+          {
+            "id":3,
+            "timestamp" : 1281900800000,
+            "idtipo": "rosso",
+            "titolo": "Riunione con Lorem dolor amet ipsum"
+          }
+        ]
+      },
+
+      "preferiti" : {
+        "data":
+        [
+          {
+            "id":1,
+            "cliente": "Marianna Rossi Palmieri",
+            "controvalore": "999.999.999,99",
+            "saldo": "999.999.999,99",
+            "mkt": "999.999.999,99"
+          },{
+            "id":2,
+            "cliente": "Greta Bosoni Rossi",
+            "controvalore": "999.999.999,99",
+            "saldo": "999.999.999,99",
+            "mkt": "999.999.999,99"
+          },
+          {
+            "id":3,
+            "cliente": "Mario Verdi",
+            "controvalore": "999.999.999,99",
+            "saldo": "999.999.999,99",
+            "mkt": "999.999.999,99"
+          },
+          {
+            "id":4,
+            "cliente": "Gary Johnson",
+            "controvalore": "999.999.999,99",
+            "saldo": "999.999.999,99",
+            "mkt": "999.999.999,99"
+          },{
+            "id":5,
+            "cliente": "Ermes Rossi",
+            "controvalore": "999.999.999,99",
+            "saldo": "999.999.999,99",
+            "mkt": "999.999.999,99"
+          }
+          ]
+        },
+
+        "indici": {
+          "timestamp" :  1288900800000,
+          "data" : [
+            {
+              "id":"europa",
+              "mercato": "Europa",
+              "indice": 0.343
+            },
+            {
+              "id":"america",
+              "mercato": "America",
+              "indice": -0.3387432
+            },
+            {
+              "id":"asia",
+              "mercato": "Asia",
+              "indice": 0
+            }
+
+          ]
+        },
+
+        "news": {
+          "data":
+          [
+              {
+              "id": 1,
+              "titolo": "Lorem ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+              "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+              "timestamp": 1281900800000
+            },
+              {
+              "id": 2,
+              "titolo": "Ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+              "abstract": "Lorem amet consectetur adipiscing elit summa cum laude",
+            "timestamp": 1281900800000
+            },
+            {
+            "id": 3,
+            "titolo": "Lorem ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+            "abstract": "Ipsum lorem amet consectetur adipiscing elit summa cum laude",
+            "timestamp": 1281900800000
+            },
+            {
+            "id": 4,
+            "titolo": "Dolor sit amet lorem sit amet lorem sit amet lorem",
+            "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+            "timestamp": 1281900800000
+            },
+            {
+            "id": 5,
+            "titolo": "Ipsum dolor sit amet lorem sit amet lorem sit amet lorem",
+            "abstract": "Dolor ipsum lorem amet consectetur adipiscing elit summa cum laude",
+            "timestamp": 1281900800000
+            }
+
+          ]
+        }
+
+    }
+}

@@ -1,0 +1,167 @@
+@import "vars.scss";
+
+/* Classi generiche per tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto !important;
+
+    tr.dispari {
+        th, td {
+            background-color: #fafafa;
+        }
+    }
+
+    th, td {
+        border: solid 1px #ccc;
+        text-align: left;
+        padding: 5px 5px;
+        line-height: 22px;
+
+        &.left {
+            text-align: left;
+        }
+
+        &.right {
+            text-align: right;
+        }
+
+        &.center {
+            text-align: center;
+        }
+
+        &.withIco {
+            text-align: center;
+        }
+    }
+
+    th {
+        background-color: #eee;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 0 none;
+
+        &.column-group {
+            overflow: visible;
+            position: relative;
+            padding: 40px 10px 10px;
+
+            .colgroup {
+                position: absolute;
+                width: 100%;
+                overflow: visible;
+                height: 35px;
+                background: #dee2e6;
+                top: 0;
+                left: 0;
+                text-align: left;
+                padding: 0 10px;
+                color: #000;
+                line-height: 35px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    span.has-dot {
+        display: inline-block;
+        padding: 0 0 0 20px;
+        position: relative;
+
+        .dot {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: block;
+        }
+
+        .date {
+            clear: both;
+            font-size: 14px;
+            display: block;
+            color: #999;
+            font-style: italic;
+        }
+    }
+
+    span.table-link {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #000;
+
+        &:hover {
+            color: $color-primary
+        }
+    }
+
+    /* Oggetti speciali per le tabelle */
+    .indicatore {
+        display: inline-block;
+        background: #ccc;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+
+        &.negativo {
+            background-color: #00b800
+        }
+
+        &.positivo {
+            background-color: #ed1208
+        }
+    }
+
+    .icona-trend {
+        display: inline-block;
+        background: transparent;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        width: 0; 
+        height: 0; 
+
+        &.up {
+            border-bottom: 18px solid #00b800;
+        }
+
+        &.down {
+           border-top: 18px solid #ed1208;
+        }
+
+        &.equal {
+            width:18px;
+            height:18px;
+            border:none;
+            border-radius:50%;
+            background-color: #fc0;
+        }
+    }
+
+    span.date-full {
+        span {
+            clear: both;
+            display: inline-block;
+            white-space: nowrap
+        }
+
+        .time {
+            font-size: 13px;
+            font-style: italic
+        }
+    }
+}
+
+
+/* Dropdown del paginatore */
+.react-bootstrap-table-pagination {
+    margin-bottom: 15px;
+
+    .dropdown-menu {
+        top: auto;
+        bottom: 0;
+    }
+}

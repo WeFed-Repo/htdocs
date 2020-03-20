@@ -1,0 +1,224 @@
+{
+    "serverName": null,
+    "exceptionType": -1,
+    "exceptionCode": null,
+    "exceptionDesc": null,
+    "appointments": {
+        "2020/02/04": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk8AAA=",
+                "subject": "31312",
+                "body": "321321\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1580742371000,
+                "endDate": 1580742371000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": "321312",
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            }
+        ],
+        "2020/02/04": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk1AAA=",
+                "subject": "PROVA 12",
+                "body": "Emilia appuntamento\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1575729000000,
+                "endDate": 1575730800000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": "Milano City Life",
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            }
+        ],
+        "2020/02/05": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk6AAA=",
+                "subject": "APPUNTAMENTO PROVA ",
+                "body": "APPUNTAMENTO\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1576704600000,
+                "endDate": 1576706400000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": "MILANO",
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            }
+        ],
+        "2020/02/20": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk2AAA=",
+                "subject": "TEST INTERNET EXPLORER 11321312",
+                "body": "Nota\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1576857600000,
+                "endDate": 1576859400000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": null,
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            }
+        ],
+        "2020/02/20": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAESAACcGw6SiqpqR7dkMFKsCFnwAAAAAA0dAAA=",
+                "subject": "PROVA 35",
+                "body": "Emilia Task\r\n",
+                "category": null,
+                "priority": "Normal",
+                "startDate": 1577102400000,
+                "endDate": 1577102400000,
+                "tipoAppuntamento": "Task",
+                "status": "NotStarted",
+                "reminderMinutesBeforeStart": null,
+                "location": null,
+                "requiredAttendees": null,
+                "optionalAttendees": null,
+                "meeting": false
+            }
+        ],
+        "2020/02/23": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk7AAA=",
+                "subject": "PROVA MEETING",
+                "body": "PROVA 1\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1577178000000,
+                "endDate": 1577179800000,
+                "tipoAppuntamento": "Meeting",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": null,
+                "requiredAttendees": {
+                    "attendees": [
+                        {
+                            "mailAddress": "MARO@HOTMAIL.IT"
+                        }
+                    ]
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": true
+            },
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk3AAA=",
+                "subject": "PROVA5",
+                "body": "EMILIA\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1577203200000,
+                "endDate": 1577205000000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": "dddd",
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            },
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk5AAA=",
+                "subject": "PROVA",
+                "body": "EMILIA PROVA MEETING\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1577208600000,
+                "endDate": 1577210400000,
+                "tipoAppuntamento": "Meeting",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": null,
+                "requiredAttendees": {
+                    "attendees": [
+                        {
+                            "mailAddress": "EMILIA@HOTMAIL.IT"
+                        }
+                    ]
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": true
+            }
+        ],
+        "2020/02/23": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAENAACcGw6SiqpqR7dkMFKsCFnwAAAAAAk4AAA=",
+                "subject": "PROVA 8",
+                "body": "emilia\r\n",
+                "category": [],
+                "priority": "Normal",
+                "startDate": 1577376000000,
+                "endDate": 1577377800000,
+                "tipoAppuntamento": "Appointment",
+                "status": null,
+                "reminderMinutesBeforeStart": 15,
+                "location": "Milano",
+                "requiredAttendees": {
+                    "attendees": []
+                },
+                "optionalAttendees": {
+                    "attendees": []
+                },
+                "meeting": false
+            }
+        ],
+        "2019/12/31": [
+            {
+                "itemId": "AAMkADFmZmE3NTRhLTVmZjAtNGY3NC04NTg5LWYyY2FjMjBjNjBkMQBGAAAAAACPLTHR8bdXS6r4ppqKEa8CBwCcGw6SiqpqR7dkMFKsCFnwAAAAAAESAACcGw6SiqpqR7dkMFKsCFnwAAAAAA0eAAA=",
+                "subject": "PROVA TASK",
+                "body": "ULTIMO DELL'ANNO\r\n",
+                "category": null,
+                "priority": "Normal",
+                "startDate": 1577750400000,
+                "endDate": 1577750400000,
+                "tipoAppuntamento": "Task",
+                "status": "InProgress",
+                "reminderMinutesBeforeStart": null,
+                "location": null,
+                "requiredAttendees": null,
+                "optionalAttendees": null,
+                "meeting": false
+            }
+        ]
+    }
+}

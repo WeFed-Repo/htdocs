@@ -1,0 +1,92 @@
+@import 'styles/vars.scss';
+
+.default-collapse {
+    margin-bottom: 1.5rem;
+
+    .card-header {
+        position: relative;
+        min-height: 2.5rem;
+        height: auto;
+        padding-left: 2rem;
+        margin-bottom: 0;
+        line-height: 2.5rem;
+        background-color: #eeeeee;
+        cursor: pointer;
+
+        .no-select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid $color-gray;
+            background-color: transparent;
+        }
+
+        .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .nominativo {
+            padding-left: 1rem;
+            color: $color-primary;
+        }
+
+        .default-collapse-label {
+            display: block;
+        }
+    }
+
+    .icon-accordion_up {
+        display: none;
+    }
+
+    .icon-accordion_down {
+        display: block;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .default-collapse-wrap {
+        padding-top: 1.25rem;
+        padding-bottom: 1px;
+    }
+
+    &.parent .default-collapse-wrap {
+        padding-left: 2rem;
+    }
+
+    &.search-collapse .default-collapse-wrap {
+        padding-top: 0;
+        .search-form {
+            border-top: 0;
+            padding-top: 1.5rem;
+        }
+    }
+
+    &.default-collapse-open > .card-header {
+        .icon-accordion_up {
+            display: block;
+        }
+
+        .icon-accordion_down {
+            display: none;
+        }
+    }
+
+    &.default-collapse-disabled > .card-header {
+        color: $color-disabled;
+        cursor: not-allowed;
+    }
+
+    &.default-collapse-errors > .card-header {
+        color: $color-invalid;
+    }
+}

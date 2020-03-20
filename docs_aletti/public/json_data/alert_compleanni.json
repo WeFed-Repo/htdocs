@@ -1,0 +1,21 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "totali": {
+            "label": "COMPLEANNO",
+            "records": 1,
+            "colore": "da definire"
+        },
+        "risultati": [
+            {
+                "ndgCode": 485001,
+                "intestazRidottaDes": "LOMBARDINI FRANCESCA",
+                "nascitaDate": "18/04/2019"
+            }
+        ]
+    }
+}

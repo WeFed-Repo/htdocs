@@ -1,0 +1,26 @@
+{
+    "esito": {
+        "tipo": "OK"
+    },
+    "data": {
+      "timestamp" :  1288900800000,
+      "data" : [
+        {
+          "id":"europa",
+          "mercato": "Europa",
+          "indice": 0.343
+        },
+        {
+          "id":"america",
+          "mercato": "America",
+          "indice": -0.3387432
+        },
+        {
+          "id":"asia",
+          "mercato": "Asia",
+          "indice": 0
+        }
+
+      ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+        },
+    "results": [
+    {
+        "promotore": "ES05502",
+        "type": "WIDGET",
+        "key": "ORDER",
+        "value": "raccolta,rischio,controvalore,agenda,alert,mp,preferiti,indici,news,proposte",
+        "dataInserimento": 1548948507000,
+        "dataAggiornamento": 1548948507000,
+        "filterTypesList": null
+    }
+    ]
+}

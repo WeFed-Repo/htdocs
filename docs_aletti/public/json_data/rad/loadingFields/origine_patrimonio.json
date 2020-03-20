@@ -1,0 +1,35 @@
+{
+    "esito": {
+        "type": "OK"
+    },
+    "results": [
+        {
+            "code": "1",
+            "description": "Redditi di lavoro autonomo"
+        },
+        {
+            "code": "2",
+            "description": "Redditi di lavoro dipendente"
+        },
+        {
+            "code": "3",
+            "description": "Rendite fondiarie"
+        },
+        {
+            "code": "4",
+            "description": "Redditi finanziari"
+        },
+        {
+            "code": "5",
+            "description": "Redditi d'impresa"
+        },
+        {
+            "code": "6",
+            "description": "Lascito\\eredità\\donazione"
+        },
+        {
+            "code": "7",
+            "description": "Altro/redditi diversi (plusvalenze, premi, lotteria)"
+        }
+    ]
+}

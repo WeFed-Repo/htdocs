@@ -1,0 +1,151 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "DOMINI_INTERESSI": [
+            {
+                "codice": "ABBIGL",
+                "descrizione": "Abbigliamento"
+            },
+            {
+                "codice": "ACQUASPORT",
+                "descrizione": "Sport Acquatici"
+            },
+            {
+                "codice": "ARCHIT",
+                "descrizione": "Architettura"
+            },
+            {
+                "codice": "ARREDAM",
+                "descrizione": "Arredamento"
+            },
+            {
+                "codice": "ARTE",
+                "descrizione": "Arte"
+            },
+            {
+                "codice": "AUTOMOTO",
+                "descrizione": "Auto e Moto"
+            },
+            {
+                "codice": "BASKET",
+                "descrizione": "Pallacanestro"
+            },
+            {
+                "codice": "CALCIO",
+                "descrizione": "Calcio"
+            },
+            {
+                "codice": "CICLISMO",
+                "descrizione": "Ciclismo"
+            },
+            {
+                "codice": "CINEMA",
+                "descrizione": "Cinema"
+            },
+            {
+                "codice": "CORSA",
+                "descrizione": "Corsa"
+            },
+            {
+                "codice": "CUCINA",
+                "descrizione": "Cucina"
+            },
+            {
+                "codice": "CULTURA",
+                "descrizione": "Cultura"
+            },
+            {
+                "codice": "DESIGN",
+                "descrizione": "Design"
+            },
+            {
+                "codice": "ENOLOGIA",
+                "descrizione": "Enologia"
+            },
+            {
+                "codice": "EQUITAZI",
+                "descrizione": "Equitazione"
+            },
+            {
+                "codice": "FINANZA",
+                "descrizione": "Finanza"
+            },
+            {
+                "codice": "FITNESS",
+                "descrizione": "Fitness e palestra"
+            },
+            {
+                "codice": "FOTOGRAF",
+                "descrizione": "Fotografia"
+            },
+            {
+                "codice": "GIARDIN",
+                "descrizione": "Giardinaggio"
+            },
+            {
+                "codice": "GIOIELLI",
+                "descrizione": "Gioielli"
+            },
+            {
+                "codice": "GOLF",
+                "descrizione": "Golf"
+            },
+            {
+                "codice": "LETTURA",
+                "descrizione": "Lettura"
+            },
+            {
+                "codice": "MUSICA",
+                "descrizione": "Musica"
+            },
+            {
+                "codice": "NAUTICA",
+                "descrizione": "Nautica"
+            },
+            {
+                "codice": "NUOTO",
+                "descrizione": "Nuoto"
+            },
+            {
+                "codice": "OROLOGI",
+                "descrizione": "Orologi"
+            },
+            {
+                "codice": "SCI",
+                "descrizione": "Sci"
+            },
+            {
+                "codice": "TECNOL",
+                "descrizione": "Tecnologia"
+            },
+            {
+                "codice": "TREKKING",
+                "descrizione": "Trekking"
+            },
+            {
+                "codice": "VIAGGI",
+                "descrizione": "Viaggi"
+            },
+            {
+                "codice": "VOLLEY",
+                "descrizione": "Pallavolo"
+            },
+            {
+                "codice": "VOLONTAR",
+                "descrizione": "Volontariato"
+            },
+            {
+                "codice": "WELNESS",
+                "descrizione": "Salute e cura della persona"
+            },
+            {
+                "codice": "YOGA",
+                "descrizione": "Yoga"
+            }
+        ]
+    }
+}

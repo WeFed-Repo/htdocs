@@ -1,0 +1,46 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "totali": {
+            "label": "TITOLI_SCADENZA",
+            "records": 1,
+            "colore": ""
+        },
+        "risultati": [
+            {
+                "codicePF": "ES05502",
+                "cliente": "BERNARDELLI GIOVANNI GINO ILVA GIUSEPPINA",
+                "ndgAletti": "0310200007063962",
+                "quantita": 21000,
+                "controvaloreCarico": null,
+                "tipo_contratto": "PA_03102",
+                "cod_dossier": "03102071320070217608000",
+                "descrizione_dossier": "Deposito Amministrato: 03102-07132-007-0217608-000",
+                "cod_area_finanza": "4054960",
+                "isin_code": "XS0124290296",
+                "titolo": "CIRIO HOLDING LUX. SA EUR 01/04 6,25% ***DEFAULTED***",
+                "divisa_strumento": "EUR",
+                "codice_tipo_strumento": "7",
+                "descrizione_tipo_strumento": "OBBLIGAZIONI PLAIN VANILLA",
+                "codice_tipo_dossier": "DTF",
+                "descrizione_tipo_dossier": "Depositi Titoli",
+                "codice_ente_emittente": "031020000011953",
+                "descrizione_ente_emittente": "CIRIO HOLDING LUX SA",
+                "controvalore_divisa": null,
+                "controvalore_eur": null,
+                "prezzo_medio_carico": null,
+                "prezzo_mercato": 0.0001,
+                "cambio_medio_carico": null,
+                "cambio_mercato": 1,
+                "var_plus_minus": null,     
+                "plus_minus_eur": null,
+                "data_scadenza": "20190216",
+                "data_riferimento": "20190208"
+            }
+        ]
+    }
+}

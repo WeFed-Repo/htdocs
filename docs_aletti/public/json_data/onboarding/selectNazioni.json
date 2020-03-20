@@ -1,0 +1,39 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        {
+            "code": 238,
+            "description": "ABU DHABI",
+            "flagTin": "N",
+            "codiceIsoAlpha2": "AE"
+        },
+        {
+            "code": 1,
+            "description": "ITALIA",
+            "flagTin": "N",
+            "codiceIsoAlpha2": "IT "
+        },
+        {
+            "code": 2,
+            "description": "AFGHANISTAN",
+            "flagTin": "N",
+            "codiceIsoAlpha2": "AF "
+        },
+        {
+            "code": 206,
+            "description": "AFRICA DEL SUD OVEST - NAMIBIA",
+            "flagTin": "N",
+            "codiceIsoAlpha2": "NA "
+        },
+        {
+            "code": 246,
+            "description": "AFRICA SPAGNOLA",
+            "flagTin": "N",
+            "codiceIsoAlpha2": "AS"
+        }
+    ]
+}

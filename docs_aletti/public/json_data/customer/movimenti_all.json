@@ -1,0 +1,140 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "listaMovimenti": [
+            {
+                "dataValuta": "15/11/2019",
+                "dataContabile": "17/11/2019",
+                "divisa": "EUR",
+                "importo": 600,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "22/11/2019",
+                "dataContabile": "21/11/2019",
+                "divisa": "USD",
+                "importo": 402.57,
+                "codCausale": "800",
+                "enteGenerante": null,
+                "descrizione": "TITOLI ESTERI",
+                "idMovimento": null,
+                "tipoAddebito": null,
+                "descrizioneEstesa": "TITOLI ESTERI",
+                "numOperazione": 660,
+                "chiaveMov": "660"
+            },
+            {
+                "dataValuta": "15/11/2019",
+                "dataContabile": "17/11/2019",
+                "divisa": "EUR",
+                "importo": -300,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito Sepa",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "14/11/2019",
+                "dataContabile": "15/11/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "13/11/2019",
+                "dataContabile": "15/11/2019",
+                "divisa": "EUR",
+                "importo": -400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Pagamento utenze",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "05/11/2019",
+                "dataContabile": "07/11/2019",
+                "divisa": "EUR",
+                "importo": 600,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "05/11/2019",
+                "dataContabile": "07/11/2019",
+                "divisa": "EUR",
+                "importo": -300,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito Sepa",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "04/11/2019",
+                "dataContabile": "05/11/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "04/11/2019",
+                "dataContabile": "05/11/2019",
+                "divisa": "EUR",
+                "importo": 400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "04/11/2019",
+                "dataContabile": "05/11/2019",
+                "divisa": "EUR",
+                "importo": -200,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Addebito bonifico",
+                "idMovimento": null,
+                "tipoAddebito": null
+            },
+            {
+                "dataValuta": "03/11/2019",
+                "dataContabile": "05/11/2019",
+                "divisa": "EUR",
+                "importo": 400,
+                "codCausale": "AAA",
+                "enteGenerante": "Ente",
+                "descrizione": "Accredito stipendio",
+                "idMovimento": null,
+                "tipoAddebito": null
+            }
+        ],
+        "numMovLista": 1,
+        "filiale": "UNIT MILANO MERCANTI",
+        "intestatario": null,
+        "saldoContabile": 4492.91,
+        "divisa" :"EUR"
+    }
+}

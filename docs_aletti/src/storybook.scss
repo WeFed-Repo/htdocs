@@ -1,0 +1,13 @@
+@import 'styles/base.scss';
+
+html, body, #root {
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#root {
+    padding: 10px;
+}

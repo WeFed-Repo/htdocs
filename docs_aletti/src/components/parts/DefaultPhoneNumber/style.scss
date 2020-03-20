@@ -1,0 +1,9 @@
+@import "styles/vars.scss";
+
+.defaultphonenumber-prefix {
+    border-right: 1px solid $color-gray;
+}
+.defaultphonenumber-number {
+    border-left: 1px solid $color-gray;
+    padding-left: 10px;
+}

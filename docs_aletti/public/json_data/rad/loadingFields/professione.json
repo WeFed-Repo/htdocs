@@ -1,0 +1,35 @@
+{
+    "esito": {
+        "type": "OK"
+    },
+    "results": [
+        {
+            "code": "1",
+            "description": "Imprenditore"
+        },
+        {
+            "code": "2",
+            "description": "Lavoratore autonomo"
+        },
+        {
+            "code": "3",
+            "description": "Libero professionista"
+        },
+        {
+            "code": "4",
+            "description": "Lavoratore dipendente"
+        },
+        {
+            "code": "5",
+            "description": "Pensionato"
+        },
+        {
+            "code": "6",
+            "description": "Non occupato"
+        },
+        {
+            "code": "7",
+            "description": "Soggetto apicale"
+        }
+    ]
+}

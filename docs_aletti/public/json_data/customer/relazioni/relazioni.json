@@ -1,0 +1,29 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        {
+            "id": 1,
+            "promotore": "ES05495",
+            "ndg": "0310200007167262",
+            "tipoRelazione": null,
+            "nominativo": null,
+            "descrizione": "Parente di Pietro",
+            "dataInserimento": 1573663193000,
+            "dataAggiornamento": 1573663193000
+        },
+        {
+            "id": 2,
+            "promotore": "ES05495",
+            "ndg": "0310200007167262",
+            "tipoRelazione": null,
+            "nominativo": null,
+            "descrizione": "Mamma di Gianlucaaaaa",
+            "dataInserimento": 1573663329000,
+            "dataAggiornamento": 1573663432000
+        }
+    ]
+}

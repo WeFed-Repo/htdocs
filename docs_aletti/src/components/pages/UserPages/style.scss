@@ -1,0 +1,83 @@
+.personal-data-box {
+    .info-name {
+        font-weight: bold;
+        clear: both;
+        width: 100%;
+        display: block;
+    }
+
+    .info-date {
+        font-size: 14px;
+        font-style: italic;
+        clear: both;
+        width: 100%;
+        display: block;
+    }
+
+    .right {
+        float: right
+    }
+
+    .col-info {
+        padding-bottom: 20px;
+        border-right: 1px solid #ccc
+    }
+
+}
+
+.documenti-list {
+    padding: 0;
+
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: #000;
+
+            span:hover {
+                text-decoration: underline;
+                color: #21557e;
+            }
+        }
+
+        i {
+            text-decoration: none;
+            padding-right: 10px;
+        }
+    }
+}
+
+.link-list {
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+            text-decoration: underline;
+            color: #21557e;
+        }
+    }
+}
+
+/* Biglietto da visita */
+#logo {
+    max-width: 379px;
+}
+
+@media print {
+    #bigliettoModal {
+        width: 450px;
+        margin-top: 5rem;
+
+        .modal-content {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 1rem;
+        }
+        .modal-header {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,336 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": ""
+    },
+    "results": {
+        "int2disabled": false,
+        "bar": {
+            "list": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "steps": [
+            {
+                "privacy_consegnata": true,
+                "promotore": "852 - Mario Testa",
+                "num_intestatari": "1",
+                "promozione": "",
+                "filiale": "37121 Verona - Via Zambelli 26",
+                "intestatari": [
+                    {
+                        "nome": "Anna",
+                        "cognome": "Rossi",
+                        "data_nascita": 473382000000,
+                        "sesso": "F",
+                        "codice_fiscale": "RSSNNA85A41F205T",
+                        "num_immagini_cf": "1",
+                        "immagine_cf": "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",
+                        "immagine_cf_fronte": "",
+                        "immagine_cf_retro": "",
+                        "email": "aa@aa.it",
+                        "prefisso": "0039",
+                        "numero": "123456789",
+                        "operatore": "TRE",
+                        "privacy_1": "1",
+                        "privacy_2": "1",
+                        "privacy_3": "1",
+                        "privacy_4": "1",
+                        "privacy_5": "1"
+                    },
+                    {
+                        "nome": "Antonio",
+                        "cognome": "Bianchi",
+                        "data_nascita": 315529200000,
+                        "sesso": "M",
+                        "codice_fiscale": "BNCNTN80A01F205X",
+                        "num_immagini_cf": "1",
+                        "immagine_cf": "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",
+                        "immagine_cf_fronte": "",
+                        "immagine_cf_retro": "",
+                        "email": "bb@bb.it",
+                        "prefisso": "0039",
+                        "numero": "123789456",
+                        "operatore": "TRE",
+                        "privacy_1": "1",
+                        "privacy_2": "1",
+                        "privacy_3": "1",
+                        "privacy_4": "1",
+                        "privacy_5": "1"
+                    }
+                ]
+            },
+            {
+                "intestatari": [
+                    {
+                        "cittadinanza": "86|ITALIA",
+                        "paese_nascita": "86|ITALIA",
+                        "provincia_nascita": "MI",
+                        "comune_nascita": "MILANO",
+                        "residenza_1": "",
+                        "tin_1": "",
+                        "residenza_2": "",
+                        "tin_2": "",
+                        "residenza_3": "",
+                        "tin_3": "",
+                        "num_immagini_tin": "1",
+                        "immagine_tin": "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",
+                        "immagine_tin_fronte": "",
+                        "immagine_tin_retro": "",
+                        "green_card": "0",
+                        "soggiorno_usa": "0",
+                        "tipo_documento": "01|Carta d'identità (cartacea, elettronica, rinnovata)",
+                        "numero_documento": "AA12345678",
+                        "paese_rilascio": "86|ITALIA",
+                        "provincia_rilascio": "MI",
+                        "comune_rilascio": "MILANO",
+                        "data_rilascio": 1262300400000,
+                        "data_scadenza": 1577833200000,
+                        "immagine_firma": "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",
+                        "num_immagini_documento": "1",
+                        "immagine_documento": "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",
+                        "immagine_documento_fronte": "",
+                        "immagine_documento_retro": "",
+                        "tipo_indirizzo_residenza": "Via",
+                        "nome_indirizzo_residenza": "Dante",
+                        "numero_indirizzo_residenza": "1",
+                        "provincia_residenza": "MI",
+                        "comune_residenza": "MILANO",
+                        "cap_residenza": "20100",
+                        "tipo_indirizzo_domicilio": "",
+                        "nome_indirizzo_domicilio": "",
+                        "numero_indirizzo_domicilio": "",
+                        "provincia_domicilio": "",
+                        "comune_domicilio": "",
+                        "cap_domicilio": "",
+                        "tipo_indirizzo_corrispondenza": "",
+                        "nome_indirizzo_corrispondenza": "",
+                        "numero_indirizzo_corrispondenza": "",
+                        "provincia_corrispondenza": "",
+                        "comune_corrispondenza": "",
+                        "cap_corrispondenza": "",
+                        "tipo_indirizzo_cai": "",
+                        "nome_indirizzo_cai": "",
+                        "numero_indirizzo_cai": "",
+                        "provincia_cai": "",
+                        "comune_cai": "",
+                        "cap_cai": "",
+                        "prefisso_casa": "0039",
+                        "numero_casa": "446564647",
+                        "prefisso_ufficio": "0039",
+                        "numero_ufficio": "815251389",
+                        "titolo_studio": "diploma|Diploma"
+                    },
+                    {
+                        "cittadinanza": "86|ITALIA",
+                        "paese_nascita": "86|ITALIA",
+                        "provincia_nascita": "MI",
+                        "comune_nascita": "MILANO",
+                        "residenza_1": "",
+                        "tin_1": "",
+                        "residenza_2": "",
+                        "tin_2": "",
+                        "residenza_3": "",
+                        "tin_3": "",
+                        "num_immagini_tin": "1",
+                        "immagine_tin": "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",
+                        "immagine_tin_fronte": "",
+                        "immagine_tin_retro": "",
+                        "green_card": "0",
+                        "soggiorno_usa": "0",
+                        "tipo_documento": "01|Carta d'identità (cartacea, elettronica, rinnovata)",
+                        "numero_documento": "BB12345678",
+                        "paese_rilascio": "86|ITALIA",
+                        "provincia_rilascio": "MI",
+                        "comune_rilascio": "MILANO",
+                        "data_rilascio": 1262300400000,
+                        "data_scadenza": 1577833200000,
+                        "immagine_firma": "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",
+                        "num_immagini_documento": "1",
+                        "immagine_documento": "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",
+                        "immagine_documento_fronte": "",
+                        "immagine_documento_retro": "",
+                        "tipo_indirizzo_residenza": "Via",
+                        "nome_indirizzo_residenza": "Nazionale",
+                        "numero_indirizzo_residenza": "1",
+                        "provincia_residenza": "MI",
+                        "comune_residenza": "MILANO",
+                        "cap_residenza": "00100",
+                        "tipo_indirizzo_domicilio": "",
+                        "nome_indirizzo_domicilio": "",
+                        "numero_indirizzo_domicilio": "",
+                        "provincia_domicilio": "",
+                        "comune_domicilio": "",
+                        "cap_domicilio": "",
+                        "tipo_indirizzo_corrispondenza": "",
+                        "nome_indirizzo_corrispondenza": "",
+                        "numero_indirizzo_corrispondenza": "",
+                        "presso_corrispondenza": "",
+                        "provincia_corrispondenza": "",
+                        "comune_corrispondenza": "",
+                        "cap_corrispondenza": "",
+                        "tipo_indirizzo_cai": "",
+                        "nome_indirizzo_cai": "",
+                        "numero_indirizzo_cai": "",
+                        "provincia_cai": "",
+                        "comune_cai": "",
+                        "cap_cai": "",
+                        "presso_cai": "",
+                        "prefisso_casa": "0039",
+                        "numero_casa": "556564647",
+                        "prefisso_ufficio": "0039",
+                        "numero_ufficio": "675251389",
+                        "titolo_studio": "diploma|Diploma"
+                    }
+                ]
+            },
+            {
+                "deposito_titoli": true,
+                "regime_fiscale": "amministrativo",
+                "tipo_commissioni": "variabile",
+                "informativa_mifid_consegnata": true
+            },
+            {
+                "autorizzazione_anatocismo": "1",
+                "intestatari": [
+                    {
+                        "titolare": true,
+                        "politicamente_esposto": "0",
+                        "scopo_rapporto_cc": "9|Risparmio",
+                        "scopo_rapporto_dt": "10|Finanziamento",
+                        "professione": "2|Lavoratore autonomo",
+                        "tipo_attivita_economica": "991|Professioni tecnico/scientifiche (architetti, ingegneri, chimici, biologi, agronomi, periti, geometri, ecc.)",
+                        "stato_svolgimento": "86|ITALIA",
+                        "provincia_svolgimento": "MI",
+                        "origine_patrimonio": "1|Redditi di lavoro autonomo",
+                        "patrimonio_netto": "4|Da 40.001  a 75.000",
+                        "note_patrimonio": "",
+                        "reddito_annuo": "4|Da 40.001  a 75.000",
+                        "note_reddito": "",
+                        "seconda_cittadinanza": ""
+                    },
+                    {
+                        "titolare": true,
+                        "politicamente_esposto": "0",
+                        "scopo_rapporto_cc": "9|Risparmio",
+                        "scopo_rapporto_dt": "10|Finanziamento",
+                        "professione": "2|Lavoratore autonomo",
+                        "tipo_attivita_economica": "991|Professioni tecnico/scientifiche (architetti, ingegneri, chimici, biologi, agronomi, periti, geometri, ecc.)",
+                        "stato_svolgimento": "86|ITALIA",
+                        "provincia_svolgimento": "MI",
+                        "origine_patrimonio": "1|Redditi di lavoro autonomo",
+                        "patrimonio_netto": "4|Da 40.001  a 75.000",
+                        "note_patrimonio": "",
+                        "reddito_annuo": "4|Da 40.001  a 75.000",
+                        "note_reddito": "",
+                        "seconda_cittadinanza": ""
+                    }
+                ]
+            },
+            {
+                "intestatari": [
+                    {
+                        "verifica_cellulare": false,
+                        "verifica_email": false
+                    },
+                    {
+                        "verifica_cellulare": true,
+                        "verifica_email": true
+                    }
+                ]
+            },
+            {
+                "intestatari": [
+                    {
+                        "identita_accertata": ""
+                    },
+                    {
+                        "identita_accertata": ""
+                    }
+                ]
+            },
+            {
+                "intestatari": [
+                    {
+                        "nome": "Giovanni",
+                        "cognome": "Cosmi",
+                        "data_nascita": "01-01-1980",
+                        "comune_nascita": "MILANO",
+                        "tipo_indirizzo_residenza": "CORSO",
+                        "nome_indirizzo_residenza": "MAGENTA",
+                        "numero_indirizzo_residenza": "1",
+                        "provincia_residenza": "MILANO",
+                        "comune_residenza": "MILANO",
+                        "cond_generali": "",
+                        "disposizioni": "",
+                        "doc_feq": false,
+                        "doc_pec": false,
+                        "cond_feq": "",
+                        "cond_pec": "",
+                        "info_precontrattuale_cc": "",
+                        "info_precontrattuale_dt": "",
+                        "info_precontrattuale_si": "",
+                        "doc_privacy": "",
+                        "doc_antiriciclaggio": "",
+                        "doc_cond_econ": "",
+                        "doc_recesso": "",
+                        "doc_fatca": "",
+                        "doc_dt": "",
+                        "codice_otp": ""
+                    },
+                    {
+                        "nome": "Giovanni",
+                        "cognome": "Cosmi",
+                        "data_nascita": "01-01-1980",
+                        "comune_nascita": "MILANO",
+                        "tipo_indirizzo_residenza": "CORSO",
+                        "nome_indirizzo_residenza": "MAGENTA",
+                        "numero_indirizzo_residenza": "1",
+                        "provincia_residenza": "MILANO",
+                        "comune_residenza": "MILANO",
+                        "cond_generali": "",
+                        "disposizioni": "",
+                        "doc_feq": false,
+                        "doc_pec": false,
+                        "cond_feq": "",
+                        "cond_pec": "",
+                        "info_precontrattuale_cc": "",
+                        "info_precontrattuale_dt": "",
+                        "info_precontrattuale_si": "",
+                        "doc_privacy": "",
+                        "doc_antiriciclaggio": "",
+                        "doc_cond_econ": "",
+                        "doc_recesso": "",
+                        "doc_fatca": "",
+                        "doc_dt": "",
+                        "codice_otp": ""
+                    }
+                ]
+            },
+            {
+                "intestatari": [
+                    {
+                        "comportamento": "",
+                        "note": "",
+                        "codice_pin": "",
+                        "codice_otp_2": ""
+                    },
+                    {
+                        "comportamento": "",
+                        "note": "",
+                        "codice_pin": "",
+                        "codice_otp_2": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": [
+        {
+            "dataRiferimento": "22/11/2019",
+            "tipologia": "MB",
+            "importo": 31.96,
+            "linkPdf": "https://promotorisvi7web.webank.local/promotori/dashboard/rest/instadoc/getPdf/W49J6byAn55OPlS7LfBHMsKeJj48C5NOsFPlleap7bSmXbfuHpnqpJvNr8OXUpGXQEJ81QYe1Q==/0",
+            "descrModulo": "Bonifico: ricevuta per beneficiario"
+        },
+        {
+            "dataRiferimento": "29/10/2019",
+            "tipologia": "MB",
+            "importo": 31.59,
+            "linkPdf": "https://promotorisvi7web.webank.local/promotori/dashboard/rest/instadoc/getPdf/W49J6byAn55OPlS7LfBHMsKeJmttXZcc4wTnleKo77SmXbDrRZmx9Zefr8XBXpvBEE91hQgdhg==/1",
+            "descrModulo": "Bonifico: ricevuta per beneficiario"
+        },
+        {
+            "dataRiferimento": "29/10/2019",
+            "tipologia": "MB",
+            "importo": null,
+            "linkPdf": "https://promotorisvi7web.webank.local/promotori/dashboard/rest/instadoc/getPdf/W49J6byAn55OPlS7LfBHMsKeJmttXZcc4wTnleKo77SmXbDrRZmx9Zefr8XBXpvBEE91hQgdhg==/1",
+            "descrModulo": "Documenti di Sintesi e Proposte di modifiche unilaterali"
+        }
+    ]
+}

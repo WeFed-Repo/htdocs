@@ -1,0 +1,263 @@
+h1 {
+    .btn.preferito {top: -3px; position:relative}
+
+}
+
+.scheda {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+
+    .data {
+        position: absolute;
+        width: 120px;
+        color: #999;
+        padding-top: 0
+    }
+
+    .desc {
+        display: block;
+        width: auto;
+        padding: 0 0 0 130px
+    }
+}
+
+.nav-btn-link {
+    border:solid 1px #ccc;
+    padding:10px 20px;
+    margin:10px 15px 10px 0;
+    display:inline-block; 
+    border-radius:5px; 
+    background:#ddd;
+
+    &:hover {
+        opacity:0.8;
+        color:inherit;
+        text-decoration:none;
+    }
+}
+
+.cloud-box {
+    display: block;
+
+    .cloud-arg {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        max-width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: solid 1px #ddd;
+        margin: 0 10px 0 0;
+        padding: 0 10px;
+        background: #eee;
+        border-radius: 5px;
+        white-space: nowrap;
+
+        &.editable {
+            background-color: #ddd;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8
+            }
+        }
+
+    }
+
+    .cloud-insert {
+        background: #21557e;
+        height: 32px;
+        display: inline-block;
+        color: #fff;
+        font-size: 25px;
+        line-height: 29px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        width: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+
+        &::before {
+            content: "+"
+        }
+    }
+}
+
+.user-widget {
+    min-height: 350px;
+
+    .scroller {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+.donutchart {
+    margin-bottom: 20px
+}
+
+.btn-console {
+    margin-bottom: 20px
+}
+
+.output-with-icon {
+    position: relative;
+
+    p {
+        float: left;
+        width: auto;
+    }
+
+    .ico-btn {
+        display: inline-block;
+        margin: 10px 0 0 20px;
+        color: #21557e;
+        cursor: pointer;
+
+        i {
+            font-size: 30px;
+            line-height: 16px;
+        }
+    }
+}
+
+.bordered-block-select {
+    border: solid 1px #ccc;
+    margin-bottom: 20px;
+
+    .bordered-block-select-block {
+        background: #ccc;
+        padding: 25px 15px 0;
+
+        .form-group {
+            padding-top: 0;
+
+            label {
+                width: auto;
+                float: left;
+                clear: none;
+                position: relative;
+                color: #fff;
+                text-transform: uppercase;
+                margin-right: 10px;
+                line-height: 37px;
+            }
+
+            select {
+                width: auto;
+                float: left;
+                clear: none;
+                min-width: 100px;
+                padding: 0 30px 0 10px
+            }
+        }
+
+    }
+
+    .bordered-block-select-cont {
+        padding: 15px
+    }
+
+    &.no-border {
+        border-color: transparent
+    }
+}
+
+.relazioni {
+    .noDisp {
+        text-align: center;
+        background: #eee;
+        line-height: 20px;
+        padding: 30px;
+        color: #aaa;
+        min-height: 0;
+        height: auto
+    }
+
+    h2 {
+        border-bottom: solid 1px #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 25px
+    }
+}
+
+.cloud-config-wrap {
+    width: 100%;
+    display: inline-block;
+    clear: both;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 10px
+}
+
+.cloud-radio-selector {
+    float: left;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+
+    &.selected {
+        background: #ddd
+    }
+}
+
+.alert-is-birthday {
+    background-color: #e5ecca;
+
+    .h2 {
+        border-bottom: 1px solid #21557e;
+    }
+}
+
+.alert-near-birthday {
+    background-color: #fbe5a3;
+
+    .h2 {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.carousel-slide.slide-alert {
+    min-height: 80px;
+    text-align: center;
+
+    .data {
+        font-size: 12px;
+        color: #666
+    }
+
+    .description {
+        font-weight: bold
+    }
+
+}
+
+.results {
+    .results-content {
+        position: relative;
+        min-height: 530px;
+    }
+
+    .icon-check-ok_table {
+        color: #80ff80;
+    }
+
+    .icon-error_table {
+        color: #ff8080;
+    }
+
+    .date {
+        white-space: nowrap;
+    }
+
+    .selected {
+        background-color: #ccc;
+    }
+}
+
+.note-nascita {color:#666;font-style:italic;}

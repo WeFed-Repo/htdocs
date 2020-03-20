@@ -1,0 +1,27 @@
+{
+    "esito": {
+        "type": "OK"
+    },
+    "results": [
+        {
+            "code": "9",
+            "description": "Risparmio"
+        },
+        {
+            "code": "10",
+            "description": "Finanziamento"
+        },
+        {
+            "code": "11",
+            "description": "Investimento"
+        },
+        {
+            "code": "12",
+            "description": "Gestione necessita familiari correnti"
+        },
+        {
+            "code": "13",
+            "description": "Servizi vari"
+        }
+    ]
+}

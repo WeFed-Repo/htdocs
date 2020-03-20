@@ -1,0 +1,234 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "id": 24,
+        "dataInserimento": 1581516903000,
+        "dataUltimoAggiornamento": 1581517017000,
+        "stato": "BOZZA",
+        "provenienza": "PROMOTORE",
+        "intestazione": "PIETRO BINI , CLAUDIO ROSSI",
+        "numIntestatari": 2,
+        "ordineIntestatari": "10",
+        "intestCorrente": 0,
+        "promotore": "ES05495",
+        "expirationDate": 1589282103000,
+        "sessionFirmeBlob": {
+            "idMifid": 1,
+            "informativaMifid": true,
+            "depositoIncluso": true
+        },
+        "anagraficaBlob": {
+            "privacyletta": true,
+            "filiale": "via dei pp 7",
+            "intestatari": {
+                "0": {
+                    "nome": "PIETRO",
+                    "cognome": "BINI",
+                    "nascita": 312379200000,
+                    "sesso": "M",
+                    "codiceFiscale": "BNIPTR79S25E625J",
+                    "imgCodFiscale": {
+                        "idDoc": 1,
+                        "codTipoDocumento": "CF"
+                    },
+                    "email": "pietro.bini@gmail.com",
+                    "prefisso": "39",
+                    "telefono": "1233336789",
+                    "operatore": "TIM",
+                    "listPrivacy": [
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_1",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_2",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_3",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_4",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_5",
+                            "consenso": true
+                        }
+                    ],
+                    "paeseNascita": "89",
+                    "provinciaNascita": "LI",
+                    "cittadinanza": "89",
+                    "comuneNascita": "Livorno",
+                    "imgFirma": {
+                        "idDoc": 5,
+                        "codTipoDocumento": "FRM"
+                    },
+                    "listResidenzeFiscale": [
+                        {
+                            "codiceUic": 266,
+                            "tin": "",
+                            "descrizione": "ARMENIA",
+                            "imgTin": null
+                        },
+                        {
+                            "codiceUic": 6,
+                            "tin": "4444",
+                            "descrizione": "ARGENTINA",
+                            "imgTin": [
+                                {
+                                    "idDoc": 8,
+                                    "codTipoDocumento": "TIN"
+                                }
+                            ]
+                        }
+                    ],
+                    "codTipoDocumento": "01",
+                    "numDocumento": "AN678",
+                    "dataRilascioRinnovo": 1581422400000,
+                    "dataScadenza": 1656806400000,
+                    "paeseRilascio": "Italia",
+                    "provinciaRilascio": "LI",
+                    "comuneRilascio": "VADA",
+                    "imgDocIdentita": {
+                        "idDoc": 4,
+                        "codTipoDocumento": "01"
+                    },
+                    "tipoIndirizzoResidenza": "Via",
+                    "indirizzoResidenza": "via fiordalisio",
+                    "numResidenza": "4",
+                    "provinciaResidenza": "MI",
+                    "comuneResidenza": "MI",
+                    "capResidenza": "20146",
+                    "tipoIndirizzoCAI": "Via",
+                    "indirizzoCAI": "via dei cai",
+                    "numCAI": "88",
+                    "provinciaCAI": "LU",
+                    "comuneCAI": "LU",
+                    "capCAI": "43212",
+                    "tipoIndirizzoDomicilio": "Viale",
+                    "indirizzoDomicilio": "via dei pini",
+                    "numDomicilio": "49",
+                    "provinciaDomicilio": "LU",
+                    "comuneDomicilio": "LU",
+                    "capDomicilio": "6789",
+                    "tipoIndirizzoCorrisp": "Piazza",
+                    "indirizzoCorrisp": "via dei corrisp",
+                    "numCorrisp": "99",
+                    "provinciaCorrisp": "PI",
+                    "comuneCorrisp": "PI",
+                    "capCorrisp": "43212",
+                    "prefissoFissoCasa": "89",
+                    "numeroFissoCasa": "78979",
+                    "prefissoFissoUfficio": "45",
+                    "numeroFissoUfficio": "12123",
+                    "codTitoloStudio": "LicenzaMedia"
+                },
+                "1": {
+                    "nome": "CLAUDIO",
+                    "cognome": "ROSSI",
+                    "nascita": 315532800000,
+                    "sesso": "M",
+                    "codiceFiscale": "RSSCLD80A01H501J",
+                    "imgCodFiscale": {
+                        "idDoc": 1,
+                        "codTipoDocumento": "CF"
+                    },
+                    "email": "claudio.rossi@gmail.com",
+                    "prefisso": "39",
+                    "telefono": "1233456666",
+                    "operatore": "TIM",
+                    "listPrivacy": [
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_1",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_2",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_3",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_4",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_CONSENSO_5",
+                            "consenso": true
+                        }
+                    ],
+                    "paeseNascita": "Italia",
+                    "provinciaNascita": "RM",
+                    "cittadinanza": "Italia",
+                    "comuneNascita": "Roma",
+                    "imgFirma": {
+                        "idDoc": 5,
+                        "codTipoDocumento": "FRM"
+                    },
+                    "listResidenzeFiscale": [
+                        {
+                            "codiceUic": 266,
+                            "tin": "",
+                            "descrizione": "ARMENIA",
+                            "imgTin": null
+                        },
+                        {
+                            "codiceUic": 6,
+                            "tin": "4444",
+                            "descrizione": "ARGENTINA",
+                            "imgTin": null
+                        }
+                    ],
+                    "codTipoDocumento": "01",
+                    "numDocumento": "AN678",
+                    "dataRilascioRinnovo": 1581422400000,
+                    "dataScadenza": 1656806400000,
+                    "paeseRilascio": "Italia",
+                    "provinciaRilascio": "LI",
+                    "comuneRilascio": "VADA",
+                    "imgDocIdentita": {
+                        "idDoc": 4,
+                        "codTipoDocumento": "01"
+                    },
+                    "tipoIndirizzoResidenza": "Via",
+                    "indirizzoResidenza": "via fiordalisio",
+                    "numResidenza": "4",
+                    "provinciaResidenza": "MI",
+                    "comuneResidenza": "MI",
+                    "capResidenza": "20146",
+                    "tipoIndirizzoCAI": "Piazza",
+                    "indirizzoCAI": "via dei cai",
+                    "numCAI": "88",
+                    "provinciaCAI": "LU",
+                    "comuneCAI": "LU",
+                    "capCAI": "43212",
+                    "tipoIndirizzoDomicilio": "Viale",
+                    "indirizzoDomicilio": "via dei pini",
+                    "numDomicilio": "49",
+                    "provinciaDomicilio": "LU",
+                    "comuneDomicilio": "LU",
+                    "capDomicilio": "6789",
+                    "tipoIndirizzoCorrisp": "Piazza",
+                    "indirizzoCorrisp": "via dei corrisp",
+                    "numCorrisp": "99",
+                    "provinciaCorrisp": "PI",
+                    "comuneCorrisp": "PI",
+                    "capCorrisp": "43212",
+                    "prefissoFissoCasa": "89",
+                    "numeroFissoCasa": "78979",
+                    "prefissoFissoUfficio": "45",
+                    "numeroFissoUfficio": "12123",
+                    "codTitoloStudio": "LicenzaMedia"
+                }
+            }
+        }
+    }
+}

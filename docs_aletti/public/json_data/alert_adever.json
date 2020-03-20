@@ -1,0 +1,24 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "totali": {
+            "label": "SCADENZA_ADVER",
+            "records": 15,
+            "colore": "da definire"
+        },
+        "risultati": [
+            {
+                "ndgCode": 486054,
+                "intestazRidottaDes": "FURLAN ELETTRA",
+                "scadenzaAdverDate": "21/09/2013",
+                "valoreVl": 3,
+                "fasciaRischio": "IRRILEVANTE",
+                "statoProfilo": "Da Richiedere-scaduta"
+            }
+        ]
+    }
+}

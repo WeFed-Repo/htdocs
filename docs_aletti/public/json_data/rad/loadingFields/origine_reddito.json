@@ -1,0 +1,31 @@
+{
+    "esito": {
+        "type": "OK"
+    },
+    "results": [
+        {
+            "code": "1",
+            "description": "Lavoro dipendente"
+        },
+        {
+            "code": "2",
+            "description": "Lavoro autonomo"
+        },
+        {
+            "code": "3",
+            "description": "Rendite immobiliari"
+        },
+        {
+            "code": "4",
+            "description": "Rendite fondiarie"
+        },
+        {
+            "code": "5",
+            "description": "Redditi finanziari"
+        },
+        {
+            "code": "6",
+            "description": "Pensione"
+        }
+    ]
+}

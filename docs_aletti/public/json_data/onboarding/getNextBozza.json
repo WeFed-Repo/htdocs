@@ -1,0 +1,12 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "nextId": 124,
+        "codPromotore": "ES2345",
+        "filiale": "via dei pini 12"
+    }
+}

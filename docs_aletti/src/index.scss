@@ -1,0 +1,52 @@
+@import 'styles/bootstrap.scss';
+@import 'styles/base.scss';
+@import 'styles/print.scss';
+
+html, body, #root {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $font-stack;
+}
+
+#root {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    border-right: solid 1px #ddd;
+}
+
+.loading { position:relative;
+    &>* {
+        visibility: hidden;
+        text-align: center;
+        vertical-align:center;
+    }
+    &::before {
+        font-family: "icomoon", sans-serif;
+        font-size:60px;
+        content: "\E953";
+        line-height:62px;
+        text-align: center;
+        color:#ddd;
+        display:inline-block;
+        background-color: transparent;
+        width:60px;
+        height:60px;
+        position:absolute;
+        top: calc(50% - 30px);
+        right:calc(50% - 30px);
+        animation: loading 4s linear infinite;
+            @keyframes loading {
+            0% { 
+                transform: rotate(0); 
+            }
+            100% { 
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

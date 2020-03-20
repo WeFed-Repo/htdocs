@@ -1,0 +1,22 @@
+{
+    "esito": {
+        "type": "E",
+        "code": "400",
+        "description": "Errore nei parametri di richiesta"
+    },
+    "results": {
+        "field_anagraficablob_filiale": "filiale obbligatoria",
+        "field_anagraficablob​_intestatari_0_comuneCAI": "comune obbligatorio",
+        "field_anagraficablob​_​intestatari_0_comuneDomicilio": "comune obbligatorio",
+        "field_anagraficablob_intestatari_0_comuneNascita": "comune nascita obbligatorio",
+        "field_anagraficablob_intestatari_0_imgFirma_codTipoDocumento": "codice non valido",
+        "field_anagraficablob_intestatari_0_imgtin_0_codTipoDocumento": "codice non valido",
+        "field_anagraficablob_intestatari_0_imgtin_0_idDocumento": "id obbligatorio",
+        "field_anagraficablob_intestatari_0_listprivacy_0_coddisclaimer": "codice ALETTI_CONSENSO_6 non esistente",
+        "field_anagraficablob_intestatari_0_listprivacy_2_coddisclaimer": "codice ALETTI_CONSENSO_9 non esistente",
+        "field_anagraficablob_intestatari_0_listprivacy_4_coddisclaimer": "codice ALETTI_CONSENSO_8 non esistente",
+        "field_anagraficablob_intestatari_0_nascita": "data di nascita obbligatoria",
+        "field_anagraficablob_intestatari_0_paeseNascita": "paese nascita obbligatorio",
+        "field_anagraficablob_intestatari_1_listprivacy_0_consenso": "accettare il consenso ALETTI_CONSENSO_1"
+    }
+}
