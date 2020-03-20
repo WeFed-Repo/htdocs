@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+	<!-- FORM -->
+	<block file="form/formGenerico01.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form di tipo input 2 colonne)]]></description></block>
+	<block file="form/formGenerico01b.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form di tipo output 2 colonne)]]></description></block>
+	<block file="form/formGenerico02.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form di tipo input 3 colonne)]]></description></block>
+	<block file="form/formGenerico02b.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form di tipo output 3 colonne)]]></description></block>
+	<block file="form/formGenerico03.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form inserito in tpl step)]]></description></block>
+	<block file="form/formGenerico04.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form con pochi campi centrato)]]></description></block>
+    <block file="form/formGenerico06.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form output con pochi campi centrato e pin32)]]></description></block>
+	<block file="form/formGenerico10.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(filtro di ricerca due colonne)]]></description></block>
+	<block file="form/formGenerico11.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(filtro di ricerca tre colonne)]]></description></block>
+	<block file="form/formGenerico12.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(filtro di ricerca centrato)]]></description></block>
+	<block file="form/formGenerico13.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(form com tooltip d'errore)]]></description></block>
+	<block file="form/formGenerico14_token.php" nobank="bpm|bm" customer="ret" area="pri" location="con"><description><![CDATA[(form controllo Token)]]></description></block>
+	<!-- BOX -->
+	<block file="boxedit/box01.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box02.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box03.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box04.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box05.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box06.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box07.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box08.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box09.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box10.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box11.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="boxedit/box13.php" nobank="webank" customer="ret" area="pri" location="con"></block>
+	<!-- BOTTONI -->
+	<block file="bottoni/btn01.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="bottoni/btn02.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="bottoni/btn03.php" nobank="webank|bm" customer="ret|bus" area="pri" location="con"></block>
+	<!-- NAVIGAZIONE -->
+	<block file="navigazione/nav01.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<!-- FILETTI -->
+	<block file="filetti/fil01.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="filetti/fil02.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="filetti/fil03.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="filetti/fil04.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="filetti/fil05.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="filetti/fil06.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<!-- TITOLI -->
+	<block file="titoli/tit01.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="titoli/tit02.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<block file="titoli/tit03.php" nobank="" customer="ret|bus" area="pri" location="con"></block>
+	<!-- TESTI -->
+	<block file="testi/text01.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(Testo con tooltip)]]></description></block>
+	<!-- ANIMAZIONI -->
+	<block file="animazioni/animazione01.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(slide conferma ed errore)]]></description></block>
+</catalog>

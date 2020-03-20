@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<templatetree>
+
+	<!--PUBBLICA -->
+	<pubblica>
+		<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_str_home_pub_wb.php" name="Home page">
+			<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_fp_wb.php" name="Front page">
+					<page bank="webank" customer ="ret|bus" name="Pagine Interne">
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_interna.php" name="Pagina descrittiva"></page>
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_estesa.php" name="Pagina estesa CD"></page>
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_interna2.php" name="Welcome page"></page>
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_sprodotto.php" name="Scheda prodotto"></page>
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_sprodotto2.php" name="Scheda prodotto2"></page>
+						
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_apriconto.php" name="Apri conto"></page>
+						<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_landing.php" name="Landing Page"></page>
+					</page>
+					
+			</page>
+		</page>
+		
+		<page bank="bm|bpm|ca|bl" customer ="ret|bus" href="connect.php?page=str_home_pub.php&amp;tpl=tpl_home_pub.php" name="Home page">
+			<page bank="bm|bpm|ca|bl" customer ="ret" name="Privati" href="connect.php?page=str_interna_pub.php&amp;tpl=tpl_pub_privati_vantaggi.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Imprese" href="connect.php?page=str_interna_pub.php&amp;tpl=tpl_pub_imprese_vantaggi.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="ret|bus" name="Help center" href="connect.php?page=str_interna_pub.php&amp;tpl=tpl_pub_help_center_strumenti_di_supporto.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="ret|bus" name="Sicurezza" href="connect.php?page=str_interna_pub.php&amp;tpl=tpl_pub_sicurezza_online_sicurezza_servizio.php"></page>
+		</page>
+		
+		<page bank="bm|bpm|ca|bl" customer ="bus" name="FP Pag.interne">
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="2col" href="tpl_fp_bus_pub_2col.shtml"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="3col" href="tpl_fp_bus_pub_3col.shtml"></page>
+		</page>
+		<page bank="bm|bpm|ca|bl" customer ="bus" name="Pop up" href="javascript:window.open('tpl_popup_bus.shtml','main','width=450,height=445,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')"></page>
+		<page bank="webank" customer="ret|bus" name="AOL">
+				<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_incentivazione_aol.php" name="Incentivazione"></page>
+				<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_aol.php" name="Adesione"></page>
+				<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_loginaol.php" name="Login"></page>
+				<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_impostaol.php" name="Imposta"></page>
+				<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_tracking.php" name="Tracking"></page>
+		</page>
+		<page bank="webank" customer ="ret|bus"  href="javascript:window.open('connect.php?page=wbold_tpl_pub_popup_wb.php','main','width=450,height=445,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')" name="Pop Up"></page>
+		<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_500.php" name="Presto online"></page>
+		<page bank="webank" customer ="ret|bus" href="connect.php?page=wbold_tpl_pub_errore.php" name="Errore login"></page>
+	</pubblica>
+	
+	
+	
+	<!--PRIVATA -->
+	<privata>
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Front page">
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="No Ria" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_noria.php&amp;liv1=MH"></page>
+			<page bank="webank" customer ="ret" name="Con Ria">
+				<page bank="webank" customer ="ret" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_ria.php&amp;liv1=MH" name="Ria Abilitata"></page>
+				<page bank="webank" customer ="ret" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_riadisab.php&amp;liv1=MH" name="Ria Disabilitata"></page>
+				<page bank="webank" customer ="ret" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_ria5.php&amp;liv1=MH" name="Ria 5.5"></page>
+				<page bank="webank" customer ="ret" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_riaNonMigrato.php&amp;liv1=MH" name="Ria Mista"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Sportello" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_banking.php&amp;liv1=BA"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Carte" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_carte.php&amp;liv1=CA"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Trading" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_trading.php&amp;liv1=TR"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Investimenti" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_risparmio.php&amp;liv1=RI"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Finanziamenti">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Finanziamenti 1" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_finanz.php&amp;liv1=FI"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Finanziamenti 2" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_finanz2.php&amp;liv1=FI"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Assicurazioni" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_assic.php&amp;liv1=AS"></page>
+			<page bank="webank" customer ="bus" name="My Home" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_noria.php&amp;liv1=MH&amp;customer=bus"></page>
+			<page bank="webank" customer ="bus" name="Sportello" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_banking.php&amp;liv1=BA&amp;customer=bus"></page>
+			<page bank="webank" customer ="bus" name="Incassi" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_my_noria.php&amp;liv1=MH&amp;customer=bus"></page>
+			<page bank="webank" customer ="bus" name="Carte" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_carte.php&amp;liv1=MH&amp;customer=bus"></page>
+			<page bank="webank" customer ="bus" name="Anagrafiche" href="connect.php?page=str_fp_priv.php&amp;tpl=tpl_priv_fp_anagrafiche.php&amp;liv1=MH&amp;customer=bus"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Privata (imprese)" href="connect.php?page=tpl_priv_bus_fp.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Privata (enti)" href="connect.php?page=tpl_priv_bus_Teso_fp.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="P.inf" href="connect.php?page=tpl_priv_bus_inf.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Conf.ver" href="connect.php?page=tpl_bus_priv_ver.php"></page>
+		
+		</page>
+		
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Pagine Interne">
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="1col" href="connect.php?page=tpl_priv_bus_fp_1col.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="2col" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_fp_2col.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="3col" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_fp_3col.php"></page>
+			
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Disposizione">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Ins" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_dispo.php" ></page>
+				<page bank="bm|bpm|ca|bl" customer ="bus" name="Ins" href="connect.php?page=tpl_priv_bus_dispo.php" ></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Rie" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_dispor.php" ></page>
+				<page bank="bm|bpm|ca|bl" customer ="bus" name="Rie" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_dispor.php" ></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Esi" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_dispoe.php" ></page>
+				<page bank="bm|bpm|ca|bl" customer ="bus" name="Esi" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_dispoe.php" ></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="My Menu" href="connect.php?page=tpl_priv_interna_mymenu.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pagina descrittiva">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pagina descrittiva1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_descrittiva2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pagina descrittiva2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_descrittiva3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pagina descrittiva3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_descrittiva4.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pagina prodotto" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_scheda_prodotto.php"></page>
+			</page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Pagina descrittiva" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_fp_descr.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Errore generico" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_errore2.php"></page>
+			<page bank="bm|bpm|ca|bl" customer ="bus" name="Errore generico" href="connect.php?page=tpl_priv_bus_errore2.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Loading">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Loading1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_loading.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Loading overlayer" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_loading_ajax.php"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Best Execution">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Obbligazioni" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_bestexecution.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Tutorial" href="javascript:window.open('tpl_poptutorial_priv.shtml','main','width=610,height=445,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Azioni" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_bestexecution_azioni.php"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Biglietteria Inter">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Biglietteria Inter1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_inter.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Biglietteria Inter2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_inter2.php"></page>
+			</page>
+			<page bank="webank" customer ="ret" name="Centro comunicazioni" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_centro_comunicazioni.php"></page>
+			<page bank="webank" customer ="ret" name="Contabili" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_contabili.php"></page>
+			<page bank="webank" customer ="ret" name="Domiciliazione utenze" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_domiciliazione_utenze.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Help center" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_helpcenter.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Landing Page" href="connect.php?page=tpl_priv_landing.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Mondadori">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Mondadori1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mondadori1.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Mondadori2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mondadori2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Mondadori3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mondadori3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Mondadori4" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mondadori4.php"></page>
+				
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Mondadori1" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_mondadori1.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Mondadori2" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_mondadori2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Mondadori3" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_mondadori3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Mondadori4" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_mondadori4.php"></page>
+			</page>
+			<page bank="bm|bpm|ca|bl" customer ="ret" name="Obbligazioni" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_obbligazioni.php"></page>
+			<page bank="webank" customer ="ret" name="Mutui casa">
+				<page bank="webank" customer ="ret" name="Mutui casa1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui1.php"></page>
+				<page bank="webank" customer ="ret" name="Mutui casa2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui2.php"></page>
+				<page bank="webank" customer ="ret" name="Mutui casa3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui3.php"></page>
+				<page bank="webank" customer ="ret" name="Mutui casa4" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui4.php"></page>
+				<page bank="webank" customer ="ret" name="Mutui casa5" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui5.php"></page>
+				<page bank="webank" customer ="ret" name="Mutui casa6" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mutui6.php"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Passo a passo" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_passo.php"></page>
+			<page bank="webank" customer ="ret" name="PCT (Blocco servizi)" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_bloccopct.php"></page>
+			<page bank="webank" customer ="ret" name="PDA Smartphone">
+				<page bank="webank" customer ="ret" name="PDA Smartphone1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_pda.php"></page>
+				<page bank="webank" customer ="ret" name="PDA Smartphone2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_pda2.php"></page>
+				<page bank="webank" customer ="ret" name="PDA Smartphone3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_pda3.php"></page>
+				<page bank="webank" customer ="ret" name="Video mobile" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_mobile.php"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Programma punti">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Programma punti1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_punti1.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Programma punti2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_punti2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Programma punti3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_punti3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Programma punti4" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_punti4.php"></page>
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Servizio sms">
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Servizio sms1" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_sms.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Servizio sms2" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_sms2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Servizio sms3" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_sms3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Servizio sms4" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_sms4.php"></page>
+				
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Servizio sms1" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_sms.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Servizio sms2" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_sms2.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Servizio sms3" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_sms3.php"></page>
+				<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Servizio sms4" href="connect.php?page=str_priv_bus_int.php&amp;tpl=tpl_priv_bus_sms4.php"></page>
+				
+			</page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Vetrina Trading" href="connect.php?page=str_interna_priv.php&amp;tpl=tpl_priv_attivazione_ss.php"></page>
+		</page>
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Accoglienza">	
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Accoglienza1" href="connect.php?page=tpl_priv_accoglienza1.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Accoglienza2" href="connect.php?page=tpl_priv_accoglienza2.php"></page>
+		</page>
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret|bus" name="Email">	
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Ciclo di vita1" href="connect.php?page=tpl_priv_wb_mail.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Ciclo di vita2" href="connect.php?page=tpl_priv_wb_mail_no_appr.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Questionario" href="connect.php?page=tpl_priv_questionario.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Questionario Risposta" href="connect.php?page=tpl_priv_questionario_risposta.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Ret" href="connect.php?page=tpl_priv_mail2.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Ret2" href="connect.php?page=tpl_priv_wb_mail3.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Ciclo di vita1" href="connect.php?page=tpl_priv_bus_mail.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Ciclo di vita2" href="connect.php?page=tpl_priv_bus_mail_no_appr.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Questionario" href="connect.php?page=tpl_priv_bus_questionario.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Questionario Risposta" href="connect.php?page=tpl_priv_bus_questionario_risposta.php"></page>
+		</page>
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Login">
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Cambio pwd" href="connect.php?page=tpl_priv_01_cambio_password.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Conferma" href="connect.php?page=tpl_priv_01_conferma.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Conferma 599" href="connect.php?page=tpl_priv_01_conferma_599_nuova.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pattichiari" href="connect.php?page=tpl_priv_02_pattichiari.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Login pin" href="connect.php?page=tpl_priv_login.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Login pin errore" href="connect.php?page=tpl_priv_03_loginpin_er.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Login no pin" href="connect.php?page=tpl_priv_04_login_nopin.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Cambio email" href="connect.php?page=tpl_priv_05_cambio_email.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Cambio email conferma" href="connect.php?page=tpl_priv_05_cambio_email_conferma.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Password di II livello" href="connect.php?page=tpl_priv_06_pwd2.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Conferma ricezione carta" href="connect.php?page=tpl_priv_07_conferma_ric_carta.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Conferma ricezione carta (msg ok)" href="connect.php?page=tpl_priv_07_conferma_ric_carta_ok.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Conferma ricezione carta (msg ko)" href="connect.php?page=tpl_priv_07_conferma_ric_carta_err.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Richiesta nuova carta servizi" href="connect.php?page=tpl_priv_08_richiesta_nuova.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Richiesta nuova carta servizi (msg ok)" href="connect.php?page=tpl_priv_08_richiesta_nuova_ok.php"></page>
+			<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Richiesta nuova carta servizi (msg richiesta fatta)" href="connect.php?page=tpl_priv_08_richiesta_nuova_ko.php"></page>
+		</page>
+		
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Pop up" href="javascript:window.open('connect.php?page=tpl_priv_popup.php','main','width=450,height=445,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')"></page>
+		<page bank="webank|bm|bpm|ca|bl" customer ="bus" name="Pop up" href="javascript:window.open('connect.php?page=tpl_priv_bus_popup.php','main','width=450,height=445,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')"></page>
+		<page bank="bpm|bm|ca|bl" customer ="bus" name="Pop up help" href="javascript:window.open('connect.php?page=tpl_priv_popup_help.php','main','width=230,height=410,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')"></page>
+		<page bank="webank|bm|bpm|ca|bl" customer ="ret" name="Sessione scaduta" href="connect.php?page=tpl_priv_sessione_scad.php"></page>
+		<page bank="bl|bm|bpm|ca" customer ="bus" name="Sessione scaduta" href="connect.php?page=tpl_priv_bus_sessione_scad.php"></page>
+	
+	
+	</privata>
+	
+</templatetree>
