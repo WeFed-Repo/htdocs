@@ -1,0 +1,182 @@
+<div  class="magazineHome large-mob-carousel-home" style="overflow:hidden;">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>MAGAZINE</h2>
+            </div>
+            <div class="col-sm-12">
+              <!-- inizio carousel -->
+              <div class="carousel carousel-showmanymoveone slide"  data-interval="false" id="carousel123">
+                <!-- Indicatori -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel123" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel123" data-slide-to="1"></li>
+                  <li data-target="#carousel123" data-slide-to="2"></li>
+                  <li data-target="#carousel123" data-slide-to="3"></li>
+                  <li data-target="#carousel123" data-slide-to="4"></li>
+                  <li data-target="#carousel123" data-slide-to="5"></li>
+                  <li data-target="#carousel123" data-slide-to="6"></li>
+                  <li data-target="#carousel123" data-slide-to="7"></li>
+                </ol>
+                <!-- Fine indicatori -->
+
+                <!-- CONTENITORE ELEMENTI -->
+                <div class="carousel-inner">
+                  
+                  <!-- ELEMENTO -->
+                  <div class="item active">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#ContoCorrente</h3>
+                      <img src="/wbresp/img/magazine/come-cambiare-conto-corrente-preview-2.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come cambiare conto corrente</h4>
+                        <p>
+                        Cambiare conto corrente, da luglio 2015, &egrave; diventato pi&ugrave; semplice ed economico. <br>In pochi passi, ti spiegheremo come gestire...
+
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-cambiare-conto-corrente/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#CartaDiCredito</h3>
+                      <img src="/wbresp/img/magazine/come-richiedere-carta-di-credito-preview-1.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come richiedere la carta di credito</h4>
+                        <p>
+                         L'utilizzo della carta di Credito per i pagamenti nella quotidianit&agrave;, sebbene a rilento rispetto al resto d'Europa, si sta diffondendo capillarmente...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-richiedere-la-carta-di-credito/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#CartaPrepagata</h3>
+                      <img src="/wbresp/img/magazine/come-funziona-carta-prepagata-ricaricabile-preview-2.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come funziona una carta prepagata ricaricabile</h4>
+                        <p>
+                        La carta prepagata ricaricabile &egrave; una valida e semplice alternativa all'utilizzo dei contanti: &egrave; la soluzione ideale per effettuare i tuoi acquisti su Internet...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-funziona-una-carta-prepagata-ricaricabile/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#Mutuo</h3>
+                      <img src="/wbresp/img/magazine/webank-casa360-240.png" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come richiedere un mutuo</h4>
+                        <p>
+                        Secondo il codice civile, il mutuo &egrave; un contratto con il quale una parte consegna all'altra una determinata quantit&agrave; di denaro, e l'altra si obbliga a restituire...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-richiedere-un-mutuo/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#Mutuo</h3>
+                      <img src="/wbresp/img/magazine/come-detrarre-mutuo-preview-rosa.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come detrarre il mutuo dalla dichiarazione dei redditi</h4>
+                        <p>
+                         Se hai stipulato o stai pensando di stipulare un mutuo con un istituto di credito per acquistare, costruire o ristrutturare la tua casa...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-detrarre-il-mutuo-dalla-dichiarazione-dei-redditi/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#Mutuo</h3>
+                      <img src="/wbresp/img/magazine/come-calcolare-rata-mutuo-preview-1.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come calcolare la rata del mutuo</h4>
+                        <p>
+                         Vuoi investire sul tuo futuro? Allora probabilmente sei intenzionato ad acquistare una nuova casa; il mercato immobiliare si sta finalmente smuovendo...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-calcolare-la-rata-del-mutuo/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                  <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#ContoCorrente</h3>
+                      <img src="/wbresp/img/magazine/come-aprire-conto-corrente-preview.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come aprire un conto corrente</h4>
+                        <p>
+                         Il conto corrente &egrave; uno strumento utile per gestire la tua moneta, in contanti ed elettronica. Puoi considerarlo come un luogo (virtuale) in cui...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-aprire-un-conto-corrente/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                      <!-- ELEMENTO -->
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <h3>#CartaDiCredito</h3>
+                      <img src="/wbresp/img/magazine/come-funziona-carta-di-credito-preview-2.jpg" class="img100" alt="" />
+                      <div class="slideBody">
+                        <h4>Come funziona la carta di credito</h4>
+                        <p>
+                       La carta di credito &egrave; uno strumento di pagamento. Si tratta di una carta plastificata su cui sono riportati: le tue generalit&agrave;...
+                        </p>
+                        <div class="readMore">
+                          <a href="https://magazine.webank.it/come-funziona-la-carta-di-credito/" title="Continua a leggere">Continua a leggere</a>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  <!-- FINE ELEMENTO -->
+
+                </div>
+                <!-- FINE CONTENITORE ELEMENTI -->
+
+                <a class="left carousel-control"  data-target="#carousel123" href="#!" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" data-target="#carousel123" href="#!" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+              </div>
+            </div>
+            <!-- fine carousel -->
+      </div>
+    </div>
+</div>

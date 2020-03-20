@@ -1,0 +1,194 @@
+<style>
+  /* ==========================================================================
+   FUTURO SEMPLICE inizio
+   ========================================================================== */
+
+   .futuroSemplice
+   {
+
+		background:#2c2c2c url(/wbresp/img/home/fondoCoppia.png) center top repeat-x;
+
+		width:100%;
+		max-width:100%;
+		color:#FFF;
+		position: relative;
+		margin-top:30px;
+		overflow:hidden;
+   }
+   .futuroSempliceV
+   {
+		background:transparent url(/wbresp/img/home/v.png) center top no-repeat;
+		width:100%;
+		height:24px;
+		position: absolute;
+		left:0;
+		top:0;
+		z-index:10;
+
+   }
+
+   .futuroSempliceI
+   {
+	   position:absolute;left:50%;top:0;width:50%;overflow:hidden;text-align:center;display:table-cell;vertical-align: middle;
+   }
+
+
+   .futuroSemplice .divButton
+   {
+	   width:100%;
+	   text-align: left;
+
+   }
+
+
+
+   .futuroSemplice .rightImage
+   {
+	   padding:0;
+   }
+
+   .futuroSemplice .rightImage img
+   {
+		width:120%;
+
+   }
+
+
+   .futuroSemplice h2.tit
+   {
+	   color:#FFF;
+	   font-weight: normal;
+	   font-size:44px;
+	   margin: 70px 0 0 0px;
+   }
+
+   .futuroSemplice h2.titGreen
+   {
+	   color:#8ab10b;
+	   margin:0;
+	   font-weight: normal;
+	   font-size:44px;
+   }
+
+   .futuroSemplice ul li
+   {
+	   color:#e9e9e9;
+	   font-family: "ralewaymedium", arial;
+	   font-size:16px;
+   }
+
+	.futuroSemplice ul
+   {
+	   margin:34px 0 0 -20px;
+   }
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+	   .futuroSemplice h2.tit
+		{
+			font-size:29px;
+			margin: 30px 0 0 0px;
+		}
+
+		.futuroSemplice h2.titGreen
+		{
+			font-size:29px;
+		}
+
+		.futuroSemplice ul
+		{
+			margin:20px 0 0 -20px;
+		}
+
+		.futuroSemplice .rightImage img
+		{
+			width:120%;
+		}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+		.futuroSemplice .rightImage img
+		{
+			width:140%;
+		}
+
+
+}
+
+@media (max-width: 767px) {
+
+	   .futuroSemplice h2.tit
+		{
+			text-align: center;
+			font-size:24px;
+			margin: 35px 0 0 0px;
+		}
+
+		.futuroSemplice h2.titGreen
+		{
+			text-align: center;
+			font-size:24px;
+		}
+
+		.futuroSemplice img {
+			width: 100%;
+			margin-top:23px;
+		}
+
+		.futuroSempliceI img
+		{
+			width:100%;
+		}
+
+		.futuroSemplice ul
+		{
+			max-width:90%;
+			margin: 20px auto;
+		}
+
+		.futuroSemplice .divButton
+		{
+			width:100%;
+			text-align: center;
+		}
+}
+
+
+
+   /* ==========================================================================
+   FUTURO SEMPLICE fine
+   ========================================================================== */
+</style>
+<div  class="futuroSemplice" style="overflow:hidden;">
+        <div  class="futuroSempliceV"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2 class="tit">IL FUTURO &Egrave; SEMPLICE,</h2>
+              <h2 class="titGreen">CON MUTUO WEBANK.</h2>
+              <ul>
+                <li>Zero spese di perizia</li>
+                <li>Uno specialista mutui dedicato</li>
+                <li>Polizza Casa gratuita</li>
+               </ul>
+               <br>
+               <div class="divButton">
+                  <a class="btn-green standardHome onBlack dblock fright" href="/webankpub/wbresp/calcolatore_mutuo.do">CALCOLA LA RATA</a>  
+               </div>
+               <br>
+               <br>
+            </div>
+            <div class="col-sm-6 rightImage">
+                   <img src="/wbresp/img/home/coppia.jpg" alt="Il futuro &egrave; semplice con mutuo Webank" />
+            </div>
+          </div>
+      </div>
+  </div>

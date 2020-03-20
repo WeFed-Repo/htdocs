@@ -1,0 +1,12 @@
+<!-- BANNER MUTUO -->
+<style>
+.widget11 {margin: 0px auto;max-width:262px;height:287px;width:100%;background: transparent url("/wbresp/img/wdg_ban_mutui_bollo_nocta.jpg?a=1") top center no-repeat;text-align:center;box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+@media (max-width: 1199px) {
+	.widget11 {display: none;}
+}	
+</style>
+<div class="widget widget11"></div>
+<!-- FINE BANNER PROMO -->
+

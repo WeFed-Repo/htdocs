@@ -1,0 +1,19 @@
+/*
+
+CSS relativo a:
+serve-aiuto.html -> Serve aiuto
+
+*/	
+
+
+
+.serve-aiuto .promoimg {display:block; width:100%; margin: 0 0 20px 0;}
+.serve-aiuto.basic-content {margin: 0 30px 30px 30px;}
+
+@media (max-width: 1199px) {
+
+	.serve-aiuto .submenu {display:none;}
+
+	}
+	
+.serve-aiuto.basic-content ul {margin-bottom:10px}

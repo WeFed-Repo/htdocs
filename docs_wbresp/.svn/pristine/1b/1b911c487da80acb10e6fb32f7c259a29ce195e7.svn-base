@@ -1,0 +1,516 @@
+/* FONT BASE (opensans) */
+@font-face {
+    font-family: "bankFont"; 
+    font-weight: 300;
+    font-style: normal; 
+    src: url("../../fe/font/opensans-light-webfont.eot"); 
+    src: url("../../fe/font/opensans-light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../../fe/font/opensans-light-webfont.woff2") format("woff2"),
+        url("../../fe/font/opensans-light-webfont.woff") format("woff"),
+        url("../../fe/font/opensans-light-webfont.ttf") format("truetype"),
+        url("../../fe/font/opensans-light-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fe/font/opensans-regular-webfont.eot");
+    src: url("../../fe/font/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../../fe/font/opensans-regular-webfont.woff2") format("woff2"),
+        url("../../fe/font/opensans-regular-webfont.woff") format("woff"),
+        url("../../fe/font/opensans-regular-webfont.ttf") format("truetype"),
+        url("../../fe/font/opensans-regular-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../../fe/font/opensans-semibold-webfont.eot");
+    src: url("../../fe/font/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../../fe/font/opensans-semibold-webfont.woff2") format("woff2"),
+        url("../../fe/font/opensans-semibold-webfont.woff") format("woff"),
+        url("../../fe/font/opensans-semibold-webfont.ttf") format("truetype"),
+        url("../../fe/font/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../fe/font/opensans-bold-webfont.eot");
+    src: url("../../fe/font/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../../fe/font/opensans-bold-webfont.woff2") format("woff2"),
+        url("../../fe/font/opensans-bold-webfont.woff") format("woff"),
+        url("../../fe/font/opensans-bold-webfont.ttf") format("truetype"),
+        url("../../fe/font/opensans-bold-webfont.svg#open_sansbold") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../../fe/font/opensans-italic-webfont.eot");
+    src: url("../../fe/font/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../../fe/font/opensans-italic-webfont.woff2") format("woff2"),
+        url("../../fe/font/opensans-italic-webfont.woff") format("woff"),
+        url("../../fe/font/opensans-italic-webfont.ttf") format("truetype"),
+        url("../../fe/font/opensans-italic-webfont.svg#open_sanssemibold") format("svg");
+}
+
+/* Font titoletti */
+@font-face {font-family: 'FuturaBT-Book';
+src: url('../../fe/font/27145D_1_0.eot');
+src: url('../../fe/font/27145D_1_0.eot?#iefix') format('embedded-opentype'),
+url('../../fe/font/27145D_1_0.woff') format('woff'),
+url('../../fe/font/27145D_1_0.ttf') format('truetype');
+}
+
+@font-face {font-family: 'Futura';
+src: url('../../fe/font/27145D_2_0.eot');
+src: url('../../fe/font/27145D_2_0.eot?#iefix') format('embedded-opentype'),
+url('../../fe/font/27145D_2_0.woff') format('woff'),
+url('../../fe/font/27145D_2_0.ttf') format('truetype');
+}
+ 
+@font-face {font-family: 'FuturaBT-Bold';
+src: url('../../fe/font/27145D_3_0.eot'); 
+src: url('../../fe/font/27145D_3_0.eot?#iefix') format('embedded-opentype'),
+url('../../fe/font/27145D_3_0.woff') format('woff'),
+url('../../fe/font/27145D_3_0.ttf') format('truetype');
+}
+
+@font-face {font-family: 'FuturaBT-Heavy'; 
+src: url('../../fe/font/27145D_4_0.eot');
+src: url('../../fe/font/27145D_4_0.eot?#iefix') format('embedded-opentype'),
+url('../../fe/font/27145D_4_0.woff') format('woff'),
+url('../../fe/font/27145D_4_0.ttf') format('truetype');
+}
+
+/* Classi generiche */
+body {background:#efefef; font-size:18px; font-family: "bankFont", Arial, Serif;background:#fff url(../../fe/img/bg_tile.png) repeat-x 0 0;}
+h1,h2,h3,h4 {font-family: "FuturaBT-Heavy", Arial, Serif;}
+*:focus, .form-control:focus {outline: none !important}
+.radio input[type="radio"]:focus + label::before,.checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before {outline:none !important;}
+.tooltip-inner {font-size:14px;padding:15px;}
+p {margin-bottom:20px;}
+.modal-header {padding:2px 15px 0; position: absolute;
+    right: 0;
+    z-index: 2; border-bottom:0 none;}
+.modal-header .close {font-size:50px;}
+.modal-body {text-align:center;}
+.form-control {padding:6px 10px;}
+
+.nowrap {white-space:nowrap !important;}
+
+#main.loading {background-position:center 200px;}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width:1140px;
+		width:auto;
+	}
+}
+
+@media (min-width: 992px) {
+.container {
+		max-width:1140px;
+		width:auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width:1140px;
+		width:auto;
+	}
+}
+
+/* Stili generici della pagina */
+#main .container {background-color: #fff}
+
+/* Header */
+header {
+	text-align:left;
+	height:140px;
+	width:100%;
+}
+header span {padding-top:5px;font-weight:bold;display:inline-block;}
+
+
+/* Blocchi della pagina */
+.main-visual {margin:0 -15px 30px;}
+.main-visual img {width:100%}
+.main-visual .visual-promo {width:100%; position:relative;}
+.main-visual .promo-box {background:#eee; position:absolute; bottom:70px;left:0; width:40%; padding:30px 50px}
+.main-visual .promo-box h3 {font-size:30px; margin:0; text-transform:uppercase;}
+.main-visual .promo-box p {font-size:20px;}
+.main-visual .promo-box ul {font-size:20px; margin-top:-18px;}
+.main-visual hr {    margin: -6px 0 6px 0;
+    background: rgba(0,0,0,0.2);
+    height: 6px;
+    position: relative;
+    z-index: 1;
+    border: 0 none;}
+.main-visual .fascione {background:#eee; margin-top:-6px; min-height:100px;position:relative; padding:15px 50px;}
+.main-visual .fascione h2 {font-size: 50px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.main-visual .fascione p {font-size:20px;}
+
+.bordato {border:solid 2px #ccc; padding:30px; margin-bottom:30px;}
+
+/* Bottoni */
+.btn-whlit, .btn-grlit,.btn {padding:0 30px; border:0 none;border-radius:30px;background:#d1d1d1; color:#fff !important;text-transform:uppercase; font-weight:bold;height:44px;line-height:44px; text-decoration:none !important;}
+.btn-whlit:hover, .btn-grlit:hover, .btn:hover {text-decoration:none;color:#fff;opacity:0.8;}
+
+/* Footer */
+footer {
+	background-color:#d9d8dd; 
+    min-height:100px;
+    padding-top:18px;
+}
+footer .container {position:relative;}
+footer hr {margin:0 0 10px; padding:0;border-color:#3f3f3f; display:none !important;}
+footer p {width:100%;padding-right:145px; min-height:80px;font-size:14px;color:#808080;margin:10px 0;}
+footer img {position:absolute;right:15px;}
+
+
+/* Fascione cookie */
+#cookie-bar {background:#111111; height:auto; min-height:24px; line-height:18px; color:#eeeeee; text-align:center; padding:3px 0px;font-family: "Open Sans",sans-serif; color:#ffffff;z-index:9999}
+//#cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
+#cookie-bar.fixed.bottom {position: fixed; bottom: 0;left:0; width:100%;}
+#cookie-bar p {margin:0; padding:0 20px; display: inline; float: left; font-family: "Open Sans",sans-serif; font-size: 12px; color: #fff;    width: 90%;}
+#cookie-bar a {color:#ffffff; display:inline-block; border-radius:3px; text-decoration:none; padding:0 6px;font-size: 11px; font-family: "Open Sans",sans-serif;  }
+#cookie-bar .cb-enable { border-color: #fff;color: #fff; -moz-box-sizing: border-box;border-radius: 3px 3px 3px 3px;border-style: solid;border-width: 1px;    cursor: pointer;  font-size: 11px; font-family: "Open Sans",sans-serif; font-style: normal; text-decoration: none;margin-left:8px;margin-top:8px}
+#cookie-bar .cb-disable {background:#990000;}
+#cookie-bar .cb-disable:hover {background:#bb0000;}
+#cookie-bar .cb-policy   {text-decoration:underline; padding:0 ; margin-left:0;}
+
+/* Calcolatore dei mutui */
+.loading {background:transparent url(../../fe/img/loading.gif) no-repeat center center;opacity:0.7;}
+.loading>* {visibility:hidden;}
+
+
+/* Overlayer bloccante */
+.overlay {position:absolute;width:100%;height:100%;background:#transparent;}
+.overlay.loading {background:#fff url(../../fe/img/loading.gif) no-repeat center center;opacity:0.7;}
+.overlay .bgol {position:absolute;width:100%;height:100%;background;background:#fff;opacity:0.7}
+.overlay .cont {position:relative;margin-top:50%;margin-left:50%;} 
+
+/* Blocchi loading */
+#mutuiWrap {width:100%;min-height:300px;}
+#mutuiWrap.loading {background:#fff url(../../fe/img/loading.gif) no-repeat center center;}
+#mutuiWrap.loading * {visibility:hidden;}
+
+#mutuiWrap .radio-inline .tooltip {width:300px;}
+
+/* Generali */
+#mCalcCons .form-group {margin-bottom:20px;}
+#mutuiWrap input[type=radio] {outline:0;}
+
+/* Wrapper */
+#mutuiWrap .intro {padding:15px 15px 10px; text-align:center; color:#666;}
+#mutuiWrap .intro h3 {text-transform:uppercase; font-size:30px; text-transform:uppercase;color:#666;}
+#mutuiWrap .intro h3 span {color: #a6cc28;}
+
+/* STILI CALCOLATORE */
+/* Tabs */ 
+ul.mTabs{float:left;clear:left; width:100%;padding:0;margin:0 0 20px;list-style-type:none;}
+ul.mTabs li {height:50px;float:left;width:50%;overflow:hidden;}
+ul.mTabs li a {text-align:center;font-weight:bold;text-transform:uppercase;text-decoration:none !important; width:100%;display:inline-block; border-bottom:solid 2px #d1d1d1;padding:0 10px;color:#d1d1d1;font-size:22px; color:#d1d1d1;}
+ul.mTabs li a span {border:solid 2px #d1d1d1; border-radius:20px 20px 0 0;display:block; height:38px;line-height:38px;border-bottom:0 none;margin-top:10px;}
+ul.mTabs li a.selected {padding: 0}
+ul.mTabs li a.selected  span {border-bottom:solid 2px #fff;height:50px; margin-top:0;line-height:58px;}
+/* Fine tabs */
+
+/* Titoli standalone */
+h2.titFinalita { width: 100%;border-bottom: solid 2px #ddd;height: 20px;margin-bottom: 20px;}
+h2.titFinalita span {display: inline-block;font-family: "FuturaBT-Heavy",Arial,Serif; font-size: 25px; padding: 0 5px 0 0; text-transform: uppercase; background: #fff;}
+
+/* console */
+#mCalcStatic {background:#fff;display:block;clear:both;width:100%;/* border: solid 2px #a6cc28; */ border-top:none; margin-top:-2px;padding:0}
+#mCalcCons {float:left; display:block; width: 100%;padding:25px 0 10px}
+#mCalcCons label {font-weight:normal}
+
+/* separatori */
+hr {border-top:solid 2px #e8e8e8; clear:both;margin-top:5px;}
+
+/* Wrapper per indentazione  */
+.indentwrap {padding: 0; width:100%; float:left;}
+
+
+/* Incona informativa con tooltip */
+a.icoinfo {display:inline-block; margin:-7px 0 -8px 10px; width:27px;height:27px;background: transparent url(../../fe/img/icon_info.png) no-repeat 0 0;}
+
+/* Alterazioni form */
+.radio label,.checkbox label {padding-left: 20px;
+    display: block;
+    padding-top: 3px;
+    font-size:15px;
+    clear: both;
+    padding-bottom: 30px;
+}
+.radio label::before {width:32px;height:32px;border:solid 2px #d1d1d1;margin-top:-3px;}
+.radio label::after {width: 20px;height: 20px;top: 6px;left: 6px;}
+.checkbox label::before {width:32px;height:32px;border:solid 2px #d1d1d1;margin-top:-3px; border-radius:0;}
+.checkbox label::after { width: 20px; height: 20px;left: 3px;font-size: 22px;}
+.checkbox input:focus {outline-color:#fff;}
+.informativa {font-size:14px;}
+
+
+/* Spinners */
+#mCalcCons .spinnerblock {    padding: 0 40px;
+    width: 100%;
+    border-radius: 10px;
+    height: 48px;
+    border: solid 2px #d1d1d1;}
+#mCalcCons .spinnerblock input {border:0;height:44px; box-shadow:none;font-weight:bold;}
+#mCalcCons #mValore,#mCalcCons #mImporto {text-align:center;left:0; font-size:21px;}
+#mCalcCons .plusmin {width: 40px;font-size: 40px;margin-top: 8px;line-height: 28px; margin-right: -40px;float: right;font-weight: normal;text-align: center;text-decoration: none;border-left: solid 2px #d1d1d1;background: url(../../fe/img/icon_plus.png) no-repeat center center; text-indent:-1000px;overflow:hidden;}
+#mCalcCons .plusmin.min {    right: 0;
+    float: left;
+    margin-left: -40px;
+    border-left: 0;
+    border-right: solid 2px #d1d1d1;
+    background-image: url(../../fe/img/icon_min.png);}
+
+/* Bottoni */
+#mutuiWrap a.btn-grlit, #mutuiWrap a.btn-whlit, .btn  {margin:20px 0 15px 0}
+#mutuiWrap #mResults a.btn-whlit.btn-whlit-arrow {margin: -7px 0 0 0}
+
+/* Slider */
+#mCalcCons .sliderBlock {padding: 0 50px;float:left;width:100%; clear:both; position:relative;height:40px;margin-bottom:25px;}
+#mCalcCons .sliderBlock .plusmin {border:solid 2px #d1d1d1;border-radius:50%;width:40px;height:40px; right:0;top:0; position:absolute;margin:0;}
+#mCalcCons .sliderBlock .plusmin:focus {border-color:#d1d1d1 !important;}
+#mCalcCons .sliderBlock .plusmin.min {left:0;}
+#mCalcCons .sliderBlock .plusmin.disabled {opacity:0.2;}
+#mCalcCons .sliderBlock .sliderel {width:100%;padding:0 3px;clear:both;float:left;width:100%;}
+#mCalcCons .sliderBlock .sliderel .slider.slider-horizontal {width:100%;}
+#mCalcCons .sliderBlock .slider {width:100%;display:block;float:left; position:relative;}
+#mCalcCons .sliderBlock .slider-handle {    background: transparent url(../../fe/img/mutui_cursore.png) no-repeat 0 0; cursor:pointer;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    line-height: 31px;
+    font-size: 18px;
+    margin-top: -15px;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    margin-left: -18px;}
+#mCalcCons .sliderBlock .slider-track {position:relative;box-shadow:0 0 0 0;background-color:#575757; height:6px;border-radius:6px; margin-top:17px;float:left; width:100%;}
+#mCalcCons .sliderBlock .slider-selection {box-shadow:0 0 0 0;background:#ccc;border-radius:2px;float:left;height:6px;}
+#mCalcCons .sliderBlock .sliderrange {width:100%;}
+#mCalcCons .sliderBlock .sliderrange span {width:50%;float:left;font-size:12px;font-weight:bold;}
+#mCalcCons .sliderBlock .sliderrange .max {text-align:right;}
+#mCalcCons .sliderBlock .tooltip.top {margin-top: -50px;z-index:1;}
+#mCalcCons .sliderBlock .tooltip.top .tooltip-arrow {display:none;}
+#mCalcCons .sliderBlock .tooltip.top .tooltip-inner {width:48px;height:42px;color:#fff;line-height:42px;font-size:16px;border-radius:10px;padding:0}
+#mutuoButton {float:right;}
+
+/* Risultati */
+#mResults{float:left;clear:both;display:block; width:100%;position:relative; padding:20px 0 0;background:transparent url(../../fe/img/separatore.gif) no-repeat center top;}
+
+#mCalcStatic .note {font-size:12px;display:block;color:#aaa;clear:both; padding:10px 0 15px}
+#mResults .legalnote {font-size:12px;display:block;color:#aaa;clear:both; padding: 5px 0 5px}
+
+/* Blocchetti mutui */
+.mData {float: left;
+    padding: 20px 0 10px;
+    width: 100%;
+    border-bottom: solid 2px #e8e8e8;}
+.mData .btn-whlit {float:right;height:44px;margin:0px;margin-bottom:15px;line-height:44px; min-width:120px;}
+.mData .title {font-size:21px;text-transform:uppercase;float:left;line-height:22px;padding-bottom:10px;font-family:'FuturaBT-Heavy',arial,serif;font-weight:normal;}
+.mData .scheda {background: transparent url(../../fe/img/freccia_link.png) no-repeat right 1px;
+    font-size: 16px;
+    float: left;
+    display: block;
+    margin: 0 20px 25px 0;
+    padding: 0 13px 0 0;
+    height: 24px;
+    font-weight: bold;
+    line-height: 15px;
+    color: #000;
+    text-decoration: underline;}
+.mData .scheda.hidden-xs {margin-left:15px;margin-bottom:0;}
+.mData .mGauge {clear:left; float:left; width:100%;background:#ddd;height:32px;text-align:right;border-radius:8px;line-height:32px;margin:-2px 0 0 -2px;position:absolute;}
+.mData .mGauge .rata {font-size:22px;padding: 0 10px; color: #fff;font-weight:bold;text-transform:uppercase;}
+.mData .mGauge .rata .smaller {font-size:14px;padding-left:10px;}
+
+.mData .message {border: solid 2px #e8e8e8; background-color:#f1f1f1;padding:10px; margin-bottom:15px;}
+
+
+#selectDurata {font-size:18px}
+.mData .mBlock {width: 100%;padding: 0;
+    border-radius: 8px;
+    height: 32px;
+    position: relative;}
+.detail  .mData .mBlock {border:none;}   
+.mData .mBlock .mButt {float:right;}
+.mData .tassi {clear: left;display: block;color: #000;font-size: 14px;padding: 10px 0 15px 25px;position:relative;}
+.mData .tassi .tassi-switch {width: 30px; height: 30px; left: 0; top: 12px; position: absolute;background: transparent url(../../fe/img/ico_espandi_testo.png) no-repeat 0 0;cursor:pointer;}
+.mData .tassi.opened .tassi-switch {background-image: url(../../fe/img/ico_contrai_testo.png);}
+.mData .tassi .testo-basic strong {font-size:16px;}
+.mData .tassi .testo-esteso {vertical-align:top; clear:both;display:block;padding-top:15px;}
+.mData .tassi .testo-esteso p {margin-bottom:10px;}
+.mData .tassi .testo-esteso p.nota {font-style:italic;}
+
+.mData .tassi.detail {padding: 15px 0 15px;}
+
+/* Assicurazioni */
+.mData span.assTitle {width:100%;clear:both; font-size:16px;float:left; font-family:'FuturaBT-Heavy',arial,serif; margin-top:20px;font-size:16px;text-transform:uppercase;}
+.mData .assBlock {float:left;width:100%;position:relative;width:100%;border-top:solid 2px #e8e8e8;padding: 0; display:none !important;}
+.mData .assBlock a.check {width:32px;height:32px;border:solid 2px #d1d1d1; position:absolute;top:10px; left:0;}
+.mData .assBlock a.check:hover {text-decoration:none;}
+.mData .assBlock a.check.selected:before {font-family: "FontAwesome";content: "\f00c";font-size: 22px; margin: 0 0 0 4px;line-height: 28px;}
+.mData .assBlock a.detail {display:block;float:left; width:22px;height:22px}
+.mData .assBlock .title {    font-size: 18px; font-weight: 400px;text-transform: none; margin: 5px 0 10px;}
+.mData .assBlock .payoff {clear: left; float: left; margin-top: -15px;padding: 0 0 10px;}
+.mData .assBlock .icoinfo {cursor:pointer;}
+.mData .assBlock p {font-size:14px;}
+.mData .goCons {
+    display: block;
+    width: 100%;
+    float: left;
+    clear: both;
+    border-top: solid 2px #e8e8e8;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;}
+.mData .goCons  #conf {
+    display: inline-block !important;
+    margin: 0 auto 0;
+    border: solid 2px #666;
+    color: #666 !important;
+    line-height: 40px;
+    font-size: 16px;
+    float: none;
+    background: #fff;
+}   
+#mResults .legalnote {padding-top:15px;margin:0;}
+
+/* Messaggio errore generico */
+#mResults .errore-generico {padding: 0 0 0 110px;min-height: 92px;font-size:16px; width: 100%;background: transparent url(../../fe/img/mutuo_messaggio.png) no-repeat 0 0;border-bottom: solid 2px #e8e8e8;margin-bottom:20px;padding-bottom:20px;}
+
+#mCalcStatic .mData .goCons a.mButt.left {margin-top:15px;width:130px}
+
+/* Bottoniera per richiesta */
+.mData .fleft {float:left;}
+.mData .fright {float:right;}
+.mData .goCons .btn-whlit {margin:31px 0 10px;}
+
+/* HACK IE8*/
+#mCalcCons .form-group{min-width:300px \9;}
+#mCalcStatic .mData .btn-whlit.btn-whlit-arrow {min-width: 0 \9;}
+
+/* Form signup */
+.bordato {font-size:16px;}
+.bordato input.form-control {width:100%;font-style:italic;margin-bottom:30px; border:solid 2px #d1d1d1;height:38px;box-shadow:0 none;}
+.bordato input.form-control:focus {border:solid 2px #d1d1d1}
+.bordato .form-group {margin-bottom:25px;}
+.bordato .no-margin-bottom {margin-bottom:0;}
+.bordato .radio label {padding-bottom:15px;}
+.bordato .btn {width:100%;text-align: center;padding: 0 10px;}
+.bordato p {font-size:16px;}
+.bordato p.intro {font-size:22px;}
+.bordato p.informativa {font-size:12px;}
+.bordato .checkbox label.control {padding-bottom:30px;}
+.bordato .checkbox label a {text-decoration:underline;}
+
+
+/* Box captcha */
+.box-captcha {border:solid 2px #d1d1d1;display:block;float:left;width:100%;}
+.box-captcha-left {display:inline-block;margin:0;padding:0;width:50%;float:left;}
+.box-captcha-left img {width:100%;}
+.box-captcha-right {width:48%;display:block;float:right;}
+.bordato .box-captcha-right input.form-control {width:100%;border:0;height:60px;border-left:solid 2px #ccc;border-radius:0;box-shadow:none;margin:0;}
+.privacy_text,.privacy_text:hover {color:#000;font-size:12px;font-weight:bold}
+
+/* Vincoli per promo */
+#conf {display:none !important;}
+
+/* Controlli generici per errori */
+label.error { position: absolute;
+    padding: 0;
+    bottom: 8px;
+    left: 15px;
+    margin: 0;
+    color: #f00;
+    font-size: 14px;font-weight:normal;}
+    label.error::before, label.error::after {content:""; width:0;height:0;border:0;}
+    .checkbox label.error,.radio label.error {left:0;}
+.bordato .form-control.error {border-color:#f00 !important}
+
+
+
+.only-yellow,.only-green,.only-blue {display:none;}
+
+.promo-msg {padding: 0; margin:0 0 30px;width: 100%;display: inline-block;clear: both; border-bottom:solid 2px #e8e8e8;}
+.detail .promo-msg {border-bottom:0 none; border-top: solid 2px #e8e8e8;}
+.promo-msg h3 {text-transform:uppercase;margin-bottom:3px;}
+.promo-msg .boxed {background:#e8e8e8;padding:10px;}
+.promo-msg .boxed p {margin:0;padding:0;font-size:14px;}
+.Surroga .promo-msg {display:none;}
+
+/* Media queries smartphone portrait*/
+@media (max-width: 1199px) {
+	#mutuiWrap a.btn-grlit,#mutuiWrap a.btn-whlit  {margin: 40px 0 15px 0;}
+}
+
+
+@media  (max-width: 1023px) {
+    
+    .main-visual .promo-box {padding:15px 15px 0;bottom:20px; width:50%;}
+    .main-visual .fascione {padding:15px 15px 0}
+} 
+
+@media (max-width: 767px) {
+
+    header {text-align:center;}
+
+    /* Main visual */
+    .main-visual .promo-box {    position: relative;
+    top: 0;
+    padding: 15px;
+    width: 100%;
+    background:#fff !important;
+    color:#000 !important;
+    margin: 0;}
+    .main-visual .promo-box h3 {font-size:20px;}
+    .main-visual .fascione h2 {font-size:25px;}
+    .main-visual .fascione p {font-size:18px;}
+
+    .main-visual .promo-box p {font-size:18px;}
+    .main-visual .promo-box ul {font-size:16px; margin-top:-14px;}
+
+    /* Fine main visual */
+    .bordato .box-captcha-left, .box-captcha-right {width:100%;}
+    .bordato .box-captcha-right input.form-control {border:0; border-top:solid 2px #dedede;}
+
+    ul.mTabs li a span {font-size:18px;}
+    .radioprimacasa .radio label {padding-bottom:10px;}
+
+	#mCalcCons .form-group label{margin-top:5px;}
+	#mutuiWrap .btn-grlit,#mutuiWrap .btn-whlit {width:100%;}
+	#mutuiWrap a.btn-grlit , #mutuiWrap a.btn-whlit{margin: 15px 0 30px 0;}
+    
+    .mData .scheda {margin:5px 20px 15px 0}
+    .mData .assBlock {margin-top:25px; display:none !important;}
+
+    #mutuiWrap #mResults a.btn-whlit.btn-whlit-arrow {    margin: 0px auto 30px;
+    float: none;
+    width: 200px;
+    text-align: center;
+    clear: both;
+    background-color: #666 !important;}
+
+    /* Footer*/
+    footer {padding-top:30px;min-height:100px;text-align:center;}
+    footer hr {display:none;}
+    footer img {display:inline-block; position:relative;right:0;}
+    footer p {background-position: center top;width:100%;padding:0 15px 20px;text-align:center;}
+
+}

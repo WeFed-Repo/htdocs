@@ -1,0 +1,1170 @@
+/*css per assistente virtuale */
+
+@import url("/wbresp/css/tool_va.css");
+
+/* Header AOL */
+
+div.console-aiuto {
+    float: right;
+    position: absolute;
+    right: 0;
+    display: bottom;
+    top: 0;
+    text-align: left;
+}
+
+div.console-aiuto .opener-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 15px 0 0;
+    float: left;
+}
+
+div.console-aiuto .aol-tool {
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    list-style-type: none;
+}
+
+div.console-aiuto li {
+    float: left;
+    list-style-type: none
+}
+
+div.console-aiuto .aol-tools {
+    margin: 0 0 0 0;
+    float: right;
+    padding: 0;
+}
+
+div.console-aiuto .tool-btn {
+    color: #fff;
+    float: left;
+    margin: 15px 15px 0 0;
+    min-height: 40px;
+    padding: 5px 0 0 45px;
+    background: transparent url(/wbresp/img/link_chatta2.png) no-repeat 0 5px
+}
+
+div.console-aiuto a.tool-btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.console-aiuto .tool-btn.disabled {
+    opacity: 0.5;
+}
+
+div.console-aiuto #toolVirtassButton .tool-btn {
+    background-image: url(/wbresp/img/link_chiedi_paolo2.png)
+}
+
+div.console-aiuto #toolCall .tool-btn {
+    background-image: url(/wbresp/img/link_numeri_utili2.png)
+}
+
+.form-group label.labelTooltip,
+.form-group .labelIco {
+    width: auto;
+}
+
+a.icoinfo {
+    display: inline-block;
+    margin: -7px 0 -6px 10px;
+    width: 25px;
+    height: 25px;
+    background: transparent url(/wbresp/img/icon_info.png) no-repeat 0 0;
+}
+
+a.icomod {
+    display: inline-block;
+    margin: -6px 0 -6px 10px;
+    width: 23px;
+    height: 24px;
+    background: transparent url(/wbresp/img/scrivi_ico.png) no-repeat 0 0;
+}
+
+a.icomod.disabled {
+    background-image: url(/wbresp/img/scrivi_ico_disabled.png);
+    cursor: default;
+}
+
+a.ico-pdf {
+    display: inline-block;
+    color: #999999;
+    padding: 0 0 0 40px;
+    background: transparent url("/wbresp/img/trasparenza/pdf.png") 0 center no-repeat;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #666;
+}
+
+.boxalert {
+    margin: 10px 0
+}
+
+.boxalert .middle {
+    background-color: #f8eec5;
+    padding: 5px
+}
+
+.boxalert .imgCont {
+    background: url(/wbresp/img/ico2or_spuntaalert_post.gif) no-repeat 0 0;
+    width: 27px;
+    height: 18px;
+    float: left;
+}
+
+.boxalert .middle .spCont {
+    float: left;
+    width: 90%
+}
+
+.submenuaol {
+    background: #fff;
+}
+
+.submenuaol li {
+    padding: 10px 5px 10px 5px;
+}
+
+.submenuaol li span {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.submenuaol .active span {
+    color: #8ab10b;
+    background: url(/wbresp/img/arrow_menuaol.gif) no-repeat 0 0;
+}
+
+input.nascGg {
+    float: left;
+    width: 22%
+}
+
+input.nascAn {
+    float: left;
+    width: 50%
+}
+
+.nascSl {
+    float: left;
+    width: 3%
+}
+
+input.numPref {
+    float: left;
+    width: 40%
+}
+
+input.numCell, input.numNaz {
+    float: left;
+    width: 60%
+}
+
+.input.input-inline:before {
+    content: " ";
+    display: table;
+}
+
+.input.input-inline:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+.form-section-title {
+    color: #666666;
+    font-size: 16px;
+    font-family: "ralewaybold", arial, sans-serif;
+}
+
+.widget-aol h4 {
+    color: #8ab10b;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.widget-aol h4.ico-pdf {
+    display: inline-block;
+    color: #999999;
+    padding: 0 0 0 40px;
+    background: transparent url("/wbresp/img/trasparenza/pdf.png") 0 center no-repeat;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #666;
+}
+
+.widget-aol h5 {
+    padding: 0 0 10px;
+}
+
+.wrapperIE {
+    margin-top: 14px
+}
+
+.basic-content .spacer-no-border,
+.modal-content .spacer-no-border {
+    border-top: 0;
+    height: 20px;
+}
+
+.mainContent .img-responsive {
+    width: 100%;
+}
+
+
+/*.aol .sectionTitle {top: 84px;}*/
+
+
+/* Ul con spunte (per features) */
+
+ul.spunte {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.spunte li {
+    padding-bottom: 10px;
+}
+
+ul.spunte span.spuntato {
+    background: transparent url(/wbresp/img/ico_spunta.png) no-repeat 0 0;
+    padding: 0 0 0 25px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+}
+
+
+/* radio/check con immagini e descrizione */
+
+.imageradio img {
+    float: left;
+    width: 100%;
+}
+
+.imageradio label {
+    white-space: nowrap \9;
+}
+
+.imageradio>.row {
+    padding: 10px 0;
+}
+
+
+/* Iconcina informativa (tooltip) */
+
+span.infoicon {
+    display: inline-block;
+    margin: -7px 0 -6px 10px;
+    width: 25px;
+    height: 25px;
+    background: transparent url(/wbresp/img/icon_info.png) no-repeat 0 0;
+}
+
+
+/* Accordion interno aggiungi/elimina box */
+
+.fieldButton.remove,
+.fieldButton.add {
+    font-size: 15px;
+    background: url("/wbresp/img/ico_accordion_aol.png") no-repeat 0 0;
+    height: 32px;
+    display: block;
+    padding-left: 38px;
+}
+
+.fieldButton.remove {
+    background-position: 0 -32px;
+}
+
+.fieldButton.disabled,
+.fieldButton.disabled:hover {
+    opacity: 0.5;
+    cursor: default;
+    text-decoration: none;
+    color: #666;
+}
+
+.radio input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+}
+
+
+/* Stili dei tooltip */
+
+div.tooltip {
+    padding: 15px 0;
+}
+
+div.tooltip img {
+    max-width: 100%;
+    clear: both;
+}
+
+div.tooltip.in {
+    opacity: 1;
+}
+
+div.tooltip .tooltip-inner {
+    color: #999;
+    font-family: "ralewaymedium", Arial, serif;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 30px;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: left;
+    box-shadow: 0 7px 35px rgba(0, 0, 0, 0.4);
+}
+
+div.tooltip.top {
+    margin-top: -3px;
+    padding: 15px 0;
+}
+
+div.tooltip.top .tooltip-arrow {
+    border-top: solid 15px #fff;
+    border-top-color: #fff;
+    border-width: 15px 15px 0;
+    margin-left: -15px
+}
+
+div.tooltip span.tooltip-close {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;
+    background: transparent url(/wbresp/img/ico_close.png) no-repeat 0 0;
+    margin: 10px 0 0 0;
+}
+
+
+/* Sub accordion */
+
+.accordion-group .panel-body .panel-title a,
+.panel-sub .panel-title a {
+    display: block;
+    background: url(/wbresp/img/ico_accordion_aol_meno.png) no-repeat left 0;
+    padding-left: 45px;
+    line-height: 28px;
+    padding-bottom: 4px
+}
+
+.accordion-group .panel-body .panel-title a.collapsed,
+.panel-sub .panel-title a.collapsed {
+    display: block;
+    background: url(/wbresp/img/ico_accordion_aol_piu.png) no-repeat left 0;
+}
+
+.accordion-group .panel-body .panel-heading p,
+.panel-sub .panel-heading p {
+    padding-top: 0;
+    padding-left: 45px;
+    font-size: 14px;
+    font-weight: normal
+}
+
+
+/* Wrapper input radio */
+
+.fieldwrapped .radio-btnstyle-wrap .radio-btnstyle-cont {
+    display: none
+}
+
+.fieldwrapped .radio-btnstyle-wrap .radio-btnstyle {
+    float: left;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: #dbdbdb;
+    color: #fff;
+    border-radius: 15px;
+    cursor: default;
+}
+
+.fieldwrapped .radio-btnstyle-wrap .radio-btnstyle label {
+    font-weight: 400;
+    width: 100%;
+}
+
+.fieldwrapped.selected .radio-btnstyle-wrap .radio-btnstyle {
+    background-color: #bcbcbc
+}
+
+.fieldwrapped.selected .radio-btnstyle-wrap.selected .radio-btnstyle {
+    background-color: #8ab10b;
+}
+
+.fieldwrapped.selected .radio-btnstyle-wrap.selected .radio-btnstyle-cont {
+    display: block;
+    padding: 10px 0 15px;
+    float: left;
+    width: 100%;
+}
+
+select.IndTipo {
+    width: 23%;
+    float: left;
+    display: block;
+    margin-right: 8px
+}
+
+input.IndNome {
+    width: 75%;
+    float: left;
+    display: block
+}
+
+.basic-content {
+    margin: 0;
+}
+
+
+/* Banner Convenzione*/
+
+.boxBannerConv {
+    padding: 10px;
+    background: #8ab10b;
+    color: #fff
+}
+
+.boxBannerConv h4 {
+    color: #fff
+}
+
+.boxBannerConv a {
+    padding: 15px;
+    margin-top: 10px;
+    background: #fff;
+    display: block
+}
+
+
+/* Note */
+
+p.note {
+    font-size: 14px!important;
+    display: block;
+    color: #aaa!important;
+    clear: both;
+    font-style: italic;
+    padding: 10px 0 15px
+}
+
+
+/*pdf embed */
+
+.pdfObject {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 300px
+}
+
+a .invioOtp {
+    color: #8ab10b
+}
+
+.invioOtp {
+    color: #aaa
+}
+
+a .invioOtp:hover {
+    text-decoration: underline
+}
+
+.otpenabled .nota {
+    text-align: right;
+}
+
+.otpenabled .nota {
+    float: right;
+    width: 130px;
+    text-align: right;
+}
+
+.otpenabled .nota a {
+    font-size: 13px;
+    color: #999999;
+    text-decoration: underline;
+}
+
+.otpenabled label.error {
+    display: inline-block;
+}
+
+
+/* Widget per AOL */
+
+.widget-aol {
+    border: solid 1px #e9e9e9;
+    margin-bottom: 25px;
+}
+
+.widget-aol .widget-head {
+    padding: 10px 12px;
+    margin: 0;
+    width: 100%;
+}
+
+.widget-aol .widget-body {
+    padding: 15px 15px 0;
+    width: 100%;
+    border-top: solid 1px #e9e9e9;
+}
+
+.widget-aol h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    height: auto;
+}
+
+.widget-aol h4.ico-pdf {
+    line-height: 20px;
+    color: #555;
+    padding: 0 0 0 24px;
+    width: 100%;
+    height: auto;
+    background: transparent url(/wbresp/img/link_pdf_black.png) no-repeat 0 0;
+    font-size: 18px;
+}
+
+.widget-aol h4.ico-pdf.collapsed {
+    background-image: url(/wbresp/img/link_pdf.png);
+    color: #8ab10b;
+}
+
+.widget-aol h4.switchable {
+    cursor: pointer;
+}
+
+.widget-aol h4 span.openclose {
+    float: right;
+    width: 25px;
+    height: 18px;
+    background: transparent url(/wbresp/img/opener_opened.png) no-repeat right center;
+}
+
+.widget-aol h4.collapsed span.openclose {
+    background-image: url(/wbresp/img/opener_closed.png);
+}
+
+.widget-aol ul {
+    margin: 0 15px 15px 20px;
+    padding: 0;
+}
+
+.widget-aol ul.listaLink {
+    list-style-image: url(/wbresp/img/link_spunta.png);
+}
+
+.widget-aol ul li {
+    padding: 5px 0;
+}
+
+.widget-aol h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+
+/* Stepper AOL */
+
+.aol-stepper {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+.aol-stepper li {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 10px;
+    border-left: solid 4px #c7c7c7;
+}
+
+.aol-stepper .stepwrap {
+    background-color: transparent;
+    margin: 0 0 0 -24px;
+    text-align: center;
+    width: 42px;
+    height: 50px;
+    float: left;
+}
+
+.aol-stepper li .step {
+    border-radius: 50%;
+    background-color: transparent;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+}
+
+.aol-stepper li .step>span {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff url(/wbresp/img/aol_step.gif) no-repeat center center;
+    margin-top: 7px;
+    border: solid 2px #c7c7c7;
+}
+
+.aol-stepper li:first-child .step {
+    background-color: #fff;
+    height: 37px;
+}
+
+.aol-stepper li.active:first-child .step {
+    height: 42px;
+}
+
+.aol-stepper li:last-child {
+    border-left-color: transparent;
+}
+
+.aol-stepper li:last-child .step>span {
+    margin-top: 0;
+}
+
+.aol-stepper li.completed {
+    border-color: #8ab10b;
+    color: #8ab10b;
+}
+
+.aol-stepper li.completed .step>span {
+    border-color: #8ab10b;
+    background: #8ab10b url(/wbresp/img/aol_step_completed.gif) no-repeat center center;
+}
+
+.aol-stepper li.active .stepwrap {
+    padding-bottom: 9px;
+    background-color: #fff;
+}
+
+.aol-stepper li.active .step {
+    background-color: #555;
+}
+
+.aol-stepper li.active .step>span {
+    border: 0;
+    height: 28px;
+    width: 28px;
+    background: #fff url(/wbresp/img/aol_step_active.gif) no-repeat center center;
+}
+
+.aol-stepper li .namewrap {
+    float: left;
+    color: #ccc;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: auto;
+    padding: 14px 0 0 5px;
+    font-family: arial, Serif;
+    max-width: 130px;
+    position: absolute;
+}
+
+.aol-stepper li.completed .namewrap {
+    color: #8ab10b;
+}
+
+.aol-stepper li.active .namewrap {
+    padding-top: 11px;
+    color: #333;
+}
+
+.aol-stepper li:last-child .namewrap {
+    padding-top: 7px;
+}
+
+.aol-stepper li .number {
+    font-weight: bold;
+    float: left;
+    display: inline-block;
+    padding: 0 5px 15px 0;
+}
+
+.aol-stepper li:last-child.active .step>span {
+    margin-top: 7px;
+}
+
+.aol-stepper li:last-child.active .namewrap {
+    padding-top: 11px;
+}
+
+@media (max-width:1199px) {
+    .aol-stepper {
+        float: none;
+        display: inline-block;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .aol-stepper li {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 11.10%;
+        border-left: none;
+        background: transparent url(/wbresp/img/aol_step_bar.gif) no-repeat right 12px;
+    }
+    .aol-stepper li:first-child {
+        background: transparent url(/wbresp/img/aol_step_bar_first.gif) no-repeat center 12px;
+    }
+    .aol-stepper li:last-child {
+        background: transparent url(/wbresp/img/aol_step_bar_last.gif) no-repeat center 12px;
+    }
+    .aol-stepper li.active {
+        background-position: center 12px;
+    }
+    .aol-stepper li.completed {
+        background-position: left 12px;
+    }
+    .aol-stepper li.completed:first-child {
+        background: transparent url(/wbresp/img/aol_step_bar_first_completed.gif) no-repeat center 12px;
+    }
+    .aol-stepper li.active:last-child {
+        background: transparent url(/wbresp/img/aol_step_bar_last_completed.gif) no-repeat center 12px;
+    }
+    .aol-stepper li .stepwrap {
+        float: none;
+        display: block;
+        clear: both;
+        margin: 0 auto;
+        height: 32px !important;
+    }
+    .aol-stepper li .namewrap {
+        position: static;
+        clear: both;
+        float: none;
+        display: inline-block;
+        text-align: center;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    .aol-stepper li .stepname {
+        display: none;
+    }
+    .aol-stepper li .number {
+        padding: 0;
+        margin: 0;
+        font-size: 17px;
+    }
+    .aol-stepper li .stepwrap {
+        width: 28px;
+        height: auto;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    .aol-stepper li .step {
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        margin: 0;
+        background: transparent !important;
+    }
+    .aol-stepper li .step>span {
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        border: solid 3px #ccc;
+    }
+    .aol-stepper li.active .step>span {
+        border: solid 3px #555;
+    }
+}
+
+
+/* Promo spalla destra */
+
+.widget-aol.widget-evidente {
+    border: 0;
+    background-color: #e2efbb;
+    text-align: center;
+}
+
+.widget-aol.widget-evidente img {
+    width: 100%;
+    max-width: 480px;
+    display: inline-block;
+}
+
+.widget-aol.widget-evidente a.verifica {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #8ab10b !important;
+}
+
+.widget-aol.widget-evidente a.verifica span {
+    font-weight: bold;
+    padding: 5px 30px 5px 5px;
+    display: inline-block;
+    background: transparent url(/wbresp/img/opener_opened.png) no-repeat right center;
+}
+
+.widget-aol.widget-evidente a.verifica.collapsed span {
+    background-image: url(/wbresp/img/opener_closed.png)
+}
+
+.widget-aol.widget-evidente .dettagli {
+    text-align: left;
+    background-color: #eee;
+    padding: 10px;
+}
+
+
+/* Riepilogo promo spalla destra */
+
+.widget-aol.widget-riepilogopromo {
+    background-color: #57585a;
+    padding: 0 15px 0;
+}
+
+.widget-aol.widget-riepilogopromo .item {
+    border-top: solid 1px #8a8a8c;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.widget-aol.widget-riepilogopromo .item:first-child {
+    border-top: 0;
+}
+
+.widget-aol.widget-riepilogopromo h4 {
+    padding-bottom: 5px;
+    color: #bdbec0;
+}
+
+.widget-aol.widget-riepilogopromo .inevidenza {
+    border: solid 2px #bdbec0;
+    background-color: #fff;
+    padding: 10px;
+    color: #6e8f0a;
+}
+
+
+/* Wrapper per immagini centrate nel codice */
+
+.centeredimage {
+    text-align: center;
+    width: 100%;
+}
+
+
+/*** CHAT INFOCERT ***/
+
+.webcamTitle {
+    margin-bottom: 30px;
+}
+
+#testPositivo {
+    position: relative;
+    padding-top: 20px;
+}
+
+
+/* Media Stream Box */
+
+#mediaRefreshBox {
+    display: block;
+    position: absolute;
+    top: 81px;
+    right: 16px;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    padding-right: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    text-align: right;
+    cursor: pointer;
+    background: url("/wbresp/img/aol/ico_refresh.png") no-repeat right 8px;
+}
+#mediaRefreshBox:hover {
+    color: #8ab10b;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url("/wbresp/img/aol/ico_refresh_hover.png");
+}
+
+#localMediaBox {
+    position: relative;
+    z-index: 10;
+    width: 30%;
+    margin-bottom: -16%;
+    border: 1px solid #e9e9e9;
+}
+
+#remoteMediaBox {
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+    border: 1px solid #e9e9e9;
+}
+
+.mediaStreamWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    background-color: #666;
+}
+
+#localMediaStream,
+#remoteMediaStream {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Media Info Box */
+
+.mediaInfo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#remoteMediaInfo {
+    padding: 10px 32px;
+}
+
+#localMediaInfo {
+    padding: 12px;
+    font-weight: bold;
+}
+
+.mediaInfo .btn-whlit {
+    padding-right: 20px;
+    margin: 0;
+    border-color: #bcbcbc;
+    color: #bcbcbc;
+    background-color: transparent;
+}
+
+.mediaInfo .btn-whlit:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.operatoreInfo {
+    padding-top: 5px;
+}
+
+#operatoreNome {
+    font-weight: bold;
+}
+
+#operatoreAzienda {
+    color: #bcbcbc;
+}
+
+
+/* Chat */
+
+#chatBox {
+    margin-top: 8px;
+    padding: 12px 32px 20px 32px;
+    border: 2px solid #e9e9e9;
+}
+
+#chat {
+    margin: 0 -15px;
+}
+
+#chatHistory {
+    height: 160px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.chat .chatSpacer {
+    margin-top: 10px;
+}
+
+.chat .messageName {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.chat .messageDate {
+    font-size: 12px;
+}
+
+.chat .messageText {
+    min-height: 40px;
+    padding-left: 20px;
+    border-left: 3px solid #666;
+}
+
+.fromOperator .messageName {
+    color: #8ab10b;
+}
+
+.fromOperator .messageText {
+    border-left-color: #b9d06d;
+}
+
+@media (max-width: 1199px) {
+    .aol .mainContent {
+        margin-top: 110px;
+    }
+    /* WIDGET */
+    .submenuaol li.active {
+        display: block;
+    }
+    .submenuaol {
+        margin-top: 20px;
+    }
+    /*
+    .aol-stepper li {
+        width: 11.1110%;
+        background-position: center 10px;
+        padding: 30px 0 15px 0;
+        margin: 0;
+        text-align: center;
+    }
+    .aol-stepper li .stepname {
+        display: none;
+    }
+    .aol-stepper li .number {
+        position: static;
+    }
+.aol-stepper li.active {
+        background-image: url(/wbresp/img/opener_closed.png)
+    }
+    */
+    .aol-tools-opener {
+        float: right;
+        width: 45px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+        margin: 25px 15px 0 0;
+        background: transparent url(/wbresp/img/opener_closed.png) no-repeat center center;
+    }
+    .aol-tools-opener .opener-title {
+        display: none;
+    }
+    div.console-aiuto .aol-tools {
+        display: none;
+        position: absolute;
+        background: #000;
+        margin: 85px 0 0 0;
+        right: 0;
+        width: 320px;
+        list-style-type: none;
+        padding: 0;
+    }
+    div.console-aiuto.opened .aol-tools-opener {
+        background-image: url(/wbresp/img/opener_opened.png);
+    }
+    div.console-aiuto.opened .aol-tools {
+        display: block
+    }
+    div.console-aiuto.opened .aol-tools li {
+        float: right;
+        width: 100%
+    }
+    div.console-aiuto.opened .aol-tools .aol-tool {
+        padding: 0 15px;
+        width: 100%;
+        float: left;
+    }
+    div.console-aiuto.opened .aol-tools .aol-tool .tool-btn {
+        width: 100%;
+        padding: 20px 15px 15px 50px;
+        margin: 0 0 10px;
+        border-top: solid 1px #333;
+        background-position: 0 18px;
+    }
+}
+
+@media (max-width: 479px) {
+    .aol .sectionTitle {
+        height: 64px;
+        top: 64px;
+    }
+    a.ico-pdf {
+        line-height: 20px;
+    }
+    .wrapperIE {
+        margin-top: 0
+    }
+    .accordion-group .panel-body .panel-title,
+    .panel-sub .panel-title {
+        font-size: 14px
+    }
+    .accordion-group .panel-body .panel-title a,
+    .panel-sub .panel-title a {
+        line-height: 14px;
+    }
+    input.IndNome {
+        width: 73%;
+    }
+    .form-group label.labelTooltip,
+    .form-group .labelIco {
+        width: 80%;
+    }
+    .aol-tools-opener {
+        margin: 15px 15px 0 0;
+    }
+    div.console-aiuto.opened .aol-tools {
+        margin: 65px 0 0 0
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .aol .sectionTitle {
+        height: 74px;
+        top: 84px;
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 1\9;
+    z-index: 1\9;
+    border: 0\9;
+    width: 19px\9;
+    height: 18px\9;
+    margin-top: 0\9;
+}
+.modal-content ol {
+	margin-top:5px;
+	margin-bottom:5px
+}
+

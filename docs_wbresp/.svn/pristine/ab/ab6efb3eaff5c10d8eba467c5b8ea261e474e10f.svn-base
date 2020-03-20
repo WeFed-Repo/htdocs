@@ -1,0 +1,232 @@
+/*
+
+CSS relativo a:
+mutuo.html -> Mutuo
+
+*/
+
+
+
+
+
+.mutuo .main_hero {height:490px; background: #1d300c url("/wbresp/img/mutuo/main_hero_bg.jpg") no-repeat center 0; background-size: cover; overflow:hidden; clear:both; float:none}
+.mutuo .main_hero h2 {margin: 41px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #fff; text-transform:uppercase}
+.mutuo .main_hero h4 {margin: 60px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #d3ff40; text-transform:uppercase}
+.mutuo .main_hero p {color: #fff; margin: 0 0 0px 50px; font-family:"ralewaymedium",arial,sans-serif}
+.mutuo .main_hero ul {text-indent:0; padding: 0 0 0 20px; margin: 0 0 10px 50px; color:#fff;  list-style: none}
+.mutuo .main_hero li {text-indent: -10px}
+.mutuo .main_hero li:before { content: "\2022   "; color:#d3ff40}
+
+/* MAIN HERO NEW */
+.mutuo .main_hero.new {text-shadow: 1px 1px 2px rgba(0,0,0,1);height:490px; background: #1d300c url("/wbresp/img/mutuo/minihero_mutuo_new.jpg") no-repeat center 0; background-size: cover; overflow:hidden; clear:both; float:none;padding:50px;position:relative;}
+.mutuo .main_hero.new h2 {margin: 0 0 20px; max-width:400px;font-size:30px; color:#d3ff40;font-family:"ralewaysemibold",arial, sans-serif; text-transform:uppercase}
+.mutuo .main_hero.new p {color: #fff; margin: 0 0 20px; max-width:400px;font-family:"ralewaymedium",arial,sans-serif;font-size:16px;}
+.mutuo .main_hero.new ul {text-indent:0; padding: 0; margin: 0 0 15px; color:#fff; list-style-type: none;}
+.mutuo .main_hero.new li {background:transparent url(/wbresp/img/carousel/flag.png) no-repeat 0 0 ;font-size:16px;text-indent: 0;padding: 0 0 10px 30px;}
+.mutuo .main_hero.new .btn-green {float:left;text-shadow:none; position:absolute;bottom:30px;}
+.mutuo .main_hero li:before {content : ""}
+
+@media (max-width: 768px) {
+	.mutuo .main_hero.new {padding: 15px; background-image: url("/wbresp/img/mutuo/minihero_mutuo_new_mobile.jpg");}
+	.mutuo .main_hero.new p {line-height:20px;}
+	.mutuo .main_hero.new li {line-height:20px; padding-bottom:5px;}
+}
+
+
+.mutuo.container02 {min-height:575px; overflow:hidden; margin-top:20px; background: transparent url("/wbresp/img/mutuo/container_02_bg.jpg") 0 bottom no-repeat;background-size: 100% 100%}
+.mutuo.container02 h3 {margin: 0px 0 10px 0px; color: #cbcbcb; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:20px; text-align:center}
+#myCarouselMutuo {min-height:500px}
+#myCarouselMutuo2 {min-height:500px; display:none}
+.mutuo.container02 .nav-tabs {border-bottom:2px solid #a6cc28;width:99.7%;margin-left:4px;padding:0}
+.mutuo.container02 .nav-tabs > li > a {margin-left:-4px}
+.mutuo.container02 .nav-tabs > li {width:50%; text-align:center}
+.mutuo.container02 .nav-tabs > li > a,
+.mutuo.container02 .nav-tabs > li > a:hover,
+.mutuo.container02 .nav-tabs > li > a:focus {border-color: #a6cc28 #a6cc28 transparent; color: #555; font-family:"ralewaybold",arial, sans-serif; font-size:14px; text-transform:uppercase;
+-webkit-border-top-left-radius: 15px;
+-webkit-border-top-right-radius: 15px;
+-moz-border-radius-topleft: 15px;
+-moz-border-radius-topright: 15px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px}
+.mutuo.container02 .nav-tabs li.active a{color: #a6cc28}
+.mutuo.container02 .nav-tabs > li > a:hover {background: #fff; cursor:pointer}
+.mutuo.container02 .carousel-control.left {background-image:none; opacity:0.8}
+.mutuo.container02 .carousel-control.right {background-image:none; opacity:0.8}
+.mutuo.container02 .carousel .carousel-control .glyphicon-chevron-left, .mutuo.container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:-35px}
+.mutuo.container02 .carousel .carousel-control .glyphicon-chevron-right, .mutuo.container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:-35px}
+.mutuo.container02 .carousel .item h3 {margin: 45px 0 0px 70px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-align:left}
+.mutuo.container02 .carousel .item p {margin: 35px 0 10px 70px; font-size:16px; color: #999; line-height:24px}
+.mutuo.container02 .carousel .item img {display:block; margin: 0 auto}
+.mutuo .carousel-indicators li {background: #a6cc28; border:2px solid #a6cc28}
+.mutuo .carousel-indicators li.active {background: #fff; border:2px solid #a6cc28}
+
+.mutuo.container03 {background: #2c2c2c url("/wbresp/img/mutuo/container_03_bg.jpg") no-repeat top right; background-size:cover; min-height:610px; overflow:hidden; margin-top:20px}
+.mutuo.container03 h4 {margin: 50px 0 6px 50px; color: #e9e9e9; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:16px}
+.mutuo.container03 h3 {margin: 0px 0 66px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #ffffff; }
+.mutuo.container03 ul {color:#e9e9e9; clear:both; float:none; padding:0; margin: 0 0px 0 50px; list-style:none; text-indent:0; overflow:hidden}
+.mutuo.container03 ul li {float:left; width:40%; padding: 10px 0 0 43px; margin: 0 15px 10px 0}
+.mutuo.container03 ul li.item1 {background: transparent url("/wbresp/img/mutuo/container_03_icon_1.png") no-repeat 0 0}
+.mutuo.container03 ul li.item2 {background: transparent url("/wbresp/img/mutuo/container_03_icon_2.png") no-repeat 0 0}
+.mutuo.container03 ul li.item3 {background: transparent url("/wbresp/img/mutuo/container_03_icon_3.png") no-repeat 0 0}
+.mutuo.container03 ul li.item4 {background: transparent url("/wbresp/img/mutuo/container_03_icon_4.png") no-repeat 0 0}
+
+
+.mutuo.container04 {background:#fff; min-height:350px; overflow:hidden; margin-top:20px}
+.mutuo.container04 h4 {margin: 10px 0 10px 0; color: #999; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:16px; text-transform:uppercase; text-align:center}
+.mutuo.container04 h3 {margin: 0 0 20px 0; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666666; text-align:center; }
+.mutuo.container04 p {text-align:left; color: #999999; padding: 0 30px}
+.mutuo.container04 img {display:block; text-align: center; margin: 0 auto 10px auto;}
+.mutuo.container04 h5 {color: #999; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:12px; text-transform:uppercase; text-align:center}
+.mutuo.container04 h5 span {color: #666; font-size:14px}
+.mutuo#s4 p {padding:0;}
+
+/* Tabella riepilogo*/
+/*.tabular table {width:100%}
+.tabular td {padding:10px 15px 5px 15px}
+.tabular td.noPd {padding:0}
+.tabular td.noPd hr {margin-top:0; margin-bottom:0}
+.tabular tr.tipM {background-color:#fafcf2}
+.tabular tr.tipM td {font-weight:bold;padding:15px}
+.tabular td span.bulCl {color:#a6cc28; padding-left:2px; padding-right:2px}*/
+.tabular .singLn  {padding-left:15px; padding-right:15px}
+.tabular .singLn span {font-weight:bold; display:block; background-color:#fafcf2; padding-top:15px; padding-bottom:15px; margin-top:5px; margin-bottom:5px}
+.tabular .singLn .nopadding {padding: 0 !important; margin: 0 !important}
+.tabular .singLn .nopadding .padLe {padding-left:4px}
+.tabular span.bulCl {color:#a6cc28; padding-left:2px; padding-right:2px}
+
+/*
+.mutuo.container05 {min-height:575px; background:#222 url("/wbresp/img/mutuo/container_05_bg.jpg") repeat-x 0 0; background-size: 100% 100%; overflow:hidden}
+.mutuo.container05 h3 {margin: 50px 0 0 50px; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:30px; text-transform:uppercase; color:#fff}
+.mutuo.container05 h3 span {color: #d3ff40}
+.mutuo .radiogroup {margin:100px 40px 10px 60px; overflow:hidden; clear:both; float:none}
+.mutuo .radiogroup .radio {float:left; margin-right:20px; }
+.mutuo .radiogroup .radio label {color:#fff; font-size:16px}
+.mutuo .checkgroup {margin:0px 40px 10px 60px; overflow:hidden; clear:both; float:none; padding-bottom: 10px; border-bottom:1px solid #3b3c3b}
+.mutuo .checkgroup .checkbox {float:left; margin-right:20px; line-height:25px; height:25px}
+.mutuo .checkgroup .checkbox label {color:#fff; font-size:16px; display:inline-block; line-height:25px; height:40px}
+.mutuo .checkgroup .checkbox span.info {display:inline-block; width:25px; height:25px; background: transparent url("/wbresp/img/mutuo/info_ico.png") 0 0 no-repeat}
+.mutuo .plusminus {margin:0px 0px 10px 60px; overflow:hidden; clear:both; float:none; padding-bottom: 10px}
+.mutuo .plusminus2 {margin: 0 0 10px 20px}
+.mutuo .plusminusbox {position:relative; width:251px;height:42px}
+.mutuo .plusminus label {color:#fff; font-size:16px; font-weight:normal}
+.mutuo .plusminus .minus {position:absolute; top:-2px; left:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo .plusminus .plus {position:absolute; top:0px; right:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo .plusminus input.textinput {border:1px solid #8ab10b; background: transparent; color: #fff; font-size:24px; line-height:40px; height:40px; width:249px; padding: 0 20px; text-align:center}
+.mutuo .spacerdark {height:10px; border-bottom:1px solid #3b3c3b; margin: 0 40px 10px 60px}
+.mutuo .sliderblock {margin:0px 50px 10px 60px; overflow:hidden; clear:both; float:none; padding-bottom: 10px}
+.mutuo .sliderbox {height:35px; width:100%; position:relative; display:none}
+.mutuo .sliderblock label {color:#fff; font-size:16px; font-weight:normal}
+.mutuo .sliderbox .minus {position:absolute; top:-6px; left:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo .sliderbox .plus {position:absolute; top:-2px; right:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo .sliderbox .whitebar {position:absolute; top:14px; left: 50px; height: 4px; width: 80%; background:#fff; overflow:hidden; z-index:9}
+.mutuo .sliderbox .greenbar {position:absolute; top:14px; left: 50px; height: 4px; width: 250px; background:#8ab10b; overflow:hidden; z-index:10}
+.mutuo .sliderbox .slider-cursor {position:absolute; top:0px; left: 40%; height: 30px; width:40px; color:#fff; font-size: 24px; z-index:11; background:#8ab10b; line-height:30px; text-align:center}
+.mutuo #ex6 .slider-selection {background: #8ab10b}
+.mutuo #ex6 .slider-handle {background: #8ab10b; color: #fff; width: 40px; height:30px; top:-8px; text-align:center; font-size:22px}
+.mutuo .sliderarea {margin: 0 auto; width:500px; text-align:center; position:relative}
+.mutuo .slider.slider-horizontal {width:410px; margin:10px auto}
+.mutuo .slider.slider-horizontal .slider-track {height:4px}
+.mutuo .sliderarea .minus {position:absolute; top:-6px; left:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo .sliderarea .plus {position:absolute; top:-2px; right:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer}
+.mutuo.container05 button.btn-green
+{
+    margin-bottom: 30px;
+}
+*/
+@media (max-width: 1199px) {
+
+	.mutuo .submenu {display:none}
+
+
+	}
+
+@media (max-width: 1025px) {
+/*
+  .mutuo .plusminus2 {margin: 0 0 10px 60px}
+  */
+}
+
+
+@media (max-width: 767px) {
+
+    .mutuo .main_hero {height:auto; padding-bottom:20px}
+    .mutuo .main_hero h2 {margin: 20px 0 10px 10px}
+    .mutuo .main_hero h4 {margin-left:10px}
+    .mutuo .main_hero p {margin-left:10px;margin-right:10px}
+    .mutuo .main_hero ul {margin-left:10px}
+    .mutuo.container02 .nav-tabs {/*display:none*/}
+    .mutuo.container02 .carousel .item h3 {margin: 20px}
+    .mutuo.container02 .carousel .item p {margin: 0 20px 20px 20px}
+    .mutuo.container02 .carousel .carousel-control .glyphicon-chevron-left, .mutuo.container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:-12px !important}
+    .mutuo.container02 .carousel .carousel-control .glyphicon-chevron-right, .mutuo.container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:-12px !important}
+    .mutuo.container03 {height:auto; padding-bottom:20px}
+    .mutuo.container03 h4 {margin: 20px 10px 10px 20px}
+    .mutuo.container03 h3 {margin: 0px 10px 20px 20px}
+    .mutuo.container03 ul {margin: 0px 10px 10px 20px}
+    .mutuo.container03 ul li {float:none; width:80%}
+    .mutuo.container03 {background: #2c2c2c url("/wbresp/img/mutuo/container_03_bg_m.jpg") no-repeat top right; background-size:default; min-height:610px; overflow:hidden; margin-top:20px}
+    .mutuo .sliderarea {margin: 0 auto; width:300px; text-align:center; position:relative}
+    .mutuo .slider.slider-horizontal {width:210px; margin:10px auto}
+
+	/* Tabella riepilogo*/
+	.tabular .singLn span {font-weight:bold;display:inline; background-color:#fff;padding:0}
+	.tabular .singLn  {padding-left:15px; padding-right:15px}
+	.tabular .singLn .nopadding {padding: 0 !important; margin: 0 !important}
+	.tabular .singLn .nopadding .padLe {padding-left:0; display:inline}
+	
+	.mutuo.container04 h4,.mutuo.container04 h3, .mutuo.container04 p{padding-left:5px;text-align:left}
+	/*.mutuo.container02 .nav-tabs {margin-left:15px;margin-right:16px;width:90%}*/
+
+		/*
+		 .mutuo.container05 h3 {
+
+				margin: 50px 0 0 20px;
+
+		}
+
+		.mutuo .radiogroup
+		{
+			margin: 100px 40px 10px 20px;
+
+		}
+
+		.mutuo .checkgroup {
+
+			margin: 0 40px 10px 20px;
+
+		}
+
+		.mutuo .plusminus {
+			margin: 0 0 10px 20px;
+
+		}
+
+		.mutuo .sliderblock {
+			margin: 0 50px 10px 20px;
+
+		}
+
+		.mutuo .spacerdark {
+			margin: 0 40px 10px 20px;
+		}
+		.mutuo.container05 button.btn-green
+		{
+			margin: 40px auto 30px auto;
+			float:none !important;
+		}
+		*/
+
+	}
+
+
+
+
+
+/* Portrait phones and smaller */
+@media (max-width: 479px) {
+
+  .mutuo.container03 a.btn-green {float:none; margin:40px auto 0 auto}
+
+
+}

@@ -1,0 +1,80 @@
+/*
+
+CSS relativo a:
+trasparenza.html -> Trasparenza
+fogli-informativi.html -> Trasparenza - Fogli informativi
+documenti-precontrattuali.html -> Trasparenza - Documenti precontrattuali
+rilevazione-tassi-effettivi.html -> Trasparenza - Rilevazione tassi effettivi
+indicatore-sintetico-di-costo.html -> Trasparenza - Indicatore sintetico di costo
+aggiornamenti-psd.html -> Trasparenza - Aggiornamenti Psd
+guide-pratiche.html -> Trasparenza - Guide pratiche
+reclami-ricorsi-e-conciliazione.html -> Trasparenza - Reclami, ricorsi e conciliazione
+rapporti-dormienti.html -> Trasparenza - Rapporti dormienti
+
+*/
+
+
+
+.indicatore-sintetico-di-costo.basic-content.content p.green-row-tit {background: #f6fae9;color: #666666;font-size: 14px;font-family: "ralewaymedium",arial,sans-serif;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0;padding: 20px 20px 20px 20px;}
+.indicatore-sintetico-di-costo.basic-content.content p.white-row-tit {background: #FFF;color: #666666;font-size: 14px;font-family: "ralewaymedium",arial,sans-serif;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0;padding: 20px 20px 20px 20px;}
+.indicatore-sintetico-di-costo.basic-content.content p.white-row-tit .colonna1, .indicatore-sintetico-di-costo.basic-content.content p.green-row-tit .colonna1 {width: 78%;display: inline-block;font-weight: normal;vertical-align:top;padding: 1%;}
+.indicatore-sintetico-di-costo.basic-content.content p.white-row-tit .colonna2, .indicatore-sintetico-di-costo.basic-content.content p.green-row-tit .colonna2 {width: 20%;display: inline-block;font-weight: normal;vertical-align:top;padding: 1%;}
+
+
+.rapporti-dormienti.basic-content h4 {font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-transform:uppercase;margin:40px 20px 10px 0px}
+.rapporti-dormienti.basic-content p {color: #999999; font-size:16px; }
+.rapporti-dormienti.basic-content ul.featlist { color: #999999; font-size: 16px; list-style: outside none none; margin-top: 6px;padding: 0 0 0 40px;}
+.rapporti-dormienti.basic-content .featlist li::before {color: #a6cc28;content: "\2022   ";}
+.rapporti-dormienti.basic-content .featlist li {text-indent: -10px;}
+.rapporti-dormienti.basic-content b {font-family:"ralewaybold",arial, sans-serif;}
+.rapporti-dormienti.basic-content a {color: #8ab10b;}
+.rapporti-dormienti.basic-content li a {color:#666;}
+
+.reclami.basic-content h4 {font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-transform:uppercase;margin:40px 20px 10px 0px;}
+.reclami.basic-content p {color: #999999; font-size:16px; }
+.reclami.basic-content ul.featlist { color: #999999; font-size: 16px; list-style: outside none none;margin-top:6px;margin-bottom:10px;padding: 0 0 0 40px;}
+.reclami.basic-content .featlist li::before {color: #a6cc28;content: "\2022   ";}
+.reclami.basic-content .featlist li {text-indent: -10px;}
+.reclami.basic-content b {font-family:"ralewaybold",arial, sans-serif;}
+.reclami.basic-content li a {color:#666; text-decoration:underline;}
+
+@media (max-width: 767px) {
+
+	.fogli-informativi.basic-content.content .doc-contents .doc-content {max-width: 70%;}
+
+}
+
+@media (max-width: 768px) {
+
+    
+}
+
+
+.guide-pratiche .basic-content h3 { color: #666666; font-family: "ralewaysemibold",arial,sans-serif; font-size: 18px; margin: 20px 0 16px 0;}
+.guide-pratiche .basic-content h4 {text-transform:uppercase; margin: 20px 0 16px 0;}
+.guide-pratiche.basic-page .basic-content.content .doc-contents .doc-content {max-width:85%;}
+
+a.ico-pdf{  display: inline-block;
+  color: #999999;
+  padding: 10px 0 10px 40px;
+  background: transparent url(/wbresp/img/trasparenza/pdf.png) 0 center no-repeat;
+  min-height: 40px;
+  height: auto;
+  line-height: 20px;
+  clear: both;
+  font-size: 16px;
+  float: none;
+  /* padding: 10px; */
+  color: #666;}
+a.ico-pdf2r{line-height:22px;}
+a.ico-print{font-size:16px; color:#666!important;}
+a.ico-print:hover{text-decoration: underline!important;}
+
+.imgnum {
+    margin: 10px auto;
+    display: block;
+}
+
+
+
+

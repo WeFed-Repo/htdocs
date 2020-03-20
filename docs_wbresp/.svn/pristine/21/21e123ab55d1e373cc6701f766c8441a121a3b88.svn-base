@@ -1,0 +1,75 @@
+/*
+
+CSS relativo ai vari widget della spalla destra
+
+*/
+
+
+/* ==========================================================================
+  WIDGET INIZIO
+========================================================================== */
+
+
+/* Loading */
+
+.widgetCont.loading {
+    width: 100%;
+    min-height: 100px;
+    display: block;
+}
+.widget {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.widget-container .spacerdark {
+    display: none;
+}
+.widget-aol {
+    margin-bottom: 18px;
+}
+.widget-aol .title {
+    margin-bottom: 6px;
+}
+.widget-aol .title a {
+    color: #8ab10b;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.widget-aol .listaInfo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ccc;
+}
+.widget-aol .listaInfo li {
+    min-height: 41px;
+    padding: 9px 0;
+    border-bottom: 1px solid #ccc;
+    line-height: 22px;
+}
+@media (max-width: 1199px) {
+    .widget-container .widget {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 1024px) {
+    .widget {
+        margin-bottom: 70px;
+    }
+    .widget-container .spacerdark {
+        margin: 30px auto 30px auto;
+        display: block;
+    }
+    .widget-container .widget {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==========================================================================
+  WIDGET FINE
+========================================================================== */

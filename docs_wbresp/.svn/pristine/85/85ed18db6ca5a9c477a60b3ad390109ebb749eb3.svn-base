@@ -1,0 +1,15 @@
+<!-- BANNER MUTUO -->
+<style>
+.widget01 {margin: 0px auto;max-width:262px;height:491px;width:100%;background: transparent url("/wbresp/img/wdg_ban_mutui.jpg?a=0") top center no-repeat;text-align:center;padding-top:415px; box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+.widget01 h3 {font-family:"ralewayextralight", arial; font-size:45px; font-weight:normal; color: #8ab10b;padding: 16px 10px 20px 20px;margin:0 0 200px 0;}
+@media (max-width: 1199px) {
+	.widget01 {display: none;}
+}	
+</style>
+<div class="widget widget01">
+    <a href="/webankpub/wbresp/calcolatore_mutuo.do" class="btn-grlit btn-grlit-arrow" title="Calcola la rata">Calcola la rata</a>
+</div>
+<!-- FINE BANNER PROMO -->
+

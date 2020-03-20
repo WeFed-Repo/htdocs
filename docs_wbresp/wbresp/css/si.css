@@ -1,0 +1,473 @@
+/*
+.sectionTitle {background: #8ab10b; color: #ffffff; height: 90px; position:fixed; left:0; top:125px; width:100%; z-index:11; display:block; box-sizing:border-box; overflow:hidden;}
+.sectionTitle h2 {color: #ffffff; font.size: 16px; font-weight:bold; margin:0; line-height:90px;}
+.sectionTitle .btn-white {float:right; width:260px; background-position: 210px center;}
+.mainContent {margin:160px 0 100px 0;}
+*/
+
+a.btn-white {background: #fff; color: #333333; text-transform:uppercase; font-size: 36px; font-weight:bold; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 215px; height: 50px; line-height:50px; font-size: 16px; padding: 0 0 0 25px; line-height:50px; margin-top:20px; font-family:"ralewaybold",arial,sans-serif;}
+a.btn-white:hover {text-decoration:none; color: #333333;}
+a.btn-arrow {background: #fff url("/wbresp/img/arrow-btn-white.png") 165px center no-repeat;}
+
+.modal-dialog {z-index:9999;}
+.modal-header {border-bottom:0px; }
+.modal-header .modal-title {color:#333333; font-size:20px; font-family:"ralewaybold",arial, sans-serif; line-height:30px; text-transform: uppercase;}
+.modal-footer {border-top:0px;}
+.modal-header .close {font-size:40px; margin-top:-12px;}
+
+body textarea.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select.form-control:focus,
+.uneditable-input:focus {
+  border-color: rgba(138, 177, 11, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(138, 177, 11, 0.6);
+  outline: 0 none;
+}
+
+.submenu {background: #f6f6f6; list-style:none; text-indent:0; padding: 0; margin: 0; }
+.submenu li {padding: 20px 13px 20px 10px; border-bottom: 1px solid #e9e9e9; line-height:18px;}
+.submenu li a {color: #666; font-family:"ralewaysemibold",arial, sans-serif; text-transform:uppercase; font-size:14px;}
+.submenu li a.selected, .submenu li a:hover, .submenu li a:focus {text-decoration:none; color: #8ab10b;}
+
+.bcrumbs {font-size:14px; color: #666666; clear:both; float: none; overflow:hidden;}
+.bcrumbs span.lastleaf {display:block; float:left; height:16px; line-height:16px;}
+.bcrumbs span.symb {color:#999999; font-size: 8px; display:block; float:left; height:16px; line-height:16px; margin:0 4px;}
+.bcrumbs a {color: #a6cc28; display:block; float:left; height:16px; line-height:16px;}
+.bcrumbs a:hover {text-decoration: none;}
+
+
+.basic-page .basic-content {margin: 30px 30px 30px 30px;}
+.basic-page .no-submenu {margin-left:0px;}
+.basic-page .basic-content h3 {color:#666666; font-size: 30px; line-height:36px; margin: 0 0 30px 0; font-family:"ralewaysemibold",arial, sans-serif;}
+.basic-page .basic-content h4 {color:#666666; font-family:"ralewaysemibold",arial, sans-serif; font-size: 18px; margin: 10px 0 6px 0;}
+.basic-page .basic-content .spacer {margin-top:20px; border-top:1px solid #e9e9e9; height:10px;}
+.basic-page .basic-content b {font-family:"ralewaybold",arial, sans-serif;}
+.basic-page .basic-content p.smaller {font-size:12px; margin-top:20px;}
+.basic-page .basic-content p a {color: #666; text-decoration:underline; }
+
+.serve-aiuto .promoimg {display:block; width:100%; margin: 0 0 20px 0;}
+.serve-aiuto .basic-content {margin: 0 30px 30px 30px;}
+
+
+.trading .main_hero {height:490px; background: #1d300c url("/wbresp/img/trading/main_hero_bg.jpg") no-repeat 0 0; background-size: cover; overflow:hidden; clear:both; float:none;}
+.trading .main_hero h3 {margin: 70px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #fff; text-transform:uppercase;}
+.trading .main_hero p {color: #fff; margin: 0 0 10px 50px; font-family:"ralewaymedium",arial,sans-serif;}
+.trading .main_hero p.claim {text-transform:uppercase; color: #d3ff40; font-family:"ralewaysemibold",arial, sans-serif; margin: 20px 0 10px 50px;}
+.trading .main_hero p.claim2 {text-transform:uppercase; color: #fff; font-family:"ralewaysemibold",arial, sans-serif; margin: 20px 0 10px 50px; font-size: 13px; letter-spacing:1px;}
+.trading .main_hero p.claim2 span {color: #d3ff40;}
+
+.trading .main_hero a.btn-green {color: #fff; text-transform:uppercase; font-size: 24px; font-weight:bold; display:block; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; width: 355px; height: 60px; line-height:60px; padding: 0 0 0 25px; font-family:"ralewaybold",arial,sans-serif; float:right; margin: 10px 30px 0 0; background: #8ab10b url("/wbresp/img/arrow-btn-green.png") 298px center no-repeat;}
+
+.trading .container02 {margin-top:20px;}
+.trading .container02 .carousel {height: 605px; background: #fff url("/wbresp/img/trading/container_02_bg.jpg") no-repeat 0 0;}
+.trading .container02 .carousel .carousel-indicators {bottom:5px;}
+.trading .container02 .carousel .item {overflow:hidden;}
+.trading .container02 .carousel .item h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 40px 0 0 0; letter-spacing:1px;}
+.trading .container02 .carousel .item h3 {text-align: center; margin: 10px 0 0 0; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #666;}
+.trading .container02 .carousel .item01 img {display:block; margin: 20px auto 10px auto;}
+.trading .container02 .carousel .item01 p {color:#999999; text-align:center; width: 70%; margin: 0 auto; font-size: 16px; line-height:22px;}
+.trading .carousel-indicators li {background: #a6cc28; border:2px solid #a6cc28;}
+.trading .carousel-indicators li.active {background: #fff; border:2px solid #a6cc28;}
+.trading .container02 .carousel a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+
+.trading .container02 .carousel .item02 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading .container02 .carousel .item02 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+.trading .container02 .carousel .item02 a.btn-green  {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+
+.trading .container02 .carousel .item03 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading .container02 .carousel .item03 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 13px; color: #999999; line-height:20px;}
+.trading .container02 .carousel .item03 a.btn-green  {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+.trading .container02 .carousel .item03 a.btn-trasp  {color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #fff url("/wbresp/img//arrow-btn-green-small-trasp.png") 200px center no-repeat; text-align: left; border:2px solid #a6cc28;}
+
+.trading .container02 .carousel .item04 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading .container02 .carousel .item04 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+.trading .container02 .carousel .item04 a.btn-green  {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+.trading .container02 .carousel .item04 a.btn-trasp  {color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #fff url("/wbresp/img//arrow-btn-green-small-trasp.png") 200px center no-repeat; text-align: left; border:2px solid #a6cc28;}
+
+.trading .container02 .carousel .item05 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading .container02 .carousel .item05 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+.trading .container02 .carousel .item05 a.btn-green  {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+.trading .container02 .carousel .item05 a.btn-trasp  {color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #fff url("/wbresp/img//arrow-btn-green-small-trasp.png") 200px center no-repeat; text-align: left; border:2px solid #a6cc28;}
+
+.trading .container02 .carousel .item06 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading .container02 .carousel .item06 p {margin:0 0 10px 0; padding: 0 0 0 77px; font-size: 16px; color: #999999; line-height:24px;}
+.trading .container02 .carousel .item06 a.btn-green  {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+.trading .container02 .carousel .item06 a.btn-trasp  {color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #fff url("/wbresp/img//arrow-btn-green-small-trasp.png") 200px center no-repeat; text-align: left; border:2px solid #a6cc28;}
+
+.trading .container02 .carousel a.btn-trasp:hover {text-decoration:none;}
+.trading .container02 .carousel .carousel-control .glyphicon-chevron-left, .trading .container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:-35px;}
+.trading .container02 .carousel .carousel-control .glyphicon-chevron-right, .trading .container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:-35px;}
+.trading .container02 .carousel-control.left {background-image:none; opacity:0.8; filter: alpha(opacity=80);}
+.trading .container02 .carousel-control.right {background-image:none; opacity:0.8; filter: alpha(opacity=80);}
+
+
+.trading .container03 {overflow: hidden; background:#1c1c1c url("/wbresp/img/trading/container_03_bg.jpg") no-repeat 0 0; height:630px; margin-top:20px; clear:both; float: none;}
+.trading .container03 h4 {text-align: right; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 50px 45px 0px 0; letter-spacing:1px;}
+.trading .container03 h3 {text-align: right; margin: 10px 45px 0 0; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; color: #fff;}
+.trading .container03 p.right {text-align: right; margin: 10px 45px 50px 0; color:#999999; width:50%; float:right;}
+.trading .container03 h5  {clear:both; float: none; color:#fff; font-family:"ralewaybold",arial,sans-serif; margin: 20px 0 0 50px; text-align:left;}
+.trading .container03 p {color:#999999; margin: 10px 50px 0 50px; text-align:left;}
+.trading .container03 a.btn-trasp {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 210px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 20px 0 50px; background: transparent url("/wbresp/img/arrow-btn-green-small-trasp.png") 160px center no-repeat; text-align: left; border:2px solid #a6cc28; float: left;}
+.trading .container03 a.btn-trasp:hover {text-decoration:none;}
+.trading .container03 a.btn-green
+{color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 50px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right;}
+.trading .container03 a.btn-green:hover {text-decoration:none;}
+
+.trading .container04 {overflow: hidden; background:#fff url("/wbresp/img/trading/container_04_bg.jpg") no-repeat 0 0; height:580px; margin-top:20px; clear:both; float: none;}
+.trading .container04 h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 40px 0 0 0 ; letter-spacing:1px;}
+.trading .container04 h3 {text-align: center; margin: 10px 0 0 0 ; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #222;}
+.trading .container04 img.icon {display:block; margin:10px auto 0 auto;}
+.trading .container04 p {margin: 10px auto 0 auto; width: 70%; color:#999999; text-align:center;}
+.trading .container04 a.btn-white {color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 210px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 20px 0 50px; background: #fff url("/wbresp/img/arrow-btn-white.png") 160px center no-repeat; text-align: left; border:2px solid #a6cc28; float: left;}
+.trading .container04 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 50px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right;}
+
+.trading .container05 {overflow: hidden; background:#fff; margin-top:20px; clear:both; float: none;}
+.trading .container05 h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 10px 0 0 0 ; letter-spacing:1px;}
+.trading .container05 h3 {text-align: center; margin: 10px 0 0 0 ; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #666666;}
+.trading .container05 h5 {margin: 20px auto 20px auto; width: 70%; color:#999999; text-align:center; font-size: 16px; line-height:20px;}
+.trading .container05 h6 {font-family:"ralewaybold",arial,sans-serif; color: #666666; font-size: 15px; text-transform:uppercase; letter-spacing:1px; margin:0px 0 10px 0; padding: 15px 0 0 50px;}
+.trading .container05 p {font-size: 14px; margin: 0 0 4px 0; padding: 0 0 0 57px;}
+.trading .container05 ul {margin:0; text-indent: -9px; padding: 0 0 0 57px; list-style: none;}
+.trading .container05 ul li {font-size: 14px; margin-bottom: 4px;}
+.trading .container05 ul li:before {content: "\2022   "; color: #aed03c; /* or whatever color you prefer */}
+.trading .container05 .box1 {background: transparent url("/wbresp/img/trading/container_05_icon_1.png") no-repeat 0 0;}
+.trading .container05 .box2 {background: transparent url("/wbresp/img/trading/container_05_icon_2.png") no-repeat 0 0;}
+.trading .container05 .box3 {background: transparent url("/wbresp/img/trading/container_05_icon_3.png") no-repeat 0 0;}
+.trading .container05 .box4 {background: transparent url("/wbresp/img/trading/container_05_icon_4.png") no-repeat 0 0;}
+.trading .container05 .box5 {background: transparent url("/wbresp/img/trading/container_05_icon_5.png") no-repeat 0 0;}
+.trading .container05 .box6 {background: transparent url("/wbresp/img/trading/container_05_icon_6.png") no-repeat 0 0;}
+.trading .container05 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 20px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; }
+
+.trading .container06 {height:586px; overflow: hidden; background:#1c1d1c url("/wbresp/img/trading/container_06_bg.jpg") no-repeat 0 0; clear:both; float: none; margin: 20px 0 0 0;}
+.trading .container06 h4 {text-align: left; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 50px 0 0px 45px; letter-spacing:1px;}
+.trading .container06 h3 {text-align: left; margin: 10px 0 0 45px; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; color: #fff;}
+.trading .container06 p {text-align: left; margin: 20px 0 50px 45px; color:#999999; font-size: 16px; line-height:22px;}
+.trading .container06 a.btn-trasp {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 290px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 10px 0 50px; background: #2a2a2a url("/wbresp/img/arrow-btn-green-small-trasp.png") 240px center no-repeat; text-align: left; border:2px solid #a6cc28; float: left;}
+.trading .container06 a.btn-trasp:hover {text-decoration:none;}
+.trading .container06 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 50px 0 10px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 200px center no-repeat; text-align: left; float:right;}
+.trading .container06 a.btn-green:hover {text-decoration:none;}
+
+.mutuo .main_hero {height:490px; background: #1d300c url("/wbresp/img/mutuo/main_hero_bg.jpg") no-repeat center 0; background-size: cover; overflow:hidden; clear:both; float:none;}
+.mutuo .main_hero h3 {margin: 41px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #fff; text-transform:uppercase;}
+.mutuo .main_hero h4 {margin: 10px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #d3ff40; text-transform:uppercase;}
+.mutuo .main_hero p {color: #fff; margin: 0 0 0px 50px; font-family:"ralewaymedium",arial,sans-serif;}
+.mutuo .main_hero ul {text-indent:0; padding: 0 0 0 20px; margin: 0 0 10px 50px; color:#fff;  list-style: none;}
+.mutuo .main_hero li {text-indent: -10px;}
+.mutuo .main_hero li:before { content: "\2022   "; color:#d3ff40;}
+.mutuo .main_hero a.btn-green {color: #fff; text-transform:uppercase; font-size: 24px; font-weight:bold; display:block; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; width: 355px; height: 60px; line-height:60px; padding: 0 0 0 25px; font-family:"ralewaybold",arial,sans-serif; float:left; margin: 20px 30px 0 50px; background: #8ab10b url("/wbresp/img/arrow-btn-green.png") 298px center no-repeat;}
+
+.mutuo .container02 {min-height:575px; overflow:hidden; margin-top:20px; background: transparent url("/wbresp/img/mutuo/container_02_bg.jpg") 0 bottom no-repeat;}
+.mutuo .container02 h3 {margin: 0px 0 10px 0px; color: #cbcbcb; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:20px; text-align:center;}
+#myCarouselMutuo {min-height:500px;}
+#myCarouselMutuo2 {min-height:500px; display:none;}
+.mutuo .container02 .nav-tabs {border-bottom:1px solid #a6cc28;}
+.mutuo .container02 .nav-tabs > li {width:50%; text-align:center;}
+.mutuo .container02 .nav-tabs > li > a,
+.mutuo .container02 .nav-tabs > li > a:hover,
+.mutuo .container02 .nav-tabs > li > a:focus {border-color: #a6cc28 #a6cc28 transparent; color: #a6cc28; font-family:"ralewaysemibold",arial, sans-serif; font-size:12px; text-transform:uppercase;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;}
+.mutuo .container02 .nav-tabs > li > a:hover {background: #fff; cursor:pointer;}
+.mutuo .container02 .carousel-control.left {background-image:none; opacity:0.8}
+.mutuo .container02 .carousel-control.right {background-image:none; opacity:0.8}
+.mutuo .container02 .carousel .carousel-control .glyphicon-chevron-left, .mutuo .container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:-35px;}
+.mutuo .container02 .carousel .carousel-control .glyphicon-chevron-right, .mutuo .container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:-35px;}
+.mutuo .container02 .carousel .item h3 {margin: 45px 0 0px 70px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-align:left;}
+.mutuo .container02 .carousel .item p {margin: 35px 0 10px 70px; font-size:16px; color: #999; line-height:24px;}
+.mutuo .container02 .carousel .item img {display:block; margin: 0 auto;}
+.mutuo .container02 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 80px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right;}
+.mutuo .container02 a.btn-trasp {color: #666; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 290px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 10px 0 50px; background: #fff url("/wbresp/img/arrow-btn-green-small-trasp.png") 250px center no-repeat; text-align: left; border:2px solid #a6cc28; float: left;}
+.mutuo .container02 a.btn-trasp:hover {text-decoration:none;}
+.mutuo .container02 a.btn-green:hover {text-decoration:none;}
+.mutuo .carousel-indicators li {background: #a6cc28; border:2px solid #a6cc28;}
+.mutuo .carousel-indicators li.active {background: #fff; border:2px solid #a6cc28;}
+
+.mutuo .container03 {background: #2c2c2c url("/wbresp/img/mutuo/container_03_bg.jpg") no-repeat 0 0; min-height:610px; overflow:hidden; margin-top:20px;}
+.mutuo .container03 h4 {margin: 50px 0 6px 50px; color: #e9e9e9; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:16px;}
+.mutuo .container03 h3 {margin: 0px 0 66px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #ffffff; }
+.mutuo .container03 ul {color:#e9e9e9; clear:both; float:none; padding:0; margin: 0 0px 0 50px; list-style:none; text-indent:0; overflow:hidden;}
+.mutuo .container03 ul li {float:left; width:40%; padding: 10px 0 0 43px; margin: 0 15px 10px 0;}
+.mutuo .container03 ul li.item1 {background: transparent url("/wbresp/img/mutuo/container_03_icon_1.png") no-repeat 0 0;}
+.mutuo .container03 ul li.item2 {background: transparent url("/wbresp/img/mutuo/container_03_icon_2.png") no-repeat 0 0;}
+.mutuo .container03 ul li.item3 {background: transparent url("/wbresp/img/mutuo/container_03_icon_3.png") no-repeat 0 0;}
+.mutuo .container03 ul li.item4 {background: transparent url("/wbresp/img/mutuo/container_03_icon_4.png") no-repeat 0 0;}
+.mutuo .container03 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 80px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right;}
+
+.mutuo .container04 {background:#fff; min-height:525px; overflow:hidden; margin-top:20px;}
+.mutuo .container04 h4 {margin: 10px 0 10px 0; color: #999; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:16px; text-transform:uppercase; text-align:center;}
+.mutuo .container04 h3 {margin: 0 0 20px 0; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666666; text-align:center; }
+.mutuo .container04 p {text-align:center; color: #999999; padding: 0 30px;}
+.mutuo .container04 img {display:block; text-align: center; margin: 0 auto 10px auto;}
+.mutuo .container04 h5 {color: #999; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:12px; text-transform:uppercase; text-align:center;}
+.mutuo .container04 h5 span {color: #666; font-size:14px;}
+.mutuo .container04 a.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 80px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right;}
+.mutuo .container04 a.btn-trasp {color: #666; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 255px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 10px 0 50px; background: #fff url("/wbresp/img/arrow-btn-green-small-trasp.png") 210px center no-repeat; text-align: left; border:2px solid #a6cc28; float: left;}
+.mutuo .container04 a.btn-trasp:hover {text-decoration:none;}
+.mutuo .container04 a.btn-green:hover {text-decoration:none;}
+
+
+.mutuo .container05 {min-height:575px; background:#222 url("/wbresp/img/mutuo/container_05_bg.jpg") repeat-x 0 0; overflow:hidden;}
+.mutuo .container05 h3 {margin: 50px 0 0 50px; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:30px; text-transform:uppercase; color:#fff;}
+.mutuo .container05 h3 span {color: #d3ff40;}
+.mutuo .radiogroup {margin:100px 40px 10px 60px; overflow:hidden; clear:both: float:none;}
+.mutuo .radiogroup .radio {float:left; margin-right:20px; }
+.mutuo .radiogroup .radio label {color:#fff; font-size:16px;}
+.mutuo .checkgroup {margin:0px 40px 10px 60px; overflow:hidden; clear:both: float:none; padding-bottom: 10px; border-bottom:1px solid #3b3c3b;}
+.mutuo .checkgroup .checkbox {float:left; margin-right:20px; line-height:25px; height:25px;}
+.mutuo .checkgroup .checkbox label {color:#fff; font-size:16px; display:inline-block; line-height:25px; height:40px;}
+.mutuo .checkgroup .checkbox span.info {display:inline-block; width:25px; height:25px; background: transparent url("/wbresp/img/mutuo/info_ico.png") 0 0 no-repeat;}
+.mutuo .plusminus {margin:0px 0px 10px 60px; overflow:hidden; clear:both: float:none; padding-bottom: 10px;}
+.mutuo .plusminus2 {margin: 0 0 10px 20px;}
+.mutuo .plusminusbox {position:relative; width:251px;height:42px;}
+.mutuo .plusminus label {color:#fff; font-size:16px; font-weight:normal;}
+.mutuo .plusminus .minus {position:absolute; top:-2px; left:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer;}
+.mutuo .plusminus .plus {position:absolute; top:0px; right:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer;}
+.mutuo .plusminus input.textinput {border:1px solid #8ab10b; background: transparent; color: #fff; font-size:24px; line-height:40px; height:40px; width:249px; padding: 0 20px; text-align:center;}
+.mutuo .spacerdark {height:10px; border-bottom:1px solid #3b3c3b; margin: 0 40px 10px 60px;}
+.mutuo .sliderblock {margin:0px 50px 10px 60px; overflow:hidden; clear:both: float:none; padding-bottom: 10px;}
+.mutuo .sliderbox {height:35px; width:100%; position:relative;}
+.mutuo .sliderblock label {color:#fff; font-size:16px; font-weight:normal;}
+.mutuo .sliderbox .minus {position:absolute; top:-6px; left:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer;}
+.mutuo .sliderbox .plus {position:absolute; top:-2px; right:0px; font-size: 50px; height:40px; width:40px; line-height:40px; color:#fff; display:block; text-align:center; text-align:center; cursor:pointer;}
+.mutuo .sliderbox .whitebar {position:absolute; top:14px; left: 50px; height: 4px; width: 80%; background:#fff; overflow:hidden; z-index:9;}
+.mutuo .sliderbox .greenbar {position:absolute; top:14px; left: 50px; height: 4px; width: 250px; background:#8ab10b; overflow:hidden; z-index:10;}
+.mutuo .sliderbox .slider-cursor {position:absolute; top:0px; left: 40%; height: 30px; width:40px; color:#fff; font-size: 24px; z-index:11; background:#8ab10b; line-height:30px; text-align:center;}
+.mutuo .container05 button.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 240px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px 80px 0 20px; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 190px center no-repeat; text-align: left; float:right; border:0px;}
+.mutuo #ex6 .slider-selection {background: #8ab10b;}
+.mutuo #ex6 .slider-handle {background: #8ab10b; color: #fff; width: 40px; height:30px;}
+
+.contatti .basic-content h4 {font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-transform:uppercase;margin:60px 20px 10px 20px;}
+.contatti .basic-content p {color: #999999; font-size:16px; }
+.contatti .basic-content p.sub {margin: 0 20px 60px 20px;}
+.contatti .basic-content p b {font-family:"ralewaysemibold",arial, sans-serif;}
+.contatti .basic-content img {display:block; margin: 60px auto;}
+.in-diretta .social_row {margin: -40px 0 0 20px;}
+.in-diretta .social_link {float:left; margin: 0 10px 0 0; display:block; text-indent:-9999px; width:54px; height:54px;}
+.in-diretta .social_fb {background: transparent url("/wbresp/img/contatti/indiretta_ico_fb.png") no-repeat 0 0;}
+.in-diretta .social_tw {background: transparent url("/wbresp/img/contatti/indiretta_ico_tw.png") no-repeat 0 0;}
+.numeri-utili .basic-content .spacer {border-top: 1px solid #cccccc; margin: 20px -20px 0 -20px;}
+.numeri-utili .basic-content p.sub {margin: 0 20px 10px 20px;}
+.numeri-utili .basic-content p.numlabel {margin: 0 20px 10px 20px; padding: 0 0 0 30px; background: transparent url("/wbresp/img/contatti/numeri_ico_tel.png") 0 0 no-repeat; color:#666666; font-family:"ralewaysemibold",arial, sans-serif;}
+.numeri-utili .basic-content p.numdesc {margin: 0 20px 10px 20px; padding: 0 0 0 30px;}
+.numeri-utili table.numeri {width:100%;}
+.numeri-utili table.numeri th {font-size:14px; color: #666; text-transform:uppercase; height:30px; line-height:30px;}
+.numeri-utili table.numeri th.col1 span {display: block; padding-left:10px;}
+.numeri-utili table.numeri td {font-size:16px; color: #666; height:70px; vertical-align: top; padding-top: 6px; padding-bottom: 6px;}
+.numeri-utili table.numeri td.col1 {width:30%;}
+.numeri-utili table.numeri td.col1 span {display: block; padding-left:10px;}
+.numeri-utili table.numeri td.col2 {width:30%;}
+.numeri-utili table.numeri td.col3 {width:40%;}
+.numeri-utili table.numeri tr.even td {background: #f6fae9;}
+.sales-team ul.featlist {color: #999999; font-size:16px; padding: 0 0 0 20px; list-style:none;}
+.sales-team .featlist li {text-indent: -10px;}
+.sales-team .featlist li:before { content: "\2022   "; color:#a6cc28;}
+.sales-team .basic-content img {display:block; margin: 0px auto;}
+.sales-team h5 {color:#cbcbcb; font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; text-transform:uppercase; margin: 20px 20px 20px 20px; }
+.sales-team form#f1 {margin: 30px 20px;}
+.sales-team label {display:block; font-weight:normal;  color:#999999; font-size:16px; }
+.sales-team .spacerlight {height:20px; border-bottom:1px solid #f0f0f0; margin-bottom:10px;}
+.sales-team select option.intr {font-style:italic; color:#999;}
+.sales-team label.radio-inline {display:inline-block; font-weight:normal; font-size: 14px;}
+.sales-team input[type=radio] {color:#a6cc28;}
+.sales-team p.sml { font-size: 14px; margin-top:-8px;}
+.sales-team button {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 210px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 0 auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 170px center no-repeat; text-align: left; float:right; border:0; margin:20px 0 0 0;}
+.sales-team .textinput-pre {width:20%; float:left; margin-right:4px;}
+.sales-team .textinput-post {width:77%; float:left; }
+
+.contatti .row_bg {background: transparent url("/wbresp/img/contatti/dialoga_bg.png") 0 0 no-repeat;}
+.dialoga .basic-content .imgnum {margin: 10px auto;}
+.dialoga ul.featlist {color: #999999; font-size:16px; padding: 0 0 0 40px; list-style:none; margin-top:6px;}
+.dialoga .featlist li {text-indent: -10px;}
+.dialoga .featlist li:before { content: "\2022   "; color:#a6cc28;}
+.dialoga .basic-content p.sub {margin-bottom:0px;}
+.dialoga .btn-scrivi {color: #666; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 250px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 40px auto 0 auto; background: #fff url("/wbresp/img/arrow-btn-green-small-trasp.png") 210px center no-repeat; text-align: left; border:2px solid #a6cc28; }
+.dialoga .btn-scrivi:hover {text-decoration:none;}
+.dialoga label {display:block; font-weight:normal; color:#999999; font-size:16px; margin-bottom:2px;}
+.dialoga form .spacer {height:10px;}
+.dialoga .control-code {color: #999; font-size: 30px; font-family:"ralewaybold",arial,sans-serif; text-align: center; border:1px solid #ccc; padding: 10px 0;}
+.dialoga form button.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 280px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 0 auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 235px center no-repeat; text-align: left; border:0px; float:right;}
+
+.spacerdark {height:20px; border-bottom:1px solid #ccc; margin: 0 -5px 10px -5px;}
+
+a.btn-print {display:block; color:#999999; padding: 0 0 0 40px; background: transparent url("/wbresp/img/print_ico.png") 0 center no-repeat; height:40px; line-height:40px;}
+a.btn-print:hover {text-decoration:none;}
+
+.stato-apertura-conto .mainContent {margin: 70px 0 100px 0;}
+.stato-apertura-conto p {color:#999999; font-size: 16px; }
+.stato-apertura-conto label {display:block; font-weight:normal;  color:#999999; font-size:16px; margin-bottom:2px;}
+.stato-apertura-conto .nota {text-align: right;}
+.stato-apertura-conto .nota a {font-size: 13px; color: #999999; text-decoration:underline;}
+.stato-apertura-conto button.btn-green {color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 280px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif; margin: 18px auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 235px center no-repeat; text-align: left; border:0px; float:right;}
+.stato-apertura-conto .basic-content h4 {font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; color: #999; text-transform:uppercase;margin:60px 20px 10px 0px;}
+.stato-apertura-conto .domanda {border-bottom:1px solid #e9e9e9; padding-bottom:20px;}
+.stato-apertura-conto .domanda h5 {position:relative; padding: 0 50px 0 0; color: #666666; font-size: 18px; font-family:"ralewaysemibold",arial, sans-serif;}
+.stato-apertura-conto .domanda .espandi {display:block; position: absolute; top: 0px; right:0px; width:32px; height:32px; background: transparent url("/wbresp/img/apertura/espandi_ico.png") no-repeat 0 0; text-indent:-9999px; overflow:hidden; cursor:pointer;}
+.stato-apertura-conto .domanda .comprimi {display:none; position: absolute; top: 0px; right:0px; width:32px; height:32px; background: transparent url("/wbresp/img/apertura/comprimi_ico.png") no-repeat 0 0; text-indent:-9999px; overflow:hidden; cursor:pointer;}
+.stato-apertura-conto .domanda p {font-size:16px; color: #999; line-height:24px; margin: 10px 50px 0 0; display:none;}
+
+.stato-apertura-conto .steps {oveflow:hidden; float:none; clear:both;}
+.stato-apertura-conto .step {width:267px; float:left; margin-left:-25px; padding: 0 20px 0 40px;}
+.stato-apertura-conto .step1 {margin-left:0px;}
+.stato-apertura-conto .step_ok {background:transparent url("../img/apertura/bg_ok.png") no-repeat 0 0;}
+.stato-apertura-conto .step_do {background:transparent url("../img/apertura/bg_do.png") no-repeat 0 0;}
+.stato-apertura-conto .step_ko {background:transparent url("../img/apertura/bg_ko.png") no-repeat 0 0;}
+.stato-apertura-conto .step h5 {text-align:center; color:#fff; font-size:36px; font-family:"ralewaysemibold",arial, sans-serif; margin: 8px 0 10px 0;}
+.stato-apertura-conto .step h6 {text-align:center; color:#fff; font-size:16px; font-family:"ralewaysemibold",arial, sans-serif; margin: 0 0 40px 0; text-transform:uppercase;}
+.stato-apertura-conto .step_ok h5, .stato-apertura-conto .step_ok h6 {color:#fff;}
+.stato-apertura-conto .step_do h5, .stato-apertura-conto .step_do h6 {color:#a6cc28;}
+.stato-apertura-conto .step_ko h5, .stato-apertura-conto .step_ko h6 {color:#fff;}
+.stato-apertura-conto .step p {color:#999;}
+.stato-apertura-conto .step ul {color:#999; margin:0; text-indent: -9px; padding: 0 0 0 12px; list-style: none;}
+.stato-apertura-conto .step ul li {font-size: 14px; margin-bottom: 4px;}
+.stato-apertura-conto .step ul li:before {content: "\2022   "; color: #aed03c; /* or whatever color you prefer */}
+.stato-apertura-conto .step_do p {color:#666;}
+.stato-apertura-conto .step_do ul {color:#666;}
+
+
+
+
+.widget02 {background: #fff url("/wbresp/img/widgets/trading_widget02_bg.jpg") no-repeat 0 0; padding: 300px 10px 0 10px; height:620px; margin: 20px 0 0 0; text-align:center;}
+.widget02 p.intro {text-align:center; color: #999999; padding-bottom: 20px; border-bottom:1px solid #cccccc;}
+.widget02 p.commento {text-align:center; color: #999999; padding-bottom: 10px;}
+.widget02 p.commento span.autore {color: #8ab10b; }
+.widget02 p.commento span.data {color:#666666;}
+.widget02 a.btn-green
+{color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 242px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 0 auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 206px center no-repeat; text-align: left;}
+
+.widget03 {margin: 30px 0 0 0;}
+.widget03 h3 {color:#333333; font-size:20px; line-height:26px; padding: 30px 10px 0 10px; border-left: 5px solid #a6cc28; margin:0; font-family:"ralewaybold",arial,sans-serif;}
+.widget03 h4.tags {color: #8ab10b; font-size:15px; text-transform:uppercase; letter-spacing:1px; padding: 6px 10px 0 15px;}
+.widget03 p.intro {text-align:left; color: #999999; padding: 0 10px 20px 16px; }
+.widget03 a.btn-green
+{color: #fff; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 242px; height: 50px; line-height:52px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 0 auto 0 auto; background: #a6cc28 url("/wbresp/img/arrow-btn-green-small.png") 206px center no-repeat; text-align: left;}
+
+.widget04 {margin: 40px 0 0 0;}
+.widget04 h3 {color: #8ab10b; font-size: 20px; text-transform:uppercase; letter-spacing:1px; padding: 0 10px 20px 20px;}
+.widget04 ul.listaDocs {list-style:none; text-indent:0; padding: 0; margin: 0;}
+.widget04 ul.listaDocs li {border-top: 1px solid #cccccc; padding: 20px 10px 20px 40px; background: transparent url("/wbresp/img/widgets/trading_widget04_icon.png") no-repeat 0 22px; color:#999999;}
+.widget04 ul.listaDocs li a {color:#666666;}
+.widget04 a.btn-white
+{color: #222; text-transform:uppercase; font-size: 14px; font-weight:normal; display:block; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; width: 238px; height: 50px; line-height:46px; padding: 0 0 0 20px; font-family:"ralewaysemibold",arial,sans-serif;  margin: 0 auto 0 auto; background: #fff url("/wbresp/img/arrow-btn-white.png") 195px center no-repeat; text-align: left; border:2px solid #a6cc28;}
+
+.widget05 {background: #fff url("/wbresp/img/widgets/trading_widget05_bg.jpg") no-repeat 0 0; padding: 300px 10px 0 10px; height:620px; margin: 20px 0 0 0; text-align:center;}
+.widget05 p.intro {text-align:center; color: #999999; padding-bottom: 20px; }
+.widget05 p.intro b {font-family:"ralewaybold",arial,sans-serif; color: #666666;}
+.widget05 p.intro span.numb {font-family:"ralewaybold",arial,sans-serif; color: #666666; font-size: 24px; color:#a6cc28;}
+
+.widget06 {background:#f9fee7; text-align:center;}
+
+
+
+
+
+
+/* custom media queries */
+
+@media (max-width: 1199px) {
+	.widget02 {background-position:center 0;}
+	.widget01 {display: none;}
+	.widget03 {background: #fff;}
+	.widget03 img {width:100%;}
+	.widget04 {background: #fff;}
+	.trading .submenu {display:none;}
+	.mutuo .submenu {display:none;}
+	.serve-aiuto .submenu {display:none;}
+	.submenu {margin-bottom:10px;}
+  .stato-apertura-conto .step {width:240px; margin-left:-25px; padding: 0 20px 0 20px;}
+  .stato-apertura-conto .step_ok {background:transparent url("../img/apertura/bg_ok_240.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_do {background:transparent url("../img/apertura/bg_do_240.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_ko {background:transparent url("../img/apertura/bg_ko_240.png") no-repeat 0 0;}
+
+	}
+
+/* Portrait tablets and small desktops / purple */
+@media (max-width: 1025px) {
+	/*.sectionTitle {top:85px;}*/
+  .mutuo .plusminus2 {margin: 0 0 10px 60px;}
+}
+
+
+/* Portrait tablets and small desktops / red */
+@media (max-width: 991px) {
+	/*.mainContent {margin-top:110px;}*/
+  .stato-apertura-conto .step {width:190px; margin-left:-25px; padding: 0 20px 0 20px;}
+  .stato-apertura-conto .step_ok {background:transparent url("../img/apertura/bg_ok_190.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_do {background:transparent url("../img/apertura/bg_do_190.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_ko {background:transparent url("../img/apertura/bg_ko_190.png") no-repeat 0 0;}
+  .stato-apertura-conto .step h5 {font-size:20px;}
+  .stato-apertura-conto .step h6 {font-size:11px;}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.trading .hidden-sm {display:none;}
+	.trading .main_hero {background-image:none;}
+	.trading .container02 {height:auto;}
+	.trading .container03 {height:auto; background-image:none; padding-bottom:20px;}
+	.trading .container03 a.btn-green {float:left; margin-left:50px;}
+	.trading .container04 {height:auto;}
+	.trading .container04 a.btn-green {float:left; margin-left:50px;}
+	.trading .container05 {height:auto;}
+	.trading .container06 {height:auto; padding-bottom:20px;}
+	.trading .container06 a.btn-green {float:left; margin-left:50px;}
+	.mutuo .main_hero {height:auto; padding-bottom:20px;}
+	.mutuo .main_hero h3 {margin-left:20px;}
+	.mutuo .main_hero h4 {margin-left:20px;}
+	.mutuo .main_hero p {margin-left:20px;}
+	.mutuo .main_hero ul {margin-left:20px;}
+	.mutuo .main_hero a.btn-green {margin: 20px 30px 0 10px; width:220px; font-size:14px; background-position: 180px center;}
+	.mutuo .container02 .nav-tabs {display:none;}
+	.mutuo .container02 .carousel .item h3 {margin: 20px;}
+	.mutuo .container02 .carousel .item p {margin: 0 20px 20px 20px;}
+	.mutuo .container02 a.btn-trasp {float:none; margin: 0 auto 10px auto;}
+	.mutuo .container02 a.btn-green {float:none; margin: 0 auto 60px auto;}
+	.mutuo .container02 .carousel .carousel-control .glyphicon-chevron-left, .mutuo .container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:3px;}
+	.mutuo .container02 .carousel .carousel-control .glyphicon-chevron-right, .mutuo .container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:3px;}
+	.mutuo .container03 {height:auto; padding-bottom:20px;}
+	.mutuo .container03 h4 {margin: 20px 10px 10px 20px;}
+	.mutuo .container03 h3 {margin: 0px 10px 20px 20px;}
+	.mutuo .container03 ul {margin: 0px 10px 10px 20px;}
+	.mutuo .container03 ul li {float:none; width:80%;}
+  .mutuo .container04 a.btn-trasp {margin: 20px auto 0 auto; float:none; clear:both;}
+  .mutuo .container04 a.btn-green {margin: 10px auto 20px auto; float:none; clear:both;}
+	.numeri-utili table.numeri th {font-size:12px;}
+	.numeri-utili table.numeri td {font-size:12px;}
+  .stato-apertura-conto .step {width:266px; margin:0 auto 20px auto; padding: 0 20px 0 40px; float:none; clear:both;}
+  .stato-apertura-conto .step_ok {background:transparent url("../img/apertura/bg_ok.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_do {background:transparent url("../img/apertura/bg_do.png") no-repeat 0 0;}
+  .stato-apertura-conto .step_ko {background:transparent url("../img/apertura/bg_ko.png") no-repeat 0 0;}
+  .stato-apertura-conto .step h5 {font-size:36px;}
+  .stato-apertura-conto .step h6 {font-size:18px; margin-bottom:60px;}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 479px) {
+	.trading .main_hero {overflow:hidden; clear:both; height:auto; padding-bottom:20px;}
+	.trading .main_hero h3 {margin-left:15px;}
+	.trading .main_hero p {margin-left:15px;}
+	.trading .main_hero a.btn-green {width:260px; background-position: 200px center; font-size:15px;}
+	.trading .container02 {height:auto;}
+	.trading .container03 {height:auto; background-image:none; padding-bottom:20px;}
+	.trading .container04 {height:auto;}
+	.trading .container05 {height:auto;}
+	.trading .container06 {height:auto; padding-bottom:20px;}
+	.numeri-utili table.numeri th {font-size:10px;}
+	.numeri-utili table.numeri td {font-size:10px;}
+}

@@ -1,0 +1,18 @@
+<!-- BANNER MUTUO -->
+<style>
+.widget20161220 {margin: 0px auto;max-width:262px;width:100%;background: #f9fee8 url("/wbresp/img/wdg_ban_promo_20161220.jpg") top center no-repeat;text-align:center;padding:340px 0 0; box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+.widget20161220 a {float:none; margin: 0 15px;}
+.widget20161220 p.bannote {font-size:11px;text-align:left; clear:both;padding:15px;color:#464936;line-height:12px;}
+@media (max-width: 1199px) {
+	.widget20161220 {display: none;}
+}	
+</style>
+<div class="widget widget20161220">
+    <a href="javascript:apriConto();" class="btn-grlit btn-grlit-arrow" title="Apri conto Webank">Apri conto Webank</a>
+    <p class="bannote">Messaggio promozionale.<br>
+    	Leggi i fogli informativi e il regolamento dell'iniziativa.</p>
+</div>
+<!-- FINE BANNER PROMO -->
+

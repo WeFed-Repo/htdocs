@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('/wbresp/font/raleway-medium-webfont.eot');
+    src: url('/wbresp/font/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), url('/wbresp/font/raleway-medium-webfont.woff') format('woff'), url('/wbresp/font/raleway-medium-webfont.ttf') format('truetype'), url('/wbresp/font/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ralewaymedium', arial;
+}
+
+
+.boxMgm{background-color:#e6f0bc; padding:20px; position:relative;}
+.boxMgm h2, .tit h2 {font-size:30px; margin-bottom:0; margin-top:0; line-height:50px; color:#000; font-weight:bold}
+.boxMgm .alr {text-align:right; padding-bottom:9px}
+.boxMgm .alr_sm {display:none}
+.boxMgm .fil {border-bottom:2px solid #b3d346; margin-bottom:20px}
+.boxMgm p, .subTit p {font-size:22px; color:#333;}
+.boxMgmSub{background-color:#eff6d2; padding:30px 30px 30px 44px}
+.boxMgmSubNoBg{background-color:transparent; padding:30px 30px 30px 0}
+.boxMgmSubNoPadLf{padding:30px}
+.boxMgmSub h3 {font-size:16px; background:url("/wbresp/img/mgm/spunta_mgm.png") no-repeat 0 1px; padding-left:14px; color:#000; font-weight:bold; margin-left:-14px}
+.boxMgmSub .fil {border-bottom:1px solid #b0d241; margin-bottom:20px}
+.boxMgmSub p {font-size:16px; font-weight:normal}
+.boxMgmSub p.note {font-size:12px; color:#000!important}
+p.note2 {font-size:14px; color:#000; font-weight:normal; padding-top:10px}
+p.note3 {font-size:12px;}
+.boxMgmSub p.err, .modal-body .boxMgmSub p.err {font-size:11px; color:#e40e2e; padding-top:8px; padding-left:5px;}
+.boxMgmSub .form-control {height: 42px;}
+button.btn-only-arrow {padding:0 28px 0 20px; margin-top:0}
+.rib {position:absolute; bottom:0px; right:0; z-index:10;}
+.rib2 {display:none}
+.output {background-color: #e6f0bc; padding:10px}
+.boxCondividi {float:right;}
+.boxCondividi p, .boxCondividi a{display:inline; vertical-align: bottom;}
+.clearFloat {clear:both}
+.modal-body textarea.form-control {height:100px;overflow: hidden;}
+.modal-body .boxMgm p {font-size:16px; color:#333; font-weight:bold; line-height: 28px;}
+.banner img {max-width: 100%;}
+.circleNum {-webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; height: 36px; width:36px; background: #a6cc28; color:#fff; font-size:28px; text-align:center; line-height: 30px;}
+.txtVer p {color:#8ab10b;}
+
+.promofb img {width:100%;}
+
+.tit h2 {padding:0 20px;}
+.subTit p, .boxPad, .txt p {padding:20px; font-weight:normal}
+button.btn-grlit {margin-top:0}
+
+.radio label {   
+    padding-left: 5px!important;
+}
+
+
+.modal-dialog {
+    z-index: 9999;
+}
+
+
+
+@media (max-width:767px) {
+	.boxMgm{padding:10px;}
+	.boxMgm h2, .tit h2 {font-size:18px; line-height:20px;}
+	.tit h2 {text-align:center;}
+	.boxMgm .alr {display:none;}
+	.boxMgm .alr_sm {display:block; margin-bottom:10px}
+	.boxMgm p, .subTit p {font-size:14px;}
+	.boxMgmSub{padding:10px 10px 10px 24px}
+	.boxMgmSubNoBg{padding:0}
+	.boxMgmSubNoPadLf{padding:10px}
+	.boxMgmSub h3 {font-size:14px;}
+	.rib2 {display:block; position:relative; margin:0 -10px -10px 0; float:right}
+	.rib {display:none}	
+	button.btn-only-arrow {min-width: 20px;padding: 0 28px 0 5px;}
+	label {margin-top:0}
+	.fil2 {border-bottom:1px solid #b0d241; margin-bottom:20px}
+	.clear {clear:both}
+	.boxMgmSub .form-control {height:36px; margin-bottom:8px}
+	.modal-body .boxMgm p {font-size:14px; line-height:24px;}
+	.tit h2 {padding:0 10px;}
+	.subTit p, .boxPad {padding:10px;}
+	.txtVer p, .boxCent {text-align:center}
+	.circleNum {margin:0 auto}
+	button.btn-grlit, a.btn-grlit {margin-top:0;border: 2px solid #a6cc28;}
+	
+	/* Per Facebook*/
+	
+		
+	button.btn-grlit,
+    a.btn-grlit {
+        font-size: 15px;
+        -webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        border-radius: 22px;
+        min-width: 215px;
+        max-width: 100%;
+        height: 36px;
+        line-height: 33px;
+        padding: 0 0 0 14px;
+        margin: 5px 4px 0 0;
+        border-width: 2px;
+    }
+
+	button.btn-grlit:hover,
+	a.btn-grlit:hover {
+		text-decoration: none;
+		color: #a6cc28;
+		background-color: #222;
+		border: 2px solid #222;
+	}
+
+		
+	button.btn-grlit-arrow, a.btn-grlit-arrow {
+		background-image: url("/wbresp/img/arrow-btn-green-l.png");
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 30px;
+		background-color: #a6cc28;
+	}
+
+
+		
+	button.btn-grlit-arrow:hover,
+    a.btn-grlit-arrow:hover {
+        background: #000 url("/wbresp/img/arrow-btn-green-l-hover.png") right center no-repeat;
+        border: 2px solid #222;
+        color: #8ab10b;
+    }
+
+	.fleft {	float: left;}
+
+	a.btn-grlit,
+	a.btn-whlit {
+		display: block;
+		text-decoration: none;
+	}
+	button.btn-grlit, a.btn-grlit {
+		font-size: 14px;
+		margin: 0 auto 8px auto;
+		margin-top: 0;
+	}
+	button.btn-only-arrow {
+		min-width: 20px;
+		padding: 0 28px 0 5px;
+	}
+	
+	
+	.col-xs-12 {width: 100%;}
+	.col-xs-9 {width: 75%;}
+	.col-xs-3 {width: 25%;}
+	.col-xs-9, .col-xs-3 {position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; float: left;	}
+	
+	*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+	.form-control {width: 100%;}
+	
+}
+
+
+@media (min-width:768px) {
+	.boxMgmBg{background:#e6f0bc url("/wbresp/img/mgm/bgline_mgm.png") no-repeat 0 1px;}
+	.tit h2 {text-transform:uppercase;}
+	.rib {position:absolute; bottom:0px; right:0; z-index:10;}
+	.rib2 {display:none}
+	.fil2 {display:none}
+	.clear {display:none}	
+	button.btn-only-arrow {padding:0 28px 0 0; margin-top:-4px;}
+	button.btn-grlit {margin-top:-4px;}
+	button.btn-grlit, a.btn-grlit {min-width: auto;} 
+	button.btn-grlit-arrow, a.btn-grlit-arrow {background: #a6cc28 url("/wbresp/img/arrow-btn-green.png") right center no-repeat; padding-right: 50px;}
+	button.btn-grlit {display: inline-block;-webkit-border-radius: 25px;-moz-border-radius: 25px;	border-radius: 25px;height: 50px;margin-top:-4px
+	}	
+	a.btn-grlit {display: inline-block;-webkit-border-radius: 25px;	-moz-border-radius: 25px;border-radius: 25px;height: 50px;}
+	
+}
+
+
+
+
+
+
+   

@@ -1,0 +1,59 @@
+body {padding-top:0;}
+#pagecontainer {float: left;}
+/* generici */
+ul li, ul li ul li, ul li ul li ul li {display: list-item; list-style-position: oustide; list-style-type: disc !important; margin: 0 0 0 15px !important; padding:2px 0 !important;}
+#content {float: right; margin:0 !important;}
+/* Rimozione degli url */
+ a[href]:after{content: none !important;}
+
+
+/* attributi oggetti */
+#mainleft, #mainright, #header, #menu, #left, #right, #printconsole,#footer ul,#maincontent .maincontenttopper, .btncontent {display:none;}
+#footer p {text-align: left; float:left !important; clear:left; display: block;}
+#maincontent {background-image: none; display: inline;  height: auto !important;padding: 110px 0 0 !important; float:left;}
+#content {float:left;}
+#maincontent .filetto {float:left !important}
+.headingprint {display: block; width:200px; position: absolute; top:0; left:13px;}
+
+
+
+/* Font in grassetto per titoli */
+#maincontent h2, #fullpromo h2, #maincontent h3 , #allcontent h3, #allcontent h4 , #maincontent table.icontable h4,.freememberTop h2  {font-weight: bold;}
+
+.noprint {display: none !important}
+.overlayer {margin-top:40px !important; margin-left: 0px !important; font-family: Tahoma, Serif; top:0; left:0}
+#layerpop {background-color: #fff !important; height: 0}
+
+.submenu, #topContent, #navbar, .bcrumbs, .widget, footer, .sectionTitle, #modalBlockLogin {display:none;}
+.contatti.basic-content img {display:none;}
+
+nav.navbar { display:block; position:static; height:50px;min-height:50pt; overflow:hidden;}
+nav.navbar .navbar-header button, nav.navbar .navbar-header a {display:none !important;}
+.navbar-brand {display:none;}
+.mainContent {margin: 20px 0;}
+
+.contatti.basic-content h4 {margin:10px 0;}
+
+.navbar-brand-print {display:block; height:40pt;}
+.privacy.basic-content.content .punto .punto-content {display:block;}
+.informativa.basic-content.content .punto .punto-content {display:block;}
+.codice-deontologico.basic-content.content .punto .punto-content {display:block;}
+
+
+.pre-footer-print {display:none;}
+
+/* Print overlayer */
+body.modal-open>* {display:none;}
+body>.modal{display:block;}
+
+.numeri-utili table.numeri {min-width:100% !important;}
+
+/* Elementi da rimuovere nella stampa*/
+.eventiCorsi .pre-footer-detail-content .pre-footer-print, 
+.eventiCorsi .pre-footer-detail-content .pre-footer-share,
+.eventiCorsi .footer-detail-content-subscribe,
+#widgetContainer {
+	display:none;
+}
+
+#cookieCheck {display:none;}

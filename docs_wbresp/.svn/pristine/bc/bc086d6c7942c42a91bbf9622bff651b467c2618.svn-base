@@ -1,0 +1,33 @@
+<!-- BANNER PROMO -->
+<style>
+.widget01 {position:relative;margin: 0px auto;max-width:262px;height:490px;width:100%;background: transparent url("/wbresp/img/wdg_ban_promo_20160405.jpg") top center no-repeat;text-align:center;padding-top:10px; box-sizing: border-box; -moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+.widget01 h3 {line-height:35px;}
+.widget01 span {width:100%;clear:both; font-family:"ralewaysemibold",Arial,Serif; font-size:22px;text-shadow:0 2px 1px rgba(0,0,0,0.7)}
+.widget01 h3 span.verde {color:#d3ff40;}
+.widget01 h3 span.bianco {color:#fff;}
+.widget01 h3 span.grande {font-size:90px;line-height:70px; padding-bottom:5px;color:#fff;}
+.widget01 h3 span.grande .piccolo {font-size:58px;}
+.widget01 span.payoff, .widget01 span.payoff span {font-size:14px; color:#fff;}
+.widget01 span.payoff .verde {color:#d3ff40;}
+.widget01 span.payoff span {clear:both;display:block;}
+.widget01 .widbottom {position:absolute; bottom:0px; width:100%}
+.widget01 .widbottom p.disclaimer {color:#fff;font-size:10px; padding-top:15px;}
+
+@media (max-width: 1199px) {
+	.widget01 {display: none;}
+}	
+</style>
+
+<div class="widget widget01">
+	<h3>
+		<span class="verde">PER I NUOVI CLIENTI</span><br>
+		<span class="bianco">FINO AL</span><br>
+		<span class="grande">2,00<span class="piccolo">%</span></span>
+	</h3>
+	<span class="payoff"><span class="bianco">lordo annuo sui vincoli a 6 mesi</span><span class="verde">se traslochi il tuo conto in Webank</span></span>
+	<div class="widbottom">
+		<a href="javascript:apriConto();" class="btn-grlit btn-grlit-arrow" title="Apri Conto Webank">Apri Conto Webank</a>
+		<p class="disclaimer">MESSAGGIO PROMOZIONALE:<br>leggi i fogli informativi e il regolamento dell'iniziativa</p>
+	</div>
+</div>
+<!-- FINE BANNER PROMO -->

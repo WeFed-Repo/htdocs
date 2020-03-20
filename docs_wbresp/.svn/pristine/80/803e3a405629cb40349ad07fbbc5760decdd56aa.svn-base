@@ -1,0 +1,394 @@
+    <!-- BLOCCO HEADER -->
+    <header>
+      <div class="container">
+            <a href="http://www.bancobpm.it/index.php" title="BancoBpm" target="_blank"><img src="./fe/img/logo_02.png"></a>
+      </div>
+    </header>
+    <!-- FINE BLOCCO HEADER -->
+
+    <!-- CONTENITORE PRINCIPALE -->
+    <div id="main">
+      <div class="container">
+        
+        <!-- MAIN VISUAL -->
+        <div class="main-visual">
+          <div class="visual-promo">
+              <div class="promo-box">
+                  <h3></h3>
+                  <p></p>
+              </div>
+                              <img src="./fe/img/mutuo_promo_tifosi.jpg" class="hidden-xs">
+                <img src="./fe/img/mutuo_promo_tifosi_mobile.jpg" class="visible-xs">
+                            
+          </div>
+          
+          <hr>
+          <div class="fascione">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Mutuo promo tasso fisso</h2>
+                    <p>Il mutuo senza sorprese, sempre con la medesima rata.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINE MAIN VISUAL -->
+
+        <div class="row">
+          <!-- BLOCCO PREVENTIVATORE -->
+          <div class="col-sm-8 col-xs-12">
+            <p>Calcola la rata pi&ugrave; adatta alle tue esigenze. Personalizza la simulazione modificando valore immobile, importo e durata del finanziamento.</p>
+            <!-- TITOLATURA ACQUISTO O SURROGA -->
+            <h2 class="titFinalita"><span>Acquisto</span></h2>
+            <div id="mutuiWrap" class="loading">
+                <!-- TABS -->
+                  <ul class="mTabs">
+                    <li><a href="javascript:;" id="mAcquisto"><span>Acquisto</span></a></li>
+                    <li><a href="javascript:;" id="mSurroga"><span>Surroga</span></a></li>
+                  </ul>
+                  <!-- FINE TABS -->
+
+                  <div id="mCalcStatic">
+                    <!-- finestra modale -->
+                    <div id="assDettaglio" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                          <!-- contenuti -->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Fine finestra modale -->
+                    
+                    <!-- Console -->
+
+                    <div id="mCalcCons">
+
+                      <form id="formmutuo" autocomplete="off">
+                        <input type="hidden" value="Acquisto" name="finalita" id="mFin">
+                        <input type="hidden" value="" name="codicemutuo" id="codiceMutuo">
+                        <input type="hidden" value="" name="assicurazioni" id="assicurazioni">
+                        
+                        <!-- Radio prima/seconda casa -->
+                        <div class="radioprimacasa">
+                        <div class="row">
+                                <div class="indentwrap">
+                                  <div class="col-sm-6 col-xs-12">
+                                        <div class="radio radio-inline form-group">
+                                          <input type="radio" name="primacasa" value="SI" id="radio_primacasa" checked>
+                                          <label for="radio_primacasa">Prima casa</label>
+                                        </div>
+                                  </div>
+                                  <div class="col-sm-6 col-xs-12">
+                                      <div class="radio radio-inline form-group">
+                                        <input type="radio" name="primacasa" value="NO" id="radio_secondacasa">
+                                        <label for="radio_secondacasa">Seconda casa<a href="javascript:;" data-toggle="tooltip" title="Ai fini del calcolo indicativo del TAEG di simulazione &egrave; considerata l'imposta sostitutiva pari al 2,00% dell'importo del mutuo per i mutui con finalit&agrave; acquisto o ristrutturazione seconda casa e pari allo 0,25% per prima casa. Per la finalit&agrave; surroga non sono previste imposte a carico del cliente." id="ttSeconda" class="icoinfo"></a></label>
+                                      </div>
+                                  </div>
+                                 
+                            </div>
+                        </div>
+                         <hr>
+                        </div>
+                        <!-- Fine radio prima e seconda casa -->
+                        <!-- Blocco spinners -->
+                        <div class="row">
+                           <div class="indentwrap">
+                            <div class="col-sm-6 col-xs-12">
+                                  <div class="form-group">
+                                    <label>Valore dell'immobile (&euro;)</label>
+                                    <div class="spinnerblock">
+                                      <a class="plusmin min" href="javascript:;" data-refered="valoreimmobile">-</a>
+                                      <a class="plusmin"href="javascript:;" data-refered="valoreimmobile">+</a>
+                                      <input type="text" value="200.000" name="valoreimmobile" id="mValore" maxlength="7" class="form-control"></input>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <label>Importo del mutuo (&euro;)</label>
+                                  <div class="spinnerblock">
+                                    <a class="plusmin min" href="javascript:;" data-refered="importomutuo">-</a>
+                                    <a class="plusmin" href="javascript:;" data-refered="importomutuo">+</a>
+                                    <input type="text" value="160.000" name="importomutuo" id="mImporto" maxlength="7" class="form-control"></input>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Fine blocco spinners -->
+                        
+                        <!-- Blocco slider e ricalcolo --> 
+                        <div class="row">
+                          <div class="indentwrap">
+                            <div class="col-sm-6 col-xs-12">
+                              <div class="form-group sliderWrapper">
+                                <label>Anni</label>      
+                                <!-- slider -->
+                                <div>
+                                  <div class="sliderBlock">
+                                    <a href="javascript:;" class="plusmin plus">+</a>
+                                    <a href="javascript:;" class="plusmin min">-</a>
+                                    <div class="sliderel">
+                                       <input type="hidden" value="20" name="durata" id="mDur" />
+                                    </div>
+                                    <div class="sliderrange"><span class="min">-</span><span class="max">-</span></div>
+                                 </div>
+                                      
+                                </div>
+                                <!-- select alternativa -->
+                                <div style="display:none">
+                                   <select id="selectDurata" class="form-control"></select>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <a href="javascript:;" id="mutuoButton" class="btn-grlit btn-grlit-arrow">Ricalcola rata</a>
+                                <a href="javascript:;" id="mutuoGoCalcola" style="display:none" class="btn-grlit btn-grlit-arrow">Calcola rata</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>     
+                        <!-- Fine blocco slider e pulsante -->
+
+                      </form>
+                      
+                    </div>
+                    <!-- Fine console -->
+                    <div id="mResults">
+                    </div>
+
+                    <p class="note" id="mNotes">
+                      <strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong><br>
+                     Per le condizioni economiche di tutte le tipologie di mutuo fare riferimento alle Informazioni Generali sul Credito Immobiliare offerto a Consumatori disponibili presso le Filiali<span class="only-yellow"> del Gruppo</span> e online alla sezione "Trasparenza" sul sito <a id="traspLink" target="_blank" ></a>. L'erogazione del finanziamento &egrave; subordinata alla normale istruttoria da parte della Banca. Il credito &egrave; garantito da un'ipoteca sul diritto di propriet&agrave; o su altro diritto reale avente per oggetto un bene immobile residenziale.
+                    </p>
+
+                  </div>
+                  <!-- FINE CALCOLATORE -->
+
+
+
+
+            </div>
+          </div>
+          <!-- FINE BLOCCO PREVENTIVATORE -->
+
+          <!-- SPALLA -->
+          <div class="col-sm-4 col-xs-12">
+            <div class="bordato">
+                 <p class="intro"><strong>Vuoi saperne di pi&ugrave;?</strong><br>Inserisci i tuoi dati, ti ricontatteremo a breve.</p>
+                     <hr>
+                     <form method="POST" name="contactform" action="#" id="formContatto" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control no-margin" id="nome" placeholder="Inserisci il nome*" name="nome" required="required" aria-required="true">
+                                    <label class="error" for="nome">Inserire nome</label>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control error" id="cognome" placeholder="Inserisci il cognome*" name="cognome" required="required" aria-required="true">
+                                    <label class="error" for="cognome">Inserire cognome</label>
+                                 </div>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-12">
+                                 <div class="form-group">
+                                       <input type="text" class="form-control" id="telefono" placeholder="Inserisci il telefono*" name="telefono" required="required" aria-required="true">
+                                       <label class="error" for="telefono">Inserire telefono</label>
+                                 </div>
+                            </div>
+                        </div>
+                        <hr>                    
+                        <div class="row">
+                            <div class="col-xs-12">
+                                 <div class="form-group no-margin-bottom">
+                                     <div class="checkbox control-group  no-margin-bottom">
+                                        <input type="checkbox" required="required" id="privacy" value="yes" name="privacy" aria-required="true">
+                                        <label class="control control-checkbox" for="privacy">Informativa D.lgs. n. 196/03.*</label>
+                                        <label class="error" for="privacy">Compila questo campo</label>
+                                     </div>
+                                </div>
+                                <p class="informativa">I dati inseriti saranno utilizzati da Banco BPM Spa e dalle società del Gruppo Banco BPM per inviare le informazioni richieste. <br>
+                                Per visionare l'informativa completa vai sul sito <a href="http://www.bancobpm.it/generale/privacy/" target="_blank" title="Banco BPM">www.bancobpm.it</a></p>
+                            </div>
+                        </div>
+
+                         <div class="row">
+                            <div class="col-xs-12">
+                                 <div class="form-group">
+                                    <p>Con riferimento ad eventuali successivi contatti per finalit&agrave; di informazione commerciale:*</p>
+                                    <div class="radio">
+                                        <input type="radio" required="" class="commerciali-input" name="commerciali" value="si" id="consensoSi" aria-required="true">
+                                        <label class="control control-radio" for="consensoSi">Presto il consenso</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" required="" class="commerciali-input" name="commerciali" value="no" aria-required="true"  id="consensoNo">
+                                        <label class="control control-radio" for="consensoNo">Nego il consenso</label>
+                                    </div>
+                                  <label class="error" for="privacy">Compila questo campo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <div class="box-captcha">
+                                        <div class="box-captcha-left">
+                                            <img src="./fe/img/captcha.png">
+                                        </div>
+                                        <div class="box-captcha-right">
+                                            <input type="text" name="captcha" required="required" id="captcha" class="altroinput form-control" placeholder="Codice *" aria-required="true">    
+                                        </div>
+                                    </div>
+                                    <a class="privacy_text" id="refresh_captcha"><i class="fa fa-refresh"></i>&nbsp;Genera nuovo codice</a>
+                                    <label class="error" for="privacy">Compila questo campo</label>       
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <!-- FEEDBACK RISULTATO INSERIMENTO RICHIESTA -->
+                                 <script type="text/javascript">
+  
+                                 var showInviaResult = function (titolo,testo) {
+
+                                     // Inserisce il messaggio nella modale e poi la mostra
+                                     $("#resultHtml").empty().append(
+                                        $("<h3>").html(titolo),
+                                        $("<p>").html(testo)
+                                     );
+                                     $("#feedbackResult").modal("show");
+
+                                     // Timeout per chiusura automatica della modale
+                                     setTimeout(function(){$("#feedbackResult").modal("hide")},5000);
+
+                                  }
+
+                                  /* Blocco inizializzazioni modale */
+
+                                  $(function(){
+
+                                  // Esempio funzioni invia richiesta con chiamata in AJAX
+                                  $("#invia_richiesta").click(function(e){
+                                      
+                                      // Se l'evento del JS e' il submit questa istruzione va rimossa
+                                      e.preventDefault();
+
+                                      // blocca il form
+                                      $("#formContatto").addClass("loading");
+
+                                      // Esegue la chiamata in AJAX
+                                      $.ajax({
+                                        url: "./fe/ajax/feedback_invio_richiesta.php",
+                                        dataType: "json",
+                                        success: function(data) {
+
+
+                                          if (data.ESITO=="OK") {
+                                            showInviaResult("Grazie mille.","Grazie per averci scritto, verrai contattato al pi&ugrave; presto.")
+                                          }
+                                          else
+                                          {
+                                            showInviaResult("Attenzione!","Si sono verificati errori in fase di richiesta. Ti invitiamo a riprovare pi&ugrave; tardi.")
+
+                                          }
+
+
+                                          // Rimozione del loading sul form
+                                          $("#formContatto").removeClass("loading");
+
+                                        }
+                                      });
+
+                                  });
+                                });
+                                </script>
+                                <div id="feedbackResult" class="modal fade in" role="dialog" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          </div>
+                                          <div class="modal-body" id="resultHtml"></div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <!-- FINE FEEDBACK RISULTATO INSERIMENTO RICHIESTA -->
+
+                                <div class="input_form submit-button" style="margin-bottom:0">
+                                 <input type="hidden" name="risposta" value="">
+                                 <input id="invia_richiesta" type="submit" class="btn btn-primary"  value="Invia subito la richiesta" name="invia">
+                                </div>
+                             
+
+                            </div>
+                            <div class="col-md-12">
+                                 <p class="informativa pull-right"> * I campi contrassegnati con l'asterisco sono obbligatori</p>
+                            </div>
+                        </div>
+
+
+
+
+                             <!-- BLOCCO TROVA LA FILIALE --
+                             <hr>
+                              <div class="form-group">      
+                                <div class="col-xs-12">
+                                 <p>Cerca la filiale pi&ugrave; vicina a te</p>
+                                
+                                 <div id="trovaFiliale" class="modal fade in" role="dialog" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                          </div>
+                                          <div class="modal-body">HTML ESTERNO - Ricerca filiale</div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <a href="javascritp;"  data-toggle="modal" class="btn btn-primary" data-target="#trovaFiliale">Trova la filiale</a>
+                                
+                                </div>
+                             </div>
+                               </div> 
+                             !-- FINE BLOCCO TROVA LA FILIALE -->
+                                            
+                     </form>  
+                </div>
+
+          </div>
+          <!-- FINE SPALLA -->
+        </div>
+      </div>
+    </div>
+    <!-- FINE CONTENITORE PRINCIPALE -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+          <hr>
+          <a href="http://www.bancobpm.it/index.php" target="_blank" title="BancoBpm"><img src="./fe/img/footer_logo.gif" title="BancoBpm"></a> 
+          <p><span>BANCO BPM GRUPPO BANCARIO</span> - Piazza F. Meda, 4 - 20121 Milano - tel. 02 77001 - P.IVA 09722490969 Tutti i diritti riservati
+          </p> 
+      </div>
+    </footer>
+    <!-- FINE FOOTER -->  
+
+    <!-- COOKIE BAR -->
+    <div id="cookie-bar" class="fixed bottom"><p>Questo sito utilizza i cookie per migliorare l'esperienza di navigazione degli utenti e per raccogliere informazioni sull'utilizzo del sito stesso. Vengono utilizzati solo cookie tecnici e non anche cookie di profilazione. E' possibile conoscere i dettagli consultando la nostra privacy policy <a style="text-decoration: underline;" href="http://www.bancobpmspa.com/media/Privacy_Policy.pdf" target="_blank">qui</a>. Proseguendo nella navigazione si accetta l'uso dei cookie; in caso contrario è possibile abbandonare il sito.</p><a href="http://mutuo.bancobpm.it/" class="cb-enable">Conferma</a></div>
+    <!-- FINE COOKIE BAR -->

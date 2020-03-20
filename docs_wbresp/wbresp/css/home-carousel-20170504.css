@@ -1,0 +1,206 @@
+/* =================== */ 
+/* CAROUSEL HOME PAGE  */
+/* =================== */
+
+#myCarousel {background:#000;padding-bottom:32px;font-family:"ralewaymedium",Arial,Serif;}
+#myCarousel .carousel-caption {text-align: left;left:15%;right:15%;bottom:30px;}
+#myCarousel .carousel-caption h2 {color:#fff;font-size:50px; line-height:50px;font-family:"ralewaysemibold",Arial,Serif;}
+#myCarousel .carousel-caption h2.doublerow {font-size:35px;}
+#myCarousel .carousel-caption h2.doublerow .secondary {font-size:35px;}
+#myCarousel .carousel-caption h2 span.big {font-size:100px;}
+#myCarousel .carousel-caption h2 span.secondary {font-size:35px; color:#d3ff40;}
+#myCarousel .carousel-caption h3 {color:#fff; margin-top:10px;line-height:23px;}
+#myCarousel .carousel-caption p.note {clear: both;font-size: 11px !important;padding: 20px 0 0;max-width: 620px;line-height: 13px;color:#eee !important;}
+#myCarousel .carousel-caption p.note a {color:#fff;text-decoration:underline;}
+#myCarousel .carousel-caption .logos {float:left;width:100%; margin-bottom:30px;}
+#myCarousel .carousel-caption .logos img {float:left;margin: 0 20px 0 0;}
+#myCarousel .carousel-caption ul {padding:10px 30px 20px;font-size:20px;list-style-image: url(/wbresp/img/carousel/flag.png);}
+#myCarousel .carousel-caption ul li {margin-bottom:5px;}
+
+#myCarousel .item.promo h2.green {color:#d3ff40;font-size:40px}
+#myCarousel .item.promo .carousel-caption ul {margin-bottom:0px;}
+#myCarousel .item.promo .carousel-caption {bottom:0;}
+#myCarousel .item.promo .carousel-caption ul li {font-size:22px; padding-left:10px; text-transform:uppercase; line-height:25px;padding-bottom:10px;}
+#myCarousel .item.promo .carousel-caption ul li span.green {color:#d3ff40}
+
+#myCarousel .item.mgm .carousel-caption p.note {padding-top:20px; position:relative !important; color:#fff !important; width:100% !important; max-width:100%;}
+#myCarousel .item.mgm a.btn-245 {width:auto;}
+
+#myCarousel .item.promo.conto .carousel-caption {bottom:20px;}
+#myCarousel .item.promo.conto h2.green {font-size: 50px;line-height:50px; padding-bottom:15px;}
+#myCarousel .item.promo.conto ul {padding:0 0 0 45px;}
+#myCarousel .item.promo.conto ul li {font-size: 25px;padding-bottom:15px;}
+/*
+#myCarousel .item.promo.conto .ribbon {position: absolute;top: 0;left: 15%;z-index: 200;max-width:258px;width:20%;padding:0 0 0 30px}
+#myCarousel .item.promo.conto .ribbon img {width:100%;}
+*/
+#myCarousel .item.promo.conto p.note {color:#fff !important;text-shadow:0 1px 2px rgba(0,0,0,.6);}
+#myCarousel .item.promo p.note {color:#000 !important;text-shadow:0 0 0 transparent;}
+#myCarousel .item.mutuo .carousel-caption {padding-bottom:10px;}
+#myCarousel .item.vota h2 {color:#d3ff40; font-size:45px;}
+#myCarousel .item.vota p {font-size:22px; line-height:28px;margin-bottom:140px;}
+#myCarousel .item.vota a.btn-grlit {width:auto;}
+#myCarousel .item.vota p.urltoget {text-align:right;padding-top:24px; font-size:20px; margin-bottom:0;}
+
+/* Campagna BUONI  */
+#myCarousel .item.buoni div.buoni {clear:both; margin-left:-5px;}
+#myCarousel .item.buoni .carousel-caption {bottom:0;}
+#myCarousel .item.buoni div.buoni .buono {display:inline-block;}
+#myCarousel .item.buoni h2 {font-size:35px;margin:0;text-transform:uppercase;font-weight:bold;color:#d3ff40;line-height:40px;}
+#myCarousel .item.buoni h3 {font-size:40px;text-transform:uppercase;margin:0; line-height:50px;padding-bottom:15px;font-weight:bold;color:#d3ff40}
+#myCarousel .item.buoni h3 span {font-size:60px;}
+#myCarousel .item.buoni .note {width:100% !important; max-width:100%;color:#000 !important;text-shadow:0 0 0 transparent;}
+/* Fine campagna BUONI */
+
+/* Add-in campagna buoni (bollo su desktop) */
+#myCarousel .item.buoni.conbollo .bollogroup {display:block;}
+#myCarousel .item.buoni.conbollo .bollogroup .bollowebcam {width:140px;position:absolute;}
+#myCarousel .item.buoni.conbollo .bollogroup h2, #myCarousel .item.buoni.conbollo .bollogroup h3 {padding-left:130px;}
+#myCarousel .item.buoni.conbollo .bollogroup h2 {font-size:33px;line-height:40px;}
+#myCarousel .item.buoni.conbollo .bollogroup h3 {font-size:38px;line-height:45px;}
+/* Fine add-in campagna buoni */
+
+@media (max-width: 1199px) {
+  
+  #myCarousel .carousel-caption {bottom:10px;}
+
+  #myCarousel .carousel-caption h2.doublerow {font-size:30px;line-height:34px;}
+
+  #myCarousel .carousel-caption ul {margin:0;padding-bottom:5px;padding-top:0;}
+  #myCarousel .carousel-caption ul li {font-size:20px;padding-bottom:5px}
+  #myCarousel .carousel-caption h2 {font-size:30px; line-height:37px;}
+  #myCarousel .carousel-caption h2 span.secondary {font-size:30;}
+  #myCarousel .carousel-caption h2 span.big {font-size:70px;}
+
+  #myCarousel .item.vota h2 {font-size:35px; line-height:40px;}
+  #myCarousel .item.vota p {margin-bottom:120px;font-size:15px;line-height:20px;}
+  #myCarousel .item.vota p.urltoget {padding-top:10px;padding-bottom:0;}
+  #myCarousel .item.promo.conto h2.green {font-size: 32px;margin-bottom:0;}
+
+  /* Campagna buoni */
+  #myCarousel .item.buoni h2,#myCarousel .item.buoni h3 {font-size:28px; line-height:35px;}
+  #myCarousel .item.buoni h3 span {font-size:35px;}
+  #myCarousel .item.buoni .buono {max-width:150px; margin-bottom:15px;}
+  #myCarousel .item.buoni .buono img {width:100%;}
+  /* Fine campagna buoni */
+  
+  /* Addin buoni bollo */
+  #myCarousel .item.buoni.conbollo .buoni .buono {max-width:150px;} 
+  #myCarousel .item.buoni.conbollo .bollogroup h2 {font-size:30px;line-height:35px;}
+  #myCarousel .item.buoni.conbollo .bollogroup h3 {font-size:35px;line-height:40px;}
+  /* Fine addin buoni bollo */
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+#myCarousel .carousel-caption {bottom:0;}
+#myCarousel .carousel-caption h2 {font-size:23px; line-height:24px; padding:0;margin:0}
+#myCarousel .carousel-caption h2 span.big {font-size:50px;}
+#myCarousel .carousel-caption h2 span.secondary {font-size:23px}
+#myCarousel .carousel-caption h2.doublerow, #myCarousel .carousel-caption h2.doublerow span.secondary{font-size:23px; line-height:24px;}
+#myCarousel .carousel-caption ul li {margin-bottom:3px;}
+
+#myCarousel .item.promo .carousel-caption {padding-bottom:10px;;}
+#myCarousel .item.promo .carousel-caption h2 {font-size:25px;}
+#myCarousel .item.promo .carousel-caption ul {margin-bottom:0px;font-size:15px;line-height:18px; padding-bottom:5px;}
+#myCarousel .item.promo .carousel-caption ul li {font-size:16px; padding-left:0px; line-height:18px; padding-bottom:5px;}
+
+#myCarousel .carousel-caption ul {font-size:14px;}
+#myCarousel .carousel-caption p.note {font-size:10px !important;line-height:12px;padding-bottom:0;}
+#myCarousel .item.mgm .carousel-caption{bottom:0; padding-bottom:10px}
+
+#myCarousel .item.vota .carousel-caption {bottom:10px;padding-bottom:10px;}
+#myCarousel .item.vota .carousel-caption h2 {font-size:30px}
+#myCarousel .item.promo.conto .ribbon {left:12%;top: -32px; width: 23%;}
+#myCarousel .item.promo.conto h2.green {font-size: 28px;margin-bottom:8px;}
+#myCarousel .item.promo.conto ul li {line-height:16px;padding:0 0 2px;}
+
+/* Mutuo */
+#myCarousel .item.mutuo ul li {font-size:16px;line-height:20px; padding-bottom:0;}
+
+/* Campagna buoni */
+#myCarousel .item.buoni .carousel-caption {padding-bottom:0;}
+#myCarousel .item.buoni h2,#myCarousel .item.buoni h3 {font-size:20px; line-height:28px;}
+#myCarousel .item.buoni h3 span {font-size:28px;}
+#myCarousel .item.buoni .buono {max-width:120px; margin-bottom:10px;}
+#myCarousel .item.buoni .buono img {width:100%;}
+/* Fine campagna buoni */
+
+/* Addin buoni bollo */
+#myCarousel .item.buoni.conbollo .carousel-caption {padding-bottom:0;}
+#myCarousel .item.buoni.conbollo .bollogroup .bollowebcam {display:none;}
+#myCarousel .item.buoni.conbollo .buoni .buono {max-width:150px;} 
+#myCarousel .item.buoni.conbollo .bollogroup h2,  #myCarousel .item.buoni.conbollo .bollogroup h3 {padding-left:0;}
+#myCarousel .item.buoni.conbollo .bollogroup h2 {font-size:25px;line-height:30px;}  
+#myCarousel .item.buoni.conbollo .bollogroup h3 {font-size:27px;line-height:30px;}
+/* Fine addin buoni bollo */
+
+#myCarousel .item.mgm a.btn-245 {font-size:13px; letter-spacing:-0.5px;}
+
+}
+
+@media (max-width: 767px) {
+   #myCarousel .carousel-caption {left:10%;right:10%; bottom:0;}
+   #myCarousel .carousel-control {width:10%}
+   #myCarousel .carousel-caption .btn-grlit {margin:5px 10px 5px 0;}
+   #myCarousel .carousel-caption ul {list-style-type:disc;list-style-image:none;}
+   #myCarousel .item.vota .carousel-caption {bottom:10px;}
+   #myCarousel .item.promo.conto .ribbon  {top: -20px;width: 20%;left:5%; display:none;}
+}
+
+@media (max-width: 479px) {
+     #myCarousel .carousel-caption {margin-bottom:0px;padding-bottom:0;bottom:10px;top:20%;margin-top:-100%;padding-top:15px}
+     #myCarousel .carousel-caption ul li {line-height:20px;}
+     /*
+     #myCarousel .item.promo h2 {font-size:25px;line-height:30px;}
+     */
+     #myCarousel .carousel-caption p.note {position:absolute;bottom:0;}
+     #myCarousel .carousel-caption p.note.note-bottom {bottom:-15px!important}
+     /*
+     #myCarousel .item.promo span.secondary {font-size:20px;}
+     #myCarousel .item.promo span.big {font-size:50px;}
+     #myCarousel .item.promo .carousel-caption .logos img {height:25px;}
+     #myCarousel .item.promo .carousel-caption p.note {font-size:9px !important;line-height:10px !important;padding-top:10px;margin-top:10px}
+     #myCarousel .item.promo .carousel-caption .btn-grlit {margin:5px 10px 5px 0}
+     */
+    #myCarousel .item.investimenti h3 {font-size:20px;}
+
+    #myCarousel .item.mgm .carousel-caption {bottom:0; padding-bottom:5px; top:auto !important; text-align:center;}
+    #myCarousel .item.mgm .carousel-caption .btn-grlit {float:none; margin:0 auto;font-size:13px;}
+    #myCarousel .item.mgm .carousel-caption p.note {padding:10px 0 0; }
+    #myCarousel .item.promo .carousel-caption ul li {font-size:15px;line-height:17px;margin-bottom:0;padding-bottom:3px;}
+    #myCarousel .item.promo .carousel-caption p.note {padding-bottom:10px;}
+
+    #myCarousel .item.vota .carousel-caption {top:0;}
+    #myCarousel .item.vota .carousel-caption .row {bottom:20px;}
+    #myCarousel .item.vota .carousel-caption h2 {font-size:25px; line-height:28px;}
+    #myCarousel .item.vota .carousel-caption p {text-align:left; font-size:14px; line-height:18px; margin-bottom:0;}
+    #myCarousel .item.vota .carousel-caption .row { bottom: 0px; position: absolute; }
+
+    #myCarousel .item.promo.conto .ribbon {display:block;width:188px;margin:-20px 0 0 ; padding:0;}
+    #myCarousel .item.promo.conto h2.green {font-size:24px;padding-bottom:0;}
+    #myCarousel .item.promo.conto ul {margin-bottom:20px;padding-left:20px;}
+    #myCarousel .item.promo.conto ul li {font-size:17px;line-height:20px;}
+    #myCarousel .item.buoni .note {margin-bottom:20px}
+
+    /* Addin buoni bollo */
+    #myCarousel .item.buoni.conbollo .bollogroup h2 {font-size:23px;line-height:28px;}  
+    #myCarousel .item.buoni.conbollo .bollogroup h3 {font-size:28px;line-height:30px; padding-bottom:5px;}
+    #myCarousel .item.buoni.conbollo .buoni .buono {max-width:45%;}
+    /* Fine addin buoni bollo */
+
+    #myCarousel .item.mgm .carousel-caption .btn-grlit {font-size:13px; letter-spacing:0;}
+    #myCarousel .item.mgm .carousel-caption p.note {padding-bottom:0;}
+    
+}
+
+
+/* Display full HD */
+@media (min-width: 1600px) {
+ #myCarousel .item.vota p {margin-bottom:250px;font-size:15px;line-height:20px;}
+
+}
+
+/* ======================== */ 
+/* FINE CAROUSEL HOME PAGE  */
+/* ======================== */

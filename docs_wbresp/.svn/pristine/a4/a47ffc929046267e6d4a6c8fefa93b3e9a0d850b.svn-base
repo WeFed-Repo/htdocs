@@ -1,0 +1,450 @@
+	/*
+
+CSS relativo a:
+trading.html -> Trading
+trading-commissioni.html -> Trading -&gt; Dettaglio commissioni
+trading-prova-piattaforma.html -> Trading -&gt; Prova piattaforma
+
+trading-mercati.html -> Trading -&gt; Mercati di tutto il mondo  -&gt; Azioni   -&gt; Obbligazioni   -&gt; Certificati   -&gt; Derivati
+
+*/	
+/* ==========================================================================
+  trading inizio
+========================================================================== */
+
+.trading .main_hero {height:490px; background: #1d300c url("/wbresp/img/trading/main_hero_bg.jpg") no-repeat 0 0; background-size: cover; overflow:hidden; clear:both; float:none;}
+.trading .main_hero h2 {margin: 60px 0 10px 50px; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #fff; text-transform:uppercase;}
+.trading .main_hero p {color: #fff; margin: 0 0 10px 50px; font-family:"ralewaymedium",arial,sans-serif;}
+.trading .main_hero p.claim {text-transform:uppercase; color: #d3ff40; font-family:"ralewaysemibold",arial, sans-serif; margin: 20px 0 10px 50px;}
+.trading .main_hero p.claim2 {text-transform:uppercase; color: #fff; font-family:"ralewaysemibold",arial, sans-serif; margin: 20px 0 10px 50px; font-size: 13px; letter-spacing:1px;}
+.trading .main_hero p.claim2 span {color: #d3ff40;}
+
+/* PROMO deposito*/
+.trading .main_hero.deposito {height:490px; padding:50px; position:relative;background: #ddd url("/wbresp/img/trading/hero_promo_deposito.jpg") no-repeat right center; background-size: cover; overflow:hidden; clear:both; float:none}
+.trading .main_hero.deposito h2 {text-shadow: 0 2px 1px rgba(0,0,0,0.7);font-size:32px;text-transform:uppercase;font-family:"ralewaysemibold",arial, sans-serif; color:#d3ff40;margin:0 0 20px;}
+.trading .main_hero.deposito ul {margin:0;max-width:80%;text-transform:uppercase;text-shadow: 0 2px 1px rgba(0,0,0,0.7);padding:0 0 0 5px;list-style-type:none;font-family:"ralewaymedium",arial, sans-serif;}            
+.trading .main_hero.deposito ul li {  line-height: 27px; font-size: 25px;background: transparent url(/wbresp/img/carousel/flag.png) no-repeat 0 6px; margin: 0;padding: 0 0 12px 35px; color: #fff;}
+.trading .main_hero.deposito ul li .green {color:#d3ff40;}
+.trading .main_hero.deposito a.btn-green {float:left; margin:20px 0;}
+.trading .main_hero.deposito p.note {color: #fff !important; padding: 0;font-size:11px !important; bottom: 20px; position: absolute;margin:0;}
+
+.trading .main_hero.new {height:490px; position:relative;background: #1d300c url("/wbresp/img/trading/minihero_trading_new.jpg?a=2") no-repeat 0 0; padding:50px;background-size: cover; overflow:hidden; clear:both; float:none;text-shadow:1px 1px 2px rgba(0,0,0,1);}
+.trading .main_hero.new h2 {max-width:400px;text-shadow: 0 2px 1px rgba(0,0,0,0.7);font-size: 32px;text-transform: uppercase;font-family: "ralewaysemibold",arial, sans-serif;color: #d3ff40;margin: 0 0 20px;}
+.trading .main_hero.new h2 span.bianco{color:#fff;}
+.trading .main_hero.new p {color: #fff;margin: 0 0 10px;font-family: "ralewaymedium",arial,sans-serif;font-size: 18px; max-width: 400px;}
+.trading .main_hero.new .onbottom {bottom:0; position:absolute; width:100%;left:0;padding:0 50px;}
+.trading .main_hero.new ul {padding:0;margin: 0 0 10px; color:#fff;font-size:22px;list-style-type:none;}
+.trading .main_hero.new ul li .green {color: #d3ff40;}
+.trading .main_hero.new a.btn-green {margin: 0 0 30px; clear:both;float:left;text-shadow:none}
+.trading .main_hero.new p.note {display:block; margin: 0 0 20px;padding:0; position: static ; clear:both;float:left; max-width:none;color:#eee !important;}
+
+@media (max-width: 767px){
+    .trading .main_hero.deposito {background-position: 0 right;background-image: url("/wbresp/img/trading/hero_promo_deposito_mobile.jpg");}
+    .trading .main_hero.deposito {padding:20px;}
+    .trading .main_hero.deposito h2 {font-size: 30px; padding: 0 0 15px; margin: 0}
+    .trading .main_hero.deposito ul {max-width:100%;}
+    .trading .main_hero.deposito ul li {font-size:20px;}
+    .trading .main_hero.deposito a.btn-green {margin: 20px 0;width: auto;padding: 0 50px 0 15px;background-position: right 9px;}
+    .trading .main_hero.new {background-position: 0 right;background-image: url("/wbresp/img/trading/minihero_trading_new_mobile.jpg?a=2");}
+    .trading .main_hero.new {padding:20px;}
+    .trading .main_hero.new h2 {font-size: 30px; padding: 0 0 15px; margin: 0}
+    .trading .main_hero.new p {font-size: 15px;}
+    .trading .main_hero.new .onbottom {padding:0 15px;}
+    .trading .main_hero.new ul {max-width:100%;}
+    .trading .main_hero.new ul li {font-size:18px;}
+    .trading .main_hero.new a.btn-green {margin: 20px 0;width: auto;padding: 0 50px 0 15px;background-position: right 9px;}
+}
+}
+
+@media (max-width: 480px){
+    .trading .main_hero.deposito {padding:15px;height:400px;}
+    .trading .main_hero.deposito h2 {font-size: 25px; padding: 0 0 15px; margin: 0}
+    .trading .main_hero.deposito ul {max-width:100%;}
+    .trading .main_hero.deposito ul li {font-size:18px; line-height:21px;}
+}
+
+.trading.container02 {margin-top:20px;}
+.trading.container02 .carousel {height: 605px; background: #fff url("/wbresp/img/trading/container_02_bg.jpg") no-repeat 0 0;}
+.trading.container02 .carousel .carousel-indicators {bottom:5px;}
+.trading.container02 .carousel .item {overflow:hidden;}
+.trading.container02 .carousel .item h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 40px 0 0 0; letter-spacing:1px;}
+.trading.container02 .carousel .item h3 {text-align: center; margin: 10px 0 0 0; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #666;}
+.trading.container02 .carousel .item01 img {display:block; margin: 20px auto 10px auto;}
+.trading.container02 .carousel .item01 p {color:#999999; text-align:center; width: 70%; margin: 0 auto; font-size: 16px; line-height:22px;}
+.trading .carousel-indicators li {background: #a6cc28; border:2px solid #a6cc28;}
+.trading .carousel-indicators li.active {background: #fff; border:2px solid #a6cc28;}
+
+.trading.container02 .carousel .item02 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading.container02 .carousel .item02 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+
+.trading.container02 .carousel .item03 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading.container02 .carousel .item03 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 13px; color: #999999; line-height:20px;}
+
+
+.trading.container02 .carousel .item04 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading.container02 .carousel .item04 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+
+.trading.container02 .carousel .item05 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading.container02 .carousel .item05 ul {margin:0; padding: 0 0 0 77px; text-indent:0px; font-size: 16px; color: #999999; line-height:24px;}
+
+.trading.container02 .carousel .item06 h5 {color: #666666; font-size:18px; margin: 20px 0 20px 60px; font-family:"ralewaysemibold",arial, sans-serif;}
+.trading.container02 .carousel .item06 p {margin:0 0 10px 0; padding: 0 0 0 77px; font-size: 16px; color: #999999; line-height:24px;}
+
+.trading.container02 .carousel .carousel-control .glyphicon-chevron-left, .trading.container02 .carousel .carousel-control .icon-prev {color:#a6cc28; margin-left:-35px;}
+.trading.container02 .carousel .carousel-control .glyphicon-chevron-right, .trading.container02 .carousel .carousel-control .icon-next {color:#a6cc28; margin-right:-35px;}
+.trading.container02 .carousel-control.left {background-image:none; opacity:0.8; filter: alpha(opacity=80);}
+.trading.container02 .carousel-control.right {background-image:none; opacity:0.8; filter: alpha(opacity=80);}
+
+
+.trading.container03 {overflow: hidden; background:#1c1c1c url("/wbresp/img/trading/container_03_bg.jpg") no-repeat 0 0; height:630px; background-size:100% 100%; margin-top:20px; clear:both; float: none;}
+.trading.container03 h4 {text-align: right; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 50px 45px 0px 0; letter-spacing:1px;}
+.trading.container03 h3 {text-align: right; margin: 10px 45px 0 0; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; color: #fff;}
+.trading.container03 p.right {text-align: right; margin: 10px 45px 50px 0; color:#999999; width:50%; float:right;}
+.trading.container03 h5  {clear:both; float: none; color:#fff; font-family:"ralewaybold",arial,sans-serif; margin: 20px 0 0 50px; text-align:left;}
+.trading.container03 p {color:#999999; margin: 10px 50px 0 50px; text-align:left;}
+.trading.container03 p a:hover {color: #8ab10b !important;}
+
+.trading.container04 {overflow: hidden; background:#fff url("/wbresp/img/trading/container_04_bg.jpg") no-repeat 0 0; background-size: 100% 100%;height:580px; margin-top:20px; padding-bottom:50px; clear:both; float: none;}
+.trading.container04 h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 40px 0 0 0 ; letter-spacing:1px;}
+.trading.container04 h3 {text-align: center; margin: 10px 0 0 0 ; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #222;}
+.trading.container04 img.icon {display:block; margin:10px auto 0 auto;}
+.trading.container04 p {margin: 10px auto 0 auto; width: 70%; color:#999999; text-align:center;}
+
+
+.trading.container05 {overflow: hidden; background:#fff; margin-top:20px; clear:both; float: none;}
+.trading.container05 h4 {text-align: center; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 10px 0 0 0 ; letter-spacing:1px;}
+.trading.container05 h3 {text-align: center; margin: 10px 0 0 0 ; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; line-height:36px; color: #666666;}
+.trading.container05 h5 {margin: 20px auto 20px auto; width: 70%; color:#999999; text-align:center; font-size: 16px; line-height:20px;}
+.trading.container05 h6 {font-family:"ralewaybold",arial,sans-serif; color: #666666; font-size: 15px; text-transform:uppercase; letter-spacing:1px; margin:0px 0 10px 0; padding: 15px 0 0 50px;}
+.trading.container05 p {font-size: 14px; margin: 0 0 4px 0; padding: 0 0 0 57px;}
+.trading.container05 ul {margin:0; text-indent: -9px; padding: 0 0 0 57px; list-style: none;}
+.trading.container05 ul li {font-size: 14px; margin-bottom: 4px;}
+.trading.container05 ul li:before {content: "\2022   "; color: #aed03c; /* or whatever color you prefer */}
+.trading.container05 .box1 {background: transparent url("/wbresp/img/trading/container_05_icon_1.png") no-repeat 0 0;}
+.trading.container05 .box2 {background: transparent url("/wbresp/img/trading/container_05_icon_2.png") no-repeat 0 0;}
+.trading.container05 .box3 {background: transparent url("/wbresp/img/trading/container_05_icon_3.png") no-repeat 0 0;}
+.trading.container05 .box4 {background: transparent url("/wbresp/img/trading/container_05_icon_4.png") no-repeat 0 0;}
+.trading.container05 .box5 {background: transparent url("/wbresp/img/trading/container_05_icon_5.png") no-repeat 0 0;}
+.trading.container05 .box6 {background: transparent url("/wbresp/img/trading/container_05_icon_6.png") no-repeat 0 0;}
+
+.trading.container06 {height:586px; overflow: hidden; background:#1c1d1c url("/wbresp/img/trading/container_06_bg.jpg") no-repeat 0 0; background-size:100% 100%; clear:both; float: none; margin: 20px 0 0 0;}
+.trading.container06 h4 {text-align: left; color:#cbcbcb; font-family:"ralewaysemibold",arial,sans-serif; text-transform:uppercase; font-size:16px; margin: 50px 0 0px 45px; letter-spacing:1px;}
+.trading.container06 h3 {text-align: left; margin: 10px 0 0 45px; font-family:"ralewaybold",arial,sans-serif; font-size: 30px; color: #fff;}
+.trading.container06 p {text-align: left; margin: 20px 0 50px 45px; color:#999999; font-size: 16px; line-height:22px;}
+.trading.container03 p a:hover {color: #8ab10b !important;}
+.title-content ul {margin-bottom:10px}
+
+@media (max-width: 1199px) {
+
+	.trading .submenu {display:none;}
+
+}
+
+@media (max-width: 767px) {
+  .trading .hidden-sm {display:none;}
+  .trading .main_hero {background-image: url("/wbresp/img/trading/main_hero_bg_dark.jpg"); background-position: right 0;}
+  .trading.container02 {height:auto;}
+  .trading.container03 {height:auto;}
+  .trading.container04 {height:auto;}
+  .trading.container05 {height:auto;}
+  .trading.container06 {height:auto; padding-bottom:20px;}
+  .trading.container06 {background:#1c1d1c;}
+    
+  .trading .main_hero h2 {margin: 20px 0 10px 20px}
+  
+  
+
+  .trading.container02 .carousel .item02 h5 {margin: 20px 0 20px 30px;}
+  .trading.container02 .carousel .item02 ul {padding: 0 20px 0 47px;}
+  .trading.container02 .carousel .item03 h5 {margin: 20px 0 20px 30px;}
+  .trading.container02 .carousel .item03 ul {padding: 0 20px 0 47px;}
+  .trading.container02 .carousel .item04 h5 {margin: 20px 0 20px 30px;}
+  .trading.container02 .carousel .item04 ul {padding: 0 20px 0 47px;}
+  .trading.container02 .carousel .item05 h5 {margin: 20px 0 20px 30px;}
+  .trading.container02 .carousel .item05 ul {padding: 0 20px 0 47px;}
+  .trading.container02 .carousel .item06 h5 {margin: 20px 0 20px 30px;}
+  .trading.container02 .carousel .item06 p {padding: 0 20px 0 47px;}
+  .trading.container03 { background-image:none; padding-bottom:20px;}
+  .trading.container03 h4 {text-align: left; margin: 50px 15px 0px 15px;}
+  .trading.container03 h3 {text-align: left; margin: 10px 15px 0px 15px;}
+  .trading.container03 p.right {text-align: left; margin: 10px 15px 20px 15px; float:left;}
+  .trading.container03 h5  {margin: 20px 0 0 20px;}
+  .trading.container03 p {margin: 10px 20px 0 20px;}
+  .carousel .carousel-control .glyphicon-chevron-left, .carousel .carousel-control .icon-prev {
+    margin-left: -10px !important;
+  }
+  .carousel .carousel-control .glyphicon-chevron-right, .carousel .carousel-control .icon-next {
+    margin-right: -10px !important;
+  }
+    
+}
+
+
+@media (max-width: 479px) {
+	.trading .main_hero {overflow:hidden; clear:both; height:auto; padding-bottom:20px;}
+	.trading .main_hero h2 {margin-left:15px; margin-right:15px;}
+	.trading .main_hero p {margin-left:15px; margin-right:15px;}
+	.trading .main_hero p.claim {margin-left:15px; margin-right:15px;}
+	.trading .main_hero p.claim2 {margin-left:15px; margin-right:15px;}
+	.trading .main_hero a.btn-green {width:260px; /*background-position: 200px center;*/ font-size:15px;}
+	.trading.container02 {height:auto;}
+	.trading.container03 {height:auto; background-image:none; padding-bottom:20px;}
+	.trading.container04 {height:auto;}
+	.trading.container05 {height:auto;}
+	.trading.container06 {height:auto; padding-bottom:20px;}
+    .trading.container06 h4,
+    .trading.container06 h3,
+    .trading.container06 p {margin-left:15px;margin-right:15px;}
+	
+	.trading .main_hero p, .trading .main_hero p.claim,.trading .main_hero p.claim2  {margin: 10px 10px 0 20px}
+	.trading.container02 .carousel .item h3,.trading.container02 .carousel .item h4,.trading.container02 .carousel .item h5 {text-align:left;margin-left:5px}
+
+
+  
+  .trading.container02 .carousel {height:765px;}
+  .trading.container03 h5 {margin:20px 15px 0 15px;}
+  .trading.container03 p {margin: 10px 15px 0}
+  .trading.container03 a.btn-trasp {margin-left:15px;}
+  .trading.container03 a.btn-green {margin-left:15px;}
+  .trading.container04 img.icon {display:none;}
+  
+
+  
+
+}
+/* ==========================================================================
+  trading fine
+========================================================================== */
+/* ==========================================================================
+  trading-commissioni inizio
+========================================================================== */
+.trading-commissioni .tabular select.selectnav {display: none;}
+.trading-commissioni .heroimg {width:100%; margin-bottom: 20px;}
+.trading-commissioni .tabular {overflow:hidden; margin: 20px 0; }
+.trading-commissioni .tabular table {background:#fff; width:100%; border:2px solid #8ab10b; vertical-align: top; position:relative; z-index:2; margin-top:0; border-top:0px;}
+.trading-commissioni .tabular table#tabella_variabile {display:none;}
+.trading-commissioni .tabular table th {font-weight:normal; text-align: center;}
+.trading-commissioni .tabular table tr {height:50px;}
+.trading-commissioni .tabular table .upbold {padding: 0 10px 0 30px; text-transform:uppercase; font-family:"ralewaysemibold",arial,sans-serif; color: #666; font-size:14px; font-weight:normal; text-align:left;}
+.trading-commissioni .tabular p.exp {padding: 0 10px 0 55px; text-transform:uppercase; font-family:"ralewaysemibold",arial,sans-serif; color: #666; font-size:14px; font-weight:normal; background: transparent url("../img/trading/more.png") no-repeat 32px 3px; cursor:pointer;}
+.trading-commissioni .tabular p.moretext {padding: 0 10px 0 40px; font-size: 12px; color:#999; display:none;}
+.trading-commissioni .tabular p.less {padding: 0 10px 0 55px; text-transform:uppercase; font-family:"ralewaysemibold",arial,sans-serif; color: #666; font-size:14px; font-weight:normal; background: transparent url("../img/trading/less.png") no-repeat 32px 3px; cursor:pointer;}
+.trading-commissioni .tabular .verysmall {font-size: 11px; }
+.trading-commissioni .tabular .lev {width:100px; padding:0; margin:0;}
+.trading-commissioni .tabular .lev1 {background: #f6fae9; text-align:center; font-size:16px;}
+.trading-commissioni .tabular .lev2 {background: #eef5d4; text-align:center; font-size:16px;}
+.trading-commissioni .tabular .lev3 {background: #e4f0be; text-align:center; font-size:16px;}
+.trading-commissioni .tabular .lev4 {background: #dbebaa; text-align:center; font-size:16px;}
+.trading-commissioni .tabular .lev5 {background: #d2e593; text-align:center; font-size:16px;}
+.trading-commissioni .tabular .vbott {vertical-align:bottom;}
+.trading-commissioni .tabular .nav-tabs {border-bottom:1px solid #a6cc28; position:relative; z-index:3;}
+.trading-commissioni .tabular .nav-tabs > li {width:200px; text-align:left;}
+.trading-commissioni .tabular .nav-tabs > li > a,
+.trading-commissioni .tabular .nav-tabs > li > a:hover,
+.trading-commissioni .tabular .nav-tabs > li > a:focus {border-color: #8ab10b #8ab10b transparent; color: #8ab10b; font-family:"ralewaysemibold",arial, sans-serif; font-size:12px; text-transform:uppercase;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px; border-width: 2px; text-align:left; padding-left:60px;}
+.trading-commissioni .tabular .nav-tabs > li > a:hover {background: #fff; cursor:pointer;}
+.trading-commissioni .tabular .nav-tabs > li a.nav1, .trading-commissioni .tabular .nav-tabs > li a.nav1:hover, .trading-commissioni .tabular .nav-tabs > li a.nav1:focus {background: transparent url("../img/trading/commissioni_fisso.png") no-repeat 16px 3px;}
+.trading-commissioni .tabular .nav-tabs > li a.nav2, .trading-commissioni .tabular .nav-tabs > li a.nav2:hover, .trading-commissioni .tabular .nav-tabs > li a.nav2:focus {background: transparent url("../img/trading/commissioni_variabile.png") no-repeat 16px 3px;}
+.trading-commissioni .tabular .nav-tabs > li.active > a,.trading-commissioni .tabular .nav-tabs > li.active > a:hover {background-color:#F6FAE9;}
+.trading-commissioni .row_bg {background: transparent url("/wbresp/img/contatti/dialoga_bg.png") 0 0 no-repeat;}
+.trading-commissioni.basic-content b {font-family:"ralewaysemibold",arial,sans-serif; font-weight:bold;}
+
+.trading-commissioni1 .nav > li > a, .trading-mercati-azioni .nav > li > a {
+  padding: 14px 0 10px 10px;
+  margin-left:0;
+}
+
+
+@media (max-width: 767px) {
+	
+  .trading-commissioni .tabular
+  {
+	  position:relative;
+	  width:100%;
+	  /*min-height:400px;*/
+  }
+
+
+  .trading-commissioni1 .tabular div.containertabular
+  {-ms-transform: scale(0.5); -webkit-transform: scale(0.5); transform: scale(0.5);position:absolute;left:-165px;top:-20px;}
+
+
+  .trading-commissioni .tabular table {border-top:2px solid #8ab10b; margin-top: 10px;}
+  .trading-commissioni .tabular .nav-tabs {display:none;}
+
+
+  .trading-commissioni .tabular table {border-top:none; margin-top: 0px;}
+  .trading-commissioni .tabular .nav-tabs {display:none;}
+  .trading-commissioni .tabular select.selectnav {display: none;}
+
+  .trading-commissioni1.tabular table {border-top:2px solid #8ab10b; margin-top: 10px;}
+  .trading-commissioni1.tabular .nav-tabs {display:none;}
+  .trading-commissioni1.tabular select.selectnav {display: block;}
+
+}
+
+
+@media (max-width: 479px) {
+
+
+  .trading-commissioni .tabular { /* min-height:200px;*/ }
+  
+}
+
+
+/* ==========================================================================
+  trading-commissioni fine
+========================================================================== */
+/* ==========================================================================
+  trading-mercati inizio
+========================================================================== */
+
+.trading-mercati .tabular select.selectnav {display: none;}
+.trading-mercati .tabular .nav-tabs > li {width:190px;}
+.trading-mercati .tabular .nav-tabs > li > a:hover {background: #fff; cursor:pointer;}
+.trading-mercati .tabular .nav-tabs > li a.nav1, .trading-mercati .tabular .nav-tabs > li a.nav1:hover, .trading-mercati .tabular .nav-tabs > li a.nav1:focus {background: none;}
+.trading-mercati .tabular .nav-tabs > li a.nav2, .trading-mercati .tabular .nav-tabs > li a.nav2:hover, .trading-mercati .tabular .nav-tabs > li a.nav2:focus {background: none;}
+.trading-mercati .tabular .nav-tabs > li a.nav4:hover, .trading-mercati .tabular .nav-tabs > li a.nav4:focus,.trading-mercati .tabular .nav-tabs > li a.nav3:hover, .trading-mercati .tabular .nav-tabs > li a.nav3:focus {background:none}
+
+.trading-mercati .tabular .nav-tabs > li > a,
+.trading-mercati .tabular .nav-tabs > li > a:hover,
+.trading-mercati .tabular .nav-tabs > li > a:focus {border-color: #8ab10b #8ab10b transparent; color: #8ab10b; font-family:"ralewaysemibold",arial, sans-serif; font-size:12px; text-transform:uppercase;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px; border-width: 2px; text-align:left; padding-left:20px;}
+
+.trading-mercati .tabular .nav-tabs > li.active
+{
+    border-bottom: 1px solid #f6fae9;
+    background-color:#f6fae9;
+}
+
+.trading-mercati .tabular table th {font-weight:normal; text-align: left; text-transform:uppercase; font-size:14px;}
+.trading-mercati .tabular table tr {height:50px;}
+.trading-mercati .tabular table .col1 {padding: 0 20px; }
+.trading-mercati .tabular table .col1 img { vertical-align: text-top;}
+.trading-mercati .tabular table .odd {background: #f6fae9;}
+.trading-mercati .tabular .nav-tabs > li.active > a {background-color:#F6FAE9;}
+.trading-mercati .sectionTitle h3 {font-size:14px; color:#fff; margin:-24px 0 0 0px; padding:0;}
+
+@media (max-width: 1025px) {
+  .trading-mercati .tabular .nav-tabs > li {width:160px;}
+  .trading-mercati .tabular .nav-tabs > li > a, .trading-mercati .tabular .nav-tabs > li > a:hover, .trading-mercati .tabular .nav-tabs > li > a:focus {font-size:11px;}
+}
+
+@media (max-width: 767px) {
+
+
+  .trading-mercati .mainContent .tabular,
+
+
+  .trading-mercati .mainContent .tabular
+  {
+	  position:relative;
+	  width:100%;
+  }
+
+  .trading-mercati .mainContent .tabular div
+  {
+      margin-left:0px;margin-top:0px;width:100%;
+  }
+
+  .trading-mercati .tabular .nav-tabs {display:none;}
+  .trading-mercati .tabular select.selectnav {display: block;}
+  .trading-mercati .tabular .nav-tabs > li {width:auto;}
+  .trading-mercati .tabular .nav-tabs > li > a, .trading-mercati .tabular .nav-tabs > li > a:hover, .trading-mercati .tabular .nav-tabs > li > a:focus {padding-left:2px; padding-right:2px;}
+
+
+
+  .trading-mercati .tabular .nav-tabs > li {width:100%; display:block; float:none;}
+  .trading-mercati .tabular .nav-tabs > li > a, .trading-mercati .tabular .nav-tabs > li > a:hover, .trading-mercati .tabular .nav-tabs > li > a:focus {padding-left:12px; font-size:14px; border-top-left-radius:0; border-top-right-radius:0;}
+  .trading-mercati .tabular .nav-tabs > li a, .trading-mercati .tabular .nav-tabs > li a:hover, .trading-mercati .tabular .nav-tabs > li a:focus {color:#cacaca;}
+  .trading-mercati .tabular .nav-tabs > li.active > a, .trading-mercati .tabular .nav-tabs > li.active > a:hover, .trading-mercati .tabular .nav-tabs > li.active > a:focus {font-size:20px;}
+
+
+    
+}
+
+
+@media (max-width: 479px) 
+{
+
+  .trading-mercati .tabular .nav-tabs > li > a, .trading-mercati .tabular .nav-tabs > li > a:hover, .trading-mercati .tabular .nav-tabs > li > a:focus {padding-left:2px; padding-right:2px;}
+
+}  
+
+
+#tabella_azioni,
+#testo_azioni
+{
+    display:block;
+}
+
+#tabella_obbligazioni,
+#tabella_etf,
+#tabella_derivati,
+#testo_obbligazioni,
+#testo_etf,
+#testo_derivati
+{
+    display:none;
+}
+
+/* ==========================================================================
+  trading-mercati fine
+========================================================================== */
+/* ==========================================================================
+TRADING prova piattaforma INIZIO
+========================================================================== */
+   
+   .trading-prova-piattaforma .heroimg {width:100%; margin-bottom: 20px;}
+   
+   .t3block
+   {
+	   font-size:16px;
+   }
+   
+   .t3block h3
+   {
+	   text-transform: uppercase;
+   }
+   
+	.trading-prova-piattaforma .form-section-title
+	{
+		font-size:20px;
+		margin-top:10px;
+	
+	}
+	
+	
+	.trading-prova-piattaforma label
+	{
+		margin-top:5px;
+	}
+
+	
+	@media (max-width: 767px) 
+	{
+		.trading-prova-piattaforma label
+		{
+			margin-top:15px;
+		}
+		
+	
+	}
+	
+	
+	
+/* ==========================================================================
+TRADING prova piattaforma FINE
+========================================================================== */
+

@@ -1,0 +1,68 @@
+ /* ==========================================================================
+   COLORE BREAKPOINTS per sviluppo
+   ========================================================================== */
+   
+   
+   
+   
+   
+	/* Portrait phones and smaller */
+	@media (max-width: 479px) {
+		
+		body
+		{
+		 	background:yellow;
+		}
+				  	
+	}
+
+
+
+	/* Landscape phones and portrait tablets */
+	@media (min-width: 480px) and (max-width: 767px) {
+		
+		body
+		{
+		 	background:green;
+		}
+		
+	}
+
+
+
+	/* Portrait tablets and small desktops / era 991px */
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		
+		body
+		{
+			background:red;
+		}
+		
+
+
+	}
+
+	/* Portrait tablets and small desktops / era 991px */
+	@media (min-width: 992px) and (max-width: 1025px) {
+		
+		
+		body
+		{
+			background:purple;
+		}
+
+
+	}
+
+	/* Landscape tablets and medium desktops */
+	@media (min-width: 1026px) and (max-width: 1199px) {
+		
+		
+		
+		body
+		{
+			background:blue;
+		}
+
+	}

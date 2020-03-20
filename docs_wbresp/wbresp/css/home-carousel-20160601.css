@@ -1,0 +1,71 @@
+/* =================== */ 
+/* CAROUSEL HOME PAGE  */
+/* =================== */
+/* =================== */ 
+/* CAROUSEL HOME PAGE  */
+/* =================== */
+
+#myCarousel {background:#000;padding-bottom:32px;font-family:"ralewaymedium",Arial,Serif;}
+#myCarousel .carousel-caption {text-align: left;left:15%;right:15%;bottom:30px;}
+#myCarousel .carousel-caption h2 {color:#fff;font-size:50px; line-height:50px;font-family:"ralewaysemibold",Arial,Serif;}
+#myCarousel .carousel-caption h2.doublerow {font-size:35px;}
+#myCarousel .carousel-caption h2.doublerow .secondary {font-size:35px;}
+#myCarousel .carousel-caption h2 span.big {font-size:100px;}
+#myCarousel .carousel-caption h2 span.secondary {font-size:35px; color:#d3ff40;}
+#myCarousel .carousel-caption h3 {color:#fff; margin-top:0;line-height:30px;}
+#myCarousel .carousel-caption p.note {clear: both;font-size: 11px !important;padding: 20px 0 0;max-width: 620px;line-height: 13px;color:#fff !important;}
+#myCarousel .carousel-caption p.note a {color:#fff;text-decoration:underline;}
+#myCarousel .carousel-caption .logos {float:left;width:100%; margin-bottom:30px;}
+#myCarousel .carousel-caption .logos img {float:left;margin: 0 20px 0 0;}
+#myCarousel .carousel-caption ul {padding:10px 30px 20px;font-size:20px;list-style-image: url(/wbresp/img/carousel/flag.png);}
+#myCarousel .carousel-caption ul li {margin-bottom:5px;}
+#myCarousel .item.promo h2.green {color:#d3ff40}
+#myCarousel .item.promo .carousel-caption ul {margin-bottom:20px;}
+#myCarousel .item.promo .carousel-caption ul li {font-size:30px; padding-left:10px;}
+/*
+#myCarousel .item.promo .carousel-caption {padding-bottom:10px}
+*/
+
+/* Media queries */
+@media (max-width: 991px) {
+   #myCarousel .carousel-caption h2 {font-size:30px; line-height:37px; padding:0;margin:0;}
+   #myCarousel .carousel-caption h2 span.big {font-size:60px;}
+   #myCarousel .carousel-caption h2 span.secondary {font-size:30px;}
+   #myCarousel .carousel-caption h2.doublerow, #myCarousel .carousel-caption h2.doublerow span.secondary{font-size:25px; line-height:30px;}
+   #myCarousel .carousel-caption ul li {margin-bottom:3;}
+
+   #myCarousel .item.promo .carousel-caption ul {margin-bottom:10px;font-size:16px;}
+   #myCarousel .item.promo .carousel-caption ul li {font-size:18px; padding-left:0px;}
+   /*
+   #myCarousel .item.promo .carousel-caption p {padding-bottom:0;font-size:11px; line-height:12px;margin-bottom:0;}
+   #myCarousel .item.promo .carousel-caption .logos {padding:0;margin:0 0 10px;}
+   #myCarousel .item.promo .carousel-caption .logos img {height:35px;}
+   */
+   #myCarousel .carousel-caption ul {font-size:14px;}
+   #myCarousel .carousel-caption p.note {font-size:10px;line-height:12px;}
+}
+@media (max-width: 767px) {
+   #myCarousel .carousel-caption {left:10%;right:10%;}
+   #myCarousel .carousel-control {width:10%}
+   #myCarousel .carousel-caption .btn-grlit {margin:5px 10px 5px 0;}
+   #myCarousel .carousel-caption ul {list-style-type:disc;list-style-image:none;}
+}
+
+@media (max-width: 479px) {
+   #myCarousel .carousel-caption {margin-bottom:0px;padding-bottom:0;bottom:10px;top:20%;margin-top:-100%;padding-top:15px}
+   /*
+   #myCarousel .item.promo h2 {font-size:25px;line-height:30px;}
+   */
+   #myCarousel .carousel-caption p.note {position:absolute;bottom:0;}
+   /*
+   #myCarousel .item.promo span.secondary {font-size:20px;}
+   #myCarousel .item.promo span.big {font-size:50px;}
+   #myCarousel .item.promo .carousel-caption .logos img {height:25px;}
+   #myCarousel .item.promo .carousel-caption p.note {font-size:9px !important;line-height:10px !important;padding-top:10px;margin-top:10px}
+   #myCarousel .item.promo .carousel-caption .btn-grlit {margin:5px 10px 5px 0}
+   */
+}
+
+/* ======================== */ 
+/* FINE CAROUSEL HOME PAGE  */
+/* ======================== */

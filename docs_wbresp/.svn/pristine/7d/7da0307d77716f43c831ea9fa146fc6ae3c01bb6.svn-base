@@ -1,0 +1,15 @@
+<!-- BANNER MUTUO -->
+<style>
+.widget11 {margin: 0px auto;max-width:262px;height:346px;width:100%;background: transparent url("/wbresp/img/wdg_ban_bollo_app.jpg") top center no-repeat;text-align:center;padding:352px 0 25px; box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+.widget11 a {float:none; margin: 0 15px;}
+@media (max-width: 1199px) {
+	.widget11 {display: none;}
+}	
+</style>
+<div class="widget widget11">
+    <a href="https://magazine.webank.it/premio-soddisfazione-clienti-banking-app-valutazione-top-per-app-webank" class="btn-grlit btn-grlit-arrow" title="Scopri di pi&ugrave;">Scopri di pi&ugrave;</a>
+</div>
+<!-- FINE BANNER PROMO -->
+

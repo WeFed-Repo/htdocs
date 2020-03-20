@@ -1,0 +1,22 @@
+<!-- WIDGET ESPERTI -->
+<style>
+.widget03 {margin: 30px 0 0 0;}
+.widget03 h3 {color:#333333; font-size:20px; line-height:26px; padding: 30px 10px 0 10px; border-left: 5px solid #a6cc28; margin:0; font-family:"ralewaybold",arial,sans-serif;}
+.widget03 img {width:100%;}
+.widget03 h4.tags {color: #8ab10b; font-size:15px; text-transform:uppercase; letter-spacing:1px; padding: 6px 10px 0 15px;}
+.widget03 p.intro {text-align:left; color: #999999; padding: 0 10px 20px 16px; }
+@media (max-width: 1199px) {
+	.widget03 {background: #fff;}
+	.widget03 img {width:100%;}
+}
+</style>
+<div class="widget widget03"> 
+	<img src="/wbresp/img/magazine/conosci-gli-esperti-widget.jpg" alt="Conosci gli Esperti" />
+    <h3>Conosci gli Esperti</h3>
+    <p class="intro">
+        Cambiare conto corrente, da luglio 2015, &egrave; diventato pi&ugrave; semplice ed economico.
+		In pochi passi, ti spiegheremo come gestire al meglio il passaggio da una banca ad un'altra, prestando la dovuta attenzione ai dettagli che potrebbero penalizzarti.
+    </p>
+    <a href="https://magazine.webank.it/esperti/" target="_blank" class="btn-grlit btn-grlit-arrow">Scopri di pi&ugrave;</a>
+</div>
+<!-- FINE WIDGET ESPERTI -->

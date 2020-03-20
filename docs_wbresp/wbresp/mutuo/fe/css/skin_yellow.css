@@ -1,0 +1,25 @@
+/* Skin colore primario #ffc300 */
+a,a:hover,a:focus {color:#ffc300;}
+/*
+.titFinalita {display:none !important;}
+*/
+.main-visual {border-top:solid 6px #ffc300;}
+.main-visual .promo-box {display:none;}
+.main-visual .fascione, .main-visual .promo-box {background: #ffc300 ;}
+.bordato {border-color:#ffc300;}
+ul.mTabs {display:none !important;}
+ul.mTabs li a.selected  span {border-color:#ffc300; border-bottom:0 none;color:#ffc300;}
+.checkbox label::after {color:#ffc300;}
+ul.mTabs li a,ul.mTabs li a:focus {border-bottom: solid 2px #ffc300;}
+#mCalcCons .sliderBlock .slider-selection, .radio label::after,#mCalcCons .sliderBlock .tooltip.top .tooltip-inner,.mData .mGauge, .btn-grlit, .btn,.btn:active,.btn:hover,.btn:focus  {background-color:#ffc300 !important;}
+h3.tipomutuo-title {display:none;}
+
+h2.titFinalita {border-color:#ffc300;}
+h2.titFinalita span {color:#ffc300;}
+
+.only-yellow {display:inline;}
+.mData .mGauge .rata {color:#414141;}
+
+.box-captcha, .box-captcha-right input.form-control {border-color: #ffc300 !important;}
+
+#mResults .goCons {display:none !important;}

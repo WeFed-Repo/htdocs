@@ -1,0 +1,110 @@
+/*
+
+CSS relativo a:
+contatti.html -> Contatti                                                                             
+dialoga-con-webank.html -> Contatti - Dialoga con Webank                                              
+in-diretta-con-webank.html -> Contatti - In diretta con Webank                                        
+numeri-utili.html -> Contatti - Numeri utili                                                          
+sales-team.html -> Contatti - Sales Team                                                              
+
+*/
+
+
+.contatti.basic-content h4 {font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-transform:uppercase;margin:60px 20px 10px 20px;}
+.contatti.basic-content p {color: #999999; font-size:16px; }
+.contatti.basic-content p.sub {margin: 0 20px 60px 20px;}
+.contatti.basic-content p b {font-family:"ralewaysemibold",arial, sans-serif;}
+.contatti.basic-content img {display:block; margin: 10px auto;}
+
+
+.in-diretta .social_row {margin: -40px 0 0 12px;}
+.in-diretta .social_link {float:left; margin: 0 10px 0 0; display:block; text-indent:-9999px; width:54px; height:54px;}
+.in-diretta .social_fb {background: transparent url("/wbresp/img/contatti/indiretta_ico_fb.png") no-repeat 0 0;}
+.in-diretta .social_tw {background: transparent url("/wbresp/img/contatti/indiretta_ico_tw.png") no-repeat 0 0;}
+
+.numeri-utili.basic-content .spacer {border-top: 1px solid #cccccc; margin: 20px -20px 0 -20px;}
+.numeri-utili.basic-content p.sub {margin: 0 20px 10px 20px;}
+.numeri-utili.basic-content p.numlabel {margin: 0 20px 10px 20px; padding: 0 0 0 30px; background: transparent url("/wbresp/img/contatti/numeri_ico_tel.png") 0 0 no-repeat; color:#666666; font-family:"ralewaysemibold",arial, sans-serif;}
+.numeri-utili.basic-content p.numlabel a {color:#666666; font-family:"ralewaysemibold",arial, sans-serif; text-decoration:none;}
+.numeri-utili.basic-content p.numdesc {margin: 0 20px 10px 20px; padding: 0 0 0 30px;}
+.numeri-utili table.numeri {width:100%;}
+.numeri-utili table.numeri th {font-size:14px; color: #666; text-transform:uppercase; height:30px; line-height:30px;}
+.numeri-utili table.numeri th.col1 span {display: block; padding-left:10px;}
+.numeri-utili table.numeri td {font-size:16px; color: #666; height:70px; vertical-align: top; padding-top: 6px; padding-bottom: 6px;}
+.numeri-utili table.numeri td a {color: #666; text-decoration:none;}
+.numeri-utili table.numeri td.col1 {width:45%}
+.numeri-utili table.numeri td.col1 span {display: block; padding-left:10px}
+.numeri-utili table.numeri td.col2 {width:20%}
+.numeri-utili table.numeri td.col3 {width:35%}
+.numeri-utili table.numeri tr.even td {background: #f6fae9;}
+
+.sales-team ul.featlist {color: #999999; font-size:16px; padding: 0 0 0 20px; list-style:none;}
+.sales-team .featlist li {text-indent: -10px;}
+.sales-team .featlist li:before { content: "\2022   "; color:#a6cc28;}
+.sales-team.basic-content img {display:block; margin: 0px auto;}
+.sales-team h5 {color:#cbcbcb; font-size:17px; font-family:"ralewaysemibold",arial, sans-serif; text-transform:uppercase; margin: 20px 20px 20px 20px; }
+.sales-team form#f1 {margin: 30px 20px;}
+.sales-team label {display:block; font-weight:normal;  color:#999999; font-size:14px; margin-right:20px; }
+.sales-team .spacerlight {height:20px; border-bottom:1px solid #f0f0f0; margin-bottom:10px;}
+.sales-team select option.intr {font-style:italic; color:#999;}
+.sales-team label.radio-inline {display:inline-block; font-weight:normal; font-size: 14px;}
+.sales-team input[type=radio] {color:#a6cc28;}
+.sales-team p.sml { font-size: 14px; margin-top:-8px;}
+.sales-team .textinput-pre {width:20%; float:left; margin-right:4px;}
+.sales-team .textinput-post {width:77%; float:left; }
+
+
+.dialoga.basic-content .imgnum {margin: 10px auto;}
+.dialoga ul.featlist {color: #999999; font-size:16px; padding: 0 0 0 40px; list-style:none; margin-top:6px;}
+.dialoga .featlist li {text-indent: -10px;}
+.dialoga .featlist li:before { content: "\2022   "; color:#a6cc28;}
+.dialoga.basic-content p.sub {margin-bottom:0px;}
+.dialoga label {display:block; font-weight:normal; color:#999999; font-size:16px; margin-bottom:2px;}
+.dialoga form .spacer {height:10px;}
+.dialoga .control-code {color: #999; font-size: 30px; font-family:"ralewaybold",arial,sans-serif; text-align: center; border:1px solid #ccc; padding: 10px 0;}
+
+
+.contatti .row_bg {background: transparent url("/wbresp/img/contatti/dialoga_bg.png") 0 0 no-repeat;}
+
+
+/* BOTTONE DIALOGA */
+.dialoga-tel {  width: 100%;
+  /* position: relative; */
+  background: transparent url(/wbresp/img/contatti/dialoga_ico_1.png) no-repeat center top;
+  width: 100%;
+  height: 305px;
+
+  width: 347px;
+  position:relative;
+  margin: 0 auto;
+  clear: both;}
+.dialoga-tel h3 {color: #999; font-weight:bold;
+  font-size: 22px; text-align:center; padding-top:55px;position:absolute;
+  width: 100%;
+    padding-right: 50px;
+  top:0;
+  	position:absolute;
+  line-height: 24px;}
+.dialoga-tel p {color: #777;
+	font-size:14px !important;
+ 	text-align:center; padding-bottom:75px;
+ 	bottom:0;
+ 	position:absolute;
+ 	  padding-right: 50px;
+  margin: 0 auto;
+  width:100%;
+  line-height: 20px;}
+
+
+
+@media (max-width: 479px) {
+    
+    .dialoga.basic-content .imgnum {width:90%;}
+    .contatti.basic-content h4 {margin:60px 10px 10px 10px;}
+    .contatti.basic-content p.sub {margin:0 10px 60px 10px;}
+
+	.dialoga-tel { width:300px;background-size:contain;height:260px;}
+	.dialoga-tel h3 {padding-right:40px;font-size:18px;line-height:20px;}
+	.dialoga-tel p {padding-bottom:60px;font-size:12px !important;}
+
+}

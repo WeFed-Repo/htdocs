@@ -1,0 +1,23 @@
+<!-- WIDGET LA BANCA CHE VORREI -->
+<style>
+.widget02 {background: #fff url("/wbresp/img/widgets/trading_widget02_bg.jpg") no-repeat 0 0; padding: 300px 10px 0 10px; min-height:590px; margin: 20px 0 0 0; text-align:center;}
+.widget02 p.intro {text-align:center; color: #999999; padding-bottom: 20px; border-bottom:1px solid #cccccc;}
+.widget02 p.commento {text-align:center; color: #999999; padding-bottom: 10px;}
+.widget02 p.commento span.autore {color: #8ab10b; }
+.widget02 p.commento span.data {color:#666666;}
+@media (max-width: 1199px) {
+	.widget02 {background-position:center 0;}
+}
+</style>
+<div class="widget widget02">
+    <p class="intro"> Aiutaci a diventare la tua banca ideale proponendoci la tue idee, consigliandoci dei miglioramenti o suggerendoci le funzionalit&agrave; che ti piacerebbe poter sfruttare. </p>
+
+    <!-- ENTRY COMMENTO -->
+    <p class="commento"> <span class="autore">Lawrence</span><span class="data"> • 11/10/2015</span>
+        <br />
+        <br />Pi&ugrave; dettagli nell'alert mail riguardante le mie linee vincolate
+    </p>
+    <!-- FINE ENTRY COMMENTO -->
+    <a href="https://labancachevorrei.webank.it/" class="btn-grlit btn-grlit-arrow">Partecipa anche tu</a>
+</div>
+<!-- FINE WIDGET LA BANCA CHE VORREI -->
