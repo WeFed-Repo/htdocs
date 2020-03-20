@@ -1,5 +1,7 @@
 <?php
 
+	/* COMMENTO MACCHINA 1 */
+
     $site = $_GET["site"];
     $libs = 'webank';
     $libsurl = '';
