@@ -1,5 +1,7 @@
 <?php
 
+    /* COMMENTO DA REMOTO */
+
     $site = $_GET["site"];
     $libs = 'webank';
     $libsurl = '';
