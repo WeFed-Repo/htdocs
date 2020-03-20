@@ -1,0 +1,61 @@
+﻿div.footer
+{
+}
+
+.footer table 
+{
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    padding: 0;
+}
+
+td.footer-band
+{
+    width: 100%; 
+    height: 20px;
+    background: url("themes/anchise/images/footerTricolore.gif") 3px bottom;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    background-repeat: repeat-x;
+}
+
+/*
+div .footer-style 
+{
+    height: 100%;
+    width: 100%;
+}
+
+.footer-style table 
+{
+    font-size: 11px;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+
+td.footer-disclaimer
+{
+    color: #003365;
+    padding-left: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    background: url("themes/anchise/images/footerTricolore.gif") 3px bottom;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    background-repeat: repeat-x;
+}
+
+div .footer-logo
+{
+    background-color: #0000cd;
+    border: 0px solid #00F0FF;
+    float: right;
+    vertical-align: top;
+    height: 50px;
+    width: 10%;
+ }
+*/

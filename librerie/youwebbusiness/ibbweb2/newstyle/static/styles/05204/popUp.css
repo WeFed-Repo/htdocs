@@ -1,0 +1,104 @@
+#popUpBox
+{ 
+	background-color: #D4D4D4;
+	width: 100%;
+	height:100%;
+	margin:0 auto;
+	display: inline-table;
+	
+}
+.formPopUp{
+	width:100%;
+}
+.titoloBox{
+	margin: 0px;
+	width: 100%;
+	padding-top: 3px;
+	padding-left:3px;
+	height: 20px;
+	color:  #ffffff;
+	BACKGROUND: #003365;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+#footerPopUp{
+	background-color: #D4D4D4;
+	margin: 0px;
+	width: 100%;
+}
+
+#contenutoBox{
+	border-style: solid; 
+	border-width : 1px; 
+	BORDER-COLOR : rgb(0,0,0);
+	width: 620px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;		
+}
+#fineContenutoBox{
+	margin:0px;
+	padding:0px;
+	background-color: rgb(240,240,240); 
+	width:100%;
+	border: none;
+	height: 5px;
+	}
+
+
+.titolettoBox{
+	background-color: rgb(220,220,220);
+	color: rgb(0,0,0);
+	height: 20px;
+	margin: 1px;
+	text-align: left;
+	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-left: 1px;
+}
+/*.alineamento{
+	text-align: left;
+	margin: 1px;
+	padding: 0px;
+	width: 100%;
+}*/
+.calendario{
+	margin-top :10px;
+	padding: 1px;
+	text-align: center;
+}
+.testoBox{
+	color: rgb(0,0,0);
+	height: 20px;
+}
+
+.paragrafoBox{
+	color: rgb(0,0,0);
+	height: 16px;
+	margin: 1px;
+	text-align: left;
+	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-left: 1px;
+	
+}
+.tableBox{
+	width:100%;
+	text-align: center;
+	margin:1 auto;
+	border: none;
+}
+.height30{
+	height: 30px;
+}
+
+.col_1 {
+  width: 140px;;
+}
+.col_2 {
+  width: 20px;
+}

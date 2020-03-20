@@ -1,0 +1,57 @@
+﻿/*img per promo menu e dettaglio*/
+
+.promo-infoConti {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/infoConti.png) no-repeat 0px 0px;
+}
+
+.promo-pagamenti {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/pagamenti.png?v=1) no-repeat 0px 0px;
+}
+
+.promo-incassi {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/incassi.png) no-repeat 0px 0px;
+}
+
+.promo-carte {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/carte.png) no-repeat 0px 0px;
+}
+
+.promo-documentiFatture {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/documentiFatture.png) no-repeat 0px 0px;
+}
+
+.promo-anagrafiche {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/anagrafiche.png) no-repeat 0px 0px;
+}
+
+.promo-datiDisposizioni {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/datiDisposizioni.png?v=1) no-repeat 0px 0px;
+}
+
+.promo-configura {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background: url(images/PromoMenu/configura.png) no-repeat 0px 0px;
+}

@@ -1,0 +1,85 @@
+.c-gruppi {
+    &--box {
+        position: relative;
+        text-align: center;
+        text-decoration: none !important;
+        .bordered {
+            position: relative;
+            @include bordered($allpadding:true);
+            height: 100%;
+            min-height: 240px;
+        }
+        cursor: pointer;
+        .c-title {
+            margin: $spacer 0 0 0;
+            padding:0;
+            font-size: 20px;
+            font-weight: 500;
+            color: $gray2;    
+        }
+        .c-subtitle {
+            margin: $spacer/2 0 0 0;
+        }
+        .c-icon {
+            text-align: center;
+            margin: 0;
+            .icon {
+                @include svg-icon-size(110px);
+                @include svg-icon-color($green);
+                margin: auto;
+                float: none;
+            }
+        }
+        .c-text {
+            min-height: 70px;
+            margin-bottom: $spacer;
+            color: $gray2;    
+        }
+        .c-delete {
+            position: absolute;
+            top:0;
+            right:0;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border-left: $grayBordered solid 1px;
+            border-bottom: $grayBordered solid 1px;
+            background: $grayBG;
+            text-align: center;
+            cursor: pointer; 
+            .icon {
+                @include svg-icon-size(15px);
+                @include svg-icon-color($gray2);
+                margin:10px 0 0 0;
+                padding:0;
+                display: inline-block;
+            }
+            &:hover {
+                .icon {
+                    @include svg-icon-color($greenLink);
+                }
+            }
+        }
+        // STATO HOVER DEL BOX 
+        &:hover {
+            .c-icon {
+                .icon {
+                    @include svg-icon-color($greenLink);
+                }
+            }
+        }
+        // BOX CON COLORE DI SFONDO DIFFERENTE
+        &.add-new {
+            .bordered {
+                @include bordered($bkg:$greenLink,$color:$white,$allpadding:true);
+            }
+            .c-title,
+            .c-text { 
+                color: $white; 
+            }
+            .c-icon .icon { 
+                @include svg-icon-color($white); 
+            }
+        }
+    }
+}

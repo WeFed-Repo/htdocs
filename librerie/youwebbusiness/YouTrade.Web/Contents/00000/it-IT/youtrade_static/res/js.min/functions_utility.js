@@ -1,0 +1,1 @@
+function Trim(r){for(var t=0,n=new String(r);n.length>t&&(" "==n.charAt(t)||"%A0"==escape(n.charAt(t)));)t++;for(n=n.substring(t,n.length),t=n.length-1;t>0&&(" "==n.charAt(t)||"%A0"==escape(n.charAt(t)));)t--;return n=n.substring(0,t+1)}

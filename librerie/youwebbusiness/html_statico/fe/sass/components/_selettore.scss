@@ -1,0 +1,54 @@
+// /* SELETTORE RAPPORTO / DOSSIER etc */
+
+.selettore {
+  min-width: 100%; 
+  .dati-key {
+    color: $gray2;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 0.5rem;
+    @media (min-width: $bp_lg_min) {
+      padding-right: 0;
+    }
+    @media (min-width: $bp_xl_min) {
+      //min-width: 120px;
+    }
+  }
+  .dati-value {
+    color: $gray2;
+    padding-bottom: 0.5rem;
+  }
+  .dati-value-big {
+    font-size: 1.3em;
+    padding-bottom: 0.5rem;
+    color: $greenLink;
+    font-weight: bold;
+  }
+  .dati-value-max {
+    font-size: 2em;
+    color: $greenLink;
+    font-weight: bold;
+  }
+  @media (max-width: $bp_lg_max) {
+    .dati-key,
+    .dati-value,
+    .dati-value-big {
+      display: block;
+      padding-bottom: 0;
+    }
+    .btn-mobile-arrow {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-family: inherit;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $greenLink;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title></title>
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type"/>
+	<link media="screen,print" rel="stylesheet" type="text/css" href="../css/content_layout.css?ver=@premia_version@"></link>
+	<script>
+		function openTabsheetTestataCredoc(sectionToShow,sectionToHide1,sectionToHide2,sectionToHide3){       
+			var tabSectionToHide1="tab-"+sectionToHide1;
+			var tabSectionToHide2="tab-"+sectionToHide2;
+			var tabSectionToHide3="tab-"+sectionToHide3;
+
+			var descTabToHide1="desc-"+sectionToHide1;
+			var descTabToHide2="desc-"+sectionToHide2;
+			var descTabToHide3="desc-"+sectionToHide3;
+			
+	        //chiude tutti gli altri	        
+	        document.getElementById(sectionToHide1).style.display = "none";
+	        document.getElementById(sectionToHide2).style.display = "none";
+	        document.getElementById(sectionToHide3).style.display = "none";
+
+            document.getElementById(tabSectionToHide1).style.background = "#357745";  
+            document.getElementById(tabSectionToHide2).style.background = "#357745";
+            document.getElementById(tabSectionToHide3).style.background = "#357745";  
+
+            document.getElementById(descTabToHide1).style.color = "white";
+            document.getElementById(descTabToHide2).style.color = "white";         
+            document.getElementById(descTabToHide3).style.color = "white";
+
+            //apre quello selezionato
+	        var idTabToShow="tab-"+sectionToShow;
+	        var descTabToShow="desc-"+sectionToShow;
+	        
+	        document.getElementById(idTabToShow).style.background = "#e7f5e7";
+	        document.getElementById(idTabToShow).style.color = "#003b79";
+	        document.getElementById(descTabToShow).style.color = "#003b79";	        
+	        document.getElementById(sectionToShow).style.display = "inline-block";	        
+	    }
+	</script>
+</head>
+
+<body class="body-popup">
+    <div class="box-testataCredoc">
+        <div class="popup-box-testataCredoc">
+            <div class="tab-popup-testataCredoc tabSel" id="tab-div_BeniServizi">
+               <div style="color:#003b79;" id="desc-div_BeniServizi" onclick="openTabsheetTestataCredoc('div_BeniServizi','div_DocumentiRichiesti','div_CondizioniAggiuntive','div_CondizioniBeneficiario');">
+                 <script>document.write(opener.currHelpLabel);</script>                 
+               </div>
+            </div>        
+            <div class="tab-popup-testataCredoc" id="tab-div_DocumentiRichiesti">
+	            <div id="desc-div_DocumentiRichiesti" onclick="openTabsheetTestataCredoc('div_DocumentiRichiesti','div_BeniServizi','div_CondizioniAggiuntive','div_CondizioniBeneficiario');">
+	               <script>document.write(opener.currHelpLabel2);</script>
+	            </div>
+            </div> 
+            <div class="tab-popup-testataCredoc" id="tab-div_CondizioniAggiuntive">
+                <div id="desc-div_CondizioniAggiuntive" onclick="openTabsheetTestataCredoc('div_CondizioniAggiuntive','div_BeniServizi','div_DocumentiRichiesti','div_CondizioniBeneficiario');">
+                  <script>document.write(opener.currHelpLabel3);</script>
+                </div>
+            </div>    
+            <div class="tab-popup-testataCredoc" id="tab-div_CondizioniBeneficiario">
+                <div id="desc-div_CondizioniBeneficiario" onclick="openTabsheetTestataCredoc('div_CondizioniBeneficiario','div_BeniServizi','div_DocumentiRichiesti','div_CondizioniAggiuntive');">
+                  <script>document.write(opener.currHelpLabel4);</script>
+                </div>
+            </div>                             
+         </div>
+         <div onClick="window.focus();window.print();" id="printImg" class="printImgCredoc"/>
+    </div>
+    <div class="form-table-testata">
+        <div id="div_BeniServizi">
+		    <div id="description-popup" class="description-popup-credoc textarea" >
+		        <script>
+		            //alert(opener.currHelpDescription);
+		            document.write(opener.currHelpDescription.replace(/\n/gi,'<br>'));
+		        </script>
+		    </div>
+	    </div>
+	    <div id="div_DocumentiRichiesti" style="display:none;">
+		    <div id="description-popup" class="description-popup-credoc textarea" style="min-height:150px;">
+		        <script>
+		            //alert(opener.currHelpDescription2);
+		            document.write(opener.currHelpDescription2.replace(/\n/gi,'<br>'));
+		        </script>
+		    </div>
+		 </div>
+		 <div id="div_CondizioniAggiuntive" style="display:none;">
+	        <div id="description-popup" class="description-popup-credoc textarea"  style="min-height:150px;">
+		        <script>
+		            //alert(opener.currHelpDescription2);
+		            document.write(opener.currHelpDescription3.replace(/\n/gi,'<br>'));
+		        </script>
+	        </div>
+	    </div>
+		<div id="div_CondizioniBeneficiario" style="display:none;">
+	        <div id="description-popup" class="description-popup-credoc textarea"  style="min-height:150px;">
+		        <script>
+		            document.write(opener.currHelpDescription4.replace(/\n/gi,'<br>'));
+		        </script>
+	        </div>
+	    </div>	    
+    </div>
+
+	<script>document.title = opener.currHelpPopupTitle;</script>
+    <script>
+       if(opener.currHelpDescription == ''){
+           document.getElementById("tab-div_BeniServizi").style.visibility = "hidden";
+       }
+       if(opener.currHelpDescription2 == ''){
+           document.getElementById("tab-div_DocumentiRichiesti").style.visibility = "hidden";
+       }
+       if(opener.currHelpDescription3 == ''){
+           document.getElementById("tab-div_CondizioniAggiuntive").style.visibility = "hidden";
+       } 
+       if(opener.currHelpDescription4 == ''){
+           document.getElementById("tab-div_CondizioniBeneficiario").style.visibility = "hidden";
+       }                  
+    </script>	
+</body>
+</html>

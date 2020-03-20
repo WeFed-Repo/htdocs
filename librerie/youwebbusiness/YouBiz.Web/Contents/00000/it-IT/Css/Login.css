@@ -1,0 +1,88 @@
+﻿.top_modallogin{
+    z-index:99999;
+}
+.modal-backdrop {
+  z-index: 99998;
+}
+.sectionPopupLogin {
+	clear: both;
+	position: relative;
+	margin: 20px;
+	padding: 5px;
+	background: #f7fcf7;
+}
+.oCenter {
+    text-align: center !important;
+}
+div.browserVersione{
+	width: 100%;
+	min-height: 35px;
+	float: left;
+	clear: both;
+}
+	
+div.browserVersione > p{
+	padding-top: 10px;
+	margin-left: 40px;
+}
+	
+div.browser {
+	width: 29px;
+	height: 35px;
+	display: block;
+	float: left;
+	z-index: 4;
+}
+
+div.browser.IE						{ background: url(/YouBiz.Web/contents/00000/it-IT/images/browser.png) no-repeat -58px 1px; }
+div.browser.safari					{ background: url(/YouBiz.Web/contents/00000/it-IT/images/browser.png) no-repeat -120px 1px; }
+div.browser.chrome					{ background: url(/YouBiz.Web/contents/00000/it-IT/images/browser.png) no-repeat 1px 1px; }
+div.browser.firefox					{ background: url(/YouBiz.Web/contents/00000/it-IT/images/browser.png) no-repeat -90px 1px; }
+
+
+#cookie-bar {
+	background: #A0C0A0;
+	height: auto;
+	min-height: 24px;
+    color: #FFFFFF;
+	text-align: center;
+	padding: 3px 0;
+	z-index: 9999;
+}
+.fixed#cookie-bar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+.bottom.fixed#cookie-bar {
+	bottom: 0px;
+	top: auto;
+}
+.cookie-content {
+	width: 80%;
+	margin: auto;
+}
+#cookie-bar a {
+	color: #FFFFFF;
+	display: inline-block;
+    font-weight:bold;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: 0 3px;
+}
+#cookie-bar a.x {
+	margin-top: 12px;
+}
+
+.btn:disabled
+{
+  border:2px solid;
+  border-color: #999 !important;
+  background-color: #999 !important;
+}
+
+.img-msg-center{
+    vertical-align:middle;
+    text-align:center;
+}

@@ -1,0 +1,35 @@
+.c-icon-preview {
+    $border: 1px;
+    $iconSize: calc( #{$inputHeight} - #{$spacer} - #{$border*2} );
+    width: $inputHeight;
+    height: $inputHeight;
+    line-height: $inputHeight;
+    flex-basis: $inputHeight;
+    background: $grayBG;
+    border: solid $border $grayBordered;
+    padding: $spacer/2; 
+    margin-right: $spacer;
+    margin-bottom: $spacer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(.active){
+        cursor: pointer;
+        &:hover {
+            background: darken($grayBG,5%);
+        }
+    }
+    @include icon {
+        @include svg-icon-size($iconSize);
+        @include svg-icon-color($gray3); 
+    }
+    &.active {
+        @include icon {
+            @include svg-icon-color($greenLink);
+        }
+    }
+    input {
+        display: none !important;
+    }
+}

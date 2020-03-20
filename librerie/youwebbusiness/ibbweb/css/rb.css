@@ -1,0 +1,95 @@
+.textwhitebig  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #ffffff;
+font-weight : bold 
+}
+.textwhitesmall  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 10px;
+color : #ffffff;
+font-weight : normal 
+}
+
+.textwhitebold  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #ffffff;
+font-weight : bold 
+}
+
+.textyellow  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #ffff33;
+font-weight : bold 
+}
+
+.textmtop  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #ffffff;
+font-weight : normal 
+}
+
+.textmpage  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #18306B;
+font-weight : bold 
+}
+.textmpagen  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #18306B;
+font-weight : normal; 
+}
+
+.textblack  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #000000;
+font-weight : bold 
+}
+
+.textred  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #FF0000;
+font-weight : bold 
+}
+.textredn  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #FF0000;
+font-weight : normal
+}
+
+.textrednormal  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 10px;
+color : #FF0000;
+font-weight : normal 
+}
+
+.texty  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 10px;
+color : #ffff00;
+font-weight : bold 
+}
+
+.textredbig  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #FF0000;
+font-weight : bold 
+}
+.textblackn  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 11px;
+color : #000000;
+font-weight : normal 
+}
+
+th  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #ff0000;
+}
+
+.textaz  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #8E93F9;
+font-weight : bold 
+}
+.textblue  { font-family : Verdana,  Arial, Geneva, Helvetica, sans-serif; 
+font-size : 12px;
+color : #3B44F7;
+font-weight : bold 
+}

@@ -1,0 +1,114 @@
+.titoli {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.testonorm {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.rotTit
+{
+	BACKGROUND-COLOR: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	color: #00376f;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.rotAbs
+{
+	BACKGROUND-COLOR: #FFFFFF;
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #00376F;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+
+.news_title{
+  PADDING-LEFT: 3px; 
+  FONT-WEIGHT: bold; 
+  FONT-SIZE: 12px; 
+  COLOR: #ffffff; 
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.alert_title {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #DD0119;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+
+.news_bodytxt{
+  PADDING-LEFT: 3px; 
+  FONT-SIZE: 11px; 
+  COLOR: #003365; 
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+.alert_bodytxt{
+  PADDING-LEFT: 3px; 
+  FONT-SIZE: 11px; 
+  COLOR: #003365; 
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.news_abstracttxt{
+  PADDING-LEFT: 3px; 
+  FONT-WEIGHT: bold; 
+  FONT-SIZE: 11px; 
+  COLOR: #003365; 
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+.news_btn {
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+		FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #003365
+}
+.alert_btn {
+  
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+		FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #003365
+ 
+}
+
+.news_bodysign
+{
+	padding-left: 3px;
+	font-weight: bold;
+	font-size: 11px;
+	color: #003365;
+	font-style: italic;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.alert_bodysign
+{
+	padding-left: 3px;
+	font-weight: bold;
+	font-size: 11px;
+	color: #003365;
+	font-style: italic;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+td{
+	FONT-SIZE: 11px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}

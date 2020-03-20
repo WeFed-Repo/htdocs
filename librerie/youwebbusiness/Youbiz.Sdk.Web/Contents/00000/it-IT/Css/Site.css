@@ -1,0 +1,1444 @@
+﻿@CHARSET "ISO-8859-1";
+
+a.box-icon {
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 5px 20px 5px 15px;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #fff;
+    background-image: url(../images/landing-icons-sprite.png?v=1);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #c5e7bc;
+}
+
+    a.box-icon:hover,
+    a.box-icon.selected {
+        background-color: #357745;
+    }
+
+.sortable-placeholder {
+    height: 200px;
+    background: #ddd;
+    background: url(../images/add_pref.png) center top no-repeat;
+}
+
+/* patch per a.auth-icon.icon-sportello */
+a.auth-icon.sportello {
+    background-position: 0px 0px;
+}
+
+/* patch per a.auth-icon.icon-pagamenti */
+a.auth-icon.pagamenti {
+    background-position: -60px 0px;
+}
+
+/* patch per a.auth-icon.icon-incassi */
+a.auth-icon.incassi {
+    background-position: -120px 0px;
+}
+
+/* patch per a.auth-icon.icon-carte */
+a.auth-icon.carte {
+    background-position: -180px 0px;
+}
+
+/* patch per a.auth-icon.icon-documenti */
+a.auth-icon.documenti {
+    background-position: -240px 0px;
+}
+
+/* patch per a.auth-icon.icon-anagrafiche */
+a.auth-icon.anagrafiche {
+    background-position: -300px 0px;
+}
+
+/* patch per a.auth-icon.icon-disposizioni */
+a.auth-icon.disposizioni {
+    background-position: -360px 0px;
+}
+
+/* patch per a.auth-icon.icon-configura */
+a.auth-icon.configura {
+    background-position: -420px 0px;
+}
+
+
+/*promo*/
+/*colore scopri*/
+.bodyPromo {
+    color: #000;
+    font-weight: normal;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.09em;
+    line-height: 1.1em;
+}
+/*img per promo menu e dettaglio*/
+/*.promo-infoConti {
+       width: 200px;
+       height: 60px;
+       display: block;
+       background: url(../images/PromoMenu/infoConti.png) no-repeat 0px 0px;
+}
+
+.promo-pagamenti {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/pagamenti.png?v=2) no-repeat 0px 0px;
+ }*/
+
+.no-action {
+    cursor: default;
+}
+
+/*.promo-incassi {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/incassi.png) no-repeat 0px 0px;
+}*/
+/*.promo-carte {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/carte.png) no-repeat 0px 0px;
+}
+.promo-documentiFatture {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/documentiFatture.png) no-repeat 0px 0px;
+}
+.promo-anagrafiche {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/anagrafiche.png) no-repeat 0px 0px;
+}
+.promo-datiDisposizioni {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/datiDisposizioni.png?v=1) no-repeat 0px 0px;
+}
+.promo-configura {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/configura.png) no-repeat 0px 0px;
+}*/
+
+#progressbar {
+    width: 80%;
+    border: 0px;
+    text-align: center;
+    padding-left: 80px;
+}
+
+.messagePanelErrorLabel {
+    text-align: right;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+/*.dropdown-menu {
+    font-size: 1.1em;
+}
+
+.topNav ul.nav>li.mega-menu div div.menu-info div>p {
+    font-size: 0.9em;
+}*/
+
+.paging {
+    text-align: center;
+}
+
+.rpp-current {
+    display: inline-block;
+    position: relative;
+    margin: 10px 5px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 12px;
+    color: #fff;
+    background: #357745;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 26px;
+    behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+    outline: none;
+}
+
+.rpp-next {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin: 10px 5px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 12px;
+    color: #fff;
+    background: #7ea889;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 26px;
+    behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+    outline: none;
+}
+
+/*23/09/2015: inserito per contratto carte Sonia e David*/
+.pull-center {
+    text-align: center;
+}
+
+/*da verificare il bold!!!*/
+.bold {
+    font-weight: bold;
+}
+
+.hidecontent {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.showcontent {
+    background-color: #fee868;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+}
+
+.icon-replace.icon-accordion {
+    background-position: -80px 0px;
+}
+
+.collapsed .icon-replace.icon-accordion {
+    background-position: -100px 0px;
+}
+
+/*Aggiunto David per stampare icone su griglia*/
+a.link-icon-table {
+    line-height: 24px;
+}
+
+.link-icon-table span.link-icon-table {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    margin-right: 5px;
+    padding: 0;
+}
+
+span.link-icon-table.icon-pdf {
+    background: url(../images/general-sprite.png) -296px -774px no-repeat;
+    cursor: pointer;
+}
+
+
+span.link-icon-table.icon-praticaInLavorazione {
+    background: url(../images/general-sprite.png) -102px -1012px no-repeat;
+}
+
+span.link-icon-table.icon-praticaInserita {
+    background: url(../images/general-sprite.png) 0 -1012px no-repeat;
+}
+
+span.link-icon-table.icon-praticaEvasa {
+    background: url(../images/general-sprite.png) -34px -1012px no-repeat;
+}
+
+span.link-icon-table.icon-praticaChiusa {
+    background: url(../images/general-sprite.png) -68px -1012px no-repeat;
+}
+
+
+/*Aggiunto David per stampare icone su griglia*/
+
+span.icon-lente {
+    background: url(../images/general-sprite.png) 0px -434px no-repeat;
+}
+
+/*span.icon-triangle-right { background: url(../images/general-sprite.png) -180px -876px no-repeat }*/
+
+/*Sonia: per textarea condizioni Firma Digitale*/
+
+.textareaDesign:focus {
+    border-color: #357745;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px #000000, 0 0 8px #cae1ca;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(202, 225, 202, 1);
+    -ms-box-shadow: inset 0 1px 1px #000000, 0 0 8px #cae1ca;
+    -ms-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(202, 225, 202, 1);
+    box-shadow: inset 0 1px 1px #000000, 0 0 8px #cae1ca;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(202, 225, 202, 1);
+}
+/*Sonia: per textarea condizioni Firma Digitale*/
+
+span.fieldset-head {
+    border-bottom-color: #cae1ca;
+    border-bottom-width: 1px;
+    border-bottom-style: inset;
+}
+
+span.error {
+    color: #ff0000;
+}
+
+span.normal {
+    font-weight: normal;
+}
+
+.ui-dialog-titlebar-close {
+    display: inline;
+}
+
+
+.communication-spinner .ui-dialog-titlebar {
+    display: none;
+}
+
+.communication-spinner {
+    background-color: transparent;
+    background-image: none;
+    border-width: 0;
+}
+
+.smallTextForGroups {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+/*feedback*/
+.feedbackFaceOk {
+    width: 120px;
+    height: 120px;
+    background: url(../images/feedback/faceOK.png) no-repeat;
+    display: block;
+}
+
+.feedbackFaceOkDisable {
+    width: 130px;
+    height: 130px;
+    background: url(../images/feedback/faceOK_disable.png) no-repeat;
+    display: block;
+}
+
+.feedbackFaceKo {
+    width: 130px;
+    height: 130px;
+    background: url(../images/feedback/faceKO.png) no-repeat;
+    display: block;
+}
+
+.feedbackFaceKoDisable {
+    width: 130px;
+    height: 130px;
+    background: url(../images/feedback/faceKO_disable.png) no-repeat;
+    display: block;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.testofeedbacksquare ul li {
+    list-style-type: square;
+    color: #003b79;
+}
+
+.menutm {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 1.2em;
+    text-transform: none;
+}
+/* sovrascritto stile in youbusinessweb per avere colore diverso (#003b79) come richiesto da Manera "Titolo: Potrebbe interessarti" */
+.topNav ul.nav > li.mega-menu div div.menu-info h3 {
+    margin: 8px 0px;
+    padding: 0px 10px;
+    color: #003b79;
+    background: #e8f2e8;
+    box-shadow: 0 10px 8px -6px rgba(108,159,108,0.5);
+    border-bottom: 1px solid #6c9f6c;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.25em;
+    behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+/*nuovo stile di stampa messaggio all'interno dei box*/
+.state-activeInfo {
+    background: #e0f4db;
+    font-weight: normal;
+    border: 0px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.homeboxInfo {
+    margin: 6px;
+}
+
+.msgInfo {
+    color: #003b79;
+    font-weight: bold;
+}
+
+.cssImgNotifiche {
+    -ms-background-size: 30px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-image: url(../images/icona-pannello-notifiche.png);
+}
+
+/*nuovo stile per icone helper in cbill*/
+h1 a,
+h3 a,
+a.help-icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+    h1 a img.imgSrv,
+    h3 a img.imgSrv,
+    a.help-icon img {
+        float: none;
+        margin-left: 10px;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+label img.imgSrv {
+    /*position:absolute;*/
+    top: 0;
+    width: 18px;
+    height: auto;
+}
+
+.imgSrv {
+    float: left;
+    margin-left: 10px;
+}
+
+.lisquare {
+    list-style-type: square;
+}
+
+/*css nuovi per popup help*/
+/*div.popup-container {
+        position: fixed;
+        z-index: 10000000;
+        width: 40%;
+        top: 20%;
+        height: 50%;
+        min-height: 250px;
+        max-height: 700px;
+        max-width: 1200px;
+        margin: auto;
+        border: 2px solid #b7c5b7;
+    }
+
+    div.popup-riquadro {
+        box-shadow: none;
+	    border-left: 2px solid #b7c5b7;
+        border-right: 2px solid #b7c5b7;
+        cursor: move;
+        background: #fff;
+    }
+
+    div.popup-riquadro-top {
+        border-top: 2px solid #b7c5b7;
+        border-bottom: 1px solid #b7c5b7;
+    }
+
+    div.popup-riquadro-bottom {
+        border-top: 1px solid #b7c5b7;
+        border-bottom: 2px solid #b7c5b7;
+    }
+
+
+    span.popup-close-icon {
+        float:right; 
+        margin-top:12px; 
+        margin-right:10px;
+    }
+
+    div.popup-scroller {
+        height: 78%;
+        min-height: 100px;
+        width: 100%;
+        padding-right: 2em; 
+        padding-left: 2em;        
+        font-size: 12px;
+        overflow-y: scroll;
+    }
+
+    div.popup-inner-scroller {
+        margin-top: 10px;
+    }
+
+    div.popup-footer {
+        position: relative;
+        margin: 0;
+        bottom: 0;
+        padding-top: 11px;
+        padding-right: 7px;
+        height: 50px;
+        width: 100%;
+        vertical-align: bottom;
+    }*/
+
+/*css nuovi per popup help*/
+
+
+/*#region POPUP-HELPER */
+
+div.popup-container {
+    position: fixed;
+    z-index: 10000000;
+    width: 40%;
+    top: 20%;
+    height: 50%;
+    min-height: 250px;
+    max-height: 700px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+div.popup-riquadro {
+    box-shadow: none;
+    border-left: 2px solid #b7c5b7;
+    border-right: 2px solid #b7c5b7;
+    cursor: move;
+    background: #fff;
+}
+
+div.popup-riquadro-top {
+    border-top: 2px solid #b7c5b7;
+    border-bottom: 1px solid #b7c5b7;
+}
+
+div.popup-riquadro-bottom {
+    border-top: 1px solid #b7c5b7;
+    border-bottom: 2px solid #b7c5b7;
+}
+
+span.popup-close-icon {
+    float: right;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+
+div.popup-scroller {
+    height: 78%;
+    min-height: 100px;
+    width: 100%;
+    padding-right: 2em;
+    padding-left: 2em;
+    font-size: 12px;
+    overflow-y: scroll;
+    border-left: 2px solid #b7c5b7;
+    border-right: 2px solid #b7c5b7;
+}
+
+div.popup-inner-scroller {
+    margin-top: 10px;
+}
+
+div.popup-footer {
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    padding-top: 11px;
+    padding-right: 7px;
+    height: 50px;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/*#endregion */
+
+
+.hidecontent {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+    .hidecontent:hover {
+        background-color: #fee868;
+        cursor: pointer;
+    }
+
+.showcontent {
+    background-color: #fee868;
+    cursor: pointer;
+}
+
+.contentTitle {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.glyphiconTriangleGrey {
+    color: #808080;
+}
+
+.glyphiconTriangleFontSize {
+    font-size: 10px;
+}
+
+.ui-menu {
+    max-height: 200px;
+    _height: 200px; /* IE 6 and below */
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.link {
+    cursor: pointer;
+}
+
+
+
+/* SICUREZZA INFO */
+
+#migl,
+#boxAiuto {
+    margin-left: 20px;
+}
+
+    #migl > ul > li,
+    #boxAiuto ul li {
+        width: 70%;
+    }
+
+        #migl > ul > li::after,
+        #boxAiuto > ul > li::after {
+            content: ">";
+            float: right;
+        }
+
+#tabs1 .contentPagina {
+    padding: 0;
+}
+
+
+.sicurezzaInfo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.sicurezzaInfo #tabs1 ul {
+    float: left;
+    width: 15%;
+}
+
+div.flag.sicurezzaInfo {
+    background: url(../images/pins-sprite.png) no-repeat -156px -328px;
+    /*margin-left:110px;*/
+}
+
+#tabs2 div.flag.sicurezzaInfo,
+#tabs3 div.flag.sicurezzaInfo {
+    margin-left: 0;
+}
+
+div.flag.f23						{ background: url(../images/pins-sprite.png) no-repeat -182px -410px; }
+div.flag.youPos						{ background: url(../images/pins-sprite.png) no-repeat -182px -410px; }
+
+
+
+#tabs2 ul li,
+#tabs3 ul li {
+    line-height: 2.3em;
+    cursor: pointer;
+}
+
+#boxMigl {
+    padding: 5px 20px;
+}
+
+#tabs3 #boxMigl ul li {
+    font-weight: normal;
+    line-height: 1.3em;
+    cursor: none;
+}
+
+#aiutoBox ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+}
+
+#aiutoBox ul li {
+    line-height: 1.2em;
+    cursor: default;
+}
+
+#aiutoBox > ul > li {
+    line-height: 1.5em;
+    width: 33%;
+}
+
+
+#boxMigl > [id^=miglText] strong a,
+#aiutoBox > [id^=aiuto] span a {
+    position: absolute;
+    left: 423px;
+    text-decoration: none;
+    color: #000;
+}
+
+#boxMigl div[id^="miglText"] {
+    display: none;
+}
+
+.sicurezzaInfo #tabs1 ul li {
+    width: 101px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 5px;
+}
+
+    .sicurezzaInfo #tabs1 ul li.active {
+        background: #fff;
+        border-right: none;
+        -moz-box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+        -webkit-box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+        -ms-box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+        box-shadow: inset 0 8px 8px -8px #696868, inset 0 -8px 8px -8px #696868;
+    }
+
+    .sicurezzaInfo #tabs1 ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 10px;
+        line-height: normal;
+        font-weight: bold;
+        outline: none;
+    }
+
+.sicurezzaInfo [id^="tabs-"] {
+    margin-left: 100px;
+    display: none;
+    padding: 0 15px;
+}
+
+
+.sicurezzaInfo #tabs-1.activeTab {
+    display: block;
+}
+
+#aiutoBox > div[id^="aiuto"] {
+    display: none;
+}
+
+
+#boxMigl > div[id^="miglText"] > span,
+#migl > ul > li > span {
+    background: #7db77d;
+    padding: 5px 10px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.riquadroSecurityInfo {
+    position: relative;
+    display: block;
+    background: #fff;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #b7c5d1;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px 1px #bbb;
+    -ms-box-shadow: 0px 1px 3px 1px #bbb;
+    box-shadow: 0px 1px 3px 1px #bbb;
+    behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+/* FINE SICUREZZA INFO*/
+
+ul#myList {
+    list-style-type: square;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+/* Sovrascrivo questi foglio di stile che si trovano in youbusinessweb mettendo il padding a zero per rendere la lista dei rapporti omogenea come anchise...senza bordino bianco.*/
+.mainContent .riquadro .tabSelezioneCC .dataTables_wrapper {
+    padding: 0px;
+    background: #fff;
+}
+
+.mainContent .riquadro .tabellaSelezioneCC {
+    background: #e7f5e7;
+    position: relative;
+    padding: 0 0px 0px 0px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.vertical-center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.scrollVoucherEnabled {
+    overflow-y: visible;
+    overflow-y: scroll;
+    height: 170px;
+}
+
+.scrollVoucherDisabled {
+    overflow: hidden;
+}
+
+/* BOLLO AUTO */
+.tipoAutomezzo {
+    height: 70px;
+    background-size: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.targa {
+    background: url("../images/targa_web.png") no-repeat top right transparent;
+    width: 194px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 21px;
+    padding-right: 21px;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.telaio {
+    width: 300px;
+    height: 22px;
+}
+
+
+.tipoAutomezzo:hover {
+    cursor: pointer;
+}
+
+.gestoreAttivo {
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset, rgba(151, 213, 150, 0.545098) 0px 0px 7.28392219543457px 0px;
+    border-radius: 8px;
+    border: 2px solid rgb(151, 213, 150);
+}
+
+.gestoreNonAttivo {
+    border: 2px solid transparent;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bs-example {
+    position: relative;
+    margin: 0px;
+    padding: 0 0px 15px 0px;
+}
+
+.margin-bottom20 {
+    margin-bottom: 20px;
+}
+
+.margin-right20 {
+    margin-right: 20px;
+}
+
+.margin-left20 {
+    margin-left: 20px;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
+.margin-left40 {
+    margin-left: 40px;
+}
+
+.margin-right100 {
+    margin-right: 100px;
+}
+
+.margin-left15 {
+    margin-left: 15px;
+}
+
+.padding-bottom20 {
+    padding-bottom: 20px !important;
+}
+
+.padding-right20 {
+    padding-right: 20px !important;
+}
+
+.padding-left20 {
+    padding-left: 20px !important;
+}
+
+.padding-left10 {
+    padding-left: 10px !important;
+}
+
+.padding-top20 {
+    padding-top: 20px !important;
+}
+
+.padding-top10 {
+    padding-top: 10px !important;
+}
+
+.padding-top5 {
+    padding-top: 5px !important;
+}
+
+.margin-bottom10 {
+    margin-bottom: 10px;
+}
+
+.margin-right10 {
+    margin-right: 10px;
+}
+
+.margin-left10 {
+    margin-left: 10px;
+}
+
+.margin-top10 {
+    margin-top: 10px !important;
+}
+
+.margin-top0 {
+    margin-top: 0px !important;
+}
+
+.margin-top5 {
+    margin-top: 5px;
+}
+
+.margin-left5 {
+    margin-left: 5px;
+}
+
+.margin-bottom5 {
+    margin-bottom: 5px;
+}
+
+.margin-top5 {
+    margin-top: 5px;
+}
+
+.margin-right5Important {
+    margin-right: 5px !important;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/*.map-attrFillDefault {
+        color: #c5e7bc;
+    }
+    .map-attrFillChange {
+        color: #97d596;
+    }
+    .map-attrFillMouseover {
+        color: #357745;
+    }
+    .map-attrFillDisable {
+        color: #ccc;
+    }*/
+
+/* BOLLO AUTO */
+/* Come richiesto da Manera il 06/02/2017 aggiunto css "usato nel class del div della pagina "WidgetEndpoint/WidgetNotifiche/Index.cshtml" per dare altezza fissa alla griglia*/
+.boxNotificheHeightFixed {
+    min-height: 160px;
+}
+
+.boxNotifichePaginateDisplayNone {
+    display: inline-block;
+    position: relative;
+    margin: 10px 5px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 26px;
+    behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+    outline: none;
+}
+
+div.readable span p {
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    font-size: 1.25em;
+    text-align: justify;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+h1.noLogo {
+    padding-left: 15px;
+}
+/*div.novspace {margin-top: 0px; padding-top: 0px;padding-bottom: 0px;margin-bottom: 0px;}*/
+
+.white-block {
+        margin: 10px 0;
+    }
+
+.white-block > div {
+    background-color: white;
+}
+
+.text-center > h1 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2em;/*per ridurre il font del titolo dei box*/
+}
+
+.tabs nav {
+	text-align: center;
+}
+
+.tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.tabs nav a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.tabs nav a span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+
+.tabs {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+.tabs-style-topline {
+	max-width: 1200px;
+}
+
+.tabs-style-topline nav li {
+	/*border: 1px solid rgba(40,44,42,0.1);*/
+}
+
+.tabs-style-topline nav li:not(:last-child) {
+	border-right: none;
+}
+
+.tabs-style-topline nav a {
+	padding: 0.65em 0 0.5em;
+	background: #ffffff;
+	color: #003b79;
+	line-height: 1;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.tabs-style-topline nav a:hover,
+.tabs-style-topline nav a:focus {
+	color: #a7cea7;
+}
+
+.tabs-style-topline .icon::before {
+	display: block;
+	margin: 0;
+}
+
+.tabs-style-topline nav a span {
+	/*text-transform: uppercase;*/
+	letter-spacing: 1px;
+	font-weight: 700;
+	/*font-size: 0.6em;*/
+}
+
+.tabs-style-topline nav li.tab-current a {
+	background: none;
+    background: #f7fcf7;
+	box-shadow: inset 0 3px 0 #f7fcf7;
+    color: #666;
+    pointer-events: none;
+    cursor: default;
+}
+.tabs nav li.tab-current a {
+	color: #74777b;
+    pointer-events: none;
+    cursor: default;
+}
+.tabs-style-topline nav li.tab-current {
+    border-top-color: #7db77d;
+    border-bottom: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+.tabsfin-style-border {
+    border-top: 1px solid #7db77d;
+    border-right: 1px solid #7db77d;
+    border-left: 1px solid #7db77d;
+}
+/*Area ptint #a7cea7*/
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background: #7ea889;
+    border-color: #7ea889;
+}
+
+.dropdown-menu > li:hover > a, .dropdown-menu > li:focus > a {
+    color: #fff !important;
+    background-color: #458e57;
+}
+
+.tm-print div.btn-group button.btn {
+    margin-bottom: 0;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.x2 {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-pdf-x {
+    background-image: url(stampa/pdf-icon.png);
+}
+
+.icon-zip {
+    background-image: url(stampa/zip-icon.png);
+}
+
+.icon-xls {
+    background-image: url(stampa/xls-icon.png);
+}
+
+.icon-doc {
+    background-image: url(stampa/doc-icon.png);
+}
+
+.icon-txt {
+    background-image: url(stampa/txt-icon.png);
+}
+
+.icon-xml {
+    background-image: url(stampa/xml-icon.png);
+}
+
+.icon-ukw {
+    background-image: url(stampa/undefined-icon.png);
+}
+
+/*Area ptint*/
+.disabledDiv {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.mainContent .riquadro .tabellaSelezioneTM { position: relative;}
+
+.mainContent .riquadro .tabSelezioneTM .dataTables_wrapper { padding: 0px; background: #fff; }
+
+	.mainContent .riquadro .tabSelezioneTM .table { margin-bottom: 0; }
+	
+	.mainContent .riquadro .tabSelezioneTM .table tbody > tr.hover,
+	.mainContent .riquadro .tabSelezioneTM .table tbody > tr.hover:nth-child(odd),
+	.mainContent .riquadro .tabSelezioneTM .table tbody > tr.hover:nth-child(even),
+	.mainContent .riquadro .tabSelezioneTM .table tbody > tr.hover.odd,
+	.mainContent .riquadro .tabSelezioneTM .table tbody > tr.hover.even { cursor: pointer; background: #458e57 !important; color: #fff; }
+
+
+
+
+
+
+
+div.samples {
+    border: 2px solid lightgrey;
+    margin-top: 40px;
+}
+
+div.sample-item {
+    margin: 5px;
+    background: lightcoral !important;
+    color: #fff;
+}
+
+div.sample-result {
+    border: 2px solid darkgray;
+    margin-top: 40px;
+    padding-left: 10px;
+}
+
+div.sample-result-values {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+div.sample-result-values-item {
+    
+    border-bottom: 1px dotted lightseagreen;
+}
+
+div.sample-result-values-item-complex {
+    padding-left: 8px;
+}
+
+div.sample-result-values-item  .key {
+    font-weight: bold;
+    padding-right: 2px;
+}
+div.sample-result-values-item  .value {
+    font-style: italic;
+    padding-left: 5px;
+}
+
+
+td.center {
+    text-align: center
+}
+
+td.right {
+    text-align: right
+}
+
+td.money {
+    text-align: right
+}
+
+/*laura 05/06/2018 classe definita per lo spostamento del menu a sx  */
+/*DIPENDE DALLA LARGHEZZA DEL TH quindi non va sempre bene*/ 
+/*ul.dropdown-menu.menu-hamburger-left {
+    top: 0%;
+    left: -90px;
+}*/
+div.dropdown.opera {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+div.opera ul.dropdown-menu {
+    top: 0%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+/*.opera ul.dropdown-menu.menu-hamburger-left {
+    top: 0%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}*/
+
+/* servono due class per rimuove globalmente .label-anfastato */
+/* stato distinta Finanziata */
+.control-label.label-anfastato {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+}
+.label-anfastato.stato-6 {
+    background-color: #74A473;
+}
+/* stato distinta ParzialmenteFinanziata */
+.label-anfastato.stato-7 {
+    background-color: #A49423;
+}
+/* stato distinta InValutazione */
+.label-anfastato.stato-5 {
+    background-color: #D7CE34;
+}
+/* stato distinta NonFinanziata */
+.label-anfastato.stato-8 {
+    background-color: #E13333;
+}
+textarea{
+    resize:none;
+}
+/*per mantenere background grigio su disabled button nell'evento di click' (esempio: _doSign per la firma dove viene aggiunta classe disabled in evento di click del bottone )*/
+.btn.btn-primary.disabled {
+    background: #999;
+    border-color: #999;
+}
+
+/*TODO: FIXED 1025NM45*/
+.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hovernocursor,
+.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hovernocursor:nth-child(odd),
+.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hovernocursor:nth-child(even),
+.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hovernocursor.odd,
+.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hovernocursor.even {
+    background: #458e57 !important;
+    color: #fff;
+}
+
+/*per eventuale sfondo grigiato nei dati richiesta anticipo*/
+.white-block > div.anfadati-richiestaanticipo {
+    background-color: #F6F6F6;
+}
+
+/* radiostylecheck per certificazione cellulare : radiobutton con aspetto di checkbox */
+
+    .radiostylecheck  div:not(#foo) > input[type='radio'] /* Nasconde checkbox e radio button */ {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    .radiostylecheck div:not(#foo) > input[type='radio'] + label {
+        margin: 0; /* Azzera i margini */
+        /*padding: 2px 0px 24px; /* Crea spazio con il padding sinistro per ospitare l'immagine di sfondo */
+        padding: 0px;
+        min-height: 30px;
+        cursor: pointer; /* Imposta il cursore */
+        background: url('../images/radioStart.png') no-repeat center;
+    }
+
+    .radiostylecheck div:not(#foo) > input[type='radio']:checked + label { /*Modifica lo sfondo del radio button quando viene attivato */
+        background: url('../images/radioCheck.png') no-repeat center;
+    }
+
+/*fine prova  radiostylecheck per certificazione cellulare*/
+.textTruncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

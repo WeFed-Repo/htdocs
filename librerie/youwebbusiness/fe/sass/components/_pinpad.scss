@@ -1,0 +1,60 @@
+.pinpad {
+  max-width: 350px;
+  min-width: 210px;
+  margin: auto;
+  > * {
+    display: flex;
+    width: 100%;
+    div {
+      display: flex;
+      width: 100%;
+      font-size: 28px;
+      input, button {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        &, &:hover, &:focus {
+          outline: 0;
+          -moz-outline: 0;
+          box-shadow: 0;
+        }
+      }
+      input[type="text"] {
+        cursor: default;
+        border: 1px solid $grayBordered;
+        margin: 1px;
+        color: $green;
+        &, &:disabled { background: $white; }
+      }
+      button,
+      input[type="button"] {
+        cursor: pointer;
+        color: #777;
+        transition: background-color 0.3s;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          height: 24px !important;
+          width: auto !important;
+        }
+        &:hover { background-color: #fefefe; }
+        &:active { background-color: #ddd; }
+        &.action {
+          color: #fff;
+          background-color: $green;
+          &:hover:not(:disabled) { background-color: $greenLight; }
+          &:active:not(:disabled) { background-color: $greenLink; }
+          &:disabled {
+            opacity: 0.5;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

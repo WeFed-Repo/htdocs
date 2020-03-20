@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/jquery-1.11.3.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/bootstrap.min.js?v=123" type="text/javascript"></script>
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/jquery-ui-1.11.4.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/underscore.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/jsonform.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/hashtable.min.js?v=123" type="text/javascript"></script>
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/jquery.json.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/jquery.dataTables.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/sly.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/radio.min.js?v=123" type="text/javascript"></script>
+
+
+
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/html5.js?v=123" type="text/javascript"></script>
+
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/knockout.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/knockout-mapping.min.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/moment.min.js?v=123" type="text/javascript"></script>
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_extensions.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_config.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_core.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_utils.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_utils_log.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_utils_pubsub.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_net.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_dom_fumetto.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_legacy.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_rubrica.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_notify.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_resource.js?v=123" type="text/javascript"></script>
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/_sdk_/_sdk_utils_text.js?v=123" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/jquery-ui.1.11.4.css?v=123">
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/bootstrap.min.css?v=123">
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/essentials.css?v=123">
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/youbusinessweb.css?v=123">
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/SiteImagesSdk.css?v=123">
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/SiteImages.css?v=123">
+
+
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/SiteSdk.css?v=123">
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/Youbiz.Sdk.Web/Contents/00000/it-IT/Css/Site.css?v=123">
+
+
+
+
+
+
+        
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/respond.min.js?v=123" type="text/javascript"></script>
+
+
+
+<script src="/Youbiz.Sdk.Web/Contents/00000/it-IT/Js/html.tag.activator.js?v=123" type="text/javascript"></script>
+
+
+
+
+
+
+        <title>YouBusiness Web</title>
+    </head>
+    <body style="-ms-zoom: 1;">
+        
+        <!-- from waiting panel -->
+<div id="dialogpopup" style="display: none"></div>
+
+
+
+
+
+        <!-- solo per momentanea compatibilità -->
+        <div class="wrapper">
+            <div class="header">
+                <div class="topbar">
+                    <div class="container">
+                        <div class="logo"> <span>Banco Popolare</span> </div>
+
+                    </div>
+                </div>
+                <header class="topNav" id="topNav">
+                    <div class="container row">
+                        <div class="col-sm-10 col-xs-10 col-md-10 col-lg-9 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 col-xs-offset-2">
+                            <div class="navbar nav-main">
+                                <nav class="nav-main">
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="container">
+                <ol class="breadcrumb pull-right"></ol>
+            </div>
+            <div class="main row">
+                <div class="container">
+               
+                    <div class="mainContent center" id="mainContent">
+                        <div id="mainSection">
+                            
+
+
+<div>
+    <div id="messagePanelError" class="messagePanel error" style="display: block;margin-bottom: 0;margin-top: 0;">
+        <h3 class="titleSection">
+            Errore !!!
+        </h3>
+        <p>
+            <strong>
+                Sessione Scaduta
+            </strong>
+        </p>
+        <p>
+            <strong>
+                <a href="javascript:goToLogin()">Riaccedi a YouBusiness Web</a>
+            </strong>
+        </p>
+    </div>
+
+    <form id="YouBizLogOutRedir" action="/Youbiz.Web/Security/Sec"></form>
+    <script type="text/javascript">
+        function goToLogin() {
+            $('#YouBizLogOutRedir').submit();
+        }
+    </script>
+</div>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="divFooter" id="divFooter">
+    <div class="row footer">
+        <div class="container">
+
+            <div class="col-xs-4">
+                <div class="assistenza clearfix">
+                    <h4>Assistenza Clienti</h4>
+                    <div class="clearfix">
+                        <a class="ico-assistenza" href="#">&nbsp;</a>
+                        <div>
+                            Numero verde:&nbsp;<strong>800.607.227</strong><br>
+                            Dall'estero:&nbsp;<strong>+39 045.8261705</strong>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <a class="ico-gestore" href="#">&nbsp;</a>
+                        <div>
+                            Per qualsiasi altra esigenza è a tua disposizione<br>
+                            il <strong>Gestore</strong> presso la tua filiale di riferimento
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+            </div>
+            <div class="col-xs-4">
+                <div class="footer-logo"> <span>Banco Popolare</span> </div>
+            </div>
+
+            <div class="col-xs-12 margin-top10 txt_center disclaimer">
+                © 2000-2015&nbsp;-&nbsp;Vietata la riproduzione totale o parziale senza l'autorizzazione scritta dei detentori del copyright
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+    
+
+
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+td.col-1{
+	width:117px;
+}
+.col-1bis{
+	width: 117px;
+}
+td.col-2{
+	width:335px;
+}
+.col-2bis{
+	width: 145px;
+}
+td.col-3{
+	width:58px;
+}
+.col-3bis{
+	width: 145px;
+}
+td.col-4{
+	width:220px;
+}
+
+table.data-entry{
+	align:center;
+	border:0px;
+	cellpadding:0px;
+	cellspacing:0px;
+	width: 760px;
+}

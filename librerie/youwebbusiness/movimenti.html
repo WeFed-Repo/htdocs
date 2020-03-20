@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<title>Banco BPM Business</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- Jquery -->
+		<script src="./fe/assets/jquery.min.js"></script>
+
+
+		<!-- Jquery UI -->
+		<script src="./fe/assets/jquery-ui.min.js"></script>
+
+		<!-- Bootstrap 3 -->
+		<script src="./fe/assets/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="./fe/assets/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="./fe/assets/bootstrap/bootstrap-theme.min.css">
+
+		<!-- Gestione Font-awesome per formattazioni "particolari" -->
+		<link rel="stylesheet" href="./fe/assets/awesome/font-awesome.min.css" />
+    	<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox.min.css" />
+    	<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox-styles.min.css" />
+
+
+		<!-- Stili -->
+		<link rel="stylesheet" href="./fe/css/style.css">
+
+		<!-- Interattivita' ed inizializzazioni -->
+		<script src="./fe/js/script.js"></script>
+
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="wrapper">
+				<!-- Logo -->
+				<div class="logospace">
+					<div class="ico-btn" id="menutoggle"><i class="icon icon-menu"></i></div>
+					<a href="#" class="logo"><img src="./fe/img/logo.png"></a>
+				</div>
+				<!-- Informazioni accesso -->
+				<div class="accinfo">
+					<span class="info"><span>Versione: </span><span class="output">Extra</span></span>
+					<span class="info"><span>Postazione: </span><span class="output">P92183912</span></span>
+					<span class="info"><span>Ultimo accesso: </span><span class="output">22/02/2019</span></span>
+				</div>
+				<!-- Console -->
+				<div class="console">
+					<a class="ico-btn userinfo"><span class="nominativo hidden-xs">Mario Rossi</span><i class="icon icon-user"></i></a>
+					<!--<a class="ico-btn flagged  "><i class="icon icon-ico_posta_arrivo"></i><span>99</span></a>-->
+					<a class="ico-btn hidden-xs"><i class="icon icon-ico_setting"></i></a>
+					<a class="ico-btn hidden-xs"><i class="icon icon-ico_ultime_disposizioni"></i></a>
+					<a class="ico-btn hidden-xs"><i class="icon icon-ico_logout"></i></a>
+				</div>
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Contenitore principale -->
+		<div id="main">
+			<div class="wrapper">
+				<div id="maincontent">
+					<!-- Spalla menu -->
+					<div id="menu">
+						<nav>
+							<div class="userdata visible-xs">
+								<span class="nome">Mario Rossi</span>
+								<div class="userdata-console">
+									<a class="ico-btn"><i class="icon icon-ico_setting"></i></a>
+									<a class="ico-btn"><div class="btn-icon-help"></div></a>
+									<a class="ico-btn"><i class="icon icon-ico_logout"></i></a>
+								</div>
+							</div>
+							<ul>
+								<li class="usermenu">
+									<a class=" toggle"><span>Menu personale</span></a>
+									<ul style="display:none">
+										<li><a>Ipsum dolor</a></li>
+										<li><a>Ipsum dolor</a></li>
+										<li><a>Ipsum dolor</a></li>
+									</ul>
+								</li>
+								<li><a>Home</a></li>
+								<li>
+									<a class="toggle"><span>Conti</span></a>
+									<ul style="display:none">
+										<li><a href="movimenti.html">Saldo e movimenti</a></li>
+										<li><a>Ipsum dolor</a></li>
+										<li><a>Ipsum dolor</a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="toggle"><span>Pagamenti</span></a>
+									<ul style="display:none">
+										<li><a href="index.html">Bonifico singolo</a></li>
+										<li><a>Bonifico per detrazioni</a></li>
+										<li><a>Deleghe F24</a></li>
+										<li><a>F24 Elementi identificativi</a></li>
+										<li><a>Modulo F23 - PIN</a></li>
+										<li><a>Riepilogo F23 - PIN</a></li>
+										<li><a>Quietanza F24</a></li>
+										<li><a>Richiedi assegni circolari</a></li>
+										<li><a>Richiedi assegni quietanza</a></li>
+										<li><a>Bollettini bancari</a></li>
+										<li><a>Bollettini postali</a></li>
+										<li><a>MAV-RAV</a></li>
+										<li><a>Utenze</a></li>
+										<li><a>Ricariche telefoniche</a></li>
+										<li><a>CBILL PAGO-PA</a></li>
+									</ul>
+								</li>
+								<li><a>Lorem</a></li>
+								<li><a>Lorem</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- Fine spalla menu -->
+
+					<!-- Spazio dei contenuti -->
+					<div id="contenuti">
+						<div class="container-fluid">
+							<span class="breadcrumb hidden-xs"><span class="verde">Home</span> / Conti / Bonifico singolo</span>
+
+								<h1>Saldo e Movimenti<a class="btn-icon-help" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></a></h1>
+
+								<!-- Navigatore a tab -->
+								<ul class="nav">
+									<li class="nav-item"><a class="nav-link active">Movimenti Online</a></li>
+									<li class="nav-item"><a class="nav-link">Movimenti CBI</a></li>
+								</ul>
+								<!-- Fine navigatore a tab -->
+
+								<form action="#">
+									<!-- Dati rapporto -->
+									<section>
+											<!-- Modale di selezione (esempio) -->
+											<div class="modal fade" id="mobileSelector" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<a class="close btn-icon" data-dismiss="modal" aria-label="Close"></a>
+															<h2 class="modal-title" id="myModalLabel">Selezione intestatario *</h2>
+														</div>
+														<div class="modal-body">
+															<div class="container-fluid">
+																<div class="row">
+																	<div class="col-xs-12">
+																		<!-- Esempio modal selector -->
+																		<div class="modal-selector">
+																			<label>Intestatario *</label>
+																			<ul>
+																				<li><a class="on">Tutti</a></li>
+																				<li><a>Nome azienda SPA</a></li>
+																				<li><a>Nome azienda SPA</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-xs-12">
+																		<!-- Esempio modal selector -->
+																		<div class="modal-selector">
+																			<label>Banca *</label>
+																			<ul>
+																				<li><a class="on">Tutti</a></li>
+																				<li><a>Banca 1</a></li>
+																				<li><a>Banca 2</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-xs-12">
+																		<!-- Esempio modal selector -->
+																		<div class="modal-selector">
+																			<label>Conto *</label>
+																			<ul>
+																				<li><a class="on">Tutti</a></li>
+																				<li><a>39128938120-312312312</a></li>
+																				<li><a>39128938120-312312399</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button data-dismiss="modal" class="btn">Conferma</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- / Modale di selezione -->
+											<div class="mobile-data-selector visible-xs" data-toggle="modal" data-target="#mobileSelector">
+												<span class="name">Nome Azienda SPA</span>
+												<span class="detail">309218309218 - Banco BPM</span>
+												<div class="row">
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label class="control-label">Saldo Disponibile</label>
+															<span  class="output verde">99.999.999,99 EUR</select>
+														</div>
+														<div class="col-xs-6">
+															<label class="control-label">Saldo Contabile</label>
+															<span  class="output verde">99.999.999,99 EUR</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fine selettore mobile -->
+
+
+										<!-- Contenuo alternativo desktop -->
+										<div class="bordered hidden-xs">
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-sm-4">
+														<label class="control-label">Rag. soc / Intestatario</label>
+														<select  class="form-control">
+															<option selected>Nome Azienda SPA</option>
+															<option>Altra azienda SPA</option>
+														</select>
+													</div>
+													<div class="col-sm-4">
+														<label class="control-label">Banca</label>
+														<select  class="form-control">
+															<option selected>00000 - Nome banca</option>
+														</select>
+													</div>
+													<div class="col-sm-4">
+														<label class="control-label">Conto</label>
+														<select  class="form-control">
+															<option selected>00000 - 00000000000</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group">
+													<div class="col-sm-4">
+														<label class="control-label">Saldo Disponibile</label>
+														<span  class="output big verde">99.999.999,99 EUR</select>
+													</div>
+													<div class="col-sm-4">
+														<label class="control-label">Saldo Contabile</label>
+														<span  class="output big verde">99.999.999,99 EUR</select>
+													</div>
+													<div class="col-sm-4">
+															<label class="control-label">SIA</label>
+														<span  class="output big verde">L0938712</select>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+									</section>
+									<!-- / Dati rapporto -->
+
+									<div class="mobile-form">
+										<!-- Dati movimenti -->
+										<script type="text/javascript">
+ 											var tableMovimenti,
+										    	tbdata = [],
+										    	randomWords = "lorem ipsum dolor sit amet consectetur adipisicing elit possimus nulla voluptas qui tempora odit iure sapiente quisquam praesentium ipsam error quod provident modi culpa quae blanditiis error deleniti suscipit neque";
+
+										    // Crea dei dati random per popolare la tabella
+										    for (x=0;x<=(Math.random()*100);x++) {
+										    	tbdata.push({
+										    		"contabile": parseInt(28-x/3) + "/02/2019",
+										    		"link": "#",
+										    		"valuta" : parseInt(28-x/3) + "/02/2019",
+										    		"importo" : 10000 * Math.random() - 3000,
+										    		"divisa": "EUR",
+										    		"causale": parseInt((Math.random()*100) + 261),
+										    		"descrizione": randomWords.split(" ").map(function(word){
+										    			if(Math.random()>0.5) return (word + " ");
+										    		}).join(" ")
+										    	});
+										    }
+
+										</script>
+
+
+										<section>
+
+											<div class="bordered">
+												<!-- Contenuto desktop -->
+												<div class="hidden-xs">
+
+													<!-- Esempio di automazione della tabella -->
+													<script type="text/javascript" src="./fe/assets/bootstrap/bootstrap-table.js"></script>
+													<script type="text/javascript" >
+
+													    $(function () {
+													    	tableMovimenti = $('#tableMovimenti');
+															tableMovimenti.bootstrapTable({
+														            data: tbdata,
+														            sortable: true,
+														            sortName: "contabile",
+														            sortOrder: "desc"
+														    	});
+													   });
+													</script>
+
+													<!-- Fine esempio di automazione di una tabella -->
+
+
+
+													<div class="table-heading">
+														<h4>Movimenti Conto</h4>
+														<div class="table-filters">
+															<div class="radio-inline">
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov1" name="tipomov" value="tutti" checked>
+								                                    <label class="control control-checkbox" for="tipomov1">Tutti</label>
+				                                     			</div>
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov2" name="tipomov" value="entrate">
+								                                    <label class="control control-checkbox" for="tipomov2">Entrate</label>
+				                                     			</div>
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov3" name="tipomov" value="uscite">
+								                                    <label class="control control-checkbox" for="tipomov3">Uscite</label>
+				                                     			</div>
+				                                     		</div>
+														</div>
+													</div>
+
+
+													<table id="tableMovimenti" cellspacing="0" cellpadding="0" border="0" class="table table-striped">
+													     <thead>
+													        <tr>
+													            <th data-field="contabile" data-formatter="formatLink">Contabile</th>
+													            <th data-field="valuta" data-sortable="true">Valuta</th>
+													            <th data-field="importo" data-sortable="true" data-formatter="tableCellValue">Importo</th>
+													            <th data-field="divisa" data-sortable="true" class="center">Divisa</th>
+													            <th data-field="causale" data-sortable="true">Causale</th>
+													            <th data-field="descrizione" data-sortable="false" class="right">Descrizione movimento</th>
+													        </tr>
+													     </thead>
+													     <tbody>
+													     </tbody>
+													</table>
+
+
+												</div>
+												<!-- Fine contenuto desktop -->
+
+												<!-- Contenuto mobile -->
+												<div class="visible-xs">
+													<script type="text/javascript">
+														$(function(){
+
+															// Inserimento dei dati mobile
+															$.each(tbdata,function(x,obj){
+																$(movimentiMobile).append(
+
+																		mobileDataBlock([
+																			{"label": "Importo", "output": tableCellValue(obj.importo) + " " + obj.divisa, "class": "output-inline"},
+																			{"label": "Data contabile", "output": obj.contabile, "class": "output-inline"},
+																			{"label": "Data valuta", "output": obj.valuta, "class": "output-inline"},
+																			{"label": "Descrizione", "output":obj.descrizione}
+																		])
+																)
+															})
+														});
+													</script>
+													<div class="mobile-data-heading">
+														<h4>Movimenti Conto</h4>
+														<div class="table-filters">
+															<div class="radio-inline">
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov1" name="tipomov" value="tutti" checked>
+								                                    <label class="control control-checkbox" for="tipomov1">Tutti</label>
+				                                     			</div>
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov2" name="tipomov" value="entrate">
+								                                    <label class="control control-checkbox" for="tipomov2">Entrate</label>
+				                                     			</div>
+																<div class="radio control-group">
+								                                    <input type="radio" id="tipomov3" name="tipomov" value="uscite">
+								                                    <label class="control control-checkbox" for="tipomov3">Uscite</label>
+				                                     			</div>
+				                                     		</div>
+														</div>
+													</div>
+													<div id="movimentiMobile" class="mobile-data">
+													</div>
+												</div>
+												<!-- Fine contenuto mobile -->
+											</div>
+
+										</section>
+										<!-- / Dati movimenti -->
+
+									</div>
+								</form>
+						</div>
+					</div>
+					<!-- Fine spazio dei contenuti -->
+
+				</div>
+			</div>
+		</div>
+		<!-- /Contenitore principale -->
+
+		<!-- Footer -->
+		<footer>
+			<div class="wrapper">
+				<div class="footer-block">
+					<h4>Info generali</h4>
+					<p>BANCO BPM GRUPPO BANCARIO<br>Piazza F. Meda, 4 - 20121 Milano</p>
+				</div>
+				<div class="footer-block">
+					<h4>Assistenza clienti</h4>
+					<p>Per chiamate dall'Italia<br><span class="verde">800 024 024</span></p>
+				</div>
+				<div class="footer-block">
+					<h4>Estero</h4>
+					<p>Per chiamate dall'estero<br><span class="verde">+39 02 43371234</span></p>
+				</div>
+			</div>
+		</footer>
+		<!-- /Footer -->
+
+	</body>
+</html>

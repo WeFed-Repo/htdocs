@@ -1,0 +1,207 @@
+/* Elementi form */
+
+.control-label {
+  width: 100%;
+  font-weight: normal;
+  color: #777;
+  line-height: 21px;
+}
+
+.form-control {
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  background-color: $grayBG;
+  box-shadow: none;
+  margin-bottom: 16px;
+  height: 44px;
+  padding: 0 8px;
+  &:focus {
+    border: solid 1px #ddd;
+    box-shadow: none;
+  }
+  &:focus,
+  &:focus::-ms-value /* fix per ie 11 */ {
+    background-color: $grayBG;
+  }
+}
+
+.form-group,
+.input-group>.custom-file,
+.input-group>.custom-select,
+.input-group>.form-control,
+.input-group>.input-group-prepend,
+.input-group>.input-group-append {
+  margin-bottom: 16px;
+  .form-row {
+    padding-left: 16px;
+    padding-right: 16px;
+  } 
+}
+
+.input-group>.input-group-append,
+.input-group>.input-group-prepend {
+  + .valid-feedback,
+  + .invalid-feedback {
+    transform: translate(0, -16px);
+  }
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+select {
+  &.form-control,
+  &.form-control:not([size]):not([multiple]) {
+    height: 44px;
+    background: $grayBG url(../../fe/img/form_select.gif) no-repeat right center;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 30px;
+    user-select: none;
+    -ms-user-select: none;
+    &[disabled] {
+      background-image: url(../../fe/img/form_select_disabled.gif);
+    }
+  }
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+span.output {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 16px;
+  min-height: 44px;
+  padding: 10px 0;
+  &.big {
+    font-size: 18px;
+  }
+  &.verde {
+    color: $greenLink;
+  }
+}
+
+.output-label {
+  color: $gray3;
+  font-size: 1.1em;
+}
+
+$noLabelSize : calc( 21px + .5rem );
+.no-label {
+  margin-top: $noLabelSize;
+}
+@media (min-width: $bp_lg_min) {
+  .no-label-lg {
+    margin-top: $noLabelSize;
+  }
+}
+@media (min-width: $bp_md_min) {
+  .no-label-md {
+    margin-top: $noLabelSize;
+  }
+}
+@media (min-width: $bp_sm_min) {
+  .no-label-sm {
+    margin-top: $noLabelSize;
+  }
+}
+@media (max-width: $bp_sm_max) {
+  .no-label-xs {
+    margin-top: $noLabelSize;
+  }
+}
+
+.input-group-append .input-group-text,
+.input-group-prepend .input-group-text {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 0;
+  background-color: #e4e4e4;
+  cursor: pointer;
+  .icon {
+    color: $greenLink;
+  }
+}
+select, input, textarea {
+  &, &.form-control, &.form-control:not([size]):not([multiple]) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #aaa;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #aaa;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #aaa;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #aaa;
+    }
+    &[disabled] {
+      border: #ddd;
+      background-color: #ddd;
+      color: $white;
+      // cerca gli elementi direttamente vicini O vicini ad un bottone
+      &, + button {
+        + .input-group-append,
+        + .input-group-append .input-group-text,
+        + .input-group-prepend,
+        + .input-group-prepend .input-group-text,
+        + .input-group-addon {
+         cursor: default;
+         pointer-events: none;
+       }
+      }
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $white;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $white;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $white;
+      }
+    }
+  }
+}
+
+.datepicker {
+  input + button {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    border: 0;
+    cursor: pointer;
+  }
+  input[disabled] + button {
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    cursor: disabled;
+  }
+}
+
+// validazione standard
+
+.form-group.invalid .form-control {
+    border-color: $error;
+}
+
+.invalid-feedback {
+  color: $error;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  transform: translate(0,-1em);
+  margin-top: .25rem;
+}

@@ -1,0 +1,75 @@
+/* CSS Document */
+
+/********************************* CLASSI CSS PER TMIBBWEBSERVIZI **************************************/
+
+/* Classe da utilizzare per il renderizzare il box bianco che contiene tutti gli elementi della pagina (quando necessario) */
+.old-pageContent {}
+
+
+/********************************* CLASSI CSS PER IBBWEB/IBBWEB2 **************************************/
+
+/* Classe da utilizzare per il renderizzare il box bianco che contiene tutti gli elementi della pagina (quando necessario) */
+.old-pageContent {}
+
+/* Classe da utilizzare per il titolo principale delle pagine (da applicare al contenitore del testo) */
+.old-pageTitle {}
+
+/* Classe da utilizzare per il titolo delle sezioni delle pagine (da applicare al contenitore del testo) */
+.old-sectionTitle {}
+
+/* Classe da utilizzare per il link "Aiuto" posto in testa alle pagine (da applicare al link) */
+a.old-pageHelp {}
+
+/* Classe da utilizzare per l'icona "Aiuto" posto in corrispondenza dei campi della form (da applicare al link) */
+a.old-fieldHelp {}
+
+/* Classe da utilizzare per l'icona "Cerca" posto in corrispondenza dei campi della form (da applicare al link) */
+a.old-fieldSearch {}
+
+/* Classe da utilizzare per l'icona "Calendario" posto in corrispondenza dei campi della form (da applicare al link) */
+a.old-fieldCalendar {}
+
+/* Classe da utilizzare per l'icona "Applica filtro rapido" (da applicare al link) */
+a.old-fieldQuickFilter {}
+
+/* Classe da utilizzare per l'icona "Filtri" */
+a.old-fieldFilter {}
+
+/* Classe da utilizzare per l'icona "Rimuovi Filtri" */
+a.old-fieldRemoveFilter {}
+
+/* Classe da utilizzare per il footer, in modo che venga modificato via javascript con l'iniezione del nuovo HTML (da applicare al <td> che deve contenere il footer) */
+table.alten-footer {}
+
+/* Classe da assegnare al contenitore dei pulsanti posti in fondo alla pagina */
+.old-buttons {}
+
+/* Classe per la visualizzazione corretta degli stili delle tabelle */
+.old-table {}
+
+/* Classe per la formattazione delle tabelle che compongono le diverse righe del controllo del paginatore (da applicare alle <table> annidate) */
+.old-pager {}
+
+/* Classe per la visualizzazione dei controlli "tab" */
+.old-tabs {}
+	.old-tabs .old-tabPanel {}
+	.old-tabs .old-tabContent {}
+
+
+
+/******************************** CLASSI CSS PER TMIBBWEB *******************************************/
+
+/* Classe da utilizzare per individuare le diverse sezioni di una pagina */
+.old-section {}
+
+/* Classe da applicare alla tabella appena dentro il body, che contiene tutta la pagina */
+.old-container {}
+
+/* Classe da applicare all'elemento che sostituisce l'header della tabella */
+.old-tableHeader {}
+
+/* Classe da applicare al <div> contenitore posto in testa alle liste (id="*ListTestata") */
+.old-listHeading {}
+
+.old-fieldPdf {}
+.old-fieldMessage {}

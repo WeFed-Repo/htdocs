@@ -1,0 +1,135 @@
+// BOOTSTRAP TABLE PLUGIN REWRITE
+
+.bootstrap-table {
+  margin: 0 -1rem;
+  overflow-x: auto;
+  .fixed-table-loading {
+    display: none;
+  }
+  table, .table {
+    border-collapse: collapse;
+    margin-bottom: 0 !important;
+    border-left: none;
+    border-right: none;
+    &.table-padded {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: calc( 100% - 2em );
+      border-left: solid 1px #ececec;
+      border-right: solid 1px #ececec;
+    }
+    tbody, thead {
+      th, td {
+        padding: 1rem 0.5rem !important;
+        &:first-child { padding-left: 1rem!important; }
+        &:last-child { padding-right: 1rem!important; }
+        &.left { text-align: left; }
+        &.right { text-align: right; }
+        &.center { text-align: center; }
+        &.hidden {display:none;}
+        &.small-width { width: 10px;}
+        &.bs-checkbox {
+          padding-top: 0!important;
+          padding-bottom: 0!important;
+        }
+      }
+    }
+    thead {
+      background-color: $greenLink;
+      th {
+        color: $white;
+        font-size: 14px;
+        font-weight: normal;
+        border: none !important;
+        vertical-align: middle !important;
+        min-height: 60px;
+        white-space: nowrap;
+        .th-inner {
+          display: inline-block;
+          &.sortable {
+            background: transparent url(../../fe/img/table_order.png) no-repeat right center;
+            padding-right: 1.5rem;
+            cursor: pointer;
+            &.asc { background-image: url(../../fe/img/table_order_asc.png); }
+            &.desc { background-image: url(../../fe/img/table_order_desc.png); }
+          }
+        }
+      }
+    }
+    tbody tr {
+      background-color: $white;
+      border-top: solid 1px #ececec;
+      td {
+        color: #666;
+        min-height: 60px;
+        vertical-align: middle !important;
+        a {
+          color: $greenLink;
+          text-decoration: underline;
+        }
+        .negativo {
+          color: $error !important;
+        }
+        .largeFieldText {
+          min-width: 130px;
+          @media (max-width:$bp_md_max) {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+  }
+  .table-striped > tbody {
+    > tr {
+      background-color: $white;
+      transition: background-color 0.1s;
+      &:nth-of-type(1),
+      &:nth-of-type(even) {
+        border-bottom: 1px solid #ddd;
+        background-color: #fafafa !important;
+        //&:hover { background-color: #f1f1f1 !important; }
+      }
+      &:nth-of-type(odd) {
+        background-color: $white !important;
+        //&:hover { background-color: $grayBG !important; }
+      }
+    }
+  }
+  .table-show-hidden {
+    tbody, thead {
+      th, td {
+        &.hidden {
+          display:table-cell;
+        }
+      }
+    }
+  }
+}
+
+.table-hovered tr:hover td {
+  background: $greenLighter !important;
+}
+
+.table-hasScrollbar-wrapper {
+  $gradientColorStart : rgba( #000,0);
+  $gradientColorEnd : rgba( #000,0.1);
+  position: relative;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+  &:after {
+    content: '';
+    display: block;
+    background: -moz-linear-gradient(left, $gradientColorStart 0%, $gradientColorStart 1%, $gradientColorEnd 100%);
+    background: -webkit-linear-gradient(left, $gradientColorStart 0%,$gradientColorStart 1%,$gradientColorEnd 100%);
+    background: linear-gradient(to right, $gradientColorStart 0%,$gradientColorStart 1%,$gradientColorEnd 100%);
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .bootstrap-table table:not(.table-padded) {
+    border-right: none !important;
+  }
+}

@@ -1,0 +1,200 @@
+/*======================= CLASSI PER MENU A TENDINA ===========================*/
+	/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu
+{
+    background-color: #B6B6B6;
+}
+.barraMenuScura
+{
+    background-color: #003365;
+}
+
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.pallinoMenu {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 9px;
+	COLOR: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+.menuPrimoLivello:hover {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+ 
+
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello {
+	background-color:#D4D4D4;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	COLOR: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+
+.menuSecondoLivello:hover {
+	background-color:#D4D4D4;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	color:#ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+
+.menuSecondoLivelloSelezionato {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	color:#ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello {
+	background-color:#D4D4D4;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	color:#003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+
+.menuTerzoLivello:hover {
+	background-color:#D4D4D4;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	color:#ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+
+.menuTerzoLivelloSelezionato {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	color:#ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+/*=========================== FINE CLASSI MENU ================================*/
+
+
+
+/**********************************************************************************************************************/
+/*============================================== ALTEN - Restyling ===================================================*/
+/**********************************************************************************************************************/
+
+
+/* CORREZIONI MENU.CSS */
+
+#mainTable { width: 960px; margin: 0 auto; }
+
+a.menuPrimoLivello {
+	display: block;
+	margin-left: 20px;
+	position: relative;
+	padding-top: 4px;
+	color: #999;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+}
+	a.menuPrimoLivello:hover {
+		color: #7db77d;
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+.pallinoMenu { visibility: hidden; }
+
+
+/* Menu di secondo e terzo livello */
+div#menu1, div#menu2 {
+	z-index: 1000;
+	background-color: #e8f2e8;
+	border: 1px solid #8fa48f;
+	box-sizing: border-box;
+}
+
+#menu1 table td, #menu2 table td,
+#menu1 table tbody, #menu2 table tbody { border: none; }
+
+
+.menuSecondoLivello,
+.menuSecondoLivello:hover {
+	padding: 5px 0px;
+	background-color: #e8f2e8;
+}
+
+	table.menuSecondoLivello td.menuSecondoLivello { padding: 0; border: none; }
+	
+	.menuSecondoLivello a.menuSecondoLivello {
+		display: block;
+		padding: 2px 4px;
+		color: #666;
+		background: #e8f2e8;
+		font-size: 12px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		line-height: 16px;
+		text-decoration: none;
+	}
+	.menuSecondoLivello a.menuSecondoLivello:hover,
+	.menuTerzoLivelloSelezionato {
+		color: #fff;
+		background-color: #7db77d;
+	}
+
+
+td#fineMenumenu1 { width: 1px !important; margin: 0; padding: 0; }
+
+
+.menuTerzoLivello,
+.menuTerzoLivello:hover {
+	padding: 10px 0px;
+	background-color: #e8f2e8;
+}
+
+	table.menuTerzoLivello td.menuTerzoLivello { padding: 0; border: none; }
+	
+	.menuTerzoLivello a.menuTerzoLivello {
+		display: block;
+		padding: 2px 4px;
+		color: #666;
+		background: #e8f2e8;
+		font-size: 12px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		line-height: 16px;
+		text-decoration: none;
+	}
+	.menuTerzoLivello a.menuTerzoLivello:hover {
+		color: #fff;
+		background-color: #7db77d;
+	}

@@ -1,0 +1,169 @@
+
+/****************************** ICONE GENERAL PURPOSE *********************************/
+
+.icon-replace {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 2px 5px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-image: url(../images/icons-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+    /* icona selettore rapporti */
+.icon-replace.icon-arrowdown.active		{ background-position: -100px 0px; }
+.icon-replace.icon-arrowdown.active:hover	{ background-position: -100px -20px; }
+.icon-replace.icon-arrowdown.selected		{ background-position: -100px -40px; }
+.icon-replace.icon-arrowdown.selected:hover{ background-position: -100px -60px; }
+.icon-replace.icon-arrowdown.disabled		{ background-position: -100px -80px; }
+.icon-replace.icon-arrowdown.disabled:hover{ background-position: -100px -100px; }
+
+    /* icona calendario */
+.icon-replace.icon-calendar.active			{ background-position: -320px 0px; }
+.icon-replace.icon-calendar.active:hover	{ background-position: -320px -20px; }
+.icon-replace.icon-calendar.selected		{ background-position: -320px -40px; }
+.icon-replace.icon-calendar.selected:hover	{ background-position: -320px -60px; }
+.icon-replace.icon-calendar.disabled		{ background-position: -320px -80px; }
+.icon-replace.icon-calendar.disabled:hover	{ background-position: -320px -100px; }
+
+
+/* ruota icona del selettore rapporto quando aperto */
+.CCselezionato .btnSelezioneCC.open {
+    transform: rotate(180deg);
+}
+
+
+/*rimuovi il button di trigger associato al datepicker... viene fornito dal datepicker tm nel div con immagine*/ 
+button.ui-datepicker-trigger {
+     display: none;
+}
+
+
+
+
+
+
+/*
+
+    .icon-replace.icon-search.active			{ background-position: -20px 0px; }
+	.icon-replace.icon-search.active:hover		{ background-position: -20px -20px; }
+	.icon-replace.icon-search.selected			{ background-position: -20px -40px; }
+	.icon-replace.icon-search.selected:hover	{ background-position: -20px -60px; }
+	.icon-replace.icon-search.disabled			{ background-position: -20px -80px; }
+	.icon-replace.icon-search.disabled:hover	{ background-position: -20px -100px; }
+	
+	.icon-replace.icon-collapse.active			{ background-position: -40px 0px; }
+	.icon-replace.icon-collapse.active:hover	{ background-position: -40px -20px; }
+	.icon-replace.icon-collapse.selected		{ background-position: -40px -40px; }
+	.icon-replace.icon-collapse.selected:hover	{ background-position: -40px -60px; }
+	.icon-replace.icon-collapse.disabled		{ background-position: -40px -80px; }
+	.icon-replace.icon-collapse.disabled:hover	{ background-position: -40px -100px; }
+	
+	.icon-replace.icon-expand.active			{ background-position: -60px 0px; }
+	.icon-replace.icon-expand.active:hover		{ background-position: -60px -20px; }
+	.icon-replace.icon-expand.selected			{ background-position: -60px -40px; }
+	.icon-replace.icon-expand.selected:hover	{ background-position: -60px -60px; }
+	.icon-replace.icon-expand.disabled			{ background-position: -60px -80px; }
+	.icon-replace.icon-expand.disabled:hover	{ background-position: -60px -100px; }
+	
+	
+	
+	.icon-replace.icon-lastpage.active			{ background-position: -120px 0px; }
+	.icon-replace.icon-lastpage.active:hover	{ background-position: -120px -20px; }
+	.icon-replace.icon-lastpage.selected		{ background-position: -120px -40px; }
+	.icon-replace.icon-lastpage.selected:hover	{ background-position: -120px -60px; }
+	.icon-replace.icon-lastpage.disabled		{ background-position: -120px -80px; }
+	.icon-replace.icon-lastpage.disabled:hover	{ background-position: -120px -100px; }
+	
+	.icon-replace.icon-firstpage.active		{ background-position: -140px 0px; }
+	.icon-replace.icon-firstpage.active:hover	{ background-position: -140px -20px; }
+	.icon-replace.icon-firstpage.selected		{ background-position: -140px -40px; }
+	.icon-replace.icon-firstpage.selected:hover{ background-position: -140px -60px; }
+	.icon-replace.icon-firstpage.disabled		{ background-position: -140px -80px; }
+	.icon-replace.icon-firstpage.disabled:hover{ background-position: -140px -100px; }
+	
+	.icon-replace.icon-next.active			{ background-position: -160px 0px; }
+	.icon-replace.icon-next.active:hover	{ background-position: -160px -20px; }
+	.icon-replace.icon-next.selected		{ background-position: -160px -40px; }
+	.icon-replace.icon-next.selected:hover	{ background-position: -160px -60px; }
+	.icon-replace.icon-next.disabled		{ background-position: -160px -80px; }
+	.icon-replace.icon-next.disabled:hover	{ background-position: -160px -100px; }
+	
+	.icon-replace.icon-prev.active			{ background-position: -180px 0px; }
+	.icon-replace.icon-prev.active:hover	{ background-position: -180px -20px; }
+	.icon-replace.icon-prev.selected		{ background-position: -180px -40px; }
+	.icon-replace.icon-prev.selected:hover	{ background-position: -180px -60px; }
+	.icon-replace.icon-prev.disabled		{ background-position: -180px -80px; }
+	.icon-replace.icon-prev.disabled:hover	{ background-position: -180px -100px; }
+	
+	.icon-replace.icon-apply.active		{ background-position: -200px 0px; }
+	.icon-replace.icon-apply.active:hover	{ background-position: -200px -20px; }
+	.icon-replace.icon-apply.selected		{ background-position: -200px -40px; }
+	.icon-replace.icon-apply.selected:hover{ background-position: -200px -60px; }
+	.icon-replace.icon-apply.disabled		{ background-position: -200px -80px; }
+	.icon-replace.icon-apply.disabled:hover{ background-position: -200px -100px; }
+	
+	.icon-replace.icon-close.active		{ background-position: -220px 0px; }
+	.icon-replace.icon-close.active:hover	{ background-position: -220px -20px; }
+	.icon-replace.icon-close.selected		{ background-position: -220px -40px; }
+	.icon-replace.icon-close.selected:hover{ background-position: -220px -60px; }
+	.icon-replace.icon-close.disabled		{ background-position: -220px -80px; }
+	.icon-replace.icon-close.disabled:hover{ background-position: -220px -100px; }
+	
+	.icon-replace.icon-help.active			{ background-position: -240px 0px; }
+	.icon-replace.icon-help.active:hover	{ background-position: -240px -20px; }
+	.icon-replace.icon-help.selected		{ background-position: -240px -40px; }
+	.icon-replace.icon-help.selected:hover	{ background-position: -240px -60px; }
+	.icon-replace.icon-help.disabled		{ background-position: -240px -80px; }
+	.icon-replace.icon-help.disabled:hover	{ background-position: -240px -100px; }
+	
+	.icon-replace.icon-edit.active			{ background-position: -260px 0px; }
+	.icon-replace.icon-edit.active:hover	{ background-position: -260px -20px; }
+	.icon-replace.icon-edit.selected		{ background-position: -260px -40px; }
+	.icon-replace.icon-edit.selected:hover	{ background-position: -260px -60px; }
+	.icon-replace.icon-edit.disabled		{ background-position: -260px -80px; }
+	.icon-replace.icon-edit.disabled:hover	{ background-position: -260px -100px; }
+	
+	.icon-replace.icon-resetfilter.active			{ background-position: -280px 0px; }
+	.icon-replace.icon-resetfilter.active:hover	{ background-position: -280px -20px; }
+	.icon-replace.icon-resetfilter.selected		{ background-position: -280px -40px; }
+	.icon-replace.icon-resetfilter.selected:hover	{ background-position: -280px -60px; }
+	.icon-replace.icon-resetfilter.disabled		{ background-position: -280px -80px; }
+	.icon-replace.icon-resetfilter.disabled:hover	{ background-position: -280px -100px; }
+	
+	.icon-replace.icon-filter.active			{ background-position: -300px 0px; }
+	.icon-replace.icon-filter.active:hover		{ background-position: -300px -20px; }
+	.icon-replace.icon-filter.selected			{ background-position: -300px -40px; }
+	.icon-replace.icon-filter.selected:hover	{ background-position: -300px -60px; }
+	.icon-replace.icon-filter.disabled			{ background-position: -300px -80px; }
+	.icon-replace.icon-filter.disabled:hover	{ background-position: -300px -100px; }
+	
+	
+	
+	.icon-replace.icon-addrecipient.active			{ background-position: -340px 0px; }
+	.icon-replace.icon-addrecipient.active:hover	{ background-position: -340px -20px; }
+	.icon-replace.icon-addrecipient.selected		{ background-position: -340px -40px; }
+	.icon-replace.icon-addrecipient.selected:hover	{ background-position: -340px -60px; }
+	.icon-replace.icon-addrecipient.disabled		{ background-position: -340px -80px; }
+	.icon-replace.icon-addrecipient.disabled:hover	{ background-position: -340px -100px; }
+	
+	.icon-replace.icon-delete.active			{ background-position: -360px 0px; }
+	.icon-replace.icon-delete.active:hover		{ background-position: -360px -20px; }
+	.icon-replace.icon-delete.selected			{ background-position: -360px -40px; }
+	.icon-replace.icon-delete.selected:hover	{ background-position: -360px -60px; }
+	.icon-replace.icon-delete.disabled			{ background-position: -360px -80px; }
+	.icon-replace.icon-delete.disabled:hover	{ background-position: -360px -100px; }
+	
+	.icon-replace.icon-check.active			{ background-position: -380px 0px; }
+	.icon-replace.icon-check.active:hover		{ background-position: -380px -20px; }
+	.icon-replace.icon-check.selected			{ background-position: -380px -40px; }
+	.icon-replace.icon-check.selected:hover	{ background-position: -380px -60px; }
+	.icon-replace.icon-check.disabled			{ background-position: -380px -80px; }
+	.icon-replace.icon-check.disabled:hover	{ background-position: -380px -100px; }
+*/
+	

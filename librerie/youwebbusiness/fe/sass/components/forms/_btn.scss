@@ -1,0 +1,226 @@
+// PERSONALIZZAZIONI DEI BOTTONI
+
+.btn {
+  @include btnPalette($color:$white, $bkg:$greenLink, $bkg_hover:$greenLink_hover);
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  max-width: 100%;
+  text-transform: uppercase;
+  height: $inputHeight;
+  line-height: 30px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  @include ellipsed();  
+  &:hover {
+    box-shadow: 0 none !important;
+  }
+  &:active, &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  &.disabled, &:disabled {
+    pointer-events: none;
+    cursor: default;
+    &, &:hover, &:active, &:focus {
+      text-decoration: none;
+      background: none;
+    }
+  }
+  @include icon {
+    @include svg-icon-size(25px);
+    transform: translate(0,2px);
+    display: inline-block;
+    margin-top: 0px;
+    display: block;
+    float: left;
+    margin-right: 0.25em !important;
+    margin-left: -0.25em !important;
+  }
+  // - - STILI PERSONALIZZATI DEI BOTTONI
+  // PRIMARY & SECONDARY
+  &.btn-primary,
+  &.btn-secondary {
+    //outline: blue dashed 3px !important;
+    text-transform: uppercase;
+  }
+  // PRIMARY
+  &.btn-primary {
+    @include btnPalette($color:$white, $bkg:$greenLink, $bkg_hover:$greenLink_hover);
+  }
+  // SECONDARY
+  &.btn-secondary {
+    @include btnPalette($color:$white, $bkg:$gray2, $bkg_hover:$gray2_hover);
+    }
+  // WHITE
+  &.btn-white {
+    //outline: red dashed 3px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    @include btnPalette($color:$greenLink, $bkg:$white, $bkg_hover: $grayBG, $border: $grayBordered, $color_disabled:$gray3 );
+    border-color: $grayBordered !important; // TODO: sistemare.....
+    text-transform: none;
+    &:disabled, &.disabled {
+      border-color: transparent !important; // TODO: sistemare.....
+    }
+    @include icon {
+      @include svg-icon-size(25px);
+    }
+    .icon-menu {
+      transform: translate(2px, 2px);
+    }
+  }
+  // FILTER
+  &.btn-link {
+    @include btnPalette($color:$greenLink, $bkg:transparent, $bkg_hover: transparent, $color_disabled:$gray3, $bkg_disabled: transparent );
+    //outline: pink dashed 3px !important;
+    text-transform: none;
+    padding: 0.5rem;
+    @include icon {
+      margin-right: 10px;
+      float:left;
+      @include svg-icon-color($greenLink);
+      @include svg-icon-size(30px);
+    }
+  }
+  // FILTER
+  &.btn-filter {
+    @include btnPalette($color:$gray1, $bkg:$gray4, $bkg_hover: $gray4_hover, $color_disabled:$gray3 );
+    font-size: 1.1rem;
+    height: 34px;
+    line-height: 28px;
+    border-radius: 28px;
+    padding: 0 1em;
+    text-transform: uppercase;
+    text-align: left;
+    transition: all 0.3s;
+    @include icon {
+      display: block;
+      float: left;
+      margin-right: 3px;
+      margin-top: 0;
+    }
+    &:disabled, &.disabled {
+      box-shadow: none !important;
+    }
+    &.is-selected {
+      @include btnPalette($color: $white, $bkg: $greenLink, $bkg_hover: $greenLink_hover);
+      box-shadow: inset 0 0 0 3px $greenLink !important;
+    }
+  }
+  // check di conferma a fianco dell'icona del bottone
+  &.is--confirmed:before {
+    content: '\2713';
+    display: block;
+    font-size: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    line-height: 1rem;
+    text-align:center;
+    color: $greenMenu;
+    background: $greenLight;
+    float:left;
+    border-radius:1rem;
+    margin-right: 0.5rem;
+  }
+  // GRANDEZZE (da bootstrap e custom)
+  &.btn-small {
+    padding: 0.25rem 0.5rem;
+    height: 30px;
+    line-height: 15px;
+  }
+  &.btn-w-sm {
+    min-width: 100px;
+  }
+  &.btn-w-md {
+    min-width: 150px;
+  }
+  &.btn-w-lg {
+    min-width: 200px;
+  }
+  // icona help e info a fianco di titoli e tooltip (icone non standard)
+  &-icon-help,
+  &-icon-info {
+    @include btnPalette($color:$greenLink, $bkg:transparent, $bkg_hover:transparent, $border:$greenLink );
+    border-style: solid !important;
+      border-width: 2px !important;
+      background-size: cover;
+      cursor: pointer;
+      width: 22px;
+      min-width: 22px;
+      font-size: 14px !important;
+      height: 22px;
+      line-height: 19px;
+      background-color: transparent;
+      border: solid 2px $greenLink;
+      color: $greenLink;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      font-weight: bold;
+      padding: 0;
+      &:before {
+        content: "i";
+      }
+      &:hover {
+        text-decoration: none !important;
+        color: $green;
+        border-color: $green;
+      }
+      // se è figlio di un h1...
+      @at-root h1 & {
+        transform: translate(8px,-2px);
+      }
+      // se è figlio di un control-label...
+      @at-root .control-label & {
+        float: right;
+      }
+  }
+  &-icon-help {
+    &:before {
+      content: "?";
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* Bottoni particolari con icone */
+
+.ico-btn {
+  color: $blue;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: text-bottom;
+  position: relative;
+  &.flagged span {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    right: 4px;
+    background: $green;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    font-size: 10px;
+  }
+  &.userinfo {
+    width: auto;
+    span.nominativo {
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+      line-height: 40px;
+      top: 0;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

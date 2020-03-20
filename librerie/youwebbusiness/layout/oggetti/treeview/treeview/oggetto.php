@@ -1,0 +1,44 @@
+<?php 
+  $voci = array(
+    array(
+      'name'=>'Voce1',
+      'children'=>array(
+        array('name'=>'sottovoce'),
+        array('name'=>'voce con sottovoci','active'=>'true',
+              'children'=>array(
+                array('name'=>'sottovoce','active'=>'true'),
+                array('name'=>'sottovoce'),
+              ),
+            ),
+            array('name'=>'sottovoce'),
+            array('name'=>'sottovoce','active'=>'true'),
+            array('name'=>'sottovoce'),
+            array('name'=>'sottovoce'),
+          ),
+    ),
+    array(
+      'name'=>'Voce2',
+      'children'=>array(
+        array('name'=>'sottovoce','active'=>'true'),
+        array('name'=>'sottovoce'),
+      ),
+    ),
+    array(
+      'name'=>'Voce3',
+      'active'=>'true',
+      'children'=>array(
+        array('name'=>'sottovoce'),
+        array('name'=>'sottovoce'),
+        array('name'=>'sottovoce'),
+      ),
+    ),
+    array(
+      'name'=>'Voce4',
+      'children'=>array(
+        array('name'=>'sottovoce'),
+        array('name'=>'sottovoce','active'=>'true'),
+      ),
+    ),
+  );
+
+  treeview_obj($voci);

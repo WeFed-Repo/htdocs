@@ -1,0 +1,680 @@
+﻿@import "common/Colors.less";
+@import "common/Images.less";
+@import "common/Width.less";
+
+/*#region LAYOUT */
+
+table.main-content {
+    height: 99.1%;
+}
+
+/*#endregion */
+
+/*#region FORCE COLORS */
+
+.bg-green-light {
+    background-color: @green-light !important;
+}
+
+.blue-text {
+    color: @blue !important;
+}
+
+/*#endregion */
+
+/*#region FOOTER */
+
+#divFooter {
+    width: 101%;
+    background-color: #d8e9d8;
+    padding-top: 0; 
+    padding-bottom: 0;
+    position: relative;
+    height: 140px;
+    bottom: -10px;
+}
+
+.footer div {
+    padding-top: 0;
+}
+
+.footer-container {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@media (min-width:@medium-width) {
+    #divFooter{
+        font-size: 12px;
+    }
+
+    .footer-container {
+        min-width: 1000px;
+        max-width: 1320px;
+        margin: auto;
+    }
+}
+
+@media (min-width: @large-width) {
+    #divFooter{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: @large-width) {
+    .footer div.row {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: @small-width) {
+    .footer-container {
+        position: relative;
+        left: -10px;
+    }
+}
+
+/*.footer {
+    font-size: 1em;
+    line-height: 1.4em;
+
+}*/
+.footer {
+    padding: 0px 0 8px 0px;
+    border-top: 1px solid #7db77d;
+    background: #d8e9d8;
+    color: #003b79;
+    min-height: 125px;
+    font-size: 0.85em;
+}
+
+.footer h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+/*#endregion */
+
+/*#region INPUT FORM */
+
+select[multiple="true"] {
+    min-height: 60px;
+}
+
+btn-file {
+    color: @green-dark;
+    font-weight: bold;
+}
+
+/*#endregion */
+
+/*#region FONT & TITLE */
+
+.testoRedSmallBold {
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 12px;
+    color: @green-dark !important;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.search-flag {
+    width: 25px;
+    height: 40px;
+    display: block;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 4;
+    background: url("@{search_pin}") no-repeat 0 0;
+}
+
+/*#endregion */
+
+/*#region POPUP */
+
+#dialogpopup.ui-dialog-content {
+    background-color: white;
+}
+
+.popup-dialog .ui-dialog-titlebar {
+    display: none;
+}
+
+/*#endregion */
+
+/*#region CONTAINER */
+
+@media (max-width:@tiny-width) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        width: 980px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width:@tiny-width) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        width: 980px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width:@small-width) {
+    body {
+        width: 99%;
+        overflow-x: auto;
+    }
+
+    .container {
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media (min-width:@medium-width) {
+    body {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        min-width: 1000px;
+        max-width: 1320px;
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .spalla {
+        display: block;
+    }
+}
+
+@media (min-width:@large-width) {
+    body {
+        font-size: 13px;
+        overflow-x: hidden;
+    }
+
+    .mainContent {
+        font-size: 1.05em;
+    }
+}
+
+/*#region GRID & TABLE */
+
+table td.tdcenter {
+    padding-top: 10px;
+}
+
+table.grid {
+    border: none;
+}
+
+td.tdright-force-left {
+    text-align: left !important;
+}
+
+div.divgrid {
+    & div, & table.summary {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    & table.dettagliodispo tbody td {
+        background-color: @green-light;
+        text-align: left;
+    }
+
+    & table.table tbody td {
+        text-align: center;
+
+        &.tdright {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        &.tdrightWrap {
+            text-align: right;
+            white-space: normal;
+        }
+
+        &.tdleft {
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        &.tdleftWrap {
+            text-align: left;
+            white-space: normal;
+        }
+    }
+}
+
+table.dettagliodispo > thead > tr.head-title {
+    background-color: @white;
+}
+
+td.tdleftWrap {
+    font-size: 12px;
+}
+
+.dettaglio .current {
+    background-color: @green-dark;
+}
+
+.pager td {
+    padding-right: 5px;
+}
+
+/*#endregion */
+
+/*#region SUBTABLE - CRUDFORM */
+
+table.subTable {
+    width: 100%;
+    background-color: @green-light;
+
+    & .td1 {
+        width: 26%;
+    }
+
+    & .td3 {
+        text-align: left;
+    }
+}
+
+.subtitle {
+    background-color: @green-light;
+}
+
+td.subtitleBottom {
+    background-color: @green-light;
+}
+
+div.FillForm {
+    background-color: @green-light;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.FillForm .title {
+    background-color: @green-light;
+}
+
+/*#endregion */
+
+/*#region OPERATION CONFIRMED */
+
+div.confirmed {
+    background-color: @white;
+    border: none;
+
+    & table {
+        & > thead > tr.head-title {
+            background-color: @white;
+
+            & > td {
+                display: inline-block;
+                color: @green-dark;
+                background: url("@{sf_titolo}") right center no-repeat;
+                margin-top: 0;
+                margin-bottom: 5px;
+                padding: 10px 50px 10px 20px;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+
+        & > tbody > tr > td {
+            & > input[type='button'] {
+                background-color: @green-dark;
+                border: 2px solid @green-dark;
+                border-radius: 6px;
+                font-family: Helvetica, Arial, sans-serif;
+                height: 24px;
+                color: @white;
+                font-size: 12px;
+                text-align: center;
+                vertical-align: middle;
+
+                &:hover, &:focus, &:active, &.active {
+                    background: @green;
+                    border-color: @green;
+                }
+            }
+
+            &.gray {
+                background: @green-light;
+            }
+        }
+    }
+}
+
+div.messagePanel.info {
+    background-color: @green-light;
+}
+
+/*#endregion */
+
+/*#region IMPORT WARNING */
+
+div.warning {
+    & table {
+        & > thead {
+            & > tr > td.redtext {
+                text-align: left;
+            }
+
+            & > tr.head-title {
+                background-color: @red;
+            }
+        }
+
+        & > tbody > tr {
+            & > td {
+                text-align: center;
+                width: 100%;
+
+                & > input[type="button"] {
+                    background-color: @green-dark;
+                    border: 2px solid @green-dark;
+                    font-family: Helvetica, Arial, sans-serif;
+                    height: 24px;
+                    color: @white;
+                    font-size: 12px;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+
+            & > td:first-child {
+                white-space: nowrap;
+                width: auto;
+            }
+        }
+    }
+
+    &.border-red {
+        border: none;
+        font-size: 14px;
+        color: @red;
+        padding: 3px;
+    }
+
+    &.page-title h1 {
+        box-shadow: 0 8px 8px -6px @red;
+        border-bottom: 1px solid @red;
+    }
+
+    & .page-title .new-flag {
+        background: url("@{blank_pin_red}") no-repeat 0 0;
+    }
+}
+/*#endregion */
+
+/*#region OVVERRIDE FOR BLUE COLOR */
+
+.divgrid table td h1 {
+    color: @blue;
+}
+
+.riquadro {
+    color: @blue;
+}
+
+#dialogpopup.ui-dialog-content table.details thead th {
+    color: @blue;
+}
+
+#dialogpopup.ui-dialog-content table.grid-esito td {
+    color: @blue;
+}
+
+table.summary {
+    width: 100%;
+}
+
+table.summary > thead > tr.head-title {
+    color: @blue;
+}
+
+table.summary > tbody > tr.subtitle {
+    color: @blue;
+}
+
+table.summary > tbody > tr.subtitle > td {
+    color: @blue;
+}
+
+select {
+    color: @blue;
+}
+
+input {
+    color: @blue;
+}
+
+textarea {
+    color: @blue;
+}
+
+.linklogin {
+    color: @blue;
+}
+
+.linkBlu {
+    color: @blue;
+}
+
+.linkBlu:hover {
+    color: @blue;
+}
+
+.sfondo {
+    SCROLLBAR-HIGHLIGHT-COLOR: @blue;
+    SCROLLBAR-SHADOW-COLOR: @blue;
+    SCROLLBAR-ARROW-COLOR: @blue;
+    SCROLLBAR-DARKSHADOW-COLOR: @blue;
+}
+
+.pallinoMenu {
+    color: @blue;
+}
+
+.menuPrimoLivello {
+    color: @blue;
+}
+
+.menuSecondoLivello {
+    color: @blue;
+}
+
+.menuTerzoLivello {
+    color: @blue;
+}
+
+.rigaChiara, .rigaScura {
+    color: @blue;
+}
+
+A.tabella {
+    color: @blue;
+}
+
+.rigaScuraDetail {
+    color: @blue;
+}
+
+.testoBlackSmallBoldDetail {
+    color: @blue;
+}
+
+.testoBlackBoldDetail {
+    color: @blue;
+}
+
+.titolicalcoliattivo {
+    color: @blue;
+}
+
+.titoloFiltri {
+    color: @blue;
+}
+
+.linkFirmatari {
+    color: @blue;
+}
+
+.linkFirmatariDisabled {
+    color: @blue;
+}
+
+.testoBlackSmall {
+    color: @blue;
+}
+
+.testoBlackSmallBold {
+    color: @blue;
+}
+
+.testoBlackSmallBoldUnderline {
+    color: @blue;
+}
+
+.testoBlackNormal {
+    color: @blue;
+}
+
+.testoBlackNormalBold {
+    color: @blue;
+}
+
+BODY {
+    SCROLLBAR-HIGHLIGHT-COLOR: @blue;
+    SCROLLBAR-SHADOW-COLOR: @blue;
+    SCROLLBAR-ARROW-COLOR: @blue;
+    SCROLLBAR-DARKSHADOW-COLOR: @blue;
+}
+
+.pl_header {
+    color: @blue;
+}
+
+.pl_header_table {
+    color: @blue;
+}
+
+.pl_txt {
+    color: @blue;
+}
+
+.interno_2 {
+    color: @blue;
+}
+
+.link_tabCliccabile {
+    color: @blue;
+}
+
+.td_tabCliccabile {
+    color: @blue;
+}
+
+.pl_header_Link {
+    color: @blue;
+}
+
+.vnt-filter {
+    color: @blue;
+}
+
+table.vnt-result-tbl > thead > tr > th {
+    color: @blue;
+}
+
+.vnt-wizard-step {
+    color: @blue;
+    /*border: @blue;*/
+}
+
+div.vnt-page-heading {
+    color: @blue;
+}
+
+div.vnt-subdata div.vnt-label {
+    color: @blue;
+}
+
+div.vnt-subdata div.vnt-edit {
+    color: @blue;
+}
+
+div.vnt-subdata table.vnt-subdata {
+    color: @blue;
+}
+
+.new-riquadro {
+    color: @blue;
+}
+
+.table tr th, .table tr td.sottotitolotabella, .old-tableHeader {
+    color: @blue;
+}
+
+.ui-widget-content {
+    color: @blue;
+}
+
+.ui-widget-content a {
+    color: @blue;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    color: @blue;
+}
+
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+    color: @blue;
+}
+
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+    color: @blue;
+}
+
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+    color: @blue;
+}
+
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+    color: @blue;
+}
+
+/*#endregion */

@@ -1,0 +1,819 @@
+/*===================== Classi per tutti i select =====================*/
+select {
+    FONT-WEIGHT: normal;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input {
+    FONT-WEIGHT: normal;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+textarea {
+    FONT-WEIGHT: normal;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    SCROLLBAR-FACE-COLOR: #D4D0C8;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #000000;
+    SCROLLBAR-3DLIGHT-COLOR: #D4D0C8;
+    SCROLLBAR-ARROW-COLOR: #000000;
+    SCROLLBAR-TRACK-COLOR: #D4D0C8;
+    SCROLLBAR-DARKSHADOW-COLOR: #000000;
+    SCROLLBAR-BASE-COLOR: #D4D0C8;
+}
+/*===================== Classi per la pagina di login =====================*/
+.linklogin {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .linklogin:hover {
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 11px;
+        COLOR: #f7fcf7;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+
+.numeroVerde {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #009900;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.news {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #00376F;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.titolonews {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #DD0119;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #FFFFFF;
+}
+/*===================== Fine Classi per la pagina di login =====================*/
+
+/*===================== Classi per il top-frame =====================*/
+.blu {
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .blu:hover {
+        FONT-SIZE: 11px;
+        FONT-WEIGHT: bold;
+        COLOR: #F0D38C;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+
+.linkBlu {
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .linkBlu:hover {
+        FONT-SIZE: 11px;
+        FONT-WEIGHT: bold;
+        COLOR: #001831;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+/*===================== Fine Classi per il top-frame =====================*/
+
+/*===================== Classi per il context-selector =====================*/
+.percorso {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*===================== Fine Classi per il context-selector =====================*/
+
+/*===================== Classi per la scrollbar =====================*/
+.sfondo {
+    SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #001831;
+    SCROLLBAR-SHADOW-COLOR: #001831;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #001831;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #001831;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+/*===================== Fine Classi per la scrollbar =====================*/
+
+/*===================== Classi per la grandezza delle tabelle =====================*/
+/*===================== Classi per la larghezza della prima tabella =====================*/
+table.larghezzaEsterna {
+    width: 100%;
+}
+/*===================== Classi per la larghezza delle tabelle di output =====================*/
+table.larghezzaInternaGrande {
+    width: 95%;
+}
+
+table.larghezzaInternaPiccola {
+    width: 85%;
+}
+/*===================== Classi per la larghezza delle tabelle Pagamento F24 =====================*/
+table.larghezzaF24 {
+    width: 650px;
+}
+/*===================== Classi per la larghezza delle tabelle di input =====================*/
+table.larghezzaInput {
+    width: 700px;
+}
+/*===================== Classi per il bordo delle tabelle =====================*/
+.sfondoTabelle {
+    background-color: transparent;
+    width: 100%;
+}
+/*===================== Fine Classi per la granedezza delle tabelle =====================*/
+
+/*======================= CLASSI PER MENU A TENDINA ===========================*/
+/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu {
+    background-color: #B6B6B6;
+}
+
+.barraMenuScura {
+    background-color: #001831;
+}
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.pallinoMenu {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .menuPrimoLivello:hover {
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 11px;
+        COLOR: #FFFFFF;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+
+.menuPrimoLivelloSelezionato {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello {
+    background-color: #f7fcf7;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .menuSecondoLivello:hover {
+        background-color: #f7fcf7;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 11px;
+        COLOR: #FFFFFF;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+
+.menuSecondoLivelloSelezionato {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello {
+    background-color: #f7fcf7;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .menuTerzoLivello:hover {
+        background-color: #f7fcf7;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 11px;
+        COLOR: #FFFFFF;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+
+.menuTerzoLivelloSelezionato {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== FINE CLASSI MENU ================================*/
+
+/*======================== Classi per le tabelle (input ed output) ============================*/
+/*======================== Classi per il titolo delle tabelle ============================*/
+.titoloTabella {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BACKGROUND: none;
+    COLOR: #666;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Classi per il sottotitolo delle tabelle ============================*/
+.sottoTitoloTabella {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    BACKGROUND: #f7fcf7;
+    COLOR: #357745;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Classi per il multiriga ============================*/
+
+.rigaChiara, .rigaScura {
+    clear: both;
+    position: relative;
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background: #f7fcf7;
+    color: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+/*======================== Classi per i link delle tabelle ============================*/
+A.tabella {
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline;
+}
+/*======================== Classi per il terzo titolo nell'elenco condizioni sbf e per il sottotitolo nell'area download ============================*/
+.terzoTitolo {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    BACKGROUND: #CDD6D8;
+    COLOR: #66868E;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Classi per i bottoni ============================*/
+.bottom {
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #001831;
+    cursor: pointer;
+}
+/*======================== Fine Classi per le tabelle (input ed output) ============================*/
+
+/*======================== Classi per la tabella di input F24 ============================*/
+.inizioSezione {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.fineSezione {
+    BACKGROUND: #9D9FA2;
+}
+
+.testoBluBold {
+    BACKGROUND: #f7fcf7;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #1f3168;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBluSmallBold {
+    BACKGROUND: #f7fcf7;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #1f3168;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackBold {
+    BACKGROUND: #f7fcf7;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #1f3168;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Classi per il dettaglio delle distinte F24 ============================*/
+.fineSezioneDetail {
+    BACKGROUND: rgb(220,220,220);
+}
+
+.rigaChiaraDetail {
+    FONT-SIZE: 12px;
+    BACKGROUND: rgb(250,250,250);
+    COLOR: #1f3168;
+    FONT-FAMILY: monospace, Verdana, Arial, Helvetica, sans-serif;
+    border-right: 1px solid rgb(230,230,230);
+    border-bottom: 1px solid rgb(230,230,230);
+    border-top: 0 solid rgb(250,250,250);
+    border-left: 0 solid rgb(250,250,250);
+}
+
+.rigaScuraDetail {
+    font-size: 12px;
+    BACKGROUND: rgb(240,240,240);
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackSmallBoldDetail {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackBoldDetail {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    BACKGROUND: rgb(240,240,240);
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Fine Classi per deleghe F24 ============================*/
+
+/*======================== Classi i calcoli finanziari ============================*/
+.titolicalcoli {
+    background-color: #9D9FA2;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.titolicalcoliattivo {
+    background-color: #9D9FA2;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Fine Classi i calcoli finanziari ============================*/
+
+/*======================== Classi i filtri, filtri stampa e dettagli ============================*/
+/*======================== Classi per il background dei pop-up ============================*/
+.sfondofiltri {
+    background-color: #f7fcf7;
+}
+
+.sfondoPopUp {
+    background-color: #ffffff;
+}
+/*======================== Classi i titoli dei pop-up ============================*/
+.testoWhiteNormalBold {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.titoloFiltri {
+    background-color: #f7fcf7;
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Fine Classi i filtri, filtri stampa e dettagli ============================*/
+
+/*======================== Classi i link "precedenti" e "successivi" ============================*/
+.submit {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #4f4f90;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .submit:hover {
+        FONT-WEIGHT: bold;
+        font-size: 12px;
+        COLOR: #C5655A;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+/*======================== Fine Classi i link "precedenti" e "successivi" ============================*/
+/*======================== Classi per Info Login ============================*/
+.infoLogin {
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    background-color: #F1F1F3;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.infoLogout {
+    background-color: #386C79;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FBCC5B;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Fine Classi per Info Login ============================*/
+
+/*======================== Classi per pagine errori ============================*/
+.erroreDati {
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    background-color: #F1F1F3;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #AE0101;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.erroreDati2 {
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    background-color: #E4E4E7;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #AE0101;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.errorPallini {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #00376F;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.errorBig {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #AE0101;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.errorSmall {
+    background-color: #517B85;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.errorMail {
+    background-color: #517B85;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+    .errorMail:hover {
+        background-color: #517B85;
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 11px;
+        COLOR: #F9CB68;
+        font-family: Helvetica, Arial, sans-serif;
+        TEXT-DECORATION: none;
+    }
+/*======================== Fine Classi per pagine errori ============================*/
+
+/*======================== Classi per la gestione firmatari ============================
+(Attualmente non utilizzate, NON CANCELLARE in vista di un prossimo utilizzo)*/
+.linkFirmatari {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.linkFirmatariDisabled {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+/*======================== Fine Classi per la gestione firmatari ============================*/
+
+/*======================== Classi per il download ============================*/
+.testoWhiteSmallBold {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Fine Classi per il download ============================*/
+
+/*======================== Classi generiche utilizzate in più aree dell'applicativo ============================*/
+.testoBlackSmall {
+    PADDING-LEFT: 3px;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackSmallBold {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackSmallBoldUnderline {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #001831;
+    TEXT-DECORATION: underline;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackNormal {
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoBlackNormalBold {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoRedSmall {
+    PADDING-LEFT: 3px;
+    font-size: 12px;
+    COLOR: #357745;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.testoRedSmallBold {
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    COLOR: #357745;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*======================== Fine Classi generiche utilizzate in più aree dell'applicativo ============================*/
+
+
+/*======================== Classi TM pagelist ============================*/
+BODY {
+    BACKGROUND-COLOR: rgb(255,255,255);
+    SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #001831;
+    SCROLLBAR-SHADOW-COLOR: #001831;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #001831;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #001831;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+
+.pl_header {
+    font-size: 13px;
+    BACKGROUND: #a7cea7;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 2px 4px;
+}
+
+table.pl_header {
+    width: 100%;
+    background: none;
+}
+
+    table.pl_header td {
+        text-align: center;
+    }
+
+        table.pl_header td.left {
+            text-align: left;
+        }
+
+        table.pl_header td.right {
+            text-align: right;
+        }
+
+.pl_header_table {
+    font-size: 13px;
+    BACKGROUND: #a7cea7;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 2px 4px;
+    text-align: center;
+}
+
+table.pl_header_table {
+    background: none;
+    padding: 0;
+}
+
+.pl_txt {
+    FONT-WEIGHT: normal;
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.interno_2 {
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    BACKGROUND-COLOR: #FFFFFF;
+}
+
+A. {
+    font-size: 12px;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline;
+}
+/*======================== Fine Classi TM pagelist ============================*/
+
+/*======================== Classi TM per tab applicazioni =====================*/
+.sfondoTab {
+    background: #FFFFFF;
+    height: 19px;
+}
+
+.tabAttiva {
+    font-size: 11px;
+    background: #001831;
+    width: 120px;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    border-bottom-color: #001831;
+    height: 19px;
+    border-right-color: #FFFFFF;
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+.link_tabAttiva {
+    padding: 8px 0 5px 0;
+    text-align: center;
+    background: #357745;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #357745;
+}
+
+.tabDisattiva {
+    padding: 8px 0 5px 0;
+    background-color: #e3eee3;
+    font-size: 13px;
+    color: #003b79;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #357745;
+    border-bottom: 1px solid #999;
+}
+
+.link_tabDisattiva {
+    font-size: 11px;
+    text-align: center;
+    color: #9D9FA2;
+    background: #f7fcf7;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.tabCliccabile {
+    font-size: 11px;
+    background: #e3eee3;
+    width: 120px;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    height: 19px;
+    border: 1px solid #357745;
+}
+
+.link_tabCliccabile {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: #001831;
+    background: #f7fcf7;
+    text-decoration: none;
+}
+
+.td_tabCliccabile {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: #001831;
+    background: #f7fcf7;
+    text-decoration: none;
+    border: 1px solid #357745;
+}
+
+.linktab {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.tabellaTab {
+    width: 750px;
+}
+
+.sfondoTabInterna {
+    background: inactiveborder;
+}
+
+.pl_header_Link {
+    FONT-WEIGHT: bold;
+    font-size: 12px;
+    BACKGROUND: #a7cea7;
+    COLOR: #001831;
+    font-family: Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline;
+}
+/*======================== Fine Classi TM per tab applicazioni =====================*/

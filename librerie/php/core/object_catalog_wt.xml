@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+	<!-- TESTI -->
+	<block file="testi/txt_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<!-- TITOLI -->
+	<block file="titoli/tit_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cCenter">[...]</div></div>]]></context></block>
+	<block file="titoli/tit_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3c2Col">[...]</div></div>]]></context></block>
+	<block file="titoli/tit_wt_003.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Titolo per pop-up media)]]></description></block>	
+	<block file="titoli/tit_wt_003b.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Titolo per pop-up grande)]]></description></block>	
+	<block file="titoli/tit_wt_004.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3c2Col">[...]</div></div>]]></context></block>
+	<block file="titoli/tit_wt_005.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	
+	<!-- BOTTONI -->
+	<block file="bottoni/bot_wt_001.php" customer="ret" area="pri" location="con"></block>
+	<block file="bottoni/bot_wt_002.php" customer="ret" area="pri" location="con"><description><![CDATA[(Bottoniera per pop-up provvisoria da rivedere graficamente)]]></description></block>
+	<block file="bottoni/bot_wt_003.php" customer="ret" area="pri" location="con"><description><![CDATA[(attiva il push)]]></description></block>
+	<block file="bottoni/bot_wt_003b.php" customer="ret" area="pri" location="con"></block>
+	<block file="bottoni/bot_wt_003c.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context><description><![CDATA[(utilizzato in FP)]]></description></block>
+	<block file="bottoni/bot_wt_004.php" customer="ret" area="pri" location="con"><description><![CDATA[(attiva il push caso popo up)]]></description></block>
+	<block file="bottoni/bot_wt_004b.php" customer="ret" area="pri" location="con"><description><![CDATA[(attiva il push caso pop-up derivati)]]></description></block>
+	<block file="bottoni/bot_wt_004c.php" customer="ret" area="pri" location="con"><description><![CDATA[(attiva il push caso pop-up tlx)]]></description></block>
+	<block file="bottoni/bot_wt_005.php" customer="ret" area="pri" location="con"></block>
+	<!-- NAVIGAZIONE -->
+	
+	<block file="navigazione/nav_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cRight">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cRight">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_wt_003.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cRight">[...]</div></div>]]></context></block><br/>	
+	
+	<!-- TABELLE -->
+	
+	<block file="tabelle/tab_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3c2Col">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cCenter">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_wt_003.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_004.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Tabella per pop-up)]]></description></block>
+	<block file="tabelle/tab_wt_005.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_006.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_007.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_008.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_010.php" customer="ret" area="pri" location="fro"></block>
+	<block file="tabelle/tab_wt_011.php" customer="ret" area="pri" location="fro"></block>
+	<block file="tabelle/tab_wt_012.php" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="tabelle/tab_wt_013.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Tabella dettaglio liquidit&agrave;)]]></description></block>
+	
+	<!-- FORM -->	
+	
+	<block file="form/form_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cLeft">[...]</div></div>]]></context></block>
+	<block file="form/form_wt_003.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Form per pop-up)]]></description></block>
+	<block file="form/form_wt_003b.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Form per pop-up caso derivati)]]></description></block>
+	<block file="form/form_wt_003c.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Form per pop-up caso tlx)]]></description></block>
+	<block file="form/form_wt_004.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3c2Col">[...]</div></div>]]></context></block>
+	<block file="form/form_wt_005.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_input_con_select.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_output_con_select.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<!--BOX EDITORIALI -->
+	
+	<block file="boxeditoriali/box_wt_001.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cLeft">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_wt_002.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div id="footerwt">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_wt_003.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cRight">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_wt_003b.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cCenter">[...]</div></div>]]></context><description><![CDATA[(news tradermade)]]></description></block>
+	<block file="boxeditoriali/box_wt_004.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_nosd.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_2.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - frontpage)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - pop-up)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_nosd_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - pop-up)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto output)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b_2.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context><description><![CDATA[(scelta rapporto output - frontpage)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto output - pop-up)]]></description></block>
+	<block file="boxeditoriali/box_wt_006.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box3cRight">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_wt_007.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_wt_008.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block><br/>
+	<block file="boxeditoriali/box_wt_009.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+</catalog>

@@ -1,0 +1,60 @@
+.img-asc {
+background-image:url('/ibbweb2/static/images/05188/lista-esiti/frecciaup-blu.gif');
+}
+
+.img-asc-selected {
+background-image:url('/ibbweb2/static/images/05188/lista-esiti/frecciaup-gialla.gif');
+}
+
+.img-desc {
+background-image:url('/ibbweb2/static/images/05188/lista-esiti/frecciadown-blu.gif');
+}
+
+.img-desc-selected {
+background-image:url('/ibbweb2/static/images/05188/lista-esiti/frecciadown-gialla.gif');
+}
+.col_1{
+	width: 140px;;
+	}
+.col_2{
+	width: 20px;
+	}
+.col_3{
+	width: 350px;
+	}
+.col_4{
+	width: 180px;
+	
+}
+.col_6{
+	width: 930px;
+	}
+.sottotitoloDettaglio{
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.maiuscolo{
+	text-transform: uppercase;
+}
+.minuscolo{
+	text-transform: lowercase;
+}
+.bordoInput{
+	border:1px;
+  	border-style:solid;
+ 	border-color:#7F9DB9;
+}
+div.places span {
+  white-space:nowrap;
+  overflow:hidden;
+}
+.col_2_mod{
+	width: 2%;
+	}
+.col_3_mod{
+	width: 36%;
+}
+
+td.col_5_det_ben{
+	width: 430px;
+}

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+	
+	<!-- AREE PROMOZIONALI -->
+	<block file="areepromoz/pub_all_con_areepromoz_000.php" nobank="webank" customer="ret|bus" area="pub" location="hom|con"></block>
+	<block file="areepromoz/pub_all_con_areepromoz_005.php" nobank="webank" customer="ret|bus" area="pub" location="hom|con"></block>
+	<block file="areepromoz/areepromoz_black_priv_007.html" nobank="webank" customer="ret" area="pri" location="con|fro"></block>
+	<block file="areepromoz/areepromoz_priv_005.html" nobank="webank" customer="ret" area="pri" location="fro"></block>
+	<block file="areepromoz/areepromoz_priv_006.html" nobank="webank" customer="ret" area="pri" location="fro"></block>
+	<block file="areepromoz/bus_priv_areepromoz_001.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[[...]]]></context></block>
+	<block file="areepromoz/bus_priv_areepromoz_002.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="areepromoz/bus_priv_areepromoz_003.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="areepromoz/bus_priv_areepromoz_004.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="areepromoz/bus_priv_areepromoz_005.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<!--block file="areepromoz/areepromoz_black_priv_007.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block-->
+	<block file="areepromoz/pub_wb_hom_are_001.php" nobank="bpm|bl|ca|bm" customer="ret|bus" area="pub" location="hom"></block>
+	<block file="areepromoz/pub_wb_hom_are_002.php" nobank="bpm|bl|ca|bm" customer="ret|bus" area="pub" location="hom"></block>
+	
+	<block file="areepromoz/pub_wb_spa_are_001.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla destra)]]></description><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="areepromoz/pub_wb_spa_are_002.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla destra)]]></description><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="areepromoz/pub_wb_spa_are_003.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla destra)]]></description><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="areepromoz/pub_wb_spa_are_004.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla destra)]]></description><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	
+	<!-- BOTTONI -->
+	<block file="bottoni/bot_black_001.html" nobank="" customer="ret" area="pri" location="con"></block>
+	<block file="bottoni/bot_black_001b.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(50% left - 50% right)]]></description></block>
+	<block file="bottoni/bot_black_002.html" nobank="" customer="ret" area="pri" location="con"></block>
+	<block file="bottoni/bot_black_003.html" nobank="" customer="ret" area="pri" location="con"></block>
+	<block file="bottoni/bot_black_004.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="bottoni/bot_001.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="bottoni/bot_002.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="bottoni/bot_003.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="bottoni/bot_004.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="bottoni/bot_black_005.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="bottoni/bot_007.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="bottoni/bot_black_008.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(pagina di login-pin2)]]></description></block>
+	<block file="bottoni/bot_black_009.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(bottone disattivato)]]></description></block>
+	<block file="bottoni/bot_black_010.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(bottone gigante)]]></description></block>
+	<block file="bottoni/bot_black_011.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(bottone gigante disattivato)]]></description></block>
+	<block file="bottoni/bot_black_012.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(usato nella firma digitale)]]></description></block>
+	<block file="bottoni/bot_black_012b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(usato nella firma digitale/con filetto)]]></description></block>
+	<block file="bottoni/bot_black_bus_001.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	<block file="bottoni/bot_black_bus_003.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	
+	<block file="bottoni/bot_black_bus_004.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	<block file="bottoni/bot_black_bus_005.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_001.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_002.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_003.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_005.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_006.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="bottoni/pub_wb_int_btn_007.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	<!-- BOX EDITORIALI -->
+	<block file="boxeditoriali/box_wt_004.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_nosd.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_2.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - frontpage)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - pop-up)]]></description></block>
+	<block file="boxeditoriali/box_wt_004_nosd_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto input - pop-up)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto output)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b_2.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context><description><![CDATA[(scelta rapporto output - frontpage)]]></description></block>
+	<block file="boxeditoriali/box_wt_004b_pop.php" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(scelta rapporto output - pop-up)]]></description></block>
+	
+	<!--block file="boxeditoriali/box_black_priv_028.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Oggetto solo x carte)]]></description></block-->
+	<block file="boxeditoriali/box_black_priv_031.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_033.html" nobank="" customer="bus|ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_034.html" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[x Alert]]></description></block>
+	<block file="boxeditoriali/box_black_priv_037.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_038.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[esito ricerca negativa]]></description></block>
+	<block file="boxeditoriali/box_black_priv_038b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[esito ricerca negativa - messaggio connotato positivo]]></description></block>
+	<block file="boxeditoriali/box_black_priv_041.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_044.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_045.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_049b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	
+	<block file="boxeditoriali/box_black_priv_050.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="obbcontenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_051.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="obbcontenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_051b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="obbcontenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_052.html" nobank="webank" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[da cancellare dopo rilascio otc]]></description></block>
+	<block file="boxeditoriali/box_black_priv_053b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_priv_061.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_064.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_064b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_064c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_065.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_066.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_067.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_068.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_069.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_070.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_070b.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_070c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_070d.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_071.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_071b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_071c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(solo per CMS)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_072.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_073.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_074.html" nobank="" customer="ret" area="pri" location="con"><catalogload><![CDATA[document.getElementById('layeralert').style.display = 'block']]></catalogload><context><![CDATA[<div id="contenuti">[...]<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_075.html" nobank="" customer="ret" area="pri" location="con"><catalogload><![CDATA[document.getElementById('layeralert2').style.display = 'block']]></catalogload><context><![CDATA[<div id="contenuti">[...]<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_076.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_077.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_078.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_080.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_080b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	
+	
+	
+	
+	<block file="boxeditoriali/box_black_priv_095.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_096.html" nobank="" customer="ret" area="pri" location="con"><catalogload><![CDATA[document.getElementById('layeralert3').style.display = 'block']]></catalogload><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<block file="boxeditoriali/box_priv_058.html" nobank="webank" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content"><div id="ctnboxdx">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_priv_059.html" nobank="webank" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content"><div id="ctnboxdx">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_priv_060.html" nobank="webank" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content"><div id="ctnboxdx">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_priv_062.html" nobank="webank" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content"><div id="ctnboxdx">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_priv_062.html" nobank="webank" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content"><div id="ctnboxdx">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_001.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_001b.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_010.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_010b.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	
+	<block file="boxeditoriali/box_black_priv_FP_20.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="ctnboxdx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_30.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_30b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><description><![CDATA[profilo consultare con box disabilitato]]></description><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_100.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_110.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_110b.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_120.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="fullpage">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_121.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_130.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block><!-- lo sfondo è contenuto in helpcenter.css-->
+	<!--block file="boxeditoriali/box_black_priv_140.php?position=inside" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block-->
+	<block file="boxeditoriali/box_black_priv_150.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_160.php" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_170.php" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_171.html" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_172.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="contenuti"><!-- NON NECESSARIO A SVILUPPO SOLO LIBRERIE--><script>addEvent(window,'load',function(){$('boxChiediEsperto').show();$('boxChiediEsperto').style.position='relative'});</script><!-- / NON NECESSARIO A SVILUPPO SOLO LIBRERIE-->[...]</div>]]></context><description><![CDATA[(overlayer chiedi all'esperto)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_173.php" nobank="bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_175.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<!--<block file="boxeditoriali/box_black_priv_175b.php" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>-->
+	
+	<block file="boxeditoriali/box_black_priv_185.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_190.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_200.php" nobank="|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Carousel)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_210.php" nobank="" customer="ret" area="pri" location="con"></block>
+	<block file="boxeditoriali/box_black_priv_220.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_220b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_230.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_240.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[(ticker)]]></description><context><![CDATA[<div id="contenuti"><div class="schedaTitoliCont">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_250.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description></description><context><![CDATA[<div id="contenuti"><div class="schedaTitoliCont">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_260.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_270.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[box di conferma usato in accoglienza e firma digitale qui in dimensioni flessibile]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_280.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[box di attenzione usato in accoglienza e firma digitale qui in dimensioni flessibile]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_290.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[box di esito negativo usato in accoglienza qui in dimensioni flessibile]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_300.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_310.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[slider carte: richiesta]]></description><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_311.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[slider carte: requisiti KO]]></description><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_312.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[slider carte: verifica richiesta]]></description><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_313.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[slider carte: carte attive]]></description><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_314.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[carte fase due]]></description><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	
+	<block file="boxeditoriali/box_black_priv_320.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[box usato nel tpl 2 colonne e in firma digitale grafica generica]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_320b.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[vedi sopra - variante grafica]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_320c.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[vedi sopra - variante grafica2]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_321.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[utilizzato per elenco in grafica]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<block file="boxeditoriali/box_black_priv_FP_040b.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_040d.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_040e.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context><description><![CDATA[(business)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_FP_050.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_050_bus.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context><description><![CDATA[B]]></description></block>
+	<block file="boxeditoriali/box_black_priv_FP_050c.php" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_060.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_070.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_090.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context><description><![CDATA[(business)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_FP_110.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_140.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_black_priv_150b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[<div class="tabber">[...]</div>]]></context><description><![CDATA[x Alert da usarsi in FP tab]]></description></block>
+	<block file="boxeditoriali/box_black_priv_151.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context><description><![CDATA[x Alert]]></description></block>
+	<block file="boxeditoriali/box_black_priv_intsx_001.html" nobank="" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="content"><div id="menusxc">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_intsx_005.html" nobank="" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="content"><div id="menusxc">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_intsx_010.php" nobank="" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="content"><div id="menusxc">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_152.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[<div class="box5">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_FP_160.php" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_210b.php" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div class="tabber">[...]</div>]]></context><description><![CDATA[(da usarsi all'interno dei tab)]]></description></block>
+	<block file="boxeditoriali/box_black_priv_FP_250.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><description></description><context><![CDATA[<div id="contenuti"><div class="schedaTitoliCont">[...]</div></div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_hom_box_001.php" nobank="bpm|bl|ca|bm" customer="ret|bus" area="pub" location="hom"><context><![CDATA[<div class="box5">[...]</div>]]></context></block>
+	
+	<!-- <block file="boxeditoriali/box_black_sp_030.html" nobank="bpm|bl|ca|bm" customer="ret" area="pub" location="spa"><context><![CDATA[<div id="main" class="orange">[...]</div>]]></context></block> -->
+	<block file="boxeditoriali/box_bus_priv_001.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_002.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_003.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_004.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_004b.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context><description><![CDATA[(Terzo sottotitolo non attivo)]]></description></block>
+	<block file="boxeditoriali/box_bus_priv_007.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_008.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_011.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_012.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_013.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_014.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_015.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_016.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_017.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_018.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_019.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_021.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="colsx">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_023.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_023b.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_024.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_025.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_026.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_027.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_priv_057.html" nobank="webank" customer="bus" area="pri" location="con" altname="Box_028"><context><![CDATA[<div id="main">[...]</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>]]></context></block>
+	<block file="boxeditoriali/box_black_priv_038.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[esito ricerca negativa]]></description></block>
+	<block file="boxeditoriali/box_black_priv_049b.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_wbb_priv_006.html" nobank="webank" customer="bus" area="pri" location="con" altname="Box_063"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_065.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_066.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_067.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_070.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_071.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_071b.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_black_priv_071c.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/bus_box_priv_074.html" nobank="webank" customer="bus" area="pri" location="con"><catalogload><![CDATA[document.getElementById('layeralert').style.display = 'block']]></catalogload><context><![CDATA[[...]<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></context></block>
+	<block file="boxeditoriali/bus_box_priv_075.html" nobank="webank" customer="bus" area="pri" location="con"><catalogload><![CDATA[document.getElementById('layeralert2').style.display = 'block']]></catalogload><context><![CDATA[[...]<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></context></block>
+	<block file="boxeditoriali/bus_box_priv_077.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/box_bus_priv_080.php" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_001.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla sinistra)]]></description></block>
+	<block file="boxeditoriali/pub_wb_spa_box_005.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(spalla sinistra)]]></description></block>
+	<block file="boxeditoriali/pub_wb_spa_box_010.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_015.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_020.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_025.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_030.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_035.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_040.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_045.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_055.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_065.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_070.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_075.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_080.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="right">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_085.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="left">[...]</div>]]></context></block>
+	<block file="boxeditoriali/pub_wb_spa_box_085b.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><context><![CDATA[<div id="left">[...]</div>]]></context></block>
+	
+	<!-- FOOTER -->
+	<block file="footer/pub_all_con_foot_000.php" nobank="webank" customer="ret|bus" area="pub" location="hom|con" ></block>
+	<block file="footer/foot_black_002.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[Pagina interna]]></description></block>
+	<block file="footer/foot_002b.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[Pagina senza navigatore]]></description></block>
+	<block file="footer/foot_priv_001.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[[...]]]></context></block>
+	
+	
+	<!-- FORM -->
+	<block file="form/pub_all_spa_form_001.php" nobank="webank" customer="ret|bus" area="pub" location="spa"></block>
+	<block file="form/form_wbb_priv_001.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_wbb_priv_002.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_black_002_priv.html" nobank="" customer="bus" area="pri" location="con"><description><![CDATA[[BLACK]]]></description><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_black_003_priv.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_black_005_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_black_005b_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/bus_priv_005c.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/bus_form_006.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/bus_form_007.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="page"><div id="main2">[...]</div></div>]]></context></block>
+	<block file="form/bus_form_008.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="mainbas2">[...]</div>]]></context></block>
+	<block file="form/bus_form_009.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="mainbas2">[...]</div>]]></context></block>
+	<block file="form/bus_form_010.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="mainbas2">[...]</div>]]></context></block>
+	<block file="form/bus_form_012.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="form/bus_form_013.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="form/bus_form_014.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="form/bus_form_015.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div class="fp">[...]</div>]]></context></block>
+	<block file="form/form_black_040_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context><description><![CDATA[SOLO POP UP]]></description></block>
+	<block file="form/form_black_041_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context><description><![CDATA[SOLO POP UP]]></description></block>
+	<block file="form/bus_priv_060.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/bus_priv_070.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="form/form_005_priv.html" nobank="webank" customer="bus" area="pri" location="fro" altname="Form_010"></block>
+	<block file="form/form_black_001_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_001b_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_002_priv.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(INPUT)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_002b_priv.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[PROMO]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_003_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[OUTPUT]]></description></block>
+	<block file="form/form_black_005_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_005b_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_005c_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_006_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_006b_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_007_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_007b_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_008_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_009_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_020_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_030_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_040_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[SOLO POP UP ]]></description></block>
+	<block file="form/form_black_041_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[OUTPUT SOLO POP UP]]></description></block>
+	<block file="form/form_black_050_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_060_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_070_priv.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_black_080_priv.html" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_090_priv.php" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_100_priv.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(form usata nella firma digitale/una colonna di campi/grandezze fisse)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_100b_priv.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(form identica a quella sopra, ma usata se in pagina &egrave; contestualmente presente una form con grafica grigia)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="form/form_110_priv.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(OTP)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<!-- NAVIGAZIONE -->
+	<block file="navigazione/pub_all_con_nav_001.php" nobank="webank" customer="ret|bus" area="pub" location="hom|con"><context><![CDATA[<div class="outer_container"><div class="container"><div class="main_content">[...]</div></div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_001.php" nobank="webank" customer="ret" area="pri" location="con|fro"></block>
+	<block file="navigazione/nav_black_priv_001c.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con|fro" altname="Nav_001"><context><![CDATA[<div class="page800">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_002.php" nobank="" customer="ret" area="pri" location="con|fro"></block>
+	<block file="navigazione/nav_black_priv_003.html" nobank="" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="content"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_005.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_006_new.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[nuovo oggetto di errore in tab di navigazione]]></description><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_006.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[oggetto di errore old]]></description><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_007.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_008.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_wb_priv_011.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[1 Attivo - 2 Precedente - 3 Successivo - 5 Sospeso]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<block file="navigazione/nav_black_priv_013.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_013b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_014.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_014b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_014c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_014d.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(bottone disattivato)]]></description></block>
+	<block file="navigazione/nav_black_priv_015.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_016.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_017.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_019.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div class="box">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_020.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_030.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_040.php" nobank="" customer="ret" area="pri" location="spa"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block><br/>
+	<block file="navigazione/nav_black_priv_050.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><table cellspacing="0" cellpadding="0" class="condiz2" style="border:0"><tr><td style="border:0">[...]</td></tr></table></div>]]></context></block>
+	<block file="navigazione/nav_priv_001_bus.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[<div class="page800">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_001_c_bus.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[<div class="page800">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_002_bus.html" nobank="webank" customer="bus" area="pri" location="fro|spa"><context><![CDATA[<div id="colsx">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_004_bus.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[<div class="box2">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_005_bus.html" nobank="webank" customer="bus" area="pri" location="con|fro"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="navigazione/nav_black_priv_005.html" nobank="" customer="bus" area="pri" location="con" ><context><![CDATA[<div id="main">[...]</div>]]></context><description><![CDATA[BLACK]]></description></block>
+	<block file="navigazione/nav_black_priv_007.html" nobank="" customer="bus" area="pri" location="con"></block>
+	<block file="navigazione/nav_priv_006_bus.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="navigazione/nav_priv_007_bus.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="navigazione/nav_priv_008_bus.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="navigazione/nav_priv_009_bus.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="navigazione/nav_priv_013_bus.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	<block file="navigazione/nav_priv_014_bus.html" nobank="webank" customer="bus" area="pri" location="spa"><context><![CDATA[<div class="page1024"><div id="colsx">[...]</div></div>]]></context></block>
+	<block file="navigazione/bus_nav_black_priv_013.html" nobank="webank" customer="bus" area="pri" location="con"><description><![CDATA[BLACK]]></description></block>
+	<block file="navigazione/nav_priv_015_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_016_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_017_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_018_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_019_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_020_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_021_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_022_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_023_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_024_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[[...]]]></context></block>
+	<block file="navigazione/nav_priv_025_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_026_bus.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="navigazione/nav_priv_027_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="navigazione/nav_priv_028_bus.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="navigazione/pub_wb_hom_nav_000.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="hom"></block>
+	<block file="navigazione/nav_wb_priv_012.html" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[1 Attivo - 2 Precedente - 3 Successivo - 5 Sospeso]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_060.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/nav_black_priv_065.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="navigazione/pub_wb_int_btn_001.php" altname="3.1 Pulsante generico con filetto divisorio" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="navigazione/pub_wb_int_btn_002.php" altname="3.2 Pulsante generico senza filetto" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="navigazione/pub_wb_int_btn_003.php" altname="3.3 Pulsante evidente (in grafica)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="navigazione/pub_wb_int_btn_004.php" altname="3.4 Pulsante di stampa" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	<block file="navigazione/pub_wb_con_nav_001.php" altname="3.5 Box ''Leggi in'' 1 - 3 minuti" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="navigazione/pub_wb_con_nav_005.php" altname="3.6 Link 3 colonne fisse" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="navigazione/pub_wb_con_nav_015.php" altname="3.7 Paginazione" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	<block file="navigazione/pub_wb_spa_nav_005.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"></block>
+	<block file="navigazione/pub_wb_con_nav_025.php" altname="3.8 Link 3 colonne fisse + bottone" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	<!-- TABELLE -->
+	<block file="tabelle/bus_tab_priv_003.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="colsx">[...]</div></div>]]></context></block>
+	<block file="tabelle/bus_tab_priv_004.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/bus_tab_priv_005.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/bus_tab_priv_006.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/bus_tab_priv_001.html" nobank="webank" customer="bus" area="pri" location="fro"><context><![CDATA[<div id="contenuti"><div class="colsx">[...]</div></div>]]></context></block>
+	<block file="tabelle/bus_tab_priv_002.html" nobank="webank" customer="bus" area="pri" location="fro"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_001.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_001b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context><description><![CDATA[POPUP]]></description></block>
+	<block file="tabelle/tab_black_priv_002.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_007.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_008.html" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_008b.php" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_010.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_010b.html" nobank="" customer="ret" area="pri" location="con" altname="Tab_010"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_010c.html" nobank="" customer="ret" area="pri" location="con" altname="Tab_010b"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_010d.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con" altname="Tab_010c"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context><description><![CDATA[(pop up 440px)]]></description></block>
+	<block file="tabelle/tab_black_priv_010e.php" nobank="" customer="ret" area="pri" location="con" altname="Tab_010e"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context><description><![CDATA[(nessun risultato ricerca)]]></description></block>
+	<block file="tabelle/tab_black_priv_011.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_011b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_011c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_014.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="obbcontenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_priv_015.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_016.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_017.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_017b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_017c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_018.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_019.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti"><div class="box5">[...]</div></div>]]></context></block>
+	<block file="tabelle/tab_black_priv_020.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025b.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025c.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025d.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025e.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025f.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_025g.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="ctnboxsx">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_025h.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_030.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_030b.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_030c.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_040.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_050.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[<div id="content">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_060.html" nobank="webank" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_060b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_050c.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_050d.html" nobank="" customer="ret" area="pri" location="fro"><context><![CDATA[[...]]]></context></block>
+	<block file="tabelle/tab_black_priv_080.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_090.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_100.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_110.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_110.php" nobank="webank|bm|ca" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_cra_110.php" nobank="webank|bm|bpm|bl" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_black_priv_120.php" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_130.php" nobank="bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_140.php" nobank="bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_140b.php" nobank="bm" customer="ret" area="pri" location="con"><description><![CDATA[(caso senza accordion)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_150.php" nobank="bm" customer="ret" area="pri" location="con"><description><![CDATA[(nuova tabella)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_160.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_170.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(nuova versione tabelle)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_170b.php" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(nuova versione tabelle)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_170c.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(nuova vers. tabelle+paginazione)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_170d.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[()]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_010.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="tabelle/tab_priv_011.html" nobank="webank" customer="bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<block file="tabelle/pub_wb_int_tab_001.php" altname="4.1 Tabella semplice (eventuale titolo h5)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="tabelle/pub_wb_int_tab_002.php" altname="4.2 Tabella stile elenco con icone (eventuale titolo h4)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="tabelle/pub_wb_int_tab_003.php" altname="4.3 Tabella" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	<!-- TESTI -->
+	<block file="testi/bus_txt_priv_006.html" nobank="webank" customer="bus" area="pri" location="fro"></block>
+	<block file="testi/txt_black_priv_001.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001b.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001b.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001c.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001c.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_001d.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(bottone disabilitato)]]></description></block>
+	<block file="testi/ele_black_priv_001.html" nobank="" customer="ret" area="pri" location="con" altname="Testo_002"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/ele_black_priv_001.html" nobank="" customer="bus" area="pri" location="con" altname="Testo_002"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/ele_black_priv_003.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/ele_black_priv_003.html" nobank="" customer="bus" area="pri" location="con"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_002.html" nobank="" customer="ret" area="pri" location="con" altname="Testo_005"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_002.html" nobank="" customer="bus" area="pri" location="con" altname="Testo_005"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_003.html" nobank="" customer="ret" area="pri" location="con" altname="Testo_006"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_003.html" nobank="" customer="bus" area="pri" location="con" altname="Testo_006"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_011.html" nobank="" customer="ret" area="pri" location="con" altname="Testo_007"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_011.html" nobank="" customer="bus" area="pri" location="con" altname="Testo_007"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_012.html" nobank="" customer="ret" area="pri" location="con" altname="Testo_008"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_012.html" nobank="" customer="bus" area="pri" location="con" altname="Testo_008"><context><![CDATA[<div id="main">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_009.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/ele_priv_001.html" nobank="" customer="bus" area="pri" location="fro" altname="Testo_002"></block>
+	<block file="testi/ele_priv_002.html" nobank="" customer="bus" area="pri" location="fro" altname="Testo_003"></block>
+	<block file="testi/ele_priv_003.html" nobank="" customer="bus" area="pri" location="fro" altname="Testo_004"></block>
+	<block file="testi/txt_black_priv_020.html" nobank="" customer="ret" area="pri" location="con"><description><![CDATA[(caricamento in corso)]]></description></block>
+	<block file="testi/txt_priv_002.html" nobank="webank" customer="bus" area="pri" location="fro" altname="Testo_005"></block>
+	<block file="testi/txt_black_priv_030.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_030b.php" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_030c.php" nobank="" customer="ret|bus" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_040.html" nobank="" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_050.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="testi/txt_black_priv_060.php" nobank="" customer="ret|bus" area="pri" location="con"><description><![CDATA[(tipologie di tooltip)]]></description><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	
+	<block file="testi/pub_wb_int_txt_001.php" altname="2.1 Testo semplice + tooltip" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_002.php" altname="2.2 Elenco semplice" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_003.php" altname="2.3 Elenco evidente" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_004.php" altname="2.4 Elenco molto evidente" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_005.php" altname="2.5 Testo/elenco a 3 colonne fisse con immagine" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_box_001.php" altname="2.6 Box editoriali (titolo h5)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_008.php" altname="2.7 Testo semplice con immagine (eventuale titolo h5)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	
+	
+	<block file="testi/pub_wb_int_txt_006.php" altname="2.9 Note" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_010.php" altname="2.10 Accordion" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="testi/pub_wb_int_txt_007.php" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="spa"><description><![CDATA[(da utilizzarsi nella spalla dx)]]></description></block>
+	<block file="testi/pub_wb_int_txt_011.php" nobank="" customer="ret" area="pub" location="con"><context><![CDATA[<div id="maincontent">[...]</div>]]></context></block>
+	
+	<!-- TITOLI -->
+	<block file="titoli/bus_priv_tit_001.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	<block file="titoli/bus_priv_tit_002.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	<block file="titoli/bus_priv_tit_002a.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	<block file="titoli/bus_priv_tit_002b.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	<block file="titoli/bus_priv_tit_002c.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	<block file="titoli/bus_priv_tit_003.html" nobank="webank" customer="bus" area="pri" location="con|fro"></block>
+	
+	<block file="titoli/tit_wb_priv_004.html" nobank="webank" customer="bus" area="pri" location="con"></block>
+	<block file="titoli/tit_black_priv_004.html" nobank="" customer="ret" area="pri" location="con" altname="Tit_001"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="titoli/tit_black_priv_004b.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con" altname="Tit_001b"><context><![CDATA[<div id="contenuti">[...]</div>]]></context></block>
+	<block file="titoli/tit_black_priv_010.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[(Usato nell'accordion)]]></description></block>
+	<block file="titoli/tit_black_priv_010b.php" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><description><![CDATA[(Usato nell'accordion)]]></description></block>
+	<block file="titoli/tit_black_priv_015.html" nobank="bpm|bl|ca|bm" customer="ret" area="pri" location="con"><context><![CDATA[<div id="contenuti">[...]</div>]]></context><description><![CDATA[(Prova resa grafica)]]></description></block>
+	
+	<block file="titoli/pub_wb_int_tit_003.php" altname="1.1 Titolo di pagina (h2)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"><description><![CDATA[(Da usare sopra a immagine)]]></description></block>
+	<block file="titoli/pub_wb_int_tit_002.php" altname="1.2 Titolo di pagina con grafica (h2)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="titoli/pub_wb_int_tit_001.php" altname="1.3 Titolo di paragrafo (h3 + eventuale h4)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="titoli/pub_wb_int_tit_004.php" altname="1.4 Titoletto (h5 + eventuale sotto titoletto h6)" nobank="bpm|bl|ca|bm" customer="bus|ret" area="pub" location="con"></block>
+	<block file="titoli/tit_black_priv_020.php" nobank="" customer="bus|ret" area="pri" location="con"></block>
+	
+	<!-- TOOL -->
+	<block file="toolbox/tool_priv_001.html" nobank="webank" customer="ret" area="pri" location="spa|fro"></block>
+	
+	<!-- AREA VISUAL -->
+	<block file="areepromoz/pub_wb_int_box_000.php" altname="6.1 Area visual di secondo livello" nobank="bpm|bl|ca|bm" customer="ret" area="pub" location="con"></block>
+	<block file="areepromoz/pub_ret_con_areepromoz_015.php" altname="6.2 Area visual di terzo livello" nobank="bpm|bl|ca|bm" customer="ret" area="pub" location="con"><context><![CDATA[<div id="fullpromo">[...]</div>]]></context></block>
+	<block file="areepromoz/pub_wb_int_box_005.php" altname="6.3 Area visual di quarto livello" nobank="bpm|bl|ca|bm" customer="ret" area="pub" location="con"></block>
+
+	<!-- DIVISORI -->
+	<block file="divisori/pub_wb_int_box_003.php" altname="5.1 Filetto semplice" nobank="bpm|bl|ca|bm" customer="ret" area="pub" location="con"></block>
+</catalog>

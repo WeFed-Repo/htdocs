@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>checked</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.06451768,10.2365608 C5.68901801,9.82976951 5.07732435,9.83289862 4.70853233,10.2324233 L4.67608305,10.2675767 C4.30269269,10.6720829 4.30215704,11.3273368 4.67722614,11.7336617 L7.01508155,14.2663383 C7.38910322,14.6715285 8.00783451,14.6771693 8.38632767,14.2899147 L15.30598,7.21008525 C15.6892767,6.817916 15.692709,6.16710138 15.3239169,5.76757669 L15.2914677,5.73242331 C14.9180773,5.32791708 14.2999246,5.31896508 13.9134642,5.70971949 L7.69230769,12 L6.06451768,10.2365608 Z" id="path-1"></path>
+    </defs>
+    <g id="checked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icon_checkmark_on" fill="#0E977F" xlink:href="#path-1"></use>
+    </g>
+</svg>
