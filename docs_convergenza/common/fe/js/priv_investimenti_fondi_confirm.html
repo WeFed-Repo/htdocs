@@ -1,0 +1,114 @@
+<script type="text/javascript">
+
+// Esempio brutale di funzione di conferma e check
+var conferma = function() {
+
+	resetErrors($("#switchConferma"));
+	var errors = [];
+	if (!$("input[name=esempioCheck1]").is(":checked")) {
+		errors.push({ field: $("input[name=esempioCheck1]"), text: "Lorem ipsum dolor sit amet." });
+	}
+	if (!$("input[name=esempioCheck2]").is(":checked")) {
+		errors.push({ field: $("input[name=esempioCheck2]"), text: "Lorem ipsum dolor sit amet." });
+	}
+	if (errors.length>0){
+		setHasErrors(errors, '#switchConferma');
+	}
+	else 
+	{
+		// Post dei dati
+
+	}
+
+
+}
+
+</script>
+<hr>
+	<input type="hidden" name="messaggiAvvertenze" value="OK"/>
+	<input type="hidden" name="messaggiInducement" value="OK"/>
+	<input type="hidden" name="fatca" value="false"/>
+	<input type="hidden" name="idDocFacta" value="$idDocFacta"/>
+	<input type="hidden" name="idTypeFacta" value="$idTypeFacta"/>
+	<input type="hidden" name="numIntestatari" value="2"/>
+	<!-- Titolo -->
+	<div class="tithelp">
+	    <h3>Informazioni e avvertenze</h4>
+	    <br class="clear">
+	</div>
+	<!-- fine titolo -->
+	<!-- Informativa -->
+	<section>
+		<div class="row">
+			<div class="col-xs-12">
+				<h4>Tempistiche dell'ordine</h4>
+				<p>Ti ricordiamo che se inserisci un ordine in un giorno lavorativo di borsa aperta prima delle ore 21.00, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti alle ore 21.00 del giorno stesso; se inserisci l'ordine dopo le ore 21.00, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti il primo giorno lavorativo successivo di borsa aperta alle ore 21.00.<br/>
+				Se inserisci un ordine in un giorno non lavorativo o di borsa chiusa, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti il primo giorno lavorativo successivo di borsa aperta alle ore 21.00.</p>
+				<div class="form-group btnWrapper">
+				    <div class="btn-align-left">
+				        <a type="button" class="btn btn-primary"   href="javascript:requestTmp(); " title="Tempistiche dell'ordine">Tempistiche dell'ordine</a>
+				    </div>
+				    <br class="clear">
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section>
+		<div class="row">
+			<div class="col-xs-12">
+				<h4>Avvertenze sul lorem ipsum dolor</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam obcaecati optio id quasi temporibus sit quos consectetur non nam. Dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, repudiandae.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+					<li>Fugiat, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+				</ul>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quisquam sed non veritatis pariatur magnam, quam recusandae ut dolor nihil!</p>
+				<div class="checkbox inline">
+                    <label class="textWrapper">
+                        <input type="checkbox" name="esempioCheck1">
+                        <span class="text">Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet</span>
+                    </label>
+                </div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-xs-12">
+				<h4>Dolor amet consectetur</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam obcaecati optio id quasi temporibus sit quos consectetur non nam. Dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, repudiandae.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consectetur.</li>
+				</ul>
+				<div class="checkbox inline">
+                    <label class="textWrapper">
+                        <input type="checkbox" name="esempioCheck2">
+                        <span class="text">Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit lorem ipsum Lorem ipsum dolor sit amet</span>
+                    </label>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quisquam sed non veritatis pariatur magnam, quam recusandae ut dolor nihil!</p>
+			</div>
+		</div>
+	</section>
+
+<!-- pulsantiera -->
+<div class="row">
+	<div class="col-xs-12">
+		<div class="form-group btnWrapper">
+		    <div class="btn-align-left">
+		        <a type="button" class="btn btn-default" href="javascript:history.back()" title="indietro">indietro</a>
+		    </div>
+		    <div class="btn-align-right">
+		        <a type="button" class="btn btn-primary"  href="javascript:conferma()" title="conferma e invia ordine">conferma e invia ordine</a>
+		    </div>
+		    <br class="clear">
+		</div>
+	</div>
+</div>
+<!-- fine pulsantiera -->

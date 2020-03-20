@@ -1,0 +1,2 @@
+<h2>Inserimento ordine condizionato</h2>
+### Vedi template "<a href="connect.php?page=strutt_priv.php&tpl=tpl_responsive_inserimento_ordini.php&liv0=3&liv1=1&liv2=1&liv3=0&responsive=y">inserimento ordine</a>" ###	

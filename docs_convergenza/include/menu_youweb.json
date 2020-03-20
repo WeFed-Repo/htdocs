@@ -1,0 +1,239 @@
+[
+	{
+		"nome": "Pagamenti",
+		"voices": [
+			{
+				"nome": "Bancomat Pay",
+				"inlavorazione": true,
+				"tpl": "tpl_pagamenti_bancomat_pay.php"
+			}
+		]
+	},
+	{
+		"nome": "Carte",
+		"voices": [
+			{
+				"nome": "Ricariche",
+				"voices": [
+					{
+						"nome": "Ricarica",
+						"inlavorazione": true,
+						"tpl": "tpl_carte_ricarica_manuale.php"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Investimenti",
+		"voices": [
+			{
+				"nome": "Posizione",
+				"voices": [
+					{
+						"nome": "Portafoglio fondi",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_investimenti_portafoglio.php"
+					},
+					{
+						"nome": "Posizione fiscale"
+					},
+					{
+						"nome": "Web Advisory"
+					},
+					{
+						"nome": "Deposito titoli GPM"
+					},
+					{
+						"nome": "Fondi preferiti"
+					}
+				]
+			},
+			{
+				"nome": "Compravendita fondi",
+				"voices": [
+					{
+						"nome": "Compravendita",
+						"voices": [
+							{
+								"nome": "Acquisto",
+								"tpl": "inv_fes_acquisto.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Vendita",
+								"tpl": "inv_fes_vendita.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Switch",
+								"tpl": "inv_fes_switch.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Versamenti aggiuntivi PAC",
+								"tpl": "inv_fes_versamentipac.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Watchlist",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_responsive_inv_watchlist.php"
+							}
+						]
+					},
+					{
+						"nome": "Situazione ordini",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_investimenti_situazione_ordini.php"
+					}
+				]
+			},
+			{
+				"nome": "Strumenti di analisi",
+				"voices": [
+					{
+						"nome": "Ricerca/Confronta",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_inv_ricerca.php"
+					},
+					{
+						"nome": "Scheda fondo",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_inv_scheda_fondo.php"
+					},
+					{
+						"nome": "Migliori e peggiori",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_fes_topandflops.php"
+					},
+					{
+						"nome": "Simulatore PAC",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_priv_fes_pac_ricerca.php"
+					}
+				]
+			},
+			{
+				"nome": "La nostra offerta",
+				"voices": [
+					{
+						"nome": "Le case di gestione",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_nostra_offerta.php"
+					},
+					{
+						"nome": "Fondi PIR",
+						"html": "mi",
+						"tpl": "tpl_responsive_cosa_sono_fondi.php"
+					},
+					{
+						"nome": "Tempi e costi",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_fes_tempi_costi.php"
+					},
+					{
+						"nome": "ABC dei fondi",
+						"html": "mi",
+						"tpl": "tpl_responsive_cosa_sono_fondi.php"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Finanziamenti",
+		"voices": [
+			{
+				"nome": "Mutui",
+				"voices": [
+					{
+						"nome": "Fai il preventivo",
+						"tpl": "tpl_responsive_calcolatore_mutui.php",
+						"html": "mi"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Assicurazioni",
+		"voices": [
+			{
+				"nome": "Le mie polizze",
+				"voices": [
+					{
+						"nome": "Il tuo profilo assicurativo",
+						"voices": [
+							{
+								"nome": "Compilazione - prima pagina",
+								"tpl": "tpl_profilo_assicurativo_compilazione.php",
+								"inlavorazione": true
+							},
+							{
+								"nome": "Questionario",
+								"tpl": "tpl_profilo_assicurativo_questionario.php",
+								"inlavorazione": true
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Non alberate",
+		"hidden-nav": true,
+		"voices": [
+			{
+				"nome": "Test iframe",
+				"tpl": "tpl_test_iframe.php"
+			},
+			{
+				"nome": "Richiedi appuntamento",
+				"voices": [
+					{
+						"nome": "Richiedi appuntamento - inserimento",
+						"tpl": "tpl_priv_rich_appuntamento.php"
+					},
+					{
+						"nome": "Richiedi appuntamento - riepilogo",
+						"tpl": "tpl_priv_rich_appuntamento_riepilogo.php"
+					}
+				]
+			},
+			{
+				"nome": "Tooltip documenti firma digitale",
+				"inlavorazione": true,
+				"tpl": "tpl_firma_digitale_documenti_tooltip.php"
+			},
+			{
+				"nome": "Firma del contratto di identità digitale",
+				"inlavorazione": true,
+				"tpl": "tpl_identita_digitale_firma_contratto.php"
+			},
+			{
+				"nome": "Firma del contratto di identità digitale esito",
+				"inlavorazione": true,
+				"tpl": "tpl_identita_digitale_firma_contratto_esito.php"
+			},
+			{
+				"nome": "Book trading",
+				"tpl":"tpl_trading_apribook.php"
+			}
+		]
+	}
+]

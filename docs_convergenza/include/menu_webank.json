@@ -1,0 +1,473 @@
+[
+	{
+	"nome": "My home",
+	"tpl":"tpl_priv_fp_myhome.php",
+	"voices": [
+		{
+			"nome": "Il mio patrimonio",
+			"tpl":"tpl_priv_full_patrimonio.php"
+			
+		}
+		]
+	},
+	{
+	"nome": "Sportello",
+	"new": true,
+	"tpl":"tpl_priv_full_sportello.php",
+	"voices": [
+		{
+			"nome": "Gestione deposito",
+			"voices": [
+				{
+				"nome": "Linee attive",
+				"tpl":"sportello/tpl_linee_attive.php"
+				},
+				{
+				"nome": "Apertura nuova linea",
+				"tpl":"sportello/tpl_apertura_nuova_linea.php"
+				}
+			]		
+		}
+		]
+	},
+	{
+		"nome": "Carte",
+		"tpl":"tpl_priv_full_carte.php",
+		"voices": [
+			{
+				"nome": "Ricariche",
+				"voices" : [
+					{
+					"nome": "Ricarica",
+					"html": "vr",
+					"inlavorazione": true,
+					"tpl": "tpl_carte_ricarica_manuale.php"
+					}
+					
+				]
+			},
+			{
+				"nome": "Estinzione Cartimpronta ONE",
+				"inlavorazione": false,
+				"tpl": "tpl_responsive_scheda_cartaImprontaOne.php"
+			},
+			{
+				"nome": "Richiesta carta Prepaid",
+				"inlavorazione": true,
+				"tpl": "tpl_responsive_richiesta_carta_prepagata.php"
+			},
+			{
+				"nome": "Confronta carte",
+				"inlavorazione": true,
+				"tpl": "tpl_responsive_confronta_carte.php"
+			} 
+		]
+	},
+	{
+		"nome": "Trading",
+		"tpl":"tpl_priv_fp_trading.php",
+		"voices": [
+			{
+				"nome" : "Portafoglio",
+				"voices": [{
+					"nome" : "Titoli",
+					"voices": [
+						{
+							"nome":"Titoli in portafoglio",
+							"tpl": "tpl_responsive_titoli_portafoglio.php"
+						}
+					]
+				}
+				]
+			},
+
+			{
+				"nome" : "Compravendita",
+				"voices": [
+					{
+						"nome":"Ricerca titoli evoluta",
+						"voices": [
+							{
+								"nome":"Generica",
+								"tpl": "tpl_responsive_ricerca_titoli_generica.php"
+							},
+							{
+								"nome":"Azioni",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta.php"
+							},
+							{
+								"nome":"Obbligazioni",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_obbligazioni.php"
+							},
+							{
+								"nome":"Derivati",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_derivati.php"
+							},
+							{
+								"nome":"CW e Certificates",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_cw.php"
+							},
+							{
+								"nome":"ETF Plus",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_etf.php"
+							}
+						]
+						
+					},
+					{
+						"nome":"Inserimento ordini",
+						"voices": [
+							{
+								"nome":"Inserimento ordine",
+								"tpl": "tpl_responsive_inserimento_ordini.php"
+							},
+							{
+								"nome":"Inserimento ordine condizionato",
+								"tpl": "tpl_responsive_ins_ordini_cond.php"
+							},
+							{
+								"nome":"Operazioni sul capitale",
+								"tpl": "tpl_responsive_opa.php"
+							},
+							{
+								"nome":"Marginazione intraday",
+								"tpl": "tpl_responsive_marginazione_intraday.php"
+							},
+							{
+								"nome":"Marginazione overnight",
+								"tpl": "tpl_responsive_marginazione_overnight.php"
+							},
+							{
+								"nome":"Conflitto di interesse",
+								"tpl": "tpl_responsive_conflitto_interesse.php"
+							},
+							{
+								"nome":"Bail-in",
+								"tpl": "tpl_responsive_bail_in.php"
+							}
+						]
+					},
+					{
+						"nome":"Stato ordini",
+						"tpl": "tpl_responsive_stato_ordini.php"
+					}
+				]
+			},
+			{
+					"nome" : "Mercati e quotazioni",
+					"voices": [
+						{
+							"nome":"Certificates",
+							"voices": [
+							{
+								"nome":"Ricerca",
+								"tpl": "tpl_responsive_cw_certificates_ricerca.php"
+							}]
+						},
+						{
+							"nome":"ETF",
+							"voices": [
+							{
+								"nome":"Ricerca",
+								"inlavorazione": true,
+								"tpl": "tpl_responsive_etf.php"
+							}]
+						}
+
+					]
+			}
+
+		]
+	},
+	{
+		"nome": "Investimenti",
+		"tpl": "tpl_priv_fp_investimenti.php",
+		"voices": [
+			{
+				"nome": "I miei investimenti",
+				"voices": [
+				{
+						"nome": "Portafoglio",
+						"voices": [
+							{
+							"nome": "Strumenti in portafoglio",
+							"tpl": "tpl_responsive_investimenti_portafoglio.php"
+							}
+
+						]
+				},
+				{
+						"nome": "Situazione ordini",
+						"voices": [
+							{
+								"nome": "Situazione ordini",
+								"tpl": "tpl_responsive_investimenti_situazione_ordini.php"
+							}
+						]
+				}
+				]
+			},
+			{
+				"nome": "Fondi e sicav",
+				"voices": [
+					{
+							"nome": "Perch&egrave; investire in fondi",
+							"tpl": "tpl_responsive_cosa_sono_fondi.php"
+					},
+					{
+							"nome": "Le case di gestione",
+							"voices": [
+								{
+									"nome": "La nostra offerta",
+									"tpl": "tpl_responsive_nostra_offerta.php"
+								},
+								{
+									"nome": "Tempi e costi",
+									"tpl": "tpl_responsive_fes_tempi_costi.php"
+								}
+							]
+					},
+					{
+							"nome": "Soluzioni self",
+							"voices": [
+								{
+									"nome": "Migliori e peggiori",
+									"tpl": "tpl_responsive_fes_topandflops.php"
+								},
+								{
+									"nome": "Watchlist",
+									"tpl": "tpl_responsive_inv_watchlist.php"
+								}
+							]
+					},
+					{
+							"nome": "Piani di accumulo (PAC)",
+							"tpl": "tpl_responsive_cosa_sono_fondi.php",
+							"voices": [
+								{
+									"nome": "Overview",
+									"tpl": "tpl_priv_fes_pac_overview.php"
+								},
+								{
+									"nome": "Simulatore PAC",
+									"tpl": "tpl_priv_fes_pac_ricerca.php"
+								}
+							]
+					},
+					{
+							"nome": "Compravendita",
+							"voices": [
+								{
+									"nome": "Ricerca",
+									"tpl": "tpl_responsive_inv_ricerca.php"
+								},
+								{
+									"nome": "Confronta",
+									"tpl": "tpl_responsive_inv_ricerca.php&confronta=123|456"
+								}
+								,
+								{
+									"nome": "Scheda fondo",
+									"tpl": "tpl_responsive_inv_scheda_fondo.php"
+								},
+								{
+									"nome": "Acquisto",
+									"tpl": "inv_fes_acquisto.php"
+								},
+								{
+									"nome": "Vendita",
+									"tpl": "inv_fes_vendita.php"
+								},
+								{
+									"nome": "Switch",
+									"tpl": "inv_fes_switch.php"
+								},
+
+								{
+									"nome": "Versamenti aggiuntivi PAC",
+									"tpl": "inv_fes_versamentipac.php"
+								}
+							]
+					}
+					
+
+				]
+			}
+		]
+   },
+	{
+		"nome": "Finanziamenti",
+		"tpl": "tpl_priv_fp_finanziamenti.php",
+		"voices": [{
+				"nome": "Mutui",
+				"voices": [
+					{
+						"nome": "Fai il preventivo",
+						"tpl": "tpl_responsive_calcolatore_mutui.php"
+					}
+				]
+			}]
+	},
+	{
+		"nome": "Assicurazioni",
+		"tpl": "tpl_priv_fp_assic.php",
+		"voices": [
+			{
+				"nome": "Le mie polizze",
+				"voices": [
+					{
+						"nome": "Il tuo profilo assicurativo",
+						"voices": [
+							{
+								"nome": "Compilazione - prima pagina",
+								"tpl": "tpl_profilo_assicurativo_compilazione.php",
+								"inlavorazione": true,
+								"html":"vr"
+							},
+							{
+								"nome": "Questionario",
+								"tpl": "tpl_profilo_assicurativo_questionario.php",
+								"inlavorazione": true,
+								"html":"vr"
+							}
+						
+						]
+					}
+				]
+			}
+			]
+
+
+	},
+	
+	{
+		"nome": "Eventi",
+		"hidden-nav":true,
+		"voices": [{
+				"nome": "Eventi in programma",
+				"voices": [
+					{
+						"nome": "Eventi FP",
+						"tpl": "tpl_responsive_eventi.php"
+					},
+					{
+						"nome": "Eventi Sezione generica",
+						"tpl": "tpl_responsive_eventi_sezione.php"
+					},
+					{
+						"nome": "Archivio",
+						"tpl": "tpl_responsive_eventi_archivio.php"
+					}
+				]
+			}]
+	},
+	{
+		"nome": "CMS",
+		"hidden-nav":true,
+		"voices": [
+			{
+				"nome":"Servizio clienti",
+				"voices": [
+					{
+						"nome": "Contatti e numeri utili",
+						"voices": [
+							{
+								"nome":"Servizio clienti (Pagina principale)",
+								"tpl":"tpl_priv_full_responsive_servizio_clienti.php"
+							},
+							{
+								"nome":"Dialoga con Webank",
+								"tpl":"tpl_responsive_dialoga_webank.php"
+							},
+							{
+								"nome":"In diretta con Webank",
+								"tpl":"tpl_responsive_diretta_webank.php"
+							},
+							{
+								"nome":"Numeri utili",
+								"tpl":"tpl_responsive_numeri_utili.php"
+							}
+						]
+					},
+					{
+						"nome": "Strumenti",
+						"voices": [
+							{
+								"nome":"Trovare la filiale",
+								"tpl":"xxx"
+							},
+							{
+								"nome":"Requisiti tecnici",
+								"tpl":"xxx"
+							}
+							]
+					}
+				]
+			},
+			{
+				"nome":"Mobile",
+				"voices": [
+					{
+						"nome": "La tua banca a portata di mano",
+						"voices": [
+							{
+								"nome": "Webank Mobile",
+								"tpl":"tpl_responsive_mobile.php"
+							},
+							{
+								"nome": "T3",
+								"tpl":"tpl_responsive_t3.php"
+							}
+						]
+					}
+				]
+			},
+			{
+				"nome":"Comunicazioni",
+				"voices": [
+					{
+						"nome":"Novit&agrave;",
+						"voices": [
+							{
+								"nome":"(1) Le principali novit&agrave; dal 24 Giugno 2019",
+								"tpl":"tpl_responsive_novita1.php"
+							},
+							{
+								"nome":"(1) Le principali novit&agrave; dal 24 Giugno 2019",
+								"tpl":"tpl_responsive_novita2.php"
+							},
+							{
+								"nome":"(1) Le principali novit&agrave; dal 24 Giugno 2019",
+								"tpl":"tpl_responsive_novita3.php"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Non alberate",
+		"hidden-nav":true,
+		"voices": [
+			{
+				"nome": "Assistente virtuale",
+				"tpl":"link_va.php"
+			},
+			{
+				"nome": "Book trading",
+				"tpl":"tpl_trading_apribook.php"
+			},
+			{
+				"nome": "Test iframe",
+				"tpl":"tpl_test_iframe.php"
+			},
+			{
+				"nome": "Logout",
+				"tpl":"http://convergenza.webank.local/template/tpl_priv_logoff.php"
+			}
+			
+		]
+	}
+]
+

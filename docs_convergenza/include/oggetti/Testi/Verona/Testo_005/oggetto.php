@@ -1,0 +1,1 @@
+<p><span class="alert"><strong>ATTENZIONE: </strong></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et <strong>accumsan eros pharetra.</strong> In vitae dolor condimentum, fringilla nunc vitae, molestie sem.</p>

@@ -1,0 +1,10 @@
+[
+	{
+		"nome": "Lorem ipsum dolor sit amet",
+		"isin" : "1234567890"
+	},
+	{
+		"nome": "Ipsum dolor sit amet",
+		"isin" : "0987654321"
+	}
+]

@@ -1,0 +1,1 @@
+<p>La funzione di questa wiki è di tenere memoria delle decisioni prese dal nostro gruppo e delle relative motivazioni.</p>

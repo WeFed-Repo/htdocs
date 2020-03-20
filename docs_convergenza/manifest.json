@@ -1,0 +1,14 @@
+{
+  "name": "Webank",
+  "short_name": "Webank",
+  "icons": [
+    {
+      "src": "/WB/fe/img/favicon256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/?",
+  "background-color": "#8ab10b",
+  "theme_color": "#8ab10b"
+}

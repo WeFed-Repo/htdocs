@@ -1,0 +1,152 @@
+<p>Inserisci le informazioni richieste per calcolare la rata pi&ugrave; adatta alle tue esigenze.</p>
+<div id="prestCalcStatic" class="preventivatore">
+	<div id="prestCalcCons">
+		<div class="row">
+			<div class="col-xs-12">
+				<form id="formprestito" class="formGenerico" autocomplete="off" role="form">
+					<div class="form-group">
+						<div class="row">
+							<!-- valore immobile -->
+							<div class="col-sm-12">
+					   	 		<label class="control-label">Importo del prestito(&euro;)</label>
+					   	 		<div class="form-inline spinner">
+				       	 			<div class="input-group">
+										<div class="input-group-addon"><a href="javascript:;" data-refered="importoprestito" class="no-underline btn-icon plusmin min"><i class="icon icon-spinner_less"></i><i class="icon icon-meno"></i></a></div>
+										<input type="text" value="0" name="importoprestito" id="prestValore" maxlength="6" class="form-control">
+				       	 				<div class="input-group-addon"><a href="javascript:;" data-refered="importoprestito" class="no-underline btn-icon plusmin"><i class="icon icon-spinner_more"></i><i class="icon icon-piu"></i></a></div>
+									</div>
+		       	 				</div>
+					   	 	</div>
+					   	 </div>
+					  </div>
+					  <div class="form-group">
+						<div class="row">
+							<div class="col-xs-12">
+								<label class="control-label">Rate</label>
+							    <div id="prestMesi" class="slider-box sliderWithTicks">
+						            <div class="slider-wrap">
+						                <!-- Slider capitale -->
+						                <div class="slider-trail trail-bg">
+						                    <div class="ui-slider-handle">
+						                        <div class="sliderText">0</div>
+						                    </div>
+											<div class="sliderTicks"></div>
+						                </div>
+						            </div>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="btn-align-center">
+							<a type="button" class="btn btn-primary btn-big" id="prestitoButton">Calcola la rata</a>
+						</div>
+					</div>
+					<hr>
+					<div id="ratePrestitiResults">
+						<h3>VERSATILO ZERO SPESE</h3>
+						<div class="row">
+							<div class="col-sm-6 col-xs-12" data-type="normal">
+							</div>
+							<div class="col-sm-6 col-xs-12" data-type="assurance">
+							</div>
+						</div>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div id="modaleTaeg" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+	<div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h1 class="modal-title">TAEG</h1>
+      </div>
+      <div class="modal-body">
+        <p>
+                <strong>
+                    Il TAEG &egrave; determinato includendo: gli interessi calcolati al TAN di Contratto e i seguenti costi
+                    connessi:
+                </strong>
+            </p>
+            <ul>
+                <li>Spese di istruttoria/commissione;</li>
+                <li>Spesa mensile Gestione pratica;</li>
+                <li>Imposta di bollo su finanziamento;</li>
+                <li>Imposta di bollo su rendiconto annuale e di fine rapporto (per importi superiori ad &euro; 77,47).</li>
+            </ul>
+
+            <p>
+                <strong>Dal </strong><strong>calcolo del TAEG sono invece escluse le seguenti voci</strong><strong>:</strong>
+            </p>
+            <ul>
+                <li>Premi connessi ad assicurazioni facoltative;</li>
+                <li>
+                    Eventuali penali o somme dovute per l&rsquo;inadempimento di qualsiasi obbligo contrattuale inclusi gli interessi di
+                    mora.
+                </li>
+            </ul>
+            <p><strong>Nello specifico il TAEG &egrave; calcolato prevedendo:</strong></p>
+            <ul>
+                <li>Un prelievo iniziale pari all&rsquo;Importo totale del credito;</li>
+                <li>
+                    Un rimborso dell&rsquo;Importo totale dovuto dal consumatore in rate mensili di importo indicato in Contratto,
+                    aumentato
+                    delle spese mensili di gestione pratica, del bollo sul finanziamento e del bollo su Rendiconto annuale, per
+                    gli
+                    importi e nei mesi in cui tali spese sono dovute in base al Contratto. Il TAEG può variare in aumento a parit&agrave;
+                    di
+                    TAN in caso di prestito flessibile se prevista l&rsquo;applicazione di imposte di bollo e spese di istruttoria e il
+                    Cliente sceglie di aumentare l’importo della rata di rimborso e ridurre la durata del finanziamento.
+                </li>
+            </ul>
+            <p><strong>COSA CAMBIA SE DECIDI DI ACQUISTARE L&rsquo;ASSICURAZIONE FACOLTATIVA</strong></p>
+            <p>
+                Il cosiddetto &quot;Importo totale del credito&quot;, che, come visto sopra, &egrave; una delle variabili considerate per il
+                calcolo
+                del TAEG, indica il limite massimo o la somma totale degli importi messi a disposizione del consumatore in virt&ugrave;
+                del
+                contratto di credito.
+            </p>
+            <p>Il relativo valore &egrave; determinato dalla somma tra:</p>
+            <ul>
+                <li>l&rsquo;importo richiesto dal cliente</li>
+                <li>
+                    e quello delleventuale premio relativo all’assicurazione facoltativa a cui lo stesso abbia inteso aderire.
+                </li>
+            </ul>
+            <p>
+                IN PAROLE SEMPLICI: se sei interessato all&rsquo;assicurazione facoltativa e decidi di acquistarla, considera che
+                l&rsquo;Importo
+                totale del credito sar&agrave; incrementato di un importo pari del costo dell&rsquo;assicurazione stessa e <strong>
+                    conseguentemente
+                    l&rsquo;importo totale da te dovuto aumenter&agrave;
+                </strong>. Ti ricordiamo che l&rsquo;importo totale dovuto dal consumatore
+                (informazione presente nel SECCI) comprende tutto quanto avrai restituito al termine del finanziamento
+                (capitale, interessi, premi assicurativi, bolli e costi connessi).<br>
+                Aderendo all&rsquo;assicurazione facoltativa l&rsquo;importo totale del credito e l&rsquo;importo totale dovuto quindi aumentano
+                (in
+                quanto l&rsquo;operazione diventa per te complessivamente pi&ugrave; onerosa), ma <strong>
+                    il valore del TAEG potrebbe diminuire:
+                    perch&eacute;?
+                </strong> Questo si verifica in quanto, a parit&agrave; di costi, un aumento dell&rsquo;importo totale del credito
+                comporta una minor incidenza percentuale degli stessi.
+            </p>
+            <p>
+                Per maggiori dettagli consulta il contratto di finanziamento, il documento allegato al SECCI ed in particolare
+                &quot;l&rsquo;indicatore del costo totale del credito, calcolato con le stesse modalità del TAEG, includendo anche le
+                polizze
+                assicurative facoltative&quot;.
+            </p>
+      </div>
+      <div class="modal-footer">
+       	<div class="align-right">
+			<input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
+		</div>
+		</div>
+    </div>
+	</div>
+</div>

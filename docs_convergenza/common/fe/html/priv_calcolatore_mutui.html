@@ -1,0 +1,123 @@
+<div class="navfrontPage navcommPage outerTab">
+	<div class="tab-content-group">
+		<div class="innerTab">
+			<ul>
+				<li class="on"><a href="javascript:;" id="mAcquisto">Acquisto<!-- o ristrutturazione--></a></li>
+				<li><a href="javascript:;" id="mSurroga" >Surroga</a></li>
+			</ul>
+		</div>
+		<div class="separator"></div>
+	</div>
+</div>
+<div id="mCalcStatic" class="preventivatore">
+	<div id="mCalcCons">
+		<div class="row">
+			<div class="col-xs-12">
+				<form id="formmutuo" class="formGenerico" autocomplete="off" role="form">
+					<input type="hidden" value="Acquisto" name="finalita" id="mFin">
+					<input type="hidden" value="" name="codicemutuo" id="codiceMutuo">
+					<input type="hidden" value="" name="assicurazioni" id="assicurazioni">
+					<div class="form-group radiocont">
+						<div class="row">
+							<label class="control-label siWnoY">&nbsp;</label>
+							<div class="col-xs-12 col-sm-4">
+								<div class="radio">
+			       					 <label class="textWrapper">
+					         			<input type="radio" value="SI" checked name="primacasa">
+					          			<span class="text">Prima casa</span>
+					        		</label>
+			     				</div>
+			     			</div>
+			     			<div class="col-xs-12 col-sm-8">
+			     				<div class="radio">
+			       					<label class="textWrapper">
+					         			<input type="radio" value="NO" name="primacasa">
+					          			<span class="text">Seconda casa</span>
+					        		</label>
+			     				</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<!-- valore immobile -->
+							<div class="col-sm-6">
+					   	 		<label class="control-label">Valore immobile (&euro;)</label>
+					   	 		<div class="form-inline spinner">
+				       	 			<div class="input-group has-errors">
+										<div class="input-group-addon"><a href="javascript:;" data-refered="valoreimmobile" class="no-underline btn-icon plusmin min">
+											<i class="icon icon-spinner_less"></i><i class="icon icon-meno"></i>
+										</a>
+									    </div>
+										<input type="text" value="200.000" name="valoreimmobile" id="mValore" maxlength="7" class="form-control">
+				       	 				<div class="input-group-addon"><a href="javascript:;" data-refered="valoreimmobile" class="no-underline btn-icon plusmin"><i class="icon icon-spinner_more"></i><i class="icon icon-piu"></i></a></div>
+									</div>
+		       	 				</div>
+					   	 	</div>
+					   	 	<!-- fine valore immobile -->
+					   	 	<!-- importo mutuo -->
+					   	 	<div class="col-sm-6">
+					   	 		<label class="control-label">Importo mutuo (&euro;)</label>
+								<div class="form-inline spinner">
+				       	 			<div class="input-group">
+										<div class="input-group-addon"><a href="javascript:;" data-refered="importomutuo" class="no-underline btn-icon plusmin min"><i class="icon icon-spinner_less"></i><i class="icon icon-meno"></i></a></div>
+										<input type="text" value="160.000" name="importomutuo" id="mImporto" maxlength="7" class="form-control">
+				       	 				<div class="input-group-addon"><a href="javascript:;" data-refered="importomutuo" class="no-underline btn-icon plusmin"><i class="icon icon-spinner_more"></i><i class="icon icon-piu"></i></a></div>
+									</div>
+		       	 				</div>
+					   	 	</div>
+					   	 	<!-- fine importo mutuo -->
+				   	 	</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12">
+								<label class="control-label">Anni</label>
+								<div class="slider-spinners">
+									<div id="mAnni" class="slider-box sliderWithTicks">
+										<div class="slider-wrap">
+											<!-- Slider capitale -->
+											<div class="slider-trail trail-bg">
+												<div class="ui-slider-handle">
+													<div class="sliderText"></div>
+												</div>
+												<div class="sliderTicks"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							    <select class="form-control slider-alt" name="durata" id="mDur"></select>
+							</div>
+						</div>
+					</div>
+				</form>
+				
+				<div class="form-group">
+					<div class="btn-align-center">
+						<a type="button" class="btn btn-primary btn-big" id="mutuoButton">Calcola la rata</a>
+						<br class="clear">
+					</div>
+				</div>
+			</div>
+		
+	</div>
+
+	<div id="mResults">
+	</div>
+	<!-- MSG WB -->
+	<p class="note siWnoY"><strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong><br>
+		Per le condizioni economiche di tutte le tipologie di mutuo fare riferimento alle <a href="/WEBWB/serviziPerTe/trasparenza/fogliInformativi.do" target="_blank">Informazioni Generali sul Credito Immobiliare offerto a Consumatori</a> disponibili online su webank.it e bancobpm.it. L'erogazione del finanziamento &egrave; subordinata alla normale istruttoria da parte della Banca. Il credito &egrave; garantito da un'ipoteca sul diritto di propriet&agrave; o su altro diritto reale avente per oggetto un bene immobile residenziale.
+	</p>
+	<!-- / MSG WB -->
+	
+	<!-- MSG YW -->
+	<!--
+	<p class="note siYnoW"><strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong><br>
+		Per le condizioni economiche di tutte le tipologie di mutuo fare riferimento alle Informazioni Generali sul Credito Immobiliare offerto a Consumatori disponibili presso le Filiali e online alla sezione "Trasparenza" sul sito <a href="http://www.bancobpm.it" target="_blank" title="BancoBpm">bancobpm.it</a>. L'erogazione del finanziamento &egrave; subordinata alla normale istruttoria da parte della Banca. Il credito &egrave; garantito da un'ipoteca sul diritto di propriet&agrave; o su altro diritto reale avente per oggetto un bene immobile residenziale.
+	</p>-->
+	<!-- / MSG YW -->
+
+	<!-- FINE CALCOLATORE V. NO FLASH --> 
+
+</div> 

@@ -1,0 +1,542 @@
+/*VECCHIO FILE WEBANK*/
+
+
+/* Colori delle icone */
+/* Colore dei testi personalizzato per banca */
+/*Colore tabelle evidenziate */
+/* VARIABILI COLORE SPECIFICHE PER OGNI BANCA*/
+/* Colore dei testi */
+/* Colore dei link */
+/* Colore dei bottoni */
+/* Colore delle tabelle */
+/* Colore Pin2 */
+/* Colore dei form*/
+/* Colore dei bottoni personalizzato per banca */
+/* Tab */
+/* BOX GENERICI */
+/* Colore del calendario*/ 
+/*Colori profili commissionali */
+/*Colore numeri verde */
+.userMenu,
+#userMenuMobile,
+.footermenu,
+nav,
+#leftmenu,
+.toolbtn,
+#logoWrap,
+.headerMobile,
+.headerMobile .row,
+.footerFixed {
+    display: none !important;
+}
+
+#contenuti,
+#contenuti.col-md-10,
+#contenuti.col-sm-12 {
+    width: 100% !important;
+}
+
+#contenuti .col-sm-6 {
+    width: 50% !important;
+    float: left;
+}
+
+#contenuti .col-sm-4 {
+    width: 33% !important;
+    float: left;
+}
+
+#contenuti .col-sm-3 {
+    width: 25% !important;
+    float: left;
+}
+
+#contenuti .col-sm-5 {
+    width: 41% !important;
+    float: left;
+}
+
+.headerMobile {
+    display: block !important;
+    background-color: #fff;
+}
+
+header .wrapper,
+.headerMobile .row {
+    background-color: #fff;
+}
+
+header .printlogoNew {
+    display: block !important;
+    margin-bottom: 20px;
+}
+
+header .printlogoNew img {
+    width: 200px;
+}
+
+.noprint {
+    display: none !important;
+}
+
+/* Stampa esclusiva delle modali*/
+body.modal-open > * {
+    display: none;
+}
+
+body.modal-open div.modal.in, body.modal-open .scrollable,#outerwrapper {
+    display: block;
+}
+
+.modal-dialog,
+.modal {
+    width: 100% !important;
+    border: 0 !important;
+}
+
+.modal-header .close {
+    display: none;
+}
+
+.boxesito .icon {
+    margin: 20px 0 8px 30px;
+}
+
+/* stampa pagina dei movimenti*/
+@media (max-width: 767px) {
+    table tbody td.hidden-xs,
+    table thead th.hidden-xs,
+    table tfoot td.hidden-xs {
+        display: table-cell !important;
+    }
+
+    table tbody td,
+    table thead th {
+        padding: 8px;
+    }
+}
+
+#linkGrafMov,
+.console-top-movimenti,
+.console-bottom-movimenti,
+#tdSceltaRappMov,
+#idButton_print,
+#btnAdvSearchMov1,
+#btnSearchMov,
+#description_mov,
+.movimentiCont .tithelp,
+.movimentiCont hr,
+#ricercaSwitch,
+.boxesitoWrap {
+    display: none !important;
+}
+
+.boxesitoWrap {
+    padding-top: 0;
+}
+
+/*table tr td,table tr{page-break-inside: avoid;}
+#numResMsg{page-break-after: avoid;page-break-before: avoid;}*/
+table .icon.icon-2x {
+    font-size: 20px;
+}
+
+thead {
+    display: table-row-group;
+}
+
+table thead th.sortedTh {
+    background-color: #f2f2f2;
+    color: #000;
+    position: static;
+}
+
+table thead th.sortedTh .fht-cell {
+    display: none;
+}
+
+table thead th.sortableTh {
+    box-shadow: none;
+}
+
+table tfoot td.bgWhite {
+    background-color: #f2f2f2;
+}
+
+table tfoot td.brdWhite {
+    border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+.movimentiCont .borderFormRounded {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.movimentiCont .form-group {
+    margin-bottom: 10px;
+}
+
+.movimentiCont #ricercaAncora h4 {
+    display: none;
+}
+
+.movimentiCont .formGenerico {
+    padding-bottom: 5px;
+}
+
+.movimentiCont table td {
+    padding: 3px;
+}
+
+#data-grid-movimenti #totMovEnt {
+    color: #3aa746 !important;
+}
+
+#data-grid-movimenti #totMovUsc {
+    color: #ee2e1b !important;
+}
+
+a[href]:after {
+    content: "" !important;
+}
+
+/*interventi per tabelle trading */
+table.fixed {
+    table-layout: auto !important;
+}
+
+#statoOrdini tr td,
+#statoOrdini tr th {
+    font-size: 11px;
+    padding: 1px;
+    page-break-inside: avoid;
+}
+
+table td.nega {
+    color: #ff0000 !important;
+}
+
+table td.posi {
+    color: #00a651 !important;
+}
+
+#statoOrdini tr td:before,
+#statoOrdini tbody tr td:after,
+#statoOrdiniCond tr td:before,
+#statoOrdiniCond tbody tr td:after {
+    content: "";
+    height: 8px;
+    display: block;
+    page-break-inside: avoid;
+    width: 1px;
+    position: relative;
+}
+
+#boxTypePortafoglio .navContSecondLev {
+    page-break-inside: avoid;
+}
+
+#boxTypePortafoglio .btn-align-left,
+#boxTypePortafoglio .btn-align-right,
+#divAddPos {
+    display: none;
+}
+
+.modal-open {
+    overflow: visible;
+}
+
+body.modal-open div.modal {
+    position: static;
+    overflow-y: visible;
+}
+
+.modal-content {
+    overflow: visible !important;
+    height: auto !important;
+    border: 0;
+    max-height: none !important;
+}
+
+
+/*FINE VECCHIO FILE WEBANK*/
+
+
+.librerie, .oggettolib, .modal-open .modal-dialog.finanziamento .modal-title, .modal-open .skin-colonne,
+.modal-open #myhometop, .modal-open #riaBannerWrap, .modal-open .navContSecondLev .outerTab, .modal-open .accesso,
+.modal-open .separator, .modal-open #riamobile {
+    display: none !important
+}
+.modal-open #riadesktop {
+    display: block !important;
+}
+.modal-open #riaBannerWrap2 {
+    display: none !important;
+}
+
+.modal-open .navContSecondLev, .modal-open .panel-group.panel-fill, .modal-open .panel {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.modal-open .modal-dialog.finanziamento {
+    width: 100%;
+    max-width: none !important;
+    background-color: #fff !important;
+    margin: 0;
+}
+
+.info-print {
+    display: block !important;
+}
+
+.youweb.modal-open .modal-dialog.finanziamento .logo_we {
+    display: none;
+}
+
+.webank.modal-open .modal-dialog.finanziamento .logo_you {
+    display: none;
+}
+
+.youweb.modal-open .modal-dialog.finanziamento .logo_you,
+.webank.modal-open .modal-dialog.finanziamento .logo_we {
+    width: 200px;
+}
+
+.modal-open .modal-dialog.finanziamento .info-print p {
+    font-weight: 700;
+}
+
+.modal-open .modal-dialog.finanziamento table {
+    width: 100% !important;
+    max-width: 700px;
+    margin-bottom: 0;
+    border: 1px solid #afafaf;
+}
+
+.modal-open .modal-dialog.finanziamento table td,
+.modal-open .modal-dialog.finanziamento table th {
+    padding: 10px;
+}
+
+.youweb.modal-open .modal-dialog.finanziamento table th {
+    text-align: left;
+    -webkit-print-color-adjust: exact;
+    background-color: #dadee1 !important;
+}
+
+.youweb.modal-open .modal-dialog.finanziamento table .pari td {
+    -webkit-print-color-adjust: exact;
+    background-color: #EBEDEE !important;
+}
+
+.webank.modal-open .modal-dialog.finanziamento table th {
+    -webkit-print-color-adjust: exact;
+    text-align: left;
+    background-color: #dadee1;
+}
+
+.modal-open .modal-dialog.finanziamento .info-print .col-sm-2, .modal-open .modal-dialog.finanziamento .info-print .col-sm-8 {
+    width: 16.66666667% !important;
+    float: left !important;
+}
+
+.modal-open .modal-dialog.finanziamento .info-print .col-sm-2 {
+    display:none;
+}
+.modal-open #outerwrapper .modal-dialog.finanziamento .info-print .col-sm-2 {
+    display:block;
+}
+
+.modal-open .modal-dialog.finanziamento .info-print .col-sm-8 {
+    width: 66.66666667% !important;
+}
+
+.modal-open .modal-dialog.finanziamento .info-print .col-sm-8 {
+    width: 100% !important;
+}
+.modal-open #outerwrapper .modal-dialog.finanziamento .info-print .col-sm-8 {
+    width: 66.66666667% !important;
+}
+.modal-open .modal-dialog.finanziamento .close.btn-icon, .modal-open .modal-dialog.finanziamento .icon.icon-print_ria_filled {
+    display: none !important;
+}
+
+.modal-open .modal-dialog.finanziamento .table-scroll, .modal-open .modal, .modal-open .modal-content {
+    overflow: visible !important;
+    position: relative !important;
+}
+
+.table-scroll tfoot, .table-scroll tfoot th, .table-scroll tfoot td {
+    position: static !important
+}
+
+.modal-open .titButton {
+    display: none !important;
+}
+
+.modal-open .modal, .modal-open .modal-content, .modal-dialog.modal-open {
+    border: 0 !important;
+    width: 100% !important;
+}
+
+.modal-open #contenuti {
+    width: 100% !important;
+}
+
+
+.modal-open header, .modal-open footer, .modal-open nav, .modal-open aside {
+    display: none;
+}
+
+
+.modal-open .noprint {
+    display: none
+}
+
+.modal-open #ctnboxdx, .modal-open #toolbox, .modal-open .modalStampa {
+    display: none;
+}
+
+.modal-open #main {
+    min-height: 0;
+}
+
+.modal-open .modal-dialog {
+    width: 100% !important
+}
+
+.modal-open .modal-dialog.finanziamento .table-scroll table th {
+    outline: 0;
+    border: 1px solid #afafaf !important
+}
+
+.modal-dialog.finanziamento .table-scroll table th {
+    border: solid 1px #c6c6c6 !important;
+}
+
+.modal-dialog.finanziamento .table-scroll {
+    border-top: 0 !important;
+    border-bottom: 0 !important
+}
+
+.titolo h1 {
+    font-family: "bankFont", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-transform: none;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.navContSecondLev ul.tabWrapper li:not(.on) {
+    display: none
+}
+
+.panel-heading a .icon.icon-arrow_up, .panel-heading a .icon.icon-arrow_down {
+    display: none
+}
+
+.navContSecondLev .panel {
+    border: 0
+}
+
+.fixed-table-body {
+    overflow-x: visible;
+    overflow-y: visible
+}
+
+.bootstrap-table table td {
+    font-size: 12px
+}
+
+.bootstrap-table table th[data-field="iconaOp"], .bootstrap-table table td[data-field="iconaOp"] {
+    padding: 0;
+    min-width: 0;
+    font-size: 1px
+}
+
+.bootstrap-table table td[data-field="iconaOp"] i {
+    display: none;
+}
+
+.navContSecondLev .panel-fill {
+    border: 0;
+    padding: 0
+}
+
+a.btn-icon {
+    display: none
+}
+
+.modal-open #prodottiFinanziamenti {
+    margin-top: 0;
+}
+
+.modal-open #contenuti {
+    padding-bottom: 0;
+}
+
+.modal-open #contenuti h2 {
+    display: none;
+}
+
+.modal-open #contenuti h2.modal-title {
+    display: block;
+}
+
+
+@media (max-width: 480px) {
+.fixed-table-loading,.tfoot{display: none}
+.table.table-hover .card-view .title{font-weight: bold}
+.table-scroll tfoot {
+        display: none;
+    }
+
+    .table-scroll .fixed-table-body .title, .table-scroll .fixed-table-body .value {
+        width: 30%;
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .table-scroll .fixed-table-body .value {
+        width: 70%;
+        text-align: right;
+        overflow: visible;
+    }
+
+    .table-scroll td {
+        padding: 0 0 20px 0 !important;
+        border-bottom: 0 !important;
+    }
+
+    .top-box-promo .img-resp {
+        display: none
+    }
+
+    .box-banner .btn.btn-primary {
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+.table.table-hover .card-view {width: 25%;float:left;}
+}
+
+/*** STAMPA MODALI ESTINZIONE CARTE ***/
+body.modal-print > :not(.modal-print-content),
+body.modal-print > #mobileMenu,
+body.modal-print > .headerFixed,
+body.modal-print > nav,
+body.modal-print > .scrollable,
+body.modal-print > #toolbox {
+    display: none !important;
+}
+body.modal-print > .modal-print-content {
+    display: block !important;
+    padding: 16px;
+}
+/*** FINE - STAMPA MODALI ESTINZIONE CARTE ***/
