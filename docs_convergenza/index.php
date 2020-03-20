@@ -1,4 +1,4 @@
-<?php include("./core/base.php"); ?>
+<?php include("./core/base.php"); ?> 
 <!DOCTYPE html>
 <html lang="it" xmlns="http://www.w3.org/1999/xhtml">
     <head>
