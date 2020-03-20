@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+    <settings>
+        <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+        <minify>true</minify>
+        <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+        <runOnBuild>true</runOnBuild>
+        <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+        <outputDirectory />
+    </settings>
+    <!--The order of the <file> elements determines the order of the files in the bundle.-->
+    <files>
+        <file>/Contents/00000/it-IT/js/App/Common/IdentifierBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/RapportoBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/AziendaBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/BancaBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/AbiCabBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/PiazzaturaBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/IndirizzoBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/DatiAggiuntiviBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/AnagraficaBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/FilterAnagrafiche.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/FilterAbiCab.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Anagrafica/OrdinanteBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/SoggettoBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/FlowBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/ClassiServizio.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/FilterDisposizioni.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/FilterDistinte.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/StatiDistinta.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/DistintaCartBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/PoteriFirma.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Utils/validation.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Utils/mapIdentifier.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Utils/piazzatura.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/BancaModel.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/StatoRapporto.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/BaseDisposizioneBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/BaseDistintaBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/CvsBo.js</file>
+        <file>/Contents/00000/it-IT/js/App/Common/Configura/ContiBo.js</file>
+    </files>
+</bundle>

@@ -1,0 +1,30 @@
+.ank-icon {
+     background-image: url(images/sprites.png);
+}
+
+.ui-widget-content .ank-icon {
+     background-image: url(images/sprites.png);
+}
+
+
+.ank-icon-sort-up-active { width: 13px; height: 8px; background-position: 0 -16px; cursor: pointer; }
+.ank-icon-sort-down-active { width: 13px; height: 8px; background-position: -16px -16px; cursor: pointer; }
+
+.ank-icon-sort-up { width: 13px; height: 8px; background-position: -32px -16px; cursor: pointer; }
+.ank-icon-sort-down { width: 13px; height: 8px; background-position: -48px -16px; cursor: pointer; }
+
+.ank-icon-export-Pdf { width: 16px; height: 16px; background-position: 0 -32px; }
+.ank-icon-export-Excel97 { width: 16px; height: 16px; background-position: -16px -32px; }
+.ank-icon-export-Excel { width: 16px; height: 16px; background-position: -32px -32px; }
+
+
+.ank-icon-filter-apply { width: 16px; height: 16px; background-position: 0 -48px; }
+.ank-icon-filter-apply.inactive { width: 16px; height: 16px; background-position: -16px -48px; }
+.ank-icon-filter-go { width: 16px; height: 16px; background-position: -32px -48px; }
+.ank-icon-filter-go.advanced { width: 16px; height: 16px; background-position: -48px -48px; }
+.ank-icon-filter-reset{ width: 16px; height: 16px; background-position: -64px -48px; }
+
+.ank-icon-pager-first{ width: 16px; height: 16px; background-position: 0 -64px; }
+.ank-icon-pager-last{ width: 16px; height: 16px; background-position: -16px -64px; }
+.ank-icon-pager-prev{ width: 16px; height: 16px; background-position: -32px -64px; }
+.ank-icon-pager-next{ width: 16px; height: 16px; background-position: -48px -64px; }

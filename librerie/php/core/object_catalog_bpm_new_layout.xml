@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+	<!-- TITOLI -->
+	<block file="titoli/bpm_tit_001.php" altname="bpm_titolo_001" customer="ret|bus" area="privata" location="introTop" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="titoli/bpm_tit_002.php" altname="bpm_titolo_002" customer="ret|bus" area="privata" location="introBottom|contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="titoli/bpm_tit_003.php" altname="bpm_titolo_003" customer="ret|bus" area="privata" location="introBottom|contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="titoli/bpm_tit_004.php" altname="bpm_titolo_004" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="titoli/bpm_tit_005.php" altname="bpm_titolo_005" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	
+	<!-- TESTI -->
+	<block file="testi/bpm_tt_001.php" altname="bpm_testo_001" customer="ret|bus" area="privata" location="introBottom|contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="testi/bpm_tt_002.php" altname="bpm_testo_002" customer="ret|bus" area="privata" location="introBottom|contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="testi/bpm_tt_003.php" altname="bpm_testo_003" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="testi/bpm_tt_004.php" altname="bpm_testo_004" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="testi/bpm_tt_005.php" altname="bpm_testo_005" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="testi/bpm_tt_006.php" altname="bpm_testo_006" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_007.php" altname="bpm_testo_007" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_008.php" altname="bpm_testo_008" customer="ret|bus" area="privata" location="introBottom" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_009.php" altname="bpm_testo_009" customer="ret|bus" area="privata" location="disclaimer" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_010.php" altname="bpm_testo_010" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_011.php" altname="bpm_testo_011" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_012.php" altname="bpm_testo_012" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	<block file="testi/bpm_tt_013.php" altname="bpm_testo_013" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_fucsia_p_assicurazioni"></block>
+	
+	<!-- BOTTONI -->
+	<block file="bottoni/bpm_bot_001.php" altname="bpm_bottone_001" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="bottoni/bpm_bot_002.php" altname="bpm_bottone_002" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	
+	<!-- BOX -->
+	<block file="box/bpm_box_001.php" altname="bpm_box_001" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="box/bpm_box_002.php" altname="bpm_box_002" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="box/bpm_box_003.php" altname="bpm_box_003" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="box/bpm_box_004.php" altname="bpm_box_004" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	
+	<!-- TABELLE -->
+	<block file="tabelle/bpm_tab_001.php" altname="bpm_tab_001" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	<block file="tabelle/bpm_tab_002.php" altname="bpm_tab_002" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+
+	<!-- ACCORDION -->
+	<block file="accordion/bpm_accordion_001.php" altname="bpm_accordion_001" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	
+	<!-- DIVISORI -->
+	<block file="divisori/bpm_divisori_001.php" altname="bpm_divisori_001" customer="ret|bus" area="privata" location="contenuti" sectionColor="c_rosso_p_finanziamenti"></block>
+	
+</catalog>

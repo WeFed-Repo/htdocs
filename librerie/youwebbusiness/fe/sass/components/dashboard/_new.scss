@@ -1,0 +1,22 @@
+.dhb-new {
+  &.box,
+  .box {
+    line-height: 70px !important;
+    min-height: 70px !important;
+    height: 70px !important;
+    border: $green dashed 2px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.05);
+    text-decoration: none;
+    &:before {
+      content: '+';
+      display: block;
+      font-size: 70px;
+      color: rgba(0,0,0,0.2);
+      text-decoration: none;
+    }
+  }
+}

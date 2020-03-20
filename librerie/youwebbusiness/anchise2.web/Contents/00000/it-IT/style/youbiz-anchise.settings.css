@@ -1,0 +1,233 @@
+﻿/* Footer */
+
+.footer div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 1320px) {
+    .footer div.row {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Input Form */
+
+select[multiple="true"] {
+    min-height: 60px;
+}
+
+btn-file {
+    color: #357745;
+    font-weight: bold;
+}
+
+/* Font & Co */
+
+.testoRedSmallBold {
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #357745 !important;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Popup */
+
+#dialogpopup.ui-dialog-content {
+    background-color: white;
+}
+
+.popup-dialog .ui-dialog-titlebar {
+    display: none;
+}
+
+/* Grid & Table */
+
+table td.tdcenter{
+    padding-top: 10px;
+}
+
+table.grid {
+    border: none;
+}
+
+div.divgrid div, div.divgrid table.summary {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/*div.divgrid table.summary thead tr.head-title{
+    text-align: left;
+}*/
+
+
+div.divgrid table.table tbody td {
+    text-align: center;
+}
+
+    div.divgrid table.table tbody td.tdright {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    div.divgrid table.table tbody td.tdrightWrap {
+        text-align: right;
+        white-space: normal;
+    }
+
+    div.divgrid table.table tbody td.tdleft {
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    div.divgrid table.table tbody td.tdleftWrap {
+        text-align: left;
+        white-space: normal;
+    }
+
+div.divgrid table.dettagliodispo tbody td {
+    background-color: #f7fcf7;
+    text-align: left;
+}
+
+table.dettagliodispo > thead > tr.head-title {
+    background-color: #fff;
+}
+
+td.tdleftWrap {
+    font-size: 12px;
+}
+
+.dettaglio .current {
+    background-color: #357745;
+}
+
+.pager td {
+    padding-right: 5px;
+}
+
+/* Subtable - CrudForm */
+
+table.subTable {
+    width: 100%;
+    background-color: #f7fcf7;
+}
+
+    table.subTable .td1 {
+        width: 26%;
+    }
+
+.subtitle {
+    background-color: #f7fcf7;
+}
+
+td.subtitleBottom {
+    background-color: #f7fcf7;
+}
+
+div.FillForm {
+    background-color: #f7fcf7;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.FillForm .title {
+    background-color: #f7fcf7;
+}
+
+/* Operation Confirmed */
+
+div.confirmed {
+    background-color: #fff;
+    border: none;
+}
+
+    div.confirmed table > thead > tr.head-title {
+        background-color: #fff;
+    }
+
+        div.confirmed table > thead > tr.head-title > td {
+            display: inline-block;
+            color: #357745;
+            background: url(../alten-anchise-images/sf_titolo.png) right center no-repeat;
+            margin-top: 0;
+            margin-bottom: 5px;
+            padding: 10px 50px 10px 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+    div.confirmed table > tbody > tr > td > input[type='button'] {
+        background-color: #357745;
+        border: 2px solid #357745;
+        border-radius: 6px;
+        font-family: Helvetica, Arial, sans-serif;
+        height: 24px;
+        color: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+        div.confirmed table > tbody > tr > td > input[type='button']:hover,
+        div.confirmed table > tbody > tr > td > input[type='button']:focus,
+        div.confirmed table > tbody > tr > td > input[type='button']:active,
+        div.confirmed table > tbody > tr > td > input[type='button'].active {
+            background: #7ea889;
+            border-color: #7ea889;
+        }
+
+    div.confirmed table > tbody > tr > td.gray {
+        background: #f7fcf7;
+    }
+
+/* Import Warning */
+
+div.warning table > thead > tr > td.redtext {
+    text-align: left;
+}
+
+div.warning table > tbody > tr > td > input[type="button"] {
+    background-color: #357745;
+    border: 2px solid #357745;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 24px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.warning table > tbody > tr > td {
+    text-align: center;
+    width: 100%;
+}
+
+    div.warning table > tbody > tr > td:first-child {
+        white-space: nowrap;
+        width: auto;
+    }
+
+div.warning table > thead > tr.head-title {
+    background-color: #940a0a;
+}
+
+div.warning .border-red {
+    border: none;
+    font-size: 14px;
+    color: #940a0a;
+    padding: 3px;
+}
+
+div.warning .page-title h1 {
+    box-shadow: 0 8px 8px -6px #940a0a;
+    border-bottom: 1px solid #940a0a;
+}
+
+div.warning .page-title .new-flag {
+    background: url(../alten-anchise-images/blank_pin_red.png) no-repeat 0 0;
+}

@@ -1,0 +1,16 @@
+/* ONLY FOR DEBUG */
+
+/*
+[class*='col'] {
+  border: red solid 1px;
+  [class*='col'] {
+    border: blue solid 1px;
+    [class*='col'] {
+      border: pink solid 1px;
+      [class*='col'] {
+        border: green solid 1px;
+      }
+    }
+  }
+}
+*/

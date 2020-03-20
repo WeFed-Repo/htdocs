@@ -1,0 +1,9 @@
+.detail-panel {
+  height: 100%;
+  background: $white;
+  border:$gray4 1px solid;
+  padding: 1.5rem 1rem;
+  h1, h2, h3 {
+    color: $green;
+  }
+}

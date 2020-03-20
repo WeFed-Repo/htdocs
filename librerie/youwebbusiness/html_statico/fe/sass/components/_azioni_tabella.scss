@@ -1,0 +1,34 @@
+.azioni-tabella {
+  .list-inline {
+    > li, .list-inline-item {
+      border-right: $greenLink 2px solid;
+      padding: 0 0.5rem;
+      margin:0 0 0 -0.25em;
+      &, a {
+        font-weight: bold;
+        color: lighten($gray1,20);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      &.active {
+        &, a {
+          color: $greenLink;
+        }
+      }
+      &:hover {
+        a {
+          color: $greenLink;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .icon-action {
+    color: $greenLink;
+  }
+}

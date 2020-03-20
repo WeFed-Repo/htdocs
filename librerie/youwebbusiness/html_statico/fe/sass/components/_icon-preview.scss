@@ -1,0 +1,32 @@
+.c-icon-preview {
+    $size: 44px;
+    $border: 1px;
+    $iconSize: calc( #{$size} - #{$spacer} - #{$border*2} );
+    width: $size;
+    height: $size;
+    line-height: $size;
+    flex-basis: $size;
+    background: $grayBG;
+    border: solid $border $grayBordered;
+    padding: $spacer/2; 
+    margin-right: $spacer;
+    margin-bottom: $spacer;
+    transition: all 0.3s;
+    &:not(.active){
+        cursor: pointer;
+        &:hover {
+            background: darken($grayBG,5%);
+        }
+    }
+    .icon {
+        @include svg-icon-size($iconSize);
+        @include svg-icon-color($gray3);
+        transform: translate(0, -2px);
+    }
+    &.active .icon {
+        @include svg-icon-color($greenLink);
+    }
+    input {
+        display: none !important;
+    }
+}

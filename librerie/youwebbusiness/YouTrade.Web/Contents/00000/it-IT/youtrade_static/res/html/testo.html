@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title></title>
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type"/>
+	<link media="screen,print" rel="stylesheet" type="text/css" href="../css/content_layout.css?ver=@premia_version@"></link>
+</head>
+
+<body class="body-popup">
+	<div id="title-popup" class="title-popup">
+		<script>document.write(opener.currHelpLabel);</script>
+		<div onClick="window.focus();window.print();" id="printImg" class="printImg"></div>			
+	</div>
+	<div id="description-popup" class="description-popup textarea">
+		<script>
+			//alert(opener.currHelpDescription);
+			document.write(opener.currHelpDescription.replace(/\n/gi,'<br>'));
+		</script>
+	</div>
+	<script>document.title = opener.currHelpPopupTitle;</script>
+</body>
+</html>

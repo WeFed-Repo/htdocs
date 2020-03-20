@@ -1,0 +1,1 @@
+!function(e){e.fn.dataTable.moment=function(n,t){var r=e.fn.dataTable.ext.type;r.detect.unshift(function(e){return""===e||null===e?"moment-"+n:moment(e.replace?e.replace(/<.*?>/g,""):e,n,t,!0).isValid()?"moment-"+n:null}),r.order["moment-"+n+"-pre"]=function(e){return""===e||null===e?-(1/0):parseInt(moment(e.replace?e.replace(/<.*?>/g,""):e,n,t,!0).format("x"),10)}}}(jQuery);

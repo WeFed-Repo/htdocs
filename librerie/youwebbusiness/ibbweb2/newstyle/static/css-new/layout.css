@@ -1,0 +1,562 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+/* SITE SPECIFIC LAYOUT */
+    body {
+        margin: 0 auto;
+        padding: 0;
+        /*cambio colore sfondo*/
+        /*background:  #DCF2FD;*/
+        background:#ffffff;
+        text-align: center;
+ 	    SCROLLBAR-FACE-COLOR: #ffffff;
+	    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+	    SCROLLBAR-SHADOW-COLOR: #003365;
+	    SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	    SCROLLBAR-ARROW-COLOR: #003365;
+	    SCROLLBAR-TRACK-COLOR:  #ffffff;
+	    SCROLLBAR-DARKSHADOW-COLOR: #003365;
+	    SCROLLBAR-BASE-COLOR:  #ffffff;
+    }
+    div#page {
+        width: 780px;
+        
+        margin:  0 auto;
+        padding: 0;
+        
+        background: white;
+        text-align: center;
+    }
+    
+    /* HEADER */
+        div#header {
+            margin: 0 0 5em 0;
+            padding: 40px 20px;
+            
+            color: white;
+            background: black;
+            
+            text-align: left;
+        }
+        div#branding {
+            float: left;
+            width: 40%;
+            
+            margin: 0;
+            padding: 10px 0 10px 20px;
+            
+            text-align: left;
+        }
+        div#search {
+            float: right;
+            width: 49%;
+            
+            margin: 0;
+            padding: 16px 20px 0 0;
+            
+            text-align: right;
+        }
+    /* END HEADER */
+    
+    
+    /* CONTENT */
+        div#content {
+            
+        }
+        
+        /* MAIN */
+            div#main {
+                
+            }
+        /* END MAIN */
+        
+        /* SUB */
+            div#sub {
+                
+            }
+        /* END SUB */
+        
+    /* END CONTENT */
+    
+    
+    /* FOOTER */
+        div#footer {
+            color: white;
+            background-color: black;
+        }
+        div#footer p {
+            font-size: 0.8em;
+            
+            margin: 0;
+            padding: 15px;
+        }
+    /* END FOOTER */
+/* END LAYOUT */
+
+
+
+
+/* UL.SUBNAV */
+    ul.subnav {
+        margin: 0;
+        padding: 0;
+        
+        font-size: 0.8em;
+        list-style: none;
+    }
+    ul.subnav li {
+        margin: 0 0 1em 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul.subnav li a,
+    ul.subnav li a:link,
+    ul.subnav li a:visited,
+    ul.subnav li a:active {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+    ul.subnav li a:hover {
+        text-decoration: underline;
+    }
+    ul.subnav li strong {
+        padding: 0 0 0 12px;
+        background: url("../i/subnav-highlight.gif") left top no-repeat transparent;
+    }
+    ul.subnav li strong a,
+    ul.subnav li strong a:link,
+    ul.subnav li strong a:visited,
+    ul.subnav li strong a:active {
+        color: white;
+        background-color: black;
+    }
+/* END UL.SUBNAV */
+
+
+
+
+
+/**********************************************************************************************************************/
+/*============================================== ALTEN - Restyling ===================================================*/
+/**********************************************************************************************************************/
+
+.frameborder { border-top: 1px solid #999; }
+
+a img { border: none; }
+
+body {
+	height: 100%;
+	margin: 0;
+	background:url(../images/header_bkg_repeat.jpg) #fff left top repeat-x;
+	/*background-attachment: fixed;*/
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* CORREZIONI LAYOUT CORPO PRINCIPALE */
+
+.larghezzaEsterna > tbody > tr:first-child > td:first-child {
+	background: url(../images/header_bkg.jpg) center top no-repeat;
+	/*background-attachment: fixed;*/
+}
+
+.formtable {
+	margin: 0px auto;
+	width: 100%;
+}
+
+
+.new-riquadro {
+	position: relative;
+	display: block;
+	/*width: 960px !important; 10/06/2015 commentati in quanto sembra crei problemi 
+	max-width: 960px !important;  15/06/2015 eliminato in quanto "container" setta già la larghezza e container-wide andrebbe in conflitto */
+	margin: 0px auto;
+	margin-bottom: 15px;
+	margin-top: 25px;
+	background: #fff;
+	height: auto;
+	padding: 0 !important;
+	border: 1px solid #b7c5d1;
+	color: #001831;
+	border-radius: 2px;
+	box-shadow: 0px 1px 3px 1px #bbb;
+}
+
+	.riquadro > table { margin-bottom: 10px; }
+
+
+.sfondoTabelle {
+	background: #fff;
+	width: 100%;
+	/*
+	background: #fff;
+	height: auto;
+	margin: 0;
+	padding: 0 !important;
+	border: 1px solid #b7c5d1;
+	color: #001831;
+	border-radius: 2px;
+	box-shadow: 0px 1px 3px 1px #bbb;
+	*/
+}
+
+#appDescr, #percorsoMenu { visibility: hidden; }
+
+.breadcrumb {
+	display: block;
+	margin: 10px 10px 0px 0px;
+	padding: 0px;
+	background: transparent;
+	color: #666;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: right;
+}
+	.breadcrumb>li { display: inline-block; }
+	
+	.breadcrumb>li+li:before {
+		padding: 0 5px;
+		color: #aaa;
+		content: "/\00a0";
+	}
+
+
+.titoloTabella { position: relative; background: none; padding-bottom: 8px; text-align: left; }
+
+table>tbody>tr>td.titoloTabella,
+table>tbody>tr>td.old-sectionTitle { padding: 0px; }
+
+h1 {
+	color: #666;
+	background: #fff;
+}
+
+.titoloTabella h1 {
+	display: inline-block;
+	position: relative;
+	color: #666;
+	background: #fff;
+	box-shadow: 0 8px 8px -6px rgba(125,183,125,0.6);
+	border-bottom: 1px solid #7db77d;
+	padding: 0 15px 0 45px;
+	margin: 10px 0 15px 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 0px;
+	behavior: url(../newstyle/static/styles/pie.htc);
+}
+
+.titoloTabella .new-flag {
+	width: 25px;
+	height: 40px;
+	display: block;
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 4;
+}
+	.titoloTabella .new-flag {
+	/*background: url(../images/blank_pin.png) no-repeat 0px 0px;*/
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url("../images/pins-sprite.png");
+	background-position: -234px -246px;
+	background-repeat: no-repeat;
+	}
+
+h1 a, h3 a, a.help-icon, a.action {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+	h1 a img.imgSrv, h3 a img.imgSrv, a.help-icon img, a.action img {
+		float: none;
+		margin-left: 10px;
+		margin-right: 0;
+	}
+
+.sottotitolotabella { background: #f7fcf7; border-top: solid 10px #fff; }
+
+	.sottoTitoloTabella a { background: none; }
+	.sottoTitoloTabella img { margin-right: 10px; }
+	.sottotitolotabella .sottotitolotabella { border-top: none; }
+	
+
+h3 {
+	display: inline-block;
+	padding-left: 20px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+}
+
+.new-titleSection {
+	display: inline-block;
+	color: #357745;
+	background: url(../images/sf_titolo.png) right center no-repeat;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-right: 50px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.rigaChiara, .rigaScura {
+	clear: both;
+	position: relative;
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	background: #f7fcf7;
+	color: #003b79;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+	label {
+		color: #003b79;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.rigaChiara .rigaChiara, .rigaChiara .rigaScura { background: none; }
+
+
+img.search { vertical-align: middle; }
+img.questionmark-i { vertical-align: middle; margin-left:10px;}
+
+
+.divFooter {/* height: 125px; text-align: left; , aggiornato 11/08/15 */
+	min-height: 125px;
+	text-align: left;
+	font-size: 13px;
+	line-height:1.42857;
+} 
+
+	.new-footer {
+		padding: 10px 0 8px 0px;
+		border-top: 1px solid #7db77d;
+		background: #d8e9d8;
+		color: #2f4664;
+		height: 125px;
+		font-size: 14px;
+	}
+	
+	.new-container { width: 960px; margin: 0px auto; } 
+	
+	.new-footer .col-left { float: left; width: 45%; font-size: 12px; text-align: left; }
+	.new-footer .col-right { float: right; width: 45%; text-align: right; }
+	
+	.txt-14 { font-size: 14px; }
+
+	.new-footer p { margin: 4px 0px; }
+
+	.new-footer a {
+		text-decoration: underline;
+		color: #003b79;
+	}
+	
+	.new-footer-logo {
+		margin-top: 10px;
+		float: right;
+		background: url(../images/sprite.png) no-repeat 0px -178px;
+		width: 170px;
+		height: 52px;
+	}
+
+		.new-footer-logo span { display: none; }
+
+
+/************* FORM INPUT **************/
+/*td.col-1, td.col-1new { width: 125px !important; padding-left: 10px; }  RESTYLING */
+td.col-1, td.col-1new {vertical-align:middle; padding-left: 10px; text-align:left;} /* width: 145px !important; */
+td.col-2 {vertical-align:middle; width: 400px !important; padding-left: 10px; }
+td.col-3 {vertical-align:middle; padding-left: 10px !important; }
+td.col-4 {vertical-align:middle; min-width: 210px !important; padding-left: 10px; padding-right: 10px; text-align:left; }
+
+td.questionmark-t { padding-left: 10px !important; }
+
+input.btn {
+	display: inline-block;
+	height: auto;
+	position: relative;
+	margin: 0 10px;
+	margin-bottom: 10px;
+	padding: 6px 12px;
+	border-radius: 6px;
+	color: #fff;
+	background: #357745;
+	border: 2px solid #357745;
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+	.btn:hover, .btn:focus, .btn:active, .btn.active {
+		color: #fff;
+		background: #7ea889;
+		border-color: #7ea889;
+	}
+
+input.btn.small {
+	margin: 0 5px;
+	margin-bottom: 10px;
+	padding: 4px 8px;
+	background: #357745;
+	border: 2px solid #357745;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+	input.btn.small.center { display: block; margin: 0px auto; }
+
+
+div.new-buttons { margin-bottom: 20px; text-align: right; }
+
+
+.new-form-control {
+	display: inline-block;
+	/*width: 100%;*/
+	padding: 4px;
+	height: auto;
+	color: #003b79;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	background-color: #f9f9f9;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	font: inherit;
+	font-size: 12px;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+.new-form-control[disabled],
+.new-form-control[readonly],
+fieldset[disabled] .new-form-control {
+	cursor: not-allowed;
+	background-color: #eee !important;
+	opacity: 1;
+}
+
+
+select.new-form-control { height: 25px; }
+
+input[type=radio], input[type=checkbox] {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 4px 0 0;
+	margin-top: 1px \9;
+	font-size: 12px;
+	line-height: normal;
+}
+
+
+/*** TABELLE ***/
+
+table.table {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: separate;
+	margin-bottom: 0;
+	margin-top: 10px;
+	font-size: 13px;
+	color: #003b79; /* aggiunto per il colore blu, prima non c'era */
+}
+
+.table tr th,
+.table tr td.sottotitolotabella {
+	border-bottom: none;
+	border-top: none;
+	color: #001831;
+	background-color: #a7cea7;
+	vertical-align: middle !important;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 14px;
+	text-align: center;
+}
+
+.table tbody tr.odd {
+	background-color: #f5f5f5;
+}
+
+.table tbody tr.even {
+	background-color: #e3eee3;
+}
+
+table.old-pager {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+	table.old-pager:first-child { margin-top: 10px; }
+	table.old-pager:last-child { margin-bottom: 10px; }
+
+
+/*** TABS ***/
+
+.old-tabContent .old-sectionTitle { padding-top: 10px; }
+
+.old-tabContent tr.rigaScura { border-bottom: 5px solid #f7fcf7; }
+
+.old-tabPanel td.tabSpacer { background: none; }
+
+#popUpBox{ width:100% }
+
+/* aggiunto per i dettagli */
+.minContainer{
+	min-width: 800px;
+}
+.old-tableHeader th table, .old-tableHeader th table {
+    margin: auto;
+}
+
+.popUpWidth{
+	max-width: none !important;
+}
+.sottoTitoloTabella { background: #f7fcf7 !important; border-top: solid 10px #fff; }
+
+.intestazione div {
+    background-color: #a7cea7;
+    color: #001831;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.42857;
+    padding: 8px 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+.intestazione div.int-sinistra {
+    float: left;
+}
+.intestazione div.int-destra {
+	background-color: #e3eee3;
+    float: right;
+}
+.new-search{
+	margin-left:10px;
+}
+.old-fieldCalendar{
+	margin-left: 5px;
+}

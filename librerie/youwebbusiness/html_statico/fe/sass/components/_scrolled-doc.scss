@@ -1,0 +1,17 @@
+.c-scrolled-doc {
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    max-height: calc( 100vh - 300px );
+    overflow: auto;
+    border: solid 1px #c8c8c8;
+    padding: 0; // tenere a zero per evitare errori in calcolo scroll
+    > .c-scrolled-doc__innerWrap {
+        padding: 1rem;
+    }
+} 
+
+.alert-to-scroll {
+    font-size: 0.8rem;
+    padding-top: 10px;
+}

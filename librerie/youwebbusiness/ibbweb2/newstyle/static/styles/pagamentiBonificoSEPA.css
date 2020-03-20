@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+td.col-1{
+	width:110px;
+}
+td.col-2{
+	width:335px;
+}
+td.col-3{
+	width:64px;
+}
+td.col-4{
+	width:220px;
+}
+
+.questionmark-t {
+    vertical-align: top;
+}
+.questionmark-ls { 
+    vertical-align: top;
+}
+.questionmark-l { 
+    vertical-align: top;
+}
+img.questionmark-i { 
+	vertical-align: top;
+}
+
+.h24px {
+	height: 24px;
+}
+
+.riconc-txt {
+	width: 100%
+}
+
+textarea#salvaBoniSepa_4531005_monitoraggio_riconciliazione  {
+	width: 115%;
+}

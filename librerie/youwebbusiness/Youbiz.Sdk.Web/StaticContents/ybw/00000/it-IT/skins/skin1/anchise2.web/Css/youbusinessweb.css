@@ -1,0 +1,3433 @@
+@CHARSET "ISO-8859-1";
+
+/*********************************** BOOTSTRAP OVERRIDE *****************************************/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+/************************************************************************************************/
+
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+.col-xs-80, .col-xs-20, .col-xs-100 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+	.col-xs-20 { width: 23%; }
+	.col-xs-80 { width: 77%; }
+    .col-xs-100 { width: 100%; }
+
+
+    #MainSection #col1 { padding-left: 0; padding-right: 5px; }
+	#MainSection #col2 { padding-left: 5px; padding-right: 0; }
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+
+html { height: 100%; }
+
+body {
+	height: 100%;
+	margin: 0;
+	font-size: 11px;
+	font-family: "roboto", Arial, sans-serif;
+	background-color: #fff;
+}
+
+.wrapper { min-height: 100%; }
+
+.clearall { clear: both; }
+
+.header {
+	position: relative;
+	z-index: 2000;
+	-webkit-box-shadow: 0 1px 8px 1px #000000;
+    -webkit-box-shadow: 0 1px 8px 1px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0 1px 8px 1px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 8px 1px rgba(0,0,0,0.5);
+	/*behavior: url(/YouBiz.Web/Contents/common/pie.htc); - Alfa 2015 07 31 - Per scrollbar orizzontale IE8*/
+}
+
+.divFooter { height: 145px; margin-top: -145px; }
+
+.row { margin: 0; }
+
+/*.main { margin-top: 30px; padding-bottom: 125px; } - laura 17/08/2015 modificato come sotto per eliminare scrollbar verticale in homepage*/
+.main { margin-top: 28px; padding-bottom: 145px; }
+
+/************ TOP BAR AND MENUS *************/
+.topNav {
+	display:block;
+	left:0; right:0; top:0;
+	height: 78px;
+	padding: 0px;
+	border-bottom: 1px solid #eee;
+	background:#f5f9f5;
+	position:relative;
+	z-index:10;
+}
+
+ul.nav { /*float: right;*/ }
+
+.topNav .nav-pills>li>a, 
+.topNav .nav-pills>li>a:focus,
+.topNav .nav-pills>li.active>a, 
+.topNav .nav-pills>li.active>a:focus {
+	background-color:transparent;
+}
+.topNav div.navbar-collapse {
+	padding:0;
+}
+.topNav ul.nav>li {
+	width: 80px;
+	height: 78px;
+	position:relative;
+	margin: 0 1px;
+	padding: 0 3px;
+	color: #999;
+	/*text-transform:capitalize;*/
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+	line-height:14px;
+	text-align:center;
+}
+
+.topNav ul.nav>li>a:hover,
+.topNav ul.nav>li.active>a{
+	content:' ';
+	color:#7db77d
+}
+
+.topNav ul.nav>li a {
+	color:#999;
+	position: relative;
+	padding-top: 4px;
+	text-decoration: none;
+	display:block;
+	/*text-transform:capitalize;*/
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.0em;
+	line-height: 1.2em;
+}
+.topNav ul.nav>li>a>span,
+.topNav ul.nav>li span {
+	display:block;
+	color: #999;
+	/*text-transform:capitalize;*/
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.09em;
+	line-height: 1.1em;
+}
+
+.topNav ul.nav>li:hover a {
+	color:#7db77d;
+}
+
+/************ SUBMENU ***********/
+.topNav ul.dropdown-menu li.divider {
+	margin:-1px 0 0 0;
+	padding:0; border:0;
+	border-bottom:rgba(0,0,0,0.2) 1px solid;
+}
+/*.topNav .nav li:hover>ul.dropdown-menu {*/
+
+.topNav ul.dropdown-menu {
+	display: none;
+	opacity: 0;
+	top: 50px;
+	padding: 0;
+	z-index: 1000;
+	
+	text-align:left;
+	margin-top:0;
+	box-shadow:none;
+	border:#eee 1px solid;
+	border-top:0;
+	list-style:none;
+	background-color:transparent;
+	box-shadow:rgba(0,0,0,0.2) 0 6px 12px;
+	min-width:200px;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
+}
+
+.topNav ul.dropdown-menu div.menu-col {
+	width: 220px;
+}
+
+.topNav ul.dropdown-menu li {
+	position:relative;
+	margin-left: 5px;
+}
+.topNav > ul.dropdown-menu>li a {
+	margin:0;
+	padding:10px 15px;
+	font-weight:400;
+	color:#555;
+	font-size:12px;
+	border-bottom:rgba(0,0,0,0.1) 1px solid;
+}
+.topNav ul.dropdown-menu>li a i.fa {
+	margin-right:4px;
+}
+.topNav ul.dropdown-menu a.dropdown-toggle:after {
+	content: "\f105";
+	font-family: FontAwesome;
+	position: absolute;
+	font-size: 15px;
+	right: 10px;
+	top: 9px;
+	color:#999;
+}
+
+.topNav .dropdown-submenu > a:after {
+	display: block;
+	content: " ";
+	float: right;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #eaeaea;
+	margin-top: 5px;
+	margin-right: -10px;
+}
+.topNav .dropdown-submenu li:hover> a:after {
+	color:#fff !important;
+}
+.topNav ul.dropdown-menu li:last-child>a {
+	border-bottom:0;
+	border-bottom:0;
+}
+.dropdown-menu>li:hover>a, 
+.dropdown-menu>li:focus>a {
+	color:#fff !important;
+	background-color:#333;
+}
+
+/********** SUB-SUBMENU ***********/
+.topNav ul.dropdown-menu>li:hover > ul.dropdown-menu {
+	display:block;
+	position:absolute;
+	left:100%; top:0;
+	padding:0; margin:0; 
+	border-top:0 !important;
+	border-bottom:0 !important;
+	border-right:0 !important;
+
+	border:#eaeaea 1px solid;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
+}
+
+/********** MEGA MENU ***********/
+.topNav ul.nav>li.mega-menu {
+	position:inherit;
+	z-index: 10000;
+}
+.topNav ul.nav>li.mega-menu p {
+	margin:0; padding:10px 10px 0 10px;
+	font-size:13px;
+}
+
+.topNav ul.nav>li.mega-menu div {
+	display:table;
+}
+.topNav ul.nav>li.mega-menu div div {
+	border-left: 1px solid #9ec3dc;
+	border-right: 1px solid #fff;
+	margin-left:-1px;
+	display: table-cell;
+	float:none;
+	vertical-align: top;
+}
+.topNav ul.nav>li.mega-menu div div:first-child {
+	border-left: none;
+}
+.topNav ul.nav>li.mega-menu div div:last-child {
+	border-right: none;
+}
+
+.topNav ul.nav>li.mega-menu div div div { border-left: none; border-right: none; margin:0 8px; }
+
+.topNav ul.nav>li.mega-menu>ul {
+	border:none;
+	box-shadow:none;
+}
+
+.topNav ul.nav>li.mega-menu>ul ul {
+	margin:0 !important;
+	margin-left: 8px;
+	padding:0 !important;
+	list-style:none;
+}
+
+.topNav ul.nav>li.mega-menu h3 {
+	font-size:18px;
+	line-height:18px;
+	margin:10px 10px 20px 10px; padding:0;
+}
+.topNav ul.nav>li.mega-menu>ul li>a {
+	border-bottom:0;
+	padding: 6px 10px;
+	color: #666;
+	font-size: 0.9em;
+}
+.topNav ul.nav>li.mega-menu>ul li.active>a,
+.topNav ul.nav>li.mega-menu>ul li:hover>a {
+	color:#fff;
+	background: url(../images/general-sprite.png) 0px -149px no-repeat;
+}
+.topNav ul.nav>li.mega-menu>ul li.divider {
+	border:0;
+	border:rgba(0,0,0,0.01) 1px solid;
+	margin:10px 0;
+}
+/*************************************************************************/
+
+strong {
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+}
+
+a, a:link, a:visited, a:active, a:focus { color: #003b79; text-decoration: none; }
+a:hover { color: #003b79; text-decoration: underline; }
+
+h1 {
+	display: inline-table;
+	position: relative;
+	color: #666;
+	background: #fff;
+	box-shadow: 0 8px 8px -6px rgba(125,183,125,0.6);
+	border-bottom: 1px solid #7db77d;
+	padding: 0 15px 0 0;
+	margin: 10px 0 15px 0;
+	font-family: "roboto", Arial, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 24px;
+	letter-spacing: 0px;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+	.contentLeft h1 {
+		font-size: 1.4em;
+		line-height: 24px;
+		letter-spacing: 0px;
+		padding: 0 15px 0 40px;
+		margin: 10px 0px 20px 0px;
+		behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+	}
+	
+	.contentLeft h1.centered-title {
+		display: block;
+		width: 80%;
+		margin: 0px auto;
+		margin-top: 10px;
+		margin-bottom: 25px;
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: center;
+	}
+	
+	div.generic_text {
+		margin: 15px;
+		font-size: 1.04em;
+	}
+	
+h3 {
+	display: inline-block;
+	padding-left: 20px;
+	font-family: "roboto", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+}
+table th {
+	text-align: center;
+}
+
+table td{
+	text-align:left;
+}
+
+.oRight{
+	text-align:right;
+}
+
+#homepage_pref ul[id^='col'] > li,
+#homepage ul[id^='col'] > li {
+	list-style: none;
+}
+
+	#homepage #col1 { padding-left: 0; padding-right: 5px; }
+	#homepage #col2 { padding-left: 5px; padding-right: 0; }
+
+.breadcrumb {
+margin-bottom: 10px;
+position: relative;
+    background: none;
+}
+
+.section {
+	clear: both;
+	position: relative;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding: 0px;
+	padding-bottom: 5px;
+	background: #f7fcf7;
+}
+
+.section.left {
+	clear: none;
+	float: left;
+	width: 48%;
+}
+	
+.section.right {
+	clear: none;
+	float: right;
+	width: 48%;
+}
+
+.titleSection {
+	display: inline-block;
+	color: #357745;
+	background: url(../images/general-sprite.png) right 0px no-repeat;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-right: 50px;
+	font-family: "roboto", Arial, sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+	.success .titleSection {
+		background: url(../images/general-sprite.png) right -114px no-repeat;
+		color: #fff;
+	}
+	
+	.alert .titleSection,
+	.waiting .titleSection {
+	background: url(../images/general-sprite.png) right -76px no-repeat;
+	}
+	
+	.error .titleSection {
+		background: url(../images/general-sprite.png) right -38px no-repeat;
+		color: #fff;
+	}
+	
+	.error .error-field label { color: #d00; }
+	.error .error-field input,
+	.error .error-field select,
+	.error .error-field textarea { border: 1px solid #d00; }
+
+div.context-buttons {
+	float: right;
+	margin-bottom: 5px;
+}
+	.context-buttons a {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+		.context-buttons a.btnTimeline { background: url(../images/general-sprite.png) -296px -400px no-repeat; }
+			.context-buttons a.btnTimeline:hover { background-position: -296px -435px; }
+			.context-buttons a.btnTimeline.disabled { background-position: -296px -470px; cursor: default; }
+			
+		.context-buttons a.btnTable { background: url(../images/general-sprite.png) -331px -400px no-repeat; }
+			.context-buttons a.btnTable:hover { background-position: -331px -435px; }
+			.context-buttons a.btnTable.disabled { background-position: -331px -470px; cursor: default; }
+		
+		.context-buttons a.btnChart { background: url(../images/general-sprite.png) -366px -400px no-repeat; }
+			.context-buttons a.btnChart:hover { background-position: -366px -435px; }
+			.context-buttons a.btnChart.disabled { background-position: -366px -470px; cursor: default; }
+
+	
+div.context-links {
+	float: right;
+	margin-bottom: 5px;
+}
+	.context-links a,
+	.context-links a:link,
+	.context-links a:visited,
+	.context-links a:active,
+	.context-links a:focus {
+		display: inline-block;
+		height: 28px;
+		padding: 0 20px 0 40px;
+		background: url(../images/general-sprite.png) -331px -152px no-repeat;
+		color: #fff;
+		line-height: 30px;
+	}	
+	.context-links a:hover { text-decoration: none; }
+	
+	.context-links select.form-control {
+		height: auto;
+		width: auto;
+		display: inline-block;
+		margin-left: 4px;
+	}
+
+
+/***** SMALL BOXES WITHIN PAGE CONTENTS *****/
+
+.mainContent .riquadro .riquadro {
+	box-shadow: none;
+	border: 1px solid #b7c5b7;
+}
+
+.mainContent .riquadro .riquadro h4 {
+	display: block;
+	position: relative;
+	color: #666;
+	background: #fff;
+	box-shadow: 0 8px 8px -6px rgba(125,183,125,0.6);
+	border-bottom: 1px solid #7db77d;
+	border-bottom: 1px solid #61a4d3;
+	margin: 5px 10px;
+	padding: 0 10px;
+	font-family: "roboto", Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	text-align: center;
+	line-height: 1.6em;
+	letter-spacing: 0px;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+.mainContent .riquadro .riquadro div {
+	margin-top: 5px;
+	padding: 5px;
+	font-size: 0.9em;
+}
+
+.riquadro > p { margin: 10px; }
+
+/****************************************/
+
+
+/***** SLIDE-DOWN PANEL FOR GROUPS AUTHORIZATIONS *****/
+.auth-panel { position: relative; margin-bottom: 20px; display: none; }
+.auth-panel .row {
+	position: relative;
+	background: #e8f2e8;
+	border: 1px solid #8fa48f;
+	padding: 10px 0px;
+	box-shadow: 0 2px 8px 0px rgba(0,0,0,0.6);
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+	.auth-panel .top-arrow { position: absolute; top: -11px; left: 0px; width: 100%; z-index: 1000; }
+		.auth-panel .top-arrow span {
+			display: block;
+			width: 30px;
+			height: 20px;
+			margin: 0 auto;
+			background: url(../images/menu-arrow.png) center top no-repeat;
+		}
+		.auth-panel .col-1 .top-arrow span { left: 14.5%; }
+		.auth-panel .col-2 .top-arrow span { left: 48.5%; }
+		.auth-panel .col-3 .top-arrow span { left: 82.5%; }
+
+	.auth-panel .row p { margin: 0px 10px 10px 10px; }
+
+	ul.auth-list,
+	ul.auth-list ul { list-style-type: none; }
+
+		.auth-list li { padding-top: 5px;  }/*text-transform: capitalize;*/
+
+	.auth-list input[type="checkbox"] { display: inline-block; margin-left: 9px; margin-right: 9px; }
+
+/****************************************/
+
+.bs-example {
+	position: relative;
+	margin: 0px;
+	padding: 0 0px 15px;
+	font-size: 1.06em;
+}
+
+	.bs-example p { margin: 0; padding: 0; padding-top: 10px; }
+
+.top10{
+	position: relative;
+	top: 10px;
+}
+.top5{
+	position: relative;
+	top: 5px;
+}
+
+.btn {
+	display: inline-block;
+	margin: 0 5px;
+	margin-bottom: 10px;
+	padding: 4px 8px;
+	background: #357745;
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	font-size:12px;
+	line-height: 14px;
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active { color: #fff; background: #7ea889; border-color: #7ea889; }
+
+.form-horizontal .form-group{ margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+
+.form-group .btn { margin-bottom: 0; }
+
+.btn-primary {
+	position: relative;
+	margin: 0 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 28px;
+	height:44px;
+	padding: 6px 12px;
+	text-transform: uppercase;
+	background: #357745;
+	border:0;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+	font-weight:normal;
+	padding: 8px 16px;
+	border-radius: 3px
+}
+
+.table {
+    border-bottom: solid 1px #ddd;
+
+}
+
+.btn-primary.execute {
+	color: #fff;
+	background: #97d596;
+	border: 2px solid #357745;
+}
+	.btn-primary.execute:hover { background: #acddab; border-color: #7ea889; }
+
+.btn.disabled { background: #999; border-color: #999; }
+
+
+
+.select-button {
+	display: inline-block;
+	position: relative;
+	min-width: 60px;
+	margin: 10px;
+	padding: 6px 12px;
+	background: #357745;
+	border: none;
+	border-radius: 6px;
+	color: #fff;
+	font-family: "roboto", Arial, sans-serif;
+	font-size: 1.04em;
+	font-weight: bold;
+	line-height: 16px;
+	text-transform: uppercase;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc)
+}
+.select-button.active { background: #425482; color: #fff; }
+
+
+
+.form-control.thin{
+	padding:2px;
+}
+.floatl-marginr10{
+	float:left;
+	margin-right:10px;
+}
+.form-control.w-auto { width: 75%; display: inline-block; }
+
+.form-control.with-help {
+	display: inline-block;
+	width: auto;	
+}
+
+.form-control{
+	border-radius: 0;
+	background-color: #f5f5f5;	
+}
+.form-control:focus{background-color: #ffffff;}
+button[disabled], html input[disabled] { background-color: #eaeaea; border: 1px solid #ccc; }
+
+/***** NEW FORM STYLES *****/
+div.form-field-input {}
+
+	div.form-field-input label {
+		display: block;
+		padding-bottom: 3px;
+		border-bottom: none;
+		text-align: left;
+	}
+	
+	div.form-field-input .form-field {
+		display: block;
+		text-align: left;
+	}
+	div.form-field-input .form-field > div { padding-left: 0; padding-right: 0; }
+
+	div.form-field-input .form-field > div.field-buttons { display: inline-block; margin-top: 5px; }
+	
+	div.form-field-input .form-field > div.field-buttons .btn { margin: 0; }
+
+
+div.form-field-resume { padding: 0 15px; }
+
+	.form-field-resume label {
+		display: block;
+		border-bottom: 1px dotted #a2b7cb;
+		text-align: left;
+	}
+	
+	.form-field-resume .resume {
+		display: block;
+		text-align: left;
+	}
+	.form-field-resume .resume.importo { display: block; float: right; padding-top: 0; text-align: right; white-space: nowrap; }
+
+
+input.importoInt, input.importo { width: 100px; display: inline-block; text-align: right; }
+span.virgola { display: inline-block; padding: 0 5px; }
+input.importoDec { display: inline-block; width: 40px; text-align: left; }
+
+/***************************/
+.logo{
+	position:relative;
+
+}
+
+.logo a { display: block; width: 140px; height: 103px; cursor: pointer; }
+
+.logo span{
+	display: none;
+}
+
+.user-info {
+	float: left;
+	font-size: 10px;
+	font-weight: normal;
+	background: url(../images/general-sprite.png) -296px -300px no-repeat;
+	padding-left: 30px;
+}
+
+.user-info strong { color: #003b79; }
+
+.postazione {
+	background: url(../images/general-sprite.png) -296px -246px no-repeat;
+	padding-left: 30px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.postazione strong { color: #003b79; }
+
+
+
+.breadcrumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-radius: .25rem;
+    position: relative;
+    font-size: 1em;
+}
+.breadcrumb>li+li:before { color: #aaa; }
+.breadcrumb span {font-size:12px}
+
+div.circle{
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 3px;
+	background: #7ea889;
+	position: relative;
+	top: 5px;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+div.circle_line{
+	border-bottom: 3px solid #7ea889;
+	width:90%;
+	margin-top: 1px;
+	position:absolute;
+	font-size: 7px;
+}
+div.circle_line.current {
+	width: auto;
+	border-color: #357745;
+}
+
+.pager{
+	position:relative;
+	margin-right: 15px;
+}
+
+div.circle.current_page{
+	background: #357745;
+}
+
+
+/****** SELEZIONE RAPPORTO ********/
+
+.mainContent .riquadro .table { border-collapse: separate; margin-bottom: 0; border-bottom: solid 1px #ddd}
+	
+
+.mainContent .riquadro .table tr td,
+.mainContent .riquadro .table tr th {
+	border-top: 2px solid #fff;
+	
+}	
+	.mainContent .riquadro .table tbody tr:nth-child(odd),
+	.mainContent .riquadro .table tbody tr.odd { background-color: #f5f5f5; }
+	
+	.mainContent .riquadro .table tbody tr:nth-child(even),
+	.mainContent .riquadro .table tbody tr.even { background-color: #e3eee3; }
+	
+	.mainContent .riquadro .table tr th {
+		border-bottom: none;
+		border-top: none;
+		background-color: #a7cea7;
+		vertical-align: middle;
+		font-family: "roboto", Arial, sans-serif;
+		font-weight: bold;
+		font-size: 1.04em;
+		font-weight: bold;
+		line-height: 14px;
+	}
+
+.mainContent .riquadro .tabellaSelezioneCC { background: #e7f5e7; position: relative; padding: 0 5px 5px 5px; }
+
+.mainContent .riquadro .tabSelezioneCC .dataTables_wrapper { padding: 5px; background: #fff; }
+
+	.mainContent .riquadro .tabSelezioneCC .table { margin-bottom: 0; }
+	
+	.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hover,
+	.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hover:nth-child(odd),
+	.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hover:nth-child(even),
+	.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hover.odd,
+	.mainContent .riquadro .tabSelezioneCC .table tbody > tr.hover.even { cursor: pointer; background: #458e57 !important; color: #fff; }
+
+
+.CCselezionato {
+	display: block;
+	position: relative;
+	margin: 10px 0 5px 0;
+	padding: 3px;
+}
+	.CCselezionato span {
+		display: inline-block;
+		margin: 0 8px 0 0;
+		padding: 3px 4px;
+	}
+	
+		.CCselezionato .numero, .CCselezionato .ABI, .CCselezionato .CAB,
+		.CCselezionato .contabile, .CCselezionato .disponibile,
+		.CCselezionato .intestazione {
+			font-family: "roboto", Arial, sans-serif;
+			font-weight: bold;
+			font-weight: 600;
+		}
+		
+		.CCselezionato .numeri span { float: left; margin-right: 10px; width: 80%; }
+		.CCselezionato .numeri span strong { float: right; text-align: right; }
+		
+	.CCselezionato .btnSelezioneCC {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		margin-top: -10px;
+	}
+	
+	.CCselezionato .btnSelezioneCC.open { transform: rotate(180deg); }
+
+
+	
+	.dataTable th.sorting { cursor: pointer; background: url(../images/general-sprite.png) -292px -555px no-repeat; padding-left: 18px;}
+	.dataTable th.sorting_asc { cursor: pointer; background: url(../images/general-sprite.png) -292px -623px no-repeat; padding-left: 18px;}
+	.dataTable th.sorting_desc { cursor: pointer; background: url(../images/general-sprite.png) -292px -701px no-repeat;padding-left: 18px; }
+
+.dataTables_length { width: 40%; float: right; text-align: right; }
+.dataTables_filter {
+	float: left;
+	width: 250px;
+	margin: 5px 0 8px 10px;
+	padding-right: 30px;
+	background: url(../images/general-sprite.png) -296px -347px no-repeat;
+}
+	.dataTables_filter label { display: block; margin-bottom: 0; padding: 3px 0; font-weight: normal; }
+	.dataTables_length label { margin-bottom: 8px; padding: 8px 10px 0px 0; font-weight: normal; }
+	
+	.dataTables_filter input { margin: 0 10px; border: 1px solid #aaa; background: #f9f9f9; }
+	.dataTables_filter input:after {
+		content: " ";
+		display: inline-block;
+	}
+
+.dataTables_paginate { text-align: center; margin-bottom: 20px; }
+
+
+/* Hide Prev and Next links */
+.dataTables_paginate > a { display: none; }
+
+
+	.dataTables_paginate span a,
+	.dataTables_paginate span a:link,
+	.dataTables_paginate span a:visited,
+	.dataTables_paginate span a:active,
+	.dataTables_paginate span a:focus {
+	    display: inline-block;
+		position: relative;
+		margin: 10px 5px;
+		width: 28px;
+		height: 28px;
+		padding: 0;
+	    border-radius: 50%;
+		color: #fff!important;
+		background: #ddd;
+		font-weight: bold;
+		font-size: 12px;
+		text-align: center;
+		cursor: pointer;
+		line-height: 26px;
+		behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+		outline: none;
+	}
+
+.dataTables_paginate span a.current { background: #2F9988; }
+
+	.dataTables_paginate span a:hover { background: #2F9988; text-decoration: none; }
+	
+	.dataTables_paginate span a.paginate_ellipsis {
+		background: none;
+		width: 36px;
+		color: #458e57;
+		font-size: 20px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		letter-spacing: 3px;
+	}
+	.dataTables_paginate span a.paginate_ellipsis:hover { color: #4c75a1; }
+
+.radio:not(.form-check-inline), .checkbox:not(.form-check-inline) {padding-top:0;}
+
+div.select-all {
+	margin: 5px 0;
+	padding: 0 10px;
+}
+
+.cc-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
+
+/****************************************/
+/********* TABELLA ESPANDIBILE **********/
+
+.mainContent .riquadro table {}
+
+	.mainContent .riquadro .table.expandable tbody tr.odd { background-color: #f5f5f5; }
+	.mainContent .riquadro .table.expandable tbody tr.even { background-color: #e3eee3; }
+	
+
+	.mainContent .riquadro table.expandable tbody tr td table { width: 100%; }
+	
+		.mainContent .riquadro table.expandable tbody tr td table tr,
+		.mainContent .riquadro table.expandable tbody tr td table tr:nth-child(odd),
+		.mainContent .riquadro table.expandable tbody tr td table tr:nth-child(even),
+		.mainContent .riquadro .section .riquadro.importi table tr:nth-child(odd),
+		.mainContent .riquadro .section .riquadro.importi table tr:nth-child(even) { background: none; }
+		
+		
+			.mainContent .riquadro table.expandable tbody tr td table tr td { border: none; }
+
+	.mainContent .riquadro table.expandable tbody tr.details { display: none; }
+	
+		.mainContent .riquadro table.expandable tbody tr.details > td { padding: 0px; padding-top: 5px; border: none; }
+		
+		.mainContent .riquadro table.expandable tr td .riquadro,
+		.mainContent .riquadro .section .riquadro.importi {
+			box-shadow: none;
+			border: 1px solid #b7c5b7;
+		}
+		
+		.mainContent .riquadro table.expandable tr td .riquadro h4,
+		.mainContent .riquadro .section .riquadro.importi h4 {
+			display: block;
+			position: relative;
+			color: #666;
+			background: #fff;
+			box-shadow: 0 8px 8px -6px rgba(125,183,125,0.6);
+			border-bottom: 1px solid #7db77d;
+			border-bottom: 1px solid #61a4d3;
+			margin: 5px 10px;
+			padding: 0 10px;
+			font-family: "roboto", Arial, sans-serif;
+			font-size: 1.2em;
+			font-weight: 300;
+			text-align: center;
+			line-height: 1.3em;
+			letter-spacing: 0px;
+			behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+		}
+		
+		.mainContent .riquadro table.expandable tr td .riquadro div,
+		.mainContent .riquadro .section .riquadro.importi div {
+			margin-top: 10px;
+			padding: 5px;
+			font-size: 0.9em;
+		}
+			.mainContent .riquadro table.expandable tr td .riquadro div table,
+			.mainContent .riquadro .section .riquadro.importi div table { margin-bottom: 5px; }
+			
+			.mainContent .riquadro table.expandable tr td .riquadro div table td,
+			.mainContent .riquadro .section .riquadro.importi div table td {
+				border: none;
+				padding: 0 0 2px 7px;
+				font-size: 1em;
+				letter-spacing: -0.2px;
+			}
+			.mainContent .riquadro table.expandable tr td .riquadro div table td.oRight,
+			.mainContent .riquadro .section .riquadro.importi div table td.oRight { padding: 0 7px 2px 0; }
+
+
+	a.table-expand-collapse,
+	a.table-expand-collapse.expand,
+	a.table-expand-collapse.collapse {
+		display: block;
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin: 0 auto;
+		width: 20px;
+		height: 20px;
+		text-indent: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+		a.table-expand-collapse.expand { background: url(../images/icons-sprite.png) -60px 0px no-repeat; }
+		a.table-expand-collapse.collapse { background: url(../images/icons-sprite.png) -40px 0px no-repeat; }
+
+
+/****************************************/
+
+
+.mainContent .riquadro .section .riquadro.importi { margin: 10px; }
+.mainContent .riquadro .section .riquadro.importi div { margin-top: 0; }
+
+.mainContent .riquadro .section .riquadro.importi table tr td,
+.mainContent .riquadro .section .riquadro.importi table tr td.oRight {
+	font-size: 1.1em;
+	padding: 10px 8px;
+}
+/*
+	.mainContent .riquadro .section .riquadro.importi div table tr.total td {
+		background: #e7eff5;
+		color: #003b79;
+	}
+*/
+
+
+
+.checkbox input[type=checkbox]{
+	position:relative;
+	margin:0;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+/*.form-horizontal .control-label.text_right,*/
+.form-horizontal .control-label.txt_right {
+		text-align: right;
+	}
+
+.checkbox label{
+	font-weight: 700;
+}
+
+.form-control{
+	padding:0 8px;
+	height: 42px;
+	font-size: 1em;
+	border-radius: 3px;
+}
+textarea.form-control{
+	min-height: 70px;
+}
+label{
+	width: 100%;
+    font-weight: normal;
+    color: #777;
+    line-height: 21px;
+    font-size:14px;
+    margin-left:0!important;
+    margin-top:10px;
+}
+.icon-replace {margin-top:8px!important;}
+label.control-label{margin-top:0;}
+select.form-control { height: 25px; }
+
+input.default-text,
+textarea.default-text { color: #aaa; font-style: italic; }
+
+
+span.resume {
+	display: inline-block;
+	padding-top: 7px;
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: bold;
+	letter-spacing: -0.2px;
+}
+
+
+.riquadro {
+	position: relative;
+	display: block;
+	background: #fff;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 15px;
+	border: 1px solid #b7c5b7;
+	/*color: #001831;*/
+   	color: #003b79;
+	border-radius: 2px;
+	box-shadow: 0px 1px 3px 1px #bbb;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+.contentLeft .riquadro p { margin: 10px; }
+
+.contentLeft ul.link-list {
+	margin: 0;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 0;
+}
+
+	.contentLeft ul.link-list  li {
+		list-style-type: none;
+		display: block;
+		margin: 0px 10px 8px 10px;
+		padding: 0;
+	}
+	
+	.contentLeft .link-list li a { font-family: "roboto", Arial, sans-serif;
+font-weight: bold; }
+	
+
+
+div.flag {display: none;}
+
+.contentLeft .flag { top: 9px; }
+
+
+
+
+
+
+div.flag.compila					{ background: url(../images/pins-sprite.png) no-repeat 0px 0px; }
+div.flag.ccEstero					{ background: url(../images/pins-sprite.png) no-repeat -26px 0px; }
+div.flag.saldoCBI					{ background: url(../images/pins-sprite.png) no-repeat -52px 0px; }
+div.flag.portafoglio				{ background: url(../images/pins-sprite.png) no-repeat -78px 0px; }
+div.flag.anticipi					{ background: url(../images/pins-sprite.png) no-repeat -104px 0px; }
+div.flag.dossier					{ background: url(../images/pins-sprite.png) no-repeat -130px 0px; }
+div.flag.domiciliazioni				{ background: url(../images/pins-sprite.png) no-repeat -156px 0px; }
+div.flag.assegni					{ background: url(../images/pins-sprite.png) no-repeat -182px 0px; }
+div.flag.estrattoContoPeriodico		{ background: url(../images/pins-sprite.png) no-repeat -208px 0px; }
+div.flag.stampa						{ background: url(../images/pins-sprite.png) no-repeat -234px 0px; }
+div.flag.disposizioneBonifico		{ background: url(../images/pins-sprite.png) no-repeat 0px -41px; }
+div.flag.stipendi					{ background: url(../images/pins-sprite.png) no-repeat -26px -41px; }
+div.flag.bonificiEstero				{ background: url(../images/pins-sprite.png) no-repeat -52px -41px; }
+div.flag.mt1010						{ background: url(../images/pins-sprite.png) no-repeat -78px -41px; }
+div.flag.f24						{ background: url(../images/pins-sprite.png) no-repeat -104px -41px; }
+div.flag.f24ElemIdent				{ background: url(../images/pins-sprite.png) no-repeat -130px -41px; }
+div.flag.f24Quietanze				{ background: url(../images/pins-sprite.png) no-repeat -156px -41px; }
+div.flag.bollettiniBancari			{ background: url(../images/pins-sprite.png) no-repeat -182px -41px; }
+div.flag.bollettiniPostali			{ background: url(../images/pins-sprite.png) no-repeat -208px -41px; }
+div.flag.rav						{ background: url(../images/pins-sprite.png) no-repeat -234px -82px; }
+div.flag.mav						{ background: url(../images/pins-sprite.png) no-repeat 0px -82px; }
+div.flag.utenze						{ background: url(../images/pins-sprite.png) no-repeat -26px -82px; }
+div.flag.ricaricaCellulare			{ background: url(../images/pins-sprite.png) no-repeat -52px -82px; }
+div.flag.canoneTv					{ background: url(../images/pins-sprite.png) no-repeat -78px -82px; }
+div.flag.esitiAltriPagamenti		{ background: url(../images/pins-sprite.png) no-repeat -104px -82px; }
+div.flag.altriPagamenti				{ background: url(../images/pins-sprite.png) no-repeat -130px -82px; }
+div.flag.riba						{ background: url(../images/pins-sprite.png) no-repeat -156px -82px; }
+div.flag.sdd						{ background: url(../images/pins-sprite.png) no-repeat -182px -82px; }
+div.flag.rid						{ background: url(../images/pins-sprite.png) no-repeat -208px -82px; }
+div.flag.cambioCoordRid				{ background: url(../images/pins-sprite.png) no-repeat -234px -82px; }
+div.flag.incassi					{ background: url(../images/pins-sprite.png) no-repeat 0px -123px; }
+div.flag.incassiEstero				{ background: url(../images/pins-sprite.png) no-repeat -26px -123px; }
+div.flag.allineamentoSeda			{ background: url(../images/pins-sprite.png) no-repeat -52px -123px; }
+div.flag.rendicontoSeda				{ background: url(../images/pins-sprite.png) no-repeat -78px -123px; }
+div.flag.dettaglioSeda				{ background: url(../images/pins-sprite.png) no-repeat -104px -123px; }
+div.flag.allineamentoRid			{ background: url(../images/pins-sprite.png) no-repeat -130px -123px; }
+div.flag.allineamentoIban			{ background: url(../images/pins-sprite.png) no-repeat -156px -123px; }
+div.flag.esitiIncassi				{ background: url(../images/pins-sprite.png) no-repeat -182px -123px; }
+div.flag.gestioneCarte				{ background: url(../images/pins-sprite.png) no-repeat -208px -123px; }
+div.flag.gestioneIntestatari		{ background: url(../images/pins-sprite.png) no-repeat -234px -123px; }
+div.flag.gestionePosizione			{ background: url(../images/pins-sprite.png) no-repeat 0px -164px; }
+div.flag.apriPosizione				{ background: url(../images/pins-sprite.png) no-repeat -26px -164px; }
+div.flag.documenti					{ background: url(../images/pins-sprite.png) no-repeat -52px -164px; }
+div.flag.documentiInArrivo			{ background: url(../images/pins-sprite.png) no-repeat -78px -164px; }
+div.flag.archivio					{ background: url(../images/pins-sprite.png) no-repeat -104px -164px; }
+div.flag.documentiConfig			{ background: url(../images/pins-sprite.png) no-repeat -130px -164px; }
+div.flag.contratti					{ background: url(../images/pins-sprite.png) no-repeat -156px -164px; }
+div.flag.richiediAnticipo			{ background: url(../images/pins-sprite.png) no-repeat -182px -164px; }
+div.flag.esitiRichieste				{ background: url(../images/pins-sprite.png) no-repeat -208px -164px; }
+div.flag.fattureYBW					{ background: url(../images/pins-sprite.png) no-repeat -234px -164px; }
+div.flag.confidi					{ background: url(../images/pins-sprite.png) no-repeat 0px -205px; }
+div.flag.anagrafiche				{ background: url(../images/pins-sprite.png) no-repeat -26px -205px; }
+div.flag.clienti					{ background: url(../images/pins-sprite.png) no-repeat -52px -205px; }
+div.flag.fornitori					{ background: url(../images/pins-sprite.png) no-repeat -78px -205px; }
+div.flag.fornitoriEstero			{ background: url(../images/pins-sprite.png) no-repeat -104px -205px; }
+div.flag.dipendenti					{ background: url(../images/pins-sprite.png) no-repeat -130px -205px; }
+div.flag.creditoriEstero			{ background: url(../images/pins-sprite.png) no-repeat -156px -205px; }
+div.flag.debitoriEstero				{ background: url(../images/pins-sprite.png) no-repeat -182px -205px; }
+div.flag.importaAnagrafiche			{ background: url(../images/pins-sprite.png) no-repeat -208px -205px; }
+div.flag.cancellaAnagrafiche		{ background: url(../images/pins-sprite.png) no-repeat -234px -205px; }
+div.flag.disposizioni				{ background: url(../images/pins-sprite.png) no-repeat 0px -246px; }
+div.flag.history					{ background: url(../images/pins-sprite.png) no-repeat -26px -246px; }
+div.flag.elencoDistinte				{ background: url(../images/pins-sprite.png) no-repeat -52px -246px; }
+div.flag.creazioneDistinte			{ background: url(../images/pins-sprite.png) no-repeat -78px -246px; }
+div.flag.autorizzaDistinte			{ background: url(../images/pins-sprite.png) no-repeat -104px -246px; }
+div.flag.distinteAnticipoFatt		{ background: url(../images/pins-sprite.png) no-repeat -130px -246px; }
+div.flag.importaDistinte			{ background: url(../images/pins-sprite.png) no-repeat -156px -246px; }
+div.flag.importaAllineamIban		{ background: url(../images/pins-sprite.png) no-repeat -182px -246px; }
+div.flag.importaIncassiEstero		{ background: url(../images/pins-sprite.png) no-repeat -208px -246px; }
+div.flag.importaStruttureLibere		{ background: url(../images/pins-sprite.png) no-repeat -234px -246px; }
+div.flag.logImportazioni			{ background: url(../images/pins-sprite.png) no-repeat 0px -287px; }
+div.flag.estraiDatiInfo				{ background: url(../images/pins-sprite.png) no-repeat -26px -287px; }
+div.flag.estraiDisposizioni			{ background: url(../images/pins-sprite.png) no-repeat -52px -287px; }
+div.flag.schedulatore				{ background: url(../images/pins-sprite.png) no-repeat -78px -287px; }
+div.flag.configuraSchedulatore		{ background: url(../images/pins-sprite.png) no-repeat -104px -287px; }
+div.flag.riaccoda					{ background: url(../images/pins-sprite.png) no-repeat -130px -287px; }
+div.flag.sospendiRiavvia			{ background: url(../images/pins-sprite.png) no-repeat -156px -287px; }
+div.flag.associaUtente				{ background: url(../images/pins-sprite.png) no-repeat -182px -287px; }
+div.flag.aggiorna					{ background: url(../images/pins-sprite.png) no-repeat -208px -287px; }
+div.flag.struttureLibere			{ background: url(../images/pins-sprite.png) no-repeat -234px -287px; }
+div.flag.gestioneCambi				{ background: url(../images/pins-sprite.png) no-repeat 0px -328px; }
+div.flag.listinoCambi				{ background: url(../images/pins-sprite.png) no-repeat -26px -328px; }
+div.flag.monitoraggioCbi			{ background: url(../images/pins-sprite.png) no-repeat -52px -328px; }
+div.flag.news						{ background: url(../images/pins-sprite.png) no-repeat -78px -328px; }
+div.flag.configura					{ background: url(../images/pins-sprite.png) no-repeat -104px -328px; }
+div.flag.personalizzaHome			{ background: url(../images/pins-sprite.png) no-repeat -130px -328px; }
+div.flag.sicurezza					{ background: url(../images/pins-sprite.png) no-repeat -156px -328px; }
+div.flag.cambioPassword				{ background: url(../images/pins-sprite.png) no-repeat -182px -328px; }
+div.flag.gestioneDispositivi		{ background: url(../images/pins-sprite.png) no-repeat -208px -328px; }
+div.flag.infoAccessi				{ background: url(../images/pins-sprite.png) no-repeat -234px -328px; }
+div.flag.infoBonifico				{ background: url(../images/pins-sprite.png) no-repeat -0px -369px; }
+div.flag.postazione					{ background: url(../images/pins-sprite.png) no-repeat -26px -369px; }
+div.flag.aziende					{ background: url(../images/pins-sprite.png) no-repeat -52px -369px; }
+div.flag.banche						{ background: url(../images/pins-sprite.png) no-repeat -78px -369px; }
+div.flag.conti						{ background: url(../images/pins-sprite.png) no-repeat -104px -369px; }
+div.flag.importaConto				{ background: url(../images/pins-sprite.png) no-repeat -130px -369px; }
+div.flag.gestioneGruppi				{ background: url(../images/pins-sprite.png) no-repeat -156px -369px; }
+div.flag.creazioneUtenti			{ background: url(../images/pins-sprite.png) no-repeat -182px -369px; }
+div.flag.elencoUtenti				{ background: url(../images/pins-sprite.png) no-repeat -208px -369px; }
+div.flag.iterAutorizzativo			{ background: url(../images/pins-sprite.png) no-repeat -234px -369px; }
+div.flag.mobile						{ background: url(../images/pins-sprite.png) no-repeat 0px -410px; }
+div.flag.paneldispo					{ background: url(../images/pins-sprite.png) no-repeat -26px -410px; }
+div.flag.riepilogo					{ background: url(../images/pins-sprite.png) no-repeat -52px -410px; }
+div.flag.login						{ background: url(../images/pins-sprite.png) no-repeat -78px -410px; }
+div.flag.ultimeRicariche			{ background: url(../images/pins-sprite.png) no-repeat -104px -410px; }
+div.flag.assistenza					{ background: url(../images/pins-sprite.png) no-repeat -130px -410px; }
+div.flag.funzioniRecenti			{ background: url(../images/pins-sprite.png) no-repeat -156px -410px; }
+div.flag.info						{ background: url(../images/pins-sprite.png) no-repeat -182px -410px; }
+div.flag.ultimiBonifici				{ background: url(../images/pins-sprite.png) no-repeat -208px -410px; }
+div.flag.aperturaConto				{ background: url(../images/pins-sprite.png) no-repeat -234px -410px; }
+div.flag.calendario					{ background: url(../images/pins-sprite.png) no-repeat 0px -451px; }
+div.flag.notifiche					{ background: url(../images/pins-sprite.png) no-repeat -26px -451px; }
+div.flag.riepilogoFlussiCBI			{ background: url(../images/pins-sprite.png) no-repeat -52px -451px; }
+
+div.flag.incassi {display: none;}
+
+
+h1 a,
+h3 a,
+a.action { display: inline-block; margin-right: 10px; vertical-align: middle; }
+
+	h1 a img.imgSrv,
+	h3 a img.imgSrv,
+	a.action img { float: none; margin-left: 10px; margin-right: 0; }
+	
+
+/****************************** ICONE GENERAL PURPOSE *********************************/
+
+.icon-replace {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 2px 5px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-image: url(../images/icons-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+	.control-label + .icon-replace.icon-search.active{ background-position: -20px 0px;margin-top:25px!important;}
+	.icon-replace.icon-search.active			{ background-position: -20px 0px;}
+	.icon-replace.icon-search.active:hover		{ background-position: -20px -20px; }
+	.icon-replace.icon-search.selected			{ background-position: -20px -40px; }
+	.icon-replace.icon-search.selected:hover	{ background-position: -20px -60px; }
+	.icon-replace.icon-search.disabled			{ background-position: -20px -80px; }
+	.icon-replace.icon-search.disabled:hover	{ background-position: -20px -100px; }
+	
+	.icon-replace.icon-collapse.active			{ background-position: -40px 0px; }
+	.icon-replace.icon-collapse.active:hover	{ background-position: -40px -20px; }
+	.icon-replace.icon-collapse.selected		{ background-position: -40px -40px; }
+	.icon-replace.icon-collapse.selected:hover	{ background-position: -40px -60px; }
+	.icon-replace.icon-collapse.disabled		{ background-position: -40px -80px; }
+	.icon-replace.icon-collapse.disabled:hover	{ background-position: -40px -100px; }
+	
+	.icon-replace.icon-expand.active			{ background-position: -60px 0px; }
+	.icon-replace.icon-expand.active:hover		{ background-position: -60px -20px; }
+	.icon-replace.icon-expand.selected			{ background-position: -60px -40px; }
+	.icon-replace.icon-expand.selected:hover	{ background-position: -60px -60px; }
+	.icon-replace.icon-expand.disabled			{ background-position: -60px -80px; }
+	.icon-replace.icon-expand.disabled:hover	{ background-position: -60px -100px; }
+	
+	.icon-replace.icon-arrowup.active			{ background-position: -80px 0px; }
+	.icon-replace.icon-arrowup.active:hover	{ background-position: -80px -20px; }
+	.icon-replace.icon-arrowup.selected		{ background-position: -80px -40px; }
+	.icon-replace.icon-arrowup.selected:hover	{ background-position: -80px -60px; }
+	.icon-replace.icon-arrowup.disabled		{ background-position: -80px -80px; }
+	.icon-replace.icon-arrowup.disabled:hover	{ background-position: -80px -100px; }
+
+	.icon-replace.icon-arrowdown.active		{ background-position: -100px 0px; }
+	.icon-replace.icon-arrowdown.active:hover	{ background-position: -100px -20px; }
+	.icon-replace.icon-arrowdown.selected		{ background-position: -100px -40px; }
+	.icon-replace.icon-arrowdown.selected:hover{ background-position: -100px -60px; }
+	.icon-replace.icon-arrowdown.disabled		{ background-position: -100px -80px; }
+	.icon-replace.icon-arrowdown.disabled:hover{ background-position: -100px -100px; }
+	
+	.icon-replace.icon-lastpage.active			{ background-position: -120px 0px; }
+	.icon-replace.icon-lastpage.active:hover	{ background-position: -120px -20px; }
+	.icon-replace.icon-lastpage.selected		{ background-position: -120px -40px; }
+	.icon-replace.icon-lastpage.selected:hover	{ background-position: -120px -60px; }
+	.icon-replace.icon-lastpage.disabled		{ background-position: -120px -80px; }
+	.icon-replace.icon-lastpage.disabled:hover	{ background-position: -120px -100px; }
+	
+	.icon-replace.icon-firstpage.active		{ background-position: -140px 0px; }
+	.icon-replace.icon-firstpage.active:hover	{ background-position: -140px -20px; }
+	.icon-replace.icon-firstpage.selected		{ background-position: -140px -40px; }
+	.icon-replace.icon-firstpage.selected:hover{ background-position: -140px -60px; }
+	.icon-replace.icon-firstpage.disabled		{ background-position: -140px -80px; }
+	.icon-replace.icon-firstpage.disabled:hover{ background-position: -140px -100px; }
+	
+	.icon-replace.icon-next.active			{ background-position: -160px 0px; }
+	.icon-replace.icon-next.active:hover	{ background-position: -160px -20px; }
+	.icon-replace.icon-next.selected		{ background-position: -160px -40px; }
+	.icon-replace.icon-next.selected:hover	{ background-position: -160px -60px; }
+	.icon-replace.icon-next.disabled		{ background-position: -160px -80px; }
+	.icon-replace.icon-next.disabled:hover	{ background-position: -160px -100px; }
+	
+	.icon-replace.icon-prev.active			{ background-position: -180px 0px; }
+	.icon-replace.icon-prev.active:hover	{ background-position: -180px -20px; }
+	.icon-replace.icon-prev.selected		{ background-position: -180px -40px; }
+	.icon-replace.icon-prev.selected:hover	{ background-position: -180px -60px; }
+	.icon-replace.icon-prev.disabled		{ background-position: -180px -80px; }
+	.icon-replace.icon-prev.disabled:hover	{ background-position: -180px -100px; }
+	
+	.icon-replace.icon-apply.active		{ background-position: -200px 0px; }
+	.icon-replace.icon-apply.active:hover	{ background-position: -200px -20px; }
+	.icon-replace.icon-apply.selected		{ background-position: -200px -40px; }
+	.icon-replace.icon-apply.selected:hover{ background-position: -200px -60px; }
+	.icon-replace.icon-apply.disabled		{ background-position: -200px -80px; }
+	.icon-replace.icon-apply.disabled:hover{ background-position: -200px -100px; }
+	
+	.icon-replace.icon-close.active		{ background-position: -220px 0px; }
+	.icon-replace.icon-close.active:hover	{ background-position: -220px -20px; }
+	.icon-replace.icon-close.selected		{ background-position: -220px -40px; }
+	.icon-replace.icon-close.selected:hover{ background-position: -220px -60px; }
+	.icon-replace.icon-close.disabled		{ background-position: -220px -80px; }
+	.icon-replace.icon-close.disabled:hover{ background-position: -220px -100px; }
+	
+	.icon-replace.icon-help.active			{ background-position: -240px 0px; }
+	.icon-replace.icon-help.active:hover	{ background-position: -240px -20px; }
+	.icon-replace.icon-help.selected		{ background-position: -240px -40px; }
+	.icon-replace.icon-help.selected:hover	{ background-position: -240px -60px; }
+	.icon-replace.icon-help.disabled		{ background-position: -240px -80px; }
+	.icon-replace.icon-help.disabled:hover	{ background-position: -240px -100px; }
+	
+	.icon-replace.icon-edit.active			{ background-position: -260px 0px; }
+	.icon-replace.icon-edit.active:hover	{ background-position: -260px -20px; }
+	.icon-replace.icon-edit.selected		{ background-position: -260px -40px; }
+	.icon-replace.icon-edit.selected:hover	{ background-position: -260px -60px; }
+	.icon-replace.icon-edit.disabled		{ background-position: -260px -80px; }
+	.icon-replace.icon-edit.disabled:hover	{ background-position: -260px -100px; }
+	
+	.icon-replace.icon-resetfilter.active			{ background-position: -280px 0px; }
+	.icon-replace.icon-resetfilter.active:hover	{ background-position: -280px -20px; }
+	.icon-replace.icon-resetfilter.selected		{ background-position: -280px -40px; }
+	.icon-replace.icon-resetfilter.selected:hover	{ background-position: -280px -60px; }
+	.icon-replace.icon-resetfilter.disabled		{ background-position: -280px -80px; }
+	.icon-replace.icon-resetfilter.disabled:hover	{ background-position: -280px -100px; }
+	
+	.icon-replace.icon-filter.active			{ background-position: -300px 0px; }
+	.icon-replace.icon-filter.active:hover		{ background-position: -300px -20px; }
+	.icon-replace.icon-filter.selected			{ background-position: -300px -40px; }
+	.icon-replace.icon-filter.selected:hover	{ background-position: -300px -60px; }
+	.icon-replace.icon-filter.disabled			{ background-position: -300px -80px; }
+	.icon-replace.icon-filter.disabled:hover	{ background-position: -300px -100px; }
+	
+	.icon-replace.icon-calendar.active			{ background-position: -320px 0px; }
+	.icon-replace.icon-calendar.active:hover	{ background-position: -320px -20px; }
+	.icon-replace.icon-calendar.selected		{ background-position: -320px -40px; }
+	.icon-replace.icon-calendar.selected:hover	{ background-position: -320px -60px; }
+	.icon-replace.icon-calendar.disabled		{ background-position: -320px -80px; }
+	.icon-replace.icon-calendar.disabled:hover	{ background-position: -320px -100px; }
+	
+	.icon-replace.icon-addrecipient.active			{ background-position: -340px 0px; }
+	.icon-replace.icon-addrecipient.active:hover	{ background-position: -340px -20px; }
+	.icon-replace.icon-addrecipient.selected		{ background-position: -340px -40px; }
+	.icon-replace.icon-addrecipient.selected:hover	{ background-position: -340px -60px; }
+	.icon-replace.icon-addrecipient.disabled		{ background-position: -340px -80px; }
+	.icon-replace.icon-addrecipient.disabled:hover	{ background-position: -340px -100px; }
+	
+	.icon-replace.icon-delete.active			{ background-position: -360px 0px; }
+	.icon-replace.icon-delete.active:hover		{ background-position: -360px -20px; }
+	.icon-replace.icon-delete.selected			{ background-position: -360px -40px; }
+	.icon-replace.icon-delete.selected:hover	{ background-position: -360px -60px; }
+	.icon-replace.icon-delete.disabled			{ background-position: -360px -80px; }
+	.icon-replace.icon-delete.disabled:hover	{ background-position: -360px -100px; }
+	
+	.icon-replace.icon-check.active			{ background-position: -380px 0px; margin-top:25px!important;}
+	.icon-replace.icon-check.active:hover		{ background-position: -380px -20px; }
+	.icon-replace.icon-check.selected			{ background-position: -380px -40px; }
+	.icon-replace.icon-check.selected:hover	{ background-position: -380px -60px; }
+	.icon-replace.icon-check.disabled			{ background-position: -380px -80px; }
+	.icon-replace.icon-check.disabled:hover	{ background-position: -380px -100px; }
+	
+
+
+/****************************** ICONE BOX PAGINE DI SMISTAMENTO *********************************/
+
+a.box-icon {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 2px 5px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #fff;
+	background-image: url(../images/landing-icons-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+	a.box-icon:hover { background-color: #7db77d; }
+
+	a.box-icon.icon-movOnline						{ background-position: 0px 0px; }
+	a.box-icon.icon-movOnlineEstero				{ background-position: -60px 0px; }
+	a.box-icon.icon-movCBI						{ background-position: -120px 0px; }
+	a.box-icon.icon-esitiBonifici					{ background-position: -180px 0px; }
+	a.box-icon.icon-esitiStipendi					{ background-position: -240px 0px; }
+	a.box-icon.icon-esitiF24						{ background-position: -300px 0px; }
+	a.box-icon.icon-esitiAltri						{ background-position: -360px 0px; }
+	a.box-icon.icon-esitiRiba						{ background-position: -420px 0px; }
+	a.box-icon.icon-esitiDirectDebit				{ background-position: -480px 0px; }
+	a.box-icon.icon-esitiBollettiniBancari			{ background-position: -540px 0px; }
+	a.box-icon.icon-esitiAllineamentoArchivi		{ background-position: -600px 0px; }
+	a.box-icon.icon-esitiAllineamentoSeda			{ background-position: -660px 0px; }
+	a.box-icon.icon-esitiAllineamentoIban			{ background-position: -720px 0px; }
+	a.box-icon.icon-esitiBeneficiario				{ background-position: -780px 0px; }
+	a.box-icon.icon-elencoDistinte					{ background-position: -840px 0px; }
+	a.box-icon.icon-creaDistinte					{ background-position: -900px 0px; }
+	a.box-icon.icon-autorizzaDistinte				{ background-position: -960px 0px; }
+	a.box-icon.icon-gestioneAnticipoFatture			{ background-position: -1020px 0px; }
+	a.box-icon.icon-importaDistinte					{ background-position: -1080px 0px; }
+	a.box-icon.icon-importaAllineamentoArchivi		{ background-position: -1140px 0px; }
+	a.box-icon.icon-importaAllineamentoIban			{ background-position: -1200px 0px; }
+	a.box-icon.icon-importaIncassiEstero			{ background-position: -1260px 0px; }
+	a.box-icon.icon-importaStruttureLibere			{ background-position: -1320px 0px; }
+	a.box-icon.icon-estraiInformative				{ background-position: -1380px 0px; }
+	a.box-icon.icon-estraiEsitiAllineamentoArchivi	{ background-position: -1440px 0px; }
+	a.box-icon.icon-estraiEsitiAllineamentoSeda		{ background-position: -1500px 0px; }
+	a.box-icon.icon-estraiEsitiAllineamentoIban		{ background-position: -1560px 0px; }
+    a.box-icon.icon-saldoOnline						{ background-position: -1620px 0px; }
+	a.box-icon.icon-saldoOnlineEstero				{ background-position: -1680px 0px; }
+	a.box-icon.icon-saldoCBI						{ background-position: -1740px 0px; }
+	
+	a.box-icon.icon-movOnline:hover						{ background-position: 0px -60px; }
+	a.box-icon.icon-movOnlineEstero:hover					{ background-position: -60px -60px; }
+	a.box-icon.icon-movCBI:hover							{ background-position: -120px -60px; }
+	a.box-icon.icon-esitiBonifici:hover						{ background-position: -180px -60px; }
+	a.box-icon.icon-esitiStipendi:hover						{ background-position: -240px -60px; }
+	a.box-icon.icon-esitiF24:hover							{ background-position: -300px -60px; }
+	a.box-icon.icon-esitiAltri:hover						{ background-position: -360px -60px; }
+	a.box-icon.icon-esitiRiba:hover							{ background-position: -420px -60px; }
+	a.box-icon.icon-esitiDirectDebit:hover					{ background-position: -480px -60px; }
+	a.box-icon.icon-esitiBollettiniBancari:hover			{ background-position: -540px -60px; }
+	a.box-icon.icon-esitiAllineamentoArchivi:hover			{ background-position: -600px -60px; }
+	a.box-icon.icon-esitiAllineamentoSeda:hover				{ background-position: -660px -60px; }
+	a.box-icon.icon-esitiAllineamentoIban:hover				{ background-position: -720px -60px; }
+	a.box-icon.icon-esitiBeneficiario:hover					{ background-position: -780px -60px; }
+	a.box-icon.icon-elencoDistinte:hover					{ background-position: -840px -60px; }
+	a.box-icon.icon-creaDistinte:hover						{ background-position: -900px -60px; }
+	a.box-icon.icon-autorizzaDistinte:hover					{ background-position: -960px -60px; }
+	a.box-icon.icon-gestioneAnticipoFatture:hover			{ background-position: -1020px -60px; }
+	a.box-icon.icon-importaDistinte:hover					{ background-position: -1080px -60px; }
+	a.box-icon.icon-importaAllineamentoArchivi:hover		{ background-position: -1140px -60px; }
+	a.box-icon.icon-importaAllineamentoIban:hover			{ background-position: -1200px -60px; }
+	a.box-icon.icon-importaIncassiEstero:hover				{ background-position: -1260px -60px; }
+	a.box-icon.icon-importaStruttureLibere:hover			{ background-position: -1320px -60px; }
+	a.box-icon.icon-estraiInformative:hover					{ background-position: -1380px -60px; }
+	a.box-icon.icon-estraiEsitiAllineamentoArchivi:hover	{ background-position: -1440px -60px; }
+	a.box-icon.icon-estraiEsitiAllineamentoSeda:hover		{ background-position: -1500px -60px; }
+	a.box-icon.icon-estraiEsitiAllineamentoIban:hover		{ background-position: -1560px -60px; }
+    a.box-icon.icon-saldoOnline:hover						{ background-position: -1620px -60px; }
+	a.box-icon.icon-saldoOnlineEstero:hover					{ background-position: -1680px -60px; }
+	a.box-icon.icon-saldoCBI:hover							{ background-position: -1740px -60px; }
+	
+	a.box-icon.icon-movOnline.disabled						{ background-position: 0px -120px; }
+	a.box-icon.icon-movOnlineEstero.disabled					{ background-position: -60px -120px; }
+	a.box-icon.icon-movCBI.disabled							{ background-position: -120px -120px; }
+	a.box-icon.icon-esitiBonifici.disabled						{ background-position: -180px -120px; }
+	a.box-icon.icon-esitiStipendi.disabled						{ background-position: -240px -120px; }
+	a.box-icon.icon-esitiF24.disabled							{ background-position: -300px -120px; }
+	a.box-icon.icon-esitiAltri.disabled							{ background-position: -360px -120px; }
+	a.box-icon.icon-esitiRiba.disabled							{ background-position: -420px -120px; }
+	a.box-icon.icon-esitiDirectDebit.disabled					{ background-position: -480px -120px; }
+	a.box-icon.icon-esitiBollettiniBancari.disabled				{ background-position: -540px -120px; }
+	a.box-icon.icon-esitiAllineamentoArchivi.disabled			{ background-position: -600px -120px; }
+	a.box-icon.icon-esitiAllineamentoSeda.disabled				{ background-position: -660px -120px; }
+	a.box-icon.icon-esitiAllineamentoIban.disabled				{ background-position: -720px -120px; }
+	a.box-icon.icon-esitiBeneficiario.disabled					{ background-position: -780px -120px; }
+	a.box-icon.icon-elencoDistinte.disabled						{ background-position: -840px -120px; }
+	a.box-icon.icon-creaDistinte.disabled						{ background-position: -900px -120px; }
+	a.box-icon.icon-autorizzaDistinte.disabled					{ background-position: -960px -120px; }
+	a.box-icon.icon-gestioneAnticipoFatture.disabled			{ background-position: -1020px -120px; }
+	a.box-icon.icon-importaDistinte.disabled					{ background-position: -1080px -120px; }
+	a.box-icon.icon-importaAllineamentoArchivi.disabled			{ background-position: -1140px -120px; }
+	a.box-icon.icon-importaAllineamentoIban.disabled			{ background-position: -1200px -120px; }
+	a.box-icon.icon-importaIncassiEstero.disabled				{ background-position: -1260px -120px; }
+	a.box-icon.icon-importaStruttureLibere.disabled				{ background-position: -1320px -120px; }
+	a.box-icon.icon-estraiInformative.disabled					{ background-position: -1380px -120px; }
+	a.box-icon.icon-estraiEsitiAllineamentoArchivi.disabled		{ background-position: -1440px -120px; }
+	a.box-icon.icon-estraiEsitiAllineamentoSeda.disabled		{ background-position: -1500px -120px; }
+	a.box-icon.icon-estraiEsitiAllineamentoIban.disabled		{ background-position: -1560px -120px; }
+    a.box-icon.icon-saldoOnline.disabled						{ background-position: -1620px -120px; }
+	a.box-icon.icon-saldoOnlineEstero.disabled					{ background-position: -1680px -120px; }
+	a.box-icon.icon-saldoCBI.disabled							{ background-position: -1740px -120px; }
+
+		a.box-icon.disabled:hover { background-color: #fff; cursor: not-allowed; }
+        a.box-icon.disabled { background-color: #fff; cursor: not-allowed; }
+
+
+/****************************** ICONE GESTIONE GRUPPI *********************************/
+
+span.groups-icon,
+a.groups-icon {
+	display: inline-block;
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #fff;
+	background-image: url(../images/groups-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	border-radius: 10px;
+	background-color: #c5e7bc;
+}
+	a.groups-icon:hover,
+	a.groups-icon.selected { background-color: #357745; }
+
+
+	.groups-icon.icon-add { background-position: 0px 0px; }
+	.groups-icon.icon-add:hover { background-position: -60px 0px; }
+	
+	.groups-icon.icon-1 { background-position: 0px -60px; }
+	.groups-icon.icon-2 { background-position: 0px -120px; }
+	.groups-icon.icon-3 { background-position: 0px -180px; }
+	.groups-icon.icon-4 { background-position: 0px -240px; }
+	.groups-icon.icon-5 { background-position: 0px -300px; }
+	.groups-icon.icon-6 { background-position: 0px -360px; }
+	.groups-icon.icon-7 { background-position: 0px -420px; }
+	.groups-icon.icon-8 { background-position: 0px -480px; }
+	.groups-icon.icon-9 { background-position: 0px -540px; }
+	.groups-icon.icon-10 { background-position: 0px -600px; }
+	.groups-icon.icon-11 { background-position: 0px -660px; }
+	.groups-icon.icon-12 { background-position: 0px -720px; }
+	.groups-icon.icon-13 { background-position: 0px -780px; }
+	.groups-icon.icon-14 { background-position: 0px -840px; }
+	.groups-icon.icon-15 { background-position: 0px -900px; }
+	.groups-icon.icon-16 { background-position: 0px -960px; }
+	.groups-icon.icon-17 { background-position: 0px -1020px; }
+	.groups-icon.icon-18 { background-position: 0px -1080px; }
+	.groups-icon.icon-19 { background-position: 0px -1140px; }
+	.groups-icon.icon-20 { background-position: 0px -1200px; }
+	.groups-icon.icon-21 { background-position: 0px -1260px; }
+	.groups-icon.icon-22 { background-position: 0px -1320px; }
+	.groups-icon.icon-23 { background-position: 0px -1380px; }
+	.groups-icon.icon-24 { background-position: 0px -1440px; }
+	.groups-icon.icon-25 { background-position: 0px -1500px; }
+	.groups-icon.icon-26 { background-position: 0px -1560px; }
+	.groups-icon.icon-27 { background-position: 0px -1620px; }
+	.groups-icon.icon-28 { background-position: 0px -1680px; }
+	.groups-icon.icon-29 { background-position: 0px -1740px; }
+	.groups-icon.icon-30 { background-position: 0px -1800px; }
+	.groups-icon.icon-31 { background-position: 0px -1860px; }
+	
+	
+	
+	.groups-icon.icon-1:hover, .groups-icon.icon-1.selected { background-position: -60px -60px; }
+	.groups-icon.icon-2:hover, .groups-icon.icon-2.selected { background-position: -60px -120px; }
+	.groups-icon.icon-3:hover, .groups-icon.icon-3.selected { background-position: -60px -180px; }
+	.groups-icon.icon-4:hover, .groups-icon.icon-4.selected { background-position: -60px -240px; }
+	.groups-icon.icon-5:hover, .groups-icon.icon-5.selected { background-position: -60px -300px; }
+	.groups-icon.icon-6:hover, .groups-icon.icon-6.selected { background-position: -60px -360px; }
+	.groups-icon.icon-7:hover, .groups-icon.icon-7.selected { background-position: -60px -420px; }
+	.groups-icon.icon-8:hover, .groups-icon.icon-8.selected { background-position: -60px -480px; }
+	.groups-icon.icon-9:hover, .groups-icon.icon-9.selected { background-position: -60px -540px; }
+	.groups-icon.icon-10:hover, .groups-icon.icon-10.selected { background-position: -60px -600px; }
+	.groups-icon.icon-11:hover, .groups-icon.icon-11.selected { background-position: -60px -660px; }
+	.groups-icon.icon-12:hover, .groups-icon.icon-12.selected { background-position: -60px -720px; }
+	.groups-icon.icon-13:hover, .groups-icon.icon-13.selected { background-position: -60px -780px; }
+	.groups-icon.icon-14:hover, .groups-icon.icon-14.selected { background-position: -60px -840px; }
+	.groups-icon.icon-15:hover, .groups-icon.icon-15.selected { background-position: -60px -900px; }
+	.groups-icon.icon-16:hover, .groups-icon.icon-16.selected { background-position: -60px -960px; }
+	.groups-icon.icon-17:hover, .groups-icon.icon-17.selected { background-position: -60px -1020px; }
+	.groups-icon.icon-18:hover, .groups-icon.icon-18.selected { background-position: -60px -1080px; }
+	.groups-icon.icon-19:hover, .groups-icon.icon-19.selected { background-position: -60px -1140px; }
+	.groups-icon.icon-20:hover, .groups-icon.icon-20.selected { background-position: -60px -1200px; }
+	.groups-icon.icon-21:hover, .groups-icon.icon-21.selected { background-position: -60px -1260px; }
+	.groups-icon.icon-22:hover, .groups-icon.icon-22.selected { background-position: -60px -1320px; }
+	.groups-icon.icon-23:hover, .groups-icon.icon-23.selected { background-position: -60px -1380px; }
+	.groups-icon.icon-24:hover, .groups-icon.icon-24.selected { background-position: -60px -1440px; }
+	.groups-icon.icon-25:hover, .groups-icon.icon-25.selected { background-position: -60px -1500px; }
+	.groups-icon.icon-26:hover, .groups-icon.icon-26.selected { background-position: -60px -1560px; }
+	.groups-icon.icon-27:hover, .groups-icon.icon-27.selected { background-position: -60px -1620px; }
+	.groups-icon.icon-28:hover, .groups-icon.icon-28.selected { background-position: -60px -1680px; }
+	.groups-icon.icon-29:hover, .groups-icon.icon-29.selected { background-position: -60px -1740px; }
+	.groups-icon.icon-30:hover, .groups-icon.icon-30.selected { background-position: -60px -1800px; }
+	.groups-icon.icon-31:hover, .groups-icon.icon-31.selected { background-position: -60px -1860px; }
+
+/*** GROUP ICONS SLIDER ***/
+
+.icons-slider { margin-top: 10px; margin-bottom: 20px; }
+
+	.icons-slider ul {
+		display: block;
+		height: 80px;
+		margin: 0;
+		padding: 0;
+	}
+
+.icons-slider .slidee li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  list-style-type: none;
+}
+
+/***/
+
+div.group-info {
+	display: block;
+	margin: 0px auto;
+}
+
+div.group-add {}
+	.group-add p { margin-top: 40px; }
+	.group-add a {
+		color: #aaa;
+		font-size: 1.4em;
+	}
+	.group-add a:hover {
+	    /*color: #001831;*/
+        color: #003b79;
+        text-decoration: none;
+	}
+    
+	.group-add span.groups-icon { background-color: transparent; margin-top: 20px; }
+
+div.group-delete {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+
+
+/****************************** ICONE ABILITAZIONI GRUPPI *********************************/
+
+a.auth-icon {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 2px 5px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #fff;
+	background-image: url(../images/auth-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+	a.auth-icon:hover { background-color: #f1faf1; }
+
+	a.auth-icon.icon-sportello { background-position: 0px 0px; }
+	a.auth-icon.icon-pagamenti { background-position: -60px 0px; }
+	a.auth-icon.icon-incassi { background-position: -120px 0px; }
+	a.auth-icon.icon-carte { background-position: -180px 0px; }
+	a.auth-icon.icon-documenti { background-position: -240px 0px; }
+	a.auth-icon.icon-anagrafiche { background-position: -300px 0px; }
+	a.auth-icon.icon-disposizioni { background-position: -360px 0px; }
+	a.auth-icon.icon-configura { background-position: -420px 0px; }
+    a.auth-icon.icon-estero { background-position: -480px 0px; }
+
+
+/****************************** ICONE LINK RAPIDI *********************************/
+
+	
+a.link-icon { line-height: 24px; }
+
+/*.link-icon span.link-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	margin-right: 5px;
+	padding: 0;
+	background-image: url(../images/general-sprite.png);
+	background-repeat: no-repeat;
+}
+
+	span.link-icon.icon-bonifici { background-position: 0 -638px; }
+	span.link-icon.icon-saldo { background-position: 0 -434px; }
+	span.link-icon.icon-documenti { background-position: -68px -604px; }
+	span.link-icon.icon-fatture { background-position: -68px -468px; }
+	span.link-icon.icon-sportello { background-position: 0 -400px; }
+	span.link-icon.icon-ricaricaCellulare { background-position: 0px -808px; }
+	span.link-icon.icon-gestioneBeneficiari { background-position: 0px -910px; }
+	span.link-icon.icon-investimenti { background-position: -68px -876px; }
+
+	span.link-icon.icon-autorizzaDistinte { background-position: -170px -672px; }
+    span.link-icon.icon-elencoDistinte { background-position: -170px -672px; }
+	span.link-icon.icon-deleghef24 { background-position: -170px -638px; }	
+	span.link-icon.icon-esiti-pagamenti { background-position: -170px -604px; }
+	span.link-icon.icon-esiti-incassi { background-position: -170px -706px; }
+	span.link-icon.icon-documenti-arrivo { background-position: -68px -672px; }*/
+    
+    
+
+    .link-icon span.link-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	margin-right: 5px;
+	padding: 0;
+}
+
+span.link-icon.icon-saldo							{ background: url(../images/quick-links-sprite.png) no-repeat 0px 0px; }
+span.link-icon.icon-ccEstero						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -24px; }
+span.link-icon.icon-saldoCBI						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -48px; }
+span.link-icon.icon-portafoglio						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -72px; }
+span.link-icon.icon-anticipi						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -96px; }
+span.link-icon.icon-dossier							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -120px; }
+span.link-icon.icon-domiciliazioni					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -144px; }
+span.link-icon.icon-assegni							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -168px; }
+span.link-icon.icon-estrattoContoPeriodico			{ background: url(../images/quick-links-sprite.png) no-repeat 0px -192px; }
+span.link-icon.icon-stampa							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -216px; }
+span.link-icon.icon-bonifici						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -240px; }
+span.link-icon.icon-stipendi						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -264px; }
+span.link-icon.icon-bonificiEstero					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -288px; }
+span.link-icon.icon-mt1010							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -312px; }
+span.link-icon.icon-f24								{ background: url(../images/quick-links-sprite.png) no-repeat 0px -336px; }
+span.link-icon.icon-f24ElemIdent					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -360px; }
+span.link-icon.icon-f24Quietanze					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -384px; }
+span.link-icon.icon-bollettiniBancari				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -408px; }
+span.link-icon.icon-bollettiniPostali				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -432px; }
+span.link-icon.icon-rav								{ background: url(../images/quick-links-sprite.png) no-repeat 0px -456px; }
+span.link-icon.icon-mav								{ background: url(../images/quick-links-sprite.png) no-repeat 0px -480px; }
+span.link-icon.icon-utenze							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -504px; }
+span.link-icon.icon-ricaricaCellulare				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -528px; }
+span.link-icon.icon-canoneTv						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -552px; }
+span.link-icon.icon-esitiAltriPagamenti				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -576px; }
+span.link-icon.icon-altriPagamenti					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -600px; }
+span.link-icon.icon-riba							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -624px; }
+span.link-icon.icon-sdd								{ background: url(../images/quick-links-sprite.png) no-repeat 0px -648px; }
+span.link-icon.icon-rid								{ background: url(../images/quick-links-sprite.png) no-repeat 0px -672px; }
+span.link-icon.icon-cambioCoordRid					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -696px; }
+span.link-icon.icon-incassi							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -720px; }
+span.link-icon.icon-incassiEstero					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -744px; }
+span.link-icon.icon-allineamentoSeda				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -768px; }
+span.link-icon.icon-rendicontoSeda					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -792px; }
+span.link-icon.icon-dettaglioSeda					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -816px; }
+span.link-icon.icon-allineamentoRid					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -840px; }
+span.link-icon.icon-allineamentoIban				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -864px; }
+span.link-icon.icon-esitiIncassi					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -888px; }
+span.link-icon.icon-gestioneCarte					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -912px; }
+span.link-icon.icon-gestioneIntestatari				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -936px; }
+span.link-icon.icon-gestionePosizione				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -960px; }
+span.link-icon.icon-apriPosizione					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -984px; }
+span.link-icon.icon-documenti						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1008px; }
+span.link-icon.icon-documentiInArrivo				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1032px; }
+span.link-icon.icon-archivio						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1056px; }
+span.link-icon.icon-documentiConfig					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1080px; }
+span.link-icon.icon-contratti						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1104px; }
+span.link-icon.icon-richiediAnticipo				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1128px; }
+span.link-icon.icon-esitiRichieste					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1152px; }
+span.link-icon.icon-fatture							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1176px; }
+span.link-icon.icon-fattureYBW						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1200px; }
+span.link-icon.icon-confidi							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1224px; }
+span.link-icon.icon-anagrafiche						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1248px; }
+span.link-icon.icon-clienti							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1272px; }
+span.link-icon.icon-fornitori						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1296px; }
+span.link-icon.icon-fornitoriEstero					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1320px; }
+span.link-icon.icon-dipendenti						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1344px; }
+span.link-icon.icon-creditoriEstero					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1368px; }
+span.link-icon.icon-debitoriEstero					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1392px; }
+span.link-icon.icon-importaAnagrafiche				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1416px; }
+span.link-icon.icon-cancellaAnagrafiche				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1440px; }
+span.link-icon.icon-disposizioni					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1464px; }
+span.link-icon.icon-history							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1488px; }
+span.link-icon.icon-elencoDistinte					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1512px; }
+span.link-icon.icon-creazioneDistinte				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1536px; }
+span.link-icon.icon-autorizzaDistinte				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1560px; }
+span.link-icon.icon-distinteAnticipoFatt			{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1584px; }
+span.link-icon.icon-importaDistinte					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1608px; }
+span.link-icon.icon-importaAllineamIban				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1632px; }
+span.link-icon.icon-importaIncassiEstero			{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1656px; }
+span.link-icon.icon-importaStruttureLibere			{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1680px; }
+span.link-icon.icon-logImportazioni					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1704px; }
+span.link-icon.icon-estraiDatiInfo					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1728px; }
+span.link-icon.icon-estraiDisposizioni				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1752px; }
+span.link-icon.icon-schedulatore					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1776px; }
+span.link-icon.icon-configuraSchedulatore			{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1800px; }
+span.link-icon.icon-riaccoda						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1824px; }
+span.link-icon.icon-sospendiRiavvia					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1848px; }
+span.link-icon.icon-associaUtente					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1872px; }
+span.link-icon.icon-aggiorna						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1896px; }
+span.link-icon.icon-struttureLibere					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1920px; }
+span.link-icon.icon-gestioneCambi					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1944px; }
+span.link-icon.icon-listinoCambi					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1968px; }
+span.link-icon.icon-monitoraggioCbi					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -1992px; }
+span.link-icon.icon-news							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2016px; }
+span.link-icon.icon-configura						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2040px; }
+span.link-icon.icon-personalizzaHome				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2064px; }
+span.link-icon.icon-sicurezza						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2088px; }
+span.link-icon.icon-cambioPassword					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2112px; }
+span.link-icon.icon-gestioneDispositivi				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2136px; }
+span.link-icon.icon-infoAccessi						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2160px; }
+span.link-icon.icon-infoBonifico					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2184px; }
+span.link-icon.icon-postazione						{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2208px; }
+span.link-icon.icon-aziende							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2232px; }
+span.link-icon.icon-banche							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2256px; }
+span.link-icon.icon-conti							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2280px; }
+span.link-icon.icon-importaConto					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2304px; }
+span.link-icon.icon-gestioneGruppi					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2328px; }
+span.link-icon.icon-creazioneUtenti					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2352px; }
+span.link-icon.icon-elencoUtenti					{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2376px; }
+span.link-icon.icon-iterAutorizzativo				{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2400px; }
+span.link-icon.icon-mobile							{ background: url(../images/quick-links-sprite.png) no-repeat 0px -2424px; }
+
+
+    	
+    
+
+/************* HEADER ELEMENTS **************/
+
+.topbar {
+	display:block;
+	position:relative;
+	background-color: #b8d8b8;
+	color: #666666;
+	min-height:30px;
+	z-index:100;
+	height: 35px;
+	font-weight: bold;
+	border: none;
+	padding: 2px 0px;
+}
+
+.topbar span {
+	color: #666;
+}
+
+.topbar .buttons div {
+	padding: 2px 5px;
+}
+
+.logout {
+	width: 24px;
+	height: 24px;
+	background: url(../images/general-sprite.png) no-repeat -296px -200px;
+	display: block;
+    margin-top: 3px;
+}
+
+.tooltips {
+    width: 30px;
+	height: 25px;
+	background: url(../images/i_tooltips.png) no-repeat;
+	display: block;
+    margin-top: 3px;
+}
+
+/*POPOVER - fumetti di help*/
+div[id*="popover"] .popover-content.fumetto {
+    padding: 6px 12px;
+    font-weight: normal;
+}
+.popover.fumetto.bottom {
+    bottom: auto;
+    padding-top: 0;
+}
+.popover.fumetto.bottom > .arrow.fumetto:after {
+    border-bottom-color: #fefada;
+}
+.popover.fumetto.top>.arrow.fumetto:after{
+	border-top-color:#fefada;
+}
+.popover.fumetto.left>.arrow.fumetto:after{
+	border-left-color:#fefada;
+}
+.popover.fumetto.right>.arrow.fumetto:after{
+	border-right-color: #fefada;
+} 
+	   
+.popover.fumetto{
+   	min-width: 160px;
+	max-width: 200px;
+	color: #666;
+	text-align: center;
+	background-color: #fefada;
+}
+
+.popover.fumetto.right > .arrow.fumetto::after {
+    border-left-width: 0;
+    border-right-color: #fefada;
+    bottom: -10px;
+    content: " ";
+    left: 1px;
+}
+
+popover.fumetto.left > .arrow.fumetto::after {
+    border-left-color: #fefada;
+    border-right-width: 0;
+    bottom: -10px;
+    content: " ";
+    right: 1px;
+}
+
+.popover.fumetto.over > .arrow.fumetto::after {
+    border-bottom-width: 0;
+    border-top-color: #fefada;
+    bottom: 1px;
+    content: " ";
+    margin-left: -10px;
+}
+
+.popover.fumetto.under > .arrow.fumetto::after {
+    border-bottom-color: #fefada;
+    border-top-width: 0;
+    content: " ";
+    margin-left: -10px;
+    top: 1px;
+}
+
+.popover.fumetto.under > .arrow.fumetto {
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-top-width: 0;
+    left: 50%;
+    margin-left: -11px;
+    top: -11px;
+}
+
+.popover.fumetto.over > .arrow {
+    border-bottom-width: 0;
+    border-top-color: rgba(0, 0, 0, 0.25);
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+.popover.fumetto{
+	min-width: 240px;
+    font-size: 11px;
+}
+
+.popover-content.fumetto{
+	text-align: justify;
+}
+
+#prefer + .popover.fumetto{
+    min-width: 350px;
+}
+
+h3.popover-title.fumetto {
+    display: block;
+    margin: 0 10px;
+    padding: 3px 5px;
+    color: #666;
+    background-color: #fefada;
+    border-bottom: 1px solid #999;
+    font-weight:bold;
+    font-size:1.1em;
+}
+/*FINE POPOVER*/
+
+
+/* menu */
+.navbar { margin-bottom: 0px; }
+
+nav.nav-main.navbar-right {
+	padding: 0;
+}
+
+ul.topMain>li {
+	width: 90px;
+	height: 84px;
+}
+
+.nav>li>a {
+	padding: 0;
+	height: 80px;
+}
+
+.topNav .disabled {
+    opacity: 0.5; 
+     padding-top: 4px;
+     filter: alpha(opacity = 50); zoom:1;
+}
+
+.topNav .disabled .topMain ul.nav li,
+.topNav .disabled .topMain ul.nav li strong { color: #ddd; }
+
+
+ul.topMain>li>a:hover {
+	/*border-bottom: 5px solid #61a4d3;*/
+	border-radius: 0;
+}
+
+ul.topMain a:hover strong { color: #7db77d; }
+
+ul.topMain>li.active {
+	border-bottom: 5px solid #7db77d;
+	border-radius: 0;
+}
+
+ul.dropdown-menu .row {
+	margin: 0;
+}
+
+ul.dropdown-menu .row .col-md-4 ul {
+	padding: 15px;
+}
+
+ul.dropdown-menu .row .col-md-4 {
+	padding: 0;
+}
+
+.topNav ul.nav>li:hover a {
+	color:#7db77d;
+}
+
+.topNav ul.nav>li.mega-menu div div {
+	border-left: 1px solid #acd8ab;
+	border-right: 1px solid #fff;
+}
+
+	.topNav ul.nav>li.mega-menu>ul li.subdropdown:hover>a,
+	.topNav ul.nav>li.mega-menu>ul li.subdropdown>a { background: none; cursor: default; color: #999; text-decoration: none; }
+
+		.topNav ul.nav>li.mega-menu>ul li.subdropdown ul li {
+			  margin-left: 0px;
+			  padding: 0px;
+			  padding-left: 10px;
+			  font-size: 0.95em;
+		}
+
+
+.topNav ul.nav>li.mega-menu div div.menu-info { margin: 0px; padding: 0px 10px; color: #666; }
+.topNav ul.nav>li.mega-menu div div.menu-info div { padding-top: 5px; font-family: "roboto", Arial, sans-serif; font-size: 0.9em; font-weight: normal; line-height: 1.2em; text-transform: none; }
+
+.topNav ul.nav>li.mega-menu div div.menu-info h3 {
+	margin: 8px 0px;
+	padding: 0px 10px;
+	color: #666;
+	background: #e8f2e8;
+	box-shadow: 0 10px 8px -6px rgba(108,159,108,0.5);
+	border-bottom: 1px solid #6c9f6c;
+	font-family: "roboto", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 1.2em;
+	line-height: 1.25em;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+ul.topMain li .ico {
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+ul.topMain div.sportello { background: url(../images/menu-sprite.png) no-repeat 0px 0px; }
+ul.topMain li.active div.sportello,
+ul.topMain li.hover div.sportello,
+ul.topMain a:hover div.sportello { background: url(../images/menu-sprite.png) no-repeat 0px -32px; }
+
+ul.topMain div.dati-e-disposizioni { background: url(../images/menu-sprite.png) no-repeat -32px 0px; }
+ul.topMain li.active div.dati-e-disposizioni,
+ul.topMain li.hover div.dati-e-disposizioni,
+ul.topMain a:hover div.dati-e-disposizioni { background: url(../images/menu-sprite.png) no-repeat -32px -32px; }
+
+ul.topMain div.pagamenti { background: url(../images/menu-sprite.png) no-repeat -64px 0px; }
+ul.topMain li.active div.pagamenti,
+ul.topMain li.hover div.pagamenti,
+ul.topMain a:hover div.pagamenti { background: url(../images/menu-sprite.png) no-repeat -64px -32px; }
+
+ul.topMain div.carte { background: url(../images/menu-sprite.png) no-repeat -96px 0px; }
+ul.topMain li.active div.carte,
+ul.topMain li.hover div.carte,
+ul.topMain a:hover div.carte { background: url(../images/menu-sprite.png) no-repeat -96px -32px; }
+
+ul.topMain div.configura { background: url(../images/menu-sprite.png) no-repeat -128px 0px; }
+ul.topMain li.active div.configura,
+ul.topMain li.hover div.configura,
+ul.topMain a:hover div.configura { background: url(../images/menu-sprite.png) no-repeat -128px -32px; }
+
+ul.topMain div.incassi { background: url(../images/menu-sprite.png) no-repeat -160px 0px; }
+ul.topMain li.active div.incassi,
+ul.topMain li.hover div.incassi,
+ul.topMain a:hover div.incassi { background: url(../images/menu-sprite.png) no-repeat -160px -32px; }
+
+ul.topMain div.documenti { background: url(../images/menu-sprite.png) no-repeat -192px 0px; }
+ul.topMain li.active div.documenti,
+ul.topMain li.hover div.documenti,
+ul.topMain a:hover div.documenti { background: url(../images/menu-sprite.png) no-repeat -192px -32px; }
+
+ul.topMain div.anagrafiche { background: url(../images/menu-sprite.png) no-repeat -224px 0px; }
+ul.topMain li.active div.anagrafiche,
+ul.topMain li.hover div.anagrafiche,
+ul.topMain a:hover div.anagrafiche { background: url(../images/menu-sprite.png) no-repeat -224px -32px; }
+ul.topMain div.estero { background: url(../images/menu-sprite.png?v=1) no-repeat -256px 0px; }
+ul.topMain li.active div.estero,
+ul.topMain li.hover div.estero,
+ul.topMain a:hover div.estero { background: url(../images/menu-sprite.png?v=1) no-repeat -256px -32px; }
+
+ul.topMain li ul.dropdown-menu .row {
+	background: #e8f2e8;
+	border: 1px solid #8fa48f;
+}
+
+ul.topMain li ul.dropdown-menu>li {
+	padding-top: 10px;
+}
+
+ul.topMain li ul.dropdown-menu .row {
+	background: #e8f2e8;
+	border: 1px solid #8fa48f;
+	padding: 10px 0px;
+	box-shadow: 0 2px 8px 0px rgba(0,0,0,0.6);
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+.topMain > li.sub-open > a {
+	height: 90px;
+	background: url(../images/menu-arrow.png) center 77px no-repeat;
+	z-index: 2000;
+}
+
+
+/* Submenu positions */
+.topMain li ul.dropdown-menu.sportello				{ left: 0px; }
+.topMain li ul.dropdown-menu.dati-e-disposizioni	{ left: 20px; }
+.topMain li ul.dropdown-menu.pagamenti				{ left: 0px; }
+.topMain li ul.dropdown-menu.carte					{ left: 200px; }
+.topMain li ul.dropdown-menu.configura				{ left: 110px; }
+.topMain li ul.dropdown-menu.incassi				{ left: 80px; }
+.topMain li ul.dropdown-menu.documenti				{ left: 60px; }
+.topMain li ul.dropdown-menu.anagrafiche			{ left: 160px; }
+
+
+/* fine menu*/
+
+
+.mainContent { padding-left: 0; padding-right: 0; }
+	
+	
+.loginMessage {
+	margin: 20px;
+	margin-bottom: 40px;
+	padding: 0px;
+}
+	.loginMessage img { float: left; max-width: 200px; margin: 0px 15px 15px 0; padding: 0; }
+	.loginMessage p { margin: 0; margin-bottom: 10px; padding: 0; }
+
+.loginMessage .fullContent { display: none; }
+
+
+a.expand,
+a.collapse {
+	display: block;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	text-decoration: none;
+}
+
+	.collapsed a.collapse { display: none; }
+	.expanded a.expand { display: none; }
+
+
+.ibandiviso label {
+height: 41px;
+}
+
+.imgSrv{
+	float: left;
+	margin-left: 10px;
+}
+
+form.formInserimento .nickname {
+display: none;
+}
+
+.ui-dialog-title { font-family: "roboto", Arial, sans-serif;
+font-weight: bold; font-size: 16px; color: #fff; }
+
+.ui-dialog,
+.ui-dialog .ui-dialog-content{
+	padding:0;
+    z-index: 2000;
+}
+
+div.dialog-content {
+	margin: 15px;
+}
+
+.form-group label,
+.form-horizontal .control-label { padding-top: 7px; font-family: "roboto", Arial, sans-serif; font-weight: normal; }
+
+.formPopUp .form-group > div{
+	margin-top:5px;
+}
+
+.padding10{
+	padding:10px;
+}
+
+.padding10-0{
+	padding:10px 0;
+}
+
+.formPopUp{
+	margin-bottom: 10px;
+}
+
+.box-riquadro {
+	box-shadow: 0px 1px 3px 1px #bbb;
+	padding: 7px;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+}
+
+.table.tableflat>tbody>tr>td{
+	border-top:0;
+	text-align:left;
+}
+
+/**************** FOOTER *****************/
+
+.footer{
+	padding: 0px 0 8px 0px;
+	border-top: 1px solid #7db77d;
+	background: #d8e9d8;
+	color: #003b79;
+	min-height: 125px;
+	font-size: 0.85em;
+}
+footer .pb-3 {padding-bottom:16px}
+
+footer a,footer a:link, footer a:visited, footer a:active, footer a:focus {color:#2F9988}
+
+footer .m-auto {
+	margin: auto; 
+	max-width: 1077px;
+	width: 100%;
+}
+
+div.footer > div.container > div {
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.footer p { margin: 4px 0px; }
+
+.footer a{
+    text-decoration: none;
+	color:#003b79;
+}
+
+.footer a:hover{
+text-decoration: underline;
+}
+
+.footer .social{
+	text-align: left;
+	
+}
+.footer .social a{
+	margin-right:10px;
+	margin-top:10px;
+}
+.footer .social a:last-child{
+	margin-right:0;	
+}
+.footer-logo{
+	margin-top:10px;
+
+	background: url(../images/general-sprite.png?v=1) no-repeat 0px -310px;
+	max-width: 120px;
+	width:100%;
+	margin:0 auto;
+}
+.footer-logo span{
+display:none;
+}
+
+/*Sonia: 09/12/2015 aggiunto per uniformare il footer a quello di Alten (come da richiesta Banca) */
+.footer h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.footer .assistenza { }
+
+	.footer .assistenza > div { margin-bottom: 5px; }
+	
+	.footer .assistenza a.ico-assistenza,
+	.footer .assistenza a.ico-manuale,
+	.footer .assistenza a.ico-gestore {
+		float: left;
+		width: 28px;
+		height: 28px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		text-decoration: none;
+	}
+	
+		.footer .assistenza a.ico-assistenza { background: url(../images/general-sprite.png) -366px -978px no-repeat; }
+		.footer .assistenza a.ico-manuale { background: url(../images/general-sprite.png) -296px -978px no-repeat; }
+		.footer .assistenza a.ico-gestore { background: url(../images/general-sprite.png) -436px -978px no-repeat; }
+		
+.footer .manuale { margin-top: 36px; }
+
+div.footer > div.container > div.disclaimer { font-size: 1em; }
+/*Sonia: fine aggiunta*/
+
+/***************** LEFT COLUMN *****************/
+
+.spalla  .table{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+.spalla  .table td {
+	border:none;
+	padding:0 0 2px 7px;
+	font-size: 1em;
+	letter-spacing: -0.2px;
+}
+.spalla  .table td strong { letter-spacing: -0.5px; }
+
+.spalla .table-responsive{
+	border-bottom:1px solid #eee;
+}
+
+.spalla .table-responsive:last-child{
+	border:none;
+}
+
+
+
+
+/***************** BOX HOMEPAGE *****************/
+
+.riquadro a {
+	/*color: #357745;*/
+}
+
+.homebox { margin: 0; padding: 0; padding-top: 10px; padding-bottom: 5px; }
+
+
+.homebox .homeMsg {
+		display: inline-block;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		padding: 2px 8px;
+	}
+	
+		.homebox .homeMsg span.ui-icon { float: left; margin-top: 2px; margin-right: 8px; }	
+
+
+	/* Link rapidi */
+	ul.quick-links { margin: 5px; margin-bottom: 15px; padding: 0; }
+
+	ul.quick-links li {
+		list-style-type: none;
+		display: block;
+		min-height: 24px;
+		margin: 0;
+		margin-bottom: 6px;
+		padding: 0;
+		vertical-align: middle;
+		font-weight: bold;
+	}
+
+		ul.quick-links li img { display: inline-block; vertical-align: middle; margin-right: 5px; }
+
+
+	/* Riepilogo conto */
+	.homebox div.account {
+		position: relative;
+		margin-right: 15px;
+		padding: 3px 0 3px 15px;
+		background: url(../images/general-sprite.png) right -200px no-repeat;
+	}
+	
+		.homebox div.account span {
+			display: inline-block;
+			width: 85%;
+		}
+		
+			.homebox div.account span.coordinate {
+				font-weight: bold;
+				color: #357745;
+			}
+			.homebox div.account span.intestatario {
+				font-size: 0.9em;
+			}
+			
+			.homebox div.account a { position: absolute; right: 20px; top: 6px; }
+
+
+		.homebox div.resume { margin-top: 10px; }
+		
+			.homebox .resume label.control-label {
+				display: inline-block;
+				margin-bottom: 0;
+				border-bottom: none;
+				font-weight: normal;
+			}
+			
+			.homebox .resume span.resume {
+				display: inline-block;
+				margin-bottom: 0;
+				padding-top: 0;
+				color: #357745;
+			}
+
+
+	/* Notifiche */
+	.homebox ul.notification {
+		list-style-type: none;
+		margin: 0 10px;
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	
+		.homebox .notification li {
+			display: block;
+			position: relative;
+			/*min-height: 28px;*/
+			margin-bottom: 2px;
+			padding: 0px 2px;
+			padding-left: 18px;
+			background: #e0f4db;
+			text-align: left;
+			line-height: 16px;
+			font-weight: normal;
+		}
+			
+			.homebox .notification li.priority { padding-left: 3px; }
+			.homebox .notification li.priority:before {
+				float: left;
+				width: 12px;
+				margin: 7px 3px 0px 0px;
+				content: '!';
+				color: #e00;
+				font-weight: bold;
+				font-family: "Courier New", Courier, monospace;
+				font-size: 24px;
+				letter-spacing: -3px;
+			}
+				
+			.homebox .notification li.unread {
+			     font-weight: bold;
+			}
+		
+			.homebox .notification li span {
+			     display: inline-block; 
+                 max-width: 68%; 
+                 padding: 5px 0px; 
+                 vertical-align: top;
+			}
+				.homebox .notification li span.date { padding-right: 10px; }
+			
+			.homebox .notification li a { position: absolute; right: 0px; top: 1px; }
+
+
+	/* Riepilogo disposizioni (in generale tutti i box che forniscono il conteggio di documenti o procedure) */
+	.homebox div.counter { width: 80%; margin: 0px auto; margin-bottom: 10px; }
+	
+		.homebox .counter .text {
+			display: block;
+			text-align: left;
+		}
+		
+		.homebox .counter .value {
+			display: block;
+			padding: 2px;
+			border: 2px solid #6cad6c;
+			border-radius: 3px;
+			background: #f5f5f5;
+			text-align: center;
+		}
+		
+		
+	/* Ultime disposizioni */
+	
+	.homebox .history { margin-bottom: 10px; }
+	
+		.homebox .history strong.intestazione {
+			display: inline-block;
+			padding: 10px;
+			color: #357745;
+			text-transform: uppercase;
+		}
+		
+		.homebox .history .table { font-size: 0.9em; }
+		.homebox .history .table>thead>tr>th, .table>tbody>tr>td { padding: 14px; vertical-align: middle; }
+
+
+
+	/* Calendario */
+	.homebox dl.events-list {
+		overflow: auto;
+		max-height: 280px;
+		margin-top: -10px;
+		padding-top: 15px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+		text-align: justify;
+	}
+	
+	.homebox .top-fade {
+		background: url(../images/white-fade-top.png) left top repeat-x;
+		position: absolute;
+		left: 0px;
+		top: -10px;
+		width: 100%;
+		height: 30px;
+		z-index: 200;
+	}
+	
+	.homebox .bottom-fade {
+		background: url(../images/white-fade-bottom.png) left bottom repeat-x;
+		position: absolute;
+		left: 0px;
+		bottom: 20px;
+		width: 100%;
+		height: 30px;
+		z-index: 200;
+	}
+	
+		.homebox .events-list dt {
+			color: #003b79;
+		}
+		
+		.homebox .events-list dd {
+			margin-bottom: 10px;
+			padding-left: 15px;
+			font-size: 0.9em;
+		}
+		
+	.homebox .events-legend {
+		margin: 10px;
+		margin-top: 15px;
+	}
+	
+		.homebox .events-legend ul { margin: 0; padding: 0; }
+			.homebox .events-legend ul li {
+				list-style-type: none;
+				margin: 0;
+				margin-bottom: 5px;
+				padding: 0;
+				font-size: 0.8em;
+			}
+			
+			.homebox .events-legend ul li span {
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				/*border-radius: 50%;*/
+				margin-right: 5px;
+				vertical-align: middle;
+				background-color: #fff;
+			}
+				.homebox .events-legend ul li span.amministrazione { background-color: #1077e3; }
+				.homebox .events-legend ul li span.fisco { background-color: #e25c5c; }
+				.homebox .events-legend ul li span.appuntamento { background-color: #12b36d; }
+				.homebox .events-legend ul li span.compleanno { background-color: #f1a732; }
+
+
+
+
+/** SLIDER RIEPILOGO CONTO **/
+
+.frame { width: 100%; height: 160px; padding: 0; }
+.frame.height_100 { height: 100%; }
+
+	.frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
+	.frame .slidee li { float: left; margin: 0 5px 0 0; padding: 0; width: auto; height: 100%; }
+
+.item-wrapper { }
+
+.frame-footer { width: 95%; margin: 0px auto; text-align: center; }
+
+	.frame-footer .first-page{ display: inline-block; font-size: 0.9em; font-weight: bold; }
+	.frame-footer .last-page { display: inline-block; font-size: 0.9em; font-weight: bold; }
+
+	.frame-footer span { display: block; clear: both; padding: 15px 5px 10px 5px; font-size: 0.8em; text-align: center; color: #666; }
+
+	.controls { display: inline-block;  width: 78%; margin: 0px 5px; padding-top: 8px; position: relative; }
+		.controls.full_width { width: 90%; margin: 0 auto; }
+
+		.scrollbar {
+			display: block;
+			margin: 0 auto;
+			width: 85%;
+			height: 6px;
+			margin: 0px auto;
+			line-height: 0;
+			background: #f5f5f5;
+			border: 1px solid #999;
+		}
+		
+			.scrollbar .handle {
+				width: 100px;
+				/*height: 100%;*/
+				height: 12px;
+				margin-top: -4px;
+				background: #6cad6c;
+				border: 1px solid #357745;
+				cursor: pointer;
+			}
+		
+		.controls .prev {
+			display: block;
+			width: 15px;
+			height: 24px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: url(../images/general-sprite.png) -296px -842px no-repeat;
+			cursor: pointer;
+		}
+			.controls .prev.disabled { background-position: -316px -842px; }
+			
+		.controls .next {
+			display: block;
+			width: 15px;
+			height: 24px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			background: url(../images/general-sprite.png) -296px -876px no-repeat;
+			cursor: pointer;
+		}
+			.controls .next.disabled { background-position: -316px -876px; }
+
+
+
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+
+.sliderContainerSpalla {
+	margin-top: 8px;
+	margin-bottom: 10px;
+}
+
+
+.sliderContainer {
+	position: relative;
+	width: 100%;
+	height: 31px;
+	padding-top: 8px;
+}
+.slider {
+	margin-left: 45px;
+	margin-right: 45px;
+	border-radius: 5px;
+}
+.slider .ui-slider-handle {
+	border-radius: 0 0 0 0;
+	box-shadow: 1px 1px 2px #666666;
+	height: 17px;
+	margin-left: -22px;
+	text-align: center;
+	text-decoration: none;
+	top: -5px;
+	width: 45px;
+	font-size:12px
+}
+.slider .ui-slider-handle:hover {
+	text-decoration: none;
+	cursor: e-resize;
+	background: #7db77d url("images/ui-bg_glass_60_7db77d_1x400.png") 50% 50% repeat-x
+}
+
+.ui-slider .ui-slider-range { background: none; }
+
+a.meno {
+	display: block;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	left: 4px;
+	top: 6px;
+	background: url(../images/general-sprite.png) -296px -842px no-repeat;
+	cursor: pointer;
+}
+a.piu {
+	display: block;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	background: url(../images/general-sprite.png) -296px -876px no-repeat;
+	cursor: pointer;
+}
+
+a.piu:hover, a.meno:hover { text-decoration: none; }
+
+.min {
+	left: 43px;
+	position: absolute;
+	top: 24px;
+	font-weight: bold;
+}
+.max {
+	right: 26px;
+	position: absolute;
+	top: 24px;
+	font-weight: bold;
+}
+
+td.select2slider {
+	padding-right: 50px;
+}
+td.select2slider .ui-slider-handle {
+	border-radius: 0 0 0 0;
+	box-shadow: 1px 1px 2px #666666;
+	height: 11px;
+	margin-left: -8px;
+	padding: 0 0 6px;
+	text-align: center;
+	text-decoration: none;
+	top: -6px;
+	width: 15px;
+}
+td.select2slider .ui-slider-handle:hover {
+	cursor: e-resize;
+}
+#limitato {
+	float: right;
+	position: relative;
+	right: 68%;
+}
+td.limiteAutoricariche .ui-slider {
+	float: right;
+	margin-right: -10px;
+	width: 62%;
+}
+
+td.small .ui-slider {
+	width: 50px;
+}
+
+td.medium .ui-slider {
+	width: 100px;
+	margin: auto;
+}
+
+
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+
+
+
+
+
+
+/***************** GRAFICI e TIMELINE *****************/
+
+.tablePanel { display: block; clear: both; }
+.timelinePanel { opacity: 0; clear: both; }
+.chartPanel {
+	opacity: 0;
+	width: 75%;
+	margin: 0px auto;
+	text-align: center;
+}
+.chart-canvas { margin: 0px auto; margin-bottom: 10px; }
+
+div.legend {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	padding: 5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	z-index: 1000;
+	background: rgba(255,255,255,0.75);
+}
+
+	.legend ul.chart-legend {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	
+		.legend ul.chart-legend li {
+			display: block;
+			list-style-type: none;
+			margin: 4px 0px;
+			padding: 4px 0;
+		}
+			.legend ul.chart-legend li span.color {
+				display: table-cell;
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+				padding: 0;
+				/*border: 1px solid #888;*/
+				box-shadow: 0 0 2px 0px rgba(0,0,0,0.7);
+				border-radius: 3px;
+			}
+			.legend ul.chart-legend li span.label {
+				display: table-cell;
+				vertical-align: middle;
+				padding-top: 5px;
+				color: #444;
+				font-size: 0.8em;
+				font-weight: normal;
+			}
+
+
+
+a.pdf {
+	display: block;
+	min-height: 24px;
+	margin-bottom: 8px;
+	padding-left: 32px;
+	padding-top: 4px;
+	color: #003b79;
+	text-decoration: none;
+	background: url(../images/general-sprite.png) -296px -774px no-repeat;
+	line-height: 20px;
+}
+
+span.pdf {
+    display: inline-block;
+	min-height: 24px;
+	margin-bottom: 1px;
+	padding-left: 24px;
+	padding-top: 4px;
+	color: #003b79;
+	text-decoration: none;
+	background: url(../images/general-sprite.png) -296px -774px no-repeat;
+	line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.display-none { display: none; }
+
+
+.left { float: left; }
+.right { float: right; }
+
+.txt_center { text-align: center; }
+.txt_left { text-align: left; }
+.txt_right { text-align: right; }
+.txt_bottom { vertical-align: bottom; }
+
+.vertical_center,
+.table>tbody>tr>td.vertical_center { vertical-align: middle; }
+
+
+.txt16 { font-size: 16px; }
+.txt14 { font-size: 14px; }
+.txt11 { font-size: 11px; }
+.txt10 { font-size: 10px; }
+
+
+.line24 { line-height: 24px; }
+.line20 { line-height: 20px; }
+.line16 { line-height: 16px; }
+.line14 { line-height: 14px; }
+
+.blue { color: #003b79; }
+.red { color: #b40303; }
+
+.margin-top5 { margin-top: 5px; }
+.margin-top10 { margin-top: 10px; }
+.margin-top20 { margin-top: 20px; }
+.margin-bottom20 { margin-bottom: 20px; }
+
+.clear-padding { padding: 0px !important; }
+
+div.messagePanel {
+	display: none;
+	min-height: 100px;
+	margin: 0;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	font-size: 1.04em;
+}
+	div.messagePanel.visible { display: block; }
+
+div.messagePanel.error { background: url(../images/ico_msg_error.png) #fff3ef 20px 36px no-repeat; }
+div.messagePanel.alert { background: url(../images/ico_msg_alert.png) #fdfce4 20px 36px no-repeat; }
+div.messagePanel.waiting { background: url(../images/ico_msg_awaiting.png) #fdfce4 20px 36px no-repeat; }
+div.messagePanel.success { background: url(../images/ico_msg_ok.png) #f3fdf2 20px 36px no-repeat; }
+
+
+	.messagePanel h3 { margin-top: 0px; }
+	.messagePanel ul, .messagePanel p { margin-left: 100px; margin-right: 10px; padding: 0px; }
+	.messagePanel strong { font-size: 1.04em; font-family: "roboto", Arial, sans-serif; font-weight: bold; font-weight: bold; }
+
+
+
+.newsItem {
+	margin: 10px;
+}
+
+	.newsItem span.date { display: block; color: #666; font-size: 1.04em; font-family: "roboto", Arial, sans-serif;
+font-weight: bold; font-weight: 600; }
+	.newsItem strong.title { display: block; margin: 3px 0px 10px 0; font-size: 1.04em; }
+	.newsItem a img { display: block; margin: 0 auto; max-width: 95%; }
+	/*.newsItem p { margin: 0px; margin-top: 10px; padding: 0px; font-size: 13px; text-align: justify; }*/
+    .newsItem p { margin: 0px; margin-top: 10px; padding: 0px; font-size: 1.0em; text-align: justify; }
+
+
+
+.ui-dialog .ui-dialog-titlebar { border-radius: 2px 2px 0 0; }
+
+
+/***** CUSTOM JQUERY UI DATEPICKER ******/
+
+.ybb-calendar .ui-widget {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1em;
+}
+.ybb-calendar .ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ybb-calendar .ui-widget input,
+.ybb-calendar .ui-widget select,
+.ybb-calendar .ui-widget textarea,
+.ybb-calendar .ui-widget button {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1em;
+}
+.ybb-calendar .ui-widget-content {
+	border: 1px solid #aaaaaa;
+	background: #ffffff url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+	color: #001831;
+}
+.ybb-calendar .ui-widget-content a {
+	color: #001831;
+}
+.ybb-calendar .ui-widget-header {
+	border: 1px solid #7db77d;
+	background: #7db77d url("images/ui-bg_glass_60_7db77d_1x400.png") 50% 50% repeat-x;
+	color: #fff;
+	font-weight: bold;
+}
+.ybb-calendar .ui-widget-header a {
+	color: #fff;
+}
+
+/* Interaction states
+----------------------------------*/
+.ybb-calendar .ui-state-default,
+.ybb-calendar .ui-widget-content .ui-state-default,
+.ybb-calendar .ui-widget-header .ui-state-default {
+	border: 1px solid #aaaaaa;
+	background: #cce2cc url("images/ui-bg_flat_75_cce2cc_40x100.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #003b79;
+}
+.ybb-calendar .ui-state-default a,
+.ybb-calendar .ui-state-default a:link,
+.ybb-calendar .ui-state-default a:visited {
+	color: #003b79;
+	text-decoration: none;
+}
+.ybb-calendar .ui-state-hover,
+.ybb-calendar .ui-widget-content .ui-state-hover,
+.ybb-calendar .ui-widget-header .ui-state-hover,
+.ybb-calendar .ui-state-focus,
+.ybb-calendar .ui-widget-content .ui-state-focus,
+.ybb-calendar .ui-widget-header .ui-state-focus {
+	border: 1px solid #7ea889;
+	background: #7ea889 url("images/ui-bg_flat_75_7ea889_40x100.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #fff;
+}
+.ybb-calendar .ui-state-hover a,
+.ybb-calendar .ui-state-hover a:hover,
+.ybb-calendar .ui-state-hover a:link,
+.ybb-calendar .ui-state-hover a:visited,
+.ybb-calendar .ui-state-focus a,
+.ybb-calendar .ui-state-focus a:hover,
+.ybb-calendar .ui-state-focus a:link,
+.ybb-calendar .ui-state-focus a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.ybb-calendar .ui-state-active,
+.ybb-calendar .ui-widget-content .ui-state-active,
+.ybb-calendar .ui-widget-header .ui-state-active {
+	border: 1px solid #aaaaaa;
+	background: #97d596 url("images/ui-bg_flat_65_97d596_40x100.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #fff;
+}
+.ybb-calendar .ui-state-active a,
+.ybb-calendar .ui-state-active a:link,
+.ybb-calendar .ui-state-active a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ybb-calendar .ui-state-highlight,
+.ybb-calendar .ui-widget-content .ui-state-highlight,
+.ybb-calendar .ui-widget-header .ui-state-highlight {
+	border: 1px solid #dbc66e;
+	background: #fdee79 url("images/ui-bg_flat_55_fdee79_40x100.png") 50% 50% repeat-x;
+	color: #001831;
+}
+.ybb-calendar .ui-state-highlight a,
+.ybb-calendar .ui-widget-content .ui-state-highlight a,
+.ybb-calendar .ui-widget-header .ui-state-highlight a {
+	color: #001831;
+}
+.ybb-calendar .ui-state-error,
+.ybb-calendar .ui-widget-content .ui-state-error,
+.ybb-calendar .ui-widget-header .ui-state-error {
+	border: 1px solid #ff3919;
+	background: #fff3ef url("images/ui-bg_flat_95_fff3ef_40x100.png") 50% 50% repeat-x;
+	color: #001831;
+}
+.ybb-calendar .ui-state-error a,
+.ybb-calendar .ui-widget-content .ui-state-error a,
+.ybb-calendar .ui-widget-header .ui-state-error a {
+	color: #001831;
+}
+.ybb-calendar .ui-state-error-text,
+.ybb-calendar .ui-widget-content .ui-state-error-text,
+.ybb-calendar .ui-widget-header .ui-state-error-text {
+	color: #001831;
+}
+.ybb-calendar .ui-priority-primary,
+.ybb-calendar .ui-widget-content .ui-priority-primary,
+.ybb-calendar .ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ybb-calendar .ui-priority-secondary,
+.ybb-calendar .ui-widget-content .ui-priority-secondary,
+.ybb-calendar .ui-widget-header .ui-priority-secondary {
+    -ms-opacity: .7;
+    opacity: .7;
+    -webkit-filter:Alpha(Opacity=70);
+    -moz-filter:Alpha(Opacity=70);
+    -o-filter:Alpha(Opacity=70);
+    filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+
+.ybb-calendar .ui-state-disabled,
+.ybb-calendar .ui-widget-content .ui-state-disabled,
+.ybb-calendar .ui-widget-header .ui-state-disabled {
+    -ms-opacity: .35;
+    opacity: .35;
+    -webkit-filter:Alpha(Opacity=35);
+    -moz-filter:Alpha(Opacity=35);
+    -o-filter:Alpha(Opacity=35);
+    filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+
+.ybb-calendar .ui-state-disabled .ui-icon {
+    -webkit-filter:Alpha(Opacity=35);
+    -moz-filter:Alpha(Opacity=35);
+    -o-filter:Alpha(Opacity=35);
+    filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+.ybb-pp{
+    background-color:#E8F2E8;
+    border-spacing:2px;
+	box-shadow: 0 1px 8px 1px rgba(0,0,0,0.5);
+    border:rgba(0,0,0,0.2) 1px solid;
+    
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ybb-calendar .ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ybb-calendar .ui-icon,
+.ybb-calendar .ui-widget-content .ui-icon {
+	background-image: url("images/ui-icons_001831_256x240.png");
+}
+.ybb-calendar .ui-widget-header .ui-icon {
+	background-image: url("images/ui-icons_fff_256x240.png");
+}
+.ybb-calendar .ui-state-default .ui-icon {
+	background-image: url("images/ui-icons_fff_256x240.png");
+}
+.ybb-calendar .ui-state-hover .ui-icon,
+.ybb-calendar .ui-state-focus .ui-icon {
+	background-image: url("images/ui-icons_fff_256x240.png");
+}
+.ybb-calendar .ui-state-active .ui-icon {
+	background-image: url("images/ui-icons_fff_256x240.png");
+}
+.ybb-calendar .ui-state-highlight .ui-icon {
+	background-image: url("images/ui-icons_dbc66e_256x240.png");
+}
+.ybb-calendar .ui-state-error .ui-icon,
+.ybb-calendar .ui-state-error-text .ui-icon {
+	background-image: url("images/ui-icons_ff3919_256x240.png");
+}
+
+/* Overlays */
+.ybb-calendar .ui-widget-overlay {
+    background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+    -ms-opacity: .3;
+    opacity: .3;
+    -webkit-filter: Alpha(Opacity=30);
+    -moz-filter: Alpha(Opacity=30);
+    -o-filter: Alpha(Opacity=30);
+    filter: Alpha(Opacity=30); /* support: IE8 */
+}
+
+.ybb-calendar .ui-widget-shadow {
+    margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+    -ms-opacity: .3;
+    opacity: .3;
+    -webkit-filter: Alpha(Opacity=30);
+    -moz-filter: Alpha(Opacity=30);
+    -o-filter: Alpha(Opacity=30);
+    filter: Alpha(Opacity=30); /* support: IE8 */
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+}
+
+
+/* EVENTI */
+
+#riepilogoEventi {
+	height: 200px;
+	margin-bottom: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.legendaEventi { margin-bottom: 10px; line-height: normal; }
+
+.colorBox {
+	clear: left;
+	float: left;
+	margin-top: 1px;
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+/****** BOOTSTRAP POPOVER ******/
+.popover {
+	background-color: #c5e7bc;
+} 
+.popover-content { padding: 4px; }
+
+	.popover.top>.arrow:after { border-top-color: #c5e7bc; }
+	.popover.left>.arrow:after { border-left-color: #c5e7bc; }
+	.popover.bottom>.arrow:after { border-bottom-color: #c5e7bc; }
+	.popover.right>.arrow:after { border-right-color: #c5e7bc; } 
+
+.event-description { float: left; padding: 0; font-size: 0.85em; }
+
+	.event-description span.event-category { display: inline-block; margin-bottom: 3px; font-size: 1.1em; }
+
+	.event-description ul { margin: 0; padding: 0 0 0 18px; }
+		.event-description ul li { margin-bottom: 5px; }
+
+
+.legendaEventi .oggi, .events-legend .oggi,
+.ybb-calendar td.oggi > .ui-state-default { background: #fdee79; border: 1px solid #dbc66e; }
+
+.legendaEventi .appuntamento, .events-legend .appuntamento,
+.ybb-calendar td.appuntamento > .ui-state-default { background: #14955d; color: #fff; border: 1px solid #10764a; }
+
+.legendaEventi .festivita, .events-legend .festivita,
+.ybb-calendar td.festivita > .ui-state-default { background: #e25c5c; color: #fff; border: 1px solid #b64444; }
+
+.legendaEventi .fiscale, .events-legend .fiscale,
+.ybb-calendar  td.fiscale > .ui-state-default { background: #377ade; color: #fff; border: 1px solid #2a5eac; }
+
+.legendaEventi .amministrazione, .events-legend .amministrazione,
+.ybb-calendar  td.amministrazione > .ui-state-default { background: #1077e3; color: #fff; border: 1px solid #2a5eac; }
+
+.legendaEventi .compleanno, .events-legend .compleanno,
+.ybb-calendar  td.compleanno > .ui-state-default { background: #f1a732; color: #fff; border: 1px solid #dbc66e; }
+
+/**********************************************************************/
+
+
+@media (max-width:767px){ body { width: 1024px; } .container{ width:1024px; } }
+@media (min-width:768px){ body { width: 1024px; } .container{ width:1024px; } }
+@media (min-width:1000px){ body { width: 100%; } .container{ width: 100%; } }
+
+/*commentato originale questo tiene il contentuto della homepage pi� stretto*/
+@media (min-width:1200px){ body { font-size: 12px; } .container{ width:auto; min-width: 1000px; max-width: 1320px; } .spalla { display: block; } }
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+/*nuova modifica questo tiene il contentuto della homepage pi� largo come sito alten*/
+/*@media (min-width:1200px){ body { font-size: 12px; } .container{ width: 100% !important; min-width: 1000px; max-width: 1680px; } .spalla { display: block; } }*/
+/**********************AGGIUNTI NUOVI CSS GRAFICA HOME 27/01/2016************************************/
+@media (min-width:1320px){ body { font-size: 13px; } .mainContent { font-size: 1.05em; } }
+
+
+/*override classi template interni*/
+.riquadro, h1 {
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.titleSection {
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 15px;
+    color: #666;
+}
+
+.section {    
+    background: #FFFFFF;
+    /*padding: 16px!important;*/
+    border: solid 1px #c8c8c8;
+    color: #737373;
+    font-size:14px;
+}
+.section .titleSection,.section .tabSelezioneCC {
+	padding: 16px;
+}
+.section .section {
+    padding: 0;
+    border: 0;
+}
+
+
+.background-darker {
+    background: none!important;
+    margin-top: 10px;
+}
+
+.control-label {
+  width: auto;
+}
+
+
+table.dataTable thead {
+    background-color: #2F9988;
+}
+
+table.dataTable thead th {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: normal;
+    border: none !important;
+    vertical-align: middle !important;
+    min-height: 60px;
+    white-space: nowrap;
+    padding:14px 8px 14px ;
+}
+
+table.dataTable > tbody > tbody > tr:nth-of-type(even) {
+    border-bottom: 1px solid #ddd;
+    background-color: #fafafa !important;
+}
+
+table.dataTable > tbody > tbody > tr:nth-of-type(odd) {
+    background-color: #FFFFFF !important;
+}
+
+ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active .page-link:hover {
+    background: #2F9988;
+    cursor: default;
+    color: white;
+}
+
+ul.pagination li.page-item .page-link {
+    background: #ddd;
+    color: white;
+    border: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 0 2px;
+    height: 2rem;
+    min-width: 2rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+@media (min-width: 576px){
+.pl-sm-3, .px-sm-3 {
+    padding-left: 1.5rem!important;
+    padding-right: 1.5rem!important;
+}
+.pr-sm-3 {
+    padding-right: 1.5rem!important;
+}
+}
+
+.mr-3, .mx-3 {
+    margin-right: 1.5rem!important;
+}
+
+.form-field.link-icon{margin-top:20px;}
+.radio input[type=checkbox], .radio input[type=radio], .radio-inline input[type=checkbox], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox input[type=radio], .checkbox-inline input[type=checkbox], .checkbox-inline input[type=radio]
+{
+	width: 22px;
+    height: 22px;
+    margin-left: -26px;
+    margin-top:10px;
+}
+/* datapicker*/
+.ui-datepicker {
+	font-family: 'roboto', sans-serif;
+}
+.ui-datepicker-title,.ui-datepicker-header {
+	background-color: #fff;
+	color: #3e3e3e;
+	border:0;
+}
+.ui-datepicker .ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-next:before{
+	color: #3e3e3e;
+}
+.ui-datepicker .ui-datepicker-title {
+	font-family: 'roboto', sans-serif;
+	font-size:15px;
+}
+.ui-datepicker .ui-datepicker-calendar th{
+	font-size:14px!important;
+}
+.ui-datepicker .ui-datepicker-calendar td a {
+	color:#777;
+	background-color:transparent;
+	border: 0;
+	font-size:15px;
+	height:28px;
+	width:28px;
+	padding:0;
+}
+
+.ui-datepicker .ui-datepicker-calendar td a:hover{
+	background-color:#fff;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left:15px;
+}
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-week-end a:hover {
+	background-color:transparent!important;
+	cursor:default!important;
+	color:#777!important;
+}
+
+.no-padding.col-xs-9:not([class*="p-"]):not([class*="px-"]):not([class*="pl-"]){padding-left:0!important;padding-right: :0!important;padding:0!important}
+
+input[type=checkbox]{width: 20px;height:20px;}

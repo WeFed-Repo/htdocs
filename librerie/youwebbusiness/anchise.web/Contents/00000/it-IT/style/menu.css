@@ -1,0 +1,395 @@
+﻿/*body
+{
+    background-image: url("themes/anchise/images/backgroundmenu.gif");
+    margin: 0px;
+}
+*/
+/*img  
+{
+    display:block; 
+    
+}
+*/
+.pallinoMenu
+{
+    font-weight: bold;
+    font-size: 9px;
+    color: #003365;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.menuPrimoLivello
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #003365;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.menuPrimoLivello:hover
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+span.space
+{
+    display: inline-block;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+
+
+/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+/*
+.barraMenu
+{
+    background-color: #B6B6B6;
+    
+}
+.barraMenuScura
+{
+   background-color: #003365;
+}
+*/
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+/*
+.cbi{
+	 background-color: #FFFFFF;
+} 
+.pallinoMenu
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+*/
+/*======================== Stile per il primo Menu ============================*/
+/*
+.menuPrimoLivello
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+  	color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+*/
+/*=========================== Stile per il secondo Menu =======================*/
+/*
+.menuSecondoLivello
+{
+	background-color:#D4D4D4; 
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+*/
+/*=========================== Stile per il terzo Menu =========================*/
+/*
+.menuTerzoLivello
+{
+	background-color:#D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+*/
+/*=========================== FINE CLASSI MENU ================================*/
+
+
+
+/* maintable */
+
+table#mainTable
+{
+    margin: 0px;
+    border-width: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    height: 28px;
+    width: 100%;
+    border-top-style:solid;
+    border-right-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+/*
+--
+table#mainTable>tbody>tr:nth-child(1)
+{
+    height: 3px;
+    background-color: #ffffff;
+}
+--
+table#mainTable>tbody>tr:nth-child(2)
+{
+    height: 1px;
+    background-color: #00386E;
+}
+--
+table#mainTable>tbody>tr:nth-child(3)
+{
+    height: 23px;
+}
+--
+table#mainTable>tbody>tr:nth-child(3)>td:nth-child(1)
+{
+    width: 15px;
+    background-color: #c0c0c0;
+}
+--
+table#mainTable>tbody>tr:nth-child(3)>td:nth-child(2)
+{
+    text-align: left;
+}
+--
+table#mainTable>tbody>tr:nth-child(3)>td:nth-child(3)
+{
+    text-align: right;
+    width: 95px;
+}
+
+--
+table#mainTable>tbody>tr:nth-child(3)>td:nth-child(4)
+{
+    width: 30px;
+}
+--
+
+table#mainTable>tbody>tr:nth-child(3)>td:nth-child(5)
+{
+    text-align: right;
+    width: 129px;
+    background-color: #FFFFFF;
+}
+
+--
+table#mainTable>tbody>tr:nth-child(4)
+{
+    height: 1px;
+    background-color: #00386E;
+}
+*/
+
+
+/* maintable */
+
+/* innertable */
+
+table#innerTable
+{
+    text-align: left;
+    border-width: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    height: 100%;
+    border-top-style:solid;
+    border-right-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+table#innerTable>tbody>tr 
+{
+    height: 1px;
+}
+
+/* innertable */
+
+
+
+/*======================= CLASSI PER MENU A TENDINA ===========================*/
+/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu
+{
+    background-color: #B6B6B6;
+    
+}
+.barraMenuScura
+{
+   background-color: #003365;
+}
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.cbi{
+	/*background-color: #DCF2FD;*/
+	 background-color: #FFFFFF;
+} 
+.pallinoMenu
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+  	color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello
+{
+	background-color:#D4D4D4; 
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello
+{
+	background-color:#D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+/* fix per doctype */
+#menu1 tr
+{
+    height: 1px;
+}
+
+#menu2 tr
+{
+    height: 1px;
+}
+/*=========================== FINE CLASSI MENU ================================*/
+
+

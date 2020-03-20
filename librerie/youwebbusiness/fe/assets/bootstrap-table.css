@@ -1,0 +1,68 @@
+.bootstrap-table {
+  margin: 0 -16px;
+}
+.bootstrap-table .fixed-table-loading {
+  display: none;
+}
+.bootstrap-table table {
+  border-collapse: collapse;
+  margin-bottom: 0 !important;
+}
+.bootstrap-table .table-striped > tbody > tr:nth-of-type(1) {
+  background-color: #fafafa !important;
+}
+.bootstrap-table .table > tbody > tr > td {
+  border-top: solid 1px #ececec;
+}
+.table > tbody > tr > th {
+  border-top: solid 1px #ececec;
+}
+.table > tfoot > tr > td, .table > tfoot > tr > th {
+  border-top: solid 1px #ececec;
+}
+.table > thead > tr > td, .table > thead > tr > th {
+  border-top: solid 1px #ececec;
+}
+.bootstrap-table .table-hover > tbody > tr:hover {
+  background-color: #fefefe;
+}
+.bootstrap-table thead {
+  background-color: #2f9988;
+}
+.bootstrap-table thead th {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 16px !important;
+  border: none !important;
+  vertical-align: middle !important;
+  min-height: 60px;
+  white-space: nowrap;
+}
+.bootstrap-table thead th .th-inner {
+  display: inline-block;
+}
+.bootstrap-table thead th .th-inner.sortable {
+  background: transparent url(../../fe/img/table_order.png) no-repeat right center;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.bootstrap-table thead th .th-inner.asc {
+  background-image: url(../../fe/img/table_order_asc.png);
+}
+.bootstrap-table thead th .th-inner.desc {
+  background-image: url(../../fe/img/table_order_desc.png);
+}
+.bootstrap-table tbody td {
+  padding: 16px !important;
+  color: #666;
+  min-height: 60px;
+  vertical-align: middle !important;
+}
+.bootstrap-table tbody td a {
+  color: #2f9988;
+  text-decoration: underline;
+}
+.bootstrap-table tbody td .negativo {
+  color: #d00 !important;
+}

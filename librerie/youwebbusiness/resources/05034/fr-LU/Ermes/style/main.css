@@ -1,0 +1,166 @@
+.bordo_esterno
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue
+}
+.bordo_1
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue
+}
+.interno_1
+{
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c8e0d8
+}
+.interno_2
+{
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c8e0d8
+}
+.textbox
+{
+    FONT-SIZE: 10px;
+    COLOR: #003f6e;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.pulsante
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #003f6e;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue
+}
+BODY
+{
+    BACKGROUND-COLOR: #c8e0d8
+}
+A
+{
+    COLOR: blue
+}
+.testoRosso
+{
+    FONT-SIZE: 10px;
+    COLOR: purple;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c8e0d8
+}
+.sf_grigio_chiaro
+{
+    FONT-SIZE: 10px;
+    COLOR: #003f6e;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white
+}
+.sf_grigio_chiaro_evidenziato
+{
+    FONT-SIZE: 10px;
+    COLOR: crimson;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white
+}
+.dati
+{
+    COLOR: black;
+    FONT-FAMILY: 'Courier New';
+    BACKGROUND-COLOR: white
+}
+.bordoImg
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    BORDER-LEFT: black 1px solid;
+    BORDER-BOTTOM: black 1px solid
+}
+.textbox_evidenziata
+{
+    FONT-SIZE: 10px;
+    COLOR: #003f6e;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightgrey
+}
+
+.testata
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c8e0d8
+}
+
+.titoliCampi
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c8e0d8
+}
+
+.bottone
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003f6e;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue
+}
+
+.evidenziato_1
+{
+    FONT-SIZE: 15px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue;
+}
+.titolo_view
+{
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightgrey;
+}
+.titolo_view_2
+{
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: yellow;
+}
+
+.titolo_view_3
+{
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightblue;
+}
+
+.title_link
+{
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightgrey;
+	text-decoration: none;
+}
+.title_link:hover
+{
+    FONT-SIZE: 11px;
+    COLOR: red;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: lightgrey;
+	text-decoration: underline;
+}

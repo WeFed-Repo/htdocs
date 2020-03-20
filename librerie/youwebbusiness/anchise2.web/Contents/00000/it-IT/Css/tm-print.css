@@ -1,0 +1,61 @@
+/* CSS Document */
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+    color: #fff !important;
+    background: #37AD9C !important;
+}
+
+.dropdown-menu > li:hover > a, .dropdown-menu > li:focus > a {
+    color: #fff !important;
+    background-color: #458e57 !important;
+}
+
+.tm-print div.btn-group button.btn {
+    margin-bottom: 0 !important;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: cover; 
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.x2 {
+    width: 50px;
+    height: 50px;
+}
+
+.anchise-icon-export-Pdf {
+    background-image: url(tm-print-icons/pdf-icon.png);
+}
+
+.icon-zip {
+    background-image: url(tm-print-icons/zip-icon.png);
+}
+
+.anchise-icon-export-Excel97 {
+    background-image: url(tm-print-icons/xls-icon.png);
+}
+
+.anchise-icon-export-Excel {
+    background-image: url(tm-print-icons/xls-icon.png);
+}
+
+.icon-doc {
+    background-image: url(tm-print-icons/doc-icon.png);
+}
+
+.icon-txt {
+    background-image: url(tm-print-icons/txt-icon.png);
+}
+
+.icon-xml {
+    background-image: url(tm-print-icons/xml-icon.png);
+}
+
+.icon-ukw {
+    background-image: url(tm-print-icons/undefined-icon.png);
+}

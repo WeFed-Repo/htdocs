@@ -1,0 +1,122 @@
+@mixin svg-icon-color($color) {
+  &,
+  g,
+  path,
+  path g,
+  &:after,
+  &:before,
+  *:after,
+  *:before {
+    color: #{$color} !important;
+    fill: #{$color} !important;
+  }
+}
+
+@mixin svg-icon-size($size) {
+  &,
+  g,
+  path,
+  path g,
+  &:after,
+  &:before,
+  *:after,
+  *:before {
+    width: #{$size};
+    height: #{$size};
+    min-width: #{$size};
+    font-size: #{$size};
+  }
+}
+
+// encoding per gli scss degli svg
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+
+// FUNZIONE DI COLORE: 
+// crea dinamicamente le classi in base all'array di colori (vedere file vars.scss)
+
+@each $name, $color in $colors {
+  .color#{"-" + $name}{ 
+    //  create variations (if not black or white)
+    @if $color != white and $color != black {
+      color: $color;
+      @include svg-icon-color($color);    
+    } 
+  }
+  .bkg#{"-" + $name}{ 
+    background-color: $color; 
+  }
+} 
+
+@mixin ellipsed() {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin invisibleScroll() {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@mixin clearFix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0px;
+    width: 100%;
+  }
+}
+
+@mixin bordered($bkg:$white,$border:$grayBordered,$color:$gray2,$allpadding:false) {
+  padding: $spacer $spacer 0;
+  background: $bkg;
+  border: solid 1px $border;
+	@if $allpadding != false {
+    padding: $spacer;
+  } 
+  color: $color;
+  width: 100%;
+  max-width:100%;
+  &.no-b {
+    &-t { border-top: none;}
+    &-r { border-right: none;}
+    &-l { border-left: none;}
+    &-b { border-bottom: none;}
+  }
+}
+
+@mixin no_user_select() {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version */
+}
+
+@mixin create_color_classes($colors,$classname) {
+  @each $name, $color in $colors {
+    #{"." + $classname} {
+      &#{"-" + $name}{ 
+        background-color: $color; 
+        //  create variations (if not black or white)
+        @if $color != white and $color != black {
+          color: $color;
+          @include svg-icon-color($color);    
+        } 
+      }
+    }
+  }  
+}

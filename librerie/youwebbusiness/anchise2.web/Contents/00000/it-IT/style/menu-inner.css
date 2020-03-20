@@ -1,0 +1,115 @@
+﻿/*======================= CLASSI PER MENU A TENDINA ===========================*/
+/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu
+{
+    background-color: #B6B6B6;
+    
+}
+.barraMenuScura
+{
+   background-color: #003365;
+}
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.cbi{
+	/*background-color: #DCF2FD;*/
+	 background-color: #FFFFFF;
+} 
+.pallinoMenu
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+  	color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello
+{
+	background-color:#D4D4D4; 
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello
+{
+	background-color:#D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivello:hover
+{
+    background-color:#D4D4D4; 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    color:#ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+/* fix per doctype */
+#menu1 tr
+{
+    height: 1px;
+}
+
+#menu2 tr
+{
+    height: 1px;
+}
+/*=========================== FINE CLASSI MENU ================================*/

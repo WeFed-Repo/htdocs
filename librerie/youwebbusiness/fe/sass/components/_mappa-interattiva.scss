@@ -1,0 +1,44 @@
+svg#MappaInterattiva { 
+    width: 100%;
+    max-width: 300px;
+    height:auto;
+    margin: 1rem 0;
+    #Regioni{
+        cursor: pointer; 
+        path, g {
+            &, &:active {
+                cursor: pointer; 
+                opacity: 0.5;
+                transition: all 0.3s; 
+                fill: $greenLink;    
+            } 
+            &:hover { 
+                opacity: 0.5;
+            }  
+            &.selected,
+            &.selected:hover { 
+                opacity: 1;
+                fill: $greenMenu;
+            }
+        } 
+    }
+}
+
+#MappaForm {
+    width:100%;
+    max-width:300px;
+    @media (max-width:$bp_md_max) {
+        max-width: 500px;
+    }
+    select#MappaSelect { 
+        text-transform: capitalize; 
+    }
+    input#MappaTarga {
+        text-transform: uppercase;
+    }
+    .radio {
+        @include icon {
+            @include svg-icon-color($greenLink);
+          }
+    }
+}

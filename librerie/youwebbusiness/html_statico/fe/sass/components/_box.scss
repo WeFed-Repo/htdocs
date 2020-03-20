@@ -1,0 +1,27 @@
+.boxOutput {
+  margin-top: -1px;
+  
+  h3 {
+    color:#737373 !important
+  }
+  
+  .borderBottom {
+    border-bottom: 1px solid #c8c8c8
+  }
+  
+  .borderRight {
+    border-right: 1px solid #c8c8c8
+  }
+   
+  @media (max-width: 767px)
+  {
+    .borderRight {
+      border-bottom: 1px solid #c8c8c8;
+      border-right: none !important;
+    }
+
+    .paddingTopResponsive {
+      padding-top: 16px
+    }
+  }
+} 

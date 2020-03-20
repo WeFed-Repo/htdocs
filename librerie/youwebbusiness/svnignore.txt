@@ -1,0 +1,10 @@
+# ' svn propset svn:ignore -F svnignore.txt . '
+tmp
+obj
+bin
+.sass-cache
+package.json
+node_modules
+package-lock.json
+*~
+mygit

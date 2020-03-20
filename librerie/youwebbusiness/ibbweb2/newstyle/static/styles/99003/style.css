@@ -1,0 +1,14 @@
+
+@import url("forms.css");
+@import url("layout.css");
+@import url("menu.css");
+
+.erroreDati2 {
+  background-color:#E4E4E7;
+  border:1px solid #00376F;
+  color:#AE0101;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+}

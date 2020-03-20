@@ -1,0 +1,161 @@
+﻿<script id="templateDetail_IPA" type="text/x-jsrender">
+    <div class="row">
+        <div class="col-xs-6 white-block">
+            <div class="col-xs-12">
+                <div class="text-center"><h1>Ordinante</h1></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Intestato a:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:originalParam.Rapporto.DescrizioneAzienda}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Iban:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:originalParam.Rapporto.CodiceIban}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Banca:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:DescrIstitutoOrdinante}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Filiale:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:CodiceFilialeOrdinante}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 white-block">
+            <div class="col-xs-12">
+                <div class="text-center"><h1>Beneficiario</h1></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Intestato a:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:originalParam.Chain.Order.Beneficiario.Denominazione}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Iban:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:originalParam.Chain.Order.Beneficiario.Iban}}</label>
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="col-xs-5">Banca:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:DescrIstitutoBeneficiario}}</label>
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="col-xs-5">Filiale:</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:CodiceFilialeBeneficiario}}</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 white-block">
+            <div class="col-xs-12">
+                <div class="text-center"><h1>Dati Bonifico</h1></div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Importo:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label right" style="padding:0">{{:Importo}}&nbsp;{{:Currency}}</label>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Commissione fissa:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label right" style="padding:0">{{:CommFissa}}&nbsp;{{:CurrencyFissa}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Commissione %:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label right" style="padding:0">{{:CommVariabile}}&nbsp;{{:CurrencyVariabile}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Totale:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label right" style="padding:0">{{:Totale}}&nbsp;{{:Currency}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">&nbsp;</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" id="xcvInternalLbl" style="padding:0">&nbsp;</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Tipologia bonifico:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" style="padding:0">{{:TipologiaBonifico}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Data esecuzione:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" style="padding:0">{{:Data}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Stato:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" style="padding:0">{{:StatoDistinta}}</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-5">Descrizione causale:</div>
+                    <div class="col-xs-7">
+                        <label class="control-label textTruncate" id="internalLabelCausale" style="padding:0">{{:Causale}}</label>
+                    </div>
+                </div>
+                <!--<div class="col-xs-12">
+                    <div class="col-xs-5">&nbsp;</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" style="padding:0">&nbsp;</label>
+                    </div>
+                </div>-->
+                <div class="col-xs-12">
+                    <div class="col-xs-5">&nbsp;</div>
+                    <div class="col-xs-7">
+                        <label class="control-label" style="padding:0">&nbsp;</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{:"<scr" + "ipt type=&quot;text/javascript&quot;>"}}
+        setTimeout(function(){
+            var wdth = $('#internalLabelCausale').width();
+            var hght = $('#internalLabelCausale').height();
+            if(hght > 30){
+                $('#xcvInternalLbl').width(wdth);
+                $('#xcvInternalLbl').height(hght);
+            }
+        }, 500);
+
+    {{:"<"}}/script>
+
+
+</script>

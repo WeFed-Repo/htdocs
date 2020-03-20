@@ -1,0 +1,80 @@
+﻿/*laura 2017/11/15 classi bootrstrap utilizzate nel widget stampe (mai ridefinite per lo stile di youbusinessWeb)*/
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background: #7ea889;
+    border-color: #7ea889;
+}
+
+.dropdown-menu > li:hover > a, .dropdown-menu > li:focus > a {
+    color: #fff !important;
+    background-color: #458e57;
+}
+
+.dropdown-menu>li>a {
+    text-decoration: none;
+}
+
+/*laura 2017/11/15 classi per widget stampe*/
+.margin-top10 {
+    margin-top: 10px !important;
+}
+
+a.btn-primary {
+    text-decoration: none;
+}
+
+.tm-print div.btn-group button.btn {
+    margin-bottom: 0;
+}
+    
+.icon {
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.x2 {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-pdf-x {
+    background-image: url(../images/print/pdf-icon.png);
+    /*background-image: url('../images/i_pdf.png');*/
+}
+
+.icon-zip {
+    background-image: url(../images/print/zip-icon.png);
+}
+
+.icon-xls {
+    background-image: url(../images/print/xls-icon.png);
+}
+
+.icon-doc {
+    background-image: url(../images/print/doc-icon.png);
+}
+
+.icon-txt {
+    background-image: url(../images/print/txt-icon.png);
+}
+
+.icon-xml {
+    background-image: url(../images/print/xml-icon.png);
+}
+
+.icon-ukw {
+    background-image: url(../images/print/undefined-icon.png);
+}
+
+.csv-semicolon {
+     background-image: url(../images/print/xls-icon.png);
+}
+
+.csv_comma {
+     background-image: url(../images/print/xls-icon.png);
+}

@@ -1,0 +1,354 @@
+﻿div.filter
+{
+    border-top: 1px solid #003365;
+    border-bottom: 1px solid #003365;
+    border-left: 1px solid #003365;
+    border-right: 1px solid #003365;
+    
+    background-color: #d4d4d4;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.filter h1
+{
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 6px;
+    padding-bottom: 3px;
+}
+
+.filter table {
+    width: 100%;
+    font-size: 10px;
+    font-weight: normal;
+    padding: 0;
+    border-spacing: 0;  
+}
+
+.filter table>td 
+{
+    /*height: 25px;    */
+   /* border: 1px solid blue;*/
+}
+
+
+.filter table.inner {
+    text-align: right;
+}
+
+
+.filter table.inner td {
+ /*height: 25px;  */ 
+}
+
+.filter thead {
+    /*height: 30px;*/
+    color: #003365;
+    padding-left: 3px;
+    background: url("themes/anchise/images/ui-bg_filter_title_row.gif") no-repeat 3px bottom;
+}
+
+.filter table.piazzatura {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    font-weight: normal;
+    
+}
+
+.filter table.piazzatura td{
+    /*height: 25px;*/
+    padding-left: 3px;
+    padding-right: 3px;   
+}
+.filter table.piazzatura select {
+    width: 300px;
+}
+
+
+.filter td.filter-label
+{
+    text-align: right;
+   /* white-space: nowrap;*/
+   font-size: 25px;
+   /* width: 200px;*/
+}
+
+/*Classi valide da qui*/
+
+
+div.filtro
+{
+    border-top: 1px solid #003365;
+    border-bottom: 1px solid #003365;
+    border-left: 1px solid #003365;
+    border-right: 1px solid #003365;
+    background-color:#d4d4d4;
+    margin-top: 20px;
+    margin-left: 50px;/*auto;*/
+    margin-right: 50px;/*auto;*/
+    padding: 0;
+    
+}
+
+div.filtro .radiobuttonrange>label[for=Data_operazione] {
+    width: 38%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 3px; 
+}
+
+div.filtro .radiobuttonrange>label {
+    width: 34%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 3px; 
+}
+
+div.PDF 
+{
+     
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+   
+}
+
+/*.filtro .title
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+*/
+.filtro table
+ {
+    text-align: left;
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+  
+}
+
+.filtro thead>tr>td
+{
+    height: 23px;
+    color: #003365;
+    padding-left: 3px;
+    background: url("themes/anchise/images/ui-bg_filter_title_row.gif") no-repeat 3px bottom;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.filtro tbody>tr
+{
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 10px;
+    font-weight: normal;
+   /* white-space: nowrap;*/
+    /*background-color:chartreuse;*/
+    width: 100%;
+    height: 23px;
+    /*min-width: 600px;*/
+  
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+}    
+
+.filtro tr.LinkedToFiltriAvanzati 
+{
+    /*MD: solo per trucci di prestigio: sezioni che devono apparire e scomparire insieme ai filtri avanzati */
+  
+}
+
+
+.filtro td.Label
+{
+    text-align: right;
+    white-space: nowrap;
+    min-width: 78px;
+    padding-right: 3px; 
+    
+}
+
+
+.filtro td.LabelWrap
+{
+    text-align: right;
+    white-space: normal;
+    min-width: 78px;
+    padding-right: 3px;
+}
+
+.filtro td.LabelOnLeft
+{
+    text-align: left;
+    white-space: nowrap;
+    font-weight: bold; 
+    padding-right: 3px;
+    
+}
+
+.filtro td.Valore
+{
+    text-align: left;
+   /* white-space: nowrap;*/
+    height: 7px;
+}
+
+
+/* ----- Valore 100 ----- */
+
+.filtro td.Valore100
+{
+    
+    text-align: left;
+    white-space: nowrap;
+}
+
+.filtro td.Valore100 input
+{
+    width: 30%;
+    min-width: 43px;
+}
+
+.filtro td.Valore100 select
+{
+    width: 33%;
+    min-width: 45px;
+}
+
+.filtro td.Valore150 input
+{
+    width: 45%;
+    min-width: 43px;
+}
+
+.filtro td.Valore150 select
+{
+    width: 48%;
+    min-width: 45px;
+}
+
+/* ----- Valore 200 ----- */
+
+.filtro td.Valore200
+{
+   
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+.filtro td.Valore200 input
+{
+    width: 63%;
+    min-width: 43px;
+}
+
+.filtro td.Valore200 select
+{
+    width: 66%;
+    min-width: 45px;
+}
+  
+  
+  
+/* ----- Valore 300 ----- */
+
+.filtro td.Valore300
+{
+    
+    text-align: left;
+    white-space: nowrap;
+}
+
+.filtro td.Valore300 input
+{
+    width: 96%;
+    min-width: 43px;
+    }
+
+.filtro td.Valore300 select
+{
+    width: 99%;
+    min-width: 45px;
+    }
+
+
+
+/*.filtro hr tr 
+{
+    height: 3px;
+}
+*/
+.filtro hr
+{
+    height: 1px;
+    border: 0;
+   /* border-top-width: 1px;*/
+    border-top-style: solid;
+    border-color: rgb(0, 51, 101);
+    margin-right: 50px;
+    margin-left: 50px;
+    line-height: 0;
+    color: rgb(0, 51, 101);
+    background-color: rgb(0, 51, 101);
+}
+
+.filtro td.Comandi
+{
+     text-align: center;
+     white-space: nowrap;
+     margin-right: 20px;
+     margin-left: 20px;
+     vertical-align: middle; 
+}
+
+.filtro input[type="button"]
+{
+    border-bottom: #ffffff 1px solid;
+    border-left: #ffffff 1px solid;
+    background-color: #003365;
+    font-family: Verdana,Arial,Helvetica;
+    height: 20px;
+    color: #ffffff;
+    font-size: 10px;
+    border-top: #ffffff 1px solid;
+    font-weight: bold;
+    border-right: #ffffff 1px solid;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.filtro td.Valore input[type="checkbox"]
+{ 
+    height: 20px;
+    color: #ffffff;
+}
+    
+.filtro td.LabelRed
+{
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 50px;
+    font-weight: bold;
+    color: #ae0101;
+    vertical-align: top; 
+}
+
+.FillForm td.LabelRed {
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 50px;
+  font-weight: bold;
+  color: #ae0101;
+  vertical-align: top;
+}

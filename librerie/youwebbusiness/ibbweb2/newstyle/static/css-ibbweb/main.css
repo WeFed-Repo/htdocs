@@ -1,0 +1,1200 @@
+/*===================== Classi per tutti i select =====================*/
+select.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;	
+} 
+input.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;	
+}
+textarea.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    SCROLLBAR-FACE-COLOR: #D4D0C8;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #000000;
+    SCROLLBAR-3DLIGHT-COLOR: #D4D0C8;
+    SCROLLBAR-ARROW-COLOR: #000000;
+    SCROLLBAR-TRACK-COLOR: #D4D0C8;
+    SCROLLBAR-DARKSHADOW-COLOR: #000000;
+    SCROLLBAR-BASE-COLOR: #D4D0C8;
+	
+}
+/*===================== Classi per la pagina di login =====================*/
+.linklogin
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+.linklogin:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #D4D4D4;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+		TEXT-DECORATION:none;
+}
+.numeroVerde
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #009900;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+.numeroVerdeTop
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+
+.news
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #00376F;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+TD.news
+{
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #00376F;
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+
+}
+.titolonews
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #DD0119;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+		TEXT-DECORATION:none;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #FFFFFF
+}
+/*===================== Fine Classi per la pagina di login =====================*/
+
+/*===================== Classi per il top-frame =====================*/
+.blu
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.blu:hover
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #F0D38C;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.linkBlu
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.linkBlu:hover
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.linkBlu_hover
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+/*===================== Fine Classi per il top-frame =====================*/
+
+/*===================== Classi per il context-selector =====================*/
+.percorso
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*===================== Fine Classi per il context-selector =====================*/
+
+/*===================== Classi per la scrollbar =====================*/
+.sfondo
+{
+    SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #003365;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+/*===================== Fine Classi per la scrollbar =====================*/
+
+/*===================== Classi per la grandezza delle tabelle =====================*/
+/*===================== Classi per la larghezza della prima tabella =====================*/
+table.larghezzaEsterna{
+	width: 100%;
+}
+/*===================== Classi per la larghezza delle tabelle di output =====================*/
+table.larghezzaInternaGrande{
+	width: 95%;
+}
+table.larghezzaInternaPiccola{
+	width: 85%;
+}
+/*===================== Classi per la larghezza delle tabelle Pagamento F24 =====================*/
+table.larghezzaF24{
+	width: 650px;
+}
+/*===================== Classi per la larghezza delle tabelle di input =====================*/
+table.larghezzaInput{
+	width: 700px;
+}
+/*===================== Classi per il bordo delle tabelle =====================*/
+.sfondoTabelle
+{ 
+	background-color: #003365
+}
+/*===================== Fine Classi per la granedezza delle tabelle =====================*/
+
+/*======================= CLASSI PER MENU A TENDINA ===========================*/
+/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu
+{
+    background-color: #B6B6B6;
+}
+.barraMenuScura
+{
+    background-color: #003365;
+}
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.pallinoMenu
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello
+{
+	background-color: #D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivello:hover
+{
+    background-color: #D4D4D4;
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello
+{
+	background-color: #D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivello:hover
+{
+    background-color: #D4D4D4;
+		FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuTerzoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+
+/*=========================== FINE CLASSI MENU ================================*/
+
+/*======================== Classi per le tabelle (input ed output) ============================*/
+/*======================== Classi per il titolo delle tabelle ============================*/
+.titoloTabella
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BACKGROUND: #003365;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per il sottotitolo delle tabelle ============================*/
+.sottoTitoloTabella
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per il multiriga ============================*/
+.rigaChiara
+{
+    FONT-SIZE: 10px;
+    BACKGROUND: #FFFFFF;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.rigaScura
+{
+    FONT-SIZE: 10px;
+    BACKGROUND: #D4D4D4;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per i link delle tabelle ============================*/
+A.tabella
+{
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+/*======================== Classi per il terzo titolo nell'elenco condizioni sbf e per il sottotitolo nell'area download ============================*/
+.terzoTitolo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #CDD6D8;
+    COLOR: #66868E;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per i bottoni ============================*/
+.bottom
+{
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+		FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #003365;
+    cursor: pointer;
+}
+/*======================== Fine Classi per le tabelle (input ed output) ============================*/
+
+/*======================== Classi per la tabella di input F24 ============================*/
+.inizioSezione {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+.fineSezione {
+    BACKGROUND: #9D9FA2
+}
+.testoBluBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 12px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBluSmallBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per il dettaglio delle distinte F24 ============================*/
+.fineSezioneDetail {
+    BACKGROUND: rgb(220,220,220);
+}
+.rigaChiaraDetail {
+    FONT-SIZE: 12px; 
+    BACKGROUND: rgb(250,250,250); 
+    COLOR: #1f3168; 
+    FONT-FAMILY: monospace, Verdana, Arial, Helvetica, sans-serif;
+    border-right : 1 solid rgb(230,230,230); 
+    border-bottom : 1 solid rgb(230,230,230); 
+    border-top : 0 solid rgb(250,250,250); 
+    border-left : 0 solid rgb(250,250,250)
+}
+.rigaScuraDetail {
+    FONT-SIZE: 10px; 
+    BACKGROUND: rgb(240,240,240); 
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBoldDetail {
+    PADDING-LEFT 3px;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBoldDetail {
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px; 
+    BACKGROUND: rgb(240,240,240);
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi per deleghe F24 ============================*/
+
+/*======================== Classi i calcoli finanziari ============================*/
+.titolicalcoli
+{
+    background-color: #9D9FA2;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.titolicalcoliattivo
+{
+    background-color: #9D9FA2;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi i calcoli finanziari ============================*/
+
+/*======================== Classi i filtri, filtri stampa e dettagli ============================*/
+/*======================== Classi per il background dei pop-up ============================*/
+.sfondofiltri
+{ 
+	background-color: #D4D4D4
+}
+.sfondoPopUp
+{
+    background-color: #ffffff;
+}
+/*======================== Classi i titoli dei pop-up ============================*/
+.testoWhiteNormalBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.titoloFiltri
+{
+    background-color: #D4D4D4
+		PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi i filtri, filtri stampa e dettagli ============================*/
+
+/*======================== Classi i link "precedenti" e "successivi" ============================*/
+.submit
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #4f4f90;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.submit:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR:  #C5655A;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+/*======================== Fine Classi i link "precedenti" e "successivi" ============================*/
+/*======================== Classi per Info Login ============================*/
+.infoLogin
+{
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;	
+  	background-color: #F1F1F3;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.infoLogout
+{
+    background-color: #386C79;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FBCC5B;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+/*======================== Fine Classi per Info Login ============================*/
+
+/*======================== Classi per pagine errori ============================*/
+.erroreDati
+{
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;	
+  	background-color: #F1F1F3;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.erroreDati2
+{
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;	
+  	background-color: #E4E4E7;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.errorPallini
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #00376F;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.errorBig
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.errorSmall
+{
+    background-color: #517B85;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.errorMail
+{
+    background-color: #517B85;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.errorMail:hover
+{
+    background-color: #517B85;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #F9CB68;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*======================== Fine Classi per pagine errori ============================*/
+
+/*======================== Classi per la gestione firmatari ============================
+(Attualmente non utilizzate, NON CANCELLARE in vista di un prossimo utilizzo)*/
+.linkFirmatari
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;    
+}
+.linkFirmatariDisabled
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none
+}
+/*======================== Fine Classi per la gestione firmatari ============================*/
+
+/*======================== Classi per il download ============================*/
+.testoWhiteSmallBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi per il download ============================*/
+
+/*======================== Classi generiche utilizzate in più aree dell'applicativo ============================*/
+.testoBlackSmall
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormal
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormalBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoSectionBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.utilitySet
+{
+ height:250px;
+ padding-left:15px;
+ padding-right:15px;
+}
+
+.testoRedSmall
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 10px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoRedSmallBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi generiche utilizzate in più aree dell'applicativo ============================*/
+
+
+/*======================== Classi TM pagelist ============================*/
+BODY
+{
+    BACKGROUND-COLOR: rgb(255,255,255);
+    SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #003365;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+.pl_header{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.pl_header_table{
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.pl_txt{
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.{    
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+.interno_2
+{
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #FFFFFF;
+    text-align: left;
+
+}
+/*======================== Fine Classi TM pagelist ============================*/
+
+/*======================== Classi TM per tab applicazioni =====================*/
+.sfondoTab
+{
+	background:#FFFFFF;
+	height:19px;
+}
+
+.tabAttiva
+{
+	font-weight: bold;
+	font-size: 15px;
+	background: #003365;
+	width: 120px;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	border-bottom-color : #003365;
+	height:30px;
+	border-right-color : #FFFFFF  ;
+	border-right-style :  solid    ;
+	border-right-width :thin ;
+	
+}
+.link_tabAttiva_old
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+}
+.link_tabAttiva
+{
+	text-align: center;
+	background: #003365;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+  
+}
+
+.tabDisattiva
+{
+	border-right: #FFFFFF thin solid;
+	font-weight: bold;
+	font-size: 15px;
+	background: #9D9FA2;
+	border-bottom-color: #003365;
+	text-transform: none;
+	width: 120px;
+	color: inactiveborder;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height: 30px;
+	text-align: center;
+}
+.link_tabDisattiva_old
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: inactiveborder;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+}
+.link_tabDisattiva
+{
+	background: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	color: #808080;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+  text-align: center;
+}
+
+.tabCliccabile
+{
+	font-weight: bold;
+	font-size: 15px;
+	background: #9D9FA2;
+	width: 120px;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	border-bottom-color : #003365;
+	height:30px;
+	border-right-color : #FFFFFF  ;
+	border-right-style :  solid    ;
+	border-right-width :thin ;
+}
+.link_tabCliccabile_old
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: #003365;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+}
+.link_tabCliccabile
+{
+	background: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	color: #002369;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+ 	text-align: center;
+}
+
+
+.linktab
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tabellaTab
+{
+	width: 750;
+}
+/*======================== Fine Classi TM per tab applicazioni =====================*/
+
+/*======================== Fine Classi x help =====================*/
+.sfondoBianco
+{  
+	background-color: #ffffff;
+}
+.testoTabella
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Verdana
+}
+.testoTabellaBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Verdana;
+}
+.sfondoCelle
+{  
+	background-color: #D5DFE1;
+}
+.textbluebold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #386C79;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblueboldsmall
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #386C79;
+    FONT-FAMILY: Arial, Verdana
+}
+.mainHelpRightBG{
+	background-image: url(../img/background5.gif);
+}
+.sfondohelp
+{
+    BACKGROUND-COLOR: #FFFFFF;
+		SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #FFFFFF;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+
+.sfondosommario
+{
+	SCROLLBAR-FACE-COLOR: #DCF2FD;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #DCF2FD;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #DCF2FD;
+    SCROLLBAR-DARKSHADOW-COLOR: #DCF2FD;
+    SCROLLBAR-BASE-COLOR: #DCF2FD;
+	background-image: url(../img/background31.gif);
+}
+.textwhitebold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblackn
+{
+    FONT-SIZE: 10pt;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblackitalic
+{
+	FONT-SIZE: 10pt;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Verdana;
+	FONT-STYLE : italic
+}
+.textblack
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.textredbold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #AE0101;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.textred
+{
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 10pt;
+  COLOR: #AE0101;
+  FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: none
+}
+.textbigblue
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.linkHelp
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.titoloHelp
+{ 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana;
+		TEXT-DECORATION: underline
+}
+
+.alertGbBody {
+	background-color: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #DD0119;
+  text-align: left;
+  border-width:0px; 
+  border-color:#000000;
+  TEXT-DECORATION: underline;
+}
+
+.noAlertGbBody {
+	background-color: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #DD0119;
+  text-align: left;
+  border-width:0px; 
+  border-color:#000000;
+  TEXT-DECORATION: none;
+}
+
+TD.alertGbBody {
+	background-color: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #003365;
+}
+
+.alertGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #DD0119;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+
+table.alertGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #DD0119;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+  TEXT-DECORATION: none;
+}
+
+.scrollerstyle{
+	font-family:webdings;background:#FFFFFF;border:0px solid #000000;cursor:hand;
+	background-color: #FFFFFF;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 12px;
+  COLOR: #DD0119;	
+  
+}
+
+.PersonalGbBody {
+	background-color: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #003365;
+}
+
+
+.PersonalGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+  TEXT-DECORATION: none;
+}
+table.PersonalGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+  TEXT-DECORATION: none;
+}
+
+.NewsGbBody {
+	background-color: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: normal;
+  FONT-SIZE: 11px;
+  COLOR: #003365;
+}
+
+
+.NewsGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+  TEXT-DECORATION: none;
+	
+}
+table.NewsGbTitle {
+	border-width: 0px;
+	padding: 0px;
+	border-style: inset;
+	background-color: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  COLOR: #ffffff;
+  TEXT-DECORATION: none;
+	
+}
+
+.appContainerMenu
+{
+    FONT-SIZE: 10px;
+    BACKGROUND: FFFFFF;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.pulsantePP
+{
+		BORDER-RIGHT: #828282 thin solid;
+		BORDER-LEFT: #FFFFFF thin solid;
+		BORDER-TOP: #FFFFFF thin solid;
+		BORDER-BOTTOM: #828282 thin solid;
+		BORDER-WIDTH: 1px 1px 1px 1px;
+}
+
+.pulsantePP:hover 
+{
+		BORDER-RIGHT: #00376F thin solid;
+		BORDER-LEFT: #00376F  thin solid;
+		BORDER-TOP: #00376F thin solid;
+		BORDER-BOTTOM: #00376F thin solid;
+		BORDER-WIDTH: 1px 1px 1px 1px;
+}		
+
+
+
+/**********************************************************************************************************************/
+/*============================================== ALTEN - Restyling ===================================================*/
+/**********************************************************************************************************************/
+
+body.top-header {
+	background:url(../images/top_bkg.png) #f5f9f5 left top repeat-x;
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+	.percorso {
+		color: #666;
+		font-size: 10px;
+		font-weight: normal;
+	}
+	
+	.postazione {
+		float: right;
+		background: url(../images/i_postazione.png) left center no-repeat;
+		padding-left: 30px;
+		font-size: 10px;
+		font-weight: normal;
+		text-align: left;
+	}
+	
+	.top-header a,
+	.top-header a:link,
+	.top-header a:visited,
+	.top-header a:active,
+	.top-header a:gocus { color: #666; text-decoration: none; }
+	.top-header a:hover { color: #333; text-decoration: underline; }
+	
+	#appDescr, #percorsoMenu { visibility: hidden; }
+
+
+
+td#logout { padding-left: 20px; }
+
+a.logout {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background: url(../images/sprite.png) no-repeat -222px -89px;
+	display: block;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+

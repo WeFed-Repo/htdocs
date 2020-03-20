@@ -1,0 +1,526 @@
+﻿/*#region LAYOUT */
+table.main-content {
+  height: 99.1%;
+}
+/*#endregion */
+/*#region FORCE COLORS */
+.bg-green-light {
+  background-color: #f7fcf7 !important;
+}
+.blue-text {
+  color: #003b79 !important;
+}
+/*#endregion */
+/*#region FOOTER */
+#divFooter {
+  width: 101%;
+  background-color: #d8e9d8;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  height: 140px;
+  bottom: -10px;
+}
+.footer div {
+  padding-top: 0;
+}
+.footer-container {
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+@media (min-width: 1200px) {
+  #divFooter {
+    font-size: 12px;
+  }
+  .footer-container {
+    min-width: 1000px;
+    max-width: 1320px;
+    margin: auto;
+  }
+}
+@media (min-width: 1320px) {
+  #divFooter {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1320px) {
+  .footer div.row {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .footer-container {
+    position: relative;
+    left: -10px;
+  }
+}
+/*.footer {
+    font-size: 1em;
+    line-height: 1.4em;
+
+}*/
+.footer {
+  padding: 0px 0 8px 0px;
+  border-top: 1px solid #7db77d;
+  background: #d8e9d8;
+  color: #003b79;
+  min-height: 125px;
+  font-size: 0.85em;
+}
+.footer h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px auto;
+}
+/*#endregion */
+/*#region INPUT FORM */
+select[multiple="true"] {
+  min-height: 60px;
+}
+btn-file {
+  color: #357745;
+  font-weight: bold;
+}
+/*#endregion */
+/*#region FONT & TITLE */
+.testoRedSmallBold {
+  padding-left: 35px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #357745 !important;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.search-flag {
+  width: 25px;
+  height: 40px;
+  display: block;
+  float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  background: url("../alten-anchise-images/search_pin.png") no-repeat 0 0;
+}
+/*#endregion */
+/*#region POPUP */
+#dialogpopup.ui-dialog-content {
+  background-color: white;
+}
+.popup-dialog .ui-dialog-titlebar {
+  display: none;
+}
+/*#endregion */
+/*#region CONTAINER */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .container {
+    width: 980px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .container {
+    width: 980px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    width: 99%;
+    overflow-x: auto;
+  }
+  .container {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 12px;
+    overflow-x: hidden;
+  }
+  .container {
+    min-width: 1000px;
+    max-width: 1320px;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .spalla {
+    display: block;
+  }
+}
+@media (min-width: 1320px) {
+  body {
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+  .mainContent {
+    font-size: 1.05em;
+  }
+}
+/*#region GRID & TABLE */
+table td.tdcenter {
+  padding-top: 10px;
+}
+table.grid {
+  border: none;
+}
+td.tdright-force-left {
+  text-align: left !important;
+}
+div.divgrid div,
+div.divgrid table.summary {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+div.divgrid table.dettagliodispo tbody td {
+  background-color: #f7fcf7;
+  text-align: left;
+}
+div.divgrid table.table tbody td {
+  text-align: center;
+}
+div.divgrid table.table tbody td.tdright {
+  text-align: right;
+  white-space: nowrap;
+}
+div.divgrid table.table tbody td.tdrightWrap {
+  text-align: right;
+  white-space: normal;
+}
+div.divgrid table.table tbody td.tdleft {
+  text-align: left;
+  white-space: nowrap;
+}
+div.divgrid table.table tbody td.tdleftWrap {
+  text-align: left;
+  white-space: normal;
+}
+table.dettagliodispo > thead > tr.head-title {
+  background-color: #ffffff;
+}
+td.tdleftWrap {
+  font-size: 12px;
+}
+.dettaglio .current {
+  background-color: #357745;
+}
+.pager td {
+  padding-right: 5px;
+}
+/*#endregion */
+/*#region SUBTABLE - CRUDFORM */
+table.subTable {
+  width: 100%;
+  background-color: #f7fcf7;
+}
+table.subTable .td1 {
+  width: 26%;
+}
+table.subTable .td3 {
+  text-align: left;
+}
+.subtitle {
+  background-color: #f7fcf7;
+}
+td.subtitleBottom {
+  background-color: #f7fcf7;
+}
+div.FillForm {
+  background-color: #f7fcf7;
+  border: none;
+  margin-bottom: 20px;
+}
+.FillForm .title {
+  background-color: #f7fcf7;
+}
+/*#endregion */
+/*#region OPERATION CONFIRMED */
+div.confirmed {
+  background-color: #ffffff;
+  border: none;
+}
+div.confirmed table > thead > tr.head-title {
+  background-color: #ffffff;
+}
+div.confirmed table > thead > tr.head-title > td {
+  display: inline-block;
+  color: #357745;
+  background: url("../alten-anchise-images/sf_titolo.png") right center no-repeat;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 10px 50px 10px 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+div.confirmed table > tbody > tr > td > input[type='button'] {
+  background-color: #357745;
+  border: 2px solid #357745;
+  border-radius: 6px;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 24px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+div.confirmed table > tbody > tr > td > input[type='button']:hover,
+div.confirmed table > tbody > tr > td > input[type='button']:focus,
+div.confirmed table > tbody > tr > td > input[type='button']:active,
+div.confirmed table > tbody > tr > td > input[type='button'].active {
+  background: #7ea889;
+  border-color: #7ea889;
+}
+div.confirmed table > tbody > tr > td.gray {
+  background: #f7fcf7;
+}
+div.messagePanel.info {
+  background-color: #f7fcf7;
+}
+/*#endregion */
+/*#region IMPORT WARNING */
+div.warning table > thead > tr > td.redtext {
+  text-align: left;
+}
+div.warning table > thead > tr.head-title {
+  background-color: #940a0a;
+}
+div.warning table > tbody > tr > td {
+  text-align: center;
+  width: 100%;
+}
+div.warning table > tbody > tr > td > input[type="button"] {
+  background-color: #357745;
+  border: 2px solid #357745;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 24px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+div.warning table > tbody > tr > td:first-child {
+  white-space: nowrap;
+  width: auto;
+}
+div.warning.border-red {
+  border: none;
+  font-size: 14px;
+  color: #940a0a;
+  padding: 3px;
+}
+div.warning.page-title h1 {
+  box-shadow: 0 8px 8px -6px #940a0a;
+  border-bottom: 1px solid #940a0a;
+}
+div.warning .page-title .new-flag {
+  background: url("../alten-anchise-images/blank_pin_red.png") no-repeat 0 0;
+}
+/*#endregion */
+/*#region OVVERRIDE FOR BLUE COLOR */
+.divgrid table td h1 {
+  color: #003b79;
+}
+.riquadro {
+  color: #003b79;
+}
+#dialogpopup.ui-dialog-content table.details thead th {
+  color: #003b79;
+}
+#dialogpopup.ui-dialog-content table.grid-esito td {
+  color: #003b79;
+}
+table.summary {
+  width: 100%;
+}
+table.summary > thead > tr.head-title {
+  color: #003b79;
+}
+table.summary > tbody > tr.subtitle {
+  color: #003b79;
+}
+table.summary > tbody > tr.subtitle > td {
+  color: #003b79;
+}
+select {
+  color: #003b79;
+}
+input {
+  color: #003b79;
+}
+textarea {
+  color: #003b79;
+}
+.linklogin {
+  color: #003b79;
+}
+.linkBlu {
+  color: #003b79;
+}
+.linkBlu:hover {
+  color: #003b79;
+}
+.sfondo {
+  SCROLLBAR-HIGHLIGHT-COLOR: #003b79;
+  SCROLLBAR-SHADOW-COLOR: #003b79;
+  SCROLLBAR-ARROW-COLOR: #003b79;
+  SCROLLBAR-DARKSHADOW-COLOR: #003b79;
+}
+.pallinoMenu {
+  color: #003b79;
+}
+.menuPrimoLivello {
+  color: #003b79;
+}
+.menuSecondoLivello {
+  color: #003b79;
+}
+.menuTerzoLivello {
+  color: #003b79;
+}
+.rigaChiara,
+.rigaScura {
+  color: #003b79;
+}
+A.tabella {
+  color: #003b79;
+}
+.rigaScuraDetail {
+  color: #003b79;
+}
+.testoBlackSmallBoldDetail {
+  color: #003b79;
+}
+.testoBlackBoldDetail {
+  color: #003b79;
+}
+.titolicalcoliattivo {
+  color: #003b79;
+}
+.titoloFiltri {
+  color: #003b79;
+}
+.linkFirmatari {
+  color: #003b79;
+}
+.linkFirmatariDisabled {
+  color: #003b79;
+}
+.testoBlackSmall {
+  color: #003b79;
+}
+.testoBlackSmallBold {
+  color: #003b79;
+}
+.testoBlackSmallBoldUnderline {
+  color: #003b79;
+}
+.testoBlackNormal {
+  color: #003b79;
+}
+.testoBlackNormalBold {
+  color: #003b79;
+}
+BODY {
+  SCROLLBAR-HIGHLIGHT-COLOR: #003b79;
+  SCROLLBAR-SHADOW-COLOR: #003b79;
+  SCROLLBAR-ARROW-COLOR: #003b79;
+  SCROLLBAR-DARKSHADOW-COLOR: #003b79;
+}
+.pl_header {
+  color: #003b79;
+}
+.pl_header_table {
+  color: #003b79;
+}
+.pl_txt {
+  color: #003b79;
+}
+.interno_2 {
+  color: #003b79;
+}
+.link_tabCliccabile {
+  color: #003b79;
+}
+.td_tabCliccabile {
+  color: #003b79;
+}
+.pl_header_Link {
+  color: #003b79;
+}
+.vnt-filter {
+  color: #003b79;
+}
+table.vnt-result-tbl > thead > tr > th {
+  color: #003b79;
+}
+.vnt-wizard-step {
+  color: #003b79;
+  /*border: @blue;*/
+}
+div.vnt-page-heading {
+  color: #003b79;
+}
+div.vnt-subdata div.vnt-label {
+  color: #003b79;
+}
+div.vnt-subdata div.vnt-edit {
+  color: #003b79;
+}
+div.vnt-subdata table.vnt-subdata {
+  color: #003b79;
+}
+.new-riquadro {
+  color: #003b79;
+}
+.table tr th,
+.table tr td.sottotitolotabella,
+.old-tableHeader {
+  color: #003b79;
+}
+.ui-widget-content {
+  color: #003b79;
+}
+.ui-widget-content a {
+  color: #003b79;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  color: #003b79;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+  color: #003b79;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  color: #003b79;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+  color: #003b79;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+  color: #003b79;
+}
+/*#endregion */
+/*# sourceMappingURL=youbiz-anchise.custom.css.map */

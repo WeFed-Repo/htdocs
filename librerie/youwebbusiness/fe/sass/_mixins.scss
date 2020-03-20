@@ -1,0 +1,195 @@
+// COLOR A NOT-INLINE SVG 
+// https://codepen.io/mstadius/pen/pJoNJX
+
+@mixin color-overlay($hex: #000000){
+  // get rgb values from hex
+  $red: red($hex);
+  $green: green($hex);
+  $blue: blue($hex);
+  // convert rgb to 0 ... 1
+  $red_c: ($red / 255);
+  $green_c: ($green / 255);
+  $blue_c: ($blue / 255);
+  $name: #{$red}_#{$green}_#{$blue};
+  $svg: "<svg xmlns='http://www.w3.org/2000/svg' version='1.1'> " + 
+          "<defs> " + 
+            "<filter id='co#{$name}'> " + 
+              "<feColorMatrix in='SourceGraphic' type='matrix' values='" + 
+                "0 0 0 0 #{$red_c} " + 
+                "0 0 0 0 #{$green_c} " + 
+                "0 0 0 0 #{$blue_c} " + 
+                "0 0 0 1 0' " + 
+              "/> " + 
+            "</filter> " + 
+          "</defs> " + 
+        "</svg>";
+  //-webkit-filter:url("data:image/svg+xml,#{$svg}#co#{$name}");
+  //filter: progid:DXImageTransform.Microsoft.Matrix( M11=0.9659258262890683, M12=0.25881904510252074, M21=-0.25881904510252074, M22=0.9659258262890683, sizingMethod='auto expand');
+  //filter:url("data:image/svg+xml,#{$svg}#co#{$name}"); 
+
+
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476); /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)"; /* IE8 */
+
+
+
+  }
+
+// MIXIN DEI COLORI DEI BOTTONI COI LORO STATI
+@mixin btnPalette($color, 
+                  $bkg, 
+                  $bkg_hover, 
+                  $color_hover: false, 
+                  $border: transparent, 
+                  $border_hover: false, 
+                  $color_disabled:$white, 
+                  $bkg_disabled:$gray4, 
+                  $border_disabled: transparent) {
+  &:not(:disabled):not(.disabled) {
+    opacity: 1;
+    color: $color;
+    background-color: $bkg;
+    @if $border_hover { // applica il colore del bordo in hover solo se settato;
+      border-color: $border_hover;
+    } @else {
+      border-color: $border;
+    }
+  &.active, &:active, &:focus, &:hover {
+      background-color: $bkg_hover !important;
+      @if $color_hover { // applica il colore in hover solo se settato;
+        color: $color_hover;
+      } @else {
+        color: $color;
+      }
+    }
+    @include icon {
+      @include svg-icon-color($color);
+    }
+  }
+  &:disabled, &.disabled {
+    opacity: 1;
+    &, &:hover, &:active, &:focus {
+      color: $color_disabled !important;
+      background: $bkg_disabled !important;
+      // applica il colore del bordo solo se settato, se no prende il bordo di default
+      @if $border_disabled {
+        border-color: $border_disabled !important;
+      } @else {
+        border-color: $border !important;
+      }
+      @include icon {
+        @include svg-icon-color($color_disabled);
+      }
+    }
+  }
+}
+
+// Wrappa le regole con tutte le classi relative alle icone
+// REF: https://sass-lang.com/documentation/at-rules/mixin#content-blocks
+@mixin icon {
+  .icon, img[src*=".svg"], i {
+      @content;
+  }
+}
+
+@mixin svg-icon-color($color) {
+  color: #{$color} !important; 
+  fill: #{$color} !important;
+  @include color-overlay($color);
+}
+
+@mixin svg-icon-size($size) {
+  width: #{$size};
+  height: #{$size}; 
+  min-width: #{$size};
+  font-size: #{$size};
+  &:before {
+    display: inline-block;
+    zoom: 80%; 
+    transform: translate(0, -10%);
+  }
+}
+
+// encoding per gli scss degli svg
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+      $hex: str-slice(ie-hex-str($string), 4);
+      $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+
+// FUNZIONE DI COLORE: 
+// crea dinamicamente le classi in base all'array di colori (vedere file vars.scss)
+
+@each $name, $color in $colors {
+  .color#{"-" + $name}{ 
+    //  create variations (if not black or white)
+    @if $color != white and $color != black {
+      color: $color;
+      @include icon {
+        @include svg-icon-color($color);
+      }
+    } 
+  }
+  img.color#{"-" + $name}, 
+  svg.color#{"-" + $name} { 
+    @include svg-icon-color($color);
+  }
+  .bkg#{"-" + $name}{ 
+    background-color: $color; 
+  }
+} 
+
+@mixin ellipsed() {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin invisibleScroll() {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@mixin clearFix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0px;
+    width: 100%;
+  }
+}
+
+@mixin bordered($bkg:$white,$border:$grayBordered,$color:$gray2,$allpadding:false) {
+  padding: $spacer $spacer 0;
+  background: $bkg;
+  border: solid 1px $border;
+	@if $allpadding != false {
+    padding: $spacer;
+  } 
+  color: $color;
+  width: 100%;
+  max-width:100%;
+  &.no-b {
+    &-t { border-top: none;}
+    &-r { border-right: none;}
+    &-l { border-left: none;}
+    &-b { border-bottom: none;}
+  }
+}
+
+@mixin no_user_select() {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version */
+}

@@ -1,0 +1,581 @@
+/*===================== Classi per tutti i select =====================*/
+select.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;	
+} 
+input.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;	
+}
+textarea.{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    SCROLLBAR-FACE-COLOR: #D4D0C8;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #000000;
+    SCROLLBAR-3DLIGHT-COLOR: #D4D0C8;
+    SCROLLBAR-ARROW-COLOR: #000000;
+    SCROLLBAR-TRACK-COLOR: #D4D0C8;
+    SCROLLBAR-DARKSHADOW-COLOR: #000000;
+    SCROLLBAR-BASE-COLOR: #D4D0C8;
+	
+}
+
+
+/*===================== Classi per la grandezza delle tabelle =====================*/
+/*===================== Classi per la larghezza della prima tabella =====================*/
+table.larghezzaEsterna{
+	width: 100%;
+        margin:0 auto;
+}
+/*===================== Classi per la larghezza delle tabelle di output =====================*/
+table.larghezzaInternaGrande{
+	width: 95%;
+}
+table.larghezzaInternaPiccola{
+	width: 85%;
+}
+/*===================== Classi per la larghezza delle tabelle Pagamento F24 =====================*/
+table.larghezzaF24{
+	width: 650px;
+}
+/*===================== Classi per la larghezza delle tabelle di input =====================*/
+table.larghezzaInput{
+	width: 700px;
+}
+/*===================== Classi per il bordo delle tabelle =====================*/
+.sfondoTabelle
+{ 
+	background-color: #003365;
+
+}
+
+
+
+/*===================== Fine Classi per la granedezza delle tabelle =====================*/
+
+
+/*======================== Classi per le tabelle (input ed output) ============================*/
+/*======================== Classi per il titolo delle tabelle ============================*/
+.titoloTabella
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BACKGROUND: #003365;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    
+    
+}
+/*======================== Classi per il sottotitolo delle tabelle ============================*/
+.sottoTitoloTabellaHeaderVuoto
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    background-image: url('../images/pager/fincatura-viola.gif');
+    background-repeat: no-repeat;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION:none;
+    TEXT-ALIGN:left;
+    HEIGHT:20px;
+    
+                 
+}
+
+.sottoTitoloTabellaCellaVuoto
+{
+	background-image: url('../../images/pager/fincatura-viola.gif');
+    background-repeat: no-repeat;
+    COLOR: #ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION:none;
+ 	HEIGHT:20px;
+}
+
+.colonnaFincatura {
+	background-position:4px 4px;
+    WIDTH:10px;
+}
+
+
+.sottoTitoloTabella
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION:none;
+    TEXT-ALIGN:left;
+    HEIGHT:20px;
+    
+                 
+}
+
+.tabellaLeftBorder
+{
+   
+    border-left: 1px solid #003365;
+                 
+}
+
+.tabellaRightBorder
+{
+ 
+    border-right: 1px solid #003365;
+                 
+}
+.sottoTitoloTabella a
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION:none;
+}
+
+/*======================== Classi per il multiriga ============================*/
+.rigaChiara
+{
+    FONT-SIZE: 10px;
+    BACKGROUND: #ffffff;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    
+   
+}
+.rigaScura
+{
+    FONT-SIZE: 10px;
+    BACKGROUND: #D4D4D4;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+
+  
+}
+
+.tabellaLista
+{
+ background-color: #003365;  
+   
+}
+
+
+.tabellaLista  .rigaScura td {
+    padding-left:3px 
+}
+
+.tabellaLista .rigaChiara td {
+    padding-left:3px 
+}
+
+
+/*======================== Classi per i link delle tabelle ============================*/
+A.tabella
+{
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+/*======================== Classi per il terzo titolo nell'elenco condizioni sbf e per il sottotitolo nell'area download ============================*/
+.terzoTitolo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #CDD6D8;
+    COLOR: #66868E;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per i bottoni ============================*/
+.bottom
+{
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #00376F;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #F7921E
+}
+/*======================== Fine Classi per le tabelle (input ed output) ============================*/
+
+/*======================== Classi per la tabella di input F24 ============================*/
+.inizioSezione {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+.fineSezione {
+    BACKGROUND: #9D9FA2
+}
+.testoBluBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 12px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBluSmallBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBold {
+	BACKGROUND: #D4D4D4;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #1f3168; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Classi per il dettaglio delle distinte F24 ============================*/
+.fineSezioneDetail {
+    BACKGROUND: rgb(220,220,220);
+}
+.rigaChiaraDetail {
+    FONT-SIZE: 12px; 
+    BACKGROUND: rgb(250,250,250); 
+    COLOR: #1f3168; 
+    FONT-FAMILY: monospace, Verdana, Arial, Helvetica, sans-serif;
+    border-right : 1 solid rgb(230,230,230); 
+    border-bottom : 1 solid rgb(230,230,230); 
+    border-top : 0 solid rgb(250,250,250); 
+    border-left : 0 solid rgb(250,250,250)
+}
+.rigaScuraDetail {
+    FONT-SIZE: 10px; 
+    BACKGROUND: rgb(240,240,240); 
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBoldDetail {
+    PADDING-LEFT 3px;
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px;
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBoldDetail {
+    FONT-WEIGHT: bold; 
+    FONT-SIZE: 10px; 
+    BACKGROUND: rgb(240,240,240);
+    COLOR: #003365; 
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi per deleghe F24 ============================*/
+
+/*======================== Classi i calcoli finanziari ============================*/
+.titolicalcoli
+{
+    background-color: #9D9FA2;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.titolicalcoliattivo
+{
+    background-color: #9D9FA2;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi i calcoli finanziari ============================*/
+
+
+/*======================== Classi i link "precedenti" e "successivi" ============================*/
+.submit
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #4f4f90;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.submit:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR:  #C5655A;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+/*======================== Fine Classi i link "precedenti" e "successivi" ============================*/
+/*======================== Classi per Info Login ============================*/
+.infoLogin
+{
+    BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;	
+  	background-color: #F1F1F3;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.infoLogout
+{
+    background-color: #386C79;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FBCC5B;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+/*======================== Fine Classi per Info Login ============================*/
+
+/*======================== Classi generiche utilizzate in più aree dell'applicativo ============================*/
+.testoBlackSmall
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormal
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormalBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoRedSmall
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 10px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoRedSmallBold
+{
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #AE0101;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+/*======================== Fine Classi generiche utilizzate in più aree dell'applicativo ============================*/
+
+/*======================== Fine Classi utilizzate per poteri di firma ============================*/
+.link_tabAttiva
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none
+}
+.link_tabDisattiva
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: inactiveborder;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none
+}
+.link_tabCliccabile
+{
+	font-weight: bold;
+	font-size: 15px;
+	color: #003365;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none	
+}
+.sfondoTab
+{
+	background:rgb(220,242,253);
+	height:30px;
+}
+.link_tabCliccabilePF
+{
+	background: rgb(220,242,253);
+	font-size: 12px;
+	font-weight: bold;
+	color: #002369;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+ 	text-align: center;
+}
+.link_tabAttivaPF
+{
+	text-align: center;
+	background: #003365;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+}
+
+.link_tabCliccabileConti
+{
+	background: #D4D4D4;
+	font-size: 9px;
+	color: #002369;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+ 	text-align: center;
+}
+
+.link_tabAttivaConti
+{
+	text-align: center;
+	background: #003365;
+	font-weight: bold;
+	font-size: 9px;
+	color: #ffffff;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+}
+
+.tabCliccabileConti
+{
+	background-color: #D4D4D4;
+	font-size: 9px;
+	color: #002369;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+ 	text-align: center;
+ 	border-left-style: solid;
+	border-left-width: 1px;
+ 	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+.tabCliccabileContiAngolo
+{
+	background-color: #D4D4D4;
+	font-size: 9px;
+	color: #002369;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+ 	text-align: center;
+ 	border-left-style: solid;
+	border-left-width: 1px;
+ 	border-top-style: solid;
+	border-top-width: 1px;
+
+
+}
+
+.tabAttivaConti
+{
+	text-align: center;
+	background: #003365;
+	font-weight: bold;
+	font-size: 9px;
+	color: #ffffff;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+  	text-decoration : none;	
+}
+
+.totale_righe
+{
+    FONT-SIZE: 10px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    
+}
+.testoNormale
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+
+	 div.exportlinks ,span.pagelinks, .pagelinks a, .exportlinks a  {
+	    FONT-WEIGHT: bold;
+	    FONT-SIZE: 10px;
+            COLOR: #003365;
+	    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	    TEXT-DECORATION: none;
+	    background: trasparent;
+	    background-color: transparent;
+		
+	}
+	   
+	    .pagebanner,.helplink   {
+	    FONT-WEIGHT: bold;
+	    FONT-SIZE: 10px;
+	    COLOR: #003365;
+	    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	    TEXT-DECORATION: none;
+	    background: trasparent;
+	    background-color: transparent;
+		
+	    }
+	   
+	    span.pagebanner,span.helplink   {
+	    FONT-WEIGHT: bold;
+	    FONT-SIZE: 10px;
+	    COLOR: #003365;
+	    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	    TEXT-DECORATION: none;
+	    background: trasparent;
+	    background-color: transparent;
+		
+	    }
+
+
+
+	    .pagebanner a:visited,helplink a:visited   {
+	    FONT-WEIGHT: bold;
+	    FONT-SIZE: 10px;
+	    COLOR: #AE0101;
+	    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	    TEXT-DECORATION: underline;
+	    background: trasparent;
+	    background-color: transparent;
+		
+	    }
+		
+		.pagebanner a:link,.helplink a:link   {
+	    FONT-WEIGHT: bold;
+	    FONT-SIZE: 10px;
+	    COLOR: #003365;
+	    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	    TEXT-DECORATION: underline;
+	    background: trasparent;
+	    background-color: transparent;
+		
+	    }

@@ -1,0 +1,103 @@
+﻿<script id="templateDetail_UVBA" type="text/x-jsrender">
+    <div class="row">
+        <div class="col-xs-6 white-block">
+            {{include tmpl="#template_ordinante"/}}
+        </div>
+        <div class="col-xs-6 white-block" id="subArea-datibollettino">
+            <div class="col-xs-12">
+                <div class="text-center"><h1>DATI OPERAZIONE</h1></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Operazione</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{mapOperazione:TipoDisposizione}}</label>
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="col-xs-5">Veicolo</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:UVBA_TIPO_VEICOLO_DESC}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Targa</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:UVBA_TARGA}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Regione</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:UVBA_REGIONE_DESC}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Codice Transazione</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{:Operazione}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 white-block">
+            {{include tmpl="#template_stato"/}}
+            <div class="col-xs-12">
+                <div class="col-xs-5">Revocabile fino al</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{formatDataOra:DataOraStornabilita}}</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-6 white-block">
+            <div class="col-xs-12">
+                <div class="text-center"><h1>IMPORTI / ORARI</h1></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Importo</div>
+                <div class="col-xs-7">
+                    <label class="control-label" id="riepilogo-contoAppoggio-filiale" style="padding:0">{{formatSaldo:Importo}}&nbsp;{{:Divisa}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Commissione</div>
+                <div class="col-xs-7">
+                    <label class="control-label" id="riepilogo-contoAppoggio-filiale" style="padding:0">{{formatSaldo:Commissione}}&nbsp;{{:Divisa}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Interessi</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{formatSaldoDisplayDettagli:UVBA_INTERESSI_BOLLO}}&nbsp;{{:Divisa}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Commissione Servizio</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{formatSaldoDisplayDettagli:UVBA_COMMISSIONI_SERVIZIO}}&nbsp;{{:Divisa}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Sanzioni</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{formatSaldoDisplayDettagli:UVBA_SANZIONI_BOLLO}}&nbsp;{{:Divisa}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Data Esecuzione</div>
+                <div class="col-xs-7">
+                    <label class="control-label" style="padding:0">{{formatData:DataEsecuzione}}</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-xs-5">Data e ora Pagamento</div>
+                <div class="col-xs-7">
+                    <label class="control-label" id="riepilogo-contoAppoggio-filiale" style="padding:0">{{formatDataOra:DataPagamento}}</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</script>

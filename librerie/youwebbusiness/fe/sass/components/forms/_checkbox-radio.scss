@@ -1,0 +1,273 @@
+/* Checkbox e radio (restyling awesome) */
+
+.radio,
+.checkbox {
+  input {
+    &:focus + label::before {
+      outline: 0 none !important;
+    }
+  }
+  padding-left: $checkboxSize;
+  margin-top: 0;
+  min-height: 30px;
+  &:not(.form-check-inline) {
+    margin-bottom: 16px;
+    padding-top: 5px;
+  }
+  &.form-check-inline {
+    margin-bottom: 0px;
+    padding-top: 2px;
+  }
+  @at-root table & {
+    padding-top: 0 !important;
+    margin-top: -3px;
+    label {
+      padding-left: 0 !important;
+    }
+    &.radio label {
+      margin-left: 3px;
+    }
+  }
+  label {
+    padding-left: $checkboxSizeGap;
+    min-height: $checkboxSize;
+    display: inline-block;
+    @include no_user_select();
+    span.ellipsed {
+      display: inline-block;
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &::before {
+      width: $checkboxSize;
+      height: $checkboxSize;
+      margin-left: -$checkboxSize;
+      margin-top: 0;
+      border-color: #ddd;
+      background: $grayBG;
+    }
+    &.c-white::before {
+      background: $white;
+    }
+  }
+  &, &-inline {
+    input[type=checkbox],
+    input[type=radio] {
+      margin-left: -$checkboxSize;
+      margin-top: -2px;
+      width: $checkboxSize;
+      height: $checkboxSize;
+      cursor: pointer;
+      &[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+  &.big label {
+    font-size: 18px;
+    padding-top: 0;
+    padding-left:7px;
+    color: #777;
+    font-weight: bold;
+    line-height: -#{($checkboxSize)-1};
+    &::before, &::after { margin-top: 2px; }
+  }
+  @include icon {
+    float: none; 
+    clear: both;
+    overflow: auto;
+    display: block;
+    width: 50px;
+    height: auto;
+    max-width: calc( 100% - #{$checkboxSize} - #{$checkboxSizeGap} );
+    text-align: left;
+    margin-left: $checkboxSizeGap;
+    margin-bottom: $checkboxSizeGap;
+  }
+}
+
+// posizione messaggio validazione
+.form-check  {
+  .valid-feedback,
+  .invalid-feedback {
+    transform: translate(-$checkboxSize,0);
+  }
+}
+
+// ONLY RADIO STYLE
+
+.radio,
+.radio input[type="radio"] {
+  label, + label{
+    &::before {
+      margin-left: -$checkboxSize;
+    }
+    &::after {
+      display: NONE;
+      transform: translate(4px, 4px) !important;
+      background-color: $greenLink;
+      margin-left: -#{$checkboxSize};
+      height: 10px;
+      width: 10px;
+    }
+  }
+  &:checked {
+    label, + label{
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+// ONLY CHECKBOX STYLE
+
+.checkbox {
+    margin-bottom: 16px;
+    input {
+    &:checked + label::after {
+      font-size: 17px;
+      color: $greenLink;
+      margin-left: -$checkboxSize;
+      margin-top: -2px;
+    }
+    // classe per lista in cui le sottovoci sono parzialmente attive
+    &.partial {
+      &, &:checked {
+        + label {
+          position: relative !important;
+          &::after {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            transform: translate(-17px, 8px) !important;
+            border-bottom: 3px solid transparentize($greenLink,0.5) !important;
+            width: 10px !important;
+            height: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+.output-title .checkbox input + label::after {
+  margin-top: 1px !important;
+}
+
+// SWITCH BUTTON
+
+.checkbox.switch {
+  padding-left: 77px;
+  label {
+    padding-top: 3px;
+    padding-left: 0px;
+    cursor: pointer;
+    &::before {
+      border: 0;
+      width: 70px;
+      height: 30px;
+      background: #ddd;
+      border-radius: 15px;
+      margin-left: -80px;
+      margin-top: -3px;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      border: 0;
+      width: 30px;
+      height: 30px;
+      background: $white;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      margin-left: -80px;
+      color: transparent;
+      margin-top: 0px;
+      z-index: 2;
+      transition: margin-left 0.3s, background-color 0.3s;
+    }
+  }
+  input:checked + label {
+    &::after {
+      content: ''; // rewrite check icon
+      margin-top: 0px; // rewrite icon position
+      margin-left: -40px; // move not-checked position
+      background-color: $greenLink;
+    }
+  }
+}
+
+// colore label in caso di validazione
+.form-check-input.is-invalid~.form-check-label,
+.was-validated .form-check-input:invalid~.form-check-label {
+  color: $gray1;
+}
+
+// posizione messaggio validazione
+
+.form-check.switch  {
+  .valid-feedback,
+  .invalid-feedback {
+    transform: translate(-77px,0);
+  }
+}
+
+.radio.imgchoice {
+  padding-top: 0;
+  &, label, label::before {
+    height: 36px;
+    width: 60px;
+  }
+  label {
+    transform: translate(-$checkboxSize,0);
+    display: block;
+    border-radius: 0;
+    background: center center no-repeat;
+    background-size: 105%;
+    border: none;
+    border: #ddd solid 1px;
+    border-bottom-left-radius: 11px;
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
+  input:checked + label {
+    background-color: $greenLink;
+    box-shadow: 0 0 3px 2px $greenLink;
+  }
+}
+
+.radio.buttonchoice {
+  padding-top: 0;
+  &, label, label::before {
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+  }
+  label {
+    transform: translate(-$checkboxSize,0);
+    display: block;
+    border-radius: 0;
+    background: center center no-repeat;
+    background-size: 105%;
+    border: none;
+    border: #ddd solid 1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+    text-align: center;
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
+  input:checked + label {
+    color: white;
+    background-color: $greenLink;
+  }
+}

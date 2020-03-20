@@ -1,0 +1,202 @@
+﻿@CHARSET "ISO-8859-1";
+
+a.box-icon {
+    display: inline-block;
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 5px 20px 5px 15px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #fff;
+    background-image: url(../images/landing-icons-sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+	background-color: #c5e7bc;
+}
+
+a.box-icon:hover,
+a.box-icon.selected { background-color: #357745; } 
+
+.sortable-placeholder{
+		height: 200px;
+		background: #ddd;
+		background: url(../images/add_pref.png) center top no-repeat;
+	}
+
+    /* patch per a.auth-icon.icon-sportello */
+    a.auth-icon.sportello { background-position: 0px 0px; }
+
+    /* patch per a.auth-icon.icon-pagamenti */
+	a.auth-icon.pagamenti { background-position: -60px 0px; }
+
+    /* patch per a.auth-icon.icon-incassi */
+	a.auth-icon.incassi { background-position: -120px 0px; }
+
+    /* patch per a.auth-icon.icon-carte */
+	a.auth-icon.carte { background-position: -180px 0px; }
+
+    /* patch per a.auth-icon.icon-documenti */
+	a.auth-icon.documenti { background-position: -240px 0px; }
+
+    /* patch per a.auth-icon.icon-anagrafiche */
+	a.auth-icon.anagrafiche { background-position: -300px 0px; }
+
+    /* patch per a.auth-icon.icon-disposizioni */
+	a.auth-icon.disposizioni { background-position: -360px 0px; }
+
+    /* patch per a.auth-icon.icon-configura */
+	a.auth-icon.configura { background-position: -420px 0px; }
+
+
+/*promo*/
+    /*colore scopri*/
+    .bodyPromo {
+        color: #000;
+        font-weight: normal;
+        display:block;
+	    font-family: Helvetica, Arial, sans-serif;
+	    font-size: 1.09em;
+	    line-height: 1.1em;
+    }
+/*img per promo menu e dettaglio*/
+.promo-infoConti {
+       width: 200px;
+       height: 60px;
+       display: block;
+       background: url(../images/PromoMenu/infoConti.png) no-repeat 0px 0px;
+}
+
+.promo-pagamenti {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/pagamenti.png?v=10) no-repeat 0px 0px;
+    }
+
+.no-action {
+    cursor: default;
+}
+
+.promo-incassi {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/incassi.png) no-repeat 0px 0px;
+}
+.promo-carte {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/carte.png) no-repeat 0px 0px;
+}
+.promo-documentiFatture {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/documentiFatture.png) no-repeat 0px 0px;
+}
+.promo-anagrafiche {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/anagrafiche.png) no-repeat 0px 0px;
+}
+.promo-datiDisposizioni {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/datiDisposizioni.png) no-repeat 0px 0px;
+}
+.promo-configura {
+    width: 200px;
+       height: 60px;
+       display: block;
+    background: url(../images/PromoMenu/configura.png) no-repeat 0px 0px;
+}
+    
+#progressbar {
+    width: 80%;
+    border: 0px;
+    text-align: center;
+    padding-left: 80px;
+}
+
+.messagePanelErrorLabel {
+    text-align: right;
+}
+
+
+
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+font-style: italic;
+}
+
+:-ms-input-placeholder {  
+font-style: italic;
+}
+
+/*.dropdown-menu {
+    font-size: 1.1em;
+}
+
+.topNav ul.nav>li.mega-menu div div.menu-info div>p {
+    font-size: 0.9em;
+}*/
+
+.paging {
+    text-align: center
+}
+
+.rpp-current {
+    
+    display: inline-block;
+		position: relative;
+		margin: 10px 5px;
+		width: 24px;
+		height: 24px;
+		padding: 0;
+	    border-radius: 12px;
+		color: #fff;
+		background: #357745;
+		font-weight: bold;
+		font-size: 12px;
+		text-align: center;
+		cursor: pointer;
+		line-height: 26px;
+		behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+		outline: none;
+
+}
+.rpp-next {
+    cursor: pointer;
+    display: inline-block;
+		position: relative;
+		margin: 10px 5px;
+		width: 24px;
+		height: 24px;
+		padding: 0;
+	    border-radius: 12px;
+		color: #fff;
+		background: #7ea889;
+		font-weight: bold;
+		font-size: 12px;
+		text-align: center;
+		cursor: pointer;
+		line-height: 26px;
+		behavior: url(/YouBiz.Web/Contents/common/pie.htc);
+		outline: none;
+}

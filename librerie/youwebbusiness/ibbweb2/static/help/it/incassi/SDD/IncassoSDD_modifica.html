@@ -1,0 +1,396 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Help on line</TITLE>
+	<script language="javascript" src="/ibbweb2/static/js/help/adeguaAbi.js"></script><!-- ADRI -->
+	<LINK id="cssRef" rel="STYLESHEET" type="text/css" href="/ibbweb2/static/styles/help/help.css">
+</HEAD>
+<BODY class="sfondo" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" rightmargin="0" onload="reindirizzaIMG()">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="1">
+	<tr valign="top">
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="4">
+				<tr>
+					<td class="textwhitebold" background="/ibbweb2/static/images/help/background2.gif">Incassi Direct Debit</td>
+					<td align="right" background="/ibbweb2/static/images/help/background2.gif">
+						<A onclick=window.print() href="#"><img src="/ibbweb2/static/images/help/print.gif" border="0" alt="Stampa" width="21" height="17"></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="textblackn">
+					<p>
+	Permette di modificare delle disposizioni di incasso SDD.
+</p>
+<p>
+	La maschera di modifica &#232; suddivisa in undici sezioni:
+</p>
+<ul>
+<p>
+	<li><b><i>Dati Ordinante</i></b></li><br><br>
+	<li><b><i>Dati Creditore Effettivo</i></b></li><br><br>
+	<li><b><i>Dati Debitore</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Aggiuntivi Debitore</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Debitore Effettivo</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Mandato</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Aggiuntivi Mandato</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Creditore Originario</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Debitore Originario</i></b><b><i></i></b></li><br><br>
+	<li><b><i>Dati Incasso</i></b><b><i></i></b></li><br><br>
+	<li><b><i>CVS (1, 2, 3)</i></b></li><br><br>
+</p>
+</ul>
+	di cui le sezioni <b>Dati Creditore Originario</b> e <b>Dati Debitore Originario</b> vengono visualizzate se si espande la sezione <b>Dati Aggiuntivi Mandato</b>.
+<p>
+	<b>Dati Ordinante</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ordinante</b>: selezionare il nominativo (i campi <b>CUC</b>, <b>Descr. Ordinante</b> e <b>C.F./P.I.</b> e <b>Identificativo creditore</b> si valorizzano in automatico)<b></b></li><br><br>
+	<li><b>CUC</b>: se valorizzato, indica il codice univoco assegnato all'azienda per la sua identificazione nella comunità Customer to Business Interaction (CBI)</li><br><br>
+	<li><b>Descr. Ordinante</b></li><br><br>
+	<li><b>C.F./P.I.</b></li><br><br>
+	<li><b>Banca</b></li><br><br>
+	<li><b>Conto</b>: selezionare il conto (i campi <b>Ordinante</b>, <b>CUC</b>, <b>Descr. Ordinante</b>, <b>C.F./P.I.</b>, <b>Banca</b>, <b>IBAN</b> e <b>Identificativo Creditore</b> si valorizzano in automatico)<b></b></li><br><br>
+	<li><b>IBAN</b></li><br><br>
+	<li><b>IBAN commissioni</b> nel caso in cui siano censiti sulla postazione più conti per l'ABI scelto, selezionare le coordinate del conto su cui 
+	sono addebitate le spese associate alle transazioni richieste. Tramite il pulsante <b>IBAN commissioni</b> è possibile visualizzare maggiori informazioni</li><br><br>
+	<li><b>Identificativo creditore</b>: indicare il codice fornito dall'ABI, univoco per ordinante</li><br><br>
+</p>
+</ul>
+<p>
+	<b>Dati Creditore Effettivo</b>
+</p>
+<p>
+	Permette di indicare, nel solo caso in cui esso non coincida con l'Ordinante, i dati dell'effettivo creditore della disposizione di incasso SDD.
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ragione Sociale</b>: indicare il nominativo dell'effettivo creditore.<br>Tramite la lente, &#232; possibile richiamare il nominativo, se presente in
+	rubrica (i campi <b>Codice</b>, <b>Indirizzo</b>, <b>Numero</b>, <b>Comune</b>, <b>CAP</b>, <b>Prov.</b>,<b> Stato</b> si valorizzano in automatico). La
+	medesima operazione pu&#242; essere effettuata anche dal campo <b>Codice</b></li><br><br>
+	<li><b>Codice </b></li><br><br>
+	<li><b>Tipo Indirizzo</b>: selezionare il tipo di indirizzo. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Indirizzo postale completo</i></li>
+	<li><i>Indirizzo di domicilio</i></li>
+	<li><i>Indirizzo di consegna</i></li>
+	<li><i>Indirizzo di residenza</i></li>
+	<li><i>Indirizzo di corrispondenza postale</i></li>
+	<li><i>Indirizzo della casella postale</i></li><br><br>
+	</ul>
+	<li><b>Indirizzo</b></li><br><br>
+	<li><b>Numero</b></li><br><br>
+	<li><b>Comune</b></li><br><br>
+	<li><b>CAP</b></li><br><br>
+	<li><b>Prov.</b></li><br><br>
+	<li><b>Stato</b></li><br><br>
+</p>
+</ul>
+<p>
+	<b>Dati Debitore</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ragione Sociale</b>: indicare il nominativo del debitore.<br>Tramite la lente, &#232; possibile richiamare il nominativo, se presente in rubrica (i
+	campi <b>Codice</b>, <b>Indirizzo</b>,<b> Numero</b>, <b>Comune</b>, <b>CAP</b>, <b>Prov.</b>,<b> Stato</b>,<b> IBAN</b>, <b>BIC</b> si valorizzano in
+	automatico). La medesima operazione pu&#242; essere effettuata anche dal campo <b>Codice</b> <b></b></li><br><br>
+	<li><b>Codice </b></li><br><br>
+	<li><b>Tipo Indirizzo</b>: selezionare il tipo di indirizzo. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Indirizzo postale completo</i></li>
+	<li><i>Indirizzo di domicilio</i></li>
+	<li><i>Indirizzo di consegna</i></li>
+	<li><i>Indirizzo di residenza</i></li>
+	<li><i>Indirizzo di corrispondenza postale</i></li>
+	<li><i>Indirizzo della casella postale</i></li><br><br>
+	</ul>
+	<li><b>Indirizzo</b></li><br><br>
+	<li><b>Numero</b></li><br><br>
+	<li><b>Comune</b></li><br><br>
+	<li><b>CAP</b></li><br><br>
+	<li><b>Prov.</b></li><br><br>
+	<li><b>Stato</b></li><br><br>
+	<li><b>IBAN</b>: tramite il pulsante <b>Aiuto IBAN</b> &#232; possibile sapere come viene strutturato</li><br><br>
+	<li><b>BIC</b></li><br><br>
+</p>
+</ul>
+<p>
+	Spuntando la casella <b>Aggiorna</b><b> dati anagrafica</b>, le informazioni vengono salvate nell'apposita rubrica.
+</p>
+<p>
+	<b>Dati Aggiuntivi Debitore</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Tipo soggetto</b>: selezionare il tipo Debitore. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Persona Fisica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>C.Fis.</i> / <i>P.Iva</i> / <i>VAT</i> e con <i>ADE</i>)</li>
+	<li><i>Persona Giuridica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>CUC CBI</i> e con <i>CBI</i>)</li><br><br>
+	</ul>
+	<li><b>Tipo Codice</b>: selezionare il tipo di codice. Pu&#242; essere:</li>
+	<ul>
+	<li><i>C.Fis. / P.Iva / VAT</i></li>
+	<li><i>CUC CBI</i></li>
+	<li><i>Identificativo BEI</i></li>
+	<li><i>Altro Codice</i></li><br><br>
+	</ul>
+	<li><b>Codice</b>: indicare il nome o il numero assegnato da un'entit&agrave; per il suo riconoscimento</li><br><br>
+	<li><b>Descriz. codice</b>: indicare l'entit&agrave; che assegna il codice.</li><br><br>
+</p>
+</ul>
+<p>
+	<b>Dati Debitore Effettivo</b>
+</p>
+<p>
+	Permette di indicare, nel solo caso in cui esso non coincida con il Debitore, i dati dell'effettivo debitore della disposizione di incasso SDD. I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ragione Sociale</b>: indicare il nominativo dell'effettivo debitore.<br>Tramite la lente, &#232; possibile richiamare il nominativo, se presente in
+	rubrica (i campi <b>Codice</b>, <b>Indirizzo</b>,<b> Numero</b>, <b>Comune</b>, <b>CAP</b>, <b>Prov.</b>,<b> Stato</b> si valorizzano in automatico). La
+	medesima operazione pu&#242; essere effettuata anche dal campo <b>Codice</b> <b></b></li><br><br>
+	<li><b>Codice </b></li><br><br>
+	<li><b>Tipo Indirizzo</b>: selezionare il tipo di indirizzo. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Indirizzo postale completo</i></li>
+	<li><i>Indirizzo di domicilio</i></li>
+	<li><i>Indirizzo di consegna</i></li>
+	<li><i>Indirizzo di residenza</i></li>
+	<li><i>Indirizzo di corrispondenza postale</i></li>
+	<li><i>Indirizzo della casella postale</i></li><br><br>
+	</ul>
+	<li><b>Indirizzo</b></li><br><br>
+	<li><b>Numero</b></li><br><br>
+	<li><b>Comune</b></li><br><br>
+	<li><b>CAP</b></li><br><br>
+	<li><b>Prov.</b></li><br><br>
+	<li><b>Stato</b></li><br><br>
+	<li><b>Tipo soggetto</b>: selezionare il tipo Debitore. Pu&#242; essere:</li>
+	<ul>
+	<li><i>Persona Fisica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>C.Fis.</i> / <i>P.Iva</i> / <i>VAT</i> e con <i>ADE</i>)</li>
+	<li><i>Persona Giuridica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>CUC CBI</i> e con <i>CBI</i>)</li><br><br>
+	</ul>
+	<li><b>Tipo codice</b>: selezionare il tipo di codice. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>C.Fis. / P.Iva / VAT</i></li>
+	<li><i>CUC CBI</i></li>
+	<li><i>Identificativo BEI</i></li>
+	<li><i>Altro Codice</i></li><br><br>
+	</ul>
+	<li><b>Codice</b>: indicare il nome o il numero assegnato da un'entit&agrave; per il suo riconoscimento</li><br><br>
+	<li><b>Descriz. codice</b>: indicare l'entit&agrave; che assegna il codice.</li><br><br>
+</p>
+</ul>
+<p>
+	<b>Dati Mandato</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Codice mandato</b>: indicare il codice identificativo del mandato sottoscritto dal debitore</b></li><br><br>
+	<li><b>Data sottoscrizione</b>: indicare la data di sottoscrizione del mandato</li><br><br>
+</p>
+</ul>
+<p>
+	<b></b>
+</p>
+<p>
+	<b>Dati Aggiuntivi Mandato</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Modifica mandato originario</b>: selezionare se si desidera modificare i dati del mandato scegliendo fra:<b></b></li>
+	<ul>
+	<li><i>Si</i></li>
+	<li><i>No</i></li>
+	</ul>
+	<li><b>Codice mandato originario</b>: indicare l'identificativo del mandato</b></li><br><br>
+	<li><b>Data ultimo incasso</b></li><br><br>
+	<li><b>Frequenza originaria</b>: selezionare la frequenza con la quale gli incassi vengono effettuati scegliendo fra quelle disponibili</li><br><br>
+	<li><b>Firma digitale</b></li><br><br>
+	<li><b>Frequenza incassi</b>: selezionare la frequenza con la quale gli incassi verranno effettuati scegliendo fra quelle disponibili</li><br><br>
+	<li><b>Data prima richiesta</b></li><br><br>
+	<li><b>Data ultima richiesta</b></li><br><br>
+</p>
+</ul>
+<p>
+	<b></b>
+</p>
+<p>
+	<b>Dati Creditore Originario</b>
+</p>
+<p>
+	La sezione viene visualizzata se si espande la sezione <b>Dati Aggiuntivi Mandato</b>. I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ragione Sociale</b>: indicare il nominativo del creditore originario. Tramite la lente, &#232; possibile richiamare il nominativo, se presente in
+	rubrica (i campi <b>Codice</b>, <b>Indirizzo</b>, <b>Numero</b>, <b>Comune</b>, <b>CAP</b>, <b>Prov.</b>,<b> Stato</b> si valorizzano in automatico). La
+	medesima operazione pu&#242; essere effettuata anche dal campo <b>Codice</b></li><br><br>
+	<li><b>Codice </b></li><br><br>
+	<li><b>Tipo Indirizzo</b>: selezionare il tipo di indirizzo. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Indirizzo postale completo</i></li>
+	<li><i>Indirizzo di domicilio</i></li>
+	<li><i>Indirizzo di consegna</i></li>
+	<li><i>Indirizzo di residenza</i></li>
+	<li><i>Indirizzo di corrispondenza postale</i></li>
+	<li><i>Indirizzo della casella postale</i></li><br><br>
+	</ul>
+	<li><b>Indirizzo</b></li><br><br>
+	<li><b>Numero</b></li><br><br>
+	<li><b>Comune</b></li><br><br>
+	<li><b>CAP</b></li><br><br>
+	<li><b>Prov.</b></li><br><br>
+	<li><b>Stato</b></li><br><br>
+	<li><b>ABI</b></li><br><br>
+	<li><b>BIC</b></li><br><br>
+	<li><b>Tipo codice</b>: selezionare il tipo di codice, scegliendo fra quelli disponibili</li><br><br>
+	<li><b>Codice</b>: indicare il nome o il numero assegnato da un'entità per il suo riconoscimento</li><br><br>
+	<li><b>Descriz. codice</b></li><br><br>
+</p>
+</ul>
+<p>
+	<b></b>
+</p>
+<p>
+	<b>Dati Debitore Originario</b>
+</p>
+<p>
+	La sezione viene visualizzata se si espande la sezione <b>Dati Aggiuntivi Mandato</b>. I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Ragione sociale</b>: indicare il nominativo del debitore originario. Tramite la lente, &#232; possibile richiamare il nominativo, se presente in
+	rubrica (i campi <b>Codice</b>, <b>Indirizzo</b>, <b>Numero</b>, <b>Comune</b>, <b>CAP</b>, <b>Prov.</b>,<b> Stato</b> si valorizzano in automatico). La
+	medesima operazione pu&#242; essere effettuata anche dal campo <b>Codice</b></li><br><br>
+	<li><b>Codice </b></li><br><br>
+	<li><b>Tipo Indirizzo</b>: selezionare il tipo di indirizzo. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Indirizzo postale completo</i></li>
+	<li><i>Indirizzo di domicilio</i></li>
+	<li><i>Indirizzo di consegna</i></li>
+	<li><i>Indirizzo di residenza</i></li>
+	<li><i>Indirizzo di corrispondenza postale</i></li>
+	<li><i>Indirizzo della casella postale</i></li><br><br>
+	</ul>
+	<li><b>Indirizzo</b></li><br><br>
+	<li><b>Numero</b></li><br><br>
+	<li><b>Comune</b></li><br><br>
+	<li><b>CAP</b></li><br><br>
+	<li><b>Prov.</b></li><br><br>
+	<li><b>Stato</b></li><br><br>
+	<li><b>IBAN</b>: tramite il pulsante Aiuto IBAN è possibile sapere come viene strutturato</li><br><br>
+	<li><b>BIC</b></li><br><br>
+	<li><b>Identificativo istituto</b></li><br><br>
+	<li><b>Tipo soggetto</b>: selezionare il<b> </b>tipo<b> </b>Debitore. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Persona Fisica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>C.Fis.</i> / <i>P.Iva</i> / <i>VAT</i> e con <i>ADE</i>)</li>
+	<li><i>Persona Giuridica</i> (i campi <b>Tipo codice</b> e <b>Descriz. codice</b> si valorizzano in automatico rispettivamente con <i>CUC CBI</i> e con <i>CBI</i>)</li><br><br>
+	</ul>
+	<li><b>Tipo codice</b>: selezionare il tipo di codice. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>C.Fis. / P.Iva / VAT</i></li>
+	<li><i>CUC CBI</i></li>
+	<li><i>Identificativo BEI</i></li>
+	<li><i>Altro Codice</i></li><br><br>
+	</ul>
+	<li><b>Codice</b>: indicare il nome o il numero assegnato da un'entità per il suo riconoscimento</li><br><br>
+	<li><b>Descriz. codice</b></li><br><br>
+</p>
+</ul>
+<p>
+	<b></b>
+</p>
+<p>
+	<b>Dati Incasso</b>
+</p>
+<p>
+	I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Importo</b>: importo della disposizione</li><br><br>
+	<li><b>Divisa</b></li><br><br>
+	<li><b>Descriz. incasso</b>tramite il pulsante <b>Descriz. incasso</b> è possibile sapere informazioni utili per la compilazione del campo</li><br><br>
+	<li><b>Data scadenza</b></li>
+	<li><b>Tipo incasso</b>: selezionare la tipologia di incasso scegliendo fra:</li>
+	<ul>
+	<li><i>Ordinario</i></li>
+	<li><i>Veloce</i></li>
+	<li><i>Ordinario COR1</i></li><br><br>
+	</ul>
+	<li><b>Sequenza incasso</b>: selezionare la sequenza incasso scegliendo fra:</li>
+	<ul>
+	<li><i>FRST - Prima  di una serie di incassi</i></li>
+	<li><i>RCUR - Per una serie di incassi</i></li>
+	<li><i>FNAL - Ultima di una serie di incassi</i></li>
+	<li><i>OOFF - Singola non ripetuta</i></li><br><br>
+	</ul>
+	<li><b>Causale</b>: selezionare la causale ISO dell'incasso  scegliendo fra quelle disponibili<b></b></li><br><br>
+	<li><b>Finalit&#224; incasso</b>: selezionare la finalit&#224; dell'incasso scegliendo fra quelle disponibili</li><br><br>
+	<li><b>Informazioni di riconciliazione</b>: indicare le eventuali informazioni di dettaglio<b></b></li><br><br>
+</p>
+</ul>
+<p>
+	<b></b>
+</p>
+<p>
+	<b>CVS (1, 2, 3)</b>
+</p>
+<p>
+	Le sezioni <b>CVS</b> contengono i campi per inserire i dati delle Comunicazioni Valutarie Statistiche relative all'incasso. I campi presenti sono:
+</p>
+<ul>
+<p>
+	<li><b>Causale valutaria</b>: selezionare la causale valutaria scegliendo fra quelle disponibili<b></b></li><br><br>
+	<li><b>Tipo CVS</b>: selezionare il tipo di comunicazione valutaria statistica. Pu&#242; essere:<b></b></li>
+	<ul>
+	<li><i>Inferiore al limite CVS</i></li>
+	<li><i>Soggetto non residente</i></li>
+	<li><i>Assegnazione causale valutaria</i></li><br><br>
+	</ul>
+	<li><b>Importo CVS </b></li><br><br>
+	<li><b>Divisa</b></li><br><br>
+</p>
+</ul>
+<p>
+	&#200; possibile inserire fino a tre CVS (ognuna accessibile cliccando la freccia posta alla fine della relativa riga di intestazione): per ciascuna,
+	occorre compilare gli specifici campi sopra descritti.
+</p>
+<p>
+	Cliccare il pulsante <b>Annulla</b> per annullare l'operazione di modifica.
+</p>
+<p>
+	Cliccare il pulsante <b>Conferma</b> per completare l'operazione.
+</p>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="35" align="right" valign="middle">
+			<input type="button" name="chiudi" value="chiudi" onclick="javascript:chiudiPopUp()" class="bottom" style="cursor: Hand;">&nbsp;
+		</td>
+	</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,28 @@
+/* Stepper */
+
+.with-stepper {
+  // width: 100%;
+  // overflow: auto;
+  h1 {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.stepper {
+  display: block;
+  float: right;
+  margin-top: 5px;
+  white-space: nowrap;
+  .dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: $gray4;
+    margin-left: 3px;
+    &.on {
+      background-color: $greenLink;
+    }
+  }
+}

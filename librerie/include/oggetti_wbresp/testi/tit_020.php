@@ -1,0 +1,7 @@
+<h3>Lorem ispum dolor sit</h3>
+<!--SE SI VUOLE TESTO CENTRATO AGGIUNGERE CLASSE text-align-center -->
+<!--SE SI VUOLE TESTO LEFT AGGIUNGERE CLASSE text-align-left -->
+<!--SE SI VUOLE TESTO RIGHT AGGIUNGERE CLASSE text-align-right -->
+<!--SE SI VUOLE TESTO MAIUSCOLO AGGIUNGERE CLASSE text-uppercase -->
+<!--SE SI VUOLE TESTO BIANCO AGGIUNGERE CLASSE text-color-white -->
+<!--SE SI VUOLE TESTO VERDE AGGIUNGERE CLASSE text-color-green -->

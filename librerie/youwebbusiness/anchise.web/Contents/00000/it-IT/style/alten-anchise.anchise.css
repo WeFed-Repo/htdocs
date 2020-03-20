@@ -1,0 +1,71 @@
+.ank-icon {
+     background-image: url(../alten-anchise-images/sprites.png);
+}
+
+/*.anchise-icon {
+     background-image: url(../alten-anchise-images/sprites.png);
+}*/
+.ui-widget-content .ank-icon {
+     background-image: url(../alten-anchise-images/sprites.png);
+}
+
+
+.ank-icon-sort-up-active { width: 20px; height: 20px; background-position: 0 -20px; cursor: pointer; }
+.ank-icon-sort-down-active { width: 20px; height: 20px; background-position: -20px -20px; cursor: pointer; }
+
+.ank-icon-sort-up { width: 20px; height: 20px; background-position: -40px -20px; cursor: pointer; }
+.ank-icon-sort-down { width: 20px; height: 20px; background-position: -60px -20px; cursor: pointer; }
+
+.ank-icon-export-Pdf { width: 20px; height: 20px; background-position: 0 -40px; }
+.ank-icon-export-Excel97 { width: 20px; height: 20px; background-position: -20px -40px; }
+.ank-icon-export-Excel { width: 20px; height: 20px; background-position: -40px -40px; }
+
+/*.anchise-icon-export-Pdf { width: 20px; height: 20px; background-position: 0 -40px; }
+.anchise-icon-export-Excel97 { width: 20px; height: 20px; background-position: -20px -40px; }
+.anchise-icon-export-Excel { width: 20px; height: 20px; background-position: -40px -40px; }*/
+
+.ank-icon-filter-apply { width: 20px; height: 20px; background-position: 0 -60px; }
+.ank-icon-filter-apply.inactive { width: 20px; height: 20px; background-position: -20px -60px; }
+.ank-icon-filter-go { width: 20px; height: 20px; background-position: -40px -60px; }
+.ank-icon-filter-go.advanced { width: 20px; height: 20px; background-position: -60px -60px; }
+.ank-icon-filter-reset{ width: 20px; height: 20px; background-position: -80px -60px; }
+
+.ank-icon-pager-first{ width: 20px; height: 20px; background-position: 0 -80px; }
+.ank-icon-pager-last{ width: 20px; height: 20px; background-position: -20px -80px; }
+.ank-icon-pager-prev{ width: 20px; height: 20px; background-position: -40px -80px; }
+.ank-icon-pager-next{ width: 20px; height: 20px; background-position: -60px -80px; }
+
+
+
+td.LabelWrap { text-align: left; padding-left: 10px; padding-right: 4px; }
+
+
+.normal-text {
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+.normal-small {
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+.alert-text
+{
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 3px;
+    color: #357745;
+}
+
+.alert-text-small
+{
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 3px;
+    color: #357745;
+}

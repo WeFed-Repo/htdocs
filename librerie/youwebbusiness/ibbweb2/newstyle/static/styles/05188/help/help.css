@@ -1,0 +1,230 @@
+input.btn1 {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
+    background: #357745;
+    border: 2px solid #357745;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+input.btn1.small {
+	margin: 0 5px;
+	margin-bottom: 10px;
+	padding: 4px 8px;
+	background: #357745;
+	border: 2px solid #357745;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+input.btn1.small.center { display: block; margin: 0px auto; }
+btn1:hover, .btn1:focus, .btn1:active, .btn1.active,  .btn1.small:hover, .btn1.small:focus, .btn1.small:active, .btn1.small.active {
+	color: #fff;
+	background: #7ea889;
+	border-color: #7ea889;
+}
+.news
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #00376F;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none;
+}
+.mainHelpRightBG{
+	background-image: url(/ibbweb2/static/images/help/background5.gif);
+}
+.sfondo
+{
+    BACKGROUND-COLOR: #ffffff;
+	SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #FFFFFF;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+.sfondosommario
+{
+	SCROLLBAR-FACE-COLOR: #D4D4D4;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #D4D4D4;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #D4D4D4;
+    SCROLLBAR-DARKSHADOW-COLOR: #D4D4D4;
+    SCROLLBAR-BASE-COLOR: #D4D4D4;
+    background-color: #D4D4D4;
+	/*background-image: url(/ibbweb2/static/images/help/background31.gif);*/
+}
+.textwhitebold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblackn
+{
+    FONT-SIZE: 10pt;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblackitalic
+{
+	FONT-SIZE: 10pt;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Verdana;
+	FONT-STYLE : italic
+}
+.textblack
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.textredbold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #AE0101;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.textred
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #AE0101;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: none
+}
+.textbigblue
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana
+}
+.linkHelp
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.linkHelp:hover
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.linkHelp:active
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+.titoloHelp
+{ 
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Arial, Verdana;
+	TEXT-DECORATION: underline
+}
+/*  inizio classi usate da help iban  ( /html/help/CoordinateConto )  */
+.textbluebold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #386C79;
+    FONT-FAMILY: Arial, Verdana
+}
+.textblueboldsmall
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #386C79;
+    FONT-FAMILY: Arial, Verdana
+}
+.testoTabella
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Verdana
+}
+.testoTabellaBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Verdana;
+}
+.sfondoCelle
+{  
+	background-color: #D5DFE1;
+}
+.sfondoBianco
+{  
+	background-color: #ffffff;
+}
+/*  fine classi usate da help iban  ( /html/help/CoordinateConto )  */
+
+/* classe per i bottoni chiudi e stampa */
+.bottom {
+    background-color: #003365;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    font-family: Verdana,Arial,Helvetica;
+    font-size: 10px;
+    font-weight: bold;
+    height: 18px;
+}
+
+/* classe per i bottoni chiudi e stampa */
+.bottomOLD
+{
+    /*BORDER-RIGHT: #00376F thin solid;
+    BORDER-LEFT: #00376F  thin solid;
+    BORDER-TOP: #00376F thin solid;
+    BORDER-BOTTOM: #00376F thin solid;*/
+    BORDER-RIGHT: #ffffff thin solid;
+    BORDER-LEFT: #ffffff  thin solid;
+    BORDER-TOP: #ffffff thin solid;
+    BORDER-BOTTOM: #ffffff thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    /*COLOR: #00376F;*/
+    color: #ffffff;
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    /*BACKGROUND-COLOR: #F7921E*/
+    background-color: #003365; 
+}

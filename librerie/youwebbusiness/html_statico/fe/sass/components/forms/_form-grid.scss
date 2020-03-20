@@ -1,0 +1,17 @@
+// cambia il gutter alle colonne della form
+.form-grid {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  .row, .form-row {
+    // margin-right: -1.25rem;
+    // margin-left: -1.25rem;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+    > [class*="col-"],
+    > .col {
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+}

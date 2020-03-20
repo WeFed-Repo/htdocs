@@ -1,0 +1,345 @@
+SELECT {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.linklogin {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linklogin:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ff9400; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.numeroVerde {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.news {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #00376f; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.titolonews {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ff9400; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 22px; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.blu {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.blu:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #f0d38c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.percorso
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sfondo
+{
+    SCROLLBAR-FACE-COLOR: #FFFFFF;
+    SCROLLBAR-HIGHLIGHT-COLOR: #003365;
+    SCROLLBAR-SHADOW-COLOR: #003365;
+    SCROLLBAR-3DLIGHT-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #003365;
+    SCROLLBAR-TRACK-COLOR: #FFFFFF;
+    SCROLLBAR-DARKSHADOW-COLOR: #003365;
+    SCROLLBAR-BASE-COLOR: #FFFFFF;
+}
+TABLE.larghezzaEsterna {
+	WIDTH: 100%
+}
+TABLE.larghezzaInternaGrande {
+	WIDTH: 95%
+}
+TABLE.larghezzaInternaPiccola {
+	WIDTH: 85%
+}
+TABLE.larghezzaInput {
+	WIDTH: 550px
+}
+.sfondoTabelle {
+	BACKGROUND-COLOR: #003365
+}
+.barraMenu
+{
+    background-color: #B6B6B6;
+}
+.barraMenuScura
+{
+    background-color: #003365;
+}
+.pallinoMenu
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivello:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuPrimoLivelloSelezionato
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.menuSecondoLivello
+{
+	background-color: #D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivello:hover
+{
+    background-color: #D4D4D4;
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuSecondoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.menuTerzoLivello
+{
+	background-color: #D4D4D4;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #003365;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivello:hover
+{
+    background-color: #D4D4D4;
+		FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+.menuTerzoLivelloSelezionato
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.titoloTabella {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #003365; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sottoTitoloTabella {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #9d9fa2; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.rigaChiara {
+	FONT-SIZE: 10px; BACKGROUND: #ffffff; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.rigaScura {
+	FONT-SIZE: 10px; BACKGROUND: #d4d4d4; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.tabella {
+	FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.terzoTitolo {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #cdd6d8; COLOR: #66868e; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bottom
+{
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+		FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #003365
+}
+
+.inizioSezione {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #9d9fa2; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.fineSezione {
+	BACKGROUND: #9d9fa2
+}
+.testoBluBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #d4d4d4; COLOR: #1f3168; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBluSmallBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #d4d4d4; COLOR: #1f3168; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #d4d4d4; COLOR: #1f3168; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.fineSezioneDetail {
+	BACKGROUND: rgb(220,220,220)
+}
+.rigaChiaraDetail {
+	BORDER-RIGHT: rgb(230,230,230) 1px solid; BORDER-TOP: rgb(250,250,250) 0px solid; FONT-SIZE: 12px; BACKGROUND: rgb(250,250,250); BORDER-LEFT: rgb(250,250,250) 0px solid; COLOR: #1f3168; BORDER-BOTTOM: rgb(230,230,230) 1px solid; FONT-FAMILY: monospace, Verdana, Arial, Helvetica, sans-serif
+}
+.rigaScuraDetail {
+	FONT-SIZE: 10px; BACKGROUND: rgb(240,240,240); COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBoldDetail {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackBoldDetail {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: rgb(240,240,240); COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.titolicalcoli {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #9d9fa2
+}
+.titolicalcoliattivo {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #9d9fa2
+}
+.sfondofiltri {
+	BACKGROUND-COLOR: #ffffff
+}
+.sfondoPopUp {
+	BACKGROUND-COLOR: #ffffff
+}
+.testoWhiteNormalBold {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.submit {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #4f4f90; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.submit:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #c5655a; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.infoLogin {
+	BORDER-RIGHT: #00376f 1px solid; BORDER-TOP: #00376f 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 11px; BORDER-LEFT: #00376f 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #00376f 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f1f1f3; TEXT-DECORATION: none
+}
+.infoLogout {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #fbcc5b; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #386c79; TEXT-DECORATION: none
+}
+.erroreDati {
+	BORDER-RIGHT: #00376f 1px solid; BORDER-TOP: #00376f 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #00376f 1px solid; COLOR: #ae0101; BORDER-BOTTOM: #00376f 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f1f1f3; TEXT-DECORATION: none
+}
+.erroreDati2 {
+	BORDER-RIGHT: #00376f 1px solid; BORDER-TOP: #00376f 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #00376f 1px solid; COLOR: #ae0101; BORDER-BOTTOM: #00376f 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #e4e4e7; TEXT-DECORATION: none
+}
+.errorPallini {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #00376f; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.errorBig {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #ae0101; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.errorSmall {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #517b85; TEXT-DECORATION: none
+}
+.errorMail {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #517b85; TEXT-DECORATION: none
+}
+.errorMail:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #f9cb68; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #517b85; TEXT-DECORATION: none
+}
+.linkFirmatari {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.linkFirmatariDisabled {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.testoBlackSmall {
+	PADDING-LEFT: 3px; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackSmallBold {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormal {
+	PADDING-LEFT: 3px; FONT-SIZE: 11px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoBlackNormalBold {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoRedSmall {
+	PADDING-LEFT: 3px; FONT-SIZE: 10px; COLOR: #ae0101; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.testoRedSmallBold {
+	PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ae0101; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.benvenuto {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.label { 	
+	font-size: 12px;
+	font-family: Verdana, Arial, Sans Serif;
+}
+.title { 	
+	font-size: 10px;
+	font-family: Verdana, Arial, Sans Serif;
+	background-color: #000066;
+	color: #ffffff;
+}
+.value { 	
+	font-size: 10px;
+	font-family: Verdana, Arial, Sans Serif;
+	BACKGROUND-COLOR:  #ffffff;
+}
+.agg1_reg { 	
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Sans Serif;
+	BACKGROUND-COLOR: #999999
+}
+.agg1_sep { 	
+	font-size: 5px;
+	font-family: Verdana, Arial, Sans Serif;
+}
+.agg2_sep { 	
+	font-size: 2px;
+	font-family: Verdana, Arial, Sans Serif;
+}
+.agg2_reg { 	
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Sans Serif;
+	BACKGROUND-COLOR: #cccccc
+}
+.pl_header{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.pl_header_table{
+    FONT-SIZE: 10px;
+    BACKGROUND: #9D9FA2;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.interno_2 {
+	PADDING-LEFT: 3px; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.pl_txt{
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #003365; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}

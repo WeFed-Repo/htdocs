@@ -1,0 +1,51 @@
+#box {
+	width:85%;
+	margin-top:20px;
+	margin-left: auto;
+	margin-right: auto;
+    background-color:#EEF7FC;
+    color:#003365;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    padding-left:3px;
+    border:1px;
+  	border-style:solid;
+ 	border-color:#000;
+}
+
+#box .formtable .formtable { width:100%; }
+.formtable { margin-top:0; }
+
+#listaEsitiPC { margin-bottom:0; }
+
+.col-1 { width:22%; text-align:right; }
+.col-2 { width:44%; text-align:left; }
+.col-2 select { width:300px; }
+.col-3 { width:16%; text-align:right; }
+.col-4 { width:6%; text-align:right; }
+.col-5 { width:10%;}
+.col-4 input, .col-4 select { font-family: verdana, arial, helvetica, sans-serif; font-size: 10px;}
+.col-1-par { width:22%; text-align:right; }
+.col-2-par { width:22%; text-align:left; }
+.col-3-par { width:10%;}
+.col-4-par { width:46%; text-align:left; }
+#tab-parametri-1 {margin-bottom:0px;}
+#tab-parametri-2 {margin-bottom:0px;}
+#tab-parametri-3 {margin-bottom:20px;}
+.nascosto { display:none; }
+
+.titoloFiltri {
+  	padding: 3px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #003365;
+    font-family: verdana, arial, helvetica, sans-serif;
+    float:left;
+}
+.bordoInput{
+	border:1px;
+  	border-style:solid;
+ 	border-color:#7F9DB9;
+ 	height: 18px;
+}

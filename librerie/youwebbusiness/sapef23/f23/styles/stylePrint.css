@@ -1,0 +1,82 @@
+@CHARSET "ISO-8859-1";
+
+body,html, .container {
+    color: #333;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 8pt;
+    line-height: auto;
+    background: none repeat scroll 0 0 transparent;
+    float: none !important;
+    padding: 0;
+    margin:0;
+    width: auto;
+    position:static!important;
+    white-space: normal !important;
+   
+}
+label{display:inline}
+.form-horizontal .form-group{
+	margin-left:0!important;
+	margin-right:0!important;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+.CCselezionato span{padding:4px}
+.CCselezionato span#disponibile, .CCselezionato span#contabile, .CCselezionato span#affidamento{display:block; padding:4px}
+
+.form-control{display:inline-block;padding:2px;height:auto; border-radius:0;}
+.form-group {
+    margin-bottom: 8px;
+}
+input#importoDec, input#centSaldoVers, #centSaldo{width:20%; margin:0}
+input#importoInt, input.importo, input#interiSaldoVers, #interiSaldo{width:68%; margin:0}
+
+
+.form-horizontal .control-label{text-align:left}
+.oRight {
+    text-align: right;
+    float: right;
+}
+.titleSection, .titleSectionLong {
+    background:none;  
+}
+#idFile,.btnSelezioneCC, .breadcrumb, .btn, .flag, .general-help, .ui-datepicker-trigger, .pager,.nascosto,.imgSrv {display:none}
+.btn.nonSelezionato,.btn.selezionato{display:block;float:left;}
+.rottura{
+		display:block;
+		page-break-before:always;
+	}
+.clearfix{margin:0; padding:0}
+
+#intestazione{font-weight:bold;}
+.data{margin-left:0px}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 10px 0 5px 0;
+}
+h1{font-size:16pt; font-weight:bold}
+h3{font-size:14pt; border-bottom:1px solid #2A6496}
+.container{border: width:100%; margin:0; padding:0}
+.row {
+    margin-left: 0;
+  margin-right: 0;}
+  
+  hr {
+  margin-bottom: 10px;
+  margin-top: 10px;}
+  
+  select.form-control{width:auto}
+  select, input{
+  	font-size: 8pt!important;
+  }
+.margin-top22 { margin-top: 22px; }
+#footer,ul.nav,#divNumeriPagina, .noPrint {
+  	display: none
+  }
+
+/* codice modifica $3401$ */
+/* codice modifica $4430$ */

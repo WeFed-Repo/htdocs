@@ -1,0 +1,239 @@
+html,body{margin:0;padding:0}
+body{font: 100.01% "Trebuchet MS",Arial,sans-serif}
+div#header {background-color: #ffffff;padding-left: 3px;font-size: 12px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}
+.riepilogoheader{background-color: #ffffff;padding-left: 3px;font-size: 12px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}
+
+.divcontentTopDisable {display:none;background-color: #ffffff;padding-left: 3px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}
+.divcontentBottomDisable {display:none;background-color: #ffffff;padding-left: 3px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}      
+.divriepilogoDisable {display:none;background-color: #ffffff;padding-left: 3px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}    
+.divsignatureDisabled {display:none;background-color: #ffffff;padding-left: 3px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}       
+
+div#navigation{background-color: #ffffff;border-bottom: 0px solid #787878;padding-left: 20px;margin-left:20px}
+div#navigation ul{list-style-type: none;margin: 0;padding: 0;white-space: nowrap}
+div#navigation li{display: inline;margin: 0;padding:0}
+div#navigation li a{text-decoration: none;border: 1px solid #787878;padding: 0px 0.3em;background: #ccc;color: #036}
+div#navigation li a:hover{background-color: #f0f0f0}
+
+.attivo {text-decoration: none;border: 1px solid #787878;padding: 0px 0.3em;background: #ccc;color: #0366}
+.disattivo {background-color: #f0f0f0}
+.ifrmRiepilogoEnable{height:150px;width:900px;border: 0px solid #787878}
+.ifrmsignatureEnable{height:150px;width:900px;border: 0px solid #787878}        
+
+
+
+
+
+.divsignatureEnabled {display:inline;background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:0px}
+.divriepilogoEnabled{display:inline;background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:0px}
+.divcontentBottomEnabled {display:inline;background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:0px}
+.divcontentTopEnabled {display:inline;background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:0px}
+.divSupBottomEnabled {display:inline;background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:00px}
+.divcontentTabAnagEnabled {display:inline;visibility: visible; width: 860px; border: 0px solid #787878;text-align: left; background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:0px}
+.divcontentTabDocumentiEnabled {display:inline;visibility: visible;width: 860px; border: 0px solid #787878;text-align: left; background-color: #ffffff;padding-left: 0px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:0px}
+
+
+
+.ifrmTopEnableSmall{height:150px;width:100%;border: 0px solid #787878}       
+
+.ifrmTopEnable{height:150px;width:100%;border: 0px solid #787878}
+
+.ifrmsupBottomEnable{display:inline-block;height:80px;width:100%;scrolling: no;border: 0px solid #787878}
+
+.ifrmBottomEnable{display:inline-block;height:480px;width:100%;scrolling: no;border: 0px solid #787878}
+
+#divCont{height:580px;width:100%;border: 0px solid #787878;text-align: center}
+
+
+
+.ifrmBottomDisable{display:none; height:0px;width:0px;scrolling: no;border: 0px solid #787878}
+
+.bottomDis{BORDER-RIGHT: #003365 thin solid;BORDER-LEFT: #003365  thin solid;BORDER-TOP: #003365 thin solid;BORDER-BOTTOM: #FFFFFF thin solid;BORDER-WIDTH: 1px 1px 1px 1px;FONT-WEIGHT: bold;FONT-SIZE: 10px;  COLOR: #cdcdcd;    FONT-FAMILY: Verdana,Arial,Helvetica;HEIGHT: 18px;BACKGROUND-COLOR: #FFFFFF;}
+
+.divSupBottomDisable {display:none;background-color: #ffffff;padding-left: 3px;font-size: 9px;color: #003365;font-weight: bold;font-family: Verdana, Arial, Helvetica, sans-serif;margin:0;line-height:30px;margin-left:20px}
+
+.ifrmsupBottomDisable{display:none; height:0px;width:0px;scrolling: no;border: 0px solid #787878}
+
+.divcontentTabAnagDisable {display:none;visibility: hidden}
+
+.divcontentTabDocumentiDisable {display:none; visibility: hidden}
+.titoloform{font-weight: bold;font-size: 12px;background: #003365;color: #ffffff;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.mytestoBlackSmall{padding-left: 3px;font-size: 9px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.mytestoSmall{padding-left: 3px;font-size: 9px; font-weight: normal; color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.mytestoBlackSmallBold{padding-left: 3px;font-weight: bold;font-size: 9px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.divVisibleInline{display: inline;height:150px;width:100%;border: 0px solid #787878}
+.divVisibleNone{display: none;}
+
+.divRiepVisibleInline{display: inline;height:150px;width:100%;border: 0px solid #787878}
+
+.imgBottom{cursor: pointer;}
+.cellTable{width: 600px;}
+.cellaBottoneSearch {width: 80px;height: 80px;}
+.select{font-weight: normal;font-size: 10px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.input{font-weight: normal;font-size: 10px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+.bottom{BORDER-RIGHT: #FFFFFF thin solid;BORDER-LEFT: #FFFFFF  thin solid;BORDER-TOP: #FFFFFF thin solid;BORDER-BOTTOM: #FFFFFF thin solid;BORDER-WIDTH: 1px 1px 1px 1px;FONT-WEIGHT: bold;FONT-SIZE: 10px;COLOR: #FFFFFF;FONT-FAMILY: Verdana,Arial,Helvetica;HEIGHT: 18px;BACKGROUND-COLOR: #003365;cursor: pointer;}      
+.bottomDisable{BORDER-RIGHT: #FFFFFF thin solid;BORDER-LEFT: #FFFFFF  thin solid;BORDER-TOP: #FFFFFF thin solid;BORDER-BOTTOM: #FFFFFF thin solid;BORDER-WIDTH: 1px 1px 1px 1px;FONT-WEIGHT: bold;FONT-SIZE: 10px;COLOR: #FFFFFF;FONT-FAMILY: Verdana,Arial,Helvetica;HEIGHT: 18px;BACKGROUND-COLOR: #003365;display: none;}        
+.style1R{padding-left: 3px;font-size: 9px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;}
+#txtCognome{width: 466px;}
+#txtNome{width: 466px;}
+#txtCodiceFiscale{width: 248px;}
+#txtDenominazione{width: 498px;}
+.divEnable{padding-left: 3px;font-weight: bold;font-size: 20px;color: #FF0000;font-family: Verdana, Arial, Helvetica, sans-serif;display: inline;text-align: center;}
+.divDisable{display: none;}
+.wrap {position:relative;height:100%;overflow:hidden;width: 100%;}
+.inner {padding:0 ; height:330px;overflow:auto;}
+
+.imgButtonstyle {cursor: pointer;text-align: center;}
+.imgButtonstyleDis{text-align: center;}
+.style1{FONT-WEIGHT: bold;FONT-SIZE: 12px;BACKGROUND: #003365;COLOR: #ffffff;FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;width: 96px;}
+.style2{padding-left: 3px;font-weight: bold;font-size: 9px;color: #003365;font-family: Verdana, Arial, Helvetica, sans-serif;width: 96px;}
+#importo{text-align: right;}
+.imgButtonstyleTable{text-align: center;}
+.link_tabAttiva_visure
+{
+	font-size: 11px;
+	text-align: center;
+	color: #003365;
+	background: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;
+	cursor:pointer;
+}
+.link_tabDisattiva_visure
+{
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	background: #003365;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration : none;	
+}
+/* tables */
+table.tablesorter {
+	background-color: #CDCDCD;
+	margin:2px 0pt 2px;
+	width: 100%;
+	border: 0px solid #CDCDCD;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #9D9FA2;
+	border: 1px solid #CDCDCD;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size: 8pt;
+	padding: 4px;
+	padding-right: 44px;
+	
+}
+table.tablesorter thead tr .header {
+	background-image: url(../img/bg.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+	white-space: nowrap;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../img/asc.gif);
+}
+
+table.tablesorter thead {
+    position:relative;
+    top:0;
+}
+
+table.tablesorter tbody {
+  overflow: auto;
+  width: 80%; /* esprimere in %, em; meglio non  usare px */
+}
+
+table.tablesorter tbody td {
+	color: #003365;
+	padding: 2px;
+	background-color: #FFFFFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #9D9FA2;
+}
+.bottomTableSorter
+{
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #003365;
+    cursor: pointer;
+}
+.bottomTableSorterDisabled
+{
+    BORDER-RIGHT: #FFFFFF thin solid;
+    BORDER-LEFT: #FFFFFF  thin solid;
+    BORDER-TOP: #FFFFFF thin solid;
+    BORDER-BOTTOM: #FFFFFF thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;  
+    COLOR: #FFFFFF;    
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #cdcdcd;
+}
+.next{
+	background-color: #ffffff;
+	cursor:pointer;
+
+}
+.prev{
+	background-color: #ffffff;
+	cursor:pointer;
+}
+.first{
+	background-color: #ffffff;
+	cursor:pointer;
+}
+.last{
+	background-color: #ffffff;
+	cursor:pointer;
+}
+.pagedisplay{	
+	color:#003365;
+	font-weight: normal;
+	font-size: 8pt;
+	width: 50px;
+	
+}
+.pagerEnable{
+	visibility:visible;
+	border: 0px solid #CDCDCD;
+	width: 100%;
+	text-align: right;
+
+}
+.pagerDisable{
+	visibility:hidden;
+}
+.lblLink{
+	text-decoration:underline;
+	cursor:pointer;
+}
+.innerDettFattura
+{
+    BORDER-RIGHT: #000000 thin solid;
+    BORDER-LEFT: #000000  thin solid;
+    BORDER-TOP: #000000 thin solid;
+    BORDER-BOTTOM: #000000 thin solid;
+    BORDER-WIDTH: 1px 1px 1px 1px;
+    WIDTH: 100%;
+}

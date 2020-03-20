@@ -1,0 +1,101 @@
+/*======================= CLASSI PER MENU A TENDINA ===========================*/
+	/*===================== Stile per la riga separatrice fra le voci di menu =====*/
+.barraMenu {
+	background-color: #F0D38C;
+}
+
+.barraMenuScura {
+	background-color: #000000;
+}
+
+/*===================== Stile per il separatore fra le voci del menu di primo livello =====*/
+.pallinoMenu {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 9px;
+	COLOR: #003365;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+/*======================== Stile per il primo Menu ============================*/
+.menuPrimoLivello {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	COLOR: #F0D38C;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+.menuPrimoLivello:hover {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	COLOR: #F0D38C;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+.menuPrimoLivelloSelezionato {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	COLOR: #F0D38C;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+/*=========================== Stile per il secondo Menu =======================*/
+.menuSecondoLivello {
+	background-color: #000000;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+
+.menuSecondoLivello:hover {
+    background-color: #000000;
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #F0D38C;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.menuSecondoLivelloSelezionato {
+	background-color: #000000;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #F0D38C;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+/*=========================== Stile per il terzo Menu =========================*/
+.menuTerzoLivello {
+	background-color: #000000;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+	
+}
+
+.menuTerzoLivello:hover {
+	background-color: #000000;
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #F0D38C;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.menuTerzoLivelloSelezionato {
+	background-color: #000000;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #F0D38C;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+/*=========================== FINE CLASSI MENU ================================*/

@@ -1,0 +1,219 @@
+﻿/* [IE] [EDGE] FIX: cancella la x sugli input testuali */
+input.ms-clear::-ms-clear {
+    display: none;
+}
+
+/* [HELPER] */
+a.tm-anchor {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.tm-text-bold {
+    font-weight: 800;
+}
+
+.tm-text-center {
+    text-align: center;
+}
+
+.tm-importo.negativo {
+    color: #CC1615 !important;
+}
+
+/* STRUTTURA */
+/* SPINNER */
+div.communication-spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 9998;
+    background-color: rgba(255,255,255,0.7);
+}
+
+    div.communication-spinner-container:before {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    div.communication-spinner-container div.communication-spinner {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding: 10px;
+    }
+
+        div.communication-spinner-container div.communication-spinner svg,
+        div.communication-spinner-container div.communication-spinner img {
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+
+
+
+
+
+/* [SKIN 1] FIX */
+/* JQUERY UI (per skin 1) */
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-unselectable {
+    opacity: 0.3;
+}
+
+/* MESSAGE PANEL */
+div[message-panel].alert {
+    display: table;
+    width: 100%;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    font-size: 1.1rem;
+    overflow: auto;
+}
+
+    div[message-panel].alert.alert-danger {
+        background-color: #CC1515;
+    }
+
+    div[message-panel].alert.alert-warn {
+        background-color: #CF9418;
+    }
+
+    div[message-panel].alert div.alert-message {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    div[message-panel].alert div.alert-icon {
+        display: table-cell;
+        vertical-align: middle;
+        width: calc(55px + 1.5rem);
+    }
+
+        div[message-panel].alert div.alert-icon.alert-icon-success:before,
+        div[message-panel].alert div.alert-icon.alert-icon-danger:before,
+        div[message-panel].alert div.alert-icon.alert-icon-warn:before {
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            font-size: 1.2rem;
+            border: 2px solid #FFFFFF;
+            text-align: center;
+            float: left;
+        }
+
+        div[message-panel].alert div.alert-icon.alert-icon-warn:before {
+            border-radius: 0;
+            height: 48.4px;
+            border: 0 solid #FFFFFF;
+            background-image: url(../img/alert-attention.png);
+            background-size: contain;
+        }
+
+        div[message-panel].alert div.alert-icon.alert-icon-success:before {
+            content: "\2714";
+        }
+
+        div[message-panel].alert div.alert-icon.alert-icon-danger:before {
+            content: "\2715";
+        }
+
+        div[message-panel].alert div.alert-icon.alert-icon-warn:before {
+            content: " ";
+            white-space: pre;
+        }
+
+/* fix sulla classe base per l'alert di success */
+.alert-success:before {
+    font-size: unset;
+    display: none;
+    content: none;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: none;
+    text-align: unset;
+    float: none;
+    margin-right: unset;
+}
+
+
+/* TABELLE */
+.table-heading-filters.table-heading {
+    margin-top: 8px !important;
+}
+
+.table-heading-filters {
+    margin-top: 0;
+}
+
+    .table-heading-filters h4, .mobile-data-heading h4 {
+        font-size: 1.3em;
+    }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-data-filters {
+    margin-top: 8px !important;
+}
+
+.bootstrap-table .fixed-table-container table.table tr td div input.checkbox-fix {
+    margin-left: -24px !important;
+    margin-top: -2px !important;
+}
+
+.bootstrap-table .fixed-table-container table.table .mobile-data input.checkbox-fix {
+    margin-left: -24px !important;
+    margin-top: -2px !important;
+}
+/* FOOTER */
+footer .footer-block p span.verde {
+    color: #2F9988 !important;
+}
+
+
+/* SEPARATOR */
+.separator-old {
+    width: 1px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+}
+
+    .separator-old:after {
+        content: '';
+        display: block;
+        border-left: dashed 1px #ccc;
+        width: 1px;
+        height: 100%;
+        border-left: dashed 1px #ccc;
+    }
+
+@media (max-width: 992px) {
+    .separator-old {
+        width: 100%;
+        position: relative;
+        margin: 1rem 0;
+        height: 1px;
+    }
+
+        .separator-old:after {
+            border-left: 0;
+            border-top: solid 1px #ddd;
+            height: 1px;
+            width: 100%;
+        }
+}

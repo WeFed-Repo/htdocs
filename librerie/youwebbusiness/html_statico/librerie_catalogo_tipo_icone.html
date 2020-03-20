@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+
+		<!-- HEAD DELLA STRUTTURA -->
+		<title>Banco BPM Business</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Jquery -->
+<script src="./fe/assets/jquery.min.js"></script>
+
+<!-- Jquery UI -->
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<!-- Gestione Font-awesome per formattazioni "particolari" -->
+<link rel="stylesheet" href="./fe/assets/awesome/font-awesome.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox-styles.min.css" />
+
+<!-- BOOTSTRAP 4 CDN (EXTERNAL VENDOR) -->
+
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script-->
+
+<script src="./fe/assets/popper.min.js"></script>
+
+<script src="./fe/assets/jquery.min.js"></script>
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<script src="./fe/assets/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
+
+<link rel="stylesheet" href="./fe/assets/datepicker.css">
+
+<script src="./fe/assets/bootstrap-table.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-table.css">
+
+<!-- Stili -->
+<link rel="stylesheet" href="./fe/css/priv_base.css">
+<link rel="stylesheet" href="./fe/css/priv_generic.css">
+
+<!-- Interattivita' ed inizializzazioni -->
+<script src="./fe/js/script.js"></script>
+
+<!-- INIZIALIZZAZIONI -->
+<script src="./fe/js/initLayout.js"></script>
+<script src="./fe/js/init.js"></script>
+
+<!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
+<script src="./fe/js/init_for_static_libraries.js"></script>
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>		<!-- FINE HEAD DELLA STRUTTURA -->
+		
+		<!-- DECLINAZIONI PER LIBRERIE -->
+		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
+		<!-- FINE DECLINAZIONI PER LIBRERIE -->
+
+	</head>
+	<body>
+		<header class="librerie">
+			<div class="wrapper"> 
+				<h1><a href="./index.html" class="btn-bak">&laquo;</a> Icone - Librerie YouBusiness</h1>
+			</div>
+		</header>
+		<div id="main" class="librerie">
+			<div class="wrapper">
+															<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<br /><h3>NOTE</h3>
+																						
+<p>Le immaigni SVG del sito vengono trasformate in SVG-inline all'onready della pagina.<br />
+<small>(viene trasformata di default qualsiasi immagine che possiede un path che termina con .svg)</small>
+</p>
+
+<p>Nell'esempio di seguito è applicata all'icona la classe CSS ".icon-style-demo" che colora di rosso l'icona.</p>
+
+<img src="./fe/img/icon/copia.svg" class="icon-style-demo">
+
+<p>Se si vuole impedire questa trasformazione, è possibile applicare la classe ".not-redraw". <br />
+<small>Come si nota, pur se è applicata la classe CSS "icon-style-demo" come per l'icona precedente, CSS non è in grado di modificare il colore dell'immagine.</small></p>
+
+<img src="./fe/img/icon/copia.svg" class="icon-style-demo not-redraw">
+
+<p>Se si da un title all'immagine, questo viene riportato nell'SVG trasformato. Se l'immagine non ha title, il sistema lo cerca nel padre diretto e lo applica.</p>
+
+<img src="./fe/img/icon/copia.svg" title="title self" class="icon-style-demo">
+
+<a href="#.html.html" title="title parent">
+    <img src="./fe/img/icon/copia.svg" class="icon-style-demo">
+</a>										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">icone-svg</h2>
+																						<div class="row"><div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/allegato.svg' class='icon-style-demo not-redraw'> allegato.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/attenzione.svg' class='icon-style-demo not-redraw'> attenzione.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/autorizza.svg' class='icon-style-demo not-redraw'> autorizza.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/avvisi.svg' class='icon-style-demo not-redraw'> avvisi.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/calcolatrice.svg' class='icon-style-demo not-redraw'> calcolatrice.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/calendario-eventi.svg' class='icon-style-demo not-redraw'> calendario-eventi.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/calendario.svg' class='icon-style-demo not-redraw'> calendario.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/carrello.svg' class='icon-style-demo not-redraw'> carrello.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/carta-di-credito.svg' class='icon-style-demo not-redraw'> carta-di-credito.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/cartelletta.svg' class='icon-style-demo not-redraw'> cartelletta.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/cassaforte.svg' class='icon-style-demo not-redraw'> cassaforte.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/checkmark.svg' class='icon-style-demo not-redraw'> checkmark.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/circlearrow-down.svg' class='icon-style-demo not-redraw'> circlearrow-down.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/circlearrow-up.svg' class='icon-style-demo not-redraw'> circlearrow-up.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/circleminus.svg' class='icon-style-demo not-redraw'> circleminus.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/circleplus.svg' class='icon-style-demo not-redraw'> circleplus.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/close-simple.svg' class='icon-style-demo not-redraw'> close-simple.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/close.svg' class='icon-style-demo not-redraw'> close.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/configurazione.svg' class='icon-style-demo not-redraw'> configurazione.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/copia.svg' class='icon-style-demo not-redraw'> copia.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/csv.svg' class='icon-style-demo not-redraw'> csv.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/delete.svg' class='icon-style-demo not-redraw'> delete.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/disponi-bonifici.svg' class='icon-style-demo not-redraw'> disponi-bonifici.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/distinta.svg' class='icon-style-demo not-redraw'> distinta.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/divieto.svg' class='icon-style-demo not-redraw'> divieto.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/documenti-in-arrivo.svg' class='icon-style-demo not-redraw'> documenti-in-arrivo.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/documento.svg' class='icon-style-demo not-redraw'> documento.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/doppie-frecce.svg' class='icon-style-demo not-redraw'> doppie-frecce.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/down-arrow.svg' class='icon-style-demo not-redraw'> down-arrow.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/elimina.svg' class='icon-style-demo not-redraw'> elimina.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/email_close.svg' class='icon-style-demo not-redraw'> email_close.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/email_open.svg' class='icon-style-demo not-redraw'> email_open.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/empty-mail.svg' class='icon-style-demo not-redraw'> empty-mail.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/equalizzatore.svg' class='icon-style-demo not-redraw'> equalizzatore.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/esiti-incassi.svg' class='icon-style-demo not-redraw'> esiti-incassi.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/esiti-pagamenti.svg' class='icon-style-demo not-redraw'> esiti-pagamenti.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/esporta.svg' class='icon-style-demo not-redraw'> esporta.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/excel.svg' class='icon-style-demo not-redraw'> excel.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/excel2000.svg' class='icon-style-demo not-redraw'> excel2000.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/external_link.svg' class='icon-style-demo not-redraw'> external_link.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/f24.svg' class='icon-style-demo not-redraw'> f24.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/filtri.svg' class='icon-style-demo not-redraw'> filtri.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/firma.svg' class='icon-style-demo not-redraw'> firma.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/fogli.svg' class='icon-style-demo not-redraw'> fogli.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/addetti.svg' class='icon-style-demo not-redraw'> addetti.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/amministratori.svg' class='icon-style-demo not-redraw'> amministratori.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/anagrafiche.svg' class='icon-style-demo not-redraw'> anagrafiche.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/documenti-online.svg' class='icon-style-demo not-redraw'> documenti-online.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/info-bonifico.svg' class='icon-style-demo not-redraw'> info-bonifico.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/plus-mini.svg' class='icon-style-demo not-redraw'> plus-mini.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/postazione.svg' class='icon-style-demo not-redraw'> postazione.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/profilatura-utenti.svg' class='icon-style-demo not-redraw'> profilatura-utenti.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi/schedulatore.svg' class='icon-style-demo not-redraw'> schedulatore.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi-banca.svg' class='icon-style-demo not-redraw'> gruppi-banca.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi-modifica.svg' class='icon-style-demo not-redraw'> gruppi-modifica.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi-valigetta.svg' class='icon-style-demo not-redraw'> gruppi-valigetta.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/gruppi.svg' class='icon-style-demo not-redraw'> gruppi.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/help.svg' class='icon-style-demo not-redraw'> help.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/in-evidenza.svg' class='icon-style-demo not-redraw'> in-evidenza.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/info.svg' class='icon-style-demo not-redraw'> info.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/laurea.svg' class='icon-style-demo not-redraw'> laurea.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/left-arrow.svg' class='icon-style-demo not-redraw'> left-arrow.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/lettera.svg' class='icon-style-demo not-redraw'> lettera.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/locker.svg' class='icon-style-demo not-redraw'> locker.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/logout.svg' class='icon-style-demo not-redraw'> logout.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/menu.svg' class='icon-style-demo not-redraw'> menu.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/minus-mini.svg' class='icon-style-demo not-redraw'> minus-mini.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/minus.svg' class='icon-style-demo not-redraw'> minus.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/modifica.svg' class='icon-style-demo not-redraw'> modifica.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/monete.svg' class='icon-style-demo not-redraw'> monete.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/money.svg' class='icon-style-demo not-redraw'> money.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/more.svg' class='icon-style-demo not-redraw'> more.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/move.svg' class='icon-style-demo not-redraw'> move.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/notifiche.svg' class='icon-style-demo not-redraw'> notifiche.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/pannello.svg' class='icon-style-demo not-redraw'> pannello.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/pdf.svg' class='icon-style-demo not-redraw'> pdf.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/plus-mini.svg' class='icon-style-demo not-redraw'> plus-mini.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/plus.svg' class='icon-style-demo not-redraw'> plus.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/print.svg' class='icon-style-demo not-redraw'> print.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/raccoglitori.svg' class='icon-style-demo not-redraw'> raccoglitori.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/reload.svg' class='icon-style-demo not-redraw'> reload.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/riepilogo-conti.svg' class='icon-style-demo not-redraw'> riepilogo-conti.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/riepilogo-distinte.svg' class='icon-style-demo not-redraw'> riepilogo-distinte.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/right-arrow.svg' class='icon-style-demo not-redraw'> right-arrow.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/search.svg' class='icon-style-demo not-redraw'> search.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/tool.svg' class='icon-style-demo not-redraw'> tool.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/tutorial.svg' class='icon-style-demo not-redraw'> tutorial.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/up-arrow.svg' class='icon-style-demo not-redraw'> up-arrow.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/user-arrow.svg' class='icon-style-demo not-redraw'> user-arrow.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/user-tie.svg' class='icon-style-demo not-redraw'> user-tie.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/user.svg' class='icon-style-demo not-redraw'> user.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/valigetta.svg' class='icon-style-demo not-redraw'> valigetta.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/warning.svg' class='icon-style-demo not-redraw'> warning.svg </div>
+<div class='col-6 col-md-4 col-lg-3 p-3'><img src='./fe/img/icon/world.svg' class='icon-style-demo not-redraw'> world.svg </div>
+</div>										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">icone-svg-trasformate</h2>
+																						<br />
+<b>Warning</b>:  virtual(): Unable to include 'layout/oggetti/icone/icone-svg-trasformate/oggetto.php' - request execution failed in <b>D:\librerie\htdocs\librerie\youwebbusiness\librerie_catalogo.php</b> on line <b>61</b><br />
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">set-icomoon</h2>
+																						<style>
+.icon-set-demo .icon {
+  margin-bottom: 1rem;
+  display:block;
+  height: auto;
+  width: auto;
+  max-width:40px;
+}
+
+.icon-set-demo .icon:after {
+  margin-top: 0.5rem;
+  content: attr(class);
+  font-size: 11px;
+  font-family: 'roboto', sans-serif;
+  display:block;
+  word-wrap: break-word;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+</style>
+
+<div class="row icon-set-demo">
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_dispositiva"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_mail"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_setting"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_logout"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_profilo"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icon_setting_utente"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_alert"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_alert_small"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_profilo_small"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mail_closed"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mail_opened"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_il_tuo_profilo"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollo_auto"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-calendario_left"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-calendario_right"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_domiciliazioni"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-grafico_portafoglio"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_i_tuoi_vincoli"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-listato_portafoglio"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-posta_dash"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-riepilogo_conto_iban"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_saldo_a_data"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_svincola"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_down"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_equal"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_up"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_vincola_partite"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-aggiorna"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_riepilogo_alert"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_beneficiari"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettini_postali"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bonifico_sepa"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_calendario"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_movimenti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_pannello_controllo"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_cambio_pin"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_ricarica"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_scarica"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_contatti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_conti_depositi"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_conto"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-documento"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_pagamento_f24"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_finanziamenti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_right"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_down"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_up"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_left"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_coordinate_iban"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_indici_mercati"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_investimenti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-logout"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettino_mav"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-meno"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-menu"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mostra"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_saldo_movimenti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-movimenti_42"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-nascondi"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_elenco_news"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_patrimoniale"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-piu"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_posta_arrivo"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_archivio_posta"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_rapporti_predefiniti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettino_rav"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ricariche_cellulare"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-settings"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_titoli"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ordini_movimenti_titoli"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_titoli_dossier"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_portafoglio_simulato_titoli"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_trasferimento_tra_conti"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ultime_disposizioni"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-user"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-user_mobile"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_youshop"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_youwin"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_alert"></i></div>
+  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_profilo"></i></div>
+</div>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+												</div>
+			</div>
+	</body>
+</html>

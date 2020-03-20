@@ -1,0 +1,40 @@
+﻿/* TODO - sr : Il file sembra obsoleto...verificare se è eliminabile */
+/* ======================= rows per page =================== */
+/*
+span.rpp 
+{
+    background-color: lightgray;
+    text-align: center;
+    width: 34%;
+    display: inline-block; 
+}
+
+
+
+.rpp ul
+{
+    display: inline;
+    margin-left: 0;
+}
+
+
+.rpp li
+{
+display: inline;
+list-style-type: none;
+padding-right: 5px;
+}
+
+.rpp-current {
+    color: blue;
+  display: inline-block;   
+}
+
+.rpp-next{
+    color: yellow;
+    cursor: pointer;
+    display: inline-block; 
+}
+*/
+
+/* ======================= rows per page =================== */

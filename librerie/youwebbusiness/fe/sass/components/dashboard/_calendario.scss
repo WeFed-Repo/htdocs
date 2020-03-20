@@ -1,0 +1,145 @@
+.dhb-calendario {
+  $dayHeight : 31px; 
+  overflow:hidden;
+  position: relative;
+  .ui-datepicker {
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    .ui-datepicker-header,
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+      height: $dayHeight;
+      line-height: $dayHeight;
+    }
+    .ui-datepicker-calendar {
+      flex: 1;
+      td {
+        padding: 0 !important;
+        height: $dayHeight;
+        cursor: default;
+        a {
+          max-width: 2.5em;
+          height: 2.5em;
+          line-height: 2.5em;
+        }
+        &,
+        &.ui-datepicker-today,
+        &.ui-state-default,
+        &.ui-state-active {
+          &:not(.has-event) {
+            &:hover a,
+            &:active a {
+              background-color:$grayBG !important; 
+              color: $gray2 !important;  
+            }
+          }
+        }
+        &.ui-datepicker-current-day {
+          &:not(.has-event) a { 
+            background-color:$grayBG !important; 
+            color: $gray2 !important;  
+          }
+        }
+        &.ui-datepicker-today.ui-datepicker-current-day {
+          &:not(.has-event) a { 
+            background-color:$grayBG !important; 
+          }
+        }
+        &.has-event {
+          cursor: pointer; 
+          a {
+            color: $white !important;
+            background-color: $greenLink !important;  
+          }
+          &:hover a,
+          &:active a { 
+            background-color: $greenLink_hover !important; 
+          }
+        }
+        &.ui-datepicker-today:not(.has-event) {
+          & a, 
+          &:hover a,
+          &:active a {
+            background-color: transparent !important; 
+            font-weight: bold;
+            color: $greenLink !important;
+          } 
+          &:hover a,
+          &:active a {
+            background-color:$grayBG !important; 
+          }
+        }
+      }
+      th {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .ui-datepicker-header {
+      .ui-datepicker-title {
+        font-size: 1.2em;
+      }
+    }
+  }
+  .calendar-modal {
+    position:absolute;
+    top:100%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.9);
+    padding: $spacer;
+    transition: top 0.75s;
+
+    display: flex;
+    flex-direction: column;
+
+
+    &.is--visible { 
+      top:0;
+    }
+    .close {
+      position: absolute;
+      top: $spacer;
+      right: $spacer;
+      width: $spacer*1.5;
+      height: $spacer*1.5;
+      line-height: $spacer;
+      text-align:center;
+      transition: all 0.3s;
+      border: $gray2 solid 2px;
+      color: $gray2;
+      border-radius: 50%;
+      font-weight: normal;
+      opacity: 1;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+    .data {
+      font-size: 1em;
+      color: $greenLink;
+      font-weight: bold;
+      margin:0;
+      padding: 0 $spacer*2 0 0; 
+      display: block;
+    }
+    .title {
+      font-size: 1.2em;
+      color: $gray2;
+      padding: 0 0 $spacer/2 0; 
+      margin:0;
+      display: block;
+      overflow: auto;
+    }
+    .text {
+      overflow: auto;
+      display: block;
+    }
+  }
+}

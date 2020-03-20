@@ -1,0 +1,79 @@
+.accordion {
+  .card, .acc-item {
+    border-radius: 0;
+    border: none;
+    background: $white;
+    margin-bottom: 1rem;
+    .card-header {
+      border-radius: 0;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      @include no_user_select();
+      .card-header-title {
+        font-size: $bodyFontSize;
+        font-weight: bold;
+        color: $greenLink;
+      }
+      .card-header-icon {
+        @extend [class*=" icon-"];
+        @extend .icon-arrow_up;
+        color: $greenLink;
+        border: solid 2px $greenLink;
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.3rem;
+        text-align: center;
+        border-radius: 1rem;
+        &:before {
+          display: block;
+          font-size: 14px;
+        }
+        &.plus-minus:before {
+          content: '\2013';
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 13px;
+        }
+      }
+      &.collapsed {
+        .card-header-title {
+          color: $gray2;
+          }
+        .card-header-icon {
+          @extend .icon-arrow_down;
+          line-height: 1.5rem;
+          border-color: $gray2;
+          color: $gray2;
+          &.plus-minus:before {
+            content: '\002B';
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 1rem;
+      font-size: $bodyFontSize;
+    }
+  }
+  &.bordered-style {
+    .card {
+      background: $white;
+      border: solid 1px #c8c8c8;
+      .card-header {
+        background: transparent;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background: none;
+        .card-header-title {
+          font-size: 22px;
+        }
+      }
+      .card-body {
+        background: transparent;
+        padding: 1rem 1rem 2rem 1rem;
+      }
+    }
+  }
+}
