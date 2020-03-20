@@ -1,0 +1,1485 @@
+/*Struttura pagina*/
+strong.verde{color:#6F8F0A!important}
+.evident{color:#6F8F0A!important}
+
+/*Header*/
+#header{margin:0 auto;position:static}
+* html #header{position:static}
+html>/**/body #header{position:relative}
+#header a.link{text-transform:uppercase;font-weight:bold;color:#6F8F0A} 
+#headnero{/*background-color:#1e201e;*/width:879px;float:left} 
+* html #headnero{width:expression(document.body.clientWidth < 1005 ? "849px": "auto" );overflow:visible}
+/*#ctndx{float:right;margin:18px 0 0 0;clear:none;width:300px}*/
+#ctndx{float:right;margin:18px 0 0 0;/*clear:none;*/width:160px}
+* html #ctndx{margin:20px 0 0 0}
+* html #ctndx{margin-right:expression(document.body.clientWidth < 905 ? "60" : "0")}
+
+/* Menu primo livello */
+#menulev1 {list-style-type:none;float: left;text-align: left;width: 862px;height: 32px;overflow: visible;margin:10px 0 0;padding: 0;clear: left;background: url(/img/ret/str_menulevel1_bg.gif) no-repeat 0 0}
+#menulev1 li {float:left; margin-right:-12px;}
+#menulev1 li a {float:left;display:block;background-position:0 top;height:32px}
+#menulev1 a span {display:none}
+#menulev1 a:hover {background-position:0 -32px}
+#menulev1 a.selected, #menufirst a.selected:hover {background-position:0 -64px !important;height:32px !important;margin-top:0 !important}
+#menulev1 a.new {height:37px;margin-top:-5px;background-position:0 -96px;}
+#menulev1 a.new:hover {background-position: 0 -133px}
+/* Immagini di ogni livello */
+#menulev1 #nav_priv_wbx_myhome {background-image: url(/img/ret/ico1bt_nav_priv_wbx_myhome.gif);width:103px}
+#menulev1 #nav_priv_wbx_sportello {background-image: url(/img/ret/ico1bt_nav_priv_wbx_sportello.gif);width:118px}
+#menulev1 #nav_priv_wbx_carte {background-image: url(/img/ret/ico1bt_nav_priv_wbx_carte.gif);width:91px}
+#menulev1 #nav_priv_wbx_trading_wt {background-image: url(/img/ret/ico1bt_nav_priv_wbx_trading.gif);width:104px}
+#menulev1 #nav_priv_wbx_investimenti {background-image: url(/img/ret/ico1bt_nav_priv_wbx_investimenti.gif);width:134px}
+#menulev1 #nav_priv_wbx_finanziamenti {background-image: url(/img/ret/ico1bt_nav_priv_wbx_finanziamenti.gif);width:141px}
+#menulev1 #nav_priv_wbx_assicurazioniWB {background-image: url(/img/ret/ico1bt_nav_priv_wbx_assicurazioni.gif);width:145px}
+/* Immagini di ogni livello Conto Tecnico */
+#menulev1 #nav_priv_wbx_sportello_ct {background-image: url(/img/ret/ico1bt_nav_priv_wbx_sportello.gif);width:118px}
+#menulev1 #nav_priv_wbx_carte_ct {background-image: url(/img/ret/ico1bt_nav_priv_wbx_carte.gif);width:91px}
+#menulev1 #nav_priv_wbx_finanziamenti_ct {background-image: url(/img/ret/ico1bt_nav_priv_wbx_finanziamenti.gif);width:141px}
+#menulev1 #nav_priv_wbx_assicurazioni_ct {background-image: url(/img/ret/ico1bt_nav_priv_wbx_assicurazioni.gif);width:145px}
+
+
+/* Oggetti Header */
+.esci{padding:5px 29px 0 1px;clear:both;text-align:right;float:right}
+.esci .helpcenter{clear:left;float:left;width:98px;height:25px;background-image:url(/img/ret/ico1bt_helpcenter.gif);background-repeat:no-repeat;margin-top:1px}
+.esci .helpcenter:hover{background-position:0 -25px}
+.esci .numeroverde{float:left;width:98px;background-position:-98px 0;height:25px;background-image:url(/img/ret/ico1bt_helpcenter.gif);background-repeat:no-repeat;margin-right:10px;margin-top:1px}
+.esci .numeroverde:hover{background-position:-98px -25px}
+.esci img{padding-top:2px;padding-right:18px}
+#ricerca{text-align:right;padding:3px 0 0 0;clear:right;float:right;display:block;width:220px}
+#ricerca input{margin:0 0 6px 10px;display:block;width:146px;height:16px;line-height:16px;padding:0 2px;border:solid 0 #fff;float:left}
+* html #ricerca input{margin-left:5px}
+#ricerca img{display:block;float:right;clear:none}
+
+/* modifica link header*/
+.esci .helpcenter2{float:left;margin:2px 8px 0 0;padding-right:8px;text-decoration:none;color:#8ab10b;border-right:1px solid #585858;line-height:15px;height:16px}
+.esci .helpcenter2:hover{text-decoration:underline; color:#8ab10b !important}
+.esci .numeroverde2{clear:left;float:left;margin:2px 8px 0 0;padding-right:8px;text-decoration:none;color:#fff;border-right:1px solid #585858;line-height:15px;height:16px}
+.esci .numeroverde2:hover{text-decoration:underline;color:#fff!important}
+
+/*Box My home*/
+.box4 .sfondo_nonsolobanca a,.box4 tr.tit th{color:#6F8F0A}
+
+/*Box finanziamenti*/
+#ctnboxtable table a:hover,#ctnboxtable .tabella_assicurazioni td a,#ctnboxtable .tabella_assicurazioni td a:hover{color:#6F8F0A}
+
+/*Tabella messaggi*/
+table.tablemessaggi tr.alert b,table.tablemessaggi td li a:hover,#contenuti h1,#contenuti h2,#contenuti table a:hover,#content table a:hover,#contenuti td.primo a:hover,#contenuti a:hover,div.titscheda h3{color:#6F8F0A}
+#contenuti ul.tablist{border-bottom:1px solid #6F8F0A}
+#contenuti a:hover strong{color:#6F8F0A!important}
+
+/*Footer*/
+#footer ul li a:hover,#footer ul li a.punti{color:#6F8F0A}
+
+/* box editoriali */
+.box5 a:hover,.box5 h3.titoloar{color:#6F8F0A}
+.box5 .lineabottone{border-top:1px solid #6F8F0A}
+.box5 .bottone{background-color:#6F8F0A}
+
+/* pagine login */
+#header2{border-bottom:1px solid #6F8F0A}
+#contenuti2 h1,#contenuti2 h2,.box6 a{color:#6F8F0A}
+.box6 .lineabottone,.box6 .lineabottone2,.box6 .modpass,.box6 .modpassb,.box6 .modpassb2,.box6 .modpassc,.box6 .modpassc2{border-top:1px solid #6F8F0A}
+.box6 .bottone,.box6 .bottone2{background-color:#6F8F0A}
+.box6 .modpass3{border-top:1px solid #6F8F0A;border-bottom:1px solid #6F8F0A}
+
+/*INQUIRY CARTE LONG*/
+#contenuti table.banco a:hover,#contenuti table.credi a:hover,#contenuti table.prepa a:hover{color:#6F8F0A}
+
+/*DA ELIMINARE A FINE PROMOZIONE*/
+#contenuti table.tabellalist tr td.off a:hover{color:#6F8F0A}
+
+/* TRADING */
+#boxPortafoglioResult table a:hover,#boxPortafoglioResult a:hover,#boxPortafoglioSelect a:hover{color:#6F8F0A}
+
+/* cartimpronta */
+.bollfrecsx2 .cartimpronta_lista .cartcontimg .titolo{color:#6F8F0A!important}
+
+/* tabella */
+div.BvTableHeaderHelp2 a:hover,div.BvTableHeaderHelp a:hover,table.form01 tr td a:hover,#contenuti table.form01 a.domanda,#contenuti table.form01 .tooltip a{color:#6F8F0A}
+* html #contenuti table.form01 a.domanda{color:#6F8F0A}
+html>/**/body #contenuti table.form01 a.domanda{color:#6F8F0A}
+#contenuti table.form01 .tooltip a:hover{color:#666666!important}
+div.tithelp .helpleft, div.tithelp .helpright2,div.tithelppic .helpleft{color:#6F8F0A}
+#linkbottone,a.btnformrightar span,a.btnformrightar:link span{background-color:#6F8F0A}
+
+/* cambio colore sfondo... prima era #ebebeb */
+div.text a.richpin2:hover{color:#6F8F0A}
+div.pincode{background-color:#8AB10B}
+.pincodeoverl{background-color:#6F8F0A}
+div.pintxt{background-color:#dce7b5}
+p.pin_testo strong{color:#6F8F0A!important}
+
+/* mutui */
+div.boxtxt2 span.titolo{color:#6F8F0A}
+
+/* mutui*/
+.mutui h3 a,.mutui2 h3 a,.mutuig h3 a,.mutuig2 h3 a{color:#6F8F0A!important}
+.mutui h3, .mutui2 h3,.mutuig h3, .mutuig2 h3,.mutui h3 a:hover,.mutui2 h3 a:hover,.mutuig h3 a:hover,.mutuig2 h3 a:hover,.mutuigs h3 a:hover,.mutuig2d h3 a:hover,.mutuigs h3 a,.mutuig2d h3 a,.mutuigs h3,.mutuig2d h3,.mutui3 .mutui h3{color:#6F8F0A}
+
+/* mutuo 3 passo */
+.mutui4sx p.pulitem_off,.mutui4sx p.pulitem_on,.mutui4sx p.pulitem_off a,.mutui4sx p.pulitem_on a,.mutui4sx p.pulitem_off a:link,.mutui4sx p.pulitem_on a:link,.mutui4sx p.pulitem_off a:hover,.mutui4sx p.pulitem_on a:hover{color:#6F8F0A!important}
+.mutui4dx #item1 h2,.mutui4dx #item2 h2,.mutui4dx #item3 h2,.mutui4dx #item4 h2{color:#6F8F0A}
+
+/*paginazione*/
+#contenuti #paginazione .menu_o li,#contenuti #paginazione .menu_o li a{color:#6F8F0A}
+
+/* aggiunta */
+.tipo6:hover{color:#6F8F0A}
+
+/* aggiunta */
+.box6 .modpasstit2,.box6 .modpasstit3,.box6 .modpasssicurb,.box6 .modpasssicur2b{border-bottom:1px solid #6F8F0A}
+.popContent h2,div.popContent a:hover{color:#6F8F0A}
+
+/*  */
+.linkRicerca,.linkFreccia{color:#6F8F0A!important}
+
+/* tooltip */
+.tooltip2 a:hover b{color:#8AB10B!important}
+
+/* adesione */
+.adesright a:hover,#contenuti .sicur4c table.tabsicur a:hover{color:#6F8F0A}
+
+/* tabelle popup */
+.popup table.banco a:hover{color:#6F8F0A}
+
+/* nuova tabella 006 */
+#contenuti table.condiz2 tr td.right span.verde2{color:#6F8F0A}
+
+/* tabs secondo livello */
+#contenuti table.tabellalist tr td.off2{border-top:1px solid #6F8F0A}
+#contenuti table.tabellalist tr td.off2 a:hover{color:#6F8F0A}
+#contenuti table.tabellalist tr td.last2{border-right:1px solid #6F8F0A}
+
+/* testo 10 */
+p.t10 a:hover{color:#6F8F0A}
+
+/*tabella condizioni sms*/
+table.tablesms a:hover{color:#6F8F0A!important}
+table.tablesms span{color:#6F8F0A}
+
+/* F24 */
+table.TableF24 td.BoxF24 strong,table.TableF24 a:hover{color:#6F8F0A!important}
+
+/* mutui */
+div.boxtxt2 span.titolo{color:#6F8F0A}
+
+/* otc */
+#obbcontenuti h1,.otc th,table.form02 tr td a,#contenuti table.form02 a,#contenuti table.form02 a:hover,table.inserimento_ordini a{color:#6F8F0A}
+
+/* otc ricerca */
+#obbcontenuti table.tabellalist tr td.on{border-top:1px solid #6F8F0A}
+table.tabellalist tr td.vuoto{border-bottom:1px solid #6F8F0A}
+
+/*popup moody*/
+div.popContent a:hover{color:#6F8F0A}
+
+/* esito ricerca */
+#obbcontenuti2 h1{color:#6F8F0A}
+
+/* nuova tabella 006 */
+table.condiz2 tr.color{background-color:#DDD}
+table.condiz2 tr.color td.dieci{border-right:1px solid #6F8F0A}
+table.condiz2 tr.color2 td{border-top:1px solid #6F8F0A}
+
+/*INQUIRY CARTE LONG*/
+#contenuti table.credi a:hover,#contenuti table.prepa a:hover{color:#6F8F0A}
+#contenuti table.short td.shsx{background:#6F8F0A}
+
+/* COL*/
+div.box03_col b{color:#6F8F0A}
+
+/*Box conto2*/
+#ctnboxcontob table td.saldo{color:#6F8F0A}
+#boxloyalty:hover{color:#6F8F0A!important}
+
+/* step stato */
+div.onStep,.tab17 tr td.v,.tab17 tr td.vb{color:#6F8F0A}
+.tab17 tr td.r2 a:hover,.tab17 tr.b td.r2 a:hover,.tab17 tr.c td.r2 a:hover{color:#6F8F0A!important}
+
+/* nav11*/
+p.nav11 a.new,p.nav11 a.new:link,p.nav11 a.new:hover,p.nav11 a:hover{color:#6F8F0A}
+
+/* nav12*/
+ul.nav12 li a:hover{color:#6F8F0A}
+
+/* box cell*/
+.boxcell p.links a,.boxcell p.links a:link,.boxcell p.links a:hover,ul.tablistcell li.on a,ul.tablistcell li.onfirst a,ul.tablistcell li.onpush a,ul.tablistcell li.on a:hover,ul.tablistcell li.onfirst a:hover,ul.tablistcell li.onpush a:hover{color:#6F8F0A}
+ul.tablistcell li.onlast{border-top:1px solid #6F8F0A;border-right:1px solid #6F8F0A}
+
+/*Cellette push*/
+.ctnimgpushcell a:hover{color:#6F8F0A}
+
+/* bott07*/
+.bott07 a,.bott07 a:link,.bott07 a:hover{background:#6F8F0A}
+
+/* tools */
+.tools .tool td.scadenza{background:#DCE7B5}
+.tools #tool5 .mese a,.tools #tool5 #mese_scadenze{color:#6F8F0A}
+
+/* text01 */
+#contenuti #riquainfo h1{color:#6F8F0A}
+
+/* short_selling */
+#contenuti a:hover{color:#6F8F0A!important}
+/* box programma sicurezza myhome */
+#banneri #prima p.tit06{color:#6F8F0A}
+div.dispo_esito_center{background:#DCE7BC}
+
+/*Menu livello 2*/
+#menusxb #menulevel2 li a.active,#menusxb #menulevel2 .current_aperto a.current,#menusxb #menulevel2 .current_aperto a.current:link,#menusxb #menulevel2 .current_aperto a.current:hover{background-color:#DCE7B5}
+#menusxb #menulevel2 a:hover,#menusxb #menulevel2 .padre_aperto,#menusxb #menulevel2 a.padre_aperto:link,#menusxb #menulevel2 a.padre_aperto:hover,#menusxb #menulevel2 .current_aperto a:hover{color:#6F8F0A}
+
+/*paginazione2 */
+.paginazione2 ul li a:hover,#contenuti #paginazione2 .menu_o li a:hover{color:#6F8F0A!important}
+#contenuti #paginazione2 .menu_o li,#contenuti #benef .ben li.first,#contenuti #benef .ben li{color:#6F8F0A}
+
+/*popup moody*/
+.moody th{color:#6F8F0A}
+
+/*Tabella ordini*/
+#tabordini .box01,#tabordini .box03,#tabordini .box02{border:1px solid #6F8F0A}
+#tabordini td a:hover{color:#6F8F0A}
+#tabordini td span{background:#6F8F0A}
+#contenuti #tabordini td.outputmk span{background:none;color:#666666;font-size:11px;padding:0!important}
+#tabordini h2,#tabordini h2.sec,#tabordini td.nocol a:hover,#tabordini2 h2{color:#6F8F0A}
+html>/**/body #tabordini h2{color:#6F8F0A}
+html>/**/body #tabordini h2.sec{color:#6F8F0A}
+
+/*Il mio conto*/
+#coord .coord2 a,#contobox .value p span,#contobox .value a{color:#6F8F0A}
+.loyalty2conto div.bgverde table td.tdtxt a{text-decoration:underline;color:#6F8F0A!important;background:transparent url(/img/ret/ff_link_conto.gif) 4px 0 no-repeat;padding-left:18px}
+
+/*Box 65*/
+.box65{border-bottom:1px solid #6F8F0A}
+.box65 .right span{background-color:#6F8F0A}
+
+/*Box 66*/
+.box66 h3{color:#6F8F0A}
+.box66 .right b.ver{color:#6F8F0A!important}
+
+/*Box 67*/
+.box67 td{color:#6F8F0A}
+.box67 td a,.box67 td a:hover{color:#6F8F0A!important}
+
+/*Box sottoscrizione*/
+#sottoscriz{border:1px solid #6F8F0A}
+#parteprima p{color:#6F8F0A}
+#parteprima{border-right:1px solid #6F8F0A}
+
+/*Box evidenza*/
+div.evidenza{border:1px solid #6F8F0A}
+
+/*Prenotazione*/
+div.tithelp6 .helpleft,div.BvTableHeaderHelp6 a:hover,#informa a,#informa2 a,#informa2 a.disc{color:#6F8F0A}
+
+/*Carte*/
+h2.carte{color:#6F8F0A}
+h2.cartegr{color:#666!important}
+.bollfrecsx2 .cartimpronta_lista .cartcont .titolo,.bollfrecsx3 .cartimpronta_lista .cartcont .titolo,ul.richmenu li.attivo a,ul.richmenu li.lastattivo a{color:#6F8F0A!important}
+.bollfrecsx2 .cartimpronta_lista.disabled .cartcont .titolo{color:#d5d5d5!important}
+a.bannerlink span.bannertit,div.bannerlink span.bannertitb,ul.richmenu li.attivo,ul.richmenu li.lastattivo,.bannerlink2 span.bannertit{color:#6F8F0A}
+
+/*Prenotazione*/
+div.tithelp6 .helpleft,div.BvTableHeaderHelp6 a:hover,#informa3 a,#informa4 a,#informa4 a.disc{color:#6F8F0A}
+#tabfirst12 .top2 strong{color:#6F8F0A!important}
+
+/* bollettino freccia */
+.bollfrecdx{border:1px solid #6F8F0A}
+.bollfrecdx h3{background-color:#DCE7B5;color:#6F8F0A}
+
+/* nuovo bollettino freccia */
+.bollfrecdxb span{color:#6F8F0A}
+.bollfrecsxb .cartimpronta_lista .cartcont .titolo{color:#6F8F0A!important}
+
+/* tabella piattaforme trading */
+#contenuti .piattrad td.attivo{background-color:#DCE7B5;border-left:1px solid #6F8F0A;border-right:1px solid #6F8F0A}
+#contenuti .piattrad td.attivotop,#contenuti .piattrad th.attivotop,#contenuti .piattrad3 td.attivo{background-color:#DCE7B5;border-top:1px solid #6F8F0A;border-left:1px solid #6F8F0A;border-right:1px solid #6F8F0A}
+#contenuti .piattrad td.attivobottom{background-color:#DCE7B5;border-bottom:1px solid #6F8F0A;border-left:1px solid #6F8F0A;border-right:1px solid #6F8F0A}
+#contenuti .piattrad3 td.attivobottom{border-bottom:1px solid #6F8F0A}
+
+/* lista doppie frecce */
+ul.listafrec li a{color:#6F8F0A!important}
+h3.verde,h4.verde{color:#6F8F0A}
+
+/* linea divisorio */
+.divisorio{border-top:1px solid #6F8F0A}
+
+/* tab 018 */
+table.tab18 tr.tabtit2{background:#DCE7B5}
+
+/*tabella selezione posto inter*/
+table.tab_posto tr td{color:#6F8F0A}
+
+/*PDA*/
+div.box75 div span.tit{color:#6F8F0A}
+
+/*fine*/
+table.titlist a{color:#6F8F0A}
+
+/*Box 078*/
+div.box78 div span.tit{color:#6F8F0A}
+
+/* 100% sicurezza */
+#sicurezza .boxtitle .phonebox p,#sicurezza .boxtitle p span,#sicurezza .boxbody h1{color:#6F8F0A}
+.definition a.close {background-color:#8ab10b;}
+
+/* Form 060 */
+.boxedform table{border:solid 1px #c7da8a}
+
+/* Form 005c (canvas)*/
+.canvas{border:solid 1px #C7DA8A!important}
+.canvasbottom{border-bottom:0 !important}
+.canvastop{border-top:0 !important;margin-top:-10px}
+
+
+/* Box 077 */
+div.box77{background-color:#ddeab0}
+.sicurezzabox div.box77{background-color:#DCE7BC}
+
+/*  menu terzo livello NORMALE*/
+/*  menu terzo livello NORMALE*/
+#menusecond div.menuthird .thirdlevelbody .dx h1,#menusecond div.menuthird .thirdlevelbody .sx ul li a:hover,#menusecond div.menuthird .thirdlevelbody .dx ul li a:hover,#menusecond .mymenu h1,#menusecond .mymenu ul li a{color:#6F8F0A}
+
+/* BoxInfo */
+#boxinfo span, #boxinfoBx .title{color:#6F8F0A}
+#boxinfoBx .desc{color:#585858}
+
+/* sidebox */
+.sidebox .promo h1{color:#6F8F0A}
+
+/* infoutente */
+.userinfo p span{color:#6F8F0A}
+
+/* infoutente Business */
+.userinfobus p span{color:#6F8F0A}
+
+/* Oggetti */
+#fixedtools .tool td.scadenza{background:#DCE7B5}
+
+/* box73 */
+#contenuti .box73 .item .tit h2{color:#8ab10b}
+#contenuti .box73 .item .tit strong.titolo{color:#6F8F0A!important}
+
+/* saldo punti loyalty */
+.saldopunti p{color:#6F8F0A!important}
+
+/* tracking box */
+a.trackbox{color:#6F8F0A!important}
+
+/* menu spalla sinistra */
+#menusxc h1,#menusxc .menusxcontainer a:hover,#menusxc .menusxcontainer a.selected{color:#6F8F0A}
+#menusxc .menusxcontainer a.selected span{background-color:#dce7b5}
+
+/* switch */
+a.switcher:hover span{color:#8ab10b}
+
+/* banner navigabile */
+.bannernav .details h1{color:#8ab10b}
+
+/* fullpage */
+#fullpage h1{color:#6F8F0A!important}
+
+/* configuratore my menu*/
+.mymenutopper{border:solid 1px #5e8602}
+.mymenuselector .selectorbody .checksection label.checked{color:#6F8F0A!important}
+
+/* tabelle incapsulate tab010b */
+.boxedtabs,.tabber .boxcontainer div.boxedtabs{border:solid 1px #8ab10b!important;background-color:#dce7b5}
+.boxedtabs table tr td.evident{color:#6F8F0A!important}
+
+
+#carte1 div.cardstatus span.cardstate,#carte1 div.cardstatus p{color:#6f8f0a}
+#carte1 div.cardstatus p b{color:#6f8f0a!important}
+
+/*grafico */
+#grafico #tab ul li.on a{color:#6F8F0A}
+
+/* linea vincolata conto deposito */
+.lineavincolata p span{color:#6F8F0A!important}
+
+/* link */
+a.hlp{color:#6F8F0A!important}
+
+/* boxfpnews */
+.boxfpnews table tr td a.link{color:#6F8F0A!important}
+
+/* pulsantino generico "goto" */
+.goto{background:transparent url(/img/ret/ff_link_conto.gif) 0 0 no-repeat;padding:0 0 0 14px;margin:0;float:right;display:block;color:#6F8F0A!important}
+
+.loyalty2conto .bgverde div.boxbianco a{color:#6F8F0A!important}
+.loyalty2conto .bgverde div.boxbianco a:hover{color:#666!important}
+
+/* link trading */
+#contenuti a.pers{color:#6F8F0A!important}
+#contenuti a.pers:hover{color:#666!important}
+
+/* overlayer pratiche in corso  */
+span.overlayerGreen{color:#8ab10b}
+
+/* box tpl obbligazioni */
+.bollfrecdxc ul.listafrec span{color:#6F8F0A}
+
+/* box inserimento ordini box 006b-007b */
+.box3cRight .box01,.box3cRight .box,.box3cCenter .box01,.box3cCenter .box,.tabordininew img{border:1px solid #6F8F0A}
+.tabordininew td.pari{background:#e5efcd;color:#58585a}
+.tabordininew td.dispari{color:#58585a}
+
+/* tab_060 font 10px */
+#contenuti table.condiza tr.g1a{background:#e5efcd}
+
+/* box_121 */
+.mymenutopper2{border:solid 1px #5e8602}
+.invquot span{color:#6F8F0A}
+
+/* tabelle generali */
+table.form01 tr td.deposito div.bottom{color:#6F8E0A}
+
+/* tabella 025f/g */
+.tab17 tr.b td table.form01 tr td a:hover{color:#666}
+.tab17 tr.b td table.form01 tr td a{color:#6F8F0A}
+
+/* color red link */
+#contenuti table.text01 td a.red,#contenuti table.text01 td a.red:hover{color:#CA0000!important}
+
+/* promo form01 */
+table.form01 .evidentcell .evident{border:solid 1px #6f8f0a;color:#6f8f0a}
+.promotab a{color:#6f8f0a!important}
+
+ul.doublecolumn li a{color:#6F8F0A!important}
+
+/* tr evidenti */
+#contenuti table tr.evident{background-color:#dce7b5!important}
+#contenuti table tr.evident2{background-color:#f8f9f2}
+#contenuti .catass .flaglist{margin:0 0 7px;padding:0;list-style-type:none;padding-top:3px}
+#contenuti .catass ul.flaglist li{background:transparent url(/img/ret/bullet_darkgrey.gif) no-repeat scroll 0 6px;padding:0 0 0 12px}
+#contenuti .catass p{padding-top:3px;padding-bottom:7px!important}
+
+/* boxeditoriali 185 */
+#internopre table.form01 a.lnkbold:hover{color:#6F8F0A!important}
+
+/* nuova linea vincolata conto deposito */
+#contenuti .nuovalinea p.mega strong,#contenuti .nuovalinea p strong.verde{color:#6F8F0A!important}
+
+/* colore link testuali con icona */
+.condiz2 .BvTableHeaderHelp a:hover{color:#6f8f0a!important}
+
+/* colore AGGIORNA SMS */
+#contenuti #tabordini div.tithelp .helpright2.wt a,#contenuti .insordcont .tithelppic  .helpright2.wt a,.lastupdate{color:#6F8F0A!important}
+.boxcontactsx{height:137px!important}
+
+/*** RIA **/
+.BoxSaldoValoreGreen,.BoxSaldoValoreGreen2,.brHead_puls_text,.boxRipartizione .importo,.tabRiaOn .tabRiaCont,span.ok,.link a{color:#6F8F0A}
+.infoRichieste span,.infoRichieste .right a,#puntiText,#puntiTextxxx,#puntiLink,#puntiLinkxxx,#tassoCD,#contenuti545 .tit,.sogliaCC div.sotto{color:#6F8F0A}
+/*** |FINE| RIA **/
+
+/*bonus commissionale*/
+div.tab17tit{border-bottom:1px solid #000;width:645px}
+span.evidenza{color:#000;font-size:12px;font-weight:bold}
+
+/*link nel testo tooltip nuovo-*/
+#contenuti span.uniqTooltipPos  a:hover{color:#6F8F0A!important}
+
+/* colore best execution */
+div.important .dx a:hover strong,div.important .dx a:hover b{color:#6F8F0A!important}
+table.out .nega,table.out .nega a{color:#666!important;font-weight:bold!important}
+
+/*cifra negativa hover*/
+table.out .nega a:hover{color:#6F8F0A!important;font-weight:bold!important}
+
+/*titolo con link sulla destra*/
+#content h2.titLinkdx,#contenuti h2.titLinkdx,#contenuti .mutuitrasp ul li a:hover{color:#6F8F0A}
+
+/* Tab speciale investimenti (basta tornare alla v. precedente)*/
+/*#menufirst .menuvoice#nav_priv_wbx_assicurazioniWB{margin-top:-5px}*/
+/*#menufirst .menuvoice#nav_priv_wbx_trading_wt{margin-top:-5px}*/
+/*#menufirst .menuvoice#nav_priv_wbx_carte{margin-top:-5px}*/
+/*#menufirst .menuvoice#nav_priv_wbx_investimenti{margin-top:-5px}*/
+#menufirst .menuvoice#nav_priv_wbx_sportello{margin-top:-5px}
+
+/*aumento di capitale hover*/
+table.form01.out tr td.nobor  a.avvertenze:hover{color:#6F8F0A!important}
+
+/* nuovo paolo FP*/
+.userinfoc .chiedi,.userinfoc .benvenuto{color:#000}
+.userinfoc .benvenuto span,.userinfohelp .benvenuto span{color:#6f8f0a;font-weight:bold}
+.userinfoc .chiedi form .txtchiedi,.userinfohelp .chiedi form .txtchiedi{border:1px solid #93b81f}
+
+/* Colori calcolatore aucap*/
+#contenuti .divtabellacont .calcolatore td#dirittiPossedutiTd,#contenuti .divtabellacont .calcolatore label{color:#6f8f0a}
+
+/* Colori pagina di logout*/
+.boxLout .boxLoutTxt span,.boxLout .boxLoutTxt a{color:#6f8f0a}
+
+/* extramoney */
+.txtextra{padding:10px 0 4px 0}
+.promo_extramoney_small,.promo_extramoney_smallb,.promo_extramoney_large{background:url(/img/ret/ban_promo_extra_small.gif) no-repeat 0 0;width:700px;height:154px;margin-bottom:10px;color:#000!important}
+.promo_extramoney_smallb{background:url(/img/ret/ban_promo_extra_smallb.gif) no-repeat 0 0;height:113px}
+.promo_extramoney_large{background:url(/img/ret/ban_promo_extra_large.gif) no-repeat 0 0}
+.promo_extramoney .help{float:right;margin:2px 20px 0 0}
+.promo_extramoney_smallb .help{float:right;margin:17px 27px 0 0}
+*html .promo_extramoney .help{float:right;margin:2px 10px 0 0}
+*html  .promo_extramoney_smallb .help{float:right;margin:17px 13px 0 0}
+.promo_extramoney_large .sx,.promo_extramoney_small .sx{float:left;margin:60px 0 0 18px;width:436px;color:#3e3e3e!important}
+.promo_extramoney_large .sx a{color:#3e3e3e!important;font-weight:bold!important}
+*html .promo_extramoney_large .sx, *html .promo_extramoney_small .sx{float:left;margin:60px 0 0 9px;width:410px}
+.promo_extramoney_large .sx ul{margin:10px 0 0 0;padding:0}
+.promo_extramoney_small .sx ul{margin:40px 0 0 0;padding:0}
+.promo_extramoney_large .sx ul li,.promo_extramoney_small .sx ul li{background:url(/img/ret/bullet_extra.gif) no-repeat scroll 0 6px transparent;list-style:none;margin:0!important;padding: 2px 0 2px 15px!important}
+#contenuti .promo_extramoney_large .sx ul li a,#contenuti .promo_extramoney_small .sx ul li a{font-weight:bold;color:#8e5701!important}
+.promo_extramoney  .vincolo{float:right;width:85px;margin-right:23px;text-align:center}
+*html .promo_extramoney  .vincolo{margin-right:34px}
+.promo_extramoney  .vincolo strong{color:#000!important}
+#contenuti .promo_extramoney  .vincolo p{width:85px;margin:0;padding-bottom:5px!important;font-size:10px;color:#000!important}
+.promo_extramoney  .interessi{float:right;width:86px;margin-right:25px;text-align:center}
+*html .promo_extramoney  .interessi{float:right;width:76px;margin-right:5px;text-align:center}
+#contenuti .promo_extramoney  .interessi p{width:86px;margin:0;font-size:10px;padding-bottom:2px!important;color:#000}
+#contenuti .promo_extramoney  .interessi p.valint{color:#8e5701!important;font-size:16px;font-weight:bold}
+#contenuti .promo_extramoney  .interessi p.valint span{font-size:10px;font-weight:bold}
+.promo_extramoney  .interessi input{width:84px;border:1px solid #CDCDCD;font-size:11px}
+.promo_extramoney a.apri,.promo_extramoney a.apri:hover{display:block;float:right;margin-right:50px!important;background:url(/img/ret/btn_extra_apri.gif) 0 0;width:142px;height:23px;text-indent:-9999px}
+.promo_extramoney a.apri:hover{background:url(/img/ret/btn_extra_apri_on.gif) 0 0}
+*html .promo_extramoney a.apri{margin-right:25px!important}
+*html .promo_extramoney a.apri:hover{margin-right:25px!important}
+.promo_extramoney p strong.orange{color:#8e5701!important}
+.promo_extramoney p.mega strong{font-size:19px;color:#8e5701!important}
+table.TableF24.extram td.BoxF24{font-weight:normal}
+.promo_extramoney div.boxright{float:right;margin:0;text-align:center;width:219px}
+*html .promo_extramoney div.boxright{width:225px}
+.promo_extramoney a.scopri{display:block;float:right;margin-right:21px!important;background:url(/img/ret/btn_extra_scopri.gif) 0 0;width:218px;height:23px;text-indent:-9999px}
+*html .promo_extramoney a.scopri{display:block;float:right;margin-right:11px!important;background:url(/img/ret/btn_extra_scopri.gif) 0 0;width:218px;height:23px}
+.promo_extramoney a.scopri:hover{background:url(/img/ret/btn_extra_scopri_on.gif) 0 0}
+.promo_extramoney .posi, .promo_extramoney .zero{margin:9px 20px 9px 0;font-weight:bold}
+.promo_extramoney_smallb.posi, .promo_extramoney_smallb .zero{float:right;margin:11px 46px 20px 0;font-weight:bold}
+*html .promo_extramoney .posi, *html .promo_extramoney .zero{margin:9px 35px 9px 0;font-weight:bold}
+*html .promo_extramoney_smallb.posi, *html .promo_extramoney_smallb .zero{float:right;margin:11px 23px 20px 0;font-weight:bold}
+.rieextra{background:url(/img/ret/str_extra_rie.gif) no-repeat scroll right bottom transparent;height:48px;width:700px;margin-bottom:2px}
+.boxextraContainer .form01{margin-bottom:2px}
+.boxextraContainer .form01 strong{color:#3e3e3e!important;padding-left:14px}
+.extra_middlecont img.tit{float:left;padding:0 0 0 20px}
+.valextra{width:700px;text-align:center;padding-top:0px;float:left;margin-bottom:2px}
+.extra_top,.extra_bottom{background:url(/img/ret/str_extra_top.gif) no-repeat scroll 0 0 #FFFFFF;height:12px;width:100%;float:left}
+.extra_bottom{background:url(/img/ret/str_extra_bottom.gif) no-repeat scroll 0 0 #FFFFFF;height:5px}
+.extra_middle{background:url(/img/ret/str_extra_middle.gif) repeat-y scroll 0 0 transparent;width:100%;float:left}
+.extra_middlecont{margin-top:-3px;background:none}
+*html .extra_middlecont{margin-top:0}
+.boxextraContainer table.totali .inextraval{color:#000;font-weight:bold;float:right}
+.boxextraContainer table.totali span{color:#3e3e3e;font-weight:normal}
+.boxextraContainer table.totali span span,span.saldodata span{font-size:12px}
+.boxextraContainer .dettagliOff,.boxextraContainer .dettagliOn{background:url(/img/ret/ico_operaz_frec_down_grey.gif) no-repeat scroll right 6px transparent;padding-right:8px;float:right;margin-right:20px}
+.boxextraContainer .dettagliOn{background:url(/img/ret/ico_operaz_frec_right_grey.gif) no-repeat scroll right 4px transparent}
+*html .boxextraContainer .dettagliOff, *html.boxextraContainer .dettagliOn{margin-right:10px}
+.boxextraContainer table.dettHidden{background:url(/img/ret/str_tratt_grey.gif) no-repeat scroll 0 0 #ffffff;display:none;width:659px;margin:0 20px;float:left;margin-top:8px}
+*html .boxextraContainer table.dettHidden{margin-left:10px;margin-right:10px}
+#contenuti .boxextraContainer table td{padding:0}
+#contenuti .boxextraContainer table.dettHidden td{border-bottom:1px solid #dedede;padding:3px 0 4px 0}
+#contenuti .boxextraContainer table.dettHidden td.last{border:0}
+#contenuti .boxextraContainer table.dettHidden td span{float:right}
+#contenuti .boxextraContainer table.dettHidden td span.voce{float:left}
+#contenuti .boxextraContainer table.totali{float:left;width:400px}
+#contenuti .boxextraContainer table td.col2{padding-left:15px}
+.boxextraContainer .saldoextra{background:url(/img/ret/str_extra_saldo.gif) no-repeat 0 0;height:50px;width:700px;float:left}
+.saldoimporto{width:251px;padding-top:19px;float:left}
+.saldoimporto span{float:right;font-weight:bold}
+.saldodata{padding:30px 0 0 20px;float:left}
+a.saldobtn{background:url(/img/ret/btn_apri_lineavinc.gif) no-repeat 0 0;width:158px;height:29px;float:right;margin:13px 20px 0 0}
+a.saldobtn:hover{background:url(/img/ret/btn_apri_lineavinc.gif) no-repeat 0 -29px}
+a.saldobtn.disabled, a.saldobtn.disabled:hover{background:url(/img/ret/btn_apri_lineavinc_disabled.gif) no-repeat 0 0}
+.extratoolsx{width:300px;float:left;padding-top:20px}
+.extratooldx{width:383px;float:right;background:url(/img/ret/str_tool_extra_top.gif) no-repeat 0 0}
+.extratooltxt{margin-top:20px;padding:0 20px}
+#contenuti .extratooltxt p{padding-bottom:0!important}
+#contenuti .extratoolsx span.uniqTooltipPos a{color:#6F8F0A}
+#contenuti .extratooltxt .listafrec{padding-top:3px!important}
+.extratoolsx.tolltipclick span.closed span.uniqTooltipText,.extratoolsx.tolltipclick span.opened span.uniqTooltipText{background:url(/wscmn/img/ico1gr_toolchiuso.gif) no-repeat scroll 2px 2px transparent;padding-left:20px}
+.extratoolsx.tolltipclick span.opened span.uniqTooltipText{background:url(/wscmn/img/ico1gr_toolaperto.gif) no-repeat scroll 2px 2px transparent}
+*html .tolltipclick span.closed span.uniqTooltipText{background:none;padding-left:0}
+*html .tolltipclick span.opened span.uniqTooltipText{background:none;padding-left:0}
+*html .extratoolsx span.closed span.uniqTooltipText{background:url(/wscmn/img/ico1gr_toolchiuso.gif) no-repeat scroll 2px 2px transparent;padding-left:20px}
+*html .extratoolsx span.opened span.uniqTooltipText{background:url(/wscmn/img/ico1gr_toolaperto.gif) no-repeat scroll 2px 2px transparent;padding-left:20px}
+.txtnote li,.txtnote h3{color:#767676;font-size:10px}
+.txtnote h3{padding-bottom:10px}
+.txtnote ul{padding-left:33px;margin-left:0}
+#contenuti .divtabellacont .calcolatore td#dirittiPossedutiTd,#contenuti .divtabellacont .calcolatore label{color:#6f8f0a}
+
+
+/* nuova scheda titoli*/
+/*parte Top */
+/* titolo wetrade con aggiorna */
+h1.floatsx{float:left;width:340px!important}
+.fooform_tit{float:right;width:360px!important}
+.schedaTitoliCont{width:700px;float:right}
+.schedaTitoliCont .aggiornamento{color:#666;font-size:9px;float:right;padding-bottom:3px}
+.fooform_tit{float:right;width:360px!important}
+.lastupdate{color:#666!important}
+div.fooform  div.fooformright .lastupdate{line-height:20px;font-size:10px}
+.schedaTitoliCont .schedaTitoliContTop{float:left;width:660px;background:url(/img/ret/str_bgTop_schedaTitoli.gif) no-repeat 0 0;color:#000;font-weight:bold;padding:15px 16px 11px 24px}
+.schedaTitoliCont .schedaTitoliContTop.novar{padding:10px 16px 6px 24px}
+.schedaTitoliCont .schedaTitoliContMdl.novar .variazioni{padding-bottom:7px}
+.schedaTitoliCont .schedaTitoliContTop div{float:left}
+.schedaTitoliCont .schedaTitoliContTop div.andamento,.schedaTitoliCont .schedaTitoliContTop div.ricarica{float:right}
+.down{color:#ee0000}
+.up{color:#368f00}
+.schedaTitoliCont span.down,.schedaTitoliCont span.up,.schedaTitoliCont span.equal{padding-right:13px}
+.schedaTitoliCont span.down{background:url(/img/ret/ico2inf_trend_down.gif) no-repeat right 3px}
+.schedaTitoliCont span.up{background:url(/img/ret/ico2inf_trend_up.gif) no-repeat right 3px}
+.schedaTitoliCont .schedaTitoliContTop div.ricarica{margin-top:-5px;width:20px;height:20px;display:block}
+.schedaTitoliCont .schedaTitoliContTop div.ricarica  a{width:20px;height:20px;background:url(/img/ret/ico1gr_refresh.gif) no-repeat 0 0;display:block}
+.schedaTitoliCont .schedaTitoliContTop div.ricarica  a:hover{background-position:0 -20px}
+
+/*variazioni Top */
+.schedaTitoliCont .schedaTitoliContMdl{float:left;width:698px;border-left:1px solid #d3d3d3;border-right:1px solid #d3d3d3;background:url(/img/ret/str_bgMdl_schedaTitoli.gif) no-repeat 0 0;padding-bottom:15px}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni{float:left;width:100%;padding-bottom:15px}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni .variazioniLeft{width:130px;float:left;text-align:center;padding-top:9px}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni .variazioniRight{width:568px;float:right}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni span.label{color:#585858;text-transform:uppercase;margin:0 auto 4px 0;display:block}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni .variazioniRight span.label{height:23px}
+.schedaTitoliCont .variazioniLeft span.up,#contenuti .schedaTitoliCont  .variazioniLeft span.down, #contenuti .schedaTitoliCont  .variazioniLeft span.equal{font:bold 17px Arial, tahoma, sans-serif;line-height:24px;background-position:right 6px}
+.schedaTitoliCont .variazioniLeft span.up span.small,#contenuti .schedaTitoliCont  .variazioniLeft span.down span.small,#contenuti .schedaTitoliCont .variazioniLeft span.equal span.small{font-size:11px}
+.schedaTitoliCont .variazioniRight ul{float:left;margin:0;padding:9px 0 0 24px;list-style-type:none;background:url(/img/ret/str_bg_variazioniInfo.gif) no-repeat 0 0; width:528px; height:52px}
+.schedaTitoliCont .variazioniRight.small ul{float:left;margin:0; padding:9px 0 0 24px;list-style-type:none;background:url(/img/ret/str_bg_variazioniInfo_small.gif) no-repeat 0 0;width:528px;height:52px}
+.schedaTitoliCont .variazioniRight ul li{padding:0;margin:0;width:104px;float:left;text-align:center}
+
+/*best execution caso quattro colonne */
+.schedaTitoliCont .variazioniRight.small ul li.first{width:104px}
+.schedaTitoliCont .variazioniRight.small ul li.third{width:156px}
+.schedaTitoliCont .variazioniRight.small ul li{width:130px;}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni .variazioniRight span.label.onerow{height:13px;margin-bottom:0}
+.schedaTitoliCont .schedaTitoliContMdl .variazioni .valoreNullo{margin-top:14px;display:block}
+
+/*best execution caso tre colonne */
+.schedaTitoliCont .variazioniRight.treCol ul li{width:286px}
+.schedaTitoliCont .variazioniRight.treCol ul li.first{width:104px}
+.schedaTitoliCont .variazioniRight.treCol ul li.last{width:130px}
+.schedaTitoliCont  .variazioniRight.treCol ul{background:url(/img/ret/str_bg_variazioniInfo_col.gif) no-repeat 0 0}
+
+/*best execution caso riga intera */
+.schedaTitoliCont .schedaTitoliContMdl .variazioniRight.fullrow{width:668px;padding-left:15px;float:left}
+.schedaTitoliCont .schedaTitoliContMdl .variazioniRight.fullrow ul{background: url(/img/ret/str_bg_variazioniInfo_full.gif) no-repeat scroll 0 0 transparent;float:left;height:52px;list-style-type:none;margin:0;padding:9px 0 0 15px;width:668px}
+.schedaTitoliCont .variazioniRight.fullrow ul li.first{width:155px}
+.schedaTitoliCont .variazioniRight.fullrow ul li{width:170px}
+.schedaTitoliCont .variazioniRight.fullrow  li.first span.num{font-size:12px;line-height:18px}
+.schedaTitoliCont  .variazioniRight ul li  span.date{color:#707070;font-size:9px;text-transform:none}
+.schedaTitoliCont  .variazioniRight span.up,#contenuti .schedaTitoliCont  .variazioniRight span.down, #contenuti .schedaTitoliCont .variazioniRight span.equal{background:none;display:block;font:bold 15px arial, thaoma, sans-serif}
+.schedaTitoliCont  .variazioniRight span.num{font:bold 15px arial,thaoma, sans-serif;color:#000}
+.schedaTitoliCont .ticker{height:25px;width:520px;float:left;margin-left:24px}
+*html .schedaTitoliCont .ticker{margin-left:12px}
+.schedaTitoliCont .ticker .tickercont{width:450px;border-top:1px solid #c6c7c8;border-bottom:1px solid #c6c7c8;height:23px;background-color:#fff;padding:0 10px}
+.schedaTitoliCont .ticker div{float:left}
+#contenuti .schedaTitoliCont .ticker p{color:#666;font-weight:bold margin-bottom:0;padding-bottom:0!important;padding-top:4px}
+.schedaTitoliCont .ticker p span{font-size:9px;font-weight:normal}
+.schedaTitoliCont .tickerleft a,.schedaTitoliCont .tickerright a{width:25px; height:25px;background:url(/img/ret/str_arrowTicket_left.gif) 0 0;display:block} 
+.schedaTitoliCont .tickerright a{background:url(/img/ret/str_arrowTicket_right.gif) 0 0} 
+
+/* dettagli titolo */
+.dettagli .dettagliTabFirst{width: 700px;background:url(/img/ret/str_Tabfirst_schedaTitoli.gif) no-repeat 0 0;float:left;height:23px;margin-left:-1px;margin-bottom:15px} 
+*html .dettagli .dettagliTabFirst{width:698px}
+.dettagli .dettagliTabFirst .dettagliTabFirstleft a , .dettagli .dettagliTabFirst .dettagliTabFirstleft{font-weight:11px;text-transform:uppercase;display:block;height:23px;float:left}
+.dettagli .dettagliTabFirst .dettagliTabFirstleft.off{background:url(/img/ret/str_TabFirstLeft_off.gif) no-repeat 0 0;float:left;display:block}
+.dettagli .dettagliTabFirst .dettagliTabFirstright{background:url(/img/ret/str_TabFirstRight_off.gif) no-repeat 0 0;width:250px;float:right;height:22px;padding-right:1px;margin-top:1px}
+.dettagli .dettagliTabFirst .dettagliTabFirstright .primo{width:138px;float:left}
+.dettagli .dettagliTabFirst .dettagliTabFirstright .secondo{width:110px;float:right}
+#contenuti .dettagli .dettagliTabFirst a{text-decoration:none;color:#585858!important;font-weight:bold} 
+#contenuti .dettagli .dettagliTabFirst .dettagliTabFirstleft.on a,#contenuti .dettagli .dettagliTabFirst a:hover,#contenuti .dettagli .dettagliTabFirst .dettagliTabFirstright  .primo.on a.first,#contenuti .dettagli .dettagliTabFirst .dettagliTabFirstright .secondo.on a{color:#6F8F0A!important}
+#contenuti .dettagli .dettagliTabFirst .dettagliTabFirstright a{font-size:10px;padding:0 0 0 17px;line-height:23px} 
+#contenuti .dettagli .dettagliTabFirst .dettagliTabFirstright  a.first{padding-right:14px} 
+.dettagli .dettagliTabFirst .dettagliTabFirstleft{padding:0px 0 0 0;width:160px}
+.dettagli .dettagliTabFirst .dettagliTabFirstleft a{padding:6px 0 0 24px;display:block}
+.dettagli .dettagliTabFirst .dettagliTabFirstright .primo.on{background:url(/img/ret/str_TabFirstRight_on.gif) no-repeat 0 0}
+.dettagli .dettagliTabFirst .dettagliTabFirstright.on{background:url(/img/ret/str_TabFirstRight_on2.gif) no-repeat 0 0}
+*html  .dettagli .dettagliTabFirst .dettagliTabFirstright.on{background:none}
+*html .dettagli .dettagliTabFirst .dettagliTabFirstright{background:url(/img/ret/str_TabFirstRight_on2.gif) no-repeat 0 0}
+.dettagli .BvTableHeaderHelp{padding-right:14px}
+*:first-child+html .dettagli .titTable .BvTableHeaderHelp{margin-top:-17px}
+.dettagli .schedadati .BvTableHeaderHelp,.dettagli .titTableCont .BvTableHeaderHelp{padding-right:0}
+.dettagli .toolbarSpace{background:url(/img/ret/str_bg_space_schedaTitolo.gif) repeat-x 0 0;margin-left:15px;height:49px;width:683px;float:left}
+*html .dettagli .toolbarSpace{margin-left:7px}
+.dettagli .graficoSpace{margin-left:15px;margin-bottom:20px;clear:left;}
+.dettagli .boxInfo .boxInfoCont{background:url(/img/ret/str_bg_infoTitoli_Mdl.gif) repeat-y 0 0;width:652px;float:left;padding:2px 8px 3px 8px}
+.dettagli .boxInfo .boxInfoCont span.title {font-size:14px;font-weight:bold;float:left;color:#000}
+.dettagli .boxInfo .boxInfoCont ul,.dettagli .boxInfo .boxInfoCont li{margin:0;padding:0;list-style-type:none;float:left}
+.dettagli .boxInfo{margin:0 0 17px 15px;float:left}
+.dettagli .boxInfo.boxOpzioni{margin:8px 0 8px 4px}
+*html .dettagli .boxInfo{margin:0 0 17px 7px}
+.dettagli .boxInfo img{float:left}
+.dettagli .boxInfo .boxInfoCont li span{color:#000;font-weight:bold;padding:0 15px 0 4px}
+.dettagli #boxImg{margin:0 0 17px 15px;float:left;background:url(/img/ret/bg_frec_scheda_tit.gif) no-repeat 0 10px;width:668px;height:26px;text-align:center}
+*html .dettagli #boxImg {margin:0 0 17px 7px}
+.dettagli .boxInfobg2 {background:url(/img/ret/bg_frec2_scheda_tit.gif) no-repeat 0 10px !important}
+.dettagli #boxImg  a,.dettagli #boxImg  a.bottom{display:block;margin:0 auto;background:url(/img/ret/img_or_frecbottom_scheda_tit.gif) no-repeat 0 0;width:106px;height:18px}
+.dettagli #boxImg  a:hover{background:url(/img/ret/img_or_frecbottom_on_scheda_tit.gif) no-repeat 0 0}
+.dettagli #boxImg  a.bottom{margin:4px auto;background:url(/img/ret/img_or_frectop_scheda_tit.gif) no-repeat 0 0}
+.dettagli #boxImg  a.bottom:hover{background:url(/img/ret/img_or_frectop_on_scheda_tit.gif) no-repeat 0 0}
+
+/* tabella overview */
+.dettagli .titTable{color:#6f8f0a;text-indent:8px;font-weight:bold;padding-bottom:3px;margin-left:15px;display:block;clear:left}
+*html  .dettagli .titTable{margin-left:7px}
+.dettagli .textCont p{clear:left}
+.dettagli table.dettLiqTable{width:668px;margin-left:15px;margin-bottom:15px;clear:left;float:left}
+*html .dettagli table.dettLiqTable{margin-left:7px}
+*html #contenuti .dettagli .col{margin-right:0}
+.dettagli table.dettLiqTable td{color:#4A4A4A!important}
+#contenuti .dettagli table.dettLiqTable tr.heading td{padding:9px 9px 6px 0;text-align:right}
+#contenuti .dettagli table.dettLiqTable tr.heading td strong{color:#4A4A4A!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong{color:#666!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td.down strong{color:#EE0000!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td.up strong{color:#368F00!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light.det td.grey{background-color:#f2f2f2}
+
+/* bottoniera scheda titolo */
+.schedaTitoliContBot{background:url(/img/ret/str_bg_schedaTitoliContBot.gif) no-repeat 0 top;width:700px;float:left;min-height:64px;margin-bottom:10px}
+#contenuti #sceltaWatchList {width:200px !important; margin-top:-3px !important;}
+#contenuti #sceltaWatchList .inputSx {width:200px !important;}
+#contenuti .btnCont table.form01 td.depwtBot {padding-top:0; padding-left: 10px;}
+
+.btnCont table.form01{background:none;width:310px!important;float:left}
+#contenuti .btnCont table.form01 td{border-bottom:0;padding-top:7px;padding-right:0}
+#content .schedaTitoliContBot .btnCont .form01 .rappWt{padding-top:3px}
+#content .btnCont table.form01 .depwt{width:110px;padding:5px 0 6px 24px}
+#content .btnCont table.form01 .depwtBot{width:110px;padding:6px 0 5px 24px}
+#content .schedaTitoliContBot .btnCont .selectRapp,#content .schedaTitoliContBot .btnCont .selectRappOut,#content .schedaTitoliContBot .btnCont .selectRapp .inputSx{width:158px}
+#content .schedaTitoliContBot .btnCont .selectRapp  .selector{width:154px}
+#content .schedaTitoliContBot .btnCont .selectRapp .selectorSpacer{width:156px}
+#content .schedaTitoliContBot .btnCont .selectRapp .input{font-weight:normal;font-size:10px;text-align:center}
+#content .schedaTitoliContBot .btnCont .selectRapp strong {font-weight:normal}
+#content .schedaTitoliContBot .btnCont .selectRapp .inputSx{height:23px; background:url(/img/ret/str_sceltawatchbordosx.gif) no-repeat 0 0}
+#content .schedaTitoliContBot .btnCont .selectRapp .inputDx{background: url(/img/ret/str_sceltawatchbordodx.gif) no-repeat scroll right top transparent}
+#content .schedaTitoliContBot .btnCont .selectRapp .input{background: url(/img/ret/str_sceltawatchsfondo.gif) repeat-x scroll left top transparent;height:22px}
+.schedaTitoliContBot div.fooform{margin:7px 22px 0 0;width:340px;float:right}
+*html .schedaTitoliContBot div.fooform{margin:7px 11px 0 0}
+.schedaTitoliContBot .btnCont .linkschedaBot{float:left;width:200px}
+#contenuti .schedaTitoliContBot .btnCont .linkschedaBot a{color:#666;float:left;line-height:20px}
+#contenuti .schedaTitoliContBot .btnCont .linkschedaBot a img{padding-right:7px;text-decoration:none;float:left}
+
+/* menu tab di secondo livello */
+.dettagliTabSecond{width:669px;margin:0 0 17px 15px;float:left}
+*html .dettagliTabSecond{margin:0 0 17px 7px}
+.dettagliTabSecond ul,.dettagliTabSecond li{text-align:center;margin:0;padding:0;list-style-type:none;float:left}
+.dettagliTabSecond li.off a.scHelp,.dettagliTabSecond li.on a.scHelp, .dettagliTabSecond li.active a.scHelp{padding-top:10px;width:auto;margin-right:0;background:none;height:15px;display:block}
+.dettagliTabSecond li.off a,.dettagliTabSecond li.on a,.dettagliTabSecond li.active a{padding-top:9px;height:24px;width:162px;margin-right:1px;background: url(/img/ret/str_TabSecondLarge_off.gif) no-repeat  left top;display:block}
+.dettagliTabSecond li.off a.doubleRow,.dettagliTabSecond li.on a.doubleRow, .dettagliTabSecond li.active a.doubleRow{padding-top:3px;height:30px}
+.dettagliTabSecond.small li.off a,.dettagliTabSecond.small li.on a, .dettagliTabSecond.small li.active a{padding-top:9px;height:24px;width:108px;margin-right:1px;background: url(/img/ret/str_TabSecondSmall_off.gif) no-repeat left top;display:block;line-height:12px}
+.dettagliTabSecond.small li.off a.doubleRow,.dettagliTabSecond.small li.on  a.doubleRow,.dettagliTabSecond.small li.active  a.doubleRow  {padding-top:3px; height:30px;}
+.dettagliTabSecond li.on a,.dettagliTabSecond li.active a{background:url(/img/ret/str_TabSecondLarge_on.gif) no-repeat left top}
+.dettagliTabSecond.small li.on a,.dettagliTabSecond.small li.active a{background:url(/img/ret/str_TabSecondSmall_on.gif) no-repeat left top}
+.dettagliTabSecond li.off  a.scHelp,.dettagliTabSecond li.on  a.scHelp,.dettagliTabSecond li.active  a.scHelp{height:14px;width:9px;padding-left:5px;padding-top:19px;background:url(/img/ret/ico1gr_helpTitoli.gif) no-repeat 0 bottom}
+.dettagliTabSecond li.active  a.scHelp,.dettagliTabSecond li.on  a.scHelp{background-image:url(/img/ret/ico1gr_helpTitoli_over.gif)}
+#contenuti .dettagliTabSecond a{color:#585858;text-decoration:none;font-weight:bold}
+#contenuti .dettagliTabSecond a:hover,#contenuti .dettagliTabSecond li.active a{color:#6f8f0a}
+
+/* tabella analisi fondamentale */
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.media{color:#3e3e3e!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.performance{text-transform:uppercase;font:bold 10px}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.outperforme{color:#51c40b!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.buy{color:#0a7c1d!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.hold{color:#ffa200!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.underperforme{color:#ee0000!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light td strong.sell{color:#a30e1c!important}
+#contenuti .dettagli table.dettLiqTable tr.heading.light.det td strong.current{font-size:11px}
+.dettagli img.raccom{padding-right:10px;margin-top:1px;padding-left:9px}
+#contenuti .dettagli table.dettLiqTable tr.heading td.left{text-align:left}
+#contenuti .dettagli table.dettLiqTable tr td a{color:#4a4a4a;font-size:11px}
+
+/* tabelle analisi tecnica */
+#contenuti .dettagli .col,#contenuti .dettagli .col table.dettLiqTable{width:216px;float:left}
+#contenuti .dettagli .col{margin-right:10px;margin-bottom:12px}
+#contenuti .dettagli .col table.dettLiqTable tr.heading.light.det td{font-size:11px}
+.schedaTitoliCont .col span.up,.schedaTitoliCont .col span.down{color:#4A4A4A;background-position:0 3px;padding-left:15px;font-size:11px;padding-right:0}
+#contenuti .col table.dettLiqTable tr.heading.light.det td{padding:9px 9px 6px 0;text-align:right}
+a.switch{float:right}
+#contenuti .dettagli .expandable{margin-left:15px;margin-right:15px}
+.dettagli .expandable h4{line-height:11px}
+
+/* indicatori finanziari */
+.schedadati,.dettagli .titTableCont{margin:0 15px}
+.dettagli .schedadati .titTable,.dettagli .titTableCont .titTable{margin-left:0;/*float:left;*/text-indent:0}
+.dettagli .schedadati table.pop{margin-bottom:15px}
+.schedaTitoliCont .schedaTitoliContMdl .dettagli .boxalert{margin:0 15px 0 0;width:665px}
+*html .schedaTitoliCont .schedaTitoliContMdl .dettagli .boxalert{margin:0}
+.schedaTitoliCont .schedaTitoliContMdl .dettagli .boxalert .boxalertdescription {width:562px}
+
+/* corporate governance */
+.dettagli .textCont{margin-left:15px;margin-right:15px}
+.dettagli .textCont .titTable{text-indent:0;margin-left:0}
+.dettagli p.borBottom{border-bottom:1px dotted #C4C4C4;margin-bottom:10px}
+#contenuti .dettagli .schedadati .col{width:212px}
+
+/* help */
+.textCont ul,.textCont ul li{margin:0 0 0 15px;padding:0}
+#contenuti .dettagli .expandable h4 a,#contenuti .dettagli .expandable h4 a:hover{font-size:12px;font-weight:bold!important;text-transform:uppercase;text-decoration:none;color:#666!important}
+#contenuti .dettagli .expandable h4 a img{padding-right:5px}
+#contenuti .dettagli .expandable h4{clear:left;padding-top:5px}
+
+/* obbligazioni */
+td.doubleRow{height:35px}
+#contenuti  table.popTre{margin-bottom:12px}
+#contenuti  table.popTre td,#contenuti  table.popTre th{padding:5px;vertical-align:middle}
+#contenuti  table.popTre .bianco{padding:0;background-color:#fff}
+#contenuti  table.popTre .intestCol{border-bottom:1px solid #000000;padding:0}
+#contenuti  table.popTre .nopadd td{padding:0}
+#contenuti  table.popTre .posdx{text-align:right}
+#contenuti  table.popTre .last{border-bottom:1px solid #000}
+#contenuti .schedaTitoliContMdl .dettagli  table.dettLiqTable .uniqTooltipText{float:right;margin-top:0}
+
+/* scheda titolo vecchia da eliminare quando online nuova versione*/
+div.tithelp.border{border:solid 1px #cecece;border-right:0;border-left:0;padding:4px 0 5px 0;margin-bottom:13px}
+div.tithelp.border .helpleft,div.tithelp.border .helpright2,div.tithelp.border .boxcomunicaz_dettaglio{margin:0}
+#contenuti .divtabellacont.schedatit{padding:15px 6px 0 6px;width:666px}
+.schedaleft,.schedaleft2col{width:75%;float:left}
+.schedaleft2col{width:100%;float:left}
+.schedaright{width:25%;float:right}
+.divtabellacont.schedatit .schedaleft .firstleft,.divtabellacont.schedatit .schedaleft .secondleft{width:50%;float:left}
+.schedaleft .firstleft,.schedaleft .secondleft{width:49%;float:left}
+.schedaleft2col .firstleftrev,.schedaleft2col .secondleft{width:62%;float:left;padding-right:2%}
+.schedaleft2col .firstleft,.schedaleft2col .secondleftrev{width:36%;float:left}
+.secondleft div{float:right}
+.schedaright .tabordininew{width:154px;float:right}
+.schedaright .tabordininew .elencotop{width:135px;float:right}
+#contenuti .schedaright .tabordininew .elencomiddle{width:132px;float:right}
+#contenuti .schedaleft  table.form01,#contenuti .schedaleft2col  table.form01,#contenuti .divtabellacont .schedaleft2col .condiz2{width:100%!important}
+#contenuti .divtabellacont .schedaleft2col .box65 .right{float:right;padding-right:0px}
+span.raccout{padding-left:35px;font-size:13px;float:left;font-weight:bold;margin-top:-2px}
+#contenuti h2.titTable a{font-weight:bold;color:#6F8F0A}
+#contenuti h2.titTable a:hover{font-weight:bold;color:#666666!important}
+#contenuti a.hlpright{float:right;color:#6F8F0A}
+#contenuti a.hlpright:hover{float:right;color:#666666!important}
+.schedaleft2col h3.verde{float:left}
+#contenuti .schedaleft2col div.tithelp{width:100%!important}
+.schedaleft2col div.BvTableHeaderHelp{width:50%;margin-top:5px}
+.schedaldatileft{width:49%;float:left;padding-right:1%}
+.schedaldatiright{width:49%;float:right;padding-left:1%}
+#contenuti .divtabellacont .schedaldatileft .condiz2,#contenuti .divtabellacont .schedaldatileft .tithelp,#contenuti .divtabellacont .schedaldatiright .condiz2,#contenuti .divtabellacont .schedaldatiright .tithelp,#contenuti .schedaleft  div.fooform {width:100%!important}
+#contenuti .divtabellacont .schedaldatileft .BvTableHeaderHelp,#contenuti .divtabellacont .schedaldatiright .BvTableHeaderHelp{width:50%!important;margin-top:5px}
+.divtabellacont.schedatit table.tablesms{width:100%}
+.tithelp.neg{margin-top:-14px}
+.divtabellacont.schedatit .schedaleft .form01 .inputdom.wt select,.divtabellacont.schedatit .schedaleft .form01 .inputdom.wt .bottsel{margin-top:-2px}
+.schedaleft2col .divisorio{margin:5px 0}
+
+/*chat*/
+#c2mToolbar{cursor:pointer;float:left;padding:0}
+
+/* Ticker */
+#tickerFlow .tickercont{overflow:hidden!important;padding:0;position:relative;width:450px}
+#tickerFlow .tickercont .tickerInfo{float:left;width:auto;position:absolute;display:block;height:23px;width:3000px}
+#tickerFlow .tickercont .tickerInfo .tickerEllipsis{float:left;position:absolute;font-size:11px;font-weight:bold;line-height:11px;display:block;background-color:#fff;line-height:22px;margin:0 0 0 430px;padding:0 10px 0 3px}
+#tickerFlow .tickercont .tickerInfo a, #tickerFlow .tickercont .tickerInfo .tickerInfoCont{line-height: 21px;padding: 0 10px;text-decoration:none;font-weight:bold;font-size:10px}
+#tickerFlow .tickercont .tickerInfo span{font-weight:normal;display:inline;height:20px}
+#tickerFlow .tickercont .tickerInfo span.tickerDots,#tickerFlow .tickercont .tickerInfo span.tickerHiddenText{font-weight:bold}
+#tickerFlow .tickercont .tickerInfo .tickerInfoCont{font-size:10px;font-weight:bold}
+#tickerFlow .tickerleft a, #tickerFlow .tickerright a,#tickerFlow .tickerleft a:hover,#tickerFlow .tickerright a:hover{text-decoration:none} 
+#tickerFlow .tickerleft a:hover,#tickerFlow .tickerright a:hover{background-position:-25px 0}
+#tickerFlow .tickerleft a.disabled,#tickerFlow .tickerright a.disabled,#tickerFlow .tickerleft a.disabled:hover,#tickerFlow .tickerright a.disabled:hover{background-position:-50px 0!important} 
+.layeralert2 .tickerDetailNav{float:left;position:absolute;display:block;width:49px;height:25px;margin-left:377px}
+.layeralert2 .tickerDetailNav a.tickerDetailLeft,.layeralert2 .tickerDetailNav a.tickerDetailRight{float:left;display:block;width:25px;height: 25px;text-decoration:none;float:left;background:transparent url(/img/ret/str_arrowTicket_left.gif) no-repeat 0 0}
+.layeralert2 .tickerDetailNav a.tickerDetailRight{width:24px;background:transparent url(/img/ret/str_arrowTicket_right.gif) no-repeat -1px 0}
+.layeralert2 .tickerDetailNav a.tickerDetailLeft:hover{background-position:-25px 0}
+.layeralert2 .tickerDetailNav a.tickerDetailRight:hover{background-position:-26px 0}
+.layeralert2 .tickerDetailNav a.tickerDetailLeft.disabled,.layeralert2 .tickerDetailNav a.tickerDetailLeft.disabled:hover{background-position:-50px 0}
+.layeralert2 .tickerDetailNav a.tickerDetailRight.disabled,.layeralert2 .tickerDetailNav a.tickerDetailRight.disabled:hover{background-position:-51px 0}
+.tickerNewsDetail p.data{font-size:10px;padding:0 0 5px;clear:left}
+.tickerNewsDetail p.testo{height:200px;overflow:auto}
+.tickerNewsDetail h3.verde{width:367px;clear:left}
+
+/* Pannello superiore paniere */
+#contenuti .loPanel {float:left; clear:left; width:700px; display:block; padding: 0 0 20px 0}
+
+/* Operativita' */
+#loOpe{float:left;width:343px;height:61px;background:transparent url(/img/ret/str_lo_bg_ope.gif) no-repeat 0 0}
+#loOpe .bottoniera{height:41px;float:left;margin:11px 0 0 116px}
+* html #loOpe .bottoniera{margin-left:58px}
+#loOpe a{float:left;width:66px;height:41px;background:transparent url(/img/ret/str_lo_ope_butt.gif) no-repeat 0 -41px;margin: 0 7px 0 0;text-decoration:none!important}
+#content #loOpe .uniqTooltipIco{margin:0;padding:0;background-image:none}
+h3.tooltipFiletto{float:left;width:180px;color:#6f8f0a;clear:both;border-bottom:solid 1px #d6d6d6;padding:0 0 4px;margin:0 0 3px;font-size:13px}
+#loOpe a:hover{background-position:0 -82px}
+#loOpe a.selected,#loOpe a.selected:hover{background-position: 0 0;cursor:default!important}
+#loOpe a#loOpeS{background-position:-66px -41px}
+#loOpe a#loOpeS:hover{background-position:-66px -82px}
+#loOpe a#loOpeS.selected,#loOpe a#loOpeS.selected:hover{background-position:-66px 0}
+#loOpe a#loOpeL{background-position:-132px -41px}
+#loOpe a#loOpeL:hover{background-position:-132px -82px}
+#loOpe a#loOpeL.selected,#loOpe a#loOpeL.selected:hover{background-position:-132px 0}
+
+/* Slider leva */
+#loLeva{float:right;width:343px;height:61px;background:transparent url(/img/ret/str_lo_bg_leva.gif) no-repeat 0 0;margin:0;overflow:hidden}
+#loLevaSlider{display:block;float:left;height:10px;margin:27px 0 0 94px;overflow:visible;width:224px;position:relative} 
+* html #loLevaSlider{margin-left:44px}
+/*
+#loLevaSlider a.cursor{position:absolute;margin:-2px 0 0 -1px;width:16px;height:16px;background:transparent url(/img/ret/img_slider_cursor.png);display:block;text-decoration:none;cursor:url(/wscmn/img/cursor_drag.gif) 4 4, url("/wscmn/img/cursor_drag.cur"), pointer;} 
+#loLevaSlider a.cursor:hover{background-position:-16px 0}
+#loLevaSlider a.cursor.selected{cursor:url(/wscmn/img/cursor_dragPress.gif) 4 4, url(/wscmn/img/cursor_dragPress.cur), pointer}
+*/
+#loLevaSlider a.ui-slider-handle{position:relative;margin:-2px 0 0 -6px;width:16px;height:16px;background:transparent url(/img/ret/img_slider_cursor.png);display:block;text-decoration:none !important;cursor:url(/wscmn/img/cursor_drag.gif) 4 4, url("/wscmn/img/cursor_drag.cur"), pointer; line-height:0} 
+#loLevaSlider a.ui-slider-handle:hover{background-position:-16px 0}
+#loLevaSlider a.ui-slider-handle.selected{cursor:url(/wscmn/img/cursor_dragPress.gif) 4 4, url(/wscmn/img/cursor_dragPress.cur), pointer}
+
+#loLevaValues{float:left;clear:left;display:block;width:300px;height:20px;margin:0 0 0 75px}
+* html #loLevaValues{margin-left:38px}
+#loLevaValues span{color:#CACACA;display:block;float:left;font-family:Arial,Serif;font-size:13px;font-weight:bold;height:24px;line-height:24px;margin:0 15px 0 0;text-align:center;width:40px}
+#loLevaValues span.active{color:#6f8f0a}
+
+/* Tabella di dettaglio */
+table.dettTable tr td a:hover{color:#6f8f0a!important} 
+
+/*inserimento ordini in pagina*/
+div.insordcont #tabordini2{margin-left:0px!important}
+div.insordcont div.inputFormCont table.form01 tr td.label,div.insordcont div.inputFormCont table.form01 tr td.uno.label{padding:0 3px 0 7px!important}
+div.insordcont div.inputFormCont table.form01 tr td.radio{padding: 2px 0;vertical-align:middle}
+div.insordcont div.inputFormCont table.form01 tr td input{color:#000;float:left;height:17px;padding:0;width:60px}
+div.insordcont div.inputFormCont table.form01 tr td.radio input{border:none!important;height:13px;margin-left:4px;width:13px}
+div.insordcont div.inputFormCont table.form01 tr td.radio span{line-height:16px}
+div.insordcont div.inputFormCont table.form01 tr td img.frecce{margin-left:3px;margin-top:1px}
+
+/* Classi per le larghezze */
+div.insordcont div.inputFormCont table.form01 {width:454px!important}  
+div.insordcont div.inputFormCont table.form01 tr td.uno{width:77px!important}
+div.insordcont div.inputFormCont table.form01 tr td.slArrowBlock {width:185px}
+div.insordcont div.inputFormCont table.form01 tr td.slvalid{width:51px}
+div.insordcont div.inputFormCont table.form01 tr td.slvalidfield{width:91px}
+div.insordcont div.inputFormCont table.form01 tr td.quant{width:85px}
+div.insordcont div.inputFormCont table.form01 tr td.quantfield{width:105px}
+div.insordcont div.inputFormCont .inputWait{color:#aaa!important}
+div.insordcont .bottomConsole{margin:0 0 10px 0;display:block;float:left;width:454px}
+* html div.insordcont .bottomConsole{margin-left:6px}
+div.insordcont .btnConsole div{display:block;float:left}
+div.insordcont .btnConsole div.onRight{float:right}
+div.insordcont a.lampadina{background:url(/img/ret/lampa_off.gif) no-repeat scroll right top transparent;color:#6F8F0A;float:right;height:25px;line-height:24px;margin-top:-3px;padding:0 17px 0 0}
+div.insordcont a.lampadina:hover{background-image:url(/img/ret/lampa_on.gif)}
+div.insordcont #stopLoss div.inputFormCont ,div.insordcont #stopOrder div.inputFormCont {margin:0; padding: 4px 0 3px;border-bottom:solid 1px #cacaca;border-left:solid 1px #cacaca; border-right:solid 1px #cacaca;margin-left:0px;margin-bottom: 10px;display:block;width:452px}
+div.insordcont #stopLoss div.inputFormCont table.form01,div.insordcont #stopOrder div.inputFormCont table.form01{background:none!important;border-collapse:separate!important;margin-bottom:0!important} 
+div.insordcont #stopOrder div.inputFormCont table.form01 .label {white-space: no-wrap; padding-left: 0px}
+
+/*dal 2012*/
+/* Accordion */
+div.insordcont .accordiontitle{padding:0;float:left;clear:left;margin:0 0 10px 0px;color:#6f8f0a;font-size:10px;font-weight:bold!important;text-transform:uppercase;text-decoration:none!important;width:452px;border:solid 1px #cacaca;height:20px;background:transparent url(/img/ret/str_acc_small_bg.gif) repeat-x 0 0}
+div.insordcont .accordiontitle span{display:block;padding:0 0 0 7px;line-height:20px;color:#666}
+div.insordcont .accordiontitle:hover{background-position: 0 -19px}
+div.insordcont .accordiontitle:hover span{color:#6f8f0a}
+div.insordcont .accordiontitle.opened{margin-bottom:0;background-position:0 -38px;border-bottom:solid 1px #e4e4e4}
+div.insordcont .accordiontitle.opened:hover{margin-bottom:0;background-position:0 -57px}
+div.insordcont .accordiontitle.unactive{cursor:default;margin-bottom:0;background-position:0 -76px;margin-bottom:10px}
+div.insordcont .accordiontitle.unactive span{color:#ccc}
+
+/* inserimento ordini condizionati modifica*/
+#contenuti #tabordini2.inputFormCont .form01 .condizfirst span{font-weight:normal}
+#contenuti #tabordini2.inputFormCont input.piccolo{border:1px solid #CDCDCD;width:84px!important}
+div.insordcont div.inputFormCont table.form01 tr td input{float:none}
+div.insordcont div.inputFormCont table.form01 tr td .tooltip{float:right;margin-top:3px}
+*:first-child+html div.insordcont div.inputFormCont table.form01 tr td .tooltip{margin-top:0px}
+div.insordcont div.inputFormCont div.tithelp{width:454px}
+#contenuti .insordcont #tabordini2 td{padding-left:2px;padding-right:2px}
+
+/* Assistente virtuale */
+#virtAss .vaTop a.vaChiudi:hover,#virtAss .vaTop a.vaWindow:hover{background-color:#6f8f0a}
+#virtAss #vaTextControl{color:#6f8f0a}
+
+/*prestiti profamily*/
+.evidenza_box{background-color:#8ab10b}
+
+/*personalizzazione calendario*/
+#CalendarPickerControl table.calframe td.heading{border:1px solid #5c7707;color:#fff}
+#CalendarPickerControl table.calframe{border:1px solid #58585a}
+
+/*tabella movimenti*/
+#contenuti .movimentiCont .dettTable tr.evident td{background-color:#e0e9c2!important}
+
+/*carousel*/
+#logoText .toggleProfileA,#logoText .toggleProfileB,#logoText .toggleProfileA:hover,#logoText .toggleProfileB:hover{color:#6F8F0A}
+#logoText table.cercaFondi td{background-color:#6b8909;border-left:1px solid #6F8F0A;border-right:1px solid #6F8F0A} 
+#logoBox .linkdx span{color:#6F8F0A}
+
+/*pop guida*/
+.book #guidaBook div.leftSel a{color:#6F8F0A}
+.book .header_popup{height:36px!important;background: #000 url(/img/str_pp_book_head_bg.gif) no-repeat right top!important}
+.book #guidaBook {text-align:left}
+.book #guidaBook div.rightBox  ul {margin:0;padding:0 0 0 15px;font-size: 12px;}
+.book #guidaBook div.rightBox  ul  li{margin:0;padding:0 0 5px 0}
+.book #guidaBook div.rightBox  ul li span.norollover {width:20px;height:20px;display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;}
+
+/*select option*/
+#content .selectRapp .selected{background-color:#dce7b5!important}
+#contenuti  div.resPagflex .resPagRight.flex .filtermenu li a:hover {background-color:#e0e9c2}
+
+/*nuova toolbox*/
+/*#fixedtools.fixedconsoletools  .toolassistente, #fixedtools.fixedconsoletools  .toolassistente2{height:62px}
+#fixedtools.fixedconsoletools  .toolassistente, #fixedtools.fixedconsoletools  .toolassistentexx{background:#fff url(/wscmn/img/ico1bt_toolbox_assistente2.gif)}
+#fixedtools.fixedconsoletools  .toolassistente2,#fixedtools.fixedconsoletools  .toolassistentexx{background:#fff url(/wscmn/img/ico1bt_toolbox_assistente.gif)}*/
+/* Declinazione form */
+.tab50 td.feature {border-top:solid 1px #6f8f0a; border-bottom:solid 1px #6f8f0a; background-color: #dce7b5 !important}
+.tab50 td.feature a{color: #6f8f0a !important}
+
+/* Colori geoblock */
+.overdett .top p, .overdett.top cardstate {color:#6f8f0a}
+
+/* Pagina cortesia */
+table.TableF24.demo{width:560px}
+
+/* Grafici movimenti */
+.slidelayerleft, .slidelayerright{background-position: 0 -80px}
+.layerboxgraficimdl .slideup:hover, .layerboxgraficimdl .slidedown:hover{background-position: -240px 0}
+
+/* Colori assistente virtuale */
+#virtAss .vaTop #vaTitle {color: #6f8f0a}
+#virtAss #vaDialog .sent.answer{background-color:#f1f5e1}
+
+/* link punto elenco evidente */
+#contenuti ul.pdfinline li a{color:#6F8F0A }
+
+/* Box di push in firma digitale */
+.boxpush  h2, #contenuti .boxpush h2.graphTit{color:#6F8F0A}
+
+/* Box spalla destra */
+.boxrichiedi a.right{color:#6F8F0A}
+.contenutiboxdet a:hover h4 {color:#6F8F0A}
+.contenutiboxdet a.last{color:#6F8F0A}
+
+/* Span verde in tabella costi e commissioni */
+.costcomm span.verde{color:#6F8F0A}
+#featConfigAccordion {float:left; clear:left; width: 862px; height: 50px; background: #fff url(/img/ret/cfeat_acc_bg.gif) no-repeat center 0}
+#featConfigAccordion.opened {height: 37px;}
+#featConfigAccordion a{font-family: 'helveTit', Arial Narrow, Arial; font-size: 15px; margin:14px 0 0 -2px; float:left; background: transparent url(/img/ret/cfeat_acc_ico.gif) no-repeat 0 2px; height: 20px; padding: 1px 0 5px 20px; color: #414042}
+#featConfigAccordion a strong{color: #414042; font-family: 'helveTitBold', Arial Narrow, Arial}
+#featConfigAccordion a:hover {color: #6f8f0a; background-position: 0 -23px}
+#featConfigAccordion a:hover strong {color: #6f8f0a}
+#featConfigAccordion.opened a{background-position: 0 -48px}
+#featConfigAccordion.opened a:hover {background-position: 0 -73px}
+#featConfig {float:left; clear:left;width:100%}
+#featMasterCont {float:left; clear:left; height: 370px; width: 862px; background: transparent url(/img/ret/cfeat_bg.gif) no-repeat 0 0; margin: 10px 0}
+#featContainer {width:500px; display:block; float:left; padding: 10px 0 0 20px; height: 200px}
+#featContainer .featWrapCont {float:left; width: 158px; height: 95px; background-position: center 0; text-align:center; background-repeat:no-repeat}
+#featContainer .featWrapCont span {; clear:left; font-family: 'helveTit', Arial Narrow, Arial; letter-spacing: 0.5px;font-size: 12px; font-weight: normal; color: #aaa}
+#featContainer .featWrap {float:left; width: 158px; height: 69px; overflow: visible; background-position: center 0; text-align:center; background-repeat:no-repeat}
+#featContainer .feat {float:none; width: 71px; height: 69px; margin:0 auto; cursor: move; overflow:visible;}
+#featContainer .feat div.hover, #featChart .feat div{background-position: -71px 0px !important}
+#featContainer .feat div.drag {background-position: -142px 0px}
+#featContainer #featPrelieviWrap {background-image: url(/img/ret/cfeat_feat_prelievi_bg.gif)}
+#featPrelievi div {background: url(/img/ret/cfeat_feat_prelievi.png) no-repeat 0 0; width: 71px; height:80px}
+#featContainer #featAcqmondoWrap {background-image: url(/img/ret/cfeat_feat_acqmondo_bg.gif)}
+#featAcqmondo div {background: url(/img/ret/cfeat_feat_acqmondo.png) no-repeat 0 0; width: 71px; height:80px}
+#featContainer #featAcqonlineWrap {background-image: url(/img/ret/cfeat_feat_acqonline_bg.gif)}
+#featAcqonline div {background: url(/img/ret/cfeat_feat_acqonline.png) no-repeat 0 0; width: 71px; height:80px}
+#featContainer #featPromoWrap {background-image: url(/img/ret/cfeat_feat_promo_bg.gif)}
+#featPromo div {background: url(/img/ret/cfeat_feat_promo.png) no-repeat 0 0; width: 71px; height:80px}
+#featContainer #featMassWrap {background-image: url(/img/ret/cfeat_feat_mass_bg.gif)}
+#featMass div {background: url(/img/ret/cfeat_feat_mass.png) no-repeat 0 0; width: 71px; height:80px}
+#featContainer #featFamigliaWrap {background-image: url(/img/ret/cfeat_feat_famiglia_bg.gif)}
+#featFamiglia div {background: url(/img/ret/cfeat_feat_famiglia.png) no-repeat 0 0; width: 71px; height:80px}
+#featChartWrap {float:right; display:block; width: 301px; height:200px;}
+#featChartWrap.hover {background: transparent url(/img/ret/cfeat_bg_cardwrap_hover.gif) no-repeat 0px 14px}
+#featChart {display: block;float: left;height: 142px;margin: 22px 0 0 7px;width: 216px}
+#featChart .feat {height: 69px; float:left; clear:none; cursor:move}
+#featChartWrap #deleteAll {float:left;display:block;margin:12px 71px 0 0;background: transparent url(/img/ret/cfeat_elimina.gif) no-repeat 0 4px;font-family: 'helveTit', Arial Narrow, Arial; color: #bebebe; font-size: 12px; text-decoration:none; padding: 0 0 0 10px; margin: 10px 0 0 160px}
+#featChartWrap #deleteAll:hover {color: #6f8f0a; background-position: 0 -11px}
+#featMsg {float:left; clear:left; width:861px; height: 20px; line-height: 0; text-align:center;}
+#featMsg span {color: #999;font-size: 10px;font-weight: bold;line-height: 20px}
+/* Carte */
+#featCards {background: url(/img/ret/cfeat_card_bg.gif) repeat-x scroll -2px 10px transparent;clear: left;height: 100px;margin: 0 0 0 57px;width:765px;overflow:hidden}
+#featCards .card {text-decoration:none; float:left; height: 80px; width: 190px; background-repeat:no-repeat; background-position: 53px 0; text-align: center; margin: 10px 0 0 0; padding:0}
+#featCards .card span {clear:both; float:none; display: block; font-size: 10px}
+#featCards .card span.name {text-decoration:none !important;padding-top: 47px; color: #666}
+#featCards .card span.details {float:left; color: #6f8f0a; background: transparent url("/img/ret/ico_bl_arrow.gif") no-repeat 0 3px; padding: 0 0 0 7px;margin:0 0 0 70px; cursor: pointer}
+#featCards #card_bancomat {background-image: url("/img/ret/ico1gr_bancomat.png")}
+#featCards #card_cartiprOne {background-image: url("/img/ret/ico1gr_cartaimprontaone.png")}
+#featCards #card_cartiprGoldPlus {background-image: url("/img/ret/ico1gr_cartaimprontagold.png")}
+#featCards #card_cartaJeans {background-image: url("/img/ret/ico1gr_cartajeans.png")}
+#featCards #card_cartaKjeans {background-image: url("/img/ret/ico1gr_cartakjeans.png")}
+#featCards #card_amexVerde {background-image: url("/img/ret/ico1gr_amexgray.png")}
+#featCards #card_amexOro {background-image: url("/img/ret/ico1gr_amexgold.png")}
+#featConfronta {float:right; margin: 10px 94px 0 0; clear: both}
+
+/* pec */
+#contenuti  a.greennounderline,#contenuti .pecinbox .activetable tr td a.opener{color:#6f8f0a}
+
+/* eventi */
+div.fpeventi {margin-top:10px}
+/* Area eventi cicli */
+.eventList{float:left;clear:both;margin: 0px 0 10px;text-align: left;}
+.eventList .eventRow {float:left; clear:left; width: 700px; height: 46px; background: transparent url(/img/ret/event_bg_full.gif) no-repeat bottom}
+.eventList .eventRow.eventRowsmall{width:645px; background: transparent url(/img/ret/event_bg.gif) no-repeat bottom}
+.eventHover {position: absolute; margin-top: -1px; width: 700px; height: 47px; background: transparent url(/img/ret/event_bg_on_full.gif) no-repeat 0 0}
+.eventHoversmall{width: 645px; background: transparent url(/img/ret/event_bg_on.gif) no-repeat 0 0}
+.eventWrap {position: absolute;  width: 700px; height: 46px; cursor: pointer}
+.eventRowsmall .eventWrap {width:645px;}
+.eventRow.withImg .eventWrap img.eventLogo{float:left;display:block;margin: 10px 0 0 14px;width:31px;height:28px}
+.eventRow.withImg .eventWrap  .eventRowLeft , .eventRow.withImg .eventWrap  .eventRowLeft  a, .eventRow.withImg .eventWrap  .eventRowLeft  span {width: 430px}
+.eventWrap .eventRowLeft {float:left;width: 545px}
+.eventRowsmall .eventWrap .eventRowLeft {width:490px}
+.eventWrap .eventRowLeft span {float:left; clear:both; font-weight: bold; color: #999;margin: 9px 0 0 13px}
+.eventWrap .eventRowLeft a {cursor:pointer !important; clear:both; width: 490px; margin: 0 0 0 13px; float:left; font-weight: bold; color: #000 !important; font-size: 12px; text-decoration:none !important}
+#contenuti .eventWrap .eventRowLeft a {font-weight: bold;}
+.eventWrap .eventIcoWrap {display:none}
+.eventWrap.hover .eventIcoWrap, .eventRow.opened  .eventWrap .eventIcoWrap {display:block !important}
+.eventWrap.hover .eventRowLeft a {color: #6f8f0a !important}
+.eventWrap .eventRowRight  {float:right; padding: 12px 5px 0; width: 140px;}
+.eventWrap .eventRowRight .eventIcoWrap {margin:0; padding:0; float:left; width: 60px}
+.eventWrap .eventRowRight .eventIcoWrap img {float:left; margin: 0 9px 0 0}
+.eventWrap .eventRowRight .eventIcoWrap a {float:right}
+.eventWrap .eventRowRight .eventIcoWrap a:first-child{float:left}
+.eventWrap .eventRowRight a.rightButt {float:right; margin: 0 7px 0 0}
+.eventWrap .eventRowRight span.rightFull {float:right; margin: 0 7px 0 0; display: block; color: #999; font-size: 10px; padding-top: 3px}
+.eventWrap .eventRowRight span.rightFull.margiTopnega{margin: -5px 7px 0 0}
+.eventList .eventRow.opened  {height: auto}
+.eventList .eventRow.opened .eventHover {display:none !important}
+*:first-child+html .eventList .eventRow.opened .eventWrap {position: relative}
+.eventList .eventRow.opened .eventWrap .eventRowLeft a {color:#6f8f0a !important}
+.eventList .eventRow.opened .eventWrap {margin-top: -1px; padding:1px 0 5px; display:block; height: auto; position: static; background: transparent url(/img/ret/event_bg_opened_full.gif) no-repeat 0 0; float:left;}
+.eventList .eventRow.eventRowsmall.opened .eventWrap {background: transparent url(/img/ret/event_bg_opened.gif) no-repeat 0 0;}
+.eventList .eventRow.opened .eventDetail{float:left;clear:both;  margin:0;display:block}
+.eventList .eventRow.opened .eventDetail .eventFiletto {background: transparent url(/img/ret/event_detail_filetto_full.gif) no-repeat center 0; margin:0; padding:0; width: 700px; float:left; clear:left;}
+.eventList .eventRow.eventRowsmall.opened .eventDetail .eventFiletto {background: transparent url(/img/ret/event_detail_filetto.gif) no-repeat center 0; width:645px;}
+.eventList .eventRow.opened .eventDetail .eventDetailBody {padding:3px 0 0; float:left; clear:left; display:block; width: 700px; background: transparent url(/img/ret/event_detail_bg_full.gif) repeat-y 0 0;}
+.eventList .eventRow.eventRowsmall.opened .eventDetail .eventDetailBody {width:645px; background: transparent url(/img/ret/event_detail_bg.gif) repeat-y 0 0;}
+.eventList .eventRow.opened .eventDetail p {clear:left; display:block;font-size:11px;color:#333;padding:0 20px 11px 14px;margin:0; clear:left;}
+.eventList .eventRow.opened .eventDetail h5 {font: bold 11px tahoma;color:#000;padding:0 14px 2px 14px;margin:0; clear:left;}
+.eventList .eventRow.opened .eventDetail .eventDetailBottom {float:left; clear:left; display:block; width: 700px; height: 5px; background: transparent url(/img/ret/event_detail_bottom_full.gif) no-repeat 0 0}
+.eventList .eventRow.eventRowsmall.opened .eventDetail .eventDetailBottom {width:645px; background: transparent url(/img/ret/event_detail_bottom.gif) no-repeat 0 0}
+.eventList .eventRow.opened .eventDetail ul.strongflaglist {padding:0px 35px 5px 13px;margin:0;}
+.eventList .eventRow.opened .eventDetail ul.strongflaglist li {background: transparent url(/img/event_dot.gif) no-repeat 2px 3px; padding:  0 0 2px 13px;color: #000000;margin:0; list-style:none;}
+.eventList .eventRow.opened .eventDetailConsole {font-size: 10px !important; float:left; width: 678px; background: transparent url(/img/ret/event_detail_filetto_full.gif) no-repeat center 0; display:block; margin: 0 0 0 14px}
+.eventList .eventRow.eventRowsmall.opened .eventDetailConsole {width: 623px; background: transparent url(/img/ret/event_detail_filetto.gif) no-repeat center 0;}
+.eventList .eventRow.opened .eventDetailConsole .eventDiff {float:left; margin:0 5px 0 0; padding:11px 0 3px; width: 65px; color: #858585;}
+.eventList .eventRow.opened .eventDetailConsole .eventDiff span.diff {background: url(/img/event_diff.gif) no-repeat scroll 0 0 transparent; float: right;height: 5px;margin: 5px 0 0;padding: 0;width: 19px}
+.eventList .eventRow.opened .eventDetailConsole .eventDiff span {float:left}
+.eventList .eventRow.opened .eventDetailConsole .eventDiff.level0 span {background-position: -21px 0} 
+.eventList .eventRow.opened .eventDetailConsole .eventDiff.level1 span {background-position: -14px 0} 
+.eventList .eventRow.opened .eventDetailConsole .eventDiff.level2 span {background-position: -7px 0}
+.eventList .eventRow.opened .eventDetailConsole .eventDiff.level3 span {background-position: 0 0} 
+.eventList .eventRow.opened .eventDetailConsole .vertFiletto {float:left;margin:10px 8px 0; width: 1px; height: 13px;display:block; border-left: solid 1px #d2d2d2}
+.eventList .eventRow.opened .eventDetailConsole a.eventPdf{float:left; padding: 10px 25px 5px 0; background: transparent url(/img/event_pdf.gif) no-repeat right 8px}
+.eventList .eventRow.opened .eventDetail .eventContBox{float:left; padding:10px 10px 6px 10px; margin:10px 0px 7px 16px; width:190px; border:1px solid #b9b9b9;
+background-color:#fff;
+border-radius:5px;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+box-shadow:0 3px #e3e3e3;
+-webkit-box-shadow:0 3px #e3e3e3;
+-moz-box-shadow:0 3px #e3e3e3;
+}
+.eventList .eventRow.opened .eventDetail .eventContBox p {padding:10px 0; border-bottom:1px solid #e4e4e4; margin-bottom:4px}
+.eventList .eventRow.opened .eventDetail .eventContBox span.bgIcoTxt {background: url(/img/ret/btn_eventi_txt_off.gif) no-repeat 0 0; display:block; width:11px; height:11px; float:left; margin-right:5px}
+.eventList .eventRow.opened .eventDetail .eventContBox span.bgIcoVid {background: url(/img/ret/btn_eventi_vid_off.gif) no-repeat 0 0;display:block; width:11px; height:11px; float:left;}
+
+div.eventoTitle {margin-bottom:10px}
+div.eventoTitle img{float:left; margin-right:10px}
+#contenuti div.eventoTitle h1 {margin:0; padding: 0;}
+#intslideEventi {position:relative;height:233px}
+#intslideEventi div.slideCont{left: 0;position: absolute;top: 0;}
+#intslideEventi a.greenbutton{background:url(/img/ret/str_greenbutton_eventi_left.png) no-repeat 0 0;display: block;float: left;padding: 0 0 9px;text-decoration: none;}
+#intslideEventi .greenbutton{position: absolute;right: -3px;top:181px;margin:0 40px 0 2px;height:26px;color:#FFFFFF !important}
+#intslideEventi a.greenbutton span{background: url(/img/ret/str_greenbutton_eventi_rig.png) no-repeat right 0;cursor: pointer;display: block;float: left;height: 29px;line-height: 30px;margin-right: -20px;min-width: 60px;padding: 0 26px 0 14px;text-align: center; font-family: 'helveTit';font-size:13px;font-weight:normal}
+/* fine eventi */
+
+#contenuti h2.titTable {color: #6F8F0A !important;}
+div.tithelp .helpright2.grey{color:#666666 !important;}
+
+/* Background form OTP*/
+.formGeneric.codiceCont{background-color: #F4F8E8}
+
+/* Colore dei bottoni */
+.aButton {background-color:#a6c34a;border:solid 1px #a6c34a;background-image:-moz-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:-webkit-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:-ms-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:linear-gradient(to top, #a8c44e, #8ab10b 70%, #7c9e11)}
+#contenuti .tolltipclick .closed span.uniqTooltipPos a.evident, #contenuti .tolltipclick .opened span.uniqTooltipPos a.evident {color:#6F8F0A !important;border-bottom:dashed 1px #6F8F0A;font-weight:bold}
+
+/* FAQ Ass. virtuale */
+#vaExtInfoCont ul.faq {background-color:#dce7b5}
+
+#contenuti .formGeneric a,fieldset span.verde{color:#6f8f0a;}
+
+/* classe colore generica x banca */
+.colorBank{color:#6f8f0a!important}
+.colorBank2{color:#8ab10b!important}
+.backgroundBank{background-color:#6f8f0a!important}
+.backgroundBank2{background-color:#8ab10b!important}
+.backgroundBank3{background-color:#dce7b5!important}
+
+/* mobile app */
+#boxedCarouselPager a.active{background-color:#6f8f0a}
+#boxedCarouselPager .boxedCarouselPagesIos a.active,#boxedCarouselPager2 .boxedCarouselPagesAnd a.active{background-color:#8ab10b}
+.infomidlarge .qr {border:solid 5px #8ab10b}
+
+#contenuti .linkInForm{background-color:#6f8f0a;border:solid 1px #a6c34a;background-image: linear-gradient(to top, #a8c44e, #8ab10b 70%,  #7c9e11);}
+
+/* adattamento grafico con hack  da togliere in futuro*/
+#contenuti .linkInForm{background-image: -webkit-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);
+	background-image: -moz-linear-gradient(bottom, #a8c44e, #8ab10b 70%,  #7c9e11);
+	background-image: -ms-linear-gradient(bottom, #a8c44e, #8ab10b 70%,  #7c9e11);
+	}
+/* Contatti rubrica unica */
+#contattiRU .rubricaAzione{color:#6F8F0A;}
+.underline{color:#6f8f0a!important;}
+/* nuove cellette front page */
+#sideboxbarBx .bx-pager-item .bx-pager-link.active{background-image:linear-gradient(to top, #b5d451, #8ab10b 40%, #6f8f0a);}
+#sideboxbarBx .bx-pager-item .bx-pager-link.active{background-image: -webkit-linear-gradient(bottom, #b5d451, #8ab10b 40%, #6f8f0a);background-color:#6f8f0a}
+
+/* Background colorato ass. virtuale */
+#rightAss {background-image: url(/img/ret/rightass_bg.gif) !important}
+
+/* txt box disponibilità cartimpronte*/
+.colorver {color:#8ab10b; font-weight:bold;}
+
+/* FONDI E SICAV */
+.btnMultiSel span {color:#6f8f0a}
+.magicSearch input{box-shadow: 1px 0px 2px 1px #c2d38c !important}
+.selOverlay h2{color:#8ab10b}
+.selOverlay #selContCodSocieta .selEl.selected{background-color:#b9d06d}
+#fesLeftSel .fesSearchLeftMenu {background-color:#b9d06d}
+.btnFondi{box-shadow: inset 0 -1px rgba(137,152,86,.9);background-color:#adc854}
+.btnFondi:hover {box-shadow:inset 0 1px rgba(137,152,86,.9)}
+.riskValue{color:#adc854;text-shadow:0 -1px rgba(137, 152, 86, 0.9)}
+.accordionsepa  a.opening h3{color:#6f8f0a}
+.accordionsepa a.opening {-webkit-box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2);-moz-box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2);box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2)}
+.accordionsepa  .expanded{-webkit-box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2);-moz-box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2);box-shadow: 0 2px 3px rgba(29,29,29,.17), inset 0 -2px rgba(138,177,11,.2)}
+.rendimentoSel{background-color:#98c351 !important;}
+
+/* icona operativa */
+#contenuti .sezioneLinks2 .azioni .over{background-color:#dce7b5}
+
+/* regole colore del trading*/
+#contenuti h2.titTable{color:#6F8F0A;}
+#content  #ctnboxsx .graintfp .titTable{color:#6F8F0A!important}
+.boxfpcambi .helpleft h2.titTable.ver{color:#6F8F0A!important}
+
+/* tab grandi*/
+.tabGeneric .active span.tabGradient,.tabGeneric li:hover span.tabGradient{background-image:linear-gradient(to bottom, rgba(139,178,14,.5), rgba(231,236,213,.08) 21%, rgba(231,236,213,0) 25%);}
+.tabGeneric .active span.tabGradient{background-image: -webkit-linear-gradient(top, rgba(139,178,14,.5), rgba(231,236,213,.08) 21%, rgba(231,236,213,0) 25%);background-image: -moz-linear-gradient(top, rgba(139,178,14,.5), rgba(231,236,213,.08) 21%, rgba(231,236,213,0) 25%)}
+
+/*  Settore fondi sicav*/
+.selOverlay #selContCodSettore .selEl.selected {border:solid 2px #8ab10b;}
+
+/* layeralert */
+.layeralert .head{background:linear-gradient(to bottom,  #9fbf37 0%,#7c9f0d 100%);background: -moz-linear-gradient(top,  #9fbf37 0%, #7c9f0d 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9fbf37), color-stop(100%,#7c9f0d));background: -webkit-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background: -o-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background: -ms-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background:#6f8f0a\9;}
+
+/* layeralert2 */
+.layeralert2 .head{background:linear-gradient(to bottom,  #9fbf37 0%,#7c9f0d 100%);background: -moz-linear-gradient(top,  #9fbf37 0%, #7c9f0d 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9fbf37), color-stop(100%,#7c9f0d));background: -webkit-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background: -o-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background: -ms-linear-gradient(top,  #9fbf37 0%,#7c9f0d 100%);background:#6f8f0a\9;}
+
+/* Colori FES*/
+#contenuti a.fes_cfr_socgeshelp{color:#6F8F0A}
+
+/* Colore box scheda prodotto*/
+.boxGeneric.hightLight{background-color:rgba(230,230,230,0);box-shadow: 0 1px rgba(0,0,0,.2), inset 0 1px 6px rgba(156,156,156,.5);background-image:linear-gradient(to bottom, #edf3db, #fff)}
+.boxGeneric.hightLight{background:#EDF3DB;-webkit-box-shadow: 0 1px rgba(0,0,0,.2), inset 0 1px 6px rgba(156,156,156,.5);-moz-box-shadow: 0 1px rgba(0,0,0,.2), inset 0 1px 6px rgba(156,156,156,.5);background-image:-webkit-linear-gradient(top, #edf3db, #fff);background-image:-moz-linear-gradient(top, #edf3db, #fff);background-image:-o-linear-gradient(top, #edf3db, #fff);background-image:-ms-linear-gradient(top, #edf3db, #fff);}
+
+/* filetto destro 2 px*/
+.bordo2px {background:url(/img/ret/str_sep_colonne.gif) repeat-y 50% 0}
+
+/* MY Price*/
+table.dettTable tr.oneRow th{padding:8px !important}
+.dettTable .sogliaServizi{font:bold 24px/12px Arial, sans-serif}
+.dettTable .costiServizi{float:left;width:47px}
+.dettTable .dettHidden2{clear:left;display:block;padding-top:20px}
+#contenuti table.accordionTable tr td{padding-top:14px!important;padding-bottom:11px!important}
+.dettTable .accordionTable,.dettTable .costiDett{float:left}
+.accordionTable .dettagliOff,.accordionTable .dettagliOn{background:url(/img/ret/ico2or_accordionTable.gif) no-repeat 0 0;display:block;width:20px;height:20px;float:right;cursor:pointer}
+.accordionTable .dettagliOn{background-position:0 -20px;}
+.accordionTable  .dettHidden{clear:left;padding-top:20px}
+.dettTable .costiDett{width:75%}
+.dettHidden2 .costiDett{width:78%}
+.levelServiceAtt span[class*="level"],.levelServiceDis span[class*="level"]{display:none;}
+.levelServiceAtt span[class*="active"], .levelServiceDis span[class*="active"]{display:block}
+#contenuti table a.actionLink,#content table a.actionLink{color:#6f8f0a!important;display:inline-block;padding-top:5px;}
+.actionLink img{padding-right:7px;float:left}
+.actionLink span{float:left}
+.levelSecond{text-align:left}
+.levelServiceAtt,.levelServiceDis{min-height:45px}
+#contenuti table .levelSecond a.actionLink, #content table .levelSecond a.actionLink,#contenuti table .levelFirst a.actionLink, #content table .levelFirst a.actionLink{padding-top:0;padding-bottom:10px}
+.accordionTable .closeStep{background:url(/img/ret/ico2or_close.gif) no-repeat 0 0;display:block;width:20px;height:20px;float:right;cursor:pointer}
+.dettTable .infoServizi{width:20px;float:left;padding-top:3px}
+
+/* aol - deposito titoli*/
+.linkpdfdim {width:500px;float:left;padding-top:10px}
+.icopdfdim {float:left;display:block;padding-top:10px}
+#contenuti .mutuitrasp ul {padding-bottom:0}
+#contenuti .mutuitrasp ul  li{padding-bottom:5px}
+
+/*colori box generici */
+.boxGeneric02 {background-color:rgba(149,186,30,.3)}
+.boxGeneric03 {background-color:rgba(255,255,255,1)}
+
+/* tab navigazione*/
+#contenuti .tabGeneric li a,#contenuti .tabGeneric li a:hover{font-family:'helveTit', Arial Narrow, Arial;font-size:20px;color:#a2a2a2!important}
+.tabGeneric li.active,.tabGeneric li:hover{border-bottom:1px solid #fff;}
+
+/*colore tabella dettagli versioen due */
+table.dettTable.typeColor tr th{background:url(/img/ret/str_dettTableTh_color.gif) repeat-x scroll 0 0 #d7e5aa}
+table.dettTable.typeColor tr th.nobg{background-image:none}
+#contenuti table.dettTable.typeColor tr.dispari td, #contenuti table.dettTable.typeColor tr.pari td{background-color:#f1f5e1}
+table.dettTable.typeColor tr th,#contenuti table.sortable.typeColor  th.sort .sortDir ,#contenuti table.sortable.typeColor  th.sort .sortDir:hover{color:#6f8f0a!important}
+
+/* MyBank */
+.mybank #ordine{max-width:700px;margin:0 auto;padding-top:100px;}
+
+/* box normativa antiriciclaggio */
+.titNomeCogn {border-bottom:1px dotted #cacaca;}
+.titNomeCogn h2{color:#565656!important;margin: 8px 0 0;}
+.paddInd {padding-left:15px}
+
+/* Box assicurazioni */
+#assiWrap {overflow:hidden}
+
+/* Icona contactless*/
+.contactless{display:inline-block;vertical-align:top;zoom:1;*display:inline;float:none !important;padding:0 !important}
+
+/*colori testi*/
+.colorDark{color:#000!important}
+.colorDark2{color:#333!important}
+#contenuti .colorDark3{color:#121212!important}
+.colorLight{color:#9a9a9a!important}
+
+/*** FP sportello ***/
+#container a, #container .linkDetail a, #container .linkDetail a span {color:#6F8F0A}
+.colRight .spMinus{border:solid 1px #7fa30a;background:url("/img/ret/responsive/btn_minus@1x.png") no-repeat center center #acc852;}
+.btn-navbar.active .icon-bar {background-color:#8ab10b}
+ul.nav li.menuprimo a:hover {color:#a7c44a !important}
+ul.nav li.menuprimo > a:hover{color:#a7c44a !important}
+ul.nav li.menuprimo.active, ul.nav li.limenusecondo.active {border-top:1px solid #a7c44a}
+ul.nav li.menuprimo.active > a, ul.nav li.menuprimo > a:hover, ul.nav li.limenusecondo.active > a, ul.nav li.menuprimo ul li.limenusecondo.active > a, ul.nav li.limenusecondo > a:hover, ul.nav li.menuprimo ul li.limenusecondo a:hover {color:#a7c44a !important}
+ul.nav li.menuprimo.active, ul.nav li.limenusecondo.active {border-top:1px solid #a7c44a}
+ul.nav li.limenuterzo.active {border-top:1px solid #a7c44a}
+ul.nav li.limenuterzo.active > a, ul.nav li.menuprimo ul li.limenusecondo li.limenuterzo.active > a {color:#a7c44a !important}
+.spGreen1{background-color:#8ab10b!important;}
+.spGreen2{background-color:#acc852!important;}
+.spTable strong a{color:#6F8F0A!important}
+.spBottBox {border:2px solid #d4e9e5;}
+.lastSpantit .bx-pager-item .bx-pager-link.active{background:none repeat scroll 0 0 #8ab10b;}
+a:hover{color:#6F8F0A}
+
+/* Colore dei bottoni */
+.aButton {background-color:#a6c34a;border:solid 1px #a6c34a;background-image:-moz-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:-webkit-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:-ms-linear-gradient(bottom, #a8c44e, #8ab10b 70%, #7c9e11);background-image:linear-gradient(to top, #a8c44e, #8ab10b 70%, #7c9e11)}
+.spClose, .spIco.close {border-color: #7FA30A}
+
+/* Colore strong pin2 */
+.formGeneric.pin2 strong{color:#6F8F0A}
+
+/*BOTTONE FUNZIONI VELOCI*/
+.button{
+background-color:#8ab10b;
+box-shadow:inset 0 -3px #8ab10b;
+border:solid 1px #8ab10b;
+background-image: linear-gradient(to bottom, #8bb20e 33%, #bbd26e);
+-webkit-box-shadow:inset 0 -3px #8ab10b;
+-moz-box-shadow:inset 0 -3px #8ab10b;
+background-image: -webkit-linear-gradient(top, #8bb20e 33%, #bbd26e);
+background-image: -moz-linear-gradient(top, #8bb20e 33%, #bbd26e);
+background-image: -o-linear-gradient(top, #8bb20e 33%, #bbd26e);
+background-image: -ms-linear-gradient(top, #8bb20e 33%, #bbd26e);
+}
+/*** FP sportello |FINE| ***/
+
+/* bollo auto */
+#contenuti h2.subTitForm {color:#6F8F0A;margin:10px 0 0 0;text-transform:none;font-size:11px}
+.logoMyBank{margin-top:3px!important}
+
+/* Assicurazioni */
+#assiTop {width:100%;height:45px;margin-top:10px;background: transparent url(/wscmn/img/ret/priv_assi_top.gif) repeat-x 0 0;border-radius:10px 10px 0 0;clear:left;float:left}
+#assiCont {width:645px;*width:643;overflow:hidden;px;height:305px;border: solid 1px #dedede;border-top:none;border-bottom:none;box-sizing: border-box;-moz-box-sizing: border-box;clear:left;float:left;overflow:hidden}
+#assiCont .tabCont {position:relative;background-color:#fff;width:645px;height:305px;float:left;overflow:hidden}
+#assiBottom {width:100%;height:58px;background: transparent url(/wscmn/img/ret/priv_assi_bottom.gif) repeat-x 0 0;border-radius:0 0 10px 10px;clear:left;float:left}
+#assiCont .loading {float:left;margin:150px 305px;width:auto;position:relative}
+#assiTop .tabs {float:left;position:absolute; margin:-10px 0 0 20px}
+#assiTop .tabs a {background:transparent url(/img/ret/priv_assi_tab.gif) no-repeat 0 bottom;color:#000000;float:left;font-family:"helveTit",Arial,Serif;font-size:15px;height:25px;line-height:25px;margin:10px 1px 0 0;text-decoration:none;width:97px;display:none}
+#assiTop .tabs a.hover {height:44px;margin-top:0;line-height:43px;background:transparent url(/img/ret/priv_assi_tab.gif) no-repeat 0 bottom;}
+#assiTop .tabs a:hover {color:#000 !important;}
+#assiTop .tabs a span {padding: 0 7px}
+#assiTop .tabs a.selected{color:#fff !important;background-image:url(/wscmn/img/ret/priv_assi_tab_selected.gif);font-size:17px;line-height:44px;height:45px;margin-top:0}
+#assiTop .tabs a.selected:hover {color:#fff !important}
+#assiBottom #assiCons {margin-top:96px;overflow:hidden;width:645px;height:80px;position:relative}
+#assiCons .scopri {display:block;float:left;width:218px;height:69px;background:transparent url(/img/ret/priv_assi_scopri.gif) no-repeat 0 0;margin:0 0 0 -220px}
+#assiCons .scopri:hover {background-position:0 -69px}
+#assiCons .right {float:right;margin:40px -300px 0 0}
+#assiCons .dettagli {background: url("/img/ret/priv_assi_dettagli.gif") no-repeat scroll 0 0;float:left;height:28px;margin-right: 4px;width: 134px;}
+#assiCons .preventivo {display:block;float:left;width:134px;height:28px;background:transparent url(/wscmn/img/ret/priv_assi_preve.gif) no-repeat 0 0;margin-right: 4px}
+#assiCons .dettagli:hover,#assiCons .preventivo:hover {background-position:0 -28px}
+#assiCont .bx-wrapper {clear:both;height:305px}
+#assiCont .bx-wrapper .bx-viewport {overflow: visible !important}
+#assiBottom .prevNext {display:none;width:100%;margin-top:-185px;position:relative;height:64px}
+#assiBottom .prevNext a {display:block;width:37px;height:64px;float:left;background:transparent url(/img/ret/assi_slider_arrow.gif) no-repeat 0 0;background-position:-37px 0;text-indent:-1000px;margin:0 1px}
+#assiBottom .prevNext a:hover {background-position:-37px -64px}
+#assiBottom #assiNext a {float:right;background-position:0 0;margin:1px}
+#assiBottom #assiNext a:hover {background-position:0 -64px}
+#assiBottom .prevNext a.disabled {display:none}
+#assiBottom .prevNext .assiLabel{color:#000;background-color:#FFF;border:1px solid #AAA;border-radius:7px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);float:left;font-family: helveTit,Arial,Serif;font-size: 15px;height: 25px;line-height: 25px; margin: 19px 10px;padding: 0 7px;display:none}
+#assiBottom .prevNext #assiLabelNext {float:right} 
+
+/*nuovo loghi*/
+#ctnloghi{float:left;height:80px;padding:13px 0 0 14px}
+.header_ctr {float:left; border-left:1px solid #58595b; border-right:1px solid #58595b; height:93px; width:457px; margin-left:41px; color:#dbddde}
+.header_ctr .nome_header{background:url(/img/ret/ico_header_home.gif) 0 4px no-repeat; padding-left:10px; margin:26px 0 12px 25px; font-size:15px!important}
+#testa{background:url(/img/ret/testata_filo_priv3.gif) repeat-x 0 0 !important;width:100%;margin:0}
+
+/*milanStyle */
+#testa.milanStyle {background: #000 url(/img/ret/bck_header_milan.jpg) no-repeat center 0!important;height:93px}
+#testa.milanStyle .header_ctr{border:0}
+.header_ctr .ico_header a.ico01{background: url(/img/ret/ico_header_01_milan.png) 0 0 no-repeat}
+.header_ctr .ico_header a.ico01:hover {background:url(/img/ret/ico_header_01_milan.png) 0 -25px no-repeat}
+.header_ctr .ico_header a.ico02{background: url(/img/ret/ico_header_02_milan.png) 0 0 no-repeat}
+.header_ctr .ico_header a.ico02:hover {background:url(/img/ret/ico_header_02_milan.png) 0 -25px no-repeat}
+.header_ctr .ico_header a.ico03{background: url(/img/ret/ico_header_03_milan.png) 0 0 no-repeat}
+.header_ctr .ico_header a.ico03:hover {background:url(/img/ret/ico_header_03_milan.png) 0 -25px no-repeat}
+.esci a.esc{background: url(/img/ret/ico_header_esci_milan.png) right 0 no-repeat}
+.esci a.esc:hover{background: url(/img/ret/ico_header_esci_milan.png) right -15px no-repeat}
+.esci a.cons{background: url(/img/ret/ico_header_consulta_milan.png) right top no-repeat;}
+.esci a.cons:hover{background: url(/img/ret/ico_header_consulta_milan.png) right -15px no-repeat;}
+.milanStyle .userinfoc .imgpaolo{display:none}
+.milanStyle .userinfoc {background:url(/img/ret/bg_paolo_big_milan.gif) no-repeat scroll 0 0;padding-left:97px;padding-bottom:10px;width:548px;}
+.milanStyle .userinfoc .chiedi{padding-top:29px}
+.milanStyle #fixedtools.fixedconsoletools .toolassistente,.milanStyle #fixedtools.fixedconsoletools .toolassistente2 {background-image:url(/wscmn/img/ret/ico1bt_toolbox_assistente_new_milan.gif?a=0)}
+.milanStyle #footer{background:url(/img/ret/str_bg_footer_milan.jpg) no-repeat center top!important;border-bottom:0;min-height:43px}
+.milanStyle #footer ul{border:0}
+
+/*firma digitale*/
+.textbb h3.cnttit, .textbb h3.cnttitb{color:#6f8f0a;}
+
+
+/*P2P */
+.pulsantiStato a.onOk{background-color:#6F8F0A}
+
+/* Slider tooltip preventivatore MetLife */
+.slider-msg-container{position:relative;width:auto;height:0;}
+.slider-warning-wrap{position:absolute;left:75px;top:-35px;z-index:10;height:100px;width:185px;}
+.last-half .slider-warning-wrap{left:-200px;}
+.slider-warning{position:relative;height:80px;width:165px;padding:4px;border:6px solid #CECECE;border-radius:5px;background-color:#fff;}
+.slider-warning-arrow{position:absolute;left:-16px;top:34px;width:10px;height:20px;background:url("/wscmn/img/responsive/tt_arrow.png") no-repeat 0 0;}
+.last-half .slider-warning-arrow{left:179px;background-position:-10px 0;}
+.error-msg .slider-warning{padding:5px;border:solid 5px #c00;}
+.error-msg .slider-warning-arrow{left:-15px;background-image:url("/wscmn/img/responsive/tt_arrow_error.png");}
+.last-half .error-msg .slider-warning-arrow{left:180px;}
+
+/* Declinazioni assistente virtuale */
+#vaExtended .inevidenza {border-color:#8ab10b}
+#vaExtended .inevidenza i.icon {color:#8ab10b}
+.chatBtn {border: solid 1px #6f8f0a;background-color: #8ab10b}
+
+/*OAD Cartimpronta Mastercard Debit*/
+.row-fluid.statoPrat .act {background:#8ab10b url(/img/ret/stato_pr_act.gif) bottom right no-repeat}
+.row-fluid.statoPrat .actmeta {background:#8ab10b url("/wscmn/img/ret/img_actmeta.gif") repeat-y right top; color:#ffffff;}
+.row-fluid.statoPrat .neg {background:#ff4935 url(/img/ret/stato_pr_neg.gif) bottom right no-repeat}
+
+/*NUOVO FATCA*/
+.fieldButton.remove,.fieldButton.add{line-height:17px;color:#6f8f0a;font-size:11px;background:url(/img/str_expander_btn.gif) no-repeat 0 0;height:21px;display:block;padding-left:28px;}
+.fieldButton.remove{background-position:0 -21px;}
+.fieldButton.disabled,.fieldButton.disabled:hover{ text-decoration:none!important;opacity:0.5;cursor:default;text-decoration:none;color:#666;}
+
+#contenuti .openVideoLink, #contenuti .openVideoLink:hover {color:#6f8f0a}
+.promoStepRight a {color:#6f8f0a!important}
+
+/* Iconcina informativa inline */
+span.icoinfo {border-color:solid 2px #8ab10b;}
+
+/* Strong Authentication selettore */
+.graphicradio a.selector.selected {border-color:#8ab10b;}
+
+/* Porting f&s */
+#contenuti.noresp.porting ul.tabGeneric li.active,#contenuti.noresp.porting ul.tabGeneric li.active:hover {border-top:solid 3px #8ab10b;}
+#contenuti.noresp.porting .fesSearchMore {background-color:#8ab10b;}
+#contenuti.noresp.porting a.linkVai.btn-icon {color:#8ab10b;text-decoration:none; vertical-align:middle;}
+#contenuti.noresp.porting a.linkVai.btn-icon i {color:#8ab10b;font-size:24px; line-height:24px;}
+#icoOpeModalContent ul.azioni li a {color:#6f8f0a}
+#contenuti.noresp.porting #fesConfrontaCont .linkVai {background-color:#8ab10b}
+#contenuti.noresp.porting .aButton, body.webview .aButton {background-color: #8ab10b}
+#contenuti.noresp.porting .aButton:hover, body.webview .aButton:hover {background-color: #96c10c !important; }
+
+/* Situazione ordini */
+#contenuti.noresp.porting table.form01 a,#contenuti.noresp.porting table.form01 tr td a strong,body.webview #contenuti.noresp.porting table.form01 a  {color:#6f8f0a;}
+.porting a[data-tooltip], #contenuti.noresp.porting .iconahelp,#contenuti.noresp.porting .boxrichiesta .modifica,#contenuti.noresp.porting .spinner a.btnspin, #contenuti.noresp.porting .fooform a, #contenuti.noresp.porting a.btnico,#contenuti.noresp.porting #fesConfrontaCont .boxstep span[data-tooltip] {background-color:#8ab10b}
+#contenuti.noresp.porting .btn-icon, body.webview .ui-datepicker.ui-widget-content .ui-datepicker-header, #contenuti.noresp.porting .btn-icon .icon,#contenuti.noresp.porting .icon {color:#8ab10b !important;}
+#contenuti.noresp.porting .btn-icon:hover .icon {color:#96c10c;}
+#contenuti.noresp.porting .spinner a.btnspin:hover {background-color:#96c10c;}
+
+

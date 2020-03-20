@@ -1,0 +1,129 @@
+/* SCHEDA FONDO */
+
+#fesFondoWrap {
+    min-height: 200px;
+    display: block;
+
+    #grafico_fondo_space {
+        height: 250px
+    }
+
+    #sfTab form.formGenerico {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    h4.txthelp {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .fundBox {
+        border: solid 1px #ccc;
+        padding: 15px;
+        clear: both;
+        margin-bottom: 15px;
+        min-height: 210px;
+    }
+
+    .formGenerico {
+        .rating .icon-corona {
+            font-size: 20px;
+            margin-right: 5px
+        }
+
+        .rating.small {
+            display: none
+        }
+
+        .panel-heading h4 {
+            margin-bottom: 0;
+        }
+    }
+
+    .grafico {
+        display: block;
+        width: 100%;
+        min-height: 250px;
+        position: relative;
+
+        .gNoDisp {
+            width: 100%;
+            min-height: 220px;
+            position: relative;
+            background: #fafafa;
+            color: #ccc;
+            line-height: 200px;
+            text-align: center;
+            padding: 30px;
+        }
+    }
+
+    .fundPanel .btn-console {
+        float: right;
+    }
+
+    .big-rating {
+        background-color: #f0f0f0;
+        color: #666;
+        border-radius: 50%;
+        padding: 0;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        font-size: 75px;
+        clear: both;
+        margin: 10px auto;
+        height: 100px;
+        width: 100px;
+        text-shadow: 0 -1px rgba(137, 152, 86, 0.9);
+    }
+}
+
+@media (max-width: 767px) {
+    .fundPanel {
+        h4 {
+            text-align: center;
+        }
+
+        .btn-console {
+            float: none;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .icon-console {
+            text-align: center;
+            float: none;
+            padding: 0 0 10px;
+
+            a.btn-icon {
+                float: none;
+                display: inline-block;
+            }
+
+        }
+
+        .btn-100 {
+            padding: 0 15px 0;
+
+            .btn {
+                width: 100%;
+                margin-bottom: 15px
+            }
+        }
+    }
+
+    #fesFondoWrap .fundBox {
+        border: none;
+        padding: 0 !important;
+        min-height: auto;
+
+        .txthelp.control-label {
+            float: left;
+            clear: both
+        }
+    }
+}

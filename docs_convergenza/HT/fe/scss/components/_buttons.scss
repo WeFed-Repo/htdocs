@@ -1,0 +1,85 @@
+.button, .btn {
+  // copre tutti i casi compresi i doppi stati
+  &:hover {
+    background-color: $grayDark;
+    color: $white;
+  }
+  &.active {
+    background-color: $primary;
+  }
+  &.btn-primary,
+  &.btn-filtra,
+  &.btn-filtra-attivo,
+  &.btn-navigation {
+    background-color: $primary;
+    margin-left: 20px;
+    &:first-child {
+      margin-left:0;
+    }
+    &:hover {
+      background-color: $primaryDark;
+    }
+  }
+  &.btn-default {
+    margin-left: 20px;
+  }
+  &.btn-disable,
+  &.btn-disabled {
+    &, &:hover, &:focus, &:active, &.active {
+      cursor: default;
+      background : $grayLight !important;
+      box-shadow: none !important;
+    }
+  }
+  &.slider-button {
+    border-radius: 16px;
+    padding: 9px 28px 7px 28px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 14px; 
+  } 
+}
+
+.btnWrapper .btn, .btnWrapper .btn-align-left, .ricFilter .btn-align-left {
+    margin-left: 0px;
+    margin-right:15px;
+}
+.btnWrapper .btn:last-child,.btnWrapper .btn-align-left:last-child, .ricFilter .btn-align-left:last-child{
+   margin-right:0
+}
+
+.btnWrapper.topBtn {
+  margin-bottom:0;
+}
+
+/* Icone bottoni */
+.btn-icon {
+  width: 25px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 25px;
+  font-size:20px;
+  cursor:pointer;
+  .icon {
+    vertical-align:text-bottom;
+  }
+}
+
+/* Icone bottone nelle note in testa */
+p.note.flRight {
+  a.btn-icon {
+    margin-left: 5px;
+    background-color: #0e977f;
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+  }
+}
+/* Icona in rotazione */
+.btn-icon .icon-push_on {
+  animation: spin 5s linear infinite
+}

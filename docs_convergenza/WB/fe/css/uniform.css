@@ -1,0 +1,151 @@
+/*
+
+Uniform Theme: Uniform Default
+Version: 1.8
+By: Josh Pyles
+License: MIT License
+---
+For use with the Uniform plugin:
+http://uniformjs.com/
+
+*/
+/* General settings */
+.uniformBtnWrapper, .uniformBtnWrapper span {-webkit-font-smoothing:antialiased}
+.uniformBtnWrapper{vertical-align:middle}
+.uniformBtnWrapper:focus{outline:0}
+.uniformBtnWrapper, .uniformBtnWrapper *{margin:0;padding:0}
+div.radio span, div.uploader,div.button, div.button span{background-image: url(/img/sprite.png);background-repeat: no-repeat;-webkit-font-smoothing: antialiased;}
+div.button,div.radio{display:-moz-inline-box; display:inline-block;*display: inline;zoom: 1;vertical-align: middle}
+div.button:focus,div.radio:focus{outline:0}
+div.radio, div.radio *,div.button,div.button *{margin:0;padding:0}
+.highContrastDetect{background: url(/img/bg-input.png) repeat-x 0 0;width:0px;height:0px;}
+
+/*bottoni*/
+/* Wrapper */
+.uniformBtnWrapper{display:-moz-inline-box;display:inline-block;*display:inline;zoom:1;position:relative;width:auto;height:40px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:#007c66;cursor:pointer}
+.uniformBtnWrapper a{text-decoration:none;position:absolute;top:0;left:0;height:40px;width:100%;background:transparent url("/common/fe/img/pixel_trasp.gif") repeat 0 0;cursor:pointer;}
+.uniformBtnWrapper span{display:-moz-inline-box;display:inline-block;*display:inline;zoom:1;width:auto;height:27px;margin:0 5px;padding:13px 10px 0 15px;line-height:14px;text-align:center;font-family:'FuturaBT-Book',arial narrow, sans-serif;font-size:14px!important;color:white;top:0;margin-top:0}
+.uniformBtnWrapper:hover span{color:white}
+
+/* Hover */
+.uniformBtnWrapper.hover{height:38px;margin:0 0 2px 0;background-color:#339585;-moz-box-shadow:0 2px 0 #00614f;-webkit-box-shadow:0 2px 0 #00614f;box-shadow:0 2px 0 #00614f;}
+.uniformBtnWrapper.hover span{height:25px;}
+.uniformBtnWrapper.hover a{height:38px;}
+
+/* Active */
+.uniformBtnWrapper.active{height:38px;margin:2px 0 0 0;background-color:#339585;-moz-box-shadow:0 -2px 0 #00614f;-webkit-box-shadow:0 -2px 0 #00614f;box-shadow:0 -2px 0 #00614f;}
+.uniformBtnWrapper.active span{height:27px;padding-top:11px;}
+.uniformBtnWrapper.active a{height:38px}
+/* Mini */
+.uniformBtnWrapper.smallBtn, .uniformBtnWrapper.smallBtn a{height:30px}
+.uniformBtnWrapper.smallBtn span{height:22px;padding-top:8px;}
+.uniformBtnWrapper.smallBtn.hover, .uniformBtnWrapper.smallBtn.hover a,
+.uniformBtnWrapper.smallBtn.active, .uniformBtnWrapper.smallBtn.active a{height:28px}
+.uniformBtnWrapper.smallBtn.hover span{height:20px;}
+.uniformBtnWrapper.smallBtn.active span{height:22px;padding-top:6px;}
+
+/* Small */
+.uniformBtnWrapper.miniBtn, .uniformBtnWrapper.miniBtn a{float:left;height:25px;width:25px;}
+.uniformBtnWrapper.miniBtn span{height:19px;padding:6px 0 0 0;background-image:none; text-indent: -9000px;}
+.uniformBtnWrapper.miniBtn a{height:25px;background-image:none;}
+.uniformBtnWrapper.miniBtn.hover, .uniformBtnWrapper.miniBtn.active{height:23px;}
+.uniformBtnWrapper.miniBtn.hover a{height:25px;}
+.uniformBtnWrapper.miniBtn.active a{top:-2px;height:25px;}
+.uniformBtnWrapper.miniBtn.hover span{height:17px;}
+.uniformBtnWrapper.miniBtn.active span{height:19px;padding-top:4px;}
+.uniformBtnWrapper.miniBtn.active a {top:0; margin-top:0px}
+
+/* Simboli */
+.uniformBtnWrapper.miniBtn .minusBtn, .uniformBtnWrapper.miniBtn.hover .minusBtn, .uniformBtnWrapper.miniBtn.active .minusBtn,
+.uniformBtnWrapper.miniBtn.ie .minusBtn, .uniformBtnWrapper.miniBtn.hover.ie .minusBtn, .uniformBtnWrapper.miniBtn.active.ie .minusBtn
+{background:url("/WB/fe/img/str_bg_meno.gif") no-repeat center 11px;}
+.uniformBtnWrapper.miniBtn .plusBtn, .uniformBtnWrapper.miniBtn.hover .plusBtn, .uniformBtnWrapper.miniBtn.active .plusBtn,
+.uniformBtnWrapper.miniBtn.ie .plusBtn, .uniformBtnWrapper.miniBtn.hover.ie .plusBtn, .uniformBtnWrapper.miniBtn.active.ie .plusBtn
+{background:url("/WB/fe/img/str_bg_piu.gif") no-repeat center 6px;}
+
+/* Disabled */
+.uniformBtnWrapper.disabledBtn, .uniformBtnWrapper.disabledBtn.active {background-position:0 -830px;cursor:default;margin-top:0;background-color:#CCCDCD}
+.uniformBtnWrapper.disabledBtn.hover{background-color:#CCCDCD;-moz-box-shadow:0 0 0;-webkit-box-shadow:0 0 0;box-shadow:0 0 0;cursor:default;height:40px;margin-bottom:0}
+.uniformBtnWrapper.disabledBtn span, .uniformBtnWrapper.disabledBtn.active span{background-position:right -652px;cursor:default;padding:13px}
+.uniformBtnWrapper a.disabled {color:#80beb3 !important;cursor:default}
+.uniformBtnWrapper.disabledBtn a {cursor:default}
+.uniformBtnWrapper.smallBtn.disabledBtn, .uniformBtnWrapper.smallBtn.disabledBtn a {height:30px}
+.uniformBtnWrapper.smallBtn.disabledBtn span, .uniformBtnWrapper.smallBtn.disabledBtn.active span {padding-top:8px}
+.uniformBtnWrapper.miniBtn.disabledBtn, .uniformBtnWrapper.miniBtn.disabledBtn a {height:25px}
+
+/* Versione grey */
+.uniformBtnWrapper.greyBtn,.ie.uniformBtnWrapper.greyBtn {background-color:#b7b7b7!important}
+.uniformBtnWrapper.greyBtn.hover{background-color:#cecece;-moz-box-shadow:0 2px 0 #b7b7b7;-webkit-box-shadow:0 2px 0 #b7b7b7;box-shadow:0 2px 0 #b7b7b7;}
+.uniformBtnWrapper.greyBtn.active {-moz-box-shadow:0 -2px 0 #b7b7b7;-webkit-box-shadow:0 -2px 0 #b7b7b7;box-shadow:0 -2px 0 #b7b7b7;}
+
+/* Font awsome */
+.uniformBtnWrapper .icon-before{margin-left:-6px;padding-right:10px;}
+.uniformBtnWrapper .icon-after{padding-left:20px;}
+
+/* PRESENTATION */
+/* uniformBtnWrappers */
+.uniformBtnWrapper span{text-transform:uppercase}
+.uniformBtnWrapper.disabledBtn span, .uniformBtnWrapper.disabledBtn.active span{color:#fff}
+
+/* *** CLASSI PER IE 7-8 *** */
+/* BOTTONI STANDARD */
+/* normal */
+.uniformBtnWrapper.ie, .uniformBtnWrapper.ie span{background:transparent url("/img/uniBtn_standard_normal.gif") no-repeat left 0;}
+.uniformBtnWrapper.ie span {background-position:right 0;margin-right:-4px;padding-right:15px}
+.uniformBtnWrapper.ie.hover  {background-position: left -40px;height:40px;margin-bottom:0;margin-top:0}
+.uniformBtnWrapper.ie.hover span {background-position: right -40px;height:27px}
+.uniformBtnWrapper.ie.active  {background-position: left -80px;height:40px;margin-top:0;margin-bottom:0}
+.uniformBtnWrapper.ie.active span {background-position: right -80px;height:29px;padding-top:13px}
+/* small */
+.uniformBtnWrapper.ie.smallBtn, .uniformBtnWrapper.ie.smallBtn span {background-image: url("/img/uniBtn_small_normal.gif");height:30px}
+.uniformBtnWrapper.ie.smallBtn span {height:22px}
+.uniformBtnWrapper.ie.smallBtn.active span {padding-top:8px}
+/* mini */
+.uniformBtnWrapper.ie.miniBtn {background-image: url("/img/uniBtn_mini_normal.gif"); margin:0; padding:0;height:25px;width:25px}
+.uniformBtnWrapper.ie.miniBtn span {background-image:none !important; height:25px}
+.uniformBtnWrapper.ie.miniBtn.active a {margin-top:0px}
+/* BOTTONI GRIGI */
+.uniformBtnWrapper.ie.greyBtn, .uniformBtnWrapper.ie.greyBtn span {background-color: transparent;background-image: url("/img/uniBtn_standard_grey.gif")}
+.uniformBtnWrapper.ie.greyBtn.smallBtn, .uniformBtnWrapper.ie.greyBtn.smallBtn span {background-image: url("/img/uniBtn_small_grey.gif")}
+.uniformBtnWrapper.ie.greyBtn.miniBtn {background-image: url("/img/uniBtn_mini_grey.gif")}
+/* BOTTONI DISABILITATI */
+.uniformBtnWrapper.ie.disabledBtn,.uniformBtnWrapper.ie.disabledBtn.hover,.uniformBtnWrapper.ie.disabledBtn.active {background-position:left 0;height:40px;background-color:transparent;margin-bottom:0}
+.uniformBtnWrapper.ie.disabledBtn span,.uniformBtnWrapper.ie.disabledBtn.hover span,.uniformBtnWrapper.ie.disabledBtn.active  span{background-position:right 0;height:14px}
+.uniformBtnWrapper.ie.disabledBtn.smallBtn {height:30px}
+.uniformBtnWrapper.ie.disabledBtn.miniBtn {height:25px}
+
+/* Radio button */
+div.radio{position:relative; margin-right: 10px;float: left; }
+div.radio,div.radio span,div.radio input{width:24px;height: 24px; }
+div.radio span{display: -moz-inline-box;display: inline-block;*display:inline;zoom: 1;text-align: center;background-position:0 -281px;}div.radio span.checked {background-position:-96px -281px}
+div.radio span input{opacity: 0;filter: alpha(opacity=0);-moz-opacity: 0;border: none;background: none;display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1;text-align:center}
+div.radio.active span{background-position:0 -281px}
+div.radio.active span.checked{background-position: -96px -281px}
+div.radio.hover span,div.radio.focus span{background-position:0 -281px}
+div.radio.hover span.checked, div.radio.focus span.checked {background-position: -96px -281px}
+div.radio.hover.active span, div.radio.focus.active span {background-position:-96px -281px}
+div.radio.hover.active span.checked, div.radio.focus.active span.checked {background-position:-96px -281px}
+div.radio.disabled span, div.radio.disabled.active span{background-position: -192px -281px}
+div.radio.disabled span.checked, div.radio.disabled.active span.checked{background-position:-216px -281px}
+
+/* Buttons */
+div.button{background-position: 0 -695px;height:43px;cursor: pointer;position:relative}
+div.button a,div.button button, div.button input,div.button  .submit{opacity: 0.01;filter: alpha(opacity=1);-moz-opacity: 0.01;display:block;top:0;left: 0;right:0;bottom:0;position: absolute; width:100%;cursor:pointer}
+div.button span{display:-moz-inline-box;display: inline-block;*display: inline;zoom: 1;line-height: 1.42857em;color: white;text-align: center;background-position: right -520px;height: 32px;margin-left: 13px;padding: 14px 50px 0 2px}
+div.button:hover span{color:white}
+div.button.active{background-position:0 -671px}
+div.button.active span {background-position: right -551px;cursor: default}
+div.button.hover, div.button.focus{background-position: 0 -739px}
+div.button.hover span, div.button.focus span{background-position:right -564px}
+div.button.disabled, div.button.disabled.active {background-position: 0 -731px}
+div.button.disabled span, div.button.disabled.active span{background-position:right -611px;cursor: default}
+
+/* PRESENTATION */
+/* Buttons */
+div.button span {font-weight:normal;font-size:0.875em;letter-spacing:1px;text-transform:uppercase}
+div.button.disabled span, div.button.disabled.active span{color:#bbb}
+
+
+
+
+

@@ -1,0 +1,265 @@
+div#switchFundData,
+div#switchFundOperation {
+  [class*="col"] {
+    width: 100%;
+  }
+}
+.magicSearch {
+    width: 100%;
+    position: relative;
+}
+#descrizione:not(.form-control) {
+  padding:17px 16px 15px 14px;
+  height: 50px;
+  width: 100%;
+  border:1px solid #ccc;
+  + a.msButton.icon.icon-r-dettaglio {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+    text-decoration: none;
+    right: 11px;
+    top: 11px;
+    &:before {
+        font-size: 24px;
+    }
+  }
+  &:focus {
+     border: 1px solid #122E5C;
+     box-shadow: none !important;
+     outline:none;
+  }
+}
+
+.selEl{
+  input[type=checkbox] {
+    margin-right: 5px;
+  }
+  .selElLabel {
+    .selElTotal {
+      margin-right: 15px;
+    }
+  }
+}
+#fesSelector .selEl {
+    font-weight: 600;
+    width: 33.332%;
+    padding: 0 15px 15px 0;
+    display: inline-block;
+    vertical-align: top;
+    .selElLabel .selElTotal {
+      color: #999;
+    }
+}
+
+/*  Rating */
+#selContCodRating {
+    form {
+        text-align: center;
+    }
+    .selEl {
+        cursor: pointer;
+        width: 120px;
+        border: solid 2px #eee;
+        height: 123px;
+        margin: 0 15px 20px;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        &.selected {
+            border-color: $textColorBank2;
+        }
+
+        input {
+            display: none;
+        }
+
+        .rating {
+            padding: 25px 0;
+
+            .icon {
+                margin: 0 1px;
+                font-size: 12px !important
+            }
+        }
+
+        .selElLabel {
+            width: 100%;
+            padding: 0;
+
+            span {
+                clear: left;
+                display: block
+            }
+        }
+    }
+}
+
+#selContFesCategoria label {
+    width: 50%;
+    float: left;
+}
+
+@media (max-width: 767px) {
+    #selContCodRating {
+        .selEl {
+            width: 100%;
+            margin: 0 0 15px;
+        }
+    }
+}
+
+/* Glifi "fissati" */
+.icon-corona {
+    font-size: 12px;
+    color: #E3E3E3;
+    &-on {
+        color: rgba(246, 207, 0, 1);
+        text-shadow: 0 0 1px #F6CF00, 0 0 0 #E1BD00, 0 0 0 #F6CF00;
+    }
+}
+/* Area geografica */
+@media (min-width: 768px) {
+    #selContCodArea {
+        margin: 0 -15px;
+        background: transparent url(/WB/fe/img/fes_world_map.png) no-repeat 0 0;
+        background-size: contain;
+        min-height: 300px;
+        input[type="checkbox"] {
+          background-color:#fff;
+        }
+        .selEl {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 3px 5px 3px;
+            width: auto;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 12px;
+
+            .selElLabel {
+                line-height: 14px;
+
+                .selElTotal {
+                    color: #eee
+                }
+            }
+
+            &#id14 {
+                top: 96px;
+                left: 428px;
+            }
+
+            &#id25 {
+                top: 100px;
+                left: 40px;
+            }
+
+            &#id60 {
+                top: 26px;
+                left: 236px;
+            }
+
+            &#id61 {
+                top: 158px;
+                left: 186px;
+            }
+
+            &#id67 {
+                top: 200px;
+                left: 38px;
+            }
+
+            &#id68 {
+                top: 123px;
+                left: 365px;
+            }
+
+            &#id75 {
+                top: 57px;
+                left: 200px;
+            }
+
+            &#id81 {
+                top: 272px;
+                left: 410px;
+            }
+
+            &#id130 {
+                top: 88px;
+                left: 224px;
+            }
+
+            &#id347 {
+                top: 164px;
+                left: 382px;
+            }
+
+            &#id348 {
+                top: 57px;
+                left: 300px;
+            }
+
+            &#id-1 {
+                top: 272px;
+            }
+        }
+
+    }
+}
+
+/* Settore merceologico */
+#selContCodSettore {
+    .selEl {
+        cursor: pointer;
+        border: solid 2px #cacaca;
+        margin: 0 5px 10px;
+        width: 48%;
+        padding: 0;
+        height: 60px;
+        position: relative;
+
+        input {
+            display: none;
+        }
+
+        .icon {
+            color: #ccc;
+            font-size: 40px;
+            position: absolute;
+            left: 7px;
+            top:7px;
+        }
+
+        .selElLabel {
+            display: block;
+            width: 100%;
+            padding-top: 19px;
+            padding-left: 52px;
+            line-height: 17px;
+        }
+
+        &.selected {
+            cursor: default;
+            border-color: $textColorBank2;
+
+            .icon {
+                color: $textColorBank2;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    #selContCodSettore {
+        .selEl {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+    }
+}

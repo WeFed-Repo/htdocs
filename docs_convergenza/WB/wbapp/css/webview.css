@@ -1,0 +1,81 @@
+/* CLASSI GENERICHE E CSS RESET*/
+body {margin:0;padding:0;font-family: "BariolRegular";font-size:75%;background-color:#fff;font-size:15px}
+input:focus{outline:none}
+a{text-decoration:none}
+
+/* WEB FONT BARIOL */
+@font-face {
+	font-family: 'BariolRegular';
+	src: url('/font/BariolRegular.eot');
+	src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+}
+
+/* WRAPPERS E DESKEWING*/
+#wrapper {margin:0 auto;max-width:640px}
+.contentwrap {font-size:1em;float:left;width:90%;margin: 0 5%;}
+.contentwrap .imgwrap {float:left;margin:0;padding:0;width:20%;margin:0.5em 0 1em;text-align:left}
+.contentwrap .imgwrap img {width:100%}
+.contentwrap .desc {float:left;margin:1em 0 0.5em 5%;padding:0;width:75%;font-size:0.9em}
+.contentwrap .desc h3 {margin:0;padding:0}
+.contentwrap .desc p {margin:0;padding:0;color:#999}
+.contentwrap .desc ul {color:#999;margin:0;padding:0.3em 0 0.5em 1.5em}
+.content {display:none;padding:0.5em 0;float:left}
+
+/* VISUAL GRANDI */
+.promoheading {color:#fff;width:100%;margin:0;padding:0 !important;background-size: cover;background-position:center top}
+.promoheading  img {width:100%;border:0;}
+.arrow {position:absolute;z-index:9999;float:left;font-size:1em;margin:-1em 0 0 4%;width:0;height:0;border-left: 1em solid transparent;border-right: 1em solid transparent; border-bottom: 1em solid #fff;}
+
+/* BOTTONE */
+.btn {width:100%;height:3em;background-color:#999;float:left;background: #fff url(/img/app_arrow_green_down.png) no-repeat 95% 1.3em;margin:-0.3em 0 0;padding:0}
+.btn span.title {padding:0 0 0 5%;line-height:2.5em;font-size:1.2em}
+.btn .new {display:none}
+.accordion {height:100%;width:100%;float:left}
+
+/* STATO INIZIALE (loading)*/
+#wrapper.pageloading {width: 100%;height: 15em;background: transparent url(/wscmn/img/bx_loader.gif) no-repeat center center;float: left}
+
+/* STATO "APERTO" */
+.accordion.opened .btn {background-color:#8ab10b;background-image: url(/img/app_arrow_white_up.png)}
+.accordion.opened .arrow {border-bottom: 1em solid #8ab10b}
+.accordion.opened .content{display: block}
+
+/* FORM */
+form {width:100%;float:left;color:#999;margin:1em 0}
+form .fieldwrap {float:left;width:100%;padding:0.5em 0}
+form .fieldwrap p {padding:0;margin-bottom:0.5em}
+form label {width:100%;float:left;clear:left}
+form input,form select {color:#666;font-family:BariolRegular;font-size:1em}
+form input[type=text],form input[type=tel] ,form input[type=email]  {float:left;width:100%;border:none;border-bottom:solid 1px #ccc;background:#fff;line-height:1.5em;padding: 0}
+form select {float:left;padding:0;margin:0;height:2em;width:100%;background:#fff;border:0;border-bottom:solid 1px #ccc;text-indent:0}
+form .radio label {float:left;width:50%;clear:none;line-height:2em}
+form .radio a.radiobut {border:solid 1px #999;border-radius:50%;background:#fff;width:1.8em;height:1.8em;float:left;padding:0;margin:0 0.5em 0.5em 0}
+form .radio a.radiobut.checked {border:solid 1px #8ab10b;background-color:#8ab10b}
+/* ERRORE DEL FORM */
+form .fieldwrap.error label {color:#c00}
+form .fieldwrap.error input ,form .fieldwrap.error select{border-bottom:solid 1px #c00}
+a.pdflink {background: transparent url("/img/ret/ico2or_pdf2.gif") no-repeat 0 0;float:left;padding:0.4em 0 0 2em;color:#999;font-size:0.8em;min-height:2em;clear:both}
+p {clear:both}
+/* BOTTONI */
+.button {cursor:pointer;text-align:center;text-indent:-900em; overflow:hidden;font-size:2em;line-height:2.2em;color:#fff;float:left;width:2.2em;height:2.2em;border:solid 1px #000;border-radius:50%;background:#fff;background-position:center;background-repeat:no-repeat;margin-bottom:1em}
+.button.green {border-color: #8ab10b}
+/* ICONE E DECLINAZIONI BOTTONI */
+.button.phone {background-image: url(/img/app_tel_green.png)}
+.button.goright {background-image: url(/img/app_arrow_right.png)}
+.loading .button {background-image: url(/wscmn/img/ico2inf_loadingbig.gif)}
+.disabled .button.goright {border-color: #ccc;background-image: url(/img/app_arrow_right_light.png)}
+.error .button {background-image: none;border-color:#c00;background-color:#c00;text-indent:0em}
+.confirm .button {background-image: none;border-color:#8ab10b;background-color:#8ab10b;text-indent:0em}
+
+/* CONSOLE BOTTONE - MESSAGGIO */
+.btnconsole p.msg {float:left;width:60%;margin: 1em 0 0 5%;clear:none !important;display:none}
+/* Errore e Conferma */
+.error p.msg, .confirm p.msg {display:block !important}
+
+
+/* FOOTER */
+#footer {float:left;width:100%;background-color:#eee;padding:1em 0;font-size:0.9em;color:#666}
+.footerleft {width:5em;float:left;text-align: center;margin:0;font-size:1.1em} 
+.footerleft .button {float:none;margin: 0 auto}
+.footerleft .telnum {color:#8ab10b;font-size:0.8em;padding:0.5em auto}
+.footerright {width:65%;float:left;line-height:1.5em;margin-left:2.5%;font-size:1em;margin-top:0.5em} 

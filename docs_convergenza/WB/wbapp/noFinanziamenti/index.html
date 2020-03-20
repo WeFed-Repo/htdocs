@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Finanziamenti</title>
+		<meta name="description" content="Webank - Finanziamenti"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT OPENSANS */			
+			@font-face {
+			  font-family: "bankFont";
+			  font-weight: 400;
+			  font-style: normal;
+			  src: url("/WB/wbapp/font/opensans-regular-webfont.eot");
+			  src: url("/WB/wbapp/font/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/WB/wbapp/font/opensans-regular-webfont.woff2") format("woff2"), url("/WB/wbapp/font/opensans-regular-webfont.woff") format("woff"), url("/WB/wbapp/font/opensans-regular-webfont.ttf") format("truetype"), url("/WB/wbapp/font/opensans-regular-webfont.svg#open_sansregular") format("svg");
+			}
+
+			@font-face {
+			  font-family: "bankFont";
+			  font-weight: 700;
+			  font-style: normal;
+			  src: url("/WB/wbapp/font/opensans-bold-webfont.eot");
+			  src: url("/WB/wbapp/font/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/WB/wbapp/font/opensans-bold-webfont.woff2") format("woff2"), url("/WB/wbapp/font/opensans-bold-webfont.woff") format("woff"), url("/WB/wbapp/font/opensans-bold-webfont.ttf") format("truetype"), url("/WB/wbapp/font/opensans-bold-webfont.svg#open_sansbold") format("svg");
+			}
+
+			body {margin:0;background:#fff;font-family:"bankFont",Arial,Serif;font-size:14px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#fff;}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img.bg {width:100%;height:100%;}
+			#heading div {position:absolute;}
+			#heading div p{color:#fff}
+			#heading p.grande {font-size:1.7em;font-weight:700;margin-top:0;}
+			#heading p.piccolo {font-size:1.2em;font-weight:400;}
+
+			/* Contenuti */
+			#content {padding:2em 0 0 0;float:left;width:100%;background:#fff;min-height:16em;}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:90%;margin:0 0 0 6%;float:left;text-align:center} 
+			#content .colbtn {width:100%;margin:0%;margin-top:10%;float:left;text-align:center;display:none;} 
+			#content .col1Left {text-align:left}
+			#content .col3 {width:95%;margin:0 0 0 6%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 6% 0 0}
+			#content .col1 a.green {color:#8ab10b}
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1 p {width:100%;float:left;font-size:1em; color:#000;line-height:1.5em;padding-bottom:0.8em;}
+			.col1 p.bl {font-weight:700;}
+			.col1Left span {text-align:left;}
+			.col1 ul {width:100%;text-align:left;float:left;line-height:1.6em;font-size:1em;padding-left:0;margin-left:1em;}
+			.col1 ul li{position:relative;font-size: 1em;color: #000;}
+
+
+			/* Declinazioni del font*/
+			span.grande {font-size:2.2em}
+			span.mega {font-size:1.5em;font-weight:bold;color:#9d9d9d}
+			span.tit {font-size:1.15em;font-weight:700;padding-bottom:0.5em;}
+			.dark, .dark a {color:#666}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:0.8em}			
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:60%;background-color:#9d9d9d;clear:both;font-size:1.5em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:1em;}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+			body.dettagli #heading img.bg {border-radius: 0;}
+			body.dettagli #txthead div.titinl span.chiudi {display: inline-block !important}
+
+
+			.nofloat{float:none!important; font-size:1em!important;}
+
+			#txthead {position:fixed;top:0px;width:100%;background:none;line-height:2em;font-size:1.9em;}
+			#txthead .cta {margin:0 auto;max-width:640px;display:block;background:none;width:100%;}
+
+			#txthead .cta p{color:#fff; padding-left:5%;}
+			#txthead .cta p.grande {font-size:1.1em;font-weight:700;margin-top:0;padding-left:5%;margin-bottom:0;line-height:1.1em;}
+			#txthead .cta p.piccolo {font-size:0.6em;font-weight:400;padding-left:5%;line-height:0.6em;}
+			#txthead .cta p.piccolo.txtalctr {padding-left:0;text-align:center;display:none;}
+			#txthead .cta p.mini {font-size:0.5em;font-weight:400;padding-left:5%;line-height:1.5em;}
+			#txthead div.titinl {position: relative;}
+			#txthead div.titinl span, #txthead div.titinl p {display: inline-block; vertical-align: middle;}
+			#txthead div.titinl span:first-child {padding-left:5%}
+			#txthead div.titinl p.piccolo {padding-left:1%}
+			#txthead div.titinl span.chiudi {margin-top: 15px;display:none;}
+
+			
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				/*body {font-size:10px}*/
+				#content {background-position: center -3em} 
+			}
+			@media (max-width : 360px ) {
+				#txthead .cta p.grande {font-size:0.8em;font-weight:700;}
+			}
+			.standard{	position:absolute; z-index:1;
+			/*	-webkit-touch-callout:none;*/
+				-webkit-tap-highlight-color:rgba(0,0,0,0);
+				width:100%;
+				padding:0;}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/WB/wbapp/js/jquery.js"></script>
+		<script type="text/javascript" src="/WB/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+			$(function(){
+				if (getUrlVar("status")=="dettagli")
+					{
+						$("body").addClass("dettagli");
+					}
+				if (getUrlVar("status")=="nuovo")
+					{
+						$("body").addClass("nuovo");
+					}
+			});
+		</script>		
+
+		
+		<div id="main">			
+			<div id="heading">
+				<a href="javascript:;">				
+					<img class="bg" src="img/top.png">					
+				</a>
+				<div id="txthead">
+					<div class="cta">
+						<div class="titinl">
+							<span><img src="img/trading.png"></span>
+							<p class="piccolo"> FINANZIAMENTI WEBANK </p>
+						</div>						
+						<p class="grande">IL FUTURO<br>&Eacute; SEMPLICE<br>CON MUTUO<br>WEBANK!</p>
+						<p class="mini">Qualunque sia la tua esigenza, ti aiutiamo<br>nei tuoi progetti.</p>
+						<p class="piccolo txtalctr">SCOPRI</p>
+					</div>
+				</div>	
+			</div>
+			
+			<div id="content">
+				<!-- blocco testo -->
+				<div class="col1 col1Left">
+					<span class="tit">PER ACQUISTARE CASA</span><br>
+					<p>
+						Qualunque sia la tua esigenza, ti seguiremo passo dopo passo fino alla stipula del mutuo:
+					</p>
+					<ul>
+						<li><strong>tasso fisso o variabile</strong>, anche con opzione;</li>
+						<li><strong>zero spese di perizia</strong>;</li>
+						<li>uno <strong>specialista mutui</strong> dedicato;</li>
+						<li><strong>polizza casa gratuita</strong>.</li>
+					</ul>	
+					<p>
+						E se vuoi rottamare il tuo vecchio mutuo, Webank ha la proposta giusta per te.
+					</p>
+					<p>
+					<strong>Per avere maggiori informazioni sulla nostra offerta e su come effettuare la richiesta online del mutuo, accedi al menu Finanziamenti dall' area privata del sito.</strong>
+					</p>
+
+					<!-- pulsante -->
+					<div class="colbtn">
+						<a class="btn" href="#">SCOPRI DI PI&Ugrave;</a>
+					</div>
+					<!-- fine pulsante -->	
+
+				</div>
+				<!-- fine blocco testo -->
+			</div>
+		</div>
+	</body>
+</html>
+

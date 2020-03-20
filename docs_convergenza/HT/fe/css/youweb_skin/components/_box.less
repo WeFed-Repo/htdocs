@@ -1,0 +1,217 @@
+//BOX GENERICO
+.box-generico {
+    &-border {
+        border: 1px solid @borderColorBox;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 0 25px 0;
+
+        h4 {
+            font-weight: 400;
+            line-height: 22px;
+            font-size: 1.2em;
+            /*background-color: @bgColorTitleBox;*/
+            padding: 15px 18px 18px 18px;
+            /*margin:0 0 20px 0;*/
+        }
+
+        .lineBottom {
+
+            border-bottom: 1px solid @borderColorBox;
+        }
+
+        h3 {
+            font-weight: 400;
+            line-height: 22px;
+            font-size: 1.5em;
+            background-color: @bgColorTitleBox;
+            padding: 20px;
+        }
+
+        .imgWrapperResponsive {
+            padding: 0 20px 0 20px;
+            text-align: center;
+
+            &.iconbox {
+                position: relative;
+
+                .iconbg {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    width: 90px;
+                    height: 90px;
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    right: 40px;
+                    border-radius: 50%;
+
+                    .icon {
+                        color: #e3e3e3;
+                        font-size: 60px
+                    }
+                }
+            }
+        }
+
+        & > .box-generico-text:last-child,
+        & > .box-generico-text > .form-group:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-card {
+        padding-top: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    h4 {
+        /*margin:0 0 9px 0*/
+    }
+
+    &-doubleTitle {
+        h4 {
+            font-weight: 400;
+            line-height: 22px;
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            padding: 0;
+            background-color: #fff;
+        }
+    }
+
+    &-comunicazioni {
+        /*padding:9px 14px 9px 14px;*/
+        padding: 0 14px 0 14px;
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fff;
+            padding: 0;
+            margin: 0
+        }
+
+        hr {
+            /*margin-top:20px;
+            margin-bottom:20px;*/
+        }
+
+        .note {
+            font-size: 12px;
+            line-height: 14px;
+            position: relative;
+            top: -6px;
+        }
+
+        .init-text,
+        .panel-body {
+            position: relative;
+            top: 4px;
+        }
+
+        .panel {
+            padding: 0;
+            border: 0;
+
+            &-border {
+                border-left: 2px solid #e3e3e3;
+                padding-left: 18px;
+            }
+
+            &.panel-selected {
+                .panel-border {
+                    border-color: #ccc;
+                }
+            }
+
+            &-body {
+                padding: 0;
+            }
+
+            &-group {
+                border-bottom: 0;
+            }
+
+            &-heading a {
+                padding: 0;
+                line-height: 20px;
+                font-weight: 600;
+                font-size: 14px;
+                /*margin-top:2px;
+                margin-bottom:5px;*/
+                color: @textColorBank;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: @textColorBank;
+                }
+
+                &.collapsed {
+                    overflow: visible;
+                    white-space: normal;
+                }
+            }
+
+            &-title {
+                margin-top: -5px;
+            }
+        }
+
+        span,
+        p {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+    }
+
+    /*padding:20px 0 10px 0;*/
+
+    &-text {
+        padding: 0 18px 0 18px;
+
+        p:last-child,
+        ul:last-child,
+        ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        ul.sameheight {
+            height: 132px;
+        }
+    }
+
+    &.promo-plus {
+        text-align: center;
+        border-right: 1px solid #e3e3e3;
+
+        &.last {
+            border-right: 0;
+        }
+
+        i {
+            color: @linkBgColorMobile;
+        }
+
+        .plus-small {
+            font-size: 20px;
+            /* margin-top:5px;*/
+        }
+
+        .plus-big {
+            font-size: 32px
+        }
+    }
+
+    &.promo-plus-nobor {
+        text-align: center;
+        border-right: 0;
+    }
+
+    .col-sm-4 img {
+        max-width: 100%
+    }
+}

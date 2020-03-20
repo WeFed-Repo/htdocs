@@ -1,0 +1,63 @@
+// TOOLTIPS
+
+.tooltip {
+  $arrowSize: 7px;
+  display: none;
+  &.in {
+    display: block;
+    opacity: 1;
+    padding: 0;
+    .tooltip-inner {
+      opacity: 1;
+      background-color: $white;
+      padding: 15px;
+      position: relative;
+      .closeTooltip {
+        position: absolute;
+        top:0;
+        right:0;
+      }
+    }
+    .tooltip-arrow {
+      position: relative;
+      display: block;
+      content: '';
+      position: absolute;
+      border: transparent $arrowSize solid;
+      //box-shadow: 0 5px 5px $grayMidLight;
+    }
+    &.top {
+      padding-bottom: 10px;
+      .tooltip-arrow {
+        top: 100%;
+        left: 50% !important;
+        border-top-color: $white;
+        transform: translate(-($arrowSize/2),-($arrowSize*1.5));
+
+      }
+    }
+  }
+}
+
+// Contenuto che viene trasferito nel tooltip dinamicamente con javascript
+
+.htmlTooltip {
+  display: none;
+}
+
+// Elemento onclick attivatore del tooltip
+
+[data-toggle="tooltip"] {
+  cursor: pointer;
+  margin-bottom: 0;
+  &:not(input):not(select):not(.icon) {
+    border-bottom: 1px dashed $gray;
+  }
+}
+
+/*
+.control-label-output + .txthelp {
+  margin-top: 15px;
+  display: inline-block;
+}
+*/

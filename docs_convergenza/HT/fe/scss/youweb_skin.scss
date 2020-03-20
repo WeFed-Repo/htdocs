@@ -1,0 +1,20 @@
+// VARIABILI GLOBALI
+@import '_vars.scss';
+ 
+// GRUPPI DI STILI
+
+// FONTS E ICONE
+// import 'fonts/_inclusions.scss';
+
+// PORTING ICONE
+@import 'fonts/_icon_remap.scss';
+
+// UTILITA' TIPOGRAFICHE E DI ELEMENTI GENERICI
+@import 'utilities/_inclusions.scss';
+
+// OGGETTI MODULARI (componenti)
+@import 'components/_inclusions.scss';
+
+// TEMPLATES PARTICOLARI
+@import 'tpl/_inclusions.scss';
+

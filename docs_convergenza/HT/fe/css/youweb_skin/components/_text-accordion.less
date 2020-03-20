@@ -1,0 +1,92 @@
+.text-accordion {
+	display: block;
+	margin-bottom: 15px;
+	a.text-term {
+		color: @black;
+		display: block;
+		font-weight: bold;
+		padding: 1px 0 0 25px;
+		position: relative;
+		text-decoration: none !important;
+		.icon {
+			color: @primary;
+			display: block;
+			font-weight: normal;
+			left: 0;
+			position: absolute;
+			top: 03px
+		}
+		.icon-row_contract {
+			display: none;
+		}
+	}
+	.text-definition {
+		display: none;
+		padding-left: 25px;
+	}
+}
+.text-accordion.opened {
+	.text-term {
+		.icon-row_contract {
+			display: block;
+		}
+		.icon-row_expand {
+			display: none;
+		}
+	}
+	.text-definition {
+		display: block;
+	}
+}
+/* OGGETTO accordion_070 di  Cartimpronta Revolving BPM */
+.contentCrBpm {
+    width: 100%;
+    min-height: 50px;
+    clear: left;
+    .sxCrBpm {
+    	float: left;
+    	margin-right: 10px;
+	}
+	.dxCrBpm {
+    	float: left;
+    }
+	.bodyCrBpm {
+   	 	display: none;
+    	margin-left: 22px;
+    	width: 80%
+	}
+}
+
+@media (max-width: 768px) {
+    .bodyCrBpm {
+        margin-left: 40px;
+    }
+}
+
+.panel-heading {
+	background-color: #eaeded;
+    border: 0;
+    height: 80px;
+    vertical-align: middle;
+    display: table;
+    width: 100%;
+    padding: 25px 20px 0;
+    border-radius: 0;
+    text-align: left;
+    background-size: 23px 23px;
+    font-size: 16px;
+    text-decoration: none !important;
+   	a {
+    	color: #202d50 !important;
+    	background: #eaeded url(/HT/fe/img/icon_accordion_opened.png) no-repeat 98% center;
+        background-size: 20px;
+        &.collapsed {
+        	background: #eaeded url(/HT/fe/img/icon_accordion_closed.png) no-repeat 98% center;
+        	background-size: 20px;
+        }
+    }
+    .icon.icon-arrow_down,.icon.icon-arrow_up{
+    	display:none!important;
+    }
+}
+/* END OGGETTO accordion_070 di  Cartimpronta Revolving BPM */

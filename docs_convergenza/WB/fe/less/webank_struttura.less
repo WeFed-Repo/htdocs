@@ -1,0 +1,312 @@
+@import "_color_webank";
+@import "_color";
+@import "_struttura";
+@import "_toolbox_fixed";
+@import "_chat";
+
+/* DECLINAZIONI ELEMENTI STRUTTURALI */
+header {
+    background-color: #000;
+
+    .userMenu .icon {
+        color: @textColorBank3;
+    }
+
+    #logoWrap {
+        width: 223px;
+        height: 124px;
+        padding: 0;
+
+        img {
+            margin-top: 28px;
+        }
+    }
+
+    .printlogoNew {
+        display: none;
+    }
+}
+
+nav {
+    margin-bottom: 65px;
+    background: #000;
+
+    ul {
+        li {
+            margin: 0;
+
+            a {
+                font-size: 1.13em;
+            }
+        }
+
+        &.level1 .selected .voice {
+            color: #000;
+            border-bottom: solid 1px @textColorBank2;
+        }
+
+        &.level2 {
+            height: 49px;
+
+            li {
+                a {
+                    margin: 0;
+                    padding: 18px 0 0 0;
+                    color: @textColorBank;
+                    border: 0;
+                    font-size: 1em;
+                    line-height: 1em;
+                    text-decoration: none;
+                }
+
+                &.selected a, a:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    border-top: solid 1px #e3e3e3;
+    background: #fafafa;
+    font-size: 1em;
+    padding-bottom: 30px;
+
+    ul {
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 30px 15px;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            margin: 0 9px;
+
+            a {
+                color: @textColorBank !important;
+                text-decoration: none
+            }
+        }
+    }
+
+    .footermenu {
+        float: left;
+        width: 100%;
+        border-bottom: solid 1px #e3e3e3;
+        background: #fff;
+    }
+
+    p {
+        display: inline-block;
+        margin: 0 auto;
+        color: #999;
+        font-size: 0.8em;
+        line-height: 20px;
+        padding: 10px 0;
+    }
+
+    a {
+        font-size: 0.875em;
+    }
+}
+
+
+/**/
+#toolbox {
+    .toolbtn a {
+        text-decoration: none;
+        color: @textColorBank3;
+
+        &:hover, &:focus {
+            text-decoration: none;
+            color: @textColorBank2;
+        }
+
+    }
+}
+
+
+header .userMenu .telLink {
+    &:hover, &:focus {
+        cursor: default;
+        color: @textColorBank3;
+
+        .icon {
+            color: @textColorBank3;
+        }
+    }
+}
+
+/* Spalla destra */
+.boxdx {
+    margin-bottom: 30px;
+}
+
+.eventi {
+    .btn-big-ico {
+        display: block;
+    }
+}
+
+.news {
+    padding: 14px 20px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+
+    h4 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .notizia {
+        width: 100%;
+        padding: 0 0 11px 0;
+        margin: 0 0 10px 0;
+        border-bottom: solid 1px #e3e3e3;
+
+        .note {
+            padding: 0;
+            margin: 0 0 2px 0;
+            font-size: 12px;
+        }
+
+        .link {
+            display: block;
+            padding: 0;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+            line-height: 19px;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+
+    .vaia {
+        display: block;
+        padding: 4px 0 0 0;
+        margin: 0;
+        text-align: right;
+    }
+}
+
+#contenuti {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+    nav {
+        margin-bottom: 0;
+    }
+
+    #leftmenu {
+        ul li.selected a {
+            color: #000;
+        }
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 0 15px;
+        text-align: left;
+        border: 0;
+        background: #fff;
+
+        .footermenu {
+            float: left;
+            width: 100%;
+            border: none;
+
+            ul {
+                padding: 17px 0;
+                border-top: solid 1px #e3e3e3;
+                border-bottom: solid 1px #e3e3e3;
+                line-height: 25px;
+
+                li {
+                    margin: 0 9px 0 0;
+                }
+            }
+        }
+
+        p {
+            margin: 22px 0 70px;
+        }
+    }
+}
+
+
+/* Elementi in spalla destra */
+/* Celletta "universale" */
+.wdg-carousel.loading {
+    max-height: 300px;
+    border: 0;
+}
+
+.wdg-carousel {
+    margin: 0 0 30px;
+    display: block;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    overflow-x: hidden;
+    max-width: 500px;
+}
+
+.wdg-carousel .carousel-inner {
+    margin-bottom: 40px;
+}
+
+.wdg-carousel ol.carousel-indicators {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 39px;
+    text-align: center;
+    border-top: 1px solid #CCCCCC;
+    bottom: 0;
+    left: 0;
+}
+
+.wdg-carousel ol.carousel-indicators li {
+    background-color: #8ab10b;
+    border: solid 1px #8ab10b;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+}
+
+.wdg-carousel ol.carousel-indicators li.active {
+    background-color: #fff;
+}
+
+.wdg-carousel.no-indicators ol {
+    display: none;
+}
+
+.wdg-carousel.no-indicators .carousel-inner {
+    margin-bottom: 0;
+}
+
+.eventi .btn.btn-large-ico {
+    width: 100%;
+}
+
+/* Per nascondere blocchi in Webank e visibili in Youweb */
+.siYnoW {
+    display: none
+}

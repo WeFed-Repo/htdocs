@@ -1,0 +1,490 @@
+.control-label-output {
+  display: inline-block;
+  float:left;
+  width: 100%;
+  &.txthelp {
+     width: auto;
+  }
+}
+ 
+.formGenerico { 
+  //border-top: solid 2px @tableStripe;
+  padding-top: 15px;
+}
+
+.boxDefault label {
+  font-weight: bold;
+}
+
+.selector {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-top: 0 none;
+  background-color: #fff;
+  width: ~"calc( 100% - 30px )";
+  margin: 0 15px;
+  .group {
+    display: block;
+    a {
+      display: block;
+      padding: 10px;
+      .notFocused;
+      border-bottom: 2px solid  @tableStripe;
+      //&:nth-child(odd) { background-color: @tableStripe; }
+    }
+    &.selected {
+      //background-color: #FAFFEB;
+      a{
+        //padding-left: 30px;
+        //border-left: @grayMid solid 3px;
+        background-color: @tableStripe;
+        border-color: @white;
+        &.selected {
+          border-left: @primary solid 5px;
+        }
+      }
+    }
+  }
+}
+
+.inputOption {
+  .ellipsed;
+}
+
+.no-label {
+    padding-top: 35px;
+    #selDepForm & {
+      padding-top:0 !important;
+    } 
+}
+
+.modal-body .selector-wrap.selector-mini .selector-box {
+    width: 111px
+}
+
+.input-group-addon {
+    padding: 0 5px;
+    border-radius: 0;
+    background-color: @borderColorForm;
+    color: @white;
+    &.date {
+      color: @blue;
+      background-color: @white;
+      position: relative;
+      min-width:30px;
+      .icon.icon-calendar_filled {
+        /*margin-top: 0;*/
+      }
+    }
+    &.first {
+      color: @blue;
+    }
+}
+input[type=checkbox] {
+  top:0;
+}
+.ui-datepicker-trigger {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    cursor: pointer;
+}
+/* Selector box */
+
+.selector-wrap {
+    text-align: left;
+}
+
+.selector-box {
+    //min-height: 280px;
+    border: solid 2px #eee;
+    cursor: pointer;
+    //padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.selector-box img {
+    margin: 0 auto
+}
+
+.selector-auto .selector-box img {
+    margin: 0;
+}
+
+.selector-box span.titoletto {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    font-size: 18px;
+}
+
+.selector-box.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.selector-box.selected {
+    border: solid 2px @textColorBank2
+}
+
+/* Selector box mini */
+
+.selector-wrap.selector-mini {
+    width: auto;
+    margin: 0 -10px;
+    text-align: left;
+}
+
+.selector-wrap.selector-mini .selector-box {
+    width: 115px;
+    min-height: 10px;
+    display: inline-block;
+    margin: 0 10px 20px;
+}
+
+/* Selettore in overlay */
+
+.modal-body .selector-wrap.selector-mini .selector-box {
+    width: 111px
+}
+
+/* Multiselettore */
+
+.multi-selector {
+    width: 100%;
+    border: solid 1px @borderColorForm;
+    padding: 0 7px;
+    height: 40px;
+    line-height: 40px;
+    &:hover {
+      border-color: @borderColorFormHover;
+    }
+    a.reset {
+        float: right;
+        text-decoration: none;
+        cursor: pointer;
+        i.icon {
+            color: @blue;
+            font-size: 20px;
+            margin: 12px 0 0 0;
+        }
+    }
+    a {
+      cursor:pointer;
+      text-decoration:underline;
+    }
+}
+
+.textScroller {
+    border: solid 1px @borderColorForm;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 14px
+}
+
+@media (max-width: @xsmax) {
+    .textScroller {
+        height: auto;
+    }
+}
+
+
+
+.form-control {
+  padding: 15px 16px 15px 14px;
+}
+@media (max-width: @smmax) {
+ .form-control {
+    padding-top: 11px;
+ }
+}
+
+.formGenerico .icon-console {
+  float: left;
+  display: block;
+  position: relative;
+  a.btn-icon {
+    margin: 15px 0 0 10px;
+    float: left;
+    cursor:pointer;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.btnMultiSel {
+  width:100%;
+  float: left;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  padding:12px 16px 15px 14px;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: #fff;
+  span {
+    height: 26px;
+    line-height: 26px;
+    float:left;
+    cursor:pointer;
+    text-decoration:underline;
+    color: @primary;
+    /*font-weight: bold;*/
+  }
+  [class^="icon-"], [class*=" icon-"], .icon {
+    margin-left: 10px;
+    background: #eee;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    min-width: 20px;
+    margin-top: 3px;
+    text-align:center;
+    font-weight: bold !important;
+    &:hover {
+      color: @primary;
+    }
+  }
+}
+/* Societa di gestione */
+#selContCodSocieta {
+    max-height: 400px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    display: inline-block;
+
+    .selEl {
+        width: 23%!important;
+        height: 160px;
+        border: solid 2px #ddd;
+        overflow: hidden;
+        padding: 85px 5px 5px!important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center -15px;
+        cursor: pointer;
+        margin: 1%;
+        font-size: 12px;
+
+        &.selected {
+            cursor: default;
+            border-color: #202d50;
+        }
+
+        input {
+            display: none;
+        }
+
+        .selElLabel {
+            line-height: 14px;
+            margin: 0;
+            border-top: solid 2px #ddd;
+            padding: 7px 0 0;
+            text-align: center; 
+            display: block;
+            .selElTotal {
+                display: block;
+                clear: both;
+                font-size: 12px;
+            }
+        }
+    }
+}
+#filtriAvanzatiSwitch {
+  width: 100%;
+  position: relative;
+  margin-bottom:15px;
+  cursor: pointer;
+  text-align: left;
+  min-width: 250px;
+  .nascondi {
+      display: none;
+  }
+  &.opened {
+    .nascondi {
+    display: inline-block;
+    }
+    .mostra {
+      display: none;
+    }
+  }
+  .icon {
+    position: absolute;
+    right:15px;
+    top:3px;
+  }
+  
+}
+
+
+
+@media (max-width: 480px) {
+    #selContCodSocieta .selEl {
+        width: 48%
+    }
+
+    .otpdesc {
+        .introtext {
+            height: 80px;
+            display: block
+        }
+    }
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+/*
+.ui-spinner {
+  .ui-spinner-input {
+    margin: 0;
+  }
+  .ui-spinner-button,
+  .ui-state-active,
+  .ui-widget-content
+  .ui-state-active {
+      border-radius: 0;
+      width: 16px;
+      height: 28px;
+      margin: 0 auto;
+      border: 0 !important;
+      text-align: center;
+      .ui-icon {
+        background: none;
+        .icon-spinner_less {
+          //transform: rotate(180deg);
+        }
+      }
+  }
+}
+*/
+
+////////////////////////////////////////////////////////////////////////////////
+
+.ui-spinner {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 14px;
+  .ui-spinner-input,
+  input,
+  input[type="text"].form-control {
+    border-left: 0;
+    padding-left: 46px;
+    padding-right: 46px;
+    text-align: center;
+    margin:0;
+  }
+  .ui-spinner-button {
+    /* .icomoonfont();*/
+    -webkit-appearance: none;
+    width: 34px;
+    height: 100%;
+    line-height: 100%;
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    color: @white;
+    background-color: @primary;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    font-size: 25px;
+    padding-top: 3px;
+    transition: all 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: @primaryDark;
+      cursor: pointer;
+    }
+    &:active,
+    &:focus {
+      color: @colorBank6;
+    }
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      &.ui-spinner-down {
+        top: 0;
+        left: 0;
+        border-radius: 4px 0 0 4px;
+        /* &:before { content: "\e92b"; } */
+      }
+      &.ui-spinner-up {
+        top: 0;
+        right: 0;
+        border-radius: 0 4px 4px 0;
+        /* &:before { content: "\e92c"; } */
+      }
+    }
+    .ui-button-text {
+      display: inline-block;
+      height: 34px;
+      padding: 1px 0;
+      .ui-icon {
+          text-indent:0;
+          position: absolute;
+          margin-top: -16px;
+          width: 35px;
+          top: 50%;
+          height: 30px;
+          left: 0;
+        }
+    }
+    .icon {
+      background-image: none;
+      font-size: 0;
+      &:before {
+        font-size: 32px;
+        line-height: 32px;
+        top: 1px;
+        position: relative;
+      }
+    }
+    @media (max-width: 1023px) {
+      & {
+        height: 38px;
+      } 
+    }
+  }
+}
+
+.borderFormRounded .output {  
+    float: left;
+    font-weight: normal;
+    width:100%;
+    &.txthelp {
+      width:auto;
+    }
+}
+
+@media (min-width: @smmin)
+{
+  .form-inline .form-group {
+      width: 100%;
+  }
+}
+
+/*
+
+&.icon-spinner_less:before {
+  content: "\e92b";
+}
+&.icon-spinner_more:before {
+  content: "\e92c";
+}
+
+*/

@@ -1,0 +1,115 @@
+/* RIADATTAMENTO OGGETTI GENERICI */
+body {height: auto;}
+body, #testa, #page1, #headnero {background: none !important; float: none !important; }
+a:after { content:''; }
+a[href]:after { content: none !important; }
+#fixedtools, #headercontainer, #header, #menufirst,#menusecond, #ctndx,#menusxc,.fpbanner,a.btnformright img,a.btnformleft img,a.btnevid1 img,#ctnboxdx,#loginH,#rightSite,#menuPath{display:none !important;}
+#main{text-align:left}
+#content, #contenuti {float: none !important; margin:0 !important; width:700px !important;}
+
+/* heading della popup */
+.header_popup {display: none;}
+
+/* Logo */
+.printlogo {display: block;}
+
+/* Generici */
+table, table.condiz2 {border-collapse:collapse; position: static; float:none; width:700px !important; overflow: visible !important;}
+table tr {page-break-inside: avoid}
+table tbody td {height: 100%;}
+
+/* OGGETTI PARTICOLARI DA ELIMINARE DALLA STAMPA*/
+.BvTableHeaderHelp, .divtabellalist,.pintxt,.pincode,.fooform,.userinfo {display: none !important;}
+
+/* OGGETTI RIADATTATI */
+#footer {width: 700px; border-top: solid 1px #999; margin-top: 20px;}
+#footer ul {display: none;}
+#footer p { line-height: 20px; color: #999;}
+
+/*  CLASSE CHE NON STAMPA GENERICA */
+.noprint {display: none !important}
+
+/* CLASSI CHE DEVONO ESSERE RIALLINEATE*/
+.layeralert, .layeralert2, .layeralert3 {position: relative !important; margin:0px !important}
+.layeralert .body , .layeralert2 .body , .layeralert3 .body {border: 0px !important}
+.layeralert .body .btnformright, .layeralert2 .body .btnformright, .layeralert3 .body .btnformright {display:none !important}
+
+/* ACCORDION APERTI */
+.cartcont p.tit img {display: none}
+.cartcont p.tit {border-bottom: solid 2px #ccc; padding: 0 10px; margin-top: 20px;}
+.cartcont .esteso {display: inline !important}
+.bollfrecsx2 .cartimpronta_lista2 {float:none !important;}
+.expandable div {display: block !important}
+
+/* ORO DEL CAPITANO */
+.expandable.near{margin-top:-5px}
+.expandable.near ul{margin:3px 0}
+.expandable.near h3{margin:-7px 0 3px 0}
+.visibleText #boxTesto{display:none!important}
+.visibleText #titPatrimonio{top:7px!important}
+#grafPatrimonio #subGrafPatrimonio{margin-bottom:0}
+#grafPatrimonio #legenda{margin-top:25px}
+
+/* Pagina movimenti */
+#data-grid-movimenti, #contenuti .movimentiCont table.form01{float: none !important; width: 848px !important;}
+#data-grid-movimenti .detMovOK a{text-decoration:none !important}
+#data-grid-movimenti .lastonprint{border-right:1px #CACACA solid !important}
+#contenuti #data-grid-movimenti th, #contenuti #data-grid-movimenti td  {font-size: 16px; line-height: 20px;}
+#contenuti #data-grid-movimenti td a, #contenuti .movimentiCont strong.large, #contenuti .movimentiCont .uniqTooltipText strong, div.tithelp .helpleft {font-size: 16px !important;}
+#contenuti #data-grid-movimenti td a {line-height:20px}
+#contenuti .movimentiCont table.form01 td {font-size: 16px; line-height: 20px;}
+
+/* F23 */
+table.f23sub { border: 0 none; border-collapse: collapse; text-align: left; width:245px !important;}
+
+/* F24*/
+table.contribuente .co01 {width:158px;}
+table.contribuente .co02 {width:170px;}
+table.contribuente .co03 {width:160px;}
+table.contribuente .co04 {width:40px;} 
+table.contribuente table.datses {border: 0 none !important; width: 192px !important;}
+table.contribuente table.provia {border: 0 none !important; width: 190px !important;}
+
+table.contribuente table {width: 676px;}
+table.contribuente table td {padding:1px 0}
+table.contribuente {width: 700px;}
+table.codfisc {border: 0 none !important;width: 676px !important;}
+
+/*nuovo header parte privata*/
+header {background-color:#fff;}
+header .wrapper .row, header .wrapper .headerMobile, header .wrapper .row .userMenuMobile, header .wrapper .toolbtns, .toolbtn .icon, footer .footermenu {display:none !important;}
+header .wrapper .printlogoNew{display:block!important;}
+header .wrapper .printlogoNew img{width:200px}
+#headercontainerFlat .logo{display:none}
+
+/*INBOX PEC*/
+#carouselMailContainer .headercons,#carouselMailContainer .bottoniera, #carouselMailContainer .mailCons .left{display:none}
+
+
+/* aggiornamento responsive-cross */
+#leftmenu, nav{display:none !important;}
+
+#contenuti.col-md-10 {
+    float: left;
+}
+
+.userMenu, #userMenuMobile, .footermenu, nav, #leftmenu, .toolbtn, .headerMobile,  .headerMobile .row{
+	display:none !important;
+}
+#contenuti, #contenuti.col-md-10, #contenuti.col-sm-12 {
+	width:100% !important;
+}
+.headerMobile {
+	display:block !important;
+	background-color:#fff;
+}
+header .wrapper, .headerMobile .row {
+	background-color:#fff;
+}
+
+#contenuti table.condiz2 tr td.right span.rosso,table.condiz2 tr td.rosso{
+	color:#f00!important;
+}
+#contenuti table.condiz2 tr td.right span.verde,table.condiz2 tr td.verde{
+	color:#007726!important;
+}

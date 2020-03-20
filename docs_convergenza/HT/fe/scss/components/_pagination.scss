@@ -1,0 +1,145 @@
+/* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */
+  div.pager {
+    position: relative;
+    top: 14px;
+    margin-right: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+    .circle {
+      width: 22px;
+      height: 22px;
+      line-height:24px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 3px;
+      background: #d7d7d7;
+      position: relative;
+      top: 5px;
+      color:#fff;
+      text-align: center;
+      &.current_page {
+        background: #003b79;
+      }
+    }
+  }
+
+  @media (max-width:500px){
+     div.pager {top:-20px;}
+  }
+
+
+  // Contenitore della paginazione
+
+  .fixed-table-pagination {
+    display: table;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    .dropup, .dropdown-menu li {
+      vertical-align: top;
+    }
+    .label-group {position: relative; top:10px;}
+  }
+
+  // Paginazione
+.pagination {
+  &.pull-right {
+    min-width: 400px;
+  }
+  ul.pagination {
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: right;
+    li {
+      margin: 0;
+      padding: 0 0.5rem;
+      display: inline-block;
+      font-weight: bold;
+      a {
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        border: 0;
+        padding: 0!important;
+        color: $white;
+        background-color: $grayLight;
+        background-image: none;
+        text-transform: uppercase;
+        border-radius: 20px;
+        min-width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+          background-color: $grayLight;
+        }
+      }
+      &.active a {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+}
+  
+  .pagination-info .label-group {
+      position:relative;
+      left:-10px;
+      top: 5px;
+  }
+  // Select di lista paginata
+
+  .page-list {
+    .btn-group {
+      margin-left: 0.5rem;
+    }
+    .btn-default,
+    .open > .dropdown-toggle.btn-default {
+      &,
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        &,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+          background-color: $grayLight;
+          color: $white;
+        }
+      }
+    }
+  }
+
+.fixed-table-pagination {
+  .dropdown-toggle {
+    display: none;
+  }
+  .dropdown-menu {
+    position:relative;
+    border: 0;
+    box-shadow: none;
+    padding-top:0 !important;
+    display: table!important;
+    li {
+      display: table-cell;
+      height: 100%;
+      text-align: center;
+    }
+    a,a:hover {
+      padding: 8px;
+      background-color: $white;
+      
+    }
+    .active a {
+       background-color: #0e977f
+    }
+  }
+}

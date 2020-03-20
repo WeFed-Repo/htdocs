@@ -1,0 +1,29 @@
+/* ALERTS */
+
+.boxesito {
+  display: table;
+  width: 100%;
+  &.positivo { color: $acqua; }
+  &.attenzione { color: $giallo; }
+  &.negativo { color: $rosso; }
+  &:after {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+  > .icon {
+    float:left;
+  }
+}
+
+.messagePanel .success  {
+  color: $acqua;
+}
+
+.boxesitoWrap {
+  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

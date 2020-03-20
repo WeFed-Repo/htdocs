@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Cartimpronta</title>
+		<meta name="description" content="Webank - Cartimpronta"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#fff;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:90%;margin:0 0 0 5%;float:left;text-align:center} 
+			#content .col1Left {text-align:left}
+			#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}
+			#content .col1 a.green {color:#8ab10b}
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1Left span {text-align:left;}
+			.col1 ul {width:100%;text-align:left;float:left;line-height:1.6em;font-size:1.2em;padding-left:0;margin-left:1em;}
+			.col1 ul li{/*list-style:none;padding-left:1em;*/position:relative;}
+			/*.col1 ul li:before {color:#8ab10b; content:"•";position:absolute; left:0em;}*/
+
+
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.green {color:#8ab10b}
+			.dark, .dark a {color:#666}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:0.8em}
+
+			
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:60%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+
+			.nofloat{float:none!important; font-size:1em!important;}
+
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em} 
+			}
+			.standard{	position:absolute; z-index:1;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/cartimpronta_telepass/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- blocco -->
+				<div class="col1 col1Left">
+					<span class="mega green">CON TELEPASS FAMILY PUOI PAGARE:</span><br>
+					<ul class="dark">
+						<li>il <strong>pedaggio</strong> in autostrada, senza code e con addebito diretto sul conto corrente;</li>
+						<li>la <strong>sosta sulle strisce blu</strong>, di Roma e Milano, con un'<strong><a href="http://www.telepass.it/ecm/faces/public/telepass/home/mondo-telepass/telepass-pyng.html" class="green">APP</a></strong>;</li>
+						<li>l'accesso all'<strong>Area C</strong> di <strong>Milano</strong>;</li>
+						<li>la sosta nei parcheggi convenzionati in citt&agrave; e in aeroporto*.</li>	
+					</ul>	
+					<span class="mega green">SOCCORSO MECCANICO GRATUITO SU TUTTE LE STRADE ITALIANE?</span><br>
+					<span class="dark"><strong><a href="https://www.telepass.it/ecm/faces/public/telepass/home/mondo-telepass/premium-extra.html">Scopri Telepass Premium Extra</a></strong> che, oltre a sconti e a vantaggi esclusivi, ti offre un supporto costante in caso di necessit&agrave;. Anche per questo, <span class="green nofloat">I PRIMI 6 MESI SONO GRATIS</span>!</span>
+
+
+				</div>
+				<!-- fine blocco -->
+				
+				<!-- separatore  -->
+				<hr class="dashed" />
+				<!-- fine separatore -->
+				
+				
+				<!-- spazio per promo -->
+				<div class="col1">
+					<a class="btn" href="https://www.telepass.it/AutostradeETIWeb/cliente/SottoscrizioneContratto">Richiedilo subito</a>
+					<span>Scegli come istituto di credito per l'addebito in conto<br>Banca Popolare di Milano</span>
+				</div>
+				<!-- fine spazio per promo -->
+				
+				<!-- separatore  -->
+				<hr class="dashed" />
+				<!-- fine separatore -->
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+			
+					<span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span>
+					<span class="footnote">Condizioni economiche e spese di spedizioni gratuite per chi richiede Telepass online entro il 31 luglio 2015 indicando come modalit&agrave; di pagamento l'addebito presso un conto corrente di Banca Popolare di Milano.<br>
+					Al termine dei 6 mesi di gratuit&agrave; il canone di locazione trimestrale di Telepass Family sar&agrave; pari a &euro; 3,78 (IVA inclusa), il canone di locazione trimestrale Telepass TWIN sar&agrave; pari a &euro; 4,13 (IVA inclusa) cos&igrave; composto: 1,80 &euro; per Telepass aggiuntivo + &euro; 2,33 per Opzione Premium, il canone mensile per l'opzione Premium Extra sar&agrave; pari a &euro; 1,78 (IVA inclusa).<br><br>
+
+					Per maggiori informazioni sui servizi Telepass, sulle Condizioni economiche e sulle Norme, visita telepass.it.<br><br>
+
+					L'attivazione dell'addebito in conto corrente del servizio Telepass &egrave; sempre soggetta valutazione da parte della banca.<br><br>
+
+					*Per scoprire tutti i parcheggi convenzionati con Telepass visita telepass/parcheggi.</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>
+
+

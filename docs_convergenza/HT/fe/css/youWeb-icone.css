@@ -1,0 +1,658 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/HT/fe/font/icomoon.eot?re3jm0');
+  src:  url('/HT/fe/font/icomoon.eot?re3jm0#iefix') format('embedded-opentype'),
+    url('/HT/fe/font/icomoon.ttf?re3jm0') format('truetype'),
+    url('/HT/fe/font/icomoon.woff?re3jm0') format('woff'),
+    url('/HT/fe/font/icomoon.svg?re3jm0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.icon-5x {
+  height: 100px !important;
+  width: 100px !important;
+  line-height: 100px !important;
+  text-align: center;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {display:inline-block; width:20px;height:20px;} 
+/* ELENCO ICONE */
+
+.icon-campana_fill:before {
+  content: "\e9c1";
+}
+.icon-stella_fill:before {
+  content: "\e9c2";
+}
+.icon-book:before {
+  content: "\e9c7";
+}
+.icon-trend_up:before {
+  content: "\e9c8";
+}
+.icon-trend_down:before {
+  content: "\e9c9";
+}
+.icon-trend_np:before {
+  content: "\e9ca";
+}
+.icon-guida_mercati:before {
+  content: "\e9cb";
+}
+.icon-scheda_titolo:before {
+  content: "\e9cc";
+}
+.icon-arrow_trading_right:before {
+  content: "\e9cd";
+}
+.icon-print_ria_filled:before {
+  content: "\e9be";
+}
+.icon-push_off:before {
+  content: "\e9bf";
+}
+.icon-push_on:before {
+  content: "\e9c0";
+}
+.icon-assic_veicoli:before {
+  content: "\e9c5";
+}
+.icon-check_ok:before {
+  content: "\e9b8";
+}
+.icon-close_inverted_fill1:before {
+  content: "\e9b9";
+}
+.icon-star_fill:before {
+  content: "\e9ba";
+}
+.icon-star:before {
+  content: "\e9bb";
+}
+.icon-questionario:before {
+  content: "\e9b7";
+}
+.icon-cat_telecomunicazioni:before {
+  content: "\e9b4";
+}
+.icon-cat_beni:before {
+  content: "\e9b5";
+}
+.icon-cat_tecnologia:before {
+  content: "\e9ab";
+}
+.icon-cat_sanita:before {
+  content: "\e9ac";
+}
+.icon-cat_np:before {
+  content: "\e9ad";
+}
+.icon-cat_materie:before {
+  content: "\e9ae";
+}
+.icon-cat_industria:before {
+  content: "\e9af";
+}
+.icon-cat_finanza:before {
+  content: "\e9b0";
+}
+.icon-cat_energia:before {
+  content: "\e9b1";
+}
+.icon-cat_consumi:before {
+  content: "\e9b2";
+}
+.icon-cat_altro:before {
+  content: "\e9b3";
+}
+.icon-corona:before {
+  content: "\e9aa";
+}
+.icon-ico_badge_new_mobile:before {
+  content: "\e9a3";
+}
+.icon-ico_badge_new:before {
+  content: "\e9a4";
+}
+.icon-ico_help_filled_tab:before {
+  content: "\e9a1";
+}
+.icon-ico_help_tab:before {
+  content: "\e9a0";
+}
+.icon-ico_help_tab_filled .path1:before {
+  content: "\e9a2";
+  color: rgb(0, 0, 0);
+}
+.icon-ico_help_tab_filled .path2:before {
+  content: "\e9c6";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-ico_assic_infortuni:before {
+  content: "\e990";
+}
+.icon-ico_assic_furti:before {
+  content: "\e991";
+}
+.icon-ico_assic_young:before {
+  content: "\e992";
+}
+.icon-ico_assic_smart:before {
+  content: "\e993";
+}
+.icon-ico_assic_more:before {
+  content: "\e994";
+}
+.icon-ico_assic_extra:before {
+  content: "\e995";
+}
+.icon-ico_assic_plus:before {
+  content: "\e996";
+}
+.icon-ico_assic_salute-light:before {
+  content: "\e997";
+}
+.icon-ico_assic_famiglia1:before {
+  content: "\e998";
+}
+.icon-ico_assic_professionista:before {
+  content: "\e999";
+}
+.icon-ico_assic_volante:before {
+  content: "\e99a";
+}
+.icon-ico_assic_base:before {
+  content: "\e99b";
+}
+.icon-ico_assic_care:before {
+  content: "\e99c";
+}
+.icon-prestito_versatilo:before {
+  content: "\e985";
+}
+.icon-ico_versatilo:before {
+  content: "\e99f";
+}
+.icon-ico_versatilozerospese:before {
+  content: "\e9a5";
+}
+.icon-assic_casa:before {
+  content: "\e986";
+}
+.icon-ico_casa:before {
+  content: "\e989";
+}
+.icon-assic_casa_famiglia:before {
+  content: "\e987";
+}
+.icon-ico_famiglia:before {
+  content: "\e98a";
+}
+.icon-assic_persona:before {
+  content: "\e988";
+}
+.icon-scrivici:before {
+  content: "\e984";
+}
+.icon-ico_assic_polizze_sanitarie:before {
+  content: "\e99d";
+}
+.icon-ico_assic_sinistro_polizza:before {
+  content: "\e99e";
+}
+.icon-assic_utili_auto:before {
+  content: "\e981";
+}
+.icon-assic_utili_casa_famiglia:before {
+  content: "\e982";
+}
+.icon-assic_utili_nonauto:before {
+  content: "\e983";
+}
+.icon-cellulare:before {
+  content: "\e980";
+}
+.icon-assic_pointer:before {
+  content: "\e97f";
+}
+.icon-assic_assistenza_sinistro:before {
+  content: "\e97c";
+}
+.icon-assic_assistenza_telefono:before {
+  content: "\e97d";
+}
+.icon-assic_assistenza_tutelalegale:before {
+  content: "\e97e";
+}
+.icon-assic_auto:before {
+  content: "\e96e";
+}
+.icon-assic_autocarro:before {
+  content: "\e96f";
+}
+.icon-assic_caravan:before {
+  content: "\e970";
+}
+.icon-assic_casa_animali:before {
+  content: "\e971";
+}
+.icon-assic_casa_beni:before {
+  content: "\e972";
+}
+.icon-assic_casa_calamita:before {
+  content: "\e973";
+}
+.icon-assic_casa_generica:before {
+  content: "\e974";
+}
+.icon-assic_casa_patrimonio:before {
+  content: "\e975";
+}
+.icon-assic_ciclomotori:before {
+  content: "\e976";
+}
+.icon-assic_motocicli:before {
+  content: "\e977";
+}
+.icon-assic_infortuni:before {
+  content: "\e978";
+}
+.icon-assic_pet:before {
+  content: "\e979";
+}
+.icon-assic_sanitaria_doc:before {
+  content: "\e97a";
+}
+.icon-assic_sanitaria_taiuta:before {
+  content: "\e97b";
+}
+.icon-alert_caution_fill:before {
+  content: "\e96d";
+}
+.icon-ico_check:before {
+  content: "\e965";
+}
+.icon-ico_cta_compara:before {
+  content: "\e966";
+}
+.icon-ico_cta_prenota:before {
+  content: "\e967";
+}
+.icon-ico_mutuofisso:before {
+  content: "\e968";
+}
+.icon-ico_mutuotassofissofinito:before {
+  content: "\e98b";
+}
+.icon-ico_mutuosurrogatassofisso:before {
+  content: "\e98d";
+}
+.icon-ico_mutuotassofissolastminute:before {
+  content: "\e98f";
+}
+.icon-ico_mutuofissoconopzione:before {
+  content: "\e969";
+}
+.icon-ico_mutuovariabileconopzione:before {
+  content: "\e96a";
+}
+.icon-ico_mutuovariabile:before {
+  content: "\e96b";
+}
+.icon-ico_mutuopromotassovariabile:before {
+  content: "\e98c";
+}
+.icon-ico_mutuosurrogatassovariabile:before {
+  content: "\e98e";
+}
+.icon-ico_stampa:before {
+  content: "\e96c";
+}
+.icon-documenti:before {
+  content: "\e963";
+}
+.icon-scarica_coordinate:before {
+  content: "\e964";
+}
+.icon-download:before {
+  content: "\e9b6";
+}
+.icon-file_pdf_fill:before {
+  content: "\e962";
+}
+.icon-excel_filled:before {
+  content: "\e959";
+}
+.icon-pdf_circle_filled:before {
+  content: "\e95e";
+}
+.icon-view_grafico_filled:before {
+  content: "\e95f";
+}
+.icon-view_tabella_filled:before {
+  content: "\e960";
+}
+.icon-bonifico-accredito:before {
+  content: "\e952";
+}
+.icon-bonifico-esecuzione:before {
+  content: "\e953";
+}
+.icon-info_fill:before {
+  content: "\e958";
+}
+.icon-calendar_filled:before {
+  content: "\e95b";
+}
+.icon-delete_table:before {
+  content: "\e95c";
+}
+.icon-zoom_filled:before {
+  content: "\e95d";
+}
+.icon-r-dettaglio:before {
+  content: "\e9a8";
+}
+.icon-edit_fill:before {
+  content: "\e961";
+}
+.icon-row_contract:before {
+  content: "\e95a";
+}
+.icon-row_expand:before {
+  content: "\e955";
+}
+.icon-add_filled:before {
+  content: "\e9a6";
+}
+.icon-f-row_contract:before {
+  content: "\e956";
+}
+.icon-f-row_expand:before {
+  content: "\e957";
+}
+.icon-add_filled1:before {
+  content: "\e9a7";
+}
+.icon-trading_euro:before {
+  content: "\e954";
+}
+.icon-alert_error:before {
+  content: "\e94f";
+}
+.icon-alert_error_fill:before {
+  content: "\e9a9";
+}
+.icon-close_inverted_fill:before {
+  content: "\e9bc";
+}
+.icon-alert_ok:before {
+  content: "\e950";
+}
+.icon-alert_caution:before {
+  content: "\e951";
+}
+.icon-inaggiornamento:before {
+  content: "\e94d";
+}
+.icon-scaduto:before {
+  content: "\e94e";
+}
+.icon-ico_setting:before {
+  content: "\e948";
+}
+.icon-ico_logout:before {
+  content: "\e949";
+}
+.icon-ico_profilo:before {
+  content: "\e94a";
+}
+.icon-icon_setting_utente:before {
+  content: "\e94b";
+}
+.icon-ico_alert:before {
+  content: "\e94c";
+}
+.icon-icona_alert_small:before {
+  content: "\e946";
+}
+.icon-ico_profilo_small:before {
+  content: "\e947";
+}
+.icon-mail_closed:before {
+  content: "\e944";
+}
+.icon-mail_opened:before {
+  content: "\e945";
+}
+.icon-ico_il_tuo_profilo:before {
+  content: "\e943";
+}
+.icon-ico_bollo_auto:before {
+  content: "\e934";
+}
+.icon-calendario_left:before {
+  content: "\e935";
+}
+.icon-calendario_right:before {
+  content: "\e936";
+}
+.icon-ico_domiciliazioni:before {
+  content: "\e937";
+}
+.icon-grafico_portafoglio:before {
+  content: "\e938";
+}
+.icon-ico_i_tuoi_vincoli:before {
+  content: "\e939";
+}
+.icon-listato_portafoglio:before {
+  content: "\e93a";
+}
+.icon-posta_dash:before {
+  content: "\e93b";
+}
+.icon-riepilogo_conto_iban:before {
+  content: "\e93c";
+}
+.icon-ico_saldo_a_data:before {
+  content: "\e93d";
+}
+.icon-ico_svincola:before {
+  content: "\e93e";
+}
+.icon-titoli_pref_down:before {
+  content: "\e93f";
+}
+.icon-titoli_pref_equal:before {
+  content: "\e940";
+}
+.icon-titoli_pref_up:before {
+  content: "\e941";
+}
+.icon-ico_vincola_partite:before {
+  content: "\e942";
+}
+.icon-aggiorna:before {
+  content: "\e900";
+}
+.icon-update:before {
+  content: "\e9bd";
+}
+.icon-ico_riepilogo_alert:before {
+  content: "\e901";
+}
+.icon-ico_gestione_beneficiari:before {
+  content: "\e902";
+}
+.icon-ico_bollettini_postali:before {
+  content: "\e903";
+}
+.icon-ico_bonifico_singolo:before {
+  content: "\e904";
+}
+.icon-ico_calendario:before {
+  content: "\e905";
+}
+.icon-ico_carte:before {
+  content: "\e906";
+}
+.icon-ico_carte_movimenti:before {
+  content: "\e907";
+}
+.icon-ico_carte_pannello_controllo:before {
+  content: "\e908";
+}
+.icon-ico_carte_cambio_pin:before {
+  content: "\e909";
+}
+.icon-ico_carte_ricarica:before {
+  content: "\e90a";
+}
+.icon-ico_carte_scarica:before {
+  content: "\e90b";
+}
+.icon-ico_contatti_recapiti:before {
+  content: "\e90c";
+}
+.icon-ico_conti_depositi:before {
+  content: "\e90d";
+}
+.icon-ico_conto:before {
+  content: "\e90e";
+}
+.icon-documento:before {
+  content: "\e90f";
+}
+.icon-ico_pagamento_f24:before {
+  content: "\e910";
+}
+.icon-ico_finanziamenti:before {
+  content: "\e911";
+}
+.icon-ico_ht_finanziamenti_ituoifinanziamenti_finattivi:before {
+  content: "\e9c3";
+}
+.icon-arrow_right:before {
+  content: "\e912";
+}
+.icon-arrow_down:before {
+  content: "\e913";
+}
+.icon-arrow_up:before {
+  content: "\e914";
+}
+.icon-arrow_left:before {
+  content: "\e915";
+}
+.icon-ico_coordinate_iban:before {
+  content: "\e916";
+}
+.icon-ico_indici_mercati:before {
+  content: "\e917";
+}
+.icon-ico_investimenti:before {
+  content: "\e918";
+}
+.icon-logout:before {
+  content: "\e919";
+}
+.icon-ico_bollettino_mav:before {
+  content: "\e91a";
+}
+.icon-meno:before {
+  content: "\e91b";
+}
+.icon-menu:before {
+  content: "\e91c";
+}
+.icon-mostra:before {
+  content: "\e91d";
+}
+.icon-ico_saldo_movimenti:before {
+  content: "\e91e";
+}
+.icon-movimenti_42:before {
+  content: "\e91f";
+}
+.icon-nascondi:before {
+  content: "\e920";
+}
+.icon-ico_elenco_news:before {
+  content: "\e921";
+}
+.icon-ico_gestione_patrimoniale:before {
+  content: "\e922";
+}
+.icon-piu:before {
+  content: "\e923";
+}
+.icon-ico_posta_arrivo:before {
+  content: "\e924";
+}
+.icon-ico_archivio_posta:before {
+  content: "\e925";
+}
+.icon-ico_rapporti_predefiniti:before {
+  content: "\e926";
+}
+.icon-rapporti_fill:before {
+  content: "\e9c4";
+}
+.icon-ico_bollettino_rav:before {
+  content: "\e927";
+}
+.icon-ico_ricariche_cellulare:before {
+  content: "\e928";
+}
+.icon-settings:before {
+  content: "\e929";
+}
+.icon-ico_titoli:before {
+  content: "\e92a";
+}
+.icon-ico_ordini_movimenti_titoli:before {
+  content: "\e92b";
+}
+.icon-ico_titoli_dossier:before {
+  content: "\e92c";
+}
+.icon-ico_portafoglio_simulato_titoli:before {
+  content: "\e92d";
+}
+.icon-ico_trasferimento_tra_conti:before {
+  content: "\e92e";
+}
+.icon-ico_ultime_disposizioni:before {
+  content: "\e92f";
+}
+.icon-user:before {
+  content: "\e930";
+}
+.icon-user_mobile:before {
+  content: "\e931";
+}
+.icon-ico_youshop:before {
+  content: "\e932";
+}
+.icon-ico_youwin:before {
+  content: "\e933";
+}

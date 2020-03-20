@@ -1,0 +1,367 @@
+/*** SPAZIATURA ELEMENTI E CONTENITORI ***/
+
+.no-gutter[class*="col"] {
+    padding: 0;
+}
+
+/* Classi per margini top generiche */
+
+.marginTopNone {
+    margin-top: 0;
+}
+
+.marginTopNano {
+    margin-top: 3px;
+}
+
+.marginTopMicro {
+    margin-top: 5px;
+}
+
+.marginTopMini {
+    margin-top: 10px;
+}
+
+.marginTopSmall {
+    margin-top: 14px;
+}
+
+.marginTopMedium {
+    margin-top: 20px;
+}
+
+.marginTopLarge {
+    margin-top: 30px;
+}
+
+.marginTopExtra {
+    margin-top: 40px;
+}
+
+.marginTopMega {
+    margin-top: 60px;
+}
+
+.marginTopIper {
+    margin-top: 80px;
+}
+
+/* Classi per margini bottom generiche */
+
+.marginBottomNone {
+    @extend .marginTopNone;
+    margin-bottom: 0 !important;
+}
+
+.marginBottomNano {
+    @extend .marginTopNone;
+    margin-bottom: 3px;
+}
+
+.marginBottomMicro {
+    @extend .marginTopNone;
+    margin-bottom: 13px;
+}
+
+.marginBottomMini {
+    @extend .marginTopNone;
+    margin-bottom: 10px;
+}
+
+.marginBottomSmall {
+    @extend .marginTopNone;
+    margin-bottom: 30px;
+}
+
+.marginBottomMedium {
+    @extend .marginTopNone;
+    margin-bottom: 20px;
+}
+
+.marginBottomLarge {
+    @extend .marginTopNone;
+    margin-bottom: 30px;
+}
+
+.marginBottomExtra {
+    @extend .marginTopNone;
+    margin-bottom: 40px;
+}
+
+.marginBottomMega {
+    @extend .marginTopNone;
+    margin-bottom: 60px;
+}
+
+.marginBottomIper {
+    @extend .marginTopNone;
+    margin-bottom: 80px;
+}
+
+.marginLeft_10 {
+    margin-left: 10px;
+}
+
+.marginLeft_Medium {
+    margin-left: 20px;
+}
+
+.marginRight_Micro {
+    margin-right: 5px;
+}
+
+.marginRight_Medium {
+    margin-right: 20px;
+}
+
+.marginLeftNone {
+    margin-left: 0 !important;
+}
+
+.marginNone {
+    margin: 0 !important;
+}
+
+/* Elementi generici */
+
+.borderBottom {
+    border-bottom:1px solid $tableStripe;
+    padding-bottom:10px
+}
+
+
+h4, caption {
+    @extend .marginBottomMicro;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 + p {
+    margin-top: -6px;
+}
+
+h4 ~ .testoIcona {
+    padding-top: 12px
+}
+
+p, ol, ul, hr, table, form {
+    @extend .marginBottomMedium;
+    padding-bottom: 0
+}
+
+/* Elementi specifici */
+
+.panel-body form:last-child {
+    @extend .marginBottomNone;
+}
+
+.control-label, .form-group .pin_testo {
+    @extend .marginBottomNano;
+}
+
+.btnWrapper {
+    @extend .marginBottomMicro;
+}
+
+.stepBtn, .wrapper-btn-products, .plus-small {
+    @extend .marginBottomMini;
+}
+
+hr.spacer {
+    @extend .marginBottomExtra
+}
+
+.form-group.last {
+    @extend .marginBottomMicro;
+}
+
+.box-generico-comunicazioni-block, .box-generico, .box-generico-border h4, .panel-group, .topBtn, .box-generico-text, .imgWrapperResponsive {
+    @extend .marginBottomMedium;
+}
+
+.formGenerico.output h4 {
+    margin-bottom: 20px
+}
+
+/* Contenitori */
+
+section {
+    /* Margine bottom che si aggiunge a quello dell'ultimo elemento del contenitore */
+    //.marginBottomLarge;
+    margin-bottom: 40px;
+}
+
+section.big {
+    @extend .marginBottomExtra;
+}
+
+.formGenerico section {
+    margin-bottom: 20px;
+}
+
+/* Elementi grandi da trattare come contenitori di se stessi */
+
+h2, video, embed, object, .largeElement, .boxesito, .panel-nofill {
+    @extend .marginBottomLarge;
+}
+
+.extraElement {
+    @extend .marginBottomExtra;
+}
+
+.topbanner {
+    margin-bottom: 30px;
+}
+
+/* Eccezioni trattate col margin top */
+
+.formGenerico .btnWrapper {
+    @extend .marginTopMedium;
+    .btn-align-right:not(:first-child) {margin-left:15px;}
+}
+
+/*** FINE - SPAZIATURA ELEMENTI E CONTENITORI ***/
+
+
+/*** Classi  correttive  ***/
+.pad_0 {
+    padding: 0 !important;
+}
+
+.pad_bottom_0 {
+    padding-bottom: 0 !important;
+}
+
+.pad_bottom_10 {
+    padding-bottom: 10px !important;
+}
+
+.pad_bottom_20 {
+    padding-bottom: 20px !important;
+}
+
+.pad_bottom_30 {
+    padding-bottom: 30px !important;
+}
+
+.pad_bottom_40 {
+    padding-bottom: 40px !important;
+}
+
+.pad_bottom_80 {
+    padding-bottom: 80px !important;
+}
+
+.pad_top_0 {
+    padding-top: 0 !important;
+}
+
+.pad_top_10 {
+    padding-top: 10px !important;
+}
+
+.pad_top_20 {
+    padding-top: 20px !important;
+}
+
+.pad_top_30 {
+    padding-top: 30px !important;
+}
+
+.pad_top_40 {
+    padding-top: 40px !important;
+}
+
+.pad_top_80 {
+    padding-top: 80px !important;
+}
+
+.pad_right_0 {
+    padding-right: 0 !important;
+}
+
+.pad_left_0 {
+    padding-left: 0 !important;
+}
+
+.pad_left_double {
+    padding-left: 28px !important;
+}
+
+.form-group.marginBottomNone {
+    margin-bottom: 0;
+}
+
+.paddMedium {
+    padding: 20px;
+}
+
+/***********Spaziature per gestire Imposta Alert *************/
+
+
+.padTop17 {
+    padding-top: 17px
+}
+
+.inputWidthSmall {
+    width: 35%;
+}
+.clear {
+    clear:both;
+}
+
+@media (max-width: 767px) {
+    .pad_left_double {
+        padding-left: 46px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .inputWidthSmall {
+        width: 70%;
+    }
+}
+
+/* Gestione elementi con spazio "fisso" */
+.with-fixed-el {
+    position: relative;
+
+    .fixed-el {
+        position: absolute;
+        right: 0;
+        width: 300px;
+    }
+
+    &.onright {
+        padding-right: 300px;
+
+        .fixed-el {
+            right: 0;
+            padding-left: 30px;
+        }
+    }
+
+    &.onleft {
+        padding-left: 300px;
+
+        .fixed-el {
+            left: 0;
+            padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .with-fixed-el {
+        padding: 0 !important;
+
+        .fixed-el {
+            position: relative;
+            width: 100% !important;
+            padding: 0 0 15px;
+        }
+    }
+}

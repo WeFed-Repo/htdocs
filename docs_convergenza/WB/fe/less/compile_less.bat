@@ -1,0 +1,9 @@
+call lessc --source-map fp_ria.less ../css/fp_ria.css
+call lessc --source-map fp_sportello.less ../css/fp_sportello.css
+call lessc --source-map fp_trading.less ../css/fp_trading.css
+call lessc --source-map mio_patrimonio.less ../css/mio_patrimonio.css
+call lessc --source-map webank_base.less ../css/webank_base.css
+call lessc --source-map webank_generic.less ../css/webank_generic.css
+call lessc --source-map webank_print.less ../css/webank_print.css
+call lessc --source-map webank_skin.less ../css/webank_skin.css
+call lessc --source-map webank_struttura.less ../css/webank_struttura.css

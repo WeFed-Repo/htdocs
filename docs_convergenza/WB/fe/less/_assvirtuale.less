@@ -1,0 +1,473 @@
+/* Assistente virtuale */
+#virtAss {
+    width:300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: visible;
+    text-align: left;
+    border-radius: 4px;
+    
+    #vaExtended {display:none;}
+
+    .vaContainer {
+
+        width: 300px;
+        float:right;
+        background: #fff;
+        box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        
+
+        #vaAudioErrore {position: absolute;color: #fff;bottom: 14px;background: rgba(0,0,0,0.4);width: 240px;height: 20px;line-height: 20px;text-align: center;font-size: 12px;left: 13px;font-style: italic;display: block;border-radius: 15px;}
+
+        .vaTop {
+            padding: 0;
+            height: 50px;
+            border-bottom: solid 1px #e1e1e1;
+            background: #f7f7f7;
+            border-radius:4px 4px 0 0;
+
+            #vaTitle {
+                cursor: move;
+                font-weight: bold;
+                line-height: 50px;
+                padding: 0 0 0 17px;
+                float: left;
+                width: 225px;
+            }
+
+            a {
+                text-align: center;
+                width: 30px;
+                float: right;
+                height: 30px;
+                margin: 10px 7px 0 0;
+                text-decoration: none;
+                line-height: 30px;
+                background: transparent none no-repeat center center;
+
+                &.vaChiudi {
+                    background-image: url("/WB/fe/img/tool_close.png");
+                }
+
+                &.vaWindow {
+                    background-image: url("/WB/fe/img/tool_reduce.png");
+
+                    &.closed {
+                        background-image: url("/WB/fe/img/tool_expand.png");
+                    }
+                }
+            }
+        }
+
+        .vaBody {
+            max-height: 460px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0 0 50px;
+            position: relative;
+            
+            form {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                margin-bottom:0;
+            }
+
+
+            #vaSpace {
+
+                height: 200px;
+                margin: 0 15px;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+
+                img,video {
+                    width: 100%;
+                    margin-top: -15px;
+                }
+            }
+
+
+            .vaConsole {
+                position: absolute;
+                right: 15px;
+                overflow: hidden;
+                height: 180px;
+                width: 45px;
+                top: 10px;
+
+
+                .vaAudio {
+                    width: 35px;
+                    height: 35px;
+                    display: block;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.7);
+                    margin: 10px 0 0;
+                    text-decoration: none;
+                    line-height: 35px;
+                    text-align: center;
+                }
+
+                #vaTextControl {
+                    width: 35px;
+                    height: 35px;
+                    display: block;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.7);
+                    margin: 10px 0 0;
+                    text-decoration: none;
+                    line-height: 35px;
+                    text-align: center;
+
+                    span {
+                        line-height:23px;
+                        background: #8ab10b;
+                        display: inline-block;
+                        height: 21px;
+                        width: 21px;
+                        border-radius: 50%;
+                        margin: 7px;
+                    }
+                    
+                    .icon {
+                        color:#fff;font-size:12px;
+                    }
+
+                    &.opened {
+                        .icon-show_text {display:none;}
+                        .icon-hide_text {display:inline-block;}
+                    }
+                    &.closed {
+                        .icon-hide_text {display:none;}
+                        .icon-show_text {display:inline-block;}
+                    }
+
+                }
+
+                 #vaSliderWrapper {   
+                    width: 35px;
+                    height: 100px;
+                    display: block;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.7);
+                    margin: 10px 0 0;
+                    text-align: center;
+
+                    #vaSlider {
+                        border:0 none;
+                        display: inline-block;
+                        background: #aaa !important;
+                        width: 5px;
+                        height: 80px;
+                        position: relative;
+                        overflow: visible;
+                        margin: 10px auto;
+                        border-radius: 2.5px;
+                        
+                        .ui-slider-range {
+                            background: #8ab10b;
+                            display: block;
+                            position: absolute;
+                            bottom: 0px;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 2.5px;
+                        }
+
+                        .ui-slider-handle, .ui-slider-handle.ui-state-active,.ui-slider-handle.ui-state-hover, .ui-slider-handle.ui-state-focus {
+                            line-height: 20px;
+                            width: 24px;
+                            margin: 0 0 -10px -9px;
+                            position: absolute;
+                            display: block;
+                            height: 24px;
+                            left:0;
+                            background-color: #fff;
+                            border: solid 2px #fff;
+                            border-radius: 50%;
+                            font-size: 20px;
+                            cursor:pointer;
+
+                            &:focus,&:hover,&:active {
+                                box-shadow:none;
+                                outline:none;
+                            };
+
+                            .icon {
+                                font-size: 20px;
+                                color: #8ab10b;
+                                display:none;
+                                &.icon-audio_middle {display:block}
+                            
+                            }
+
+                        }    
+
+                    }
+
+                    &.volmax {
+                        .icon-audio_middle {display:none !important}
+                        .icon-audio_max {display:block !important}
+                    }
+                    &.mute {
+                        .icon-audio_middle {display:none  !important}
+                        .icon-audio_off {display:block !important}
+                    }
+
+                }
+
+
+            }
+        }
+
+
+        #vaDialog {
+            height: 180px;
+            padding: 0;
+            overflow-y: auto;
+            margin: 10px 15px 0;
+            overflow-x:hidden;
+
+            .sent {
+                color: #1b77e0;
+
+                &.answer {
+                    color: #000;
+                }
+
+                p {
+                    line-height: 20px;
+                    margin-bottom: 5px;
+                }
+            }
+
+        }
+
+        #vaForm {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            padding: 0 15px;
+
+            #vaDom {
+                width: 100%;
+                padding: 0 35px 0 6px;
+                height: 40px;
+                border: solid 1px #ccc;
+                border-radius: 3px;
+                margin-bottom: 15px;
+                outline: 0 none;
+                font-size: 14px;
+            }
+
+            #vaAsking {
+                position: absolute;
+                top: 0;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                background: transparent url("/WB/fe/img/tool_va_send.png") no-repeat center center;
+
+                img, span {
+                    display: none;
+                }
+            }
+
+            &.waiting {
+                #vaDom {
+                    background: #f9f9f9;
+                    color: #cccccc;
+                }
+
+                #vaAsking {
+                    background-image: url("/WB/fe/img/tool_va_send.png")
+                }
+            }
+        }
+
+    }
+    
+
+    /* Extended */    
+    
+     &.extended {
+            width:350px;
+            box-shadow:none;
+            .vaContainer {box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);    border-radius: 0 4px 4px 4px;}
+            #vaLinguetta {
+                position: absolute;
+                text-decoration: none;
+                text-align: center;
+                background: #eee url(/WB/fe/img/tool_expand.png) no-repeat center center;
+                width: 50px;
+                border-radius: 5px 0 0 5px;
+                height: 50px;
+                float: right;
+                z-index: 333;
+            }
+            .vaExtBody {display:none; padding: 15px;}
+            .vaExtTitle {display:none;}
+            
+            #vaExtended {width:0px;position:absolute;}
+
+
+            &.extended-opened {
+                .vaContainer {border-radius: 0 4px 4px 0;}
+                width: 600px;
+                height: auto;
+                background: #fff;
+                box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+                #vaExtended {
+                    width: 300px;
+                    height: 100%;
+                    position: absolute;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    border-radius: 4px 0 0 4px;
+                    .vaExtBody {display:block;
+                        
+                        .vaExtTitle {
+                            display:inline-block;
+                            width:100%;
+                        }
+
+                        /* Classi dedicate per extended View */
+                        .inevidenza {
+                            border: solid 2px #8ab10b;
+                            border-radius: 5px;
+                            width: 100%;
+                            margin: 15px 0 15px;
+                            position: relative;
+                            display: inline-block;
+                            padding: 15px 15px 0;
+                            .icon {
+                                    background: #fff;
+                                    position: absolute;
+                                    background: #8ab10b;
+                                    top: -15px;
+                                    display: block;
+                                    border-radius: 50%;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    line-height: 28px;
+                                    text-align: center;
+                                    height: 30px;
+                                    width: 30px;
+                                    left: -11px;
+                            }
+
+                        }
+                        .vaSurvey .valutazione {text-align:center;border-bottom:solid 1px #ccc; height:17px;overflow:visible;
+                            .vaStar {
+                                cursor: pointer; display:inline-block;width:40px;height:35px;background: #fff url(/WB/fe/img/va_stars.gif) no-repeat center bottom;
+                                &.on {background-position: center top;}
+                            }
+                        }
+
+                    }
+                    .vaExtTop {    
+                        background: #fff;
+                        height: 50px;
+                        width: 100%;
+                        border-bottom: solid 1px #eee;
+                        .vaExtTitle {font-weight:bold;padding:15px;display:inline-block;}
+                         #vaLinguetta {
+                            background: transparent url(/WB/fe/img/tool_reduce.png) no-repeat center center;
+                           right:0;
+                         }
+                    }
+
+                   
+                    
+    
+
+                }
+        }
+    }
+
+    /*
+    &.extended {
+            width:580px;
+            .toolcont {border-radius:0 5px 5px 0}
+            #vaExtended {
+                overflow:hidden;
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+                border-radius: 5px 0 0 5px;
+                background:#fff;
+                position:absolute;
+                left:0;
+                height:480px;
+                display:block;
+                width:280px;
+                .vaExtTop { padding: 0;
+                  width:263px;float:right;
+                  height: 50px;
+                  border-bottom: solid 1px #ececec;
+                  background: #fff;
+                  #vaExtTitle {
+                      font-weight: bold;
+                      line-height: 50px;
+                      padding: 0;
+                      float: left;
+                      width: 220px}
+                  #vaLinguetta {line-height:50px;text-decoration:none; text-align:center; width:42px;float:right;
+                     .icon-reduce_toolbox {font-size:2px;display:block}
+                     .icon-enlarge_window {display:none}
+                      &:hover {
+                           .icon {color:#96c10c}
+                        }
+                  }
+                }
+                .vaExtBody {
+                    display: block;
+                    clear:both;
+                    padding: 15px 0 15px 17px;
+                    overflow-y: auto;
+                    height: 430px;
+                    img {max-width:100%}
+                }
+            }
+
+            &.extended-min {
+                width:342px; 
+                .toolcont {border-radius:0 5px 5px 5px;}
+                 #vaExtended { 
+                        box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+                        background:transparent;
+                        position: absolute;
+                        width: 42px;height:49px;
+                    #vaLinguetta {
+                        width:42px; display:block;
+                        height: 49px; background:#fff; border-radius:5px 0 0 5px; 
+                       
+                        .icon-reduce_toolbox {display:none}
+                        .icon-enlarge_window {display:inline-block}
+                     }
+                    .vaExtBody {
+                        display:none;
+                    }
+                }
+            }
+        }
+
+    */
+
+
+    .vaBottom {
+        display: none;
+    }
+}
+
+@media (max-width : 1023px) {
+    #virtAss {
+        
+        display:none !important;
+
+    }
+}

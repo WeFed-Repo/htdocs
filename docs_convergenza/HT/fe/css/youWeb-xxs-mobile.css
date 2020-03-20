@@ -1,0 +1,31 @@
+/* Css per xxs */
+.hidden-xxs{
+	display:none !important;
+}
+
+.titleSection{
+	padding-right:25px
+}
+.visible-mobile{
+	visibility:visible;
+}
+
+
+
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td, 
+.table>tfoot>tr>td {
+    padding: 3px 5px 3px 5px;
+} 
+
+#formAutoricaricaSoglia .col-xs-1{min-width:50px;clear:left;}
+#formAutoricaricaSoglia .col-xs-11{max-width:225px;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td]{margin-top:10px!important;}
+#mainContent #formAllarmiTitoli .col-xs-2,#mainContent #formAllarmiTitoli .col-xs-3{width:75%!important;}
+#mainContent #formAllarmiTitoli .col-xs-3{clear:both}
+#mainContent #formAllarmiTitoli .col-xs-2:last-child{width:15%!important;float: left};
+
+

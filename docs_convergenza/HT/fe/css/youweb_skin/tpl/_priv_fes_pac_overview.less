@@ -1,0 +1,160 @@
+
+
+/******REGOLE infografica PAC E PIC**********/
+
+.pic-pac_wrapper {
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.info-pic {
+    background: url('../img/pic_infografica.png') no-repeat center bottom;
+    height: 194px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #d1d1d1;
+    border-bottom: 0;
+    padding-top: 80px;
+}
+
+.info-pac {
+    background: url('../img/pac_infografica.png') no-repeat center 70px;
+    height: 293px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #d1d1d1;
+    border-top: 0;
+    padding-bottom: 90px;
+    margin-bottom: 70px;
+}
+
+.banner-inv {
+    background: #fff url('../img/banner_inv.png') no-repeat left center;
+    background-size: 100%;
+    color: @textColor;
+    margin: 0;
+    padding: 10px 0;
+    p {
+        font-size: 32px;
+        padding: 25px 20px 0 20px;
+    }
+    .btn {
+      &.btn-align-right {
+          margin-right: 10px;
+      }
+    }
+}
+
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .info-pic {
+        background: url('../img/pic_infografica_2x.png') no-repeat center bottom;
+        background-size: 610px;
+    }
+
+    .info-pac {
+        background: url('../img/pac_infografica_2x.png') no-repeat center 70px;
+        background-size: 610px;
+    }
+
+    .pic-pac_wrapper {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner-inv {
+        p {
+            font-size: 25px;
+            padding: 6px 20px 0 20px;
+            margin: 5px 0 2% 0;
+        }
+
+        .form-group .btn {
+            width: auto;
+            margin: 0 10px 0 0;
+            height: 34px;
+            line-height: 34px;
+        }
+
+        .btn-align-right {
+            float: right;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner-inv {
+        p {
+            font-size: 15px;
+            padding: 6px 20px 0 20px;
+            margin: 3px 0 1% 0;
+        }
+
+        .form-group .btn {
+            height: 26px;
+            line-height: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-inv {
+        background: #fff url('../img/banner_inv_320.png') no-repeat right 0;
+        background-size: 100%;
+
+        p {
+            font-size: 13px;
+            padding: 0;
+            margin: 5px 0 2% 0;
+        }
+
+        .form-group .btn {
+            width: auto;
+            margin: 0 5px 0 0;
+            height: 24px;
+            line-height: 24px;
+            font-size: 11px;
+            padding: 1px 6px 3px 6px;
+        }
+
+        .btn-align-right {
+            float: right;
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-pic {
+        background: url('../img/pic_infografica_320.png') no-repeat center 0;
+        height: 230px;
+        border: 0;
+        margin-bottom: 30px;
+    }
+
+    .info-pac {
+        background: url('../img/pac_infografica_320.png') no-repeat center 0;
+        height: 234px;
+        border: 0;
+    }
+
+    .pic-pac_wrapper {
+        padding: 0 15px;
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .info-pic {
+        background: url('../img/pic_infografica_320_2x.png') no-repeat center 0;
+        background-size: 290px;
+    }
+
+    .info-pac {
+        background: url('../img/pac_infografica_320_2x.png') no-repeat center 0;
+        background-size: 290px;
+    }
+
+    .pic-pac_wrapper {
+        padding: 0 15px;
+        background-color: #fff;
+    }
+}

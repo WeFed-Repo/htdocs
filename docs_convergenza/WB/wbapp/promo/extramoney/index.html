@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - ExtraMoney</title>
+		<meta name="description" content="Webank - ExtraMoney"/>
+		<!-- / SEO -->
+		<link rel="stylesheet" href="/wbapp/css/wv_promo.css"></link>
+		<style>
+		/* WEB FONT BARIOL */
+		@font-face {
+			font-family: 'Bariol';
+			src: url('/font/BariolRegular.eot');
+			src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+		}
+
+		body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+		/* Wrappers */
+		#main {max-width:640px;margin: 0 auto}
+
+		/* Heading */
+		#heading {float:left;width:100%;background-color:#272727;height:17em}
+		#heading a {float:left;width:100%;line-height:0}
+		#heading img {width:100%;}
+
+		/* CTA goto */
+		#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+		#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+		#goto .cta span {padding:0 5%}
+		#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#8ab10b}
+
+		/* Contenuti */
+		#content {display:none;padding:2em 0;float:left;width:100%;background: #fff url("/wbapp/promo/extramoney/img/top_arrow.png") no-repeat center -1em; min-height:30em}
+
+		/* Suddivisione in colonne */
+		#content .col1 {width:90%;margin:0 0 0 5%;float:left;text-align:center} 	
+
+		/* Forme e decliazione dei contenuti */
+		.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+		.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.1em}
+		.col1 span {width:100%;text-align:left;float:left;line-height:1.6em;font-size:1.2em}
+		.col2 span {color:#666}
+
+
+		/* Declinazioni del font*/
+		.col1.col1Left span.grande {font-size:1.4em;color:#666}
+		span.grande {font-size:1.4em}
+		span.mega {font-size:1.3em;font-weight:bold}
+		span.green {color:#8ab10b}
+		span.dark {color:#666}
+		span.titfootnote {text-align:center;}
+		span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em;text-align:center;}
+
+		/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/ text-align:left; height:auto; overflow-y:hidden;}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/extramoney/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/extramoney/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+		/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+		/* CTA */
+		a.btn {display:inline-block;float:none;margin:0.5em auto;width:40%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+		a.link{color:#000}
+
+		/* DECLINAZIONI PER STATUS */
+		body.dettagli #goto {display:none}
+		body.dettagli #heading {height:auto !important}
+		body.dettagli #content {display:block !important}
+
+		body.nuovo #goto .new {display:inline}
+
+		/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/extramoney/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/extramoney/img/frecciaSu2.gif');}
+				
+			}
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/extramoney/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="mega green">SOLO PER TE UN TASSO SPECIALE!</span>
+					<span class="grande">Porta nuova liquidit&agrave; sul tuo conto entro il 5 maggio 2016, per te l'<strong>1,80% lordo annuo</strong> sulle linee vincolate a 6 mesi attivate entro il 15 maggio 2016</span><br>&nbsp;
+					<span class="mega green">APPROFITTANE SUBITO!</span>
+					<span class="grande">Controlla la tua disponibilit&agrave; ExtraMoney e scopri tutti i dettagli della promozione nella tua area privata.</span>
+				</div>
+				<!-- fine spazio per testo -->				
+				
+				<!-- regolamento e chiusura -->
+				<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+									<!-- REGOLAMENTO -->									
+									<span class="maintitle">PORTA NUOVA LIQUIDIT&Agrave; IN WEBANK</span>
+									<span class="title">VALIDIT&Agrave;</span>
+									<p>La promozione &egrave; valida dal 01 aprile 2016 al 15 maggio 2016.</p>
+									
+									<span class="title">CHI PU&Ograve; ADERIRE ALLA PROMOZIONE </span>
+									<p>La promozione &egrave; riservata ai clienti titolari di Conto Webank aperto alla data del 31 marzo 2016.</p>
+																		
+									<div class="leggiReg" id="vedi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+									</div>
+									<div id="hiddenRegolamento" style="display:none">
+								
+										<span class="title">OGGETTO DELL'INIZIATIVA</span>
+										<p>
+											I clienti che apportano in Webank Nuova Liquidit&agrave; nel periodo compreso tra il 01 aprile 2016 e il 05 maggio 2016 compresi, hanno la possibilit&agrave; di attivare, dal 05 aprile al 15 maggio 2016 compresi, una o pi&ugrave; linee vincolate a 6 mesi al tasso di interesse del 1,80% annuo lordo per un importo massimo pari a quello della Nuova Liquidit&agrave; apportata secondo le modalit&agrave; di seguito indicate.
+										</p>										
+										
+										<span class="title">FUNZIONAMENTO DELL'INIZIATIVA</span>
+										<p>
+											La Nuova Liquidit&agrave; &egrave; calcolata come somma algebrica della Liquidit&agrave; in entrata al netto della Liquidit&agrave; in uscita nel periodo di riferimento (01.04.2016-05.05.2016). Il calcolo &egrave; effettuato una volta al giorno e fa fede per il cliente l'importo visualizzato nella sezione privata del sito alla voce &quot;Disponibilit&agrave; ExtraMoney&quot;. L'importo viene visualizzato il giorno successivo a quello della contabilizzazione delle operazioni sul conto corrente.
+										</p>
+										
+										<p>La Liquidit&agrave; in entrata &egrave; costituita da tutti i versamenti e gli accrediti complessivamente contabilizzati sul conto corrente Webank dal 01 aprile 2016 al 05 maggio 2016.</p>
+										
+										<p>Le somme derivanti dal versamento su conto corrente di assegni e/o vaglia postali concorrono al calcolo della liquidit&agrave; in entrata nel giorno di contabilizzazione e saranno vincolabili dalla data di effettiva disponibilit&agrave;.</p>
+										
+										<p>Sono esclusi:</p>
+										<ul style="margin-top:0">
+											<li>gli importi derivanti dalla vendita e dal rimborso di titoli, Fondi comuni d'investimento, Sicav e altri strumenti finanziari detenuti presso Webank (ad eccezione di cedole e dividendi) oltre ai proventi derivanti dal prestito titoli;</li>
+											<li>i bonifici o i trasferimenti di liquidit&agrave; provenienti da conti correnti Webank o dalle banche del Gruppo Bipiemme (giroconti e bonifici generici), con l'eccezione degli accrediti relativi a stipendi, pensioni, onorari o emolumenti in generale;</li>
+											<li>tutti i trasferimenti tra deposito di risparmio Webank e conto corrente operativo Webank;</li>
+											<li>le somme, comprensive degli interessi, provenienti dal disinvestimento o dalla scadenza di altre linee vincolate del deposito di risparmio Webank.</li>
+										</ul>
+										
+										<p>La Liquidit&agrave; in uscita &egrave; costituita da tutte le uscite del conto corrente operativo (ad esempio: bonifici in uscita, prelievi presso agenzie o bancomat, addebito assegni, POS, addebiti SDD, carte di credito, ecc.) complessivamente contabilizzate sul conto corrente Webank dal 01 aprile 2016 al 05 maggio 2016.</p>
+										
+										<p>Sono esclusi:</p>
+										<ul style="margin-top:0">
+											<li>gli importi derivanti dall'applicazione dell'imposta di bollo fissa dovuta sulle somme non vincolate in conto corrente;</li>
+											<li>gli importi derivanti dall'applicazione dell'imposta di bollo proporzionale dovuta sulle somme vincolate in conto corrente e sul deposito titoli.</li>
+										</ul>											
+										
+										<span class="title">AVVERTENZE</span>
+										<p>
+											La banca si riserva di verificare che il cliente si trovi nelle condizioni d'offerta, descritte nel presente regolamento, anche in un momento successivo.
+										</p>
+										
+										<p>
+											L'importo massimo complessivamente vincolabile per singolo conto corrente &egrave; pari a 1 milione di Euro. Gli interessi verranno liquidati entro due giorni successivi alla scadenza del vincolo.
+										</p>
+										
+										<p>
+											Il cliente ha la facolt&agrave; di procedere, in qualsiasi momento nel corso della durata di un investimento nella linea ExtraMoney, allo svincolo anticipato parziale o totale delle somme. Sull'importo eventualmente svincolato vengono riconosciuti gli interessi previsti per il deposito di risparmio libero anzich&egrave; quelli previsti dalla linea promozionale ExtraMoney.
+										</p>
+										
+										<p>
+											Sulle somme non vincolate in conto corrente &egrave; dovuta l'imposta di bollo fissa, sulle linee vincolate in conto corrente &egrave; dovuta l'imposta di bollo proporzionale come da normativa tempo per tempo in vigore. Alla remunerazione delle giacenze &egrave; applicata la ritenuta fiscale come da normativa tempo per tempo in vigore. Le imposte e gli oneri fiscali sono a carico del cliente.
+										</p>										
+										
+										<span class="title">Esempio di calcolo liquidit&agrave; in entrata e in uscita</span>
+										<p style="background-color:#eae8e8">
+											05/04/2016 Saldo disponibile: 20.000 &euro;<br><br>
+											12/04/2016 Liquidit&agrave; in entrata per bonifico in ingresso da banca non appartenente al Gruppo BPM: 55.000 &euro;<br>Nuova Liquidit&agrave; al 13/04/2016 = 55.000 &euro;<br><br>
+											18/04/2016 Liquidit&agrave; in uscita per addebito assegno: 10.000 &euro;<br>Nuova Liquidit&agrave; all'19/04/2016 = 55.000 – 10.000 = 45.000 &euro;<br><br>
+											20/04/2016 Vendita titoli: 15.000 &euro;<br>La Nuova Liquidit&agrave; non varia ed &egrave; sempre pari a 45.000 &euro;<br><br>
+											21/04/2016 Liquidit&agrave; in entrata per bonifico in ingresso da conto BPM: 5.000€<br>La Nuova Liquidit&agrave; non varia ed &egrave; sempre pari a 45.000 &euro;<br><br>
+											27/04/2016 Liquidit&agrave; in entrata per accredito stipendio: 2.500 &euro;<br>Nuova liquidit&agrave; al 28/04/2016 = 45.000 + 2.500 = 47.500 &euro;<br><br>
+										</p>
+										
+										<span class="title">PUBBLICIT&Agrave; DI SVOLGIMENTO DELLA MANIFESTAZIONE</span>
+										<p>
+											Attraverso la comunicazione via e-mail, banner e pagine dedicate sul sito www.webank.it.
+										</p>
+										
+										<span class="title">MEZZI E MODALIT&Agrave; DI CONSULTAZIONE DEL REGOLAMENTO</span>
+										<p>
+											Il presente regolamento &egrave; a disposizione degli utenti finali nell'area privata del sito www.webank.it, al percorso Sportello &gt; Gestione deposito &gt; Linee vincolate &gt; Promozione ExtraMoney.
+										</p>								
+										
+										<p>Ulteriori informazioni sull'iniziativa possono essere richieste contattando il Servizio Clienti Webank.</p>
+										
+										<div class="leggiReg" id="chiudi">
+											<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<span class="titfootnote"><br>MESSAGGIO PROMOZIONALE</span>
+					<span class="footnote">Per ulteriori informazioni sulle condizioni economiche e contrattuali, fare riferimento ai Fogli Informativi disponibili sul sito www.webank.it.</span>
+					</div>
+				<!-- fine regolamento e chiusura -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

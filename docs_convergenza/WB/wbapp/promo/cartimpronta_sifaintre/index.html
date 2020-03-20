@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Cartimpronta</title>
+		<meta name="description" content="Webank - Cartimpronta"/>
+		<!-- / SEO -->
+		<!--link rel="stylesheet" href="/wbapp/css/wv_promo.css"></link-->
+		<style>
+		/* WEB FONT BARIOL */
+		@font-face {
+			font-family: 'Bariol';
+			src: url('/font/BariolRegular.eot');
+			src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+		}
+
+		body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+		/* Wrappers */
+		#main {max-width:640px;margin: 0 auto}
+
+		/* Heading */
+		#heading {float:left;width:100%;background-color:#8ab10b;height:17em}
+		#heading a {float:left;width:100%;line-height:0}
+		#heading img {width:100%;}
+
+		/* CTA goto */
+		#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+		#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+		#goto .cta span {padding:0 5%}
+		#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#8ab10b}
+
+		/* Contenuti */
+		#content {display:none;padding:2em 0;float:left;width:100%;background: #fff url("/wbapp/promo/cartimpronta/img/top_arrow.png") no-repeat center -1em; min-height:30em}
+
+		/* Suddivisione in colonne */
+		#content .col1 {width:90%;margin:0 0 0 5%;float:left;text-align:center} 
+		#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+		#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}
+
+		/* Forme e decliazione dei contenuti */
+		.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+		.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+		.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+		.banner {background-image: url(/wbapp/promo/cartimpronta_totalerg_utilizzo/img/banner.png); background-position:0 0;background-repeat:no-repeat;height:9em;width:9em; margin-left:-0.4em;margin-top:1em;}
+
+
+		/* Declinazioni del font*/
+		span.grande {font-size:1.4em}
+		span.mega {font-size:1.5em;font-weight:bold}
+		span.green {color:#8ab10b}
+		span.dark {color:#666}
+		span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em}
+
+		/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+		/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+		/* CTA */
+		a.btn {display:inline-block;float:none;margin:0.5em auto;width:40%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+		a.link{color:#000}
+
+		/* Separatori */
+		hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+		/* DECLINAZIONI PER STATUS */
+		body.dettagli #goto {display:none}
+		body.dettagli #heading {height:auto !important}
+		body.dettagli #content {display:block !important}
+
+		body.nuovo #goto .new {display:inline}
+
+		/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/frecciaSu2.gif');}
+				
+			}
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;"><img src="/wbapp/promo/cartimpronta_sifaintre/img/top.png"></a>
+			</div>
+			
+			<div id="content">
+				<!-- blocco a 3 colonne -->
+				<div class="col3">
+					<div class="col">
+						<div style="background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/img_richiedila.png')" class="visimg"></div>
+						<span class="grande dark">1 - RICHIEDILA</span>
+						<span>dal 26/10<br>al 19/12/2015</span>
+					</div>
+					<div class="col">
+						<div style="background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/img_attivala.png')" class="visimg"></div>
+						<span class="grande dark">2 - ATTIVALA</span>
+						<span>entro il<br>31/01/2016</span>
+					</div>
+					<div class="col">
+						<div style="background-image: url('/wbapp/promo/cartimpronta_sifaintre/img/img_buoni.png')" class="visimg"></div>
+						<span class="grande dark">3 - PARTECIPI</span>
+						<span>all'estrazione<br>di 30 buoni</span>
+					</div>
+				</div>
+				<!-- fine blocco a 3 colonne -->
+				
+				<!-- separatore  -->
+				<hr class="dashed" />
+				<!-- fine separatore -->
+				
+				<!-- spazio per promo -->
+				<div class="col1">
+					<span class="mega green">RICHIEDI LA TUA CARTIMPRONTA. &Egrave; GRATIS!</span>
+					<a class="btn" href="tel:800060070">Chiama</a>
+					<span class="mega green">800 060 070</span>
+					<span>luned&igrave; - venerdì 8:30 - 21:00, sabato 9:00 - 17:00</span>
+					<span class="grande">oppure accedi alla sezione Carte<br>della tua area privata sul sito www.webank.it</span>
+				</div>
+				<!-- fine spazio per promo -->
+				
+				<!-- separatore  -->
+				<hr class="dashed" />
+				<!-- fine separatore -->
+				
+				<!-- regolamento e chiusura -->
+				<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento concorso a premi</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+									<!-- REGOLAMENTO -->
+									<span class="maintitle">denominata &ldquo;Richiedi Cartimpronta e scegli il tuo buono&rdquo;</span>
+									<span class="title">SOGGETTO PROMOTORE</span>
+									<p>
+										Banca Popolare di Milano S.c.a.r.l<br>
+										Piazza Meda 4 - 20121 Milano<br>
+										CF e PI: 00715120150 
+									</p>
+
+									<span class="title">AMBITO TERRITORIALE</span>
+									<p>
+										Territorio della Repubblica Italiana (di seguito &ldquo;Italia&rdquo; o &ldquo;Territorio&rdquo;).
+									</p>
+									
+									<div class="leggiReg" id="vedi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+									</div>
+									<div id="hiddenRegolamento" style="display:none">
+										<span class="title">DURATA DELLA MANIFESTAZIONE</span>
+										<p>
+											Dal 26 Ottobre 2015 al 31 Gennaio 2016 con estrazione finale entro il 28 Febbraio 2016. 
+											Banca Popolare di Milano si impegna a non dare inizio alla presente manifestazione a 
+											premi prima dell'avvenuta comunicazione al Ministero dello Sviluppo Economico.
+										</p>
+										
+										<span class="title">PRODOTTO PROMOZIONATO</span>
+										<p>
+											Il Concorso ha il fine di incentivare la richiesta e l'attivazione della Carta di credito Cartimpronta 
+											con addebito su Conto Webank.
+										</p>
+										
+										<span class="title">DESTINATARI DEI PREMI</span>
+										<p>
+											Il concorso &egrave; rivolto a tutti i titolari di un Conto Webank che avranno ricevuto la 
+											comunicazione commerciale dell'iniziativa denominata &ldquo;Richiedi Cartimpronta e scegli 
+											il tuo buono&rdquo; mediante e-mail pubblicitarie o comunicazione dedicata sul sito www.webank.it.<br>
+											Sono esclusi dalla partecipazione coloro che alla data di avvio di detta manifestazione 
+											a premi abbiano gi&agrave; effettuato richiesta di Cartimpronta con addebito su Conto Webank 
+											o siano gi&agrave; in possesso di una Cartimpronta con addebito su Conto Webank, coloro che 
+											presenteranno situazioni di scoperto sul Conto Webank e i possessori di conto tecnico, 
+											coloro ai quali verr&agrave; rifiutata l'emissione della carta di credito Cartimpronta 
+											in seguito a valutazione da parte di Banca Popolare di Milano.<br>
+											Sono esclusi dal concorso i dipendenti e i promotori finanziari di Banca Popolare di 
+											Milano e delle Societ&agrave; del Gruppo Bipiemme (Banca Popolare di Mantova, Banca Akros e ProFamily).
+										</p>
+										
+										<span class="title">COMUNICAZIONE</span>
+										<p>
+											Il Concorso sar&agrave; veicolato tramite comunicazioni all'interno dell'area privata del 
+											sito internet www.webank.it, attraverso l'invio di email, attraverso comunicazione 
+											push notification, attraverso SMS e attraverso contatto telefonico ai Destinatari.<br>
+											Il regolamento completo del Concorso sar&agrave; inviato via mail e sar&agrave; disponibile alla 
+											pagina www.webank.it/richiedicartimprontascegliilbuono.
+										</p>
+										
+										<span class="title">MODALIT&Agrave; DI SVOLGIMENTO DELLA MANIFESTAZIONE</span>
+										<p>
+											I Destinatari che tra il 26 Ottobre 2015 e il 19 Dicembre 2015 richiederanno la 
+											<strong>carta di credito Cartimpronta</strong> con addebito su Conto Webank e entro 
+											il 31 Gennaio 2016 ne perfezioneranno l'attivazione, parteciperanno automaticamente 
+											all'estrazione finale di n&deg; 30 Buoni a scelta tra:<br>
+											- Buoni Carburante Web TotalErg del valore di 120,00&euro; cad IVA inclusa,<br>
+											oppure<br>
+											- Buoni acquisto Mediaworld compra on-line, del valore di &euro; 120,00 IVA inclusa,<br>
+											oppure<br>
+											- Buono Acquisto PayPal spendibile sul Sito www.ebay.it, del valore di &euro; 120,00 IVA inclusa.
+											<br><br>
+											<strong>L'estrazione avverr&agrave; a Milano entro il 28 Febbraio 2016 alla presenza 
+											di un Notaio o di un Funzionario Camerale e saranno previste in totale n&deg; 10 riserve 
+											con le modalit&agrave; di seguito indicate.</strong><br><br>
+											<strong>La partecipazione potr&agrave; avvenire solamente qualora la richiesta di sottoscrizione 
+											e l'attivazione della carta di credito avvengano all'interno del periodo di validit&agrave; 
+											della presente manifestazione.</strong><br>
+											<strong>L'emissione della carta &egrave; gratuita ed &egrave; sempre soggetta a valutazione 
+											da parte della banca.</strong><br><br>
+											<strong>Si specifica che ogni titolare non potr&agrave; vincere pi&ugrave; di un premio nel corso 
+											della manifestazione, ma nel</strong> caso in cui il cliente sia intestatario di pi&ugrave; conti, 
+											potr&agrave; partecipare all'estrazione il numero di volte corrispondente al numero 
+											di Carte di Credito Cartimpronta con addebito su Conto Webank richieste e attivate, 
+											posto che per ognuna vengano soddisfatte le condizioni sopra indicate.
+										</p>
+
+										<span class="title">TECNICA DI PREMIAZIONE E COMUNICAZIONE DI VINCITA</span>
+										<p>
+											Terminato il periodo di partecipazione alla manifestazione, il sistema produrr&agrave; 
+											un file in formato excel con l'elenco contenente i nominativi di tutti coloro 
+											che avranno rispettato i requisiti di partecipazione descritti sopra e dall'elenco 
+											verranno estratti N&deg; 30 nominativi. Verranno inoltre previsti N&deg; 10 nominativi di 
+											riserva, che saranno contattati, in ordine di estrazione, nel caso in cui i nominativi 
+											estratti non fossero in regola con le norme del concorso o non siano reperibili.<br><br>
+											Entro 5 giorni lavorativi dall'estrazione finale, i soggetti estratti verranno informati 
+											telefonicamente (per n. 2 tentativi al giorno effettuati in 2 giorni differenti) e la 
+											comunicazione ufficiale di vincita verr&agrave; inviata entro 5 giorni lavorativi via e-mail 
+											ai recapiti rilasciati durante la sottoscrizione del Conto Webank, o eventualmente a 
+											quelli successivamente comunicati alla Banca, e per convalidare la vincita dovranno 
+											inviare una e-mail di accettazione entro 5 giorni lavorativi dall'avviso di vincita, 
+											accedendo all'area privata del sito Webank dell'intestatario della Carta di Credito 
+											Cartimpronta estratta, pena l'annullamento della vincita. Le istruzioni per la convalida 
+											e per la scelta del premio saranno indicate nella mail che i vincitori riceveranno. 
+											Una volta effettuata la scelta, la stessa non potr&agrave; essere pi&ugrave; modificata.<br><br>
+											L'erogazione del premio verr&agrave; effettuata ai soggetti estratti che avranno inviato nel 
+											termine sopra citato e-mail di accettazione, solo se gli stessi risulteranno in regola 
+											con i pagamenti della loro Carta di Credito Cartimpronta e se gli stessi non 
+											presenteranno situazioni di scoperto sul Conto Webank alla data dell'estrazione finale. 
+											Inoltre, per avere diritto al premio, il partecipante dovr&agrave; risultare ancora 
+											Titolare della Carta di Credito Cartimpronta alla data prevista per l'estrazione. 
+											La societ&agrave; promotrice si riserva la facolt&agrave; di effettuare tutti gli opportuni 
+											controlli al fine di verificare la corretta posizione dei Titolari risultati 
+											vincitori dei premi in palio.
+										</p>
+										
+										<span class="title">MONTEPREMI<br>N. 30 Buoni a scelta tra i seguenti:</span>&nbsp;
+										<ul>
+											<li>Buoni Carburante Web TotalErg del valore di &euro; 120,00 cad IVA inclusa 
+											spendibili per rifornimenti nei Punti vendita TotalErg abilitati ed in presenza del 
+											Gestore* entro 6 mesi dalla data di emissione del buono,</li>
+											<li>Buoni acquisto Mediaworld** spendibili sul sito di Mediaworld compra 
+											on-line (http://compraonline.mediaworld.it) e usufruibili entro dieci mesi dalla 
+											data di consegna, del valore di &euro; 120,00 IVA inclusa,</li>
+											<li>Buono Acquisto PayPal*** spendibile sul Sito www.ebay.it e usufruibile 
+											entro quattro mesi dalla data di consegna, del valore di &euro; 120,00 IVA inclusa.</li>
+										</ul>
+										<p>
+											<strong>Totale montepremi complessivo: Euro 3.600,00 IVA inclusa.</strong><br>
+											Banca Popolare di Milano presta idonea garanzia a favore del Ministero dello 
+											Sviluppo Economico, in ragione del 100% di tale importo.<br><br>
+											*L'elenco degli punti vendita TotalErg presso i quali sar&agrave; possibile utilizzare 
+											i Buoni Carburante Web e le relative istruzioni per l'utilizzo sono disponibili 
+											sul sito www.totalerg.it. Gli stessi dovranno essere stampati e consegnati al 
+											Gestore del Punto Vendita TotalErg per l'utilizzo al momento del rifornimento.<br>
+											** Per utilizzare il &ldquo;Buono acquisto&rdquo; Media World &egrave; sufficiente scegliere il bene 
+											desiderato fra quelli disponibili sul sito, arrivare alla schermata degli strumenti 
+											di pagamento, inserire il codice e il valore del &ldquo;Buono acquisto&rdquo; nella pagina che 
+											comparir&agrave; selezionando l'opzione &ldquo;Buoni e carte EasyGift&rdquo;. Qualora l'ammontare 
+											complessivo della transazione, comprensiva di spese di spedizione, dovesse avere 
+											un valore superiore a quello del Buono, sar&agrave; necessario integrare la differenza 
+											utilizzando altri strumenti di pagamento. L'utilizzo parziale del Buono dar&agrave; 
+											diritto a spendere l'ammontare del valore residuo nelle transazioni successive.<br>
+											*** Per utilizzare il &ldquo;Buono acquisto&rdquo; PayPal &egrave; sufficiente scegliere i prodotti 
+											desiderati fra quelli disponibili sul sito eBay, arrivare alla schermata degli 
+											strumenti di pagamento, inserire il codice &ldquo;Buono acquisto&rdquo; ed effettuare 
+											il pagamento mediante PayPal. Il Buono acquisto deve essere utilizzato in un'unica soluzione. 
+											Un eventuale utilizzo parziale non dar&agrave; diritto al rimborso dell'importo non utilizzato. 
+											L'utilizzo del Buono acquisto &egrave; soggetto ai termini e condizioni pubblicati 
+											alla pagina http://pages.ebay.it/buono_sconto/
+										</p>
+										
+										<span class="title">MODALIT&Agrave; DI CONSEGNA DEI PREMI</span><br>
+										<p>
+											Banca Popolare di Milano, entro 180 giorni dalla data dell'estrazione, 
+											come previsto dall'art. 1 comma 3 del D.P.R. n. 430 - 26 Ottobre 2001, 
+											consegner&agrave; al partecipante vincente e avente diritto, il premio tramite email 
+											all'indirizzo di posta elettronica precedentemente inserito dal cliente e 
+											memorizzato nella sezione &ldquo;dati e impostazioni personali&rdquo; della parte privata del 
+											sito www.webank.it. Banca Popolare di Milano non si assume nessuna responsabilit&agrave; in 
+											caso di mancato contatto con i partecipanti o di mancato recapito dell'avviso di 
+											vincita e/o del premio dovuti all'indicazione da parte dei vincitori di indirizzi 
+											e/o dati personali errati o non veritieri o non aggiornati.<br>
+											Il vincitore che non potesse o volesse usufruire del premio non avr&agrave; diritto 
+											ad alcuna somma di denaro.<br>
+											Il premio in palio non pu&ograve; essere convertito n&acute; in denaro n&acute; in gettoni d'oro.
+										</p>
+										
+										<span class="title">RICHIESTA DI PREMI NON PI&Ugrave; DISPONIBILI SUL MERCATO O MODIFICATI RISPETTO A QUELLI PROMESSI</span>
+										<p>
+											L'avente diritto, una volta maturato il premio, non potr&agrave; pretendere in alcun modo che 
+											il premio indicato e raffigurato originariamente sul materiale pubblicitario a lui 
+											sottoposto preventivamente, gli sia consegnato se al momento dell'invio il premio 
+											non sar&agrave; disponibile per impossibilit&agrave; sopravvenuta o per causa non imputabile al soggetto promotore.<br>
+											Verr&agrave; pertanto inviato un premio della stessa natura di valore uguale o superiore.
+										</p>
+										
+										<span class="title">I PREMI NON RICHIESTI O NON ASSEGNATI</span>
+										<p>
+											I premi non richiesti o non assegnati, diversamente da quelli rifiutati 
+											verranno devoluti a: Associazione Children in Crisis Italy Onlus, 
+											Foro Buonaparte, 76 - 20121 Milano - C.F: 97242500151.
+										</p>
+										
+										<span class="title">RINUNCIA ALLA FACOLT&agrave; DI RIVALSA</span>
+										<p>
+											Banca Popolare di Milano dichiara di rinunciare fin d'ora al diritto di 
+											rivalsa per quanto attiene il versamento dell'IRPEF di cui all'art. precedente come 
+											previsto dell'art. 30 DPR 600/1973.
+										</p>
+										
+										<span class="title">TRATTAMENTO DATI PERSONALI</span>
+										<p>
+											Banca Popolare di Milano dichiara che la partecipazione al presente concorso 
+											a premi presuppone il trattamento dei dati personali dei partecipanti nel rispetto 
+											del Decreto Legislativo del 30/06/2003 n&deg;196 &ldquo;Codice in materia di protezione dei 
+											dati personali&rdquo; e successive modifiche, così come dettagliato e specificato 
+											dall'informativa ai sensi dell'art. 13 di detto Decreto, che verr&agrave; resa ai partecipanti 
+											al concorso a premi in fase di apertura del &ldquo;Conto Webank&rdquo;.<br>
+											Il conseguimento delle finalit&agrave; di cui al presente regolamento potr&agrave; avvenire anche 
+											per mezzo di trasmissione e comunicazione di dati a terzi, con ci&ograve; si intende terzi 
+											autorizzati al correlato trattamento dei dati stessi, in quanto svolgono o forniscono 
+											specifici servizi strettamente funzionali all'esecuzione del concorso a premi 
+											ovvero in quanto nominati responsabili del trattamento ai sensi dell'art. 29 del Decreto. 
+											La lista completa dei responsabili &egrave; disponibile presso la societ&agrave;.
+										</p>
+										
+										<span class="title">ULTERIORI INFORMAZIONI</span>
+										<p>
+											Per qualsiasi informazione inerente il presente Concorso si potranno contattare 
+											il numero verde WeBank 800.148.149 o scrivere all'indirizzo e-mail: webank@webank.it.
+										</p>
+										
+										<span class="title">VARIE</span>
+										<p>
+											Il responsabile tecnico incaricato della societ&agrave; promotrice della realizzazione 
+											e gestione del software per la partecipazione al presente concorso, rilascia 
+											dichiarazione sostitutiva di atto notorio relativamente a:
+											<ul>
+												<li>l'adozione di opportuni accorgimenti per impedire interventi esterni 
+												per modificare il software e/o influenzare le vincite;</li>
+												<li>l'adozione di opportune misure di sicurezza del sistema necessarie e 
+												sufficienti a garantire la tutela della fede pubblica.</li>
+											</ul>
+										</p>
+										<p>
+											Si attesta che il server che raccoglie le informazioni sulle carte di credito 
+											ha sede in Italia presso la Societ&agrave; CartaSi S.p.A., Corso Sempione, 55 - 20145 Milano.
+											<br><br>
+											La Societ&agrave; promotrice non si assume alcuna responsabilit&agrave;:
+											<ul>
+												<li>per cause a lei non imputabili (es. sovraccarico di rete, assenza di rete...) 
+												che comportino l'impossibilit&agrave; ad accedere al sito;</li>
+												<li>per caselle di posta elettronica piene che non consentono pertanto la 
+												ricezione di e-mail inviate da Banca Popolare di Milano;</li>
+												<li>per indirizzi e-mail errati o incompleti indicati dal partecipante 
+												in fase di apertura del conto;</li>
+												<li>per mancata risposta dall'host computer dopo l'invio di e-mail da 
+												parte di Banca Popolare di Milano.</li>
+											</ul>
+										</p>
+										<p>
+											I partecipanti sono quindi invitati a controllare la propria casella di 
+											posta elettronica (anche tra le spam).
+										</p>
+										
+										<span class="title">ARTICOLI</span>
+										<p>
+											Per quanto non espressamente indicato nel presente regolamento, 
+											trova attuazione il D.P.R. 430 del 26/10/2001.
+										</p>
+						
+										<div class="leggiReg" id="chiudi">
+											<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span>
+						<span class="footnote"><br>
+							Concorso a premi valido dal 26/10/2015 al 31/01/2016.<br>
+							Estrazione finale entro 28/02/2016.<br>
+							Montepremi Euro 3.600,00 Iva inclusa. Regolamento disponibile a questo <a href="http://www.webank.it/richiedicartimprontascegliilbuono" target="_blank" class="link">link</a>. Prendere visione delle 
+							condizioni economiche mediante i Fogli Informativi disponibili sul sito www.webank.it<br>
+							L'emissione della carta &egrave; sempre soggetta a valutazione da parte della banca.</span>
+					</div>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>

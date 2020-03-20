@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Promo Bolli</title>
+		<meta name="description" content="Webank - Promo Bolli"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#666}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#FFF;height:17em}
+			#heading a {float:left;width:100%;line-height:0;color:#8ab10b;}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:91%;margin:5% 0 0 4%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			/*#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}*/
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1 span.fascione {width:80%;text-align:left;float:left;line-height:1.4em;font-size:1.1em;margin:0 0 0 18%;padding:2% 0;color:#333}
+			.col1Left span {text-align:left;}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:1em;padding-bottom:17.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/promo_bolli/img/banner_01.png');background-size: 100% 100%;}
+			.banner02 {background-image: url('/wbapp/promo/promo_bolli/img/banner_02.png');background-size: 100% 100%;}
+			.banner03 {background-image: url('/wbapp/promo/promo_bolli/img/banner_03.png');background-size: 100% 100%;}
+			.wrapper{position:absolute;top:0;right:0;bottom:0;left:0;display:table-cell;vertical-align:middle}
+			ol{margin:0}
+			ol li{margin:0 0 10px 0}
+			ol.numIniz {padding-left:4%}
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.iper {font-size:1.9em;font-weight:bold}
+			span.green {color:#8ab10b}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em;color:#999}
+			span.piccolo {font-size:0.9em}
+			b.green {color:#8ab10b}
+			a {text-decoration:none;}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/mgm_2016/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/mgm_2016/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:50%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+			a.btn.green {
+			    background-color: #8ab10b;
+			    border-bottom: 0;
+			    border-radius: 40px;
+			    margin-bottom: 0;
+			}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/mgm_2016/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/mgm_2016/img/frecciaSu2.gif');}
+				
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/token/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="mega green">CAMBIA LA MODALIT&Agrave; DI ACCESSO AL SITO</span>
+					<span class="dark"><strong>Dal 20 novembre 2017</strong> la <strong>Carta dei Servizi Telematici</strong> sar&agrave; <strong>sostituita</strong> definitivamente da un nuovo strumento di sicurezza, che utilizzerai per accedere al sito Webank e autorizzare le disposizioni di pagamento.<br>
+
+					Puoi scegliere tra il <strong>Token App</strong> (App Webank Mobile) oppure il <strong>Token Fisico</strong>.<br>
+
+					Entra nella tua area privata, troverai informazioni utili e tutte le indicazioni da seguire per effettuare la scelta dello strumento di sicurezza che <strong>sostituir&agrave; definitivamente</strong> la tua Carta dei Servizi Telematici. In alternativa, segui il percorso <i>My home</i> &gt; <i>Dati e impostazioni personali</i> &gt; <i>Sicurezza dei dati</i> &gt; <i>Strumenti di sicurezza</i>.<br><br></span>
+					
+					<span class="mega green">TOKEN APP (APP WEBANK MOBILE)</span>
+
+					<span class="dark">Le funzioni di sicurezza sono <strong>integrate</strong> nell'App Webank Mobile. Questo ti permette di avere la tua Banca sempre a portata di mano e, con un unico strumento di sicurezza, consultare il conto corrente ed effettuare <strong>operazioni</strong> in qualsiasi momento, sia dall'app stessa che dal sito Webank.<br><br>
+
+					&Egrave; disponibile <strong>gratuitamente</strong> sugli store <a href="https://play.google.com/store/apps/details?id=com.opentecheng.android.webank&amp;hl=it" target="_blank"><b class="green">Google Play</b></a>, <a href="https://itunes.apple.com/it/app/webank/id306283651?mt=8" target="_blank"><b class="green">Apple Store</b></a> e <a href="https://www.microsoft.com/it-it/store/p/webank/9wzdncrdnfgm" target="_blank"><b class="green">Windows Phone</b></a>.
+					La comodit&agrave; di questo strumento &egrave; che non hai bisogno di portare con te un ulteriore dispositivo fisico quando vuoi operare sul tuo internet banking. Baster&agrave; avere con te il tuo smartphone.<br><br></span>
+
+					<span class="green">COME FUNZIONA</span>
+
+					<span class="dark">Dopo aver attivato l'App Webank Mobile come strumento di sicurezza, <strong>non ti sar&agrave; pi&ugrave; chiesta la password di II livello</strong> per accedere al sito ma ti baster&agrave; semplicemente fare un <strong>tap sulla notifica</strong> che riceverai automaticamente sullo smartphone.<br>
+
+					Per confermare le disposizioni di pagamento, dopo il tap sulla notifica ti sar&agrave; richiesto l'inserimento del <strong>Pin Personale</strong> (da 4 a 8 cifre) che avrai creato in fase di certificazione dell'App. Se lo smartphone la supporta, potrai utilizzare la tua <strong>impronta digitale</strong> al posto del Pin Personale.<br><br></span>
+					<span class="green">ATTENZIONE!</span><span class="dark">Scegli bene il tuo Pin Personale, ti servir&agrave; ogni volta che utilizzi Webank.<br><br></span>
+
+					<span class="green">COME ATTIVARLA</span>					
+					<span class="dark">
+					<ul>
+						<li><strong>Accedi</strong> da PC alla tua area privata del sito e segui il percorso <i>My home</i> &gt; <i>Dati e impostazioni personali</i> &gt; <i>Sicurezza dei dati</i> &gt; <i>Strumenti di sicurezza</i>, oppure digita Token App nella finestra di dialogo di Paolo, il nostro assistente virtuale;</li>
+						<li><strong>scarica</strong> o <strong>aggiorna</strong> dal tuo store di riferimento l'applicazione Webank per smartphone (disponibile per iOS, Android e Microsoft);</li>
+						<li>apri l'app e segui i semplici passaggi per la certificazione.</li>						
+					</ul></span>
+					<span class="dark">Una volta che avrai terminato l'app sar&agrave; associata al tuo smartphone ed alla tua User ID e sostituir&agrave; definitivamente la tua Carta dei Servizi Telematici.</span>
+
+					<div class="col1">
+						<a class="btn green" href="https://www.youtube.com/watch?v=zNe4dzJ7JMU" target="blank" title="GUARDA IL VIDEO">GUARDA IL VIDEO</a><br><br>
+					</div>
+
+
+					<span class="mega green">TOKEN FISICO</span>
+
+					<span class="dark">Se preferisci uno strumento fisico per gestire il tuo conto, puoi scegliere il Token Fisico. Un piccolo dispositivo personale che, portandolo con te, ti permette di accedere al tuo conto e confermare le disposizioni di pagamento in qualsiasi momento.<br><br>
+					<strong>Il Token Fisico ha un costo di attivazione di 15 &euro;</strong>. Utilizzerai un solo Token per gestire tutti i tuoi rapporti.<br><br></span>
+
+					<span class="green">COME FUNZIONA</span>	
+					<span class="dark">Il Token &egrave; uno strumento di sicurezza dedicato che genera codici numerici <strong>&quot;usa e getta&quot;</strong>. Per accedere all'area privata e confermare le disposizioni di pagamento ti sar&agrave; chiesto di inserire un codice di 6 cifre. Dovrai inserire il codice generato di volta in volta dal tuo token personale.<br><br></span>
+
+
+					<span class="green">COME ATTIVARLO</span>					
+					<span class="dark">
+					<ul>
+						<li><strong>Accedi</strong> da PC alla tua area privata del sito e segui il percorso <i>My home</i> &gt; <i>Dati e impostazioni personali</i> &gt; <i>Sicurezza dei dati</i> &gt; <i>Strumenti di sicurezza</i>, oppure digita Token Fisico nella finestra di dialogo di Paolo, il nostro assistente virtuale;</li>
+						<li>Seleziona &quot;Token Fisico&quot; e inserisci il tuo indirizzo di corrispondenza. Riceverai comodamente il token al recapito da te indicato.</li>					
+					</ul></span>
+
+					<span class="dark">Quando ne sarai in possesso accendilo tenendo premuto il pulsante <img src="/wbapp/promo/token/img/ico_play.gif" height="16px" width="16px"> e contemporaneamente il pulsante <img src="/wbapp/promo/token/img/ico_lucchetto.gif" height="16px" width="16px">. Il token &egrave; protetto da un Pin di 4 cifre che potrai scegliere alla prima accensione e non &egrave; modificabile in futuro.<br><br>
+					Per rendere operativo il token, occorre <b>attivarlo</b>: accedi al sito Webank con User ID e password e in pochi passi verrai guidato per completare l'attivazione.<br><br>
+					Per maggiori informazioni <a href="https://www.webank.it/doc/Attivazione_Token_Fisico_250917.pdf" target="_blank"><b class="green">leggi il documento</b></a>.<br><br></span>
+
+
+					<span class="mega green">FAQ</span>
+					<span class="green">1. E SE PERDO O MI RUBANO IL TELEFONO?</span>	
+					<span class="dark">Contatta subito il Customer Center al numero 800 060 070. In seguito potrai installare l'App su un nuovo smartphone.<br><br></span>	
+
+					<span class="green">2. E SE DISINSTALLO L'APP O CAMBIO TELEFONO?</span>	
+					<span class="dark">Per motivi di sicurezza solo una installazione dell'App associata alla tua User ID avr&agrave; attiva la funzionalit&agrave; di token digitale. Sar&agrave; la prima che certifichi.<br>Se hai cambiato telefono disattiva l'App precedente contattando il Customer Center all'800 060 070 prima di procedere alla nuova installazione.<br><br></span>
+
+					<span class="green">3. E SE HO PI&Ugrave; TELEFONI?</span>	
+					<span class="dark">L'App pu&ograve; essere installata su pi&ugrave; telefoni ma le installazioni successive alla prima non avranno attiva la funzionalit&agrave; di token digitale per autorizzare le operazioni da web.<br><br></span>	
+
+					<span class="green">4. IL MIO TELEFONO &Egrave; ABBASTANZA EVOLUTO?</span>	
+					<span class="dark">L'App che integra le funzionalit&agrave; di sicurezza &egrave; disponibile per:
+					<ul>
+						<li>iPhone con iOS versione 9 o superiore;</li>
+						<li>smartphone con Android versione 4.1 o superiore;</li>	
+						<li>smartphone con Windows 10 Mobile o superiore.</li>	
+					</ul>
+					La possibilit&agrave; di abilitare l'uso dell'impronta digitale verr&agrave; automaticamente proposta in fase di attivazione sui device che garantiscono un adeguato livello di sicurezza.<br><br></span>	
+
+					<span class="green">5. PERCH&Eacute; IL MIO TELEFONO NON RICEVE LE NOTIFICHE PUSH?</span>	
+					<span class="dark">Alcuni costruttori per massimizzare la durata della batteria impediscono la notifica ad applicazione chiusa, salvo impostazione di un parametro di configurazione del telefono.<br>In particolare per i modelli Huawei occorre andare in <i>Impostazioni</i> &gt; <i>impostazioni avanzate</i> &gt; <i>gestione batteria</i> &gt; <i>App protette e abilitare l'App Webank</i>.<br>
+					Per i dispositivi Asus seleziona Gestione avvio automatico &gt; App scaricate e di fianco all'icona dell'App Webank imposta l'avvio automatico su &quot;Consenti&quot;.<br>
+					A seguito della modifica dell'impostazione, per renderla effettiva, &egrave; necessario avviare almeno una volta l'App Webank.<br><br></span>	
+
+					<span class="green">6. E SE NON RICEVO LA NOTIFICA PERCH&Eacute; SONO OFFLINE?</span>	
+					<span class="dark">Potrai comunque generare un codice &quot;usa e getta&quot; utilizzando la funzione &quot;Genera codice token&quot; presente nell'app. Ti baster&agrave; inserire nella pagina web il codice generato.<br><br></span>	
+
+					<span class="green">7. SE PERDO O MI RUBANO IL TOKEN FISICO?</span>	
+					<span class="dark">Puoi bloccarlo chiamando il numero verde 800 060 070 e, successivamente, potrai richiederne uno nuovo.<br>Se hai con te il token ma hai dimenticato il Pin per accenderlo, chiamando il numero verde, con l'aiuto di un operatore potrai sbloccare il tuo token e ripristinarne le funzionalit&agrave;.<br><br></span>	
+					
+					<hr class="dashed">
+					<span class="green">ASSISTENZA SERVIZIO CLIENTI 800 060 070</span>	
+					<span class="dark">Dal luned&igrave; al venerd&igrave; dalle 8:00 alle 22:00 e il sabato dalle 9:00 alle 17:00<br>Il numero &egrave; a disposizione per assistenza e informazioni in caso di furto, smarrimento, blocco del Token App o Token Fisico</span>	
+
+					<hr class="dashed">
+
+
+
+
+					<span class="mega green"><br>GUIDA ALLA SICUREZZA</span>
+					<span class="dark">Per un ulteriore supporto ti forniamo una guida con alcune indicazioni operative sull'utilizzo degli strumenti di sicurezza del tuo conto, seguite da informazioni utili alla sicurezza online.<br>
+					Puoi salvarla sul tuo Pc oppure stamparla per poterla consultare quando ne hai bisogno.<br><br>
+					Leggi la <a href="https://www.webank.it/doc/Guida_Token_Privati_220917.pdf" target="_blank"><b class="green">Guida alla Sicurezza</b></a>.</span>
+
+
+
+				</div>				
+				<!-- fine spazio per testo -->
+
+				<br><br>
+				
+
+			</div>
+		</div>
+	</body>
+</html>	

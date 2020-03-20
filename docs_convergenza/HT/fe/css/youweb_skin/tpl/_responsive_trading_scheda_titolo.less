@@ -1,0 +1,149 @@
+.fundPanel {
+  @trendSize: 150px;
+  background: @tableStripe;
+  display: table;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  > .row,
+  > .trend {
+    width: 100%;
+    margin: 0;
+    padding:0;
+    > * {
+      margin: 0 !important;
+      padding: 0 15px !important;
+    }
+  }
+  > .row {
+    @media (min-width: @mdmin) {
+      width: ~"calc( 100% - @{trendSize} )";
+      float: right;
+    }
+  }
+  .icon-console {
+    text-align: center;
+    .btn-icon {
+      display: inline-block;
+    }
+  }
+  > .trend {
+    float: left;
+    width: @trendSize;
+    min-width: @trendSize;
+    max-width: @trendSize;
+    flex-basis: @trendSize;
+    text-align: center;
+    @media (max-width: @xsmax) {
+      display: none;
+    }
+  }
+  .trading-news {
+    margin-left: 0;
+    width: 100%;
+    @media (min-width: @mdmin) {
+      margin-left: -(@trendSize);
+      width: ~"calc( 100% + @{trendSize} )";
+    }
+    .carousel-control i {
+        color: @primary;
+        font-size: 20px;
+    }
+    .item {
+      background: @white;
+    }
+    .trading-news-wrapper {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      > * {
+        max-height: 22px;
+      }
+      .title {
+        //.ellipsed;
+        white-space: normal;
+        display: block;
+      }
+    }
+  }
+  .rating-gauge {
+    .rating-gauge(@tableStripe);
+  }
+
+  // TABS
+
+  + #titoloTabs {
+    .outerTab ul {
+      display:block !important;
+      li a {
+        &:hover {
+          border: green  solid 1px;
+        }
+      }
+    }
+    .panel-group.panel-fill {
+    }
+    .panel-heading {
+      display: block !important;
+    }
+
+  }
+}
+
+// DALL'HTML:
+
+.trading-news {
+  width:calc(100% + 145px);
+  margin-left:-145px;
+  .carousel {
+    border:solid 1px #ccc;
+    background:#fff;
+    display:block;
+    margin-bottom:15px;
+    height:40px;
+    overflow:hidden;
+  }
+  .trading-news-wrapper {
+    padding:5px 40px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    .date {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 40px;
+      height: 27px;
+      padding: 0 10px 0 0;
+      border-right: solid 1px #ccc;
+      font-size: 12px;
+      color: #999;line-height: 27px;
+    }
+    .title {
+      cursor:pointer;
+      display:inline;
+      font-weight:bold;
+      font-size:14px;
+      padding:0 0 0 105px;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      line-height: 25px;
+    }
+  }
+  .trading-news-body {
+    display:none;
+  }
+  .carousel-control {
+    width:40px;
+    text-decoration:none;
+    background:transparent;
+    opacity:1;
+    i {
+      color: @primary;
+      text-shadow: none;
+      line-height: 40px;
+      font-size: 24px;
+    }
+  }
+}

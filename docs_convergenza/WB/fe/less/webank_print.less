@@ -1,0 +1,284 @@
+@import "_color_webank";
+@import "_color";
+@import "_print_grid";
+
+a.btn-icon {
+    display:inline-block !important;
+}
+
+.userMenu, #userMenuMobile, .footermenu, nav, #leftmenu, .toolbtn, #logoWrap, .headerMobile, .headerMobile .row, .footerFixed {
+    display: none !important;
+}
+
+#contenuti, #contenuti.col-md-10, #contenuti.col-sm-12 {
+    width: 100% !important;
+}
+
+#contenuti .col-sm-6 {
+    width: 50% !important;
+    float: left;
+}
+
+#contenuti .col-sm-4 {
+    width: 33% !important;
+    float: left;
+}
+
+#contenuti .col-sm-3 {
+    width: 25% !important;
+    float: left;
+}
+
+#contenuti .col-sm-5 {
+    width: 41% !important;
+    float: left;
+}
+
+
+header .wrapper, .headerMobile .row {
+    background-color: #fff;
+}
+
+header .printlogoNew {
+    display: block !important;
+    margin-bottom: 20px
+}
+
+header .printlogoNew img {
+    width: 200px;
+}
+header .row.hidden-xs.hidden-sm.no-gutter-left {
+    display:none;
+}
+
+.noprint {
+    display: none !important
+}
+
+/* Stampa esclusiva delle modali */
+.modal-open {
+    overflow: visible;
+
+    &.hasModalChild {
+        #mobileMenu, #toolbox, .scrollable, nav {
+            display: none !important;
+        }
+    }
+
+    header {
+        display: block !important;
+    }
+
+    .modal.in {
+        position: static;
+        overflow-y: visible;
+
+        .modal-dialog {
+            max-width: 1110px !important;
+            margin-top: 0 !important;
+        }
+
+        .modal-content {
+            overflow: visible !important;
+            height: auto !important;
+            border: 0;
+            max-height: none !important;
+        }
+
+        .modal-dialog, .modal {
+            width: 100% !important;
+            border: 0 !important
+        }
+
+        .modal-header .close {
+            display: none
+        }
+    }
+}
+
+.boxesito .icon {
+    margin: 20px 0 8px 30px
+}
+
+/* Stampa pagina dei movimenti */
+@media (max-width: 767px) {
+    table tbody td.hidden-xs, table thead th.hidden-xs, table tfoot td.hidden-xs {
+        display: table-cell !important;
+    }
+    table tbody td, table thead th {
+        padding: 5px;
+    }
+    table thead th .sortable {padding:5px;}
+}
+
+#linkGrafMov, .console-top-movimenti, .console-bottom-movimenti, #tdSceltaRappMov, #idButton_print, #btnAdvSearchMov1, #btnSearchMov, #description_mov, .movimentiCont .tithelp, .movimentiCont hr, #ricercaSwitch, .boxesitoWrap {
+    display: none !important
+}
+
+.boxesitoWrap {
+    padding-top: 0
+}
+
+/*table tr td,table tr{page-break-inside: avoid;}
+#numResMsg{page-break-after: avoid;page-break-before: avoid;}*/
+table .icon.icon-2x {
+    font-size: 20px;
+}
+
+thead {
+    display: table-row-group;
+}
+
+table thead th.sortedTh {
+    background-color: #f2f2f2;
+    color: #000;
+    position: static;
+
+    .fht-cell {
+        display: none
+    }
+}
+
+table thead th.sortableTh {
+    box-shadow: none
+}
+
+table tfoot td.bgWhite {
+    background-color: #f2f2f2;
+}
+
+table tfoot td.brdWhite {
+    border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+section {
+    margin-bottom: 10px
+}
+
+.movimentiCont .borderFormRounded {
+    padding: 10px;
+    margin-bottom: 10px
+}
+
+.movimentiCont .form-group {
+    margin-bottom: 10px
+}
+
+.movimentiCont #ricercaAncora h4 {
+    display: none
+}
+
+.movimentiCont .formGenerico {
+    padding-bottom: 5px
+}
+
+.movimentiCont table td {
+    padding: 3px;
+}
+
+#data-grid-movimenti #totMovEnt {
+    color: #3aa746 !important
+}
+
+#data-grid-movimenti #totMovUsc {
+    color: #ee2e1b !important
+}
+
+a[href]:after {
+    content: "" !important;
+}
+
+/*interventi per tabelle trading */
+table.fixed {
+    table-layout: auto !important;
+}
+
+#statoOrdini tr td, #statoOrdini tr th {
+    font-size: 11px;
+    padding: 1px;
+    page-break-inside: avoid;
+}
+
+table td.nega {
+    color: #ff0000 !important
+}
+
+table td.posi {
+    color: #00a651 !important
+}
+
+#statoOrdini tr td:before,
+#statoOrdini tbody tr td:after,
+#statoOrdiniCond tr td:before,
+#statoOrdiniCond tbody tr td:after {
+    content: "";
+    height: 8px;
+    display: block;
+    page-break-inside: avoid;
+    width: 1px;
+    position: relative;
+}
+
+#boxTypePortafoglio .navContSecondLev {
+    page-break-inside: avoid;
+}
+
+#boxTypePortafoglio .btn-align-left, #boxTypePortafoglio .btn-align-right, #divAddPos {
+    display: none;
+}
+
+
+// Il mio patrimonio
+#grafPatrimonio {
+    .panel.disabled, .icoLegenda {
+        display: none;
+    }
+}
+
+#sceltaRapportoForm .checkbox.inline {
+    display: none;
+}
+
+#legendaBody, #headingOnePre_1 {
+    .icon-arrow_down, .icon-arrow_up {
+        display: none;
+    }
+}
+
+#accordionPref_1 {
+    page-break-before: always;
+    break-before: page;
+    border-bottom: 0 !important;
+}
+
+#collapseOne2Pre_1 {
+    display: block;
+    height: auto !important;
+    padding-top: 50px;
+
+    .icon {
+        display: none;
+    }
+}
+
+#patrimonioBtns {
+    display: none;
+}
+
+/* Revisione grandezze dei font e layout di stampa */
+body #contenuti {
+    font-size: 14px !important;
+}
+
+input[type="text"].form-control, input[type="email"].form-control, input[type="number"].form-control, input[type="tel"].form-control, input[type="date"].form-control, input[type="password"].form-control, textarea.form-control, .textarea.form-control, select.form-control, .selectRapp .inputSx.form-control {
+    font-size: 14px !important
+}
+
+/* Nasconde i tab non attivi */
+.panel-heading a.collapsed[aria-expanded=false]{display:none;}
+.panel-group {padding:0 !important;}
+.navContSecondLev .panel-body {padding:0 !important;}
+
+/* Colori per stampa bottoni */
+.btn.btn-primary {width:auto !important;}

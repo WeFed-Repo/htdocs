@@ -1,0 +1,241 @@
+table,
+.table,
+.ui-dialog .table {
+  //border-top: solid 2px $tableStripe !important;
+  margin-top: 10px;
+  border-collapse: separate;
+  clear: both;
+  width: 100%;
+  .icon:not(.icon-corona),
+  .icon.icon-chiudi_table {
+    font-size: $fontSizeX2 !important;
+  }
+  tr {
+    td, th {
+      border-top: 0;
+      vertical-align:middle;
+      &.oCenter { text-align:left!important; }
+      &.oRight { text-align:right!important; }
+    }
+    th { 
+      height: 100%;
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      background-color:#fff!important;
+      @extend .notFocused;
+      @extend .sortable !optional;
+      .sorting {
+        padding-left: 12px;
+        cursor: pointer;
+        background: url(../img/icon_sort_none.png) 0px 2px no-repeat;
+        height: 100%;
+        text-align: left !important;
+        &.asc,
+        &.sorting_asc {
+          background-image: url(../img/icon_sort_asc.png);
+          text-decoration: underline;
+        }
+        &.desc,
+        &.sorting_desc {
+          background-image: url(../img/icon_sort_desc.png);
+          background-position: 0px 10px;
+          text-decoration: underline;
+        }
+        .icon-accordion_up,
+        .icon-accordion_down {
+          display: none !important;
+        }
+      }
+      &.sort {
+        padding:0 0 0 15px!important;
+        cursor: pointer;
+        background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+        &.asc {
+           background: url(/HT/fe/img/icon_sort_asc.png) 0 3px no-repeat;
+        }
+        &.desc {
+           background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
+        }
+      }
+     
+    }
+    td { vertical-align:middle; }
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $tableStripe;
+    td, th {
+      &[rowspan] {
+        border: 1px solid $white!important;
+      }
+    }
+  }
+ 
+.tradingNewsBox {
+      border-bottom: 1px solid $grayMidLight;
+      padding: 15px 0;
+      a {
+          text-decoration: underline;
+      }
+    }
+  
+  tfoot {
+    background: $tableStripe;
+    tr th {
+      vertical-align:middle;
+    }
+  }
+  .colGroup {
+    > * {
+      border-bottom: 2px solid $tableStripe !important;
+    }
+  }
+  &.evident tr th {
+    vertical-align:middle;
+  }
+  .bs-checkbox {
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+.box-generico-comunicazioni {
+  padding:0!important;
+  table tr:nth-child(odd) {
+    background-color: #fff!important;
+  }
+  table td {
+    padding:0;
+  }
+}
+// wrapper del plugin della tabella
+
+.bootstrap-table {
+  overflow: auto;
+  width: 100%;
+}
+
+// Loader
+
+.fixed-table-loading {
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: $white;
+    text-align: center;
+}
+
+// Personalizzazioni tabelle
+
+.tabSelezioneCC .dataTables_wrapper {
+    padding: 5px 0px 0px 0px;
+    background: $grayLight2;
+}
+.sortableTable td a {text-decoration: underline;}
+
+/* trading book, INIZIO */
+
+.formGenerico {
+  &.borderFormRounded {
+    &.output {
+      table {
+        tbody {
+          tr {
+            th {
+              background-color: $tableStripe !important;
+              &.right {
+                text-align: right !important;
+              }
+            }
+          }
+        }
+        &.riepilogo {
+          thead {
+            th {
+              background-color: $grayMidLight !important;
+            }
+          }
+          tbody {
+            tr:nth-child(odd) {
+              background-color: $white !important;
+            }
+          }
+          tfoot {
+            background-color: $grayMid !important;
+          }
+        } 
+      }
+    }
+  }
+}
+
+#formBook {
+  @media (max-width: 991px) and (min-width: 768px) {
+    .row {
+      .col-sm-8 {
+          width: 100%;
+      }
+      &.visible-xs {
+        display: block !important;
+      }
+    }
+    #filtriAvanzatiBtn {
+      .row {
+        .col-sm-4:not(.hidden-xs) {
+          width: 100%;
+        }
+      }
+    }
+    #pannelloOpzioni {
+      >.form-group {
+        >.row {
+          .no-label {
+            padding-top: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* trading book, FINE */
+
+// tabelle dei grafici
+
+.my-crosshair tr td, .my-crosshair tr th {
+    background-color: #eaeded!important;
+    color: #202d50!important;
+    height:30px; 
+}
+.my-crosshair tr th {
+  padding:5px!important;
+}
+.my-crosshair tr td {
+  padding:5px 0!important;
+}
+.tabTradInd .glyph-arrow_trading_line {
+  display: none!important;
+}
+.tabTradInd tr td.status-selected .glyph-arrow_trading_fill {
+  display: none!important;
+}
+
+.tabTradInd .glyph-arrow_trading_fill{
+  display: inline-block!important;
+  background: url("/HT/fe/img/arrow_trading.png");
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+.tabTradInd tr td.status-selected .glyph-arrow_trading_line {
+  display: inline-block!important;
+  background: url("/HT/fe/img/arrow_trading_fill.png");
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+
+
+

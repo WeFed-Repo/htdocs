@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Deposito titoli</title>
+		<meta name="description" content="Deposito titoli"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+			
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#666}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#FFF;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff url("/wbapp/promo/deposito_titoli/img/top_arrow.png") no-repeat center -3px; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:91%;margin:5% 0 0 4%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			/*#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}*/
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1 span.fascione {width:80%;text-align:left;float:left;line-height:1.4em;font-size:1.1em;margin:0 0 0 18%;padding:2% 0;color:#333}
+			.col1Left span {text-align:left;}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:1em;padding-bottom:17.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/promo_bolli/img/banner_01.png');background-size: 100% 100%;}
+			.banner02 {background-image: url('/wbapp/promo/promo_bolli/img/banner_02.png');background-size: 100% 100%;}
+			.banner03 {background-image: url('/wbapp/promo/promo_bolli/img/banner_03.png');background-size: 100% 100%;}
+			.wrapper{position:absolute;top:0;right:0;bottom:0;left:0;display:table-cell;vertical-align:middle}
+			ol{margin:0}
+			ol li{margin:0 0 10px 0}
+			ol.numIniz {padding-left:4%}
+			.col1 ul {
+				width: 100%;
+				text-align: left;
+				float: left;
+				line-height: 1.6em;
+				font-size: 1.2em;
+				padding-left: 0;
+				margin-left: 1em;
+			}
+			ul.bulletColored{margin-top:0}
+			ul.bulletColored li{color:#8ab10b;}
+			ul.bulletColored li p{color:#666;float:none;margin:0}
+			/* Declinazioni del font*/
+			span.grande {font-size:1.3em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.iper {font-size:1.9em;font-weight:bold}
+			span.red {color:#e31d4e}
+			span.blu {color:#0097bf}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em;color:#999}
+			span.piccolo {font-size:0.9em}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {float:left;width:100%;background:#eae8e8; background-image: url('/wbapp/promo/jiffy/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/jiffy/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+			 a.link, a.link:hover{color:#8ab10b;}
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em;margin-bottom: 10px;margin-top: 10px;}
+			.col1 span.regolamentoCol,.col1 span.regolamentoColLeft{width:65%;float:left;text-align:left;font-size:0.9em;line-height:1.2em}
+			.col1 span.regolamentoColLeft{width:35%}
+			p.regolamentoCol{float:left}
+			.firmaRight{text-align:center;float:right}
+			.scrollable .area .scroller ul{padding-right:2.5%}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:50%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+			a.btn.red{background-color:#e31d4e; border-bottom:0; border-radius:40px;margin-bottom:0}
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/mgm_2016/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/mgm_2016/img/frecciaSu2.gif');}
+				
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/deposito_titoli/img/top.png" title="Richiedi il deposito titoli" alt="Richiedi il deposito titoli">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="dark">Apri un deposito titoli entro il 30 novembre 2016 e in 
+					esclusiva per te: </span>
+					<br style="clear: both">
+					<ul class="dark bulletColored">
+						<li><p><strong>1.000 Euro in trading bonus</strong> per poter operare 
+   senza commissioni di negoziazione su qualsiasi 
+   strumento finanziario;</p></li>
+   					<li><p><strong>zero bolli sul deposito titoli</strong> per il 2016 e il 2017 fino 
+   a un massimo di 1.000 Euro annui;</p></li>
+
+     <li><p>piattaforma <strong>T3 gratuita</strong> fino al 31 dicembre 2017.</p></li>
+					</ul>
+				</div>
+				<!-- fine spazio per testo -->
+				
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+					<div class="scrollable">
+						<div class="top">REGOLAMENTO CONCORSO WIN 29/16</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+									<!-- REGOLAMENTO -->
+									<span class="maintitle">&quot;JIFFY SUPERPOWER&quot;</span>
+
+									<span class="title">Concorso a Premi indetto da:</span>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Promotore</strong></span>
+										<span class="regolamentoCol">SIA S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Indirizzo</strong></span>
+										<span class="regolamentoCol">Via Francesco Gonin, 36</span>
+										<span class="regolamentoColLeft"><strong>Localit&agrave;</strong></span>
+										<span class="regolamentoCol">20147 Milano</span>
+										<span class="regolamentoColLeft"><strong>P. Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">10596540152</span>
+									</p>
+
+									<span class="title">Banche coinvolte nell'iniziativa:</span>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Carime S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Viale Crati, 87100 – Cosenza</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">13336590156</span>
+									</p>
+									
+									<div class="leggiReg" id="vedi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+									</div>
+									<div id="hiddenRegolamento" style="display:none">
+							
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca CR Firenze S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Carlo Magno, 7 - 50127 Firenze</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">04385190485</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Mediolanum S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Palazzo Meucci - Via Francesco Sforza, 15-20080 Basiglio Milano 3</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">10698820155</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">02124090164</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Monte dei Paschi di Siena S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza Salimbeni,3 53100 Siena (SI)</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00884060526</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Nazionale del Lavoro S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via V.Veneto,119/A – 00187 Roma </span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">09339391006</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Nuova S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Giacomo Cusmano, 56, I-90141 Palermo </span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">05940510828</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare di Ancona S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Don A. Battistoni,4 - 60035 Jesi (AN) </span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00078240421</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare di Bergamo S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza Vittorio Veneto, 8 – 24122 Bergamo</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">03034840169</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare Commercio e Industria S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Monte di Piet&agrave;, 7 20121 Milano</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">03910420961</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare Friuladria S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza XX Settembre 2, 33170 Pordenone (PN)</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">01369030935</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare di Milano Societ&agrave; Cooperativa a r.l</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza F. Meda, 4 – 20121 Milano</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00715120150</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Popolare di Vicenza S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Btg. Framarin, 18 I-36100 Vicenza</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00204010243</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Regionale Europea S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Roma, 13 - 12100 Cuneo (CN)</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">01127760047</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca di Valle Camonica S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza della Repubblica 2, 25043 – Breno (BS)</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">00550080980</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00283770170</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banca Widiba S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Ippolito Rosellini, 16 – 20124 Milano</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">08447330963</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banco di Brescia San Paolo Cab S.p.A </span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso Martiri della Libert&agrave;, 13 – 25122 Brescia (BS)</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">03480180177</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Banco di Napoli S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Toledo, 177 - 80132 Napoli</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">04485191219</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio in Bologna</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">via Farini, 22 - 40124 Bologna</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">02089911206</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa dei Risparmi di Forl&igrave; e della Romagna S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso della Repubblica, 14 - 47121 Forl&egrave;</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00182270405</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio del Friuli Venezia Giulia S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso Verdi, 104 - 34170 Gorizia</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">01045800313</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">91025940312</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio di Parma e Piacenza S.p.A. (Cariparma S.p.A.)</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Universit&agrave;, 1 - 43121 Parma</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">02113530345</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio di Pistoia e della Lucchesia S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Roma, 3 - 51100 Pistoia</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00092220474</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio della Spezia S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso Cavour 86 - 19121 La Spezia</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00057340119</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Cassa di Risparmio del Veneto S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso Garibaldi, 22/26 - 35122 Padova</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">03591520287</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">02089931204</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Casse di Risparmio dell'Umbria S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Corso Tacito, 49/A - 05100 Terni</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">01943160547</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">CheBanca! S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Viale Bodio 37, Palazzo 4- 20158 Milano</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">10359360152</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Gruppo Banca Carige - Banca CARIGE S.p.A. - Cassa di Risparmio di Genova e Imperia</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Cassa di Risparmio, 15 – 16123 Genova</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">03285880104</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Intesa Sanpaolo S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza San Carlo 156, 10121 Torino</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">10810700152</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00799960158</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Intesa Sanpaolo Private Banking S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Hoepli, 10 - 20121 Milano</span>
+										<span class="regolamentoColLeft"><strong>P.Iva</strong></span>
+										<span class="regolamentoCol">06075800158</span>
+										<span class="regolamentoColLeft"><strong>Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00460870348</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Ubi Banca S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Piazza Vittorio Veneto 8 - 24122 Bergamo</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">03053920165</span>
+									</p>
+									<p class="regolamentoCol">
+										<span class="regolamentoColLeft"><strong>Ragione Sociale</strong></span>
+										<span class="regolamentoCol">Unicredit S.p.A</span>
+										<span class="regolamentoColLeft"><strong>Sede Legale</strong></span>
+										<span class="regolamentoCol">Via Alessandro Specchi 16 - 00186 Roma</span>
+										<span class="regolamentoColLeft"><strong>P.Iva e Codice Fiscale</strong></span>
+										<span class="regolamentoCol">00348170101</span>
+									</p>
+									<span class="title">Societ&agrave; Delegata</span>
+									<p>
+										Winning S.r.l. con sede a Milano in Via Settala 16, codice fiscale e partita iva 12606230154
+
+									</p>
+									<span class="title">Denominazione</span>
+									<p>&quot;JIFFY SUPERPOWER&quot; – WIN 29/16</p>
+									<span class="title">Territorio</span>
+									<p>Intero Territorio Nazionale e Repubblica di San Marino.</p>	
+									<span class="title">Destinatari</span>
+									<p>Clienti maggiorenni - correntisti e/o titolari di carte prepagate
+									dotate di IBAN abilitate a Jiffy - che si attivino in Jiffy entro la data
+									termine del concorso tramite almeno una delle Banche coinvolte
+									(ivi inclusi i diversi canali delle stesse).</p>		
+									<p>Il servizio Jiffy &egrave; fornito tramite le seguenti app/servizi delle
+									Banche coinvolte (ivi inclusi i diversi canali delle stesse):</p>
+									<ul>
+										<li><strong>UBI Banca:</strong>  app UBI PAY dove &egrave; presente il servizio Invio denaro</li>
+										<li><strong>Banca Popolare di Vicenza:</strong>app BPViGO! dove &garve; presente il servizio BPVi MoneyGO!</li>
+										<li><strong>BNL e Hello!bank:</strong> BNL PAY e Hello PAY le due app dove &egrave; presente il servizio Invia denaro con Jiffy</li>
+										<li><strong>BPM Mobile e App WeBank:</strong> dove &egrave; presente DailyPay by Jiffy</li>
+										<li><strong>CheBanca!:</strong> app WoW dove &egrave; presente il servizio Jiffy</li>
+										<li><strong>Cariparma, Friuladria e Carispezia:</strong> app NowPay dove &egrave; presente il servizio Jiffy</li>
+										<li><strong>Carige:</strong> app Carige Mobile dove &egrave; presente il servizio Invia denaro</li>
+										<li><strong>Intesa San Paolo:</strong>  app La Tua Banca dove &egrave; presente JiffyPay (&egrave; necessario aver sottoscritto il contratto MyKey)</li>
+										<li><strong>Banca Mediolanum:</strong> app Mediolanum Wallet dove &egrave; presente il servizio Invia Denaro</li>
+										<li><strong>Banca Monte dei Paschi di Siena:</strong>  app Wallie dove &egrave; presente ilservizio Invia Denaro</li>
+										<li><strong>Unicredit:</strong>  app Monhey dove &egrave; presente il servizio Send Money</li>
+										<li><strong>Widiba:</strong>  MoviPay by Jiffy</li>
+									</ul>
+									<p>e nei siti internet ai seguenti indirizzi:</p>
+									<ul>
+										<li>per BPM  <a href="https://www.bpmbanking.it/pub/xbank/home.do" class="link" target="_blank">www.bpmbanking.it</a></li>
+										<li>per WeBank <a href="https://www.webank.it" class="link"  target="_blank">www.webank.it</a></li>
+										<li>per Widiba <a href="https://www.widiba.it" class="link"  target="_blank">www.widiba.it</a></li>
+									</ul>
+									<span class="title">Durata</span>
+									<p>
+										<strong>Instant Win</strong><br>
+										Dalle ore 00.00 del 3 Ottobre 2016 alle ore 23.59.59&quot; del 21
+										Novembre 2016.
+									</p>
+									<p>
+										<strong>Estrazione Finale</strong><br>
+										Entro il 12 Dicembre 2016.
+									</p>
+									<span class="title">Premi</span>
+									<p>
+										<strong>Instant Win</strong><br>
+										n. 1 iPhone 7 32GB (Display Retina HD Widescreen retroilluminato
+										LED da 4,7&quot; (diagonale) - Multi-Touch con tecnologia IPS -
+										1334x750 pixel a 326 ppi).<br>
+										valore commerciale di &euro; 799,00 iva inclusa – in palio ogni giorno.
+									</p>
+									<p>
+										<strong>Estrazione Finale</strong><br>
+										N. 1 Buono Vacanza ai Caraibi del valore commerciale di &euro; 3.000,00.
+									</p>
+									<span class="title">Descrizione premio estrazione finale</span>
+									<p>
+									Il vincitore avr&agrave; a disposizione un buono del valore di &euro; 3.000,00 da utilizzare presso l'agenzia
+									viaggi selezionata dal Promotore, per l'acquisto di un pacchetto vacanza ai Caraibi (voli,
+									alberghi, ecc.).<br>
+									Il buono dovr&agrave; essere utilizzato in un'unica soluzione <strong>entro e non oltre il 14 Ottobre 2017.</strong><br>
+									La prenotazione dovr&agrave; avvenire con almeno 14 giorni di anticipo rispetto alla data di fruizione.
+									Eventuali differenze di costo oltre i 3.000&euro; saranno a carico del vincitore stesso.<br>
+									Il buono non sar&agrave; in nessun caso convertibile in denaro n&eacute; dar&agrave; diritto a resto in caso di
+									utilizzo parziale.
+									</p>
+									
+									<span class="title">MODALIT&Agrave; DI SVOLGIMENTO</span>
+									<p><strong>Il servizio del concorso sar&agrave; attivo dalle ore 00.00 del 3 Ottobre 2016 alle ore
+									23.59.59 del 21 Novembre 2016. Tutti i giorni, 24 ore al giorno. Totale 50 giorni
+									operativi.</strong></p>
+									<p>Potranno partecipare a tutte le fasi del presente concorso, nel rispetto dei requisiti previsti nel
+presente Regolamento, tutti i clienti maggiorenni - correntisti e/o titolari di carte prepagate
+dotate di IBAN abilitate a Jiffy - che si attivino in Jiffy entro la data termine del concorso,
+tramite almeno una delle Banche coinvolte (ivi inclusi i diversi canali delle stesse).</p>
+									
+									<span class="title">Registrazione:</span>
+									<p>Per partecipare i clienti dovranno collegarsi al sito web del concorso www.jiffysuperpower.it, su
+									cui dovranno registrare i propri dati compilando un apposito form.<br>
+									Terminata la registrazione il cliente ricever&agrave; una mail di conferma di avvenuta registrazione al
+									concorso</p>
+									<p>Presupposti della registrazione:</p>
+									<ul>
+										<li>Il cliente deve essere maggiorenne;</li>
+										<li>Il cliente deve essere correntista e/o titolare di carte prepagate dotate di IBAN, abilitate
+										a Jiffy, tramite almeno una delle Banche coinvolte (ivi inclusi i canali delle stesse); </li>
+										<li>Il cliente deve essere in possesso di un numero telefonico cellulare sul quale sia attivo o
+										venga attivato il servizio Jiffy entro la data termine del concorso</li>
+									</ul>
+									<span class="title">Partecipazione estrazione instant win:</span>
+									<p>
+										Ogni giorno, per ogni transazione effettuata con esito positivo con Jiffy, il cliente parteciper&agrave;
+										automaticamente al concorso instant win per provare a vincere il premio giornaliero.<br>
+										In caso di vincita, il cliente ricever&agrave; immediatamente un SMS di risposta con l'esito della
+										partecipazione vincente e l'informazione che verr&agrave; successivamente contattato da un operatore
+										per la raccolta dei dati ai fini della consegna del premio vinto.<br>
+										Il contatto telefonico verr&agrave; effettuato nell'arco dei 3 giorni lavorativi successivi alla data della
+										vincita per un massimo di 5 tentativi al giorno in 5 momenti diversi della giornata tra le ore 9 e
+										le ore 18. Se al termine dei 15 tentativi di contatto il vincitore non fosse reperibile la vincita
+										non verr&agrave; confermata.<br>
+										In caso di vincita plurima, alla medesima persona fisica non potr&agrave; essere assegnato più di 1
+										iPhone.
+									</p>
+									<p>Presupposti per la partecipazione all'estrazione instant win:</p>
+									<ul>
+										<li>Il cliente deve avere attivato il servizio Jiffy sul numero telefonico inserito in fase di
+										registrazione al concorso ed effettuare transazioni tramite Jiffy. </li>
+										<li>La transazione deve avere avuto esito positivo e deve essere effettuata tra due clienti
+										che abbiano gi&agrave; attivato il servizio Jiffy.</li>
+									</ul>
+									<p>Si precisa che:</p>
+									<ul>
+										<li>Nel caso dell'Instant Win, i clienti riceveranno l'SMS di risposta solo in caso di vincita.
+										Successivamente il Promotore effettuer&agrave; le verifiche sul rispetto del Regolamento del
+										concorso.</li>
+										<li>Il Promotore non assume alcuna responsabilit&agrave; in caso di mancato recapito dell'avviso di
+										vincita dovuto a cause ad esso non imputabili.</li>
+										<li>Ogni cliente potr&agrave; partecipare pi&ugrave; volte al giorno attraverso le transazioni effettuate con
+										Jiffy. Le transazioni devono aver avuto esito positivo ed essere effettuate tra due clienti che
+										abbiano gi&agrave; attivato il servizio Jiffy. </li>
+																				<li>La vincita viene attribuita casualmente al partecipante che risulti aver effettuato
+										un'operazione, andata a buon fine, con Jiffy ad una determinata ora. Tale ora viene
+										determinata casualmente con cadenza giornaliera attraverso una funzione software
+										anch'essa casuale. Per il software informatico utilizzato viene redatta apposita dichiarazione
+										sostitutiva di atto notorio sul corretto funzionamento dello stesso.</li>
+										<li>I server ed il software su cui saranno registrate tutte le partecipazioni risiedono sul territorio
+										italiano.</li>
+										<li>Non &egrave; mai possibile determinare a priori quale sar&agrave; la partecipazione vincente e quella non
+										vincente, in modo da garantire al consumatore l'affidamento circa il fatto che la vincita sia
+										effettivamente casuale e non preordinata.</li>
+										<li>Nel caso in cui in una giornata, per qualsiasi motivo non fosse possibile assegnare il premio
+										in palio, lo stesso sar&agrave; rimesso in palio il giorno successivo.</li>
+									</ul>
+									
+									<span class="title">Partecipazione estrazione premio finale:</span>	
+									<p>Al termine della fase di registrazione al concorso il cliente avr&agrave; inoltre la possibilit&agrave; di invitare
+									al massimo 20 suoi amici, inserendo i seguenti dati: nome ed indirizzo mail dell’amico invitato.<br>
+									Per ogni amico invitato che si registrer&agrave; al concorso, il cliente invitante, purch&egrave; abbia attivato il
+									servizio Jiffy entro la data termine del concorso, sar&agrave; accreditato per la partecipazione
+									all'estrazione finale del premio in palio.<br>
+									Il cliente invitante sar&agrave; censito nel data base da cui verr&agrave; estratto il vincitore, tante volte
+									quanti saranno gli amici invitati che si saranno registrati a loro volta al concorso.</p>
+									<p>Presupposti necessari affinch&egrave; l'invito ad un amico si trasformi nel diritto ad una &quot;ricorrenza&quot; ai
+									fini della estrazione finale:</p>
+									<ul>
+										<li>Il cliente invitante deve essere correntista e/o titolare di carte prepagate dotate di
+										IBAN, abilitate a Jiffy, ed aver attivato il servizio Jiffy entro la data termine del
+										concorso, tramite almeno una delle Banche coinvolte (ivi inclusi i diversi canali delle
+										stesse).
+										</li>
+										<li>Il cliente invitato deve aver partecipato al concorso inserendo, in fase di registrazione al
+										concorso stesso, il medesimo indirizzo e-mail sul quale abbia ricevuto l'invito.</li>
+									</ul>
+									<span class="title">ESTRAZIONE FINALE – ENTRO IL 12 DICEMBRE 2016</span>	
+									<p>Entro il giorno 12 Dicembre 2016, verr&agrave; effettuata l'estrazione finale del premio in palio
+									consistente in un buono viaggio ai Caraibi.</p>
+									<p>Verranno inoltre estratti n. 3 nominativi di riserva da utilizzarsi in caso di irreperibilit&agrave; del
+									vincitore o perch&eacute; non in regola con le norme del concorso.
+									</p>
+									<p>L'estrazione verrà effettuata tra tutti i clienti accreditati per la partecipazione, ed avverr&agrave; alla
+									presenza di un Funzionario della Camera di Commercio competente per territorio o di un
+									Notaio.<br>
+									Il vincitore verr&agrave; contattato telefonicamente per la conferma dei dati per la consegna del
+									premio.</p>
+									<p>Durante l'estrazione finale verranno sorteggiati altres&igrave;:</p>
+									<ul>
+										<li>gli eventuali premi non assegnati e/o non confermati per qualsivoglia motivo nella fase di vincita immediata;</li>
+										<li>n. 10 nominativi di riserva che saranno utilizzati in caso di irreperibilit&agrave; del o dei vincitore/i
+										o perch&eacute; non in regola con le norme del concorso.
+										</li>
+									</ul>
+									<p>L'estrazione verr&agrave; effettuata tra tutti i soggetti che abbiano partecipato alla fase di instant win
+									del concorso.</p>
+									<p>Il contatto telefonico verr&agrave; effettuato nell'arco dei 3 giorni lavorativi successivi alla data
+dell'estrazione finale per un massimo di 5 tentativi al giorno in 5 momenti diversi della giornata
+tra le ore 9 e le ore 18. Se al termine dei 15 tentativi di contatto il vincitore non fosse
+reperibile la vincita non verr&agrave; confermata ma assegnata alla prima riserva disponibile e cos&igrave;
+via.</p>
+									<span class="title">MONTEPREMI</span>
+									<p>
+										<strong>Instant Win</strong><br>
+										n. 50 iPhone 7 32GB (Display Retina HD Widescreen retroilluminato LED da 4,7&quot; (diagonale)
+										Multi-Touch con tecnologia IPS - 1334x750 pixel a 326 ppi) del valore commerciale
+										complessivo di &euro; 39.950,00 iva inclusa.
+									</p>
+									<p>
+										<strong>Estrazione Finale</strong><br>
+										N. 1 Buono Viaggio ai Caraibi del valore commerciale di &euro; 3.000,00.
+									</p>
+									<p><strong>TOTALE Montepremi &euro; 42.950,00</strong> salvo conguaglio a fine manifestazione.</p>
+									<p>Si precisa inoltre che:</p>
+									<ul>
+										<li>Il Regolamento completo del concorso &egrave; disponibile sul sito www.jiffysuperpower.it</li>
+										<li>I partecipanti al concorso devono risiedere e/o essere domiciliati sul Territorio Italiano o
+										nella Repubblica di San Marino al momento della partecipazione (intendendosi per tale, il
+										momento in cui avviene la registrazione).</li>
+										<li>La partecipazione &egrave; gratuita, fatto salvo il costo per la connessione internet applicato dal
+									proprio gestore e l'eventuale costo del servizio Jiffy.</li>
+									<li>La presente manifestazione a premio &egrave; soggetta alla normativa italiana vigente, pertanto
+									ogni partecipante accetta il presente Regolamento e la normativa che lo disciplina.</li>
+									<li>Il software che registrer&agrave; le partecipazioni al concorso, ivi incluso il software applicativo del
+									concorso, verr&agrave; gestito su un server ubicato nel territorio nazionale.
+									</li>
+									<li>Nel caso in cui il Promotore avesse autonomamente prova del mancato rispetto di una o pi&ugrave;
+									regole del concorso, provveder&agrave; ad escludere il partecipante e ad annullare la vincita (nel
+									caso di vincitore).
+									</li>
+									<li>Non saranno ritenute valide le partecipazioni prive dei requisiti previsti dal Regolamento,
+									ovvero che presentino dati incompleti.</li>
+									<li>Qualora si verificassero tentativi di frode, violazioni, tentativi di eludere le regole del
+									concorso, il Promotore potr&agrave; decidere a suo insindacabile giudizio l'esclusione di un
+									partecipante.						
+									</li>
+									<li>I premi non potranno essere convertiti in gettoni d’oro n&eacute; in denaro.</li>
+									<li>I premi saranno consegnati ai vincitori a cura della societ&egrave; promotrice e/o dalle banche
+coinvolte entro 180 giorni dalla fine del concorso all'indirizzo che sar&agrave; comunicato dal cliente
+quando verr&agrave; contattato.</li>
+<li>La fruizione del premio &quot;Buono Viaggio ai Caraibi&quot; &egrave; soggetta al rispetto delle normative
+vigenti relative all'espatrio. &Egrave; onere esclusivo del vincitore e del suo accompagnatore
+verificare che i propri documenti risultino in regola con le normative vigenti in Italia e nel
+luogo di destinazione.</li><li>I premi iPhone, in caso di indisponibilit&agrave;, potranno essere sostituiti con altri premi aventi
+caratteristiche analoghe o superiori. In caso di vincita plurima, alla medesima persona fisica
+non potrà essere assegnato pi&ugrave; di 1 iPhone.
+</li><li>Sono esclusi dalla partecipazione al concorso i dipendenti della Societ&agrave; Italia Brand Group
+S.r.l. e i relativi familiari (intendendosi per tali: coniuge o convivente more uxorio, figlio/a).
+</li><li>I dati dei partecipanti sono utilizzati ai fini dell'adesione al presente concorso e saranno
+registrati elettronicamente. Titolare dei dati &egrave; la Societ&agrave; SIA S.p.A. con sede in via
+Francesco Gonin 36, 20147 Milano. Responsabili del trattamento dati sono la Societ&agrave; Italia
+Brand Group S.r.l. e sue associate – Via Varallo 22/A – 10153 Torino, e la Societ&agrave; Winning Srl
+- Via Settala 16 – 20124 Milano. Ai sensi dell'art. 7 d.lgs. 196/03, i partecipanti potranno
+consultare o far modificare i propri dati od opporsi al loro utilizzo scrivendo a SIA
+all’indirizzo info@jiffysuperpower.it. I dati dei partecipanti saranno utilizzati solo per
+consentire lo svolgimento del concorso.</li><li>Il contenuto della promozione sar&agrave; comunicato attraverso i seguenti mezzi:
+<ul><li>Internet</li></ul>Il Promotore si riserva la facolt&agrave; di utilizzare ogni altro mezzo di comunicazione che appaia
+idoneo per diffondere il contenuto della manifestazione a premio.
+</li><li>Il Promotore dichiara di rinunciare alla facolt&agrave; di rivalsa della ritenuta alla fonte di cui all'ex
+art. 30 del D.P.R. 600 del 29/9/73 a favore dei vincitori.</li><li>I premi eventualmente non assegnati al termine della manifestazione per qualsivoglia
+motivo, saranno devoluti in beneficenza alla ONLUS – Comitato Maria Letizia Verga Onlus –
+via Pergolesi 33, 20900 Monza (MB) C.F. 97015930155.</li>
+									</ul>
+									<p>Milano, 15 Settembre 2016<br></p>
+									<p class="firmaRight">Per SIA S.p.A.<br>
+Il soggetto delegato<br>
+Winning Srl</p>
+									<div class="leggiReg" id="chiudi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span-->
+					<span class="footnote"><br>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE<br><br>
+					Concorso a premi valido dal 03.10.2016 al 21.11.2016. 
+Estrazione finale entro il 12.12.2016. Il montepremi viene determinato 
+in via presuntiva per un importo complessivo di &euro; 42.950.
+Regolamento disponibile all'indirizzo www.jiffysuperpower.it
+Prendere visione delle condizioni economiche mediante i 
+Fogli Informativi disponibili sul sito  www.webank.it</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+					</div>
+		</div>
+	</body>
+</html>	

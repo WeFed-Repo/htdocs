@@ -1,0 +1,397 @@
+/*REGOLE GENERICHE HEADER MOBILE */ 
+body{overflow-y: scroll;-webkit-overflow-scrolling: touch; /* for enable momentum safari mobile */}
+#menu{overflow:hidden;width:100%;position:relative;}
+.pusher #menu{position:static;}
+#headerDesktop,#menuDesktop{display:none;}
+#headerDesktopPub{display:none;}
+#headerMobile{border-bottom:2px solid #f5f7f8;height:62px;text-align:center;position:fixed;top:0;left:0;width:100%;z-index:5;background-color:#fff;}
+.fixed .pusher #headerMobile{position:relative;z-index: 3}
+.fixed  .pusher #main {padding-top:0;}
+#main{padding-top:62px;}
+#mainContent{position: relative}
+/*BOTTONE DI APERTURA MENU MOBILE */
+#buttonMenuMobile,#buttonUserMobile{height:60px;width:60px;padding:22px 0 26px 0;display:block;text-align:center;float:left;}
+#buttonUserMobile{height:62px;float:right;;background-color: #0E977F;cursor:pointer}
+#buttonUserMobile .icon {color:#fff;}
+#buttonUserMobile:hover .icon,#outerwrapper.pusher #buttonUserMobile .icon {color:#65b7a9 !important;}
+.lineMenuWrap{margin:0 auto;width:20px;cursor:pointer}
+.lineMenu{background-color:#0E977F;display:inline-block;margin-bottom:2px;height:3px;width:20px;}
+
+/*FINE BOTTONE DI APERTURA MENU MOBILE */
+
+/* MENU MOBILE */
+#menuMainMobile{overflow:hidden;width:260px;position: absolute;top: 0;left: -260px;z-index: 1;height: 100%;}
+#menuMainMobileWrapper{position: relative;z-index: 1;height: 100%;left:0;}
+#menuUserMobile{background-color:#0E977F;width:260px;position: absolute;top: 0;left: 100%;z-index: 1;height: 100%;}
+#menuUserMobile .info-user{height:60px;padding:3px 0 0 38px;width:100%;position:absolute;z-index:11;top:0;background:#fff;}
+#menuUserMobile .info-user .intro{color:#202D50;font-size:14px;}
+#menuUserMobile .info-user .name-user{color:#2A3D63;text-transform:uppercase;font-size:14px;font-weight:600;}
+#menuUserMobile .info-user .info-accesso{color:#C0C5C9;font-size:10px;}
+#menuUserMobile div.accordionMenuWrap {height:100%;overflow:auto;padding-top:60px;background-color: #0E977F;}
+#menuUserMobile ul {background-color: #0E977F!important;margin:0;padding:0;background-image: none!important}
+#menuUserMobile .info-user > span{display:block;}
+#menuMainMobile .mm-list{padding:0;margin:0;background:#fff;position: absolute;top: 0;left: -100%;width: 260px;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list{display:none;padding:61px 0 0 0;margin:0;background:#fff;position: absolute;top: 0;left: 100%;width: 100%;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list.activeUl{display:block;}
+#menuUserMobile .mm-list{background:#fff;position: absolute;top: 0;left: 100%;width: 100%;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list{background-color:#EBEDEE;}
+
+#menuMainMobile .mm-list.opened{overflow-y:auto;overflow-x:hidden;}
+#menuMainMobile .first-levelMenu{padding-top:18px;}
+.pusher{position: relative;top:0;left: 0;height: 100%;}
+body.fixed,html.fixed{overflow-y:hidden;position:fixed;top:0;}
+body.headerfixed #headerMobile{position:relative}
+body.headerfixed #main{padding-top:0;}
+.first-levelMenu li{list-style-type: none;padding:0;font-size:14px;}
+#menuUserMobile .first-levelMenu li,#menuUserMobile .first-levelMenu li a{padding:0;font-size:13px!important;min-height: 50px}
+#menuMainMobile .first-levelMenu  span.openSubMenu a {padding:0!important;border:0!important;}
+.first-levelMenu li:first-child a{background-image: none;}
+.first-levelMenu li a,.first-levelMenu li span.openSubMenu{/*background: url('/HT/fe/img/arrow_menu_right.png') no-repeat right center;*/border-bottom:1px solid #eeeff1;text-transform:uppercase;padding:13px 0 11px 0;margin:0 0 0 0;list-style-type: none;display: block;padding-left:24px;}
+
+#menuMainMobile .first-levelMenu li span.openSubMenu i {float:right;font-size: 16px;margin-right:20px;}
+
+
+#menuUserMobile .first-levelMenu li a{background-image:none;border:0;text-transform:none;color:#fff!important;font-weight:normal;margin-left:25px;padding:0 20px 0 0}
+#menuUserMobile .first-levelMenu li  .ui-accordion-content a{padding:19px 20px 15px 0}
+#menuUserMobile .first-levelMenu li.menu-posta{position:relative}
+#menuUserMobile .first-levelMenu li a.posta{background: url('/HT/fe/img/ico_busta.png') no-repeat 180px center}
+.badge {position: absolute;z-index: 10;top: 10px;left: 225px;height: 20px;line-height: 20px;border-radius: 10px;text-align:center;background-color: #122e5c;padding: 0 4px;}
+#menuUserMobile .first-levelMenu li a.dispositiva{background: url('/HT/fe/img/ico_dispositiva.png') no-repeat 180px center}
+#menuUserMobile .first-levelMenu li.logout{background-color: #137363}
+#menuUserMobile .first-levelMenu li:active{background-color:#0D8E77;}
+.first-levelMenu li a, .first-levelMenu li span.openSubMenu{color:#202D50;font-weight:600;text-decoration:none;cursor:pointer;}
+.first-levelMenu li.active a,.first-levelMenu li.active span.openSubMenu,.first-levelMenu li.active a:active,.first-levelMenu li.active span.openSubMenu:active{color:#00A592;margin-left:0;padding-left:20px/*background: url('/HT/fe/img/arrow_menu_right_on.png') no-repeat right center;*/}
+.second-levelMenu a:active,.first-levelMenu .second-levelMenu li.active a:active {margin-left:0!important;background-image:none!important;}
+.first-levelMenu li:active span.openSubMenu{color:#00A592;}
+.first-levelMenu li.active{border-left:4px solid #00A592}
+#menuMainMobile a.back{border-radius:0;padding-top:21px;background-color: #fff;top:0;left:0;height:60px!important;width:260px;position:absolute;z-index:3;margin-left:0;padding-left:20px;}
+#menuMainMobile a.back i{float:left;font-size:16px;}
+.second-levelMenu li a:not(.back){background-image:none;border-bottom:none;color:#2A3D63;font-weight:normal;text-transform: none;font-size:13px;padding:17px 20px 12px 5px;margin:0;}
+/*.second-levelMenu li.active a{color:#00A592;padding-left:24px;}*/
+.first-levelMenu .second-levelMenu li.active {border-left:0;}
+.first-levelMenu li a:active,.second-levelMenu li a.active:not(.back):active{color:#00A592;}
+
+#overlayMenu{position: absolute;z-index:7;width: 100%;height: 100%;background: #666;opacity:0.4;top: 0;left: 0;}
+.pusher.right,.pusher.left{float:none;}
+.pusher.right #overlayMenu{box-shadow: inset 10px 0 10px #000;}
+.pusher.left #overlayMenu{box-shadow: inset -10px 0 10px #000;}
+.no-scroll{overflow:hidden;height:100%;}
+#menuMainMobile .mm-list.opened.over-visible{overflow:visible;}
+#menuMainMobile a.back#clonedBack{z-index:4;left:0;outline:none!important;color:#00A592}
+#logo-mobile{margin:0;width:90px;display: inline-block;}
+#logo-mobile a{width:90px;height: 25px;background: url("/HT/fe/img/logo_bancobpm@2x.png") no-repeat;background-size: 100%}
+#logo-mobile a {display:inline-block;margin:14px auto;}
+.animation-end .first-levelMenu{left:100%!important;}
+.animation-end .second-levelMenu{left:0!important;}
+.wrapperheaderMobile{height:62px;transform:translate3d(0,0,0)}
+/* * * FOOTER * * */
+footer{
+	background-color:#dadee2;
+	float: left;
+}
+.rowPaddFooter{
+	padding:40px 0;
+}
+#footer{
+	padding:0 30px;
+	margin-bottom:15px;
+}
+.logoYouWebFooter{
+	display:block;
+	width:71px;
+	height:44px;
+	background:url(/HT/fe/img/logo_youweb.png) no-repeat;
+}
+.numVerdeFooter{
+	color: #0e967e;
+	padding-left:20px;
+}
+.numVerdeFooter a, .numVerdeFooter a:hover, .numVerdeFooter a:active {
+	color: #0e967e;
+	text-decoration:none !important;
+	font-weight:bold;
+}
+
+.barraAssistenza a{
+	padding:0 3px;
+}
+.scaricaFooter{
+	padding-right:20px;
+}
+
+#footer h5{
+	font-weight: bold;
+}
+
+#footer a{
+	text-decoration: underline;
+}
+
+@media (max-width:768px){
+	.logoYouWebFooter{
+		margin:0 auto 30px auto;
+	}	
+	.iconNmVerde {
+		display:none;
+	}
+	.numVerdeFooter {
+    padding-left: 0;
+	}
+}
+
+@media (min-width: 992px){
+	.mainFooter {
+	    padding-right: 330px;
+	}
+}
+@media (max-width:992px){	
+	.PaddTopBoxFooter{
+		margin-top:30px;
+	}
+}
+
+/* * * END FOOTER * * */
+
+html{overflow-x:visible!important;}
+
+
+
+/** Struttura pubblica Menu  **/
+	.menuNotImg{
+		background-image: none!important;
+	}
+
+
+/**  Struttura pubblica Footer **/	
+	.numeriUtiliPub{
+		color: #0e967e;
+		font-weight:600;
+		text-decoration:none;
+	}
+
+	.copyPub{
+		font-size:10px!important;
+	}
+
+
+#footer p{
+	font-size:12px;
+}
+
+#footer h5{
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+/* MENU MOBILE ACCORDION*/
+#menuMainMobile .accordionMenu,#menuUserMobile .accordionMenu {font-family: 'bankFont', Arial, sans-serif;}
+#menuMainMobile .ui-accordion-header-icon.ui-icon,#menuUserMobile .ui-accordion-header-icon.ui-icon{display:none;}
+#menuMainMobile .ui-accordion-header.ui-state-default,#menuUserMobile .ui-accordion-header.ui-state-default{text-align:left;}
+#menuMainMobile .ui-accordion .ui-accordion-header,#menuUserMobile .ui-accordion .ui-accordion-header{margin:0;outline:none!important;}
+#menuMainMobile .ui-accordion-header.ui-state-default:not(.back),#menuUserMobile .ui-accordion-header.ui-state-default:not(.back){height:auto;min-height: 50px}
+#menuMainMobile .ui-accordion-header:not(.back){color:#202D50;font-size: 13px;font-family: 'tableFont', Arial, sans-serif;font-weight:600;border-bottom:1px solid #d8d8d8!important;}
+#menuMainMobile .ui-accordion-header-active:not(.back),#menuUserMobile .ui-accordion-header-active:not(.back){border-bottom:0!important;}
+#menuMainMobile  .ui-accordion .ui-accordion-content{background: #EBEDEE;padding:0;}
+#menuMainMobile  .ui-accordion-content a,#menuMainMobile .second-levelMenu .ui-accordion-content li,
+#menuUserMobile  .ui-accordion-content a,#menuUserMobile .second-levelMenu .ui-accordion-content li 
+ {padding:0;}
+#menuMainMobile .second-levelMenu .ui-accordion-content li,#menuUserMobile .second-levelMenu .ui-accordion-content li{padding:17px 0 12px 0;}
+#menuMainMobile .second-levelMenu .ui-accordion-content li{padding:0;}
+#menuMainMobile .second-levelMenu li,#menuUserMobile .second-levelMenu li{padding:0;}
+#menuMainMobile .second-levelMenu li a{padding-left:20px;}
+#menuMainMobile .second-levelMenu .ui-accordion-content li a,#menuMainMobile .second-levelMenu .ui-accordion-content li a:active {border-bottom:1px solid #d8d8d8;padding-left:0;margin:0 0 0 20px!important;padding:17px 0 12px 0;}
+#menuMainMobile .second-levelMenu .ui-accordion-content li:last-child a,#menuMainMobile .second-levelMenu .ui-accordion-content li:last-child a:active {margin:0 0 0 0!important;padding:17px 0 12px 20px;}
+#menuMainMobile  .ui-accordion-header .icon-arrow_up,#menuUserMobile  .ui-accordion-header .icon-arrow_up{display:none;}
+#menuMainMobile  .ui-accordion-header.ui-state-active .icon-arrow_up,#menuUserMobile .ui-accordion-header.ui-state-active .icon-arrow_up{display:block;}
+#menuMainMobile  .ui-accordion-header.ui-state-active .icon-arrow_down,#menuUserMobile  .ui-accordion-header.ui-state-active .icon-arrow_down{display:none;}
+#menuMainMobile  .ui-accordion .ui-accordion-header .icon-arrow_up, .ui-accordion .ui-accordion-header .icon-arrow_down,
+#menuUserMobile  .ui-accordion .ui-accordion-header .icon-arrow_up, .ui-accordion .ui-accordion-header .icon-arrow_down{margin-right:0;font-size: 15px}
+#menuMainMobile  .ui-accordion-header.ui-state-default.ui-accordion-icons.ui-state-hover.ui-accordion-header-active.ui-state-active
+{background-color:#EBEDEE;}
+#menuMainMobile .ui-accordion .ui-accordion-header-active {
+    background-color: #EBEDEE;
+}
+#menuUserMobile .icon-ico_profilo,
+#menuUserMobile .icon-ico_alert,
+#menuUserMobile .icon-ico_setting,
+#menuUserMobile .icon-ico_logout,
+#menuUserMobile .icon-ico_mail,
+#menuUserMobile .icon-ico_dispositiva
+{float:left;width: 40px;height: 40px;margin-right: 0;padding:16px 12px 12px 12px;font-size:14px;}
+
+#menuUserMobile .icon{color:#fff;}
+#menuUserMobile .ui-accordion .ui-state-default,#menuUserMobile .ui-accordion .ui-state-default.ui-state-active,
+#menuUserMobile .ui-accordion .ui-state-default.ui-state-hover,#menuUserMobile .ui-accordion .ui-state-default.ui-state-active{background-color: #0E977F}
+#menuUserMobile .ui-accordion .ui-state-default.ui-state-active{
+	background-color: #137363;
+}
+#menuUserMobile .accordionMenu .accordionMenu .ui-state-default.ui-state-active{
+	background-color: #0E977F;
+}
+
+#menuUserMobile .ui-accordion-header:not(.back){font-size: 13px;font-family: 'tableFont', Arial, sans-serif;font-weight:600}
+#menuUserMobile .ui-accordion-content .ui-accordion-header {font-family: 'bankFont', Arial, sans-serif;font-weight:normal}
+#menuUserMobile .accordionMenu span,
+#menuUserMobile .ui-accordion-header .icon-arrow_down, #menuUserMobile .icon-arrow_up
+{
+	padding-top: 16px;
+    display: inline-block;
+}  
+#menuUserMobile ul.ui-accordion-content{padding-top:0;}
+#menuUserMobile .badge {left:160px;top:11px;padding-top:0!important;}
+#menuUserMobile .accordionMenu .accordionMenu .ui-accordion-header {padding-left:25px;}
+#menuUserMobile .accordionMenu .accordionMenu .ui-accordion-header i {padding-top:0;}
+#menuUserMobile .accordionMenu .accordionMenu .ui-accordion-content a {padding-left:25px;}
+#menuUserMobile .menu-no-accordion a{margin:0!important;}
+#menuUserMobile .menu-no-accordion a span{display: inline-block;padding-top: 16px;font-family: 'tableFont', Arial, sans-serif;font-weight:600}
+
+.ui-accordion .icon{float:right;}
+body:after { content: 'mobile'; display: none;}
+
+
+/*MENU F24 */
+.menuF24 #headerMobile {display:none!important;}
+.menuF24 #headerDesktop, #menuDesktop{display: block!important}
+/* Menu primo livello */
+.menuF24 .firstMenuDesk li{list-style: none;float: left;margin: 0 21px 0 0;font-weight:400}
+.menuF24 .firstMenuDesk li ul ul li{float: none}
+.menuF24 .firstMenuDesk .subMenuXL li:nth-child(5){margin-right:0}
+.menuF24 .headerDesktopX .firstMenuDesk li{
+	margin: 14px 0 0 15px!important;
+	padding-right:15px;
+	font-weight:600;
+	border-right: 1px solid #ccc;
+}
+
+.menuF24 .firstMenuDesk li.last{
+	border-right: 0;
+}
+
+.menuF24 #firstMenu{
+	margin:0;
+	padding:0 0 0 25px;
+}
+.menuF24 .firstMenuDesk li a{font-weight:600;padding:0;background:transparent;font-size: 13px; color:#122e5c;line-height:16px;display: inline-block;}
+.menuF24 .firstMenuDesk .no-children li a,.firstMenuDesk .btn-navigation{line-height:23px!important;}
+.menuF24 .firstMenuDesk li a:hover{background:transparent;}
+.menuF24 .firstMenuDesk .subMenuXL li a {font-family: 'tableFont', Arial, Helvetica,sans-serif;}
+.menuF24 .firstMenuDesk .subMenuBoxCenter li a{font-size: 14px; color:#2A3D63;}
+.menuF24 ul.firstMenuDesk>li>a {text-decoration:none !important;}
+
+.menuF24 ul.firstMenuDesk>li.selected>a,ul.firstMenuDesk>li.selected>a:hover {color:#00A592;}
+
+.menuF24 ul.firstMenuDesk>li.open>a, ul.firstMenuDesk>li.open>a:hover, ul.firstMenuDesk>li.open>a:focus, li.open>ul.firstMenuDesk>a:active{text-decoration: none;color: #00A592;text-transform:uppercase;font-weight:600;padding-bottom: 3px;border-bottom: 4px solid #00A592;}
+
+
+/*//////////// REGOLE HEADER MENU F24 ///////////////*/
+
+.menuF24 #headerDesktop.headerDesktopX {
+  display: table !important;
+  padding:0 !important;
+  /*width: calc( 100% - 70px ) !important;
+  margin:0 35px !important;*/
+  width: 100% !important;
+  margin: 0 !important;
+}
+.menuF24 #headerDesktop.headerDesktopX > * {
+  display:table-cell !important;
+  vertical-align: middle;
+  margin:0 !important;
+  float:none !important;
+  position:relative;
+  top:auto;
+  left:auto;
+  right:auto;
+  bottom:auto;
+  width: auto;
+  border: none !important;
+}
+
+/* LOGO */
+
+.menuF24 .logoYouWeb,
+.menuF24 .logoYouWeb {
+  margin: 0 0 0 15px;
+}
+
+/* ICONA CLOSE */
+
+.menuF24 .contMenuDesk .firstMenuDesk {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.menuF24 .contMenuDesk {
+  padding: 0 5px !important;
+}
+
+.menuF24 .contMenuDesk .firstMenuDesk:first-child li {
+    margin-top: 0 !important;
+}
+
+/* ICONA CLOSE */
+
+.menuF24 .contImpDxDeskX {
+  width:100px !important;
+  min-width:100px !important;
+  height:81px;
+  margin-right:0 !important;
+  text-align: center;
+}
+
+.menuF24 .contImpDxDeskX a,
+.menuF24 .contImpDxDeskX .iconExit {
+  width:100px !important;
+  height: 100% !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.menuF24 .contImpDxDeskX .containerIconHeadDX {
+  padding: 0 !important;
+  width:100px !important;
+  height: 100% !important;
+  display: table !important;
+}
+
+.menuF24 .contImpDxDeskX .containerIconHeadDX span {
+  display: table-cell !important;
+  vertical-align: middle;
+  padding: 0 !important;
+  height:81px;
+  line-height:81px;
+}
+.menuF24 .logoYouWeb {
+    display: block;
+    width: 113px;
+    height: 29px;
+    background-image: url(/HT/fe/img/logo_bancobpm@2x.png);
+    background-size: 113px 29px;
+}
+.menuF24 #headerDesktop{background:#FFF;width: 100%;margin: 0px;display:block;overflow:visible;padding:0 300px 0 0;float:left;position: relative;height:80px;border-bottom: solid 2px rgba(0,0,0,0.07);}
+
+.menuF24 .headerDesktopX #firstMenu{width:auto;}
+@media (max-width:650px){
+	div#contentF24 {top:160px;}
+}
+
+.first-levelMenu li.new  {position:relative;}
+.first-levelMenu li.new:after {
+	content:'\e9a3';
+	position: absolute;
+	top: 12px;
+    right: 44px;
+    color:#00A592;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+}
+/* FINE */

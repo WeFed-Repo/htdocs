@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<title>Webank</title>
+		<meta name="description" content="Webank"/>
+
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- Allows fullscreen mode from the Homescreen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Sets the color of the text/battery, wireless icons etc -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="format-detection" content="telephone=no">
+		<!-- / MOBILE -->
+
+		<!-- Css base -->
+		<link href="/wscmn/fe/css/priv_base_webank.css" rel="stylesheet" type="text/css" media="all">
+		
+		<!-- JS -->
+
+		<!-- /JS -->
+			
+		<style>
+			body {margin:0;padding:0;font-family: "bankFont", Arial, Helvetica, sans-serif;font-weight:300;color:#252525}
+			body {background:transparent url(/wbapp/img/offerte/tablet_trading.jpg) no-repeat left top;background-size: cover!important;width:100%;height:100%}
+			#wrapper {margin:0;padding:0; margin:0 auto;top:15%;left:3%;position:absolute;padding:20px 30px 40px;
+				width:450px;
+				background: rgba(255, 255, 255, 0.90);
+				box-shadow: 0 30px 24px 0 rgba(0,0,0,0.30);
+				border-radius: 4px;
+			}
+			
+			#wrapper span.titolo {font-size:35px;}
+			#wrapper span.sottotitolo {font-size:20px;line-height:28px}
+			
+			a.bottone {
+				float: left;
+				background: #8AB10B;
+				background-image: linear-gradient(-180deg, rgba(255,255,255,0.20) 0%, rgba(138,177,0,0.20) 100%);
+				box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15), inset 0 -1px 1px 0 rgba(0,0,0,0.19);
+				border-radius: 5px;
+				display: block;
+				text-decoration: none;
+				padding: 10px 20px 10px 20px;
+				margin:10px 0 0 0;
+			}
+
+			a.bottone:hover {
+				opacity: 0.8;
+				box-shadow: 0 0 0 0 rgba(0,0,0,0), inset 0 0 0 0 rgba(0,0,0,0);
+				background-image: none;
+			}
+			
+			.labelButton {
+				font-size: 20px;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				text-shadow: 0 1px 0 rgba(0,0,0,0.20);
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+
+			.labelButton:hover {
+				text-shadow: 0 0 0 rgba(0,0,0,0);
+			}
+			
+			@media screen and (max-width: 1023px) {
+			   html, body {
+					overflow: auto!important;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<span class="titolo">Trading Webank</span><br>
+			<span class="sottotitolo">Vuoi accedere ad un mondo di soluzioni per i tuoi investimenti?</span>
+			<br>
+			<a href="/mobile/wbOnetoone/3l/do/nsf/AperturaCustodiaTitoli.action?cancellaStato=true&OBSCNT=TAB&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_dep_titoli_wt&OBSKEY3=nav_wbx_priv_apertura_dep_tit_wt" class="bottone"><span class="labelButton">Apri il deposito titoli</span></a>
+		</div>
+	</body>
+</html>

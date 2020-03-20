@@ -1,0 +1,1567 @@
+#fpLoading.loading .boxesito {
+  display: none;
+}
+#fpData {
+  display: none;
+}
+#fpData.loaded {
+  display: block;
+}
+.spPersonBtns a,
+.spPersonOpAdd {
+  text-decoration: none;
+}
+#menusecond a {
+  font-size: 11px !important;
+}
+#menusecond .menuthird .sx a {
+  font-size: 12px !important;
+}
+#menusecond div.menuthird .thirdlevelbody .footer p,
+#menusecond div.menuthird .thirdlevelbody .footer p a {
+  text-decoration: underline;
+  font-size: 10px !important;
+}
+.spTable strong a {
+  text-decoration: none;
+  outline: none !important;
+}
+.contenuti table {
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+.titleSection {
+  font-size: 1.28em;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 0;
+}
+.negativo {
+  color: #ff0000;
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table th,
+.table td {
+  padding: 7px 5px 8px 5px;
+  border-top: 1px solid #ddd;
+}
+.alignright {
+  text-align: right;
+}
+.alignleft {
+  text-align: left;
+}
+.aligncenter {
+  text-align: center;
+}
+.table td {
+  border-bottom: 1px solid #e3e3e3;
+}
+.table th {
+  padding: 5px 5px 2px 5px;
+  background-color: #e3e3e3;
+}
+.spNoWrap {
+  white-space: nowrap;
+}
+.contenuti table .borderlr {
+  border-right: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+}
+.noborderbot {
+  border-bottom: 0;
+}
+.noBorderleft,
+.table td.noBorderleft {
+  border-left: 0;
+}
+.buttonContent .bx-wrapper {
+  margin: 0 0 0 !important;
+}
+form {
+  margin: 0;
+}
+/*operazioni veloci */
+.contenuti fieldset input,
+.contenuti fieldset select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#container select.form-control {
+  float: none;
+}
+.panel-collapse .formGenerico {
+  margin: 0;
+  padding: 0 !important;
+}
+.panel-collapse .btnWrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.panel-collapse .carouselPlus {
+  border: 0;
+}
+#accordionOps {
+  color: #262626;
+}
+#accordionOps .collapse {
+  display: block;
+  height: 0 !important;
+  overflow-y: hidden;
+  border: none;
+}
+#accordionOps .collapse.in {
+  height: auto !important;
+  overflow-y: visible;
+  border-top: 1px solid #E3E3E3;
+}
+#accordionOps .carouselPlusPage {
+  position: relative;
+}
+#accordionOps .carouselPlusPage .sectioncont {
+  padding-right: 1px;
+}
+#accordionOps form[id$=FormToken] .control-label {
+  font-weight: normal;
+}
+#accordionOps .msgOnPage,
+#boxContact .msgOnPage,
+#movDispoExp .msgOnPage,
+#accordionOps .loadingOnPage,
+#boxContact .loadingOnPage,
+#movDispoExp .loadingOnPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+#accordionOps .msgOnPage,
+#boxContact .msgOnPage,
+#movDispoExp .msgOnPage {
+  overflow-x: hidden;
+}
+#accordionOpsWrap .boxConsultare,
+#boxContact .boxConsultare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+#accordionOpsWrap .boxConsultare .boxConsultareWrap,
+#boxContact .boxConsultare .boxConsultareWrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+#accordionOpsWrap .boxConsultare .boxConsultareMsg,
+#boxContact .boxConsultare .boxConsultareMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 310px;
+  height: 110px;
+  padding: 19px;
+  border: 1px solid #ccc;
+  margin: -55px 0 0 -155px;
+  background-color: #ffffff;
+}
+.wrapLayer {
+  position: relative;
+  height: auto;
+}
+.loadingLayer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.loadingLayer.loading {
+  display: block;
+}
+#accordionOpsWrap {
+  min-height: 428px;
+}
+#boxContactWrap {
+  min-height: 260px;
+}
+form .form-group + .btnSeparator {
+  border-top: 1px solid #e3e3e3;
+  margin-bottom: 20px;
+}
+.strSeparator {
+  position: relative;
+  height: 0;
+  border-top: 1px solid #ccc;
+  margin: -10px 0 20px 0;
+}
+.strSeparator span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -11px;
+  padding-right: 5px;
+  line-height: 18px;
+  font-style: italic;
+  color: #999;
+  background-color: #fff;
+}
+.contattoFormApp .strSeparator {
+  margin-top: 0;
+}
+.contattoFormApp .form-group.requiredField {
+  margin-bottom: 10px;
+}
+.contattoFormApp .form-group.requiredField p {
+  margin-bottom: 0;
+}
+.spPersonOpsBox .contattoFormSmash .form-group {
+  margin-bottom: 0;
+}
+.spPersonOpsBox .contattoFormSmashSMS hr {
+  margin-top: -10px;
+}
+.saldoGroup {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 18px;
+}
+.saldoLabel,
+.saldoVal {
+  display: block;
+  line-height: 19px;
+  color: #262626;
+}
+.saldoLabel {
+  font-weight: 600;
+}
+.saldoVal {
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#boxContact .ibanVal {
+  font-size: 12px;
+  line-height: 20px;
+}
+#boxContact .appOK ol {
+  margin-bottom: 20px;
+}
+#boxContact .appOK .btnSeparator {
+  margin-bottom: 15px;
+}
+/* BOTTONE */
+.button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+/* SPORTELLO */
+#movDispoExp {
+  position: relative;
+}
+#movDispoExp_loadlayer,
+.loadlayer {
+  position: absolute;
+}
+/****** MEDIA QUERY *****/
+@media (max-width: 767px) {
+  /* BOTTONE */
+  .button {
+    border-radius: 0;
+  }
+}
+/* GENERICI */
+#container {
+  padding: 0;
+}
+.bordertopgrey {
+  border-top: 1px solid #e3e3e3;
+}
+/* operazioni veloci*/
+.sectioncont section {
+  display: block;
+  height: 69px;
+  margin: 0 12px 55px 12px;
+  cursor: pointer;
+  border: 1px solid #c6c6c6;
+  border-radius: 4px 0 0 4px;
+}
+.sectioncont section.disabled {
+  cursor: default;
+  color: #a6a6a6;
+}
+.sectioncont .slidelink {
+  position: relative;
+  height: 69px;
+  text-decoration: none;
+  line-height: 69px;
+}
+.slidelink .movTitle {
+  display: inline-block;
+  padding: 0 10px 0 80px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.2;
+}
+.button {
+  position: absolute;
+  top: -1px;
+  float: left;
+  width: 69px;
+  height: 69px;
+  margin: 0 10px 10px 0;
+  border-radius: 4px;
+}
+.button .img {
+  width: 58px;
+  height: 58px;
+  margin: 4px 0 0 5px;
+  background: none no-repeat 0 0;
+  background-size: 58px 58px;
+}
+/*bottone disabilitato */
+.spBtnDis {
+  background-color: #b7b7b7;
+}
+/* form */
+.formGeneric {
+  width: 100%;
+}
+.spBox .formGeneric {
+  margin: 0;
+}
+.spBox .formGeneric fieldset {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0;
+  vertical-align: top;
+  border: 0;
+}
+.formGeneric fieldset.row {
+  width: 100%;
+  padding-left: 0;
+}
+.formGeneric label.nomefield {
+  color: #666;
+}
+.formGeneric label.nomefield.ico {
+  width: auto;
+}
+.formGeneric legend {
+  margin: 0;
+  padding: 0 0 3px 0;
+  color: #666;
+  font-weight: bold;
+  *margin-left: -6px;
+}
+.row .unacolonna {
+  width: 100%;
+  *width: 99.94680851%;
+}
+.formGeneric .errore input[type="text"],
+.formGeneric .errore input[type="tel"],
+.formGeneric .errore input[type="password"],
+.formGeneric .errore input[type="number"],
+.formGeneric .errore textarea {
+  border-color: #f00;
+}
+.formGeneric fieldset.errore label {
+  color: #f00;
+}
+.formGeneric .row .span4 input.hasDatepicker[type="text"],
+.formGeneric input.withIcon,
+.formGeneric select.withIcon {
+  width: 77%;
+}
+.contenuti input[type=number]::-webkit-outer-spin-button,
+.contenuti input[type=number]::-webkit-inner-spin-button {
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+  /* display:none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+}
+.container-fluid .formGeneric .row {
+  margin-bottom: 12px;
+}
+.container-fluid .spBottBox .row {
+  margin-bottom: 6px;
+}
+/* Fondo box password 2 livello */
+.formGeneric.pin2 strong {
+  color: #262626;
+}
+.formGeneric input[type="text"].inppass2,
+.formGeneric input[type="password"].inppass2,
+.formGeneric .asterisco {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-left: 0;
+  line-height: 30px;
+  text-align: center;
+}
+.formGeneric .asterisco {
+  padding-top: 5px;
+  line-height: 25px;
+  color: #999;
+  background-color: #f3f3f3;
+}
+.formGeneric .asterisco:before {
+  content: '*';
+}
+.formGeneric .pinInput {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  border-left: 1px solid #ccc;
+}
+/*** /wscmn/css/ret/responsive/sportello.css ***/
+/* BODY tabella */
+#container {
+  color: #000;
+}
+/* HEAD tabella */
+.spHead {
+  margin-bottom: 32px;
+  padding: 20px 30px;
+  border: 1px solid #CCCCCC;
+  background-color: #FBFBFB;
+}
+.spHead.formGeneric .row {
+  margin-bottom: 0;
+}
+.spNome,
+.spSaldo {
+  height: 67px;
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+}
+/* BOX */
+.spContent {
+  border-radius: 0;
+}
+.spIco {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50%;
+}
+.spIco img {
+  padding-top: 6px;
+}
+.spIco.close {
+  width: 3px;
+  height: 3px;
+  border: 1px solid #999;
+  box-shadow: 0 2px 0 0 #e0e0e0;
+}
+.spBox {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0;
+  background-color: #fff;
+}
+/* #movDispoTab .spBox{box-shadow:none;overflow:hidden} */
+#movDispoTab {
+  margin-bottom: 80px;
+}
+.spBar {
+  margin-top: 29px;
+  text-align: left;
+  font-weight: bold;
+}
+.spBar a:hover {
+  color: #6f8f0a;
+}
+.spBottom {
+  height: 25px;
+  margin-top: 5px;
+}
+.spLine {
+  overflow: hidden;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+.spLeft {
+  left: 10px;
+}
+.spRight {
+  right: 0;
+}
+.spButton {
+  width: auto;
+  padding: 4px 14px 5px 14px;
+  cursor: pointer;
+  color: #fff !important;
+  border: 0 none;
+  border-radius: 9px 9px 9px 9px;
+}
+.spButton:hover {
+  color: #fff !important;
+}
+.spGray {
+  background-color: #bababa;
+}
+.spLinkBr {
+  position: absolute;
+  right: 6px;
+  bottom: 14px;
+}
+#buttonBox {
+  overflow: hidden;
+  width: 100%;
+  height: 286px;
+  margin-bottom: 80px;
+  border: 1px solid #d0d0d0;
+}
+#buttonBox .spBar {
+  position: relative;
+  z-index: 1;
+  margin-top: -94px;
+  padding-left: 4px;
+}
+#movDispoTab .spBar {
+  padding-left: 4px;
+}
+#movDispoTab .spTable .th-data {
+  width: 14%;
+}
+#movDispoTab .spTable .th-desc {
+  width: 65%;
+}
+#movDispoTab .spTable .th-tipo {
+  width: 40%;
+}
+#movDispoTab .spTable .th-stato {
+  width: 25%;
+}
+#movDispoTab .spTable .th-imp {
+  width: 21%;
+}
+#movDispoTab .boxesito {
+  width: auto;
+  margin: 0 4px;
+}
+/* SLIDE */
+.spCover {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  height: 282px;
+  border-radius: 0;
+}
+.spSlide {
+  position: relative;
+  height: 282px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #fff;
+}
+.spSlide .spLine {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+/* ZOOM */
+.spZoom {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 282px;
+  border-radius: 0;
+  background-color: #f4f4f4;
+}
+/* SLIDER */
+.bx-wrapper .ui-datepicker-trigger {
+  width: 23px;
+  height: 23px;
+}
+/* BOX MOVIMENTI E DISPOSIZIONI */
+#movDispoTab a {
+  text-decoration: none;
+}
+#movContent,
+#dispoContent {
+  margin-bottom: 0;
+}
+#dispoBox .spCover {
+  border-top: 0 none;
+}
+#dispoDescBox {
+  height: 20px;
+}
+#dispoDetailLink {
+  display: block;
+  margin: 40px 10px 0 0;
+  text-align: right;
+}
+/* BOX MOVIMENTI VELOCI */
+#buttonBox .sectioncont {
+  margin: 0;
+}
+.buttonContent {
+  margin-bottom: 0;
+}
+#buttonHeader {
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+/* BONIFICO */
+#fieldsetBeneficiario {
+  position: relative;
+}
+#wrapBeneficiario {
+  padding-right: 100px;
+}
+#bonificoRubrica {
+  position: absolute;
+  top: 0;
+}
+.bonificoContattoPage1 .input-group-addon {
+  cursor: pointer;
+}
+/* BOLLETTINO */
+#nonSvincolaBox {
+  text-align: left;
+  line-height: 25px;
+}
+#msgSvincola {
+  text-align: left;
+}
+/* TABLE */
+.spWrapper {
+  padding: 23px 6px 10px 6px;
+}
+.spSlide .spWrapper {
+  padding: 0 12px;
+}
+.spWrapper2 {
+  padding: 0;
+}
+.linkDetail.clicked {
+  background-color: #edf3db;
+}
+.linkDetail .spTdDesc {
+  overflow: hidden;
+}
+/* MISC */
+.spHeader {
+  margin-bottom: 15px;
+  padding-top: 0;
+  font-weight: 600;
+  line-height: 14px;
+  font-size: 17px;
+}
+.spHeader2 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.spWrapper .btnWrapper {
+  margin-top: 10px;
+}
+.spWrapper .formGenerico {
+  padding-top: 10px;
+}
+.spWrapper .form-group {
+  margin-bottom: 0;
+}
+.spWrapper .checkbox.inline,
+.spWrapper .radio.inline {
+  padding-top: 10px;
+}
+.spWrapper .checkbox.inline .textWrapper,
+.spWrapper .radio.inline .textWrapper {
+  margin-bottom: 7px;
+}
+.spWrapper2 .spHeader2,
+.spWrapper2 p {
+  margin-left: 10px;
+}
+.spCopy {
+  text-align: center;
+  font-size: 10px;
+}
+/* BOTTONI */
+.spBtn {
+  height: 70px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  background-color: #fff;
+}
+/* FORM */
+/* BOX CONTATTI */
+#layerHideContact {
+  position: absolute;
+  z-index: 20;
+  top: 1px;
+  left: 440px;
+  width: 415px;
+  height: 200px;
+  border-radius: 0 5px 0 0;
+  background-color: #fff;
+}
+#contactContainer {
+  margin: 0;
+}
+#boxContact {
+  margin: 0 0 50px 0;
+}
+#boxContact .carouselPlusPage {
+  height: 195px;
+  overflow-y: hidden;
+}
+#boxContact .carouselPlusPage .sectioncont {
+  padding-right: 1px;
+  overflow-x: hidden;
+}
+/* PERSON */
+.spPersonCol {
+  display: none;
+}
+.spPersonCol.visible {
+  display: block;
+}
+.spPersonWrap {
+  position: relative;
+  height: 260px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.spPersonWrap .msgOnPage,
+.spPersonWrap .loadingOnPage {
+  padding: 19px;
+  border: 1px solid #E3E3E3;
+}
+.spPersonWrap .carouselPlusPage .msgOnPage,
+.spPersonWrap .carouselPlusPage .loadingOnPage {
+  padding: 0;
+  border: 0;
+}
+.spPersonBox,
+.spPersonOpsBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 19px;
+  border: 1px solid #E3E3E3;
+  background-color: #fff;
+}
+.spPersonOpsBox {
+  top: 100%;
+  padding: 0;
+  transition: top 330ms ease-out;
+  /* Form autorizzazione*/
+}
+.spPersonOpsBox.open {
+  top: 0;
+}
+.spPersonOpsBox .spPersonOpsInfo {
+  height: 39px;
+  border-bottom: 1px solid #E3E3E3;
+}
+.spPersonOpsBox .spPersonOpBox {
+  height: 219px;
+  padding: 10px 19px;
+  display: none;
+}
+.spPersonOpsBox .spPersonOpBox.active {
+  display: block;
+}
+.spPersonOpsBox .spPersonOpBox .requiredField {
+  position: relative;
+}
+.spPersonOpsBox .spPersonOpBox .requiredField .with-errors {
+  position: absolute;
+  top: 52px;
+  left: 0;
+}
+.spPersonOpsBox .spPersonOpBox .pin2 .with-errors {
+  position: absolute;
+  top: 28px;
+  left: 10px;
+}
+.spPersonOpsBox .carouselPlus,
+.spPersonOpsBox .carouselPlusPages {
+  height: 100%;
+  border: 0;
+  padding: 0;
+}
+.spPersonOpsBox .carouselPlusPage .saldoGroup {
+  margin-bottom: 8px;
+}
+.spPersonOpsBox .carouselPlusPage .row {
+  margin-bottom: 0;
+}
+.spPersonOpsBox .carouselPlusPage .spBtns {
+  margin-top: 11px;
+  margin-bottom: 0;
+}
+.spPersonOpsBox .carouselPlusPage .spBack {
+  display: inline-block;
+  margin-top: 6px;
+  height: 34px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.spPersonOpsBox .carouselPlusPage .spBack .icon {
+  height: 34px;
+  line-height: 34px;
+}
+.spPersonOpsBox .carouselPlusPage .spBottBox {
+  padding-bottom: 0;
+}
+.spPersonOpsBox .spPersonInfo {
+  position: relative;
+}
+.spPersonOpsBox .spPersonName {
+  margin: 0 89px 0 0;
+  padding: 3px 0 7px 0;
+  height: 48px;
+  line-height: 19px;
+}
+.spPersonOpsBox .spPersonFirstName,
+.spPersonOpsBox .spPersonLastName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spPersonOpsBox .spPersonLastName {
+  font-weight: 300;
+}
+.spPersonOpsBox .formGenerico {
+  padding-bottom: 0;
+}
+.spPersonOpsBox .form-group {
+  margin-bottom: 20px;
+}
+.spPersonOpsBox .editable-input .form-control {
+  width: 100%;
+}
+.spPersonOpsBox .btn-full.btn {
+  margin-top: 6px;
+}
+.spPersonOpsBox .contattoFormToken .spBtns {
+  margin-top: -5px;
+}
+.spPersonOpsInfo {
+  position: relative;
+}
+.spPersonOpsIcon {
+  position: absolute;
+  top: 3px;
+  left: 19px;
+  width: 32px;
+  height: 32px;
+}
+.spPersonOpsIcon .icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 32px;
+  color: #ccc;
+}
+.spPersonOpsIcon .icon.icon-add {
+  font-size: 24px;
+}
+.spPersonOpsSep {
+  position: absolute;
+  top: 9px;
+  left: 52px;
+  width: 32px;
+  height: 32px;
+  color: #979797;
+}
+.spPersonOpsName {
+  margin: 0 58px 0 75px;
+  padding: 7px 0;
+  height: 48px;
+  line-height: 24px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spPersonOpsLastName {
+  font-weight: 300;
+}
+.spPersonOpsClose {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 19px;
+  width: 12px;
+  height: 12px;
+}
+.spPersonOpsClose .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.spPersonInfo {
+  position: relative;
+}
+.spPersonName {
+  margin: 0 89px 0 0;
+  padding: 3px 0 7px 0;
+  height: 48px;
+  line-height: 19px;
+}
+.spPersonFirstName,
+.spPersonLastName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spPersonLastName {
+  font-weight: 300;
+}
+.spPersonBtns {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 74px;
+  height: 48px;
+  padding: 6px 0 10px 0;
+}
+#boxContact .spPersonBtns a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  line-height: 32px;
+  color: #8AB10B;
+}
+#boxContact .spPersonBtns a:first-child {
+  margin-left: 0;
+}
+.spPersonBtns .icon {
+  width: 32px;
+  line-height: 32px;
+  font-size: 32px;
+  display: inline-block;
+  height: 32px;
+  text-align: center;
+}
+.spPersonBtns .icon.icon-minus {
+  background-color: #8AB10B;
+  border-radius: 50%;
+}
+.spPersonBtns .icon.icon-minus:after {
+  position: relative;
+  font-size: 32px;
+  top: -2px;
+  content: "\2212";
+  color: #fff;
+}
+.spPersonOp {
+  position: relative;
+  height: 52px;
+  margin-top: 9px;
+  margin-right: -20px;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+}
+.spPersonOpBtn {
+  display: block;
+}
+.spPersonOpBtn .icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 32px;
+  color: #ccc;
+}
+.spPersonOpBtn span {
+  display: inline-block;
+  height: 32px;
+  padding-left: 10px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.spPersonOpAdd {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+.spPersonOpAdd .icon {
+  font-size: 20px;
+  color: #8AB10B;
+}
+.disabled .spPersonOpAdd {
+  display: block;
+}
+#boxContact .disabled .spPersonOpBtn {
+  cursor: default;
+  color: #CCCCCC;
+}
+.disabled .spPersonOpBtn .icon {
+  color: #E6E6E6;
+}
+.spPersonBoxAdd h4 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.spPersonBoxAdd label {
+  margin-bottom: 17px;
+  font-weight: 400;
+}
+.spPersonBoxAdd .btn {
+  margin-top: 0;
+}
+.spPersonBoxAdd .form-group {
+  margin-bottom: 20px;
+}
+.spPersonOpsDetails .formGenerico {
+  padding: 10px 19px;
+}
+.spPersonOpsDetails .form-group {
+  margin-bottom: 10px;
+}
+.spPersonOpsDetails .control-label-output {
+  padding: 7px 0;
+}
+.spPersonOpsDetails .output {
+  text-align: right;
+}
+#proseguiSetContatto {
+  margin-top: 10px;
+}
+/* FINE | PERSON */
+#inputBenCellContatto,
+#inputBenCjContatto {
+  height: 25px;
+  line-height: 25px;
+}
+#boxContact .spContactOps {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 100%;
+  height: 188px;
+}
+#spContactLink .textLinkRubrica {
+  padding-top: 32px;
+}
+#formAddContatto select {
+  width: 100%;
+}
+/*#contenuti #boxContact .spContactOps #linkRubrica {
+    right: 50%; width: 70px; margin-right: -40px;
+}*/
+#labelImportoPrefContatto {
+  font-size: 11px;
+  font-weight: normal;
+}
+#formSetContatto .output {
+  font-weight: bold;
+}
+#formSetContatto .withIco {
+  width: 94%;
+}
+#formSetContatto option.preferito {
+  font-weight: bold;
+}
+.errorlayer.contatto a.errclose {
+  top: -10px;
+  right: -8px;
+}
+/* TAB SPORTELLO */
+.spTabCont .spBox {
+  float: left;
+}
+.spTab {
+  display: table;
+  position: relative;
+  z-index: 2;
+  height: 41px;
+  margin: 0 0 -1px 0;
+  padding: 0;
+  list-style-type: none;
+}
+.spTab li {
+  display: table-cell;
+  top: 2px;
+  width: auto;
+  height: 39px;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+}
+.spTab li.firstTab {
+  left: 0;
+  border-right: 0;
+}
+.spTab li.tabAttivo {
+  top: 0;
+  height: 41px;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  cursor: default;
+}
+.spTab li h4 {
+  height: 39px;
+  margin: 0;
+  padding: 0 15px;
+  border-top: 1px solid #E9E9E9;
+  border-right: 1px solid #E9E9E9;
+  line-height: 38px;
+  text-align: center;
+  background-color: #fbfbfb;
+}
+.spTab li.firstTab h4 {
+  border-right: 0;
+  border-left: 1px solid #E9E9E9;
+}
+.spTab li.tabAttivo h4 {
+  height: 40px;
+  border: 0;
+  padding-top: 3px;
+  color: #000;
+  background-color: #fff;
+}
+.spTab .spHeader {
+  padding-top: 0;
+}
+.spBottBox {
+  padding: 5px 0 0 0;
+  border: 0;
+}
+.spBottBox h4 {
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.spBottBox .formGeneric fieldset {
+  margin-bottom: 0;
+}
+.spBottBox .appOK p {
+  margin-bottom: 8px;
+}
+.spBottBox .appOK ol {
+  margin-left: 0;
+  margin-bottom: 30px;
+  list-style-position: inside;
+}
+.tabCont {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #CCC;
+}
+/* |FINE| TAB SPORTELLO */
+/* BOX PROMOZIONALI */
+.spTitoloBanner {
+  margin: 0;
+  padding: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.spBorderbtnPromo {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #e3e3e3;
+}
+.spPromo {
+  height: 87px;
+}
+#spPromoCarousel {
+  padding: 30px 30px 20px 30px;
+  border: 1px solid #CCC;
+}
+#spPromoCarousel .carouselPlusPages {
+  min-height: 170px;
+}
+.spBoxPromo {
+  height: 170px;
+}
+.spImgPromo img {
+  width: 100%;
+}
+#spPromoCarousel .carouselPlusNav {
+  position: relative;
+  height: 53px;
+  border-top: 0;
+}
+#spPromoCarousel .carouselPlusArrowSx,
+#spPromoCarousel .carouselPlusArrowDx {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 9px;
+  height: 15px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 0;
+  font-size: 15px;
+  background-color: transparent;
+  color: #EAEAEA;
+  cursor: default;
+}
+#spPromoCarousel .carouselPlusArrowSx.off,
+#spPromoCarousel .carouselPlusArrowDx.off {
+  color: #8AB10B;
+  cursor: pointer;
+}
+#spPromoCarousel .carouselPlusArrowDx {
+  left: auto;
+  right: 5px;
+}
+.spbtnPromo {
+  margin-top: -6px;
+}
+.spbtnPromo .spButton {
+  margin-top: -17px;
+}
+.spImpostazioniWrap {
+  border: 1px solid #CCC;
+}
+.spImpostazioniWrap hr {
+  margin: 0;
+}
+.spImpostazioni {
+  padding: 31px 30px;
+}
+.spImpostazioni > div {
+  text-align: left;
+}
+.spImpostazioni > div:last-child {
+  text-align: right;
+}
+#contenuti .spImpostazioni strong a {
+  font-weight: bold;
+}
+#spPromowrapper .bx-wrapper {
+  clear: both;
+}
+#spPromowrapper .lastSpantit .bx-pager.bx-default-pager {
+  padding-top: 5px;
+}
+.contenuti .header.tab,
+header.tab {
+  position: relative;
+  background-color: #fff;
+}
+#container header {
+  background-color: #fff;
+}
+/* |FINE| BOX PROMOZIONALI */
+.lastSpantit {
+  float: right;
+  margin-right: 4px;
+}
+.lastSpantit .bx-pager.bx-default-pager {
+  float: right;
+  margin-top: 3px;
+  padding-top: 0;
+  padding-right: 5px;
+}
+.lastSpantit .bx-pager-item {
+  display: inline-block;
+}
+.lastSpantit .bx-pager-item .bx-pager-link {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 0 5px;
+  text-align: left;
+  text-indent: -999999px;
+  border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #ccc;
+}
+#consoleServ {
+  margin-right: 5px;
+}
+#container a.disabled:hover {
+  cursor: pointer;
+}
+.spConto .preferito {
+  padding-top: 3px;
+}
+#bonificoForm2 {
+  position: relative;
+}
+/* Padding bottoni funzioni veloci da rimuovere con doctype corretto */
+#funzBonifico .movTitle,
+#funzGiroconto .movTitle,
+#funzBollo .movTitle,
+#funzMavRav .movTitle {
+  padding-top: 24px;
+  *padding-top: 0;
+}
+#funzJeans .movTitle {
+  padding-top: 13px;
+  *padding-top: 0;
+}
+#funzCellulare .movTitle,
+#funzBollettino .movTitle,
+#funzAtm .movTitle {
+  padding-top: 13px;
+  *padding-top: 0;
+}
+#funzAtm .movTitle {
+  letter-spacing: -1px;
+}
+/* VISIBILITY */
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: none !important;
+}
+.hidden-desktop {
+  display: none !important;
+}
+.visible-desktop {
+  display: inherit !important;
+}
+/*ricarica ATM */
+#boxTesEsistente {
+  height: 96px;
+}
+.elFloat {
+  float: left;
+  width: 90%;
+}
+.inputFloat {
+  float: left;
+}
+.container-fluid .formGeneric .radioWrapper .row {
+  margin-bottom: 5px;
+}
+.container-fluid .formGeneric .radioWrapper .row .importo {
+  font-weight: bold;
+}
+.formGeneric .errore label span,
+.errore .formGeneric label span {
+  color: #000 !important;
+}
+#tesseraAtmForm img {
+  padding-top: 10px;
+}
+#proseguiRicaricaAtmStep2 {
+  margin-top: 10px;
+}
+/*Bollettini postali */
+#bollettinoPostaleForm label.active {
+  font-weight: bold;
+}
+#boxBollettino {
+  margin-top: 15px;
+}
+/*#bollettinoPostaleForm label{font-weight:normal}*/
+#container .boxesito a strong {
+  color: #6f8f0a !important;
+}
+/* Link nel feedback dopo pin 2*/
+#container .boxesito.positivo a,
+#contenuti .boxesito.positivo a:hover {
+  text-decoration: underline !important;
+}
+.smallText {
+  margin-top: -4px !important;
+  font-size: 11px !important;
+  line-height: 12px;
+}
+/* Configuratore */
+#spConfig {
+  position: absolute;
+  top: -47px;
+  right: 15px;
+  z-index: 1000;
+  width: 50px;
+  height: 44px;
+  padding: 5px 10px 5px 0;
+  background-color: #8ab10b;
+  overflow: hidden;
+  transition-duration: 250ms;
+}
+#spConfig .icon {
+  color: #ffffff;
+  cursor: pointer;
+}
+#spConfig .icon-arrow_right_filled {
+  display: none;
+}
+#spConfig .icon-arrow_left_filled {
+  display: inline;
+}
+#spConfig.open {
+  width: 410px;
+}
+#spConfig.open .icon-arrow_right_filled {
+  display: inline;
+}
+#spConfig.open .icon-arrow_left_filled {
+  display: none;
+}
+#spConfigWrap {
+  width: 400px;
+  height: 34px;
+}
+#spConfigWrap .col-xs-2,
+#spConfigWrap .col-xs-4,
+#spConfigWrap .col-xs-6 {
+  text-align: right;
+}
+#spConfigWrap .col-xs-2 {
+  line-height: 34px;
+}
+#spConfigWrap .col-xs-2 .icon {
+  font-size: 32px;
+}
+/****** MEDIA QUERY *****/
+@media (min-width: 320px) and (max-width: 1023px) {
+  .spInfo {
+    padding-left: 0;
+    padding-top: 15px;
+    border-left: 0;
+  }
+  .spHead {
+    margin-bottom: 48px;
+  }
+  #movDispoTab,
+  #boxContact {
+    margin-bottom: 0;
+  }
+  #boxContactWrap {
+    margin-bottom: -30px;
+  }
+  #container > .row > article {
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+  .spBottBox {
+    width: 92%;
+  }
+  .spInfo {
+    min-height: 30px;
+  }
+  .spButtonRow {
+    margin-top: 10px;
+  }
+  .spConto,
+  .spNome,
+  .spSaldo {
+    padding: 0;
+    text-align: left;
+  }
+  #buttonBox .spContent {
+    height: 504px;
+  }
+  #buttonBox .spSlide,
+  #buttonBox .spCover {
+    height: 502px;
+  }
+  #buttonBox .buttonContent .bx-viewport {
+    height: 502px;
+  }
+  #buttonBox .buttonContent .bx-viewport .item {
+    height: 454px;
+  }
+  /* BODY */
+  .spBody {
+    padding: 0;
+  }
+  .spHeadBg {
+    background: none #fff;
+  }
+  #container {
+    padding: 0 10px;
+  }
+  .spbtnPromo {
+    top: 10px;
+  }
+  .spImpostazioni div {
+    text-align: left;
+  }
+  #spTraslocoFacile,
+  #spRicaricaPostePay {
+    height: 113px;
+  }
+  #spPromowrapper .spHeader {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+  .spWrapper {
+    padding: 13px 6px;
+  }
+}
+/*** /wscmn/css/ret/responsive/sportello.css |FINE| ***/
+/*** LAYOUT.CSS ***/
+/*** LAYOUT.CSS |FINE| ***/
+/*# sourceMappingURL=fp_sportello.css.map */

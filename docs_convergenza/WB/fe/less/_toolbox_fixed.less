@@ -1,0 +1,420 @@
+/* PULSANTIERA */
+
+/* Altezza toolbox */
+@toolboxHeight: 44px;
+
+/* TOOLBOX */
+#toolbox {
+    position: fixed; z-index: 4; bottom: 0; left: 0; width: 100%; height: @toolboxHeight;
+}
+#toolwrap {
+    position: relative; height: @toolboxHeight;
+}
+#toolcontainer {
+    position:absolute; right:28px; top:125px;
+}
+#toolhandle {
+    display: block; position: absolute; top: 0; left: 0; width: 100%; height: @toolboxHeight; text-align: center; line-height: 44px;
+}
+#toolbtns {
+    position: absolute; top: @toolboxHeight; left: 0; width: 100%; height: 58px; margin: 0; padding: 0; list-style-type: none;text-align: center;
+}
+.toolbtn {
+    position: relative; display: inline-block; width: 40px; height: 40px; margin: 0 5px 18px 5px; border-radius: 50%; line-height: 40px;;
+    .icon {
+        position: absolute; top: 4px; display: block; width: 32px; height: 32px; font-size: 32px!important;line-height: 32px;
+        &:hover, &:focus, &.selected {
+            color: @textColorBank2 !important;
+        }
+        text-decoration: none; color: #999;
+        &.disabled,&.disabled:hover {color:#666 !important}
+    }
+}
+.selected #toolbtnpaolo, .selected #toolbtnpaolo:hover {
+    top: 2px; left: -2px; width: 36px; height: 36px; border: 2px solid @textColorBank2; border-radius: 50%;
+}
+#toolbox {
+    position: absolute; z-index:11; top: 0; right: 0; overflow: visible; height: 0; background-color: transparent;
+}
+#toolwrap {
+    max-width: 1110px; height: 0; margin: 0 auto;
+}
+#toolhandle {
+    display: none;
+}
+#toolbtns {
+    top: 52px; right: 28px; left: auto; width: 282px; text-align: right;
+    #toolbtnpaolo:hover, #toolbtnpaolo.selected {
+        top: 2px; left: -2px; width: 36px; height: 36px; border: 2px solid @textColorBank2; border-radius: 50%;
+    }
+}
+.toolbtn {
+    width: 32px!important; height: 32px!important; margin: 0 0 0 10px!important; font-size: 24px!important;line-height: 32px!important;
+}
+
+@import "_assvirtuale";
+
+/* Tools */
+/* Tool direttamente sotto "page1" */
+div.tool{display:none;position:absolute;z-index:2000;margin:0;width:201px;overflow:visible;float:left;left:0;background: #fff;box-shadow: 1px 3px 10px rgba(0,0,0,0.2);}
+div.tool .handle{cursor:move!important}
+// div.tool form{margin:0;padding:0}
+// div.tool .toolhead{background:none right top no-repeat;float:left;display:block;width:231px;margin:0}
+div.tool .toolhead span.tooltit{background:none left top no-repeat;float:left;color:#ffffff;font-weight:bold;font-size:11px;margin:0;border:none;height:49px;width:160px;cursor:move!important}
+// div.tool .toolhead img.close{float:right;padding:18px 13px 4px 0;cursor:pointer;cursor:hand}
+// div.tool .toolmiddle{background:url(/wscmn/img/ret/tool_chat_middle.png) 0 0 repeat-y;float:left;display:block;width:231px;min-height:314px}
+// div.tool .toolfooter{background:url(/wscmn/img/ret/tool_chat_bottom.png) left top no-repeat;float:left;display:block;width:231px; height:11px}
+// div.tool .toolmiddle a.posiz{margin:36px 0 0 90px; line-height:14px; float:left}
+// div.tool .tooltit img{display:block;float:right;padding:2px;cursor:move!important}
+// div.tool .textarea1{margin-top:132px;margin-left:12px;padding:0;overflow:auto;border:none;width:152px;height:180px;border:solid 1px #666}
+// div.tool .textarea2{margin-left:12px;overflow:auto;border:none;width:152px;height:48px;border:1px solid #58585a;float:left}
+// div.tool p{font:normal 11px tahoma,sans-serif;color:#1e201e;text-align:left;width:182px;margin:10px 0 10px 23px;padding:0}
+// div.tool p.pswchiamata{width:182px}
+// div.tool p.pswchiamata span{font-size:9px}
+// div.tool textarea{font:bold 11px tahoma,tahoma,tahoma,sans-serif;color:#58585a;text-align:left;border:1px solid #58585A;height:110px}
+// div.tool .invia{margin:5px 12px 0 12px!important;padding:0 0 6px 0;width:154px;float:left;clear:left}
+// div.tool .invia a,#fixedtools .tool .invia a:link,#fixedtools .tool .invia a:hover{float:right}
+// div.tool a,div.tool a:link,div.tool a:hover{text-decoration:none}
+// div.tool .sxlarge{border:1px solid #c6c7c8;border-right:none;float:left;width:259px;overflow:hidden;background-color:#fff}
+// div.tool img.freccia{float:right}
+// div.tool input{display:inline;border:1px solid #d2d2d2;font-size:9px!important;margin-right:1px}
+// div.tool input.txtpswchiamata{width:56px}
+// div.tool input.rd{border:0;padding-top:2px;float:left}
+// div.tool span.rdtxt{border:0;padding:0;margin:2px 0 0 4px;float:left}
+// div.tool label{display:inline}
+// div.txtscrivimess,div.tool textarea{margin-left:8px}
+// div.tool .txttiporich{margin:8px 0 0 8px}
+// div.tool select{margin-left:8px;border:1px solid #58585A}
+// div.tool table{margin:0;border-collapse:collapse}
+// div.tool td{border-top:1px solid #58585A;color:#999;padding:2px 5px;text-align:center;width:15px;margin:0;border-collapse:collapse}
+// div.tool td .bpop{display:none;text-align:left}
+// div.tool td .bpopon,div.tool td .bpopon2,div.tool td .bpopon3{display:block;text-align:left;position:absolute;z-index:200;margin-top:20px;background-color:#fefefe;padding:1px 3px 2px 3px;border:1px solid #008656;color:#353535;width:100px}
+// div.tool td .bpopon2{left:40px}
+// div.tool td .bpopon3{left:70px}
+// div.tool .faqon p,#ctntools .faqoff p{color:#000}
+// div.tool .faqon .clic,#ctntools .faqoff .clic{margin:0 0 0 6px;padding:3px 3px 3px 8px;color:#000;font-weight:bold}
+// div.tool .faqon .faqcont,#ctntools .faqoff .faqcont{margin-left:4px;margin:0;padding:3px;color:#000}
+// div.tool .faqon .clic{background:url(/img/ret/frec_lista.gif) 0 4px no-repeat;padding:0 0 0 14px}
+// div.tool .faqoff .clic{background:url(/img/ret/frec_lista.gif) 0 4px no-repeat;padding:0 0 0 14px}
+// div.tool .faqoff .faqcont{display:none}
+// div.tool .faqon .faqcont{display:block;padding-left:16px}
+// div.tool .faqon .faqcont ul{margin:5px 0 0 20px;padding:0}
+// div.tool .boxtools7form6{overflow-y:scroll;overflow-x:hidden;width:193px;height:260px;margin:0 0 10px}
+// div.tool .boxtools7form6 p{width:140px}
+// div.tool .boxtools7form7{clear:left;height:0;line-height:0}
+// #tool2 label{margin:0 5px 0 0}
+// #tool6 .sx,#tool7 .sx{height:360px}
+// div.tool p.imgicoadd{margin-right:0;width:172px}
+// div.tool .imgicoadd a,#fixedtools .tool .imgicoadd a:link,#fixedtools .tool .imgicoadd a:hover{text-decoration:none;font-size:9px}
+// div.tool p.boxtools7form2 input.boxtools7form3{display:block;float:left;width:110px}
+// div.tool div.faq{overflow-x:hidden;overflow-y:scroll;height:265px;width:193px}
+// div.tool div.faq p{width:134px}
+// div.tool p.boxtools7form2{clear:left;padding:10px 0;width:182px;margin-bottom:0!important}
+// div.tool .txtgiorno{margin-left:0;width:114px}
+// div.tool .txtfascia{margin-left:0;width:84px}
+
+
+// /* tool larghi */
+// div.tool.toollarge{width:345px;background-color:#fff}
+// div.tool.toollarge .toolhead{width:345px;margin-bottom:0px}
+// div.tool.toollarge .toolhead span.tooltit{width:305px}
+//
+// /* tool mail/pec*/
+// div.toolmail {width: 280px; margin-top: 437px}
+// div.toolmail .toolhead {display: block; float: left; width: 280px; height: 55px; margin: 0; background: url(/wscmn/img/ret/tool_mail_top.png) right top no-repeat}
+// div.toolmail .toolhead span.tooltit {float: left; width: 160px; height: 49px; margin: 0; padding-top: 22px; padding-left: 16px; cursor: move!important; color: #000; border: none; background: none; font-size: 11px; font-weight: bold}
+// div.toolmail .toolhead img.close {float: right; padding: 18px 13px 4px 0; cursor: pointer; cursor: hand}
+// div.toolmail .toolmiddle {display: block; float: left; width: 278px; height: 116px; border-right: 1px solid #d5d5d5; border-left: 1px solid #d5d5d5; background: url(/wscmn/img/ret/tool_mail_middle.gif) 0 0 repeat-x}
+// div.toolmail .toolmiddle img {margin-left: 15px}
+// div.toolmail .toolfooter {display: block; float: left; width: 280px; height: 30px; background: url(/wscmn/img/ret/tool_mail_bottom.png) left top no-repeat}
+//
+// /* Declinazioni da noresp per elementi proprietari */
+// #virtAss,.tool {
+//     .ui-slider-handle {  box-shadow: none; margin-top: -1px;}
+//     .toolhead9 {
+//         background: url(/img/ret/tool_agenzia_top.png) right top no-repeat !important;
+//         .tooltit9 {
+//             background-image: none !important;
+//             height: 60px !important
+//         }
+//     }
+//     input {font-size:12px;padding:3px}
+//     a.btnformright span, a.btnformright:link span, a.btnformright:hover span {
+//       display: block;
+//       float: left;
+//       height: 21px;
+//       padding-right: 5px;
+//       padding-left: 5px;
+//       text-decoration: none!important;
+//       color: #fff;
+//       background: url(/img/ret/btn_center_ar.gif) left top repeat-x;
+//       font-size: 11px;
+//       line-height: 19px;
+//     }
+//     a.btnformright img {float:left}
+//
+//     h3 {margin-bottom:5px;color:#000;margin:5px 23px;clear:both; font-weight: 600;line-height: 15px;font-size: 12px;}
+//     p {clear:both;}
+//     .radiogroup {padding:0 23px}
+//     .radiogroup label {float:left; clear:left; padding:0;float:left;font-weight:bold;font-size:11px;}
+//     .radiogroup span.output {float:right; clear:right; margin:3px 0; line-height: 14px; font-size:11px;padding: 0 0 5px;margin:0;max-width:115px; text-align:left;text-overflow:ellipsis;overflow:hidden;}
+//     .radiogroup label input {margin:0px 5px 5px 0;float:left; border:0;padding:0;}
+//     hr {margin: 7px 23px 9px;float:left;clear:both;border:0;border-top:solid 1px #ccc;width:188px}
+//     .txtagenzia {width:130px;}
+//     .boxesito {width:188px;margin:15px 23px 10px;background-image:#fff;background-color:#fff}
+//     .boxesito .middle .imgCont {margin-top:-15px;}
+//     .boxesito p {padding: 10px 15px 10px;margin: 0; width: 155px;}
+//     .boxesito .middle div.text {padding:0; width:155px;}
+//     .boxesito.positivo .middle .imgCont{background:transparent url(/wscmn/img/ico2or_boxesito_pos.png) no-repeat 0 0}
+//     .boxesito.positivo {border-color:#a7c44a}
+//     .boxesito.negativo .middle .imgCont{background:transparent url(/wscmn/img/ico2or_boxesito_neg.png) no-repeat 0 0}
+//     .boxesito.negativo {border-color:#ff4d3b}
+//     .boxesito.attenzione .middle .imgCont{background:transparent url(/wscmn/img/ico2or_boxesito_att.png) no-repeat 0 0}
+//     .boxesito.attenzione{border-color:#ffcc33}
+//     div.fooform {width:187px;margin:0 23px 10px;}
+//     .fooform .fooformleft {float:left}
+//     .fooform .fooformright {float:right}
+//     .ui-datepicker-trigger {width:auto;height:auto;top:auto;left:auto;}
+//
+//     #campoAutocomplete {  width: 160px !important;float: left;height: 20px;}
+//     a.autoSelButt {height:20px;background-position: center center;float:left;margin-left:-1px}
+//
+// }
+//
+// .ui-autocomplete.agenzia {position:absolute;z-index:999999}
+//
+// /* Promo assistente virtuale */
+// #vaExtended .inevidenza {float:left;width:100%;border:solid 1px #ddd; margin:5px 0;border-radius:4px; box-sizing:border-box;}
+// #vaExtended .inevidenza.red {border-color:#ff4d3b;}
+// #vaExtended .inevidenza.red i.icon {color:#ff4d3b;}
+// #vaExtended .inevidenza i.icon {  float: left;width: 16px;height: 16px;font-size: 16px;background: #fff;text-align: center;line-height: 16px;margin: -5px 0 0 -5px;border: solid 5px #fff;/* border-radius: 50%; */}
+// #vaExtended .inevidenza p {padding: 10px 5px 10px 21px; font-size:12px;margin-bottom:3px;}
+// #vaExtended .vaSurvey img {width:100%;float:left;margin-top:-10px;}
+// #vaExtended .vaSurvey p {margin-bottom:5px; line-height:13px}
+// #vaExtended .vaSurvey .valutazione {text-align:center;border-bottom:solid 1px #ccc; height:17px;overflow:visible;}
+// #vaExtended .vaSurvey .valutazione .vaStar {cursor: pointer; display:inline-block;width:40px;height:35px;background: #fff url(/wscmn/img/va_stars.gif) no-repeat center bottom;}
+// #vaExtended .vaSurvey .valutazione .vaStar.on {background-position: center top;}
+// .chatBtn {display: block;clear: both;width: 100%;margin: 5px 0;box-sizing: border-box;border-radius: 5px;color: #fff;font-size: 12px;text-align: center; cursor: pointer;text-decoration: none;padding: 10px;font-weight: bold;}
+// .chatBtn:hover {color:#fff !important;font-size:12px; opacity:0.8;}
+// .chatBtn.disabled {color:#eee !important;background-color:#ddd;border-color:#ccc;}
+// *:first-child+html #vaExtended .inevidenza i.icon{display:none;}
+// *:first-child
+
+.ui-autocomplete.agenzia {
+  z-index: 9999;
+  opacity: 1;
+  position: absolute;
+}
+
+div.tool {
+  font-family: "bankFont", Arial, Helvetica, sans-serif;
+  min-width: 300px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffffff;
+  .toolhead {
+    overflow: auto;
+    background: right 15px top 50% #f7f7f7 no-repeat url("/WB/fe/img/tool_close.png");
+    border-bottom: #e1e1e1 solid 1px;
+    padding-left: 15px;
+    span.tooltit {
+      float:left;
+      display:block;
+      width: ~"calc( 100% - 35px )";
+    }
+    .close {
+      cursor: pointer;
+      opacity: 0;
+      width: 35px;
+      height: 50px;
+      float: right;
+      font-size: 0px;
+    }
+  }
+  .fooform {
+    .fooformleft, .fooformright {
+      width: 50%;
+      float:left;
+    }
+  }
+  .toolmiddle {
+    padding: 15px 17px 0;
+    max-height: 650px;
+    @media (max-height: 650px) { max-height: 550px; }
+    overflow: auto;
+    p.operatori strong {
+      font-weight: normal;
+    }
+    .boxesito.attenzione {
+      margin-top: 5px;
+      margin-bottom: 25px;
+      .imgCont {
+        display:none;
+      }
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      color: @colorBank2b;
+    }
+    form.formoperatori {
+      label {
+        font-weight: bold;
+        display: block;
+        + br {
+          display:none;
+        }
+      }
+    }
+    .alRgFields {
+      position: relative;
+      img {
+        display:none;
+      }
+    }
+    .btnformright, .btnformleft {
+      display: table;
+      height: 34px;
+      min-width: 80px;
+      margin: auto;
+      float: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+      text-decoration:none !important;
+      color: #ffffff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: #aaaaaa;
+      background-image: none;
+      background-color: @colorBank2b;
+      img {
+        display: none;
+      }
+    }
+    input[type="text"], input[type="email"], input[type="number"],
+    input[type="tel"], input[type="date"], input[type="password"], select {
+      display: block;
+      width: 100%;
+      height: 34px;
+      padding: 6px 10px 9px 10px;
+      margin-bottom: 20px;
+      -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+      -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: @textColorBlack;
+      border: 1px solid @borderColorForm;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      background-color: @bgColorForm;
+      font-weight: normal;
+      font-size: 14px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      &:focus {
+        border-color: @textColorBank2;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px @bckFocusInput;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px @bckFocusInput;
+      }
+      &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+        color: @colorPlaceholder;
+      }
+      &[disabled] {
+        cursor: not-allowed;
+        color: @textColorDisabled;
+        border: 1px solid @borderColorDisabled;
+        border-radius: 0;
+      }
+      + br {
+        display:none;
+      }
+    }
+    .radiogroup {
+      padding-bottom: 15px;
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      .output {
+        margin-bottom: 10px;
+        display: block;
+        margin-left: 22px;
+        word-break: break-all;
+      }
+    }
+    // input specifici
+    input[type="text"][maxlength="4"] {
+      width: ~"calc( 4ch + 20px )";
+      float: left;
+    }
+    input[type="text"][maxlength="16"] {
+      width: ~"calc( 100% - 4ch - 20px - 5px )";
+      float: right;
+    }
+  }
+  .autoSelButt {
+    width: 100%;
+    display: block;
+    min-height: 30px;
+    border: none;
+    margin-top: -15px;
+    border-bottom: 1px solid #ccc;
+    .icon {
+      font-size: 16px;
+      color: #8ab10b;
+      padding: 0;
+      height: 16px;
+      float: right;
+    }
+  }
+  // PERSONALIZZAZIONI
+  &#tool2 {
+    .toolhead span.tooltit:before {
+      display: block;
+      content: "Webank ti richiama";
+      font-size: 14px;
+      color: #333;
+      padding-top: 15px;
+    }
+  }
+  &#tool9 {
+    .toolhead span.tooltit:before {
+      display: block;
+      content: "Appuntamento in sede";
+      font-size: 14px;
+      color: #333;
+      padding-top: 15px;
+    }
+    p[style="float:left"],
+    p[style="float:left"] + p  {
+      float:left;
+      width: 100% !important;
+      label {
+        width: 110px !important;
+        float:left !important;
+      }
+      .alRgFields {
+        display: block !important;
+        float: right !important;
+        width: ~"calc( 100% - 112px )" !important;
+        input, select {
+          width: 100% !important;
+          float: right !important;
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* Varianti "responsive" per Day WE */
+@media (max-width:1023px) {
+    #toolbox {display:none;}
+}

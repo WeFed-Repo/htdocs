@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Promo Bolli</title>
+		<meta name="description" content="Webank - Promo Bolli"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#FFF;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:91%;margin:0 0 0 4%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			/*#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}*/
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1 span.fascione {width:80%;text-align:left;float:left;line-height:1.4em;font-size:1.1em;margin:0 0 0 18%;padding:2% 0;color:#333}
+			.col1Left span {text-align:left;}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:1em;padding-bottom:17.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/promo_bolli/img/banner_01.png');background-size: 100% 100%;}
+			.banner02 {background-image: url('/wbapp/promo/promo_bolli/img/banner_02.png');background-size: 100% 100%;}
+			.banner03 {background-image: url('/wbapp/promo/promo_bolli/img/banner_03.png');background-size: 100% 100%;}
+			.wrapper{position:absolute;top:0;right:0;bottom:0;left:0;display:table-cell;vertical-align:middle}
+			ol{margin:0}
+			ol li{margin:0 0 10px 0}
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.iper {font-size:1.9em;font-weight:bold}
+			span.green {color:#8ab10b}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em}
+			span.piccolo {font-size:0.9em}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/promo_bolli/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/promo_bolli/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:50%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/promo_bolli/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/promo_bolli/img/frecciaSu2.gif');}
+				
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/mgm/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="dark">Invita i tuoi amici ad aprire Conto Webank <strong>entro il 15 novembre 2015. Per te</strong> 
+					un buono di <strong>80 Euro per ogni presentato che aprir&agrave; il Conto</strong> mentre per il tuo amico un buono di 
+					<strong>120 Euro</strong>.</span>
+					<span class="mega green">PARTECIPARE &Egrave; SEMPLICE</span>&nbsp;
+					<ol type="1">
+						<li><strong>Scegli il premio</strong> tra <strong>un buono</strong> acquisto 
+						<strong>ibs, eBay, Groupon, Media World</strong> o <strong>TotalErg</strong>.</li>
+						<li><strong>Inserisci</strong> il tuo codice presentatore o il tuo codice fiscale e segui le istruzioni.</li>
+						<li><strong>Invia il link dedicato ai tuoi amici per condividere il premio</strong> tramite email, Facebook, Twitter e Google+.</li>
+					</ol>
+					<br>
+				</div>
+				<div id="heading">
+					<img src="/wbapp/promo/mgm/img/middle.png">
+				</div>
+				
+				<!-- fine spazio per testo -->
+
+				<br><br>
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento operazione a premi</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+									<!-- REGOLAMENTO -->
+									<span class="maintitle">denominata &ldquo;PORTA I TUOI AMICI IN WEBANK! EA 2015&rdquo;</span>
+
+									<span class="title">SOGGETTO PROMOTORE</span>
+									<p>
+										Banca Popolare di Milano S.c.a.r.l<br>
+										Piazza Meda 4 - 20121 Milano<br>
+										Cod.Fisc. 00103200762 P.IVA 01906000201 
+									</p>
+
+									<span class="title">AMBITO TERRITORIALE</span>
+									<p>
+										Territorio Nazionale
+									</p>
+									
+									<div class="leggiReg" id="vedi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+									</div>
+									<div id="hiddenRegolamento" style="display:none">
+							
+									<span class="title">DENOMINAZIONE OPERAZIONE</span>
+									<p>
+										PORTA I TUOI AMICI IN WEBANK! EA 2015
+									</p>
+									
+									<span class="title">PRODOTTO PROMOZIONATO</span>
+									<p>
+										Conto Webank
+									</p>
+									
+									<span class="title">DURATA</span>
+									<p>
+										L'iniziativa verr&agrave; pubblicizzata a partire dal 26 Giugno 2015 ma avr&agrave; effettivo 
+										svolgimento complessivamente dal 15 Luglio 2015 al 31 Dicembre 2015<br>
+										In particolare:
+									</p>
+										<ul>
+										<li>termine per la presentazione dei nuovi clienti = dal 15 Luglio 2015 al 15 Novembre 2015</li>
+										<li>termine per la richiesta di apertura di Conto WeBank da parte dei &ldquo;Presentati&rdquo; = dal 15 Luglio 2015 al 15 Novembre 2015</li>
+										<li>termine per il perfezionamento dell'apertura di Conto WeBank da parte dei &ldquo;Presentati&rdquo; = dal 15 Luglio 2015 al 30 Novembre 2015</li>
+										<li>termine per l'apertura della linea promo non svincolabile a 12 mesi = dal 21 Luglio 2015 al 10 Dicembre 2015</li>
+										<li>termine per accreditare lo stipendio o la pensione da parte dei Presentati = il 31 Dicembre 2015</li>
+										</ul>
+									
+									<span class="title">DESTINATARI</span>
+									<p>
+										La presente iniziativa &egrave; rivolta ai seguenti destinatari:
+									</p>
+									<ul>
+										<li><strong><i>Clienti &ldquo;presentatori&rdquo;</i></strong>: tutti i clienti del Gruppo Banca Popolare di Milano residenti sul territorio italiano che, nel periodo promozionato, siano Titolari di un conto corrente privato WeBank attivo e non sospeso o revocato. Non potranno beneficiare di questa iniziativa i promotori finanziari ed i dipendenti del Gruppo Banca Popolare di Milano.</li>
+										<li><strong><i>Clienti &ldquo;presentati&rdquo;</i></strong>: tutti i soggetti residenti 
+										sul territorio nazionale di et&agrave; uguale o superiore a 18 anni. 
+										I Clienti &ldquo;Presentati&rdquo; dovranno essere nuovi clienti del Gruppo Banca 
+										Popolare di Milano, residenti sul territorio italiano che, nel periodo promozionato 
+										e sulla base delle scadenze oltre riportate, sottoscrivono un nuovo Conto Webank 
+										a <i>seguito di presentazione</i> da parte di un cliente &ldquo;Presentatore&rdquo;.<br>
+										Non potranno beneficiare di questa iniziativa:
+										<ul>
+											<li>coloro che alla data di apertura del Conto Webank risultano gi&agrave; clienti 
+											del Gruppo Banca Popolare di Milano. Per gi&agrave; cliente del Gruppo 
+											Banca Popolare di Milano si intende il titolare di un conto corrente presso una 
+											della banche del Gruppo Banca Popolare di Milano (Banca Popolare di Milano e 
+											Banca Popolare di Mantova). Nel caso di conto cointestato, nessuno dei 
+											cointestatari dovr&agrave; essere gi&agrave; Cliente del Gruppo Banca Popolare di Milano</li>
+											<li>coloro che hanno chiuso un conto in essere presso una delle banche del Gruppo Banca Popolare di Milano dal 01/06/2012;</li>
+											<li>coloro che hanno chiuso un Conto Webank aperto in regime di convenzione (a titolo esemplificativo: ZurichConnect, MediaWorld) dal 01/04/2010;</li>
+											<li>coloro che durante il periodo di durata di detta manifestazione a premi o nei 2 mesi antecedenti al suo inizio, risultino aver gi&agrave; compilato on-line il modulo di richiesta di apertura di Conto Webank, pur non avendo ancora perfezionato l'apertura del conto medesimo;</li>
+											<li>i promotori finanziari ed i dipendenti del Gruppo Banca Popolare di Milano;</li>
+											<li>coloro ai quali verr&agrave; rifiutata la domanda di apertura del Conto Webank per mancanza dei requisiti richiesti dalla banca ovvero del rispetto delle disposizioni normative vigenti in materia.</li>
+											<li>coloro che apriranno Conto Webank in regime di convenzione (a titolo esemplificativo: ZurichConnect, MediaWorld).</li>
+										</ul></li>
+									</ul>
+									
+									<span class="title">MODALIT&Agrave; DI PARTECIPAZIONE</span>
+									<p>
+										<strong>Nel periodo compreso tra il 15 Luglio 2015 e il 15 Novembre 2015</strong> i clienti 
+										del Gruppo Banca Popolare di Milano titolari di un conto corrente privato 
+										Webank (di seguito Presentatori) avranno la possibilit&agrave; di creare dalla 
+										propria area privata, dalla pagina pubblica o da Facebook un <strong>codice 
+										&ldquo;presentatore&rdquo;</strong> che servir&agrave; per associare automaticamente e nel 
+										rispetto della privacy i <strong>&ldquo;presentati&rdquo;</strong> alla sua utenza. Una volta creato, 
+										il codice presentatore non si potr&agrave; pi&ugrave; n&eacute; cambiare n&eacute; modificare e sar&agrave; 
+										sempre attivo. Se si &egrave; gi&agrave; creato il codice nelle precedenti edizioni 
+										dell'iniziativa, lo si ritrover&agrave; nella sezione privata del conto dedicata 
+										alla stessa. Una volta attivato il codice, il &ldquo;presentatore&rdquo; potr&agrave; 
+										visualizzare i box per condividere automaticamente la promozione e 
+										contestualmente sceglier&agrave; il premio che desidera sia ricevere sia far 
+										ricevere al proprio amico, parente o conoscente (di seguito Presentati). 
+										Le opzioni di scelta sono: <strong>Buoni Carburante Web TotalErg o 
+										Buono Acquisto PayPal o Buono Acquisto Groupon o Buono Acquisto Mediaworld o 
+										Buoni Acquisto Ibs</strong>. Il Presentatore potr&agrave; condividere l'operazione a premi 
+										con i Presentati inviando loro un invito tramite email o social network 
+										ad aprire il conto Webank e aderire all'iniziativa. Il Presentato, 
+										per partecipare, <strong>dovr&agrave;</strong> aprire il conto Webank unicamente tramite 
+										l'invito ricevuto dal Presentatore, in quanto lo stesso contiene 
+										le informazioni necessarie per associare automaticamente Presentatore, 
+										Presentato e Buono scelto. Il Presentatore ricever&agrave; sempre la stessa 
+										tipologia di premio scelta di volta in volta per il Presentato. 
+										Il Presentatore per poter partecipare dovr&agrave; inviare <strong>entro il 15 Novembre 2015</strong> 
+										ad amici, parenti e conoscenti (di seguito Presentati) l'invito ad 
+										aprire il conto Webank associato al premio che vorr&agrave; ricevere o che comunque 
+										vorr&agrave; che riceva ogni suo Presentato che soddisfer&agrave; le condizioni di seguito indicate
+										<br><br>
+										<strong>Nel dettaglio:<br>
+										Tutti i &ldquo;PRESENTATI&rdquo;</strong> che :
+										<ol type="1">
+											<li>nel periodo dal <strong>15 Luglio 2015 e il 15 Novembre 2015</strong> 
+											richiederanno l'apertura di Conto Webank <strong>dall'invito</strong> che avranno 
+											ricevuto dal cliente &ldquo;Presentatore&rdquo;, <strong>e</strong></li>
+											<li>entro il <strong>30 Novembre 2015</strong> perfezioneranno l'apertura del conto, e</li>
+											<li>entro il <strong>10 Dicembre 2015</strong> attiveranno una linea Promo a 
+											12 mesi non svincolabile fino a scadenza con almeno 1.000,00 &euro;,<br>
+											&nbsp; &nbsp; <strong>oppure</strong><br>
+											entro il <strong>31 Dicembre 2015</strong> accrediteranno lo stipendio o la pensione,</li>
+										</ol>
+										<p>
+											<strong>riceveranno contestualmente al verificarsi di tutte le condizioni di cui sopra, e in virt&ugrave; dell'invito 
+											ricevuto dal Presentatore, uno dei seguenti premi:</strong>
+										</p>
+										<ul>
+											<li><strong>n&deg; 12 Buoni Carburante Web TotalErg</strong> del valore di <strong>&euro; 10,00</strong> 
+											ciascuno spendibili per rifornimenti nei Punti vendita TotalErg abilitati 
+											ed in presenza del Gestore entro cinque mesi dalla data di consegna dei buoni;<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono Acquisto PayPal</strong> spendibile sul Sito 
+											www.<strong>ebay</strong>.it e usufruibile entro quattro mesi dalla data di consegna, 
+											del valore di <strong>&euro; 120,00</strong> IVA inclusa<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Groupon</strong> spendibile sul sito 
+											www.groupon.it e usufruibile entro dieci mesi dalla data di consegna, 
+											del valore di <strong>&euro; 120,00</strong> IVA inclusa,<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Mediaworld</strong> spendibile sul sito di Mediaworld 
+											compra on-line (http://compraonline.mediaworld.it) e usufruibile entro dieci mesi 
+											dalla data di consegna, del valore di <strong>&euro; 120,00</strong> IVA inclusa,<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Ibs</strong> spendibile sul sito di www.ibs.it e 
+											usufruibile entro dieci mesi dalla data di consegna, del valore di 
+											<strong>&euro; 120,00 IVA</strong> inclusa,</li>
+										</ul>
+										<p>
+											<strong>Tutti i &ldquo;PRESENTATORI&rdquo;</strong> che <strong>dal 15 Luglio 2015 al 
+											31 Dicembre 2015 avranno uno o pi&ugrave; amici</strong>, parenti o conoscenti (&ldquo;Presentati&rdquo;) 
+											che abbiano soddisfatto le condizioni 1), 2) e 3) specificate al paragrafo dedicato 
+											ai clienti &ldquo;Presentati&rdquo;, riceveranno in omaggio <strong>per ciascun amico PRESENTATO, 
+											in base all'invito dal quale il Presentato avr&agrave; aperto il conto</strong>:
+										</p>
+										<ul>
+											<li><strong>n&deg; 8 Buoni Carburante Web TotalErg</strong> del valore di 
+											<strong>&euro; 10,00 ciascuno</strong> spendibili per rifornimenti nei Punti 
+											vendita TotalErg abilitati ed in presenza del Gestore entro cinque mesi 
+											dalla data di consegna dei buoni;<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono Acquisto PayPal</strong> spendibile sul sito 
+											www.ebay.it e usufruibile entro quattro mesi dalla data di consegna, del valore 
+											di <strong>&euro; 80,00</strong> IVA inclusa<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Groupon</strong> spendibile sul sito www.groupon.it e 
+											usufruibile entro dieci mesi dalla data di consegna, del valore di 
+											<strong>&euro; 80,00</strong> IVA inclusa,<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Mediaworld</strong> spendibile sul sito di 
+											Mediaworld compra on-line (http://compraonline.mediaworld.it) e usufruibile entro dieci 
+											mesi dalla data di consegna del valore di <strong>&euro; 80,00</strong> IVA inclusa.<br>
+											&nbsp; &nbsp; <strong>oppure,</strong></li>
+											<li><strong>n&deg; 1 Buono acquisto Ibs</strong> spendibile sul sito www.ibs.it e usufruibile 
+											entro dieci mesi dalla data di consegna del valore di <strong>&euro; 80,00</strong> IVA inclusa.</li>
+										</ul>
+									
+									<span class="title">NATURA E VALORE DEI SINGOLI PREMI MESSI IN PALIO</span>
+									<p>
+										<strong>Per i Presentatori</strong>
+									</p>
+									<ul>
+										<li><strong>n&deg; 8 Buoni Carburante Web TotalErg</strong> del valore di <strong>&euro; 10,00</strong> ciascuno 
+										spendibili per rifornimenti nei Punti vendita TotalErg abilitati 
+										ed in presenza del Gestore entro cinque mesi dalla data di consegna dei buoni;</li>
+										<li><strong>n&deg; 1 Buono Acquisto PayPal</strong> spendibile sul sito www.ebay.it e usufruibile 
+										entro quattro mesi dalla data di consegna, del valore di <strong>&euro; 80,00</strong> IVA inclusa</li>
+										<li><strong>n&deg; 1 Buono acquisto Groupon</strong> spendibile sul sito www.groupon.it 
+										e usufruibile entro dieci mesi dalla data di consegna, 
+										del valore di <strong>&euro; 80,00</strong> IVA inclusa;</li>
+										<li><strong>n&deg; 1 Buono acquisto Mediaworld</strong> spendibile sul sito di 
+										Mediaworld compra on-line (http://compraonline.mediaworld.it) e usufruibile entro 
+										dieci mesi dalla data di consegna, del valore di <strong>&euro; 80,00</strong> IVA inclusa</li>
+										<li><strong>n&deg; 1 Buono acquisto Ibs</strong> spendibile sul sito www.ibs.it e usufruibile 
+										entro dieci mesi dalla data di consegna del valore di <strong>&euro; 80,00</strong> IVA inclusa.</li>
+									</ul>
+									<p>
+										<strong>Per i Presentati</strong>
+									</p>
+									<ul>
+										<li><strong>n&deg; 12 Buoni Carburante Web TotalErg</strong> del valore di 
+										<strong>&euro; 10,00</strong> ciascuno spendibili per rifornimenti nei Punti vendita 
+										TotalErg abilitati ed in presenza del Gestore entro cinque mesi dalla data di consegna dei buoni;</li>
+										<li><strong>n&deg; 1 Buono Acquisto PayPal</strong> spendibile sul sito www.ebay.it e usufruibile 
+										entro quattro mesi dalla data di consegna, del valore di <strong>&euro; 120,00</strong> IVA inclusa</li>
+										<li><strong>n&deg; 1 Buono acquisto Groupon</strong> spendibile sul sito www.groupon.it e 
+										usufruibile entro dieci mesi dalla data di consegna, del valore di <strong>&euro; 120,00</strong> IVA inclusa,</li>
+										<li><strong>n&deg; 1 Buono acquisto Mediaworld</strong> spendibile sul sito di Mediaworld 
+										compra on-line (http://compraonline.mediaworld.it) usufruibile entro dieci mesi 
+										dalla data di consegna, del valore di <strong>&euro; 120,00</strong> IVA inclusa,</li>
+										<li><strong>n&deg; 1 Buono acquisto Ibs</strong> spendibile sul sito www.ibs.it e 
+										usufruibile entro dieci mesi dalla data di consegna del valore di <strong>&euro; 80,00</strong> IVA inclusa.</li>
+									</ul>
+									
+									<span class="title">MONTEPREMI</span>
+									<p>
+										<strong>Banca Popolare di Milano</strong> prevede di assegnare complessivamente 
+										un montepremi stimato di <strong>&euro; 100.000,00 iva inclusa</strong>.
+									</p>
+									<p>
+										<strong>Banca Popolare di Milano ASSICURA in ogni caso l'assegnazione del premio 
+										A TUTTI i partecipanti all'operazione a premi che soddisferanno le condizioni 
+										di cui sopra, anche se risulteranno in numero superiore rispetto a quanto 
+										stimato al momento dell'avvio dell'operazione.</strong>
+									</p>
+									
+									<span class="title">MODALIT&Agrave; DI CONSEGNA</span>
+									<p>
+										I Buoni verranno <strong>inviati contestualmente al verificarsi delle 
+										condizioni</strong> previste per i Presentati e per i Presentatori 
+										all'indirizzo e-mail precedentemente inserito dal cliente e memorizzato 
+										nella sezione &ldquo;dati e impostazioni personali&rdquo; della parte privata del sito www.webank.it.
+									</p>
+									
+									<span class="title">VARIE</span><br>
+									<ul>
+										<li>Per apertura di Conto Webank si intende la conclusione del contratto ai sensi 
+										dell'art.97 Conclusione ed efficacia del contratto della Sezione V &ldquo;Norme 
+										generali che regolano il servizio WeBank&rdquo; contenuta nella &ldquo;Condizioni generali 
+										di Contratto del Conto Corrente e dei Servizi Associati - Servizio Webank&rdquo;.</li>
+										L'accredito dello stipendio o della pensione dovr&agrave; avvenire con l'inserimento di una causale (Es. Emolumenti, Abi 27 ecc.) che permetta alla Banca di riconoscere la natura dell'accredito, ossia che trattasi di stipendio o pensione. Resta inteso che la Banca si riserva la facolt&agrave; di effettuare le verifiche del caso.</li>
+										<li>L'iniziativa non &egrave; cumulabile con altre operazioni a premio o convenzioni della Banca e pertanto non sar&agrave; possibile inserire alcun codice convenzione al momento dell'apertura di Conto Webank.</li>
+										<li>La tipologia di premio spettante al &ldquo;Presentatore&rdquo; sar&agrave; la medesima di quella assegnata al rispettivo &ldquo;Presentato&rdquo; e dipender&agrave; dall'invito dal quale quest'ultimo ha aperto il conto</li>
+										<li>Se il &ldquo;presentato&rdquo; viene presentato da pi&ugrave; &ldquo;presentatori&rdquo;, il &ldquo;presentatore&rdquo; che ricever&agrave; il buono sar&agrave; solo quello a cui &egrave; associato il primo conto corrente che &egrave; stato aperto dal &ldquo;presentato&rdquo; ed ha conseguito i requisiti per ricevere il premio.</li>
+										<li>Se il &ldquo;presentato&rdquo; apre pi&ugrave; conti correnti verr&agrave; premiato solo sul primo conto corrente aperto.</li>
+										<li>L'apertura di Conto Webank al nuovo richiedente &egrave; subordinata all'approvazione da parte di Banca Popolare di Milano che provveder&agrave; all'effettuazione di tutti i normali controlli procedurali: qualora il nominativo del cliente &ldquo;Presentato&rdquo; non rientrasse nelle condizioni richieste ed il conto corrente non potesse essere aperto e sottoscritto, il &ldquo;Presentatore&rdquo; non potr&agrave; vantare diritti in merito.</li>
+										<li>I premi non potranno essere riconosciuti ai destinatari della promozione nel caso in cui il cliente &ldquo;Presentatore&rdquo; o il cliente &ldquo;Presentato&rdquo; non siano in regola con le norme relative alla tenuta conto (insolvenza, morosit&agrave;, ecc.).</li>
+										<li>Condizione necessaria per l'ottenimento del premio da parte del &ldquo;Presentatore&rdquo; e da parte del &ldquo;Presentato&rdquo; &egrave; che entrambi abbiano ancora Conto Webank aperto alla data nella quale matura il diritto all'ottenimento del premio: eventuali chiusure o estinzioni anticipate del conto da parte di uno dei due soggetti coinvolti (&ldquo;Presentatore&rdquo; e/o &ldquo;Presentato&rdquo;) antecedentemente tale data non permetteranno l'ottenimento del premio.</li>
+										<li>Ogni singolo Buono non &egrave; cedibile a terzi n&eacute; rivendibile ad altro soggetto</li>
+										<li>La clientela &egrave; informata che Banca Popolare di Milano non si assume alcuna responsabilit&agrave; in caso di mancato contatto con i premiati o di mancato recapito del premio dovuti all'indicazione da parte dei premiati di indirizzi e/o dati personali errati o non veritieri o non aggiornati.</li>
+										<li>Il premiato che non potesse o volesse usufruire del premio non avr&agrave; diritto ad alcuna somma di denaro.</li>
+										<li>Il premio non pu&ograve; essere convertito n&eacute; in denaro n&eacute; in gettoni d'oro.</li>
+										<li>La Societ&agrave; promotrice non si assume alcuna responsabilit&agrave;:
+											<ul>
+												<li>per cause a lei non imputabili (es. sovraccarico di rete, assenza di rete...) che comportino l'impossibilit&agrave; ad accedere al sito per la compilazione della richiesta di apertura;</li>
+												<li>per caselle di posta elettronica piene che non consentono pertanto la ricezione di mail inviate da Banca Popolare di Milano;</li>
+												<li>per indirizzi e-mail errati o incompleti indicati dal partecipante in fase di registrazione;</li>
+												<li>per mancata risposta dall'host computer dopo l'invio di mail da parte di Banca Popolare di Milano;</li>
+												<li>per e-mail indicate in fase di registrazioni inserite in black-list.</li>
+											</ul>
+											I partecipanti sono quindi invitati a controllare la propria casella di posta elettronica (anche tra le spam).</li>
+										<li>Nell'eventualit&agrave; in cui, per impossibilit&agrave; sopravvenuta o per causa non imputabile al soggetto promotore, il premio spettante non sia disponibile, Banca Popolare di Milano S.p.A. metter&agrave; a disposizione un premio della stessa natura e di medesimo valore.</li>
+										<li>La Banca si riserva la facolt&agrave; di verificare tutti i requisiti per l'esigibilit&agrave; e consegna del premio anche in un momento successivo all'apertura del conto corrente da parte del cliente.</li>
+										<li>Nel caso di Conti Cointestati, verr&agrave; erogato sempre un solo Premio</li>
+										<li>Per utilizzare il &ldquo;Buono acquisto&rdquo; PayPal &egrave; sufficiente scegliere i prodotti desiderati fra quelli disponibili sul sito eBay, arrivare alla schermata degli strumenti di pagamento, inserire il codice &ldquo;Buono acquisto&rdquo; ed effettuare il pagamento mediante PayPal. Il Buono acquisto deve essere utilizzato in un'unica soluzione. Un eventuale utilizzo parziale non dar&agrave; diritto al rimborso dell'importo non utilizzato. L'utilizzo del Buono acquisto &egrave; soggetto ai termini e condizioni pubblicati alla pagina http://pages.ebay.it/buono_sconto/</li>
+										<li>L'elenco degli punti vendita TotalErg presso i quali sar&agrave; possibile utilizzare i Buoni Carburante Web e le relative istruzioni per l'utilizzo sono disponibili sul sito www.totalerg.it. Gli stessi dovranno essere stampati e consegnati al Gestore del Punto Vendita TotalErg per l'utilizzo al momento del rifornimento. La scadenza dei Buoni Carburante &egrave; riportata sui buoni stessi</li>
+										<li>Per utilizzare il buono Groupon &egrave; necessario collegarsi al sito www.groupon.it e selezionare il coupon da acquistare cliccando sul pulsante &ldquo;Compra&rdquo;. Una volta nel menu di acquisto, prima di effettuare il pagamento, immettere il &ldquo;Codice Promozionale&rdquo; del Buono Acquisto nell'apposito campo e poi cliccare sul tasto &ldquo;Applica&rdquo;; dal prezzo del coupon verr&agrave; sottratto il valore del codice sconto. A questo punto sar&agrave; possibile concludere l'ordine cliccando sul tasto &ldquo;Acquista ora&rdquo;. Nel caso in cui il costo del coupon sia inferiore al valore del codice promozionale, il credito residuo verr&agrave; accreditato sul conto Groupon del cliente. In caso invece sia superiore, sar&agrave; necessario integrare la differenza utilizzando altri strumenti di pagamento.</li>
+										<li>Per utilizzare il &ldquo;Buono acquisto&rdquo; Media World &egrave; sufficiente scegliere il bene desiderato fra quelli disponibili sul sito, arrivare alla schermata degli strumenti di pagamento, inserire il codice e il valore del &ldquo;Buono acquisto&rdquo; nella pagina che comparir&agrave; selezionando l'opzione &ldquo;Buoni e carte EasyGift&rdquo;. Qualora l'ammontare complessivo della transazione, comprensiva di spese di spedizione, dovesse avere un valore superiore a quello del Buono, sar&agrave; necessario integrare la differenza utilizzando altri strumenti di pagamento. L'utilizzo parziale del Buono dar&agrave; diritto a spendere l'ammontare del valore residuo nelle transazioni successive.</li>
+										<li>Per utilizzare il &ldquo;Buono acquisto&rdquo; Ibs (Happy Card) &egrave; sufficiente scegliere i prodotti desiderati fra quelli disponibili sul sito, arrivare alla schermata degli strumenti di pagamento, inserire il codice della &ldquo;Happy Card&rdquo; nell'apposita stringa selezionando l'opzione corretta. Qualora l'ammontare complessivo della transazione, comprensiva di spese di spedizione, dovesse avere un valore superiore a quello del Buono, sar&agrave; necessario integrare la differenza utilizzando altri strumenti di pagamento. L'utilizzo parziale del Buono dar&agrave; diritto a spendere l'ammontare del valore residuo nelle transazioni successive.</li>
+									</ul>
+									
+									<span class="title">PUBBLICIT&Agrave;</span>
+									<p>
+										Attraverso comunicazione tramite Sito www.webank.it, Call center Webank, Direct Mailing su popria customer Base, Fan Page Facebook, Twitter e G+.
+									</p>
+									
+									<span class="title">MEZZI E MODALIT&Agrave; DI CONSULTAZIONE DEL REGOLAMENTO</span>
+									<p>
+										Il regolamento completo sar&agrave; a disposizione degli utenti finali alla pagina www.webank.it/doc/MGMEA2015.pdf<br>
+										Ulteriori informazioni sull'iniziativa potranno essere richieste contattando il 
+										Numero Verde WeBank 800.148.149 oppure scrivendo all'indirizzo e-mail webank@webank.it.
+									</p>
+									
+									<span class="title">TRATTAMENTO DEI DATI</span>
+									<p>
+										La societ&agrave; dichiara che la partecipazione alla presente operazione a premi 
+										presuppone il trattamento dei dati personali dei partecipanti nel rispetto 
+										del Decreto Legislativo del 30/06/2003 n&deg;196 &ldquo;Codice in materia di protezione 
+										dei dati personali&rdquo; e successive modifiche, cos&igrave; come dettagliato e specificato 
+										dall'informativa ai sensi dell'art. 13 di detto Decreto, che verr&agrave; resa ai 
+										partecipanti all'operazione a premi in fase di apertura del &ldquo;Conto Webank<br>
+										Il conseguimento delle finalit&agrave; di cui al presente regolamento potr&agrave; avvenire 
+										anche per mezzo di trasmissione e comunicazione di dati a terzi, con ci&ograve; 
+										s'intende terzi autorizzati al correlato trattamento dei dati stessi, 
+										in quanto svolgono o forniscono specifici servizi strettamente funzionali 
+										all'esecuzione dell'Operazione a Premi ovvero in quanto nominati 
+										responsabili del trattamento ai sensi dell'art. 29 del Decreto. 
+										La lista completa dei responsabili &egrave; disponibile presso la societ&agrave;.
+									</p>
+									
+									
+								
+									<div class="leggiReg" id="chiudi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span-->
+					<span class="footnote"><br>Messaggio pubblicitario con finalit&agrave; promozionale</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>	

@@ -1,0 +1,36 @@
+.rating {
+  white-space: nowrap;
+  .icon-corona {
+    position: relative;
+    top: 0;
+    width: 15px;
+    padding-left: 3px;
+    font-size: 12px;
+    &:first-child {
+      width: 12px;
+      padding-left: 0;
+    }
+  }
+  &.small {
+    display: none;
+  }
+}
+
+.icon-corona {
+    font-size: 12px !important;
+    color: darken(@tableStripe,10%);
+
+    &-on {
+        color: @giallo;
+    }
+    &::-moz-selection {
+        background: @primary;
+        color: #fff;
+        text-shadow: none;
+    }
+    &::selection {
+        background: @primary;
+        color: #fff;
+        text-shadow: none;
+    }
+}

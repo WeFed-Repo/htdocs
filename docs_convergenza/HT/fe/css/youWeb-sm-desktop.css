@@ -1,0 +1,259 @@
+/* CSS sm */
+	body {
+		font-size: 14px;
+	}
+
+	/* https://adactio.com/journal/5429/ */
+	body:after {
+    	content: 'desktop';
+    	display: none;
+  	}
+
+	.container {
+		width: auto;
+		/*min-width: 768px;*/
+		max-width: 1680px;
+	}
+
+	.spalla {
+		display: block;
+	}
+
+	#topNav ul.nav>li {
+		none;
+	}
+
+
+	.col-sm-80, .col-sm-20 {
+		float:left;
+		position: relative;
+		min-height: 1px;
+  		padding-right: 0;
+  		padding-left: 0;
+	}
+
+	.col-sm-20{
+		width:23%;
+	}
+	.col-sm-80{
+		width:77%;
+	}
+
+	.col-sm-offset-20{
+		margin-left:23%;
+	}
+
+	.nav-pills>li {
+    	float: left;
+	}
+
+	.section > .row > .col-sm-6:last-child,
+	.section > .row > .row-height > .col-sm-6:last-child {
+		padding: 0px 10px 0px 5px;
+	}
+	.section > .row > .col-sm-6:first-child,
+	.section > .row > .row-height > .col-sm-6:first-child{
+		padding: 0px 5px 0px 10px;
+	}
+
+
+	.col-sm-6.col-sm-offset-3 > .boxDefault{
+		margin-bottom: 10px;
+		width:50%;
+		margin-left:0;
+
+
+	}
+
+	.visible-mobile{
+		visibility:hidden;
+	}
+
+	.margin-top-sm-20{
+		margin-top: 20px;
+	}
+
+	.margin-top-sm-60{
+		margin-top: 60px;
+	}
+
+	.margin-bottom-sm-10{
+		margin-bottom: 10px;
+	}
+
+	.col-sm-45{
+		width: 45%;
+	}
+
+	.verticalAlignMultipleColumns > div[class ^= "col-sm"]{
+		float:none;
+		display: table-cell;
+	}
+
+	.center-sm{
+		text-align:center;
+	}
+
+	.form-control-w-auto { width: auto; }
+	.w-auto{
+		width:auto;
+	}
+
+	.sm-float-r{
+		float:right !important;
+	}
+
+	.ui-accordion .ui-accordion-header:hover{
+		background-color: #dadee1!important;
+
+	}
+	.btn-primary:hover,.ui-accordion-content input.btn:hover,.ui-accordion-content .XXL:hover,.btn-innerBox:hover,.innerBoxWhite input[type="button"]:hover,
+	.form-group input[type="submit"]:hover
+	 {
+		background-color: #007c66!important;
+	}
+	.btn-primary:active,.ui-accordion-content input.btn:active,.ui-accordion-content .XXL:active {
+		background-color: #65b7a9!important;
+	}
+.CCselezionato > .col-sm-6{float:right;width:40%;}
+.CCselezionato > .col-sm-6:first-child{float:left;width:50%;}
+.innerWrapperTab li a:hover,.sicurezzaInfo #tabs1 ul li a:hover{color:#00a592;}
+#divAltraCarta input[type="button"].btn:not(.btn-primary):hover{color:#007c66!important;}
+
+/*
+#mainContent .row > .col-xs-1,#mainContent .row > .col-sm-1,#mainContent .row > .col-md-1,#mainContent .row > .col-lg-1, #mainContent .row > .col-xs-2,#mainContent .row > .col-sm-2,#mainContent .row > .col-md-2,#mainContent .row > .col-lg-2,#mainContent .row > .col-xs-3,#mainContent .row > .col-sm-3,#mainContent .row >  .col-md-3,#mainContent .row > .col-lg-3,#mainContent .row > .col-xs-4, #mainContent .row > .col-sm-4,#mainContent .row > .col-md-4,#mainContent .row > .col-lg-4,#mainContent .row > .col-xs-5,#mainContent .row > .col-sm-5,#mainContent .row > .col-md-5,#mainContent .row > .col-lg-5,#mainContent .row > .col-xs-6,#mainContent .row > .col-sm-6,#mainContent .row > .col-md-6,#mainContent .row > .col-lg-6,#mainContent .row > .col-xs-7,#mainContent .row > .col-sm-7,#mainContent .row > .col-md-7,#mainContent .row > .col-lg-7,#mainContent .row > .col-xs-8,#mainContent .row > .col-sm-8,#mainContent .row > .col-md-8,#mainContent .row > .col-lg-8,#mainContent .row > .col-xs-9,#mainContent .row > .col-sm-9,#mainContent .row > .col-md-9,#mainContent .row > .col-lg-9,#mainContent .row > .col-xs-10,#mainContent .row > .col-sm-10,#mainContent .row > .col-md-10,#mainContent .row > .col-lg-10,#mainContent .row > .col-xs-11,#mainContent .row > .col-sm-11,#mainContent .row > .col-md-11,#mainContent .row > .col-lg-11,#mainContent .row > .col-xs-12,#mainContent .row > .col-sm-12,#mainContent .row > .col-md-12,#mainContent .row > .col-lg-12{
+	padding-right:15px;
+	padding-left:15px;
+}
+*/
+
+#inputAddebito .form-field-input{width:33.33333333%}
+#mainContent #inputMassimali .col-sm-6:nth-child(even) label,#mainContent #inputMassimali .col-sm-6:nth-child(even) .sliderContainer{margin-left:20px;}
+ #mainContent #formAllarmiBonifici  .col-xs-5, #mainContent #formAllarmiRicarica  .col-xs-5{width:100%;margin-bottom:10px;}
+#formAllarmiTitoli label:first-child,#formAllarmiTitoli .col-xs-3:first-child{width:100%;}
+#formAllarmiFondi label:first-child,#formAllarmiFondi .col-xs-3:first-child{width:100%;}
+#mainContent #formAllarmiTitoli .tabellaBlu.table.allarmi label{margin-top:0;}
+#mainContent #formAllarmiTitoli .align-vertical, #mainContent #formAllarmiFondi .align-vertical{padding-top:15px;text-align:right;}
+#mainContent #formAllarmiTitoli .align-vertical:last-child, #mainContent #formAllarmiFondi .align-vertical:last-child{text-align:left;}
+.table.allarmi.tabellaBlu tr td[data-td]{padding-top:15px!important;}
+#formContoAllarmi .table.allarmi.tabellaBlu tr td[data-td]{padding-top:0px!important;}
+
+
+/* TABELLE INVESTIMENTI*/
+@media (min-width: 992px){
+	.col-sm-6 .boxDefault{
+	min-height:300px;
+	}
+	.col-sm-6 .boxDefault.large{
+	min-height:400px;
+	}
+}
+
+
+@media (min-width: 1200px){
+	.col-sm-6 .boxDefault{
+	min-height:280px;
+}
+.col-sm-6 .boxDefault.large{
+	min-height:375px;
+}
+}
+@media (max-width: 1200px){
+#mainContent .divSinistra.col-xs-6 ,#mainContent .divDestra.col-xs-6{width:100%;}
+#best5 #gbox_best5Table, #best5 #gbox_best5Table div,#best5 #gbox_best5Table table,
+#gbox_worst5Table,#gbox_worst5Table div, #gbox_worst5Table table,
+#gbox_I_NEWSTable,#gbox_I_NEWSTable div, #gbox_I_NEWSTable table,
+#gbox_topVolumi_Table, #gbox_topVolumi_Table div, #gbox_topVolumi_Table table
+{width:100%!important;}
+}
+
+#mainContentPub .browserVersione{float:left;width: 25%;clear:none;}
+#mainContentPub div.browserVersione > p{margin-left:15px;}
+#mainContentPub  div.browser{float:none;margin:10px auto;}
+
+
+/*bordo di separazione tra BLOCCHI YOUWEB richiesta UX*/
+#formGestioneCategorie .section .col-sm-1{width:16.66666667%;}
+/*FINE bordo di separazione tra BLOCCHI YOUWEB*/
+
+#formRicaricaCarta .form-field-resume .resume,#formScaricaCarta .form-field-input:first-child .form-field{padding-top:15px;}
+#formGestioneBeneficiari .col-sm-6 .boxDefault {
+	padding-left:0;
+}
+#formGestioneBeneficiari .col-sm-6:nth-child(even) .boxDefault {
+    border-right: 2px solid #ebeef0;
+    padding-right: 15px;
+		border-left:0;
+}
+#formGestioneBeneficiari .col-sm-6:nth-child(odd) .boxDefault {
+    padding-left: 15px;
+}
+#formGestioneBeneficiari .col-sm-6:nth-child(odd) .boxDefault {border-right:0;}
+/*RICHIESTA FINANZIAMENTO*/
+#formRichiestaFinanziamento .form-field-input.col-sm-4.col-xs-12{min-height: 92px}
+@media (max-width: 1200px){
+	#formRichiestaFinanziamento .form-field-input.col-sm-4.col-xs-12 {width:50%;}
+}
+
+/* overlayer costi e commissioni*/
+.wrapper-overCont{padding-left:30px;padding-right:30px;}
+.costi-commissioni section{margin-bottom:50px;}
+
+/* richiesta appuntamento*/
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-4,
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-8
+{width:50%;}
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-4{padding-right:15px;}
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-8{padding-left:15px;}
+#mainContentPub .strong-auth, #mainContentPub .riquadro{width:800px!important;margin: 0 auto;}
+#mainContentPub .riquadro{margin-bottom:30px;}
+#formAdeguataVerifica label[for='professione'],
+#formAdeguataVerifica label[for='provenienzaFondi'],
+#formAdeguataVerifica label[for='attEconomica']
+{padding-top:15px;}
+#contoDepositoFrom #container .col-xs-4{width:100%;}
+/** FIX Ricarica automatica **/
+#formAutoricaricaSoglia .row.bottom, #formAutoricaricaSoglia .row.bottom {
+    position: absolute!important;
+}
+#formInserimento .form-field-input > .control-label{padding-bottom:8px;}
+.banner-pic-pac{
+	background: url('/HT/fe/img/banner_pic_pac.png') no-repeat 0 0;
+	background-size: 100%;
+    width: 100%;
+    padding-top:50.88%;
+}
+.banner-pir{
+	background: url('/HT/fe/img/banner_pir.png') no-repeat 0 0;
+	background-size: 100%;
+    width: 100%;
+    padding-top:35%;
+}
+.banner-ass-casa {
+	background: url('/HT/fe/img/banner-ass-casa.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:35%;
+}
+.banner-ass-persona {
+	background: url('/HT/fe/img/banner-ass-persona.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:45%;
+}
+.banner-ass-veicoli {
+	background: url('/HT/fe/img/banner-ass-veicoli.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:35%;
+}
+.banner-ass-reddito {
+	background: url('/HT/fe/img/banner-ass-reddito.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:35%;
+}
+
+/* Blocco fascicoli informativi */
+.docpdf {display:none}
+

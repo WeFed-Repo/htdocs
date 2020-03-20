@@ -1,0 +1,284 @@
+/* Carica anche il vecchio HelveTit per le titolature noresp */
+/* Font face helveTit*/
+/*@font-face {
+    font-family: 'helveTit';
+    !* src: url('/wscmn/font/helve.eot'); *!
+    src: url('/wscmn/font/helve.eot?#iefix') format('embedded-opentype'), url('/wscmn/font/helve.woff') format('woff'), url('/wscmn/font/helve.ttf') format('truetype'), url('/wscmn/font/helve.svg#helveTit') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/* Fine font face */
+
+/* Font face helveTitBold*/ 
+/*@font-face {
+    font-family: 'helveTitBold';
+    !* src: url('/wscmn/font/helvebold.eot'); *!
+    src: url('/wscmn/font/helvebold.eot?#iefix') format('embedded-opentype'), url('/wscmn/font/helvebold.woff') format('woff'), url('/wscmn/font/helvebold.ttf') format('truetype'), url('/wscmn/font/helvebold.svg#helveTitBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/* Fine font face */
+ 
+/* DEFINIZIONE DEI FONT */
+@font-face {
+    font-family: "bankFont";
+    font-weight: 300;
+    font-style: normal;
+    src: url("/WB/fe/font/opensans-light-webfont.eot");
+    src: url("/WB/fe/font/opensans-light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/WB/fe/font/opensans-light-webfont.woff2") format("woff2"),
+    url("/WB/fe/font/opensans-light-webfont.woff") format("woff"),
+    url("/WB/fe/font/opensans-light-webfont.ttf") format("truetype"),
+    url("/WB/fe/font/opensans-light-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/WB/fe/font/opensans-regular-webfont.eot");
+    src: url("/WB/fe/font/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/WB/fe/font/opensans-regular-webfont.woff2") format("woff2"),
+    url("/WB/fe/font/opensans-regular-webfont.woff") format("woff"),
+    url("/WB/fe/font/opensans-regular-webfont.ttf") format("truetype"),
+    url("/WB/fe/font/opensans-regular-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/WB/fe/font/opensans-semibold-webfont.eot");
+    src: url("/WB/fe/font/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/WB/fe/font/opensans-semibold-webfont.woff2") format("woff2"),
+    url("/WB/fe/font/opensans-semibold-webfont.woff") format("woff"),
+    url("/WB/fe/font/opensans-semibold-webfont.ttf") format("truetype"),
+    url("/WB/fe/font/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/WB/fe/font/opensans-bold-webfont.eot");
+    src: url("/WB/fe/font/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/WB/fe/font/opensans-bold-webfont.woff2") format("woff2"),
+    url("/WB/fe/font/opensans-bold-webfont.woff") format("woff"),
+    url("/WB/fe/font/opensans-bold-webfont.ttf") format("truetype"),
+    url("/WB/fe/font/opensans-bold-webfont.svg#open_sansbold") format("svg");
+}
+
+@font-face {
+    font-family: "bankFont";
+    font-weight: 400;
+    font-style: italic;
+    src: url("/WB/fe/font/opensans-italic-webfont.eot");
+    src: url("/WB/fe/font/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/WB/fe/font/opensans-italic-webfont.woff2") format("woff2"),
+    url("/WB/fe/font/opensans-italic-webfont.woff") format("woff"),
+    url("/WB/fe/font/opensans-italic-webfont.ttf") format("truetype"),
+    url("/WB/fe/font/opensans-italic-webfont.svg#open_sanssemibold") format("svg");
+}
+
+
+/* SEZIONE KIT FONTS ICOMOON*/
+
+@font-face {
+    font-family: "icomoon";
+    src: url("/WB/fe/font/icomoon.eot?xds9pz&rel=@{release}");
+    src: url("/WB/fe/font/icomoon.eot?#iefix-7i6nte&rel=@{release}") format("embedded-opentype"), url("/WB/fe/font/icomoon.ttf?xds9pz&rel=@{release}") format("truetype"), url("/WB/fe/font/icomoon.woff?xds9pz&rel=@{release}") format("woff"), url("/WB/fe/font/icomoon.svg?xds9pz#icomoon&rel=@{release}") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rotate(@degrees) {
+    -webkit-transform: rotate(@degrees);
+    -moz-transform: rotate(@degrees);
+    -ms-transform: rotate(@degrees);
+    -o-transform: rotate(@degrees);
+    transform: rotate(@degrees);
+}
+
+.icon {
+    font-size: 16px;
+    font-family: "icomoon", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.icon-1x {
+        font-size: 16px;
+    }
+
+    &.icon-2x {
+        font-size: 32px;
+    }
+
+    &.icon-mob { 
+        font-size: 40px;
+    }
+
+    &.icon-3x {
+        font-size: 48px;
+    }
+
+    &.icon-4x {
+        font-size: 64px;
+    }
+    &.icon-20 {
+        font-size: 20px;
+    }
+
+    &.icon-rotate-90, &.icon-rotate-180, &.icon-rotate-270 {
+        display: inline-block;
+    }
+
+    &.icon-rotate-90 {
+        .rotate(90deg);
+    }
+
+    &.icon-rotate-180 {
+        .rotate(180deg);
+    }
+
+    &.icon-rotate-270 {
+        .rotate(270deg);
+    }
+
+    &.btn-disabled, &.disabled {
+        color: @bgColorBtnDis;
+    }
+}
+
+/* ICONA LOADING ROTANTE */
+.icon-loading:before {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    :not(.ui-spinner) .icon {
+        font-size: 32px;
+    }
+    .icon.icon-4x {
+        font-size: 64px;
+    }
+}
+
+/* SEZIONE KIT FONTS ICOMOON COLOR */
+
+@font-face {
+    font-family: 'icomoon_color';
+    src: url('/WB/fe/font/icomoon_color.eot?ru7ll5');
+    src: url('/WB/fe/font/icomoon_color.eot?ru7ll5#iefix') format('embedded-opentype'), url('/WB/fe/font/icomoon_color.ttf?ru7ll5') format('truetype'), url('/WB/fe/font/icomoon_color.woff?ru7ll5') format('woff'), url('/WB/fe/font/icomoon_color.svg?ru7ll5#icomoon_color') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.glyph {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon_color', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 64px;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyph-2x {
+    font-size: 128px;
+}
+
+/* SEZIONE KIT FONTS */
+
+@import "_font_icomoon.less";
+@import "_font_multicolor64.less";
+
+/* Glifi "fissati" */
+.icon-corona {
+    font-size: 12px;
+    color: #E3E3E3;
+
+    &-on {
+        color: rgba(246, 207, 0, 1);
+        text-shadow: 0 0 1px #F6CF00, 0 0 0 #E1BD00, 0 0 0 #F6CF00;
+    }
+
+    /* Don't show shadows when selecting text */
+
+    &::-moz-selection {
+        background: #8ab10b;
+        color: #fff;
+        text-shadow: none;
+    }
+
+    &::selection {
+        background: #8ab10b;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+.icon.icon-hide {
+    font-size: 22px;
+}
+
+.icon.icon-show {
+    font-size: 12px;
+}
+
+.icon.icon-show {
+    font-size: 12px;
+}
+
+.icon.icon-add {
+    font-size: 18px;
+}
+
+
+/* Tabella */
+table td .icon-clessidra_stroke {
+    color: #8ab10b;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* FONT PER accordion  BPM */
+/*
+@font-face {
+    font-family: 'Futura'; 
+    src: url('/wscmn/font/futuraBT/27145D_2_0.eot'); 
+    src: url('/wscmn/font/futuraBT/27145D_2_0.eot?#iefix') format('embedded-opentype'),url('/wscmn/font/futuraBT/27145D_2_0.woff') format('woff'),url('/wscmn/font/futuraBT/27145D_2_0.ttf') format('truetype');
+}
+*/

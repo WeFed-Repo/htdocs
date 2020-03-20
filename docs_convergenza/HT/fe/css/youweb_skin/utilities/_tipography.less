@@ -1,0 +1,47 @@
+/* DATI FORMATTATI */
+
+.nega {
+  color: red;
+}
+
+.posi {
+  color: green;
+}
+
+// Applica l'allinemaneto solo agli oggetti che non hanno classe ".pusher"
+// ( che in YW è una classe di posizionamento )
+*:not(.pusher) {
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+}
+
+.notFocused {
+  &, &:focus {
+    -moz-outline: 0px;
+    outline: 0px;
+    box-shadow: none;
+  }
+}
+
+.ellipsed {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.imgWrapperResponsive img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.img100 {
+    width: 100%
+}

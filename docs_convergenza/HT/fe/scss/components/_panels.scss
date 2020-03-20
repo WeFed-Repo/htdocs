@@ -1,0 +1,506 @@
+
+.panel-step > .panel {
+  padding: 0 0 6px 0;
+}
+
+.panel {
+  padding: 6px 10px 6px 6px; //padding-bottom: 6px;
+  //border: 1px solid #ccc;
+  border-bottom: 0;
+
+  &-default.disabled .panel-title {
+    a,
+    .icon-arrow_down {
+      &,
+      &:hover,
+      &:focus {
+        color: #ccc;
+      }
+    }
+  }
+
+  &-heading p.sottotitolo {
+    color: #999;
+    font-style: italic;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+  }
+
+  &-body {
+    padding: 9px 13px 12px 13px;
+    /*border: 1px solid #ccc;*/
+    p {
+      line-height: 20px;
+      &.sottotitolo {
+        color: #999;
+        font-style: italic;
+        line-height: 18px;
+      }
+    }
+    > ul:last-child,
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+    &-heading h4 {
+    font-weight: 600;
+    position: relative;
+  }
+  &-heading a {
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    line-height: 22px;
+    padding: 10px 62px 10px 13px;
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $textColorBank;
+    }
+    .icon {
+      position: absolute;
+      top: 12px;
+      right: 17px;
+      color: #bfbfbf;
+      font-weight: 600; // aggiunto da simone
+      &.icon-arrow_up,
+      &.icon-arrow_down {
+        font-size: 24px;
+      }
+      &.icon-ellipsis-v {
+        font-size: 32px;
+        font-weight: normal;
+      }
+
+      &.icon-arrow_up {
+        display: block;
+      }
+
+      &.icon-arrow_down {
+        display: none;
+      }
+    }
+
+    &.collapsed {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &.active {
+        color: $textColorBank;
+      }
+      .icon.icon-arrow_up {
+        display: none;
+      }
+      .icon.icon-arrow_down {
+        display: block;
+      }
+      &.disabled {
+        color: $textColorDisabled;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  //nuova sezione eventi
+  &.eventi {
+    a.disabled .icon {
+      color: $textColorDisabled;
+    }
+
+    .icon {
+      position: absolute;
+      top: 10px;
+      right: 17px;
+      color: #bfbfbf;
+      font-weight: 600; // aggiunto da simone
+      &.icon-arrow_up,
+      &.icon-arrow_down {
+        font-size: 16px;
+      }
+
+      &.icon-ellipsis-v {
+        font-size: 32px;
+        font-weight: normal;
+      }
+
+      &.icon-arrow_up {
+        display: block;
+      }
+
+      &.icon-arrow_down {
+        display: none;
+      }
+    }
+
+    &.collapsed {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $textColorBank;
+
+      .icon.icon-arrow_up {
+        display: none;
+      }
+
+      .icon.icon-arrow_down {
+        display: block;
+      }
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        color: $textColorBank;
+      }
+
+      &.disabled {
+        color: $textColorDisabled;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+
+    .text-event-small {
+      //.note;
+      font-size: 14px;
+    }
+
+    .text-event-ico {
+      //.note;
+      font-size: 13px;
+    }
+
+    .text-event-title {
+      display: block;
+    }
+
+    .eventRowLeft {
+      margin-top: -10px;
+      padding: 0;
+
+      .icon {
+        position: static;
+        color: $bgColorBtn;
+        line-height: 50px;
+        float: left;
+        margin-right: 10px;
+
+        :hover {
+          color: $bgColorBtnOver;
+        }
+      }
+    }
+
+    .eventRowRight {
+      padding: 0;
+      text-align: right;
+
+      span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .btn {
+        font-size: 12px;
+        line-height: 17px;
+        color: $textColorBank3;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+    }
+
+    .btnWrapper {
+      margin: 20px 10px 0 0;
+    }
+
+    .eventDiff {
+      .diff {
+        margin-left: 10px;
+
+        span {
+          border: 1px solid #ccc;
+          border-radius: 100%;
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: transparent;
+        }
+      }
+
+      &.level1 .diff {
+        span:first-child {
+          background-color: #ccc;
+        }
+      }
+
+      &.level2 .diff {
+        span {
+          background-color: #ccc;
+        }
+
+        span:last-child {
+          background-color: transparent;
+        }
+      }
+
+      &.level3 .diff {
+        span {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+
+  &-heading-plus a {
+    padding-left: 50px;
+    color: #666;
+    background-color: transparent;
+
+    .icon {
+      font-size: 16px;
+
+      &.icon-add_filled {
+        display: block;
+      }
+
+      &.icon-left {
+        left: 10px;
+      }
+    }
+
+    &.collapsed {
+      background-color: transparent;
+
+      .icon.icon-add_filled {
+        display: block;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0;
+  }
+
+  &-group {
+    background:#fff;
+    /* border-bottom: 1px solid #ccc; */
+
+    &.panel-step {
+      margin-top: -1px;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .panel-title a {
+        padding-left: 55px;
+
+        &.collapsed {
+          padding-left: 13px;
+        }
+      }
+
+      .sub-accordion .panel-title a {
+        padding-left: 0;
+      }
+
+      .panel {
+        border-bottom: 1px solid $borderColorBox;
+
+        &.panel-selected {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      .sub-accordion .panel {
+        border-bottom: 0;
+      }
+
+      //classi specifiche per gestire richieste carte
+      &.unclosable,
+      &.disabled,
+      &.editable,
+      &.done {
+        .panel-heading a .icon.icon-arrow_up,
+        .panel-heading a.collapsed .icon.icon-arrow_down,
+        .icon-edit_fill,
+        .number-step .icon,
+        .editButton {
+          display: none
+        }
+
+        .panel-title a {
+          cursor: default
+        }
+      }
+
+      &.unclosable,
+      &.disabled,
+      &.editable,
+      &.done {
+        .sub-accordion .panel-heading a .icon.icon-arrow_up,
+        .sub-accordion .panel-heading a.collapsed .icon.icon-arrow_down {
+          display: block
+        }
+
+        .panel-title a {
+          cursor: pointer
+        }
+      }
+
+      &.unclosable {
+        .sub-accordion .panel-heading a.collapsed .icon.icon-arrow_down {
+          display: none
+        }
+      }
+
+      &.disabled,
+      &.done {
+        .number-step,
+        .panel-title a {
+          color: #c0c0c0;
+        }
+      }
+
+      &.editable {
+        .icon-edit_fill {
+          display: block;
+          font-size: 24px;
+          color: $colorBank2;
+          cursor: pointer
+        }
+
+        .number-step .icon {
+          display: block;
+          color: $colorBank1;
+          font-size: 32px
+        }
+
+        .panel-selected .icon-check_ok_big {
+          color: $textColorBlack;
+        }
+
+        .number,
+        .proseguiButton {
+          display: none
+        }
+
+        .editButton {
+          display: inline-block
+        }
+      }
+
+      &.done {
+        .number {
+          display: none
+        }
+
+        .number-step .icon {
+          display: block;
+          color: #c0c0c0;
+          font-size: 32px
+        }
+      }
+    }
+
+    &.panel-group-icon {
+      .panel {
+        padding: 0 0 0 30px;
+
+        &.opened {
+          border-color: #aaa;
+        }
+
+        &.after-opened {
+          border-top-color: #aaa;
+        }
+      }
+
+      .panel-title a {
+        padding: 13px 62px 13px 0;
+        line-height: 32px;
+
+        .icon {
+          top: 17px;
+        }
+
+        .title-icon {
+          display: inline-block;
+          position: static;
+          padding-right: 16px;
+          vertical-align: middle;
+          font-size: 32px;
+          font-weight: 300;
+          color: #262626;
+        }
+
+        .title-text {
+          display: inline-block;
+          line-height: 32px;
+          color: #262626;
+        }
+      }
+
+      .panel-title a.collapsed {
+        .title-icon {
+          color: #ccc;
+        }
+
+        .title-text {
+          color: $colorBank1;
+        }
+
+        &:hover .title-text {
+          color: #262626;
+        }
+      }
+
+      .panel-collapse {
+        padding: 0 30px 0 0;
+        border-top: 1px solid #E3E3E3;
+      }
+
+      .panel-body {
+        padding: 25px 0 30px 0;
+      }
+
+      &.last-opened {
+        border-color: #aaa;
+      }
+
+      .control-label,
+      .form-control {
+        color: #262626;
+      }
+    }
+  }
+
+  .number-step {
+    font-size: 28px;
+    font-weight: 600;
+    width: 42px;
+    height: 34px;
+    margin-top: 4px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+    float: left;
+    color: $textColorBank;
+    border-right: 1px solid #e3e3e3;
+  }
+}

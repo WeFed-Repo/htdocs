@@ -1,0 +1,315 @@
+/* generali */
+/*famiglia di font FUTURA */
+@font-face {font-family: 'FuturaBT-Book'; src: url("/wscmn/font/futuraBT/27145D_1_0.eot?#iefix") format("embedded-opentype"), url("/wscmn/font/futuraBT/27145D_1_0.woff") format("woff"), url("/wscmn/font/futuraBT/27145D_1_0.ttf") format("truetype");font-weight:normal;font-style:normal;}
+@font-face {font-family: 'FuturaBT-Heavy'; src: url("/wscmn/font/futuraBT/27145D_4_0.eot?#iefix") format("embedded-opentype"), url("/wscmn/font/futuraBT/27145D_4_0.woff") format("woff"), url("/wscmn/font/futuraBT/27145D_4_0.ttf") format("truetype");}
+body{background:#eee;margin:0;padding:0;font-family:'FuturaBT-Book',tahoma,Arial,sans-serif;color:#565959;font-size:15px}
+#wrapperHome{width:888px; margin:0 auto}
+img{border:0}
+a{outline:none} 
+
+/* header */
+.headerFloat{float:right}
+#headercontainerFlat img{float:left;padding-top:9px}
+.flRight{float:right!important}
+.flLeft{float:left!important}
+
+/* content */
+h1,h3{margin:0;padding:0}
+#content{width:100%; margin-top:11px}
+.homeTab{float:right; position:relative; margin-bottom:-1px} 
+.homeTab ul{float:right; margin:0 20px 0 0} 
+.homeTab ul li{display:inline-block;zoom:1;*display:inline;padding:20px 20px 10px 20px}
+.homeTab ul li.privati.attiva{border:1px solid #cdcdcd; border-bottom:1px solid #fff;background-color:#fff}
+.homeTab ul li.imprese.attiva{background-color:#fff;background:#fff url(/img/ico_tab_imprese.png) no-repeat 20px 24px; border:1px solid #cdcdcd; border-bottom:1px solid #fff}
+.homeTab ul li a {font-weight:bold; text-decoration:none; padding-left:9px}
+.homeTab ul li.attiva a {color:#565959;*padding-top:20px}
+.homeTop{padding:20px;border:1px solid #cdcdcd;display:inline-block;width:848px;background:#fff;}
+.homeLeft,.homeRight{width:48%;float:left}
+.homeRight{float:right}
+
+/*accordion*/
+.accordion{height:400px;position:relative;overflow:hidden;background:#fff}
+.accordion.errore{height:auto}
+.accordion-item{display:none;width:100%;*width:408px}
+.accordion-item p,.accordion-item ul{display:block;margin:0;padding:9px 0}
+.accordion-item ul span{font-weight:bold}
+.accordionMenu{position:absolute;bottom:0;left:0;width:100%;background:#fff;}
+
+.accordionMenu div{margin-top:0;float:left}
+.accordionMenu div {margin-top:20px}
+.accordionMenu div:first-child{margin-top:0}
+.accordionMenu .accordion-item{float:left;margin-top:0px;/**margin-top:20px;*/}
+
+.accordionMenu  .accordion-item{padding:0;}
+.accordion-item .num{background:#eee;padding:2px 5px;overflow:hidden;float:none;margin-top:10px!important}
+.accordion-item .num div{float:left;width:49%;margin-top:0;background:#eee;}
+.accordion-item .num div.nv{font-size:20px;font-weight:bold}
+.accordion-item .num div.txt{padding-top:2px;*padding-top:4px}
+.accordionMenu  .accordion-item p,.accordionMenu  .accordion-item li,.accordionMenu .accordion-item .num div.txt{*line-height:15px}
+.accordionMenu  .accordion-item ul{padding-left:20px}
+
+.accordionMenu h3,.accordionInner h3{position:relative;height:30px;width:388px;font-size:16px;background:#eee;padding-top:10px;padding-left:20px}
+.accordionInner h3{width:auto;*width:770px}
+.accordionInner div,.layeralert .accordionInner div{margin-bottom:20px}
+.accordionInner div.accordionCont,.layeralert .accordionInner div.accordionCont{margin-bottom:0}
+.accordionInner  h3:hover,.accordionInner  h3.on,.accordionInner h3{background-position:98% 50%}
+.accordionMenu h3 i{position:absolute;right:36px;top:12px}
+.accordionMenu h3 i.icon-chevron-down,.accordionMenu .active h3 i.icon-chevron-up{display:none}
+.accordionMenu .active h3 i.icon-chevron-down{display:block}
+/* footer */
+#footer {width:100%; padding: 60px 0 0; clear:both; color:#999999;margin:0 auto; padding-bottom:11px; padding-top:11px; text-align:center;}
+#footer p {color:#565959; min-height:48px; padding-top:12px; background-color:#FFFFFF; font-size:14px!important;margin:0}
+
+/* loghi stampa */
+.printlogo{display:none!important}
+.printlogoNew{display:none}
+
+
+/*Login*/
+.headerLogin {background:#57585a; padding:0 13px 0 20px; color:#fff;height:40px}
+.headerLogin span{float:left;font-weight:bold}
+.headerLogin span.flRight{float:right}
+.boxLogin {border:1px solid #CDCDCD;border-top:0;height:327px}
+.headerLogin span{padding:10px 0}
+.form-item {clear:both}
+.form-item .radio {float:left;}
+.form-item label {float:left;display:block; margin-bottom: 4px;  padding-top: 4px; font-size:14px;color:#565959}
+.form-item input[type="text"], .form-item input[type="password"]{width:264px;height:14px;}
+.clear{margin:0;padding:0;display:block;overflow:hidden;height:0;line-height:0;font-size:0;clear:both}
+
+.form-item span { font-size:12px}
+.form-item span a{color:#007c66; text-decoration:none}
+.form-width {width:302px; margin:0 auto;padding-top:41px}
+
+.boxLoginImp .form-width {padding-top:15px}
+
+/* MyBank */
+.mybank .boxLogin{height:auto;padding-bottom:30px;}
+
+/*campi di input*/
+input.uniform-input{background:none}
+ input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+   background-color: #FFFFFF;
+    border: 1px solid #CCCDCD;
+    color: #4E4E4F;
+    font-family: 'FuturaBT-Book',"Trebuchet MS",Arial,sans-serif;
+    margin: 0;
+    outline: medium none;
+    padding: 10px 18px;
+    text-align: left;
+    vertical-align: top;
+	
+}
+ input[type="text"]:focus, input[type="password"]:focus{border-color:#4E4E4F}
+ input[type="text"].disabled, input[type="password"].disabled{border-color:#cbcdcd;background-color:#eee}
+#login_privati .rowInput,#login_imprese .rowInput,.boxLogin form .rowInput{width:100%;float:left;padding-bottom:45px}
+#login_privati .rowInput:first-child,#login_imprese .rowInput:first-child,.boxLogin form .rowInput:first-child{padding-bottom:34px}
+
+.boxLoginImp form .rowInput{padding-bottom:15px}
+.boxLoginImp form .rowInput:first-child{padding-bottom:14px}
+
+#login_privati .rowRadio,#login_imprese .rowRadio,.boxLogin form .rowRadio{padding-bottom:46px}
+#login_imprese .rowInput.marginBottomSmall{padding-bottom:11px}
+#login_imprese .rowInput.marginBottomSmall:first-child{padding-bottom:9px}
+.marginRightRadio{margin-right:31px}
+#login_privati .button,.boxLogin form .button{width:auto}
+.errore input{border:1px solid #EE4555}
+.errore input:focus{border:1px solid #EE4555}
+/* Tooltip */
+#ttBox {display:block;position:absolute;z-index:10000;float:left;max-width:20em; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;clear:left}
+#ttClose {background: url("/WB/fe/img/ico1gr_tooltip_close.gif") repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 20px;
+    margin: -11px -8px 0 0;
+    width: 18px;}
+#ttBox #ttCont{  background-color: #FFFFFF;
+    border: 6px solid #CECECE;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    float: left;
+    font-size: 0.8em;
+    padding: 0;}
+#ttBox #ttCont #ttContText {padding:0.5em 1em 0.5em 0.5em;float:none}
+#ttBox .arrow {clear:left;margin:0 auto;background: transparent url(/wscmn/img/responsive/tt_arrow.png) no-repeat center bottom;height:0.5em;float:left;*float:none;width:100%;*width:20px;}
+#ttBox .arrow.top {background-position: center top}
+#ttBox.error #ttCont{color:#a00;border:solid 5px #c00}
+#ttBox.error .arrow {background-image: url(/wscmn/img/responsive/tt_arrow_error.png)}
+
+
+/*gestione tab */
+.tabWrapper,.tabWrapperInner{float:left;width:100%}
+.tabWrapperInner{width:100%}
+.layeralert .tabWrapperInner .tabMenu,.layeralert .contentNoImg,.layeralert .contentImg{padding:0 10px}
+strong.tit{text-transform:uppercase}
+.layeralert .tabWrapperInner .tabMenu{margin-bottom:10px;margin-top:10px}
+.contentImg{float:left;margin-bottom:30px!important}
+.contentText{width:86%;width:670px;float:right}
+.contentImg{width:780px}
+.contentTab{float:left}
+.contentTab.contenutoAttivo{display:block}
+.contentTab.contenutoInattivo{display:none}
+
+/* overlayer*/
+.infodetails p{padding:20px;font-weight:normal;margin:0}
+.bckColorOvelayer .infodetails{background-color:#57585A}
+.bckColorOvelayer .infodetails .close{float:right;padding:10px 13px 0 0}
+.infodetails ul{margin:0;font-weight:normal;*padding-left:40px}
+.headerLogin a{color:#fff}
+.headerLogin a i{font-size:20px}
+
+/* layeralert */
+.layeralert{position:absolute;text-align:left;display:block;border-radius:10px;border:1px solid #999999;}
+.layeralert div{margin:0;padding:0}
+.layeralert .head{clear:left;display:block;line-height:1px;width:246px;height:22px;border-top-left-radius:10px;border-top-right-radius:10px;border:none;float:left;background:none;position:relative}
+.layeralert .head  .closeLayer i{position:relative;font-size:23px;top:7px;cursor:pointer;position:absolute}
+.layeralert .body{clear:left;display:block;width:226px;\width:246px;w\idth:226px;padding:10px;background:#fff;float:left}
+.layeralert .body div.important{background:transparent}
+.layeralert .body div.important .dx{width:170px;margin-bottom:5px}
+.layeralert .body .btnformright{display:block;float:right;padding-left:5px;text-decoration:none}
+.layeralert .foot{clear:left;display:block;width:246px;height:10px;border:none;float:left;line-height:1px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.layeralert .body p{margin-bottom:5px !important;padding-bottom:5px !important}
+.layeralert h3.verde{margin:0 0 5px 0}
+
+#layerpop{background-color:#000000;height:100%;left:0;filter:alpha(opacity=70);-moz-opacity:.70;opacity:.70;position:absolute;top:0;width:100%;z-index:1}
+
+/*3box*/
+.box3 {clear:both;}
+.box3 .box{float:left;padding:30px 10px 20px 10px;border:1px solid #cdcdcd;display:inline-block;zoom:1;*display:inline;width:256px;background:#fff; font-size:14px; text-align:center;font-weight:bold;margin:30px 27px 0 0}
+.box3 .box.last{margin:30px 0 0 0}
+
+.layeralert div.boxNumUtil {width:48%; height:150px;margin-top:10px;border:1px solid #cdcdcd;float:left}
+.layeralert div.boxNumUtil.mgpad{margin-right:10px; margin-left:10px}
+#layerBloccoCarte.layeralert div.boxNumUtil.mgpad{margin-left:0;margin-right:20px}
+.layeralert div.boxNumUtil h3{background:#4E4E4F; color:#fff; padding:10px 10px 6px; font-weight:bold;font-size:15px}
+.layeralert div.boxNumUtil h3 span{font-weight:normal}
+.layeralert div.boxNumUtil p{margin:0;padding:10px 10px 6px;}
+.layeralert div.boxNumUtil .giorni{float:left;width:110px;margin-left:10px;margin-top:5px;font-size:13px}
+.layeralert div.boxNumUtil .giorniMed{float:left;width:200px;margin-left:10px;margin-top:5px;font-size:13px}
+.layeralert div.boxNumUtil .nazione{float:left;width:206px;margin-left:10px;margin-top:10px;font-size:13px}
+.layeralert div.boxNumUtil .estero{float:left;margin-left:10px;margin-top:10px;font-size:13px}
+
+.form-item span a{font-size:14px;padding-top:4px;float:right}
+.layeralert{border:0;font-size:15px;margin-top:90px!important}
+.layeralert,.layeralert .head,.layeralert .body{border-radius:0;}
+.layeralert,.layeralert .head {background-color:#eee;width:830px;height:40px;color:#565959}
+.layeralert,.layeralert .head .icon-user,.layeralert .head .icon-truck{margin-left:10px;*float:left;*margin-top:12px}
+.layeralert .body{width:810px}
+
+.layeralert .head  .closeLayer{right:10px;float:right;left:0;margin-right:30px;top:9px;text-decoration:none}
+.layeralert .head span{font-weight:bold;color:#007C66;padding:20px 20px 20px 0;display:inline-block;*display:inline;*zoom:1}
+.layeralert .head span.privati,.layeralert .head span.imprese{margin-left:10px;}
+.layeralert .homeTab {float:none;padding:0;margin-bottom:-1px;position:relative;}
+.layeralert .homeTab ul{float:none; margin:0 5px 0 0; padding:0;height: 100%;}
+.layeralert .homeTab ul li{display:table-cell;zoom:1;*display:block;padding:9px 21px;text-align:center;vertical-align:top;height:100%;*max-width:200px;*float:left;*min-height:36px}
+.layeralert .homeTab ul li.attiva{border:1px solid #cdcdcd;border-bottom:1px solid #fff;padding:8px 20px} 
+.layeralert .tabWrapperInner .homeTab ul li{*min-height:auto}
+.layeralert .tabWrapperInner .homeTab ul li.attiva{border:0} 
+.layeralert .tabWrapperInner .homeTab ul li{text-align:left;padding-left:0}
+.layeralert .homeTab ul li a{color:#565959}
+.layeralert .homeTab ul li a:hover{color:#66b0a3}
+.layeralert .homeTab ul li.attiva a{color:#007c66}
+.layeralert .contentTab{border: 1px solid #CDCDCD;width:100%;padding-bottom:10px}
+.layeralert .tabWrapperInner .contentTab{border:0}
+.layeralert .contentTab p{padding:0 10px 5px 10px}
+.layeralert .contentTab div p{padding:0}
+.layeralert a{color:#007C66}
+
+
+/*errore di sistema */
+.systemError{height:auto}
+.error_message{background:none;margin-right: 12px;padding: 0;}
+.colorBank{color:#007C66}
+.systemError p,.systemError h2{padding-top:0;margin-top:0}
+.systemError h2,.systemError p{padding:0; margin:0 0 5px 0;font-size:15px}
+.systemError label{font-size:14px;margin-bottom:4px;display:block}
+.systemError input{height:14px;clear:left;width:264px;}
+.systemError input {margin-bottom:10px}
+.invio_segnalazione_btn{margin-left:156px;position:relative;height:43px;cursor:pointer;background-position:0 -695px;background-image:url("/img/sprite.png");background-repeat:none;}
+.invio_segnalazione_btn:hover {background-position: 0 -739px;}
+.invio_segnalazione_btn a{background-image:url("/img/sprite.png");background-repeat:none;background-position:right -520px;color: #FFFFFF;
+    font-size:13px;
+	display: inline-block;
+    height: 32px;
+    line-height: 1.42857em;
+    margin-left: 13px;
+    padding: 14px 50px 0 2px;
+    text-align: center;text-decoration:none;text-transform:uppercase;}
+	
+.invio_segnalazione_btn:hover  a{
+    background-position: right -564px;
+	
+}
+
+.bannerPromoRight{margin-top:20px;float:left}
+
+input[type="password"]{font-family:tahoma,sans-serif}
+
+/*inner accordion */
+.layeraler .accordionInner,.accordionInner{padding:0 10px!important}
+.accordionInner .accordionCont{display:none;}
+.layeralert .contentTab  .accordionCont p{margin:0;padding:10px}
+
+.systemError strong.colorBank{margin-bottom:10px;display:block}
+
+
+/* colori login banca */
+.homeTab ul li.attiva a ,.homeTab ul li.attiva i {color:#565959;}
+.layeralert .homeTab ul li a{color:#565959}
+.rowButton,#login_privati .greyBtn,#login_imprese .greyBtn,.boxLogin form .greyBtn {*float:left}
+
+
+
+
+/*WEBANK*/
+#testa{background-color:#1e201e}
+body {background: #fff /*url(/WB/fe/img/mybank_home_bg.gif) repeat-x 0 0*/}
+#headercontainerFlat {/*background: transparent url(/WB/fe/img/mybank_head_bg.gif) no-repeat 0 0;*/height: 95px; padding: 0; width:895px;margin:0 0 0 -5px}
+#headercontainerFlat img {margin:20px 0 0 0; padding:0}
+#headercontainerFlat img.logoMyBank{margin:0;padding:10px 21px 0 0}
+.homeTop{border:0;width:850px}
+.accordionMenu h3:hover,.accordionInner  h3:hover{background-color:#6f8f0a;color:#fff;cursor:pointer}
+.accordionMenu h3:hover,.accordionInner  h3:hover{color:#fff;cursor:pointer}
+.accordionMenu .active h3:hover{background:#aa1224color:#fff;cursor:pointer}
+.accordionMenu .active h3,.accordionInner  h3.on{background:#dce785}
+.layeralert .homeTab ul li a:hover{color:#66b0a3}
+.accordion-item ul span,.accordionMenu .active .accordion-item a,.accordionMenu .accordion-item a,.homeTab ul li a, .accordion-item ul span, .accordionMenu .active .accordion-item a, .accordionMenu h3,.accordionInner h3, #footer p a, .form-item span a, .accordionMenu .accordion-item a, .layeralert .head span, .layeralert .homeTab ul li.attiva a, .layeralert a, .colorBank,.tabMenu li i{color:#6f8f0a}
+.uniformBtnWrapper,.ie.uniformBtnWrapper{background-color:#6f8f0a}
+.uniformBtnWrapper.hover{background-color:#8ab10b;box-shadow:0 2px 0 #6f8f0a}
+.uniformBtnWrapper.active{background-color:#8ab10b;box-shadow:0 -2px 0 #6f8f0a}
+#footer ul li a:hover,.layeralert .head .icon-user,.layeralert .head .icon-truck {color:#6f8f0a}
+/* modifica per adattare a mancanza img, da togliere se vengono inserite immagini promo*/
+.bannerPromoRight{display:none}
+.accordion div:first-child img{display:none}
+.accordionMenu{bottom:none;top:0}
+
+
+@media (max-width: 900px) {
+	#headercontainerFlat {width:100%}
+	#headercontainerFlat img {margin-left:20px}
+	#wrapperHome{width:100%}
+	.homeTop{width:100%}
+	.tabWrapper,.tabWrapperInner{width:95%}
+    .homeLeft, .homeRight {
+    width: 100%;
+	clear: both;
+	}
+	.homeRight {margin-bottom:30px}
+	.accordionMenu h3,.accordionInner h3{width:100%}
+	.accordionMenu div{float:none;clear:both}
+	
+	.layeralert {width:90%}
+	.layeralert .head {width:100%}
+	.layeralert .body{width:100%;box-sizing: border-box}
+ }
+
+ @media (max-width: 480px) {
+ #headercontainerFlat img {margin-left:10px}
+ #headercontainerFlat img.logoMyBank{padding-right:10px	}
+ .tabWrapper,.tabWrapperInner{width:100%}
+ .homeTop{padding:0px 0;}
+ .accordion-item p,.accordion-item ul{display:block;margin:0;padding:9px 10px}
+ .accordionMenu  .accordion-item ul{padding-left:50px}
+ }
+ 

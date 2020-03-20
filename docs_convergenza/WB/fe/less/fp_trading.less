@@ -1,0 +1,482 @@
+@import "_color_webank";
+@import "_color";
+
+#formSelRapporto {
+    margin-bottom: 0
+}
+
+#chartwrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-top: 30px;
+}
+
+#chartdiv {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+
+    .empty & {
+        background: repeating-linear-gradient(45deg, #ffffff, #ffffff 8px, #e3e3e3 8px, #e3e3e3 10px);
+        border-radius: 50%;
+    }
+}
+
+#outercircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+
+#innercircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin-top: -15%;
+    margin-left: -15%;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+
+    .empty & {
+        border: 2px solid #fff;
+        z-index:1;
+
+        &:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+        }
+    }
+}
+
+#chartCover {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 242px;
+    height: 242px;
+    border: 2px solid #A8A9AB;
+    border-radius: 50%;
+    background: #EDF5FF;
+}
+
+#chartCoverText {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 13px;
+        color: #262626;
+    }
+}
+
+#tradingChart {
+    padding-top: 30px;
+    margin-bottom: 30px;
+
+    .graficoLeg {
+        margin: 20px 0 0 0;
+        padding-left: 30px;
+        border-left: 2px solid #E3E3E3;
+        list-style: none;
+
+        li {
+            line-height: 30px;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .legAzI .icon {
+            color: #6fa3de;
+        }
+
+        .legAzE .icon {
+            color: #c1ad9b;
+        }
+
+        .legObb .icon {
+            color: #535150;
+        }
+
+        .legDer .icon {
+            color: #ffd54a;
+        }
+
+        .legCwc .icon {
+            color: #8a9d77;
+        }
+
+        .legEtf .icon {
+            color: #245e80;
+        }
+
+        .legMar .icon {
+            color: #7be8d1;
+        }
+    }
+
+    .graficoLegWrap {
+        position: relative;
+    }
+
+    #graficoLegArrow {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        background-color: #fff;
+        transform: rotate(90deg);
+
+        .icon-cursore-menu-down {
+            font-size: 8px;
+            color: #E3E3E3;
+        }
+    }
+}
+
+#tradingChartTitle {
+    /* padding-top: 20px; */
+    margin-bottom: 30px;
+}
+
+.totChart {
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:after {
+        display: table;
+        content: " ";
+        clear: both;
+    }
+}
+
+.valTotChart .valuta {
+    font-weight: 400;
+}
+
+#fpTrading .posi {
+    color: #68b31e;
+}
+
+#fpTrading .nega {
+    color: #d83217;
+}
+
+#tradingChartBtns {
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+#chartLegend {
+    font-size: 12px;
+    border: 0;
+
+    th, td {
+        border: 0;
+        background-color: #fff;
+        padding: 0;
+    }
+
+    .nome {
+        width: 150px;
+
+        span {
+            display: block;
+            padding: 18px 0 6px 0;
+        }
+    }
+
+    .valore {
+        width: 100%;
+
+        span {
+            display: block;
+            padding: 18px 0 7px 30px;
+        }
+    }
+
+    tbody .valore span {
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    tbody .nome {
+        span {
+            border-bottom: 3px solid #e3e3e3;
+        }
+
+        .nomeAit {
+            border-bottom-color: #6fa3de;
+        }
+
+        .nomeAes {
+            border-bottom-color: #c1ad9b;
+        }
+
+        .nomeObb {
+            border-bottom-color: #535150;
+        }
+
+        .nomeDvt {
+            border-bottom-color: #ffd54a;
+        }
+
+        .nomeCwc {
+            border-bottom-color: #8a9d77;
+        }
+
+        .nomeEtf {
+            border-bottom-color: #245e80;
+        }
+
+        .nomeMar {
+            border-bottom-color: #7be8d1;
+        }
+    }
+}
+
+
+.wrapTradChange {
+    margin-bottom: 20px;
+}
+
+#watchlistBtns {
+    margin-bottom: 10px;
+}
+
+#tradingBanner {
+    text-align: left;
+    overflow: auto;
+    padding: 15px;
+    border: solid 1px #ccc;
+    border-bottom: solid 3px #8ab10b;
+    width: 100%;
+
+    .ban-img, .ban-cta {
+        display: block;
+    }
+
+    .ban-img {
+        width: 60px;
+        margin: 0 0 0 20px;
+        float: left;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.19);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+
+    .ban-cta {
+        margin: 18px 10px 0 0;
+        float: left;
+        width: ~"calc( 100% - 255px )";
+        height: 30px;
+        font-size: 18px;
+        font-weight: bold;
+
+        a {
+            margin: 0;
+            float: left;
+            height: 30px;
+            width: auto;
+            font-size: 20px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            .icon {
+                font-size: 16px;
+            }
+
+
+        }
+
+    }
+}
+
+#boxinfoTrPlus {
+    padding-bottom: 0;
+
+    .tit {
+        height: 0;
+        padding-top: 19.9265381084%;
+        margin: 5px 0 20px;
+        background: url(/WB/fe/img/str_bg_markinsight.png) no-repeat 0 0;
+        background-size: cover;
+    }
+
+    .desc,
+    .title {
+        display: inline-block;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .desc {
+        color: #000;
+    }
+
+    .title {
+        color: #ff0000
+    }
+
+    .text {
+        padding: 0 0 11px 0;
+        margin: 0 0 10px 0;
+        border-bottom: solid 1px #e3e3e3;
+    }
+}
+
+#carouselPlusinfoTr {
+    position: relative;
+}
+
+#carouselPlusinfoTr .carouselPlusNav {
+    border-top: 0;
+}
+
+.boxApriDepTit {
+    padding: 20px 30px 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #8ab10b;
+    }
+}
+
+.titleApriDepTit {
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 32px;
+    font-size: 32px;
+    color: #8ab10b;
+
+    .icon {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+.platformApriDepTit,
+.walletApriDepTit {
+    display: table;
+}
+
+.platformApriDepTit {
+    padding-right: 29px;
+    border-right: 1px solid #b2b2b2;
+    margin-right: -15px;
+}
+
+.walletApriDepTit {
+    padding-left: 15px;
+}
+
+.icoLinkApriDepTit .icon {
+    position: relative;
+    top: 4px;
+}
+
+.icoLinkApriDepTit,
+.infoLinkApriDepTit {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.icoLinkApriDepTit .icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 32px;
+    color: #b2b2b2;
+}
+
+.titleLinkApriDepTit {
+    font-size: 20px;
+    font-weight: 400;
+    color: #8ab10b;
+
+    .icon {
+        font-size: 16px;
+        color: #fff;
+    }
+}
+
+.textLinkApriDepTit {
+    color: #b2b2b2;
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #chartwrap {
+        width: 80%;
+        padding-top: 80%;
+        margin: 30px 10%;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .boxTradInd,
+    .tradingNewsfooter {
+        .icon-arrow_trading_right {
+            font-size: 8px;
+        }
+    }
+
+    .tradingNewsLegendItem,
+    .tradingNewsIcon {
+        .icon {
+            display: block;
+            float: left;
+        }
+    }
+
+    .tradingNewsLink {
+        display: block;
+    }
+}

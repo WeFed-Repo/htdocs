@@ -1,0 +1,892 @@
+/***************************** NUOVA RIA  *****************************/
+#contenuti545 {
+  margin: 40px auto 5px auto;
+  width: 100%;
+}
+.separator-ria {
+  height: 1px;
+  margin: 20px 0 25px 0;
+  border: 0;
+  border-bottom: 1px solid #E3E3E3;
+  overflow: hidden;
+}
+.separator-medium {
+  margin: 30px 0;
+}
+.separator-small {
+  margin: 20px 0;
+}
+.separator-tot {
+  margin: 25px 0 30px 0;
+}
+.separator-graf {
+  margin: 20px 0 30px 0;
+}
+.panel-body-accordion hr.accordion {
+  margin-bottom: 10px;
+}
+#contenuti545 .bottomSmall {
+  margin-bottom: 14px;
+}
+#contenuti545 .bottomZero {
+  margin-bottom: 0;
+}
+/* Form */
+#riaMobileWrap.loading,
+#riaDesktopWrap.loading {
+  min-height: 38px;
+  background-size: 24px;
+  border: 1px solid #ccc;
+}
+.confermaContent .formGenerico {
+  padding-bottom: 0;
+}
+.form-group .row .clearfix {
+  margin-bottom: 30px;
+}
+/* Text */
+.note {
+  font-size: 12px;
+}
+.accesso.note {
+  margin-bottom: -35px;
+  padding-top: 3px;
+  line-height: 14px;
+  font-size: 10px;
+}
+/* Tab */
+#riadesktop .navContSecondLev {
+  margin-bottom: 20px;
+}
+.trasfRicorr {
+  display: none;
+}
+.trasfRicorr.in {
+  display: block;
+}
+/* Safari 9 (only) */
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+  #riadesktop .outerTab {
+    position: relative;
+    z-index: 2;
+  }
+  #riadesktop .tabWrapper li:hover {
+    background-color: transparent;
+  }
+  #riadesktop .tabWrapper li.on:hover {
+    background-color: #fff;
+  }
+  input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+#riadesktop .panel-fill {
+  padding: 19px 29px;
+}
+#riadesktop .panel-fill .tab-wrap {
+  min-height: 100px;
+}
+#riadesktop .contentRia .panel-fill {
+  padding: 25px 14px 15px;
+}
+#riadesktop .panel-body .formGenerico {
+  padding-top: 0 !important;
+}
+.panel-group-ria,
+.panel-ria {
+  margin-bottom: 0;
+}
+.panel-group-collapse {
+  margin-bottom: 20px;
+}
+.panel-group-collapse .panel-body {
+  padding: 0 14px;
+  margin: 9px 0;
+}
+.collapse-bottom .panel-body {
+  margin: 0;
+  padding-bottom: 1px;
+}
+.collapse-bottom .panel-wrap {
+  margin: 0 0 29px 0;
+}
+.box-ria {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+/* Seleziona conto */
+#ctnboxtable .btn {
+  margin-right: 20px;
+}
+#ctnboxtable .btn:last-of-type {
+  margin-right: 0;
+}
+#nascondi-div {
+  text-align: right;
+}
+#form-ria-conto {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* Grafico RIA */
+#tabLiquidita {
+  margin-top: 10px;
+}
+#graficoContiBox,
+#graficoContiBoxInner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+#graficoContiBox {
+  margin-top: 5px;
+}
+#graficoContiDiv,
+#graficoContiDivInner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#graficoContiBoxWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+.graficoLeg {
+  height: 105px;
+  margin: 0;
+  border-right: 1px solid #E3E3E3;
+  list-style: none;
+}
+#riadesktop .graficoLeg li {
+  line-height: 25px;
+  font-size: 13px;
+}
+.graficoLeg .icon {
+  font-size: 10px;
+}
+.legMargine,
+.legRisparmio {
+  font-weight: bold;
+}
+.legMargine .icon {
+  color: #000000;
+}
+.legDisp .icon {
+  color: #262626;
+}
+.legFido .icon {
+  color: #B0B0B0;
+}
+.legDer .icon {
+  color: #DEDEDE;
+}
+.legRisparmio .icon {
+  color: #719100;
+}
+.legDep .icon {
+  color: #9CBF00;
+}
+.legLinee .icon {
+  color: #CDE17B;
+}
+.ripartizioneTot {
+  font-size: 25px;
+}
+.ripartizioneImporto {
+  font-size: 23px;
+}
+.ripartizioneTotA {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.ripartizioneImportoA {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 23px;
+  font-weight: 400;
+  text-align: right;
+}
+#totLiquidita .row {
+  margin: 10px 0 -15px 0;
+}
+/* Box esito */
+#conto1 .boxesitoWrap {
+  padding: 0 0 30px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid #E3E3E3;
+}
+#conto1 .boxesitoForm {
+  margin-bottom: 0;
+  margin-top: 23px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+#conto1 .boxesitoForm .boxesito {
+  padding: 7px 0;
+}
+#conto1 .boxesitoBottom {
+  padding: 30px 0 0 0;
+  margin: 30px 0 0 0;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 0;
+}
+#conto1 .boxesito {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+#conto1 .boxesito .text {
+  padding: 0 14px;
+  color: #999999;
+  font-style: italic;
+}
+.confermaResponse.boxesitoWrap {
+  padding: 0;
+  border: 0;
+}
+/* Tooltip saldo */
+.tbSaldo,
+.tbSaldo th,
+.tbSaldo td {
+  border: 0;
+}
+.tdSaldoTitle,
+.tdSaldoValue {
+  font-weight: 600;
+}
+/* Trasferimenti */
+#titleTrasferimento {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+#tabTrasferimento .control-label {
+  color: #000;
+}
+#riadesktop .dispLabel {
+  display: inline-block;
+  width: 120px;
+  padding-top: 0;
+  text-align: left;
+}
+#riadesktop .dispVal {
+  padding-top: 0;
+  text-align: right;
+}
+#riadesktop .dispVal.visible-sm-inline-block {
+  width: 160px;
+  padding-left: 20px;
+}
+.riaTrasf {
+  margin: 0 -30px 20px -30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E3E3E3;
+}
+.riaTrasf .form-group {
+  margin-bottom: 20px;
+}
+.riaTrasf1a,
+.riaTrasf2a {
+  margin-bottom: 10px;
+}
+.riaTrasf1b,
+.riaTrasf2b {
+  margin-bottom: 0;
+}
+.riaTrasfInput {
+  position: relative;
+}
+.riaTrasfInput .editable-input {
+  width: auto;
+  margin-right: 90px;
+}
+.riaTrasfInput button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+}
+#contentRia2 .trasfIntro {
+  margin-bottom: 30px;
+}
+#scadenzeLabeleRadio .textWrapper {
+  white-space: nowrap;
+}
+/* Grafico trasferimenti */
+#graficoProiezioneTRicDiv {
+  height: 200px;
+  margin: 0;
+}
+#LegendaGraficoProiezioneTRicDiv {
+  text-align: right;
+  font-size: 13px;
+  color: #262626;
+}
+#LegendaGraficoProiezioneTRicDiv .legenda .icon {
+  font-size: 12px;
+}
+#LegendaGraficoProiezioneTRicDiv .legAumen .icon {
+  color: #4A90E2;
+}
+#LegendaGraficoProiezioneTRicDiv .legTrasf .icon {
+  color: #8CC2FF;
+}
+/* Trasferimenti a soglia */
+.sepBoxes {
+  position: relative;
+  margin-top: 30px;
+}
+.sepBoxes .sepLine {
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  width: 0;
+  height: 94%;
+  border-right: 1px solid #E3E3E3;
+}
+.sogliaMain {
+  height: 60px;
+}
+.sogliaInfo {
+  margin: 0;
+  padding: 6px 0 0 0;
+}
+.sogliaBox,
+.sogliaBtns {
+  text-align: center;
+}
+.sogliaBox .strongTitle {
+  margin-bottom: 14px;
+}
+.sogliaInput input.form-control {
+  width: 76px;
+  margin: 0 auto;
+}
+.sogliaBtns .btn {
+  margin: 0 auto;
+}
+.sogliaBtns {
+  padding: 18px 0;
+}
+.sogliaBtns .icon-group {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+}
+.sogliaBtns .icon-group a {
+  display: inline-block;
+  padding: 0 10px;
+}
+.sogliaOutput {
+  padding-top: 6px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.sogliaOutput .value {
+  display: inline;
+}
+/* Box saldi */
+#contenuti545 .panel-group-collapse {
+  border: 0;
+}
+#contenuti545 .panel-group-collapse .panel {
+  border: 1px solid #CCC;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+#contenuti545 .panel-group-collapse .panel.panel-selected {
+  border: 1px solid #AAAAAA;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.panel-heading a.collapsed.expanded {
+  color: #000;
+  cursor: default;
+}
+.saldoGroup {
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #E3E3E3;
+}
+.saldoGroup.prevSaldo {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.saldoGroup.nextSaldo {
+  padding-top: 9px;
+  border-top: 1px solid #E3E3E3;
+}
+.saldoGroup .note {
+  font-size: 11px;
+}
+.saldoLabel {
+  color: #262626;
+  font-weight: 600;
+  line-height: 19px;
+}
+.saldoVal {
+  display: block;
+  text-align: right;
+}
+.saldoVal2 {
+  display: block;
+  min-height: 20px;
+  text-align: left;
+}
+.saldoStrong {
+  border-bottom: 2px solid #DBE9AF;
+}
+.saldoStrong .saldoLabel,
+.saldoStrong .saldoVal {
+  color: #000;
+  font-weight: 700;
+}
+#dashboardBanner {
+  border: 1px solid #CCC;
+}
+#dashboardBanner a {
+  display: block;
+  height: 256px;
+  line-height: 256px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.085);
+  background-image: -webkit-linear-gradient(#eee 0%, #fff 100%);
+  background-image: -o-linear-gradient(#eee 0%, #fff 100%);
+  background-image: linear-gradient(#eee 0%, #fff 100%);
+}
+/* Box linee vincolate */
+.boxTassoBox2a,
+.boxTassoBox2b {
+  display: block;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+}
+.boxTassoBox2a:hover,
+.boxTassoBox2b:hover {
+  text-decoration: none;
+}
+.boxTassoBox1 {
+  background: rgba(0, 0, 0, 0.085);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5), 0 3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+.boxTassoBox2 {
+  background: #DBE9AF;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #A9B978;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5), 0 3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+#infoRichieste3 {
+  margin: 30px 0 10px 0;
+}
+#infoRichieste3 .icon-hr-arrow {
+  display: block;
+  font-size: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.boxTassoBox1 .icon-hr-arrow {
+  color: #CCCCCC;
+}
+.boxTassoBox2 .icon-hr-arrow {
+  color: #A9B978;
+}
+#infoRichieste3 .tassoLordo {
+  display: block;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+#infoRichieste3 .percentuale {
+  display: block;
+  line-height: 38px;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: rgba(0, 0, 0, 0.7);
+}
+#infoRichieste3 .tasso {
+  font-weight: inherit;
+}
+.promozioneLV {
+  display: none;
+}
+.icoTasso {
+  position: relative;
+  height: 80px;
+  top: -1px;
+  left: -1px;
+  border-radius: 2px 0 0 2px;
+  color: #fff;
+}
+#infoRichieste3 .boxTassoPromo {
+  border: 1px solid #4a8a99;
+  background-color: #6fb1c7;
+}
+#infoRichieste3 .boxTassoPromo .tassoLordo,
+#infoRichieste3 .boxTassoPromo .percentuale {
+  color: #fff;
+}
+#infoRichieste3 .boxTassoPromo .icon-hr-arrow {
+  color: #4a8a99;
+}
+.boxTassoEM .icoTasso {
+  border: 1px solid #D7AF2D;
+  background: #FFD036;
+  box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.5);
+}
+.boxTassoEM .logo-em {
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  background: url(/WB/fe/img/logo_em@2x.png) no-repeat center center;
+  background-size: 60px 60px;
+}
+.boxTassoEM .icon-arrow-box {
+  color: #FFD036;
+}
+.infoTasso {
+  margin-left: -30px;
+  text-align: center;
+}
+.vincolataBox div.offertaPromo {
+  padding-top: 141px;
+  height: 59px;
+}
+.vincolataBox div.offertaPromo .guadagni {
+  color: #fff;
+}
+.vincolataBox div.offertaPromo .apri a {
+  width: 55px;
+  height: 15px;
+  margin-left: 0;
+}
+.btnWrapper.saldoButton {
+  padding-top: 0;
+}
+/* Linee attive */
+#contentRia3 .tab-wrap > section {
+  margin-bottom: 40px;
+}
+#tabellaLV .LVdescText {
+  width: 100px;
+  word-wrap: break-word;
+}
+#tabellaLV .LVscad,
+#tabellaLV .LVimp {
+  font-weight: 600;
+}
+#tabellaLV .LVico .txthelp {
+  border-bottom: 0;
+}
+#tabellaLV .LVico .icon-clessidra_fill {
+  color: #8ab10b;
+  cursor: pointer;
+}
+.lvName {
+  word-wrap: break-word;
+}
+/* Apri nuova linea */
+.wrapDispDep {
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+.textDispDep {
+  padding-top: 15px;
+}
+/* Extra Money */
+.sectionEM {
+  margin-bottom: 30px;
+}
+.strongTitleEM {
+  margin-bottom: 20px;
+}
+.introEM {
+  margin-bottom: 35px;
+}
+#contentExtraMoney {
+  padding: 0 15px;
+}
+#contentExtraMoney .boxBaseContent {
+  display: table;
+  margin: 0 -15px;
+}
+#boxExtraMoney {
+  display: table-row;
+}
+#boxExtraMoneyText {
+  display: table-cell;
+  float: none;
+  height: auto;
+  min-height: 236px;
+  border-radius: 1px 0 0 1px;
+  background-image: linear-gradient(-180deg, #FEEFA3 6%, #F5C600 100%);
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+#boxExtraMoneyInner {
+  display: table-cell;
+  float: none;
+  height: auto;
+  min-height: 236px;
+  border: 1px solid #BABABA;
+  border-radius: 0 1px 1px 0;
+  background: #ECECEC;
+  text-align: right;
+  color: #333;
+}
+#boxExtraMoneyText .wrapEM {
+  padding: 0 33px 0 3px;
+}
+#boxExtraMoneyInner .wrapEM {
+  padding: 0 32px 0 22px;
+}
+.promozioneEM {
+  height: 37px;
+  margin: 22px 0 15px 0;
+}
+.promozioneEM1 {
+  line-height: 27px;
+  padding-right: 3px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+}
+.promozioneEM2 {
+  line-height: 27px;
+  padding-left: 3px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  font-size: 20px;
+}
+.ExtraMoneyText {
+  margin-bottom: 10px;
+  line-height: 25px;
+  font-size: 16px;
+  color: #000000;
+}
+#extraMoneyLink {
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+#extraMoneyLink:hover {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+#boxExtraMoneyText .note {
+  line-height: 25px;
+  font-size: 10px;
+  color: #9A7D00;
+}
+.labelSaldoEM {
+  margin: 26px 0 2px 0;
+  line-height: 19px;
+  font-size: 14px;
+}
+.saldoEM {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.sepEM1,
+.sepEM2,
+.sepEM3 {
+  height: 0;
+  border-top: 1px solid #ccc;
+}
+.sepEM1 {
+  margin: 7px 0 4px 0;
+}
+.sepEM2 {
+  margin: 11px 0 12px 0;
+}
+.sepEM3 {
+  margin: 5px 0 14px 0;
+}
+.infoEM {
+  position: relative;
+  line-height: 24px;
+  font-size: 14px;
+  text-align: right;
+}
+.infoValEM {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.tassoEM {
+  line-height: 17px;
+  font-size: 12px;
+  color: #999;
+}
+.nuovaEMBox {
+  margin-bottom: -18px;
+  text-align: center;
+}
+#importoNuovaEM {
+  width: 100%;
+}
+#nuovaEM {
+  line-height: 20px;
+  border-radius: 5px;
+  background: #151515;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 15px;
+}
+#nuovaEM:hover {
+  background: #2E2E2E;
+}
+#helpEM {
+  position: absolute;
+  top: 21px;
+  right: 15px;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+#helpEM:hover {
+  text-decoration: none;
+}
+#helpEM .icon {
+  font-size: 20px;
+}
+#bolloEM {
+  position: absolute;
+  top: -22px;
+  right: -41px;
+  width: 90px;
+  height: 90px;
+  background: url(/WB/fe/img/logo_extramoney1x.png) no-repeat center center;
+  background-size: 90px 90px;
+  z-index: 1;
+}
+#contentAccordion2 .btnWrapper.saldoButton {
+  display: none;
+}
+/* Modal */
+div.piePopUp {
+  height: 20px;
+  margin: 0;
+  padding: 5px 0 0;
+  text-align: right;
+}
+/* RIA Mobile */
+#graficoContiMobileBox {
+  position: relative;
+  height: 200px;
+  margin-bottom: 30px;
+}
+#graficoContiMobileDiv {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+}
+#graficoContiMobileDivInner {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+}
+@media screen and (max-width: 1023px) {
+  #riadesktop .contentRia .panel-fill {
+    padding: 29px;
+  }
+  .riaTrasf {
+    margin: 0 0 30px 0;
+  }
+  #accordionSaldi .panel-heading a {
+    padding: 20px 60px 10px 29px;
+  }
+  #accordionSaldi .panel-heading a .icon {
+    top: 18px;
+    right: 28px;
+  }
+  .panel-group-collapse .panel-body {
+    padding: 0 29px;
+    margin: 9px 0 19px 0;
+  }
+  .collapse-bottom .panel-body {
+    margin: 0 0 29px 0;
+  }
+  .graficoLeg {
+    border-right: 0;
+  }
+  .riaTrasf1 {
+    padding-bottom: 30px;
+  }
+  .riaTrasf2 {
+    margin-bottom: 15px;
+    border-bottom: 0;
+  }
+  .riaTrasf .form-group {
+    margin-bottom: 15px;
+  }
+  #dashboardBanner a {
+    height: 173px;
+    line-height: 173px;
+  }
+  #riamobile {
+    padding: 0 0 80px 0;
+  }
+  #graficoContiBoxWrap {
+    padding: 20px;
+  }
+  .panel-group-collapse {
+    margin-bottom: 9px;
+  }
+  .saldoGroup {
+    margin-bottom: 19px;
+  }
+  .promozioneEM1,
+  .promozioneEM2,
+  .ExtraMoneyText {
+    font-size: 14px;
+  }
+  #boxExtraMoneyText .note {
+    line-height: 16px;
+  }
+  #boxExtraMoney .btn {
+    line-height: 24px;
+  }
+  #nuovaEM {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=fp_ria.css.map */

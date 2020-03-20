@@ -1,0 +1,2871 @@
+/* Colori delle icone */
+/* Colore dei testi personalizzato per banca */
+/*Colore tabelle evidenziate */
+/* VARIABILI COLORE SPECIFICHE PER OGNI BANCA*/
+/* Colore dei testi */
+/* Colore dei link */
+/* Colore dei bottoni */
+/* Colore delle tabelle */
+/* Colore Pin2 */
+/* Colore dei form*/
+/* Colore dei bottoni personalizzato per banca */
+/* Tab */
+/* BOX GENERICI */
+/* Colore del calendario*/
+/*Colori profili commissionali */
+/*Colore numeri verde */
+.no-gutter div[class^=col-] {
+  padding: 0;
+}
+/* HEADER */
+header {
+  width: 100%;
+  padding: 0;
+}
+header #logomyhome {
+  display: none;
+}
+header #logoWrap {
+  width: 100%;
+}
+header #logoWrap img {
+  width: 100%;
+}
+header .userMenu {
+  padding: 10px 0 0;
+  color: #fff;
+  font-size: 1em;
+}
+header .userMenu ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: solid 1px #303030;
+}
+header .userMenu ul li {
+  float: left;
+  margin: 0;
+  line-height: 30px;
+}
+header .userMenu ul li.nameConto {
+  color: #fff;
+  font-weight: 600;
+  line-height: 30px;
+}
+header .userMenu ul li:first-child {
+  padding-left: 0;
+}
+header .userMenu ul a {
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+header .userMenu ul a:hover,
+header .userMenu ul a:focus {
+  color: #8ab10b;
+}
+header .userMenu ul a:hover .icon,
+header .userMenu ul a:focus .icon {
+  color: #8ab10b;
+}
+header .userMenu ul.userMenuConsole .icon {
+  margin-right: 5px;
+}
+header .userMenu ul.userMenuInfo {
+  clear: right;
+  margin: 0 298px 0 0;
+  padding-top: 15px;
+}
+header .userMenu ul.userMenuInfo li:first-child {
+  padding-left: 0;
+}
+header .userMenu ul.userMenuInfo li span {
+  display: none;
+}
+header .userMenu ul.userMenuInfo li.nameConto span {
+  display: block;
+  padding-right: 15px;
+  font-weight: 300;
+}
+header .userMenu ul.userMenuInfo li {
+  padding: 0 0 0 10px;
+}
+.userMenuConsole li {
+  padding: 0 0 0 29px;
+}
+.userMenuConsole .userMenuLink,
+.userMenuConsole .userMenuLabel,
+.userMenuConsole .icon {
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+.userMenuConsole .icon {
+  padding: 7px 0;
+  line-height: 16px;
+}
+header .headerMobile {
+  display: none;
+  height: 60px;
+}
+header .headerMobile .headbtn {
+  float: left;
+  width: 62px;
+  height: 60px;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  background-size: cover;
+}
+header .headerMobile .headbtn i {
+  margin: 15px;
+  line-height: 60px;
+}
+header .headerMobile .headbtn .icon {
+  font-size: 20px;
+}
+header .headerMobile .headbtn.opened {
+  color: #6f8f0a;
+  background-color: #fff;
+}
+header .headerMobile .headbtn.usermenuopen {
+  float: right;
+}
+header .headerMobile .headbtn.usermenuopen .icon {
+  line-height: 55px;
+  font-size: 26px;
+}
+header .headerMobile .headbtn.logoicon {
+  width: 60px;
+  padding: 14px 0 0;
+  text-align: center;
+}
+header .headerMobile .headbtn.logoicon img {
+  width: 32px;
+}
+header .headerMobile #sectionName {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 1.129em;
+  font-weight: 600;
+  line-height: 60px;
+}
+/* MENU */
+nav {
+  width: 100%;
+  height: 36px;
+  font-size: 0.9em;
+}
+nav a:hover,
+nav a:active,
+nav a:focus {
+  text-decoration: none;
+}
+nav ul {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  height: 36px;
+  margin: 0 10px 0 0;
+  padding: 0 17px;
+}
+nav ul li a {
+  display: block;
+  height: 36px;
+  cursor: pointer;
+  color: #fff;
+  line-height: 36px;
+}
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus {
+  text-decoration: none;
+  color: #8ab10b;
+}
+nav ul li.new a {
+  background: #555;
+}
+nav ul li.new a:hover,
+nav ul li.new a:active,
+nav ul li.new a:focus {
+  background-color: #ebebeb;
+  color: #6f8f0a;
+}
+nav ul li.new span.new {
+  position: relative;
+  float: right;
+  width: 25px;
+  height: 25px;
+  margin: -49px -5px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50%;
+  background: #8ab10b;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  font-size: 8px;
+  line-height: 26px;
+}
+nav ul li.selected a,
+nav ul li.selected a:hover,
+nav ul li.selected:active,
+nav ul li.selected:focus {
+  color: #6f8f0a;
+  background-color: #fff;
+}
+nav ul.level1 li {
+  padding: 0;
+}
+nav ul.level1 a {
+  padding: 0 17px;
+}
+nav ul.level1 .voice {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+}
+nav ul.level2 li {
+  cursor: pointer;
+  /*
+            &:hover,&:active,&:focus {
+                a {
+                    color: #000; background-image: url(/WB/fe/img/menu_arrow.gif);
+                }
+                ul {
+                    display: block;
+                    li a {
+                        color: @textColorBank; background-image: none;
+                        &:hover,&:active,&:focus {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            */
+}
+nav ul.level2 li a {
+  position: relative;
+  z-index: 10;
+  height: 45px;
+  color: #6f8f0a;
+  border: 0;
+  background: transparent none no-repeat left bottom;
+}
+nav ul.level2 li a:hover,
+nav ul.level2 li a:active,
+nav ul.level2 li a:focus {
+  background: transparent no-repeat left bottom;
+}
+nav ul.level2 li.new a {
+  margin-right: 30px;
+}
+nav ul.level2 li.new span.new {
+  float: right;
+  width: 25px;
+  border-radius: 2px;
+  margin: -29px 0 0 0;
+  height: 15px;
+  position: relative;
+  display: inline-block;
+  line-height: 15px;
+  box-shadow: 0 0;
+}
+nav ul.level2 li ul {
+  position: absolute;
+  z-index: 9;
+  display: none;
+  width: auto;
+  min-width: 220px;
+  max-width: 320px;
+  height: auto;
+  margin: -1px 0 0 -13px;
+  padding: 5px 14px;
+  border: solid 1px #bbb;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+nav ul.level2 li ul li {
+  float: left;
+  clear: left;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+nav ul.level2 li ul li a {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  border-top: solid 1px #e9e9e9;
+  background-image: none;
+}
+nav ul.level2 li ul li:first-child a {
+  border-top: 0;
+}
+nav ul.level2 li ul li.selected a {
+  color: #000;
+}
+nav ul.level2 li.active {
+  /*position:static;*/
+}
+nav ul.level2 li.active a {
+  color: #000;
+  background-image: url(/WB/fe/img/menu_arrow.gif);
+}
+nav ul.level2 li.active ul {
+  display: block;
+}
+nav ul.level2 li.active ul li a {
+  color: #6f8f0a;
+  background-image: none;
+}
+nav ul.level2 li.active ul li a:hover,
+nav ul.level2 li.active ul li a:active,
+nav ul.level2 li.active ul li a:focus {
+  color: #000;
+}
+nav ul.level2 li.active ul li.selected a {
+  color: #000;
+}
+#mobileMenu,
+#userMenu,
+#userMenuMobile {
+  display: none;
+}
+/* Menu quarto livello */
+#leftmenu {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#leftmenu h2 {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  text-align: left;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 24px;
+}
+#leftmenu ul {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  border-top: solid 1px #dedede;
+}
+#leftmenu ul li {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding-right: 10px;
+  border-bottom: solid 1px #dedede;
+}
+#leftmenu ul li a {
+  float: left;
+  width: 100%;
+  min-height: 40px;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #6f8f0a;
+  font-size: 0.9em;
+}
+#leftmenu ul li.selected .icon {
+  display: none;
+}
+#leftmenu ul li.selected #thirdLevelMenu {
+  display: none;
+}
+#leftmenu ul li.selected a {
+  text-align: left;
+  color: #000;
+}
+/* TOOLBOX */
+/* Altezza toolbox */
+/* TOOLBOX */
+#toolbox {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+}
+#toolwrap {
+  position: relative;
+  height: 44px;
+}
+#toolcontainer {
+  position: absolute;
+  right: 28px;
+  top: 125px;
+}
+#toolhandle {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+}
+#toolbtns {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.toolbtn {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 18px 0;
+  border-radius: 50%;
+  line-height: 40px;
+}
+.toolbtn .icon {
+  position: absolute;
+  top: 4px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px !important;
+  line-height: 32px;
+}
+.toolbtn .icon:hover,
+.toolbtn .icon:focus {
+  color: #8ab10b;
+}
+.toolbtn.selected .icon {
+  text-decoration: none;
+  color: #8ab10b;
+}
+.selected #toolbtnpaolo,
+.selected #toolbtnpaolo:hover {
+  top: 2px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #8ab10b;
+  border-radius: 50%;
+}
+/* SINGOLI TOOL + TAG GENERICI */
+.toolobj {
+  background: transparent;
+  position: fixed;
+  width: 300px;
+  display: none;
+  padding: 0;
+  /* 0 10px 24px 0 rgba(0, 0, 0, 0.3)*/
+  border-radius: 4px;
+  overflow: visible;
+  z-index: 12;
+}
+.toolobj .toolcont {
+  width: 100%;
+  display: block;
+  /* box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.35); */
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.toolobj .tooltop {
+  padding: 0;
+  height: 50px;
+  border-bottom: solid 1px #e1e1e1;
+  background: #f7f7f7;
+}
+.toolobj .tooltop .titolo {
+  cursor: move;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 0 0 17px;
+  float: left;
+  width: 225px;
+}
+.toolobj .tooltop .tooltop-btn {
+  text-align: center;
+  width: 30px;
+  float: right;
+  height: 30px;
+  margin: 10px 7px 0 0;
+  text-decoration: none;
+  line-height: 30px;
+}
+.toolobj .tooltop .tooltop-btn:hover .icon {
+  color: #96c10c;
+}
+.toolobj .tooltop .tooltop-btn .icon-close_toolbox {
+  font-size: 10px;
+}
+.toolobj .tooltop .tooltop-btn.minifizza {
+  line-height: 22px;
+}
+.toolobj .tooltop .tooltop-btn.minifizza .icon-reduce_toolbox {
+  font-size: 2px;
+}
+.toolobj .tooltop .tooltop-btn.minifizza .icon-enlarge_window {
+  display: none;
+  font-size: 14px;
+}
+.toolobj .toolbody {
+  padding: 15px 17px 0;
+  max-height: 550px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* Parti esclusive dell'assistente virtuale */
+.toolobj#virtAss {
+  width: 300px;
+  /* Extended view */
+}
+.toolobj#virtAss .toolcont {
+  right: 0;
+  position: absolute;
+}
+.toolobj#virtAss video {
+  width: 267px;
+}
+.toolobj#virtAss #vaExtended {
+  display: none;
+}
+.toolobj#virtAss .vaAvatar {
+  width: 265px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.toolobj#virtAss .vaAvatar #vaAudioErrore {
+  position: absolute;
+  color: #fff;
+  bottom: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  width: 240px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  left: 13px;
+  font-style: italic;
+  display: block;
+  border-radius: 15px;
+}
+.toolobj#virtAss .vaAvatar .vaConsole {
+  right: 10px;
+  position: absolute;
+  width: 35px;
+  z-index: 1;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0;
+  text-decoration: none;
+  line-height: 35px;
+  text-align: center;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl .icon {
+  background: #8ab10b;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 24px;
+  color: #fff;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl .icon-show_text {
+  font-size: 12px;
+  display: none;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl .icon-hide_text {
+  font-size: 12px;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl.hidetext .icon-show_text {
+  display: inline-block;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaTextControl.hidetext .icon-hide_text {
+  display: none;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper {
+  width: 35px;
+  height: 100px;
+  display: block;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0;
+  text-align: center;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper #vaSlider {
+  display: inline-block;
+  background: #aaa;
+  width: 5px;
+  height: 80px;
+  position: relative;
+  overflow: visible;
+  margin: 10px auto;
+  border-radius: 2.5px;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper #vaSlider .ui-slider-range {
+  background-color: #8ab10b;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5px;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle {
+  line-height: 20px;
+  width: 24px;
+  margin: 0 0 -10px -9px;
+  position: absolute;
+  display: block;
+  height: 24px;
+  background-color: #fff;
+  border: solid 2px #fff;
+  border-radius: 50%;
+  color: #8ab10b;
+  font-size: 20px;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle .icon {
+  font-size: 20px;
+  position: absolute;
+  margin: 0;
+  display: none;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle .icon.icon-audio_middle {
+  display: block;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper.volmax .icon-audio_middle {
+  display: none !important;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper.volmax .icon-audio_max {
+  display: block !important;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper.mute .icon-audio_middle {
+  display: none !important;
+}
+.toolobj#virtAss .vaAvatar .vaConsole #vaSliderWrapper.mute .icon-audio_off {
+  display: block !important;
+}
+.toolobj#virtAss .vaAvatar #vaSpace {
+  margin-top: -15px;
+}
+.toolobj#virtAss #vaDialog p {
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.toolobj#virtAss #vaDialog .sent {
+  color: #1b77e0;
+}
+.toolobj#virtAss #vaDialog .sent.answer {
+  color: #000;
+}
+.toolobj#virtAss form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+.toolobj#virtAss form input {
+  width: 100%;
+  padding: 0 6px;
+  height: 40px;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  color: #1b77e0;
+  outline: 0 none;
+}
+.toolobj#virtAss form .askbtn {
+  background: transparent;
+  color: #8ab10b;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
+.toolobj#virtAss form .askbtn:hover {
+  color: #96c10c;
+}
+.toolobj#virtAss form.waiting input {
+  background: #f9f9f9;
+  color: #ccc;
+}
+.toolobj#virtAss form.waiting .askbtn {
+  color: #dedede;
+}
+.toolobj#virtAss form.waiting .askbtn:hover {
+  color: #dedede;
+}
+.toolobj#virtAss #vaDialog {
+  height: 150px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+.toolobj#toolAppuntamento .formGenerico .radio label {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+/* MEDIA QUERIES */
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .toolobj#virtAss {
+    box-shadow: none;
+  }
+  .toolobj#virtAss .toolcont {
+    width: 300px;
+  }
+  .toolobj#virtAss.mini {
+    width: 134px !important;
+    box-shadow: none;
+    border: 0 none;
+    display: block;
+    height: 104px;
+    overflow: visible;
+    background: transparent;
+  }
+  .toolobj#virtAss.mini #vaExtended {
+    display: none !important;
+  }
+  .toolobj#virtAss.mini .toolcont {
+    box-shadow: none;
+    overflow: visible;
+    width: 134px !important;
+    background: transparent;
+  }
+  .toolobj#virtAss.mini .tooltop {
+    background: transparent;
+    border: none;
+  }
+  .toolobj#virtAss.mini .tooltop .titolo {
+    overflow: hidden;
+    display: block;
+    text-indent: -1000px;
+    width: 104px;
+    height: 104px;
+    border: solid 2px #8ab10b;
+    border-radius: 20px 0 20px 20px;
+    background: transparent url(/WB/fe/img/virtass_mini.jpg) no-repeat center center;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3);
+    background-size: cover;
+  }
+  .toolobj#virtAss.mini .tooltop .titolo:hover {
+    color: #96c10c;
+    filter: brightness(1.03);
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn {
+    position: absolute;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.chiudi {
+    background-color: #8ab10b;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.chiudi:hover {
+    background-color: #96c10c;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.chiudi:hover .icon {
+    color: #fff;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.minifizza {
+    left: 74px;
+    margin: 0;
+    line-height: 34px;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.minifizza:hover .icon {
+    color: #96c10c;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.minifizza .icon-enlarge_window {
+    display: inline-block;
+    color: #8ab10b;
+  }
+  .toolobj#virtAss.mini .tooltop .tooltop-btn.minifizza .icon-reduce_toolbox {
+    display: none;
+  }
+  .toolobj#virtAss.mini .toolbody {
+    display: none;
+  }
+  .toolobj#virtAss.extended {
+    width: 580px;
+  }
+  .toolobj#virtAss.extended .toolcont {
+    border-radius: 0 5px 5px 0;
+  }
+  .toolobj#virtAss.extended #vaExtended {
+    overflow: hidden;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px 0 0 5px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    height: 480px;
+    display: block;
+    width: 280px;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop {
+    padding: 0;
+    width: 263px;
+    float: right;
+    height: 50px;
+    border-bottom: solid 1px #ececec;
+    background: #fff;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop #vaExtTitle {
+    font-weight: bold;
+    line-height: 50px;
+    padding: 0;
+    float: left;
+    width: 220px;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop #vaLinguetta {
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    width: 42px;
+    float: right;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop #vaLinguetta .icon-reduce_toolbox {
+    font-size: 2px;
+    display: block;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop #vaLinguetta .icon-enlarge_window {
+    display: none;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop #vaLinguetta:hover .icon {
+    color: #96c10c;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtBody {
+    display: block;
+    clear: both;
+    padding: 15px 0 15px 17px;
+    overflow-y: auto;
+    height: 430px;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtBody img {
+    max-width: 100%;
+  }
+  .toolobj#virtAss.extended.extended-min {
+    width: 342px;
+  }
+  .toolobj#virtAss.extended.extended-min .toolcont {
+    border-radius: 0 5px 5px 5px;
+  }
+  .toolobj#virtAss.extended.extended-min #vaExtended {
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+    background: transparent;
+    position: absolute;
+    width: 42px;
+    height: 49px;
+  }
+  .toolobj#virtAss.extended.extended-min #vaExtended #vaLinguetta {
+    width: 42px;
+    display: block;
+    height: 49px;
+    background: #fff;
+    border-radius: 5px 0 0 5px;
+  }
+  .toolobj#virtAss.extended.extended-min #vaExtended #vaLinguetta .icon-reduce_toolbox {
+    display: none;
+  }
+  .toolobj#virtAss.extended.extended-min #vaExtended #vaLinguetta .icon-enlarge_window {
+    display: inline-block;
+  }
+  .toolobj#virtAss.extended.extended-min #vaExtended .vaExtBody {
+    display: none;
+  }
+}
+/* SMARTPHONE E TABLET */
+@media screen and (max-width: 1023px) {
+  #toolbox {
+    z-index: 9;
+    background-color: #000;
+  }
+  #toolbox #toolconsole {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    height: 65px;
+    z-index: 6;
+    width: 100%;
+  }
+  #toolbox #toolconsole #toolbtns {
+    white-space: nowrap;
+    overflow-x: scroll;
+    position: static;
+    padding: 0 10px 0 30px;
+    height: 65px;
+    overflow-y: hidden;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn {
+    width: 44px;
+    height: 44px;
+    margin: 0 20px 0 0;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn .icon {
+    width: 44px;
+    height: 44px;
+    font-size: 44px !important;
+    line-height: 44px;
+    top: 0;
+    color: #ccc;
+    overflow: hidden;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn .icon img {
+    width: 44px;
+    height: 44px;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn.selected .icon {
+    color: #8ab10b;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn.selected #toolbtnpaolo {
+    margin: 0 0 0 2px;
+  }
+  #toolbox #toolconsole #toolbtns .toolbtn.selected #toolbtnpaolo img {
+    margin: -2px -2px;
+    border: 0;
+  }
+  #toolbox #toolhandle {
+    z-index: 5;
+    background-color: #111;
+  }
+  #toolbox.compact #toolconsole {
+    display: block;
+  }
+  #toolbox.compact,
+  #toolbox.compact #toolwrap {
+    height: 110px;
+    background-color: #111;
+  }
+  #toolbox.expanded,
+  #toolbox.expanded #toolwrap {
+    height: 100%;
+  }
+  #toolbox.expanded {
+    padding-top: 60px;
+    z-index: 9;
+  }
+  #toolbox.expanded #toolconsole {
+    display: block;
+    height: 80px;
+    background-color: #111;
+  }
+  #toolbox.expanded #toolwrap {
+    border-top: solid 1px #333;
+  }
+  #toolbox.expanded #toolbtns {
+    top: auto;
+    bottom: 0;
+    padding-top: 10px;
+    height: 68px;
+    margin-top: 15px;
+  }
+  #toolbox #toolcontainer {
+    z-index: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0;
+    padding: 44px 15px 85px;
+    overflow: scroll;
+  }
+  #toolbox .toolobj {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    top: 0 !important;
+    left: 0 !important;
+    background: #fff;
+  }
+  #toolbox .toolobj .toolbody {
+    max-height: none;
+  }
+  #toolbox .toolobj .tooltop {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    border-bottom: none;
+    background: #fff;
+  }
+  #toolbox .toolobj .tooltop .titolo {
+    width: 100%;
+    font-weight: normal;
+    height: auto;
+    font-size: 20px;
+    padding: 15px 15px 23px;
+    line-height: 22px;
+  }
+  #toolbox .toolobj .tooltop a {
+    display: none;
+  }
+  #toolbox .toolobj .minihead {
+    padding: 10px 0;
+  }
+  #toolbox .toolobj .minihead img {
+    width: 48px;
+    float: left;
+    margin: 0 15px 0 0;
+  }
+  #toolbox .toolobj .minihead span {
+    font-weight: 600;
+    line-height: 50px;
+  }
+  #toolbox .toolobj .dialogo {
+    width: 100%;
+    height: 165px;
+    font-size: 0.95em;
+  }
+  #toolbox .toolobj .vaAvatar {
+    display: none;
+  }
+}
+/* RISERVATO TABLET */
+@media screen and (max-width: 1023px) and (min-width: 481px) {
+  #toolbox.expanded {
+    height: 60%;
+    padding-top: 0;
+  }
+  #toolCmbForm .form-group {
+    margin-bottom: 0;
+  }
+  #toolCmbForm .col-sm-6 {
+    padding-bottom: 20px;
+  }
+  #toolCmbForm .col-sm-6.has-error {
+    padding-bottom: 0;
+  }
+}
+/* RISERVATO SMARTPHONE */
+@media screen and (max-width: 767px) {
+  /* Assistente virtuale per smartphone*/
+  .toolobj#virtAss {
+    height: 100%;
+  }
+  .toolobj#virtAss .toolbody {
+    padding: 0;
+    height: 100%;
+  }
+  .toolobj#virtAss .toolcont {
+    height: 100%;
+    position: relative;
+    padding: 60px 0;
+  }
+  .toolobj#virtAss .toolcont .vaContainer {
+    height: 100%;
+  }
+  .toolobj#virtAss .toolcont .tooltop {
+    position: absolute;
+    top: 0;
+  }
+  .toolobj#virtAss form .askbtn {
+    right: 16px;
+  }
+  .toolobj#virtAss form .askbtn .icon {
+    font-size: 16px;
+  }
+  .toolobj#virtAss form input {
+    margin-bottom: 0;
+    padding-right: 40px;
+  }
+  .toolobj#virtAss #vaFormTag {
+    position: absolute;
+    bottom: 10px;
+    padding: 0 15px;
+  }
+  .toolobj#virtAss #vaDialog {
+    height: 100%;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0 15px;
+  }
+  .toolobj#virtAss.extended {
+    padding-top: 44px;
+  }
+  .toolobj#virtAss.extended #vaExtended {
+    display: block;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtTop {
+    top: 0;
+    width: 100%;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 10px 15px;
+    line-height: 22px;
+    height: 44px;
+    background-color: #eee;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+  }
+  .toolobj#virtAss.extended #vaExtended #vaLinguetta {
+    display: none;
+  }
+  .toolobj#virtAss.extended #vaExtended .vaExtBody {
+    display: none;
+  }
+  .toolobj#virtAss.extended.extended-smart {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .toolobj#virtAss.extended.extended-smart .toolcont {
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+  }
+  .toolobj#virtAss.extended.extended-smart .toolcont #vaDialog {
+    display: none;
+  }
+  .toolobj#virtAss.extended.extended-smart #vaExtended {
+    height: 100%;
+    position: static;
+    width: 100%;
+    padding-top: 44px;
+  }
+  .toolobj#virtAss.extended.extended-smart #vaExtended .vaExtBody {
+    height: 100%;
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 15px;
+  }
+  .toolobj#virtAss.extended.extended-smart .vaExtBody {
+    display: block;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  #toolbox {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    overflow: visible;
+    height: 0;
+    background-color: transparent;
+  }
+  #toolwrap {
+    max-width: 1110px;
+    height: 0;
+    margin: 0 auto;
+  }
+  #toolhandle {
+    display: none;
+  }
+  #toolbtns {
+    top: 52px;
+    right: 28px;
+    left: auto;
+    width: 282px;
+    text-align: right;
+  }
+  #toolbtns #toolbtnpaolo:hover {
+    top: 2px;
+    left: -2px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #8ab10b;
+    border-radius: 50%;
+  }
+  .toolbtn {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 0 0 10px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  #toolCmbForm .form-group {
+    margin-bottom: 0;
+  }
+  #toolCmbForm .col-sm-6 {
+    padding-bottom: 20px;
+  }
+  #toolCmbForm .col-sm-6.has-error {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1023px) {
+  body > .tool {
+    display: none;
+  }
+}
+/* TOOLBOX */
+/* MEDIA QUERIES */
+@media screen and (max-width: 1023px) {
+  header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+  }
+  header .headerMobile {
+    display: block;
+  }
+  /* NAVIGAZIONE GENERALE */
+  /* Menu secondo e terzo livello */
+  nav {
+    height: 0;
+    margin: 0;
+  }
+  nav .wrapper {
+    display: none;
+  }
+  #mobileMenu {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 60px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    background-color: #fff;
+    margin-left: -100%;
+    -webkit-backface-visibility: hidden;
+  }
+  #mobileMenu #mobileDetailTree {
+    right: -100%;
+  }
+  #mobileMenu ul {
+    list-style-type: none;
+  }
+  #mobileMenu .liv3mobile {
+    display: none;
+  }
+  #mobileMenu.opened {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    margin-left: 0;
+  }
+  #mobileMenu.opened ul {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  #mobileMenu.opened ul li {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #mobileMenu.opened ul li .new {
+    display: inline-block;
+    line-height: 25px;
+    margin: -5px 0 0 10px;
+    font-size: 8px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    background-color: #8ab10b;
+  }
+  #mobileMenu.opened ul li a {
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+    border-bottom: solid 1px #dedede;
+  }
+  #mobileMenu.opened ul li a .icon {
+    margin-right: 14px;
+    vertical-align: middle;
+  }
+  #mobileMenu.opened ul li a span {
+    font-size: 1.1em;
+  }
+  #mobileMenu.opened ul li a:hover,
+  #mobileMenu.opened ul li a:active,
+  #mobileMenu.opened ul li a:focus,
+  #mobileMenu.opened ul li a:hover .icon,
+  #mobileMenu.opened ul li a:active .icon,
+  #mobileMenu.opened ul li a:focus .icon {
+    color: #000;
+  }
+  #mobileMenu.opened .selected a,
+  #mobileMenu.opened .selected .icon {
+    color: #000;
+  }
+  #mobileMenu.opened #mobileDetailTree {
+    position: fixed;
+    right: -100%;
+    float: right;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px 60px;
+    background: #fff;
+    -webkit-backface-visibility: hidden;
+  }
+  #mobileMenu.opened #mobileDetailTree ul {
+    margin: 0;
+  }
+  #mobileMenu.opened #mobileDetailTree.opened {
+    right: 0;
+  }
+  #mobileMenu.opened #mobileDetailTree a {
+    float: left;
+    width: 100%;
+    padding: 17px 0;
+    border-bottom: solid 1px #dedede;
+  }
+  #mobileMenu.opened #mobileDetailTree a.back {
+    padding: 5px 0;
+    color: #999;
+  }
+  #mobileMenu.opened #mobileDetailTree a.back .icon {
+    float: left;
+  }
+  #mobileMenu.opened #mobileDetailTree a.back span {
+    padding-left: 15px;
+    font-style: italic;
+    line-height: 44px;
+  }
+  #mobileMenu.opened #mobileDetailTree a.fplink {
+    color: #6f8f0a;
+    font-weight: bold;
+  }
+  #mobileMenu.opened #mobileDetailTree ul span {
+    float: left;
+    width: 100%;
+    padding: 19px 0;
+    color: #000;
+    border-bottom: solid 1px #dedede;
+    font-weight: 600;
+  }
+  #mobileMenu.opened #mobileDetailTree ul ul {
+    padding-left: 15px;
+  }
+  #userMenu {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 15px;
+    background-color: #fff;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+  }
+  #userMenu ul {
+    float: right;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+  }
+  #userMenu ul li {
+    float: right;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  #userMenu ul li a {
+    float: right;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+    border-bottom: solid 1px #dedede;
+  }
+  #userMenu ul li a .icon {
+    margin-left: 14px;
+    vertical-align: middle;
+  }
+  #userMenu ul li span.nameConto {
+    float: right;
+    width: 100%;
+    padding: 19px 0;
+    color: #333;
+    border-bottom: solid 1px #dedede;
+  }
+  #userMenu #userMenuMobile {
+    list-style-type: none;
+    display: block;
+    text-align: right !important;
+  }
+  #userMenu #userMenuMobile li span {
+    padding: 19px 0;
+  }
+  #userMenu.opened {
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    min-width: 320px;
+    margin-right: 0;
+  }
+  /* Menu quarto livello */
+  #leftmenu {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-right: 0;
+  }
+  #leftmenu h2 {
+    display: none;
+  }
+  #leftmenu ul {
+    margin-bottom: 0;
+    border-top: none;
+  }
+  #leftmenu ul li {
+    display: none;
+    height: auto;
+  }
+  #leftmenu ul li.selected {
+    display: block;
+    height: 58px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: solid 1px #e3e3e3;
+    background-color: #f2f2f2;
+    line-height: 58px;
+  }
+  #leftmenu ul li.selected a {
+    overflow: hidden;
+    padding: 20px 47px 0 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    color: #000;
+    font-size: 1.1em;
+    line-height: 1em;
+  }
+  #leftmenu ul li.selected i.icon {
+    display: block;
+    float: right;
+    width: 100%;
+    height: 60px;
+    margin: -40px 0 0;
+    text-align: right;
+    cursor: pointer;
+    color: #999;
+    padding: 0 5px 0 0;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    margin: 60px 0 0;
+    border-top: 0;
+    background: #fff;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu.opened {
+    display: block;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu li {
+    display: block;
+    min-height: 41px;
+    padding: 0 15px;
+    border: none;
+    text-align: left;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu li a,
+  #leftmenu ul li.selected #thirdLevelMenu li span {
+    padding: 20px 0;
+    color: #6f8f0a;
+    border-top: solid 1px #ddd;
+    line-height: 20px;
+    width: 100%;
+    float: left;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu li:first-child * {
+    border-top: none;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu li.selected {
+    height: auto;
+    background: #fff;
+  }
+  #leftmenu ul li.selected #thirdLevelMenu li.selected span {
+    min-height: 40px;
+    color: #aaa;
+    font-size: 1.1em;
+  }
+  #leftmenu ul li.selected.selected.opened #thirdLevelMenu {
+    z-index: 4;
+    display: block;
+    border-top: 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+/* Blocco dei tools */
+.tool {
+  display: none;
+}
+/* PULSANTIERA */
+/* Altezza toolbox */
+/* TOOLBOX */
+#toolbox {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+}
+#toolwrap {
+  position: relative;
+  height: 44px;
+}
+#toolcontainer {
+  position: absolute;
+  right: 28px;
+  top: 125px;
+}
+#toolhandle {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+}
+#toolbtns {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.toolbtn {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 18px 5px;
+  border-radius: 50%;
+  line-height: 40px;
+}
+.toolbtn .icon {
+  position: absolute;
+  top: 4px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px!important;
+  line-height: 32px;
+  text-decoration: none;
+  color: #999;
+}
+.toolbtn .icon:hover,
+.toolbtn .icon:focus,
+.toolbtn .icon.selected {
+  color: #8ab10b !important;
+}
+.toolbtn .icon.disabled,
+.toolbtn .icon.disabled:hover {
+  color: #666 !important;
+}
+.selected #toolbtnpaolo,
+.selected #toolbtnpaolo:hover {
+  top: 2px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #8ab10b;
+  border-radius: 50%;
+}
+#toolbox {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  overflow: visible;
+  height: 0;
+  background-color: transparent;
+}
+#toolwrap {
+  max-width: 1110px;
+  height: 0;
+  margin: 0 auto;
+}
+#toolhandle {
+  display: none;
+}
+#toolbtns {
+  top: 52px;
+  right: 28px;
+  left: auto;
+  width: 282px;
+  text-align: right;
+}
+#toolbtns #toolbtnpaolo:hover,
+#toolbtns #toolbtnpaolo.selected {
+  top: 2px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #8ab10b;
+  border-radius: 50%;
+}
+.toolbtn {
+  width: 32px!important;
+  height: 32px!important;
+  margin: 0 0 0 10px!important;
+  font-size: 24px!important;
+  line-height: 32px!important;
+}
+/* Assistente virtuale */
+#virtAss {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: visible;
+  text-align: left;
+  border-radius: 4px;
+  /* Extended */
+  /*
+    &.extended {
+            width:580px;
+            .toolcont {border-radius:0 5px 5px 0}
+            #vaExtended {
+                overflow:hidden;
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+                border-radius: 5px 0 0 5px;
+                background:#fff;
+                position:absolute;
+                left:0;
+                height:480px;
+                display:block;
+                width:280px;
+                .vaExtTop { padding: 0;
+                  width:263px;float:right;
+                  height: 50px;
+                  border-bottom: solid 1px #ececec;
+                  background: #fff;
+                  #vaExtTitle {
+                      font-weight: bold;
+                      line-height: 50px;
+                      padding: 0;
+                      float: left;
+                      width: 220px}
+                  #vaLinguetta {line-height:50px;text-decoration:none; text-align:center; width:42px;float:right;
+                     .icon-reduce_toolbox {font-size:2px;display:block}
+                     .icon-enlarge_window {display:none}
+                      &:hover {
+                           .icon {color:#96c10c}
+                        }
+                  }
+                }
+                .vaExtBody {
+                    display: block;
+                    clear:both;
+                    padding: 15px 0 15px 17px;
+                    overflow-y: auto;
+                    height: 430px;
+                    img {max-width:100%}
+                }
+            }
+
+            &.extended-min {
+                width:342px; 
+                .toolcont {border-radius:0 5px 5px 5px;}
+                 #vaExtended { 
+                        box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+                        background:transparent;
+                        position: absolute;
+                        width: 42px;height:49px;
+                    #vaLinguetta {
+                        width:42px; display:block;
+                        height: 49px; background:#fff; border-radius:5px 0 0 5px; 
+                       
+                        .icon-reduce_toolbox {display:none}
+                        .icon-enlarge_window {display:inline-block}
+                     }
+                    .vaExtBody {
+                        display:none;
+                    }
+                }
+            }
+        }
+
+    */
+}
+#virtAss #vaExtended {
+  display: none;
+}
+#virtAss .vaContainer {
+  width: 300px;
+  float: right;
+  background: #fff;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+#virtAss .vaContainer #vaAudioErrore {
+  position: absolute;
+  color: #fff;
+  bottom: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  width: 240px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  left: 13px;
+  font-style: italic;
+  display: block;
+  border-radius: 15px;
+}
+#virtAss .vaContainer .vaTop {
+  padding: 0;
+  height: 50px;
+  border-bottom: solid 1px #e1e1e1;
+  background: #f7f7f7;
+  border-radius: 4px 4px 0 0;
+}
+#virtAss .vaContainer .vaTop #vaTitle {
+  cursor: move;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 0 0 17px;
+  float: left;
+  width: 225px;
+}
+#virtAss .vaContainer .vaTop a {
+  text-align: center;
+  width: 30px;
+  float: right;
+  height: 30px;
+  margin: 10px 7px 0 0;
+  text-decoration: none;
+  line-height: 30px;
+  background: transparent none no-repeat center center;
+}
+#virtAss .vaContainer .vaTop a.vaChiudi {
+  background-image: url("/WB/fe/img/tool_close.png");
+}
+#virtAss .vaContainer .vaTop a.vaWindow {
+  background-image: url("/WB/fe/img/tool_reduce.png");
+}
+#virtAss .vaContainer .vaTop a.vaWindow.closed {
+  background-image: url("/WB/fe/img/tool_expand.png");
+}
+#virtAss .vaContainer .vaBody {
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 0 50px;
+  position: relative;
+}
+#virtAss .vaContainer .vaBody form {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+#virtAss .vaContainer .vaBody #vaSpace {
+  height: 200px;
+  margin: 0 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+#virtAss .vaContainer .vaBody #vaSpace img,
+#virtAss .vaContainer .vaBody #vaSpace video {
+  width: 100%;
+  margin-top: -15px;
+}
+#virtAss .vaContainer .vaBody .vaConsole {
+  position: absolute;
+  right: 15px;
+  overflow: hidden;
+  height: 180px;
+  width: 45px;
+  top: 10px;
+}
+#virtAss .vaContainer .vaBody .vaConsole .vaAudio {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0;
+  text-decoration: none;
+  line-height: 35px;
+  text-align: center;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0;
+  text-decoration: none;
+  line-height: 35px;
+  text-align: center;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl span {
+  line-height: 23px;
+  background: #8ab10b;
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  margin: 7px;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl .icon {
+  color: #fff;
+  font-size: 12px;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl.opened .icon-show_text {
+  display: none;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl.opened .icon-hide_text {
+  display: inline-block;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl.closed .icon-hide_text {
+  display: none;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaTextControl.closed .icon-show_text {
+  display: inline-block;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper {
+  width: 35px;
+  height: 100px;
+  display: block;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0;
+  text-align: center;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider {
+  border: 0 none;
+  display: inline-block;
+  background: #aaa !important;
+  width: 5px;
+  height: 80px;
+  position: relative;
+  overflow: visible;
+  margin: 10px auto;
+  border-radius: 2.5px;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-range {
+  background: #8ab10b;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5px;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus {
+  line-height: 20px;
+  width: 24px;
+  margin: 0 0 -10px -9px;
+  position: absolute;
+  display: block;
+  height: 24px;
+  left: 0;
+  background-color: #fff;
+  border: solid 2px #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle:focus,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active:focus,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover:focus,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus:focus,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle:hover,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active:hover,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover:hover,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus:hover,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle:active,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active:active,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover:active,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus:active {
+  box-shadow: none;
+  outline: none;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle .icon,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active .icon,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover .icon,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus .icon {
+  font-size: 20px;
+  color: #8ab10b;
+  display: none;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle .icon.icon-audio_middle,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-active .icon.icon-audio_middle,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-hover .icon.icon-audio_middle,
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper #vaSlider .ui-slider-handle.ui-state-focus .icon.icon-audio_middle {
+  display: block;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper.volmax .icon-audio_middle {
+  display: none !important;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper.volmax .icon-audio_max {
+  display: block !important;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper.mute .icon-audio_middle {
+  display: none !important;
+}
+#virtAss .vaContainer .vaBody .vaConsole #vaSliderWrapper.mute .icon-audio_off {
+  display: block !important;
+}
+#virtAss .vaContainer #vaDialog {
+  height: 180px;
+  padding: 0;
+  overflow-y: auto;
+  margin: 10px 15px 0;
+  overflow-x: hidden;
+}
+#virtAss .vaContainer #vaDialog .sent {
+  color: #1b77e0;
+}
+#virtAss .vaContainer #vaDialog .sent.answer {
+  color: #000;
+}
+#virtAss .vaContainer #vaDialog .sent p {
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+#virtAss .vaContainer #vaForm {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  padding: 0 15px;
+}
+#virtAss .vaContainer #vaForm #vaDom {
+  width: 100%;
+  padding: 0 35px 0 6px;
+  height: 40px;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  outline: 0 none;
+  font-size: 14px;
+}
+#virtAss .vaContainer #vaForm #vaAsking {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: transparent url("/WB/fe/img/tool_va_send.png") no-repeat center center;
+}
+#virtAss .vaContainer #vaForm #vaAsking img,
+#virtAss .vaContainer #vaForm #vaAsking span {
+  display: none;
+}
+#virtAss .vaContainer #vaForm.waiting #vaDom {
+  background: #f9f9f9;
+  color: #cccccc;
+}
+#virtAss .vaContainer #vaForm.waiting #vaAsking {
+  background-image: url("/WB/fe/img/tool_va_send.png");
+}
+#virtAss.extended {
+  width: 350px;
+  box-shadow: none;
+}
+#virtAss.extended .vaContainer {
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 4px 4px 4px;
+}
+#virtAss.extended #vaLinguetta {
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  background: #eee url(/WB/fe/img/tool_expand.png) no-repeat center center;
+  width: 50px;
+  border-radius: 5px 0 0 5px;
+  height: 50px;
+  float: right;
+  z-index: 333;
+}
+#virtAss.extended .vaExtBody {
+  display: none;
+  padding: 15px;
+}
+#virtAss.extended .vaExtTitle {
+  display: none;
+}
+#virtAss.extended #vaExtended {
+  width: 0px;
+  position: absolute;
+}
+#virtAss.extended.extended-opened {
+  width: 600px;
+  height: auto;
+  background: #fff;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+}
+#virtAss.extended.extended-opened .vaContainer {
+  border-radius: 0 4px 4px 0;
+}
+#virtAss.extended.extended-opened #vaExtended {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 4px 0 0 4px;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody {
+  display: block;
+  /* Classi dedicate per extended View */
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .vaExtTitle {
+  display: inline-block;
+  width: 100%;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .inevidenza {
+  border: solid 2px #8ab10b;
+  border-radius: 5px;
+  width: 100%;
+  margin: 15px 0 15px;
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 0;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .inevidenza .icon {
+  background: #fff;
+  position: absolute;
+  background: #8ab10b;
+  top: -15px;
+  display: block;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  left: -11px;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .vaSurvey .valutazione {
+  text-align: center;
+  border-bottom: solid 1px #ccc;
+  height: 17px;
+  overflow: visible;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .vaSurvey .valutazione .vaStar {
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 35px;
+  background: #fff url(/WB/fe/img/va_stars.gif) no-repeat center bottom;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtBody .vaSurvey .valutazione .vaStar.on {
+  background-position: center top;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtTop {
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  border-bottom: solid 1px #eee;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtTop .vaExtTitle {
+  font-weight: bold;
+  padding: 15px;
+  display: inline-block;
+}
+#virtAss.extended.extended-opened #vaExtended .vaExtTop #vaLinguetta {
+  background: transparent url(/WB/fe/img/tool_reduce.png) no-repeat center center;
+  right: 0;
+}
+#virtAss .vaBottom {
+  display: none;
+}
+@media (max-width: 1023px) {
+  #virtAss {
+    display: none !important;
+  }
+}
+/* Tools */
+/* Tool direttamente sotto "page1" */
+div.tool {
+  display: none;
+  position: absolute;
+  z-index: 2000;
+  margin: 0;
+  width: 201px;
+  overflow: visible;
+  float: left;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+}
+div.tool .handle {
+  cursor: move !important;
+}
+div.tool .toolhead span.tooltit {
+  background: none left top no-repeat;
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 0;
+  border: none;
+  height: 49px;
+  width: 160px;
+  cursor: move !important;
+}
+.ui-autocomplete.agenzia {
+  z-index: 9999;
+  opacity: 1;
+  position: absolute;
+}
+div.tool {
+  font-family: "bankFont", Arial, Helvetica, sans-serif;
+  min-width: 300px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffffff;
+}
+div.tool .toolhead {
+  overflow: auto;
+  background: right 15px top 50% #f7f7f7 no-repeat url("/WB/fe/img/tool_close.png");
+  border-bottom: #e1e1e1 solid 1px;
+  padding-left: 15px;
+}
+div.tool .toolhead span.tooltit {
+  float: left;
+  display: block;
+  width: calc( 100% - 35px );
+}
+div.tool .toolhead .close {
+  cursor: pointer;
+  opacity: 0;
+  width: 35px;
+  height: 50px;
+  float: right;
+  font-size: 0px;
+}
+div.tool .fooform .fooformleft,
+div.tool .fooform .fooformright {
+  width: 50%;
+  float: left;
+}
+div.tool .toolmiddle {
+  padding: 15px 17px 0;
+  max-height: 650px;
+  overflow: auto;
+}
+@media (max-height: 650px) {
+  div.tool .toolmiddle {
+    max-height: 550px;
+  }
+}
+div.tool .toolmiddle p.operatori strong {
+  font-weight: normal;
+}
+div.tool .toolmiddle .boxesito.attenzione {
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+div.tool .toolmiddle .boxesito.attenzione .imgCont {
+  display: none;
+}
+div.tool .toolmiddle h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #8ab10b;
+}
+div.tool .toolmiddle form.formoperatori label {
+  font-weight: bold;
+  display: block;
+}
+div.tool .toolmiddle form.formoperatori label + br {
+  display: none;
+}
+div.tool .toolmiddle .alRgFields {
+  position: relative;
+}
+div.tool .toolmiddle .alRgFields img {
+  display: none;
+}
+div.tool .toolmiddle .btnformright,
+div.tool .toolmiddle .btnformleft {
+  display: table;
+  height: 34px;
+  min-width: 80px;
+  margin: auto;
+  float: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none !important;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #aaaaaa;
+  background-image: none;
+  background-color: #8ab10b;
+}
+div.tool .toolmiddle .btnformright img,
+div.tool .toolmiddle .btnformleft img {
+  display: none;
+}
+div.tool .toolmiddle input[type="text"],
+div.tool .toolmiddle input[type="email"],
+div.tool .toolmiddle input[type="number"],
+div.tool .toolmiddle input[type="tel"],
+div.tool .toolmiddle input[type="date"],
+div.tool .toolmiddle input[type="password"],
+div.tool .toolmiddle select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 10px 9px 10px;
+  margin-bottom: 20px;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+div.tool .toolmiddle input[type="text"]:focus,
+div.tool .toolmiddle input[type="email"]:focus,
+div.tool .toolmiddle input[type="number"]:focus,
+div.tool .toolmiddle input[type="tel"]:focus,
+div.tool .toolmiddle input[type="date"]:focus,
+div.tool .toolmiddle input[type="password"]:focus,
+div.tool .toolmiddle select:focus {
+  border-color: #8ab10b;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(111, 143, 10, 0.4);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(111, 143, 10, 0.4);
+}
+div.tool .toolmiddle input[type="text"]::-moz-placeholder,
+div.tool .toolmiddle input[type="email"]::-moz-placeholder,
+div.tool .toolmiddle input[type="number"]::-moz-placeholder,
+div.tool .toolmiddle input[type="tel"]::-moz-placeholder,
+div.tool .toolmiddle input[type="date"]::-moz-placeholder,
+div.tool .toolmiddle input[type="password"]::-moz-placeholder,
+div.tool .toolmiddle select::-moz-placeholder,
+div.tool .toolmiddle input[type="text"]:-ms-input-placeholder,
+div.tool .toolmiddle input[type="email"]:-ms-input-placeholder,
+div.tool .toolmiddle input[type="number"]:-ms-input-placeholder,
+div.tool .toolmiddle input[type="tel"]:-ms-input-placeholder,
+div.tool .toolmiddle input[type="date"]:-ms-input-placeholder,
+div.tool .toolmiddle input[type="password"]:-ms-input-placeholder,
+div.tool .toolmiddle select:-ms-input-placeholder,
+div.tool .toolmiddle input[type="text"]::-webkit-input-placeholder,
+div.tool .toolmiddle input[type="email"]::-webkit-input-placeholder,
+div.tool .toolmiddle input[type="number"]::-webkit-input-placeholder,
+div.tool .toolmiddle input[type="tel"]::-webkit-input-placeholder,
+div.tool .toolmiddle input[type="date"]::-webkit-input-placeholder,
+div.tool .toolmiddle input[type="password"]::-webkit-input-placeholder,
+div.tool .toolmiddle select::-webkit-input-placeholder {
+  color: #999;
+}
+div.tool .toolmiddle input[type="text"][disabled],
+div.tool .toolmiddle input[type="email"][disabled],
+div.tool .toolmiddle input[type="number"][disabled],
+div.tool .toolmiddle input[type="tel"][disabled],
+div.tool .toolmiddle input[type="date"][disabled],
+div.tool .toolmiddle input[type="password"][disabled],
+div.tool .toolmiddle select[disabled] {
+  cursor: not-allowed;
+  color: #ccc;
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+div.tool .toolmiddle input[type="text"] + br,
+div.tool .toolmiddle input[type="email"] + br,
+div.tool .toolmiddle input[type="number"] + br,
+div.tool .toolmiddle input[type="tel"] + br,
+div.tool .toolmiddle input[type="date"] + br,
+div.tool .toolmiddle input[type="password"] + br,
+div.tool .toolmiddle select + br {
+  display: none;
+}
+div.tool .toolmiddle .radiogroup {
+  padding-bottom: 15px;
+}
+div.tool .toolmiddle .radiogroup input[type="radio"] {
+  margin-right: 10px;
+}
+div.tool .toolmiddle .radiogroup .output {
+  margin-bottom: 10px;
+  display: block;
+  margin-left: 22px;
+  word-break: break-all;
+}
+div.tool .toolmiddle input[type="text"][maxlength="4"] {
+  width: calc( 4ch + 20px );
+  float: left;
+}
+div.tool .toolmiddle input[type="text"][maxlength="16"] {
+  width: calc( 100% - 4ch - 20px - 5px );
+  float: right;
+}
+div.tool .autoSelButt {
+  width: 100%;
+  display: block;
+  min-height: 30px;
+  border: none;
+  margin-top: -15px;
+  border-bottom: 1px solid #ccc;
+}
+div.tool .autoSelButt .icon {
+  font-size: 16px;
+  color: #8ab10b;
+  padding: 0;
+  height: 16px;
+  float: right;
+}
+div.tool#tool2 .toolhead span.tooltit:before {
+  display: block;
+  content: "Webank ti richiama";
+  font-size: 14px;
+  color: #333;
+  padding-top: 15px;
+}
+div.tool#tool9 .toolhead span.tooltit:before {
+  display: block;
+  content: "Appuntamento in sede";
+  font-size: 14px;
+  color: #333;
+  padding-top: 15px;
+}
+div.tool#tool9 p[style="float:left"],
+div.tool#tool9 p[style="float:left"] + p {
+  float: left;
+  width: 100% !important;
+}
+div.tool#tool9 p[style="float:left"] label,
+div.tool#tool9 p[style="float:left"] + p label {
+  width: 110px !important;
+  float: left !important;
+}
+div.tool#tool9 p[style="float:left"] .alRgFields,
+div.tool#tool9 p[style="float:left"] + p .alRgFields {
+  display: block !important;
+  float: right !important;
+  width: calc( 100% - 112px ) !important;
+}
+div.tool#tool9 p[style="float:left"] .alRgFields input,
+div.tool#tool9 p[style="float:left"] + p .alRgFields input,
+div.tool#tool9 p[style="float:left"] .alRgFields select,
+div.tool#tool9 p[style="float:left"] + p .alRgFields select {
+  width: 100% !important;
+  float: right !important;
+  margin: 0 !important;
+}
+/* Varianti "responsive" per Day WE */
+@media (max-width: 1023px) {
+  #toolbox {
+    display: none;
+  }
+}
+.onTop {
+  z-index: 15000;
+}
+.chat {
+  width: 360px;
+  height: 534px;
+  background: none repeat scroll 0 0 transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  font-family: Tahoma, tahoma, Arial, Sans serif;
+  font-size: 11px;
+  text-align: left;
+  z-index: 15000;
+  border: 0;
+  background-color: white !important;
+  position: absolute;
+  box-sizing: content-box;
+}
+.outerChat {
+  height: 50px;
+  padding-top: 3px;
+  color: #8ab10b;
+  font-family: arial, serif;
+  font-size: 28px;
+  font-weight: bold;
+  width: 100%;
+}
+div.intestazioneChat {
+  margin-top: 4px;
+  float: left;
+}
+label.intestazioneChat {
+  margin-left: 10px;
+}
+.chatheader {
+  cursor: move;
+  height: 30px;
+  padding-top: 3px;
+}
+.chatheader-image {
+  /*
+    margin-top: 5px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+    */
+  margin-top: 9px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.chatheader-image-chat {
+  /*background-image: url(/wbresp/img/chat_symbol.png);
+    height: 22px;
+    width: 28px;*/
+  background-image: url(/wbresp/img/chat_symbol.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 32px;
+  width: 32px;
+}
+.chatheader-button {
+  margin-top: 5px;
+  float: right;
+  margin-left: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.chatheader-filler {
+  float: left;
+  width: 345px;
+  height: 22px;
+}
+.chatheader-button-close {
+  background-image: url(/WB/fe/img/chat_close.png);
+  height: 14px;
+  width: 15px;
+  margin-top: 5px;
+}
+.chatheader-button-minimize {
+  background-image: url(/WB/fe/img/chat_minimize.png);
+  height: 2px;
+  width: 15px;
+  margin-top: 15px;
+}
+.chatheader-button-maximize {
+  background-image: url(/WB/fe/img/chat_maximize.png);
+  height: 13px;
+  width: 15px;
+  margin-top: 5px;
+}
+.chatheader-typing {
+  margin-top: 10px;
+  margin-left: 30px;
+  display: none;
+  float: left;
+}
+.chatheader-typing-img {
+  background: url(/WB/fe/img/matita_animazione.gif) no-repeat 0 0;
+  width: 20px;
+  height: 13px;
+  background-size: 20px 13px;
+}
+.iframe-chat {
+  position: absolute;
+  width: 100%;
+  border: 0;
+}
+.div-switch {
+  width: 280px;
+  height: 120px;
+  background: none repeat scroll 0 0 transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  font-family: Tahoma, tahoma, Arial, Sans serif;
+  font-size: 11px;
+  text-align: left;
+  z-index: 15000;
+  border: 0;
+  background-color: white !important;
+  position: relative;
+  padding: 10px;
+  display: none;
+  box-sizing: content-box;
+}
+.div-switch-close {
+  background-image: url(/WB/fe/img/chat_close.png);
+  height: 14px;
+  width: 15px;
+}
+.div-switch-main {
+  padding-top: 22px !important;
+  height: 93px;
+  background-color: ghostwhite;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #666;
+  padding-bottom: 5px;
+}
+.footer-switch {
+  background-color: #8ab10b;
+  position: absolute;
+  width: 280px;
+  bottom: 10px;
+  height: 55px;
+  padding-top: 5px;
+}
+.btn-switch {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  border: 0;
+  border-top: 1px solid transparent;
+  padding: 5px 10px 5px 10px;
+  color: #ffffff;
+  background-color: #a6cc28 !important;
+  border-radius: 25px;
+  height: 35px;
+  width: 100px;
+  line-height: 35px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 5px 10px 20px 25px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+.sticky {
+  position: fixed;
+}
+/* DECLINAZIONI ELEMENTI STRUTTURALI */
+header {
+  background-color: #000;
+}
+header .userMenu .icon {
+  color: #fff;
+}
+header #logoWrap {
+  width: 223px;
+  height: 124px;
+  padding: 0;
+}
+header #logoWrap img {
+  margin-top: 28px;
+}
+header .printlogoNew {
+  display: none;
+}
+nav {
+  margin-bottom: 65px;
+  background: #000;
+}
+nav ul li {
+  margin: 0;
+}
+nav ul li a {
+  font-size: 1.13em;
+}
+nav ul.level1 .selected .voice {
+  color: #000;
+  border-bottom: solid 1px #8ab10b;
+}
+nav ul.level2 {
+  height: 49px;
+}
+nav ul.level2 li a {
+  margin: 0;
+  padding: 18px 0 0 0;
+  color: #6f8f0a;
+  border: 0;
+  font-size: 1em;
+  line-height: 1em;
+  text-decoration: none;
+}
+nav ul.level2 li.selected a,
+nav ul.level2 li a:hover {
+  color: #000;
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  border-top: solid 1px #e3e3e3;
+  background: #fafafa;
+  font-size: 1em;
+  padding-bottom: 30px;
+}
+footer ul {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 30px 15px;
+  list-style-type: none;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0 9px;
+}
+footer ul li a {
+  color: #6f8f0a !important;
+  text-decoration: none;
+}
+footer .footermenu {
+  float: left;
+  width: 100%;
+  border-bottom: solid 1px #e3e3e3;
+  background: #fff;
+}
+footer p {
+  display: inline-block;
+  margin: 0 auto;
+  color: #999;
+  font-size: 0.8em;
+  line-height: 20px;
+  padding: 10px 0;
+}
+footer a {
+  font-size: 0.875em;
+}
+/**/
+#toolbox .toolbtn a {
+  text-decoration: none;
+  color: #fff;
+}
+#toolbox .toolbtn a:hover,
+#toolbox .toolbtn a:focus {
+  text-decoration: none;
+  color: #8ab10b;
+}
+header .userMenu .telLink:hover,
+header .userMenu .telLink:focus {
+  cursor: default;
+  color: #fff;
+}
+header .userMenu .telLink:hover .icon,
+header .userMenu .telLink:focus .icon {
+  color: #fff;
+}
+/* Spalla destra */
+.boxdx {
+  margin-bottom: 30px;
+}
+.eventi .btn-big-ico {
+  display: block;
+}
+.news {
+  padding: 14px 20px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.news h4 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.news .notizia {
+  width: 100%;
+  padding: 0 0 11px 0;
+  margin: 0 0 10px 0;
+  border-bottom: solid 1px #e3e3e3;
+}
+.news .notizia .note {
+  padding: 0;
+  margin: 0 0 2px 0;
+  font-size: 12px;
+}
+.news .notizia .link {
+  display: block;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  line-height: 19px;
+}
+.news .notizia p {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+.news .vaia {
+  display: block;
+  padding: 4px 0 0 0;
+  margin: 0;
+  text-align: right;
+}
+#contenuti {
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 1023px) {
+  nav {
+    margin-bottom: 0;
+  }
+  #leftmenu ul li.selected a {
+    color: #000;
+  }
+  footer {
+    margin-top: 30px;
+    padding: 0 15px;
+    text-align: left;
+    border: 0;
+    background: #fff;
+  }
+  footer .footermenu {
+    float: left;
+    width: 100%;
+    border: none;
+  }
+  footer .footermenu ul {
+    padding: 17px 0;
+    border-top: solid 1px #e3e3e3;
+    border-bottom: solid 1px #e3e3e3;
+    line-height: 25px;
+  }
+  footer .footermenu ul li {
+    margin: 0 9px 0 0;
+  }
+  footer p {
+    margin: 22px 0 70px;
+  }
+}
+/* Elementi in spalla destra */
+/* Celletta "universale" */
+.wdg-carousel.loading {
+  max-height: 300px;
+  border: 0;
+}
+.wdg-carousel {
+  margin: 0 0 30px;
+  display: block;
+  min-height: 200px;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  overflow-x: hidden;
+  max-width: 500px;
+}
+.wdg-carousel .carousel-inner {
+  margin-bottom: 40px;
+}
+.wdg-carousel ol.carousel-indicators {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 39px;
+  text-align: center;
+  border-top: 1px solid #CCCCCC;
+  bottom: 0;
+  left: 0;
+}
+.wdg-carousel ol.carousel-indicators li {
+  background-color: #8ab10b;
+  border: solid 1px #8ab10b;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+}
+.wdg-carousel ol.carousel-indicators li.active {
+  background-color: #fff;
+}
+.wdg-carousel.no-indicators ol {
+  display: none;
+}
+.wdg-carousel.no-indicators .carousel-inner {
+  margin-bottom: 0;
+}
+.eventi .btn.btn-large-ico {
+  width: 100%;
+}
+/* Per nascondere blocchi in Webank e visibili in Youweb */
+.siYnoW {
+  display: none;
+}
+/*# sourceMappingURL=webank_struttura.css.map */

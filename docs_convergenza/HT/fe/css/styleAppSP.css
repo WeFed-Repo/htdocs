@@ -1,0 +1,22 @@
+* {
+
+	font-family:Helvetica, sans-serif;
+	font-size:12pt;
+	margin:0px; 
+	padding:0px;
+	color: #244D93;
+
+}
+
+div {
+	margin: 5px;
+}
+
+img {
+	margin: 10px;
+	border: 0px;
+}
+
+.newsDett{
+	width: 50%;
+}

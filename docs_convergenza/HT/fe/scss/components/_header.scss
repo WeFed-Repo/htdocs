@@ -1,0 +1,43 @@
+.ui-dialog-content.ui-widget-content,
+.ui-widget-content {
+  li a {
+    color: $blue !important;
+  }
+}
+
+body {
+  &.popup {
+    margin: 0 auto;
+    padding: 0;
+    header {
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      text-align: center;
+      display: block;
+      .wrapper {
+        position: relative;
+        max-width: 1110px;
+        margin: 0 auto;
+        padding: 0 15px;
+        .logo {
+          max-height: 40px;
+          overflow: hidden;
+          width: 120px;
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          img {
+            width: 100%;
+          }
+        }
+        .btn-console {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+html {
+    background: none repeat scroll 0 0 transparent;
+}
+div#watercolors {
+    background: none repeat scroll 0 0 transparent;
+}
+
+/* layout */
+#gridHeader {
+	display:none;
+}
+#gridNavigazione {
+	display:none;
+}
+#contentLeft {
+	display:none;
+}
+#contentRight {
+	display:none;
+}
+#contentCenter, #content2Col {
+    margin-left: 0;
+    margin-right: 0;
+}
+#marqueeWrapper {
+	display:none;
+}
+
+/* tabelle */
+.tabellaSelezioneCC tbody th, .tabellaSelezioneCC thead th {
+    border-bottom: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+}
+.tabellaSelezioneCC tbody td {
+    background-color: white;
+} 
+.OUTLetFac, .OUT2ColDiff {
+    display: block;
+}
+.ui-jqgrid-bdiv {
+	height: 100% !important;
+}
+
+/* form */
+.divForm td {
+    background-color: white;
+}
+.actions, .button,
+input[type="button"] {
+	display:none !important;
+}
+img.imgSrv {
+	/*display:none !important;*/
+}
+
+.ui-menu{
+	display:none !important;
+}
+
+/* titoli */
+.intestazioneSelezioneCC span.rounded_corner {
+	display: none;
+}
+.intestazioneSelezioneCC .labelIntestazioneSelezioneCC {
+	border-right: 1px solid #B0B0B0;
+}
+.bottoni_intestazione_tabella {
+	display: none;
+}
+.ulGridOptions {
+	display: none;
+}
+
+/* jqGrid */
+.pulsantiIntestazione {
+    display: none;
+}
+.formHeaderGrid {
+    background-color: white;
+}
+
+/* news sez investimenti */
+#formHeadlines {
+    display: none !important;
+}
+div.divSinistra { 
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+div.divDestra { 
+    float: none;
+    width: 100%;
+}
+div.divSinistra > div {
+   	margin-right: 0px;
+	height: auto !important; 
+}
+div.divDestra > div {
+   	margin-left: 0px;
+}

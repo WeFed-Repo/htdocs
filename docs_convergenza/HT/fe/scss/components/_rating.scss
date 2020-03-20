@@ -1,0 +1,127 @@
+.rating {
+  white-space: nowrap;
+  .icon-corona {
+    position: relative;
+    top: 0;
+    width: 15px;
+    padding-left: 3px;
+    font-size: 12px;
+    &:first-child {
+      width: 12px;
+      padding-left: 0;
+    }
+  }
+  &.small {
+    display: none;
+  }
+}
+
+.icon-corona {
+    font-size: 12px !important;
+    color: darken($tableStripe,10%);
+
+    &-on {
+        color: $giallo;
+    }
+    &::-moz-selection {
+        background: $primary;
+        color: #fff;
+        text-shadow: none;
+    }
+    &::selection {
+        background: $primary;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+/* Rating-gauge */
+@mixin rating-gauge($bkg:#eaeded,$disabled:lightgray,$negative:red,$positive:#5bc162) {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 50%;
+  position: relative;
+  .circle {
+      position: absolute;
+      width: 100%;
+      padding-top: 100%;
+      margin-bottom: 0;
+      border-radius: 50%;
+      background: linear-gradient(90deg, $disabled, $disabled 47%, $bkg 47.1%, $bkg 53%, $disabled 53.1%, $disabled 100%);
+      bottom: 0;
+      left: 0;
+      transform: translate(0, 50%);
+      .pointer {
+          width: 20%;
+          height: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -10%;
+          &:before {
+              content: '';
+              display: block;
+              background: $bkg;
+              width: 75%;
+              height: auto;
+              padding-top: 100%;
+              transform: rotate(45deg) translate(-35%, 35%);
+              position: absolute;
+              top: 7%;
+              left: 50%;
+              z-index: 2;
+          }
+      }
+      &:before {
+          content: '';
+          display: block;
+          width: 75%;
+          height: 75%;
+          border-radius: 50%;
+          background: $bkg;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+  }
+  &.status-1, &.status-2, &.status-3, &.status-4 {
+      .circle {
+          background: linear-gradient(90deg, $negative, $negative 47%, $bkg 47.1%, $bkg 53%, $disabled 53.1%, $disabled 100%);
+      }
+  }
+  &.status-9, &.status-8, &.status-7, &.status-6 {
+      .circle {
+          background: linear-gradient(90deg, $disabled, $disabled 47%, $bkg 47.1%, $bkg 53%, $positive 53.1%, $positive 100%);
+      }
+  }
+  &.status-1 .pointer {
+      transform: rotate(-75deg);
+  }
+  &.status-2 .pointer {
+      transform: rotate(-56deg);
+  }
+  &.status-3 .pointer {
+      transform: rotate(-38deg);
+  }
+  &.status-4 .pointer {
+      transform: rotate(-20deg);
+  }
+  &.status-9 .pointer {
+      transform: rotate(75deg);
+  }
+  &.status-8 .pointer {
+      transform: rotate(56deg);
+  }
+  &.status-7 .pointer {
+      transform: rotate(38deg);
+  }
+  &.status-6 .pointer {
+      transform: rotate(20deg);
+  }
+}
+
+
+.rating-gauge {
+  @include rating-gauge();
+}
