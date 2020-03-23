@@ -10,6 +10,23 @@ import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./style.scss";
 
+// Filtraggio in INPUT
+const applyMask = (value,mask) => {
+
+    // Stringhe basiche di caratteri consentiti
+    let reTest= {
+        "numero" : /\d/,
+        "telefono": /[0-9+]/,
+        "alfanumerico": /\w/
+    }
+    value = value.split("").filter((char)=>{ return reTest[mask].test(char)}).join("");
+
+    if (mask==="alfanumerico") value = value.toUpperCase()
+
+    return value;
+}
+
+
 // Funzione che gestisce i cambi dei vari campi
 let handleChange = function (component, e) {
 
@@ -22,7 +39,7 @@ let handleChange = function (component, e) {
     // Se esiste una maschera filtra il valore a monte
     let mask = e.mask;
     if(mask){
-       
+        value = applyMask(value,mask);
     }
 
     // Stato del checkbox

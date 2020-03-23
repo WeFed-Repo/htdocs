@@ -113,7 +113,7 @@ export default class extends Component {
                             <Form.input
                                 name="esempio_campo_input_alfanumerico"
                                 value={formstate.esempio_campo_input_alfanumerico}
-                                label="Input di esempio"
+                                label="Input di esempio (alfanumerico)"
                                 error={formstate.errors["esempio_campo_input_alfanumerico"]}
                                 onChange={this.generalOnChange}
                                 mask="alfanumerico"
