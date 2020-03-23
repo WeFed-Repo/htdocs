@@ -89,68 +89,7 @@
 				"descrizione": "Patente cartacea"
 			}
 		],
-		"OPERATORI_TELEFONICI": [
-			{
-				"codice": "ALTRO",
-				"descrizione": "Altro..."
-			},
-			{
-				"codice": "AMOBILE",
-				"descrizione": "A-Mobile"
-			},
-			{
-				"codice": "BT",
-				"descrizione": "BT Mobile"
-			},
-			{
-				"codice": "CONAD",
-				"descrizione": "Conad Insim"
-			},
-			{
-				"codice": "COOP",
-				"descrizione": "Coop Voce"
-			},
-			{
-				"codice": "DAILY",
-				"descrizione": "Daily Telecom Mobile"
-			},
-			{
-				"codice": "FASTWEB",
-				"descrizione": "Fastweb Mobile"
-			},
-			{
-				"codice": "MTV",
-				"descrizione": "Mtv Mobile"
-			},
-			{
-				"codice": "POSTE",
-				"descrizione": "Poste Mobile"
-			},
-			{
-				"codice": "ILIAD",
-				"descrizione": "Iliad"
-			},
-			{
-				"codice": "TIM",
-				"descrizione": "Tim"
-			},
-			{
-				"codice": "TRE",
-				"descrizione": "Tre"
-			},
-			{
-				"codice": "UNO",
-				"descrizione": "Uno Mobile"
-			},
-			{
-				"codice": "VODAF",
-				"descrizione": "Vodafone"
-			},
-			{
-				"codice": "WIND",
-				"descrizione": "Wind"
-			}
-		],
+		
 		"ADEVER": {
 			"naturaScopo": [
 				{

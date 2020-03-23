@@ -183,7 +183,6 @@ const defaultFields = {
                 "email": "",
                 "prefisso": "",
                 "telefono": "",
-                "operatore": "",
                 "listPrivacy": [
                     {
                         "codDisclaimer": "",
@@ -316,7 +315,6 @@ const defaultFields = {
                 "email": "",
                 "prefisso": "",
                 "telefono": "",
-                "operatore": "",
                 "listPrivacy": [
                     {
                         "codDisclaimer": "",
