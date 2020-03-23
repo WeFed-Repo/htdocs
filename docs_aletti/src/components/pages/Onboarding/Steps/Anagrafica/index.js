@@ -160,12 +160,13 @@ class IntestatarioAnagrafica extends Component {
                 this.emissioneDoc = moment(new Date()).subtract(10,"year").format('DD/MM/YYYY');
                 break;
             case "03":
-                alert("passaporto");
+                //CASO PASSAPORTO 10 anni /il giorno prima
+                this.emissioneDoc = moment(new Date()).subtract(10,"year").add(1,"day").format('DD/MM/YYYY');
                 break;
             case "02":
             case "13":
             case "14":
-            alert("patente");
+                this.emissioneDoc = moment(new Date()).subtract(10,"year").format('DD/MM/YYYY');
             break;
             default:
             break;
@@ -173,33 +174,43 @@ class IntestatarioAnagrafica extends Component {
     }
     setDateScadenza (val) {
         //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO E DELLA DATA DI EMISSIONE
-        let documentTypeSelected = this.typeDoc;
+        let documentTypeSelected = this.typeDoc,
+            scadenzaPlus10 = moment(val, 'DD-MM-YYYY').add(10,"year").format('DD/MM/YYYY'),
+            scadenzaPlus5 = moment(val, 'DD-MM-YYYY').add(5,"year").format('DD/MM/YYYY'),
+            scadenzaPlus3 = moment(val, 'DD-MM-YYYY').add(3,"year").format('DD/MM/YYYY'),
+            scadenzaPlus2 = moment(val, 'DD-MM-YYYY').add(2,"year").format('DD/MM/YYYY'),
+            //DATA DI NASCITA DELL'INTESTATARIO
+            dateBirth =  this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt +"_nascita"],
+            DMbirth = dateBirth.split("/")[0] + "/" + dateBirth.split("/")[1],
+            YPlus10 = scadenzaPlus10.split("/")[2],
+            YPlus5 = scadenzaPlus5.split("/")[2],
+            YPlus3 = scadenzaPlus3.split("/")[2],
+            YPlus2 = scadenzaPlus2.split("/")[2],
+            dateBirtToCheck10 = DMbirth + "/" + YPlus10,
+            dateBirtToCheck5 = DMbirth + "/" + YPlus5,
+            dateBirtToCheck3 = DMbirth + "/" + YPlus3,
+            dateBirtToCheck2 = DMbirth + "/" + YPlus2
+        
         switch (documentTypeSelected) {
             case "01":
             case "11":
             case "12":
                 //CASO CARTA IDENTITA'
-                let scadenzaPlus10 = moment(val, 'DD-MM-YYYY').add(10,"year").format('DD/MM/YYYY');
+               
                 //SE DATA DI EMISSIONE E' PRIMA DEL 9 FEBBRAIO LA DATA DI SCADENZA/RINNOVO SARA' 10 ANNI
                 if(getDateDifference("09/02/2012",val)< 0) {
                     this.scadenzaDoc = scadenzaPlus10
                 }
                 //SE DATA DI EMISSIONE E' SUCCESSIVA AL 9 DI FEBBRAIO LA DATA DI SCADENZA SARA' 10 ANNI O IL COMPLEANNO SE QUESTO E' SUCCESSIVO
                 else {
-                    //DATA DI NASCITA DELL'INTESTATARIO
-                    let dateBirth =  this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt +"_nascita"],
-                        DMbirth = dateBirth.split("/")[0] + "/" + dateBirth.split("/")[1],
-                        YPlus10 = scadenzaPlus10.split("/")[2],
-                        dateBirtToCheck = DMbirth + "/" + YPlus10;
-                      
                     if(dateBirth!="")
                     {
-                        if (getDateDifference(scadenzaPlus10, dateBirtToCheck)<0) {
+                        if (getDateDifference(scadenzaPlus10, dateBirtToCheck10)<0) {
                             //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                            this.scadenzaDoc = moment(dateBirtToCheck,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
+                            this.scadenzaDoc = moment(dateBirtToCheck10,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
                         }
                         else {
-                            this.scadenzaDoc = dateBirtToCheck
+                            this.scadenzaDoc = dateBirtToCheck10
                         }
                     }
                     else {
@@ -208,19 +219,115 @@ class IntestatarioAnagrafica extends Component {
                     }
                     
                 }
+                this.scadenzaDocPre = moment(this.scadenzaDoc,'DD/MM/YYYY').subtract(1,"day").format('DD/MM/YYYY');
                 break;
             case "03":
-                alert("passaporto");
+                 //CASO PASSAPORTO 10 anni /il giorno prima
+                 this.scadenzaDoc = moment(scadenzaPlus10,'DD/MM/YYYY').subtract(1,"day").format('DD/MM/YYYY');
+                 this.scadenzaDocPre =  this.scadenzaDoc
+
                 break;
             case "02":
             case "13":
             case "14":
-            alert("patente");
+            //CASO PATENTE:
+            //CASO CLIENTE CON MENO DI 55 ANNI
+            var eta = moment.duration(moment(val,'DD/MM/YYYY').diff(moment(dateBirth,'DD/MM/YYYY')));
+            var eta = eta.asYears();
+            
+            if(eta < 49.999) {
+                //SE HO MENO DI 50 ANNI ALLA DATA DEL RINNOVO IL DOC VALE 10 o FINO AL COMPLEANNO
+                if(getDateDifference("09/02/2012",val)< 0) {
+                    this.scadenzaDoc = scadenzaPlus10
+                }
+                else {
+                    if(dateBirth!="")
+                    {
+                        if (getDateDifference(scadenzaPlus10, dateBirtToCheck10)<0) {
+                            //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                            this.scadenzaDoc = moment(dateBirtToCheck10,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
+                        }
+                        else {
+                            this.scadenzaDoc = dateBirtToCheck10
+                        }
+                    }
+                    else {
+                        alert("data di nascita non specificata");
+                        
+                    }
+                }
+            }
+            else if(eta < 69.999 && eta >= 49.999  ) {
+                
+                if(getDateDifference("09/02/2012",val)< 0) {
+                    this.scadenzaDoc = scadenzaPlus5
+                }
+                else {
+                    if(dateBirth!="")
+                    {
+                        if (getDateDifference(scadenzaPlus5, dateBirtToCheck5)<0) {
+                            //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                            this.scadenzaDoc = moment(dateBirtToCheck5,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
+                        }
+                        else {
+                            this.scadenzaDoc = dateBirtToCheck5
+                        }
+                    }
+                    else {
+                        alert("data di nascita non specificata");
+                        
+                    }
+                }
+            }
+            else if(eta < 79.999 && eta >= 69.999  ) {
+               if(getDateDifference("09/02/2012",val)< 0) {
+                    this.scadenzaDoc = scadenzaPlus3
+                }
+                else {
+                    if(dateBirth!="")
+                    {
+                        if (getDateDifference(scadenzaPlus3, dateBirtToCheck3)<0) {
+                            //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                            this.scadenzaDoc = moment(dateBirtToCheck3,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
+                        }
+                        else {
+                            this.scadenzaDoc = dateBirtToCheck3
+                        }
+                    }
+                    else {
+                        alert("data di nascita non specificata");
+                        
+                    }
+                }
+            }
+            else {
+                if(getDateDifference("09/02/2012",val)< 0) {
+                    this.scadenzaDoc = scadenzaPlus2
+                }
+                else {
+                    if(dateBirth!="")
+                    {
+                        if (getDateDifference(scadenzaPlus2, dateBirtToCheck2)<0) {
+                            //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                            this.scadenzaDoc = moment(dateBirtToCheck2,'DD/MM/YYYY').add(1,"year").format('DD/MM/YYYY');
+                        }
+                        else {
+                            this.scadenzaDoc = dateBirtToCheck2
+                        }
+                    }
+                    else {
+                        alert("data di nascita non specificata");
+                        
+                    }
+                }
+            }
+            this.scadenzaDocPre =  moment(new Date(),'DD/MM/YYYY').format('DD/MM/YYYY');
+           
             break;
             default:
             break;
         }
-        this.scadenzaDocPre = moment(this.scadenzaDoc,'DD/MM/YYYY').subtract(1,"day").format('DD/MM/YYYY');
+       
      }
     render() {
         
@@ -936,6 +1043,8 @@ class IntestatarioAnagrafica extends Component {
                                                         }
                                                         this.setTypeDocumento(val);
                                                         this.setDateEmissione(val);
+                                                        this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "";
+                                                        this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
                                                     }
                                                     }
                                                 >
@@ -967,7 +1076,7 @@ class IntestatarioAnagrafica extends Component {
                                                     className=""
                                                     error={this.props.formstate.errors[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                     disabled = { this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === "" }
-                                                    dateTo = {moment(new Date()).format('DD/MM/YYYY')}
+                                                    dateTo = {moment(new Date(),'DD/MM/YYYY').subtract(1,"day").format('DD/MM/YYYY')}
                                                     dateFrom = {this.emissioneDoc}
                                                 >
                                                 </Form.date>
