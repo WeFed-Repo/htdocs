@@ -27,13 +27,23 @@ export default function(form) {
     // Altri campi obbligatori condizionati 
     if (form["field_sessionfirmeblob_depositoincluso"]==="true")  obbligatori.push("field_sessionfirmeblob_naturascopodeposito_0_id");
     if (form["field_sessionfirmeblob_intestatarifirme_0_listrispadever_nazionalita_0_id"]==="86") obbligatori1int.push("field_sessionfirmeblob_intestatarifirme_0_listrispadever_provincia_0_id");
-    
+
+
     obbligatori = obbligatori.concat(obbligatori1int);
     
     // Aggiunge altri campi obbligatori a seconda del numero di intestatari coinvolti
     if(form["field_numintestatari"]==="2") {
         obbligatori = obbligatori.concat(obbligatori1int.map((val)=>{return (val.replace("intestatarifirme_0_","intestatarifirme_1_"))}));
     }
+
+    // Campi note obbligatori condizionati
+    // int0
+    if(form["field_sessionfirmeblob_intestatarifirme_0_listrispadever_fasciapatrimonio_0_id"]==="4") obbligatori.push("field_sessionfirmeblob_intestatarifirme_0_fasciapatrimonionote");
+    if(form["field_sessionfirmeblob_intestatarifirme_0_listrispadever_originefondi_0_id"]==="7") obbligatori.push("field_sessionfirmeblob_intestatarifirme_0_originefondinote");
+    // int1
+    if(form["field_sessionfirmeblob_intestatarifirme_1_listrispadever_fasciapatrimonio_0_id"]==="4") obbligatori.push("field_sessionfirmeblob_intestatarifirme_1_fasciapatrimonionote");
+    if(form["field_sessionfirmeblob_intestatarifirme_1_listrispadever_originefondi_0_id"]==="7") obbligatori.push("field_sessionfirmeblob_intestatarifirme_1_originefondinote");
+
 
      // Ciclo di controllo dei campi obbligatori 
     obbligatori.forEach((v, i) => {

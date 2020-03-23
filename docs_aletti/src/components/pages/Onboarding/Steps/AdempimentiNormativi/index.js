@@ -88,18 +88,22 @@ class Adever extends Component {
                                 options={this.props.obdomini["adever_nazionalita"]}
                             ></Form.select>
                         </Col>
-                        <Col sm="6">
-                            <Form.select
-                                label="Provincia svolgimento"
-                                name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"}
-                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"]}
-                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"]}
-                                onChange={obchange}
-                                disabled={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] !== "86"}
-                                placeholder="Seleziona..."
-                                options={this.props.obdomini["adever_provincia"]}
-                            ></Form.select>
-                        </Col>
+                        {
+                            formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] === "86" && 
+                            <Col sm="6">
+                                <Form.select
+                                    label="Provincia svolgimento"
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"}
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"]}
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id"]}
+                                    onChange={obchange}
+                                    disabled={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] !== "86"}
+                                    placeholder="Seleziona..."
+                                    options={this.props.obdomini["adever_provincia"]}
+                                ></Form.select>
+                            </Col>
+                        }
+                        
                     </Row>
                     <Row>
                         <Col sm="6">
@@ -159,16 +163,23 @@ class Adever extends Component {
                                 options={this.props.obdomini["adever_fasciapatrimonio"]}
                             ></Form.select>
                         </Col>
-                        <Col sm="6">
-                            <Form.input
-                                label="Note patrimonio"
-                                name={"field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"}
-                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
-                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
-                                onChange={obchange}
-                                placeholder="Note..."
-                            ></Form.input>
-                        </Col>
+                       
+                            {
+                                formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciapatrimonio_0_id"] === "4" &&
+                               
+                                <Col sm="6">
+                                    <Form.input
+                                    label="Note patrimonio"
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"}
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
+                                    onChange={obchange}
+                                    placeholder="Note..."
+                                ></Form.input>
+                                </Col>
+                            }
+                            
+                        
                     </Row>
                     <Row>
                         <Col sm="6">
@@ -182,6 +193,7 @@ class Adever extends Component {
                                 options={this.props.obdomini["adever_originefondi"]}
                             ></Form.select>
                         </Col>
+                        {formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"]==="7" &&
                         <Col sm="6">
                         <Form.input
                                 label="Note origine del patrimonio"
@@ -192,6 +204,10 @@ class Adever extends Component {
                                 placeholder="Note..."
                             ></Form.input>
                         </Col>
+                        
+                        
+                        }
+                        
                     </Row>
                 </section>
             </DefaultCollapse>
