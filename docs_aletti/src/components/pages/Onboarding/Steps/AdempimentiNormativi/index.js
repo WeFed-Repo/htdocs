@@ -240,7 +240,7 @@ class StepForm extends Component {
                                 <Form.select
                                     name={"field_sessionfirmeblob_naturascopodeposito_0_id"}
                                     value={formstate["field_sessionfirmeblob_naturascopodeposito_0_id"]}
-                                    label="Scopo del rapporto di CC"
+                                    label="Scopo del rapporto di custodia titoli"
                                     error={formstate.errors["field_sessionfirmeblob_naturascopodeposito_0_id"]}
                                     onChange={this.props.obchange}
                                     placeholder="Seleziona..."
