@@ -7,20 +7,6 @@
   color: green;
 }
 
-// Applica l'allinemaneto solo agli oggetti che non hanno classe ".pusher"
-// ( che in YW è una classe di posizionamento )
-*:not(.pusher) {
-  &.left {
-    text-align: left;
-  }
-  &.center {
-    text-align: center;
-  }
-  &.right {
-    text-align: right;
-  }
-}
-
 .notFocused {
   &, &:focus {
     -moz-outline: 0px;

@@ -11,11 +11,20 @@ table,
     font-size: $fontSizeX2 !important;
   }
   tr {
+    // "Zebratura da backend"
+    &.dispari {
+      background-color: $tableStripe;
+    }
+    &.pari {
+      background-color: #fff;
+    }
     td, th {
       border-top: 0;
       vertical-align:middle;
       &.oCenter { text-align:left!important; }
       &.oRight { text-align:right!important; }
+      &.left {text-align: left}
+      &.right {text-align: right}
     }
     th { 
       height: 100%;
@@ -57,18 +66,36 @@ table,
            background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
         }
       }
-     
+
+      // Forzature per #trading par-tec (non devono essere estese a tutto il sito a meno che non richiesto)
+      #tradingArea & {
+        &.left {
+          text-align:left !important;
+        }
+        &.right {
+          text-align:right !important;
+        }
+        &.center {
+          text-align:center !important;
+        }
+      }
     }
     td { vertical-align:middle; }
   }
-  tbody tr:nth-child(odd) {
-    background-color: $tableStripe;
-    td, th {
-      &[rowspan] {
-        border: 1px solid $white!important;
+  
+
+  // Forzato il css "automatico" via "odd" solo se la classe .dispari o .pari non e' presente
+  tbody tr:not(.dispari):not(.pari) {
+      &:nth-child(odd){
+      background-color: $tableStripe;
+      td, th {
+        &[rowspan] {
+          border: 1px solid $white!important;
+        }
       }
     }
   }
+
  
 .tradingNewsBox {
       border-bottom: 1px solid $grayMidLight;
