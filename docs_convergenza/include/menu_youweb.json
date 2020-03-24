@@ -191,6 +191,24 @@
 						]
 					}
 				]
+			},
+			{
+				"nome": "Scheda MP5",
+				"voices": [
+					{
+						"nome": "Preventivatore",
+						"voices": [
+							{
+								"nome": "Preventivo consensi",
+								"tpl": "tpl_preventivo_MP5_step1.php",
+								"inlavorazione": true,
+								"html":"vr"
+							}
+							
+						
+						]
+					}
+				]
 			}
 		]
 	},
