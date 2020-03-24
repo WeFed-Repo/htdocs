@@ -648,3 +648,24 @@ input[type=checkbox] {
     transform: rotate(360deg);
   }
 }
+
+/* Grafici interattivi trading */
+#tradingArea {
+  .compLegend {
+    span:not(.check) {margin-right:20px;}
+    span.check {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+        margin-right:5px;
+        &.checkVerde {background-color: #18a018;}
+        &.checkBlue {background-color: #0d1c34;}
+        &.checkOrange {background-color: #fb6002;}
+        &.checkLightBlue {background-color: #27d3ed;}
+        &.checkRed {background-color: #d82818;}  
+        
+      }
+    }
+}
+    

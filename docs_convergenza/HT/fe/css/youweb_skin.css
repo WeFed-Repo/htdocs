@@ -257,10 +257,6 @@ section {
 }
 
 /* Eccezioni trattate col margin top */
-.formGenerico .btnWrapper .btn-align-right:not(:first-child) {
-  margin-left: 15px;
-}
-
 /*** FINE - SPAZIATURA ELEMENTI E CONTENITORI ***/
 /*** Classi  correttive  ***/
 .pad_0 {
@@ -441,6 +437,11 @@ li.linkOn a {
 .btnWrapper .btn, .btnWrapper .btn-align-left, .ricFilter .btn-align-left {
   margin-left: 0px;
   margin-right: 15px;
+}
+
+.btnWrapper .btn-align-right, .ricFilter .btn-align-right {
+  margin-right: 0px;
+  margin-left: 15px;
 }
 
 .btnWrapper .btn:last-child, .btnWrapper .btn-align-left:last-child, .ricFilter .btn-align-left:last-child {
@@ -1121,6 +1122,33 @@ input[type=checkbox] {
     transform: rotate(360deg);
   }
 }
+/* Grafici interattivi trading */
+#tradingArea .compLegend span:not(.check) {
+  margin-right: 20px;
+}
+#tradingArea .compLegend span.check {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+#tradingArea .compLegend span.check.checkVerde {
+  background-color: #18a018;
+}
+#tradingArea .compLegend span.check.checkBlue {
+  background-color: #0d1c34;
+}
+#tradingArea .compLegend span.check.checkOrange {
+  background-color: #fb6002;
+}
+#tradingArea .compLegend span.check.checkLightBlue {
+  background-color: #27d3ed;
+}
+#tradingArea .compLegend span.check.checkRed {
+  background-color: #d82818;
+}
+
 table,
 .table,
 .ui-dialog .table {

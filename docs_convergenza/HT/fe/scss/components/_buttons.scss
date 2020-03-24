@@ -44,6 +44,14 @@
     margin-left: 0px;
     margin-right:15px;
 }
+
+.btnWrapper,.ricFilter {
+  .btn-align-right {
+    margin-right: 0px;
+    margin-left:15px;
+  }
+}
+
 .btnWrapper .btn:last-child,.btnWrapper .btn-align-left:last-child, .ricFilter .btn-align-left:last-child{
    margin-right:0
 }
