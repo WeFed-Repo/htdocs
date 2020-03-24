@@ -25,6 +25,7 @@ table,
       &.oRight { text-align:right!important; }
       &.left {text-align: left}
       &.right {text-align: right}
+      &.center {text-align: center}
     }
     th { 
       height: 100%;
@@ -85,7 +86,7 @@ table,
   
 
   // Forzato il css "automatico" via "odd" solo se la classe .dispari o .pari non e' presente
-  tbody tr:not(.dispari):not(.pari) {
+  #mainContent tbody tr:not(.dispari):not(.pari) {
       &:nth-child(odd){
       background-color: $tableStripe;
       td, th {

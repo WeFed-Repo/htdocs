@@ -64,6 +64,9 @@
   .icon {
     vertical-align:text-bottom;
   }
+  &.btn-icon-text {
+    width:auto; font-size:14px; color: $primary;
+  }
 }
 
 /* Icone bottone nelle note in testa */

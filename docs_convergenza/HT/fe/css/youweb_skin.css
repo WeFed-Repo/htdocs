@@ -464,6 +464,11 @@ li.linkOn a {
 .btn-icon .icon {
   vertical-align: text-bottom;
 }
+.btn-icon.btn-icon-text {
+  width: auto;
+  font-size: 14px;
+  color: #0e977f;
+}
 
 /* Icone bottone nelle note in testa */
 p.note.flRight a.btn-icon {
@@ -1178,6 +1183,13 @@ table tr td.right, table tr th.right,
 .ui-dialog .table tr th.right {
   text-align: right;
 }
+table tr td.center, table tr th.center,
+.table tr td.center,
+.table tr th.center,
+.ui-dialog .table tr td.center,
+.ui-dialog .table tr th.center {
+  text-align: center;
+}
 table tr th,
 .table tr th,
 .ui-dialog .table tr th {
@@ -1257,16 +1269,16 @@ table tr td,
 .ui-dialog .table tr td {
   vertical-align: middle;
 }
-table tbody tr:not(.dispari):not(.pari):nth-child(odd),
-.table tbody tr:not(.dispari):not(.pari):nth-child(odd),
-.ui-dialog .table tbody tr:not(.dispari):not(.pari):nth-child(odd) {
+table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd),
+.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd),
+.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) {
   background-color: #eaeded;
 }
-table tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan], table tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
-.table tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
-.table tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
-.ui-dialog .table tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
-.ui-dialog .table tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan] {
+table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan], table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
+.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
+.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
+.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
+.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan] {
   border: 1px solid #fff !important;
 }
 table .tradingNewsBox,
