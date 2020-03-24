@@ -49,6 +49,7 @@
   .btn-align-right {
     margin-right: 0px;
     margin-left:15px;
+    &.col-xs-3{margin-left:0 !important}
   }
 }
 

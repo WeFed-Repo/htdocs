@@ -476,10 +476,12 @@ input[type=checkbox] {
     float: none;
     width:100%;
     display:inline-block;
+    &.no-label{padding-top:0}
     &.txthelp {
       width:auto;
     }
 }
+a.output {color: $primary;text-decoration:underline}
 
 @media (min-width: $smmin)
 {

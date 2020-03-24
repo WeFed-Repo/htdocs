@@ -443,6 +443,9 @@ li.linkOn a {
   margin-right: 0px;
   margin-left: 15px;
 }
+.btnWrapper .btn-align-right.col-xs-3, .ricFilter .btn-align-right.col-xs-3 {
+  margin-left: 0 !important;
+}
 
 .btnWrapper .btn:last-child, .btnWrapper .btn-align-left:last-child, .ricFilter .btn-align-left:last-child {
   margin-right: 0;
@@ -925,8 +928,16 @@ input[type=checkbox] {
   width: 100%;
   display: inline-block;
 }
+.borderFormRounded .output.no-label {
+  padding-top: 0;
+}
 .borderFormRounded .output.txthelp {
   width: auto;
+}
+
+a.output {
+  color: #0e977f;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
@@ -1175,6 +1186,11 @@ table tr.pari,
 .ui-dialog .table tr.pari {
   background-color: #fff;
 }
+table tr.separator,
+.table tr.separator,
+.ui-dialog .table tr.separator {
+  border-top: solid 2px #ccc;
+}
 table tr td, table tr th,
 .table tr td,
 .table tr th,
@@ -1297,18 +1313,6 @@ table tr td,
 .ui-dialog .table tr td {
   vertical-align: middle;
 }
-table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd),
-.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd),
-.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) {
-  background-color: #eaeded;
-}
-table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan], table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
-.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
-.table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan],
-.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) td[rowspan],
-.ui-dialog .table #mainContent tbody tr:not(.dispari):not(.pari):nth-child(odd) th[rowspan] {
-  border: 1px solid #fff !important;
-}
 table .tradingNewsBox,
 .table .tradingNewsBox,
 .ui-dialog .table .tradingNewsBox {
@@ -1345,6 +1349,13 @@ table .bs-checkbox,
 .ui-dialog .table .bs-checkbox {
   text-align: center;
   margin-top: 5px;
+}
+
+#mainContent tbody tr:not(.dispari):nth-child(odd) {
+  background-color: #eaeded;
+}
+#mainContent tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
+  border: 1px solid #fff !important;
 }
 
 .box-generico-comunicazioni {

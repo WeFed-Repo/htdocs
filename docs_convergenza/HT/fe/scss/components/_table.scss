@@ -18,7 +18,9 @@ table,
     &.pari {
       background-color: #fff;
     }
-    td, th {
+    &.separator {border-top:solid 2px #ccc}
+    
+    td, th { 
       border-top: 0;
       vertical-align:middle;
       &.oCenter { text-align:left!important; }
@@ -84,19 +86,6 @@ table,
     td { vertical-align:middle; }
   }
   
-
-  // Forzato il css "automatico" via "odd" solo se la classe .dispari o .pari non e' presente
-  #mainContent tbody tr:not(.dispari):not(.pari) {
-      &:nth-child(odd){
-      background-color: $tableStripe;
-      td, th {
-        &[rowspan] {
-          border: 1px solid $white!important;
-        }
-      }
-    }
-  }
-
  
 .tradingNewsBox {
       border-bottom: 1px solid $grayMidLight;
@@ -125,6 +114,19 @@ table,
     margin-top: 5px;
   }
 }
+
+// Forzato il css "automatico" via "odd" solo se la classe .dispari o .pari non e' presente
+#mainContent tbody tr:not(.dispari) {
+  &:nth-child(odd){
+  background-color: $tableStripe;
+  td, th {
+    &[rowspan] {
+      border: 1px solid $white!important;
+    }
+  }
+}
+}
+
 .box-generico-comunicazioni {
   padding:0!important;
   table tr:nth-child(odd) {
