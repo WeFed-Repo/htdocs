@@ -201,7 +201,22 @@
 							{
 								"nome": "Preventivo consensi",
 								"tpl": "tpl_preventivo_MP5_step1.php",
+								"html":"vr"
+							},
+							{
+								"nome": "Preventivo beni e garanzie",
+								"tpl": "tpl_preventivo_MP5_step2.php",
 								"inlavorazione": true,
+								"html":"vr"
+							},
+							{
+								"nome": "Preventivo riepilogo",
+								"tpl": "tpl_preventivo_MP5_step3.php",
+								"html":"vr"
+							},
+							{
+								"nome": "Preventivo esito",
+								"tpl": "tpl_preventivo_MP5_step4.php",
 								"html":"vr"
 							}
 							
