@@ -1,0 +1,30 @@
+<h2>Portafoglio titoli e fondi</h2>
+<!-- SELETTORE DEPOSITO -->
+<?php include ("./parts/selettore_deposito.php"); ?>
+<!-- FINE SELETTORE DEPOSITO -->
+
+<!-- FORM CON SELETTORI PER COLONNE E STRUMENTI -->
+
+
+<!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
+<!-- BLOCCO AGGIORNAMENTI -->
+
+
+<!-- FINE BLOCCO AGGIORNAMENTI -->
+
+<!-- TABELLA -->
+
+<!-- FINE TABELLA -->
+
+<!-- PULSANTIERA SOTTO TABELLA -->
+
+<!-- FINE PULSANTIERA SOTTO TABELLA -->
+
+<!-- LISTA CON DETTAGLI -->
+
+<!-- FINE LISTA CON DETTAGLI -->
+
+
+<!-- NOTE FISCALI ESPANDIBILI -->
+
+<!-- FINE NOTE FISCALI ESPANDIBILI -->
