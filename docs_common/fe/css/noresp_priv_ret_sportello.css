@@ -1,0 +1,1691 @@
+#container a {
+    text-decoration: none
+}
+#menusecond a {
+    font-size: 11px!important;
+}
+#menusecond .menuthird .sx a {
+    font-size: 12px!important;
+}
+#menusecond div.menuthird .thirdlevelbody .footer p, #menusecond div.menuthird .thirdlevelbody .footer p a {
+    text-decoration: underline;
+    font-size: 10px !important;
+}
+.sphead .spInfo {
+    font-size: 12px!important;
+}
+.spTable strong a {
+    text-decoration: none;
+    outline: none!important;
+}
+.contenuti table {
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.table th, .table td {
+    padding: 7px 5px 8px 5px;
+    border-top: 1px solid #ddd;
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+.aligncenter {
+    text-align: center;
+}
+.table td {
+    border-bottom: 1px solid #e3e3e3;
+}
+.table th {
+    padding: 5px 5px 2px 5px;
+    background-color: #e3e3e3;
+}
+.contenuti table .borderlr {
+    border-right: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+}
+.noborderbot {
+    border-bottom: 0;
+}
+.noBorderleft, .table td.noBorderleft {
+    border-left: 0;
+}
+.buttonContent .bx-wrapper {
+    margin: 0 0 0 !important;
+}
+
+/*** /wscmn/css/ret/responsive/priv_generic.css + compatib ***/
+
+
+/*operazioni veloci */
+
+.contenuti fieldset input, .contenuti fieldset select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* BOTTONE */
+
+.button {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* SPORTELLO */
+
+#movDispoExp_loadlayer, .loadlayer {
+    position: absolute;
+}
+
+/****** MEDIA QUERY *****/
+
+@media (max-width:767px) {
+    /* BOTTONE */
+    .button {
+        border-radius: 0px;
+    }
+}
+
+/* GENERICI */
+
+#container {
+    padding: 0;
+}
+.bordertopgrey {
+    border-top: 1px solid #e3e3e3;
+}
+.contenuti article, #container article {
+    font-size: 12px;
+}
+.contenuti article h4 {
+    font: normal 18px;
+}
+
+/* operazioni veloci*/
+
+.sectioncont section {
+    display: block;
+    height: 69px;
+    margin: 0 12px 55px 12px;
+    cursor: pointer;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px 0 0 4px;
+}
+.sectioncont section.disabled {
+    cursor: default;
+    color: #a6a6a6;
+}
+.sectioncont .slidelink {
+    position: relative;
+    height: 69px;
+    text-decoration: none;
+    line-height: 69px;
+}
+.slidelink .movTitle {
+    display: inline-block;
+    padding: 0 10px 0 80px;
+    font: normal 17px;
+    line-height: 1.2;
+}
+.button {
+    position: absolute;
+    top: -1px;
+    float: left;
+    width: 69px;
+    height: 69px;
+    margin: 0 10px 10px 0;
+    border-radius: 4px;
+}
+.button .img {
+    width: 58px;
+    height: 58px;
+    margin: 4px 0 0 5px;
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 0;
+    background-size: 58px 58px;
+}
+.bonifico .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_bonifico@1x.png);
+}
+.jeans .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_jeans@1x.png);
+}
+.cellulare .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_cellulare@1x.png);
+}
+.bollettino .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_bollettino@1x.png);
+}
+.giroconto .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_giroconto@1x.png);
+}
+.bollo .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_bollo_auto@1x.png);
+}
+.atm .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_atm@1x.png);
+}
+.atm .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_atm@1x.png);
+}
+.mavRav .img {
+    background-image: url(/wscmn/img/ret/responsive/ico_mav_rav@1x.png);
+}
+
+/*bottone disabilitato */
+
+.spBtnDis {
+    background-color: #b7b7b7;
+}
+
+/* form */
+
+.formGeneric {
+    width: 100%;
+}
+.spBox .formGeneric {
+    margin: 0;
+}
+.spBox .formGeneric fieldset {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 0;
+}
+.spBottBox .formGeneric fieldset {
+    margin-bottom: 0;
+}
+.formGeneric fieldset.row, .formGeneric fieldset.row-fluid {
+    width: 100%;
+    padding-left: 0;
+}
+.formGeneric label.nomefield {
+    color: #666;
+}
+.formGeneric label.nomefield.ico {
+    width: auto;
+}
+.formGeneric legend {
+    margin: 0;
+    padding: 0 0 3px 0;
+    color: #666;
+    font-weight: bold;
+    *margin-left: -6px;
+}
+.row .unacolonna {
+    width: 100%;
+    *width: 99.94680851063829%;
+}
+.formGeneric .errore input[type="text"], .formGeneric .errore input[type="tel"], .formGeneric .errore input[type="password"], .formGeneric .errore input[type="number"], formgeneric .errore textarea {
+    border-color: #f00;
+}
+.formGeneric fieldset.errore label {
+    color: #f00;
+}
+.textinline {
+    line-height: 8px;
+}
+.formGeneric .row-fluid .span4 input.hasDatepicker[type="text"], .formGeneric input.withIcon, .formGeneric select.withIcon {
+    width: 77%;
+}
+.contenuti input[type=number]::-webkit-outer-spin-button, .contenuti input[type=number]::-webkit-inner-spin-button {
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+    /* display:none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+}
+
+/*.container-fluid .formGeneric .row-fluid {
+    margin-bottom: 12px;
+}*/
+
+.container-fluid .spBottBox .formGeneric .row-fluid {
+    margin-bottom: 6px;
+}
+
+/* Fondo box password 2 livello */
+
+.wellpass {
+    margin-bottom: 5px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+    background-color: #f6f6f6;
+}
+.formGeneric .row-fluid input[type="text"].inppass2, .formGeneric .row-fluid input[type="password"].inppass2 {
+    display: inline-block;
+    width: 20px;
+    margin: 0 2px;
+}
+.asterisco {
+    display: inline-block;
+    zoom: 1;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    background-image: url(/wscmn/img/ret/responsive/asterisco.gif);
+}
+.pinInput, .pinNumb {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+.pinNumb span {
+    padding: 0 7px;
+}
+#datepicker, #datepicker3 {
+    width: 80%;
+}
+
+/*** /wscmn/css/ret/responsive/sportello.css ***/
+
+
+/* BODY tabella */
+
+#container {
+    color: #000;
+}
+
+/* HEAD tebella */
+
+.spHead {
+    margin-bottom: 10px;
+    padding: 1px;
+    border: 1px solid #ededed;
+    background: url(/wscmn/img/ret/responsive/bg_intestazione.gif) repeat left top;
+    font-size: 12px
+}
+.spHead.formGeneric .row-fluid {
+    margin-bottom: 0;
+}
+.spHeadBg {
+    padding: 5px 0;
+}
+.spInfo {
+    min-height: 50px;
+    font-size: 12px;
+    line-height: 25px;
+}
+.spConto {
+    padding: 0 4px 0 8px;
+    text-align: left;
+}
+.spNome {
+    padding: 0 4px 0 4px;
+    text-align: center;
+}
+.spSaldo {
+    padding: 0 8px 0 4px;
+    text-align: center;
+}
+
+/* BOX */
+
+.spContent {
+    border-radius: 0;
+}
+.spIco {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+}
+.spIco img {
+    padding-top: 6px;
+}
+.spIco.close {
+    width: 3px;
+    height: 3px;
+    border: 1px solid #999;
+    box-shadow: 0 2px 0 0 #e0e0e0;
+}
+.spBox {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+/* #movDispoTab .spBox{box-shadow:none;overflow:hidden} */
+
+#movDispoTab {
+    margin-bottom: 20px;
+}
+.spBar {
+    margin-top: 29px;
+    text-align: left;
+    font-weight: bold;
+}
+.spBar a:hover {
+    color: #6f8f0a;
+}
+.spBottom {
+    height: 25px;
+    margin-top: 5px;
+}
+.spLine {
+    overflow: hidden;
+    height: 1px;
+    background-color: #e3e3e3;
+}
+.spBack, .spForward {
+    margin: 0;
+    cursor: pointer;
+    background: url(/wscmn/img/ret/responsive/btn_back@1x.png) no-repeat left top;
+}
+.spClose {
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    background-image: url(/wscmn/img/ret/responsive/btn_close@1x.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.spLeft {
+    left: 10px;
+}
+.spRight {
+    right: 0;
+}
+.spButton {
+    width: auto;
+    padding: 4px 14px 5px 14px;
+    cursor: pointer;
+    color: #fff!important;
+    border: 0 none;
+    border-radius: 9px 9px 9px 9px;
+}
+.spButton:hover {
+    color: #fff!important;
+}
+.spGray {
+    background-color: #bababa;
+}
+.spLinkBr {
+    position: absolute;
+    right: 6px;
+    bottom: 14px;
+}
+#buttonBox {
+    overflow: hidden;
+    width: 100%;
+    height: 286px;
+    margin-bottom: 15px;
+    border: 1px solid #d0d0d0;
+}
+#buttonBox .spBar {
+    position: relative;
+    z-index: 1;
+    margin-top: -94px;
+    padding-left: 4px;
+}
+#contenuti.noresp #buttonBox .spBar {
+    margin-top: -34px;
+}
+#movDispoTab .spBar {
+    padding-left: 4px;
+}
+#movDispoTab .spTable .th-data {
+    width: 14%;
+}
+#movDispoTab .spTable .th-desc {
+    width: 65%;
+}
+#movDispoTab .spTable .th-tipo {
+    width: 40%;
+}
+#movDispoTab .spTable .th-stato {
+    width: 25%;
+}
+#movDispoTab .spTable .th-imp {
+    width: 21%;
+}
+#movDispoTab .boxesito {
+    width: auto;
+    margin: 0 4px;
+}
+
+/* SLIDE */
+
+.spCover {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    overflow: hidden;
+    height: 282px;
+    border-radius: 0;
+}
+.spSlide {
+    position: relative;
+    height: 282px;
+    width: 100%;
+    border-radius: 0;
+    background-color: #fff;
+}
+.spSlide .spLine {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+.spSlide .spBack {
+    position: absolute;
+    bottom: 0;
+}
+.spSlide .spBack {
+    position: absolute;
+    bottom: 10px;
+}
+
+/* ZOOM */
+
+.spZoom {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 282px;
+    border-radius: 0;
+    background-color: #f4f4f4;
+}
+
+/* SLIDER */
+
+#bxsliderMovBox, #bxsliderDispoBox {
+    overflow: hidden;
+    height: 193px;
+}
+.bx-wrapper .ui-datepicker-trigger {
+    width: 23px;
+    height: 23px;
+}
+
+/* BOX MOVIMENTI */
+
+#linkMovimenti {
+    padding-left: 23px;
+}
+#graph {
+    text-align: center;
+}
+#btnGraficiMov {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-top: -4px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: url("/wscmn/img/ret/responsive/btn_grafici.png");
+}
+
+/* BOX ESITO DISPOSIZIONI */
+
+#linkDiposizioni {
+    padding-left: 55px;
+}
+#dispoBox .spCover {
+    border-top: 0 none;
+}
+#dispoDescBox {
+    height: 20px;
+}
+#dispoDetailLink {
+    display: block;
+    margin: 40px 10px 0 0;
+    text-align: right;
+}
+
+/* BOX MOVIMENTI VELOCI */
+
+#buttonBox .sectioncont {
+    margin: 0;
+}
+.buttonContent {
+    margin-bottom: 0;
+}
+#buttonHeader {
+    margin-top: 33px;
+}
+
+/* BONIFICO */
+
+#fieldsetBeneficiario {
+    position: relative;
+}
+#wrapBeneficiario {
+    padding-right: 100px;
+}
+#bonificoRubrica {
+    position: absolute;
+    top: 0;
+}
+
+/* BOLLETTINO */
+
+#inviaConBenEsisteBoll .spBack {
+    position: static;
+}
+#nonSvincolaBox {
+    text-align: left;
+    line-height: 25px;
+}
+#msgSvincola {
+    text-align: left;
+}
+
+/* TABLE */
+
+.spTable {
+    margin: 0;
+    border: 0;
+}
+.spWrapper {
+    padding: 23px 6px 10px 6px;
+}
+.spSlide .spWrapper {
+    padding: 0 12px;
+}
+.spWrapper2 {
+    padding: 36px 0 3px 0;
+}
+.spTable td, .spTable th {
+    height: 32px;
+    padding: 0 4px;
+    vertical-align: middle;
+    border-bottom: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
+    line-height: 32px;
+}
+.spTable td:first-child, .spTable th:first-child {
+    border-left: 0 none;
+}
+.spTable th {
+    border-top: 1px solid #d0d0d0;
+    background-color: #f5f5f5;
+    font: normal 16px helvetica!important;
+}
+.spTable td, .spTable td a, .spTable td a:hover {
+    white-space: nowrap;
+    border-top: 0 none;
+    font: normal 12px helvetica!important;
+}
+.spContent .spTable td {
+    overflow: hidden;
+}
+.spThead {
+    background-color: #f1f1f1;
+}
+.spTable .spRight {
+    text-align: right !important;
+}
+.linkDetail.clicked {
+    background-color: #edf3db;
+}
+.linkDetail .spTdDesc {
+    overflow: hidden;
+}
+
+/* MISC */
+
+.spHyphen {
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin: 0 6px;
+    padding: 0;
+    vertical-align: top;
+    background: url(/wscmn/img/ret/responsive/hyphen-plus.gif) no-repeat center 7px;
+}
+.spHeader {
+    margin-bottom: 15px;
+    padding-top: 0;
+    font-weight: normal;
+    line-height: 14px;
+    font-size: 1.2em
+}
+.spHeader2 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.spWrapper {
+    margin-top: 10px;
+}
+.spWrapper .btnWrapper {
+    margin-top: 10px;
+}
+.spWrapper .formGenerico {
+    padding-top: 10px;
+}
+.spWrapper .form-group {
+    margin-bottom: 0;
+}
+.spWrapper .checkbox.inline, .spWrapper .radio.inline {
+    padding-top: 10px;
+}
+.spWrapper2 .spHeader2, .spWrapper2 p {
+    margin-left: 10px;
+}
+.spCopy {
+    text-align: center;
+    font-size: 10px;
+}
+
+/* BOTTONI */
+
+.spBtn {
+    height: 70px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* FORM */
+
+#container input {
+    *min-height: 18px;
+    *height: 18px;
+}
+
+/* BOX SPORTELLO */
+
+.spContent {
+    overflow: hidden;
+    height: 282px;
+}
+
+/* BOX CONTATTI */
+
+#layerHideContact {
+    position: absolute;
+    z-index: 20;
+    top: 1px;
+    left: 440px;
+    width: 415px;
+    height: 200px;
+    border-radius: 0 5px 0 0;
+    background-color: #fff;
+}
+#contactContainer {
+    margin: 0 0 18px 0;
+}
+#boxContact {
+    margin-left: 0;
+}
+#boxContact #bxsliderContactBox {
+    overflow: hidden;
+    width: auto;
+    height: 202px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+}
+#boxContact .bx-wrapper {
+    width: auto;
+}
+#boxContact .bx-viewport {
+    background-color: transparent;
+}
+#spContactBar {
+    height: 35px;
+    margin: 0;
+    padding-top: 15px;
+    border: 1px solid #d0d0d0;
+    border-top: 0 none;
+}
+.spContact {
+    position: relative;
+    height: 202px;
+    background: url("/wscmn/img/ret/responsive/bg_border_pixel.gif") transparent repeat-y center top;
+}
+.spContact .spBox {
+    overflow: visible;
+    -webkit-box-shadow: 0 0 0 0 #fff;
+    -moz-box-shadow: 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 #fff;
+}
+.spContactData {
+    position: relative;
+    height: 187px;
+    padding-bottom: 0;
+}
+.spContact .spContent {
+    overflow: visible;
+    height: 95px;
+    border: 0 none;
+    clear: both;
+}
+.noresp .spContact .spContent {
+    height: 150px;
+}
+.contactLeft, .contactRight {
+    position: relative;
+}
+.contactLeft .spWrapper {
+    padding: 15px 0 0 10px;
+}
+.contactRight .spWrapper {
+    padding: 15px 11px 0 0;
+}
+.spContact .contactLeft .spClose {
+    top: 4px;
+    right: -4px;
+}
+.spContact .contactRight .spClose {
+    top: 4px;
+    right: 5px;
+}
+.spContact {
+    display: none;
+}
+.spContact.item {
+    display: block;
+}
+.spContactBox {
+    position: relative;
+}
+.spContactBox .spMinus {
+    position: absolute;
+    top: -25px;
+    z-index: 100;
+    right: -8px;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px rgba(0, 0, 0, 0.12);
+}
+#contenuti.noresp .spContactBox .spMinus {
+    top: -33px;
+}
+#contenuti .spContactBox .spMinus {
+    top: 10px;
+}
+.spContactBox .spBox > .spClose {
+    z-index: 100;
+    top: -40px;
+    right: -19px;
+}
+.noresp .spContactBox .spBox > .spClose {
+    top: -33px;
+    right: -8px;
+}
+.spContactBox .spZoom {
+    height: 151px;
+    border-radius: 0;
+}
+.spContactBox .spCover {
+    overflow: visible;
+    height: 151px;
+    border: 0 none;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 0 #fff;
+    -moz-box-shadow: 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 #fff;
+}
+.spContactBox .spSlide {
+    height: 151px;
+}
+.spContactBox .spSlide.token .wrapTrasferisci {
+    height: 168px;
+}
+#boxContact .spSlide.token .boxesito {
+    bottom: 0;
+}
+.spContactBox .spSlide.token.app {
+    height: 251px;
+}
+.spContactBox .spCover.strongAuthOK {
+    min-height: 151px;
+    height: auto;
+}
+.spContactBox .spWrapper, .spContactBox .spWrapper2 {
+    padding: 0;
+}
+.spContactBox .spCover .spWrapper {
+    padding-top: 5px;
+}
+.noresp .spContactBox .spCover .spWrapper {
+    padding-top: 0;
+    margin-top: 0;
+}
+.spContactBox .spCover .spWrapper2 {
+    padding-top: 8px;
+}
+.noresp .spContactBox .spCover .spWrapper2 {
+    padding-top: 0;
+}
+.spContactBox .spCover .spButtonRow {
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.spContactBoxWrapper {
+    height: 174px;
+    padding: 7px 11px 0 11px;
+}
+.open .spContactBoxWrapper {
+    height: 173px;
+    padding: 6px 10px 0 10px;
+    border: 1px solid #d0d0d0;
+}
+.spContactBox .formGeneric label.nomefield {
+    padding-bottom: 1px;
+}
+.spContactBox .spWrapper .formGeneric label.nomefield {
+    padding-bottom: 2px;
+}
+.spContactBox .formGeneric > .row-fluid {
+    margin-bottom: 7px;
+}
+.noresp .formGeneric > .row-fluid, .noresp .spContactBox .formGeneric > .row-fluid {
+    margin-bottom: 3px;
+}
+.spContactBox .spWrapper .formGeneric > .row-fluid {
+    margin-bottom: 11px;
+}
+.noresp .spContactBox .spWrapper .formGeneric > .row-fluid {
+    margin-bottom: 5px;
+}
+.spContactBox .spWrapper .formGeneric > .spButtonRow {
+    margin-bottom: 0;
+}
+.spContactBox .button {
+    position: static;
+    float: left;
+    margin: 20px 30px 0 0;
+    cursor: pointer;
+}
+.spContactBox .button.add {
+    display: block;
+    margin: 20px 0 0 30px;
+}
+.spContactBox .button.add.first {
+    margin-left: 0;
+}
+.spContactBox .button.add .img, .spContactBox .button.add .riflesso {
+    display: block;
+}
+.spContactBox .button.add .img {
+    background: none transparent;
+}
+.spContactBox .button.add {
+    border: 0 none;
+    background: url(/wscmn/img/ret/responsive/ico_add@1x.png) transparent no-repeat right bottom;
+    -webkit-box-shadow: inset 0 0 #fff;
+    -moz-box-shadow: inset 0 0 #fff;
+    box-shadow: inset 0 0 #fff;
+}
+.spContactBox .button.jeans {
+    margin-right: 0;
+}
+.contactPhoto {
+    float: left;
+    width: 69px;
+    height: 69px;
+    margin: 0 0 0 5px;
+    background: url("/wscmn/img/ret/responsive/bg_contatto.gif") transparent no-repeat right bottom;
+}
+.contactPhotoImg {
+    width: 62px;
+    height: 62px;
+    border: 1px solid #d0d0d0;
+    background: url("/wscmn/img/ico1gr_contatto_icodef.gif") transparent no-repeat -1px -1px;
+}
+#contenuti .contactMod {
+    position: absolute;
+    top: -5px;
+    left: 80px;
+    width: 84px;
+}
+#contenuti.noresp .contactMod {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.contactMod span {
+    text-decoration: underline;
+    font-size: 10px;
+}
+#contenuti .contactName {
+    float: left;
+    height: 63px;
+    margin: 0;
+    padding-left: 15px;
+}
+#contenuti.noresp .contactName {
+    float: none;
+    height: auto;
+    padding-left: 0;
+}
+.contactOps {
+    margin: 0 15px 0 0;
+    padding-top: 35px;
+    background: url("/wscmn/img/ret/responsive/bg_border_pixel.gif") transparent repeat-x right 52px;
+}
+.contactName span {
+    vertical-align: middle;
+    font-size: 18px;
+    color: #333;
+}
+#contenuti .contactName span {
+    display: table-cell;
+    height: 35px;
+}
+#contenuti.noresp .contactName span {
+    display: block;
+    height: auto;
+}
+#contenuti .contactOps span {
+    display: block;
+    width: 110px;
+    height: 16px;
+    color: #222;
+    background-color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+}
+#boxContact .spButton.absRight {
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+}
+#boxContact .spBack.absLeft {
+    position: absolute;
+    bottom: 21px;
+    left: -94px;
+}
+#boxContact .spBottBox {
+    margin: 0;
+    padding: 0 0 9px 0;
+    border: 0 none;
+    border-radius: 0;
+}
+#boxContact .spSlide .boxesito {
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    margin: 0;
+}
+#boxContact .pinInput, #boxContact .pinNumb {
+    width: 188px;
+    border: 1px solid #d7d7d7;
+    background-color: #f6f6f6;
+}
+#boxContact .pinInput {
+    border-width: 1px 1px 0 1px;
+    border-radius: 5px 5px 0 0;
+}
+#boxContact .pinNumb {
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 5px 5px;
+}
+#boxContact .pin2 > .row-fluid {
+    margin-bottom: 0;
+}
+#boxContact .pin2 > .row-fluid:first-child {
+    height: 18px;
+}
+#inputBenCellContatto, #inputBenCjContatto {
+    height: 25px;
+    line-height: 25px;
+}
+#boxContact .spMsg {
+    position: absolute;
+    top: 5px;
+    width: 303px;
+    height: 195px;
+}
+#boxContact .msgLeft {
+    left: 105px;
+}
+#boxContact .msgRight {
+    left: 515px;
+}
+#boxContact .spContactOps {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 100%;
+    height: 188px;
+}
+#container #boxContact .spContactOps {
+    width: 385px;
+}
+#container .colLeft {
+    float: left;
+}
+#container .colRight {
+    float: right;
+    width: 299px;
+    margin-right: 4px;
+}
+#boxContact .contactRight .spContactOps {
+    left: 10px;
+}
+.noresp #boxContact .contactRight .spContactOps {
+    left: 0;
+}
+#boxContact .spContactOps .spContent {
+    height: 188px;
+}
+#boxContact .spContactOps .spZoom {
+    border-radius: 0;
+}
+#boxContact .spContactOps .spCover {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 0 #fff;
+    -moz-box-shadow: 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 #fff;
+}
+#boxContact .spContactOps .spWrapper {
+    padding: 0 0 0 5px;
+}
+.noresp #boxContact .spContactOps .spWrapper {
+    margin: 0;
+    padding: 0;
+}
+#boxContact .spContactOps .spSlide {
+    height: 188px;
+    border-radius: 0;
+}
+#boxContact .spContactOps .spBack.absLeft {
+    left: 5px;
+    bottom: 7px;
+}
+#boxContact .spContactOps .spButton.absRight {
+    right: 0;
+    bottom: 3px;
+}
+#boxContact .token.contatto .spButton.absRight {
+    top: 32px;
+    bottom: auto;
+}
+#boxContact .spContactOps .titleContatto {
+    margin-top: 0;
+    padding-top: 38px;
+    font-size: 18px;
+}
+#boxContact #slideAddContatto .titleContatto {
+    padding-top: 13px;
+}
+#boxContact #slideSetContatto .titleContatto {
+    margin-top: 0;
+    padding-top: 0;
+}
+.noresp #boxContact #slideSetContatto .titleContatto {
+    margin-bottom: 5px;
+}
+#boxContact #slideSetContatto .output {
+    height: 25px;
+    line-height: 25px;
+}
+#spContactDel .textDeleteContatto {
+    padding-top: 14px;
+}
+#spContactLink .textLinkRubrica {
+    padding-top: 32px;
+}
+#boxContact .spContactOps #formAddContatto {
+    padding-top: 5px;
+}
+#formAddContatto select {
+    width: 100%;
+}
+.noresp #formAddContatto select {
+    width: 99%;
+}
+#boxContact .spContactOps #proseguiAddContatto {
+    right: 50%;
+    width: 58px;
+    margin-right: -30px;
+}
+#contenuti #boxContact .spContactOps #linkRubrica {
+    right: 50%;
+    width: 70px;
+    margin-right: -40px;
+}
+#contenuti.noresp #boxContact .spContactOps #linkRubrica {
+    width: auto;
+}
+#labelImportoPrefContatto {
+    font-size: 11px;
+    font-weight: normal;
+}
+#formSetContatto .output {
+    font-weight: bold;
+}
+#formSetContatto .withIco {
+    width: 94%;
+}
+#formSetContatto option.preferito {
+    font-weight: bold;
+}
+.errorlayer.contatto a.errclose {
+    top: -10px;
+    right: -8px;
+}
+
+/* TAB SPORTELLO */
+
+.spTabCont .spBox {
+    float: left;
+}
+.spTab li {
+    float: left;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+}
+.spTab li:first-child {
+    border-radius: 0;
+}
+.spTab li:first-child.tabAttivo {
+    color: #000;
+    border-top: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
+    border-radius: 0;
+    background-color: #fff;
+}
+.spTab li:last-child.tabAttivo {
+    color: #000;
+    border-top: 1px solid #d0d0d0;
+    border-left: 0;
+    border-radius: 0;
+    background-color: #fff;
+}
+.spTab li:last-child.tabAttivo h4 {
+    height: 37px;
+    border-right: 1px solid #d0d0d0;
+    border-radius: 0;
+    background-color: #fff;
+}
+.spTab li.tabAttivo h4 {
+    color: #000;
+    background-color: #fff;
+}
+.spTab li.tabAttivo:first-child h4 {
+    color: #000;
+    background-color: #fff;
+}
+.spTab li:first-child.tabAttivo h4 {
+    height: 37px;
+    margin-left: 0;
+    background-color: #fff;
+}
+.spTab li:first-child h4 {
+    border-radius: 0;
+}
+.spTab li h4 {
+    position: relative;
+    z-index: 2;
+    height: 37px;
+    border-radius: 0;
+    background-color: #c2c2c2;
+}
+.spTab li h4 .gradientTab {
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+}
+.spTab li.tabAttivo .gradientTab {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+.spTab li .spTabBott {
+    display: block;
+    width: 9px;
+    height: 20px;
+    margin-top: -8px;
+    background-color: #fff;
+}
+.spTab li:first-child .spTabBott {
+    float: right;
+}
+.spTab .spHeader {
+    padding-top: 0;
+}
+.spBottWrap {
+    position: absolute;
+    bottom: 10px;
+    left: 6px;
+    width: 405px;
+}
+.spBottBox {
+    width: 100%;
+    padding: 5px 2% 0 2%;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background:#fff;
+}
+.tabCont {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 286px;
+    border: 1px solid #d0d0d0;
+}
+#movContent, #dispoContent {
+    height: 284px;
+    border-top: 0;
+}
+
+/* |FINE| TAB SPORTELLO */
+
+
+/* BOX PROMOZIONALI */
+
+.spTitoloBanner {
+    margin: 0;
+    padding: 0 0 6px 0;
+    font: normal 16px;
+}
+.spBorderbtnPromo {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #e3e3e3;
+}
+#bxsliderServ .spPromo {
+    height: 87px;
+}
+#bxsliderServ .spBoxPromo {
+    min-height: 130px;
+}
+.spbtnPromo {
+    margin-top: -6px;
+}
+.spImgPromo {
+    max-width: 133px;
+    max-height: 92px;
+}
+.spbtnPromo .spButton {
+    margin-top: -17px;
+}
+.spImpostazioniWrap {
+    padding: 0 15px;
+}
+.spImpostazioniWrap .spHeader {
+    margin-left: -15px;
+}
+.spImpostazionirow {
+    border-bottom: 1px solid #d0d0d0;
+}
+.spImpostazionirow > div {
+    padding: 7px 0;
+    text-align: right;
+}
+.spImpostazionirow > div:first-child {
+    text-align: left;
+}
+#spPromowrapper .bx-wrapper {
+    clear: both;
+}
+#spPromowrapper .lastSpantit .bx-pager.bx-default-pager {
+    padding-top: 5px;
+}
+.contenuti .header.tab, header.tab {
+    position: relative;
+    height: 62px;
+    background-color: #fff;
+}
+#container header {
+    background-color: #fff;
+    /*height:auto*/
+}
+.spTab {
+    position: relative;
+    top: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    box-sizing: border-box;
+    width: 100%;
+    height: 37px;
+    margin: 0;
+    list-style-type: none;
+    background-color: #c2c2c2;
+    padding: 0;
+}
+.spTab * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    box-sizing: border-box;
+}
+.spTab h4 {
+    height: 30px;
+    margin: 0;
+}
+
+/* |FINE| BOX PROMOZIONALI */
+
+
+/* BXSLIDER */
+
+.bx-wrapper {
+    width: 100%;
+    margin: 0;
+}
+.lastSpantit {
+    float: right;
+    margin-right: 4px;
+}
+.lastSpantit .bx-pager.bx-default-pager {
+    float: right;
+    margin-top: 3px;
+    padding-top: 0;
+    padding-right: 5px;
+}
+.lastSpantit .bx-pager-item {
+    display: inline-block;
+}
+.lastSpantit .bx-pager-item .bx-pager-link {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 5px;
+    text-align: left;
+    text-indent: -999999px;
+    border-radius: 5px 5px 5px 5px;
+    background: none repeat scroll 0 0 #ccc;
+}
+#consoleServ {
+    margin-right: 5px;
+}
+#container a.disabled:hover {
+    cursor: pointer;
+}
+
+/*.spConto .preferito {
+    padding-top: 3px;
+}*/
+
+#bxsliderServ div.msg {
+    width: 100%;
+    height: 102px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #eee;
+}
+#bxsliderServ div.msg p {
+    text-align: center;
+    color: #999;
+    line-height: 100px;
+}
+
+/* |FINE| BXSLIDER */
+
+#bonificoForm2 {
+    position: relative;
+}
+
+/* Padding bottoni funzioni veloci da rimuovere con doctype corretto */
+
+#funzBonifico .movTitle, #funzGiroconto .movTitle, #funzBollo .movTitle, #funzMavRav .movTitle {
+    padding-top: 24px;
+    *padding-top: 0;
+}
+#funzJeans .movTitle {
+    padding-top: 13px;
+    *padding-top: 0;
+}
+#funzCellulare .movTitle, #funzBollettino .movTitle, #funzAtm .movTitle {
+    padding-top: 13px;
+    *padding-top: 0;
+}
+#funzAtm .movTitle {
+    letter-spacing: -1px;
+}
+
+/* VISIBILITY */
+
+.visible-phone {
+    display: none !important;
+}
+.visible-tablet {
+    display: none !important;
+}
+.hidden-desktop {
+    display: none !important;
+}
+.visible-desktop {
+    display: inherit !important;
+}
+
+/*ricarica ATM */
+
+#boxTesEsistente {
+    height: 96px;
+}
+.elFloat {
+    float: left;
+    width: 90%;
+}
+.inputFloat {
+    float: left;
+}
+.container-fluid .formGeneric .radioWrapper .row-fluid {
+    margin-bottom: 5px;
+}
+.container-fluid .formGeneric .radioWrapper .row-fluid .importo {
+    font-weight: bold;
+}
+#tesseraAtmForm2 .spBack {
+    position: static;
+}
+.formGeneric .errore label span, .errore .formGeneric label span {
+    color: #000 !important;
+}
+#tesseraAtmForm img {
+    padding-top: 10px;
+}
+#proseguiRicaricaAtmStep2 {
+    margin-top: 10px;
+}
+
+/*Bollettini postali */
+
+#bollettinoPostaleForm label.active {
+    font-weight: bold;
+}
+#boxBollettino {
+    margin-top: 15px;
+}
+
+/*#bollettinoPostaleForm label{font-weight:normal}*/
+
+#container .boxesito a strong {
+    color: #6f8f0a!important;
+}
+
+/* Link nel feedback dopo pin 2*/
+
+#container .boxesito.positivo a, #contenuti .boxesito.positivo a:hover {
+    text-decoration: underline !important;
+}
+.smallText {
+    margin-top: -4px!important;
+    font-size: 11px!important;
+    line-height: 12px;
+}
+.textinline {
+    font-size: 0.9em
+}
+
+/* Dashboard */
+
+#spDashboard .output {
+    font-size: 16px;
+    line-height: 30px;
+}
+.spDashboardBox {
+    overflow: hidden;
+    height: 36px;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+}
+#spDashboard .spWrapper {
+    margin-top: -10px;
+}
+#spDashboard .spHeader2 {
+    margin-top: 25px;
+}
+.spSlipt {
+    float: left;
+    width: 50%;
+}
+.spDetail {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    display: block;
+}
+.spDB {
+    position: relative;
+}
+.row-fluid [class*="span"] {
+    min-height: 30px;
+}
+
+/* CLEARFIX */
+
+.clearfix:before, .clearfix:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after, .container:after, .container-fluid:after, .row:after {
+    clear: both;
+}
+
+/****** MEDIA QUERY *****/
+
+@media (max-width:320px) {
+    #movBox .spContent {
+        height: 282px;
+    }
+    #movBox .spSlide {
+        height: 282px;
+    }
+    #movBox .buttonContent .bx-viewport {
+        height: 282px;
+    }
+    #movBox .buttonContent .bx-viewport .item {
+        height: 282px;
+    }
+}
+@media (min-width:320px) and (max-width:767px) {
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-phone {
+        display: inherit !important;
+    }
+    .hidden-phone {
+        display: none !important;
+    }
+    .spBottBox {
+        width: 92%;
+    }
+    .spInfo {
+        min-height: 30px;
+    }
+    .spButtonRow {
+        margin-top: 10px;
+    }
+    .spConto, .spNome, .spSaldo {
+        padding: 0;
+        text-align: left;
+    }
+    #buttonBox .spContent {
+        height: 504px;
+    }
+    #buttonBox .spSlide, #buttonBox .spCover {
+        height: 502px;
+    }
+    #buttonBox .buttonContent .bx-viewport {
+        height: 502px;
+    }
+    #buttonBox .buttonContent .bx-viewport .item {
+        height: 454px;
+    }
+    /* BODY */
+    .spBody {
+        padding: 0;
+        background: url("../img/bg_intestazione.gif") repeat scroll left top transparent;
+    }
+    .spHeadBg {
+        background: none;
+        background-color: #fff;
+    }
+    #container {
+        padding: 0 10px;
+    }
+    .spbtnPromo {
+        top: 10px;
+    }
+    .spImpostazionirow div {
+        text-align: left;
+    }
+    #spTraslocoFacile, #spRicaricaPostePay {
+        height: 113px;
+    }
+    #spPromowrapper .spHeader {
+        margin-bottom: 8px;
+    }
+}
+@media (min-width:768px) and (max-width:979px) {
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-tablet {
+        display: inherit !important;
+    }
+    .hidden-tablet {
+        display: none !important;
+    }
+    .spWrapper {
+        padding: 13px 6px;
+    }
+}
+#conti {
+    width: auto;
+    min-width: 195px;
+}

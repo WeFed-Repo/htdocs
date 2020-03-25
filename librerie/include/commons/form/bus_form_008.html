@@ -1,0 +1,384 @@
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td class="defaultUtenteTitle">Il questionario più adatto alla tua Impresa </td>
+            </tr>
+            <tr>
+                <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="top" align="left" class="defaultUtenteSubtitle">Il questionario è "ritagliato" in base al tipo di Impresa.<br/><b> Inserisci</b> in questa pagina le informazioni richieste: sarai indirizzato al <b>questionario più adatto alla tua Impresa</b>, sia essa di medie dimensioni, piccola, o appartenente a settori particolari quali immobiliare... Nel caso la tua azienda  sia una "start up", cioè avviata da meno di tre anni, indica negli appositi campi le previsioni di fatturato per l'anno in corso e per i successivi due anni di attività.  
+
+ </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><img height="20" src="/img/bus/spacer.gif"/></td>
+                           </tr>
+                                         
+                            <tr>
+                                <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td class="utenteBG1"> </td>
+                                        <td width="190" class="utenteBG1 utenteBarText">* Campo obbligatorio</td>
+                                    </tr>
+                                </table></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="left" class="utenteBG2 wf21ContentBox"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"><a onclick="javascript:window.open('HelpNavigazione.do?help=partitaiva','help','width=500,height=320,top=0,left=0,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=yes')" href="javascript:void(0)"><img border="0" src="/img/bus/question_mark.gif"/></a></td>
+                                        
+                                        <td width="300" nowrap="" class="wf21FieldBox utenteFieldName">* Partita Iva</td>
+                                        <td>
+                                        	<input type="text" class="serviceInputText" value="12646670153" size="25" maxlength="11" name="partitaIva"/>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                        
+                                        <td width="1%" nowrap="" class="wf21FieldBox utenteFieldName">* Durata attività</td>
+                                         <td class="serviceInputText">
+                                        	<select onchange="javascript:visualizzaDurata();" name="durataAttivita">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">meno di tre anni</option>
+                                        		<option value="2">tra tre e dieci anni</option>
+                                        		<option value="3">più di dieci anni</option>
+                    
+                                        	</select>
+                                        	<script>document.forms[0].durataAttivita.value="1";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                        
+                                        <td width="1%" nowrap="" style="display: block;" class="wf21FieldBox utenteFieldName" id="anno1">
+                                            * Fatturato anno 2006</td>
+                                            <td width="1%" nowrap="" style="display: none;" class="wf21FieldBox utenteFieldName" id="anno1N">
+                                            * Fatturato anno 2009</td>
+                                        <td>
+                                        	<input type="text" class="serviceInputText" value="17.000" size="25" maxlength="18" name="fatturato1"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" style="display: block;" class="wf21FieldBox utenteFieldName" id="anno2">
+                                            * Fatturato anno 2005</td>
+                                             <td width="1%" nowrap="" style="display: none;" class="wf21FieldBox utenteFieldName" id="anno2N">
+                                            * Fatturato anno 2008</td>
+                                        <td>
+                                        	<input type="text" class="serviceInputText" value="16.000" size="25" maxlength="18" name="fatturato2"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" style="display: block;" class="wf21FieldBox utenteFieldName" id="anno3">
+                                            * Fatturato anno 2004</td>
+                                        <td width="1%" nowrap="" style="display: none;" class="wf21FieldBox utenteFieldName" id="anno3N">
+                                            * Fatturato anno 2007</td>
+                                        <td>
+                                        	<input type="text" class="serviceInputText" value="13.000" size="25" maxlength="18" name="fatturato3"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" class="wf21FieldBox utenteFieldName">* L'azienda è strutturata come</td>
+                                        <td class="serviceInputText">
+                                        	<select name="struttura">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">società di capitale</option>
+                                        		<option value="2">società di persone</option>
+                                        		<option value="3">impresa individuale</option>
+                                        		<option value="4">società cooperativa</option>
+                                        		<option value="5">altro</option>
+                                        	</select>
+                                        	<script>document.forms[0].struttura.value="3";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" class="wf21FieldBox utenteFieldName">* L'azienda fa parte di un gruppo?</td>
+                                        <td class="serviceInputText">
+                                        	<select name="tipoGruppo">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">si, è una controllata</option>
+                                        		<option value="2">si, è una controllante</option>
+                                        		<option value="3">no</option>
+                                        	</select>
+                                        	<script>document.forms[0].tipoGruppo.value="1";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" class="wf21FieldBox utenteFieldName">* L'azienda nasce da un gruppo?</td>
+                                        <td class="serviceInputText">
+                                        	<select name="nasceDaGruppo">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">si</option>
+                                        		<option value="2">no</option>
+                                        	</select>
+                                        	<script>document.forms[0].nasceDaGruppo.value="2";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>                                                                                                         
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" class="wf21FieldBox utenteFieldName">* L'azienda appartiene al Macrosettore</td>
+                                        <td class="serviceInputText">
+                                        	<select onchange="javascript:visualizza();" name="categoriaCommerciale">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">artigiani</option>
+                                        		<option value="2">commercianti</option>
+                                        		<option value="3">industria</option>
+                                        		<option value="4">commercio/servizi</option>
+                                        		<option value="5">immobiliare</option>
+                                        		<option value="6">agricoltura</option>
+                                        		<option value="7">altro</option>
+                                        	</select>
+                                        	<script>document.forms[0].categoriaCommerciale.value="4";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" class="wf21FieldBox utenteFieldName">* Il mercato di riferimento è</td>
+                                        <td class="serviceInputText">
+                                        	<select name="mercato">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">di quartiere</option>
+                                        		<option value="2">di città</option>
+                                        		<option value="3">provinciale</option>
+                                        		<option value="4">regionale</option>
+                                        		<option value="5">nazionale</option>
+                                        		<option value="6">internazionale</option>
+                                        	</select>
+                                        	<script>document.forms[0].mercato.value="1";</script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr> 
+                                    <tr style="display: none;" id="imm1">
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" class="wf21FieldBox utenteFieldName">* quale tipologia immobilare è presente in prevalenza nel proprio portafoglio?</td>
+                                        <td class="serviceInputText">
+                                        	<select name="tipologiaImmobiliare">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">residenziale</option>
+                                        		<option value="2">commerciale</option>
+                                        		<option value="3">industriale</option>
+                                        		<option value="4">agricola</option>
+                                        		<option value="5">altro</option>
+                                        	</select>
+                                        	<script>document.forms[0].tipologiaImmobiliare.value="";</script>
+                                       </td>
+                                    </tr>
+                                    <tr style="display: none;" id="imm2">
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none;" id="imm3">
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" nowrap="" class="wf21FieldBox utenteFieldName">* In quali settori l'azienda opera prevalentemente?</td>
+                                        <td class="serviceInputText">
+                                        	<select name="settoreImmobiliare">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">intermediazione e consulenza immobiliare</option>
+                                        		<option value="2">compravendita di immobili/terreni</option>
+                                        		<option value="3">gestione affitti e servizi amministrativi</option>
+                                        		<option value="4">altro</option>                                        		
+                                        	</select>
+                                        	<script>document.forms[0].settoreImmobiliare.value="";</script>
+                                       </td>
+                                    </tr>
+                                    <tr style="display: none;" id="imm4">
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none;" id="imm5">
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" class="wf21FieldBox utenteFieldName">* In caso di attività di compravendita, la dimensione degli immobili presenti nel patrimonio immobiliare sono di dimensioni</td>
+                                        <td class="serviceInputText">
+                                        	<select name="dimensioneImmobiliare">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">piccola</option>
+                                        		<option value="2">media</option>
+                                        		<option value="3">grande</option>
+                                        		<option value="4">molto grande</option>
+                                        	</select>
+                                        	<script>document.forms[0].dimensioneImmobiliare.value="";</script>
+                                       </td>
+                                    </tr>
+                                     <tr style="display: none;" id="imm6">
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr>
+                                    
+                                     <tr style="display: none;" id="agr1">
+                                        <td valign="middle" align="left" class="wf21QuestionBox"/>
+                                         
+                                        <td width="1%" class="wf21FieldBox utenteFieldName">* L'attività collaterale prevalente è:</td>
+                                        <td class="serviceInputText">
+                                        	<select name="attivitaAgrPrevalente">
+                                        		<option value="">--- scegli ---</option>
+                                        		<option value="1">nessuna</option>
+                                        		<option value="2">agriturismo</option>
+                                        		<option value="3">manipolazione/conservazione</option>
+                                        		<option value="4">trasformazione</option>
+                                        		<option value="5">contoterzismo</option>
+                                        		<option value="6">commercializzazione</option>
+                                        		<option value="7">ricerca e sperimentazione</option>
+                                        		<option value="8">risparmio energetico</option>
+                                        	</select>
+                                        	<script>document.forms[0].attivitaAgrPrevalente.value="";</script>
+                                       </td>
+                                    </tr> 
+                                    <tr style="display: none;" id="agr2">
+                                        <td class="wf21Filetto" colspan="4">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td class="utenteFilettoBox"><img src="/img/bus/spacer.gif"/></td>
+    </tr>
+</table>
+
+                                        </td>
+                                    </tr> 
+                                                                                                                                                                                                   
+                                   
+                                </table>								
+								</td>
+                            </tr>
+                        </table>						
+						</td>
+                    </tr>
+                    <tr>
+                        <td><img height="40" src="/img/bus/spacer.gif"/></td>
+                    </tr>
+                </table>
+				<div class="fooform">
+	
+	<div class="fooformleft">
+		<div><a title="Lorem ipsum" class="btnformleft" href="#1"><img alt="" src="/img/bus/btn_left_bi.gif"/><span>Lorem ipsum</span><img alt="" src="/img/bus/btn_right_bi.gif"/></a></div>	
+	</div>
+	<div class="fooformright">
+		<div></div><div><a title="Lorem ipsum" class="btnformright" href="#1"><img alt="" src="/img/bus/btn_left_ar.gif"/><span>Lorem ipsum</span><img alt="" src="/img/bus/btn_right_ar.gif"/></a></div>
+	<br class="clear" />
+	</div>	
+<br class="clear" />
+</div>
+				</td>
+            </tr>
+        </table>

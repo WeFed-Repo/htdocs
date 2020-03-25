@@ -1,0 +1,130 @@
+/*LAYOUT GENERICO compatibile con la divisione in colonne di qualsiasi elemento in pagina*/
+.row-fluid{*zoom: 1}
+.row-fluid [class*="span"]{*margin-left:2.5109110747408616%;*float:left;*display:inline;*zoom:1}
+.row-fluid .span12{*width:99.94680851063829%;margin-left:0;}
+.row-fluid .span11{*width:91.39979996362975%}
+.row-fluid .span10{*width:82.8527914166212%}
+.row-fluid .span9{*width:74.30578286961266%}
+.row-fluid .span8{*width:65.75877432260411%}
+.row-fluid .span7{*width:57.21176577559556%} 
+.row-fluid .span6{*width:48.664757228587014%}
+.row-fluid .span5{*width:40.11774868157847%}
+.row-fluid .span4{*width:31.510740134569924%}
+.row-fluid .span3{*width:23.023731587561375%}
+.row-fluid .span2{*width:14.476723040552828%}
+.row-fluid .span1{*width:5.929714493544281%}
+.formGeneric .row-fluid input.withIco[type="text"],.formGeneric .row-fluid input.withIco[type="tel"],.formGeneric .row-fluid select.withIco{width:94%\9}
+.formGeneric.formCentered  .row-fluid input.withIco[type="text"],.formGeneric.formCentered  .row-fluid input.withIco[type="tel"],.formGeneric.formCentered  .row-fluid select.withIco{width:93%\9}
+.formGeneric .row-fluid .span6 input.withIco[type="text"],.formGeneric .row-fluid .span6 input.withIco[type="tel"],.formGeneric .row-fluid .span6 select.withIco{width:91%\9!important}
+.formGeneric .row-fluid .span4 input.withIco[type="text"],.formGeneric .row-fluid .span4 input.withIco[type="tel"],.formGeneric .row-fluid .span4 select.withIco,.formGeneric .row-fluid .span6.paddRightLarge input.withIco[type="text"]{width:89%\9!important}
+*:first-child+html  .formGeneric   .span4 input.withIco[type="text"],*:first-child+html .formGeneric .span4 input.withIco[type="tel"],*:first-child+html .formGeneric  .span4 select.withIco{width:80%}
+.formGeneric .row-fluid .span12 input.withIco[type="text"],.formGeneric .row-fluid .span12 input.withIco[type="tel"],.formGeneric .row-fluid .span12 select.withIco{width:97%\9}
+.formGeneric .row-fluid .span6 .span10 input.withIco[type="text"],.formGeneric .row-fluid .span6 .span10  input.withIco[type="tel"],.formGeneric .row-fluid .span6  .span10 select.withIco{width:88%\9!important}
+.formGeneric .row-fluid .span6 .span6  input.withIco[type="text"],.formGeneric .row-fluid .span6 .span6  input.withIco[type="tel"],.formGeneric .row-fluid .span6  .span6 select.withIco{width:82%\9!important}
+.formGeneric .row-fluid .span6 .span4  input.withIco[type="text"],.formGeneric .row-fluid .span6 .span4  input.withIco[type="tel"],.formGeneric .row-fluid .span6  .span4 select.withIco,.formGeneric .row-fluid .span4 .span6  input.withIco[type="text"],.formGeneric .row-fluid .span4 .span6  input.withIco[type="tel"],.formGeneric .row-fluid .span4  .span6 select.withIco{width:72%\9!important}
+.formCenteredwrapper .formGeneric .span4 input.withIco[type="text"],.formCenteredwrapper  .formGeneric  .span4 input.withIco[type="tel"],.formCenteredwrapper  .formGeneric   .span4 select.withIco{width:76%\9!important}
+
+/*FORM GENERICO */
+/*form in box xon angoli arrotondati*/ 
+.formGeneric .row-fluid {*display:inline}
+.formGeneric legend{*margin-left:-6px}
+.borderFormRounded{*width:97%}
+.formGeneric .row-fluid input[type="text"],.formGeneric .row-fluid input[type="number"],.formGeneric .row-fluid input[type="password"],.formGeneric .row-fluid input[type="tel"],.formGeneric  .row-fluid select,.formGeneric .row-fluid  textarea,
+.formGeneric .row input[type="text"],.formGeneric .row input[type="number"],.formGeneric .row input[type="password"],.formGeneric .row input[type="tel"],.formGeneric  .row select,.formGeneric .row  textarea{*width:99.94680851063829%;}
+*:first-child+html .formGeneric .row-fluid .span4 input[type="text"],*:first-child+html .formGeneric .row-fluid .span4 input[type="number"],*:first-child+html .formGeneric .row-fluid  .span4 input[type="password"],*:first-child+html .formGeneric .row-fluid .span4 input[type="tel"],*:first-child+html .formGeneric  .row-fluid .span4 select,*:first-child+html .formGeneric .row-fluid .span4 textarea{width:88%}
+.formGeneric .row-fluid input.disabled[type="text"],.formGeneric .row-fluid input.disabled[type="number"],.formGeneric .row-fluid input.disabled[type="password"],.formGeneric .row-fluid input.disabled[type="tel"],.formGeneric  .row-fluid select.disabled,.formGeneric .row-fluid  textarea.disabled{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background-image:none;-moz-box-shadow: 0 2px #f4f4f4;-webkit-box-shadow: 0 2px #f4f4f4;*width:99.94680851063829%;}
+.formGeneric input[type="radio"],.formGeneric input[type="checkbox"]{*width:14px!important;*height:14px!important}
+.formGeneric .row-fluid input[type="text"],.formGeneric .row-fluid input[type="number"],.formGeneric .row-fluid input[type="password"],.formGeneric .row-fluid input[type="tel"] {background:url(/wscmn/img/ret/responsive/bg_fieldform.gif) repeat-x 0 0\9}
+.buttonBack a.aButton{background:#c2c2c2;}
+*:first-child+html .formCentered{width:92.94680851063829%!important}
+:first-child+html .formGeneric input[type="text"],*:first-child+html .formGeneric input[type="number"],*:first-child+html .formGeneric input[type="password"],*:first-child+html .formGeneric input[type="tel"]{height:15px}
+*:first-child+html .formGeneric select{margin-top:3px!important}
+.boxfirmabg fieldset:first-child{margin-right:1.54%}
+/* Nuovi errori FORM*/
+*:first-child+html .formGeneric fieldset.errore select {outline: 1px solid #f00}
+/* TAB DI NAVIGAZIONE*/
+.tabGeneric li{*display:inline;*zoom: 1; *margin:0 4px 0 0}
+*:first-child+html .tabGeneric li{height:40px;overflow:hidden;position:static}
+.tabGeneric li a{*padding:0 25px;vertical-align:middle;*line-height:40px;*display: table-cell;*zoom: 1;*height:auto;*float:left}
+.tabGeneric li .tabBorder{*display:inline;*zoom: 1;}
+.tabGeneric span.tabGradient{*display:inline;*zoom: 1;}
+.tabGeneric span.tabGradient a.leftelement{*line-height:inherit; *float:left; *display:table-cell; *margin:0}
+#fesConfButt {*float:none; *display:table-cell;}
+*:first-child+html .formGeneric .fieldWrap {margin-right:1px}
+*:first-child+html .formGeneric .fieldWrap  input,*:first-child+html .formGeneric .fieldWrap  label{width:89%}
+
+
+/* BOX EDITORIALI GENERICI*/
+.boxGeneric{border:1px solid #e3e3e3\9}
+.boxGeneric02{background-color:#dfeabb}
+.boxGeneric03 {background-color:#fff}
+*:first-child+html  .marginTopNega20.fixIE{margin-top:0}
+*:first-child+html .boxGeneric02 ul{margin:0}
+*:first-child+html .boxGeneric02 ul li{margin:0;padding:0}
+
+/* FILETTO VERTICALE*/
+*:first-child+html  .filettoGenericCorner{background:none;border-left:1px solid #E6E6E6;border-right:1px solid #E6E6E6}
+.filettoGenericCorner{background:none\0;border-left:1px solid #E6E6E6\0;border-right:1px solid #E6E6E6\0}
+
+/*box movimenti cartaimpronta*/
+.heightMin {*height:52px;min-height:53px\9;*min-height:52px;*padding:10px 0 0 0 !important}
+.heightMin label, .heightMin span, .heightMin select{*margin-left:10px !important}
+#datiBox{*padding-bottom:10px!important;}
+
+/* layeralert */
+.layeralert{*border:none;}
+.layeralert .head{*background:url(/img/ret/bg_layeralert_top.gif) left top no-repeat;}
+.layeralert .body{*border-left:1px solid #b1b1b1;*border-right:1px solid #999999;}
+.layeralert .foot{*background:url(/img/ret/bg_layeralert_bottom.gif) left top no-repeat;}
+
+/* layeralert2 */
+.layeralert2{*border:none;}
+.layeralert2 .head{*background:url(/img/ret/bg_layeralert_top2.gif) left top no-repeat;}
+.layeralert2 .body{*border-left:1px solid #b1b1b1;*border-right:1px solid #999999;}
+.layeralert2 .foot{*background:url(/img/ret/bg_layeralert_bottom2.gif) left top no-repeat;}
+
+/* Declinazione box avvertimento */
+*:first-child+html .formGeneric.paddLeftMedium .boxesito.attenzione {width:665px}
+
+/*ALTEZZE MINIME */
+.minHeightCosti{min-height:200px\9}
+
+/* AUTOCOMPLETE PER FORM */
+*:first-child+html .formGeneric input.ui-autocomplete-input  {width:83%!important; float:left !important;border-right:solid 1px #dedede}
+*:first-child+html  .span12 .autoClearWrapper.esteso input.ui-autocomplete-input,*:first-child+html  .span6 .autoClearWrapper.esteso input.ui-autocomplete-input {width:99%!important}
+*:first-child+html  .span12 .autoClearWrapper input.ui-autocomplete-input {width:95%!important}
+*:first-child+html  .span6 .autoClearWrapper input.ui-autocomplete-input {width:87.5%!important}
+*:first-child+html a.autoSelButt  {height:22px;float:left}
+*:first-child+html ul.ui-autocomplete {width:200px}
+*:first-child+html  a.autoClearButt{height:22px}
+
+/* Box di conferma */
+*:first-child+html .infoBox {width:700px}
+*:first-child+html #sicurezza .infoBox {width:575px}
+*:first-child+html #sicurezza .infoBox.alert,*:first-child+html #sicurezza .infoBox.promo {width:790px}
+*:first-child+html .infoBox ul{margin-left:35px}
+*:first-child+html #sicurezza .infoBox .formGeneric {width:730px}
+
+/* tasto prosegui*/
+*:first-child+html  #contenuti .steprichiestatit .modifica{margin-top:-32px;top:0}
+
+/* richiesta carte post-aol */
+*:first-child+html  #content .steprichiestatit .richiestaTit,*:first-child+html  #contenuti .steprichiestatit .richiestaTit,*:first-child+html .steprichiestatit .richiestaTit {position:relative;top:5px}
+*:first-child+html .boxrichiesta  .steprichiestacont{width:93.7%}
+
+/* Nuova pagina di accoglienza*/
+*:first-child+html #sicurezza .formGeneric {padding:15px 15px 0}
+
+/*BOX  grafico di step*/
+*:first-child+html .rowwrapper .boxstepCont .boxstep .middle{width:99.7%}
+*:first-child+html  .boxstepCont .hovfin .uniqTooltipPos a{top:0}
+
+/*BOX di errore di sistema generico usato solo in pagina di accoglienza quindi da trasferire in css apposito*/
+*:first-child+html .boxedform.errorForm  .middle{width:799px}
+*:first-child+html  .errorForm  .middle{width:99.65%} /*hack per browser old */
+*html .errorForm  .middle{width:99.65%}/*hack per browser old */
+
+/*F23 - F24 pagamento box */
+div.layeralert2 {border:0\9}
+div.layeralert2  .body{border:1px solid #999999 \9}
+div.layeralert2 .head  {background:url(/img/ret/bg_layeralert_top2.gif) no-repeat scroll left top transparent\9;border:0\9}

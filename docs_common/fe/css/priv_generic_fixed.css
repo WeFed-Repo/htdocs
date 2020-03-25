@@ -1,0 +1,155 @@
+/* QUESTO LESS DEVE CONTENERE ESCLUSIVAMENTE FORZATURE OMISSIBILI SULLA VERSIONE FULL RESP */
+#contenuti {
+  /* Tag generici */
+  /* Testo dei bottoni */
+  /* MyHome RIA */
+  /* Sportello */
+  /* Carte */
+  /* Trading */
+  /* Investimenti */
+  /* Finanziamenti */
+  /* Assicurazioni */
+}
+#contenuti .panel .panel-heading a {
+  color: #8ab10b;
+  font-size: 16px;
+  line-height: 20px;
+}
+#contenuti .panel.panel-selected .panel-heading a {
+  color: #000000;
+}
+#contenuti .navContFirstLev .slider-spin,
+#contenuti .navContFirstLev .btn-primary {
+  color: #ffffff;
+}
+#contenuti #riadesktop #form-ria-conto #ctnboxtable .col-sm-6 {
+  width: 45%;
+}
+#contenuti #riadesktop #form-ria-conto #ctnboxtable #nascondi-div {
+  width: auto !important;
+  width: 55%;
+}
+#contenuti #riadesktop #form-ria-conto #ctnboxtable #nascondi-div .btn {
+  margin-right: 10px;
+  padding: 6px 7px;
+}
+#contenuti #riadesktop #form-ria-conto #ctnboxtable #nascondi-div .btn .icon-text,
+#contenuti #riadesktop #form-ria-conto #ctnboxtable #nascondi-div .btn .glyph-text {
+  font-size: 13px;
+}
+#contenuti #riadesktop #form-ria-conto #ctnboxtable #nascondi-div .btn:last-child {
+  margin-right: 0;
+}
+#contenuti #riadesktop .graficoLeg {
+  margin: 0 0 0 -15px;
+}
+#contenuti #riadesktop table td,
+#contenuti #riadesktop table th {
+  padding: 5px;
+  font-size: 13px;
+}
+#contenuti #riadesktop #tabVincoli .form-output-aligned {
+  border-bottom: 0 none;
+}
+#contenuti #riadesktop #tabVincoli .form-output-aligned span.output {
+  position: relative !important;
+  text-align: left !important;
+}
+#contenuti #riadesktop #tabVincoli .infoLV .percentuale {
+  font-size: 26px;
+}
+#contenuti #riadesktop #tabVincoli #bolloEM {
+  top: -44px;
+}
+#contenuti #riadesktop #tabVincoli #boxExtraMoneyText,
+#contenuti #riadesktop #tabVincoli #boxExtraMoneyInner {
+  height: 300px;
+}
+#contenuti #riadesktop #tabVincoli h4.promozioneEM span {
+  font-size: 16px !important;
+}
+#contenuti #riadesktop #tabVincoli .wrapEM {
+  padding: 0;
+}
+#contenuti #riadesktop #tabVincoli #helpEM {
+  top: 0px;
+}
+#contenuti #riadesktop #accordionSaldi .panel-body .btn-align-left,
+#contenuti #riadesktop #accordionSaldi .panel-body .btn-align-right {
+  width: 100%;
+  margin-top: 15px;
+}
+#contenuti #riadesktop #accordionSaldi .panel-body .btn-align-left .btn,
+#contenuti #riadesktop #accordionSaldi .panel-body .btn-align-right .btn {
+  width: 100%;
+  margin: 0 !important;
+}
+#contenuti #riadesktop .infoRichieste .boxTassoBox2,
+#contenuti #riadesktop .infoRichieste .boxTassoBox1 {
+  overflow: hidden !important;
+}
+#contenuti #riadesktop .infoRichieste .boxTassoBox2 .icon-hr-arrow,
+#contenuti #riadesktop .infoRichieste .boxTassoBox1 .icon-hr-arrow {
+  margin-left: -14px;
+}
+#contenuti #riadesktop .infoRichieste .infoTasso .tassoLordo {
+  line-height: 14px;
+  padding: 5px 0;
+}
+#contenuti #riadesktop .infoRichieste .infoTasso .icon-hr-arrow {
+  margin-left: 0;
+}
+#contenuti #riadesktop #infoRichieste3 .percentuale {
+  font-size: 20px;
+}
+#contenuti #riadesktop .boxTassoPromo .icon-promo_big {
+  top: 14px;
+  margin-left: -32px;
+  font-size: 30px;
+}
+#contenuti #riadesktop #tabVincoli .infoLV .percentuale {
+  font-size: 22px;
+}
+#contenuti #widgetInvestimenti .navFpWrap .navFpPage {
+  padding: 0 20px 0;
+}
+#contenuti #widgetInvestimenti .navFpWrap .navFpPage .navFpBox {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+#contenuti #widgetInvestimenti .ticker-wrap ul li {
+  padding-top: 0 !important;
+}
+#contenuti .tab-shadow {
+  display: none;
+}
+#contenuti .fpInvBtns .btn.btn-large {
+  padding: 10px 15px 10px 14px;
+  font-size: 16px !important;
+}
+#contenuti #prodottiFinanziamenti .boxProdottoText {
+  height: 270px;
+}
+#contenuti #widgetAssicurazioni .btn {
+  width: 100%;
+  margin: 15px 0 0;
+}
+#contenuti #widgetAssicurazioni .navFpVisualContent .btn {
+  width: 295px;
+}
+/* Spalla destra */
+#ctnboxdx .btn.btn-large-ico {
+  padding: 10px !important;
+  line-height: 46px !important;
+  width: 100%;
+}
+#ctnboxdx .btn.btn-large-ico .icon {
+  display: none;
+}
+#ctnboxdx .btn.btn-large-ico span {
+  padding-left: 0;
+}
+.boxProdottoBtns .btnWrapper {
+  min-width: 300px;
+}
+/*# sourceMappingURL=priv_generic_fixed.css.map */

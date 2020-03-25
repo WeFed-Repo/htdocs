@@ -1,0 +1,1 @@
+<iframe src="connect.php?page=tpl_priv_popup.php" width="400" height="350"></iframe>

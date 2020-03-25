@@ -1,0 +1,851 @@
+body {
+  margin: 0;
+  background-color: #fff;
+}
+.fondb {
+  background-color: #fff;
+}
+table {
+  width: 100&;
+  background-color: #fff;
+  font: 10px Arial, sans-serif;
+  color: #000000;
+}
+table,
+td,
+th {
+  border: 1px solid #EEE;
+  border-collapse: collapse;
+}
+table th {
+  background-color: #d7d7d7;
+  text-align: left;
+  font-weight: bold;
+  font-size: 11px;
+}
+#contenuti table th {
+  text-align: left;
+  padding: 2px;
+}
+th span {
+  font-weight: normal;
+}
+input {
+  color: #000;
+  font: 11px Verdana, Arial, sans-serif;
+  border: 1px solid #999;
+  width: 14px;
+  padding: 0 2px;
+  text-transform: uppercase;
+}
+select {
+  color: #000;
+  font: 11px Verdana, Arial, sans-serif;
+  border: 1px solid #999;
+  width: 40px;
+  text-transform: uppercase;
+}
+table tr td,
+#contenuti table tr td {
+  padding: 1px;
+}
+/*#contenuti table tr td {font-size:10px}*/
+table.provia td,
+table.contribuente,
+table.contribuente td,
+table.versamento td,
+table.estr01,
+table.estr01 td,
+table.estr02,
+table.estr02 td,
+table#tbDelegaErrata td,
+table#tbDelegaCorretta td,
+table.bottsotto,
+table.bottsotto td {
+  border: 0;
+  border-collapse: collapse;
+}
+td span {
+  font: bold 11px Arial, Verdana, sans-serif;
+  text-align: left;
+  /*padding-left:2px;*/
+}
+table.contribuente {
+  border-left: 1px solid #EEE;
+  border-right: 1px solid #EEE;
+}
+table.contribuente table {
+  border: 0;
+  border-top: 1px solid #EEE;
+  width: 100%;
+}
+div.lettera {
+  text-align: left;
+  width: 106px;
+  height: 14px;
+  padding-left: 2px;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+table.contribuente .co01 {
+  width: 158px;
+}
+table.contribuente .co02 {
+  width: 170px;
+}
+table.contribuente .co03 {
+  width: 160px;
+}
+table.contribuente .co04 {
+  width: 40px;
+}
+td.nota {
+  font: bold 10px Verdana, Arial, sans-serif;
+}
+td.nota img {
+  padding-top: 5px;
+}
+input#f1-0-7,
+input#cognome,
+input#ragSoc,
+input#nome,
+input#comNasc,
+input#comDomic {
+  width: 182px;
+}
+input#dataNasc {
+  width: 60px;
+}
+input#indirizzo {
+  width: 128px;
+}
+input#f1-0-14 {
+  width: 140px;
+}
+table.contribuente table.datses {
+  width: 192px;
+  border: 0 !important;
+}
+table.contribuente table.provia {
+  width: 190px;
+  border: 0 !important;
+}
+input#Text10,
+input#Text11 {
+  width: 182px;
+}
+input#Text13 {
+  width: 164px;
+}
+input#Text14 {
+  width: 40px;
+}
+input#Text12 {
+  width: 22px;
+}
+.bottsotto {
+  width: 250px;
+}
+/* erario */
+table.erario td {
+  text-align: center !important;
+}
+table tr td.er01 {
+  width: 112px;
+}
+table tr td.er01b {
+  width: 111px;
+}
+table tr td.er02 {
+  width: 113px;
+}
+table tr td.er03 {
+  width: 115px;
+}
+table tr td.er04 {
+  width: 117px;
+}
+/* nuove classi*/
+.dim0 {
+  border: 0;
+  margin: 0 !important;
+}
+.dim24 {
+  width: 24px;
+}
+.dim26 {
+  width: 26px;
+}
+.dim26rg {
+  width: 26px;
+  text-align: right;
+}
+.dim30 {
+  width: 30px;
+}
+.dim33 {
+  width: 33px;
+}
+.dim34 {
+  width: 34px;
+}
+.dim38 {
+  width: 38px;
+}
+.dim44 {
+  width: 44px;
+}
+.dim54rg {
+  width: 54px;
+  text-align: right;
+}
+.dim49 {
+  width: 49px;
+}
+.dim64 {
+  width: 64px;
+}
+.dim86 {
+  width: 86px;
+}
+.dim150 {
+  width: 150px;
+}
+.dim80rg {
+  width: 80px;
+  text-align: right;
+}
+/* fine nuove classi*/
+table.erario td.alleft {
+  text-align: left !important;
+}
+table.erario td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+input#f2-0-3 {
+  width: 34px;
+}
+input#f2-0-4 {
+  width: 86px;
+}
+/* inps */
+table.inps td {
+  text-align: center !important;
+}
+.in01 {
+  width: 49px;
+}
+.in02 {
+  width: 61px;
+}
+.in03 {
+  width: 97px;
+}
+.in04 {
+  width: 128px;
+}
+table.inps td.alleft {
+  text-align: left !important;
+}
+table.inps td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* regioni */
+table.regioni td {
+  text-align: center !important;
+}
+.re01 {
+  width: 82px;
+}
+.re02 {
+  width: 85px;
+}
+.re03 {
+  width: 86px;
+}
+table.regioni td.alleft {
+  text-align: left;
+}
+table.regioni td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* ici */
+table.ici td {
+  text-align: center !important;
+}
+.ic01 {
+  width: 44px;
+}
+table.ici td.ic02 {
+  width: 26px;
+}
+table.ici td.ic03 {
+  width: 32px;
+}
+table.ici td.ic04 {
+  width: 19px;
+}
+.ic05 {
+  width: 23px;
+}
+.ic06,
+.ic07,
+.ic09 {
+  /*width:36px;*/
+}
+.ic08 {
+  width: 48px;
+  text-align: center !important;
+}
+input#f4-0-5 {
+  width: 58px;
+  text-align: right;
+}
+input.ckb {
+  border: 0;
+}
+table.ici td.alleft {
+  text-align: left !important;
+}
+table.ici td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* enti */
+table.enti td {
+  text-align: center !important;
+}
+.en01 {
+  width: 60px;
+  font-weight: bold;
+  font-size: 11px;
+}
+.en02 {
+  width: 50px;
+}
+.en03 {
+  width: 112px;
+}
+.en04 {
+  width: 69px;
+}
+.en05 {
+  width: 42px;
+}
+table.enti td.alleft {
+  text-align: left !important;
+}
+table.enti td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* enti2 */
+table.enti2 td {
+  text-align: center !important;
+}
+.en201 {
+  width: 50px;
+}
+.en202 {
+  width: 61px;
+}
+.en203 {
+  width: 54px;
+}
+.en204 {
+  width: 64px;
+}
+.en205 {
+  width: 112px;
+}
+table.enti2 td.alleft {
+  text-align: left !important;
+}
+table.enti2 td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* accise */
+table.accise td {
+  text-align: center !important;
+}
+.ac01 {
+  width: 46px;
+}
+.ac02 {
+  width: 53px;
+}
+.ac03 {
+  width: 55px;
+}
+.ac04 {
+  width: 95px;
+}
+.ac05 {
+  width: 70px;
+}
+input#f6-1-9,
+input#f6-2-9,
+input#f6-3-9,
+input#f6-4-9,
+input#f6-5-9,
+input#f6-6-9,
+input#f6-7-9 {
+  width: 34px;
+}
+table.accise td.alleft {
+  text-align: left !important;
+}
+table.accise td.alright {
+  text-align: right !important;
+  font: bold 11px Arial, Verdana, sans-serif;
+}
+/* estremi */
+.estr01 {
+  width: 232px;
+}
+.estr02 {
+  width: 500px;
+}
+.clv {
+  width: 465px;
+}
+input#Text297,
+input#f1-0-8 {
+  width: 80px;
+}
+/*input#Text305 {width:168px;}*/
+input#f1-0-5,
+input#f1-0-6 {
+  width: 48px;
+}
+input#f1-0-1 {
+  width: 78px;
+}
+input#f1-0-8,
+input#Text297 {
+  text-align: right;
+}
+/* blocco errore top pagina*/
+#tbDelegaErrata {
+  background-color: #c00;
+  padding: 10px;
+}
+#tbDelegaErrata td,
+#tbDelegaErrata td ul li {
+  font: 11px Verdana, Arial, sans-serif;
+  text-align: left;
+  color: #fff;
+}
+#tbDelegaErrata td {
+  padding: 4px 0 4px 4px;
+}
+#tbDelegaCorretta {
+  border: 5px solid #7BB631;
+  width: 565px;
+  height: 60px;
+  margin: 0 0 3px 5px;
+}
+#tbDelegaCorretta .btnDelegaCorretta {
+  width: 150px;
+  margin-right: 5px;
+}
+#tbDelegaCorretta span {
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Verdana, Arial, sans-serif;
+}
+#tbDelegaCorretta .bgbottone2 {
+  padding: 3px 5px;
+}
+.sezioni_hidden {
+  background: #fff;
+  text-align: center !important;
+}
+/* erario immatricolazione */
+/*table.erimm td {text-align:center;}*/
+table.erimm td.erileft {
+  text-align: left;
+  height: 30px;
+}
+.erimm01 {
+  width: 88px;
+}
+.erimm02 {
+  width: 180px;
+}
+.erimm03 {
+  width: 75px;
+}
+.erimm04 {
+  width: 100px;
+}
+.erimm05 {
+  width: 130px;
+}
+#ctnboxsx div.fooform {
+  width: 645px;
+}
+.fooformtop {
+  padding: 0 0 2px 5px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #CDCDCD;
+  font: 11px Arial, sans-serif;
+}
+div.fooform .fooformtop2 {
+  padding: 0 0 6px 5px;
+  margin-bottom: 4px;
+}
+div.fooform .fooformtopright {
+  padding: 0 0 2px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #CDCDCD;
+  float: right;
+  width: 700px;
+}
+p.testosel {
+  float: right;
+  margin: 0;
+  padding: 0 8px 0 0;
+}
+div.bottsel {
+  float: right;
+}
+div.fooform .fooformleft {
+  float: left;
+}
+div.fooform .fooformleft div.text {
+  font-size: 10px;
+  line-height: 10px;
+}
+div.fooform .fooformleftb {
+  float: left;
+  /*width:330px;*/
+  margin-left: 10px;
+}
+div.fooform .fooformleftb div.text {
+  font-size: 10px;
+  line-height: 10px;
+}
+/*div.fooform .fooformright{float:right} */
+div.fooform .fooformrightb {
+  float: right;
+  width: 340px;
+}
+.box6 div .fooform .fooformrightb {
+  float: right;
+  width: 215px;
+}
+div.fooform .fooformcenter {
+  margin-top: 3px;
+  float: left;
+  width: 95px;
+  text-align: center;
+}
+div.fooform .fooformright div,
+div.fooform .fooformrightb div {
+  margin-left: 7px;
+  float: right;
+}
+/*modifica will*/
+.fooform2 .fooformleft div {
+  margin-right: 7px;
+  float: left;
+}
+a.btnformleft {
+  display: block;
+  color: #666;
+  text-decoration: none !important;
+  font-size: 10px;
+}
+a.btnformleft:hover {
+  display: block;
+  color: #666;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+a.btnformleft img,
+a.btnformleft:link img,
+a.btnformleft:hover img {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none !important;
+}
+a.btnformleft span,
+a.btnformleft:link span,
+a.btnformleft:hover span {
+  cursor: hand;
+  display: block;
+  float: left;
+  height: 21px;
+  line-height: 19px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: url(/img/ret/btn_center_bi.gif) left top repeat-x;
+  font-size: 11px;
+  color: #252725;
+  text-decoration: none !important;
+  font-family: tahoma, sans-serif;
+}
+a.btnformright {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+a.btnformright:hover {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+a.btnformright img,
+a.btnformright:link img,
+a.btnformright:hover img {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none !important;
+}
+a.btnformright span,
+a.btnformright:link span,
+a.btnformright:hover span {
+  cursor: hand;
+  display: block;
+  float: left;
+  height: 21px;
+  line-height: 19px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: url(/img/ret/btn_center_ar.gif) left top repeat-x;
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none !important;
+  font-family: tahoma, sans-serif;
+}
+/* nuovi */
+table.datses,
+table.provia {
+  width: 200px;
+}
+table.datses,
+table.datses td,
+table.datses th,
+table.provia,
+table.provia td,
+table.provia th,
+table.codfisc,
+table.codfisc td,
+table.codfisc th {
+  border: 0;
+}
+/* nuovi f23 */
+.f_bigx {
+  width: 250px;
+}
+.f_big {
+  width: 200px;
+}
+.f_medium {
+  width: 150px;
+}
+.f_normal {
+  width: 100px;
+}
+.f_small {
+  width: 50px;
+}
+.f_15num {
+  width: 110px;
+}
+.f_8num {
+  width: 66px;
+}
+.f_5num {
+  width: 40px;
+}
+.f_4num {
+  width: 33px;
+}
+.f_3num {
+  width: 25px;
+}
+table {
+  width: 100%;
+  background-color: #fff;
+  font: 10px Arial, sans-serif;
+  color: #000;
+  margin-bottom: 0;
+}
+#contenuti table.f23 td {
+  font-size: 11px;
+}
+table,
+td,
+th {
+  border: 1px solid #EEE;
+  border-collapse: collapse;
+}
+table th {
+  background-color: #d7d7d7;
+  text-align: left;
+  font-weight: bold;
+  font-size: 11px;
+}
+table.f23,
+table.f23 td,
+table.f23 th {
+  border: 0;
+  border-collapse: collapse;
+}
+table.f23 {
+  border: 1px solid #EEEEEE;
+  border-collapse: collapse;
+  border-top: 0;
+}
+#contenuti table.f23 th {
+  text-align: left;
+  padding-left: 7px;
+}
+#contenuti table.f23 td {
+  line-height: 14px;
+  padding: 1px 8px 8px;
+}
+#contenuti table.f23 td.rg {
+  text-align: right;
+  padding-right: 10px;
+}
+#contenuti table th.nobg {
+  background: none;
+  text-align: left;
+  padding-left: 7px;
+}
+table.f23sub {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+#contenuti table.f23sub td {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+table.f23 .ui-datepicker-trigger {
+  float: right;
+  margin: 0 278px 0 0;
+  position: absolute;
+  top: 0;
+  left: 68px;
+  width: 20px;
+  height: 17px;
+  padding: 0;
+  cursor: pointer;
+}
+table.f23.f24 .ui-datepicker-trigger {
+  left: 80px;
+}
+#contenuti table.f23 td.nopad {
+  padding: 4px 0;
+  border-top: 1px solid #EEEEEE;
+}
+table.tabellalist {
+  width: auto;
+  border: 0;
+  background: none;
+}
+table.tabellalist,
+table.tabellalist td,
+table.tabellalist th {
+  border: 0;
+}
+input {
+  color: #000;
+  font: 11px Verdana, Arial, sans-serif;
+  border: 1px solid #ccc;
+  width: 20px;
+  padding: 0 2px;
+  text-transform: uppercase;
+}
+select {
+  color: #000;
+  font: 11px Verdana, Arial, sans-serif;
+  border: 1px solid #ccc;
+  width: 40px;
+  text-transform: uppercase;
+}
+#contenuti table.f23 .rg {
+  text-align: right;
+}
+#contenuti table.f23h tr td {
+  padding: 1px 8px 3px;
+}
+#contenuti table.f23h tr {
+  padding: 0;
+}
+#contenuti table.f23h tr td input {
+  margin-bottom: 0;
+}
+.flLeftf23 {
+  float: left;
+}
+#contenuti table.f23 td.numrif {
+  padding-left: 88px;
+}
+#contenuti table.f23 .spazstamp {
+  padding-left: 60px;
+}
+#contenuti table.f23 .lungstamp {
+  width: 180px;
+}
+#contenuti table.f24 td {
+  padding: 1px 0 8px 18px;
+}
+table.f24sub {
+  width: 258px;
+  float: right;
+}
+/* fix per header business*/
+li.btnEsci input,
+#cerca_box input {
+  border: 0;
+  width: auto;
+  text-transform: none;
+  padding: 0;
+}
+/* box tares */
+th.imu {
+  border-right: 0 !important;
+}
+th.alright {
+  text-align: right!important;
+  padding-right: 4px!important;
+  border-left: 0 !important;
+}
+/* nuovi f24 */
+#contenuti table tr td.saldo {
+  text-align: right !important;
+}
+#contenuti table tr td.saldo div.lettera {
+  text-align: right;
+  width: 100px;
+  margin-right: 45px;
+}
+#contenuti table tr td.saldo span.lettera {
+  width: 104px;
+  display: inline-table;
+}
+strong {
+  font-size: 11px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=delega.css.map */

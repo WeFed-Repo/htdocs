@@ -1,0 +1,467 @@
+var menuData = [
+  {
+    "title": "My home",
+    "link": "\/webankpri\/wbOnetoone\/myHome.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_myhome&cf=0.8423041784140237",
+    "id": "nav_priv_wbx_myhome",
+	"responsive": true,
+	"new": false,
+    "voices": [
+      {
+        "title": "Dati e impostazioni personali",
+		"id": "xyz", 
+        "voices": [
+          {
+            "title": "Modifica recapiti",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsChangePersonalData0.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_domicilio_residenza_599&cf=0.7321319466403036",
+			"id": "zzz",
+			"responsive": true,
+			"new": false
+		  },
+          {
+            "title": "Codici di accesso",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_i_tuoi_codici&OBSKEY3=nav_priv_wbx_guida_ai_codici&cf=0.2476295295777028"
+          },
+          {
+            "title": "Impostazioni preferenze",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/myMenu.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_impostazioni_mymenu&cf=0.7752388400287931"
+          },
+          {
+            "title": "Sicurezza dei dati",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_sicur_di_wb&cf=0.49785213059046174"
+          }
+        ]
+      },
+      {
+        "title": "Alert",
+        "voices": [
+          {
+            "title": "Alert  sms-email",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/sms\/alertAttivi.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_sms_elenco_alert&cf=0.6213340979589222"
+          },
+          {
+            "title": "Sms a richiesta",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/webank\/sms\/infoARichiestaIstruzioni.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_info_e_attivaz_att_abil&cf=0.5811753033347093"
+          }
+        ]
+      },
+      {
+        "title": "Comunicazioni",
+        "voices": [
+          {
+            "title": "Novit\u00e0",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=LANDINGPAGE-1392898089977&cf=0.7337799605279651"
+          },
+          {
+            "title": "Comunicazioni di servizio\n",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/wbblack\/contents\/sc\/spazioComunic.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_comunic_hc&cf=0.7282299624676054"
+          },
+          {
+            "title": "Nuovo conto Webank",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=Caratteristiche_noCD&cf=0.1551190121959073"
+          }
+        ]
+      },
+      {
+        "title": "Mobile",
+        "voices": [
+          {
+            "title": "La tua banca a portata di mano",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_wb_mobile&cf=0.6918183006778564"
+          }
+        ]
+      },
+      {
+        "title": "Premi e concorsi",
+        "voices": [
+          {
+            "title": "Porta un amico",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/common\/mgmFacebook\/mgmPromo.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_crea_codice&cf=0.5740127603651431"
+          }
+        ]
+      },
+      {
+        "title": "Acquisti online",
+        "voices": [
+          {
+            "title": "Libri, riviste e multimedia",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/partnership_mondadori_priv.do?codice=MONDADORI_PRIV&IDAlleato=&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_myhome&OBSKEY=nav_priv_wbx_riviste_monda&cf=0.3231873363145096"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Sportello",
+    "link": "\/webankpri\/wbOnetoone\/extfpSportello.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_sportello&cf=0.5803146861951722",
+    "id": "nav_priv_wbx_sportello",
+	"new" :true,
+    "voices": [
+      {
+        "title": "Il mio conto",
+        "voices": [
+          {
+            "title": "Rendicontazione",
+            "link": ""
+          },
+          {
+            "title": "Coordinate bancarie",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsCoordinate.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_coordin_bancarie&cf=0.24033768722984972"
+          },
+          {
+            "title": "Condizioni",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/bnkg\/condizioniere.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_le_mie_condiz_contome&cf=0.249557624647322"
+          },
+          {
+            "title": "Trasloco in Webank",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_trasloco_in_webank&cf=0.4011198398099033"
+          },
+          {
+            "title": "Modulistica",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaModulisticaOffline.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=Modulistica_sportello&cf=0.44090250086844207"
+          }
+        ]
+      },
+      {
+        "title": "Bonifici e altri pagamenti",
+        "voices": [
+          {
+            "title": "Bonifici",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsBonificoSepaInput.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_bonifico_ordinario&cf=0.33418778586143016"
+          },
+          {
+            "title": "Bollettini postali e bancari",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/banking\/postalforms\/WsPostalForms0.do?OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_bollettini_postali&OBSKEY3=nav_priv_wbx_nuovo_bollet&cf=0.7381545699495433"
+          },
+          {
+            "title": "Bollo auto",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/vehicleTaxPayment\/WsPaymentVehicleTaxInsert.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_bolloauto&cf=0.5845022510997575"
+          },
+          {
+            "title": "Ricariche e abbonamenti",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/banking\/WsCellRecharge0.do?OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_ricaric_cell&OBSKEY3=nav_priv_wbx_ricarica&cf=0.5165706399815881"
+          },
+          {
+            "title": "Ricarica Postepay",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsBirRecharge0.do?type=poste&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_carta_postepay_sp&cf=0.8956271176238012"
+          },
+          {
+            "title": "Riba -Mav -Rav",
+            "link": "\/webankpri\/wbOnetoone\/mf\/do\/banking\/WsExternalApp.do?useXml=true&extFunc=PROL&page=INS&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_riba_new&cf=0.28929859434883143"
+          },
+          {
+            "title": "Pagamento tributi - F24\/F23",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/banking\/WsNewTaxesPayment.do?useXml=true&OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_pagamento_f23_24&OBSKEY3=nav_priv_wbx_f24&cf=0.7527909366855081"
+          },
+          {
+            "title": "Giroconti",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsGirocontoDiretto0.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_giroconti&cf=0.7031578547010411"
+          },
+          {
+            "title": "Assegni",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/nsf\/RichiestaLibrettoAssegni.do?OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_richiesta_libretto&OBSKEY3=nav_priv_wbx_richiesta&cf=0.4863948482150894"
+          },
+          {
+            "title": "Domiciliazioni",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_come_domic_un_pag&cf=0.7855628872824347"
+          },
+          {
+            "title": "Rubrica",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsGestioneRubrica.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_rubricha&cf=0.6758899355387177"
+          }
+        ]
+      },
+      {
+        "title": "Versamenti e prelievi",
+        "voices": [
+          {
+            "title": "Accredita in conto",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsSalaryCredit0.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_accredito_stip&cf=0.9512501357712506"
+          },
+          {
+            "title": "Versa contante e assegni",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsBollFrecciaInc0.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_versam_conto_me&cf=0.6274141139427815"
+          },
+          {
+            "title": "Preleva da conto",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/banking\/WsCashWithdrawal0.do?OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_prenotaz_contante&OBSKEY3=nav_priv_wbx_nuova_pren&cf=0.12829475320342854"
+          },
+          {
+            "title": "Prelievo Cardless",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_sportello&OBSKEY=nav_priv_wbx_info_richiesta&OBSKEY3=nav_priv_wbx_scheda_prod_prelievo_cardless&cf=0.45235999034644725"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Carte",
+    "link": "\/webankpri\/wbOnetoone\/extendfpCarte.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_carte&cf=0.20405552969568674",
+    "id": "nav_priv_wbx_carte",
+    "voices": [
+      {
+        "title": "Bancomat",
+        "voices": [
+          {
+            "title": "Info e richiesta bancomat",
+            "voices" : [{
+                title: "bancomat internazionale",
+                link: "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_Bancomat_rich&OBSKEY3=nav_priv_wbx_scheda_prod_bancomat&cf=0.6126618784942713"
+              }
+            ]
+          },
+          {
+            "title": "Gestione bancomat",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/nsf\/NewTrackingPratica.do?functionTrack=Bancomat\n&OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_Bancomat_gest&OBSKEY3=nav_priv_wbx_stato_pratica_b&cf=0.616935773257433"
+          }
+        ]
+      },
+      {
+        "title": "Carte di credito",
+        "voices": [
+          {
+            "title": "Info e richiesta carte di credito",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?COL=carte&OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_one_rich&OBSKEY3=nav_priv_wbx_scheda_prod_cartimpr_one&cf=0.047338237391580495"
+          },
+          {
+            "title": "Gestione carte di credito",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/nsf\/TrackingPratica.do?functionTrack=trackCartimprontaOne\n&OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_one_gest&OBSKEY3=nav_priv_wbx_stato_pratica_cartimpr_one&cf=0.06311290235768863"
+          }
+        ]
+      },
+      {
+        "title": "Carte prepagate",
+        "voices": [
+          {
+            "title": "Info e richiesta Carta Je@ns",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartajeans_rich&OBSKEY3=nav_priv_wbx_scheda_prod_cartajeans&cf=0.9010688000637453"
+          },
+          {
+            "title": "Gestione Carta Je@ns",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/banking\/WsBirRecharge0.do?type=jeans&OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartajeans_gest&OBSKEY3=nav_priv_wbx_ricarica_cartajeans&cf=0.03549252178200779"
+          },
+          {
+            "title": "Ricarica Postepay",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/banking\/WsBirRecharge0.do?type=poste&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_carta_postepay&cf=0.9447946096971871"
+          }
+        ]
+      },
+      {
+        "title": "BPM MasterPass",
+        "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/masterpass\/masterPassRequestPage.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_carte_masterpass&cf=0.7523720549608804"
+      }
+    ]
+  },
+  {
+    "title": "Trading",
+    "link": "\/webankpri\/wbOnetoone\/fpTrading.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_trading_wt&cf=0.6504063696878983",
+    "id": "nav_priv_wbx_trading_wt",
+    "voices": [
+      {
+        "title": "Portafoglio",
+        "voices": [
+          {
+            "title": "Titoli",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/wbblack\/jsp\/noDepTitoli.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_tit_in_portaf_nodep_wt&cf=0.009862319330362745"
+          },
+          {
+            "title": "Gestione liquidit\u00e0",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/wbblack\/jsp\/noDepTitoli.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_saldo_liquid_nodep_wt&cf=0.13806881050712738"
+          },
+          {
+            "title": "Trasferimento titoli",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaModulisticaOffline.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=moduli_trasferimento_titoli&cf=0.45844094153869264"
+          }
+        ]
+      },
+      {
+        "title": "Costi e attivazioni",
+        "voices": [
+          {
+            "title": "Servizi, strumenti e piattaforme",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_dep_titoli_wt&OBSKEY3=nav_wbx_priv_scopri_il_deposito_wt&cf=0.38482742693123617"
+          },
+          {
+            "title": "Modulistica",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaModulisticaOffline.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=Moduli_trading_wt&cf=0.1977381455134415"
+          }
+        ]
+      },
+      {
+        "title": "Piattaforme evolute",
+        "voices": [
+          {
+            "title": "Scopri le piattaforme",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_trading_wt&OBSKEY=nav_priv_wbx_Overview_piattaforme_wt&cf=0.866294738479729"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Investimenti",
+    "link": "\/webankpri\/wbOnetoone\/fpInvestimentiWb.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_investimenti&cf=0.8134009617821817",
+    "id": "nav_priv_wbx_investimenti",
+    "voices": [
+      {
+        "title": "I miei investimenti",
+        "voices": [
+          {
+            "title": "Portafoglio",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/wbblack\/jsp\/noDepTitoli.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_il_mio_portaf_wb_noDep&cf=0.15917349472415943"
+          },
+          {
+            "title": "Situazioni ordini",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/FMP\/situazioneOrdiniFund.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_situaz_ordini&cf=0.6281641841312265"
+          },
+          {
+            "title": "Estratto conto e contabili",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/col\/WsSearchDocumentsAction0.do?OBSCNT=TAB&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_inv_col_ABIL&OBSKEY3=nav_priv_wbx_inv_archivio_doc&cf=0.24454528531038122"
+          },
+          {
+            "title": "Attivazioni",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_trad_custodia_titoli&OBSKEY3=nav_wbx_priv_scopri_il_deposito&cf=0.8470622146483828"
+          },
+          {
+            "title": "Modulistica",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaModulisticaOffline.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=Moduli_offline_investimenti&cf=0.9059004715160132"
+          },
+          {
+            "title": "Trasferimento fondi",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaModulisticaOffline.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=moduli_trasferimento_fondi&cf=0.8496022404721723"
+          }
+        ]
+      },
+      {
+        "title": "Fondi e Sicav",
+        "voices": [
+          {
+            "title": "Investire in fondi",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/FMP\/fpFondiSicav.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_la_nostra_offerta_fs&cf=0.5196675288400463"
+          },
+          {
+            "title": "Strumenti",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/FMP\/fida\/ricerca.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_ricerca_confronta&cf=0.9430721914826198"
+          },
+          {
+            "title": "Compravendita",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/FMP\/fida\/ricerca.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto&cf=0.9301173178237708"
+          }
+        ]
+      },
+      {
+        "title": "Collocamenti",
+        "voices": [
+          {
+            "title": "Obbligazioni",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/FMP\/ListaTitoliDiStato.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_aste_titoli_di_Stato&cf=0.8028558182798139"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Finanziamenti",
+    "link": "\/webankpri\/wbOnetoone\/fpFinanziamenti.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_finanziamenti&cf=0.6694840263487716",
+    "id": "nav_priv_wbx_finanziamenti",
+    "voices": [
+      {
+        "title": "Mutui",
+        "voices": [
+          {
+            "title": "Offerta",
+            "link": "\/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/landingPagePrivata.do?KEYLAND=Catalogo_acquisto&OBSCNT=TAB&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_mutuo_webank&OBSKEY3=nav_priv_wbx_cat_acquisto&cf=0.2454615890413243"
+          },
+          {
+            "title": "Preventivo e richiesta",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_fai_il_preventivo&cf=0.20844364046095343"
+          }
+        ]
+      },
+      {
+        "title": "Prestiti",
+        "voices": [
+          {
+            "title": "Catalogo e simulazione",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/WsRichiestaCatalogo.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_prestito_x_te_wb&cf=0.3401986638362"
+          },
+          {
+            "title": "Autovalutazione",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/wbblack\/jsp\/finanziamenti\/autovalutazionePrestiti.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_autovalutaz_prestiti_wb&cf=0.22279271086925012"
+          },
+          {
+            "title": "Guida ai prestiti",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_abc_prestiti_wb&cf=0.1456606185151852"
+          }
+        ]
+      },
+      {
+        "title": "Fidi",
+        "voices": [
+          {
+            "title": "Informazioni",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_tuo_fido&cf=0.27237513620048304"
+          },
+          {
+            "title": "Richiedi fido",
+            "link": "\/webankpri\/wbOnetoone\/2l\/jsp\/wbOnetoone\/richiesta_fido.do?codice=tuo_fido&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_finanziamenti&OBSKEY=nav_priv_wbx_fido@me_rich&cf=0.2114185095141593"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Assicurazioni",
+    "link": "\/webankpri\/wbOnetoone\/fpAssicurazioni.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=nav_priv_wbx_assicurazioniWB&cf=0.6997392584198758",
+    "id": "nav_priv_wbx_assicurazioniWB",
+    "voices": [
+      {
+        "title": "Auto e moto",
+        "voices": [
+          {
+            "title": "Polizza auto Zurich Connect",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Auto_Caratteristiche&cf=0.442771651009935"
+          },
+          {
+            "title": "Polizza moto Zurich Connect",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Moto_Caratteristiche&cf=0.008631055865805592"
+          }
+        ]
+      },
+      {
+        "title": "Casa",
+        "voices": [
+          {
+            "title": "Polizza casa Zurich Connect",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Casa_Caratteristiche&cf=0.9427056419902035"
+          }
+        ]
+      },
+      {
+        "title": "Viaggi e vacanze",
+        "voices": [
+          {
+            "title": "Polizze viaggi Allianz Global Assistance",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Viaggi_Caratteristiche&cf=0.11768891307124818"
+          }
+        ]
+      },
+      {
+        "title": "Vita e salute",
+        "voices": [
+          {
+            "title": "Wecare Vita",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Vita_dettagli_polizza&cf=0.9480739791895201"
+          },
+          {
+            "title": "Wecare Protezione",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Protezione_dettagli_polizza&cf=0.5177724785845871"
+          },
+          {
+            "title": "Wecare Salute",
+            "link": "\/webankpri\/wbOnetoone\/2l\/do\/wbOnetoone\/schedaPrivata.do?OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Salute_dettagli_polizza&cf=0.4379497673859589"
+          }
+        ]
+      }
+    ]
+  }
+]

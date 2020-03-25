@@ -1,0 +1,1 @@
+{"esito":"<?php print (rand(1,10)>=5)? "ok":"ko"; ?>"}

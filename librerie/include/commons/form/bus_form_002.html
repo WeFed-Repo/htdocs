@@ -1,0 +1,31 @@
+<div id="login"><img src="/img/bus/tit_login.jpg" alt="ACCEDI AL SERVIZIO" title="ACCEDI AL SERVIZIO" />
+		<div class="logincont">
+		<form action="" method="post" id="inizioform">
+			<input type="radio" id="amministratore" name="scelta_utenza" checked="checked" onclick="document.getElementById('registrato_target').style.display='none';document.getElementById('utente_target').style.display='none';document.getElementById('amministratore_target').style.display='block'" /><img src="/img/bus/frm_admin.gif" alt="Admin" title="Admin" /><input type="radio" id="utente" name="scelta_utenza" onclick="document.getElementById('registrato_target').style.display='none';document.getElementById('utente_target').style.display='block';document.getElementById('amministratore_target').style.display='none'" /><img src="/img/bus/frm_utente.gif" alt="Utente" title="Utente" /><input type="radio" id="registrato" name="scelta_utenza" onclick="document.getElementById('registrato_target').style.display='block';document.getElementById('utente_target').style.display='none';document.getElementById('amministratore_target').style.display='none'" /><img src="/img/bus/frm_registr.gif" alt="Registrato" title="Registrato" /> 
+          </form>
+		
+          <form action="" method="post" id="amministratore_target">
+		  <span><label for="codice_admin">Codice cliente</label><input type="text" id="codice_admin" name="username" class="testo" maxlength="8" /><br class="clear" /></span>
+		  <span><label for="amm_pass">Password</label><input type="password" name="password" class="testo" id="amm_pass" maxlength="16" /><br class="clear" /></span>
+		  <input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra_home.gif" alt="Accedi" />
+          </form>
+		  
+		  <form action="" method="post" id="utente_target">
+		  <span><label for="codice_cliente">Codice cliente</label><input type="text" id="codice_cliente" name="username" class="testo" maxlength="8" /><br class="clear" /></span>
+		  <span><label for="id_utente">Codice utente</label><input type="text" id="id_utente" name="utente" class="testo" maxlength="8A.Ý" /><br class="clear" /></span>		 
+		  <span><label for="user_pass">Password</label><input type="password" name="password" class="testo" id="user_pass" maxlength="16" /><br class="clear" /></span>
+		  <input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra_home.gif" alt="Accedi" />
+          </form>
+		  
+		  <form action="" method="post" id="registrato_target">		 	
+            <span><label for="id_registrato">User Id</label><input type="text" id="id_registrato" name="username" class="testo" maxlength="16" /><br class="clear" /></span>            
+			<span><label for="reg_pass">Password</label><input type="password" name="password" class="testo" id="reg_pass" maxlength="16" /><br class="clear" /></span>
+            <input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra_home.gif" alt="Accedi" />
+          </form>
+		</div>
+		<ul class="logincont2">		
+		<li class="nuovo_utente"><a href="#"><span>Istruzioni primo accesso</span></a></li>
+		<li class="dimenticato_pass"><a href="#"><span>Dimenticato la password?</span></a></li>		
+		</ul>
+		<div class="logincont3"><a href="#"><span>Abilita BL Banking</span></a></div>
+		</div>

@@ -1,0 +1,26 @@
+<div class="megafpbanner" id="megafpbanner"></div>
+<?php
+	if ($_GET["position"] != "inside") 
+	{
+?>
+<script language="javascript" type="text/javascript">
+	var so = new SWFObject("/swf/ban_assicurazioni.swf", "megafpbanner", "645", "418", "8", "#ffffff");
+	so.addParam("wmode", "transparent");
+	so.addParam("FlashVars", "myURL=/swf/ban_assicurazioni/flashData.xml");
+	so.addParam("allowScriptAccess", "sameDomain");
+	so.write("megafpbanner");
+</script>
+<?php
+	}
+	else
+	{
+?>
+	<script language="javascript" type="text/javascript">
+		var so = new SWFObject("/swf/ban_assicurazioni_auto.swf", "megafpbanner", "645", "305", "8", "#ffffff");
+		so.addParam("wmode", "transparent");
+		so.addParam("allowScriptAccess", "sameDomain");
+		so.write("megafpbanner");
+	</script>
+<?php
+	}
+?>

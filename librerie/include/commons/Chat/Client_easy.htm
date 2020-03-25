@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+<head>
+	<title>Chat</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="script" http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="script" http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="description" content="We@bank - Conosci Conto@me" />
+	<meta name="keywords" content="" />
+	<meta name="distribution" content="Global" />
+<style>
+
+/*Generali*/
+html,body,img{margin:0;padding:0;border:none;overflow:hidden;font-family:Arial, Helvetica, sans-serif;}
+
+/*Font*/
+body,div,li{font-size:12px;font-family:Arial, Helvetica, sans-serif; text-align: center;}
+table,td, textarea,input{font-size:11px;font-family:Arial, Helvetica, sans-serif;}
+
+
+#ctnchat{margin:0px auto; display: block; width:185px;text-align:center;background-color:#fff;height:175px;}
+#ctnchat form{padding:0;border:none;}
+#ctnchat form textarea.first{border: solid 1px #fff; display:block;margin:5px 0 0 2px;padding:0;border:none;color:#9b9b9b;font-size:11px;width:173px;height:100px;overflow:auto}
+#ctnchat form #bkgStorico{margin:2px 0 0 0; border: solid 1px #000; width:180px;height:112px;overflow:auto}
+#ctnchat form textarea.second{ border: solid 1px #fff; display:block;margin:5px 0 0 2px;padding:0;border:none;color:#9b9b9b;font-size:11px;width:173px;height:28px;overflow:auto}
+#ctnchat form #bkgInsert{margin:2px 0 0 0; border: solid 1px #000; width:180px;height:38px;overflow:auto}
+
+#ctnchat p{margin:0;padding:10px 0 0 0;}
+#ctnchat p b{color:#d87109;}
+
+
+
+/* NEW */
+#ctnrisp b{font-size:13px;}
+#ctnrisp{float:left;background-color:#f5f5f5;width:501px;text-align:center;border-left:1px solid #cccccc;height:157px}
+#ctnrisp p{margin:0;padding:30px 0 0 0;}
+#ctnrisp p b{color:#d87109;}
+
+/* FINE NEW */
+
+
+img.dx{float:right;margin-right:20px}
+img.sx{float:left;margin-left:20px}
+
+#note{clear:both;text-align:center;padding-top:15px}
+
+div#popup{text-align:left;padding:0 0 10px 10px} 
+div#popup img{float:right} 
+
+.btnarancio, .btngrigio {display:block;margin:2px 0 0 0; text-transform: uppercase; padding:0;border:none;float:left;color:#fff; font-size:9px;background: url(img/str_chat_minibutton.gif) left top no-repeat;text-align:center;width:50px;height:15px;line-height:13px;text-decoration:none}
+.btngrigio   {float: right;}
+.status{font-size:10px;} 
+
+</style>
+</head>
+<body onload="javascript:init();">
+<div id="ctnchat">
+	<form>
+		<script language="javascript" src="IFM_Global.js"></script>
+		<script language="javascript" src="IFM_ScriptControl.js"></script>
+		<script language="javascript" src="Client.js"></script>
+		<div class="bkGround">
+		 <div id="bkgStorico">
+			 <textarea id="txtArea" cols="40" rows="5" class="first" wrap="soft" readonly></textarea>
+		 </div>
+		 <div id="bkgInsert">
+			<textarea id="txtMsg" cols="40" rows="3" class="second" tabindex="1" readonly onkeydown="javascript:;" onkeyup="javascript:;"></textarea>
+		 </div>
+		 <div>
+			<input class="btnarancio" type="button" id="btnConnect" value="chiama" onclick="javascript:call('9990063')" enabled runat="server" />
+			<input class="btngrigio" type="button" id="btnSend" value="invia" onclick="javascript:send()" disabled  runat="server"/>
+		 </div>
+		 <div id="txtStatus" class="status">
+			Non connesso
+		 </div>
+    </div>
+	</form>
+</div>
+</body>
+</html>

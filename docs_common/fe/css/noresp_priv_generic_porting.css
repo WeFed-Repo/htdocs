@@ -1,0 +1,310 @@
+/* FORZATURE PER RENDERE IL NORESP RESPONSIVE (porting) */
+#contenuti.noresp.porting {width:100%;font-family: "bankFont", Arial, Helvetica, sans-serif;font-size:14px}
+#contenuti.noresp.porting * {box-sizing:border-box !important;}
+
+/* MACRO FORZATURE NORESP PER WEBVIEW */
+body.webview #contenuti.noresp.porting {font-size:16px}
+body.webview #noteLegaliFondo {padding:25px !important;color:#999;}
+body.webview #noteLegaliFondo p {font-size:12px !important;}
+body.webview #noteLegaliFondo p {font-size:12px !important;color:#999;}
+
+body.webview #contenuti h2 {font-size: 1.8em;font-weight: 500;line-height: 36px;color:#000; margin-top:0;}
+body.webview .ui-datepicker.ui-widget-content {font-size:16px !important;}
+body.webview .ui-datepicker.ui-widget-content .ui-datepicker-header {height:auto;background:transparent none; border:0;}
+body.webview .ui-datepicker.ui-widget-content td { border:solid 1px #eee;}
+body.webview .ui-datepicker.ui-widget-content td a {padding:5px;}
+body.webview .selOverlay .selEl {font-size:14px !important; padding:0 0 15px;}
+body.webview #ttContText {font-size:14px;line-height:16px}
+body.webview .notablet {display:none !important;}
+body.webview #dettOrdini.layeralert3 .head {width:598px !important;}
+
+/* Generici */
+#contenuti.noresp.porting h1 {color:#000; text-transform: none; font-weight:normal;font-size:28px;font-family: "bankFont", Arial, Helvetica, sans-serif;  line-height: 36px;padding:0;margin: 0 0 30px;}
+#contenuti.noresp.porting p.note {font-size:12px !important;color:#999;}
+#contenuti.noresp.porting .borderFormRounded {border-radius:0;}
+#contenuti.noresp.porting td {font-family: "bankFont", Arial, Helvetica, sans-serif;font-size:14px;}
+#contenuti.noresp.porting br.clear {height:1px;font-size:1px;line-height:1px;}
+#contenuti.noresp.porting b, #contenuti.noresp.porting strong, body.webview strong, body.webview b {color:inherit !important;}
+#contenuti.noresp.porting .smallClose {margin: 0;padding: 0; width: 20px;float: right;height: 20px;cursor: pointer;color: #fff;display: block;
+  border-radius: 50%; background: #ccc url(/wscmn/fe/img/noresp_icon_x_ongrey.gif) no-repeat center center; line-height: 17px;
+  background-size: 50%;}
+#contenuti.noresp.porting h4.verde {font-size: 16px;font-family: "bankfont",Arial,serif !important;box-sizing: border-box !important; color: #000; font-weight: 400;}
+#contenuti.noresp.porting>br.clear {display:none !important;}
+
+/* Box */
+#contenuti.noresp.porting div[id^=error] {width:100%;}
+#contenuti.noresp.porting div[id^=error] div.boxtop {display: block;position: absolute;background: #fff url(/wscmn/fe/img/noresp_iconbox_x.gif) no-repeat center center;border: solid 2px #ff4d3b;vertical-align: middle;
+  border-radius: 50%;font-size: 20px;height: 32px;line-height: 27px;text-align: center;margin: -10px -5px; width: 32px}
+#contenuti.noresp.porting div[id^=error] div.boxtop img {display:none;}
+#contenuti.noresp.porting div[id^=error] div.boxtxt {border:solid 2px #ff4d3b;border-radius:10px 6px 6px; margin: 0 0 20px; padding:15px;}
+#contenuti.noresp.porting div[id^=error] div.boxtxt img.dx {display:none} 
+#contenuti.noresp.porting div[id^=error] div.boxtxt ul.alert li {color:#000}
+
+/* Box informativo */
+#contenuti.noresp.porting table.TableF24 {width:100%;margin:20px 0;}
+#contenuti.noresp.porting table.TableF24 .TopF24, #contenuti.noresp.porting table.TableF24 .BottomF24 {display:none}
+#contenuti.noresp.porting table.TableF24 .BoxF24 {border-radius: 5px;width: 100%;display:block;border:solid 2px #ccc;padding:15px;float:left}
+
+/* Form */
+#contenuti.noresp.porting .formGeneric .borderFormRounded  {padding:15px; border-radius:0; margin-bottom:15px;}
+#contenuti.noresp.porting .formGeneric label.nomefield {font-weight:600;white-space:nowrap;text-overflow:ellipsis; overflow:hidden;}
+#contenuti.noresp.porting .formGeneric input[type="text"],#contenuti.noresp.porting .formGeneric input[type="number"],
+#contenuti.noresp.porting .formGeneric input[type="password"],#contenuti.noresp.porting .formGeneric input[type="tel"],
+#contenuti.noresp.porting .formGeneric select, #contenuti.noresp.porting .btnMultiSel {height:34px; background:#fff none;box-shadow:none !important; border:solid 1px #BBBBBB;};
+#contenuti.noresp.porting #ttBox #ttCont {font-size:14px;}
+#contenuti.noresp.porting #ttBox #ttCont #ttContText {font-size:14px !important;line-height:18px !important;}
+#contenuti.noresp.porting  div.tithelp .helpleft {font-size:20px;color:#000; font-weight:400;}
+#contenuti.noresp.porting .aButton, body.webview .aButton {font-family:bankFont,Arial,Serif;outline: 0; color: #fff;text-decoration: none; border-radius:4px;display: inline-block; height: 34px; margin-bottom: 0; padding: 0 10px !important;  cursor: pointer; background-image:none; border:0 none; box-shadow:none;line-height: 35px !important; font-size:16px;margin:0;}
+#contenuti.noresp.porting .aButton  span, body.webview .aButton  span{	text-transform: none;background-image:none; text-shadow:none;}
+#contenuti.noresp.porting .aButton:hover, body.webview .aButton:hover {color:#fff !important;}
+
+/* Iconcine */
+#contenuti.noresp.porting a.btnico {display: inline-block;width: 24px; height: 24px;text-align: center; border-radius: 50%; line-height: 40px;vertical-align: middle;margin: -5px 0 0 5px; cursor:pointer;background-repeat: no-repeat;background-position: center center}
+#contenuti.noresp.porting a.btnico.ico-info {background-image: url(/wscmn/fe/img/noresp_icon_info.gif);background-size: 7px 16px}
+body.webview #contenuti.noresp.porting a.btnico{width:24px; height:24px;line-height:24px;display:inline-block;}
+#contenuti.noresp.porting td a.btnico {margin-top:0;}
+
+/* Spinner renew */
+#contenuti.noresp.porting .spinner {width:100%;max-width:150px;margin: 0;position:relative;display:inline-block;padding: 0 33px;}
+#contenuti.noresp.porting .spinner input {text-align:center;box-sizing:padding-box;width:100%;}
+#contenuti.noresp.porting .spinner a.btnspin {color:#fff !important;display: block; font-weight: 600;font-size: 28px !important;text-decoration: none; border: none;text-align: center;line-height: 34px;width: 34px; height: 34px;position:absolute; border-radius:4px 0 0 4px;}
+#contenuti.noresp.porting .spinner a.btnspin:hover {color:#fff !important;}
+#contenuti.noresp.porting .spinner a.btnspin.plus { right: 2px; top: 0; border-radius: 0 4px 4px 0}
+#contenuti.noresp.porting .spinner a.btnspin.minus {left:0;}
+
+/* Form ricerca */
+#contenuti.noresp.porting .searchFilter {background:#fff;border-radius:0;padding: 14px;}
+
+/* Widget autocomplete "magic" */
+#contenuti.noresp.porting .magicSearch {width:100%;position:relative;padding: 0 30px 0 0;}
+#contenuti.noresp.porting .magicSearch input {width:100% !important; display:block;}
+#contenuti.noresp.porting .magicSearch ul {min-width:350px;}
+#contenuti.noresp.porting .magicSearch a.msbutton {right: 0;position: absolute;top: 0;margin-top: -3px}
+#contenuti.noresp.porting .magicSearch a.msbutton.reset {background-position:right 0;}
+#contenuti.noresp.porting .btnMultiSel a.reset {width: 20px;height: 20px;cursor: pointer;color: #fff;display: block;margin: 6px 3px 0 0;border-radius: 50%;
+	background: #ccc url(/wscmn/fe/img/noresp_icon_x_ongrey.gif) no-repeat center center;line-height: 17px;background-size: 50%;}
+#contenuti.noresp.porting .btnMultiSel span {overflow: hidden;line-height: 22px;font-size: 12px;text-overflow: ellipsis;width: 85%;white-space: nowrap;}
+body.webview #contenuti.noresp.porting {font-size:14px;}
+/* Porting Tabs Old  */
+#contenuti.noresp.porting .divtabellatabs {background: transparent none;border-top:solid 1px #ccc; margin:40px 0 0;}
+#contenuti.noresp.porting .tabellatabs {margin:-40px 0 0; display:block;}
+#contenuti.noresp.porting .tabellatabs td {padding: 0; margin:0;}
+#contenuti.noresp.porting .tabellatabs td {background:#fff none;padding:0; margin:0 !important; border:1px solid #ccc;}
+#contenuti.noresp.porting .tabellatabs td.offinizio,#contenuti.noresp.porting .tabellatabs td.oninizio, #contenuti.noresp.porting .tabellatabs td.off2,#contenuti.noresp.porting .tabellatabs td.off2a,#contenuti.noresp.porting .tabellatabs td.off2b,#contenuti.noresp.porting .tabellatabs td.on2a,#contenuti.noresp.porting .tabellatabs td.on2b,#contenuti.noresp.porting .tabellatabs td.on2 {display:none !important;}
+#contenuti.noresp.porting .tabellatabs td.on, #contenuti.noresp.porting .tabellatabs td.off {padding-left:0 !important;height:34px; border-bottom:solid 1px #ccc;}
+#contenuti.noresp.porting .tabellatabs td.on a, #contenuti.noresp.porting .tabellatabs td.off a {padding: 13px; display:inline-block; font-size:14px !important; margin:0;color:#999;background-color:#FBFBFB;}
+#contenuti.noresp.porting .tabellatabs td.on a {border-bottom:solid 1px #fff;background-color:#fff;}
+#contenuti.noresp.porting .tabellatabs td.off a {border-bottom:solid 1px #ccc;}
+#contenuti.noresp.porting .divtabellatabs .divtabellacont {padding:40px 20px 20px;}
+
+/* Bottoni da stile vecchio */
+#contenuti.noresp.porting .fooform a img {display:none;}
+#contenuti.noresp.porting .fooform a {height:auto;color: #fff !important;text-decoration: none; border-radius:4px;
+  display: inline-block; margin-bottom: 0; padding: 8px 10px;  cursor: pointer; background-image:none; border:0 none; box-shadow:none;}
+#contenuti.noresp.porting .fooform a span {display:inline; padding:0;font-size:16px; height:auto;background: transparent none;height:auto;}
+#contenuti.noresp.porting .fooform a.btnformleft{background-color:#aaa;}
+#contenuti.noresp.porting .fooform a.btnformleft span {color:#fff;}
+
+/* Area Fondi e Sicav */
+body.webview #fesFondoWrapper .campana,body.webview #fesFondoWrapper .stella {display:none}
+
+#contenuti.noresp.porting #noteLegaliFondo {padding: 20px !important;}
+#contenuti.noresp.porting #noteLegaliFondo p.note{font-size:12px !important; color:#999;}
+#contenuti.noresp.porting #contenuti.noresp .fesViewSelect {margin: 0 0 10px;}
+#contenuti.noresp.porting td {font-size:14px;}
+#contenuti.noresp.porting .boxcomunicaz_dettaglio span.titolo {font-size:16px;}
+#contenuti.noresp.porting #fesFondoWrapper .borderFormRounded {padding:5px;}
+#contenuti.noresp.porting .output .note,#contenuti.noresp.porting .swQuotesSel .output  {font-size:12px !important; color:#999;}
+
+/* Bordi arrotondati --> squadrati */
+#contenuti.noresp.porting .borderRoundedNopadd {border-radius:0;}
+
+/* Tabelle "old" */
+#contenuti.noresp.porting .BvTableHeaderHelp {overflow:visible;}
+#contenuti.noresp.porting table.form01 {background-color:#fff;border:solid 1px #ccc; padding:5px 8px;display:block;}
+#contenuti.noresp.porting table.form01 a {font-size:12px;}
+#contenuti.noresp.porting table.form01 tr:first-child td {border-top: 0 !important;}
+#contenuti.noresp.porting table.form01 td {border-collapse:collapse; border-top:solid 1px #eee; border-left:0;border-right:0;border-bottom:0;background:#fff;font-size:12px;font-family:"bankFont", Arial, Helvetica, sans-serif; line-height:16px;padding:8px 10px 8px 0;}
+#contenuti.noresp.porting table.form01 td input,#contenuti.noresp.porting table.form01 td select  {height:34px;font-size:14px;}
+#contenuti.noresp.porting table.form01 td input[type=radio] {height:25px !important;}
+#contenuti.noresp.porting .BvTableHeaderHelp a {font-size:16px !important;}
+#contenuti.noresp.porting table.form01 td.grscuro {  background-color: #eee;padding: 10px;font-size: 14px;}
+#contenuti.noresp.porting table.form01 .btnevid1 img {display:none;}
+#contenuti.noresp.porting table.form01 .btnevid1 span {  background: transparent none;font-size: 14px;color: inherit;text-decoration: underline !important;text-transform: none;}
+#contenuti.noresp.porting table.form01 select[disabled] {opacity:0.3;}
+#contenuti.noresp.porting table.form01 td select {width:100%;}
+#contenuti.noresp.porting table.form01 .importo2,#contenuti.noresp.porting table.form01 .importo3 {width:60px;}
+#contenuti.noresp.porting table.form01 .note {font-size:12px !important; color:#666;}
+#contenuti.noresp.porting table.form01 td.uno {width:145px !important;}
+#contenuti.noresp.porting table.form01 span.txtinput {width:auto !important;}
+body.webview #contenuti.noresp.porting table.form01 a {font-size:14px;}
+body.webview #contenuti.noresp.porting table.form01 td {font-size:14px;line-height:20px;width:auto!important;}
+body.webview #contenuti.noresp.porting table.form01 td.uno {width:20% !important}
+#contenuti.noresp.porting table.form01 span.txtinput.txtinputlungo{width:90% !important;margin-top:7px;}
+#contenuti.noresp.porting .texta.read {min-height:100px;}
+#contenuti.noresp.porting .texta.read p, #contenuti.noresp.porting .texta.read ul li {font-size:12px !important;}
+#contenuti.noresp.porting table.form01 strong.verde{font-size:14px;margin-bottom:15px;display:block;}
+#contenuti.noresp.porting table.form01 strong{font-weight:600;}
+#contenuti.noresp.porting table.form01.form01b textarea.read, #contenuti.noresp.porting table.form01.form01b div.texta.read{
+	width:100%;
+}
+#contenuti.noresp.porting table.form01.form01b div.nobor3{width:96%;}
+#contenuti.noresp.porting table.form01.form01b div.tithelp{margin-top:5px;}
+
+/*box antiriciclaggio*/
+#contenuti.noresp.porting  div.verde{color:#515151;font-size:12px;font-family:"bankFont", Arial, Helvetica, sans-serif;}
+body.webview #contenuti.noresp.porting  div.verde{font-size:14px;}
+#contenuti.noresp.porting fieldset{width:50%;}
+#contenuti.noresp.porting fieldset strong{font-family:"bankFont", Arial, Helvetica, sans-serif;font-size:12px;font-weight:600;}
+#contenuti.noresp.porting  fieldset .uniqTooltipText{margin-top:-9px;background: #8ab10b;display: inline-block;width: 24px;height: 24px;border-radius: 50%;position:relative;top:5px;}
+#contenuti.noresp.porting  fieldset .uniqTooltipPos{background: url(/wscmn/fe/img/noresp_icon_info.gif) 8px 3px;background-size: 7px 16px;width:24px;height:24px;display:inline-block;background-repeat:no-repeat;}
+#contenuti.noresp.porting  fieldset .uniqTooltipPos .lampa{display:none;}
+#contenuti.noresp.porting  fieldset select{height:34px;border:1px solid #cdcdcd;color:#515151;margin-top:-10px;}
+#contenuti.noresp.porting #sorifinsel,#scorapsel{max-width:340px;}
+
+
+/* Tabelle ordinabili detTable */
+#contenuti.noresp.porting .dettTable {width:100%}
+#contenuti.noresp.porting .dettTable th, #contenuti.noresp.porting .dettTable td {border-top:solid 1px #c6c6c6;border-bottom:solid 1px #c6c6c6;font-size:14px; line-height:16px; font-family:"bankFont", Arial, Helvetica, sans-serif;padding:10px 6px !important}
+#contenuti.noresp.porting .dettTable tr.pari td {background-color:#fbfbfb;}
+#contenuti.noresp.porting .dettTable th {background: #f2f2f2 none;font-weight:600 !important;};
+#contenuti.noresp.porting table.sortable th.sort .sortDir:hover {font-size:14px;}
+#contenuti.noresp.porting table.sortable a {font-size:14px;font-weight: 600 !important;}
+#contenuti.noresp.porting .resPag .resPagLeft, #contenuti.noresp.porting .resPag .resPagRight {background-image:none; width:auto;}
+#contenuti.noresp.porting .resPag span {padding: 7px 10px 0 0}
+#contenuti.noresp.porting .resPag a {padding:0 7px; line-height:32px !important;color:#000;font-size:14px; margin:0; min-width:32px; display:inline-block;height:32px; width:auto;background: #f2f2f2 none;  border: 1px solid #e3e3e3}
+#contenuti.noresp.porting .resPag a.active {border: 1px solid #b6ca77;background-color: #c4d885 !important;color:#000}
+#contenuti.noresp.porting .resPag a[style*=hidden] {display:none;}
+#contenuti.noresp.porting .resPag .nobutt {border:0; background-color:transparent; font-weight:normal !important; font-size:12px;}
+#contenuti.noresp.porting .resPag .nobutt.off {color:#ccc !important;}
+#contenuti.noresp.porting .resPag .resPagRight span {margin:0;padding-right:0;}
+#contenuti.noresp.porting .resPag .resPagRight .pulsantiera {margin-left:10px;}
+#contenuti.noresp.porting .dettTable .icon {margin:0 auto; color:#666;}
+
+#contenuti.noresp.porting table.form01.form01b ul.small li,#contenuti.noresp.porting table.form01.form01b strong.small {font-size:14px !important;}
+#contenuti.noresp.porting table.form01.form01b .txtinput strong.small,#contenuti.noresp.porting table.form01.form01b  ul.small li{font-size:12px !important;}
+.webview #contenuti.noresp.porting table.form01.form01b .txtinput strong.small,.webview #contenuti.noresp.porting table.form01.form01b  ul.small li{font-size:14px !important;}
+/* Tabella ricerca "rimpicciolita" */
+#contenuti.noresp.porting #fesSearchTable td, #contenuti.noresp.porting #fesSearchTable th {padding:5px !important;}
+#contenuti.noresp.porting #fesSearchTable td, #contenuti.noresp.porting #fesSearchTable td a, #contenuti.noresp.porting #fesSearchTable th,#contenuti.noresp.porting #fesSearchTable th a {font-size:12px;}
+/* FONDI PIR */
+#contenuti.noresp.porting .dettTable a {text-decoration:none;}
+#contenuti.noresp.porting .dettTable a span {text-decoration:underline;}
+#contenuti.noresp.porting .dettTable a span.labelpir {    clear: both;
+    background-color: #8ab10b;
+    width: 30px;
+    height: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 16px;
+    text-decoration: none !important;
+    font-size: 11px;
+    display: block;}
+
+/* Tabella "progressbar" tempistiche */
+body.webview table.timetable, #contenuti.noresp.porting table.timetable {width:100% !important;background: url(/fe/img/progress_gauge_noresp.gif) repeat-y 0 0; background-size:contain}
+body.webview table.timetable tbody , #contenuti.noresp.porting table.timetable tbody {width:100%}
+body.webview table.timetable .timerow td , #contenuti.noresp.porting table.timetable .timerow td {height:25px;}
+body.webview table.timetable tr.timerow4 td , #contenuti.noresp.porting table.timetable tr.timerow4 td {width: 25% !important}
+body.webview table.timetable tr.timerow5 td , #contenuti.noresp.porting table.timetable tr.timerow5 td {width: 20% !important}
+body.webview table.timetable tr.timerow6 td , #contenuti.noresp.porting table.timetable tr.timerow6 td {width: 16.66% !important}
+body.webview table.timetable tr.timerow7 td , #contenuti.noresp.porting table.timetable tr.timerow7 td {width: 14.29% !important}
+body.webview table.timetable tr.timerow8 td , #contenuti.noresp.porting table.timetable tr.timerow8 td {width: 12.50% !important}
+body.webview .timedesc td ,body.webview .timeday td, #contenuti.noresp.porting .timeday td,#contenuti.noresp.porting .timedesc td {border:#fff;background-color:#fff; font-size:16px !important;line-height:18px;}
+body.webview table.timetable tr.timedesc td ul li , #contenuti.noresp.porting table.timetable tr.timedesc td ul li {font-size:14px !important;line-height:18px !important;}
+body.webview table.timetable tr.timeday td.selected {background-color:#fff;}
+
+/* Esito "normale" */
+#contenuti.noresp.porting .box49 {width:100%;border-radius:10px;}
+#contenuti.noresp.porting div.dispo_esito_top, #contenuti.noresp.porting  div.dispo_esito_bottom {display:none;}
+
+/* Scheda fondo/confronta */
+#fesLeftSel .fesSearchLeftTitle {line-height: 16px !important; padding: 10px 5px !important;}
+body.webview #fesLeftSel{display:none !important;} 
+#contenuti.noresp.porting #fesRicercaCont,#contenuti.noresp.porting #fesSearchResults {width:100%;margin:0; padding:0;}
+#contenuti.noresp.porting #fesRicercaCont,#contenuti.noresp.porting #fesConfrontaCont {padding-top:20px;width:100%;}
+#contenuti.noresp.porting #fesRicercaCont .paddMedium {padding: 0 !important; margin-top:15px;}
+#contenuti.noresp.porting .filettoGenericoVerticale,#contenuti.noresp.porting .filettoGenericCorner {background-image:none;}
+#contenuti.noresp.porting #fesSearchResults label {float:right;}
+#contenuti.noresp.porting #fesSearchResults .fesTotRes {margin-top:5px}
+#icoOpeModalLabel {font-weight:400;}
+#icoOpeModalContent ul.azioni {width:100%;padding:0;margin:0;}
+#icoOpeModalContent ul.azioni li {width:100%;margin:0;border-bottom:solid 1px #ddd;list-style-type:none;padding:0;}
+#icoOpeModalContent ul.azioni li a {padding:20px 0;margin:0;display:block;}
+#icoOpeModalContent ul.azioni li.linkOff a {color:#ddd;text-decoration:none;}
+#contenuti.noresp.porting .divtabellacont td {line-height:20px;}
+#contenuti.noresp.porting .fesBackRicerca {margin: 0 0 10px;}
+#contenuti.noresp.porting .borderRoundedNopadd .filettoGenericoOrizzontale02 {margin:0;}
+#contenuti.noresp.porting .borderRoundedNopadd .fondoTransp {display:none;}
+#contenuti.noresp.porting #grafico_fondo {padding:15px;margin:0;width:100%;}
+#contenuti.noresp.porting #grafico_fondo_space {width:100%;}
+#contenuti.noresp.porting #grafico_fondo .fesGraphSelector {width:100%;height:auto;background:#fff;border:solid 1px #ccc; border-radius:0;padding:10px;margin:0 0 15px;}
+
+/* declinazioni fesSelect */ 
+#selContFesCategoria .fesRadio input {display:inline-block;margin:0 5px 0 0;} 
+#selContFesCategoria .fesSelect .btnConsole .btn {background:#fff;text-align:left;margin: 0 10px 0 0;}
+body.noresp.porting #tablePersOverlay #tablePersCont {height:30px;}
+/* Confronta */
+#contenuti.noresp.porting #fesConfrontaCont .noPaddleft {padding-left:0;}
+#contenuti.noresp.porting #fesConfrontaCont .paddMedium {padding: 0 !important}
+#contenuti.noresp.porting #fesConfrontaCont .boxstep .middle {padding-bottom:0;}
+#contenuti.noresp.porting #fesConfrontaCont .boxstep span[data-tooltip] {display: inline-block; background-image: url(/wscmn/fe/img/noresp_icon_info.gif); background-size: 5px 13px;
+  width: 23px; height: 23px; text-align: center;border-radius: 50%; line-height: 40px; vertical-align: middle;
+  margin: 0 0 7px; cursor: pointer; background-repeat: no-repeat; background-position: center center;}
+  #contenuti.noresp.porting #fesConfrontaCont .boxstep span[data-tooltip] img {display:none;}
+#contenuti.noresp.porting #fesConfrontaCont .fes_box {padding:10px;} 
+#contenuti.noresp.porting #fesConfrontaCont .boxstepCont.fes_cfr_box .boxstep .middle {border: solid 1px #ccc;
+  border-radius: 0;background: transparent none;box-shadow: 0 0 0 0;}
+#contenuti.noresp.porting #fesConfrontaCont .boxstepCont.fes_cfr_box .boxstep .middle.fes_cfr_title {border-bottom: 0;}
+#contenuti.noresp.porting #fesConfrontaCont .noborderBottom { display:none;}
+#contenuti.noresp.porting #fesConfrontaCont table .titFondi {margin:10px 0 0;}
+#contenuti.noresp.porting #grafico_confronta_space {width:100%;}
+#contenuti.noresp.porting .bggrigioFondi {background:#fff;}
+#contenuti.noresp.porting #grafico_confronta {padding:0 !important;}
+#contenuti.noresp.porting #grafico_confronta .fesGraphSelector {width:100%;padding:15px; height:auto;margin:0;border:none;border-top:solid 1px #ccc;background:#fff;border-radius:0;}
+#contenuti.noresp.porting #grafico_confronta .fesGraphSelector label {display:inline-block;}
+#contenuti.noresp.porting .fes_box a.fes_cfr_socges {padding-top:0;font-size:18px;line-height:22px;}
+#contenuti.noresp.porting .fes_box span.flLeft {float:none !important;display:inline;}
+#contenuti.noresp.porting #fesConfrontaCont .linkVai {border-radius: 4px;background: #999 url(/wscmn/fe/img/noresp_linkvai.png) no-repeat center center;background-size:cover; width:22px;height:22px;}
+
+/* Tab commerciali */
+#contenuti.noresp.porting ul.tabGeneric {border-bottom:solid 1px #ccc;width:100%;border-collapse:collapse; height:50px;display:block;padding: 0 0 0 1px}
+#contenuti.noresp.porting ul.tabGeneric li {display:block;margin:0;padding:0 15px;margin-left:-1px;background:#FBFBFB none;border:solid 1px #e9e9e9;border-bottom:solid 1px #ccc;height:49px;border-radius:0;float:left}
+#contenuti.noresp.porting ul.tabGeneric li .tabBorder {border:none;margin:0;padding:0}
+#contenuti.noresp.porting ul.tabGeneric li .tabGradient {background-image:none;margin:0;padding:0;border-radius:0;border:none}
+#contenuti.noresp.porting ul.tabGeneric li a {padding:0;margin:0;background-color: transparent;line-height:45px; padding:0 15px;color:#999;font-family:bankFont;font-size:20px}
+#contenuti.noresp.porting ul.tabGeneric li:hover {border:solid 1px #ccc}
+#contenuti.noresp.porting ul.tabGeneric li:hover a {color:#000 !important}
+#contenuti.noresp.porting ul.tabGeneric li.active,#contenuti.noresp.porting ul.tabGeneric li.active:hover {border:solid 1px #ccc;border-bottom:solid 1px #fff;border-top:solid 3px #666; margin-top:-2px; height:51px;background:#fff;}
+#contenuti.noresp.porting ul.tabGeneric li.active a {color:#000 !important}
+#contenuti.noresp.porting #fesConfButt {padding: 3px;display: block; height:auto;width:auto;border-radius: 0;  margin-top: 8px;  box-shadow: 0 0 0;  background: #fff;  border: 1px solid #ddd;}
+#contenuti.noresp.porting #fesConfButt span {font-size:18px;font-weight:normal;}
+#contenuti.noresp.porting #fesConfButt .smallClose {margin:1px  7px 0 10px;padding:0; width: 20px; float:right;height: 20px;cursor: pointer;color: #fff; display: block;border-radius: 50%;background: #ccc url(/wscmn/fe/img/noresp_icon_x_ongrey.gif) no-repeat center center;line-height: 17px;background-size: 50%;}
+#contenuti.noresp.porting .fesSearchMore {width:250px;float:none;margin:40px auto 25px; display: block; box-shadow:0 0 0 0; height: 34px;
+  padding: 6px 10px; cursor: pointer; text-decoration: none; text-align: center; vertical-align: middle; white-space: nowrap; color: #ffffff; border: 1px solid transparent;
+  border-radius: 4px; background-color: #aaaaaa; background-image: none; font-size: 1em; font-weight: 400;clear:both;}
+
+/* Porting situazione ordini */
+#contenuti.noresp.porting #tb-ordini td ,#contenuti.noresp.porting #tb-ordini th {padding:5px !important;}
+#contenuti.noresp.porting .fesTotRes {width:250px;}
+#contenuti.noresp.porting .fesViewSelect {margin-bottom:10px;}
+#contenuti.noresp.porting #tb-ordini td, #contenuti.noresp.porting #tb-ordini th,  #contenuti.noresp.porting #tb-ordini a {font-size:12px !important;}
+#contenuti.noresp.porting .fooformtop {padding-bottom:4px}
+
+/* Porting glifi */
+#contenuti.noresp.porting .btn-icon {background:none; text-decoration:none !important;}
+#contenuti.noresp.porting .btn-icon .icon {margin:0;font-size:22px;text-decoration:none;}
+#contenuti.noresp.porting .icon {display:inline-block;font-size:22px; margin:-5px 0 0 5px;}
+#contenuti.noresp.porting .icon.disabled {color:#999 !important;}
+
+/* Tooltip su etichetta */
+#contenuti.noresp.porting .formGeneric .txthelp {text-decoration:none !important;padding-bottom: 0;line-height: 18px;float:none;width:auto !important; display:inline-block;text-decoration:underline;border-bottom: 1px dashed #666}
+
+/* Overlay selettori su TABLET */
+body.webview #fesSelector {margin-top:20px !important;max-height:90%;}
+body.webview #fesSelector .fesSelCont {overflow-y:scroll; max-height: 400px;}
+
+/* Overlayer oscuranti */
+body.webview #layerpop {width:100%; height:100%;position:fixed;}
+body.webview .layeralert3 {position:fixed;}

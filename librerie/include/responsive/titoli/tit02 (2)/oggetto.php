@@ -1,0 +1,1 @@
+<h2 class="titGeneric02 colorDark3">Loremipsum dolor sit lorem?</h2>

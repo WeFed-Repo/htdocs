@@ -1,0 +1,104 @@
+<script language="javascript">
+<!--
+function functionOnChange(idContainer,idMessaggio,valore){
+	var container = document.getElementById(idContainer);
+	var div = document.getElementById(idMessaggio);
+	var div_testo = '<div class="testoMess2">';
+	var img_inizio_reclami = '<img src="/wscmn/img/str_bg_tempirisposta_top2.gif" alt=""/>';
+	var img_fine ='<img src="/wscmn/img/str_bg_sugg_bottom2.gif" alt=""/>';
+	var div_testo_chiusura ='</div>';
+	
+	if (valore=='Seleziona' || 
+			valore=='Info conto e/o carte' || 
+			valore=='Assistenza navigazione' || 
+			valore=='Info offerta commerciale' || 
+			valore=='Info trading' ||
+			valore=='Suggerimenti' ||
+			valore=='Altro'){
+		container.style.display='none';	
+	} else {
+		container.style.display='block';
+		if(valore=="Modifica email")
+			{
+			var img_inizio = '<img src="/wscmn/img/str_bg_sugg_top2.gif" alt=""/>';
+			messaggio='Per modificare il tuo <b>indirizzo email</b>: <ul><li>clicca su My Home> Identità e sicurezza >  Recapiti > Email</li><li><b>modifica l\'\indirizzo</b> email precedentemente inserito</li><li>inserisci i codici di controllo che riceverai tramite <b>sms e al nuovo indirizzo email</b></li></ul><b>Se desideri ulteriori informazioni, prosegui con la compilazione del form.</b>';
+			}
+		if(valore=="Reclami")
+			{
+			var img_inizio = '<img src="/wscmn/img/str_bg_tempirisposta_top2.gif" alt=""/>';
+			messaggio='In questa pagina puoi inserire un tuo <b>reclamo</b>.<ul><li>L\'Ufficio Reclami fornir&agrave; una risposta via email nel pi&ugrave; breve tempo possibile. Come previsto dalla normativa vigente, la risposta arriver&agrave; comunque <b>entro 30 giorni</b> se il reclamo &egrave; relativo a operazioni e servizi bancari e finanziari (ad es. carte di credito, mutui, conti correnti, etc.). <b>Entro 90 giorni</b>, se il reclamo &egrave; inerente a servizi di investimento.</li><li>Per abbreviare i tempi, ti suggeriamo di fornire il maggior <b>numero di dettagli</b>.</li></ul><br class=\"clear\" />';
+			}
+		div.innerHTML = img_inizio + div_testo + messaggio + div_testo_chiusura + img_fine;
+	}
+}
+-->
+</script>
+
+<div class="tithelp">
+	<div class="helpleft">Lorem ipsum</div>
+	<div align="right" class="BvTableHeaderHelp"><a href="#1" class="hlp">help</a><a href="#1"><img src="/img/ret/ico2or_help2.gif" alt="help" /></a><br class="clear" /></div>
+<br class="clear" /></div>
+<table class="form01">	
+	<tr> 
+		<td width="360" colspan="3" class="uno" id="campo02">Seleziona il tipo di richiesta*</td>
+		<td width="170"><select value="" onChange="functionOnChange('containerMess','testoMess',this.options[this.selectedIndex].value);" name="typeRic2">
+  <option value="Seleziona">Seleziona</option>
+  <option value="Seleziona1">Seleziona1</option>
+  <option value="Modifica email">Modifica email</option>
+  <option value="Reclami">Reclami</option>
+  <option value="Seleziona4">Seleziona4</option>
+  <option value="Seleziona5">Seleziona5</option>
+</select></td>
+	</tr>	
+	<tr class="bianco"> 
+		<td colspan="4">
+		<div class="for_080">
+			<div class="txtvis" id="containerMess">
+				<div id="testoMess">
+				</div>
+     <!--div id="testoMess">
+	 <img alt="" src="/wscmn/img/str_bg_sugg_top2.gif"/>
+	  <div class="testoMess">
+	 	Per modificare il tuo indirizzo email:
+		<ul>
+		<li>accedi all'area privata inserendo i tuoi codici di accesso</li>
+		<li>clicca su Anagrafica e recapiti > modifica indirizzo Email</li>	
+		<li>modifica <strong>l'indirizzo email </strong>precedentemente inserito</li>	
+		<li>inserisci il codice di controllo che riceverai al nuovo indirizzo email</li>		
+		</ul> 
+Per modificare gli indirizzi email associati ai firmatari della firma digitale:
+		<ul>
+		<li>accedi all'area privata inserendo i tuoi <strong>codici di accesso</strong></li>
+		<li>seleziona la voce Elenco Firmatari</li>	
+		<li>scegli il nominativo desiderato e inserirsci il nuovo indirizzo email</li>		
+		</ul>
+		<strong>Se desideri ulteriori informazioni, prosegui con la compilazione del form.</strong>
+	</div>	
+	<img alt="" src="/wscmn/img/str_bg_sugg_bottom2.gif"/>	
+	</div--> 
+	<!--div id="testoMess2">
+	 <img alt="" src="/wscmn/img/str_bg_sugg_top2.gif"/>
+	  <div class="testoMess2">
+	 	<ul>
+		<li>L'Ufficio Reclami fornirà una risposta via email nel più breve tempo possibile.<br />Come previsto dalla normativa vigente, la risposta arriverà comunque entro 30 giorni se il reclamo è relativo a operazioni e servizi bancari e finanziari (ad es. carte di credito, mutui, conti correnti, etc.).<br />Entro 90 giorni, se il reclamo è inerente a servizi di investimento.</li>
+		<li>Per abbreviare i tempi, ti suggeriamo di fornire il maggior numero di dettagli.</li>		
+		</ul>
+		
+	</div>	
+	<img alt="" src="/wscmn/img/str_bg_sugg_bottom2.gif"/>	
+	</div-->	
+     </div> 
+</div>
+		</td>
+</tr>	
+</table>
+
+
+
+
+
+
+
+
+
+

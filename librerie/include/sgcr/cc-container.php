@@ -1,0 +1,1 @@
+<a href="/index.php?page=paginterna.php&pag=richiedile&amp;sez=0" id="sx_richiedile_online" class="rollover fixBg last" title="Richiedile online"><img src="/prepagate/img/s.gif" alt="Richiedile online" title="Richiedile online" border="0" /><span class="hide">Richiedile online</span></a>

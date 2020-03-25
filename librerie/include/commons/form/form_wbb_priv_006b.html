@@ -1,0 +1,30 @@
+<div id="boxconto">	
+
+	<form name="selectForm" action="">
+			<select onchange="loadXMLDoc();" id="selectBal" name="selectBal">
+			
+				<option value="0">00206 - 0000098926 - EUR</option>
+			
+				<option selected="" value="1">01032 - 0000038926 - EUR</option>
+			
+				<option value="2">Nascondi dati</option>
+			
+		</select>
+	</form>
+
+	<table cellspacing="0" cellpadding="0" border="0" id="boxsaldo">
+						<tbody>
+						<tr><td class="valuta">Saldo contabile</td></tr>
+						<tr><td class="importopad bor"><b>1.000.000,00 &euro;</b></td></tr>
+						<tr><td class="valuta bor">Saldo disponibile</td></tr>
+						<tr><td class="importopad"><b>1.000.000,00 &euro;</b></td></tr>
+					</tbody></table>
+
+				<a href="https://www.bpmbanking.it/imprpri/wbOnetoone/nvt/do/banking/WsSearchMovements.do?cf=0.7316519437285873&amp;tabId=nav_priv_iln_situaz_az&amp;OBS_KEY=nav_priv_iln_inter_conto_BPM&amp;OBS_KEY3=nav_priv_iln_movimenti_oggi&amp;categRicerca=ultimoMese&amp;contonum=01032 - 0000038926 - EUR" id="ajaxMovimentiUltimoMese"><img class="btn" title="Movimenti mese in corso" alt="Movimenti mese in corso" src="/INLINEANET/iln/img/btn_movimenti_mese.gif"></a><br>
+				
+				<a href="https://www.bpmbanking.it/imprpri/wbOnetoone/2l/do/banking/WsCoordinate.do?cf=0.9449775404966523&amp;tabId=nav_priv_iln_situaz_az&amp;OBS_KEY=nav_priv_iln_coordinate_bancarie&amp;OBS_KEY3=nav_priv_iln_coordinate_bancarie&amp;contoNum=01032 - 0000038926 - EUR" id="ajaxCoordinateBancarie"><img class="btn" title="Coordinate bancarie" alt="Coordinate bancarie" src="/INLINEANET/iln/img/btn_coordinate.gif"></a><br><br><br>	
+		
+				<a class="estrattoconto" href="javascript:top.callJSP('/wbOnetoone/nvt/do/col/WsSearchLastECAction.do',null,'&amp;keep=Yes&amp;tipoOrdinamento=DD&amp;tipoRicerca=N&amp;nomeRicerca=WsSearchLastECAction&amp;tabId=nav_priv_iln_situaz_az&amp;OBS_KEY=nav_priv_iln_cont_online_abil&amp;OBS_KEY3=nav_priv_iln_archivio_doc')"><img class="btn" title="Ultimo estratto conto" alt="Ultimo estratto conto" src="/INLINEANET/iln/img/btn_ultimo_ec.gif"></a><br>
+				<a href="javascript:top.callJSP('/wbOnetoone/nvt/do/col/WsSearchLast10Action.do',null,'&amp;keep=Yes&amp;statoDocumenti=T&amp;filtroMese=no&amp;tipoOrdinamento=DD&amp;tipoRicerca=N&amp;ultimeDieci=si&amp;nomeRicerca=WsSearchLast10Action&amp;tabId=nav_priv_iln_situaz_az&amp;OBS_KEY=nav_priv_iln_cont_online_abil&amp;OBS_KEY3=nav_priv_iln_archivio_doc')"><img class="btn" title="Ultime 10 contabili" alt="Ultime 10 contabili" src="/INLINEANET/iln/img/btn_ultime_10col.gif"></a>
+		
+			</div>

@@ -1,0 +1,2331 @@
+
+<div class="layeralert2" id="layerAddWatchList" style="display: none;">
+	<div class="head handle" onmouseover="this.style.cursor='move'; $('layerAddWatchList').dragHandle = new Draggable('layerAddWatchList',{handle: 'handle'}, { scroll: window });"><img src="/img/ret/layeralert_x.gif" alt="chiudi" onclick="javascript:chiudiUpdateWatchList();"/></div>
+	<div class="body">	
+	
+	<div id="upWL"></div>
+	<br class="clear"><br>
+	<div id="esitoNeagtivoUpdWL" style="display: none;" class="boxesito negativo">
+		<div class="middle"><span class="imgCont"></span>
+			<div class="text">
+				<div class="row-fluid">
+					<div class="span10">
+						<p><strong>Si &egrave; verificato un errore</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="foot"></div>
+</div>
+
+<div class="boxcomunicaz_dettaglio paddBottomSmall">
+	<span class="titolo">Scheda fondo</span>
+</div>
+<div class="tithelp paddBottomSmall">
+	<div class="flLeft">
+			<a class="fesBackRicerca" href="javascript:;">Torna a ricerca</a>
+	</div>
+	<div class="flRight">
+		dati al 
+							19/12/2017
+					<br class="clear">
+	</div>
+	<br class="clear">
+</div>
+<div class="borderFormRounded margBottomLarge lineBg">
+	<div class="row-fluid ">
+		<div class="span2">
+			<div>
+				<img src="/wscmn/img/ret/img_or_S-invesco.gif"/>
+			</div>
+		</div>		
+		<div class="span10 noMarg">
+			<div class="row-fluid">
+				<div class="span12 titFondi">
+					Invesco Global Income R Dis EUR
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="paddTopSmall">
+						<span class="txthelp flLeft" 
+							  data-tooltip="
+							  		  Il <b>rating</b> &egrave; un <b>giudizio sintetico</b>, rappresentato su una scala da 1 a 5 'corone', 
+									  attribuito da BRating ai prodotti di risparmio gestito (fondi e Sicav). 
+									  Il procedimento parte dall'<b>analisi qualitativa</b> delle caratteristiche d'<b>investimento</b> 
+									  per giungere a una valutazione <b>quantitativa</b> basata sulla posizione del singolo <b>fondo</b> 
+									  nella categoria di appartenenza, ordinata sulla base di parametri di rendimento e rischio.">
+						Rating FIDA</span> 
+						<div class="flRight">						
+																																																		<img src="/wscmn/img/ret/ico1gr_corona.gif"/><img src="/wscmn/img/ret/ico1gr_corona.gif"/>
+								<img src="/wscmn/img/ret/ico1gr_corona.gif"/><img src="/wscmn/img/ret/ico1gr_corona.gif"/>
+								<img src="/wscmn/img/ret/ico1gr_corona.gif"/>
+													</div>
+					</div>
+				</div>
+				<div class="span8">
+					<div>
+																							<!-- 
+						<a class="btnFondi" href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/do/FMP/buyFundSelect.action?codIsin=LU1097689878&divisa=EUR&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto'" onclick="javascript:;" title="Compra">Compra</a>
+						 -->
+						<a class="btnFondi" href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/action/investimenti/BuyFundSelect.action?codInt=44338910&codIsin=LU1097689878&divisa=EUR&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto_resp'" onclick="javascript:;" title="Compra">Compra</a>
+						
+										</div>
+					<div class="flLeft paddLeftSmall">					
+						<a href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/jsp/FMP/alert/impostaAlertFondiSicav.do?isin=LU1097689878&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_sf_alert'" onclick="javascript:;" alt="Imposta alert" title="Imposta alert" class="campana"></a>					
+						<a href="javascript:updateWatchList();" alt="Aggiungi a watchlist" title="Aggiungi a watchlist" class="stella"></a>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>		
+</div>
+<br class="clear" />
+<div class="divtabellatabs autoWidth">
+<table class="tabellatabs" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="oninizio"></td>
+	<td class="on" isselected="true">
+		<a title="Sintesi" href="javascript:;" data-tabid="1">Sintesi</a>
+	</td>
+	<td class="on2b"> </td>
+	<td class="off">
+		<a title="Grafico e rendimenti" href="javascript:;" data-tabid="2">Grafico e rendimenti</a>
+	</td>
+	<td class="off2"> </td>
+	<td class="off">
+		<a title="Rating e rischio" href="javascript:;" data-tabid="3">Rating e Rischio</a>
+	</td>
+	<td class="off2"> </td>
+	<td class="off">
+		<a title="Composizione" href="javascript:;" data-tabid="4">Composizione</a>
+	</td>
+	<td class="off2"> </td>
+	<td class="off">
+		<a title="Societ&agrave; di gestione" href="javascript:;" data-tabid="5">Societ&agrave; di gestione</a>
+	</td>
+	<td class="off2"></td>
+</tr>
+</table>
+<!-- primo tab-->
+	<div class="divtabellacont" id="tabAlert1">
+		<div class="row-fluid">
+		<div class="span6">
+			<div class="borderRoundedNopadd">
+			<h3>Grafico</h3>
+			<div class="filettoGenericoOrizzontale02"></div>
+<div id="grafico_sintesi"></div>
+
+<script type="text/javascript">		
+
+	var ultimaIdWL;
+
+	function formatDateAsyyyyMM(inputDate) {
+		var sepPos = inputDate.indexOf(' ');
+		if (sepPos > -1) {
+			inputDate = inputDate.substring(0, sepPos);
+		}
+		var dateValues = inputDate.split('-');
+		var year = parseFloat(dateValues[0]);
+		var month = parseFloat(dateValues[1]) - 1;
+		var day = parseFloat(dateValues[2]);
+		return new Date(year, month, day);		
+	}
+	
+	var nome_indice = 'Ben.Ritorno Assoluto (Media Volatilità)';
+	dati_sintesi = [];
+	var index = 0;
+	var valuesAreValid = false;
+	var indexesAreValid = false;
+	
+	
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-01-06 00:00:00.0');
+		sintesi.valore = '10.1972';
+		sintesi.indice = '10.1972';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.1972';
+		//sintesi.indicedollari = '10.1972';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-01-23 00:00:00.0');
+		sintesi.valore = '10.1352';
+		sintesi.indice = '10.1403';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.1352';
+		//sintesi.indicedollari = '10.1403';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-02-07 00:00:00.0');
+		sintesi.valore = '10.1539';
+		sintesi.indice = '10.2025';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.1539';
+		//sintesi.indicedollari = '10.2025';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-02-24 00:00:00.0');
+		sintesi.valore = '10.2535';
+		sintesi.indice = '10.3646';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.2535';
+		//sintesi.indicedollari = '10.3646';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-03-14 00:00:00.0');
+		sintesi.valore = '10.214';
+		sintesi.indice = '10.2798';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.214';
+		//sintesi.indicedollari = '10.2798';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-03-30 00:00:00.0');
+		sintesi.valore = '10.2358';
+		sintesi.indice = '10.3276';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.2358';
+		//sintesi.indicedollari = '10.3276';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-04-19 00:00:00.0');
+		sintesi.valore = '10.216';
+		sintesi.indice = '10.3367';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.216';
+		//sintesi.indicedollari = '10.3367';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-05-05 00:00:00.0');
+		sintesi.valore = '10.3906';
+		sintesi.indice = '10.2754';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3906';
+		//sintesi.indicedollari = '10.2754';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-05-22 00:00:00.0');
+		sintesi.valore = '10.4154';
+		sintesi.indice = '10.2001';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.4154';
+		//sintesi.indicedollari = '10.2001';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-06-12 00:00:00.0');
+		sintesi.valore = '10.3164';
+		sintesi.indice = '10.2625';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3164';
+		//sintesi.indicedollari = '10.2625';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-07-07 00:00:00.0');
+		sintesi.valore = '10.297';
+		sintesi.indice = '10.1289';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.297';
+		//sintesi.indicedollari = '10.1289';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-07-21 00:00:00.0');
+		sintesi.valore = '10.3664';
+		sintesi.indice = '10.1369';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3664';
+		//sintesi.indicedollari = '10.1369';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-08-11 00:00:00.0');
+		sintesi.valore = '10.3454';
+		sintesi.indice = '10.0625';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3454';
+		//sintesi.indicedollari = '10.0625';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-09-01 00:00:00.0');
+		sintesi.valore = '10.2551';
+		sintesi.indice = '10.0869';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.2551';
+		//sintesi.indicedollari = '10.0869';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-09-20 00:00:00.0');
+		sintesi.valore = '10.3128';
+		sintesi.indice = '10.0811';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3128';
+		//sintesi.indicedollari = '10.0811';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-10-06 00:00:00.0');
+		sintesi.valore = '10.3985';
+		sintesi.indice = '10.1968';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3985';
+		//sintesi.indicedollari = '10.1968';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-10-24 00:00:00.0');
+		sintesi.valore = '10.4124';
+		sintesi.indice = '10.2086';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.4124';
+		//sintesi.indicedollari = '10.2086';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-11-13 00:00:00.0');
+		sintesi.valore = '10.4212';
+		sintesi.indice = '10.2712';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.4212';
+		//sintesi.indicedollari = '10.2712';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-11-29 00:00:00.0');
+		sintesi.valore = '10.4454';
+		sintesi.indice = '10.2554';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.4454';
+		//sintesi.indicedollari = '10.2554';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+			var sintesi = {};
+		sintesi.chiave = formatDateAsyyyyMM('2017-12-15 00:00:00.0');
+		sintesi.valore = '10.3787';
+		sintesi.indice = '10.3213';
+		sintesi.valuta = 'EUR';
+		if(false){
+		sintesi.valoredollari = '10.3787';
+		//sintesi.indicedollari = '10.3213';
+		}
+		
+		if (sintesi.valore != 0.0) {
+			valuesAreValid = true;
+		}
+		if (sintesi.indice != 0.0) {
+			indexesAreValid = true;
+		}
+		dati_sintesi.push(sintesi);																
+	
+	if (!valuesAreValid || !indexesAreValid) {
+		dati_sintesi = [];
+	}
+
+
+	function updateWatchList() {
+	
+		var numero_casuale=Math.random();
+		ultimaIdWL = -1;
+		
+		var url= cgi_script + '/FMP/fida/addToWatchListJsp.jsp?cf='+numero_casuale;
+		var param = {listW : "listW"};
+		
+		$.ajax({url: url,	type: "GET",	data: param,	dataType: "html",	success: function(t) {$('upWL').innerHTML=t;},	error: function() {$('#esitoNeagtivoUpWL').css("display","");}	});
+
+		openPopOverLayer('layerAddWatchList', 'floating', 1);
+	
+	}
+	
+	function addToWl() {
+		var numero_casuale=Math.random();
+		
+		var index =  document.getElementById("idWL").selectedIndex;
+   		ultimaIdWL = document.getElementById("idWL").options[index].value;
+   		var descWL = document.getElementById("idWL").options[index].text;
+   		
+		var param = {addToWL : "addToWL", idWL : ultimaIdWL, isin : "LU1097689878", nameWL : descWL};
+		
+		var url= cgi_script + '/FMP/insertFundWL.do?cf='+numero_casuale;
+
+		$.ajax({url: url,	type: "POST",	data: param,	dataType: "html",	success: function(t) {$('upWL').innerHTML=t;},	error: function() {$('#esitoNeagtivoUpWL').css("display","");}	});
+
+	}
+
+	function chiudiUpdateWatchList(){
+		$('#esitoNeagtivoUpdWL').css("display","none");
+		closeAlert('layerAddWatchList');
+		unobscurateAll(1);
+		
+	}
+	
+	function forwardWL(){
+		 	
+		 	param = "OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_watchlist_fs&newWL="+ultimaIdWL;
+			callJSP('/wbOnetoone/2l/do/FMP/watchListFund.do',null,param);
+			
+	}	
+
+</script>
+
+			</div>
+		</div>
+		<div class="span6">
+			<h3 class="titFondib">Sintesi</h3>
+			<div class="row-fluid">
+				<div class="span6">
+					<strong>Tipologia strumento</strong>
+					<br />
+						Flessibili
+					<br/><br/>
+				</div>
+				<div class="span6">
+					<strong>ISIN</strong>
+					<br />
+						LU1097689878
+					<br/><br/>
+				</div>		
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<strong>Categoria Assogestioni</strong>
+					<br />
+						Fondi Flessibili
+					<br/><br/>
+				</div>	
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<strong>Categoria Brating</strong>
+					<br />
+						Ritorno Assoluto (Media Volatilita')
+					<br/><br/>
+				</div>	
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<strong>Benchmark ufficiale</strong>
+					<br />
+											40%
+						MSCI AC World
+											30%
+						The BofA ML EURO HIGH YIELD
+											30%
+						The BofA ML Sterling Corporate
+										<br/><br/>
+				</div>	
+			</div>
+			<div class="filettoGenericoOrizzontale02 paddBottomSmall" style="width:96%"></div>
+			<div class="row-fluid">
+				<table width="100%">
+					<tr>
+						<td>
+							<strong>Data di lancio</strong>
+						</td>
+						<td>
+															12/11/2014
+													</td>
+						<td>							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>Patrimonio del fondo (mln)</strong>
+						</td>
+						<td>
+															48,589
+													</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span data-tooltip="&Egrave; la valuta nella quale &egrave; espresso il 
+												<b>valore quota/NAV</b> del fondo." 
+												class="txthelp flLeft">
+								<strong>Valuta di riferimento</strong>
+							</span>
+						</td>
+						<td>
+															EUR
+													</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span data-tooltip="&Egrave; la valuta nella quale &egrave; 
+												<b>denominato il fondo</b>. 
+											    Pu&ograve; essere diversa dalla valuta 
+											    di riferimento." 
+											    class="txthelp flLeft">
+								<strong>Valuta base</strong>
+							</span>
+						</td>
+						<td>
+															EUR
+													</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span data-tooltip="Fondo che prevede la <b>copertura valutaria</b> 
+												dell'investimento per ridurre 
+											    l&apos;effetto delle fluttuazioni del tasso di 
+											    cambio tra valuta di riferimento
+											    e valuta di sottoscrizione che pu&ograve; 
+											    influenzarne il rendimento." 
+											    class="txthelp flLeft">
+								<strong>Valuta coperta</strong>
+							</span>	
+						</td>
+						<td>
+															si
+													</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span data-tooltip="I fondi a distribuzione <b>erogano</b> 
+												periodicamente ai sottoscrittori i <b>proventi 
+												realizzati</b>. 
+											    Al contrario, i fondi ad accumulazione 
+											    non distribuiscono i proventi realizzati 
+											    ma reinvestono 
+											    nel fondo gli utili da compravendita, 
+											    gli interessi e i dividendi incassati." 
+											    class="txthelp flLeft">
+								<strong>Distribuzione dei proventi</strong>
+							</span>
+						</td>
+						<td>
+															si
+													</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strong>Periodicita dividendo</strong></td>
+						<td>
+															Trimestrale
+													</td>
+						<td>							
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<span data-tooltip="Indica percentualmente la parte del 
+												<b>portafoglio</b> del fondo <b>investita</b> 
+												in <b>Titoli di Stato italiani</b> 
+												ed <b>esteri</b> inseriti nella c.d. white 
+												list che godono di un'aliquota di tassazione 
+												sul capital gain 
+												del 12,50% anzich&egrave; di quella 
+												ordinaria del 26%." 
+												class="txthelp flLeft">
+								<strong>Fiscalita (% white list)</strong>
+							</span>	
+						</td>						
+						<td>
+							10,024														
+						</td>
+						<td></td>
+					</tr>				
+				</table>
+			</div>
+		</div>		
+	</div>
+		<br>
+		<br class="clear"/>
+		<div class="filettoGenericoOrizzontale02 clear"></div><br/>
+		<div class="row-fluid">
+		<div class="span6">
+			<h3 class="titFondi">Valore quota/NAV e rendimento</h3>
+			<p>
+				<strong>Val quota/NAV</strong> al 
+				<span>
+											18/12/2017
+									</span>
+			</p>
+			<p class="lastPrice">
+				<span class="lastPriceLarge">
+											10,41 EUR
+									</span>
+			</p>
+			<div class="borderRoundedNopadd">
+			<h3>Rendimenti</h3>
+			<div class="filettoGenericoOrizzontale02"></div>
+				<table class="bggrigioFondi">
+					<tr>
+						<td class="fondo"></td>
+						<td class="fondo">YTD</td>
+						<td class="fondo">1A</td>
+						<td class="fondo">3A</td>
+						<td class="fondo">5A</td>
+					</tr>
+					<tr>
+						<td><strong>Fondo</strong></td>
+						<td>
+							<strong>
+																	7,397							
+															</strong>
+						</td>
+						<td>
+							<strong>
+																	7,332
+															</strong>
+						</td>
+						<td>
+							<strong>
+																	18,872
+															</strong>
+						</td>
+						<td>
+							<strong>
+																	-
+															</strong>
+						</td>
+					</tr>
+					<tr>
+						<td class="ultimo">Categoria</td>
+													<td class="ultimo">
+																	1,61
+															</td>
+							<td class="ultimo">
+																	1,266
+															</td>
+							<td class="ultimo">
+																	15,299
+															</td>
+							<td class="ultimo">
+																	27,468
+															</td>
+											</tr>						
+				</table>
+			</div>
+		</div>
+					<div class="span6">
+				<h3 class="titFondi">Asset allocation %
+					<span class="icoTit" data-tooltip="Indica la <b>ripartizione</b> in percentuale degli 
+													   <b>strumenti finanziari</b> 
+													   presenti nel portafoglio 
+													   del fondo tra le principali asset class: azioni, 
+													   obbligazioni, liquidit&agrave;.">
+						<img class="help" src="/img/ret/ico2or_help2.gif">
+					</span>
+				</h3>		
+				<div id="grafico_assetallocation"></div>
+				<script type="text/javascript">
+				var data_assetallocation = [
+				{
+				    chiave: "Azioni",
+				    valore: 35.32,
+				    color: '#8E0C0C'
+				},
+				{
+				   chiave: "Obbligazioni",
+				   valore: 59.53,
+				   color: '#003262'
+				},
+				{
+				    chiave: "Liquidita'",
+				    valore: 5.15,
+				    color: '#ABB9BF'
+				},
+				{
+				    chiave: "Altro",
+				    valore: 0,
+				    color: '#333333'
+				}
+				];
+				</script>			
+			</div>
+			</div>
+		<br/>
+		<div class="filettoGenericoOrizzontale02">
+		</div>
+		<br/>
+		<div class="row-fluid">
+			<div class="span12">
+				<h3 class="titFondi">Politica di gestione</h3>					
+											Il Comparto intende conseguire il suo obiettivo investendo principalmente in un'allocazione flessibile a titoli di debito e azioni globali. I titoli di debito possono essere investment grade, non investment grade, privi di rating o titoli garantiti da attivita'. I titoli di debito possono essere emessi da societa' di tutto il mondo (comprese quelle dei mercati emergenti). Il Comparto puo' investire anche in liquidita' e suoi equivalenti, strumenti del mercato monetario e altri titoli trasferibili dell'universo d'investimento generale. I derivati utilizzati dal Comparto possono comprendere derivati su credito, tassi, azioni e valute e possono essere impiegati per acquisire posizioni lunghe e corte. Gli investimenti non denominati in euro potranno essere coperti in euro a discrezione del Consulente per gli investimenti.
+									<br/><br/>
+			</div>	
+		</div>
+		<br/>
+		<div class="filettoGenericoOrizzontale02"></div><br/>
+		<h3 class="titFondi">Minimi di investimento</h3>
+		<div class="row-fluid">	
+		<div class="span6">		
+			<div class="borderRoundedNopadd">
+			<h3>Investimento in unica soluzione (PIC)</h3>
+			<div class="filettoGenericoOrizzontale02"></div>
+				<table class="bggrigioFondi">					
+										<tr>
+						<td><strong>Investimento minimo iniziale</strong></td>
+						<td class="right">1000 EUR</td>
+						
+					</tr>
+					<tr>
+						<td class="ultimo"><strong>Investimento minimo successivo</strong></td>
+						<td class="ultimo right">0 EUR</td>
+					</tr>
+									</table>
+			</div>
+		</div>
+		
+		<!-- non visualizzare per comparti non abilitati al PAC-->
+		
+		<div class="span6">
+			<div class="borderRoundedNopadd">
+			<h3>Piano di accumulo (PAC)</h3>
+			<div class="filettoGenericoOrizzontale02"></div>
+				<table class="bggrigioFondi">
+											<tr>
+							<td>
+								Per questo fondo non &egrave; prevista 
+								la modalit&agrave; di sottoscrizione PAC
+							</td>
+						</tr>
+									</table>
+			</div>
+		</div>		
+	</div>
+	<!-- fine -->
+		<br/>
+		<div class="filettoGenericoOrizzontale02"></div><br/>
+		<h3 class="titFondi">Costi  e commissioni</h3>
+		<div class="row-fluid">
+	<div class="span6">
+		<table width="100%">
+			<tr>
+				<td colspan="2">
+					<strong>Commissioni</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>					
+					<span data-tooltip="&Egrave; la <b>commissione</b> trattenuta annualmente dalla societ&agrave; di gestione 
+									    o dalla Sicav come remunerazione per l'<b>attivit&agrave; di gestione</b>. &Egrave; calcolata giornalmente 
+									    in percentuale sul patrimonio del fondo 
+					                    o del comparto Essendo prelevata direttamente, il valore quota (fondi di diritto italiano) 
+					                    o il NAV (Sicav o fondi di diritto estero) sono pubblicati al netto della commissione." 
+					    				class="txthelp flLeft">
+						<span class="flLeft">Commissione di gestione annuale</span>	
+					</span>
+				</td>
+				<td>
+					<strong>
+																				1,95%
+																		</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>Commissione di ingresso max da prospetto</td>
+				<td>
+					<strong>					
+													- 
+											</strong>
+				</td>
+			</tr>
+							<tr>
+					<td class="colorBank">Commissione di ingresso WeBank</td>
+					<td class="colorBank">
+						<strong>						
+																							Gratis
+																					</strong>
+					</td>
+				</tr>
+						<tr>
+				<td class="">Commissione di performance</td>
+				<td class="">
+					<strong>
+													- 
+											</strong>
+				</td>
+			</tr>	
+			<tr>
+				<td class="">Commissione di uscita </td>
+				<td class="">
+					<strong>					
+													Zero
+											</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="">Commissione di switch</td>
+				<td class="">
+					<strong>					
+													Zero
+											</strong>
+				</td>
+			</tr>
+					</table>
+	</div>
+	<div class="span6">
+		<table width="100%">
+			<tr>
+				<td colspan="2">					
+					<span data-tooltip="<b>Spese amministrative</b> trattenute in misura fissa dal soggetto incaricato dei pagamenti (banca
+										corrispondente nel caso di Sicav e fondi diritto estero) o dalle societ&agrave; di gestione 
+										(nel caso di fondi di diritto italiano) per l'<b>esecuzione</b> di ogni <b>singola operazione</b> 
+										(sottoscrizione, rimborso, stacco cedola)."
+										class="txthelp flLeft">
+						<strong class="flLeft">Diritti Fissi</strong>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Sottoscrizione PIC</td>
+				<td>
+											10,00 EUR </span></strong>
+									</td>
+			</tr>
+			<tr>
+				<td>Rimborso</td>
+				<td>
+											10,00 EUR
+									</td>
+			</tr>
+						<tr><td></td><td></td></tr>			
+			<tr>
+									<td>Switch</td>
+					<td>Zero</td>
+							</tr>
+			<tr>
+				<td>Stacco cedola</td>
+				<td>
+											1,50 EUR
+									</td>
+			</tr>			
+		</table>
+	</div>
+</div>
+	<br/>
+	<div class="filettoGenericoOrizzontale02">
+	</div>
+	<br/>
+	<script type="text/javascript">societa=800</script>
+	<script type="text/javascript">cfam='-'</script>
+	<script type="text/javascript">codSocieta=2046</script>
+	<h3 class="titFondi">Tempi</h3>
+	<div id="tempi">        
+    </div>	
+	<br/>
+	<div class="filettoGenericoOrizzontale02">	
+	</div>
+		<br/>
+	<!--br/>
+	<h3 class="titFondi">Note operative</h3>
+	<div class="row-fluid">
+	<div class="span12">
+		Carmignac Gestion: lo switch tra i Fondi di diritto francese (codice Isin che inizia con FR) non &egrave; consentito in quanto ogni Fondo &egrave; regolato da un prospetto informativo individuale.
+		Sicav Carmignac Portfolio: lo switch tra i comparti della Sicav di dirittto lussemburghese (codice Isin che inizia con LU) &egrave; consentito.
+	</div>
+	</div>
+	<br/>
+	<div class="filettoGenericoOrizzontale02"></div><br/>
+	<h3 class="titFondi">Ultimi fondi visualizzati</h3>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="borderFormRounded bggrigioFondi">			
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="borderFormRounded">
+							<p class="titFondoConfronto"><strong>JPM Income Opportunity A Acc EUR Hdg</strong></p>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall"></div>
+							<span>Rating FIDA</span>
+							<div class="paddTopSmall paddBottomSmall">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+							</div>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall"></div>
+							<div class="txtAlCenter"><a href="#" class="">Confronta</a></div>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="borderFormRounded">
+							<p class="titFondoConfronto">
+								<strong>Templeton Global</strong>
+                       		</p>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall">
+							</div>
+							<span>Rating FIDA</span>
+							<div class="paddTopSmall paddBottomSmall">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+							</div>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall">
+							</div>
+							<div class="txtAlCenter">
+								<a href="#" class="">Confronta</a>
+							</div>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="borderFormRounded">
+							<p class="titFondoConfronto"><strong>Templeton Global
+                       </strong></p>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall"></div>
+							<span>Rating FIDA</span>
+							<div class="paddTopSmall paddBottomSmall">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+								<img src="/wscmn/img/ret/ico1gr_corona.gif">
+							</div>
+							<div class="filettoGenericoOrizzontale02 paddBottomSmall">
+							</div>
+							<div class="txtAlCenter">
+								<a href="#" class="">Confronta</a>
+							</div>
+						</div>
+					</div>									
+				</div>
+			</div>
+		</div>
+	</div-->	
+	</div>
+	
+	<script type="text/javascript">
+		
+		var serieYTD = {"serieYTD":[{"chiave":"2017-01-10 00:00:00","indice":10.1889,"valuta":"EUR","valore":10.1889},{"chiave":"2017-01-16 00:00:00","indice":10.1939,"valuta":"EUR","valore":10.1804},{"chiave":"2017-01-23 00:00:00","indice":10.1352,"valuta":"EUR","valore":10.1352},{"chiave":"2017-01-27 00:00:00","indice":10.1746,"valuta":"EUR","valore":10.1465},{"chiave":"2017-02-02 00:00:00","indice":10.1288,"valuta":"EUR","valore":10.1028},{"chiave":"2017-02-13 00:00:00","indice":10.2793,"valuta":"EUR","valore":10.1863},{"chiave":"2017-02-17 00:00:00","indice":10.2969,"valuta":"EUR","valore":10.2264},{"chiave":"2017-02-24 00:00:00","indice":10.3595,"valuta":"EUR","valore":10.2535},{"chiave":"2017-03-03 00:00:00","indice":10.3395,"valuta":"EUR","valore":10.2461},{"chiave":"2017-03-10 00:00:00","indice":10.2647,"valuta":"EUR","valore":10.2299},{"chiave":"2017-03-17 00:00:00","indice":10.2915,"valuta":"EUR","valore":10.2505},{"chiave":"2017-03-24 00:00:00","indice":10.2588,"valuta":"EUR","valore":10.1849},{"chiave":"2017-03-30 00:00:00","indice":10.3224,"valuta":"EUR","valore":10.2358},{"chiave":"2017-04-05 00:00:00","indice":10.3446,"valuta":"EUR","valore":10.2555},{"chiave":"2017-04-11 00:00:00","indice":10.3763,"valuta":"EUR","valore":10.262},{"chiave":"2017-04-21 00:00:00","indice":10.3544,"valuta":"EUR","valore":10.2411},{"chiave":"2017-04-27 00:00:00","indice":10.3161,"valuta":"EUR","valore":10.3439},{"chiave":"2017-05-05 00:00:00","indice":10.2703,"valuta":"EUR","valore":10.3906},{"chiave":"2017-05-12 00:00:00","indice":10.3065,"valuta":"EUR","valore":10.4405},{"chiave":"2017-05-18 00:00:00","indice":10.2121,"valuta":"EUR","valore":10.3714},{"chiave":"2017-05-24 00:00:00","indice":10.2249,"valuta":"EUR","valore":10.4326},{"chiave":"2017-06-01 00:00:00","indice":10.2403,"valuta":"EUR","valore":10.3083},{"chiave":"2017-06-12 00:00:00","indice":10.2574,"valuta":"EUR","valore":10.3164},{"chiave":"2017-06-19 00:00:00","indice":10.3005,"valuta":"EUR","valore":10.3417},{"chiave":"2017-07-03 00:00:00","indice":10.1605,"valuta":"EUR","valore":10.3214},{"chiave":"2017-07-11 00:00:00","indice":10.1207,"valuta":"EUR","valore":10.3037},{"chiave":"2017-07-17 00:00:00","indice":10.1784,"valuta":"EUR","valore":10.3684},{"chiave":"2017-07-21 00:00:00","indice":10.1318,"valuta":"EUR","valore":10.3664},{"chiave":"2017-07-28 00:00:00","indice":10.0922,"valuta":"EUR","valore":10.3771},{"chiave":"2017-08-04 00:00:00","indice":10.1077,"valuta":"EUR","valore":10.4142},{"chiave":"2017-08-15 00:00:00","indice":10.0955,"valuta":"EUR","valore":10.365},{"chiave":"2017-08-25 00:00:00","indice":10.0530,"valuta":"EUR","valore":10.368},{"chiave":"2017-09-01 00:00:00","indice":10.0818,"valuta":"EUR","valore":10.2551},{"chiave":"2017-09-11 00:00:00","indice":10.0768,"valuta":"EUR","valore":10.2436},{"chiave":"2017-09-18 00:00:00","indice":10.0837,"valuta":"EUR","valore":10.2958},{"chiave":"2017-09-22 00:00:00","indice":10.0759,"valuta":"EUR","valore":10.3337},{"chiave":"2017-09-29 00:00:00","indice":10.1345,"valuta":"EUR","valore":10.359},{"chiave":"2017-10-06 00:00:00","indice":10.1917,"valuta":"EUR","valore":10.3985},{"chiave":"2017-10-13 00:00:00","indice":10.1915,"valuta":"EUR","valore":10.3808},{"chiave":"2017-10-20 00:00:00","indice":10.2045,"valuta":"EUR","valore":10.4025},{"chiave":"2017-10-27 00:00:00","indice":10.2894,"valuta":"EUR","valore":10.4286},{"chiave":"2017-11-03 00:00:00","indice":10.3042,"valuta":"EUR","valore":10.4804},{"chiave":"2017-11-13 00:00:00","indice":10.2660,"valuta":"EUR","valore":10.4212},{"chiave":"2017-11-20 00:00:00","indice":10.2468,"valuta":"EUR","valore":10.3788},{"chiave":"2017-11-27 00:00:00","indice":10.2156,"valuta":"EUR","valore":10.4093},{"chiave":"2017-12-04 00:00:00","indice":10.2515,"valuta":"EUR","valore":10.3804},{"chiave":"2017-12-08 00:00:00","indice":10.2940,"valuta":"EUR","valore":10.3888},{"chiave":"2017-12-15 00:00:00","indice":10.3162,"valuta":"EUR","valore":10.3787}]};
+		var serieFiveYear = {"serieFiveYear":[{"chiave":"2014-11-19 00:00:00","indice":9.9900,"valuta":"EUR","valore":9.99},{"chiave":"2014-12-08 00:00:00","indice":10.0980,"valuta":"EUR","valore":10.12},{"chiave":"2014-12-29 00:00:00","indice":10.1674,"valuta":"EUR","valore":10.11},{"chiave":"2015-01-16 00:00:00","indice":10.4393,"valuta":"EUR","valore":10.17},{"chiave":"2015-02-05 00:00:00","indice":10.5736,"valuta":"EUR","valore":10.44},{"chiave":"2015-02-24 00:00:00","indice":10.6850,"valuta":"EUR","valore":10.6399},{"chiave":"2015-03-13 00:00:00","indice":10.9828,"valuta":"EUR","valore":10.6957},{"chiave":"2015-03-31 00:00:00","indice":10.9512,"valuta":"EUR","valore":10.7052},{"chiave":"2015-04-20 00:00:00","indice":11.0526,"valuta":"EUR","valore":10.8068},{"chiave":"2015-05-08 00:00:00","indice":10.8075,"valuta":"EUR","valore":10.631},{"chiave":"2015-05-28 00:00:00","indice":10.9280,"valuta":"EUR","valore":10.7711},{"chiave":"2015-06-17 00:00:00","indice":10.6804,"valuta":"EUR","valore":10.3939},{"chiave":"2015-07-08 00:00:00","indice":10.6792,"valuta":"EUR","valore":10.3292},{"chiave":"2015-07-30 00:00:00","indice":10.8324,"valuta":"EUR","valore":10.4817},{"chiave":"2015-08-19 00:00:00","indice":10.7060,"valuta":"EUR","valore":10.412},{"chiave":"2015-09-04 00:00:00","indice":10.4520,"valuta":"EUR","valore":10.0348},{"chiave":"2015-09-25 00:00:00","indice":10.4196,"valuta":"EUR","valore":9.9559},{"chiave":"2015-10-15 00:00:00","indice":10.5337,"valuta":"EUR","valore":10.0836},{"chiave":"2015-11-27 00:00:00","indice":10.9460,"valuta":"EUR","valore":10.2706},{"chiave":"2015-12-16 00:00:00","indice":10.6812,"valuta":"EUR","valore":9.9482},{"chiave":"2016-01-12 00:00:00","indice":10.5571,"valuta":"EUR","valore":9.7972},{"chiave":"2016-01-28 00:00:00","indice":10.4610,"valuta":"EUR","valore":9.6604},{"chiave":"2016-02-16 00:00:00","indice":10.3906,"valuta":"EUR","valore":9.5063},{"chiave":"2016-03-03 00:00:00","indice":10.6897,"valuta":"EUR","valore":9.7554},{"chiave":"2016-03-22 00:00:00","indice":10.6809,"valuta":"EUR","valore":9.8437},{"chiave":"2016-04-11 00:00:00","indice":10.6051,"valuta":"EUR","valore":9.8208},{"chiave":"2016-04-29 00:00:00","indice":10.6846,"valuta":"EUR","valore":9.9835},{"chiave":"2016-05-17 00:00:00","indice":10.6777,"valuta":"EUR","valore":9.9333},{"chiave":"2016-06-07 00:00:00","indice":10.8092,"valuta":"EUR","valore":9.954},{"chiave":"2016-06-24 00:00:00","indice":10.8086,"valuta":"EUR","valore":9.8419},{"chiave":"2016-07-13 00:00:00","indice":11.0185,"valuta":"EUR","valore":9.9841},{"chiave":"2016-07-29 00:00:00","indice":11.0446,"valuta":"EUR","valore":10.0531},{"chiave":"2016-08-18 00:00:00","indice":11.0351,"valuta":"EUR","valore":10.1361},{"chiave":"2016-09-06 00:00:00","indice":11.0889,"valuta":"EUR","valore":10.1399},{"chiave":"2016-09-26 00:00:00","indice":11.0157,"valuta":"EUR","valore":10.0287},{"chiave":"2016-10-12 00:00:00","indice":11.0565,"valuta":"EUR","valore":10.0227},{"chiave":"2016-11-09 00:00:00","indice":11.0612,"valuta":"EUR","valore":9.9164},{"chiave":"2016-12-05 00:00:00","indice":11.1136,"valuta":"EUR","valore":9.916},{"chiave":"2016-12-29 00:00:00","indice":11.2996,"valuta":"EUR","valore":10.1236},{"chiave":"2017-01-23 00:00:00","indice":11.2496,"valuta":"EUR","valore":10.1352},{"chiave":"2017-02-13 00:00:00","indice":11.4096,"valuta":"EUR","valore":10.1863},{"chiave":"2017-03-03 00:00:00","indice":11.4763,"valuta":"EUR","valore":10.2461},{"chiave":"2017-03-24 00:00:00","indice":11.3868,"valuta":"EUR","valore":10.1849},{"chiave":"2017-04-11 00:00:00","indice":11.5172,"valuta":"EUR","valore":10.262},{"chiave":"2017-05-05 00:00:00","indice":11.3995,"valuta":"EUR","valore":10.3906},{"chiave":"2017-05-24 00:00:00","indice":11.3492,"valuta":"EUR","valore":10.4326},{"chiave":"2017-06-19 00:00:00","indice":11.4331,"valuta":"EUR","valore":10.3417},{"chiave":"2017-07-17 00:00:00","indice":11.2976,"valuta":"EUR","valore":10.3684},{"chiave":"2017-08-04 00:00:00","indice":11.2191,"valuta":"EUR","valore":10.4142},{"chiave":"2017-09-01 00:00:00","indice":11.1904,"valuta":"EUR","valore":10.2551},{"chiave":"2017-09-22 00:00:00","indice":11.1838,"valuta":"EUR","valore":10.3337},{"chiave":"2017-10-13 00:00:00","indice":11.3121,"valuta":"EUR","valore":10.3808},{"chiave":"2017-11-03 00:00:00","indice":11.4371,"valuta":"EUR","valore":10.4804},{"chiave":"2017-11-27 00:00:00","indice":11.3389,"valuta":"EUR","valore":10.4093},{"chiave":"2017-12-15 00:00:00","indice":11.4505,"valuta":"EUR","valore":10.3787}]};
+		var serieThreeYear = {"serieThreeYear":[{"chiave":"2015-01-06 00:00:00","indice":10.0700,"valuta":"EUR","valore":10.07},{"chiave":"2015-02-05 00:00:00","indice":10.4628,"valuta":"EUR","valore":10.44},{"chiave":"2015-03-09 00:00:00","indice":10.7310,"valuta":"EUR","valore":10.6594},{"chiave":"2015-04-08 00:00:00","indice":10.8805,"valuta":"EUR","valore":10.7793},{"chiave":"2015-05-08 00:00:00","indice":10.6942,"valuta":"EUR","valore":10.631},{"chiave":"2015-06-10 00:00:00","indice":10.5498,"valuta":"EUR","valore":10.4268},{"chiave":"2015-07-14 00:00:00","indice":10.6915,"valuta":"EUR","valore":10.4742},{"chiave":"2015-08-19 00:00:00","indice":10.5938,"valuta":"EUR","valore":10.412},{"chiave":"2015-09-18 00:00:00","indice":10.3080,"valuta":"EUR","valore":10.0352},{"chiave":"2015-10-28 00:00:00","indice":10.6392,"valuta":"EUR","valore":10.2338},{"chiave":"2015-12-16 00:00:00","indice":10.5693,"valuta":"EUR","valore":9.9482},{"chiave":"2016-01-22 00:00:00","indice":10.4011,"valuta":"EUR","valore":9.6591},{"chiave":"2016-02-22 00:00:00","indice":10.4325,"valuta":"EUR","valore":9.6631},{"chiave":"2016-03-22 00:00:00","indice":10.5690,"valuta":"EUR","valore":9.8437},{"chiave":"2016-04-25 00:00:00","indice":10.6482,"valuta":"EUR","valore":10.0081},{"chiave":"2016-05-24 00:00:00","indice":10.6565,"valuta":"EUR","valore":9.9811},{"chiave":"2016-06-24 00:00:00","indice":10.6954,"valuta":"EUR","valore":9.8419},{"chiave":"2016-07-25 00:00:00","indice":10.9649,"valuta":"EUR","valore":10.0648},{"chiave":"2016-08-24 00:00:00","indice":10.9393,"valuta":"EUR","valore":10.1755},{"chiave":"2016-09-26 00:00:00","indice":10.9003,"valuta":"EUR","valore":10.0287},{"chiave":"2016-10-28 00:00:00","indice":10.9574,"valuta":"EUR","valore":10.0429},{"chiave":"2016-12-13 00:00:00","indice":11.1361,"valuta":"EUR","valore":10.0539},{"chiave":"2017-01-23 00:00:00","indice":11.1318,"valuta":"EUR","valore":10.1352},{"chiave":"2017-02-24 00:00:00","indice":11.3780,"valuta":"EUR","valore":10.2535},{"chiave":"2017-03-30 00:00:00","indice":11.3373,"valuta":"EUR","valore":10.2358},{"chiave":"2017-05-05 00:00:00","indice":11.2801,"valuta":"EUR","valore":10.3906},{"chiave":"2017-06-12 00:00:00","indice":11.2659,"valuta":"EUR","valore":10.3164},{"chiave":"2017-07-21 00:00:00","indice":11.1280,"valuta":"EUR","valore":10.3664},{"chiave":"2017-09-01 00:00:00","indice":11.0731,"valuta":"EUR","valore":10.2551},{"chiave":"2017-10-06 00:00:00","indice":11.1938,"valuta":"EUR","valore":10.3985},{"chiave":"2017-11-13 00:00:00","indice":11.2754,"valuta":"EUR","valore":10.4212},{"chiave":"2017-12-15 00:00:00","indice":11.3305,"valuta":"EUR","valore":10.3787}]};
+		var serieOneYear = {"serieOneYear":[{"chiave":"2017-01-06 00:00:00","indice":10.1972,"valuta":"EUR","valore":10.1972},{"chiave":"2017-01-23 00:00:00","indice":10.1403,"valuta":"EUR","valore":10.1352},{"chiave":"2017-02-07 00:00:00","indice":10.2025,"valuta":"EUR","valore":10.1539},{"chiave":"2017-02-24 00:00:00","indice":10.3646,"valuta":"EUR","valore":10.2535},{"chiave":"2017-03-14 00:00:00","indice":10.2798,"valuta":"EUR","valore":10.214},{"chiave":"2017-03-30 00:00:00","indice":10.3276,"valuta":"EUR","valore":10.2358},{"chiave":"2017-04-19 00:00:00","indice":10.3367,"valuta":"EUR","valore":10.216},{"chiave":"2017-05-05 00:00:00","indice":10.2754,"valuta":"EUR","valore":10.3906},{"chiave":"2017-05-22 00:00:00","indice":10.2001,"valuta":"EUR","valore":10.4154},{"chiave":"2017-06-12 00:00:00","indice":10.2625,"valuta":"EUR","valore":10.3164},{"chiave":"2017-07-07 00:00:00","indice":10.1289,"valuta":"EUR","valore":10.297},{"chiave":"2017-07-21 00:00:00","indice":10.1369,"valuta":"EUR","valore":10.3664},{"chiave":"2017-08-11 00:00:00","indice":10.0625,"valuta":"EUR","valore":10.3454},{"chiave":"2017-09-01 00:00:00","indice":10.0869,"valuta":"EUR","valore":10.2551},{"chiave":"2017-09-20 00:00:00","indice":10.0811,"valuta":"EUR","valore":10.3128},{"chiave":"2017-10-06 00:00:00","indice":10.1968,"valuta":"EUR","valore":10.3985},{"chiave":"2017-10-24 00:00:00","indice":10.2086,"valuta":"EUR","valore":10.4124},{"chiave":"2017-11-13 00:00:00","indice":10.2712,"valuta":"EUR","valore":10.4212},{"chiave":"2017-11-29 00:00:00","indice":10.2554,"valuta":"EUR","valore":10.4454},{"chiave":"2017-12-15 00:00:00","indice":10.3213,"valuta":"EUR","valore":10.3787}]};
+		var serieSixMonths = {"serieSixMonths":[{"chiave":"2017-06-21 00:00:00","indice":10.3156,"valuta":"EUR","valore":10.3156},{"chiave":"2017-07-07 00:00:00","indice":10.1507,"valuta":"EUR","valore":10.297},{"chiave":"2017-07-14 00:00:00","indice":10.2116,"valuta":"EUR","valore":10.3652},{"chiave":"2017-07-21 00:00:00","indice":10.1587,"valuta":"EUR","valore":10.3664},{"chiave":"2017-07-31 00:00:00","indice":10.1043,"valuta":"EUR","valore":10.3808},{"chiave":"2017-08-11 00:00:00","indice":10.0842,"valuta":"EUR","valore":10.3454},{"chiave":"2017-08-22 00:00:00","indice":10.1167,"valuta":"EUR","valore":10.3626},{"chiave":"2017-09-01 00:00:00","indice":10.1086,"valuta":"EUR","valore":10.2551},{"chiave":"2017-09-12 00:00:00","indice":10.1152,"valuta":"EUR","valore":10.2654},{"chiave":"2017-09-20 00:00:00","indice":10.1028,"valuta":"EUR","valore":10.3128},{"chiave":"2017-09-27 00:00:00","indice":10.1828,"valuta":"EUR","valore":10.3458},{"chiave":"2017-10-06 00:00:00","indice":10.2188,"valuta":"EUR","valore":10.3985},{"chiave":"2017-10-16 00:00:00","indice":10.2406,"valuta":"EUR","valore":10.3838},{"chiave":"2017-10-24 00:00:00","indice":10.2306,"valuta":"EUR","valore":10.4124},{"chiave":"2017-11-01 00:00:00","indice":10.3255,"valuta":"EUR","valore":10.4559},{"chiave":"2017-11-13 00:00:00","indice":10.2933,"valuta":"EUR","valore":10.4212},{"chiave":"2017-11-21 00:00:00","indice":10.3077,"valuta":"EUR","valore":10.4},{"chiave":"2017-11-29 00:00:00","indice":10.2775,"valuta":"EUR","valore":10.4454},{"chiave":"2017-12-07 00:00:00","indice":10.2918,"valuta":"EUR","valore":10.3747},{"chiave":"2017-12-15 00:00:00","indice":10.3436,"valuta":"EUR","valore":10.3787}]};
+		var serieThreeMonths = {"serieThreeMonths":[{"chiave":"2017-09-20 00:00:00","indice":10.3128,"valuta":"EUR","valore":10.3128},{"chiave":"2017-09-27 00:00:00","indice":10.3945,"valuta":"EUR","valore":10.3458},{"chiave":"2017-10-06 00:00:00","indice":10.4312,"valuta":"EUR","valore":10.3985},{"chiave":"2017-10-16 00:00:00","indice":10.4534,"valuta":"EUR","valore":10.3838},{"chiave":"2017-10-24 00:00:00","indice":10.4433,"valuta":"EUR","valore":10.4124},{"chiave":"2017-11-01 00:00:00","indice":10.5401,"valuta":"EUR","valore":10.4559},{"chiave":"2017-11-13 00:00:00","indice":10.5072,"valuta":"EUR","valore":10.4212},{"chiave":"2017-11-21 00:00:00","indice":10.5220,"valuta":"EUR","valore":10.4},{"chiave":"2017-11-29 00:00:00","indice":10.4911,"valuta":"EUR","valore":10.4454},{"chiave":"2017-12-07 00:00:00","indice":10.5057,"valuta":"EUR","valore":10.3747},{"chiave":"2017-12-15 00:00:00","indice":10.5585,"valuta":"EUR","valore":10.3787}]};
+		
+		function loadSeries(serieArray, key, dati_graficofondo) {
+			if ( (serieArray != null) && (serieArray.length > 0) ) {
+				
+				for (var i=0;i<serieArray.length;i++) { 
+					serieArray[i].chiave = formatDateAsyyyyMM(serieArray[i].chiave);
+				}
+			    
+				dati_graficofondo[key] = serieArray;
+			}
+		}
+
+		dati_graficofondo = {};
+		
+		
+		loadSeries(serieYTD.serieYTD, 'YTD', dati_graficofondo);
+		loadSeries(serieThreeMonths.serieThreeMonths, '3 mesi', dati_graficofondo);
+		loadSeries(serieSixMonths.serieSixMonths, '6 mesi', dati_graficofondo);
+		loadSeries(serieOneYear.serieOneYear, '1 anno', dati_graficofondo);
+		loadSeries(serieThreeYear.serieThreeYear, '3 anni', dati_graficofondo);
+		loadSeries(serieFiveYear.serieFiveYear, '5 anni', dati_graficofondo);
+
+		
+	</script>
+	
+<!-- fine primo tab-->
+	<!-- secondo tab-->
+	<div class="divtabellacont" id="tabAlert2" style="display:none">
+		<div class="row-fluid">
+			<div class="span12">
+					<div class="borderRoundedNopadd">
+						<h3>Grafico e Rendimenti</h3>
+						<div class="filettoGenericoOrizzontale02"></div>
+						<div id="grafico_fondo"></div>
+					</div>
+			</div>
+		</div>
+		<br/>
+		<div class="filettoGenericoOrizzontale02"></div><br/>
+
+		<h3 class="titFondi">Rendimenti</h3>
+	    <div class="row-fluid">
+			<div class="span12">
+				<div class="borderRoundedNopadd">
+					<div class="row-fluid">
+						<div class="span11">							
+							<h3>
+								<span class="txthelp" data-tooltip="&Egrave; la somma dei rendimenti percentuali del fondo su periodi standard: 
+							 										   da inizio anno (YTD); 1 settimana; 1, 3, 6 mesi; 1, 3, 5 anni . 
+							 										   Il <b>rendimento annualizzato</b> &egrave; il <b>rendimento medio annuo</b>
+							 										   riferito a due periodi standard (3 e 5 anni) calcolato con la metodologia 
+							 										   dell'interesse composto.">
+									Rendimenti cumulati %
+								</span>
+							</h3>							
+						</div>
+						<div class="span1"></div>
+					</div>
+					<br class="clear"/>
+					<div class="filettoGenericoOrizzontale02"></div>
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondo"></td>
+							<td class="fondo">YTD</td>
+							<td class="fondo">1S</td>
+							<td class="fondo">1M</td>
+							<td class="fondo">3M</td>
+							<td class="fondo">6M</td>
+							<td class="fondo">1A</td>
+							<td class="fondo">3A</td>
+							<td class="fondo">5A</td>
+							<td class="fondo">3A ann.</td>
+							<td class="fondo">5A ann.</td>
+						</tr>
+						<tr>
+							<td><strong>Fondo</strong></td>
+							<td>
+								<strong>
+																			7,4										
+																	</strong>	
+							</td>
+							<td>
+								<strong>
+																			0,15										
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			1,02									
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			1,94										
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			3,01								
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			7,33										
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			18,87									
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			5,53										
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>Categoria</td>
+														<td>
+																	1,61								
+															</td>
+							<td>
+																	0,22							
+															</td>
+							<td>
+																	1,25								
+															</td>
+							<td>
+																	2,37								
+															</td>
+							<td>
+																	0,35									
+															</td>
+							<td>
+																	1,27							
+															</td>
+							<td>
+																	15,3								
+															</td>
+							<td>									27,47							
+															</td>
+							<td>
+																	4,07					
+															</td>
+							<td>									4,77									
+															</td>
+													</tr>
+						<tr>
+							<td class="ultimo">Differenza</td>
+							<td class="ultimo">
+																	5,79
+															</td>
+							<td class="ultimo">
+																	-0,07
+															</td>
+							<td class="ultimo">
+																	-0,23
+															</td>
+							<td class="ultimo">
+																	-0,43
+															</td>
+							<td class="ultimo">
+																	2,66
+															</td>
+							<td class="ultimo">
+																	6,07
+															</td>
+							<td class="ultimo">
+																	3,57
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	1,46									
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+						</tr>						
+					</table>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="borderRoundedNopadd">
+					<div class="row-fluid">
+						<div class="span11">							
+							<h3>
+								<span class="txthelp" data-tooltip="Rendimento in percentuale conseguito dal fondo in ogni singolo anno solare.">
+									Rendimenti per anno solare %
+								</span>
+							</h3>							
+						</div>
+						<div class="span1"></div>
+					</div>
+					<div class="filettoGenericoOrizzontale02"></div>
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondo"></td>
+															<td class="fondo">2017</td>
+															<td class="fondo">2016</td>
+															<td class="fondo">2015</td>
+															<td class="fondo">2014</td>
+															<td class="fondo">2013</td>
+															<td class="fondo">2012</td>
+															<td class="fondo">2011</td>
+															<td class="fondo">2010</td>
+															<td class="fondo">2009</td>
+															<td class="fondo">2008</td>
+													</tr>
+						<tr>
+							<td><strong>Fondo</strong></td>
+							<td>
+								<strong>
+																			7,4										
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			5,95		
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			3,33			
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>							
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+							<td>
+								<strong>
+																			-
+																	</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>Categoria</td>
+														<td>
+																	1,61
+															</td>
+							<td>
+																	5,11		
+															</td>
+							<td>
+																	5,36		
+															</td>
+							<td>
+																	10,02		
+															</td>
+							<td>
+																	3,08									
+															</td>
+							<td>
+																	5,54		
+															</td>
+							<td>
+																	2,36		
+															</td>
+							<td>
+																	10,35		
+															</td>
+							<td>
+																	10,83		
+															</td>
+							<td>
+																	-8,38		
+															</td>
+													</tr>
+						<tr>
+							<td class="ultimo">Differenza</td>
+							<td class="ultimo">
+																	5,79
+															</td>
+							<td class="ultimo">
+																	0,84
+															</td>
+							<td class="ultimo">								
+																	-2,04
+															</td>
+							<td class="ultimo">								
+																	0
+															</td>
+							<td class="ultimo">								
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>							
+							<td class="ultimo">								
+																	0
+															</td>
+							<td class="ultimo">								
+																	0
+															</td>
+						</tr>						
+					</table>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="borderRoundedNopadd">
+					<div class="row-fluid">
+						<div class="span11">							
+							<h3>
+								<span class="txthelp" data-tooltip="&Egrave; il totale dei <b>dividendi erogati</b> ai sottoscrittori negli anni 
+															    per ogni quota di fondo o azione di Sicav posseduta. Il dividendo &egrave; 
+																liquidato in base alla periodicit&agrave; (mensile, trimestrale, semestrale 
+																o annuale) prevista dalle singole societ&agrave; di gestione.">
+									Proventi distribuiti
+								</span>		
+							</h3>							
+						</div>
+						<div class="span1"></div>
+					</div>
+					<div class="filettoGenericoOrizzontale02"></div>
+						<table class="bggrigioFondi">
+							<tr>
+								<td class="fondo"></td>
+								
+															<td class="fondo">2017</td>
+															<td class="fondo">2016</td>
+															<td class="fondo">2015</td>
+															<td class="fondo">2014</td>
+															<td class="fondo">2013</td>
+															
+							</tr>
+							<tr>
+								<td><strong>Fondo</strong></td>								
+								<td>
+									<strong>
+																					0,4354
+																			</strong>
+								</td>
+								<td>
+									<strong>
+																					0,4794
+																			</strong>
+								</td>
+								<td>
+									<strong>
+																					0,4327
+																			</strong>
+								</td>
+								<td>
+									<strong>
+																					-
+																			</strong>
+								</td>
+								<td>
+									<strong>
+																					-
+																			</strong>
+								</td>																	
+							</tr>							
+							<tr>
+								<td class="fondo"></td>
+																	<td class="fondo">2012</td>
+																	<td class="fondo">2011</td>
+																	<td class="fondo">2010</td>
+																	<td class="fondo">2009</td>
+																	<td class="fondo">2008</td>
+															</tr>
+							<tr>
+								<td class="ultimo"><strong>Fondo</strong></td>
+								<td class="ultimo">
+									<strong>
+																					-
+																			</strong>
+								</td>
+								<td class="ultimo">
+									<strong>
+																					-
+																			</strong>
+								</td>
+								<td class="ultimo">
+									<strong>
+																					-
+																			</strong>
+								</td>
+								<td class="ultimo">
+									<strong>
+																					-
+																			</strong>
+								</td>
+								<td class="ultimo">
+									<strong>
+																					-
+																			</strong>
+								</td>																	
+							</tr>													
+						</table>
+				</div>
+			</div>
+	    </div>
+		<br/>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="borderRoundedNopadd">
+					<div class="row-fluid">
+						<div class="span11">							
+							<h3>
+								<span class="txthelp" data-tooltip="I fondi appartenenti alla stessa categoria BRating, ordinati in base 
+															    alla performance, vengono raggruppati in <b>quattro parti uguali</b>, 
+																i quartili. Un fondo che rientra nel primo quartile si posiziona 
+																pertanto nel migliore 25% dei fondi della propria categoria.">
+									Rendimenti per quartili
+								</span>		
+							</h3>							
+						</div>
+						<div class="span1"></div>
+					</div>
+					<div class="filettoGenericoOrizzontale02"></div>
+						<table class="bggrigioFondi">
+							<tr>
+								<td class="fondo"></td>
+								<td class="fondo">5A</td>
+								<td class="fondo">4A</td>
+								<td class="fondo">3A</td>
+								<td class="fondo">2A</td>
+								<td class="fondo">1A</td>
+							</tr>
+							<tr>
+								<td>1&deg; quartile</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoSel"></span>
+																	</td>
+							</tr>
+							<tr>
+								<td>2&deg; quartile</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+							</tr>
+							<tr>
+								<td>3&deg; quartile</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td>
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+							</tr>	
+							<tr>
+								<td class="ultimo">4&deg; quartile</td>
+								<td class="ultimo">
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td class="ultimo">
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td class="ultimo">
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td class="ultimo">
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+								<td class="ultimo">
+																			<span class="rendimentoNoSel"></span>
+																	</td>
+							</tr>							
+						</table>
+					</div>
+				</div>
+		    </div>
+		</div>
+	<!-- fine secondo tab-->	
+	<!-- terzo tab-->
+	<div class="divtabellacont" id="tabAlert3" style="display:none">			 
+		<div class="row-fluid">
+			<div class="span3">
+				<h3 class="titFondi">
+					Profilo di rischio/</br>rendimento
+					<span class="icoTit" data-tooltip="&Egrave; il profilo di rischio/rendimento del fondo espresso 
+													   su una scala da 1 a 7 riportato nella documentazione d'offerta 
+													   (KIID - Informazione Chiave per l'Investitore).">
+						<img class="help" src="/img/ret/ico2or_help2.gif">
+					</span>
+				</h3>
+				<div class="borderRoundedNopadd">
+					<span class="riskValue grey">
+						<span class="riskPart">
+															4
+													</span>					
+					</span>
+				</div>
+			</div>
+			<div class="span9">
+				<h3 class="titFondi">Rating e score</h3>
+				<div class="borderRoundedNopadd">					
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondoTransp" colspan="6">
+								<div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="fondo2"></td>
+							<td class="fondo2">							
+																	nov/17
+															</td>
+							<td class="fondo2">
+																	ott/17
+															</td>
+							<td class="fondo2">
+																	set/17
+															</td>
+							<td class="fondo2">
+																	ago/17
+															</td>
+							<td class="fondo2">
+																	lug/17
+															</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="txthelp" data-tooltip="<b>RATING</b>: &egrave; un <b>giudizio sintetico</b>, 
+																	rappresentato da &quot;corone&quot; 
+													   				su una scala da 5 (migliori) a 1 (peggiori), attribuito da 
+													   				BRating ai prodotti di risparmio gestito (Fondi e Sicav). 
+													   				Il procedimento parte dall'<b>analisi qualitativa</b> delle caratteristiche 
+													   				d'<b>investimento</b> per giungere ad una <b>valutazione quantitativa</b> 
+													   				basata sulla posizione del <b>singolo fondo</b> nella categoria di 
+													   				appartenenza, ordinata sulla base di parametri di rendimento e rischio.">
+									<strong>Rating del fondo</strong>
+								</span>	
+							</td>
+							<td>
+								<strong>
+									<span class="fontLarger">
+																					5
+																			</span>
+								</strong>
+							</td>
+							<td>
+								<strong>
+									<span class="fontLarger">
+																					0
+																			</span>
+								</strong>
+							</td>
+							<td>
+								<strong>
+									<span class="fontLarger">
+																					0
+																			</span>
+								</strong>
+							</td>
+							<td>
+								<strong>
+									<span class="fontLarger">
+																					0
+																			</span>
+								</strong>
+							</td>
+							<td>
+								<strong>
+									<span class="fontLarger">
+																					0
+																			</span>
+								</strong>
+							</td>
+						</tr>
+						<tr>
+							<td class="ultimo">
+								<span class="txthelp" data-tooltip="<b>SCORE</b>: &egrave; la sintesi del modello di valutazione 
+																	della qualit&agrave; gestionale mediante l'assegnazione di 
+																	un <b>punteggio</b> da 100 (migliore) a 1 (peggiore) ai fondi 
+																	e alle Sicav presenti in ciascuna categoria BRating. 
+													   				&Egrave; un <b>criterio oggettivo</b> di <b>valutazione</b> 
+													   				fondato su un algoritmo matematico che 
+													   				combina indicatori statistici di rendimento e rischio 
+													   				espressi in un definito	orizzonte temporale.">
+									Score categoria
+								</span>
+							</td>
+							<td class="ultimo">
+																	71
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+							<td class="ultimo">
+																	0
+															</td>
+						</tr>
+					</table>
+				</div>
+				<span class="tabellaNote">
+					<span class="txthelp" data-tooltip="<b>CATEGORIE BRATING</b>: i prodotti di risparmio gestito vengono classificati da 
+													   BRating in categorie omogenee. Il processo di classificazione prende in considerazione, 
+													   tra gli altri elementi, l'<b>asset class</b> di riferimento, l'<b>area geografica</b>,
+													   il <b>settore merceologico</b>, la <b>tipologia di strumenti</b> in portafoglio 
+													   e l'<b>esposizione valutaria</b>. 
+													   Gli elementi su cui si basa l'analisi sono prevalentemente: la politica di gestione 
+													   dichiarata nella documentazione d'offerta, l'evoluzione storica del NAV rispetto 
+													   a benchmark di mercato e la composizione effettiva di portafoglio.">					
+						<strong>Categoria BRating</strong> Ritorno Assoluto (Media Volatilita')
+					</span>	
+				</span>
+			</div>
+		</div>
+		<br/>
+		<div class="filettoGenericoOrizzontale02">
+		</div>
+		<br/>
+		<div class="row-fluid">
+			<h3 class="titFondi">Analisi</h3>
+			<div class="borderRoundedNopadd">
+				<table class="bggrigioFondi">
+					<tr>
+						<td class="fondoTransp" colspan="4">
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="fondo2"></td>
+						<td class="fondo2 center">1A</td>
+						<td class="fondo2 center">3A</td>
+						<td class="fondo2 center">5A</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="txthelp" data-tooltip="<b>RENDIMENTO</b>: &egrave; il rendimento a 1, 3, 5 anni conseguito dal fondo.">
+								<strong>Rendimento (EUR)</strong>
+							</span>	
+						</td>
+						<td class="center">
+							<strong>
+																	8,93%
+															</strong>
+						</td>
+						<td class="center">
+							<strong>
+																	17,52%
+															</strong>
+						</td>
+						<td class="center">
+							<strong>
+																	-
+															</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="txthelp" data-tooltip="<b>VOLATILIT&Agrave;</b>: indica la <b>variabilit&agrave;</b> 
+																del <b>rendimento</b> del fondo nel 
+																tempo e rappresenta quindi la tendenza del valore quota/NAV a 
+																discostarsi dal valore 
+																medio nel periodo considerato (1, 3, 5, 10 anni). Quanto pi&ugrave; 
+																alta &egrave; la volatilit&agrave;, tanto maggiore &egrave; stata 
+																l'oscillazione del valore quota/NAV nel periodo di riferimento. 
+																Maggiore &egrave; la volatilit&agrave; 
+																di un fondo, pi&ugrave; il fondo &egrave; rischioso.">
+								Volatilit&agrave;
+							</span>	
+						</td>
+						<td class="center">
+															2,11%
+													</td>
+						<td class="center">
+															5,53%
+													</td>
+						<td class="center">
+															-
+													</td>
+					</tr>					
+					<tr>
+						<td>
+							<span class="txthelp" data-tooltip="<b>INDICE DI SHARPE</b>: &egrave; un indice usato per valutare 
+																l'<b>efficienza</b> 
+																della <b>gestione</b> calcolato come rapporto tra il differenziale di 
+																rendimento di un fondo rispetto ad un'attivit&agrave; 
+																priva di rischio (in genere il tasso d'interesse sui titoli di Stato) e il rischio 
+																corso (deviazione standard). <b>Maggiore</b> &egrave; l'<b>indice di Sharpe</b>, 
+																<b>migliore</b> &egrave; la <b>performance</b> storica del fondo corretta 
+																per il rischio e quindi l'efficienza della gestione.">						
+								Indice di Sharpe
+							</span>
+						</td>
+						<td class="center">
+															4,437
+													</td>
+						<td class="center">
+															1,075
+													</td>
+						<td class="center">
+															-
+													</td>
+					</tr>
+					<tr>
+						<td class="ultimo">
+							<span class="txthelp" data-tooltip="<b>INDICE DI SORTINO</b>: &egrave; un indice usato per valutare l'efficienza 
+																della gestione calcolato come rapporto tra il differenziale di rendimento 
+																di un fondo rispetto ad un'attivit&agrave; priva di rischio (in genere il 
+																tasso d'interesse sui titoli di Stato) 
+																e il rischio corso (misurato con il downside risk). Maggiore &egrave; 
+																l'indice di Sortino, migliore &egrave; la performance storica del fondo 
+																corretta per il rischio e quindi l'efficienza della gestione.">
+								Indice di Sortino
+							</span>	
+						</td>
+						<td class="ultimo center">
+															-
+													</td>
+						<td class="ultimo center">
+															1,968
+													</td>
+						<td class="ultimo center">
+															-
+													</td>
+					</tr>					
+				</table>
+			</div>		
+		</div>
+		<br/>
+		<div class="filettoGenericoOrizzontale02"></div><br/>
+		<div class="row-fluid">
+			<div class="span6">
+				<h3 class="titFondi">Analisi di rischio</h3>
+				<div class="borderRoundedNopadd">
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondoTransp" colspan="4">
+								<div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="fondo2"></td>
+							<td class="fondo2"></td>
+							<td class="fondo2 center">3A</td>
+							<td class="fondo2"></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="txthelp" data-tooltip="<b>BETA</b>: &egrave; un <b>indicatore</b> che esprime l'<b>elasticit&agrave; 
+																	dei movimenti</b> del fondo 
+																	rispetto a quelli dell'<b>indice</b> di <b>riferimento</b> (benchmark).  
+																	L'indice di riferimento ha un valore di Beta pari a 1. Un fondo con Beta 
+																	maggiore di 1 tende ad amplificare i movimenti del mercato, mentre con un 
+																	Beta inferiore a 1 tende a smorzarli. L'amplificazione sar&agrave; tanto 
+																	maggiore quanto pi&ugrave; elevato sar&agrave; il Beta.
+																	Ad esempio: a fronte di un incremento del 10% dell'indice di riferimento, 
+																	un fondo con Beta pari a 1,1 salirebbe tendenzialmente dell'11%, mentre 
+																	in caso di flessione dell'indice del 10%, tendenzialmente perderebbe l'11%.">
+									Beta
+								</span>	
+							</td>
+							<td></td>
+							<td class="center">
+																	0,884
+															</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="txthelp" data-tooltip="<b>R-QUADRO</b>: &egrave; un indicatore di quanto il <b>comportamento</b> 
+																	di un fondo sia riconducibile 
+																	all'<b>andamento</b> dell'indice di riferimento (benchmark). &Egrave; 
+																	utile per valutare se la 
+																	gestione del fondo &egrave; passiva (ovvero replica il benchmark) 
+																	o attiva. Il valore dell'indicatore 
+																	varia da 0 a 1 dove 1 indica che il fondo ha perfettamente replicato 
+																	il parametro di riferimento. 
+																	Pi&ugrave; il valore &egrave; elevato, maggiore &egrave; l'adattamento 
+																	del fondo al parametro di riferimento.">
+									R-Quadro
+								</span>	
+							</td>
+							<td></td>
+							<td class="center">
+																	0,562
+															</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="ultimo">
+								<span class="txthelp" data-tooltip="<b>TRACKING ERROR VOLATILY (TEV)</b>: esprime la <b>volatilit&agrave;</b> 
+																	dei rendimenti differenziali di un 
+																	fondo rispetto all'indice di riferimento (benchmark). Quanto pi&ugrave; 
+																	il valore della TEV si 
+																	avvicina a zero tanto pi&ugrave; vi sar&agrave; correlazione tra 
+																	l'andamento del fondo e il suo benchmark. 
+																	In tal caso si pu&ograve; dire che il prodotto &egrave; a gestione passiva, 
+																	cio&egrave;	che replica l'indice 
+																	di riferimento. Quanto pi&ugrave; la TEV &egrave; elevata, tanto pi&ugrave; 
+																	la gestione del	fondo &egrave; stata attiva.">
+									Tracking Error Volatility
+								</span>	
+							</td>
+							<td class="ultimo"></td>
+							<td class="ultimo center">
+																	3,699
+															</td>
+							<td class="ultimo"></td>
+						</tr>
+					</table>
+				</div>				
+			</div>
+			<div class="span6">
+				<h3 class="titFondi">Analisi di efficienza</h3>
+				<div class="borderRoundedNopadd">
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondoTransp" colspan="4">
+								<div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="fondo2"></td>
+							<td class="fondo2"></td>
+							<td class="fondo2 center">3A</td>
+							<td class="fondo2"></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="txthelp" data-tooltip="<b>ALFA</b>: indica la capacit&agrave; del gestore di battere 
+																	sistematicamente l'indice di 
+																	riferimento (benchmark). Maggiore &egrave; l'Alfa e pi&ugrave; 
+																	elevata &egrave; la capacit&agrave; del 
+																	gestore di ottenere statisticamente rendimenti positivi rispetto al benchmark. 
+																	L'Alfa pu&ograve; essere anche negativo nel caso in cui il fondo tenda a 
+																	sottoperformare stabilmente il benchmark.">
+									Alfa
+								</span>	
+							</td>
+							<td></td>
+							<td class="center">
+																	0,002
+															</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="txthelp" data-tooltip="<b>INFORMATION RATIO</b>: indicatore che <b>misura l'extra rendimento</b> 
+																	ottenuto dalla gestione di un fondo
+																	rispetto al proprio benchmark in relazione al rischio assunto. 
+																	Valori positivi di Information Ratio sono indicatori di gestione 
+																	attiva &quot;efficiente&quot;, valori tendenti a zero sono 
+																	tipici di una gestione che replica il benchmark (gestione passiva), 
+																	valori negativi sono indicatori di gestione senza valore aggiunto.">
+									Information Ratio
+								</span>	
+							</td>
+							<td></td>
+							<td class="center">
+																	0,407
+															</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="ultimo">
+								<span class="txthelp" data-tooltip="<b>INDICE DI TREYNOR</b>: &egrave; un <b>indice di rischio finanziario</b> 
+																	che utilizza il <b>Beta</b> come 
+																	indice di rischio a differenza dell'indice di Sharpe che utilizza la 
+																	deviazione standard. Un indice di Treynor elevato &egrave; indicatore di 
+																	elevata 
+																	capacit&agrave; del portafoglio di remunerare l'esposizione al rischio 
+																	sistematico di mercato (Beta).">
+									Indice di Treynor
+								</span>	
+							</td>
+							<td class="ultimo"></td>
+							<td class="ultimo center">
+																	0,006%
+															</td>
+							<td class="ultimo"></td>
+						</tr>
+					</table>
+				</div>				
+			</div>		
+		</div>
+	</div>
+	<!-- fine terzo tab-->	
+	<!--quarto tab -->
+	<div class="divtabellacont" id="tabAlert4" style="display:none">
+					<h3 class="titFondi">
+				Asset Allocation %
+				<span class="icoTit" data-tooltip="Indica la ripartizione in percentuale degli <b>strumenti finanziari</b> 
+												   presenti nel portafoglio del fondo tra le principali asset class: 
+												   azioni, obbligazioni, liquidit&agrave;.">
+					<img class="help" src="/img/ret/ico2or_help2.gif">
+				</span>
+			</h3>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="borderRoundedNopadd">
+						<div id="grafico_asset_composizione" class="grafComposizione"></div>						
+					</div>
+				</div>
+			</div>			
+			<br/>
+			<br/>
+									<div class="filettoGenericoOrizzontale02"></div><br/>
+			<h3 class="titFondi">Distribuzione settoriale</h3>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="borderRoundedNopadd">
+						<div id="grafico_settori" class="grafComposizione"></div>														
+							<script type="text/javascript">						
+								dati_settori = [];
+																	var distrib = {};
+									distrib.chiave = 'Energia';
+									distrib.valore = '11.69';
+									distrib.color = '#00A8D5';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Finanza';
+									distrib.valore = '26.77';
+									distrib.color = '#00622D';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Tecnologia';
+									distrib.valore = '6.27';
+									distrib.color = '#8E0C0C';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Industria';
+									distrib.valore = '16.72';
+									distrib.color = '#0DCC5E';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Sanita\'';
+									distrib.valore = '12.01';
+									distrib.color = '#E04848';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Servizi per la telecomunicazione';
+									distrib.valore = '6.7';
+									distrib.color = '#ABB9BF';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Beni di prima necessita\'';
+									distrib.valore = '15.1';
+									distrib.color = '#F78334';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Materiali e Materie Prime';
+									distrib.valore = '2.76';
+									distrib.color = '#003262';
+									dati_settori.push(distrib);																
+																	var distrib = {};
+									distrib.chiave = 'Altro';
+									distrib.valore = '1.98';
+									distrib.color = '#333333';
+									dati_settori.push(distrib);																
+															</script>
+					</div>
+				</div>
+			</div>			
+			<br/>
+			<br/>			
+							<div class="filettoGenericoOrizzontale02"></div><br/>
+			<h3 class="titFondi">Top ten titoli in portafoglio</h3>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="borderRoundedNopadd">
+						<div id="grafico_topten"></div>
+							<script type="text/javascript">						
+								dati_topten = [];
+								var index = 0;
+								var size = graphColors.length;							
+																	var distrib = {};
+									distrib.chiave = 'UNITED STATES TREASURY NOTE/BOND T 1 7/8 09/30/22';
+									distrib.valore = '7.23';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'Invesco STIC Euro Liquidity';
+									distrib.valore = '5.3';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'Rwe Vorzug';
+									distrib.valore = '2.14';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'UNITED STATES TREASURY NOTE/BOND T 1 3/8 09/30/19';
+									distrib.valore = '1.81';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'NATIONWIDE BUILDING SOCIETY NWIDE 10 1/4 PERP';
+									distrib.valore = '1.8';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'WIND TRE SPA WINTRE 0 01/20/24';
+									distrib.valore = '1.36';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'SFR GROUP SA SFRFP 5 3/8 05/15/22';
+									distrib.valore = '1.34';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'JPMorgan Chase';
+									distrib.valore = '1.27';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'LLOYDS BANK PLC LLOYDS 12 PERP';
+									distrib.valore = '1.23';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+																	var distrib = {};
+									distrib.chiave = 'TESCO PROPERTY FINANCE 3 PLC TSCOLN 5.744 04/13/40';
+									distrib.valore = '1.2';
+									if (index == size) {
+										index = 0;
+									}
+									distrib.color = graphColors[index];
+									dati_topten.push(distrib);
+									index++;								
+															</script>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<br/>			
+							<div class="filettoGenericoOrizzontale02">
+			</div>
+			<br/>
+			<h3 class="titFondi">Esposizione valutaria</h3>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="borderRoundedNopadd">
+						<div id="grafico_esposizione" class="grafComposizione"></div>							
+							<script type="text/javascript">						
+								dati_esposizione = [];
+																	var distrib = {};
+									distrib.chiave = 'JPY';
+									distrib.valore = '-1.21';
+									distrib.color = '#ABB9BF';
+									dati_esposizione.push(distrib);																	
+																	var distrib = {};
+									distrib.chiave = 'EUR';
+									distrib.valore = '119.21';
+									distrib.color = '#003262';
+									dati_esposizione.push(distrib);																	
+																	var distrib = {};
+									distrib.chiave = 'USD';
+									distrib.valore = '-7.4';
+									distrib.color = '#00622D';
+									dati_esposizione.push(distrib);																	
+																	var distrib = {};
+									distrib.chiave = 'Altro';
+									distrib.valore = '-10.6';
+									distrib.color = '#333333';
+									dati_esposizione.push(distrib);																	
+															</script>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<br/>						
+				<div class="filettoGenericoOrizzontale02"></div><br/>
+		<h3 class="titFondi">Qualit&agrave; del credito</h3>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="borderRoundedNopadd">
+					<table class="bggrigioFondi">
+						<tr>
+							<td class="fondoTransp" colspan="8">
+								<div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+															<td class="fondo2 center">AAA</td>
+															<td class="fondo2 center">AA</td>
+															<td class="fondo2 center">A</td>
+															<td class="fondo2 center">BBB</td>
+															<td class="fondo2 center">BB</td>
+															<td class="fondo2 center">B</td>
+															<td class="fondo2 center">< B</td>
+															<td class="fondo2 center">Altro</td>
+															<td class="fondo2 center">No rating/Liquidità</td>
+													</tr>
+						<tr>
+																					<td class="ultimo center">5.76%</td>
+																												<td class="ultimo center">0.36%</td>
+																												<td class="ultimo center">2.26%</td>
+																												<td class="ultimo center">10.05%</td>
+																												<td class="ultimo center">16.12%</td>
+																												<td class="ultimo center">14.64%</td>
+																												<td class="ultimo center">-</td>
+																												<td class="ultimo center">-</td>
+																												<td class="ultimo center">50.81%</td>
+																			</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--fine quarto tab -->
+	<!--quarto tab -->
+	<div class="divtabellacont" id="tabAlert5" style="display:none">
+		
+	</div>
+	<!--fine quarto tab -->	
+	<br class="clear"/>
+	<br/><br/>
+	<div class="borderFormRounded margBottomLarge lineBg">
+		<div class="row-fluid ">
+			<div class="span2">
+				<div class="flLeft">
+					<a class="fesBackRicerca" href="javascript:;">Torna a ricerca</a>
+				</div>
+			</div>		
+			<div class="span10 noMarg">				
+				<div class="row-fluid">
+					<div class="span4">
+						&nbsp;
+					</div>
+					<div class="span8">
+						<div>
+																											<!-- 
+							<a class="btnFondi" href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/do/FMP/buyFundSelect.action?codIsin=LU1097689878&divisa=EUR&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto'" onclick="javascript:;" title="Compra">Compra</a>
+							 -->
+							<a class="btnFondi" href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/action/investimenti/BuyFundSelect.action?codInt=44338910&codIsin=LU1097689878&divisa=EUR&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto_resp'" onclick="javascript:;" title="Compra">Compra</a>
+						
+												</div>
+						<div class="flLeft paddLeftSmall">
+							<div class="flLeft paddLeftSmall">					
+								<a href="javascript:document.location.href=cgi_script + '/wbOnetoone/2l/jsp/FMP/alert/impostaAlertFondiSicav.do?isin=LU1097689878&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_sf_alert'" onclick="javascript:;" alt="Imposta alert" title="Imposta alert" class="campana"></a>					
+								<a href="javascript:updateWatchList();" alt="Aggiungi a watchlist" title="Aggiungi a watchlist" class="stella"></a>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>		
+	</div>	
+</div>

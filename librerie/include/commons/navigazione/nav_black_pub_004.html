@@ -1,0 +1,30 @@
+<div id="header">
+	<div class="topHead">
+		<h1 class="head2"><a href="#1" title="Webankit">Webankit online dal 1999</a></h1>														
+	<!-- box login -->
+		<div id="loginH">		
+			<form name="loginPrivati" id="loginPrivatiId" action="" method="post">
+			<input type="radio" value="privi" name="privati" onfocus="this.value=''" id="privati"/><span><b>PRIVATI</b></span>
+			<input type="radio" value="privi" name="privati" onfocus="this.value=''" id="business" class="business"/><span><b>BUSINESS</b></span><span class="lv"><b>|</b></span>
+			<span class="aiuto"><a  href="#1"><b>Serve aiuto?</b></a></span><br clear="all" />					
+			<!-- campi userID -->
+			<input type="text" class="text" value="user ID" name="username" onfocus="document.getElementById('idCl').style.display = '';this.style.display = 'none';document.getElementById('idCl').focus();" id="idCliente"/>
+			<input type="text" class="text" value="" name="username" style="display:none;" id="idCl" maxlength="8" />
+			<!-- fine campi userID -->
+			<!-- campi password -->
+			<input type="text" class="text2" value="password" name="fintapassword" onfocus="document.getElementById('pwd1b').style.display = '';this.style.display = 'none';document.getElementById('pwd1b').focus();" id="pwd1"/>
+			<input type="password" class="text2" style="display: none;" value="" name="password"  id="pwd1b" maxlength="16" />
+			<!-- fine campi password -->
+			<input name="browser" value="" type="hidden">
+			<input name="versione" value="" type="hidden">
+			<input name="initClick" value="" type="hidden">
+			<input name="multiwebapp" value="yes" type="hidden">
+			<input src="/img/ret/pixel_trasp.gif" type="image" width="0" height="0">
+			<input name="service" value="WEBANK" type="hidden">
+			<input name="IDAlleato" value="HOME_PRIV" type="hidden">
+			<span class="entra"><a title="Entra" onclick="return checkUserAndPwd(loginPrivati.idCl,loginPrivati.idCl,loginPrivati.pwd1b,loginPrivati.pwd1b)" href="javascript:document.loginPrivati.submit();"><img alt="Entra" src="/img/ret/btn_entra.gif"/></a></span><br clear="all"/>
+			</form>					
+		</div>
+		<!--/ box login -->
+	</div>
+</div>

@@ -1,0 +1,1 @@
+<h2 class="titGeneric03 txtTransformUpper colorBank">lorem ipsum</h2>

@@ -1,0 +1,1 @@
+<div class="mini_banner to_right"><a href="/connect.php?page=str_interna_pub.php&tpl=tpl_pub_promo_graphic.php" title="SERVIZIO SMS"><img src="/img/ban_dx.jpg" alt="SERVIZIO SMS" /></a></div>

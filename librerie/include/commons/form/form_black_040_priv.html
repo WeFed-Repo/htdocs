@@ -1,0 +1,158 @@
+<script language="JavaScript">
+<!--
+function CampoErrato ()
+	{
+	n=5;
+	for(i=1; i<n; i++)
+		{
+		campoCorrente = "campo0"+i;
+		//alert (campoCorrente);
+		if (document.getElementById)
+			 {
+			 questoMenu = document.getElementById(campoCorrente).style;
+			 questoMenu.color = "red";
+			 }
+		else
+			 {
+			 return true
+			 }
+		}
+	}
+-->
+</script>
+<div class="tithelp">
+	<div class="helpleft2">Lorem ipsum lorem ipsum <strong>lorem ipsum lorem</strong> ipsum lorem ipsum lorem ipsum lorem ipsum:</div><br/><br/>
+	<div class="helpleft">Lorem ipsum</div>
+<br class="clear" /></div>
+<table class="form01 formpop">
+	<tr> 
+		<td width="95" class="uno" id="campo01">0 Micro_SX</td>
+		<td > <input name="text" type="text" class="micro" />
+		<!--NUOVO TOOLTIP-->
+		<span id="tooltip5" class="uniqTooltipText nodotted" onmouseout="removeUniqTooltip(event,this); vedi('lampa5');" onmouseover="createUniqTooltip(event, this); nascondi('lampa5');" onmousemove="createUniqTooltip(event, this)">
+				<span class="uniqTooltipPos"><img class="lampa" id="lampa5" src="/img/ret/lampa_off.gif"></span>
+				<span class="uniqTooltipInnerHTML">
+							100 Testo_semplice - Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad 
+				</span>
+		</span>
+		<!--fine NUOVO TOOLTIP-->
+		</td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno" >10 Piccolo_SX</td>
+		<td > <input name="text" type="text" class="piccolo" /><a href="#1" onmouseover="nascondi('lampa403');" onmouseout="vedi('lampa403');"><img src="/img/ret/lampa_off.gif" id="lampa403" class="lampa" /></a><a href="#1" class="domanda" onmouseover="nascondi('lampa403');" onmouseout="vedi('lampa3');">link</a></td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno" >15 Piccolo_SX</td>
+		<td > <input name="text" type="text" class="piccolo" /> <img src="/img/ret/frecce.gif" usemap="#map1"/><map id="map1" name="map1"><area shape="rect" coords="0,0,9,5" href="#" alt="Aumenta di..." title="Aumenta di..."/><area shape="rect" coords="0,9,9,14" href="#" alt="Diminuisci di 1000" title="Diminuisci di 1000"/></map></td>
+		
+	</tr>
+	<tr> 
+		<td class="uno" width="95">20 Medio_SX</td>
+		<td> <input name="text2" type="text" class="medio" /><a href="#1" onmouseover="nascondi('lampa405');" onmouseout="vedi('lampa405');"><img src="/img/ret/lampa_off.gif" id="lampa405" class="lampa" /></a><a href="#1" class="domanda" onmouseover="nascondi('lampa405');" onmouseout="vedi('lampa405');">link</a></td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno">30 Grande_SX</td>
+		<td > <input name="text" type="text" class="grande" /></td>
+		
+	</tr>	
+	<tr> 
+		<td width="95" class="uno">50 Data_SX</td>
+		<td ><input name="text" id="1" type="text" value="gg/mm/aaaa" class="data" style="color:#7f7f7f;" onfocus="document.getElementById('1').value='';"/></td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno">51 Data_SX</td>
+		<td ><input name="text" type="text" value="gg" maxlength="2" class="micro" style="color:#7f7f7f;" onfocus="document.getElementById('1').value='';"/> / <input name="text" id="1" type="text" value="mm" maxlength="2" class="micro" style="color:#7f7f7f;" onfocus="document.getElementById('1').value='';"/> / <input name="text" id="1" type="text" value="aaaa" maxlength="4" class="piccolo" style="color:#7f7f7f;" onfocus="document.getElementById('1').value='';"/></td>
+		
+	</tr>
+	
+	<tr> 
+		<td width="95" class="uno">60 Telefono_SX</td>
+		<td class="sceltacell"><input name="text" type="text" class="piccolo" maxlength="3"/> <input type="text" maxlength="7"/> 
+	</td>
+
+	</tr>
+	<tr> 
+		<td width="95" class="uno">70 Importo_SX</td>
+		<td > <input name="text" type="text" class="importo" /> , <input name="text" type="text" class="importo2" maxlength="2" />  <strong>VAL</strong></td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno">80 Cap_SX</td>
+		<td> <input name="text" type="text" class="cap" maxlength="5"/></td>
+		
+	</tr>
+	<tr> 
+		<td class="uno" width="95"> 90 Select_SX</td>
+		<td width="149"><select name="select">
+		<option>-- seleziona --</option>
+		<option>-----------------------</option>
+		</select></td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno">92 Intervallo_SX</td>
+		<td>da <select name="select">
+		<option>----</option>
+		<option>AAA</option>
+		</select>
+		&nbsp;&nbsp;&nbsp;
+		a <select name="select">
+		<option>----</option>
+		<option>BBB</option>
+		</select><a href="#1" onmouseover="nascondi('lampa4010');" onmouseout="vedi('lampa4010');"><img src="/img/ret/lampa_off.gif" id="lampa4010" class="lampa" /></a><a href="#1" class="domanda" onmouseover="nascondi('lampa4010');" onmouseout="vedi('lampa4010');">link</a> </td>
+	</tr>
+	<tr>
+		<td class="uno">&nbsp;</td>
+		<td>100 Testo_semplice - Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </td>
+	</tr>
+	<tr>
+		<td class="uno" width="95">&nbsp;</td>
+		<td><div class="nobor3"><a href="#1"><img src="/img/ret/pdf.gif"></a></div><span class="txtinput"><a href="#1">110 img_link_SX - Lorem ipsum sed diam nonummy</a></span></td>
+	</tr>
+	<tr>
+		<td class="uno" width="95">&nbsp;</td>
+		<td ><a href="#1">120 Link_lungo - Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</a></td>
+	</tr>
+	<tr>
+		<td class="uno" width="95">&nbsp;</td>
+		<td><div><a href="#1" class="btnevid1" title="Lorem ipsum"><img src="/img/ret/btn_left_sm1.gif" alt="" /><span>125 Link evidenziato sx</span><img src="/img/ret/btn_right_sm1.gif" alt="" /></a></div></td>
+		
+	</tr>	
+	<tr> 
+		<td class="uno" width="95">130 Radio_SX</td>
+		<td colspan="1">	
+		<input type="radio" name="radiobutton" value="radiobutton" checked class="nobor3" /> Lorem ipsum dolor <br class="clear" />
+		<input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum dolor <br class="clear" />
+		 <input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum dolor <br class="clear" />
+		</td>		
+		
+	</tr>
+	<tr> 
+		<td class="uno" width="95">140 Radio</td>
+		<td><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0">
+		</td>
+		</td>
+	</tr>
+	<tr> 
+		<td class="uno" width="95">150 Checkbox_SX</td>
+		<td colspan="1">	
+		<input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		</td>		
+	</tr>
+	<tr> 
+		<td width="95" class="uno" valign="top">175 Piccolo Textarea</td>
+		<td> <textarea name="textarea" class="piccolo"></textarea></td>
+	</tr>
+	
+</table>
+	

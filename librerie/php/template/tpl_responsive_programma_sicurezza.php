@@ -1,0 +1,13 @@
+<h2>Programma Sicurezza</h2>
+<section>
+	<p>Il Programma Sicurezza &egrave; un'<strong>iniziativa</strong> della banca nata per contrastare la sempre maggiore presenza della frode informatica e le sue continue evoluzioni.</p>
+	<p>La banca utilizza soluzioni informatiche costantemente aggiornate, ma per garantire la sicurezza del servizio  &egrave; sempre pi&ugrave; indispensabile la collaborazione degli utenti nell'utilizzo del web e l'adozione di comportamnti sicuri durante la navigazione. </p>
+	<p><strong>L'adesione al Programma Sicurezza &egrave; semplice e gratuita</strong>, dovrai soltanto inserire il tuo numero di cellulare nell'area privata del sito alla voce My Home &gt; Dati e impostazioni personali &gt; Modifica recapiti &gt; Cellulare. </p>
+	<p>Partecipando al Programma Sicurezza potrai disporre di una serie di iniziative volte a migliorare la sicurezza dei tuoi accessi e la tua educazione telematica. </p>
+	<p>In particolare potrai cos&igrave; usufruire di:</p>
+	<ul>
+		<li>Strumenti di controllo:<strong>Alert sms gratis e per sempre</strong> su bonifici Italia ed estero, ricariche di cellulari e carta prepagate, modifica profilo e massimali bancomat. Dopo ogni disposizione inoltrata riceverai in tempo reale sul tuo cellulare un SMS di conferma. Controlla sempre i tuoi SMS...se qualcosa non ti convince chiama subito il nostro Numero Verde!</li>
+		<li>Processi pi&ugrave; sicuri per la gestione dell'identit&agrave; digitale:  per <strong>modificare e certificare</strong> in totale sicurezza <strong>l'email e/o il numero di cellulare</strong> che compongono la tua <strong>identit&agrave; digitale</strong>. Per effettuare il cambio dell'email, ti invieremo <strong>due codici di sicurezza</strong> di 8 cifre (One Time Password), uno via SMS e uno via email, che dovrai inserire online  per ultimare la variazione dell'indirizzo. Per modificare il recapito telefonico, invece, ti invieremo  via SMS un <strong>codice di autenticazione</strong>al vecchio numero  di cellulare e un <strong>codice di controllo</strong>al nuovo numero da certificare. Solo dopo aver inserito online i due codici e la password di II livello potrai  confermare la modifica. </li>
+		<li>Strumenti di autorizzazione: ogni volta che <strong>ricarichi un numero di telefono o una carta prepagata non ancora presente in rubrica</strong>, ti viene <strong>inviato via SMS</strong> un codice di sicurezza di 8 cifre (One Time Password) da utilizzare al <strong>posto della password di secondo livello</strong>.Salva in rubrica i numeri che utilizzi più frequentemente e, le volte successive, potrai ricaricarli come di consueto. I numeri che hai già in rubrica sono automaticamente certificati.   </li>
+	</ul>
+</section>

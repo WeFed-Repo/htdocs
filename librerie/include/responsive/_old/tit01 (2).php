@@ -1,0 +1,1 @@
+<h2 class="titGeneric txtSize20 txtTransformUpper colorDark3 txtAlCenter paddBottomMedium">lorem ipsum dolor sit</h2>

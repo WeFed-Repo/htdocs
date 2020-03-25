@@ -1,0 +1,19 @@
+<div id="login">
+<a onclick="ApriChiudiLogin()" href="#1"><img title="Accedi al servizio" alt="login" id="login_img" src="/img/ret/login_off.jpg"/></a> 
+	<div id="login_cont"><a onclick="ApriChiudiLogin()" href="#1"><img title="Chiudi la login" alt="login" src="/img/ret/login_on.jpg"/></a> 
+		<form onsubmit="return check1();" name="login_form" method="post" action="#">
+			<label class="testo" for="user_id">User ID</label>
+			<input type="text" maxlength="8" size="8" value="" name="username"/>
+			<label class="testo" for="password">Password</label>
+			<input type="password" autocomplete="off" maxlength="16" size="10" value="" name="password"/>
+			<input type="image" title="Entra" alt="Entra" src="/img/ret/btn_entra.gif" value="Entra ora" id="image1" name="image1"/>							
+			<input type="hidden" value="" name="browser"/>
+			<input type="hidden" value="" name="versione"/>
+			<input type="hidden" value="" name="initClick"/>
+			<input type="hidden" value="yes" name="multiwebapp"/>
+			<input type="hidden" value="WEBANK" name="service"/>
+		</form>
+		<p><a href="#1"><img title="Istruzioni primo accesso" alt="Istruzioni primo accesso" src="/img/ret/btn_nuovoutente.gif"/></a>
+		<a href="#1"><img title="Dimenticato la password?" alt="Dimenticato la password?" src="/img/ret/btn_dimenticato.gif"/></a></p>
+	</div>
+</div>

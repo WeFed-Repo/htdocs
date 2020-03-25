@@ -1,0 +1,2 @@
+<h2>Migliori e peggiori certificates</h2>
+### Vedi template "<a href="connect.php?page=strutt_priv.php&tpl=tpl_responsive_cw.php&liv0=3&liv1=2&liv2=3&liv3=0&responsive=y">migliori e peggiori Covered Warrants</a>" ###	

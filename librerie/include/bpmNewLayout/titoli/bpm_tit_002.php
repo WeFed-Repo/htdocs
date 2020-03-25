@@ -1,0 +1,1 @@
+<p><strong class="txtTransformUpper">Titolo sezione</strong></p>

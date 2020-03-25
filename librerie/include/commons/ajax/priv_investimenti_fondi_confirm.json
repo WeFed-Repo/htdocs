@@ -1,0 +1,103 @@
+
+<input type="hidden" name="messaggiAvvertenze" value="OK"/>
+<input type="hidden" name="messaggiInducement" value="OK"/>
+<input type="hidden" name="fatca" value="false"/>
+<input type="hidden" name="idDocFacta" value="$idDocFacta"/>
+<input type="hidden" name="idTypeFacta" value="$idTypeFacta"/>
+<input type="hidden" name="numIntestatari" value="2"/>
+
+<div class="tithelp">
+<div class="helpleft">INFORMAZIONI E AVVERTENZE</div>
+<br class="clear"></div>
+	<table class="form01 form01b" style="width:100%">
+		<tr>	
+			<td colspan="4"><strong class="verde">Tempistiche dell'ordine<br></strong>
+							Ti ricordiamo che se inserisci un ordine in un giorno lavorativo di borsa aperta prima delle ore 21.00, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti alle ore 21.00 del giorno stesso; se inserisci l'ordine dopo le ore 21.00, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti il primo giorno lavorativo successivo di borsa aperta alle ore 21.00.<br/>
+				Se inserisci un ordine in un giorno non lavorativo o di borsa chiusa, l'operazione sar&agrave; inviata al soggetto incaricato dei pagamenti il primo giorno lavorativo successivo di borsa aperta alle ore 21.00.<br/><br/>
+						<div><a title="Tempistiche dell'ordine" class="btnevid1" href="javascript:requestTmp(); "><img alt="" src="/img/ret/btn_left_sm1.gif"><span>Tempistiche dell'ordine</span><img alt="" src="/img/ret/btn_right_sm1.gif"></a></div></td>
+	 	</tr>
+	 	 		<tr> 
+			<td colspan="4">
+				<strong class="verde">Avvertenze sull&#39;operazione che stai per effettuare<br></strong>
+				Prima di procedere nell&#39;operazione di investimento, <strong>ti preghiamo di consultare nuovamente l&#39;&#34;Informativa preliminare relativa ai Servizi ed alle attivit&#224; di investimento offerti da WeBank&#34;</strong>.<br/> 
+				<strong>Verifica</strong>, inoltre, <strong>che le informazioni da te fornite a WeBank</strong> in merito al tuo livello di esperienza e conoscenza nell&#39;ambito degli investimenti in strumenti finanziari <strong>siano aggiornate</strong>. Tali informazioni sono necessarie per permettere a WeBank di controllare che tu sia in grado di comprendere i rischi che la presente operazione di investimento comporta. Viceversa, verr&#224; fatto affidamento sulle informazioni che hai gi&#224; fornito.<br/>
+				<strong>Ti invitiamo, in particolare, a prendere visione delle seguenti avvertenze</strong> relative all&#39;operazione di investimento che intendi effettuare:<br/>	
+				<ul class="small">
+								</ul>
+				<ul class="small">
+										- Ti informiamo che stai per effettuare un'operazione nella quale Webank ha un conflitto di interessi per prodotti o servizi di terzi per i quali la Banca percepisce delle commissioni.<br>
+								</ul>
+									<div class="nobor3">
+					<input name="checkAvvertenze" class="nobor3" type="checkbox">
+					<span class="txtinput txtinputlungo"><strong class="small">nonostante le suddette avvertenze, intendo comunque proseguire nell&#39;operazione di investimento.</strong></span>
+					</div>
+			</td>
+		</tr>
+				<tr>
+			<td colspan="4">
+			<strong class="verde">Dichiarazione relativa agli incentivi<br> </strong>
+				<p>Ti segnaliamo che in relazione all&#39;operazione di investimento che stai per concludere abbiamo percepito - percepiremo - un incentivo nella misura specificata di seguito</p>
+				<ul class="small">
+										- PER IL PRESENTE COLLOCAMENTO LA BANCA PERCEPIRA' DALL'EMITTENTE LE SEGUENTI COMMISSIONI MASSIME:  69,00% DELLE COMMISSIONI DI GESTIONE PERIODICHE PARI A   2,25%                                       <br>
+								</ul>
+				<div class="nobor3">
+				<input name="checkIncentivi" class="nobor3" type="checkbox">
+				<span class="txtinput txtinputlungo"><strong class="small">Dichiaro di avere preso visione delle informazioni relative agli incentivi percepiti da WeBank in relazione alla presente operazione di investimento.</strong></span>
+				</div>
+			</td>
+		</tr>
+		<tr id="reinvestimentoOut" style="display: none;">
+					</tr>
+		
+    	<tr>
+			<td colspan="4"><strong class="verde">Informazioni<br></strong>
+			<p><strong>Ti ricordiamo che, ai sensi dell&#39;art. 67-duodecies comma 5 del D. Lgs. 206/2005, alle sottoscrizioni tramite tecniche di comunicazione a distanza di quote/azioni di fondi/sicav non si applica il diritto di recesso previsto per un eventuale ripensamento da parte dell&#39;investitore entro 14 giorni dall&#39;avvenuta sottoscrizione delle quote/azioni.</strong></p>
+				
+		</tr>
+		<tr>				
+			<td colspan="4"><strong class="verde">Prospetto informativo<br></strong>
+			<p>Prima di sottoscrivere le azioni della Sicav, <strong>prendi visione attentamente della</strong> relativa <strong>documentazione</strong> (Prospetto semplificato, Modulo di Sottoscrizione e relativo Allegato) dopo averla stampata e/o salvata su supporto duraturo. In particolare fai attenzione al paragrafo &#8220;fattori di rischio&#8221; contenuto nel Prospetto Semplificato.<br>	
+			Ti ricordiamo che nella sezione &#8220;Investire in fondi e sicav&#8221;&gt;&#8220;Societ&#224; di gestione&#8221; sono sempre disponibili i documenti informativi di cui ti raccomandiamo un&#39;attenta lettura.</p>
+			<a href="javascript:prospetto('10027','18')"><strong>Documentazione obbligatoria</strong></a><br/><br/>
+			<input name="checkProspetto" class="nobor3" type="checkbox" disabled="Enabled">
+			<span class="txtinput txtinputlungo"><strong class="small">Confermo di aver preso visione dell&#39;intera documentazione informativa relativa alla Sicav dopo averla stampata e/o acquisita su supporto duraturo.</span></strong> 
+			<br class="clear">
+			</td>
+		</tr>
+
+		
+	
+	<input name="primaSottoscrizione" type="hidden" value="N"/>
+    				<tr>
+				<td colspan="4">
+						<strong>Prima di procedere nell&#39;operazione di investimento, ti ricordiamo che qualsiasi investimento dovrebbe essere preceduto da un&#39;attenta lettura della documentazione relativa alla Sicav ed in particolare di quanto previsto in ordine alle modalit&#224; di effettuazione delle operazioni successive alla prima sottoscrizione.</strong><br/><br/> 
+				</td>
+			</tr>
+		    <tr> 
+				<td colspan="4">
+					<strong class="verde">Conferma ordine</strong><br/>
+				Premendo &#8220;conferma e invia ordine&#8221; <strong>confermi la tua volont&#224; di effettuare l&#39;operazione di investimento</strong> e in particolare:<br/><br/>
+				<ul class="small">
+					<li>dichiari di aver letto nuovamente la documentazione relativa alla Sicav ed in particolare di quanto previsto in ordine alle modalit&#224; di effettuazione delle operazioni successive alla prima sottoscrizione;</li>
+					<li>autorizzi WeBank a compiere tutto quanto necessario per eseguire l&#39;operazione di investimento richiesta; autorizzi, altres&#236;, l&#39;addebito sul conto corrente collegato al deposito titoli precedentemente scelto di quanto necessario per eseguire l&#39;operazione;</li>
+					<li>confermi l&#39;autorizzazione generale gi&#224; rilasciata a WeBank di operare in conflitto di interessi;</li>
+					<li>dichiari di avere autonomamente valutato le condizioni economiche dell&#39;operazione di investimento in oggetto e di averle trovate appropriate rispetto alle proprie aspettative di risultato;</li>
+					<li>confermi le tue dichiarazioni circa le tue precedenti esperienze ed attuali conoscenze nell&#39;ambito degli investimenti in strumenti finanziari.</li>
+				</ul>
+				<br/>
+				L&#39;ordine sar&#224; inviato alla Sicav e verr&#224; effettuato l&#39;addebito sul conto corrente collegato al deposito titoli precedentemente scelto.<br/><br/>
+				</td>
+		    </tr>       
+   			</table>
+
+<div class="fooform"  style="width:100%">
+<div class="fooformtop"></div>
+	<div class="fooformleft">
+		<div><a href="javascript:history.back()" class="btnformleft" title="indietro"><img src="/img/ret/btn_left_bi.gif" alt="" /><span>indietro</span><img src="/img/ret/btn_right_bi.gif" alt="" /></a></div>	
+	</div>
+	<div class="fooformright">
+		<div><a href="javascript:conferma()" class="btnformright" title="conferma"><img src="/img/ret/btn_left_ar.gif" alt="" /><span>conferma e invia ordine</span><img src="/img/ret/btn_right_ar.gif" alt="" /></a></div>
+		<br class="clear" />
+	</div>	
+	<br class="clear" />
+</div>

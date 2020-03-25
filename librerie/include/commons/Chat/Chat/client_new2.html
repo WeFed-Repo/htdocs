@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Chat</title>
+<style type="text/css">
+body {margin:0 !important; padding:0 !important;font-family:Tahoma,tahoma,Arial,sans-serif; font-size:11px; color:#565656; text-align:center;}
+/* overlayer chiedi all'esperto" */
+#boxChiediEsperto {background:transparent url(img/str_boxChiediEsperto.gif) no-repeat top left; height:323px; width:186px;margin:0 !important;padding:0 !important; text-align:left;}
+.boxChiediEspertoTop {height:40px;width:186px;margin:0;padding:0; cursor: move;}
+.boxChiediEspertoTop img {margin:10px 0 0 165px;cursor:pointer}
+.boxChiediEspertoMiddle {padding:0 8px 0 11px;float:left; height:261px; margin:0; display: block;}
+*html #contenuti .boxChiediEspertoMiddle {padding:0 10px;width:166px;}
+.boxChiediEspertoMiddle p.intro {padding: 0 3px 0 50px; height:50px; display: block; margin:0;}
+#chiediespertoform01 select {width:119px;margin-bottom:3px;margin-top:4px;}
+#chiediespertoform01 select.date{margin:0 0 12px 19px;}
+*:first-child+html  #chiediespertoform01 select.date {margin-left:23px;}
+*html #chiediespertoform01 select.date{margin-left:23px;}
+#boxChiediEsperto .message {font-weight:bold; margin-top:72px;text-align:center;}
+#boxChiediEsperto .message p {padding-bottom: 5px; color: #000 !important}
+#boxChiediEsperto p.feedback {clear:both; display: inline;} 
+#boxChiediEsperto form {margin:11px 0 0 0; height: 150px; float:left; clear:left;}
+
+#boxChiediEsperto input.error, #boxChiediEsperto textarea.error {border: 1px solid #f00 !important}
+#chiediespertoform01 input.prefisso {width:33px;height:13px;border:1px solid #cdcdcd}
+#chiediespertoform01 input.telnumber {width:60px;height:13px;border:1px solid #cdcdcd}
+#boxChiediEsperto .fooform {margin-top:7px; width: 162px; float:left; padding:0;}
+#chiediespertoform02 textarea {width: 161px; height:138px; border:1px solid #cdcdcd; overflow: auto;}
+
+#chiediespertoform02 textarea.area1 {width: 161px; height:100px; border:1px solid #cdcdcd; overflow: auto;font-family:Tahoma,tahoma,Arial,sans-serif; font-size:11px; color:#565656;}
+#chiediespertoform02 textarea.area2 {width: 161px; height:33px; border:1px solid #cdcdcd; overflow: auto;font-family:Tahoma,tahoma,Arial,sans-serif; font-size:11px; color:#565656;}
+
+
+.boxChiediEspertoBottom {text-align: left; display: block; clear:left; float:left; width: 186px; height: 25px; padding:0; margin:-5px 0 0 1px; overflow: visible;}
+.boxChiediEspertoBottom a.opener {font-size: 10px; color: #6f8f0a; display:block; background:transparent url(/img/ret/frec_lista.gif) no-repeat scroll right 11px; color:#6F8F0A; display:block;font-size:10px;margin:0 9px;padding:7px 0;}
+.boxChiediEspertoBottom .disclaimer {display:block;position: absolute; float:left; clear:left; text-align: left; width:184px; height: 230px; margin-top: -206px; background: transparent url(img/str_chiediEspertoDisclaimer.gif) no-repeat left top; margin-left:0;}
+*:first-child+html .boxChiediEspertoBottom .disclaimer {display:block;position: absolute; float:left; clear:left; text-align: left; width:184px; height: 230px; margin-top: -206px;background: transparent url(img/str_chiediEspertoDisclaimer.gif) no-repeat left top; margin-left:-9px;}
+* html .boxChiediEspertoBottom .disclaimer{display:block;position: absolute; float:left; clear:left; text-align: left; width:184px; height: 230px; margin-top: -206px;background: transparent url(img/str_chiediEspertoDisclaimer.gif) no-repeat left top; margin-left:-9px;}
+
+.boxChiediEspertoBottom .disclaimer p {font-size:10px; line-height:16px;padding:6px 6px 6px 10px;height: 198px; float:left; margin:0; clear:left;}
+.boxChiediEspertoBottom .disclaimer a {font-size:10px; color: #6f8f0a; padding:3px 8px 0 0; text-align:right; display:block; clear:both;}
+div.fooform .fooformleft {float:left;}
+div.fooform .fooformright {float:right;}
+
+.stato {background: transparent url(img/img_or_statoattivo.gif) no-repeat 4px 4px; font-size:10px; color:#565656; margin:0 0 3px 0; padding:0 0 0 12px; clear:left; float:left; width:170px;}
+.stato2 {background: transparent url(img/img_or_statononattivo.gif) no-repeat 4px 4px; font-size:10px; color:#565656; margin:0 0 3px 0; padding:0 0 0 12px; float:left; clear:left; width:170px;}
+.stato3 {background: transparent url(img/img_or_statoattesa.gif) no-repeat 4px 4px; font-size:10px; color:#565656; margin:0 0 3px 0; padding:0 0 0 12px; float:left; clear:left; width:170px;}
+.bolla {margin:50px 0 0 0; width:170px; float:left; clear:left; text-align:center}
+.testobolla {height:33px; padding:20px 0 0 0; width:170px; float:left; clear:left; font-weight:bold; text-align:center}
+
+a.btnformleft{display:block;color:#666;text-decoration:none !important;font-size:10px}
+a.btnformleft:hover{display:block;color:#666;font-size:10px;text-decoration:none !important}
+a.btnformleft img,a.btnformleft:link img,a.btnformleft:hover img{display:block;float:left;margin:0;padding:0;border:none;text-decoration:none !important}
+a.btnformleft span,a.btnformleft:link span,a.btnformleft:hover span{cursor:hand;display:block;float:left;height:21px;line-height:19px;padding-left:5px;padding-right:5px;background:url(img/btn_center_bi.gif) left top repeat-x;font-size:11px;color:#252725;text-decoration:none !important}
+a.btnformright{display:block;color:#fff;text-decoration:none;font-size:10px;text-decoration:none !important}
+a.btnformright:hover{display:block;color:#fff;text-decoration:none;font-size:10px;text-decoration:none !important}
+a.btnformright img,a.btnformright:link img,a.btnformright:hover img{display:block;float:left;margin:0;padding:0;border:none;text-decoration:none !important}
+a.btnformright span,a.btnformright:link span,a.btnformright:hover span{cursor:hand;display:block;float:left;height:21px;line-height:19px;padding-left:5px;padding-right:5px;background:url(img/btn_center_ar.gif) left top repeat-x;font-size:11px;color:#fff;text-decoration:none !important}
+</style>
+<script type="text/javascript">
+function cambiopag()
+		{
+			document.getElementById("chiediEspertoChiamare").style.display='none';
+			document.getElementById("connessioneFallita").style.display='block';
+		}
+function cambiopag2()
+		{
+			document.getElementById("chiediEspertoChiamare").style.display='block';
+			document.getElementById("connessioneFallita").style.display='none';
+		}
+	</script>
+</head>
+<body>
+<div id="boxChiediEsperto">
+		<div class="boxChiediEspertoTop">
+			<img onclick="javascript: self.close();" alt="chiudi" src="img/boxchiediesperto_x.gif"/>
+		</div>
+		<div class="boxChiediEspertoMiddle">
+			<p id="introPhrase" class="intro"><strong>Interagisci</strong> in tempo reale con il <strong>nostro esperto</strong>.</p>
+		
+		<!-- Form richiesta di contatto -->
+		<div id="chiediEspertoChiamare" style="">
+			<div class="bolla"><img src="img/img_or_bolla.jpg" alt="Messaggio Chiamare"/></div>
+			<div class="testobolla">&nbsp;</div>		
+			<div class="stato2"><strong>Stato:</strong> non connesso</div>			
+			<div class="fooform">				
+				<div class="fooformright">
+					<div><a onclick="javascript: cambiopag();" href="javascript:;" class="btnformright" title="connetti"><img src="img/btn_left_ar.gif" alt="Connetti"/><span>connetti</span><img src="img/btn_right_ar.gif" alt="Connetti"/></a></div>
+					<br class="clear"/>
+				</div>
+			</div>		
+		</div>
+		<!-- Fine form richiesta di contatto -->
+		
+		<!-- Form scrivi -->
+		<div style="display: none;" id="connessioneFallita">
+			<div class="bolla"><img src="img/img_or_bolla.jpg" alt="Connessione fallita"/></div>
+			<div class="testobolla">Il servizio è attivo<br />dalle 8:30 alle 19:00</div>		
+			<div class="stato2"><strong>Stato:</strong> non connesso</div>
+		</div>
+		<!-- Fine form scrivi -->
+	</div>
+	
+	<script type="text/javascript">
+		
+		function chiediEspertoCloseDisclaimer(clicked)
+		{
+			clicked.parentNode.style.display='none';
+			for (i=0;i<$('chiediespertoform02').getElementsByTagName('SELECT').length;i++)
+			{
+				$('chiediespertoform02').getElementsByTagName('SELECT')[i].style.visibility='visible';
+			}
+		}
+		
+		function chiediEspertoOpenDisclaimer(clicked)
+		{
+			clicked.parentNode.getElementsByTagName('DIV')[0].style.display='block';
+			for (i=0;i<$('chiediespertoform02').getElementsByTagName('SELECT').length;i++)
+			{
+				$('chiediespertoform02').getElementsByTagName('SELECT')[i].style.visibility='hidden';
+			}
+		}	
+				
+	</script>
+	
+	<div class="boxChiediEspertoBottom">
+		<div style="display: none;" class="disclaimer">
+			<p>"Chiedi all'esperto" è il servizio di assistenza che riporta dati pubblici e altre informazioni di natura operativa o istituzionale riguardanti titoli obbligazionari e non fornisce, pertanto, alcuna consulenza di merito rispetto alla bontà dell'emittente o alle opportunità dell'eventuale investimento.<br/>
+			<strong>In nessun caso l'assistenza deve essere intesa come consulenza in materia di investimenti.</strong></p>
+		<a onclick="chiediEspertoCloseDisclaimer(this);" href="javascript:;">Chiudi</a>
+		</div>
+		<a class="opener" onclick="chiediEspertoOpenDisclaimer(this);" href="javascript:;">Il servizio non fornisce consulenza</a>
+	</div>
+</div>
+	
+</body>
+</html>

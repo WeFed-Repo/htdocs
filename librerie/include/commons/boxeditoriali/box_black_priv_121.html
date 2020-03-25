@@ -1,0 +1,177 @@
+<script language="javascript" type="text/javascript">
+// javascript per il controllo di tutti gli accordion
+function closeMyMenuSelector2(element)
+{
+element.getElementsByTagName('div')[1].getElementsByTagName('a')[1].style.backgroundImage = 'url(/img/ret/ico1bt_checksectiontitle_open.gif)';
+	element.getElementsByTagName('div')[2].style.display = 'none';
+}
+function openMyMenuSelector2(element)
+{
+	element.getElementsByTagName('div')[1].getElementsByTagName('a')[1].style.backgroundImage = 'url(/img/ret/ico1bt_checksectiontitle_close.gif)';
+	element.getElementsByTagName('div')[2].style.display = 'block';
+}
+function switchMyMenuSelector2(element)
+{
+	if (element.getElementsByTagName('div')[2].style.display == 'block')
+	{closeMyMenuSelector2(element)}
+	else
+	{openMyMenuSelector2(element)}
+}
+function switchMyMenuVoice2 (checkboxelement)
+{
+	if (checkboxelement.checked == true) 
+	{checkboxelement.parentNode.className = 'checked';}
+	else
+	{checkboxelement.parentNode.className = '';}
+}
+function closeAllMyMenuVoices2 ()
+{
+	var divarray = document.getElementsByTagName('div');
+	for (i=0;i<=divarray.length-1;i++)
+	{
+		if (divarray[i].className == 'mymenuselector2')
+		{			
+			closeMyMenuSelector2(divarray[i]);
+		}
+	}
+}
+function openAllMyMenuVoices2 ()
+{
+	var divarray = document.getElementsByTagName('div');
+	for (i=0;i<=divarray.length-1;i++)
+	{
+		if (divarray[i].className == 'mymenuselector2')
+		{
+			
+			openMyMenuSelector2(divarray[i]);
+		}
+	}
+}
+
+</script>
+
+<div class="mymenutopper2">
+				<div class="console">
+					<a href="javascript:;" onclick="openAllMyMenuVoices2()"><img src="/img/ret/ico1bt_mymenutopper_open.gif" title="Apri tutti"></a>					
+					<a href="javascript:;" onclick="closeAllMyMenuVoices2()"><img src="/img/ret/ico1bt_mymenutopper_close.gif" title="Chiudi tutti"></a>
+				</div><br class="clear">
+			</div>	
+			<br class="clear">
+			<!-- SELECTOR -->
+			<div class="mymenuselector2">
+				<div class="selectortop2"></div>
+				<div class="selectortitle2"><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="sezioni" title="Lorem ipsum">Lorem ipsum</a><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="selectorswitch"></a></div>
+					<div class="selectorbody2">
+					<div class="contsection">						
+						<div class="sx">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis hendrerit posuere. Donec aliquet sem metus, euismod mattis urna. Duis nec est rhoncus odio blandit vestibulum sed vitae ante. Nam ultricies purus vitae enim ullamcorper euismod. Morbi dictum, tortor et fringilla pulvinar, purus turpis varius lacus, tincidunt bibendum sapien dolor in libero. Cras vitae arcu a mi imperdiet tempor. Aenean bibendum semper mattis. Cras pretium malesuada leo et porttitor. Proin vestibulum vulputate tellus a gravida. Phasellus et mauris quis lacus dignissim mattis. Suspendisse potenti.</div>	
+						<div class="dx"><img src="/wscmn/img/ret/img_or_ingombro2.gif" title="Lorem ipsum"/></div>	
+					</div>
+					</div>
+				<div class="selectorbottom2"></div>
+			</div>
+			<!-- FINE SELECTOR -->
+			<br class="clear">
+			<!-- SELECTOR -->
+			<div class="mymenuselector2">
+				<div class="selectortop2"></div>
+				<div class="selectortitle2"><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="sezioni" title="Lorem ipsum">Lorem ipsum</a><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="selectorswitch"></a></div>
+					<div class="selectorbody2">
+					<div class="contsection">
+					<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Quisque lobortis hendrerit posuere. Donec aliquet sem metus, euismod mattis urna. <strong>Duis nec est rhoncus odio blandit</strong> vestibulum sed vitae.</p>						
+					<table border="0" class="invquot">					
+					<tr>
+						<td class="uno"><span>DomesticMOT</span> (titoli di Stato)</td>
+						<td class="due">9.00</td>
+						<td class="tre">17.30</td>
+					</tr>
+					<tr>
+						<td class="uno"><span>DomesticMOT</span> (Obbligazioni in euro)</td>
+						<td class="due">9.00</td>
+						<td class="tre">17.30</td>
+					</tr>
+					<tr>
+						<td class="uno"><span>EuroMOT, ExtraMOT</span></td>
+						<td class="due">9.00</td>
+						<td class="tre">17.30</td>
+					</tr>
+					<tr>
+						<td class="uno"><span>EuroTLX</span> (Covered Warrant, Certificates e Obbligazioni Bancarie non Eurobond)</td>
+						<td class="due">9.00</td>
+						<td class="tre">17.30</td>
+					</tr>
+					<tr>
+						<td class="uno"><span>EuroTLX</span> (Altri strumenti)</td>
+						<td class="due">9.00</td>
+						<td class="tre">18.00</td>
+					</tr>
+					<tr>
+						<td class="uno"><span>Akros IS</span></td>
+						<td class="due">8.30</td>
+						<td class="tre">17.30</td>
+					</tr>										
+					</table>				
+					</div>
+										
+				</div>
+				<div class="selectorbottom2"></div>
+			</div>
+			<!-- FINE SELECTOR -->
+			<br class="clear">
+			<!-- SELECTOR -->
+			<div class="mymenuselector2">
+				<div class="selectortop2"></div>
+				<div class="selectortitle2"><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="sezioni" title="Lorem ipsum">Lorem ipsum</a><a href="javascript:;" onclick="switchMyMenuSelector2(this.parentNode.parentNode)" class="selectorswitch"></a></div>
+					<div class="selectorbody2">					
+					<div class="contsection">						
+					<table border="0" class="invgrade">
+					<tr>
+						<td rowspan="9" class="invimg"><img src="/wscmn/img/ret/img_or_invgrade.jpg"/></td>
+						<td><strong>Aaa</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici consecteur aliqua et labora sit amet adispici</td>
+					</tr>
+					<tr>
+						<td><strong>Aa1<br/>Aa2<br/>Aa3</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici consecteut aliqua et labbora unt adispici aliqua
+consecteur et laborum</td>
+					</tr>
+					<tr>
+						<td><strong>A1<br/>A2<br/>A3</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici consecteur aliqua et labora unt parabellum into</td>
+					</tr>
+					<tr>
+						<td><strong>Baa1<br/>Baa2<br/>Baa3</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici conecteur aliqua parabellum et scriba into lao
+lanum arcantino et arcangelum entrall</td>
+					</tr>
+					<tr>
+						<td><strong>Ba1<br/>Ba2<br/>Ba3</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici consecteur aliqua et labora unt aliqua</td>
+					</tr>
+					<tr>
+						<td><strong>B1<br/>B2<br/>B3</strong></td>
+						<td>Lorem ipsum dolor sit amet adispici consecteur aliqua et labora unt aliqua et</td>
+					</tr>
+					<tr>
+						<td><strong>Caa1<br/>Caa2<br/>Caa3</strong></td>
+						<td>Lorem ispum dolor et labora ora et estamus adispici consecta inside</td>
+					</tr>
+					<tr>
+						<td><strong>Ca</strong></td>
+						<td>Lorem ispum dolor et labora ora et estamus adispici consecta inside</td>
+					</tr>
+					<tr>
+						<td><strong>C</strong></td>
+						<td>Lorem ispum dolor et labora ora et estamus adispici consecta insidei</td>
+					</tr>						
+					</table>				
+					</div>	
+				</div>
+				<div class="selectorbottom2"></div>
+			</div>
+			<!-- FINE SELECTOR -->
+<div class="mymenutopper mymenutopper2">
+				<div class="console">
+					<a href="javascript:;" onclick="openAllMyMenuVoices2()"><img src="/img/ret/ico1bt_mymenutopper_open.gif" title="Apri tutti"></a>					
+					<a href="javascript:;" onclick="closeAllMyMenuVoices2()"><img src="/img/ret/ico1bt_mymenutopper_close.gif" title="Chiudi tutti"></a>
+				</div>
+			</div>

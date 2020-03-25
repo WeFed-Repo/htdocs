@@ -1,0 +1,66 @@
+<script src="/wscmn/js/wb/pubblica/sliderProduct.js" type="text/javascript"></script>
+<script src="/wscmn/js/wb/pubblica/sliderMinor.js" type="text/javascript"></script>
+
+
+<div id="productbrowser">
+	<div id="ajaxLoader"></div>
+	<span id="tabContainer">
+
+		<div id="tabTrading">
+			<ul>
+				<li id="tabProdotti">Prodotti</li>
+				<li id="tabServizi"><a href="javascript:switchTab('servizi');">Servizi per il Trading</a></li>
+			</ul>
+		</div>
+	</span>
+	<div style="overflow: hidden;" id="pb-productbrowsercontainer"> 
+		<div id="frecciaDestra"><img src="/img/ret/freccia_fade_right.png" width="25" height="126" alt="Freccia destra"/></div>
+
+		<div id="frecciaSinistra"><img src="/img/ret/freccia_fade_left.png" width="25" height="126" alt="Freccia sinistra" /></div>
+		<ul id="pb-productslider"></ul>
+		<div id="baloonContainer">
+			<ul id="baloon"></ul>
+		</div>
+		<div style="visibility: visible;" id="pb-productslidertrack"> 
+			<div id="track" > 
+				<div id="handle"><img src="/img/ret/maniglia.png" alt="Trascina"/></div>
+				<div id="catContainer"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div id="longDesc">Il sistema sta caricando la scheda prodotto...</div>
+<div class="bginvest">
+<div class="bloccoTesto"> 
+	<h2>Lorem ipsum lorem</h2>
+	<p>Maecenas pulvinar, diam non consectetuer adipiscing, libero arcu dapibus sem, eget mattis nibh nibh vitae purus. <br /> Vestibulum egestas.</p>
+</div>
+<div id="minorBrowser"> 
+	<div id="minorFrecciaDestra"><img src="/img/ret/freccia_minor_right.png" width="30" height="49" alt="Freccia destra"/></div>
+	<div id="minorFrecciaSinistra"><img src="/img/ret/freccia_minor_left.png" width="30" height="49" alt="Freccia sinistra" /></div>
+	<ul id="minorBrowserContainer"></ul>
+</div>
+<div id="minorBaloon"></div>
+
+<script type="text/javascript">
+<!--
+	function switchTab(target)
+	{
+		var tabHtml = '';
+		
+		if (target == 'prodotti')
+			tabHtml = '<div id="tabTrading"><ul><li id="tabProdotti">Prodotti</li><li id="tabServizi"><a href="javascript:switchTab(\'servizi\');">Servizi per il Trading</a></li></ul></div>';
+		else if (target == 'servizi')
+			tabHtml = '<div id="tabPiattaforme"><ul><li id="tabProdotti"><a href="javascript:switchTab(\'prodotti\');">Prodotti</a></li><li id="tabServizi">Servizi per il Trading</li></ul></div>';
+				
+		$('tabContainer').innerHTML = tabHtml;
+
+		startProductSlider('prodotti', '', cgi_script + '/wscmn/xml/trading2.xml' + target);
+	}
+	
+	switchTab('prodotti');
+	startMinorSlider(cgi_script + '/wscmn/xml/trading.xml');
+-->
+</script>
+</div>

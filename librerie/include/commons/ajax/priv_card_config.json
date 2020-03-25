@@ -1,0 +1,38 @@
+{
+    "cartiprOne":
+    {
+        "id": "nav_priv_wbx_compara_carte_cartiprOne",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?COL=carte&OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_one_rich&OBSKEY3=nav_priv_wbx_scheda_prod_cartimpr_one&OBS_REF=Card_wizard_link_imprntone_scheda",
+        "name": " Cartimpronta One "
+    },
+    "bancomat":
+    {
+        "id": "nav_priv_wbx_compara_carte_bancomat",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_Bancomat_rich&OBSKEY3=nav_priv_wbx_scheda_prod_bancomat&OBS_REF=Card_wizard_link_Bncmt_scheda ",
+        "name": " Bancomat "
+    },
+    "amexVerde":
+    {
+        "id": "nav_priv_wbx_compara_carte_amexVerde",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_amex_verde_rich&OBSKEY3=nav_priv_wbx_scheda_prod_amexVerde&OBS_REF=Card_wizard_link_amexgreen_scheda",
+        "name": " CARTA VERDE AMERICAN EXPRESS "
+    },
+    "cartaKjeans":
+    {
+        "id": "nav_priv_wbx_compara_carte_cartaKjeans",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartaKjeans_rich&OBSKEY3=nav_priv_wbx_scheda_prod_cartaKjeans&OBS_REF=Card_wizard_link_kjeans_scheda",
+        "name": " Carta Kje@ns "
+    },
+    "cartiprGoldPlus":
+    {
+        "id": "nav_priv_wbx_compara_carte_cartiprGoldPlus",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_gold_plus_rich&OBSKEY3=nav_priv_wbx_scheda_prod_cartimpr_gold_plus&OBS_REF=Card_wizard_link_imprntgold_scheda",
+        "name": " Cartimpronta Gold Plus "
+    },
+    "amexOro":
+    {
+        "id": "nav_priv_wbx_compara_carte_amexOro",
+        "link": " \/webankpri\/wbOnetoone\/3l\/do\/wbOnetoone\/schedaProdotto.do?OBSCNT=TAB&tabId=nav_priv_wbx_carte&OBSKEY=nav_priv_wbx_cartimpr_amex_oro_rich&OBSKEY3=nav_priv_wbx_scheda_prod_amexOro&OBS_REF=Card_wizard_link_amexgold_scheda",
+        "name": " CARTA ORO AMERICAN EXPRESS "
+    }
+}

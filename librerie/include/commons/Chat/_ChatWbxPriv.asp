@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+
+	
+<head>
+	<title>We@bank - BPM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="script" http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="script" http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="description" content="We@bank - Conosci Conto@me" />
+	<meta name="keywords" content="" />
+	<meta name="distribution" content="Global" />
+	<link href="css/WbxPrivstyle.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body onload="javascript:init();">
+<%
+username = Request.QueryString("username")
+%>
+
+<div id="ctnchat">
+	<form>
+		<script language="javascript" src="IFM_Global.js"></script>
+		<script language="javascript" src="IFM_ScriptControl.js"></script>
+		<script language="javascript" src="Client.js"></script>
+		<div class="bkGround">
+		 <div id="bkgStorico">
+			 <textarea id="txtArea" cols="40" rows="5" class="first" wrap="soft" readonly></textarea>
+		 </div>
+		 <div id="bkgInsert">
+			<textarea id="txtMsg" cols="40" rows="3" class="second" tabindex="1" readonly onkeydown="javascript:checkEnter(event)" onkeyup="javascript:enableSendButton()"></textarea>
+		 </div>
+		 <div>
+			<input class="btnarancio" type="button" id="btnConnect" value="chiama" onclick="javascript:call('<%=username%>')" enabled runat="server" />
+			<input class="btngrigio" type="button" id="btnSend" value="invia" onclick="javascript:send()" disabled  runat="server"/>
+
+
+
+		 </div>
+		 <div id="txtStatus" class="status">
+			Non connesso
+		 </div>
+    </div>
+
+	</form>
+</div>
+</body>
+</html>

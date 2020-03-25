@@ -1,0 +1,670 @@
+#grafPatrimonio {
+  position: relative;
+  min-height: 356px;
+  z-index: 0;
+}
+#boxTesto {
+  display: none;
+}
+#boxTesto p {
+  color: #000;
+  padding: 5px 35px 5px 35px;
+  line-height: 11px;
+}
+#noChartText {
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 13px;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  z-index: 10;
+}
+#legenda {
+  position: relative;
+  float: right;
+  width: 275px;
+  margin-top: 25px;
+  z-index: 10;
+}
+#grafPatrimonio.visibleText {
+  min-height: 401px;
+}
+.visibleText #boxTesto {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 570px;
+  height: 40px;
+  background: url(/img/ret/str_bg_boxtesto.gif) transparent no-repeat left top;
+  z-index: 9;
+}
+.visibleText #titPatrimonio {
+  top: 59px;
+}
+.visibleText #legenda {
+  margin-top: 50px;
+}
+.visibleText #borPatrimonioLeft {
+  height: 355px;
+}
+.visibleText #borPatrimonioRight {
+  height: 335px;
+}
+.visibleText #borPatrimonioBottom {
+  top: 362px;
+}
+.visibleText #blurGrafPatrimonio {
+  top: 319px;
+}
+.visibleText #subGrafPatrimonio {
+  margin-top: 319px;
+}
+.visibleText #chartPatrimonio {
+  top: 70px;
+}
+#legendaContent .grafSubLegenda .first a {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+#grafPatrimonio .clear {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+}
+#subGrafPatrimonio {
+  position: relative;
+  z-index: 1;
+}
+.collapse:not(.in) .subLegenda {
+  display: none;
+}
+/* Grafici */
+#chartPatrimonioWrap,
+#subChartPatrimonioWrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+#chartPatrimonio,
+#subChartPatrimonio,
+#coveringDiv,
+#coveringDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+#coveringDiv.empty {
+  background: url("/wscmn/fe/img/mio_patrimonio_empty_chart.png") no-repeat 0 0;
+  background-size: cover;
+}
+#coveringDiv2.empty {
+  background: url("/wscmn/fe/img/mio_patrimonio_empty_chart2.png") no-repeat 0 0;
+  background-size: cover;
+}
+.btnBgPortafoglio {
+  width: 245px;
+  height: 39px;
+  margin-left: 11px;
+}
+#legendaContent .grafLegenda li.btnBgPort {
+  background: none;
+  height: 39px;
+  margin-bottom: 5px;
+}
+.btnBgPortafoglio a,
+#legendaContent .grafLegenda li.btnBgPort .btnBgPortafoglio a {
+  display: block;
+  width: 206px;
+  height: 31px;
+  background: url(/img/ret/btn_bg_patr_portafoglio.gif) no-repeat left top;
+  cursor: pointer;
+  padding: 4px 30px 4px 9px;
+  text-decoration: none !important;
+  color: #6F8F0A !important;
+  font-weight: bold !important;
+  line-height: 14px;
+}
+.btnBgPortafoglio a:hover,
+#legendaContent .grafLegenda li.btnBgPort .btnBgPortafoglio a:hover {
+  display: block;
+  width: 206px;
+  height: 31px;
+  background: url(/img/ret/btn_bg_patr_portafoglio_on.gif) no-repeat left top;
+  cursor: pointer;
+  padding: 4px 30px 4px 9px;
+  text-decoration: none !important;
+  color: #6F8F0A !important;
+  font-weight: bold !important;
+}
+#legendaContent #boxPortafoglio .btnBgPortafoglio a {
+  padding-top: 11px;
+}
+/* |FINE| Grafici */
+.descLegenda h3 {
+  margin-bottom: 5px;
+}
+.descLegenda ul {
+  padding-left: 30px;
+}
+/* Versione selettore conti */
+#content .rapporti .depwt,
+#contenuti .rapporti .depwt {
+  width: 50px;
+  height: 13px;
+}
+#content .rapporti .rappWt,
+#contenuti .rapporti .rappWt {
+  height: 27px;
+}
+#content .rapporti .selTutti,
+#contenuti .rapporti .selTutti {
+  float: left;
+  width: 100px;
+  height: 13px;
+  line-height: 13px;
+  margin-left: 16px;
+  margin-right: 0;
+  cursor: pointer;
+}
+#content .rapporti .selTutti label,
+#contenuti .rapporti .selTutti label {
+  cursor: pointer;
+}
+#content .rapporti .selTutti .txtinput,
+#contenuti .rapporti .selTutti .txtinput {
+  width: 70px;
+  height: 20px;
+  line-height: 27px;
+  overflow: hidden;
+}
+#content .rapporti #selTuttiCB,
+#contenuti .rapporti #selTuttiCB {
+  float: left;
+  display: block;
+  margin-top: 8px;
+  cursor: default;
+}
+#content .rapporti .selectRapp,
+#contenuti .rapporti .selectRapp,
+#content .rapporti .selectRappOut,
+#contenuti .rapporti .selectRappOut,
+#content .rapporti .selectRapp .inputSx,
+#contenuti .rapporti .selectRapp .inputSx {
+  width: 335px !important;
+}
+#content .rapporti .selectRapp .selectorSpacer,
+#contenuti .rapporti .selectRapp .selectorSpacer {
+  width: 333px;
+}
+#content .rapporti .selectRapp .selector,
+#contenuti .rapporti .selectRapp .selector {
+  width: 331px;
+}
+#content .rapporti .selectorConfirm,
+#contenuti .rapporti .selectorConfirm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 335px;
+  height: 34px;
+  margin: 0;
+  background: url(/img/ret/str_sr_confirmLeft.gif) transparent no-repeat scroll left top;
+}
+#content .rapporti .selectorConfirm2,
+#contenuti .rapporti .selectorConfirm2 {
+  height: 34px;
+  margin: 0 0 0 4px;
+  background: url(/img/ret/str_sr_confirmRight.gif) transparent no-repeat scroll right top;
+}
+#content .rapporti .selectorConfirm3,
+#contenuti .rapporti .selectorConfirm3 {
+  height: 26px;
+  margin: 0 4px 0 0;
+  padding-top: 8px;
+  background: url(/img/ret/str_sr_confirmMid.gif) transparent repeat-x scroll left top;
+}
+#content .rapporti .btnConfirm,
+#contenuti .rapporti .btnConfirm {
+  width: 71px;
+  height: 20px;
+  margin: 0 auto;
+  background: url(/img/ret/str_sr_btnConfirmLeft.gif) transparent no-repeat scroll left top;
+}
+#content .rapporti .btnConfirm2,
+#contenuti .rapporti .btnConfirm2 {
+  height: 20px;
+  margin: 0 0 0 8px;
+  background: url(/img/ret/str_sr_btnConfirmRight.gif) transparent no-repeat scroll right top;
+}
+#content .rapporti .btnConfirm3,
+#contenuti .rapporti .btnConfirm3 {
+  height: 20px;
+  margin: 0 8px 0 0;
+  background: url(/img/ret/str_sr_btnConfirmMid.gif) transparent repeat-x scroll left top;
+}
+#content .rapporti .btnConfirm3 a,
+#contenuti .rapporti .btnConfirm3 a,
+#content .rapporti .btnConfirm3 a:visited,
+#contenuti .rapporti .btnConfirm3 a:visited,
+#content .rapporti .btnConfirm3 a:hover,
+#contenuti .rapporti .btnConfirm3 a:hover {
+  display: block;
+  height: 20px;
+  margin: 0 auto;
+  line-height: 20px;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+  color: #ffffff !important;
+}
+#content .rapporti.form01,
+#contenuti .rapporti.form01 {
+  float: left;
+  margin-top: 10px;
+}
+#content .rapporti .selectorOptions .selConto,
+#contenuti .rapporti .selectorOptions .selConto {
+  float: left;
+  display: block;
+  margin: 5px 5px 0 5px;
+  cursor: default;
+}
+#content .rapporti .selectorOptions span,
+#contenuti .rapporti .selectorOptions span {
+  float: left;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+#content .rapporti .selectRappOut,
+#contenuti .rapporti .selectRappOut {
+  line-height: 22px;
+  font-weight: bold;
+}
+#content .selectRapp .selectorOptions,
+#contenuti .selectRapp .selectorOptions {
+  margin: 0;
+  padding: 0 0 0 5px;
+  height: 23px;
+  line-height: 23px;
+  vertical-align: middle;
+}
+#content .selectRapp .selected,
+#contenuti .selectRapp .selected {
+  background-color: #ececec;
+}
+#content .selectRapp .optionOver,
+#contenuti .selectRapp .optionOver {
+  color: #666 !important;
+  background-color: #f9f9f9;
+  text-decoration: none;
+}
+#content .btncustomer,
+#contenuti .btncustomer {
+  float: right;
+  margin-top: -5px;
+}
+#content .form01.rapporti.noQuest,
+#contenuti .form01.rapporti.noQuest {
+  width: 700px !important;
+}
+#coveringDiv a {
+  display: none;
+}
+#coveringDiv2 a {
+  display: none;
+}
+#coveringDiv.empty a {
+  background: url(/wscmn/img/ret/str_bg_graficonodati.gif) transparent repeat-x scroll 0 -14px;
+}
+#coveringDiv2.empty a {
+  background: url(/wscmn/img/ret/str_bg_subgraficonodati.gif) transparent repeat-x scroll left top;
+}
+#outputConti {
+  margin: 5px -5px -5px -5px;
+}
+.listaConti {
+  float: none;
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #Fff;
+  border: 1px solid #cecece;
+}
+.clear {
+  display: block;
+  overflow: hidden;
+}
+#switch_contoPredefinito {
+  float: left;
+  margin-top: 5px;
+  width: 30px;
+}
+/* HEAD tebella */
+.spHead {
+  margin-bottom: 0;
+  padding: 20px 30px;
+  border: 1px solid #CCCCCC;
+  background-color: #FBFBFB;
+}
+.spHead.formGeneric .row-fluid {
+  margin-bottom: 0;
+}
+.spNome,
+.spSaldo {
+  height: 67px;
+  padding-left: 30px;
+}
+.panel-group.panel-group-icon .panel-title a {
+  padding: 8px 62px 8px 0;
+  line-height: 32px;
+  font-size: 16px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+.panel-group.panel-group-icon .panel-title a,
+.panel-group.panel-group-icon .panel-title a:hover {
+  cursor: default;
+}
+.panel-group.panel-group-icon .panel-title a .icoLegenda,
+.panel-group.panel-group-icon .panel-title a .valLegenda,
+.panel-group.panel-group-icon .panel-title a .icon-arrow_down,
+.panel-group.panel-group-icon .panel-title a .icon-arrow_up,
+.panel-group.panel-group-icon .panel-title a .icoLegenda:hover,
+.panel-group.panel-group-icon .panel-title a .valLegenda:hover,
+.panel-group.panel-group-icon .panel-title a .icon-arrow_down:hover,
+.panel-group.panel-group-icon .panel-title a .icon-arrow_up:hover {
+  color: #8ab10b;
+  cursor: pointer;
+}
+.panel-group.panel-group-icon .panel-title a .valLegenda {
+  text-decoration: underline;
+  color: #6F8F0A;
+}
+.panel-group.panel-group-icon .panel-title a .valLegenda:hover {
+  text-decoration: none;
+  color: #6F8F0A;
+}
+.panel-group.panel-group-icon .panel-title a .labelLegenda {
+  color: #000;
+}
+.panel-group.panel-group-icon .panel-title a .valLegenda {
+  padding: 8px 62px 8px 0;
+  line-height: 32px;
+}
+.panel-group.panel-group-icon .panel-title a .title-icon {
+  display: inline-block;
+  padding-right: 16px;
+  vertical-align: middle;
+  font-size: 32px;
+  font-weight: 300;
+  color: #262626;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 18px;
+  left: -44px;
+  background-color: transparent;
+  z-index: 20;
+}
+.panel-group.panel-group-icon .panel-title a .icon.icon-small-attivo {
+  top: 1px;
+  right: 8px;
+  font-size: 16px;
+  color: #fff;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon {
+  border-radius: 5px;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon01 {
+  background: #00331d;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon02 {
+  background: #016725;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon03 {
+  background: #7e9732;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon04 {
+  background: #ced786;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon05 {
+  background: #102943;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon06 {
+  background: #5cbce2;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIcon07 {
+  background: #aed9ea;
+}
+.panel-group.panel-group-icon .panel-title a .boxBgIconDis {
+  background: #eeeeee;
+}
+.panel-group.panel-group-icon .panel-default:not(.active) .icon-arrow_down,
+.panel-group.panel-group-icon .panel-default:not(.active) .icon-arrow_up {
+  display: none;
+}
+.panel-group.panel-group-icon .disabled .panel-title a .labelLegenda,
+.panel-group.panel-group-icon .disabled .panel-title a .valLegenda,
+.panel-group.panel-group-icon .disabled .panel-title a .boxBgIcon,
+.panel-group.panel-group-icon .disabled .panel-title a .icon-arrow_down,
+.panel-group.panel-group-icon .disabled .panel-title a .icon-arrow_up,
+.panel-group.panel-group-icon .disabled .panel-title a .labelLegenda:hover,
+.panel-group.panel-group-icon .disabled .panel-title a .valLegenda:hover,
+.panel-group.panel-group-icon .disabled .panel-title a .boxBgIcon:hover,
+.panel-group.panel-group-icon .disabled .panel-title a .icon-arrow_down:hover,
+.panel-group.panel-group-icon .disabled .panel-title a .icon-arrow_up:hover {
+  color: #eee;
+}
+.panel-group.panel-group-icon .disabled .panel-title a .boxBgIcon,
+.panel-group.panel-group-icon .disabled .panel-title a .boxBgIcon:hover {
+  background-color: #eee;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_1 {
+  background-color: #00561e;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_2 {
+  background-color: #00782a;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_3 {
+  background-color: #009a35;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_4 {
+  background-color: #00bc41;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_5 {
+  background-color: #00de4d;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon01_6 {
+  background-color: #01ff59;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon03_1 {
+  background-color: #a4c857;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon03_2 {
+  background-color: #b2d170;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon03_3 {
+  background-color: #c0d98a;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon03_4 {
+  background-color: #cee1a4;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon04_1 {
+  background-color: #d6df9e;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon04_2 {
+  background-color: #e1e7b7;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_1 {
+  background-color: #1a426c;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_2 {
+  background-color: #245b95;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_3 {
+  background-color: #2d75be;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_4 {
+  background-color: #5997d7;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_5 {
+  background-color: #82b0e1;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_6 {
+  background-color: #b8d3ee;
+}
+.panel-group.panel-group-icon .subLegenda .boxBgIcon05_7 {
+  background-color: #e2edf8;
+}
+#legendaBody .panel-group.panel-group-icon .panel-title a .title-text {
+  display: inline-block;
+  line-height: 26px;
+  color: #262626;
+}
+.panel-heading h4 {
+  font-weight: 300;
+  position: relative;
+}
+.panel-group.panel-group-icon .panel {
+  background: #fff;
+}
+.formGenericoBlack {
+  background: #000;
+  color: #fff;
+  margin-bottom: 0;
+  border: 1px solid #000000;
+}
+#headingOnePre_1 .panel-heading a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Legenda */
+#legendaBody .panel-body {
+  padding: 0;
+}
+#legendaBody a.link {
+  padding-right: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#legendaBody a.link:hover {
+  text-decoration: none;
+}
+.saldoRow {
+  display: table;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #e3e3e3;
+  font-size: 16px;
+}
+.saldoRow:first-of-type {
+  border-top: 0;
+}
+.saldoColor {
+  display: table-cell;
+  width: 15px;
+  padding: 15px 15px 15px 0;
+}
+.saldoColorBox {
+  width: 15px;
+  height: 15px;
+  background-color: #ececec;
+}
+.saldoLabel {
+  display: table-cell;
+  padding: 15px 0;
+  line-height: 15px;
+}
+.saldoVal {
+  display: table-cell;
+  text-align: right;
+  width: 122px;
+  padding: 15px 0;
+  line-height: 15px;
+}
+#accordionLegPor {
+  margin-bottom: 0;
+}
+/* Totali */
+#totali {
+  background-color: #333;
+}
+#totali .control-label {
+  margin-bottom: 0;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 300;
+}
+#titPatrimonio {
+  line-height: 32px;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: right;
+}
+.titLegenda {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+}
+.titValLegenda {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  #sceltaRapportoForm {
+    border: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  #totali {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+  }
+  .saldoLabel {
+    display: block;
+    width: 100%;
+  }
+  .saldoVal {
+    display: block;
+    width: 100%;
+    padding-top: 0;
+    text-align: left;
+  }
+  #titPatrimonio {
+    text-align: left;
+  }
+  #grafPatrimonio {
+    border: 0;
+    padding: 20px 0 0 16px;
+    background-color: #fff;
+  }
+  #patrimonioBtns {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 15px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background-color: #fbfbfb;
+  }
+  #patrimonioBtns .flRight .btn-icon:first-of-type {
+    margin-right: 20px;
+  }
+  .btn-icon .icon-3x {
+    font-size: 48px;
+  }
+}
+/*# sourceMappingURL=priv_mio_patrimonio.css.map */

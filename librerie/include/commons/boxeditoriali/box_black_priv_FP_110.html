@@ -1,0 +1,30 @@
+<!-- INIZIO CODICE -->
+<div class="topbanner">
+	<a class="#" onclick="openPopOverLayer('#videoLay')" href="javascript:;" title="Lorem"><img src="/img/ret/ban_nocarte_Cardless.jpg"></a>
+</div>
+<!-- FINE CODICE -->
+
+<!-- OVERLAYER VIDEO -->
+<div class="layeralert2" id="videoLay" style="display: none">
+	<div class="head" ><img src="/img/ret/layeralert_x.gif" alt="chiudi" onclick="javascript: closePopOverLayer('videoLay'); "/></div>
+	<div id="bodyPopUp" class="body">
+		<div class="important">
+			<!-- Corpo overlay -->
+			<div id="videoApp" style="margin:0 0 0 20px">
+				<embed src="https://media.webank.it/vod/video_bancomat_sc.mov" width="382" height="241" autoplay="true" scale="tofit" controller="true" pluginspage="http://www.apple.com/quicktime/download/"></embed>
+			</div>
+			<script defer="defer" type="text/javascript"> 
+				var flashobject = new SWFObject("/swf/videoplayer.swf", "flash", "382", "241", "9", "#000000"); 
+				flashobject.addParam("quality", "high"); 
+				flashobject.addParam("wmode", "opaque"); 
+				flashobject.addParam("allowfullscreen","false"); 
+				flashobject.addParam("allowscriptaccess", "always"); 
+				flashobject.addParam("FlashVars","videoLink=https://media.webank.it/vod/video_bancomat_sc.flv"); 
+				flashobject.write("videoApp");
+			</script> 
+			<!-- Fine corpo overlay -->
+			</div>
+		</div>
+	<div class="foot"></div>
+</div>
+<!-- /OVERLAYER -->

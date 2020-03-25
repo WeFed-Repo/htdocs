@@ -1,0 +1,1 @@
+<div class="main_banner"><img src="/img/ban_visual_privati.jpg" alt="Privati" /></div>

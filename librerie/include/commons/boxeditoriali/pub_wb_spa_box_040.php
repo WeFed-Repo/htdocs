@@ -1,0 +1,3 @@
+<!-- inizio codice hai visto -->
+<div class="gen"><img src="/img/tit_haivisto.gif" alt="Hai visto" class="titolo" /><p class="lineheight15"><a href="#1" title="Lorem ipsu dolor..." >Lorem ipsu dolor sit ame</a><br/><a href="#1" title="Duis id sem sit...">Duis id sem sit amet sapen mollis</a><br/><a href="#" title="Cum sociis natoque...">Cum sociis natoque petibus magnis</a></p></div>
+<!-- fine codice hai visto -->

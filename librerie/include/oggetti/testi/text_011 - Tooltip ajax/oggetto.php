@@ -1,0 +1,1 @@
+<p>Paragrafo semplice. Qui c'è un <span class="txthelp"><strong class="closeable" data-title="Caricamento dati..." data-toggle="tooltip" data-url="/librerie/include/commons/ajax/tooltipTest.php">tooltip con chiamata AJAX</strong></span>. Lorem <a href="#">ipsum dolor sit amet</a> ipsum dolor <strong>sit amet</strong>.</p>

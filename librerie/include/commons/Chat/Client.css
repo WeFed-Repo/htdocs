@@ -1,0 +1,40 @@
+﻿body 
+{
+	font-family:Arial;
+	font-size:small;
+}
+
+.bkGround
+{
+	background-color:Teal;
+	margin: 2px 2px 2px 6px;
+	border: solid 1px black;
+	width: 300px;
+}
+
+.textHistory
+{
+	width:300px;
+	height:200px;
+}
+
+.textMsg
+{
+	width:300px;
+	height:40px;
+}
+
+.status
+{
+	background-color:InfoBackground;
+	font-family:Courier New;
+	width:300px;
+	padding-left: 4px;
+}
+
+.title
+{
+	font-family:Courier New;
+	width:300px;
+	padding-left: 4px;
+}

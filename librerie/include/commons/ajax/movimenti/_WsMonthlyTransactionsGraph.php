@@ -1,0 +1,162 @@
+<?php
+	header('content-type: application/json; charset=utf-8');
+	$isLast15 = ($_POST['period'] && $_POST['period'] == '15');
+	if (!$isLast15) {
+?>{
+    "movMese": {
+      "catEnt":[
+         {
+            "id":"3",
+            "label":"Bonifici e giroconti",
+            "valore":500000.05
+         },
+         {
+            "id":"-2",
+            "label":"Altri accrediti",
+            "valore":1500000.0
+         }
+      ],
+      "catUsc":[
+         {
+            "id":"25",
+            "label":"Bonifici e giroconti",
+            "valore":-70.0
+         },
+         {
+            "id":"24",
+            "label":"Pagamenti",
+            "valore":-220.0
+         },
+         {
+            "id":"-1",
+            "label":"Altri addebiti",
+            "valore":-50.0
+         }
+      ],
+      "listaEnt":{
+         "20130205":{
+            "num":1,
+            "tot":2000000.05
+         }
+      },
+      "listaUsc":{
+         "20130226":{
+            "num":2,
+            "tot":-104.0
+         },
+		 "20130228":{
+            "num":2,
+            "tot":-236.0
+         }
+      },
+        "saldo": {
+			 "20130204":493840.74,
+			 "20130225":2493840.74,
+			 "20130227":2493736.74
+        }
+    },
+	"saldoIniziale":493844.54,
+	"saldoFinale":2493493.59
+}<?php
+	} else {
+?>{
+   "movMese":{
+      "catEnt":[
+         {
+            "id":"3",
+            "label":"Bonifici e giroconti",
+            "valore":0.01
+         },
+         {
+            "id":"-2",
+            "label":"Altri accrediti",
+            "valore":2000000.58
+         }
+      ],
+      "catUsc":[
+         {
+            "id":"25",
+            "label":"Bonifici e giroconti",
+            "valore":-1
+         },
+         {
+            "id":"24",
+            "label":"Pagamenti",
+            "valore":-345
+         },
+         {
+            "id":"-1",
+            "label":"Altri addebiti",
+            "valore":-5.55
+         }
+      ],
+      "listaEnt":{
+         "20110525":{
+            "num":1,
+            "tot":0.01
+         },
+         "20120107":{
+            "num":1,
+            "tot":0.38
+         },
+         "20120205":{
+            "num":1,
+            "tot":2000000
+         },
+         "20130408":{
+            "num":1,
+            "tot":0.2
+         }
+      },
+      "listaUsc":{
+         "20110606":{
+            "num":1,
+            "tot":-2.85
+         },
+         "20120107":{
+            "num":1,
+            "tot":-1.35
+         },
+         "20120226":{
+            "num":2,
+            "tot":-4
+         },
+         "20130228":{
+            "num":2,
+            "tot":-336
+         },
+         "20130304":{
+            "num":2,
+            "tot":-4
+         },
+         "20130312":{
+            "num":1,
+            "tot":-1
+         },
+         "20130403":{
+            "num":1,
+            "tot":-1
+         },
+         "20130408":{
+            "num":1,
+            "tot":-1.35
+         }
+      },
+      "saldo":{
+         "20110524":493844.55,
+         "20110605":493844.56,
+         "20120106":493841.71,
+         "20120204":493840.74,
+         "20120225":2493840.74,
+         "20130227":2493836.74,
+         "20130303":2493500.74,
+         "20130311":2493496.74,
+         "20130402":2493495.74,
+         "20130407":2493494.74
+      }
+   },
+   "saldoIniziale":493844.5499999999,
+   "saldoFinale":2493493.59
+}<?php
+	}
+?>

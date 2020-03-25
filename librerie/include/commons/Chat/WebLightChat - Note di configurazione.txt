@@ -1,0 +1,109 @@
+
+C:\Inetpub\wwwroot\WebLightChat
+
+
+------------
+WebLightChat
+------------
+
+La LightChat è composta da due elementi:
+
+1) L'applicazione Server (installata in "C:\Server WebLightChat").
+2) L'applicazione Client (installata in "C:\Inetpub\wwwroot\WebLightChat")
+
+Entrambe vanno installate sul Server IIS e richiedono la presenza su tale macchina del framework .NET 2.0
+
+
+
+-------------------
+Applicazione Server
+-------------------
+
+È un'applicazione .NET configurabile come servizio NT che ha il compito di collegarsi al server @Phones (sul port TCP 2214).
+
+Nel file di configurazione ("LightChat.exe.config") è importante considerare i seguenti parametri:
+
+"Port" (valore di default 8046): indica il port TCP tramite cui il Server WebLightChat comunica con il Client WebLightChat.
+"AtPhonesHostName": indica il nome primo server @Phones a cui collegarsi
+"AtPhonesHostName2": indica il nome del server @Phones a cui collegarsi nel caso il primo venisse trovato non disponibile
+"AtPhonesPort" (valore di dafault 2214): indica il port TCP per il collegamento al server @Phones
+"LoggerLibrary.XmlLogger, LoggerLibrary": indica il path in cui scrivere i file di log
+"LogInfSwitch": indica il livello di Trace del Logging (consigliabile tenerlo a 4, "Verbose" nel caso di traffico moderato)
+
+
+
+-------------------
+Applicazione Client
+-------------------
+
+È l'applicazione (da inserire in IIS) che implementa la parte client della WebLightChat.
+
+Sfrutta un file di configurazione ("web.config") di cui è importante considerare i seguenti parametri:
+
+"hostName": indica il nome del server su cui è installato il Server WebLightChat
+"port" (valore di default è 8046): indica il port TCP tramite cui il Client WebLightChat comunica con il Server WebLightChat
+"LoggerLibrary.XmlLogger, LoggerLibrary": indica il path in cui scrivere i file di log
+"LogInfSwitch": indica il livello di Trace del Logging (consigliabile tenerlo a 4, "Verbose" nel caso di traffico moderato)
+
+Il Client WebLightChat è sviluppato per comunicare tramite https (per abilitare tale configurazione occorre ricevere una certificazione valida).
+Normalmente il port utilizzata da https è 443.
+È comunque possibile utilizzare connessioni http su port 80, modificando i parametri nel file "Client.js", nella funzione "init()".
+Sempre nello stesso file (funzione "call()") è possibile impostare la VirtualExtension del Servizio utilizzato per la LightChat ("IFM_ScriptCtrl.call([VirtualExtension desiderata], "");".
+
+In caso di terminazione, il CLient WebLightChat si comporta nel seguente modo:
+
+- In caso di terminazione da parte dell'utente, la finestra di chat si chiude
+- In caso di problemi tecnici (mancanza di risorse, @Phones bloccato o disattivato, servizio sospeso), viene visualizzata una pagina che indica all'utente il problema
+- In caso di transito in coda, viene visualizzato un messaggio informativo che invita l'utente ad attendere un operatore
+- In caso di fuori orario,  viene visualizzato un messaggio informativo contenente gli orari di servizio
+
+Tali comportamenti possono essere modificati nel file "Client.js", funzione "onStatus".
+
+
+
+----------------
+Campaign handler
+----------------
+
+Per la gestione delle code e delle eventuali problematiche tecniche è stato aggiunto un CampaignHandler (LightChatHandler) per il server @Phones.
+
+Nella directory "CampaignHandlers" di @Phones server vanno copiati i seguenti files:
+
+LightChatHandler.dll (da registrare tramite regsvr32)
+LightChatHandler.pdb
+LightChatHandler.ini
+
+Il file "LightChatHandler.ini" contiene tutte le informazioni relative alle campagne di coda, ai messaggi di attesa e benvenuto.
+
+La sezione [Campaign] indica quale campagna è adibita alla coda per la WebLightChat (nel formato Servizio/Campagna)
+
+La sezione ("[Servizio/Campagna]") relativa alla campagna di coda contiene una serie di parametri i cui significati sono i seguenti:
+
+"Type": tipo di campagna (obbligatorio nel caso di "Coda", altrimenti descrittivo)
+"DefaultCampaign": lasciare il valore di default ("Chiusura")
+"ErrorCampaign": lasciare il valore di default ("Chiusura")
+"TimeRange<n>": <nomeFascia>-DataInizio-DataFine-ListaGiorni(separati da virgole)-Campagna successiva
+"ChatMsgOutTime": messaggio relativo ai periodi di chiusura della chat
+"ChatMsgQueue" messaggio indicante la temporanea attesa di un operatore disponibile
+"ChatMsgEndQueue" messaggio indicante la terminazione dell'attesa di un operatore disponibile
+"ChatMsgEntry" messaggio di benvenuto di un operatore
+"ChatQueueTimer" timer (in millisecondi) indicante ogni quanto tempo verra' ripetuto il messaggio ChatMsgQueue
+
+È sconsigliato impostare per ChatQueueTimer un valore inferiore a 10000.
+
+Il file "configuration.ini" di @Phones Server va aggiornato inserendo il nuovo Handler
+
+[HANDLERS]
+handler1=LightChatHandler.TDemoCampaignFactory
+
+
+
+-----------------------------------------------
+Configurazione del servizio su Phones Enterpise
+-----------------------------------------------
+
+- Creare un Servizio di Inbound, settare il nome e la VirtualExtension desiderati (questi dati ovviamente devono essere congruenti con quelli nel file "Client.js" della WebLightChat e del file "LightChatHandler.ini").
+- Creare una campagna di Agenti umani e settarla come campagna principale del Servizio (inserire poi gli agenti che si desidera utilizzare per la chat).
+- Creare una campagna di Coda e assegnarvi il numero di agenti IVR @Phones desiderato.
+- Tra le proprietà della campagna di Agenti umani, nel pannello relativo alle Code, flaggare il campo "Accoda Chiamata" e indicare come campagna di coda quella creata precedentemente.
+- Spuntare la casella "Accodamento preventivo".

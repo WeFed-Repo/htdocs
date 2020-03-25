@@ -1,0 +1,44 @@
+<div id="flash"></div>
+<script language="vbscript" type="text/vbscript">
+	<!--
+	Function VBGetSwfVer(i)
+	  on error resume next
+  	Dim swControl, swVersion
+	  swVersion = 0
+  
+  	set swControl = CreateObject("ShockwaveFlash.ShockwaveFlash." + CStr(i))
+	  if (IsObject(swControl)) then
+  	  swVersion = swControl.GetVariable("$version")
+	  end if
+  	VBGetSwfVer = swVersion
+	End Function
+	-->
+</script>
+<script type="text/javascript">
+<!--
+var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+if (hasRightVersion)
+{
+	var so = new SWFObject("/wscmn/swf/home.swf", "sotester", "600", "200", "7", "");		
+	so.addParam("wmode", "opaque");
+	so.addVariable("link0", "http://www.google.it");
+	so.addVariable("target0", "_self");
+	so.addVariable("link1", "http://www.tim.it");
+	so.addVariable("target1", "_blank");
+	so.addVariable("link2", "http://www.libero.it");
+	so.addVariable("target2", "");
+	so.write("flash");
+}
+else
+{
+	var alternateContent = '<div id="noflashImg">'
+	+'<img src="/img/ret/home.jpg" alt="" width="600" height="200" border="0" usemap="#Map" />'
+	+'<map name="Map" id="Map">'
+	+'<area shape="rect" coords="169,136,282,161" href="#" title="Apri il conto" />'
+	+'<area shape="rect" coords="27,136,155,162" href="#" title="Scopri i dettagli" />'
+	+'</map>'
+	+'</div>';
+	document.getElementById('flash').innerHTML= alternateContent ;
+}
+-->
+</script>

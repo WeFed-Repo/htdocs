@@ -1,0 +1,1 @@
+<h2>tpl_responsive_carta_debito_internazionale_fastpay</h2>

@@ -1,0 +1,233 @@
+<script language="JavaScript">
+<!--
+function CampoErrato ()
+	{
+	n=5;
+	for(i=1; i<n; i++)
+		{
+		campoCorrente = "campo0"+i;
+	//	alert (campoCorrente);
+		if (document.getElementById)
+			 {
+			 questoMenu = document.getElementById(campoCorrente).style;
+			 questoMenu.color = "red";
+			 }
+		else
+			 {
+			 return true
+			 }
+		}
+	}
+-->
+</script>
+<div class="tithelp">
+	<div class="helpleft2">Lorem ipsum lorem ipsum <strong>lorem ipsum lorem</strong> ipsum lorem ipsum lorem ipsum lorem ipsum:</div><br /><br />
+	<div class="helpleft">Lorem ipsum</div>
+	<div class="helpright"><a href="#1" class="liste">help</a><a href="#1"><img src="/img/ret/ico2or_help2.gif" alt="help" /></a></div>
+<br class="clear" />
+</div>
+
+<table class="form01">
+	<tr> 
+		<td width="95" class="uno" id="campo01">1 Piccolo_SX</td>
+		<td width="170"> <input name="text" type="text" class="piccolo" /> <a href="#1"><img src="/img/ret/iconcina2.gif" class="domanda"></a></td>
+		<td width="95" class="uno" id="campo02">1 Piccolo_DX</td>
+		<td width="170"><input name="text2" type="text" class="piccolo" /> <a href="#1"><img src="/img/ret/iconcina2.gif" class="domanda"></a></td>
+	</tr>
+	<tr> 
+		<td  class="uno" width="95">2 Medio_SX</td>
+		<td> <input name="text2" type="text" class="medio" /></td>
+		<td  class="uno" width="95">2 Medio_DX</td>
+		<td><input name="text2" type="text" class="medio" /></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno">3 Grande_SX</td>
+		<td width="170"> <input name="text" type="text" class="grande" /> </td>
+		<td width="95" class="uno">3 Grande_DX</td>
+		<td width="170"><input name="text2" type="text" class="grande" /></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno">4 Extra_SX</td>
+		<td width="446" colspan="3"> <input name="text" type="text" class="extra" /> </td>
+		
+	</tr>
+	<tr> 
+		<td width="95" class="uno">5 Data_SX</td>
+		<td width="170"><input name="text" id="1" type="text" value="gg/mm/aaaa" class="data" style="color:#7f7f7f;" onfocus="document.getElementById('1').value='';"/></td>
+		<td width="95" class="uno">5 Data_DX</td>
+		<td width="170"><input name="text" id="2" type="text" value="gg/mm/aaaa" class="data" style="color:#7f7f7f;" onfocus="document.getElementById('2').value='';"/></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno">6 Telefono_SX</td>
+		<td class="sceltacell"><input name="text" type="text" class="piccolo" maxlength="3"/> <input type="text" maxlength="7"/></td>
+	<td width="95" class="uno">6 Telefono_DX</td>
+		<td class="sceltacell"><input name="text" type="text" class="piccolo" maxlength="3"/> <input type="text" maxlength="7"/></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno">7 Importo_SX</td>
+		<td width="170"> <input name="text" type="text" class="importo" /> , <input name="text" type="text" class="importo2" maxlength="2" />  <strong>VAL</strong></td>
+		<td width="95" class="uno">7 Importo_DX</td>
+		<td width="170"><input name="text" type="text" class="importo" /> , <input name="text" type="text" class="importo2" maxlength="2" />  <strong>VAL</strong></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno" id="campo03">8 Cap_SX</td>
+		<td width="170"> <input name="text" type="text" class="cap" maxlength="5"/></td>
+		<td width="95" class="uno">8 Cap_DX</td>
+		<td width="170"> <input name="text" type="text" class="cap" maxlength="5"/></td>
+	</tr>
+	<tr> 
+		<td class="uno" width="95"> 9 Select_SX</td>
+		<td width="149"><select name="select">
+		<option>-- seleziona --</option>
+		<option>-----------------------</option>
+		</select></td>
+		<td class="uno" width="95">9 Select_DX</td>
+		<td><select name="select">
+		<option>-- seleziona --</option>
+		<option>-----------------------</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td class="uno">&nbsp;</td>
+		<td colspan="3">10 Testo_semplice - Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </td>
+	</tr>
+	<tr>
+		<td class="uno" width="95"><a href="#1"><img src="/img/ret/iconcina3.gif"></a></td>
+		<td width="170"><a href="#1">11 img_link_SX - Lorem ipsum sed diam nonummy</a></td>
+		<td class="uno" width="95"><a href="#1"><img src="/img/ret/iconcina3.gif"></a></td>
+		<td width="170"><a href="#1">11 img_link_DX - Lorem ipsum sed diam nonummy</a></td>
+	</tr>
+	<tr>
+		<td class="uno" width="95">&nbsp;</td>
+		<td colspan="3"><a href="#1">12 Link_lungo - Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</a></td>
+	</tr>
+	<tr> 
+		<td rowspan="2" width="95" class="uno">13 Radio_SX</td>
+		<td class="noriga meno"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor3" /> Lorem ipsum dolor</td>
+		<td rowspan="2"  class="uno" width="95">13 Radio_DX</td>
+		<td class="noriga meno"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor3" /> Lorem ipsum dolor</td>
+	</tr>
+	<tr>
+		<td class="meno"><input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum suit</td>
+		<td class="meno"><input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum suit</td>
+	</tr>
+	<tr> 
+		<td  class="uno" width="95">14 Radio</td>
+		<td colspan="3"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"><input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> <input type="radio" name="radiobutton" value="radiobutton" checked class="nobor2" /> 
+		<img src="/img/ret/spazio_img_form.gif" border="0"> </td>
+		</td>
+	</tr>
+	<tr> 
+		<td class="uno" width="95">15 Checkbox_SX</td>
+		<td colspan="1">	
+		<input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		</td>		
+		<td class="uno" width="95">15 Checkbox_DX</td>
+		<td colspan="1">	
+		<input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" /> Lorem ipsum Lorem ipsum  <br class="clear" />
+		</td>		
+	</tr>
+	<tr> 
+		<td class="uno" width="95">16 Checkbox_SX</td>
+		<td colspan="3">	
+		<input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" />Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet<br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" />Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet<br class="clear" />
+		 <input type="checkbox" name="radiobutton" value="radiobutton" class="nobor3" />Lorem ipsum sed diam nonummy nibh euismod tincidunt ut laoreet<br class="clear" />
+		</td>		
+				
+	</tr>
+	<tr> 
+		<td width="95" class="uno" valign="top">17 Textarea</td>
+		<td colspan="3"><textarea name="textarea"></textarea></td>
+	</tr>
+	<tr> 
+		<td width="95" class="uno" valign="top" id="campo04">18 Textarea</td>
+		
+		<td colspan="3"><textarea readonly="readonly" name="textarea" class="read">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad 
+minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu 
+feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril 
+delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, 
+quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore 
+eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qu</textarea><br/>
+		<div class="nobor3"><input type="checkbox" class="nobor3" checked="" value="radiobutton" name="radiobutton"/>
+		lorem</div> 
+		<div class="nobor3"><input type="checkbox" class="nobor3" value="radiobutton" name="radiobutton"/>
+		lorem</div>
+		<div class="nobor3"><input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> 
+		lorem</div>
+		<div class="nobor3"><input type="radio" name="radiobutton" value="radiobutton" class="nobor3" /> 
+		lorem</div>
+		</td>
+	</tr>
+	<tr></tr>
+	
+		<!--NUOVA  RIGA PER XXX BANKING stato disposizioni -->
+	
+	<script type="text/javascript">
+	function selectall(obj) {
+	var inputscheck = obj.parentNode.parentNode.getElementsByTagName('input');
+	for(i= 0; i<inputscheck.length; i++) 
+		{
+			if(inputscheck[i].checked==false) 
+			{
+			inputscheck[i].checked = true;
+			}
+			
+		}
+	}
+	function deselectall(obj) {
+	var inputscheck = obj.parentNode.parentNode.getElementsByTagName('input');
+	for(i= 0; i<inputscheck.length; i++) 
+		{
+			if(inputscheck[i].checked) 
+			{
+			inputscheck[i].checked = false;
+			}
+			
+		}
+	}
+	</script>
+	<tr> 
+		<td width="105" class="uno">Stato disposizione</td>
+		<td width="550" colspan="3">
+		<div class="checktop">Seleziona:<a href="javascript:;" onclick="selectall(this);">Tutti</a>, <a href="javascript:;" onclick="deselectall(this)";>Nessuno</a></div>
+			<div class="colchecksx">
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />bozza</span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />da approvare</span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />respinto per controlli</span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />da firmare</span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />firmato</span>
+			</div>
+			<div class="colcheckdx">
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />inoltrato</span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />accettato </span>
+				<span id=""><input type="checkbox" id=""  value="" name="" class="nobor3" />prenotato </span>
+				<span id=""><input type="checkbox" id="" value="" name="" class="nobor3" />eseguito </span>
+				<span id=""><input type="checkbox" id="" value="" name="" class="nobor3" />non eseguito </span>
+				<span id=""><input type="checkbox" id="" value="" name="" class="nobor3" />annullato </span>
+			</div>
+		</td>
+	
+	</tr>
+	
+	<!--FINE NUOVA  RIGA PER XXX BANKING stato disposizioni -->
+	
+	
+	
+	
+	</table>

@@ -1,0 +1,44 @@
+      <div id="login"><a href="#1" onclick="ApriChiudiLogin()"><img src="/img/bus/login_off.jpg" id="login_img" alt="ACCEDI" title="Apri il box &quot;Accedi&quot;" /></a> 
+				<div id="login_cont"><a href="#1" onclick="ApriChiudiLogin()"><img src="/img/bus/login_on.jpg" alt="Chiudi il box &quot;Accedi&quot;" title="Chiudi il box &quot;Accedi&quot;" /></a>
+			<form action="" method="post" id="inizioform">
+				<input type="radio" id="amministratore" name="scelta_utenza" checked="checked" onclick="document.getElementById('registrato_target').style.display='none';document.getElementById('utente_target').style.display='none';document.getElementById('amministratore_target').style.display='block';" />
+				<label for="amministratore">Amministratore</label><br class="clear" />
+				
+				<input type="radio" id="utente" name="scelta_utenza" onclick="document.getElementById('registrato_target').style.display='none';document.getElementById('utente_target').style.display='block';document.getElementById('amministratore_target').style.display='none';" />
+				<label for="utente">Utente</label><br class="clear" />
+				
+				<input type="radio" id="registrato" name="scelta_utenza" onclick="document.getElementById('registrato_target').style.display='block';document.getElementById('utente_target').style.display='none';document.getElementById('amministratore_target').style.display='none';" />
+				<label for="registrato">Registrato</label><br class="clear" />
+			</form>
+			
+			<form action="" method="post" id="amministratore_target">
+			<label for="codice_admin" class="testo">Codice cliente</label>	
+			<input type="text" value="000000" id="codice_admin" name="codice_admin" class="testo" />
+			<label for="pass_admin" class="testo">Password</label>
+			<input type="password" value="******" id="pass_admin" name="pass_admin" class="testo" />
+			<input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra.gif" alt="Entra" title="Entra" />
+			</form>
+			
+			<form action="" method="post" id="registrato_target">
+			<label for="id_registrato" class="testo">User ID</label>	
+			<input type="text" value="000000" id="id_registrato" name="id_registrato" class="testo" />
+			<label for="pass_registrato" class="testo">Password</label>
+			<input type="password" value="******" id="pass_registrato" name="pass_registrato" class="testo" />
+			<input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra.gif" alt="Entra" title="Entra" />
+			</form>
+			
+			<form action="" method="post" id="utente_target">
+			<label for="id_utente" class="testo">Codice utente</label>	
+			<input type="text" value="000000" id="id_utente" name="id_utente" class="testo" />
+			<label for="codice_cliente" class="testo">Codice cliente</label>	
+			<input type="text" value="000000" id="codice_cliente" name="codice_cliente" class="testo" />
+			<label for="pass_utente" class="testo">Password</label>
+			<input type="password" value="******" id="pass_utente" name="pass_utente" class="testo" />
+			<input type="image" name="image1" class="image1" value="Entra ora" src="/img/bus/btn_entra.gif" alt="Entra" title="Entra" />
+			</form>
+			<p><a href="#"><img src="/img/bus/btn_nuovoutente.gif" alt="Nuovo utente?" title="Nuovo utente?" /></a>
+		  <a href="#"><img src="/img/bus/btn_dimenticato.gif" alt="Dimenticato la password?" title="Dimenticato la password?" /></a>
+		  <a href="#"><img src="/img/bus/btn_demoaccesso.gif" alt="Demo primo accesso" title="Demo primo accesso" /></a></p>
+					<img src="/img/bus/login_bottom.gif" alt="" title="" />
+				</div>
+			</div>

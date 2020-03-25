@@ -1,0 +1,92 @@
+/* header */
+.header_pop_left {float:left;}
+.header_pop_right {float:right;max-width:80px;height:55px}
+/*fine*/
+
+/* oggetti non visibili */
+.printlogo {margin-bottom: 20px;}
+
+/* valori tabella centrati */
+.condiz td.centered {text-align:center !important}
+
+/* parte centrale */
+/* privati */
+#contenuti {float:left; padding:9px 0 0 9px; width:95%; text-align:left;}
+#contenuti h2 {margin: 10px 0 2px;}
+.mymenutopper2, .mymenuselector2, .mymenuselector2 .selectortop2, .mymenuselector2 .selectorbottom2, .mymenuselector2 .selectorbody2 {width: 573px;}
+* html .mymenutopper2, * html .mymenuselector2, * html .mymenuselector2 .selectortop2, * html .mymenuselector2 .selectorbottom2, * html .mymenuselector2 .selectorbody2 {width: 573px;}
+.mymenuselector2 .selectortitle2 {width: 575px;}
+* html .mymenuselector2 .selectortitle2 {width: 575px;}
+.mymenuselector2 .selectorbody2 .contsection{width: 536px;}
+* html .mymenuselector2 .selectorbody2 .contsection{width: 536px;}
+table.invgrade {width:529px;}
+* html table.invgrade {width:529px;}
+/* pubblica */
+#colCentroSmall {float:none; padding:10px 0 0 10px; width:95%;}
+#leftSite {float:none; padding:10px 0 0 10px; width:95%;}
+#main {padding:10px 0 0 10px; width:95%;}
+/*fine*/
+
+table.form01, .fooform  {width:575px!important;}
+/*popup 700px*/
+table.form01max, .fooformmax  {width:700px!important;}
+.sottotabelmax {width:700px!important;}
+
+/* tpl book WT*/
+.fooform.formpop, .tithelp.formpop, #contenuti table.condiz2.wt.formpop {width:415px!important;}
+.fooform.formpop a span.active {color:#000;}
+#contenuti .tithelp.formpop .helpright2 {color:#666666 !important;}
+
+/* tplpop-up grandi WT*/
+.fooform.formpopLarge, .tithelp.formpopLarge, #contenuti table.condiz2.formpopLarge {width:570px!important;}
+/* wetrade */
+
+/*tabella in pop-up  di guide al trading*/
+#contenuti table.condiz2 tr td  table td {border:0;}
+.boxedtabs.wt {width:100%; background-color:#fff;}
+.boxedtabs.wt table.pop {border:0;margin-bottom:5px; background-color:#EFEFEF; border-bottom:1px solid #CACACA; border-right:1px solid #CACACA; border-top:1px solid #CACACA}
+.boxedtabs.wt table.pop  tr td {padding:6px!important; background-color:#EFEFEF; border:0; border-left:1px solid #CACACA;}
+.boxedtabs.wt table.pop  tr td.bgrcol {background-color:#fff}
+#contenuti table.condiz2.condpadd  td {padding:8px;}
+
+/*** SCELTA RAPPORTO - Select stilizzata  in Pop-up***/
+#content .form01.popup {width:415px!important;}
+#content .form01 .depLeftBlock .iconaDettaglio {float:left;}
+#content .form01 .depLeftBlock .importoDeposito {margin-left:0;}
+
+/* oscuramento */
+#boxHidden {display:block;width:100%; float:left;}
+table.TableF24  td.BoxF24  span.demo  {text-align:center!important;display:block;}
+table.TableF24  td.BoxF24  span.demo img {margin:0 auto}
+table.TableF24.demo {width:560px;}
+
+/* pop up tempi attivazione */
+table.TableF24 {width: 542px; margin-left:30px;}
+table.TableF24.formpop {margin-left:0;}
+table.TableF24.formpop {margin-left:0}
+table.TableF24 td.BoxF24 {padding:0!important;}
+p.top {color:#666; font-weight:normal; padding:0 20px 12px 9px; border-bottom:1px solid #dfdfdf}
+p.bottom {color:#000; font-weight:normal; padding:6px 9px 0 9px; border-top:1px solid #fff}
+table.TableF24 td.BoxF24 p.top strong {color:#666 !important; line-height:21px; }
+table.TableF24 td.BoxF24 p.bottom strong {color:#000 !important; line-height:21px; }
+
+
+/* Popup agenzie */
+#aucap_prezzoDirAgenzieTd {width: 60px; font-weight:bold; vertical-align: middle;}
+#daContro {margin-top:10px}
+#controLabel {letter-spacing: -0.1px; width:172px}
+#controLabel span {font-size:11px;font-weight: normal;}
+#contenuti p.mininote {font-size: 10px; margin-top:-3px; float:left; clear:left;}
+#contenuti table.tabellatabs td a {line-height: 11px}
+
+/* Declinazione tabella popup */
+#contenuti table.dettTable {width: 100% !important; margin-bottom: 10px;}
+#contenuti table.dettTable tr th {height: 30px !important}
+
+/* Prestiti*/
+#contenuti .prestitiScheda .prestitiSchedatxt {width:400px}
+
+/*NUOVA GRAFICA BPM */
+/* contenitori*/
+body{background-image:none!important}
+#ttBox #ttCont{margin-left:45px;}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <tab selezionato="0">
+        <label>
+            <![CDATA[Vita e salute]]>
+        </label>
+        <contenutoGrafico>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_metlife_protezione_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Protezione_dettagli_polizza')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/do/wbOnetoone/alico.do',null,'&step=0&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=nav_priv_wbx_protezione_preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Wecare Protezione]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Il sostegno e la protezione in caso di infortuni improvvisi.]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_metlife_salute_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Salute_dettagli_polizza')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/do/wbOnetoone/alico.do',null,'&step=0&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=nav_priv_wbx_salute_preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Wecare Salute]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Scegli la tutela per te e per le persone che ami, bastano pochi click!]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_metlife_vita+_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Vita_dettagli_polizza')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/do/wbOnetoone/alico.do',null,'&step=0&OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=nav_priv_wbx_vita_preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Wecare Vita]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Basta un piccolo importo per garantire un futuro tranquillo alle persone che ami.]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+        </contenutoGrafico>
+    </tab>
+    <tab selezionato="1">
+        <label>
+            <![CDATA[Auto e moto]]>
+        </label>
+        <contenutoGrafico>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_zurich_auto_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Auto_Caratteristiche')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Auto_Preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Polizza Auto]]>
+                </titolo>
+                <testo>
+                    <![CDATA[La convenienza da prendere al volo per proteggere tutto il tuo mondo.]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_zurich_moto_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Moto_Caratteristiche')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Moto_Preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Polizza Moto]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Per la tua due ruote, scegli una polizza moto di qualit&agrave;.]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+        </contenutoGrafico>
+    </tab>
+    <tab selezionato="0">
+        <label>
+            <![CDATA[Casa]]>
+        </label>
+        <contenutoGrafico>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_zurich_casa_700x700.jpg]]>
+                </filePath>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Casa_Caratteristiche')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Casa_Preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Polizza Casa]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Risparmia e dormi sonni tranquilli!]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+        </contenutoGrafico>
+    </tab>
+    <tab selezionato="0">
+        <label>
+            <![CDATA[Viaggi]]>
+        </label>
+        <contenutoGrafico>
+            <file>
+                <filePath>
+                    <![CDATA[/wscmn/fe/img/bnr_assicurazioni_allianz_viaggi_700x700.jpg]]>
+                </filePath>
+                <offertaUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Viaggi_Offerte')]]>
+                </offertaUrl>
+                <dettaglioUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Viaggi_Caratteristiche')]]>
+                </dettaglioUrl>
+                <preventivoUrl>
+                    <![CDATA[javascript:callJSP('/wbOnetoone/2l/action/wbOnetoone/schedaPrivata.action',null,'&OBSCNT=LANDING&tabId=nav_priv_wbx_assicurazioniWB&OBSKEY=Viaggi_Preventivo')]]>
+                </preventivoUrl>
+                <titolo>
+                    <![CDATA[Polizza Viaggi]]>
+                </titolo>
+                <testo>
+                    <![CDATA[Assicurare i tuoi viaggi per te &egrave; sempre scontato.]]>
+                </testo>
+                <note>
+                    <![CDATA[]]>
+                </note>
+            </file>
+        </contenutoGrafico>
+    </tab>
+</menu>
