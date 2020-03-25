@@ -240,16 +240,19 @@
 							{
 								"nome": "Pagamento ok",
 								"tpl": "tpl_acquisto_MP5_pagamento_ok.php",
+								"inlavorazione": true,
 								"html":"vr"
 							},
 							{
 								"nome": "Pagamento ko",
 								"tpl": "tpl_acquisto_MP5_pagamento_ko.php",
+								"inlavorazione": true,
 								"html":"vr"
 							},
 							{
 								"nome": "Preventivo esito",
 								"tpl": "tpl_acquisto_esito.php",
+								"inlavorazione": true,
 								"html":"vr"
 							}
 							
