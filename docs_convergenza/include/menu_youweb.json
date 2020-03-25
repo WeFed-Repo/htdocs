@@ -222,6 +222,33 @@
 							
 						
 						]
+					},
+					{
+						"nome": "Acquisto",
+						"voices": [
+							{
+								"nome": "Riepilogo/pagamento",
+								"tpl": "tpl_acquisto_MP5_riepilogo.php",
+								"html":"vr"
+							},
+							{
+								"nome": "Pagamento ok",
+								"tpl": "tpl_acquisto_MP5_pagamento_ok.php",
+								"html":"vr"
+							},
+							{
+								"nome": "Pagamento ko",
+								"tpl": "tpl_acquisto_MP5_pagamento_ko.php",
+								"html":"vr"
+							},
+							{
+								"nome": "Preventivo esito",
+								"tpl": "tpl_acquisto_esito.php",
+								"html":"vr"
+							}
+							
+						
+						]
 					}
 				]
 			}
