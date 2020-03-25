@@ -28,13 +28,19 @@
 		"nome": "Investimenti",
 		"voices": [
 			{
-				"nome": "Posizione",
+				"nome": "La tua posizione",
 				"voices": [
 					{
 						"nome": "Portafoglio fondi",
 						"html": "mi",
 						"inlavorazione": true,
 						"tpl": "tpl_responsive_investimenti_portafoglio.php"
+					},
+					{
+						"nome": "Portafoglio titoli e fondi",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
 					},
 					{
 						"nome": "Posizione fiscale"
