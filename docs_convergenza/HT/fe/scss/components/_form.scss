@@ -57,8 +57,8 @@
   border: 1px solid #ccc;
   border-top: 0 none;
   background-color: #fff;
-  width: "calc( 100% - 30px )";
-  margin: 0 15px;
+  width: 100%;
+  margin: 0;
   .group {
     display: block;
     a {
@@ -89,9 +89,6 @@
 
 .no-label {
     padding-top: 28px;
-    #selDepForm & {
-      padding-top:0 !important;
-    }
     > div {
       a:not([type="button"]) {
         color: #0E977F;
@@ -479,7 +476,8 @@ input[type=checkbox] {
     &.no-label{padding-top:0}
     &.txthelp { 
       width:auto;
-    }
+    } 
+    a{color:$primary}
 }
 a.output {color: $primary;text-decoration:underline}
 
@@ -670,4 +668,9 @@ a.output {color: $primary;text-decoration:underline}
       }
     }
 }
-    
+
+/* Selettore rapporto/deposito */
+.selectRapp {
+  position:relative;
+  &>.inputOption {background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center}
+}

@@ -548,8 +548,8 @@ p.note.flRight a.btn-icon {
   border: 1px solid #ccc;
   border-top: 0 none;
   background-color: #fff;
-  width: "calc( 100% - 30px )";
-  margin: 0 15px;
+  width: 100%;
+  margin: 0;
 }
 .selector .group {
   display: block;
@@ -569,9 +569,6 @@ p.note.flRight a.btn-icon {
 
 .no-label {
   padding-top: 28px;
-}
-#selDepForm .no-label {
-  padding-top: 0 !important;
 }
 .no-label > div a:not([type=button]) {
   color: #0E977F;
@@ -934,6 +931,9 @@ input[type=checkbox] {
 .borderFormRounded .output.txthelp {
   width: auto;
 }
+.borderFormRounded .output a {
+  color: #0e977f;
+}
 
 a.output {
   color: #0e977f;
@@ -1158,6 +1158,14 @@ a.output {
 }
 #tradingArea .compLegend span.check.checkRed {
   background-color: #d82818;
+}
+
+/* Selettore rapporto/deposito */
+.selectRapp {
+  position: relative;
+}
+.selectRapp > .inputOption {
+  background: #fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
 }
 
 table,
@@ -2045,41 +2053,6 @@ div.pager .circle.current_page {
   float: left;
   color: #0e977f;
   border-right: 1px solid #e3e3e3;
-}
-
-/* ALERTS */
-.boxesito {
-  display: table;
-  width: 100%;
-}
-.boxesito.positivo {
-  color: #75c2b8;
-}
-.boxesito.attenzione {
-  color: #edb54d;
-}
-.boxesito.negativo {
-  color: #eb4e62;
-}
-.boxesito:after {
-  float: none;
-  width: 100%;
-  clear: both;
-}
-.boxesito > .icon {
-  float: left;
-}
-
-.messagePanel .success {
-  color: #75c2b8;
-}
-
-.boxesitoWrap {
-  margin-bottom: 0;
-}
-.boxesitoWrap p {
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .tooltip {
@@ -3214,6 +3187,41 @@ div.pager .circle.current_page {
 
 .glyph-arrow_trading_fill .path2:before {
   background-image: url("/HT/fe/img/arrow_trading_fill.png");
+}
+
+/* ALERTS */
+.boxesito {
+  display: table;
+  width: 100%;
+}
+.boxesito.positivo {
+  color: #75c2b8;
+}
+.boxesito.attenzione {
+  color: #edb54d;
+}
+.boxesito.negativo {
+  color: #eb4e62;
+}
+.boxesito:after {
+  float: none;
+  width: 100%;
+  clear: both;
+}
+.boxesito > .icon {
+  float: left;
+}
+
+.messagePanel .success {
+  color: #75c2b8;
+}
+
+.boxesitoWrap {
+  margin-bottom: 0;
+}
+.boxesitoWrap p {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .ui-dialog-content.ui-widget-content li a,
