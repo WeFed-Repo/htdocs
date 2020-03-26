@@ -28,6 +28,7 @@
 						<a href="https://youwebcertificato.bancopopolare.it/" onclick="createCookieAccess()">
 							Accesso Easy
 						</a>
+						<a href="#!" class="publicHelp"></a>
 					</p>
 				</div>
 
@@ -133,7 +134,7 @@
 				</div>
 				<div class="col-xs-9">
 					<h4><strong>COVID-19</strong></h4>
-					<p><strong><a href="https://www.bancobpm.it/magazine/privati/news-covid-19/" target="_blank" style="text-decoration:none;"><u>Scopri tutte le azioni</u></a></strong> messe in atto dal Gruppo Banco BPM e prendi appuntamento per andare in filiale.</p>
+					<p><strong><a href="https://www.bancobpm.it/magazine/privati/news-covid-19/" target="_blank" style="text-decoration:none;"><u>Scopri tutte le azioni</u></a></strong> messe in atto dal Gruppo Banco BPM.</p>
 				</div>
 			</div>
 			<div class="row margin-bottom40">
@@ -150,7 +151,7 @@
 				<strong><a href="#" class="arrow-link">Primo accesso?</a></strong>
 			</p>
 			<p>
-				<strong><a href="#" class="arrow-link">Accesso Easy, scoprilo</a></strong>
+				<strong><a href="#" class="arrow-link">Come utilizzare il token</a></strong>
 			</p>
 
 			

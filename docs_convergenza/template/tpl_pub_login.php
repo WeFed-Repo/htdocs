@@ -30,6 +30,7 @@
 						<a href="https://youwebcertificato.bancopopolare.it/" onclick="createCookieAccess()">
 							Accesso Easy
 						</a>
+						<a href="#!" class="publicHelp"></a>
 					</p>
 				</div>
 
@@ -152,7 +153,7 @@
 				<strong><a href="#" class="arrow-link">Primo accesso?</a></strong>
 			</p>
 			<p>
-				<strong><a href="#" class="arrow-link">Accesso Easy, scoprilo</a></strong>
+				<strong><a href="#" class="arrow-link">Come utilizzare il token</a></strong>
 			</p>
 
 			
