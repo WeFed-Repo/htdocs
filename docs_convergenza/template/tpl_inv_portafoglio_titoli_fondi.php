@@ -66,9 +66,77 @@ $(function(){
     <!-- FINE BLOCCO AGGIORNAMENTI -->
     <section>
         <!-- TABELLA -->
-    
-        TABELLA PERSONALIZZATA
-    
+        <script>
+            // Esempio di creazione della tabella di bootstrap
+            $(function(){
+                var tablePortafoglio = $('#tablePortafoglio');
+                    tablePortafoglio.bootstrapTable();
+                });
+
+        </script>
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="fixed">
+            <thead>
+                <tr>
+                    <th class="center">IcoHelp</th>
+                    <th class="left">Titolo/Fondo (FILTER)</th>
+                    <th class="left">Mercato</th>
+                    <th class="right">Q.t&agrave; in<br>portaf.</th>
+                    <th class="right">Q.t&agrave;<br>disp.</th>
+                    <th class="right">Prz. medio carico</th>
+                    <th class="right">Prz. medio carico</th>
+                    <th class="left">Settore</th>
+                    <th class="right">Valore Y</th>
+                    <th class="right">Ult. prz.ora</th>
+                    <th class="right">Controval. Eur</th>
+                    <th class="right">Utili/Perdite<br>Eur VAR%</th>
+                </tr>
+            </thead>
+            <tbody>	
+            <?php
+                for($x=0;$x<=6;$x++)  {
+
+                    ?>
+                    <tr>
+                        <td class="center">IcoHelp</td>
+                        <td class="left">Titolo <?php print (999990 + $x ) ?></td>
+                        <td class="left"><?php 
+                            if ($x==0) {
+                                ?>
+                                <nobr>MOT <span class="table-bt-details">+</span></nobr>
+                                <?php
+                            }
+                            else
+                            {
+                                print "MOT";
+                            }
+                        ?>    
+                        </td>
+                        <td class="right"><?php print rand(0,10000)/100;?></td>
+                        <td class="right"><?php print rand(0,10000)/100;?></td>
+                        <td class="right"><?php print rand(0,10000)/100;?></td>
+                        <td class="right"><?php print rand(0,10000)/100;?></td>
+                        <td class="left"><?php print ["Telecomunicazioni","Chimica e materie prime","Industria"][rand(0,2)];?></td>
+                        <td class="right">00,0&euro;</td>
+                        <td class="right">101,01<br>11:17:05</td>
+                        <td class="right">20.202,00</td>
+                        <td class="right nega">-24,00<br>-0,1%</td>
+                    </tr>
+                    <?php
+
+                }            
+            ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="bgWhite brdWhite"></td>
+                    <td colspan="9">Totale portafoglio</td>
+                    <td class="right">123.404,00</td>
+                    <td class="right nega">-24,00<br>-0,1%</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
         <!-- FINE TABELLA -->
 
         <!-- PULSANTIERA SOTTO TABELLA -->
