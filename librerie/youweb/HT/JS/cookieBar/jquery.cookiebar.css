@@ -1,0 +1,15 @@
+#cookie-bar {background:#90adc5; height:auto; min-height:24px; color:#ffffff; text-align:center; padding:3px 0; z-index:9999}
+.cookie-content {margin: auto; width: 80%;}
+#cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
+#cookie-bar.fixed.bottom {bottom:0; top:auto;}
+#cookie-bar p {margin:0; padding:0;text-align:justify; padding: 5px 25px; float: left; font-size: 1.1em;}
+#cookie-bar a {color:#ffffff; display:inline-block; border-radius:3px; text-decoration:none; padding:0 3px;}
+#cookie-bar a.x {background: transparent url("/HT/IMAGES/x.png") no-repeat scroll; width: 23px; float: right; margin: auto; margin-top:5px; line-height: 20px;    position: absolute;  top: 0; right: 0;}
+#cookie-bar .cb-disable {background:#990000;}
+#cookie-bar .cb-disable:hover {background:#bb0000;}
+#cookie-bar .cb-policy {background:#0033bb;}
+#cookie-bar .cb-policy:hover {background:#0055dd;}
+
+media (max-width:768px){
+	.cookie-content {margin: auto; width: auto;} 
+}

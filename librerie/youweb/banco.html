@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+	<base href="https://youwebcard.bancopopolare.it/">
+	-->
+	<meta charset="utf-8">
+	<meta name="language" content="it"> 
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+	<meta name="HandheldFriendly" content="True" /> 	
+	<meta name="MobileOptimized" content="320" /> 		
+	<meta http-equiv="cleartype" content="on"> 			
+	<meta name="description" content="YouWeb - Banco BPM">	
+	<meta name="format-detection" content="telephone=no">		
+	<meta name="apple-mobile-web-app-title" content="YouWeb"> 
+	<meta name="application-name" content="YouWeb" />               
+	<meta name="msapplication-TileColor" content="#003B79" />		
+
+
+	<link rel="apple-touch-icon" href="/HT/IMAGES/favicon/apple-touch-icon.png">		                          
+	<link rel="apple-touch-icon" sizes="76x76"   href="/HT/IMAGES/favicon/apple-touch-icon-76.png" />    
+	<link rel="apple-touch-icon" sizes="120x120" href="/HT/IMAGES/favicon/apple-touch-icon-120.png" />   
+	<link rel="apple-touch-icon" sizes="152x152" href="/HT/IMAGES/favicon/apple-touch-icon-152.png" />   
+	<link rel="apple-touch-icon" sizes="167x167" href="/HT/IMAGES/favicon/apple-touch-icon-167.png" />   
+	<link rel="apple-touch-icon" sizes="180x180" href="/HT/IMAGES/favicon/apple-touch-icon-180.png" />   
+	<meta name="msapplication-square150x150logo" content="/HT/IMAGES/favicon/touch-icon-150.png" />  
+	<meta name="msapplication-square310x310logo" content="/HT/IMAGES/favicon/touch-icon-310.png" />  
+	<meta name="msapplication-square70x70logo" content="/HT/IMAGES/favicon/touch-icon-70.png" />    
+	<link rel="shortcut icon" href='/HT/IMAGES/favicon.ico' type="image/x-icon" />
+	<link rel="icon" sizes="128x128" href="/HT/IMAGES/favicon/touch-icon-128.png" type="image/png" />  
+	<link rel="icon" sizes="192x192" href="/HT/IMAGES/favicon/touch-icon-192.png" type="image/png" />  
+
+	
+	<!-- CSS -->
+ 	<link media="screen, print" rel="stylesheet" type="text/css" href="css/jquery-ui_ng.min.css" />
+	<link media="screen, print" rel="stylesheet" type="text/css" href="css/bootstrap.min.css"  />
+	<link media="screen, print" rel="stylesheet" type="text/css" href="css/bootstrap.height.plugin.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="css/ie10-viewport.css"  />
+	<link media="screen" rel="stylesheet" type="text/css" href="css/youWeb-main.css?v=161229"  />
+	
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="css/youWeb-xs-mobile-struttura.css?v=161229" />
+	<link media="screen and (min-width: 991px)" rel="stylesheet" type="text/css" href="css/youWeb-sm-desktop-struttura.css?v=161229" />
+
+	<link media="screen and (max-width: 544px)" rel="stylesheet" type="text/css" href="css/youWeb-xxs-mobile.css?v=161229" />
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="css/youWeb-xs-mobile.css?v=161229" />
+	<link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="css/youWeb-sm-desktop.css?v=161229" />
+
+	<!--CSS AGGIUNTO PER STILIZZARE SITO COME INDICAZIONI UI -->
+	<link media="screen" rel="stylesheet" type="text/css" href="css/redesign.css"  />
+	
+	<link media="print" rel="stylesheet" type="text/css" href="css/print.css" />
+
+
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/funzioniYW.js?v=161229"></script>
+	
+
+	<script type="text/javascript" src="/wscmn/HT/fe/js/jquery.js"></script>
+
+	
+
+	<script type="text/javascript">
+	var menuPushMobile = (function() {
+		/* variabili generiche*/
+	
+		var viewdim = function() {
+				    var e = window,
+				        a = 'inner';
+				    if (!('innerWidth' in window)) {
+				        a = 'client';
+				        e = document.documentElement || document.body;
+				    }
+				    return { width: e[a + 'Width'], height: e[a + 'Height'] };
+		};	
+	
+		/*FUNZIONE GENERICA DI ANIMAZIONE */
+		var animateLevels = function (element,amountLeft,postAnimationFunction) {
+				element.animate({
+					left: amountLeft
+				},500, postAnimationFunction)
+		}
+		var initCloseMenu = function(deltaSlideMenu,offCanvasWrapper,menuWrapper){
+			$('#overlayMenu,#clonedBack').fadeOut();
+			$('.mm-list.opened').css('left',this.deltaSlideMenu);
+
+			animateLevels(offCanvasWrapper,'0',function(){$('#overlayMenu,#clonedBack').remove();$(this).removeClass('pusher left right');menuWrapper.css('left','0');$('.mm-list').removeClass('opened').removeClass('over-visible').removeClass('active')});
+			offCanvasWrapper.unwrap('<div class="no-scroll"></div>');
+			
+			$('body').removeClass('fixed');
+			$('html').removeClass('fixed');
+			
+		}
+		var closeSubMenu = function(el,subMenu,menuWrapper,menuFirst){
+				el = $(el);
+				animateLevels(menuWrapper,'0',function(){menuFirst.removeClass('over-visible').scrollTop(0,0);subMenu.removeClass('active')});
+				el.remove();
+		}
+		
+		//previene le interazioni tra menu mobile e desktop, da richiamare al resize
+		var resetMenu = function () {
+				if(viewdim().width >991)
+				{
+					$('#overlayMenu').trigger('click');
+				}
+		}
+		//oggetto costruttore Menu
+		function Menumobile (btn,elementToMove,deltaSlideWrapper,deltaSlideMenu,side) {
+			this.btn = btn;
+			this.elementToMove = elementToMove;
+			this.deltaSlideWrapper = deltaSlideWrapper;
+			this.deltaSlideMenu = deltaSlideMenu;
+			this.side = side;
+		}
+		Menumobile.prototype.openMenu = function() {
+			//definizione variabili iniziali
+			var deltaSlideWrapper = this.deltaSlideWrapper,
+				deltaSlideMenu = this.deltaSlideMenu,
+				menuFirst =  $(this.elementToMove).find('.first-levelMenu'),
+				overlayMenu = '<div id="overlayMenu"></div>',
+				offCanvasWrapper = $('#outerwrapper'),
+				menuWrapper = $('#menuMainMobileWrapper'),
+				voicesSubMenu = menuFirst.find('li span.openSubMenu'),
+				side = this.side;
+				
+				//event click su bottone che apre primo livello
+				$(this.btn).on('click', function(event){
+					//offCanvasWrapper.append(overlayMenu).addClass('pusher');
+					//var offsetTopMain = $('#main').offset().top;
+					offCanvasWrapper.append(overlayMenu).addClass('pusher' + ' ' + side);
+					offCanvasWrapper.wrap('<div class="no-scroll"></div>');
+					
+					if (/iPad|iPhone|iPod|Android/i.test(navigator.userAgent)) {
+							
+							$('body').addClass('fixed');
+							$('html').addClass('fixed');
+						}
+					if(navigator.userAgent.match(/Windows Phone/i)){
+						$('body').removeClass('fixed');
+						$('html').removeClass('fixed');
+					}
+					animateLevels(offCanvasWrapper,deltaSlideWrapper);
+					animateLevels(menuFirst,'0',function(){
+						menuFirst.addClass('opened');
+						
+						
+					});
+					$('#overlayMenu').click(function(){
+						initCloseMenu(deltaSlideMenu,offCanvasWrapper,menuWrapper)
+					});
+				})
+				//event click su eventuali voci di sottomenu
+				voicesSubMenu.on('click', function(event){
+					var subMenu = $(this).next('.mm-list').eq(0);
+					if(subMenu.length>0){
+						subMenu.addClass('active').scrollTop(0,0);;
+						menuFirst.addClass('over-visible');
+						animateLevels($('#menuMainMobileWrapper'),'-100%',function(){
+							subMenu.addClass('opened');
+							subMenu.find('.back').clone().attr('id','clonedBack').click(function(){closeSubMenu(this,subMenu,menuWrapper,menuFirst)}).insertBefore(subMenu);
+						});
+						
+					}
+				})
+		}
+	//fine oggetto costruttore Menu
+	
+	//inializzo i due tipi di menu
+	var menuMain = new Menumobile('#buttonMenuMobile','#menuMainMobile','260px','-100%','right');
+	var menuUser = new Menumobile('#buttonUserMobile','#menuUserMobile','-260px','100%','left');
+	
+	function initMenuMain() {
+		menuMain.openMenu();
+	}
+	function initMenuUser() {
+		menuUser.openMenu();
+	}
+	return{
+			'initMenuMain' : initMenuMain,
+			'initMenuUser' : initMenuUser,
+			'resetMenuResize' : resetMenu
+	}
+
+	})();
+	
+	$(function () {
+		menuPushMobile.initMenuMain();
+		menuPushMobile.initMenuUser();
+	});
+
+	
+	$(window).resize(function(){
+		if($('#overlayMenu').length===1){
+			menuPushMobile.resetMenuResize()
+	}});
+	</script>
+
+	<title>YouWeb</title>
+</head>
+
+<body>
+	
+	<div id="outerwrapper">
+		<!-- HEADER -->
+		<header class="nav-down">
+	<div class="wrapper">
+		<!-- HEADER DESKTOP-->
+		
+<div id="headerDesktop">
+		<!-- Header SX -->
+		<div class="contLogoDesk">
+			<div class="logoYouWeb"></div>
+		</div>
+	<!-- END Header SX -->
+
+
+
+
+	<!-- Header Center -->
+		<div class="contMenuDesk">
+
+			<ul id="" class="firstMenuDesk">
+				<!-- Conti e deposito -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+						<span>CONTI E</span> <span>DEPOSITI</span>
+					</a>
+				</li>			
+				<!-- END Conti e deposito -->
+				
+				<!-- Pagamenti -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">PAGAMENTI</a>
+				</li>			
+				<!-- END Pagamenti -->
+
+				<!-- Carte -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">CARTE</a>
+				</li>
+				<!-- END Carte -->
+
+				<!-- Alert -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">ALERT</a>
+				</li>
+				<!-- END Alert -->
+
+				<!-- Posta -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">POSTA</a>
+				</li>
+				<!-- END Posta -->	
+
+				<!-- Investimenti -->		
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">INVESTIMENTI</a>
+				</li>	
+				<!-- END Investimenti -->	
+
+				<!-- Servizi -->
+				<li>
+	  				<a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">SERVIZI</a>
+	  					<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> SERVIZI TITOLO SU DUE RIGHE </h1>
+										<p>
+											Il Portale dei pagamenti &egrave; un'area nella quale &egrave; possibile trovare i servizi abilitati al pagamento, effettuare e controllare
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+										<div style="width:100px; height:100px; border-radius:80px; border:1px solid #000; background-color:#000; margin: 0 auto; ">
+										</div>
+										<h1 style="width:100%; text-align:center">SERVIZI </h1>
+										<p style="padding: 20px 50px 20px 36px">
+											Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Ultime disposizioni</a></li>
+										<li><a href="#">Gestione beneficiari</a></li>
+										<li><a href="#">Ricarica carta</a></li>
+										<li><a href="#">Bonifico per detrazioni</a></li>
+										<li><a href="#">Trasferimento tra conti</a></li>
+										<li><a href="#">Ricarica telefonica</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+										<li><a href="#">Bollettino postale</a></li>
+										<li><a href="#">Bollettino MAV</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+										<li><a href="#">Coordinate IBAN</a></li>
+										<li><a href="#">Utenze</a></li>
+										<li><a href="#">Compilazione Richiedi</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+										<li><a href="#">Domiciliazioni</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+										<li><a href="#">Accredito stipendio</a></li>
+										<li><a href="#">Mediaset Premium (Ricarica)</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+										<li><a href="#">Bollettino freccia</a></li>
+										<li><a href="#">Bollettino ripetitivo</a></li>
+										<li><a href="#">Lista bonifici ripetitivi</a></li>
+										<li><a href="#">Lorem Ipsum Lorem</a></li>
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+
+						</ul>
+				</li>
+				<!-- END Servizi -->
+			</ul>
+
+		</div>
+	
+	<!--END Header Center -->
+
+<!-- Header DX -->
+	<div class="contSpallaDxDesk">
+
+		<!-- Icona Uno -->
+	                            
+  			<div class="dropdown">
+    			<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">
+    				<img src="/HT/fe/img/user_menu_mobile.png" class="iconUserDx">
+    			</a>
+    			<ul class="dropdown-menu spallaDxUserMenu">
+      				<li>
+      					<span class="triangoloUser"></span>
+      					<p>Benvenuta</p> 
+      					<p>Teresa Colombo</p> 
+      					<p>ultima visita 15 MAR 2017 17:40</p>
+      				</li>
+      				<li></li>
+      				<li><a href="#">Il mio profilo</a></li>
+      				<li><a href="#">I miei contatti</a></li>
+      				<li><a href="#">Il  mio calendario</a></li>
+      				<li><a href="#">Aiuto</a></li>
+    			</ul>
+  			</div>
+		
+		<!-- End Icona Uno -->
+
+		<!-- Icona Impostazioni -->
+                            
+  			<div class="dropdown">
+    			<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">
+    				<img src="/HT/fe/img/user_menu_mobile.png" class="iconImpostazioneDx">
+    			</a>
+    			<ul class="dropdown-menu spallaDxIconDue">
+      				<li>
+      					<span class="triangoloImp"></span>
+      					<a href="#">Personalizza Homepage</a>
+      				</li>
+      				<li><a href="#">Rapporti in primo piano</a></li>
+      				<li><a href="#">Modifica link preferiti</a></li>
+      				<li><a href="#">Stampa</a></li>
+    			</ul>
+  			</div>
+
+		<!-- End Icona Impostazioni -->
+
+		<!-- Icona Exit -->
+
+		<!-- End Icona Exit-->
+
+	</div>
+<!-- END Header DX -->
+
+
+</div>
+
+
+<!-- QUI -->
+
+
+
+<!-- END QUI-->
+
+
+
+<script type="text/javascript">
+	
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+        $("li.open").removeClass("open");
+        $(".dropdown.open").removeClass("open");
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+</script>		<!-- / HEADER -->
+		<!-- HEADER MOBILE-->
+		<div id="headerMobile">
+	<div class="wrapperheaderMobile">
+		<div id="buttonMenuMobile" class="pushBtn">
+			<div class="lineMenuWrap">
+				<span class="lineMenu"></span>
+				<span class="lineMenu"></span>
+				<span class="lineMenu"></span>
+			</div>
+		</div>
+		<h1 id="logo-mobile"></h1>
+		<div id="buttonUserMobile" class="pushBtn"></div>
+	</div>	
+</div>		<!-- / HEADER -->
+		
+	</div>
+</header>		<!-- / HEADER -->
+		
+		<!-- MENU -->
+		<div id="menu">
+	<!-- MENU DESKTOP-->
+	<nav id="menuDesktop">
+
+
+
+
+</nav>		<!-- / MENU DESKTOP -->
+	<!-- MENU MOBILE-->
+	<!--LA CLASSE ACTIVE DEVE ESSERE APPESA ALLA VOCE e alla SOTTOVOCE APERTA NEL BODY -->
+
+<nav id="menuMainMobile">
+	<div id="menuMainMobileWrapper">
+		<ul class="first-levelMenu mm-list">
+			 <li><a href="#" title="Homepage">Homepage</a></li>
+			 <li class="active"><span class="openSubMenu" title="Conti e depositi">Conti e depositi</span>
+				<ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back" title="Conti e depositi">Conti e depositi</a></li>
+	               	<li class="active"><a href="#" title="Saldo e movimenti">Saldo e movimenti</a></li> 
+	                <li><a href="#" title="Interessi e spese">Interessi e spese</a></li>
+	            	<li><a href="#" title="Adeguata verifica">Adeguata verifica</a></li>
+	            	<li><a href="#" title="Bilancio mensile">Bilancio mensile</a></li>
+	                <li><a href="#" title="Gestione categorie">Gestione categorie</a></li>
+	            	<li><a href="#" title="Creazione categorie">Creazione categorie</a></li>
+	            	<li><a href="#" title="Renaming di voce vincola">Renaming di voce vincola</a></li>
+					<li><a href="#" title="Renaming di voce i tuoi vincoli">Renaming di voce i tuoi vincoli</a></li>
+					<li><a href="#" title="Renaming di voce conti di appoggio">Renaming di voce conti di appoggio</a></li>
+	             </ul>
+			 </li>
+			 <li>
+			 	 <span class="openSubMenu" title="Pagamenti">Pagamenti</span>
+			 	 <ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back" title="Pagamenti">Pagamenti</a></li>
+	               	<li><a href="#" title="Ultime disposizionii">Ultime disposizioni</a></li> 
+	               	<li><a href="#" title="Gestione beneficiari">Gestione beneficiari</a></li>
+	               	<li><a href="#" title="Bonifico ordinario">Bonifico ordinario</a></li> 
+	               	<li><a href="#" title="Bonifico per detrazioni">Bonifico per detrazioni</a></li>
+	               	<li><a href="#" title="Trasferimento tra conti">Trasferimento tra conti</a></li>
+	               	<li><a href="#" title="Ricarica telefonica">Ricarica telefonica</a></li>
+	             </ul>
+			 </li> 
+			 <li>
+			 	<span class="openSubMenu" title="Carte">Carte</span>
+			 	<ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back">Carte</a></li>
+	               	<li><a href="#">lorem ipsum Carte</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	             </ul>
+			 </li>
+			 <li><span class="openSubMenu" title="Alert">Alert</span></li>
+			
+			 <li><span class="openSubMenu" title="Posta">Posta</span></li>
+			 <li><span class="openSubMenu" title="Investimenti">Investimenti</span></li>
+			 <li><span class="openSubMenu" title="Servizi">Servizi</span></li>
+		</ul>
+	</div>
+</nav>
+<nav id="menuUserMobile">
+	<div class="first-levelMenu mm-list">
+		<div class="info-user">
+			<span class="intro">Benvenuta</span> 
+			<span class="name-user">Teresa Colombo</span>
+			<span class="info-accesso"><span>Ultima visita</span> <span>5 Mar 2017 - 17:40</span></span>
+		</div>
+		<ul class="">
+			 <li><a href="#">Il mio profilo</a></li>
+			 <li><a href="#">I miei contatti</a></li>
+			 <li><a href="#">Il mio calendario</a></li> 
+			 <li><a href="#">Rapporti in primo piano</a></li>
+			 <li><a href="#">Disconnetti utente</a></li>
+			 <li><a href="#">Modalit&agrave; dispositiva</a></li> 
+		</ul>
+	</div>
+</nav>
+	<!-- / MENU MOBILE-->
+
+</div>		<!-- / MENU -->
+		<div id="main">
+			<div class="wrapper">
+
+				<!-- CONTENITORE PRINCIPALE -->
+				<div id="mainContent">
+					<!-- BREADCRUMB -->
+					<div class="breadcrumb">
+						<span>Lorem</span>
+				       	<span>Ipsum dolor</span>
+					</div>
+					<!-- FINE BREADCRUMB -->
+					<div class="visible-print-block">
+   <img src="/HT/IMAGES/nGrafica/logo.png" title="Torna all'homepage" alt="Torna all'homepage" />
+   <div class="pull-right">
+      01/03/2017  
+   </div>
+</div>
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+<div class="riquadro clearfix">
+  
+
+   <div class="clearfix">
+      <style>
+         .imgSrv{
+         float: none;
+         }
+      </style>
+      <h1>
+         <div class="hidden-print hidden-xxs flag saldiMovimenti">&nbsp;</div>
+         <span>Saldo e movimenti</span>
+      </h1>
+      <a href="javascript:OpenHelp('/WEBHT/help/page.do?id=106')" class="general-help help-icon hidden-xs"><img src="/HT/IMAGES/nGrafica/i_help.png" class="imgSrv" title="Help On Line" alt="Help On Line" /></a>
+      <div id="helpDialog" class="modal fade bs-example-modal-lg helpDialog" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header clearfix">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               </div>
+               <div class="modal-body">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xs-12 hidden-xs hidden-print">
+         <div class="contentPagina">
+            Di seguito viene visualizzata la situazione del tuo conto. Per ottenere la lista dei movimenti desiderata imposta i criteri a tuo piacimento e clicca sul pulsante "Ricerca".
+         </div>
+      </div>
+   </div>
+   <form id="formMovimentiConto2" method="post" action="/WEBHT/cc/movimentiConto.do">
+      <div class="section clearfix">
+         <h3 class="titleSection">
+            Rapporto selezionato
+         </h3>
+         <div class="selezioneCC tabellaSelezioneCC">
+            <div class="CCselezionato clearfix">
+               <!-- C'è anche la sezione saldo -->
+               <div class="col-sm-6 col-xs-12">
+                  <span class="col-xs-4 col-xs-4" id="labelIntestatario">
+                  Intestato a:
+                  </span>
+                  <span class="col-xs-6" id="intestazione">
+                  Cognome Nome
+                  </span>
+                  <span class="col-xs-4" id="conto">
+                  Conto corrente:
+                  </span>
+                  <span class="col-xs-6" id="numero">
+                  00000000 
+                  </span>
+                  <span class="col-xs-4">
+                  Filiale:
+                  </span>
+                  <span class="col-xs-6" id="agenzia">
+                  MILANO&nbsp;-&nbsp;
+                  0000
+                  </span>
+               </div>
+               <div class="col-xs-12 col-sm-6" id="numeri">
+                  <span id="disponibile">
+                     Saldo disponibile:
+                     <strong>
+                     88,00
+                     </strong>
+                     <!-- Multivaluta Visualizza -->
+                     <!-- Multivaluta Visualizza fine -->
+                  </span>
+                  <span id="contabile"> 
+                  Saldo contabile: 
+                  <strong>
+                  88,00
+                  </strong>
+                  </span>
+                  <span id="affidamento"> 
+                  Affidamento: 
+                  <strong>
+                  0,00
+                  </strong>
+                  </span>
+               </div>
+               <!-- C'è solo la sezione intestatario -->
+               <a id="selezionaCC" class="btnSelezioneCC" href="javascript:void(0);" title="seleziona rapporto" role="button" aria-pressed="false">
+               <img src="/HT/IMAGES/nGrafica/ico-select.png" id="btnSelezioneRapporto" />
+               </a>
+            </div>
+            <div class="tabSelezioneCC" style="display: block;">
+               <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+                  <table class="table table-responsive table-striped dataTable no-footer" id="DataTables_Table_10" role="grid">
+                     <tbody>
+                        <tr>
+                           <td class="hidden" style="text-align: center"><input type="radio" name="codContoCorrente" value="001|0000|000000000000" checked="checked" />
+                           </td>
+                           <td headers="tipoRapporto">Conto corrente 
+                           </td>
+                           <td headers="ccRapporto">00000000</td>
+                           <td headers="filialeRapporto" class="hidden-xs">MILANO&nbsp;-&nbsp; 
+                              0000
+                           </td>
+                           <td headers="intestazioneRapporto">
+                              Cognome Nome      
+                           </td>
+                           <td headers="divisaSaldoDisponibile" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="divisaSaldoContabile" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="affidamento" class=" hidden oRight">
+                              0,00
+                              EUR
+                           </td>
+                           <td headers="divisaSaldoAffidamento" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="saldoIstantaneo" class="hidden oRight">
+                              88,00
+                              <span>EUR</span>
+                           </td>
+                           <td headers="saldoDisponibile" class="oRight  hidden-xxs">
+                              88,00
+                              <span class="hidden-xs">EUR</span>
+                           </td>
+                           <!-- Multivaluta -->
+                           <!-- Multivaluta fine -->
+                           <td class="hidden">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="hidden" style="text-align: center"><input type="radio" name="codContoCorrente" value="001|0000|000000000000" />
+                           </td>
+                           <td headers="tipoRapporto">Conto deposito 
+                           </td>
+                           <td headers="ccRapporto">00000000</td>
+                           <td headers="filialeRapporto" class="hidden-xs">MILANO&nbsp;-&nbsp; 
+                              0000
+                           </td>
+                           <td headers="intestazioneRapporto">
+                              Cognome Nome      
+                           </td>
+                           <td headers="divisaSaldoDisponibile" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="divisaSaldoContabile" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="affidamento" class=" hidden oRight">
+                              0,00
+                              EUR
+                           </td>
+                           <td headers="divisaSaldoAffidamento" class="hidden">
+                              EUR
+                           </td>
+                           <td headers="saldoIstantaneo" class="hidden oRight">
+                              5,00
+                              <span>EUR</span>
+                           </td>
+                           <td headers="saldoDisponibile" class="oRight  hidden-xxs">
+                              5,00
+                              <span class="hidden-xs">EUR</span>
+                           </td>
+                           <!-- Multivaluta -->
+                           <!-- Multivaluta fine -->
+                           <td class="hidden">&nbsp;</td>
+                        </tr>
+                     </tbody>
+                     <thead>
+                        <tr class="hover">
+                           <th class="hidden" style="width: 0px;">&nbsp;</th>
+                           <th headers="tipoRapporto" class="sorting_asc" style="width: 0px;">Tipo rapporto</th>
+                           <th headers="ccRapporto" class="sorting" style="width: 0px;">Numero</th>
+                           <th headers="filialeRapporto" class="sorting hidden-xs" style="width: 0px;">Filiale</th>
+                           <th headers="intestazioneRapporto" class="sorting" style="width: 0px;">Intestazione</th>
+                           <th headers="divisaSaldoDisponibile" class="hidden" style="width: 0px;"> </th>
+                           <th headers="divisaSaldoContabile" class="hidden" style="width: 0px;"> </th>
+                           <th headers="affidamento" class="hidden sorting" style="width: 0px;">Affidamento</th>
+                           <th headers="divisaSaldoAffidamento" class="hidden" style="width: 0px;"> </th>
+                           <th headers="saldoIstantaneo" class="hidden sorting" style="width: 0px;">Saldo Contabile</th>
+                           <th headers="saldoDisponibile" class="sorting hidden-xxs" style="width: 0px;">
+                              Saldo Disponibile
+                           </th>
+                           <th class="hidden" style="width: 0px;">&nbsp;</th>
+                        </tr>
+                     </thead>
+                  </table>
+               </div>
+            </div>
+         </div>
+       
+      </div>
+      <div class="section clearfix">
+      </div>
+      <div class="section clearfix" id="formRisultati">
+         <div class="context-buttons">
+            <a href="#" id="btnRicerca" title="mostra parametri di ricerca" class="btnSelezioneOpen pull-right" role="button" aria-pressed="false"></a>
+         </div>
+         <input type="hidden" name="compilazione" value="S" />
+         <input type="hidden" name="contoDeposito" value="N"/>
+         <input type="hidden" name="movimentiK2" value="N"/>
+         <input type="hidden" name="pagina" value="" />
+         <input type="hidden" name="indiceColonna" value="0" id="indiceColonna" />
+         <input type="hidden" name="tipoOrdinamento" value="desc" id="tipoOrdinamento" />    
+         <h3 class="titleSection">
+            Parametri di ricerca
+         </h3>
+         <div class="bs-example">
+            <div class="form-group clearfix">
+               <div class="col-xs-12">
+                  Criteri: movimenti dal <b>30/01/2017</b> al <b>01/03/2017</b>, status movimento <b>TUTTI</b>, tipologia movimento <b>TUTTI</b>
+               </div>
+            </div>
+         </div>
+         <style>
+            .titoloSgancio {
+            border-bottom: 2px solid #0E6AB3;
+            color: #0E6AB3;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 24px;
+            margin: 0 0 8px;
+            padding-left: 10px;
+            padding-top: 0;
+            text-align: left;
+            width: 98.5%;
+            }
+            .no-close .ui-dialog-titlebar-close {
+            display: none;
+            }
+         </style>
+         <div id="sgancio" style="font-size: 13px; z-index: 1000; display: none;">
+            <h1 class="titoloSgancio">Informazione per il cliente</h1>
+            <div style="padding:10px;">
+               Attenzione l'operazione è stata effettuata utilizzando vecchie coordinate IBAN. La Banca ha provveduto in automatico al corretto accredito/addebito. E' indispensabile, tuttavia, che siano comunicate a tutte le controparti le corrette coordinate IBAN del tuo conto corrente.<br/>
+            </div>
+         </div>
+      </div>
+      <div class="section clearfix" id="formRicerca">
+         <div class="context-buttons">
+            <a href="#" id="btnRicercaHide" title="nascondi parametri di ricerca" class="btnSelezioneClose pull-right" role="button" aria-pressed="true"> </a>
+         </div>
+         <h3 class="titleSection">  
+            Parametri di ricerca             
+         </h3>
+         <div class="bs-example">
+            <div class="form-group clearfix">
+               <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                     <div class="col-xs-12 clearpadding margin-bottom-xs-10">
+                        <label style="padding-top:2px" for="intervalloPeriodo">
+                        <input type="radio" name="tipoIntervallo" value="periodo" checked="checked" id="intervalloPeriodo" />
+                        Periodo
+                        (gg/mm/aaaa)
+                        </label>
+                     </div>
+                     <div class="col-xs-12 clearpadding ">
+                        <div  class="col-sm-6 col-xs-12 margin-bottom-xs-10 xs-align-right">
+                           <span class="float-xs-left">Dal </span>
+                           <input type="text" name="dataInizio" size="16" value="30/01/2017" onclick="$('#intervalloPeriodo').prop('checked',true)" onchange="$('#intervalloPeriodo').prop('checked',true)" id="dataInizio" class="datepicker form-control wauto" />
+                        </div>
+                        <div  class="col-sm-6 col-xs-12 margin-bottom-xs-10 xs-align-right">
+                           <span class="float-xs-left">Al </span>
+                           <input type="text" name="dataFine" size="16" value="01/03/2017" onclick="$('#intervalloPeriodo').prop('checked',true)" onchange="$('#intervalloPeriodo').prop('checked',true)" id="dataFine" class="datepicker form-control wauto " />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                     <label style="padding-top:2px" for="intervalloUltimiMovimenti">
+                     <input type="radio" name="tipoIntervallo" value="ultimiGiorni" id="intervalloUltimiMovimenti" />
+                     Ultimi movimenti
+                     </label>
+                     <select name="ultimiMovimenti" onclick="$('#intervalloUltimiMovimenti').prop('checked',true)" disabled="disabled" id="ultimiMovimenti" class="form-control">
+                        <option value="7">7 giorni</option>
+                        <option value="30" selected="selected">30 giorni</option>
+                        <option value="90">90 giorni</option>
+                        <option value="180">180 giorni</option>
+                        <option value="365">1 anno</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="form-field-input col-sm-6 col-xs-12">
+                     <label class="control-label">
+                     Testo nella Causale
+                     </label>
+                     <div class="form-field">
+                        <input type="text" name="testoCausale" value="" id="testoCausale" class="form-control" />
+                     </div>
+                  </div>
+                  <div class="form-field-input col-sm-3 col-xs-12">
+                     <label class="control-label">
+                     Tipologia Movimento           
+                     </label>
+                     <div class="form-field">
+                        <select name="tipologiaMovimento" id="tipologiaMovimento" class="form-control">
+                           <option value="tutti" selected="selected">Tutti</option>
+                           <option value="entrate">In entrata</option>
+                           <option value="uscite">In uscita</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-field-input col-sm-3 col-xs-12">
+                     <label class="control-label">
+                     Status Movimento
+                     </label>             
+                     <div class="form-field">
+                        <select name="statusMovimento" id="statusMovimento" class="form-control">
+                           <option value="tutti" selected="selected">Tutti</option>
+                           <option value="contabilizzato">Contabilizzato</option>
+                           <option value="prenotato">Prenotato</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="pull-right margin-bottom10 margin-top10" id="submitRicerca" style="display:none">
+         <input type="submit" name="" value="Ricerca" class="btn btn-primary" />       
+      </div>
+   </form>
+   <div class="section clearfix">
+	<div class="pulsanti">
+			<div class="context-buttons pull-left" style="margin-left:10px">
+				<a href="#" onclick="javascript:exportExcel('formMovimentiConto2');" title="esporta in excel" id="excel" class="btnExcel" role="button"></a>
+			</div>
+			<div id="puls_gr_table_chart_timeline" class="context-buttons pull-right">
+				<!--[if gt IE 8]><!-->
+					<a href="#table" title="Tabella" onclick="showTable()" id="btnTable" class="btnTable disabled" role="button"> </a>
+					<a href="#areaChart" title="Grafico" onclick="caricaGrafico()" id="btnChart" class="btnChart" role="button"> </a>
+					<a href="#timeLine" title="Timeline" onclick="showTimeline()" id="btnTimeline" class="btnTimeline" role="button"> </a>
+				<!--<![endif]-->
+					
+			</div>
+		</div>
+		<div class="bs-example" style="position:relative; z-index:1">
+			<div class="form-group">
+					
+				<div class="form-field-input col-xs-12 margin-bottom10 clear-padding" id="table">
+					<!--           OPERA          -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="SelezioneMovimenti">
+	<div class="tabSelezioneMovimenti" style="display: block;">
+		<div id="CCMO_wrapper" class="dataTables_wrapper no-footer"><table id="CCMO" class="table table-striped dataTable no-footer" role="grid">
+<colgroup>
+<col width="15%">
+<col width="15%">
+<col width="18%">
+<col width="5%">
+<col width="36%">
+<col width="5%">
+<col width="5%">
+</colgroup>
+<thead>
+<tr class="hover" role="row"><th class="date sorting sorting_desc sorting_disabled" title="Data Contabile" rowspan="1" colspan="1" style="width: 106px;">Data Contabile</th><th class="hidden-xs date sorting sort_none sorting_disabled" title="Data Valuta" rowspan="1" colspan="1" style="width: 107px;">Data Valuta</th><th class="number sorting sort_none sorting_disabled" title="Importo" rowspan="1" colspan="1" style="width: 133px;">Importo</th><th class="hidden-xs text sorting sort_none sorting_disabled" title="Divisa" rowspan="1" colspan="1" style="width: 36px;">Divisa</th><th class="text sorting sort_none sorting_disabled" title="Causale" rowspan="1" colspan="1" style="width: 288px;">Causale</th><th class="hidden-xs text sorting sort_none sorting_disabled" title="Status" rowspan="1" colspan="1" style="width: 38px;">Status </th><th class="hidden-xs image sorting sort_none sorting_disabled" title="Canale" rowspan="1" colspan="1" style="width: 41px;">Canale</th></tr>
+</thead>
+<tbody>
+
+
+
+<tr role="row" class="odd">
+<td class="oCenter">03/02/2017</td>
+<td class="oCenter hidden-xs">03/02/2017</td>
+<td class="importo oRight positivo oRight">5,00</td>
+<td class="oCenter hidden-xs">EUR</td>
+<td class="oLeft break-xs">trasferim.tra conti - trasferimento da conto *1794</td>
+<td class="oCenter hidden-xs">Cont.</td>
+<td class="oCenter orderAsc hidden-xs"><img src="/HT/IMAGES/HBMVWeb.gif" alt="Web" title="Web"></td>
+</tr><tr role="row" class="even">
+<td class="oCenter">27/01/2017</td>
+<td class="oCenter hidden-xs">27/01/2017</td>
+<td class="importo oRight negativo oRight">-7,00</td>
+<td class="oCenter hidden-xs">EUR</td>
+<td class="oLeft break-xs">add. pagam. diversi - ricarica carta conto youweb  n. *9130            del 27/01/2017 ore 11:55</td>
+<td class="oCenter hidden-xs">Cont.</td>
+<td class="oCenter orderAsc hidden-xs"><img src="/HT/IMAGES/HBMVApp.gif" alt="App" title="App"></td>
+</tr><tr role="row" class="odd">
+<td class="oCenter">27/01/2017</td>
+<td class="oCenter hidden-xs">27/01/2017</td>
+<td class="importo oRight negativo oRight">-10,00</td>
+<td class="oCenter hidden-xs">EUR</td>
+<td class="oLeft break-xs">trasferim.tra conti - trasferimento a conto *1794</td>
+<td class="oCenter hidden-xs">Cont.</td>
+<td class="oCenter orderAsc hidden-xs"><img src="/HT/IMAGES/HBMVWeb.gif" alt="Web" title="Web"></td>
+</tr></tbody>
+</table></div>
+
+		
+		
+	</div>
+</div>
+
+<!--           /OPERA           -->
+					<div class="visible-print-block pull-right">
+						<span>Pagina: 1 / 1</span>
+					</div>
+				</div>
+				<div id="loadingChart" class="caricamentoAjax" style="display: none;">
+					<img src="/HT/IMAGES/caricamento.gif">
+				</div>
+				<div id="areaChart" style="margin-top:40px">
+				
+				</div>
+				<div class="form-field-input col-xs-12 margin-bottom10 clear-padding" id="timeLine">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<style>
+   .titoloSgancio {
+   border-bottom: 2px solid #0E6AB3;
+   color: #0E6AB3;
+   font-size: 16px;
+   font-style: italic;
+   font-weight: bold;
+   line-height: 24px;
+   margin: 0 0 8px;
+   padding-left: 10px;
+   padding-top: 0;
+   text-align: left;
+   width: 98.5%;
+   }
+   .no-close .ui-dialog-titlebar-close {
+   display: none;
+   }
+</style>
+<div id="sgancio" style="font-size: 13px; z-index: 1000; display: none;">
+   <h1 class="titoloSgancio">Informazione per il cliente</h1>
+   <div style="padding:10px;">
+      Attenzione l'operazione è stata effettuata utilizzando vecchie coordinate IBAN. La Banca ha provveduto in automatico al corretto accredito/addebito. E' indispensabile, tuttavia, che siano comunicate a tutte le controparti le corrette coordinate IBAN del tuo conto corrente.<br/>
+   </div>
+</div>
+
+				</div>
+				<!-- SPAZIO PER I CONTENUTI -->
+								<!-- SPALLA DESTRA -->
+					<div id="spalla">
+<form id="formSM">
+	<input type="hidden" name="svuotaCache" value="false" id="svuota">
+</form>
+<div class="riquadro clearfix">
+	<h1><div class="flag hidden-xxs saldiMovimenti">&nbsp;</div>Ultimi Movimenti</h1>
+	<div id="result">
+		<div id="loading" class="caricamentoAjax" style="display: none;">
+			<img src="/HT/IMAGES/caricamento.gif">
+		</div>
+		<span id="riquadroSpalla" class="context-buttons">
+			<a title="Aggiorna" onclick="call(true);" id="refresh" class="refreshButton pull-right"> </a>
+		</span>
+		<div class="smSpalla clearfix margin-bottom10">
+			<div class="bs-example form-horizontal">
+				<div class="form-group">
+					<div class="col-xs-12">
+						<label class="control-label bold">Conto corrente&nbsp;00001585&nbsp;di&nbsp;Idda Asdetgenicva</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="homePageHelp clear-padding margin-bottom10">Ultimi 2 movimenti del rapporto predefinito</div>
+
+		<div class="spallaSaldo">
+			<div class="col-xs-12">
+				<span class="control-label floatl">Data esecuzione</span>
+				<span class="spallaSX bold floatr clear-padding-top">23/02/2017</span>
+			</div>
+			<div class="col-xs-12">
+				<span class="control-label floatl">Importo:</span>
+				<span class="spallaSX floatr negativo bold oRight clear-padding-top">-1,00&nbsp;&euro;</span>
+			</div>
+			<div class="col-xs-12">
+				<span class="control-label floatl">Causale:</span>
+				<span class="spallaSX bold floatr clear-padding-top">vostra disposizione</span>
+			</div>
+
+			<div class="form-field-resume col-xs-12 oCenter margin-bottom10">
+				<label class="control-label">&nbsp;</label>
+			</div>
+		</div>
+
+		<div class="spallaSaldo">
+			<div class="col-xs-12">
+				<span class="control-label floatl">Data esecuzione</span>
+				<span class="spallaSX bold floatr clear-padding-top">23/02/2017</span>
+			</div>
+			<div class="col-xs-12">
+				<span class="control-label floatl">Importo:</span>
+				<span class="spallaSX floatr negativo bold oRight clear-padding-top">-1,00&nbsp;&euro;</span>
+			</div>
+			<div class="col-xs-12">
+				<span class="control-label floatl">Causale:</span>
+				<span class="spallaSX bold floatr clear-padding-top">vostra disposizione</span>
+			</div>
+
+			<div class="form-field-resume col-xs-12 oCenter margin-bottom10">
+				<label class="control-label">&nbsp;</label>
+			</div>
+		</div>
+
+		<div class="padding-bottom10">&nbsp;</div>
+	</div>
+</div>
+
+
+
+	
+		<div id="linkRapidi" class="riquadro clearfix">
+			<h1>
+				<div class="flag hidden-xxs linkRapidi">&nbsp;</div>Link rapidi
+			</h1>
+ 			<span id="riquadroSpalla">
+				<button class="modificaButton pull-right" value=" " name="modifica" id="modificaLink" aria-label="Modifica Link rapidi" title="Modifica Link rapidi"></button>
+			</span>
+			<ul>
+			
+			
+				
+				
+					<li title="Bonifico ordinario" class="bonifico_sepa">
+					<a href="/WEBHT/pagamenti/bonificoSepa.do" title="Bonifico ordinario"><b>Bonifico ordinario</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Ricariche telefoniche" class="ricariche_cellulare">
+					<a href="/WEBHT/pagamenti/ricaricaDati.do" title="Ricariche telefoniche"><b>Ricariche telefoniche</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Gestione contatti" class="gestione_contatti">
+					<a href="/WEBHT/serviziPerTe/contatti.do" title="Gestione contatti"><b>Gestione contatti</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Ultime disposizioni" class="ultime_disposizioni">
+					<a href="/WEBHT/pagamenti/ultimeDisposizioni.do" title="Ultime disposizioni"><b>Ultime disposizioni</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Il tuo profilo" class="il_tuo_profilo">
+					<a href="/WEBHT/serviziPerTe/ilTuoProfilo.do" title="Il tuo profilo"><b>Il tuo profilo</b></a>
+					</li>
+				
+			
+			
+			</ul>
+		</div></div>				<!-- / SPALLA DESTRA -->
+							</div>
+		</div>
+		
+
+		<!-- FOOTER -->
+		<style>
+footer {background-color:#dadee2; float: left;}
+/*.logoFooter {padding-left: 15px}*/
+.rowPaddFooter {padding:40px 0;}
+#footer {padding:0 30px; margin-bottom:15px;}
+.logoYouWebFooter {width: 71px; height: 44px; background: url(/HT/fe/img/logo_youweb.png) no-repeat;}
+.numVerdeFooter {color: #0e967e; padding-left:20px;}
+.barraAssistenza a {padding:0 3px;}
+.scaricaFooter {padding-right:20px;}
+@media (max-width:768px){
+.logoYouWebFooter {margin:0 auto;}
+#footer h5{padding-top:30px;}
+	}
+
+</style>
+
+<footer>	
+	<div id="footer" class="">
+		<div class="row rowPaddFooter">
+			<div class="col-sm-2">					
+				<h2 class="logoYouWebFooter"></h2>
+			</div>
+			<div class="col-sm-10">					
+				<div class="row">
+					<div class="col-md-4 col-sm-12">
+						<h5>INFO GENERALI</h5>
+						<p>Gruppo Banco BPM. Societ&agrave; soggetta a direzione e coordinamento di Banco BPM S.p.A. Tutti i diritti riservati.© 2000-2017 - Vietata la riproduzione totale o parziale senza l'autorizzazione scritta dei detentori del copyright - <a href="">Privacy</a></p>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<h5>LA TUA BANCA</h5>
+						<p>Per qualsiasi altra esigenza &egrave; a tua disposizione il Direttore GIORGIO TERNO presso la tua filiale di riferimento, Piazza F. Meda, 4 - 20121 Milano.</p>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<h5>NUMERI UTILI</h5>
+						<p>Blocco carta<br>
+							Italia: 800 12 12 12<br>
+							Estero: 02 1212 1212
+						</p>
+					</div>
+				</div>	
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-9">					
+				<div class="row barraAssistenza">
+					<div class="col-sm-6">
+						<span><a href="#"><img src="/HT/fe/img/ico_domanda.png"/></a> <a href="#"><img src="/HT/fe/img/ico_stampa.png"/></a> <span class="numVerdeFooter">Numero verde: <strong>800.024.024</strong></span></span>
+					</div>
+					<div class="col-sm-6 hidden-xs">
+						<span class="pull-right"><span class="scaricaFooter">Scarica l'app:</span> <a href="#"><img src="/HT/fe/img/ico_apple.png"/></a> <a href="#"><img src="/HT/fe/img/ico_android.png"/></a> <a href="#"><img src="/HT/fe/img/ico_windows.png"/></a></span>
+					</div>
+				</div>	
+			</div>		
+		</div>	
+	</div>
+	<!--div id="footerMobile">
+		<h2 class="">YouWeb</h2>
+	</div-->
+</footer>
+		<!-- / FOOTER -->
+
+	</div>
+
+	<!--
+	<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialogLinkRapidi" aria-labelledby="ui-id-1" style="display: none; position: absolute;">
+	   <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Link rapidi</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div>
+	   <div id="dialogLinkRapidi" class="ui-dialog-content ui-widget-content" style="max-height: 753px;"></div>
+	   <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+	</div>
+	-->
+
+</body>
+</html>

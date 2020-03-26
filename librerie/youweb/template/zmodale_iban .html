@@ -1,0 +1,52 @@
+
+
+<div id="dialogIban">
+	<section>
+		<form id="formCalcoloIban" method="post" action="/WEBHT/pagamenti/calcoloIBANEsito.do">
+		<h3 class="titleSection titleForm">Imposta dati</h3>
+			<div class="formWrapper">
+				<div class="form-group">
+					<div class="row row-space">
+						<div class="form-field-input col-xs-4">
+							<label class="control-label" for="abi">
+								ABI
+							</label>
+							<div class="form-field">
+								<input type="text" name="abi" maxlength="5" size="5" value="" onchange="fillZero(this, 5);" id="abi" class="form-control">&nbsp;
+							</div>
+						</div>
+						<div class="form-field-input col-xs-4">
+							<label class="control-label" for="cab">
+								CAB
+							</label>
+							<div class="form-field">
+								<input type="text" name="cab" maxlength="5" size="5" value="" onchange="fillZero(this, 5);" id="cab" class=" form-control">
+							</div>
+						</div>
+						<div class="form-field-input col-xs-4">
+							<label class="control-label" for="conto">
+								Conto
+							</label>
+							<div class="form-field">
+								<input type="text" name="conto" maxlength="12" size="20" value="" onchange="fillZero(this, 12);" id="conto" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="popup" value="true">
+			<div class="row">
+				<div class="col-xs-12">
+					La Banca &egrave; sollevata da ogni responsabilit&agrave; derivante da un'eventuale errata digitazione dei dati obbligatori inseriti.
+				</div>
+			</div>
+		</form>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-xs-12 ">
+			<input type="button" name="" value="Avanti"  onclick="javascript:$(helpDialog).hide();$(helpDialog).show();OpenHelp('/template/modale_iban2.html')" class="btn pull-right" alt="Avanti">	
+			</div>
+		</div>
+	</section>
+</div>

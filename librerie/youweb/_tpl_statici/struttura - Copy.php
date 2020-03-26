@@ -1,0 +1,933 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+	<base href="https://youwebcard.bancopopolare.it/">
+	-->
+	<meta charset="utf-8">
+	<meta name="language" content="it"> 
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="HandheldFriendly" content="True" /> 	
+	<meta name="MobileOptimized" content="320" /> 		
+	<meta http-equiv="cleartype" content="on"> 			
+	<meta name="description" content="YouWeb - Banco BPM">	
+	<meta name="format-detection" content="telephone=no">		
+	<meta name="apple-mobile-web-app-title" content="YouWeb"> 
+	<meta name="application-name" content="YouWeb" />               
+	<meta name="msapplication-TileColor" content="#003B79" />		
+
+
+	<link rel="apple-touch-icon" href="/HT/IMAGES/favicon/apple-touch-icon.png">		                          
+	<link rel="apple-touch-icon" sizes="76x76"   href="/HT/IMAGES/favicon/apple-touch-icon-76.png" />    
+	<link rel="apple-touch-icon" sizes="120x120" href="/HT/IMAGES/favicon/apple-touch-icon-120.png" />   
+	<link rel="apple-touch-icon" sizes="152x152" href="/HT/IMAGES/favicon/apple-touch-icon-152.png" />   
+	<link rel="apple-touch-icon" sizes="167x167" href="/HT/IMAGES/favicon/apple-touch-icon-167.png" />   
+	<link rel="apple-touch-icon" sizes="180x180" href="/HT/IMAGES/favicon/apple-touch-icon-180.png" />   
+	<meta name="msapplication-square150x150logo" content="/HT/IMAGES/favicon/touch-icon-150.png" />  
+	<meta name="msapplication-square310x310logo" content="/HT/IMAGES/favicon/touch-icon-310.png" />  
+	<meta name="msapplication-square70x70logo" content="/HT/IMAGES/favicon/touch-icon-70.png" />    
+	<link rel="shortcut icon" href='/HT/IMAGES/favicon.ico' type="image/x-icon" />
+	<link rel="icon" sizes="128x128" href="/HT/IMAGES/favicon/touch-icon-128.png" type="image/png" />  
+	<link rel="icon" sizes="192x192" href="/HT/IMAGES/favicon/touch-icon-192.png" type="image/png" />  
+	
+	<!-- CSS -->
+ 	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/jquery-ui_ng.min.css" />
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.min.css"  />
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.height.plugin.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/ie10-viewport.css"  />
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-main.css?v=161229"  />
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xs-mobile-struttura.css?v=161229" />
+	<link media="screen and (min-width: 991px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-sm-desktop-struttura.css?v=161229" />
+	<link media="screen and (max-width: 544px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xxs-mobile.css?v=161229" />
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xs-mobile.css?v=161229" />
+	<link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-sm-desktop.css?v=161229" />
+
+	<!--CSS AGGIUNTO PER STILIZZARE SITO COME INDICAZIONI UI -->
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/redesign.css"  />
+	<link media="print" rel="stylesheet" type="text/css" href="/HT/fe/css/print.css" />
+
+	<!--[if IE 8]>
+	<link media="screen,print" rel="stylesheet" type="text/css" href="/HT/fe/css/ie8.css" />
+	<![endif]-->
+
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-migrate-1.0.0.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/bootstrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/ie10-viewport.js"></script> 
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/jsapi.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.dateIT.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.altImg.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.formattedNum.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.form.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.blockUI.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-ui.selectToUISlider.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" language="javascript" src="/HT/fe/js/script/html5.js"></script>
+		<script type="text/javascript" language="javascript" src="/HT/fe/js/script/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/funzioniYW.js?v=161229"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/struttura.js"></script>
+	<script>
+	$(document).ready(function(e) {
+		var resizeTimer;
+		var servVal = false;
+		$(window).resize(function () {
+			if ( servVal != isMobile() && location.href.search('login') ==-1) {
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function() {
+					
+					$.post(getPathContext()+'/common/refreshBreakpoint.do', { device: getBreakpoint()}, function(response, status) { 
+						servVal = isMobile();
+					});
+				}, 500);
+			}
+		});
+	});
+	</script>
+
+	<script type="text/javascript">
+	function getPathImages() { return "/HT/fe/css/";}
+	function getPathContext() {	return "/WEBHT";}
+	function getKBanca() {	return "1";}
+	function getLineaTol() {	return "";}
+	</script>
+	<title>YouWeb</title>
+</head>
+
+<body>
+	
+	<div id="outerwrapper">
+		<!-- HEADER -->
+		<header class="nav-down">
+	<div class="wrapper">
+		<!-- HEADER DESKTOP-->
+		
+<div id="headerDesktop">
+		<!-- Header SX -->
+		<div class="contLogoDesk">
+			<div class="logoYouWeb"></div>
+		</div>
+	<!-- END Header SX -->
+
+
+
+
+	<!-- Header Center -->
+		<div class="contMenuDesk">
+
+			<ul id="" class="firstMenuDesk">
+				<!-- Conti e deposito -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+						<span>CONTI E</span> <span>DEPOSITI</span>
+					</a>
+						<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> conti e depositi su due righe</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+							<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#" class="disabledSubMenu">Saldo e movimenti</a></li>
+										<li><a href="#">Finanziamenti</a></li>
+										<li><a href="#">Interessi e spese</a></li>
+										<li><a href="#">Pannello rapporti</a></li>
+										<li><a href="#">Adeguata verifica</a></li>
+										<li><a href="#">Bilancio mensile</a></li>
+										<li><a href="#">Gestione categorie</a></li>
+										<li><a href="#">Creazione categorie</a></li>
+										<li><a href="#">Vincola conto deposito</a></li>
+										<li><a href="#">I tuoi vincoli</a></li>
+										<li><a href="#">Conti di appoggio</a></li>
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+
+						</ul>
+				</li>			
+				<!-- END Conti e deposito -->
+				
+				<!-- Pagamenti -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">PAGAMENTI</a>
+					<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> Pagamenti </h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Ultime disposizioni</a></li>
+										<li><a href="#">Gestione beneficiari</a></li>
+										<li><a href="#">Bonifico ordinario</a></li>
+										<li><a href="#">Bonifico per detrazioni</a></li>
+										<li><a href="#">Trasferimento tra conti</a></li>
+										<li><a href="#">Ricarica telefonica</a></li>
+										<li><a href="#">Pagamento F24</a></li>
+										<li><a href="#">Bollettino postale</a></li>
+										<li><a href="#">Bollettino MAV</a></li>
+										<li><a href="#">Bollettino RAV</a></li>
+										<li><a href="#">Coordinate IBAN</a></li>
+										<li><a href="#">Utenze</a></li>
+										<li><a href="#">Richiesta voucher Inps</a></li>
+										<li><a href="#" class="disabledSubMenu">Domiciliazioni</a></li>
+										<li><a href="#">Assegni</a></li>
+										<li><a href="#">Accredito stipendio</a></li>
+										<li><a href="#">Mediaset Premium</a></li>
+										<li><a href="#">Bollo auto</a></li>
+										<li><a href="#">Bollettino Freccia</a></li>
+										<li><a href="#">Bonifico ripetitivo</a></li>
+										<li><a href="#">Lista bonifici ripetitivi</a></li>
+										<li><a href="#">CBILL - pagoPA</a></li>
+										
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+
+						</ul>
+				</li>			
+				<!-- END Pagamenti -->
+
+				<!-- Carte -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">CARTE</a>
+						<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> CARTe </h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Le mie carte</a></li>
+										<li><a href="#">Movimenti</a></li>
+										<li><a href="#">Ricarica carta</a></li>
+										<li><a href="#">Scarica carta</a></li>
+										<li><a href="#">Ricarica automatica</a></li>
+										<li><a href="#">Cambio PIN carta</a></li>
+										<li><a href="#">Pannello controllo</a></li>
+										<li><a href="#">Portale CartaSi</a></li>
+										<li><a href="#" class="disabledSubMenu">Portale Agos Ducato</a></li>
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+						</ul>
+				</li>
+				<!-- END Carte -->
+
+				<!-- Alert -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">ALERT</a>
+						<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> Alert </h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Pannello alert</a></li>
+										<li><a href="#">Info bonifico</a></li>
+										<li><a href="#">Info ricarica</a></li>
+										<li><a href="#">Info carte</a></li>
+										<li><a href="#">Info conto</a></li>
+										<li><a href="#">Info dossier</a></li>
+										<li><a href="#">Info titoli</a></li>
+										<li><a href="#">Info fondi</a></li>
+										<li><a href="#">Cambi e indici</a></li>
+										<li><a href="#" class="disabledSubMenu">Recedi</a></li>
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+						</ul>
+				</li>
+				<!-- END Alert -->
+
+				<!-- Posta -->
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">POSTA</a>
+						<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> Posta </h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Posta in arrivo</a></li>
+										<li><a href="#">Info posta</a></li>
+										<li><a href="#" class="disabledSubMenu">Archivio</a></li>
+										<li class="nascondi">&nbsp;</li>
+										<li><a href="#">Contratti e proposte</a></li>
+								
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+						</ul>
+				</li>
+				<!-- END Posta -->	
+
+				<!-- Investimenti -->		
+				<li>
+					<a href="#!" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">INVESTIMENTI</a>
+						<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> Investimenti </h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>Titolo ADV </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Situazione</a></li>
+										<li><a href="#">Titoli preferiti</a></li>
+										<li><a href="#">Il tuo portafoglio</a></li>
+										<li><a href="#" class="disabledSubMenu">Ordini e movimenti</a></li>
+										<li><a href="#">Portafoglio simulato</a></li>
+										<li><a href="#">Questionario Mifid</a></li>
+										<li><a href="#">Linea di trading</a></li>
+										<li><a href="#">Analisi</a></li>
+										<li><a href="#">Indici</a></li>
+										<li><a href="#">Posizione fiscale</a></li>
+										<li><a href="#">Posizione patrimoniale</a></li>
+										<li><a href="#">Cambi</a></li>
+										<li><a href="#">Fondi:ricerca e analisi</a></li>
+										<li><a href="#">Fondi: ordini</a></li>
+										<li><a href="#">Fondi preferiti</a></li>
+									</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+						</ul>
+				</li>	
+				<!-- END Investimenti -->	
+
+				<!-- Servizi -->
+				<li>
+	  				<a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"> SERVIZI</a>
+	  					<ul class="dropdown-menu subMenuXL">
+	  						<!-- BOX Sinistro -->
+							<li>
+								<div class="subMenuBoxSx">
+										<h1> SERVIZI TITOLO SU DUE RIGHE </h1>
+										<p>
+											Il Portale dei pagamenti &egrave; un'area nella quale &egrave; possibile trovare i servizi abilitati al pagamento, effettuare e controllare
+										</p>
+								</div>
+							</li>
+							<!-- END BOX Sinistro -->
+
+							<!-- BOX Destro -->
+							<li>	
+								<div class="subMenuBoxDx">
+									<div class="containerIcon"></div>
+									<h1>SERVIZI </h1>
+									<p>
+										Pagare il bollo auto non è mai stato così semplice, ora anche in Piemonte.
+									</p>
+										<button class="btn btn-primary center-block" >
+											 Lorem Ipsum
+										</button>
+								</div>
+							</li>
+							<!-- END BOX Destro -->	
+
+							<!-- BOX Centro -->
+							<li>	
+								<div class="subMenuBoxCenter">
+									<ul>
+										<li><a href="#">Richiedi appuntamento</a></li>
+										<li><a href="#">Apri dossier titoli</a></li>
+										<li><a href="#">Richiedi la YouCard</a></li>
+										<li><a href="#">News</a></li>
+										<li><a href="#" class="disabledSubMenu">Scarico certificato</a></li>
+										<li><a href="#">Sicurezza YouWeb</a></li>
+										<li><a href="#">Contattaci</a></li>
+										<li><a href="#">YouShop</a></li>
+										<li><a href="#">YouWin</a></li>
+										</ul>	
+								</div>
+							</li>
+							<!-- END BOX Centro -->
+
+						</ul>
+				</li>
+				<!-- END Servizi -->
+			</ul>
+
+		</div>
+	
+	<!--END Header Center -->
+
+<!-- Header DX -->
+	<div class="contImpDxDesk">
+
+		<!-- Header DX Icona User -->                   
+  			<div class="dropdown">
+    			<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">
+    				<img src="/HT/fe/img/user_menu_desk.png" class="iconUserDx">
+    			</a>
+    			<ul class="dropdown-menu headerDxUserMenu">
+      				<li>
+      					<span class="triangoloUser"></span>
+      					<span id="intestazioniUserIcon">
+      						<p class="introUser">
+      							Benvenuta
+      						</p> 
+							<p class="nameUser">
+								Teresa Colombo
+							</p>
+							<p class="infoAccessUser">
+								Ultima visita
+								<span class="infoAccessUser2">15 MAR 2017 17:40</span>
+							</p> 
+						</span>
+      				</li>
+      				<li></li>
+      				<li><a href="#">Il mio profilo</a></li>
+      				<li><a href="#">I miei contatti</a></li>
+      				<li><a href="#">Il  mio calendario</a></li>
+      				<li><a href="#">Aiuto</a></li>
+    			</ul>
+  			</div>
+		<!--END  Header DX Icona User -->
+
+		<!-- HEADER DX Icona Impostazioni -->               
+  			<div class="dropdown">
+    			<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">
+    				<img src="/HT/fe/img/impostazioni_menu_desk.png" class="iconImpostazioneDx">
+    			</a>
+    			<ul class="dropdown-menu headerDxIconImp">
+    				<li><span class="triangoloImp"></span></li>
+      				<li><a href="#">Personalizza Homepage</a></li>
+      				<li><a href="#">Rapporti in primo piano</a></li>
+      				<li><a href="#">Modifica link preferiti</a></li>
+      				<li><a href="#">Stampa</a></li>
+    			</ul>
+  			</div>
+		<!-- End Icona Impostazioni -->
+
+		<!-- Icon Exit -->
+		<div class="containerIconHeadDX">
+			<span>
+				<img src="/HT/fe/img/icon_separator.png" class="iconSep">
+			</span>
+			<span>
+			<a href="#">
+				<img src="/HT/fe/img/icon-exit.png" class="iconExit">
+			</a>
+			</span>
+		</div>	
+	
+
+	</div>
+<!-- END Header DX -->
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+        $("li.open").removeClass("open");
+        $(".dropdown.open").removeClass("open");
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+</script>		<!-- / HEADER -->
+		<!-- HEADER MOBILE-->
+		<div id="headerMobile">
+	<div class="wrapperheaderMobile">
+		<div id="buttonMenuMobile" class="pushBtn">
+			<div class="lineMenuWrap">
+				<span class="lineMenu"></span>
+				<span class="lineMenu"></span>
+				<span class="lineMenu"></span>
+			</div>
+		</div>
+		<h1 id="logo-mobile"></h1>
+		<div id="buttonUserMobile" class="pushBtn"></div>
+	</div>	
+</div>		<!-- / HEADER -->
+		
+	</div>
+</header>		<!-- / HEADER -->
+		
+		<!-- MENU -->
+		<div id="menu">
+	<!-- MENU DESKTOP-->
+	<nav id="menuDesktop">
+
+
+
+
+</nav>		<!-- / MENU DESKTOP -->
+	<!-- MENU MOBILE-->
+	<nav id="menuMainMobile">
+	<div id="menuMainMobileWrapper">
+		<ul class="first-levelMenu mm-list">
+			 <li><a href="#" title="Homepage">Homepage</a></li>
+			 <li class="active"><span class="openSubMenu" title="Conti e depositi">Conti e depositi</span>
+				<ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back" title="Conti e depositi">Conti e depositi</a></li>
+	               	<li class="active"><a href="#" title="Saldo e movimenti">Saldo e movimenti</a></li> 
+	                <li><a href="#" title="Interessi e spese">Interessi e spese</a></li>
+	            	<li><a href="#" title="Adeguata verifica">Adeguata verifica</a></li>
+	            	<li><a href="#" title="Bilancio mensile">Bilancio mensile</a></li>
+	                <li><a href="#" title="Gestione categorie">Gestione categorie</a></li>
+	            	<li><a href="#" title="Creazione categorie">Creazione categorie</a></li>
+	            	<li><a href="#" title="Renaming di voce vincola">Renaming di voce vincola</a></li>
+					<li><a href="#" title="Renaming di voce i tuoi vincoli">Renaming di voce i tuoi vincoli</a></li>
+					<li><a href="#" title="Renaming di voce conti di appoggio">Renaming di voce conti di appoggio</a></li>
+	             </ul>
+			 </li>
+			 <li>
+			 	 <span class="openSubMenu" title="Pagamenti">Pagamenti</span>
+			 	 <ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back" title="Pagamenti">Pagamenti</a></li>
+	               	<li><a href="#" title="Ultime disposizionii">Ultime disposizioni</a></li> 
+	               	<li><a href="#" title="Gestione beneficiari">Gestione beneficiari</a></li>
+	               	<li><a href="#" title="Bonifico ordinario">Bonifico ordinario</a></li> 
+	               	<li><a href="#" title="Bonifico per detrazioni">Bonifico per detrazioni</a></li>
+	               	<li><a href="#" title="Trasferimento tra conti">Trasferimento tra conti</a></li>
+	               	<li><a href="#" title="Ricarica telefonica">Ricarica telefonica</a></li>
+	             </ul>
+			 </li> 
+			 <li>
+			 	<span class="openSubMenu" title="Carte">Carte</span>
+			 	<ul class="second-levelMenu mm-list">
+	               	<li><a href="javascript:;" class="back">Carte</a></li>
+	               	<li><a href="#">lorem ipsum Carte</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	            	 <li><a href="#">lorem ipsum</a></li>
+	                <li><a href="#">lorem ipsum</a></li>
+	            	<li><a href="#">lorem ipsum</a></li>
+	             </ul>
+			 </li>
+			 <li><span class="openSubMenu" title="Alert">Alert</span></li>
+			
+			 <li><span class="openSubMenu" title="Posta">Posta</span></li>
+			 <li><span class="openSubMenu" title="Investimenti">Investimenti</span></li>
+			 <li><span class="openSubMenu" title="Servizi">Servizi</span></li>
+		</ul>
+	</div>
+</nav>
+<nav id="menuUserMobile">
+	<div class="first-levelMenu mm-list">
+		<div class="info-user">
+			<span class="intro">Benvenuta</span> 
+			<span class="name-user">Teresa Colombo</span>
+			<span class="info-accesso"><span>Ultima visita</span> <span>5 Mar 2017 - 17:40</span></span>
+		</div>
+		<ul class="">
+			 <li><a href="#">Il mio profilo</a></li>
+			 <li><a href="#">I miei contatti</a></li>
+			 <li><a href="#">Il mio calendario</a></li> 
+			 <li><a href="#">Rapporti in primo piano</a></li>
+			 <li><a href="#">Disconnetti utente</a></li>
+			 <li><a href="#" class="dispositiva">Modalit&agrave; dispositiva</a></li> 
+		</ul>
+	</div>
+</nav>
+	<!-- / MENU MOBILE-->	<!-- / MENU MOBILE-->
+
+</div>		<!-- / MENU -->
+		<div id="main">
+			<div class="wrapper">
+
+				<!-- CONTENITORE PRINCIPALE -->
+				<div id="mainContent">
+					<!-- BREADCRUMB -->
+					<div class="breadcrumb">
+						<span>Lorem</span>
+				       	<span>Ipsum dolor</span>
+					</div>
+					<!-- FINE BREADCRUMB -->
+					<style>
+div.placeholder {width:100%;min-height:400px;background:#ddd;font-size:30px;line-height:200px; opacity:0.5;color:#fff;text-align:center; vertical-align:middle;}
+</style>
+<div class="placeholder">
+	PLACEHOLDER
+</div>	
+				</div>
+				<!-- SPAZIO PER I CONTENUTI -->
+								<!-- SPALLA DESTRA -->
+					<div id="spalla">
+
+
+
+	
+		<div id="linkRapidi" class="riquadro clearfix">
+			<h1>
+				<div class="flag hidden-xxs linkRapidi">&nbsp;</div>Link rapidi
+			</h1>
+			<!--
+ 			<span id="riquadroSpalla">
+				<button class="modificaButton pull-right" value=" " name="modifica" id="modificaLink" aria-label="Modifica Link rapidi" title="Modifica Link rapidi"></button>
+			</span>
+			-->
+			<ul>
+				
+
+
+					<li title="Bonifico ordinario" class="bonifico_sepa">
+					<a href="#" title="Bonifico ordinario"><b>Bonifico ordinario</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Ricariche telefoniche" class="ricariche_cellulare">
+					<a href="#" title="Ricariche telefoniche"><b>Ricariche telefoniche</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Gestione contatti" class="gestione_contatti">
+					<a href="#" title="Gestione contatti"><b>Gestione contatti</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Ultime disposizioni" class="ultime_disposizioni">
+					<a href="#" title="Ultime disposizioni"><b>Ultime disposizioni</b></a>
+					</li>
+				
+			
+			
+			
+				
+				
+					<li title="Posizione patrimoniale" class="gestione_patrimoniale">
+					<a href="#" title="Posizione patrimoniale"><b>Posizione patrimoniale</b></a>
+					</li>
+				
+			
+			
+			</ul>
+		</div><div class="riquadro clearfix">
+	<a class="promobox" href="#" target="_self" title="Concorso speciale">
+		<img src="/HT/fe/img/ban_spalla_youwin.png">
+		<div class="promodettaglio">
+			<p>Concorso speciale</p>
+			<span class="cta">Scopri di pi&ugrave;</span>
+		</div>
+	</a>
+</div><div class="riquadro clearfix">
+	<a class="promobox" href="#" target="_self" title="Tantissime offerte">
+		<img src="/HT/fe/img/ban_spalla_youshop.png">
+		<div class="promodettaglio">
+			<p>Tantissime offerte</p>
+			<span class="cta">Scopri di pi&ugrave;</span>
+		</div>
+	</a>
+</div><div class="riquadro clearfix">
+	<a class="promobox" href="#" target="_self" title="I Brucopremi">
+		<img src="/HT/fe/img/ban_spalla_bruco.jpg">
+		<div class="promodettaglio">
+			<p>I Brucopremi</p>
+			<span class="cta">Scopri di pi&ugrave;</span>
+		</div>
+	</a>
+</div></div>				<!-- / SPALLA DESTRA -->
+							</div>
+		</div>
+		
+
+		<!-- FOOTER -->
+		<footer>	
+	<div id="footer" class="">
+		<div class="row rowPaddFooter">
+			<div class="col-sm-2">					
+				<h2 class="logoYouWebFooter"></h2>
+			</div>
+			<div class="col-sm-10">					
+				<div class="row">
+					<div class="col-md-3 col-sm-12">
+						<h5>INFO GENERALI</h5>
+						<p>Gruppo Banco BPM. Societ&agrave; soggetta a direzione e coordinamento di Banco BPM S.p.A. Tutti i diritti riservati.<br>&copy; 2000-2017 - Vietata la riproduzione totale o parziale senza l'autorizzazione scritta dei detentori del copyright - <a href="">Privacy</a></p>
+					</div>
+					<div class="col-md-1 hidden-xs"></div>					
+					<div class="col-md-3 col-sm-5 PaddTopBoxFooter">
+						<h5>LA TUA BANCA</h5>
+						<p>Per qualsiasi altra esigenza &egrave; a tua disposizione il Direttore GIORGIO TERNO presso la tua filiale di riferimento, Piazza F. Meda, 4 - 20121 Milano.</p>
+					</div>
+					<div class="col-md-1 col-sm-1 hidden-xs"></div>
+					<div class="col-md-3 col-sm-5 PaddTopBoxFooter">
+						<h5>NUMERI UTILI</h5>
+						<p>Blocco carta<br>
+							Italia: 800 12 12 12<br>
+							Estero: 02 1212 1212
+						</p>
+					</div>
+					<div class="col-md-1 col-sm-1 hidden-xs"></div>
+				</div>	
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-12 mainFooter">					
+				<div class="row barraAssistenza"> 
+					<div class="col-sm-6">
+						<span><span class="iconNmVerde"><a href="#"><img src="/HT/fe/img/ico_domanda.png"/></a> <a href="#"><img src="/HT/fe/img/ico_stampa.png"/></a></span> <span class="numVerdeFooter">Numero verde: <a href="tel://800024024">800.024.024</a></span></span>
+					</div>
+					<div class="col-sm-6 hidden-xs">
+						<span class="pull-right"><span class="scaricaFooter">Scarica l'app:</span> <a href="#"><img src="/HT/fe/img/ico_apple.png"/></a> <a href="#"><img src="/HT/fe/img/ico_android.png"/></a> <a href="#"><img src="/HT/fe/img/ico_windows.png"/></a></span>
+					</div>
+				</div>	
+			</div>		
+		</div>	
+	</div>
+	<!--div id="footerMobile">
+		<h2 class="">YouWeb</h2>
+	</div-->
+</footer>
+		<!-- / FOOTER -->
+
+		<!-- ASSISTENTE VIRTUALE -->
+		<script type="text/javascript">
+	$(function(){
+		$("#assist-btn").click(function(){
+
+		});	
+	});
+	
+</script>
+<div id="assist-wrap">
+	<div class="assist-btn-wrap">
+		<a id="assist-btn">
+			<span>Non trovi qualcosa?</span>
+			<span class="cta">Cercalo qui</span>
+		</a>
+	</div>
+</div>		<!-- / ASSISTENTE VIRTUALE -->
+
+	</div>
+
+	<!--
+	<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialogLinkRapidi" aria-labelledby="ui-id-1" style="display: none; position: absolute;">
+	   <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Link rapidi</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div>
+	   <div id="dialogLinkRapidi" class="ui-dialog-content ui-widget-content" style="max-height: 753px;"></div>
+	   <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+	   <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+	</div>
+	-->
+</body>
+</html>

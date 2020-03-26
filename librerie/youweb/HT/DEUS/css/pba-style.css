@@ -1,0 +1,52 @@
+button.btn:focus { outline: none; }
+.full-size { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.view-controller { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+/* Chart toolbar */
+.chart-toolbar { position: relative; height: 32px; background-color: #bcd9ec; color: #000; box-sizing: border-box; border-bottom: 1px solid lightgray; font-size: 13px; font-weight: bold; }
+.chart-toolbar .toolbar-title { position: absolute; top: 7px; bottom: 5px; padding-left: 10px; left: 5px; }
+.chart-toolbar .toolbar-options { position: absolute; top: 5px; bottom: 5px; right: 5px; }
+.chart-toolbar .toolbar-options .toolbar-timeframe { font-size: 11px; border-left: 1px solid lightgray; padding-left: 10px; float: left; margin-top: 3px; margin-right: 10px; }
+.chart-toolbar .toolbar-options .toolbar-timeframe div[data-timeframe] { display: inline-block; cursor: pointer; text-align: center; width: 25px; }
+.chart-toolbar .toolbar-options .toolbar-timeframe div[data-timeframe].selected { text-decoration: underline; }
+.chart-toolbar .toolbar-options .toolbar-historytype { border-left: 1px solid lightgray; padding-left: 10px; float: right; }
+.chart-toolbar .toolbar-options .toolbar-historytype .dropdown-menu { font-size: 13px; left: auto; right: 0px; }
+
+/* Chart Legend */
+.legend_container .vc-content::after { content: ""; display: block; clear: both; }
+.serie-legend-entry { font-size: 11px; height: 24px; overflow: hidden; position: relative; }
+.serie-legend-entry .serie-name-container { padding: 5px 15px; float: left; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;position: absolute; left: 0; right: 60px; top: 0; bottom: 0; }
+.serie-legend-entry .serie-performance-container { margin-right: 5px; float: right; padding: 5px; }
+.serie-legend-entry .serie-icon{ height: 3px; width: 10px; display: inline-block; margin: 0 5px 2px 0; border: hidden; position: absolute; left: 10px; top: 7px; }
+.serie-legend-entry .serie-icon.square { width: 10px; height: 10px; margin: 0px 5px 0px 0px; }
+.serie-legend-entry .serie-icon.triangle { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid red; }    
+.serie-legend-entry .serie-name { margin-left: 20px; }
+.serie-legend-entry .serie-curr {}
+.serie-legend-entry .serie-price {}
+.serie-legend-entry .serie-performance {}
+.serie-legend-entry .serie-performance-icon {}
+    
+/* Chart Tooltip */
+.tooltip-icon { display: inline-block; border: hidden; position: absolute; left: px; top: 2px; }
+.tooltip-icon.square { width: 10px; height: 10px; margin: 0px 5px 0px 0px; }
+.tooltip-icon.triangle { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid red; }    
+.tooltip-name { margin-left: 15px; }
+
+@media (max-width: 700px) {
+    .chart-toolbar { font-size: 11px; }
+    .chart-toolbar .toolbar-options .toolbar-timeframe { font-size: 10px; }
+    .chart-toolbar .toolbar-options .toolbar-historytype { display: none; }
+    
+    .serie-legend-entry { height: 16px; }
+    .serie-legend-entry .serie-name-container { padding: 0px 5px; }
+    .serie-legend-entry .serie-icon { top: 2px; }
+    .serie-legend-entry .serie-performance-container { padding: 0px 5px; }
+}
+
+/*******************************
+*                              *
+*       Highcharts             *
+*                              *
+*******************************/
+.highcharts-tooltip[opacity="0"] { display: none; }
+.highcharts-tooltip[opacity="1"] { display: block; }

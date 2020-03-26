@@ -1,0 +1,183 @@
+h2{
+	margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.panel-group .panel {border-radius:0;border:0;box-shadow: none}
+.panel-step .panel-heading{
+	background: #dadde0;
+	margin: 0 -35px;
+	height: 80px;
+    vertical-align: middle;
+    display: block;
+  	padding:0 35px;
+}
+.panel-title{color: #202d50;font-size: 16px;text-transform: uppercase;font-weight: 700;padding-top:25px}
+.panel-title a:hover,.panel-title a:focus{text-decoration: none;cursor: default;}
+.formGenerico .control-label, .formGenerico .control-label-output {
+    display: block;
+    
+}
+.panel-step  .output{font-weight: 600}
+.panel-step .form-group{margin-bottom:30px}
+.input-group-addon.preferito{display: none}
+.panel-step .output a{
+	color:#00a592;
+	background: url('/HT/fe/img/arrow_btn_normal.png') no-repeat center right;
+	padding-right:16px;
+	letter-spacing: 0.5px;
+	background-color: transparent!important;
+	box-shadow: none;
+	font-weight: 600;
+	text-transform: uppercase
+}
+.panel-step .output a:hover{
+	color:#007c66;
+	background: url('/HT/fe/img/arrow_btn_hover.png') no-repeat center right;
+	text-decoration: none;
+	cursor: pointer
+}
+.panel-step .output a:focus,.panel-step .output a:active {
+	 color: #65b7a9;
+	 box-shadow: none;
+	 background: url('/HT/fe/img/arrow_btn_active.png') no-repeat center right;
+	 outline:0!important;
+	 text-decoration: none;
+}
+.modal-content{border-radius: 0;box-shadow: none}
+td,th{height: 50px!important;padding:0 6px;}
+tbody tr:nth-child(even) td {
+    background-color: #eaeded;
+}
+.align-right{text-align:right }
+.txthelp {
+    cursor: pointer;
+    border-bottom: 1px dashed #666;
+    margin-bottom: 0;
+    display: inline-block!important;
+}
+.tooltip-inner{background-color:#fff;color:#202D50; border:2px solid #202D50;border-radius: 0;font-family: 'bankFont', Arial, Helvetica,sans-serif;font-size: 14px;padding:10px}
+.tooltip.top .tooltip-arrow{border-top-color: ##202D50}
+.tooltip.in{opacity:1}
+/*campi editabili */
+
+.editable-input .editable-clear-x {
+  display: none!important
+}
+input[disabled][type="checkbox"] {
+    border: 1px solid #d9dcdf;
+    background-color: #EBEDEE!important
+}
+
+a {
+    color: #202d50;
+    text-decoration: none;
+}
+.panel-group.panel-step.unclosable .panel-heading a .icon.icon-arrow_up,
+.panel-group.panel-step.disabled .panel-heading a .icon.icon-arrow_up,
+.panel-group.panel-step.editable .panel-heading a .icon.icon-arrow_up,
+.panel-group.panel-step.done .panel-heading a .icon.icon-arrow_up,
+.panel-group.panel-step.unclosable .panel-heading a.collapsed .icon.icon-arrow_down,
+.panel-group.panel-step.disabled .panel-heading a.collapsed .icon.icon-arrow_down,
+.panel-group.panel-step.editable .panel-heading a.collapsed .icon.icon-arrow_down,
+.panel-group.panel-step.done .panel-heading a.collapsed .icon.icon-arrow_down,
+.panel-group.panel-step.unclosable .icon-edit_fill,
+.panel-group.panel-step.disabled .icon-edit_fill,
+.panel-group.panel-step.editable .icon-edit_fill,
+.panel-group.panel-step.done .icon-edit_fill,
+.panel-group.panel-step.unclosable .number-step .icon,
+.panel-group.panel-step.disabled .number-step .icon,
+.panel-group.panel-step.editable .number-step .icon,
+.panel-group.panel-step.done .number-step .icon,
+.panel-group.panel-step.unclosable .editButton,
+.panel-group.panel-step.disabled .editButton,
+.panel-group.panel-step.editable .editButton,
+.panel-group.panel-step.done .editButton {
+  display: none;
+}
+.btn-align-center{text-align: center}
+.help-block.with-errors,.has-error  .control-label{color:#f16875}
+.panel-group.panel-step.editable .number, .panel-group.panel-step.editable .proseguiButton {
+    display: none;
+}
+.panel-group.panel-step.editable .editButton {
+    display: inline-block;
+}
+.formGenerico .hovfin {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    cursor: default;
+    background: url(/wscmn/img/pixel_trasp.gif) repeat scroll 0 0 transparent !important;
+}
+.closeTooltip .icon{
+	border: solid 2px #202d50!important;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+}
+.closeTooltip {position: absolute;top:0;right:-12px;background-color: #fff;}
+.closeTooltip .icon:after {
+	content: "x";
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-family: 'bankFont', Arial, Helvetica,sans-serif;
+    font-size: 14px;
+}
+.icon.icon-edit_fill.editButton{background: url('/HT/fe/img/i_modifica.gif') no-repeat 0 0;float: right}
+.panel-group.panel-step.unclosable .panel-title a, .panel-group.panel-step.disabled .panel-title a, .panel-group.panel-step.editable .panel-title a, .panel-group.panel-step.done .panel-title a {
+    cursor: pointer;
+}
+.panel-body{padding-left:0;padding-left:0}
+.formGenerico.bgPin32 .form-inline input[type="password"], .formGenerico.bgPin32 .form-inline input[type="number"] {
+    float: none;
+    display: inline-block;
+    width: 40px;
+    margin: 0 5px;
+    text-align: center;
+    color: #000;
+}
+.formGenerico.bgPin32 .form-inline span {
+    float: none;
+    display: inline-block;
+    width: 40px;
+    margin: 0 5px;
+    text-align: center;
+}
+.note {
+    font-size: 1em;
+    font-weight: 400;
+    color: #999;
+    line-height: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.formGenerico.bgPin32 .form-inline .input-group {
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.boxesito.positivo p strong {color:#75c2b8!important}
+.formGenerico.borderFormRounded{border:2px solid #ebeef0;padding:10px;margin-bottom:20px}
+form.borderFormRounded{border:0}
+.panel-group.panel-step.done .number {
+    display: none;
+}
+.panel-group.panel-step.done .number-step .icon{background: url('/HT/fe/img/NNFFSpunta.png') no-repeat 0 0;display: block;display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+}

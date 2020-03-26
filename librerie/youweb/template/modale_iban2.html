@@ -1,0 +1,63 @@
+<div id="dialogIban" class="ui-dialog-content ui-widget-content" style="max-height: none; width: auto; min-height: 119px; height: auto;">
+<div id="gridBody">
+<div class="contentFull">
+<div class="riquadro clearfix">
+	<div class="pager clearfix pull-right">
+		<div class="circle_line">&nbsp;</div>
+				<div class="circle current_page">&nbsp;</div>
+				<div class="circle current_page">&nbsp;</div>
+	</div>
+<div class="clearfix">
+
+<style>
+.imgSrv{
+	float: none;
+}
+</style>
+
+
+	<h1>
+				<div class="hidden-print hidden-xxs flag info">&nbsp;</div>
+ 					<span>Calcolo IBAN</span>
+	</h1>
+			<div class="col-xs-12 hidden-xs hidden-print">
+		<div class="contentPagina">
+			<br><!--Questa funzione ti offre la possibilit&agrave; di calcolare i codici <b>Check Digit</b> e <b>CIN</b> relativi all'IBAN di un conto corrente. Per effettuare il calcolo inserisci ABI, CAB e Conto e clicca 'Avanti'. <br /><br /> La funzionalit&agrave; calcoler&agrave; i codici mancanti sulla base alle coordinate che ci hai fornito, verifica quindi attentamente la correttezza dei dati inseriti poich&eacute;, se fossero inesatti, anche i codici Check Digit e CIN risulterebbero errati. <br /><br /> E' sempre consigliabile farsi confermare dal beneficiario l'IBAN calcolato sulle vecchie coordinate (ABI, CAB e Conto) poich&eacute; con l'avvento dell'IBAN, alcune banche potrebbero aver modificato alcuni dati di conto corrente della loro clientela (ad esempio sono stati eliminati i caratteri speciali come "." "-" "/" ed incorporato, nel numero di conto, le cifre ad essi successive).-->
+		</div>
+			</div>
+</div>
+
+<div style="border: 1px solid #61a4d3; margin: 0 10px; padding-bottom:10px">
+	<div style="text-align:center; font-weight:bold; margin:10px 0; text-transform:uppercase">Coordinate IBAN</div>
+		<div class="row">
+			<div class="col-xs-1 col-xs-offset-3" style="text-transform:uppercase">
+				<b>IBAN:</b>				
+			</div>
+			<div class="col-xs-5 col-xs-offset-1">
+				IT72B0000000000000000000000
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-1 col-xs-offset-3" style="text-transform:uppercase">
+								
+				<b>Banca:</b>		
+			</div>
+			<div class="col-xs-5 col-xs-offset-1">
+			BANCA POPOLARE DI MILANO                &nbsp;-&nbsp;AG.000                                  
+			</div>
+		</div>
+</div>
+<div class="col-xs-12" style="margin:10px 0">La Banca &egrave; sollevata da ogni responsabilit&agrave; derivante da un' eventuale errata digitazione dei dati obbligatori inseriti.</div>
+</div>
+<form id="formCalcoloIban" method="post" action="/WEBHT/pagamenti/calcoloIBAN.do">
+<div class="pull-right" style="margin-bottom:5px">
+	<input type="hidden" name="popup" value="true">
+	<input type="submit" name="indietro" value="Nuovo calcolo" class="btn">
+		
+	<input type="button" class="btn" onclick="inserisciIban('IT72B0000000000000000000000')" value="Inserisci IBAN">
+	
+</div>
+</form>	
+
+</div>
+</div></div>

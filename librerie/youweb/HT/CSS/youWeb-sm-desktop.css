@@ -1,0 +1,107 @@
+/* CSS sm */
+	body { 
+		font-size: 12px; 
+	} 
+
+	/* https://adactio.com/journal/5429/ */ 
+	body:after {
+    	content: 'desktop';
+    	display: none;
+  	}
+	
+	.container { 
+		width: auto; 
+		min-width: 768px; 
+		max-width: 1680px; 
+	} 
+	
+	.spalla { 
+		display: block; 
+	}
+	
+	#topNav ul.nav>li {
+		none;
+	}
+
+	
+	.col-sm-80, .col-sm-20 {
+		float:left;
+		position: relative;
+		min-height: 1px;
+  		padding-right: 10px;
+  		padding-left: 10px;
+	}
+	
+	.col-sm-20{
+		width:23%;
+	}
+	.col-sm-80{
+		width:77%;
+	}
+	
+	.col-sm-offset-20{
+		margin-left:23%;
+	}
+	
+	.nav-pills>li {
+    	float: left;
+	}
+	
+	.section > .row > .col-sm-6:last-child,
+	.section > .row > .row-height > .col-sm-6:last-child {
+		padding: 0px 10px 0px 5px;
+	}
+	.section > .row > .col-sm-6:first-child,
+	.section > .row > .row-height > .col-sm-6:first-child{
+		padding: 0px 5px 0px 10px;
+	}
+	
+	.col-sm-6 > .boxDefault{
+		margin-top: 10px;
+	}
+	
+	.col-sm-6.col-sm-offset-3 > .boxDefault{
+		margin-bottom: 10px;
+	}
+
+	.col-height{
+		overflow: hidden;
+	}
+	
+	.visible-mobile{
+		visibility:hidden;
+	}
+	
+	.margin-top-sm-20{
+		margin-top: 20px;
+	}
+
+	.margin-top-sm-60{
+		margin-top: 60px;
+	}
+	
+	.margin-bottom-sm-10{
+		margin-bottom: 10px;
+	}
+	
+	.col-sm-45{
+		width: 45%;
+	}
+	
+	.verticalAlignMultipleColumns > div[class ^= "col-sm"]{
+		float:none;
+		display: table-cell;
+	}
+	
+	.center-sm{
+		text-align:center;
+	}
+	
+	.form-control-w-auto { width: auto; }
+	.w-auto{
+		width:auto;
+	}
+	
+	.sm-float-r{
+		float:right !important;
+	}

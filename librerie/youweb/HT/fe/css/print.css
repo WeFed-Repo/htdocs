@@ -1,0 +1,854 @@
+@page {
+        margin: 0.8cm;
+    }
+
+*{
+  width: auto;
+     height: auto;
+     overflow: visible;
+}
+
+html, body {
+    background: none repeat scroll 0 0 transparent;
+	 height: 99% !important; 
+}
+
+.visible-xs {
+	display: none !important;
+}
+
+.hidden-xs {
+	display: block !important;
+}
+
+span.hidden-xs {
+	display: inline !important;
+}
+
+table.hidden-xs {
+	display: table;
+}
+
+tr.hidden-xs {
+   display: table-row !important;
+}
+
+th.hidden-xs,
+td.hidden-xs {
+	display: table-cell !important;
+}
+
+.hidden-xs.hidden-print {
+	display: none !important;
+}
+
+div#watercolors {
+    background: none repeat scroll 0 0 transparent;
+}
+
+h1{
+	margin-bottom:5px !important;
+}
+
+h2{
+	font-size: 1.5em;
+}
+
+.hidden-prt{
+	display:none;
+}
+
+h3{
+	color:#003b79 !important;
+}
+
+table.ui-jqgrid-htable tr th{
+    word-wrap: normal;
+    height: auto;
+}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column{
+	white-space:normal;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div{
+	height:auto !important;
+}
+
+
+.container{
+	margin: 0 !important;
+	
+}
+
+.colonnaStampaLarga{
+	width:300px!important;
+} 
+
+.boxDefault{
+	border-top:5px solid #d2e6f4;
+	margin:0; 
+	height:auto !important;
+}
+
+.col-xs-12{
+	margin:0;
+	padding:0;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, 
+.table>tfoot>tr>th, .table>thead>tr>td, 
+.table>tbody>tr>td, .table>tfoot>tr>td{
+	    padding: 3px 8px;
+}
+
+.col-sm-6 > .boxDefault .row:nth-child(even){
+	background-color: #d2e6f4;
+}
+.col-sm-6 > .boxDefault{
+	margin-top:0;
+	height:auto !important;
+}
+.boxDefault h3{
+	margin:0;
+}
+
+#homepage .riquadro,
+.footer{
+	border-top:5px solid #d2e6f4;
+}
+
+.footer-logo {
+    margin-top: 10px;
+    float: right;
+    width: 170px;
+    height: 52px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.ui-jqgrid-btable tr.jqgrow td.tot {
+    text-align: center;
+}
+
+.selezioneCC .col-xs-6,
+.footer .col-xs-6{
+	width:50% !important;
+}
+
+
+a[href]:after {
+	content: none !important;
+}
+
+/* .footer{
+	display: block !important;
+} */
+
+body {
+	height: 100%;
+    background: white!important;
+    padding: 0 10px;
+    font-size:12px !important;
+    line-height:14px !important;
+}
+/* layout */
+
+.col-prt-12,
+.col-sm-6 {
+	width:100% !important;
+}
+
+.col-prt-3{
+	width:25% !important;
+}
+
+.col-prt-7{
+	width:58.333333%  !important;
+}
+
+.col-prt-offset-2{
+	margin-left:16.666667%  !important;
+}
+
+#portafoglio .col-xs-6{
+	width:50%;
+}
+.col-height{
+	display: block;
+}
+
+li, #homepage ul[id^='col'] > li {
+    list-style: none;
+}
+
+#homepage ul[id^='col']{
+	width: 100%;
+}
+
+#homepage ul[id^='col'] > li > .riquadro h1{
+	width: 100%;
+	border-bottom: 2px solid #d2e6f4;;
+	text-align: center;
+}
+
+#homepage ul[id^='col'] > li > .riquadro{
+	page-break-inside: avoid;
+}
+
+#homepage ul[id^='col'] > li > .riquadro table thead th{
+	text-align: center;
+}
+
+#homepage ul[id^='col'] > li > .riquadro table tbody td{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#homepage ul[id^='col'] > li > .riquadro table tbody tr{
+	height: 25px!important;
+}
+
+.form-group div[class^="col-sm-"] div[class^="col-xs-"], [class*="col-sm-"] label[class^="col-xs-"], .due-box > div[class^="col-xs-"] {
+    padding: 0;
+}
+
+div#MovimentiHomePage[style], div#RiepilogoCartaHomePage[style], div#RiepilogoHomePage[style]{
+	min-height: 100px!important;
+}
+
+div.homeMsg[style]{
+    position: absolute!important;
+    left: 25%!important;
+    top: 64px!important;
+}
+
+#mainContent {
+    background: none repeat scroll 0 0 transparent;
+    float: none !important;
+    padding: 0;
+    margin:0;
+    width: auto;
+    position:static!important;
+    white-space: normal !important;
+}
+
+.riquadro{
+  border:0;
+}
+
+.col-xs-80 {
+    width: 100% !important;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.riquadro h3{
+	margin-top:10px;
+	padding-top: 10px;
+	font-size: 1.2em;
+}
+
+.ui-widget-content{
+	border:none !important;
+}
+
+.dataTables_paginate{display: none}
+
+#gridHeader {
+	display:none;
+}
+#gridNavigazione {
+	display:none;
+}
+#contentLeft {
+	display:none;
+}
+#contentRight {
+	display:none;
+}
+#contentCenter, #content2Col {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btnSelezioneCC img, .circle_line, .imgSrv, .user-info, .logo, .ico, .navbar, #topNav,
+#contattaci, .sliderContainerSpalla, #formRicerca, .vincola_box, .legendPie, .header,
+.messagePanel, #otp, .chkBoxNuovi, #ilMioCalendario, .ui-datepicker-trigger, .btnAggiungiBeneficiario {
+	display: none;
+}
+
+#riepilogoEventi{
+	width: 100%;
+}
+
+#riepilogoEventi b{
+	float:left;
+	width:20%
+}
+
+#riepilogoEventi .leggendaEventi {
+	float:right;
+	width: 80%;
+}
+
+
+.wauto {
+    width: auto;
+}
+
+#divFooter {
+    height: 110px;
+    clear: both;
+    font-size: 0.8em;
+    margin-top: 0px;
+}
+
+#divFooter .col-xs-5{
+	width: 100%!important;
+}
+
+.footer-logo{
+	margin-top:10px;
+	float:right !important;
+}
+
+#divFooter .margin-top10{
+	margin-top: 0px!important;
+}
+
+.clear-padding{
+	padding: 0px!important;
+}
+
+.oCenter{
+	text-align: center;
+}
+
+.oRight{
+	text-align: right;
+}
+
+.oLeft{
+	text-align: left;
+}
+
+.floatl{
+	float:left;
+}
+
+.floatr{
+	float:right;
+}
+
+
+.negativo{
+	color:#b40101!important;
+}
+
+.row{
+	margin-right: 0;
+    margin-left: 0;
+}
+
+select.form-control {
+  -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+   border:0;
+   height:auto;
+   font-size: 1em;
+   padding:0;
+   margin-left:-5px;
+}
+
+select.form-control option{
+   padding:0;
+
+}
+h1{
+	display: inline-table;
+    position: relative;
+    margin:0;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+h3{
+	font-size: 1.2em;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: -0;
+}
+	
+.CCselezionato  div[class^="col-xs"],
+.CCselezionato  span[class^="col-xs"]{
+	padding:0 !important;
+}
+
+.cartaSelezionata .col-sm-6{
+	width: 100%;
+} 
+.cartaSelezionata .col-sm-6 .col-xs-6{
+	width: 50%;
+} 
+
+.riquadro {
+    position: relative;
+    display: block;
+    background: #fff;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.margin-top10{
+	margin-top:10px!important;
+}
+
+.margin-bottom10{
+	margin-bottom:10px;
+}
+
+.margin-left10{
+	margin-left:10px;
+}
+
+.margin-right10{
+	margin-right:10px;
+}
+
+.clear-paddingImportant{
+	padding-left:0px!important;
+	padding-right:0px!important;
+}
+
+.riquadro {
+	margin-top:10px;
+}
+.col-sm-6 > .innerBoxWhite,
+.col-sm-6 > .boxDefault {
+	margin-top:0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.col-sm-6 > .boxDefault .row label {
+    width: 50%;
+    float: left;
+}
+
+.col-sm-6.col-sm-offset-3{
+	margin-left:0;
+}
+
+.col-sm-6 > .boxDefault .row span {
+    width: 50%;
+	display: inline-block;
+}
+
+.homePageHelp {
+    font-size: 0.91em;
+    margin-left: 10px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 0px!important;
+    background: none!important;
+}
+
+.col-sm-6 > .boxDefault .row label {
+    float: left;
+}
+
+.col-sm-6 > .boxDefault .row span.col-xs-3 {
+    float: right;
+}
+
+#homepage h1{
+	color:#003b79 !important;
+	font-weight:700;
+}
+
+#homepage #movimentiTable,
+#homepage #movimentiGrafico,
+#homepage #container{
+	height:auto !important;
+}
+
+.CCselezionato strong{
+	font-weight: 100;
+	float: right;
+    margin-right: 40%;
+}
+.CCselezionato #disponibile,
+.CCselezionato #contabile,
+.CCselezionato #liquidita,
+.CCselezionato #affidamento{
+	width:100%;
+}
+.CCselezionato{
+	line-height: 1.4em;
+}
+.CCselezionato .col-sm-6 span{
+	float:left;
+	clear:right;
+	
+}
+
+ .CCselezionato .col-sm-6 > div[class^="col-xs-"]{
+	padding: 0px!important; 
+}
+
+ .CCselezionato .col-sm-6 .col-xs-4, .CCselezionato .col-sm-6 .col-xs-5{
+ 	float:left;
+ 	clear:both;
+ 	width:40%;
+ }
+ 
+ .CCselezionato .col-sm-6 .col-xs-5{
+ 	width:45%;
+ }
+ 
+  .CCselezionato .col-sm-6 .col-xs-6, .CCselezionato .col-sm-6 .col-xs-7{
+ 	width:60%;
+ }
+ 
+  .CCselezionato .col-sm-6 .col-xs-7{
+ 	width:55%;
+ }
+ 
+ .boxDefault h3 {
+    display: inline-table;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-size: 1.2em;
+    font-weight: 300;
+    width: 92%;
+    margin-left: 4%;
+    text-transform: uppercase;
+    text-align: center;
+}
+ 
+ #mainContent .boxDefault .row {
+    width: 92%;
+    margin-left: 4%;
+}
+ 
+
+
+/* tabelle */
+.tabellaSelezioneCC tbody th, .tabellaSelezioneCC thead th {
+    border-bottom: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+}
+
+
+
+.tabSelezioneMovimenti table,
+.tabSelezioneMovimenti table thead,
+.tabSelezioneMovimenti table tbody,
+.tabSelezioneMovimenti table tbody tr td,
+.tabSelezioneMovimenti table thead tr.hover th,
+.tabSelezioneMovimenti table tbody tr,
+.tabSelezioneMovimenti table tbody tr.hover,
+
+.tabSelezioneCarte table,
+.tabSelezioneCarte table thead,
+.tabSelezioneCarte table tbody,
+.tabSelezioneCarte table tbody tr td,
+.tabSelezioneCarte table thead tr.hover th,
+.tabSelezioneCarte table tbody tr,
+.tabSelezioneCarte table tbody tr.hover{
+	border:2px solid #C0C0C0;
+}
+
+table tr{
+	page-break-inside: avoid;
+}
+
+tr th.number{
+ text-align:right;
+}
+
+
+.tabellaSelezioneCC tbody td {
+    background-color: white;
+} 
+.OUTLetFac, .OUT2ColDiff {
+    display: block;
+}
+.ui-jqgrid-bdiv {
+	height: 100% !important;
+}
+
+/* form */
+.divForm td {
+    background-color: white;
+}
+.actions, .button,
+input[type="button"],.btn {
+	display:none !important;
+}
+
+
+
+.ui-menu{
+	display:none !important;
+}
+
+/* titoli */
+.intestazioneSelezioneCC span.rounded_corner {
+	display: none;
+}
+.intestazioneSelezioneCC .labelIntestazioneSelezioneCC {
+	border-right: 1px solid #B0B0B0;
+}
+.bottoni_intestazione_tabella {
+	display: none;
+}
+.ulGridOptions {
+	display: none;
+}
+
+/* jqGrid */
+.pulsantiIntestazione {
+    display: none;
+}
+.formHeaderGrid {
+    background-color: white;
+}
+
+/* news sez investimenti */
+#formHeadlines {
+    display: none !important;
+}
+div.divSinistra { 
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+div.divDestra { 
+    float: none;
+    width: 100%;
+}
+div.divSinistra > div {
+   	margin-right: 0px;
+	height: auto !important; 
+}
+div#divNumeriPagina{
+	display:none;
+}
+
+.ui-jqgrid-bdiv { 
+    overflow:hidden !important; 
+}
+
+#I_TITDOS h3{
+	display:none;
+}
+
+
+.form-control {
+    display: inline-block;
+    padding: 2px;
+    height: auto;
+    border-radius: 0;
+    }
+
+canvas#piechart{
+	width:240px !important;
+	height: auto  !important;
+	margin-left:-50px;
+	margin-top:50px;
+}
+    
+ .col-prt-12{
+ 	width:100%;
+ }
+ 
+ .col-prt-4{
+ 	width:33.33333333%;
+ }
+ 
+ .col-prt-6{
+ 	width:50%;
+ } 
+ .table {
+ 	width: 97%;
+ }
+#firstMenu,#menu,#spalla{display:none;}
+#footer .col-md-3.col-sm-12,#footer .col-md-3.col-sm-5.PaddTopBoxFooter:nth-child(3),.toolbox-wrap,.iconNmVerde,
+#footer .col-md-1.hidden-xs
+
+{display:none!important;}
+
+
+.breadcrumb{
+    display: none;
+}
+
+.visible-print-block img{
+    width: 150px!important;
+}
+
+.dropdown-menu.headerDxIconImp{
+    display:none;
+}
+
+
+#dbgraphwrapper{
+    display: none;
+}
+
+
+/** Home Page **/
+
+#mainContent .dashboard-widgets .dbwidget table{ 
+    width: 100%; 
+}
+
+#mainContent .dashboard-widgets .dbwidget table tr td { 
+    height:32px; 
+    padding-left: 10px; 
+    border: 1px solid #000; 
+}
+
+.dbwidget#dbconto .output{ 
+    border:1px solid #000; 
+    height:31px; 
+}
+
+.dbwidget#dbconto .datioutput .evidente .output label{ 
+    border-right:1px solid #000; 
+    width: 49%; 
+    margin-left: 10px;
+    height: 31px;
+}
+
+
+
+.dbwidget#dbconto .elenco-dati .output label {
+    width: 50%!important;
+    border-right: 1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+}
+
+.dbwidget#dbconto .elenco-dati .output span {
+    padding-left: 10px;
+}
+
+
+
+
+.dbwidget#dbposta .datioutput .evidente.withico, .dbwidget#dbposta .datioutput .elenco-dati .output.output-reverse {
+    border:1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+
+.dbwidget#dbcarte .datioutput .elenco-dati .output{ 
+    width: 100%; 
+    border: 1px solid #000; 
+    height: 31px; 
+}
+
+.dbwidget#dbcarte .datioutput .elenco-dati .output  label{
+    width: 50%!important;
+    border-right: 1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+}
+
+.dbwidget#dbcarte .datioutput .elenco-dati .output  span{ 
+    padding-left: 10px;
+}
+
+
+
+.dbwidget#dbcarte .dropdown.selector .selector-btn.selector-el {
+    border:1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+}
+
+
+
+
+.dbwidget#dbcarte .datioutput .evidente{
+    border:1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+}
+
+.dbwidget#dbcarte .datioutput .evidente .output.inline label{
+    width: 50%!important;
+    border-right: 1px solid #000;
+    height: 31px;
+    padding-left: 10px;
+}
+
+
+
+
+.dbwidget#dbsintesi table tr td:first-child{
+    display: none;
+}
+
+.dbwidget#dbsintesi table tr td{
+    width: 50%;
+}
+
+.dbwidget#dbcalendario table tr td:first-child{
+    display: none;
+}
+
+.dbwidget.promo .promo-wrapper p{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    border:1px solid #000;
+}
+
+
+
+
+.cta.personalizza{
+    display: none;
+}
+
+
+
+.bottom-console{
+    display: none;
+}
+
+
+
+.datioutput > #containerSP{
+    display: none;
+}
+
+
+#dbtitoli table .col1{
+    display: none;
+}
+
+#dbtitoli table .col2, #dbtitoli table .col3, #dbtitoli table .col4 {
+    width:33%;
+}
+/** END HOME PAGE **/
+
+#footer .col-md-3.hidden-sm.PaddTopBoxFooter, #footer .row.barraAssistenza{display:none;}

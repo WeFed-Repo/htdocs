@@ -1,0 +1,206 @@
+
+						
+
+
+
+ 
+<div class="breadcrumb">
+	
+</div>
+
+						 
+						<div class="visible-print-block"> 
+							<img src="/HT/fe/img/logo_bancobpm@2x.png" title="Torna all'homepage" alt="Torna all'homepage">
+							<div class="pull-right">
+								  
+								15/09/2017	
+							</div>
+						</div>
+						
+
+						
+
+						
+						
+
+
+
+
+ 
+
+
+
+
+<form id="formRecuperoPin" method="post" action="/WEBHB/recuperoCodici/pinEsito.do" class="form-horizontal"><div style="display:none"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="a6a5e501a83416c1e110387e81707125"></div>
+<div class="riquadro clearfix">
+	   
+	
+
+
+
+
+	
+	<div class="pager clearfix pull-right">
+		<div class="circle_line">&nbsp;</div>
+		
+			
+			
+			
+				
+			
+				<div class="circle current_page">&nbsp;</div>
+			
+		
+			
+			
+			
+				
+			
+				<div class="circle current_page">&nbsp;</div>
+			
+		
+			
+			
+			
+				<div class="circle ">&nbsp;</div>
+			
+		
+	</div>
+
+
+
+
+
+
+<div class="clearfix">
+	
+		
+		
+				
+
+
+
+<style>
+.imgSrv{
+	float: none;
+}
+</style>
+
+
+	<h1>
+		
+			
+			
+				<div class="hidden-print hidden-xxs flag info">&nbsp;</div>
+			
+		
+		
+			
+		
+		
+			
+		
+			
+			
+				
+				
+ 					<span>Recupera codici</span>
+ 					
+				
+ 					
+ 					
+ 						<span class="hidden-xs">:&nbsp; Reset PIN</span>
+ 					
+				
+			
+			
+		
+	</h1>
+	
+	
+
+
+		
+	
+	
+	
+		
+		
+			<div class="col-xs-12 hidden-xs hidden-print">
+				
+
+
+
+
+
+
+
+
+
+			</div>
+		
+	
+</div>
+	
+
+
+
+
+
+
+
+	
+
+
+	
+	<div class="col-xs-12">
+		Prima di confermare verifica con attenzione che il numero di cellulare e l'indirizzo email sotto riportati siano corretti perchè verranno utilizzati per l'invio del pin. In caso contrario, è necessario rivolgersi alla propria filiale per aggiornarli.
+	</div>
+	
+	
+
+
+
+
+ 
+
+	<div class="col-xs-12">
+		<div class="boxDefault clearfix content col-xs-12" style="margin-bottom:0px;">
+			<h2>I tuoi dati</h2>
+			<div class="col-xs-12">
+				<div class="col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-xs-6">Instestatario contratto:</div>
+						<div class="col-xs-6"><strong>MAURO LUCA TALLO</strong></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">Codice fiscale:</div>
+						<div class="col-xs-6"><strong>TLLMLC70A30F205O</strong></div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-xs-6">Cellulare predefinito:</div>
+						<div class="col-xs-6"><strong>******1800</strong></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">Email predefinita:</div>
+						<div class="col-xs-6"><strong>m*********o@l*****.i*</strong></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-xs-12 messagePanel alert warning" style="display: block;">
+		<div><p>Attenzione: procedendo nella richiesta il tuo PIN verrà resettato..</p></div>
+	</div>
+	<div class="pull-right margin-bottom20">
+	<input type="submit" name="modifica" tabindex="3" value="Indietro" class="button btn btn-primary ">
+	<input type="submit" name="" tabindex="2" value="Conferma" class="btn btn-primary" alt="Conferma">
+</div>
+
+</div>
+
+</form>
+				

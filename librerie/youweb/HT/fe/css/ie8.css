@@ -1,0 +1,11 @@
+body {
+	overflow-x: hidden; 
+}
+
+h1 {
+	box-shadow: inherit;
+}
+
+.pull-right.azioni{
+	margin-left:20px;
+}

@@ -1,0 +1,51 @@
+/* Assistente virtuale */
+#virtAss {position: absolute; top: 0; left: 0; display: block; overflow: visible; text-align: left}
+#virtAss .vaTop {display: block; float: left; clear: left; width: 272px; height: 29px; margin: 0; padding: 0; background: transparent url(/HT/av/img/va_top.png) no-repeat 0 0; _background-image: url(/HT/av/img/va_top.gif)}
+#virtAss .vaBody {display: block; float: left; clear: left; width: 272px; margin: 0; padding: 0; background: transparent url(/HT/av/img/va_bg.gif) repeat-y 0 0}
+#virtAss .vaBottom {display: block; float: left; clear: left; width: 272px; height: 11px; margin: 0; padding: 0; background: transparent url(/HT/av/img/va_bottom.gif) no-repeat 0 0}
+#virtAss .vaTop #vaTitle {font-weight:bold;display: block; float: left; margin: 0; padding: 13px 10px 5px 13px; cursor: move; text-transform: uppercase; font-size: 13px;letter-spacing:-0.5px;}
+#virtAss .vaTop a.vaChiudi {display: block; float: right; width: 9px; height: 9px; margin: 10px 13px 0 0; text-decoration: none; background: #898989 url(/HT/av/img/va_chiudi.gif) no-repeat 0 0; line-height: 1px; _margin-right: 7px; _padding: 0}
+#virtAss .vaTop a.vaWindow {display: block; float: right; width: 11px; height: 9px; margin: 10px 7px 0 0; text-decoration: none; background: #898989 url(/HT/av/img/va_window.gif) no-repeat 0 0; line-height: 1px; _margin-right: 3px; _padding: 0}
+#virtAss .vaTop a.vaWindow.closed {text-decoration: none; background-position: 0 -9px}
+#virtAss .vaTop a.vaChiudi:hover, #virtAss .vaTop a.vaWindow:hover {text-decoration: none}
+#virtAss .vaFiletto {float: left; clear: left; width: 272px; height: 8px; background: transparent url(/HT/av/img/va_filetto.gif) no-repeat 0 0}
+#virtAss #vaSpace {display: block; float: left; width: 258px; height: 220px; margin: 0 0 0 7px; background: transparent url(/HT/av/img/ico2inf_loadingbig.gif) no-repeat center 80px; _margin-left: 3px }
+#virtAss .vaConsole {display: block; float: left; width: 258px; height: 28px; margin: 0 0 0 7px; border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; background: #fff url(/HT/av/img/va_console_bg.gif) repeat-x 0 0; _margin-left: 3px}
+#virtAss .vaConsole a.vaAudio {display: block; float: left; width: 20px; height: 16px; margin: 7px 0 0 8px; background: transparent url(/HT/av/img/va_audio.gif) no-repeat 0 0}
+#virtAss .vaConsole a.vaAudio.off {background-position: 0 -16px}
+#virtAss .vaConsole #vaSlider {display: block; float: left; border:0;width: 65px; height: 17px; margin: 7px 0 0 10px; background: transparent url(/HT/av/img/va_slider_bg.gif) no-repeat 0 0; _margin-left: 5px}
+/* #virtAss .vaConsole #vaSliderCursor{float:left;display:block;width:10px;height:17px;margin:0;background:transparent url(/HT/av/img/va_slider.gif) no-repeat 0 0} */
+#virtAss .vaConsole #vaSlider .ui-slider-handle {margin-top:3px;border:0;position: relative; display: block; width: 10px; height: 17px; margin-left: -4px; background: transparent url(/HT/av/img/va_slider.gif) no-repeat 0 0}
+#virtAss .vaConsole #vaSlider .ui-slider-handle:focus {outline:none;}
+#virtAss #vaTextControl {display: block; float: right; margin: 0 6px 0; padding: 0; text-decoration: none; line-height: 26px;font-size:12px}
+#virtAss #vaTextControl:hover {color: #666!important}
+#virtAss #vaDialog {display: block; float: left; clear: left; overflow: auto; width: 258px; height: 64px; margin: 0 0 0 7px; border-bottom: solid 1px #cacaca; _margin-left: 3px}
+#virtAss #vaDialog .sent {padding: 3px 6px 2px; color: #333; line-height: 13px}
+#virtAss #vaDialog .sent.answer {background-color: #efefef}
+#virtAss #vaDialog .sent p {font-size: 11px !important;line-height: 13px; margin-bottom: 0;}
+#virtAss #vaForm {display: block; float: left; clear: left; width: 245px; margin: 0 0 0 13px; padding: 0; _margin-left: 6px}
+#virtAss #vaForm #vaDom {display: block; float: left; width: 175px; height: 20px; margin: 10px 0 5px; padding-left: 3px; border: solid 1px #b8b8b8; line-height: 16px}
+#virtAss #vaForm #vaDom.waiting {color: #999}
+#virtAss #vaForm .btnformright {  float: right; margin: 10px 0 5px;background: #003b79;height: 20px;color: #fff;line-height: 20px;border-radius: 4px;text-transform: uppercase;text-decoration: none;padding: 0 10px}
+#vaExtended {position: absolute; display: block; float: left; width: 261px; height: 261px; margin: 0 0 0 -260px}
+#vaExtended #vaLinguetta {float: right; clear: right; width: 40px; height: 28px; margin: 0 -8px 0 0; background: url(/HT/av/img/va_ext_linguetta.png) no-repeat scroll 0 0 transparent; _background-image: url(/HT/av/img/va_ext_linguetta.gif)}
+#vaExtended.opened #vaLinguetta {background-position: 0 -28px}
+#vaExtended .vaExtBody {display: none; overflow: hidden}
+#vaExtended.opened .vaExtBody {display: block; float: right; clear: right; width: 262px; height: 241px; margin: -10px 0 0 0; background: transparent url(/HT/av/img/va_ext_bg.png) no-repeat 0 0; _background-image: url(/HT/av/img/va_ext_bg.gif); _margin-left: -1px}
+#vaExtended .vaExtBody span.vaExtTitle {display: block; float: left; width: 225px; margin: 5px 0 5px 0; padding: 0 0 5px; background: transparent url(/HT/av/img/va_underline.gif) no-repeat 0 bottom; font-size: 12px; font-weight: bold}
+#vaExtended #vaExtConsole {position: absolute; display: block; float: left; width: 24px; height: 93px; margin: 89px 0 0 -23px; padding: 15px 0 0; background: url(/HT/av/img/va_ext_console.png) no-repeat scroll 0 0 transparent; _background-image: url(/HT/av/img/va_ext_console.gif)}
+#vaExtended .consBtn {display: block; float: left; width: 19px; height: 15px; margin: 0 0 9px 5px; cursor: hand; background: transparent url(/img/ret/va_ico_mail.gif) no-repeat 0 0}
+#vaExtended #vaExtInfo,#vaExtended #vaExtINFO  {background: transparent url(/img/ret/va_ico_form.gif) no-repeat 0 0}
+#vaExtended #vaExtFaq,#vaExtended #vaExtFAQ {background: transparent url(/img/ret/va_ico_faq.gif) no-repeat 0 0}
+#vaExtended .consBtn.selected {background-position: 0 -15px !important}
+#vaExtended .extCont {float: left; overflow: auto; line-height:14px !important;width: 242px; font-size:11px;height: 219px; margin: 9px 0 0 13px; _margin-left: 6px}
+#vaExtended .extCont  ul {clear: left; margin: 0; padding: 0}
+#vaExtended .extCont  ul li {margin: 0 !important; padding: 2px 0 2px 15px!important; list-style: none outside none !important; background: url(/img/ret/frec_lista.gif) no-repeat scroll 0 6px transparent}
+#vaExtended .extCont  ul li a {text-decoration:none}
+#vaExtended .extCont  ul li a:hover {color: #666!important}
+#vaExtended .extCont p {line-height:14px}
+#virtAss #vaAudioErrore {position: absolute; display: block; width: 258px; height: 28px; margin: 250px 0 0 7px; text-align: center; color: #900; background: #efefef; font-size: 10px; line-height: 28px}
+#agenziaTbx {float:left}
+/* Nuove azioni promo assistente virtuale */
+#vaExtended .extBan {float:left;width:100%}
+#vaExtended .extBan img {float:left;width:100%;}

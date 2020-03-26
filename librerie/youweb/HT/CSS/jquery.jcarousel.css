@@ -1,0 +1,96 @@
+.jcarousel-skin-tango {
+	padding-left: 10px;
+    padding-right: 10px;
+}
+.jcarousel-skin-tango .jcarousel-container {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+	height: 85px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+	margin-left: 2%;
+	width: 96%;
+	height: 85px;
+	float: left;
+	overflow: auto;
+	background: url(/HT/IMAGES/GRAFICA/panel_bkg.png) top left repeat-x;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+	width: 99px;
+	height: 77px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 8px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 8px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: transparent;
+    color: #000;
+}
+
+
+
+/**
+ *  Horizontal Buttons
+*/
+
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+	position: absolute;
+	top: 0px;
+	left: 98%;
+	width: 2%;
+	/*min-width: 26px;*/
+	height: 85px;
+	cursor: pointer;
+	background: url(/HT/IMAGES/GRAFICA/menu2_right_arrow.png) right -85px no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+	background-position: right top;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 2%;
+	min-width: 14px;
+	height: 85px;
+	cursor: pointer;
+	background: url(/HT/IMAGES/GRAFICA/menu2_left_arrow.png) left -85px no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background-position: left top;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+   cursor: default;
+   background-position: right bottom;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: left bottom;
+}

@@ -1,0 +1,42 @@
+<div id="gridBody">
+<div class="contentFull">
+	
+	
+	
+
+
+
+
+
+	
+	
+	
+		
+		
+	
+
+
+<div class="col-xs-12 messagePanel success" style="display: block;">
+	<h3 class="titleSection">Esito operazione</h3>
+	<div>
+		
+			
+			
+				<b class="verde">Messaggio al cliente
+				</b>
+			
+		
+
+<br>
+
+		Titolo aggiunto al portafoglio simulato
+		
+	</div>
+</div>
+<br>
+<div class="pull-right margin-bottom20">
+	<input class="btn button" type="button" value="Chiudi" title="Chiudi" onclick="closeAjaxDialog(this, false)">
+</div>
+
+</div>
+</div>

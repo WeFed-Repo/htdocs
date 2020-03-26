@@ -1,0 +1,3 @@
+Il file .html contiene il codice di un ipotetico bottone provvisorio da inserire nella spalla sinistra.
+
+Il materiale sotto av sarebbe da inserire nell'omonima cartella in /HT/

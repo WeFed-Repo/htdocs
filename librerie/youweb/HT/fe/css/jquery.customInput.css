@@ -1,0 +1,49 @@
+/*	wrapper divs */
+.custom-checkbox, .custom-radio { position: relative; }
+	
+/* input, label positioning */
+.custom-checkbox input, 
+.custom-radio input {
+	left: 7px;
+    margin: 0;
+    position: absolute;
+    top: 7px;
+    z-index: 0;
+}
+
+.custom-checkbox label, 
+.custom-radio label {
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding-right: 1em;
+	line-height: 1;
+	padding: 8px 0 6px 30px;
+	margin: 0 0 .3em;
+	cursor: pointer;
+}
+
+	
+/* states */
+.custom-checkbox label { background: url(/HT/IMAGES/GRAFICA/checkbox.png) no-repeat; }
+
+.custom-radio label { background: url(/HT/IMAGES/GRAFICA/radiobutton.gif) no-repeat; }
+
+.custom-checkbox label, .custom-radio label {
+	background-position: -10px -14px;
+}
+
+.custom-checkbox label.hover,
+.custom-radio label.hover {
+	background-position: -10px -114px;
+}
+
+.custom-checkbox label.checked, 
+.custom-radio label.checked {
+	background-position: -10px -214px;
+}
+
+.custom-checkbox label.checked.hover,
+.custom-radio label.checked.hover {
+	background-position: -10px -314px;
+}

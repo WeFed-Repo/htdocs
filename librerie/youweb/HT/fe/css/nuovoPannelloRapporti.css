@@ -1,0 +1,10 @@
+.rapportiContainer{
+	min-height: 130px;
+	margin-bottom: 10px;
+}
+
+.rapporto{
+	background-color: white;
+	padding: 6px;
+	min-height: 120px;
+}

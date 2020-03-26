@@ -1,0 +1,2496 @@
+/* Css per xs */
+
+	html, body {
+	  	overflow-x: hidden;
+	}
+
+	html,
+	body {
+	  	font-size: 12px;
+	}
+
+	.enable-momentum {
+		overflow-y: scroll;
+  		-webkit-overflow-scrolling: touch; /* for enable momentum safari mobile */
+	}
+
+	.fix-datepicker-momentun {
+	}
+
+	colgroup {
+	    display: none;
+	}
+
+	/* https://adactio.com/journal/5429/ */
+	body:after {
+    	content: 'mobile';
+    	display: none;
+  	}
+
+
+
+ 	/*.form-control.targa {
+ 		height:54px !important;
+ 		font-size: 1.7em !important;
+ 	}*/
+
+
+ 	#loadingPage {
+    	position: absolute;
+    	z-index: 1000;
+    	left: 40%;
+    	top: 50%;
+ 	}
+
+
+
+ 	#menu-mobile{
+ 		z-index: 3333333333;
+ 		position: absolute;
+ 		top: 0;
+ 		margin:15px;
+ 		width: 35px;
+ 		height: 35px;
+ 		padding: 4px;
+    	padding-top: 8px;
+ 	}
+
+ 	.logo a {
+	    display: block;
+	    width: 190px;
+	    height: 66px;
+	    cursor: pointer;
+	    text-align: center;
+	    margin: 0 auto;
+
+	}
+
+	.boxDefault .row span{
+		word-wrap: break-word;
+	}
+
+
+
+	.dataTable th.sorting,
+	.dataTable th.sorting_desc,
+	.dataTable th.sorting_asc {
+		background: none;
+	}
+	.navbar-toggle .icon-bar {
+	    background-color: #563d7c;
+	}
+
+	.float-xs-left{
+		float:left
+	}
+
+	.xs-align-right{
+		text-align:right;
+	}
+
+	.pull-xs-right{
+		float:right;
+	}
+
+	#topNav{
+		height: 66px;
+	}
+	.container {
+    	width: 100%;
+	}
+
+	.visible-xs-block{
+		display:block !important;
+	}
+
+	.isMobile{
+		position:relative;
+	}
+
+	.ico.logout a {
+		margin-top: 60px;
+    	margin-right: 15px;
+
+	}
+
+	div.header{
+		height:65px;
+	}
+
+	.sidebar-offcanvas ul{
+		padding-left: 0;
+	}
+
+	.sidebar-offcanva #frmLogout{
+		margin-left:5px
+	}
+
+	.btn-menu{
+		background: #ffd800;
+		border:none;
+	}
+
+	.btn-menu span.icon-bar{
+		background: #fff;
+		height: 3px;
+		margin-bottom:5px;
+		margin-left:5%;
+		display:block;
+	}
+
+	.nav-pills>li{
+		float:none;
+	}
+
+
+/*
+	#divFooter .footer{
+		background: url('/HT/IMAGES/nGrafica/logo_footer_resp.png')#d7ebf9  no-repeat right center;
+	}
+*/
+	#topNav ul.nav>li.mega-menu div{
+		display:none;
+	}
+	.nav>li>a,
+	ul#topMain>li,
+	#topNav ul.nav>li{
+		height:auto;
+		width:auto;
+		text-align:left;
+		padding:0;
+		margin:0;
+
+	}
+
+	.visible-mobile{
+		visibility:visible;
+	}
+
+	#topNav ul.nav>li a{
+		color:#003b79;
+		padding:5px;
+	}
+
+	#topNav ul.nav>li:hover a{
+		color:#fff;
+	}
+
+	#topNav ul.nav>li>ul>li>a{
+		color:#003b79 !important;
+	}
+	.logo{
+		background:url(/HT/IMAGES/nGrafica/logo-mobile.png) no-repeat center center;
+		width:100%;
+		text-align:center;
+		height:65px;
+		top:0;
+		left:auto;
+	}
+
+	.clear-padding-xs {
+		padding-left:0px;
+		padding-right:0px;
+	}
+
+	.padding-top-xs-5{
+ 	padding-top:5px;
+ 	}
+
+ 	.padding-top-xs-10{
+ 	padding-top:10px;
+ 	}
+
+ 	.padding-left-xs-10{
+ 	padding-left:10px;
+ 	}
+
+ 	.padding-left-xs-20{
+ 	padding-left:20px;
+ 	}
+
+ 	.padding-top-xs-20{
+ 	padding-top:20px;
+ 	}
+
+ 	.padding-bottom-xs-10{
+ 	padding-bottom:10px;
+ 	}
+
+ 	.padding-bottom-xs-20{
+ 	padding-bottom:20px;
+ 	}
+
+ 	.margin-bottom-xs-10{
+ 		margin-bottom:10px;
+ 	}
+
+
+ 	.margin-top-xs-0{
+ 	margin-top:0px !important;
+ 	}
+
+ 	.margin-top-xs-5{
+ 	margin-top:5px;
+ 	}
+
+ 	.margin-top-xs-10{
+ 	margin-top:10px;
+ 	}
+
+ 	.margin-left-xs-10{
+ 	margin-left:10px;
+ 	}
+ 	.margin-right-xs-10{
+ 	margin-left:10px;
+ 	}
+
+ 	.margin-top-xs-20{
+ 	margin-top:20px;
+ 	}
+
+ 	.margin-top-xs-40{
+ 	margin-top:40px;
+ 	}
+
+ 	.margin-top-xs-60{
+ 	margin-top:60px;
+ 	}
+
+ 	.sidebar-offcanvas ul li>ul.menu-child li{
+ 		padding: 5px 5px;
+ 		border-bottom:1px solid #fff;
+ 	}
+
+ 	.sidebar-offcanvas ul li>ul.menu-child li{
+ 		padding: 5px 5px;
+ 		border-bottom:1px solid #fff;
+ 	}
+
+ 	.sidebar-offcanvas ul li>ul.child li:hover {
+	    background: #a7c5de;
+	}
+	.sidebar-offcanvas ul li>ul.child li:hover a{
+    	color:#fff;
+	}
+
+	.sidebar-offcanvas ul li>ul li a:hover {
+		border: none;
+	    color:#fff;
+	    text-decoration:none;
+	}
+
+	.main{
+		padding-bottom:0;
+	}
+	.wrapper{
+		margin-bottom:0;
+	}
+	 .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .table-responsive{
+  	margin-bottom:5px;
+  }
+
+	@media (max-width: 991px){
+
+
+
+		.table-responsive {
+      		overflow-x: scroll;
+      		clear:both;
+      		margin:0;
+    	}
+
+     #listaDocumenti {
+      		border:1px solid #FFF;
+
+    	}
+
+
+	}
+
+
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+   right: -75%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -75%; /* 6 columns */
+    padding:0 0 0 35px;
+    z-index:99999;
+  }
+
+  div.row.sidebar-menu{
+      margin-left: 0;
+      margin-right:0;
+  }
+
+  ul.menu-child{
+  	display: none;
+  	background:#667c93;
+
+  }
+
+   ul.menu-child li a{
+    color:#fff;
+  	padding-left:40px;
+  	font-size:1.1em;
+  	display: block;
+  }
+
+   ul.menu-child li a.terzo-livello {
+    color:#fff;
+  	padding-left:60px;
+  	font-size:1.1em;
+  	display: block;
+  }
+
+   ul.menu-child li span {
+    color: #999;
+  	padding-left:40px;
+  	font-size:1.1em;
+  }
+
+
+  ul.menu-child li:hover a:hover{
+     color:#aaa;
+  }
+
+
+  #sidebar .sidebar-container{
+  	height:100%;
+  	width:95%;
+  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a2c3dc+0,dfecf5+100 */
+	background: #a2c3dc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a2c3dc 0%, #dfecf5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a2c3dc 0%,#dfecf5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a2c3dc 0%,#dfecf5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2c3dc', endColorstr='#dfecf5',GradientType=0 ); /* IE6-9 */
+	    box-shadow: 0px 1px 3px 1px #bbb;
+  }
+
+  .nav>li>a:hover, .nav>li>a:focus{
+  	background:transparent;
+  }
+
+  .sidebar-menu > ul > li > a{
+  		padding-left:45px;
+  	    line-height: 33px;
+  }
+  .sidebar-menu > ul > li > hr {
+  	width: 90%;
+  	margin:0;
+  	margin-left:5%;
+  	border-top: 1px solid #667c93;
+  }
+
+
+  .row-offcanvas-right.active {
+    right: 75%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 75%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+     height: 100%;
+    position: absolute;
+    top: 0;
+    width: 75%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas ul li {
+	list-style: none;
+	padding:5px 0;
+	}
+
+	#homepage #col2 ,
+	#homepage #col1 {
+    	padding-left: 0;
+    	padding-right: 0px;
+	}
+
+
+	.sidebar-menu > ul.nav > li{
+	    margin:0;
+	    padding:0;
+	    margin:10px;
+	}
+
+	.sidebar-menu > ul.nav > li:before{
+		content:' ';
+		height:27px;
+		width:34px;
+	    display: block;
+    	float: left;
+    	overflow:hidden;
+	}
+
+	div.ripetiMobile{
+		display:none;
+	    text-decoration:none;
+	    box-shadow: none;
+		border: none;
+	    height: 29px;
+	    text-align: right;
+	    padding-right: 15px;
+		cursor:pointer;
+		line-height:30px;
+		text-transform: uppercase;
+		margin-top:-10px;
+		font-weight:600;
+		color:#00a592;
+		background: url('/HT/fe/img/arrow_btn_normal.png') no-repeat center right;
+		padding-right:16px;
+		letter-spacing: 1px
+	}
+
+
+	div#elencoRipetiMobile{
+	    position: absolute;
+	    z-index: 6;
+	    width: 100%;
+	    right: 1px;
+	    top: 165px;
+	    display:none;
+	    height:100%;
+	    overflow: auto;
+	    padding-bottom:100px;
+	}
+	#ripetiMobile + .titleSection + #formBonifico {margin-top:50px;}
+	#formRicaricheTelefoniche .ripetiMobile{top:-15px;}
+
+    #formRicaricheTelefoniche .titleSection{padding-top:20px;}
+	.ripetiPagamento .ripetiMobile{margin-top:0;}
+	#mainContent #ripetiRicaricaForm .col-xs-12{padding:10px 0;}
+	#ripetiRicaricaForm{padding-bottom:0;border-bottom:0!important;}
+
+	#ripetiMobile + .titleSection{top:50px;position:relative;}
+	#elencoRipetiMobile table td, #elencoRipetiMobile .control-label.floatl {
+		border: none;
+		padding:10px 0;
+	}
+	div#elencoRipetiMobile #divContent {
+		background: #f5f9fc;
+	}
+div#elencoRipetiMobile #divContent form{
+	    background: #fff;
+	    border-bottom:1px solid #dadde0;
+	}
+
+	.ripetiButton, #ripetiRicaricaForm input[type="submit"], #elencoRipetiMobile input[type="submit"]
+	{
+		background-image:none;background-color: #0e977f!important;color:#fff;padding: 9px 28px 7px 28px;
+		border-radius: 16px;
+		text-indent: -9999px;
+		background-color: transparent;
+		padding-left:0;
+		width:160px;
+		height:auto;
+	}
+	#mainContentCarte #ripetiRicaricaForm .ripetiButton{background-color: transparent!important;position: relative;z-index: 1;text-indent: -9999px}
+	#mainContentCarte #ripetiRicaricaForm  .txt_center.vertical_center{border-bottom:1px solid #dadde0;padding-bottom:10px!important;}
+	#mainContentCarte #ripetiRicaricaForm td.bold.oRight{text-align: right!important}
+	#ripetiRicaricaForm input[type="submit"]{text-indent: 15px;float:right;}
+	#elencoRipetiMobile #formBonifico input[type="submit"]{text-indent:0;float:right;width:180px;padding-left:23px;}
+	#elencoRipetiMobile .txt_center.vertical_center:before{top:10px;}
+    /*#ripetiRicaricaForm input[type="submit"]{text-indent:0;float:right;padding-left:12px;}*/
+	.txt_center.vertical_center:before{top:-5px;content:'RIPETI BONIFICO';width:100px;color:#fff;left:145px;font-size:14px;line-height: 14px;font-weight: 600;text-transform: uppercase;position: relative}
+	#ripetiRicaricaForm{padding-left:0;padding-right:0;}
+	#ripetiRicaricaForm{border-bottom: 1px solid #dadde0;}
+	#ripetiRicaricaForm td{padding:10px;}
+	#ripetiRicaricaForm .txt_center.vertical_center:before{content:'RIPETI RICARICA';top:0;}
+	#mainContentCarte .txt_center.vertical_center:before{background-color: #0e977f!important;padding:9px 28px 7px 28px;border-radius: 16px}
+    #bonificoEsteroContenitore #ibanCampo, #bonificoEsteroContenitore #ibanCampo +.numeroConto{padding-left:15px;}
+    /*
+	.sidebar-menu > ul.nav  li{
+		line-height: 33px;
+	}
+
+	.sidebar-menu > ul.nav > li.conti_depositi:before{
+	    background: url(/HT/IMAGES/nGrafica/conto_deposito_resp.png) no-repeat 0px 0px;
+
+	}
+	.sidebar-menu > ul.nav > li.pagamenti{
+	    background: url(/HT/IMAGES/nGrafica/pagamenti_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.carte{
+	    background: url(/HT/IMAGES/nGrafica/carte_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.alert{
+	    background: url(/HT/IMAGES/nGrafica/alert_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.posta_personale{
+	    background: url(/HT/IMAGES/nGrafica/posta_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.investimenti{
+	    background: url(/HT/IMAGES/nGrafica/investimenti_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.servizi_per_te{
+	    background: url(/HT/IMAGES/nGrafica/servizi_per_te_resp.png) no-repeat 0px 0px;
+	}
+	.sidebar-menu > ul.nav > li.logout{
+	 	background: url(/HT/IMAGES/nGrafica/logout_resp.png) no-repeat 5px 0px;
+	}
+	*/
+	.listaTitoli span{
+		text-align:right;
+	}
+
+	.col-height {
+	    display: block;
+	    float: left;
+	}
+
+	textarea.form-control{
+		min-height: 72px;
+	}
+
+
+	.allarmi tr td input[type=checkbox] {
+   		 margin-bottom: 10px;
+   }
+
+	#titoliPrefRest > div{
+		margin-bottom:15px /*30px*/;
+	}
+
+	#mainContent #titoliPrefRest .col-xs-12{
+	padding:0 5px
+	}
+
+
+	#I_TITDOS #titoliPrefRest div.col-xs-12:nth-child(odd), #titoliPrefRest div.col-xs-12:nth-child(odd){
+    background: #fff;
+	}
+
+	#I_TITDOS #titoliPrefRest div.col-xs-12:nth-child(even), #titoliPrefRest div.col-xs-12:nth-child(even) {
+		background: #eaeded;
+	}
+
+	#I_TITDOS #titoliPrefRest .boxtotale, #titoliPrefRest .boxtotale {
+    background-color: #dadee1!important;
+	margin-bottom:50px!important;
+	}
+
+	h3.descrizione,
+	#titoliPrefRest h3#denominazione{
+		text-align:left;
+		/*padding-left:15px;*/
+		width:100%;
+		font-size:16px;
+		margin-top: 10px;
+		font-weight: 600;
+    	margin-bottom: 10px;
+	}
+
+	#titoliPrefRest label{
+		font-weight: normal;
+		margin-bottom:10px!important;
+	}
+	#titoliPrefRest span{
+		font-weight: 600;
+	}
+
+	#titoliPrefRest .col-xs-6:first-child{
+		border-right: 2px solid #ebeef0;
+    }
+
+ 	#documenti.active td{
+ 		padding: 3px;
+ 	}
+
+
+ 	.ripetiPagamento form{
+ 		padding:20px 20px 0 20px;
+	}
+
+	.ripetiPagamento#divContent #formBonifico{padding-bottom:50px;}
+	.ripetiPagamento .table-responsive{overflow:visible;}
+	.ripetiPagamento table{position: relative}
+	.ripetiPagamento td{display:block;}
+	#elencoRipetiMobile hr{display:none;}
+	.ripetiPagamento td:first-child,.ripetiPagamento td.oRight{width:50%;float:left;}
+	.ripetiPagamento td.txt_center.vertical_center{position: absolute;top:100%;width: 100%;text-align:right;}
+	.modal-body .riquadro{
+		margin-top: 10px;
+    	padding-bottom: 10px;
+	}
+
+
+
+	input[id^='bollettino'] + div > img{
+		padding: 10px;
+	}
+
+	input[id^='bollettino']:checked + div > img{
+		padding: 10px;
+		background: #003b79;
+		border-radius: 5px;
+	}
+
+
+
+	/*               */
+	/* Tabella Carte */
+	/*               */
+
+  	/* reset */
+  	.table-responsive { border: none; }
+  	div#div_wrapper {
+  		padding-left: 0;
+  		padding-right: 0;
+  	}
+
+	/* Tabella carte */
+
+  	/* reset table stripe */
+
+	#mainContent .riquadro .table#riepCarteConto tbody tr:nth-child(odd) { background-color: #EAEDED; }
+	#mainContent .riquadro .table#riepCarteConto tbody tr:nth-child(even)  { background-color: #ffffff; }
+    table#riepCarteConto thead { display: none; }
+  	table#riepCarteConto tbody td {	display: block; padding: 0; border-top: 0px !important; }
+	table#riepCarteConto tbody td:before {
+    	content: attr(data-th);
+    	font-weight: bold;
+    	display: inline-block;
+    	width: 40%;
+  	}
+  	#mainContent .riquadro .table#riepCarteConto tbody tr td{padding:10px;height:40px;}
+    #mainContent .riquadro .table#riepCarteConto tbody tr td input{margin-bottom: 20px;float:right;}
+  	table#riepCarteConto tbody tr td:nth-child(2) {
+    	width: 100%;
+  		margin-top: 5px;
+    	text-align: left;
+    	text-transform: uppercase
+   }
+
+	/* first row */
+	table#riepCarteConto tbody tr td:nth-child(2):before {
+    	content: '';
+    	display: inline-block;
+    	width: 0;
+  	}
+	table#riepCarteConto tbody tr td:nth-child(2) {
+    	font-weight: bold;
+    }
+  	/* borders */
+  	table#riepCarteConto tbody tr td:nth-child(odd),
+  	table#riepCarteConto tbody tr td:nth-child(even) {
+  	//	border-left: 2px solid #c6dfef;
+	//	border-right: 2px solid #c6dfef;
+  	}
+  	table#riepCarteConto tbody tr td:nth-child(6) {
+  	//	border-bottom: 2px solid #c6dfef;
+  	}
+	/* */
+
+	/* Table Ricarica carta conto */
+    /* reset stripe */
+    #mainContent .riquadro .table#ricaricaCarteConto tbody tr:nth-child(odd) { background-color: #eaeded; }
+
+	#mainContent .riquadro .table#ricaricaCarteConto tbody tr:nth-child(even)  { background-color: #eaeded; }
+    table#ricaricaCarteConto tbody tr td.oRight { text-align: left!important; } /* reset align right */
+
+    table#ricaricaCarteConto thead { display: none; }
+  	table#ricaricaCarteConto tbody td { display: block;border-top: 0px !important; }
+	table#ricaricaCarteConto tbody td:not(.oCenter.hidden-xs):before {
+    	content: attr(data-th);
+    	font-weight: bold;
+    	display: inline-block;
+    	width: 40%;
+  	}
+    table#ricaricaCarteConto tbody td.oCenter.hidden-xs {
+		text-align:left!important;
+    }
+    /* Bordi */
+    table#ricaricaCarteConto tbody tr td:nth-child(2) {  border-top: 0 }
+    table#ricaricaCarteConto tbody tr td:nth-child(odd), table#ricaricaCarteConto tbody tr td:nth-child(even) {
+  		border-left: 0;
+		border-right: 0;
+  	}
+    table#ricaricaCarteConto tbody tr:not(#altraCarta) td:nth-last-child(1) {border-bottom:20px solid #fff}
+  	table#ricaricaCarteConto tbody tr td:nth-child(2) { margin-top: 0; }
+
+  	/* Specifico della tabella ricaricaCarteConto - reset content col 1 */
+  	/*#mainContent .riquadro .table#ricaricaCarteConto tbody tr:last-child  td:before { content: 'Voglio caricare dsfsdfdsfdsfsdfsdfsdfsdfsdfdsfsdfdsfsdfsdfsdfdsfdsf'; }*/
+
+  	/* Specifico della tabella ricaricaCarteConto - sel tr */
+  	#mainContent .riquadro .table#ricaricaCarteConto .oCenter.hidden-xs{display:block!important;}
+  	#mainContent .riquadro .table#ricaricaCarteConto tbody tr.cartaSelezionata { padding:0; }
+  	#mainContent .riquadro .table#ricaricaCarteConto tbody tr.cartaSelezionata td {	background-color: #dadde0; }
+  	table#ricaricaCarteConto tbody td:before {
+    	content: attr(data-th);
+    	font-weight: bold;
+    	display: inline-block;
+    	width: 40%;
+   }
+  	table#ricaricaCarteConto tbody tr:last-child td:before,table#ricaricaCarteConto tbody tr td:first-child:before {
+    	content: '';
+    	display: inline-block;
+    	width: 0;
+  	}
+    table#ricaricaCarteConto tbody tr:last-child td {
+    	font-weight: bold;
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    }
+    .SelezioneMovimenti{
+    	margin:5px;
+    }
+
+    .tableToResponsiveBox{
+    	margin-bottom: 10px;
+    }
+
+    .tableToResponsiveBox a{
+    	margin: 5px;
+    	float: right;
+    }
+
+    span#documenti{
+    	display:none;
+	    position: absolute;
+	    z-index: 1000;
+	    background: #fff;
+	    top: 110px;
+	    padding: 10px;
+	    border: 1px solid #aaa;
+	    border-radius: 3px;
+	    width: 100%;
+	    left: 0;
+    }
+    .modal-dialog #documenti ul{list-style-type: none;padding:0;}
+    .modal-dialog #documenti ul li{background: url(/HT/fe/img//ico_pdf2.gif) no-repeat 0 14px;padding: 15px 20px 15px 30px;border-bottom:1px solid #dadee1;}
+    .modal-dialog #documenti ul li a:hover,.modal-dialog #documenti ul li a:active,.modal-dialog #documenti ul li a:focus{color:#00a592;text-decoration: none}
+    /* Date picker */ /* http://stackoverflow.com/questions/18864675/need-a-responsive-datepicker-rather-than-pickadate-js */
+
+	.ui-datepicker-multi, .ui-datepicker-group { float: none!important; }
+	.ui-datepicker-multi-2 .ui-datepicker-group{ width:100%!important; }
+	.ui-datepicker-group-last { display:none!important; }
+
+
+  	#ui-datepicker-div { /* problem safari mobile */
+	  	-webkit-transform: translate3d(0, 0, 0);
+	  	-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+  	}
+
+
+	.margin-left-xs-0{
+		margin-left: 0px;
+	}
+
+	.margin-left-xs-20{
+		margin-left: 20px;
+	}
+
+	#codiceOTPConSMS{
+		//width:100%;
+		width:210px;
+	}
+
+	#titoliPrefRest .col-xs-12 .col-xs-6:first-child{
+		padding:0;
+	}
+	#titoliPrefRest .col-xs-12 .col-xs-6{
+		padding-right:0;
+	}
+
+	.investimentiMarquee #scorr a,
+	table#tableTitoliHome td a:hover{
+		text-decoration:none;
+		cursor:default;
+	}
+
+	#formRecuperoUser .col-xs-12  .col-xs-6:first-child{
+		padding:0;
+	}
+
+	.scale-img-xs {
+		-webkit-transform: scale(1.3);
+  		-moz-transform:    scale(1.3);
+  		-ms-transform:     scale(1.3);
+  		-o-transform:      scale(1.3);
+  		transform:         scale(1.3);
+	}
+
+
+	.section-responsive {
+		clear: both;
+		padding: 30px 0 0 0;
+		background: #dadde0;
+	}
+
+	#link-menu ul li a {
+		padding-left: 20px;
+		font-size: 1.1rem;
+		font-weight: normal;
+		color: #404040;
+	}
+
+	.hr-menu {
+		width: 90%;
+		margin-left: 5%;
+		border-top: 1px solid #667c93;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	/* css trasform table to box layout */
+	.cardbox-background {
+		background: rgb(255, 255, 255) !important;
+	}
+	#cardbox-wrapper {
+		/* margin:	5px; */
+	}
+	#cardbox-wrapper .descrizione  div,  #cardbox-wrapper .descrizione  span {
+		padding-left: 0!important;
+		padding-right: 0;
+	}
+	#cardbox-wrapper .descrizione{padding-left:10px;}
+	#cardbox-wrapper .cardbox-border {
+	//	border: 2px solid #c6dfef;
+		margin-bottom: 10px;
+	}
+	#cardbox-wrapper .cardbox-margin {
+		margin-bottom: 5px;
+	}
+	#cardbox-wrapper .cardbox-top-btn-margin {
+		margin: 5px 0px 0px 0px;
+	}
+	#cardbox-wrapper .cardbox-sep-button {
+		margin-left: 15px;
+	}
+	#cardbox-wrapper .cardbox .importo{
+		color:#289730;
+	}
+	#cardbox-wrapper .cardbox .importo.negativo{
+		color:#b40101;
+	}
+
+
+	#cardbox-wrapper .col-xs-12.cardbox-border:nth-child(odd){
+		background-color: #EAEDED;
+	}
+
+	#cardbox-wrapper .col-xs-12.cardbox-border:nth-child(even){
+		background-color: #FFF;
+	}
+	#cardbox-wrapper .col-xs-12.cardbox-border.title{
+		background-color: #dadee1!important;
+		margin-bottom:0;
+	}
+	#cardbox-wrapper .col-xs-12.cardbox-border.title + .col-xs-12.cardbox-border{
+		background-color: #EAEDED!important;
+	}
+	#cardbox-wrapper .col-xs-12.cardbox-border.title + .col-xs-12.cardbox-border + .col-xs-12.cardbox-border{
+		background-color: #fff!important;
+	}
+	#formContoAllarmi #cardbox-wrapper .col-xs-12.cardbox-border:nth-child(odd){
+		background-color: #fff;
+	}
+	#formContoAllarmi #cardbox-wrapper .col-xs-12.cardbox-border:nth-child(even){
+		background-color: #EAEDED;
+	}
+	#formIndiciCambiAllarmi  .col-xs-12.cardbox-border:nth-child(odd){
+		background-color: #EAEDED;
+	}
+	#formIndiciCambiAllarmi  .col-xs-12.cardbox-border:nth-child(even){
+		background-color: #fff;
+	}
+	#cardbox-wrapper .col-xs-12.cardbox-border > .row{
+		padding-left:15px;
+		padding-right:15px;
+		margin-top:12px;
+		margin-bottom: 12px;
+	}
+
+
+	/* selectToUISlider */
+	span.ui-slider-label {
+		margin-top: -5px;
+	}
+
+	#bloccoAccesso {
+		padding-top:10px;
+		padding-bottom:10px;
+		background: none;
+		border: none;
+	}
+
+	.btn-innerBox {
+	    position: relative;
+	    right: 5px;
+	    bottom: 5px;
+	}
+
+	.break-xs {
+		word-break: break-all;
+	}
+	#divAltraCarta {
+		margin-top:-5px;
+	}
+	/*accordion su mobile */
+	.ui-accordion  a, .ui-accordion  .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{font-size:14px;}
+	.ui-accordion .ui-state-default, #accordion .ui-widget-content .ui-state-default,#accordion .ui-widget-header .ui-state-default{
+		background: #eaeded url('/HT/fe/img/icon_accordion_closed.png') no-repeat 96% center;
+		background-size: 23px 23px;
+	}
+	.ui-accordion .ui-accordion-header:active{
+		background: #dadee1 url('/HT/fe/img/icon_accordion_opened.png') no-repeat 96% center;
+		background-size: 23px 23px;
+	}
+	.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
+	 padding:0 0 0 4%;
+	}
+	.ui-accordion .ui-accordion-content{padding:25px 4%;}
+	.ui-accordion-header a {padding-right:30px!important;}
+	.titleSection{font-size:14px;}
+
+
+	/****************/
+	/*ALERT*/
+
+	.allarmi tbody td .col-xs-1{
+		padding-left: 10px;
+	}
+	.DettInf{overflow-x:auto;}
+
+
+
+/** Gestione dispositivo app **/
+@media (max-width:991px){
+	#formGestioneDispositiviApp .ui-slider-scale li span:first-child{
+		top: -7px;
+	}
+}
+/** END  Gestione dispositivo app **/
+
+/*Pagina finanziamenti preammortamenti*/
+
+	#situazionePrestitiMutuiForm .row .col-xs-12.col-sm-offset-1 {
+     padding-left: 15px!important;
+	}
+#situazionePrestitiMutuiForm .row .col-xs-12{margin-bottom:20px;}
+
+/*END Pagina finanziamenti preammortamenti*/
+
+/**  CBILL  **/
+
+@media(max-width:991px){
+
+	#formCBill .row-height .col-sm-6:last-child .boxDefault{
+		padding-left: 0px;
+	}
+
+	#formCBill > .riquadro.clearfix > .section.clearfix > .row label {
+		margin-left:-15px!important;
+	}
+
+	#formCBill > .riquadro.clearfix > .section.clearfix > .row h3 {
+		margin-left:-15px!important;
+
+	}
+
+	#cbillConferma_3 .row-height .col-xs-12.col-sm-6:last-child .boxDefault {
+		padding-left: 0px!important;
+	}
+
+}
+
+@media(max-width: 991px){
+	#cbillRevoca-2 .boxDefault{
+		height: auto!important;
+	}
+}
+
+@media(max-width: 991px){
+	#cbillRevoca-3 .boxDefault{
+		height: auto!important;
+	}
+}
+
+/** END CBILL **/
+
+
+/*******************/
+/****CALENDARIO****/
+
+	.ui-datepicker-trigger {
+    	margin: -6px 0 0 -40px;
+    	cursor: pointer;
+	}
+
+
+@media(max-width:384px ){
+
+	#fondiOrdiniElencoFrom #dtDataA{
+		margin-left: 22px;
+    	margin-top: 10px;
+	}
+
+
+}
+
+
+
+
+	/*********/
+	/* FORM */
+
+
+	.form-control{
+		padding: 6px 16px 7px 7px;
+		height: 40px;
+		border:1px solid #DADEE1;
+	}
+
+	select.form-control {
+		height: 40px;
+		background: #fff url(/HT/fe/img/select_down.gif) no-repeat 96% center;
+		background-position: calc(100% - 12px)  center;
+	}
+	.ui-combobox{height:40px;}
+	.ui-combobox input{height:38px;}
+
+	.form-group label,.form-horizontal .control-label {
+		//padding-bottom: 10px;
+		//padding-top: 10px;
+		color: #202D50;
+	}
+
+.selezioneCC{margin:0 -20px;}
+#formTrasferimento .section{margin-left:-20px;margin-right:-20px;padding:20px;}
+.CCselezionato #numeri span{width:100%;float:left;}
+#mainContent .riquadro .tabellaSelezioneCC, #mainContent .riquadro .tabellaSelezioneCarte, .ui-dialog .tabellaSelezioneCC, .ui-dialog .tabellaSelezioneCarte,#mainContent .selezioneCC{padding: 23px 20px 0 20px;}
+.CCselezionato #numeri span{margin-right:0;}
+.CCselezionato span{margin:0;}
+.CCselezionato .btnSelezioneCC{margin-right:-10px;}
+
+#mainContent .riquadro .tabSelezioneCC .table tbody > tr:active td { background: #7884a2; color: #fff; }
+.CCselezionato > .col-sm-6,.CCselezionato > .col-sm-6:first-child{width:100%;}
+.outerWrapperTab .boxDefault,.boxDefault.importiBox{margin-right:0;}
+.col-sm-offset-3{margin-left:0;}
+.outerWrapperTab .boxDefault{padding:0 20px 20px;border-right:0;}
+.outerWrapperTab .boxDefault:not(.importiBox) .row span{width:45%;margin-left:5%;}
+.outerWrapperTab .boxDefault h3{margin-top:22px;margin-bottom:10px;}
+.outerWrapperTab{margin-left:-20px;margin-right:-20px;padding-right:35px;}
+.outerWrapperTab .margin-bottom-xs-10{margin-bottom:0;}
+.section .row + .row-height  .col-sm-6:first-child .boxDefault{border-bottom:0;}
+.innerWrapperTab{margin-right:-20px;}
+.innerWrapperTab ul li{padding:15px 0;}
+.innerWrapperTab ul li a{font-size:10px;padding:8px 8px}
+.outerWrapperTab .row-height .boxDefault{border-right:0}
+
+
+
+/*Calendario con icona*/
+.datepicker.form-control.floatl-marginr10.wauto.hasDatepicker + .ui-datepicker-trigger {
+    margin: 11px 0 0 -40px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*Pagina Voucher*/
+
+	.vincola_box{
+		width: 40px;
+    	height: 40px;
+    	padding-top: 12px;
+	}
+
+
+	.vincola_box.vincola_boxSingle{
+		margin-top:-10px;
+		margin-right:5px;
+		font-size:26px;
+		padding: 3px;
+	}
+
+
+
+	#divAggiungi .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(3) {
+		margin: 10px 10px 0 68px;
+	}
+
+	#divAggiungi .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(4) {
+		margin: 10px 10px 0 10px;
+	}
+
+	#divAggiungi .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(5) {
+		margin: 10px 0 0 10px;
+	}
+
+	.form-group.clearfix .floatl.margin-top5.col-xs-12{
+		position: static;
+		bottom: 0px;
+		left: 0px;
+}
+
+
+#divAggiungi .floatl.margin-top5.margin-top-xs-10.margin-left-xs-10.clear-padding.col-sm-1 {
+    width: 10px;
+    margin-left: 6px;
+    margin-top: 20px;
+}
+
+
+@media (min-width: 320px) and (max-width: 460px) {
+
+	input[type='text'].vincola {
+    	width: 100%;
+	}
+}
+
+@media (min-width: 461px) and (max-width: 767px) {
+
+	input[type='text'].vincola {
+    	width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	input[type='text'].vincola {
+		width: 100%;
+	}
+
+	#divAggiungi .floatl.margin-top5.margin-top-xs-10.margin-left-xs-10.clear-padding.col-sm-1 {
+    	margin-left: 30px;
+	}
+}
+/* END Pagina Voucher*/
+
+
+/** Archivio **/
+
+	#formPostaPersonale .col-xs-12.cardbox-border h3{
+		text-align: left;
+		padding-left:0;
+	}
+
+	#formPostaPersonale .col-xs-12.cardbox-border{
+		padding:15px;
+	}
+
+	@media (max-width: 380px){
+		#formPostaPersonale  .form-field-input.col-xs-12.col-sm-4:last-child div:first-child{
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		#formPostaPersonale  .form-field-input.col-xs-12.col-sm-4:last-child .margin-left20.floatl{
+			margin-left: 0px!important;
+			width: 100%;
+		}
+	}
+/** End Archivio**/
+
+/* Richiedi appuntamento */
+	@media (max-width: 991px){
+		#formRichiestaAppuntamento1 #contatti{
+    		height: 40px;
+    		font-size: 10px!important;
+    		top:-40px;
+		}
+	}
+/* END Richiedi appuntamento */
+
+
+/** Sicurezza YouWeb **/
+
+	@media(max-width:500px){
+
+		#tabSicurezza{
+			overflow-x: auto;
+		}
+
+		.sicurezzaInfo #tabs1 ul li {
+    		width: 120px;
+		}
+
+		.sicurezzaInfo #tabs1 ul {
+    		width: 500px;
+		}
+
+	}
+
+/** End Sicurezza YouWeb **/
+
+
+/** Il tuo profilo step 3**/
+	#formRichiediDispositivoSicurezza #contatti{
+    	height: 40px!important;
+    	    margin: -3px 0 0 -4px!important;
+	}
+
+	@media(min-width:320px) and (max-width:332px){
+		#formRichiediDispositivoSicurezza #email{
+    		width: 200px;
+		}
+	}
+/** END Il tuo profilo step 3**/
+
+/** Ultime Disposizioni **/
+@media(max-width: 991px){
+		#formUltimeDisposizioni
+	.form-field-input.col-sm-6.col-xs-12:nth-child(2) .ui-datepicker-trigger{
+		margin: -6px 15px 0 -40px;
+	}
+}
+/** END  Ultime Disposizioni **/
+
+/* Pagina Vincola */
+@media (min-width: 331px) and (max-width: 550px){
+
+	.col-xs-12.col-sm-9.floatl > .margin-left10.floatl.clearFloat.margin-bottom10   .vincola_box:nth-child(7){
+		clear: left;
+	}
+
+	.col-xs-12.col-sm-9.floatl > .margin-left10.floatl.clearFloat.margin-bottom10   .vincola_box:first-child{
+		margin-top:0 !important;
+	}
+
+	.col-xs-12.col-sm-9.floatl > .margin-left10.floatl.clearFloat.margin-bottom10   .vincola_box{
+		margin: 10px 5px 0 5px !important;
+	}
+
+}
+#contoDepositoFrom{margin-left:-20px;margin-right:-20px;float:none;}
+#contoDepositoFrom .col-sm-5, #contoDepositoFrom .col-sm-7{padding-left:20px;padding-right:20px;width:100%;}
+
+/* END Pagina Vincola*/
+/*.row {
+    margin-right: 0;
+    margin-left: 0;
+}*/
+#formMovimentiConto2, #situazionePrestitiMutuiForm, #formDettaglioInteressiConto, #listaContiAppoggio, #formUltimeDisposizioni, #formContoDepositoVincola{margin-top:35px;}
+
+#formMovimenti #dataInizio,#formMovimenti #dataFine {
+	margin-bottom:15px;
+}
+
+
+/*ICONE */
+
+.btnAggiungiBeneficiario,.btnEditCheck{
+	width:40px;
+	height: 40px;
+    background-position: 10px 7px;
+}
+
+/*END ICONE*/
+/*PANNELLO CONTROLLO */
+
+#tableFormWebsafe label{line-height:20px;margin-left:5px;padding-top:0;}
+#tableFormWebsafe .col-xs-12.margin-top5 .col-xs-11{max-width: 255px;float:left;}
+#tableFormWebsafe .col-xs-11:first-child,#datiAddebito .col-xs-11:first-child,#inputAddebito .col-xs-11:first-child,#datiMassimali .col-xs-11:first-child, #inputMassimali .col-xs-11:first-child,#datiGeosafe .col-xs-11:first-child, #inputGeosafe .col-xs-11:first-child,#datiFamilysafe .col-xs-11:first-child, #inputFamilysafe .col-xs-11:first-child{width:100%;}
+#tableFormWebsafe .col-xs-1,#datiWebsafe .col-xs-1,#datiAddebito .col-xs-1,#inputAddebito .col-xs-1,#datiMassimali .col-xs-1, #inputMassimali .col-xs-1,#datiGeosafe .col-xs-1, #inputGeosafe .col-xs-1,#datiFamilysafe .col-xs-1, #inputFamilysafe .col-xs-1{position: absolute;right:0;padding-right:0!important;}
+#tableFormWebsafe .ui-datepicker-trigger{margin:-5px 30px 0 -36px;}
+#inputFamilysafe label{padding-top:14px;}
+.imgGeosafe label{text-align: center}
+#mainContent #inputMassimali .col-sm-6:nth-child(even) label{margin-left:0;}
+/*Ricarica telefonica*/
+	#formRicaricheTelefoniche .form-group .form-field-input.col-sm-3.col-xs-12{
+		width: 100%!important;
+	}
+
+	#formRicaricheTelefoniche .form-group .form-field-input.col-sm-9.col-xs-12{
+		width: 100%!important;
+	}
+
+	@media(max-width: 330px){
+		.ricaricaCellulare + div {
+			width: 130px;
+		}
+	}
+
+	@media(max-width:424px){
+		#formRicaricheTelefoniche #divHelp h1 {
+			margin-top: -70px;
+		}
+	}
+/*END Ricarica telefonica*/
+
+/** Bollettino postale in bianco **/
+	#ico-documenti{margin-left:20px;margin-top:-5px;position: relative}
+
+	@media(max-width: 991px){
+		#postaleEsito-4{
+			margin-left: -15px;
+		}
+	}
+
+/** END Bollettino postale in bianco **/
+
+
+/*Bollettino postale premarcato*/
+#formBollettinoPostale .clearfix>.form-field-input.col-xs-12.col-sm-3{
+	padding-left:0px;
+	width: 100%;
+}
+
+#formBollettinoPostale .form-group> .form-field-input.col-xs-12.col-sm-3{
+	width:50%;
+}
+/* END Bollettino postale premarcato*/
+
+
+/*Accredito Stipendio*/
+
+	@media(max-width: 991px){
+		#boxIndirizzoDatoreLavoro .bs-example > .form-group > .form-field-input.col-xs-12.margin-bottom10 >
+		.form-field-input.col-sm-4.col-xs-8 {
+			padding-top: 10px;
+		}
+	}
+
+	#formAccreditoStipendio .form-field-input.col-xs-6 .control-label{
+	 	padding-top:1px;
+	}
+
+	#formAccreditoStipendio .form-field-input.col-xs-11.clear-padding{
+		padding-left: 12px;
+	}
+
+
+
+/*END Accredito Stipendio*/
+
+
+/**RICARICHE TELEFONICHE :  SELEZIONA TAGLIO RICARICA**/
+	#formRicaricheTelefoniche .imgLabel.btn.select-button{
+		min-width: 40px!important;
+		min-height: 40px!important;
+		width: 40px!important;
+		height: 40px!important;
+	}
+
+		#formRicaricheTelefoniche .imgLabel.btn.select-button:nth-child(1n + 4){
+		padding: 2px 10px;
+	}
+
+	#formRicaricheTelefoniche .imgLabel.btn.select-button:nth-child( -n+3 ){
+		padding: 2px 10px;
+	}
+/** END RICARICHE TELEFONICHE :  SELEZIONA TAGLIO RICARICA**/
+
+/** Il mio profilo **/
+	@media(max-width:991px){
+		.mdTableMyProfile{	display:none;   }
+		.xsTableMyProfile{ 	display: block; }
+
+		.myProfileTable{
+		  	width: 100%;
+		  	overflow-x: auto;
+		}
+	}
+
+/**END  Il mio profilo **/
+
+
+/** FIX Ricarica Automatica **/
+
+
+
+@media(min-width: 320px) and (max-width: 459px){
+
+	#formAutoricaricaTempo .row, .main.row {
+		margin-bottom: 15px!important;
+		margin-left: -15px;
+	}
+}
+
+@media(min-width: 460px) and (max-width: 992px){
+
+	#formAutoricaricaTempo .row, .main.row {
+		margin-bottom: 33px!important;
+		margin-left: -15px;
+	}
+}
+
+
+
+
+
+@media(min-width: 443px) and (max-width: 991px){
+
+	#formAutoricaricaSoglia .row, .main.row {
+    	margin-bottom: 33px;
+    	margin-left: -15px;
+	}
+}
+
+@media(min-width: 320px) and (max-width: 442px){
+
+	#formAutoricaricaSoglia .row, .main.row {
+    	margin-bottom: 0px;
+
+	}
+}
+
+/** END  FIX Ricarica Automatica **/
+
+
+/** Contratti e proposte **/
+
+@media (max-width: 991px){
+	#confermaCPForm .col-xs-12 .form-field-input.col-xs-12.col-sm-6 .col-xs-12.col-sm-6:last-child{
+		margin: 10px 0 0 9px;
+	}
+}
+
+/** END Contratti e proposte **/
+
+/*Il mio calendario*/
+
+
+	#formIlMioCalendario .col-sm-6.col-xs-12:last-child{
+		margin: 10px 0 0 8px;
+	}
+#formIlMioCalendario .col-sm-4.col-xs-12.clear-padding-left.padding-right20,
+#formIlMioCalendario .form-field .col-sm-6.col-xs-12.clear-padding-left
+{margin-bottom:10px;}
+#formIlMioCalendario .form-field .col-sm-6.col-xs-12.clear-padding-left input[type="text"],
+#formIlMioCalendario .form-field .col-sm-6.col-xs-12 input[type="text"]
+{width:87%!important;}
+/*END IL MIO CALENDARIO*/
+
+
+/** SCARICO CERTIFICATO **/
+
+@media(min-width: 320px) and (max-width: 369px) {
+
+	#formOtpSms .form-field.col-sm-6.col-xs-12 > .col-xs-12.col-sm-5 > input{
+		padding: 9px 8px 7px 8px;
+	}
+
+	#formOtpSms .form-field.col-sm-6.col-xs-12 > .col-xs-9.margin-bottom-xs-10.col-sm-3{
+		width: 186px;
+	}
+}
+
+@media (max-width:991px){
+	#formOtpSms .form-field.col-sm-6.col-xs-12:last-child{
+		width: 330px;
+		margin-top: 30px;
+	}
+}
+
+/**END  SCARICO CERTIFICATO **/
+
+/*carte */
+
+/*#mainContent .riquadro .table tr td.oRight, #mainContent .riquadro .table tr th.oRight{text-align:left!important;}*/
+
+/* Ricarica Mediaset Premium*/
+#formRicaricaMediaset #taglioRicarica{
+	height: 40px!important;
+}
+
+@media (max-width:386px) {
+	#formRicaricaMediaset {
+		float:left!important;
+	}
+}
+
+
+@media(max-width: 991px){
+	#premium_4 .section.clearfix .row > .col-xs-12.col-sm-6 > .boxDefault{ margin-left:-15px; }
+	#premium_4 + .bs-example.form-horizontal > .col-xs-12.clear-padding > .form-field-resume{ margin-left:-15px; }
+}
+
+/*END Ricarica Mediaset Premium*/
+
+
+/*GENERICO FORM*/
+
+.form-field-input > .control-label{
+	/*padding-top:18px;*/
+	padding-bottom: 2px;
+}
+
+.form-field-input >  label{
+	/*padding-top:18px;*/
+	padding-bottom: 2px;
+}
+
+.form-group label{
+	/*padding-top:18px;*/
+	padding-bottom: 2px;
+}
+
+.form-field > .control-label{
+	/*padding-top:18px;*/
+	padding-bottom: 2px;
+}
+
+/*END GENERICO FORM*/
+
+/* slider*/
+#handle_giornoRicarica1 + .ui-slider-scale li:nth-child(7) span.ui-slider-label{left:-20px;}
+#mainContent .sliderContainer {width:100%;height:auto;}
+.outerWrapperTab .boxDefault.importiBox{margin-right: 0}
+#mainContent .outerWrapperTab .boxDefault{min-height: 0}
+.section .col-sm-6:first-child .innerBoxWhite,.col-sm-6 .boxDefault{
+		border-right:0;
+}
+.col-sm-6:last-child .boxDefault{padding-left:0!important;}
+.outerWrapperTab .col-sm-6 .boxDefault.importiBox.inside,.outerWrapperTab .boxDefault.inside.inside-full-height{padding-left:20px!important;padding-right:20px!important;}
+.row-height .col-sm-6:last-child .boxDefault{padding-left:35px;}
+#trGiornoRicarica1,#trGiornoRicarica2{width:100%;}
+#formAutoricaricaTempo .section,#formAutoricaricaTempo .section .form-group,#formAutoricaricaTempo .section .sliderContainer{padding-right:0!important;}
+#formAutoricaricaSoglia .col-sm-6 .vincola_box:first-child{margin-left:14px;}
+#datiAddebito .form-field-resume .form-field-resume, #datiMassimali .form-field-resume .form-field-resume,#inputAddebito .form-field-resume .form-field-resume{padding-right:15px!important;padding-left: 15px!important}
+/*trasferimento conti */
+/*.innerSection .verticalAlignMultipleColumns .col-sm-45:first-child{margin-bottom: 30px}*/
+#mainContent #tdLabelCartaK3{padding-left:0;}
+#trCartaConto, #trTesto{padding-right:0!important;}
+#mainContent #formAutoricaricaTempo .section .form-group{margin:0;padding-right:15px!important;}
+#formRicaricheTelefoniche .form-field-resume.col-xs-12.margin-bottom-xs-10,#mainContent #formRicaricheTelefoniche .col-sm-6{padding:0;}
+/*Bollettino postale premarcato*/
+#formBollettinoPostale .clearfix> .form-field-input.col-xs-12.col-sm-4 {padding-right: 0;padding-left: 0;}
+#formFreccia .form-field-input.col-xs-12.col-sm-3,#formFreccia .form-field-input.col-xs-12.col-sm-9{width:100%;}
+
+@media(min-width:768px ){
+#formFreccia .col-sm-offset-1.col-xs-7{margin-left:0;}
+}
+#formAutoricaricaSoglia .form-group.col-sm-7{padding-left:0;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr th,#mainContent .riquadro  .table.allarmi.tabellaBlu tr td{display:inline-block;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr th[data-th]{display:none;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td{width:100%;}
+#mainContent #formAllarmiRicarica  .riquadro  .table.allarmi.tabellaBlu tr td,
+#mainContent #formAllarmiBonifici  .riquadro  .table.allarmi.tabellaBlu tr td {min-height:80px;}
+
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td]{font-weight:600;min-height:50px!important;width:33%;margin-top:20px;text-align:left!important;padding-bottom:50px;height:auto;}
+/*#mainContent #formAllarmiTitoli .riquadro  .table.allarmi.tabellaBlu tr td, #mainContent #formAllarmiFondi .riquadro  .table.allarmi.tabellaBlu tr td[data-td]{margin-top:0;}*/
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr:last-child td[data-td]{padding-bottom:0;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td] input:after,
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td] input:checked:after
+{padding-left:20px;font-size: 12px;font-weight:600;width:70px;display: inline-block;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td] input:checked:after{position: relative;top:-12px;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td = 'Sms'] input:after{content:'Sms'}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td = 'Email'] input:after{content:'E-mail'}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td[data-td = 'App'] input:after{content:'App'}
+#mainContent #formAllarmiRicarica .riquadro  .table.allarmi.tabellaBlu .col-xs-5,
+#mainContent #formAllarmiBonifici .riquadro  .table.allarmi.tabellaBlu .col-xs-5
+{width:100%;padding-bottom:15px;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu .col-xs-3,#mainContent .riquadro  .table.allarmi.tabellaBlu .col-xs-2{width:40%;}
+#mainContent  #formInfoCarte #cardbox-wrapper .descrizione,#mainContent  #allarmiDossier #cardbox-wrapper .descrizione,
+#mainContent  #formIndiciCambiAllarmi #cardbox-wrapper .descrizione,
+#mainContent  #formAllarmiBonifici #cardbox-wrapper .descrizione,
+#mainContent  #formAllarmiRicarica #cardbox-wrapper .descrizione,
+#mainContent #formContoAllarmi #cardbox-wrapper .descrizione,
+#mainContent #formAllarmiDossier #cardbox-wrapper .descrizione,
+#mainContent #formIndiciCambiAllarmi  .descrizione,
+#formAllarmiTitoli .descrizione
+{display:none;}
+#formAllarmiBonifici,#formAllarmiRicarica,
+#formInfoCarte,#formContoAllarmi .actions,
+#formAllarmiDossier .actions,
+#formIndiciCambiAllarmi .actions
+{margin-bottom:50px;}
+#formIndiciCambiAllarmi .actions{margin-top:40px;}
+#formAllarmiRicarica  .cardbox-border input[type='image'],
+#formAllarmiBonifici .cardbox-border input[type='image'],
+#formInfoCarte .cardbox-border input[type='image'],
+#formAllarmiDossier .cardbox-border input[type='image']
+{position: relative;top:-55px;}
+
+#formIndiciCambiAllarmi .cardbox-border input[type='image']{
+position: relative;top:-35px;
+}
+#formAllarmiRicarica .titleSection,
+#formAllarmiBonifici .titleSection,
+#formInfoCarte .titleSection,
+#formAllarmiDossier .titleSection,
+#formContoAllarmi .titleSection,
+#formIndiciCambiAllarmi .titleSection
+{margin-left:5px;}
+#formAllarmiRicarica .DettInf,
+#formAllarmiBonifici .DettInf,
+#formInfoCarte .DettInf,
+#formAllarmiDossier .DettInf,
+#formIndiciCambiAllarmi .DettInf
+{overflow:visible;}
+/*#formIndiciCambiAllarmi .titleSection{position:relative;top:35px;left:5px;}*/
+#mainContent  #formAllarmiBonifici .col-xs-7.cardbox-margin .pull-left,
+#mainContent  #formAllarmiRicarica .col-xs-7.cardbox-margin .pull-left,
+#mainContent #formInfoCarte .col-xs-7.cardbox-margin .pull-left,
+#mainContent #formContoAllarmi .col-xs-7.cardbox-margin .pull-left,
+#formAllarmiDossier .col-xs-7.cardbox-margin .pull-left,
+#formIndiciCambiAllarmi .col-xs-7.cardbox-margin .pull-left,
+#formAllarmiTitoli .col-xs-7.cardbox-margin .pull-left
+{float:right!important;}
+#formAllarmiTitoli .cardbox-border .row:last-child .col-xs-5 strong:after{content:'App';}
+#mainContent .tabellaBlu.table.allarmi .col-xs-6{padding-left:15px;padding-right:15px;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu td{height:auto;}
+#mainContent .riquadro  .table.allarmi.tabellaBlu tr td, #mainContent .riquadro  .table.allarmi.tabellaBlu tr th{padding-bottom:5px!important;}
+#mainContent #formAllarmiRicarica  .table.allarmi.tabellaBlu tr th:first-child,#mainContent #formAllarmiBonifici  .table.allarmi.tabellaBlu tr th:first-child{padding-bottom:15px!important;}
+#mainContent .tabellaBlu.table.allarmi .col-xs-6{padding-right:0;padding-left:0;}
+#mainContent #formContoAllarmi .tabellaBlu.table.allarmi .col-xs-6{padding-bottom:0;}
+#mainContent .tabellaBlu.table.allarmi label{margin-top:0;}
+#mainContent #formContoAllarmi  .tabellaBlu.table.allarmi .col-xs-5{width:50%;}
+#formAllarmiTitoli .form-field-input.col-xs-4,#formAllarmiFondi .form-field-input.col-xs-4{width:100%;}
+#formAllarmiFondi .form-field-input.col-xs-4 .col-xs-4{width:33.33%;}
+#mainContent #formAllarmiTitoli label.col-xs-3:first-child{width:100%;}
+#mainContent #formAllarmiTitoli .col-xs-3 input[type="text"],#mainContent #formAllarmiTitoli .col-xs-3 select,
+#mainContent #formAllarmiFondi .col-xs-3 input[type="text"],#mainContent #formAllarmiFondi .col-xs-3 select
+{margin-bottom:10px;}
+#mainContent #formAllarmiTitoli .col-xs-3,#mainContent #formAllarmiFondi .col-xs-6 .col-xs-6{clear:both}
+#mainContent #formAllarmiFondi .col-xs-6 {width:40%;clear:both;}
+#mainContent #formAllarmiFondi tr:last-child .col-xs-6{clear:none;}
+#mainContent #formAllarmiFondi .col-xs-6 .col-xs-6 {width:100%;}
+#mainContent #formAllarmiFondi .col-xs-6 .col-xs-4:first-child{width: 100%;text-align:left;}
+#mainContent #formAllarmiFondi .riquadro  .table.allarmi.tabellaBlu tr td{padding-bottom:0!important;}
+#mainContent #formAllarmiTitoli label + .col-xs-3,#mainContent #formAllarmiTitoli label.col-xs-3{clear:none;}
+#mainContent #formAllarmiTitoli .col-xs-2{text-align:left;width:15%;}
+#formAllarmiTitoli .form-field-input.col-xs-4 input[type="submit"],
+#formAllarmiFondi .form-field-input.col-xs-4 input[type="submit"]
+{height:40px;}
+#formApriTol  .col-xs-6,#lineeTol .col-xs-6{width:100%;}
+#formApriTol .col-xs-12 .floatl{margin-bottom:10px;}
+#formApriTol .innerBoxWhite{padding-right:0;}
+#formApriTol .col-xs-6:first-child{padding-right: 15px!important}
+#formApriTol .col-xs-12 .innerBoxWhite .col-xs-12 .floatr{clear:both;float:none;}
+#formApriTol .col-xs-12 .innerBoxWhite .col-xs-12 .floatr input[type="checkbox"],#formApriTol .col-xs-12 .innerBoxWhite .col-xs-12 .floatr img{float:left;margin-top:2px;margin-left: 0;
+    margin-right: 10px!important;}
+
+/*#mainContent #formAllarmiTitoli .col-xs-2{text-align:left;width:100%;}
+#mainContent #formAllarmiTitoli .col-xs-3 select,#mainContent #formAllarmiTitoli .col-xs-2 input{width:50%!important;margin-bottom:20px;}*/
+
+#mainContent .divSinistra.col-xs-6 ,#mainContent .divDestra.col-xs-6{width:100%;}
+.contentInterno #best5 #gbox_best5Table, .contentInterno #best5 #gbox_best5Table div,.contentInterno #best5 #gbox_best5Table table,
+.contentInterno #gbox_worst5Table,.contentInterno #gbox_worst5Table div, .contentInterno #gbox_worst5Table table,
+.contentInterno #gbox_I_NEWSTable,.contentInterno #gbox_I_NEWSTable div, .contentInterno #gbox_I_NEWSTable table,
+.contentInterno #gview_topVolumi_Table, .contentInterno #gview_topVolumi_Table div, .contentInterno #gview_topVolumi_Table table
+{width:100%!important;}
+#best5 #gbox_best5Table .ui-jqgrid-hbox, #gbox_worst5Table .ui-jqgrid-hbox{padding-right:0!important;}
+/*#tableListaAdeguataVerifica,.dataTables_wrapper{overflow-x:auto;display:block;}*/
+.dataTable th.sorting{padding-left:15px!important;}
+.dataTable th.sorting_asc {padding-left:15px!important;}
+.dataTable th.sorting_desc {padding-left:15px!important; }
+.selezioneCC .table>thead>tr>th, .selezioneCC .table>tbody>tr>th, .selezioneCC .table>tfoot>tr>th, .selezioneCC .table>thead>tr>td, .selezioneCC .table>tbody>tr>td, .selezioneCC .table>tfoot>tr>td {
+    padding: 0 10px;
+}
+#mainContent .row .col-sm-6.col-xs-12.margin-bottom-xs-10{padding-left:0;}
+#mainContent .row .col-xs-12 label.col-xs-5 + .col-xs-7{padding-left:22px;}
+/* investimenti*/
+#datiGenerici .col-xs-12.margin-bottom5{margin-bottom:15px;}
+#datiGenerici .col-height:first-child .boxDefault{padding-right:0;}
+#datiGenerici .boxDefault.clearfix.content.col-xs-12{height:auto!important;}
+#datiGenerici .col-sm-6.col-xs-12.col-height{margin-bottom:20px;}
+.ui-dialog .ui-dialog-title{font-size:12px;}
+.ui-dialog.ui-widget{max-width: 100%}
+#simuForm .form-field .col-xs-4,#simuForm .form-field .col-xs-6{width:100%;}
+#simuForm .btn.button:first-child,#fondiPreferitiForm .btn.button:first-child{margin-left:0;}
+.contentFull #formHeadlines .actions{margin-top:19px!important;}
+.contentFull #formHeadlines .actions input{background-color: #dadee1;border-radius:0;height:40px;margin-left:-20px;padding-left:20px;padding-right:20px;background-image:none;}
+.contentFull #formCompraVendi .boxContent{margin-left:0;}
+@media(max-width:450px ){
+.divSinistra .contentInterno.padding-top20 .col-xs-6{width:100%;}
+}
+#formModificaSimulato .col-xs-4{width:100%;}
+#formInvestimenti .col-xs-6{width:100%;}
+
+#formInvestimenti .cartaSelezionata span{margin-bottom:0;}
+.OUT2ColDiff.form-horizontal .form-field-resume.col-xs-4 {width:100%;margin-bottom:20px;}
+#formOrdiniDossier .form-field-input.col-xs-6{width:100%;}
+#formOrdiniDossier .form-field-input.col-xs-4{width:100%;}
+#formMovimentiDossier .btn.button[value='Ricerca']{float:right;margin-top:20px;}
+@media(max-width: 500px){
+ .pager{top:-20px}
+}
+#formApriTol .col-xs-6:first-child .innerBoxWhite {border-right:0}
+#formApriTol input[type="submit"]{top:0;position: relative}
+#mainContent #fondiRicercaForm .col-xs-12 .col-sm-8,
+#mainContent #formAllarmiFondi .col-xs-12 .col-sm-8 {
+    padding-right: 0;margin-bottom:20px;width:100%;
+}
+#mainContent #fondiRicercaForm .col-xs-12 .col-sm-4,
+#mainContent #formAllarmiFondi .col-xs-12 .col-sm-4  {
+  margin-bottom:10px;width:100%;
+}
+#mainContent #fondiRicercaForm .pull-right,
+#mainContent #formAllarmiFondi .pull-right
+{margin-left:0;}
+form[name='fondiSottoscrizioneForm'] .btn{margin-top:20px;}
+
+
+/* gestione categorie*/
+#formGestioneCategorie  .control-label{letter-spacing: 0}
+#formGestioneCategorie #divFrecce a{background: url('/HT/fe/img/causali.png') no-repeat -90px 0;width:30px;height:30px;display: inline-block;background-size: cover}
+#formGestioneCategorie #divFrecce a:first-child{background: url('/HT/fe/img/causali.png') no-repeat -30px 0;width:30px;height:30px;display: inline-block;margin-bottom:0px;background-size: cover}
+#formGestioneCategorie #divFrecce{padding: 10px 20px 0 10px!important;}
+#formGestioneCategorie .col-sm-1{width: 100%;text-align: center}
+
+/* elenco vincoli in essere*/
+#formContoDepositoVincola + div .descrizione{text-align: left}
+#formContoDepositoVincola + div .descrizione span.text-center{padding-left:15px!important;}
+
+#formCambioPinCarta #agenzia,#formCambioPinCarta #intestazione,#formCambioPinCarta #conto{float:right;}
+#formCambioPinCarta #intestazione,#formCambioPinCarta #conto{text-align: right}
+
+/* F24 */
+@media(max-width:500px){
+	#tabIntro{overflow-x: auto;}
+	.istruzf24Info #tabs {min-height: 56px;}
+}
+
+
+@media(min-width:768px){
+ #mainContent  div.ripetiMobile.visible-xs{
+  display:block!important;
+ }
+}
+
+/** Gestione Secondo bottone Mobile **/
+@media(max-width: 420px){
+
+	.pull-right.margin-bottom20 > form{
+		float:right!important;
+	}
+	#formScaricaCarta,#formPannelloRapporti.floatl{float:left!important;}
+	#formPannelloRapporti.floatl + input[type='button']{margin-right: 0!important}
+	.pull-right.margin-bottom20 > form > input{
+		margin-right: 0px!important;
+		margin-left: 20px;
+		/*float:right;*/
+	}
+
+	.pull-right.margin-bottom20 > input{
+		margin-right: 0px!important;
+		margin-left: 10px;
+		/*float:right;*/
+	}
+	/*.pull-right.margin-bottom20 > input.execute{
+		margin-right: 15px!important;
+	}*/
+	.pull-right.margin-bottom20 .actions > input {
+		float:right;
+		margin-left: 20px;
+		margin-right: 0px!important;
+	}
+	.messaggio.pull-right.margin-bottom20 .actions > input{
+		float:none;
+	}
+	.pull-right.margin-bottom20 .actions > input[value="Torna a Pagamento bollo auto"]{
+		letter-spacing: 0;
+		padding: 9px 20px 7px!important;
+	}
+
+
+	.actions.pull-right input{
+		float:right;
+	}
+	#fondiSwitchForm .actions.pull-right input{
+		float:left;
+	}
+
+	.pull-right input{
+		/*float:right;*/
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.pull-right.margin-bottom20 .btn.btn-primary.btn-annulla{
+		margin-right: 0px!important;
+	}
+
+	.pull-right form {
+		float:right;
+	}
+	.btn-primary,.btn-primary:hover,.btn-primary:visited,
+	.ui-accordion-content input.btn,.ui-accordion-content input.btn:hover,.ui-accordion-content input.btn:visited,
+	.ui-accordion-content .XXL,.ui-accordion-content .XXL:hover,.ui-accordion-content .XXL:visited,.btn-innerBox,
+	.innerBoxWhite input[type="button"], .form-group input[type="submit"],#mainContent #dialogIban input[type="button"],#mainContent #dialogAbiCab input[type="button"],
+	#mainContent .pull-right input[type="button"] + input[type="button"][value="Modifica"]:last-child,
+	.ui-dialog-buttonset .ui-button,
+	#dialogRecapito input[type="submit"][value="Modifica"],
+	.ui-dialog.ui-widget #dialog-confirm input[type="button"][value="Conferma"],
+	.ui-dialog.ui-widget #disableAlert-confirm input[type="button"][value="Conferma"],
+	#formRicercaTitoli input.btn,
+	#formRicercaObbligazioni input.btn,
+	#formRicercaCW input.btn,
+	#formRicercaEtf input.btn,
+	#formBolloAuto input[value="Modifica"],
+	input[value="Modifica"],
+	input[value="Indietro"],
+    input[value="Torna indietro"]:not(:last-child),
+	input[value="Annulla"],
+	input[value="Cancella"],
+	input[value="Revoca"]:first-child,
+	input[value="Torna a Pagamento bollo auto"],
+	.btn-annulla,
+	.ui-dialog[aria-describedby='colchooser_I_TITPREF_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_RICERCA_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_TITDOS_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_ORD_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_MOVDOS_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_TITSIMU_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_fcPtf_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_fcDettPAC_Table'] .ui-dialog-buttonset button,
+	.ui-dialog[aria-describedby='colchooser_I_COMPVEN_Table'] .ui-dialog-buttonset button,
+	#formInvestimentiAllarmi .actions.pull-right input[type="button"],
+	#formApriTol input[value="Recedi"],
+	#fondiRicercaForm .pull-right a.btn,
+	#formRecuperoUser .pull-right.margin-bottom20 a:first-child:active,
+	#formRecuperoPin .pull-right.margin-bottom20 a:first-child:active,
+	.btn-default
+	{
+		padding: 9px 13px 7px 13px!important;
+   	 	letter-spacing: -0.1px;
+	}
+	.btn-default + .btn-primary:last-child {margin-left:0}
+	.innerWrapperTab ul li a{display:inline-block;text-align: center;padding:5px 8px;}
+	.innerWrapperTab ul li{padding:0}
+
+}
+
+@media(max-width: 818px){
+	.pull-right.margin-bottom20 input[value="Torna a bollettini"],
+	.pull-right.margin-bottom20 input[value="Ultime disposizioni"]{
+		float: right!important;
+		margin-left: 10px!important;
+		margin-right: 0px!important;
+	}
+
+}
+
+
+/** END  Gestione Secondo bottone Mobile **/
+
+#mainContent #formRicaricaCarta td.oRight{text-align: left!important}
+/* strong authentication*/
+.strong-auth .row {margin-left:-15px;margin-right:-15px;}
+#mainContent .modal-dialog .modal-body .riquadro h1{font-size:14px;margin-top:-46px;}
+#mainContent #helpDialog  .modal-body .riquadro#divHelp h1{margin-top: -66px;}
+.modal-dialog .strong-auth .link-help{margin-top:0;}
+.modal-dialog .modal-body,.modal-dialog .modal-header{padding:15px;}
+.modal-header .close{right:15px;}
+.strong-auth p.alignCenter{text-align:left!important;}
+.strong-auth a{display: inline-block}
+
+@media(max-width: 767px){
+
+.fullScreen.modal{background: #fff;z-index:9999999;}
+.fullScreen.modal .section,.fullScreen.modal .modal-body{position:static;}
+.fullScreen.modal .modal-dialog,.modal-content{height:100%;position: relative}
+.modal-dialog .modal-bottom{position: absolute;bottom:25px;width: 100%;padding:0 30px 0 0px}
+.strong-auth .link-help{margin-top:0;}
+}
+@media(max-height: 480px){
+#mainContent .row.alignCenter{margin-top:0px;}
+#mainContent .strong-auth .row{margin-bottom:0px;}
+.modal-bottom.no-position{position: relative;top:20px;}
+}
+/** Bonifico ordinario(revoca step 2) **/
+	@media(max-width: 991px){
+		#bonOrdinarioBox  .boxDefault{
+			/*margin-left:-15px;*/
+		}
+
+		#bonOrdinarioBox  .boxDefault:last-child{
+			height: auto!important;
+		}
+	}
+/** Bonifico ordinario(revoca step 2) **/
+
+
+/** Bonifico per detrazioni **/
+	@media (max-width: 991px){
+		#bonDet{
+			margin-left: -15px;
+		}
+	}
+/** END Bonifico per detrazioni **/
+
+
+/** GESTIONE BENEFICIARIO Riepilogo **/
+
+@media(max-width: 378px){
+	#formGestioneBeneficiari + .pull-right.margin-bottom20 input[value="Modifica"]{
+		float:right!important;
+	}
+
+	#formGestioneBeneficiari + .pull-right.margin-bottom20  .floatl{
+		float:none;
+	}
+}
+
+
+/** END  GESTIONE BENEFICIARIO Riepilogo **/
+
+/** Adeguata verifica **/
+@media(max-width:991px){
+	#cardbox-wrapper > .col-xs-12.cardbox-border > .descrizione .col-xs-12 .col-xs-9{
+		text-align: left;
+	}
+}
+/**END ADEGUATA VERIFICA**/
+
+/*************************************/
+/**********PAGINE PUBBLICHE**********/
+/***********************************/
+
+
+/** FAQ **/
+
+	#subCenter .newsRiquadro p{
+
+	}
+
+	@media (max-width: 991px){
+		#subCenter{
+			width:90%!important;
+    		margin: 8% 0% 0% 5%;
+		}
+	}
+	/** FAQ **/
+	#subCenter h1 ,#mainContentPub h1{
+		padding-top:35px;
+		padding-bottom:20px;
+		font-size: 20px
+	}
+
+	#mainContentPub .riquadro{padding-left:20px;padding-right:20px;}
+	#mainContentPub .ui-accordion{margin-left:-20px;margin-right: -20px;}
+	#mainContentPub .ui-accordion a{padding-left:0;padding-right:23px;}
+	#mainContentPub .contentLogin .riquadro{padding:0;}
+	#mainContentPub .accordion h3{padding-left: 20px}
+	#mainContentPub .accordion .ui-accordion-content{padding-left: 20px;padding-right:20px;}
+	#mainContentPub .row-height .col-xs-10.col-sm-12{padding-left:20px;}
+	#mainContent .row > .col-xs-5,#mainContent .row > .col-xs-12{padding-left:0;}
+	#mainContent #postaleEsito-4 .col-xs-12.col-sm-12{padding-left:15px;}
+	.section .col-sm-6:first-child .innerBoxWhite, .col-sm-6 .boxDefault, .col-xs-6 .boxDefault{padding-right:0;}
+	#mainContent #formMovimentiConto2 .row > .col-xs-12,
+    #mainContent #situazionePrestitiMutuiForm .row > .col-xs-12,
+    #mainContent #formMovimentiCarte .row > .col-xs-12
+	{padding-left:15px;}
+	#mainContent .cardbox-background .cardbox-border .col-xs-5{padding-left:10px;}
+	#mainContentPub .riquadro{width:86%;float:none;margin:20px auto;}
+	#mainContentPub .contentPagina{padding:20px 0;}
+	@media (max-width: 400px){
+	.ui-accordion .ui-state-default, #accordion .ui-widget-content .ui-state-default, #accordion .ui-widget-header .ui-state-default{padding-top:15px;}
+	}
+/**END  FAQ **/
+
+
+ /** LOGIN **/
+
+	@media(max-width:991px){
+
+		.contentLogin{
+			width: 100%;
+			height: auto;
+		}
+
+	.bgLoginForm{
+		height: auto;
+		width: 93%;
+		margin: 0 auto;
+	}
+
+	.loginTxt{
+		height: auto;
+		width: 80%;
+		border:1px solid #FFF;
+		margin: 0 auto;
+	}
+
+	.col-sm-7.col-sm-pull-5.loginTxt {
+		margin: 0 auto;
+		margin-bottom: 20px!important;
+	}
+
+	.row.bgLoginForm .col-sm-12:nth-child(2){
+		margin-top:40px;
+		margin-bottom: 30px!important;
+	}
+
+	.row.bgLoginForm .col-sm-12.hidden-xs{
+		display: none;
+	}
+
+}
+
+	@media (min-width: 768px) and (max-width: 991px){
+
+		.contentLogin .col-sm-push-7 {
+    		left: 0;
+    		width: 100%;
+		}
+
+		.contentLogin .col-sm-pull-5 {
+    		right:0;
+    		width: 80%;
+		}
+
+		 .contentLogin  .col-sm-7{
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.contentLogin  .col-sm-7, .contentLogin .col-sm-5.col-sm-push-7{
+			float: none;
+		}
+	}
+
+
+	@media (min-width: 992px){
+		.contentLogin  .col-sm-7{
+			float: right;
+		}
+	}
+
+
+
+
+   @media(min-width: 320px) and (max-width: 500px){
+   		.contentLogin .logoLogin {
+    		margin: 40px 0 30px 20px;
+   		}
+
+   		.contentLogin .textLogin {
+    		margin-left: 20px;
+		}
+
+		.contentLogin .textLogin h3 {
+   			margin-right: 15px;
+		}
+
+		.contentLogin .textLogin p:nth-child(3) {
+    		margin-right: 20px;
+		}
+		.textLogin .btn{
+			letter-spacing: -1px;
+		}
+	}
+	.popover{max-width: 320px!important;}
+ /** END LOGIN**/
+
+ /** ALTRE PAGINE PUBBLICA**/
+ /** Sicurezza YouWeb **/
+
+	@media(max-width:500px){
+
+		#mainContentPub #tabs .overflow{
+			overflow-x: auto;
+		}
+
+		.sicurezzaInfo #tabs1 ul li {
+    		width: 120px;
+		}
+
+		#mainContentPub #tabs ul {
+    		width: 620px;
+		}
+
+	}
+
+/** End Sicurezza YouWeb **/
+
+/** Recupera codice identificativo **/
+@media (max-width: 991px){
+	#formRecuperoUser .bs-example.margin20 .form-group.clearfix{
+		margin-left: -18px!important;
+	}
+}
+
+@media (max-width:991px){
+	#formRecuperoUser .pager.clearfix.pull-right{
+		top:71px!important;
+	}
+}
+/** END  Recupera codice identificativo **/
+
+/** RESET PIN **/
+@media (max-width:991px){
+	#formRecuperoPin .pager.clearfix.pull-right{
+		top:45px!important;
+	}
+}
+
+
+/** END RESET PIN**/
+
+
+/** Pagine pubbliche da 1 a 8 **/
+
+.tplPubTable tr td:first-child{
+	display:block;
+	width: 100%;
+}
+
+.tplPubTable tr td:last-child{
+	display:block;
+	width: 90%;
+}
+
+.tplPubTable img{
+	max-width: 100%;
+	height: auto;
+	display:block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+table.tplPubTable_7 {
+	width: 100%;
+}
+
+.tplPubTable_7 tr td{
+	display:block;
+	width: 100%;
+}
+
+.tplPubTable_7 img{
+	max-width: 100%;
+	height: auto;
+	display:block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+
+@media(max-width:486px){
+	.pull-right.azioni.margin-bottom20 input[value="Home"],
+	.pull-right.azioni.margin-bottom20 input[value="Le tue richieste"]{
+		float: right;
+		margin-left: 50px;
+		margin-right: 0px;
+	}
+}
+
+
+@media(max-width:587px){
+	.pull-right.azioni.margin-bottom20 input[value="Più tardi"],
+	.pull-right.azioni.margin-bottom20 input[value="Personalizza adesso"]{
+		float: right;
+		margin-left: 50px;
+		margin-right: 0px;
+	}
+}
+
+@media(max-width:545px){
+	.pull-right.azioni.margin-bottom20 input[value="Vai a YouWin"],
+	.pull-right.azioni.margin-bottom20 input[value="Vai alla Home"]{
+		float: right;
+		margin-left: 50px;
+		margin-right: 0px;
+	}
+}
+
+@media(max-width:516px){
+	.pull-right.azioni.margin-bottom20 input[value="Stampa"],
+	.pull-right.azioni.margin-bottom20 input[value="Vai alla Home"]{
+		float: right;
+		margin-left: 50px;
+		margin-right: 0px;
+	}
+}
+
+@media(max-width:660px){
+	.pull-right.azioni.margin-bottom20 input[value="Vai a YouShop Premium"],
+	.pull-right.azioni.margin-bottom20 input[value="Vai alla Home"]{
+		float: right;
+		margin-left: 50px;
+		margin-right: 0px;
+	}
+}
+
+/** END Pagine pubbliche da 1 a 8 **/
+
+/*bordo di separazione tra BLOCCHI YOUWEB richiesta UX*/
+
+
+/*FINE bordo di separazione tra BLOCCHI YOUWEB*/
+#formCancellazioneCategorie .table-responsive.tabSelezioneCarte{overflow-x:hidden;}
+/*RICHIESTA FINANZIAMENTO*/
+#divContenitoreImmagine.col-sm-2.hidden-xs + .col-sm-10.col-xs-12{width: 100%}
+.col-sm-offset-1 .contenitoreUploadFile{left:-8.33333333%;position: relative;}
+#contoDepositoFrom .col-sm-7{border-left:0;}
+#contoDepositoFrom{border-bottom:0;}
+#formUltimeDisposizioni .tabSelezioneMovimenti{overflow-x:auto;}
+#ultimeDisposizioni + .actions input[type="button"]{float:right;margin-right:0;clear: both}
+#situazionePrestitiMutuiForm + .section.clearfix.outerWrapperTab .row .col-xs-12 .innerWrapperTab{
+	margin-right: -15px;
+}
+.row.clear-margin-left{margin-left:0;margin-right:0;}
+#formBollettinoPostale .clearfix> .form-field-input.col-xs-12.col-sm-4:first-child{padding-right:0;}
+#formBuoniInps .floatl.margin-top5.col-xs-12{padding-left:15px;}
+/* overlayer costi e commissioni*/
+.wrapper-overCont{padding-left:10px;padding-right:10px;}
+.wrapper-overCont .col-sm-4{margin-bottom:10px;}
+
+.logoutText{margin-left: 20px;
+    margin-right: 20px;}
+.logoutContainer .logoutTestata p,.logoutContainer .logoutTestata h1,.logoutContainer .logoutTestata.sessioneScaduta h1{padding-left:20px;}
+.logoutContainer .logoutTestata .pull-right{padding-right:20px;}
+.logoutText{height:auto;padding-bottom:60px;}
+.col-sm-6.col-xs-12.col-height.paddLeft15{padding-left:0px!important;}
+
+/*#video{width: 1920px;height:1080px;}*/
+#video{display: none!important}
+#bgBodyPublic{background-size: 1680px 1680px}
+.contentLogin .row.bgLoginForm label span, .contentLogin .credenzialiPopOver{font-size:11px}
+.outerWrapperPubblic #logo-mobile{margin-left:-60px;}
+#formInserimento .col-sm-6.col-xs-12.col-prt-6{margin-bottom: 20px;}
+#formInserimento .form-group.clearfix.padding-top5 .form-field-input.col-sm-6.col-xs-12.clear-padding{padding-left:0;padding-right:0;}
+#mainContentPub #content2Col .col-xs-12.oCenter.margin-bottom10 a:first-child{margin-bottom:20px;display: inline-block}
+#cookie-bar a.x{right: 3px!important;}
+#formPuRapportiPredefiniti .col-xs-4{padding-left:0!important;}
+
+/* richiesta appuntamento*/
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-4,
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-8
+{width:100%;}
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-4{padding-right:0px;margin-bottom:20px;}
+#formRichiestaAppuntamento1 .form-group .form-field-input.col-xs-12 .form-field-input.col-xs-8{padding-left:0px;padding-right:0;}
+
+/*rimborso fondi */
+#mainContent form[name="fondiRimborsoForm"] .form-field-resume.col-xs-4,
+#mainContent form[name="fondiRimborsoForm"] .form-field-resume.col-xs-6,
+#mainContent form[name="fondiRimborsoForm"] .form-group.col-sm-12.col-lg-6 .col-xs-6,
+#mainContent form[name="fondiRimborsoForm"] .form-field-input.col-xs-4{width:100%;}
+
+
+/*sottoscrizione fondi */
+#fondiSottoscrizioneForm .selezioneCC.tabellaSelezioneCC .col-xs-6{width:100%;}
+#fondiSottoscrizioneForm .form-field-resume.col-xs-12.col-sm-6{padding-left:0!important;margin-top:0!important;}
+#fondiSottoscrizioneForm .bs-example .col-xs-6.col-md-4.col-lg-4{padding-left:0!important;width: 100%;margin-bottom:20px;}
+/*#fondiSottoscrizioneForm .actions.pull-right  a{float: right;margin-right:0;}*/
+#sceltaPic .col-xs-6.col-sm-6:first-child{padding-left:0;}
+/*#fondiSottoscrizioneForm .col-xs-12.col-sm-4{margin-bottom:20px;}*/
+#fondiSottoscrizioneForm .oRight{text-align: left!important}
+
+/*login tooltip */
+.credenzialiPopOver.popover img{display: none}
+.credenzialiPopOver.popover{width:250px!important;min-width:0;height:70px;}
+#mainContentPub #formRecuperoPin .pull-right.margin-bottom20{margin-left: 0}
+
+/* gestione categorie*/
+#causAssociabili,#causAssociate{height:40px!important;background: #fff url(/HT/fe/img/select_down.gif) no-repeat 96% center;padding: 6px 16px 7px 7px;}
+#formRiepilogoCartaConto input.btn
+{
+	position: relative;
+	margin-bottom: 30px;
+	font-size: 14px;
+	border:0;
+	padding: 9px 28px 7px 28px;
+	color:#fff;
+	background-color: #0e977f!important;
+	background-image:none;
+}
+#formRiepilogoCartaConto input.btn:hover:active{
+	background-color: #65b7a9!important;
+	box-shadow: none
+}
+
+#confermaCPForm .col-xs-12{
+	padding-right:0!important;
+}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4 input{width:100%;}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4:first-child{width:100%;}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4:first-child select{width: 90px;margin-right:15px;}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4:first-child input{width: 160px;margin-left:15px;}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4:nth-child(2){width:50%;}
+#formApriCC .form-horizontal .form-group.clearfix .form-field-input.col-xs-4:nth-child(3){width:30%;}
+#formMovimentiConto2 .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right,
+#formUltimeDisposizioni .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right,
+#formMovimentiCarte .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right,
+#formPostaPersonale .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right
+{text-align: left;width: 50%}
+#formMovimentiConto2 .float-xs-left,
+#formUltimeDisposizioni .float-xs-left,
+#formMovimentiCarte .float-xs-left,
+#formPostaPersonale .float-xs-left
+{float:none; margin-right: 5px; display: inline-block;  min-width: 25px;}
+#formContoDepositoVincola + div  .col-sm-5.col-prt-4,#formContoDepositoVincola + div  .col-sm-5.col-prt-4 + .col-sm-7{margin-left:0;border-bottom:0;}
+#formContoDepositoVincola .col-xs-3.pull-right.cardbox-top-btn-margin{padding-left:0!important;}
+#formUltimeDisposizioni .form-field-input.col-sm-6.col-xs-12:nth-child(3) .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right,
+#formUltimeDisposizioni .form-field-input.col-sm-6.col-xs-12:nth-child(3) .col-sm-6.col-xs-12.xs-align-right
+{width: 100%}
+#formUltimeDisposizioni .form-field-input.col-sm-6.col-xs-12:nth-child(3) .col-sm-6.col-xs-12.margin-bottom-xs-10.xs-align-right input,
+#formUltimeDisposizioni .form-field-input.col-sm-6.col-xs-12:nth-child(3) .col-sm-6.col-xs-12.xs-align-right input
+{width:100%!important;}
+#formUltimeDisposizioni .form-field-input.col-sm-6.col-xs-12:nth-child(3) .col-sm-6.col-xs-12.xs-align-right{text-align: left}
+#formIndietro{float:left!important;}
+#formIndietro input{margin-left:0;}
+#formInserimento .col-sm-4.col-xs-12.marginmeno5,
+#formInserimento .col-sm-4.col-xs-12.marginRight15,
+#formInserimento .form-field-input.col-xs-12.col-sm-4.marginmeno10,
+#formInserimento .form-field-input.col-xs-12.col-sm-4
+{padding-left:15px!important;margin-left:0;padding-right: 15px!important}
+#formInserimento .col-sm-4.col-xs-12.marginmeno5,#formInserimento .col-sm-4.col-xs-12.marginRight15{margin-bottom:20px;}
+.btnEdit{width: 40px;height: 40px;background-position: 10px 10px;}
+#bonificoOrdinarioBtn input{float:right;}
+#formInserimento .form-field-input.col-xs-12.col-sm-2.clear-padding.padding-left-xs-10{width:50%;}
+#formInserimento .form-field-input.col-xs-12.col-sm-2.clear-padding.padding-left-xs-10 + .form-field-input.col-xs-12.col-sm-3{width:50%;}
+#formInserimento .form-field-input.col-xs-12.col-sm-2.clear-padding.padding-left-xs-10 + .form-field-input.col-xs-12.col-sm-3 input{width:120px;}
+#divAggiungi #quantitaText{margin:0;width:100%;}
+#formBuoniInps .floatl.margin-bottom10.clear-padding.col-sm-5 .vincola_box:first-child {position:absolute;top: 50px;}
+#formBuoniInps .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(3){margin:10px 10px 0 68px;}
+#formBuoniInps .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(4),
+#formBuoniInps .floatl.margin-bottom10.clear-padding.col-sm-5	span:nth-child(5)
+{margin:10px 10px 0 10px;}
+#formStatoAssegni .form-field-input.col-xs-11.col-sm-11.clear-padding{line-height: 24px;}
+#tableListaBonifici_wrapper .cardbox-border,#formGestioneEMail + .table-responsive .cardbox-border{padding:0 10px;}
+#formMovimentiCarte #intestazione,#formMovimentiCarte #agenzia,#formMovimentiCarte #conto{float:right;text-align: right;}
+#formAutoricaricaTempo .row.bottom {
+    margin-bottom: 0!important;
+}
+@media (min-width: 320px) and (max-width: 600px)  {
+#tableFormWebsafe label[for="flagServiziDataAtt"] {line-height: 14px}
+#tableFormWebsafe label[for="flagServiziDataAtt"]+ label,#tableFormWebsafe img +label[for="flagServiziDataAtt"]{
+	display: block;
+    width: 20%;
+    position: relative;
+    top: 23px;
+}
+#tableFormWebsafe input[type="text"]{margin-left:40px;}
+}
+#formPannelloControllo img{max-width: 50%}
+.pull-right #formRicaricheTelefoniche,.pull-right #formBolloAuto{float:left!important;}
+#allarmiCarte .cardbox-border, #formInfoCarte .cardbox-border, #cambiIndici .cardbox-border{padding:0 10px;}
+.pull-right.margin-bottom20{text-align: right}
+#mainContent .accordion.aperturaDossier.ui-accordion .form-group{margin-right:0;margin-left:0;}
+#mainContentPub .row-height .col-sm-6:first-child{padding-right:0;}
+#mainContentPub .btn-link{margin-right:15px!important;}
+#mainContentPub .center-blockWrap{width:100%;}
+#formGestioneEMail input, #formGestioneCellulari input {margin-top:30px;}
+#formGestioneEMail + .table-responsive .cardbox-border .imgSrv{margin-left:5px;}
+#formRicaricheTelefoniche #contattoClient + .ui-combobox{margin-bottom: 20px}
+#formMavEsito .actions input,#formRavEsito .actions input{float:none;}
+#formAccreditoStipendio .titleSection {position: relative;top: 20px;}
+/*#formRicaricaCarta,#formAutoricarica,#formAutoricaricaTempo,#formAutoricaricaSoglia, #formAutoricaricaSoglia input[type='submit'],
+#formAllarmiBonifici input[type='submit'],
+#formAllarmiRicarica input[type='submit'],
+#formInfoCarte  input[type='submit'],
+#formContoAllarmi input[type='submit'],
+#formAllarmiDossier input[type='submit'],
+#formAllarmiTitoli input[type='submit'],
+#formAllarmiFondi input[type='submit'],
+#formIndiciCambiAllarmi input[type='submit'],
+#formRichiediDispositivoSicurezza input,
+#formGestioneEMail .pull-right.margin-bottom20 input
+{float:left!important;}*/
+
+#formCompraVendi input.button.btn{float:right;margin-right:0!important;margin-bottom:20px;}
+#mainContent .section .bs-example.form-horizontal .row  .form-group.col-xs-4{width:100%;}
+#mainContent .section .bs-example.form-horizontal .row  .form-group.col-xs-4{margin-left: -15px;margin-right: -15px;}
+#mainContent .section .bs-example.form-horizontal .row.form-group  .form-group.col-xs-4{margin-left:0;margin-right:0;}
+.col-sm-6.clearfix.clear-padding-left.margin-top10 .innerBoxSkyBlue{margin-left:0!important;}
+.col-sm-6.clearfix.clear-padding-left.margin-top10 .innerBoxSkyBlue .col-xs-6{padding-left:0!important;}
+.col-sm-6.clearfix.clear-padding-left.margin-top10 .innerBoxSkyBlue .boxTitle.txt_center{text-align: left}
+#formPostePay .ui-combobox,#formPostePay #nomeBeneficiarioField input{margin-bottom:20px;}
+#formPostePay #nomeBeneficiarioField .col-xs-10{width:100%;}
+#formPostePay #nomeBeneficiarioField .form-field{position: relative}
+#formPostePay #nomeBeneficiarioField .form-field .col-xs-2{position: absolute;width:40px;right:0;}
+#formYouCardApri .bs-example.form-horizontal .form-group.col-xs-4,
+#formYouCardApri .bs-example.form-horizontal.ui-accordion-content .col-xs-6.clear-padding,
+#formYouCardApri .bs-example.form-horizontal.ui-accordion-content .form-field-input.col-xs-2,
+#formYouCardApri .bs-example.form-horizontal.ui-accordion-content .form-field-input.col-xs-4
+{width:100%;}
+.otp .col-xs-6 input{margin-top:5px;}
+
+/*NUOvA SEZIONE MIFID */
+#mainContent .row .col-sm-6.listato-note,#mainContent .row .col-sm-6.listato-note .col-xs-6{padding-left: 0!important}
+#fondiSottoscrizioneForm .row{margin-left:0}
+.outerWrapperTab.no-backgr .innerWrapperTab{padding-right:50px}
+
+#fondiSottoscrizioneForm #accredito{margin-bottom:20px}
+#fondiSwitchForm #numeroQuoteSwitchInt,#fondiSwitchForm #numeroQuoteSwitchDec,#fondiSwitchForm #euroSwitch{margin-bottom:20px}
+#fondiSwitchForm #euroSwitch{margin-top:0}
+.banner-pic-pac{
+	background: url('/HT/fe/img/banner_pic_pac_mobile.png') no-repeat 0 0;
+	background-size: 100%;
+    width: 100%;
+	padding-top:94.01%;
+}
+.banner-pir{
+	background: url('/HT/fe/img/banner_pir_mobile.png') no-repeat 0 0;
+	background-size: 100%;
+    width: 100%;
+    padding-top:227%;
+}
+.banner-ass-casa{
+	background: url('/HT/fe/img/banner-ass-casa-mobile.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:76%;
+}
+.banner-ass-persona{
+	background: url('/HT/fe/img/banner-ass-persona-mobile.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:76%;
+}
+.banner-ass-veicoli{
+	background: url('/HT/fe/img/banner-ass-veicoli-mobile.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:76%;
+}
+.banner-ass-reddito {
+	background: url('/HT/fe/img/banner-ass-reddito-mobile.jpg') no-repeat 0 0;
+	background-size: 100%;
+  width: 100%;
+  padding-top:76%;
+}
+.ricerca-field .row{margin-right:0;margin-left:0;}
+.ricerca-field .float-xs-left{float:none;display: inline-block;width: 100%;font-weight: 700}
+.ricerca-field .btn{float:right;}
+.ricerca-field input[type="text"]{width: 100%}
+
+
+
+.filtra .btn-primary{
+	font-size:10px!important;
+    letter-spacing: 0.07px
+}
+
+#cookie-bar a.x {
+    background: transparent url(/HT/IMAGES/x.png) no-repeat scroll;
+    margin: auto;
+     line-height: 20px;
+    margin-bottom: 10px;
+    float:none !important;
+    position:relative !important;
+    top:0 !important;
+    margin-bottom:10px !important;
+}
+#cookie-bar p{
+    float:none !important;
+}
+
+.cookie-content{
+	background: #122e5c!important;
+}
+
+/* Blocco fascicoli informativi */
+.docpdf {display:block}
+.docpdf ul{list-style-type:none; padding:0;}
+#mainContent .docpdf h2{text-transform:uppercase;}
+#mainContent .docpdf{margin-left:-15px}
+.docpdf h2 {font-size: 16px;font-weight: 600;line-height: 20px;}
+.docpdf ul li{background: url(/HT/fe/img/icon_spalla_documento.png) no-repeat 0 -20px; background-size: 20px 40px; padding: 1px 20px 5px 28px; font-size:16px; font-weight:600; color:#0e977f;}
+.docpdf ul li a, .docpdf ul li a:hover, .docpdf ul li a:active,.docpdf ul li a:focus{color:#0e977f; text-decoration:none;}

@@ -1,0 +1,2521 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+
+
+
+
+
+<meta charset="utf-8">
+
+<meta name="language" content="it"> 
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+	<meta name="HandheldFriendly" content="True" /> 	
+	<meta name="MobileOptimized" content="320" /> 		
+	<meta http-equiv="cleartype" content="on"> 			
+
+
+<meta name="description" content="YouWeb - Banco BPM">	
+<meta name="format-detection" content="telephone=no">		
+
+
+
+<meta name="apple-mobile-web-app-title" content="YouWeb"> 
+<link rel="apple-touch-icon" href="/HT/IMAGES/favicon/apple-touch-icon.png">		                          
+<link rel="apple-touch-icon" sizes="76x76"   href="/HT/IMAGES/favicon/apple-touch-icon-76.png" />    
+<link rel="apple-touch-icon" sizes="120x120" href="/HT/IMAGES/favicon/apple-touch-icon-120.png" />   
+<link rel="apple-touch-icon" sizes="152x152" href="/HT/IMAGES/favicon/apple-touch-icon-152.png" />   
+<link rel="apple-touch-icon" sizes="167x167" href="/HT/IMAGES/favicon/apple-touch-icon-167.png" />   
+<link rel="apple-touch-icon" sizes="180x180" href="/HT/IMAGES/favicon/apple-touch-icon-180.png" />   
+
+<link rel="shortcut icon" href='/HT/IMAGES/favicon.ico' type="image/x-icon" />
+<link rel="icon" sizes="128x128" href="/HT/IMAGES/favicon/touch-icon-128.png" type="image/png" />  
+<link rel="icon" sizes="192x192" href="/HT/IMAGES/favicon/touch-icon-192.png" type="image/png" />  
+
+<meta name="application-name" content="YouWeb" />               
+<meta name="msapplication-TileColor" content="#003B79" />		
+<meta name="msapplication-square150x150logo" content="/HT/IMAGES/favicon/touch-icon-150.png" />  
+<meta name="msapplication-square310x310logo" content="/HT/IMAGES/favicon/touch-icon-310.png" />  
+<meta name="msapplication-square70x70logo" content="/HT/IMAGES/favicon/touch-icon-70.png" />     
+
+
+
+
+
+
+	
+		
+	
+
+
+
+
+
+
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/jquery-ui_ng.min.css" />
+
+<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.min.css"  />
+<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.height.plugin.css" />
+
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/ie10-viewport.css"  />
+
+<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-main.css?v=161220"  />
+ 
+
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xs-mobile-struttura.css?v=161220" />
+	<link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-sm-desktop-struttura.css?v=161220" />
+	<link media="screen and (max-width: 544px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xxs-mobile.css?v=161220" />
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-xs-mobile.css?v=161220" />
+	<link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-sm-desktop.css?v=161220" />
+
+
+
+
+<!--CSS AGGIUNTO PER STILIZZARE SITO COME INDICAZIONI UI -->
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/redesign.css"  />
+	
+<!--[if IE 8]>
+<link media="screen,print" rel="stylesheet" type="text/css" href="/HT/fe/css/ie8.css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+	
+
+<link media="screen,print" rel="stylesheet" type="text/css" href="/HT/CSS/jquery-ui.jqgrid_ng.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/HT/CSS/jquery-ui.multiselect.css" />
+
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-migrate-1.0.0.min.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.ui.touch-punch.min.js"></script>
+
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/ie10-viewport.js"></script> 
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/script/jsapi.js"></script>
+
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.dateIT.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.altImg.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.formattedNum.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.dataTables.natural.js"></script>
+
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.form.js"></script>
+
+
+
+
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery.blockUI.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/fe/js/jquery/jquery-ui.selectToUISlider.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/html5.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" language="javascript" src="/HT/fe/js/script/funzioniYW.js?v=161220"></script>
+
+<script type="text/javascript" language="javascript" src="/HT/fe//js/script/struttura.js"></script>
+
+
+<script>
+
+
+$(document).ready(function(e) {
+	var resizeTimer;
+	var servVal = false;
+	$(window).resize(function () {
+		if ( servVal != isMobile() && location.href.search('login') ==-1) {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function() {
+				
+				$.post(getPathContext()+'/common/refreshBreakpoint.do', { device: getBreakpoint()}, function(response, status) { 
+					servVal = isMobile();
+				});
+			}, 500);
+		}
+	});
+});
+</script>
+
+<script type="text/javascript">
+function getPathImages() { return "/HT/IMAGES/";}
+function getPathContext() {	return "/WEBHT";}
+function getKBanca() {	return "1";}
+function getLineaTol() {	return "IDT";}
+</script>
+
+
+
+
+<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-ui.jqGrid.locale-it.js"></script>
+<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-ui.jqGrid.js"></script>
+<script type="text/javascript" src="/HT/JS/script/funzioniInvestimenti.js?v=161220"></script>
+
+<script type="text/javascript" src="/HT/JS/HashMap.js"></script>
+<script type="text/javascript" src="/HT/JS/script/funzioniJQGrid.js?v=161220"></script>
+<script type="text/javascript" src="/HT/JS/Highcharts/cs/chartserverHS.min.js"></script>
+<script type="text/javascript" src="/HT/JS/Highcharts/js/highstock.js"></script>
+<script type="text/javascript" src="/HT/JS/lightstreamer.js"></script>
+<script type="text/javascript" src="/HT/JS/funzioniPush.js"></script>
+	
+	<title>YouWeb</title>
+</head>
+ 
+<body cz-shortcut-listen="true">
+	<div id="outerwrapper">
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<!-- HEADER-->
+<header class="nav-down">
+	<div class="wrapper">
+	
+		<!-- HEADER DESKTOP-->
+		<div id="headerDesktop">
+			<!-- Header SX -->
+			<div class="contLogoDesk">
+				<a href="/WEBHT/homepage.do" class="logoYouWeb" title="Torna all'homepage"></a>
+
+			</div>
+			<!-- END Header SX -->
+		
+			<!-- Header Center -->
+			<div class="contMenuDesk">
+				<ul id="firstMenu" class="firstMenuDesk">
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="CONTI E DEPOSITI" aria-expanded="false">
+								<span>
+									CONTI E DEPOSITI
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/movimentiConto.do" class=" " title="Saldo e movimenti">Saldo e movimenti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/prestitiMutui/dettaglioPrestitiMutui.do" class=" " title="Finanziamenti">Finanziamenti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/dettaglioInteressiConto.do" class=" " title="Interessi e spese">Interessi e spese</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/pannelloRapporti.do" class=" " title="Pannello Rapporti">Pannello Rapporti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/bilancioMensile.do" class=" " title="Bilancio mensile">Bilancio mensile</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/gestioneCategorie.do" class=" " title="Gestione categorie">Gestione categorie</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/creazioneCategorie.do" class=" " title="Creazione categorie">Creazione categorie</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT" class=" " title="Conto deposito">Conto deposito</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="PAGAMENTI" aria-expanded="false">
+								<span>
+									PAGAMENTI
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/ultimeDisposizioni.do" class=" " title="Ultime disposizioni">Ultime disposizioni</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/listaBeneficiari.do" class=" " title="Gestione beneficiari">Gestione beneficiari</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bonificoSepa.do" class=" " title="Bonifico ordinario">Bonifico ordinario</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bonificoDetrazione.do" class=" " title="Bonifico per detrazioni">Bonifico per detrazioni</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/trasferimentoConti.do" class=" " title="Trasferimento tra conti">Trasferimento tra conti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/ricaricaDati.do" class=" " title="Ricarica telefonica">Ricarica telefonica</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/f24.do" class=" " title="Pagamento F24">Pagamento F24</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bollettiniPostali.do" class=" " title="Bollettino Postale">Bollettino Postale</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/mav.do" class=" " title="Bollettino MAV">Bollettino MAV</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/rav.do" class=" " title="Bollettino RAV">Bollettino RAV</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/coordinateIban.do" class=" " title="Coordinate IBAN">Coordinate IBAN</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bolletta.do" class=" " title="Utenze">Utenze</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/buoniInps.do" class=" " title="Richiesta Voucher Inps">Richiesta Voucher Inps</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/delegheRid.do" class=" " title="Domiciliazioni">Domiciliazioni</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/statoAssegni.do" class=" " title="Assegni">Assegni</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/accreditoStipendio.do" class=" " title="Accredito stipendio">Accredito stipendio</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/ricaricaMediaset.do" class=" " title="Mediaset Premium">Mediaset Premium</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bolloAuto.do" class=" " title="Bollo Auto">Bollo Auto</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/freccia.do" class=" " title="Bollettino Freccia">Bollettino Freccia</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/tasseUniversita.do" class=" " title="Tasse università">Tasse università</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bonificoContinuativoCompilazione.do" class=" " title="Bonifico ripetitivo">Bonifico ripetitivo</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/bonificoContinuativoLista.do" class=" " title="Lista bonifici ripetitivi">Lista bonifici ripetitivi</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cd/trasferimentoFondi.do" class=" " title="Bonifico da Conto Dep">Bonifico da Conto Dep</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cd/ultimiTrasferimenti.do" class=" " title="Ultimi bonifici da conto dep">Ultimi bonifici da conto dep</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/cbill.do" class=" " title="CBILL - pagoPA">CBILL - pagoPA</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/pagamenti/cbillListaPagamenti.do" class=" " title="Equitalia - Pagamenti">Equitalia - Pagamenti</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="CARTE" aria-expanded="false">
+								<span>
+									CARTE
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/riepilogoCartaConto.do" class=" " title="Le mie carte">Le mie carte</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/movimenti.do" class=" " title="Movimenti">Movimenti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/ricaricaCarta.do" class=" " title="Ricarica Carta">Ricarica Carta</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/scaricaCarta.do" class=" " title="Scarica Carta">Scarica Carta</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/autoricarica.do" class=" " title="Ricarica automatica">Ricarica automatica</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/cambioPinCarta.do" class=" " title="Cambio PIN carta">Cambio PIN carta</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/pannelloControllo.do" class=" " title="Pannello controllo">Pannello controllo</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/cartaSi.do" class=" " title="Portale CartaSi">Portale CartaSi</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="ALERT" aria-expanded="false">
+								<span>
+									ALERT
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/riepilogo.do" class=" " title="Pannello Alert">Pannello Alert</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/bonifici.do" class=" " title="Info bonifico">Info bonifico</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/ricarica.do" class=" " title="Info ricarica">Info ricarica</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/carte.do" class=" " title="Info carte">Info carte</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/conto.do" class=" " title="Info conto">Info conto</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/dossier.do" class=" " title="Info dossier">Info dossier</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/titoli.do" class=" " title="Info titoli">Info titoli</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/fondi.do" class=" " title="Info fondi">Info fondi</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/indiciCambi.do" class=" " title="Cambi e indici">Cambi e indici</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/sm/recedi.do" class=" " title="Recedi">Recedi</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="POSTA" aria-expanded="false">
+								<span>
+									POSTA
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/postaPersonale/nuoviDocumenti.do" class=" " title="Posta in arrivo">Posta in arrivo</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/postaPersonale/vediAllarmiRapporti.do" class=" " title="Info posta">Info posta</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/postaPersonale/archivio.do" class=" " title="Archivio">Archivio</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/postaPersonale/richieste.do" class=" " title="Contratti e Proposte">Contratti e Proposte</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/postaPersonale/contrattiProposte.do" class=" " title="Contratti e Proposte New">Contratti e Proposte New</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="INVESTIMENTI" aria-expanded="false">
+								<span>
+									INVESTIMENTI
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+												
+												Titoli preferiti</p>
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/news.do" class=" " title="Situazione">Situazione</a>
+												</li>
+											
+											
+											
+												
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/titoliPreferiti.do" class="disabledSubMenu" title="Titoli preferiti">Titoli preferiti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/titoliDossier.do" class=" " title="Il tuo portafoglio">Il tuo portafoglio</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/ordiniMovimenti.do" class=" " title="Ordini e movimenti">Ordini e movimenti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/portafoglioSimulato.do" class=" " title="Portafoglio simulato">Portafoglio simulato</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/mifid.do" class=" " title="Questionario Mifid">Questionario Mifid</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/aperturaTol.do" class=" " title="Linea di Trading">Linea di Trading</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/analisiTecnica.do" class=" " title="Analisi">Analisi</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/indici.do" class=" " title="Indici">Indici</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/posizioneFiscale.do" class=" " title="Posizione fiscale">Posizione fiscale</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cc/posizionePatrimoniale.do" class=" " title="Posizione patrimoniale">Posizione patrimoniale</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/cambiForm.do" class=" " title="Cambi">Cambi</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT" class=" " title="Fondi">Fondi</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+
+						<li>
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle" title="SERVIZI" aria-expanded="false">
+								<span>
+									SERVIZI
+								</span>
+							</a>
+							
+							<ul class="dropdown-menu subMenuXL">
+								<!-- BOX Sinistro -->
+								<li>
+									<div class="subMenuBoxSx">
+										<p class="titleMenuSx">
+										
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+										
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+									</li>
+								<!-- END BOX Sinistro -->
+								<!-- BOX Destro -->
+								<li>	
+									<div class="subMenuBoxDx">
+										<div class="containerIcon"></div>
+										<p class="titleSubMenuDx">Titolo ADV </p>
+										<p>
+											Pagare il bollo auto non &egrave; mai stato cos&igrave; semplice, ora anche in Piemonte.
+										</p>
+										<button class="btn btn-primary center-block" title="Lorem ipsum">
+											Lorem Ipsum
+										</button>
+									</div>
+								</li>
+								<!-- END BOX Destro -->	
+								<!-- BOX Centro -->
+								<li>	
+									<div class="subMenuBoxCenter">
+										<ul>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/ilTuoProfilo.do" class=" " title="Il tuo profilo">Il tuo profilo</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/assistenzaRiferimenti.do" class=" " title="assistenza riferimenti">assistenza riferimenti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/rapportiPredefiniti.do" class=" " title="Rapporti in primo piano">Rapporti in primo piano</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/contatti.do" class=" " title="Gestione contatti">Gestione contatti</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/ilMioCalendario.do" class=" " title="Il mio calendario">Il mio calendario</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/richiestaAppuntamentoCompilazione.do" class=" " title="Richiedi appuntamento">Richiedi appuntamento</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/investimenti/dossierApri.do" class=" " title="Apri il dossier titoli">Apri il dossier titoli</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cartaConto/youCardApri.do" class=" " title="Richiedi la YouCard">Richiedi la YouCard</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/cd/contoDepositoAttivazione.do" class=" " title="Apri conto deposito">Apri conto deposito</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/news/elenco.do" class=" " title="News">News</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/scaricoCertificato.do" class=" " title="Accesso easy">Accesso easy</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/av/adeguataVerificaLista.do" class=" " title="Adeguata Verifica">Adeguata Verifica</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/serviziPerTe/sicurezzaInfo.do" class=" " title="Sicurezza YouWeb">Sicurezza YouWeb</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHT/info/contattaci.do" class=" " title="Contattaci">Contattaci</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHTjavascript:OpenWindow('/WEBHT/youshop/login.do','_blank','');" class=" " title="YouShop">YouShop</a>
+												</li>
+											
+											
+											
+												<li>
+										  			<a href="/WEBHTjavascript:OpenWindow(getPathContext() + '/serviziPerTe/youWin.do','_blank','');" class=" " title="YouWin">YouWin</a>
+												</li>
+											
+										</ul>	
+									</div>
+								</li>
+								<!-- END BOX Centro -->
+								
+							</ul>
+						</li >
+					
+				</ul>
+			</div>
+			
+			<!--END Header Center -->
+		
+			<!-- Header DX -->
+			<div class="contImpDxDesk">
+		
+				<!-- Header DX Icona User -->                   
+				<div class="dropdown">
+					<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" title="Dati personali">
+						<input type="image" name="" src="/HT/fe/img/user_menu_desk.png" class="iconUserDx" />
+					</a>
+					<ul class="dropdown-menu headerDxUserMenu">
+						<li>
+							<span class="triangoloUser"></span>
+							<span id="intestazioniUserIcon">
+								<p class="introUser">
+									
+										
+										
+											Benvenuto
+										
+									
+								</p> 
+								<p class="nameUser">
+									Luca Castagnedi
+								</p>
+								
+									<p class="infoAccessUser">
+										Ultima visita
+										<span class="infoAccessUser2">
+											16/05/2017			
+											&nbsp;
+											13:42
+										</span>
+									</p> 
+								
+							</span>
+						</li>
+						<li></li>
+						<li><a href="#!" title="Il mio profilo">Il mio profilo</a></li>
+						<li><a href="#!" title="I miei contatti">I miei contatti</a></li>
+						<li><a href="#!" title="Il  mio calendario">Il  mio calendario</a></li>
+						<li><a href="#!" title="Aiuto">Aiuto</a></li>
+					</ul>
+				</div>
+				<!--END  Header DX Icona User -->
+			
+				<!-- HEADER DX Icona Impostazioni -->               
+				<div class="dropdown">
+					<a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" title="Strumenti">
+						<input type="image" name="" src="/HT/fe/img/impostazioni_menu_desk.png" class="iconImpostazioneDx" />
+					</a>
+					<ul class="dropdown-menu headerDxIconImp">
+						<li><span class="triangoloImp"></span></li>
+						
+						<li><a href="/WEBHT/homepagePreferenze.do" title="Personalizza Homepage">Personalizza Homepage</a></li>
+						<li><a href="WEBHT/serviziPerTe/rapportiPredefiniti.do" title="Rapporti in primo piano">Rapporti in primo piano</a></li>
+						<li><a href="#!" id="modificaLink" onclick="modificaLink();return false;"  id="modificaLink" aria-label="Modifica Link rapidi" title="Modifica Link rapidi">Modifica link preferiti</a></li>
+						<li><a onclick="javascript:window.print();" title="Stampa" href="#!">Stampa</a></li>
+					</ul>
+				</div>
+				<!-- END Icona Impostazioni -->
+			
+				<!-- Icon Exit -->
+				<div class="containerIconHeadDX">
+					<span>
+						<input type="image" name="" src="/HT/fe/img/icon_separator.png" class="iconSep" />
+					</span>
+					<span>
+						<a href="#"  title="Esci" onclick="$('form#logout').submit(); return false;"> 
+							<input type="image" name="" src="/HT/fe/img/icon-exit.png" class="iconExit" />
+						</a>
+					</span>
+				</div>
+				<!-- END Icon Exit -->		
+			</div>
+		<!-- END Header DX -->
+		</div>
+			<!-- HEADER MOBILE-->
+			<div id="headerMobile" style="top: 0px;">
+				<div class="wrapperheaderMobile">
+					<div id="buttonMenuMobile" class="pushBtn">
+						<div class="lineMenuWrap">
+							<span class="lineMenu"></span>
+							<span class="lineMenu"></span>
+							<span class="lineMenu"></span>
+						</div>
+					</div>
+					<h1 id="logo-mobile"></h1>
+					<div id="buttonUserMobile" class="pushBtn"></div>
+				</div>	
+			</div>
+		<!-- / HEADER MOBILE-->
+	</header>
+	<!-- / HEADER -->
+
+<!-- MENU -->
+<div id="menu">
+	<!-- MENU MOBILE-->
+	<nav id="menuMainMobile" style="top: 0px;">
+		<div id="menuMainMobileWrapper">
+			<ul class="first-levelMenu mm-list">
+				 <li><a href="#" title="Homepage">Homepage</a></li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="CONTI E DEPOSITI" aria-expanded="false" >CONTI E DEPOSITI</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="CONTI E DEPOSITI">CONTI E DEPOSITI</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/movimentiConto.do" title="Saldo e movimenti">Saldo e movimenti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/prestitiMutui/dettaglioPrestitiMutui.do" title="Finanziamenti">Finanziamenti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/dettaglioInteressiConto.do" title="Interessi e spese">Interessi e spese</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/pannelloRapporti.do" title="Pannello Rapporti">Pannello Rapporti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/bilancioMensile.do" title="Bilancio mensile">Bilancio mensile</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/gestioneCategorie.do" title="Gestione categorie">Gestione categorie</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/creazioneCategorie.do" title="Creazione categorie">Creazione categorie</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT" title="Conto deposito">Conto deposito</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="PAGAMENTI" aria-expanded="false" >PAGAMENTI</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="PAGAMENTI">PAGAMENTI</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/ultimeDisposizioni.do" title="Ultime disposizioni">Ultime disposizioni</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/listaBeneficiari.do" title="Gestione beneficiari">Gestione beneficiari</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bonificoSepa.do" title="Bonifico ordinario">Bonifico ordinario</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bonificoDetrazione.do" title="Bonifico per detrazioni">Bonifico per detrazioni</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/trasferimentoConti.do" title="Trasferimento tra conti">Trasferimento tra conti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/ricaricaDati.do" title="Ricarica telefonica">Ricarica telefonica</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/f24.do" title="Pagamento F24">Pagamento F24</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bollettiniPostali.do" title="Bollettino Postale">Bollettino Postale</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/mav.do" title="Bollettino MAV">Bollettino MAV</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/rav.do" title="Bollettino RAV">Bollettino RAV</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/coordinateIban.do" title="Coordinate IBAN">Coordinate IBAN</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bolletta.do" title="Utenze">Utenze</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/buoniInps.do" title="Richiesta Voucher Inps">Richiesta Voucher Inps</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/delegheRid.do" title="Domiciliazioni">Domiciliazioni</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/statoAssegni.do" title="Assegni">Assegni</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/accreditoStipendio.do" title="Accredito stipendio">Accredito stipendio</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/ricaricaMediaset.do" title="Mediaset Premium">Mediaset Premium</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bolloAuto.do" title="Bollo Auto">Bollo Auto</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/freccia.do" title="Bollettino Freccia">Bollettino Freccia</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/tasseUniversita.do" title="Tasse università">Tasse università</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bonificoContinuativoCompilazione.do" title="Bonifico ripetitivo">Bonifico ripetitivo</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/bonificoContinuativoLista.do" title="Lista bonifici ripetitivi">Lista bonifici ripetitivi</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cd/trasferimentoFondi.do" title="Bonifico da Conto Dep">Bonifico da Conto Dep</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cd/ultimiTrasferimenti.do" title="Ultimi bonifici da conto dep">Ultimi bonifici da conto dep</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/cbill.do" title="CBILL - pagoPA">CBILL - pagoPA</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/pagamenti/cbillListaPagamenti.do" title="Equitalia - Pagamenti">Equitalia - Pagamenti</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="CARTE" aria-expanded="false" >CARTE</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="CARTE">CARTE</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/riepilogoCartaConto.do" title="Le mie carte">Le mie carte</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/movimenti.do" title="Movimenti">Movimenti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/ricaricaCarta.do" title="Ricarica Carta">Ricarica Carta</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/scaricaCarta.do" title="Scarica Carta">Scarica Carta</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/autoricarica.do" title="Ricarica automatica">Ricarica automatica</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/cambioPinCarta.do" title="Cambio PIN carta">Cambio PIN carta</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/pannelloControllo.do" title="Pannello controllo">Pannello controllo</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/cartaSi.do" title="Portale CartaSi">Portale CartaSi</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="ALERT" aria-expanded="false" >ALERT</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="ALERT">ALERT</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/riepilogo.do" title="Pannello Alert">Pannello Alert</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/bonifici.do" title="Info bonifico">Info bonifico</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/ricarica.do" title="Info ricarica">Info ricarica</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/carte.do" title="Info carte">Info carte</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/conto.do" title="Info conto">Info conto</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/dossier.do" title="Info dossier">Info dossier</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/titoli.do" title="Info titoli">Info titoli</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/fondi.do" title="Info fondi">Info fondi</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/indiciCambi.do" title="Cambi e indici">Cambi e indici</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/sm/recedi.do" title="Recedi">Recedi</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="POSTA" aria-expanded="false" >POSTA</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="POSTA">POSTA</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/postaPersonale/nuoviDocumenti.do" title="Posta in arrivo">Posta in arrivo</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/postaPersonale/vediAllarmiRapporti.do" title="Info posta">Info posta</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/postaPersonale/archivio.do" title="Archivio">Archivio</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/postaPersonale/richieste.do" title="Contratti e Proposte">Contratti e Proposte</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/postaPersonale/contrattiProposte.do" title="Contratti e Proposte New">Contratti e Proposte New</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+								
+							
+				 	<li class="active" ><span  class="openSubMenu " title="INVESTIMENTI" aria-expanded="false" >INVESTIMENTI</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="INVESTIMENTI">INVESTIMENTI</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/news.do" title="Situazione">Situazione</a>
+								</li>
+							
+								
+								
+									
+								
+								<li class="active">
+						  			<a href="/WEBHT/investimenti/titoliPreferiti.do" title="Titoli preferiti">Titoli preferiti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/titoliDossier.do" title="Il tuo portafoglio">Il tuo portafoglio</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/ordiniMovimenti.do" title="Ordini e movimenti">Ordini e movimenti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/portafoglioSimulato.do" title="Portafoglio simulato">Portafoglio simulato</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/mifid.do" title="Questionario Mifid">Questionario Mifid</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/aperturaTol.do" title="Linea di Trading">Linea di Trading</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/analisiTecnica.do" title="Analisi">Analisi</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/indici.do" title="Indici">Indici</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/posizioneFiscale.do" title="Posizione fiscale">Posizione fiscale</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cc/posizionePatrimoniale.do" title="Posizione patrimoniale">Posizione patrimoniale</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/cambiForm.do" title="Cambi">Cambi</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT" title="Fondi">Fondi</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 	
+				 			
+				 	<li class=" " ><span  class="openSubMenu " title="SERVIZI" aria-expanded="false" >SERVIZI</span>
+					 	<ul class="second-levelMenu mm-list">
+					 		<li><a href="javascript:;" class="back" title="SERVIZI">SERVIZI</a></li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/ilTuoProfilo.do" title="Il tuo profilo">Il tuo profilo</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/assistenzaRiferimenti.do" title="assistenza riferimenti">assistenza riferimenti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/rapportiPredefiniti.do" title="Rapporti in primo piano">Rapporti in primo piano</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/contatti.do" title="Gestione contatti">Gestione contatti</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/ilMioCalendario.do" title="Il mio calendario">Il mio calendario</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/richiestaAppuntamentoCompilazione.do" title="Richiedi appuntamento">Richiedi appuntamento</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/investimenti/dossierApri.do" title="Apri il dossier titoli">Apri il dossier titoli</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cartaConto/youCardApri.do" title="Richiedi la YouCard">Richiedi la YouCard</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/cd/contoDepositoAttivazione.do" title="Apri conto deposito">Apri conto deposito</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/news/elenco.do" title="News">News</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/scaricoCertificato.do" title="Accesso easy">Accesso easy</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/av/adeguataVerificaLista.do" title="Adeguata Verifica">Adeguata Verifica</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/serviziPerTe/sicurezzaInfo.do" title="Sicurezza YouWeb">Sicurezza YouWeb</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHT/info/contattaci.do" title="Contattaci">Contattaci</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHTjavascript:OpenWindow('/WEBHT/youshop/login.do','_blank','');" title="YouShop">YouShop</a>
+								</li>
+							
+								
+								
+								<li class=" ">
+						  			<a href="/WEBHTjavascript:OpenWindow(getPathContext() + '/serviziPerTe/youWin.do','_blank','');" title="YouWin">YouWin</a>
+								</li>
+							
+					 	</ul>
+				 	</li>
+				 
+				 
+			</ul>
+		</div>
+	</nav>
+	<nav id="menuUserMobile">
+		<div class="first-levelMenu mm-list">
+			<div class="info-user">
+				<span class="intro">Benvenuta</span> 
+				<span class="name-user">Teresa Colombo</span>
+				<span class="info-accesso"><span>Ultima visita</span> <span>5 Mar 2017 - 17:40</span></span>
+			</div>
+			<ul class="">
+				 <li><a href="#">Il mio profilo</a></li>
+				 <li><a href="#">I miei contatti</a></li>
+				 <li><a href="#">Il mio calendario</a></li> 
+				 <li><a href="#">Rapporti in primo piano</a></li>
+				 <li><a href="#">Disconnetti utente</a></li>
+				 <li><a href="#" class="dispositiva">Modalità dispositiva</a></li> 
+			</ul>
+		</div>
+	</nav>
+	<!-- / MENU MOBILE-->
+</div>
+<!-- / MENU -->		
+		
+<form action="/WEBHT/logout.do" name="frmLogout" id="logout" method="post" target="_top">
+	<div style="display: none">
+		<input type="hidden" name="logoutExitPage" value="https://youwebcard.bancopopolare.it/logout.html" />
+		<input type="hidden" name="logoutKey" value="" />
+	</div>
+</form>
+	
+			
+		<div id="main">
+				<div class="wrapper">
+				
+				<div id="mainContent">
+					
+
+
+
+ 
+<div class="breadcrumb" >
+	
+	
+		<span>Investimenti</span>
+	
+		<span>Titoli Preferiti</span>
+	
+</div>
+
+					<div class="visible-print-block"> 
+						<img src="/HT/fe/img/logo_youweb.pngg" title="Torna all'homepage" alt="Torna all'homepage" />
+						<div class="pull-right">
+							  
+							<fmt:formatDate type="date" value="${now}" pattern="${fmtdate}" />	
+						</div>
+					</div>
+	 				<div class="riquadro clearfix"> 				  
+						
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="clearfix">
+	
+		
+		
+				
+
+
+
+<style>
+.imgSrv{
+	float: none;
+}
+</style>
+
+
+	<h1>
+		
+				
+				<div class="hidden-print hidden-xxs flag titoliPreferiti">&nbsp;</div>
+			
+			
+		
+		
+			
+		
+		
+			
+		
+			
+				
+ 					<span>Titoli</span>
+ 					
+				
+				
+				
+				
+					
+				
+			
+			
+			
+		
+	</h1>
+	
+	
+
+
+		
+	
+	
+	
+		
+		
+			<div class="col-xs-12 hidden-xs hidden-print">
+				
+
+
+
+
+
+
+
+
+
+			</div>
+		
+	
+</div>
+
+<!--[if gte IE 8]>
+<style>
+.jqGridTOLDiv {
+	display: block;
+}
+.jqGridTOLDiv .ui-jqgrid-bdiv {
+	margin-top: auto;
+}
+</style>
+<![endif]-->
+						
+						
+						
+
+
+
+ <div class="section clearfix">
+
+ 	
+
+
+
+
+
+
+
+
+
+<form id="simuFormSub" method="post" action="/WEBHT/investimenti/titoliPreferiti.do">
+	<input type="hidden" name="codLista" id="codListSub"/>
+</form>
+
+<div id="I_TITPREF" class="jqGridTOLDiv nosort" >
+<!-- 	FORM GESTIONE LISTE -->
+	<form id="simuForm" method="post" action="/WEBHT/investimenti/titoliSimulatiJson.do" class="form-horizontal divForm formHeaderGrid">
+		<div class="bs-example">
+			<div class="form-group">
+				<div class="form-field-input col-xs-12">
+					<input type="hidden" name="tipoRapportoSimulato" value="PREF" />
+					<label class="control-label" for="PTF_SEL">Lista</label>
+					<div class="form-field">
+						<div class="col-xs-4">
+						<select name="codLista" onchange="ricaricaSimulati(this)" id="codLista" class="form-control"><option value="2356:1" selected="selected">Collaudo</option>
+							
+								<option value="2336:1">jnk</option>
+							
+								<option value="2576:1">test</option>
+							
+								<option value="2580:1">test espresso</option></select></div>
+						<div class="col-xs-6">	
+						<input class="btn button" type="button" value="Nuova" title="Crea una lista" onclick="creaSelezione(1);" /> 
+						<input class="btn button" type="button" value="Rinomina" title="Rinomina una lista" onclick="rinominaSelezione();" /> 
+						<input class="btn button" type="button" value="Elimina" title="Elimina lista" onclick="eliminaSelezione();" />
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<table id="I_TITPREF_Table" class="jqGridTOLTable"></table>
+</div>
+<script>
+	$(document).ready(function() {
+		startGrid('#I_TITPREF', { 
+caption:"Titoli Preferiti",
+height:'auto',
+colModel:[
+{name:'datiJqGrid.id',jsonmap:'datiJqGrid.id',key:true, hidden:true, hidedlg:true},
+{name:'datiJqGrid.titoloTot',jsonmap:'datiJqGrid.titoloTot', hidden:true, hidedlg:true},
+{name:'datiJqGrid.titoloGTot',jsonmap:'datiJqGrid.titoloGTot', hidden:true, hidedlg:true},
+{name:'act',jsonmap:'act',label:' ', width:30, align:'center',sortable:false,hidedlg:true},
+{name:'simbolo',jsonmap:'titolo.simbolo',push:'N',label:"Cod.",title:"Codice del titolo",width:50,align:'Left',classes:'uppercase'},
+{name:'titolo.denominazione',jsonmap:'titolo.denominazione',push:'N',label:"Titolo",title:"Descrizione titolo",width:130,align:'Left',classes:'uppercase',formatter:linkFmt,formatoptions:{funzioneJS:'goToPage',urlLink:'/investimenti/dettaglioTitolo.do',isin:'titolo.isin',codMercatoInfo:'titolo.codMercatoInfo',simbolo:'titolo.simbolo'},unformat:linkUnFmt},
+{name:'codMercatoInfo',jsonmap:'titolo.codMercatoInfo',push:'S',label:"Piazza",title:"Piazza",width:40,align:'Left',hidden:true,hidedlg:true},
+{name:'LAST',jsonmap:'titolo.quotazione.last',push:'S',label:"P. di Mercato",title:"Ultimo prezzo disponibile, espresso nella divisa di negoziazione. ",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'VAR_PERC',jsonmap:'titolo.quotazione.variazionePercentuale',push:'S',label:"Var%",title:"Variazione percentuale sull'ultimo prezzo del giorno precedente",width:40,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D2'},classes:'importo',unformat:decimalUnFmt,sorttype:'currency'},
+{name:'TRDDIR_CAH',jsonmap:'titolo.quotazione.trend',push:'S',label:"Tr.",title:"Trend",width:20,align:'Center',formatter:trendFmt,sortable:false},
+{name:'TIMELAST_STR',jsonmap:'titolo.quotazione.ora',push:'S',label:"Ora",title:"Ora",width:35,align:'Right',formatter:dateFmt,formatoptions:{ltformat:'d/m/Y H:i',srcformat:'d/m/Y H:i',newformat:'H:i'},sorttype:'date'},
+{name:'titolo.anagrafica.divisaTrattazione',jsonmap:'titolo.anagrafica.divisaTrattazione',label:"Div.",title:"Divisa Trattazione",width:30,align:'Center'},
+{name:'isin',jsonmap:'titolo.isin',push:'N',label:"ISIN",title:"ISIN",width:80,align:'Left'},
+{name:'DESC_FASE',jsonmap:'titolo.quotazione.descrizioneFase',push:'S',label:"Fase",title:"Fase",width:70,align:'Left'},
+{name:'ritardo',jsonmap:'titolo.quotazione.ritardata',push:'N',label:"Rit.",title:"Ritardata",width:28,align:'Center'},
+{name:'QTOT',jsonmap:'titolo.quotazione.quantitaTotale',push:'S',label:"Volumi",title:"Volumi trattati",width:70,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D0'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'titolo.quotazione.apertura',jsonmap:'titolo.quotazione.apertura',label:"Apert.",title:"Prezzo di apertura",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'HIGH_1_CAH',jsonmap:'titolo.quotazione.massimoGiorno',push:'S',label:"Max",title:"Massimo del giorno",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'LOW_1_CAH',jsonmap:'titolo.quotazione.minimoGiorno',push:'S',label:"Min",title:"Minimo del giorno",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'idMovimento',jsonmap:'idMovimento',label:"Id Movimento",title:"Id Movimento",width:50,align:'Left',hidden:true,hidedlg:true},
+{name:'idPortafoglio',jsonmap:'idPortafoglio',label:"id Portafoglio",title:"id Portafoglio",width:50,align:'Left',hidden:true,hidedlg:true},
+{name:'BID_CAH',jsonmap:'titolo.quotazione.bid',push:'S',label:"P. di Acquisto",title:"Prezzo di Acquisto",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'BIDSIZE_CAH',jsonmap:'titolo.quotazione.quantitaBid',push:'S',label:"Q.tà Miglior Acquisto",title:"Quantità miglior offerta in acquisto",width:60,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D0'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'ASK_CAH',jsonmap:'titolo.quotazione.ask',push:'S',label:"P. di Vendita",title:"Prezzo di Vendita",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'ASKSIZE_CAH',jsonmap:'titolo.quotazione.quantitaAsk',push:'S',label:"Q.tà Miglior Vendita",title:"Quantità miglior offerta in vendita",width:60,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D0'},unformat:decimalUnFmt,sorttype:'currency'},
+{name:'titolo.quotazione.prezzoRiferimento',jsonmap:'titolo.quotazione.prezzoRiferimento',label:"Pr. Rif. Prec.",title:"Prezzo di riferimento",width:50,align:'Right',formatter:decimalFmt,formatoptions:{cellFormat:'D4'},unformat:decimalUnFmt,sorttype:'currency'}
+],
+opzioniTabella:[
+{label:'Personalizza',funcOptions:{funzioneJS:opzioni}},
+{label:'Esporta in Excel',funcOptions:{funzioneJS:esportaGrigliaExcel}},
+{testDisplay:hidePopUpFunction,label:'Pop-up',funcOptions:{funzioneJS:apriPopupGriglia}},
+{label:'Stampa',funcOptions:{funzioneJS:Stampa_tuoProtafoglio}},
+{testDisplay:hidePopUpFunction,label:'Help',funcOptions:{funzioneJS:helpTabella}}
+],
+opzioniRiga:[
+{label:"Compra Vendi",funcOptions:{funzioneJS:goToPage,urlLink:'/investimenti/compraVendiTitolo.do',isin:'isin',codMercatoInfo:'codMercatoInfo',simbolo:'simbolo'}},
+{label:"Dettaglio Titolo",funcOptions:{funzioneJS:goToPage,urlLink:'/investimenti/dettaglioTitolo.do',isin:'isin',codMercatoInfo:'codMercatoInfo',simbolo:'simbolo'}},
+{label:"Book 5 livelli",funcOptions:{funzioneJS:openTitoloPopupDaTabellatore,isin:'isin',codMercatoInfo:'codMercatoInfo'}},
+{label:"Cancella",funcOptions:{funzioneJS:openAjaxDialog,urlLink:'/investimenti/eliminaSimulato.do',idMovimento:'idMovimento',idRapportoSimulato:'idPortafoglio',denominazione:'titolo.denominazione',title:'Elimina titolo'}},
+{label:"Agg. a Portafoglio Simulato",funcOptions:{funzioneJS:openAjaxDialog,urlLink:'/investimenti/titoliPortafoglioSimulatoAggiungi.do',isin:'isin',codMercatoInfo:'codMercatoInfo',denominazione:'denominazione',title:'Aggiungi a Portafoglio Simulato'}}
+]
+});
+
+		
+		
+			setTimeout('startStreamGrid("https://collpush.intranet.servizi","I_TITPREF_Table","KlXybFb8KRO5LDjzLDj4KiWyLw%3D%3D")', 2000);
+		
+		
+		
+	});
+	
+	function ricaricaSimulati(x){
+		
+		
+			$("#codListSub").val($('#codLista').val());
+			$("#simuFormSub").submit();
+		
+		
+		
+	}
+	function titoliSimulatiPush(){
+		ricaricaGriglia('I_TITPREF_Table');
+	}
+	
+	function creaSelezione(tipoRapporto){
+		openAjaxDialog('/investimenti/creaSelezione.do', 'tipoRapportoSimulato', tipoRapporto, 'dialogName', 'dialogSelezione', 'title', 'Crea nuova lista', 'width' ,600);
+	}
+	
+	function rinominaSelezione(){
+		openAjaxDialog('/investimenti/rinominaSelezione.do', 'codLista', $('#codLista').val(), 'dialogName', 'dialogSelezione', 'title', 'Rinomina una lista', 'width' ,600);
+	}
+	
+	function eliminaSelezione(){
+		if(confirm('Sicuro di voler eliminare la lista '+ $('#codLista option:selected').text() + '?')) {
+			openAjaxDialog('/investimenti/eliminaSelezione.do', 'codLista', $('#codLista').val(), 'dialogName', 'dialogSelezione', 'title', 'Elimina lista', 'width' ,600);
+		}
+	}
+</script>
+
+<script>
+function helpTabellaI_TITPREF() {
+
+	
+		
+	
+	var idHelp = 0;
+	 	
+		idHelp = 408;
+	
+	OpenHelp(getPathContext() + '/help/page.do?id=' + idHelp);
+
+}
+</script>
+
+
+
+
+
+
+<div id="helpDialog" class="modal fade bs-example-modal-lg helpDialog" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header clearfix">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+			
+		</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+	 				</div>	
+	 				<div class="toldisclaimer col-xs-12">
+						<span>Fonte dati: Borsa Italiana</span>
+						 
+					</div>			
+	 				
+					
+					
+				</div>
+				
+		        <!-- SPALLA DESTRA -->
+				<div id="spalla">
+					
+					
+
+
+
+
+
+
+
+<div class="widget">
+<h2>Indici</h2>
+
+	
+		<a title="Aggiorna" id="indiciReload" class="minibtn reload" > </a><br/>
+		<p>Aggiornato alle <span id="oraRefresh"></span></p>
+	<div id="indicielenco" class="datioutput">
+	
+	 		
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		richiestaIndici();
+		
+			/** inizializzazione link da codificare */
+	$('#indiciReload').click(function() {
+		richiestaIndici();
+	});
+		
+});	
+
+if(isMobile()){
+	$( document ).ajaxComplete(function( event, xhr, settings ) {
+		$(".investimentiMarquee #scorr a").each(function(){
+			$(this).removeAttr("href");
+
+		})
+	});
+}
+
+</script>
+
+
+			<div id="scorr" class="indici"></div>
+	
+	<div id="actions" class="actions pull-right margin-bottom5">
+		<div class="actions pull-right">
+			<input type="button" class="btn button thin XL hidden-xs" value="Indici" onclick="javascript:goToPage('/investimenti/indici.do')" />
+		</div>
+	</div>
+
+	
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+			<div class="widget">
+				<h2>Ricerca Veloce</h2>
+				<form id="formRicercaTitoliRapid2" method="post" action="/WEBHT/investimenti/ricercaTitoliRapidaForm.do" class="formRicercaTitoli">
+					<div class="row">
+						<p><div class="col-xs-12">E' possibile digitare la sola lettera iniziale per una ricerca alfabetica mirata.</p> </div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" name="isinDescrizioneRapid" size="30" value="Descrizione/Isin" onclick="fullSelect('isinDescrizioneTitRapid')" id="isinDescrizioneTitRapid" class="form-control" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						<select name="mercatoRapid" id="selMercatoRapid" class="form-control"><option value="MTA">BorsaItaliana MTA</option>
+<option value="MTA|ETF|MOT|TLX|HMF|SEDEX|IDEM">Borsa Italiana tutti i mercati</option>
+<option value="ETF">BorsaItaliana ETFPLUS</option>
+<option value="MOT|TLX|HMF">Mercati Obbligazionari</option>
+<option value="SEDEX">BorsaItaliana Sedex</option>
+<option value="IDEM">BorsaItaliana Idem</option>
+<option value="PAR">Paris Bourse</option>
+<option value="XET">Deutsche Börse Group</option>
+<option value="AMS">Amsterdam</option>
+<option value="NASDAQ">Nasdaq</option>
+<option value="NYSE">NYSE</option>
+<option value="AMEX">Amex</option>
+<option value="FONDI">Fondi e Sicav</option></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<input id="cercaButton" class="btn button thin" type="submit" value="Cerca" title="Cerca" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="/investimenti/investimentiRicercaTitoli.do" class="cta onright" title="Ricerca avanzata">Ricerca avanzata</a>
+						</div>
+					</div>
+				</form>
+			</div>
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<strong>
+<p>Tassazione&nbsp;italiana sulle transazioni finanziarie</p>
+<p style="text-align: right;"><a title="Scopri" href="/WEBHT/news/dettaglio.do?id=770">Dettagli&raquo;</a></p>
+</strong>
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+				</div>
+				<!-- /SPALLA DESTRA -->
+			</div>
+		</div>
+
+	<div id="divFooter">
+		
+
+
+<footer>	
+	<div id="footer" class="">
+		<div class="row rowPaddFooter">
+			<div class="col-sm-2">					
+				<a href="#!" class="logoYouWebFooter" title="Torna all'homepage"></a>
+			</div>
+			<div class="col-sm-10">					
+				<div class="row">
+					<div class="col-md-3 col-sm-12">
+						<h5>INFO GENERALI</h5>
+						<p>Gruppo Banco BPM. Societ&agrave; soggetta a direzione e coordinamento di Banco BPM S.p.A. Tutti i diritti riservati.<br>&copy; 2000-2017 - Vietata la riproduzione totale o parziale senza l'autorizzazione scritta dei detentori del copyright - <a href="#!" title="Privacy">Privacy</a></p>
+					</div>
+					<div class="col-md-1 hidden-xs"></div>					
+					<div class="col-md-3 col-sm-5 PaddTopBoxFooter">
+						<h5>LA TUA BANCA</h5>
+						<p>Per qualsiasi altra esigenza &egrave; a tua disposizione il Direttore LUCA CAVAZZA presso la tua filiale di riferimento, VIA F.R. MORANDO, 17 - 37131 VERONA (VR) .</p>
+					</div>
+					<div class="col-md-1 col-sm-1 hidden-xs"></div>
+					<div class="col-md-3 col-sm-5 PaddTopBoxFooter">
+						<h5>NUMERI UTILI</h5>
+						<p>Blocco carta<br>
+							Italia: 800 12 12 12<br>
+							Estero: 02 1212 1212
+						</p>
+					</div>
+					<div class="col-md-1 col-sm-1 hidden-xs"></div>
+				</div>	
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-12 mainFooter">					
+				<div class="row barraAssistenza"> 
+					<div class="col-sm-6">
+						<span>
+							<span class="iconNmVerde">
+								<a href="#" title="Help" style="text-decoration:none">
+									<img src="/HT/fe/img/ico_domanda.png" />
+									
+								</a> 
+								<a href="#" title="Stampa"  style="text-decoration:none">
+									<img src="/HT/fe/img/ico_stampa.png" />
+								</a>
+								</span> 
+								<span class="numVerdeFooter">Numero verde: <a href="tel://800.024.024" title="Numero verde"> 800.024.024</a></span></span>
+					</div>
+					<div class="col-sm-6 hidden-xs">
+						<span class="pull-right"><span class="scaricaFooter">Scarica l'app:</span> 
+							<a href="#" title="Scarica l'app per Apple"><img src="/HT/fe/img/ico_apple.png"/></a> 
+							<a href="#" title="Scarica l'app per Android"><img src="/HT/fe/img/ico_android.png"/></a> 
+							<a href="#" title="Scarica l'app per Windows"><img src="/HT/fe/img/ico_windows.png"/></a>
+						</span>
+					</div>
+				</div>	
+			</div>		
+		</div>	
+	</div>
+	<!--div id="footerMobile">
+		<h2 class="">YouWeb</h2>
+	</div-->
+</footer>
+	</div>
+	</div><!--  #outerwrapper -->
+</body>
+</html>

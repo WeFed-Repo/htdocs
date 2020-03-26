@@ -1,0 +1,198 @@
+<div id="dialogIban" class="ui-dialog-content ui-widget-content" style="max-height: none; width: auto; min-height: 119px; height: auto;">
+
+
+
+<div id="gridBody">
+<div class="contentFull">
+	
+	
+	
+
+
+ 
+<div class="riquadro">
+
+
+
+
+
+
+
+
+
+
+	
+	<div class="pager clearfix pull-right">
+		<div class="circle_line">&nbsp;</div>
+		
+			
+			
+			
+				
+			
+				<div class="circle current_page">&nbsp;</div>
+			
+		
+			
+			
+			
+				<div class="circle ">&nbsp;</div>
+			
+		
+	</div>
+
+
+
+
+
+
+<div class="clearfix">
+	
+		
+		
+				
+
+
+
+<style>
+.imgSrv{
+	float: none;
+}
+</style>
+
+
+	<h1>
+		
+			
+			
+				<div class="hidden-print hidden-xxs flag info">&nbsp;</div>
+			
+		
+		
+			
+		
+		
+			
+		
+			
+				
+ 					<span>Calcolo IBAN</span>
+ 					
+				
+				
+				
+				
+					
+				
+			
+			
+			
+		
+	</h1>
+	
+	
+
+
+		
+	
+	
+	
+		
+		
+			<div class="col-xs-12 hidden-xs hidden-print">
+				
+
+
+
+
+
+
+
+		<div class="contentPagina">
+			<br><!--Questa funzione ti offre la possibilit&agrave; di calcolare i codici <b>Check Digit</b> e <b>CIN</b> relativi all'IBAN di un conto corrente. Per effettuare il calcolo inserisci ABI, CAB e Conto e clicca 'Avanti'. <br /><br /> La funzionalit&agrave; calcoler&agrave; i codici mancanti sulla base alle coordinate che ci hai fornito, verifica quindi attentamente la correttezza dei dati inseriti poich&eacute;, se fossero inesatti, anche i codici Check Digit e CIN risulterebbero errati. <br /><br /> E' sempre consigliabile farsi confermare dal beneficiario l'IBAN calcolato sulle vecchie coordinate (ABI, CAB e Conto) poich&eacute; con l'avvento dell'IBAN, alcune banche potrebbero aver modificato alcuni dati di conto corrente della loro clientela (ad esempio sono stati eliminati i caratteri speciali come "." "-" "/" ed incorporato, nel numero di conto, le cifre ad essi successive).-->
+		</div>
+
+
+
+			</div>
+		
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	<form id="formCalcoloIban" method="post" action="/WEBHT/pagamenti/calcoloIBANEsito.do" class="clearfix formPopUp">
+		<div class="section clearfix">
+			<h3 class="titleSection">
+				
+
+
+
+
+
+
+
+
+		
+			Imposta dati
+		
+		
+		
+		
+
+
+			</h3>
+			<div class="bs-example">
+				<div class="form-group">
+					<div class="form-field-input col-xs-4">
+						<label class="control-label" for="abi">
+							ABI
+						</label>
+						<div class="form-field">
+							<input type="text" name="abi" maxlength="5" size="5" value="" onchange="fillZero(this, 5);" id="abi" class="form-control">&nbsp;
+						</div>
+					</div>
+					<div class="form-field-input col-xs-4">
+						<label class="control-label" for="cab">
+							CAB
+						</label>
+						<div class="form-field">
+							<input type="text" name="cab" maxlength="5" size="5" value="" onchange="fillZero(this, 5);" id="cab" class=" form-control">
+						</div>
+					</div>
+					<div class="form-field-input col-xs-4">
+						<label class="control-label" for="conto">
+							Conto
+						</label>
+						<div class="form-field">
+							<input type="text" name="conto" maxlength="12" size="20" value="" onchange="fillZero(this, 12);" id="conto" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="popup" value="true">
+			<div class="col-xs-12">
+				La Banca &egrave; sollevata da ogni responsabilit&agrave; derivante da un'eventuale errata digitazione dei dati obbligatori inseriti.
+			</div>
+		</div>
+	</form>
+	
+</div>
+		<div class="clearfix" style="margin-bottom:10px">
+			
+			<input type="button" name="" value="Avanti"  onclick="javascript:$(helpDialog).hide();$(helpDialog).show();OpenHelp('/template/modale_iban2.html')" class="btn pull-right" alt="Avanti">	
+		</div>
+</div>
+</div></div>

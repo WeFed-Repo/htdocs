@@ -1,0 +1,176 @@
+/*REGOLE GENERICHE HEADER MOBILE */
+body{overflow-y: scroll;-webkit-overflow-scrolling: touch; /* for enable momentum safari mobile */}
+#menu{overflow:hidden;width:100%;position:relative;}
+.pusher #menu{position:static;}
+#headerDesktop,#menuDesktop{display:none;}
+#headerDesktopPub{display:none;}
+#headerMobile{border-bottom:2px solid #f5f7f8;height:62px;text-align:center;position:fixed;top:0;left:0;width:100%;z-index:5;background-color:#fff;}
+.fixed .pusher #headerMobile{position:relative;z-index: 3}
+.fixed  .pusher #main {padding-top:0;}
+#main{padding-top:62px;}
+#mainContent{position: relative}
+/*BOTTONE DI APERTURA MENU MOBILE */
+#buttonMenuMobile,#buttonUserMobile{height:60px;width:60px;padding:22px 0 26px 0;display:block;text-align:center;float:left;}
+#buttonUserMobile{height:62px;float:right;;background-color: #0E977F;cursor:pointer}
+#buttonUserMobile .icon {color:#fff;}
+#buttonUserMobile:hover .icon,#outerwrapper.pusher #buttonUserMobile .icon {color:#65b7a9 !important;}
+.lineMenuWrap{margin:0 auto;width:20px;cursor:pointer}
+.lineMenu{background-color:#0E977F;display:inline-block;margin-bottom:2px;height:3px;width:20px;}
+
+/*FINE BOTTONE DI APERTURA MENU MOBILE */
+
+/* MENU MOBILE */
+#menuMainMobile{overflow:hidden;width:260px;position: absolute;top: 0;left: -260px;z-index: 1;height: 100%;}
+#menuMainMobileWrapper{position: relative;z-index: 1;height: 100%;left:0;}
+#menuUserMobile{background-color:#0E977F;width:260px;position: absolute;top: 0;left: 100%;z-index: 1;height: 100%;}
+#menuUserMobile .info-user{height:60px;padding:3px 0 0 38px;width:100%;position:absolute;z-index:5;top:0;background:#fff;}
+#menuUserMobile .info-user .intro{color:#202D50;font-size:14px;}
+#menuUserMobile .info-user .name-user{color:#2A3D63;text-transform:uppercase;font-size:14px;font-weight:600;}
+#menuUserMobile .info-user .info-accesso{color:#C0C5C9;font-size:10px;}
+#menuUserMobile ul {background-color: #0E977F;margin:0;padding:0;height:100%;overflow:auto;padding-top:60px;}
+#menuUserMobile .info-user > span{display:block;}
+#menuMainMobile .mm-list{padding:0;margin:0;background:#fff;position: absolute;top: 0;left: -100%;width: 260px;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list{display:none;padding:71px 0 0 0;margin:0;background:#fff;position: absolute;top: 0;left: 100%;width: 100%;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list.activeUl{display:block;}
+#menuUserMobile .mm-list{background:#fff;position: absolute;top: 0;left: 100%;width: 100%;height: 100%;}
+#menuMainMobile .second-levelMenu.mm-list{background-color:#EBEDEE;}
+
+#menuMainMobile .mm-list.opened{overflow-y:auto;overflow-x:hidden;}
+#menuMainMobile .first-levelMenu{padding-top:18px;}
+.pusher{position: relative;top:0;left: 0;height: 100%;}
+body.fixed,html.fixed{overflow-y:hidden;position:fixed;top:0;}
+body.headerfixed #headerMobile{position:relative}
+body.headerfixed #main{padding-top:0;}
+.first-levelMenu li{list-style-type: none;padding:0 28px 0 0px;font-size:14px;}
+#menuUserMobile .first-levelMenu li{padding:0;font-size:13px;}
+.first-levelMenu li:first-child a{background-image: none;}
+.first-levelMenu li a,.first-levelMenu li span.openSubMenu{background: url('/HT/fe/img/arrow_menu_right.png') no-repeat right center;border-bottom:1px solid #eeeff1;text-transform:uppercase;padding:13px 0 11px 0;margin:0 0 0 24px;list-style-type: none;display: block}
+
+#menuUserMobile .first-levelMenu li a{background-image:none;border:0;text-transform:none;color:#fff;font-weight:normal;margin-left:40px;padding:21px 24px 17px 0}
+#menuUserMobile .first-levelMenu li.menu-posta{position:relative}
+#menuUserMobile .first-levelMenu li a.posta{background: url('/HT/fe/img/ico_busta.png') no-repeat 180px center}
+.badge {position: absolute;z-index: 10;top: 10px;left: 225px;height: 20px;line-height: 20px;border-radius: 10px;text-align:center;background-color: #122e5c;padding: 0 4px;}
+#menuUserMobile .first-levelMenu li a.dispositiva{background: url('/HT/fe/img/ico_dispositiva.png') no-repeat 180px center}
+#menuUserMobile .first-levelMenu li a.logout{background: #137363 url('/HT/fe/img/ico_logout.png') no-repeat 224px center;margin-left: 0px;padding-left: 40px}
+#menuUserMobile .first-levelMenu li:active{background-color:#0D8E77;}
+.first-levelMenu li a, .first-levelMenu li span.openSubMenu{color:#2A3D63;font-weight:600;text-decoration:none;cursor:pointer;}
+.first-levelMenu li.active a,.first-levelMenu li.active span.openSubMenu,.first-levelMenu li.active a:active,.first-levelMenu li.active span.openSubMenu:active{color:#00A592;margin-left:20px;background: url('/HT/fe/img/arrow_menu_right_on.png') no-repeat right center;}
+.second-levelMenu a:active,.first-levelMenu .second-levelMenu li.active a:active {margin-left:0!important;background-image:none!important;}
+.first-levelMenu li:active span.openSubMenu{color:#00A592;}
+.first-levelMenu li.active{border-left:4px solid #00A592}
+#menuMainMobile a.back{padding-top:23px;background: #fff url('/HT/fe/img/arrow_menu_left_on.png') no-repeat 25px center;top:0;left:0;height:60px;width:260px;position:absolute;z-index:3;margin-left:0;padding-left:43px;}
+.second-levelMenu li a:not(.back){background-image:none;border-bottom:none;color:#2A3D63;font-weight:normal;text-transform: none;font-size:13px;padding:5px 5px 12px 28px;margin:0;}
+.second-levelMenu li.active a{color:#00A592;padding-left:24px;}
+.first-levelMenu li a:active,.second-levelMenu li a.active:not(.back):active{color:#00A592;}
+
+#overlayMenu{position: absolute;z-index:7;width: 100%;height: 100%;background: #666;opacity:0.4;top: 0;left: 0;}
+.pusher.right,.pusher.left{float:none;}
+.pusher.right #overlayMenu{box-shadow: inset 10px 0 10px #000;}
+.pusher.left #overlayMenu{box-shadow: inset -10px 0 10px #000;}
+.no-scroll{overflow:hidden;height:100%;}
+#menuMainMobile .mm-list.opened.over-visible{overflow:visible;}
+#menuMainMobile a.back#clonedBack{z-index:4;left:0;}
+#logo-mobile{margin:0;width:90px;display: inline-block;}
+#logo-mobile a{width:90px;height: 25px;background: url("/HT/fe/img/logo_bancobpm@2x.png") no-repeat;background-size: 100%}
+#logo-mobile a {display:inline-block;margin:14px auto;}
+.animation-end .first-levelMenu{left:100%!important;}
+.animation-end .second-levelMenu{left:0!important;}
+.wrapperheaderMobile{height:62px;transform:translate3d(0,0,0)}
+/* * * FOOTER * * */
+footer{
+	background-color:#dadee2;
+	float: left;
+}
+.rowPaddFooter{
+	padding:40px 0;
+}
+#footer{
+	padding:0 30px;
+	margin-bottom:15px;
+}
+.logoYouWebFooter{
+	display:block;
+	width:71px;
+	height:44px;
+	background:url(/HT/fe/img/logo_youweb.png) no-repeat;
+}
+.numVerdeFooter{
+	color: #0e967e;
+	padding-left:20px;
+}
+.numVerdeFooter a, .numVerdeFooter a:hover, .numVerdeFooter a:active {
+	color: #0e967e;
+	text-decoration:none !important;
+	font-weight:bold;
+}
+
+.barraAssistenza a{
+	padding:0 3px;
+}
+.scaricaFooter{
+	padding-right:20px;
+}
+
+#footer h5{
+	font-weight: bold;
+}
+
+#footer a{
+	text-decoration: underline;
+}
+
+@media (max-width:768px){
+	.logoYouWebFooter{
+		margin:0 auto 30px auto;
+	}	
+	.iconNmVerde {
+		display:none;
+	}
+	.numVerdeFooter {
+    padding-left: 0;
+	}
+}
+
+@media (min-width: 992px){
+	.mainFooter {
+	    padding-right: 330px;
+	}
+}
+@media (max-width:992px){	
+	.PaddTopBoxFooter{
+		margin-top:30px;
+	}
+}
+
+/* * * END FOOTER * * */
+
+html{overflow-x:visible!important;}
+
+
+
+/** Struttura pubblica Menu  **/
+	.menuNotImg{
+		background-image: none!important;
+	}
+
+
+/**  Struttura pubblica Footer **/	
+	.numeriUtiliPub{
+		color: #0e967e;
+		font-weight:600;
+		text-decoration:none;
+	}
+
+	.copyPub{
+		font-size:10px!important;
+	}
+
+
+#footer p{
+	font-size:12px;
+}
+
+#footer h5{
+	text-transform: uppercase;
+	font-size: 13px;
+}
