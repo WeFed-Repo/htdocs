@@ -70,7 +70,11 @@ $(function(){
             // Esempio di creazione della tabella di bootstrap
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
-                    tablePortafoglio.bootstrapTable();
+                    tablePortafoglio.bootstrapTable({
+                        onLoadSuccess:function(){
+                            $(".table-btn-more").click(function(){alert("po32p1o")})
+                        }
+                    });
                 });
 
         </script>
@@ -102,7 +106,7 @@ $(function(){
                         <td class="left"><?php 
                             if ($x==0) {
                                 ?>
-                                <nobr>MOT <span class="table-bt-details">+</span></nobr>
+                                <nobr>MOT <span class="table-btn-more" data-attr-isin="09090909"></span></nobr>
                                 <?php
                             }
                             else
