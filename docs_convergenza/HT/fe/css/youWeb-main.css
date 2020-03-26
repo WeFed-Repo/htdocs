@@ -7255,9 +7255,9 @@ label.error{color: #f16875!important;}
 		text-decoration:underline
 	}
 
-	.contentLogin .textLogin p:first-child, .contentLogin .textLogin p:last-child {
+	/*.contentLogin .textLogin p:first-child, .contentLogin .textLogin p:last-child {
 		font-size:12px;
-	}
+	}*/
 
 	.contentLogin .textLogin p:nth-child(3){
 		margin-bottom:77px!important;
@@ -7281,7 +7281,7 @@ label.error{color: #f16875!important;}
 	}
 
 	.contentLogin .row.bgLoginForm p {
-		margin:40px 50px 75px 0;
+		margin:40px 22px 75px 0;
 		text-align: right;
 	 }
 
