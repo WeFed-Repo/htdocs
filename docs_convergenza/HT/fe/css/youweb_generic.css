@@ -1366,7 +1366,7 @@ body.modal-open {
     margin: 0 !important;
 }
 
-.modal-dialog p {
+.modal-dialog p:not(.flRight) {
     clear: left;
 }
 
@@ -6362,6 +6362,22 @@ div[id*="popover"] .popover-content {
   width: 25px;
   margin-left: 0;
 }
+
+.spsel.spsel-hasconsole .spsel-option {
+    position:relative;
+}
+.spsel.spsel-hasconsole .spse-option-el {
+    padding-right:100px;
+}
+
+.spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
+    width: 100px;
+    position: absolute;
+    text-align: right;
+    top: 12px;
+    right: 30px;
+}
+
 @media (max-width: 767px) {
   .spsel {
     margin-bottom: 14px;
@@ -7111,4 +7127,30 @@ div.fixed-table-scroll-outer {
     .fixedColumns.scelta-profilo .radio-mobile {display:table-row}
     .fixedColumns.scelta-profilo .radio-mobile input {position:static!important}
     
+}
+
+.text-link {color:#0e977f;text-decoration:underline;font-weight:normal}
+
+/* icona operativa */
+.btn-icon-operativa {position:relative}
+.icoope-overlay {
+    width: 250px;
+    background: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    top: 20px;
+    left: 0;
+    z-index:1;
+    position: absolute;
+    min-height: 50px;
+}
+.icoope-overlay .close {    
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    
+    color: #000;
+}
+.icoope-overlay .close:before {
+    content: "\00D7";
 }

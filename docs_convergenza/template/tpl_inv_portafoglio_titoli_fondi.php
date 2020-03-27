@@ -33,26 +33,226 @@ $(function(){
                 <!-- SELECT MULTIFUNZIONE -->
                 <div class="form-group">
                     <label class="control-label">Colonne visibili</label>
+
+                    <!-- Overlayer eliminazione -->
+                    <div class="modal fade" id="layerEliminaColonna" tabindex="-1" role="dialog" aria-labelledby="layerEliminaColonnaLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                                    <h2 class="modal-title" id="layerEliminaColonnaLabel">Cancella set colonne</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Stai cancellando la vista <strong id="cancellaVistaName"></strong>.<br>
+                                    Sei sicuro di voler procedere?</p>                                   
+
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn-align-left">
+                                        <a type="button" class="btn btn-default" data-dismiss="modal">Annulla</a>
+                                    </div>
+                                    <div class="btn-align-right">
+                                        <a type="button" class="btn btn-primary" data-dismiss="modal">S&igrave;, cancella</a>
+                                    </div>
+                                    <br class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fine overlayer eliminazione -->
+
+
+                    <!-- Overlay di selezione delle colonne -->
+                    <div class="modal fade" id="layerPers" tabindex="-1" role="dialog" aria-labelledby="layerPersLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                                    <h2 class="modal-title" id="layerPersLabel">Modifica colonne</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                    <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group marginBottomMedium">
+                                                    <label class="control-label flLeft noFloatMobile">Nome vista (max 25 caratteri)</label>
+                                                    <input maxlenght="25" type="text" class="form-control" id="inputSelColName">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="control-label flLeft noFloatMobile">Seleziona le colonne da visualizzare (massimo X)</label>
+                                                    <p class="note flRight noFloatMobile"><strong>X</strong> di X selezionati</p>
+                                                    <br class="clear">
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="checkbox inline">
+                                                                <label class="textWrapper">
+                                                                        <input type="checkbox">
+                                                                        <span class="text">Lorem ipsum</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn-align-left">
+                                        <a type="button" class="btn btn-default" data-dismiss="modal">Annulla</a>
+                                    </div>
+                                    <div class="btn-align-right">
+                                        <a type="button" class="btn btn-primary" data-dismiss="modal">Crea</a>
+                                    </div>
+                                    <br class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fine overlay di selezione -->
+
+                    <!-- Attivazione Icona operativa-->
+                    <?php include("parts/icona_operativa.php"); ?>
+                    <!-- Fine attivazione icona operativa -->
+
                     <script type="text/javascript">
 
+                        // funzione di apertura overlay di personalizzazione (emulazione)
+                        var persCol = function(nomevista){
+                            $("#inputSelColName").val(nomevista);
+                            $("#layerPers").modal("show");
+                        }
+                        
                         /* Esempio inizializzazione */
                         $(function(){
                             // Inizializza la special-select tipo "default" (esempio di callback)
-                            $("#spselCTA").spSel(
+                            $("#spselCol").spSel(
                                 function(){
-                                    console.log($("input[name=spselCTAinput]").val())}
+                                    console.log($("input[name=spselCTAinput]").val())
+                                }
                             );
-                            // Inizializzazione personalizzata degli elementi correlati alla special select (nel caso specifico sono delle iconcine)
-                            // La funzione deve essere uguale per tutti e verra' riportata anche nell'elemento selezionato
-                            $("#spselCTA .spsel-addel.btn-icon").click(function(e){
-                                e.stopPropagation();
-                                alert("Elemento selezionato: " + $(this).attr("data-el"));
-                            })
+
+                            $("#selColonne").click(function(){
+                               persCol("");
+                               $("#spselCol").removeClass("opened");
+                            });
+
+                            $("#spselCol .btn-icon[data-function=edit]").click(function(event){
+                                event.preventDefault();
+                                persCol($(this).attr("data-list-name"));
+                                event.stopPropagation(); $("#spselCol").removeClass("opened");
+                            });
+
+                            $("#spselCol .btn-icon[data-function=delete]").click(function(event){
+                                event.preventDefault();
+                                $("#cancellaVistaName").html($(this).attr("data-list-name"));
+                                $("#layerEliminaColonna").modal("show");
+                                event.stopPropagation();
+                            });
+
                         });
 
                     </script>
-                    <div class="spsel spsel-hasconsole nosel" id="spselCTA" placeholder="Seleziona...">
-                        <input type="hidden" name="spselCTAinput" value="predefinite">
+                    <div class="spsel spsel-hasconsole nosel" id="spselCol" placeholder="Seleziona...">
+                        <input type="hidden" name="spselColinput" value="predefinite">
                         <div class="spsel-options">
                             <div class="spsel-option" data-value="predefinite">
                                 <a class="spsel-option-el">Predefinite</a>
@@ -60,19 +260,22 @@ $(function(){
                             <div class="spsel-option" data-value="mercati">
                                 <a class="spsel-option-el">Mercati e prezzi</a>
                                 <div class="spsel-btn-console">
-                                    <a class="btn-icon">A</a>
-                                    <a class="btn-icon">b</a>
+                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
                                 </div>
                             </div>
                             <div class="spsel-option" data-value="vista2">
                                 <a class="spsel-option-el">Vista 2</a>
                                 <div class="spsel-btn-console">
-                                    <a class="btn-icon">A</a>
-                                    <a class="btn-icon">b</a>
+                                    <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                                    <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
                                 </div>
                             </div>
-                            <div class="spsel-option" data-value="vista2">
+                            <div class="spsel-option spsel-custom" id="selColonne">
                                 <a class="spsel-option-el">Scegli colonne</a>
+                                <div class="spsel-btn-console">
+                                    <i class="icon icon-row_expand"></i>
+                                </div>
                             </div>
                         </div>
                     </div>	
@@ -95,12 +298,42 @@ $(function(){
                 </div>
             </div>
         </div>
+        <?php if ($site=="webank") { ?>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Valorizzazione prezzi</label>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="radio inline">
+                                    <label class="textWrapper">
+                                        <input type="radio" name="" id="">
+                                        <span class="text">Intraday</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="radio inline">
+                                    <label class="textWrapper">
+                                        <input type="radio" name="" id="">
+                                        <span class="text">Overnight</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
     </form>
 
     <!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
     <!-- BLOCCO AGGIORNAMENTI -->
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-sm-4">
+            <a href="#" class="text-link">Situazione PAC</a>
+        </div>
+        <div class="col-sm-8">
             <p class="note flRight noFloatMobile">
                 <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                 <!--esempio di loading -->
@@ -112,7 +345,28 @@ $(function(){
     <section>
     
         <!-- MODALE HELP TABELLA -->
-
+        <div class="modal fade" id="layerLegenda" tabindex="-1" role="dialog" aria-labelledby="layerLegendaLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                        <h2 class="modal-title" id="layerLegendaLabel">Legenda titoli in colonna</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Titolo</strong> lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor </p>                                   
+                        <p><strong>Div</strong> lorem ipsum dolo ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor </p>                                   
+                        <p><strong>P. Medio Lorem Dolor </strong> lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor </p>                                   
+                        <p><strong>Cambio</strong> lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor </p>                                   
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-align-right">
+                            <a type="button" class="btn btn-primary" data-dismiss="modal">Chiudi</a>
+                        </div>
+                        <br class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- FINE MODALE HELP TABELLA -->
 
 
@@ -123,7 +377,9 @@ $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                     tablePortafoglio.bootstrapTable({
                         onPostBody: function(){
-                            $(".table-btn-more").click(function(){alert($(this).attr("data-isin"))})
+                            // Funzioni da ripetere ad ogni refresh
+                            $(".table-btn-more").click(function(){alert($(this).attr("data-isin"))});
+                            attivaIconaOperativa();
                         }
                 });
             });
@@ -131,7 +387,7 @@ $(function(){
         <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
             <thead>
                 <tr>
-                    <th class="center"><a class="btn-icon"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                    <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
                     <th class="left filter" data-sortable="true">
                         Titolo/Fondo
                     </th>

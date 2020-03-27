@@ -4483,36 +4483,40 @@ $.fn.spSel = function (callback, clickfunction) {
             var spel = $(this),
                 sp = spel.parents(".spsel");
 
-            // Caso select normale
-            if (!sp.hasClass("spsel-check")) {
-                // Clona l'opzione con le relative parti
-                sp.find(".spsel-selected").empty().append(
-                    spel.find(">*").not(".spsel-option-el").clone(true),
-                    spel.find(".spsel-option-el").clone().click(spCf)
-                );
+            // Se non è custom
+            if (!spel.hasClass("spsel-custom")){
 
-                // Assegna il valore all'input
-                sp.find("input[type=hidden]").eq(0).val(spel.attr("data-value"));
+                // Caso select normale
+                if (!sp.hasClass("spsel-check")) {
+                    // Clona l'opzione con le relative parti
+                    sp.find(".spsel-selected").empty().append(
+                        spel.find(">*").not(".spsel-option-el").clone(true),
+                        spel.find(".spsel-option-el").clone().click(spCf)
+                    );
 
-                // Chiude la select
-                sp.removeClass("opened nosel");
-            } else {
-                // Caso checkbox
-                var spopener = sp.find(".spsel-selected .spsel-option-el"),
-                    cbsel = sp.find("input[type=checkbox]:checked");
-                var cbval = [];
-                $.each(cbsel, function (i, v) {
-                    cbval.push($(v).val());
-                });
-                spin.val(cbval.join(","));
-                if (spin.val() !== "") {
-                    sp.removeClass("nosel");
-                    var sinplu = (cbval.length > 1) ? ["i", "i"] : ["e", "o"];
-                    spopener.html(cbval.length + " valor" + sinplu[0] + " selezionat" + sinplu[1]);
+                    // Assegna il valore all'input
+                    sp.find("input[type=hidden]").eq(0).val(spel.attr("data-value"));
+
+                    // Chiude la select
+                    sp.removeClass("opened nosel");
                 } else {
-                    // Reset del placeholder
-                    sp.addClass("nosel");
-                    spopener.html(spDefaultText);
+                    // Caso checkbox
+                    var spopener = sp.find(".spsel-selected .spsel-option-el"),
+                        cbsel = sp.find("input[type=checkbox]:checked");
+                    var cbval = [];
+                    $.each(cbsel, function (i, v) {
+                        cbval.push($(v).val());
+                    });
+                    spin.val(cbval.join(","));
+                    if (spin.val() !== "") {
+                        sp.removeClass("nosel");
+                        var sinplu = (cbval.length > 1) ? ["i", "i"] : ["e", "o"];
+                        spopener.html(cbval.length + " valor" + sinplu[0] + " selezionat" + sinplu[1]);
+                    } else {
+                        // Reset del placeholder
+                        sp.addClass("nosel");
+                        spopener.html(spDefaultText);
+                    }
                 }
             }
 

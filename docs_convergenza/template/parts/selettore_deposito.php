@@ -81,7 +81,7 @@
 						<!-- Modale con dettaglio dei saldi -->
 						
 						<!-- Fine modale con dettaglio dei saldi -->
-						<span class="output"><a href="#" title="Dettaglio saldo">Dettaglio saldo</a></span>
+						<span class="output"><a href="#" class="text-link" title="Dettaglio saldo">Dettaglio saldo</a></span>
 					</div>
 				</div>
 			</div>

@@ -15,11 +15,9 @@ else
 {
 	virtual("/include/struttura_youweb/head_pub.php"); 
 }
-
 ?>
+
 <!-- HEAD -->
-
-
 
 <body id="bgBodyPublic">
 
@@ -51,8 +49,8 @@ else
 				
 				<div  class="full">
 					<?php 
-						// Acquisizione del  template
-					virtual ("./".$tpl) ;
+						// Acquisizione del template
+						virtual ("./".$tpl);
 					?>	
 				</div>
 				
