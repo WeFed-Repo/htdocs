@@ -31,7 +31,52 @@ $(function(){
         <div class="row">
             <div class="col-sm-6">
                 <!-- SELECT MULTIFUNZIONE -->
+                <div class="form-group">
+                    <label class="control-label">Colonne visibili</label>
+                    <script type="text/javascript">
 
+                        /* Esempio inizializzazione */
+                        $(function(){
+                            // Inizializza la special-select tipo "default" (esempio di callback)
+                            $("#spselCTA").spSel(
+                                function(){
+                                    console.log($("input[name=spselCTAinput]").val())}
+                            );
+                            // Inizializzazione personalizzata degli elementi correlati alla special select (nel caso specifico sono delle iconcine)
+                            // La funzione deve essere uguale per tutti e verra' riportata anche nell'elemento selezionato
+                            $("#spselCTA .spsel-addel.btn-icon").click(function(e){
+                                e.stopPropagation();
+                                alert("Elemento selezionato: " + $(this).attr("data-el"));
+                            })
+                        });
+
+                    </script>
+                    <div class="spsel spsel-hasconsole nosel" id="spselCTA" placeholder="Seleziona...">
+                        <input type="hidden" name="spselCTAinput" value="predefinite">
+                        <div class="spsel-options">
+                            <div class="spsel-option" data-value="predefinite">
+                                <a class="spsel-option-el">Predefinite</a>
+                            </div>
+                            <div class="spsel-option" data-value="mercati">
+                                <a class="spsel-option-el">Mercati e prezzi</a>
+                                <div class="spsel-btn-console">
+                                    <a class="btn-icon">A</a>
+                                    <a class="btn-icon">b</a>
+                                </div>
+                            </div>
+                            <div class="spsel-option" data-value="vista2">
+                                <a class="spsel-option-el">Vista 2</a>
+                                <div class="spsel-btn-console">
+                                    <a class="btn-icon">A</a>
+                                    <a class="btn-icon">b</a>
+                                </div>
+                            </div>
+                            <div class="spsel-option" data-value="vista2">
+                                <a class="spsel-option-el">Scegli colonne</a>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
                 <!-- FINE SELECT MULTIFUNZIONE -->
             </div>
             <div class="col-sm-6">
@@ -65,24 +110,31 @@ $(function(){
     </div>
     <!-- FINE BLOCCO AGGIORNAMENTI -->
     <section>
+    
+        <!-- MODALE HELP TABELLA -->
+
+        <!-- FINE MODALE HELP TABELLA -->
+
+
         <!-- TABELLA -->
         <script>
             // Esempio di creazione della tabella di bootstrap
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                     tablePortafoglio.bootstrapTable({
-                        onLoadSuccess:function(){
-                            $(".table-btn-more").click(function(){alert("po32p1o")})
+                        onPostBody: function(){
+                            $(".table-btn-more").click(function(){alert($(this).attr("data-isin"))})
                         }
-                    });
                 });
-
+            });
         </script>
-        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="fixed">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
             <thead>
                 <tr>
-                    <th class="center">IcoHelp</th>
-                    <th class="left">Titolo/Fondo (FILTER)</th>
+                    <th class="center"><a class="btn-icon"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                    <th class="left filter" data-sortable="true">
+                        Titolo/Fondo
+                    </th>
                     <th class="left">Mercato</th>
                     <th class="right">Q.t&agrave; in<br>portaf.</th>
                     <th class="right">Q.t&agrave;<br>disp.</th>
@@ -101,12 +153,12 @@ $(function(){
 
                     ?>
                     <tr>
-                        <td class="center">IcoHelp</td>
+                        <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
                         <td class="left">Titolo <?php print (999990 + $x ) ?></td>
                         <td class="left"><?php 
                             if ($x==0) {
                                 ?>
-                                <nobr>MOT <span class="table-btn-more" data-attr-isin="09090909"></span></nobr>
+                                <nobr>MOT <span class="table-btn-more" data-isin="09090909"></span></nobr>
                                 <?php
                             }
                             else
@@ -133,7 +185,7 @@ $(function(){
             <tfoot>
                 <tr>
                     <td class="bgWhite brdWhite"></td>
-                    <td colspan="9">Totale portafoglio</td>
+                    <td colspan="9"><strong>Totale portafoglio</strong></td>
                     <td class="right">123.404,00</td>
                     <td class="right nega">-24,00<br>-0,1%</td>
                 </tr>
