@@ -70,11 +70,11 @@ class DatiPersonali extends Component {
             YPlus10 = scadenzaPlus10.split("/")[2],
             YPlus5 = scadenzaPlus5.split("/")[2],
             YPlus3 = scadenzaPlus3.split("/")[2],
-            YPlus2 = scadenzaPlus2.split("/")[2],
             dateBirtToCheck10 = DMbirth + "/" + YPlus10,
             dateBirtToCheck5 = DMbirth + "/" + YPlus5,
             dateBirtToCheck3 = DMbirth + "/" + YPlus3,
-            dateBirtToCheck2 = DMbirth + "/" + YPlus2
+            eta = moment.duration(moment(new Date(), 'DD/MM/YYYY').diff(moment(dateBirth, 'DD/MM/YYYY'))).asYears();
+           
            
         switch (documentTypeSelected) {
             case "01":
@@ -83,9 +83,10 @@ class DatiPersonali extends Component {
                 //CASO CARTA IDENTITA'
 
                 //SE DATA DI EMISSIONE E' PRIMA DEL 9 FEBBRAIO LA DATA DI SCADENZA/RINNOVO SARA' 10 ANNI
-                if (getDateDifference("09/02/2012", val) < 0) {
+                if (getDateDifference("13/05/2011", val) < 0) {
                     this.scadenzaDoc = scadenzaPlus10
                 }
+                
                 //SE DATA DI EMISSIONE E' SUCCESSIVA AL 9 DI FEBBRAIO LA DATA DI SCADENZA SARA' 10 ANNI O IL COMPLEANNO SE QUESTO E' SUCCESSIVO
                 else {
                     if (dateBirth != "") {
@@ -103,25 +104,23 @@ class DatiPersonali extends Component {
                     }
 
                 }
-                this.scadenzaDocPre = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
-                break;
+               
+                this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
+               break;
             case "03":
                 //CASO PASSAPORTO 10 anni /il giorno prima
-                this.scadenzaDoc = moment(scadenzaPlus10, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
-                this.scadenzaDocPre = this.scadenzaDoc
+                this.scadenzaDoc = moment(scadenzaPlus10, 'DD/MM/YYYY').add(1, "day").format('DD/MM/YYYY');
+                this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
 
                 break;
             case "02":
-            case "13":
             case "14":
-                //CASO PATENTE:
+                //CASO PATENTE NON RINNOVATA; NUOVA EMISSIONE
                 //CASO CLIENTE CON MENO DI 55 ANNI
-                var eta = moment.duration(moment(val, 'DD/MM/YYYY').diff(moment(dateBirth, 'DD/MM/YYYY')));
-                var eta = eta.asYears();
-
-                if (eta < 49.999) {
-                    //SE HO MENO DI 50 ANNI ALLA DATA DEL RINNOVO IL DOC VALE 10 o FINO AL COMPLEANNO
-                    if (getDateDifference("09/02/2012", val) < 0) {
+              
+                if (eta < 55) {
+                    //SE HO MENO DI 55 IL DOC VALE 10 ANNI o FINO AL COMPLEANNO
+                    if (getDateDifference("13/05/2011", val) < 0) {
                         this.scadenzaDoc = scadenzaPlus10
                     }
                     else {
@@ -140,7 +139,7 @@ class DatiPersonali extends Component {
                         }
                     }
                 }
-                else if (eta < 69.999 && eta >= 49.999) {
+                else if (eta >= 55 ) {
 
                     if (getDateDifference("09/02/2012", val) < 0) {
                         this.scadenzaDoc = scadenzaPlus5
@@ -161,8 +160,55 @@ class DatiPersonali extends Component {
                         }
                     }
                 }
-                else if (eta < 79.999 && eta >= 69.999) {
-                    if (getDateDifference("09/02/2012", val) < 0) {
+                
+                this.scadenzaDocPre = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
+                break;
+                case "13":
+                //PATENTE RINNOVATA
+                if (eta < 50) {
+                    //SE HO MENO DI 50 IL DOC VALE 10 ANNI o FINO AL COMPLEANNO
+                    if (getDateDifference("13/05/2011", val) < 0) {
+                        this.scadenzaDoc = scadenzaPlus10
+                    }
+                    else {
+                        if (dateBirth != "") {
+                            if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
+                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                                this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
+                            }
+                            else {
+                                this.scadenzaDoc = dateBirtToCheck10
+                            }
+                        }
+                        else {
+                            alert("data di nascita non specificata");
+
+                        }
+                    }
+                }
+                else if (eta < 70 && eta >= 50) {
+
+                    if (getDateDifference("13/05/2011", val) < 0) {
+                        this.scadenzaDoc = scadenzaPlus5
+                    }
+                    else {
+                        if (dateBirth != "") {
+                            if (getDateDifference(scadenzaPlus5, dateBirtToCheck5) < 0) {
+                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
+                                this.scadenzaDoc = moment(dateBirtToCheck5, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
+                            }
+                            else {
+                                this.scadenzaDoc = dateBirtToCheck5
+                            }
+                        }
+                        else {
+                            alert("data di nascita non specificata");
+
+                        }
+                    }
+                }
+                else if (eta < 80 && eta >= 70) {
+                    if (getDateDifference("13/05/2011", val) < 0) {
                         this.scadenzaDoc = scadenzaPlus3
                     }
                     else {
@@ -181,29 +227,6 @@ class DatiPersonali extends Component {
                         }
                     }
                 }
-                else {
-                    if (getDateDifference("09/02/2012", val) < 0) {
-                        this.scadenzaDoc = scadenzaPlus2
-                    }
-                    else {
-                        if (dateBirth != "") {
-                            if (getDateDifference(scadenzaPlus2, dateBirtToCheck2) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck2, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck2
-                            }
-                        }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
-                    }
-                }
-                this.scadenzaDocPre = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
-
-                break;
             default:
                 break;
         }
