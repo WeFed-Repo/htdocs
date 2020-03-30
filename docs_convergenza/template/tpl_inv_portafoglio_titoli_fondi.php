@@ -412,7 +412,6 @@ $(function(){
             <tbody>	
             <?php
                 for($x=0;$x<=6;$x++)  {
-
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
@@ -458,7 +457,16 @@ $(function(){
         <!-- FINE TABELLA -->
 
         <!-- PULSANTIERA SOTTO TABELLA -->
-        
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon" href="#"><i class="icon icon-excel_filled"></i><span>Scarica in Excel</span></a>
+                <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
+            </div>
+            <div class="btn-align-right">
+                <a class="btn-link-icon" href="#"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+            </div>
+            <br class="clear">
+        </div>
         <!-- FINE PULSANTIERA SOTTO TABELLA -->
     
     </section>
