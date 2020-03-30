@@ -1254,6 +1254,7 @@ table tr th,
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   background-color: #fff !important;
+  /* Classi bootstraptable da WB */
 }
 table tr th .sorting,
 .table tr th .sorting,
@@ -1305,6 +1306,24 @@ table tr th.sort.desc,
 .table tr th.sort.desc,
 .ui-dialog .table tr th.sort.desc {
   background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
+}
+table tr th.sortableTh .th-inner,
+.table tr th.sortableTh .th-inner,
+.ui-dialog .table tr th.sortableTh .th-inner {
+  cursor: pointer;
+  background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+  margin-left: -15px;
+  padding-left: 15px;
+}
+table tr th.sortableTh .th-inner.asc,
+.table tr th.sortableTh .th-inner.asc,
+.ui-dialog .table tr th.sortableTh .th-inner.asc {
+  background: url(/HT/fe/img/icon_sort_asc.png) 0 2px no-repeat;
+}
+table tr th.sortableTh .th-inner.desc,
+.table tr th.sortableTh .th-inner.desc,
+.ui-dialog .table tr th.sortableTh .th-inner.desc {
+  background: url(/HT/fe/img/icon_sort_desc.png) 0 11px no-repeat;
 }
 #tradingArea table tr th.left,
 #tradingArea .table tr th.left,

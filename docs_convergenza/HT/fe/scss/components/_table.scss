@@ -57,7 +57,9 @@ table,
         .icon-accordion_down {
           display: none !important;
         }
+        
       }
+     
       &.sort {
         padding:0 0 0 15px!important;
         cursor: pointer;
@@ -69,6 +71,24 @@ table,
            background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
         }
       }
+
+      /* Classi bootstraptable da WB */
+      &.sortableTh {
+        .th-inner {
+          cursor: pointer;
+          background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+          margin-left: -15px;
+          padding-left: 15px;
+          &.asc {
+            background: url(/HT/fe/img/icon_sort_asc.png) 0 2px no-repeat;
+          }
+          &.desc {
+            background: url(/HT/fe/img/icon_sort_desc.png) 0 11px no-repeat;
+          }
+          }
+        }
+       
+
 
       // Forzature per #trading par-tec (non devono essere estese a tutto il sito a meno che non richiesto)
       #tradingArea & {
