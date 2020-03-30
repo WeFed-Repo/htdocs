@@ -1401,8 +1401,8 @@ table .bs-checkbox,
 }
 
 .bootstrap-table {
-  overflow: auto;
   width: 100%;
+  position: relative;
 }
 
 .fixed-table-loading {
@@ -1515,6 +1515,11 @@ table .table-btn-more:before {
 }
 table .table-btn-more:hover {
   opacity: 0.7;
+}
+
+/* Scrolling delle tabelle */
+.fixed-table-container {
+  clear: both;
 }
 
 /* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */

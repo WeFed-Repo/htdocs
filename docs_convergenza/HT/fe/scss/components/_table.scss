@@ -87,7 +87,6 @@ table,
           }
           }
         }
-       
 
 
       // Forzature per #trading par-tec (non devono essere estese a tutto il sito a meno che non richiesto)
@@ -157,10 +156,9 @@ table,
   }
 }
 // wrapper del plugin della tabella
-
 .bootstrap-table {
-  overflow: auto;
   width: 100%;
+  position:relative;
 }
 
 // Loader
@@ -301,4 +299,9 @@ table .table-btn-more {
     cursor:pointer;
   &:before {content: "\2795";}
   &:hover {opacity:0.7}
+}
+
+/* Scrolling delle tabelle */
+.fixed-table-container {
+  clear:both;
 }

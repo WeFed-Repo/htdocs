@@ -7146,9 +7146,12 @@ div.fixed-table-scroll-outer {
 .icoope-overlay .close {    
     float: right;
     display: block;
+    font-size: 30px;
     width: 30px;
+    line-height: 30px;
+    cursor: pointer;
     height: 30px;
-    
+    text-align: center;
     color: #000;
 }
 .icoope-overlay .close:before {
@@ -7178,7 +7181,8 @@ div.fixed-table-scroll-outer {
 .icoope-overlay .icoope-functions ul li{
     margin:0;
     padding:0;
-    width:100%
+    width:100%;
+    list-style-type: none;
 }
 .icoope-overlay .icoope-functions ul li a{
     margin:0;
