@@ -36,19 +36,21 @@
   color: red !important;
 }
 
+/*
 #main {
   width: 100%;
-}
-#main .wrapper {
-  float: left;
-  max-width: 100%;
-  width: 100%;
+  .wrapper {
+    float: left;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 #leftmenu {
-  display: none !important;
-}
+  display:none !important
+} 
 
+*/
 /* DATI FORMATTATI */
 .nega {
   color: red;
