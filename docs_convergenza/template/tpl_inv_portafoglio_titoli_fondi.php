@@ -371,24 +371,30 @@ $(function(){
 
 
         <!-- TABELLA -->
+        <!-- FUNZIONI PER FILTRI -->
+        <?php include("./parts/table_th_filter.php"); ?>
+        <!-- FINE FUNZIONI PER FILTRI -->
         <script>
             // Esempio di creazione della tabella di bootstrap
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
-                    tablePortafoglio.bootstrapTable({
+                tablePortafoglio.bootstrapTable({
                         onPostBody: function(){
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").click(function(){alert($(this).attr("data-isin"))});
                             attivaIconaOperativa();
                         }
                 });
+
+                // Inizializza i filtri addizionali
+                initThFilter();
             });
         </script>
         <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-                    <th class="left filter" data-sortable="true">
+                    <th class="left filter" data-sortable="true" id="filterTitolo">
                         Titolo/Fondo
                     </th>
                     <th class="left">Mercato</th>
