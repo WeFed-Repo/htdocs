@@ -7136,12 +7136,12 @@ div.fixed-table-scroll-outer {
 .icoope-overlay {
     width: 250px;
     background: #fff;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
-    top: 20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    top: 30px;
     left: 0;
     z-index:1;
     position: absolute;
-    min-height: 50px;
+    display:block;
 }
 .icoope-overlay .close {    
     float: right;
@@ -7153,4 +7153,57 @@ div.fixed-table-scroll-outer {
 }
 .icoope-overlay .close:before {
     content: "\00D7";
+}
+.icoope-overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border-bottom: solid 10px #fff;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    top: -10px;
+    background: transparent;
+}
+.icoope-overlay .icoope-functions {
+    width:100%;
+    min-height:80px;
+}
+.icoope-overlay .icoope-functions ul {
+    margin:0;
+    padding:0;
+    width:100%
+}
+.icoope-overlay .icoope-functions ul li{
+    margin:0;
+    padding:0;
+    width:100%
+}
+.icoope-overlay .icoope-functions ul li a{
+    margin:0;
+    padding:0;
+    width:100%;
+    display: inline-block;
+    font-size:14px;
+    padding:10px 10px;
+    border-top: solid 1px #ddd;
+    color: #0e977f;
+    font-weight:normal;
+    text-decoration:none;
+}
+.icoope-overlay .icoope-functions ul li a:after {
+    content: "\203A";
+    display: inline-block;
+    margin-left: 5px;
+    line-height: 16px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #bbb;
+}
+.icoope-overlay .icoope-functions ul li a span {
+    text-decoration:underline;
+}
+.icoope-overlay .icoope-functions ul li a:hover {
+    background:#eee;
 }
