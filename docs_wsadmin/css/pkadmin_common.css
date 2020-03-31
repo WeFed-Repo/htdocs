@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+
+ul {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+p.tableTitle {
+	margin-top: 5px;
+	padding: 0 0 0 0;
+	text-align: left;
+	font-weight: bolder;
+	color: #6F8F0A;
+}
+
+.box_result {
+	width: 950px;
+	margin: 5px auto 5px auto;
+	padding: 5px 6px 5px 6px;
+	background-color: #DCE7B5;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+}
+
+.box_result strong {
+	font-weight: bolder;
+	color: #000000;
+}
+
+table.formAdmin {
+	margin-top: -10px;
+	margin-bottom: 5px;
+	font-size: 11px;
+}
+
+table.formAdmin {
+	width: 950px;
+	border: 0 none;
+	border-spacing: 0;
+}
+
+table.formAdmin tr td {
+	margin: 0;
+	padding: 5px 6px 5px 6px;
+	background-color: #EEEEEE;
+	border-bottom: 1px solid white;
+}
+
+table.formAdmin td.uno {
+	width: 170px;
+	text-align: right;
+}
+
+table.formAdmin td.due {
+	width: 305px;
+	text-align: left;
+}
+
+table.formAdmin td.tre {
+	width: 780px;
+	text-align: left;
+}
+
+table.tablePkAdmin {
+	width: 950px;
+	margin: 0 0 20px 0;
+	padding: 0;
+	border-spacing: 0px;
+	border: 1px solid black;
+	background-color: #FFFFFF;
+}
+
+table.tablePkAdmin tr.pari {
+	background-color: #CACACA;
+}
+
+table.tablePkAdmin tr.dispari {
+	background-color: #FFFFFF;
+}
+
+table.tablePkAdmin td {
+	font-size: 9px;
+	padding: 2px;
+	border: 1px solid black;
+}
+
+table.tablePkAdmin td.head {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+}
+
+table.tablePkAdmin .error {
+	background-color:#FF0000;
+}
+
+p.bottoniera {
+	text-align: right;
+	/*width: 950px; modifica simone*/
+	width: 100%;
+	border-top: 1px solid #CACACA;
+	padding-top: 5px;
+	margin-bottom: 10px;
+}
+
+p.bottoniera input {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 3px;
+	float: right;
+	background-color: black;
+	color: white;	
+}
+
+p.bottoniera input.back {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 3px;
+	float: left;
+	background-color: gray;
+	color: black;	
+}
+

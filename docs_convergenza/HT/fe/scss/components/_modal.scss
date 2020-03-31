@@ -1,8 +1,6 @@
 [data-toggle="modal"]:not(.btn) {
   &, &:hover, a, a:hover {
-    //background: url(/HT/fe/img/arrow_btn_normal.png) no-repeat center right;
     color: $primary;
-    //padding-right: 16px;
     letter-spacing: 0px;
     background-color: transparent!important;
     box-shadow: none;
@@ -19,6 +17,10 @@
       .modal-body {
         section {
           margin-bottom: 20px;
+        }
+        /* Caso Tabelle in modale (eliminato strano padding dei TD) */
+        table td {
+          padding-bottom:0;
         }
       }
     }
@@ -46,3 +48,4 @@
     margin-top: 0 !important;
     border: none !important;
 }
+

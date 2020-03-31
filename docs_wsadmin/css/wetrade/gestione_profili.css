@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document*/
+
+.haligndivs5 {
+	display: block;
+	height: 35px;
+	margin: 5px 0 5px 0;
+	padding: 0;
+}
+
+ .haligndivs5 div{
+	float:left;
+	margin: 0;
+	padding: 0;
+	margin: 5px 0 5px 0;
+	width:15%;
+}
+
+ .haligndivs5 div.primo{
+ 	float:left;
+	padding:0;
+	margin-left:5px;
+	width:35%;
+ }
+ 
+ .haligndivs4 {
+	display: block;
+	height: 35px;
+	margin: 5px 0 5px 0;
+	padding: 0;
+}
+
+ .haligndivs4 div{
+	float:left;
+	margin: 0;
+	padding: 0;
+	margin: 5px 0 5px 0;
+	width:20%;
+}
+
+ .haligndivs4 div.primo{
+ 	float:left;
+	padding:0;
+	margin-left:5px;
+	width:35%;
+ }

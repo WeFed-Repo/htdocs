@@ -1,0 +1,4 @@
+/* OGGETTI PARTICOLARI DA ELIMINARE DALLA STAMPA*/
+#header, #topmenu,#footer, #leftmenu, .nostampa {display: none !important;}
+#contenuti {padding:0 !important}
+.printlogo {display: block !important;}

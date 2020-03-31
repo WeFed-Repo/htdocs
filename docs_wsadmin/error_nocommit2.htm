@@ -1,0 +1,1268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+	<head>
+		<link rel="stylesheet" href="/css/wsadmin.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="/css/wsadmin_print.css" type="text/css" media="print" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<script src="/js/frontEnd.js" type="text/javascript"></script>
+       <script src="/js/ajax_low.js" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript">
+			var cgi_script = '/wetools'; 
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<a href="/wetools/admin/menu.jsp">
+				<h1 class="logo">
+					<span>WeTools</span>
+				</h1>
+			</a>
+			<div id="infooperatore">
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="3"><strong>OPERATORE</strong></td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Sara Strepponi</span></td>
+
+						<td rowspan="3" class="separ">Profilo:</td><td rowspan="3" width="240"><span>
+WTL_SVIL_GEN<br/>CONSULENTI<br/>SVILUPPO-ESTERNI<br/>CONTENT-ESTERNI<br/>
+						</span></td>
+					</tr>
+					<tr>
+						<td>Matricola:</td>
+						<td><span>bp77002</span></td>
+					</tr>
+					<!-- SI applica solo a BPM 
+					<tr>
+						<td>Ufficio:</td>
+						<td><span>12345</span></td>
+					</tr>
+					 -->
+				</table>
+				
+			</div>
+			<div id="infocliente">
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="2"><strong>CLIENTE</strong></td>
+					</tr>
+					<tr>
+						<td colspan="2"><span id="menu_cust_name">&lt;Nessun cliente&gt;</span></td>
+					</tr>
+					<tr>
+						<td>User id:</td><td id="menu_cust_id"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="logout">
+				<a href="/wetools/admin/logout.jsp"><img src="/img/btn_esci.gif" /></a>
+				
+
+				<a href="/wetools/admin/CustomerSearch.do" class="cerca"><img src="/img/btn_cerca.gif"></a>
+
+			</div>
+		</div>
+		<div id="topmenu">
+			<ul>
+	
+				<li><a href="/wetools/admin/2l/jsp/admin/showPermissionForUser.do
+?tabId=WeT_Pri_Gwe&obsKey=Privata&obsKey3=WeT_Pri_Gwe" >Strumenti gestione Wetools</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/rm.do?tabId=WeT_Pri_Ass&obsKey=WeT_Pri_Ass_ges&obsKey3=WeT_Pri_Ass_ges&cmd=gestioneFile&Azione=1013&HP=" >Assegnazioni stock purchase</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsDerEnablingSearchInput.do?tabId=WeT_Pri_Der&obsKey=WeT_Pri_Der_Abi&obsKey3=WeT_Pri_Der_Abi" >Derivati</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsBasketLoanManageInput.do?tabId=WeT_Pri_Ord&obsKey=WeT_Pri_Ord_Bas&obsKey3=WeT_Pri_Ord_Bas_Vis" >Operativit&agrave; Marginata</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/rm.do?tabId=WeT_Pri_Pia&obsKey=WeT_Pri_Pia_Ins&obsKey3=WeT_Pri_Pia_Ins&cmd=InsPA&Azione=1101&HP=" >Piani Azionari</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/MonteTitoliListWt.do?tabId=WeT_Pri_Pre&obsKey=WeT_Pri_Pre_MoT&obsKey3=WeT_Pri_Pre_MoT" >Prestito Titoli</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsSearchGestionePromotori.do?tabId=Wet_Pri_Pro&obsKey=WeT_Pri_Ges_Promotori&obsKey3=WeT_Pri_Ges_Pro_Ric" >Promotori</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&obsKey=WeT_Pri_Eve_Att&obsKey3=WeT_Pri_Eve_Att&status=online" >Eventi</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/promolistadmin/WsLoadPromoList.do?tabId=WeT_Pri_Gpm&obsKey=Privata&obsKey3=WeT_Pri_Gpm" >Gestione Promo Mobile</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsFeesCalculationInput.do?tabId=WeT_Pri_Ges_Can&obsKey=WeT_Pri_Ges_Ges&obsKey3=WeT_Pri_Ges_Calcolo" >Gestione Canoni</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/admin/negoziatori/listaMercati.do?tabId=WeT_Pri_Ges_Mer&obsKey=Privata&obsKey3=WeT_Pri_Ges_Mer" >Gestione Mercato</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsGmoSearchOrdersCash.do?tabId=WeT_Pri_Ges_ord&obsKey=WeT_Pri_Ges_Ord_Ric&obsKey3=WeT_Pri_Ges_Ord_Ric" >Gestione ordini manuali</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Ges_Pro&obsKey=WeT_Pri_Ges_pro&obsKey3=WeT_Pri_Ges_pro&pagePath=/amministrazione/gestioneprofilo/gestioneprofiliservizi&puls1=1" >Gestione Profili</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Iso&obsKey=WeT_Pri_Iso_Ese&obsKey3=WeT_Pri_Iso_Ese_Lis_Ese&pagePath=/amministrazione/isoalpha/esercizi" >Iso alpha</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Com&obsKey=WeT_Pri_Bon&obsKey3=WeT_Pri_Bon_Ins&pagePath=/amministrazione/bc/homebc&puls=1" >Commissioni</a></li>
+	
+				<li><a href="/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Bus&obsKey=WeT_Pri_Bus_Ins&obsKey3=WeT_Pri_Bus_Ins&pagePath=/amministrazione/bu/homebu&puls=1" >Business Unit</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/CustomerTradingActivationStateSearchView.do?tabId=WeT_Pri_Sch&obsKey=WeT_Pri_Sch_Vis&obsKey3=WeT_Pri_Sch_Vis" >Scheda cliente in PK</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/CustomerTradingT3ParametersSearchView.do?tabId=WeT_Pri_T3&obsKey=WeT_Pri_Par&obsKey3=WeT_Pri_Par_VisT3" >T3</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/bankingadmin/jsp/abicab/index.do?tabId=WeT_Pri_Uti&obsKey=WeT_Pri_Uti_Abi&obsKey3=WeT_Pri_Uti_Abi_Ins" >Utility Banking</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/bankingadmin/monitoring.do?tabId=WeT_Pri_Rep&obsKey=WeT_Pri_Rep_Cli&obsKey3=WeT_Pri_Rep_Cli" >Reportistica</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/bankingadmin/jsp/sblocco/index.do?tabId=WeT_Pri_Sic&obsKey=WeT_Pri_Sic_Sbl&obsKey3=WeT_Pri_Sic_Sbl" >Sicurezza</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/bankingadmin/demoneBanking.do?tabId=WeT_Pri_Dem&obsKey=WeT_Pri_Dem_Bce&obsKey3=WeT_Pri_Dem_Bce_Ese&method=bce" >Demoni</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/bankingadmin/catalogoMol.do?tabId=WeT_Pri_Fin&obsKey=WeT_Pri_Fin_Mol&obsKey3=WeT_Pri_Fin_Mol_Cat_Acquisto&tipologia=0" >Finanziamenti</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/SearchTransactionDetail.do?tabId=WeT_Pri_Int&obsKey=WeT_Pri_Int_Big&obsKey3=WeT_Pri_Int_Big_Lis" >Inter</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/bankingadmin/jsp/serviziSms/index.do?tabId=WeT_Pri_Sms&obsKey=WeT_Pri_Sms_Ale&obsKey3=WeT_Pri_Sms_Ale" >Servizi sms</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/financeadmin/quotazioniFinance.do?tabId=WeT_Pri_Utf&obsKey=WeT_Pri_Utf_Boo&obsKey3=WeT_Pri_Utf_Boo&method=book" >Utility Finanza</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/smsadmin/jsp/updateUtentiDeleted.do?tabId=WeT_Pri_UtB&obsKey=WeT_Pri_UtB_Upd&obsKey3=WeT_Pri_UtB_Upd" >Utility BroadVision</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/aoladmin/RiconciliazioneBonifici.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Ric&obsKey3=WeT_Pri_Aol_Ric" class="selected">Agenzia</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/mastri.do?tabId=WeT_Pri_Con&obsKey=WeT_Pri_Con_Arm&obsKey3=WeT_Pri_Con_Arm" >Contabilit&agrave;</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsOwnerPortafoglioClientiPromotori.do?tabId=WeT_Pri_Poc&obsKey=Privata&obsKey3=WeT_Pri_Poc" >Portafoglio clienti</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/bankingadmin/noprofit/organizationList.do?tabId=WeT_Pri_UtV&obsKey=WeT_Pri_UtV_Ges&obsKey3=WeT_Pri_UtV_Ges" >Utility varie</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/cruscotto/WsPkHostMonitorDashboard_0.do?tabId=WeT_Pri_Mon&obsKey=WeT_Pri_Mon_Pan&obsKey3=WeT_Pri_Mon_Pan" >Monitoraggio Code</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/adever/makeDueDiligence.do?tabId=WeT_Pri_AdV&obsKey=WeT_Pri_AdV_DuD&obsKey3=WeT_Pri_AdV_DuD&method=list" >AdeVer</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/bankingadmin/observation.do?tabId=WeT_Pri_Obs&obsKey=WeT_Pri_Obs_Ric&obsKey3=WeT_Pri_Obs_Ric" >Observation</a></li>
+	
+				<li><a href="/wetools/admin/2l/html/cruscotto/inputLista.do?tabId=WeT_Pri_Bretellaggio&obsKey=Privata&obsKey3=WeT_Pri_Bretellaggio" >Caricamento bretellaggio</a></li>
+	
+				<li><a href="/wetools/admin/2l/do/admin/WsConflictManageInput.do?tabId=WeT_Pri_Comp&obsKey=WeT_Pri_Comp_CdI&obsKey3=WeT_Pri_Comp_CdI" >Compliance</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/admin/BonificaCaricamentoConfSportelli.do?tabId=WeT_Pri_Csp&obsKey=WeT_Pri_Csp_Bcr&obsKey3=WeT_Pri_Csp_Bca" >Migrazione banca</a></li>
+	
+				<li><a href="/wetools/admin/2l/jsp/admin/assicurazioni/alicoStatoPolizze.do?tabId=WeT_Pri_Uas&obsKey=WeT_Pri_Uas_Pme&obsKey3=WeT_Pri_Uas_Pme" >Utility Assicirazioni</a></li>
+
+			</ul>
+		</div>
+
+
+
+
+		<div id="leftmenu">
+
+			<h2>Agenzia</h2>
+			<ul>
+
+				<li><a href="/wetools/admin/2l/do/aoladmin/RiconciliazioneBonifici.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Ric" >Riconciliazione bonifici</a></li>
+
+				<li><a href="/wetools/aoladmin/WsAolStart.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Ges" target="blank" >Gestione pratiche AOL</a></li>
+
+				<li><a href="/wetools/admin/2l/do/bankingadmin/RicercaPratiche.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger" class="selected">Gestione chiusura conti</a></li>
+
+				<li><a href="/wetools/admin/2l/do/admin/CustomerTradingFreeSubDepositSearch.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Afc" >Affrancamento custodie</a></li>
+
+				<li><a href="/wetools/admin/2l/do/aoladmin/RicercaBancarizzazione.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Ban" >Bancarizzazione</a></li>
+
+				<li><a href="/wetools/admin/2l/do/admin/CustomerAddendumLongSearch2.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Glo&obsKey3=WeT_Pri_Aol_Glo_Ric" >Gestione Long Overnight</a></li>
+
+				<li><a href="/wetools/admin/2l/do/aoladmin/RicercaDeroga.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Der" >Deroghe</a></li>
+
+				<li><a href="/wetools/admin/2l/jsp/aoladmin/jsp/sendPuk.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_SendPuk" >Send Puk</a></li>
+
+			</ul>
+		</div>
+		
+		<div id="contenuti">
+			<div id="content">
+
+				<h3>Gestione chiusura conti</h3>
+
+				<!-- NAVIGATORE TAB -->
+				<div id="navtab">
+
+					<a href="/wetools/admin/2l/do/bankingadmin/RicercaPratiche.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger" class="selected">elenco richieste</a>
+
+					<a href="/wetools/admin/2l/do/bankingadmin/CaricaExcel.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Gnr" >nuova richiesta</a>
+
+					<span class="limiter"></span>
+				</div>
+				<!-- FINE NAVIGATORE TAB -->
+
+				<script src="/wscmn/js/ret/setiframe.js" type="text/javascript"></script>	
+				
+				<script>
+					var larghezza = 980;
+					var frames = new Array();
+					var principale = new Object();
+					frames[0] = top;
+					frames[1] = top;
+			
+					function getPrincipale() {
+						return principale;
+					}
+					
+					function setPrincipale(p) {
+						principale = p;
+						principale.document = p;
+						frames[2] = principale;
+					}
+				</script>
+				<p>
+
+
+
+	
+		
+		
+		
+		
+		
+		
+	
+	
+
+
+
+	
+		
+		
+		
+		
+	
+	
+
+
+	
+	
+		
+		
+		
+		
+	
+
+
+	
+	
+		
+		
+		
+		
+	
+
+
+
+
+	
+		
+			
+				
+			
+			
+		
+	
+	
+
+
+<script language="JavaScript">
+<!--
+function CampoErrato ()
+	{
+	n=5;
+	for(i=1; i<n; i++)
+		{
+		campoCorrente = "campo0"+i;
+		//alert (campoCorrente);
+		if (document.getElementById)
+			 {
+			 questoMenu = document.getElementById(campoCorrente).style;
+			 questoMenu.color = "red";
+			 }
+		
+		else
+			 {
+			 return true
+			 }
+		}
+	}
+function retrieveAnomalie(tipoProdotto, div, checkId, idProdotto) {
+	var isBoxChecked = document.getElementById(checkId).checked;
+	var url = cgi_script + '/bankingadmin/AnomaliePerTipoProdotto.do'
+	if (isBoxChecked) {
+		new Ajax.Updater(
+				{ success:div, failure:'error' },
+				url,
+				{
+					method:'get',
+					parameters: {tipoProdotto: tipoProdotto, idProdotto: idProdotto}
+				});
+	} else {
+		document.getElementById(div).innerHTML = "&nbsp;";
+	}
+	
+}
+
+function deselectAnomalia(idAnomalia, tipoProdotto) {
+	//alert('idAnomalia: ' + idAnomalia + ' tipoProdotto: ' + tipoProdotto);
+	var suffisso = '_' + tipoProdotto + '_' + idAnomalia;
+	var checkAssociato = document.getElementById('anomalie' + suffisso);
+	var restituitoCheck = document.getElementById('restituito' + suffisso);
+	var gestitoCheck = document.getElementById('gestito' + suffisso);
+	var note = document.getElementById('noteAnomalie' + suffisso);
+	//var spia = document.inserimentoPratica.'spia' + suffisso;
+	var disabledValue = !checkAssociato.checked;
+	if(restituitoCheck) {
+		restituitoCheck.checked = false;
+		restituitoCheck.disabled = disabledValue;
+	}
+	if(gestitoCheck) {
+		gestitoCheck.checked = false;
+		gestitoCheck.disabled = disabledValue;
+	}
+	if(note) {
+		note.value = '';
+		note.disabled = disabledValue;
+	}
+	checkIcona(idAnomalia, tipoProdotto);
+}
+
+function checkIcona(idAnomalia, tipoProdotto) {
+	var suffisso = '_' + tipoProdotto + '_' + idAnomalia;
+	var checkAssociato = document.getElementById('anomalie' + suffisso);
+	var restituitoCheck = document.getElementById('restituito' + suffisso);
+	var gestitoCheck = document.getElementById('gestito' + suffisso);
+	var icona = document.getElementById('icona_' + idAnomalia);
+	if(checkAssociato.checked) {
+		var ok = true;
+		if (restituitoCheck) {
+			ok = ok && restituitoCheck.checked;
+		}
+		if (gestitoCheck) {
+			ok = ok && gestitoCheck.checked;
+		}
+		if (ok) {
+			icona.innerHTML = "<img src=\"/img/ico2inf_on.gif\" />";
+		} else {
+			icona.innerHTML = "<img src=\"/img/ico2inf_off.gif\" />";
+		}
+	} else {
+		icona.innerHTML = "";
+	}
+}
+function addEvent(o, n, h) {
+	// alert(o);
+	if (o.attachEvent){
+		// alert("attachEvent");
+		o.attachEvent("on" + n, h);
+	} else {
+		// alert("addEventListener " + n + h);
+		o.addEventListener(n, h, false);
+	}
+}
+function removeEvent(o, n, h) {
+	// alert(o);
+	if (o.attachEvent){
+		// alert("attachEvent");
+		o.detachEvent("on" + n, h); 
+	} else {
+		// alert("addEventListener " + n + h);
+		o.removeEventListener(n, h, false);
+	}
+}
+
+addEvent(window,"load",function() {
+	retrieveAnomalie('CCDEP', 'anomalieCTecnico', 'contoTecnicoCheck', '3610');
+	retrieveAnomalieCUS('-1', '-1');
+});
+
+function checkIban(ibanString) {
+	var regex = new RegExp("[a-z]{2}[0-9]{2}[a-z0-9]{1}[0-9]{5}[0-9]{5}[a-z .\\-0-9]{12}", "i");
+	if (ibanString.length == 0) {
+		return true;
+	} else {
+		var checked = regex.test(ibanString);
+		if (!checked) {
+			alert('Il valore IBAN inserito non è un valore valido');
+		}
+		return checked;
+	}
+}
+function retrieveAnomalieCUS(idCustodia, idDerivati) {
+	retrieveAnomalie('CUS', 'anomalieDeposito', 'custodiaTitoliCheck', idCustodia);
+	retrieveAnomalie('CDER', 'anomalieCDer', 'custodiaTitoliCheck', idDerivati);
+}
+
+function validateAndSubmit() {
+	var form = document.forms['inserimentoPratica'];
+	if (checkIban(form.iban.value)) {
+		form.submit();
+	}
+}
+-->
+</script>
+
+<div class="wtcontent">
+
+<form name="inserimentoPratica" method="POST" action="./CensimentoPraticheEstinzioneInsert.do">
+<input type="hidden" name="tabId" value="WeT_Pri_Aol" />
+<input type="hidden" name="obsKey" value="WeT_Pri_Aol_Gcc" />
+<input type="hidden" name="obsKey3" value="WeT_Pri_Aol_Ger" />
+<input type="hidden" name="idPratica" value="2493" />
+<input type="hidden" name="nome" value="GROSSI LAURA"/>
+<input type="hidden" name="idUtente" value="2213" />
+<input type="hidden" name="userAlias" value="0782032" />
+<input type="hidden" name="ndg" value="4320528" />
+<input type="hidden" name="codiceFiscale" value="GRSLRA79L49G482Q" />
+<input type="hidden" name="idProdotto" value="3609" />
+<input type="hidden" name="tipoProdotto" value="CC" /> 
+<input type="hidden" name="idCustodiaTitoli" value="-1" />
+<input type="hidden" name="idContoTecnico" value="3610" />
+<input type="hidden" name="idContoDerivati" value="-1" />
+<input type="hidden" name="agenzia" value="599"/>
+<input type="hidden" name="numero" value="45550"/>
+<input type="hidden" name="canale" value="WEB"/>
+
+	<h2>Tipo conto da estinguere: Conto corrente</h2><br/>
+	<h2>Canale: WEB</h2>
+	<table class="inputtable bonificict" cellpadding="0" cellspacing="0" >	
+		<tr>
+			<td class="label inputtablert">
+			<div class="multiLeft">
+				<div class="multibuttonpanel">
+					<a class="button" href="javascript:history.back()"><span>INDIETRO</span></a>
+				</div>
+			</div>
+			<div class="multiRight">			
+				<div class="multibuttonpanel">
+					<a class="button" href="#" onClick="javascript:validateAndSubmit();">SALVA</a>
+				</div>
+				
+				
+				
+				
+				<div class="multibuttonpanel">
+					<a class="button" href="./AbilitaDisabilitaComunicazioniMail.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger&idPratica=2493">disabilita COMUNICAZIONI MAIL</a>
+				</div>
+				
+				<div class="multibuttonpanel">
+					<a class="button" href="./CancellazionePratica.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger&idPratica=2493">CANCELLA PRATICA</a>
+				</div>
+				
+			</div>
+			</td>
+		</tr>
+	</table><br />
+	
+	
+	<h3>Dati cliente</h3>
+	<table class="inputtable bonificict" cellpadding="0" cellspacing="0" >	
+		<tr>
+			<td width="15%" class="label">
+				Nome e cognome
+			</td>
+			<td class="value" width="30%">
+				GROSSI LAURA
+			</td>
+			<td width="15%" class="label">
+				&nbsp;
+			</td>
+			<td width="30%" class="value">
+				&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+				Numero c/c
+			</td>
+			<td class="value">
+				599/45550
+			</td>
+			<td class="label">
+				IBAN destinatario
+			</td>
+			<td class="value">
+				
+					
+					
+						
+					
+				
+				<input name="iban" type="text" class="grande" value="IT53A0340201749000000030000" />
+			</td>
+		</tr>
+		
+			
+			
+				<tr>			
+					<td class="label">
+						Numero c/dep
+					</td>
+					<td class="value" colspan="3">
+						<input name="agenziaCTecnico" type="text" class="piccolo" maxlength="5"value="596"/> <input type="text" name="numeroCTecnico" maxlength="5" value="45550"/> 
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						Deposito titoli
+					</td>
+					<td class="value">
+						<input name="agenziaDeposito" type="text" class="piccolo" maxlength="5"value=""/> <input type="text" name="numeroDeposito" maxlength="11" value=""/>
+					</td>
+					<td class="label">
+						Numero c/der
+					</td>
+					<td class="value">
+						<input name="agenziaContoDerivati" type="text" class="piccolo" maxlength="5"value=""/> <input type="text" name="numeroContoDerivati" maxlength="5" value=""/>
+					</td>
+				</tr>
+			
+		
+	</table>
+	
+	<br class="clear"><br />
+	
+	<h3>Tipo conto da estinguere</h3>
+	<table class="inputtable bonificict" cellpadding="0" cellspacing="0" >	
+		<tr>
+			<td width="50%" class="label">
+				<input type="checkbox" name="contoTecnicoCheck" id="contoTecnicoCheck" value="TRUE" onclick="javascript:retrieveAnomalie('CCDEP', 'anomalieCTecnico', 'contoTecnicoCheck', '3610');" checked="checked"/> Conto deposito
+			</td>			
+			<td width="50%" class="label inputtablert">
+				<input type="checkbox" name="custodiaTitoliCheck" id="custodiaTitoliCheck" value="TRUE" onclick="javascript:retrieveAnomalieCUS('-1', '-1');" /> Deposito titoli/Conto derivati
+			</td>
+		</tr>		
+	</table>
+		
+	<div class="bollfrecsx2">
+		<div class="cartimpronta_lista cartimpronta_lista2"><img src="/img/1px.gif" class="carttit" alt=""><div class="cartcont" id=""><p class="tit" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:ApriCartImpr(this);" style="cursor: pointer;" id=""><span><strong class="titolo">PRODOTTI E SERVIZI</strong><br></span><img src="http://librerieadmin/img/cartimpr_off.gif" class="bot" alt=""></p><br class="clear"><div class="esteso" style="display: none;">
+			
+				<table cellspacing="0" cellpadding="0" class="tableint">
+					<tbody><tr>
+						<th colspan="2">Conto tecnico</th>
+						<th>Associato</th>
+						<th>Restituito</th>
+						<th>Gestito</th>
+						<th>Note</th>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_121">
+								
+							
+						</div></td>
+						<td width="170" class="uno">Capital gain</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input type="checkbox" class="nobor3" value="121" name="anomalie_CT" onclick="deselectAnomalia(121, 'CT');" id="anomalie_CT_121"></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input type="checkbox" disabled="disabled" class="nobor3" value="TRUE" onclick="checkIcona(121, 'CT');" name="gestito_CT_121" id="gestito_CT_121"></td>
+							
+							
+						
+						<td width="170"><input type="text" disabled="disabled" value="" class="grande" name="noteAnomalie_CT_121" id="noteAnomalie_CT_121"></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_124">
+								
+							
+						</div></td>
+						<td width="170" class="uno">Saldo conto tecnico negativo</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input type="checkbox" class="nobor3" value="124" name="anomalie_CT" onclick="deselectAnomalia(124, 'CT');" id="anomalie_CT_124"></td>
+							
+							
+						
+	
+						
+							
+								<td><input type="checkbox" disabled="disabled" class="nobor3" value="TRUE" onclick="checkIcona(124, 'CT');" name="restituito_CT_124" id="restituito_CT_124"></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+						<td width="170"><input type="text" disabled="disabled" value="" class="grande" name="noteAnomalie_CT_124" id="noteAnomalie_CT_124"></td>
+					</tr>
+					
+				</tbody></table>
+			
+				<br>
+				<div id="anomalieCTecnico" class="box73">&nbsp;</div>
+				<br>
+				<div id="anomalieDeposito" class="box73">
+				</div>
+				<br>
+				<div id="anomalieCDer" class="box73">
+				</div>
+				
+				</div></div><br><br class="clear"></div>		
+		</div>
+	<br class="clear"><br />
+	
+	<div class="bollfrecsx2">
+		<div class="cartimpronta_lista cartimpronta_lista2"><img alt="" class="carttit" src="/img/1px.gif"/><div class="cartcont"><p  onclick="javascript:ApriCartImpr(this);" onmouseover="javascript:this.style.cursor='pointer'" class="tit"><span><strong class="titolo">PRODOTTI E SERVIZI</strong><br /></span><img alt="" class="bot" src="/img/cartimpr_off.gif" /></p><br class="clear" /><div class="esteso">
+			
+				<table cellpadding="0" cellspacing="0" class="tableint">
+					<tr>
+						<th colspan="2">Conto corrente</th>
+						<th>Associato</th>
+						<th>Restituito</th>
+						<th>Gestito</th>
+						<th>Note</th>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_21"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Assegni</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_21" type="checkbox" onClick="deselectAnomalia(21, 'CC');" name="anomalie_CC" value="21" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="restituito_CC_21" type="checkbox" name="restituito_CC_21" onClick="checkIcona(21, 'CC');" value="TRUE" class="nobor3"  disabled="disabled"/></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_21" type="checkbox" name="gestito_CC_21" onClick="checkIcona(21, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_21" name="noteAnomalie_CC_21" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_22"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Bancomat</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_22" type="checkbox" onClick="deselectAnomalia(22, 'CC');" name="anomalie_CC" value="22" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="restituito_CC_22" type="checkbox" name="restituito_CC_22" onClick="checkIcona(22, 'CC');" value="TRUE" class="nobor3"  disabled="disabled"/></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_22" type="checkbox" name="gestito_CC_22" onClick="checkIcona(22, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_22" name="noteAnomalie_CC_22" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_43"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Capital gain</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_43" type="checkbox" onClick="deselectAnomalia(43, 'CC');" name="anomalie_CC" value="43" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_43" type="checkbox" name="gestito_CC_43" onClick="checkIcona(43, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_43" name="noteAnomalie_CC_43" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_23"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Carta je@ns</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_23" type="checkbox" onClick="deselectAnomalia(23, 'CC');" name="anomalie_CC" value="23" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_23" type="checkbox" name="gestito_CC_23" onClick="checkIcona(23, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_23" name="noteAnomalie_CC_23" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_24"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Cartimpronta</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_24" type="checkbox" onClick="deselectAnomalia(24, 'CC');" name="anomalie_CC" value="24" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="restituito_CC_24" type="checkbox" name="restituito_CC_24" onClick="checkIcona(24, 'CC');" value="TRUE" class="nobor3"  disabled="disabled"/></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_24" type="checkbox" name="gestito_CC_24" onClick="checkIcona(24, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_24" name="noteAnomalie_CC_24" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_26"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Domiciliazione utenze/Rid</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_26" type="checkbox" onClick="deselectAnomalia(26, 'CC');" name="anomalie_CC" value="26" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_26" type="checkbox" name="gestito_CC_26" onClick="checkIcona(26, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_26" name="noteAnomalie_CC_26" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_31"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Fidi</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_31" type="checkbox" onClick="deselectAnomalia(31, 'CC');" name="anomalie_CC" value="31" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_31" type="checkbox" name="gestito_CC_31" onClick="checkIcona(31, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_31" name="noteAnomalie_CC_31" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_29"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Mutui</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_29" type="checkbox" onClick="deselectAnomalia(29, 'CC');" name="anomalie_CC" value="29" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_29" type="checkbox" name="gestito_CC_29" onClick="checkIcona(29, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_29" name="noteAnomalie_CC_29" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_32"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Ordini permanenti</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_32" type="checkbox" onClick="deselectAnomalia(32, 'CC');" name="anomalie_CC" value="32" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_32" type="checkbox" name="gestito_CC_32" onClick="checkIcona(32, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_32" name="noteAnomalie_CC_32" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_30"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Prestiti</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_30" type="checkbox" onClick="deselectAnomalia(30, 'CC');" name="anomalie_CC" value="30" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_30" type="checkbox" name="gestito_CC_30" onClick="checkIcona(30, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_30" name="noteAnomalie_CC_30" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_25"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Saldo c/c negativo</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_25" type="checkbox" onClick="deselectAnomalia(25, 'CC');" name="anomalie_CC" value="25" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="restituito_CC_25" type="checkbox" name="restituito_CC_25" onClick="checkIcona(25, 'CC');" value="TRUE" class="nobor3"  disabled="disabled"/></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_25" name="noteAnomalie_CC_25" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_27"/>
+								
+							
+						</td>
+						<td class="uno" width="170">Telepass</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_27" type="checkbox" onClick="deselectAnomalia(27, 'CC');" name="anomalie_CC" value="27" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+							
+								<td>&nbsp;</td>
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_27" type="checkbox" name="gestito_CC_27" onClick="checkIcona(27, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_27" name="noteAnomalie_CC_27" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+								
+								
+								
+									<div id="icona_33"/>
+								
+							
+						</td>
+						<td class="uno" width="170">ALTRO</td>
+						
+							
+							
+								
+								
+							
+						
+						
+							
+								<td><input id="anomalie_CC_33" type="checkbox" onClick="deselectAnomalia(33, 'CC');" name="anomalie_CC" value="33" class="nobor3"  /></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="restituito_CC_33" type="checkbox" name="restituito_CC_33" onClick="checkIcona(33, 'CC');" value="TRUE" class="nobor3"  disabled="disabled"/></td>
+							
+							
+						
+	
+						
+							
+								<td><input id="gestito_CC_33" type="checkbox" name="gestito_CC_33" onClick="checkIcona(33, 'CC');" value="TRUE" class="nobor3"  disabled="disabled" /></td>
+							
+							
+						
+						<td width="170"><input id="noteAnomalie_CC_33" name="noteAnomalie_CC_33" type="text" class="grande" value=""disabled="disabled" /></td>
+					</tr>
+					
+				</table>
+			
+				<br />
+				<div class="box73" id="anomalieCTecnico">
+				</div>
+				<br />
+				<div class="box73" id="anomalieDeposito">
+				</div>
+				<br/>
+				<div class="box73" id="anomalieCDer">
+				</div>
+				
+				</div></div><br /><br class="clear"/></div>		
+		</div>	
+<br class="clear">
+</form>	
+	
+	<table class="inputtable bonificict" cellpadding="0" cellspacing="0" >	
+		<tr>
+			<td class="label inputtablert">
+			<div class="multiLeft">
+				<div class="multibuttonpanel">
+					<a class="button" href="javascript:history.back()"><span>INDIETRO</span></a>
+				</div>
+			</div>
+			<div class="multiRight">			
+				<div class="multibuttonpanel">
+					<a class="button" href="#" onClick="javascript:validateAndSubmit();">SALVA</a>
+				</div>
+				
+				
+				
+				
+				<div class="multibuttonpanel">
+					<a class="button" href="./AbilitaDisabilitaComunicazioniMail.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger&idPratica=2493">disabilita COMUNICAZIONI MAIL</a>
+				</div>
+				
+				<div class="multibuttonpanel">
+					<a class="button" href="./CancellazionePratica.do?tabId=WeT_Pri_Aol&obsKey=WeT_Pri_Aol_Gcc&obsKey3=WeT_Pri_Aol_Ger&idPratica=2493">CANCELLA PRATICA</a>
+				</div>
+				
+			</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+				</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p class="disclaimer">	
+			<strong>Ricorda</strong>: Non permettere ad alcuno di utilizzare questo strumento con la tua utenza<br>
+			Non diffondere in alcun modo le informazione di cui verrai a conoscenza durante il tuo lavoro
+			</p>
+			<ul class="footermenu">
+				<li class="first"><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Dolor</a></li>
+				<li><a href="#">Sit amet cons</a></li>
+				<li><a href="#">Elit</a></li>
+				<li><a href="#">Adipiscing</a></li>
+			</ul>
+			<p class="footnotes">&copy; Lorem ipsum dolor sit - Amet 123890029</p>
+		</div>
+		<script>
+			function invioForm (e, formEl) {
+				if (!e) var e = window.event
+				if (e.keyCode) code = e.keyCode;
+				else if (e.which) code = e.which;
+				
+				if (code == 13) formEl.submit();
+			}
+		</script>
+	</body>
+</html>
+		 

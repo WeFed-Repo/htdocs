@@ -1,0 +1,1706 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html>
+	<head>
+	<link rel="stylesheet" href="/css/wsadmin.css" type="text/css" media="all"/>
+	<link rel="stylesheet" type="text/css" media="print" href="/css/wsadmin_print.css" />
+	<script src="/js/frontEnd.js" type="text/javascript"></script>
+	<script src="/wscmn/js/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	<!--
+		function startStop(schedName, triggerName, triggerGroup, action) {
+			var urlStats = 'startStopScheduler.jsp';
+			var r=confirm("ATTENZIONE stai per fare " + action +" su "+ triggerName + ". Vuoi procedere ?");
+			if (r==true) {
+				var parameters = {
+						  "schedName" : schedName
+						, "triggerName" : triggerName
+						, "triggerGroup" : triggerGroup
+						, "action" : action
+				};
+				var onComplete = function(response) {
+						if (response.indexOf("OK") >= 0){
+							location.reload();
+						}
+						else if (response.indexOf("KO") >= 0){
+							alert("Nessun job trovato");
+						}
+						else if (response.indexOf("refresh") >= 0){
+							alert("Devi essere loggato a wetools e nel gruppo giusto");
+						} else {
+							alert(response);
+						}
+					};
+				var onFailure = function(response) {
+						alert("Errore: <"+response.statusText+">\nDevi essere loggato a wetools e nel gruppo giusto");
+					};
+
+				jqAJAXCall('POST', 'text', urlStats, onComplete, onFailure, parameters);
+			}
+		}
+
+		function restart(schedName, jobName, jobGroup) {
+			var urlStats =  'restartTrigger.jsp';
+			var r=confirm("ATTENZIONE stai per avviare: '"+jobName+"'.\nVuoi procedere ?");
+			if (r==true) {
+				var parameters = {
+						"schedName" : schedName
+						, "jobName" : jobName
+						, "jobGroup" : jobGroup
+				};
+				var onComplete = function(request) {
+						if (request.indexOf("OK") >= 0){
+							location.reload();
+						}
+						else if (request.indexOf("KO") >= 0){
+							alert("Nessun job trovato");
+						}
+						else if (request.indexOf("refresh") >= 0){
+							alert("Devi essere loggato a wetools e nel gruppo giusto");
+						} else {
+							alert(request);
+						}
+					};
+
+				jqAJAXCall('POST', 'text', urlStats, onComplete, null, parameters);
+			}
+		}
+		//-->
+	</script>
+</head>
+
+<body>
+
+	<div id="header"><a href="#"><h1 class="logo"><span>WeTools</span></h1></a></div>
+	<img src="/img/app_logo.png" class="printlogo">
+
+
+
+	<div class="wtcontent">
+		<h2>Webank Scheduler  non dispositivo </h2>
+		<h4>mer 10 ottobre - 14:50:16</h4>
+		<table class="resulttable notop" cellpadding="0" cellspacing="0">
+			<thead>
+				<tr>
+					<th style="width:130px">Prossima esecuzione</th>
+					<th>Job</th>
+					<th style="width:120px">Nome</th>
+					<th style="width:150px" title="(GdS: 1=dom)">Orario Crontab<br/><span>(ss mm hh GdM M GdS A )</span></th>
+					<th style="width:50px">Stato</th>
+					<th class="nostampa"></th>
+					<th class="nostampa"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 14:55:00</td>
+					<td class="col-motivo">QuoteLoader</td>
+					<td style="font-size: 10px;">QuoteLoader</td>
+					<td>0 0/5 * * * ? <strong></strong>
+
+						<br/><span>mer 10/10/2012 15:00:00</span>
+
+						<br/><span>mer 10/10/2012 15:05:00</span>
+
+						<br/><span>mer 10/10/2012 15:10:00</span>
+
+					</td>
+					<td>NORMAL</td>
+					<td class="nostampa">aaaa</td>
+					<td class="nostampa">aaaa</td>
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 15:00:00</td>
+					<td class="col-motivo">RecallPrevisionaleReport</td>
+					<td style="font-size: 10px;">RecallPrevisionaleRe</td>
+					<td>0 00 15 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 15:00:00</span>
+
+						<br/><span>ven 12/10/2012 15:00:00</span>
+
+						<br/><span>lun 15/10/2012 15:00:00</span>
+
+					</td>
+					<td>NORMAL</td>
+					<td class="nostampa">aaaa</td>
+					<td class="nostampa">aaaa</td>
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 15:00:00</td>
+					<td class="col-motivo">DemoneSenderJob</td>
+					<td style="font-size: 10px;">DemoneSenderJob</td>
+					<td>0 0/15 * * * ? <strong></strong>
+
+						<br/><span>mer 10/10/2012 15:15:00</span>
+
+						<br/><span>mer 10/10/2012 15:30:00</span>
+
+						<br/><span>mer 10/10/2012 15:45:00</span>
+
+					</td>
+					<td>NORMAL</td>
+					<td class="nostampa">aaaa</td>
+					<td class="nostampa">aaaa</td>
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 15:10:00</td>
+					<td class="col-motivo">Contabilizza le fees</td>
+					<td style="font-size: 10px;">contabilizzazioneFee</td>
+					<td>0 10 15 10 * ? <strong></strong>
+
+						<br/><span>sab 10/11/2012 15:10:00</span>
+
+						<br/><span>lun 10/12/2012 15:10:00</span>
+
+						<br/><span>gio 10/01/2013 15:10:00</span>
+
+					</td>
+					<td>NORMAL</td>
+					<td class="nostampa">aaaa</td>
+					<td class="nostampa">aaaa</td>
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 15:30:00</td>
+					<td class="col-motivo">ApertureOdiernesuTReport</td>
+					<td style="font-size: 10px;">ApertureOdiernesuTRe</td>
+					<td>0 30 15 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 15:30:00</span>
+
+						<br/><span>ven 12/10/2012 15:30:00</span>
+
+						<br/><span>lun 15/10/2012 15:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 15:30:00</td>
+					<td class="col-motivo">Acquisizione bonifici verso conti liquidit&agrave; per riconoscimento AOL e trasferimento a CT.</td>
+					<td style="font-size: 10px;">AcquisisciBonifici</td>
+					<td>0 30 15 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 15:30:00</span>
+
+						<br/><span>ven 12/10/2012 15:30:00</span>
+
+						<br/><span>lun 15/10/2012 15:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 16:00:00</td>
+					<td class="col-motivo">ChiusuraPrestitiShortOvernight</td>
+					<td style="font-size: 10px;">ChiusuraPrestitiShor</td>
+					<td>0 0 16 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 16:00:00</span>
+
+						<br/><span>ven 12/10/2012 16:00:00</span>
+
+						<br/><span>lun 15/10/2012 16:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:00:00</td>
+					<td class="col-motivo">available.current.position</td>
+					<td style="font-size: 10px;">available.current.po</td>
+					<td>00 00 17 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:00:00</span>
+
+						<br/><span>ven 12/10/2012 17:00:00</span>
+
+						<br/><span>lun 15/10/2012 17:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:05:00</td>
+					<td class="col-motivo">MessaggiLender</td>
+					<td style="font-size: 10px;">MessaggiLender</td>
+					<td>0 05 17 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:05:00</span>
+
+						<br/><span>ven 12/10/2012 17:05:00</span>
+
+						<br/><span>lun 15/10/2012 17:05:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:15:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni ETF</td>
+					<td style="font-size: 10px;">chiusuraforzata_ETF</td>
+					<td>0 15 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:15:00</span>
+
+						<br/><span>ven 12/10/2012 17:15:00</span>
+
+						<br/><span>lun 15/10/2012 17:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:15:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni aperte ESTERI_EUROPA</td>
+					<td style="font-size: 10px;">chiusuraforzata_ESTE</td>
+					<td>0 15 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:15:00</span>
+
+						<br/><span>ven 12/10/2012 17:15:00</span>
+
+						<br/><span>lun 15/10/2012 17:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:25:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni aperte derivati intraday IDEM</td>
+					<td style="font-size: 10px;">chiusuraforzata_deri</td>
+					<td>0 25 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:25:00</span>
+
+						<br/><span>ven 12/10/2012 17:25:00</span>
+
+						<br/><span>lun 15/10/2012 17:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:25:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni marginate aperte TLX_EUROTLX</td>
+					<td style="font-size: 10px;">chiusuraforzata_TLX_</td>
+					<td>0 25 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:25:00</span>
+
+						<br/><span>ven 12/10/2012 17:25:00</span>
+
+						<br/><span>lun 15/10/2012 17:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:25:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni aperte MTA continua</td>
+					<td style="font-size: 10px;">chiusuraforzata_MTA_</td>
+					<td>0 25 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:25:00</span>
+
+						<br/><span>ven 12/10/2012 17:25:00</span>
+
+						<br/><span>lun 15/10/2012 17:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:25:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni marginate aperte MOT</td>
+					<td style="font-size: 10px;">chiusuraforzata_MOT</td>
+					<td>0 25 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:25:00</span>
+
+						<br/><span>ven 12/10/2012 17:25:00</span>
+
+						<br/><span>lun 15/10/2012 17:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:30:00</td>
+					<td class="col-motivo">OperazioniReport</td>
+					<td style="font-size: 10px;">OperazioniReport</td>
+					<td>0 30 17 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:30:00</span>
+
+						<br/><span>ven 12/10/2012 17:30:00</span>
+
+						<br/><span>lun 15/10/2012 17:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 17:30:00</td>
+					<td class="col-motivo">Invia le mail di segnalazione ai clienti.</td>
+					<td style="font-size: 10px;">ChiusureForzateMail_</td>
+					<td>0 30 17 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 17:30:00</span>
+
+						<br/><span>ven 12/10/2012 17:30:00</span>
+
+						<br/><span>lun 15/10/2012 17:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 18:30:00</td>
+					<td class="col-motivo">Aggiorna i close price della basket loans richiedendoli alla cache</td>
+					<td style="font-size: 10px;">AggiornamentoPrezziC</td>
+					<td>0 30 18 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 18:30:00</span>
+
+						<br/><span>ven 12/10/2012 18:30:00</span>
+
+						<br/><span>lun 15/10/2012 18:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 20:15:34</td>
+					<td class="col-motivo">Chiusure forzate posizioni marginate aperte MTA_AFTERHOUR</td>
+					<td style="font-size: 10px;">chiusuraforzata_MTA_</td>
+					<td>34 15 20 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 20:15:34</span>
+
+						<br/><span>ven 12/10/2012 20:15:34</span>
+
+						<br/><span>lun 15/10/2012 20:15:34</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 20:45:00</td>
+					<td class="col-motivo">Apre i prestiti e calcola fee passive e variazioni margini per posizioni overnight.</td>
+					<td style="font-size: 10px;">CalcoloAdeguamentoMa</td>
+					<td>0 45 20 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 20:45:00</span>
+
+						<br/><span>ven 12/10/2012 20:45:00</span>
+
+						<br/><span>lun 15/10/2012 20:45:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:30:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni marginate aperte ESTERI_AMERICA</td>
+					<td style="font-size: 10px;">chiusuraforzata_ESTE</td>
+					<td>0 30 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:30:00</span>
+
+						<br/><span>ven 12/10/2012 21:30:00</span>
+
+						<br/><span>lun 15/10/2012 21:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:30:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni marginate intraday aperte su EUREX</td>
+					<td style="font-size: 10px;">chiusuraforzata_DERI</td>
+					<td>0 30 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:30:00</span>
+
+						<br/><span>ven 12/10/2012 21:30:00</span>
+
+						<br/><span>lun 15/10/2012 21:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:30:00</td>
+					<td class="col-motivo">Chiusure forzate posizioni aperte DERIVATI_INTRADAY_CME</td>
+					<td style="font-size: 10px;">chiusuraforzata_DERI</td>
+					<td>0 30 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:30:00</span>
+
+						<br/><span>ven 12/10/2012 21:30:00</span>
+
+						<br/><span>lun 15/10/2012 21:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:30:00</td>
+					<td class="col-motivo">Invia ad AF le penali targate TBF</td>
+					<td style="font-size: 10px;">InvioPenaliBatch</td>
+					<td>0 30 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:30:00</span>
+
+						<br/><span>ven 12/10/2012 21:30:00</span>
+
+						<br/><span>lun 15/10/2012 21:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:30:00</td>
+					<td class="col-motivo">Verifica le richieste Geoblock Bancomat pervenute da Webank e le notifica in ritardo se non gestite entro 1 gg lavorativo</td>
+					<td style="font-size: 10px;">DemoneGeoblockRitard</td>
+					<td>0 30 21 * * ? <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:30:00</span>
+
+						<br/><span>ven 12/10/2012 21:30:00</span>
+
+						<br/><span>sab 13/10/2012 21:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:35:00</td>
+					<td class="col-motivo">Invia le mail di segnalazione ai clienti.</td>
+					<td style="font-size: 10px;">ChiusureForzateMail_</td>
+					<td>0 35 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:35:00</span>
+
+						<br/><span>ven 12/10/2012 21:35:00</span>
+
+						<br/><span>lun 15/10/2012 21:35:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:35:00</td>
+					<td class="col-motivo">Invia le mail di segnalazione ai clienti.</td>
+					<td style="font-size: 10px;">ChiusureForzateMail_</td>
+					<td>0 35 21 ? * 2-6 <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:35:00</span>
+
+						<br/><span>ven 12/10/2012 21:35:00</span>
+
+						<br/><span>lun 15/10/2012 21:35:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 21:55:00</td>
+					<td class="col-motivo">Generazione ordinativi a/da conti liquidit&agrave; per riconoscimento AOL e per trasferimento a/da CT.</td>
+					<td style="font-size: 10px;">GeneraOrdinativi</td>
+					<td>0 55 21 ? * MON-FRI <strong></strong>
+
+						<br/><span>gio 11/10/2012 21:55:00</span>
+
+						<br/><span>ven 12/10/2012 21:55:00</span>
+
+						<br/><span>lun 15/10/2012 21:55:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 22:05:00</td>
+					<td class="col-motivo">execperiod</td>
+					<td style="font-size: 10px;">execperiod</td>
+					<td>0 5 22 * * ? <strong></strong>
+
+						<br/><span>gio 11/10/2012 22:05:00</span>
+
+						<br/><span>ven 12/10/2012 22:05:00</span>
+
+						<br/><span>sab 13/10/2012 22:05:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 22:25:00</td>
+					<td class="col-motivo">DemoneSetLockOn</td>
+					<td style="font-size: 10px;">DemoneSetLockOn</td>
+					<td>0 25 22 ? * 2-5 <strong>dateContabili</strong>
+
+						<br/><span>gio 11/10/2012 22:25:00</span>
+
+						<br/><span>lun 15/10/2012 22:25:00</span>
+
+						<br/><span>mar 16/10/2012 22:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 23:00:00</td>
+					<td class="col-motivo">Carica in PK le associazioni Ndg-Promotori partendo dai dati delle AOL in DWH - Invia mail di notifica a Galbiati</td>
+					<td style="font-size: 10px;">AllineatoreNdgPromot</td>
+					<td>0 0 23 * * ? <strong></strong>
+
+						<br/><span>gio 11/10/2012 23:00:00</span>
+
+						<br/><span>ven 12/10/2012 23:00:00</span>
+
+						<br/><span>sab 13/10/2012 23:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 23:30:00</td>
+					<td class="col-motivo">Report scoperti titoli prospettica</td>
+					<td style="font-size: 10px;">RptScopertiTitProsp</td>
+					<td>0 30 23 * * ? <strong>dateMercatiNonDer</strong>
+
+						<br/><span>gio 11/10/2012 23:30:00</span>
+
+						<br/><span>ven 12/10/2012 23:30:00</span>
+
+						<br/><span>sab 13/10/2012 23:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 10/10/2012 23:30:00</td>
+					<td class="col-motivo">Demone di Inesecuzione delle Revoche rimaste Pendenti - Invia notifica al gruppo ExecutionDesk - Rif Coco</td>
+					<td style="font-size: 10px;">DemoneInesecuzioneRe</td>
+					<td>0 30 23 * * ? <strong></strong>
+
+						<br/><span>gio 11/10/2012 23:30:00</span>
+
+						<br/><span>ven 12/10/2012 23:30:00</span>
+
+						<br/><span>sab 13/10/2012 23:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 0:00:00</td>
+					<td class="col-motivo">DemoneAggiornamentoContiNotes</td>
+					<td style="font-size: 10px;">DemoneAggiornamentoC</td>
+					<td>0 0 00 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 0:00:00</span>
+
+						<br/><span>sab 13/10/2012 0:00:00</span>
+
+						<br/><span>dom 14/10/2012 0:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 0:15:00</td>
+					<td class="col-motivo">Caricamento listini linee vincolate</td>
+					<td style="font-size: 10px;">ListiniLineeVincolat</td>
+					<td>0 15 0 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 0:15:00</span>
+
+						<br/><span>sab 13/10/2012 0:15:00</span>
+
+						<br/><span>dom 14/10/2012 0:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 0:30:00</td>
+					<td class="col-motivo">DemoneAggiornamentoDerNotes</td>
+					<td style="font-size: 10px;">DemoneAggiornamentoD</td>
+					<td>0 30 00 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 0:30:00</span>
+
+						<br/><span>sab 13/10/2012 0:30:00</span>
+
+						<br/><span>dom 14/10/2012 0:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 1:00:00</td>
+					<td class="col-motivo">Verifica tramite CRIF delle richieste AOL ricevute</td>
+					<td style="font-size: 10px;">DemoneAolCrif</td>
+					<td>0 0 1 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 1:00:00</span>
+
+						<br/><span>lun 15/10/2012 1:00:00</span>
+
+						<br/><span>mar 16/10/2012 1:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:00:00</td>
+					<td class="col-motivo">DemoneTitoli</td>
+					<td style="font-size: 10px;">DemoneTitoliNuovaAna</td>
+					<td>0 0 5 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:00:00</span>
+
+						<br/><span>sab 13/10/2012 5:00:00</span>
+
+						<br/><span>dom 14/10/2012 5:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:00:00</td>
+					<td class="col-motivo">DemoneAolSospette</td>
+					<td style="font-size: 10px;">DemoneAolSospette</td>
+					<td>0 0 5 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:00:00</span>
+
+						<br/><span>sab 13/10/2012 5:00:00</span>
+
+						<br/><span>dom 14/10/2012 5:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:20:00</td>
+					<td class="col-motivo">Prequadratura bollettini postali FastBank (esclusi i festivi)</td>
+					<td style="font-size: 10px;">PrequadraturaFastBan</td>
+					<td>0 20 5 ? * * <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:20:00</span>
+
+						<br/><span>sab 13/10/2012 5:20:00</span>
+
+						<br/><span>dom 14/10/2012 5:20:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:30:00</td>
+					<td class="col-motivo">DemoneTitoli</td>
+					<td style="font-size: 10px;">RitenuteCedole</td>
+					<td>0 30 5 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:30:00</span>
+
+						<br/><span>sab 13/10/2012 5:30:00</span>
+
+						<br/><span>dom 14/10/2012 5:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:30:00</td>
+					<td class="col-motivo">Cancellazione alert a richiesta scaduti</td>
+					<td style="font-size: 10px;">CleanAlert</td>
+					<td>0 30 5 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:30:00</span>
+
+						<br/><span>sab 13/10/2012 5:30:00</span>
+
+						<br/><span>dom 14/10/2012 5:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:40:00</td>
+					<td class="col-motivo">MonteTitoli</td>
+					<td style="font-size: 10px;">MonteTitoli</td>
+					<td>0 40 5 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:40:00</span>
+
+						<br/><span>lun 15/10/2012 5:40:00</span>
+
+						<br/><span>mar 16/10/2012 5:40:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 5:50:00</td>
+					<td class="col-motivo">Consuntivo pagamenti FastBank (esclusi i festivi)</td>
+					<td style="font-size: 10px;">ConsuntivoFastBank</td>
+					<td>0 50 5 ? * * <strong></strong>
+
+						<br/><span>ven 12/10/2012 5:50:00</span>
+
+						<br/><span>sab 13/10/2012 5:50:00</span>
+
+						<br/><span>dom 14/10/2012 5:50:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 6:00:00</td>
+					<td class="col-motivo">DemoneRiepilogoBancarizzazione</td>
+					<td style="font-size: 10px;">DemoneRiepilogoBanca</td>
+					<td>0 00 06 ? * * <strong>dateContabili</strong>
+
+						<br/><span>ven 12/10/2012 6:00:00</span>
+
+						<br/><span>sab 13/10/2012 6:00:00</span>
+
+						<br/><span>dom 14/10/2012 6:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 6:00:00</td>
+					<td class="col-motivo">DemoneAggiornamentoNdgNotes</td>
+					<td style="font-size: 10px;">DemoneAggiornamentoN</td>
+					<td>0 0,30 6-11 * * ? <strong></strong>
+
+						<br/><span>gio 11/10/2012 6:30:00</span>
+
+						<br/><span>gio 11/10/2012 7:00:00</span>
+
+						<br/><span>gio 11/10/2012 7:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 6:00:30</td>
+					<td class="col-motivo">Report di quadratura portafoglio titoli tra PK e Cad</td>
+					<td style="font-size: 10px;">SaldiTitoliPkCad</td>
+					<td>30 00 6 * * ? <strong>dateContabili+1</strong>
+
+						<br/><span>ven 12/10/2012 6:00:30</span>
+
+						<br/><span>sab 13/10/2012 6:00:30</span>
+
+						<br/><span>dom 14/10/2012 6:00:30</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 6:15:00</td>
+					<td class="col-motivo">Aggiorna le tabelle utilizzate dalla scheda titolo e le viste materializzate relative ai file RESC</td>
+					<td style="font-size: 10px;">MultexBatchResc</td>
+					<td>0 15 06 ? * MON-SAT <strong></strong>
+
+						<br/><span>ven 12/10/2012 6:15:00</span>
+
+						<br/><span>sab 13/10/2012 6:15:00</span>
+
+						<br/><span>lun 15/10/2012 6:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 6:45:00</td>
+					<td class="col-motivo">Calcola la perdita per le posizioni Overnight (LONG E SHORT).</td>
+					<td style="font-size: 10px;">Perdita50Overnight</td>
+					<td>0 45 06 ? * 2-6 <strong></strong>
+
+						<br/><span>ven 12/10/2012 6:45:00</span>
+
+						<br/><span>lun 15/10/2012 6:45:00</span>
+
+						<br/><span>mar 16/10/2012 6:45:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:00:00</td>
+					<td class="col-motivo">Carica su DB i bollettini premarcati e ICI</td>
+					<td style="font-size: 10px;">PostalAccountsLoader</td>
+					<td>0 00 7,14 ? * * <strong></strong>
+
+						<br/><span>gio 11/10/2012 14:00:00</span>
+
+						<br/><span>ven 12/10/2012 7:00:00</span>
+
+						<br/><span>ven 12/10/2012 14:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:00:00</td>
+					<td class="col-motivo">NamingLineeVincolateDescr</td>
+					<td style="font-size: 10px;">NamingLineeVincolate</td>
+					<td>0 0 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:00:00</span>
+
+						<br/><span>sab 13/10/2012 7:00:00</span>
+
+						<br/><span>dom 14/10/2012 7:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:00:00</td>
+					<td class="col-motivo">ImportRadiocor</td>
+					<td style="font-size: 10px;">ImportRadiocor</td>
+					<td>0 0 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:00:00</span>
+
+						<br/><span>sab 13/10/2012 7:00:00</span>
+
+						<br/><span>dom 14/10/2012 7:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:00:00</td>
+					<td class="col-motivo">DemoneDeleterScheduledSendJob</td>
+					<td style="font-size: 10px;">DemoneDeleterSchedul</td>
+					<td>0 0 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:00:00</span>
+
+						<br/><span>sab 13/10/2012 7:00:00</span>
+
+						<br/><span>dom 14/10/2012 7:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:00:00</td>
+					<td class="col-motivo">AnagrafamentoBodUpdate</td>
+					<td style="font-size: 10px;">AnagrafamentoBodUpda</td>
+					<td>0 0 7 ? * 1-5 <strong></strong>
+
+						<br/><span>dom 14/10/2012 7:00:00</span>
+
+						<br/><span>lun 15/10/2012 7:00:00</span>
+
+						<br/><span>mar 16/10/2012 7:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:10:00</td>
+					<td class="col-motivo">DemoneTitoli</td>
+					<td style="font-size: 10px;">DemoneTitoli</td>
+					<td>0 10 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:10:00</span>
+
+						<br/><span>sab 13/10/2012 7:10:00</span>
+
+						<br/><span>dom 14/10/2012 7:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:10:00</td>
+					<td class="col-motivo">Elabora i bollettini postali FastBank</td>
+					<td style="font-size: 10px;">BollettiniFastBank</td>
+					<td>0 10 7,14 ? * * <strong></strong>
+
+						<br/><span>gio 11/10/2012 14:10:00</span>
+
+						<br/><span>ven 12/10/2012 7:10:00</span>
+
+						<br/><span>ven 12/10/2012 14:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:15:00</td>
+					<td class="col-motivo">Calcola la perdita per le trades su Future IDEM.</td>
+					<td style="font-size: 10px;">Perdita50FutureIDEM</td>
+					<td>0 15 07 ? * 2-6 <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:15:00</span>
+
+						<br/><span>lun 15/10/2012 7:15:00</span>
+
+						<br/><span>mar 16/10/2012 7:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:25:00</td>
+					<td class="col-motivo">LeggiEsitiChiusuraCC</td>
+					<td style="font-size: 10px;">LeggiEsitiChiusuraCC</td>
+					<td>0 25 7 * * ? <strong>dateContabili+1</strong>
+
+						<br/><span>ven 12/10/2012 7:25:00</span>
+
+						<br/><span>sab 13/10/2012 7:25:00</span>
+
+						<br/><span>dom 14/10/2012 7:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:25:00</td>
+					<td class="col-motivo">DemoneUpdateBonifici</td>
+					<td style="font-size: 10px;">DemoneUpdateBonifici</td>
+					<td>0 25 7 * * ? <strong>dateContabili</strong>
+
+						<br/><span>ven 12/10/2012 7:25:00</span>
+
+						<br/><span>sab 13/10/2012 7:25:00</span>
+
+						<br/><span>dom 14/10/2012 7:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:25:00</td>
+					<td class="col-motivo">DemoneTitoli</td>
+					<td style="font-size: 10px;">DemoneTitoliNuovaAna</td>
+					<td>0 25 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:25:00</span>
+
+						<br/><span>sab 13/10/2012 7:25:00</span>
+
+						<br/><span>dom 14/10/2012 7:25:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:30:00</td>
+					<td class="col-motivo">reports.paolo3d.obs</td>
+					<td style="font-size: 10px;">reports.paolo3d.obs</td>
+					<td>00 30 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:30:00</span>
+
+						<br/><span>sab 13/10/2012 7:30:00</span>
+
+						<br/><span>dom 14/10/2012 7:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:30:00</td>
+					<td class="col-motivo">BCE</td>
+					<td style="font-size: 10px;">BCE</td>
+					<td>0 30 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:30:00</span>
+
+						<br/><span>sab 13/10/2012 7:30:00</span>
+
+						<br/><span>dom 14/10/2012 7:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:30:00</td>
+					<td class="col-motivo">AnagrafamentoBodInsert</td>
+					<td style="font-size: 10px;">AnagrafamentoBodInse</td>
+					<td>0 30 7 ? * 1-5 <strong></strong>
+
+						<br/><span>dom 14/10/2012 7:30:00</span>
+
+						<br/><span>lun 15/10/2012 7:30:00</span>
+
+						<br/><span>mar 16/10/2012 7:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:35:00</td>
+					<td class="col-motivo">Caricamento catalogo prodotti FICS per muutui</td>
+					<td style="font-size: 10px;">CatalogoMutuiFics</td>
+					<td>0 35 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:35:00</span>
+
+						<br/><span>sab 13/10/2012 7:35:00</span>
+
+						<br/><span>dom 14/10/2012 7:35:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:45:00</td>
+					<td class="col-motivo">DemoneReminderMail</td>
+					<td style="font-size: 10px;">DemoneReminderMail</td>
+					<td>0 45 07 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:45:00</span>
+
+						<br/><span>sab 13/10/2012 7:45:00</span>
+
+						<br/><span>dom 14/10/2012 7:45:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:50:00</td>
+					<td class="col-motivo">Calcola la perdita per le trades su Options.</td>
+					<td style="font-size: 10px;">Perdita50Options</td>
+					<td>0 50 07 ? * 2-6 <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:50:00</span>
+
+						<br/><span>lun 15/10/2012 7:50:00</span>
+
+						<br/><span>mar 16/10/2012 7:50:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:55:00</td>
+					<td class="col-motivo">Calcola la perdita per le le trades su Future Esteri.</td>
+					<td style="font-size: 10px;">Perdita50FutureEster</td>
+					<td>0 55 07 ? * 2-6 <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:55:00</span>
+
+						<br/><span>lun 15/10/2012 7:55:00</span>
+
+						<br/><span>mar 16/10/2012 7:55:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:56:00</td>
+					<td class="col-motivo">Estrazione e invio Saldi &amp; Margini iniziali a ED</td>
+					<td style="font-size: 10px;">reports.derivati.sal</td>
+					<td>00 56 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:56:00</span>
+
+						<br/><span>sab 13/10/2012 7:56:00</span>
+
+						<br/><span>dom 14/10/2012 7:56:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 7:59:30</td>
+					<td class="col-motivo">Quadratura saldi PK/NC</td>
+					<td style="font-size: 10px;">scheduler.reports.de</td>
+					<td>30 59 7 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 7:59:30</span>
+
+						<br/><span>sab 13/10/2012 7:59:30</span>
+
+						<br/><span>dom 14/10/2012 7:59:30</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">available.current.position</td>
+					<td style="font-size: 10px;">available.current.po</td>
+					<td>00 00 8 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>lun 15/10/2012 8:00:00</span>
+
+						<br/><span>mar 16/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">VerificaRischioOpzioni</td>
+					<td style="font-size: 10px;">VerificaRischioOpzio</td>
+					<td>00 00 08 ? * 1-5 <strong></strong>
+
+						<br/><span>dom 14/10/2012 8:00:00</span>
+
+						<br/><span>lun 15/10/2012 8:00:00</span>
+
+						<br/><span>mar 16/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">SendMailScadenzaFreeMember</td>
+					<td style="font-size: 10px;">SendMailScadenzaFree</td>
+					<td>0 0 8 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>sab 13/10/2012 8:00:00</span>
+
+						<br/><span>dom 14/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">Oberthur</td>
+					<td style="font-size: 10px;">Oberthur</td>
+					<td>0 0 8 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>sab 13/10/2012 8:00:00</span>
+
+						<br/><span>dom 14/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">Deroghe trading - Notifica la scadenza del bonus ai clienti</td>
+					<td style="font-size: 10px;">EndingPricingBonus</td>
+					<td>0 0 8 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>sab 13/10/2012 8:00:00</span>
+
+						<br/><span>dom 14/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">DemoneCTInTrasferimento</td>
+					<td style="font-size: 10px;">DemoneCTInTrasferime</td>
+					<td>0 00 08 ? * 2-5 <strong>dateContabili</strong>
+
+						<br/><span>lun 15/10/2012 8:00:00</span>
+
+						<br/><span>mar 16/10/2012 8:00:00</span>
+
+						<br/><span>mer 17/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">ConfermaPrestito</td>
+					<td style="font-size: 10px;">ConfermaPrestito</td>
+					<td>0 00 8 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>lun 15/10/2012 8:00:00</span>
+
+						<br/><span>mar 16/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:00:00</td>
+					<td class="col-motivo">AvanzaCartaimprontaJob</td>
+					<td style="font-size: 10px;">AvanzaCartaimprontaJ</td>
+					<td>0 0 8 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:00:00</span>
+
+						<br/><span>sab 13/10/2012 8:00:00</span>
+
+						<br/><span>dom 14/10/2012 8:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:01:00</td>
+					<td class="col-motivo">Sollecito invio contratto Amex</td>
+					<td style="font-size: 10px;">SollecitoContrattoAm</td>
+					<td>0 1 8 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:01:00</span>
+
+						<br/><span>sab 13/10/2012 8:01:00</span>
+
+						<br/><span>dom 14/10/2012 8:01:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:10:00</td>
+					<td class="col-motivo">Invia le mail di segnalazione ai clienti.</td>
+					<td style="font-size: 10px;">Perdita50Mailing</td>
+					<td>0 10 08 ? * 2-6 <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:10:00</span>
+
+						<br/><span>lun 15/10/2012 8:10:00</span>
+
+						<br/><span>mar 16/10/2012 8:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:15:00</td>
+					<td class="col-motivo">Aggiorna le tabelle utilizzate dalla scheda titolo e le viste materializzate relative ai file RAS</td>
+					<td style="font-size: 10px;">MultexBatchRas</td>
+					<td>0 15 08 ? * TUE-SAT <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:15:00</span>
+
+						<br/><span>sab 13/10/2012 8:15:00</span>
+
+						<br/><span>mar 16/10/2012 8:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:30:00</td>
+					<td class="col-motivo">Deroghe trading - Notifica le modifiche avvenute nell'ultima giornata</td>
+					<td style="font-size: 10px;">LastRequestsPricingB</td>
+					<td>0 30 8 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:30:00</span>
+
+						<br/><span>lun 15/10/2012 8:30:00</span>
+
+						<br/><span>mar 16/10/2012 8:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 8:30:00</td>
+					<td class="col-motivo">Verifica le richieste di carta Jeans pervenute da area privati o AOL e sollecita l'invio contratto da parte del cliente (10/50/60gg)</td>
+					<td style="font-size: 10px;">DemoneCartaJeansSoll</td>
+					<td>0 30 8 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 8:30:00</span>
+
+						<br/><span>lun 15/10/2012 8:30:00</span>
+
+						<br/><span>mar 16/10/2012 8:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 9:00:00</td>
+					<td class="col-motivo">MessaggiAkrosLongOvernight</td>
+					<td style="font-size: 10px;">MessaggiAkrosLongOve</td>
+					<td>0 0 9 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 9:00:00</span>
+
+						<br/><span>lun 15/10/2012 9:00:00</span>
+
+						<br/><span>mar 16/10/2012 9:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 9:00:00</td>
+					<td class="col-motivo">Download Esisti Elaborazioni pagamenti FastBank</td>
+					<td style="font-size: 10px;">DownLoadEsitiFastBan</td>
+					<td>0 0 9 ? * * <strong></strong>
+
+						<br/><span>ven 12/10/2012 9:00:00</span>
+
+						<br/><span>sab 13/10/2012 9:00:00</span>
+
+						<br/><span>dom 14/10/2012 9:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 9:10:00</td>
+					<td class="col-motivo">Acquisizione bonifici verso conti liquidit&agrave; per riconoscimento AOL e trasferimento a CT.</td>
+					<td style="font-size: 10px;">AcquisisciBonifici</td>
+					<td>0 10 9 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 9:10:00</span>
+
+						<br/><span>lun 15/10/2012 9:10:00</span>
+
+						<br/><span>mar 16/10/2012 9:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 9:15:00</td>
+					<td class="col-motivo">Scarica Eonia</td>
+					<td style="font-size: 10px;">ScaricaEonia</td>
+					<td>0 15 9 ? * * <strong></strong>
+
+						<br/><span>ven 12/10/2012 9:15:00</span>
+
+						<br/><span>sab 13/10/2012 9:15:00</span>
+
+						<br/><span>dom 14/10/2012 9:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 9:30:00</td>
+					<td class="col-motivo">PCT</td>
+					<td style="font-size: 10px;">PCT</td>
+					<td>0 30 9 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 9:30:00</span>
+
+						<br/><span>sab 13/10/2012 9:30:00</span>
+
+						<br/><span>dom 14/10/2012 9:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 10:00:00</td>
+					<td class="col-motivo">SendAlicoEsitiRate</td>
+					<td style="font-size: 10px;">SendAlicoEsitiRate</td>
+					<td>0 0 10 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 10:00:00</span>
+
+						<br/><span>sab 13/10/2012 10:00:00</span>
+
+						<br/><span>dom 14/10/2012 10:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 10:10:00</td>
+					<td class="col-motivo">Invio cambi classe per termine maxi-prelievo in scadenza</td>
+					<td style="font-size: 10px;">AggiornaStatiRichies</td>
+					<td>0 10 10 * * ? <strong></strong>
+
+						<br/><span>ven 12/10/2012 10:10:00</span>
+
+						<br/><span>sab 13/10/2012 10:10:00</span>
+
+						<br/><span>dom 14/10/2012 10:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 11/10/2012 14:00:00</td>
+					<td class="col-motivo">available.current.position</td>
+					<td style="font-size: 10px;">available.current.po</td>
+					<td>00 00 14 ? * MON-FRI <strong></strong>
+
+						<br/><span>ven 12/10/2012 14:00:00</span>
+
+						<br/><span>lun 15/10/2012 14:00:00</span>
+
+						<br/><span>mar 16/10/2012 14:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">dom 14/10/2012 6:15:00</td>
+					<td class="col-motivo">Aggiorna le tabelle utilizzate dalla scheda titolo e le viste materializzate relative al file GENINFO</td>
+					<td style="font-size: 10px;">MultexWeekBatch</td>
+					<td>0 15 06 ? * SUN <strong></strong>
+
+						<br/><span>dom 21/10/2012 6:15:00</span>
+
+						<br/><span>dom 28/10/2012 6:15:00</span>
+
+						<br/><span>dom 4/11/2012 6:15:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mar 16/10/2012 6:30:00</td>
+					<td class="col-motivo">Report observation tipo 405 primi 15giorni</td>
+					<td style="font-size: 10px;">report.metlife.obsst</td>
+					<td>0 30 6 16 * ? <strong></strong>
+
+						<br/><span>ven 16/11/2012 6:30:00</span>
+
+						<br/><span>dom 16/12/2012 6:30:00</span>
+
+						<br/><span>mer 16/01/2013 6:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mar 16/10/2012 6:35:00</td>
+					<td class="col-motivo">Report observation tipo 405 totali primi 15giorni</td>
+					<td style="font-size: 10px;">report.metlife.obsst</td>
+					<td>0 35 6 16 * ? <strong></strong>
+
+						<br/><span>ven 16/11/2012 6:35:00</span>
+
+						<br/><span>dom 16/12/2012 6:35:00</span>
+
+						<br/><span>mer 16/01/2013 6:35:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 1/11/2012 6:10:00</td>
+					<td class="col-motivo">Contabilizzazione transazioni FastBank (esclusi i festivi)</td>
+					<td style="font-size: 10px;">ContabilizzazioneFas</td>
+					<td>0 10 6 1 * ? <strong></strong>
+
+						<br/><span>sab 1/12/2012 6:10:00</span>
+
+						<br/><span>mar 1/01/2013 6:10:00</span>
+
+						<br/><span>ven 1/02/2013 6:10:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">ven 2/11/2012 6:40:00</td>
+					<td class="col-motivo">Report observation tipo 405 mese precedente</td>
+					<td style="font-size: 10px;">report.metlife.obsst</td>
+					<td>0 40 6 2 * ? <strong></strong>
+
+						<br/><span>dom 2/12/2012 6:40:00</span>
+
+						<br/><span>mer 2/01/2013 6:40:00</span>
+
+						<br/><span>sab 2/02/2013 6:40:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">ven 2/11/2012 6:45:00</td>
+					<td class="col-motivo">Report observation tipo 405 totali mese precedente</td>
+					<td style="font-size: 10px;">report.metlife.obsst</td>
+					<td>0 45 6 2 * ? <strong></strong>
+
+						<br/><span>dom 2/12/2012 6:45:00</span>
+
+						<br/><span>mer 2/01/2013 6:45:00</span>
+
+						<br/><span>sab 2/02/2013 6:45:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">ven 2/11/2012 10:00:00</td>
+					<td class="col-motivo">reports.investimenti.visite</td>
+					<td style="font-size: 10px;">reports.investimenti</td>
+					<td>00 00 10 2 * ? <strong></strong>
+
+						<br/><span>dom 2/12/2012 10:00:00</span>
+
+						<br/><span>mer 2/01/2013 10:00:00</span>
+
+						<br/><span>sab 2/02/2013 10:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">sab 3/11/2012 15:00:00</td>
+					<td class="col-motivo">Calcola le fees ogni 2 del mese</td>
+					<td style="font-size: 10px;">calcoloFees</td>
+					<td>0 00 15 3 * ? <strong></strong>
+
+						<br/><span>lun 3/12/2012 15:00:00</span>
+
+						<br/><span>gio 3/01/2013 15:00:00</span>
+
+						<br/><span>dom 3/02/2013 15:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">mer 7/11/2012 7:00:00</td>
+					<td class="col-motivo">SendMailReporEnti</td>
+					<td style="font-size: 10px;">SendMailReporEnti</td>
+					<td>0 0 7 7 * ? <strong></strong>
+
+						<br/><span>ven 7/12/2012 7:00:00</span>
+
+						<br/><span>lun 7/01/2013 7:00:00</span>
+
+						<br/><span>gio 7/02/2013 7:00:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+				<tr>
+					<td class="col-data right">gio 8/11/2012 10:30:00</td>
+					<td class="col-motivo">reports.ReportAccessi</td>
+					<td style="font-size: 10px;">reports.ReportAccess</td>
+					<td>00 30 10 8 * ? <strong></strong>
+
+						<br/><span>sab 8/12/2012 10:30:00</span>
+
+						<br/><span>mar 8/01/2013 10:30:00</span>
+
+						<br/><span>ven 8/02/2013 10:30:00</span>
+
+					</td>
+					<td>NORMAL</td><td class="nostampa">aaaa</td><td class="nostampa">aaaa</td>
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

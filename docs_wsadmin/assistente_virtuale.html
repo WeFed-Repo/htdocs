@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+	<head>
+		<link rel="stylesheet" href="css/wsadmin.css">
+		<link rel="shortcut icon" href="/favicon.ico" />
+	</head>
+	<body>
+		<div id="header">
+			<h1 class="logo">
+				WeTools
+			</h1>
+			<div id="infooperatore">
+				<strong>OPERATORE</strong><br>
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="2">Mario Rossi</td>
+						<td rowspan="3" class="separ">Profilo:</td><td rowspan="3" width="80">Lorem ipsum dolor sit amet consectetur</td>
+					</tr>
+					<tr>
+						<td>Matricola:</td>
+						<td>00312893</td>
+					</tr>
+					<tr>
+						<td>Ufficio:</td>
+						<td>12345</td>
+					</tr>
+				</table>
+				
+			</div>
+			<div id="infocliente">
+				<strong>CLIENTE</strong><br>
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="2">Mario Rossi</td>
+					</tr>
+					<tr>
+						<td>User id:</td><td>raffio12039</td>
+					</tr>
+				</table>
+			</div>
+			<div id="logout">
+				<a href="#"><img src="img/btn_esci.gif"></a>
+			</div>
+		</div>
+		<div id="topmenu">
+			<ul>
+				<li><a href="#">Lorem ipsum do</a></li>
+				<li><a href="#" class="selected">Lor sit amet conse</a></li>
+				<li><a href="#">Ctetur adipiscing</a></li>
+				<li><a href="#">Elit summa</a></li>
+			</ul>
+		</div>
+		<div id="leftmenu">
+			<h2>Titolo dell'area</h2>
+			<ul>
+				<li><a href="#">Lorem ipsum do</a></li>
+				<li><a href="#">Lor sit amet conse</a>
+					<ul>
+						<li><a href="#">Ipsum dolor sit amet</a></li>
+						<li><a href="#">Dolor sit amet</a></li>
+						<li><a href="#">Ipsum sit amet</a></li>
+						<li><a href="#">Sit amet</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Ctetur adipiscing</a></li>
+				<li><a href="#">Elit summa</a></li>
+				<li><a href="#" class="selected">Ctetur adipiscing</a></li>
+				<li><a href="#">Elit summa</a></li>
+				<li><a href="#">Superctetur</a></li>
+				<li><a href="#">Elit summa</a></li>
+			</ul>
+		</div>
+
+
+
+
+
+<div id="contenuti">
+			<div id="content">
+				<h3>Master Pass</h3>
+				<script src="/wscmn/js/ret/setiframe.js" type="text/javascript"></script>
+				<script>
+					var larghezza = 980;
+					var frames = new Array();
+					var principale = new Object();
+					frames[0] = top;
+					frames[1] = top;
+
+					function getPrincipale() {
+						return principale;
+					}
+
+					function setPrincipale(p) {
+						principale = p;
+						principale.document = p;
+						frames[2] = principale;
+					}
+				</script>
+				<p>
+
+
+
+
+<script language="javascript" type="text/javascript">
+
+	function startSession() {
+		var url =  cgi_script + '/admin/agenzia/virtass/ajax/startVirtassSession.jsp';
+	
+		new Ajax.Request(url, {
+			
+			method: 'post',
+			parameters:  {
+				"cf": Math.random()
+			},
+			onSuccess: function(transport) {
+				var res = transport.responseJSON;
+				if (res.error) {
+					alert (res.error)
+				} else if (res.sessionId) {
+					$('#idSessionId').text(res.sessionId);
+				}
+				reset();
+				location.reload();
+			},
+			onFailure : function(transport) {
+				alert("Richiesta utente, ottenuto errore: " + statusText);
+			}
+		} );
+	}
+	
+	function ask() {
+		var url = cgi_script + '/admin/agenzia/virtass/ajax/askVirtass.jsp';
+		new Ajax.Request(url, {
+			method: 'post',
+			parameters:  {
+				"cf": Math.random(),
+				"question" : $('#idQuestion').val()
+			},
+			onSuccess: function(transport) {
+				var res = transport.responseJSON;
+				if (res.OK) {
+					$("#resultTable tbody").prepend("<tr><td>"+ $('#idQuestion').val() + "</td><td>"+res.answer+"</td></tr>");
+					$('#idQuestion').val('')
+				} else {
+					alert (res.error);
+				}
+			},
+			onFailure : function(transport) {
+				alert("Richiesta utente, ottenuto errore: " + statusText);
+			}
+		} );
+	}
+	
+	function askHistory() {
+		var url = cgi_script + '/admin/agenzia/virtass/ajax/askVirtassHistory.jsp';
+		new Ajax.Request(url, {
+			method: 'post',
+			parameters:  {
+				"cf": Math.random()
+			},
+			onSuccess: function(transport) {
+				var res = transport.responseJSON;
+				if (res.OK) {
+					$.each(res.questAndAns, function(i, item) {
+						$("#resultTable tbody").prepend("<tr><td>"+ item.question + "</td><td>"+item.answer+"</td></tr>");
+					});
+				} else {
+					alert (res.error);
+				}
+			},
+			onFailure : function(transport) {
+				alert("Richiesta utente, ottenuto errore: " + statusText);
+			}
+		} );
+	}
+
+	function closeSession() {
+		var url = cgi_script + '/admin/agenzia/virtass/ajax/closeVirtass.jsp';
+		new Ajax.Request(url, {
+			method: 'post',
+			parameters:  {
+				"cf": Math.random()
+			},
+			onSuccess: function(transport) {
+				var res = transport.responseJSON;
+				if (res.OK) {
+					$('#tr_'+code).remove();
+				}
+			},
+			onFailure : function(transport) {
+				alert("Richiesta utente, ottenuto errore: " + statusText);
+			}
+		} );
+	}
+
+</script>
+
+	</p><h2>Chiedi a Paolo</h2>
+	
+	<table class="inputtable bonificict nobottom" cellpadding="0" cellspacing="0">	
+		<tbody><tr>
+			<td>
+				<fieldset>
+					<label>SessionId:</label>
+					<span class="output" id="idSessionId">a723581c31d885afccd272db9d872a988f7e57653a3d43f845bfdbd67315ae56</span>
+				</fieldset>
+			</td>
+	</tr></tbody></table>
+	<br><br>
+	<style>
+/*da non copiare*/	
+	div.buttonpanel a {
+    background: #f2f2f2 url(./img/bg_buttons.gif) repeat-x left top;
+}
+	</style>
+	<script type="text/javascript">
+		function setFocus(id) {
+		   document.getElementById(id).focus();
+		   
+		  
+		}
+		
+		vaScrollLast = function() {
+			var lastQ = vaDiag.find(".sent").last();
+			alert(lastQ);
+			vaDiag.scrollTop(0);
+			vaDiag.scrollTop(lastQ.offset().top - lastQ.height());
+		}
+		
+		window.onload = function() {
+		
+			setFocus('idQuestion');
+			vaScrollLast();
+		};
+		
+		
+		
+	</script>
+	<div style="" class="virtassist">
+		<div class="history" id="vaDialog">
+			<div class="sent"><p><strong>Tu scrivi: </strong>non uscire (MESSAGGIO PIU' RECENTE)</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>sono un assistente virtuale: posso assisterti nella compilazione della richiesta di apertura conto e rispondere alle tue domande sui servizi e i prodotti a tua disposizione. Fammi una domanda e proverò a risponderti.</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>tu fai la tua parte</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Non parliamo di me. Posso assisterti nella compilazione della richiesta di apertura conto e rispondere alle tue domande sui servizi e i prodotti a tua disposizione. Come posso esserti utile?</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>ce la possiamo fare anche come paese</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Questa volta non ho capito la tua domanda, potresti riformularla per cortesia?</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>ancora un piccolo sforzo</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>cosa succede</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>devo farti domande, voglio vedere la scroll</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Se non è un'informazione che si trova in questo sito non riesco ad aiutarti. Sono un Assistente Virtuale, ovvero un agente software con il compito di supportarti nella compilazione della richiesta di apertura conto e di rispondere, con un buon grado di precisione, alle tue domande sui servizi e i prodotti offerti. Fammi una domanda e sarò felice di risponderti.</p></div>
+			<div class="sent"><p><strong>Tu scrivi: </strong>ciao (MESSAGGIO PIU' VECCHIO)</p></div>
+			<div class="answer"><p><strong>Paolo: </strong>Ciao, come posso esserti utile?</p></div>
+		</div>
+		<div class="question">
+			<fieldset>
+					<input type="text" id="idQuestion" maxlength="400" name="campo" class="ask" value="" placeholder="fammi una domanda..." >
+					<div id="buttonReset" class="buttonpanel">
+						<a href="javascript:ask()" class="button">chiedi</a>
+					</div>
+				</fieldset>
+		</div>
+	</div>
+	<!--h2>Cosa vuoi chiedere</h2>
+	<table class="inputtable bonificict nobottom waiting" cellpadding="0" cellspacing="0">	
+		<tbody><tr>
+			<td>
+				<fieldset>
+					<!--textarea cols="20" rows="2" name="propValore" id="idQuestion"></textarea-->
+					<!--input type="text" id="vaDom" maxlength="200" name="campo" class="" value="" placeholder="fammi una domanda...">
+				</fieldset>
+			</td>
+		</tr>
+	</tbody></table>	
+	<div id="buttonReset" class="buttonpanel">
+		<a href="javascript:ask()" class="button">chiedi</a>
+	</div>
+	<br><br><br><br>
+
+	<h2>STORIA DELLE RICHIESTE</h2>
+	<table cellspacing="0" cellpadding="0" class="inputtable" id="resultTable">
+		<tbody><tr><td>non uscire</td><td>Sono un assistente virtuale: posso assisterti nella compilazione della richiesta di apertura conto e rispondere alle tue domande sui servizi e i prodotti a tua disposizione. Fammi una domanda e proverò a risponderti.</td></tr>
+		<tr><td>tu fai la tua parte</td><td>Non parliamo di me. Posso assisterti nella compilazione della richiesta di apertura conto e rispondere alle tue domande sui servizi e i prodotti a tua disposizione. Come posso esserti utile?</td></tr>
+		<tr><td>ce la possiamo fare anche come paese</td><td>Questa volta non ho capito la tua domanda, potresti riformularla per cortesia?</td></tr>
+		<tr><td>ancora un piccolo sforzo</td><td>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</td></tr>
+		<tr><td>cosa succede</td><td>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</td></tr>
+		<tr><td>devo farti domande, voglio vedere la scroll</td><td>Se non è un'informazione che si trova in questo sito non riesco ad aiutarti. Sono un Assistente Virtuale, ovvero un agente software con il compito di supportarti nella compilazione della richiesta di apertura conto e di rispondere, con un buon grado di precisione, alle tue domande sui servizi e i prodotti offerti. Fammi una domanda e sarò felice di risponderti.</td></tr>
+		<tr><td>token</td><td>Come
+<b>          strumento di sicurezza                  </b> 
+puoi scegliere il Token Webank, 
+un tastierino tascabile che genera codici temporanei,
+da utilizzare per accedere e disporre dal conto.</td></tr><tr><td>sar' per la prossima volta</td><td>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</td></tr><tr><td>speravo che almeno tu ci riuscissi</td><td>Perché parlare di me? Sarei più felice se potessi esserti d'aiuto a trovare quello che cerchi su questo sit</td></tr><tr><td>nessuno qui riesce ad aiutare nessuno</td><td>Se hai bisogno di supporto per la compilazione della richiesta di apertura conto, o per conoscere meglio i prodotti e i servizi che ti offre <b>Webank</b>, scrivi la tua domanda e cercherò di aiutarti.
+<br>Se invece vuoi avere supporto sulla tua posizione personale, contatta il numero verde 800 148 149.
+</td></tr><tr><td>coronavirus
+</td><td>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</td></tr><tr><td>chiusura rapporto</td><td>Potrai richiedere gratuitamente l'estinzione del conto utilizzando l'apposito modulo disponibile all'interno della parte privata del sito.<br>Se invece volevi sapere come trasferire il tuo vecchio conto, <a onclick="vaAsking('trasloco')" href="javascript:;">clicca qui</a>.
+</td></tr><tr><td>per chiudere il deposito
+</td><td>Mi sa che non riesco ad aiutarti. Ti suggerisco di contattare direttamente il numero verde 800 148 149.</td></tr><tr><td>apertura deposito titoli</td><td>Puoi richiedere l'apertura del deposito titoli al punto 2 "<b>Componi il tuo conto</b>" dell'adesione online che stai compilando, oppure successivamente all'apertura del conto nella parte privata del sito.</td></tr><tr><td>i mutui</td><td><b>Acquisto</b>, <b>ristrutturazione</b>, <b>surroga</b>: qualunque sia la tua esigenza, <b>Mutuo Webank</b> ti offre il massimo:<br>
+
+<br> - <b>zero spese</b> di attivazione e gestione;
+<br> - perizia <b>gratuita</b>, polizza casa gratuita;
+<br> - un <b>consulente personale</b> che ti segue in ogni fase.
+
+
+<br><br>
+È semplice e veloce: basta un clic per un <b><a href="https://www.webank.it/webankpub/wbresp/calcolatore_mutuo.do" target="_blank">preventivo personalizzato</a></b> e un altro clic per inviare la richiesta non impegnativa oppure ricevere una consulenza preliminare.
+
+</td></tr><tr><td>dove trovo il fido</td><td><b>Fido Webank</b> è il servizio che mette a tua disposizione un importo concordato, permettendoti all'occorrenza di spendere oltre la disponibilità del tuo conto corrente. Puoi attivarlo se accrediti lo stipendio sul conto. </td></tr><tr><td>finanziamenti
+</td><td>Per favore, riscrivi la tua domanda e controlla di non aver fatto errori di battitura.</td></tr><tr><td>carte di credito</td><td>Webank ti mette a disposizione un'offerta completa di <b>Carte di pagamento</b> che offrono tutte le caratteristiche 
+per le tue esigenze:
+
+<br> - <a onclick="vaAsking('- Carta di debito ')" href="javascript:;"> Carta di debito </a>
+<br> - <a onclick="vaAsking('- Carta Prepaid')" href="javascript:;">Carta Prep@id</a>
+<br> - <a onclick="vaAsking('- Cartimpronta One')" href="javascript:;">Cartimpronta One</a>
+
+</td></tr><tr><td>come stai</td><td>Sto bene, grazie. Come posso esserti utile?</td></tr><tr><td>bonifico</td><td>Il bonifico bancario è un'operazione che ti consente di trasferire denaro dal tuo conto corrente ad un altro.<br>Potrai effettuare bonifici online dalla parte privata del sito. L'operazione effettuata in euro, in Italia e in area Sepa, è gratuita.
+</td></tr><tr><td>ciao</td><td>Ciao, come posso esserti utile?</td></tr><tr>
+			<th colspan="1"></th>
+			<th colspan="1"></th>
+		</tr>
+	</tbody></table-->
+	
+	<br><br><br>
+
+	<script language="javascript" type="text/javascript">
+		$(function() {
+			startSession ();
+			askHistory();
+		});
+	</script>
+				<p></p>
+			</div>
+		</div>
+		
+		
+		
+		
+
+		
+		
+		
+<div id="footer">
+			<ul class="footermenu">
+				<li class="first"><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Dolor</a></li>
+				<li><a href="#">Sit amet cons</a></li>
+				<li><a href="#">Elit</a></li>
+				<li><a href="#">Adipiscing</a></li>
+			</ul>
+			<p>&copy; Lorem ipsum dolor sit - Amet 123890029</p>
+		</div>
+	</body>
+</html>

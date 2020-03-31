@@ -1,0 +1,4 @@
+.input-group-addon .icon, .autoSelButt .icon {color:#333 !important;}
+.ui-datepicker .ui-state-hover, .ui-datepicker .ui-state-active,.ui-datepicker .ui-datepicker-current-day .ui-state-default,.ui-datepicker td.ui-datepicker-week-end:hover a, .ui-datepicker td.ui-datepicker-festivo:hover a {outline: #000 !important; background:#aaa !important;}
+#ui-datepicker-div .icon {color:#333 !important;}
+#ui-datepicker-div .ui-state-disabled {opacity:0.5;}

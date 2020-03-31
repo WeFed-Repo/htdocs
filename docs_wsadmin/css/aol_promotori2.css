@@ -1,0 +1,1300 @@
+/*css per assistente virtuale */
+@import url("/wscmn/css/ret/virtas.css");
+#virtAss .vaTop #vaTitle{color:#6F8F0A}
+#virtAss{left:-18px} 
+#virtAss a{color:#000000}
+a.btnformright span, a.btnformright:link span, a.btnformright:hover span{background: url("/img/ret/btn_center_ar.gif") repeat-x scroll left top transparent;color: #FFFFFF;display: block;float: left;font-size: 11px;height: 21px;line-height: 19px;padding-left: 5px;padding-right: 5px;text-decoration: none !important;}
+a.btnformright img, a.btnformright:link img, a.btnformright:hover img, .bottdis img{float:left}
+#virtAss #vaDialog .sent.answer{background-color:#F1F5E1}
+strong{color:#666;}
+/*fine css per assistente virtuale */
+/* Font face */
+@font-face {
+    font-family: 'webankAolMedium';
+    src: url('/font/Raleway-Medium.eot');
+    src: url('/font/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+         url('/font/Raleway-Medium.woff') format('woff'),
+         url('/font/Raleway-Medium.ttf') format('truetype'),
+         url('/font/Raleway-Medium.svg#webankAolMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'webankAolBold';
+    src: url('/font/Raleway-Bold.eot');
+    src: url('/font/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/font/Raleway-Bold.woff') format('woff'),
+         url('/font/Raleway-Bold.ttf') format('truetype'),
+         url('/font/Raleway-Bold.svg#webankAolBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'webankAolSemiBold';
+    src: url('/font/Raleway-SemiBold.eot');
+    src: url('/font/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('/font/Raleway-SemiBold.woff') format('woff'),
+         url('/font/Raleway-SemiBold.ttf') format('truetype'),
+         url('/font/Raleway-SemiBold.svg#webankAolSemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'webankAolItalic';
+    src: url('/font/Raleway-Italic.eot');
+    src: url('/font/Raleway-Italic.eot?#iefix') format('embedded-opentype'),
+         url('/font/Raleway-Italic.woff') format('woff'),
+         url('/font/Raleway-Italic.ttf') format('truetype'),
+         url('/font/Raleway-Italic.svg#webankAolItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Fine font face */
+body {background:url(/img/str_header_aol.gif) repeat-x 0 0;padding:0;margin:0;font-family: 'webankAolMedium', Tahoma, Arial, Sans serif; color:#999999; text-align: center;font-size:16px; line-height:24px}
+img {border:0;}
+a{outline:none;outline:0;color:#999;text-decoration:none;} 
+a:hover {color:#8ab10b;text-decoration:underline;}
+.clear{clear:both}
+/* CONTENITORI STRUTTURALI */
+#pagecontainer {text-align:left;width:100%;margin: 0 auto;max-width:1140px; background:url(/img/bck_aol_body.png) repeat-x 0 bottom;overflow:hidden}
+#main {max-width:1140px;margin:0 auto;padding:0 15px}
+/* header */
+.headingprint {display: none;}
+#header {height:90px;overflow:visible;background-color:#000; margin:0}
+#header h1 a, #header h1 .logo {float:left; background: transparent url(/img/lg_webank.jpg?a=1) no-repeat 0 0; width:238px; height:78px;margin:6px 0 0 0;padding:0}
+#header h1 a span {display: none;}
+#header h1 {margin:0;padding:0;}
+#header span.homeChat {float:right;display:block;height:33px}
+#header span.homeChat  #wbbutton{float:right;margin:0;padding: 9px 7px 4px; border-right:solid 1px #232323}
+#menu {position:relative;height:90px;display: block;width:100%;background-color:#8ab10b;padding:0;margin:0; overflow: visible;}
+#menu h2 {height:65px;margin:0;padding:32px 0 0 0;font-family: 'webankAolMedium', Arial Narrow, Helvetica, Tahoma, Serif;font-weight:bold;color: #fff;font-size:32px;}
+
+/* Menu con stepper */
+#aolStepper {width:165px;padding-right:15px;margin-right:0;}
+#aolStepper ul{margin:27px 0 0 0;padding:0;width:100%}
+#aolStepper ul li{display:block;margin:0;padding:20px 0;border-top:1px solid #e9e9e9}
+#aolStepper ul li:first-child{border-top:0}
+#aolStepper ul li span {color:#666;padding:0;display:block;font-family: 'webankAolSemiBold', Arial Narrow, Helvetica, Tahoma, Serif;font-size:14px;text-transform:uppercase;padding-left:21px;}
+#aolStepper ul li.active span {color:#8ab10b;background:url(/img/ico_menusx_aol_active.png) no-repeat 0 1px}
+#aolStepper ul li.completed span {color:#cbcbcb;background:url(/img/ico_menusx_aol_completed.png) no-repeat 0 1px;}
+@media screen and (max-width: 1170px) {
+   #aolStepper {
+      width:100%;
+	  background-color:#fff;
+	  float:left;
+    }
+	#aolStepper ul li{
+	float:left;
+	border-top:0;
+	padding:0 2%;
+    width:14%;
+    border-left:1px solid #e9e9e9;
+	}
+    #aolStepper ul li:first-child{
+        border-left:0;
+    }
+	#menu{
+	height:auto;
+	}
+	#aolStepper ul li span{
+		padding-left:0;
+		background:none!important
+	}
+	#aolcontainer  {
+		width:100%;
+		max-width:none;
+	}
+}
+
+/* contenitore principale */
+#content {width:100%;padding:0;margin:0;float:left}
+
+/* Contenitori per aol splittata*/
+#aolcontainer {float:right;margin:47px 0 0;width:100%;max-width:960px;}
+#aolcontainer.step0{float:none;margin:47px auto 0;}
+#aolleft {float:left; width:71%;display:block; float:left; margin:0; padding:0;}
+#aolright{float:left;width:29%; max-width:250px; display:block; float:right;margin:0; padding:0;padding-left:0;}
+#aolcontainer.step0 #aolright{padding-left:30px;float:left;}
+
+/* Titolature e blocchi */
+h2{font-family:'webankAolSemiBold', Arial Narrow, Helvetica, Tahoma, Serif;color: #666;font-weight: normal;padding:0;margin:0 47px 50px 47px;font-size:32px}
+.aolblock {width:100%;padding:0 47px 0 47px;margin:14px 0 14px 0;float:left;border-bottom:1px solid #ccc;padding-bottom:30px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.overlayerbody .aolblock {float:none}
+h3,#allcontent h4.title{float:left;font-family: 'webankAolBold', Arial Narrow, Helvetica, Tahoma, Serif; color: #666;padding:0; margin:0 0 20px 0;font-size:20px;width:100%}
+.aolblock h3 {margin-bottom:16px}
+.aolAccContent .aolblock h3{margin-bottom: 20px;margin-top: 15px;}
+.aolAccContent  h3.subTitle{font-family:'webankAolMedium';text-transform:uppercase;font-size:16px;font-weight:normal;margin-bottom: 10px;}
+
+/*form*/
+form {padding:0;margin:0}
+.label {padding:0;margin:0 0 6px 0; display:inline-block;clear:left;width:100%;font-size: 16px;position:relative;}
+.aolAccContent .aolAccContent .label{width:255px!important;}
+.aolAccContent .aolAccContent .labmax,.labmax{width:100%!important}
+form {padding:0;margin:0}
+fieldset{padding:0 0 10px 0; margin:0; border: none; display: block; float:left;width: 293px; min-height: 95px;}
+
+/*
+input[type=radio]:not(:checked) + .optiontext,input[type=radio]:checked + .optiontext {height:23px;margin-right:10px;display: inline-block;margin-left: -20px;padding-left :31px;background : url('/img/radiobtn_aol.png') no-repeat 0 -23px;line-height :23px;margin-top:8px;}
+input[type=radio]:checked + .optiontext {background-position:0 0}
+input[type=radio]:checked,input[type=radio]:not(:checked) {opacity:0;}
+input[type=checkbox]:not(:checked):disabled + .optiontext{opacity:0.4} 
+input[type=checkbox]:not(:checked) + .optiontext,input[type=checkbox]:checked + .optiontext{float:left;display: inline-block;margin-left: -16px;padding-left :33px;background : url('/img/checkbtn_aol.png') no-repeat 0 -21px;height:21px;overflow:hidden}
+input[type=checkbox]:checked + .optiontext {background-position:0 0}
+input.stilizzato[type=checkbox]:checked,input.stilizzato[type=checkbox]:not(:checked) {opacity:0;}
+*/
+/* RADIO*/
+input[type=radio]  + .optiontext,input[type=radio]  + .optiontextmini{display: inline-block;vertical-align: middle;position:relative;padding-left:11px;cursor:pointer}
+input[type=radio] + .optiontext::before,input[type=radio] + .optiontextmini::before {content: "";display: inline-block;position: absolute;width: 21px;height: 21px;left: 0;margin-left: -20px;border: 1px solid #cccccc;border-radius: 50%;background-color: #fff;-webkit-transition: border 0.15s ease-in-out;-o-transition: border 0.15s ease-in-out;transition: border 0.15s ease-in-out;}
+input[type=radio]+ .optiontext::after,input[type=radio]+ .optiontextmini::after {display: inline-block;position: absolute;content: " ";width: 13px;height: 13px;left: 5px;top: 5px;margin-left: -20px;border-radius: 50%;background-color: #555555;-webkit-transform: scale(0, 0);-ms-transform: scale(0, 0);-o-transform: scale(0, 0);transform: scale(0, 0);-webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);-moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);-o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);}
+input[type="radio"]{opacity: 0;z-index:1}
+input[type=radio]:checked + .optiontext::after {-webkit-transform: scale(1, 1);-ms-transform: scale(1, 1);-o-transform: scale(1, 1);transform: scale(1, 1); }
+input[type=radio]::disabled + .optiontext {opacity: 0.65;}
+input[type=radio]:disabled + .optiontext::before {cursor: not-allowed; }
+input[type="radio"] + .optiontext::after {background-color:#a6cc28;}
+#sesso_int1 + .optiontext,#sesso_int2 + .optiontext, #sesso_int3 + .optiontext,#politicEspostaAv_int1_N  + .optiontext,#politicEspostaAv_int2_N  + .optiontext,#politicEspostaAv_int3_N  + .optiontext,#amministrazionePatrimonioAv_int1 + .optiontext,#amministrazionePatrimonioAv_int2 + .optiontext,#amministrazionePatrimonioAv_int3 + .optiontext{padding-right:10px}
+
+/*checkbox */
+input[type=checkbox]:not(:checked):disabled + .optiontext{opacity:0.4} 
+input[type=checkbox]:not(:checked) + .optiontext,input[type=checkbox]:checked + .optiontext{float:left;display: inline-block;margin-left: -16px;padding-left :33px;background : url('/img/checkbtn_aol.png') no-repeat 0 -21px;height:21px;overflow:hidden}
+input[type=checkbox]:checked + .optiontext {background-position:0 0}
+input.stilizzato[type=checkbox]:checked,input.stilizzato[type=checkbox]:not(:checked) {opacity:0;}
+
+
+fieldset label span {float:left; display:block;}
+#contabili fieldset{width:auto!important;}
+input ,select {border:1px solid #acacac;font-size:14px;padding:0;margin:0;display:block;color:#666;padding:10px 0 12px 10px;width: 263px}
+input:focus {border-color:#8ab10b; outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 0 3px #c5d29d; box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 0 8px #c5d29d;}
+select{padding:9px 0 11px 10px;width:275px;}
+#aolcontainer form fieldset.row select{width:568px;}
+fieldset label{width:auto!important;}
+#tuttaLaData{width:189px;}
+#via_int1,#via_int2,#via_int3,#via_recapito_int1,#via_recapito_int2,#via_recapito_int3,#via_domicilioCAI_int1,#via_domicilioCAI_int2,#via_domicilioCAI_int3,#telefono_int1,#telefono_int2,#telefono_int3{width:176px!important;}
+#presso_int1,#presso_int2, #presso_int3, #presso_recapito_int1,#presso_recapito_int2, #presso_recapito_int3,#presso_domicilioCAI_int1,#presso_domicilioCAI_int2,#presso_domicilioCAI_int3{width:203px!important}
+#idCap1,#idCap2,#idCap3, #idCapRecapito1, #idCapRecapito2,#idCapRecapito3,#idCapCai1,#idCapCai2,#idCapCai3{width:124px!important;}
+#cap_int1,#cap_int2,#cap_int3,#cap_recapito_int1,#cap_recapito_int2,#cap_recapito_int3,#cap_domicilioCAI_int1,#cap_domicilioCAI_int2,#cap_domicilioCAI_int3,#cap_FATCA_int1,#cap_FATCA_int2,#cap_FATCA_int3{width:93px!important}
+#prefisso_int1,#prefisso_int2,#prefisso_int3,#prefisso_2_int1,#prefisso_2_int2,#prefisso_2_int3{width:74px!important;}
+#via_FATCA_int1,#via_FATCA_int2,#via_FATCA_int3{width:176px!important;}
+#civico_FATCA_int1,#civico_FATCA_int2,#civico_FATCA_int3{margin-left:2px;width:76px!important;}
+#provincia_FATCA_int1,#provincia_FATCA_int2,#provincia_FATCA_int3{width:74px!important;}
+#comune_FATCA_int1,#comune_FATCA_int2,#comune_FATCA_int3{width:364px!important;}
+#divComuneFATCA1 fieldset,#divComuneFATCA2 fieldset,#divComuneFATCA3 fieldset{width:378px!important;}
+#numeroComponentiAv_int1,#numeroComponentiAv_int2,#numeroComponentiAv_int3{width:275px!important;margin-right:18px;}
+/*#operatore_int1,#operatore_int2,#operatore_int3{width:156px!important;}*/
+#prefisso_3_int1,#prefisso_3_int2,#prefisso_3_int3{width:40px!important;}
+#telefono_3_int1,#telefono_3_int2,#telefono_3_int3{width:90px!important;}
+
+/* Bottone "submit" */
+.filettobutton {margin:60px 0 12px 0; padding: 0;float:left;width:100%}
+.filettobutton a,a.greybutton,.backLinked, .greenbutton{float:right; text-decoration:none; margin:0;border-radius:25px;min-width:205px;height:50px;text-transform:uppercase;font-family:webankAolBold}
+.filettobutton a.greenbutton, .overlayerbody .filettobutton a.greenbutton, .greenbutton,.printDocAol {background:#a6cc28 url(/img/ico_arrow_right_white.png) no-repeat 95% 50%;color:#fff}
+.printDocAol{padding:12px 50px 12px 22px;border-radius:25px;text-transform: uppercase;font-family: webankAolBold;}
+.filettobutton a span,.greenbutton span {cursor: pointer; display: block; float: left;padding: 15px 50px 0 22px;}
+.filettobutton.linked .backLinked,.overlayerbody .filettobutton.linked .backLinked{float:left}
+.filettobutton.linked .bozzaLinked{font-family:'webankAolMedium';color:#999;text-transform:none;text-decoration:none;font-weight:normal;float:left;margin:0;line-height:19px;}
+.filettobutton.linked .bozzaLinked:hover span{text-decoration:underline;color:#a6cc28;}
+.filettobutton.linked .bozzaLinked span{padding:17px 0 0 35px}
+.filettobutton.linked{text-align:center;width:100%}
+.overlayer .filettobutton.linked{text-align:center;width:97%}
+a.greybutton,.backLinked{box-sizing:border-box;height:50px;padding-top:13px;background:#fff url(/img/ico_arrow_left_green.png) no-repeat 5% 50%;color:#333;border:2px solid #a6cc28;text-align:right;padding-right:22px;padding-left:50px}
+.filettobutton a.greybutton {float:left;text-decoration:none; margin: 0;}
+a.greenbutton:hover{background:#000 url(/img/ico_arrow_right_green.png) no-repeat 95% 50%;color:#a6cc28;}
+.backLinked:hover, a.greybutton:hover{background:#fff url(/img/ico_arrow_left_black.png) no-repeat 5% 50%;border-color:#000;color:#000;}
+.overlayer .filettobutton a, .overlayer a.greybutton, .overlayer .backLinked, .overlayer .greenbutton{min-width:170px;}
+.overlayer .filettobutton a span, .overlayer a.greybutton span, .overlayer .backLinked span, .overlayer .greenbutton span{padding-top:25px;}
+.certificazioniContainer .greenbutton{width:250px;margin-left:0!important;margin-top:18px!important;}
+.certificazioniContainer .greenbutton span{font-size:13px;padding:13px 36px 0 15px}
+
+ul.elencodoc, #aolright ul.elencoprodotti {margin:0;padding:0; list-style-type:none;}
+#aoldoclist ul li, #aolright ul.elencoprodotti li {background: none; padding:10px 0; color:#ccc; border-bottom: 1px solid #ccc}
+#aolright ul.elencoprodotti li:first-child{padding-top:0;}
+#aoldoclist ul li a {font-family: 'webankAolMedium', Arial Narrow, Helvetica, Tahoma, Serif; font-size:16px;}  
+#aoldoclist ul li a:hover{color:#a6cc28;}
+#aolright ul.elencoprodotti li span.productname {color:#000}
+#aolright ul.elencoprodotti li span {color: #ccc;padding-bottom:10px}
+.filettobutton .backLinked{min-width: 131px\9;height: 50px\9;}
+#adever1 .fullwidth,#adever2 .fullwidth,#adever3 .fullwidth{border-bottom:1px solid #f0f0f0;padding-bottom:15px!important;}
+#lbusoConto,#lbcittadinanza2Av_int1,#lbcittadinanza2Av_int2,#lbcittadinanza2Av_int3{margin-top:15px;}
+
+/* Testi outform*/
+#aolcontainer p {margin:0; padding:0 0 10px 0;}
+#aolcontainer p.minitext { padding:0 0 10px;}
+#aolcontainer p.minitext  a {color:#6f8f0a}
+#aolcontainer p.minitext.grey, #aolcontainer  form .aolblock p.grey  {color:#999999}
+
+/* Elementi del Form */
+#aolcontainer form fieldset.lastrow {min-height:0px !important;}
+#aolcontainer .nobottpad {padding-bottom: 0px !important}
+#aolcontainer form span.label.labmax {width:550px;float:left}
+#aolcontainer form .expandableCont span.label {width:100%;}
+#aolcontainer form fieldset label {float:left; display:block;}
+#aolcontainer form fieldset label.uniqTooltipPos {float:none;}
+#aolcontainer form fieldset label input {width: auto; background: none; border:none; float:left;margin: 0 4px 0 0; vertical-align: middle; width:13px; height:13px; padding:0;}
+#aolcontainer form fieldset label span.optiontext {padding-top:0px}
+#aolcontainer form fieldset  .fieldblock {float:left; width: auto !important; margin-right: 2px}
+#aolcontainer form fieldset  span.separator {float:left; padding: 5px 2px 0 0} 
+#aolcontainer form fieldset.output  {min-height:0;padding-bottom:10px;}
+#aolcontainer form fieldset.output span.output {clear:left;font-family:'webankAolSemiBold';color:#666}
+#aolcontainer form fieldset.output span.label span.output {display:inline; clear:none}
+#aolcontainer form fieldset.fullwidth {clear: left;width: 560px;height: auto; min-height:30px; padding-bottom:5px}
+.fullwidth.lastrow.check{width:100%!important;float:left;margin-bottom:20px;}
+.fullwidth.lastrow.check .label{width:100%!important;float:left;}
+#aolcontainer form fieldset.fullwidth.lastrow {min-height:30px; padding-bottom:0}
+#aolcontainer form fieldset.fullwidth label span.optiontextmini  {width: 525px;float:right;color:#666;font-family:'webankAolSemiBold', Tahoma, Arial}
+#aolcontainer form fieldset.fullwidth .column label span.optiontextmini{font-family:'webankAolMedium'; color:#999;}
+#aolcontainer form fieldset.withInput {min-height:30px;float:left;width:auto;clear:left;}
+#aolcontainer form fieldset.withInput label{height:23px;}
+#aolcontainer form fieldset.withInput label input {margin-top:5px;padding:0 3px}
+
+
+/* Errori nel form */
+#aolcontainer form fieldset span.errortext , #aolcontainer form .fieldblock span.errortext{color: #ff2a00; font-size: 11px;float:left; display:none; clear:left;}
+#aolcontainer form .aolDepositoBody span.errortext{padding-left:18px;width:auto}
+#aolcontainer form .error label input  {border:0; background-color: transparent;}
+#aolcontainer form .error label span.optiontext, #aolcontainer form label.error span.optiontext {color: #ff2a00;}
+#aolcontainer form .productPush div.product .error label span.optiontext {color: #ff2a00!important;}
+#aolcontainer form .error span.errortext {display:block}
+#aolcontainer form fieldset.error .fieldblock span.errortext {font-size:0;display:none}
+#aolcontainer form .error span.errortext {display:block}
+#aolcontainer form .check.error label span.optiontextmini {color: #666 !important}
+#aolcontainer form .check.error span.errortext {padding-left:35px}
+#aolcontainer form .error  input, #aolcontainer form .error select {border:solid 1px #ff2a00;}
+#aolcontainer form .check.error input {outline:solid 1px #ff2a00}
+/* Opzionale */
+::-webkit-input-placeholder, #aolcontainer form fieldset input.opzionale {
+  font-family:'webankAolItalic', Arial Narrow, Helvetica, Tahoma, Serif; color:#999;
+}
+ :-moz-placeholder {  
+   font-family:'webankAolItalic', Arial Narrow, Helvetica, Tahoma, Serif; color:#999;
+}
+
+/* Contatore */
+#aolcontainer form fieldset div.fieldCounter {float:right; height: 0px; overflow: visible; padding: 0 19px 0 0; margin:0; display:block; font-size:11px;text-align: right;}
+/* Espansione con + e - */
+.expandable {margin:0; padding:0; float:left; display:block;border-bottom:1px solid #f0f0f0;width:100%;}
+.expandable:last-child, .expanded{border-bottom:0}
+.expandable .expander {margin:0;float:left;display:block;padding: 1px 0 10px; clear:both;position:relative;width:100%;}
+.expandable .expander  .btn{float:left; display:block; width:32px; height: 32px;background: transparent url(/img/ico_accordion_aol.png) no-repeat 0 0; margin: 1px 5px 0 0;}
+.expandable.expanded .expander  a.btn {background: transparent url(/img/ico_accordion_aol.png) no-repeat 0 -32px ;}
+.expandable .expander  a span {float:left; display:block;font-size:14px;padding-left:43px;width:100%}
+.expandable .expandableCont {float:left;clear:both; margin:0; padding:0;display:none;width:100%;}
+.expandable.expanded .expandableCont {display:block}
+.miniTT {z-index:2;float:left; position: absolute; display:block; height:14px; width: 14px; background: transparent url(pixel_trasp.gif) 0 0; clear:left;}
+.expandable .label{font-family:webankAolSemiBold;text-transform:uppercase;color:#666;padding-left:40px;position:relative;top:34px;left:3px}
+.expandable .expandableCont  .label{font-family:webankAolMedium;text-transform:none;color:#999;padding-left:0;position:static;top:0left:0}
+.expandable .expander span {float: left;display: block;font-size: 14px;padding-left: 43px;width: 100%;}
+/* Campi disabilitati */
+#aolcontainer form fieldset input.disabled, #aolcontainer form fieldset select.disabled {background-image: no-image; border:solid 1px #dedede; color: #dedede}
+
+/* Aol accordion intestatari */
+#aolcontainer .aolAcc .aolAccTitle {text-decoration: none;clear:left; height:27px;width:100%;display:block;}
+#aolcontainer .aolAcc .aolAccTitle span {cursor:pointer; cursor:hand;}
+#aolcontainer .aolAcc .aolAccTitle span.accButt {float:right; display:block;  background: transparent url(/img/ico1gr_aolacc.png) no-repeat 0 -18px; width: 30px; height: 18px;}
+#aolcontainer .aolAcc .aolAccTitle span.titoloAcc {display: block;float: left;text-transform: uppercase;font-size:18px;height: 22px;line-height: 20px; font-weight: bold; margin:0;padding:0;color: #666}
+#aolcontainer .aolAcc .aolAccTitle span.errortext {font-size:12px;display:none; float:left; clear:left; color: #ff2a00; padding: 10px 15px}
+#aolcontainer .aolAcc .aolAccTitle.small span.errortext{padding:8px 15px 0 15px}
+#aolcontainer .aolAcc .aolAccTop .aolAccTitle.error  {border-bottom: solid 3px #cd0005;}
+#aolcontainer .aolAcc .aolAccTitle.error span.errortext {display:block}
+#aolcontainer .aolAcc .aolAccContent {display:none} 
+#aolcontainer .aolAcc.expanded .aolAccContent {display:block;}
+#aolcontainer .aolAcc.expanded .aolAccTitle span.accButt {background-position:0 0}
+.aolAcc{margin-bottom:20px;}
+.aolAccTop{border-bottom: 1px solid #a6cc28;}
+
+
+/* Aol accordion intestatari disabilitato */
+#aolcontainer .aolAcc.disabled .aolAccTitle span.accButt {float:right; display:block;  background: transparent url(/img/ico1gr_aolacc_disabled.gif) no-repeat 0 0; width: 64px; height: 41px;}
+#aolcontainer .aolAcc.disabled .aolAccTitle span.titoloAcc {color:#b9b9b9}
+#aolcontainer .aolAcc.disabled .aolAccTitle span, #aolcontainer .aolAcc.disabled .aolAccTitle {cursor: default;}
+
+
+/* spalla destra */
+.gen {margin:9px 0 0 0;padding:0; display:block;float:left;width:100%;}
+#aolright .leftit {font-family: 'webankAolBold', Arial Narrow, Helvetica, Tahoma, Serif; clear:both; border-bottom: 1px solid #ccc; color:#8ab10b; font-weight:bold; margin: 4px 0 0 0; padding:0 0 6px 0;}
+#aolright .titIcoTieni {background:url(/img/ico_aol_tieni.png) no-repeat 0 0; padding:5px 0 20px 40px;}
+#aolright .titIcoDocumenta {background:url(/img/ico_aol_documenta.png) no-repeat 0 0 !important; padding:5px 0 20px 40px;cursor:pointer}
+#aolright .boxpromoright {float:left; width:181px}
+#aolright .boxpromoright.paddbott{margin-bottom:14px;}
+*html #aolright .boxpromoright.paddbott{margin-bottom:7px;}
+#aolright .boxpromoright img {float:left;}
+#aolright .promoopen {border:1px solid #000; border-top:0;border-radius: 0 0 4px 4px; height:18px;background-color:#333;/*background:url(/img/str_bg_promoopen.gif) repeat-y scroll 0 0 #333;*/ float:left; color:#6f8f0A; padding-top:2px; width:179px; text-align:center; position:relative;left:0px}
+.promoopen img{display:none;}
+#aolright .promoopen.white {background:url(/img/str_bg_promoopen_black.gif) repeat-y scroll 0 0 #333; float:left; color:#8ab10b; padding-top:2px; width:181px; text-align:center; position:relative;}
+#aolright .promoopen.white p {width:160px;}
+#aolright .promoopen a {font-size:13px;color:#6F8F0A; font-weight:bold; background: url(/img/ico2or_frecciaclosed3.gif) no-repeat scroll right 5px transparent; padding-right:11px;}
+#aolright .promoopen.white a {padding-right:9px;color:#6F8F0A; font-weight:normal; font-size:10px; background: url(/img/ico2or_frecciaclosed2.gif) no-repeat scroll right 6px transparent; padding-right:11px;}
+#aolright .promoopen a.opened {background: url(/img/ico2or_frecciaopened.gif) no-repeat scroll right 5px transparent;}
+#aolright .promoopen.white a.opened {background: url(/img/ico2or_frecciaopened2.gif) no-repeat scroll right 6px transparent;}
+#aolright .promoopen.white .condizionidetails p{padding-bottom:6px;}
+#aolright .gen .promoopen a:hover {text-decoration:none;}
+#aolright .gen .boxpromoright img {margin:0;}
+.filettolarge {clear:left; display:block; float:left;margin:14px 0;}
+*html .filettolarge {margin:7px 0 2px 0;}
+.condizionidetails {z-index:4;width:164px; background:url(/img/str_bg_cond_det.gif) repeat-x scroll left top #ddd; position:absolute; top:18px; left:-1px; border:2px solid #bdbdbd; border-top:0; font-size:11px; color:#666; text-align:left; padding:11px 5px 6px 8px;}
+.boxpromoright:first-child .condizionidetails{z-index:5;}
+.promoopen.white .condizionidetails{background:url(/img/str_bg_cond_det_white.gif) repeat-x scroll left top #f8f8f8;border-color:#bdbdbd; top:21px;}
+.condizionidetails h4 {margin:0; padding:0 0 5px 0; font:normal 10px tahoma, Serif;}
+.condizionidetails ul  {margin:0; padding:0; list-style-type:none;}
+.condizionidetails ul  li  ul li {background:url(/img/str_bg_puntoelenco_arr.gif) no-repeat scroll left 5px transparent;padding-bottom:0;}
+.condizionidetails ul  li {background:url(/img/str_bg_puntoelenco_trat.gif) no-repeat scroll left 7px transparent; padding-left:7px; padding-bottom:5px; line-height:11px;}
+ul.elencodoc {margin:0; padding:0; list-style-type:none;}
+ul.elencodoc li {padding:9px 0;border-bottom:1px solid #ccc}
+ul.elencodoc li:first-child{padding-top:0;}
+ul.elencosimple {margin:0; padding:0; list-style-type:none; padding-left:11px;}
+.gen ul.elencosimple li {padding-bottom:9px;}
+.gen ul.elencosimple p {color:#999; width:150px;}
+.gen ul.elencosimple p.hlgreen, .gen ul.elencosimple p.hlgrey {background-color:#6f8f0a; color:#fff; padding: 3px 0 2px 6px; margin-top:4px; margin-bottom:2px;}
+.gen ul.elencosimple p.hlpromo {background: #c7dd83 url(/img/str_aolright_promo_bg.gif) repeat-x left bottom; color:#4b4b4b}
+
+
+/* Elenco documenti AOL */
+#aoldoclist {clear:left; display: block;}
+#aoldoclist h4{color:#666;}
+#aoldoclist ul {margin:0 15px 2px 0; padding:0 0 10px 0;}
+#aoldoclist ul li {list-style-type: none;}
+#aoldoclist ul li a.visited {text-decoration: none; color: #505050 !important}
+
+#aoldoclist .expanded h4{background:url(/img/str_accordion_dx_open.gif) no-repeat 0 0;}
+#aoldoclist .expanded {background:url(/img/str_accordion_dx_bottom.gif) no-repeat 0 bottom;}
+#aoldoclist h4 a{padding:10px}
+
+/* CallMeBack */
+/* POP UP CallMeBack */
+.gen ul.elencosimple.callmeback a, .gen ul.elencosimple.callmeback img {text-decoration:underline; float:left; line-height:20px;}
+.gen ul.elencosimple.callmeback img {padding-right:5px;}
+.overlayer{text-align:left;padding-bottom:30px}
+.overlayer  .overlayertitle a {background: transparent url(/img/ico_close_aol.png) no-repeat scroll left top; height:20px; width:20px; margin:3px;}
+.overlayer  .overlayertitle span {padding-top:5px;display:block; margin-right:16px; padding-bottom:6px}
+.overlayer  .contact{padding:0 30px}
+.overlayer  .overlayerbody  .fieldblocklayer{width:30%;float:left;}
+.overlayer  .overlayerbody  .fieldblocklayer.middle {width:32%;float:left;margin:0 4%}
+.overlayer .overlayerbody  .fieldblocklayer.dx   {width:30%; float:left;}
+.overlayer .overlayerbody  form label, .overlayerbody  form .pdf a {display:inline-block;min-width:40%;line-height:24px;margin-bottom:4px;}
+.overlayer input,.overlayer select{width:100%}
+.overlayer  .contactbox {padding-left:20px; float:left; padding-bottom:10px;}
+.overlayer  .contact  img {float:left;}
+.overlayer  .overlayerbody .contactcont {float:left; width:100%;padding-top:15px}
+.overlayer  .overlayerbody .contactcont #layerBianco{width:208px;}
+.overlayer .overlayerbody form .calendarbutton {clear:none; width:26px; height:24px;  border:0; top:-33px;left:100%;margin-left:15px}
+.overlayer .rightlink{color: #6f8f0a;display:inline-block;font-size:12px}
+.overlayer .filettobutton .greenbutton {margin-right:30px;}
+.overlayerbody p,.overlayerbody .filettobutton{padding:10px 30px}
+.abbandono .overlayerbody .filettobutton{text-align:center;width:80%;margin: 0 auto;float:none;width:auto}
+.abbandono .overlayerbody .filettobutton a{float:none;display:inline-block}
+.overlayer .greenbutton{min-width:208px;background-position:160px 50%;margin-top:20px;}
+.overlayer  span.error{font-size:0;visibility:hidden;}
+.overlayer .error .error {visibility:visible;font-size:12px;color:#ff2a00;}
+
+#callmeback.overlayer .overlayerbody .contactcont  .txtconf   {float:left; padding: 5px 10px 0 0; color:#6E6E6E; letter-spacing:-1px;}
+#callmeback.overlayer form .error  input {border: 1px solid #ff2a00; }
+.contimgquest  {margin:0 0 0 -11px; padding:0; width:820px; height:261px; clear: both;}
+form.formimgquest {margin:0; padding:0}
+.overlayer form .fieldblocklayer .loading {border:0; padding-left: 35px; padding-top:65px;}
+#callmeback.overlayer .contactbox.small {width:386px; padding-bottom:24px;}
+#callmeback.overlayer .overlayerbody .contactbox.small .contactcont {padding-top:5px;padding-bottom:16px; background:url(/img/str_bg_overlayer_abb_md.gif) repeat-x scroll 0 0 #F1F1F1; border-left:1px solid #C7C7C7; border-right:1px solid #C7C7C7; width:374px; float:left; padding-left:10px}
+#callmeback.overlayer .overlayerbody .contactbox.small .contactcont .contactText {color:#666; font-family:Arial; font-size:14px; line-height:21px;}
+#callmeback.overlayer .contactbox.small  img{border:0;}
+
+/* Overlayer abbandono */
+.overlayer .abbandono .contact {padding-bottom:10px; float:left;}
+.overlayer .abbandono .contact  img {float:left;}
+.overlayer .abbandono .overlayerbody .contactcont {background: #f1f1f1 url(/img/str_bg_overlayer_abb_md.gif) repeat-x scroll 0 0; width:412px; border-left:1px solid #c7c7c7; border-right:1px solid #c7c7c7; padding-left:10px; float:left;}
+.overlayer .abbandono .overlayerbody .contactcont .num  {padding-top:10px; float:left; width:100%;}
+.overlayer .abbandono .overlayerbody .contactcont .contactText img {float:left;}
+.overlayer .abbandono .overlayerbody .contactcont .contactText span {color:#454545; letter-spacing:-1px; padding-left:10px;line-height:17px;}
+.overlayer .abbandono .overlayerbody .contactcont .contactText span.pipe {color:#ccc;padding:0 5px;line-height:17px;}
+.overlayer .abbandono .overlayerbody .contactcont .contactText span.vcenter {line-height:30px;}
+.overlayer .abbandono .overlayerbody form {margin:0; padding:0; width:100%;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer   {width:144px; float:left; margin-right:11px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.dx   {margin-right:0;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer input {width:142px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.middle   {width:141px; float:left; margin-right:11px;}
+.datepickernobr  {float:left; width:141px; height:23px;}
+.overlayer .abbandono .overlayerbody form img.nobor {border:0;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.middle  input {width:108px; margin-right:3px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.middle  input.lenghtmiddle {width:137px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.dx   {width:97px; float:left;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.dx   input, .overlayer .abbandono .overlayerbody  .fieldblocklayer.dx   select  {width:95px;}
+.overlayer .abbandono .overlayerbody  form .pdf  a:hover {text-decoration:underline;}
+.overlayer .abbandono .overlayerbody  form .pdf  a {padding-left:5px;}
+.overlayer .abbandono .overlayerbody  form label, .overlayer .abbandono .overlayerbody  form .pdf a {text-decoration:none; color:#8b8b8b; font-size:10px; font-family:Tahoma,tahoma,Arial,Sans serif; float:left; display:block;}
+.overlayer .abbandono .overlayerbody form .calendarbutton {clear:none; width:26px; height:24px;  border:0; top:-14px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.middle .pdf {padding-top:3px;}
+.overlayer .abbandono .buttoncontainer {margin-top:-52px;}
+.overlayer .abbandono .overlayerbody a.redirect {background: transparent url(/img/ico2or_arrowlink.gif) no-repeat scroll right 15px; float:right; font-family:Tahoma,tahoma,Arial,Sans serif; padding-right:10px;  margin-right:10px; text-decoration:none; padding-top:10px; font-weight:normal}
+.overlayer .abbandono .overlayerbody  .error span.error {color:#CD0005; font-size:10px; visibility:visible; font-weight:normal; font-family:Tahoma,tahoma,Arial,Sans serif; float:left;}
+.overlayer .abbandono .overlayerbody span.error {visibility:hidden; line-height:11px;}
+.overlayer .abbandono form .rightlink {font-weight:normal; font-family:Tahoma,tahoma,Arial,Sans serif}
+.overlayer .abbandono form label {padding-bottom:1px;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.dx  a.greenbutton  {margin-top:55px; margin-right:0;}
+.overlayer .abbandono .overlayerbody  .fieldblocklayer.dx  a.greenbutton span {padding:0 18px;}
+.overlayer .abbandono .overlayerbody .contactcont  .txtconf   {float:left; padding: 5px 10px 0 0; color:#6E6E6E; letter-spacing:-1px;}
+.overlayer .abbandono form .error  input {border: 1px solid #CD0005; }
+.contimgquest  {margin:0 0 0 -11px; padding:0; width:820px; height:261px; clear: both;}
+form.formimgquest {margin:0; padding:0}
+.overlayer form  .fieldblocklayer .loading {border:0; padding-left: 35px; padding-top:65px;}
+
+/* Overlayer procedi */
+.overlayer .abbandono.aol .overlayertitle {float:left; height: 69px; padding: 0 0 0 0; width:446px;}
+.overlayer .abbandono.aol .overlayertitle span{padding-top:62px; margin-right:24px;margin-left:24px;}
+.overlayer .abbandono.aol .overlayerbody .sep {padding-bottom:0; margin-bottom:13px; margin-right:0;}
+.overlayer .abbandono .filettobutton .greenbutton.large span {min-width:60px; padding:0 20px;}
+.overlayer .abbandono.aol .overlayertitle img {float:left;}
+.overlayer .abbandono.aol .overlayertitle img {float:left;}
+
+/* Generico */
+.topfiletto {border-top: solid 1px #e5e5e5}
+
+/* Classi form output */
+#aolcontainer .aolblock .outputblock, #aolcontainer .aolblock  .outputblock {padding: 0; display: block; clear:left; float:left; width: 100%;}
+#aolcontainer .aolblock .filettobutton{width: 100%; margin:0 0 0 -15px}
+.output .label{margin-bottom:0;}
+
+/* Configurazione prodotti "output" */
+
+#aolcontainer .aolblock h4.subtitle {margin:0; padding:5px 0 5px; color: #666; font-weight: normal;}
+#aolcontainer .aolblock div.product {padding: 3px 0 4px; display:block; clear:left; float:left; width:100%}
+#aolcontainer .aolblock div.product span.productitle {text-transform:uppercase; color: #666;}
+
+#aolcontainer .aolblock div.product div.productconfig span.promo{clear:both; display:block; color: #6f8f0a}
+#aolcontainer .aolblock div.product div.productconfig span.subtitle{clear:both; display:block;}
+#aolcontainer .aolblock div.product div.productconfig ul {padding:0; list-style-type:none; margin:0;}
+#aolcontainer .aolblock div.product div.productconfig ul li {background: transparent url(/img/str_bg_puntoelenco_arr_grey.gif) no-repeat left 5px; color: #999;line-height:14px;padding: 0 0 0 10px;}
+#aolcontainer .aolblock span.productelement {display:block; float:left; clear:both; color: #666; padding: 4px 0; width: 100%}
+#aolcontainer .aolblock span.productelement span {color: #6f8f0a; font-weight: bold; text-transform: uppercase}
+
+/* step 3*/
+#aolcontainer form fieldset.fullwidth .column {width: 293px; float:left; padding-top:5px}
+#aolcontainer form fieldset.fullwidth .column label span.optiontextmini {/*width: 250px;*/width:auto}
+#aolcontainer form fieldset.fullwidth .column label {padding-bottom:15px; float:left; clear:left;width:250px}
+#aolcontainer form fieldset.fullwidth .column label input, #aolcontainer form .aolblock .fullwidthradio input {clear:left}
+#aolcontainer form .aolblock p.paddLef {padding-left:29px!important;font-size:14px;top:-10px;position:relative;padding-bottom:0;}
+#aolcontainer form .aolblock p.paddLef a{text-decoration:underline;}
+#aolcontainer form .aolblock .fullwidthradio span.optiontextmini {color:#000; width:500px; float:left; display;block}
+#aolcontainer form .aolblock .fullwidthradio p.minitext.nobottpad {margin-bottom:0;}
+#aolcontainer form .aolblock .fullwidthradio label {float:left; padding-bottom:3px; width:100%;}
+#aolcontainer form .aolblock .fullwidthradio label.last {padding-bottom:0}
+#aolcontainer form .aolblock .fullwidthradio .dett {float:left; width:100%; display:none; padding:7px 0 0 20px; clear:left}
+#aolcontainer form .aolblock .fullwidthradio .opened .dett {display:block;}
+#aolcontainer form fieldset label .dett input {width:238px!important; height:20px!important; background:url(/img/str_aol_bgfields.gif) repeat-x scroll left top #FFFFFF; border:1px solid #9A9A9A;}
+#aolcontainer .dett p.minitext {padding-bottom:0px;}
+#aolcontainer  p.minitext a:visited {color: #505050 !important;text-decoration:none}
+#aolcontainer  p.minitext a:hover {text-decoration:underline}
+#aolcontainer form .aolAccContent fieldset label .dett fieldset  {padding-top:8px}
+#aolcontainer form .error label span.optiontextmini {color: #CD0005!important}
+#aolcontainer form .aolblock a.openpop {color: #6f8f0a; float:left; padding:10px 0 0 17px}
+#aolcontainer form fieldset.btn {float:left; width:100px;}
+#aolcontainer form .blockradio .btnCont {float:left; width:570px; margin-top:0; padding-left:17px}
+#aolcontainer form  .blockradio .btnCont fieldset {float:left;}
+#aolcontainer form fieldset.btn .greenbutton {margin-top:17px;text-decoration:none}
+#aolcontainer .dett p.minitext.black {color:#333!important;}
+#aolcontainer form fieldset.fullwidthradio  {width:550px;padding-bottom:0;}
+#aolcontainer form .aolblock .fullwidthradio span.optiontextmini p {width:500px; float:left;}
+#aolcontainer form .dett fieldset.nominh {min-height:0}
+
+
+/* tabella lista agenzia in pop up*/
+#maincontent table.list {border:1px solid #cacaca; border-bottom:0; width:100%;}
+#maincontent table.list td.heading span  {color:#fff; text-transform:uppercase; font-weight:bold}
+#maincontent table.list td.heading  {background:url(/img/str_heading_tab_popup.gif) repeat-x 0 0; padding:5px 0 6px 8px}
+#maincontent table.list td {padding: 5px 0 6px 8px; border-bottom:1px solid #cacaca; border-top:1px solid #cacaca}
+#maincontent table.list tr.hightlight td {background:url(/img/str_hight_tab_popup.gif) repeat-x 0 0; font-weight:bold}
+#maincontent table.list tr.dispari td {background-color:#f4f4f4; border-top:0}
+#maincontent table.list tr.pari td {background-color:#fff; border-top:0}
+.popupcontent {width:100%;}
+.popupcontent #maincontent {width:100%!important;}
+
+/* Lista di documenti per aol */
+#aolleft ul.documentlist {margin: 0; padding: 0; display:block; width: 530px; list-style-type:none; clear:left}
+#aolleft ul.documentlist li {background: url(/img/icopdf_aol.png) no-repeat scroll 0 0 transparent; padding:7px 0 14px 30px}
+
+#aolleft ul.documentlist li a.visited {color: #505050 !important; text-decoration:none}
+#aolleft ul.documentlist li img.visitedImg {padding: 0 0 0 4px}
+
+
+/* Tooltip verde */
+#greentooltip {background-color: #DCE7B5;display: block;float: left; top:0; left:0; padding:0;position: absolute; width: 240px; z-index:3}
+#greentooltip p {width: auto !important; padding: 8px 10px !important; margin:0;text-align:left}
+
+/* Paragrafini */
+#aolcontainer form .aolblock p.evident {font-weight: bold; color: #666666; margin: 5px 0 5px}
+#aolcontainer form .aolblock p.subevident {font-size:10px; margin:0 0 7px; padding:0; color: #666}
+
+/* Box deposito titoli */
+#aolDeposito {float:left; clear:left; display:block; width: 100%; height: auto}
+.aolDepositotop {display:none; float:left; clear:left; padding:0; margin:0}
+.aolDepositotop fieldset{min-height:0;}
+#aolDeposito .aolDepositotop span.title {margin: 3px 0 10px;margin-left:-10px;float:left; clear:left; width: 290px; height: 29px; background: transparent url(/img/tit_aoldeposito.gif) no-repeat left 0;}
+#aolDeposito.opened .aolDepositotop span.title {background-position: 0 -29px}
+#aolDeposito .aolDepositotop fieldset {width: auto;}
+#aolDeposito #aolDepositoCont  {display:none; margin: 0}
+#aolDeposito.opened #aolDepositoCont {display:block}
+#aolDeposito  .aolDepositoBody {float:left; clear:left; display:block;padding: 0 0 15px}
+#aolDeposito .aolDepositoBody h4 {padding-top:15px;border-top:1px solid #f0f0f0;clear:left;margin:0;font-family:'webankAolSemiBold', Tahoma, Arial;color:#666;text-transform:uppercase;}
+#aolcontainer #aolDeposito .aolDepositoBody p {margin-bottom:10px;}
+#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth span{color: #666}
+#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth span.dettaglio{font-size:14px;color:#999;padding-left:27px;padding-bottom:8px;}
+#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth span.optiontextmini,#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth span.optiontext{width:470px;}
+#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth span.optiontextb{color: #666;font-family:'webankAolSemiBold', Tahoma, Arial;}
+#aolcontainer #aolDeposito .aolDepositoBody .error fieldset.fullwidth  span {color: #CD0005}
+#aolcontainer #aolDeposito .aolDepositoBody .error fieldset.fullwidth  span.dettaglio {color: #666}
+#aolcontainer #aolDeposito .aolDepositoBody fieldset.fullwidth.error span {color: #CD0005}
+#aolcontainer #aolDeposito .aolDepositoBody a.floating:hover {text-decoration:none}
+.aolDepositoBody .fieldblock .optiontext strong{font-family:'webankAolSemiBold', Tahoma, Arial;font-weight:normal;}
+
+
+/* promo push product */
+.productPush {float:left; clear:left; display: block; margin: 0; padding:0 0 30px; width: 100%}
+.productPush span.pushTitolo {display:block; float:left; width: 548px; padding:0px 0 7px 47px; clear:left; margin:0}
+#aolcontainer .productPush span.pushTitolo img {display:block;float:left;clear:both;padding:10px 0 20px}
+#aolcontainer .productPush span.pushTitolo p {clear:both;color:#999;font-size:11px;font-weight:bold;line-height:23px;margin:4px 0 5px; display:block; padding:0;}
+.productPush div.product {padding-left:47px;display:block; float:left;border-bottom:1px solid #f0f0f0}
+.productPush div.product.bancomat {background: transparent url(/img/str_aolpush_bancomat.png) no-repeat 47px 0; margin-bottom:15px;}
+.productPush div.product.carta {background: transparent url(/img/str_aolpush_carta.png) no-repeat 47px 0;}
+.productPush div.product .upperLeft {width:70%;display:block; float:right; margin:0; padding:0 5px 5px 14px !important;}
+.productPush div.product fieldset label span.large {font-family:'webankAolSemiBold', Tahoma, Arial;color:#666;}
+.productPush div.product .upperLeft.bancomat  {background: transparent url(/img/img_pr_aol_bancomat.gif) no-repeat right top;}
+#aolcontainer .productPush div.product .upperLeft p {font-size:14px;padding:0 0 7px 0; margin:0;line-height:20px;}
+#aolcontainer form .productPush div.product fieldset {clear: both; display: block;min-height:15px !important;padding: 11px 0 5px 19px; width: 535px; min-height: 15px;}
+#aolcontainer form .productPush div.product fieldset.options {padding: 5px 0 5px 0!important;}
+.productPush div.product fieldset input {margin:0; padding:0; float:left;}
+.productPush div.product img {float:right; display:block; padding: 0px 10px 0 0; margin:0}
+.productPush div.product p.evident {clear:left; display:block; padding: 0; margin:0 14px 4px !important; font-weight: bold; color: #666}
+.productPush div.product ul {list-style-type:none; padding: 0; margin: 0 14px}
+.productPush div.product ul li {list-style-type:none; padding:0; margin: 0 6px 2px; background: url(/img/img_or_elenco.gif) no-repeat scroll 0 0 transparent; padding: 0 0 0 21px;}
+#aolcontainer .productPush div.product p.mini {clear:left; display:block; padding: 0 0 4px 0; margin:0; color: #999; font-size: 10px; line-height: 12px}
+#aolcontainer form .productPush div.product fieldset.options {padding-top: 5px !important}
+#aolcontainer form .productPush div.product fieldset.options label span {color: #666 !important; font-weight: normal}
+.productPush fieldset{min-height:0;width:auto}
+/* AllAccOpener */
+#aolcontainer a.allAccOpener {white-space: nowrap; float:left; clear:left;color: #8ab10b;display: block;float: left;font-size: 18px;padding:11px 10px 11px 16px;line-height: 20px; margin: 0 0 22px; text-decoration:none; background: transparent url(/img/str_aolacc_allexpander.gif) no-repeat top left;margin-left:0}
+
+/* Tabella commissioni */
+.popupcontent table.detail {width:100%; border-collapse:collapse}
+.popupcontent table.detail tr th {border:solid 1px #cacaca; text-align:center; font-weight: bold; background: #edf2d8 url(/img/str_aoltable_bg_th.gif) repeat-x 0 0}
+.popupcontent table.detail tr th.vuoto {background: #fff none; border-top: solid 1px #fff; border-left: solid 1px #fff} 
+.popupcontent table.detail tr th, .popupcontent table.detail tr td {padding: 5px;}
+.popupcontent table.detail tr td.heading {background: #eaeaea url(/img/str_aoltable_bg_heading.gif) repeat-x 0 0; border: solid 1px #cacaca; font-weight: bold;}
+.popupcontent table.detail tr td {text-align:left; border:solid 1px #cacaca}
+.popupcontent table.detail tr td.center {text-align:center;}
+
+/* tpl di conferma */
+#aolcontainer.post .boxconfMiddle {width:100%; float:left;}
+#aolcontainer.post .boxconfTop {height:36px; margin-top:16px;padding-top:13px}
+#aolcontainer.post .boxconfMiddle {width:100%; padding-top:5px}
+#aolcontainer.post .boxconfBottom {width:100%; float:left;}
+#aolcontainer.post .boxconfMiddle img {float:left; padding-right:10px}
+#aolcontainer.post .boxconfMiddle .visitedImg {float:none}
+#aolcontainer.post .boxconfMiddle .steptxt {float:left;padding-top:14px;margin-bottom:26px}
+#aolcontainer.post .boxconfMiddle .step.first .steptxt{margin-bottom:40px}
+#aolcontainer.post .boxconfMiddle  .step{padding-top:0px;float:left;width:100%;border-bottom:1px solid #ccc;padding-bottom:0;margin-bottom:20px;}
+#aolcontainer.post .boxconfMiddle .steptxt ul.documentlist{margin:0; padding:0 26px 0 0; list-style-type:none;float:left;width:300px}
+#aolcontainer.post .boxconfMiddle .steptxt ul.documentlist li {margin:0; padding:2px 0 9px 20px; background:url(/wscmn/img/ico2or_pdftrasp.gif) no-repeat 0 0; }
+#aolcontainer.post .boxconfMiddle .steptxt ul.documentlist li a {color:#6f8f0a; font-size:10px;}
+#aolcontainer  h2.small {line-height:19px}
+#aolcontainer .boxconf  {margin-bottom:16px; float:left;width:100%;}
+#aolcontainer p.large a  {color:#6f8f0a;}
+#aolcontainer .txtconf {padding-top:22px;padding-right:25px;padding-bottom:22px}
+.contimgquest {clear: both;height: 261px;margin: 0 0 -24px -26px;padding: 0;width: 820px;}
+#aolcontainer .filettobuttonAll a.greenbutton.paddright {margin-right: 99px;}
+.stepConferma{color:#a6cc28;margin-right:10px;}
+
+/* post aol */
+#aolcontainer.post {background:none;margin-top:23px;float:none;max-width:none;}
+#aolcontainer.post h2{margin:0;}
+#aolcontainer.post h2.title {padding-bottom:0;}
+#aolcontainer.post fieldset {width:768px; clear:left; float:left; display: block; height: 322px;}
+.boxperte {width:168px; float:left; margin-right:32px;margin-top:34px; display:block;}
+.boxperte img {float:left;clear:left; display:block;}
+.boxperte.last {margin-right:0;}
+.boxperte label {padding-left: 38px;  padding-top:5px; width:130px; height:30px; float:left; background:url(/img/str_bg_boxperte_check.gif) no-repeat 0 0 transparent;}
+.boxperte  label  input{font-weight:bold;padding-top:4px; display:block; }
+.boxperte  label input {border:0; margin-right:5px; width:13px; height:13px;}
+#aolcontainer form .check .boxperte  label span {color:#6f8f0a; font-weight:bold; width:100px;}
+#aolcontainer .filettobuttonAll a {float: right; margin: 0 0 0 -25px;text-decoration: none;}
+#aolcontainer .filettobuttonAll a.greenbutton {float: right; margin-left: 9px;text-decoration: none;}
+#aolcontainer.post  form fieldset.check span.errortext {clear: left;color: #CD0005;display: none;float: left;font-size: 10px; padding-left:0;}
+#aolcontainer.post form fieldset.error span.errortext {display: block; width:100%}
+#aolcontainer .msgesi  {margin-bottom:64px; float:left}
+#aolcontainer .msgesi img {float:left}
+#aolcontainer .msgesi .esitxt  {width:680px;padding-left:18px;float:left}
+#aolcontainer .txtconf .large{padding-bottom:8px}
+
+#aolcontainer.post .findAgenzia span{border:1px solid #cdcdcd;background:#e2e2e2  url(/img/str_bg_cerca_agenzia.png) no-repeat 5px 5px; border-radius:2px;color:#333;padding:10px 10px 10px 50px;float:left;margin-bottom:10px}
+
+/* Prodotti in spalla destra*/
+#aolright .gen img {margin:0 0 0 5px}
+#aolright .gen ul.elencosimple img {margin:0}
+#aolright ul.elencoprodotti li span {clear:left; color: #999; display:block;}
+#aolright ul.elencoprodotti li span.productname {color:#000}
+#aolright ul.elencoprodotti li span.boxedgreen {background-color: #8ab10b; color:#fff}
+#aolright ul.elencoprodotti li span.boxedgreen span {color:#fff;padding: 3px 5px}
+#aolright ul.elencoprodotti li span.promogreen {background: #c7dd82 url(/img/str_aolright_promo_bg.gif) repeat-x left bottom; color:#fff}
+#aolright ul.elencoprodotti li span.promogreen span {color:#4b4b4b;padding: 3px 10px 3px 5px !important; cursor:pointer;background: transparent url(/img/frecciaPromo.gif) no-repeat right bottom;}
+
+/* Tooltip su img*/
+#aolcontainer a.imgTooltip {padding-left:4px;display:inline-block; margin-top:-2px;}
+#aolcontainer form  .label span.output {float:none;}
+
+#aolcontainer ul.bulletSfumato li {background: url(/img/bl_quadratinosfumato.gif) no-repeat scroll 0 7px transparent; margin:0; padding:0 0 5px 10px;list-style-type:none}
+#aolcontainer ul.bulletSfumato {margin:0 0 7px 20px; padding:0;}
+#aolcontainer ul.bulletSfumato li strong {color:#666;}
+
+/* BANCARIZZAZIONE*/
+
+.productPush.bancarizza div.product.bancomat {margin-bottom: 0;}
+#aolcontainer .aolblock.bancarizza  h4 {clear:left;font-weight: bold; font-size: 11px; text-transform: uppercase; margin:0; padding: 15px 0 5px 0; color: #6f8f0a; display:block; float:left; width:100%}
+#aolcontainer form .aolblock.bancarizza fieldset.output {height: 20px;min-height: 20px;}
+#aolcontainer form .aolblock.bancarizza fieldset.output.attivato {height: 27px;min-height: 27px;}
+#aolcontainer form .aolblock.bancarizza fieldset.output.lastrow {height: 13px;min-height: 20px;}
+#aolcontainer div.aolblock.bancarizza .outputblock{padding-bottom:5px;}
+
+#aolcontainer p.linkBottom span,#aolcontainer p.linkBottom img  {display:block; float:left;line-height:15px}
+#aolcontainer p.linkBottom img {padding-right:5px;}
+#aolcontainer p.linkBottom a {color:#000;text-decoration: underline}
+#aolcontainer p.linkBottom a:hover {color:#6F8F0A; text-decoration:underline}
+#aolcontainer span.elencostepPre {clear:both;color:#454545;display:block;font-family:Arial Narrow,Helvetica,Tahoma,Serif;font-size:14px;font-weight:normal;margin:0;padding:0 0 2px;text-transform:uppercase;width:560px;}
+
+/* Cella del form che contiene i dettagli del deposito */
+#aolcontainer .rightPos{float:right}
+#aolcontainer .totLiquidita{margin-left:0;margin-right:0; font-size:10px; color:#666; line-height:14px;}
+#aolcontainer .importoDeposito{float:left;width:170px;margin-left:0;margin-right:0}
+#aolcontainer .iconaDettaglio{display:block;float:right;width:20px;margin-left:4px;margin-right:4px;padding-top:4px;padding-bottom:4px}
+#aolcontainer .depRightBlock{float:left;}
+
+/* Tooltip unico */
+.uniqTooltipText,.cartimpronta_lista .uniqTooltipText{position:relative;color:#666!important;text-decoration:none!important;border-bottom:dashed 1px #666!important;padding-bottom:0;cursor:default}
+#bookPosition .uniqTooltipText{color:#232323!important;border-bottom:dashed 1px #232323}
+.uniqTooltipText.nodotted{border-bottom:0!important}
+.uniqTooltipInnerHTML,#aolcontainer form fieldset label .uniqTooltipInnerHTML{display:none!important}
+#uniqTooltip{position:absolute;z-index:1000}
+.uniqTooltipPos{position:relative}
+.uniqTooltipArrow{position:absolute;top:-3px;left:95px;width:14px;height:9px;background:url(/wscmn/img/ret/str_tooltip_frecciasu.gif) transparent no-repeat scroll left top;z-index:1}
+.uniqTooltipBody{position:absolute;top:6px;left:0;border:1px solid #ccc\9;}
+.opened .uniqTooltipBody{top:6px}
+.opened .uniqTooltipBody{top /*\**/:-5px\9}
+.mutuitraspdcol .opened .uniqTooltipBody{top /*\**/:6px\9}
+:first-child+html .opened .uniqTooltipBody{top:6px}
+.uniqTooltipContent{font-size:14px;background-color:#FFF;box-shadow:0px 0px 60px 0px rgba(0, 0, 0, 0.5);-moz-box-shadow:0px 0px 60px 0px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0px 0px 60px 0px rgba(0, 0, 0, 0.5);padding:30px;}
+.uniqTooltipContent p {padding:0px !important;width:auto!important}
+.tab50 .noTooltip{float:left; margin-right: 5px}
+.cartimpronta_lista .esteso p span{display:inline;float:none}
+.cartimpronta_lista .esteso p span.uniqTooltipInnerHTML{display:none;float:none}
+.uniqTooltipText.dot ,.cartimpronta_lista .uniqTooltipText.dot{border-bottom:0!important}
+.uniqTooltipContent ul, .uniqTooltipContent ol {margin:0; padding:0 0 0 15px;}
+
+
+/* Tooltip unico caso static */
+#aolcontainer .static{border-bottom:0 none!important}
+.over .uniqTooltipBody{top:-3px}
+.uniqTooltipArrowgiu{position:absolute;bottom:-22px;left:120px;width:43px;height:22px;background:url(/img/str_tooltip_frecciagiu.png) transparent no-repeat scroll left top;z-index:1}
+#aolcontainer .uniqTooltipContent{font-weight:normal}
+#aolcontainer .uniqTooltipContent ul.flaglist li{font-size:11px;}
+.uniqTooltip{position:absolute;z-index:1000}
+:first-child+html .under .uniqTooltipBody{top:9px}
+:first-child+html .under .uniqTooltipArrow{top:3px}
+:first-child+html .over .uniqTooltipBody{top:-2px}
+:first-child+html .over .uniqTooltipArrow{top:-2px}
+.under .uniqTooltipBody{ top /*\**/:-3px\9 }
+.under .uniqTooltipArrow{ top /*\**/:-9px\9 }
+.over .uniqTooltipBody{ top /*\**/:-15px\9 }
+.over .uniqTooltipArrow{ top /*\**/:-10px\9 }
+
+#aolcontainer #tabordini2 span.tooltip span{font-weight:normal!important}
+#aolcontainer #tabordini2 span{color:#515151;font-weight:bold}
+
+/* dimensioni tooltip*/
+.tolltipclick .opened,.tolltipclick .closed{position:relative}
+.label .opened,.label .closed{position:absolute}
+.label.labmax .closed,.label.labmax .opened{position:relative}
+.anchorTooltip .opened,.anchorTooltip .closed{float:left}
+#aolcontainer .tolltipclick .opened a,#contenuti .tolltipclick .closed a{text-decoration:none}
+#aolcontainer .tolltipclick .closed span.uniqTooltipPos a,#contenuti .tolltipclick .opened span.uniqTooltipPos a{border-bottom:1px dashed #666666;padding-bottom:0;text-decoration:none}
+#aolcontainer .tolltipclick .closed span.uniqTooltipPos a.noborder,#contenuti .tolltipclick .opened span.uniqTooltipPos a.noborder{border-bottom:0}
+.opened .uniqTooltipText ,.closed .uniqTooltipText{border-bottom:none!important}
+.uniqTooltipBody.bsmall{width:280px}
+.uniqTooltipBody.bmedium{width:380px}
+.uniqTooltipArrow.amedium,.uniqTooltipArrowgiu.amedium{left:170px}
+.uniqTooltipBody.blarge{width:480px!important}
+.uniqTooltipArrow.alarge,.uniqTooltipArrowgiu.alarge{left:220px}
+.uniqTooltipBody a.closeUniqTooltip{background:#fff;float:right;display:block;width:20px;height:20px;cursor:pointer;text-align:right;background:transparent url(/img/ico_close_aol.png) no-repeat 0px 0px;margin:10px}
+.over.static .uniqTooltipBody a.closeUniqTooltip{display:none}
+.uniqTooltipContent .center{text-align:center}
+#aolcontainer form .aolblock .uniqTooltipPos p{width:auto!important;float:none!important}
+
+/* chat */
+#c2mToolbar {cursor:pointer; float:right; padding-top:13px; padding-right:30px;}
+#aol input.hidden, #aolleft input.hidden {display:none;} 
+
+/* upperBanner */
+#aolUpperPromo {float:left; width: 820px; display:block; margin: 0px 0 10px 18px; padding:0;}	
+#aolUpperPromo .aolUpperPromoCont {float:left; clear:left; display:block; width: 820px; padding:0; margin:0;}
+* html #aolUpperPromo .aolUpperPromoCont {margin-top: -200px}
+#aolUpperPromo .aolUpperFascia {padding: 0; margin:0; padding:0; float:left; display:block; height: 42px}
+
+/* Stampa documenti AOL */
+#aolUpperPromo .aolUpperFascia {padding: 0; margin:0; padding:0; float:left; display:block; height: 42px}
+
+
+/* promotori da compilare*/
+#aolcontainer .aolblockpromo  h3 {background:url(/img/str_aol_dacompilaretop.gif) no-repeat 0 0; width:550px;float:left;margin:0; padding:42px 0 0 16px} 
+#aolcontainer .aolblockpromo .aolblockwrapper{float:left;background:url(/img/str_aol_dacompilaremid.gif) repeat-y 0 0;padding: 2px 0 7px 16px;/*margin-bottom:11px*/}
+#aolcontainer .aolblock .aolblockwrapper{float:none;background:none;padding-left:0;margin-bottom:0;padding:0;}
+#aolcontainer .aolblockpromo{margin-bottom:40px;float:left;/*background:url(/img/str_aol_dacompilarebot.gif) no-repeat 0 bottom;*/} 
+#aolcontainer form .aolblockpromo p{color: #000000;margin-bottom: 7px;padding: 0;width: 550px;}
+#aolcontainer form .aolblockpromo p.grey {color:#999999}
+#aolcontainer .aolblockpromo h3.subTitle{background:none;padding:15px 0 7px 0}
+#aolcontainer form .aolblockpromo p.evident{color:#666666;font-weight: bold;margin: 5px 0}
+#aolcontainer form .aolblockpromo p.subevident {color: #666666;font-size: 10px;margin: 0 0 7px;padding:0}
+#aolcontainer .aolblockpromo .promobottom{float:left}
+#aolcontainer .aolblock  .promobottom{display:none}
+
+/*bug chrome */
+
+/*certificazione in aol step 0/1/4*/
+img.margneg{margin-top:-8px}
+.boxLightMiddle{padding:10px}
+#aolcontainer form .aolblock .boxLightMiddle p{width:510px;margin-bottom:3px}
+#aolcontainer form .aolblock .boxLightMiddle strong{line-height:14px}
+.boxLightMiddle a{color:#6f8f0a}
+#aolcontainer .boxLight{margin-bottom:19px; margin-top:9px}
+.certificazioniContainer{padding-left:11px}
+#aolcontainer form fieldset.right,.boxLight img,.boxLight{float:left}
+#aolcontainer form fieldset.right{width:248px;float:right;}
+#aolcontainer form fieldset.right .greenbutton, #aolcontainer form fieldset.right .disabledbutton{margin:11px 0 0 4px}
+div.linkdisabled, div.linkenabled{margin:5px 0 5px 0px !important;}
+div.linkdisabled span{color:#ccc;text-decoration:underline}
+div.linkenabled a {font-family:webankAolItalic;font-size:14px;}
+.intro{margin:7px 0 0 0;display:block}
+.intro img:first-child{display:none;}
+.intro span{padding:3px 0 0 3px}
+.intro span,.intro img{float:left}
+#aolcontainer form .aolblock  a.greenbutton,#aolcontainer form .aolblock a.disabledbutton{text-decoration:none!important}
+#aolcontainer form .datatocertificate fieldset input.disabled,#aolcontainer form .datatocertificate fieldset select.disabled{background-image:none;background-color:#e6e6e6;color:#9e9e9e;border-color:#dedede}
+#aolcontainer form .hiddenCert fieldset input,#aolcontainer form .hiddenCert .right .label,#aolcontainer form  .hiddenCert fieldset span.errortext {width:211px;margin-left:16px}
+#aolcontainer form .hiddenCert .right .label{width:100%}
+#aolcontainer form fieldset.marginR{margin-right:20px}
+#aolcontainer form fieldset.right .greenbutton.marginL{margin-left:147px}
+#aolcontainer form .datatocertificate fieldset.left input{width:305px}
+.msgbottom, .msgbottom  div,.msgbottom  img{float:left}
+.msgbottom {margin-top:22px; margin-bottom:35px}
+.msgbottom  div{width:471px;padding-left:9px;}
+.msgbottom  ul{margin:0;padding:0; list-style-type:none}
+.msgbottom  a {color:#6f8f0a; text-decoration:underline;}
+.msgbottom  ul li{background:url(/img/ico2or_puntoelencosmall.gif) no-repeat 0 7px; padding-left:10px}
+.boxalert{width:532px;margin-bottom:19px;float:left}
+fieldset .boxalert{width:239px;margin:12px 0 0 0}
+.boxalert.posi .top, .boxalert.nega .top, fieldset .boxalert.post .top{background:url(/img/str_boxalerttop.gif) no-repeat 0 0;width:239px;float:left;height:3px;overflow:hidden}
+.boxalert.nega .top{background:url(/img/str_boxalerttop_ko.gif) no-repeat 0 0;}
+fieldset .boxalert.post .top{background:url(/img/str_boxalerttop_post.gif) no-repeat 0 0;}
+.boxalert.post .top{background:url(/img/str_boxalerttop_532.gif) no-repeat 0 0;width:532px;float:left;height:3px;overflow:hidden}
+.boxalert.posi .imgCont, .boxalert.nega .imgCont, .boxalert.post .imgCont{background:url(/img/ico2or_spuntaalert.gif) no-repeat 0 0;width:27px;height:18px;float:left}
+.boxalert.nega .imgCont{background:url(/img/ico2or_spuntaalert_ko.gif) no-repeat 0 0}
+.boxalert.post .imgCont{background:url(/img/ico2or_spuntaalert_post.gif) no-repeat 0 0}
+.boxalert.posi .bottom,.boxalert.nega .bottom, fieldset  .boxalert.post .bottom{background:url(/img/str_boxalertbottom.gif) no-repeat 0 0;width:239px;float:left;height:3px}
+.boxalert.nega .bottom{background:url(/img/str_boxalertbottom_ko.gif) no-repeat 0 0;}
+fieldset .boxalert.post .bottom{background:url(/img/str_boxalertbottom_post.gif) no-repeat 0 0;}
+.boxalert.post .bottom{background:url(/img/str_boxalertbottom_post_532.gif) no-repeat 0 0;width:532px;float:left;height:3px}
+.boxalert.posi .middle,.boxalert.nega .middle, fieldset .boxalert.post .middle{width:239px;float:left; background-color:#dce7bc}
+.boxalert.post .middle{width:532px;float:left; background-color:#dce7bc}
+.boxalert.nega .middle{background-color:#f5d6cc}
+.boxalert.post .middle,fieldset .boxalert.post .middle{background-color:#f8eec5}
+#aolcontainer form .aolblock  fieldset .boxalert .middle strong{width:205px;float:left; margin:1px 0 4px 0}
+#aolcontainer form .aolblock  fieldset .boxalert .middle p{margin-left:6px;width:220px}
+#aolcontainer form .aolblock  .boxalert .middle p{width:500px;float:left}
+#aolcontainer .allrow{float:none}
+#aolcontainer .buttonright{margin-right:40px; width:261px;float:right}
+.buttonright a.greenbutton{float:right; margin-top:25px}
+.abbandono.aol .buttonCont  .greenbutton, .abbandono.aol .buttonCont  .greenbutton{float:right; margin-right:0}
+.abbandono.aol .buttonCont, .abbandono.aol .buttonCont{padding:0 14px 20px 14px;float:left;width:370px}  
+.abbandono.aol .buttonCont .bozzaLinked, .abbandono.aol .buttonCont .bozzaLinked{line-height:30px;float:left}
+
+#rightMail .right.lastrow.error,.buttonright .error{background:url(/img/ico2or_errorinvio.gif) no-repeat 14px 15px;}  
+#aolcontainer .buttonright .error .errortext{padding-left:51px;width:200px} 
+.buttonright .error {float:right;background-position:26px 30px} 
+#aolcontainer form #rightMail .right.lastrow.error a.greenbutton{margin-left:27px}
+#rightMail .right.lastrow.error .errortext{padding-left:24px; color:#cd0005}
+#aolcontainer form fieldset .conferma{margin-left:266px; width:236px;float:left;}
+#aolcontainer form fieldset.error .conferma{background:url(/img/ico2or_errorinvio.gif) no-repeat 134px 15px transparent;}
+#aolcontainer form fieldset.error .conferma .errortext{width:100px;margin-left:160px}
+
+/* tooltip aol documenti*/
+.anchorTooltip{width:auto;display:inline-block;*display:inline;*zoom:1}
+#aolcontainer form fieldset .anchorTooltip input {display:inline}
+
+/* box servizi top aol*/
+#boxServiziTopAol {/*min-width:150px;width:230px;*/height:55px;float:right;margin:7px 0 0 0;}
+#boxServiziTopAol.serviziAttivi{border-radius:8px;padding:0 11px;border:1px solid #404040;background: #303030 url(/img/box_aol_servizi_top.png) no-repeat 11px 8px;}
+.boxServiziTopAolAss,#boxServiziTopAolNum{/*position:absolute;width:90px;height:20px;/*top:36px;*left:60px*/margin-top:24px;float:left}
+#boxServiziTopAolNum{margin-left:5px}
+#c2mToolbar.boxServiziTopAolChat{/*position:absolute;top:36px;left:167px;padding:0*/padding-top:0;margin-top:24px;padding-right:0;padding-left:0;*float:none}
+#c2mToolbar.boxServiziTopAolChat #wbbutton{padding-left:19px;float:left}
+.wrapperTool{float:right;height:71px;}
+.wrapperTool .condizionidetailsOverlayer .middleTooltip{float:left;min-width:200px;*max-width:200px;background-color: #fff;border-radius:8px;box-shadow: 0 2px rgba(0, 0, 0, 0.2);color: #585858;font-family: arial,tahoma,sans-serif;font-size:12;padding: 11px;width: auto;}
+.condizionidetailsOverlayer .closeOverlayer{float:right}
+.wrapperTool .condizionidetailsOverlayer .nVerdi{display:block;clear:left;text-align:center;color:#217e31;font-weight:bold}
+.wrapperTool .condizionidetailsOverlayer .numeri{display:block}
+.condizionidetailsOverlayer.ui-draggable:hover{cursor:move}
+
+/* fix per IE*/
+.leftIE{background: transparent url(/img/box_aol_servizi_left.png) no-repeat 0 0\9;width:12px\9;height:56px\9;margin-left:-12px\9;float:left\9}
+#boxServiziTopAol.serviziAttivi{background-color:transparent\9;border:0\9}
+.wrapperTool{background: transparent url(/img/box_aol_servizi_right.png) no-repeat right 7px\9;}
+.wrapperIE{float:left\9;background: transparent url(/img/box_aol_servizi_middle.png) no-repeat 0 0\9;height:56px\9}
+.ieLeftTooltip,.ieRightTooltip{background:none;background: transparent url(/img/str_ieLeftTooltip_overlayer.png) no-repeat 0 0\9;width:9px\9;height:66px\9;display:block\9;float:left}
+.ieRightTooltip{background: transparent url(/img/str_ieRightTooltip_overlayer.png) no-repeat 0 0\9;}
+.wrapperTool .condizionidetailsOverlayer .middleTooltip {border-radius:0px\9;padding-left:0\9;padding-right:0\9;background: transparent url(/img/str_ieMidTooltip_overlayer.png) repeat-x 0 0\9;height:67px\9}
+
+/*interventi aol decembre 2013 */
+.clearBlock{float:left;margin-bottom:30px}
+.flLeft{float:left!important}
+.flRight{float:right}
+.marginLeftMedium{margin-left:10px;}
+.tolltipclick.flLeft .closed,.tolltipclick.flLeft .opened {float:left!important}
+.tolltipclick.flLeft .uniqTooltipText{float:left}
+.prodGroup{float:left;width:510px;}
+.cartimpronta .prodGroup{width:530px;margin-bottom:30px}
+.prodGroup .prodImg{float:left;margin-top:-5px}
+.prodGroup .prodDescription{width:67%;float:left}
+.cartimpronta .prodGroup .prodDescription{padding-right:20px;width:64%;}
+#aolcontainer .prodGroup h3{width:100%;margin-bottom:5px}
+#aolcontainer form .prodDescription p,#aolcontainer form  .prodDescription ul{width:auto;clear:left}
+#aolcontainer form .prodDescription ul,#aolcontainer form  .prodDescription ul li{margin:0px 0 10px 7px;padding:0;clear:left}
+#aolcontainer form .prodDescription ul li{margin-bottom:0}
+.checkProd{float:left;margin-top:0;margin-right:10px}
+.prodDescription .showConditionOverlayer,.prodDescription .showConditionOverlayer:hover{font-size:12px;color:#6F8F0A;font-weight:bold}
+.prodDescription .condizionidetailsOverlayer{background-color: #FFFFFF;border: 1px solid #CCCCCC;width: 550px;border-radius:8px;box-shadow: 0 2px rgba(0, 0, 0, 0.2);-moz-box-shadow: 0 2px rgba(0, 0, 0, 0.2);-webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.2);color: #585858;font-family: arial,tahoma,sans-serif;padding: 15px 12px 15px 20px;}
+.prodDescription .condizionidetailsOverlayer.marginNega {margin-left:-40px}
+.condizionidetailsOverlayer div{width:70%}
+#aolcontainer .condizionidetailsOverlayer  h2{width:auto}
+.condizionidetailsOverlayer .imgProd{margin-right:10px}
+.deposito  #aolDeposito .aolDepositotop,.product .aolDepositotop{background:transparent url(/img/str_aolpush_bg_top.gif) no-repeat 0 0;width:548px;height:auto;padding-left:0}
+.product .aolDepositoBottom, #aolDeposito  .aolDepositoBottom{/*background:transparent url(/img/str_aolpush_bg_bottom.gif) no-repeat 0 bottom;*/width:548px;height:11px}
+div.product .prodDescription{margin-left:36px}
+div.product .prodDescription, #aolcontainer form .productPush div.product  fieldset{width:70%;float:right}
+.deposito #aolDeposito{width:548px}
+/*.productPush div.product{height:auto;margin-bottom:15px!important;background:none!important}*/
+.productPush div.product.deposito ul{float:left;margin-top:5px;margin-bottom:10px}
+.productPush div.product ul li,.productPush div.product ul{background:none;list-style-type:disc;padding:0;margin-left:7px}
+.productPush div.product.deposito #aolDepositoCont .aolDepositoBody{background-color:#f9f9f9;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;width:506px;float:left;padding-left:40px;padding-top:10px}
+#aolcontainer .productPush div.product.deposito fieldset label span.large{padding-left:5px}
+#aolcontainer   span.tit{float:left;font-family: 'webankTitle', Arial Narrow, Helvetica, Tahoma, Serif;color: #333;font-size:16px;text-transform:uppercase}
+.productPush div.product.deposito img.prodImg{float:left;margin-top:-20px}
+.prodGroup #aolDeposito  .aolDepositoBody h4{padding:10px 0 5px 0;width:auto;min-width:300px}
+#aolcontainer .product #aolDeposito .aolDepositoBody p,#aolcontainer .product #aolDeposito .aolDepositoBody fieldset{clear:none;padding-left:0!important}
+.product.deposito #aolDeposito  .aolDepositoBody h4 span.closed,.product.deposito #aolDeposito  .aolDepositoBody h4 span.opened{text-transform:none;padding-left:5px}
+#aolcontainer .product.deposito #aolDeposito .aolDepositoBody a.floating{padding:0;display:inline-block;*display:inline;*zoom:1}
+.productPush div.product .uniqTooltipPos img{float:none;display:inline-block;*display:inline;*zoom:1}
+#aolcontainer .productPush div.product .tolltipclick .closed span.uniqTooltipPos a, #contenuti .productPush div.product .tolltipclick .opened span.uniqTooltipPos a,#aolcontainer .productPush div.product a,.aolDepositoBody a{text-decoration:underline;line-height:37px;}
+#aolcontainer .productPush div.product .tolltipclick .closed span.uniqTooltipPos a:hover, #contenuti .productPush div.product .tolltipclick .opened span.uniqTooltipPos a:hover,#aolcontainer .productPush div.product a:hover{text-decoration:none}
+#aolcontainer  fieldset.fullwidth span.hovfin{background:url(/wscmn/img/pixel_trasp.gif) repeat scroll 0 0 !important;cursor:default;display:block;height: 15px;left: 0;padding: 0 !important;position: absolute;width: 15px!important;z-index: 1}
+.hovfincont{border-bottom: medium none !important;float: left;left:0;position: relative;top: 0}
+#aolDeposito .aolDepositoBody h4 span{text-transform:none}
+#aolcontainer .tolltipclick label span.closed,#aolcontainer .tolltipclick label span.opened{float:left}
+.noPaddBott{padding-bottom:0!important}
+.noMargBott{margin-bottom:0!important}
+.cartimpronta .prodGroup .prodImg{margin-top:0}
+.prodGroup #aolDeposito .aolDepositoBody{border-left:0;border-right:0}
+.tooltipTit .closed,.tooltipTit .opened{float:left;margin-top:10px;padding-left:5px}
+#aolcontainer .prodGroup #aolDeposito .aolDepositoBody fieldset,#aolcontainer .prodGroup #aolDeposito  .aolDepositoBody p{padding-left:0!important}
+#aolcontainer form  .prodGroup fieldset{width:264px}
+#aolcontainer form  .prodDescription .condizionidetailsOverlayer p{padding-bottom:5px}
+.productPush div.product.deposito img.prodImg{margin-top:-35px}
+.productPush div.product.bancomat img.prodImg,.productPush div.product.carta img.prodImg{margin-top:-20px}
+#aolcontainer form .deposito.product .aolDepositoBody span.errortext{padding-left:0}
+#aoldoclistAncorato{float:left;visibility:hidden}
+#aoldoclist.accordion   ul{display:none}
+#aoldoclist.accordion  .expanded  ul{display:block}
+.labelConsigliato{background:transparent url(/img/label_consigliato.gif) no-repeat 0 0;width:101px;height:22px;display:block;float:left!important;padding:0!important;margin-top:-5px;margin-left:5px}
+.aolDepositoBody fieldset{width:auto!important;min-width:160px;}
+#contabiliCt{float:left;margin-bottom:20px;}
+/*box aol conferma */
+.boxAolInfo{background-color:#dce7b5; border:1px solid #ababab;border-radius:5px;width:100%;float:left}
+.boxAolInfoInner{padding:10px 10px 10px 13px;float:left}
+.boxAolInfoInner .titboxAol{padding-bottom:5px;display:block}
+
+/*interventi 14-01000 */
+.searchAg{background:transparent url(/wscmn/img/ico2inf_search.gif) no-repeat right 0;}
+.searchAg strong{color:#666;font-size:10px;padding:0 20px 5px 0;}
+.modBonifico label{margin-top:0!important;}
+.modBonifico .optiontextmini{padding-left:5px;float:left;width:534px}
+.modBonifico fieldset.fullwidthradio{padding-left:28px;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper{padding-left:28px;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper fieldset{margin-left:15px;width:264px;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper fieldset.row{margin-left:0;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper a {text-decoration:underline}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper fieldset select{width:257px;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper fieldset input{width:245px;}
+#aolcontainer .aolblock .modBonifico .aolblockwrapper fieldset .label{width:auto;}
+
+.noDocOpt div.optiontextmini{background:transparent url(/img/ret/ico1gr_frecciaverde.gif) no-repeat 0 3px;padding-bottom:10px;padding-left:10px}
+.docBack{background:transparent url(/img/ret/ico2inf_back.gif) no-repeat 0 0;padding-left:20px;position:relative;top:-40px;}
+#aolcontainer form fieldset.shortInput{width:100%}
+#aolcontainer form fieldset .shortInput div.fieldCounter{padding-right:0}
+#aolcontainer form fieldset.shortInput input{width:98%}
+#aolcontainer form fieldset.shortInput select{width:230px}
+#aolcontainer form .modBonifico fieldset.row select{width:536px;}
+#aolcontainer .optiontextmini  fieldset.row select{width:535px!important;}
+.modBonifico .row{float:none!important;clear:left;width:100%;padding-bottom:0;}
+.noDocOpt{float:left;padding-bottom:20px;}
+
+/*popup agenzia*/
+#maincontent form {padding:0;margin:0}
+#maincontent form fieldset label {float:left; display:block;}
+#maincontent form fieldset {padding:0; margin:0; border: none; display: block; float:left; width: 50%; min-height: 56px;}
+#maincontent form fieldset.lastrow {min-height:0px !important;}
+#maincontent form fieldset.btn .greenbutton {margin-top: 17px;text-decoration: none;}
+#maincontent form fieldset.margLef label, #maincontent form fieldset.margLef input, #maincontent form fieldset.margLef span  {margin-left:8px}
+#maincontent form fieldset.margLef  {width:210px}
+#maincontent form fieldset input , #maincontent form fieldset select {padding:1px 3px; font-size: 11px; margin:0;width: 180px; display: block; height: 20px; line-height: 20px; border: solid 1px #9a9a9a; background: #fff url(/img/str_aol_bgfields.gif) repeat-x left top}
+/*errori popup agenzia*/
+#maincontent form fieldset span.errortext {color: #cd0005; font-size: 10px;/*font-size: 1px;*/ float:left; display:none; clear:left; width: 100%}
+#maincontent form .aolDepositoBody span.errortext{padding-left:18px;width:auto}
+#maincontent form .error label input  {border:0; background-color: transparent;}
+#maincontent form .error label span.optiontext, #maincontent form label.error span.optiontext {color: #cd0005;}
+
+/* cardelss*/
+.productPush .product.cardless{margin-top:-20px;background:transparent url(/img/str_aolpush_cardless.png) no-repeat 47px 0px;padding-bottom:0!important; min-height:160px;}
+.condizionidetailsWrapper .product .condizionidetailsOverlayer {width: 514px;background-color: #fff;border: 1px solid #ccc;border-radius: 12px;box-shadow: 0 2px rgba(0,0,0,.2);
+-moz-box-shadow: 0 2px rgba(0,0,0,.2);
+-webkit-box-shadow: 0 2px rgba(0,0,0,.2);
+padding: 15px 12px 15px 20px;}
+.condizionidetailsWrapper .product{position:relative}
+.product .showConditionOverlayer{margin-left:-14px;padding-left:14px}
+#aolcontainer .condizionidetailsOverlayer h3{text-transform:none;color:#000;width:auto}
+.productPush .condizionidetailsWrapper {overflow:visible}
+.productPush .product.cardless fieldset{position:relative;z-index:2}
+.linkOpenField{color:#6f8f0a;line-height:30px}
+
+/* Nuovo footer */
+#footer {float:left;display:block;width:100%;padding:0;margin:60px 0 0 0;text-align:center}
+#footer ul {margin:0 auto;padding:40px 0;overflow: hidden;max-width:1140px;display:inline-block}
+#footer ul li {display: inline; list-style-image: none; float:left;font-weight:normal;color:#fff; }
+#footer ul li a,#footer ul li a:hover {color:#fff; text-decoration:none; padding:0 15px 0 15px; font-size:14px }
+#footer p {color:#fff;margin:0;text-align:center;width:100%;font-size:14px;padding-top:25px}
+
+/* contenitore fullpromo */
+#fullpromo {float:left; width:638px; background: transparent url(/img/str_filetto_fullpromo.gif) no-repeat left top;}
+#fullpromo h2 {font: normal 21px 'webankTitle', Helvetica MS, Arial Narrow, Serif;text-transform:uppercase;color:#454545;padding:0;margin:18px 14px 9px 14px; float:left; clear:left;}
+#fullpromo .filetto {width:611px; margin-bottom:13px; margin-left: 14px !important;}
+
+/* oggetto complesso in pagina con tab automatico GRANDE*/
+#fullpromo .maincontentobject {display:block; float:left; padding: 0; background-color: #fff; margin: 0 14px 1px; width:611px; height: 241px; margin-top:-8px;}
+#fullpromo .maincontentobject #maincontentobjectmenu {float:left; padding:12px 13px 0 13px; margin:0; width:26px; height: 200px;}
+#fullpromo .maincontentobject #maincontentobjectarea {padding: 13px 0 0 0; height: auto; width: auto;}
+#fullpromo .maincontentobject #maincontentobjectmenu a, #fullpromo .maincontentobject #maincontentobjectmenu span.disabled  {background: transparent url(/img/str_fullpromoobject_tabvuoto.gif) no-repeat right top; width:26px}
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabguarda {background-image: url(/img/str_fullpromoobject_guarda.gif)} 
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabascolta {background-image: url(/img/str_fullpromoobject_ascolta.gif)} 
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabsimula {background-image: url(/img/str_fullpromoobject_simula.gif)} 
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabguarda.selected {background-image: url(/img/str_fullpromoobject_guarda_on.gif)} 
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabascolta.selected {background-image: url(/img/str_fullpromoobject_ascolta_on.gif)} 
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabsimula.selected {background-image: url(/img/str_fullpromoobject_simula_on.gif)} 
+/* nuovi tab */
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabguarda.leggi {background-image: url(/img/str_fullpromoobject_leggi.gif)}
+#fullpromo .maincontentobject #maincontentobjectmenu a#tabguarda.leggi.selected {background-image: url(/img/str_fullpromoobject_leggi_on.gif)}
+#fullpromo .maincontentimg {display:block; padding: 0; margin: 0 14px 1px 14px; width:611px; float:left; clear:left;}
+
+/* printing console */
+#printconsole {position: relative; overflow: visible; display: block; text-align: right; margin:-29px 0 0 0; width:601px; height:0;}
+#printconsole .btnstampa {border-top: solid 1px #e5e5e5; color: #000; height: 0px; padding:0; width: 404px; float:right; margin-top: -29px; display: block;}
+#printconsole .btnstampa a {color:#6f8f0a;text-decoration:none; float:right;display: block; background: transparent url(/img/ico1gr_stampa.gif) no-repeat top left; height: 14px; margin-top: 14px; padding:3px 0 0 21px;}
+#printconsole .notopborder {border-top: 0 !important}
+
+/* elementi strutturali */
+#maincontent .maincontenttopper {display: block; float:left; clear:left; width: 434px; height: 21px; background: transparent url(/img/str_maincontent_bg_top.gif) no-repeat left -1px;}
+#leftcontent .maincontenttopper {display: block; float:left; clear:left; width: 601px; height: 21px; background: transparent url(/img/str_leftcontent_bg_top.gif) no-repeat left -1px;}
+
+/* Filetto generico */
+.filetto {display:block; line-height:0; overflow:hidden; margin:12px 12px 14px !important; height:2px; width:179px; margin:0 0 22px 11px; background:transparent url(/img/str_filetto.gif) repeat-x top left;float:left; clear:left;}
+.filettoBlack{display:block;padding-bottom:11px;border-top:1px solid #c2c2c2;height:2px; width:159px;float:left;margin-left:11px;}
+
+/* varianti filetto */
+#maincontent .filetto {margin: 0 14px 16px  !important; padding:0; width: 404px; height:1px; border-top: solid 1px #E5E5E5; background-image: none}
+#left .filetto {width: 159px; margin: 0 11px 10px !important;}
+#maincontent .boxeventilivesx .filetto {padding: 0 0 7px 0 !important; margin:0 0 0 14px !important; width: 238px; height:1px; border-top: solid 1px #E5E5E5; background-image: none;display:block;}
+#maincontent .filetto.top { background-color:#FFFFFF; border-top:1px solid #C5C5C5;}
+#maincontent .img_txt img {padding:8px 8px 0 0; float:left;}
+#maincontent .img_txt .txtright {float: left; padding:3px 0 0 0; margin:0;}
+#maincontent .img_txt .txtright p {padding: 3px 0 0;}
+#maincontent .img_txt .txtright h5 {padding: 3px 0 0;}
+#maincontent .img_txt .txtFogli {display:block;margin-left:62px}
+#maincontent .txt_img {padding:0 0 17px; margin:0 0 0 14px; display: block; float:left; width: 404px;}
+#maincontent .txt_img .dx {padding: 5px 0 0 10px; display: block; float:left; margin:0;}
+#maincontent .txt_img .txtleft {float: left; display: block; padding:0 !important; margin:0 !important; width: 316px; }
+#maincontent .txt_img .txtleft p {padding: 3px 0 0; margin:0; clear:left;}
+#maincontent .txt_img .txtleft p span.verde {color: #6f8f0a !important; font-weight: bold !important; display: inline !important}
+
+/*bottoni*/
+#maincontent .btncontent {padding:6px 0 2px 0;}
+#maincontent .btncontent2 a, #maincontent .btncontent2 {float:left;}
+#maincontent a.btncontent2 {margin-left:-22px;}
+#maincontent a.btncontent2 span {display:none;}
+#maincontent .btncontainer {float:left;clear:left;width:100%;}
+#maincontent .filettobutton {background:transparent url(/img/str_filettoservizi.gif) repeat-x scroll 0 15px;float:left;width:404px;margin:10px 15px 12px !important;padding: 0}
+#maincontent .filettobutton .greenbutton, #maincontent .filettobutton .disabledbutton {float:right;margin-right:46px;}
+#maincontent a.greenbutton, #maincontent a.disabledbutton {text-decoration:none;padding:0 0px 9px 0;display:block;float:left}
+
+/* box numeri verdi */
+.numeriverdi {display:block; clear: left; float: left; margin:0 11px 11px 10px; padding:0;  width: 160px}
+.numeriverdi a:hover {text-decoration: underline}
+.numeriverdi a {float: right; display: block; padding:0 9px 0 0; margin: 46px 15px 0 5px; background: transparent url(/img/ico2or_freccia.gif) no-repeat scroll right 4px; color: #6f8f0a; text-decoration:none; clear:both;}
+.numeriverdi .numeriverditop {background: transparent url(/img/str_numeriverdi_top.gif) no-repeat left top; float:left; display:block; width: 161px;}
+.numeriverdi .numeriverditop a {margin-top:67px; margin-bottom: 6px;}
+.numeriverdi .numeriverditop .detailcontainer {display:none; padding: 67px 0 0 0; margin:0; float:left;}
+.numeriverdi .numeriverditop .detailcontainer a {margin: 0 13px 7px 0; background: transparent url(/img/ico2or_frecciaup.gif) no-repeat scroll right 6px;padding:0 11px 0 0;}
+.numeriverdi .numeriverditop .detailcontainer p {color: #58585a; font-size: 10px; padding:0 22px 3px; margin:0;}
+.numeriverdi .numeriverdimiddle {background: transparent url(/img/str_numeriverdi_middle.gif) no-repeat left top; float:left; display:block; width: 161px; height:66px;}
+.numeriverdi .numeriverdibottom {background: transparent url(/img/str_numeriverdi_bottom.gif) no-repeat left top; float:left; display:block; width: 161px; height:37px;}
+.numeriverdi .numeriverdibottom a {margin-top: 10px;}
+
+/* overlayer layerpop */
+#layerpop{background-color:#000000;height:100%;left:0;filter:alpha(opacity=70);-moz-opacity:.70;opacity:.70;position:absolute;top:0;width:100%;z-index:1}
+
+/* overlayer */
+.overlayer {display: none; position: absolute; width: 446px; margin:0; padding:0; background-color: #dedede; clear: both;top:0;left:0;}
+/* oggetti per l'overlayer */
+.overlayer form {line-height:10px;padding: 12px 0 30px 14px; float:left; clear:left; display: block; text-align: left;}
+.overlayer form .fieldblock {float:left; display: block;margin:0 0 8px 0; padding:0;width:202px;}
+.overlayer form .fieldblock.onright {float:right; margin-right:14px;}
+.overlayer form .fieldblockfull {width: 360px; float:left; display: block; margin:0;margin-bottom:8px; padding:0;}
+.overlayer form input.preftel {width: 35px; float:left !important;clear:none;margin-top:0;}
+.overlayer form input.numtel {width: 150px;clear:none;margin:0 0 0 9px}
+.overlayer form input.hidden {display:none;} 
+.overlayer form textarea {color:#000000;font-family:Tahoma,tahoma,Arial,Sans serif;font-size:12px;margin:0; background: #f8f8f8 url(/img/str_bg_fields.gif) repeat-x left top; width: 198px; height: 62px; float:left; clear:left; border: solid 1px #bebebe; display:block; padding: 2px 0 2px 2px;overflow:auto;}
+.overlayer form img {float:left; display: block; clear:left;border:1px solid #bebebe;}
+.overlayer form .rightlink:hover {text-decoration: none;}
+.overlayer .buttoncontainer {float:right; display:block; padding: 10px 0 10px 0;margin-right:25px;margin-top:-43px;}
+.overlayer .buttoncontainer .greenbutton {margin-right: 0; width: auto;text-decoration:none!important;}
+.overlayer form .fieldblock  span, .overlayer form .fieldblockfull span {color:#cd0005;font-size:10px;float:right;display:none;width:300px;}
+.overlayer form .fieldblock.error span, .overlayer form .fieldblockfull.error span {color:#cd0005;font-size:10px;float:right;display:block; width:auto;}
+.overlayer form .fieldblock.error input , .overlayer form .fieldblockfull.error textarea, .overlayer .fieldblock.error input, .overlayer .fieldblockfull.error textarea {border: solid 1px #cd0005;}
+.overlayer form .fieldblock select option {background-color:#fff}
+.overlayer .overlayerbody h5 {font:bold 11px Tahoma;color:#333;text-align:left;padding:13px 14px 12px 14px;margin:0;}
+.overlayer .overlayerbody p {text-align:left;padding:0 14px 20px 14px;margin:0;}
+.overlayer .overlayerbody p.sx {font:normal 11px Tahoma;color:#666;text-align:left;padding:14px 14px 0 14px;margin:0;}
+.overlayer .overlayerbody p.note {font: normal 10px tahoma;color:#898989;}
+.overlayer form input.radio {width: 20px;clear:left;margin:0; float:none; display:inline;border:0px solid #fff; background:none;}
+.overlayer form input.radio.second {margin-left:9px;}
+.overlayer form div.fieldradio {width:150px;color:#666666}
+.overlayerbody  form .fieldblock.error  input , .overlayerbody  form .fieldblockfull.error  textarea {border: solid 1px #cd0005;}
+.overlayerbody  form .fieldblock.error  .fieldradio input {border: 0;}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {.overlayer form .fieldblock.pd13  {padding-bottom:4px;}}
+form p {padding-left:0 !important;}
+.overlayer form img#imgcaptchalayer {width:200px; height:100px;}
+.overlayer form div.fieldradio input.radio {vertical-align:middle}
+html>/**/body  .overlayer form div.fieldradio input.radio, x:-moz-any-link, x:only-child {vertical-align:bottom}
+
+/* Paragrafi espandibili */
+.expandableitem, .expandableitembody, .expandablecommand {float:left; width:100%; clear:left; display:block;}
+.expandableitem .commevid {background-color:#fff; border:1px solid #8ab10b; width:395px;display:block;padding:5px;margin:10px 0 0 13px}
+.expandableitem .commevid span.commwb {margin:0; display:block;font-weight:bold;padding:0}
+.expandableitem .commevid p {margin:0;padding:0 !important}
+#maincontent .expandablecommand a.clspiace {text-decoration:none !important; float:right;margin:0 7px 0 0; padding:0px !important;background: transparent url(/img/btn_mipiace.gif) no-repeat top left; display: block !important; height: 16px; width: 47px;} /*{background:none;margin:0 10px 0 0;padding:0;float:left;text-decoration:none !important;}*/
+#maincontent .expandablecommand a.clspiace span {display:none;}
+#maincontent .expandablecommand a.clspiace2 {text-decoration:none !important; float:right;padding:0 8px 0 0;background:none}
+.expandablecommand a {float:right;}
+.expandablecommand {background:transparent url(/img/str_filetto_contributi.png) repeat-x scroll left bottom;width:407px;height:24px;padding-bottom:4px;margin:5px 0 4px 13px;/*margin-bottom:5px;margin-left:13px;*/}
+#maincontent .expandableitembody p {padding-left:10px;margin-top:2px;}
+.expandableitembody {border-left:1px dotted #6F8F0A;margin:14px 0 0 14px;width:420px;}
+#maincontent .expandablecommand  a, #maincontent .expandablecommand  a {background:transparent url(/img/ico1gr_espandi.gif) no-repeat scroll right 3px;padding-right:10px;text-decoration:none;font-size:10px;}
+#maincontent .expandablecommand  a:hover {text-decoration:underline;}
+#maincontent .expandablecommand  a.extended {background:transparent url(/img/ico1gr_riduci.gif) no-repeat scroll right 3px;padding-right:18px;}
+.expandableitem span {clear:left;float:left; padding:0 13px 0 14px;color:#666;font:11px Tahoma;width:80%;}
+.expandableitem .expandableitembody span { padding:2px 0 0 10px;color:#666;font:11px Tahoma;width:auto;margin:0;margin-bottom:1px;}
+.expandableitem .expandableitembody span strong {color:#333}
+#maincontent .expandableitem .expandableitembody p {padding-bottom:8px}
+.expandablecommand span.tooltip{width:280px !important}
+
+/* upperbox */
+.upperbox {display: block; clear:left; float:left; margin:0 0 0 10px; padding:0; width: 424px; min-height:50px;}
+.upperbox.valutazione {background: transparent url(/img/img_or_contributi_in_valutazione.gif) no-repeat top left !important; }
+.upperbox p {padding: 0 14px 8px 48px !important; margin:0}
+#maincontent .upperbox .filetto {width:361px; margin:0 0 0 47px !important; border-top: 1px solid #c5c5c5; background-color: #fff}
+#maincontent .upperbox {background:transparent url(/img/img_or_contributi_realizzati.gif) no-repeat scroll 4px top}
+#maincontent .upperbox p {padding:0 14px 8px 52px !important }
+#maincontent .upperbox .filetto {margin:0 0 0 51px !important }
+/* #maincontent .expandableitem.realizzati {background:transparent url(/img/ico2inf_check.gif) no-repeat scroll 395px 6px } */
+.expandableitem span.realizzati_img {float:left; padding:0 !important; margin:0 !important; width:auto; clear:none;}
+#maincontent .realizzati h3 {width:367px}
+
+/* Titoli paragrafi espandibili */
+#maincontent h3.expandableitemtitle {font-family: Arial Narrow !important; display: inline !important; text-transform: none !important; padding: 10px 14px 5px 14px !important; margin:0; font-size: 17px; line-height: 20px; letter-spacing:0px; float:left; font-weight:bold; color: #555;}
+
+/* layerPos e Loading overlay */
+.layerPos {position: relative;}
+.layerPos.gen {min-height:210px;}
+div.loadingOverlay {position: absolute; text-align: center; background-color: #dedede;display: block;overflow: hidden;opacity:0.9;filter:alpha(opacity=90)}
+
+/* Tabella interattiva */
+.activetable {width: 404px; border-collapse: collapse;border-bottom: solid 1px #cacaca; margin:0 14px 10px;}
+.activetable tr th {border: solid 1px #cacaca;font-weight: normal; padding: 5px 8px 5px 15px !important; text-align: left !important; background: transparent url(/wscmn/img/str_activetable_header.gif) repeat-x left top; border-bottom: solid 1px #cacaca; border-right: solid 1px #cacaca; font-weight:bold;}
+.activetable tr th input {margin: 0 5px 0 0; padding:0; vertical-align: sub;float:left;}
+.activetable tr {background-color: #fff}
+.activetable tr td {border: solid 1px #cacaca; vertical-align:top; color: #000; padding: 8px  8px 8px 15px !important} 
+.activetable tr td span {color:#666}
+.activetable tr td.openercontainer {padding: 8px !important; text-align: right !important; vertical-align: top;}
+.activetable tr.opened, .activetable tr.detailrow {background-color: #f7f7f7}
+.activetable tr.opened td {border-bottom: none !important;background: #f7f7f7 url(/wscmn/img/str_activetable_filetto.gif) no-repeat 15px bottom;}
+.activetable tr.opened.last td {border-top: none !important;}
+.activetable tr.opened.last td.last {background-image: none !important;}
+.activetable tr.opened td.openercontainer {background-position: left bottom;}
+.activetable tr.detailrow td {background: #fff url(/wscmn/img/str_activetable_filetto.gif) no-repeat 35px bottom; border-bottom: none !important;border-top: none !important; padding:5px 5px 5px 35px !important}
+.activetable tr.closed {display: none}
+.activetable tr.detailrow {display: table-row; background-color: #f7f7f7}
+.activetable tr.detailrow td.last, .activetable td.last {background-image: none !important}
+.activetable tr td.no_leftborder {border-left: none !important}
+.activetable tr td.no_rightborder {border-right: none !important}
+.activetable tr td.no_bottomborder {border-b: none !important}
+.activetable tr.opened td a.opener {background: transparent url(/wscmn/img/ico1gr_activetableclose.gif) no-repeat top left;}
+.activetable tr td a.opener {float:right; background: transparent url(/wscmn/img/ico1gr_activetableopen.gif) no-repeat top left; width:21px; height:21px; display:block;}
+.activetable tr td.alto, .activetable tr td.evidentcol {text-align: center !important;border-left: none !important; border-right: none !important; border-top: none !important}
+#contenuti .activetable tr td.evidentcol {color: #6f8f0a; font-size:10px;font-weight: bold; text-align: center !important; background: transparent url(/img/ret/str_columnselector.gif) no-repeat center bottom; padding: 10px 5px 15px 5px !important}
+.activetable tr td.evident {background-color: #edf3da}
+.activetable tr th.greycolor {background-color: #E2E2E2;background-image:none;}
+
+/*nuovo banner terzo livello  */
+.maincontentimgterbis  {display:block; padding: 0; margin: -36px 14px 1px 14px; width:611px; float:left; clear:left;}
+
+/* Bottoni grigi */
+#maincontent div.greybuttons {float: left; display: block; clear:both; padding: 0 13px; width: 400px}
+#maincontent div.greybuttons.indented {padding-left: 25px}  /* Classe addittiva per indentazione */
+#maincontent div.greybuttons a {float:left; display:block; background: transparent url(/img/str_greybutton_bg_left.gif) no-repeat top left; height: 24px; padding: 0 0 0 11px; color: #6f8f0a; text-decoration: none; margin-right: 5px}
+#maincontent div.greybuttons a span {float:left; display:block; background: transparent url(/img/str_greybutton_bg_right.gif) no-repeat top right; height: 24px;padding: 0 11px 0 0; line-height: 23px; font-weight: bold; cursor: pointer}
+#maincontent div.greybuttons a:hover{background-position:left -24px}
+#maincontent div.greybuttons a:hover span {background-position:right -24px}
+
+
+/* Skin datepicker Webank */
+#CalendarPickerControl table.calframe td.heading  table td a , #CalendarPickerControl table.calframe td.heading  table td span, #CalendarPickerControl table.calframe td.yearNav a , #CalendarPickerControl table.calframe td.yearNav span {background-image: url(/img/btn_cmn_datepicker.gif) !important}
+#CalendarPickerControl table.calframe td.current a, #CalendarPickerControl table.calframe td.current a:hover , #CalendarPickerControl table.calframe td.day a:hover {color: #6f8f0a !important}
+
+/* chat */
+.boxchatsx  a {margin:0; background:none; padding:0; float:none;}
+.boxchatsx {width:161px; /*height:33px;*/ float:left;}
+
+
+/* nuova tabella */
+.activetablepub tr td {font-family:tahoma,sans-serif; font-size:11px; line-height:12px; text-align:left; padding:5px 5px 5px 15px !important;}
+.activetablepub tr td.last {background-color:#dce7b5;border-bottom: 1px solid #B7C583; font-weight:bold}
+.activetablepub tr td.lastb {background-color:#dce7b5; font-weight:bold}
+.activetablepub tr td.right {text-align:right}
+.activetablepub tr th {text-align:center !important;}
+
+/* Chat promotori */
+#chatPromo {float:left;clear:left;display:block;width:159px;margin:0 0 0 11px}
+#chatPromo .block {float:left;clear:left;display:block;width:159px}
+#chatPromo .block.top {height:5px; background:transparent url(/img/chatpromo_top.gif) no-repeat 0 0}
+#chatPromo .block.bottom {height:8px; background:transparent url(/img/chatpromo_bottom.gif) no-repeat 0 0}
+#chatPromo .block.content {padding:5px 0; background:transparent url(/img/chatpromo_bg.gif) repeat-y 0 0}
+#chatPromo span.introText {padding: 5px 13px 10px;display:block;float:left;line-height:15px;font-family:'webankTitle',Arial Narrow,Helvetica MS,serif;font-size:15px;text-transform:uppercase}
+#chatPromo div.btn {float:left;display:block;width:135px;height:38px; background:transparent url(/img/chatpromo_btn.gif) no-repeat 0 0;clear:both;margin:0 0 5px 12px}
+#chatPromo p {clear:left;display:block;text-align:center;padding:0 5px 10px; margin:0}
+#chatPromo p.small {font-size:10px;padding: 0 13px 10px}
+#chatPromo .nverde {margin:0 0 0 10px}
+#chatPromo .separator {width:155px;height:1px;display:block;float:left;clear:left;margin:0 0 10px 2px;padding:0;border-bottom:solid 1px #fff;background-color:#dadada}
+#chatPromo div.btn .btnImg {width:135px;height:37px;float:left;display:block;cursor:pointer;text-decoration:none}
+#chatPromo div.btn a {text-decoration:none}
+#chatPromo div.btn.disabled {opacity:0.3;cursor: default !important}
+#chatPromo div.btn.disabled .btnImg {cursor: default !important}
+#chatPromo div.btn #chatPromoChat {background: transparent url(/img/chatpromo_btn_chat.gif) no-repeat 0 0;margin: -5px 0 0 0;width:140px}
+#chatPromo div.btn #chatPromoCall {background: transparent url(/img/chatpromo_btn_call.gif) no-repeat 0 0}
+#chatPromoServ {background: transparent url(/img/chatpromo_btn_scopri.gif) no-repeat 0 0}
+#chatPromoSend {background: transparent url(/img/chatpromo_btn_send.gif) no-repeat 0 0}
+
+/* Fascione raccolta dati cookie */
+#cookieCheck {position:fixed;bottom:0;float:left;width:100%;background-color:#333;margin:0;border-top:solid 1px #aaa;z-index:9999}
+*:first-child+html #cookieCheck{margin-left:-50%}
+#cookieCheck .fascioneCont {max-width:861px;height:65px;margin:0 auto;text-align:left;font-size:15px;color:#999}
+#cookieCheck p {float:left;width:90%;margin:10px 0 0 5px;font-size:12px}
+#cookieCheck p a {color:#6f8f0a;font-weight:bold}
+#cookieCheck a.button {float:right;background:#8ab10b;color:#fff;width:60px;height:30px;max-width:10%;border-radius:5px;margin:10px 5px 0;text-transform:uppercase;font-family:"webankTitle";font-size:18px;line-height:30px;text-align:center;text-decoration:none;}
+
+
+/* Tabella nuovo pricing */
+.activetable tr td.col01 {width:114px;}
+.activetable tr td.bgCosti1 {background:#a6cc3b; color:#fff; width:48px; border-left:1px solid #a6cc3b!important; text-align:center; vertical-align:top;}
+.activetable tr td.bgCosti2 {background:#8ab10b; color:#fff; width:48px; border-left:1px solid #8ab10b!important; text-align:center; vertical-align:top;}
+.activetable tr td.bgCosti3 {background:#4d9e07; color:#fff; width:48px; border-left:1px solid #4d9e07!important; text-align:center; vertical-align:top;}
+.activetable tr td.bgCosti4 {background:#417c03; color:#fff; width:48px; border-left:1px solid #417c03!important; text-align:center; vertical-align:top;}
+.activetable tr td.bgCosti5 {background:#216302; color:#fff; width:48px; border-left:1px solid #216302!important; text-align:center; vertical-align:top;}
+.activetable tr td.bgCostiPad {height:1px; padding:1px!important;font-size:4px;}
+.activetableColor {border:1px solid #cacaca;}
+.activetableColor tr td {padding: 4px!important; border:0; text-align:center;vertical-align:middle;}
+.activetableColor tr td.textLeft {text-align:left;}
+#maincontent .activetableColor tr td.textLeft a{text-decoration: none; color:#000}
+.activetableColor tr td.bor {border-bottom:1px solid #cacaca!important;}
+.activetableColor tr td.borLeft {border-left:1px solid #cacaca;}
+.activetableColor tr.detailrow td {padding: 5px !important;}
+.activetableColorTab {margin-bottom:0; border:1px solid #cacaca; border-bottom:0; border-top:0;}
+.activetableColorTab tr td {padding: 4px!important; border:0; background:#f2f2f2; width:50%;}
+#maincontent .activetableColorTab a {display:block; height:24px;text-decoration: none; font-size:14px;padding-left:50px;}
+.activetableColorTab .bgAtt {background:#8bb702; color:#fff;}
+#maincontent .activetableColorTab .bgAtt a{color:#fff;}
+.activetableColorTab .profFis {background:url("/img/ico_profilo_fis.gif") no-repeat 8px 2px; margin-top:8px;}
+.activetableColorTab .profVar {background:url("/img/ico_profilo_var.gif") no-repeat 8px 2px; margin-top:8px;}
+.activetable tr td span.circle {background-color: transparent; height:20px; -moz-border-radius:75px; -webkit-border-radius: 75px; border-radius: 75px; width: 20px; font-size: 14px; display:block; border:2px solid #fff; color:#fff; text-align:center; margin:0 auto;}
+.activetableColor tr.detailrow td, .activetableColor tr.opened td.openercontainer, .activetableColor tr.opened td.no_leftborder  {background: none!important;background-color:#fff!important;}
+.activetableColor tr td p.textLeftPie {padding-left: 37px!important}
+.activetable .fontBig {font-size: 14px;}
+.activetable .fontMin {font-size: 10px; color:#fff; line-heigh:12px;}
+
+/*NUOVO FATCA*/
+.fieldButton.remove,.fieldButton.add{font-size:15px;background:url("/img/ico_accordion_aol.png") no-repeat 0 0;height:32px;display:block;padding-left:38px;}
+.fieldButton.remove{background-position:0 -32px;}
+.fieldButton.disabled,.fieldButton.disabled:hover{opacity:0.5;cursor:default;text-decoration:none;color:#666;}
+
+@media screen and (max-width: 990px) {
+    #aolleft,#aolright{width:100%;}
+    .gen{width:100%;}
+
+}
+.condividi,.linksocialnet,#fbLike{display:none;}
+/* overlayer */
+/* overlayer layerpop */
+#layerpop{background-color:#000;height:100%;left:0;filter:alpha(opacity=20);-moz-opacity:.20;opacity:.20;position:absolute;top:0;width:100%;z-index:1}
+.overlayer{display:none;position:absolute; width:750px;margin:0;padding:0;background-color:#fff; clear: both;top:0;left:0;box-shadow: 5px 5px 60px rgba(0,0,0,0.6);text-align:left;}
+.overlayer .overlayertitle h2{margin:20px 10px;font-family:webankAolBold;color:#333}
+.overlayer .overlayertitle {background:#fff;padding:25px 30px 0 30px}
+.overlayer .overlayertitle a {color: #6f8f0a;position:absolute;top:20px;right:20px;}
+.overlayer .overlayerbody {float:left;margin:0; padding:0;display:block;width:100%}
+
+/*AOL MUTUI */
+#allcontent{margin-top:23px}
+#allcontent h2{margin:0}
+#allcontent h4.title{text-transform:lowercase}
+.boxLight img{display:none}
+.boxLight,.boxevidenza {width:100%;border:1px solid #a6cc28;border-radius:10px;}
+.boxevidenza{margin:20px 0}
+.boxevidenza  .middle{padding:10px}
+.tabDin{width:100%;border:2px solid #8ab10b;margin-bottom:20px}
+.tabDin td{width:20%!important;padding:15px 20px}
+.picc1{background:#f6fae9}
+#allcontent table.tabDin tr.altz td span {background: transparent url(/img/icopdf_aol.png) no-repeat 0 0;padding:7px 20px 14px 30px;}
+.vertTop{width:100%;margin-bottom:50px;}
+.vertTop .formfill{display:none}
+.vertTop td{width:25%!important;vertical-align:top;}
+#err_indirizzo,#err_indirizzo_int1{width:17%!important;}
+#err_civico,#err_civico_int1{width:7%!important;}
+#allcontent form{line-height:11px}
+#allcontent form label{line-height:24px;display:block;margin-bottom:6px;}
+#allcontent form select{width:95%}
+#allcontent form input.gg{width:35px;float:left}
+#allcontent form span.divisorio{float:left;margin:10px}
+#allcontent form input.anno{width:75px;}
+#allcontent form input.tel, #allcontent form input.telab{width: 50px;margin: 0 2px 0 0;float:left;}
+#allcontent form input.telab{width:54px}
+#allcontent form input.tel2 { width: 100px;float: left;margin: 0 2px 0 0;}
+#allcontent form select.oper {width:93px;float:left;margin-top: 0;}
+#allcontent form input.tel2ab{width: 195px;margin: 0 2px 0 0;float:left;}
+#allcontent form td span.err {display:none}
+#allcontent form td.error span.err {color:#ff2a00;display:block;font-size:11px}
+#aolcontainer form .error input, #aolcontainer form .error select {border: solid 1px #ff2a00;}
+#allcontent input[type="radio"]{opacity:1;width:auto;display:inline}
+#allcontent .expandable{margin-bottom:20px}
+#allcontent .expandable .expander{padding-bottom:0;}
+#allcontent .expandable .expander  .btn{width: 100%;border-bottom: 1px solid #a6cc28;font-family:webankAolSemiBold;font-size:16px;background-position:47px 1px}
+#allcontent .expandable .expander a span{padding-top:10px;padding-left:90px}
+#allcontent .expandable .expander.tolltipclick .opened, #allcontent .expandable .expander.tolltipclick  .closed {position: absolute;left:305px;line-height:24px;top:5px;}
+#allcontent table:last-child{width:100%;line-height:24px;}

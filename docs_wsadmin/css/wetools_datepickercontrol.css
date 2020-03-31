@@ -1,0 +1,128 @@
+div.calendarbutton{
+	position: absolute;
+	background: #fff url('/img/btn_pickdate.gif') no-repeat center;	
+}
+
+#CalendarPickerControl{
+	background-color: #fff;
+	width: 170px;
+	font-family: tahoma, verdana, serif;
+	font-size: 11px;
+}
+
+#CalendarPickerControl table.calframe {
+	width: 100%;
+	border-top: solid 1px #666;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-bottom: solid 1px #999;
+	text-align: center;
+	font-size: 11px;
+	background-color: #fff;
+}
+
+#CalendarPickerControl table.calframe td {
+	text-align: center; 
+	vertical-align: center;
+	padding:0;
+	margin:0;
+}
+
+#CalendarPickerControl table.calframe td.monthname 
+{
+	background: #292929 url(/img/datepicker_bg_dark.gif) repeat-x left top;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 12px;
+}
+
+#CalendarPickerControl table.calframe td.monthname  a 
+{
+	color: #fff;
+	text-decoration:none;
+}
+
+
+#CalendarPickerControl table.navigation {
+	background: #bababa url(/img/datepicker_bg_light.gif) repeat-x left top;
+	width: 100%;
+	text-align: center; 
+	font-size: 11px;
+	font-weight: bold;
+	color: #666;
+}
+
+#CalendarPickerControl table.navigation a 
+{
+	color: #666;
+	text-decoration:none;
+}
+
+#CalendarPickerControl table.calframe td.dayname 
+{
+	font-weight: bold;
+	border-bottom: dotted 1px #dedede;
+	padding: 2px 0;
+	font-size:10px;
+}
+#CalendarPickerControl table.calframe td.dayothermonth
+{
+	font-size: 10px;
+	padding: 2px 0;
+	color: #ccc;
+}
+
+#CalendarPickerControl table.calframe td.day, 
+{
+	font-size: 10px;
+	padding: 2px 0;
+}
+
+#CalendarPickerControl table.calframe td.day a , #CalendarPickerControl table.calframe td.today a 
+{
+	color: #666;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 10px;
+}
+
+#CalendarPickerControl table.calframe td.day a:hover, #CalendarPickerControl table.calframe td.today a:hover
+{
+	font-weight: bold;
+}
+
+#CalendarPickerControl table.calframe td.current
+{
+	font-size: 10px;
+	padding: 2px 0;
+	background: #bababa url(/img/datepicker_bg_light.gif) repeat-x left top;
+	font-weight: bold;
+	color: #666;
+}
+
+#CalendarPickerControl table.calframe td.current a, #CalendarPickerControl table.calframe td.current a:hover
+{
+	text-decoration:none;
+	color: #666;
+}
+
+#CalendarPickerControl table.calframe td.weekend
+{
+	font-size: 10px;
+	padding: 2px 0;
+	background-color: #eee;
+	color: #999;
+}
+
+#CalendarPickerControl table.calframe td.weekend a
+{
+	color: #999;
+	text-decoration:none;
+}
+
+#CalendarPickerControl table.calframe td.weekend a:hover
+{
+	font-weight: bold;
+}
+

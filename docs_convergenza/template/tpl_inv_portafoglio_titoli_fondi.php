@@ -61,6 +61,43 @@ $(function(){
                     </div>
                     <!-- Fine overlayer eliminazione -->
 
+                    <!-- Overlayer confronto mercati -->
+                    <div class="modal fade" id="layerConfronta" tabindex="-1" role="dialog" aria-labelledby="layerConfrontaLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                                    <h2 class="modal-title" id="layerConfrontaLabel">Confronta su altri mercati</h2>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <table>
+                                        <thead>
+                                            <th></th>
+                                            <th class="left">Titolo/Fondo</th>
+                                            <th class="left">Mercato</th>
+                                            <th class="right">Q.t&agrave; in<br>portaf.</th>
+                                            <th class="right">Ult. prz.ora</th>
+                                            <th class="right">Controval. Eur</th>
+                                            <th class="right">Utili/Perdite<br>Eur VAR%</th>
+                                        </thead>
+                                        <tbody>
+                                            <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                            <td class="left">Titolo azione 1</td>
+                                            <td class="left">MOT</td>
+                                            <td class="right">20,000</td>
+                                            <td class="right">101,01<br>11:17:05</td>
+                                            <td class="right">20.202,00</td>
+                                            <td class="right nega">-24,00<br>-0,1%</td>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fine overlayer confronto mercati -->
+
 
                     <!-- Overlay di selezione delle colonne -->
                     <div class="modal fade" id="layerPers" tabindex="-1" role="dialog" aria-labelledby="layerPersLabel">
@@ -381,8 +418,10 @@ $(function(){
                 tablePortafoglio.bootstrapTable({
                         onPostBody: function(){
                             // Funzioni da ripetere ad ogni refresh
-                            $(".table-btn-more").click(function(){alert($(this).attr("data-isin"))});
-                            attivaIconaOperativa();
+                            $(".table-btn-more").not("inited").click(function(){
+                                    $("#layerConfronta").modal("show");
+                                });
+                            attivaIconaOperativa("#tablePortafoglio");
                         }
                 });
 

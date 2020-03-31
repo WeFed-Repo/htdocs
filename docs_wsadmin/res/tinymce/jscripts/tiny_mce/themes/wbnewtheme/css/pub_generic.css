@@ -1,0 +1,6 @@
+/* tooltip */
+a.tooltiplink {text-decoration:none !important}
+a span.tooltip {left:0; background-color: red; margin:0; display: block; visibility: hidden; position: absolute; background: transparent url(/jscripts/tiny_mce/themes/wbnewtheme/images/str_tooltip_bg.gif) no-repeat left bottom; padding:0 0 7px; color: #000;}
+a span.tooltip span {line-height: 12px; width: 180px !important; background: #dde7b5 url(/jscripts/tiny_mce/themes/wbnewtheme/images/str_tooltip_border.gif) no-repeat left top; display:block; float:left; margin:0; padding:0; padding: 5px 9px; border: solid 1px #c2c5b0; border-bottom: none; display: block;}
+
+ 

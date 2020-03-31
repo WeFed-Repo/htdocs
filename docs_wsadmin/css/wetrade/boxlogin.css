@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document 
+verde: #a0bb4a;
+testo #343434;
+
+*/
+
+/* box login e member area */
+#home1d3 {
+	float:center;
+	width:158px;
+}
+#home2d3 {
+	float:left;
+	width:302px;
+	margin-left: 14px;
+}
+#home3d3 {
+	float:left;
+	width:282px;
+	margin-left: 17px;
+}
+
+#home1d3 .login {
+	background:#ededed;
+	border:1px solid #dadada;
+}
+#home1d3 .login .text{ padding:6px; }
+#home1d3 .login .inbox{
+	padding:4px 6px;
+	background:url(/img/wetrade/title_login_dot.gif) no-repeat top center;
+}
+#home1d3 .login .field {
+	height:20px;
+	padding-top:2px;
+}
+#home1d3 .login input {
+	width:73px;
+	float:right;
+}
+#home1d3 .login select {
+	width:132px;
+	font-size:11px;
+}
+#home1d3 .login .link a {
+	text-decoration:none;
+	color:#a0bb4a;
+	text-weight:bold;
+}

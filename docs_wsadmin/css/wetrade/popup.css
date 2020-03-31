@@ -1,0 +1,355 @@
+@charset "utf-8";
+/* CSS Document 
+verde: #a0bb4a;
+testo #343434;
+
+*/
+
+
+/* IMPOSTAZIONI GENERALI */
+*, html, body, img, form {
+	margin:0;
+	padding:0;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+img {	border:0; }
+body {
+	text-align:center;
+	font-size:11px;
+	color:#343434;
+}
+select {
+	height:16px;
+	font-size:11px;
+	font-family:Tahoma,Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+}
+input {
+	height:12px;
+	margin:0;
+	padding:0;
+	font-size:11px;
+	font-family:Tahoma,Verdana, Arial, Helvetica, sans-serif
+}
+a { text-decoration:none; color:#3d3d3d; }
+
+#content_popup {
+	width:434px;
+	height:414px;
+	background:url(../../img/wetrade/popup_bg.gif) top no-repeat;
+	margin: 0 auto;
+}
+
+#content_popup.grafici {
+	width:550px;
+	background:url(../../img/wetrade/popup_bg_550.gif) top no-repeat;
+}
+
+#header {
+	height: 108px;
+}
+#bottons4 {
+	float:right;
+	margin-top:18px;
+	margin-right:10px;
+	height: 40px;
+	width: 146px;
+	overflow: hidden;
+}
+#aggiornamento {
+	clear:both;
+	text-align:left;
+	padding: 8px 18px 8px;
+}
+#topbar {
+	clear:both;
+	text-align:left;
+	padding: 0 18px;
+	height: 17px;
+	font-weight: bold;
+}
+#popTable2, #popTable1 {
+	border:1px solid #dadada;
+	width:426px;
+	margin:0 auto;
+	margin-bottom: 6px;
+}
+#popTable1 { border-bottom:none; }
+#formTable {
+	height:60px;
+	overflow:hidden;
+	padding-top: 8px;
+	text-align:left;
+}
+#bottombar {
+	line-height:18px;
+	height:18px;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+/* stili specifici */
+#topbar .left {	float:left; }
+#topbar .right {
+	float:right;
+	font-size:12px;
+}
+#bottons4 .button_green {
+	float:left;
+	margin-bottom:6px;
+	margin-right:2px;
+}
+
+#bottombar .dark { width:55px; }
+#bottombar .dark#margbutton { width:65px; }
+#bottombar .dark a { color:#33391f; }
+#bottombar .button_green { float:left;  margin-left:9px}
+#bottombar .moveleft { float:left; margin-left:9px }
+#bottombar .moveright { float:right; margin-right:9px; margin-left:0px;}
+
+#formTable .col1d3, #formTable .col2d3, #formTable .col3d3 {
+	width:133px;
+	margin-left:4px;
+	overflow:hidden;
+	float:left;
+	margin-right: 3px;
+}
+#formTable select {
+	width:90px;
+	float:right;
+	font-size: 9px;
+}
+#formTable input {
+	width:86px;
+	float:right;
+}
+#formTable select.rubrica {
+	width:27px;
+	margin-right:63px;
+}
+#formTable p { height:19px; line-height:19px; overflow:hidden;}
+
+/* stili generici */
+.clear {  clear:both; }
+.red { color:#ce1b1b; }
+.logo {
+	float:left;
+	margin-top:24px;
+	margin-left:17px;
+}
+
+.table_base {
+	width:426px;
+	font-size:#666666;
+	font-size:11px;
+	font-weight:normal;
+
+}
+.table_base tr th {
+	height:23px;
+	line-height:23px;
+	font-weight:bold;
+	font-size:12px;
+	color:#afd142;
+	background:url(../../img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	text-align:center;
+}
+.table_base tr th div {
+	background:url(../../img/wetrade/title_bg_black_divisorio.gif) left no-repeat;
+}
+.table_base tr th div{ }
+.table_base tr td {
+	border-left:1px solid #dadada;
+	border-bottom:1px solid #dadada;
+	height:22px;
+	line-height:22px;
+	text-align:center;
+}
+.table_base tr td.primo { border-left:none; }
+.table_base tr.dark td { background-color:#dfeacf; }
+
+/* BUTTON GREEN */
+.button_green {	height:17px;}
+.button_green div {
+	background:url(../../img/wetrade/button_green.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	margin:0;
+	vertical-align:10%;
+}
+.button_green div.right {
+	background:url(../../img/wetrade/button_green.gif) right no-repeat;
+	width:7px;
+	padding:0;
+	margin:0;
+}
+.button_green div a {
+	color:white;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+	vertical-align:10%;
+}
+
+#footer {
+	background:transparent url(/img/wetrade/footer-bg.gif) no-repeat scroll center bottom;
+	padding-bottom:50px;
+	width:434px;
+}
+
+#footer.grafici{
+	width:540px;
+	margin-left:10px;
+}
+
+#footer .foot {
+	color:#6C6C6C;
+	height:22px;
+	line-height:22px;
+	margin:10px 58px;
+	text-align:center;
+}
+
+#footer .foot .foot_right {
+	float:right;
+	text-align:right;
+	width:150px;
+}
+
+#footer .foot .foot_left {
+	float:left;
+	text-align:left;
+	font-size:10px;
+	color:#505050;
+	width:150px;
+}
+
+#popup1d2 {
+	float:left;
+	width:158px;
+	display:block;
+	height:400px ;
+	padding:4px;
+}
+#popup2d2 {
+	float:left;
+	margin-left:14px;
+	width:250px;
+	display:block;
+	height:400px ;
+	vertical-align: middle;
+}
+
+#content_popup {
+	
+}
+
+.elencoPuntatoPopUp ul{
+    text-align:left; !important;
+    margin-left:25px; !important;
+}
+
+#content_popup h3 {
+	background: url(/img/wetrade/title_bg_green.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 15px;
+	margin:0 4px 0 4px;
+	text-align:left;
+	color:#000;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#content_popup .box_base {
+	border: 1px solid #DADADA;
+	margin-bottom:5px;
+	background-color: #ededed;
+	text-align:left;
+	/*position: relative;*/
+}
+
+#content_popup .box_base h3 {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:29px;
+	font-size:13px;
+	color:#333333;
+	border-bottom: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+
+#content_popup .box_base .text {
+	margin:5px;
+}
+
+.classicLink a{
+    color:#afd142 !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+    font-weight:bold;
+}
+
+.evidenziato { color:#a0bb4a;}
+
+.tableGuidaMercati {
+	font-size: 13px; 
+	width: 100%;
+	text-align:center;
+	margin:10px 0;
+}
+
+.tableGuidaMercati tr th {
+	height:23px;
+	line-height:23px;
+	font-weight:bold;
+	font-size:12px;
+	color:#afd142;
+	background:url(../../img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	text-align:center;
+}
+.tableGuidaMercati tr th div {
+	background:url(../../img/wetrade/title_bg_black_divisorio.gif) left no-repeat;
+}
+
+.tableGuidaMercati tr td {
+	border-left:1px solid #dadada;
+	border-bottom:1px solid #dadada;
+	height:22px;
+	line-height:22px;
+	text-align:center;
+}
+
+.tableGuidaMercati tr td.ultimo {
+	border-right:1px solid #dadada;
+}
+
+.titoloGuida1,.titoloGuida2 {
+	font-weight:bold;
+}
+
+/*x gestire il th dei book contenente i 2 div "ultimo" + "data"*/
+.noBG div {
+	background: none ! important; 
+}
+
+/*div contenente la scritta "Ultimo " x la tabella dei book in push*/
+.bookUltimoAgg{
+	float: left;
+	margin-left: 10px;
+}
+
+/* variazione percentuale positiva (verde)*/
+.bookPercPos{
+	color: #009900;
+}
+
+/* variazione percentuale negativa (rossa)*/
+.bookPercNeg{
+	color: #dd0000;
+}

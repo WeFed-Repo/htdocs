@@ -1,0 +1,252 @@
+body {
+	text-align:center;
+}
+
+h1 {
+	text-align:left;
+	color:#6F8F0A;
+	font-family:Tahoma;
+	font-size:16px;
+}
+
+table.multiValue, table.multiValue tr td, table.multiValue tr th {
+	border: 1px solid #FFFFFF;
+}
+
+table.multiValue tr td.multiValueNoBorderLeft, table.multiValue tr th.multiValueNoBorderLeft {
+	border-left: 0px !important;
+}	
+
+table.multiValue tr td.multiValueNoBorderRight, table.multiValue tr th.multiValueNoBorderRight {
+	border-right: 0px !important;
+}	
+
+table.form01 {
+	background:#F3F3F3 none repeat scroll 0 0;
+	border-collapse:collapse;
+	font-size:12px;
+	margin-bottom:10px;
+	padding:0 4px;
+	width:625px;
+	font-family:tahoma;
+	margin:0 auto;
+}
+
+table.form01_ext {
+	width:1000px !important;
+}	
+
+table.form01 td.centerPos {
+	text-align: center;
+}	
+
+table.form01 tr th {
+	background-color:#000000;
+	color:#FFFFFF;
+	font-size:11px;
+	padding:4px !important;
+	text-align:left !important;
+	text-decoration:none;
+}
+
+table.form01 tr th.icon {
+	width: 30px;
+	text-align:right !important;
+}	
+
+table.form01 tr th.rightAlign {
+	text-align:right !important;
+}
+
+table.form01 tr td {
+	color:#515151;
+	font-size:11px;
+	line-height:13px;
+	padding:6px;
+	text-align:left;
+}
+
+table.form01 tr td.dx {
+	text-align:right !important;
+}
+
+table.form01 input, table.form01 select {
+	border:1px solid #CDCDCD;
+	font-size:11px;
+}
+
+table.form01 tr td {
+	border-bottom:1px solid #FFFFFF;
+	color:#515151;
+	font-size:11px;
+	padding:4px;
+	text-decoration:none;
+}
+
+table.form01 input.micro {
+	width:30px;
+}
+
+a {
+	color:#515151 ;
+}
+
+a:hover {
+	color:#6F8F0A ;
+}
+
+.clear {
+	clear:both;
+}
+
+table.form01 input.nobor, table.form01 .nobor {
+	border:0;
+	float:left;
+	margin-right:8px;
+}
+
+table.form01 input.nobor2 {
+	border:0;
+	float:none;
+	margin-right:8px;
+}
+
+textarea {
+	width: 80%;
+	border: 1px solid #CDCDCD;
+	font-family: Tahoma;
+}
+
+textarea.speaker {
+	width: 835px; 
+	height: 40px;
+}		
+
+span {
+	margin-bottom:6px;
+}
+
+td.invia input {
+	float:right;
+	width:70px;
+	border:1px solid #CDCDCD;
+	cursor:pointer;
+	margin-right:42px;
+}
+
+table.form01 input.marginRight, table.form01 img.marginRight {
+	margin-right:42px;
+}		
+
+tr.titolo {
+	background-color:white;
+}
+
+p.giallo {
+	color: #F08A04;
+	font-weight:bold;
+}
+
+select.dateStyle {
+	margin-bottom:6px;
+}
+
+select.normalStyle, select.normalStyle option {
+	font-weight: normal;
+}	
+
+span.labelError {
+	color: #FF0000;
+	text-color: #FF0000;
+}
+
+.formTabOn select  {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #000000;
+    border-color: #000000 #000000 -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #FFFFFF;
+    float: left;
+    font-size: xx-small;
+    font-weight: bold;
+    height: 23px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+    margin-top: 9px;
+    padding: 5px;
+}	
+
+.formTabOn select.big  {
+    height: 26px;
+    padding-left: 0;
+    margin-left: -4px;
+}
+
+table.form01 div.colored {
+  		margin-left: 18px;
+  		text-align: center;
+  		width: 20px;	
+  	}
+  	
+table.form01 div.Y {
+	background-color: #00FF00;
+  	}  
+  	
+  	table.form01 div.N {
+	background-color: #FF0000;
+  	} 
+  	
+  	table.form01 div.Z {
+	background-color: #000000;
+  	} 	  
+  	
+  	table.form01 table.selAll {	
+	background-color:#000000;
+	color:#FFFFFF;
+	border: none;
+	text-align:center;
+}
+
+table.form01 table.selAll td {	
+	background-color:#000000;
+	color:#FFFFFF;
+	border: none;
+	text-align:center;
+}
+
+table.form01 img.alignImg {
+	vertical-align: middle;
+	width: 17px;
+	height: 17px;
+}
+
+table.form01 select.answersList {
+	width: 285px;
+}		
+  	
+  	span.leftSpace 	{
+  		margin-left: 30px;
+  	}
+  	
+  	span.leftSpaceMicro 	{
+  		margin-left: 26px;
+  	}	  
+  	
+  	table.form01 tr.centerPos th.centerPos {
+	text-align: center !important;
+}
+
+img.viewOnly {
+	opacity:0.4 !important;
+	filter:alpha(opacity=40) !important;
+}
+
+a.noDecoration {
+	text-decoration: none;
+}

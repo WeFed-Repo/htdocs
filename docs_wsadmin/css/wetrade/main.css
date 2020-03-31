@@ -1,0 +1,1767 @@
+@charset "utf-8";
+/* CSS Document 
+verde: #a0bb4a;
+testo #343434;     */
+
+
+/* IMPOSTAZIONI GENERALI */
+html, body, img, form {
+	margin:0;
+	padding:0;
+	border:0;
+}
+body {
+	text-align:center;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#343434;
+	filter:none;/*disabilita il cleartype di explorer 7*/
+	/*disabilita il cleartype di explorer 8*/
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=99);*/
+}
+img { margin:0; padding:0; border:0; }
+select {
+	height:18px;
+	font-size:11px;
+	font-family:Tahoma,Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+}
+input {
+	height:14px;
+	margin:0;
+	padding:0;
+	font-size:11px;
+	font-family:Tahoma,Verdana, Arial, Helvetica, sans-serif
+}
+a { text-decoration:none !important; color:#3d3d3d; }
+.hr_foot {
+	background: #FFFFFF url(/img/wetrade/hr_bg.gif) 0 8px repeat-x;
+	padding-top:12px;
+	height:6px;
+}
+.hr_foot.testata{
+	padding-top:19px;
+	height:26px;
+	overflow:hidden;
+	clear:both;
+}
+.evidenziato { color:#a0bb4a;}
+.clear { clear:both; }
+.clear2 { 
+	clear:both;
+	overflow:hidden; 
+}
+.clear a ,.clear2 a{ text-decoration:none; font-weight:bold; }
+
+/* caratteristiche bottone verde */
+
+#bodier .button_green {	height:17px;}
+
+#bodier .btn_on_right { float:right; margin-right:5px; }
+
+#bodier .green { color:#1e9d44; }
+#bodier .red { color:red; }
+#bodier .blue { color:blue; }
+#bodier .yellow { color:gold; }
+
+#bodier .button_green div {
+	background:url(/img/wetrade/button_green.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	margin:0;
+	vertical-align:10%;
+}
+#bodier .button_green div.right {
+	background:url(/img/wetrade/button_green.gif) right no-repeat;
+	width:7px;
+	padding:0;
+	margin:0;
+}
+#bodier .button_green div a {
+	color:white;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+	vertical-align:10%;
+}
+
+#bodier .button_green div a:hover {
+	color:white !important;
+}
+
+#bodier .button_green_dark {	height:17px;}
+#bodier .button_green_dark div {
+	background:url(/img/wetrade/button_green_dark.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	vertical-align:10%;
+}
+#bodier .button_green_dark div.right {
+	background:url(/img/wetrade/button_green_dark.gif) right no-repeat;
+	width:7px;
+	padding: 0;
+}
+#bodier .button_green_dark div a {
+	color:white;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+	vertical-align:10%;
+}
+
+/* CONTENITORE PRINCIPALE */
+#header,#bodier,#footer {
+	margin:0 auto;
+	text-align:left;
+}
+
+#container {
+	background:#FFFFFF url(/img/wetrade/body_bg.gif) center top repeat-y;
+	width:865px;
+	margin:0 auto;
+	text-align: center;
+}
+
+/* TESTATA PAGINA */
+#header {
+	width:865px;
+	height:128px;
+	background:url(/img/wetrade/header_bg.gif) top center no-repeat;
+	position:relative;
+}
+#header .logo {
+	position:absolute;
+	top:34px;
+	left:67px;
+	font-size:10px;
+	letter-spacing:-1px
+}
+
+iframe.z_menu { position:absolute; display:block; z-index:0; visibility:hidden }
+
+#mainMenu {
+	position:absolute;
+	background:url(/img/wetrade/mainMenu_bg.gif) repeat-x;
+	bottom:0;
+	top:99px;
+	left:47px;
+	width:771px;
+	height:29px;
+}
+#mainMenu ul{
+	list-style:none;
+	padding:0;
+	margin:0 0 0 13px;
+}
+#mainMenu ul li{ float:left; }
+#mainMenu ul li{
+	padding-left:2px;
+	background:url(/img/wetrade/mainMenu_divisorio.gif) left top no-repeat;
+}
+#mainMenu ul li.primo{
+	padding-left:0px;
+	background:none;
+}
+#mainMenu ul li a {
+	line-height:29px;
+	height:29px;
+	color:#FFFFFF;
+	padding:0 10px;
+	text-decoration:none;
+	font-weight:bold;
+}
+/*#mainMenu ul:hover a {  color:#666666; }*/
+#mainMenu ul li a:hover, #mainMenu ul li.active a { 
+	color:#9fb747; 
+}
+#container ul.menu_tendina {
+	width:200px;
+	list-style:none;
+	background-color:#000000;
+	color:#FFFFFF;
+	padding:0px 0 5px 5px;
+	text-align:left;
+	margin:0;
+	z-index:1;
+	display: block;
+	float:left;
+	position:relative;
+
+}
+#container .menu_tendina li {
+	line-height:19px;
+	height:19px;
+	float:none;
+	background:none;
+}
+#container .menu_tendina li:hover {
+	background:url(/img/wetrade/title_bg_green.gif) #a4c242 top repeat-x;
+	float:none;
+}
+#container .menu_tendina li a {
+	color:#FFFFFF;
+	text-decoration:none;
+	background:url(/img/wetrade/arrowLittle_white.gif) no-repeat 9px 7px;	
+	padding-left:19px;
+	line-height:19px;
+	height:19px;
+	display:block;
+	font-weight:normal;
+	float:none;
+	
+}
+#container .menu_tendina li a:hover {
+	background:url(/img/wetrade/arrowLittle_black.gif) #a4c242 no-repeat 9px 7px;
+	width: inherit;
+	color:#FFFFFF;
+	float:none;
+}
+
+/* sotto menu a comparsa */
+#topMenu {
+	position:relative;
+	top:38px;
+	left:382px;
+	height: 15px;
+	width:431px;
+	overflow: hidden;
+}
+#topMenu ul {
+	display:inline;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+#topMenu ul li{
+	float:left;
+	display:inline;
+}
+#topMenu ul li{
+	padding-left:1px;
+	background:url(/img/wetrade/topMenu_divisorio.gif) left center no-repeat;
+}
+#topMenu ul li.primo{
+	padding-left:0px;
+	background:none;
+}
+#topMenu ul li a {
+	color:#343434;
+	text-decoration:none;
+	padding:0 7px;
+}
+#topMenu ul li.home a {
+	color:#a0bb4a;
+	text-decoration:none;
+	font-weight:bold;
+}
+#topMenu ul li.number {
+	color:#8dbd00;
+	background:url(/img/wetrade/logo-phone.gif) 1px -1px no-repeat;
+	padding-left:23px;
+	font-weight:bold;
+	float:right;
+}
+#topMenu ul li.aiuto {
+	background:url(/img/wetrade/button_question.gif) no-repeat;
+	padding-left:15px;
+	float:right;
+	margin-right: 10px;
+}
+#topMenu ul li.contattaci {
+	background:url(/img/wetrade/button_mail.gif) no-repeat;
+	padding-left:15px;
+	float:right;
+	margin-right: 10px;
+}
+#toolbar{
+	position:relative;
+	top:48px;
+	left:370px;
+}
+div#toolbar,div#toolbar label,div#toolbar input,div#toolbar select,div#toolbar a img { display:inline; line-height:27px; vertical-align:middle; }
+div#toolbar a img { margin: 0 5px 0 5px;}
+
+/* CONTENITORE INTERNO */
+#bodier {
+	width:773px;
+	margin: 0 auto;
+}
+
+#bodier.home { background:url(/img/wetrade/bodier_bg.gif) repeat-y center; }
+#bodier.privata { background-image:url(/img/wetrade/bodier_bg_privata.gif); }
+#bodier.unica { background-image:none; }
+#bodier.compravendi { background-image:url(/img/wetrade/bodier_bg_compravendi.gif); }
+
+#bodier .top_bar{
+	height:18px;
+	background-color:#FFFFFF;
+	text-align:right;
+	padding-top:12px;
+}
+#bodier .top_bar .aggiornamento{
+	float:right; 
+	margin-right:10px;
+}
+#bodier .top_bar div {height:17px; line-height:17px; }
+#bodier .top_bar strong{ color:#d75136; }
+#bodier .subTopBar {
+	display: block;
+	height: 15px;
+}
+#bodier .subTopBar div{
+	float:left;
+	margin-right:25px;
+	margin-left:5px;
+}
+#bodier .subTopBar div.ultimo{
+	float:right;
+	margin-right:6px;
+}
+#bodier .subTopBar div.ultimo strong {
+	background:url(/img/wetrade/arrowDown_blue.gif) 8px 5px no-repeat;
+	padding-left:20px;
+}
+#bodier .subTopBar2 {
+	display: block;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+}
+#bodier .subTopBar2 div{
+	float:left;
+	margin-right:25px;
+	margin-left:172px;
+}
+#bodier .subTopBar2 div.ultimo{
+	float:right;
+	margin-right:3px;
+	margin-left: 6px;
+}
+#bodier .subTopBar2 div.prima{
+	float:left;
+	padding:0;
+	margin:0;
+	padding-left:172px;
+}
+
+#bodier .subTopBar2 div.prima.operatore{
+	padding-left:0;
+}
+
+#home1d3 {
+	float:left;
+	width:158px;
+}
+#home2d3 {
+	float:left;
+	width:302px;
+	margin-left: 14px;
+}
+#home3d3 {
+	float:left;
+	width:282px;
+	margin-left: 17px;
+}
+
+/* box login e member area */
+#home1d3 .login {
+	background:#ededed;
+	border:1px solid #dadada;
+}
+#home1d3 .login .text{ padding:6px; }
+#home1d3 .login .inbox{
+	padding:4px 6px;
+	background:url(/img/wetrade/title_login_dot.gif) no-repeat top center;
+}
+#home1d3 .login .field {
+	height:20px;
+	padding-top:2px;
+}
+#home1d3 .login input {
+	width:73px;
+	float:right;
+}
+#home1d3 .login select {
+	width:132px;
+	font-size:11px;
+}
+#home1d3 .login .link a {
+	text-decoration:none;
+	color:#a0bb4a;
+	font-weight:bold;
+}
+#home1d3 .member_box { border:1px solid #dadada; }
+#home1d3 .member_box .text{
+	padding:6px;
+	background-color: #ededed;
+}
+#home1d3 .member_box ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	margin-top:4px;
+}
+#home1d3 .member_box ul li{
+	background:url(/img/wetrade/list_green.gif) 0px 2px no-repeat;
+	padding-left:15px;
+	font-size: 10px;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:3px;
+}
+
+
+/* box eventi */
+#home1d3 .eventi {
+	background:url(/img/wetrade/title_eventi_Bg.gif) top repeat-x #3e3e3e;
+	border:1px solid #dadada;
+}
+#home1d3 .eventi .text {
+	background:url(/img/wetrade/box_bg_gradientGray.gif) top repeat-x;
+	color:white;
+	padding:6px;
+	margin:0;
+	border:0;
+}
+#home1d3 .eventi .text strong { color:#a0bb4a; }
+#home1d3 .eventi .text a {
+	color:#a0bb4a;
+	font-weight:bold;
+	text-decoration:none;
+}
+#home1d3 .box { margin-bottom:5px; }
+#home2d3 .banner{
+	border:1px solid #dadada;
+	padding:2px;
+	margin-bottom:5px;
+}
+#home2d3 .box_wetrade {
+	border:2px solid #8bb110;
+	margin-bottom: 5px;
+	padding-bottom: 10px;
+	background-color: #eeeeee;
+}
+#home2d3 .box_wetrade ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#home2d3 .box_wetrade li {
+	height:43px;
+	padding: 0 14px 0 36px;
+	background:url(/img/wetrade/list_play_green_OnGrey.gif) 7px 10px no-repeat;
+}
+#home2d3 .box_wetrade li div {
+	padding-top:10px;
+	padding-bottom:7px;
+	border-bottom:1px #8bb110 solid; 
+}
+#home2d3 .box_wetrade li.ultimo div {
+	border-bottom:none;
+}
+#home2d3 .box_novita h3 {
+	background: url(/img/wetrade/title_bg_green.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	color:#fff;
+	font-weight:bold;
+	font-size:13px;
+}
+#home2d3 .box_novita .text {
+	border:2px solid #adc361;
+	border-top:none;
+	padding:10px;
+	padding-top:13px;
+}
+#home2d3 .box_novita h4 {
+	color:#a0bb4a;
+	background:url(/img/wetrade/title_bg_white.gif) left top no-repeat;
+	padding:16px 0 14px 18px;
+	margin:0;
+	font-size:11px;
+}
+#home2d3 .box_novita .text p {
+	margin:0;
+	padding-bottom: 5px;
+}
+#home2d3 .box_novita .text p a {
+	color:#6e6e6e;
+	text-decoration:none;
+	font-weight:bold;
+}
+#home2d3 .box_novita .img {
+	border:2px solid #aec461;
+	float:left;
+	margin-right:7px;
+}
+
+/* box grafico */
+#home2d3 .box_grafico,
+#home3d3 .box_grafico {
+	border:1px solid #dadada;
+	background:#EBEBEB url(/img/wetrade/table_bg_gray.gif) bottom right no-repeat;
+	margin-bottom:5px;
+}
+#home3d3 .box_grafico h3,
+#home2d3 .box_grafico h3 {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	color:#a0bb4a;
+	font-weight:bold;
+	font-size:13px;
+}
+
+/* box news */
+
+#home1d3 .box_news{
+	border:1px solid #dadada;
+	margin-bottom:5px;
+	background:url(/img/wetrade/table_bg_white.gif) bottom right no-repeat;
+}
+
+#home1d3 .box_news h3 	{
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+	color:#333333;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#home1d3 .box_news ul{
+	margin:0;
+	padding:0 0 12px 0;
+	list-style:none;
+	background:url(/img/wetrade/Last_tr_bg_white.gif) bottom no-repeat; 
+}
+
+#home1d3 .box_news ul li.dark{
+	background-color:#dfeacf;
+}
+
+#home1d3 .box_news ul li.dark div{
+	background:url(/img/wetrade/list_play_white_OnGreen.jpg) 7px 10px no-repeat;
+}
+
+#home1d3 .box_news ul li.light{
+	background-color:#FFFFFF;
+}
+
+#home1d3 .box_news ul li.light div{
+	background:url(/img/wetrade/list_play_white_OnWhite.jpg) 7px 10px no-repeat;
+}
+
+#home1d3 .box_news ul li{
+        height:65px;
+}
+
+#home1d3 .box_news ul li div{
+	padding: 13px 10px 0 36px;
+}
+
+#home1d3 .box_news ul li div strong{
+        color:#333333;
+}
+
+#home1d3 .box_news ul li div a{
+        color:#333333;
+        text-decoration:none;
+        font-weight:normal;
+}
+
+#home1d3 .box_news ul li div a:hover{
+        color:#AFD142;
+}
+
+div.inside2d2 .box_news,
+#home2d3 .box_news,
+#home3d3 .box_news {
+	border:1px solid #dadada;
+	margin-bottom:5px;
+	background:url(/img/wetrade/table_bg_white.gif) bottom right no-repeat;
+}
+
+div.inside2d2 .box_news{
+	height:250px;
+}
+
+div.inside2d2 .box_news h3,
+#home2d3 .box_news h3 {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	color:#a0bb4a;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#home3d3 .box_news h3 {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	color:#a0bb4a;
+	font-weight:bold;
+	font-size:11px;
+}
+
+#home3d3 .box_news ul li div a:hover{
+        color:#a0bb4a;
+}
+
+div.inside2d2 .box_news ul,
+#home2d3 .box_news ul,
+#home3d3 .box_news ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	background:url(/img/wetrade/Last_tr_bg_white.gif) bottom no-repeat; 
+	padding-bottom:12px;
+}
+
+div.inside2d2 .box_news li div,
+#home2d3 .box_news li div{
+	height:35px;
+	padding: 13px 14px 0 36px;
+	background:url(/img/wetrade/list_play_white_OnWhite.jpg) 7px 10px no-repeat;
+}
+
+/*separato dal precedente per explorer 7*/
+#home3d3 .box_news li div{
+	height:45px;
+	padding: 13px 14px 0 36px;
+	background:url(/img/wetrade/list_play_white_OnWhite.jpg) 7px 10px no-repeat;
+}
+
+div.inside2d2 .box_news li.dark,
+#home2d3 .box_news li.dark,
+#home3d3 .box_news li.dark {
+	background-color:#dfeacf;
+}
+
+div.inside2d2 .box_news li.dark div,
+#home2d3 .box_news li.dark div{
+	height:35px;
+	padding: 13px 14px 0 36px;
+	background:url(/img/wetrade/list_play_white_OnGreen.jpg) 7px 10px no-repeat;
+}
+
+/*separato dal precedente per explorer 7*/
+#home3d3 .box_news li.dark div{
+	height:45px;
+	padding: 13px 14px 0 36px;
+	background:url(/img/wetrade/list_play_white_OnGreen.jpg) 7px 10px no-repeat;
+}
+
+div.inside2d2 .box_news ul li a:hover,
+#home2d3 .box_news ul li a:hover,
+{
+        color:#a0bb4a !important;
+}
+
+/*#home1d3 .box_news {
+	border:1px solid #dadada;
+	margin-bottom:5px;
+	background:url(/img/wetrade/table_bg_white.gif) bottom right no-repeat;
+	
+}
+
+#home1d3 .box_news ul {padding-bottom:4px;}
+
+#home1d3 .box_news li {height:65px;}
+
+#home1d3 .box_news li div.top{
+	padding: 10px 10px 5px 36px;
+	background:url(/img/wetrade/list_play_white_OnWhite.jpg) 10px 6px no-repeat;
+}
+#home1d3 .box_news li div.bottom{
+	padding: 0 14px 0 14px;
+}
+
+#home1d3 .box_news li.dark {
+	background-color:#dfeacf;
+	height:65px;	
+}
+
+#home1d3 .box_news  li.dark div.top{
+	background:url(/img/wetrade/list_play_white_OnGreen.jpg) 10px 6px no-repeat;
+}
+
+#home1d3 .box_news .first {
+	padding:8px;
+	padding-top:12px;
+	font-size: 10px;
+	fint-weight:normal;
+}
+
+#home1d3 .box_news .last {
+	background: url(/img/wetrade/Last_button_bg_gray_mini.gif) top center no-repeat;
+	padding:8px;
+	padding-top:12px;
+	font-size: 10px;
+}
+
+#home1d3 .box_news .last a{ text-decoration:none; color:#83a800; }
+
+#home1d3 .box_news strong {
+	color:#343434;
+}
+*/
+/* tabella */
+.table_indici {
+	border:1px solid #dadada;
+	width:282px;
+	margin-bottom: 5px;
+	background:url(/img/wetrade/table_bg_white.gif) bottom right no-repeat;
+}
+.table_indici tr th{
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	padding-left:14px;
+	text-align:left;
+	color:#a0bb4a;
+	font-weight:bold;
+	line-height: 29px;
+}
+.table_indici tr.light td { background:#fff; }
+.table_indici tr.dark td { background:#e0eacf; }
+.table_indici tr td { 
+/*	width:104px; */
+	height:22px;
+	line-height:22px;
+	/*padding-left:14px;*/
+	padding-left:10px;
+	white-space:nowrap;
+}
+
+.table_indici tr + tr + tr td { 
+	border-top:1px solid #dadada; 
+}
+
+.table_indici tr td div { padding-right: 14px; }
+.table_indici tr td.pos div { background:url(/img/wetrade/indice_pos.gif) no-repeat right center; text-align:right; }
+.table_indici tr td.neg div { background:url(/img/wetrade/indice_neg.gif) no-repeat right center; text-align:right; }
+.table_indici tr td.equal div { background:url(/img/wetrade/indice_equal.gif) no-repeat right center; text-align:right; }
+.table_indici tr td.close div { background:url(/img/wetrade/indice_close.gif) no-repeat right center; text-align:right; }
+.table_indici tr td.nd div { background:url(/img/wetrade/indice_close.gif) no-repeat right center; text-align:right; }
+.table_indici tr td.posLast div { background:none; color:#34a041; text-align:right; }
+.table_indici tr td.negLast div{ background:none; color:#ff0000; text-align:right; }
+.table_indici tr td.ndLast div{ background:none; color:#000000; text-align:right; }
+
+.table_indici tr td a { color:#000000 !important; text-decoration:none !important; font-style:normal !important; }
+.table_indici tr td a:hover { color:#a0bb4a !important; }
+
+.table_indici .legenda div { padding-right:10px; margin-right:10px; float:left;}
+.table_indici .legenda div.pos { background:url(/img/wetrade/indice_pos.gif) no-repeat right center; }
+.table_indici .legenda div.neg { background:url(/img/wetrade/indice_neg.gif) no-repeat right center; }
+.table_indici .legenda div.equal { background:url(/img/wetrade/indice_equal.gif) no-repeat right center; }
+.table_indici .legenda div.close { background:url(/img/wetrade/indice_close.gif) no-repeat right center; }
+.table_indici .indici_futures {
+	float:right;
+	height:18px;
+	padding-top: 7px;
+	width: 130px;
+}
+.table_indici .indici_futures select{
+	font-size:10px;
+	height:16px;
+	float:right;
+	margin-right:7px;
+}
+
+/* AREA FOOTER */
+#footer {
+	width:865px;
+	background:url(/img/wetrade/footer-bg.gif) bottom no-repeat;
+	padding-bottom:50px;
+}
+#footer .riferimenti {
+	font-size:9px;
+	margin:3px 58px 20px;
+}
+#footer .box {
+	background-color:#e8e8e8;
+	font-size:11px;
+	margin:10px 58px;
+	padding:8px 10px;
+}
+
+#footer .box ul{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#footer .box strong { color:#e81919; }
+#footer .foot {
+	margin:10px 58px;
+	text-align: center;
+	color:#6c6c6c;
+	height: 22px;
+	line-height: 22px;
+}
+#footer .foot .foot_left {
+	width:150px;
+	float:left;
+	text-align:left;
+	color:#505050;
+	font-size: 10px;
+}
+#footer .foot .foot_right {
+	width:150px;
+	float:right;
+	text-align:right;
+}
+#footer .foot a { color:#6c6c6c; font-size:10px; }
+
+/* PARTE PRIVATA */
+#bodier.privata #home1d3 {
+	width:202px;
+} 
+#bodier.privata #home2d3 {
+	width:256px;
+	margin-left:14px;
+} 
+#bodier.privata #home1d3 .user_box {
+	background:#000000 url(/img/wetrade/user_box_bg.gif) top no-repeat;
+	height: 88px;
+	display: block;
+	color: white;
+	padding: 12px 5px 5px;
+}
+#bodier.privata #home1d3 .user_box#longnames {
+	background:#000000 url(/img/wetrade/user_box_bg_longnames.gif) top no-repeat;
+}
+#bodier.privata #home1d3 .user_box .text{
+	font-size:12px;
+	font-weight:bold;
+	padding-left: 5px;
+	padding-bottom: 10px;
+}
+#bodier.privata #home1d3 .user_box .text#longnames{
+	height:65px;
+	line-height :20px;
+}
+#bodier.privata #home1d3 .user_box .text strong{
+	font-size:14px;
+	color:#a0bb4a;
+}
+#bodier.privata #home1d3 .user_box .mail{
+	font-size:12px;
+	background:url(/img/wetrade/user_box_mail.gif) no-repeat top left;
+	padding-left:27px;
+	height:23px;
+	line-height: 23px;
+	padding-bottom: 5px;
+}
+
+#bodier.privata #home1d3 .user_box .mail a{
+	text-decoration:none;
+	font-weight:bold !important;   
+}
+
+.box_base {
+	border: 1px solid #DADADA;
+	margin-bottom:5px;
+	background-color: #ededed;
+	font-weight:bold;
+	/*position: relative;*/
+}
+
+.no_bck {
+	background:none;	
+}
+
+.box_base ul, .box_base li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.box_base h3 {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:29px;
+	font-size:13px;
+	color:#333333;
+/*	border-bottom: 1px solid #DADADA;*/
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+.box_base h3 .subtitle {
+	float:right; 
+	padding-right:10px; 
+	width:150px; 
+	color:#FFFFFF; 
+	line-height:normal; 
+	text-align:right;
+}
+.box_base h3 strong{ color:#2c2c2c;}
+
+.box_base .title_time {
+	text-align: right;
+	padding-right: 9px;
+}
+
+.box_base .text {
+	padding:7px 7px 3px;
+}
+
+.box_base .intraday li { padding:8px;}
+
+.box_base .intraday li a { color:#000000 !important; text-decoration: none; }
+.box_base .intraday li a:hover { color:#C0E156 !important; text-decoration: none; }
+
+.box_base .intraday li div.yellow,
+.box_base .intraday li.yellow,
+.box_base .intraday li div.red,
+.box_base .intraday li.red,
+.box_base .intraday li div.blue,
+.box_base .intraday li.blue,
+.box_base .intraday li div.green,
+.box_base .intraday li.green {
+	padding-top: 7px;
+	padding-left:28px;
+} 
+.box_base .intraday li.light 	{ background-color:#FFFFFF !important; } 
+
+.box_base .intraday li div.yellow,
+.box_base .intraday li.yellow 	{ background:transparent url(/img/wetrade/list_legenda_yellow.gif) 	no-repeat scroll 8px 9px ;}
+
+.box_base .intraday li div.red,
+.box_base .intraday li.red 		{ background:transparent url(/img/wetrade/list_legenda_red.gif) 	no-repeat scroll 8px 9px ;}
+
+.box_base .intraday li div.blue,
+.box_base .intraday li.blue 	{ background:transparent url(/img/wetrade/list_legenda_blue.gif) 	no-repeat scroll 8px 9px ;}
+
+.box_base .intraday li div.green,
+.box_base .intraday li.green 	{ background:transparent url(/img/wetrade/list_legenda_green.gif) 	no-repeat scroll 8px 9px ;}
+
+.box_base .legenda {
+	font-weight:normal;
+	padding: 7px;
+	background:url(/img/wetrade/table_bg_gray.gif) bottom right no-repeat;
+}
+
+.box_base .legenda h5 { color: #C0E156; font-weight: bold; margin: 0; padding: 0; font-size: 12px;}
+
+.box_base .legenda ul {
+	padding-top: 7px;
+}
+.box_base .legenda li {
+	padding-top: 7px;
+	padding-left:20px;
+}
+.box_base .legenda li.yellow { background:url(/img/wetrade/list_legenda_yellow.gif) 2px 9px no-repeat;}
+.box_base .legenda li.red { background:url(/img/wetrade/list_legenda_red.gif) 2px 9px no-repeat;}
+.box_base .legenda li.blue { background:url(/img/wetrade/list_legenda_blue.gif) 2px 9px no-repeat;}
+.box_base .legenda li.green { background:url(/img/wetrade/list_legenda_green.gif) 2px 9px no-repeat;}
+.box_base .text li {
+	margin-bottom:5px;
+}
+.box_base .last {
+	background:url(/img/wetrade/Last_button_bg_gray.gif) top no-repeat;
+	padding-top:15px;
+	padding-right:8px;
+	height:22px;
+}
+ .box_base .strumenti {
+	padding:7px 7px 15px;
+	background:url(/img/wetrade/table_bg_gray.gif) bottom right no-repeat;
+	margin: 0;
+}
+.box_base .strumenti .info {
+	font-weight:normal;
+	margin:0;
+	padding: 4px 8px 7px;
+}
+.box_base .strumenti ul li {
+	font-size:10px;
+	padding-left:20px;
+	background:url(/img/wetrade/list_green_big.gif) no-repeat top left;
+	padding-bottom:6px;
+}
+.box_base .strumenti ul li a:hover{
+	color:#a0bb4a;
+}
+
+.box_up {
+	margin-top:5px;
+}
+
+/* tabella */
+.top10_table {
+	border:1px solid #dadada;
+	width:196px;
+	font-weight:normal;
+	text-align:left;
+	color:#666666;
+	margin:2px;
+}
+.top10_table th {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	color:#a0bb4a;
+	font-weight:bold;
+	line-height: 29px;
+}
+.top10_table .primo { 
+	padding-left:14px;
+	text-align:left;
+}
+.top10_table th div {
+	padding:0;
+	text-align:center;
+	background: url(/img/wetrade/title_bg_black_divisorio.gif) left no-repeat;
+}
+
+.top10_table tr.light td { background:#fff; }
+.top10_table tr.dark td { background:#e0eacf; }
+.top10_table tr td div { 
+	text-align:center; 
+	border-left:1px solid #dadada;
+}
+.top10_table tr td {
+	height:22px;
+	line-height:22px;
+}
+.top10_table tr td.posLast div { background:none; color:#34a041; text-align:right; padding-right:4px;}
+.top10_table tr td.negLast div{ background:none; color:#ff0000; text-align:right; padding-right:4px; }
+
+.top10_table a{
+	color:#000000 !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+}
+.top10_table a:hover{
+    color:#a0bb4a !important;
+}
+
+.cambiEuro {
+	border:1px solid #dadada;
+	width:282px;
+	font-weight:normal;
+	text-align:left;
+	color:#666666;
+	margin-bottom:5px;
+}
+.cambiEuro th {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	color:#a0bb4a;
+	font-weight:bold;
+	line-height: 29px;
+	padding-left:14px;
+}
+
+.cambiEuro tr.light td { background:#fff; }
+.cambiEuro tr.dark td { background:#e0eacf; }
+.cambiEuro tr td {
+	height:22px;
+	line-height:22px;
+}
+.cambiEuro tr td.primo { padding-left:14px;}
+.cambiEuro tr td div { background:none; text-align:right; padding-right:18px;}
+
+
+
+/* PARTE UNICA */
+
+table.portafoglio_table { border-collapse:collapse; border: 0px none none; }
+table.portafoglio_table  td, table.portafoglio_table th { padding:0; border: 0px none none; }
+
+.portafoglio_table {
+	width:773px;
+	font-weight:normal;
+	text-align:left;
+	color:#666666;
+	margin-bottom:5px;
+	text-align:center;
+	font-size:11px;
+}
+
+.portafoglio_table .primo {
+	text-align:left;
+	padding-left:6px;
+	border-left:1px solid #dadada;
+}
+
+.portafoglio_table .grosso {
+	font-size:11px;
+}
+
+.portafoglio_table .primocenter {
+	text-align:center;
+	padding-left:6px;
+	border-left:1px solid #dadada;
+}
+
+.portafoglio_table .prima div { background:none; }
+.portafoglio_table .primoMenu {
+	border-left:1px solid #dadada;
+}
+.portafoglio_table .ultimo {
+	border-right:1px solid #dadada;
+}
+
+.portafoglio_table th {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	border-top:1px solid #dadada;
+	height:29px;
+	color:#afd142;
+	font-weight:bold;
+	line-height: 29px;
+}
+.portafoglio_table th div {
+	height:29px;
+	line-height: 29px;
+	background: url(/img/wetrade/title_bg_black_divisorio.gif) left no-repeat;
+	padding-left:2px;
+}
+	
+table.portafoglio_table .left_e_pad { text-align:left; padding-left:6px; }
+
+.portafoglio_table th a { 
+	color:#AFD142; 
+	font-size: 10px;
+}
+.portafoglio_table th.active a {
+	color:#9fb747; 
+}
+.portafoglio_table th .mercati select {
+	margin-top:4px;
+	width:70px;
+}
+.portafoglio_table th.doubleline div {
+	line-height:12px;
+	padding-top: 1px;
+	height: 28px;
+}
+.portafoglio_table th.doubleline div select {
+	font-size:9px;
+	height:14px;
+	width:67px;
+	margin:0px -7px 0px -7px;
+	padding: 0;
+}
+.portafoglio_table td.doubleline {
+	line-height:12px;
+}
+.portafoglio_table th .top {
+	line-height:normal;
+	background:none;
+	padding:0;
+	height:auto;
+	padding-top: 2px;
+}
+.portafoglio_table th .bottom {
+	line-height:normal;
+	float:left;
+	width:49%;
+	background:none;
+	padding:0;
+	height:auto;
+}
+
+.portafoglio_table tr.light td { background:#fff; }
+.portafoglio_table tr.dark td { background:#e0eacf; }
+.portafoglio_table tr td.darkCell { background:#e0eacf; }
+.portafoglio_table tr td {
+	height:22px;
+	line-height:22px;
+	border-left:1px solid #dadada;
+}
+.portafoglio_table tr td { border-bottom:1px solid #dadada; }
+.portafoglio_table tr td.pos { color:#1e9d44; }
+.portafoglio_table tr td.neg {
+	color:red;
+}
+.portafoglio_table tr td.red { color:#ce1b1b; }
+.portafoglio_table tr td div { background:none; text-align:right; padding-right:18px;}
+
+.portafoglio_table tr td a:hover{
+    color:#a0bb4a;
+}
+
+.portafoglio_table tr td div a:hover{
+    color:#a0bb4a;
+}
+
+.portafoglio_table tr td.totale_portfolio {
+	color:#2f2a2b;
+	border-bottom:none; 
+	border-left:none; 
+	padding-right:10px;
+}
+
+#bodier h3.tit_sez {
+	background:#89B112 url(/img/wetrade/title_bg_green.gif) repeat-x scroll center top;
+	margin:0 0 10px;
+	padding:0.45em 10px 0.45em 10px;
+	border:1px solid #DADADA;
+	font-size: 13px;
+}
+
+#bodier .highlight_value {
+	background:url(/img/wetrade/highlight_bg.gif) no-repeat;
+	height:33px;
+	width:773px;
+	line-height:33px;
+	margin:12px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+#bodier .highlight_value div{
+	float:left;
+	margin-left:28px;
+}
+#bodier .highlight_value div.ultimo{
+	float:right;
+	margin-right:30px;
+	margin-left:0;
+}
+.highlight_value a.indietro { text-decoration:none;  color:#000000 !important;}
+.highlight_value a.indietro:hover { color:#a0bb4a !important; }
+
+#bodier .highlight_value2 {
+	background:url(/img/wetrade/highlight_bg_601.gif) no-repeat;
+	height:33px;
+	width:601px;
+	line-height:33px;
+	margin:12px 0 0;
+	position: relative;
+	overflow: hidden;
+}
+#bodier .highlight_value2 div{
+	float:left;
+	padding-left: 10px;
+	margin: 0;
+}
+#bodier .highlight_value2 div.ultimo{
+	float:right;
+	padding-right: 10px;
+	margin: 0;
+}
+.highlight_value2 a.indietro { text-decoration:none;  color:#000000 !important;}
+.highlight_value2 a.indietro:hover { color:#a0bb4a !important; }
+
+#bodier .highlight_value3 {
+	background:url(/img/wetrade/highlight_bg_601.gif) no-repeat;
+	height:33px;
+	width:601px;
+	line-height:33px;
+	/* matteo : rimosso dopo segnalazioni 
+	margin:12px 0 0;*/
+}
+#bodier .highlight_value3 div{
+	/*float:left;
+	padding-left: 10px;
+	margin: 0;  segnalazione*/
+	background:#89B112 url(/img/wetrade/title_bg_green.gif) repeat-x scroll center top;
+	border-bottom:1px solid #DADADA;
+	color:#333333;
+	font-size:13px;
+	line-height:29px;
+	margin:0;
+	padding:0 0 0 10px;
+}
+#bodier .highlight_value3 div.ultimo{
+	float:right;
+	padding-right: 10px;
+	margin: 0;
+}
+.highlight_value3 a.indietro { text-decoration:none;  color:#000000 !important;}
+.highlight_value3 a.indietro:hover { color:#a0bb4a !important; }
+
+#bodier .titoloPrivato { 
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:6px;
+	text-transform:uppercase;
+}
+#bodier .weightNormal { font-weight:normal; }
+#bodier .topTableBar {
+	height:30px;
+	background-color: #fff;
+	padding-top: 5px;
+}
+#bodier .topTableBar .selectField { float:left; margin-left:6px;}
+#bodier .topTableBar .selectField label{ padding-right:20px; }
+#bodier .topTableBar .selectField label select{ margin-left:5px; }
+#bodier .bottomTableBar {
+	padding:13px 0px 2px 75px;
+	height:18px;
+}
+#bodier .bottomTableBar .selectField { float:left; margin-left:6px;}
+#bodier .bottomTableBar .selectField label{ padding-right:20px; }
+#bodier .bottomTableBar .selectField label select{
+	margin-left:5px;
+	width: 102px;
+}
+
+#home1d3 .button_green a{
+	text-decoration:none;
+}
+
+#unicaIside1d2 {
+	float:left;
+	width:350px;
+	overflow:visible;
+	position: static;
+}
+
+#unicaIside1d2 .schedaTitolo, #unicaIside1d2 .schedaTitolo tr,
+#unicaIside1d2 .schedaTitolo td{
+	overflow:visible;
+	position: static;
+}
+
+#unicaIside2d2 {
+	float:left;
+	width:242px;
+	margin: 0;
+	margin-left:7px;
+	background-color:#ebebeb;
+	border:1px solid #dadada;
+	color:#333333;
+	text-align:center;
+	height: 252px;
+
+}
+#unicaIside1d2 .schedaTitolo{
+	border:1px solid #dadada;
+	width:348px;
+}
+#unicaIside1d2 .schedaTitolo tr td {
+	height:42px;
+	background-color:#fff;
+	line-height:42px;
+	padding-left:16px;
+}
+#unicaIside1d2 .schedaTitolo tr.dark td {
+	background-color:#e7efdb; 
+}
+#unicaIside1d2 td.value{
+	font-weight:bold;
+	text-align:center;
+	color:#1a1818; 
+	padding-left:0 !important;
+}
+#unicaIside1d2 td.value.red{ color:red; }
+#unicaIside1d2 td.value.green{ color:#1E9D44; }
+
+#container #unicaIside2d2 h3{
+	margin-top:6px;
+	padding:0;
+	font-size:13px;
+}
+
+
+#compravendi2d3 {
+	width:371px;
+	margin-left:14px;
+	float:left;
+}
+#compravendi3d3 {
+	width:214px;
+	margin-left:14px;
+	float:left;
+}
+#home1d3 .blackbox {
+	border:1px solid #dadada;
+	color:#FFFFFF;
+	background:url(/img/wetrade/compravendi_minibox.gif) no-repeat #333333;
+	height:90px;
+	width:156px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+#home1d3 .blackbox strong {
+	color:#c0e156;
+}
+#home1d3 .blackbox div {
+	padding: 8px;
+}
+#home1d3 .blackboxBig {
+	border:1px solid #dadada;
+	color:#FFFFFF;
+	background:url(/img/wetrade/compravendi_bg_bigbox.gif) repeat-x top #3e3e3e;
+	text-align: left;
+	font-size: 11px;
+	margin-bottom: 5px;
+	padding:7px 7px;
+	overflow: hidden;
+}
+#home1d3 .blackboxBig a,
+#home1d3 .blackboxBig a:hover{
+	font-weight:bold;
+}
+#home1d3 p {
+	margin-top:0px;
+	line-height:15px;
+	margin-bottom: 13px;
+	padding-top: 3px;
+}
+#home1d3 strong { color:#c0e156; }
+#home1d3 a { color:#c0e156; text-decoration:none;}
+#home1d3 .button_green_dark a { color:#fff; text-decoration:none;}
+
+#compravendi2d3 .inside {
+	border:1px solid #dadada;
+	height:346px;
+	background-color:#ebebeb;
+}
+#compravendi2d3 h3 {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:28px;
+	font-size:13px;
+	color:#333333;
+	border-bottom: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+
+#compravendi2d3 .button_green .dark#margbutton {
+	width:65px;
+}
+
+#compravendi2d3 .button_green .dark {
+	width:50px;
+}
+
+
+#compravendi2d3 .button_green .dark a { color:#33391f; }
+
+#compravendi2d3 .button_green { float:left;  margin-left:3px; margin-right:0;}
+#compravendi2d3 .moveleft { float:left; margin-left:3px; margin-right:0; }
+#compravendi2d3 .moveright { float:right; margin-right:3px; margin-left:0;}
+
+#compravendi2d3 .row {
+	height:42px;
+	line-height:42px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+}
+#compravendi2d3 .col {
+	float:right;
+	width:260px;
+	line-height:normal;
+	color: black;
+	padding-top: 13px;
+	font-weight: bold;
+}
+#compravendi2d3 .col select.full { width:210px; }
+#compravendi2d3 .col select.half { width:133px; }
+#compravendi2d3 .col input.half { width:75px; }
+
+#compravendi3d3 table {
+	border:1px solid #dadada;
+	border-bottom:none;
+	color:#666666;
+	width: 214px;
+}
+#compravendi3d3 th {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:28px;
+	color:#a0bb4a;
+	font-weight:bold;
+	line-height: 29px;
+	text-align:left;
+	padding-left: 9px;
+}
+#compravendi3d3 tr.dark td {
+	background-color:#dfeacf;
+}
+#compravendi3d3 td {
+	line-height:20px;
+	border-bottom:1px solid #c3cfb1;
+	padding:1px 9px;
+}
+#compravendi3d3 .last {
+	text-align:right;
+	padding-right: 9px;
+}
+
+/* parte mercati */
+
+#bodier.mercati {
+	background-image: url(/img/wetrade/bodier_bg_mercati.gif);
+}
+
+
+#bodier .inside2d2 {
+	width:601px;
+	margin-left:14px;
+	float:left;
+}
+
+.textIndici a{
+    color:#3d3d3d !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+}
+
+.textIndici a:hover{
+    color:#c0e156 !important;
+}
+
+.box_base h4 {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:29px;
+	font-size:11px;
+	color:#333333;
+	border-bottom: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+
+.testo_box_base { margin:0; padding:0 10px 20px 10px; text-align: justify}
+ul.testo_box_base { margin:0; padding:0 10px 20px 23px;}
+
+.TRSfondoGreen
+{COLOR: #FFFFFF;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ FONT-WEIGHT: bold;
+ BACKGROUND-COLOR: #89b112}
+ 
+.evenDark { background-color:#e0eacf;}
+.oddLight { background-color:#ffffff; }
+.testoErrore {
+	color:#FF0000;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+#home3d3 .box_grafico_derivati {
+	border:1px solid #dadada;
+	width:280px;
+	height:300px;
+	background:#EBEBEB url(/img/wetrade/table_bg_gray.gif) bottom right no-repeat;
+	margin-bottom:5px;
+}
+
+#home3d3 .box_grafico_derivati h3 {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	line-height:29px;
+	padding:0 0 0 14px;
+	margin:0;
+	text-align:left;
+	color:#a0bb4a;
+	font-weight:bold;
+	font-size:13px;
+}
+	
+#topMenu li.closePopup {
+	color:#8dbd00;
+	background:url(/img/wetrade/indice_close.gif) bottom no-repeat;
+	padding-left:5px;
+	font-weight:bold;
+	float:right;
+}
+
+.classicLink a{
+    color:#afd142 !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+    font-weight:bold;
+}
+
+.classicLinkNoUnder a{
+    color:#afd142 !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+    font-size: 11px !important;
+    font-weight:bold;
+}
+
+.IntestazioneMovTitoli th{
+	font-size:10px !important;
+	color:#afd142 !important;
+}
+
+.IntestazioneMovTitoli a{
+	font-size:10px !important;
+	color:#afd142 !important;
+}
+
+.tabellaCWVariante {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	height:29px;
+	color:#afd142;
+	font-weight:bold;
+	line-height: 29px;
+}
+
+.tabellaWatchlist {
+	background:url(/img/wetrade/title_bg_black.gif) #000000 repeat-x top;
+	color:#afd142;
+	font-weight:bold;
+}
+
+
+#bodier .button_green_push {	height:17px;}
+#bodier .button_green_push div {
+	background:url(/img/wetrade/button_green.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	vertical-align:10%;
+}
+#bodier .button_green_push div.right {
+	background:url(/img/wetrade/button_green.gif) right no-repeat;
+	width:7px;
+	padding: 0;
+}
+#bodier .button_green_push div p {
+    color:#808080;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+}
+
+.message{
+	color:#FF6633 !important;
+	font-weight:bold !important;
+	font-size:12px !important;
+}
+
+.quotazioneLink a{
+    color:#afd142 !important;
+    font-weight:bold !important;
+    text-decoration:none !important;
+    padding-left:10px !important;
+}
+.quotazioneLink b{
+    padding-left:10px !important;
+}
+
+#compravendi2d3 .rowNews {
+	height:30px;
+	line-height:30px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+}
+
+#compravendi2d3 .rowNews.marg {
+	margin-top: 3px;
+}
+
+#compravendi2d3 .rowNewsMT {
+	height:25px;
+	line-height:25px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+}
+#compravendi2d3 .colNews {
+	float:right;
+	width:260px;
+	line-height:normal;
+	color: black;
+	padding-top: 10px;
+	font-weight: bold;
+}
+#compravendi2d3 .colNewsMT {
+	float:right;
+	width:260px;
+	line-height:normal;
+	color: black;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#compravendi2d3 .largeCol {
+	color:black;
+	float:right;
+	font-weight:bold;
+	line-height:normal;
+	padding-top:13px;
+	width:280px;
+}
+
+#compravendi2d3 .largeCol .inputBox {
+	float: left;
+}
+
+#compravendi2d3 .largeCol .checkbox {
+	float: right;
+	padding-right: 30px;
+}
+
+/* modifiche a pagina selezione rapporto*/
+#middleContainer div#sel_conto .sx {
+	padding: 42px 0 !important;
+}
+
+#middleContainer .message {
+	margin-bottom: 14px;
+}
+
+#middleContainer div#sel_conto div.dx div.evidenziato {
+	text-align: left;
+}
+ 
+/*infoFondo.jsp*/
+
+#infoFondo, #infoFondo .evenDark, #infoFondo .oddLight{
+	width:312px;
+}
+
+#infoFondo  .tdFondo1{
+	width:90px;
+	padding-left:4px;  
+	height:25px; 
+	float:left;
+	line-height:25px; 
+}
+
+#infoFondo  .tdFondo1Cat{
+	width:120px;
+	padding-left:4px;  
+	height:25px; 
+	float:left;
+	line-height:25px; 
+}
+
+#infoFondo  .tdFondo2{
+	height:25px; 
+	text-align:right;
+	line-height:25px; 
+}
+
+#infoFondo  .tdFondo2Cat{
+	height:25px; 
+	text-align:right;
+}

@@ -1,0 +1,334 @@
+.txt {}
+.txt2 {color:#425A9B; font-weight:bold; text-decoration: none;}
+.txt3 {color:#000000; text-decoration: none; font-size: 14px;}
+.txt4 {color:#000000; text-decoration: none;}
+.txt5 {color:#FFFFFF; text-decoration: none;}
+
+.lnk {text-decoration: underline;}
+.lnk2n {color:#425A9B; font-weight:bold; text-decoration: none;}
+.lnk3y {color:#999999; text-decoration: underline;}
+.lnk4n {color:#FFFFFF; font-weight:bold; text-decoration: none;}
+.lnk4y {color:#FFFFFF; font-weight:bold; text-decoration: underline;}
+.lnk5n {color : #808080; text-decoration: none;}
+.lnk5y {color : #808080; text-decoration: underline;}
+.lnk6n {color : #F8B500; font-weight:bold; text-decoration: none;}
+
+.hdrtxt {color:#425A9B;font-weight: bold;}
+.hdrtxt2 {color:#425A9B;}
+
+.qt {}
+.qtup {color:#009900;}
+.qtdw {color:#FF6633;}
+.qteq {}
+.qt2 {font-weight: bold;}
+.qt2up {color:#009900;font-weight: bold;}
+.qt2dw {color:#FF6633;font-weight: bold;}
+.qt2eq {font-weight : bold;}
+.qt3 {font-size:14px;font-weight:bold;}
+.qt3up {font-size:14px;color:#009900;font-weight: bold;}
+.qt3dw {font-size:14px;color:#FF6633;font-weight : bold;}
+.qt3eq {font-size:14px;font-weight : bold;}
+
+.hlight{font:bold 11px Verdana,Arial,sans-serif;color:#F7791D;text-decoration:none;}
+.hlight2{text-decoration: none; color: #FF6633}
+.hlight3{text-decoration: none; color: #CCCCCC}
+.hlight4{text-decoration: none; color: #425A9B}
+
+.strmlnk {text-decoration: none; color: #000000}
+.idxhdr {text-decoration: none;  color:#425A9B}
+
+.nwshdr {font-weight:bold;color:#425A9B}
+.nwshdr2 {}
+.nwstime {}
+.nwstxt {COLOR: #425A9B;}
+.bsttitle {}
+.bsttxt {}
+.tdhdr {COLOR: #FFFFFF; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #425A9B}
+.tdhdr2 {COLOR: #425A9B; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #FFFFFF}
+.tdhdr3 {COLOR: #425A9B; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #FEF0BD}
+.trhdr1 {COLOR: #FFFFFF; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #425A9B}
+.trhdr2 {COLOR: #FFFFFF; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #FFFFFF}
+.trftr {}
+.trbkg1 {BACKGROUND-COLOR: #FFFFFF}
+.trbkg2 {BACKGROUND-COLOR: #FFFFFF}
+.trbkg3 {BACKGROUND-COLOR: #EFEFEF}
+.tdftr {COLOR: #FFFFFF; FONT-WEIGHT: bold;	BACKGROUND-COLOR: #425A9B}
+
+.mtx01 {COLOR: #425A9B; FONT-WEIGHT: bold;TEXT-ALIGN:center; VERTICAL-ALIGN: middle}
+.mtx02 {COLOR: #425A9B; FONT-WEIGHT: normal;	BACKGROUND-COLOR: #f5f5f5; TEXT-ALIGN:center; VERTICAL-ALIGN: middle}
+.multexTrbkg1 {BACKGROUND-COLOR: #E7EBF7;}
+.multexTrbkg2 {BACKGROUND-COLOR: #FFFFFF;}
+.multexThr {BACKGROUND-COLOR: #EBEBEB; TEXT-ALIGN:LEFT; HEIGHT: 20px;font-weight:bold;}
+.multexThd {font-family : Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#425A9C; font-weight: bold; text-decoration: none; TEXT-ALIGN:LEFT;}
+.multxPuls {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#FFFFFF;text-decoration:none; font-weight:bold;}
+.multxPulsOn {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#F8B500; text-decoration:none; font-weight:bold;}
+
+.mtxHelp1 {COLOR: #000000;}
+.mtxHelp2 {COLOR: #425A9C; BACKGROUND-COLOR: #E7EBF7; FONT-WEIGHT: bold}
+.mtxHelp3 {COLOR: #425A9B}
+.mtxHelp4 {COLOR: #425A9C; BACKGROUND-COLOR: #E7EBF7;font-size:11px;font-weight:bold;text-decoration:underline;}
+
+.mtxHelp1:hover {COLOR: #425A9B; text-decoration:underline;}
+.mtxHelp2:hover {COLOR: #FEF0BD; BACKGROUND-COLOR: #425A9B; text-decoration:underline;}
+.mtxHelp3:hover {COLOR: #000000; text-decoration:underline;}
+.mtxHelp4:hover {COLOR: #425A9C; BACKGROUND-COLOR: #000000;font-size:11px;font-weight:bold;text-decoration:underline;}
+.TitoliPort {color:#FFFFFF; text-decoration: none;}
+.TitoloGrande {font:bold 18px Verdana,Arial,Helvetica,sans-serif;color:#425A9C;text-decoration:none;font-style:italic;}
+
+.BODF {font-size:8pt; font-family: Verdana, Helvetica, Arial,sans-serif; color: red}
+.BBianco1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : white}
+
+
+.LightGrigio1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #999999}
+
+.BNero1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #000001}
+
+.BGiallo1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #F8B500}
+
+.BBlu1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #425A9B}
+
+
+
+.BGrigio1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #808080}
+
+.BArancio {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #FF6600}
+
+.Arancio {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #FF6600}
+
+.BRosso {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #FF6633}
+
+.Rosso {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #FF6633}
+
+.Verde {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : Green}
+
+.VerdeScuro {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #003300}
+
+.Grigio1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #808080}
+
+.BGrigio2 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #C0C0C0}
+
+.Blu1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #425A9B}
+
+.Bianco1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : white}
+
+.Nero1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : black}
+
+.Giallo1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #F8B500}
+
+.BViola1 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color: #800080}
+
+.TRSfondoGiallo
+{COLOR: black;
+ FONT-FAMILY : Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #FEF0BD}
+
+
+.TRSfondoArancio
+{COLOR: white;
+ FONT-FAMILY : Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #FFCC00}
+
+
+.TRSfondoRosso
+{COLOR: white;
+ FONT-FAMILY : Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #FF6633}
+
+.TRSfondoBianco
+{COLOR: black;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: white}
+
+.TRSfondoGialloBlu
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #FEF0BD}
+
+.TRSfondoGialloBlu2
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #FEF0BD}
+
+.TRSfondoBiancoBlu2
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: white}
+
+.Nero2 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : black}
+
+.Blu2 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : #425A9B}
+
+.Bianco2 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+color : white}
+
+.TRSfondoGialloNero2
+{COLOR: black;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+
+ BACKGROUND-COLOR: #FEF0BD}
+
+.BRosso2 {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-weight : bold;
+color : #FF0000}
+
+.TRSfondoGialloBluB
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ FONT-WEIGHT: bold;
+ BACKGROUND-COLOR: #FEF0BD}
+
+
+.TRSfondoBiancoNero
+{COLOR: black;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: white}
+
+.TRSfondoBiancoBlu
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ FONT-WEIGHT: bold;
+ BACKGROUND-COLOR: white}
+
+.TRSfondoBiancoBluLight
+{COLOR: #425A9B;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: white}
+
+.TRSfondoBlu
+{COLOR: #FFFFFF;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ FONT-WEIGHT: bold;
+ BACKGROUND-COLOR: #425A9B}
+
+
+.TRSfondoGrigioChiaro
+{COLOR: white;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ FONT-WEIGHT: bold;
+ BACKGROUND-COLOR: #C0C0C0}
+
+.TRSfondoGrigioScuro
+{COLOR: white;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #808080}
+
+TRSfondoGrigioScuroViola
+{COLOR: #800080;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #808080}
+
+.nolink
+{text-decoration: none;
+ color: #FFFFFF}
+
+.nolinkBlu
+{text-decoration: none;
+ color: #425A9B}
+
+.nolinkNero
+{text-decoration: none;
+ color: #000000}
+
+.nolinkArancio
+{text-decoration: none;
+ color: #FF6600}
+
+.silinkArancio
+{
+ color: #FF6600}
+
+.nolinkGiallo
+{text-decoration: none;
+ color: #FFCC00}
+
+.silinkGiallo
+{
+ color: #FECC00}
+
+.silinkBlu
+{color: #425A9B}
+
+.silinkNero
+{color: #000000}
+
+.silink
+{color: #FFFFFF}
+
+.NeroOnMouselinkBlu
+{text-decoration: none;
+ color: #000000}
+
+.NeroOnMouselinkBlu:hover
+{text-decoration: underline;
+color: #425A9B}
+
+.BluOnMouseNolinkGiallo
+{text-decoration: none;
+ color:#425A9B}
+
+.BluOnMouseNolinkGiallo:hover
+{text-decoration: none;
+ color: #FECC00}
+
+.Titolo1 {font-family: Verdana, Arial, helvetica; font-size: 14px; color: rgb(69,89,148); }
+.Titolo2 {font-family: Verdana, Arial, helvetica; font-size: 14px; color: rgb(69,89,148);}
+.Titolo3Verde {font-family: Verdana, Arial, helvetica; font-size: 14px; color: rgb(27,140,11);}
+.Titolo1Arancio {font-family: Verdana, Arial, helvetica; font-size: 14px; color: rgb(255,102,0); }
+.Titolo2Arancio {font-family: Verdana, Arial, helvetica; font-size: 14px; color: rgb(255,102,0);}
+
+
+.even { background-color:#E5E9F5;}
+.odd { background-color:#FFFFFF; }

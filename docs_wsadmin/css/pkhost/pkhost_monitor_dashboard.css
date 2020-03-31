@@ -1,0 +1,122 @@
+.dashboard {
+	/*position:absolute;*/
+	/*width:75%;*/
+	height:490px;
+	border:2px solid #CACACA;
+	/*margin:50px 50px 20px 20px;*/
+	background-color: #000000;
+}
+.left {
+	float:left;
+	width:330px;
+	height:490px;
+	border:2px solid #CACACA;
+	margin:0px 12px 20px 0px;
+	background-color: #000000;
+}
+.right {
+	float:left;
+	width:600px;
+	height:490px;
+	border:2px solid #CACACA;
+	margin:0px 0px 20px 0px;
+	background-color: #000000;
+}
+.left .window {
+	/*float:left;*/
+	width:90%;
+	height:42%;
+	background-color: #FFFFFF;
+	margin:8% 1% -8% 5%;
+}
+.right .window {
+	float:left;
+	width:45%;
+	height:42%;
+	background-color: #FFFFFF;
+	margin:4.5% 1% -1.5% 3%;
+}
+.dashboard .window .bar {
+	width:100%;
+	height:15%;
+	background-color: #CACACA;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid black;
+	color:#000000;
+	font-size: 18px;
+	font-weight:bold;
+	text-align: center;
+	padding-top:5px;
+}
+.dashboard .window .workspace {
+	width:100%;
+	height:75%;
+	margin:0;
+	padding:0;
+	color:#000000;
+	font-size: 18px;
+	border-bottom: 1px solid black;
+}
+.dashboard .window .workspace .counter {
+	width:20%;
+	font-size: 24px;
+	font-weight: bold;
+}
+.dashboard .window .workspace table {
+	width:80%;
+	margin-left:15px;
+	margin-right:15px;
+	background-color: #FFFFFF;
+	border:0;
+}
+dashboard .window .workspace td {
+	text-align:right;
+	border:0;
+}
+.dashboard .window .link {
+	width:100%;
+	height:10%;
+	margin:0;
+	padding:0;
+	font-size: 11px;
+	background-color: #CACACA;
+	text-align: right;
+	vertical-align: middle;
+}
+.dashboard .window .link a {
+	text-decoration: none;
+	color: #000000;
+	padding-top:8px;
+	padding-right:3px;
+}
+.dashboard .window .link a:HOVER {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#overlayer {
+	/*position:absolute;*/
+	width:950px;
+	height:490px;
+	margin:0px 50px 20px 20px;
+	position: absolute;
+	background-color: #000000;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+	display: none;
+	z-index: 1000;
+}
+#overlayer_text {
+	position: absolute;
+	width:200px;
+	height:50px;
+	padding: 0;
+	margin:220px auto auto 30%;
+	display: none;
+	z-index: 1001;
+	color: #CCCCCC;
+	text-align: center;
+}
+#overlayer_text img{
+	margin:5px 5px 5px 5px;
+}

@@ -1,0 +1,136 @@
+.ok { 
+	color: #7EBB00; 
+}
+.ko { 
+	color: #FF0000; 
+}
+.ack { 
+	color: #FDD017; 
+}
+.pageTitle {
+	/*position:absolute;*/
+	width:950px;
+	height:45px;
+	border:2px solid #CACACA;
+	margin:0px 50px 20px 20px;
+	background-color: #000000;
+   	color:#FFFFFF;
+   	font-size: 12px;
+   	font-weight: bold;
+   	vertical-align: middle;
+}
+.pageTitle .title{
+	float:left;
+	margin: 2px auto auto 2%;
+}
+.pageTitle .title table{
+	height:100%;
+}
+.pageTitle .filter {
+	margin: 1.5% auto auto 2%;
+	float:left;
+}
+.pageTitle .filter div {
+	margin: 1% auto auto 2%;
+}
+.pageTitle .filter submit{
+	vertical-align: bottom;
+}
+.container {
+	width:950px;
+	/*position:absolute;*/
+	margin:0px 50px 20px 20px;
+}
+.tablePk {
+	width:85%;
+	margin:0 0 40px 10px;
+	padding: 0;
+	border-spacing: 0px;
+	border: 1px solid black;
+	background-color: #FFFFFF;
+}
+.tablePk tr.pari {
+	background-color: #CACACA;	
+}
+.tablePk tr.dispari {
+	background-color: #FFFFFF;
+}
+.tablePk td{
+	background-color: #FFFFFF;
+	font-size: 9px;
+	padding:2px;
+	border: 1px solid black;
+}
+.tablePk td.head{
+	background-color:#000000;
+   	color:#FFFFFF;
+   	font-weight: bold;
+   	font-size: 10px;
+   	text-align: center;
+}
+.tablePk td.detail_header{
+	background-color:#4CC417;
+   	color:#000000;
+   	font-weight: bold;
+   	font-size: 14px;
+   	text-align: center;
+}
+.tablePk td.label {
+	background-color:#CACACA;
+	color:#000000;
+	font-weight: normal;
+	cursor: default;
+	font-size: 10px;
+}
+.tablePk td.alert_ack_button {
+	background-color: #CACACA;
+	text-align: center;	
+}
+.tablePk td div.message{
+	width:150px;
+	word-wrap:break-word;
+}
+.tablePk td.id{
+	font-weight:bold;
+}
+.tablePk td.amount {
+	text-align: right;
+}
+.tablePk td.status {
+	color: #FF0000;
+}
+.tablePk .sx{
+	width: 95px;
+}
+.tablePk .dx{
+	width: 270px;
+}
+.tablePk .error {
+	background-color:#FF0000;
+}
+.accordion {
+	margin-bottom:20px;
+}
+.accordion .title {
+	width:85%;
+	height: 30px;
+	background-color:#CACACA;
+	color:#000000;
+	font-weight: bold;
+	font-size: 16px;
+	float:left;
+	padding: 10px 0px 0px 10px;
+}
+.accordion .control {
+	width:10%;
+	height: 30px;
+	background-color:#EFEFEF;
+	color:#000000;
+	float:left;
+	cursor: pointer;
+	padding: 10px 20px 0px 10px;
+	text-align: right;
+}
+input.alert_ack_note {
+	width: 200px;
+}

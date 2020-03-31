@@ -1,0 +1,8 @@
+body {background:#fff; padding:0; margin:0; font-family: Tahoma, tahoma, Arial, Sans serif; color: #000; text-align: center; font-size: 11px;}
+
+.main {text-align:left;}
+.login {background: transparent url(../img/boxlogin.gif) no-repeat top left;width:314px; height:197px;margin:100px auto;}
+input {background:transparent;border:none}
+input.lgUser {margin:71px 0 0 135px;width:150px}
+input.lgPwd {margin:19px 0 0 135px;width:150px}
+input.lgSbt {margin:25px 0 0 235px;width:62px;background: transparent url(../img/btn_entra.gif) no-repeat top left;cursor:pointer}

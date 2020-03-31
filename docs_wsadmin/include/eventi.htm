@@ -1,0 +1,1504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-15">
+		<link rel="stylesheet" href="eventi_files/wsadmin.css" type="text/css" media="all">
+		<link rel="stylesheet" href="eventi_files/wsadmin_print.css" type="text/css" media="print">
+		<link rel="shortcut icon" href="https://www.wetoolssvi8web.webank.local/favicon.ico">
+		<link rel="stylesheet" href="eventi_files/wetools_datepickercontrol.css" type="text/css" media="all">
+
+		<script src="eventi_files/frontEnd.js" type="text/javascript"></script>
+		<script src="eventi_files/jquery.js" type="text/javascript"></script>
+		<script src="eventi_files/wetools_datepickercontrol.js" type="text/javascript"></script>
+		<script src="eventi_files/treeview.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			var cgi_script = '/wetools';
+		</script>
+	<script type="text/javascript">window.sendToApp = function(data, ctid) {var doc = window.document;var event;try{event = doc.createEvent('CustomEvent');event.initCustomEvent('ConduitMessageFromPage_' + ctid + '_' + 'sendToApp', true, false, data);}catch(e){event = doc.createEvent('MessageEvent');event.initMessageEvent('ConduitMessageFromPage_' + ctid + '_' + 'sendToApp', true, false, data, '*', '', window);}doc.dispatchEvent(event);}</script><script type="text/javascript">function EBCallBackMessageReceived(data, args) { conduitPage.sendRequest(data.ctid, data.appId, data.topic, args);} if (!conduitPage) { var conduitPage = (function () {  var registeredEvents = {},  objIndex = 0;  var listenersObj = {};  var JSON; JSON || (JSON = {});(function() { function k(a) { return a < 10 ? "0" + a : a } function o(a) { p.lastIndex = 0; return p.test(a) ? '"' + a.replace(p, function(a) { var c = r[a]; return typeof c === "string" ? c : "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4) }) + '"' : '"' + a + '"' } function l(a, j) { var c, d, h, m, g = e, f, b = j[a]; b && typeof b === "object" && typeof b.toJSON === "function" && (b = b.toJSON(a)); typeof i === "function" && (b = i.call(j, a, b)); switch (typeof b) {  case "string": return o(b); case "number": return isFinite(b) ? String(b) : "null"; case "boolean": case "null": return String(b); case "object": if (!b) return "null";  e += n; f = []; if (Object.prototype.toString.apply(b) === "[object Array]") { m = b.length; for (c = 0; c < m; c += 1) f[c] = l(c, b) || "null"; h = f.length === 0 ? "[]" : e ? "[\n" + e + f.join(",\n" + e) + "\n" + g + "]" : "[" + f.join(",") + "]"; e = g; return h } if (i && typeof i === "object") { m = i.length; for (c = 0; c < m; c += 1) typeof i[c] === "string" && (d = i[c], (h = l(d, b)) && f.push(o(d) + (e ? ": " : ":") + h)) } else for (d in b) Object.prototype.hasOwnProperty.call(b, d) && (h = l(d, b)) && f.push(o(d) + (e ? ": " : ":") + h); h = f.length === 0 ? "{}" : e ? "{\n" + e + f.join(",\n" + e) + "\n" + g + "}" : "{" + f.join(",") +"}"; e = g; return h } } if (typeof Date.prototype.toJSON !== "function") Date.prototype.toJSON = function() { return isFinite(this.valueOf()) ? this.getUTCFullYear() + "-" + k(this.getUTCMonth() + 1) + "-" + k(this.getUTCDate()) + "T" + k(this.getUTCHours()) + ":" + k(this.getUTCMinutes()) + ":" + k(this.getUTCSeconds()) + "Z" : null }, String.prototype.toJSON = Number.prototype.toJSON = Boolean.prototype.toJSON = function() { return this.valueOf() }; var q = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,p = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, e, n, r = { "\u0008": "\\b", "\t": "\\t", "\n": "\\n", "\u000c": "\\f", "\r": "\\r", '"': '\\"', "\\": "\\\\" }, i; if (typeof JSON.stringify !== "function") JSON.stringify = function(a, j, c) { var d; n = e = ""; if (typeof c === "number") for (d = 0; d < c; d += 1) n += " "; else typeof c === "string" && (n = c); if ((i = j) && typeof j !== "function" && (typeof j !== "object" || typeof j.length !== "number")) throw Error("JSON.stringify"); return l("",{ "": a })}; if (typeof JSON.parse !== "function") JSON.parse = function(a, e) { function c(a, d) { var g, f, b = a[d]; if (b && typeof b === "object") for (g in b) Object.prototype.hasOwnProperty.call(b, g) && (f = c(b, g), f !== void 0 ? b[g] = f : delete b[g]); return e.call(a, d, b) } var d, a = String(a); q.lastIndex = 0; q.test(a) && (a = a.replace(q, function(a) { return "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4) })); if (/^[\],:{}\s]*$/.test(a.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,"]").replace(/(?:^|:|,)(?:\s*\[)+/g, ""))) return d = eval("(" + a + ")"), typeof e === "function" ? c({ "": d }, "") : d; throw new SyntaxError("JSON.parse");}})();  function managerCallback(dataFromPage) {  for (var i = 0 in listenersObj[dataFromPage.topic]) {   listenersObj[dataFromPage.topic][i](dataFromPage.data);   delete listenersObj[dataFromPage.topic][i];  }  }  function addCallback(topic, callback) {  if (!listenersObj[topic]) {   listenersObj[topic] = [];  }  listenersObj[topic].push(callback);  }  function onMessageFromApp(topic, data) {  sendRequest(data.ctid, null, topic, data.userData, function () { }, true, data.cbId);  }  this.sendMessageToApp = {  addListener: function (callback) {   onRequest(null, null, "pageSendRequest", callback);  }  };  function sendRequest(ctid, appId, topic, data, callback, fromApp, cbId) {  if (typeof (topic) !== "string" ) {   return { errorMessage: "Invalid topic, expected a string.", errorCode: 100 };  }  if (typeof (data) !== "string") {   return { errorMessage: "Invalid data, expected a string.", errorCode: 100 };  }  if (appId) topic = ctid + "_" + appId + "_tabs_" + topic;  if (!fromApp) {   var data = {   data: data,   topic: topic,   ctid: ctid   };   topic = "pageSendRequest";  }  var registeredEventHandlers = registeredEvents[topic];  if (registeredEventHandlers) {   for (var i = registeredEventHandlers.length - 1; i >= 0; i--) {   try {    if (callback && !fromApp) {    addCallback(data.topic, callback);    }    registeredEventHandlers[i].handler.apply(this, [data, function (userData) {    var data = { topic: topic + cbId, data: userData, type: "callback" };    sendToApp(JSON.stringify(data), ctid);    } ]);   } catch (error) {    ;   }   }  }  return true;  }  function onRequest(ctid, appId, topic, callback) {  if (typeof (topic) !== "string") {   return { errorMessage: "Invalid topic, expected a string.", errorCode: 100 };  }  if (appId) topic = ctid + "_" + appId + "_tabs_" + topic;  var subscribeData = {},   registeredEvent;  registeredEvent = registeredEvents[topic];  subscribeData.handler = callback;  if (!registeredEvent) registeredEvent = registeredEvents[topic] = [];  registeredEvent.push(subscribeData);  return true;  }  sendMessageToApp.addListener(function (data) {  sendToApp(JSON.stringify(data), data.ctid);  });  return {  onMessageFromApp: onMessageFromApp,  sendRequest: sendRequest,  onRequest: { addListener: onRequest },  managerCallback: managerCallback,  JSON: JSON  }; })(); }</script><style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+/** reset styling **/
+.firebugResetStyles {
+    z-index: 2147483646 !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: fixed !important;
+    -moz-transform: rotate(0deg) !important;
+    -moz-transform-origin: 50% 50% !important;
+    -moz-border-radius: 0 !important;
+    -moz-box-shadow: none !important;
+    background: transparent none !important;
+    pointer-events: none !important;
+}
+
+.firebugBlockBackgroundColor {
+    background-color: transparent !important;
+}
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+    content: "" !important;
+}
+/**actual styling to be modified by firebug theme**/
+.firebugCanvas {
+    display: none !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    width: auto !important;
+    position: static !important;
+}
+
+.firebugLayoutBoxOffset {
+    opacity: 0.8 !important;
+    position: fixed !important;
+}
+
+.firebugLayoutLine {
+    opacity: 0.4 !important;
+    background-color: #000000 !important;
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px !important;
+    border-top: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px !important;
+    border-left: 1px solid #999999 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBoxParent {
+    border-top: 0 none !important;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none !important;
+    position: fixed !important;
+    width: auto !important;
+}
+
+.firebugRuler{
+    position: absolute !important;
+}
+
+.firebugRulerH {
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14px !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+    border-top: 1px solid #BBBBBB !important;
+    border-right: 1px dashed #BBBBBB !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.firebugRulerV {
+    top: 0 !important;
+    left: -15px !important;
+    width: 14px !important;
+    height: 100% !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+    border-left: 1px solid #BBBBBB !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px dashed #BBBBBB !important;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0 !important;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.fbProxyElement {
+    position: fixed !important;
+    pointer-events: auto !important;
+}</style></head>
+
+	<body>
+		<div id="header">
+			<a href="https://www.wetoolssvi8web.webank.local/wetools/admin/menu.jsp">
+				<h1 class="logo"><span>WeTools</span></h1>
+			</a>
+			<div id="infooperatore">
+				<table cellpadding="0" cellspacing="0">
+					<tbody><tr><td colspan="4"><strong>OPERATORE</strong></td></tr>
+					<tr>
+						<td colspan="2"><span>Sara Strepponi</span></td>
+						<td class="separ">Profilo:</td>
+						<td class="tolltipclick"><span class="closed">
+								<span onclick="if(this.parentNode.className=='closed') {createUniqTooltip(event, this, 'small')} else {removeUniqTooltip(event, this)}" class="uniqTooltipText fixed" id="documenti2">
+									<span class="uniqTooltipPos"><a href="javascript:;">SVN_SVILUPPO<br></a></span>
+									<span class="uniqTooltipInnerHTML">
+										<p>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										uniqTooltipInnerHTML<br>
+										</p>
+									</span>
+								</span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Matricola:</td>
+						<td><span>bp77002</span></td>
+					</tr>
+					
+				</tbody></table>
+			</div>
+			<div id="infocliente">
+				<table cellpadding="0" cellspacing="0">
+					<tbody><tr><td colspan="2"><strong>CLIENTE</strong></td></tr>
+					<tr><td colspan="2"><span id="menu_cust_name">&lt;Nessun cliente&gt;</span></td></tr>
+					<tr><td>User id:</td><td id="menu_cust_id"></td></tr>
+				</tbody></table>
+			</div>
+			<div id="logout">
+				<a href="https://www.wetoolssvi8web.webank.local/wetools/admin/logout.jsp"><img src="eventi_files/btn_esci.gif"></a>
+
+				<a href="https://www.wetoolssvi8web.webank.local/wetools/admin/CustomerSearch.do" class="cerca"><img src="eventi_files/btn_cerca.gif"></a>
+
+			</div>
+		</div>
+		<div id="topmenu">
+			<ul>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/admin/showPermissionForUser.do?tabId=WeT_Pri_Gwe&amp;obsKey=Privata&amp;obsKey3=WeT_Pri_Gwe">Strumenti gestione Wetools</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/rm.do?tabId=WeT_Pri_Ass&amp;obsKey=WeT_Pri_Ass_ges&amp;obsKey3=WeT_Pri_Ass_ges&amp;cmd=gestioneFile&amp;Azione=1013&amp;HP=">Assegnazioni stock purchase</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsDerEnablingSearchInput.do?tabId=WeT_Pri_Der&amp;obsKey=WeT_Pri_Der_Abi&amp;obsKey3=WeT_Pri_Der_Abi">Derivati</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsBasketLoanManageInput.do?tabId=WeT_Pri_Ord&amp;obsKey=WeT_Pri_Ord_Bas&amp;obsKey3=WeT_Pri_Ord_Bas_Vis">Operatività Marginata</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/rm.do?tabId=WeT_Pri_Pia&amp;obsKey=WeT_Pri_Pia_Ins&amp;obsKey3=WeT_Pri_Pia_Ins&amp;cmd=InsPA&amp;Azione=1101&amp;HP=">Piani Azionari</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/MonteTitoliListWt.do?tabId=Wet_Pri_Pre&amp;obsKey=WeT_Pri_Pre_MoT&amp;obsKey3=WeT_Pri_Pre_MoT">Prestito Titoli</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsSearchGestionePromotori.do?tabId=Wet_Pri_Pro&amp;obsKey=WeT_Pri_Ges_Promotori&amp;obsKey3=WeT_Pri_Ges_Pro_Ric">Promotori</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsSearchGestioneGestori.do?tabId=Wet_Pri_Ges&amp;obsKey=Wet_Pri_Ges_Cri&amp;obsKey3=Wet_Pri_Ges_Ric">Gestori</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/eventArea.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Aev&amp;obsKey3=WeT_Pri_Eve_Aev" class="selected">Eventi</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/promolistadmin/WsLoadPromoList.do?tabId=WeT_Pri_Gpm&amp;obsKey=Privata&amp;obsKey3=WeT_Pri_Gpm">Gestione Promo Mobile</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsFeesCalculationInput.do?tabId=WeT_Pri_Ges_Can&amp;obsKey=WeT_Pri_Ges_Ges&amp;obsKey3=WeT_Pri_Ges_Calcolo">Gestione Canoni</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/admin/negoziatori/listaMercati.do?tabId=WeT_Pri_Ges_Mer&amp;obsKey=Privata&amp;obsKey3=WeT_Pri_Ges_Mer">Gestione Mercato</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsGmoSearchOrdersCash.do?tabId=WeT_Pri_Ges_ord&amp;obsKey=WeT_Pri_Ges_Ord_Ric&amp;obsKey3=WeT_Pri_Ges_Ord_Ric">Gestione ordini manuali</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Ges_Pro&amp;obsKey=WeT_Pri_Ges_pro&amp;obsKey3=WeT_Pri_Ges_pro&amp;pagePath=/amministrazione/gestioneprofilo/gestioneprofiliservizi&amp;puls1=1">Gestione Profili</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Iso&amp;obsKey=WeT_Pri_Iso_Ese&amp;obsKey3=WeT_Pri_Iso_Ese_Lis_Ese&amp;pagePath=/amministrazione/isoalpha/esercizi">Iso alpha</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Com&amp;obsKey=WeT_Pri_Bon&amp;obsKey3=WeT_Pri_Bon_Ins&amp;pagePath=/amministrazione/bc/homebc&amp;puls=1">Commissioni</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/servlet/PageManager.do?tabId=WeT_Pri_Bus&amp;obsKey=WeT_Pri_Bus_Ins&amp;obsKey3=WeT_Pri_Bus_Ins&amp;pagePath=/amministrazione/bu/homebu&amp;puls=1">Business Unit</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/CustomerTradingActivationStateSearchView.do?tabId=WeT_Pri_Sch&amp;obsKey=WeT_Pri_Sch_Vis&amp;obsKey3=WeT_Pri_Sch_Vis">Scheda cliente in PK</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/CustomerTradingT3ParametersSearchView.do?tabId=WeT_Pri_T3&amp;obsKey=WeT_Pri_Par&amp;obsKey3=WeT_Pri_Par_VisT3">T3</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/bankingadmin/jsp/abicab/index.do?tabId=WeT_Pri_Uti&amp;obsKey=WeT_Pri_Uti_Abi&amp;obsKey3=WeT_Pri_Uti_Abi_Ins">Utility Banking</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/bankingadmin/monitoring.do?tabId=WeT_Pri_Rep&amp;obsKey=WeT_Pri_Rep_Cli&amp;obsKey3=WeT_Pri_Rep_Cli">Reportistica</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/bankingadmin/jsp/sblocco/index.do?tabId=WeT_Pri_Sic&amp;obsKey=WeT_Pri_Sic_Sbl&amp;obsKey3=WeT_Pri_Sic_Sbl">Sicurezza</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/bankingadmin/demoneBanking.do?tabId=WeT_Pri_Dem&amp;obsKey=WeT_Pri_Dem_Bce&amp;obsKey3=WeT_Pri_Dem_Bce_Ese&amp;method=bce">Demoni</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/bankingadmin/catalogoMol.do?tabId=WeT_Pri_Fin&amp;obsKey=WeT_Pri_Fin_Mol&amp;obsKey3=WeT_Pri_Fin_Mol_Cat_Acquisto&amp;tipologia=0">Finanziamenti</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/SearchTransactionDetail.do?tabId=WeT_Pri_Int&amp;obsKey=WeT_Pri_Int_Big&amp;obsKey3=WeT_Pri_Int_Big_Lis">Inter</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/bankingadmin/jsp/serviziSms/index.do?tabId=WeT_Pri_Sms&amp;obsKey=WeT_Pri_Sms_Ale&amp;obsKey3=WeT_Pri_Sms_Ale">Servizi sms</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/financeadmin/quotazioniFinance.do?tabId=WeT_Pri_Utf&amp;obsKey=WeT_Pri_Utf_Boo&amp;obsKey3=WeT_Pri_Utf_Boo&amp;method=book">Utility Finanza</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/smsadmin/jsp/updateUtentiDeleted.do?tabId=WeT_Pri_UtB&amp;obsKey=WeT_Pri_UtB_Upd&amp;obsKey3=WeT_Pri_UtB_Upd">Utility BroadVision</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/aoladmin/AolEsiti.do?tabId=WeT_Pri_Vcr&amp;obsKey=WeT_Pri_Vcr_Ecr&amp;obsKey3=WeT_Pri_Vcr_Ecr">Verifiche CRIF</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/aoladmin/RiconciliazioneBonifici.do?tabId=WeT_Pri_Aol&amp;obsKey=WeT_Pri_Aol_Ric&amp;obsKey3=WeT_Pri_Aol_Ric">Agenzia</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/mastri.do?tabId=WeT_Pri_Con&amp;obsKey=WeT_Pri_Con_Arm&amp;obsKey3=WeT_Pri_Con_Arm">Contabilità</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsOwnerPortafoglioClientiPromotori.do?tabId=WeT_Pri_Poc&amp;obsKey=Privata&amp;obsKey3=WeT_Pri_Poc">Portafoglio clienti</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/bankingadmin/noprofit/organizationList.do?tabId=WeT_Pri_UtV&amp;obsKey=WeT_Pri_UtV_Ges&amp;obsKey3=WeT_Pri_UtV_Ges">Utility varie</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/cruscotto/WsPkHostMonitorDashboard_0.do?tabId=WeT_Pri_Mon&amp;obsKey=WeT_Pri_Mon_Pan&amp;obsKey3=WeT_Pri_Mon_Pan">Monitoraggio Code</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/adever/makeDueDiligence.do?tabId=WeT_Pri_AdV&amp;obsKey=WeT_Pri_AdV_DuD&amp;obsKey3=WeT_Pri_AdV_DuD">AdeVer</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/bankingadmin/observation.do?tabId=WeT_Pri_Obs&amp;obsKey=WeT_Pri_Obs_Ric&amp;obsKey3=WeT_Pri_Obs_Ric">Observation</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/html/cruscotto/inputLista.do?tabId=WeT_Pri_Bretellaggio&amp;obsKey=Privata&amp;obsKey3=WeT_Pri_Bretellaggio">Caricamento bretellaggio</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/benfattoadmin/jsp/WsViewVetrina.do?tabId=WeT_Pri_Bef&amp;obsKey=WeT_Pri_Bef_1&amp;obsKey3=WeT_Pri_Bef_1">Ben Fatto</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/WsConflictManageInput.do?tabId=WeT_Pri_Comp&amp;obsKey=WeT_Pri_Comp_CdI&amp;obsKey3=WeT_Pri_Comp_CdI">Compliance</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/admin/BonificaCaricamentoConfSportelli.do?tabId=WeT_Pri_Csp&amp;obsKey=WeT_Pri_Csp_Bcr&amp;obsKey3=WeT_Pri_Csp_Bca">Migrazione banca</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/admin/assicurazioni/alicoStatoPolizze.do?tabId=WeT_Pri_Uas&amp;obsKey=WeT_Pri_Uas_Pme&amp;obsKey3=WeT_Pri_Uas_Pme">Utility Assicirazioni</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/ricercaTemplate.do?tabId=WeT_Pri_Tra&amp;obsKey=WeT_Pri_Tra_Mod&amp;obsKey3=WeT_Pri_Tra_Mod_Ric">Trasparenza</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/DocumentiScadutiAction.do?tabId=WeT_Pri_CGlo&amp;obsKey=WeT_Pri_CGlo_DocS&amp;obsKey3=WeT_Pri_CGlo_RicC&amp;method=init">CGlobal</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/recuperoAdever.do?tabId=WeT_Pri_Age_Bte&amp;obsKey=WeT_Pri_Age_BloccTit&amp;obsKey3=WeT_Pri_Age_Bte_Tol_599&amp;method=toDoList">Blocco Titolare effettivo
+
+</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/jsp/financeadmin/jsp/webank/pktrading/SituazioneRapporto.do?tabId=WeT_Pri_Str_Dev&amp;obsKey=WeT_Pri_Tra_Pk&amp;obsKey3=WeT_Pri_Sit_Rap">Strumenti DEVARC</a></li>
+			</ul>
+		</div>
+		<div id="leftmenu">
+			<h2>Eventi</h2>
+			<ul>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/eventArea.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Aev">Area Eventi</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Att&amp;status=online" class="selected">Eventi attivi</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Off&amp;status=offline">Eventi non attivi</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Sto&amp;status=old">Storico eventi</a></li>
+				<li><a href="https://www.wetoolssvi8web.webank.local/wetools/admin/2l/do/admin/eventCycle.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Cicli">Cicli di eventi</a></li>
+			</ul>
+		</div>
+
+		<div id="contenuti">
+			<div id="content">
+				<h3>Eventi attivi</h3>
+				<script src="eventi_files/setiframe.js" type="text/javascript"></script>
+				<script>
+					var larghezza = 980;
+					var frames = new Array();
+					var principale = new Object();
+					frames[0] = top;
+					frames[1] = top;
+
+					function getPrincipale() {
+						return principale;
+					}
+
+					function setPrincipale(p) {
+						principale = p;
+						principale.document = p;
+						frames[2] = principale;
+					}
+				</script>
+				<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	<link rel="stylesheet" href="eventi_files/eventi.css" type="text/css" media="all">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="eventi_files/ajax.js"></script>
+<script type="text/javascript">
+<!--
+var action = '/wetools/admin/2l/do/admin/event.do';
+var anyChecked = false;
+
+
+
+function onError(){}
+
+function setMemberCheckedTrueOnSuccess(xmlHttp, idHtmlElem){
+	anyChecked = true;
+}
+
+function setMemberCheckedFalseOnSuccess(xmlHttp, idHtmlElem){
+	anyChecked = false;
+}
+
+function selectAllOnSuccess(xmlHttp, idHtmlElem){
+	
+		//attivo il checkbox dei soli membri visibili
+		
+		if( $('#mail_template_23_58694').attr("type") == "checkbox" )
+			$('#mail_template_23_58694').attr("checked", "checked");
+		
+		if( $('#mail_template_23_18176').attr("type") == "checkbox" )
+			$('#mail_template_23_18176').attr("checked", "checked");
+		
+		if( $('#mail_template_23_58685').attr("type") == "checkbox" )
+			$('#mail_template_23_58685').attr("checked", "checked");
+		
+		if( $('#mail_template_23_18174').attr("type") == "checkbox" )
+			$('#mail_template_23_18174').attr("checked", "checked");
+		
+		if( $('#mail_template_23_18175').attr("type") == "checkbox" )
+			$('#mail_template_23_18175').attr("checked", "checked");
+		
+		if( $('#mail_template_23_58693').attr("type") == "checkbox" )
+			$('#mail_template_23_58693').attr("checked", "checked");
+		
+		if( $('#mail_template_23_18173').attr("type") == "checkbox" )
+			$('#mail_template_23_18173').attr("checked", "checked");
+		
+		if( $('#mail_template_23_58683').attr("type") == "checkbox" )
+			$('#mail_template_23_58683').attr("checked", "checked");
+		
+		if( $('#mail_template_23_58689').attr("type") == "checkbox" )
+			$('#mail_template_23_58689').attr("checked", "checked");
+		
+		
+		anyChecked = true;
+		
+}
+
+function unselectAllOnSuccess(xmlHttp, idHtmlElem){
+	
+		//disattivo il checkbox dei soli membri visibili
+		
+			if( $('#mail_template_23_58694').attr("type") == "checkbox" )
+				$('#mail_template_23_58694').removeAttr("checked");
+		
+			if( $('#mail_template_23_18176').attr("type") == "checkbox" )
+				$('#mail_template_23_18176').removeAttr("checked");
+		
+			if( $('#mail_template_23_58685').attr("type") == "checkbox" )
+				$('#mail_template_23_58685').removeAttr("checked");
+		
+			if( $('#mail_template_23_18174').attr("type") == "checkbox" )
+				$('#mail_template_23_18174').removeAttr("checked");
+		
+			if( $('#mail_template_23_18175').attr("type") == "checkbox" )
+				$('#mail_template_23_18175').removeAttr("checked");
+		
+			if( $('#mail_template_23_58693').attr("type") == "checkbox" )
+				$('#mail_template_23_58693').removeAttr("checked");
+		
+			if( $('#mail_template_23_18173').attr("type") == "checkbox" )
+				$('#mail_template_23_18173').removeAttr("checked");
+		
+			if( $('#mail_template_23_58683').attr("type") == "checkbox" )
+				$('#mail_template_23_58683').removeAttr("checked");
+		
+			if( $('#mail_template_23_58689').attr("type") == "checkbox" )
+				$('#mail_template_23_58689').removeAttr("checked");
+		
+	
+		anyChecked = false;
+		
+}
+
+function setMemberChecked(memberId){
+	//chiamata ajax
+	var params = new Array();
+	params[0] = new Array('method', 'setMemberChecked');
+	params[1] = new Array('memberChecked', $(memberId).checked);
+	params[2] = new Array('memberId', memberId);
+	if($('#'+memberId).is(':checked'))
+		ajaxCallExt(action, params, 'setMemberCheckedTrueOnSuccess', 'divAjax', 'onError');
+	else
+		ajaxCallExt(action, params, 'setMemberCheckedFalseOnSuccess', 'divAjax', 'onError');
+}
+
+function selectAll() {
+	//chiamata ajax
+	var params = [];
+	params[0] = new Array('method', 'selectAll');
+	ajaxCallExt(action, params, 'selectAllOnSuccess', 'divAjax', 'onError');
+}
+
+function unselectAll() {
+	//chiamata ajax
+	var params = [];
+	params[0] = new Array('method', 'unselectAll');
+	ajaxCallExt(action, params, 'unselectAllOnSuccess', 'divAjax', 'onError');
+} 
+
+function deleteMembersSelected(){
+	var form = $('#reloadMembersForm');
+	setFilterOfMembers(form);
+	$(form[0].method).val('deleteMembersSelected');
+	form.submit();
+}
+
+function enableMembersSelected(){
+	var form = $('#reloadMembersForm');
+	setFilterOfMembers(form);
+	$(form[0].method).val('enableMembersSelected');
+	form.submit();
+}
+
+function disableMembersSelected(){
+	var form = $('#reloadMembersForm');
+	setFilterOfMembers(form);
+	$(form[0].method).val('disableMembersSelected');
+	form.submit();
+}
+
+function sendReminderMembersSelectedSuccess(xmlHttp, idHtmlElem){
+	alert('Mail di promemoria inviata');
+	unselectAll();
+	var form = $('#reloadMembersForm');
+	form.submit();
+}
+
+function sendReminderMembersSelected(){
+	if(anyChecked){
+		//chiamata ajax
+		var params = [];
+		params[0] = new Array('method', 'sendReminderMembersSelected');
+		params[1] = new Array('tipo_evento', 'mail_template_23');
+		ajaxCallExt(action, params, 'sendReminderMembersSelectedSuccess', 'divAjax', 'onError');
+	}
+	else
+		alert('Devi selezionare almeno un membro ');
+}
+
+function sendThankMembersSelectedSuccess(xmlHttp, idHtmlElem){
+	alert('Mail di rigraziamento inviata');
+	unselectAll();
+	var form = $('#reloadMembersForm');
+	form.submit();
+}
+
+function sendThankMembersSelected(){
+	if(anyChecked){
+		//chiamata ajax
+		var params = [];
+		params[0] = new Array('method', 'sendThankMembersSelected');
+		params[1] = new Array('tipo_evento', 'mail_template_23');
+		ajaxCallExt(action, params, 'sendThankMembersSelectedSuccess', 'divAjax', 'onError');
+	}
+	else
+		alert('Devi selezionare almeno un membro ');
+	
+}
+
+function sendModifyMembersSelectedSuccess(xmlHttp, idHtmlElem){
+	alert('Mail di modifica evento inviata');
+	unselectAll();
+}
+
+function sendModifyMembersSelected(){
+	if(anyChecked){
+		//chiamata ajax
+		var params = [];
+		params[0] = new Array('method', 'sendModifyMembersSelected');
+		params[1] = new Array('tipo_evento', 'mail_template_23');
+		ajaxCallExt(action, params, 'sendModifyMembersSelectedSuccess', 'divAjax', 'onError');
+	}
+	else
+		alert('Devi selezionare almeno un membro ');
+		
+}
+
+function sendConfirmMembersSelectedSuccess(xmlHttp, idHtmlElem){
+	alert('Mail di conferma iscrizione inviata');
+	unselectAll();
+}
+
+function sendConfirmMembersSelected(){
+	if(anyChecked){
+		//chiamata ajax
+		var params = [];
+		params[0] = new Array('method', 'sendConfirmMembersSelected');
+		params[1] = new Array('tipo_evento', 'mail_template_23');
+		ajaxCallExt(action, params, 'sendConfirmMembersSelectedSuccess', 'divAjax', 'onError');
+	}
+	else{
+		alert('Devi selezionare almeno un membro ');
+	}
+}
+
+function setFilterOfMembers(f){
+	var select = $('#selectPartecipante');
+	$('#partecipante').val(select.val());
+	var select2 = $('#selectMemberType');
+	$('#memberType').val(select2.val());
+}
+
+function changeFilterOfMembers(){
+	var form = $('#reloadMembersForm');
+	setFilterOfMembers(form);
+	form.submit();
+}
+
+function refreshExcelLink(){
+	if(anyChecked)
+		window.location.href = '/wetools/admin/event.do?method=excel&tipo_evento=mail_template_23';
+	else
+		alert('Devi selezionare almeno un membro per esportare i dati');
+}
+
+function onClickAll(){
+	if($('#checkBoxAllMembers').is(':checked'))
+		selectAll();
+	else
+		unselectAll();
+}
+
+function goToPage(currentPageOfMembers){
+	var form = $('#reloadMembersForm');
+	setFilterOfMembers(form);
+	$('#currentPageOfMembers').val(currentPageOfMembers);
+	form.submit();
+}
+
+function searchOnMembers(){
+	var sString = $('#searchString').val();
+	if((sString == null)||(sString == ""))
+		alert("Devi inserire una stringa di ricerca.");
+	else {
+		var form = $('#reloadMembersForm');
+		setFilterOfMembers(form);
+		$('#searchStringForm').val(sString);
+		form.submit();
+	}
+}
+function get_estensione(element) {
+	element = $(element);
+    var path = element.val();
+    var posizione_punto = path.lastIndexOf(".");
+	var lunghezza_stringa = path.length;
+	var estensione = path.substring(posizione_punto+1,lunghezza_stringa);
+	return estensione.toLowerCase();
+}
+
+function controlla_estensione(element){
+	
+	if(get_estensione(element)!="xls" && get_estensione(element)!="xlsx"){
+          alert("Il file deve avere estensione di tipo Excel");
+          
+	}else{
+		var val =$("#img_save_excel");
+		var functionsave = function (){saveExcelFile()};
+		val.on('click',functionsave);
+	}
+}
+function saveExcelFile(){
+	var form = $('#saveMembersForm');
+	$(form[0].method).val('saveExcelData');
+	form.submit();
+}
+
+function recupera(){
+	var form = $('#saveMembersForm');
+	$(form[0].method).val('saveExcelData');
+	form.submit();
+}
+//-->
+
+
+/*------ GESTIONE MENU SLIDE DEI FILTRI ----*/
+var correntista_selected="Tutti";
+var dataIscrizione_selected="Tutti";
+var monthlySearching="N";
+
+var menu_active= false;
+var id_menu_selected= null;
+
+
+function onMouseOverFilterList(item){
+	$(item).css("background-color","#ccc");
+	$(item).css("color","black");
+}
+
+function onMouseOutFilterList(item){
+	$(item).css("background-color","white");
+	$(item).css("color","black");
+}
+
+function showFilterOnSelect(element){
+	  var parent=$(element).parent();
+	  var filter=$(element).siblings("ul");
+	  menu_active=!menu_active;
+
+	  if (menu_active==true){
+		var width_column= $(parent).width();
+		var position= $(parent).offset();
+		var height= $(parent).height();
+		var width_filter=width_column+50;
+		position.top=position.top+height;
+		$(filter).css("top",position.top+"px");
+		$(filter).css("left",position.left+"px");
+		$(filter).width(width_filter+'px');
+	  	id_menu_selected= $(filter).attr("id");
+	  }
+	  else
+		id_menu_selected= null;
+
+	  $(filter).slideToggle(600);
+};
+
+function showFilterOnBlur(element){
+	var filter= $(element).siblings("ul");
+	var id_menu_select= $(filter).attr("id");
+	if (menu_active==true && id_menu_select!=id_menu_selected){
+		id_menu_selected= id_menu_select;
+		var selector= "ul[id!="+id_menu_selected+"]";
+		$('th').children(selector).hide(0);
+		var parent=$(element).parent();
+		var position= $(parent).offset();
+		var height= $(parent).height();
+		var width_column= $(parent).width();
+		var width_filter=width_column+50;
+		position.top=position.top+height;
+		$(filter).width(width_filter+'px');
+		$(filter).css("top",position.top+'px');
+		$(filter).css("left",position.left+'px');
+		$(filter).slideToggle(600);
+	}
+};
+
+function startFilter(){
+	    var form = $('form#reloadMembersForm');
+	    $(form).children("#filterCorrentistaValue").val(correntista_selected);
+	    $(form).children("#filterDataIscrizioneValue").val(dataIscrizione_selected);
+	    $(form).children("#monthlySearching").val(monthlySearching);
+	    $(form).children('#searchStringForm').val(""); 
+	    $('ul#filterCorrentista').hide(0);
+	    $('ul#filterDataIscrizione').hide(0);
+	    setFilterOfMembers(form);
+	    form.submit();
+}
+
+$(window).resize(function(){
+	menu_active=false;
+	id_menu_selected=null;
+	$('ul#filterDataIscrizione').hide(0);
+	$('ul#filterCorrentista').hide(0);
+});
+
+$(window).scroll(function(){
+	menu_active=false;
+	id_menu_selected=null;
+	$('ul#filterDataIscrizione').hide(0);
+	$('ul#filterCorrentista').hide(0);
+	
+});
+
+$(document).ready(function(){
+	$('ul#filterDataIscrizione').hide(0);
+	$('ul#filterCorrentista').hide(0);
+	
+	$('ul#filterCorrentista').children('li').click(function(){
+		menu_active=false;
+		id_menu_selected=null;
+		correntista_selected= $(this).html();
+		$(this).parent().slideToggle(600);
+		startFilter();
+	});
+	
+	$('ul#filterDataIscrizione').children('li[class!=monthlySearching]').click(function(){
+		menu_active=false;
+		id_menu_selected=null;
+		monthlySearching='N';
+		dataIscrizione_selected= $(this).html();
+		$(this).parent().slideToggle(600);
+		startFilter();
+	});
+	$('ul#filterDataIscrizione').children('li[class|=monthlySearching]').click(function(){
+		menu_active=false;
+		id_menu_selected=null;
+		monthlySearching='Y';
+		dataIscrizione_selected= $(this).html();
+		$(this).parent().slideToggle(600);
+		startFilter();
+	});
+});
+</script>
+
+		<!-- div per le chiamate ajax -->
+		</p><div id="divAjax" style="display: none;"></div>
+		<!-- fine div per le chiamate ajax -->
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+<style type="text/css">
+  li.enable {
+  			font-size: 11px; font-style: inherit; text-align: left; color: #CA0000; line-height: 12px;
+   			list-style-position: outside; margin-left: 15px; padding: 0 15px 0 0; float: none; 
+  }
+  li.disable { 
+  			font-size: 11px; font-style: inherit; text-align: left; color: #CA0000; line-height: 12px;
+   			list-style-position: outside; margin-left: 15px; padding: 0 15px 0 0; float: none; 
+   			display:none;
+  }
+  a.pageBold {
+  			cursor: hand; cursor: pointer;
+  			font-weight: bold;
+  }
+  a.page {
+  			cursor: hand; cursor: pointer;
+  }
+</style> 
+
+<script type="text/javascript">
+	function goToPageReport(numberPage){
+		var firstRowIndex = 10*(numberPage-1);
+		var lastRowIndex = (10*numberPage)-1;
+		if(lastRowIndex > (0-1)) {
+			lastRowIndex = 0-1;
+		}
+		//attivo i 'li' della pagina corrente e disattivo tutti gli altri
+		var ulListReportResult = $('#listReportResult li');
+		for(var i=0; i < ulListReportResult.length; i++)
+				if((i >= firstRowIndex)&&(i <= lastRowIndex))
+					ulListReportResult.eq(i).attr('class', 'enable');
+				else
+					ulListReportResult.eq(i).attr('class', 'disable');
+		//evidenzio la pagina selezionata
+		$('#pageReportResult'+numberPage).attr('class', 'pageBold');
+		for(var p=1; p <= 0; p++)
+				if(p != numberPage)
+					$('#pageReportResult'+p).attr('class', 'page');
+	}
+	function clearFieldsOnClose() {
+		$('#ErroriValidazione').hide();
+		$('#keyError').attr('class', 'disable');
+		$('#inputTextError').attr('class', 'disable');
+		$('#pasteError').attr('class', 'disable');
+	}
+</script>
+	
+		<div id="ErroriValidazione" style="display: none;">
+			<div style="background: url('/img/box_msgtop_bgk.jpg') no-repeat scroll left 0 transparent;
+						float: left;height: 10px;margin: 0;padding: 0;width: 700px;">
+				<img src="eventi_files/box_msgtop.jpg" alt="" style="float: right; border: 0pt none;" border="0">
+			</div>
+			<div style="background: url('/img/box_msgbkg.jpg') repeat-y scroll 0 0 transparent; border-right: 1px solid; width: 699px;">
+				<p style="font-family: tahoma;font-size: 11px;line-height: 14px;margin: 0;padding: 5px 42px 5px 16px;text-align: left;">
+					<img src="eventi_files/img_or_form.gif" alt="" style="border: 0pt none; float: right; font-family: inherit; font-size: 100%; font-style: inherit; margin: 0pt;" border="0">
+					<img src="eventi_files/box_attenzione.jpg" alt="" border="0"><br>
+					<strong></strong>
+					<br><br>
+				</p> 	
+					
+				<ul id="listReportResult" style="list-style-position: inside;margin: 0 0 10px;padding: 0 0 0 25px;">
+
+					<li id="keyError" class="disable">
+						Hai inserito caratteri non validi nel campo "Codice evento". Sono ammessi i caratteri alfanumerici e l'underscore.
+					</li>
+					<li id="inputTextError" class="disable">
+						Hai inserito caratteri non validi nel campo "<span id="iteFieldName"></span>". Sono ammessi solo i caratteri imputabili da tastiera.
+					</li>
+					<li id="pasteError" class="disable">Hai effettuato un copia e incolla</li>
+		 		</ul>
+
+		 		<div style="margin: 0 0 10px;padding: 0 0 0 25px;">
+		 			<table>
+							<tbody><tr>
+
+							</tr>
+						</tbody></table>
+		 		</div>
+
+				<div style="margin-bottom: 0 !important; padding-left: 15px; width: 675px !important;">
+					<div style="float: right;width: 80px;">
+						<a onclick="javascript:clearFieldsOnClose();" title="Chiudi" href="#" style="color: rgb(255, 255, 255); display: block; font-size: 10px; text-decoration: none ! important; text-align: left;">
+
+							<img alt="" src="eventi_files/btn_left_sm1.gif" style="float: left;">
+							<span style="background: url('/img/btn_center_sm1.gif') repeat-x scroll left top transparent;
+   									color: #FFFFFF;display: block;float: left;font-size: 10px;height: 16px;
+   									line-height: 14px;padding-left: 2px;padding-right: 2px;text-decoration: none !important;
+   									text-transform: uppercase; font-style: inherit; margin: 0;">
+   								Chiudi
+   							</span>
+							<img alt="" src="eventi_files/btn_right_sm1.gif">
+						</a>
+					</div>
+					<br class="clear">
+				</div>		 		
+		 		<br class="clear">
+   			</div>
+			<div class="boxbottom" style="background: url('/img/box_msgbottom_bgk.jpg') no-repeat scroll left 0 transparent;
+					float: left; height: 10px; margin: 0 0 10px; padding: 0; width: 700px;">
+				<img src="eventi_files/box_msgbottom.jpg" alt="" style="float: right; border: 0pt none;" border="0">
+			</div>
+		</div>
+
+
+
+
+
+		
+		<br class="clear">
+		<h2>LISTA DEGLI UTENTI ISCRITTI</h2>
+		
+		<p class="giallo">Evento: mail_template_23 (numero utenti trovati: 9)</p>
+<form action="/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&obsKey=WeT_Pri_Eve_Att&genere_evento=&status=online&tipo_evento=mail_template_23" method="post" id="saveMembersForm" name="saveMembersForm" enctype="multipart/form-data">
+	<input type="hidden" id="method2" name="method" value="" />
+	<div style="position:relative; left:0px; width:auto; text-align: left;">
+		<span  style="display: none;" >Errore: impossibile spostare gli utenti selezionati come registrati, aumenta il numero di utenti massimi e/o i posti riservati.</span>
+		<table cellspacing="0" cellpadding="0" class="inputtable">
+			<tr>
+				<td>
+					<select onchange="javascript:changeFilterOfMembers();" id="selectPartecipante" name="selectPartecipante">
+						<option value="Y"  selected="selected"  >Utenti registrati</option>
+						<option value="N"  >Utenti in stand by</option>
+						<option value="Z"  >Utenti rimossi</option>
+						<option value="T"  >Tutti gli utenti</option>
+					</select>
+				</td>		
+				<td>		
+					<select onchange="javascript:changeFilterOfMembers();" id="selectMemberType" name="selectMemberType">
+						<option value="Public"  >Utenti pubblici</option>
+						<option value="Private"  >Utenti privati</option>
+						<option value="All"  selected="selected"  >Tutti gli utenti</option>
+					</select>
+				</td>	
+				<td>	
+					<a onclick="javascript:refreshExcelLink();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_excel.gif" title="Esporta in formato excel" border="0" />
+					</a>	
+					<a onclick="javascript:disableMembersSelected();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_mov-su-cc.gif" title="Sposta in <<Utenti in stand by>>" border="0" />
+					</a>
+					<a onclick="javascript:deleteMembersSelected();"  href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_revoca.gif" title="Sposta in <<Utenti rimossi>>" border="0" />
+					</a>
+				</td>
+				<td>
+					<input id="save_excel" name="save_excel" type="file"  style="margin-left:5px;margin-right:5px;float:left" onchange="javascript:controlla_estensione(this);" />
+					<a onclick="javascript:;" id="img_save_excel" >
+						<img src="/img/ico2or_excel.gif" title="Importa file in formato excel" border="0" style="float:left" />
+					</a>
+				</td>	
+				<td>	
+					<input type="text" id="searchString" name="searchString" style="width: 200px;margin-left:5px" value="" />
+					<input type="button" onclick="javascript:searchOnMembers();" value="cerca utente" style="width:100px;" />
+					<a onclick="javascript:sendReminderMembersSelected();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico2or_lampaon.gif" title="Invia mail di reminder" border="0" />
+					</a>
+					<a onclick="javascript:sendThankMembersSelected();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_autorizzo.gif" title="Invia mail di ringraziamento" border="0" />
+					</a>
+					<a onclick="javascript:sendModifyMembersSelected();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_modifica.gif" title="Invia mail di modifica evento" border="0" />
+					</a>
+					<a onclick="javascript:sendConfirmMembersSelected();" href="javascript:;" style="text-decoration:none">
+						<img src="/img/ico1gr_seleziona.gif" title="Re-invia mail di conferma iscrizione" border="0" />
+					</a>			
+				</td>
+			</tr>
+		</table>
+	</div>
+</form>
+
+
+	<table class="inputtable">		
+		<tr id="filterMenu">
+				<th style="max-height: 20px;">
+					<table class="selAll">
+						<tbody><tr>
+							<td style="padding:0;border:0">Seleziona</td>
+							<td style="padding:0 0 0 5px;border:0">
+								<input id="checkBoxAllMembers" onclick="javascript:onClickAll();" style="margin: 1px;" type="checkbox">
+							</td>
+						</tr>
+					</tbody></table>
+				</th>
+				<th>Nome</th>
+				<th>Cognome</th>
+				<th>Data di nascita</th>
+				<th>Sesso</th>
+				<th>Email</th>
+				<th style="min-width: 110px;">Data iscrizione
+					<img id="image_IscrizioneFilter" src="/img/str_paginaz_filter.gif" title="filtro" style="cursor: pointer; display: inline;" onclick="showFilterOnSelect(this)" onmouseover="showFilterOnBlur(this)" height="20" width="20">
+					<ul id="filterDataIscrizione" style="border:solid 1px #ccc; list-style-type: none; background-color: transparent; position: absolute; z-index: 300; overflow: auto; display: none; top: 500.4px; left: 628px; height: 80px; padding: 0; margin: 0pt; width: 160px;">
+						<li class="monthlySearching" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-top-style: solid; border-width: 1px 0 1px 0; border-color: #8AB10B; background-color:#DCE7B5; color:black; font-size: 13px">mag 2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-width: 1px 0 1px 0; border-color: #ccc; background-color:#fff;">29/05/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding: 3px 1px; margin: 0pt; border-bottom: 1px solid white; border-width: 1px 0pt; border-color:#ccc; background-color: #fff;">22/05/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-width: 1px 0 1px 0; border-color:#ccc; background-color: #fff;">21/05/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding: 3px 1px; margin: 0pt; border-bottom: 1px solid white; border-width: 1px 0pt; border-color: white; border-color:#ccc; background-color: #fff;">20/05/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-width: 1px 0 1px 0; border-color:#ccc; background-color: #fff;">02/05/2014</li>
+						<li class="monthlySearching" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-top-style: solid; border-width: 1px 0 1px 0;border-color: #8AB10B; background-color:#DCE7B5; color:black; font-size: 13px">apr 2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding: 3px 1px; margin: 0pt; border-bottom: 1px solid white; border-width: 1px 0pt;border-color:#ccc; background-color: #fff;">23/04/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding: 3px 1px; margin: 0pt; border-bottom: 1px solid white; border-width: 1px 0pt;border-color:#ccc; background-color: #fff;">22/04/2014</li>
+						<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding: 3px 1px; margin: 0pt; border: 0pt none; border-color:#ccc; background-color: #fff;">Tutti</li>
+					</ul>
+				</th>
+				<th>Identificativo</th>
+				<th style="min-width: 90px;">Correntista
+					<img id="image_CorrentistaFilter" src="/img/str_paginaz_filter.gif" title="filtro" style="cursor: pointer; display: inline;" onclick="showFilterOnSelect(this)" onmouseover="showFilterOnBlur(this)" height="20" width="20">
+						<ul id="filterCorrentista" style="border-width: 0pt 0pt 2px; list-style-type: none; background-color: transparent; position: absolute; z-index: 300; overflow: auto; display: none; height: 61px; padding: 2px 0pt; margin: 0pt; border:1px solid #8AB10B;">
+							<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-width: 1px 0 1px 0;;border-color:#ccc; background-color: #fff;">N</li>
+							<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0; border-bottom-style: solid; border-width: 1px 0 1px 0;;border-color:#ccc; background-color: #fff;">Y</li>
+							<li onmouseover="onMouseOverFilterList(this)" onmouseout="onMouseOutFilterList(this)" style="padding:3px 1px 3px 1px; margin:0;;border-color:#ccc; background-color: #fff;">Tutti</li>
+						</ul>
+				</th>
+				<th>Indirizzo</th>
+				<th>Provincia</th>
+				<th>Comune</th>
+				<th>Cap</th>
+				<th>Cellulare</th>
+				<th>Telefono</th>
+				<th>Categoria</th>
+				<th>Mail remind inviate</th>
+				<th>Mail Ringraziamento inviate</th>
+					
+						<th>Qual è il tuo broker principale?</th>
+					
+						<th>Qual è il tuo broker secondario?</th>
+					
+						<th>Quali programmi professionali di analisi tecnica utilizzi?</th>
+					
+						<th>Quante operazioni fai al mese?</th>
+					
+						<th>Quali servizi informativi o applicativi di information provider utilizzi?</th>
+					
+						<th>Su quali strumenti finanziari operi?</th>
+					
+						<th>Utilizzi trading system?</th>
+					
+						<th>A quale sessione vuoi partecipare?</th>
+					
+						<th>consenso1</th>
+					
+						<th>consenso2</th>
+
+			</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_58694" id="mail_template_23_58694" onclick="javascript:setMemberChecked('mail_template_23_58694');" type="checkbox">
+						</div>
+					</td>
+					<td>alessandro</td>
+					<td>re</td>
+					<td>27/08/1988</td>
+					<td>maschio</td>
+					<td>linda.dogliani@webank.it</td>
+					<td class="ColumnDataIscrizione">29/05/2014</td>
+					<td>rexlsn88m27E514I</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>335-1670119</td>
+					<td></td>
+					<td>fisico</td>
+					<td>0</td>
+					<td>0</td>
+					
+					
+							<td>Onlinesim</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>21-50</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Mattina e Pomeriggio</td>
+					
+							<td>no</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_18176" id="mail_template_23_18176" onclick="javascript:setMemberChecked('mail_template_23_18176');" type="checkbox">
+						</div>
+					</td>
+					<td>FRIGGA</td>
+					<td>HOENIG</td>
+					<td>28/11/1967</td>
+					<td>femmina</td>
+					<td>NOSSWITZ@HOTMAIL.IT</td>
+					<td class="ColumnDataIscrizione">02/05/2014</td>
+					<td>HNGFGG67S68Z112F</td>
+					<td class="ColumnCorrentista">Y</td>
+					<td>VIA ANTONIO GRAMSCI, 5</td>
+					<td>MI</td>
+					<td>OZZERO</td>
+					<td>20080</td>
+					<td>322-444444444</td>
+					<td></td>
+					<td>fisico</td>
+					<td>3</td>
+					<td>6</td>
+					
+					
+							<td>Directa</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>11-20</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>no</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_58685" id="mail_template_23_58685" onclick="javascript:setMemberChecked('mail_template_23_58685');" type="checkbox">
+						</div>
+					</td>
+					<td>tlm</td>
+					<td>cst</td>
+					<td>11/06/1964</td>
+					<td>maschio</td>
+					<td>paol@paolo.it</td>
+					<td class="ColumnDataIscrizione">21/05/2014</td>
+					<td>CSTTLM64H11F205C</td>
+					<td class="ColumnCorrentista">Y</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>320-1234567</td>
+					<td></td>
+					<td>fisico</td>
+					<td>2</td>
+					<td>0</td>
+					
+					
+							<td>Webank</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>Nessuna</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_18174" id="mail_template_23_18174" onclick="javascript:setMemberChecked('mail_template_23_18174');" type="checkbox">
+						</div>
+					</td>
+					<td>lionel</td>
+					<td>messi</td>
+					<td>08/08/1983</td>
+					<td>maschio</td>
+					<td>lionel@gmail.com</td>
+					<td class="ColumnDataIscrizione">23/04/2014</td>
+					<td>MSSLNL83M08Z600I</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>320-1213456</td>
+					<td></td>
+					<td>fisico</td>
+					<td>15</td>
+					<td>16</td>
+					
+					
+							<td>Nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>Nessuna</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>no</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_18175" id="mail_template_23_18175" onclick="javascript:setMemberChecked('mail_template_23_18175');" type="checkbox">
+						</div>
+					</td>
+					<td>franco</td>
+					<td>ciccio</td>
+					<td>01/01/1980</td>
+					<td>maschio</td>
+					<td>bereketeab@euris.it</td>
+					<td class="ColumnDataIscrizione">23/04/2014</td>
+					<td>CCCFNC80A01F205E</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>320-1213456</td>
+					<td></td>
+					<td>fisico</td>
+					<td>15</td>
+					<td>11</td>
+					
+					
+							<td>Nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>Nessuna</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>no</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_58693" id="mail_template_23_58693" onclick="javascript:setMemberChecked('mail_template_23_58693');" type="checkbox">
+						</div>
+					</td>
+					<td>mario</td>
+					<td>de leo</td>
+					<td>03/05/1976</td>
+					<td>maschio</td>
+					<td>linda.dogliani@webank.it</td>
+					<td class="ColumnDataIscrizione">29/05/2014</td>
+					<td>DLEMRA76E03C352B</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>335-1670119</td>
+					<td></td>
+					<td>fisico</td>
+					<td>0</td>
+					<td>0</td>
+					
+					
+							<td>Sella</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>1-10</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Pomeriggio</td>
+					
+							<td>no</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_18173" id="mail_template_23_18173" onclick="javascript:setMemberChecked('mail_template_23_18173');" type="checkbox">
+						</div>
+					</td>
+					<td>bkt</td>
+					<td>ycb</td>
+					<td>13/10/1979</td>
+					<td>maschio</td>
+					<td>bereketeab@euris.it</td>
+					<td class="ColumnDataIscrizione">22/04/2014</td>
+					<td>ycbbkt79r13z368r</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>320-1213456</td>
+					<td></td>
+					<td>fisico</td>
+					<td>11</td>
+					<td>12</td>
+					
+					
+							<td>Nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>Nessuna</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_58683" id="mail_template_23_58683" onclick="javascript:setMemberChecked('mail_template_23_58683');" type="checkbox">
+						</div>
+					</td>
+					<td>paolo</td>
+					<td>tiano</td>
+					<td>15/08/1973</td>
+					<td>maschio</td>
+					<td>ppp@paolo.it</td>
+					<td class="ColumnDataIscrizione">20/05/2014</td>
+					<td>TNIPLA73M15F205K</td>
+					<td class="ColumnCorrentista">N</td>
+					<td>123, 123</td>
+					<td>AG</td>
+					<td>AGRIGENTO</td>
+					<td>12312</td>
+					<td>123-1231223</td>
+					<td></td>
+					<td>fisico</td>
+					<td>0</td>
+					<td>1</td>
+					
+					
+							<td>Webank</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>Nessuna</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Tutte</td>
+					
+							<td>yes</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td>
+						<div class="colored Y">
+							<input name="mail_template_23_58689" id="mail_template_23_58689" onclick="javascript:setMemberChecked('mail_template_23_58689');" type="checkbox">
+						</div>
+					</td>
+					<td>franca</td>
+					<td>carlini</td>
+					<td>16/10/1944</td>
+					<td>femmina</td>
+					<td>linda.dogliani@webank.it</td>
+					<td class="ColumnDataIscrizione">22/05/2014</td>
+					<td>crlfnc44R56A851O</td>
+					<td class="ColumnCorrentista">N</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>335-1670119</td>
+					<td></td>
+					<td>fisico</td>
+					<td>0</td>
+					<td>0</td>
+					
+					
+							<td>Fineco</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>21-50</td>
+					
+							<td>nessuno</td>
+					
+							<td>nessuno</td>
+					
+							<td>no</td>
+					
+							<td>Mattina</td>
+					
+							<td>no</td>
+					
+							<td>yes</td>
+					
+				</tr>
+
+				<tr>
+					<td colspan="28">
+						<table>
+							<tbody><tr>
+
+								<td>
+									<a style="cursor: pointer;" onclick="javascript:goToPage('1');">
+										
+											<b>1</b>
+										
+									</a>
+								</td>
+
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+
+			<tr class="invia">
+				<td colspan="28">
+					<input onclick="javascript:history.back();" value="Indietro" type="button">
+				</td>
+			</tr>
+	</table>
+	
+		<form action="/wetools/admin/2l/do/admin/event.do?tabId=WeT_Pri_Eve&amp;obsKey=WeT_Pri_Eve_Att&amp;genere_evento=&amp;status=online&amp;tipo_evento=mail_template_23" method="post" id="reloadMembersForm" name="reloadMembersForm">
+			<input id="method" name="method" value="" type="hidden"> 
+			<input id="partecipante" name="partecipante" value="" type="hidden"> 
+			<input id="memberType" name="memberType" value="" type="hidden">
+			<input id="currentPageOfMembers" name="currentPageOfMembers" value="" type="hidden">
+			<input id="searchStringForm" name="searchStringForm" value="" type="hidden">
+			<input id="filterCorrentistaValue" name="filterCorrentistaValue" value="Tutti" type="hidden">
+			<input id="filterDataIscrizioneValue" name="filterDataIscrizioneValue" value="Tutti" type="hidden">
+			<input id="monthlySearching" name="monthlySearching" value="N" type="hidden">
+		</form>
+
+
+
+
+				<p></p>
+			</div>
+		</div>
+		<div id="footer">
+			<p class="disclaimer">	
+			<strong>Ricorda</strong>: Non permettere ad alcuno di utilizzare questo strumento con la tua utenza<br>
+			Non diffondere in alcun modo le informazione di cui verrai a conoscenza durante il tuo lavoro
+			</p>
+			<ul class="footermenu">
+				<li class="first"><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Dolor</a></li>
+				<li><a href="#">Sit amet cons</a></li>
+				<li><a href="#">Elit</a></li>
+				<li><a href="#">Adipiscing</a></li>
+			</ul>
+			<p class="footnotes">© Lorem ipsum dolor sit - Amet 123890029</p>
+		</div>
+		<script>
+			function invioForm (e, formEl) {
+				if (!e) var e = window.event
+				if (e.keyCode) code = e.keyCode;
+				else if (e.which) code = e.which;
+				
+				if (code == 13) formEl.submit();
+			}
+		</script>
+	
+
+		</body></html>

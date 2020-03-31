@@ -1,0 +1,140 @@
+/*REGOLE DI STRUTTURA*/
+body{background:url(/img/str_background_pub.jpg) no-repeat scroll center top #080808;color:#000;font-family:Arial,tahoma,sans-serif;font-size:12px;margin:0;padding:0;text-align:center}
+img{border:0}
+a{outline:none}
+select option, x:-moz-any-link, x:only-child {background-color:#FFFFFF;}
+.clear{background:none repeat scroll 0 0 transparent!important;clear:both!important;float:none!important;font-size: 0 !important;height: 0 !important;line-height: 0 !important;margin: 0 !important;padding: 0 !important}
+#pagecontainer{display:block;margin: 0 auto;padding:0;text-align:left;max-width:620px;width:100%}
+#header,#menu{width:100%}
+#header h1{margin:0;padding:0}
+#header h1 a span{display:none}
+#header h1 a{background:url(/img/lg_webank.jpg) no-repeat scroll 0 0 transparent;float:left;height:71px;margin:0;padding:0;width:238px}
+#menu{background:url(/img/str_bg_menu.gif) no-repeat scroll center top transparent;display:block;float:left;height:34px;margin:0;overflow:visible;padding:0}
+#menu h2{float:left;margin:0;padding:9px 0 0 26px}
+#content{margin:0;width:100%;background:#fff;display:block;float:left;padding:0 0 14px}
+#aolcontainer{font-family:arial,tahoma,sans-serif;color:#666666;font-size:12px;display:block;float:left;clear:left;width:100%;margin:25px 0 0}
+#aolleft{display:block;float:left;margin: 0;padding:0;width:100%}
+
+/*LAYOUT GENERICO compatibile con la divisione in colonne di qualsiasi elemento in pagina*/
+.row-fluid{width:100%!important}
+.row-fluid:before,.row-fluid:after{display:table;line-height:0;content:"";}
+.row-fluid:after{clear:both}
+.row-fluid [class*="span"] {float:left;width:100%;margin-left:6.564102564102564%;box-sizing:border-box}
+.row-fluid [class*="span"]:first-child{margin-left:0}
+.row-fluid .span1{width:2.316239316239316%}
+.row-fluid .span2{width:11.19658119666667%}
+.row-fluid .span3{width:20.076923076923077%}
+.row-fluid .span4{width:28.95726495726496%}
+.row-fluid .span5{width:37.83760683756410%}
+.row-fluid .span6{width:46.717948717948715%}
+.row-fluid .span7{width:55.598290598333336%}
+.row-fluid .span8{width:64.478632478632476%}
+.row-fluid .span9{width:73.35897435897436%}
+.row-fluid .span10{width:82.239316239230766%}
+.row-fluid .span11{width:91.11965811965812%}
+.row-fluid .span12{width:100%}
+.flRight{float:right!important}
+.flLeft{float:left}
+.noPaddBott{padding-bottom:0!important}
+/*FINE LAYOUT GENERICO compatibile con la divisione in colonne di qualsiasi elemento in pagina*/
+
+/*LAYOUT GENERICO compatibile con la divisione in colonne di qualsiasi elemento in pagina FIX per IE7/*/
+.row-fluid{*zoom: 1;*width:99.34680851063829%!important}
+.row-fluid [class*="span"]{*margin-left:6.4279323513366058%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;*float:left;*display:inline;*zoom:1}
+.row-fluid .span1{*width:2.263047826877614%}
+.row-fluid .span2{*width:11.143389707304%}
+.row-fluid .span3{*width:20.023731587561375%}
+.row-fluid .span4{*width:28.904073467903258%}
+.row-fluid .span5{*width:37.784415348202398%}
+.row-fluid .span6{*width:46.664757228587013%}
+.row-fluid .span7{*width:55.545099108971634%}
+.row-fluid .span8{*width:64.425440989270774%}
+.row-fluid .span9{*width:73.305782869612658%}
+.row-fluid .span10{*width:82.186124749869064%}
+.row-fluid .span11{*width:91.066466630296418%}
+.row-fluid .span12{*width:99.94680851063829%}
+/*FINE LAYOUT GENERICO compatibile con la divisione in colonne di qualsiasi elemento in pagina  FIX per IE7*/
+
+/* Elementi del Form */
+#aolcontainer form{width:100%}
+#aolcontainer fieldset{margin:0;clear:left;padding:0;padding-right:18px;padding-bottom:14px;border:0}
+#aolcontainer legend{display:block;float:left;width:100%;color:#6f8f0a;font-weight:bold;padding:0 0 12px;margin:0;text-transform:uppercase;font-size:19px;line-height:19px;font-family:Arial Narrow, 'webankTitle', Helvetica, Tahoma, sans-serif;}
+#aolcontainer legend{*margin-left:-5px}
+#aolcontainer fieldset .row-fluid.spaceBottom{margin-bottom:12px}
+#aolcontainer form fieldset label,#aolcontainer form fieldset span.label{color:#666666;display:inline-block;font-size:12px;line-height:18px;margin:0;padding:0 0 2px 0}
+.focusOut,.focusIn{width:100%;border-radius:3px;height:25px;padding:3px;display:block;margin-top:-3px;margin-left:-3px}
+*:first-child+html .focusOut,*:first-child+html .focusIn{margin-left:0}
+.focusIn{background-color:#c8dd96}
+input:focus{outline:none}
+.row-fluid input[type="text"],.row-fluid input[type="number"], .row-fluid input[type="password"], .row-fluid input[type="tel"], .row-fluid select,.row-fluid  textarea{width:100%;*width:99.34680851063829%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+#aolcontainer form fieldset input[type="text"],#aolcontainer form fieldset select{padding:1px 0 1px 3px;font-size:11px;margin:0;display: block;height:25px;line-height:20px;border:solid 1px #9a9a9a;background:#fff url(/img/str_aol_bgfields.gif) repeat-x left top;color:#666;font-family:arial, tahoma, sans-serif;font-size:12px}
+#aolcontainer form fieldset input[type="text"].disabled,#aolcontainer form fieldset select.disabled{color:#ccc}
+#aolcontainer form fieldset .span2 input[type="text"],#aolcontainer form fieldset .span3 input,#aolcontainer form fieldset .span9 .span4 input[type="text"]{padding-left:0;text-align:center}
+*:first-child+html #aolcontainer form fieldset input{height:20px;}
+#aolcontainer form fieldset textarea{background:#fff url(/img/str_aol_bgfields.gif) repeat-x left top;border:1px solid #9A9A9A;padding:5px 0 1px 8px;color:#666;font-family:tahoma,arial,sans-serif;font-size:11px;min-height:60px;overflow:auto}
+#aolcontainer form fieldset select {height:24px;padding:2px 3px 3px 3px;}
+*:first-child+html #aolcontainer form fieldset select  {margin: 2px 0 0 0;height:auto}
+#aolcontainer form fieldset input[type="checkbox"],#aolcontainer form .error label input,#aolcontainer form fieldset input[type="radio"]{float:left;margin:1px 8px 0 0;border:0; background-color:transparent;padding:0;}
+#aolcontainer form fieldset label,#aolcontainer form fieldset span.label{color:#666666;display:inline-block;font-size:12px;line-height:18px;margin:0;padding:0 0 2px 0;font-family:Arial,tahoma,sans-serif}
+#aolcontainer form .error input[type="text"],#aolcontainer form .error select{background-color:#FEE8E1;background-image:none;border:1px solid #CD0005;}
+#aolcontainer form .error input[type="checkbox"] {outline:solid 1px #cd0005;}
+*:first-child+html #aolcontainer form .error input[type="checkbox"]{border:solid 1px #cd0005;height:15px;width:15px}
+#aolcontainer form fieldset span.errortext,#aolcontainer form .fieldblock span.errortext{clear:left;color:#CD0005;display:none;float:left;font-size:10px}
+#aolcontainer form .error span.errortext{display:block;width:100%}
+#aolcontainer form fieldset span.separator{float:left;padding:5px 0 0 0}
+#aolcontainer form fieldset div.fieldCounter{color:#AAAAAA;float:right;font-size:10px;height:0;margin:0;overflow:visible;padding:4px 0 0 0;text-align: right;}
+.lineSeparator{border-top:1px solid #e5e5e5;height:1px;display:block;width:100%;padding-bottom:11px}
+.noPaddBott{padding-bottom:0!important}
+.noPaddTop{padding-top:0!important}
+/* Titolature e blocchi */
+#aolcontainer .aolFormContent{display:block;margin:0;padding:0 26px}
+
+/* Tooltip */
+#ttBox {display:block;position:absolute;z-index:10000;float:left; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;clear:left}
+#ttClose {background: url("/wscmn/img/ret/ico1gr_tooltip_close.gif") repeat scroll -2px center transparent;display: block;float: right;height: 18px;margin: -11px -12px 0 0;width: 18px}
+#ttBox #ttCont{float:left; background-color:#fff;border:6px solid #CECECE;font-size:12px;padding:0;color:#666666;border-radius:8px;box-shadow: 2px 3px #F2F2F2}
+#ttBox #ttCont #ttContText {padding:10px;float:none;text-align:left}
+#ttBox .arrow {clear:left;margin:0 auto;background: transparent url(/wscmn/img/responsive/tt_arrow.png) no-repeat center bottom;height:0.5em;float:left;width:100%}
+#ttBox .arrow.top {background-position: center top}
+#ttBox.error #ttCont{color:#a00;border:solid 5px #c00}
+#ttBox.error .arrow {background-image: url(/wscmn/img/responsive/tt_arrow_error.png)}
+.ttHtmlContent{display:none}
+
+/* Aol accordion intestatari */
+#aolcontainer .aolAcc{padding:16px 0 0 0;display:block;clear:left;float:left;width:100%}
+#aolcontainer .aolAcc:first-child {margin-top:-10px;}
+#aolcontainer .aolAcc .aolAccTitle {text-decoration: none; float:left; clear:left; height:42px; width:548px; background: transparent url(/img/str_aolacc_closed.gif) no-repeat 0 0;  padding: 0; margin:0;}
+#aolcontainer .aolAcc .aolAccTitle span {cursor:pointer; cursor:hand;}
+#aolcontainer .aolAcc .aolAccTitle span.accButt {float:right; display:block;  background: transparent url(/img/ico1gr_aolacc.gif) no-repeat 0 -84px; width: 62px; height: 42px;}
+#aolcontainer .aolAcc .aolAccTitle:hover  span.accButt{background-position: 0 -126px}
+#aolcontainer .aolAcc .aolAccTitle span.titoloAcc {display: block;float: left;text-transform: uppercase;font-family: Helvetica MS, Arial Narrow, Serif;font-size:18px;height: 22px;line-height: 20px; font-weight: bold; margin:5px 0 0 13px;padding:0;width:432px; color: #666}
+*html #aolcontainer .aolAcc .aolAccTitle span.titoloAcc{margin:5px 0 0 6px}
+#aolcontainer .aolAcc .aolAccTitle span.errortext{display:none;float:left;clear:left;color:#cd0005;padding:0 15px}
+#aolcontainer .aolAcc .aolAccTitle.small span.errortext{padding:3px 15px}
+#aolcontainer .aolAcc .aolAccTop .aolAccTitle.error  {border-top: solid 3px #cd0005;}
+#aolcontainer .aolAcc .aolAccTitle.error span.errortext {display:block}
+#aolcontainer .aolAcc .aolAccContent {display:none} 
+#aolcontainer .aolAcc.expanded .aolAccContent {display:block;width:100%;clear:left}
+*html #aolcontainer .aolAcc {width:575px}
+*html #aolcontainer .aolAcc.expanded .aolAccContent{display:block;width:575px}
+#aolcontainer .aolAcc.expanded .aolAccTitle {background-image: url(/img/str_aolacc_opened.gif); padding-bottom: 18px;}
+#aolcontainer .aolAcc.expanded .aolAccTitle span.accButt {background-position:0 0}
+#aolcontainer .aolAcc.expanded .aolAccTitle:hover span.accButt {background-position:0 -42px}
+
+/* Espansione con + e - */
+#aolcontainer form .expandable{margin:0;padding:0;float:left;display:block;width:100%}
+#aolcontainer form .expandable .expander{margin:0;padding:1px 0 10px 0;float:left;display:block;clear:both;width:100%}
+#aolcontainer form .expandable legend .expander{padding-bottom:0}
+#aolcontainer form .expandable .expander  a.btn{float:left;display:block;width:20px;height:19px;background:transparent url(/img/str_expander2_btn.gif) no-repeat 0 0;margin:1px 10px 0 0;}
+#aolcontainer form  .expandable.expanded .expander  a.btn{background:transparent url(/img/str_expander2_btn.gif) no-repeat 0 -19px}
+#aolcontainer form .expandable .expander  span {float:left;display:block;color:#999;line-height:18px;font-size:12px;width:94%;}
+#aolcontainer form  .expandable .expandableCont {float:left; clear:left; clear:both; margin:0; padding:0; display:none;width:100%}
+#aolcontainer form  .expandable.expanded .expandableCont {display:block;padding-bottom:14px}
+* html #aolcontainer form .expanded .expander  a.btn {background-position: 0 -21px}
+
+/*bottoniera */
+.aolButton{padding:0 44px 0 26px;text-align:center;min-height:26px}
+.aButton{font-size:15px;background-color:#A6C34A;border:1px solid #A6C34A;border-radius:10px 10px 10px 10px;box-shadow:0 1px rgba(255, 255, 255, 0.5) inset;color:#fff;display:inline-block;font-family:arial,serif;line-height:24px!important;margin:0;min-width:60px;padding-bottom:0!important;padding-left:10px;padding-right:10px;padding-top:0;text-align:center;text-decoration:none;background-image:linear-gradient(to top, #A8C44E, #8AB10B 70%, #7C9E11)}
+.aButton span{color:#FFF;text-align:center;text-decoration:none;text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);text-transform:uppercase}
+.aTextLink{color:#6f8f0a;font-size:13px;font-weight:bold;font-family;arial,tahoma,sans-serif}
+/*fine bottoniera */

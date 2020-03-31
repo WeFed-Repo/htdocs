@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document*/
+
+.haligndivs2 {
+	display: block;
+	height: 20px;
+	margin: 5px 0 5px 0;
+	padding: 0;
+}
+
+ .haligndivs2 div{
+	float:left;
+	margin: 0;
+	padding: 0;
+	margin: 5px 0 5px 0;
+}
+
+ .haligndivs2 .leftside{
+ 	float:left;
+	padding:0;
+	margin-left:5px;
+ }
+ 
+ .haligndivs2 .rightsideold{
+ 	float:right;
+	width: 50%;
+ }
+ 
+ .haligndivs2 .startleft{
+	width: 50%;
+ }
+ 
+ .haligndivs2 .rightside{
+ 	float:right;
+	/*margin-right:5px;*//*segnalazione 243*/
+	margin-left: 5px;
+	/*margin-top:0;*//*togliere in caso di visualizzazione sballata*/
+ }
+ 
+ .haligndivs2 .rightside.question{
+ 	margin-top:4px;
+ }
+ 
+ .haligndivs2 div.center{
+	padding-left:30%;
+ }

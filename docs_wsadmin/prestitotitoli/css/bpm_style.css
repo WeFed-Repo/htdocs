@@ -1,0 +1,59 @@
+/* header */
+#header{background:url("/prestitotitoli/img/bpm/bg_header.gif") top left repeat-x; height:91px}
+.bglogo{background:url("/prestitotitoli/img/bpm/bg_logo.jpg") top left no-repeat;float:left;height:80px;margin-top:11px;width:580px}
+h1.logo{background:url("/prestitotitoli/img/bpm/logo.jpg") top left no-repeat;display:block;margin:17px 0 0 31px;height:48px;width:198px}
+
+/* login */
+.bgFieldslogin{min-height:290px;padding:6px 28px 14px 28px;background:url("/prestitotitoli/img/bpm/bg_center_login.gif") no-repeat bottom left}
+.bglogin{background:url("/prestitotitoli/img/bpm/bg_center_repeat_login.gif") repeat-y top left}
+.bgTopLogin{width:310px;height:17px;background:url("/prestitotitoli/img/bpm/bg_top_login.gif") top left no-repeat}
+.bgBottomLogin{width:310px;height:11px;background:url("/prestitotitoli/img/bpm/bg_bottom_login.gif") top left no-repeat}
+#login{background:url("/prestitotitoli/img/bpm/bg_center.gif") repeat top left}
+#login .loginInput{width:246px;height:14px;padding:4px;margin-top:1px;overflow:hidden;color:#000;background:url("/prestitotitoli/img/bpm/bg_login_input.gif") transparent top left repeat-x}
+#login .loginTitle{margin:0;padding-left:12px;font-size:14px;color:#33cccc;background:url("/prestitotitoli/img/dot_3_bianco.gif") no-repeat left 5px}
+#login .boxlogindetails ul li{margin:0;padding:0 0 6px 13px;color:#fff;background:url("/prestitotitoli/img/bpm/dot_3_verde.gif") no-repeat 1px 5px}
+a.btnformright span, a.btnformright:link span, a.btnformright:hover span{cursor:hand;background:url(/prestitotitoli/img/bpm/btn_center.gif) repeat-x left top;color:#FFFFFF;display:block;float:right;font-size:13px; height:27px;line-height:26px;padding-left:5px;padding-right:5px;text-decoration:none}
+a.btnformright span.btndx, a.btnformright:link span.btndx, a.btnformright:hover span.btndx{cursor:hand;background:url(/prestitotitoli/img/bpm/btn_right.gif) no-repeat left top;display:block;float:right;font-size:13px; height:27px;line-height:26px;width:21px; padding-left:0; padding-right:0;}
+a.btnformright span.btnsx, a.btnformright:link span.btnsx, a.btnformright:hover span.btnsx{cursor:hand;background:url(/prestitotitoli/img/bpm/btn_left.gif) no-repeat left top;display:block;float:right;font-size:13px; height:27px;line-height:26px;width:21px; padding-left:0; padding-right:0;}
+
+/* footer */
+#footer{height:39px;background:url(/prestitotitoli/img/bpm/bg_footer.gif) top left repeat-x; width:100%; clear:left;}
+.bgfooter{background:url(/prestitotitoli/img/bpm/bg_logo_footer.gif) top left no-repeat;text-align:center}
+h2.logo{background:url(/prestitotitoli/img/bpm/logo_footer.gif) top left no-repeat;display:block;margin:5px 0 0 31px;height:27px;width:139px}
+
+/* menu */
+#menu { float: left; margin: 0; padding: 0; position:relative; padding: 0; width:100%; background:url(/prestitotitoli/img/bpm/bg_center.gif) repeat scroll left top #474747}
+#menu li.vociFirstlevel {float:left; border-left:1px solid #1f564c; border-right:1px solid #092924; padding: 16px 24px}
+#menu li.vociFirstlevel ul li a {color: #484848; background: transparent url(/prestitotitoli/img/bpm/ico1gr_menusecond_off.gif) no-repeat 4px center; padding:0 0 0 20px; font-family:arial; font-size:13px; font-weight:bold; line-height:26px; height:27px; display:block; float:left;}
+#menu li.vociFirstlevel a:hover {background: transparent url(/prestitotitoli/img/bpm/ico1gr_menu_on.png) no-repeat 0 0;}
+*html #menu li.vociFirstlevel a:hover {background: transparent url(/prestitotitoli/img/bpm/ico1gr_menu_on.gif) no-repeat 0 0;}
+#menu li.vociFirstlevel a.active {background: transparent url(/prestitotitoli/img/bpm/ico1gr_menu_on.png) no-repeat 0 0;}
+#menu li.vociFirstlevel.on {background: transparent url(/prestitotitoli/img/bpm/str_bg_menu_selected.gif) no-repeat center center;}
+#menu li.vociFirstlevel ul li a:hover {color: #007a63; background: transparent url(/prestitotitoli/img/bpm/ico1gr_menusecond_over.gif) no-repeat 4px center; padding-left:20px;}
+#menu li.vociFirstlevel ul li a.selected, #menu li.vociFirstlevel ul li a.selected:hover {color: #007a63; background: transparent url(/prestitotitoli/img/bpm/ico1gr_menusecond_on.gif) no-repeat 4px center; padding-left:20px; margin-left:-4px;}
+
+
+
+/* barra di ricerca */
+.cerca a.btnformright span, .cerca a.btnformright:link span, .cerca a.btnformright:hover span {margin-bottom:9px; background: url(/prestitotitoli/img/bpm/btn_small_center.gif) repeat-x scroll left top transparent;height: 20px; line-height:19px; cursor:pointer;}
+.cerca a.btnformright span.btndx, .cerca a.btnformright:link span.btndx, .cerca a.btnformright:hover span.btndx {margin-bottom:9px; background: url(/prestitotitoli/img/bpm/btn_small_right.gif) no-repeat left top transparent;height: 20px; line-height:19px; cursor:pointer; width:13px}
+.cerca a.btnformright span.btnsx, .cerca a.btnformright:link span.btnsx, .cerca a.btnformright:hover span.btnsx {margin-bottom:9px; background: url(/prestitotitoli/img/bpm/btn_small_left.gif) no-repeat left top transparent;height: 20px; line-height:19px; cursor:pointer; width:13px}
+
+/* content */
+#contenuti h1 {background:url(/prestitotitoli/img/bpm/frec_h1.gif) no-repeat 0 4px; color:#007a63; padding:0 0 20px 10px; margin:0; font-size:13px}
+
+/* tabella accordion e tabella ricerca */
+table.resulttable tr th, div.wtcontent table.inputtable tr th {color:#ffffff; background: #ccc url(/prestitotitoli/img/bpm/bg_table_head.gif) repeat-x 0 0; padding:6px 9px; font-weight: bold; border-bottom: solid 1px #999; border-right: solid 1px #999; text-align: left; font-size:11px;}
+table.resulttable tr.green td, div.wtcontent table.inputtable tr.green td {background-color:#d4e9e5 !important}
+table.resulttable tr.dettaglioespandibile.aperto td{background: #d4e9e5;}
+
+/* layeralert3 */
+.layeralert3 .head{margin:0;padding:0;width:600px;height:22px;background:url(/prestitotitoli/img/bpm/bg_layeralert_top3.gif) left top no-repeat;border:none;}
+
+/* tab di navigazione */
+.wtcontent table.tabellalist tr td.on {background: url(/prestitotitoli/img/bpm/tab_on.gif) no-repeat scroll 0 0 transparent; color: #181818; font-size: 11px; font-weight: bold;width: 95px;}
+.wtcontent table.tabellalist tr td.off a:hover {color:#007a63;}
+.wtcontent table.tabellasublist tr td.on {background: url(/prestitotitoli/img/bpm/subtab_on.gif) no-repeat 0 0; color: #181818; font-size: 11px; width:100px; vertical-align:middle;}
+.wtcontent table.tabellasublist tr td a:hover {color:#007a63;}
+
+

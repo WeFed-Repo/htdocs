@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Campi disponibili per le mail degli eventi</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="../../utils/mctabs.js"></script>
+	<script type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script type="text/javascript" src="../../utils/validate.js"></script>
+	<script type="text/javascript" src="js/link.js"></script>
+</head>
+<body id="link" style="display: none">
+<form onsubmit="LinkDialog.update();return false;" action="#">
+
+	<div class="panel_wrapper">
+		<div id="general_panel" class="panel current">
+			<table border="0" cellpadding="4" cellspacing="0">
+				<tr>
+					<td><label for="field_select">Seleziona un campo</label></td>
+					<td>
+						<select id="field_select" name="field_select">
+							<option value="event.nome_evento">Titolo evento</option>
+							<option value="event.tipo_evento">Codice evento</option>
+							<option value="event.nome_ciclo">Ciclo evento</option>
+							<option value="event.citta">Citt&agrave;</option>
+							<option value="event.location">Location</option>
+							<option value="event.indirizzo">Indirizzo</option>
+							<option value="event.fascia_oraria">Fascia oraria</option>
+							<option value="event.data_evento">Data evento</option>
+							<option value="user.nome">Nome utente</option>
+							<option value="user.cognome">Cognome utente</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="mceActionPanel">
+		<input type="submit" id="insert" name="insert" value="{#insert}" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+</body>
+</html>

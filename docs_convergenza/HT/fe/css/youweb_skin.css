@@ -1785,8 +1785,14 @@ div.pager .circle.current_page {
   text-decoration: none;
 }
 
+.modal .modal-dialog .modal-content .modal-body {
+  /* Caso Tabelle in modale (eliminato strano padding dei TD) */
+}
 .modal .modal-dialog .modal-content .modal-body section {
   margin-bottom: 20px;
+}
+.modal .modal-dialog .modal-content .modal-body table td {
+  padding-bottom: 0;
 }
 
 .modal-header .close,

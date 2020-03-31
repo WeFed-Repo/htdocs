@@ -1,9 +1,11 @@
 <!-- FUNZIONI EMULATE DI ATTIVAZIONE DELL'ICONA OPERATIVA -->
 <script>
 
-    var attivaIconaOperativa = function(){
+    var attivaIconaOperativa = function(wrapper){
         chiudiIconeOper();
-        $(".btn-icon-operativa").click(apriBoxOperativita);
+        var icoGroup = (typeof wrapper== "string")? $(wrapper +" .btn-icon-operativa") : $(".btn-icon-operativa");
+        icoGroup.click(apriBoxOperativita);
+        
     }
 
     var chiudiIconeOper = function(){
@@ -23,10 +25,22 @@
             icoOpeOlClose = $("<span>").addClass("close").click(chiudiIconeOper);
             icoFunctions = $("<div>").addClass("icoope-functions loading");
         icoOpeOl.append(icoOpeOlClose,icoFunctions);
-        icoBtn.parents(".bootstrap-table").prepend(icoOpeOl.css({
+
+        // A seconda di dove lo si va ad invocare, si aggancia in maniera diversa;
+        var icoBtnParent = (icoBtn.parents(".bootstrap-table").length>0)? icoBtn.parents(".bootstrap-table") : icoBtn.parents(".modal-dialog");
+        if (icoBtnParent.length==0) icoBtnParent = icoBtn.parents("table").parent();
+
+        // Attenzione! Nelle modale l'offset e' diverso perchè il layer viene applicato "a monte" per "sbordare" dalla modale stessa.
+        if (icoBtnParent.hasClass("modal-dialog")) {
+            var modalOffset = icoBtnParent.find(".modal-body").position();
+            olpos.top += modalOffset.top;
+        }
+        
+        icoBtnParent.prepend(icoOpeOl.css({
             top: olpos.top + 30 + "px",
             left: olpos.left + "px"
         }));
+
         // Esempio dato raccolto 
         console.log("ES: dato input = ISIN: " + icoBtn.attr("data-isin"));
 

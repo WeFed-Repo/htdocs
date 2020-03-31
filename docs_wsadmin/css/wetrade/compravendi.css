@@ -1,0 +1,1990 @@
+@charset "utf-8";
+/* CSS Document 
+verde: #a0bb4a;
+testo #343434;     */
+
+
+/* Ricerca Titolo */
+.ricercaNomeTitolo  {
+	border:1px solid #dadada; 
+	background-color:#ebebeb;
+}
+
+.ricercaNomeTitolo input{
+	vertical-align:middle;
+}
+
+div#ricercaTlx  {
+	float:left;
+	clear:both;
+	border:1px solid #dadada;
+	background-color:#ebebeb;
+	width: 599px;
+	margin-bottom: 1em;
+}
+
+div#ricercaTlx .rowRicercaTlx {
+	float:left;
+	clear: both;
+	width:500px;
+	color:#666666;
+	padding: 1em 0px 1em 1em;
+	text-align:left;
+	width: 96%;
+}
+
+.public_container h3, #ricercaTlx h3 {
+	background:#89B112 url(/img/wetrade/title_bg_green.gif) repeat-x scroll center top;
+	border-bottom:1px solid #DADADA;
+	color:#333333;
+	font-size:13px;
+	line-height:28px;
+	padding:0 0 0 10px;
+	margin: 0;
+}
+
+div#tasto_vai{
+	float: right; 
+	width:3.3em;
+}
+/* linea con 4 sezioni (es 'da:' - input - 'a:' - input)*/
+
+DIV#ricercaTlx .col1_TLX{       DISPLAY: block; FLOAT:left;    WIDTH:20%; line-height: 1.5em;  }
+DIV#ricercaTlx .col1_TLX label {display: block; float: left;   clear: none; margin-right: 0.3em; }
+DIV#ricercaTlx .col1_TLX .col1_TLX_splitted{    float: right; }
+
+DIV#ricercaTlx .col2_TLX{
+	DISPLAY:block;
+	FLOAT:left;
+	WIDTH:25%;/*Segnalazione 125 : porto la dimensione a 25%*/
+}
+
+DIV#ricercaTlx .col2_TLX.tight{
+	WIDTH:20%;
+}
+
+DIV#ricercaTlx .col2_TLX LABEL{FONT-WEIGHT:bold}
+
+DIV#ricercaTlx .col3_TLX{
+	DISPLAY:block;
+	FLOAT:left;
+	WIDTH:55%/*Segnalazione 125 : porto la dimensione a 55%*/
+}
+DIV#ricercaTlx .col3_TLX INPUT{DISPLAY:block;FLOAT:left;WIDTH:30%;TEXT-ALIGN:right}
+DIV#ricercaTlx .col3_TLX LABEL{
+	DISPLAY:block;
+	FLOAT:left;
+	WIDTH:25%;/*Segnalazione 125 : porto la dimensione a 25%*/
+	TEXT-ALIGN:right;
+	line-height:1.5em
+}
+
+DIV#ricercaTlx .col4_TLX{DISPLAY:block;FONT-WEIGHT:bold;FLOAT:left;WIDTH:38%}
+
+/* allineamento blocco 'condizioni di attivazione' x ordine derivati*/
+
+
+
+/* PANIERI TLX EURO-TLX (prima colonna)*/
+
+div#pan_TLX { line-height:18px; } 
+div#pan_TLX div { padding:0.5em 0 2em 0; max-width:150px; }
+div#pan_TLX a { font-weight: bold; }
+
+/* END   PANIERI TLX EURO-TLX (prima colonna)*/
+
+
+
+#condAtt .blocco1{
+	width: 30%; 
+	float: left;
+}
+
+#condAtt .blocco2{
+	float: right; 
+	width: 61%; 
+	text-decoration: none; 
+	font-weight: normal;
+}
+
+#condAtt .blocco2 input{
+	width: 61%; 
+}
+
+
+
+/* PAGINA DI CONFERMA DELL'ORDINE*/
+
+#bodier #confermaOrdine {
+	/*text-align:center;
+	margin: 0 auto;*/
+	/* Segnalazione 81 Area Prodotti */
+	text-align:left;
+	margin: 0 40px;
+}
+
+
+#confermaOrdine {
+	width:371px;
+	margin-left:14px;
+	float:left;
+}
+
+#confermaOrdine .inside {
+	border:1px solid #dadada;
+	height:346px;
+	background-color:#ebebeb;
+}
+#confermaOrdine h3, .bloccoCentrato h3 {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:28px;
+	font-size:13px;
+	color:#333333;
+	border-botton: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+	text-align:center;
+}
+
+
+#confermaOrdine .rowCanaleNotifica {
+	height:20px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+}
+#confermaOrdine .row {
+	height:30px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+	
+	/* Segnalazione 81 Area Prodotti */
+	float:right;
+	width:90%;
+}
+#confermaOrdine .col{
+	float:right;
+	width:180px;
+	color: black;
+	font-weight: bold;
+	text-align:left;
+}
+
+#confermaOrdine label {
+	text-align:right !important;
+}
+
+#confermaOrdine #conferma .col{
+	float:right;
+	width:195px;
+	color: black;
+	font-weight: bold;
+	text-align:left;
+}
+
+
+/* CheckBox Allineata a destra*/
+.confirmRightCB{
+	text-align: right;
+	align: right;
+}
+
+
+/*2 blocchi (link,pulsanti,...) agli estremi della stessa linea */
+.tag1d2 {
+	width:45%;
+	float:left;
+	text-align:left;
+	padding-left:7px;
+}
+
+ .tag2d2 {
+	width:50%;
+	float:left;
+	text-align:right;
+	padding-right:7px;
+}
+
+
+
+/* ####################### PULSANTIERA Indietro-Abbandona-Esegui START ####################### */
+
+#pulsantieraConferma {
+	text-align:center;
+	padding-top:8px;
+	width:100% ;
+	align: center;
+}
+
+#pulsantieraConferma .indietro{
+	width:20%;
+	float:left;
+}
+
+#pulsantieraConferma .abb_esegui{
+	width:60%;
+	float:right;
+}
+
+#pulsantieraConferma .abb_esegui .abbandona{
+	width:35%;
+	float:left;
+}
+
+#pulsantieraConferma .abb_esegui .esegui{
+	width:35%;
+	float:right;
+}
+
+/* ####################### PULSANTIERA Indietro-Abbandona-Esegui STOP ####################### */
+
+
+/* ####################### PULSANTIERA Precedenti-Abbandona-Seguenti START ####################### */
+
+#pulsantieraElenco {
+	text-align:center;
+	padding-top:8px;
+	width:100% ;
+	align: center;
+}
+
+#pulsantieraElenco .indietro{
+	width:35%;
+	float:left;
+	margin-left: 8px;
+}
+
+#pulsantieraElenco .abb_esegui{
+	width:56%;
+	float:right;
+}
+
+#pulsantieraElenco .abb_esegui .abbandona{
+	width:35%;
+	float:left;
+}
+
+#pulsantieraElenco .abb_esegui .esegui{
+	width:35%;
+	float:right;
+}
+
+/* ####################### PULSANTIERA Indietro-Abbandona-Esegui STOP ####################### */
+
+/* ####################### ELENCO PAGINE PER ESITO RICERCHE - START ####################### */
+
+.esitoRicerca{
+	width:100%;
+	text-align:center;
+	height:22px;
+}
+
+/* NON FUNZIONA IN EXPLORER 
+.esitoRicerca > div{
+	height:100%;
+	padding-top : 7px;
+}
+*/
+
+.esitoRicerca .title{
+	width:13%;
+	float:left;
+	text-align: left;
+	height:100%;
+	padding-top : 7px;
+}
+
+.esitoRicerca .page_green{
+	width:4%;
+	float:left;
+	border-left:1px solid #DADADA;
+	COLOR: #FFFFFF;
+ 	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ 	FONT-WEIGHT: bold;
+ 	BACKGROUND-COLOR: #89b112;
+ 	height:100%;
+	padding-top : 7px;
+}
+
+.esitoRicerca .page{
+	width:4%;
+	float:left;
+	border-left:1px solid #DADADA;
+	height:100%;
+	padding-top : 7px;
+}
+
+
+/* ####################### ELENCO PAGINE PER ESITO RICERCHE - STOP ####################### */
+
+
+
+/* BLOCCO UNICO CENTRATO*/
+.bloccoCentrato{
+	text-align:center;
+	border:1px solid #dadada;
+	height:200px;
+	background-color:#ebebeb;
+	width: 350px;
+	margin: 0px auto;
+}
+
+.bloccoCentrato .row {
+	height:42px;
+	line-height:42px;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+}
+
+.bloccoCentrato .col {
+	float:right;
+	width:240px;
+	line-height:normal;
+	color: black;
+	padding-top: 13px;
+	font-weight: bold;
+	text-align:left;
+}
+
+#cercaObbligazioni{
+	height: 210px;	
+}
+
+#cercaObbligazioni input{
+	vertical-align: middle;
+}
+
+#scegliObbligazioni{
+	height: 110px;	
+}
+
+#scegliObbligazioni input{
+	vertical-align: middle;
+}
+
+
+.colFondi {
+	float:right;
+	width:270px;
+	line-height:normal;
+	color: black;
+	padding-top: 13px;
+	font-weight: bold;
+}
+
+.rowFondi {
+	height:14px;
+	line-height:normal;
+	color:#666666;
+	clear: both;
+	padding-left: 11px;
+	padding-top: 14px;
+}
+
+/* TABELLE */
+
+#tableOrdiniEsteri{
+	width : 100%;	
+}
+
+#tableOrdiniEsteri .tdLabel{
+	text-align : left;
+	width : 20%;
+}
+
+#tableOrdiniEsteri .tdInput{
+	text-align : left;
+	width : 30%;
+}
+
+
+/*visualizza errore su ordine*/
+#visErrore .bloccoCentrato{
+	height:auto;	
+}
+
+#visErrore .bloccoCentrato .row .col{
+	padding-right:10px;
+}
+
+#visErrore .bloccoCentrato .classicLink{
+	height:20px;
+}
+
+#visErrore .bloccoCentrato .veLeft{
+	float:left;
+	text-align:left;
+	padding-left:7px;
+	width:50%;
+}
+
+#visErrore .bloccoCentrato .veRight{
+	float:right;
+	text-align:right;
+	padding-right:7px;
+	width:45%;
+}
+
+/* GENERICI */
+
+/*test grassetto nero*/
+.blackBold{
+	color: black;
+	font-weight: bold;
+}
+
+/*allineamento a destra*/
+#floatRight {
+	float:right;	
+	margin-right: 10px;
+}
+
+/* testo rosso x messaggi di errore*/
+#testoErrore {
+	color:#FF0000;
+	font-size:10pt;
+	font-weight:bold;
+	padding: 2em 2em 1em 2em;
+	text-align: center;
+}
+
+/*link nero sottolineato -> Hover verde*/
+.commonLink {
+    color:#3d3d3d !important;
+    font-style:normal !important;
+    text-decoration:none;
+}
+
+
+/*link nero -> Hover verde  (senza necessità di div esterno)*/
+.pageNumLink {
+    color:#3d3d3d !important;
+    font-style:normal !important;
+}
+
+.commonLink:hover, .pageNumLink:hover{
+    color:#c0e156 !important;
+}
+
+/*identico stile di  '.classicLink a' ma senza necessita di un div esterno al link*/
+.greenLink {
+	color:#afd142 !important;
+    text-decoration:none !important;
+    font-style:normal !important;
+}
+
+/*applicato ai tag div, inserisce uno spazio bianco*/
+.bloccoBianco {
+	background-color: #FFFFFF;
+	width: 110%;
+	margin-left: -5px;
+}
+
+/*blocco grigio con bordo, centrato, altezza automatica*/
+.greyRow{
+	text-align:center;
+	border:1px solid #dadada;
+	height:auto;
+	background-color:#ebebeb;
+	width: 400px;
+	margin: 0px auto;
+	/*line-height:35px;*/
+}
+
+.greyRow #testoErrore{
+	line-height:35px;
+}
+
+
+/*imposta l'altezza dei div contententi un singolo bottone 
+(di solito 'VAI', presente nelle form)*/
+
+.boxButtonHeight {
+	height : 22px !important;
+}
+
+/*blocco a sfondo grigio x le form centrali
+analogo a '#compravendi2d3 .inside' , solo con l'altezza regolata in automatico */
+ .insideAutoHeight {
+	border:1px solid #dadada;
+	height:auto;
+	background-color:#ebebeb;
+}
+
+/*applicare al div contenente le tabelle coi risultati di una ricerca, in modo da posizionarla al centro*/
+.tabellaRisultati {
+	width:80%;
+	margin:0 auto;
+}
+
+
+/* ******************   gestione di 2 righe con 1 sola label centrata  START *********************** */
+
+/* ----------- cerca fondi ----------- */
+
+/*contenitore della riga 'doppia'*/
+#doubleRowFondi {
+	width:100%;
+	float:left;
+}
+
+/*label della riga 'doppia'*/
+#doubleRowFondi .label{
+	width: 18%; 
+	float: left; 
+	padding-top: 18px;
+	text-align:center;
+}
+
+/*parte destra contenente le 2 righe*/
+#doubleRowFondi .contentCol{
+	width: 80%; 
+	float: right; 
+	text-align: left;
+}
+
+/*prima riga*/
+#doubleRowFondi .contentCol .line1{
+	width: 100%; 
+	float: right; 
+	text-align: left; 
+	height: 25px; 
+	padding-top: 5px;
+}
+
+/*seconda riga*/
+#doubleRowFondi .contentCol .line2{
+	width: 100%; 
+	float: right; 
+	text-align: left; 
+	height: 25px; 
+}
+
+/*campi select di ogni singola riga*/
+#doubleRowFondi .contentCol .line1 select,#doubleRowFondi .contentCol .line2 select{
+	width:70%
+}
+
+
+/* ----------- cerca obbligazioni ----------- */
+
+/*contenitore della riga 'doppia'*/
+#doubleRowCercaObbl {
+	width:100%;
+	float:left;
+}
+
+/*label della riga 'doppia'*/
+#doubleRowCercaObbl .label{
+	width: 24%; 
+	float: left; 
+	padding-top: 22px;
+	text-align: right;
+}
+
+/*parte destra contenente le 2 righe*/
+#doubleRowCercaObbl .contentCol{
+	width: 69%; 
+	float: right; 
+	text-align: left;
+}
+
+/*prima riga*/
+#doubleRowCercaObbl .contentCol .line1{
+	width: 100%; 
+	float: right; 
+	text-align: left; 
+	height: 25px; 
+	padding-top: 10px;
+}
+
+/*seconda riga*/
+#doubleRowCercaObbl .contentCol .line2{
+	width: 100%; 
+	float: right; 
+	text-align: left; 
+	height: 25px; 
+}
+
+/*primo blocco all'interno di una singola riga*/
+#doubleRowCercaObbl .contentCol .first{
+	width: 40%; 
+	float: left; 
+}
+
+/*secondo blocco all'interno di una singola riga*/
+ #doubleRowCercaObbl .contentCol  .last{
+	width: 50%; 
+	float: left; 
+}
+
+/*campo select prima riga*/
+#doubleRowCercaObbl .contentCol .line1 .last select{
+	width:100%
+}
+
+/*campo text-input seconda riga*/
+#doubleRowCercaObbl .contentCol .line2 .last input[type="text"]{
+	width:98%
+}
+
+/* ******************   gestione di 2 righe con 1 sola label centrata  STOP *********************** */
+
+/*label su 2 linee all'interno della stessa riga*/
+.labelDoppia {
+	float: left;  
+	line-height: normal; 
+	padding-top: 9px;
+}
+
+
+/*proprieta per allineare correttamente in un'unica riga immagine+link alle guide (sezione sinistra)*/
+/*NON USATE X PROBLEMA CON EXPLORER*/
+.linkGuidaContainer {
+	width: 135px;
+}
+
+.linkGuidaImg {
+	float: left;
+	width: 30px;
+}
+
+.linkGuidaText{
+	float: right;
+	width: 105px;
+	 text-align: left;
+}
+
+
+/* SEZIONE PAGINE PUBBLICHE - START */
+
+.public_container{
+	float: left; 
+	width: 98%;
+	margin-left:0px;
+}
+
+.public_container#fullwide{ 
+	width: 100%;
+}
+
+/*testo in alto*/
+.public_container .top{
+	line-height:18px;
+	padding-left:3px;
+}
+
+/*immagine in basso a sx*/
+.public_container .bottom_left{
+	float: left;
+	margin-top : 18px;
+}
+
+/*testo in basso a dx (a fianco immagine)*/
+.public_container .bottom_right{
+	float: right; 
+	text-align: left; 
+	line-height: 18px; 
+	width: 40%;
+	margin-top : 18px;
+}
+
+.public_container .bottom_right a {
+    /*color:#3d3d3d ;
+    font-weight:bold ;
+    text-decoration:none;*/
+    color: #AFD142 ;
+    font-size : 11px;
+    text-decoration: none;
+    font-weight:bold;  
+}
+
+/*.public_container .bottom_right a:hover{
+    color:#c0e156 !important;
+}*/
+
+
+
+/* SEZIONE PAGINE PUBBLICHE - END */
+
+
+
+/*SEZIONE POPUP : importata da popup.css x evitare conflitti con main.css  - START*/
+
+/*------------- popup cercacw ------------------*/
+
+#content_popup {
+	width:434px;
+	background:url(../../img/wetrade/popup_bg.gif) top no-repeat;
+	margin: 0 auto;
+}
+
+#popup_header {
+	height: 108px;
+}
+
+#bottons4 {
+	float:right;
+	margin-top:18px;
+	margin-right:10px;
+	height: 40px;
+	width: 146px;
+	overflow: hidden;
+}
+
+#bottons4 .button_green {
+	float:left;
+	margin-bottom:6px;
+	margin-right:2px;
+}
+
+#popup_header .logo {
+	float:left;
+	margin-top:24px;
+	margin-left:17px;
+}
+
+#popup_header .button_green {	
+	height:17px;
+}
+
+#popup_header .button_green div {
+	background:url(../../img/wetrade/button_green.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	margin:0;
+	vertical-align:10%;
+}
+
+#popup_header .button_green div.right {
+	background:url(../../img/wetrade/button_green.gif) right no-repeat;
+	width:7px;
+	padding:0;
+	margin:0;
+}
+
+#popup_header .button_green div a {
+	color:white;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+	vertical-align:10%;
+}
+
+#content_popup #compravendi2d3 {
+	width:95%;
+	margin-left:5pt;
+	float:left;
+}
+
+#content_popup #abbandona{
+	float: right; 
+	width: 59%; 
+	margin-top: 10pt;	
+}
+
+#content_popup .footer{
+float: left;
+height: auto;
+width: 100%;
+margin-top: 8pt;
+}
+
+#content_popup .footer .number{
+	color:#8dbd00;
+	background:url(/img/wetrade/logo-phone-white.gif) 1px -1px no-repeat;
+	padding-left:23px;
+	font-weight:bold;
+	float:left;
+}
+
+#content_popup .footer .info{
+	float:right;
+	color: #6C6C6C;
+	font-size: 10px;
+}
+
+#content_popup .row .col input{
+	height:14px;
+}
+
+
+/*------------- popup elencocw ------------------*/
+
+#content_popup #bodier{
+	width:100%;
+}
+
+#content_popup .tabellaRisultati{
+	width:92%;
+	margin: 0px;
+	margin-left:4%;
+}
+
+#content_popup #pulsantieraElenco .abb_esegui{
+	width:59%;
+	float:right;
+}
+
+#content_popup .esitoRicerca{
+	width:100%;
+	text-align:center;
+	height:15px;
+}
+
+#content_popup .esitoRicerca .title{
+	width:13%;
+	float:left;
+	text-align: left;
+	height:100%;
+	padding-top : 0px;
+}
+
+/* SEZIONE POPUP - STOP */
+
+
+
+/* #################  SEZIONE DEMO - START  ################# */
+
+
+/*pagina introduttiva alle demo*/
+
+#demo_container{
+	float: none;
+	margin: 0px auto;
+	margin-top: 10px;
+	width: 80%;	
+	font-size: 12px;
+}
+
+#demo_container .highlight_value3{
+	margin-left:10px;
+	padding-top:1px
+}
+
+#demo_container div{
+	float: none;
+	margin: 5px;
+	padding: 5px;	
+}
+
+
+#demo_container div a {
+    color: #AFD142 ;
+    font-size : 12px;
+    text-decoration: none;
+    font-weight:bold;  
+}
+
+
+/*singole pagine di demo*/
+
+#demo_page{
+	float: none; 
+	/*margin-left: 10%;*/ 
+	width: 100%;
+}
+
+#demo_page .highlight_value{
+	padding-left: 10px; 
+	width: 100%;
+	/*necessari in explorer x evitare che il menu a tendine venga nascosto*/
+	overflow:visible;
+	position: static;
+}
+
+.highlight_value_finedemo {
+	background:url(/img/wetrade/highlight_bg_550.gif) no-repeat;
+	height:33px;
+	width:550px;
+	line-height:33px;
+	margin-left:20px;
+	padding-left:10px;
+	position: static;
+	overflow: visible;
+}
+
+/* #################  SEZIONE DEMO - STOP  ################# */
+
+
+/* #################  SEZIONE BOOK - START  ################# */
+
+ #formTable .tendinaRubrica  {
+	width: 200px; 
+	padding-left: 5px;
+	float:left;
+}
+
+ #formTable .tendinaRubrica select {
+	width: 150px;
+	margin-right : 6px;
+}
+
+ #formTable input {
+	height:13px;
+}
+
+#popTable1 .bookMinMax {
+	margin: 0 auto;
+}
+
+ #popTable1 .bookMinMax .min {
+	float: left; 
+	width: 40%; 
+	text-align: right;
+}
+
+ #popTable1 .bookMinMax .max {
+	float: right; 
+	width: 40%; 
+	text-align: left;
+}
+
+
+/* #################  SEZIONE BOOK - STOP  ################# */
+
+
+/* pdf */
+
+#pdfContainer {
+	margin: 20px auto 0px; 
+	width: 75%;
+}
+
+#pdfContainer .pdfImg{
+	float: left;
+}
+
+#pdfContainer .pdfTitle{
+	float: left; 
+	font-weight: bold; 
+	font-size: 14px; 
+	color: rgb(2, 136, 2); 
+	padding-left: 20px; 
+	padding-top: 2%;
+	text-align:left;
+}
+
+#pdfContainer #pdfText{
+	float: right; 
+	text-align: center; 
+	padding-top: 8px;
+}
+
+/*
+#pdfContainer {
+	margin:0 auto;
+}
+
+#pdfContainer .pdfImg{
+	float: left;
+	width:40%;
+}
+
+#pdfContainer #pdfText{
+	float: left;
+	margin-top:30px;
+}*/
+
+
+/* notizie */
+
+#dettNotizia {
+	width:100%;
+	float:left;
+}
+
+#dettNotizia h3  {
+	margin:0;
+	padding:0;
+	padding-left:9px;
+	line-height:28px;
+	font-size:13px;
+	color:#333333;
+	border-bottom: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+
+#dettNotizia .headerNotizia  {
+	width:100%;
+	margin-top:20px
+}
+
+#dettNotizia .headerNotizia .data {
+	float:left;
+	width:15%;
+	padding-left:5px;
+}
+
+#dettNotizia .headerNotizia .titolo {
+	float:left;
+	width:82%;
+	font-weight:bold;
+}
+
+#dettNotizia .headerNotizia .titolo a:hover{
+	 color:#a0bb4a !important; 
+}
+
+#dettNotizia  .testo {
+	width:100%;
+	margin-top:30px
+}
+
+
+/* ----------------------------- EXTRA ------------------------------*/
+
+/*##########   AMEX FUNDS START ##########*/
+
+/*numero verde*/
+#amexfunds .number{
+	font-size:12px;
+	color:  green;
+}
+
+#amexfunds .number img{
+	height:11px;
+	vertical-align:middle;
+}
+
+#amexfunds .logoImg{
+	float: left; 
+	width: 30%;
+}
+
+#amexfunds .title{
+	float: right; 
+	width: 70%;
+	color: #afd142;
+	font-size:14px;
+	padding-top:3px;
+}
+
+#amexfunds .subtitle{
+	margin-top:20px;
+}
+
+#amexfunds .subtitle .h{
+	font-weight:bold;
+	color: #afd142;
+	font-size: 11px;
+}
+
+#amexfunds .title b{
+	color: black;
+}
+
+#amexfunds #amexfundsTable td{
+	font-size:13px;
+}
+
+#amexfunds #amexfundsTable .h{
+	color: #afd142;
+	font-size:13px;
+	text-align:center;
+	font-weight:bold;
+}
+
+#amexfunds #amexfundsTable .col1d3{
+	width:33%;
+	float:left;
+}
+
+#amexfunds #amexfundsTable .col2d3{
+	width:28%;
+	float:left;
+}
+
+#amexfunds #amexfundsTable .col3d3{
+	width:29%;
+	float:right;
+}
+
+#amexfunds #amexfundsTable .col1d3,#amexfunds #amexfundsTable .col2d3,#amexfunds #amexfundsTable .col3d3{
+	padding:10px;
+	line-height:20px;
+	font-size:12px;	
+}
+
+#amexfunds #amexfundsTable .rowFooter{
+	font-size:12px;	
+	padding-left:10px;
+	float:left;
+}
+
+#amexfunds #amexfundsTable .colUnica{
+	width:100%;
+	/*display:table-cell;*/
+	text-align:center;
+}
+
+#amexfunds .rowUnica{
+	line-height:31px;
+}
+
+#amexfunds #amexfundsTable .rowUnica{
+	line-height:normal;
+}
+
+#amexfunds .rowUnica .col1d2, #amexfunds #amexfundsTable .rowUnica .col1d2{
+	width:60%;
+	float:left;
+	text-align:left;
+}
+
+#amexfunds  .rowUnica .col2d2, #amexfunds #amexfundsTable .rowUnica .col2d2{
+	width:35%;
+	float:right;
+	text-align:left;
+}
+
+#amexfunds  .rowUnica .col2d2 img, #amexfunds  .rowUnica .col1d2 img{
+	vertical-align:middle;
+}
+
+/*##########   AMEX FUNDS STOP ##########*/
+
+
+/*vodafone*/
+
+#vodafonePopup{
+	width:80%;
+	margin: 0 auto;
+}
+
+#vodafonePopup #testoErrore, #vodafonePopup .classicLink{
+	text-align:center;
+}
+
+
+/*iban*/
+
+#iban {
+	width: 72%;
+	float:left;
+	padding-left:25px;
+}
+
+#iban .h{
+	color: #afd142;
+	font-size:13px;
+	text-align:left;
+	font-weight:bold;
+}
+
+
+/*cw goldmansachs: riutilizzo 'iban' come container*/
+
+#iban .textRow{
+	width:100%;
+	clear:both;
+	padding-top: 20px;
+}
+
+#iban .imgRow{
+	width:100%;
+	clear:both;
+	padding-top: 20px;
+	height: 120px;
+	line-height:120px;
+}
+
+#iban .lastImgRow{
+	width:100%;
+	clear:both;
+	padding-top: 20px;
+	height: 92px;
+	line-height:92px;
+}
+
+#iban .firstRow{
+	width:100%;
+	clear:both;
+}
+
+#iban .textRow label, #iban .firstRow label{
+	font-weight:bold;
+}
+
+#iban .imgRow .img, #iban .lastImgRow .img{
+	float:left;
+}
+
+#iban .imgRow .link, #iban .lastImgRow .link{
+	width:37%;
+	float:left;
+	/*padding-top: 10%;*/
+}
+
+#iban .imgRow img, #iban .lastImgRow img{
+	vertical-align:middle;
+}
+
+#popupGoldman {
+	width:90%;
+	margin:0 auto;
+	text-align:left;
+}
+
+/*descrizione profili commissionali (pubblica)*/
+
+#descProfiliComm .classicLink{
+	margin-top:20px;
+	width:550px;
+	margin-left:20px;
+}
+
+#descProfiliComm label{
+	color: #afd142;
+	font-weight:bold;
+}
+
+#descProfiliComm .right{
+	clear:both;
+	/*float:right;
+	text-align:right;*/
+	margin-top:10px;
+	/*segnalaz 180*/
+	float: left;
+	text-align: left;
+	margin-bottom: 10px ;
+}
+
+#descProfiliComm .indietro{
+ background-color: #FFFFFF;
+ margin-left: 20px;
+ margin-top:10px;
+}
+
+/*descrizione profili commissionali (privata)*/
+.unica #descProfiliComm{
+	width:80%;
+	margin:0 auto;	
+}
+
+
+/*errore operatore : operaz non disponibile*/
+#centralError{
+	width:60%;
+	margin:0 auto;
+}
+
+#centralError .bottom{
+	border-top: 1px solid lightGrey;
+	padding-top:5px;
+	margin-top:10px;
+}
+
+
+/*popup condiz contrattuali*/
+#condContratt .colored{
+	 background-color:#c8db8b;
+}
+
+#condContratt .highlight_value{
+	padding-left:10px;
+}
+
+#condContratt .colored2{
+	 /*background-color:Gainsboro;*/
+	 background-color:white;
+}
+
+#condContratt .classicLink{
+	float:right;
+	clear:both;
+}
+
+#condContratt .label{
+	width:5%;
+	float:left;
+}
+#condContratt .text{
+	float:right;
+	text-align:left;
+	width:95%;
+}
+
+#condContratt .row{
+	clear:both;
+}
+
+#condContratt tr{
+	align:center;
+	text-align:center;
+}
+
+#closeButton {
+	float:right;
+	margin-top: 45px;
+	margin-right: 60px;
+	width:90px;
+}
+
+#closeButton .button_green {	height:17px;}
+#closeButton .button_green div {
+	background:url(../../img/wetrade/button_green.gif) left no-repeat;
+	padding-left:7px;
+	text-align:center;
+	height:17px;
+	float:left;
+	margin:0;
+	width:80%;
+	vertical-align:10%;
+}
+#closeButton .button_green div.right {
+	background:url(../../img/wetrade/button_green.gif) right no-repeat;
+	width:7px;
+	padding:0;
+	margin:0;
+}
+#closeButton .button_green div a {
+	color:white;
+	font-weight:bold;
+	line-height:17px;
+	height:17px;
+	text-transform: uppercase;
+	vertical-align:10%;
+}
+
+
+/*dettaglio circolare*/
+#circolare {
+	margin:0 auto;
+	width:90%;
+	text-align:left;
+}
+
+#circolare h3, #circolare .classicLink{
+	text-align:center;
+}
+
+/* diventa cliente - come aderire*/
+#comeAderire{
+	margin-left:18%;
+	padding-right:30px;
+}
+
+#comeAderire .highlight_value2{
+	padding-left:10px;
+	font-weight: bold;
+}
+
+/*numero verde*/
+#comeAderire .numeroVerde{
+	color:  green;
+	font-weight: bold;
+}
+
+
+/*guida modifica profilo*/
+#guidaMP .highlight_value{
+	padding-left:10px;
+	font-weight:bold;
+}
+
+#guidaMP .blockIndex{
+	color:#afd142;
+	font-weight:bold;
+	font-size:14px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+
+#guidaMP .block .text{
+	float:left;
+	width:50%;
+	text-align:left;
+}
+
+#guidaMP .block .img{
+	float:right;
+	width:45%;
+}
+
+#guidaMP .block .img img{
+	vertical-align:middle;
+}
+
+#guidaMP .chiudi{
+	width:100%;
+	text-align:right;
+}
+
+#guidaMP .clear{
+	height:20px;
+}
+
+
+/*mappa del sito*/
+
+#map {
+	text-align:center;
+	margin: 0 auto;
+	padding-left:10px;
+}
+
+#map .col{
+	width:100px;
+	float:left;
+}
+
+#map .col div{
+	height : 30px;
+	margin: 1px;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+/* non funziona in ie6!
+
+#map .col[name="Ufficio studi"] .item, #map .col[name="Ufficio studi"] .item div{
+	height : 60px !important;
+}*/
+
+#map #Ufficio_studi .item, #map #Ufficio_studi .item div{
+	height : 63px !important;
+}
+
+
+#map .col .title{
+	background-color : #afd142;
+	font-weight : bold;
+	border: 1px solid #aaaaaa;
+}
+
+#map .col .item{
+	border: 1px solid #aaaaaa;
+}
+
+#map .col .title div , #map .col .item div{
+	display:table;
+	width:100%;
+}
+
+
+/* funziona in firefox ma non in ie6 : 
+	x ff queste proprietà verranno caricate da uno script js 
+	al caricamento della pagina
+
+#map .col .title div p, #map .col .item div p{
+	display:table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width:100%;
+}*/
+
+/* funziona in ie6 ma non in ff*/
+#map .col .title div p,#map .col .item div p{
+	*margin-top: expression(this.offsetHeight < this.parentNode.offsetHeight ? parseInt((this.parentNode.offsetHeight - this.offsetHeight) / 2) + "px" : "0");
+}
+
+
+/* Informativa Fine Anno*/
+#infoFineAnno{
+	margin:0 auto;;
+	text-align:left;
+	width:80%;	
+}
+
+#infoFineAnno .highlight_value2{
+	font-weight:bold;
+	padding-left:10px;
+	position: static;
+	overflow: visible;
+}
+
+#infoFineAnno .row .title{
+	float:left;
+	width:50%;
+}
+#infoFineAnno .row .value{
+	float:left;
+}
+
+#infoFineAnno .bottomBar{
+	border-bottom: 1px solid #aaaaaa;
+	padding-top: 5px;
+	width: 600px;
+	height: 10px;
+}
+
+#infoFineAnno .linkBar{
+	margin-top: 8px;
+}
+
+#infoFineAnno .bottomBar .tag2d2{
+	float:right;
+	width:13%;
+}
+
+#infoFineAnno input[type="radio"]{
+	vertical-align: middle;
+}
+
+
+/*logonInfoPopup*/
+
+#logonInfoPopup{
+	/*font-weight: bold;*/	
+}
+
+#logonInfoPopup .highlight_value{
+	font-weight: bold;	
+	padding-left:10px;
+}
+
+#logonInfoPopup .button_green{
+	width:50px;
+	margin:0 auto;
+}
+
+#logonInfoPopup .numeroVerde{
+	color:  green;
+	font-weight: bold;
+}
+
+
+/*storico capitale derivati*/
+
+#storicoDerivati{
+	float:right;
+	width:80%;	
+}
+
+#storicoDerivati th,#storicoDerivati td{
+	width: 33%;
+}
+
+#storicoDerivati .tag2d2{
+	float:right !important;
+	width: 85px !important;	
+	/*padding-right: 15px !important;*/
+}
+
+#storicoDerivati .highlight_value2{
+	font-weight: bold;	
+	padding-left:10px;
+	overflow:visible;
+	position:static;
+}
+
+#storicoDerivati .Grigio1{
+	color: #808080;	
+}
+
+#storicoDerivati .commonLink{
+	font-weight: bold;	
+}
+
+#storicoDerivati .row{
+	clear:both;	
+	margin-bottom: 20px;
+}
+
+#storicoDerivati .row .col1d2{
+	float:left;
+	width:55%;	
+}
+
+#storicoDerivati .row .col2d2{
+	float:right;
+	width:45%;	
+}
+
+#storicoDerivati .portafoglio_table{
+	width:601px;	
+}
+
+#storicoDerivati .subtitle{
+	color: #afd142;	
+	font-weight: bold;	
+}
+
+#storicoDerivati .row .col2d2 .greenLink{	
+	font-weight: bold;	
+}
+
+
+/* vodafone scegli modalita'*/
+
+#vodaScegliModo .highlight_value2{
+	font-weight: bold;	
+	padding-left:5px;
+	margin-bottom:20px;
+}
+
+#vodaScegliModo h3 {
+	margin:15px 0;
+	padding:0;
+	text-align:center;
+	line-height:28px;
+	font-size:13px;
+	color:#333333;
+	border-bottom: 1px solid #DADADA;
+	background:#89b112 url(/img/wetrade/title_bg_green.gif) repeat-x top;
+}
+
+#vodaScegliModo .row .title{
+	float:left;
+	width: 85%;
+	font-weight: bold;
+}
+
+#vodaScegliModo .row .link{
+	float:right;
+	width: 15%;
+}
+
+#vodaScegliModo #home1d3, #vodaScegliModo  #home1d3 .blackboxBig{
+	width:120px;
+	height:auto;
+	margin:0;
+}
+
+#vodaScegliModo #home1d3, #vodaScegliModo  #home1d3 .blackboxBig a:hover{
+	font-weight:bold;
+}
+
+#vodaScegliModo .inside2d2{
+	margin-left:25px;
+}
+
+#vodaScegliModo #pulsantieraElenco .indietro{
+	text-align:left;
+	width:20%
+}
+
+#vodaScegliModo #pulsantieraElenco .abb_esegui{
+	width:70%
+}
+
+#vodaScegliModo #pulsantieraElenco .abb_esegui .esegui{
+	width:15%;
+}
+
+#vodaScegliModo #pulsantieraElenco .abb_esegui .esegui a{
+	text-decoration:none !important;
+	color : #ffffff !important;
+}
+
+#vodaHelp .highlight_value{
+	font-weight: bold;	
+	text-align:center;
+	margin-bottom:20px;
+}
+
+/*utilizzata nella static box relativa alle condizioni economiche (id=2533)*/
+#vodaHelp label{
+	font-weight:bold;
+	font-size:12px;
+	color: #afd142;
+}
+
+
+#vodaAutoriz .classicLink{
+	margin-top:20px;
+	text-align:right;
+	padding-right:5px;
+}
+
+#vodaAutorizWarn .tag2d2{
+	text-align:right;
+	float:right;
+}
+
+#vodaAutorizWarn .tag1d2{
+	padding-left:0px;
+}
+
+
+/* alert su eseguiti */
+
+#alertEseguiti .insideAutoHeight{
+	height:100px;	
+}
+
+#alertEseguiti {
+	width:50%;
+	margin: 0 auto;
+}
+
+#alertEseguiti .height30{
+	height:30px;
+	margin-top: 5px;
+}
+
+#alertEseguiti input[type="checkbox"]{
+	vertical-align: middle;
+}
+
+/* comparatore - settori indici*/
+#settoriIndici label{
+	font-weight: bold;
+	color:#afd142;
+}
+
+/*ricerca x grafici*/
+#ricercaPerGrafici{
+	text-align:left;
+	width:95%;
+	margin: 0 auto;
+}
+
+#ricercaPerGrafici #confermaOrdine{
+	text-align:left;
+	margin: 0 10px;
+}
+
+#ricercaPerGrafici #confermaOrdine .insideAutoHeight{
+	padding-top: 15px;
+	height: 200px;
+}
+
+#ricercaPerGrafici #confermaOrdine .row{
+	float:none;
+	width: 95%;
+}
+
+#ricercaPerGrafici #confermaOrdine .col{
+	float:right;
+	width: 65%;
+	text-align:left;
+}
+
+#ricercaPerGrafici #confermaOrdine .label{
+	float:left;
+	width: 35%;
+	text-align:left;
+}
+
+#ricercaPerGrafici #confermaOrdine .col .sx{
+	float:left;
+	width:50%
+}
+
+#ricercaPerGrafici #confermaOrdine .col .dx{
+	float:right;
+	width:20%
+}
+
+input[type="radio"], input[type="checkbox"]{
+	vertical-align:middle;
+}
+
+
+/*visualizza Fondi Tematici*/
+
+#visFondiTematici .tableRow {
+	width=100%;
+	clear:both;
+	padding-bottom : 25px;
+}
+
+#visFondiTematici .tableRow .title{
+	clear:both;
+	color: #a0bb4a;
+	font-weight:bold;
+	font-size:12px;
+	padding : 0 0 5px 3px;
+}
+
+#visFondiTematici .tableRow table .primo{
+	width:20% ;
+	text-align: center ;
+}
+
+#visFondiTematici .tableRow table .th2{
+	width:20%;
+	line-height : normal;
+}
+
+#visFondiTematici .tableRow table .th4, #visFondiTematici .tableRow table .th3{
+	width:15%;
+}
+
+#visFondiTematici .tableRow table .th5{
+	width:30%;
+}
+
+#visFondiTematici .tableRow table th, #visFondiTematici .tableRow table td{
+	padding : 3px;
+}
+
+/* message.jsp*/
+
+#errMessage #movimenti_titoli{
+	width: 480px;
+	margin-bottom:50px;
+}
+
+#errMessage #testoErrore{
+	font-size:15px;
+	height:35px;
+	padding-top:5px;
+}
+
+#errMessage .messaggio{
+	height:40px;
+	font-size:13px;
+}
+
+#errMessage .indietro{
+	float:right;
+	padding-right:5px;
+	height:20px;
+}
+
+
+
+/* X CENTRARE VERTICALMENTE LE IMMAGINI DEI GRAFICI IN SCEDE TITOLO*/
+#unicaIside2d2 .displayTable{
+	/*funziona in ff ma non in ie*/
+	display:table;
+	height:252px; /*deve avere la stessa altezza del blocco unicaIside2d2*/
+}
+
+#unicaIside2d2 .displayTable .displayTableCell{
+	/*funziona in ff ma non in ie*/
+	display:table-cell;
+	vertical-align:middle;
+	/*funziona in ie ma non in ff*/
+	*margin-top: expression(this.offsetHeight < this.parentNode.offsetHeight ? parseInt((this.parentNode.offsetHeight - this.offsetHeight) / 2) + "px" : "0");
+}
+
+/*segnalazione 163 - 383*/
+#graficiInterattivi{
+	/*width: 755px;*/
+	margin-left: 10px;
+	height:auto;
+}
+
+/*#graficiInterattivi .box_base{
+	border: 0 ;
+}
+*/
+
+#graficiInterattivi h4{
+	background:#000000 url(/img/wetrade/title_bg_black.gif) repeat-x scroll center top;
+	border:1px solid #596464;
+	color:#AFD142;
+	font-weight:bold;
+	height:29px;
+	line-height:29px;
+	margin:0;
+	width:100%;
+}
+
+#graficiInterattivi h3 div{
+	padding-left: 7px;
+	font-size: 12px;
+	width: 190px;
+}
+
+#graficiInterattivi h4 div{
+	padding-left: 17px;
+	font-size: 12px;
+	width: 190px;
+}
+
+#graficiInterattivi #cfrAndamento{
+	margin: 10px 0;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 4px;
+}
+
+#graficiInterattivi #boxSX{
+	width: 230px;
+	height: auto; 
+	float: left;
+}
+
+
+#graficiInterattivi #boxDX{
+	width: 520px; 
+	float: left;
+	margin-left: 5px;
+	padding-left: 5px;
+	/*border-left: 1px dotted;*/
+}
+
+#graficiInterattivi #boxDX img{
+	/*width: 500px;*/ 
+	width:520px;
+	height:350px;
+}
+
+#graficiInterattivi #boxDX .checkbox{
+	width:15px; 
+	float:left;
+}
+
+#graficiInterattivi #boxDX .colore{
+	width: 10px; 
+	float: left;
+	margin: 1px 3px 0 5px;
+	
+}
+
+#graficiInterattivi #boxDX .rowTitolo{
+	margin: 5px; 
+	/*height: 11px;*/
+}
+
+/*#graficiInterattivi #boxDX .rowTitolo div{
+	height: 11px;
+	line-height: 11px;
+}*/
+
+
+/* FORM ORDINE DERIVATI IDEM */
+.rowFODI{
+	clear:both;
+	color:#666666;
+	height:37px;
+	line-height:37px;
+	padding-left:11px;
+}
+
+/* FORM ORDINE DERIVATI ESTERI */
+.rowFODE{
+	clear:both;
+	color:#666666;
+	height:38px;
+	line-height:38px;
+	padding-left:11px;
+}
+
+/* FORM ORDINE OBBLIGAZIONI TLX */
+.rowObblTlx{
+	clear:both;
+	color:#666666;
+	height:33px;
+	line-height:33px;
+	padding-left:11px;
+}
+
+/* FORM ORDINE AZIONI TLX */
+.rowAzTlx{
+	clear:both;
+	color:#666666;
+	height:31px;
+	line-height:31px;
+	padding-left:11px;
+}
+
+/*guide online*/
+.guideOnlineBox{
+	margin-left: 100px;
+	float: none;
+	width: 600px;
+}
+

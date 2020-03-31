@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{$lang_insert_tooltip_title}</title>
+	<script language="javascript" type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/mctabs.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script language="javascript" type="text/javascript" src="jscripts/tooltip.js"></script>
+	<script>
+		function preTooltip() {
+			var myText = document.getElementById("textTooltip");
+			var mySelectedText = document.getElementById("selectedText");
+			if (myText != null) {
+				insertTooltip(myText.value,mySelectedText.value);
+			}
+			else {
+				alert("errore");
+			}
+		}
+	</script>
+	<base target="_self" />
+</head>
+<body id="link" onload="tinyMCEPopup.executeOnLoad('initTooltip();');" style="display: none">
+<form name="tooltipForm" onsubmit="preTooltip();return false;tinyMCEPopup.close();" action="#">
+	<input type="hidden" name="selectedText" id="selectedText" value="" />
+	<div class="tabs">
+		<ul>
+			<li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{$lang_insert_tooltip_title}</a></span></li>
+		</ul>
+	</div>
+
+	<div class="panel_wrapper">
+		<div id="general_panel" class="panel current">
+
+		<table border="0" cellpadding="4" cellspacing="0">
+
+          <tr>
+            <td nowrap="nowrap"><label for="text">Testo</label></td>
+            <td><textarea id="textTooltip" name="textTooltip" cols='67' rows='5'></textarea></td>
+          </tr>
+        </table>
+		</div>
+	</div>
+
+	<div class="mceActionPanel">
+		<div style="float: left">
+			<input type="submit" id="insert" name="insert" value="{$lang_insert}" />
+		</div>
+
+		<div style="float: right">
+			<input type="button" id="cancel" name="cancel" value="{$lang_cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+	</div>
+</form>
+</body>
+</html>
