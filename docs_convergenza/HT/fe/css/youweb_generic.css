@@ -6385,6 +6385,13 @@ div[id*="popover"] .popover-content {
   }
 }
 
+@media (max-width: 991px) {
+    .spsel.spsel-hasconsole .spsel-option {height:38px;}
+    .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
+        top:8px;
+    }
+}
+
 /* Input tipo rcb (radio o checkbox) */
 .input-rcb-inline {
     width:auto;
@@ -7226,6 +7233,7 @@ div.fixed-table-scroll-outer {
 .btn-link-icon span {
     text-decoration:none;
     text-transform:uppercase;
+    font-weight:normal
 }
 
 .btn-link-icon .icon {
@@ -7233,17 +7241,25 @@ div.fixed-table-scroll-outer {
 }
 
 .btn-align-right .btn-link-icon {
+    margin-right:0px;
     margin-left:15px;
-    margin-right:0;
 }
 
 @media (max-width:767px) {
-    .btn-link-icon, .btn-align-right .btn-link-icon  {
-        float:left !important;
-        clear:both;
-        margin: 10px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+    .btn-link-icon {
+        position:relative;
+        text-align:center;
+        width:38px;
+        height:38px;
+        padding:0;
     }
-    
+
+    .btn-link-icon .icon {
+        position:relative;
+        line-height:38px;
+    }
+    .btn-link-icon span  {
+        display:none;
+    }
+
 }

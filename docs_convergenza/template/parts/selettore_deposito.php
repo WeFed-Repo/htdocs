@@ -65,7 +65,7 @@
 		<div class="bordered-you">
 			<div class="form-group">
 				<div class="row">
-					<div class="col-xs-8 col-sm-6">
+					<div class="col-xs-12 col-sm-6">
 						<label class="control-label-output">Saldo disponibile</label>
 						<span class="output txthelp" data-toggle="tooltip">4.213,46 al gg/mm/aaaa</span>
 						<div class="htmlTooltip">
@@ -77,7 +77,7 @@
 						</div>
 						
 					</div>
-					<div class="col-xs-2 col-sm-2 no-label">
+					<div class="col-xs-12 col-sm-6 no-label">
 						<!-- Modale con dettaglio dei saldi -->
 						
 						<!-- Fine modale con dettaglio dei saldi -->

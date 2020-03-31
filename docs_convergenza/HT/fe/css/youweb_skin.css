@@ -408,6 +408,11 @@ li.linkOn a {
   color: #202d50 !important;
 }
 
+@media (max-width: 767px) {
+  .note.flRight.noFloatMobile span.flLeft {
+    display: none;
+  }
+}
 .button:hover, .btn:hover {
   background-color: #474B4E;
   color: #fff;

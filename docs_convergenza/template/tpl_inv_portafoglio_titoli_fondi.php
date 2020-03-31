@@ -424,10 +424,10 @@ $(function(){
     <!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
     <!-- BLOCCO AGGIORNAMENTI -->
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-8 col-sm-4">
             <a href="#" class="text-link">Situazione PAC</a>
         </div>
-        <div class="col-sm-8">
+        <div class="col-xs-4 col-sm-8">
             <p class="note flRight noFloatMobile">
                 <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                 <!--esempio di loading -->
@@ -553,7 +553,7 @@ $(function(){
         <!-- FINE TABELLA -->
 
         <!-- PULSANTIERA SOTTO TABELLA -->
-        <div class="btnWrapper">
+        <div class="btnWrapper marginTopMedium">
             <div class="btn-align-left">
                 <a class="btn-link-icon" href="#"><i class="icon icon-excel_filled"></i><span>Scarica in Excel</span></a>
                 <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
