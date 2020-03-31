@@ -615,6 +615,11 @@ table th {
     vertical-align: top !important
 }
 
+/* Subgroups */
+table tr.sub {background:#ddd}
+table tr.sub td {background:#ddd}
+table td.indent {padding-left:25px}
+
 input[type=checkbox] {
     width: 15px;
     height: 15px;

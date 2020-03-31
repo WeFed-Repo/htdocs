@@ -82,13 +82,33 @@ $(function(){
                                             <th class="right">Utili/Perdite<br>Eur VAR%</th>
                                         </thead>
                                         <tbody>
-                                            <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
-                                            <td class="left">Titolo azione 1</td>
-                                            <td class="left">MOT</td>
-                                            <td class="right">20,000</td>
-                                            <td class="right">101,01<br>11:17:05</td>
-                                            <td class="right">20.202,00</td>
-                                            <td class="right nega">-24,00<br>-0,1%</td>
+                                            <tr>
+                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                <td class="left">Titolo azione 1</td>
+                                                <td class="left">MOT</td>
+                                                <td class="right">20,000</td>
+                                                <td class="right">101,01<br>11:17:05</td>
+                                                <td class="right">20.202,00</td>
+                                                <td class="right nega">-24,00<br>-0,1%</td>
+                                            <tr>
+                                            <tr class="sub">
+                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                <td class="left indent">Titolo azione 1</td>
+                                                <td class="left">MOT</td>
+                                                <td class="right">20,000</td>
+                                                <td class="right">101,01<br>11:17:05</td>
+                                                <td class="right">20.202,00</td>
+                                                <td class="right nega">-24,00<br>-0,1%</td>
+                                            <tr>
+                                            <tr class="sub">
+                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                <td class="left indent">Titolo azione 1</td>
+                                                <td class="left">MOT</td>
+                                                <td class="right">20,000</td>
+                                                <td class="right">101,01<br>11:17:05</td>
+                                                <td class="right">20.202,00</td>
+                                                <td class="right nega">-24,00<br>-0,1%</td>
+                                            <tr>
                                         </tbody>
                                     </table>
 
@@ -97,6 +117,43 @@ $(function(){
                         </div>
                     </div>
                     <!-- Fine overlayer confronto mercati -->
+
+
+                    <!-- Overlayer tassi di cambio -->
+                    <div class="modal fade" id="layerCambio" tabindex="-1" role="dialog" aria-labelledby="layerCambioLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                                    <h2 class="modal-title" id="layerCambioLabel">Confronta su altri mercati</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Di seguito si mostra il tasso di cambio con cui viene calcolato il controvalore in euro dei titoli.</p>
+                                    <table>
+                                        <thead>
+                                            <th class="left">Valuta</th>
+                                            <th class="right">Bid</th>
+                                            <th class="right">Ask</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="left">EUR/GBP*</td>
+                                                <td class="left">99,999999</td>
+                                                <td class="left">99,999999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">EUR/USD</td>
+                                                <td class="left">199,999999</td>
+                                                <td class="left">199,999999</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="note">* Cambio EUR / GBP espresso in pence (centesimi di pound)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fine overlayer tassi di cambio -->
 
 
                     <!-- Overlay di selezione delle colonne -->
@@ -502,7 +559,7 @@ $(function(){
                 <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
             </div>
             <div class="btn-align-right">
-                <a class="btn-link-icon" href="#"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
             </div>
             <br class="clear">
         </div>

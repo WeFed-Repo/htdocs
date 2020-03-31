@@ -6,7 +6,7 @@
         var filter = $("<div>").addClass("filter-wrap"),
             toggleFilter = $("<div>").addClass("filter-toggle").append(
                 $("<i>").addClass("icon icon_filter"),
-                $("<i>").addClass("icon icon_close"),
+                $("<i>").addClass("icon icon_close")
 
             ).click(function(){
                 $(this).parents("th").toggleClass("filter-opened");
