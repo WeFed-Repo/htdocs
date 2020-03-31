@@ -17,7 +17,8 @@ const applyMask = (value,mask) => {
     let reTest= {
         "numero" : /\d/,
         "telefono": /[0-9+]/,
-        "alfanumerico": /\w/
+        "alfanumerico": /\w/,
+        "alfabetico" : /[^0-9@]/
     }
     value = value.split("").filter((char)=>{ return reTest[mask].test(char)}).join("");
 

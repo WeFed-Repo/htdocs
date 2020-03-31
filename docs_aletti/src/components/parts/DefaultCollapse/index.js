@@ -25,6 +25,7 @@ class DefaultCollapse extends PureComponent {
         const { disabled, hasErrors, label, nominativo, children, className } = this.props;
         const isOpen = !disabled && this.state.isOpen;
         const nominativoLabel = nominativo ? <span className="nominativo">{ nominativo }</span> : '';
+        const errorMessage = (!disabled && hasErrors && !isOpen) ? <span class="error-message"> Apri per Compilare</span> : ''
 
         // Verifica se nei vari "figli c'è un errore" e setta "hasErrors automaticamente qualora non fosse specificato dall'esterno
         
@@ -56,10 +57,14 @@ class DefaultCollapse extends PureComponent {
 
         return (
             <Card { ...cardProps }>
+                {errorMessage}
                 <CardHeader tag={ tag } onClick={ this.toggleCollapse }><i
                     className="icon icon-accordion_down icon-2x"/><i className="icon icon-accordion_up icon-2x"/><span
-                    className="default-collapse-label">{ label }{ nominativoLabel }</span>
+                    className="default-collapse-label">{ label }{ nominativoLabel }
+                    </span>
+
                     <div className="no-select"/>
+                   
                 </CardHeader>
                 <Collapse isOpen={ isOpen }>
                     <div className="default-collapse-wrap">

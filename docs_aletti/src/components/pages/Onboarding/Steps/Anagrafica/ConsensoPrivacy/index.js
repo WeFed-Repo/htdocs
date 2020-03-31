@@ -3,8 +3,8 @@ import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
 import moment from "moment";
-import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
+import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class ConsensoPrivacy extends Component {
     indexIntText = this.props.indexInt === '0' ? "PRIMO" : "SECONDO"
@@ -17,7 +17,12 @@ class ConsensoPrivacy extends Component {
         optionTextDiscalimer = this.props.obdomini.disclaimer
         //SEZIONE INFORMATIVA PRIVACY COMUNE PER ENTAMBI GLI INTESTATARI
         return (
-            <DefaultCollapse disabled={this.props.isPrivacyUnChecked} label={`INSERISCI I DATI E I CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO`} startsOpen={false} className="search-collapse">
+            <DefaultCollapse 
+                disabled={this.props.isPrivacyUnChecked} 
+                label={`INSERISCI I DATI E I CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO`} 
+                startsOpen={false} 
+                className="search-collapse"
+                hasErrors={ CheckAccordionErrors(this.props.formstate.errors, [anagraficaIntestatario + "nome"])}>
                         <section className="onboarding-block">
                             <Row>
                                 <Col xs="6">
@@ -29,6 +34,7 @@ class ConsensoPrivacy extends Component {
                                         placeholder="Nome completo (es. Maria Luisa)"
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "nome"]}
+                                        mask = "alfabetico"
                                     >
                                     </Form.input>
                                 </Col>

@@ -10,12 +10,7 @@ class InformativaDatiPersonali extends Component {
         "localfield_privacyopen": (this.props.formstate.field_anagraficablob_privacyletta === "true") ? true : false
     }
    
-    /*checkErrorsInAccordion(els) {
-        const fieldsErrors = this.props.formstate.errors
-        return fieldsErrors && els.some(els => {
-            return fieldsErrors[els];
-        });
-    }*/
+    
     render() {
         
         //SEZIONE INFORMATIVA PRIVACY COMUNE PER ENTAMBI GLI INTESTATARI
@@ -23,9 +18,9 @@ class InformativaDatiPersonali extends Component {
         return (
             <DefaultCollapse
                 label="LEGGI L'INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI"
-                startsOpen={true}
+                startsOpen={ true }
                 className="search-collapse"
-                hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_anagraficablob_privacyletta"]) }>
+                hasErrors={ CheckAccordionErrors (this.props.formstate.errors, ["field_anagraficablob_privacyletta"]) }>
             
                 <section className="onboarding-block">
                     <Row>

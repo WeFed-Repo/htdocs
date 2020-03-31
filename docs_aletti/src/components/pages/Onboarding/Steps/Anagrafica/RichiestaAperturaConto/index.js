@@ -10,13 +10,13 @@ class RichiestaAperturaConto extends Component {
         
         //SEZIONE INFORMATIVA PRIVACY COMUNE PER ENTAMBI GLI INTESTATARI
         return (
+            <>
             <DefaultCollapse
             label="RICHIESTA APERTURA CONTO"
-            startsOpen={false}
+            startsOpen={ false }
             className="search-collapse"
             disabled={!this.props.isPrivacyChecked}
-            hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_numintestatari"]) }>
-        
+            hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_numintestatari"])}>
             <section className="onboarding-block">
                 <Row>
                     <Col xs="12">
@@ -84,7 +84,9 @@ class RichiestaAperturaConto extends Component {
                     </Col>
                 </Row>
             </section>
-        </DefaultCollapse>
+            </DefaultCollapse>
+           
+            </>
         )
     }
 }
