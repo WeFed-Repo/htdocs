@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
+import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class RichiestaAperturaConto extends Component {
     
@@ -14,7 +15,8 @@ class RichiestaAperturaConto extends Component {
             startsOpen={false}
             className="search-collapse"
             disabled={!this.props.isPrivacyChecked}
-        >
+            hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_numintestatari"]) }>
+        
             <section className="onboarding-block">
                 <Row>
                     <Col xs="12">

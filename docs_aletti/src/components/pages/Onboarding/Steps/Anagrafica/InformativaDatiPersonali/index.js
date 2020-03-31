@@ -2,20 +2,31 @@ import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
+import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
+
 
 class InformativaDatiPersonali extends Component {
     state = {
         "localfield_privacyopen": (this.props.formstate.field_anagraficablob_privacyletta === "true") ? true : false
     }
+   
+    /*checkErrorsInAccordion(els) {
+        const fieldsErrors = this.props.formstate.errors
+        return fieldsErrors && els.some(els => {
+            return fieldsErrors[els];
+        });
+    }*/
     render() {
         
         //SEZIONE INFORMATIVA PRIVACY COMUNE PER ENTAMBI GLI INTESTATARI
+        
         return (
             <DefaultCollapse
                 label="LEGGI L'INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI"
                 startsOpen={true}
                 className="search-collapse"
-            >
+                hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_anagraficablob_privacyletta"]) }>
+            
                 <section className="onboarding-block">
                     <Row>
                         <Col xs="12">
