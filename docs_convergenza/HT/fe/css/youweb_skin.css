@@ -32,7 +32,7 @@
 }
 
 .icon_filter:before, .icon_cambi:before {
-  font-style: normal;
+  font-style: normal iImportant;
   content: "☒";
   color: red !important;
 }
@@ -1623,6 +1623,20 @@ table .table-btn-more:hover {
 /* Scrolling delle tabelle */
 .fixed-table-container {
   clear: both;
+}
+
+/* Classi per lo scroll delle tabelle senza bootstrap */
+.headerContainerNoBootS {
+  position: relative;
+}
+
+.tableContainerNoBootS {
+  overflow-y: auto;
+}
+
+.tableContainerNoBootS table {
+  border-spacing: 0;
+  width: 100%;
 }
 
 /* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */

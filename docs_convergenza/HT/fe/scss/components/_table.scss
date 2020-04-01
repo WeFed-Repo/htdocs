@@ -372,3 +372,17 @@ table .table-btn-more {
   clear:both;
 }
 
+/* Classi per lo scroll delle tabelle senza bootstrap */
+
+.headerContainerNoBootS {
+  position: relative;
+}
+
+.tableContainerNoBootS {
+  overflow-y: auto;
+}
+
+.tableContainerNoBootS table {
+  border-spacing: 0;
+  width: 100%;
+}

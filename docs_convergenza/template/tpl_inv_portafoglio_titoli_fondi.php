@@ -70,47 +70,50 @@ $(function(){
                                     <h2 class="modal-title" id="layerConfrontaLabel">Confronta su altri mercati</h2>
                                 </div>
                                 <div class="modal-body">
-                                    
-                                    <table>
-                                        <thead>
-                                            <th></th>
-                                            <th class="left">Titolo/Fondo</th>
-                                            <th class="left">Mercato</th>
-                                            <th class="right">Q.t&agrave; in<br>portaf.</th>
-                                            <th class="right">Ult. prz.ora</th>
-                                            <th class="right">Controval. Eur</th>
-                                            <th class="right">Utili/Perdite<br>Eur VAR%</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
-                                                <td class="left">Titolo azione 1</td>
-                                                <td class="left">MOT</td>
-                                                <td class="right">20,000</td>
-                                                <td class="right">101,01<br>11:17:05</td>
-                                                <td class="right">20.202,00</td>
-                                                <td class="right nega">-24,00<br>-0,1%</td>
-                                            <tr>
-                                            <tr class="sub">
-                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
-                                                <td class="left indent">Titolo azione 1</td>
-                                                <td class="left">MOT</td>
-                                                <td class="right">20,000</td>
-                                                <td class="right">101,01<br>11:17:05</td>
-                                                <td class="right">20.202,00</td>
-                                                <td class="right nega">-24,00<br>-0,1%</td>
-                                            <tr>
-                                            <tr class="sub">
-                                                <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
-                                                <td class="left indent">Titolo azione 1</td>
-                                                <td class="left">MOT</td>
-                                                <td class="right">20,000</td>
-                                                <td class="right">101,01<br>11:17:05</td>
-                                                <td class="right">20.202,00</td>
-                                                <td class="right nega">-24,00<br>-0,1%</td>
-                                            <tr>
-                                        </tbody>
-                                    </table>
+                                <div class="headerContainerNoBootS">
+                                    <div class="tableContainerNoBootS">
+                                        <table>
+                                            <thead>
+                                                <th></th>
+                                                <th class="left">Titolo/Fondo</th>
+                                                <th class="left">Mercato</th>
+                                                <th class="right">Q.t&agrave; in<br>portaf.</th>
+                                                <th class="right">Ult. prz.ora</th>
+                                                <th class="right">Controval. Eur</th>
+                                                <th class="right">Utili/Perdite<br>Eur VAR%</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                    <td class="left">Titolo azione 1</td>
+                                                    <td class="left">MOT</td>
+                                                    <td class="right">20,000</td>
+                                                    <td class="right">101,01<br>11:17:05</td>
+                                                    <td class="right">20.202,00</td>
+                                                    <td class="right nega">-24,00<br>-0,1%</td>
+                                                <tr>
+                                                <tr class="sub">
+                                                    <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                    <td class="left indent">Titolo azione 1</td>
+                                                    <td class="left">MOT</td>
+                                                    <td class="right">20,000</td>
+                                                    <td class="right">101,01<br>11:17:05</td>
+                                                    <td class="right">20.202,00</td>
+                                                    <td class="right nega">-24,00<br>-0,1%</td>
+                                                <tr>
+                                                <tr class="sub">
+                                                    <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                                    <td class="left indent">Titolo azione 1</td>
+                                                    <td class="left">MOT</td>
+                                                    <td class="right">20,000</td>
+                                                    <td class="right">101,01<br>11:17:05</td>
+                                                    <td class="right">20.202,00</td>
+                                                    <td class="right nega">-24,00<br>-0,1%</td>
+                                                <tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
 
                                 </div>
                             </div>
@@ -129,25 +132,29 @@ $(function(){
                                 </div>
                                 <div class="modal-body">
                                     <p>Di seguito si mostra il tasso di cambio con cui viene calcolato il controvalore in euro dei titoli.</p>
-                                    <table>
-                                        <thead>
-                                            <th class="left">Valuta</th>
-                                            <th class="right">Bid</th>
-                                            <th class="right">Ask</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="left">EUR/GBP*</td>
-                                                <td class="left">99,999999</td>
-                                                <td class="left">99,999999</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left">EUR/USD</td>
-                                                <td class="left">199,999999</td>
-                                                <td class="left">199,999999</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="headerContainerNoBootS">
+                                        <div class="tableContainerNoBootS">
+                                            <table>
+                                                <thead>
+                                                    <th class="left">Valuta</th>
+                                                    <th class="right">Bid</th>
+                                                    <th class="right">Ask</th>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="left">EUR/GBP*</td>
+                                                        <td class="left">99,999999</td>
+                                                        <td class="left">99,999999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left">EUR/USD</td>
+                                                        <td class="left">199,999999</td>
+                                                        <td class="left">199,999999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                     <p class="note">* Cambio EUR / GBP espresso in pence (centesimi di pound)</p>
                                 </div>
                             </div>
