@@ -67,7 +67,23 @@ $numInt = $mono? 1 : 3;
                     </div>
                 </div>
 				<div class="row">
-					<div class="col-md-12 form-group">
+                <p>
+					lorem ipum dolor sit
+                    <a class="text-tooltip" href="javascript:;" data-toggle="tooltip" 
+                    title="Ai sensi della normativa antiriciclaggio (D.Lgs. 231/07 e successive integrazioni e modifiche) 
+                    il cliente è obbligato a fornire alla Banca alcune dichiarazioni e informazioni. Ti ricordiamo che il 
+                    rilascio di false informazioni od omissioni comporta conseguenze anche di natura penale. Prima di procedere ti invitiamo a prendere visione 
+                    dell'<a href='/common/apriDocumento.action?id=66&isPDF=true' target='_blank'>Informativa sul trattamento dei dati personali della Banca</a>"
+                    >
+                    lorem ipum dolor sit
+                </a> 
+                lorem ipum dolor sit
+    
+				</p>
+                    
+                    
+                    
+                    <div class="col-md-12 form-group">
 						<label for="titeff_int<?php echo $i; ?>" class="labelTooltip">Titolare effettivo*</label>
 						<a href="#!" data-toggle="tooltip" title="" id="ttNome" class="icoinfo" data-original-title="Per titolare effettivo si intende la persona fisica per conto della quale &egrave; realizzata un'operazione o un'attivit&agrave; (D.lgs n&deg;231/07)"></a>
 						<div class="checkbox check-inline">
@@ -84,9 +100,47 @@ $numInt = $mono? 1 : 3;
 					</div>						
                     <div class="col-sm-2 form-group">
                         <div class="radio radio-inline">
-                            <input type="radio" name="politicEspostaAv_int<?php echo $i; ?>" id="politicEspostaAv_int<?php echo $i; ?>_S" value="si">
-                            <label for="isbpmcliente_int<?php echo $i; ?>a">S&Igrave;</label>
+                            <input data-toggle="tooltip" type="radio" onclick="triggerTooltip(event)" name="politicEspostaAv_int<?php echo $i; ?>" id="politicEspostaAv_int<?php echo $i; ?>_S" value="si">
+                            <label class="closeable" id="spanTooltip" data-toggle="tooltip" title="" data-html="true" data-htmlid="#tooltipText" for="isbpmcliente_int<?php echo $i; ?>a">S&Igrave;</label>
                         </div>
+                        <p id="tooltipText" style="display:none">lorem ipsum dolor sit <a data-toggle="modal" data-target="#modalePoliticamente">apri modale</a></p>
+                        <div id="modalePoliticamente" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i></a>
+                                <h1 class="modal-title">TITOLO MODALE</h1>
+                            </div>
+                            <div class="modal-body">
+                                Contenuto modale
+                            </div>
+                            <div class="modal-footer">
+                                <div class="align-right">
+                                    <input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <script>
+                             var triggerTooltip = function(e) {
+                            
+                            if($(e.target).is(':checked')) {
+                                $('#spanTooltip').tooltip('show');
+                               
+                            }
+                            $(".tooltip-close").on("click", function() {
+                                $('#spanTooltip').tooltip('hide');
+                            })
+                        }
+                        $('#modalePoliticamente').on('show.bs.modal', function () {
+                            $("#spanTooltip").tooltip('hide');
+                        })
+                    </script>    
+                            
+                           
+                   
+                        
                     </div>
                     <div class="col-sm-10 form-group">
                         <div class="radio radio-inline">

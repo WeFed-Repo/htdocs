@@ -21,6 +21,7 @@ const applyMask = (value,mask) => {
         "alfabetico" : /[^0-9@]/,
         "codicefiscale" : /[A-za-z0-9]/
     }
+   
     value = value.split("").filter((char)=>{ return reTest[mask].test(char)}).join("");
 
     if (mask==="alfanumerico" || mask==="codicefiscale" ) value = value.toUpperCase()
