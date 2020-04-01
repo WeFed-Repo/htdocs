@@ -455,7 +455,13 @@ function ttCloseMenuOuterTap() {
 
 /* Attiva i tooltip */
 var initTooltip = function () {
+    var $wrapper = $('body');
     var ttel = $("*[data-toggle=tooltip]").not(".ttInited");
+    // html complesso per i tooltip con ID indicato
+    $.each($wrapper.find("[data-htmlid]"), function (i, v) {
+       var ttHtml = $($(v).attr("data-htmlid")).addClass("inited");
+        $(v).attr("title", ttHtml.html());
+    });
     $("*[data-toggle=tooltip]").tooltip(
         {
             trigger: "click",
@@ -471,10 +477,13 @@ var initTooltip = function () {
             event.preventDefault();
             $(this).parents(".tooltip").tooltip('hide');
         });
+       
     }).addClass("ttInited");
     // Avvia il precaricamento di tutte le immagini eventualmente presenti nei vari tooltip
     $.each(ttel, function (i, v) {
         var ttCode = $(v).attr("data-original-title");
+        
+        
         if (ttCode.indexOf("<img") >= 0) {
             if (typeof imgttpreload == "undefined") {
                 imgttpreload = $("<div>").css("display", "none").attr("id", "imgttpreloader");
@@ -485,12 +494,15 @@ var initTooltip = function () {
                 if (ele.is("img")) imgttpreload.append(ele);
             });
         }
+        
     });
     $("[data-toggle='tooltip']").on('show.bs.tooltip', function () {
         $('.tooltip,in.fade').tooltip('hide');
-        ttClosTooltipOuterTap();
+        if(!ttel.hasClass("closeable")) {
+            ttClosTooltipOuterTap();
+        }
+       
     });
-
 };
 
 function ttClosTooltipOuterTap() {
@@ -909,4 +921,3 @@ $(function () {
     $("body").prepend(gEl);
 });
 /* FINE TRACCIATURA GOOGLE*/
-

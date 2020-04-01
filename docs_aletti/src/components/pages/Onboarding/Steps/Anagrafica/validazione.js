@@ -6,7 +6,8 @@ export default function(form) {
         obbligatorimsg = "Compila",
         obbligatorimsgSel = "Seleziona",
         codicemsgLength = "Il codice fiscale deve contenere 16 caratteri",
-        mailmsgFormat = "Verifica"
+        mailmsgFormat = "Verifica",
+        cimsgFormat = "Verifica" 
 
     
     //Obbligatori intestatario 1 
@@ -24,10 +25,16 @@ export default function(form) {
         "field_anagraficablob_intestatari_0_listprivacy_2_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_3_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_4_consenso",
+        "field_anagraficablob_intestatari_0_numdocumento"
         
         ],
         obbligatoriSel_int1 = [
-        "field_anagraficablob_intestatari_0_sesso"    
+            "field_anagraficablob_intestatari_0_sesso",
+            "field_anagraficablob_intestatari_0_paesenascita",
+            "field_anagraficablob_intestatari_0_cittadinanza",
+            "field_anagraficablob_intestatari_0_provincianascita",
+            "field_anagraficablob_intestatari_0_comunenascita",
+            "field_anagraficablob_intestatari_0_codtipodocumento"
         ];
     
     //Obbligatori eventuale intestatario 2
@@ -44,12 +51,18 @@ export default function(form) {
         "field_anagraficablob_intestatari_1_listprivacy_1_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_2_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_3_consenso",
-        "field_anagraficablob_intestatari_1_listprivacy_4_consenso"
+        "field_anagraficablob_intestatari_1_listprivacy_4_consenso",
+        "field_anagraficablob_intestatari_1_numdocumento"
         ],
         obbligatoriSel_int2 = [
-          "field_anagraficablob_intestatari_1_sesso"    
+          "field_anagraficablob_intestatari_1_sesso",
+          "field_anagraficablob_intestatari_1_paesenascita" ,
+          "field_anagraficablob_intestatari_1_cittadinanza",
+          "field_anagraficablob_intestatari_1_provincianascita",
+          "field_anagraficablob_intestatari_1_comunenascita",
+          "field_anagraficablob_intestatari_1_codtipodocumento"
         ];
-    
+
     //obbligatorio con selzione documento
     let obbligatoriVis = ["field_anagraficablob_privacyletta"]
     
@@ -72,7 +85,7 @@ export default function(form) {
         
     });
     obbligatoriSel.forEach((v, i) => {
-        if (form[v] === "") errors[v] = obbligatorimsgSel;
+        if (form[v] === "" || form[v] === "Seleziona") errors[v] = obbligatorimsgSel;
     });
    
     // Controllo sul codice fiscale
@@ -84,8 +97,24 @@ export default function(form) {
    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
    if (form["field_anagraficablob_intestatari_0_email"].length!="" && !emailRegex.test(form["field_anagraficablob_intestatari_0_email"])) errors["field_anagraficablob_intestatari_0_email"] = mailmsgFormat;
    if (form["field_anagraficablob_intestatari_1_email"].length!="" && !emailRegex.test(form["field_anagraficablob_intestatari_1_email"])) errors["field_anagraficablob_intestatari_1_email"] = mailmsgFormat; 
-    // Ripassa l'oggetto con tutti gli errori del form visualizzato
-    return (errors);
+    
+   // Controllo sul formato della carta d'identità mail
+   if(form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="12")
+   {
+        const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
+        if(form["field_anagraficablob_intestatari_0_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_0_numdocumento"])) {
+            errors["field_anagraficablob_intestatari_0_numdocumento"] = cimsgFormat
+        }
+   }
+   if(form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="12")
+   {
+        const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
+        if(form["field_anagraficablob_intestatari_1_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_1_numdocumento"])) {
+            errors["field_anagraficablob_intestatari_1_numdocumento"] = cimsgFormat
+        }
+   }
+   // Ripassa l'oggetto con tutti gli errori del form visualizzato
+   return (errors);
     
 
 }
