@@ -1213,6 +1213,37 @@ span.sell {
 .boxAction .btn-link .icon-arrow_right {
   display: none;
 }
+.collapse-par {
+  position: relative;
+}
+.collapse-par .collapse-par-title {
+  padding-left: 25px;
+  margin-bottom: 15px;
+  color: #6f8f0a;
+}
+.collapse-par .collapse-par-title:before {
+  border: solid 2px #8ab10b;
+  width: 20px;
+  left: 0;
+  color: #8ab10b;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+  font-weight: normal;
+  content: "\2796";
+}
+.collapse-par .collapse-par-title.collapsed::before {
+  content: "\2795";
+  transform: rotate(0);
+}
+.collapse-par .collapse-par-collapse {
+  padding-left: 25px;
+}
 /* REGOLE COMUNI TABELLE*/
 table {
   width: 100%;
@@ -5637,6 +5668,20 @@ table tr td.td-fondo .fundName {
 .spsel.spsel-hasicon.nosel .spsel-option.spsel-selected .spsel-option-el {
   padding-left: 10px;
   padding-right: 15px;
+}
+.spsel.spsel-hasconsole .spsel-option {
+  padding-right: 100px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
+  margin-left: 10px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console .icon-row_expand {
+  display: inline-block;
 }
 .spsel.opened {
   z-index: 1;

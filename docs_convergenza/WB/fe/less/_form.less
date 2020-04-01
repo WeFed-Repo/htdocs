@@ -1498,7 +1498,7 @@ form .col-xs-1, form .col-sm-1, form .col-md-1, form .col-lg-1, form .col-xs-2, 
 }
 
 .selector-box.selected {
-    border: solid 2px @textColorBank2
+    border: solid 2px @textColorBank2;
 }
 
 /* Selector box mini */
@@ -2939,6 +2939,18 @@ table tr td.td-fondo {
         &.nosel .spsel-option.spsel-selected {
             padding-left:0;
             .spsel-option-el {padding-left:10px;padding-right:15px;}
+        }
+    }
+    &.spsel-hasconsole{
+        .spsel-option {padding-right:100px;}
+       .spsel-btn-console {
+            position: absolute;
+            top: 4px;
+            right: 20px;
+            .btn-icon {
+                margin-left:10px;
+            }
+            .icon-row_expand {display:inline-block}
         }
     }
     &.opened {z-index:1;
