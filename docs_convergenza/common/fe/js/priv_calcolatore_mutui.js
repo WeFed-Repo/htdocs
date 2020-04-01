@@ -372,6 +372,8 @@ function mGetData()
 			mLtv = 0;
 			mMutuoMin = 1000000;
 			mMutuoMax = 0;
+
+			var erroreGenericoMsg = "";
 			
 			$.each(mutui,function(i,v){
 				mutuo =v;
@@ -382,6 +384,11 @@ function mGetData()
 				if (mutuo.mutuominimo<mMutuoMin) mMutuoMin = mutuo.mutuominimo;
 				if (mutuo.mutuomassimo>mMutuoMax) mMutuoMax = mutuo.mutuomassimo;
 				if (mutuo.ltv>mLtv) mLtv = mutuo.ltv;
+
+				// Input errore generico 
+				if (mutuo.messaggioGenerico =="errore generico") {
+					erroreGenericoMsg = mutuo.messaggio;
+				}
 				
 				//Assembla il nodo con i dettagli del mutuo (differenziando il dettaglio ed il comparativo)
 				mNode = $("<div>").addClass("mData").append($("<h3>").addClass("title").html(mutuo.nome));
@@ -560,7 +567,10 @@ function mGetData()
 				mNode.fadeIn();
 			});
 			
-
+			// In caso di errore generico distrugge il contenitore e inserisce il messaggio
+			if (erroreGenericoMsg != "") {
+				mRes.empty().append($("<div>").addClass("errore-generico").append("<p>").html(erroreGenericoMsg));
+			}
 
 			// Inizializza e resetta lo slider e la select alternativa
 			mSliderDefault = $("#mDur").val();
