@@ -4,6 +4,7 @@
 @import "_color_webank";
 @import "_color";
 @import "_font";
+@import "_icon_missing";
 
 
 /* ELEMENTI GENERICI */
@@ -1736,4 +1737,36 @@ body.popup {
 
 .btnWrapper.tabbed-buttons {
     .btn {text-transform:uppercase; margin-right:5px;}
+}
+
+/* Link con iconcina */
+.btn-link-icon {
+    padding: 3px 0 0 25px;
+    position:relative;
+    margin-right:15px;
+    .icon {
+        position:absolute;
+        font-size:20px;
+        top:0;
+        left:0;
+    };
+}
+.btn-align-right .btn-link-icon {
+    margin-left:15px;
+    margin-right:0;
+}
+
+@media (max-width:767px) {
+    .btn-link-icon {
+        width: 100%;
+        text-align: left;
+        float: left;
+        margin: 0 0 15px !important;
+        clear: both;
+        padding: 8px 0 10px 39px;
+       .icon {
+           font-size:32px; 
+            color:#8ab10b
+        }
+    }
 }

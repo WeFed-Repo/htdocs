@@ -1217,6 +1217,7 @@ span.sell {
   position: relative;
 }
 .collapse-par .collapse-par-title {
+  cursor: pointer;
   padding-left: 25px;
   margin-bottom: 15px;
   color: #6f8f0a;
@@ -2962,6 +2963,25 @@ table.riepilogo thead th {
 table.tabValNorm td {
   padding: 10px;
   font-size: 14px;
+}
+/* Pulsantini per testi validi solo in tabella */
+table .table-btn-more {
+  display: inline-block;
+  background: #8ab10b;
+  width: 20px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+table .table-btn-more:before {
+  content: "\2795";
+}
+table .table-btn-more:hover {
+  opacity: 0.7;
 }
 /* REGOLE COMUNI FORM*/
 /* wrapper generico per form parametrizzabile in colore  di sfondo*/
@@ -10501,6 +10521,65 @@ div.select-content select:active {
   }
 }
 /* TRADING NEWS CAROUSEL */
+/* NUOVA ICONA OPERATIVA */
+.icoope-overlay {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  min-height: 100px;
+  margin-left: 7px;
+  z-index: 100;
+}
+.icoope-overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-bottom: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  top: -10px;
+  background: transparent;
+}
+.icoope-overlay .close {
+  float: right;
+  display: block;
+  font-size: 30px;
+  width: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  color: #000;
+}
+.icoope-overlay .close:before {
+  content: "\00D7";
+}
+.icoope-overlay .icoope-functions {
+  clear: both;
+  width: 100%;
+  min-height: 100px;
+}
+.icoope-overlay .icoope-functions ul {
+  margin: 0;
+  list-style-type: none;
+}
+.icoope-overlay .icoope-functions ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px #ccc;
+}
+.icoope-overlay .icoope-functions ul li a {
+  width: 100%;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.icoope-overlay .icoope-functions ul li a:hover {
+  background: #eee;
+}
 /* Box linee vincolate */
 #boxTabLineeVincolateWrap {
   width: 100%;

@@ -5737,3 +5737,62 @@ div.select-content select {
 
 }
 /* TRADING NEWS CAROUSEL */
+
+/* NUOVA ICONA OPERATIVA */
+.icoope-overlay {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    min-height: 100px;
+    margin-left: 7px;
+    z-index:100;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        border-bottom: solid 10px #fff;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+        top: -10px;
+        background: transparent;
+    }
+    .close {
+        float: right;
+        display: block;
+        font-size: 30px;
+        width: 30px;
+        line-height: 30px;
+        cursor: pointer;
+        height: 30px;
+        text-align: center;
+        color: #000;
+        &:before {
+            content: "\00D7"
+        }
+    }
+    .icoope-functions {
+        clear: both;
+        width: 100%;
+        min-height: 100px;
+        ul {
+            margin: 0;
+            list-style-type: none;
+            li {
+                width:100%;
+                margin:0;
+                padding:0;
+                border-top:solid 1px #ccc;
+                a {
+                    width: 100%;
+                    padding: 10px 15px;
+                    display: inline-block;
+                    &:hover {background:#eee}
+                }
+            }
+        }
+    }
+    
+}

@@ -422,12 +422,13 @@ $(function(){
     </form>
 
     <!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
-    <!-- BLOCCO AGGIORNAMENTI -->
+
+    <!-- BLOCCO AGGIORNAMENTI  (differente per you e we) -->
     <div class="row">
-        <div class="col-xs-8 col-sm-4">
+        <div class="col-xs-<?php print ($site=="webank")?"12":"8"; ?> col-sm-4">
             <a href="#" class="text-link">Situazione PAC</a>
         </div>
-        <div class="col-xs-4 col-sm-8">
+        <div class="col-xs-<?php print ($site=="webank")?"12":"4"; ?> col-sm-8">
             <p class="note flRight noFloatMobile">
                 <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                 <!--esempio di loading -->

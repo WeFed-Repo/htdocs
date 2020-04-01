@@ -1846,6 +1846,12 @@ table td .icon-clessidra_stroke {
     src: url('/wscmn/font/futuraBT/27145D_2_0.eot?#iefix') format('embedded-opentype'),url('/wscmn/font/futuraBT/27145D_2_0.woff') format('woff'),url('/wscmn/font/futuraBT/27145D_2_0.ttf') format('truetype');
 }
 */
+.icon_cambi:before,
+.icon_filter:before {
+  font-style: normal !important;
+  content: "\2612";
+  color: red !important;
+}
 /* ELEMENTI GENERICI */
 body {
   -webkit-box-sizing: border-box;
@@ -3264,5 +3270,35 @@ body.popup #contenuti {
 .btnWrapper.tabbed-buttons .btn {
   text-transform: uppercase;
   margin-right: 5px;
+}
+/* Link con iconcina */
+.btn-link-icon {
+  padding: 3px 0 0 25px;
+  position: relative;
+  margin-right: 15px;
+}
+.btn-link-icon .icon {
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+}
+.btn-align-right .btn-link-icon {
+  margin-left: 15px;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .btn-link-icon {
+    width: 100%;
+    text-align: left;
+    float: left;
+    margin: 0 0 15px !important;
+    clear: both;
+    padding: 8px 0 10px 39px;
+  }
+  .btn-link-icon .icon {
+    font-size: 32px;
+    color: #8ab10b;
+  }
 }
 /*# sourceMappingURL=webank_base.css.map */
