@@ -18,11 +18,12 @@ const applyMask = (value,mask) => {
         "numero" : /\d/,
         "telefono": /[0-9+]/,
         "alfanumerico": /\w/,
-        "alfabetico" : /[^0-9@]/
+        "alfabetico" : /[^0-9@]/,
+        "codicefiscale" : /[A-za-z0-9]/
     }
     value = value.split("").filter((char)=>{ return reTest[mask].test(char)}).join("");
 
-    if (mask==="alfanumerico") value = value.toUpperCase()
+    if (mask==="alfanumerico" || mask==="codicefiscale" ) value = value.toUpperCase()
 
     return value;
 }
