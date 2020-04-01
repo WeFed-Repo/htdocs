@@ -331,6 +331,76 @@ table {
         &.margini-dispo {
             min-width: 250px
         }
+
+        /* Filtri (nell'header delle tabelle) */
+        &.filter {
+            position:relative;
+            min-width:150px;
+            .filter-wrap{
+            width:30px;
+            top:0;
+            right:0;
+            display:block;
+            position:absolute;
+            text-align:right; 
+            .filter-toggle{
+                position: absolute;
+                top: 7px;
+                right: 5px;
+                width: 25px;
+                height: 25px;
+                line-height: 24px;
+                background: #8ab10b;
+                border-radius: 50%;
+                text-align: center;
+                display: inline-block;
+                cursor: pointer;
+                .icon {
+                    font-size: 16px !Important;
+                    color: #fff;
+                    line-height:24px;
+                }
+                .icon_close {
+                    display: none;
+                    font-weight:bold;
+                    color: #fff;
+                &:before {content: "\00D7"}
+                }
+            }
+            input {display:none}
+            
+            }
+            &.filter-opened {
+            .th-inner {visibility:hidden;}
+            .filter-wrap {
+                width:100%;
+                padding: 5px 35px 0 5px;
+                input {
+                display: inline-block;
+                border: solid 1px #ccc;
+                height: 30px;
+                color: #333;
+                font-weight: normal;
+                width:100%;
+                padding: 5px;
+                &:hover,&:active,&:focus {
+                    outline:0 none;
+                    box-shadow: 0 0 3px #8ab10b;
+                }
+                }
+                .icon_close {
+                display: inline-block;
+                } 
+                .icon_filter {
+                display: none;
+                }
+
+            } 
+            
+            }
+        }
+
+
     }
 
     td {

@@ -1459,6 +1459,7 @@ table th {
   text-align: center;
   font-weight: 600;
   background-color: #f2f2f2;
+  /* Filtri (nell'header delle tabelle) */
 }
 table th.fix1Col {
   width: 160px;
@@ -1511,6 +1512,75 @@ table th.indent {
 }
 table th.margini-dispo {
   min-width: 250px;
+}
+table th.filter {
+  position: relative;
+  min-width: 150px;
+}
+table th.filter .filter-wrap {
+  width: 30px;
+  top: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  text-align: right;
+}
+table th.filter .filter-wrap .filter-toggle {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 24px;
+  background: #8ab10b;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+table th.filter .filter-wrap .filter-toggle .icon {
+  font-size: 16px !Important;
+  color: #fff;
+  line-height: 24px;
+}
+table th.filter .filter-wrap .filter-toggle .icon_close {
+  display: none;
+  font-weight: bold;
+  color: #fff;
+}
+table th.filter .filter-wrap .filter-toggle .icon_close:before {
+  content: "\00D7";
+}
+table th.filter .filter-wrap input {
+  display: none;
+}
+table th.filter.filter-opened .th-inner {
+  visibility: hidden;
+}
+table th.filter.filter-opened .filter-wrap {
+  width: 100%;
+  padding: 5px 35px 0 5px;
+}
+table th.filter.filter-opened .filter-wrap input {
+  display: inline-block;
+  border: solid 1px #ccc;
+  height: 30px;
+  color: #333;
+  font-weight: normal;
+  width: 100%;
+  padding: 5px;
+}
+table th.filter.filter-opened .filter-wrap input:hover,
+table th.filter.filter-opened .filter-wrap input:active,
+table th.filter.filter-opened .filter-wrap input:focus {
+  outline: 0 none;
+  box-shadow: 0 0 3px #8ab10b;
+}
+table th.filter.filter-opened .filter-wrap .icon_close {
+  display: inline-block;
+}
+table th.filter.filter-opened .filter-wrap .icon_filter {
+  display: none;
 }
 table td {
   min-height: 40px;
