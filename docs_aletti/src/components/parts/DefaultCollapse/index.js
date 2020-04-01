@@ -25,7 +25,7 @@ class DefaultCollapse extends PureComponent {
         const { disabled, hasErrors, label, nominativo, children, className } = this.props;
         const isOpen = !disabled && this.state.isOpen;
         const nominativoLabel = nominativo ? <span className="nominativo">{ nominativo }</span> : '';
-        const errorMessage = (!disabled && hasErrors && !isOpen) ? <span class="error-message"> Apri per Compilare</span> : ''
+        const errorMessage = (!disabled && hasErrors && !isOpen) ? <span className="error-message"> Apri per Compilare</span> : ''
 
         // Verifica se nei vari "figli c'è un errore" e setta "hasErrors automaticamente qualora non fosse specificato dall'esterno
         

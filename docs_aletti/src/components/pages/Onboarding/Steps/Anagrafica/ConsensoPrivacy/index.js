@@ -22,12 +22,21 @@ class ConsensoPrivacy extends Component {
                 label={`INSERISCI I DATI E I CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO`} 
                 startsOpen={false} 
                 className="search-collapse"
-                hasErrors={ CheckAccordionErrors(this.props.formstate.errors, [anagraficaIntestatario + "nome"])}>
+                hasErrors={ 
+                        CheckAccordionErrors(this.props.formstate.errors, 
+                        [
+                        anagraficaIntestatario + "nome", 
+                        anagraficaIntestatario + "cognome", 
+                        anagraficaIntestatario + "nascita",
+                        anagraficaIntestatario + "sesso",
+                        anagraficaIntestatario + "codicefiscale",
+                        anagraficaIntestatario + "email"
+                        ])}>
                         <section className="onboarding-block">
                             <Row>
                                 <Col xs="6">
                                     <Form.input
-                                        label="Nome"
+                                        label="Nome*"
                                         name={anagraficaIntestatario + "nome"}
                                         value={this.props.formstate[anagraficaIntestatario + "nome"]}
                                         onChange={this.props.obchange}
@@ -40,7 +49,7 @@ class ConsensoPrivacy extends Component {
                                 </Col>
                                 <Col xs="6">
                                     <Form.input
-                                        label="Cognome"
+                                        label="Cognome*"
                                         name={anagraficaIntestatario + "cognome"}
                                         value={this.props.formstate[anagraficaIntestatario + "cognome"]}
                                         onChange={this.props.obchange}
@@ -63,13 +72,13 @@ class ConsensoPrivacy extends Component {
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "nascita"]}
                                         dateFrom="01/01/1900"
-                                        dateTo={dateNascitaTo}
+                                        dateTo= { dateNascitaTo }
                                     >
                                     </Form.date>
                                 </Col>
                                 <Col xs="6">
                                     {optionSesso != [] && optionSesso != undefined && <Form.radiogroup
-                                        label="Sesso"
+                                        label="Sesso*"
                                         name={anagraficaIntestatario + "sesso"}
                                         value={this.props.formstate[anagraficaIntestatario + "sesso"]}
                                         onChange={this.props.obchange}
@@ -84,7 +93,7 @@ class ConsensoPrivacy extends Component {
                             <Row>
                                 <Col xs="6">
                                     <Form.input
-                                        label="Codice fiscale"
+                                        label="Codice fiscale*"
                                         name={anagraficaIntestatario + "codicefiscale"}
                                         value={this.props.formstate[anagraficaIntestatario + "codicefiscale"]}
                                         onChange={this.props.obchange}
@@ -92,6 +101,8 @@ class ConsensoPrivacy extends Component {
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "codicefiscale"]}
                                         maxlength="16"
+                                        minlength="16"
+                                        mask = "codicefiscale"
                                     >
                                     </Form.input>
                                 </Col>
