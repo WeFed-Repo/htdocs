@@ -1074,3 +1074,34 @@ span.sell {
 
 }
 
+.collapse-par {
+    position:relative;
+    .collapse-par-title {
+        cursor:pointer;
+        padding-left: 25px; margin-bottom:15px; color:#6f8f0a;
+        &:before {
+            border: solid 2px #8ab10b;
+            width: 20px;
+            left: 0;
+            color: #8ab10b;
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            height: 20px;
+            line-height: 16px;
+            text-align: center;
+            transform: rotate(360deg);
+            transition: transform 0.5s;
+            font-weight: normal;
+            content: "\2796";
+        }
+        &.collapsed {
+			&::before {
+				content: "\2795";
+				transform: rotate(0); 
+			}
+			
+		}
+    }
+    .collapse-par-collapse {padding-left:25px;}
+}
