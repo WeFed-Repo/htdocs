@@ -4706,6 +4706,26 @@ span.colAlert {
     padding-top:20px
 }
 
+/* Messaggio di errore generico */
+.preventivatore #mResults .errore-generico {
+    display: inline-block;
+    border-bottom: solid 1px #ddd;
+    width: 100%;
+    color: #666;
+    padding: 0 0 30px 105px;
+    background: transparent url(/common/fe/img/mutuo_messaggio.png) no-repeat left 0;
+    margin-bottom: 25px;
+}
+
+@media (max-width:767px) {
+    .preventivatore #mResults .errore-generico {
+        background-size:50px;
+        background-position: top center;
+        padding: 70px 0 20px;
+    }
+
+}
+
 .preventivatore .mData {
     border-bottom: solid 1px #eee;
     padding-bottom: 20px;
