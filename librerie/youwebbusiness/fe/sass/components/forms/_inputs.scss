@@ -24,7 +24,7 @@
   margin-bottom: 16px;
   height: $inputHeight;
   padding: 0 8px;
-  &:focus, 
+  &:focus,
   &:focus::-ms-value /* fix per ie 11 */ {
     background-color: $grayBG;
   }
@@ -45,7 +45,7 @@
   .form-row {
     padding-left: 16px;
     padding-right: 16px;
-  } 
+  }
 }
 
 .input-group>.input-group-append,
@@ -79,13 +79,13 @@ select {
   }
 }
 
-// FILE 
+// FILE
 input[type="file"].form-control {
-  display:none; 
+  display:none;
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance:         none;
-} 
+}
 
 span.output {
   display: inline-block;
@@ -132,17 +132,21 @@ $noLabelSize : calc( 21px + .5rem );
   }
 }
 
-.input-group-append .input-group-text,
-.input-group-prepend .input-group-text {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: 0;
-  background-color: $gray6;
-  cursor: pointer;
-  @include icon {
-    @include svg-icon-color($greenLink);
+.input-group-append,
+.input-group-prepend {
+  max-width: 50px;
+  .input-group-text {
+    max-width: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 0;
+    background-color: $gray6;
+    cursor: pointer;
+    @include icon {
+      @include svg-icon-color($greenLink);
 
-  } 
+    }
+  }
 }
 select, input, textarea {
   &, &.form-control, &.form-control:not([size]):not([multiple]) {
@@ -206,6 +210,29 @@ select, input, textarea {
     z-index: -1;
     opacity: 0;
     cursor: disabled;
+  }
+}
+
+.bootstrap-timepicker-widget {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  tr:first-child, tr:last-child {
+    display: none !important;
+  }
+  .separator {
+    position: relative;
+    width: auto;
+    border: none;
+    &:after  {
+      display: none !important;
+    }
+  }
+  input {
+    min-width: 4ch;
+    text-align: center;
+    background-color: $grayBG;
+    border: solid 1px $gray4;
+    border-radius: 3px;
+    box-shadow: none;
   }
 }
 

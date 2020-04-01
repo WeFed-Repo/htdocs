@@ -1,0 +1,13 @@
+#!/bin/zsh
+# PER RISOLVERE PERMISSION DENIED USARE: chmod +x delete_ds_store
+
+svn add --force ./layout/*
+svn add --force ./fe/*
+svn st
+
+echo ""
+echo "- - - - - - - - - - - - - - - - - - - - - -"
+echo "FILE nelle cartelle /layout e /fe AGGIUNTI."
+echo "ORA RIMUOVI A MANO QUELLLI CON '!'"
+echo "- - - - - - - - - - - - - - - - - - - - - -"
+echo ""

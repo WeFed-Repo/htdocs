@@ -7,7 +7,7 @@
 <div class="userdata BT3-visible-xs d-block d-sm-none">
   <span class="nome">Mario Rossi</span>
   <div class="userdata-console">
-    <a class="ico-btn"><img class="icon icon-autorizza" src="./fe/img/icon/configurazione.svg"><?php // <i class="icon icon-ico_setting"></i> ?></a>
+    <a class="ico-btn"><img class="icon icon-autorizza" src="./fe/img/icon/icon-5.svg"><?php // <i class="icon icon-ico_setting"></i> ?></a>
     <a class="ico-btn"><div class="btn-icon-help"></div></a>
     <a href="#" class="ico-btn"><i class="icon icon-ico_logout"></i></a>
   </div>

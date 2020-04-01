@@ -12,7 +12,7 @@
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  @include ellipsed();  
+  @include ellipsed();
   &:hover {
     box-shadow: 0 none !important;
   }
@@ -30,19 +30,35 @@
   }
   @include icon {
     @include svg-icon-size(25px);
-    transform: translate(0,2px);
-    display: inline-block;
+    line-height: 1px !important;
     margin-top: 0px;
-    display: block;
-    float: left;
+    margin-bottom: 0px;
     margin-right: 0.25em !important;
     margin-left: -0.25em !important;
+    // transform: translate(0,2px);
+    // display: block;
+    // float: left;
+    transform: translate(0, -2px);
+    display: inline-block;
+    float: none;
+
+    @at-root {
+      .btn i.icon {
+        line-height: 1px !important;
+        height: 1px !important;
+        min-width: 1px !important;
+        overflow: visible !important;
+        &:before {
+          transform: translate(0, 5px) !important;
+        }
+      }
+    }
+
   }
   // - - STILI PERSONALIZZATI DEI BOTTONI
   // PRIMARY & SECONDARY
   &.btn-primary,
   &.btn-secondary {
-    //outline: blue dashed 3px !important;
     text-transform: uppercase;
   }
   // PRIMARY
@@ -182,6 +198,12 @@
       content: "?";
     }
   }
+  &-config {
+    text-transform: none !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 8px 37px;
+  }
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -203,7 +225,7 @@
     top: 3px;
     right: 4px;
     background: $green;
-    color: #fff;
+    color: $white;
     border-radius: 50%;
     text-align: center;
     line-height: 16px;

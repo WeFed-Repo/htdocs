@@ -1,7 +1,34 @@
 /* Tooltip */
 
-.tooltip .tooltip-inner {
-  padding: 16px;
-  border-radius: 0;
-  min-width: 250px;
+/* Tooltip */
+
+.tooltip {
+  opacity: 1 !important;
+  .tooltip-inner {
+    padding: 16px;
+    border-radius: 0;
+    min-width: 200px;
+    width: 100px;
+    max-width: calc(100vw - 1rem);
+    background: $white;
+    color: $gray1;
+    border-radius: 3px;
+    box-shadow: 0 5px 8px rgba($gray1,0.1);
+    font-size: 1rem !important;
+    line-height: 1.1rem !important;
+    font-family: 'roboto', sans-serif;
+    text-align: left;
+    border: #eee 1px solid;
+  }
+  &.tooltip-lg .tooltip-inner {
+    width: 400px;
+  }
+  &.tooltip-xl .tooltip-inner {
+    width: 650px;
+  }
+  .arrow:before {
+      top: -1px;
+      border-width: .7rem .7rem 0;
+      border-top-color: white;
+  }
 }

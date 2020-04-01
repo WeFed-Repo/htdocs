@@ -9,6 +9,7 @@ $(function () {
     scrollpx = bd.scrollTop();
     initHeader();
     initTabs();
+    initTabsFilters();
     initScroll();
 });
 
@@ -49,6 +50,38 @@ function initTabs() {
     }
 }
 
+function initTabsFilters() {
+    $(".nav-tabs.nav-tabs--filters label").click(function(e) {
+        var $input = $(this).find("input"); 
+        var $label = $(this);
+        var $parent = $label.closest('.nav-tabs');
+        if( $label.hasClass("all") ) {
+          if($input.prop("checked")) {
+            $label.addClass("active");
+            $parent.find('label:not(.all)')
+                   .removeClass("active")
+                   .find('input');
+          } else {
+            $label.removeClass("active");
+            $parent.find('label:not(.all) input')
+                   .removeAttr("checked") // fallback per ie 
+                   .prop('checked',false);
+          }
+        } else {
+            if($input.prop("checked")) {
+                $label.addClass("active");
+                $parent.find('label.all')
+                   .removeClass("active")
+                   .find('input')
+                   .removeAttr("checked") // fallback per ie 
+                   .prop('checked',false);
+            } else {
+                $label.removeClass("active");
+          }
+        }
+    });
+}
+
 function initScroll() {
     // inizializza le freccine di scroll laterale
     var elem = '.clickScroll';
@@ -83,8 +116,8 @@ function initScroll() {
     // centra la tab attiva
     $.fn.activeTab = function () {
         var elem = '.nav-tabs';
-        if (this.length > 0 && !this.attr('disabled')) {
-            var p = this.closest(elem)
+        var p = this.closest(elem)
+        if ( this.length > 0 && !this.attr('disabled') && !p.hasClass('nav-tabs--filters') ) {
             var a = p.find('.nav-link.active').length == 1 ? p.find('.nav-link.active') : p.find('.nav-link:first-child') // fallback se ci sono active != 1
             if (a.length > 0 && p.length > 0) {
                 //p.scrollLeft(this.position().left + p.scrollLeft()) // positione scroll

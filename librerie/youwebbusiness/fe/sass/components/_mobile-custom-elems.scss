@@ -5,21 +5,21 @@
 }
 
 .mobile-data-block {
-  border-top: solid 1px #ddd;
+  border-top: solid 1px $gray4;
   padding: 16px;
   &:first-child { border-top: 0 none; }
   label {
-    color: #333;
+    color: $gray1_hover;
   }
   span.output {
-    color: #777;
+    color: $gray2;
     height: auto;
     font-weight: normal;
     padding: 0;
     margin: 0 0 8px;
     min-height: auto;
     span.negativo {
-      color: #c00;
+      color: $error;
     }
     a {
       text-decoration: underline;
@@ -53,7 +53,7 @@
 }
 
 .mobile-data-heading {
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px $gray4;
   margin-left: -16px;
   margin-right: -16px;
   padding: 16px;

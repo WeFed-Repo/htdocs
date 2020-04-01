@@ -6,18 +6,18 @@
 
     <!-- stato normale -->
     <div class="form-row">
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label>Text</label>
         <input type="text" class="form-control" placeholder="Text">
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Select</label>
         <select  class="form-control">
           <option selected>Lorem</option>
           <option>Ipsum</option>
         </select>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Datepicker</label>
         <div class="input-group datepicker">
           <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
@@ -28,28 +28,50 @@
           </div>
         </div>
       </div>
+      <div class="form-group col-sm-6 col-md-3">
+        <label class="control-label">Timepicker</label>
+        <div class="input-group bootstrap-timepicker timepicker">
+          <input type="text"class="input-group-addon form-control hasTimepicker" placeholder="00:00" data-timepicker="">
+          <div class="input-group-append input-group-addon">
+            <span class="input-group-text">
+              <img src="./fe/img/icon/orologio.svg">
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- stato disabilitato -->
     <div class="form-row">
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label>Text disabled</label>
         <input type="text" class="form-control" placeholder="Text" disabled>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Select disabled</label>
         <select  class="form-control" disabled>
           <option selected>Lorem</option>
           <option>Ipsum</option>
         </select>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Datepicker disabled</label>
         <div class="input-group datepicker">
-          <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data" disabled />
+          <input disabled type="text"class="input-group-addon form-control hasTimepicker" placeholder="00:00" data-timepicker="">
           <div class="input-group-append">
             <span class="input-group-text">
               <i class="icon icon-ico_calendario"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-6 col-md-3">
+        <label class="control-label">Timepicker disabled</label>
+        <div class="input-group bootstrap-timepicker timepicker">
+          <input type="text" class="input-group-addon form-control hasTimepicker" data-timepicker="Time"  placeholder="00:00" disabled>
+          <div class="input-group-append input-group-addon">
+            <span class="input-group-text">
+              <img src="./fe/img/icon/orologio.svg">
             </span>
           </div>
         </div>
@@ -62,13 +84,13 @@
 
     <!-- validazione -->
     <div class="form-row">
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label>Text</label>
         <input type="text" class="form-control is-invalid" placeholder="Text">
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Select</label>
         <select  class="form-control is-invalid">
           <option selected>Lorem</option>
@@ -77,13 +99,26 @@
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Datepicker</label>
         <div class="input-group datepicker">
           <input type="text" class="form-control is-invalid" data-datepicker autocomplete="off" placeholder="Data"/>
           <div class="input-group-append">
             <span class="input-group-text">
               <i class="icon icon-ico_calendario"></i>
+            </span>
+          </div>
+          <!-- messaggio d'errore personalizzabile -->
+          <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
+        </div>
+      </div>
+      <div class="form-group col-sm-6 col-md-3">
+        <label class="control-label">Timepicker</label>
+        <div class="input-group bootstrap-timepicker timepicker">
+          <input type="text" class="input-group-addon form-control is-invalid hasTimepicker" placeholder="00:00" data-timepicker="">
+          <div class="input-group-append input-group-addon">
+            <span class="input-group-text">
+              <img src="./fe/img/icon/orologio.svg">
             </span>
           </div>
           <!-- messaggio d'errore personalizzabile -->
@@ -97,13 +132,13 @@
     <!-- ESEMPIO DI VALIDAZIONE -->
     <!-- test di errore validazione lato client ( campi required o con patterns )-->
     <div class="form-row">
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label>Text</label>
         <input pattern="^[a-zA-Z0-9]{5,5}$" type="text" class="form-control" placeholder="Text" required >
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback"> Valido con 5 caratteri alfanumerici (validazione con pattern HTML5) </div>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Select</label>
         <select  class="form-control" required >
           <option selected></option>
@@ -113,7 +148,7 @@
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback"> Scegli una voce </div>
       </div>
-      <div class="form-group col-sm-4">
+      <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Datepicker</label>
         <div class="input-group datepicker">
           <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data" required />

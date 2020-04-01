@@ -45,7 +45,7 @@
       height: $checkboxSize;
       margin-left: -$checkboxSize;
       margin-top: 0;
-      border-color: #ddd;
+      border-color: $gray4;
       background: $grayBG;
     }
     &.c-white::before {
@@ -69,13 +69,13 @@
     font-size: 18px;
     padding-top: 0;
     padding-left:7px;
-    color: #777;
+    color: $gray2;
     font-weight: bold;
     line-height: -#{($checkboxSize)-1};
     &::before, &::after { margin-top: 2px; }
   }
   @include icon {
-    float: none; 
+    float: none;
     clear: both;
     overflow: auto;
     display: block;
@@ -161,59 +161,93 @@
 // SWITCH BUTTON
 
 .checkbox.switch {
-  padding-left: 77px;
+  $switchBullet : 26px;
+  $switchPill : 54px;
+  $switchBorder : 2px;
+  $switchDist : 14px;
+  padding-left: $switchPill + $switchDist;
+  position: relative;
   label {
-    padding-top: 3px;
-    padding-left: 0px;
+    position: relative;
+    padding-top: $switchBorder;
+    padding-left: $switchDist;
     cursor: pointer;
     &::before {
       border: 0;
-      width: 70px;
-      height: 30px;
-      background: #ddd;
-      border-radius: 15px;
-      margin-left: -80px;
-      margin-top: -3px;
+      width: $switchPill - $switchBorder;
+      height: $switchBullet;
+      background: $gray4;
+      border-radius: ($switchBullet)/2;
+      margin-left: -($switchPill);
+      margin-top: 0;
       z-index: 1;
+      transition: background-color 0.3s;
     }
     &::after {
       content: '';
       border: 0;
-      width: 30px;
-      height: 30px;
+      width: $switchBullet - $switchBorder*2;
+      height:  $switchBullet - $switchBorder*2;
       background: $white;
-      border: 1px solid #ddd;
-      border-radius: 15px;
-      margin-left: -80px;
+      border: 1px solid $gray4;
+      border-radius: ($switchBullet)/2;
+      margin-left: -($switchPill);
       color: transparent;
-      margin-top: 0px;
+      margin-top: $switchBorder*2 !important;
+      margin-left: -($switchPill - $switchBorder);
       z-index: 2;
-      transition: margin-left 0.3s, background-color 0.3s;
+      transition: margin 0.3s;
     }
   }
   input:checked + label {
-    &::after {
-      content: ''; // rewrite check icon
-      margin-top: 0px; // rewrite icon position
-      margin-left: -40px; // move not-checked position
+    &::before {
       background-color: $greenLink;
     }
+    &::after {
+      content: '';
+      margin-left: -($switchPill/2);
+    }
   }
+  .valid-feedback,
+  .invalid-feedback {
+    transform: translate(-(#{$switchPill}),0);
+  }
+
+  &.left-label {
+    padding-left: 0 !important;
+    margin-right: $switchPill - $switchBorder !important;
+    label {
+      padding-left: 0 !important;
+      &::before {
+        margin-right: - ( $switchPill + ($switchDist/2) );
+        margin-left: 0;
+        left: auto;
+        right: 0;
+      }
+      &::after {
+        margin-right: - ( ($switchPill/2 - $switchBorder/2) + ($switchDist/2) );
+        margin-left: 0;
+        left: auto;
+        right: 0;
+      }
+    }
+    input:checked + label {
+      &::after {
+        margin-right: -( ($switchPill - $switchBorder*2) + ($switchDist/2) );
+      }
+    }
+    .valid-feedback,
+    .invalid-feedback {
+      transform: translate(0,0);
+    }
+  }
+
 }
 
 // colore label in caso di validazione
 .form-check-input.is-invalid~.form-check-label,
 .was-validated .form-check-input:invalid~.form-check-label {
   color: $gray1;
-}
-
-// posizione messaggio validazione
-
-.form-check.switch  {
-  .valid-feedback,
-  .invalid-feedback {
-    transform: translate(-77px,0);
-  }
 }
 
 .radio.imgchoice {
@@ -229,7 +263,7 @@
     background: center center no-repeat;
     background-size: 105%;
     border: none;
-    border: #ddd solid 1px;
+    border: $gray4 solid 1px;
     border-bottom-left-radius: 11px;
     &::before,
     &::after {
@@ -256,7 +290,7 @@
     background: center center no-repeat;
     background-size: 105%;
     border: none;
-    border: #ddd solid 1px;
+    border: $gray4 solid 1px;
     background-color: white;
     border-radius: 5px;
     padding: 0;

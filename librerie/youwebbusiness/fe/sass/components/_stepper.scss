@@ -3,6 +3,7 @@
 .with-stepper {
   // width: 100%;
   // overflow: auto;
+  overflow: auto;
   h1 {
     display: inline-block;
     width: auto;
@@ -13,6 +14,7 @@
   display: block;
   float: right;
   margin-top: 5px;
+  margin-bottom: 1rem;
   white-space: nowrap;
   .dot {
     display: inline-block;

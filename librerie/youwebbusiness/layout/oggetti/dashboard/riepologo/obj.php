@@ -9,7 +9,7 @@
       <div><span class="dhb-riepilogo-list__num">1</span></div>
     </li>
     <li>
-      <div><img class="icon icon-autorizza" src="./fe/img/icon/modifica.svg"></div>
+      <div><img class="icon icon-autorizza" src="./fe/img/icon/icon-22.svg"></div>
       <div>
         <span class="text">Disposizioni in modifica</span>
         <a href="#">Visualizza</a>

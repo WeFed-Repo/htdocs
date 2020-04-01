@@ -11,13 +11,15 @@ $(function () {
     initCarousel();
     initAccordion();
     initDatepicker();
+    initTimepicker();
     initDataFilters();
     initTooltips();
     initTreeview();
+    initControlPanel();
     imgToSvg();
 });
 
-// INIT ELEMENTI 
+// INIT ELEMENTI
 
 function initAccordion() {
     // init opened
@@ -28,7 +30,7 @@ function initAccordion() {
         header.toggleClass(sense);
         body.collapse(sense);
     });
-    // onclick 
+    // onclick
     $('.collapser [data-toggle="collapse"]').on('click', function () {
         $(this).accordionCollapse();
     });
@@ -103,7 +105,16 @@ function initCarouselLazy(owner, count) {
 }
 
 function initDatepicker() {
-    $("[data-datepicker]").datepicker({ showOn: "both" });
+    $("[data-datepicker]").datepicker({
+      showOn: "both"
+    });
+}
+
+function initTimepicker() {
+    $("[data-timepicker]").timepicker({
+      defaultTime: false,
+      showMeridian: false,
+    });
 }
 
 function initDataFilters() {
@@ -127,7 +138,8 @@ function initDataFilters() {
 function initTooltips() {
     $("[data-toggle=tooltip]").tooltip({
         trigger: 'click',
-        container: $('#main')
+        container: $('#main'),
+        html:true
     }).on('show.bs.tooltip', function (e) {
         $(".tooltip").tooltip('hide');
     });
@@ -142,6 +154,30 @@ function initTreeview() {
         $(this).treeviewCountTotal();
     });
 }
+
+function initControlPanel() {
+  $('[data-write-mode]').on('click',function(e){
+    e.preventDefault();
+    $(this).closest('.bordered').addClass('is-editable');
+  });
+  $('[data-read-mode]').on('click',function(e){
+    e.preventDefault();
+    $(this).closest('.bordered.is-editable').removeClass('is-editable');
+  });
+  // Forza la selezione del radiobutton all'interno del tab attivo
+  $('.c-pannello-controllo .nav label, .c-pannello-controllo .nav input').on('click',function(e){
+    e.preventDefault();
+    var input = $(this).closest('.form-check').find('input');
+    var label = $(this).closest('.form-check').find('label');
+    var tab = $(label.attr('href'));
+    var tabs = tab.closest('.tab-content').find('.tab-pane')
+    tabs.removeClass('show active');
+    tab.addClass('show active');
+    label.closest('.nav').find('label').removeClass('active');
+    label.addClass('active');
+    input.prop('checked',true);
+  });
+};
 
 function imgToSvg(img) {
     // SVG - Conversione delle immagini in SVG in pagina
@@ -193,7 +229,7 @@ function imgToSvg(img) {
         // controlla se fare o no l'autoplay prima di fare l'init del carosello
         var opt;
         this.each(function () {
-            // appende i bullets di default 
+            // appende i bullets di default
             $(this).carouselBulletsPaging();
             if ($(this).hasClass('autoplay')) {
                 opt = { rise: true, interval: 6000 };
@@ -211,7 +247,6 @@ function imgToSvg(img) {
             $(this).carousel('dispose').carousel(opt)
         })
     }
-
     $.fn.carouselAutoPaging = function (max) {
         // NOTE: per cambiare il numero massimo degli item visualizzati
         // come bullet usare: ELEMENTO.carouselAutoPaging( {max: NUMERO} )
@@ -221,7 +256,7 @@ function imgToSvg(img) {
         // ciclo sui caroselli per i quali ho inizializzato il plugin.
         this.each(function () {
             // salvo il carosello corrente in nua variabile
-            var carousel = $(this)
+            var carousel = $(this);
             // Massimo di elementi perchè il carosello passi dai bullet alle arrow (default 5)
             // Se il carosello corrente non possiede un ID univoco, ne assenga uno a tavolino.
             var rootName = 'carouselAutoPaging_';
@@ -252,11 +287,11 @@ function imgToSvg(img) {
     }
 
     $.fn.carouselBulletsPaging = function () {
-        // BULLET 
+        // BULLET
         if (!$(this).hasClass('carousel--bullet')) {
             var elemId = $(this).attr('id');
             var num = $(this).find('.carousel-item').length;
-            // elimina paginatori preesistenti per ridisegnarli 
+            // elimina paginatori preesistenti per ridisegnarli
             $(this).find('.carousel-indicators').remove();
             // ridisegna gli elementi
             $(this).prepend("<ol class='carousel-indicators'></ol>");
@@ -273,7 +308,7 @@ function imgToSvg(img) {
         // ARROWS (prev e next)
         if (!$(this).hasClass('carousel--arrows')) {
             var elemId = $(this).attr('id');
-            // elimina paginatori preesistenti per ridisegnarli 
+            // elimina paginatori preesistenti per ridisegnarli
             $(this).find('.carousel-control-prev, carousel-control-next').remove();
             // ridisegna gli elementi
             $(this).prepend("<a class='carousel-control-prev' href='#" + elemId + "' role='button' data-slide='prev'>\
@@ -307,9 +342,9 @@ function imgToSvg(img) {
             $parentCh.treeviewPartial();
         }
     }
-    
+
     $.fn.treeviewChildren = function () {
-        $isChecked = this.prop("checked"); 
+        $isChecked = this.prop("checked");
         $children = this.closest('li').find('ul input');
         if( $children.length > 0 ) {
             this.removeClass('partial');
@@ -346,14 +381,26 @@ function imgToSvg(img) {
             switch (dir) {
                 case "show": header.removeClass('collapsed');    break;
                 case "hide": header.addClass('collapsed'); break;
-                default:     header.toggleClass('collapsed'); 
+                default:     header.toggleClass('collapsed');
             }
             body.collapse(dir);
             header.addClass('collapse-move');
-            setTimeout(function(){ 
-                header.removeClass('collapse-move'); 
+            setTimeout(function(){
+                header.removeClass('collapse-move');
             }, 500);
         }
     };
 
-})(jQuery);
+
+    // TOOLTIP CUSTOM CLASS
+    var Tooltip = $.fn.tooltip.Constructor;
+    //$.extend( Tooltip.Default, { customClass: '' });
+    var _show = Tooltip.prototype.show;
+    Tooltip.prototype.show = function () {
+      _show.apply(this,Array.prototype.slice.apply(arguments));
+      //var customClass = this.config.customClass
+      var customClass = $(this.element).data('toggle-dimension');
+      if ( customClass ) { $(this.getTipElement()).addClass('tooltip-'+customClass); }
+    };
+
+})(window.jQuery);

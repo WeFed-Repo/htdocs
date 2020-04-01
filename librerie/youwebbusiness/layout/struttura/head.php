@@ -26,8 +26,10 @@
 <script src="./fe/assets/jquery-ui.min.js"></script>
 
 <script src="./fe/assets/bootstrap.min.js"></script>
-
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
+
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
 
 <link rel="stylesheet" href="./fe/assets/datepicker.css">
 

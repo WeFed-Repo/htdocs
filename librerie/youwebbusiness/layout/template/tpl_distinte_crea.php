@@ -73,7 +73,7 @@
 									data-filter-on="col_radio submit_confirm"
 									data-filter-off="label_desc"
 									class="btn btn-filter fl-left mr-3">
-						<img class="icon icon-modifica" src="./fe/img/icon/modifica.svg">
+						<img class="icon icon-modifica" src="./fe/img/icon/icon-22.svg">
 						Modifica
 					</button>
 				</div>

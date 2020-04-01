@@ -1,19 +1,19 @@
 /* Tabelle */
 
 .table {
-  border-left: solid 1px #ddd;
-  border-right: solid 1px #ddd;
+  border-left: solid 1px $gray4;
+  border-right: solid 1px $gray4;
   > tbody > tr > th {
-    border-top: solid 1px #ececec;
+    border-top: solid 1px $gray7;
   }
   > tfoot > tr > {
     td, th {
-      border-top: solid 1px #ececec;
+      border-top: solid 1px $gray7;
     }
   }
   > thead > tr > {
     td, th {
-      border-top: solid 1px #ececec;
+      border-top: solid 1px $gray7;
     }
   }
   span.output {
@@ -26,7 +26,7 @@
 
 .table-heading {
   h4 { 
-    color: #666;
+    color: $grayMid;
     float: left;
     font-size: 1em; // 1.3em
   }
@@ -64,7 +64,7 @@
   .title {
     display: inline-block;
     font-weight: bold;
-    color: #333;
+    color: $gray1_hover;
   }
   .btn {
     margin-bottom: 0;
@@ -76,7 +76,7 @@
 }
 
 .table-heading-firstline {
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px $gray4;
   margin-left: -16px;
   margin-right: -16px;
   padding-left: 8px;
@@ -102,13 +102,16 @@
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 1rem 1rem 0 1rem;
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px $gray4;
+}
+
+.wrap-no-border-bottom .table-filters-accordion {
+  border-bottom: 0;
 }
 
 .azioni-tabella {
   @include icon {
     @include svg-icon-size(30px); 
-    @include svg-icon-color(#ff0000); 
     margin: 0.5rem 0 0.5rem 1rem;
   }  
 }

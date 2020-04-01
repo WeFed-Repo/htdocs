@@ -176,6 +176,15 @@
 		]
 	},
 	{
+		"title": "Gestione carte",
+		"voices": [
+			{
+				"title": "Pannello di controllo",
+				"tpl": "tpl_carte_gestione_pannello_controllo.php"
+			}
+		]
+	},
+	{
 		"title": "Documenti e fatture",
 		"voices": [
 			{
@@ -194,7 +203,12 @@
 				"tpl": "tpl_finanziamenti_rateali.php"
 			},
 			{
-				"title": "Lorem ipsum"
+				"title": "Finanziamenti rateali Ammortamento",
+				"tpl": "tpl_finanziamenti_rateali_ammortamento.php"
+			},
+			{
+				"title": "Finanziamenti rateali Pre Ammortamento",
+				"tpl": "tpl_finanziamenti_rateali_pre_ammortamento.php"
 			}
 		]
 	},
@@ -248,11 +262,11 @@
 				"tpl": "tpl_smart_lending.php"
 			},
 			{
-				"title": "LOGIN", 
+				"title": "LOGIN",
 				"tpl": "tpl_login.php"
 			},
 			{
-				"title": "Profilatura Utenti", 
+				"title": "Profilatura Utenti",
 				"voices": [
 					{
 						"title": "Profilatura Utenti",

@@ -4,7 +4,7 @@
     height: 100%;
     max-height: calc( 100vh - 300px );
     overflow: auto;
-    border: solid 1px #c8c8c8;
+    border: solid 1px $grayBordered;
     padding: 0; // tenere a zero per evitare errori in calcolo scroll
     > .c-scrolled-doc__innerWrap {
         padding: 1rem;

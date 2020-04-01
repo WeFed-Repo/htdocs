@@ -47,7 +47,7 @@
           </a> </li>-->
           <li class="nav-item d-none d-sm-flex align-items-center pl-2 pl-sm-3 pr-0 pr-sm-3">
             <a href="strutt_priv.php?tpl=tpl_home_configurator.php" class="nav-link ico-btn ">
-              <img class="icon icon-autorizza" src="./fe/img/icon/configurazione.svg"><?php // <i class="icon icon-ico_setting"></i> ?>
+              <img class="icon icon-autorizza" src="./fe/img/icon/icon-5.svg"><?php // <i class="icon icon-ico_setting"></i> ?>
             </a> </li>
           <li class="nav-item d-none d-sm-flex align-items-center">
             <a class="nav-link ico-btn d-flex align-items-center"> <i class="icon icon-ico_ultime_disposizioni"></i>

@@ -31,7 +31,7 @@
           <div class="form-group col-6 col-md-3 col-lg-4">
             <label class="control-label">Data da</label>
             <div class="input-group datepicker">
-              <input type="text" id="dataDa" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
+              <input type="text" id="dataDa" class="form-control" autocomplete="off" placeholder="Data"/>
               <div class="input-group-append">
                 <span class="input-group-text">
                   <i class="icon icon-ico_calendario"></i>
@@ -42,7 +42,7 @@
           <div class="form-group col-6 col-md-3 col-lg-4">
             <label class="control-label">Data a</label>
             <div class="input-group datepicker">
-              <input type="text" id="dataA" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
+              <input type="text" id="dataA" class="form-control" autocomplete="off" placeholder="Data"/>
               <div class="input-group-append">
                 <span class="input-group-text">
                   <i class="icon icon-ico_calendario"></i>

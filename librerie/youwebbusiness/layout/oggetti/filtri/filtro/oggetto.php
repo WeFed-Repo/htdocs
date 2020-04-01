@@ -16,20 +16,20 @@
           <div  class="flex-grow-1 mw-100 my-2">
             <?php
             $tabs = array(
-              array('label'=>'TUTTI','active'=>true),
+              array('label'=>'TUTTI','active'=>true,'all'=>true),
               array('label'=>'ESTRATTI'),
               array('label'=>'CONTABILI'),
               array('label'=>'DDS'),
               array('label'=>'COMUNICAZIONI'),
               array('label'=>'PORTAFOGLIO'),
             );
-            tabs_obj($tabs); ?>
+            tabs_obj_filter($tabs); ?>
           </div>
 
           <div class="d-flex flex-wrap justify-content-end align-items-center flex-grow-1 mw-100">
 
             <div class="d-flex justify-flex-start flex-wrap align-items-center flex-grow-1">
-              <div class="form-check  radio">
+              <div class="form-check radio">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1">
                 <label class="form-check-label" for="inlineRadio1">Tutte</label>
               </div>
@@ -42,12 +42,12 @@
                 <label class="form-check-label" for="inlineRadio3">Non letti</label>
               </div>
             </div>
-
-            <div class="d-flex pl-2">
-              <a href="javascript:void(0)" class="btn btn-white fl-left mb-0" data-filter-button="filter01">
-                <i class="icon icon-arrow_down" title="icon-aggiorna"></i>
-                Filtra
-              </a>
+            
+            <div class="form-group d-flex pl-2">
+              <div class="form-check  checkbox switch">
+                <input class="form-check-input" type="checkbox" id="switch1" name="notifica1" data-filter-button="filter01">
+                <label class="form-check-label" for="switch1">Estendi la ricerca</label>
+              </div>
             </div>
 
           </div>

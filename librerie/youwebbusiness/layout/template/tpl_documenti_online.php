@@ -2,7 +2,9 @@
 	<h1>Documenti</h1>
 </div>
 <?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_dossier/oggetto.php'); ?>
-<?php virtual('/youwebbusiness/layout/oggetti/filtri/filtro/oggetto.php'); ?>
+<div class="wrap-no-border-bottom">
+	<?php virtual('/youwebbusiness/layout/oggetti/filtri/filtro/oggetto.php'); ?>
+</div>
 <div class="container-fluid">
 	<div class="azioni-tabella d-flex justify-content-between align-items-center">
 		<div class="colonna1">
@@ -26,7 +28,7 @@
 	</div>
 	<section class="no-margin-section">
 		<div class="bordered pt-0 d-none d-lg-block">
-			<table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-striped azioni-tabella" data-table-mobilized-desktop="dossierTable">
+			<table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table azioni-tabella" data-table-mobilized-desktop="dossierTable">
 				<thead>
 					<tr>
 						<!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
@@ -39,7 +41,7 @@
 						<th data-field="PDF"></th>
 						<th data-field="data" data-sortable="true">Data</th>
 						<th data-field="riferimento" data-sortable="true">Riferimento</th>
-						<th data-field="importo" data-formatter="tableCellValue" class="right">Importo</th>
+						<th data-field="importo" data-formatter="tableCellValue">Importo</th>
 						<th data-field="tipo" data-sortable="true">Tipo</th>
 					</tr>
 				</thead>
@@ -82,12 +84,17 @@
 	</div>
 	<?php 
 		pulsantiera_obj(array(
-		'right' => array(
-			array(
-			'class'=>'primary',
-			'label'=>'Scarica'
+			'right' => array(
+				array(
+				'class'=>'primary',
+				'label'=>'Scarica'
+				),
 			),
-		),
 		));
 	?>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#dataDa, #dataA').datepicker({minDate: "-1Y", maxDate: 0});
+  	});
+</script>

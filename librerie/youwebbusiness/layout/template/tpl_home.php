@@ -30,7 +30,7 @@
 
     <div class="col-6 col-md-4 mt-3 mx-auto text-center d-block"><!-- d-block risolve l'allineamento dell'icona del bottone -->
       <a href="strutt_priv.php?tpl=tpl_home_configurator.php" class="dhb-link m-auto btn btn-link">
-        <img class="icon icon-autorizza float-left" src="./fe/img/icon/configurazione.svg">
+        <img class="icon icon-autorizza float-left" src="./fe/img/icon/icon-5.svg">
         <span class="pl-1">Configura homepage</span>
       </a>
     </div>
