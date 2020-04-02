@@ -14,15 +14,13 @@ class DatiPersonali extends Component {
     indexIntText = this.props.indexInt === '0' ? "PRIMO" : "SECONDO"
     constructor(props) {
         super(props);
-        let listaTinRequested = this.props.obdomini["nazioni_attive"].filter((el) => { return el.flagTin === "S" }).map((obj) => {
-            return obj.value;
-        });
         this.state = {
             //IN UN PRIMO MOMENTO NON SARA' POSSIBILE CARICARE UNA SECONDA RESIDENZA FISCALE, VI SARA' UN OVERLAYER //settare true per emulare la presenza di fatca
             fatcaEnable: false,
             showModalFatcaDisabled: false,
             //STATO RELATIVO ALLA VISIBILITA' DEGLI HELP DOCUMENTI
             isHelpDocVisible: false,
+            isWarningDateVisible : false
         }
     }
 
@@ -36,6 +34,7 @@ class DatiPersonali extends Component {
     }
     setDateEmissione(val) {
         //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO PER SETTARE LA DATA DI EMISSIONE DALLA QUALE PARTIRE
+        
         let documentTypeSelected = this.typeDoc;
         switch (documentTypeSelected) {
             case "01":
@@ -58,7 +57,7 @@ class DatiPersonali extends Component {
                 break;
         }
     }
-    setDateScadenza(val) {
+    setDateScadenza (val) {
         //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO E DELLA DATA DI EMISSIONE
         let documentTypeSelected = this.typeDoc,
             scadenzaPlus10 = moment(val, 'DD-MM-YYYY').add(10, "year").format('DD/MM/YYYY'),
@@ -74,8 +73,14 @@ class DatiPersonali extends Component {
             dateBirtToCheck5 = DMbirth + "/" + YPlus5,
             dateBirtToCheck3 = DMbirth + "/" + YPlus3,
             eta = moment.duration(moment(new Date(), 'DD/MM/YYYY').diff(moment(dateBirth, 'DD/MM/YYYY'))).asYears();
-
-
+        
+        if (dateBirth === "") {
+            //alert per indicare di specificare la data di nascita necessaria per fare i controlli sulla data di scadenza
+            this.setState({
+                isWarningDateVisible : true
+            })
+        }
+        else {
         switch (documentTypeSelected) {
             case "01":
             case "11":
@@ -89,7 +94,7 @@ class DatiPersonali extends Component {
 
                 //SE DATA DI EMISSIONE E' SUCCESSIVA AL 9 DI FEBBRAIO LA DATA DI SCADENZA SARA' 10 ANNI O IL COMPLEANNO SE QUESTO E' SUCCESSIVO
                 else {
-                    if (dateBirth != "") {
+                    
                         if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
                             //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                             this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
@@ -97,12 +102,6 @@ class DatiPersonali extends Component {
                         else {
                             this.scadenzaDoc = dateBirtToCheck10
                         }
-                    }
-                    else {
-                        alert("data di nascita non specificata");
-
-                    }
-
                 }
 
                 this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
@@ -111,7 +110,6 @@ class DatiPersonali extends Component {
                 //CASO PASSAPORTO 10 anni /il giorno prima
                 this.scadenzaDoc = moment(scadenzaPlus10, 'DD/MM/YYYY').add(1, "day").format('DD/MM/YYYY');
                 this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
-
                 break;
             case "02":
             case "14":
@@ -124,19 +122,14 @@ class DatiPersonali extends Component {
                         this.scadenzaDoc = scadenzaPlus10
                     }
                     else {
-                        if (dateBirth != "") {
-                            if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
+                        if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
                                 //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                                 this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
                             }
                             else {
                                 this.scadenzaDoc = dateBirtToCheck10
-                            }
                         }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
+                        
                     }
                 }
                 else if (eta >= 55) {
@@ -145,7 +138,7 @@ class DatiPersonali extends Component {
                         this.scadenzaDoc = scadenzaPlus5
                     }
                     else {
-                        if (dateBirth != "") {
+                        
                             if (getDateDifference(scadenzaPlus5, dateBirtToCheck5) < 0) {
                                 //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                                 this.scadenzaDoc = moment(dateBirtToCheck5, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
@@ -153,11 +146,8 @@ class DatiPersonali extends Component {
                             else {
                                 this.scadenzaDoc = dateBirtToCheck5
                             }
-                        }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
+                        
+                        
                     }
                 }
 
@@ -171,7 +161,7 @@ class DatiPersonali extends Component {
                         this.scadenzaDoc = scadenzaPlus10
                     }
                     else {
-                        if (dateBirth != "") {
+                        
                             if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
                                 //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                                 this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
@@ -179,11 +169,8 @@ class DatiPersonali extends Component {
                             else {
                                 this.scadenzaDoc = dateBirtToCheck10
                             }
-                        }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
+                        
+                       
                     }
                 }
                 else if (eta < 70 && eta >= 50) {
@@ -192,7 +179,7 @@ class DatiPersonali extends Component {
                         this.scadenzaDoc = scadenzaPlus5
                     }
                     else {
-                        if (dateBirth != "") {
+                        
                             if (getDateDifference(scadenzaPlus5, dateBirtToCheck5) < 0) {
                                 //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                                 this.scadenzaDoc = moment(dateBirtToCheck5, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
@@ -200,19 +187,15 @@ class DatiPersonali extends Component {
                             else {
                                 this.scadenzaDoc = dateBirtToCheck5
                             }
-                        }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
-                    }
+                        
+                     }
                 }
                 else if (eta < 80 && eta >= 70) {
                     if (getDateDifference("13/05/2011", val) < 0) {
                         this.scadenzaDoc = scadenzaPlus3
                     }
                     else {
-                        if (dateBirth != "") {
+                        
                             if (getDateDifference(scadenzaPlus3, dateBirtToCheck3) < 0) {
                                 //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
                                 this.scadenzaDoc = moment(dateBirtToCheck3, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
@@ -220,17 +203,13 @@ class DatiPersonali extends Component {
                             else {
                                 this.scadenzaDoc = dateBirtToCheck3
                             }
-                        }
-                        else {
-                            alert("data di nascita non specificata");
-
-                        }
-                    }
+                        
+                     }
                 }
             default:
                 break;
         }
-
+        }
     }
     render() {
 
@@ -249,7 +228,17 @@ class DatiPersonali extends Component {
                     <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "1") this.props.formstate[anagraficaIntestatario + "paesenascita"] = "Seleziona"; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "1") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = "Seleziona"; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "1") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "1") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                        </div>
+                    </div>
+                </DefaultModal>
+                
+                <DefaultModal show={this.state.isWarningDateVisible}
+                    params={{ "modalTitle": 'Attenzione' }}>
+                    <p>Specificare la data di nascita per proseguire con la selezione della data di emisisone e scadenza dei documenti</p>
+                    <div className="btn-console">
+                        <div className="btn-console-right">
+                            <Button color="primary" className="center" onClick={() => {this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = ""; this.setState({ isWarningDateVisible: false }) }} title="Close">Close</Button>
                         </div>
                     </div>
                 </DefaultModal>
@@ -266,7 +255,12 @@ class DatiPersonali extends Component {
                                 anagraficaIntestatario + "provincianascita",
                                 anagraficaIntestatario + "comunenascita",
                                 anagraficaIntestatario + "codtipodocumento",
-                                anagraficaIntestatario + "numdocumento"
+                                anagraficaIntestatario + "numdocumento",
+                                anagraficaIntestatario + "datarilasciorinnovo",
+                                anagraficaIntestatario + "datascadenza",
+                                anagraficaIntestatario + "provinciarilascio",
+                                anagraficaIntestatario + "comunerilascio"
+                                
                             ])}>
                     <>
                         <section className="onboarding-block">
@@ -367,10 +361,14 @@ class DatiPersonali extends Component {
                                                     else {
                                                         this.setState({ isHelpDocVisible: false })
                                                     }
-                                                    this.setTypeDocumento(val);
-                                                    this.setDateEmissione(val);
-                                                    this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "";
-                                                    this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
+                                                    
+                                                    if (this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") {
+                                                        
+                                                        this.setTypeDocumento(val);
+                                                        this.setDateEmissione(val);
+                                                        this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "";
+                                                        this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
+                                                    }
                                                 }
                                                 }
                                             >
@@ -384,6 +382,7 @@ class DatiPersonali extends Component {
                                                 value={this.props.formstate[anagraficaIntestatario + "numdocumento"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "numdocumento"]}
                                                 onChange={this.props.obchange}
+                                                mask = {(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? "alfanumerico" : ""}
                                             >
                                             </Form.input>
                                             {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"]} />}
@@ -391,26 +390,31 @@ class DatiPersonali extends Component {
                                     </Row>
 
                                     <Row>
-                                        <Col xs="6" className="position-help">
-                                            <Form.date
-                                                label="Data di rilascio/rinnovo*"
-                                                name={anagraficaIntestatario + "datarilasciorinnovo"}
-                                                value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
-                                                onChange={this.props.obchange}
-                                                cbchange={(val) => this.setDateScadenza(val)}
-                                                placeholder=""
-                                                className=""
-                                                error={this.props.formstate.errors[anagraficaIntestatario + "datarilasciorinnovo"]}
-                                                disabled={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === ""}
-                                                dateTo={moment(new Date(), 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY')}
-                                                dateFrom={this.emissioneDoc}
-                                            >
-                                            </Form.date>
-                                            {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
-                                        </Col>
-
-                                        <Col xs="6" className="position-help">
-                                            <Form.date
+                                        <Col xs="6">
+                                            <Row>
+                                                <Col xs="6" className="position-help">
+                                                    <Form.date
+                                                    label="Data di rilascio/rinnovo*"
+                                                    name={anagraficaIntestatario + "datarilasciorinnovo"}
+                                                    value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
+                                                    onChange={this.props.obchange}
+                                                    cbchange={(val) => {
+                                                        if (this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") {
+                                                            this.setDateScadenza(val)}
+                                                        }
+                                                        }
+                                                    placeholder=""
+                                                    className=""
+                                                    error={this.props.formstate.errors[anagraficaIntestatario + "datarilasciorinnovo"]}
+                                                    disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === "" : "" }
+                                                    dateTo={moment(new Date(), 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY')}
+                                                    dateFrom={this.emissioneDoc}
+                                                    >
+                                                </Form.date>
+                                                {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
+                                                </Col>
+                                                <Col xs="6" className="position-help">
+                                                <Form.date
                                                 label="Data di scadenza*"
                                                 name={anagraficaIntestatario + "datascadenza"}
                                                 value={this.props.formstate[anagraficaIntestatario + "datascadenza"]}
@@ -418,29 +422,32 @@ class DatiPersonali extends Component {
                                                 placeholder=""
                                                 className=""
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]}
-                                                disabled={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === ""}
+                                                disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
                                                 dateTo={this.scadenzaDoc}
                                                 dateFrom={this.scadenzaDocPre}
                                             >
                                             </Form.date>
                                             {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs="6" >
+                                                </Col>
+                                            </Row>
+                                         </Col>
+                                         <Col xs="6" >
                                             {listaNazioni != [] && listaNazioni != undefined && <Form.select
                                                 label="Paese di rilascio*"
                                                 name={anagraficaIntestatario + "paeserilascio"}
                                                 value={this.props.formstate[anagraficaIntestatario + "paeserilascio"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "paeserilascio"]}
                                                 onChange={this.props.obchange}
-                                                options={listaNazioni}
+                                                options={ listaNazioni }
                                                 placeholder="Seleziona"
                                             >
                                             </Form.select>
                                             }
                                         </Col>
-                                        <Col xs="6" >
+
+                                    </Row>
+                                    <Row>
+                                        {(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") && <Col sm="6">
                                             <Form.select
                                                 label="Provincia di rilascio*"
                                                 name={anagraficaIntestatario + "provinciarilascio"}
@@ -449,10 +456,25 @@ class DatiPersonali extends Component {
                                                 onChange={this.props.obchange}
                                                 ajaxoptions="province"
                                                 placeholder="Seleziona"
-                                                disabled={this.props.formstate[anagraficaIntestatario + "paeserilascio"] !== "86"}
                                             >
                                             </Form.select>
                                         </Col>
+                                        }
+                                        {this.props.formstate[anagraficaIntestatario + "provinciarilascio"] !== "" && <Col sm="6">
+                                            <Form.select
+                                                label="Comune di rilascio*"
+                                                name={anagraficaIntestatario + "comunerilascio"}
+                                                value={this.props.formstate[anagraficaIntestatario + "comunerilascio"]}
+                                                error={this.props.formstate.errors[anagraficaIntestatario + "comunerilascio"]}
+                                                onChange={this.props.obchange}
+                                                ajaxoptions="comuni"
+                                                ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
+                                                placeholder="Seleziona.."
+                                                
+                                            >
+                                            </Form.select>
+                                        </Col>
+                                        }
                                     </Row>
                                     <Row>
                                         {this.props.formstate[anagraficaIntestatario + "provinciarilascio"] !== "" && <Col sm="6">

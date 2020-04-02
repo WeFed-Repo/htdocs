@@ -18,15 +18,18 @@
         .help {
             position: absolute;
             top: -2px;
-            left:35%;
+            left: 95%;
+        }
+        .daypicker + .help {
+            top: 32px;
+            left: 240px;
         }
         .opener {
             position: relative;
         }
-        label {
-            display: inline;
-        }
+       
     }
+    
     .btn-primary.disabled, .btn-primary:disabled {
         background-color: #ccc;
         cursor: default;
