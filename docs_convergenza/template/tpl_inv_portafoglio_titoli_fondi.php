@@ -595,14 +595,14 @@ $(function(){
         <div class="collapse collapse-par-collapse" id="collapseNoteEtf">
             <p>Dal possesso di ETF (Exchange Traded Fund) si possono generare sia redditi di capitale, sia redditi diversi.</p>
             <p><strong>Redditi di capitale</strong></br>
-            L'E.T.F. riconosce agli investitori i dividendi incassati a fronte delle azioni detenute in portafoglio, nonch� i proventi del loro reinvestimento e quelli derivanti dalle operazioni di "prestito titoli" (ovvero dividendi).
-            La normativa fiscale stabilisce che la differenza tra il ricavo e il costo sostenuto � oggetto di imponibilit� fiscale, con la precisazione che il reddito di capitale � determinato dal differenziale positivo tra il NAV dell'operazione di vendita/rimborso e il NAV dell'operazione di acquisto/sottoscrizione, denominato Delta NAV. La sigla NAV � acronimo di Net Asset Value, e corrisponde al patrimonio netto del fondo diviso per il numero di quote in circolazione. Quando l'E.T.F. � acquistato e venduto nello stesso giorno, il suo Delta NAV sar� nullo.
-            Nel caso in cui la posizione del cliente si sia formata sulla base di molteplici acquisti, effettuati a prezzi differenti, verr� utilizzato come prezzo NAV di acquisto un valore medio ponderato sulle quantit� (calcolato sulla base dei valori lordi delle quote dei giorni in cui sono stati effettuati gli acquisti, ponderati sulle quantit�).
-            Sui redditi di capitale (proventi periodici e Delta NAV positivo) si applica una ritenuta del 12,50%, a titolo d'imposta per i percipienti persone fisiche e a titolo d'acconto nei confronti delle Societ� di capitali.
+            L'E.T.F. riconosce agli investitori i dividendi incassati a fronte delle azioni detenute in portafoglio, nonch i proventi del loro reinvestimento e quelli derivanti dalle operazioni di "prestito titoli" (ovvero dividendi).
+            La normativa fiscale stabilisce che la differenza tra il ricavo e il costo sostenuto  oggetto di imponibilit fiscale, con la precisazione che il reddito di capitale  determinato dal differenziale positivo tra il NAV dell'operazione di vendita/rimborso e il NAV dell'operazione di acquisto/sottoscrizione, denominato Delta NAV. La sigla NAV  acronimo di Net Asset Value, e corrisponde al patrimonio netto del fondo diviso per il numero di quote in circolazione. Quando l'E.T.F.  acquistato e venduto nello stesso giorno, il suo Delta NAV sar nullo.
+            Nel caso in cui la posizione del cliente si sia formata sulla base di molteplici acquisti, effettuati a prezzi differenti, verr utilizzato come prezzo NAV di acquisto un valore medio ponderato sulle quantit (calcolato sulla base dei valori lordi delle quote dei giorni in cui sono stati effettuati gli acquisti, ponderati sulle quantit).
+            Sui redditi di capitale (proventi periodici e Delta NAV positivo) si applica una ritenuta del 12,50%, a titolo d'imposta per i percipienti persone fisiche e a titolo d'acconto nei confronti delle Societ di capitali.
             </p>
             <p><strong>
             Redditi diversi</strong><br>
-            L'eventuale reddito diverso � pari alla differenza tra prezzo di vendita e prezzo di acquisto meno il Delta NAV riferito alle medesime date di vendita e di acquisto. Le plus/minusvalenze come sopra determinate entreranno mensilmente a far parte del conteggio dell'imposta sostitutiva sui capital gain di cui al D. Lgs. 461/97 (Regime amministrato o gestito per le sole persone fisiche).</p>
+            L'eventuale reddito diverso  pari alla differenza tra prezzo di vendita e prezzo di acquisto meno il Delta NAV riferito alle medesime date di vendita e di acquisto. Le plus/minusvalenze come sopra determinate entreranno mensilmente a far parte del conteggio dell'imposta sostitutiva sui capital gain di cui al D. Lgs. 461/97 (Regime amministrato o gestito per le sole persone fisiche).</p>
         </div>
     </div>
 </section>
