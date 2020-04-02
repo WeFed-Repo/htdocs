@@ -17,8 +17,7 @@ mFinalita  = "Acquisto",
 mPrimacasa = "SI",
 mStoreId = "";
 
-
- mutuiIE8 = (document.all && document.querySelector && !document.addEventListener);
+mutuiIE8 = (document.all && document.querySelector && !document.addEventListener);
 
 function setLoading()
 {
@@ -460,6 +459,8 @@ function mGetData()
 			mLtv = 0;
 			mMutuoMin = 1000000;
 			mMutuoMax = 0;
+
+			var erroreGenericoMsg = "";
 			
 			$.each(mutui,function(i,v){
 				mutuo = v;
@@ -470,6 +471,12 @@ function mGetData()
 				if (mutuo.mutuominimo<mMutuoMin) mMutuoMin = mutuo.mutuominimo;
 				if (mutuo.mutuomassimo>mMutuoMax) mMutuoMax = mutuo.mutuomassimo;
 				if (mutuo.ltv>mLtv) mLtv = mutuo.ltv;
+
+
+				// Input errore generico 
+				if (mutuo.messaggioGenerico =="errore generico") {
+					erroreGenericoMsg = mutuo.messaggio;
+				}
 				
 				if (!mPromoMode) {
 
@@ -624,6 +631,18 @@ function mGetData()
 				}
 			});
 			
+			// In caso di errore generico distrugge il contenitore e inserisce il messaggio
+			if (erroreGenericoMsg != "") {
+				mRes.empty().append(
+					$("<div>").addClass("errore-generico").append("<p>").html(
+						$("<div>").addClass("boxalert errore").append(
+							$("<div>").addClass("boxcont").append("<p>" + erroreGenericoMsg + "</p>")
+
+						)
+						)
+					
+					);
+			}
 
 			// Inizializza e resetta lo slider
 			mSliderDefault = parseFloat($("#mDur").val());

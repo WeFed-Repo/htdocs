@@ -33,7 +33,14 @@
         // Attenzione! Nelle modale l'offset e' diverso perchè il layer viene applicato "a monte" per "sbordare" dalla modale stessa.
         if (icoBtnParent.hasClass("modal-dialog")) {
             var modalOffset = icoBtnParent.find(".modal-body").position();
+            var modalLeftScroller = icoBtnParent.find(".headerContainerNoBootS");
+            if (modalLeftScroller.length>0) {
+                var cumulativeOffset = modalLeftScroller.position();
+                olpos.top += cumulativeOffset.top;
+                olpos.left += cumulativeOffset.left;
+            }
             olpos.top += modalOffset.top;
+            olpos.left += modalOffset.left;
         }
         
         icoBtnParent.prepend(icoOpeOl.css({

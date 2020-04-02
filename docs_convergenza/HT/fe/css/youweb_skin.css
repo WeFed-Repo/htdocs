@@ -32,7 +32,7 @@
 }
 
 .icon_filter:before, .icon_cambi:before {
-  font-style: normal iImportant;
+  font-style: normal !important;
   content: "☒";
   color: red !important;
 }
@@ -479,6 +479,7 @@ li.linkOn a {
 }
 .btn-icon .icon {
   vertical-align: text-bottom;
+  line-height: 24px;
 }
 .btn-icon.btn-icon-text {
   width: auto;

@@ -1,7 +1,7 @@
 .icon_filter, .icon_cambi {
    
     &:before{
-        font-style:normal iImportant;
+        font-style:normal !important;
         content: "\2612";
         color: red !important;
     }

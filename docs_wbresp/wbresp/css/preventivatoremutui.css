@@ -133,6 +133,12 @@ a.icoinfo {display:inline-block; margin:-7px 0 -6px 10px; width:25px;height:25px
 #mCalcCons .form-group{min-width:300px \9;}
 #mCalcStatic .mData .btn-whlit.btn-whlit-arrow {min-width: 0 \9;}
 
+#mResults .errore-generico {
+    border-bottom: solid 1px #ddd;
+    padding: 20px 15px 10px;
+    margin-bottom: 20px;
+}
+
 /* Media queries smartphone portrait*/
 @media (max-width: 1199px) {
     #mutuiWrap a.btn-grlit,#mutuiWrap a.btn-whlit  {margin: 40px 0 15px 0;}
