@@ -8,6 +8,10 @@ import getDateDifference from 'functions/getDateDifference';
 import DefaultModal from "components/parts/DefaultModal";
 import HelpBtn from 'components/parts/Help';
 import DatiFatca from './DatiFatca';
+import DatiCai from './DatiCai';
+import DatiDomicilio from './DatiDomicilio';
+import DatiCorrispondenza from './DatiCorrispondenza';
+import AltriRecapiti from './AltriRecapiti';
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class DatiPersonali extends Component {
@@ -258,9 +262,15 @@ class DatiPersonali extends Component {
                                 anagraficaIntestatario + "numdocumento",
                                 anagraficaIntestatario + "datarilasciorinnovo",
                                 anagraficaIntestatario + "datascadenza",
+                                anagraficaIntestatario + "paeserilascio",
                                 anagraficaIntestatario + "provinciarilascio",
-                                anagraficaIntestatario + "comunerilascio"
-                                
+                                anagraficaIntestatario + "comunerilascio",
+                                anagraficaIntestatario + "imgdocidentita_iddoc",
+                                anagraficaIntestatario + "tipoindirizzoresidenza",
+                                anagraficaIntestatario + "indirizzoresidenza",
+                                anagraficaIntestatario + "numresidenza",
+                                anagraficaIntestatario + "provinciaresidenza",
+                                anagraficaIntestatario + "comuneresidenza"
                             ])}>
                     <>
                         <section className="onboarding-block">
@@ -551,7 +561,7 @@ class DatiPersonali extends Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="6">
+                                        <Col xs="4">
                                             <Form.select
                                                 label="Provincia di residenza*"
                                                 name={anagraficaIntestatario + "provinciaresidenza"}
@@ -564,7 +574,7 @@ class DatiPersonali extends Component {
                                             </Form.select>
                                         </Col>
                                         <Col>
-                                            {this.props.formstate[anagraficaIntestatario + "provinciaresidenza"] !== "" && <Col sm="6">
+                                            {this.props.formstate[anagraficaIntestatario + "provinciaresidenza"] !== "" && <Col sm="8">
                                                 <Form.select
                                                     label="Comune di residenza*"
                                                     name={anagraficaIntestatario + "comuneresidenza"}
@@ -581,286 +591,10 @@ class DatiPersonali extends Component {
                                 </>
                             </section>
                             <div className="inner-wrapper-collapse ">
-                                <DefaultCollapse label="AGGIUNGI UN INDIRIZZO PER LA CENTRALE D'ALLARME INTERBANCARIA (CAI)" startsOpen={false} className="search-collapse">
-                                    <section className="onboarding-block">
-                                        <p>Aggiungi l'indirizzo se diverso da quello di residenza. A questo indirizzo verranno inviate eventuali segnalazioni da parte della CAI sull'uso irregolare di assegni e carte di pagamento.</p>
-                                        <Row>
-                                            <Col xs="8">
-                                                <Row>
-                                                    <Col xs="4">
-                                                        {optionResidenza != [] && optionResidenza != undefined &&
-                                                            <Form.select
-                                                                label="Indirizzo Cai*"
-                                                                name={anagraficaIntestatario + "tipoindirizzocai"}
-                                                                value={this.props.formstate[anagraficaIntestatario + "tipoindirizzocai"]}
-                                                                error={this.props.formstate.errors[anagraficaIntestatario + "tipoindirizzocai"]}
-                                                                onChange={this.props.obchange}
-                                                                options={optionResidenza}
-                                                                placeholder="Seleziona"
-
-                                                            ></Form.select>
-                                                        }
-                                                    </Col>
-                                                    <Col xs="8">
-                                                        <Form.input
-                                                            label="&nbsp;"
-                                                            name={anagraficaIntestatario + "indirizzocai"}
-                                                            value={this.props.formstate[anagraficaIntestatario + "indirizzocai"]}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "indirizzocai"]}
-                                                            onChange={this.props.obchange}
-                                                        ></Form.input>
-
-                                                    </Col>
-                                                </Row>
-                                            </Col>
-                                            <Col xs="4">
-                                                <Form.input
-                                                    label="Numero*"
-                                                    name={anagraficaIntestatario + "numcai"}
-                                                    value={this.props.formstate[anagraficaIntestatario + "numcai"]}
-                                                    error={this.props.formstate.errors[anagraficaIntestatario + "numcai"]}
-                                                    onChange={this.props.obchange}
-                                                    placeholder="Seleziona"
-
-                                                ></Form.input>
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col xs="6">
-                                                <Form.select
-                                                    label="Provincia*"
-                                                    name={anagraficaIntestatario + "provinciacai"}
-                                                    value={this.props.formstate[anagraficaIntestatario + "provinciacai"]}
-                                                    error={this.props.formstate.errors[anagraficaIntestatario + "provinciacai"]}
-                                                    onChange={this.props.obchange}
-                                                    ajaxoptions="province"
-                                                    placeholder="Seleziona"
-                                                >
-                                                </Form.select>
-                                            </Col>
-                                            <Col>
-                                                {this.props.formstate[anagraficaIntestatario + "provinciacai"] !== "" && <Col sm="6">
-                                                    <Form.select
-                                                        label="Comune*"
-                                                        name={anagraficaIntestatario + "comunecai"}
-                                                        value={this.props.formstate[anagraficaIntestatario + "comunecai"]}
-                                                        error={this.props.formstate.errors[anagraficaIntestatario + "comunecai"]}
-                                                        onChange={this.props.obchange}
-                                                        placeholder="Seleziona..."
-                                                        ajaxoptions="comuni"
-                                                        ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciacai"]}
-                                                    ></Form.select>
-                                                </Col>}
-                                            </Col>
-                                        </Row>
-                                    </section>
-                                </DefaultCollapse>
-                                <DefaultCollapse label="AGGIUNGI INDIRIZZO DI DOMICILIO (SE DIVERSO DALLA RESIDENZA)" startsOpen={false} className="search-collapse">
-                                    <section className="onboarding-block">
-                                        <p>Aggiungi un indirizzo se diverso da quello di residenza. A questo indirizzo verrà inviata la documentazione contrattuale, per tutti gli intestatari del conto.</p>
-                                        <Row>
-                                            <Col xs="8">
-                                                <Row>
-                                                    <Col xs="4">
-                                                        {optionResidenza != [] && optionResidenza != undefined &&
-                                                            <Form.select
-                                                                label="Indirizzo Domicilio*"
-                                                                name={anagraficaIntestatario + "tipoindirizzodomicilio"}
-                                                                value={this.props.formstate[anagraficaIntestatario + "tipoindirizzodomicilio"]}
-                                                                error={this.props.formstate.errors[anagraficaIntestatario + "tipoindirizzodomicilio"]}
-                                                                onChange={this.props.obchange}
-                                                                options={optionResidenza}
-                                                                placeholder="Seleziona"
-
-                                                            ></Form.select>
-                                                        }
-                                                    </Col>
-                                                    <Col xs="8">
-                                                        <Form.input
-                                                            label="&nbsp;"
-                                                            name={anagraficaIntestatario + "indirizzodomicilio"}
-                                                            value={this.props.formstate[anagraficaIntestatario + "indirizzodomicilio"]}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "indirizzodomicilio"]}
-                                                            onChange={this.props.obchange}
-                                                        ></Form.input>
-
-                                                    </Col>
-                                                </Row>
-                                            </Col>
-                                            <Col xs="4">
-                                                <Form.input
-                                                    label="Numero*"
-                                                    name={anagraficaIntestatario + "numdomicilio"}
-                                                    value={this.props.formstate[anagraficaIntestatario + "numdomicilio"]}
-                                                    error={this.props.formstate.errors[anagraficaIntestatario + "numdomicilio"]}
-                                                    onChange={this.props.obchange}
-                                                ></Form.input>
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col xs="6">
-                                                <Form.select
-                                                    label="Provincia*"
-                                                    name={anagraficaIntestatario + "provinciadomicilio"}
-                                                    value={this.props.formstate[anagraficaIntestatario + "provinciadomicilio"]}
-                                                    error={this.props.formstate.errors[anagraficaIntestatario + "provinciadomicilio"]}
-                                                    onChange={this.props.obchange}
-                                                    ajaxoptions="province"
-                                                    placeholder="Seleziona"
-                                                >
-                                                </Form.select>
-                                            </Col>
-                                            <Col>
-                                                {this.props.formstate[anagraficaIntestatario + "provinciadomicilio"] !== "" && <Col sm="6">
-                                                    <Form.select
-                                                        label="Comune*"
-                                                        name={anagraficaIntestatario + "comunedomicilio"}
-                                                        value={this.props.formstate[anagraficaIntestatario + "comunedomicilio"]}
-                                                        error={this.props.formstate.errors[anagraficaIntestatario + "comunedomicilio"]}
-                                                        onChange={this.props.obchange}
-                                                        placeholder="Seleziona..."
-                                                        ajaxoptions="comuni"
-                                                        ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciadomicilio"]}
-                                                    ></Form.select>
-                                                </Col>}
-                                            </Col>
-                                        </Row>
-                                    </section>
-                                </DefaultCollapse>
-
-                                {this.props.indexInt === '0' &&
-                                    <DefaultCollapse label="AGGIUNGI INDIRIZZO DI CORRISPONDENZA (SE DIVERSO DAI PRECEDENTI)" startsOpen={false} className="search-collapse">
-                                        <section className="onboarding-block">
-                                            <p>Se preferisci ricevere la nostra corrispondenza a un indirizzo diverso dalla tua residenza, inseriscilo di seguito. A questo indirizzo invieremo, per tutti gli intestatari del conto, tutte le comunicazioni cartacee. </p>
-                                            <Row>
-                                                <Col xs="8">
-                                                    <Row>
-                                                        <Col xs="4">
-                                                            {optionResidenza != [] && optionResidenza != undefined &&
-                                                                <Form.select
-                                                                    label="Indirizzo Corrispondenza"
-                                                                    name={anagraficaIntestatario + "tipoindirizzocorrisp"}
-                                                                    value={this.props.formstate[anagraficaIntestatario + "tipoindirizzocorrisp"]}
-                                                                    error={this.props.formstate.errors[anagraficaIntestatario + "tipoindirizzocorrisp"]}
-                                                                    onChange={this.props.obchange}
-                                                                    options={optionResidenza}
-                                                                    placeholder="Seleziona"
-
-                                                                ></Form.select>
-                                                            }
-                                                        </Col>
-                                                        <Col xs="8">
-                                                            <Form.input
-                                                                label="&nbsp;"
-                                                                name={anagraficaIntestatario + "indirizzocorrisp"}
-                                                                value={this.props.formstate[anagraficaIntestatario + "indirizzocorrisp"]}
-                                                                error={this.props.formstate.errors[anagraficaIntestatario + "indirizzocorrisp"]}
-                                                                onChange={this.props.obchange}
-                                                            ></Form.input>
-
-                                                        </Col>
-                                                    </Row>
-                                                </Col>
-                                                <Col xs="4">
-                                                    <Form.input
-                                                        label="Numero*"
-                                                        name={anagraficaIntestatario + "numcorrisp"}
-                                                        value={this.props.formstate[anagraficaIntestatario + "numcorrisp"]}
-                                                        error={this.props.formstate.errors[anagraficaIntestatario + "numcorrisp"]}
-                                                        onChange={this.props.obchange}
-                                                    ></Form.input>
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col xs="6">
-                                                    <Form.select
-                                                        label="Provincia*"
-                                                        name={anagraficaIntestatario + "provinciacorrisp"}
-                                                        value={this.props.formstate[anagraficaIntestatario + "provinciacorrisp"]}
-                                                        error={this.props.formstate.errors[anagraficaIntestatario + "provinciacorrisp"]}
-                                                        onChange={this.props.obchange}
-                                                        ajaxoptions="province"
-                                                        placeholder="Seleziona"
-                                                    >
-                                                    </Form.select>
-                                                </Col>
-                                                <Col>
-                                                    {this.props.formstate[anagraficaIntestatario + "pprovinciacorrisp"] !== "" && <Col sm="6">
-                                                        <Form.select
-                                                            label="Comune*"
-                                                            name={anagraficaIntestatario + "comunecorrisp"}
-                                                            value={this.props.formstate[anagraficaIntestatario + "comunecorrisp"]}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "comunecorrisp"]}
-                                                            onChange={this.props.obchange}
-                                                            placeholder="Seleziona..."
-                                                            ajaxoptions="comuni"
-                                                            ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciacorrisp"]}
-                                                        ></Form.select>
-                                                    </Col>}
-                                                </Col>
-                                            </Row>
-                                        </section>
-                                    </DefaultCollapse>
-                                }
-                                <DefaultCollapse label="AGGIUNGI ALTRI RECAPITI" startsOpen={false} className="search-collapse">
-                                    <section className="onboarding-block">
-                                        <p>Puoi aggiungere un ulteriore numero di telefono.</p>
-                                        <Row>
-                                            <Col xs="6">
-                                                <Row>
-                                                    <Col xs="6">
-                                                        <Form.input
-                                                            label="Numero di telefono fisso di casa"
-                                                            name={anagraficaIntestatario + "prefissofissocasa"}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "prefissofissocasa"]}
-                                                            value={this.props.formstate[anagraficaIntestatario + "prefissofissocasa"]}
-                                                            onChange={this.props.obchange}
-                                                            placeholder=""
-                                                        >
-                                                        </Form.input>
-                                                    </Col>
-                                                    <Col xs="6">
-                                                        <Form.input
-                                                            label="&nbsp;"
-                                                            name={anagraficaIntestatario + "numerofissocasa"}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "numerofissocasa"]}
-                                                            value={this.props.formstate[anagraficaIntestatario + "numerofissocasa"]}
-                                                            onChange={this.props.obchange}
-                                                            placeholder=""
-                                                        >
-                                                        </Form.input>
-                                                    </Col>
-                                                </Row>
-                                            </Col>
-                                            <Col xs="6">
-                                                <Row>
-                                                    <Col xs="6">
-                                                        <Form.input
-                                                            label="Numero di telefono fisso ufficio"
-                                                            name={anagraficaIntestatario + "prefissofissoufficio"}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "prefissofissoufficio"]}
-                                                            value={this.props.formstate[anagraficaIntestatario + "prefissofissoufficio"]}
-                                                            onChange={this.props.obchange}
-                                                            placeholder=""
-                                                        >
-                                                        </Form.input>
-                                                    </Col>
-                                                    <Col xs="6">
-                                                        <Form.input
-                                                            label="&nbsp;"
-                                                            name={anagraficaIntestatario + "numerofissoufficio"}
-                                                            error={this.props.formstate.errors[anagraficaIntestatario + "numerofissoufficio"]}
-                                                            value={this.props.formstate[anagraficaIntestatario + "numerofissoufficio"]}
-                                                            onChange={this.props.obchange}
-                                                            placeholder=""
-                                                        >
-                                                        </Form.input>
-                                                    </Col>
-                                                </Row>
-                                            </Col>
-                                        </Row>
-                                    </section>
-                                </DefaultCollapse>
+                                <DatiCai formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza= {optionResidenza} obchange={this.props.obchange}></DatiCai>
+                                <DatiDomicilio formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza= {optionResidenza} obchange={this.props.obchange}></DatiDomicilio>
+                                {this.props.indexInt === '0' &&  <DatiCorrispondenza formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza= {optionResidenza} obchange={this.props.obchange}></DatiCorrispondenza> }
+                                <AltriRecapiti formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} obchange={this.props.obchange}></AltriRecapiti>
                                 <DefaultCollapse label="INFORMAZIONI AGGIUNTIVE" startsOpen={false} className="search-collapse">
                                     <section className="onboarding-block">
                                         <Row>
