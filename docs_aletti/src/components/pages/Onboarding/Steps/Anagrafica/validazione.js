@@ -25,7 +25,9 @@ export default function(form) {
         "field_anagraficablob_intestatari_0_listprivacy_2_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_3_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_4_consenso",
-        "field_anagraficablob_intestatari_0_numdocumento"
+        "field_anagraficablob_intestatari_0_numdocumento",
+        "field_anagraficablob_intestatari_0_datarilasciorinnovo",
+        "field_anagraficablob_intestatari_0_datascadenza"
         
         ],
         obbligatoriSel_int1 = [
@@ -34,7 +36,9 @@ export default function(form) {
             "field_anagraficablob_intestatari_0_cittadinanza",
             "field_anagraficablob_intestatari_0_provincianascita",
             "field_anagraficablob_intestatari_0_comunenascita",
-            "field_anagraficablob_intestatari_0_codtipodocumento"
+            "field_anagraficablob_intestatari_0_codtipodocumento",
+            "field_anagraficablob_intestatari_0_provinciarilascio",
+            "field_anagraficablob_intestatari_0_comunerilascio"
         ];
     
     //Obbligatori eventuale intestatario 2
@@ -52,7 +56,9 @@ export default function(form) {
         "field_anagraficablob_intestatari_1_listprivacy_2_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_3_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_4_consenso",
-        "field_anagraficablob_intestatari_1_numdocumento"
+        "field_anagraficablob_intestatari_1_numdocumento",
+        "field_anagraficablob_intestatari_1_datarilasciorinnovo",
+        "field_anagraficablob_intestatari_1_datascadenza"
         ],
         obbligatoriSel_int2 = [
           "field_anagraficablob_intestatari_1_sesso",
@@ -60,7 +66,9 @@ export default function(form) {
           "field_anagraficablob_intestatari_1_cittadinanza",
           "field_anagraficablob_intestatari_1_provincianascita",
           "field_anagraficablob_intestatari_1_comunenascita",
-          "field_anagraficablob_intestatari_1_codtipodocumento"
+          "field_anagraficablob_intestatari_1_codtipodocumento",
+          "field_anagraficablob_intestatari_0_provinciarilascio",
+            "field_anagraficablob_intestatari_0_comunerilascio"
         ];
 
     //obbligatorio con selzione documento
@@ -81,7 +89,7 @@ export default function(form) {
     });
     
     obbligatori.forEach((v, i) => {
-        if (form[v] === "") errors[v] = obbligatorimsg;
+       if (form[v] === "") errors[v] = obbligatorimsg;
         
     });
     obbligatoriSel.forEach((v, i) => {
@@ -99,20 +107,30 @@ export default function(form) {
    if (form["field_anagraficablob_intestatari_1_email"].length!="" && !emailRegex.test(form["field_anagraficablob_intestatari_1_email"])) errors["field_anagraficablob_intestatari_1_email"] = mailmsgFormat; 
     
    // Controllo sul formato della carta d'identità mail
-   if(form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="12")
-   {
-        const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
-        if(form["field_anagraficablob_intestatari_0_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_0_numdocumento"])) {
-            errors["field_anagraficablob_intestatari_0_numdocumento"] = cimsgFormat
-        }
+   //VA FATTO SOLO SE NON  HO SELEZIONATO UN PAESE STRANIERO COME PAESE DI EMISSIONE
+  
+   if(form["field_anagraficablob_intestatari_0_paeserilascio"] === "86" || form["field_anagraficablob_intestatari_0_paeserilascio"] === "" )
+   { 
+    
+    if(form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_0_codtipodocumento"] ==="12")
+    {
+         
+         const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
+         if(form["field_anagraficablob_intestatari_0_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_0_numdocumento"])) {
+             errors["field_anagraficablob_intestatari_0_numdocumento"] = cimsgFormat
+         }
+    }
    }
-   if(form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="12")
-   {
-        const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
-        if(form["field_anagraficablob_intestatari_1_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_1_numdocumento"])) {
-            errors["field_anagraficablob_intestatari_1_numdocumento"] = cimsgFormat
-        }
-   }
+   if(form["field_anagraficablob_intestatari_1_paeserilascio"] === "86" || form["field_anagraficablob_intestatari_1_paeserilascio"] === "" )
+   { 
+    if(form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="01"|| form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="11" || form["field_anagraficablob_intestatari_1_codtipodocumento"] ==="12")
+    {
+            const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
+            if(form["field_anagraficablob_intestatari_1_numdocumento"].length!="" && !ciRegex.test(form["field_anagraficablob_intestatari_1_numdocumento"])) {
+                errors["field_anagraficablob_intestatari_1_numdocumento"] = cimsgFormat
+            }
+    }
+    }
    // Ripassa l'oggetto con tutti gli errori del form visualizzato
    return (errors);
     
