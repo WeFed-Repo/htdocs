@@ -1,4 +1,5 @@
-import validazioneIndirizzi from "./DatiPersonali/validazioneIndirizzi" 
+import validazioneIndirizzi from "./DatiPersonali/validazioneIndirizzi"
+import validazioneFatca from "./DatiPersonali/DatiFatca/validazioneFatca"
 
 export default function (form) {
     // Inizializzazione oggetto errori
@@ -92,11 +93,6 @@ export default function (form) {
     let obbligatori = form["field_numintestatari"] === "1" ? obbligator_int1 : obbligator_int1.concat(obbligator_int2),
         obbligatoriSel = form["field_numintestatari"] === "1" ? ["field_numintestatari"].concat(obbligatoriSel_int1) : ["field_numintestatari"].concat(obbligatoriSel_int1).concat(obbligatoriSel_int2);
 
-
-  //
-
-
-
     // Ciclo di controllo dei campi obbligatori 
 
     obbligatoriVis.forEach((v, i) => {
@@ -112,7 +108,7 @@ export default function (form) {
         if (form[v] === "" || form[v] === "Seleziona") errors[v] = obbligatorimsgSel;
     });
 
-    
+
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
@@ -145,11 +141,10 @@ export default function (form) {
             }
         }
     }
-   
+    // Ripassa l'oggetto con tutti gli errori del form visualizzato aggiungendo gli eventuali controlli degli indirizzi
+    errors = Object.assign(errors, validazioneIndirizzi(form, "cai"), validazioneIndirizzi(form, "domicilio"), validazioneIndirizzi(form, "corrisp"));
     
-    errors = Object.assign(errors,validazioneIndirizzi(form,"cai"), validazioneIndirizzi(form,"domicilio"),validazioneIndirizzi(form,"corrisp"));
-   // Ripassa l'oggetto con tutti gli errori del form visualizzato
-   
+
     return (errors);
 
 
