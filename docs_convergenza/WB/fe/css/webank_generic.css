@@ -5772,6 +5772,7 @@ table tr td.td-fondo .fundName {
 }
 .spsel.spsel-hasconsole .spsel-btn-console .icon-row_expand {
   display: inline-block;
+  cursor: pointer;
 }
 .spsel.opened {
   z-index: 1;

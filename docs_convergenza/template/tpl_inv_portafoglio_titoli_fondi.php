@@ -481,6 +481,10 @@ $(function(){
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
+                        /*
+                        fixedColumns: true,
+                        fixedNumber: 2,
+                        */
                         onPostBody: function(){
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
@@ -515,7 +519,7 @@ $(function(){
             </thead>
             <tbody>	
             <?php
-                for($x=0;$x<=6;$x++)  {
+                for($x=0;$x<=6;$x++) {
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
@@ -536,21 +540,20 @@ $(function(){
                         <td class="right"><?php print rand(0,10000)/100;?></td>
                         <td class="right"><?php print rand(0,10000)/100;?></td>
                         <td class="right"><?php print rand(0,10000)/100;?></td>
-                        <td class="left"><?php print ["Telecomunicazioni","Chimica e materie prime","Industria"][rand(0,2)];?></td>
+                        <td class="left">Lorem ipsum dolor</td>
                         <td class="right">00,0&euro;</td>
                         <td class="right">101,01<br>11:17:05</td>
                         <td class="right">20.202,00</td>
                         <td class="right nega">-24,00<br>-0,1%</td>
                     </tr>
                     <?php
-
                 }            
             ?>
             </tbody>
             <tfoot>
                 <tr>
                     <td class="bgWhite brdWhite"></td>
-                    <td colspan="9"><strong>Totale portafoglio</strong></td>
+                    <td colspan="9"><strong> Totale portafoglio</strong></td>
                     <td class="right">123.404,00</td>
                     <td class="right nega">-24,00<br>-0,1%</td>
                 </tr>
