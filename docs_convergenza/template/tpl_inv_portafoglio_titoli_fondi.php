@@ -497,42 +497,7 @@ $(function(){
                                 });
                             
                             attivaIconaOperativa("#tablePortafoglio");
-                            
-
-                            fixedColumns= 2;
-
-
-
-                            // Clona l'intera tabella
-                            var tbs = $("#tablePortafoglio");
-                            var tbbsTab = tbs.parents(".bootstrap-table");
-                            tbbsTab.find("div.fixed-columns").remove();
-
-                            // calcolo della larghezza delle colonne scelte
-                            var fixWidth = 0;
-                            for(x=0;x<fixedColumns;x++) {
-                                fixWidth += tbs.find("th").eq(x).outerWidth()
-                            }                            
-
-                            var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort");
-
-                            // Regole per il controllo dei "sortable"
-                            tbfix.find('.sortable').closest('th').addClass('sortableTh');
-                            tbfix.find('.sortable.both').closest('th').removeClass('sortedTh');
-                            tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
-
-                            tbbsTab.prepend(
-                                $("<div>").addClass("fixed-columns").append(tbfix).css({
-                                    "position":"absolute",
-                                    "top": "left:0",
-                                    "width": fixWidth + 1 + "px",
-                                    "overflow":"hidden",
-                                    "z-index": "1",
-                                    "background": "#ffffff"
-                                })
-                                
-                            );
-                            
+                                                   
                         }
                 });
 
@@ -540,7 +505,7 @@ $(function(){
                 initThFilter();
             });
         </script>
-        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
