@@ -481,15 +481,7 @@ $(function(){
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
-
-                        /*
-                        fixedColumns: true,
-                        fixedNumber: 2,
-                        */
-                        pagination: true,
-                        pageSize: 20,
                         onPostBody: function(){
-
 
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
@@ -497,38 +489,7 @@ $(function(){
                                 });
                             
                             attivaIconaOperativa("#tablePortafoglio");
-                            
-
-                            fixedColumns= 2;
-
-
-                            // Clona l'intera tabella
-                            var tbs = $("#tablePortafoglio");
-                            var tbbsTab = tbs.parents(".bootstrap-table");
-                            tbbsTab.find("div.colonne-fisse").remove();
-
-                            // calcolo della larghezza delle colonne scelte
-                            var fixWidth = 0;
-                            for(x=0;x<fixedColumns;x++) {
-                                fixWidth += tbs.find("th").eq(x).outerWidth()
-                            }                            
-
-                            var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort");
-                            tbbsTab.prepend(
-                                $("<div>").addClass("colonne-fisse").append(tbfix).css({
-                                    "position":"absolute",
-                                    "top": "left:0",
-                                    "width": fixWidth + 1 + "px",
-                                    "overflow":"hidden",
-                                    "z-index": "9",
-                                    "background": "#ffffff"
-
-                                })
-                                
-                            );
-
-                            console.log("tabella-fixed-ricreata")
-                            
+                                                   
                         }
                 });
 
@@ -536,7 +497,7 @@ $(function(){
                 initThFilter();
             });
         </script>
-        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -555,7 +516,7 @@ $(function(){
             </thead>
             <tbody>	
             <?php
-                for($x=0;$x<=90;$x++) {
+                for($x=0;$x<=10;$x++) {
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>

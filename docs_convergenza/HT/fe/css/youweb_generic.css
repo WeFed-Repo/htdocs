@@ -7095,6 +7095,22 @@ div.fixed-table-scroll-outer {
 .linee-wrapper .lineaT {float:left;padding-left: 46%;height:30px;font-weight: bold}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
 .textWrapper {position:relative;}
+
+.bootstrap-table {
+    position:relative
+}
+
+.bootstrap-table .fixed-columns {
+    position: absolute;
+    top: 0;
+    left:0;
+    overflow:hidden;
+    z-index: 1;
+    background: #ffffff;
+}
+
+.bootstrap-table table {margin-top:0}
+
 @media (max-width:820px) {
     .linee-wrapper .lineaT {float:left;padding-left: 40%;height:30px;}
 }
@@ -7117,6 +7133,7 @@ div.fixed-table-scroll-outer {
         border-right: 0;
     }
     
+
     .bootstrap-table table {
         margin-bottom: 0 !important;
     }
@@ -7124,7 +7141,8 @@ div.fixed-table-scroll-outer {
         position: relative!important;
         clear: both;
        
-    } 
+    }
+    
     
     .fixed-table-body-columns .table-hover, .fixed-table-body-columns .table-hover tr:first-child td {
         border-top: 0;
@@ -7167,7 +7185,7 @@ div.fixed-table-scroll-outer {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     top: 30px;
     left: 0;
-    z-index:1;
+    z-index:2;
     position: absolute;
     display:block;
 }
