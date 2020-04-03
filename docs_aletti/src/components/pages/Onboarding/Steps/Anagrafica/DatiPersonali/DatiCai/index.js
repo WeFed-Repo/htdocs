@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
-import { Col, Row, Button } from 'reactstrap';
+import { Col, Row} from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class DatiCai extends Component {
-
     render() {
-
         return (
             <DefaultCollapse
                 label="AGGIUNGI UN INDIRIZZO PER LA CENTRALE D'ALLARME INTERBANCARIA (CAI)"
@@ -99,4 +97,5 @@ class DatiCai extends Component {
     }
 }
 
-export default DatiCai;
+export default DatiCai
+

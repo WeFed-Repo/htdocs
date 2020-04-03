@@ -9,7 +9,19 @@ class DatiDomicilio extends Component {
     render() {
 
         return (
-            <DefaultCollapse label="AGGIUNGI INDIRIZZO DI DOMICILIO (SE DIVERSO DALLA RESIDENZA)" startsOpen={false} className="search-collapse">
+            <DefaultCollapse 
+            label="AGGIUNGI INDIRIZZO DI DOMICILIO (SE DIVERSO DALLA RESIDENZA)" 
+            startsOpen={false} 
+            className="search-collapse"
+            hasErrors={
+                CheckAccordionErrors(this.props.formstate.errors,
+                    [
+                        this.props.anagraficaIntestatario  + "tipoindirizzodomicilio",
+                        this.props.anagraficaIntestatario  + "indirizzodomicilio",
+                        this.props.anagraficaIntestatario  + "numdomicilio",
+                        this.props.anagraficaIntestatario  + "provinciadomicilio"
+                    ])}>
+             >
                 <section className="onboarding-block">
                     <p>Aggiungi un indirizzo se diverso da quello di residenza. A questo indirizzo verrà inviata la documentazione contrattuale, per tutti gli intestatari del conto.</p>
                     <Row>

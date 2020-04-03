@@ -9,7 +9,20 @@ class DatiCorrispondenza extends Component {
     render() {
 
         return (
-            <DefaultCollapse label="AGGIUNGI INDIRIZZO DI CORRISPONDENZA (SE DIVERSO DAI PRECEDENTI)" startsOpen={false} className="search-collapse">
+            <DefaultCollapse 
+            label="AGGIUNGI INDIRIZZO DI CORRISPONDENZA (SE DIVERSO DAI PRECEDENTI)" 
+            startsOpen={false} 
+            className="search-collapse"
+            hasErrors={
+                CheckAccordionErrors(this.props.formstate.errors,
+                    [
+                        this.props.anagraficaIntestatario  + "tipoindirizzocorrisp",
+                        this.props.anagraficaIntestatario  + "indirizzocorrisp",
+                        this.props.anagraficaIntestatario  + "numcorrisp",
+                        this.props.anagraficaIntestatario  + "provinciacorrisp"
+                    ])}
+                    >
+             
                                         <section className="onboarding-block">
                                             <p>Se preferisci ricevere la nostra corrispondenza a un indirizzo diverso dalla tua residenza, inseriscilo di seguito. A questo indirizzo invieremo, per tutti gli intestatari del conto, tutte le comunicazioni cartacee. </p>
                                             <Row>
@@ -18,7 +31,7 @@ class DatiCorrispondenza extends Component {
                                                         <Col xs="4">
                                                             {this.props.optionResidenza != [] && this.props.optionResidenza != undefined &&
                                                                 <Form.select
-                                                                    label="Indirizzo Corrispondenza"
+                                                                    label="Indirizzo Corrispondenza*"
                                                                     name={this.props.anagraficaIntestatario + "tipoindirizzocorrisp"}
                                                                     value={this.props.formstate[this.props.anagraficaIntestatario + "tipoindirizzocorrisp"]}
                                                                     error={this.props.formstate.errors[this.props.anagraficaIntestatario + "tipoindirizzocorrisp"]}

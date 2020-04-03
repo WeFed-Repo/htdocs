@@ -1,5 +1,6 @@
-export default function (form) {
+import validazioneIndirizzi from "./DatiPersonali/validazioneIndirizzi" 
 
+export default function (form) {
     // Inizializzazione oggetto errori
     let errors = {},
         obbligatorimsgVis = "Prendi visione del documento e seleziona",
@@ -92,50 +93,7 @@ export default function (form) {
         obbligatoriSel = form["field_numintestatari"] === "1" ? ["field_numintestatari"].concat(obbligatoriSel_int1) : ["field_numintestatari"].concat(obbligatoriSel_int1).concat(obbligatoriSel_int2);
 
 
-    //controllo sezione CAI - obbligatori solo se almeno un campo dell'accordion è compilato
-    let campiCai_int1 = [
-        form["field_anagraficablob_intestatari_0_tipoindirizzocai"],
-        form["field_anagraficablob_intestatari_0_indirizzocai"],
-        form["field_anagraficablob_intestatari_0_numcai"],
-        form["field_anagraficablob_intestatari_0_provinciacai"]
-    ],
-        campiCai_int2 = [
-            form["field_anagraficablob_intestatari_1_tipoindirizzocai"],
-            form["field_anagraficablob_intestatari_1_indirizzocai"],
-            form["field_anagraficablob_intestatari_1_numcai"],
-            form["field_anagraficablob_intestatari_1_provinciacai"]
-        ],
-        isObbCampiCai_int1 = false,
-        isObbCampiCai_int2 = false,
-        obbligatoriCai = [],
-        obbligatoriCaiSel = [];
-
-
-    campiCai_int1.some((el) => {
-        if (el != "") isObbCampiCai_int1 = true
-    })
-    campiCai_int2.some((el) => {
-        if (el != "") isObbCampiCai_int2 = true
-    })
-
-    if (form["field_numintestatari"] === "1" && isObbCampiCai_int1) {
-        obbligatoriCai = ["field_anagraficablob_intestatari_0_indirizzocai", "field_anagraficablob_intestatari_0_numcai"]
-        obbligatoriCaiSel = ["field_anagraficablob_intestatari_0_tipoindirizzocai", "field_anagraficablob_intestatari_0_provinciacai"];
-    }
-    else if (form["field_numintestatari"] !== "1") {
-        if (isObbCampiCai_int1 && !isObbCampiCai_int2) {
-            obbligatoriCai = ["field_anagraficablob_intestatari_0_indirizzocai", "field_anagraficablob_intestatari_0_numcai"]
-            obbligatoriCaiSel = ["field_anagraficablob_intestatari_0_tipoindirizzocai", "field_anagraficablob_intestatari_0_provinciacai"];
-        }
-        if (!isObbCampiCai_int1 && isObbCampiCai_int2) {
-            obbligatoriCai = ["field_anagraficablob_intestatari_1_indirizzocai", "field_anagraficablob_intestatari_1_numcai"]
-            obbligatoriCaiSel = ["field_anagraficablob_intestatari_1_tipoindirizzocai", "field_anagraficablob_intestatari_1_provinciacai"];
-        }
-        else if (isObbCampiCai_int1 && isObbCampiCai_int2) {
-            obbligatoriCai = ["field_anagraficablob_intestatari_0_indirizzocai", "field_anagraficablob_intestatari_0_numcai", "field_anagraficablob_intestatari_1_indirizzocai", "field_anagraficablob_intestatari_1_numcai"];
-            obbligatoriCaiSel = ["field_anagraficablob_intestatari_0_tipoindirizzocai", "field_anagraficablob_intestatari_0_provinciacai", "field_anagraficablob_intestatari_1_tipoindirizzocai", "field_anagraficablob_intestatari_1_provinciacai"];
-        }
-    }
+  //
 
 
 
@@ -154,12 +112,7 @@ export default function (form) {
         if (form[v] === "" || form[v] === "Seleziona") errors[v] = obbligatorimsgSel;
     });
 
-    obbligatoriCai.forEach((v, i) => {
-        if (form[v] === "") errors[v] = obbligatorimsg;
-    });
-    obbligatoriCaiSel.forEach((v, i) => {
-        if (form[v] === "") errors[v] = obbligatorimsgSel;
-    });
+    
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
@@ -192,11 +145,11 @@ export default function (form) {
             }
         }
     }
-
-
-
-
-    // Ripassa l'oggetto con tutti gli errori del form visualizzato
+   
+    
+    errors = Object.assign(errors,validazioneIndirizzi(form,"cai"), validazioneIndirizzi(form,"domicilio"),validazioneIndirizzi(form,"corrisp"));
+   // Ripassa l'oggetto con tutti gli errori del form visualizzato
+   
     return (errors);
 
 
