@@ -481,15 +481,7 @@ $(function(){
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
-
-                        /*
-                        fixedColumns: true,
-                        fixedNumber: 2,
-                        */
-                        pagination: true,
-                        pageSize: 20,
                         onPostBody: function(){
-
 
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
@@ -524,7 +516,7 @@ $(function(){
             </thead>
             <tbody>	
             <?php
-                for($x=0;$x<=90;$x++) {
+                for($x=0;$x<=10;$x++) {
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>

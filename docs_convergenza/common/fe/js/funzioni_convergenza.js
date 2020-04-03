@@ -3629,21 +3629,11 @@ var columnBsFixed = function(){
             tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
 
             tbbsTab.prepend(
-                $("<div>").addClass("fixed-columns").append(tbfix).css({
-                    "position":"absolute",
-                    "top": "left:0",
-                    "width": fixWidth + 1 + "px",
-                    "overflow":"hidden",
-                    "z-index": "1",
-                    "background": "#ffffff"
-                })
-                
+                $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
             );
         });
     });
 }
-
-
 
 /* GESTIONE SPINNER
     options.idInput = elemento da spinnare

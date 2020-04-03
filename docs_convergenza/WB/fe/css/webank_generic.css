@@ -2599,6 +2599,14 @@ div.fixed-table-scroll-outer {
 .bootstrap-table + .clearfix {
   margin-bottom: 20px;
 }
+.bootstrap-table .fixed-columns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: #ffffff;
+}
 .fixCol {
   padding: 10px 0 !important;
 }
@@ -13202,4 +13210,8 @@ body.modal-print > .modal-print-content {
   display: none;
 }
 /*** FINE - STAMPA MODALI ESTINZIONE CARTE ***/
+/* Risoluzione problemi paginazione */
+.fixed-table-pagination .dropdown-menu {
+  z-index: 0;
+}
 /*# sourceMappingURL=webank_generic.css.map */
