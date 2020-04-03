@@ -502,10 +502,11 @@ $(function(){
                             fixedColumns= 2;
 
 
+
                             // Clona l'intera tabella
                             var tbs = $("#tablePortafoglio");
                             var tbbsTab = tbs.parents(".bootstrap-table");
-                            tbbsTab.find("div.colonne-fisse").remove();
+                            tbbsTab.find("div.fixed-columns").remove();
 
                             // calcolo della larghezza delle colonne scelte
                             var fixWidth = 0;
@@ -514,20 +515,23 @@ $(function(){
                             }                            
 
                             var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort");
+
+                            // Regole per il controllo dei "sortable"
+                            tbfix.find('.sortable').closest('th').addClass('sortableTh');
+                            tbfix.find('.sortable.both').closest('th').removeClass('sortedTh');
+                            tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
+
                             tbbsTab.prepend(
-                                $("<div>").addClass("colonne-fisse").append(tbfix).css({
+                                $("<div>").addClass("fixed-columns").append(tbfix).css({
                                     "position":"absolute",
                                     "top": "left:0",
                                     "width": fixWidth + 1 + "px",
                                     "overflow":"hidden",
-                                    "z-index": "9",
+                                    "z-index": "1",
                                     "background": "#ffffff"
-
                                 })
                                 
                             );
-
-                            console.log("tabella-fixed-ricreata")
                             
                         }
                 });
