@@ -482,24 +482,53 @@ $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
 
+                        /*
                         fixedColumns: true,
                         fixedNumber: 2,
+                        */
                         pagination: true,
                         pageSize: 20,
-
                         onPostBody: function(){
+
+
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
                                     $("#layerConfronta").modal("show");
                                 });
-
                             
-                            // Attiva il blocco dei filtri
-                            
-
-                            console.log("appende tfoot")
-
                             attivaIconaOperativa("#tablePortafoglio");
+                            
+
+                            fixedColumns= 2;
+
+
+                            // Clona l'intera tabella
+                            var tbs = $("#tablePortafoglio");
+                            var tbbsTab = tbs.parents(".bootstrap-table");
+                            tbbsTab.find("div.colonne-fisse").remove();
+
+                            // calcolo della larghezza delle colonne scelte
+                            var fixWidth = 0;
+                            for(x=0;x<fixedColumns;x++) {
+                                fixWidth += tbs.find("th").eq(x).outerWidth()
+                            }                            
+
+                            var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort");
+                            tbbsTab.prepend(
+                                $("<div>").addClass("colonne-fisse").append(tbfix).css({
+                                    "position":"absolute",
+                                    "top": "left:0",
+                                    "width": fixWidth + 1 + "px",
+                                    "overflow":"hidden",
+                                    "z-index": "9",
+                                    "background": "#ffffff"
+
+                                })
+                                
+                            );
+
+                            console.log("tabella-fixed-ricreata")
+                            
                         }
                 });
 
