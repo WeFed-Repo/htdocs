@@ -63,7 +63,7 @@ $(function(){
 
                     <!-- Overlayer confronto mercati -->
                     <div class="modal fade" id="layerConfronta" tabindex="-1" role="dialog" aria-labelledby="layerConfrontaLabel">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
@@ -481,15 +481,24 @@ $(function(){
             $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
-                        /*
+
                         fixedColumns: true,
                         fixedNumber: 2,
-                        */
+                        pagination: true,
+                        pageSize: 20,
+
                         onPostBody: function(){
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
                                     $("#layerConfronta").modal("show");
                                 });
+
+                            
+                            // Attiva il blocco dei filtri
+                            
+
+                            console.log("appende tfoot")
+
                             attivaIconaOperativa("#tablePortafoglio");
                         }
                 });
@@ -502,9 +511,7 @@ $(function(){
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-                    <th class="left filter" data-sortable="true" id="filterTitolo">
-                        Titolo/Fondo
-                    </th>
+                    <th class="left filter" data-sortable="true" id="filterTitolo">Titolo/Fondo</th>
                     <th class="left">Mercato</th>
                     <th class="right">Q.t&agrave; in<br>portaf.</th>
                     <th class="right">Q.t&agrave;<br>disp.</th>
@@ -519,7 +526,7 @@ $(function(){
             </thead>
             <tbody>	
             <?php
-                for($x=0;$x<=6;$x++) {
+                for($x=0;$x<=90;$x++) {
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
@@ -553,7 +560,8 @@ $(function(){
             <tfoot>
                 <tr>
                     <td class="bgWhite brdWhite"></td>
-                    <td colspan="9"><strong> Totale portafoglio</strong></td>
+                    <td><strong> Totale portafoglio</strong></td>
+                    <td colspan="8"></td>
                     <td class="right">123.404,00</td>
                     <td class="right nega">-24,00<br>-0,1%</td>
                 </tr>
