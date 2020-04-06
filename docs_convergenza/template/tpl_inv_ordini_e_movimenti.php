@@ -15,6 +15,69 @@ function auto_input_select( $array ) {
     <?php } ?>
   <?php endforeach;
 }
+
+$selectStrumento = array(
+  'Titoli',
+  'Derivati'
+);
+
+$selectTipoOperazione = array(
+  'Tutte le operazioni',
+  'Acquisto',
+  'Vendita',
+  'Acquisto intraday',
+  'Vendita intraday',
+  'Acquisto overnight',
+  'Vendita overnight'
+);
+
+$selectStatoOrdine = array(
+  'Tutti',
+  'Inseriti',
+  'Eseguiti',
+  'Parzialmente eseguiti',
+  'Ineseguiti',
+  'Cancellati',
+  'Parzialmente cancellati',
+  'In cancellazione',
+);
+
+$selectMercato = array(
+  'Tutti i mercati',
+  'Azioni' => array(
+    'MTA',
+    'BIT GEM',
+    'AEX25',
+    'BEL20',
+    'FTSE100',
+    'IBEX35',
+    'NASDAQ',
+    'NYSE',
+    'PSI20',
+    'SBF',
+    'XETRA',
+    'Hi-MTF',
+    'EuroTLX',
+  ),
+  'SD Certificates' => array(
+    'SEDEX',
+    'ETF/ETC',
+    'ETFPlus',
+  ),
+  'Obbligazioni' => array(
+    'MOT',
+    'EuroTLX',
+    'Hi-MTF',
+    'EuroMOT',
+    'ExtraMOT',
+    'Best execution',
+    'Akros IS',
+  ),
+);
+
+$tipo_op_1 = array('Acquisto', 'Vendita');
+$tipo_op_2 = array('', 'intraday', 'overnight');
+
 ?>
 
 <h2>Ordini e movimenti</h2>
@@ -77,10 +140,6 @@ function auto_input_select( $array ) {
           <?php if($site == "webank") { ?>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <?php $selectStrumento = array(
-                'Titoli',
-                'Derivati'
-              ); ?>
               <label class="control-label">Strumento</label>
               <select class="form-control" id="selectStrumento">
                 <?php auto_input_select( $selectStrumento ) ?>
@@ -90,15 +149,6 @@ function auto_input_select( $array ) {
           <?php } ?>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <?php $selectTipoOperazione = array(
-                'Tutte le operazioni',
-                'Acquisto',
-                'Vendita',
-                'Acquisto intraday',
-                'Vendita intraday',
-                'Acquisto overnight',
-                'Vendita overnight'
-              ); ?>
               <label class="control-label">Tipi di operazione</label>
               <select class="form-control" id="selectTipoOperazione">
                 <?php auto_input_select( $selectTipoOperazione ) ?>
@@ -107,16 +157,6 @@ function auto_input_select( $array ) {
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <?php $selectStatoOrdine = array(
-                'Tutti',
-                'Inseriti',
-                'Eseguiti',
-                'Parzialmente eseguiti',
-                'Ineseguiti',
-                'Cancellati',
-                'Parzialmente cancellati',
-                'In cancellazione',
-              ); ?>
               <label class="control-label">Stato ordine</label>
               <select class="form-control" id="selectStatoOrdine">
                 <?php auto_input_select( $selectStatoOrdine ) ?>
@@ -125,38 +165,6 @@ function auto_input_select( $array ) {
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <?php $selectMercato = array(
-                'Tutti i mercati',
-                'Azioni' => array(
-                  'MTA',
-                  'BIT GEM',
-                  'AEX25',
-                  'BEL20',
-                  'FTSE100',
-                  'IBEX35',
-                  'NASDAQ',
-                  'NYSE',
-                  'PSI20',
-                  'SBF',
-                  'XETRA',
-                  'Hi-MTF',
-                  'EuroTLX',
-                ),
-                'SD Certificates' => array(
-                  'SEDEX',
-                  'ETF/ETC',
-                  'ETFPlus',
-                ),
-                'Obbligazioni' => array(
-                  'MOT',
-                  'EuroTLX',
-                  'Hi-MTF',
-                  'EuroMOT',
-                  'ExtraMOT',
-                  'Best execution',
-                  'Akros IS',
-                ),
-              ); ?>
               <label class="control-label">Mercato</label>
               <select class="form-control" id="selectMercato">
                 <?php auto_input_select( $selectMercato ) ?>
@@ -179,6 +187,70 @@ function auto_input_select( $array ) {
         </div>
 
         </div>
+
+
+        <!-- TABELLA -->
+        <!-- FUNZIONI PER FILTRI -->
+        <?php include("./parts/table_th_filter.php"); ?>
+        <!-- FINE FUNZIONI PER FILTRI -->
+        <script>
+            // Esempio di creazione della tabella di bootstrap
+            $(function(){
+                var tablePortafoglio = $('#tablePortafoglio');
+                tablePortafoglio.bootstrapTable({
+                        onPostBody: function(){
+
+                            // Funzioni da ripetere ad ogni refresh
+                            $(".table-btn-more").not("inited").click(function(){
+                                    $("#layerConfronta").modal("show");
+                                });
+
+                            attivaIconaOperativa("#tablePortafoglio");
+
+                        }
+                });
+
+                // Inizializza i filtri addizionali
+                initThFilter();
+            });
+        </script>
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+            <thead>
+                <tr>
+                    <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                    <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / ISIN</th>
+                    <th class="left">Tipo operazione</th>
+                    <th class="right">Q.t&agrave; immessa / eseguita</th>
+                    <th class="right">Prezzo immesso / eseguito</th>
+                    <th class="right">Data / Ora</th>
+                    <th class="left">Stato ordine</th>
+                    <th class="left">Mercato</th>
+                    <th class="right">N. ordine sintetico</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php for($x=0;$x<=10;$x++) { ?>
+              <tr>
+                  <td class="center">
+                    <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
+                      <i class="icon icon-2x icon-ico_azioni02A"></i>
+                    </a>
+                  </td>
+                  <td class="left"><a href="">Lorem ipsum <?php print (999990 + $x ) ?></a></td>
+                  <td class="right"><?=
+                    $tipo_op_1[array_rand($tipo_op_1)].' '.$tipo_op_2[array_rand($tipo_op_2)];
+                  ?></td>
+                  <td class="right"><?php print rand(0,1);?> <br /> <?php print rand(0,1);?></td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="right">20/01/2020</td>
+                  <td class="right"><?= $selectStatoOrdine[array_rand($selectStatoOrdine)] ?></td>
+                  <td class="right"><?= $selectMercato['Azioni'][array_rand($selectMercato['Azioni'])] ?></td>
+                  <td class="right">00000<?= $x+15 ?></td>
+              </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+
 
       </div>
     </div>
