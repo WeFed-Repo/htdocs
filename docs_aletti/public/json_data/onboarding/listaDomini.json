@@ -1,2296 +1,3905 @@
 {
-	"esito": {
-		"type": "OK",
-		"code": "200",
-		"description": null
-	},
-	"results": {
-		"QUALIFICA_VIA": [
-			{
-				"codice": "Via",
-				"descrizione": "Via"
-			},
-			{
-				"codice": "Viale",
-				"descrizione": "Viale"
-			},
-			{
-				"codice": "Corso",
-				"descrizione": "Corso"
-			},
-			{
-				"codice": "Piazza",
-				"descrizione": "Piazza"
-			},
-			{
-				"codice": "Piazzale",
-				"descrizione": "Piazzale"
-			},
-			{
-				"codice": "Strada",
-				"descrizione": "Strada"
-			},
-			{
-				"codice": "Stretto",
-				"descrizione": "Stretto"
-			},
-			{
-				"codice": "Contrada",
-				"descrizione": "Contrada"
-			},
-			{
-				"codice": "Vicolo",
-				"descrizione": "Vicolo"
-			},
-			{
-				"codice": "LocalitaGrave",
-				"descrizione": "Localit&agrave;"
-			},
-			{
-				"codice": "Largo",
-				"descrizione": "Largo"
-			},
-			{
-				"codice": "Vico",
-				"descrizione": "Vico"
-			},
-			{
-				"codice": "Altro",
-				"descrizione": "Altro"
-			}
-		],
-		"DOCUMENTI_IDENTITA": [
-			{
-				"codice": "01",
-				"descrizione": "Carta d'identità elettronica"
-			},
-			{
-				"codice": "12",
-				"descrizione": "Carta d'identità rinnovata"
-			},
-			{
-				"codice": "11",
-				"descrizione": "Carta d'identità cartacea"
-			},
-			{
-				"codice": "03",
-				"descrizione": "Passaporto"
-			},
-			{
-				"codice": "02",
-				"descrizione": "Patente elettronica"
-			},
-			{
-				"codice": "14",
-				"descrizione": "Patente rinnovata"
-			},
-			{
-				"codice": "13",
-				"descrizione": "Patente cartacea"
-			}
-		],
-		
-		"ADEVER": {
-			"naturaScopo": [
-				{
-					"id": "15",
-					"nome": "Affidamenti concessi"
-				},
-				{
-					"id": "22",
-					"nome": "Attivita di investimento"
-				},
-				{
-					"id": "10",
-					"nome": "Finanziamento"
-				},
-				{
-					"id": "18",
-					"nome": "Gestione fornitori"
-				},
-				{
-					"id": "12",
-					"nome": "Gestione necessita familiari correnti"
-				},
-				{
-					"id": "21",
-					"nome": "Gestione stipendi dei dipendenti"
-				},
-				{
-					"id": "14",
-					"nome": "Gestione su incassi e pagamenti aziendali - cc su basi attive"
-				},
-				{
-					"id": "17",
-					"nome": "Gestione tesorerie aziendali"
-				},
-				{
-					"id": "11",
-					"nome": "Investimento"
-				},
-				{
-					"id": "20",
-					"nome": "Regolamento transazioni da e per estero"
-				},
-				{
-					"id": "9",
-					"nome": "Risparmio"
-				},
-				{
-					"id": "13",
-					"nome": "Servizi vari"
-				},
-				{
-					"id": "19",
-					"nome": "Smobilizzo crediti commerciali estero"
-				},
-				{
-					"id": "16",
-					"nome": "Smobilizzo crediti commerciali italia"
-				}
-			],
-			"naturaScopoDeposito": [
-				{
-					"id": "15",
-					"nome": "Affidamenti concessi"
-				},
-				{
-					"id": "22",
-					"nome": "Attivita di investimento"
-				},
-				{
-					"id": "10",
-					"nome": "Finanziamento"
-				},
-				{
-					"id": "18",
-					"nome": "Gestione fornitori"
-				},
-				{
-					"id": "12",
-					"nome": "Gestione necessita familiari correnti"
-				},
-				{
-					"id": "21",
-					"nome": "Gestione stipendi dei dipendenti"
-				},
-				{
-					"id": "14",
-					"nome": "Gestione su incassi e pagamenti aziendali - cc su basi attive"
-				},
-				{
-					"id": "17",
-					"nome": "Gestione tesorerie aziendali"
-				},
-				{
-					"id": "11",
-					"nome": "Investimento"
-				},
-				{
-					"id": "20",
-					"nome": "Regolamento transazioni da e per estero"
-				},
-				{
-					"id": "9",
-					"nome": "Risparmio"
-				},
-				{
-					"id": "13",
-					"nome": "Servizi vari"
-				},
-				{
-					"id": "19",
-					"nome": "Smobilizzo crediti commerciali estero"
-				},
-				{
-					"id": "16",
-					"nome": "Smobilizzo crediti commerciali italia"
-				}
-			],
-			"professione": [
-				{
-					"id": "1",
-					"nome": "Imprenditore"
-				},
-				{
-					"id": "2",
-					"nome": "Lavoratore autonomo"
-				},
-				{
-					"id": "4",
-					"nome": "Lavoratore dipendente"
-				},
-				{
-					"id": "3",
-					"nome": "Libero professionista"
-				},
-				{
-					"id": "6",
-					"nome": "Non occupato"
-				},
-				{
-					"id": "5",
-					"nome": "Pensionato"
-				},
-				{
-					"id": "7",
-					"nome": "Soggetto apicale"
-				}
-			],
-			"taeSettore": [
-				{
-					"id": "771",
-					"nome": "Agenzie viaggio e intermediari dei trasporti"
-				},
-				{
-					"id": "660",
-					"nome": "Alberghi e pubblici esercizi"
-				},
-				{
-					"id": "14",
-					"nome": "Allevamento, caccia, silvicoltura e pesca"
-				},
-				{
-					"id": "999",
-					"nome": "Altra attivita'"
-				},
-				{
-					"id": "993",
-					"nome": "Altri agenti, mediatori e consulenti non ancora classificati (es. agenti sportivi)"
-				},
-				{
-					"id": "984",
-					"nome": "Altri servizi personali non altrove classificati (servizi delle pompe funebri, di cremazione, di agenzie matrim., ecc.)"
-				},
-				{
-					"id": "732",
-					"nome": "Autotrasportatori di contante, titoli e valori c/ terzi"
-				},
-				{
-					"id": "994",
-					"nome": "Badante"
-				},
-				{
-					"id": "829",
-					"nome": "Bancari"
-				},
-				{
-					"id": "463",
-					"nome": "Carpenteria e costruzioni in legno, lavori in legno per edilizia"
-				},
-				{
-					"id": "10",
-					"nome": "Coltivazione prodotti agricoli e olio"
-				},
-				{
-					"id": "619",
-					"nome": "Commercio altri prodotti non alimentari"
-				},
-				{
-					"id": "649",
-					"nome": "Commercio antiquariato e oggetti d'arte"
-				},
-				{
-					"id": "654",
-					"nome": "Commercio armi e munizioni"
-				},
-				{
-					"id": "600",
-					"nome": "Commercio combustibili, minerali, prodotti chimici e carburanti"
-				},
-				{
-					"id": "613",
-					"nome": "Commercio legname e materiale da costruzione"
-				},
-				{
-					"id": "653",
-					"nome": "Commercio libri, giornali, cancelleria"
-				},
-				{
-					"id": "614",
-					"nome": "Commercio macchine, attrezzature, veicoli"
-				},
-				{
-					"id": "620",
-					"nome": "Commercio materiale di recupero"
-				},
-				{
-					"id": "611",
-					"nome": "Commercio materie prime agricole, animali vivi"
-				},
-				{
-					"id": "615",
-					"nome": "Commercio mobili, elettrodomestici, tv, casalinghi e ferramenta"
-				},
-				{
-					"id": "621",
-					"nome": "Commercio orologi, gioielleria, argenteria"
-				},
-				{
-					"id": "617",
-					"nome": "Commercio prodotti alimentari, bevande, tabacco"
-				},
-				{
-					"id": "618",
-					"nome": "Commercio prodotti farmaceutici, cosmetici, profumi"
-				},
-				{
-					"id": "616",
-					"nome": "Commercio prodotti tessili, abbigliamento, calzature"
-				},
-				{
-					"id": "500",
-					"nome": "Edilizia, opere pubbliche e demolizione immobili"
-				},
-				{
-					"id": "5",
-					"nome": "Forze dell ordine/forze armate"
-				},
-				{
-					"id": "493",
-					"nome": "Prodotti cinematografia e fotografia"
-				},
-				{
-					"id": "473",
-					"nome": "Prodotti stampa ed editoria"
-				},
-				{
-					"id": "430",
-					"nome": "Prodotti tessili, pelle, pellicce, abbigliamento"
-				},
-				{
-					"id": "460",
-					"nome": "Produzione biancheria per la casa e arredamento"
-				},
-				{
-					"id": "450",
-					"nome": "Produzione calzature"
-				},
-				{
-					"id": "410",
-					"nome": "Produzione di prodotti alimentari e prodotti a base di tabacco"
-				},
-				{
-					"id": "494",
-					"nome": "Produzione giocattoli e articoli sportivi"
-				},
-				{
-					"id": "491",
-					"nome": "Produzione gioielli e oreficeria"
-				},
-				{
-					"id": "490",
-					"nome": "Produzione legno, sughero"
-				},
-				{
-					"id": "320",
-					"nome": "Produzione macchine agricole e industriali"
-				},
-				{
-					"id": "330",
-					"nome": "Produzione macchine per ufficio, elaboratori, strumenti di precisione, ottica, orologi"
-				},
-				{
-					"id": "340",
-					"nome": "Produzione materiale elettrico"
-				},
-				{
-					"id": "230",
-					"nome": "Produzione materiali da costruzione, vetro, ceramica, produzione, estrazione e ricerca di sali"
-				},
-				{
-					"id": "210",
-					"nome": "Produzione metalli"
-				},
-				{
-					"id": "350",
-					"nome": "Produzione mezzi di trasporto"
-				},
-				{
-					"id": "467",
-					"nome": "Produzione mobili in legno e giunco, materassi"
-				},
-				{
-					"id": "495",
-					"nome": "Produzione penne, timbri e prodotti di cancelleria"
-				},
-				{
-					"id": "250",
-					"nome": "Produzione prodotti chimici, farmaceutici, vernici, fibre artificiali e sintetiche"
-				},
-				{
-					"id": "110",
-					"nome": "Produzione prodotti energetici (carbone, petrolio, energia elettrica, gas, raccolta, depurazione e distribuzione acqua)"
-				},
-				{
-					"id": "480",
-					"nome": "Produzione prodotti in gomma, plastica e pneumatici"
-				},
-				{
-					"id": "492",
-					"nome": "Produzione strumenti musicali"
-				},
-				{
-					"id": "440",
-					"nome": "Produzione tappeti, tappezzerie"
-				},
-				{
-					"id": "12",
-					"nome": "Produzione vino"
-				},
-				{
-					"id": "470",
-					"nome": "Produzione, trasformazione carta e cartone"
-				},
-				{
-					"id": "832",
-					"nome": "Professioni amministrativo/contabili (commercialisti, ragionieri, periti commerciali, amm.condominio, revisori, ecc)"
-				},
-				{
-					"id": "990",
-					"nome": "Professioni giuridico/legali (avvocati, notai)"
-				},
-				{
-					"id": "992",
-					"nome": "Professioni in discipline religiose e teologiche"
-				},
-				{
-					"id": "971",
-					"nome": "Professioni sportive e artistiche"
-				},
-				{
-					"id": "991",
-					"nome": "Professioni tecnico/scientifiche (architetti, ingegneri, chimici, biologi, agronomi, periti, geometri, ecc.)"
-				},
-				{
-					"id": "1",
-					"nome": "Pubblica amministrazione e magistrati"
-				},
-				{
-					"id": "671",
-					"nome": "Riparazione auto, moto e biciclette"
-				},
-				{
-					"id": "672",
-					"nome": "Riparazione calzature, articoli cuoio, elettrodomestici"
-				},
-				{
-					"id": "972",
-					"nome": "Sale corse, case da gioco"
-				},
-				{
-					"id": "760",
-					"nome": "Servizi connessi ai trasporti (gestione porti, autostrade, stazioni di servizio, controllo e pesatura merci)"
-				},
-				{
-					"id": "630",
-					"nome": "Servizi degli intermediari del commercio (agenti, rappresentanti e agenzie di mediazione del commercio)"
-				},
-				{
-					"id": "790",
-					"nome": "Servizi delle comunicazioni e professioni linguistiche, letterarie  (giornalisti, scrittori, ecc.)"
-				},
-				{
-					"id": "834",
-					"nome": "Servizi di affari immobiliari (agenti immobiliari)"
-				},
-				{
-					"id": "831",
-					"nome": "Servizi di consulenza tributaria, del lavoro, direzionale, organizzativa, tecnica, ecc."
-				},
-				{
-					"id": "773",
-					"nome": "Servizi di custodia e deposito"
-				},
-				{
-					"id": "731",
-					"nome": "Servizi di custodia valori"
-				},
-				{
-					"id": "981",
-					"nome": "Servizi di lavanderia e tintoria"
-				},
-				{
-					"id": "840",
-					"nome": "Servizi di noleggio e locazione"
-				},
-				{
-					"id": "833",
-					"nome": "Servizi di pubblicita"
-				},
-				{
-					"id": "940",
-					"nome": "Servizi di ricerca e sviluppo"
-				},
-				{
-					"id": "920",
-					"nome": "Servizi disinfezione, pulizia e nettezza urbana"
-				},
-				{
-					"id": "710",
-					"nome": "Servizi ferroviari, tram, metro, autobus di linea"
-				},
-				{
-					"id": "830",
-					"nome": "Servizi finanziari e assicurativi (consul. finanz. e assic., prom. finanz., agenti finanz., broker, mediat. cred. ecc.)"
-				},
-				{
-					"id": "930",
-					"nome": "Servizi insegnamento"
-				},
-				{
-					"id": "960",
-					"nome": "Servizi istituzioni sociali, delle associazioni professionali e delle organizzazioni economiche e sindacali"
-				},
-				{
-					"id": "982",
-					"nome": "Servizi parrucchieri barbieri e istituti di bellezza"
-				},
-				{
-					"id": "724",
-					"nome": "Servizi per oleodotto e gasdotto"
-				},
-				{
-					"id": "970",
-					"nome": "Servizi ricreativi e culturali(discoteche, circhi, luna park, ecc.)"
-				},
-				{
-					"id": "950",
-					"nome": "Servizi sanitari destinabili alla vendita"
-				},
-				{
-					"id": "983",
-					"nome": "Servizi studi fotografici"
-				},
-				{
-					"id": "722",
-					"nome": "Servizi trasporti di persone e merci"
-				},
-				{
-					"id": "740",
-					"nome": "Servizi trasporti marittimi, cabotaggio, aerei"
-				}
-			],
-			"fasciaReddito": [
-				{
-					"id": "2",
-					"nome": "Da 10.001  a 25.000"
-				},
-				{
-					"id": "3",
-					"nome": "Da 25.001  a 40.000"
-				},
-				{
-					"id": "4",
-					"nome": "Da 40.001  a 75.000"
-				},
-				{
-					"id": "6",
-					"nome": "Da 500.001  a 2.500.000"
-				},
-				{
-					"id": "5",
-					"nome": "Da 75.001  a 500.000"
-				},
-				{
-					"id": "1",
-					"nome": "Fino a 10.000"
-				},
-				{
-					"id": "7",
-					"nome": "Oltre 2.500.000"
-				}
-			],
-			"fasciaPatrimonio": [
-				{
-					"id": "5",
-					"nome": "Da 3.000.001  a 10.000.000"
-				},
-				{
-					"id": "3",
-					"nome": "Da 300.001  a 1.000.000"
-				},
-				{
-					"id": "2",
-					"nome": "Da 500.001  a 2.500.000"
-				},
-				{
-					"id": "1",
-					"nome": "Fino a 100.000"
-				},
-				{
-					"id": "6",
-					"nome": "Oltre 10.000.000"
-				},
-				{
-					"id": "4",
-					"nome": "Privo di patrimonio/altro"
-				}
-			],
-			"origineReddito": [
-				{
-					"id": "2",
-					"nome": "Lavoro autonomo"
-				},
-				{
-					"id": "1",
-					"nome": "Lavoro dipendente"
-				},
-				{
-					"id": "6",
-					"nome": "Pensione"
-				},
-				{
-					"id": "5",
-					"nome": "Redditi finanziari"
-				},
-				{
-					"id": "4",
-					"nome": "Rendite fondiarie"
-				},
-				{
-					"id": "3",
-					"nome": "Rendite immobiliari"
-				}
-			],
-			"origineFondi": [
-				{
-					"id": "7",
-					"nome": "Altro/redditi diversi (plusvalenze, premi, lotteri"
-				},
-				{
-					"id": "6",
-					"nome": "Lascito\\eredita'\\donazione"
-				},
-				{
-					"id": "5",
-					"nome": "Redditi d'impresa"
-				},
-				{
-					"id": "1",
-					"nome": "Redditi di lavoro autonomo"
-				},
-				{
-					"id": "2",
-					"nome": "Redditi di lavoro dipendente"
-				},
-				{
-					"id": "4",
-					"nome": "Redditi finanziari"
-				},
-				{
-					"id": "3",
-					"nome": "Rendite fondiarie"
-				}
-			],
-			"nazionalita": [
-				{
-					"id": "238",
-					"nome": "ABU DHABI"
-				},
-				{
-					"id": "2",
-					"nome": "AFGHANISTAN"
-				},
-				{
-					"id": "206",
-					"nome": "AFRICA DEL SUD OVEST - NAMIBIA"
-				},
-				{
-					"id": "246",
-					"nome": "AFRICA SPAGNOLA"
-				},
-				{
-					"id": "239",
-					"nome": "AJMAN"
-				},
-				{
-					"id": "292",
-					"nome": "ALAND ISOLE"
-				},
-				{
-					"id": "87",
-					"nome": "ALBANIA"
-				},
-				{
-					"id": "3",
-					"nome": "ALGERIA"
-				},
-				{
-					"id": "148",
-					"nome": "AMERICAN SAMOA"
-				},
-				{
-					"id": "4",
-					"nome": "ANDORRA"
-				},
-				{
-					"id": "133",
-					"nome": "ANGOLA"
-				},
-				{
-					"id": "209",
-					"nome": "ANGUILLA"
-				},
-				{
-					"id": "197",
-					"nome": "ANTIGUA E BARBUDA"
-				},
-				{
-					"id": "5",
-					"nome": "ARABIA SAUDITA"
-				},
-				{
-					"id": "6",
-					"nome": "ARGENTINA"
-				},
-				{
-					"id": "266",
-					"nome": "ARMENIA"
-				},
-				{
-					"id": "212",
-					"nome": "ARUBA"
-				},
-				{
-					"id": "227",
-					"nome": "ASCENSION"
-				},
-				{
-					"id": "7",
-					"nome": "AUSTRALIA"
-				},
-				{
-					"id": "8",
-					"nome": "AUSTRIA"
-				},
-				{
-					"id": "268",
-					"nome": "AZERBAIGIAN"
-				},
-				{
-					"id": "234",
-					"nome": "AZZORRE ISOLE"
-				},
-				{
-					"id": "160",
-					"nome": "BAHAMA"
-				},
-				{
-					"id": "169",
-					"nome": "BAHREIN"
-				},
-				{
-					"id": "130",
-					"nome": "BANGLADESH"
-				},
-				{
-					"id": "118",
-					"nome": "BARBADOS"
-				},
-				{
-					"id": "9",
-					"nome": "BELGIO"
-				},
-				{
-					"id": "198",
-					"nome": "BELIZE"
-				},
-				{
-					"id": "158",
-					"nome": "BENIN"
-				},
-				{
-					"id": "207",
-					"nome": "BERMUDA"
-				},
-				{
-					"id": "97",
-					"nome": "BHUTAN"
-				},
-				{
-					"id": "264",
-					"nome": "BIELORUSSIA"
-				},
-				{
-					"id": "10",
-					"nome": "BOLIVIA"
-				},
-				{
-					"id": "295",
-					"nome": "BONAIRE SAINT EUSTATIUS AND SABA"
-				},
-				{
-					"id": "274",
-					"nome": "BOSNIA ERZEGOVINA"
-				},
-				{
-					"id": "98",
-					"nome": "BOTSWANA"
-				},
-				{
-					"id": "11",
-					"nome": "BRASILE"
-				},
-				{
-					"id": "125",
-					"nome": "BRUNEI DARUSSALAM"
-				},
-				{
-					"id": "12",
-					"nome": "BULGARIA"
-				},
-				{
-					"id": "142",
-					"nome": "BURKINA FASO"
-				},
-				{
-					"id": "25",
-					"nome": "BURUNDI"
-				},
-				{
-					"id": "135",
-					"nome": "CAMBOGIA (CAMPUCEA)"
-				},
-				{
-					"id": "119",
-					"nome": "CAMERUN"
-				},
-				{
-					"id": "139",
-					"nome": "CAMPIONE D'ITALIA"
-				},
-				{
-					"id": "13",
-					"nome": "CANADA"
-				},
-				{
-					"id": "211",
-					"nome": "CAYMAN ISOLE"
-				},
-				{
-					"id": "230",
-					"nome": "CHAFARINAS"
-				},
-				{
-					"id": "144",
-					"nome": "CIAD"
-				},
-				{
-					"id": "15",
-					"nome": "CILE"
-				},
-				{
-					"id": "101",
-					"nome": "CIPRO"
-				},
-				{
-					"id": "93",
-					"nome": "CITTA DEL VATICANO"
-				},
-				{
-					"id": "223",
-					"nome": "CLIPPERTON"
-				},
-				{
-					"id": "17",
-					"nome": "COLOMBIA"
-				},
-				{
-					"id": "176",
-					"nome": "COMORE"
-				},
-				{
-					"id": "18",
-					"nome": "CONGO REPUBBLICA DEMOCRATICA"
-				},
-				{
-					"id": "145",
-					"nome": "CONGO REPUBBLICA POPOLARE"
-				},
-				{
-					"id": "74",
-					"nome": "COREA DEL NORD"
-				},
-				{
-					"id": "84",
-					"nome": "COREA DEL SUD"
-				},
-				{
-					"id": "146",
-					"nome": "COSTA D'AVORIO"
-				},
-				{
-					"id": "19",
-					"nome": "COSTARICA"
-				},
-				{
-					"id": "261",
-					"nome": "CROAZIA"
-				},
-				{
-					"id": "20",
-					"nome": "CUBA"
-				},
-				{
-					"id": "296",
-					"nome": "CURACAO"
-				},
-				{
-					"id": "21",
-					"nome": "DANIMARCA"
-				},
-				{
-					"id": "192",
-					"nome": "DOMINICA"
-				},
-				{
-					"id": "240",
-					"nome": "DUBAI"
-				},
-				{
-					"id": "24",
-					"nome": "ECUADOR"
-				},
-				{
-					"id": "23",
-					"nome": "EGITTO"
-				},
-				{
-					"id": "64",
-					"nome": "EL SALVADOR"
-				},
-				{
-					"id": "277",
-					"nome": "ERITREA"
-				},
-				{
-					"id": "257",
-					"nome": "ESTONIA"
-				},
-				{
-					"id": "26",
-					"nome": "ETIOPIA"
-				},
-				{
-					"id": "190",
-					"nome": "FALKLAND"
-				},
-				{
-					"id": "27",
-					"nome": "FILIPPINE"
-				},
-				{
-					"id": "28",
-					"nome": "FINLANDIA"
-				},
-				{
-					"id": "29",
-					"nome": "FRANCIA"
-				},
-				{
-					"id": "241",
-					"nome": "FUIJAYRAH"
-				},
-				{
-					"id": "157",
-					"nome": "GABON"
-				},
-				{
-					"id": "164",
-					"nome": "GAMBIA"
-				},
-				{
-					"id": "267",
-					"nome": "GEORGIA"
-				},
-				{
-					"id": "112",
-					"nome": "GHANA"
-				},
-				{
-					"id": "82",
-					"nome": "GIAMAICA"
-				},
-				{
-					"id": "88",
-					"nome": "GIAPPONE"
-				},
-				{
-					"id": "102",
-					"nome": "GIBILTERRA"
-				},
-				{
-					"id": "113",
-					"nome": "GIBUTI"
-				},
-				{
-					"id": "122",
-					"nome": "GIORDANIA"
-				},
-				{
-					"id": "228",
-					"nome": "GOUGH"
-				},
-				{
-					"id": "32",
-					"nome": "GRECIA"
-				},
-				{
-					"id": "156",
-					"nome": "GRENADA"
-				},
-				{
-					"id": "200",
-					"nome": "GROENLANDIA"
-				},
-				{
-					"id": "214",
-					"nome": "GUADALUPA"
-				},
-				{
-					"id": "154",
-					"nome": "GUAM"
-				},
-				{
-					"id": "33",
-					"nome": "GUATEMALA"
-				},
-				{
-					"id": "123",
-					"nome": "GUAYANA FRANCESE"
-				},
-				{
-					"id": "201",
-					"nome": "GUERNSEY C.I."
-				},
-				{
-					"id": "137",
-					"nome": "GUINEA"
-				},
-				{
-					"id": "185",
-					"nome": "GUINEA BISSAU"
-				},
-				{
-					"id": "167",
-					"nome": "GUINEA EQUATORIALE"
-				},
-				{
-					"id": "159",
-					"nome": "GUYANA"
-				},
-				{
-					"id": "34",
-					"nome": "HAITI"
-				},
-				{
-					"id": "284",
-					"nome": "HEARD E MCDONALD ISOLE"
-				},
-				{
-					"id": "35",
-					"nome": "HONDURAS"
-				},
-				{
-					"id": "103",
-					"nome": "HONG KONG"
-				},
-				{
-					"id": "114",
-					"nome": "INDIA"
-				},
-				{
-					"id": "129",
-					"nome": "INDONESIA"
-				},
-				{
-					"id": "39",
-					"nome": "IRAN"
-				},
-				{
-					"id": "38",
-					"nome": "IRAQ"
-				},
-				{
-					"id": "40",
-					"nome": "IRLANDA"
-				},
-				{
-					"id": "41",
-					"nome": "ISLANDA"
-				},
-				{
-					"id": "203",
-					"nome": "ISOLA DI MAN"
-				},
-				{
-					"id": "100",
-					"nome": "ISOLE CANARIE"
-				},
-				{
-					"id": "256",
-					"nome": "ISOLE CAROLINE"
-				},
-				{
-					"id": "255",
-					"nome": "ISOLE CHAGOS"
-				},
-				{
-					"id": "237",
-					"nome": "ISOLE COOK"
-				},
-				{
-					"id": "188",
-					"nome": "ISOLE DEL CAPO VERDE"
-				},
-				{
-					"id": "204",
-					"nome": "ISOLE FAEROER"
-				},
-				{
-					"id": "161",
-					"nome": "ISOLE FIGI"
-				},
-				{
-					"id": "217",
-					"nome": "ISOLE MARSHALL"
-				},
-				{
-					"id": "249",
-					"nome": "ISOLE VERGINI BRITANNICHE"
-				},
-				{
-					"id": "178",
-					"nome": "ISOLE WAKE"
-				},
-				{
-					"id": "182",
-					"nome": "ISRAELE"
-				},
-				{
-					"id": "86",
-					"nome": "ITALIA"
-				},
-				{
-					"id": "202",
-					"nome": "JERSEY"
-				},
-				{
-					"id": "269",
-					"nome": "KAZAKISTAN"
-				},
-				{
-					"id": "116",
-					"nome": "KENYA"
-				},
-				{
-					"id": "270",
-					"nome": "KIRGHIZISTAN"
-				},
-				{
-					"id": "194",
-					"nome": "KIRIBATI"
-				},
-				{
-					"id": "126",
-					"nome": "KUWAIT"
-				},
-				{
-					"id": "136",
-					"nome": "LAOS"
-				},
-				{
-					"id": "89",
-					"nome": "LESOTHO"
-				},
-				{
-					"id": "258",
-					"nome": "LETTONIA"
-				},
-				{
-					"id": "95",
-					"nome": "LIBANO"
-				},
-				{
-					"id": "44",
-					"nome": "LIBERIA"
-				},
-				{
-					"id": "45",
-					"nome": "LIBIA"
-				},
-				{
-					"id": "90",
-					"nome": "LIECHTENSTEIN"
-				},
-				{
-					"id": "259",
-					"nome": "LITUANIA"
-				},
-				{
-					"id": "92",
-					"nome": "LUSSEMBURGO"
-				},
-				{
-					"id": "59",
-					"nome": "MACAO"
-				},
-				{
-					"id": "278",
-					"nome": "MACEDONIA"
-				},
-				{
-					"id": "104",
-					"nome": "MADAGASCAR"
-				},
-				{
-					"id": "235",
-					"nome": "MADEIRA"
-				},
-				{
-					"id": "56",
-					"nome": "MALAWI"
-				},
-				{
-					"id": "106",
-					"nome": "MALAYSIA"
-				},
-				{
-					"id": "127",
-					"nome": "MALDIVE"
-				},
-				{
-					"id": "149",
-					"nome": "MALI"
-				},
-				{
-					"id": "105",
-					"nome": "MALTA"
-				},
-				{
-					"id": "219",
-					"nome": "MARIANNE (ISOLE)"
-				},
-				{
-					"id": "107",
-					"nome": "MAROCCO"
-				},
-				{
-					"id": "213",
-					"nome": "MARTINICA"
-				},
-				{
-					"id": "141",
-					"nome": "MAURITANIA"
-				},
-				{
-					"id": "128",
-					"nome": "MAURIZIO"
-				},
-				{
-					"id": "226",
-					"nome": "MAYOTTE"
-				},
-				{
-					"id": "231",
-					"nome": "MELILLA"
-				},
-				{
-					"id": "46",
-					"nome": "MESSICO"
-				},
-				{
-					"id": "215",
-					"nome": "MICRONESIA"
-				},
-				{
-					"id": "177",
-					"nome": "MIDWAY ISOLE"
-				},
-				{
-					"id": "265",
-					"nome": "MOLDAVIA"
-				},
-				{
-					"id": "91",
-					"nome": "MONACO"
-				},
-				{
-					"id": "110",
-					"nome": "MONGOLIA"
-				},
-				{
-					"id": "290",
-					"nome": "MONTENEGRO"
-				},
-				{
-					"id": "208",
-					"nome": "MONTSERRAT"
-				},
-				{
-					"id": "134",
-					"nome": "MOZAMBICO"
-				},
-				{
-					"id": "83",
-					"nome": "MYANMAR"
-				},
-				{
-					"id": "109",
-					"nome": "NAURU"
-				},
-				{
-					"id": "115",
-					"nome": "NEPAL"
-				},
-				{
-					"id": "47",
-					"nome": "NICARAGUA"
-				},
-				{
-					"id": "150",
-					"nome": "NIGER"
-				},
-				{
-					"id": "117",
-					"nome": "NIGERIA"
-				},
-				{
-					"id": "205",
-					"nome": "NIUE - SAVAGE"
-				},
-				{
-					"id": "285",
-					"nome": "NORFOLK ISOLE"
-				},
-				{
-					"id": "48",
-					"nome": "NORVEGIA"
-				},
-				{
-					"id": "253",
-					"nome": "NUOVA CALEDONIA"
-				},
-				{
-					"id": "49",
-					"nome": "NUOVA ZELANDA"
-				},
-				{
-					"id": "175",
-					"nome": "OCEANIA BRITANNICA"
-				},
-				{
-					"id": "252",
-					"nome": "OCEANIA DEGLI STATI UNITI"
-				},
-				{
-					"id": "163",
-					"nome": "OMAN"
-				},
-				{
-					"id": "50",
-					"nome": "PAESI BASSI O OLANDA"
-				},
-				{
-					"id": "36",
-					"nome": "PAKISTAN"
-				},
-				{
-					"id": "279",
-					"nome": "PALESTINA, TERRITORI AUTONOMI"
-				},
-				{
-					"id": "51",
-					"nome": "PANAMA"
-				},
-				{
-					"id": "186",
-					"nome": "PAPUA E NUOVA GUINEA"
-				},
-				{
-					"id": "52",
-					"nome": "PARAGUAY"
-				},
-				{
-					"id": "232",
-					"nome": "PENON DE ALHUCEMAS"
-				},
-				{
-					"id": "233",
-					"nome": "PENON DE VELEZ DE LA GOMERA"
-				},
-				{
-					"id": "53",
-					"nome": "PERU'"
-				},
-				{
-					"id": "225",
-					"nome": "POLINESIA FRANCESE"
-				},
-				{
-					"id": "54",
-					"nome": "POLONIA"
-				},
-				{
-					"id": "55",
-					"nome": "PORTOGALLO"
-				},
-				{
-					"id": "220",
-					"nome": "PORTORICO"
-				},
-				{
-					"id": "168",
-					"nome": "QATAR"
-				},
-				{
-					"id": "242",
-					"nome": "RAS EL KHAIMAN"
-				},
-				{
-					"id": "31",
-					"nome": "REGNO UNITO"
-				},
-				{
-					"id": "22",
-					"nome": "REP. CINA NAZ. (TAIWAN)"
-				},
-				{
-					"id": "275",
-					"nome": "REPUBBLICA CECA"
-				},
-				{
-					"id": "143",
-					"nome": "REPUBBLICA CENTRAFRICANA"
-				},
-				{
-					"id": "291",
-					"nome": "REPUBBLICA DEL KOSOVO"
-				},
-				{
-					"id": "216",
-					"nome": "REPUBBLICA DI PALAU"
-				},
-				{
-					"id": "37",
-					"nome": "REPUBBLICA DI SAN MARINO"
-				},
-				{
-					"id": "63",
-					"nome": "REPUBBLICA DOMINICANA"
-				},
-				{
-					"id": "94",
-					"nome": "REPUBBLICA FED.DI GERMANIA"
-				},
-				{
-					"id": "16",
-					"nome": "REPUBBLICA POPOLARE CINESE"
-				},
-				{
-					"id": "78",
-					"nome": "REPUBBLICA SUDAFRICANA"
-				},
-				{
-					"id": "247",
-					"nome": "REUNION"
-				},
-				{
-					"id": "61",
-					"nome": "ROMANIA"
-				},
-				{
-					"id": "151",
-					"nome": "RUANDA"
-				},
-				{
-					"id": "262",
-					"nome": "RUSSIA"
-				},
-				{
-					"id": "254",
-					"nome": "S.ELENA"
-				},
-				{
-					"id": "166",
-					"nome": "SAHARA OCCIDENTALE"
-				},
-				{
-					"id": "293",
-					"nome": "SAINT BARTHELEMY"
-				},
-				{
-					"id": "199",
-					"nome": "SAINT LUCIA"
-				},
-				{
-					"id": "191",
-					"nome": "SALOMONE"
-				},
-				{
-					"id": "131",
-					"nome": "SAMOA OCCIDENTALE"
-				},
-				{
-					"id": "187",
-					"nome": "SAO TOME' E PRINCIPE"
-				},
-				{
-					"id": "189",
-					"nome": "SEICELLE"
-				},
-				{
-					"id": "152",
-					"nome": "SENEGAL"
-				},
-				{
-					"id": "289",
-					"nome": "SERBIA"
-				},
-				{
-					"id": "243",
-					"nome": "SHARJAH"
-				},
-				{
-					"id": "153",
-					"nome": "SIERRA LEONE"
-				},
-				{
-					"id": "147",
-					"nome": "SINGAPORE"
-				},
-				{
-					"id": "294",
-					"nome": "SINT MAARTEN (DUTCH PART)"
-				},
-				{
-					"id": "65",
-					"nome": "SIRIA"
-				},
-				{
-					"id": "276",
-					"nome": "SLOVACCHIA"
-				},
-				{
-					"id": "260",
-					"nome": "SLOVENIA"
-				},
-				{
-					"id": "66",
-					"nome": "SOMALIA"
-				},
-				{
-					"id": "67",
-					"nome": "SPAGNA"
-				},
-				{
-					"id": "85",
-					"nome": "SRI LANKA"
-				},
-				{
-					"id": "195",
-					"nome": "ST. KITTS E NEVIS"
-				},
-				{
-					"id": "222",
-					"nome": "ST. MARTIN SETTENTRIONALE"
-				},
-				{
-					"id": "248",
-					"nome": "ST. PIERRE E MIQUELON"
-				},
-				{
-					"id": "69",
-					"nome": "STATI UNITI D'AMERICA"
-				},
-				{
-					"id": "70",
-					"nome": "SUDAN"
-				},
-				{
-					"id": "124",
-					"nome": "SURINAME"
-				},
-				{
-					"id": "286",
-					"nome": "SVALBARD E JAN MAYEN ISOLE"
-				},
-				{
-					"id": "68",
-					"nome": "SVEZIA"
-				},
-				{
-					"id": "71",
-					"nome": "SVIZZERA"
-				},
-				{
-					"id": "138",
-					"nome": "SWAZILAND - NGWANE"
-				},
-				{
-					"id": "272",
-					"nome": "TAGIKISTAN"
-				},
-				{
-					"id": "57",
-					"nome": "TANZANIA"
-				},
-				{
-					"id": "245",
-					"nome": "TERRIT.BRIT.OCC."
-				},
-				{
-					"id": "183",
-					"nome": "TERRITORI FRANCESI DEL SUD"
-				},
-				{
-					"id": "180",
-					"nome": "TERRITORIO ANTARTICO BRITANNICO"
-				},
-				{
-					"id": "72",
-					"nome": "THAILANDIA"
-				},
-				{
-					"id": "287",
-					"nome": "TIMOR"
-				},
-				{
-					"id": "155",
-					"nome": "TOGO"
-				},
-				{
-					"id": "236",
-					"nome": "TOKELAU"
-				},
-				{
-					"id": "162",
-					"nome": "TONGA"
-				},
-				{
-					"id": "120",
-					"nome": "TRINIDAD E TOBAGO"
-				},
-				{
-					"id": "229",
-					"nome": "TRISTAN DE CUNHA"
-				},
-				{
-					"id": "75",
-					"nome": "TUNISIA"
-				},
-				{
-					"id": "76",
-					"nome": "TURCHIA"
-				},
-				{
-					"id": "273",
-					"nome": "TURKMENISTAN"
-				},
-				{
-					"id": "210",
-					"nome": "TURKS E CAICOS"
-				},
-				{
-					"id": "193",
-					"nome": "TUVALU"
-				},
-				{
-					"id": "263",
-					"nome": "UCRAINA"
-				},
-				{
-					"id": "132",
-					"nome": "UGANDA"
-				},
-				{
-					"id": "244",
-					"nome": "UMM AL QAIWAIN"
-				},
-				{
-					"id": "77",
-					"nome": "UNGHERIA"
-				},
-				{
-					"id": "80",
-					"nome": "URUGUAY"
-				},
-				{
-					"id": "271",
-					"nome": "UZBEKISTAN"
-				},
-				{
-					"id": "121",
-					"nome": "VANUATU"
-				},
-				{
-					"id": "81",
-					"nome": "VENEZUELA"
-				},
-				{
-					"id": "221",
-					"nome": "VERGINI AMERICANE (ISOLE)"
-				},
-				{
-					"id": "62",
-					"nome": "VIETNAM"
-				},
-				{
-					"id": "196",
-					"nome": "VINCENT E GRENADINE"
-				},
-				{
-					"id": "218",
-					"nome": "WALLIS E FUTUNA"
-				},
-				{
-					"id": "42",
-					"nome": "YEMEN"
-				},
-				{
-					"id": "58",
-					"nome": "ZAMBIA"
-				},
-				{
-					"id": "73",
-					"nome": "ZIMBABWE"
-				}
-			],
-			"provincia": [
-				{
-					"id": "AG",
-					"nome": "AG"
-				},
-				{
-					"id": "AL",
-					"nome": "AL"
-				},
-				{
-					"id": "AN",
-					"nome": "AN"
-				},
-				{
-					"id": "AO",
-					"nome": "AO"
-				},
-				{
-					"id": "AP",
-					"nome": "AP"
-				},
-				{
-					"id": "AQ",
-					"nome": "AQ"
-				},
-				{
-					"id": "AR",
-					"nome": "AR"
-				},
-				{
-					"id": "AT",
-					"nome": "AT"
-				},
-				{
-					"id": "AV",
-					"nome": "AV"
-				},
-				{
-					"id": "BA",
-					"nome": "BA"
-				},
-				{
-					"id": "BG",
-					"nome": "BG"
-				},
-				{
-					"id": "BI",
-					"nome": "BI"
-				},
-				{
-					"id": "BL",
-					"nome": "BL"
-				},
-				{
-					"id": "BN",
-					"nome": "BN"
-				},
-				{
-					"id": "BO",
-					"nome": "BO"
-				},
-				{
-					"id": "BR",
-					"nome": "BR"
-				},
-				{
-					"id": "BS",
-					"nome": "BS"
-				},
-				{
-					"id": "BT",
-					"nome": "BT"
-				},
-				{
-					"id": "BZ",
-					"nome": "BZ"
-				},
-				{
-					"id": "CA",
-					"nome": "CA"
-				},
-				{
-					"id": "CB",
-					"nome": "CB"
-				},
-				{
-					"id": "CE",
-					"nome": "CE"
-				},
-				{
-					"id": "CH",
-					"nome": "CH"
-				},
-				{
-					"id": "CL",
-					"nome": "CL"
-				},
-				{
-					"id": "CN",
-					"nome": "CN"
-				},
-				{
-					"id": "CO",
-					"nome": "CO"
-				},
-				{
-					"id": "CR",
-					"nome": "CR"
-				},
-				{
-					"id": "CS",
-					"nome": "CS"
-				},
-				{
-					"id": "CT",
-					"nome": "CT"
-				},
-				{
-					"id": "CZ",
-					"nome": "CZ"
-				},
-				{
-					"id": "EN",
-					"nome": "EN"
-				},
-				{
-					"id": "FC",
-					"nome": "FC"
-				},
-				{
-					"id": "FE",
-					"nome": "FE"
-				},
-				{
-					"id": "FG",
-					"nome": "FG"
-				},
-				{
-					"id": "FI",
-					"nome": "FI"
-				},
-				{
-					"id": "FM",
-					"nome": "FM"
-				},
-				{
-					"id": "FR",
-					"nome": "FR"
-				},
-				{
-					"id": "GE",
-					"nome": "GE"
-				},
-				{
-					"id": "GO",
-					"nome": "GO"
-				},
-				{
-					"id": "GR",
-					"nome": "GR"
-				},
-				{
-					"id": "IM",
-					"nome": "IM"
-				},
-				{
-					"id": "IS",
-					"nome": "IS"
-				},
-				{
-					"id": "KR",
-					"nome": "KR"
-				},
-				{
-					"id": "LC",
-					"nome": "LC"
-				},
-				{
-					"id": "LE",
-					"nome": "LE"
-				},
-				{
-					"id": "LI",
-					"nome": "LI"
-				},
-				{
-					"id": "LO",
-					"nome": "LO"
-				},
-				{
-					"id": "LT",
-					"nome": "LT"
-				},
-				{
-					"id": "LU",
-					"nome": "LU"
-				},
-				{
-					"id": "MB",
-					"nome": "MB"
-				},
-				{
-					"id": "MC",
-					"nome": "MC"
-				},
-				{
-					"id": "ME",
-					"nome": "ME"
-				},
-				{
-					"id": "MI",
-					"nome": "MI"
-				},
-				{
-					"id": "MN",
-					"nome": "MN"
-				},
-				{
-					"id": "MO",
-					"nome": "MO"
-				},
-				{
-					"id": "MS",
-					"nome": "MS"
-				},
-				{
-					"id": "MT",
-					"nome": "MT"
-				},
-				{
-					"id": "NA",
-					"nome": "NA"
-				},
-				{
-					"id": "NO",
-					"nome": "NO"
-				},
-				{
-					"id": "NU",
-					"nome": "NU"
-				},
-				{
-					"id": "OR",
-					"nome": "OR"
-				},
-				{
-					"id": "PA",
-					"nome": "PA"
-				},
-				{
-					"id": "PC",
-					"nome": "PC"
-				},
-				{
-					"id": "PD",
-					"nome": "PD"
-				},
-				{
-					"id": "PE",
-					"nome": "PE"
-				},
-				{
-					"id": "PG",
-					"nome": "PG"
-				},
-				{
-					"id": "PI",
-					"nome": "PI"
-				},
-				{
-					"id": "PN",
-					"nome": "PN"
-				},
-				{
-					"id": "PO",
-					"nome": "PO"
-				},
-				{
-					"id": "PR",
-					"nome": "PR"
-				},
-				{
-					"id": "PT",
-					"nome": "PT"
-				},
-				{
-					"id": "PU",
-					"nome": "PU"
-				},
-				{
-					"id": "PV",
-					"nome": "PV"
-				},
-				{
-					"id": "PZ",
-					"nome": "PZ"
-				},
-				{
-					"id": "RA",
-					"nome": "RA"
-				},
-				{
-					"id": "RC",
-					"nome": "RC"
-				},
-				{
-					"id": "RE",
-					"nome": "RE"
-				},
-				{
-					"id": "RG",
-					"nome": "RG"
-				},
-				{
-					"id": "RI",
-					"nome": "RI"
-				},
-				{
-					"id": "RM",
-					"nome": "RM"
-				},
-				{
-					"id": "RN",
-					"nome": "RN"
-				},
-				{
-					"id": "RO",
-					"nome": "RO"
-				},
-				{
-					"id": "SA",
-					"nome": "SA"
-				},
-				{
-					"id": "SI",
-					"nome": "SI"
-				},
-				{
-					"id": "SO",
-					"nome": "SO"
-				},
-				{
-					"id": "SP",
-					"nome": "SP"
-				},
-				{
-					"id": "SR",
-					"nome": "SR"
-				},
-				{
-					"id": "SS",
-					"nome": "SS"
-				},
-				{
-					"id": "SU",
-					"nome": "SU"
-				},
-				{
-					"id": "SV",
-					"nome": "SV"
-				},
-				{
-					"id": "TA",
-					"nome": "TA"
-				},
-				{
-					"id": "TE",
-					"nome": "TE"
-				},
-				{
-					"id": "TN",
-					"nome": "TN"
-				},
-				{
-					"id": "TO",
-					"nome": "TO"
-				},
-				{
-					"id": "TP",
-					"nome": "TP"
-				},
-				{
-					"id": "TR",
-					"nome": "TR"
-				},
-				{
-					"id": "TS",
-					"nome": "TS"
-				},
-				{
-					"id": "TV",
-					"nome": "TV"
-				},
-				{
-					"id": "UD",
-					"nome": "UD"
-				},
-				{
-					"id": "VA",
-					"nome": "VA"
-				},
-				{
-					"id": "VB",
-					"nome": "VB"
-				},
-				{
-					"id": "VC",
-					"nome": "VC"
-				},
-				{
-					"id": "VE",
-					"nome": "VE"
-				},
-				{
-					"id": "VI",
-					"nome": "VI"
-				},
-				{
-					"id": "VR",
-					"nome": "VR"
-				},
-				{
-					"id": "VT",
-					"nome": "VT"
-				},
-				{
-					"id": "VV",
-					"nome": "VV"
-				}
-			]
-		},
-		"TITOLI_STUDIO": [
-			{
-				"codice": "LaureaDisciplineEconomiche",
-				"descrizione": "Laurea in discipline economiche"
-			},
-			{
-				"codice": "Laurea",
-				"descrizione": "Laurea"
-			},
-			{
-				"codice": "Diploma",
-				"descrizione": "Diploma"
-			},
-			{
-				"codice": "LicenzaMedia",
-				"descrizione": "Licenza media"
-			},
-			{
-				"codice": "LicenzaElementare",
-				"descrizione": "Licenza elementare"
-			},
-			{
-				"codice": "Nessuno",
-				"descrizione": "Nessuno"
-			}
-		],
-		"SESSO": [
-			{
-				"codice": "M",
-				"descrizione": "M"
-			},
-			{
-				"codice": "F",
-				"descrizione": "F"
-			}
-		],
-		"NAZIONI_ATTIVE": [
-			{
-				"code": 238,
-				"description": "ABU DHABI",
-				"flagTin": "N",
-				"codiceIsoAlpha2": "AE"
-			},
-			{
-				"code": 86,
-				"description": "ITALIA",
-				"flagTin": "N",
-				"codiceIsoAlpha2": "IT"
-			}
-		],
-		"DISCLAIMER": [
-			{
-				"codDisclaimer": "ALETTI_CONSENSO_1",
-				"testoDisclaimer": "il trattamento, da parte della Banca, dei miei dati a fini di rilevazione della qualita' dei servizi erogati dalla Banca e/o dal Gruppo Banco BPM o la loro comunicazione, per le medesime finalita' , a societa' terze;"
-			},
-			{
-				"codDisclaimer": "ALETTI_CONSENSO_2",
-				"testoDisclaimer": "il trattamento, da parte della Banca, dei miei dati a fini di informazione commerciale,ricerche di mercato, offerte dirette di prodotti o servizi della Banca e/o del Gruppo Banco BPM;"
-			},
-			{
-				"codDisclaimer": "ALETTI_CONSENSO_3",
-				"testoDisclaimer": "il trattamento, da parte della Banca, dei miei dati a fini di informazione commerciale,ricerche di mercato, offerte dirette di prodotti o servizi di societa' terze;"
-			},
-			{
-				"codDisclaimer": "ALETTI_CONSENSO_4",
-				"testoDisclaimer": "Infine, per quanto riguarda il trattamento di categorie particolari di dati, (es. iscrizione a sindacati, partiti o altre associazioni, dati relativi alla salute), che potrebbero essere acquisiti dalla Banca per l'esecuzione di operazioni o di contratti;"
-			},
-			{
-				"codDisclaimer": "ALETTI_CONSENSO_5",
-				"testoDisclaimer": "la comunicazione, da parte della Banca, dei miei dati a societa' terze a fini di informazione commerciale, ricerche di mercato, offerte dirette di loro prodotti o servizi;"
-			},
-			{
-				"codDisclaimer": "ALETTI_CAPITALIZZ_PERIODICA",
-				"testoDisclaimer": "la comunicazione, da parte della Banca, dei miei dati a societa' terze a fini di informazione commerciale, ricerche di mercato, offerte dirette di loro prodotti o servizi;"
-			}
-		],
-		"TIPOLOGIA_IMMAGINE": [
-			{
-				"codice": "FRONTE",
-				"descrizione": ""
-			},
-			{
-				"codice": "RETRO",
-				"descrizione": ""
-			},
-			{
-				"codice": "UNICA",
-				"descrizione": ""
-			}
-		],
-		"FORMATO_IMMAGINE": [
-			{
-				"codice": "JPEG",
-				"descrizione": ""
-			},
-			{
-				"codice": "JPG",
-				"descrizione": "image/jpeg"
-			},
-			{
-				"codice": "PDF",
-				"descrizione": "application/pdf"
-			}
-		]
-	}
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "QUALIFICA_VIA": [
+            {
+                "codice": "Via",
+                "descrizione": "Via"
+            },
+            {
+                "codice": "Viale",
+                "descrizione": "Viale"
+            },
+            {
+                "codice": "Corso",
+                "descrizione": "Corso"
+            },
+            {
+                "codice": "Piazza",
+                "descrizione": "Piazza"
+            },
+            {
+                "codice": "Piazzale",
+                "descrizione": "Piazzale"
+            },
+            {
+                "codice": "Strada",
+                "descrizione": "Strada"
+            },
+            {
+                "codice": "Stretto",
+                "descrizione": "Stretto"
+            },
+            {
+                "codice": "Contrada",
+                "descrizione": "Contrada"
+            },
+            {
+                "codice": "Vicolo",
+                "descrizione": "Vicolo"
+            },
+            {
+                "codice": "LocalitaGrave",
+                "descrizione": "Localit&agrave;"
+            },
+            {
+                "codice": "Largo",
+                "descrizione": "Largo"
+            },
+            {
+                "codice": "Vico",
+                "descrizione": "Vico"
+            },
+            {
+                "codice": "Altro",
+                "descrizione": "Altro"
+            }
+        ],
+        "DOCUMENTI_IDENTITA": [
+            {
+                "codice": "01",
+                "descrizione": "Carta d'identità elettronica"
+            },
+            {
+                "codice": "12",
+                "descrizione": "Carta d'identità rinnovata"
+            },
+            {
+                "codice": "11",
+                "descrizione": "Carta d'identità cartacea"
+            },
+            {
+                "codice": "03",
+                "descrizione": "Passaporto"
+            },
+            {
+                "codice": "02",
+                "descrizione": "Patente elettronica"
+            },
+            {
+                "codice": "14",
+                "descrizione": "Patente rinnovata"
+            },
+            {
+                "codice": "13",
+                "descrizione": "Patente cartacea"
+            }
+        ],
+        "NAZIONI_ATTIVE": [
+            {
+                "code": 238,
+                "description": "ABU DHABI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE"
+            },
+            {
+                "code": 2,
+                "description": "AFGHANISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AF"
+            },
+            {
+                "code": 206,
+                "description": "AFRICA DEL SUD OVEST - NAMIBIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NA"
+            },
+            {
+                "code": 246,
+                "description": "AFRICA SPAGNOLA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 239,
+                "description": "AJMAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE1"
+            },
+            {
+                "code": 292,
+                "description": "ALAND ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AX"
+            },
+            {
+                "code": 87,
+                "description": "ALBANIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AL"
+            },
+            {
+                "code": 3,
+                "description": "ALGERIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "DZ"
+            },
+            {
+                "code": 148,
+                "description": "AMERICAN SAMOA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AS"
+            },
+            {
+                "code": 4,
+                "description": "ANDORRA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "AD"
+            },
+            {
+                "code": 133,
+                "description": "ANGOLA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AO"
+            },
+            {
+                "code": 209,
+                "description": "ANGUILLA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AI"
+            },
+            {
+                "code": 197,
+                "description": "ANTIGUA E BARBUDA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AG"
+            },
+            {
+                "code": 5,
+                "description": "ARABIA SAUDITA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SA"
+            },
+            {
+                "code": 6,
+                "description": "ARGENTINA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "AR"
+            },
+            {
+                "code": 266,
+                "description": "ARMENIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AM"
+            },
+            {
+                "code": 212,
+                "description": "ARUBA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AW"
+            },
+            {
+                "code": 227,
+                "description": "ASCENSION",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 7,
+                "description": "AUSTRALIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "AU"
+            },
+            {
+                "code": 8,
+                "description": "AUSTRIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "AT"
+            },
+            {
+                "code": 268,
+                "description": "AZERBAIGIAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AZ"
+            },
+            {
+                "code": 234,
+                "description": "AZZORRE ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 160,
+                "description": "BAHAMA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BS"
+            },
+            {
+                "code": 169,
+                "description": "BAHREIN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BH"
+            },
+            {
+                "code": 130,
+                "description": "BANGLADESH",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BD"
+            },
+            {
+                "code": 118,
+                "description": "BARBADOS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BB"
+            },
+            {
+                "code": 9,
+                "description": "BELGIO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "BE"
+            },
+            {
+                "code": 198,
+                "description": "BELIZE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "BZ"
+            },
+            {
+                "code": 158,
+                "description": "BENIN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BJ"
+            },
+            {
+                "code": 207,
+                "description": "BERMUDA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BM"
+            },
+            {
+                "code": 97,
+                "description": "BHUTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BT"
+            },
+            {
+                "code": 264,
+                "description": "BIELORUSSIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BY"
+            },
+            {
+                "code": 10,
+                "description": "BOLIVIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BO"
+            },
+            {
+                "code": 295,
+                "description": "BONAIRE SAINT EUSTATIUS AND SABA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BQ"
+            },
+            {
+                "code": 274,
+                "description": "BOSNIA ERZEGOVINA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BA"
+            },
+            {
+                "code": 98,
+                "description": "BOTSWANA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BW"
+            },
+            {
+                "code": 11,
+                "description": "BRASILE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "BR"
+            },
+            {
+                "code": 125,
+                "description": "BRUNEI DARUSSALAM",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BN"
+            },
+            {
+                "code": 12,
+                "description": "BULGARIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "BG"
+            },
+            {
+                "code": 142,
+                "description": "BURKINA FASO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BF"
+            },
+            {
+                "code": 25,
+                "description": "BURUNDI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BI"
+            },
+            {
+                "code": 135,
+                "description": "CAMBOGIA (CAMPUCEA)",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KH"
+            },
+            {
+                "code": 119,
+                "description": "CAMERUN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CM"
+    
+        },
+            {
+                "code": 139,
+                "description": "CAMPIONE D'ITALIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 13,
+                "description": "CANADA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CA"
+            },
+            {
+                "code": 211,
+                "description": "CAYMAN ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KY"
+            },
+            {
+                "code": 230,
+                "description": "CHAFARINAS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 144,
+                "description": "CIAD",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TD"
+            },
+            {
+                "code": 15,
+                "description": "CILE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CL"
+            },
+            {
+                "code": 101,
+                "description": "CIPRO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CY"
+            },
+            {
+                "code": 93,
+                "description": "CITTA DEL VATICANO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VA"
+            },
+            {
+                "code": 223,
+                "description": "CLIPPERTON",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 17,
+                "description": "COLOMBIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CO"
+            },
+            {
+                "code": 176,
+                "description": "COMORE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KM"
+            },
+            {
+                "code": 18,
+                "description": "CONGO REPUBBLICA DEMOCRATICA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CD"
+            },
+            {
+                "code": 145,
+                "description": "CONGO REPUBBLICA POPOLARE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CG"
+            },
+            {
+                "code": 74,
+                "description": "COREA DEL NORD",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KP"
+            },
+            {
+                "code": 84,
+                "description": "COREA DEL SUD",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "KR"
+            },
+            {
+                "code": 146,
+                "description": "COSTA D'AVORIO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CI"
+            },
+            {
+                "code": 19,
+                "description": "COSTARICA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CR"
+            },
+            {
+                "code": 261,
+                "description": "CROAZIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "HR"
+            },
+            {
+                "code": 20,
+                "description": "CUBA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CU"
+            },
+            {
+                "code": 296,
+                "description": "CURACAO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CW"
+            },
+            {
+                "code": 21,
+                "description": "DANIMARCA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "DK"
+            },
+            {
+                "code": 192,
+                "description": "DOMINICA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "DM"
+            },
+            {
+                "code": 240,
+                "description": "DUBAI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE"
+            },
+            {
+                "code": 24,
+                "description": "ECUADOR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "EC"
+            },
+            {
+                "code": 23,
+                "description": "EGITTO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "EG"
+            },
+            {
+                "code": 64,
+                "description": "EL SALVADOR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SV"
+            },
+            {
+                "code": 277,
+                "description": "ERITREA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ER"
+            },
+            {
+                "code": 257,
+                "description": "ESTONIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "EE"
+            },
+            {
+                "code": 26,
+                "description": "ETIOPIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ET"
+            },
+            {
+                "code": 190,
+                "description": "FALKLAND",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "FK"
+            },
+            {
+                "code": 27,
+                "description": "FILIPPINE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PH"
+            },
+            {
+                "code": 28,
+                "description": "FINLANDIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "FI"
+            },
+            {
+                "code": 29,
+                "description": "FRANCIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "FR"
+            },
+            {
+                "code": 241,
+                "description": "FUIJAYRAH",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE2"
+            },
+            {
+                "code": 157,
+                "description": "GABON",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GA"
+            },
+            {
+                "code": 164,
+                "description": "GAMBIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GM"
+            },
+            {
+                "code": 267,
+                "description": "GEORGIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GE"
+            },
+            {
+                "code": 112,
+                "description": "GHANA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GH"
+            },
+            {
+                "code": 82,
+                "description": "GIAMAICA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "JM"
+            },
+            {
+                "code": 88,
+                "description": "GIAPPONE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "JP"
+            },
+            {
+                "code": 102,
+                "description": "GIBILTERRA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "GI"
+            },
+            {
+                "code": 113,
+                "description": "GIBUTI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "DJ"
+            },
+            {
+                "code": 122,
+                "description": "GIORDANIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "JO"
+            },
+            {
+                "code": 228,
+                "description": "GOUGH",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 32,
+                "description": "GRECIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "GR"
+            },
+            {
+                "code": 156,
+                "description": "GRENADA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GD"
+            },
+            {
+                "code": 200,
+                "description": "GROENLANDIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "GL"
+            },
+            {
+                "code": 214,
+                "description": "GUADALUPA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GP"
+            },
+            {
+                "code": 154,
+                "description": "GUAM",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GU"
+            },
+            {
+                "code": 33,
+                "description": "GUATEMALA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GT"
+            },
+            {
+                "code": 123,
+                "description": "GUAYANA FRANCESE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GF"
+            },
+            {
+                "code": 201,
+                "description": "GUERNSEY C.I.",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "GG"
+            },
+            {
+                "code": 137,
+                "description": "GUINEA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GN"
+            },
+            {
+                "code": 185,
+                "description": "GUINEA BISSAU",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GW"
+            },
+            {
+                "code": 167,
+                "description": "GUINEA EQUATORIALE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GQ"
+            },
+            {
+                "code": 159,
+                "description": "GUYANA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "GY"
+            },
+            {
+                "code": 34,
+                "description": "HAITI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "HT"
+      
+      },
+            {
+                "code": 284,
+                "description": "HEARD E MCDONALD ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "HM"
+            },
+            {
+                "code": 35,
+                "description": "HONDURAS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "HN"
+            },
+            {
+                "code": 103,
+                "description": "HONG KONG",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "HK"
+            },
+            {
+                "code": 114,
+                "description": "INDIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "IN"
+            },
+            {
+                "code": 129,
+                "description": "INDONESIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ID"
+            },
+            {
+                "code": 39,
+                "description": "IRAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "IR"
+            },
+            {
+                "code": 38,
+                "description": "IRAQ",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "IQ"
+            },
+            {
+                "code": 40,
+                "description": "IRLANDA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "IE"
+            },
+            {
+                "code": 41,
+                "description": "ISLANDA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "IS"
+            },
+            {
+                "code": 203,
+                "description": "ISOLA DI MAN",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "IM"
+            },
+            {
+                "code": 100,
+                "description": "ISOLE CANARIE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 256,
+                "description": "ISOLE CAROLINE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 255,
+                "description": "ISOLE CHAGOS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 237,
+                "description": "ISOLE COOK",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CK"
+            },
+            {
+                "code": 188,
+                "description": "ISOLE DEL CAPO VERDE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CV"
+            },
+            {
+                "code": 204,
+                "description": "ISOLE FAEROER",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "FO"
+            },
+            {
+                "code": 161,
+                "description": "ISOLE FIGI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "FJ"
+            },
+            {
+                "code": 217,
+                "description": "ISOLE MARSHALL",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "MH"
+            },
+            {
+                "code": 249,
+                "description": "ISOLE VERGINI BRITANNICHE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VG"
+            },
+            {
+                "code": 178,
+                "description": "ISOLE WAKE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 182,
+                "description": "ISRAELE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "IL"
+            },
+            {
+                "code": 86,
+                "description": "ITALIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "IT"
+            },
+            {
+                "code": 202,
+                "description": "JERSEY",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "JE"
+            },
+            {
+                "code": 269,
+                "description": "KAZAKISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KZ"
+            },
+            {
+                "code": 116,
+                "description": "KENYA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KE"
+            },
+            {
+                "code": 270,
+                "description": "KIRGHIZISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KG"
+            },
+            {
+                "code": 194,
+                "description": "KIRIBATI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KI"
+            },
+            {
+                "code": 126,
+                "description": "KUWAIT",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "KW"
+            },
+            {
+                "code": 136,
+                "description": "LAOS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LA"
+            },
+            {
+                "code": 89,
+                "description": "LESOTHO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LS"
+            },
+            {
+                "code": 258,
+                "description": "LETTONIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "LV"
+            },
+            {
+                "code": 95,
+                "description": "LIBANO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LB"
+            },
+            {
+                "code": 44,
+                "description": "LIBERIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LR"
+            },
+            {
+                "code": 45,
+                "description": "LIBIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LY"
+            },
+            {
+                "code": 90,
+                "description": "LIECHTENSTEIN",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "LI"
+            },
+            {
+                "code": 259,
+                "description": "LITUANIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "LT"
+            },
+            {
+                "code": 92,
+                "description": "LUSSEMBURGO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "LU"
+            },
+            {
+                "code": 59,
+                "description": "MACAO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MO"
+            },
+            {
+                "code": 278,
+                "description": "MACEDONIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MK"
+            },
+            {
+                "code": 104,
+                "description": "MADAGASCAR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MG"
+            },
+            {
+                "code": 235,
+                "description": "MADEIRA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 56,
+                "description": "MALAWI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MW"
+            },
+            {
+                "code": 106,
+                "description": "MALAYSIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "MY"
+            },
+            {
+                "code": 127,
+                "description": "MALDIVE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MV"
+            },
+            {
+                "code": 149,
+                "description": "MALI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ML"
+            },
+            {
+                "code": 105,
+                "description": "MALTA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "MT"
+            },
+            {
+                "code": 219,
+                "description": "MARIANNE (ISOLE)",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MP"
+            },
+            {
+                "code": 107,
+                "description": "MAROCCO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MA"
+            },
+            {
+                "code": 213,
+                "description": "MARTINICA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MQ"
+            },
+            {
+                "code": 141,
+                "description": "MAURITANIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MR"
+            },
+            {
+                "code": 128,
+                "description": "MAURIZIO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MU"
+            },
+            {
+                "code": 226,
+                "description": "MAYOTTE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "YT"
+            },
+            {
+                "code": 231,
+                "description": "MELILLA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 46,
+                "description": "MESSICO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "MX"
+            },
+            {
+                "code": 215,
+                "description": "MICRONESIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "FM1"
+            },
+            {
+                "code": 177,
+                "description": "MIDWAY ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 265,
+                "description": "MOLDAVIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MD"
+          
+  },
+            {
+                "code": 91,
+                "description": "MONACO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MC"
+            },
+            {
+                "code": 110,
+                "description": "MONGOLIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MN"
+            },
+            {
+                "code": 290,
+                "description": "MONTENEGRO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ME"
+            },
+            {
+                "code": 208,
+                "description": "MONTSERRAT",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MS"
+            },
+            {
+                "code": 134,
+                "description": "MOZAMBICO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MZ"
+            },
+            {
+                "code": 83,
+                "description": "MYANMAR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MM"
+            },
+            {
+                "code": 109,
+                "description": "NAURU",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "NR"
+            },
+            {
+                "code": 115,
+                "description": "NEPAL",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NP"
+            },
+            {
+                "code": 47,
+                "description": "NICARAGUA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NI"
+            },
+            {
+                "code": 150,
+                "description": "NIGER",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NE"
+            },
+            {
+                "code": 117,
+                "description": "NIGERIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NG"
+            },
+            {
+                "code": 205,
+                "description": "NIUE - SAVAGE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NU"
+            },
+            {
+                "code": 285,
+                "description": "NORFOLK ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NF"
+            },
+            {
+                "code": 48,
+                "description": "NORVEGIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "NO"
+            },
+            {
+                "code": 253,
+                "description": "NUOVA CALEDONIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "NC"
+            },
+            {
+                "code": 49,
+                "description": "NUOVA ZELANDA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "NZ"
+            },
+            {
+                "code": 175,
+                "description": "OCEANIA BRITANNICA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PN"
+            },
+            {
+                "code": 252,
+                "description": "OCEANIA DEGLI STATI UNITI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "UM"
+            },
+            {
+                "code": 163,
+                "description": "OMAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "OM"
+            },
+            {
+                "code": 50,
+                "description": "PAESI BASSI O OLANDA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "NL"
+            },
+            {
+                "code": 36,
+                "description": "PAKISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PK"
+            },
+            {
+                "code": 279,
+                "description": "PALESTINA, TERRITORI AUTONOMI",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PS"
+            },
+            {
+                "code": 51,
+                "description": "PANAMA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PA"
+            },
+            {
+                "code": 186,
+                "description": "PAPUA E NUOVA GUINEA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PG"
+            },
+            {
+                "code": 52,
+                "description": "PARAGUAY",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PY"
+            },
+            {
+                "code": 232,
+                "description": "PENON DE ALHUCEMAS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 233,
+                "description": "PENON DE VELEZ DE LA GOMERA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 53,
+                "description": "PERU'",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PE"
+            },
+            {
+                "code": 225,
+                "description": "POLINESIA FRANCESE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PF"
+            },
+            {
+                "code": 54,
+                "description": "POLONIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "PL"
+            },
+            {
+                "code": 55,
+                "description": "PORTOGALLO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "PT"
+            },
+            {
+                "code": 220,
+                "description": "PORTORICO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PR"
+            },
+            {
+                "code": 168,
+                "description": "QATAR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "QA"
+            },
+            {
+                "code": 242,
+                "description": "RAS EL KHAIMAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE3"
+            },
+            {
+                "code": 31,
+                "description": "REGNO UNITO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "GB"
+            },
+            {
+                "code": 22,
+                "description": "REP. CINA NAZ. (TAIWAN)",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TW"
+            },
+            {
+                "code": 275,
+                "description": "REPUBBLICA CECA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CZ"
+            },
+            {
+                "code": 143,
+                "description": "REPUBBLICA CENTRAFRICANA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "CF"
+            },
+            {
+                "code": 291,
+                "description": "REPUBBLICA DEL KOSOVO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "RS"
+            },
+            {
+                "code": 216,
+                "description": "REPUBBLICA DI PALAU",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PW"
+            },
+            {
+                "code": 37,
+                "description": "REPUBBLICA DI SAN MARINO",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SM"
+            },
+            {
+                "code": 63,
+                "description": "REPUBBLICA DOMINICANA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "DO"
+            },
+            {
+                "code": 94,
+                "description": "REPUBBLICA FED.DI GERMANIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "DE"
+            },
+            {
+                "code": 16,
+                "description": "REPUBBLICA POPOLARE CINESE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CN"
+            },
+            {
+                "code": 78,
+                "description": "REPUBBLICA SUDAFRICANA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "ZA"
+            },
+            {
+                "code": 247,
+                "description": "REUNION",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "RE"
+            },
+            {
+                "code": 61,
+                "description": "ROMANIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "RO"
+            },
+            {
+                "code": 151,
+                "description": "RUANDA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "RW"
+            },
+            {
+                "code": 262,
+                "description": "RUSSIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "RU"
+            },
+            {
+                "code": 254,
+                "description": "S.ELENA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SH"
+            },
+            {
+                "code": 166,
+                "description": "SAHARA OCCIDENTALE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "EH"
+            },
+            {
+                "code": 293,
+                "description": "SAINT BARTHELEMY",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "BL"
+            },
+            {
+                "code": 199,
+                "description": "SAINT LUCIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "LC"
+            },
+            {
+                "code": 191,
+                "description": "SALOMONE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SB"
+            },
+            {
+                "code": 131,
+                "description": "SAMOA OCCIDENTALE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "WS"
+            },
+            {
+                "code": 187,
+                "description": "SAO TOME' E PRINCIPE",
+                "flagTin":
+ "N",
+                "codiceIsoAlpha2": "ST"
+            },
+            {
+                "code": 189,
+                "description": "SEICELLE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SC"
+            },
+            {
+                "code": 152,
+                "description": "SENEGAL",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SN"
+            },
+            {
+                "code": 289,
+                "description": "SERBIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "RS"
+            },
+            {
+                "code": 243,
+                "description": "SHARJAH",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE4"
+            },
+            {
+                "code": 153,
+                "description": "SIERRA LEONE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SL"
+            },
+            {
+                "code": 147,
+                "description": "SINGAPORE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SG"
+            },
+            {
+                "code": 294,
+                "description": "SINT MAARTEN (DUTCH PART)",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SX"
+            },
+            {
+                "code": 65,
+                "description": "SIRIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SY"
+            },
+            {
+                "code": 276,
+                "description": "SLOVACCHIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SK"
+            },
+            {
+                "code": 260,
+                "description": "SLOVENIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SI"
+            },
+            {
+                "code": 66,
+                "description": "SOMALIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SO"
+            },
+            {
+                "code": 67,
+                "description": "SPAGNA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "ES"
+            },
+            {
+                "code": 85,
+                "description": "SRI LANKA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "LK"
+            },
+            {
+                "code": 195,
+                "description": "ST. KITTS E NEVIS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "KN"
+            },
+            {
+                "code": 222,
+                "description": "ST. MARTIN SETTENTRIONALE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "MF"
+            },
+            {
+                "code": 248,
+                "description": "ST. PIERRE E MIQUELON",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "PM"
+            },
+            {
+                "code": 69,
+                "description": "STATI UNITI D'AMERICA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "US"
+            },
+            {
+                "code": 70,
+                "description": "SUDAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SD"
+            },
+            {
+                "code": 124,
+                "description": "SURINAME",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SR"
+            },
+            {
+                "code": 286,
+                "description": "SVALBARD E JAN MAYEN ISOLE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SJ"
+            },
+            {
+                "code": 68,
+                "description": "SVEZIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "SE"
+            },
+            {
+                "code": 71,
+                "description": "SVIZZERA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "CH"
+            },
+            {
+                "code": 138,
+                "description": "SWAZILAND - NGWANE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "SZ"
+            },
+            {
+                "code": 272,
+                "description": "TAGIKISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TJ"
+            },
+            {
+                "code": 57,
+                "description": "TANZANIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TZ"
+            },
+            {
+                "code": 245,
+                "description": "TERRIT.BRIT.OCC.",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "IO"
+            },
+            {
+                "code": 183,
+                "description": "TERRITORI FRANCESI DEL SUD",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TF"
+            },
+            {
+                "code": 180,
+                "description": "TERRITORIO ANTARTICO BRITANNICO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AQ"
+            },
+            {
+                "code": 72,
+                "description": "THAILANDIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TH"
+            },
+            {
+                "code": 287,
+                "description": "TIMOR",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TL"
+            },
+            {
+                "code": 155,
+                "description": "TOGO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TG"
+            },
+            {
+                "code": 236,
+                "description": "TOKELAU",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TK"
+            },
+            {
+                "code": 162,
+                "description": "TONGA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TO"
+            },
+            {
+                "code": 120,
+                "description": "TRINIDAD E TOBAGO",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TT"
+            },
+            {
+                "code": 229,
+                "description": "TRISTAN DE CUNHA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": ""
+            },
+            {
+                "code": 75,
+                "description": "TUNISIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TN"
+            },
+            {
+                "code": 76,
+                "description": "TURCHIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "TR"
+            },
+            {
+                "code": 273,
+                "description": "TURKMENISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TM"
+            },
+            {
+                "code": 210,
+                "description": "TURKS E CAICOS",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TC"
+            },
+            {
+                "code": 193,
+                "description": "TUVALU",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "TV"
+            },
+            {
+                "code": 263,
+                "description": "UCRAINA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "UA"
+            },
+            {
+                "code": 132,
+                "description": "UGANDA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "UG"
+            },
+            {
+                "code": 244,
+                "description": "UMM AL QAIWAIN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "AE5"
+            },
+            {
+                "code": 77,
+                "description": "UNGHERIA",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "HU"
+            },
+            {
+                "code": 80,
+                "description": "URUGUAY",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "UY"
+            },
+            {
+                "code": 271,
+                "description": "UZBEKISTAN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "UZ"
+            },
+            {
+                "code": 121,
+                "description": "VANUATU",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VU"
+            },
+            {
+                "code": 81,
+                "description": "VENEZUELA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VE"
+            },
+            {
+                "code": 221,
+                "description": "VERGINI AMERICANE (ISOLE)",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VI"
+            },
+            {
+                "code": 62,
+                "description": "VIETNAM",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "VN"
+            },
+            {
+                "code": 196,
+                "description": "VINCENT E GRENADINE",
+                "flagTin": "S",
+                "codiceIsoAlpha2": "VC"
+            },
+            {
+                "code": 218,
+                "description": "WALLIS E FUTUNA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "WF"
+            },
+            {
+                "code": 42,
+                "description": "YEMEN",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "YE"
+            },
+            {
+                "code": 58,
+                "description": "ZAMBIA",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ZM"
+            },
+            {
+                "code": 73,
+                "description": "ZIMBABWE",
+                "flagTin": "N",
+                "codiceIsoAlpha2": "ZW"
+            }
+        ],
+        "DISCLAIMER": [
+            {
+                "codDisclaimer": "ALETTI_ANAG_CONS_1",
+                "testoDisclaimer": "1. il trattamento, da parte della Banca, dei miei dati a fini di rilevazione della qualità dei servizi erogati dalla Banca e/o dal Gruppo Banco BPM o la loro comunicazione, per le medesime finalità, a società terze;"
+            },
+            {
+                "codDisclaimer": "ALETTI_ANAG_CONS_2",
+                "testoDisclaimer": "2. il trattamento, da parte della Banca, dei miei dati a fini di informazione commerciale, ricerche di mercato, offerte dirette di prodotti o servizi della Banca e/o del Gruppo Banco BPM;"
+            },
+            {
+                "codDisclaimer": "ALETTI_ANAG_CONS_3",
+                "testoDisclaimer": "3.il trattamento, da parte della Banca, dei miei dati a fini di informazione commerciale, ricerche di mercato, offerte dirette di prodotti o servizi di società terze;"
+            },
+            {
+                "codDisclaimer": "ALETTI_ANAG_CONS_4",
+                "testoDisclaimer": "4.la comunicazione, da parte della Banca, dei miei dati a società terze a fini di informazione commerciale, ricerche di mercato, offerte dirette di loro prodotti o servizi;"
+            },
+            {
+                "codDisclaimer": "ALETTI_ANAG_CONS_5",
+                "testoDisclaimer": "5.Infine, per quanto riguarda il trattamento di categorie particolari di dati, (es. iscrizione a sindacati, partiti o altre associazioni, dati relativi alla salute), che potrebbero essere acquisiti dalla Banca per l’esecuzione di operazioni o di contratti;"
+            },
+            {
+                "codDisclaimer": "ALETTI_CONFERMA_DATI",
+                "testoDisclaimer": "Il sottoscritto, consapevole delle responsabilità penali derivanti da mendaci affermazioni in tal sede, dichiara di aver fornito nel presente modulo tutte le informazioni necessarie ed aggiornate di cui è a conoscenza, anche relativamente al titolare effettivo del rapporto / dell'operazione, garantisce che le stesse sono esatte e veritiere e si impegna a comunicarne ogni futura ed eventuale modifica."
+            },
+            {
+                "codDisclaimer": "ALETTI_CAP_PERIODICA",
+                "testoDisclaimer": "<b><u>Autorizzazione alla capitalizzazione periodica degli interessi</u><b>La legge n. 49 dell'8 Aprile 2016 indica che: <ul><li>Gli interessi debitori e creditori sono conteggiati il 31 Dicembre di ogni anno;</li><li>Gli interessi debitori dovuti dal cliente sono esigibili, sempre annualmente, il 1° marzo dell''anno successivo a quello in cui sono maturati. Cliccando su \"Acconsento\" potrai autorizzare l'addebito automatico degli interessi sul tuo conto corrente. In alternativa chiedi al tuo Consulente Finanziario. </li></ul>"
+            }
+        ],
+        "FORMATO_IMMAGINE": [
+            {
+                "codice": "JPEG",
+                "descrizione": "image/jpeg"
+            },
+            {
+                "codice": "JPG",
+                "descrizione": "image/jpeg"
+            },
+            {
+                "codice": "PDF",
+                "descrizione": "application/pdf"
+            }
+        ],
+        "TIPOLOGIA_IMMAGINE": [
+            {
+                "codice": "FRONTE",
+                "descrizione": ""
+            },
+            {
+                "codice": "RETRO",
+                "descrizione": ""
+            },
+            {
+                "codice": "UNICA",
+                "descrizione": ""
+            }
+        ],
+        "ADEVER": {
+            "naturaScopo": [
+                {
+                    "id": "9",
+                    "nome": "Risparmio"
+                },
+                {
+                    "id": "10",
+                    "nome": "Finanziamento"
+                },
+                {
+                    "id": "11",
+                    "nome": "Investimento"
+                },
+                {
+                    "id": "12",
+                    "nome": "Gestione necessita familiari correnti"
+                },
+                {
+                    "id": "13",
+                    "nome": "Servizi vari"
+                },
+                {
+                    "id": "14",
+                    "nome": "Gestione su incassi e pagamenti aziendali - cc su basi attive"
+                },
+                {
+                    "id": "15",
+                    "nome": "Affidamenti concessi"
+                },
+                {
+                    "id": "16",
+                    "nome": "Smobilizzo crediti commerciali italia"
+                },
+                {
+                    "id": "17",
+                    "nome": "Gestione tesorerie aziendali"
+                },
+                {
+                    "id": "18",
+                    "nome": "Gestione fornitori"
+                },
+                {
+                    "id": "19",
+                    "nome": "Smobilizzo crediti commerciali estero"
+                },
+                {
+                    "id": "20",
+                    "nome": "Regolamento transazioni da e per estero"
+                },
+                {
+                    "id": "21",
+                    "nome": "Gestione stipendi dei dipendenti"
+                },
+                {
+                    "id": "22",
+                    "nome": "Attivita di investimento"
+                }
+            ],
+            "naturaScopoDeposito": [
+                {
+                    "id": "9",
+                    "nome": "Risparmio"
+                },
+                {
+                    "id": "10",
+                    "nome": "Finanziamento"
+                },
+                {
+                    "id": "11",
+                    "nome": "Investimento"
+                },
+                {
+                    "id": "12",
+                    "nome": "Gestione necessita familiari correnti"
+                },
+                {
+                    "id": "13",
+                    "nome": "Servizi vari"
+                },
+                {
+                    "id": "14",
+                    "nome": "Gestione su incassi e pagamenti aziendali - cc su basi attive"
+                },
+                {
+                    "id": "15",
+                    "nome": "Affidamenti concessi"
+                },
+                {
+                    "id": "16",
+                    "nome": "Smobilizzo crediti commerciali italia"
+                },
+                {
+                    "id": "17",
+                    "nome": "Gestione tesorerie aziendali"
+                },
+                {
+                    "id": "18",
+                    "nome": "Gestione fornitori"
+                },
+                {
+                    "id": "19",
+                    "nome": "Smobilizzo crediti commerciali estero"
+                },
+                {
+                    "id": "20",
+                    "nome": "Regolamento transazioni da e per estero"
+                },
+                {
+                    "id": "21",
+                    "nome": "Gestione stipendi dei dipendenti"
+                },
+                {
+                    "id": "22",
+                    "nome": "Attivita di investimento"
+                }
+            ],
+            "professione": [
+                {
+                    "id": "1",
+                    "nome": "Imprenditore"
+                },
+                {
+                    "id": "2",
+                    "nome": "Lavoratore autonomo"
+                },
+                {
+                    "id": "3",
+                    "nome": "Libero professionista"
+                },
+                {
+                    "id": "4",
+                    "nome": "Lavoratore dipendente"
+                },
+                {
+                    "id": "5",
+                    "nome": "Pensionato"
+                },
+                {
+                    "id": "6",
+                    "nome": "Non occupato"
+                },
+                {
+                    "id": "7",
+                    "nome": "Soggetto apicale"
+                }
+            ],
+            "taeSettore": [
+                {
+                    "id": "1",
+                    "nome": "Pubblica amministrazione e magistrati"
+                },
+                {
+                    "id": "5",
+                    "nome": "Forze dell ordine/forze armate"
+                },
+                {
+                    "id": "10",
+                    "nome": "Coltivazione prodotti agricoli e olio"
+                },
+                {
+                    "id": "12",
+                    "nome": "Produzione vino"
+                },
+                {
+                    "id": "14",
+                    "nome": "Allevamento, caccia, silvicoltura e pesca"
+                },
+                {
+                    "id": "110",
+                    "nome": "Produzione prodotti energetici (carbone, petrolio, energia elettrica, gas, raccolta, depurazione e distribuzione acqua)"
+                },
+                {
+                    "id": "210",
+                    "nome": "Produzione metalli"
+                },
+                {
+                    "id": "230",
+                    "nome": "Produzione materiali da costruzione, vetro, ceramica, produzione, estrazione e ricerca di sali"
+                },
+                {
+                    "id": "250",
+                    "nome": "Produzione prodotti chimici, farmaceutici, vernici, fibre artificiali e sintetiche"
+                },
+                {
+                    "id": "320",
+                    "nome": "Produzione macchine agricole e industriali"
+                },
+                {
+                    "id": "330",
+                    "nome": "Produzione macchine per ufficio, elaboratori, strumenti di precisione, ottica, orologi"
+                },
+                {
+                    "id": "340",
+                    "nome": "Produzione materiale elettrico"
+                },
+                {
+                    "id": "350",
+                    "nome": "Produzione mezzi di trasporto"
+                },
+                {
+                    "id": "410",
+                    "nome": "Produzione di prodotti alimentari e prodotti a base di tabacco"
+                },
+                {
+                    "id": "430",
+                    "nome": "Prodotti tessili, pelle, pellicce, abbigliamento"
+                },
+                {
+                    "id": "440",
+                    "nome": "Produzione tappeti, tappezzerie"
+                },
+                {
+                    "id": "450",
+                    "nome": "Produzione calzature"
+                },
+                {
+                    "id": "460",
+                    "nome": "Produzione biancheria per la casa e arredamento"
+                },
+                {
+                    "id": "463",
+                    "nome": "Carpenteria e costruzioni in legno, lavori in legno per edilizia"
+                },
+                {
+                    "id": "467",
+                    "nome": "Produzione mobili in legno e giunco, materassi"
+                },
+                {
+                    "id": "470",
+                    "nome": "Produzione, trasformazione carta e cartone"
+                },
+                {
+   
+                 "id": "473",
+                    "nome": "Prodotti stampa ed editoria"
+                },
+                {
+                    "id": "480",
+                    "nome": "Produzione prodotti in gomma, plastica e pneumatici"
+                },
+                {
+                    "id": "490",
+                    "nome": "Produzione legno, sughero"
+                },
+                {
+                    "id": "491",
+                    "nome": "Produzione gioielli e oreficeria"
+                },
+                {
+                    "id": "492",
+                    "nome": "Produzione strumenti musicali"
+                },
+                {
+                    "id": "493",
+                    "nome": "Prodotti cinematografia e fotografia"
+                },
+                {
+                    "id": "494",
+                    "nome": "Produzione giocattoli e articoli sportivi"
+                },
+                {
+                    "id": "495",
+                    "nome": "Produzione penne, timbri e prodotti di cancelleria"
+                },
+                {
+                    "id": "500",
+                    "nome": "Edilizia, opere pubbliche e demolizione immobili"
+                },
+                {
+                    "id": "600",
+                    "nome": "Commercio combustibili, minerali, prodotti chimici e carburanti"
+                },
+                {
+                    "id": "611",
+                    "nome": "Commercio materie prime agricole, animali vivi"
+                },
+                {
+                    "id": "613",
+                    "nome": "Commercio legname e materiale da costruzione"
+                },
+                {
+                    "id": "614",
+                    "nome": "Commercio macchine, attrezzature, veicoli"
+                },
+                {
+                    "id": "615",
+                    "nome": "Commercio mobili, elettrodomestici, tv, casalinghi e ferramenta"
+                },
+                {
+                    "id": "616",
+                    "nome": "Commercio prodotti tessili, abbigliamento, calzature"
+                },
+                {
+                    "id": "617",
+                    "nome": "Commercio prodotti alimentari, bevande, tabacco"
+                },
+                {
+                    "id": "618",
+                    "nome": "Commercio prodotti farmaceutici, cosmetici, profumi"
+                },
+                {
+                    "id": "619",
+                    "nome": "Commercio altri prodotti non alimentari"
+                },
+                {
+                    "id": "620",
+                    "nome": "Commercio materiale di recupero"
+                },
+                {
+                    "id": "621",
+                    "nome": "Commercio orologi, gioielleria, argenteria"
+                },
+                {
+                    "id": "630",
+                    "nome": "Servizi degli intermediari del commercio (agenti, rappresentanti e agenzie di mediazione del commercio)"
+                },
+                {
+                    "id": "649",
+                    "nome": "Commercio antiquariato e oggetti d'arte"
+                },
+                {
+                    "id": "653",
+                    "nome": "Commercio libri, giornali, cancelleria"
+                },
+                {
+                    "id": "654",
+                    "nome": "Commercio armi e munizioni"
+                },
+                {
+                    "id": "660",
+                    "nome": "Alberghi e pubblici esercizi"
+                },
+                {
+                    "id": "671",
+                    "nome": "Riparazione auto, moto e biciclette"
+                },
+                {
+                    "id": "672",
+                    "nome": "Riparazione calzature, articoli cuoio, elettrodomestici"
+                },
+                {
+                    "id": "710",
+                    "nome": "Servizi ferroviari, tram, metro, autobus di linea"
+                },
+                {
+                    "id": "722",
+                    "nome": "Servizi trasporti di persone e merci"
+                },
+                {
+                    "id": "724",
+                    "nome": "Servizi per oleodotto e gasdotto"
+                },
+                {
+                    "id": "731",
+                    "nome": "Servizi di custodia valori"
+                },
+                {
+                    "id": "732",
+                    "nome": "Autotrasportatori di contante, titoli e valori c/ terzi"
+                },
+                {
+                    "id": "740",
+                    "nome": "Servizi trasporti marittimi, cabotaggio, aerei"
+                },
+                {
+                    "id": "760",
+                    "nome": "Servizi connessi ai trasporti (gestione porti, autostrade, stazioni di servizio, controllo e pesatura merci)"
+                },
+                {
+                    "id": "771",
+                    "nome": "Agenzie viaggio e intermediari dei trasporti"
+                },
+                {
+                    "id": "773",
+                    "nome": "Servizi di custodia e deposito"
+                },
+                {
+                    "id": "790",
+                    "nome": "Servizi delle comunicazioni e professioni linguistiche, letterarie  (giornalisti, scrittori, ecc.)"
+                },
+                {
+                    "id": "829",
+                    "nome": "Bancari"
+                },
+                {
+                    "id": "830",
+                    "nome": "Servizi finanziari e assicurativi (consul. finanz. e assic., prom. finanz., agenti finanz., broker, mediat. cred. ecc.)"
+                },
+                {
+                    "id": "831",
+                    "nome": "Servizi di consulenza tributaria, del lavoro, direzionale, organizzativa, tecnica, ecc."
+                },
+                {
+                    "id": "832",
+                    "nome": "Professioni amministrativo/contabili (commercialisti, ragionieri, periti commerciali, amm.condominio, revisori, ecc)"
+                },
+                {
+                    "id": "833",
+                    "nome": "Servizi di pubblicita"
+                },
+                {
+                    "id": "834",
+                    "nome": "Servizi di affari immobiliari (agenti immobiliari)"
+                },
+                {
+                    "id": "840",
+                    "nome": "Servizi di noleggio e locazione"
+                },
+                {
+                    "id": "920",
+                    "nome": "Servizi disinfezione, pulizia e nettezza urbana"
+                },
+                {
+                    "id": "930",
+                    "nome": "Servizi insegnamento"
+                },
+                {
+                    "id": "940",
+                    "nome": "Servizi di ricerca e sviluppo"
+                },
+                {
+                    "id": "950",
+                    "nome": "Servizi sanitari destinabili alla vendita"
+                },
+                {
+                    "id": "960",
+                    "nome": "Servizi istituzioni sociali, delle associazioni professionali e delle organizzazioni economiche e sindacali"
+                },
+                {
+                    "id": "970",
+                    "nome": "Servizi ricreativi e culturali(discoteche, circhi, luna park, ecc.)"
+                },
+                {
+                    "id": "971",
+                    "nome": "Professioni sportive e artistiche"
+                },
+                {
+                    "id": "972",
+                    "nome": "Sale corse, case da gioco"
+                },
+                {
+                    "id": "981",
+                    "nome": "Servizi di lavanderia e tintoria"
+                },
+                {
+                    "id": "982",
+                    "nome": "Servizi parrucchieri barbieri e istituti di bellezza"
+                },
+                {
+                    "id": "983",
+                    "nome": "Servizi studi fotografici"
+                },
+                {
+                    "id": "984",
+                    "nome": "Altri servizi personali non altrove classificati (servizi delle pompe funebri, di cremazione, di agenzie matrim., ecc.)"
+                },
+                {
+                    "id": "990",
+                    "nome": "Professioni giuridico/legali (avvocati, notai)"
+                },
+                {
+                    "id": "991",
+                    "nome": "Professioni tecnico/scientifiche (architetti, ingegneri, chimici, biologi, agronomi, periti, geometri, ecc.)"
+                },
+                {
+                    "id": "992",
+                    "nome": "Professioni in discipline religiose e teologiche"
+                },
+                {
+                    "id": "993",
+                    "nome": "Altri agenti, mediatori e consulenti non ancora classificati (es. agenti sportivi)"
+                },
+                {
+                    "id": "994",
+                    "nome": "Badante"
+                },
+                {
+                    "id": "999",
+                    "nome": "Altra attivita'"
+                }
+            ],
+            "fasciaReddito": [
+                {
+                    "id": "1",
+                    "nome": "Fino a 10.000"
+                },
+                {
+                    "id": "2",
+                    "nome": "Da 10.001  a 25.000"
+                },
+                {
+                    "id": "3",
+                    "nome": "Da 25.001  a 40.000"
+                },
+                {
+                    "id": "4",
+                    "nome": "Da 40.001  a 75.000"
+                },
+                {
+                    "id": "5",
+                    "nome": "Da 75.001  a 500.000"
+        
+        },
+                {
+                    "id": "6",
+                    "nome": "Da 500.001  a 2.500.000"
+                },
+                {
+                    "id": "7",
+                    "nome": "Oltre 2.500.000"
+                }
+            ],
+            "fasciaPatrimonio": [
+                {
+                    "id": "1",
+                    "nome": "Fino a 100.000"
+                },
+                {
+                    "id": "2",
+                    "nome": "Da 100.001  a 300.000"
+                },
+                {
+                    "id": "3",
+                    "nome": "Da 300.001  a 1.000.000"
+                },
+                {
+                    "id": "4",
+                    "nome": "Da 1.000.001  a 3.000.000"
+                },
+                {
+                    "id": "5",
+                    "nome": "Da 3.000.001  a 10.000.000"
+                },
+                {
+                    "id": "6",
+                    "nome": "Oltre 10.000.000"
+                }
+            ],
+            "origineReddito": [
+                {
+                    "id": "1",
+                    "nome": "Lavoro dipendente"
+                },
+                {
+                    "id": "2",
+                    "nome": "Lavoro autonomo"
+                },
+                {
+                    "id": "3",
+                    "nome": "Rendite immobiliari"
+                },
+                {
+                    "id": "4",
+                    "nome": "Rendite fondiarie"
+                },
+                {
+                    "id": "5",
+                    "nome": "Redditi finanziari"
+                },
+                {
+                    "id": "6",
+                    "nome": "Pensione"
+                }
+            ],
+            "origineFondi": [
+                {
+                    "id": "1",
+                    "nome": "Redditi di lavoro autonomo"
+                },
+                {
+                    "id": "2",
+                    "nome": "Redditi di lavoro dipendente"
+                },
+                {
+                    "id": "3",
+                    "nome": "Rendite fondiarie"
+                },
+                {
+                    "id": "4",
+                    "nome": "Redditi finanziari"
+                },
+                {
+                    "id": "5",
+                    "nome": "Redditi d'impresa"
+                },
+                {
+                    "id": "6",
+                    "nome": "Lascito\\eredita'\\donazione"
+                },
+                {
+                    "id": "7",
+                    "nome": "Altro/redditi diversi (plusvalenze, premi, lotteri"
+                }
+            ],
+            "nazionalita": [
+                {
+                    "id": "238",
+                    "nome": "ABU DHABI"
+                },
+                {
+                    "id": "2",
+                    "nome": "AFGHANISTAN"
+                },
+                {
+                    "id": "206",
+                    "nome": "AFRICA DEL SUD OVEST - NAMIBIA"
+                },
+                {
+                    "id": "246",
+                    "nome": "AFRICA SPAGNOLA"
+                },
+                {
+                    "id": "239",
+                    "nome": "AJMAN"
+                },
+                {
+                    "id": "292",
+                    "nome": "ALAND ISOLE"
+                },
+                {
+                    "id": "87",
+                    "nome": "ALBANIA"
+                },
+                {
+                    "id": "3",
+                    "nome": "ALGERIA"
+                },
+                {
+                    "id": "148",
+                    "nome": "AMERICAN SAMOA"
+                },
+                {
+                    "id": "4",
+                    "nome": "ANDORRA"
+                },
+                {
+                    "id": "133",
+                    "nome": "ANGOLA"
+                },
+                {
+                    "id": "209",
+                    "nome": "ANGUILLA"
+                },
+                {
+                    "id": "197",
+                    "nome": "ANTIGUA E BARBUDA"
+                },
+                {
+                    "id": "5",
+                    "nome": "ARABIA SAUDITA"
+                },
+                {
+                    "id": "6",
+                    "nome": "ARGENTINA"
+                },
+                {
+                    "id": "266",
+                    "nome": "ARMENIA"
+                },
+                {
+                    "id": "212",
+                    "nome": "ARUBA"
+                },
+                {
+                    "id": "227",
+                    "nome": "ASCENSION"
+                },
+                {
+                    "id": "7",
+                    "nome": "AUSTRALIA"
+                },
+                {
+                    "id": "8",
+                    "nome": "AUSTRIA"
+                },
+                {
+                    "id": "268",
+                    "nome": "AZERBAIGIAN"
+                },
+                {
+                    "id": "234",
+                    "nome": "AZZORRE ISOLE"
+                },
+                {
+                    "id": "160",
+                    "nome": "BAHAMA"
+                },
+                {
+                    "id": "169",
+                    "nome": "BAHREIN"
+                },
+                {
+                    "id": "130",
+                    "nome": "BANGLADESH"
+                },
+                {
+                    "id": "118",
+                    "nome": "BARBADOS"
+                },
+                {
+                    "id": "9",
+                    "nome": "BELGIO"
+                },
+                {
+                    "id": "198",
+                    "nome": "BELIZE"
+                },
+                {
+                    "id": "158",
+                    "nome": "BENIN"
+                },
+                {
+                    "id": "207",
+                    "nome": "BERMUDA"
+                },
+                {
+                    "id": "97",
+                    "nome": "BHUTAN"
+                },
+                {
+                    "id": "264",
+                    "nome": "BIELORUSSIA"
+                },
+                {
+                    "id": "10",
+                    "nome": "BOLIVIA"
+                },
+                {
+                    "id": "295",
+                    "nome": "BONAIRE SAINT EUSTATIUS AND SABA"
+                },
+                {
+                    "id": "274",
+                    "nome": "BOSNIA ERZEGOVINA"
+                },
+                {
+                    "id": "98",
+                    "nome": "BOTSWANA"
+                },
+                {
+                    "id": "11",
+                    "nome": "BRASILE"
+                },
+                {
+                    "id": "125",
+                    "nome": "BRUNEI DARUSSALAM"
+                },
+                {
+                    "id": "12",
+                    "nome": "BULGARIA"
+                },
+                {
+                    "id": "142",
+                    "nome": "BURKINA FASO"
+                },
+                {
+                    "id": "25",
+                    "nome": "BURUNDI"
+                },
+                {
+                    "id": "135",
+                    "nome": "CAMBOGIA (CAMPUCEA)"
+                },
+                {
+                    "id": "119",
+                    "nome": "CAMERUN"
+                },
+                {
+                    "id": "139",
+                    "nome": "CAMPIONE D'ITALIA"
+                },
+                {
+                    "id": "13",
+                    "nome": "CANADA"
+                },
+                {
+                    "id": "211",
+                    "nome": "CAYMAN ISOLE"
+                },
+                {
+                    "id": "230",
+                    "nome": "CHAFARINAS"
+                },
+                {
+                    "id": "144",
+                    "nome": "CIAD"
+                },
+                {
+                    "id": "15",
+                    "nome": "CILE"
+                },
+                {
+                    "id": "101",
+                    "nome": "CIPRO"
+                },
+                {
+                    "id": "93",
+                    "nome": "CITTA DEL VATICANO"
+                },
+                {
+                    "id": "223",
+                    "nome": "CLIPPERTON"
+                },
+                {
+                    "id": "17",
+                    "nome": "COLOMBIA"
+                },
+                {
+                    "id": "176",
+                    "nome": "COMORE"
+                },
+                {
+                    "id": "18",
+                    "nome": "CONGO REPUBBLICA DEMOCRATICA"
+                },
+                {
+                    "id": "145",
+                    "nome": "CONGO REPUBBLICA POPOLARE"
+                },
+                {
+                    "id": "74",
+                    "nome": "COREA DEL NORD"
+                },
+                {
+                    "id": "84",
+                    "nome": "COREA DEL SUD"
+                },
+                {
+                    "id": "146",
+                    "nome": "COSTA D'AVORIO"
+                },
+                {
+                    "id": "19",
+                    "nome": "COSTARICA"
+                },
+                {
+                    "id": "261",
+                    "nome": "CROAZIA"
+                },
+                {
+                    "id": "20",
+                    "nome": "CUBA"
+                },
+                {
+                    "id": "296",
+                    "nome": "CURACAO"
+                },
+                {
+                    "id": "21",
+                    "nome": "DANIMARCA"
+                },
+                {
+                    "id": "192",
+                    "nome": "DOMINICA"
+
+                },
+                {
+                    "id": "240",
+                    "nome": "DUBAI"
+                },
+                {
+                    "id": "24",
+                    "nome": "ECUADOR"
+                },
+                {
+                    "id": "23",
+                    "nome": "EGITTO"
+                },
+                {
+                    "id": "64",
+                    "nome": "EL SALVADOR"
+                },
+                {
+                    "id": "277",
+                    "nome": "ERITREA"
+                },
+                {
+                    "id": "257",
+                    "nome": "ESTONIA"
+                },
+                {
+                    "id": "26",
+                    "nome": "ETIOPIA"
+                },
+                {
+                    "id": "190",
+                    "nome": "FALKLAND"
+                },
+                {
+                    "id": "27",
+                    "nome": "FILIPPINE"
+                },
+                {
+                    "id": "28",
+                    "nome": "FINLANDIA"
+                },
+                {
+                    "id": "29",
+                    "nome": "FRANCIA"
+                },
+                {
+                    "id": "241",
+                    "nome": "FUIJAYRAH"
+                },
+                {
+                    "id": "157",
+                    "nome": "GABON"
+                },
+                {
+                    "id": "164",
+                    "nome": "GAMBIA"
+                },
+                {
+                    "id": "267",
+                    "nome": "GEORGIA"
+                },
+                {
+                    "id": "112",
+                    "nome": "GHANA"
+                },
+                {
+                    "id": "82",
+                    "nome": "GIAMAICA"
+                },
+                {
+                    "id": "88",
+                    "nome": "GIAPPONE"
+                },
+                {
+                    "id": "102",
+                    "nome": "GIBILTERRA"
+                },
+                {
+                    "id": "113",
+                    "nome": "GIBUTI"
+                },
+                {
+                    "id": "122",
+                    "nome": "GIORDANIA"
+                },
+                {
+                    "id": "228",
+                    "nome": "GOUGH"
+                },
+                {
+                    "id": "32",
+                    "nome": "GRECIA"
+                },
+                {
+                    "id": "156",
+                    "nome": "GRENADA"
+                },
+                {
+                    "id": "200",
+                    "nome": "GROENLANDIA"
+                },
+                {
+                    "id": "214",
+                    "nome": "GUADALUPA"
+                },
+                {
+                    "id": "154",
+                    "nome": "GUAM"
+                },
+                {
+                    "id": "33",
+                    "nome": "GUATEMALA"
+                },
+                {
+                    "id": "123",
+                    "nome": "GUAYANA FRANCESE"
+                },
+                {
+                    "id": "201",
+                    "nome": "GUERNSEY C.I."
+                },
+                {
+                    "id": "137",
+                    "nome": "GUINEA"
+                },
+                {
+                    "id": "185",
+                    "nome": "GUINEA BISSAU"
+                },
+                {
+                    "id": "167",
+                    "nome": "GUINEA EQUATORIALE"
+                },
+                {
+                    "id": "159",
+                    "nome": "GUYANA"
+                },
+                {
+                    "id": "34",
+                    "nome": "HAITI"
+                },
+                {
+                    "id": "284",
+                    "nome": "HEARD E MCDONALD ISOLE"
+                },
+                {
+                    "id": "35",
+                    "nome": "HONDURAS"
+                },
+                {
+                    "id": "103",
+                    "nome": "HONG KONG"
+                },
+                {
+                    "id": "114",
+                    "nome": "INDIA"
+                },
+                {
+                    "id": "129",
+                    "nome": "INDONESIA"
+                },
+                {
+                    "id": "39",
+                    "nome": "IRAN"
+                },
+                {
+                    "id": "38",
+                    "nome": "IRAQ"
+                },
+                {
+                    "id": "40",
+                    "nome": "IRLANDA"
+                },
+                {
+                    "id": "41",
+                    "nome": "ISLANDA"
+                },
+                {
+                    "id": "203",
+                    "nome": "ISOLA DI MAN"
+                },
+                {
+                    "id": "100",
+                    "nome": "ISOLE CANARIE"
+                },
+                {
+                    "id": "256",
+                    "nome": "ISOLE CAROLINE"
+                },
+                {
+                    "id": "255",
+                    "nome": "ISOLE CHAGOS"
+                },
+                {
+                    "id": "237",
+                    "nome": "ISOLE COOK"
+                },
+                {
+                    "id": "188",
+                    "nome": "ISOLE DEL CAPO VERDE"
+                },
+                {
+                    "id": "204",
+                    "nome": "ISOLE FAEROER"
+                },
+                {
+                    "id": "161",
+                    "nome": "ISOLE FIGI"
+                },
+                {
+                    "id": "217",
+                    "nome": "ISOLE MARSHALL"
+                },
+                {
+                    "id": "249",
+                    "nome": "ISOLE VERGINI BRITANNICHE"
+                },
+                {
+                    "id": "178",
+                    "nome": "ISOLE WAKE"
+                },
+                {
+                    "id": "182",
+                    "nome": "ISRAELE"
+                },
+                {
+                    "id": "86",
+                    "nome": "ITALIA"
+                },
+                {
+                    "id": "202",
+                    "nome": "JERSEY"
+                },
+                {
+                    "id": "269",
+                    "nome": "KAZAKISTAN"
+                },
+                {
+                    "id": "116",
+                    "nome": "KENYA"
+                },
+                {
+                    "id": "270",
+                    "nome": "KIRGHIZISTAN"
+                },
+                {
+                    "id": "194",
+                    "nome": "KIRIBATI"
+                },
+                {
+                    "id": "126",
+                    "nome": "KUWAIT"
+                },
+                {
+                    "id": "136",
+                    "nome": "LAOS"
+                },
+                {
+                    "id": "89",
+                    "nome": "LESOTHO"
+                },
+                {
+                    "id": "258",
+                    "nome": "LETTONIA"
+                },
+                {
+                    "id": "95",
+                    "nome": "LIBANO"
+                },
+                {
+                    "id": "44",
+                    "nome": "LIBERIA"
+                },
+                {
+                    "id": "45",
+                    "nome": "LIBIA"
+                },
+                {
+                    "id": "90",
+                    "nome": "LIECHTENSTEIN"
+                },
+                {
+                    "id": "259",
+                    "nome": "LITUANIA"
+                },
+                {
+                    "id": "92",
+                    "nome": "LUSSEMBURGO"
+                },
+                {
+                    "id": "59",
+                    "nome": "MACAO"
+                },
+                {
+                    "id": "278",
+                    "nome": "MACEDONIA"
+                },
+                {
+                    "id": "104",
+                    "nome": "MADAGASCAR"
+                },
+                {
+                    "id": "235",
+                    "nome": "MADEIRA"
+                },
+                {
+                    "id": "56",
+                    "nome": "MALAWI"
+                },
+                {
+                    "id": "106",
+                    "nome": "MALAYSIA"
+                },
+                {
+                    "id": "127",
+                    "nome": "MALDIVE"
+                },
+                {
+                    "id": "149",
+                    "nome": "MALI"
+                },
+                {
+                    "id": "105",
+                    "nome": "MALTA"
+                },
+                {
+                    "id": "219",
+                    "nome": "MARIANNE (ISOLE)"
+                },
+                {
+                    "id": "107",
+                    "nome": "MAROCCO"
+                },
+                {
+                    "id": "213",
+                    "nome": "MARTINICA"
+                },
+                {
+                    "id": "141",
+                    "nome": "MAURITANIA"
+                },
+                {
+                    "id": "128",
+                    "nome": "MAURIZIO"
+                },
+                {
+                    "id": "226",
+                    "nome": "MAYOTTE"
+                },
+                {
+                    "id": "231",
+                    "nome": "MELILLA"
+                },
+                {
+                    "id": "46",
+                    "nome": "MESSICO"
+                },
+                {
+                    "id": "215",
+                    "nome": "MICRONESIA"
+                },
+                {
+                 
+   "id": "177",
+                    "nome": "MIDWAY ISOLE"
+                },
+                {
+                    "id": "265",
+                    "nome": "MOLDAVIA"
+                },
+                {
+                    "id": "91",
+                    "nome": "MONACO"
+                },
+                {
+                    "id": "110",
+                    "nome": "MONGOLIA"
+                },
+                {
+                    "id": "290",
+                    "nome": "MONTENEGRO"
+                },
+                {
+                    "id": "208",
+                    "nome": "MONTSERRAT"
+                },
+                {
+                    "id": "134",
+                    "nome": "MOZAMBICO"
+                },
+                {
+                    "id": "83",
+                    "nome": "MYANMAR"
+                },
+                {
+                    "id": "109",
+                    "nome": "NAURU"
+                },
+                {
+                    "id": "115",
+                    "nome": "NEPAL"
+                },
+                {
+                    "id": "47",
+                    "nome": "NICARAGUA"
+                },
+                {
+                    "id": "150",
+                    "nome": "NIGER"
+                },
+                {
+                    "id": "117",
+                    "nome": "NIGERIA"
+                },
+                {
+                    "id": "205",
+                    "nome": "NIUE - SAVAGE"
+                },
+                {
+                    "id": "285",
+                    "nome": "NORFOLK ISOLE"
+                },
+                {
+                    "id": "48",
+                    "nome": "NORVEGIA"
+                },
+                {
+                    "id": "253",
+                    "nome": "NUOVA CALEDONIA"
+                },
+                {
+                    "id": "49",
+                    "nome": "NUOVA ZELANDA"
+                },
+                {
+                    "id": "175",
+                    "nome": "OCEANIA BRITANNICA"
+                },
+                {
+                    "id": "252",
+                    "nome": "OCEANIA DEGLI STATI UNITI"
+                },
+                {
+                    "id": "163",
+                    "nome": "OMAN"
+                },
+                {
+                    "id": "50",
+                    "nome": "PAESI BASSI O OLANDA"
+                },
+                {
+                    "id": "36",
+                    "nome": "PAKISTAN"
+                },
+                {
+                    "id": "279",
+                    "nome": "PALESTINA, TERRITORI AUTONOMI"
+                },
+                {
+                    "id": "51",
+                    "nome": "PANAMA"
+                },
+                {
+                    "id": "186",
+                    "nome": "PAPUA E NUOVA GUINEA"
+                },
+                {
+                    "id": "52",
+                    "nome": "PARAGUAY"
+                },
+                {
+                    "id": "232",
+                    "nome": "PENON DE ALHUCEMAS"
+                },
+                {
+                    "id": "233",
+                    "nome": "PENON DE VELEZ DE LA GOMERA"
+                },
+                {
+                    "id": "53",
+                    "nome": "PERU'"
+                },
+                {
+                    "id": "225",
+                    "nome": "POLINESIA FRANCESE"
+                },
+                {
+                    "id": "54",
+                    "nome": "POLONIA"
+                },
+                {
+                    "id": "55",
+                    "nome": "PORTOGALLO"
+                },
+                {
+                    "id": "220",
+                    "nome": "PORTORICO"
+                },
+                {
+                    "id": "168",
+                    "nome": "QATAR"
+                },
+                {
+                    "id": "242",
+                    "nome": "RAS EL KHAIMAN"
+                },
+                {
+                    "id": "31",
+                    "nome": "REGNO UNITO"
+                },
+                {
+                    "id": "22",
+                    "nome": "REP. CINA NAZ. (TAIWAN)"
+                },
+                {
+                    "id": "275",
+                    "nome": "REPUBBLICA CECA"
+                },
+                {
+                    "id": "143",
+                    "nome": "REPUBBLICA CENTRAFRICANA"
+                },
+                {
+                    "id": "291",
+                    "nome": "REPUBBLICA DEL KOSOVO"
+                },
+                {
+                    "id": "216",
+                    "nome": "REPUBBLICA DI PALAU"
+                },
+                {
+                    "id": "37",
+                    "nome": "REPUBBLICA DI SAN MARINO"
+                },
+                {
+                    "id": "63",
+                    "nome": "REPUBBLICA DOMINICANA"
+                },
+                {
+                    "id": "94",
+                    "nome": "REPUBBLICA FED.DI GERMANIA"
+                },
+                {
+                    "id": "16",
+                    "nome": "REPUBBLICA POPOLARE CINESE"
+                },
+                {
+                    "id": "78",
+                    "nome": "REPUBBLICA SUDAFRICANA"
+                },
+                {
+                    "id": "247",
+                    "nome": "REUNION"
+                },
+                {
+                    "id": "61",
+                    "nome": "ROMANIA"
+                },
+                {
+                    "id": "151",
+                    "nome": "RUANDA"
+                },
+                {
+                    "id": "262",
+                    "nome": "RUSSIA"
+                },
+                {
+                    "id": "254",
+                    "nome": "S.ELENA"
+                },
+                {
+                    "id": "166",
+                    "nome": "SAHARA OCCIDENTALE"
+                },
+                {
+                    "id": "293",
+                    "nome": "SAINT BARTHELEMY"
+                },
+                {
+                    "id": "199",
+                    "nome": "SAINT LUCIA"
+                },
+                {
+                    "id": "191",
+                    "nome": "SALOMONE"
+                },
+                {
+                    "id": "131",
+                    "nome": "SAMOA OCCIDENTALE"
+                },
+                {
+                    "id": "187",
+                    "nome": "SAO TOME' E PRINCIPE"
+                },
+                {
+                    "id": "189",
+                    "nome": "SEICELLE"
+                },
+                {
+                    "id": "152",
+                    "nome": "SENEGAL"
+                },
+                {
+                    "id": "289",
+                    "nome": "SERBIA"
+                },
+                {
+                    "id": "243",
+                    "nome": "SHARJAH"
+                },
+                {
+                    "id": "153",
+                    "nome": "SIERRA LEONE"
+                },
+                {
+                    "id": "147",
+                    "nome": "SINGAPORE"
+                },
+                {
+                    "id": "294",
+                    "nome": "SINT MAARTEN (DUTCH PART)"
+                },
+                {
+                    "id": "65",
+                    "nome": "SIRIA"
+                },
+                {
+                    "id": "276",
+                    "nome": "SLOVACCHIA"
+                },
+                {
+                    "id": "260",
+                    "nome": "SLOVENIA"
+                },
+                {
+                    "id": "66",
+                    "nome": "SOMALIA"
+                },
+                {
+                    "id": "67",
+                    "nome": "SPAGNA"
+                },
+                {
+                    "id": "85",
+                    "nome": "SRI LANKA"
+                },
+                {
+                    "id": "195",
+                    "nome": "ST. KITTS E NEVIS"
+                },
+                {
+                    "id": "222",
+                    "nome": "ST. MARTIN SETTENTRIONALE"
+                },
+                {
+                    "id": "248",
+                    "nome": "ST. PIERRE E MIQUELON"
+                },
+                {
+                    "id": "69",
+                    "nome": "STATI UNITI D'AMERICA"
+                },
+                {
+                    "id": "70",
+                    "nome": "SUDAN"
+                },
+                {
+                    "id": "124",
+                    "nome": "SURINAME"
+                },
+                {
+                    "id": "286",
+                    "nome": "SVALBARD E JAN MAYEN ISOLE"
+                },
+                {
+                    "id": "68",
+                    "nome": "SVEZIA"
+                },
+                {
+                    "id": "71",
+                    "nome": "SVIZZERA"
+                },
+                {
+                    "id": "138",
+                    "nome": "SWAZILAND - NGWANE"
+                },
+                {
+                    "id": "272",
+                    "nome": "TAGIKISTAN"
+                },
+                {
+                    "id": "57",
+                    "nome": "TANZANIA"
+                },
+                {
+                    "id": "245",
+                    "nome": "TERRIT.BRIT.OCC."
+                },
+                {
+                    "id": "183",
+                    "nome": "TERRITORI FRANCESI DEL SUD"
+                },
+                {
+                    "id": "180",
+                    "nome": "TERRITORIO ANTARTICO BRITANNICO"
+                },
+                {
+                    "id": "72",
+                    "nome": "THAILANDIA"
+                },
+                {
+                
+    "id": "287",
+                    "nome": "TIMOR"
+                },
+                {
+                    "id": "155",
+                    "nome": "TOGO"
+                },
+                {
+                    "id": "236",
+                    "nome": "TOKELAU"
+                },
+                {
+                    "id": "162",
+                    "nome": "TONGA"
+                },
+                {
+                    "id": "120",
+                    "nome": "TRINIDAD E TOBAGO"
+                },
+                {
+                    "id": "229",
+                    "nome": "TRISTAN DE CUNHA"
+                },
+                {
+                    "id": "75",
+                    "nome": "TUNISIA"
+                },
+                {
+                    "id": "76",
+                    "nome": "TURCHIA"
+                },
+                {
+                    "id": "273",
+                    "nome": "TURKMENISTAN"
+                },
+                {
+                    "id": "210",
+                    "nome": "TURKS E CAICOS"
+                },
+                {
+                    "id": "193",
+                    "nome": "TUVALU"
+                },
+                {
+                    "id": "263",
+                    "nome": "UCRAINA"
+                },
+                {
+                    "id": "132",
+                    "nome": "UGANDA"
+                },
+                {
+                    "id": "244",
+                    "nome": "UMM AL QAIWAIN"
+                },
+                {
+                    "id": "77",
+                    "nome": "UNGHERIA"
+                },
+                {
+                    "id": "80",
+                    "nome": "URUGUAY"
+                },
+                {
+                    "id": "271",
+                    "nome": "UZBEKISTAN"
+                },
+                {
+                    "id": "121",
+                    "nome": "VANUATU"
+                },
+                {
+                    "id": "81",
+                    "nome": "VENEZUELA"
+                },
+                {
+                    "id": "221",
+                    "nome": "VERGINI AMERICANE (ISOLE)"
+                },
+                {
+                    "id": "62",
+                    "nome": "VIETNAM"
+                },
+                {
+                    "id": "196",
+                    "nome": "VINCENT E GRENADINE"
+                },
+                {
+                    "id": "218",
+                    "nome": "WALLIS E FUTUNA"
+                },
+                {
+                    "id": "42",
+                    "nome": "YEMEN"
+                },
+                {
+                    "id": "58",
+                    "nome": "ZAMBIA"
+                },
+                {
+                    "id": "73",
+                    "nome": "ZIMBABWE"
+                }
+            ],
+            "provincia": [
+                {
+                    "id": "AG",
+                    "nome": "AG"
+                },
+                {
+                    "id": "AL",
+                    "nome": "AL"
+                },
+                {
+                    "id": "AN",
+                    "nome": "AN"
+                },
+                {
+                    "id": "AO",
+                    "nome": "AO"
+                },
+                {
+                    "id": "AP",
+                    "nome": "AP"
+                },
+                {
+                    "id": "AQ",
+                    "nome": "AQ"
+                },
+                {
+                    "id": "AR",
+                    "nome": "AR"
+                },
+                {
+                    "id": "AT",
+                    "nome": "AT"
+                },
+                {
+                    "id": "AV",
+                    "nome": "AV"
+                },
+                {
+                    "id": "BA",
+                    "nome": "BA"
+                },
+                {
+                    "id": "BG",
+                    "nome": "BG"
+                },
+                {
+                    "id": "BI",
+                    "nome": "BI"
+                },
+                {
+                    "id": "BL",
+                    "nome": "BL"
+                },
+                {
+                    "id": "BN",
+                    "nome": "BN"
+                },
+                {
+                    "id": "BO",
+                    "nome": "BO"
+                },
+                {
+                    "id": "BR",
+                    "nome": "BR"
+                },
+                {
+                    "id": "BS",
+                    "nome": "BS"
+                },
+                {
+                    "id": "BT",
+                    "nome": "BT"
+                },
+                {
+                    "id": "BZ",
+                    "nome": "BZ"
+                },
+                {
+                    "id": "CA",
+                    "nome": "CA"
+                },
+                {
+                    "id": "CB",
+                    "nome": "CB"
+                },
+                {
+                    "id": "CE",
+                    "nome": "CE"
+                },
+                {
+                    "id": "CH",
+                    "nome": "CH"
+                },
+                {
+                    "id": "CL",
+                    "nome": "CL"
+                },
+                {
+                    "id": "CN",
+                    "nome": "CN"
+                },
+                {
+                    "id": "CO",
+                    "nome": "CO"
+                },
+                {
+                    "id": "CR",
+                    "nome": "CR"
+                },
+                {
+                    "id": "CS",
+                    "nome": "CS"
+                },
+                {
+                    "id": "CT",
+                    "nome": "CT"
+                },
+                {
+                    "id": "CZ",
+                    "nome": "CZ"
+                },
+                {
+                    "id": "EN",
+                    "nome": "EN"
+                },
+                {
+                    "id": "FC",
+                    "nome": "FC"
+                },
+                {
+                    "id": "FE",
+                    "nome": "FE"
+                },
+                {
+                    "id": "FG",
+                    "nome": "FG"
+                },
+                {
+                    "id": "FI",
+                    "nome": "FI"
+                },
+                {
+                    "id": "FM",
+                    "nome": "FM"
+                },
+                {
+                    "id": "FR",
+                    "nome": "FR"
+                },
+                {
+                    "id": "GE",
+                    "nome": "GE"
+                },
+                {
+                    "id": "GO",
+                    "nome": "GO"
+                },
+                {
+                    "id": "GR",
+                    "nome": "GR"
+                },
+                {
+                    "id": "IM",
+                    "nome": "IM"
+                },
+                {
+                    "id": "IS",
+                    "nome": "IS"
+                },
+                {
+                    "id": "KR",
+                    "nome": "KR"
+                },
+                {
+                    "id": "LC",
+                    "nome": "LC"
+                },
+                {
+                    "id": "LE",
+                    "nome": "LE"
+                },
+                {
+                    "id": "LI",
+                    "nome": "LI"
+                },
+                {
+                    "id": "LO",
+                    "nome": "LO"
+                },
+                {
+                    "id": "LT",
+                    "nome": "LT"
+                },
+                {
+                    "id": "LU",
+                    "nome": "LU"
+                },
+                {
+                    "id": "MB",
+                    "nome": "MB"
+                },
+                {
+                    "id": "MC",
+                    "nome": "MC"
+                },
+                {
+                    "id": "ME",
+                    "nome": "ME"
+                },
+                {
+                    "id": "MI",
+                    "nome": "MI"
+                },
+                {
+                    "id": "MN",
+                    "nome": "MN"
+                },
+                {
+                    "id": "MO",
+                    "nome": "MO"
+                },
+                {
+                    "id": "MS",
+                    "nome": "MS"
+                },
+                {
+                    "id": "MT",
+                    "nome": "MT"
+                },
+                {
+                    "id": "NA",
+                    "nome": "NA"
+                },
+                {
+                    "id": "NO",
+                    "nome": "NO"
+                },
+                {
+                    "id": "NU",
+                    "nome": "NU"
+                },
+                {
+                    "id": "OR",
+                    "nome": "OR"
+                },
+                {
+                    "id": "PA",
+                    "nome": "PA"
+                },
+                {
+                    "id": "PC",
+                    "nome": "PC"
+                },
+                {
+                    "id": "PD",
+                    "nome": "PD"
+                },
+                {
+                    "id": "PE",
+                    "nome": "PE"
+                },
+                {
+                    "id": "PG",
+                    "nome": "PG"
+                },
+                {
+                    "id": "PI",
+                    "nome": "PI"
+                },
+                {
+                    "id": "PN",
+                    "nome": "PN"
+                },
+                {
+                    "id": "PO",
+                    "nome": "PO"
+    
+            },
+                {
+                    "id": "PR",
+                    "nome": "PR"
+                },
+                {
+                    "id": "PT",
+                    "nome": "PT"
+                },
+                {
+                    "id": "PU",
+                    "nome": "PU"
+                },
+                {
+                    "id": "PV",
+                    "nome": "PV"
+                },
+                {
+                    "id": "PZ",
+                    "nome": "PZ"
+                },
+                {
+                    "id": "RA",
+                    "nome": "RA"
+                },
+                {
+                    "id": "RC",
+                    "nome": "RC"
+                },
+                {
+                    "id": "RE",
+                    "nome": "RE"
+                },
+                {
+                    "id": "RG",
+                    "nome": "RG"
+                },
+                {
+                    "id": "RI",
+                    "nome": "RI"
+                },
+                {
+                    "id": "RM",
+                    "nome": "RM"
+                },
+                {
+                    "id": "RN",
+                    "nome": "RN"
+                },
+                {
+                    "id": "RO",
+                    "nome": "RO"
+                },
+                {
+                    "id": "SA",
+                    "nome": "SA"
+                },
+                {
+                    "id": "SI",
+                    "nome": "SI"
+                },
+                {
+                    "id": "SO",
+                    "nome": "SO"
+                },
+                {
+                    "id": "SP",
+                    "nome": "SP"
+                },
+                {
+                    "id": "SR",
+                    "nome": "SR"
+                },
+                {
+                    "id": "SS",
+                    "nome": "SS"
+                },
+                {
+                    "id": "SU",
+                    "nome": "SU"
+                },
+                {
+                    "id": "SV",
+                    "nome": "SV"
+                },
+                {
+                    "id": "TA",
+                    "nome": "TA"
+                },
+                {
+                    "id": "TE",
+                    "nome": "TE"
+                },
+                {
+                    "id": "TN",
+                    "nome": "TN"
+                },
+                {
+                    "id": "TO",
+                    "nome": "TO"
+                },
+                {
+                    "id": "TP",
+                    "nome": "TP"
+                },
+                {
+                    "id": "TR",
+                    "nome": "TR"
+                },
+                {
+                    "id": "TS",
+                    "nome": "TS"
+                },
+                {
+                    "id": "TV",
+                    "nome": "TV"
+                },
+                {
+                    "id": "UD",
+                    "nome": "UD"
+                },
+                {
+                    "id": "VA",
+                    "nome": "VA"
+                },
+                {
+                    "id": "VB",
+                    "nome": "VB"
+                },
+                {
+                    "id": "VC",
+                    "nome": "VC"
+                },
+                {
+                    "id": "VE",
+                    "nome": "VE"
+                },
+                {
+                    "id": "VI",
+                    "nome": "VI"
+                },
+                {
+                    "id": "VR",
+                    "nome": "VR"
+                },
+                {
+                    "id": "VT",
+                    "nome": "VT"
+                },
+                {
+                    "id": "VV",
+                    "nome": "VV"
+                }
+            ]
+        },
+        "TITOLI_STUDIO": [
+            {
+                "codice": "LaureaDisciplineEconomiche",
+                "descrizione": "Laurea in discipline economiche"
+            },
+            {
+                "codice": "Laurea",
+                "descrizione": "Laurea"
+            },
+            {
+                "codice": "Diploma",
+                "descrizione": "Diploma"
+            },
+            {
+                "codice": "LicenzaMedia",
+                "descrizione": "Licenza media"
+            },
+            {
+                "codice": "LicenzaElementare",
+                "descrizione": "Licenza elementare"
+            },
+            {
+                "codice": "Nessuno",
+                "descrizione": "Nessuno"
+            }
+        ],
+        "SESSO": [
+            {
+                "codice": "M",
+                "descrizione": "M"
+            },
+            {
+                "codice": "F",
+                "descrizione": "F"
+            }
+        ]
+    }
 }
