@@ -1,4 +1,4 @@
-<h2>Portafoglio titoli e fondi</h2>
+﻿<h2>Portafoglio titoli e fondi</h2>
 <!-- SELETTORE DEPOSITO -->
 <?php include ("./parts/selettore_deposito.php"); ?>
 <!-- FINE SELETTORE DEPOSITO -->
@@ -63,7 +63,7 @@ $(function(){
 
                     <!-- Overlayer confronto mercati -->
                     <div class="modal fade" id="layerConfronta" tabindex="-1" role="dialog" aria-labelledby="layerConfrontaLabel">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
@@ -482,11 +482,14 @@ $(function(){
                 var tablePortafoglio = $('#tablePortafoglio');
                 tablePortafoglio.bootstrapTable({
                         onPostBody: function(){
+
                             // Funzioni da ripetere ad ogni refresh
                             $(".table-btn-more").not("inited").click(function(){
                                     $("#layerConfronta").modal("show");
                                 });
+                            
                             attivaIconaOperativa("#tablePortafoglio");
+                                                   
                         }
                 });
 
@@ -494,13 +497,11 @@ $(function(){
                 initThFilter();
             });
         </script>
-        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-                    <th class="left filter" data-sortable="true" id="filterTitolo">
-                        Titolo/Fondo
-                    </th>
+                    <th class="left filter" data-sortable="true" id="filterTitolo">Titolo/Fondo</th>
                     <th class="left">Mercato</th>
                     <th class="right">Q.t&agrave; in<br>portaf.</th>
                     <th class="right">Q.t&agrave;<br>disp.</th>
@@ -515,7 +516,7 @@ $(function(){
             </thead>
             <tbody>	
             <?php
-                for($x=0;$x<=6;$x++)  {
+                for($x=0;$x<=10;$x++) {
                     ?>
                     <tr>
                         <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
@@ -536,21 +537,21 @@ $(function(){
                         <td class="right"><?php print rand(0,10000)/100;?></td>
                         <td class="right"><?php print rand(0,10000)/100;?></td>
                         <td class="right"><?php print rand(0,10000)/100;?></td>
-                        <td class="left"><?php print ["Telecomunicazioni","Chimica e materie prime","Industria"][rand(0,2)];?></td>
+                        <td class="left">Lorem ipsum dolor</td>
                         <td class="right">00,0&euro;</td>
                         <td class="right">101,01<br>11:17:05</td>
                         <td class="right">20.202,00</td>
                         <td class="right nega">-24,00<br>-0,1%</td>
                     </tr>
                     <?php
-
                 }            
             ?>
             </tbody>
             <tfoot>
                 <tr>
                     <td class="bgWhite brdWhite"></td>
-                    <td colspan="9"><strong>Totale portafoglio</strong></td>
+                    <td><strong> Totale portafoglio</strong></td>
+                    <td colspan="8"></td>
                     <td class="right">123.404,00</td>
                     <td class="right nega">-24,00<br>-0,1%</td>
                 </tr>
@@ -595,14 +596,14 @@ $(function(){
         <div class="collapse collapse-par-collapse" id="collapseNoteEtf">
             <p>Dal possesso di ETF (Exchange Traded Fund) si possono generare sia redditi di capitale, sia redditi diversi.</p>
             <p><strong>Redditi di capitale</strong></br>
-            L'E.T.F. riconosce agli investitori i dividendi incassati a fronte delle azioni detenute in portafoglio, nonché i proventi del loro reinvestimento e quelli derivanti dalle operazioni di "prestito titoli" (ovvero dividendi).
-            La normativa fiscale stabilisce che la differenza tra il ricavo e il costo sostenuto è oggetto di imponibilità fiscale, con la precisazione che il reddito di capitale è determinato dal differenziale positivo tra il NAV dell'operazione di vendita/rimborso e il NAV dell'operazione di acquisto/sottoscrizione, denominato Delta NAV. La sigla NAV è acronimo di Net Asset Value, e corrisponde al patrimonio netto del fondo diviso per il numero di quote in circolazione. Quando l'E.T.F. è acquistato e venduto nello stesso giorno, il suo Delta NAV sarà nullo.
-            Nel caso in cui la posizione del cliente si sia formata sulla base di molteplici acquisti, effettuati a prezzi differenti, verrà utilizzato come prezzo NAV di acquisto un valore medio ponderato sulle quantità (calcolato sulla base dei valori lordi delle quote dei giorni in cui sono stati effettuati gli acquisti, ponderati sulle quantità).
-            Sui redditi di capitale (proventi periodici e Delta NAV positivo) si applica una ritenuta del 12,50%, a titolo d'imposta per i percipienti persone fisiche e a titolo d'acconto nei confronti delle Società di capitali.
+            L'E.T.F. riconosce agli investitori i dividendi incassati a fronte delle azioni detenute in portafoglio, nonch i proventi del loro reinvestimento e quelli derivanti dalle operazioni di "prestito titoli" (ovvero dividendi).
+            La normativa fiscale stabilisce che la differenza tra il ricavo e il costo sostenuto  oggetto di imponibilit fiscale, con la precisazione che il reddito di capitale  determinato dal differenziale positivo tra il NAV dell'operazione di vendita/rimborso e il NAV dell'operazione di acquisto/sottoscrizione, denominato Delta NAV. La sigla NAV  acronimo di Net Asset Value, e corrisponde al patrimonio netto del fondo diviso per il numero di quote in circolazione. Quando l'E.T.F.  acquistato e venduto nello stesso giorno, il suo Delta NAV sar nullo.
+            Nel caso in cui la posizione del cliente si sia formata sulla base di molteplici acquisti, effettuati a prezzi differenti, verr utilizzato come prezzo NAV di acquisto un valore medio ponderato sulle quantit (calcolato sulla base dei valori lordi delle quote dei giorni in cui sono stati effettuati gli acquisti, ponderati sulle quantit).
+            Sui redditi di capitale (proventi periodici e Delta NAV positivo) si applica una ritenuta del 12,50%, a titolo d'imposta per i percipienti persone fisiche e a titolo d'acconto nei confronti delle Societ di capitali.
             </p>
             <p><strong>
             Redditi diversi</strong><br>
-            L'eventuale reddito diverso è pari alla differenza tra prezzo di vendita e prezzo di acquisto meno il Delta NAV riferito alle medesime date di vendita e di acquisto. Le plus/minusvalenze come sopra determinate entreranno mensilmente a far parte del conteggio dell'imposta sostitutiva sui capital gain di cui al D. Lgs. 461/97 (Regime amministrato o gestito per le sole persone fisiche).</p>
+            L'eventuale reddito diverso  pari alla differenza tra prezzo di vendita e prezzo di acquisto meno il Delta NAV riferito alle medesime date di vendita e di acquisto. Le plus/minusvalenze come sopra determinate entreranno mensilmente a far parte del conteggio dell'imposta sostitutiva sui capital gain di cui al D. Lgs. 461/97 (Regime amministrato o gestito per le sole persone fisiche).</p>
         </div>
     </div>
 </section>

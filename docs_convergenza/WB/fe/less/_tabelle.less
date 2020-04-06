@@ -1673,9 +1673,17 @@ div.fixed-table-scroll-outer {
 
 .bootstrap-table {
     margin-bottom: 0;
-
+    position:relative;
     &+.clearfix {
         margin-bottom: 20px;
+    }
+    .fixed-columns {
+        position: absolute;
+        top: 0;
+        left:0;
+        overflow:hidden;
+        z-index: 1;
+        background: #ffffff;
     }
 }
 

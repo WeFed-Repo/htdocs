@@ -277,7 +277,7 @@ class StepForm extends Component {
                     }
                     <section className="onboarding-block">
                         <h3>Autorizzazione alla capitalizzazione periodica degli interessi</h3>
-                        <p>{this.props.obdomini.disclaimer["ALETTI_CAPITALIZZ_PERIODICA"]}</p>
+                        <p dangerouslySetInnerHTML={{__html: this.props.obdomini.disclaimer["ALETTI_CAP_PERIODICA"]}}></p>
                         <Form.radiogroup
                             className="no-label"
                             name={"field_sessionfirmeblob_capitalizzazioneperiodica_consenso"}
