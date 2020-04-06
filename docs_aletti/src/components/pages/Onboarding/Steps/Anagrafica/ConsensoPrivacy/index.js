@@ -198,7 +198,7 @@ class ConsensoPrivacy extends Component {
                                             </div>
                                         </DefaultModal>
                                         <Form.radiogroup
-                                            label={optionTextDiscalimer["ALETTI_CONSENSO_1"]}
+                                            label={optionTextDiscalimer["ALETTI_ANAG_CONS_1"]}
                                             name={anagraficaIntestatario + "listprivacy_0_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_0_consenso"]}
                                             onChange={this.props.obchange}
@@ -215,7 +215,7 @@ class ConsensoPrivacy extends Component {
                                 <Row>
                                     <Col xs="12">
                                         <Form.radiogroup
-                                            label={optionTextDiscalimer["ALETTI_CONSENSO_2"]}
+                                            label={optionTextDiscalimer["ALETTI_ANAG_CONS_2"]}
                                             name={anagraficaIntestatario + "listprivacy_1_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_1_consenso"]}
                                             onChange={this.props.obchange}
@@ -229,7 +229,7 @@ class ConsensoPrivacy extends Component {
                                 <Row>
                                     <Col xs="12">
                                         <Form.radiogroup
-                                            label={optionTextDiscalimer["ALETTI_CONSENSO_3"]}
+                                            label={optionTextDiscalimer["ALETTI_ANAG_CONS_3"]}
                                             name={anagraficaIntestatario + "listprivacy_2_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_2_consenso"]}
                                             onChange={this.props.obchange}
@@ -243,7 +243,7 @@ class ConsensoPrivacy extends Component {
                                 <Row>
                                     <Col xs="12">
                                         <Form.radiogroup
-                                            label={optionTextDiscalimer["ALETTI_CONSENSO_4"]}
+                                            label={optionTextDiscalimer["ALETTI_ANAG_CONS_4"]}
                                             name={anagraficaIntestatario + "listprivacy_3_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_3_consenso"]}
                                             onChange={this.props.obchange}
@@ -257,7 +257,7 @@ class ConsensoPrivacy extends Component {
                                 <Row>
                                     <Col xs="12">
                                         <Form.radiogroup
-                                            label={optionTextDiscalimer["ALETTI_CONSENSO_5"]}
+                                            label={optionTextDiscalimer["ALETTI_ANAG_CONS_5"]}
                                             name={anagraficaIntestatario + "listprivacy_4_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_4_consenso"]}
                                             onChange={this.props.obchange}

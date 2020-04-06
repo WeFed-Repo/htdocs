@@ -6,6 +6,7 @@ import 'moment/locale/it';
 import DefaultModal from "components/parts/DefaultModal";
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
+
 class DatiFatca extends Component {
     constructor(props) {
         super(props);
@@ -141,6 +142,7 @@ class DatiFatca extends Component {
             this.setState({ showModalFatcaDisabled: true })
         }
     }
+    
     render() {
         let listaNazioni = this.props.obdomini["nazioni_attive"],
             //LISTA delle NAZIONI che richiedono il TIN
@@ -164,6 +166,9 @@ class DatiFatca extends Component {
         listaNazioniResidenza2[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
         listaNazioniResidenza3[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_2_codiceuic"] }).filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
 
+        //
+        
+        
         return (
             <>
                 <DefaultModal
@@ -180,14 +185,14 @@ class DatiFatca extends Component {
                     label="ALTRI DATI FATCA E CRS"
                     startsOpen={false}
                     className="search-collapse"
-                    /*hasErrors={ //COSTRUIRE OGGETTO CONDIZIONATO; NON SEMPRE QUESTI CAMPI SONO OBBLIGATOTI
+                    hasErrors={ 
                         CheckAccordionErrors(this.props.formstate.errors,
                             [
                                 this.props.anagraficaIntestatario + "listresidenzefiscale_1_tin",
                                 this.props.anagraficaIntestatario + "listresidenzefiscale_2_tin",
                                 this.props.anagraficaIntestatario + "listresidenzefiscale_3_tin"
                             ]
-                        )}*/
+                        )}
                     >
                     <section className="onboarding-block">
                         <p>Con l'entrata in vigore delle normative FATCA (Foreign Account Tax Compliance Act) e CRS (Common
@@ -580,4 +585,5 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
     }
 }
 
-export default DatiFatca;
+export default  DatiFatca
+ 
