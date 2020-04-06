@@ -35,16 +35,17 @@ let handleChange = function (component, e) {
 
     let name = e.name ? e.name : e.target.name,
         value = (typeof e.value !== "undefined") ? e.value : e.target.value;
-
+   
     // Assegna l'eventuale callBack, se possibile
     let cbchange = (e.cbchange)? e.cbchange : function(){};
 
     // Se esiste una maschera filtra il valore a monte
     let mask = e.mask;
     if(mask){
+        console.log(value)
         value = applyMask(value,mask);
     }
-
+    
     // Stato del checkbox
     if (e.target && e.target.type && e.target.type === "checkbox") {
         let currValues = component.state[name].toString().split(",").filter((val) => { return val !== "" });

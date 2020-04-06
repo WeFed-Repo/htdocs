@@ -20,9 +20,9 @@ class AltriRecapiti extends Component {
                                         label="Numero di telefono fisso di casa"
                                         name={this.props.anagraficaIntestatario + "prefissofissocasa"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissocasa"]}
-                                        value={ this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] : "0039" }
+                                        value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] : "+39"}
                                         onChange={this.props.obchange}
-                                        placeholder="0039"
+                                        placeholder="+39"
                                         maxlength = "5"
                                         mask ="telefono"
 
@@ -34,7 +34,7 @@ class AltriRecapiti extends Component {
                                         label="&nbsp;"
                                         name= {this.props.anagraficaIntestatario + "numerofissocasa"}
                                         error= {this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissocasa"]}
-                                        value= {this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] : "0039" }
+                                        value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] : "+39"}
                                         onChange={this.props.obchange}
                                         placeholder=""
                                         mask ="telefono"
