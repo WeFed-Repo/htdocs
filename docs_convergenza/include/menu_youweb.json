@@ -42,6 +42,22 @@
 						"inlavorazione": true,
 						"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
 					},
+
+
+					{
+						"nome": "Ordini e Movimenti",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_ordini_e_movimenti.php"
+					},
+					{
+						"nome": "Portafoglio Simulato",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_portafoglio_simulato.php"
+					},
+
+
 					{
 						"nome": "Posizione fiscale"
 					},
@@ -225,8 +241,8 @@
 								"tpl": "tpl_preventivo_MP5_step4.php",
 								"html":"vr"
 							}
-							
-						
+
+
 						]
 					},
 					{
@@ -252,8 +268,8 @@
 								"tpl": "tpl_acquisto_esito.php",
 								"html":"vr"
 							}
-							
-						
+
+
 						]
 					}
 				]

@@ -194,7 +194,21 @@
 								"nome": "Portafoglio titoli e fondi",
 								"inlavorazione": true,
 								"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
-							}
+							},
+
+							{
+								"nome": "Ordini e Movimenti",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_inv_ordini_e_movimenti.php"
+							},
+							{
+								"nome": "Portafoglio Simulato",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_inv_portafoglio_simulato.php"
+							},
+
 						]
 					},
 					{
