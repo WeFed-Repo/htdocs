@@ -207,7 +207,7 @@
 								"html": "mi",
 								"inlavorazione": true,
 								"tpl": "tpl_inv_portafoglio_simulato.php"
-							},
+							}
 
 						]
 					},
