@@ -20,7 +20,7 @@ class DatiPersonali extends Component {
         super(props);
         this.state = {
             //IN UN PRIMO MOMENTO NON SARA' POSSIBILE CARICARE UNA SECONDA RESIDENZA FISCALE, VI SARA' UN OVERLAYER //settare true per emulare la presenza di fatca
-            fatcaEnable: false,
+            fatcaEnable: true,
             showModalFatcaDisabled: false,
             //STATO RELATIVO ALLA VISIBILITA' DEGLI HELP DOCUMENTI
             isHelpDocVisible: false,
@@ -282,7 +282,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "paesenascita"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "paesenascita"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -297,7 +297,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "cittadinanza"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cittadinanza"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -449,7 +449,7 @@ class DatiPersonali extends Component {
                                                 value={this.props.formstate[anagraficaIntestatario + "paeserilascio"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "paeserilascio"]}
                                                 onChange={this.props.obchange}
-                                                options={listaNazioni}
+                                                options={ listaNazioni }
                                                 placeholder="Seleziona"
                                             >
                                             </Form.select>

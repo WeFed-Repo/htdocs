@@ -142,7 +142,8 @@ export default function (form) {
         }
     }
     // Ripassa l'oggetto con tutti gli errori del form visualizzato aggiungendo gli eventuali controlli degli indirizzi
-    errors = Object.assign(errors, validazioneIndirizzi(form, "cai"), validazioneIndirizzi(form, "domicilio"), validazioneIndirizzi(form, "corrisp"));
+    
+    errors = Object.assign(errors, validazioneIndirizzi(form, "cai"), validazioneIndirizzi(form, "domicilio"), validazioneIndirizzi(form, "corrisp"),validazioneFatca(form));
     
 
     return (errors);
