@@ -42,8 +42,6 @@ export default function (form) {
             "field_anagraficablob_intestatari_0_comunenascita",
             "field_anagraficablob_intestatari_0_codtipodocumento",
             "field_anagraficablob_intestatari_0_paeserilascio",
-            "field_anagraficablob_intestatari_0_provinciarilascio",
-            "field_anagraficablob_intestatari_0_comunerilascio",
             "field_anagraficablob_intestatari_0_tipoindirizzoresidenza",
             "field_anagraficablob_intestatari_0_provinciaresidenza",
             "field_anagraficablob_intestatari_0_comuneresidenza"
@@ -79,13 +77,24 @@ export default function (form) {
             "field_anagraficablob_intestatari_1_comunenascita",
             "field_anagraficablob_intestatari_1_codtipodocumento",
             "field_anagraficablob_intestatari_1_paeserilascio",
-            "field_anagraficablob_intestatari_1_provinciarilascio",
-            "field_anagraficablob_intestatari_1_comunerilascio",
             "field_anagraficablob_intestatari_1_tipoindirizzoresidenza",
             "field_anagraficablob_intestatari_1_provinciaresidenza",
             "field_anagraficablob_intestatari_1_comuneresidenza"
         ];
+    
 
+    if(form["field_anagraficablob_intestatari_0_paeserilascio"]==="86" || form["field_anagraficablob_intestatari_0_paeserilascio"] === "") {
+        obbligator_int1.push ("field_anagraficablob_intestatari_0_provinciarilascio")
+    }
+    if(form["field_anagraficablob_intestatari_1_paeserilascio"]==="86" || form["field_anagraficablob_intestatari_1_paeserilascio"] === "") {
+        obbligator_int2.push ("field_anagraficablob_intestatari_1_provinciarilascio")
+    }
+    if(form["field_anagraficablob_intestatari_0_provinciarilascio"] !=="") {
+        obbligator_int1.push ("field_anagraficablob_intestatari_0_comunerilascio")
+    }
+    if(form["field_anagraficablob_intestatari_1_provinciarilascio"] !=="") {
+        obbligator_int2.push ("field_anagraficablob_intestatari_1_comunerilascio") 
+    }
     //obbligatorio con selezione documento
     let obbligatoriVis = ["field_anagraficablob_privacyletta"]
 

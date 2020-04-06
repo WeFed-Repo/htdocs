@@ -282,7 +282,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "paesenascita"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "paesenascita"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "86" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -297,7 +297,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "cittadinanza"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cittadinanza"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "86" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
