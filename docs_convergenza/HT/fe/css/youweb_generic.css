@@ -7103,6 +7103,7 @@ div.fixed-table-scroll-outer {
 .bootstrap-table .fixed-columns {
     position: absolute;
     top: 0;
+    width:100%;
     left:0;
     overflow:hidden;
     z-index: 1;
