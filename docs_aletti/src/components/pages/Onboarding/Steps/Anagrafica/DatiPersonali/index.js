@@ -216,7 +216,7 @@ class DatiPersonali extends Component {
         }
     }
     render() {
-
+       
         const anagraficaIntestatario = `field_anagraficablob_intestatari_${this.props.indexInt}_`;
         //DOMINI
         let optionTipoDocumento = this.props.obdomini["documenti_identita"],
@@ -232,7 +232,7 @@ class DatiPersonali extends Component {
                     <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "1") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "1") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
                         </div>
                     </div>
                 </DefaultModal>
@@ -282,7 +282,10 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "paesenascita"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "paesenascita"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "86" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { 
+                                            if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } 
+                                            if (val !== "86" && this.state.fatcaEnable) { this.props.formstate[anagraficaIntestatario + "provincianascita"] = "" } 
+                                        }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -297,7 +300,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "cittadinanza"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cittadinanza"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "86" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -315,6 +318,7 @@ class DatiPersonali extends Component {
                                         onChange={this.props.obchange}
                                         ajaxoptions="province"
                                         placeholder="Seleziona"
+                                        disabled = { this.props.formstate[anagraficaIntestatario + "paesenascita"] != "" && this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86" }
                                     >
                                     </Form.select>
 

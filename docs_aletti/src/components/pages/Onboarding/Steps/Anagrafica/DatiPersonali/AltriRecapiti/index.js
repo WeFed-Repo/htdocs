@@ -20,9 +20,9 @@ class AltriRecapiti extends Component {
                                         label="Numero di telefono fisso di casa"
                                         name={this.props.anagraficaIntestatario + "prefissofissocasa"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissocasa"]}
-                                        value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] : "+39"}
+                                        value={ this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] }
                                         onChange={this.props.obchange}
-                                        placeholder="+39"
+                                        placeholder="0039"
                                         maxlength = "5"
                                         mask ="telefono"
 
@@ -51,6 +51,8 @@ class AltriRecapiti extends Component {
                                         name={this.props.anagraficaIntestatario + "prefissofissoufficio"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
+                                        placeholder="0039"
+                                        maxlength = "5"
                                         onChange={this.props.obchange}
                                         placeholder=""
                                     >
