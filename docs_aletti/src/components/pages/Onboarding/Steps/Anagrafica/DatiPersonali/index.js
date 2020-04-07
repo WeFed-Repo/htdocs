@@ -20,7 +20,7 @@ class DatiPersonali extends Component {
         super(props);
         this.state = {
             //IN UN PRIMO MOMENTO NON SARA' POSSIBILE CARICARE UNA SECONDA RESIDENZA FISCALE, VI SARA' UN OVERLAYER //settare true per emulare la presenza di fatca
-            fatcaEnable: true,
+            fatcaEnable: false,
             showModalFatcaDisabled: false,
             //STATO RELATIVO ALLA VISIBILITA' DEGLI HELP DOCUMENTI
             isHelpDocVisible: false,
