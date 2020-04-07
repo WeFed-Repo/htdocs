@@ -107,21 +107,21 @@
 			border: solid 2px #0e977f;
 			top: -1px;
 			left: 0;
-			width: 20px;
-			height: 20px;
-			line-height: 18px;
+			width: 22px;
+			height: 22px;
+			line-height: 20px;
+			font-size: 16px;
 			border-radius: 50%;
 			padding: 0;
 			text-align: center;
-			font-size: 14px;
-			font-weight:normal;
-			content: "\2796";
-			transform: rotate(360deg); 
+			font-weight: normal;
+			content: "－";
+			transform: rotate(360deg);
 			transition: transform 0.5s;
 		}
 		&.collapsed {
 			&::before {
-				content: "\2795";
+				content: "\FF0B"; 
 				transform: rotate(0); 
 			}
 			

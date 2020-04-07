@@ -409,6 +409,10 @@ $(function () {
         });
         // Forza l'evento resize per le trasformazioni di JQGRID nelle tabelle
         //setTimeout(function(){$(window).trigger("resize");},300)
+
+        if(columnBsFixedResize) {
+            setTimeout(columnBsFixedResize,300)
+        }
     });
 
     // Blocco scrolling dello switch (se esiste il footer)

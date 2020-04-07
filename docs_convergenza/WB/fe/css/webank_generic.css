@@ -1231,15 +1231,16 @@ span.sell {
   position: absolute;
   border-radius: 50%;
   height: 20px;
+  font-size: 16px;
   line-height: 16px;
   text-align: center;
   transform: rotate(360deg);
   transition: transform 0.5s;
-  font-weight: normal;
-  content: "\2796";
+  font-weight: bold;
+  content: "\FF0D";
 }
 .collapse-par .collapse-par-title.collapsed::before {
-  content: "\2795";
+  content: "\FF0B";
   transform: rotate(0);
 }
 .collapse-par .collapse-par-collapse {
@@ -3057,7 +3058,7 @@ table .table-btn-more {
   cursor: pointer;
 }
 table .table-btn-more:before {
-  content: "\2795";
+  content: "\FF0B";
 }
 table .table-btn-more:hover {
   opacity: 0.7;
@@ -5784,7 +5785,7 @@ table tr td.td-fondo .fundName {
   cursor: pointer;
 }
 .spsel.opened {
-  z-index: 1;
+  z-index: 2;
 }
 .spsel.opened .spsel-options {
   display: block;

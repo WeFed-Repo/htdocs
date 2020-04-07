@@ -6366,7 +6366,7 @@ div[id*="popover"] .popover-content {
   padding-right: 15px;
 }
 .spsel.opened {
-  z-index: 1;
+  z-index: 2;
 }
 .spsel.opened .spsel-options {
   display: block;
@@ -7109,6 +7109,8 @@ div.fixed-table-scroll-outer {
     z-index: 1;
     background: #ffffff;
 }
+
+.bootstrap-table .fixed-columns .filter-wrap {z-index:1}
 
 .bootstrap-table table {margin-top:0}
 
