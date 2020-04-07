@@ -21,7 +21,7 @@ class DatiDomicilio extends Component {
                         this.props.anagraficaIntestatario  + "numdomicilio",
                         this.props.anagraficaIntestatario  + "provinciadomicilio"
                     ])}>
-             >
+             
                 <section className="onboarding-block">
                     <p>Aggiungi un indirizzo se diverso da quello di residenza. A questo indirizzo verrà inviata la documentazione contrattuale, per tutti gli intestatari del conto.</p>
                     <Row>
@@ -64,20 +64,28 @@ class DatiDomicilio extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs="6">
-                            <Form.select
+                        <Col xs="4">
+                        <Form.select
                                 label="Provincia*"
                                 name={this.props.anagraficaIntestatario + "provinciadomicilio"}
                                 value={this.props.formstate[this.props.anagraficaIntestatario + "provinciadomicilio"]}
                                 error={this.props.formstate.errors[this.props.anagraficaIntestatario + "provinciadomicilio"]}
                                 onChange={this.props.obchange}
+                                cbchange = {(val) => {
+                                    if(val === "") {
+                                        this.props.formstate[this.props.anagraficaIntestatario + "comunedomicilio"] = "";
+                                        this.props.formstate[this.props.anagraficaIntestatario + "capdomicilio"] = ""
+                                    }
+                                }}
                                 ajaxoptions="province"
                                 placeholder="Seleziona"
                             >
                             </Form.select>
                         </Col>
-                        <Col>
-                            {this.props.formstate[this.props.anagraficaIntestatario + "provinciadomicilio"] !== "" && <Col sm="6">
+                        
+                            {this.props.formstate[this.props.anagraficaIntestatario + "provinciadomicilio"] !== "" && 
+                            <>
+                            <Col sm="6">
                                 <Form.select
                                     label="Comune*"
                                     name={this.props.anagraficaIntestatario + "comunedomicilio"}
@@ -86,10 +94,23 @@ class DatiDomicilio extends Component {
                                     onChange={this.props.obchange}
                                     placeholder="Seleziona..."
                                     ajaxoptions="comuni"
-                                    ajaxfilter={this.props.formstate[this.props.optionResidenza + "provinciadomicilio"]}
+                                    ajaxfilter={this.props.formstate[this.props.anagraficaIntestatario + "provinciadomicilio"]}
                                 ></Form.select>
-                            </Col>}
-                        </Col>
+                            </Col>
+                            <Col xs="2">
+                                <Form.input
+                                    label="Cap domicilio*"
+                                    name={this.props.anagraficaIntestatario + "capdomicilio"}
+                                    value={this.props.formstate[this.props.anagraficaIntestatario + "capdomicilio"]}
+                                    error={this.props.formstate.errors[this.props.anagraficaIntestatario + "capdomicilio"]}
+                                    onChange={this.props.obchange}
+                                    placeholder=""
+                                    mask="numero"
+                                ></Form.input>
+                            </Col>
+                            </>
+                            }
+                        
                     </Row>
                 </section>
             </DefaultCollapse>

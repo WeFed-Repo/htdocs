@@ -1,6 +1,7 @@
 
 docs_aletti/src/**/*.map
 docs_aletti/src/**/*.css
+docs_aletti/build
 librerie
 docs_webank/librerie
 docs_webank/wbresp

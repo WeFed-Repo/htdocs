@@ -20,7 +20,7 @@ class DatiPersonali extends Component {
         super(props);
         this.state = {
             //IN UN PRIMO MOMENTO NON SARA' POSSIBILE CARICARE UNA SECONDA RESIDENZA FISCALE, VI SARA' UN OVERLAYER //settare true per emulare la presenza di fatca
-            fatcaEnable: true,
+            fatcaEnable: false,
             showModalFatcaDisabled: false,
             //STATO RELATIVO ALLA VISIBILITA' DEGLI HELP DOCUMENTI
             isHelpDocVisible: false,
@@ -232,7 +232,7 @@ class DatiPersonali extends Component {
                     <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "1") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "1") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
                         </div>
                     </div>
                 </DefaultModal>
@@ -270,7 +270,8 @@ class DatiPersonali extends Component {
                                 anagraficaIntestatario + "indirizzoresidenza",
                                 anagraficaIntestatario + "numresidenza",
                                 anagraficaIntestatario + "provinciaresidenza",
-                                anagraficaIntestatario + "comuneresidenza"
+                                anagraficaIntestatario + "comuneresidenza",
+                                anagraficaIntestatario + "capresidenza"
                             ])}>
                     <>
                         <section className="onboarding-block">
@@ -282,7 +283,10 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "paesenascita"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "paesenascita"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => {
+                                            if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) }
+                                            if (val !== "86" && this.state.fatcaEnable) { this.props.formstate[anagraficaIntestatario + "provincianascita"] = "" }
+                                        }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -297,7 +301,7 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "cittadinanza"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cittadinanza"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "1" || !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
+                                        cbchange={(val) => { if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                     >
@@ -315,6 +319,7 @@ class DatiPersonali extends Component {
                                         onChange={this.props.obchange}
                                         ajaxoptions="province"
                                         placeholder="Seleziona"
+                                        disabled={this.props.formstate[anagraficaIntestatario + "paesenascita"] != "" && this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86"}
                                     >
                                     </Form.select>
 
@@ -449,7 +454,7 @@ class DatiPersonali extends Component {
                                                 value={this.props.formstate[anagraficaIntestatario + "paeserilascio"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "paeserilascio"]}
                                                 onChange={this.props.obchange}
-                                                options={ listaNazioni }
+                                                options={listaNazioni}
                                                 placeholder="Seleziona"
                                             >
                                             </Form.select>
@@ -574,8 +579,8 @@ class DatiPersonali extends Component {
                                             >
                                             </Form.select>
                                         </Col>
-                                        <Col>
-                                            {this.props.formstate[anagraficaIntestatario + "provinciaresidenza"] !== "" && <Col sm="8">
+                                        {this.props.formstate[anagraficaIntestatario + "provinciaresidenza"] !== "" &&
+                                            <><Col xs="6">
                                                 <Form.select
                                                     label="Comune di residenza*"
                                                     name={anagraficaIntestatario + "comuneresidenza"}
@@ -586,8 +591,21 @@ class DatiPersonali extends Component {
                                                     ajaxoptions="comuni"
                                                     ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciaresidenza"]}
                                                 ></Form.select>
-                                            </Col>}
-                                        </Col>
+                                            </Col>
+                                                <Col xs="2">
+                                                    <Form.input
+                                                        label="Cap di residenza*"
+                                                        name={anagraficaIntestatario + "capresidenza"}
+                                                        value={this.props.formstate[anagraficaIntestatario + "capresidenza"]}
+                                                        error={this.props.formstate.errors[anagraficaIntestatario + "capresidenza"]}
+                                                        onChange={this.props.obchange}
+                                                        placeholder=""
+                                                        mask="numero"
+                                                    ></Form.input>
+                                                </Col>
+                                            </>
+                                        }
+
                                     </Row>
                                 </>
                             </section>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
-import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
+
 
 class AltriRecapiti extends Component {
 
@@ -15,12 +15,12 @@ class AltriRecapiti extends Component {
                     <Row>
                         <Col xs="6">
                             <Row>
-                                <Col xs="3">
+                                <Col xs="6">
                                     <Form.input
                                         label="Numero di telefono fisso di casa"
                                         name={this.props.anagraficaIntestatario + "prefissofissocasa"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissocasa"]}
-                                        value={ this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] : "0039" }
+                                        value={ this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] }
                                         onChange={this.props.obchange}
                                         placeholder="0039"
                                         maxlength = "5"
@@ -29,12 +29,12 @@ class AltriRecapiti extends Component {
                                     >
                                     </Form.input>
                                 </Col>
-                                <Col xs="5">
+                                <Col xs="6">
                                     <Form.input
                                         label="&nbsp;"
                                         name= {this.props.anagraficaIntestatario + "numerofissocasa"}
                                         error= {this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissocasa"]}
-                                        value= {this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !="" ? this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] : "0039" }
+                                        value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] }
                                         onChange={this.props.obchange}
                                         placeholder=""
                                         mask ="telefono"
@@ -51,8 +51,10 @@ class AltriRecapiti extends Component {
                                         name={this.props.anagraficaIntestatario + "prefissofissoufficio"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
+                                        placeholder="0039"
+                                        maxlength = "5"
                                         onChange={this.props.obchange}
-                                        placeholder=""
+                                        mask ="telefono"
                                     >
                                     </Form.input>
                                 </Col>
@@ -64,6 +66,7 @@ class AltriRecapiti extends Component {
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"]}
                                         onChange={this.props.obchange}
                                         placeholder=""
+                                        mask ="telefono"
                                     >
                                     </Form.input>
                                 </Col>

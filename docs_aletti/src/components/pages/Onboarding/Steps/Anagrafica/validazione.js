@@ -32,18 +32,16 @@ export default function (form) {
         "field_anagraficablob_intestatari_0_datascadenza",
         "field_anagraficablob_intestatari_0_imgdocidentita_iddoc",
         "field_anagraficablob_intestatari_0_indirizzoresidenza",
-        "field_anagraficablob_intestatari_0_numresidenza"
+        "field_anagraficablob_intestatari_0_numresidenza",
+        "field_anagraficablob_intestatari_0_capresidenza"
+     
     ],
         obbligatoriSel_int1 = [
             "field_anagraficablob_intestatari_0_sesso",
             "field_anagraficablob_intestatari_0_paesenascita",
             "field_anagraficablob_intestatari_0_cittadinanza",
-            "field_anagraficablob_intestatari_0_provincianascita",
-            "field_anagraficablob_intestatari_0_comunenascita",
             "field_anagraficablob_intestatari_0_codtipodocumento",
             "field_anagraficablob_intestatari_0_paeserilascio",
-            "field_anagraficablob_intestatari_0_provinciarilascio",
-            "field_anagraficablob_intestatari_0_comunerilascio",
             "field_anagraficablob_intestatari_0_tipoindirizzoresidenza",
             "field_anagraficablob_intestatari_0_provinciaresidenza",
             "field_anagraficablob_intestatari_0_comuneresidenza"
@@ -69,23 +67,46 @@ export default function (form) {
         "field_anagraficablob_intestatari_1_datascadenza",
         "field_anagraficablob_intestatari_1_imgdocidentita_iddoc",
         "field_anagraficablob_intestatari_1_indirizzoresidenza",
-        "field_anagraficablob_intestatari_1_numresidenza"
+        "field_anagraficablob_intestatari_1_numresidenza",
+        "field_anagraficablob_intestatari_1_capresidenza"
     ],
         obbligatoriSel_int2 = [
             "field_anagraficablob_intestatari_1_sesso",
             "field_anagraficablob_intestatari_1_paesenascita",
             "field_anagraficablob_intestatari_1_cittadinanza",
-            "field_anagraficablob_intestatari_1_provincianascita",
-            "field_anagraficablob_intestatari_1_comunenascita",
             "field_anagraficablob_intestatari_1_codtipodocumento",
             "field_anagraficablob_intestatari_1_paeserilascio",
-            "field_anagraficablob_intestatari_1_provinciarilascio",
-            "field_anagraficablob_intestatari_1_comunerilascio",
             "field_anagraficablob_intestatari_1_tipoindirizzoresidenza",
             "field_anagraficablob_intestatari_1_provinciaresidenza",
             "field_anagraficablob_intestatari_1_comuneresidenza"
         ];
+    
 
+    if(form["field_anagraficablob_intestatari_0_paeserilascio"]==="86" || form["field_anagraficablob_intestatari_0_paeserilascio"] === "") {
+        obbligator_int1.push ("field_anagraficablob_intestatari_0_provinciarilascio")
+    }
+    if(form["field_anagraficablob_intestatari_1_paeserilascio"]==="86" || form["field_anagraficablob_intestatari_1_paeserilascio"] === "") {
+        obbligator_int2.push ("field_anagraficablob_intestatari_1_provinciarilascio")
+    }
+    if(form["field_anagraficablob_intestatari_0_provinciarilascio"] !=="") {
+        obbligator_int1.push ("field_anagraficablob_intestatari_0_comunerilascio")
+    }
+    if(form["field_anagraficablob_intestatari_1_provinciarilascio"] !=="") {
+        obbligator_int2.push ("field_anagraficablob_intestatari_1_comunerilascio") 
+    }
+
+    if(form["field_anagraficablob_intestatari_0_paesenascita"]==="86" || form["field_anagraficablob_intestatari_0_paesenascita"] === "") {
+        obbligatoriSel_int1.push("field_anagraficablob_intestatari_0_provincianascita")
+    }
+    if(form["field_anagraficablob_intestatari_1_paesenascita"]==="86" || form["field_anagraficablob_intestatari_1_paesenascita"] === "") {
+        obbligatoriSel_int2.push("field_anagraficablob_intestatari_1_provincianascita")
+    }
+    if(form["field_anagraficablob_intestatari_0_provincianascita"] !=="") {
+        obbligatoriSel_int1.push ("field_anagraficablob_intestatari_0_comunenascita")
+    }
+    if(form["field_anagraficablob_intestatari_1_provincianascita"] !=="") {
+        obbligatoriSel_int2.push ("field_anagraficablob_intestatari_1_comunenascita")
+    }
     //obbligatorio con selezione documento
     let obbligatoriVis = ["field_anagraficablob_privacyletta"]
 
@@ -107,7 +128,7 @@ export default function (form) {
     obbligatoriSel.forEach((v, i) => {
         if (form[v] === "" || form[v] === "Seleziona") errors[v] = obbligatorimsgSel;
     });
-
+    console.log(form)
 
 
     // Controllo sul codice fiscale

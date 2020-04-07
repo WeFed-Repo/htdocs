@@ -3602,37 +3602,64 @@ var styleSortTable = function () {
 };
 
 // Colonne fixed nelle tabelle
+var columnBsFixedResize;
+
 var columnBsFixed = function(){
+
+    var tbHfc =  $("table.has-fixed-cols");
+
+    if (tbHfc.length>0) {
+
+        // Handler per il resize
+        columnBsFixedResize = function() { 
+            $("table.has-fixed-cols").each(function(){
+                var tb = $(this);
+                var tbw = tb.width();
+                tb.parents(".bootstrap-table").find(".fixed-columns table").css("width",tbw + "px")
+            });
+        }
+        // Handler per il resize
+        $(window).resize(function(){columnBsFixedResize(); if(feBank && feBank=="youweb"){setTimeout(columnBsFixedResize,250)}});
+
+        tbHfc.each(function(){
+       
+            $(this).on('post-body.bs.table', function () {
     
-    $("table.has-fixed-cols").each(function(){
+                // Clona l'intera tabella
+                var tbs = $(this);
+                var fixedColumns= parseFloat(tbs.attr("data-fixed-cols"));
+    
+                var tbbsTab = tbs.parents(".bootstrap-table");
+                tbbsTab.find("div.fixed-columns").remove();
+    
+                // calcolo della larghezza delle colonne scelte
+                var fixWidth = 0;
+                for(x=0;x<fixedColumns;x++) {
+                    fixWidth += tbs.find("th").eq(x).outerWidth()
+                }                            
+    
+                var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.width() + "px");
+    
+                // Regole per il controllo dei "sortable"
+                tbfix.find('.sortable').closest('th').addClass('sortableTh');
+                tbfix.find('.sortable.both').closest('th').removeClass('sortedTh');
+                tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
+    
+                tbbsTab.prepend(
+                    $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
+                );
+    
+    
+            });
 
-        $(this).on('post-body.bs.table', function () {
-
-            // Clona l'intera tabella
-            var tbs = $(this);
-            var fixedColumns= parseFloat(tbs.attr("data-fixed-cols"));
-
-            var tbbsTab = tbs.parents(".bootstrap-table");
-            tbbsTab.find("div.fixed-columns").remove();
-
-            // calcolo della larghezza delle colonne scelte
-            var fixWidth = 0;
-            for(x=0;x<fixedColumns;x++) {
-                fixWidth += tbs.find("th").eq(x).outerWidth()
-            }                            
-
-            var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort");
-
-            // Regole per il controllo dei "sortable"
-            tbfix.find('.sortable').closest('th').addClass('sortableTh');
-            tbfix.find('.sortable.both').closest('th').removeClass('sortedTh');
-            tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
-
-            tbbsTab.prepend(
-                $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
-            );
-        });
+   
     });
+
+  
+
+
+    }
+
 }
 
 /* GESTIONE SPINNER

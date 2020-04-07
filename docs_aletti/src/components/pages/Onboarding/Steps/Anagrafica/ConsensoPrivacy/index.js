@@ -154,9 +154,9 @@ class ConsensoPrivacy extends Component {
                                             <Form.input
                                                 label="Prefisso*"
                                                 name={anagraficaIntestatario + "prefisso"}
-                                                error={ this.props.formstate.errors[anagraficaIntestatario + "prefisso"]}
-                                                value={ this.props.formstate[anagraficaIntestatario + "prefisso"] !="" ? this.props.formstate[anagraficaIntestatario + "prefisso"] : "0039" }
-                                                onChange={this.props.obchange}
+                                                value={ this.props.formstate[anagraficaIntestatario + "prefisso"] }
+                                                error= {this.props.formstate.errors[anagraficaIntestatario + "prefisso"]}
+                                                onChange={ this.props.obchange }
                                                 placeholder="0039"
                                                 maxlength = "5"
                                                 mask ="telefono"
