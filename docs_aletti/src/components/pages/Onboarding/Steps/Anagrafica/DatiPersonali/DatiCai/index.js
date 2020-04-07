@@ -17,7 +17,9 @@ class DatiCai extends Component {
                             this.props.anagraficaIntestatario  + "tipoindirizzocai",
                             this.props.anagraficaIntestatario  + "indirizzocai",
                             this.props.anagraficaIntestatario  + "numcai",
-                            this.props.anagraficaIntestatario  + "provinciacai"
+                            this.props.anagraficaIntestatario  + "provinciacai",
+                            this.props.anagraficaIntestatario  + "comunecai",
+                            this.props.anagraficaIntestatario  + "capcai"
                         ])}>
             
                 <section className="onboarding-block">
@@ -64,20 +66,28 @@ class DatiCai extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs="6">
-                            <Form.select
+                        <Col xs="4">
+                        <Form.select
                                 label="Provincia*"
                                 name={this.props.anagraficaIntestatario + "provinciacai"}
                                 value={this.props.formstate[this.props.anagraficaIntestatario + "provinciacai"]}
                                 error={this.props.formstate.errors[this.props.anagraficaIntestatario + "provinciacai"]}
                                 onChange={this.props.obchange}
+                                cbchange = {(val) => {
+                                    if(val === "") {
+                                        this.props.formstate[this.props.anagraficaIntestatario + "comunecai"] = "";
+                                        this.props.formstate[this.props.anagraficaIntestatario + "capcai"] = ""
+                                    }
+                                }}
                                 ajaxoptions="province"
                                 placeholder="Seleziona"
                             >
                             </Form.select>
                         </Col>
-                        <Col>
-                            {this.props.formstate[this.props.anagraficaIntestatario + "provinciacai"] !== "" && <Col sm="6">
+                        
+                            {this.props.formstate[this.props.anagraficaIntestatario + "provinciacai"] !== "" && 
+                            <>
+                            <Col sm="6">
                                 <Form.select
                                     label="Comune*"
                                     name={this.props.anagraficaIntestatario + "comunecai"}
@@ -88,8 +98,21 @@ class DatiCai extends Component {
                                     ajaxoptions="comuni"
                                     ajaxfilter={this.props.formstate[this.props.anagraficaIntestatario + "provinciacai"]}
                                 ></Form.select>
-                            </Col>}
-                        </Col>
+                            </Col>
+                            <Col xs="2">
+                                <Form.input
+                                    label="Cap cai*"
+                                    name={this.props.anagraficaIntestatario + "capcai"}
+                                    value={this.props.formstate[this.props.anagraficaIntestatario + "capcai"]}
+                                    error={this.props.formstate.errors[this.props.anagraficaIntestatario + "capcai"]}
+                                    onChange={this.props.obchange}
+                                    placeholder=""
+                                    mask="numero"
+                                ></Form.input>
+                            </Col>
+                            </>
+                            }
+                        
                     </Row>
                 </section>
             </DefaultCollapse>

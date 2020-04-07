@@ -32,7 +32,9 @@ export default function (form) {
         "field_anagraficablob_intestatari_0_datascadenza",
         "field_anagraficablob_intestatari_0_imgdocidentita_iddoc",
         "field_anagraficablob_intestatari_0_indirizzoresidenza",
-        "field_anagraficablob_intestatari_0_numresidenza"
+        "field_anagraficablob_intestatari_0_numresidenza",
+        "field_anagraficablob_intestatari_0_capresidenza"
+     
     ],
         obbligatoriSel_int1 = [
             "field_anagraficablob_intestatari_0_sesso",
@@ -65,7 +67,8 @@ export default function (form) {
         "field_anagraficablob_intestatari_1_datascadenza",
         "field_anagraficablob_intestatari_1_imgdocidentita_iddoc",
         "field_anagraficablob_intestatari_1_indirizzoresidenza",
-        "field_anagraficablob_intestatari_1_numresidenza"
+        "field_anagraficablob_intestatari_1_numresidenza",
+        "field_anagraficablob_intestatari_1_capresidenza"
     ],
         obbligatoriSel_int2 = [
             "field_anagraficablob_intestatari_1_sesso",
