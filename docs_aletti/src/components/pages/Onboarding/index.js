@@ -277,7 +277,7 @@ export default class extends Component {
                         if (this.state.field_id === "") {
                             // E' un nuovo inserimento, carica solo i campi esterni
                             getData({
-                                url: { "svil": "/json_data/onboarding/getNextBozza.json", "prod": "/promotori/onboarding/rest/bozze/getNextBozza" },
+                                url: { "svil": "/json_data/onboarding/getNextBozza.json", "prod": " /promotori/onboarding/rest/bozze/inizializzaBozza" },
                                 method: "GET",
                                 success: (data) => {
                                     if (data && data.results) {
