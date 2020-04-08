@@ -13,10 +13,10 @@ table,
   tr {
     // "Zebratura da backend"
     &.dispari {
-      background-color: $tableStripe;
+      background-color: $tableStripe !important;
     }
     &.pari {
-      background-color: #fff;
+      background-color: #fff !important;
     }
     &.separator {border-top:solid 2px #ccc}
     
