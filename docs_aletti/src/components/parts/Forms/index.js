@@ -36,7 +36,7 @@ let handleChange = function (component, e) {
     let name = e.name ? e.name : e.target.name,
         value = (typeof e.value !== "undefined") ? e.value : e.target.value;
    
-    // Assegna l'eventuale callBack, se possibile
+    // Assegna l'eventuale callBack, se possibile, altimenti non fa nulla
     let cbchange = (e.cbchange)? e.cbchange : function(){};
 
     // Se esiste una maschera filtra il valore a monte
@@ -213,7 +213,7 @@ class FormSelect extends Component {
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "") + (this.state.isLoading? " loading":"")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
-                {!output && <select disabled={this.props.disabled} name={this.props.name} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}} value={value} className={"form-control"}>
+                {!output && <select disabled={this.props.disabled} name={this.props.name} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}} value={value} className={"form-control"}>
                     {placeholder && <option value="">{placeholder}</option>}
                     {options && options.map(function (val, index) {
                         return <option value={val.value} key={index}>{val.text}</option>
@@ -259,7 +259,7 @@ class FormCheckgroup extends Component {
                 {!output &&
                     <FieldMainWrapper>
                         {options && options.map((obj, ind) => {
-                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
                         })}
                     </FieldMainWrapper>
                 }
@@ -302,7 +302,7 @@ class FormRadiogroup extends Component {
                 {!output &&
                     <FieldMainWrapper>
                         {options && options.map((obj, ind) => {
-                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
                         })}
                     </FieldMainWrapper>
                 }
@@ -334,7 +334,7 @@ class FormCheckfile extends Component {
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 {!this.props.disabled && 
-                    <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange })}} href={this.props.fileurl} target="_blank">
+                    <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange , mask:null})}} href={this.props.fileurl} target="_blank">
                         <i className="icon icon-file_pdf"></i>
                         <span className="text">{this.props.filedescription}</span>
                     </a>
@@ -371,7 +371,7 @@ class FormFile extends Component {
         this.setState({ fileLoading: true },
             () => {
                 // Qui farebbe la chiamata al file vero e proprio ed in "value" metterebbe l'id del file
-                this.props.onChange({ "name": this.props.name, "value": parseInt(Math.random() * 99999) ,"cbchange": this.props.cbchange})
+                this.props.onChange({ "name": this.props.name, "value": parseInt(Math.random() * 99999) ,"cbchange": this.props.cbchange, mask: null})
                 this.setState({
                     fileToTransfer: "",
                     fileLoading: false,
@@ -604,6 +604,7 @@ class FormDate extends Component {
                         onDayChange={(a, b, input) => {
                             let inp = input.getInput();
                             inp["cbchange"] = cbchange;
+                            inp["mask"] = null;
                             this.props.onChange(inp)}
                         }
                         inputProps={{
