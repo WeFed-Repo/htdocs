@@ -4780,8 +4780,18 @@ span.colAlert {
     display: block;
 }
 
+.preventivatore .mData .btn-icon.documenti {
+    width:auto;
+} 
+
 .preventivatore .mData .btn-icon span {
     font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    padding: 4px 0 0 0;
+    width: auto;
+    white-space:nowrap;
 }
 
 .preventivatore .mData ul.documenti {
