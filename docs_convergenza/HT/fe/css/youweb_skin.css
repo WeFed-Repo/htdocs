@@ -1200,12 +1200,12 @@ table .icon.icon-chiudi_table,
 table tr.dispari,
 .table tr.dispari,
 .ui-dialog .table tr.dispari {
-  background-color: #eaeded;
+  background-color: #eaeded !important;
 }
 table tr.pari,
 .table tr.pari,
 .ui-dialog .table tr.pari {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 table tr.separator,
 .table tr.separator,
