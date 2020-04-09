@@ -495,9 +495,8 @@ $selectCausaleMovimenti = array(
   </div>
 </div>
 
-<!-- FUNZIONI PER FILTRI -->
 <?php include("./parts/table_th_filter.php"); ?>
-<!-- FINE FUNZIONI PER FILTRI -->
+<?php include("./parts/icona_operativa.php"); ?>
 
 <!-- INIZIALIZZAZIONI -->
 <script type="text/javascript">
@@ -516,14 +515,14 @@ $selectCausaleMovimenti = array(
         onClose: function() { $('#datePickerWrapper').modal('hide'); }
     });
     appendDatePickerIcon('periodo');
-    var tableOrdiniMovimenti = $('#tableOrdiniMovimenti');
+    var tableOrdiniMovimenti = $('.sortableTable');
     tableOrdiniMovimenti.bootstrapTable({
       onPostBody: function(){
         // Funzioni da ripetere ad ogni refresh
         $(".table-btn-more").not("inited").click(function(){
           $("#layerConfronta").modal("show");
         });
-
+        attivaIconaOperativa(".sortableTable");
       }
     });
     initThFilter();
