@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon_filter:before, .icon_cambi:before {
+.icon_filter:before, .icon_cambi:before, .icon_piumeno:before {
   font-style: normal !important;
   content: "☒";
   color: red !important;
