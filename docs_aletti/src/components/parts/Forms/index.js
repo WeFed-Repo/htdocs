@@ -435,11 +435,11 @@ class FormFile extends Component {
                                 <>
                                      <div className="document-wrapper ok">
                                         <div className="document-thumbnail fronte"></div>
-                                        <Button color="primary">Fronte</Button>
+                                        <Button color="primary">Carica fronte</Button>
                                     </div>
                                     <div className="document-wrapper">
                                         <div className="document-thumbnail retro"></div>
-                                        <Button color="primary">Retro</Button>
+                                        <Button color="primary">Carica retro</Button>
                                     </div>
                                    
                                 </>
