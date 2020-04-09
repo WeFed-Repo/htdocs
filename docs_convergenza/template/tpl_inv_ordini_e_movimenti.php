@@ -110,6 +110,23 @@ $selectTipoOperazioneFondi = array(
   'Altro',
 );
 
+$selectPeriodoMovimenti = array(
+  ( ($site == "webank") ? 'Ieri' : 'Oggi' ),
+  'Ultimi 7 giorni',
+  'Ultimi 30 giorni',
+  'Ultimi 3 mesi',
+  'Ultimi 6 mesi',
+);
+
+$selectCausaleMovimenti = array(
+  'Tutte le causali',
+  'Causale 1',
+  'Causale 2',
+  'Causale 3',
+  'Causale 4',
+  'Causale 5',
+);
+
 ?>
 
 <h2>Ordini e movimenti</h2>
@@ -205,9 +222,6 @@ $selectTipoOperazioneFondi = array(
 
 
         <!-- TABELLA -->
-        <!-- FUNZIONI PER FILTRI -->
-        <?php include("./parts/table_th_filter.php"); ?>
-        <!-- FINE FUNZIONI PER FILTRI -->
 
         <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
@@ -317,9 +331,7 @@ $selectTipoOperazioneFondi = array(
 
 
             <!-- TABELLA -->
-            <!-- FUNZIONI PER FILTRI -->
-            <?php include("./parts/table_th_filter.php"); ?>
-            <!-- FINE FUNZIONI PER FILTRI -->
+
             <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
                 <thead>
                   <tr>
@@ -388,12 +400,104 @@ $selectTipoOperazioneFondi = array(
         </h4>
       </div>
       <div id="collapse2c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2c" style="height: auto;">
-        3
+
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Periodo</label>
+                <select class="form-control" id="selectPeriodFondi">
+                  <?php auto_input_select( $selectPeriodoMovimenti ) ?>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Causale</label>
+                <select class="form-control" id="selectTipoOperazioneFondi">
+                  <?php auto_input_select( $selectCausaleMovimenti ) ?>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12">
+    					<div class="btn-align-right">
+    						<a type="button" class="btn btn-primary" href="#">Cerca</a>
+    					</div>
+            </div>
+            <div class="col-xs-12">
+              <br />
+              <p class="note flLeft noFloatMobile">
+                  <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+                  <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
+                    <i class="icon icon-2x icon-update"></i>
+                  </a>
+              </p>
+          </div>
+
+          </div>
+
+
+          <!-- TABELLA -->
+
+          <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+              <thead>
+                <tr>
+                  <th class="left filter" data-sortable="true" id="filterTitolo">Descrizione</th>
+                  <th class="left">Causale</th>
+                  <th class="right">Data e ora inserim.</th>
+                  <th class="right">Quantità</th>
+                  <th class="left">Divisa</th>
+                  <th class="right">Prezzo</th>
+                  <th class="right">Controv Euro</th>
+                  <th class="left">Stato</th>
+                  <th class="center">Data valuta</th>
+                  <th class="right">Numero ordine</th>
+                </tr>
+              </thead>
+              <tbody>
+              <?php for($x=0;$x<=10;$x++) { ?>
+                <tr>
+                  <td class="left">UBI BANCA</td>
+                  <td class="left">
+                    <?php echo $selectCausaleMovimenti[array_rand($selectCausaleMovimenti)]; ?>
+                  </td>
+                  <td class="center">20/01/2020 10:10</td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="left">EUR</td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="left"><?php
+                    $st = array('Eseguito','Ineseguito');
+                    echo $st[array_rand($st)];
+                  ?></td>
+                  <td class="center">20/01/2020</td>
+                  <td class="right">0000-000-0000</td>
+                </tr>
+              <?php } ?>
+              </tbody>
+          </table>
+
+          <!-- PULSANTIERA SOTTO TABELLA -->
+          <div class="btnWrapper marginTopMedium">
+              <div class="btn-align-left">
+                  <a class="btn-link-icon" href="#"><i class="icon icon-excel_filled"></i><span>Scarica in Excel</span></a>
+                  <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
+              </div>
+              <!--div class="btn-align-right">
+                  <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+              </div-->
+              <br class="clear">
+          </div>
+          <!-- FINE PULSANTIERA SOTTO TABELLA -->
+
       </div>
 
     </div>
   </div>
 </div>
+
+<!-- FUNZIONI PER FILTRI -->
+<?php include("./parts/table_th_filter.php"); ?>
+<!-- FINE FUNZIONI PER FILTRI -->
 
 <!-- INIZIALIZZAZIONI -->
 <script type="text/javascript">
