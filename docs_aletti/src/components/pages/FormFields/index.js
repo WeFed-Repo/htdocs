@@ -28,7 +28,9 @@ export default class extends Component {
             esempio_campo_radiogroup_verticale: "",
             esempio_campo_check: "",
             esempio_campo_checkfile: "",
-            esempio_campo_file: ""
+
+            esempio_campo_file: "",
+            esempio_campo_file_fr: ""
 
         }
         this.generalOnChange=this.generalOnChange.bind(this);
@@ -70,7 +72,33 @@ export default class extends Component {
             <div className="onboarding-wrapper">
 
                 <div className="onboarding-form">
+                    <h2>File upload</h2>
 
+                    <Row>
+                        <Col sm="3">
+                            <Form.file
+                                label="Upload file (unico o f/r)"
+                                name="esempio_campo_file"
+                                value={formstate.esempio_campo_file}
+                                disabled={this.state.allDisabled}
+                                error={formstate.errors["esempio_campo_file"]}
+                                onChange={this.generalOnChange}
+                                tipo="fr"
+                                >
+                                ></Form.file>
+                        </Col>
+                        <Col sm="3">
+                            <Form.file
+                                label="Upload file (unico)"
+                                name="esempio_campo_file_fr"
+                                value={formstate.esempio_campo_file_fr}
+                                disabled={this.state.allDisabled}
+                                error={formstate.errors["esempio_campo_file_fr"]}
+                                onChange={this.generalOnChange}
+                                >
+                                ></Form.file>
+                        </Col>
+                    </Row>
 
                     <h2>Input</h2>
                     <Row>
@@ -305,21 +333,7 @@ export default class extends Component {
                     </Row>
 
 
-                    <h2>File upload</h2>
-
-                    <Row>
-                        <Col sm="3">
-                            <Form.file
-                                label="Upload file"
-                                name="esempio_campo_file"
-                                value={formstate.esempio_campo_file}
-                                disabled={this.state.allDisabled}
-                                error={formstate.errors["esempio_campo_file"]}
-                                onChange={this.generalOnChange}
-                                >
-                                ></Form.file>
-                        </Col>
-                    </Row>
+                    
                 </div>
 
                 <div className="onboarding-pulsantiera">

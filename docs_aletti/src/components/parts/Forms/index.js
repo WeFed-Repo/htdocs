@@ -358,11 +358,11 @@ class FormFile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalShow: false,
-            fileToTransfer: "",
-            fileLoading: false
+            flag_unico: true,
+            modalUpload: false
         }
         this.fileUpload = this.fileUpload.bind(this);
+        this.fileView = this.fileView.bind(this);
     }
 
     // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
@@ -383,12 +383,17 @@ class FormFile extends Component {
 
     }
 
+    fileView() {
+
+    }
+
     render() {
 
         // parametri del campo: vengono cambiati tramite le sue props
         let label = (this.props.label) ? this.props.label : "",
             error = this.props.error,
-            value = this.props.value
+            value = this.props.value,
+            tipo = (this.props.tipo) ? this.props.tipo : "";
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
@@ -412,10 +417,35 @@ class FormFile extends Component {
                         </ModalFooter>
                     </div>
                 </Modal>
-                <div className="file-upload">
-                    {value === "" && <span className="output">File non caricato</span>}
-                    {value !== "" && <span className="output">{value}</span>}
-                    <Button onClick={() => this.setState({ modalShow: true })}>{value !== "" ? "Cambia" : "Carica"}</Button>
+                <div className="file-input-wrapper">
+                    <div className="fr-selector">
+                        {tipo === "fr" && 
+                            <label className="file-check-label"><input type="checkbox" value="true" onChange={(e)=>this.setState({
+                                flag_unico: !this.state.flag_unico
+                            })} checked={this.state.flag_unico}></input><span>Carica il documento fronte-retro in un unico file</span></label>
+                        }
+                        <div className="file-input-parts">
+                            {this.state.flag_unico &&
+                                <div className={"document-wrapper ok "}>
+                                    <div className={"document-thumbnail " + ((tipo==="fr")?"unico" : "solo")}></div>
+                                    <Button color="primary">Carica</Button>
+                                </div>
+                            }
+                            {!this.state.flag_unico && 
+                                <>
+                                     <div className="document-wrapper ok">
+                                        <div className="document-thumbnail fronte"></div>
+                                        <Button color="primary">Fronte</Button>
+                                    </div>
+                                    <div className="document-wrapper">
+                                        <div className="document-thumbnail retro"></div>
+                                        <Button color="primary">Retro</Button>
+                                    </div>
+                                   
+                                </>
+                            }
+                        </div>
+                    </div>
                 </div>
                 {error && <span className="error">{error}</span>}
             </div>
