@@ -5769,6 +5769,29 @@ table tr td.td-fondo .fundName {
   padding-left: 10px;
   padding-right: 15px;
 }
+.spsel.spsel-hasactions .spsel-option {
+  padding-right: 80px;
+}
+.spsel.spsel-hasactions.nosel .spsel-option.spsel-selected {
+  padding-left: 0;
+}
+.spsel.spsel-hasactions.nosel .spsel-option.spsel-selected .spsel-option-el {
+  padding-right: 10px;
+  padding-left: 15px;
+}
+.spsel.spsel-hasactions .spsel-addel {
+  left: auto;
+  right: 45px;
+}
+.spsel.spsel-hasactions .spsel-addel:last-child {
+  right: 5px;
+}
+.spsel.spsel-hasactions .spsel-option.spsel-selected .spsel-option {
+  padding-right: 0;
+}
+.spsel.spsel-hasactions .spsel-option.spsel-selected .spsel-addel {
+  display: none;
+}
 .spsel.spsel-hasconsole .spsel-option {
   padding-right: 100px;
 }
