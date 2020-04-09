@@ -4320,7 +4320,17 @@ span.colAlert {
 .assicurazioni .box-catalogue-right {
     background-color: #fff
 }
-
+.assicurazioni .box-catalogue-right .btn-icon {width: auto;}
+.assicurazioni .box-catalogue-right .btn-icon span {
+    color: #0e977f;
+    float: right;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 0 5px 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size:14px;
+}
 .assicurazioni hr {
     margin-top: 0;
     margin-bottom: 0;
