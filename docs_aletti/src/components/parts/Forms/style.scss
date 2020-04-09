@@ -27,39 +27,43 @@
         }
     }
 
-    .file-upload {
-        border:solid 1px #ccc;
-        border-radius:5px;
-        height:40px;
-        background:#f9f9f9;
-        button {
-            text-align: center;
-            font-size: 25px;
-            border:0 none;
-            line-height: 40px;
-            display: inline-block;
-            color: #21557e;
-            width:60px;
-            background: #ccc;
-            font-size:12px;
-            text-transform:uppercase;
-            z-index: 1;
-            width: 40px;
-            height: 38px;
-            background: #eee;
-            border-radius: 0 5px 5px 0;
-            position: absolute;
-            right: 1px;
-            padding:0;
-            &:hover {
-                background-color:#ddd
-            }
+    .file-input-wrapper {
+        .file-check-label {width:100%;display:inline-block; position:relative; font-style:normal;
+        padding-left:20px; margin:10px 0; clear:both;
+            input {position:absolute; top:3px;left:0;}
         }
-        span.output {
-            width:calc(100%-60px);
-            padding: 5px;
-            color:#666;
-            line-height:38px;
+        .file-input-parts {border:solid 1px #ccc; padding:15px;position:relative;
+        text-align:center;margin-top:10px;
+            .document-wrapper {
+                max-width:50%;min-width:120px; display:inline-block;padding:10px;
+                .document-thumbnail {opacity:0.5; position:relative;
+                    margin-bottom:10px;
+                    display:inline-block;width:70px;height:70px;background: transparent url(/img/documenti_unico.png) no-repeat center center; background-size:cover;
+                    &.fronte {background-image: url(/img/documenti_fronte.png)}
+                    &.retro {background-image: url(/img/documenti_retro.png)}
+                    &.solo {background-image: url(/img/documenti_solo.png)}
+                    
+                }
+                .btn {width:100%;}
+                &.ok {
+                    .document-thumbnail{
+                        opacity:1;
+                        &::before {
+                            content: "\2714";
+                            position: absolute;
+                            border-radius: 50%;
+                            line-height: 30px;
+                            text-align: center;
+                            top: -8px;
+                            right: -3px;
+                            color: #fff;
+                            width: 30px;
+                            background-color: #21557e;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -208,7 +212,7 @@
     }
     &.error {
         .form-control-label {color:#c00}
-        input,select {border-color: #c00}
+        input,select,.file-input-parts {border-color: #c00}
         span.text {color:#c00}
         span.error {color:#c00;clear:both;display:block}
        

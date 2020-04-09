@@ -7,11 +7,11 @@ $(function(){
 			var errors = [];
 			errors.push({ field: $("#spselCTA"), text: "Lorem ipsum dolor sit amet, consectetur adipisicing." });
 			errors.push({ field: $("#spselCTA2"), text: "Lorem ipsum dolor sit amet, consectetur adipisicing." });
-			
+
 			setHasErrors(errors);
 	});
 });
-</script> 
+</script>
 <?php
 } ?>
 
@@ -46,9 +46,9 @@ $(function(){
 							<a class="spsel-addel btn-icon" data-el="icona_informativa_<?php print($i);?>"><i class="icon <?php print ($site==="webank") ? "icon-info": "icon-info_fill";?>"></i></a>
 							<a class="spsel-option-el">Elemento <?php print($i);?> lorem ipsum dolor sit amet</a>
 						</div>
-						<?php } ?>						
+						<?php } ?>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 form-field-input">
 				<label class="control-label">Versione "grafica" con CTA senza preselezione</label>
@@ -77,9 +77,9 @@ $(function(){
 							<a class="spsel-addel btn-icon" data-el="icona_informativa_<?php print($i);?>"><i class="icon <?php print ($site==="webank") ? "icon-info": "icon-info_fill";?>"></i></a>
 							<a class="spsel-option-el">Elemento <?php print($i);?> lorem ipsum dolor sit amet</a>
 						</div>
-						<?php } ?>						
+						<?php } ?>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -91,7 +91,7 @@ $(function(){
 
 					/* Esempio inizializzazione */
 					$(function(){
-						
+
 						// Inizializzazione personalizzata degli elementi correlati alla special select (nel caso specifico sono delle iconcine)
 						// La funzione deve essere uguale per tutti e verra' riportata anche nell'elemento selezionato
 						$("#spselOutIco").click(function(e){
@@ -118,7 +118,7 @@ $(function(){
 							$(this).parents(".spsel").removeClass("nosel").addClass("spsel-hasicon");
 							// Esempio funzione custom
 							alert("Esempio funzione custom!")
-							$(this).parents(".spsel-option").empty().append('<a class="spsel-addel btn-icon" data-el="icona_informativa_3"><i class="icon <?php print ($site==="webank") ? "icon-info": "icon-info_fill";?>"></i></a><a class="spsel-option-el">Elemento 3 lorem ipsum dolor sit amet</a></div>');							
+							$(this).parents(".spsel-option").empty().append('<a class="spsel-addel btn-icon" data-el="icona_informativa_3"><i class="icon <?php print ($site==="webank") ? "icon-info": "icon-info_fill";?>"></i></a><a class="spsel-option-el">Elemento 3 lorem ipsum dolor sit amet</a></div>');
 
 						});
 					});
@@ -130,7 +130,7 @@ $(function(){
 					<div class="spsel-option spsel-selected">
 						<a class="spsel-option-el">Clicca per riempire la "select"</a>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -156,13 +156,13 @@ $(function(){
 						<div class="spsel-option" data-value="<?php print($i);?>">
 							<label>
 								<input type="checkbox" value="<?php print($i);?>" name="spselCTAinputCB">
-								<span class="spsel-option-el">Elemento <?php print($i);?> lorem ipsum dolor sit amet</span>	
+								<span class="spsel-option-el">Elemento <?php print($i);?> lorem ipsum dolor sit amet</span>
 								<span class="spse-countdetail">(<?php print($i * 3 );?>)</span>
 							</label>
 						</div>
-						<?php } ?>						
+						<?php } ?>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 form-field-input">
 				<label class="control-label">Versione "lista" con dettagli</label>
@@ -184,11 +184,55 @@ $(function(){
 						<div class="spsel-option" data-value="<?php print($i);?>">
 							<a class="spsel-option-el">Elemento <?php print($i);?> lorem ipsum dolor sit amet<span class="only-detail"><br>Lorem <strong>ipsum</strong> dolor<br><strong>333.333,31</strong> EUR</span></a>
 						</div>
-						<?php } ?>						
+						<?php } ?>
 					</div>
 				</div>
 
 			</div>
+
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="row">
+
+
+			<div class="col-xs-12 col-sm-6 form-field-input">
+				<label class="control-label">Versione "grafica" con due azioni a destra del testo</label>
+				<script type="text/javascript">
+
+					/* Esempio inizializzazione */
+					$(function(){
+						// Inizializza la special-select tipo "default" (esempio di callback)
+						$("#spselCTAactions").spSel(
+							function(){console.log($("input[name=spselCTAinput2]").val())}
+						);
+						// Inizializzazione personalizzata degli elementi correlati alla special select (nel caso specifico sono delle iconcine)
+						// La funzione deve essere uguale per tutti e verra' riportata anche nell'elemento selezionato
+						$("#spselCTAactions .spsel-addel.btn-icon").click(function(e){
+							e.stopPropagation();
+							alert("Elemento selezionato: " + $(this).attr("data-el"));
+						})
+					});
+
+				</script>
+				<div class="spsel spsel-hasactions nosel" id="spselCTAactions"  placeholder="Seleziona...">
+					<input type="hidden" name="spselCTAinput2">
+					<div class="spsel-options">
+						<?php for($i=0;$i<=20;$i++) { ?>
+						<div class="spsel-option" data-value="<?php print($i);?>">
+							<a class="spsel-option-el">Elemento <?php print($i);?></a>
+							<a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
+								<i class="icon icon-r-modifica"></i>
+							</a>
+							<a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
+								<i class="icon icon-r-elimina"></i>
+							</a>
+						</div>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>

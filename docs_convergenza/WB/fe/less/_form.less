@@ -2,7 +2,7 @@
 
 /* wrapper generico per form parametrizzabile in colore  di sfondo*/
 
-@borderRadiusForm: 0; 
+@borderRadiusForm: 0;
 .wrapperForm(@bckColorForm) {
     width: 100%;
     margin-bottom: 30px;
@@ -1146,7 +1146,7 @@ ul.ui-autocomplete li.ui-menu-item {
         position: absolute;
         top: 0;
         line-height: 22px;
-       
+
         &.icon-spinner_less {
             left: 0;
         }
@@ -1557,7 +1557,7 @@ form .col-xs-1, form .col-sm-1, form .col-md-1, form .col-lg-1, form .col-xs-2, 
 
 /* Selettore in overlay */
 .modal-body .selector-wrap.selector-mini{
-    .selector-box { width: 111px} 
+    .selector-box { width: 111px}
     &.only-definition .selector-box {width:158px;}
 }
 @media (max-width: 767px) {
@@ -2879,18 +2879,19 @@ table tr td.td-fondo {
     font-size: 100px
 }
 
-.top-title-promo { 
+.top-title-promo {
     color: @colorBank2;
     font-size: 22px;
 }
 @media (max-width: 767px) {
     .box-catalogue.assicurazioni .icon {display: none!important}
     .box-catalogue.assicurazioni h3 {margin-bottom:0;}
-} 
+}
 
 /*fine nuova sezione fianziamenti */
 
 /* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
+
 .spsel {
     width:100%;border:solid 1px #ccc; background-color:#fff;position:relative;
     background-size:20px 20px;
@@ -2941,6 +2942,28 @@ table tr td.td-fondo {
             .spsel-option-el {padding-left:10px;padding-right:15px;}
         }
     }
+    &.spsel-hasactions{
+      .spsel-option {padding-right:80px;}
+      &.nosel .spsel-option.spsel-selected {
+          padding-left:0;
+          .spsel-option-el {
+            padding-right:10px;
+            padding-left:15px;
+          }
+      }
+      .spsel-addel {
+        left: auto;
+        right:45px;
+        
+        &:last-child {
+          right: 5px;
+        }
+      }
+      .spsel-option.spsel-selected {
+        .spsel-option {padding-right:0;}
+        .spsel-addel { display: none; }
+      }
+    }
     &.spsel-hasconsole{
         .spsel-option {padding-right:100px;}
        .spsel-btn-console {
@@ -2960,11 +2983,11 @@ table tr td.td-fondo {
     &.output {
         border:0 none;background-color: transparent;
         .spsel-option{
-            background-image: none; 
+            background-image: none;
             background-color: transparent;
             .spsel-addel {width:25px;margin-left:0;}
-        } 
-        
+        }
+
     }
     &.spsel-check {
         .spsel-option {
@@ -2989,4 +3012,3 @@ table tr td.td-fondo {
 @media (max-width: 767px){
     .spsel {margin-bottom:14px;}
 }
-
