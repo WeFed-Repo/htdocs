@@ -4,7 +4,7 @@
             <h1>
                 <div class="row">
                     <div class="col-sm-8">
-                        <span>Acquisto ed emissione polizza<br>RIEPILOGO</span></span>
+                        <span>Acquisto ed emissione polizza<br><span>RIEPILOGO</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">
@@ -79,7 +79,7 @@
 							<label class="control-label">Tacito rinnovo</label>
 						</div>
 						<div class="col-xs-8">
-							<span class="resume">S&igrave;&nbsp; </span> <a class="text-underline" href="Javascript:;" data-toggle="tooltip" data-title="La polizza si rinnova automaticamente. Potrà essere disdetta in agenzia o con raccomandata entro 30 giorni dalla scadenza."> dettagli</a>
+							<span class="resume">S&igrave;&nbsp; </span> <a class="link-text text-underline" href="Javascript:;" data-toggle="tooltip" data-title="La polizza si rinnova automaticamente. Potrà essere disdetta in agenzia o con raccomandata entro 30 giorni dalla scadenza."> Dettagli</a>
 						</div>
 					</div>
 				</div>
@@ -105,7 +105,7 @@
 							<label class="control-label">Valore immobile</label>
 						</div>
 						<div class="col-xs-8">
-                            <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale."> dettagli</a>
+                            <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="link-text text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale."> Dettagli</a>
 						</div>
                     </div>
                     <div class="row">
@@ -139,7 +139,7 @@
 							<label class="control-label">Valore immobile</label>
 						</div>
 						<div class="col-xs-8">
-                            <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale."> dettagli</a>
+                            <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="link-text text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale."> Dettagli</a>
 						</div>
                     </div>
                     <div class="row">
@@ -197,7 +197,7 @@
                     <div class="details collapse" id="collapseDet" aria-expanded="false">
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Dimora abituale</span>
+                                <span class="resume titolo">Dimora abituale</span>
                             </div>
                         </div>
                         <div class="row">
@@ -210,7 +210,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-4">
-                                <label class="control-label">Danni al contenuto + RC e Assistenza</label>
+                                <label class="control-label">Danni al contenuto</label>
                             </div>
                             <div class="col-xs-8">
                                 <span class="resume">000,00 &euro;</span>
@@ -226,7 +226,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Box</span>
+                                <span class="resume titolo">Box</span>
                             </div>
                         </div>
                         <div class="row">
@@ -239,7 +239,15 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Soggetto fisico</span>
+                                <span class="resume titolo">Soggetto fisico</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label class="control-label">Responsabilit&agrave; civile</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="resume">000,00 €</span>
                             </div>
                         </div>
                         <div class="row">
@@ -300,7 +308,7 @@
                   </label>
                   <p class="marginLeftExtraLarge">Sarà disponibile, una volta completato l'acquisto, nella sezione "Polizze attive”.</p>
                </div>
-              <div class="form-field-input col-xs-6">
+              <div class="form-field-input col-xs-12">
                  <label>
                     <input type="radio" name="formato" value="C"  id="" onclick="$('#digitale').hide();$('#cartaceo').show()">
                     Formato cartaceo
@@ -312,11 +320,11 @@
 </section>
 <section>
     <div class="row" id="digitale">
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-8">
             <p><strong>Autorizza il pagamento</strong></p>
             <p>Per autorizzare clicca su Acquista polizza e utilizza la tua <strong>app di sicurezza.</strong></p>
         </div>
-        <div class="col-xs-12 col-sm-8 paddingTopLarge">
+        <div class="col-xs-12 col-sm-4 paddingTopLarge">
             <div class="btn-align-right">
                 <div>
                     <a type="button" href="#" class="btn btn-primary" title="acquista polizza">acquista polizza</a>
@@ -325,10 +333,10 @@
         </div>
     </div>
     <div class="row" id="cartaceo" style="display:none">
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-8">
             <p>Contatta il gestore della tua filiale di riferimento</p>
         </div>
-        <div class="col-xs-12 col-sm-8 paddingTopLarge">
+        <div class="col-xs-12 col-sm-4">
             <div class="btn-align-right">
                 <div>
                     <a type="button" href="#" class="btn btn-primary" title="prendi appuntamento">prendi appuntamento</a>

@@ -6,7 +6,7 @@
 
                     
                     <div class="col-sm-8">
-                        <span>Richiedi il preventivo<br>selzione beni e garanzie</span></span>
+                        <span>Richiedi il preventivo<br><span>Consensi privacy</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">
@@ -52,7 +52,7 @@
                         <div class="col-xs-12 col-sm-4 form-field-input">
                         <label class="control-label">
                         Seleziona la tua filiale
-                        <a><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="A quale filiale vuoi associare la tua polizza? Scegli l'indirizzo che ti è più comodo. Potresti aver bisogno di andarci per ottenere la documentazione cartacea, ricevere assistenza dopo l'acquisto, disdire la tua polizza, ecc."></i></a>
+                        <a class="btn-icon"><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="A quale filiale vuoi associare la tua polizza? Scegli l'indirizzo che ti è più comodo. Potresti aver bisogno di andarci per ottenere la documentazione cartacea, ricevere assistenza dopo l'acquisto, disdire la tua polizza, ecc."></i></a>
                         </label>
                         <script type="text/javascript">
                             /* Esempio inizializzazione */

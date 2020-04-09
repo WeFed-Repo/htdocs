@@ -3,10 +3,8 @@
     <div class="titolo">
             <h1>
                 <div class="row">
-
-                    
-                    <div class="col-sm-8">
-                        <span>Richiedi il preventivo<br>Esito</span></span>
+						<div class="col-sm-8">
+                        <span>Richiedi il preventivo<br><span>Esito</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">
@@ -53,7 +51,7 @@ e sarà valido fino al xx/xx/xxxx</h3>
 	</div>
 	<div class="row boxAction">
 		<div class="col-sm-7 hidden-xs"><p>Acquista la polizza</p></div>
-		<div class="col-sm-5 col-xs-12 alignRight"><a href="#" class="btn btn-link"><span>Acquista/span><i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a></div>
+		<div class="col-sm-5 col-xs-12 alignRight"><a href="#" class="btn btn-link"><span>Acquista</span><i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a></div>
 	</div>
 	<div class="row boxAction">
 		<div class="col-sm-7 hidden-xs"><p>Consulta i tuoi preventivi</p></div>

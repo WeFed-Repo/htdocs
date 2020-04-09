@@ -6,7 +6,7 @@
 
                     
                     <div class="col-sm-8">
-                        <span>Richiedi il preventivo<br>Riepilogo</span></span>
+                        <span>Richiedi il preventivo<br><span>Riepilogo</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">
@@ -67,7 +67,8 @@
 							<label class="control-label">Tacito rinnovo</label>
 						</div>
 						<div class="col-xs-8">
-							<span class="resume">S&igrave;&nbsp; </span> <a class="text-underline" href="Javascript:;" data-toggle="tooltip" data-title="La polizza si rinnova automaticamente. Potrà essere disdetta in agenzia o con raccomandata entro 30 giorni dalla scadenza."> dettagli</a>
+							<span class="resume">S&igrave;&nbsp; </span> 
+							<a class="link-text text-underline" href="Javascript:;" data-toggle="tooltip" data-title="La polizza si rinnova automaticamente. Potrà essere disdetta in agenzia o con raccomandata entro 30 giorni dalla scadenza."> Dettagli</a>
 						</div>
 					</div>
 					
@@ -95,7 +96,7 @@
 							<label class="control-label">Valore immobile</label>
 						</div>
 						<div class="col-xs-8">
-                        <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale"> dettagli</a>
+                        <span class="resume">xxx.xxx,xx &euro;&nbsp; </span> <a class="link-text text-underline" href="Javascript:;" data-toggle="tooltip" data-title="Corrisponde al valore di ricostruzione dell'immobile calcolato sulla base dei mq e della categoria catastale"> Dettagli</a>
 						</div>
 					</div>
 					<div class="row">
@@ -126,7 +127,7 @@
     <div class="border-output">
 		<div class="row first-row">
 			<div class="col-sm-12 col-xs-12 boxDefault">
-				<h3 class="titleSection titleForm">Premio</h3>
+				<h3 class="titleSection titleForm titolo">Premio</h3>
 				<div class="formWrapper">
 					<div class="row">
 						<div class="col-xs-4">
@@ -155,7 +156,7 @@
                     <div class="details collapse" id="collapseDet" aria-expanded="false">
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Dimora abituale</span>
+                                <span class="resume titolo">Dimora abituale</span>
                             </div>
                         </div>
                         <div class="row">
@@ -168,7 +169,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-4">
-                                <label class="control-label">Danni al contenuto + RC e Assistenza</label>
+                                <label class="control-label">Danni al contenuto</label>
                             </div>
                             <div class="col-xs-8">
                                 <span class="resume">000,00 &euro;</span>
@@ -184,7 +185,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Box</span>
+                                <span class="resume titolo">Box</span>
                             </div>
                         </div>
                         <div class="row">
@@ -197,7 +198,15 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span class="resume">Soggetto fisico</span>
+                                <span class="resume titolo">Soggetto fisico</span>
+                            </div>
+						</div>
+						<div class="row">
+                            <div class="col-xs-4">
+                                <label class="control-label">Responsabilit&agrave; civile</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="resume">000,00 €</span>
                             </div>
                         </div>
                         <div class="row">
@@ -226,7 +235,9 @@
     <div class="form-group">
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-12">
-                <label class="informativa"><input disabled type="checkbox" name="" id="" class="input-toggle-hidden">Dichiaro di aver preso visione dell' <a href="#" target="_blank" class="text-underline">allegato 3</a>, <a href="#" target="_blank" class="text-underline">l'allegato 4</a>, il <a href="#" target="_blank" class="text-underline">DIP</a>, il <a href="#" target="_blank" class="text-underline">DIP aggiuntivo</a>, delle <a href="#" target="_blank" class="text-underline">condizioni di assicurazione</a>, e di averne compreso e salvato il contenuto.</label>
+                <label class="informativa has-feedback">
+				   <span data-toggle="tooltip" class="tooltip-masked" data-title="Per procedere, apri e leggi tutta la documentazione"></span>
+				  <input disabled type="checkbox" name="" id="" class="flLeft"><span class="flLeft text-checkbox">Dichiaro di aver preso visione dell' <a href="#" target="_blank" class="link-text text-underline">allegato 3</a>, <a href="#" target="_blank" class="link-text text-underline">l'allegato 4</a>, il <a href="#" target="_blank" class="link-text text-underline">DIP</a>, il <a href="#" target="_blank" class="link-text text-underline">DIP aggiuntivo</a>, delle <a href="#" target="_blank" class="link-text text-underline">condizioni di assicurazione</a>, e di averne compreso e salvato il contenuto.</span></label>
             </div>
         </div> 
            
@@ -243,8 +254,20 @@
       </div>
       <div class="btn-align-back">
           <div>
-            <a type="button" href="javascript:vai('back')" class="btn btn-default">indietro</a>
+            <a type="button" href="#" class="btn btn-default">indietro</a>
           </div>
       </div>
   </div>
 </section>
+<script>
+	var openedLink = 0;
+	$(".informativa").find("a:not(.opened)").on("click", function(){
+		$(this).addClass("opened");
+		openedLink++;
+		if(openedLink=== $(".informativa").find("a").length)
+		{
+			$(".informativa").find(".tooltip-masked").remove();
+			$(".informativa").find("input").attr("disabled", false)
+		}
+	})
+</script>

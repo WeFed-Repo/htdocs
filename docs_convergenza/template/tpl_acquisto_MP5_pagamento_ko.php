@@ -6,7 +6,7 @@
 
                     
                     <div class="col-sm-8">
-                        <span>ACQUISTO ED EMISSIONE POLIZZA<br>Esito</span></span>
+                        <span>ACQUISTO ED EMISSIONE POLIZZA<br><span>Esito</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">

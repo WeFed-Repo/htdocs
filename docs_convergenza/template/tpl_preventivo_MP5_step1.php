@@ -6,7 +6,7 @@
 
                     
                     <div class="col-sm-8">
-                        <span>Richiedi il preventivo<br>Consensi privacy</span></span>
+                        <span>Richiedi il preventivo<br><span>Consensi privacy</span></span>
                     </div>
                     <div class="col-sm-4">	
                         <div class="pager pull-right">
