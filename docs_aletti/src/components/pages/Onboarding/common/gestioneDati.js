@@ -305,10 +305,7 @@ const defaultFields = {
                 "nascita": "",
                 "sesso": "",
                 "codiceFiscale": "",
-                "imgCodFiscale": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgCodFiscale": [],
                 "email": "",
                 "prefisso": "",
                 "telefono": "",
@@ -559,11 +556,13 @@ let fieldsFromJson = (json) => {
             }
             else {
                 /* Se è un immagine la preserva come oggetto */
+                
                 if (v==="imgCodFiscale") {
                     formObj[prefisso + "_" + v.toLowerCase()] = json[v];
                 }
                 else
                 {
+
                     Object.assign(formObj, extractObject(prefisso + "_" + v.toLowerCase(), json[v], formObj));
                 }
             }

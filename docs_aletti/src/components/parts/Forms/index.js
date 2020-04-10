@@ -432,7 +432,7 @@ class FormFile extends Component {
         // Oggetto locale per le visualizzazioni
         let fileObject = {"FRONTE":{},"RETRO":{},"UNICA":{}};
        
-        this.props.value.forEach((v,i)=>{
+        this.props.value && this.props.value.forEach((v,i)=>{
                fileObject[v.tipo] = v;
             });
 
