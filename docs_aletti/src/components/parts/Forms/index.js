@@ -9,6 +9,7 @@ import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./style.scss";
+import { startsWith } from 'lodash-es';
 
 // Filtraggio in INPUT
 const applyMask = (value,mask) => {
@@ -358,32 +359,65 @@ class FormFile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            flag_unico: true,
-            modalUpload: false
+            flag_unico: (this.props.value && this.props.value.filter((el)=>{return (el.tipo==="FRONTE" || el.tipo==="RETRO")}).length>0)? false: true,
+            
+            modalUploadTitle: "",
+            modalUpload: false,
+            fileToTransfer: "",
+            fileUploadStream: null,
+            
+            fileLoading: false,
+            modalView: false
         }
         this.fileUpload = this.fileUpload.bind(this);
         this.fileView = this.fileView.bind(this);
     }
 
     // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
-    fileUpload() {
+    fileUpload(tipo) {
+        
+        // crea il nuovo array locale eliminando eventuale file preesistente
+        let localValue = [];
+        this.props.value.forEach((v,i)=>{
+                if(v.tipo!==tipo) localValue.push(v);
+        });
+        
 
-        this.setState({ fileLoading: true },
-            () => {
-                // Qui farebbe la chiamata al file vero e proprio ed in "value" metterebbe l'id del file
-                this.props.onChange({ "name": this.props.name, "value": parseInt(Math.random() * 99999) ,"cbchange": this.props.cbchange, mask: null})
-                this.setState({
-                    fileToTransfer: "",
-                    fileLoading: false,
-                    modalShow: false
-                })
-            }
-        )
+        // Appende il nuovo valore
+        localValue.push ({
+            "idImmagine":parseInt(Math.random()*999999),    
+            "formato":"PDF",    
+            "tipo":tipo 
+        });
+
+        // Chiude la modale e resetta il trasferimento
+        this.setState({
+            fileToTransfer:"",
+            modalUpload:false
+        })
+
+        // Cambia il valore nel form
+        this.props.onChange({name:this.props.name,value:localValue})
 
 
     }
 
-    fileView() {
+    modalUpload(type) {
+        this.setState({
+            modalUploadTitle: this.props.label + ": carica immagine " + ( type!=="UNICA"? type.toLowerCase(): ""),
+            modalUpload: true,
+            modalUploadType: type,
+            fileToTransfer: ""
+        })
+    }
+
+    
+    fileView(file) {
+        if(file && file.idImmagine) {
+            this.setState({
+                modalView: true
+            })
+        }
 
     }
 
@@ -394,13 +428,23 @@ class FormFile extends Component {
             error = this.props.error,
             value = this.props.value,
             tipo = (this.props.tipo) ? this.props.tipo : "";
+                   
+        // Oggetto locale per le visualizzazioni
+        let fileObject = {"FRONTE":{},"RETRO":{},"UNICA":{}};
+       
+        this.props.value.forEach((v,i)=>{
+               fileObject[v.tipo] = v;
+            });
+
+        console.log(fileObject)
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
-                <Modal isOpen={this.state.modalShow}>
+                
+                <Modal isOpen={this.state.modalUpload}>
                     <div className={(this.state.fileLoading) ? "loading" : ""}>
-                        <ModalHeader>{this.props.label}</ModalHeader>
+                        <ModalHeader>{this.state.modalUploadTitle}</ModalHeader>
                         <ModalBody>
                             <p>{value === "" ? "Seleziona un file da caricare" : "Seleziona un file con il quale sovrascrivere quello già caricato"}:</p>
                             <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value }) }}></input>
@@ -408,15 +452,36 @@ class FormFile extends Component {
                         <ModalFooter>
                             <div className="btn-console">
                                 <div className="btn-console-left">
-                                    <Button onClick={() => this.setState({ modalShow: false, fileToTransfer: "" })}>Annulla</Button>
+                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
                                 </div>
                                 <div className="btn-console-right">
-                                    <Button color="primary" style={{ display: (this.state.fileToTransfer === "") ? "none" : "" }} onClick={this.fileUpload}>Carica il file</Button>
+                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
                                 </div>
                             </div>
                         </ModalFooter>
                     </div>
                 </Modal>
+
+                <Modal isOpen={this.state.modalWiew}>
+                    <div className={(this.state.fileLoading) ? "loading" : ""}>
+                        <ModalHeader>{this.state.modalViewTitle}</ModalHeader>
+                        <ModalBody>
+                            <p>Seleziona un file da caricare</p>
+                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value , fileUploadStream: e.target.files}) }}></input>
+                        </ModalBody>
+                        <ModalFooter>
+                            <div className="btn-console">
+                                <div className="btn-console-left">
+                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
+                                </div>
+                                <div className="btn-console-right">
+                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
+                                </div>
+                            </div>
+                        </ModalFooter>
+                    </div>
+                </Modal>
+
                 <div className="file-input-wrapper">
                     <div className="fr-selector">
                         {tipo === "fr" && 
@@ -426,20 +491,20 @@ class FormFile extends Component {
                         }
                         <div className="file-input-parts">
                             {this.state.flag_unico &&
-                                <div className={"document-wrapper ok "}>
-                                    <div className={"document-thumbnail " + ((tipo==="fr")?"unico" : "solo")}></div>
-                                    <Button color="primary">Carica</Button>
+                                <div className={"document-wrapper " + (fileObject["UNICA"].idImmagine? "ok": "")}>
+                                    <div className={"document-thumbnail " + ((tipo==="fr")?"unico" : "solo")}  onClick={()=>this.fileView(fileObject["UNICA"])}></div>
+                                    <Button color="primary" onClick={()=>this.modalUpload("UNICA")}>carica</Button>
                                 </div>
                             }
                             {!this.state.flag_unico && 
                                 <>
-                                     <div className="document-wrapper ok">
-                                        <div className="document-thumbnail fronte"></div>
-                                        <Button color="primary">Carica fronte</Button>
+                                     <div className={"document-wrapper " + (fileObject["FRONTE"].idImmagine? "ok": "")}>
+                                        <div className="document-thumbnail fronte" onClick={()=>this.fileView(fileObject["FRONTE"])}></div>
+                                        <Button color="primary" onClick={()=>this.modalUpload("FRONTE")}>carica fronte</Button>
                                     </div>
-                                    <div className="document-wrapper">
-                                        <div className="document-thumbnail retro"></div>
-                                        <Button color="primary">Carica retro</Button>
+                                    <div className={"document-wrapper " + (fileObject["RETRO"].idImmagine? "ok": "")}>
+                                        <div className="document-thumbnail retro"  onClick={()=>this.fileView(fileObject["RETRO"])}></div>
+                                        <Button color="primary"  onClick={()=>this.modalUpload("RETRO")}>carica retro</Button>
                                     </div>
                                    
                                 </>

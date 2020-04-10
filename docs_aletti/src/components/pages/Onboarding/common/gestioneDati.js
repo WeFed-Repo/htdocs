@@ -176,10 +176,7 @@ const defaultFields = {
                 "nascita": "",
                 "sesso": "",
                 "codiceFiscale": "",
-                "imgCodFiscale": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgCodFiscale": [],
                 "email": "",
                 "prefisso": "",
                 "telefono": "",
@@ -457,6 +454,10 @@ let typeKeys = {
         "field_anagraficablob_intestatari_1_nascita",
         "field_anagraficablob_intestatari_1_datarilasciorinnovo",
         "field_anagraficablob_intestatari_1_datascadenza"
+    ],
+    "file" : [
+        "field_anagraficablob_intestatari_0_imgcodfiscale",
+        "field_anagraficablob_intestatari_1_imgcodfiscale"
     ]
 }
 
@@ -473,6 +474,9 @@ let decodeField = (fieldkey, fieldval) => {
         }
         else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
             outval = (fieldval) ? "true" : ""
+        }
+        else if (typeKeys["file"].indexOf(fieldkey) >= 0) {
+            outval = fieldval;
         }
         else {
             outval = fieldval.toString();
@@ -553,9 +557,15 @@ let fieldsFromJson = (json) => {
             if (typeof json[v] !== "object" || json[v] === null) {
                 formObj[prefisso + "_" + v.toLowerCase()] = decodeField(prefisso + "_" + v.toLowerCase(), json[v]);
             }
-
             else {
-                Object.assign(formObj, extractObject(prefisso + "_" + v.toLowerCase(), json[v], formObj))
+                /* Se è un immagine la preserva come oggetto */
+                if (v==="imgCodFiscale") {
+                    formObj[prefisso + "_" + v.toLowerCase()] = json[v];
+                }
+                else
+                {
+                    Object.assign(formObj, extractObject(prefisso + "_" + v.toLowerCase(), json[v], formObj));
+                }
             }
 
         });

@@ -29,9 +29,8 @@ export default class extends Component {
             esempio_campo_check: "",
             esempio_campo_checkfile: "",
 
-            esempio_campo_file: "",
-            esempio_campo_file_fr: ""
-
+            esempio_campo_file: [],
+            esempio_campo_file_fr: []
         }
         this.generalOnChange=this.generalOnChange.bind(this);
         this.setAllErrors = this.setAllErrors.bind(this);

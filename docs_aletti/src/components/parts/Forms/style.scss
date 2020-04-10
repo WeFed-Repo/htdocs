@@ -36,7 +36,7 @@
         text-align:center;margin-top:10px;
             .document-wrapper {
                 max-width:50%;min-width:120px; display:inline-block;padding:10px;
-                .document-thumbnail {opacity:0.5; position:relative;
+                .document-thumbnail {opacity:0.3; position:relative;
                     margin-bottom:10px;
                     display:inline-block;width:70px;height:70px;background: transparent url(/img/documenti_unico.png) no-repeat center center; background-size:cover;
                     &.fronte {background-image: url(/img/documenti_fronte.png)}
@@ -47,6 +47,7 @@
                 .btn {width:100%;}
                 &.ok {
                     .document-thumbnail{
+                        cursor:pointer;
                         opacity:1;
                         &::before {
                             content: "\2714";
