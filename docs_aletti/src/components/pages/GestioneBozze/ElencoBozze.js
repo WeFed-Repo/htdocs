@@ -8,7 +8,6 @@ import momentIt from "functions/rad/momentIt";
 import getDateDifference from 'functions/getDateDifference';
 import DefaultModal from "components/parts/DefaultModal";
 import Form from 'components/parts/Forms';
-import Functions from '../../functions';
 const urlDeleteBozze = { "svil": "/json_data/onboarding/deleteBozza.json", "prod": "/promotori/onboarding/rest/bozze/deleteBozza" }
 
 export default class extends Component {
@@ -47,12 +46,12 @@ export default class extends Component {
 
             let rigaOk = true;
             // Test per il campo
-            if (rigaOk && tthis.state.form_intestatario != "") {
+            if (rigaOk && tthis.state.form_intestatario !== "") {
                 rigaOk = (value.intestazione.toLowerCase().indexOf(tthis.state.form_intestatario.toLowerCase()) >= 0)
             }
             //Test per lo stato
             let statoOk = true;
-            if (statoOk && tthis.state.form_stato != "" && tthis.state.form_stato != "Seleziona") {
+            if (statoOk && tthis.state.form_stato !== "" && tthis.state.form_stato !== "Seleziona") {
                 statoOk = value.stato.replace('_', ' ') === tthis.state.form_stato.replace('_', ' ') ? true : false;
             }
 
@@ -63,7 +62,7 @@ export default class extends Component {
                 dateToSearch = (tthis.state.form_data_a).split('-').join('/');
           
           
-            if (dataOk && ((tthis.state.form_data_da != "") || (tthis.state.form_data_a != ""))) {
+            if (dataOk && ((tthis.state.form_data_da !== "") || (tthis.state.form_data_a !== ""))) {
                 dataOk = (getDateDifference(dateFromSearch, dateInsertBozze) >= 0) && (getDateDifference(dateToSearch, dateInsertBozze) <= 0) ? true : false;
             }
 
@@ -88,7 +87,7 @@ export default class extends Component {
     setSelectedRow(id, isSelect) {
         const listId = [...this.state.selectedRow];
         const Isid = (value) => {
-            return value != id
+            return value !== id
         }
         this.setState({
             selectedRow: isSelect ? listId.concat(id) : listId.filter(Isid)
@@ -201,15 +200,15 @@ export default class extends Component {
                 close={this.closeModalDeleteBozza}
                 params={{ "modalTitle": 'Attenzione' }}>
                 {this.state.showModalType === 0 && (<p>
-                    {this.state.selectedRow.length == 0 ? "Seleziona almeno una pratica" : "Confermi l'eliminazione delle pratiche?"}
+                    {this.state.selectedRow.length === 0 ? "Seleziona almeno una pratica" : "Confermi l'eliminazione delle pratiche?"}
                 </p>)}
                 {this.state.showModalType === 1 && (<p>
-                    {this.state.selectedRow.length == 0 ? "Seleziona una pratica" : "Confermi di voler duplicare la pratica?"}
+                    {this.state.selectedRow.length === 0 ? "Seleziona una pratica" : "Confermi di voler duplicare la pratica?"}
                 </p>)}
                 <div className="btn-console">
-                    {this.state.showModalType === 0 && (<Button color="primary" className="center" onClick={this.state.selectedRow.length != 0 ? this.getDeleteBozze : this.closeModalDeleteBozza}
+                    {this.state.showModalType === 0 && (<Button color="primary" className="center" onClick={this.state.selectedRow.length !== 0 ? this.getDeleteBozze : this.closeModalDeleteBozza}
                         title="OK">OK</Button>)}
-                    {this.state.showModalType === 1 && (<Button color="primary" className="center" onClick={this.state.selectedRow.length != 0 ? this.getDuplicaBozze : this.closeModalDeleteBozza}
+                    {this.state.showModalType === 1 && (<Button color="primary" className="center" onClick={this.state.selectedRow.length !== 0 ? this.getDuplicaBozze : this.closeModalDeleteBozza}
                         title="OK">OK</Button>)}
                 </div>
             </DefaultModal>

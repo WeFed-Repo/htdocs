@@ -133,13 +133,13 @@ export default function (form) {
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
-    if (form["field_anagraficablob_intestatari_0_codicefiscale"].length != "" && form["field_anagraficablob_intestatari_0_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_0_codicefiscale"] = codicemsgLength;
-    if (form["field_anagraficablob_intestatari_1_codicefiscale"].length != "" && form["field_anagraficablob_intestatari_1_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_1_codicefiscale"] = codicemsgLength;
+    if (form["field_anagraficablob_intestatari_0_codicefiscale"].length !== "" && form["field_anagraficablob_intestatari_0_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_0_codicefiscale"] = codicemsgLength;
+    if (form["field_anagraficablob_intestatari_1_codicefiscale"].length !== "" && form["field_anagraficablob_intestatari_1_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_1_codicefiscale"] = codicemsgLength;
 
     // Controllo sulla mail
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    if (form["field_anagraficablob_intestatari_0_email"].length != "" && !emailRegex.test(form["field_anagraficablob_intestatari_0_email"])) errors["field_anagraficablob_intestatari_0_email"] = mailmsgFormat;
-    if (form["field_anagraficablob_intestatari_1_email"].length != "" && !emailRegex.test(form["field_anagraficablob_intestatari_1_email"])) errors["field_anagraficablob_intestatari_1_email"] = mailmsgFormat;
+    if (form["field_anagraficablob_intestatari_0_email"].length !== "" && !emailRegex.test(form["field_anagraficablob_intestatari_0_email"])) errors["field_anagraficablob_intestatari_0_email"] = mailmsgFormat;
+    if (form["field_anagraficablob_intestatari_1_email"].length !== "" && !emailRegex.test(form["field_anagraficablob_intestatari_1_email"])) errors["field_anagraficablob_intestatari_1_email"] = mailmsgFormat;
 
     // Controllo sul formato della carta d'identità
     //VA FATTO SOLO SE NON  HO SELEZIONATO UN PAESE STRANIERO COME PAESE DI EMISSIONE
@@ -149,7 +149,7 @@ export default function (form) {
         if (form["field_anagraficablob_intestatari_0_codtipodocumento"] === "01" || form["field_anagraficablob_intestatari_0_codtipodocumento"] === "11" || form["field_anagraficablob_intestatari_0_codtipodocumento"] === "12") {
 
             const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
-            if (form["field_anagraficablob_intestatari_0_numdocumento"].length != "" && !ciRegex.test(form["field_anagraficablob_intestatari_0_numdocumento"])) {
+            if (form["field_anagraficablob_intestatari_0_numdocumento"].length !== "" && !ciRegex.test(form["field_anagraficablob_intestatari_0_numdocumento"])) {
                 errors["field_anagraficablob_intestatari_0_numdocumento"] = cimsgFormat
             }
         }
@@ -157,7 +157,7 @@ export default function (form) {
     if (form["field_anagraficablob_intestatari_1_paeserilascio"] === "86" || form["field_anagraficablob_intestatari_1_paeserilascio"] === "") {
         if (form["field_anagraficablob_intestatari_1_codtipodocumento"] === "01" || form["field_anagraficablob_intestatari_1_codtipodocumento"] === "11" || form["field_anagraficablob_intestatari_1_codtipodocumento"] === "12") {
             const ciRegex = /^([a-z]{2}\d{6,7}|\d{6,7}[a-z]{2}\d?)$/i;
-            if (form["field_anagraficablob_intestatari_1_numdocumento"].length != "" && !ciRegex.test(form["field_anagraficablob_intestatari_1_numdocumento"])) {
+            if (form["field_anagraficablob_intestatari_1_numdocumento"].length !== "" && !ciRegex.test(form["field_anagraficablob_intestatari_1_numdocumento"])) {
                 errors["field_anagraficablob_intestatari_1_numdocumento"] = cimsgFormat
             }
         }

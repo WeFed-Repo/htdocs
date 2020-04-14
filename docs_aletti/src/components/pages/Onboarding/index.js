@@ -13,7 +13,7 @@ import ConsoleSviluppo from "./consoleSviluppo"
 
 // Gestione degli stati e dei dati
 import {getNextState,getStatiPratica} from "./common/gestioneStati";
-import { defaultFields, fieldsFromJson, jsonFromFields, checkObbligatori } from "./common/gestioneDati";
+import { defaultFields, fieldsFromJson, jsonFromFields } from "./common/gestioneDati";
 
 // Importazione di tutti gli steps
 import Anagrafica from "./Steps/Anagrafica/";
@@ -320,7 +320,7 @@ export default class extends Component {
 
         return (<>
 
-            <h3>INSERIMENTO <span style={{ color: "#ccc" }}>(ID pratica: {(this.state.field_id != "") ? this.state.field_id : "Non assegnato"})</span></h3>
+            <h3>INSERIMENTO <span style={{ color: "#ccc" }}>(ID pratica: {(this.state.field_id !== "") ? this.state.field_id : "Non assegnato"})</span></h3>
             <ConsoleSviluppo obbligatori={this.state.svi_obbligatori} backend={this.state.svi_be} setObState={this.setObState}></ConsoleSviluppo>
             <div className={"onboarding " + ((this.state.isLoading) ? "loading" : "")}>
             {this.state.field_stato && <Stepper form={this.state}></Stepper> }
