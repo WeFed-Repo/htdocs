@@ -395,39 +395,43 @@ class FormFile extends Component {
                 "idWorkflowPratica": this.props.idBozza
             }
 
-            console.log(dataToSend)
-            
-            // crea il nuovo array locale eliminando eventuale file preesistente
-            let localValue = [];
-            this.props.value.forEach((v,i)=>{
-                    if(v.tipo!==tipo) localValue.push(v);
-            });
-            
-            // Appende il nuovo valore
-            localValue.push ({
-                "idImmagine":parseInt(Math.random()*999999),    
-                "formato":"PDF",    
-                "tipo":tipo 
-            });
+            getData({
+                url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
+                data: dataToSend,
+                success: (data)=>{
+                    console.log(data);
 
-            // Chiude la modale e resetta il trasferimento
-            this.setState({
-                fileToTransfer:"",
-                modalUpload:false,
-                modalUploadLoading: false
+                    // crea il nuovo array locale eliminando eventuale file preesistente
+                    let localValue = [];
+                    this.props.value.forEach((v,i)=>{
+                            if(v.tipo!==tipo) localValue.push(v);
+                    });
+
+                    // Aggiorna il dato locale con il nuovo valore
+                    localValue.push ({
+                        "idImmagine":data.results,    
+                        "formato":extension,    
+                        "tipo":tipo 
+                    });
+
+                    // Chiude la modale e resetta il trasferimento
+                    this.setState({
+                        fileToTransfer:"",
+                        modalUpload:false,
+                        modalUploadLoading: false
+                    })
+
+                    // Cambia il valore nel form
+                    this.props.onChange({name:this.props.name,value:localValue})
+
+                },
+                error: ()=>{
+                    alert("Si sono verificati degli errori in fase di salvataggio")
+                }
+
             })
-
-            // Cambia il valore nel form
-            this.props.onChange({name:this.props.name,value:localValue})
-
-        
         }
         fr.readAsText(this.state.fileUploadStream)
-        
-        
-       
-
-
     }
 
     modalUpload(type) {
