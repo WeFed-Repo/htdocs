@@ -7,7 +7,7 @@ class DefaultModal extends PureComponent {
     render() {
         return (
             this.props.show &&
-            <Modal isOpen={ this.props.show } { ...this.props.modalProps }>
+            <Modal isOpen={ this.props.show } { ...this.props.modalProps } className={ this.props.className } >
                 <ModalHeader toggle={ this.props.close }>{ this.props.params.modalTitle }</ModalHeader>
                 <ModalBody>{ this.props.children }</ModalBody>
             </Modal>

@@ -117,8 +117,27 @@ const helpBody =  {
         </ul>
     </div>,
     //PREVIEW CARTA IDENTITA'
-    "12" : <p>preview immagine PLACEHOLDER CI RINNOVATA</p>,
-    "01" : <p>preview immagine PLACEHOLDER DOC 01</p>
+    "01_numero" : <div class="doc-img"><img src="/img/01-numero.gif" alt="Numero carta d'identità elettronica"/></div>,
+    "01_dataRinnovo" : <div class="doc-img"><img src="/img/01-rilascio.gif" alt="Data di rilascio carta d'identità elettronica"/></div>,
+    "01_dataScadenza" : <div class="doc-img"><img src="/img/01-scadenza.gif" alt="Data di scadenza carta d'identità elettronica"/></div>,
+    "12_numero" : <div class="doc-img"><img src="/img/12-numero.gif" alt="Numero carta d'identità rinnovata"/></div>,
+    "12_dataRinnovo" : <div class="doc-img"><img src="/img/12-rilascio.gif" alt="Data di rilascio carta d'identità rinnovata"/></div>,
+    "12_dataScadenza" : <div class="doc-img"><img src="/img/12-scadenza.gif" alt="Data di scadenza d'identità rinnovata"/></div>,
+    "11_numero" : <div class="doc-img"><img src="/img/11-numero.gif" alt="Numero carta d'identità cartacea"/></div>,
+    "11_dataRinnovo" : <div class="doc-img"><img src="/img/11-rilascio.gif" alt="Data di rilascio carta d'identità cartacea"/></div>,
+    "11_dataScadenza" : <div class="doc-img"><img src="/img/11-scadenza.gif" alt="Data di scadenza d'identità cartacea"/></div>,
+    "03_numero" : <div class="doc-img"><img src="/img/03-numero.gif" alt="Numero passaporto"/></div>,
+    "03_dataRinnovo" : <div class="doc-img"><img src="/img/03-rilascio.gif" alt="Data di rilascio passaporto"/></div>,
+    "03_dataScadenza" : <div class="doc-img"><img src="/img/03-scadenza.gif" alt="Data di scadenza passaporto"/></div>,
+    "02_numero" : <div class="doc-img"><img src="/img/02-numero.gif" alt="Numero patente elettronica"/></div>,
+    "02_dataRinnovo" : <div class="doc-img"><img src="/img/02-rilascio.gif" alt="Data di rilascio patente elettronica"/></div>,
+    "02_dataScadenza" : <div class="doc-img"><img src="/img/02-scadenza.gif" alt="Data di scadenza patente elettronica"/></div>,
+    "13_numero" : <div class="doc-img"><img src="/img/13-numero.gif" alt="Numero patente cartacea"/></div>,
+    "13_dataRinnovo" : <div class="doc-img"><img src="/img/13-rilascio.gif" alt="Data di rilascio patente cartacea"/></div>,
+    "13_dataScadenza" : <div class="doc-img"><img src="/img/13-scadenza.gif" alt="Data di scadenza patente cartacea"/></div>,
+    "14_numero" : <div class="doc-img"><img src="/img/14-numero.gif" alt="Numero patente rinnovata"/></div>,
+    "14_dataRinnovo" : <div class="doc-img"><img src="/img/14-rilascio.gif" alt="Data di rilascio patente rinnovata"/></div>,
+    "14_dataScadenza" : <div class="doc-img"><img src="/img/14-scadenza.gif" alt="Data di scadenza patente rinnovata"/></div>
 
 }
 

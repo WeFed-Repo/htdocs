@@ -3,9 +3,9 @@ import validazione from "./validazione";
 import salva from "./salva";
 import 'moment/locale/it';
 import InformativaDatiPersonali from './InformativaDatiPersonali';
-import RichiestaAperturaConto  from './RichiestaAperturaConto';
-import ConsensoPrivacy  from './ConsensoPrivacy';
-import DatiPersonali  from './DatiPersonali'
+import RichiestaAperturaConto from './RichiestaAperturaConto';
+import ConsensoPrivacy from './ConsensoPrivacy';
+import DatiPersonali from './DatiPersonali'
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
@@ -23,22 +23,22 @@ class StepForm extends Component {
 
         //controllo esistenza secondo intestatario
         const isSecondoIntestatario = formstate.field_numintestatari !== "1" ? true : false;
-        
+
 
         // Rendering del form semplificato (considerare "formstate" come main container per rivedere eventuali condizioni per gli elementi e per gli errori)
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <InformativaDatiPersonali formstate= { formstate } obchange={this.props.obchange}></InformativaDatiPersonali>
-                    <RichiestaAperturaConto formstate= { formstate } isPrivacyChecked = {isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto>
+                    <InformativaDatiPersonali formstate={formstate} obchange={this.props.obchange}></InformativaDatiPersonali>
+                    <RichiestaAperturaConto formstate={formstate} isPrivacyChecked={isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto>
                     <ConsensoPrivacy indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>
-                    {isSecondoIntestatario && <ConsensoPrivacy indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy> }
+                    {isSecondoIntestatario && <ConsensoPrivacy indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>}
                     <h2>Inserisci i dati personali </h2>
                     <h5>Inserisci i tuoi dati e quelli di tutti i cointestatari</h5>
                     <DatiPersonali indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>
                     {isSecondoIntestatario && <DatiPersonali indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>}
-                   </div>
-                 </div>
+                </div>
+            </div>
         )
     }
 

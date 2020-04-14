@@ -397,7 +397,7 @@ class DatiPersonali extends Component {
                                                 mask={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? "alfanumerico" : ""}
                                             >
                                             </Form.input>
-                                            {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"]} />}
+                                            {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_numero"} />}
                                         </Col>
                                     </Row>
 
@@ -424,7 +424,7 @@ class DatiPersonali extends Component {
                                                         dateFrom={this.emissioneDoc}
                                                     >
                                                     </Form.date>
-                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
+                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
                                                 </Col>
                                                 <Col xs="6" className="position-help">
                                                     <Form.date
@@ -434,13 +434,13 @@ class DatiPersonali extends Component {
                                                         onChange={this.props.obchange}
                                                         placeholder=""
                                                         className=""
-                                                        error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]}
+                                                        error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]} 
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
                                                         dateTo={this.scadenzaDoc}
                                                         dateFrom={this.scadenzaDocPre}
                                                     >
                                                     </Form.date>
-                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
+                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className ="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
                                                 </Col>
                                             </Row>
                                         </Col>
