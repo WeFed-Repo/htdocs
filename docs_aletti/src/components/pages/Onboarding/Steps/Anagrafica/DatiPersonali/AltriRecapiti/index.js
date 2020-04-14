@@ -20,11 +20,11 @@ class AltriRecapiti extends Component {
                                         label="Numero di telefono fisso di casa"
                                         name={this.props.anagraficaIntestatario + "prefissofissocasa"}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissocasa"]}
-                                        value={ this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"] }
+                                        value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissocasa"]}
                                         onChange={this.props.obchange}
                                         placeholder="0039"
-                                        maxlength = "5"
-                                        mask ="telefono"
+                                        maxlength="5"
+                                        mask="telefono"
 
                                     >
                                     </Form.input>
@@ -32,12 +32,12 @@ class AltriRecapiti extends Component {
                                 <Col xs="6">
                                     <Form.input
                                         label="&nbsp;"
-                                        name= {this.props.anagraficaIntestatario + "numerofissocasa"}
-                                        error= {this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissocasa"]}
-                                        value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] }
+                                        name={this.props.anagraficaIntestatario + "numerofissocasa"}
+                                        error={this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissocasa"]}
+                                        value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"]}
                                         onChange={this.props.obchange}
                                         placeholder=""
-                                        mask ="telefono"
+                                        mask="telefono"
                                     >
                                     </Form.input>
                                 </Col>
@@ -52,9 +52,9 @@ class AltriRecapiti extends Component {
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "prefissofissoufficio"]}
                                         placeholder="0039"
-                                        maxlength = "5"
+                                        maxlength="5"
                                         onChange={this.props.obchange}
-                                        mask ="telefono"
+                                        mask="telefono"
                                     >
                                     </Form.input>
                                 </Col>
@@ -66,7 +66,7 @@ class AltriRecapiti extends Component {
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"]}
                                         onChange={this.props.obchange}
                                         placeholder=""
-                                        mask ="telefono"
+                                        mask="telefono"
                                     >
                                     </Form.input>
                                 </Col>
