@@ -1,5 +1,6 @@
 /* Campi "standard" per i form */
 import React, { Component, Children } from 'react';
+import {ambiente} from "functions/genericVars";
 import Functions from "components/functions";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import getData from "functions/getData";
@@ -8,8 +9,8 @@ import moment from "moment";
 import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 import "./style.scss";
-import { startsWith } from 'lodash-es';
 
 // Filtraggio in INPUT
 const applyMask = (value,mask) => {
@@ -43,7 +44,6 @@ let handleChange = function (component, e) {
     // Se esiste una maschera filtra il valore a monte
     let mask = e.mask;
     if(mask){
-        console.log(value)
         value = applyMask(value,mask);
     }
     
@@ -363,6 +363,7 @@ class FormFile extends Component {
             
             modalUploadTitle: "",
             modalUpload: false,
+            modalUploadLoading: false,
             fileToTransfer: "",
             fileUploadStream: null,
             
@@ -371,35 +372,87 @@ class FormFile extends Component {
         }
         this.fileUpload = this.fileUpload.bind(this);
         this.fileView = this.fileView.bind(this);
+        this.imageBlock = this.imageBlock.bind(this);
+    }
+
+    // Ritorna il componente per la preview
+    imageBlock(file) {
+        //Assembla l'url dal file
+        if (file) {
+            getData({
+                url: {"svil":"/json_data/onboarding/getAllegato.json","prod":"/promotori/onboarding/rest/documentale/"+ file.idImmagine +"/getAllegato"},
+                method: "GET",
+                success: (data)=> {
+                    this.setState({imageViewComp: <img src={data.results} className="file-preview"></img>});
+                }
+            })
+        }
+        else
+        {
+            this.setState({imageViewComp: <></>});
+        }
+        
     }
 
     // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
-    fileUpload(tipo) {
-        
-        // crea il nuovo array locale eliminando eventuale file preesistente
-        let localValue = [];
-        this.props.value.forEach((v,i)=>{
-                if(v.tipo!==tipo) localValue.push(v);
-        });
-        
+    fileUpload(tipo,currentFile) {
 
-        // Appende il nuovo valore
-        localValue.push ({
-            "idImmagine":parseInt(Math.random()*999999),    
-            "formato":"PDF",    
-            "tipo":tipo 
-        });
+        // Avvia il salvataggio del file
+        let fr = new FileReader();
+        this.setState({modalUploadLoading: true})
+        fr.onloadend = (e)=> {
+            
+            // Effettua l'invio del file
+            let inputStream = fr.result;
 
-        // Chiude la modale e resetta il trasferimento
-        this.setState({
-            fileToTransfer:"",
-            modalUpload:false
-        })
+            // Estrae il tipo dall'estensione del file (Maiuscola)
+            let extension = this.state.fileToTransfer.split(".").reverse()[0].toUpperCase();
 
-        // Cambia il valore nel form
-        this.props.onChange({name:this.props.name,value:localValue})
+            let dataToSend  ={
+                "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
+                "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream,
+                "formatoAllegato": extension,
+                "tipoAllegato" : tipo,
+                "idWorkflowPratica": this.props.idBozza
+            }
 
 
+            getData({
+                url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
+                data: dataToSend,
+                success: (data)=>{
+
+                    // crea il nuovo array locale eliminando eventuale file preesistente
+                    let localValue = [];
+                    this.props.value.forEach((v,i)=>{
+                            if(v.tipo!==tipo) localValue.push(v);
+                    });
+
+                    // Aggiorna il dato locale con il nuovo valore
+                    localValue.push ({
+                        "idImmagine":data.results,    
+                        "formato":extension,    
+                        "tipo":tipo 
+                    });
+
+                    // Chiude la modale e resetta il trasferimento
+                    this.setState({
+                        fileToTransfer:"",
+                        modalUpload:false,
+                        modalUploadLoading: false
+                    })
+
+                    // Cambia il valore nel form
+                    this.props.onChange({name:this.props.name,value:localValue})
+
+                },
+                error: ()=>{
+                    alert("Si sono verificati degli errori in fase di salvataggio")
+                }
+
+            })
+        }
+        fr.readAsDataURL(this.state.fileUploadStream)
     }
 
     modalUpload(type) {
@@ -413,11 +466,15 @@ class FormFile extends Component {
 
     
     fileView(file) {
+        
         if(file && file.idImmagine) {
             this.setState({
-                modalView: true
+                modalViewTitle: this.props.label + (file.tipo != "UNICA"? ": " + file.tipo.toLowerCase(): ""),
+                modalView: true,
+                modalViewFile: file
             })
         }
+        this.imageBlock(file);
 
     }
 
@@ -436,46 +493,41 @@ class FormFile extends Component {
                fileObject[v.tipo] = v;
             });
 
-        console.log(fileObject)
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 
                 <Modal isOpen={this.state.modalUpload}>
-                    <div className={(this.state.fileLoading) ? "loading" : ""}>
+                    <div className={(this.state.modalUploadLoading) ? "loading" : ""}>
                         <ModalHeader>{this.state.modalUploadTitle}</ModalHeader>
                         <ModalBody>
                             <p>{value === "" ? "Seleziona un file da caricare" : "Seleziona un file con il quale sovrascrivere quello già caricato"}:</p>
-                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value }) }}></input>
+                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value ,fileUploadStream:e.target.files[0]}) }}></input>
                         </ModalBody>
                         <ModalFooter>
                             <div className="btn-console">
                                 <div className="btn-console-left">
-                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
+                                    <Button onClick={() => this.setState({fileToTransfer:"", modalUpload: false})}>Annulla</Button>
                                 </div>
                                 <div className="btn-console-right">
-                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
+                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType, fileObject[this.state.modalUploadType])}>Carica il file</Button>
                                 </div>
                             </div>
                         </ModalFooter>
                     </div>
                 </Modal>
 
-                <Modal isOpen={this.state.modalWiew}>
+                <Modal isOpen={this.state.modalView}>
                     <div className={(this.state.fileLoading) ? "loading" : ""}>
                         <ModalHeader>{this.state.modalViewTitle}</ModalHeader>
                         <ModalBody>
-                            <p>Seleziona un file da caricare</p>
-                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value , fileUploadStream: e.target.files}) }}></input>
+                           {this.state.imageViewComp}
                         </ModalBody>
                         <ModalFooter>
                             <div className="btn-console">
-                                <div className="btn-console-left">
-                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
-                                </div>
-                                <div className="btn-console-right">
-                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
+                              <div className="btn-console-right">
+                                    <Button color="primary" onClick={()=>this.setState({modalView:false})}>chiudi</Button>
                                 </div>
                             </div>
                         </ModalFooter>

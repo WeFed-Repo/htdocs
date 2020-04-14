@@ -68,6 +68,8 @@
         }
     }
 
+    
+
     /* Datepicker */
     .daypicker-wrapper { width:200px;
         position:relative;
@@ -218,4 +220,10 @@
         span.error {color:#c00;clear:both;display:block}
        
     }
+}
+
+// Preview nella modale
+.modal img.file-preview {
+    display:inline-block;
+    width:100%;
 }
