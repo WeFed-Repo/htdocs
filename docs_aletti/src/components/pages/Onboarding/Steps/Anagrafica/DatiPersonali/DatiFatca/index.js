@@ -142,7 +142,7 @@ class DatiFatca extends Component {
             this.setState({ showModalFatcaDisabled: true })
         }
     }
-    
+
     render() {
         let listaNazioni = this.props.obdomini["nazioni_attive"],
             //LISTA delle NAZIONI che richiedono il TIN
@@ -167,8 +167,8 @@ class DatiFatca extends Component {
         listaNazioniResidenza3[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_2_codiceuic"] }).filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
 
         //
-        
-        
+
+
         return (
             <>
                 <DefaultModal
@@ -185,7 +185,7 @@ class DatiFatca extends Component {
                     label="ALTRI DATI FATCA E CRS"
                     startsOpen={false}
                     className="search-collapse"
-                    hasErrors={ 
+                    hasErrors={
                         CheckAccordionErrors(this.props.formstate.errors,
                             [
                                 this.props.anagraficaIntestatario + "listresidenzefiscale_1_tin",
@@ -193,7 +193,7 @@ class DatiFatca extends Component {
                                 this.props.anagraficaIntestatario + "listresidenzefiscale_3_tin"
                             ]
                         )}
-                    >
+                >
                     <section className="onboarding-block">
                         <p>Con l'entrata in vigore delle normative FATCA (Foreign Account Tax Compliance Act) e CRS (Common
                         Reporting Standard,) il Governo italiano si è impegnato a garantire la compliance fiscale
@@ -578,6 +578,35 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
                         </Col>
 
                     </Row>
+                    <Row>
+                        <Col xs="12">
+                            <Form.radiogroup
+                                label="Possiedi una green card"
+                                name={this.props.anagraficaIntestatario + "gcard"}
+                                value={this.props.formstate[this.props.anagraficaIntestatario + "gcard"]}
+                                onChange={this.props.obchange}
+                                cbchange = {(val) => { if(val ==="true" && !this.props.fatcaEnable ) {this.setState({ showModalFatcaDisabled: true })}}}
+                                options={[{ "value": "true", "text": "sì" }, { "value": "false", "text": "no" }]}
+                                className=""
+                            >
+                            </Form.radiogroup>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col xs="12">
+                            <Form.radiogroup
+                                label="Hai soggiornato negli USA almeno 31 giorni nell’anno di riferimento e 183 giorni nell’arco temporale di un triennio (calcolati computando interamente i giorni di presenza nell’anno di riferimento; un terzo dei giorni di presenza dell’anno precedente; un sesto dei giorni di presenza per il secondo anno precedente)?"
+                                name={this.props.anagraficaIntestatario + "soggusa"}
+                                value={this.props.formstate[this.props.anagraficaIntestatario + "soggusa"]}
+                                onChange={this.props.obchange}
+                                cbchange = {(val) => { if(val ==="true" && !this.props.fatcaEnable ) {this.setState({ showModalFatcaDisabled: true })}}}
+                                options={[{ "value": "true", "text": "sì" }, { "value": "false", "text": "no" }]}
+                                className=""
+                            >
+                            </Form.radiogroup>
+                        </Col>
+                    </Row>
 
                 </DefaultCollapse>
             </>
@@ -585,5 +614,4 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
     }
 }
 
-export default  DatiFatca
- 
+export default DatiFatca
