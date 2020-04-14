@@ -1,5 +1,6 @@
 /* Campi "standard" per i form */
 import React, { Component, Children } from 'react';
+import {ambiente} from "functions/genericVars";
 import Functions from "components/functions";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import getData from "functions/getData";
@@ -8,8 +9,8 @@ import moment from "moment";
 import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 import "./style.scss";
-import { startsWith } from 'lodash-es';
 
 // Filtraggio in INPUT
 const applyMask = (value,mask) => {
@@ -371,6 +372,26 @@ class FormFile extends Component {
         }
         this.fileUpload = this.fileUpload.bind(this);
         this.fileView = this.fileView.bind(this);
+        this.imageBlock = this.imageBlock.bind(this);
+    }
+
+    // Ritorna il componente per la preview
+    imageBlock(file) {
+        //Assembla l'url dal file
+        if (file) {
+            getData({
+                url: {"svil":"/json_data/onboarding/getAllegato.json","prod":"/promotori/onboarding/rest/documentale/"+ file.idImmagine +"/getAllegato"},
+                method: "GET",
+                success: (data)=> {
+                    this.setState({imageViewComp: <img src={data.results} className="file-preview"></img>});
+                }
+            })
+        }
+        else
+        {
+            this.setState({imageViewComp: <></>});
+        }
+        
     }
 
     // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
@@ -389,17 +410,17 @@ class FormFile extends Component {
 
             let dataToSend  ={
                 "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
-                "allegato":inputStream,
+                "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream,
                 "formatoAllegato": extension,
                 "tipoAllegato" : tipo,
                 "idWorkflowPratica": this.props.idBozza
             }
 
+
             getData({
                 url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
                 data: dataToSend,
                 success: (data)=>{
-                    console.log(data);
 
                     // crea il nuovo array locale eliminando eventuale file preesistente
                     let localValue = [];
@@ -431,7 +452,7 @@ class FormFile extends Component {
 
             })
         }
-        fr.readAsText(this.state.fileUploadStream)
+        fr.readAsDataURL(this.state.fileUploadStream)
     }
 
     modalUpload(type) {
@@ -449,9 +470,11 @@ class FormFile extends Component {
         if(file && file.idImmagine) {
             this.setState({
                 modalViewTitle: this.props.label + (file.tipo != "UNICA"? ": " + file.tipo.toLowerCase(): ""),
-                modalView: true
+                modalView: true,
+                modalViewFile: file
             })
         }
+        this.imageBlock(file);
 
     }
 
@@ -499,7 +522,7 @@ class FormFile extends Component {
                     <div className={(this.state.fileLoading) ? "loading" : ""}>
                         <ModalHeader>{this.state.modalViewTitle}</ModalHeader>
                         <ModalBody>
-                           idImmagine
+                           {this.state.imageViewComp}
                         </ModalBody>
                         <ModalFooter>
                             <div className="btn-console">
