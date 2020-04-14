@@ -1846,8 +1846,9 @@ table td .icon-clessidra_stroke {
     src: url('/wscmn/font/futuraBT/27145D_2_0.eot?#iefix') format('embedded-opentype'),url('/wscmn/font/futuraBT/27145D_2_0.woff') format('woff'),url('/wscmn/font/futuraBT/27145D_2_0.ttf') format('truetype');
 }
 */
+.icon_filter:before,
 .icon_cambi:before,
-.icon_filter:before {
+.icon_piumeno:before {
   font-style: normal !important;
   content: "\2612";
   color: red !important;
@@ -2225,7 +2226,7 @@ body.accoglienza .btnWrapper .note {
 }
 /* REGOLE STRUMENTI - FINESTRE MODALI ... */
 /*configurazione HTML,CSS, JS PER PERSONALIZZARE FINESTRA MODALE */
-/* 
+/*
 ------------------------------------GRANDEZZA----------------------------------
 AGGIUNGERE LA CLASSE modal-lg A modal-dialog PER AVERE OVERLAYER GRANDE (900px)
 AGGIUNGERE LA CLASSE modal-sm A modal-dialog PER AVERE OVERLAYER PICCOLO (300px)
@@ -2386,6 +2387,19 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
 }
 .webview #datePickerWrapper .modal-content {
   padding: 0;
+}
+.modal-fixed-footer .modal-body {
+  margin-bottom: 55px;
+}
+.modal-fixed-footer .modal-footer {
+  position: fixed;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  width: calc(100% - 2px);
+  z-index: 2000;
+  background: #fff;
+  border-top: 1px solid #e3e3e3;
 }
 /*******************************
 * MODALLEFT/RIGHT
@@ -3301,3 +3315,4 @@ body.popup #contenuti {
     color: #8ab10b;
   }
 }
+/*# sourceMappingURL=webank_base.css.map */

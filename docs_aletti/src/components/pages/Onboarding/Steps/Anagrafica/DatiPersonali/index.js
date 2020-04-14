@@ -8,10 +8,7 @@ import getDateDifference from 'functions/getDateDifference';
 import DefaultModal from "components/parts/DefaultModal";
 import HelpBtn from 'components/parts/Help';
 import DatiFatca from './DatiFatca';
-import DatiCai from './DatiCai';
-import DatiDomicilio from './DatiDomicilio';
-import DatiCorrispondenza from './DatiCorrispondenza';
-import AltriRecapiti from './AltriRecapiti';
+import DatiIndirizzi from './DatiIndirizzi';
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class DatiPersonali extends Component {
@@ -610,10 +607,37 @@ class DatiPersonali extends Component {
                                 </>
                             </section>
                             <div className="inner-wrapper-collapse ">
-                                <DatiCai formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza={optionResidenza} obchange={this.props.obchange}></DatiCai>
-                                <DatiDomicilio formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza={optionResidenza} obchange={this.props.obchange}></DatiDomicilio>
-                                {this.props.indexInt === '0' && <DatiCorrispondenza formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} optionResidenza={optionResidenza} obchange={this.props.obchange}></DatiCorrispondenza>}
-                                <AltriRecapiti formstate={this.props.formstate} anagraficaIntestatario={anagraficaIntestatario} obchange={this.props.obchange}></AltriRecapiti>
+                                <DatiIndirizzi
+                                    formstate={this.props.formstate}
+                                    anagraficaIntestatario={anagraficaIntestatario}
+                                    optionResidenza={optionResidenza}
+                                    obchange={this.props.obchange}
+                                    labelIndirizzi="AGGIUNGI UN INDIRIZZO PER LA CENTRALE D'ALLARME INTERBANCARIA (CAI)"
+                                    tpyeIndirizzo="cai"
+                                >
+                                </DatiIndirizzi>
+                                <DatiIndirizzi
+                                    formstate={this.props.formstate}
+                                    anagraficaIntestatario={anagraficaIntestatario}
+                                    optionResidenza={optionResidenza}
+                                    obchange={this.props.obchange}
+                                    labelIndirizzi="AGGIUNGI INDIRIZZO DI DOMICILIO (SE DIVERSO DALLA RESIDENZA)"
+                                    tpyeIndirizzo="domicilio"
+                                >
+                                </DatiIndirizzi>
+                                {this.props.indexInt === '0' &&
+                                    <DatiIndirizzi
+                                        formstate={this.props.formstate}
+                                        anagraficaIntestatario={anagraficaIntestatario}
+                                        optionResidenza={optionResidenza}
+                                        obchange={this.props.obchange}
+                                        labelIndirizzi="AGGIUNGI INDIRIZZO DI CORRISPONDENZA (SE DIVERSO DAI PRECEDENTI)"
+                                        tpyeIndirizzo="corrisp"
+                                    >
+                                    </DatiIndirizzi>
+                                }
+
+
                                 <DefaultCollapse label="INFORMAZIONI AGGIUNTIVE" startsOpen={false} className="search-collapse">
                                     <section className="onboarding-block">
                                         <Row>

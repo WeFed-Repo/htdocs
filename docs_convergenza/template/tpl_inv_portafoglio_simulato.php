@@ -128,7 +128,6 @@ $tipo_op_1 = array(1,2,3);
       <a href="#" class="text-link">
         Simula compravendita
         <i class="icon icon_piumeno"></i>
-        <i class="icon icon_cambi"></i>
       </a>
     </div>
     <div class="col-xs-12 col-md-6">
@@ -149,34 +148,48 @@ $tipo_op_1 = array(1,2,3);
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-              <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / ISIN</th>
-              <th class="left">Tipo operazione</th>
-              <th class="right">Q.t&agrave; immessa/ eseguita</th>
-              <th class="right">Prezzo immesso/ eseguito</th>
-              <th class="right">Data/ Ora</th>
-              <th class="left">Stato ordine</th>
+              <th class="left"></th>
+              <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / Fondo</th>
               <th class="left">Mercato</th>
-              <th class="right">N. ordine sintetico</th>
+              <th class="right">Q.t&agrave; in portaf.</th>
+              <th class="right">Q.t&agrave; disp.</th>
+              <th class="right">Prz. medio carico</th>
+              <th class="right">Settore</th>
+              <th class="right">Valore Y</th>
+              <th class="right">Ult. prz. ora</th>
+              <th class="right">Controval. Eur</th>
+              <th class="right">Utili /Perdite Eur VAR%</th>
+              <th class="right"></th>
           </tr>
       </thead>
       <tbody>
       <?php for($x=0;$x<=5;$x++) { ?>
         <tr>
-            <td class="center">
-              <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
-                <i class="icon icon-2x icon-ico_azioni02A"></i>
-              </a>
-            </td>
-            <td class="left"><a href="">Lorem ipsum <?php print (999990 + $x ) ?></a></td>
-            <td class="right"><?=
-              $tipo_op_1[array_rand($tipo_op_1)];
-            ?></td>
-            <td class="right"><?php print rand(0,1);?> <br /> <?php print rand(0,1);?></td>
-            <td class="right"><?php print rand(1000,1000000)/100;?></td>
-            <td class="right">20/01/2020</td>
-            <td class="right"><?= $tipo_op_1[array_rand($tipo_op_1)] ?></td>
-            <td class="right"><?= $tipo_op_1[array_rand($tipo_op_1)] ?></td>
-            <td class="right">00000<?= $x+15 ?></td>
+          <td class="center">
+            <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
+              <i class="icon icon-2x icon_piumeno"></i>
+            </a>
+          </td>
+          <td class="center">
+            <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
+              <i class="icon icon-2x icon-r-modifica"></i>
+            </a>
+          </td>
+          <td class="left"><a href="">Titolo azione <?= $x + 1 ?></a></td>
+          <td class="left">MOT</td>
+          <td class="right"><?php print rand(1000,1000000)/100;?></td>
+          <td class="right"><?php print rand(1000,1000000)/100;?></td>
+          <td class="right"><?php print rand(1000,1000000)/100;?></td>
+          <td class="right">Settore <?= $x + 1 ?></td>
+          <td class="right"><?php print rand(10,10000)/100;?>&euro;</td>
+          <td class="right"><?php print rand(10,10000)/100;?> 00:00:00</td>
+          <td class="right"><?php print rand(1000,1000000)/100;?></td>
+          <td class="right negativo"><?php print rand(1000,1000000)/100;?></td>
+          <td class="center">
+            <a class="btn-icon btn-icon-azioni" data-isin="<?php print (999990 + $x )?>">
+              <i class="icon icon-2x icon-ico_azioni02A"></i>
+            </a>
+          </td>
         </tr>
       <?php } ?>
       </tbody>
@@ -216,5 +229,160 @@ $tipo_op_1 = array(1,2,3);
       }
     });
     initThFilter();
+
+    $('.btn-icon-azioni').on('click', function (e) {
+      e.preventDefault();
+      $('#menuAzioni').modal();
+    });
+
+    $('.btn-icon-modifica').on('click', function (e) {
+      e.preventDefault();
+      $('#menuModifica').modal();
+    });
+
   });
+</script>
+
+
+
+<div class="modal fade" id="menuAzioni" tabindex="-1" role="dialog" aria-labelledby="menuAzioniLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i></a>
+            </div>
+            <div class="modal-body">
+              <table>
+                <tr><td>Azione 1</td></tr>
+                <tr><td>Azione 2</td></tr>
+                <tr><td>Azione 3</td></tr>
+                <tr><td>Azione 4</td></tr>
+              </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-fixed-footer" id="menuModifica" tabindex="-1" role="dialog" aria-labelledby="menuModificaLabel">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <a class="close btn-icon" data-dismiss="modal" aria-label="Close">
+                <i class="icon icon-alert_error_fill icon-2x"></i>
+              </a>
+              <h2 class="modal-title">Elimina / Modifica riga</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12 col-md-8">
+                  Titolo
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-md-8">
+                  <strong>BTP 0,05% EUR 15.04.2018-15.04-2021</strong>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <div class="btn-align-left">
+                    <a class="btn-link-icon" href="#">
+                      <i class="icon icon-r-elimina"></i>
+                      <span>Elimina riga</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              <form class="formGenerico">
+                <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-6 requiredField">
+                          <label class="control-label">Quantità</label>
+                          <div class="editable-input">
+                            <input type="text" class="form-control clear-x" name="qta">
+                            <span class="editable-clear-x" style="">
+                              <i class="icon icon-close icon-1x"></i>
+                            </span>
+                          </div>
+                      </div>
+                        <div class="col-xs-6 requiredField">
+                            <label class="control-label">Prezzo</label>
+                            <div class="editable-input">
+                              <input type="text" class="form-control clear-x" name="prezzo">
+                              <span class="editable-clear-x" style="">
+                                <i class="icon icon-close icon-1x"></i>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 requiredField">
+                          <label class="control-label">Data inserimento</label>
+                          <div class="form-inline">
+                            <div class="input-group">
+                              <input type="text" id="dataInserimento" placeholder="gg/mm/aaaa" class="form-control clear-x width-100">
+                              <div class="input-group-addon date"><i class="icon icon-calendar_filled"></i ></div>
+          		       	 			</div>
+            							</div>
+                        </div>
+                        <div class="col-xs-6 requiredField">
+                          <label class="control-label">Cambio</label>
+                          <div class="editable-input">
+                            <input type="text" class="form-control clear-x" name="cambio">
+                            <span class="editable-clear-x" style="">
+                              <i class="icon icon-close icon-1x"></i>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 requiredField">
+                            <label class="control-label">Operatività</label>
+                            <div class="editable-input">
+                              <select name="operativita" class="form-control">
+                                <option value="ordinaria">Ordinaria</option>
+                                <option value="intraday">Intraday</option>
+                                <option value="overnight">Overnight</option>
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </form>
+              <small>Tutti i campi sono obbligatori</small>
+            </div>
+            <div class="modal-footer">
+            	<div class="btn-align-center">
+            		<a type="button" class="btn btn-primary">Modifica riga</a>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+//inizializzazione datepicker
+$(function() {
+  $("#dataInserimento").mask("99/99/9999");
+  $("#dataInserimento").datepicker({
+      beforeShowDay: highlightDays,
+      //beforeShowDay: noHolidays,  //si applica se si vuole che i fine sttimana e festivi non siano delezionabili
+      minDate: 0,
+      showOtherMonths: true,
+      showOn: "button",
+      prevText: "<i class=\"icon icon-arrow_left\" title=\"mese precedente\"></i>",
+      nextText: "<i class=\"icon icon-arrow_right\" title=\"mese successivo\"></i>",
+      // buttonImage: "/img/ret/pixel_trasp.gif",
+      buttonImageOnly: true,
+      beforeShow: renderPickDateMobile, //funzione per far si che si apra come overlayer su mobile
+      onClose: function() {
+          $('#datePickerWrapper').modal('hide');
+      }
+  });
+  appendDatePickerIcon('dataInserimento');
+});
 </script>

@@ -1,8 +1,7 @@
 .icon_filter, .icon_cambi, .icon_piumeno {
-
-    &:before{
-        font-style:normal !important;
-        content: "\2612";
-        color: red !important;
-    }
+  &:before {
+    font-style:normal !important;
+    content: "\2612" !important;
+    color: red !important;
+  }
 }
