@@ -364,22 +364,6 @@ $tipo_op_1 = array(1,2,3);
     </div>
 </div>
 
-<style>
-.modal-fixed-footer .modal-body{
-    margin-bottom: 55px;
-}
-.modal-fixed-footer .modal-footer{
-    position: fixed;
-    bottom: 1px;
-    left: 1px;
-    right: 1px;
-    width: calc(100% - 2px);
-    z-index: 2000;
-    background: #fff;
-    border-top: 1px solid #e3e3e3;
-}
-</style>
-
 <script type="text/javascript">
 //inizializzazione datepicker
 $(function() {
