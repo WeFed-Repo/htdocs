@@ -83,6 +83,7 @@ export default class extends Component {
                                 error={formstate.errors["esempio_campo_file"]}
                                 onChange={this.generalOnChange}
                                 tipo="fr"
+                                idBozza="99999999"
                                 >
                                 ></Form.file>
                         </Col>
@@ -94,6 +95,7 @@ export default class extends Component {
                                 disabled={this.state.allDisabled}
                                 error={formstate.errors["esempio_campo_file_fr"]}
                                 onChange={this.generalOnChange}
+                                idBozza="999999999"
                                 >
                                 ></Form.file>
                         </Col>

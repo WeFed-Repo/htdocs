@@ -43,7 +43,6 @@ let handleChange = function (component, e) {
     // Se esiste una maschera filtra il valore a monte
     let mask = e.mask;
     if(mask){
-        console.log(value)
         value = applyMask(value,mask);
     }
     
@@ -363,6 +362,7 @@ class FormFile extends Component {
             
             modalUploadTitle: "",
             modalUpload: false,
+            modalUploadLoading: false,
             fileToTransfer: "",
             fileUploadStream: null,
             
@@ -374,30 +374,58 @@ class FormFile extends Component {
     }
 
     // Funzione che fa l'upload di un file (al momento e' emulato in attesa di una chiamata vera e propria)
-    fileUpload(tipo) {
+    fileUpload(tipo,currentFile) {
+
+        // Avvia il salvataggio del file
+        let fr = new FileReader();
+        this.setState({modalUploadLoading: true})
+        fr.onloadend = (e)=> {
+            
+            // Effettua l'invio del file
+            let inputStream = fr.result;
+
+            // Estrae il tipo dall'estensione del file (Maiuscola)
+            let extension = this.state.fileToTransfer.split(".").reverse()[0].toUpperCase();
+
+            let dataToSend  ={
+                "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
+                "allegato":inputStream,
+                "formatoAllegato": extension,
+                "tipoAllegato" : tipo,
+                "idWorkflowPratica": this.props.idBozza
+            }
+
+            console.log(dataToSend)
+            
+            // crea il nuovo array locale eliminando eventuale file preesistente
+            let localValue = [];
+            this.props.value.forEach((v,i)=>{
+                    if(v.tipo!==tipo) localValue.push(v);
+            });
+            
+            // Appende il nuovo valore
+            localValue.push ({
+                "idImmagine":parseInt(Math.random()*999999),    
+                "formato":"PDF",    
+                "tipo":tipo 
+            });
+
+            // Chiude la modale e resetta il trasferimento
+            this.setState({
+                fileToTransfer:"",
+                modalUpload:false,
+                modalUploadLoading: false
+            })
+
+            // Cambia il valore nel form
+            this.props.onChange({name:this.props.name,value:localValue})
+
         
-        // crea il nuovo array locale eliminando eventuale file preesistente
-        let localValue = [];
-        this.props.value.forEach((v,i)=>{
-                if(v.tipo!==tipo) localValue.push(v);
-        });
+        }
+        fr.readAsText(this.state.fileUploadStream)
         
-
-        // Appende il nuovo valore
-        localValue.push ({
-            "idImmagine":parseInt(Math.random()*999999),    
-            "formato":"PDF",    
-            "tipo":tipo 
-        });
-
-        // Chiude la modale e resetta il trasferimento
-        this.setState({
-            fileToTransfer:"",
-            modalUpload:false
-        })
-
-        // Cambia il valore nel form
-        this.props.onChange({name:this.props.name,value:localValue})
+        
+       
 
 
     }
@@ -413,8 +441,10 @@ class FormFile extends Component {
 
     
     fileView(file) {
+        
         if(file && file.idImmagine) {
             this.setState({
+                modalViewTitle: this.props.label + (file.tipo != "UNICA"? ": " + file.tipo.toLowerCase(): ""),
                 modalView: true
             })
         }
@@ -436,46 +466,41 @@ class FormFile extends Component {
                fileObject[v.tipo] = v;
             });
 
-        console.log(fileObject)
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 
                 <Modal isOpen={this.state.modalUpload}>
-                    <div className={(this.state.fileLoading) ? "loading" : ""}>
+                    <div className={(this.state.modalUploadLoading) ? "loading" : ""}>
                         <ModalHeader>{this.state.modalUploadTitle}</ModalHeader>
                         <ModalBody>
                             <p>{value === "" ? "Seleziona un file da caricare" : "Seleziona un file con il quale sovrascrivere quello già caricato"}:</p>
-                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value }) }}></input>
+                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value ,fileUploadStream:e.target.files[0]}) }}></input>
                         </ModalBody>
                         <ModalFooter>
                             <div className="btn-console">
                                 <div className="btn-console-left">
-                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
+                                    <Button onClick={() => this.setState({fileToTransfer:"", modalUpload: false})}>Annulla</Button>
                                 </div>
                                 <div className="btn-console-right">
-                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
+                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType, fileObject[this.state.modalUploadType])}>Carica il file</Button>
                                 </div>
                             </div>
                         </ModalFooter>
                     </div>
                 </Modal>
 
-                <Modal isOpen={this.state.modalWiew}>
+                <Modal isOpen={this.state.modalView}>
                     <div className={(this.state.fileLoading) ? "loading" : ""}>
                         <ModalHeader>{this.state.modalViewTitle}</ModalHeader>
                         <ModalBody>
-                            <p>Seleziona un file da caricare</p>
-                            <input type="file" value={this.state.fileToTransfer} onChange={(e) => { this.setState({ fileToTransfer: e.target.value , fileUploadStream: e.target.files}) }}></input>
+                           idImmagine
                         </ModalBody>
                         <ModalFooter>
                             <div className="btn-console">
-                                <div className="btn-console-left">
-                                    <Button onClick={() => this.setState({fiteToTransfer:"", modalUpload: false})}>Annulla</Button>
-                                </div>
-                                <div className="btn-console-right">
-                                    <Button color="primary" style={{ display: (this.state.fileToTransfer==="") ? "none" : "" }} onClick={()=>this.fileUpload(this.state.modalUploadType)}>Carica il file</Button>
+                              <div className="btn-console-right">
+                                    <Button color="primary" onClick={()=>this.setState({modalView:false})}>chiudi</Button>
                                 </div>
                             </div>
                         </ModalFooter>
