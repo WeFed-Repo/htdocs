@@ -504,6 +504,14 @@ p.note.flRight a.btn-icon {
   animation: spin 5s linear infinite;
 }
 
+/* sovrascrittura classe icon-text perchè non erediti lo stile icomoon */
+.icon-text {
+  font-family: "bankFont", Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
 .control-label-output {
   display: inline-block;
   float: left;
@@ -1179,6 +1187,188 @@ a.output {
 }
 .selectRapp > .inputOption {
   background: #fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
+}
+
+.form-group.w100 .input-group, .form-group.w100 .input-inline {
+  width: 100% !important;
+}
+
+/* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
+.spsel {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  background-size: 20px 20px;
+  height: 50px;
+  padding: 0 !important;
+  /*  Versione solo layout */
+}
+.spsel.loading {
+  height: 48px;
+}
+.spsel .spsel-selected {
+  width: 100%;
+  height: 48px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  float: left;
+  position: relative;
+  background: transparent url(/HT/fe/img/select_down.gif) no-repeat calc(100% - 10px) center;
+}
+.spsel .spsel-selected .only-detail {
+  display: none;
+}
+.spsel .spsel-selected.spsel-option:hover {
+  background-color: #fff;
+}
+.spsel.nosel .spsel-selected .spsel-option-el {
+  color: #aaa;
+}
+.spsel .spsel-options {
+  display: none;
+  border: solid 1px #ccc;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 1;
+}
+.spsel .spsel-options .spsel-option {
+  border-top: solid 1px #eee;
+}
+.spsel .spsel-options .spsel-option:first-child {
+  border-top: none;
+}
+.spsel .spsel-options .spsel-option .selected {
+  display: none;
+}
+.spsel .spsel-option {
+  position: relative;
+  padding: 0 0 0 10px;
+}
+.spsel .spsel-option .spsel-addel {
+  position: absolute;
+  top: 0;
+  width: 34px;
+  text-align: center;
+  height: 48px;
+  font-size: 25px;
+  line-height: 50px;
+  left: 0;
+}
+.spsel .spsel-option .spsel-addel .icon {
+  font-size: 25px;
+}
+.spsel .spsel-option .spsel-option-el {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  line-height: 40px;
+  padding: 5px 0 5px;
+  display: inline-block;
+}
+.spsel .spsel-option:hover {
+  background-color: #f1f1f1;
+}
+.spsel.spsel-hasicon .spsel-option {
+  padding-left: 35px;
+}
+.spsel.spsel-hasicon.nosel .spsel-option.spsel-selected {
+  padding-left: 0;
+}
+.spsel.spsel-hasicon.nosel .spsel-option.spsel-selected .spsel-option-el {
+  padding-left: 10px;
+  padding-right: 15px;
+}
+.spsel.spsel-hasactions .spsel-option {
+  padding-right: 80px;
+}
+.spsel.spsel-hasactions.nosel .spsel-option.spsel-selected {
+  padding-left: 0;
+}
+.spsel.spsel-hasactions.nosel .spsel-option.spsel-selected .spsel-option-el {
+  padding-right: 10px;
+  padding-left: 15px;
+}
+.spsel.spsel-hasactions .spsel-addel {
+  left: auto;
+  right: 45px;
+}
+.spsel.spsel-hasactions .spsel-addel:last-child {
+  right: 5px;
+}
+.spsel.spsel-hasactions .spsel-addel:hover {
+  opacity: 0.8;
+}
+.spsel.spsel-hasactions .spsel-option.spsel-selected .spsel-option {
+  padding-right: 0;
+}
+.spsel.spsel-hasactions .spsel-option.spsel-selected .spsel-addel {
+  display: none;
+}
+.spsel.spsel-hasconsole .spsel-option {
+  padding-right: 100px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
+  margin-left: 10px;
+}
+.spsel.spsel-hasconsole .spsel-btn-console .icon-row_expand {
+  display: inline-block;
+  cursor: pointer;
+}
+.spsel.opened {
+  z-index: 2;
+}
+.spsel.opened .spsel-options {
+  display: block;
+}
+.spsel.output {
+  border: 0 none;
+  background-color: transparent;
+}
+.spsel.output .spsel-option {
+  background-image: none;
+  background-color: transparent;
+}
+.spsel.output .spsel-option .spsel-addel {
+  width: 25px;
+  margin-left: 0;
+}
+.spsel.spsel-check .spsel-option label {
+  width: 100%;
+  position: relative;
+  padding: 8px 0 8px 20px;
+  font-weight: normal;
+}
+.spsel.spsel-check .spsel-option label input {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.spsel.spsel-check .spsel-option label .spsel-option-el {
+  display: inline;
+}
+.spsel.spsel-check .spsel-option label .spsel-option-el .rating {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+.spsel.spsel-check .spsel-option label .spse-countdetail {
+  float: right;
+  padding-right: 10px;
+  color: #aaa;
+}
+.has-error .spsel {
+  border: solid 1px #f00;
 }
 
 table,
@@ -2361,6 +2551,22 @@ div.pager .circle.current_page {
   position: relative;
   top: 13px;
   right: 13px;
+}
+
+/* nuovo stile per inversimenti */
+.navContSecondLev {
+  margin-bottom: 20px;
+}
+.navContSecondLev .outerTab {
+  background-color: #ebeef0;
+  margin: -20px -35px 20px -35px;
+  padding: 20px 10px 0 35px;
+  border-bottom: 7px solid #fff;
+  min-height: 75px;
+  width: calc( 100% + 70px );
+}
+.navContSecondLev .outerTab ul li a {
+  border: none !important;
 }
 
 .box-generico {

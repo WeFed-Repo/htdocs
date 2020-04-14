@@ -135,7 +135,8 @@ $selectCausaleMovimenti = array(
 <!-- FINE SELETTORE DEPOSITO -->
 
 <div class="navContSecondLev" id="secondTab">
-  <div class=" outerTab">
+  <?php if($site != "webank") { ?><br /><?php } ?>
+  <div class="outerTab">
     <ul class="tabWrapper tabsmall hidden-xs">
       <li class="on"><a href="#heading1b">Ordini titoli</a></li>
       <li class=""><a href="#heading2b">Ordini fondi</a></li>
@@ -143,6 +144,7 @@ $selectCausaleMovimenti = array(
     </ul>
   </div>
   <div class="separator"></div>
+  <?php if($site != "webank") { ?><br /><?php } ?>
   <div class="panel-group panel-fill" id="accordion2" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
       <div class="panel-heading visible-xs" role=" tab" id="heading1b">
@@ -156,16 +158,16 @@ $selectCausaleMovimenti = array(
 
         <div class="row">
           <div class="col-xs-12 col-md-6">
-              <div class="form-group">
-                <label class="control-label" for="periodo">Periodo</label>
-                <div class="input-group">
-                  <input type="text" id="periodo"
-                         placeholder="gg/mm/aaaa"
-                         value="<?= ($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y') ?>"
-                         class="form-control clear-x">
-                  <a class="input-group-addon date btn-icon" href="#!">
-                    <i class="icon icon-calendar_filled"></i>
-                  </a>
+              <div class="form-group w100">
+                <label class="control-label">Periodo</label>
+                  <div class="input-group">
+                      <input type="text"
+                             id="periodo"
+                             placeholder="gg/mm/aaaa"
+                             value="<?= ($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y') ?>"
+                             class="form-control datepicker input-inline clear-x">
+                      <span class="editable-clear-x" style="display: inline;"><i class="icon icon-close icon-1x"></i></span>
+                    <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
                 </div>
               </div>
           </div>
@@ -178,6 +180,8 @@ $selectCausaleMovimenti = array(
               </select>
             </div>
           </div>
+        </div>
+        <div class="row">
           <?php } ?>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
@@ -187,6 +191,10 @@ $selectCausaleMovimenti = array(
               </select>
             </div>
           </div>
+          <?php if($site != "webank") { ?>
+          </div>
+          <div class="row">
+          <?php } ?>
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Stato ordine</label>
@@ -203,14 +211,23 @@ $selectCausaleMovimenti = array(
               </select>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 no-label">
+
+          <?php if($site != "webank") { ?>
+          </div>
+          <div class="row">
+          <?php } ?>
+
+          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 ' : 'marginTopMedium' ?> no-label">
   					<div class="btn-align-right">
   						<a type="button" class="btn btn-primary" href="#">Cerca</a>
   					</div>
           </div>
 
+        </div>
+        <div class="row">
+
           <div class="col-xs-12">
-            <p class="note flLeft noFloatMobile">
+            <p class="note flLeft noFloatMobile marginTopMedium">
                 <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
                 <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                   <i class="icon icon-2x icon-update"></i>
@@ -304,6 +321,8 @@ $selectCausaleMovimenti = array(
                   </select>
                 </div>
               </div>
+            </div>
+            <div class="row">
               <?php } ?>
               <div class="col-xs-12 col-md-6">
                 <div class="form-group">
@@ -313,13 +332,17 @@ $selectCausaleMovimenti = array(
                   </select>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-6 no-label">
+              <?php if($site != "webank") { ?>
+              </div>
+              <div class="row">
+              <?php } ?>
+              <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 ' : 'marginTopMedium' ?> no-label">
       					<div class="btn-align-right">
       						<a type="button" class="btn btn-primary" href="#">Cerca</a>
       					</div>
               </div>
               <div class="col-xs-12">
-                <p class="note flLeft noFloatMobile">
+                <p class="note flLeft noFloatMobile marginTopMedium">
                     <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
                     <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                       <i class="icon icon-2x icon-update"></i>
@@ -418,14 +441,15 @@ $selectCausaleMovimenti = array(
                 </select>
               </div>
             </div>
-            <div class="col-xs-12">
+          </div>
+          <div class="row">
+            <div class="col-xs-12 marginTopMedium">
     					<div class="btn-align-right">
     						<a type="button" class="btn btn-primary" href="#">Cerca</a>
     					</div>
             </div>
             <div class="col-xs-12">
-              <br />
-              <p class="note flLeft noFloatMobile">
+              <p class="note flLeft noFloatMobile marginTopMedium">
                   <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
                   <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                     <i class="icon icon-2x icon-update"></i>
@@ -506,7 +530,7 @@ $selectCausaleMovimenti = array(
     $("#periodo").datepicker({
         minDate: 1,
         showOtherMonths: true,
-        showOn: "button",
+        showOn: "both",
         prevText: "<i class=\"icon icon-arrow_left\" title=\"icon-arrow_left\"></i>",
         nextText: "<i class=\"icon icon-arrow_right\" title=\"icon-arrow_right\"></i>",
         buttonImage: "/img/ret/pixel_trasp.gif",

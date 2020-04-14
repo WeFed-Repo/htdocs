@@ -362,6 +362,12 @@ input[type="button"][disabled],
 .innerWrapperTab ul li a:hover {
   color: #000;
 }
+.innerWrapperTab ul li:hover {
+  background-color: #fff;
+}
+.innerWrapperTab ul li:hover a {
+  color: #000;
+}
 .innerWrapperTab ul li.on {
   background-color: #fff;
   z-index: 2;
@@ -369,6 +375,18 @@ input[type="button"][disabled],
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
+}
+.innerWrapperTab ul li.on a {
+  color: #000;
+}
+.innerWrapperTab ul > li.on:first-child {
+  border-left: 1px solid #ccc;
+}
+.innerWrapperTab ul > li:first-child {
+  border-left: 1px solid #e9e9e9;
+}
+.innerWrapperTab .separator {
+  display: none;
 }
 .tabbig .innerWrapperTab ul li.on,
 .tabbig .innerWrapperTab ul li.on:hover {
@@ -385,22 +403,6 @@ input[type="button"][disabled],
 }
 .tabbig section {
   margin-bottom: 40px;
-}
-.innerWrapperTab ul > li.on:first-child {
-  border-left: 1px solid #ccc;
-}
-.innerWrapperTab .separator {
-  display: none;
-}
-.innerWrapperTab ul li:hover {
-  background-color: #fff;
-}
-.innerWrapperTab ul li:hover a,
-.innerWrapperTab ul li.on a {
-  color: #000;
-}
-.innerWrapperTab ul > li:first-child {
-  border-left: 1px solid #e9e9e9;
 }
 /*TABELLE*/
 .table {

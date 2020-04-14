@@ -70,3 +70,19 @@
   }
 }
 
+/* nuovo stile per inversimenti */
+
+.navContSecondLev {
+  margin-bottom: 20px;
+  .outerTab {
+    background-color: #ebeef0;
+    margin: -20px -35px 20px -35px;
+    padding: 20px 10px 0 35px;
+    border-bottom: 7px solid #fff;
+    min-height: 75px;
+    width: calc( 100% + 70px );
+    ul li a {
+      border: none !important;
+    }
+  }
+}

@@ -929,6 +929,11 @@ h1 .pager .circle {
     display: inline-block !important;
 }
 
+.form-control.w100 {
+    width: 100% !important;
+    display: inline-block !important;
+}
+
 .control-label + .form-control.wauto {
     display: block;
 }

@@ -45,10 +45,10 @@ $tipo_op_1 = array(1,2,3);
             <div class="spsel-option" data-value="<?php print($i);?>">
               <a class="spsel-option-el">Portafoglio <?php print($i);?></a>
               <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                <i class="icon icon-r-modifica"></i>
+                <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
               </a>
               <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                <i class="icon icon-r-elimina"></i>
+                <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
               </a>
             </div>
             <?php } ?>
@@ -67,8 +67,8 @@ $tipo_op_1 = array(1,2,3);
     </div>
     <div class="col-xs-12 col-md-6 no-label">
       <div class="btn-align-left">
-        <a type="button" href="#!" class="btn btn-primary btn-aggiungi" title="Aggiungi">
-          <i class="icon icon-add"></i>
+        <a type="button" href="#" class="btn btn-primary" title="Crea nuovo">
+          <?php if($site == "webank") echo '<i class="icon icon-add"></i>' ?>
           <span class="icon-text">Crea nuovo</span>
         </a>
       </div>
@@ -83,9 +83,9 @@ $tipo_op_1 = array(1,2,3);
         </select>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6 form-field-input">
-      <label class="control-label">Colonne visibili</label>
+    <div class="col-xs-12 col-md-6">
       <div class="form-group">
+        <label class="control-label">Colonne visibili</label>
         <div class="spsel spsel-hasactions nosel" id="spselColonne"  placeholder="Seleziona...">
           <input type="hidden" name="spselCTAinput2">
           <div class="spsel-options">
@@ -96,10 +96,10 @@ $tipo_op_1 = array(1,2,3);
             <div class="spsel-option" data-value="<?php print($i);?>">
               <a class="spsel-option-el">Vista <?php print($i);?></a>
               <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                <i class="icon icon-r-modifica"></i>
+                <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
               </a>
               <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                <i class="icon icon-r-elimina"></i>
+                <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
               </a>
             </div>
             <?php } ?>
@@ -172,7 +172,7 @@ $tipo_op_1 = array(1,2,3);
           </td>
           <td class="center">
             <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
-              <i class="icon icon-2x icon-r-modifica"></i>
+              <i class="icon icon-2x icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
             </a>
           </td>
           <td class="left"><a href="">Titolo azione <?= $x + 1 ?></a></td>
@@ -285,7 +285,7 @@ $tipo_op_1 = array(1,2,3);
                 <div class="col-xs-12 col-md-4">
                   <div class="btn-align-left">
                     <a class="btn-link-icon" href="#">
-                      <i class="icon icon-r-elimina"></i>
+                      <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
                       <span>Elimina riga</span>
                     </a>
                   </div>
@@ -319,13 +319,27 @@ $tipo_op_1 = array(1,2,3);
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-6 requiredField">
-                          <label class="control-label">Data inserimento</label>
+                          <!--<label class="control-label">Data inserimento</label>
                           <div class="form-inline">
                             <div class="input-group">
                               <input type="text" id="dataInserimento" placeholder="gg/mm/aaaa" class="form-control clear-x width-100">
                               <div class="input-group-addon date"><i class="icon icon-calendar_filled"></i ></div>
           		       	 			</div>
-            							</div>
+            							</div>-->
+
+                          <div class="form-group w100">
+                            <label class="control-label">Periodo</label>
+                              <div class="input-group">
+                                  <input type="text"
+                                         id="dataInserimento"
+                                         placeholder="gg/mm/aaaa"
+                                         value=""
+                                         class="form-control datepicker input-inline clear-x">
+                                  <span class="editable-clear-x" style="display: inline;"><i class="icon icon-close icon-1x"></i></span>
+                                <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
+                            </div>
+                          </div>
+
                         </div>
                         <div class="col-xs-6 requiredField">
                           <label class="control-label">Cambio</label>

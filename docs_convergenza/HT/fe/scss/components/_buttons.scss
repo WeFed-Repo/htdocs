@@ -97,3 +97,11 @@ p.note.flRight {
 .btn-icon .icon-push_on {
   animation: spin 5s linear infinite
 }
+
+/* sovrascrittura classe icon-text perchè non erediti lo stile icomoon */
+.icon-text {
+  font-family: 'bankFont', Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
