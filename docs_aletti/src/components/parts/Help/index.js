@@ -30,7 +30,7 @@ export default class extends PureComponent {
     render() {
         return(
             <div className="help">
-                <DefaultModal show={this.state.isHelpOpened} close={this.closeHelp} params={{modalTitle: "Help" }}>
+                <DefaultModal className ={ this.props.className } show={this.state.isHelpOpened} close={this.closeHelp} params={{modalTitle: "Help" }}>
                     <HelpCont arg={this.props.arg} />
                 </DefaultModal>
                 <span className="opener" onClick={this.openHelp}><i className="icon icon-info_fill"></i></span>

@@ -87,3 +87,10 @@
     display:inline-block;background:#eee;padding:5px; cursor:pointer;border:solid 1px #ccc;font-size:11px;border-radius:5px;
     &:hover{opacity:0.8}
 }
+
+.modal-content .doc-img {
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+}
