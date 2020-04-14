@@ -33,7 +33,7 @@
 
 .icon_filter:before, .icon_cambi:before, .icon_piumeno:before {
   font-style: normal !important;
-  content: "☒";
+  content: "☒" !important;
   color: red !important;
 }
 

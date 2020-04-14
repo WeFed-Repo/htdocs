@@ -1846,8 +1846,9 @@ table td .icon-clessidra_stroke {
     src: url('/wscmn/font/futuraBT/27145D_2_0.eot?#iefix') format('embedded-opentype'),url('/wscmn/font/futuraBT/27145D_2_0.woff') format('woff'),url('/wscmn/font/futuraBT/27145D_2_0.ttf') format('truetype');
 }
 */
+.icon_filter:before,
 .icon_cambi:before,
-.icon_filter:before {
+.icon_piumeno:before {
   font-style: normal !important;
   content: "\2612";
   color: red !important;
@@ -3301,3 +3302,4 @@ body.popup #contenuti {
     color: #8ab10b;
   }
 }
+/*# sourceMappingURL=webank_base.css.map */
