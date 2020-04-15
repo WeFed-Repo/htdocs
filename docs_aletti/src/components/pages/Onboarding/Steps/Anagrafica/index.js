@@ -13,6 +13,7 @@ class StepForm extends Component {
         "localfield_privacyopen": (this.props.obstate.field_anagraficablob_privacyletta === "true") ? true : false
     }
     render() {
+        
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props
         let formstate = this.props.obstate,
             // Cattura i domini tramite le props
@@ -29,14 +30,14 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <InformativaDatiPersonali formstate={formstate} obchange={this.props.obchange}></InformativaDatiPersonali>
-                    <RichiestaAperturaConto formstate={formstate} isPrivacyChecked={isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto>
-                    <ConsensoPrivacy indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>
-                    {isSecondoIntestatario && <ConsensoPrivacy indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>}
-                    <h2>Inserisci i dati personali </h2>
-                    <h5>Inserisci i tuoi dati e quelli di tutti i cointestatari</h5>
-                    <DatiPersonali indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>
-                    {isSecondoIntestatario && <DatiPersonali indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>}
+                    {!this.props.isOutput && <InformativaDatiPersonali formstate={formstate} obchange={this.props.obchange}></InformativaDatiPersonali> }
+                    {!this.props.isOutput && <RichiestaAperturaConto formstate={formstate} isPrivacyChecked={isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto> } 
+                    <ConsensoPrivacy isOutput = { this.props.isOutput } indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>
+                    {isSecondoIntestatario && <ConsensoPrivacy isOutput = { this.props.isOutput } indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>}
+                    {!this.props.isOutput && <h2>Inserisci i dati personali </h2> }
+                    {!this.props.isOutput && <h5>Inserisci i tuoi dati e quelli di tutti i cointestatari</h5> }
+                    <DatiPersonali isOutput = { this.props.isOutput } indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>
+                    {isSecondoIntestatario && <DatiPersonali isOutput = { this.props.isOutput } indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>}
                 </div>
             </div>
         )
