@@ -84,7 +84,12 @@ export default class extends Component {
                                 onChange={this.generalOnChange}
                                 tipo="fr"
                                 idBozza="99999999"
-                                >
+                                formati={[
+                                    {value: "JPEG", text: "image/jpeg"},
+                                    {value: "JPG", text: "image/jpeg"},
+                                    {value: "PDF", text: "application/pdf"}
+                                ]
+                                }>
                                 ></Form.file>
                         </Col>
                         <Col sm="3">
