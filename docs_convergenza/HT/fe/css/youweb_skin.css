@@ -978,6 +978,11 @@ a.output {
   padding: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .input-group .input-group-addon.btn-icon .icon {
+    margin-top: 7px;
+  }
+}
 .ui-datepicker table tbody tr:nth-child(odd) {
   background-color: transparent !important;
 }
@@ -2554,21 +2559,42 @@ div.pager .circle.current_page {
 }
 
 /* nuovo stile per inversimenti */
-.navContSecondLev {
-  margin-bottom: 20px;
+@media screen and (min-width: 1024px) {
+  .navContSecondLev {
+    margin-bottom: 20px;
+  }
+  .navContSecondLev .outerTab {
+    background-color: #ebeef0;
+    margin: -20px -35px 20px -35px;
+    padding: 20px 10px 0 35px;
+    border-bottom: 7px solid #fff;
+    min-height: 75px;
+    width: calc( 100% + 70px );
+  }
+  .navContSecondLev .outerTab ul li a {
+    border: none !important;
+  }
+  .navContSecondLev .panel.panel-accordion {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navContSecondLev .panel.panel-accordion .panel-body {
+    padding: 12px 0 12px 0;
+  }
 }
-.navContSecondLev .outerTab {
-  background-color: #ebeef0;
-  margin: -20px -35px 20px -35px;
-  padding: 20px 10px 0 35px;
-  border-bottom: 7px solid #fff;
-  min-height: 75px;
-  width: calc( 100% + 70px );
-}
-.navContSecondLev .outerTab ul li a {
-  border: none !important;
-}
+@media screen and (max-width: 1023px) {
+  .navContSecondLev .outerTab {
+    margin-bottom: 0px;
+  }
 
+  .panel.panel-accordion {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .panel.panel-accordion .panel-body {
+    padding: 12px 13px 12px 13px;
+  }
+}
 .box-generico {
   /*padding:20px 0 10px 0;*/
 }

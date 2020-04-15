@@ -34,48 +34,49 @@ $tipo_op_1 = array(1,2,3);
 
 <div id="collapse1b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1b" style="height: auto;">
 
-  <div class="row">
-    <div class="col-xs-12 col-md-6 form-field-input">
-      <label class="control-label">I tuoi portafogli</label>
-      <div class="form-group">
-        <div class="spsel spsel-hasactions nosel" id="spselPortafogli"  placeholder="Seleziona...">
-          <input type="hidden" name="spselCTAinput2">
-          <div class="spsel-options">
-            <?php for($i=0;$i<=3;$i++) { ?>
-            <div class="spsel-option" data-value="<?php print($i);?>">
-              <a class="spsel-option-el">Portafoglio <?php print($i);?></a>
-              <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
-              </a>
-              <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
-              </a>
+
+  <div class="form-group">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<label class="control-label">I tuoi portafogli</label>
+          <div class="spsel spsel-hasactions nosel" id="spselPortafogli"  placeholder="Seleziona...">
+            <input type="hidden" name="spselCTAinput2">
+            <div class="spsel-options">
+              <?php for($i=0;$i<=3;$i++) { ?>
+              <div class="spsel-option" data-value="<?php print($i);?>">
+                <a class="spsel-option-el">Portafoglio <?php print($i);?></a>
+                <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
+                  <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
+                </a>
+                <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
+                  <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
+                </a>
+              </div>
+              <?php } ?>
             </div>
-            <?php } ?>
           </div>
-        </div>
-        <script type="text/javascript">
-          $(function(){
-            $("#spselPortafogli").spSel();
-            $("#spselPortafogli .spsel-addel.btn-icon").click(function(e){
-              e.stopPropagation();
-              alert("Elemento selezionato: " + $(this).attr("data-el"));
-            })
-          });
-        </script>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-6 no-label">
-      <div class="btn-align-left">
-        <a type="button" href="#" class="btn btn-primary" title="Crea nuovo">
-          <?php if($site == "webank") echo '<i class="icon icon-add"></i>' ?>
-          <span class="icon-text">Crea nuovo</span>
-        </a>
-      </div>
-    </div>
-  </div>
+          <script type="text/javascript">
+            $(function(){
+              $("#spselPortafogli").spSel();
+              $("#spselPortafogli .spsel-addel.btn-icon").click(function(e){
+                e.stopPropagation();
+                alert("Elemento selezionato: " + $(this).attr("data-el"));
+              })
+            });
+          </script>
+			</div>
+			<div class="col-xs-12 col-sm-4 no-label">
+				<div class="btn-align-right">
+          <a type="button" href="#" class="btn btn-primary" title="Crea nuovo">
+            <?php if($site == "webank") echo '<i class="icon icon-add"></i>' ?>
+            <span class="icon-text">Crea nuovo</span>
+          </a>
+				</div>
+			</div>
+		</div>
+	</div>
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="form-field-input col-xs-12 col-md-6">
       <div class="form-group">
         <label class="control-label">Strumenti finanziari</label>
         <select class="form-control" id="selectStatoOrdine">
@@ -83,7 +84,7 @@ $tipo_op_1 = array(1,2,3);
         </select>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="form-field-input col-xs-12 col-md-6">
       <div class="form-group">
         <label class="control-label">Colonne visibili</label>
         <div class="spsel spsel-hasactions nosel" id="spselColonne"  placeholder="Seleziona...">
@@ -124,13 +125,13 @@ $tipo_op_1 = array(1,2,3);
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-8 col-sm-6">
       <a href="#" class="text-link">
         Simula compravendita
         <i class="icon icon_piumeno"></i>
       </a>
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-4 col-sm-6">
       <p class="note flRight noFloatMobile">
           <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
           <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
@@ -279,10 +280,11 @@ $tipo_op_1 = array(1,2,3);
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-12 col-md-8">
+                <div class="col-xs-8">
+                  <br class="hidden-md hidden-lg hidden-xl" />
                   <strong>BTP 0,05% EUR 15.04.2018-15.04-2021</strong>
                 </div>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-4">
                   <div class="btn-align-left">
                     <a class="btn-link-icon" href="#">
                       <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>

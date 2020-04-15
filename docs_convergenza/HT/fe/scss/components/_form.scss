@@ -7,18 +7,18 @@
      width: auto;
   }
 }
-  
-.formGenerico { 
+
+.formGenerico {
   //border-top: solid 2px $tableStripe;
   padding-top: 15px;
-  &.borderFormRounded { 
+  &.borderFormRounded {
     border: 0;
-    padding:0; 
+    padding:0;
     box-shadow:none!important;
     .marginBottomNone {
       padding:10px;
       .control-label-output {
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
       }
     }
     .control-label {display: inline-block;width:100%;
@@ -29,7 +29,7 @@
     .marginBottomNone {
       margin: 0 15px;
     }
-  } 
+  }
   input:focus {
     outline:none;
     box-shadow: none;
@@ -42,7 +42,7 @@
       }
     }
   }
- 
+
 }
 
 .boxDefault label {
@@ -325,7 +325,7 @@ input[type=checkbox] {
             margin: 0;
             border-top: solid 2px #ddd;
             padding: 7px 0 0;
-            text-align: center; 
+            text-align: center;
             display: block;
             .selElTotal {
                 display: block;
@@ -358,7 +358,7 @@ input[type=checkbox] {
     right:15px;
     top:3px;
   }
-  
+
 }
 
 
@@ -383,7 +383,7 @@ input[type=checkbox] {
   padding: 0;
   width: 100%;
   margin-bottom: 14px;
-  height: 50px !important; 
+  height: 50px !important;
   .ui-spinner-input,
   input,
   input[type="text"].form-control {
@@ -464,19 +464,19 @@ input[type=checkbox] {
     @media (max-width: 1023px) {
       & {
         height: 38px;
-      } 
+      }
     }
   }
 }
 
-.borderFormRounded .output {  
+.borderFormRounded .output {
     float: none;
     width:100%;
     display:inline-block;
     &.no-label{padding-top:0}
-    &.txthelp { 
+    &.txthelp {
       width:auto;
-    } 
+    }
     a{color:$primary}
 }
 a.output {color: $primary;text-decoration:underline}
@@ -486,7 +486,7 @@ a.output {color: $primary;text-decoration:underline}
   .form-inline .form-group {
       width: 100%;
   }
-} 
+}
 
 // Campi con addon
 .input-group {
@@ -501,17 +501,27 @@ a.output {color: $primary;text-decoration:underline}
     z-index: 5;
     padding: 0;
   }
-} 
+}
+
+@media screen and (max-width: 1023px) {
+  .input-group {
+    .input-group-addon.btn-icon {
+      .icon {
+        margin-top: 7px;
+      }
+    }
+  }
+}
 
 // Datepicker
 .ui-datepicker {
   table tbody tr:nth-child(odd) {background-color: transparent !important}
-  th {background-color: transparent !important;text-align: center !important;} 
-  th,td {border:0 none}  
+  th {background-color: transparent !important;text-align: center !important;}
+  th,td {border:0 none}
 }
 /* Selettore in overlay */
 .modal-body .selector-wrap.selector-mini{
-  .selector-box { width: 111px} 
+  .selector-box { width: 111px}
   &.only-definition .selector-box {width:188px;}
 }
 @media (max-width: 767px) {
@@ -552,12 +562,12 @@ a.output {color: $primary;text-decoration:underline}
     background: #eaeded url('/HT/fe/img/icon_accordion_closed.png') no-repeat 98% center;
     height: 80px;
     line-height: 80px;
-    background-size: 20px; 
+    background-size: 20px;
   }
 }
 .opened .sel-adv-selector {
   background:#eaeded url('/HT/fe/img/icon_accordion_opened.png') no-repeat 98% center;
-  background-size: 20px;  
+  background-size: 20px;
 }
 
 .sel-adv .sel-adv-selector,
@@ -637,7 +647,7 @@ a.output {color: $primary;text-decoration:underline}
     border: solid 1px #ccc;
     z-index: 5;
     width: 100%;
-    background: #fff; 
+    background: #fff;
   }
 }
 @keyframes spin {
@@ -663,8 +673,8 @@ a.output {color: $primary;text-decoration:underline}
         &.checkBlue {background-color: #0d1c34;}
         &.checkOrange {background-color: #fb6002;}
         &.checkLightBlue {background-color: #27d3ed;}
-        &.checkRed {background-color: #d82818;}  
-        
+        &.checkRed {background-color: #d82818;}
+
       }
     }
 }

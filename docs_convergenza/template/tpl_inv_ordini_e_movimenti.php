@@ -146,7 +146,7 @@ $selectCausaleMovimenti = array(
   <div class="separator"></div>
   <?php if($site != "webank") { ?><br /><?php } ?>
   <div class="panel-group panel-fill" id="accordion2" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
+    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading1b">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1b" aria-expanded="true" aria-controls="collapse1b" class="">
@@ -155,7 +155,7 @@ $selectCausaleMovimenti = array(
         </h4>
       </div>
       <div id="collapse1b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1b" style="height: auto;">
-
+        <div class="panel-body">
         <div class="row">
           <div class="col-xs-12 col-md-6">
               <div class="form-group w100">
@@ -172,7 +172,7 @@ $selectCausaleMovimenti = array(
               </div>
           </div>
           <?php if($site == "webank") { ?>
-          <div class="col-xs-12 col-md-6">
+          <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Strumento</label>
               <select class="form-control" id="selectStrumento">
@@ -183,7 +183,7 @@ $selectCausaleMovimenti = array(
         </div>
         <div class="row">
           <?php } ?>
-          <div class="col-xs-12 col-md-6">
+          <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Tipi di operazione</label>
               <select class="form-control" id="selectTipoOperazione">
@@ -195,7 +195,7 @@ $selectCausaleMovimenti = array(
           </div>
           <div class="row">
           <?php } ?>
-          <div class="col-xs-12 col-md-6">
+          <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Stato ordine</label>
               <select class="form-control" id="selectStatoOrdine">
@@ -203,7 +203,7 @@ $selectCausaleMovimenti = array(
               </select>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
+          <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Mercato</label>
               <select class="form-control" id="selectMercato">
@@ -217,7 +217,7 @@ $selectCausaleMovimenti = array(
           <div class="row">
           <?php } ?>
 
-          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 ' : 'marginTopMedium' ?> no-label">
+          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 no-label' : '' ?> ">
   					<div class="btn-align-right">
   						<a type="button" class="btn btn-primary" href="#">Cerca</a>
   					</div>
@@ -293,7 +293,8 @@ $selectCausaleMovimenti = array(
 
       </div>
     </div>
-    <div class="panel panel-default">
+    </div>
+    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading2b">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2b" aria-expanded="true" aria-controls="collapse2b" class="">
@@ -301,120 +302,120 @@ $selectCausaleMovimenti = array(
           </a>
         </h4>
       </div>
-      <div id="collapse1c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2b" style="height: auto;">
-
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <div class="form-group">
-                  <label class="control-label">Periodo</label>
-                  <select class="form-control" id="selectPeriodFondi">
-                    <?php auto_input_select( $selectPeriodoFondi ) ?>
-                  </select>
-                </div>
-              </div>
-              <?php if($site == "webank") { ?>
-              <div class="col-xs-12 col-md-6">
-                <div class="form-group">
-                  <label class="control-label">Stato ordine</label>
-                  <select class="form-control" id="selectStatoOrdineFondi">
-                    <?php auto_input_select( $selectStatoOrdineFondi ) ?>
-                  </select>
-                </div>
-              </div>
+      <div id="collapse2b" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2b" style="height: auto;">
+        <div class="panel-body">
+        <div class="row">
+          <div class="form-field-input col-xs-12 col-md-6">
+            <div class="form-group">
+              <label class="control-label">Periodo</label>
+              <select class="form-control" id="selectPeriodFondi">
+                <?php auto_input_select( $selectPeriodoFondi ) ?>
+              </select>
             </div>
-            <div class="row">
-              <?php } ?>
-              <div class="col-xs-12 col-md-6">
-                <div class="form-group">
-                  <label class="control-label">Tipi di operazione</label>
-                  <select class="form-control" id="selectTipoOperazioneFondi">
-                    <?php auto_input_select( $selectTipoOperazioneFondi ) ?>
-                  </select>
-                </div>
-              </div>
-              <?php if($site != "webank") { ?>
-              </div>
-              <div class="row">
-              <?php } ?>
-              <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 ' : 'marginTopMedium' ?> no-label">
-      					<div class="btn-align-right">
-      						<a type="button" class="btn btn-primary" href="#">Cerca</a>
-      					</div>
-              </div>
-              <div class="col-xs-12">
-                <p class="note flLeft noFloatMobile marginTopMedium">
-                    <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
-                    <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
-                      <i class="icon icon-2x icon-update"></i>
+          </div>
+          <?php if($site == "webank") { ?>
+          <div class="form-field-input col-xs-12 col-md-6">
+            <div class="form-group">
+              <label class="control-label">Stato ordine</label>
+              <select class="form-control" id="selectStatoOrdineFondi">
+                <?php auto_input_select( $selectStatoOrdineFondi ) ?>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <?php } ?>
+          <div class="form-field-input col-xs-12 col-md-6">
+            <div class="form-group">
+              <label class="control-label">Tipi di operazione</label>
+              <select class="form-control" id="selectTipoOperazioneFondi">
+                <?php auto_input_select( $selectTipoOperazioneFondi ) ?>
+              </select>
+            </div>
+          </div>
+          <?php if($site != "webank") { ?>
+          </div>
+          <div class="row">
+          <?php } ?>
+          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 no-label' : '' ?> ">
+            <div class="btn-align-right">
+              <a type="button" class="btn btn-primary" href="#">Cerca</a>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <p class="note flLeft noFloatMobile marginTopMedium">
+                <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+                <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
+                  <i class="icon icon-2x icon-update"></i>
+                </a>
+            </p>
+        </div>
+
+        </div>
+
+
+        <!-- TABELLA -->
+
+        <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+            <thead>
+              <tr>
+                <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                <th class="left filter" data-sortable="true" id="filterTitolo">Fondo / ISIN</th>
+                <th class="left">Stato ordine</th>
+                <th class="right">Quote/ azioni</th>
+                <th class="left">Tipo operazione</th>
+                <th class="right">Controv. in Euro</th>
+                <th class="right">Ultimo prezzo</th>
+                <th class="right">Data Valuta</th>
+                <th class="right">Data Inserim.</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php for($x=0;$x<=10;$x++) { ?>
+              <tr>
+                  <td class="center">
+                    <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
+                      <i class="icon icon-2x icon-ico_azioni02A"></i>
                     </a>
-                </p>
+                  </td>
+                  <td class="left"><a href="#">Ipsum dolor sit amet</a> <?php print rand(1000,1000000)/100;?> </td>
+                  <td class="left"><?php
+                    $a1 = $selectStatoOrdineFondi;
+                    array_shift($a1);
+                    $a1[] = 'Annullato';
+                    echo $a1[array_rand($a1)];
+                  ?></td>
+                  <td class="left"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="left"><?php
+                    $a2 = $selectTipoOperazioneFondi;
+                    array_shift($a2);
+                    echo $a2[array_rand($a2)];
+                  ?></td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="right">20/01/2020</td>
+                  <td class="right">20/01/2020</td>
+              </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+
+        <!-- PULSANTIERA SOTTO TABELLA -->
+        <div class="btnWrapper marginTopMedium">
+            <div class="btn-align-left">
+                <a class="btn-link-icon" href="#"><i class="icon icon-excel_filled"></i><span>Scarica in Excel</span></a>
+                <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
             </div>
-
-            </div>
-
-
-            <!-- TABELLA -->
-
-            <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
-                <thead>
-                  <tr>
-                    <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-                    <th class="left filter" data-sortable="true" id="filterTitolo">Fondo / ISIN</th>
-                    <th class="left">Stato ordine</th>
-                    <th class="right">Quote/ azioni</th>
-                    <th class="left">Tipo operazione</th>
-                    <th class="right">Controv. in Euro</th>
-                    <th class="right">Ultimo prezzo</th>
-                    <th class="right">Data Valuta</th>
-                    <th class="right">Data Inserim.</th>
-                  </tr>
-                </thead>
-                <tbody>
-                <?php for($x=0;$x<=10;$x++) { ?>
-                  <tr>
-                      <td class="center">
-                        <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
-                          <i class="icon icon-2x icon-ico_azioni02A"></i>
-                        </a>
-                      </td>
-                      <td class="left"><a href="#">Ipsum dolor sit amet</a> <?php print rand(1000,1000000)/100;?> </td>
-                      <td class="left"><?php
-                        $a1 = $selectStatoOrdineFondi;
-                        array_shift($a1);
-                        $a1[] = 'Annullato';
-                        echo $a1[array_rand($a1)];
-                      ?></td>
-                      <td class="left"><?php print rand(1000,1000000)/100;?></td>
-                      <td class="left"><?php
-                        $a2 = $selectTipoOperazioneFondi;
-                        array_shift($a2);
-                        echo $a2[array_rand($a2)];
-                      ?></td>
-                      <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                      <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                      <td class="right">20/01/2020</td>
-                      <td class="right">20/01/2020</td>
-                  </tr>
-                <?php } ?>
-                </tbody>
-            </table>
-
-            <!-- PULSANTIERA SOTTO TABELLA -->
-            <div class="btnWrapper marginTopMedium">
-                <div class="btn-align-left">
-                    <a class="btn-link-icon" href="#"><i class="icon icon-excel_filled"></i><span>Scarica in Excel</span></a>
-                    <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
-                </div>
-                <!--div class="btn-align-right">
-                    <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
-                </div-->
-                <br class="clear">
-            </div>
-            <!-- FINE PULSANTIERA SOTTO TABELLA -->
-
+            <!--div class="btn-align-right">
+                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+            </div-->
+            <br class="clear">
+        </div>
+        <!-- FINE PULSANTIERA SOTTO TABELLA -->
       </div>
     </div>
-    <div class="panel panel-default">
+    </div>
+    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading2c">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2c" aria-expanded="true" aria-controls="collapse2c" class="">
@@ -423,9 +424,9 @@ $selectCausaleMovimenti = array(
         </h4>
       </div>
       <div id="collapse2c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2c" style="height: auto;">
-
+        <div class="panel-body">
           <div class="row">
-            <div class="col-xs-12 col-md-6">
+            <div class="form-field-input col-xs-12 col-md-6">
               <div class="form-group">
                 <label class="control-label">Periodo</label>
                 <select class="form-control" id="selectPeriodFondi">
@@ -433,7 +434,7 @@ $selectCausaleMovimenti = array(
                 </select>
               </div>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="form-field-input col-xs-12 col-md-6">
               <div class="form-group">
                 <label class="control-label">Causale</label>
                 <select class="form-control" id="selectTipoOperazioneFondi">
@@ -443,7 +444,7 @@ $selectCausaleMovimenti = array(
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12 marginTopMedium">
+            <div class="col-xs-12 ">
     					<div class="btn-align-right">
     						<a type="button" class="btn btn-primary" href="#">Cerca</a>
     					</div>
@@ -512,9 +513,8 @@ $selectCausaleMovimenti = array(
               <br class="clear">
           </div>
           <!-- FINE PULSANTIERA SOTTO TABELLA -->
-
+        </div>
       </div>
-
     </div>
   </div>
 </div>
