@@ -220,6 +220,7 @@ class DatiPersonali extends Component {
             optionResidenza = this.props.obdomini["qualifica_via"],
             optionStudio = this.props.obdomini["titoli_studio"],
             labelDatiPer = this.props.indexInt === '0' ? "INSERISCI I TUOI DATI PERSONALI" : "INSERISCI I DATI PERSONALI DEL SECONDO INTESTATARIO",
+            labelDatiPerOutput = `RIEPILOGO DATI PERSONALI DEL ${this.indexIntText} INTESTATARIO`,
             argHelp = "",
             listaNazioni = this.props.obdomini["nazioni_attive"];
         return (
@@ -244,8 +245,8 @@ class DatiPersonali extends Component {
                     </div>
                 </DefaultModal>
                 <DefaultCollapse
-                    disabled={this.props.isPrivacyUnChecked}
-                    label={labelDatiPer}
+                    disabled={this.props.isPrivacyUnChecked && !this.props.isOutput }
+                    label={ !this.props.isOutput ? labelDatiPer : labelDatiPerOutput }
                     startsOpen={false}
                     className="search-collapse"
                     hasErrors={
@@ -286,6 +287,7 @@ class DatiPersonali extends Component {
                                         }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.select>
 
@@ -301,6 +303,7 @@ class DatiPersonali extends Component {
                                         cbchange={(val) => { if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.select>
                                 </Col>
@@ -317,6 +320,7 @@ class DatiPersonali extends Component {
                                         ajaxoptions="province"
                                         placeholder="Seleziona"
                                         disabled={this.props.formstate[anagraficaIntestatario + "paesenascita"] != "" && this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86"}
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.select>
 
@@ -332,6 +336,7 @@ class DatiPersonali extends Component {
                                         placeholder="Seleziona..."
                                         ajaxoptions="comuni"
                                         ajaxfilter={this.props.formstate[anagraficaIntestatario + "provincianascita"]}
+                                        output = {this.props.isOutput}
                                     ></Form.select>
                                 </Col>}
 
@@ -365,6 +370,7 @@ class DatiPersonali extends Component {
                                                 onChange={this.props.obchange}
                                                 options={optionTipoDocumento}
                                                 placeholder="Seleziona"
+                                                output = {this.props.isOutput}
                                                 cbchange={(val) => {
                                                     if (val != "") {
                                                         this.setState({ isHelpDocVisible: true })
@@ -382,7 +388,9 @@ class DatiPersonali extends Component {
                                                         this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
                                                     }
                                                 }
-                                                }
+                                                
+                                            }
+                                                
                                             >
                                             </Form.select>
                                             }
@@ -394,6 +402,7 @@ class DatiPersonali extends Component {
                                                 value={this.props.formstate[anagraficaIntestatario + "numdocumento"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "numdocumento"]}
                                                 onChange={this.props.obchange}
+                                                output = {this.props.isOutput}
                                                 mask={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? "alfanumerico" : ""}
                                             >
                                             </Form.input>
@@ -422,6 +431,7 @@ class DatiPersonali extends Component {
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === "" : ""}
                                                         dateTo={moment(new Date(), 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY')}
                                                         dateFrom={this.emissioneDoc}
+                                                        output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
                                                     {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
@@ -438,6 +448,7 @@ class DatiPersonali extends Component {
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
                                                         dateTo={this.scadenzaDoc}
                                                         dateFrom={this.scadenzaDocPre}
+                                                        output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
                                                     {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className ="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
@@ -453,6 +464,7 @@ class DatiPersonali extends Component {
                                                 onChange={this.props.obchange}
                                                 options={listaNazioni}
                                                 placeholder="Seleziona"
+                                                output = {this.props.isOutput}
                                             >
                                             </Form.select>
                                             }
@@ -469,6 +481,7 @@ class DatiPersonali extends Component {
                                                 onChange={this.props.obchange}
                                                 ajaxoptions="province"
                                                 placeholder="Seleziona"
+                                                output = {this.props.isOutput}
                                             >
                                             </Form.select>
                                         </Col>
@@ -483,6 +496,7 @@ class DatiPersonali extends Component {
                                                 ajaxoptions="comuni"
                                                 ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
                                                 placeholder="Seleziona.."
+                                                output = {this.props.isOutput}
 
                                             >
                                             </Form.select>
@@ -501,6 +515,7 @@ class DatiPersonali extends Component {
                                                 ajaxoptions="comuni"
                                                 ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
                                                 disabled={this.props.formstate[anagraficaIntestatario + "paeserilascio"] !== "86"}
+                                                output = {this.props.isOutput}
                                             ></Form.select>
                                         </Col>
                                         }
@@ -511,6 +526,9 @@ class DatiPersonali extends Component {
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "imgdocidentita_iddoc"]}
                                                 value={this.props.formstate[anagraficaIntestatario + "imgdocidentita_iddoc"]}
                                                 onChange={this.props.obchange}
+                                                tipo="fr"
+                                                idBozza="99999999"
+                                                output = {this.props.isOutput}
                                             >
                                             </Form.file>
                                         </Col>
@@ -535,6 +553,7 @@ class DatiPersonali extends Component {
                                                             onChange={this.props.obchange}
                                                             options={optionResidenza}
                                                             placeholder="Seleziona"
+                                                            output = {this.props.isOutput}
 
                                                         ></Form.select>
                                                     }
@@ -547,6 +566,7 @@ class DatiPersonali extends Component {
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "indirizzoresidenza"]}
                                                         onChange={this.props.obchange}
                                                         placeholder="Seleziona"
+                                                        output = {this.props.isOutput}
 
                                                     ></Form.input>
 
@@ -560,6 +580,7 @@ class DatiPersonali extends Component {
                                                 value={this.props.formstate[anagraficaIntestatario + "numresidenza"]}
                                                 error={this.props.formstate.errors[anagraficaIntestatario + "numresidenza"]}
                                                 onChange={this.props.obchange}
+                                                output = {this.props.isOutput}
                                             ></Form.input>
                                         </Col>
                                     </Row>
@@ -573,6 +594,7 @@ class DatiPersonali extends Component {
                                                 onChange={this.props.obchange}
                                                 ajaxoptions="province"
                                                 placeholder="Seleziona"
+                                                output = {this.props.isOutput}
                                             >
                                             </Form.select>
                                         </Col>
@@ -587,6 +609,7 @@ class DatiPersonali extends Component {
                                                     placeholder="Seleziona..."
                                                     ajaxoptions="comuni"
                                                     ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciaresidenza"]}
+                                                    output = {this.props.isOutput}
                                                 ></Form.select>
                                             </Col>
                                                 <Col xs="2">
@@ -598,6 +621,7 @@ class DatiPersonali extends Component {
                                                         onChange={this.props.obchange}
                                                         placeholder=""
                                                         mask="numero"
+                                                        output = {this.props.isOutput}
                                                     ></Form.input>
                                                 </Col>
                                             </>
@@ -614,6 +638,7 @@ class DatiPersonali extends Component {
                                     obchange={this.props.obchange}
                                     labelIndirizzi="AGGIUNGI UN INDIRIZZO PER LA CENTRALE D'ALLARME INTERBANCARIA (CAI)"
                                     tpyeIndirizzo="cai"
+                                    isOutput = {this.props.isOutput }
                                 >
                                 </DatiIndirizzi>
                                 <DatiIndirizzi
@@ -623,6 +648,7 @@ class DatiPersonali extends Component {
                                     obchange={this.props.obchange}
                                     labelIndirizzi="AGGIUNGI INDIRIZZO DI DOMICILIO (SE DIVERSO DALLA RESIDENZA)"
                                     tpyeIndirizzo="domicilio"
+                                    isOutput = { this.props.isOutput }
                                 >
                                 </DatiIndirizzi>
                                 {this.props.indexInt === '0' &&
@@ -633,6 +659,7 @@ class DatiPersonali extends Component {
                                         obchange={this.props.obchange}
                                         labelIndirizzi="AGGIUNGI INDIRIZZO DI CORRISPONDENZA (SE DIVERSO DAI PRECEDENTI)"
                                         tpyeIndirizzo="corrisp"
+                                        isOutput = { this.props.isOutput }
                                     >
                                     </DatiIndirizzi>
                                 }
@@ -651,6 +678,7 @@ class DatiPersonali extends Component {
                                                     onChange={this.props.obchange}
                                                     options={optionStudio}
                                                     placeholder="Seleziona"
+                                                    output = {this.props.isOutput}
                                                 >
                                                 </Form.select>
                                                 }

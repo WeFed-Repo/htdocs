@@ -1,5 +1,5 @@
 .outerTab {
- 
+
   margin-right:-35px;
   margin-left:-35px;
   .innerTab {
@@ -25,7 +25,7 @@
       display:table-cell;
       height:100%;
       text-align:center;
-      vertical-align: middle; 
+      vertical-align: middle;
       a {
         text-decoration: none;
         text-transform:uppercase;
@@ -56,12 +56,12 @@
     clear:both;
   }
 }
-.navContSecondLev .outerTab { 
+.navContSecondLev .outerTab {
   margin-right:0;
   margin-left:0;
   background-color: $tableStripe;
   width: 100%;
-  float:left; 
+  float:left;
   margin-bottom:20px;
   .btn-icon {
     position: relative;
@@ -72,17 +72,41 @@
 
 /* nuovo stile per inversimenti */
 
-.navContSecondLev {
-  margin-bottom: 20px;
-  .outerTab {
-    background-color: #ebeef0;
-    margin: -20px -35px 20px -35px;
-    padding: 20px 10px 0 35px;
-    border-bottom: 7px solid #fff;
-    min-height: 75px;
-    width: calc( 100% + 70px );
-    ul li a {
-      border: none !important;
+@media screen and (min-width: 1024px) {
+  .navContSecondLev {
+    margin-bottom: 20px;
+    .outerTab {
+      background-color: #ebeef0;
+      margin: -20px -35px 20px -35px;
+      padding: 20px 10px 0 35px;
+      border-bottom: 7px solid #fff;
+      min-height: 75px;
+      width: calc( 100% + 70px );
+      ul li a {
+        border: none !important;
+      }
+    }
+    .panel.panel-accordion {
+      padding-left: 0;
+      padding-right: 0;
+      .panel-body {
+        padding: 12px 0 12px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navContSecondLev {
+    .outerTab {
+      margin-bottom: 0px;
+    }
+  }
+  .panel.panel-accordion {
+    padding-left: 0;
+    padding-right: 0;
+    .panel-body {
+      padding: 12px 13px 12px 13px;
     }
   }
 }
