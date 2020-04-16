@@ -145,7 +145,7 @@ $tipo_op_1 = array(1,2,3);
 
   <!-- TABELLA -->
 
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -194,6 +194,17 @@ $tipo_op_1 = array(1,2,3);
         </tr>
       <?php } ?>
       </tbody>
+      <tfoot>
+            <tr>
+                    <td colspan="2" class="bgWhite brdWhite"></td>
+                    <td><strong> Totale portafoglio</strong></td>
+                    <td colspan="7"></td>
+                    <td class="right">123.404,00</td>
+                    <td class="right nega">-24,00<br>-0,1%</td>
+                    <td class="bgWhite brdWhite"></td>
+            </tr>
+      </tfoot>
+
   </table>
 
   <!-- PULSANTIERA SOTTO TABELLA -->
