@@ -3,14 +3,14 @@
 function auto_input_select( $array ) {
   foreach ($array as $name => $opt): ?>
     <?php if( is_array( $opt ) ) { ?>
-    <optgroup label="<?= $name ?>">
+    <optgroup label="<?php print ( $name ) ?>">
       <?php foreach ($opt as $o): ?>
-        <option value="<?= strtolower(str_replace(' ', '_', $o)) ?>"><?= $o ?></option>
+        <option value="<?php print ( strtolower(str_replace(' ', '_', $o))) ?>"><?php print ( $o) ?></option>
       <?php endforeach; ?>
     </optgroup>
   <?php } else { ?>
-      <option value="<?= $name ? $name : strtolower(str_replace(' ', '_', $opt)) ?>">
-        <?= $opt ?>
+      <option value="<?php print ( $name ? $name : strtolower(str_replace(' ', '_', $opt))) ?>">
+      <?php print ( $opt )?>
       </option>
     <?php } ?>
   <?php endforeach;
@@ -146,7 +146,7 @@ $selectCausaleMovimenti = array(
   <div class="separator"></div>
   <?php if($site != "webank") { ?><br /><?php } ?>
   <div class="panel-group panel-fill" id="accordion2" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
+    <div class="panel panel-default <?php print (($site != "webank") ? 'panel-accordion ' : '') ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading1b">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1b" aria-expanded="true" aria-controls="collapse1b" class="">
@@ -164,7 +164,7 @@ $selectCausaleMovimenti = array(
                       <input type="text"
                              id="periodo"
                              placeholder="gg/mm/aaaa"
-                             value="<?= ($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y') ?>"
+                             value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>"
                              class="form-control datepicker input-inline clear-x">
                       <span class="editable-clear-x" style="display: inline;"><i class="icon icon-close icon-1x"></i></span>
                     <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
@@ -217,7 +217,7 @@ $selectCausaleMovimenti = array(
           <div class="row">
           <?php } ?>
 
-          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 no-label' : '' ?> ">
+          <div class="col-xs-12 <?php print(($site == "webank") ? 'col-md-6 no-label' : '') ?> ">
   					<div class="btn-align-right">
   						<a type="button" class="btn btn-primary" href="#">Cerca</a>
   					</div>
@@ -228,7 +228,7 @@ $selectCausaleMovimenti = array(
 
           <div class="col-xs-12">
             <p class="note flLeft noFloatMobile marginTopMedium">
-                <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+                <span class="flLeft">Ultimo Aggiornamento: <?php print(date('d/m/Y')) ?> ore <?php print(date('h:i:s')) ?></span>
                 <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                   <i class="icon icon-2x icon-update"></i>
                 </a>
@@ -263,15 +263,13 @@ $selectCausaleMovimenti = array(
                     </a>
                   </td>
                   <td class="left"><a href="">Lorem ipsum <?php print (999990 + $x ) ?></a></td>
-                  <td class="right"><?=
-                    $tipo_op_1[array_rand($tipo_op_1)].' '.$tipo_op_2[array_rand($tipo_op_2)];
-                  ?></td>
+                  <td class="right"><?php print ($tipo_op_1[array_rand($tipo_op_1)].' '.$tipo_op_2[array_rand($tipo_op_2)]);?></td>
                   <td class="right"><?php print rand(0,1);?> <br /> <?php print rand(0,1);?></td>
                   <td class="right"><?php print rand(1000,1000000)/100;?></td>
                   <td class="right">20/01/2020</td>
-                  <td class="right"><?= $selectStatoOrdine[array_rand($selectStatoOrdine)] ?></td>
-                  <td class="right"><?= $selectMercato['Azioni'][array_rand($selectMercato['Azioni'])] ?></td>
-                  <td class="right">00000<?= $x+15 ?></td>
+                  <td class="right"><?php print ($selectStatoOrdine[array_rand($selectStatoOrdine)]) ?></td>
+                  <td class="right"><?php print ($selectMercato['Azioni'][array_rand($selectMercato['Azioni'])]) ?></td>
+                  <td class="right">00000<?php print ($x+15) ?></td>
               </tr>
             <?php } ?>
             </tbody>
@@ -294,7 +292,7 @@ $selectCausaleMovimenti = array(
       </div>
     </div>
     </div>
-    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
+    <div class="panel panel-default <?php print (($site != "webank") ? 'panel-accordion ' : '') ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading2b">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2b" aria-expanded="true" aria-controls="collapse2b" class="">
@@ -337,14 +335,14 @@ $selectCausaleMovimenti = array(
           </div>
           <div class="row">
           <?php } ?>
-          <div class="col-xs-12 <?= ($site == "webank") ? 'col-md-6 no-label' : '' ?> ">
+          <div class="col-xs-12 <?php print (($site == "webank") ? 'col-md-6 no-label' : '') ?> ">
             <div class="btn-align-right">
               <a type="button" class="btn btn-primary" href="#">Cerca</a>
             </div>
           </div>
           <div class="col-xs-12">
             <p class="note flLeft noFloatMobile marginTopMedium">
-                <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+                <span class="flLeft">Ultimo Aggiornamento: <?php print ( date('d/m/Y')) ?> ore <?php print ( date('h:i:s')) ?></span>
                 <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                   <i class="icon icon-2x icon-update"></i>
                 </a>
@@ -415,7 +413,7 @@ $selectCausaleMovimenti = array(
       </div>
     </div>
     </div>
-    <div class="panel panel-default <?= ($site != "webank") ? 'panel-accordion ' : '' ?>">
+    <div class="panel panel-default <?php print (($site != "webank") ? 'panel-accordion ' : '') ?>">
       <div class="panel-heading visible-xs" role=" tab" id="heading2c">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2c" aria-expanded="true" aria-controls="collapse2c" class="">
@@ -451,7 +449,7 @@ $selectCausaleMovimenti = array(
             </div>
             <div class="col-xs-12">
               <p class="note flLeft noFloatMobile marginTopMedium">
-                  <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+                  <span class="flLeft">Ultimo Aggiornamento: <?php print ( date('d/m/Y')) ?> ore <?php print ( date('h:i:s')) ?></span>
                   <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
                     <i class="icon icon-2x icon-update"></i>
                   </a>
