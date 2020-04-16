@@ -388,7 +388,7 @@ class FormFile extends Component {
                 success: (data)=> {
 
                     // A seconda del tipo di file mostra il file oppure un iconcina per scaricarlo/vederlo nel browser
-                    if ((["JPG","JPEG","PNG","GIF"]).indexOf(file.formato)>=0) {
+                    if ((["JPG","JPEG","PNG","GIF","BPM"]).indexOf(file.formato)>=0) {
                         // Se puo' visualizzarlo nel browser...
                         this.setState({imageViewComp: <img src={data.results} className={"file-preview"}></img>});
                     }
