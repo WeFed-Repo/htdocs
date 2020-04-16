@@ -40,7 +40,7 @@ class ConsensoPrivacy extends Component {
                         anagraficaIntestatario + "sesso",
                         anagraficaIntestatario + "codicefiscale",
                         anagraficaIntestatario + "email",
-                        anagraficaIntestatario + "imgcodfiscale_iddoc",
+                        anagraficaIntestatario + "imgcodfiscale",
                         anagraficaIntestatario + "prefisso",
                         anagraficaIntestatario + "telefono",
                         anagraficaIntestatario + "listprivacy_0_consenso",
@@ -146,11 +146,14 @@ class ConsensoPrivacy extends Component {
                                 <Col xs="6">
                                     <Form.file
                                         label="Carica il documento*"
-                                        name={anagraficaIntestatario + "imgcodfiscale_iddoc"}
-                                        error={this.props.formstate.errors[anagraficaIntestatario + "imgcodfiscale_iddoc"]}
-                                        value={this.props.formstate[anagraficaIntestatario + "imgcodfiscale_iddoc"]}
+                                        name={anagraficaIntestatario + "imgcodfiscale"}
+                                        error={this.props.formstate.errors[anagraficaIntestatario + "imgcodfiscale"]}
+                                        value={this.props.formstate[anagraficaIntestatario + "imgcodfiscale"]}
                                         onChange={this.props.obchange}
                                         output = {this.props.isOutput}
+                                        tipo="fr"
+                                        idBozza={this.props.formstate["field_id"]}
+                                        formati={this.props.obdomini["formato_immagine"]}
                                     >
                                     </Form.file>
                                 </Col>

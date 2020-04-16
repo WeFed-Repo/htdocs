@@ -9,7 +9,6 @@ import moment from "moment";
 import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-
 import "./style.scss";
 
 // Filtraggio in INPUT
@@ -37,7 +36,7 @@ let handleChange = function (component, e) {
 
     let name = e.name ? e.name : e.target.name,
         value = (typeof e.value !== "undefined") ? e.value : e.target.value;
-   
+
     // Assegna l'eventuale callBack, se possibile, altimenti non fa nulla
     let cbchange = (e.cbchange)? e.cbchange : function(){};
 
@@ -358,6 +357,8 @@ class FormFile extends Component {
 
     constructor(props) {
         super(props);
+
+        console.log(this.props.label + " " + this.props.name);
         this.state = {
             flag_unico: (this.props.value && this.props.value.filter((el)=>{return (el.tipo==="FRONTE" || el.tipo==="RETRO")}).length>0)? false: true,
             
@@ -422,8 +423,6 @@ class FormFile extends Component {
             // La grandezza è in MB (la grandezza originale è il 25% più piccola)
             
             let lengthb64 = (4 * [this.maxSize/3]) * 1024 * 1024; 
-
-            console.log(inputStream.length + " <= " + lengthb64)
 
             if (inputStream.length<=lengthb64) {
 

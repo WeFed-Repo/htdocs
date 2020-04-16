@@ -263,7 +263,7 @@ class DatiPersonali extends Component {
                                 anagraficaIntestatario + "paeserilascio",
                                 anagraficaIntestatario + "provinciarilascio",
                                 anagraficaIntestatario + "comunerilascio",
-                                anagraficaIntestatario + "imgdocidentita_iddoc",
+                                anagraficaIntestatario + "imgdocidentita",
                                 anagraficaIntestatario + "tipoindirizzoresidenza",
                                 anagraficaIntestatario + "indirizzoresidenza",
                                 anagraficaIntestatario + "numresidenza",
@@ -522,12 +522,13 @@ class DatiPersonali extends Component {
                                         <Col xs="6">
                                             <Form.file
                                                 label="Carica il documento*"
-                                                name={anagraficaIntestatario + "imgdocidentita_iddoc"}
-                                                error={this.props.formstate.errors[anagraficaIntestatario + "imgdocidentita_iddoc"]}
-                                                value={this.props.formstate[anagraficaIntestatario + "imgdocidentita_iddoc"]}
+                                                name={anagraficaIntestatario + "imgdocidentita"}
+                                                error={this.props.formstate.errors[anagraficaIntestatario + "imgdocidentita"]}
+                                                value={this.props.formstate[anagraficaIntestatario + "imgdocidentita"]}
                                                 onChange={this.props.obchange}
                                                 tipo="fr"
-                                                idBozza="99999999"
+                                                idBozza={this.props.formstate["field_id"]}
+                                                formati={this.props.obdomini["formato_immagine"]}
                                                 output = {this.props.isOutput}
                                             >
                                             </Form.file>

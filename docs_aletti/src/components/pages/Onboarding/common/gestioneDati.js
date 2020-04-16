@@ -207,55 +207,32 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     }
                 ],
                 "codTipoDocumento": "",
@@ -265,10 +242,7 @@ const defaultFields = {
                 "paeseRilascio": "",
                 "provinciaRilascio": "",
                 "comuneRilascio": "",
-                "imgDocIdentita": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgDocIdentita": [],
                 "tipoIndirizzoResidenza": "",
                 "indirizzoResidenza": "",
                 "numResidenza": "",
@@ -336,55 +310,32 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     },
                     {
                         "codiceUic": "",
                         "tin": "",
                         "descrizione": "",
-                        "imgTin": [
-                            {
-                                "idDoc": "",
-                                "codTipoDocumento": ""
-                            }
-                        ]
+                        "imgTin": []
                     }
                 ],
                 "codTipoDocumento": "",
@@ -394,10 +345,7 @@ const defaultFields = {
                 "paeseRilascio": "",
                 "provinciaRilascio": "",
                 "comuneRilascio": "",
-                "imgDocIdentita": {
-                    "idDoc": "",
-                    "codTipoDocumento": ""
-                },
+                "imgDocIdentita": [],
                 "tipoIndirizzoResidenza": "",
                 "indirizzoResidenza": "",
                 "numResidenza": "",
@@ -454,7 +402,9 @@ let typeKeys = {
     ],
     "file" : [
         "field_anagraficablob_intestatari_0_imgcodfiscale",
-        "field_anagraficablob_intestatari_1_imgcodfiscale"
+        "field_anagraficablob_intestatari_0_imgdocidentita",
+        "field_anagraficablob_intestatari_1_imgcodfiscale",
+        "field_anagraficablob_intestatari_1_imgdocidentita",
     ]
 }
 
@@ -518,8 +468,8 @@ let objFormTranslate = function () {
     let extractObject = (prefisso, json) => {
         let node = {};
         Object.keys(json).forEach((v, i) => {
-            // Se non e' un array o un ulteriore oggetto...
-            if (typeof json[v] !== "object" || json[v] === null) {
+            // Se non e' un array,un ulteriore oggetto o un tipo FILE...
+            if (typeof json[v] !== "object" || json[v] === null || typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
                 node[v] = prefisso + "_" + v.toLowerCase();
             }
 
@@ -545,8 +495,6 @@ let fieldsFromJson = (json) => {
     let formObj = {},
         prefissocampi = "field";
 
-    console.log(json);
-
     // Ritorna i sottonodi di un nodo ricorsivamente
     let extractObject = (prefisso, json, formObj) => {
         Object.keys(json).forEach((v, i) => {
@@ -555,9 +503,8 @@ let fieldsFromJson = (json) => {
                 formObj[prefisso + "_" + v.toLowerCase()] = decodeField(prefisso + "_" + v.toLowerCase(), json[v]);
             }
             else {
-                /* Se è un immagine la preserva come oggetto */
-                
-                if (v==="imgCodFiscale") {
+                /* Se è un file lo preserva come oggetto */
+                if (typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
                     formObj[prefisso + "_" + v.toLowerCase()] = json[v];
                 }
                 else
@@ -585,11 +532,11 @@ let jsonFromFields = (objState) => {
     let extractObject = (node, objState) => {
         let ntr = {};
         Object.keys(node).forEach((v, i) => {
+
             // Se non e' un array o un ulteriore oggetto...
             if (typeof node[v] !== "object" || node[v] === null) {
                 ntr[v] = encodeField(node[v], objState[node[v]]);
             }
-
             else {
                 ntr[v] = extractObject(node[v], objState);
             }
