@@ -3,14 +3,14 @@
 function auto_input_select( $array ) {
   foreach ($array as $name => $opt): ?>
     <?php if( is_array( $opt ) ) { ?>
-    <optgroup label="<?= $name ?>">
+    <optgroup label="<?php print ( $name ) ?>">
       <?php foreach ($opt as $o): ?>
-        <option value="<?= strtolower(str_replace(' ', '_', $o)) ?>"><?= $o ?></option>
+        <option value="<?php print ( strtolower(str_replace(' ', '_', $o))) ?>"><?php print ( $o ) ?></option>
       <?php endforeach; ?>
     </optgroup>
   <?php } else { ?>
-      <option value="<?= $name ? $name : strtolower(str_replace(' ', '_', $opt)) ?>">
-        <?= $opt ?>
+      <option value="<?php print ( $name ? $name : strtolower(str_replace(' ', '_', $opt))) ?>">
+        <?php print ($opt) ?>
       </option>
     <?php } ?>
   <?php endforeach;
@@ -46,10 +46,10 @@ $tipo_op_1 = array(1,2,3);
               <div class="spsel-option" data-value="<?php print($i);?>">
                 <a class="spsel-option-el">Portafoglio <?php print($i);?></a>
                 <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                  <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
+                  <i class="icon icon-<?php print ( ($site == "webank") ? 'r-modifica' : 'edit_fill' ) ?>"></i>
                 </a>
                 <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                  <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
+                  <i class="icon icon-<?php print ( ($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
                 </a>
               </div>
               <?php } ?>
@@ -97,10 +97,10 @@ $tipo_op_1 = array(1,2,3);
             <div class="spsel-option" data-value="<?php print($i);?>">
               <a class="spsel-option-el">Vista <?php print($i);?></a>
               <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                <i class="icon icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
+                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
               </a>
               <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
+                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
               </a>
             </div>
             <?php } ?>
@@ -133,7 +133,7 @@ $tipo_op_1 = array(1,2,3);
     </div>
     <div class="col-xs-4 col-sm-6">
       <p class="note flRight noFloatMobile">
-          <span class="flLeft">Ultimo Aggiornamento: <?= date('d/m/Y') ?> ore <?= date('h:i:s') ?></span>
+          <span class="flLeft">Ultimo Aggiornamento: <?php print ( date('d/m/Y') ) ?> ore <?php print ( date('h:i:s') ) ?></span>
           <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
             <i class="icon icon-2x icon-update"></i>
           </a>
@@ -145,7 +145,7 @@ $tipo_op_1 = array(1,2,3);
 
   <!-- TABELLA -->
 
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -173,15 +173,15 @@ $tipo_op_1 = array(1,2,3);
           </td>
           <td class="center">
             <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
-              <i class="icon icon-2x icon-<?= ($site == "webank") ? 'r-modifica' : 'edit_fill' ?>"></i>
+              <i class="icon icon-2x icon-<?php print(($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
             </a>
           </td>
-          <td class="left"><a href="">Titolo azione <?= $x + 1 ?></a></td>
+          <td class="left"><a href="">Titolo azione <?php print($x + 1) ?></a></td>
           <td class="left">MOT</td>
           <td class="right"><?php print rand(1000,1000000)/100;?></td>
           <td class="right"><?php print rand(1000,1000000)/100;?></td>
           <td class="right"><?php print rand(1000,1000000)/100;?></td>
-          <td class="right">Settore <?= $x + 1 ?></td>
+          <td class="right">Settore <?php print ( $x + 1 )?></td>
           <td class="right"><?php print rand(10,10000)/100;?>&euro;</td>
           <td class="right"><?php print rand(10,10000)/100;?> 00:00:00</td>
           <td class="right"><?php print rand(1000,1000000)/100;?></td>
@@ -194,6 +194,17 @@ $tipo_op_1 = array(1,2,3);
         </tr>
       <?php } ?>
       </tbody>
+      <tfoot>
+            <tr>
+                    <td colspan="2" class="bgWhite brdWhite"></td>
+                    <td><strong> Totale portafoglio</strong></td>
+                    <td colspan="7"></td>
+                    <td class="right">123.404,00</td>
+                    <td class="right nega">-24,00<br>-0,1%</td>
+                    <td class="bgWhite brdWhite"></td>
+            </tr>
+      </tfoot>
+
   </table>
 
   <!-- PULSANTIERA SOTTO TABELLA -->
@@ -287,7 +298,7 @@ $tipo_op_1 = array(1,2,3);
                 <div class="col-xs-4">
                   <div class="btn-align-left">
                     <a class="btn-link-icon" href="#">
-                      <i class="icon icon-<?= ($site == "webank") ? 'r-elimina' : 'delete_table' ?>"></i>
+                      <i class="icon icon-<?php print (($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
                       <span>Elimina riga</span>
                     </a>
                   </div>

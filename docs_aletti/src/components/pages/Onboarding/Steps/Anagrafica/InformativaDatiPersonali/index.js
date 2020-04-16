@@ -21,7 +21,6 @@ class InformativaDatiPersonali extends Component {
                 startsOpen={ true }
                 className="search-collapse"
                 hasErrors={ CheckAccordionErrors (this.props.formstate.errors, ["field_anagraficablob_privacyletta"]) }>
-            
                 <section className="onboarding-block">
                     <Row>
                         <Col xs="12">
@@ -34,6 +33,7 @@ class InformativaDatiPersonali extends Component {
                                 filedescription="Informativa sul trattamento dei dati personali*"
                                 fileurl="http://www.google.it"
                                 filetype="pdf"
+                               
                             ></Form.checkfile>
                             <Form.checkgroup className="no-label"
                                 name="field_anagraficablob_privacyletta"
@@ -42,6 +42,7 @@ class InformativaDatiPersonali extends Component {
                                 disabled={!this.state.localfield_privacyopen}
                                 onChange={this.props.obchange}
                                 options={[{ "value": "true", "text": "Dichiaro di aver letto e visionato l’informativa privacy" }]}
+                               
                             >
                             </Form.checkgroup>
                         </Col>

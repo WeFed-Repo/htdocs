@@ -17,6 +17,7 @@ class ConsensoPrivacy extends Component {
     indexIntText = this.props.indexInt === '0' ? "PRIMO" : "SECONDO"
    
     render() {
+        
         const anagraficaIntestatario = `field_anagraficablob_intestatari_${this.props.indexInt}_`;
         let today = moment(new Date(), 'DD/MM/YYYY'),
             dateNascitaTo = today.subtract(18, "year").format('DD/MM/YYYY'),
@@ -26,8 +27,8 @@ class ConsensoPrivacy extends Component {
         //SEZIONE INFORMATIVA PRIVACY COMUNE PER ENTAMBI GLI INTESTATARI
         return (
             <DefaultCollapse 
-                disabled={this.props.isPrivacyUnChecked} 
-                label={`INSERISCI I DATI E I CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO`} 
+                disabled={this.props.isPrivacyUnChecked && !this.props.isOutput } 
+                label={!this.props.isOutput ? `INSERISCI I DATI E I CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO`: `RIEPILOGO DATI E CONSENSI PRIVACY DEL ${this.indexIntText} INTESTATARIO` } 
                 startsOpen={false} 
                 className="search-collapse"
                 hasErrors={ 
@@ -39,7 +40,7 @@ class ConsensoPrivacy extends Component {
                         anagraficaIntestatario + "sesso",
                         anagraficaIntestatario + "codicefiscale",
                         anagraficaIntestatario + "email",
-                        anagraficaIntestatario + "imgcodfiscale_iddoc",
+                        anagraficaIntestatario + "imgcodfiscale",
                         anagraficaIntestatario + "prefisso",
                         anagraficaIntestatario + "telefono",
                         anagraficaIntestatario + "listprivacy_0_consenso",
@@ -60,6 +61,7 @@ class ConsensoPrivacy extends Component {
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "nome"]}
                                         mask = "alfabetico"
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
@@ -72,6 +74,7 @@ class ConsensoPrivacy extends Component {
                                         placeholder="Cognome completo (es: De luca)"
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cognome"]}
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
@@ -89,6 +92,7 @@ class ConsensoPrivacy extends Component {
                                         error={this.props.formstate.errors[anagraficaIntestatario + "nascita"]}
                                         dateFrom="01/01/1900"
                                         dateTo= { dateNascitaTo }
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.date>
                                 </Col>
@@ -101,6 +105,7 @@ class ConsensoPrivacy extends Component {
                                         error={this.props.formstate.errors[anagraficaIntestatario + "sesso"]}
                                         options={[optionSesso[0], optionSesso[1]]}
                                         className=""
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.radiogroup>
                                     }
@@ -119,6 +124,7 @@ class ConsensoPrivacy extends Component {
                                         maxlength="16"
                                         minlength="16"
                                         mask = "codicefiscale"
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
@@ -131,6 +137,7 @@ class ConsensoPrivacy extends Component {
                                         placeholder="email@esempio.it"
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "email"]}
+                                        output = {this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
@@ -139,10 +146,14 @@ class ConsensoPrivacy extends Component {
                                 <Col xs="6">
                                     <Form.file
                                         label="Carica il documento*"
-                                        name={anagraficaIntestatario + "imgcodfiscale_iddoc"}
-                                        error={this.props.formstate.errors[anagraficaIntestatario + "imgcodfiscale_iddoc"]}
-                                        value={this.props.formstate[anagraficaIntestatario + "imgcodfiscale_iddoc"]}
+                                        name={anagraficaIntestatario + "imgcodfiscale"}
+                                        error={this.props.formstate.errors[anagraficaIntestatario + "imgcodfiscale"]}
+                                        value={this.props.formstate[anagraficaIntestatario + "imgcodfiscale"]}
                                         onChange={this.props.obchange}
+                                        output = {this.props.isOutput}
+                                        tipo="fr"
+                                        idBozza={this.props.formstate["field_id"]}
+                                        formati={this.props.obdomini["formato_immagine"]}
                                     >
                                     </Form.file>
                                 </Col>
@@ -160,6 +171,7 @@ class ConsensoPrivacy extends Component {
                                                 placeholder="0039"
                                                 maxlength = "5"
                                                 mask ="telefono"
+                                                output = {this.props.isOutput}
                                                
                                             >
                                             </Form.input>
@@ -174,6 +186,7 @@ class ConsensoPrivacy extends Component {
                                                 placeholder=""
                                                 maxlength = "10"
                                                 mask ="telefono"
+                                                output = {this.props.isOutput}
                                                 
                                             >
                                             </Form.input>
@@ -206,6 +219,7 @@ class ConsensoPrivacy extends Component {
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_0_consenso"]}
                                             options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
                                             className=""
+                                            output = {this.props.isOutput}
                                         >
                                         </Form.radiogroup>
 
@@ -222,6 +236,7 @@ class ConsensoPrivacy extends Component {
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_1_consenso"]}
                                             options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
                                             className=""
+                                            output = {this.props.isOutput}
                                         >
                                         </Form.radiogroup>
                                     </Col>
@@ -236,6 +251,7 @@ class ConsensoPrivacy extends Component {
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_2_consenso"]}
                                             options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
                                             className=""
+                                            output = {this.props.isOutput}
                                         >
                                         </Form.radiogroup>
                                     </Col>
@@ -250,6 +266,7 @@ class ConsensoPrivacy extends Component {
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_3_consenso"]}
                                             options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
                                             className=""
+                                            output = {this.props.isOutput}
                                         >
                                         </Form.radiogroup>
                                     </Col>
@@ -264,6 +281,7 @@ class ConsensoPrivacy extends Component {
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_4_consenso"]}
                                             options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
                                             className=""
+                                            output = {this.props.isOutput}
                                         >
                                         </Form.radiogroup>
                                     </Col>

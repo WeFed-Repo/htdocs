@@ -5,7 +5,9 @@ import DefaultCollapse from "components/parts/DefaultCollapse";
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class DatiIndirizzi extends Component {
+  
     render() {
+        
         const tpyeIndirizzo = this.props.tpyeIndirizzo;
         let paragrafo = "";
         switch (tpyeIndirizzo) {
@@ -19,11 +21,12 @@ class DatiIndirizzi extends Component {
                 paragrafo = "Se preferisci ricevere la nostra corrispondenza a un indirizzo diverso dalla tua residenza, inseriscilo di seguito. A questo indirizzo invieremo, per tutti gli intestatari del conto, tutte le comunicazioni cartacee."
                 break;
             default:
-
                 break;
         }
-
+        
         return (
+            <>
+            {(!this.props.isOutput || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "tipoindirizzo" + tpyeIndirizzo] !== "")) &&
             <DefaultCollapse
                 label={this.props.labelIndirizzi}
                 startsOpen={false}
@@ -38,7 +41,7 @@ class DatiIndirizzi extends Component {
                             this.props.anagraficaIntestatario + "comune" + tpyeIndirizzo,
                             this.props.anagraficaIntestatario + "cap" + tpyeIndirizzo
                         ])}>
-
+            
                 <section className="onboarding-block">
                     <p>{paragrafo}</p>
                     <Row>
@@ -51,9 +54,10 @@ class DatiIndirizzi extends Component {
                                             name={this.props.anagraficaIntestatario + "tipoindirizzo" + tpyeIndirizzo}
                                             value={this.props.formstate[this.props.anagraficaIntestatario + "tipoindirizzo" + tpyeIndirizzo]}
                                             error={this.props.formstate.errors[this.props.anagraficaIntestatario + "tipoindirizzo" + tpyeIndirizzo]}
-                                            onChange={this.props.obchange}
-                                            options={this.props.optionResidenza}
+                                            onChange={ this.props.obchange }
+                                            options={ this.props.optionResidenza }
                                             placeholder="Seleziona"
+                                            output={ this.props.isOutput }
 
                                         ></Form.select>
                                     }
@@ -65,6 +69,7 @@ class DatiIndirizzi extends Component {
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "indirizzo" + tpyeIndirizzo]}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "indirizzo" + tpyeIndirizzo]}
                                         onChange={this.props.obchange}
+                                        output={this.props.isOutput}
                                     ></Form.input>
 
                                 </Col>
@@ -78,6 +83,7 @@ class DatiIndirizzi extends Component {
                                 error={this.props.formstate.errors[this.props.anagraficaIntestatario + "num" + tpyeIndirizzo]}
                                 onChange={this.props.obchange}
                                 placeholder="Seleziona"
+                                output={this.props.isOutput}
 
                             ></Form.input>
                         </Col>
@@ -98,6 +104,7 @@ class DatiIndirizzi extends Component {
                                 }}
                                 ajaxoptions="province"
                                 placeholder="Seleziona"
+                                output={this.props.isOutput}
                             >
                             </Form.select>
                         </Col>
@@ -114,6 +121,7 @@ class DatiIndirizzi extends Component {
                                         placeholder="Seleziona..."
                                         ajaxoptions="comuni"
                                         ajaxfilter={this.props.formstate[this.props.anagraficaIntestatario + "provincia" + tpyeIndirizzo]}
+                                        output={this.props.isOutput}
                                     ></Form.select>
                                 </Col>
                                 <Col xs="2">
@@ -125,6 +133,7 @@ class DatiIndirizzi extends Component {
                                         onChange={this.props.obchange}
                                         placeholder=""
                                         mask="numero"
+                                        output={this.props.isOutput}
                                     ></Form.input>
                                 </Col>
                             </>
@@ -133,6 +142,8 @@ class DatiIndirizzi extends Component {
                     </Row>
                 </section>
             </DefaultCollapse>
+            }
+            </>
         )
     }
 }

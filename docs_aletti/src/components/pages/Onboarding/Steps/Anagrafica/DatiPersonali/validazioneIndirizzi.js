@@ -1,11 +1,11 @@
 const validazioneIndirizzi = (form, tpyeIndirizzo) => {
     // Inizializzazione oggetto errori
-    
+
     let errors = {},
         obbligatorimsg = "Compila",
-        obbligatorimsgSel = "Seleziona"
+        obbligatorimsgSel = "Seleziona",
     //controllo sezione CAI - obbligatori solo se almeno un campo dell'accordion è compilato
-    let campi_int1 = [
+    campi_int1 = [
         form["field_anagraficablob_intestatari_0_tipoindirizzo" + tpyeIndirizzo],
         form["field_anagraficablob_intestatari_0_indirizzo" + tpyeIndirizzo],
         form["field_anagraficablob_intestatari_0_num" + tpyeIndirizzo],
@@ -20,7 +20,7 @@ const validazioneIndirizzi = (form, tpyeIndirizzo) => {
             form["field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo],
             form["field_anagraficablob_intestatari_0_comune" + tpyeIndirizzo],
             form["field_anagraficablob_intestatari_0_cap" + tpyeIndirizzo]
-    ],
+        ],
         isObbCampi_int1 = false,
         isObbCampi_int2 = false,
         obbligatori = [],
@@ -37,8 +37,7 @@ const validazioneIndirizzi = (form, tpyeIndirizzo) => {
     if (form["field_numintestatari"] === "1" && isObbCampi_int1) {
         obbligatori = ["field_anagraficablob_intestatari_0_indirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_num" + tpyeIndirizzo]
         obbligatoriSel = ["field_anagraficablob_intestatari_0_tipoindirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo];
-        if(form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "")
-        {
+        if (form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "") {
             obbligatori.push("field_anagraficablob_intestatari_0_cap" + tpyeIndirizzo);
             obbligatoriSel.push("field_anagraficablob_intestatari_0_comune" + tpyeIndirizzo);
         }
@@ -47,18 +46,16 @@ const validazioneIndirizzi = (form, tpyeIndirizzo) => {
         if (isObbCampi_int1 && !isObbCampi_int2) {
             obbligatori = ["field_anagraficablob_intestatari_0_indirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_num" + tpyeIndirizzo]
             obbligatoriSel = ["field_anagraficablob_intestatari_0_tipoindirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo];
-            if(form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "")
-            {
+            if (form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "") {
                 obbligatori.push("field_anagraficablob_intestatari_0_cap" + tpyeIndirizzo);
                 obbligatoriSel.push("field_anagraficablob_intestatari_0_comune" + tpyeIndirizzo);
             }
-        
+
         }
         if (!isObbCampi_int1 && isObbCampi_int2) {
             obbligatori = ["field_anagraficablob_intestatari_1_indirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_num" + tpyeIndirizzo]
             obbligatoriSel = ["field_anagraficablob_intestatari_1_tipoindirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo];
-            if(form["field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo] != "")
-            {
+            if (form["field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo] != "") {
                 obbligatori.push("field_anagraficablob_intestatari_1_cap" + tpyeIndirizzo);
                 obbligatoriSel.push("field_anagraficablob_intestatari_1_comune" + tpyeIndirizzo);
             }
@@ -66,19 +63,17 @@ const validazioneIndirizzi = (form, tpyeIndirizzo) => {
         else if (isObbCampi_int1 && isObbCampi_int2) {
             obbligatori = ["field_anagraficablob_intestatari_0_indirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_num" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_indirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_num" + tpyeIndirizzo];
             obbligatoriSel = ["field_anagraficablob_intestatari_0_tipoindirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_tipoindirizzo" + tpyeIndirizzo, "field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo];
-            if(form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "")
-            {
+            if (form["field_anagraficablob_intestatari_0_provincia" + tpyeIndirizzo] != "") {
                 obbligatori.push("field_anagraficablob_intestatari_0_cap" + tpyeIndirizzo);
                 obbligatoriSel.push("field_anagraficablob_intestatari_0_comune" + tpyeIndirizzo);
             }
-            if(form["field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo] != "")
-            {
+            if (form["field_anagraficablob_intestatari_1_provincia" + tpyeIndirizzo] != "") {
                 obbligatori.push("field_anagraficablob_intestatari_1_cap" + tpyeIndirizzo);
                 obbligatoriSel.push("field_anagraficablob_intestatari_1_comune" + tpyeIndirizzo);
             }
         }
     }
-
+   
     // Ciclo di controllo dei campi obbligatori 
 
 

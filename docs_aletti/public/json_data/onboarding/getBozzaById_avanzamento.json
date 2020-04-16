@@ -31,10 +31,10 @@
                     "nascita": 312379200000,
                     "sesso": "M",
                     "codiceFiscale": "BNIPTR79S25E625J",
-                    "imgCodFiscale": {
-                        "idDoc": 1,
-                        "codTipoDocumento": "CF"
-                    },
+                    "imgCodFiscale": [
+                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
+                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                    ],
                     "email": "pietro.bini@gmail.com",
                     "prefisso": "39",
                     "telefono": "1233336789",
@@ -94,10 +94,10 @@
                     "paeseRilascio": "Italia",
                     "provinciaRilascio": "LI",
                     "comuneRilascio": "VADA",
-                    "imgDocIdentita": {
-                        "idDoc": 4,
-                        "codTipoDocumento": "01"
-                    },
+                    "imgDocIdentita": [
+                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
+                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                    ],
                     "tipoIndirizzoResidenza": "Via",
                     "indirizzoResidenza": "via fiordalisio",
                     "numResidenza": "4",
@@ -134,10 +134,9 @@
                     "nascita": 315532800000,
                     "sesso": "M",
                     "codiceFiscale": "RSSCLD80A01H501J",
-                    "imgCodFiscale": {
-                        "idDoc": 1,
-                        "codTipoDocumento": "CF"
-                    },
+                    "imgCodFiscale": [
+                        {"idImmagine": 99991, "formato": "JPG", "tipo": "UNICA"}
+                    ],
                     "email": "claudio.rossi@gmail.com",
                     "prefisso": "39",
                     "telefono": "1233456666",
@@ -192,10 +191,10 @@
                     "paeseRilascio": "Italia",
                     "provinciaRilascio": "LI",
                     "comuneRilascio": "VADA",
-                    "imgDocIdentita": {
-                        "idDoc": 4,
-                        "codTipoDocumento": "01"
-                    },
+                    "imgDocIdentita": [
+                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
+                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                    ],
                     "tipoIndirizzoResidenza": "Via",
                     "indirizzoResidenza": "via fiordalisio",
                     "numResidenza": "4",
