@@ -9,6 +9,7 @@ import DefaultModal from "components/parts/DefaultModal";
 import HelpBtn from 'components/parts/Help';
 import DatiFatca from './DatiFatca';
 import DatiIndirizzi from './DatiIndirizzi';
+import AltriRecapiti from './AltriRecapiti';
 import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class DatiPersonali extends Component {
@@ -326,7 +327,7 @@ class DatiPersonali extends Component {
 
                                 </Col>
 
-                                {this.props.formstate[anagraficaIntestatario + "provincianascita"] !== "" && <Col sm="6">
+                                { this.props.formstate[anagraficaIntestatario + "provincianascita"] !== "" && <Col sm="6">
                                     <Form.select
                                         label="Comune di nascita*"
                                         name={anagraficaIntestatario + "comunenascita"}
@@ -504,21 +505,6 @@ class DatiPersonali extends Component {
                                         }
                                     </Row>
                                     <Row>
-                                        {this.props.formstate[anagraficaIntestatario + "provinciarilascio"] !== "" && <Col sm="6">
-                                            <Form.select
-                                                label="Comune di rilascio*"
-                                                name={anagraficaIntestatario + "comunerilascio"}
-                                                value={this.props.formstate[anagraficaIntestatario + "comunerilascio"]}
-                                                error={this.props.formstate.errors[anagraficaIntestatario + "comunerilascio"]}
-                                                onChange={this.props.obchange}
-                                                placeholder="Seleziona..."
-                                                ajaxoptions="comuni"
-                                                ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
-                                                disabled={this.props.formstate[anagraficaIntestatario + "paeserilascio"] !== "86"}
-                                                output = {this.props.isOutput}
-                                            ></Form.select>
-                                        </Col>
-                                        }
                                         <Col xs="6">
                                             <Form.file
                                                 label="Carica il documento*"
@@ -664,8 +650,15 @@ class DatiPersonali extends Component {
                                     >
                                     </DatiIndirizzi>
                                 }
+                                <AltriRecapiti
+                                     formstate={this.props.formstate}
+                                     anagraficaIntestatario={anagraficaIntestatario}
+                                     obchange={this.props.obchange}
+                                     isOutput = { this.props.isOutput }
+                                >
 
-
+                                </AltriRecapiti>
+                                {(!this.props.isOutput || (this.props.isOutput && this.props.formstate[anagraficaIntestatario + "codtitolostudio"]!=="")) &&
                                 <DefaultCollapse label="INFORMAZIONI AGGIUNTIVE" startsOpen={false} className="search-collapse">
                                     <section className="onboarding-block">
                                         <Row>
@@ -687,6 +680,7 @@ class DatiPersonali extends Component {
                                         </Row>
                                     </section>
                                 </DefaultCollapse>
+                                }
                             </div>
 
                         </div>

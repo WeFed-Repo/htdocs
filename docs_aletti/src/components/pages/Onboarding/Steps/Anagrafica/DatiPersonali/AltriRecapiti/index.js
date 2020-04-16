@@ -7,13 +7,17 @@ import DefaultCollapse from "components/parts/DefaultCollapse";
 class AltriRecapiti extends Component {
 
     render() {
-
+        
         return (
+            <>
+            {(!this.props.isOutput || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !== "") || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"] !== "")) &&
             <DefaultCollapse label="AGGIUNGI ALTRI RECAPITI" startsOpen={false} className="search-collapse">
                 <section className="onboarding-block">
                     <p>Puoi aggiungere un ulteriore numero di telefono.</p>
                     <Row>
+                        {(!this.props.isOutput || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !== "")) &&
                         <Col xs="6">
+                       
                             <Row>
                                 <Col xs="6">
                                     <Form.input
@@ -25,6 +29,7 @@ class AltriRecapiti extends Component {
                                         placeholder="0039"
                                         maxlength="5"
                                         mask="telefono"
+                                        output={this.props.isOutput}
 
                                     >
                                     </Form.input>
@@ -38,11 +43,15 @@ class AltriRecapiti extends Component {
                                         onChange={this.props.obchange}
                                         placeholder=""
                                         mask="telefono"
+                                        output={this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
                             </Row>
+                        
                         </Col>
+                        }
+                        {(!this.props.isOutput || (this.props.isOutput && this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"] !== "")) &&
                         <Col xs="6">
                             <Row>
                                 <Col xs="6">
@@ -55,6 +64,7 @@ class AltriRecapiti extends Component {
                                         maxlength="5"
                                         onChange={this.props.obchange}
                                         mask="telefono"
+                                        output={this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
@@ -67,14 +77,19 @@ class AltriRecapiti extends Component {
                                         onChange={this.props.obchange}
                                         placeholder=""
                                         mask="telefono"
+                                        output={this.props.isOutput}
                                     >
                                     </Form.input>
                                 </Col>
                             </Row>
+                            
                         </Col>
+                        }
                     </Row>
                 </section>
             </DefaultCollapse>
+            }
+            </>
         )
     }
 }
