@@ -1,4 +1,3 @@
-
 docs_aletti/src/**/*.map
 docs_aletti/src/**/*.css
 docs_aletti/build
@@ -6,3 +5,4 @@ docs_webank/librerie
 docs_webank/wbresp
 docs_webank/wscmn
 librerie/wscmn
+librerie/youwebbusiness/node_modules
