@@ -131,9 +131,15 @@ export default function (form) {
     });
     console.log(form)
 
-    // Check obbligatorieta' dei file
+    // Check obbligatorieta' dei file (arricchisce un oggetto)
     // Monointestatario
-    Object.assign(errors,Functions.getFileErrors("field_anagraficablob_intestatari_0_imgcodfiscale",form) )
+    Object.assign(errors,Functions.getFileErrors(["field_anagraficablob_intestatari_0_imgcodfiscale","field_anagraficablob_intestatari_0_imgdocidentita"],form));
+
+    // Altro intestatario
+    if (form["field_numintestatari"]==="2") {
+        Object.assign(errors,Functions.getFileErrors(["field_anagraficablob_intestatari_1_imgcodfiscale","field_anagraficablob_intestatari_0_imgdocidentita"],form));
+    }
+
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
