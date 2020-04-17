@@ -1,3 +1,4 @@
+import Functions from "components/functions";
 import validazioneIndirizzi from "./DatiPersonali/validazioneIndirizzi"
 import validazioneFatca from "./DatiPersonali/DatiFatca/validazioneFatca"
 
@@ -130,6 +131,9 @@ export default function (form) {
     });
     console.log(form)
 
+    // Check obbligatorieta' dei file
+    // Monointestatario
+    Object.assign(errors,Functions.getFileErrors("field_anagraficablob_intestatari_0_imgcodfiscale",form) )
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
