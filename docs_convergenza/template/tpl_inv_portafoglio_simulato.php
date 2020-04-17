@@ -167,7 +167,7 @@ $tipo_op_1 = array(1,2,3);
       <?php for($x=0;$x<=5;$x++) { ?>
         <tr>
           <td class="center">
-            <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>">
+            <a class="btn-icon">
               <i class="icon icon-2x icon_piumeno"></i>
             </a>
           </td>
@@ -187,7 +187,7 @@ $tipo_op_1 = array(1,2,3);
           <td class="right"><?php print rand(1000,1000000)/100;?></td>
           <td class="right negativo"><?php print rand(1000,1000000)/100;?></td>
           <td class="center">
-            <a class="btn-icon btn-icon-azioni" data-isin="<?php print (999990 + $x )?>">
+            <a class="btn-icon  btn-icon-operativa" data-isin="<?php print (999990 + $x )?>" data-isin="<?php print (999990 + $x )?>">
               <i class="icon icon-2x icon-ico_azioni02A"></i>
             </a>
           </td>
