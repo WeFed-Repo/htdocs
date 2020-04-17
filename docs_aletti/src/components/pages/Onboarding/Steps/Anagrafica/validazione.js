@@ -1,3 +1,4 @@
+import Functions from "components/functions";
 import validazioneIndirizzi from "./DatiPersonali/validazioneIndirizzi"
 import validazioneFatca from "./DatiPersonali/DatiFatca/validazioneFatca"
 
@@ -129,6 +130,15 @@ export default function (form) {
         if (form[v] === "" || form[v] === "Seleziona") errors[v] = obbligatorimsgSel;
     });
     console.log(form)
+
+    // Check obbligatorieta' dei file (arricchisce un oggetto)
+    // Monointestatario
+    Object.assign(errors,Functions.getFileErrors(["field_anagraficablob_intestatari_0_imgcodfiscale","field_anagraficablob_intestatari_0_imgdocidentita"],form));
+
+    // Altro intestatario
+    if (form["field_numintestatari"]==="2") {
+        Object.assign(errors,Functions.getFileErrors(["field_anagraficablob_intestatari_1_imgcodfiscale","field_anagraficablob_intestatari_0_imgdocidentita"],form));
+    }
 
 
     // Controllo sul codice fiscale

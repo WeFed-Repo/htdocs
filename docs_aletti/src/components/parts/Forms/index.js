@@ -219,7 +219,7 @@ class FormSelect extends Component {
                         return <option value={val.value} key={index}>{val.text}</option>
                     })}
                 </select>}
-                {output && <span className="output">{value}</span>}
+                {output && <span className="output">{options && options.map((val)=>{if (value===val.value) return val.text})}</span>}
                 {error && <span className="error">{error}</span>}
             </div>
         );
@@ -256,14 +256,11 @@ class FormCheckgroup extends Component {
         return (
             <div className={"form-group checkgroup " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
-                {!output &&
-                    <FieldMainWrapper>
-                        {options && options.map((obj, ind) => {
-                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
-                        })}
-                    </FieldMainWrapper>
-                }
-                {output && <span className="output">{value}</span>}
+                <FieldMainWrapper>
+                    {options && options.map((obj, ind) => {
+                        return (<FieldWrapper key={ind}><label className={"checkradio " + (output? "output" : "")}><input disabled={this.props.disabled || output} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                    })}
+                </FieldMainWrapper>
                 {error && <span className="error">{error}</span>}
             </div>
         );
@@ -299,14 +296,11 @@ class FormRadiogroup extends Component {
         return (
             <div className={"form-group radiogroup " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
-                {!output &&
-                    <FieldMainWrapper>
-                        {options && options.map((obj, ind) => {
-                            return (<FieldWrapper key={ind}><label className="checkradio"><input disabled={this.props.disabled} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
-                        })}
-                    </FieldMainWrapper>
-                }
-                {output && <span className="output">{value}</span>}
+                <FieldMainWrapper>
+                    {options && options.map((obj, ind) => {
+                        return (<FieldWrapper key={ind}><label className={"checkradio " + (output? "output":"")}><input disabled={this.props.disabled || output} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
+                    })}
+                </FieldMainWrapper>
                 {error && <span className="error">{error}</span>}
             </div>
         );
@@ -500,9 +494,9 @@ class FormFile extends Component {
                 modalViewTitle: this.props.label + (file.tipo != "UNICA"? ": " + file.tipo.toLowerCase(): ""),
                 modalView: true,
                 modalViewFile: file
-            })
+            },()=>this.imageBlock(file))
         }
-        this.imageBlock(file);
+        
 
     }
 
@@ -513,6 +507,7 @@ class FormFile extends Component {
             error = this.props.error,
             value = this.props.value,
             tipo = (this.props.tipo) ? this.props.tipo : "",
+            output = (this.props.output)? this.props.output : false,
             localformat = (this.props.formati)? this.props.formati.map((obj)=>{return "." + obj.value.toLowerCase()}).join(",") : ".jpg,.jpeg"
                    
         // Oggetto locale per le visualizzazioni
@@ -593,7 +588,7 @@ class FormFile extends Component {
 
                 <div className="file-input-wrapper">
                     <div className="fr-selector">
-                        {tipo === "fr" && 
+                        {tipo === "fr" && !output &&
                             <label className="file-check-label"><input type="checkbox" value="true" onChange={(e)=>this.setState({
                                 flag_unico: !this.state.flag_unico
                             })} checked={this.state.flag_unico}></input><span>Carica il documento fronte-retro in un unico file</span></label>
@@ -602,18 +597,18 @@ class FormFile extends Component {
                             {this.state.flag_unico &&
                                 <div className={"document-wrapper " + (fileObject["UNICA"].idImmagine? "ok": "")}>
                                     <div className={"document-thumbnail " + ((tipo==="fr")?"unico" : "solo")}  onClick={()=>this.fileView(fileObject["UNICA"])}></div>
-                                    <Button color="primary" onClick={()=>this.modalUpload("UNICA")}>carica</Button>
+                                    {!output && <Button color="primary" onClick={()=>this.modalUpload("UNICA")}>carica</Button> }
                                 </div>
                             }
                             {!this.state.flag_unico && 
                                 <>
                                      <div className={"document-wrapper " + (fileObject["FRONTE"].idImmagine? "ok": "")}>
                                         <div className="document-thumbnail fronte" onClick={()=>this.fileView(fileObject["FRONTE"])}></div>
-                                        <Button color="primary" onClick={()=>this.modalUpload("FRONTE")}>carica fronte</Button>
+                                        {!output && <Button color="primary" onClick={()=>this.modalUpload("FRONTE")}>carica fronte</Button>}
                                     </div>
                                     <div className={"document-wrapper " + (fileObject["RETRO"].idImmagine? "ok": "")}>
                                         <div className="document-thumbnail retro"  onClick={()=>this.fileView(fileObject["RETRO"])}></div>
-                                        <Button color="primary"  onClick={()=>this.modalUpload("RETRO")}>carica retro</Button>
+                                        {!output && <Button color="primary"  onClick={()=>this.modalUpload("RETRO")}>carica retro</Button>}
                                     </div>
                                    
                                 </>
