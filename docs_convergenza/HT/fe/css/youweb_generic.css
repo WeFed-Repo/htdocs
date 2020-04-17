@@ -1240,14 +1240,36 @@ html input.inputSliderValue[disabled] {
     margin-bottom: 15px
 }
 
-.border-output .boxDefault .details .row {
+.selezioneCCNoBor .border-output .boxDefault .details .row {
     margin-bottom: 0
 }
-.border-output .boxDefault .details .row .resume.titolo {
-    margin: 15px 0
+.border-output .boxDefault .details .row .control-label {
+    margin-bottom: 5px;
 }
-.border-output .boxDefault .formWrapper .row {
+.border-output .boxDefault .details .import-details .control-label {
+    margin-bottom: 15px;
+}
+.border-output .boxDefault .details .row .resume.titolo {
+    margin: 15px 0;
+    width: auto;
+}
+.selezioneCCNoBor .border-output .boxDefault .row .resume {
+    width: 100px;
+}
+.selezioneCCNoBor .border-output .boxDefault .formWrapper .row {
     margin-bottom: 0;
+}
+/*riga di dettaglio degli importi --di cui */
+.import-details .control-label, .import-details span {
+    font-size:12px;
+}
+@media (max-width: 768px) {
+    .formWrapper .col-xs-8 .resume, .formWrapper .col-xs-6 .resume {
+        float: right;
+    }
+    .import-details .control-label, .import-details span {
+        font-size:11px;
+    }
 }
 /*datepicker */
 .ui-dialog-content.ui-widget-content,

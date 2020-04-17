@@ -130,18 +130,26 @@
 				<h3 class="titleSection titleForm titolo">Premio</h3>
 				<div class="formWrapper">
 					<div class="row">
-						<div class="col-xs-4">
+						<div class="col-sm-4 col-xs-6">
 							<label class="control-label">Premio totale</label>
 						</div>
-						<div class="col-xs-8">
+						<div class="col-sm-8 col-xs-6">
 							<span class="resume">000.000,00 &euro;</span>
 						</div>
 					</div>
+					<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
+                            </div>
+                    </div>
 					<div class="row">
-						<div class="col-xs-4">
+						<div class="col-sm-4 col-xs-6">
 							<label class="control-label">Frazionamento</label>
 						</div>
-						<div class="col-xs-8">
+						<div class="col-sm-8 col-xs-6">
 							<span class="resume">Annuale</span>
 						</div>
                     </div>
@@ -160,26 +168,50 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Danni al fabbricato</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
+                            </div>
+                        </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 &euro;</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Danni al contenuto</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
+                            </div>
+                        </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 &euro;</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Furto, rapina e scippo</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
+                            </div>
+                        </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 &euro;</span>
                             </div>
                         </div>
@@ -189,11 +221,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Danni al fabbricato</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 €</span>
+                            </div>
+                        </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
                             </div>
                         </div>
                         <div class="row">
@@ -202,19 +242,35 @@
                             </div>
 						</div>
 						<div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Responsabilit&agrave; civile</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 €</span>
                             </div>
                         </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-6">
                                 <label class="control-label">Tutela legale</label>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-sm-8 col-xs-6">
                                 <span class="resume">000,00 €</span>
+                            </div>
+                        </div>
+						<div class="row import-details">
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label">di cui imposte</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-6">
+                                <span class="resume">000,00 &euro;</span>
                             </div>
                         </div>
                     </div>
