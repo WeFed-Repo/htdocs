@@ -8,6 +8,7 @@ export default class extends Component {
         super(props);
         this.state = {
             allDisabled: undefined,
+            allOutput: false,
 
             /* Allestimento degli errori  */
             errors: {},
@@ -84,6 +85,7 @@ export default class extends Component {
                                 onChange={this.generalOnChange}
                                 tipo="fr"
                                 idBozza="99999999"
+                                output={this.state.allOutput}
                                 formati={[
                                     {value: "JPEG", text: "image/jpeg"},
                                     {value: "JPG", text: "image/jpeg"},
@@ -100,6 +102,7 @@ export default class extends Component {
                                 disabled={this.state.allDisabled}
                                 error={formstate.errors["esempio_campo_file_fr"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 idBozza="999999999"
                                 >
                                 ></Form.file>
@@ -115,6 +118,7 @@ export default class extends Component {
                                 label="Input di esempio"
                                 error={formstate.errors["esempio_campo_input"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 placeholder="Inserisci un valore"
                                 disabled={this.state.allDisabled}
                             ></Form.input>
@@ -126,6 +130,7 @@ export default class extends Component {
                                 label="Input di esempio (numero)"
                                 error={formstate.errors["esempio_campo_input_numero"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 placeholder="Inserisci un numero"
                                 mask="numero"
                                 disabled={this.state.allDisabled}
@@ -138,6 +143,7 @@ export default class extends Component {
                                 label="Input di esempio (telefono)"
                                 error={formstate.errors["esempio_campo_input_telefono"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 mask="telefono"
                                 placeholder="Inserisci un numero telefonico"
                                 disabled={this.state.allDisabled}
@@ -150,6 +156,7 @@ export default class extends Component {
                                 label="Input di esempio (alfanumerico)"
                                 error={formstate.errors["esempio_campo_input_alfanumerico"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 mask="alfanumerico"
                                 placeholder="Inserisci un valore"
                                 disabled={this.state.allDisabled}
@@ -168,6 +175,7 @@ export default class extends Component {
                                 error={formstate.errors["esempio_campo_data"]}
                                 placeholder="Seleziona una data..."
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 dateFrom={"07/12/1990"}
                                 dateTo={"01/03/1991"}
                                 disabled={this.state.allDisabled}
@@ -181,6 +189,7 @@ export default class extends Component {
                                 error={formstate.errors["esempio_campo_data_callback"]}
                                 placeholder="Seleziona una data..."
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 cbchange={(val)=>{alert("La data selezionata è "+ val)}}
                                 disabled={this.state.allDisabled}
                             ></Form.date>
@@ -198,6 +207,7 @@ export default class extends Component {
                                 error={formstate.errors["esempio_campo_select"]}
                                 onChange={this.generalOnChange}
                                 placeholder="Seleziona..."
+                                output={this.state.allOutput}
                                 disabled={this.state.allDisabled}
                                 options={[
                                     { "value": "val1", "text": "Selezione valore 1" },
@@ -214,6 +224,7 @@ export default class extends Component {
                                 label="Select di esempio (dato da url)"
                                 error={formstate.errors["esempio_campo_select_url"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 placeholder="Seleziona..."
                                 disabled={this.state.allDisabled}
                                 ajaxoptions="province"
@@ -226,6 +237,7 @@ export default class extends Component {
                                 label="Select con url collegato dipendente da altra select"
                                 error={formstate.errors["esempio_campo_select_url_collegato"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 placeholder="Seleziona..."
                                 disabled={this.state.allDisabled}
                                 ajaxoptions="comuni"
@@ -245,6 +257,7 @@ export default class extends Component {
                                 label="Checkgroup di esempio"
                                 error={formstate.errors["esempio_campo_checkgroup"]}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 disabled={this.state.allDisabled}
                                 options={[
                                     { "value": "v1", "text": "Checkbox valore 1" },
@@ -259,6 +272,7 @@ export default class extends Component {
                                 name="esempio_campo_radiogroup"
                                 value={formstate.esempio_campo_radiogroup}
                                 label="Radio di esempio"
+                                output={this.state.allOutput}
                                 error={formstate.errors["esempio_campo_radiogroup"]}
                                 onChange={this.generalOnChange}
                                 disabled={this.state.allDisabled}
@@ -278,6 +292,7 @@ export default class extends Component {
                                 orientation="vertical"
                                 value={formstate.esempio_campo_checkgroup_verticale}
                                 label="Checkgroup di esempio"
+                                output={this.state.allOutput}
                                 error={formstate.errors["esempio_campo_checkgroup_verticale"]}
                                 onChange={this.generalOnChange}
                                 disabled={this.state.allDisabled}
@@ -295,6 +310,7 @@ export default class extends Component {
                                 orientation="vertical"
                                 value={formstate.esempio_campo_radiogroup_verticale}
                                 label="Radio di esempio"
+                                output={this.state.allOutput}
                                 error={formstate.errors["esempio_campo_radiogroup_verticale"]}
                                 onChange={this.generalOnChange}
                                 disabled={this.state.allDisabled}
@@ -315,6 +331,7 @@ export default class extends Component {
                                 name="esempio_campo_check"
                                 value={formstate.esempio_campo_check}
                                 error={formstate.errors["esempio_campo_check"]}
+                                output={this.state.allOutput}
                                 onChange={this.generalOnChange}
                                 disabled={this.state.allDisabled}
                                 options={[{ "value": "checcato", "text": "Autorizzo il checkbox ad attivarsi ai sensi di quanto scritto qui sopra" }]}
@@ -328,6 +345,7 @@ export default class extends Component {
                                 name="esempio_campo_checkfile"
                                 value={formstate.esempio_campo_checkfile}
                                 onChange={this.generalOnChange}
+                                output={this.state.allOutput}
                                 disabled={this.state.allDisabled}
                                 error={formstate.errors["esempio_campo_checkfile"]}
                                 filedescription="Contratti per la prestazione di Servizi ed Attività d'Investimento e Servizi Accessori"
@@ -347,6 +365,7 @@ export default class extends Component {
                     <Button onClick={this.setAllErrors} style={{ marginLeft: "10px" }}>Setta errori su tutti i campi</Button>
                     <Button onClick={() => this.setState({errors: {}})} style={{ marginLeft: "10px" }}>Resetta errori</Button>
                     <Button onClick={() => this.setState({ allDisabled: true })} style={{ marginLeft: "10px" }}>Disabilita tutti</Button>
+                    <Button color="primary" onClick={() => this.setState({ allOutput: !this.state.allOutput })} style={{ marginLeft: "10px" }}>Tutti {(!this.state.allOutput)? "output" : "input"}</Button>
                 </div>
 
             </div>
