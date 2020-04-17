@@ -6,9 +6,9 @@
 @mixin icon-img-next($color) {
     background-position: right center !important;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{encodecolor($color)}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-} 
+}
 
-// icona con carattere speciale "bullet" 
+// icona con carattere speciale "bullet"
 
 .icon-bullet:before {
     font-family: 'roboto', sans-serif;
@@ -19,7 +19,7 @@
 .colonna2 {
     @include icon {
         @include svg-icon-color($greenLink);
-        @include svg-icon-size(30px); 
+        @include svg-icon-size(30px);
         margin:0 0 0 1rem;
     }
     margin:0.5rem 0;
@@ -27,6 +27,13 @@
 
 // rewrite dello zoom di alcune icone
 i.icon.icon-aggiorna:before {
-    zoom: 100%; 
+    zoom: 100%;
     transform: translate(0, 0);
+}
+
+// correzione alcuni font-iconici in bottone
+button, a.btn {
+  i.icon.icon-mostra {
+    margin-top: 10px;
+  }
 }
