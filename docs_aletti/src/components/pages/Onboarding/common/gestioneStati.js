@@ -54,7 +54,7 @@ let getStatiPratica = (form)=>{
         else
         {
             stati_pratica = stati_pratica.concat(stati["int0"]);
-         }
+        }
     stati_pratica = stati_pratica.concat(stati["finale"]);
     return(stati_pratica);
 
@@ -62,7 +62,7 @@ let getStatiPratica = (form)=>{
 
 // Ritorna un oggetto complesso contenente, per ogni stato, il suo livello di completamento rispetto alla validazione
 let getAvanzamentoPratica = (form) => {
-    var stato = form.field_stato;
+    var stato = stateInt(form);
 
     // Livelli generali (primi 4 step)
     let completo = true,
@@ -91,11 +91,21 @@ let getAvanzamentoPratica = (form) => {
     return (avanzamento);
 }
 
+let stateInt = (form) => {
+    let cState = form.field_stato;
+    if (stati["iniziali"].indexOf(cState)>=0 || cState ==="conclusa") {
+        return cState
+    }
+    else
+    {
+        return ("INT"+ form.field_intestcorrente + "_"+ cState);
+    }
+}
+
 let getNextState = (form) => {
 
-    // Caso con 1 intestatario
     let stati = getStatiPratica(form);
-    return stati[stati.indexOf(form.field_stato)+1];
+    return stati[stati.indexOf(stateInt(form))+1];
 
 }
 
@@ -103,7 +113,7 @@ let getPrevState = (form) => {
 
     // Caso con 1 intestatario 
     let stati = getStatiPratica(form);
-    return stati[stati.indexOf(form.field_stato)-1];
+    return stati[stati.indexOf(stateInt(form))-1];
 }
 
 export {getStatiPratica,getAvanzamentoPratica,getNextState,getPrevState};
