@@ -422,46 +422,61 @@ class FormFile extends Component {
 
                 // Estrae il tipo dall'estensione del file (Maiuscola)
                 let extension = this.state.fileToTransfer.split(".").reverse()[0].toUpperCase();
-                let dataToSend  ={
-                    "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
-                    "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream,
-                    "formatoAllegato": extension,
-                    "tipoAllegato" : tipo,
-                    "idWorkflowPratica": this.props.idBozza
-                }
-                getData({
-                    url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
-                    data: dataToSend,
-                    success: (data)=>{
 
-                        // crea il nuovo array locale eliminando eventuale file preesistente
-                        let localValue = [];
-                        this.props.value.forEach((v,i)=>{
-                                if(v.tipo!==tipo) localValue.push(v);
-                        });
-                        
-                        // Aggiorna il dato locale con il nuovo valore
-                        localValue.push ({
-                            "idImmagine":data.results,    
-                            "formato":extension,    
-                            "tipo":tipo 
-                        });
+    
 
-                        // Chiude la modale e resetta il trasferimento
-                        this.setState({
-                            fileToTransfer:"",
-                            modalUpload:false,
-                            modalUploadLoading: false
-                        })
+                // Se l'estensione è compatibile 
+                if (this.props.formati.map((obj)=>{return obj.value.toLowerCase()}).indexOf(extension.toLowerCase())>=0 ){
 
-                        // Cambia il valore nel form
-                        this.props.onChange({name:this.props.name,value:localValue})
-
-                    },
-                    error: ()=>{
-                        alert("Si sono verificati degli errori in fase di salvataggio")
+                    let dataToSend  ={
+                        "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
+                        "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream,
+                        "formatoAllegato": extension,
+                        "tipoAllegato" : tipo,
+                        "idWorkflowPratica": this.props.idBozza
                     }
-                })
+                    getData({
+                        url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
+                        data: dataToSend,
+                        success: (data)=>{
+    
+                            // crea il nuovo array locale eliminando eventuale file preesistente
+                            let localValue = [];
+                            this.props.value.forEach((v,i)=>{
+                                    if(v.tipo!==tipo) localValue.push(v);
+                            });
+                            
+                            // Aggiorna il dato locale con il nuovo valore
+                            localValue.push ({
+                                "idImmagine":data.results,    
+                                "formato":extension,    
+                                "tipo":tipo 
+                            });
+    
+                            // Chiude la modale e resetta il trasferimento
+                            this.setState({
+                                fileToTransfer:"",
+                                modalUpload:false,
+                                modalUploadLoading: false
+                            })
+    
+                            // Cambia il valore nel form
+                            this.props.onChange({name:this.props.name,value:localValue})
+    
+                        },
+                        error: ()=>{
+                            alert("Si sono verificati degli errori in fase di salvataggio")
+                        }
+                    })
+
+                }
+                else
+                {
+                    // File eccessivamente grande
+                    this.setState({modalUploadLoading: false, modalUploadError: "Il file ha un estensione ("+ extension +") non consentita"})
+                }
+
+
 
             }
             else
