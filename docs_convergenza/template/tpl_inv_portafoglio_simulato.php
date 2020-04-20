@@ -179,8 +179,7 @@ $tipo_op_1 = array(1,2,3);
 
 
   <!-- TABELLA -->
-
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableSimula" class="sortableTable has-fixed-cols" data-fixed-cols="3">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -433,7 +432,7 @@ $tipo_op_1 = array(1,2,3);
               </div>
               <div class="simula-table" style="display:none">
                 <h3>Risultati della ricerca</h3>
-                <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti">
+                <table cellspacing="0" cellpadding="0" border="0" id="tableSimula" class="sortableTable has-fixed-cols" data-fixed-cols="1">
                   <thead>
                     <tr>
                         <th class="left"></th>
