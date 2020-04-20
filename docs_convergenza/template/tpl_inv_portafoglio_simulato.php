@@ -27,6 +27,39 @@ $strumenti = array(
   'Fondi',
 );
 
+$selectMercato = array(
+  'Tutti i mercati',
+  'Azioni' => array(
+    'MTA',
+    'BIT GEM',
+    'AEX25',
+    'BEL20',
+    'FTSE100',
+    'IBEX35',
+    'NASDAQ',
+    'NYSE',
+    'PSI20',
+    'SBF',
+    'XETRA',
+    'Hi-MTF',
+    'EuroTLX',
+  ),
+  'SD Certificates' => array(
+    'SEDEX',
+    'ETF/ETC',
+    'ETFPlus',
+  ),
+  'Obbligazioni' => array(
+    'MOT',
+    'EuroTLX',
+    'Hi-MTF',
+    'EuroMOT',
+    'ExtraMOT',
+    'Best execution',
+    'Akros IS',
+  ),
+);
+
 $tipo_op_1 = array(1,2,3);
 ?>
 
@@ -125,13 +158,15 @@ $tipo_op_1 = array(1,2,3);
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-8 col-sm-6">
-      <a href="#" class="text-link">
+    <div class="col-xs-12 col-sm-5">
+      <a href="#" class="btn-icon-simula text-link">
         Simula compravendita
         <i class="icon icon_piumeno"></i>
       </a>
+      <br />
+      <br />
     </div>
-    <div class="col-xs-4 col-sm-6">
+    <div class="col-xs-12 col-sm-7">
       <p class="note flRight noFloatMobile">
           <span class="flLeft">Ultimo Aggiornamento: <?php print ( date('d/m/Y') ) ?> ore <?php print ( date('h:i:s') ) ?></span>
           <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
@@ -221,41 +256,6 @@ $tipo_op_1 = array(1,2,3);
   <!-- FINE PULSANTIERA SOTTO TABELLA -->
 
 </div>
-
-<?php include("./parts/table_th_filter.php"); ?>
-<?php include("./parts/icona_operativa.php"); ?>
-
-<!-- INIZIALIZZAZIONI -->
-<script type="text/javascript">
-  $(function(){
-    resizeTab('secondTab',0);
-    appendDatePickerIcon('periodo');
-    var tableOrdiniMovimenti = $('.sortableTable');
-    tableOrdiniMovimenti.bootstrapTable({
-      onPostBody: function(){
-        // Funzioni da ripetere ad ogni refresh
-        $(".table-btn-more").not("inited").click(function(){
-          $("#layerConfronta").modal("show");
-        });
-        attivaIconaOperativa(".sortableTable");
-      }
-    });
-    initThFilter();
-
-    $('.btn-icon-azioni').on('click', function (e) {
-      e.preventDefault();
-      $('#menuAzioni').modal();
-    });
-
-    $('.btn-icon-modifica').on('click', function (e) {
-      e.preventDefault();
-      $('#menuModifica').modal();
-    });
-
-  });
-</script>
-
-
 
 <div class="modal fade" id="menuAzioni" tabindex="-1" role="dialog" aria-labelledby="menuAzioniLabel">
     <div class="modal-dialog modal-sm" role="document">
@@ -391,25 +391,159 @@ $tipo_op_1 = array(1,2,3);
     </div>
 </div>
 
+<div class="modal fade" id="menuSimula" tabindex="-1" role="dialog" aria-labelledby="menuModificaLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <a class="close btn-icon" data-dismiss="modal" aria-label="Close">
+                <i class="icon icon-alert_error_fill icon-2x"></i>
+              </a>
+              <h2 class="modal-title">Simula compravendita</h2>
+            </div>
+            <div class="modal-body">
+              <div class="simula-form">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-5">
+                      <div class="form-group w100">
+                        <label class="control-label">Titolo/Fondo</label>
+                        <div class="editable-input">
+                          <input type="text" name="" class="form-control clear-x" placeholder="ISIN/Descrizione/Titolo">
+                          <span class="editable-clear-x" style="">
+                            <i class="icon icon-close icon-1x"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-5">
+                      <div class="form-group">
+                        <label class="control-label">Mercato</label>
+                        <select class="form-control" id="selectMercato">
+                          <?php auto_input_select( $selectMercato ) ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-2 no-label">
+                      <div class="btn-align-right">
+                        <a id="simula-cerca" type="button" href="#" class="btn btn-primary">Cerca</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="simula-table" style="display:none">
+                <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
+                    <thead>
+                        <tr>
+                            <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                            <th class="left"></th>
+                            <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / Fondo</th>
+                            <th class="left">Mercato</th>
+                            <th class="right">Q.t&agrave; in portaf.</th>
+                            <th class="right">Q.t&agrave; disp.</th>
+                            <th class="right">Prz. medio carico</th>
+                            <th class="right">Settore</th>
+                            <th class="right">Valore Y</th>
+                            <th class="right">Ult. prz. ora</th>
+                            <th class="right">Controval. Eur</th>
+                            <th class="right">Utili /Perdite Eur VAR%</th>
+                            <th class="right"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php for($x=0;$x<=4;$x++) { ?>
+                      <tr>
+                        <td class="center">
+                          <a class="btn-icon">
+                            <i class="icon icon-2x icon_piumeno"></i>
+                          </a>
+                        </td>
+                        <td class="center">
+                          <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
+                            <i class="icon icon-2x icon-<?php print(($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
+                          </a>
+                        </td>
+                        <td class="left"><a href="">Titolo azione <?php print($x + 1) ?></a></td>
+                        <td class="left">MOT</td>
+                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                        <td class="right">Settore <?php print ( $x + 1 )?></td>
+                        <td class="right"><?php print rand(10,10000)/100;?>&euro;</td>
+                        <td class="right"><?php print rand(10,10000)/100;?> 00:00:00</td>
+                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                        <td class="right negativo"><?php print rand(1000,1000000)/100;?></td>
+                        <td class="center">
+                          <a class="btn-icon  btn-icon-operativa" data-isin="<?php print (999990 + $x )?>" data-isin="<?php print (999990 + $x )?>">
+                            <i class="icon icon-2x icon-ico_azioni02A"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include("./parts/table_th_filter.php"); ?>
+<?php include("./parts/icona_operativa.php"); ?>
+
+<!-- INIZIALIZZAZIONI -->
 <script type="text/javascript">
-//inizializzazione datepicker
-$(function() {
-  $("#dataInserimento").mask("99/99/9999");
-  $("#dataInserimento").datepicker({
-      beforeShowDay: highlightDays,
-      //beforeShowDay: noHolidays,  //si applica se si vuole che i fine sttimana e festivi non siano delezionabili
-      minDate: 0,
-      showOtherMonths: true,
-      showOn: "button",
-      prevText: "<i class=\"icon icon-arrow_left\" title=\"mese precedente\"></i>",
-      nextText: "<i class=\"icon icon-arrow_right\" title=\"mese successivo\"></i>",
-      // buttonImage: "/img/ret/pixel_trasp.gif",
-      buttonImageOnly: true,
-      beforeShow: renderPickDateMobile, //funzione per far si che si apra come overlayer su mobile
-      onClose: function() {
-          $('#datePickerWrapper').modal('hide');
+  $(function(){
+    resizeTab('secondTab',0);
+    appendDatePickerIcon('periodo');
+    var tableOrdiniMovimenti = $('.sortableTable');
+    tableOrdiniMovimenti.bootstrapTable({
+      onPostBody: function(){
+        // Funzioni da ripetere ad ogni refresh
+        $(".table-btn-more").not("inited").click(function(){
+        });
+        $('.btn-icon-azioni').on('click', function (e) {
+          e.preventDefault();
+          $('#menuAzioni').modal();
+        });
+        $('.btn-icon-modifica').on('click', function (e) {
+          e.preventDefault();
+          $('#menuModifica').modal();
+        });
+        $('.btn-icon-simula').on('click', function (e) {
+          e.preventDefault();
+          $('#menuSimula').modal().on('hidden.bs.modal', function () {
+            $('.simula-table').hide();
+          });
+        });
+        attivaIconaOperativa(".sortableTable");
       }
+    });
+    initThFilter();
+    $('#simula-cerca').on('click', function (e) {
+      e.preventDefault();
+      $('.simula-table').show();
+    });
   });
-  appendDatePickerIcon('dataInserimento');
-});
+
+  //inizializzazione datepicker
+  $(function() {
+    $("#dataInserimento").mask("99/99/9999");
+    $("#dataInserimento").datepicker({
+        beforeShowDay: highlightDays,
+        //beforeShowDay: noHolidays,  //si applica se si vuole che i fine sttimana e festivi non siano delezionabili
+        minDate: 0,
+        showOtherMonths: true,
+        showOn: "button",
+        prevText: "<i class=\"icon icon-arrow_left\" title=\"mese precedente\"></i>",
+        nextText: "<i class=\"icon icon-arrow_right\" title=\"mese successivo\"></i>",
+        // buttonImage: "/img/ret/pixel_trasp.gif",
+        buttonImageOnly: true,
+        beforeShow: renderPickDateMobile, //funzione per far si che si apra come overlayer su mobile
+        onClose: function() {
+            $('#datePickerWrapper').modal('hide');
+        }
+    });
+    appendDatePickerIcon('dataInserimento');
+  });
 </script>

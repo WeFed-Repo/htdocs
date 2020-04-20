@@ -6,7 +6,7 @@ html {
     height: 100%;
 }
 
-[class^="icon-"], [class*=" icon-"] { 
+[class^="icon-"], [class*=" icon-"] {
     font-size: 20px;
 }
 /* FONT MONTSERRAT */
@@ -358,7 +358,7 @@ button {
 }
 .btn.btn-primary.btn-info:hover {
 
-    
+
 }
 .btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus {
 
@@ -1446,7 +1446,7 @@ body.modal-open {
     padding-left: 1px;
     padding-right: 0;
 }
-.modal-body .btn-primary, .modal-body .btn-default, .modal-body .btn-filtra, .modal-body .btn-filtra-attivo,.modal-body .btn-navigation9px 
+.modal-body .btn-primary, .modal-body .btn-default, .modal-body .btn-filtra, .modal-body .btn-filtra-attivo,.modal-body .btn-navigation9px
 {
     padding: 9px 10px 7px 10px;
 }
@@ -2002,7 +2002,7 @@ span.alert, .alert {
     min-height: 0!important;
     text-align: center;
     overflow: hidden;
-    
+
 }
 
 .select-don .imgLabel.btn.select-button.active,  .select-button input[type=text]:focus {
@@ -2011,13 +2011,13 @@ span.alert, .alert {
     padding: 6px 0px;
     box-shadow: none!important;
     background-color: #ecf5f3!important;
-    
+
 }
 .select-don .select-button input[type=text] {
-    padding: 5px 10px; 
+    padding: 5px 10px;
 }
 .select-don .select-button input[type=text]:focus {
-    padding: 5px 12px;   
+    padding: 5px 12px;
     outline:0;
     border:0!important;
 }
@@ -2038,7 +2038,7 @@ span.alert, .alert {
     position: relative;
     top:22px;
     margin-bottom: 20px;
-}  
+}
 .select-don .select-button span {
     color:#676767;
     font-size:13px;
@@ -2048,10 +2048,10 @@ span.alert, .alert {
 .select-don .select-button.imgLabel.btn {
     top: 0;
     width:96px!important;
-} 
+}
 .select-don .select-button.active .outline{
     outline: 4px solid #4CA292;
-}    
+}
 
 .text-align-center {
     display: inline-block;
@@ -2353,7 +2353,7 @@ div.messagePanel p {
     outline: 0;
 }
 
-.wrapper-questionario .paddingForQuestionario{    
+.wrapper-questionario .paddingForQuestionario{
     padding-left: 125px !important;
     float: left;
     width: 100%;
@@ -2377,7 +2377,7 @@ span.spanQuestionario {
     opacity: 1;
     position: absolute;
     height: 100px !important;
-    width: 100px !important;   
+    width: 100px !important;
 }
 
 .icon-5x.icon-questionario{
@@ -2434,11 +2434,11 @@ span.spanQuestionario {
         text-align: right;
     }
 
-    .wrapper-questionario  span.spanQuestionario {    
+    .wrapper-questionario  span.spanQuestionario {
         position: relative;
    }
-  
-   .wrapper-questionario .paddingForQuestionario {    
+
+   .wrapper-questionario .paddingForQuestionario {
         padding-left: 0px !important;
    }
 
@@ -2450,7 +2450,7 @@ span.spanQuestionario {
     .paddingLeft100 {
         padding-left: 75px !important;
     }
-    
+
     .paddingLarge {
         padding-left: 15px !important;
         padding-right: 15px !important;
@@ -2483,7 +2483,7 @@ span.spanQuestionario {
 
     .polizzeAttive .fontSize70 {
         font-size: 50px !important;
-    }  
+    }
 
     .profiloAssicurativo .backgroundColor {
         background-color: #EBEDEE;
@@ -2627,12 +2627,12 @@ span.spanQuestionario {
     }
 
     .profiloAssicurativo h2 {
-        margin-top: 0px;        
-    } 
+        margin-top: 0px;
+    }
 }
 
 .profiloAssicurativo h2 {
-       margin-bottom: 10px;       
+       margin-bottom: 10px;
 }
 
 .dataTables_paginate span a.current, .dataTables_paginate span a:hover {
@@ -3849,7 +3849,7 @@ div.messagePanel.success.bgBoxBonif i {
     float: left;
 }
 div.messagePanel.success.bgBoxBonif .linHeighVert span + .row
-{ 
+{
     padding:0 20px 0 50px;
 }
 div.messagePanel.success.bgBoxBonif .linHeighVert i + span {
@@ -4322,15 +4322,15 @@ label.select-button + span {
 span.colSucc {
     color: #75c2b8;
     font-weight: bold;
-} 
+}
 
 span.colErr {
     color: #ef5133;
      font-weight: bold;
-} 
+}
 
 span.colAlert {
-    color: #F6CF00; 
+    color: #F6CF00;
      font-weight: bold;
 }
 .box-catalogue-left {
@@ -4360,7 +4360,7 @@ span.colAlert {
 .assicurazioni .col-sm-3.box-catalogue-left .icon {
     color: #65b7a9;
     margin-bottom: 15px;
-} 
+}
 
 .assicurazioni .box-catalogue-right {
     background-color: #fff
@@ -4390,7 +4390,7 @@ span.colAlert {
 .assicurazioniAutoMoto .borderFormRoundedWrapper.smallPaddingLeftRight {
     padding: 35px 20px;
 }
-.assicurazioniAutoMoto .assicurazioniBtnCalcola .btn.btn-primary.noMargin,.assicurazioneCasa .assicurazioniBtnCalcola .btn.btn-primary.noMargin { 
+.assicurazioniAutoMoto .assicurazioniBtnCalcola .btn.btn-primary.noMargin,.assicurazioneCasa .assicurazioniBtnCalcola .btn.btn-primary.noMargin {
     position: absolute;
     bottom:0;
     right: 35px;
@@ -4837,7 +4837,7 @@ span.colAlert {
 
 .preventivatore .mData .btn-icon.documenti {
     width:auto;
-} 
+}
 
 .preventivatore .mData .btn-icon span {
     font-weight: bold;
@@ -5445,7 +5445,7 @@ select:focus::-ms-value {
 @media screen and (max-width: 991px) {
     .ui-combobox-input button {
         height: 36px;
-    }   
+    }
 }
 
 .ui-menu-item.ui-state-focus {
@@ -5779,12 +5779,12 @@ ul.ui-autocomplete {
     line-height: 24px;
     text-transform: none;
     font-weight: normal;
-  
+
 }
 
 .titButtonIco p {
     padding-bottom: 15px;
-}    
+}
 
 .titButtonIco ul {
     padding-left: 14px;
@@ -5871,7 +5871,7 @@ ul.ui-autocomplete {
 
 .box-catalogue-left.box-txt-white .icon {
     color: #202D50;
-}    
+}
 
 
 
@@ -5891,13 +5891,13 @@ ul.ui-autocomplete {
 
     .paddingLeft125 {
         padding-left: 65px !important;
-    } 
+    }
 
     .polizzeAttive a.btn-primary{
         margin-bottom: 0px;
         width: auto !important;
     }
-    
+
     .assicurazioneCasa .col-xs-5 {
         padding-left: 0px !important;
     }
@@ -6018,7 +6018,7 @@ ul.ui-autocomplete {
     .box-catalogue-right-txt p {
         font-size: 16px;
         color: #202D50;
-    }    
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -6300,7 +6300,7 @@ div[id*="popover"] .popover-content {
     padding: 0;
     border:0;
     margin-bottom:0;
-    
+
 }
 .testoIcona span{width:50px;height: 50px;margin:0 auto;text-align: center}
 /*.testoIcona .icon {
@@ -6321,7 +6321,7 @@ div[id*="popover"] .popover-content {
     overflow-y: auto;
     border:0 none;
     -webkit-overflow-scrolling: touch;
-}    
+}
 @media (max-width: 767px) {
     .resp-iframe { min-height: 1800px}
 }
@@ -6486,7 +6486,7 @@ div[id*="popover"] .popover-content {
 /* Input tipo rcb (radio o checkbox) */
 .input-rcb-inline {
     width:auto;
-    clear:both; 
+    clear:both;
     display:inline-block;
     position:relative;
     padding-left:30px;
@@ -6494,7 +6494,7 @@ div[id*="popover"] .popover-content {
 }
 .input-rcb-inline input {
     position:absolute !important;
-    left:0; 
+    left:0;
     top:0;
 }
 .input-rcb-inline input[type="checkbox"] {
@@ -6564,7 +6564,7 @@ label.select-button:not(.imgLabel):not(.btn) span{
 
 .paddingRight {
     padding-right: 15px;
-} 
+}
 
 .paddingForTd {
     padding-right: 5px !important;
@@ -6624,7 +6624,7 @@ span.paddingLeft {
 
 .alignItemCenter {
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
 
 .polizzeAttive h3{
@@ -6708,11 +6708,11 @@ div.titButton.titButtonIco {
 
 .tooltip-masked {
     position: absolute;
-    z-index: 1; 
-    top: 0px; 
-    left: 0px; 
-    display: block; 
-    width: 15px; 
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 15px;
     height: 15px;
     cursor: default;
 }
@@ -6835,7 +6835,7 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
         width: 96%;
         padding-top: 10%;
     }
-    
+
     .img-fixed-badge-apps {
         width: 40%;
     }
@@ -6855,7 +6855,7 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
 .scaricaAppBancomatPay ul {
     list-style: none; /* Remove default bullets */
 }
-  
+
 .scaricaAppBancomatPay ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: #0E977F; /* Change the color */
@@ -6949,7 +6949,7 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
 }
 
 .paddingForBox {
-    padding-right: 0px; 
+    padding-right: 0px;
     padding-left:15px
 }
 
@@ -7093,8 +7093,8 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
         margin-top:8px;
     }
 
-    .spsel .spsel-option .spsel-option-el {     
-        padding: 10px 0 15px;    
+    .spsel .spsel-option .spsel-option-el {
+        padding: 10px 0 15px;
     }
 
 
@@ -7204,13 +7204,13 @@ div.fixed-table-scroll-outer {
     .fixed-table-body-columns {
         overflow: visible;
     }
-    
+
     .fixed-table-body-columns table {
         position: absolute;
         animation: none;
         border-right: 0;
     }
-    
+
 
     .bootstrap-table table {
         margin-bottom: 0 !important;
@@ -7218,14 +7218,14 @@ div.fixed-table-scroll-outer {
     .bootstrap-table .fixed-table-container {
         position: relative!important;
         clear: both;
-       
+
     }
-    
-    
+
+
     .fixed-table-body-columns .table-hover, .fixed-table-body-columns .table-hover tr:first-child td {
         border-top: 0;
     }
-    
+
     .table-desc-text {
         margin-bottom: 14px;
     }
@@ -7250,7 +7250,7 @@ div.fixed-table-scroll-outer {
     .fixed-table-header-columns {width:206px!important}
     .fixedColumns.scelta-profilo .radio-mobile {display:table-row}
     .fixedColumns.scelta-profilo .radio-mobile input {position:static!important}
-    
+
 }
 
 .text-link {color:#0e977f;text-decoration:underline;font-weight:normal}
@@ -7263,11 +7263,11 @@ div.fixed-table-scroll-outer {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     top: 30px;
     left: 0;
-    z-index:2;
+    z-index:25;
     position: absolute;
     display:block;
 }
-.icoope-overlay .close {    
+.icoope-overlay .close {
     float: right;
     display: block;
     font-size: 30px;
