@@ -264,7 +264,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 								elem.click(
 								function() {
 									var mSB = $(this).parents(".magicSearch");
-									mSB.find("input").val(v.nome);
+									mSB.find("input").val(v.isin.toString()); // Sostituito nome con ISIN per ricerca univoca
 									mSB.find("ul").hide();
 									$(mSB.find(".msButton")).trigger("click");
 								}
