@@ -540,10 +540,6 @@ $selectCausaleMovimenti = array(
     var tableOrdiniMovimenti = $('.sortableTable');
     tableOrdiniMovimenti.bootstrapTable({
       onPostBody: function(){
-        // Funzioni da ripetere ad ogni refresh
-        $(".table-btn-more").not("inited").click(function(){
-          $("#layerConfronta").modal("show");
-        });
         attivaIconaOperativa(".sortableTable");
       }
     });
