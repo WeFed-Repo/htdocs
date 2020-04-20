@@ -3,6 +3,8 @@ import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import validazione from "./validazione";
 import Anagrafica from '../Anagrafica';
+import salva from "./salva";
+
 const FieldOutput = {
     "ANAGRAFICA" : Anagrafica
 }
@@ -38,6 +40,7 @@ class StepForm extends Component {
                     <section className="onboarding-block">
                             <FieldOutput.ANAGRAFICA.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.ANAGRAFICA.form>
                     </section>
+                    <p>Il sottoscritto, consapevole delle responsabilità penali derivanti da mendaci affermazioni in tal sede, dichiara di aver fornito nel presente modulo tutte le informazioni necessarie ed aggiornate di cui è a conoscenza, anche relativamente al titolare effettivo del rapporto / dell’operazione, garantisce che le stesse sono esatte e veritiere e si impegna a comunicarne ogni futura ed eventuale modifica.</p>
                 </div>
             </div>
         )
@@ -47,5 +50,7 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm
+    form : StepForm,
+    validazione: validazione,
+    salva: salva
 }
