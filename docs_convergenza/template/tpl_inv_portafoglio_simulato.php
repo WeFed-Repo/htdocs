@@ -179,8 +179,7 @@ $tipo_op_1 = array(1,2,3);
 
 
   <!-- TABELLA -->
-
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -402,13 +401,13 @@ $tipo_op_1 = array(1,2,3);
             </div>
             <div class="modal-body">
               <div class="simula-form">
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom:0;">
                   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-5">
                       <div class="form-group w100">
                         <label class="control-label">Titolo/Fondo</label>
                         <div class="editable-input">
-                          <input type="text" name="" class="form-control clear-x" placeholder="ISIN/Descrizione/Titolo">
+                          <input type="text" name="" class="simula-input form-control clear-x" placeholder="ISIN/Descrizione/Titolo">
                           <span class="editable-clear-x" style="">
                             <i class="icon icon-close icon-1x"></i>
                           </span>
@@ -418,69 +417,49 @@ $tipo_op_1 = array(1,2,3);
                     <div class="col-xs-12 col-sm-8 col-md-5">
                       <div class="form-group">
                         <label class="control-label">Mercato</label>
-                        <select class="form-control" id="selectMercato">
+                        <select class="simula-input form-control" id="selectMercato">
                           <?php auto_input_select( $selectMercato ) ?>
                         </select>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-2 no-label">
                       <div class="btn-align-right">
-                        <a id="simula-cerca" type="button" href="#" class="btn btn-primary">Cerca</a>
+                        <button id="simula-cerca" class="btn btn-primary" href="#">Cerca</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="simula-table" style="display:none">
-                <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
-                    <thead>
-                        <tr>
-                            <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-                            <th class="left"></th>
-                            <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / Fondo</th>
-                            <th class="left">Mercato</th>
-                            <th class="right">Q.t&agrave; in portaf.</th>
-                            <th class="right">Q.t&agrave; disp.</th>
-                            <th class="right">Prz. medio carico</th>
-                            <th class="right">Settore</th>
-                            <th class="right">Valore Y</th>
-                            <th class="right">Ult. prz. ora</th>
-                            <th class="right">Controval. Eur</th>
-                            <th class="right">Utili /Perdite Eur VAR%</th>
-                            <th class="right"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php for($x=0;$x<=4;$x++) { ?>
-                      <tr>
-                        <td class="center">
-                          <a class="btn-icon">
-                            <i class="icon icon-2x icon_piumeno"></i>
-                          </a>
-                        </td>
-                        <td class="center">
-                          <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
-                            <i class="icon icon-2x icon-<?php print(($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
-                          </a>
-                        </td>
-                        <td class="left"><a href="">Titolo azione <?php print($x + 1) ?></a></td>
-                        <td class="left">MOT</td>
-                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                        <td class="right">Settore <?php print ( $x + 1 )?></td>
-                        <td class="right"><?php print rand(10,10000)/100;?>&euro;</td>
-                        <td class="right"><?php print rand(10,10000)/100;?> 00:00:00</td>
-                        <td class="right"><?php print rand(1000,1000000)/100;?></td>
-                        <td class="right negativo"><?php print rand(1000,1000000)/100;?></td>
-                        <td class="center">
-                          <a class="btn-icon  btn-icon-operativa" data-isin="<?php print (999990 + $x )?>" data-isin="<?php print (999990 + $x )?>">
-                            <i class="icon icon-2x icon-ico_azioni02A"></i>
-                          </a>
-                        </td>
-                      </tr>
+                <h3>Risultati della ricerca</h3>
+                <table cellspacing="0" cellpadding="0" border="0" id="tableSimula" class="sortableTable has-fixed-cols" data-fixed-cols="1">
+                  <thead>
+                    <tr>
+                        <th class="left"></th>
+                        <th class="left">Descrizione</th>
+                        <th class="left">Simbolo</th>
+                        <th class="left">Codice ISIN</th>
+                        <th class="left">Mercato</th>
+                        <th class="right">Prezzo Rif. Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <?php for($x=0;$x<=5;$x++) { ?>
+                    <tr>
+                      <td class="center">
+                        <a class="btn-icon">
+                          <i class="icon icon-2x icon_piumeno"></i>
+                        </a>
+                      </td>
+
+                      <td class="left"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></td>
+                      <td class="left">IT0005330961</td>
+                      <td class="left">IT0005330961</td>
+                      <td class="left"><?php print ($selectMercato['Azioni'][array_rand($selectMercato['Azioni'])]) ?></td>
+                      <td class="right">100,00 <br />00/00/0000</td>
+                    </tr>
                     <?php } ?>
-                    </tbody>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -510,11 +489,9 @@ $tipo_op_1 = array(1,2,3);
           e.preventDefault();
           $('#menuModifica').modal();
         });
-        $('.btn-icon-simula').on('click', function (e) {
-          e.preventDefault();
-          $('#menuSimula').modal().on('hidden.bs.modal', function () {
-            $('.simula-table').hide();
-          });
+        $('#menuSimula').on('hidden.bs.modal', function () {
+          $('.simula-table').hide();
+          $('#simula-cerca').removeAttr('disabled').removeClass('btn-disabled');
         });
         attivaIconaOperativa(".sortableTable");
       }
@@ -522,10 +499,19 @@ $tipo_op_1 = array(1,2,3);
     initThFilter();
     $('#simula-cerca').on('click', function (e) {
       e.preventDefault();
+      $('#simula-cerca').attr('disabled','disabled').addClass('btn-disabled');
       $('.simula-table').show();
     });
+    $('.simula-input').on('click change', function (e) {
+      e.preventDefault();
+      //$('.simula-table').hide();
+      $('#simula-cerca').removeAttr('disabled').removeClass('btn-disabled');
+    });
+    $('.btn-icon-simula').on('click', function (e) {
+      e.preventDefault();
+      $('#menuSimula').modal();
+    });
   });
-
   //inizializzazione datepicker
   $(function() {
     $("#dataInserimento").mask("99/99/9999");
