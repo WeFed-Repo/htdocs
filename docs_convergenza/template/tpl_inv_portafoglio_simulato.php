@@ -235,23 +235,19 @@ $tipo_op_1 = array(1,2,3);
       onPostBody: function(){
         // Funzioni da ripetere ad ogni refresh
         $(".table-btn-more").not("inited").click(function(){
-          $("#layerConfronta").modal("show");
+        });
+        $('.btn-icon-azioni').on('click', function (e) {
+          e.preventDefault();
+          $('#menuAzioni').modal();
+        });
+        $('.btn-icon-modifica').on('click', function (e) {
+          e.preventDefault();
+          $('#menuModifica').modal();
         });
         attivaIconaOperativa(".sortableTable");
       }
     });
     initThFilter();
-
-    $('.btn-icon-azioni').on('click', function (e) {
-      e.preventDefault();
-      $('#menuAzioni').modal();
-    });
-
-    $('.btn-icon-modifica').on('click', function (e) {
-      e.preventDefault();
-      $('#menuModifica').modal();
-    });
-
   });
 </script>
 
