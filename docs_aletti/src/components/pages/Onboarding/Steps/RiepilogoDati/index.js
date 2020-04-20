@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
-import validazione from "./validazione";
 import Anagrafica from '../Anagrafica';
 import salva from "./salva";
 
@@ -51,6 +50,6 @@ class StepForm extends Component {
 
 export default {
     form : StepForm,
-    validazione: validazione,
+    validazione: ()=>{return {}},
     salva: salva
 }
