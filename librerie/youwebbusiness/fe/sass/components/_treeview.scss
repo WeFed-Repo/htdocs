@@ -35,24 +35,24 @@
                 &:after {
                     height: 28px;
                 }
-            } 
-            .radio, 
+            }
+            .radio,
             .checkbox {
                 width: 100%;
-                input[type=checkbox], 
-                input[type=radio] {
-                    label {
-                        max-width: calc( 100% - 5px ) !important;
-                        line-height: 1.1em;    
-                        padding-top: 3px;
-                        &::before {
-                            margin-top: -5px;
-                        }
-                        &::after {
-                            margin-top: 1px;
-                            margin-left: -23px;
-                        }
+                label {
+                    max-width: 100% !important; //calc( 100% - 5px ) !important;
+                    line-height: 1.1em;
+                    padding-top: 3px;
+                    &::before {
+                        margin-top: -5px;
                     }
+                    &::after {
+                        margin-top: 1px;
+                        margin-left: -23px;
+                    }
+                }
+                input[type=checkbox],
+                input[type=radio] {
                     // stile disabilitato
                     &[disabled] {
                         & + label::before {
@@ -79,11 +79,11 @@
     >ul>li:first-child:after {
         height: 100%;
         top: 16px;
-    }  
+    }
     >ul>li:first-child:last-child {
         &:before,
         &:after {
             display: none !important;
         }
-    } 
+    }
 }

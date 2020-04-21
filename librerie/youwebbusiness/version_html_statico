@@ -4,7 +4,7 @@
 current_time=$(date "+%y%m%d_%H%M")
 
 #newpath="../../../../Documents/HTML_STATICO/"
-newpath="../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
+newpath="../../../../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
 
 newname="html_statico_$current_time"
 

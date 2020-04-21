@@ -213,6 +213,7 @@ dl, .list {
     // validate solution
     float:right;
     clear:right;
+    word-break: break-all;
   }
   dt, dd, &-key, &-value {
     &.full-w {
@@ -410,7 +411,7 @@ NOTE: La classe .content-hidden-in-mobile
   }
 }
 
-// WIDTH AUTO 
+// WIDTH AUTO
 .w-auto { width:auto !important; }
 @media (min-width:$bp_sm_min) { .w-sm-auto { width:auto !important; } }
 @media (min-width:$bp_md_min) { .w-md-auto { width:auto !important; } }

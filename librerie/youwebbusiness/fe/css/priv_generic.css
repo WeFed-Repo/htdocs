@@ -1713,6 +1713,22 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   color: white;
 }
 
+.azioni-tabella {
+  flex-wrap: wrap;
+}
+.azioni-tabella .colonna1 .d-flex {
+  flex-wrap: wrap !important;
+  max-width: 100%;
+}
+.azioni-tabella .colonna2 {
+  justify-self: flex-end;
+  align-self: flex-end !important;
+  float: right;
+}
+.azioni-tabella .list-inline {
+  padding-left: 5px;
+  justify-self: flex-end !important;
+}
 .azioni-tabella .list-inline > li, .azioni-tabella .list-inline .list-inline-item {
   border-right: #2F9988 2px solid;
   padding: 0 0.5rem;
@@ -5055,24 +5071,18 @@ svg#MappaInterattiva #Regioni path.selected, svg#MappaInterattiva #Regioni path.
 .c-treeview ul li .checkbox {
   width: 100%;
 }
-.c-treeview ul li .radio input[type=checkbox] label,
-.c-treeview ul li .radio input[type=radio] label,
-.c-treeview ul li .checkbox input[type=checkbox] label,
-.c-treeview ul li .checkbox input[type=radio] label {
-  max-width: calc( 100% - 5px ) !important;
+.c-treeview ul li .radio label,
+.c-treeview ul li .checkbox label {
+  max-width: 100% !important;
   line-height: 1.1em;
   padding-top: 3px;
 }
-.c-treeview ul li .radio input[type=checkbox] label::before,
-.c-treeview ul li .radio input[type=radio] label::before,
-.c-treeview ul li .checkbox input[type=checkbox] label::before,
-.c-treeview ul li .checkbox input[type=radio] label::before {
+.c-treeview ul li .radio label::before,
+.c-treeview ul li .checkbox label::before {
   margin-top: -5px;
 }
-.c-treeview ul li .radio input[type=checkbox] label::after,
-.c-treeview ul li .radio input[type=radio] label::after,
-.c-treeview ul li .checkbox input[type=checkbox] label::after,
-.c-treeview ul li .checkbox input[type=radio] label::after {
+.c-treeview ul li .radio label::after,
+.c-treeview ul li .checkbox label::after {
   margin-top: 1px;
   margin-left: -23px;
 }

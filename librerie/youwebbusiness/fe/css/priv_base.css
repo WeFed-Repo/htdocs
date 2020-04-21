@@ -1056,6 +1056,7 @@ dl dd, dl-value, .list dd, .list-value {
   padding: 0 0 0.25em 0;
   float: right;
   clear: right;
+  word-break: break-all;
 }
 dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .list dd.full-w, .list-key.full-w, .list-value.full-w {
   width: 100%;
