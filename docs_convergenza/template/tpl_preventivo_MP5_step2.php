@@ -87,11 +87,18 @@
             <div class="form-group">
                 <div class="row">
                     <div class="form-field-input col-xs-12 col-sm-12">
-                        <label class="control-label">Bene/soggetto da assicurare</label>
                         <div class="form-field">
                             <div class="row">
                                 <div class="form-field-input col-xs-12 col-sm-6">
+                                <label class="control-label">Bene/soggetto da assicurare</label>
                                     <select name="" class="form-control bene-assicurato" id="bene-assicurato_0"></select>
+                                </div>
+                                <div class="form-field-input col-xs-12 col-sm-6" id="datiAssicurato" style="display:none">
+                                    <label class="control-label">Assicurato
+                                        <a class="btn-icon"><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="Per la Tutela legale sono assicurati il Contraente, i figli minori anche se non conviventi, ed ogni familiare e/o persona con lui convivente se presente nello Stato di Famiglia.
+                                        Per RC e Assistenza: Il Contraente e i familiari conviventi."></i></a>
+                                    </label>
+                                    <div class="input-group"><span class="output">Lorem ipsum</span></div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +166,7 @@
             btnAggiungi.removeClass("disabled");
             arrayOptionSelect[index] = arrayOption.filter((element) => element.value !==  valSelected);
             console.log(arrayOptionSelect[0]);
-            
+            $("#datiAssicurato").hide();
             //Chiamata ad html relativo con switch di contenuto
                 switch (valSelected) {
                     case 'DA':
@@ -171,12 +178,13 @@
                     dimoraType = "DS";
                     break;
                     case 'B':
-                    urlToCall = "/include/aggiungiBox.html";
+                    urlToCall = "/include/aggiungiBox.php";
                     dimoraType = "";
                     break;
                     case 'SF':
-                    urlToCall = "/include/aggiungiPersona.html";
+                    urlToCall = "/include/aggiungiPersona.php";
                     dimoraType = "";
+                    $("#datiAssicurato").show();
                      break;
                     default:
                     $('.add-wrapper').eq(index).html("");
