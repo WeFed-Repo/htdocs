@@ -171,6 +171,9 @@ h3 {
 .paddingLeftLarge {
     padding-left: 20px !important
 }
+.paddingLeftExtraLarge {
+    padding-left: 40px
+}
 
 .paddingLeftMedium {
      padding-left: 15px;
@@ -900,7 +903,12 @@ h1 .pager .circle {
     font-weight: 300;
     margin-bottom: 8px;
 }
-
+.form-group .input-line {
+    float: left;
+    padding-top: 15px;
+    padding-left: 10px;
+    display: inline-block;
+}
 .titleSection.titleForm {
     margin-bottom: 13px;
 }
@@ -5177,7 +5185,8 @@ th.radio, th.checkbox {
 }
 .link-text.text-underline, text-underline.link-text:hover {
     text-decoration: underline;
-    margin-left: 10px
+    margin-left: 10px;
+    cursor: pointer;
 }
 .informativa .link-text.text-underline, .informativa text-underline.link-text:hover {
     margin-left: 0
