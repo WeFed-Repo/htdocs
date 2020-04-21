@@ -1,5 +1,8 @@
 .onboarding-form {
     height:100%;position:relative;width:100%; padding-bottom:100px;
+    .onboarding-form {
+        padding-bottom: 0;
+    }
     
     .onboarding-block {
         padding-top: 20px;
@@ -41,6 +44,13 @@
     }
 }
 
+// Wrapper per contenuti riepilogativi 
+.wrapped-item {
+    border:solid 2px #ddd; padding:30px 15px 15px; position:relative; border-radius:10px;
+    margin-bottom:30px;
+    h4.wrapped-item-title {font-size:20px; background:#fff;display:inline-block;top:-13px; padding:0 5px; position:absolute;color:#666;left:10px;}
+
+}
 .onboarding {position:relative;}
 
 .onboarding-pulsantiera {

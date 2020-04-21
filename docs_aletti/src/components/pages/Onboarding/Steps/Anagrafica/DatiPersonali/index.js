@@ -209,7 +209,8 @@ class DatiPersonali extends Component {
                         }
                     }
                 default:
-                    break;
+
+                break;
             }
         }
     }
@@ -231,7 +232,7 @@ class DatiPersonali extends Component {
                     <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] != "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] !== "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
                         </div>
                     </div>
                 </DefaultModal>
@@ -320,7 +321,7 @@ class DatiPersonali extends Component {
                                         onChange={this.props.obchange}
                                         ajaxoptions="province"
                                         placeholder="Seleziona"
-                                        disabled={this.props.formstate[anagraficaIntestatario + "paesenascita"] != "" && this.props.formstate[anagraficaIntestatario + "paesenascita"] != "86"}
+                                        disabled={this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "" && this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "86"}
                                         output = {this.props.isOutput}
                                     >
                                     </Form.select>
@@ -363,7 +364,7 @@ class DatiPersonali extends Component {
                                     <h4>Inserisci i dati del tuo documento di identità</h4>
                                     <Row>
                                         <Col xs="6">
-                                            {optionTipoDocumento != [] && optionTipoDocumento != undefined && <Form.select
+                                            {optionTipoDocumento !== [] && optionTipoDocumento !== undefined && <Form.select
                                                 label="Tipo di documento*"
                                                 name={anagraficaIntestatario + "codtipodocumento"}
                                                 value={this.props.formstate[anagraficaIntestatario + "codtipodocumento"]}
@@ -373,7 +374,7 @@ class DatiPersonali extends Component {
                                                 placeholder="Seleziona"
                                                 output = {this.props.isOutput}
                                                 cbchange={(val) => {
-                                                    if (val != "") {
+                                                    if (val !== "") {
                                                         this.setState({ isHelpDocVisible: true })
                                                         argHelp = this.props.formstate[anagraficaIntestatario + "codtipodocumento"]
                                                     }
@@ -407,7 +408,7 @@ class DatiPersonali extends Component {
                                                 mask={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? "alfanumerico" : ""}
                                             >
                                             </Form.input>
-                                            {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_numero"} />}
+                                            {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] !== "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_numero"} />}
                                         </Col>
                                     </Row>
 
@@ -435,7 +436,7 @@ class DatiPersonali extends Component {
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
-                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
+                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] !== "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
                                                 </Col>
                                                 <Col xs="6" className="position-help">
                                                     <Form.date
@@ -452,12 +453,12 @@ class DatiPersonali extends Component {
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
-                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] != "") && <HelpBtn className ="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
+                                                    {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] !== "") && <HelpBtn className ="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataScadenza"} />}
                                                 </Col>
                                             </Row>
                                         </Col>
                                         <Col xs="6" >
-                                            {listaNazioni != [] && listaNazioni != undefined && <Form.select
+                                            {listaNazioni !== [] && listaNazioni !== undefined && <Form.select
                                                 label="Paese di rilascio*"
                                                 name={anagraficaIntestatario + "paeserilascio"}
                                                 value={this.props.formstate[anagraficaIntestatario + "paeserilascio"]}
@@ -531,7 +532,7 @@ class DatiPersonali extends Component {
                                         <Col xs="8">
                                             <Row>
                                                 <Col xs="4">
-                                                    {optionResidenza != [] && optionResidenza != undefined &&
+                                                    {optionResidenza !== [] && optionResidenza !== undefined &&
                                                         <Form.select
                                                             label="Indirizzo di residenza*"
                                                             name={anagraficaIntestatario + "tipoindirizzoresidenza"}
@@ -664,7 +665,7 @@ class DatiPersonali extends Component {
                                         <Row>
 
                                             <Col xs="6">
-                                                {optionStudio != [] && optionStudio != undefined && <Form.select
+                                                {optionStudio !== [] && optionStudio !== undefined && <Form.select
                                                     label="Titolo di studio"
                                                     name={anagraficaIntestatario + "codtitolostudio"}
                                                     value={this.props.formstate[anagraficaIntestatario + "codtitolostudio"]}

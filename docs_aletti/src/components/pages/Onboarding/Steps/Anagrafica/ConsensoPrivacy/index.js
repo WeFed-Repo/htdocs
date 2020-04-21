@@ -97,7 +97,7 @@ class ConsensoPrivacy extends Component {
                                     </Form.date>
                                 </Col>
                                 <Col xs="6">
-                                    {optionSesso != [] && optionSesso != undefined && <Form.radiogroup
+                                    {optionSesso !== [] && optionSesso !== undefined && <Form.radiogroup
                                         label="Sesso*"
                                         name={anagraficaIntestatario + "sesso"}
                                         value={this.props.formstate[anagraficaIntestatario + "sesso"]}
@@ -195,7 +195,7 @@ class ConsensoPrivacy extends Component {
                                     </Row>
                                 </Col>
                             </Row>
-                            {optionTextDiscalimer != [] && optionTextDiscalimer != undefined && <div>
+                            {optionTextDiscalimer !== [] && optionTextDiscalimer !== undefined && <div>
 
                                 <h3>CONSENSI AL TRATTAMENTO DEI DATI PERSONALI*</h3>
                                 <p>Tenuto conto dell’Informativa che mi è stata fornita ai sensi del Regolamento EU 2016/679 e messa a disposizione sul sito Internet della Banca, per quanto riguarda: </p>

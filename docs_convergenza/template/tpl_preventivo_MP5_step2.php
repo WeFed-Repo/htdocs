@@ -83,15 +83,22 @@
     <form method="post" action="" id="aggiungiAssicurazioni">
         <h3 class="titleSection titleForm">Beni da assicurare</h3>
         <p>Puoi indicare fino ad un massimo di due fabbricati (a scelta tra abitazione abituale, saltuaria e box) e una persona (soggetto fisico).</p>        
-        <div class="formWrapper garanzia">
+        <div class="formWrapper garanzia visible">
             <div class="form-group">
                 <div class="row">
                     <div class="form-field-input col-xs-12 col-sm-12">
-                        <label class="control-label">Bene/soggetto da assicurare</label>
                         <div class="form-field">
                             <div class="row">
                                 <div class="form-field-input col-xs-12 col-sm-6">
+                                <label class="control-label">Bene/soggetto da assicurare</label>
                                     <select name="" class="form-control bene-assicurato" id="bene-assicurato_0"></select>
+                                </div>
+                                <div class="form-field-input col-xs-12 col-sm-6" id="datiAssicurato" style="display:none">
+                                    <label class="control-label">Assicurato
+                                        <a class="btn-icon"><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="Per la Tutela legale sono assicurati il Contraente, i figli minori anche se non conviventi, ed ogni familiare e/o persona con lui convivente se presente nello Stato di Famiglia.
+                                        Per RC e Assistenza: Il Contraente e i familiari conviventi."></i></a>
+                                    </label>
+                                    <div class="input-group"><span class="output">Lorem ipsum</span></div>
                                 </div>
                             </div>
                         </div>
@@ -102,13 +109,7 @@
         </div>
         <div class="formWrapper garanzia hidden">
             <div class="form-group">
-               <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand"></i> Aggiungi bene</a>
-                        <a class="link-text btn-elimina hidden" href="javascript:;" data-select-rel="#bene-assicurato_1"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
-                    </div>
-                </div>
-                <div class="row next-select hidden" >
+               <div class="row next-select" >
                     <div class="form-field-input col-xs-12 col-sm-46">
                         <label class="control-label">Bene/soggetto da assicurare</label>
                         <div class="form-field">
@@ -123,7 +124,15 @@
             </div>
             <div class="add-wrapper"></div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand disabled" disabled></i> Aggiungi bene</a>
+                <a class="link-text btn-elimina hidden" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            </div>
+        </div>
     </form>
+</section>
+<section>
 </section>
 <script>
   	//chiamata per caricare html aggiunto
@@ -138,57 +147,82 @@
           arrayOptionSelect = []
         
     
-    var setSelect = function(idSelect) {
+    var setSelect = function(idSelect, options) {
         var wrapper = $("#" + idSelect),
             optionHtml = "<option selected=\"selected\" value=\"\">Seleziona</option>"
-        arrayOption.map (el => {
+         options.map (el => {
             optionHtml +=  "<option value=" + el["value"]  + " " + "data-type=" + el["type"]  +">" + el["text"] +"</option>"
         })
         wrapper.append(optionHtml);
     }
     //al load popolo la prima select
-    setSelect("bene-assicurato_0");
+    setSelect("bene-assicurato_0", arrayOption);
     //alla selezione di una categoria aggiungo o tolgo dall'array di partenza
     $.each(selectAggiungiAss, function(index, value ) {
         
         $(this).on("change", function() {
             //popolo l'array per l'eventuale select successiva
             valSelected = $(this).find("option:selected").val();
+            btnAggiungi.removeClass("disabled");
             arrayOptionSelect[index] = arrayOption.filter((element) => element.value !==  valSelected);
             console.log(arrayOptionSelect[0]);
-            
+            $("#datiAssicurato").hide();
             //Chiamata ad html relativo con switch di contenuto
                 switch (valSelected) {
                     case 'DA':
+                    urlToCall = "/include/aggiungiDimora.php";
+                    dimoraType = "DA";
+                    break;
                     case 'DS':
-                    urlToCall = "/include/aggiungiDimora.html";
+                    urlToCall = "/include/aggiungiDimora.php";
+                    dimoraType = "DS";
                     break;
- 
                     case 'B':
-                    urlToCall = "/include/aggiungiBox.html";
+                    urlToCall = "/include/aggiungiBox.php";
+                    dimoraType = "";
                     break;
-
                     case 'SF':
-                    urlToCall = "/include/aggiungiPersona.html";
+                    urlToCall = "/include/aggiungiPersona.php";
+                    dimoraType = "";
+                    $("#datiAssicurato").show();
                      break;
                     default:
+                    $('.add-wrapper').eq(index).html("");
+                    btnAggiungi.addClass("disabled");
                     break;
                 }
-            $.ajax({
-	          type: "GET",
+            
+            if(valSelected!=="")
+            {
+                
+                $.ajax({
+	            type: "GET",
 	              url: urlToCall,
 	              dataType: 'html',
+                  data: "dimoratype=" + dimoraType,
 	              success: function(result){
 	                //nextFormWrapper =  selectAggiungiAss.closest('.formWrapper').next('.formWrapper').eq(0);
                     $('.add-wrapper').eq(index).html(result);
-                    $('.formWrapper.hidden').eq(index).removeClass("hidden").addClass("visible");
-    	        }
+                }
              })
+            }
+            
         })
         
     
     })
-    
+
+    btnAggiungi.on('click', function(){
+        var selectAttiva = $('.formWrapper.visible').find(".bene-assicurato")
+        if(!$(this).hasClass("disabled"))
+        {
+            setSelect("bene-assicurato_1", arrayOptionSelect[0]);
+            selectAttiva.attr("disabled", true);
+            $('.formWrapper.hidden').eq(0).removeClass("hidden").addClass("visible");
+           
+        }
+        
+    })
       /*
       btnAggiungi.on('click', function(){
         

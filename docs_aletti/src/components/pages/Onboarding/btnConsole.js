@@ -27,7 +27,7 @@ export default class extends Component {
                                     <p>Stai abbandonando la procedura di apertura conto. Cosa vuoi fare?</p>
                                     <div className="btn-console">
                                         <div className="btn-console-left"><NavLink to="/"><Button>Esci senza salvare</Button></NavLink></div>
-                                        <div className="btn-console-right"><Button color="primary" onClick={() => formprops.salvaPratica(false)}>Salva ed esci</Button></div>
+                                        <div className="btn-console-right"><Button color="primary" onClick={() => formprops.obsave(false)}>Salva ed esci</Button></div>
                                     </div>
                                 </ModalBody>
                             </Modal>
