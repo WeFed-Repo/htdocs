@@ -351,8 +351,7 @@ class FormFile extends Component {
 
     constructor(props) {
         super(props);
-
-        console.log(this.props.label + " " + this.props.name);
+        
         this.state = {
             flag_unico: (this.props.value && this.props.value.filter((el)=>{return (el.tipo==="FRONTE" || el.tipo==="RETRO")}).length>0)? false: true,
             
@@ -422,8 +421,6 @@ class FormFile extends Component {
 
                 // Estrae il tipo dall'estensione del file (Maiuscola)
                 let extension = this.state.fileToTransfer.split(".").reverse()[0].toUpperCase();
-
-    
 
                 // Se l'estensione è compatibile 
                 if (this.props.formati.map((obj)=>{return obj.value.toLowerCase()}).indexOf(extension.toLowerCase())>=0 ){

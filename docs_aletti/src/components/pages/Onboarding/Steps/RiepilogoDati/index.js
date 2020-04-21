@@ -41,16 +41,16 @@ class StepForm extends Component {
                 <h3>Riepilogo dati</h3>
                     <p>Ecco il riepilogo dei dati inseriti. Verifica che siano tutti corretti: se ci sono variazioni, puoi ancora modificarli.</p>
                     <section className="onboarding-block">
-                        <div class="wrapped-item">
-                            <h4 class="wrapped-item-title">Dati anagrafici</h4>
+                        <div className="wrapped-item">
+                            <h4 className="wrapped-item-title">Dati anagrafici</h4>
                             <FieldOutput.ANAGRAFICA.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.ANAGRAFICA.form>
                         </div>
-                        <div class="wrapped-item">
-                            <h4 class="wrapped-item-title">Prodotti</h4>
+                        <div className="wrapped-item">
+                            <h4 className="wrapped-item-title">Prodotti</h4>
                             <FieldOutput.RACCOLTAPRODOTTI.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.RACCOLTAPRODOTTI.form>
                         </div>
-                        <div class="wrapped-item">
-                            <h4 class="wrapped-item-title">Adempimenti normativi</h4>
+                        <div className="wrapped-item">
+                            <h4 className="wrapped-item-title">Adempimenti normativi</h4>
                             <FieldOutput.ADEMPIMENTINORMATIVI.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.ADEMPIMENTINORMATIVI.form>
                         </div>
                     </section>

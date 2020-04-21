@@ -16,8 +16,6 @@ class StepForm extends Component {
 
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props
         let formstate = this.props.obstate;
-        // Cattura i domini tramite le props
-        let obdomini = this.props.obdomini;
         let isOutput = this.props.isOutput ? true : false;
 
         return (<>

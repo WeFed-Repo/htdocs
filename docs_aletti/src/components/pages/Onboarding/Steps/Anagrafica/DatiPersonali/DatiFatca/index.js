@@ -20,8 +20,8 @@ class DatiFatca extends Component {
             isSecondaResidenzaVisible: [true, true],
             showModalFatcaDisabled: false,
             //STATI PER FATCA //SE NON CHIAMO LA BOZZA DI DEFAULT SI PARTE DA SITUAZIONE 2 RESIDENZE (ITALIA E UNA STRANIERA DA SELEZIONARE)
-            local_numero_residenze_fiscali: [this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length != "" ? this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length : 2, this.props.formstate.field_anagraficablob_intestatari_1_listresidenzefiscale_length != "" ? this.props.formstate.field_anagraficablob_intestatari_1_listresidenzefiscale_length : 2],
-            isBtnAggiungiActive: this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length != "" ? true : false,
+            local_numero_residenze_fiscali: [this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length !== "" ? this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length : 2, this.props.formstate.field_anagraficablob_intestatari_1_listresidenzefiscale_length !== "" ? this.props.formstate.field_anagraficablob_intestatari_1_listresidenzefiscale_length : 2],
+            isBtnAggiungiActive: this.props.formstate.field_anagraficablob_intestatari_0_listresidenzefiscale_length !== "" ? true : false,
             isTinRequested1: [listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_0_listresidenzefiscale_1_codiceuic"]) ? true : false, listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_1_listresidenzefiscale_1_codiceuic"]) ? true : false],
             isTinRequested2: [listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_0_listresidenzefiscale_2_codiceuic"]) ? true : false, listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_1_listresidenzefiscale_2_codiceuic"]) ? true : false],
             isTinRequested3: [listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_0_listresidenzefiscale_3_codiceuic"]) ? true : false, listaTinRequested.some(value => value.toString() === this.props.formstate["field_anagraficablob_intestatari_1_listresidenzefiscale_3_codiceuic"]) ? true : false],
@@ -156,15 +156,15 @@ class DatiFatca extends Component {
                 return obj.value;
             }),
             //listaNazioni per la prima select (tolgo ITALIA che è la residenza di default)
-            listaNazioniResidenza1 = listaNazioni.filter((el) => { return el.text != "ITALIA" }),
+            listaNazioniResidenza1 = listaNazioni.filter((el) => { return el.text !== "ITALIA" }),
 
             //LISTA DELLE EVENTUALI RESIDENZE ESTERE AGGIUNTIVE
             listaNazioniResidenza2 = [],
             listaNazioniResidenza3 = [];
 
         //PER OGNI INTESTATARIO RESTITUISCE LA LISTA DELLE NAZIONI AL NETTO DELLA NAZIONE SELEZIONATA IN PARTENZA    
-        listaNazioniResidenza2[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
-        listaNazioniResidenza3[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_2_codiceuic"] }).filter((el) => { return el.value != this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
+        listaNazioniResidenza2[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value !== this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
+        listaNazioniResidenza3[this.props.indexInt] = listaNazioniResidenza1.filter((el) => { return el.value !== this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_2_codiceuic"] }).filter((el) => { return el.value !== this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"] })
 
         //
 
@@ -205,7 +205,7 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
 
                     {this.state.isSecondaResidenzaVisible[this.props.indexInt] && <Row>
                         <Col xs="6">
-                            {this.props.fatcaEnable && listaNazioniResidenza1 != [] && listaNazioniResidenza1 != undefined && <Form.select
+                            {this.props.fatcaEnable && listaNazioniResidenza1 !== [] && listaNazioniResidenza1 !== undefined && <Form.select
                                 label="Secondo paese di residenza fiscale"
                                 name={this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"}
                                 value={this.props.formstate[this.props.anagraficaIntestatario + "listresidenzefiscale_1_codiceuic"]}
@@ -332,7 +332,7 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
                         }
                     </Row>
                     }
-                    {this.state.local_numero_residenze_fiscali[this.props.indexInt] > 2 && listaNazioniResidenza2[this.props.indexInt] != [] && listaNazioniResidenza2[this.props.indexInt] != undefined &&
+                    {this.state.local_numero_residenze_fiscali[this.props.indexInt] > 2 && listaNazioniResidenza2[this.props.indexInt] !== [] && listaNazioniResidenza2[this.props.indexInt] !== undefined &&
                         <Row>
                             <Col xs="6">
                                 <Form.select
@@ -450,7 +450,7 @@ amministrazioni tributarie dei rispettivi Paesi aderenti.</p>
                             }
                         </Row>
                     }
-                    {this.state.local_numero_residenze_fiscali[this.props.indexInt] > 3 && listaNazioniResidenza3[this.props.indexInt] != [] && listaNazioniResidenza3[this.props.indexInt] != undefined && <Row>
+                    {this.state.local_numero_residenze_fiscali[this.props.indexInt] > 3 && listaNazioniResidenza3[this.props.indexInt] !== [] && listaNazioniResidenza3[this.props.indexInt] !== undefined && <Row>
                         <Col xs="6">
                             <Form.select
                                 label="Quarto paese di residenza fiscale"
