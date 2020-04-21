@@ -11,7 +11,8 @@ class Adever extends Component {
 
         let int = this.props.int,
             formstate = this.props.obstate,
-            obchange = this.props.obchange;
+            obchange = this.props.obchange,
+            isOutput = this.props.isOutput ? true : false;
 
         // Calcolo variabili "locali"
         let nomeintestatario = formstate["field_anagraficablob_intestatari_" + int + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + int + "_cognome"]
@@ -19,7 +20,7 @@ class Adever extends Component {
         return (
             <DefaultCollapse
                 label={"Normativa antiricilaggio " + nomeintestatario}
-                startsOpen={int === "0"}
+                startsOpen={int === "0" && !isOutput}
                 className="search-collapse"
                 disabled={false}
             >
@@ -34,6 +35,7 @@ class Adever extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"]}
                                 onChange={obchange}
                                 options={[{ "value": "true", "text": "Dichiaro di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
+                                output={isOutput}
                             ></Form.checkgroup>
                         </Col>
                     </Row>
@@ -48,6 +50,7 @@ class Adever extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
                                 onChange={this.props.obchange}
                                 options={[{ "value": "true", "text": "Sì" }, { "value": "false", "text": "No" }]}
+                                output={isOutput}
                             ></Form.radiogroup>
                         </Col>
                     </Row>
@@ -62,6 +65,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_professione"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                         <Col sm="6">
@@ -73,6 +77,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_taesettore"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                     </Row>
@@ -86,6 +91,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_nazionalita"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                         {
@@ -100,6 +106,7 @@ class Adever extends Component {
                                     disabled={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] !== "86"}
                                     placeholder="Seleziona..."
                                     options={this.props.obdomini["adever_provincia"]}
+                                    output={isOutput}
                                 ></Form.select>
                             </Col>
                         }
@@ -115,6 +122,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_fasciareddito"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                         <Col sm="6">
@@ -125,6 +133,7 @@ class Adever extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciaredditonote"]}
                                 onChange={obchange}
                                 placeholder="Note..."
+                                output={isOutput}
                             ></Form.input>
                         </Col>
                     </Row>
@@ -138,6 +147,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_originereddito"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                         <Col sm="6">
@@ -148,6 +158,7 @@ class Adever extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_origineredditonote"]}
                                 onChange={obchange}
                                 placeholder="Note..."
+                                output={isOutput}
                             ></Form.input>
                         </Col>
                     </Row>
@@ -161,6 +172,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_fasciapatrimonio"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                        
@@ -175,6 +187,7 @@ class Adever extends Component {
                                     error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
                                     onChange={obchange}
                                     placeholder="Note..."
+                                    output={isOutput}
                                 ></Form.input>
                                 </Col>
                             }
@@ -191,6 +204,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 placeholder="Seleziona..."
                                 options={this.props.obdomini["adever_originefondi"]}
+                                output={isOutput}
                             ></Form.select>
                         </Col>
                         {formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"]==="7" &&
@@ -202,6 +216,7 @@ class Adever extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"]}
                                 onChange={obchange}
                                 placeholder="Note..."
+                                output={isOutput}
                             ></Form.input>
                         </Col>
                         
@@ -233,10 +248,12 @@ class StepForm extends Component {
         // Cattura i domini tramite le props
         let obdomini = this.props.obdomini;
 
+        let isOutput = this.props.isOutput ? true : false;
+
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Adempimenti normativi</h3>
+                    {!isOutput && <h3>Adempimenti normativi</h3>}
                     <section className="onboarding-block">
                         <p>Paragrafo introduttivo lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing.</p>
                         <Row>
@@ -249,6 +266,7 @@ class StepForm extends Component {
                                     onChange={this.props.obchange}
                                     placeholder="Seleziona..."
                                     options={this.props.obdomini["adever_naturascopo"]}
+                                    output={isOutput}
                                 ></Form.select>
                             </Col>
                             { formstate["field_sessionfirmeblob_depositoincluso"]==="true" && 
@@ -261,6 +279,7 @@ class StepForm extends Component {
                                     onChange={this.props.obchange}
                                     placeholder="Seleziona..."
                                     options={this.props.obdomini["adever_naturascopodeposito"]}
+                                    output={isOutput}
                                 ></Form.select>
                             </Col>
                             }
@@ -285,6 +304,7 @@ class StepForm extends Component {
                             error={formstate.errors["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             onChange={this.props.obchange}
                             options={[{ "value": "true", "text": "Acconsento" }, { "value": "false", "text": "Non acconsento" }]}
+                            output={isOutput}
                         ></Form.radiogroup>
 
                     </section>

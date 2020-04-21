@@ -18,6 +18,7 @@ class StepForm extends Component {
         let formstate = this.props.obstate;
         // Cattura i domini tramite le props
         let obdomini = this.props.obdomini;
+        let isOutput = this.props.isOutput ? true : false;
 
         return (<>
             {
@@ -40,6 +41,7 @@ class StepForm extends Component {
                                 value={formstate.field_sessionfirmeblob_depositoincluso}
                                 error={formstate.errors["field_sessionfirmeblob_depositoincluso"]}
                                 onChange={this.props.obchange}
+                                output={isOutput}
                                 options={[{ "value": "true", "text": "DEPOSITO TITOLI A CUSTODIA ED AMMINISTRAZIONE" }]}
                             >
                                 ></Form.checkgroup>
@@ -72,6 +74,7 @@ class StepForm extends Component {
                                 filedescription="Contratti per la prestazione di Servizi ed Attività d'Investimento e Servizi AccessoriInformativa sul trattamento dei dati personali"
                                 fileurl="http://www.google.it"
                                 filetype="pdf"
+                                output={isOutput}
                             ></Form.checkfile>
                             <Form.checkgroup className="no-label"
                                 name="field_sessionfirmeblob_informativamifid"
@@ -80,13 +83,14 @@ class StepForm extends Component {
                                 disabled={!this.state.localfield_privacyopen}
                                 onChange={this.props.obchange}
                                 options={[{ "value": "true", "text": "Dichiaro di aver preso visione dell’informativa MIFID" }]}
+                                output={isOutput}
                             >
                             </Form.checkgroup>
                         </section>
                         {formstate.field_sessionfirmeblob_idmifid !=="" &&
                             <section className="onboarding-block">
                                 <p>Questionario MIFID già <strong>compilato</strong>.</p>
-                                <Button className="form-inline-request" onClick={()=>this.props.setObState({field_sessionfirmeblob_idmifid: "", questMifid: true})}>Ricompila il questionario MIFID</Button>
+                                {!isOutput && <Button className="form-inline-request" onClick={()=>this.props.setObState({field_sessionfirmeblob_idmifid: "", questMifid: true})}>Ricompila il questionario MIFID</Button>}
                             </section>
                         }
                         </div>
