@@ -1,14 +1,22 @@
 #!/bin/bash
 # PER RISOLVERE PERMISSION DENIED USARE: chmod +x version_html_statico
 
-current_time=$(date "+%y%m%d_%H%M")
+echo -n "${STACCO}${YELLOW}Hai generato lo statico prima di far partire lo script?${NC}"
+read REPLY
+if [[ $REPLY =~ ^[y]$ ]]
+then
 
-#newpath="../../../../Documents/HTML_STATICO/"
-newpath="../../../../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
+  current_time=$(date "+%y%m%d_%H%M")
 
-newname="html_statico_$current_time"
+  #newpath="../../../../Documents/HTML_STATICO/"
+  newpath="../../../../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
 
-zip -vr "$newpath$newname.zip" html_statico/ changelog.html  -x "*.DS_Store"
+  newname="html_statico_$current_time"
+
+  zip -vr "$newpath$newname.zip" html_statico/ changelog.html  -x "*.DS_Store"
 
 
-#ls $newpath
+else
+  echo "\n${RED}Vai e torna! :D${NC}"
+fi
+echo "\n"
