@@ -54,10 +54,22 @@
     }
   }
   &-control-prev-icon {
-    @extend .icon-img-prev;
+    @include icon-img-prev($green);
+    @at-root [disabled] & {
+      @include icon-img-prev($gray3); 
+    } 
+    @at-root .disabled & {
+      @include icon-img-prev($gray3); 
+    } 
   }
   &-control-next-icon {
-    @extend .icon-img-next;
+    @include icon-img-next($green);
+    @at-root [disabled] & {
+      @include icon-img-next($gray3); 
+    } 
+    @at-root .disabled & {
+      @include icon-img-next($gray3); 
+    } 
   }
   &-arrows-outside {
     margin: 0 calc(#{$arrowWidth} + #{$spacer});

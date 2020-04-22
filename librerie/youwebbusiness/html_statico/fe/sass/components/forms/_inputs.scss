@@ -3,26 +3,36 @@
 .control-label {
   width: 100%;
   font-weight: normal;
-  color: #777;
+  color: $gray2;
   line-height: 21px;
 }
 
 .form-control {
-  border: solid 1px #ddd;
+  border: solid 1px $gray4;
+  &:focus {
+    border: solid 1px $gray4;
+    box-shadow: nosvg-icon-size
+    ne;
+  }
+}
+
+.form-control,
+.form-control[readonly] {
   border-radius: 3px;
   background-color: $grayBG;
   box-shadow: none;
   margin-bottom: 16px;
-  height: 44px;
+  height: $inputHeight;
   padding: 0 8px;
-  &:focus {
-    border: solid 1px #ddd;
-    box-shadow: none;
-  }
   &:focus,
   &:focus::-ms-value /* fix per ie 11 */ {
     background-color: $grayBG;
   }
+}
+
+.form-control[readonly]:not([data-file]) {
+  font-style: italic;
+  //background-color: darken($grayBG,5%);
 }
 
 .form-group,
@@ -35,7 +45,7 @@
   .form-row {
     padding-left: 16px;
     padding-right: 16px;
-  } 
+  }
 }
 
 .input-group>.input-group-append,
@@ -53,7 +63,7 @@ label[for] {
 select {
   &.form-control,
   &.form-control:not([size]):not([multiple]) {
-    height: 44px;
+    height: $inputHeight;
     background: $grayBG url(../../fe/img/form_select.gif) no-repeat right center;
     appearance: none;
     -webkit-appearance: none;
@@ -69,12 +79,20 @@ select {
   }
 }
 
+// FILE
+input[type="file"].form-control {
+  display:none;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+
 span.output {
   display: inline-block;
   width: 100%;
   font-weight: bold;
   margin-bottom: 16px;
-  min-height: 44px;
+  min-height: $inputHeight;
   padding: 10px 0;
   &.big {
     font-size: 18px;
@@ -114,35 +132,40 @@ $noLabelSize : calc( 21px + .5rem );
   }
 }
 
-.input-group-append .input-group-text,
-.input-group-prepend .input-group-text {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: 0;
-  background-color: #e4e4e4;
-  cursor: pointer;
-  .icon {
-    color: $greenLink;
+.input-group-append,
+.input-group-prepend {
+  max-width: 50px;
+  .input-group-text {
+    max-width: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 0;
+    background-color: $gray6;
+    cursor: pointer;
+    @include icon {
+      @include svg-icon-color($greenLink);
+
+    }
   }
 }
 select, input, textarea {
   &, &.form-control, &.form-control:not([size]):not([multiple]) {
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #aaa;
+      color: $input_placeholder;
     }
     &::-moz-placeholder { /* Firefox 19+ */
-      color: #aaa;
+      color: $input_placeholder;
     }
     &:-ms-input-placeholder { /* IE 10+ */
-      color: #aaa;
+      color: $input_placeholder;
     }
     &:-moz-placeholder { /* Firefox 18- */
-      color: #aaa;
+      color: $input_placeholder;
     }
     &[disabled] {
-      border: #ddd;
-      background-color: #ddd;
-      color: $white;
+      border: $input_disabled_bkg;
+      background-color: $input_disabled_bkg;
+      color: $input_disabled_color;
       // cerca gli elementi direttamente vicini O vicini ad un bottone
       &, + button {
         + .input-group-append,
@@ -155,16 +178,16 @@ select, input, textarea {
        }
       }
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: $white;
+        color: $input_disabled_placeholder;
       }
       &::-moz-placeholder { /* Firefox 19+ */
-        color: $white;
+        color: $input_disabled_placeholder;
       }
       &:-ms-input-placeholder { /* IE 10+ */
-        color: $white;
+        color: $input_disabled_placeholder;
       }
       &:-moz-placeholder { /* Firefox 18- */
-        color: $white;
+        color: $input_disabled_placeholder;
       }
     }
   }
@@ -173,8 +196,8 @@ select, input, textarea {
 .datepicker {
   input + button {
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: $inputHeight;
+    height: $inputHeight;
     z-index: 1;
     right: 0;
     top: 0;
@@ -187,6 +210,29 @@ select, input, textarea {
     z-index: -1;
     opacity: 0;
     cursor: disabled;
+  }
+}
+
+.bootstrap-timepicker-widget {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  tr:first-child, tr:last-child {
+    display: none !important;
+  }
+  .separator {
+    position: relative;
+    width: auto;
+    border: none;
+    &:after  {
+      display: none !important;
+    }
+  }
+  input {
+    min-width: 4ch;
+    text-align: center;
+    background-color: $grayBG;
+    border: solid 1px $gray4;
+    border-radius: 3px;
+    box-shadow: none;
   }
 }
 

@@ -1,0 +1,117 @@
+// cerca la chiave in un map partendo dal valore.
+// se non esiste restituisce false.
+@function map_get_key($array,$needle){
+  $exists: false;
+  @each $key, $value in $array {
+    @if($exists!=true) {
+      @if($needle==$value) {
+        $exists: $key;
+      }
+    }
+  } 
+  @return $exists;
+}
+
+// Encoding per gli scss degli svg
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+      $hex: str-slice(ie-hex-str($string), 4);
+      $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+
+@function color_exist_in_maps($hex){
+  $exists : false;
+  // Se il colore esiste nel'array colori...
+  $key_in_colors : map_get_key($colors,$hex);
+  @if( $key_in_colors != false ) {
+    // ... allora cerco la chiave trovata nell'array dei filtri...
+    $value_in_filters : map-get($colors_filters,$key_in_colors);
+    @if( $value_in_filters != false ) {
+      // ... e se la trovo, applico a filter il fallback per IE.
+      $exists : true;
+  } @else {
+      @warn $key_in_colors + " is not in $colors_filters array!";
+    }
+  } @else {
+    @warn $hex + " is not in $colors array!";
+  }
+  @return $exists;
+}
+
+// modifiche ai colori 
+
+@function convert-angle($value, $unit) {
+  $convertable-units: deg grad turn rad;
+  $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+  @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+  @return $value
+          / nth($conversion-factors, index($convertable-units, unit($value)))
+          * nth($conversion-factors, index($convertable-units, $unit));
+  }
+  
+  @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+// Test if `$value` is an angle
+// @param {*} $value - Value to test
+// @return {Bool}
+@function is-direction($value) {
+  $is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+  
+  @return $is-direction or $is-angle;
+}
+
+// Convert a direction to legacy syntax
+// @param {Keyword | Angle} $value - Value to convert
+// @require {function} is-direction
+// @require {function} convert-angle
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+  @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+  }
+  
+  $conversion-map: ( 
+  to top          : bottom,
+  to top right    : bottom left,
+  to right top    : left bottom,
+  to right        : left,
+  to bottom right : top left,
+  to right bottom : left top,
+  to bottom       : top,
+  to bottom left  : top right,
+  to left bottom  : right top,
+  to left         : right,
+  to left top     : right bottom,
+  to top left     : bottom right
+  );
+  
+  @if map-has-key($conversion-map, $value) {
+  @return map-get($conversion-map, $value);
+  }
+  
+  @return 90deg - convert-angle($value, 'deg');
+}
+
+/* Filtro per gradienti in IE6-9 */
+@function linear-gradient-filter($direction, $color-stops...) {
+  $first: get_index( $color-stops, 1 );
+  $last: get_index( $color-stops, length($color-stops) );
+  @return progid:DXImageTransform.Microsoft.gradient(
+          startColorstr=#{$first}, 
+          endColorstr=#{$last},GradientType=1
+          ); /* IE6-9 */
+}
+
+@function get_index( $list, $index ) {
+  $result : false;
+  @for $i from 1 through length($list) {
+  $item: nth($list, $i);
+  @if $i == $index { $result : $item; } 
+  }
+  @return $result;
+}

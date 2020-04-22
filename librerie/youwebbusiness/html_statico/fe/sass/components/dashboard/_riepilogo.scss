@@ -48,7 +48,7 @@
         }
       }
 
-      .icon {
+      @include icon {
         @include svg-icon-color($blue);
       }
 

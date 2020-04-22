@@ -43,6 +43,22 @@ img.icon {
   //margin-top: 2px;
 }
 
+.icon-format {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.icon-span {
+  margin: 0.5em 0.5em 0 0;
+  float: left;
+  text-decoration: underline;
+  font-family: 'roboto', sans-serif !important;
+}
+
+.icon-check {
+  margin-top: 0.2em !important;
+}
+
 /* INCOLLARE I FONT DA QUI IN AVANTI */
 .icon-ico_dispositiva:before {
   content: "\e94d";

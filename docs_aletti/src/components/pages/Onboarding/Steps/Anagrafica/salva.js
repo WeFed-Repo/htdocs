@@ -14,7 +14,7 @@ export default  {
                 "id": form.field_id,
                 "validazione": val,
                 "anagrafica": jsonFromFields(form)["anagraficaBlob"],
-                "ordineintestatari": form.field_ordineintestatari
+                "ordineIntestatari": form.field_ordineintestatari
             }
 
 

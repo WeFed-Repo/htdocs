@@ -40,7 +40,7 @@
       &__img {
         text-align: center;
         img, svg {
-          max-width: 110px;
+          max-width: 150px;
           height: auto;
         }
       }
@@ -63,31 +63,31 @@
       }
     }
     &__parag {
-      //display: flex;
+      $paragImgSize: 70px;
       padding: 1rem 0;
       overflow: auto;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .img {
-        width: 60px;
-        height: 60px;
-        font-size: 60px;
+        width: $paragImgSize;
+        height: $paragImgSize;
+        font-size: $paragImgSize;
         float:left;
-        img, svg {
+        @include icon {
+          @include svg-icon-color($white);
+          @include svg-icon-size($paragImgSize);
           display: block;
           margin: auto;
           float: left;
-        }
+        } 
       }
       .content {
-        width: calc(100% - 60px );
+        width: calc( 100% - #{$paragImgSize} - 1rem );
         float:right;
-        padding: 0 0 0 1.5rem;
         text-align: left;
         line-height: 1.3em;
-        //display: flex;
-        //flex-direction: column;
-        //align-content: center;
-        //justify-content: left;
         h2 {
           font-size: 1.1em;
           margin: 0 0 0.25em 0;
@@ -110,14 +110,13 @@
       > * { flex-basis: 50%; }
     }
     &__icon {
-      img, svg {
+      @include icon {
+        @include svg-icon-color($white);
+        @include svg-icon-size(50px);
+        padding: 0;
         display: block;
         margin: auto;
-        width: 40px;
-        height: 40px;
-        @include svg-icon-color($white);
-        padding: 0 0 0.5rem 0;
-      }
+      } 
       span {
         display: block;
         width: 100%;

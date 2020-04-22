@@ -32,9 +32,9 @@
       button,
       input[type="button"] {
         cursor: pointer;
-        color: #777;
+        color: $gray2;
         transition: background-color 0.3s;
-        background-color: #eee;
+        background-color: $gray7;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,10 +42,10 @@
           height: 24px !important;
           width: auto !important;
         }
-        &:hover { background-color: #fefefe; }
-        &:active { background-color: #ddd; }
+        &:hover { background-color: $grayBG; }
+        &:active { background-color: $gray4; }
         &.action {
-          color: #fff;
+          color: $white;
           background-color: $green;
           &:hover:not(:disabled) { background-color: $greenLight; }
           &:active:not(:disabled) { background-color: $greenLink; }

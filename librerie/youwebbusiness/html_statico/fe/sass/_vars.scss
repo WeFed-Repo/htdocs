@@ -1,5 +1,9 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// FONTS 
+
 $bodyFontSize : 14px;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Bootstrap Grid
 
 $bp_sm_min : 576px;
@@ -11,11 +15,13 @@ $bp_lg_max : $bp_lg_min - 1;
 $bp_xl_min : 1200px;
 $bp_xl_max : $bp_xl_min - 1;
 
-// CUSTOM BP
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// CUSTOM BREAKPOINTS
 
 $bp_tablet_min : 1025px;
 $bp_tablet_max : $bp_tablet_min - 1;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // MISURE 
 
 $spacer : 1rem;
@@ -26,49 +32,4 @@ $headerHeight: 70px;
 
 $checkboxSize: 24px;
 $checkboxSizeGap: 0.5rem;
-
-// COLORI
-
-$white : #FFFFFF;
-$black : #000000;
-$green : #37AD9C;
-$greenLink : #2F9988; // menu primo lv
-$greenLink_hover : #248C7B;
-$greenMenu : #097562; // menu 2 lv
-$greenMenu_hover : #046957;
-$greenLight : #30C9B4; 
-$greenLighter : mix($green, $white, 15%);
-$grayBordered : #c8c8c8; // bordi dei box
-$gray1 : #3e3e3e; // menu user
-$gray1_hover : #333333;
-$gray2 : #737373;
-$gray2_hover : #5c5c5c;
-$gray3 : #999999;
-$gray4 : #DDDDDD;
-$gray4_hover : $grayBordered;
-$gray5 : #888888; // NEW COLOR ADDED 14/11/2019
-$grayBG : #F5F5F5;
-$blue : #0b2147;
-$orange: #ee9314;
- 
-$warning : #CF9418; // "alert" status
-$error : #CC1615 ; // "error" status
-$success : $greenLink; // "pass" status
-
-// Array per le classi .color-NOMECOLORE e .bkg-NOMECOLORE
-
-$colors:(
-    white  : $white,
-    black  : $black,
-    green  : $green,
-    greenLink  : $greenLink,
-    gray1  : $gray1,
-    gray2  : $gray2,
-    gray3  : $gray3,
-    gray4  : $gray4,
-    gray5  : $gray5,
-    grayBG  : $grayBG,
-    warning  : $warning,
-    error  : $error,
-    success  : $success 
-);
+$inputHeight: 44px;

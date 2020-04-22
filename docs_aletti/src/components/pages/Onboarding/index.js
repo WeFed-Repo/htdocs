@@ -20,13 +20,15 @@ import Anagrafica from "./Steps/Anagrafica/";
 import RaccoltaProdotti from "./Steps/RaccoltaProdotti/"
 import AdempimentiNormativi from "./Steps/AdempimentiNormativi/"
 import RiepilogoDati from "./Steps/RiepilogoDati"
+import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali"
 
 // Assegnazione di tutti gli step ad un unico oggetto Form
 const Step = {
     "BOZZA" : Anagrafica,
     "RACCOLTA_PRODOTTI": RaccoltaProdotti,
     "ADEMPIMENTI_NORMATIVI": AdempimentiNormativi,
-    "RIEPILOGO_DATI" : RiepilogoDati
+    "RIEPILOGO_DATI" : RiepilogoDati,
+    "CERTIF_CREDENZIALI": CertificazioneCredenziali
 }
 
 
@@ -331,7 +333,9 @@ export default class extends Component {
                 {getNextState(this.state) === "ADEMPIMENTI_NORMATIVI" && this.state.field_intestcorrente !== "" && <Step.ADEMPIMENTI_NORMATIVI.form {...obformprops} btnConsole={this.btnConsole}></Step.ADEMPIMENTI_NORMATIVI.form>}
                 
                 {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
-                {/* getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form> */}
+                {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                
+                
                 <BtnConsole formprops={obformprops}></BtnConsole>
                 
             </div>

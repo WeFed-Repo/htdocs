@@ -7,80 +7,94 @@
   border-bottom: none;
   position: relative;
   overflow: auto;
-    display: flex;
-    flex-wrap: nowrap;  
-    @include invisibleScroll();
-     .nav-item {
-      display: inline-block;
-      white-space: nowrap;
-      margin: 0;
-      background: none;
-      .nav-link, a.nav-link {
-        font-size: 16px;
-        color: $gray1;
-        font-weight: bold;
-        padding: 0 1rem 0.5rem 1rem;
-        min-width: 100px;
-        text-align: center;
-        cursor: pointer;
-        color: $gray2;
-        border-radius: 0;
-        background: none;
-        border: transparent 1px solid;
-        border-bottom: solid 3px transparent;
-        transition: all 0.3s;
-        text-decoration: none;
-        &:hover,
-        &.active {
-          &:not(:disabled) { 
-            color: $greenLink;
-            margin-bottom: 3px;
-            &:hover {color: $greenLink;}
-          }
-        }
-         &.active:not(:disabled) {
-          box-shadow: 0 3px 0 0 $greenLink;
-        }
-        &:disabled, &.disabled {
-          &, &:hover {
-            color: $gray4 !important;
-            cursor: default !important;  
-            border-bottom: solid 3px transparent !important;  
-            box-shadow: none !important;
-          }
-        }
-      } 
-  }      
-} 
+  display: flex;
+  flex-wrap: nowrap;
+  @include invisibleScroll();
+  .nav-item {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    background: none;
+  }
+  .nav-link {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    color: $gray1;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+    color: $gray2;
+    border-radius: 0;
+    background: none;
+    border: transparent 1px solid;
+    border-bottom: solid 3px transparent;
+    transition: all 0.3s;
+    text-decoration: none;
+    &:not(.btn) { padding-top: 0; }
+    &:hover,
+    &.active {
+      &:not(:disabled) {
+        color: $greenLink;
+        margin-bottom: 3px;
+        &:hover {color: $greenLink;}
+      }
+    }
+      &.active:not(:disabled) {
+      box-shadow: 0 3px 0 0 $greenLink;
+    }
+    &:disabled, &.disabled {
+      &, &:hover {
+        color: $gray4 !important;
+        cursor: default !important;
+        border-bottom: solid 3px transparent !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
 
 .tabsContenuti.nav-tabs {
   border-bottom: 1px solid $grayBordered;
   a.nav-link {
     outline: none !important;
-  font-size: 16px;
-  color: $gray1;
-  font-weight: bold;
-  min-width: 100px;
-  text-align: center; 
-  color: $gray2;
-  border-radius: 0;
-  transition: background 0.3s;
-  text-decoration: none;
-  border: transparent 1px solid;
-  &.active:not(.disabled) {
-    color: $greenLink;
-    background-color: #ffffff;
-    border: 1px solid $grayBordered !important;
-    border-bottom: white  solid 1px !important;
-  }
-  &:hover:not(.active) {
-    color: $greenLink;
-    border-color: transparent 
-  }
-  &:disabled, &.disabled {
-    &, &:hover { 
-      color: $gray4 !important;
+    font-size: 16px;
+    color: $gray1;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    color: $gray2;
+    border-radius: 0;
+    transition: background 0.3s;
+    text-decoration: none;
+    border: transparent 1px solid;
+    &.active:not(.disabled), &:active:not(.disabled) {
+      color: $greenLink;
+      background-color: $white;
+      border: 1px solid $grayBordered !important;
+      border-bottom: white  solid 1px !important;
+    }
+    &:hover:not(.active) {
+      color: $greenLink;
+      border: transparent 1px solid;
+    }
+    &:disabled, &.disabled {
+      &, &:hover {
+        color: $gray4 !important;
+      }
     }
   }
- }
+}
+
+.nav-tabs-container {
+  transform: translate(0,1px);
+  z-index: 2;
+  .nav-tabs.nav-tabs--filters {
+    label {
+      > input[type="checkbox"] {
+        cursor: pointer;
+        display: none;
+      }
+    }
+  }
 }

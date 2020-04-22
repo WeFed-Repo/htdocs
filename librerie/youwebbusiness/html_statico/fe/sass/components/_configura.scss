@@ -17,7 +17,7 @@
                 padding-top: 3px;
             }
             .c-icon {
-                .icon {
+                @include icon {
                     float: right;
                     margin-right:0;
                     margin-left: $spacer;
@@ -57,7 +57,7 @@
                     text-align: center;
                     color: $warning;
                     font-weight: bold;
-                    .icon {
+                    @include icon {
                         display: block; 
                         float: none;
                         margin: $spacer auto;

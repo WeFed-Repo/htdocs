@@ -1,11 +1,7 @@
 .dropleft {
   .btn {
-    &, &:not([href]), &:not([tabindex]) {
-      &, &:not([href]), &:not([tabindex]) {
-        padding-left: 0.75rem !important;
-        padding-right: 0.75rem !important;
-      }
-    }
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
   .dropdown-menu {
     margin-right: 10px;
@@ -23,7 +19,7 @@
       left: 100%;
     }
     &:before {
-      border-color: transparent transparent transparent #ffffff;
+      border-color: transparent transparent transparent $white;
       z-index: 2;
     }
     &:after {

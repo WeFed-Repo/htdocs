@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="104px" height="44px" viewBox="0 0 104 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
-    <title>token</title>
+<svg width="113px" height="60px" viewBox="0 0 113 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>04 - elements/OTP/token</title>
     <desc>Created with Sketch.</desc>
-    <g id="login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1280_03a_login-copy-3" transform="translate(-405.000000, -387.000000)">
-            <g id="Group" transform="translate(-1.000000, 104.000000)">
-                <g id="token" transform="translate(406.000000, 283.000000)">
-                    <g id="Combined-Shape-2" fill="#FFFFFF" stroke="#5A9066" stroke-width="3">
-                        <path d="M102.5,29.9285714 L102.5,14.0714286 L93.2555556,14.0714286 L93.2555556,2 C93.2555556,1.72385763 93.0316979,1.5 92.7555556,1.5 L2,1.5 C1.72385763,1.5 1.5,1.72385763 1.5,2 L1.5,42 C1.5,42.2761424 1.72385763,42.5 2,42.5 L92.7555556,42.5 C93.0316979,42.5 93.2555556,42.2761424 93.2555556,42 L93.2555556,29.9285714 L102.5,29.9285714 Z" id="Combined-Shape"></path>
-                    </g>
-                    <circle id="Oval" fill="#5A9066" cx="18.5" cy="22.5" r="9.5"></circle>
-                    <path d="M36,14 L81,14 C81.5522847,14 82,14.4477153 82,15 L82,29 C82,29.5522847 81.5522847,30 81,30 L36,30 C35.4477153,30 35,29.5522847 35,29 L35,15 C35,14.4477153 35.4477153,14 36,14 Z" id="Rectangle" fill="#D8D8D8"></path>
-                </g>
-            </g>
-        </g>
+    <g id="04---elements/OTP/token" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M29,4.6 C15.5242521,4.6 4.6,15.5242521 4.6,29 C4.6,42.4757479 15.5242521,53.4 29,53.4 C35.880372,53.4 42.3005744,50.5382053 46.8895155,45.5930885 L47.0675612,45.4012236 L105.539446,45.4 C106.155239,45.4 106.698733,44.9976246 106.878478,44.4086487 C108.406982,39.4001057 109.170805,34.3935741 109.170805,29.3872999 C109.170805,24.3513704 108.397896,19.095638 106.850579,13.6193381 C106.680208,13.016355 106.129921,12.6000051 105.503329,12.6 L47.0684721,12.5997789 L46.8904195,12.4078857 C42.3014339,7.46218411 35.880837,4.6 29,4.6 Z M29,11.4 C38.7202116,11.4 46.6,19.2797884 46.6,29 C46.6,38.7202116 38.7202116,46.6 29,46.6 C19.2797884,46.6 11.4,38.7202116 11.4,29 C11.4,19.2797884 19.2797884,11.4 29,11.4 Z" id="Combined-Shape" stroke="#2F9988" stroke-width="1.2" fill="#FFFFFF"></path>
+        <rect id="Rectangle" stroke="#2F9988" stroke-width="1.2" fill="#F5F5F5" x="56.6" y="22.6" width="42.8" height="11.8" rx="2"></rect>
     </g>
 </svg>

@@ -1,19 +1,19 @@
 /* Tabelle */
 
 .table {
-  border-left: solid 1px #ddd;
-  border-right: solid 1px #ddd;
+  border-left: solid 1px $gray4;
+  border-right: solid 1px $gray4;
   > tbody > tr > th {
-    border-top: solid 1px #ececec;
+    border-top: solid 1px $gray7;
   }
   > tfoot > tr > {
     td, th {
-      border-top: solid 1px #ececec;
+      border-top: solid 1px $gray7;
     }
   }
   > thead > tr > {
     td, th {
-      border-top: solid 1px #ececec;
+      border-top: solid 1px $gray7;
     }
   }
   span.output {
@@ -25,10 +25,10 @@
 }
 
 .table-heading {
-  h4 {
-    color: #666;
+  h4 { 
+    color: $grayMid;
     float: left;
-    font-size: 1.3em;
+    font-size: 1em; // 1.3em
   }
   &-filters {
     margin-top: 10px;
@@ -64,23 +64,19 @@
   .title {
     display: inline-block;
     font-weight: bold;
-    color: #333;
+    color: $gray1_hover;
   }
   .btn {
-    &, &:not([href]), &:not([tabindex]) {
-      &, &:not([href]), &:not([tabindex]) {
-        margin-bottom: 0;
-        padding: 0 1rem;
-        height: 34px;
-        line-height: 34px;
-        i { margin-top: 3px; } 
-      }
-    }
+    margin-bottom: 0;
+    padding: 0 1rem;
+    height: 34px;
+    line-height: 34px;
+    i { margin-top: 3px; } 
   }
 }
 
 .table-heading-firstline {
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px $gray4;
   margin-left: -16px;
   margin-right: -16px;
   padding-left: 8px;
@@ -106,9 +102,16 @@
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 1rem 1rem 0 1rem;
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px $gray4;
 }
 
-.marginTop-1 {
-  margin-top: -1px;
+.wrap-no-border-bottom .table-filters-accordion {
+  border-bottom: 0;
+}
+
+.azioni-tabella {
+  @include icon {
+    @include svg-icon-size(30px); 
+    margin: 0.5rem 0 0.5rem 1rem;
+  }  
 }
