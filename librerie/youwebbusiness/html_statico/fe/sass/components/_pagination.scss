@@ -6,11 +6,12 @@ ul.pagination {
   max-width: 310px;
   li.page-item {
     .page-link {
-      background: #ddd;
+      background: $gray4;
       color: white;
       border: none;
       padding: 0;
       text-align: center;
+      text-decoration: none;
       margin: 0 0 0 2px;
       height: 2rem;
       min-width: 2rem;

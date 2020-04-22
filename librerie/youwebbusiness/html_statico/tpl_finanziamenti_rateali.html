@@ -32,6 +32,9 @@
 <script src="./fe/assets/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
 
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
 <link rel="stylesheet" href="./fe/assets/datepicker.css">
 
 <script src="./fe/assets/bootstrap-table.js"></script>
@@ -50,19 +53,20 @@
 
 <!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
 <script src="./fe/js/init_for_static_libraries.js"></script>
-<script src="./fe/js/init_for_static_filtered_tables.js"></script>	</head>
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+	</head>
 	<body>
 					<!-- Header -->
 			<header>
 				
-				
+
 <div class="wrapper">
   <nav class="navbar navbar-expand-lg rounded">
     <div class="navbar-brand d-flex align-items-center">
       <a href="javascript:void(0)"><div class="d-block" id="menutoggle"><i class="icon icon-menu"></i></div></a>
       <a href="#.html.html" class="logo"><img src="./fe/img/logo.png"></a>
     </div>
-    
+
           <ul class="navbar-nav flex-row d-none d-lg-flex align-items-center">
         <li class="nav-item"> Postazione: <span class="nav-info">P92183912</span> </li>
         <li class="nav-item d-none d-lg-block"> Versione: <span class="nav-info">Extra</span> </li>
@@ -76,7 +80,7 @@
           </li>
 
       </ul>
-    
+
           <ul class="navbar-nav flex-row ml-md-auto d-flex align-items-center">
           <li class="nav-item d-flex align-items-center pl-0 pl-sm-3 pr-0 pr-sm-3">
             <div class="dropdown">
@@ -103,37 +107,37 @@
               <img class="not-redraw" src="./fe/img/icon/notifiche.svg">
               <span class="ico-label">Posta</span>
               <span class="ico-badge">2</span>
-            </a> 
+            </a>
           </li>
           <!-- le icone che seguono non hanno la classe .d-flex bensì .d-none .d-sm-flex poichè non vanno mostrate in mobile -->
           <li class="nav-item d-none d-sm-flex align-items-center pl-2 pl-sm-3 pr-0 pr-sm-3">
             <a href="tpl_home_configurator.html" class="nav-link ico-btn ">
-              <img class="not-redraw" src="./fe/img/icon/configurazione.svg">
+              <img class="not-redraw" src="./fe/img/icon/icon-5.svg">
               <span class="ico-label">Configura</span>
-            </a> 
+            </a>
           </li>
             <!--a href="tpl_configura.html" class="nav-link ico-btn ">
-              <img class="not-redraw" src="./fe/img/icon/configurazione.svg">
+              <img class="not-redraw" src="./fe/img/icon/icon-5.svg">
               <span class="ico-label">Configura</span>
-            </a--> 
+            </a-->
           <li class="nav-item d-none d-sm-flex align-items-center">
-            <a class="nav-link ico-btn d-flex align-items-center"> 
+            <a class="nav-link ico-btn d-flex align-items-center">
               <img class="not-redraw" src="./fe/img/icon/help.svg">
               <span class="ico-label">Tutorial</span>
-            </a> 
+            </a>
           </li>
-            <!--a class="nav-link ico-btn d-flex align-items-center"> 
+            <!--a class="nav-link ico-btn d-flex align-items-center">
               <img class="not-redraw" src="./fe/img/icon/help.svg">
               <span class="ico-label">Help</span>
-            </a--> 
+            </a-->
           <li class="nav-item d-none d-sm-flex align-items-center">
-            <a class="nav-link ico-btn d-flex pr-1"> 
+            <a class="nav-link ico-btn d-flex pr-1">
               <img class="not-redraw" src="./fe/img/icon/logout.svg">
               <span class="ico-label">Logout</span>
-            </a> 
+            </a>
           </li>
       </ul>
-    
+
   </nav>
 </div>
 			</header>
@@ -148,7 +152,7 @@
 									<div class="userdata BT3-visible-xs d-block d-sm-none">
   <span class="nome">Mario Rossi</span>
   <div class="userdata-console">
-    <a class="ico-btn"><img class="icon icon-autorizza" src="./fe/img/icon/configurazione.svg"></a>
+    <a class="ico-btn"><img class="icon icon-autorizza" src="./fe/img/icon/icon-5.svg"></a>
     <a class="ico-btn"><div class="btn-icon-help"></div></a>
     <a href="#" class="ico-btn"><i class="icon icon-ico_logout"></i></a>
   </div>
@@ -206,11 +210,21 @@
                                 <li><a class="disabled">Lorem ipsum</a></li>
                           </ul>
               <li class="">
+                <a class="toggle"><span>Documenti e Fatture</span></a>
+          <ul style="display:none;">
+                          <li><a href="tpl_documenti_online.html" class="">Documenti online</a></li>
+                        </ul>
+              <li class="">
                 <a class="toggle"><span>Carte Business</span></a>
           <ul style="display:none;">
                             <li><a class="disabled">Lorem ipsum</a></li>
                                 <li><a class="disabled">Lorem ipsum</a></li>
                           </ul>
+              <li class="">
+                <a class="toggle"><span>Gestione carte</span></a>
+          <ul style="display:none;">
+                          <li><a href="tpl_carte_gestione_pannello_controllo.html" class="">Pannello di controllo</a></li>
+                        </ul>
               <li class="">
                 <a class="toggle"><span>Documenti e fatture</span></a>
           <ul style="display:none;">
@@ -221,8 +235,9 @@
                 <a class="toggle"><span>Finanziamenti</span></a>
           <ul >
                           <li><a href="tpl_finanziamenti_rateali.html" class="on">Finanziamenti rateali</a></li>
-                              <li><a class="disabled">Lorem ipsum</a></li>
-                          </ul>
+                            <li><a href="tpl_finanziamenti_rateali_ammortamento.html" class="">Finanziamenti rateali Ammortamento</a></li>
+                            <li><a href="tpl_finanziamenti_rateali_pre_ammortamento.html" class="">Finanziamenti rateali Pre Ammortamento</a></li>
+                        </ul>
               <li class="">
                 <a class="toggle"><span>Dati e disposizioni</span></a>
           <ul style="display:none;">
@@ -242,7 +257,8 @@
                             <li><a href="strutt_priv.php?tpl=tpl_configura.php" class="">CONFIGURA</a></li>
                             <li><a href="tpl_smart_lending.html" class="">SMART LENDING</a></li>
                             <li><a href="strutt_priv.php?tpl=tpl_login.php" class="">LOGIN</a></li>
-                            <li><a href="tpl_login_help.html" class="">LOGIN HELP</a></li>
+                              <li><a class="disabled">Profilatura Utenti</a></li>
+                              <li><a href="tpl_login_help.html" class="">LOGIN HELP</a></li>
                             <li><a href="tpl_login_post.html" class="">POST LOGIN</a></li>
                             <li><a href="tpl_password_change.html" class="">CHANGE PASSWORD</a></li>
                             <li><a href="tpl_certificazione_cell_1.html" class="">CERTIFICAZIONE CELL</a></li>
@@ -607,19 +623,19 @@
     <div class="clickScroll-overflow">
         <ul id="tabs" class="nav nav-tabs clickScroll tabsContenuti mb-0" tm-tabs-navigator>
                             <li class="nav-item">
-                        <a class="nav-link  active " 
+                        <a class="nav-link  active "
                                                 href="strutt_priv.php?tpl=tpl_finanziamenti_rateali.php">
                             Dettaglio                        </a>
                     </li>
                                     <li class="nav-item">
-                        <a class="nav-link " 
+                        <a class="nav-link "
                                                 href="strutt_priv.php?tpl=tpl_finanziamenti_rateali_ammortamento.php">
                             Ammortamento                        </a>
                     </li>
                                     <li class="nav-item">
-                        <a class="nav-link " 
+                        <a class="nav-link "
                                                 href="strutt_priv.php?tpl=tpl_finanziamenti_rateali_pre_ammortamento.php">
-                            Per ammortamento                        </a>
+                            Pre Ammortamento                        </a>
                     </li>
                         </ul>
         <a class="clickScroll-arrow left">

@@ -23,7 +23,7 @@
         .c-icon {
             text-align: center;
             margin: 0;
-            .icon {
+            @include icon {
                 @include svg-icon-size(110px);
                 @include svg-icon-color($green);
                 margin: auto;
@@ -42,29 +42,32 @@
             width: 35px;
             height: 35px;
             line-height: 35px;
+            padding: 7px;
             border-left: $grayBordered solid 1px;
             border-bottom: $grayBordered solid 1px;
             background: $grayBG;
             text-align: center;
             cursor: pointer; 
-            .icon {
-                @include svg-icon-size(15px);
+            transition: all 0.3s;
+            @include icon {
+                @include svg-icon-size(20px);
                 @include svg-icon-color($gray2);
-                margin:10px 0 0 0;
-                padding:0;
+                margin: 0;
+                padding: 0;
                 display: inline-block;
             }
-            &:hover {
-                .icon {
-                    @include svg-icon-color($greenLink);
-                }
-            }
-        }
+        } 
         // STATO HOVER DEL BOX 
         &:hover {
-            .c-icon {
-                .icon {
-                    @include svg-icon-color($greenLink);
+            .c-delete {
+                @include icon {
+                    @include svg-icon-color($gray2);
+                }
+                &:hover {
+                    background: darken($grayBG,3%);
+                    @include icon {
+                        @include svg-icon-color($gray1);
+                    }
                 }
             }
         }
@@ -77,8 +80,10 @@
             .c-text { 
                 color: $white; 
             }
-            .c-icon .icon { 
-                @include svg-icon-color($white); 
+            .c-icon { 
+                @include icon {
+                    @include svg-icon-color($white); 
+                }
             }
         }
     }

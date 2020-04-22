@@ -33,6 +33,9 @@
 <script src="./fe/assets/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
 
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
 <link rel="stylesheet" href="./fe/assets/datepicker.css">
 
 <script src="./fe/assets/bootstrap-table.js"></script>
@@ -51,7 +54,8 @@
 
 <!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
 <script src="./fe/js/init_for_static_libraries.js"></script>
-<script src="./fe/js/init_for_static_filtered_tables.js"></script>		<!-- FINE HEAD DELLA STRUTTURA -->
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<!-- FINE HEAD DELLA STRUTTURA -->
 		
 		<!-- DECLINAZIONI PER LIBRERIE -->
 		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
@@ -102,9 +106,14 @@
 									<div class="row">
 										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">modale dettaglio con help</h2>
-																						
+																						<p>Esempio della modale "doppia" (per aprire una modale all'interno di un'altra modale, con effetto slide)
+</p>
+<p>
+  Classe usata: modal-dialog modal-dialog-centered with-slider
+</p>
+
 <button type="button" class="btn btn-primary" data-modal-detail>
-  Launch demo modal DETAIL + HELP
+  Launch demo modal
 </button>
 
 <!-- Modal -->
@@ -184,11 +193,15 @@
                 				<dt class="list-key">Lorem</dt>
                 				<dd class="list-value">Ipsum</dd>
                 			</div>
-                                          <div class="list">
-                				<dt class="list-key">Lorem</dt>
-                				<dd class="list-value">Ipsum</dd>
+                                        <div class="list">
+                				<dt class="list-key">Lorem ipsum dolor</dt>
+                				<dd class="list-value">
+                          Sit amet consectetur adipisicing elit. Possimus doloremque 
+                          perferendis quia ea dolore itaque! Iste voluptas similique 
+                          voluptate? Voluptates repellendus quos illo ut consequatur 
+                          amet omnis sequi a quisquam.</dd>
                 			</div>
-                                      </div>
+                  </div>
                 </div>
               </div>
               <!-- INIZIO DESKTOP -->
@@ -293,6 +306,45 @@
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">modale grande</h2>
+																						<p>Esempio della modale grande (usata, ad esempio, per le icone 
+  "Help" delle sezioni  o in casi in cui una modale abbia molto contenuto)
+</p>
+<p>
+  Classe usata: modal-dialog modal-dialog-centered modal-xl
+</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-modal-open="big">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" data-modal="big">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+                <a href="#" data-dismiss="modal" aria-label="Close" >
+          <img src="./fe/img/icon/close.svg">
+        </a>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">modale help</h2>
 																						<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-modal-help>
@@ -324,6 +376,82 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
         <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
         <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+      </div>
+    </div>
+  </div>
+</div>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">modale media</h2>
+																						<p>Esempio della modale media (usata in casi in cui la modale grande, causa scarsità di contenuto, risulti vuora quindi esteticamente poco gradevole)
+</p>
+<p>
+  Classe usata: modal-dialog modal-dialog-centered modal-lg
+</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-modal-open="mid">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" data-modal="mid">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+                <a href="#" data-dismiss="modal" aria-label="Close" >
+          <img src="./fe/img/icon/close.svg">
+        </a>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">modale piccola</h2>
+																						<p>Esempio della modale piccola (usata per conferme)
+</p>
+<p>
+  Classe usata: modal-dialog modal-dialog-centered
+</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-modal-open="small">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="small" data-modal="small">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+                <a href="#" data-dismiss="modal" aria-label="Close" >
+          <img src="./fe/img/icon/close.svg">
+        </a>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

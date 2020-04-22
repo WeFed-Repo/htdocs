@@ -4,9 +4,9 @@
   position: relative;
   button {
     position: absolute;
-    width: 44px;
+    width: $inputHeight;
     border: 0;
-    height: 44px;
+    height: $inputHeight;
     background: transparent;
   }
 }

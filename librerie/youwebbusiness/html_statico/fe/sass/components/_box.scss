@@ -1,22 +1,22 @@
 .boxOutput {
-  margin-top: -1px;
+  //margin-top: -1px;
   
   h3 {
-    color:#737373 !important
+    color:$gray2 !important
   }
   
   .borderBottom {
-    border-bottom: 1px solid #c8c8c8
+    border-bottom: 1px solid $grayBordered;
   }
   
   .borderRight {
-    border-right: 1px solid #c8c8c8
+    border-right: 1px solid $grayBordered;
   }
    
   @media (max-width: 767px)
   {
     .borderRight {
-      border-bottom: 1px solid #c8c8c8;
+      border-bottom: 1px solid $grayBordered;
       border-right: none !important;
     }
 

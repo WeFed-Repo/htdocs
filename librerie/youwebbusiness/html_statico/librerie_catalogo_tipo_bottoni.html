@@ -33,6 +33,9 @@
 <script src="./fe/assets/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
 
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
 <link rel="stylesheet" href="./fe/assets/datepicker.css">
 
 <script src="./fe/assets/bootstrap-table.js"></script>
@@ -51,7 +54,8 @@
 
 <!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
 <script src="./fe/js/init_for_static_libraries.js"></script>
-<script src="./fe/js/init_for_static_filtered_tables.js"></script>		<!-- FINE HEAD DELLA STRUTTURA -->
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<!-- FINE HEAD DELLA STRUTTURA -->
 		
 		<!-- DECLINAZIONI PER LIBRERIE -->
 		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
@@ -86,22 +90,24 @@
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">bottone configurazione con icona</h2>
+																						<button class="btn btn-primary btn-config" onclick="window.location.href='tpl_home_configurator.html'">
+    <img class="icon icon-autorizza float-left" src="./fe/img/icon/icon-5.svg">
+    Configura homepage
+</button>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">bottone filtro</h2>
 																						<!-- buttons -->
-<button class="btn btn-filter fl-left is-selected">
-  <i class="icon icon-aggiorna" title="icon-aggiorna"></i>
-  Button selected
-</button>
+<button class="btn btn-filter fl-left is-selected">Button selected</button>
 
-<button class="btn btn-filter fl-left">
-  <i class="icon icon-aggiorna" title="icon-aggiorna"></i>
-  Button default
-</button>
+<button class="btn btn-filter fl-left">Button default</button>
 
-<button class="btn btn-filter fl-left" disabled>
-  <i class="icon icon-aggiorna" title="icon-aggiorna"></i>
-  Button default
-</button>
+<button class="btn btn-filter fl-left" disabled>Button default</button>
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->
@@ -131,6 +137,7 @@
 
 <a class="btn btn-primary fl-left">Button Primary anchor no href</a>
 
+
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->
@@ -147,8 +154,20 @@
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">link con icona e check</h2>
+																						<a href="#.html.html">
+    <img class="icon icon-format" src="./fe/img/icon/pdf.svg">
+    <span class="icon-span">Lorem ipsum dolor sit amet</span>
+    <img class="icon icon-check" src="./fe/img/icon/checkmark.svg">
+</a>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">link semplice</h2>
-																						<a href="#.html.html" >link abilitato con href</a>
+																						<a href="#" >link abilitato con href</a>
 <br />
 <a>link abilitato senza href</a>
 <br />
@@ -164,31 +183,21 @@
 																							<h2 class="titolo-oggetto">pulsantiera due bottoni</h2>
 																						    <!-- pulsantiera -->
     <div class="row justify-content-end mt-3">
-                 
-        <div class="col-sm-6">
+                        <div class="col-sm-6">
             <div class="form-row d-flex justify-content-end">
                     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-primary btn-block ">
             Bottone 1        </a>
-    </div> 
+    </div>
     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-secondary btn-block ">
             Bottone 2        </a>
-    </div> 
+    </div>
             </div>
         </div>
             </div>
-										</div>
-									</div>
-									<!-- Fine blocco oggetto -->
-																	<!-- Blocco oggetto -->
-									<div class="row">
-										<div class="col-sm-12">
-																							<h2 class="titolo-oggetto">pulsantiera due bottoni - HTML nuovo</h2>
-																						<br />
-<b>Warning</b>:  virtual(): Unable to include 'layout/oggetti/bottoni/pulsantiera_due_bottoni_-_HTML_nuovo/oggetto.php' - request execution failed in <b>D:\librerie\htdocs\librerie\youwebbusiness\librerie_catalogo.php</b> on line <b>61</b><br />
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->
@@ -199,46 +208,35 @@
 																						<!-- NUOVA VERSIONE -->
     <!-- pulsantiera -->
     <div class="row justify-content-end mt-3">
-         
-        <div class="col-sm-6">
+                <div class="col-sm-6">
             <div class="form-row d-flex justify-content-start">
                     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-primary btn-block ">
             Bottone 1        </a>
-    </div> 
+    </div>
     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-secondary btn-block ">
             Bottone 2        </a>
-    </div> 
+    </div>
             </div>
         </div>
-                 
-        <div class="col-sm-6">
+                        <div class="col-sm-6">
             <div class="form-row d-flex justify-content-end">
                     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-primary btn-block ">
             Bottone 3        </a>
-    </div> 
+    </div>
     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-secondary btn-block ">
             Bottone 4        </a>
-    </div> 
+    </div>
             </div>
         </div>
             </div>
-										</div>
-									</div>
-									<!-- Fine blocco oggetto -->
-																	<!-- Blocco oggetto -->
-									<div class="row">
-										<div class="col-sm-12">
-																							<h2 class="titolo-oggetto">pulsantiera quattro bottoni - HTML nuovo</h2>
-																						<br />
-<b>Warning</b>:  virtual(): Unable to include 'layout/oggetti/bottoni/pulsantiera_quattro_bottoni_-_HTML_nuovo/oggetto.php' - request execution failed in <b>D:\librerie\htdocs\librerie\youwebbusiness\librerie_catalogo.php</b> on line <b>61</b><br />
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->
@@ -248,14 +246,13 @@
 																							<h2 class="titolo-oggetto">pulsantiera un bottone</h2>
 																						    <!-- pulsantiera -->
     <div class="row justify-content-end mt-3">
-                 
-        <div class="col-sm-6">
+                        <div class="col-sm-6">
             <div class="form-row d-flex justify-content-end">
                     <div class="form-group col-6 col-lg-4">
-        <a href="#" 
+        <a href="#"
                         class="btn btn-primary btn-block ">
             Bottone 1        </a>
-    </div> 
+    </div>
             </div>
         </div>
             </div>

@@ -15,7 +15,7 @@
         list-style: none;
         background: $grayBG;
         padding: 1rem; 
-        border: solid 1px #c8c8c8;
+        border: solid 1px $grayBordered;
         position: relative;
         overflow: hidden;
         min-width: 160px;
@@ -45,7 +45,7 @@
             line-height: 1rem;
             display: inline;
         }
-        .icon { 
+        @include icon { 
             width: 7rem;
             height: 7rem;
             position: absolute;
@@ -64,15 +64,8 @@
         &--higlighted {
             background: $green;
             border-color: $green;
-            @include svg-icon-color($white);
-            .key, 
-            .output,
-            .value { 
-                color: white;
-            }
-            .icon { 
-                @include svg-icon-color($white);
-            }  
+            .key, .output, .value { color: white; }
+            @include icon { @include svg-icon-color($white); }  
         }
     }
 } 

@@ -147,7 +147,9 @@
     width: 100%;
     padding: 16px 16px 16px;
     color: $white;
-    @include svg-icon-color($white);
+    @include icon {
+      @include svg-icon-color($white); 
+    }
     background-color: $gray1;
     position: relative;
     span.nome {
@@ -171,9 +173,11 @@
     .ico-btn, a {
       width: 30px;
       height: 30px;
-      line-height: 30px;
+      line-height: 30px; 
       color: $white;
-      @include svg-icon-color($white);
+      @include icon {
+        @include svg-icon-color($white); 
+      }
       .btn-icon-help {
         background-color: transparent;
         color: $white;

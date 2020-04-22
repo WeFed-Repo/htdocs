@@ -1,4 +1,7 @@
 @import 'commons'; // LET IT FIRST!
+
+// componenti da libreria oggetti
+
 @import 'components/modal';
 @import 'components/tooltips';
 @import 'components/accordion';
@@ -34,4 +37,6 @@
 @import 'components/icon-preview';
 @import 'components/treeview';
 @import 'components/autorizzazioni';
-@import 'components/box';  
+@import 'components/box';
+@import 'components/filter';
+@import 'components/pannello_controllo';  

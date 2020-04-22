@@ -4,32 +4,45 @@
   }
 }
 
-// LINKS 
-a,
-a:not(.btn),
-a:not(.btn):not([href]):not([tabindex]) {
-  color: $greenLink; 
+// LINKS
+a:not(.btn) {
+  color: $greenLink;
   text-decoration: none;
+  cursor:pointer;
+  @include icon {
+    @include svg-icon-color($greenLink);
+    line-height: 1em;
+    top: 0;
+    display: inline-block;
+    left: 0;
+    margin: 0 0.5em 0 0;
+    padding: 0;
+    //transform: translate(0, 30%);
+    //@include svg-icon-size(1em); assolutamente NO!
+    //transform: translate(0.1em, 0.1em) scale(1.5); NO NO NO
+    float: left; // TEST. DA CONTROLLARE E VALIDARE.
+  }
   &:hover {
     color: $green;
     text-decoration: underline;
+    @include icon {
+      @include svg-icon-color($green);
+    }
   }
-  &.disabled, 
+  &.disabled,
   &[disabled] {
-    &, &:hover { 
+    &, &:hover {
       color: $gray3;
       text-decoration: none;
       cursor: default;
+      @include icon {
+        @include svg-icon-color($gray3);
+      }
     }
   }
-} 
-
-img { border: 0; } 
-
-h2 {
-  font-size:20px;
-  padding: 0 0 5px;
 }
+
+img { border: 0; }
 
 .fl-right {
   float: right;
@@ -81,11 +94,22 @@ h2 {
   border-bottom: solid 2px $gray4;
 }
 
+// icone nei titoli
+h1, h2 {
+  @include icon {
+    // @include svg-icon-size(16px); // VERIFICARE
+    // transform: translate(0px, 6px); // VERIFICARE
+    @include svg-icon-size(24px);
+    @include svg-icon-color($green);
+    margin-right: $spacer/2;
+  }
+}
+
 /* Contenuti */
 
 h1 {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: bold !important;
   padding: 0;
   margin: 0 0 15px;
   color: $gray2;
@@ -111,16 +135,6 @@ h4 {
   color: $gray2;
 }
 
-// icone nei titoli
-h1, h2 {
-  .icon, svg, i:before {
-    @include svg-icon-color($green);
-    @include svg-icon-size(16px);
-    transform: translate(0px, 6px);
-    margin-right: $spacer/2;
-  }
-}
-
 section {
   margin-bottom: 16px;
 }
@@ -135,6 +149,10 @@ ol {
 
 .bordered {
   @include bordered();
+  >.row {
+    margin-left:0;
+    margin-right:0;
+  }
 }
 
 @media (max-width: $bp_md_max) {
@@ -171,19 +189,31 @@ dl, .list {
   color: $gray2;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  // old solution
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+  // validate solution
+  display: table;
+  width: 100%;
+
   dt, &-key {
     text-align: left;
     font-weight: bold;
     margin: 0;
     padding: 0 0 0.25em 0;
+    // validate solution
+    float:left;
+    clear:left;
   }
   dd, &-value {
     text-align: right;
     margin: 0;
     padding: 0 0 0.25em 0;
+    // validate solution
+    float:right;
+    clear:right;
+    word-break: break-all;
   }
   dt, dd, &-key, &-value {
     &.full-w {
@@ -198,8 +228,16 @@ dl, .list {
   text-decoration: underline;
 }
 
-.text-primary { color: $greenLink !important; @include svg-icon-color($greenLink); }
-.text-secondary { color: $gray2 !important; @include svg-icon-color($gray2); }
+.text-primary { color: $greenLink !important;
+  @include icon {
+    @include svg-icon-color($greenLink);
+  }
+}
+.text-secondary { color: $gray2 !important;
+  @include icon {
+    @include svg-icon-color($gray2);
+  }
+}
 
 .display-icon {
   width: 65px;
@@ -290,7 +328,7 @@ dl, .list {
       &-3 { order: 3 !important; }
       &-4 { order: 4 !important; }
       &-5 { order: 5 !important; }
-      &-6 { order: 6 !important; } 
+      &-6 { order: 6 !important; }
     }
   }
   @media (min-width:$bp_xl_min) {
@@ -305,10 +343,10 @@ dl, .list {
   }
 }
 
-/* 
-NOTE: La classe .content-hidden-in-mobile 
-      serve ad impedire all'utente  di "stringere" 
-      la pagina e sfasciare il sito in caso, 
+/*
+NOTE: La classe .content-hidden-in-mobile
+      serve ad impedire all'utente  di "stringere"
+      la pagina e sfasciare il sito in caso,
       su desktop, ridimensioni la finestra.
 */
 
@@ -346,9 +384,36 @@ NOTE: La classe .content-hidden-in-mobile
 
 .no-user-select {
   @include no_user_select();
-} 
+}
 
 .text-break {
   word-break: break-word!important;
   overflow-wrap: break-word!important;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// ICONE PER LIBRERIA
+
+.icon-demo {
+  background: $white;
+  border: solid 1px $grayBordered;
+  color: $gray1;
+  display:inline-block;
+  width:auto;
+  margin: 0 1rem 0 0;
+  padding: 5px;
+  @include icon {
+    @include svg-icon-color($gray1);
+    @include svg-icon-size(20px);
+  }
+}
+
+// WIDTH AUTO
+.w-auto { width:auto !important; }
+@media (min-width:$bp_sm_min) { .w-sm-auto { width:auto !important; } }
+@media (min-width:$bp_md_min) { .w-md-auto { width:auto !important; } }
+@media (min-width:$bp_lg_min) { .w-lg-auto { width:auto !important; } }
+@media (min-width:$bp_xl_min) { .w-xl-auto { width:auto !important; } }

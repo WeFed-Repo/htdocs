@@ -65,7 +65,7 @@ function initModali_static(){
 	}
 
 	$.fn.hasScrollBar = function() {
-		return (   this.hasScrollBarHoriz() 
+		return (   this.hasScrollBarHoriz()
 				|| this.hasScrollBarVert() );
 	}
 
@@ -175,4 +175,3 @@ function initModali_static(){
 window.onload = setTimeout(function(){ imgToSvg() }, 100);
 window.onload = setTimeout(function(){ imgToSvg() }, 1000);
 window.onload = setTimeout(function(){ imgToSvg() }, 2000);
-

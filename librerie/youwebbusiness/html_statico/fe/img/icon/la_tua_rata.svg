@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="66px" viewBox="0 0 64 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icona_latuarata</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2smart" transform="translate(-773.000000, -461.000000)" stroke="#82C4BB" stroke-width="4.5">
+            <g id="Group-12" transform="translate(256.000000, 231.000000)">
+                <g id="Group-11">
+                    <g id="icona_latuarata" transform="translate(520.000000, 233.000000)">
+                        <ellipse id="Oval" cx="28" cy="18.5" rx="18" ry="18.5"></ellipse>
+                        <path d="M27,37 C35.4571844,37.8333333 42.502639,40.3333333 48.1363636,44.5 C53.7700883,48.6666667 57.0579671,54.5 58,62" id="Path-3"></path>
+                        <path d="M0,37 C8.45718443,37.8333333 15.502639,40.3333333 21.1363636,44.5 C26.7700883,48.6666667 30.0579671,54.5 31,62" id="Path-3" transform="translate(15.500000, 49.500000) scale(-1, 1) translate(-15.500000, -49.500000) "></path>
+                        <path d="M21,25 C23.3442729,27 25.6776062,28 28,28 C30.3223938,28 32.6557271,27 35,25" id="Path-5" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

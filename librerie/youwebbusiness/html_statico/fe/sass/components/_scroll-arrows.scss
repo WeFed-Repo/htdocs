@@ -28,9 +28,12 @@
       position: absolute;
       top:3px;
       cursor: pointer;
-      i, .icon { @include svg-icon-color($greenLink); }
+      @include icon { 
+        @include svg-icon-color($greenLink); 
+        margin:0;
+      }
       &:hover { 
-        i, .icon { @include svg-icon-color($greenMenu); }
+        @include icon { @include svg-icon-color($greenMenu); }
       }
       &.left { left:5px; }
       &.right { right:5px; }

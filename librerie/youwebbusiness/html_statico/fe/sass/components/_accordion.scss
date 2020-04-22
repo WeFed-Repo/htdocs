@@ -7,7 +7,7 @@
     .card-header {
       border-radius: 0;
       border: none;
-      background: #eee;
+      background: $gray7;
       cursor: pointer;
       @include no_user_select();
       .card-header-title {
@@ -60,7 +60,7 @@
   &.bordered-style {
     .card {
       background: $white;
-      border: solid 1px #c8c8c8;
+      border: solid 1px $grayBordered;
       .card-header {
         background: transparent;
         padding-top: 1.5rem;

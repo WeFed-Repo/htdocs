@@ -34,6 +34,7 @@
                 }
                 .card-header-icon {
                     flex-shrink: 0;
+                    border: $gray2 solid 1px;
                     &, &:before {
                         border-color: $gray2 !important;
                         color: $gray2 !important;
@@ -41,6 +42,7 @@
                 }
                 &.collapsed {
                     .card-header-icon { 
+                        border: $greenLink solid 1px;
                         &, &:before {
                             border-color: $greenLink !important;
                             color: $greenLink !important;

@@ -75,5 +75,5 @@
   width:100%;
   min-height:75px;
   padding: 1rem;
-  .icon { @include svg-icon-color($green); }
+  @include icon { @include svg-icon-color($green); }
 }

@@ -16,14 +16,14 @@
       font-size: 18px;
       font-weight: bold;
       margin: 0 0 $spacer/2 0;
-    } 
+    }
     #{$that}__title {
       text-transform: uppercase;
     }
     #{$that}__desc {
       font-size: 1.1em;
       line-height: 1.6em;
-      opacity: 0.8; 
+      opacity: 0.8;
     }
   }
 
@@ -36,12 +36,12 @@
     min-height: 150px;
     @media (min-width:$bp_sm_min) {
       height: $dhbMinHeight;
-    } 
+    }
   }
 
   &__btn {
     width: 100%; //180px;
-    max-width: 100%;    
+    max-width: 100%;
   }
 
   @media (min-width:$bp_sm_min) {

@@ -36,4 +36,9 @@ svg#MappaInterattiva {
     input#MappaTarga {
         text-transform: uppercase;
     }
+    .radio {
+        @include icon {
+            @include svg-icon-color($greenLink);
+          }
+    }
 }

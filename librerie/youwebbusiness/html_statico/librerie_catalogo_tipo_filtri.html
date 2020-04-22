@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+
+		<!-- HEAD DELLA STRUTTURA -->
+		<title>Banco BPM Business</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Jquery -->
+<script src="./fe/assets/jquery.min.js"></script>
+
+<!-- Jquery UI -->
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<!-- Gestione Font-awesome per formattazioni "particolari" -->
+<link rel="stylesheet" href="./fe/assets/awesome/font-awesome.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox-styles.min.css" />
+
+<!-- BOOTSTRAP 4 CDN (EXTERNAL VENDOR) -->
+
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script-->
+
+<script src="./fe/assets/popper.min.js"></script>
+
+<script src="./fe/assets/jquery.min.js"></script>
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<script src="./fe/assets/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
+
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
+<link rel="stylesheet" href="./fe/assets/datepicker.css">
+
+<script src="./fe/assets/bootstrap-table.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-table.css">
+
+<!-- Stili -->
+<link rel="stylesheet" href="./fe/css/priv_base.css">
+<link rel="stylesheet" href="./fe/css/priv_generic.css">
+
+<!-- Interattivita' ed inizializzazioni -->
+<script src="./fe/js/script.js"></script>
+
+<!-- INIZIALIZZAZIONI -->
+<script src="./fe/js/initLayout.js"></script>
+<script src="./fe/js/init.js"></script>
+
+<!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
+<script src="./fe/js/init_for_static_libraries.js"></script>
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<!-- FINE HEAD DELLA STRUTTURA -->
+		
+		<!-- DECLINAZIONI PER LIBRERIE -->
+		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
+		<!-- FINE DECLINAZIONI PER LIBRERIE -->
+
+	</head>
+	<body>
+		<header class="librerie">
+			<div class="wrapper"> 
+				<h1><a href="./index.html" class="btn-bak">&laquo;</a> Filtri - Librerie YouBusiness</h1>
+			</div>
+		</header>
+		<div id="main" class="librerie">
+			<div class="wrapper">
+															<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">filtro</h2>
+																						<section class="c-filter no-margin-section">
+  <div class="bordered pt-md-0 pt-lg-0 pb-3">
+    <div class="d-block">
+      <div class="table-heading table-heading-filters">
+
+        <div class="row d-flex justify-content-between align-items-center pb-3">
+          <div class="col">
+            <h1 class="d-inline-block mb-0">Tipologie di documenti</h1> <span>Dal 09/09/2020 a 09/12/2020</span>
+          </div>
+        </div>
+
+        <!-- FILTRI -->
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+
+          <div  class="flex-grow-1 mw-100 my-2">
+                <div class="nav-tabs-container clickScroll-container">
+    <div class="clickScroll-overflow">
+        <ul id="tabs" class="nav nav-tabs nav-tabs--filters clickScroll " tm-tabs-navigator>
+                            <li class="nav-item">
+                        <label for="TUTTI"
+                            class="nav-link  active  all ">
+                                TUTTI                                <input type="checkbox"
+                                       id="TUTTI"
+                                       checked />
+                        </label>
+                    </li>
+                                    <li class="nav-item">
+                        <label for="ESTRATTI"
+                            class="nav-link ">
+                                ESTRATTI                                <input type="checkbox"
+                                       id="ESTRATTI"
+                                        />
+                        </label>
+                    </li>
+                                    <li class="nav-item">
+                        <label for="CONTABILI"
+                            class="nav-link ">
+                                CONTABILI                                <input type="checkbox"
+                                       id="CONTABILI"
+                                        />
+                        </label>
+                    </li>
+                                    <li class="nav-item">
+                        <label for="DDS"
+                            class="nav-link ">
+                                DDS                                <input type="checkbox"
+                                       id="DDS"
+                                        />
+                        </label>
+                    </li>
+                                    <li class="nav-item">
+                        <label for="COMUNICAZIONI"
+                            class="nav-link ">
+                                COMUNICAZIONI                                <input type="checkbox"
+                                       id="COMUNICAZIONI"
+                                        />
+                        </label>
+                    </li>
+                                    <li class="nav-item">
+                        <label for="PORTAFOGLIO"
+                            class="nav-link ">
+                                PORTAFOGLIO                                <input type="checkbox"
+                                       id="PORTAFOGLIO"
+                                        />
+                        </label>
+                    </li>
+                        </ul>
+        <a class="clickScroll-arrow left">
+        <i class="icon-arrow_left"></i>
+        </a>
+        <a class="clickScroll-arrow right">
+        <i class="icon-arrow_right"></i>
+        </a>
+    </div>
+    </div>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-end align-items-center flex-grow-1 mw-100">
+
+            <div class="d-flex justify-flex-start flex-wrap align-items-center flex-grow-1">
+              <div class="form-check radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Tutte</label>
+              </div>
+              <div class="form-check  radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Letti</label>
+              </div>
+              <div class="form-check radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option3" checked>
+                <label class="form-check-label" for="inlineRadio3">Non letti</label>
+              </div>
+            </div>
+            
+            <div class="form-group d-flex pl-2">
+              <div class="form-check  checkbox switch">
+                <input class="form-check-input" type="checkbox" id="switch1" name="notifica1" data-filter-button="filter01">
+                <label class="form-check-label" for="switch1">Estendi la ricerca</label>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- fine  FILTRI -->
+
+      </div>
+        <!-- FILTRI DESKTOP -->
+<div class="table-filters-accordion" data-filter-form="filter01" style="display:none">
+
+  <form>
+    <div class="row justify-content-between">
+        <div class="col-12 col-md-6">
+            <label>Categoria documenti</label>
+            <input type="text" class="form-control" placeholder="Addebbiti/Accrediti">
+        </div>
+        <div class="col-12 col-md-6">
+            <label>Tipologia documenti</label>
+            <input type="text" class="form-control" placeholder="Altri accrediti">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Importo da</label>
+            <input type="text" class="form-control" placeholder="Text">
+          </div>
+          <div class="form-group col-6">
+            <label>Importo a</label>
+            <input type="text" class="form-control" placeholder="Text">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="form-row">
+          <div class="form-group col-6 col-md-3 col-lg-4">
+            <label class="control-label">Data da</label>
+            <div class="input-group datepicker">
+              <input type="text" id="dataDa" class="form-control" autocomplete="off" placeholder="Data"/>
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="icon icon-ico_calendario"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-6 col-md-3 col-lg-4">
+            <label class="control-label">Data a</label>
+            <div class="input-group datepicker">
+              <input type="text" id="dataA" class="form-control" autocomplete="off" placeholder="Data"/>
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="icon icon-ico_calendario"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-md-6 col-lg-4">
+            <button class="btn btn-white btn-block no-label-md">
+              Conferma
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+<!-- FINE FILTRI DESKTOP -->
+      </div>
+    </div>
+  </div>
+</section>										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+												</div>
+			</div>
+	</body>
+</html>

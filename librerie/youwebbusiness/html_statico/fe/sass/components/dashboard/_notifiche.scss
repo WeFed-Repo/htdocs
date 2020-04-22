@@ -16,7 +16,6 @@
       padding: 0.6rem 0;
       border-bottom: $grayBordered solid 1px;
       justify-content: space-between;
-
       &:last-child {
         border-bottom: none;
       }
@@ -35,8 +34,9 @@
           padding-right: 0;
         }
       }
-      .icon {
+      @include icon {
         @include svg-icon-color($green);
+        @include svg-icon-size(30px); 
       }
       a {
         text-decoration: underline;
@@ -44,15 +44,6 @@
     }
   }
   &-icon {
-    padding: 3px;
-    margin: 0;
-    float: none;
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
-    @include svg-icon-color($blue);
-
     &__wrapper {
       border: $blue solid 2px;
       border-radius: 50%;
@@ -61,6 +52,15 @@
       width: 50px;
       height: 50px;
       line-height: 50px;
+      @include icon {
+        @include svg-icon-color($blue);
+        @include svg-icon-size(44px); 
+        padding: 3px;
+        margin: 0;
+        float: none;
+        display: inline-block;
+        margin-top: -8px;
+      }    
     }
   }
   &-text {
@@ -69,7 +69,6 @@
     color: $blue;
     font-weight: bold;
   }
-
   .btn.btn-filter {
     min-width: 0;
     text-align: center;

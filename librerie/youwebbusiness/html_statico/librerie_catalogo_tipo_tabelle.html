@@ -33,6 +33,9 @@
 <script src="./fe/assets/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
 
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
 <link rel="stylesheet" href="./fe/assets/datepicker.css">
 
 <script src="./fe/assets/bootstrap-table.js"></script>
@@ -51,7 +54,8 @@
 
 <!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
 <script src="./fe/js/init_for_static_libraries.js"></script>
-<script src="./fe/js/init_for_static_filtered_tables.js"></script>		<!-- FINE HEAD DELLA STRUTTURA -->
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<!-- FINE HEAD DELLA STRUTTURA -->
 		
 		<!-- DECLINAZIONI PER LIBRERIE -->
 		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
@@ -88,7 +92,8 @@ es: <span class="negativo">-12345</span>
             <th data-field="causale" data-sortable="true" class="left">Causale</th>
             <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA IN FULL WIDTH
                  (non titolo a sx e valore a dx ma con 2 righe separate), USARE LA CLASSE .data-mobilized-fullwidth -->
-            <th data-field="descrizione" data-sortable="false" class="data-mobilized-fullwidth">Descrizione movimento</th>
+             <th data-field="descrizione" data-sortable="false" class="data-mobilized-fullwidth">Descrizione movimento</th>
+             <th data-field="azioni" data-sortable="false">Azioni</th>
           </tr>
        </thead>
        <tbody>
@@ -100,6 +105,20 @@ es: <span class="negativo">-12345</span>
               <td>EUR</td>
               <td>345</td>
               <td> Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente praesentium ipsam quae blanditiis neque </td>
+              <td class="text-center">
+                <div class="btn-group">
+                  <span type="button" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./fe/img/icon/more.svg">
+                  </span>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </td>
            </tr>
                     <tr data-index="1">
              <td>Lorem ipsum</td>
@@ -109,6 +128,20 @@ es: <span class="negativo">-12345</span>
               <td>EUR</td>
               <td>345</td>
               <td> Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente praesentium ipsam quae blanditiis neque </td>
+              <td class="text-center">
+                <div class="btn-group">
+                  <span type="button" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./fe/img/icon/more.svg">
+                  </span>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </td>
            </tr>
                     <tr data-index="2">
              <td>Lorem ipsum</td>
@@ -118,6 +151,20 @@ es: <span class="negativo">-12345</span>
               <td>EUR</td>
               <td>345</td>
               <td> Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente praesentium ipsam quae blanditiis neque </td>
+              <td class="text-center">
+                <div class="btn-group">
+                  <span type="button" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./fe/img/icon/more.svg">
+                  </span>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </td>
            </tr>
                     <tr data-index="3">
              <td>Lorem ipsum</td>
@@ -127,6 +174,20 @@ es: <span class="negativo">-12345</span>
               <td>EUR</td>
               <td>345</td>
               <td> Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente praesentium ipsam quae blanditiis neque </td>
+              <td class="text-center">
+                <div class="btn-group">
+                  <span type="button" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./fe/img/icon/more.svg">
+                  </span>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </td>
            </tr>
                </tbody>
     </table>
@@ -138,6 +199,40 @@ es: <span class="negativo">-12345</span>
     <div class="mobile-data" data-table-mobilized-mobile="dossierTable"></div>
   </div>
   <!-- Fine contenuto mobile -->
+</section>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto"> tabella vuota</h2>
+																						<!-- NOTE: data-bootstrap-table inizializza lo stile e il sortable della tabella la classe .ellipsed nei radiobutton dei filtri forza la riga singola con i puntini [...] per i numeri negativi, aggiungere la classe "negativo" al tag che contiene il numero da formattare
+es: <span class="negativo">-12345</span>
+-->
+
+<section class="no-margin-section">
+  <div class="bordered pt-0 d-none d-lg-block">
+    <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-striped">
+      <thead>
+        <!-- ESEMPIO HEADER -->
+         <tr>
+           <th data-field="titolo" class="center data-mobilized-title">Titolo</th>
+           <th data-field="contabile" data-formatter="formatLink" class="center"><span class="d-inline d-md-none">Data </span>Contabile</th>
+           <th data-field="valuta" data-sortable="true" class="center"><span class="d-inline d-md-none">Data </span>Valuta</th>
+           <th data-field="importo" data-sortable="true" data-formatter="tableCellValue" class="right">Importo</th>
+           <th data-field="divisa" data-sortable="true" class="center">Divisa</th>
+           <th data-field="causale" data-sortable="true" class="left">Causale</th>
+            <th data-field="descrizione" data-sortable="false" class="data-mobilized-fullwidth">Descrizione movimento</th>
+            <th data-field="azioni" data-sortable="false">Azioni</th>
+         </tr>
+      </thead>
+
+      <!-- SE NELLA TABELLA NON VIENE STAMPATA ALCUNA RIGA, VIENE VISUALIZZATO IL MESSAGGIO DI DEFAULT "Nessun elemento trovato" -->
+
+    </table>
+  </div>
+
 </section>
 										</div>
 									</div>
@@ -463,7 +558,7 @@ data-filter-button=form02 data-filter-form=form02
 
 
 <section>
-  <div class="bordered  pt-md-0 pt-lg-0 marginTop-1">
+  <div class="bordered  pt-md-0 pt-lg-0">
     <div class="d-none d-md-block">
       <div class="table-heading table-heading-filters">
         <div class="table-heading-firstline row d-flex justify-content-between align-items-center">
