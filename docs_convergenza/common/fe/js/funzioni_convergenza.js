@@ -797,7 +797,7 @@ var ttinputOuterTap = function () {
         isFilledHidden = true,
         btnHidden,
         isTabWrapped = false;
-    /* btnTab = formWrapper.find('.tab-data-btn a') 
+    /* btnTab = formWrapper.find('.tab-data-btn a')
 
     inputToActivate.each(function () {
 
@@ -939,7 +939,7 @@ var ttinputOuterTap = function () {
             if (!$(elWrapper).find('.tabber-wrapper').length) {
                 $(elWrapper).find('.to-able').attr('disabled', false).removeClass('disabled');
             }
-            
+
         } else {
             unsetLayerObject(elWrapper);
 
@@ -985,14 +985,14 @@ var tabber = function () {
                 var wrapperForm = $(this).closest('form');
                         var inputToFullfill = wrapperForm.find('.input-required');
                         var inputFullFilled= [];
-                        
+
                         inputToFullfill.each(function(index){
                            inputFullFilled.push($(this).val())
                         })
                         function isNotEmpty(value) {
                             if(value != '') return value;
                         }
-                        var fieldNotEmpty = inputFullFilled.filter(isNotEmpty); 
+                        var fieldNotEmpty = inputFullFilled.filter(isNotEmpty);
                           if(inputToFullfill.length>fieldNotEmpty.length) {
                               errorFields(wrapperForm);
                           }
@@ -1005,7 +1005,7 @@ var tabber = function () {
                                       verificaBonificoOrdinarioEstero();
                                 }
                           }
-                
+
             });
         });
     });
@@ -1014,7 +1014,7 @@ var tabber = function () {
 var errorFields = function(wrapperForm){
       if($('.error-box-fields').length===0){
          $('#error-box-fields').html('<div class="error-box-fields"><strong>ATTENZIONE</strong><br> Verifica che tutti i campi siano compilati prima di selezionare il tipo di bonifico.</div>')
-         $("html, body").animate({scrollTop: $('#error-box-fields').offset().top -30},500)  
+         $("html, body").animate({scrollTop: $('#error-box-fields').offset().top -30},500)
  }
   }
 var removeErrorFields = function(wrapperForm) {
@@ -3611,7 +3611,7 @@ var columnBsFixed = function(){
     if (tbHfc.length>0) {
 
         // Handler per il resize
-        columnBsFixedResize = function() { 
+        columnBsFixedResize = function() {
             $("table.has-fixed-cols").each(function(){
                 var tb = $(this);
                 var tbw = tb.width();
@@ -3622,40 +3622,40 @@ var columnBsFixed = function(){
         $(window).resize(function(){columnBsFixedResize(); if(feBank && feBank=="youweb"){setTimeout(columnBsFixedResize,250)}});
 
         tbHfc.each(function(){
-       
+
             $(this).on('post-body.bs.table', function () {
-    
+
                 // Clona l'intera tabella
                 var tbs = $(this);
                 var fixedColumns= parseFloat(tbs.attr("data-fixed-cols"));
-    
+
                 var tbbsTab = tbs.parents(".bootstrap-table");
                 tbbsTab.find("div.fixed-columns").remove();
-    
+
                 // calcolo della larghezza delle colonne scelte
                 var fixWidth = 0;
                 for(x=0;x<fixedColumns;x++) {
                     fixWidth += tbs.find("th").eq(x).outerWidth()
-                }                            
-    
+                }
+
                 var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.width() + "px");
-    
+
                 // Regole per il controllo dei "sortable"
                 tbfix.find('.sortable').closest('th').addClass('sortableTh');
                 tbfix.find('.sortable.both').closest('th').removeClass('sortedTh');
                 tbfix.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
-    
+
                 tbbsTab.prepend(
                     $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
                 );
-    
-    
+
+
             });
 
-   
+
     });
 
-  
+
 
 
     }
@@ -4147,7 +4147,7 @@ $.fn.selAdv = function (params) {
             selAdvModal.modal("show");
         }
     });
-    // Aggiunge il clickout 
+    // Aggiunge il clickout
     $(window).click(function (e) {
         if ($(e.target).closest(".sel-adv-selector").length === 0) {
             $(".sel-adv").removeClass("opened");
@@ -4655,7 +4655,7 @@ $(function () {
     // Inizializzazione carousel spalla destra
     $(".wdg-carousel").initCarouselSpalla();
     styleSortTable();
-    
+
     // Funzione per colonne fixed delle tabelle
     columnBsFixed();
 
@@ -4663,4 +4663,3 @@ $(function () {
     addRemoveField();
     openPdfEmbed();
 });
-

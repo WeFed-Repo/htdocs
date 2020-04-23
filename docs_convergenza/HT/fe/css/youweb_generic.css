@@ -7388,3 +7388,31 @@ div.fixed-table-scroll-outer {
     }
 
 }
+
+.select-periodo-switch > div {
+  width: calc( 100% - 42px );
+  float:left;
+}
+.select-periodo-switch > a {
+  width: 30px;
+  float:right;
+  margin-top: 34px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  z-index: 6;
+}
+
+.select-periodo-switch .input-group-addon {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .select-periodo-switch > a {
+    margin-top: 26px;
+  }
+}
+
+.select-periodo-switch .hasDatepicker {
+  padding-right: 20px !important;
+}

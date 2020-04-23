@@ -127,7 +127,58 @@ $selectCausaleMovimenti = array(
   'Causale 5',
 );
 
-?>
+function print_periodo_switch($periodo) {
+  $site = $GLOBALS["site"];?>
+  <div class="form-group w100 select-periodo-switch">
+    <div>
+      <div data-inputtoggle class="input-group" style="display:none">
+        <div class="row">
+          <div class="col-xs-6">
+            <label class="control-label">Dal</label>
+  		 			<div class="input-group">
+  					    <input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
+                value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
+  					    <a class="input-group-addon date">
+                  <?php if($site == "webank") { ?>
+                    <i class="icon icon-calendar_filled"></i>
+                  <?php } else { ?>
+                    <img src="/HT/fe/img/calendar.png">
+                  <?php } ?>
+                </a>
+  	     		  </div>
+          </div>
+          <div class="col-xs-6">
+            <label class="control-label">Al</label>
+  		 			<div class="input-group">
+  					    <input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
+                value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
+  					    <a class="input-group-addon date">
+                  <?php if($site == "webank") { ?>
+                    <i class="icon icon-calendar_filled"></i>
+                  <?php } else { ?>
+                    <img src="/HT/fe/img/calendar.png">
+                  <?php } ?>
+                </a>
+  	     		  </div>
+          </div>
+        </div>
+      </div>
+      <div data-inputtoggle>
+        <label class="control-label">Periodo</label>
+        <select class="form-control">
+          <?php auto_input_select( $periodo ) ?>
+        </select>
+      </div>
+    </div>
+    <a class="print_periodo_switch">
+      <?php if($site == "webank") { ?>
+        <i class="icon icon-calendario"></i>
+      <?php } else { ?>
+        <img src="/HT/fe/img/calendar.png">
+      <?php } ?>
+    </a>
+  </div>
+<?php } ?>
 
 <h2>Ordini e movimenti</h2>
 <!-- SELETTORE DEPOSITO -->
@@ -158,18 +209,7 @@ $selectCausaleMovimenti = array(
         <div class="panel-body">
         <div class="row">
           <div class="col-xs-12 col-md-6">
-              <div class="form-group w100">
-                <label class="control-label">Periodo</label>
-                  <div class="input-group">
-                      <input type="text"
-                             id="periodo"
-                             placeholder="gg/mm/aaaa"
-                             value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>"
-                             class="form-control datepicker input-inline clear-x">
-                      <span class="editable-clear-x" style="display: inline;"><i class="icon icon-close icon-1x"></i></span>
-                    <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
-                </div>
-              </div>
+            <?php print_periodo_switch( $selectPeriodoMovimenti ); ?>
           </div>
           <?php if($site == "webank") { ?>
           <div class="form-field-input col-xs-12 col-md-6">
@@ -304,12 +344,7 @@ $selectCausaleMovimenti = array(
         <div class="panel-body">
         <div class="row">
           <div class="form-field-input col-xs-12 col-md-6">
-            <div class="form-group">
-              <label class="control-label">Periodo</label>
-              <select class="form-control" id="selectPeriodFondi">
-                <?php auto_input_select( $selectPeriodoFondi ) ?>
-              </select>
-            </div>
+            <?php print_periodo_switch( $selectPeriodoFondi ); ?>
           </div>
           <?php if($site == "webank") { ?>
           <div class="form-field-input col-xs-12 col-md-6">
@@ -425,12 +460,7 @@ $selectCausaleMovimenti = array(
         <div class="panel-body">
           <div class="row">
             <div class="form-field-input col-xs-12 col-md-6">
-              <div class="form-group">
-                <label class="control-label">Periodo</label>
-                <select class="form-control" id="selectPeriodFondi">
-                  <?php auto_input_select( $selectPeriodoMovimenti ) ?>
-                </select>
-              </div>
+              <?php print_periodo_switch( $selectPeriodoMovimenti ); ?>
             </div>
             <div class="form-field-input col-xs-12 col-md-6">
               <div class="form-group">
@@ -524,19 +554,23 @@ $selectCausaleMovimenti = array(
 <script type="text/javascript">
   $(function(){
     resizeTab('secondTab',0);
-    $("#periodo").mask("99/99/9999");
-    $("#periodo").datepicker({
-        minDate: 1,
-        showOtherMonths: true,
-        showOn: "both",
-        prevText: "<i class=\"icon icon-arrow_left\" title=\"icon-arrow_left\"></i>",
-        nextText: "<i class=\"icon icon-arrow_right\" title=\"icon-arrow_right\"></i>",
-        buttonImage: "/img/ret/pixel_trasp.gif",
-        buttonImageOnly: true,
-        beforeShow: renderPickDateMobile,
-        onClose: function() { $('#datePickerWrapper').modal('hide'); }
+    $(".periodo").mask("99/99/9999");
+    $(".periodo").datepicker({
+    minDate: 1,
+    showOtherMonths: true,
+    showOn: "focus",
+    prevText: "<i class=\"icon icon-arrow_left\" title=\"icon-arrow_left\"></i>",
+    nextText: "<i class=\"icon icon-arrow_right\" title=\"icon-arrow_right\"></i>",
+    beforeShow: renderPickDateMobile, //funzione per far si che si apra come overlayer su mobile
+      onClose: function(){
+        $('#datePickerWrapper').modal('hide');
+      }
+    })
+
+    $('.print_periodo_switch').click(function(e){
+      $(this).parent().find('[data-inputtoggle]').toggle();
     });
-    appendDatePickerIcon('periodo');
+
     var tableOrdiniMovimenti = $('.sortableTable');
     tableOrdiniMovimenti.bootstrapTable({
       onPostBody: function(){
