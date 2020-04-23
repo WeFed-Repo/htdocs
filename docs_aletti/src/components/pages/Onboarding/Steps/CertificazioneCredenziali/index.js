@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import salva from "./salva";
+import validazione from "./validazione";
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
@@ -9,8 +10,7 @@ class StepForm extends Component {
     // Eventuali stati "locali" 
     state = {
         //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true",
-        
+        isOutput : "true"        
     }
     
 
@@ -35,7 +35,8 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-        <h3>Cerficazione credenziali{nomeint}</h3>
+                    <h3>Certificazione credenziali{nomeint}</h3>
+
                 </div>
             </div>
         )
@@ -46,6 +47,6 @@ class StepForm extends Component {
 
 export default {
     form : StepForm,
-    validazione: ()=>{return {}},
+    validazione: validazione,
     salva: salva
 }

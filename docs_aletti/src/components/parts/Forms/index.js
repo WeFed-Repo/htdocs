@@ -839,6 +839,59 @@ class FormDate extends Component {
     }
 }
 
+// ############################ Input OTP ##############################
+class FormOtp extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state={
+            loading: false,
+            status: "nootp"
+        }
+        this.otpRequest = this.otpRequest.bind(this);
+    }
+
+
+    otpRequest(){
+        this.setState({loading:true});
+        this.props.onChange({name:this.props.name,value:"true"});
+        this.setState({loading:false});
+    }
+
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value? this.props.value ==="true": false,
+            btnText = this.props.btnText? this.props.btnText : "Richiedi codice di controllo",
+            cbchange = this.props.cbchange
+
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}</label>}
+                <div className={"otp-field " + (this.state.loading?"loading":"")}>
+            
+                    {!value && !output &&
+                        <>
+                            <span className="otp-esito">Non verificato</span>
+                            <Button color="primary" onClick={this.otpRequest}>{btnText}</Button>
+                        </>
+                    }
+                    {!value && output && <span className="otp-esito">Non verificato</span>}
+                    {value && <span className="otp-esito ok">Verificato</span>}
+                </div>
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+
+}
+
+
 /* Esportazione degli oggetti */
 const Form = {
     input: FormInput,
@@ -848,6 +901,7 @@ const Form = {
     checkfile: FormCheckfile,
     file: FormFile,
     date: FormDate,
+    otp: FormOtp,
 
     /* Funzione generica per gestire gli onchange */
     change: handleChange

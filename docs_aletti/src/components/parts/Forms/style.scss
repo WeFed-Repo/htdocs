@@ -13,6 +13,52 @@
         overflow:hidden;
     }
 
+    .otp-field {
+        display:inline-block;
+        width:100%; background:#ddd;
+        border-radius:5px;
+        height: 36px;
+        .btn-primary {
+            width:auto;
+            border:none;
+            font-size:10px;
+            line-height:13px;
+            text-transform:uppercase;
+            width:120px;
+            height: 36px;
+            display:inline-block;
+            float: right;
+        }        
+        .otp-esito {
+            display:inline-block;
+            position:relative;
+            font-weight:bold;
+            padding: 6px 0 0 35px;
+            &::before {
+                content: "\00D7";
+                position:absolute;
+                display:block;
+                width:25px;
+                height:25px;
+                border:solid 2px #999;
+                left:5px;
+                border-radius: 50%;
+                color: #999;
+                text-align:center;
+                font-size:20px;
+                line-height:20px;
+            }
+            &.ok::before {
+                content:"\2714";
+                color:#009933;
+                border-color:#009933;
+                line-height:25px;
+            }
+
+            
+        }
+    }
+
     .checkradio {
         width:auto;
         display:inline-block;
