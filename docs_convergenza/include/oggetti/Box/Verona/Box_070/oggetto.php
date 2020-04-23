@@ -25,13 +25,15 @@
 	 			</ul>	 			
 			</div>
 	 	</div>
-	 	<div class="row">
+	</div>
+	<div class="row">
 			<div class="col-sm-12">
 				<p>Garanzie prestate con abbinamento secondo formule predefinit</p>
 			</div>
-		</div>
-		<hr>
-		<div class="row">
+	</div> 	
+	<hr>
+	<div class="box-catalogue assicurazioni">
+	 	<div class="row">
 	 		<div class="col-sm-3 box-catalogue-left box-catalogue-white">
 	 			<i class="icon icon-ico_check"></i>
 	 			<h3>AUTOVETTURE</h3>
@@ -51,12 +53,12 @@
 	 			</ul>	 			
 			</div>
 	 	</div>
-	 	<div class="row">
+	</div>
+	<div class="row">
 			<div class="col-sm-12">
-				<p>Garanzie prestate con abbinamento secondo <strong>formule predefinit</strong></p>
+				<p>Garanzie prestate con abbinamento secondo formule predefinit</p>
 			</div>
-		</div>
-	 </div>
+	</div> 	
 </section>
 <?php
 }?>	
