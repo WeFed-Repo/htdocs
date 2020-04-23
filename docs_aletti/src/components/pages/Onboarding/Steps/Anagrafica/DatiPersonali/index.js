@@ -58,164 +58,96 @@ class DatiPersonali extends Component {
             default:
                 break;
         }
-    }
+    } 
     setDateScadenza(val) {
-        //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO E DELLA DATA DI EMISSIONE
-        let documentTypeSelected = this.typeDoc,
-            scadenzaPlus10 = moment(val, 'DD-MM-YYYY').add(10, "year").format('DD/MM/YYYY'),
-            scadenzaPlus5 = moment(val, 'DD-MM-YYYY').add(5, "year").format('DD/MM/YYYY'),
-            scadenzaPlus3 = moment(val, 'DD-MM-YYYY').add(3, "year").format('DD/MM/YYYY'),
-            //DATA DI NASCITA DELL'INTESTATARIO
-            dateBirth = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
-            DMbirth = dateBirth.split("/")[0] + "/" + dateBirth.split("/")[1],
-            YPlus10 = scadenzaPlus10.split("/")[2],
-            YPlus5 = scadenzaPlus5.split("/")[2],
-            YPlus3 = scadenzaPlus3.split("/")[2],
-            dateBirtToCheck10 = DMbirth + "/" + YPlus10,
-            dateBirtToCheck5 = DMbirth + "/" + YPlus5,
-            dateBirtToCheck3 = DMbirth + "/" + YPlus3,
-            eta = moment.duration(moment(new Date(), 'DD/MM/YYYY').diff(moment(dateBirth, 'DD/MM/YYYY'))).asYears();
-
-        if (dateBirth === "") {
-            //alert per indicare di specificare la data di nascita necessaria per fare i controlli sulla data di scadenza
-            this.setState({
-                isWarningDateVisible: true
-            })
-        }
-        else {
-            switch (documentTypeSelected) {
-                case "01":
-                case "11":
-                case "12":
-                    //CASO CARTA IDENTITA'
-
-                    //SE DATA DI EMISSIONE E' PRIMA DEL 9 FEBBRAIO LA DATA DI SCADENZA/RINNOVO SARA' 10 ANNI
-                    if (getDateDifference("13/05/2011", val) < 0) {
-                        this.scadenzaDoc = scadenzaPlus10
-                    }
-
-                    //SE DATA DI EMISSIONE E' SUCCESSIVA AL 9 DI FEBBRAIO LA DATA DI SCADENZA SARA' 10 ANNI O IL COMPLEANNO SE QUESTO E' SUCCESSIVO
-                    else {
-
-                        if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
-                            //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                            this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                        }
-                        else {
-                            this.scadenzaDoc = dateBirtToCheck10
-                        }
-                    }
-
-                    this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
-                    break;
-                case "03":
-                    //CASO PASSAPORTO 10 anni /il giorno prima
-                    this.scadenzaDoc = moment(scadenzaPlus10, 'DD/MM/YYYY').add(1, "day").format('DD/MM/YYYY');
-                    this.scadenzaDocPre = moment(val, 'DD/MM/YYYY').format('DD/MM/YYYY');
-                    break;
-                case "02":
-                case "14":
-                    //CASO PATENTE NON RINNOVATA; NUOVA EMISSIONE
-                    //CASO CLIENTE CON MENO DI 55 ANNI
-
-                    if (eta < 55) {
-                        //SE HO MENO DI 55 IL DOC VALE 10 ANNI o FINO AL COMPLEANNO
-                        if (getDateDifference("13/05/2011", val) < 0) {
-                            this.scadenzaDoc = scadenzaPlus10
-                        }
-                        else {
-                            if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck10
-                            }
-
-                        }
-                    }
-                    else if (eta >= 55) {
-
-                        if (getDateDifference("09/02/2012", val) < 0) {
-                            this.scadenzaDoc = scadenzaPlus5
-                        }
-                        else {
-
-                            if (getDateDifference(scadenzaPlus5, dateBirtToCheck5) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck5, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck5
-                            }
-
-
-                        }
-                    }
-
-                    this.scadenzaDocPre = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
-                    break;
-                case "13":
-                    //PATENTE RINNOVATA
-                    if (eta < 50) {
-                        //SE HO MENO DI 50 IL DOC VALE 10 ANNI o FINO AL COMPLEANNO
-                        if (getDateDifference("13/05/2011", val) < 0) {
-                            this.scadenzaDoc = scadenzaPlus10
-                        }
-                        else {
-
-                            if (getDateDifference(scadenzaPlus10, dateBirtToCheck10) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck10, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck10
-                            }
-
-
-                        }
-                    }
-                    else if (eta < 70 && eta >= 50) {
-
-                        if (getDateDifference("13/05/2011", val) < 0) {
-                            this.scadenzaDoc = scadenzaPlus5
-                        }
-                        else {
-
-                            if (getDateDifference(scadenzaPlus5, dateBirtToCheck5) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck5, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck5
-                            }
-
-                        }
-                    }
-                    else if (eta < 80 && eta >= 70) {
-                        if (getDateDifference("13/05/2011", val) < 0) {
-                            this.scadenzaDoc = scadenzaPlus3
-                        }
-                        else {
-
-                            if (getDateDifference(scadenzaPlus3, dateBirtToCheck3) < 0) {
-                                //SE IL COMPLEANNO E' GIA' PASSATO VADO ALL'ANNO SUCCESSIVO
-                                this.scadenzaDoc = moment(dateBirtToCheck3, 'DD/MM/YYYY').add(1, "year").format('DD/MM/YYYY');
-                            }
-                            else {
-                                this.scadenzaDoc = dateBirtToCheck3
-                            }
-
-                        }
-                    }
-                default:
-
-                break;
+        //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
+        let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
+            drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
+            
+            documentTypeSelected = this.typeDoc,
+            birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
+            //NUMERO DI ANNI DA AGGIUNGERE
+            yearsToAdd = 10,
+            //CAPIRE SE MI SERVE LA DATA DI NASCITA DEL SOGGETTO
+            useBirthDate = false,
+            eta = moment.duration(moment(new Date(), 'DD/MM/YYYY').diff(moment(birthDate, 'DD/MM/YYYY'))).asYears();
+            
+            this.scadenzaDoc = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
+            this.scadenzaDocPre = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
+            //IL NUMERO DA AGGIUNGERE DIPENDE ANCHE DAL DOCUMENTO SELEZIONATO (CONTROLLI SULLA PATENTE !??)
+            
+            //SE E' UNA PATENTE RINNOVATA IL LIMITE E' 50 ANNI DI ETA'
+            if (documentTypeSelected == '14' && eta >=50) {
+                if (eta < 70 && eta >= 50){
+                    yearsToAdd = 5;
+                }
+                else if(eta < 80 && eta >= 70) {
+                   yearsToAdd = 3;
+                }
+                else {
+                    yearsToAdd = 2;
+                }
+             }
+            //SE LA LA PATENTE NON E' RINNOVATA iL LIMITE E' 55
+            if (/^(02|13)$/.test(documentTypeSelected) && eta >=55) {
+                yearsToAdd = 5;
             }
-        }
+            
+            if (birthDate === "") {
+                //alert per indicare di specificare la data di nascita necessaria per fare i controlli sulla data di scadenza
+                this.setState({
+                    isWarningDateVisible: true
+                })
+            }
+            else {
+                //SE E' CARTA IDENTITA'..
+                if (/^(01|11|12)$/.test(documentTypeSelected)) {
+                    // Carta di identita'
+                    useBirthDate = getDateDifference(identityCardChangeDate, val) >=0;
+                }
+                else if (/^(02|13|14)$/.test(documentTypeSelected)) {
+                    // Patente
+                    useBirthDate = getDateDifference(drivingLicenseChangeDate, val) >=0;
+                }
+                //SE CONSIDERO LA DATA DI NASCITA
+                if (useBirthDate) {
+                    //CARTA IDENTITA'
+                    if (( moment(birthDate,"DD/MM/YYYY").month() < moment(val,"DD/MM/YYYY").month()) || ( moment(birthDate,"DD/MM/YYYY").month() == moment(val,"DD/MM/YYYY").month() && moment(birthDate,"DD/MM/YYYY").date() < moment(val,"DD/MM/YYYY").date())) {
+                        ++yearsToAdd;
+                    }
+                    this.scadenzaDoc = moment(new Date(Date.UTC(moment(val,"DD/MM/YYYY").year() + yearsToAdd, moment(birthDate,"DD/MM/YYYY").month(), moment(birthDate,"DD/MM/YYYY").date(), 12, 0, 0, 0)).getTime()).format("DD/MM/YYYY");
+                    
+                }
+                //SE NON CONSIDERO LA DATA DI NASCITA
+                else {
+                    this.scadenzaDoc = moment(new Date(Date.UTC(moment(val,"DD/MM/YYYY").year() + yearsToAdd, moment(val,"DD/MM/YYYY").month(), moment(val,"DD/MM/YYYY").date(), 12, 0, 0, 0)).getTime()).format("DD/MM/YYYY");
+                    //SE PASSAPORTO LA SCADENZA E' IL GIORNO PRIMA:
+                    if (documentTypeSelected == '03') {
+                        this.scadenzaDoc = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
+                        this.scadenzaDocPre = this.scadenzaDoc
+                    }
+                }
+                //LIMITE PRE
+                //SE E' CARTA IDENTITA' O LA SCADENZA HO IL GIORNO PRIMA:
+                if (/^(01|11|12)$/.test(documentTypeSelected)) {
+                    this.scadenzaDocPre = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
+                }
+            }
+    }
+    //calcolo del range per COVID:
+    getRangeCovid (datetoCheck) {
+        var initCovid = new Date(2020, 2, 1),     
+            endCovid =  new Date(2020, 7, 31)
+            datetoCheck = new Date(moment(datetoCheck,"DD/MM/YYYY"));
+            if((datetoCheck.getTime()>= initCovid.getTime() && datetoCheck.getTime() <= endCovid.getTime()))
+            {
+                return true
+            }
+            else {
+                return false
+            }    
     }
     render() {
-
         const anagraficaIntestatario = `field_anagraficablob_intestatari_${this.props.indexInt}_`;
         //DOMINI
         let optionTipoDocumento = this.props.obdomini["documenti_identita"],
