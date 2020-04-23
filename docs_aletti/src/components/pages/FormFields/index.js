@@ -30,6 +30,8 @@ export default class extends Component {
             esempio_campo_check: "",
             esempio_campo_checkfile: "",
 
+            esempio_campo_otp: "",
+
             esempio_campo_file: [],
             esempio_campo_file_fr: []
         }
@@ -106,6 +108,22 @@ export default class extends Component {
                                 idBozza="999999999"
                                 >
                                 ></Form.file>
+                        </Col>
+                    </Row>
+
+                    <h2>Codice di controllo</h2>
+                    <Row>
+                        <Col sm="3">
+                        <Form.otp
+                            label="Codice di controllo"
+                            name="esempio_campo_otp"
+                            value={formstate.esempio_campo_otp}
+                            disabled={this.state.allDisabled}
+                            error={formstate.errors["esempio_campo_otp"]}
+                            onChange={this.generalOnChange}
+                            output={this.state.allOutput}
+                            >
+                            ></Form.otp>
                         </Col>
                     </Row>
 
