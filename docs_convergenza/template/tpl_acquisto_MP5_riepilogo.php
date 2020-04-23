@@ -18,10 +18,10 @@
             </h1>
     </div>
 </section>
+<p>Di seguito sono riportati i dati della polizza che stai per acquistare.</p>
 
-<section>
-  <p>Di seguito sono riportati i dati della polizza che stai per acquistare.</p>
-  <div class="border-output">
+  <section>
+    <div class="border-output">
 		<div class="row first-row">
 			<div class="col-sm-12 col-xs-12 boxDefault">
 				<h3 class="titleSection titleForm">Dati polizza</h3>
@@ -87,6 +87,8 @@
 			
 		</div>
     </div>
+    </section>
+ <section>  
     <div class="border-output">
 		<div class="row first-row">
 			<div class="col-sm-12 col-xs-12 boxDefault">
@@ -162,8 +164,8 @@
 			</div>
 		</div>
 	</div>
-</section>
-<section>
+    </section>
+<section class="paddingTop10">
 <div class="clearfix selezioneCC selezioneCCNoBor">
     <div class="border-output">
 		<div class="row first-row">

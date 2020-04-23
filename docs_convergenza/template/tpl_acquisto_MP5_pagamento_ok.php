@@ -23,7 +23,7 @@
     <h3 class="titleSection titleForm">Il pagamento della polizza è andato a buon fine.</h3>
     <p>Per finalizzare l'emissione della polizza prosegui con la presa visione e la sottoscrizione della documentazione contrattuale</p>
     <p><a target="_blank" href="https://www.google.it" onclick="$('.tooltip-masked').remove(); $('#pwdInput').attr('disabled', false)"><i class="icon icon-file_pdf_fill fLeft btnLink" title="
-    Nome_documento"></i> <span class="fLeft btnLink paddingLeftSmall">
+    Nome_documento"></i> <span class="fLeft colorVerde paddingLeftSmall">
     Nome_documento</span></a>
 </section>
 

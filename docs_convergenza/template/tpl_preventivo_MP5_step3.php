@@ -77,7 +77,8 @@
 			
 		</div>
 	</div>
-
+</section>
+<section>
     <div class="border-output">
 		<div class="row first-row">
 			<div class="col-sm-12 col-xs-12 boxDefault">
@@ -122,7 +123,7 @@
 	</div>
 </section>
 
-<section>
+<section class="paddingTop10">
 <div class="clearfix selezioneCC selezioneCCNoBor">
     <div class="border-output">
 		<div class="row first-row">
@@ -285,7 +286,7 @@
 
 
 
-<section>
+<section class="paddingTop10">
     <h3 class="titleSection titleForm">Informativa precontrattuale</h3>
     <p>Prendi visione delle informative precontrattuali</p>
     <div class="form-group">

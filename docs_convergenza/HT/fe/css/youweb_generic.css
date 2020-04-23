@@ -113,8 +113,8 @@ a, a:hover, a:active {
     color: #202d50;
 }
 
-.link-text, .link-text:hover, .link-text:active {
-    color: #0E977F;
+.link-text, .link-text:hover, .link-text:active, .link-text:focus {
+    color: #0E977F!important;
 }
 
 ol {
@@ -1003,7 +1003,9 @@ h1 .pager .circle {
 .titleSection.titleForm {
     margin-bottom: 13px
 }
-
+.border-output .boxDefault .titleSection.titleForm {
+    margin-bottom: 20px
+}
 select.form-control, .ui-combobox {
     width: 100%;
     height: 50px;
@@ -1245,7 +1247,7 @@ html input.inputSliderValue[disabled] {
 }
 
 .border-output .boxDefault .row {
-    margin-bottom: 15px
+    margin-bottom: 5px
 }
 
 .selezioneCCNoBor .border-output .boxDefault .details .row {
@@ -3890,7 +3892,9 @@ div.messagePanel a {color:#fff;text-decoration:underline}
 .boxAction {
     border-bottom: 1px solid #ebeef0;
 }
-
+.paddingLeftCattolica .boxAction {
+    border-bottom: 0
+}
 .boxAction h3 {
     color: #C0C5C9;
 }
@@ -3899,7 +3903,17 @@ div.messagePanel a {color:#fff;text-decoration:underline}
     padding-bottom: 20px;
     padding-top: 20px
 }
-
+.paddingLeftCattolica .boxAction p, .paddingLeftCattolica .boxAction a {
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+.paddingLeftCattolica .boxAction p.note {
+    padding-right:20px;
+}
+.testoIcona .paddingLeftCattolica .boxAction .btn-link {
+    text-align:right;
+    float: right;
+}
 @media (max-width: 767px) {
     .boxAction a {
         display: block;
@@ -3907,7 +3921,12 @@ div.messagePanel a {color:#fff;text-decoration:underline}
         padding-bottom: 20px;
         padding-top: 20px
     }
-
+    .paddingLeftCattolica .boxAction a {
+        display: inline-block;
+        width: auto;
+        padding-bottom: 0px;
+        padding-top: 20px
+    }
     .boxAction span {
         float: left;
         padding-bottom: 20px;
@@ -3945,6 +3964,12 @@ div.messagePanel a {color:#fff;text-decoration:underline}
 
     .paddingLeftCattolica {
         padding-left: 110px !important;
+    }
+    .hidden-mobile .paddingLeftCattolica {
+        padding-left: 0 !important;
+    }
+    .hidden-mobile .positionAbsolute {
+        display:none;
     }
 }
 
@@ -5032,6 +5057,7 @@ span.colAlert {
         width: 100%;
         min-height:100px;
      }
+    
      #mCalcWrapper #mCalcStatic .spinner {
         margin-bottom: 20px;
     }
@@ -7389,6 +7415,7 @@ div.fixed-table-scroll-outer {
 
 }
 
+<<<<<<< HEAD
 .select-periodo-switch > div {
   width: calc( 100% - 42px );
   float:left;
@@ -7415,4 +7442,31 @@ div.fixed-table-scroll-outer {
 
 .select-periodo-switch .hasDatepicker {
   padding-right: 20px !important;
+=======
+/*sezione preventivo covea */
+.garanzia-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom:30px;
+    position: relative;;
+}
+
+.garanzia-add {
+    padding: 0 20px 20px;
+    margin-bottom:30px;
+}
+.garanzia-box .btn-elimina, .btn-aggiungi {
+    position: absolute;
+    top: -15px;
+    background: white;
+    padding:0 5px;
+}
+.formWrapper .form-group.det-modifica {
+    padding: 20px;
+    margin-bottom:30px;
+    margin-top:-10px;
+}
+.formWrapper .form-group.det-modifica .alignLeft.btnWrapper a:first-child {
+    margin-left: 0
+>>>>>>> 340d67f1fef31d2be06d7dae77f46a36c0c8ea0a
 }
