@@ -72,6 +72,10 @@ $tipo_op_1 = array(1,2,3);
 		<div class="row">
 			<div class="col-xs-12 col-sm-8">
 				<label class="control-label">I tuoi portafogli</label>
+        <select class="form-control" id="spselPortafogli">
+          <?php auto_input_select( array('Portafoglio 1','Portafoglio 2','Portafoglio 3','Portafoglio 4') ) ?>
+        </select>
+        <?php /*
           <div class="spsel spsel-hasactions nosel" id="spselPortafogli"  placeholder="Seleziona...">
             <input type="hidden" name="spselCTAinput2">
             <div class="spsel-options">
@@ -97,6 +101,7 @@ $tipo_op_1 = array(1,2,3);
               })
             });
           </script>
+          */ ?>
 			</div>
 			<div class="col-xs-12 col-sm-4 no-label">
 				<div class="btn-align-right">
