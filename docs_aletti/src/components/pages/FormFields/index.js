@@ -122,6 +122,9 @@ export default class extends Component {
                             error={formstate.errors["esempio_campo_otp"]}
                             onChange={this.generalOnChange}
                             output={this.state.allOutput}
+                            otpType="email"
+                            idBozza="9999999"
+                            btnText="Richiedi il codice di controllo"
                             >
                             ></Form.otp>
                         </Col>
