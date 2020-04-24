@@ -18,8 +18,8 @@ import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js
                         "intestatariFirme":
                             {
                                 [form.field_intestcorrente]: { 
-                                "cellCertif":true,
-                                "emailCertif":true,
+                                "cellCertif":form["field_sessionfirmeblob_intestatarifirme_"+ form.field_intestcorrente +"_emailcertif"],
+                                "emailCertif":form["field_sessionfirmeblob_intestatarifirme_"+ form.field_intestcorrente +"_emailcertif"],
                             }
                         }
                     },

@@ -829,7 +829,7 @@ class FormDate extends Component {
                         format="DD/MM/YYYY"
                         dayPickerProps={dpProps}
                     ></DayPickerInput>
-                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , mask: null, cbchange: cbchange})}>&#215;</div>}
+                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , cbchange: cbchange})}>&#215;</div>}
                 </div>
                 }
                 {output && <span className="output">{value}</span>}
@@ -955,7 +955,7 @@ class FormOtp extends Component {
                     {!value && !output && this.state.status==="otpcheck" &&
                         <>
                             <input className="form-control" placeholder="Inserisci" maxLength="7" value={this.state.ccvalue} onChange={(e)=>{this.setState({ccvalue: e.target.value})}}></input>
-                            <Button color="primary" disabled={this.state.ccvalue.length<3} onClick={this.otpTest}>Verifica</Button>
+                            <Button color="primary" disabled={this.state.ccvalue.length<7} onClick={this.otpTest}>Verifica</Button>
                         </>
                     }
                     {!value && !output && this.state.status==="otperror" &&

@@ -13,7 +13,7 @@ export default class extends Component {
         // Declinazione per stati "particolari"
         let proseguiTxt = "Prosegui";
         if (formfields.field_stato==="ADEMPIMENTI_NORMATIVI") {
-            proseguiTxt = "Certifica intestatario";
+            proseguiTxt = "Conferma dati";
         }
 
 
@@ -74,7 +74,7 @@ export default class extends Component {
                                         </div>
                                     </ModalBody>
                                 </Modal>
-                                <Button color="primary" onClick={() => formprops.obsave(true)}>Prosegui</Button>
+                                <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
                             </>
                         }
 

@@ -36,12 +36,69 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Certificazione credenziali{nomeint}</h3>
-                    Verifica numero di cellulare
-                    Output: numero di cellulare.
-                    Test OTP
 
-                    Verifica indirizzo E-mail
-                    Output: Email
+                    <section>
+                        <h4>Verifica numero di cellulare</h4>
+                        <Row>
+                        <Col sm="1">
+                                <Form.input
+                                    label="Prefisso"
+                                    output={true}
+                                    value={formstate["field_anagraficablob_intestatari_"+ formstate.field_intestcorrente +"_prefisso"]}
+                                >
+                                </Form.input>                                               
+                            </Col>
+                            <Col sm="3">
+                                <Form.input
+                                    label="Numero di cellulare"
+                                    output={true}
+                                    value={formstate["field_anagraficablob_intestatari_"+ formstate.field_intestcorrente +"_telefono"]}
+                                >
+                                </Form.input>                                               
+                            </Col>
+                            <Col sm="4">
+                                <Form.otp
+                                        label="Codice di controllo"
+                                        name={"field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_cellcertif"}
+                                        value={formstate["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_cellcertif"]}
+                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_cellcertif"]}
+                                        onChange={this.props.obchange}
+                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_cellcertif"]}
+                                        otpType="sms"
+                                        idIntestatario={formstate.field_intestcorrente}
+                                        btnText="Richiedi il codice di controllo"
+                                    >
+                                    ></Form.otp>
+                            </Col>
+                        </Row>
+                    </section>
+
+                    <section>
+                        <h4>Verifica indirizzo email</h4>
+                        <Row>
+                            <Col sm="4">
+                                <Form.input
+                                    label="Indirizzo email"
+                                    output={true}
+                                    value={formstate["field_anagraficablob_intestatari_"+ formstate.field_intestcorrente +"_email"]}
+                                > </Form.input>
+                            </Col>
+                            <Col sm="4">
+                            <Form.otp
+                                        label="Codice di controllo"
+                                        name={"field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_emailcertif"}
+                                        value={formstate["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_emailcertif"]}
+                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_emailcertif"]}
+                                        onChange={this.props.obchange}
+                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+ formstate.field_intestcorrente +"_emailcertif"]}
+                                        otpType="email"
+                                        idIntestatario={formstate.field_intestcorrente}
+                                        btnText="Richiedi il codice di controllo"
+                                    >
+                                    ></Form.otp>
+                            </Col>
+                        </Row>
+                    </section>
                 </div>
             </div>
         )
