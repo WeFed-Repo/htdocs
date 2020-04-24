@@ -98,6 +98,7 @@ let stateInt = (form) => {
     {
         return ("INT"+ form.field_intestcorrente + "_"+ cState);
     }
+    
 }
 
 let getNextState = (form) => {

@@ -108,14 +108,6 @@ export default class extends Component {
                 bdata["field_anagraficablob_intestatari_0_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["0"]["listResidenzeFiscale"]).length;
                 bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length;
 
-                // Attribuisce lo stato "locale"
-                // Se lo stato non è iniziale o finale...
-                if (getStatiPratica().indexOf(bdata["field_stato"])<0) {
-
-                    bdata["field_stato"] = "INT" + bdata["field_intestcorrente"] + "_" + bdata["field_stato"]
-
-                }
-                
                 tthis.setState(bdata);
                 tthis.setState({ isLoading: false });
                 console.log(this.state);
