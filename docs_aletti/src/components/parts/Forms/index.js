@@ -829,7 +829,7 @@ class FormDate extends Component {
                         format="DD/MM/YYYY"
                         dayPickerProps={dpProps}
                     ></DayPickerInput>
-                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , cbchange: cbchange})}>&#215;</div>}
+                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , mask: null, cbchange: cbchange})}>&#215;</div>}
                 </div>
                 }
                 {output && <span className="output">{value}</span>}
