@@ -9,6 +9,14 @@ export default class extends Component {
 
         let formprops = this.props.formprops,
             formfields = formprops.obstate;
+
+        // Declinazione per stati "particolari"
+        let proseguiTxt = "Prosegui";
+        if (formfields.field_stato==="ADEMPIMENTI_NORMATIVI") {
+            proseguiTxt = "Certifica intestatario";
+        }
+
+
         return (
 
             <div className="onboarding-pulsantiera">

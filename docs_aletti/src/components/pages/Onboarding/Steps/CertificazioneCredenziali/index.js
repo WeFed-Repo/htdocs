@@ -36,7 +36,12 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Certificazione credenziali{nomeint}</h3>
+                    Verifica numero di cellulare
+                    Output: numero di cellulare.
+                    Test OTP
 
+                    Verifica indirizzo E-mail
+                    Output: Email
                 </div>
             </div>
         )

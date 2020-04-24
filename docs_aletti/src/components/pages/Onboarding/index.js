@@ -324,8 +324,8 @@ export default class extends Component {
                 {getNextState(this.state) === "RACCOLTA_PRODOTTI" && this.state.field_intestcorrente !== "" && <Step.RACCOLTA_PRODOTTI.form {...obformprops} btnConsole={this.btnConsole}></Step.RACCOLTA_PRODOTTI.form>}
                 {getNextState(this.state) === "ADEMPIMENTI_NORMATIVI" && this.state.field_intestcorrente !== "" && <Step.ADEMPIMENTI_NORMATIVI.form {...obformprops} btnConsole={this.btnConsole}></Step.ADEMPIMENTI_NORMATIVI.form>}
                 
-                {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
-                {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
+                {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
                 
                 
                 <BtnConsole formprops={obformprops}></BtnConsole>
