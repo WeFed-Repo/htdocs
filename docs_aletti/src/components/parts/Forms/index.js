@@ -854,8 +854,8 @@ class FormOtp extends Component {
     }
 
     ccurl = {
-        "email":  {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idBozza + "/invioOtpEmail"},
-        "sms": {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idBozza + "/invioOtpSms"}
+        "email":  {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idIntestatario + "/invioOtpEmail"},
+        "sms": {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idIntestatario + "/invioOtpSms"}
     }
 
     cctest = {
@@ -954,8 +954,8 @@ class FormOtp extends Component {
                     }
                     {!value && !output && this.state.status==="otpcheck" &&
                         <>
-                            <input className="form-control" placeholder="Inserisci" maxLength="6" value={this.state.ccvalue} onChange={(e)=>{this.setState({ccvalue: e.target.value})}}></input>
-                            <Button color="primary" disabled={this.state.ccvalue.length<6} onClick={this.otpTest}>Verifica</Button>
+                            <input className="form-control" placeholder="Inserisci" maxLength="7" value={this.state.ccvalue} onChange={(e)=>{this.setState({ccvalue: e.target.value})}}></input>
+                            <Button color="primary" disabled={this.state.ccvalue.length<3} onClick={this.otpTest}>Verifica</Button>
                         </>
                     }
                     {!value && !output && this.state.status==="otperror" &&

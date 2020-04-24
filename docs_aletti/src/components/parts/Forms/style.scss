@@ -28,7 +28,10 @@
             height: 38px;
             display:inline-block;
             float: right;
-        }   
+        }
+        .btn-primary:disabled {
+            background-color:#999;
+        }
         input.form-control {
             width: calc( 100% - 130px );
             display:inline-block;

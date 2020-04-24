@@ -123,7 +123,7 @@ export default class extends Component {
                             onChange={this.generalOnChange}
                             output={this.state.allOutput}
                             otpType="email"
-                            idBozza="9999999"
+                            idIntestatario="0"
                             btnText="Richiedi il codice di controllo"
                             >
                             ></Form.otp>
