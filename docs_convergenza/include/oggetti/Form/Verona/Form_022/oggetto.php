@@ -26,7 +26,7 @@
 									<?php
 									}?>	
 								
-								<input type="text" id="codiceOTP" value="" size="10" maxlength="6" name="codiceOTP" autocomplete="off" tabindex="1" class="form-control wauto" style="margin-top:5px" autofocus=""> 
+								<input type="text" id="codiceOTP" value="" size="10" maxlength="6" name="codiceOTP" autocomplete="off" tabindex="1" class="form-control wauto" style="margin-top:5px" > 
 								<?php 
 								if ($site == "youweb") 
 								{
