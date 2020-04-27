@@ -4,15 +4,16 @@ import DefaultCollapse from "components/parts/DefaultCollapse";
 import { Col, Row, Button } from 'reactstrap';
 import validazione from "./validazione";
 import salva from "./salva";
+import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class Adever extends Component {
 
     render() {
-
+       
         let int = this.props.int,
             formstate = this.props.obstate,
             obchange = this.props.obchange,
-            isOutput = this.props.isOutput ? true : false;
+            isOutput = this.props.isOutput ? true : false
 
         // Calcolo variabili "locali"
         let nomeintestatario = formstate["field_anagraficablob_intestatari_" + int + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + int + "_cognome"]
@@ -23,7 +24,22 @@ class Adever extends Component {
                 startsOpen={int === "0" && !isOutput}
                 className="search-collapse"
                 disabled={false}
-            >
+                hasErrors={
+                    CheckAccordionErrors(formstate.errors,
+                        [
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_professione_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_taesettore_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_provincia_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciareddito_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originereddito_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciapatrimonio_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"
+                        ])
+                   }
+                >
                 <section className="onboarding-block">
                     <Row>
                         <Col>
