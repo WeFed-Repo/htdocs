@@ -17,10 +17,16 @@ import { defaultFields, fieldsFromJson, jsonFromFields } from "./common/gestione
 
 // Importazione di tutti gli steps
 import Anagrafica from "./Steps/Anagrafica/";
-import RaccoltaProdotti from "./Steps/RaccoltaProdotti/"
-import AdempimentiNormativi from "./Steps/AdempimentiNormativi/"
-import RiepilogoDati from "./Steps/RiepilogoDati"
-import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali"
+import RaccoltaProdotti from "./Steps/RaccoltaProdotti/";
+import AdempimentiNormativi from "./Steps/AdempimentiNormativi/";
+import RiepilogoDati from "./Steps/RiepilogoDati";
+import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali";
+import IdentificazioneCliente from "./Steps/IdentificazioneCliente";
+import FirmaPrecontrattuale from "./Steps/FirmaPrecontrattuale";
+import FirmaVessatorie from "./Steps/FirmaVessatorie";
+import FirmaInvestimento from "./Steps/FirmaInvestimento";
+import FirmaVessatorieInvestimento from "./Steps/FirmaVessatorieInvestimento";
+import FirmaConsulente from "./Steps/FirmaConsulente";
 
 // Assegnazione di tutti gli step ad un unico oggetto Form
 const Step = {
@@ -28,7 +34,15 @@ const Step = {
     "RACCOLTA_PRODOTTI": RaccoltaProdotti,
     "ADEMPIMENTI_NORMATIVI": AdempimentiNormativi,
     "RIEPILOGO_DATI" : RiepilogoDati,
-    "CERTIF_CREDENZIALI": CertificazioneCredenziali
+    "CERTIF_CREDENZIALI": CertificazioneCredenziali,
+
+    "IDENTIF_CLIENTE": IdentificazioneCliente,
+    "FIRMA_PRECONTRATTUALE": FirmaPrecontrattuale,
+    "FIRMA_VESSATORIE": FirmaVessatorie,
+    "FIRMA_INVESTIMENTO": FirmaInvestimento,
+    "FIRMA_VESSATORIE_INVESTIMENTO": FirmaVessatorieInvestimento,
+    "FIRMA_CONSULENTE": FirmaConsulente
+
 }
 
 
