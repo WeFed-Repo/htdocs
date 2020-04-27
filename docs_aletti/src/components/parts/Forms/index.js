@@ -846,15 +846,87 @@ class FormOtp extends Component {
         super(props);
         this.state={
             loading: false,
-            status: "nootp"
+            status: "nootp",
+            ccvalue: ""
         }
         this.otpRequest = this.otpRequest.bind(this);
+        this.otpTest = this.otpTest.bind(this);
     }
 
+    ccurl = {
+        "email":  {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idIntestatario + "/invioOtpEmail"},
+        "sms": {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/"+ this.props.idIntestatario + "/invioOtpSms"}
+    }
+
+    cctest = {
+        "email": {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/validaOtpEmail"},
+        "sms": {"svil":"/json_data/simpleEsitoOk.json","prod":"/promotori/onboarding/rest/validazioniOtp/validaOtpSms"}
+    }
 
     otpRequest(){
         this.setState({loading:true});
-        this.props.onChange({name:this.props.name,value:"true"});
+        let tthis = this;
+        getData({
+            url: this.ccurl[this.props.otpType],
+            success: function(data){
+                if (data && data.esito && data.esito.type && data.esito.type==="OK") {
+                    // Otp inviato
+                    tthis.setState(
+                        {
+                            status:"otpcheck",
+                            loading:false
+                        }
+                    );
+                }
+                else
+                {
+                    // Otp non inviato: errore
+                    tthis.setState({
+                        status: "otperror",
+                        loading: false
+                    })
+
+                }
+
+            }
+        })
+      
+    }
+
+    otpTest(){
+
+        this.setState({loading:true});
+        let tthis = this;
+        getData({
+            url: this.cctest[this.props.otpType],
+            data : {"codOtp":this.state.ccvalue },
+            success: function(data){
+                if (data && data.esito && data.esito.type && data.esito.type==="OK") {
+                    // Otp inviato
+                    tthis.setState(
+                        {
+                            loading:false
+                        }
+                    );
+                    tthis.props.onChange({name:tthis.props.name,value:"true"});
+                }
+                else
+                {
+                    // Otp non inviato: errore
+                    tthis.setState({
+                        status: "otperror",
+                        loading: false
+                    })
+
+                }
+
+            }
+        })
+
+
+        this.setState({loading:true});
+        
+        /* */
         this.setState({loading:false});
     }
 
@@ -874,10 +946,22 @@ class FormOtp extends Component {
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 <div className={"otp-field " + (this.state.loading?"loading":"")}>
             
-                    {!value && !output &&
+                    {!value && !output && this.state.status==="nootp" &&
                         <>
                             <span className="otp-esito">Non verificato</span>
                             <Button color="primary" onClick={this.otpRequest}>{btnText}</Button>
+                        </>
+                    }
+                    {!value && !output && this.state.status==="otpcheck" &&
+                        <>
+                            <input className="form-control" placeholder="Inserisci" maxLength="7" value={this.state.ccvalue} onChange={(e)=>{this.setState({ccvalue: e.target.value})}}></input>
+                            <Button color="primary" disabled={this.state.ccvalue.length<7} onClick={this.otpTest}>Verifica</Button>
+                        </>
+                    }
+                    {!value && !output && this.state.status==="otperror" &&
+                        <>  
+                            <span className="otp-esito ko">Errore!</span>
+                            <Button color="primary" onClick={this.otpRequest}>Richiedi un nuovo codice</Button>
                         </>
                     }
                     {!value && output && <span className="otp-esito">Non verificato</span>}

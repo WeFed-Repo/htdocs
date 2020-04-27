@@ -1206,6 +1206,7 @@ label .btn-icon {
     top: 0;
     left: 10px;
     float: right;
+    cursor:pointer;
 }
 
 .vertical-center {
@@ -4352,6 +4353,7 @@ label.select-button + span {
     margin-bottom:0;
     padding-bottom:0;
  }
+
 span.colSucc {
     color: #75c2b8;
     font-weight: bold;
@@ -7415,34 +7417,6 @@ div.fixed-table-scroll-outer {
 
 }
 
-<<<<<<< HEAD
-.select-periodo-switch > div {
-  width: calc( 100% - 42px );
-  float:left;
-}
-.select-periodo-switch > a {
-  width: 30px;
-  float:right;
-  margin-top: 34px;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  z-index: 6;
-}
-
-.select-periodo-switch .input-group-addon {
-  text-decoration: none;
-}
-
-@media screen and (max-width: 1023px) {
-  .select-periodo-switch > a {
-    margin-top: 26px;
-  }
-}
-
-.select-periodo-switch .hasDatepicker {
-  padding-right: 20px !important;
-=======
 /*sezione preventivo covea */
 .garanzia-box {
     border: 1px solid #ccc;
@@ -7468,5 +7442,4 @@ div.fixed-table-scroll-outer {
 }
 .formWrapper .form-group.det-modifica .alignLeft.btnWrapper a:first-child {
     margin-left: 0
->>>>>>> 340d67f1fef31d2be06d7dae77f46a36c0c8ea0a
 }

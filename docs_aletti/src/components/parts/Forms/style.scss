@@ -15,9 +15,9 @@
 
     .otp-field {
         display:inline-block;
-        width:100%; background:#ddd;
+        width:100%;
         border-radius:5px;
-        height: 36px;
+        height: 38px;
         .btn-primary {
             width:auto;
             border:none;
@@ -25,15 +25,21 @@
             line-height:13px;
             text-transform:uppercase;
             width:120px;
-            height: 36px;
-            display:inline-block;
+            height: 38px;
             float: right;
-        }        
+        }
+        .btn-primary:disabled {
+            background-color:#999;
+        }
+        input.form-control {
+            width: calc( 100% - 130px );
+            display:inline-block;
+        }     
         .otp-esito {
             display:inline-block;
             position:relative;
             font-weight:bold;
-            padding: 6px 0 0 35px;
+            padding: 6px 0 0 30px;
             &::before {
                 content: "\00D7";
                 position:absolute;
@@ -41,7 +47,7 @@
                 width:25px;
                 height:25px;
                 border:solid 2px #999;
-                left:5px;
+                left:0;
                 border-radius: 50%;
                 color: #999;
                 text-align:center;
@@ -54,8 +60,12 @@
                 border-color:#009933;
                 line-height:25px;
             }
+            &.ko::before {
+                color: #f00;
+                border-color: #f00;
+            }
 
-            
+
         }
     }
 

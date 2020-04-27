@@ -36,34 +36,24 @@ class DatiPersonali extends Component {
     }
     setDateEmissione(val) {
         //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO PER SETTARE LA DATA DI EMISSIONE DALLA QUALE PARTIRE
-
-        let documentTypeSelected = this.typeDoc;
-        switch (documentTypeSelected) {
-            case "01":
-            case "11":
-            case "12":
-                //CASO CARTA IDENTITA'
-                //LA DATA DI PARTENZA NON PU0' ESSERE PIU' INDIETRO DI 10 ANNI
-                this.emissioneDoc = moment(new Date()).subtract(10, "year").format('DD/MM/YYYY');
-                break;
-            case "03":
-                //CASO PASSAPORTO 10 anni /il giorno prima
-                this.emissioneDoc = moment(new Date()).subtract(10, "year").add(1, "day").format('DD/MM/YYYY');
-                break;
-            case "02":
-            case "13":
-            case "14":
-                this.emissioneDoc = moment(new Date()).subtract(10, "year").format('DD/MM/YYYY');
-                break;
-            default:
-                break;
+        let documentTypeSelected = this.typeDoc,
+            today = moment().format('DD/MM/YYYY'),
+            //SE E' PERIODO COVIT 
+            dateToStart = this.getRangeCovid(today) ? moment("01/03/2020",'DD/MM/YYYY') : today
+        this.emissioneDoc = moment( dateToStart ).subtract(10, "year").format('DD/MM/YYYY');
+        //CORRETTIVA PER PERIODO COVID: ABILITARE EVENTUALI DATE DI EMISSIONE DI DOCUMENTI CHE SAREBBERO GIA? SCADUTI
+        
+        //CASO PASSAPORTO 10 anni /il giorno prima
+        if (documentTypeSelected == '03') {
+            this.emissioneDoc = moment(dateToStart).subtract(10, "year").add(1, "day").format('DD/MM/YYYY');
         }
+        
+       
     } 
     setDateScadenza(val) {
         //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
         let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
             drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
-            
             documentTypeSelected = this.typeDoc,
             birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
             //NUMERO DI ANNI DA AGGIUNGERE
@@ -364,7 +354,7 @@ class DatiPersonali extends Component {
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === "" : ""}
                                                         dateTo={moment(new Date(), 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY')}
-                                                        dateFrom={this.emissioneDoc}
+                                                        dateFrom= { this.emissioneDoc }
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>

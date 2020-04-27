@@ -348,7 +348,7 @@
 					<div class="form-field-input col-xs-12 col-sm-6">
 						<div class="form-field-input">
 								<img src="/HT/fe/img/OTPWT.png">
-								<input type="text" id="codiceOTP" value="" size="10" maxlength="6" name="codiceOTP" autocomplete="off" tabindex="1" class="form-control wauto" style="margin-top:5px" autofocus=""> 
+								<input type="text" id="codiceOTP" value="" size="10" maxlength="6" name="codiceOTP" autocomplete="off" tabindex="1" class="form-control wauto" style="margin-top:5px"> 
 								
 									<a href="#" onclick="javascript:OpenHelp('/HT/HTML/HelpOtp.html')" class="no-underline btn-icon hidden-xs">
 										<i class="icon icon-info_fill icon-2x"></i>

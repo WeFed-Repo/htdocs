@@ -228,7 +228,6 @@
 							{
 								"nome": "Preventivo beni e garanzie",
 								"tpl": "tpl_preventivo_MP5_step2.php",
-								"inlavorazione": true,
 								"html":"vr"
 							},
 							{

@@ -17,10 +17,17 @@ import { defaultFields, fieldsFromJson, jsonFromFields } from "./common/gestione
 
 // Importazione di tutti gli steps
 import Anagrafica from "./Steps/Anagrafica/";
-import RaccoltaProdotti from "./Steps/RaccoltaProdotti/"
-import AdempimentiNormativi from "./Steps/AdempimentiNormativi/"
-import RiepilogoDati from "./Steps/RiepilogoDati"
-import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali"
+import RaccoltaProdotti from "./Steps/RaccoltaProdotti/";
+import AdempimentiNormativi from "./Steps/AdempimentiNormativi/";
+import RiepilogoDati from "./Steps/RiepilogoDati";
+import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali";
+import IdentificazioneCliente from "./Steps/IdentificazioneCliente";
+import FirmaPrecontrattuale from "./Steps/FirmaPrecontrattuale";
+import FirmaVessatorie from "./Steps/FirmaVessatorie";
+import FirmaInvestimento from "./Steps/FirmaInvestimento";
+import FirmaVessatorieInvestimento from "./Steps/FirmaVessatorieInvestimento";
+import FirmaConsulente from "./Steps/FirmaConsulente";
+import Conclusa from "./Steps/Conclusa";
 
 // Assegnazione di tutti gli step ad un unico oggetto Form
 const Step = {
@@ -28,7 +35,17 @@ const Step = {
     "RACCOLTA_PRODOTTI": RaccoltaProdotti,
     "ADEMPIMENTI_NORMATIVI": AdempimentiNormativi,
     "RIEPILOGO_DATI" : RiepilogoDati,
-    "CERTIF_CREDENZIALI": CertificazioneCredenziali
+    "CERTIF_CREDENZIALI": CertificazioneCredenziali,
+
+    "IDENTIF_CLIENTE": IdentificazioneCliente,
+    "FIRMA_PRECONTRATTUALE": FirmaPrecontrattuale,
+    "FIRMA_VESSATORIE": FirmaVessatorie,
+    "FIRMA_INVESTIMENTO": FirmaInvestimento,
+    "FIRMA_VESSATORIE_INVESTIMENTO": FirmaVessatorieInvestimento,
+    "FIRMA_CONSULENTE": FirmaConsulente,
+
+    "CONCLUSA": Conclusa
+
 }
 
 
@@ -108,14 +125,6 @@ export default class extends Component {
                 bdata["field_anagraficablob_intestatari_0_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["0"]["listResidenzeFiscale"]).length;
                 bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length;
 
-                // Attribuisce lo stato "locale"
-                // Se lo stato non è iniziale o finale...
-                if (getStatiPratica().indexOf(bdata["field_stato"])<0) {
-
-                    bdata["field_stato"] = "INT" + bdata["field_intestcorrente"] + "_" + bdata["field_stato"]
-
-                }
-                
                 tthis.setState(bdata);
                 tthis.setState({ isLoading: false });
                 console.log(this.state);
@@ -332,9 +341,15 @@ export default class extends Component {
                 {getNextState(this.state) === "RACCOLTA_PRODOTTI" && this.state.field_intestcorrente !== "" && <Step.RACCOLTA_PRODOTTI.form {...obformprops} btnConsole={this.btnConsole}></Step.RACCOLTA_PRODOTTI.form>}
                 {getNextState(this.state) === "ADEMPIMENTI_NORMATIVI" && this.state.field_intestcorrente !== "" && <Step.ADEMPIMENTI_NORMATIVI.form {...obformprops} btnConsole={this.btnConsole}></Step.ADEMPIMENTI_NORMATIVI.form>}
                 
-                {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
-                {getNextState(this.state) === "INT"+ this.state.field_intestcorrente + "_CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
+                {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
+                {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
+                {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
+                {getNextState(this.state) === "FIRMA_VESSATORIE_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_INVESTIMENTO.form>}
+                {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
                 
+                {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
                 
                 <BtnConsole formprops={obformprops}></BtnConsole>
                 

@@ -9,6 +9,14 @@ export default class extends Component {
 
         let formprops = this.props.formprops,
             formfields = formprops.obstate;
+
+        // Declinazione per stati "particolari"
+        let proseguiTxt = "Prosegui";
+        if (formfields.field_stato==="ADEMPIMENTI_NORMATIVI") {
+            proseguiTxt = "Conferma dati";
+        }
+
+
         return (
 
             <div className="onboarding-pulsantiera">
@@ -19,7 +27,8 @@ export default class extends Component {
                         }
                         <span className="svi-btn" onClick= {()=>console.log(formfields)}>Mostra stato onboarding</span>
                     </div>
-                    <div className="btn-console-right">
+                    {getNextState(formfields)!=="CONCLUSA" &&
+                        <div className="btn-console-right">
                         {formfields.field_anagraficablob_privacyletta === "true" && <>
                             <Modal isOpen={formfields.modalEsci}>
                                 <ModalHeader>Esci</ModalHeader>
@@ -66,11 +75,19 @@ export default class extends Component {
                                         </div>
                                     </ModalBody>
                                 </Modal>
-                                <Button color="primary" onClick={() => formprops.obsave(true)}>Prosegui</Button>
+                                <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
                             </>
                         }
 
                     </div>
+                    }
+                    {
+                        getNextState(formfields)==="CONCLUSA" && 
+                        <div className="btn-console-right">
+                            <Button color="primary" onClick={()=>window.location.href="/gestionebozze"}>Fine</Button>
+                        </div>
+                    }
+                    
                 </div>
             </div>
 
