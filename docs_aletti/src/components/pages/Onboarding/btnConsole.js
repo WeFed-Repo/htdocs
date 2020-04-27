@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import {getAvanzamentoPratica,getNextState,getPrevState} from "./common/gestioneStati";
+import {getNextState,getPrevState, getPrevInt} from "./common/gestioneStati";
 
 export default class extends Component {
 
@@ -23,7 +23,7 @@ export default class extends Component {
                 <div className="btn-console">
                     <div className="btn-console-left">
                         {formfields.field_stato !=="BOZZA" && 
-                            <Button onClick={()=>formprops.setObState({field_stato:getPrevState(formfields)})}>Indietro</Button>
+                            <Button onClick={()=>formprops.setObState({field_stato:getPrevState(formfields), field_intestcorrente: getPrevInt(formfields)})}>Indietro</Button>
                         }
                         <span className="svi-btn" onClick= {()=>console.log(formfields)}>Mostra stato onboarding</span>
                     </div>
