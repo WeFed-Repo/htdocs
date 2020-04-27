@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
-import salva from "./salva";
-import validazione from "./validazione";
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
@@ -27,15 +25,10 @@ class StepForm extends Component {
             setObState: this.props.setObState,
         }
 
-        // Eventuale nome intestatario 
-        let nomeint;
-        if (formstate.field_numintestatari==="2") {
-            nomeint= " " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_nome"] +" " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_cognome"] ;
-        }
-        return (
+       return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Titolo step {nomeint}</h3>
+                    <h3>PRATICA CONCLUSA</h3>
                 </div>
             </div>
         )
@@ -45,7 +38,5 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm,
-    validazione: validazione,
-    salva: salva
+    form : StepForm
 }

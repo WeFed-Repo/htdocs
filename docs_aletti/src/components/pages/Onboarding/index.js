@@ -27,6 +27,7 @@ import FirmaVessatorie from "./Steps/FirmaVessatorie";
 import FirmaInvestimento from "./Steps/FirmaInvestimento";
 import FirmaVessatorieInvestimento from "./Steps/FirmaVessatorieInvestimento";
 import FirmaConsulente from "./Steps/FirmaConsulente";
+import Conclusa from "./Steps/Conclusa";
 
 // Assegnazione di tutti gli step ad un unico oggetto Form
 const Step = {
@@ -41,7 +42,9 @@ const Step = {
     "FIRMA_VESSATORIE": FirmaVessatorie,
     "FIRMA_INVESTIMENTO": FirmaInvestimento,
     "FIRMA_VESSATORIE_INVESTIMENTO": FirmaVessatorieInvestimento,
-    "FIRMA_CONSULENTE": FirmaConsulente
+    "FIRMA_CONSULENTE": FirmaConsulente,
+
+    "CONCLUSA": Conclusa
 
 }
 
@@ -340,7 +343,13 @@ export default class extends Component {
                 
                 {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
                 {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
+                {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
+                {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
+                {getNextState(this.state) === "FIRMA_VESSATORIE_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_INVESTIMENTO.form>}
+                {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
                 
+                {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
                 
                 <BtnConsole formprops={obformprops}></BtnConsole>
                 

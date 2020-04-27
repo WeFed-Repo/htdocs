@@ -27,7 +27,8 @@ export default class extends Component {
                         }
                         <span className="svi-btn" onClick= {()=>console.log(formfields)}>Mostra stato onboarding</span>
                     </div>
-                    <div className="btn-console-right">
+                    {getNextState(formfields)!=="CONCLUSA" &&
+                        <div className="btn-console-right">
                         {formfields.field_anagraficablob_privacyletta === "true" && <>
                             <Modal isOpen={formfields.modalEsci}>
                                 <ModalHeader>Esci</ModalHeader>
@@ -79,6 +80,14 @@ export default class extends Component {
                         }
 
                     </div>
+                    }
+                    {
+                        getNextState(formfields)==="CONCLUSA" && 
+                        <div className="btn-console-right">
+                            <Button color="primary" onClick={()=>window.location.href="/gestionebozze"}>Fine</Button>
+                        </div>
+                    }
+                    
                 </div>
             </div>
 

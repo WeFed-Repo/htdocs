@@ -1,11 +1,14 @@
 import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
 
+
+
     export default  {
 
         url: saveUrl.SessioneFirme,
         
         data: (form,validazione) => {
-    
+
+            
             let val = (validazione)? validazione : false;
     
             // Oggetto "data" del form
