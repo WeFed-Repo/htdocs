@@ -3309,4 +3309,120 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
     letter-spacing: -1px;
   }
 }
+/* BOX_050 */
+.box-catalogue.box-catalogue-assicur {
+  border: 1px solid #CCCCCC;
+}
+.box-catalogue.box-catalogue-assicur .box-catalogue-left {
+  padding: 0;
+  background: none;
+}
+.box-catalogue.box-catalogue-assicur .box-catalogue-left img {
+  width: 100%;
+}
+.box-catalogue.box-catalogue-assicur .box-catalogue-right {
+  padding-bottom: 0;
+}
+.box-catalogue.box-catalogue-assicur .box-catalogue-right h2,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right video,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right embed,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right object,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right .largeElement,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right .boxesito,
+.box-catalogue.box-catalogue-assicur .box-catalogue-right .panel-nofill {
+  margin-bottom: 15px;
+}
+.box-catalogue.box-catalogue-assicur .box-catalogue-right p strong {
+  font-weight: normal;
+}
+.box-catalogue.box-catalogue-assicur h3 {
+  color: #000;
+  text-transform: none;
+}
+/* BOX_070 */
+.top-box-promo {
+  background: #f6f4f4;
+  border: 1px solid #CCCCCC;
+}
+@media screen and (max-width: 767px) {
+  .top-box-promo {
+    padding: 20px;
+  }
+}
+.top-box-promo > .row:first-child > div:first-child {
+  float: right;
+}
+.top-box-promo > .row:first-child > div:last-child {
+  float: left;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .top-box-promo > .row:first-child > div:last-child:before,
+  .top-box-promo > .row:first-child > div:last-child:after {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #f6f4f4;
+    z-index: 3;
+  }
+}
+.top-box-promo .top-title-promo {
+  color: #000;
+  padding-top: 30px;
+  font-weight: bold;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+}
+/* BOX_065 */
+.titButton.titButtonIco {
+  background: #f6f4f4;
+  border: 1px solid #CCCCCC;
+}
+.titButton.titButtonIco .row {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.titButton.titButtonIco .row > div {
+  width: fit-content;
+}
+.titButton.titButtonIco .row > div:first-child {
+  min-width: 120px;
+}
+.titButton.titButtonIco .row > div:first-child .icon {
+  font-size: 90px;
+}
+/* BOX_070 */
+.box-catalogue.assicurazioni ul {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.box-catalogue.assicurazioni ul li {
+  padding-bottom: 25px;
+}
+.box-catalogue.assicurazioni .box-catalogue-right {
+  background: #f6f4f4;
+}
+@media screen and (max-width: 767px) {
+  .box-catalogue.assicurazioni .bullet-spunta {
+    margin-bottom: 0;
+  }
+  .box-catalogue.assicurazioni .box-catalogue-right {
+    padding-bottom: 0;
+  }
+  .box-catalogue.assicurazioni .box-catalogue-right:last-child {
+    padding-top: 0;
+  }
+  .box-catalogue.assicurazioni .box-catalogue-right:last-child .bullet-spunta {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+/**/
 /*# sourceMappingURL=webank_skin.css.map */
