@@ -1,7 +1,7 @@
 import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
 import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js";
-import { indexOf } from "lodash-es";
-
+import {getNextInt} from "components/pages/Onboarding/common/gestioneStati.js";
+ 
 export default  {
 
     url: saveUrl.Anagrafica,
@@ -73,7 +73,7 @@ export default  {
         let dataObj = {
                 "id": form.field_id,
                 "firme":firme,
-                "intestatarioCorrente": form.field_intestcorrente,
+                "intestatarioCorrente": getNextInt(form),
                 "stato": "ADEMPIMENTI_NORMATIVI"
             }
 

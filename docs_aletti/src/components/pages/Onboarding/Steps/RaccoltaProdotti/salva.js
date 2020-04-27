@@ -1,5 +1,5 @@
 import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
-import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js";
+import { getNextInt } from "../../common/gestioneStati";
 
 export default  {
 
@@ -18,7 +18,7 @@ export default  {
                     "informativaMifid": (form.field_sessionfirmeblob_informativamifid==="true")
                 },
                 "stato": "RACCOLTA_PRODOTTI",
-                "intestatarioCorrente": form.field_intestcorrente               
+                "intestatarioCorrente": getNextInt(form)
                 
             }
 
