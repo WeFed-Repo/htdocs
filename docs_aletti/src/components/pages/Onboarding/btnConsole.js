@@ -16,7 +16,6 @@ export default class extends Component {
             proseguiTxt = "Conferma dati";
         }
 
-
         return (
 
             <div className="onboarding-pulsantiera">
