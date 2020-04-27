@@ -109,6 +109,14 @@ let getNextState = (form) => {
 
 }
 
+let getNextInt = (form) => {
+    let int = "0",
+        stati = getStatiPratica(form);
+    var nextState = stati[stati.indexOf(stateInt(form))+1];
+    if (nextState.indexOf("INT")>=0) {int = nextState.substring(3,4)}
+    return (int);
+}
+
 let getPrevState = (form) => {
 
     // Caso con 1 intestatario 
@@ -116,4 +124,12 @@ let getPrevState = (form) => {
     return stati[stati.indexOf(stateInt(form))-1].replace("INT0_","").replace("INT1_","");
 }
 
-export {getStatiPratica,getAvanzamentoPratica,getNextState,getPrevState};
+let getPrevInt = (form) => {
+    let int = "0",
+    stati = getStatiPratica(form);
+    var nextState = stati[stati.indexOf(stateInt(form))-1];
+    if (nextState.indexOf("INT")>=0) {int = nextState.substring(3,4)}
+    return (int);
+}
+
+export {getStatiPratica,getAvanzamentoPratica,getNextState,getNextInt,getPrevState,getPrevInt};

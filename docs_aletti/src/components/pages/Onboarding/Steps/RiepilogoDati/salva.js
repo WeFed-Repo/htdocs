@@ -1,5 +1,5 @@
 import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
-import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js";
+import {getNextInt} from "components/pages/Onboarding/common/gestioneStati.js";
 
     export default  {
 
@@ -13,7 +13,7 @@ import {jsonFromFields} from "components/pages/Onboarding/common/gestioneDati.js
             let dataObj = {
                     "id": form.field_id,
                     "stato": "RIEPILOGO_DATI",
-                    "intestatarioCorrente": form.field_intestcorrente               
+                    "intestatarioCorrente": getNextInt(form)
                     
                 }
     

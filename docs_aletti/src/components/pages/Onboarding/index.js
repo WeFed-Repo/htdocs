@@ -12,8 +12,8 @@ import "./style.scss";
 import ConsoleSviluppo from "./consoleSviluppo"
 
 // Gestione degli stati e dei dati
-import {getNextState,getStatiPratica} from "./common/gestioneStati";
-import { defaultFields, fieldsFromJson, jsonFromFields } from "./common/gestioneDati";
+import {getNextState,getNextInt} from "./common/gestioneStati";
+import { defaultFields, fieldsFromJson } from "./common/gestioneDati";
 
 // Importazione di tutti gli steps
 import Anagrafica from "./Steps/Anagrafica/";
@@ -186,7 +186,8 @@ export default class extends Component {
                                 {
                                     //Prosegue allo step successivo
                                     this.setState({
-                                        field_stato: getNextState(this.state).replace("INT0_","").replace("INT1_","")
+                                        field_stato: getNextState(this.state),
+                                        field_intestcorrente: getNextInt(this.state)
                                     });
                                 }
                                 
@@ -220,10 +221,6 @@ export default class extends Component {
                 }
             });
         }
-        console.log("------------------------ STATO CAMPI ---------------------------")
-        console.log(this.state)
-        console.log("--------------------- JSON PER SPEDIZIONE ----------------------")
-        console.log(jsonFromFields(this.state))
     }
 
 
@@ -346,6 +343,7 @@ export default class extends Component {
                 {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
                 {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
                 {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
+                {getNextState(this.state) === "FIRMA_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_INVESTIMENTO.form>}
                 {getNextState(this.state) === "FIRMA_VESSATORIE_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_INVESTIMENTO.form>}
                 {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
                 
