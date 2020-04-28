@@ -5,21 +5,104 @@
         "description": null
     },
     "results": {
-        "id": 24,
-        "dataInserimento": 1581516903000,
-        "dataUltimoAggiornamento": 1581517017000,
-        "stato": "RIEPILOGO_DATI",
+        "id": 61,
+        "dataInserimento": 1581948529000,
+        "dataUltimoAggiornamento": 1582194393000,
+        "stato": "ADEMPIMENTI_NORMATIVI",
         "provenienza": "PROMOTORE",
         "intestazione": "PIETRO BINI , CLAUDIO ROSSI",
         "numIntestatari": 2,
-        "intestCorrente": 1,
-        "ordineIntestatari": "10",
+        "intestCorrente": 0,
+        "ordineIntestatari": "01",
         "promotore": "ES05495",
-        "expirationDate": 1589282103000,
+        "expirationDate": 1589713729000,
         "sessionFirmeBlob": {
-            "idMifid": 1,
+            "idAccessToken": null,
+            "idMifid": 77,
+            "depositoIncluso": true,
             "informativaMifid": true,
-            "depositoIncluso": true
+            "capitalizzazionePeriodica": {
+                "codDisclaimer": "ALETTI_CAP_PERIODICA",
+                "consenso": true
+            },
+            "naturaScopo": [
+                {
+                    "id": "15",
+                    "nome": "Affidamenti concessi aaaa"
+                }
+            ],
+            "naturaScopoDeposito": [
+                {
+                    "id": "15",
+                    "nome": "Affidamenti concessi aaaa"
+                }
+            ],
+            "codicePratica": null,
+            "intestatariFirme": {
+                "0": {
+                    "listRispAdever": {
+                        "professione": [
+                            {
+                                "id": "3",
+                                "nome": "Libero professionista"
+                            }
+                        ],
+                        "taeSettore": [
+                            {
+                                "id": "993",
+                                "nome": "Altri agenti, mediatori e consulenti non ancora classificati (es. agenti sportivi)"
+                            }
+                        ],
+                        "fasciaReddito": [
+                            {
+                                "id": "6",
+                                "nome": "Da 500.001 a 2.500.000"
+                            }
+                        ],
+                        "fasciaPatrimonio": [
+                            {
+                                "id": "6",
+                                "nome": "Oltre 10.000.000"
+                            }
+                        ],
+                        "origineReddito": [
+                            {
+                                "id": "5",
+                                "nome": "Redditi finanziari"
+                            }
+                        ],
+                        "origineFondi": [
+                            {
+                                "id": "6",
+                                "nome": "Lascito\\eredita'\\donazione"
+                            }
+                        ],
+                        "nazionalita": [
+                            {
+                                "id": "212",
+                                "nome": "ARUBA"
+                            }
+                        ],
+                        "provincia": [
+                            {
+                                "id": "AQ",
+                                "nome": "AQ"
+                            }
+                        ]
+                    },
+                    "titolareEffettivo": true,
+                    "fasciaRedditoNote": "note1",
+                    "origineRedditoNote": "note4",
+                    "fasciaPatrimonioNote": "note3",
+                    "origineFondiNote": "note4",
+                    "personaEsposta": true,
+                    "cellCertif": true,
+                    "emailCertif": true,
+                    "emailPec": null,
+                    "codAttivazionePec": null,
+                    "sessioneConclusa": false
+                }
+            }
         },
         "anagraficaBlob": {
             "privacyletta": true,
@@ -32,42 +115,46 @@
                     "sesso": "M",
                     "codiceFiscale": "BNIPTR79S25E625J",
                     "imgCodFiscale": [
-                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
-                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                        {
+                            "idImmagine": 33,
+                            "formato": "PDF",
+                            "tipo": "RETRO"
+                        },
+                        {
+                            "idImmagine": 34,
+                            "formato": "PDF",
+                            "tipo": "FRONTE"
+                        }
                     ],
                     "email": "pietro.bini@gmail.com",
                     "prefisso": "39",
                     "telefono": "1233336789",
                     "listPrivacy": [
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_1",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_1",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_2",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_2",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_3",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_3",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_4",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_4",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_5",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_5",
                             "consenso": true
                         }
                     ],
-                    "paeseNascita": "89",
+                    "paeseNascita": "86",
                     "provinciaNascita": "LI",
-                    "cittadinanza": "89",
+                    "cittadinanza": "86",
                     "comuneNascita": "Livorno",
-                    "imgFirma": {
-                        "idDoc": 5,
-                        "codTipoDocumento": "FRM"
-                    },
                     "listResidenzeFiscale": [
                         {
                             "codiceUic": 266,
@@ -81,8 +168,9 @@
                             "descrizione": "ARGENTINA",
                             "imgTin": [
                                 {
-                                    "idDoc": 8,
-                                    "codTipoDocumento": "TIN"
+                                    "idImmagine": 33,
+                                    "formato": "JPG",
+                                    "tipo": "UNICA"
                                 }
                             ]
                         }
@@ -91,12 +179,15 @@
                     "numDocumento": "AN678",
                     "dataRilascioRinnovo": 1581422400000,
                     "dataScadenza": 1656806400000,
-                    "paeseRilascio": "Italia",
+                    "paeseRilascio": "236",
                     "provinciaRilascio": "LI",
                     "comuneRilascio": "VADA",
                     "imgDocIdentita": [
-                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
-                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                        {
+                            "idImmagine": 33,
+                            "formato": "JPG",
+                            "tipo": "UNICA"
+                        }
                     ],
                     "tipoIndirizzoResidenza": "Via",
                     "indirizzoResidenza": "via fiordalisio",
@@ -129,47 +220,52 @@
                     "codTitoloStudio": "LicenzaMedia"
                 },
                 "1": {
-                    "nome": "CLAUDIO",
+                    "nome": "MAURIZIO",
                     "cognome": "ROSSI",
-                    "nascita": 315532800000,
+                    "nascita": 312379200000,
                     "sesso": "M",
-                    "codiceFiscale": "RSSCLD80A01H501J",
+                    "codiceFiscale": "BNIPTR79S25E625J",
                     "imgCodFiscale": [
-                        {"idImmagine": 99991, "formato": "JPG", "tipo": "UNICA"}
+                        {
+                            "idImmagine": 33,
+                            "formato": "PDF",
+                            "tipo": "RETRO"
+                        },
+                        {
+                            "idImmagine": 34,
+                            "formato": "PDF",
+                            "tipo": "FRONTE"
+                        }
                     ],
-                    "email": "claudio.rossi@gmail.com",
+                    "email": "pietro.bini@gmail.com",
                     "prefisso": "39",
-                    "telefono": "1233456666",
+                    "telefono": "1233336789",
                     "listPrivacy": [
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_1",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_1",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_2",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_2",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_3",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_3",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_4",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_4",
                             "consenso": true
                         },
                         {
-                            "codDisclaimer": "ALETTI_CONSENSO_5",
+                            "codDisclaimer": "ALETTI_ANAG_CONS_5",
                             "consenso": true
                         }
                     ],
-                    "paeseNascita": "Italia",
-                    "provinciaNascita": "RM",
-                    "cittadinanza": "Italia",
-                    "comuneNascita": "Roma",
-                    "imgFirma": {
-                        "idDoc": 5,
-                        "codTipoDocumento": "FRM"
-                    },
+                    "paeseNascita": "86",
+                    "provinciaNascita": "LI",
+                    "cittadinanza": "86",
+                    "comuneNascita": "Livorno",
                     "listResidenzeFiscale": [
                         {
                             "codiceUic": 266,
@@ -181,19 +277,28 @@
                             "codiceUic": 6,
                             "tin": "4444",
                             "descrizione": "ARGENTINA",
-                            "imgTin": null
+                            "imgTin": [
+                                {
+                                    "idImmagine": 33,
+                                    "formato": "JPG",
+                                    "tipo": "UNICA"
+                                }
+                            ]
                         }
                     ],
                     "codTipoDocumento": "01",
                     "numDocumento": "AN678",
                     "dataRilascioRinnovo": 1581422400000,
                     "dataScadenza": 1656806400000,
-                    "paeseRilascio": "Italia",
+                    "paeseRilascio": "236",
                     "provinciaRilascio": "LI",
                     "comuneRilascio": "VADA",
                     "imgDocIdentita": [
-                        {"idImmagine": 99991, "formato": "JPG", "tipo": "FRONTE"},
-                        {"idImmagine": 99993, "formato": "JPG", "tipo": "RETRO"}
+                        {
+                            "idImmagine": 33,
+                            "formato": "JPG",
+                            "tipo": "UNICA"
+                        }
                     ],
                     "tipoIndirizzoResidenza": "Via",
                     "indirizzoResidenza": "via fiordalisio",
@@ -201,7 +306,7 @@
                     "provinciaResidenza": "MI",
                     "comuneResidenza": "MI",
                     "capResidenza": "20146",
-                    "tipoIndirizzoCAI": "Piazza",
+                    "tipoIndirizzoCAI": "Via",
                     "indirizzoCAI": "via dei cai",
                     "numCAI": "88",
                     "provinciaCAI": "LU",

@@ -1,6 +1,7 @@
 import Functions from "components/functions";
 import { getNextState } from "./gestioneStati";
 
+
 const defaultFields = {
 
     "dataInserimento": "",
@@ -379,6 +380,8 @@ const defaultFields = {
         }
     }
 }
+
+
 
 
 /* Assegna un tipo di conversione diverso per alcune chiavi: serve a gestire i boolean, i timestamp, ecc */
