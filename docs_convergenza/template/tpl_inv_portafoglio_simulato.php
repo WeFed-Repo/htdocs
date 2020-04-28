@@ -108,7 +108,7 @@ $tipo_op_1 = array(1,2,3);
 			</div>
 			<div class="col-xs-12 col-sm-4 no-label">
 				<div class="btn-align-right">
-          <a type="button" href="#" class="btn btn-primary" title="Crea nuovo">
+          <a type="button" href="#" class="btn btn-primary" title="Crea nuovo" data-toggle="modal" data-target="#layerNuovo">
             <?php if($site == "webank") echo '<i class="icon icon-add"></i>' ?>
             <span class="icon-text">Crea nuovo</span>
           </a>
@@ -138,7 +138,7 @@ $tipo_op_1 = array(1,2,3);
             </div>
             <?php } ?>
             <div class="spsel-option" data-value="<?php print($i);?>">
-              <a class="spsel-option-el">CREA NUOVA VISTA</a>
+              <a class="spsel-option-el" data-toggle="modal" data-target="#layerNuovaVista">CREA NUOVA VISTA</a>
               <a class="spsel-addel btn-icon" data-el="icona_add_<?php print($i);?>">
                 <i class="icon icon-<?php print ( ($site == "webank") ? 'r-user_add' : 'add_filled') ?>"></i>
               </a>
@@ -206,7 +206,7 @@ $tipo_op_1 = array(1,2,3);
           </tr>
       </thead>
       <tbody>
-      <?php for($x=0;$x<=5;$x++) { ?>
+      <?php for($x=0;$x<=3;$x++) { ?>
         <tr>
           <td class="center">
             <a class="btn-icon">
@@ -519,13 +519,96 @@ $tipo_op_1 = array(1,2,3);
 </div>
 <!-- Fine overlayer tassi di cambio -->
 
+<!-- Overlayer crea nuova vista -->
+<div class="modal fade modal-fixed-header modal-fixed-footer" id="layerNuovaVista" tabindex="-1" role="dialog" aria-labelledby="layerNuovaVistaLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                <h2 class="modal-title" id="layerNuovaVistaLabel">Crea nuova vista</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <label class="control-label">Nome vista (max 25 caratteri)</label>
+        		 			<div class="input-group">
+        					    <input type="text" class="form-control" value="" maxlength="25">
+        	     		  </div>
+                </div>
+              </div>
+              <div class="row marginTopMedium">
+                <div class="col-xs-10">
+                  <p>Seleziona le colonne da visualizzare (massimo&nbsp;<span class="maxCols">0</span>)</p>
+                </div>
+                <div class="col-xs-2 align-right totCols">
+                  <p><span class="countCols">0</span>/<span class="maxCols">0</span></p>
+                </div>
+              </div>
+
+              <div class="row marginTopMedium" id="wrapperCheckCols">
+                <?php for($x=0;$x<=30;$x++) { ?>
+                <div class="col-xs-6 col-md-4">
+                  <div class="checkbox">
+                    <label class="textWrapper">
+                      <input type="checkbox">
+                      <span class="text">Nome Colonna</span>
+                    </label>
+                </div>
+                </div>
+                <?php } ?>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <div class="align-right">
+                <input type="button" name="annulla" value="Annulla" data-dismiss="modal" class="btn btn-secondary" alt="Annulla">
+          			<input type="button" name="crea" value="Crea" data-dismiss="modal" class="btn btn-primary" alt="Crea">
+              </div>
+      		  </div>
+        </div>
+    </div>
+</div>
+<!-- Fine overlayer crea nuova vista -->
+
+<!-- Overlayer crea nuovo -->
+<div class="modal fade modal-fixed-header modal-fixed-footer" id="layerNuovo" tabindex="-1" role="dialog" aria-labelledby="layerNuovoLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                <h2 class="modal-title" id="layerNuovoLabel">Crea portafoglio simulato</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br />Puoi creare altri <strong>8</strong> portafogli</label>
+                </div>
+              </div>
+              <div class="row form-group w100">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control " value="" maxlength="25" placeholder="Nome portafoglio simulato">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="align-right">
+                <input type="button" name="annulla" value="Annulla" data-dismiss="modal" class="btn btn-secondary" alt="Annulla">
+          			<input type="button" name="crea" value="Crea" data-dismiss="modal" class="btn btn-primary" alt="Crea">
+              </div>
+      		  </div>
+        </div>
+    </div>
+</div>
+<!-- Fine overlayer crea nuovo -->
+
 <?php include("./parts/table_th_filter.php"); ?>
 <?php include("./parts/icona_operativa.php"); ?>
 
 <!-- INIZIALIZZAZIONI -->
 <script type="text/javascript">
   $(function(){
-    resizeTab('secondTab',0);
     appendDatePickerIcon('periodo');
     var tableOrdiniMovimenti = $('.sortableTable');
     tableOrdiniMovimenti.bootstrapTable({
@@ -561,6 +644,10 @@ $tipo_op_1 = array(1,2,3);
       e.preventDefault();
       $('#menuSimula').modal();
     });
+    initCheckCols();
+    $('#wrapperCheckCols input').on('click', function (e) {
+      initCheckCols();
+    });
   });
   //inizializzazione datepicker
   $(function() {
@@ -582,4 +669,19 @@ $tipo_op_1 = array(1,2,3);
     });
     appendDatePickerIcon('dataInserimento');
   });
+  function initCheckCols() {
+    var parent = $('#wrapperCheckCols');
+    var totCols = $('.totCols');
+    var max = 20;
+    var num = parent.find('input:checked').size();
+    $('.countCols').each(function(){ $(this).html( num ); })
+    $('.maxCols').each(function(){ $(this).html( max ); })
+    if(num >= max ) {
+      parent.find('input:not(:checked)').attr('disabled','disabled');
+      totCols.addClass('has-error');
+    } else {
+      parent.find('input:not(:checked)').removeAttr('disabled');
+      totCols.removeClass('has-error');
+    }
+  }
 </script>

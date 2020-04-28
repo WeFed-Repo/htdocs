@@ -13238,6 +13238,11 @@ body.modal-print > .modal-print-content {
 .fixed-table-pagination .dropdown-menu {
   z-index: 0;
 }
+/* select di periodo alternabile */
+.select-periodo-switch {
+  display: table;
+  width: 100%;
+}
 .select-periodo-switch > div {
   width: calc(100% - 42px);
   float: left;
@@ -13250,6 +13255,11 @@ body.modal-print > .modal-print-content {
   text-align: center;
   display: block;
   z-index: 6;
+}
+@media (max-width: 991px) {
+  .select-periodo-switch > a {
+    margin-top: 22px;
+  }
 }
 .select-periodo-switch .input-group-addon {
   text-decoration: none;
