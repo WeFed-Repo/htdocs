@@ -578,5 +578,9 @@ function print_periodo_switch($periodo) {
       }
     });
     initThFilter();
+
+    $('.tabWrapper').on('shown.bs.tab', function (e) {
+      alert('secondTab');
+    });
   });
 </script>

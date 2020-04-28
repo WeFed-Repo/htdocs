@@ -2952,24 +2952,31 @@ body.modal-print > .modal-print-content {
     z-index:0;
 }
 
-.select-periodo-switch > div {
-  width: calc( 100% - 42px );
-  float:left;
-}
-.select-periodo-switch > a {
-  width: 28px;
-  float:right;
-  margin-top: 30px;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  z-index: 6;
-}
+/* select di periodo alternabile */
 
-.select-periodo-switch .input-group-addon {
-  text-decoration: none;
-}
-
-.select-periodo-switch .hasDatepicker {
-  padding-right: 20px !important;
+.select-periodo-switch {
+  display: table;
+  width: 100%;
+  > div {
+   width: calc( 100% - 42px );
+   float:left;
+ }
+ > a {
+   width: 28px;
+   float:right;
+   margin-top: 30px;
+   text-decoration: none;
+   text-align: center;
+   display: block;
+   z-index: 6;
+   @media (max-width: 991px) {
+     margin-top: 22px;
+   }
+ }
+ .input-group-addon {
+   text-decoration: none;
+ }
+ .hasDatepicker {
+   padding-right: 20px !important;
+ }
 }
