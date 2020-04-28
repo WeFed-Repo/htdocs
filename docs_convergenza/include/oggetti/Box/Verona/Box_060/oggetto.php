@@ -1,7 +1,5 @@
-<?php 
-	if ($site == "youweb") 
-	{
-		?>	
+<?php //if ($site == "youweb") { ?>
+
 <!-- box top acquisto mutuo -->
 <section>
 	 <div class="top-box-promo">
@@ -21,18 +19,17 @@
 	 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona check"></i><span>Lorem ipsum dolor sit amet</span></li>
 	 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona check"></i><span>Lorem ipsum dolor sit</span></li>
 	 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona check"></i><span>Dolor sit amet, consectetur</span></li>
-	 			</ul>		
+	 			</ul>
 			</div>
 	 	</div>
 	 	<hr>
 	 </div>
-<?php
-}?>	
+<?php // } ?>
 
-<?php 
-	if ($site == "webank") 
+<?php
+/*	if ($site == "webank")
 	{
 		?>
 		PER WEBANK CASISTICA NON CONTEPLATA
 <?php
-}?>	
+} */ ?>

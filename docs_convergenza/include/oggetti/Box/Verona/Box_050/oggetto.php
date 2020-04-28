@@ -1,7 +1,6 @@
-<?php 
-	if ($site == "youweb") 
-	{
-		?>
+<?php
+	//if ($site == "youweb")  {
+?>
 <!-- box top acquisto mutuo -->
 <section>
 	 <div class="box-catalogue box-catalogue-assicur">
@@ -29,7 +28,7 @@
 			 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona posta_arrivo"></i><span>Ogni mese il tasso applicato segue la variazione del parametro di riferimento utilizzato (Euribor 3 mesi)</span></li>
 			 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona posta_arrivo"></i><span>Ogni mese il tasso applicato segue la variazione del parametro di riferimento utilizzato (Euribor 3 mesi)</span></li>
 			 			</ul>
-			 		</div>	
+			 		</div>
 	 			</div>
 
 	 			<div class="row">
@@ -47,14 +46,13 @@
 	 	</div>
 	 </div>
 </section>
-		
-<?php
-}?>	
 
-<?php 
-	if ($site == "webank") 
+<?php // } ?>
+
+<?php
+/*	if ($site == "webank")
 	{
 		?>
 		PER WEBANK CASISTICA NON CONTEPLATA
 <?php
-}?>	
+} */ ?>	
