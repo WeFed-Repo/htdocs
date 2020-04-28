@@ -24,7 +24,7 @@ $strumenti = array(
   'CW and Certificates',
   'ETF',
   'Marginazione',
-  'Fondi',
+  'Fondi e SICAV',
 );
 
 $selectMercato = array(
@@ -64,6 +64,9 @@ $tipo_op_1 = array(1,2,3);
 ?>
 
 <h2>Portafoglio simulato</h2>
+
+<p>Esercitati nel trading online! Puoi creare fino a 8 portafogli virtuali per valutare la performance delle tue scelte di investimento in tutta sicurezza.</p>
+<br />
 
 <div id="collapse1b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1b" style="height: auto;">
 
@@ -116,14 +119,6 @@ $tipo_op_1 = array(1,2,3);
   <div class="row">
     <div class="form-field-input col-xs-12 col-md-6">
       <div class="form-group">
-        <label class="control-label">Strumenti finanziari</label>
-        <select class="form-control" id="selectStatoOrdine">
-          <?php auto_input_select( $strumenti ) ?>
-        </select>
-      </div>
-    </div>
-    <div class="form-field-input col-xs-12 col-md-6">
-      <div class="form-group">
         <label class="control-label">Colonne visibili</label>
         <div class="spsel spsel-hasactions nosel" id="spselColonne"  placeholder="Seleziona...">
           <input type="hidden" name="spselCTAinput2">
@@ -145,7 +140,7 @@ $tipo_op_1 = array(1,2,3);
             <div class="spsel-option" data-value="<?php print($i);?>">
               <a class="spsel-option-el">CREA NUOVA VISTA</a>
               <a class="spsel-addel btn-icon" data-el="icona_add_<?php print($i);?>">
-                <i class="icon icon-r-user_add"></i>
+                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-user_add' : 'add_filled') ?>"></i>
               </a>
             </div>
           </div>
@@ -159,6 +154,14 @@ $tipo_op_1 = array(1,2,3);
             })
           });
         </script>
+      </div>
+    </div>
+    <div class="form-field-input col-xs-12 col-md-6">
+      <div class="form-group">
+        <label class="control-label">Strumenti finanziari</label>
+        <select class="form-control" id="selectStatoOrdine">
+          <?php auto_input_select( $strumenti ) ?>
+        </select>
       </div>
     </div>
   </div>
@@ -184,7 +187,7 @@ $tipo_op_1 = array(1,2,3);
 
 
   <!-- TABELLA -->
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -253,11 +256,15 @@ $tipo_op_1 = array(1,2,3);
           <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
       </div>
       <div class="btn-align-right">
-          <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+        <a class="btn-link-icon btn-tasso-cambio" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
       </div>
       <br class="clear">
   </div>
   <!-- FINE PULSANTIERA SOTTO TABELLA -->
+
+  <div class="row marginTopMedium">
+    <div class="col-xs-12 align-right marginTopMedium">Fonte dati: Borsa Italiana</div>
+  </div>
 
 </div>
 
@@ -472,6 +479,46 @@ $tipo_op_1 = array(1,2,3);
     </div>
 </div>
 
+<!-- Overlayer tassi di cambio -->
+<div class="modal fade" id="layerCambio" tabindex="-1" role="dialog" aria-labelledby="layerCambioLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                <h2 class="modal-title" id="layerCambioLabel">Confronta su altri mercati</h2>
+            </div>
+            <div class="modal-body">
+                <p>Di seguito si mostra il tasso di cambio con cui viene calcolato il controvalore in euro dei titoli.</p>
+                <div class="headerContainerNoBootS">
+                    <div class="tableContainerNoBootS">
+                        <table>
+                            <thead>
+                                <th class="left">Valuta</th>
+                                <th class="right">Bid</th>
+                                <th class="right">Ask</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="left">EUR/GBP*</td>
+                                    <td class="left">99,999999</td>
+                                    <td class="left">99,999999</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">EUR/USD</td>
+                                    <td class="left">199,999999</td>
+                                    <td class="left">199,999999</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="note">* Cambio EUR / GBP espresso in pence (centesimi di pound)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fine overlayer tassi di cambio -->
+
 <?php include("./parts/table_th_filter.php"); ?>
 <?php include("./parts/icona_operativa.php"); ?>
 
@@ -484,8 +531,6 @@ $tipo_op_1 = array(1,2,3);
     tableOrdiniMovimenti.bootstrapTable({
       onPostBody: function(){
         // Funzioni da ripetere ad ogni refresh
-        $(".table-btn-more").not("inited").click(function(){
-        });
         $('.btn-icon-azioni').on('click', function (e) {
           e.preventDefault();
           $('#menuAzioni').modal();

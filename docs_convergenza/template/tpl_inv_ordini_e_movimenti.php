@@ -225,7 +225,7 @@ function print_periodo_switch($periodo) {
           <?php } ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
-              <label class="control-label">Tipi di operazione</label>
+              <label class="control-label">Tipo di operazione</label>
               <select class="form-control" id="selectTipoOperazione">
                 <?php auto_input_select( $selectTipoOperazione ) ?>
               </select>
@@ -360,7 +360,7 @@ function print_periodo_switch($periodo) {
           <?php } ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
-              <label class="control-label">Tipi di operazione</label>
+              <label class="control-label">Tipo di operazione</label>
               <select class="form-control" id="selectTipoOperazioneFondi">
                 <?php auto_input_select( $selectTipoOperazioneFondi ) ?>
               </select>
@@ -394,13 +394,13 @@ function print_periodo_switch($periodo) {
               <tr>
                 <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
                 <th class="left filter" data-sortable="true" id="filterTitolo">Fondo / ISIN</th>
-                <th class="left">Stato ordine</th>
-                <th class="right">Quote/ azioni</th>
-                <th class="left">Tipo operazione</th>
-                <th class="right">Controv. in Euro</th>
-                <th class="right">Ultimo prezzo</th>
-                <th class="right">Data Valuta</th>
-                <th class="right">Data Inserim.</th>
+                <th class="left" data-sortable="true">Stato ordine</th>
+                <th class="right" data-sortable="true">Quote/ azioni</th>
+                <th class="left" data-sortable="true">Tipo operazione</th>
+                <th class="right" data-sortable="true">Controv. in Euro</th>
+                <th class="right" data-sortable="true">Ultimo prezzo</th>
+                <th class="right" data-sortable="true">Data Valuta</th>
+                <th class="right" data-sortable="true">Data Inserim.</th>
               </tr>
             </thead>
             <tbody>
@@ -411,7 +411,7 @@ function print_periodo_switch($periodo) {
                       <i class="icon icon-2x icon-ico_azioni02A"></i>
                     </a>
                   </td>
-                  <td class="left"><a href="#">Ipsum dolor sit amet</a> <?php print rand(1000,1000000)/100;?> </td>
+                  <td class="left"><a href="#">Ipsum dolor sit amet</a> <br /> xxxxxxxxxx </td>
                   <td class="left"><?php
                     $a1 = $selectStatoOrdineFondi;
                     array_shift($a1);
@@ -491,7 +491,7 @@ function print_periodo_switch($periodo) {
 
           <!-- TABELLA -->
 
-          <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+          <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="1">
               <thead>
                 <tr>
                   <th class="left filter" data-sortable="true" id="filterTitolo">Descrizione</th>
