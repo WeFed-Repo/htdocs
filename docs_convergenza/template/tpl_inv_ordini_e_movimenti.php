@@ -32,14 +32,12 @@ $selectTipoOperazione = array(
 );
 
 $selectStatoOrdine = array(
-  'Tutti',
-  'Inseriti',
-  'Eseguiti',
-  'Parzialmente eseguiti',
-  'Ineseguiti',
-  'Cancellati',
-  'Parzialmente cancellati',
-  'In cancellazione',
+  'Tutti gli stati',
+  'Inserito',
+  'Inviato',
+  'Eseguito',
+  'Annullato',
+  'Altro',
 );
 
 $selectMercato = array(
@@ -79,6 +77,7 @@ $tipo_op_1 = array('Acquisto', 'Vendita');
 $tipo_op_2 = array('', 'intraday', 'overnight');
 
 $selectPeriodoFondi = array(
+  ( ($site == "webank") ? 'Ieri' : 'Oggi' ),
   'Ultimi 7 giorni',
   'Ultimi 30 giorni',
   'Ultimi 3 mesi',
@@ -225,9 +224,9 @@ function print_periodo_switch($periodo) {
           <?php } ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
-              <label class="control-label">Tipo di operazione</label>
-              <select class="form-control" id="selectTipoOperazione">
-                <?php auto_input_select( $selectTipoOperazione ) ?>
+              <label class="control-label">Stato ordine</label>
+              <select class="form-control" id="selectStatoOrdine">
+                <?php auto_input_select( $selectStatoOrdine ) ?>
               </select>
             </div>
           </div>
@@ -237,9 +236,9 @@ function print_periodo_switch($periodo) {
           <?php } ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
-              <label class="control-label">Stato ordine</label>
-              <select class="form-control" id="selectStatoOrdine">
-                <?php auto_input_select( $selectStatoOrdine ) ?>
+              <label class="control-label">Tipo di operazione</label>
+              <select class="form-control" id="selectTipoOperazione">
+                <?php auto_input_select( $selectTipoOperazione ) ?>
               </select>
             </div>
           </div>
@@ -305,7 +304,7 @@ function print_periodo_switch($periodo) {
                   <td class="left"><a href="">Lorem ipsum <?php print (999990 + $x ) ?></a></td>
                   <td class="right"><?php print ($tipo_op_1[array_rand($tipo_op_1)].' '.$tipo_op_2[array_rand($tipo_op_2)]);?></td>
                   <td class="right"><?php print rand(0,1);?> <br /> <?php print rand(0,1);?></td>
-                  <td class="right"><?php print rand(1000,1000000)/100;?></td>
+                  <td class="right"><?php print str_replace(',', '.', str_replace('.', '', rand(1000,1000000)/100)); ?></td>
                   <td class="right">20/01/2020</td>
                   <td class="right"><?php print ($selectStatoOrdine[array_rand($selectStatoOrdine)]) ?></td>
                   <td class="right"><?php print ($selectMercato['Azioni'][array_rand($selectMercato['Azioni'])]) ?></td>
