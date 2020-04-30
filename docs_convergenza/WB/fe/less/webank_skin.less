@@ -3560,15 +3560,14 @@ ul.bullet-spunta {
     align-items: center;
     padding: 15px;
     > div {
-      width: fit-content;
       &:first-child {
         min-width: 120px;
         .icon {
           font-size: 90px;
         }
       }
-      &:last-child {
-        //align-self: flex-end;
+      &:not(:first-child):not(:last-child) {
+        width: fit-content;
       }
     }
   }

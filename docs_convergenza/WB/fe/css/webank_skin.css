@@ -3407,14 +3407,14 @@ ul.bullet-spunta li .icon {
   align-items: center;
   padding: 15px;
 }
-.titButton.titButtonIco .row > div {
-  width: fit-content;
-}
 .titButton.titButtonIco .row > div:first-child {
   min-width: 120px;
 }
 .titButton.titButtonIco .row > div:first-child .icon {
   font-size: 90px;
+}
+.titButton.titButtonIco .row > div:not(:first-child):not(:last-child) {
+  width: fit-content;
 }
 /* BOX_070 */
 .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white ul.bullet-spunta {
