@@ -1,10 +1,20 @@
 /* globals $:false, setFormGroupCell:false, setFormGroupDate:false, getTodayDateITA:false, checkForm:false */
 "use strict";
 $(function() {
-
+    var setOverlayerCovid = function() {
+        var initCovid = isCovid === true ? dateCovidIni : "",
+        endCovid = isCovid === true ? dateCovidEnd : "",
+        htmlOverlayCovid = "<p>Documento scaduto? Nessun problema: in virt&ugrave; del DECRETO-LEGGE Cura Italia del 17 marzo 2020, tutti i documenti d&#39;identit&agrave; scaduti a partire dal <strong> " + initCovid + " </strong> mantengono la loro validit&agrave; fino al <strong>" +  endCovid + "</strong>.</p><p>Puoi procedere con l&#39;apertura del conto on line.</p>",
+        overlayCovid = '<div class="modal fade" id="covidOverlay" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">PROROGA SCADENZA DOCUMENTI</h4></div><div class="modal-body feedback"><div class="col-md-12 col-sm-12"><div class="title-content">'+ htmlOverlayCovid +'</div></div></div><div class="modal-footer"><div class="row"><div class="col-sm-12"><button type="submit" class="btn-grlit btn-grlit-arrow fright uppercase inlineB" data-dismiss="modal">CONTINUA</button></div></div></div></div></div></div>';
+        $("body").append(overlayCovid); 
+    }
+    
+    if(typeof isCovid !== "undefined" && isCovid=== true) {
+            setOverlayerCovid();
+    }
     // Tooltip del campo
     // $("#ttNome, #ttCognome, #ttCellulare").tooltip();
-    // $('#tplOverlayer').modal('show');
+    
     
     var formEl = $('#aolStep0'),
         formValidator = formEl.validate({

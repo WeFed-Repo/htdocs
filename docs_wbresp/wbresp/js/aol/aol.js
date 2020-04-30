@@ -412,4 +412,8 @@ $(function() {
     /* FUNZIONI ADDIZIONALI (PRIORITA' 2) */
     // Assistente virtuale
     loadVirtass();
+    if(typeof isCovid !== "undefined" && isCovid=== true) {
+        $("#covidOverlay").modal("show");
+    }
+    
 });
