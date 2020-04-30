@@ -78,33 +78,6 @@ $tipo_op_1 = array(1,2,3);
         <select class="form-control" id="spselPortafogli">
           <?php auto_input_select( array('Portafoglio 1','Portafoglio 2','Portafoglio 3','Portafoglio 4') ) ?>
         </select>
-        <?php /*
-          <div class="spsel spsel-hasactions nosel" id="spselPortafogli"  placeholder="Seleziona...">
-            <input type="hidden" name="spselCTAinput2">
-            <div class="spsel-options">
-              <?php for($i=0;$i<=3;$i++) { ?>
-              <div class="spsel-option" data-value="<?php print($i);?>">
-                <a class="spsel-option-el">Portafoglio <?php print($i);?></a>
-                <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                  <i class="icon icon-<?php print ( ($site == "webank") ? 'r-modifica' : 'edit_fill' ) ?>"></i>
-                </a>
-                <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                  <i class="icon icon-<?php print ( ($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
-                </a>
-              </div>
-              <?php } ?>
-            </div>
-          </div>
-          <script type="text/javascript">
-            $(function(){
-              $("#spselPortafogli").spSel();
-              $("#spselPortafogli .spsel-addel.btn-icon").click(function(e){
-                e.stopPropagation();
-                alert("Elemento selezionato: " + $(this).attr("data-el"));
-              })
-            });
-          </script>
-          */ ?>
 			</div>
 			<div class="col-xs-12 col-sm-4 no-label">
 				<div class="btn-align-right">
@@ -119,41 +92,358 @@ $tipo_op_1 = array(1,2,3);
   <div class="row">
     <div class="form-field-input col-xs-12 col-md-6">
       <div class="form-group">
-        <label class="control-label">Colonne visibili</label>
-        <div class="spsel spsel-hasactions nosel" id="spselColonne"  placeholder="Seleziona...">
-          <input type="hidden" name="spselCTAinput2">
-          <div class="spsel-options">
-            <div class="spsel-option" data-value="<?php print($i);?>">
-              <a class="spsel-option-el">Predefinite</a>
+        <!-- SELECT MULTIFUNZIONE -->
+        <div class="form-group">
+            <label class="control-label">Colonne visibili</label>
+
+            <!-- Overlayer eliminazione -->
+            <div class="modal fade" id="layerEliminaColonna" tabindex="-1" role="dialog" aria-labelledby="layerEliminaColonnaLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                            <h2 class="modal-title" id="layerEliminaColonnaLabel">Cancella set colonne</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Stai cancellando la vista <strong id="cancellaVistaName"></strong>.<br>
+                            Sei sicuro di voler procedere?</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-align-left">
+                                <a type="button" class="btn btn-default" data-dismiss="modal">Annulla</a>
+                            </div>
+                            <div class="btn-align-right">
+                                <a type="button" class="btn btn-primary" data-dismiss="modal">S&igrave;, cancella</a>
+                            </div>
+                            <br class="clear">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <?php for($i=0;$i<=2;$i++) { ?>
-            <div class="spsel-option" data-value="<?php print($i);?>">
-              <a class="spsel-option-el">Vista <?php print($i);?></a>
-              <a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
-              </a>
-              <a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
-              </a>
+            <!-- Fine overlayer eliminazione -->
+
+            <!-- Overlayer confronto mercati -->
+            <div class="modal fade" id="layerConfronta" tabindex="-1" role="dialog" aria-labelledby="layerConfrontaLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                            <h2 class="modal-title" id="layerConfrontaLabel">Confronta su altri mercati</h2>
+                        </div>
+                        <div class="modal-body">
+                        <div class="headerContainerNoBootS">
+                            <div class="tableContainerNoBootS">
+                                <table>
+                                    <thead>
+                                        <th></th>
+                                        <th class="left">Titolo/Fondo</th>
+                                        <th class="left">Mercato</th>
+                                        <th class="right">Q.t&agrave; in<br>portaf.</th>
+                                        <th class="right">Ult. prz.ora</th>
+                                        <th class="right">Controval. Eur</th>
+                                        <th class="right">Utili/Perdite<br>Eur VAR%</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                            <td class="left">Titolo azione 1</td>
+                                            <td class="left">MOT</td>
+                                            <td class="right">20,000</td>
+                                            <td class="right">101,01<br>11:17:05</td>
+                                            <td class="right">20.202,00</td>
+                                            <td class="right nega">-24,00<br>-0,1%</td>
+                                        <tr>
+                                        <tr class="sub">
+                                            <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                            <td class="left indent">Titolo azione 1</td>
+                                            <td class="left">MOT</td>
+                                            <td class="right">20,000</td>
+                                            <td class="right">101,01<br>11:17:05</td>
+                                            <td class="right">20.202,00</td>
+                                            <td class="right nega">-24,00<br>-0,1%</td>
+                                        <tr>
+                                        <tr class="sub">
+                                            <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="9873213"><i class="icon icon-2x icon-ico_azioni02A"></i></i></a></td>
+                                            <td class="left indent">Titolo azione 1</td>
+                                            <td class="left">MOT</td>
+                                            <td class="right">20,000</td>
+                                            <td class="right">101,01<br>11:17:05</td>
+                                            <td class="right">20.202,00</td>
+                                            <td class="right nega">-24,00<br>-0,1%</td>
+                                        <tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <?php } ?>
-            <div class="spsel-option" data-value="<?php print($i);?>">
-              <a class="spsel-option-el">CREA NUOVA VISTA</a>
-              <a class="spsel-addel btn-icon" data-el="icona_add_<?php print($i);?>" data-toggle="modal" data-target="#layerNuovaVista">
-                <i class="icon icon-<?php print ( ($site == "webank") ? 'r-user_add' : 'add_filled') ?>"></i>
-              </a>
+            <!-- Fine overlayer confronto mercati -->
+
+
+            <!-- Overlayer tassi di cambio -->
+            <div class="modal fade" id="layerCambio" tabindex="-1" role="dialog" aria-labelledby="layerCambioLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                            <h2 class="modal-title" id="layerCambioLabel">Confronta su altri mercati</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Di seguito si mostra il tasso di cambio con cui viene calcolato il controvalore in euro dei titoli.</p>
+                            <div class="headerContainerNoBootS">
+                                <div class="tableContainerNoBootS">
+                                    <table>
+                                        <thead>
+                                            <th class="left">Valuta</th>
+                                            <th class="right">Bid</th>
+                                            <th class="right">Ask</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="left">EUR/GBP*</td>
+                                                <td class="left">99,999999</td>
+                                                <td class="left">99,999999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">EUR/USD</td>
+                                                <td class="left">199,999999</td>
+                                                <td class="left">199,999999</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="note">* Cambio EUR / GBP espresso in pence (centesimi di pound)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- Fine overlayer tassi di cambio -->
+
+
+            <!-- Overlay di selezione delle colonne -->
+            <div class="modal fade" id="layerPers" tabindex="-1" role="dialog" aria-labelledby="layerPersLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
+                            <h2 class="modal-title" id="layerPersLabel">Modifica colonne</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                            <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group marginBottomMedium">
+                                            <label class="control-label flLeft noFloatMobile">Nome vista (max 25 caratteri)</label>
+                                            <input maxlenght="25" type="text" class="form-control" id="inputSelColName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label flLeft noFloatMobile">Seleziona le colonne da visualizzare (massimo X)</label>
+                                            <p class="note flRight noFloatMobile"><strong>X</strong> di X selezionati</p>
+                                            <br class="clear">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox inline">
+                                                        <label class="textWrapper">
+                                                                <input type="checkbox">
+                                                                <span class="text">Lorem ipsum</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-align-left">
+                                <a type="button" class="btn btn-default" data-dismiss="modal">Annulla</a>
+                            </div>
+                            <div class="btn-align-right">
+                                <a type="button" class="btn btn-primary" data-dismiss="modal">Crea</a>
+                            </div>
+                            <br class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fine overlay di selezione -->
+
+            <!-- Attivazione Icona operativa-->
+            <?php include("parts/icona_operativa.php"); ?>
+            <!-- Fine attivazione icona operativa -->
+
+            <script type="text/javascript">
+
+                // funzione di apertura overlay di personalizzazione (emulazione)
+                var persCol = function(nomevista){
+                    $("#inputSelColName").val(nomevista);
+                    $("#layerPers").modal("show");
+                }
+
+                /* Esempio inizializzazione */
+                $(function(){
+                    // Inizializza la special-select tipo "default" (esempio di callback)
+                    $("#spselCol").spSel(
+                        function(){
+                            console.log($("input[name=spselCTAinput]").val())
+                        }
+                    );
+
+                    $("#selColonne").click(function(){
+                       persCol("");
+                       $("#spselCol").removeClass("opened");
+                    });
+
+                    $("#spselCol .btn-icon[data-function=edit]").click(function(event){
+                        event.preventDefault();
+                        persCol($(this).attr("data-list-name"));
+                        event.stopPropagation(); $("#spselCol").removeClass("opened");
+                    });
+
+                    $("#spselCol .btn-icon[data-function=delete]").click(function(event){
+                        event.preventDefault();
+                        $("#cancellaVistaName").html($(this).attr("data-list-name"));
+                        $("#layerEliminaColonna").modal("show");
+                        event.stopPropagation();
+                    });
+
+                });
+
+            </script>
+            <div class="spsel spsel-hasconsole nosel" id="spselCol" placeholder="Seleziona...">
+                <input type="hidden" name="spselColinput" value="predefinite">
+                <div class="spsel-options">
+                    <div class="spsel-option" data-value="predefinite">
+                        <a class="spsel-option-el">Predefinite</a>
+                    </div>
+                    <div class="spsel-option" data-value="mercati">
+                        <a class="spsel-option-el">Mercati e prezzi</a>
+                        <div class="spsel-btn-console">
+                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                        </div>
+                    </div>
+                    <div class="spsel-option" data-value="vista2">
+                        <a class="spsel-option-el">Vista 2</a>
+                        <div class="spsel-btn-console">
+                            <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                            <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                        </div>
+                    </div>
+                    <div class="spsel-option spsel-custom" id="selColonne">
+                        <a class="spsel-option-el">Scegli colonne</a>
+                        <div class="spsel-btn-console">
+                            <i class="icon icon-row_expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script type="text/javascript">
-          $(function(){
-            $("#spselColonne").spSel();
-            // $("#spselColonne .spsel-addel.btn-icon").click(function(e){
-            //   e.stopPropagation();
-            //   alert("Elemento selezionato: " + $(this).attr("data-el"));
-            // })
-          });
-        </script>
+        <!-- FINE SELECT MULTIFUNZIONE -->
       </div>
     </div>
     <div class="form-field-input col-xs-12 col-md-6">
@@ -191,7 +481,6 @@ $tipo_op_1 = array(1,2,3);
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
-              <th class="left"></th>
               <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / Fondo</th>
               <th class="left">Mercato</th>
               <th class="right">Q.t&agrave; in portaf.</th>
@@ -208,11 +497,6 @@ $tipo_op_1 = array(1,2,3);
       <tbody>
       <?php for($x=0;$x<=3;$x++) { ?>
         <tr>
-          <td class="center">
-            <a class="btn-icon">
-              <i class="icon icon-2x icon_piumeno"></i>
-            </a>
-          </td>
           <td class="center">
             <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
               <i class="icon icon-2x icon-<?php print(($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
@@ -518,57 +802,6 @@ $tipo_op_1 = array(1,2,3);
     </div>
 </div>
 <!-- Fine overlayer tassi di cambio -->
-
-<!-- Overlayer crea nuova vista -->
-<div class="modal fade modal-fixed-header modal-fixed-footer" id="layerNuovaVista" tabindex="-1" role="dialog" aria-labelledby="layerNuovaVistaLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i ></a>
-                <h2 class="modal-title" id="layerNuovaVistaLabel">Crea nuova vista</h2>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <label class="control-label">Nome vista (max 25 caratteri)</label>
-        		 			<div class="input-group">
-        					    <input type="text" class="form-control" value="" maxlength="25">
-        	     		  </div>
-                </div>
-              </div>
-              <div class="row marginTopMedium">
-                <div class="col-xs-10">
-                  <p>Seleziona le colonne da visualizzare (massimo&nbsp;<span class="maxCols">0</span>)</p>
-                </div>
-                <div class="col-xs-2 align-right totCols">
-                  <p><span class="countCols">0</span>/<span class="maxCols">0</span></p>
-                </div>
-              </div>
-
-              <div class="row marginTopMedium" id="wrapperCheckCols">
-                <?php for($x=0;$x<=30;$x++) { ?>
-                <div class="col-xs-6 col-md-4">
-                  <div class="checkbox">
-                    <label class="textWrapper">
-                      <input type="checkbox">
-                      <span class="text">Nome Colonna</span>
-                    </label>
-                </div>
-                </div>
-                <?php } ?>
-              </div>
-
-            </div>
-            <div class="modal-footer">
-              <div class="align-right">
-                <input type="button" name="annulla" value="Annulla" data-dismiss="modal" class="btn btn-secondary" alt="Annulla">
-          			<input type="button" name="crea" value="Crea" data-dismiss="modal" class="btn btn-primary" alt="Crea">
-              </div>
-      		  </div>
-        </div>
-    </div>
-</div>
-<!-- Fine overlayer crea nuova vista -->
 
 <!-- Overlayer crea nuovo -->
 <div class="modal fade modal-fixed-header modal-fixed-footer" id="layerNuovo" tabindex="-1" role="dialog" aria-labelledby="layerNuovoLabel">
