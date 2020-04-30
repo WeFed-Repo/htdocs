@@ -109,7 +109,7 @@ $tipo_op_1 = array(1,2,3);
 			<div class="col-xs-12 col-sm-4 no-label">
 				<div class="btn-align-right">
           <a type="button" href="#" class="btn btn-primary" title="Crea nuovo" data-toggle="modal" data-target="#layerNuovo">
-            <?php if($site == "webank") echo '<i class="icon icon-add"></i>' ?>
+            <i class="icon icon-<?php print ( ($site == "webank") ? 'add' : 'add_filled') ?>"></i>
             <span class="icon-text">Crea nuovo</span>
           </a>
 				</div>

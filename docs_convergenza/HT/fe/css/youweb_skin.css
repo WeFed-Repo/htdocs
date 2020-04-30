@@ -445,6 +445,11 @@ li.linkOn a {
   height: 30px;
   line-height: 14px;
 }
+.button .icon + .icon-text, .btn .icon + .icon-text {
+  display: inline-block;
+  transform: translate(0, -3px);
+  margin-left: 5px;
+}
 
 .btnWrapper .btn, .btnWrapper .btn-align-left, .ricFilter .btn-align-left {
   margin-left: 0px;
