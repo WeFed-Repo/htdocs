@@ -666,9 +666,13 @@ input[type='checkbox']:checked:before {
     background-color: #eee;
     opacity: 1;
 }
-.text-checkbox {width: 90%;}
+.text-checkbox {width: 89%;}
 @media screen and (min-width: 1300px) {
     .text-checkbox {width: 95%;}
+}
+
+@media screen and (max-width: 1200px) {
+    .text-checkbox {float:left}
 }
 table tr th.sorting,
 table tr th.sorting_asc,
@@ -1216,7 +1220,10 @@ label .btn-icon {
 .form-field-input {
     margin-bottom: 20px;
 }
-
+.form-field-input input + span.note {
+    position:relative;
+    top: 5px;
+}
 
 .form-field-input .form-field-input {
     margin-bottom: 0;

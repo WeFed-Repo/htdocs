@@ -30,7 +30,7 @@
      </div>
     <div class="form-group selezioneCCNoBor det-modifica" style="display: none">
         <div class="row">
-            <div class="form-field-input col-xs-12">
+            <div class="form-field-input col-xs-5">
                 <label class="control-label">Indirizzo</label>
                 <div class="form-field">
                     <input type="text" placeholder="Es. Viale Monte Bianco, 4" class="form-control" />
@@ -75,7 +75,8 @@
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-6">
             <label>
-                <input type="checkbox" name="" id="checkedFirstBox" class="input-toggle-hidden">Danni al fabbricato
+                <input  class="flLeft" type="checkbox" name="" id="checkedFirstBox" class="input-toggle-hidden">
+                <span class="text-checkbox">Danni al fabbricato</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia">Dettagli garanzia</a>  
             </div>
