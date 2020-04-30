@@ -3488,14 +3488,30 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
   }
 }
 
-/* BOX_070 */
+/* BULLET ICONA CHECK NUOVA */
+
+.icon-ico_check:before {
+  content: "\e979";
+}
+
+ul.bullet-spunta {
+  li {
+    background: none;
+    .icon {
+      margin-left: -30px;
+    font-size: 20px;
+    }
+  }
+}
+
+/* BOX_060 */
 
 .top-box-promo {
-  background: #f6f4f4;
   border: 1px solid #CCCCCC;
   @media screen and (max-width: 767px) {
     padding: 20px;
   }
+  hr { display: none; }
   > .row:first-child > div:first-child {
     float: right;
   }
@@ -3515,7 +3531,7 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
         height: 0;
         border-top: @tringleWidth solid transparent;
         border-bottom: @tringleWidth solid transparent;
-        border-right: @tringleWidth solid #f6f4f4;
+        border-right: @tringleWidth solid #fff;
         z-index: 3;
       }
     }
@@ -3526,6 +3542,10 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
     font-weight: bold;
     line-height: 1.1em;
     margin-bottom: 10px;
+    padding-right: 30px;
+  }
+  .box-txt-white .bullet-spunta {
+    margin: 20px 30px 15px 30px;
   }
 }
 
@@ -3556,28 +3576,29 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
 /* BOX_070 */
 
 .box-catalogue.assicurazioni {
-  ul {
-    padding-top: 15px;
-    padding-left: 15px;
-    li {
-      padding-bottom: 25px;
+  .box-catalogue-left.box-catalogue-white {
+    ul.bullet-spunta {
+      padding-top: 15px;
+      padding-left: 15px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 0;
+      }
+      li {
+        padding-bottom: 25px;
+      }
     }
-  }
-  .box-catalogue-right {
-    background: #f6f4f4;
-  }
-  @media screen and (max-width: 767px) {
-    .bullet-spunta {
-      margin-bottom: 0;
-    }
-    .box-catalogue-right {
-      padding-bottom: 0;
-    }
-    .box-catalogue-right:last-child {
-      padding-top: 0;
-      .bullet-spunta {
-        padding-top: 0;
-        padding-bottom: 20px;
+    + .box-catalogue-right,
+    + .box-catalogue-right + .box-catalogue-right {
+      background: #f6f4f4;
+      @media screen and (max-width: 767px) {
+        padding-bottom: 0;
+        &:last-child {
+          padding-top: 0;
+          .bullet-spunta {
+            padding-top: 0;
+            padding-bottom: 20px;
+          }
+        }
       }
     }
   }

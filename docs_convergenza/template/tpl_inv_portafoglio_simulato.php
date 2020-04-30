@@ -843,30 +843,13 @@ $tipo_op_1 = array(1,2,3);
 <script type="text/javascript">
   $(function(){
     appendDatePickerIcon('periodo');
-    var tableOrdiniMovimenti = $('.sortableTable');
-    tableOrdiniMovimenti.bootstrapTable({
-      onPostBody: function(){
-        // Funzioni da ripetere ad ogni refresh
-        $('.btn-icon-azioni').on('click', function (e) {
-          e.preventDefault();
-          $('#menuAzioni').modal();
-        });
-        $('.btn-icon-modifica').on('click', function (e) {
-          e.preventDefault();
-          $('#menuModifica').modal();
-        });
-        $('#menuSimula').on('hidden.bs.modal', function () {
-          $('.simula-table').hide();
-          $('#simula-cerca').removeAttr('disabled').removeClass('btn-disabled');
-        });
-        attivaIconaOperativa(".sortableTable");
-      }
-    });
+    btsTableInit();
     initThFilter();
     $('#simula-cerca').on('click', function (e) {
       e.preventDefault();
       $('#simula-cerca').attr('disabled','disabled').addClass('btn-disabled');
       $('.simula-table').show();
+      btsTableInit();
     });
     $('.simula-input').on('click change', function (e) {
       e.preventDefault();
@@ -887,7 +870,7 @@ $tipo_op_1 = array(1,2,3);
     $("#dataInserimento").mask("99/99/9999");
     $("#dataInserimento").datepicker({
         beforeShowDay: highlightDays,
-        //beforeShowDay: noHolidays,  //si applica se si vuole che i fine sttimana e festivi non siano delezionabili
+        //beforeShowDay: noHolidays,  //si applica se si vuole che i fine settimana e festivi non siano delezionabili
         minDate: 0,
         showOtherMonths: true,
         showOn: "button",
@@ -916,5 +899,25 @@ $tipo_op_1 = array(1,2,3);
       parent.find('input:not(:checked)').removeAttr('disabled');
       totCols.removeClass('has-error');
     }
+  }
+  function btsTableInit() {
+    $('.sortableTable').bootstrapTable('destroy').bootstrapTable({
+      onPostBody: function(){
+        // Funzioni da ripetere ad ogni refresh
+        $('.btn-icon-azioni').on('click', function (e) {
+          e.preventDefault();
+          $('#menuAzioni').modal();
+        });
+        $('.btn-icon-modifica').on('click', function (e) {
+          e.preventDefault();
+          $('#menuModifica').modal();
+        });
+        $('#menuSimula').on('hidden.bs.modal', function () {
+          $('.simula-table').hide();
+          $('#simula-cerca').removeAttr('disabled').removeClass('btn-disabled');
+        });
+        attivaIconaOperativa(".sortableTable");
+      }
+    });
   }
 </script>

@@ -3339,15 +3339,28 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
   color: #000;
   text-transform: none;
 }
-/* BOX_070 */
+/* BULLET ICONA CHECK NUOVA */
+.icon-ico_check:before {
+  content: "\e979";
+}
+ul.bullet-spunta li {
+  background: none;
+}
+ul.bullet-spunta li .icon {
+  margin-left: -30px;
+  font-size: 20px;
+}
+/* BOX_060 */
 .top-box-promo {
-  background: #f6f4f4;
   border: 1px solid #CCCCCC;
 }
 @media screen and (max-width: 767px) {
   .top-box-promo {
     padding: 20px;
   }
+}
+.top-box-promo hr {
+  display: none;
 }
 .top-box-promo > .row:first-child > div:first-child {
   float: right;
@@ -3368,7 +3381,7 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
     height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #f6f4f4;
+    border-right: 15px solid #fff;
     z-index: 3;
   }
 }
@@ -3378,6 +3391,10 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
   font-weight: bold;
   line-height: 1.1em;
   margin-bottom: 10px;
+  padding-right: 30px;
+}
+.top-box-promo .box-txt-white .bullet-spunta {
+  margin: 20px 30px 15px 30px;
 }
 /* BOX_065 */
 .titButton.titButtonIco {
@@ -3399,27 +3416,33 @@ form#formAggCondContrattuali > div.formWrapper > div.form-group > div.documenti 
   font-size: 90px;
 }
 /* BOX_070 */
-.box-catalogue.assicurazioni ul {
+.box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white ul.bullet-spunta {
   padding-top: 15px;
   padding-left: 15px;
 }
-.box-catalogue.assicurazioni ul li {
+@media screen and (max-width: 767px) {
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white ul.bullet-spunta {
+    margin-bottom: 0;
+  }
+}
+.box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white ul.bullet-spunta li {
   padding-bottom: 25px;
 }
-.box-catalogue.assicurazioni .box-catalogue-right {
+.box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right,
+.box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right + .box-catalogue-right {
   background: #f6f4f4;
 }
 @media screen and (max-width: 767px) {
-  .box-catalogue.assicurazioni .bullet-spunta {
-    margin-bottom: 0;
-  }
-  .box-catalogue.assicurazioni .box-catalogue-right {
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right,
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right + .box-catalogue-right {
     padding-bottom: 0;
   }
-  .box-catalogue.assicurazioni .box-catalogue-right:last-child {
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right:last-child,
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right + .box-catalogue-right:last-child {
     padding-top: 0;
   }
-  .box-catalogue.assicurazioni .box-catalogue-right:last-child .bullet-spunta {
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right:last-child .bullet-spunta,
+  .box-catalogue.assicurazioni .box-catalogue-left.box-catalogue-white + .box-catalogue-right + .box-catalogue-right:last-child .bullet-spunta {
     padding-top: 0;
     padding-bottom: 20px;
   }
