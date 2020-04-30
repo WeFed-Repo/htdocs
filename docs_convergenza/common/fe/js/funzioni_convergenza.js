@@ -1050,6 +1050,7 @@ var activateTab = function () {
                 return false;
             });
         }
+        
     });
 };
 
@@ -1742,6 +1743,7 @@ var resizeTab = function (idTab, indexTabOpened) {
                 panelAccordion.removeClass('in');
                 aAccordion.eq(index).attr('aria-expanded', 'true').removeClass('collapsed');
                 panelAccordion.eq(index).addClass('in').css('height', 'auto');
+                $("table.has-fixed-cols").trigger("post-body.bs.table");
                 return false;
             });
         });
@@ -1749,6 +1751,7 @@ var resizeTab = function (idTab, indexTabOpened) {
             $(this).click(function () {
                 tabLi.removeClass('on');
                 tabLi.eq(index).addClass('on');
+                setTimeout(function(){$("table.has-fixed-cols").trigger("post-body.bs.table")},200);
             });
         });
     });

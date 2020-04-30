@@ -279,7 +279,7 @@ function print_periodo_switch($periodo) {
 
         <!-- TABELLA -->
 
-        <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniTitoli" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -388,7 +388,7 @@ function print_periodo_switch($periodo) {
 
         <!-- TABELLA -->
 
-        <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
+        <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniFondi" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
               <tr>
                 <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
@@ -570,16 +570,15 @@ function print_periodo_switch($periodo) {
       $(this).parent().find('[data-inputtoggle]').toggle();
     });
 
-    var tableOrdiniMovimenti = $('.sortableTable');
-    tableOrdiniMovimenti.bootstrapTable({
+    
+    // Inizializzazione tabelle di bootstrap
+    $('.sortableTable').bootstrapTable({
       onPostBody: function(){
         attivaIconaOperativa(".sortableTable");
       }
     });
+
     initThFilter();
 
-    $('.tabWrapper').on('shown.bs.tab', function (e) {
-      alert('secondTab');
-    });
   });
 </script>
