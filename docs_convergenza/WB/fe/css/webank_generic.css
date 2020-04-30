@@ -5807,6 +5807,15 @@ table tr td.td-fondo .fundName {
   display: inline-block;
   cursor: pointer;
 }
+.spsel.spsel-hasconsole .spsel-btn-console > .icon,
+.spsel.spsel-hasconsole .spsel-btn-console .btn-icon .icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 3px;
+  display: inline-block;
+}
 .spsel.opened {
   z-index: 2;
 }
