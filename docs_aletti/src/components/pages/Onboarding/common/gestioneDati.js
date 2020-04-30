@@ -3,7 +3,6 @@ import { getNextState } from "./gestioneStati";
 
 
 const defaultFields = {
-
     "dataInserimento": "",
     "dataUltimoAggiornamento": "",
     "stato": "",
@@ -15,7 +14,6 @@ const defaultFields = {
     "promotore": "",
     "expirationDate": "",
     "sessionFirmeBlob": {
-
         "idMifid": "",
         "informativaMifid": "",
         "depositoIncluso": "",
@@ -100,7 +98,6 @@ const defaultFields = {
                 "cellCertif": "",
                 "emailCertif": ""
             },
-            
             "1": {
                 "fasciaRedditoNote":"",
                 "origineRedditoNote":"",
@@ -551,6 +548,5 @@ let jsonFromFields = (objState) => {
     return extractObject(objFormTranslate, objState);
 
 }
-
 
 export { defaultFields, fieldsFromJson, jsonFromFields }

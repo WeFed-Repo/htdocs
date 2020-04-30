@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Innesco</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+
+</head>
+<body>
+
+    <h3>Innesco diretto questionario:</h3>
+    
+    <table>
+
+        <tr>
+            <td>Istituto</td>
+            <td>
+                <input id='istituto' type=text value="3102">
+            </td>
+        </tr>
+        <tr>
+            <td>Utente</td>
+            <td>
+                <input id=name type=text value="CICSUSER">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input id=password type=password value="CICSUSER">
+            </td>
+        </tr>
+        <tr>
+            <td>Ufficio</td>
+            <td>
+                <input id=branch type=text value="1">
+            </td>
+        </tr>
+        <tr>
+            <td>Debug</td>
+            <td>
+                <input id=debug type=checkbox checked=checked>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>NDG</td>
+            <td>
+                <input id='ndg' type=text value="">
+            </td>
+        </tr>
+        <tr>
+            <td>Codice fiscale 1</td>
+            <td>
+                <input id='codiceFiscale1' type=text placeholder="AAAAAAABBBBBCCCC">
+            </td>
+        </tr>
+        <tr>
+            <td>Intestazione 1</td>
+            <td>
+                <input id='intestazione1' type=text placeholder="Mario Rossi">
+            </td>
+        </tr>
+        <tr>
+            <td>Data di Nascita 1</td>
+            <td>
+                <input id='dataDiNascita1' type=text placeholder="gg/mm/aaaa">
+            </td>
+        </tr>
+        <tr>
+            <td>Codice fiscale 2</td>
+            <td>
+                <input id='codiceFiscale2' type=text value="">
+            </td>
+        </tr>
+        <tr>
+            <td>Intestazione 2</td>
+            <td>
+                <input id='intestazione2' type=text value="">
+            </td>
+        </tr>
+        <tr>
+            <td>Data di Nascita 2</td>
+            <td>
+                <input id='dataDiNascita2' type=text value="">
+            </td>
+        </tr>
+        <tr>
+            <td>Codice Questionario</td>
+            <td>
+                <input id='codiceQuestionario' type=text placeholder="111">
+            </td>
+        </tr>
+        <tr>
+            <td>Tipo operazione</td>
+            <td>
+                <input id='tipoOperazione' type=text value="SIM">
+            </td>
+        </tr>
+        <tr>
+            <td>Canale</td>
+            <td>
+            <select id=canale value=Filiale >
+                <option value="" ></option>
+                <option value="Filiale" selected=selected>Filiale</option>
+                <option value="OnBoarding" >On Boarding</option>
+                <option value="WeBank" >We Bank</option>
+                <option value="TOL" >Tol</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Tipo offerta</td>
+            <td>
+            <select id=tipoOfferta value=InSedeNormale>
+                <option value="" ></option>
+                <option value="InSedeNormale"  selected=selected>In sede</option>
+                <option value="OffertaFuoriSede" >Fuori sede</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Codice Promotore</td>
+            <td>
+                <input id=codicePromotore type=text value="12345">
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <button onclick="post ()">Invia</button>
+
+    <script>
+        function post () {
+            function value (name){
+                return document.getElementById (name).value;
+            };
+            
+            function dateValue (name) {
+                var v = value (name);
+                v = v.replace (/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1');
+                return v;
+            };
+            
+            function booleanValue (name){
+                return document.getElementById (name).checked;
+            };
+
+            var codiceQuestionario = value ('codiceQuestionario');
+
+            var http = new XMLHttpRequest();
+            http.open('POST', 'Innesco', true);
+            http.setRequestHeader('Content-type', 'text/xml');
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if (http.readyState == 4) 
+                    if (http.status == 200) {
+                        location = 'index.jsp?2.1.16-SNAPSHOT' + (!codiceQuestionario? 'raccolta': '');
+                    } else {
+                        alert ('Failed, http status ${http.status}');     
+                }
+            }
+            
+
+        var xml = '<?xml version="1.0" encoding="UTF-8"?>'
+        + '<root>'
+        + '<parametri>'
+        + '<param id="1">'
+        + '<paramNome>codiceFiscale</paramNome>'
+        + '<paramValore>' + value ('codiceFiscale1') + '</paramValore>'
+        + '</param>'
+        + '<param id="2">'
+        + '<paramNome>intestazione</paramNome>'
+        + '<paramValore>' + value ('intestazione1') + '</paramValore>'
+        + '</param>'
+        + '<param id="3">'
+        + '<paramNome>dataDiNascita</paramNome>'
+        + '<paramValore>' + dateValue ('dataDiNascita1') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>codiceFiscale</paramNome>'
+        + '<paramValore>' + value ('codiceFiscale2') + '</paramValore>'
+        + '</param>'
+        + '<param id="5">'
+        + '<paramNome>intestazione</paramNome>'
+        + '<paramValore>' + value ('intestazione2') + '</paramValore>'
+        + '</param>'
+        + '<param id="6">'
+        + '<paramNome>dataDiNascita</paramNome>'
+        + '<paramValore>' + dateValue ('dataDiNascita2') + '</paramValore>'
+        + '</param>'
+        + '<param id="7">'
+        + '<paramNome>PROMOTORE</paramNome>'
+        + '<paramValore>' + (value ('codicePromotore')? 'S': 'N') + '</paramValore>'
+        + '</param>'
+        + '<param id="7">'
+        + '<paramNome>NDG</paramNome>'
+        + '<paramValore>' + value ('ndg') + '</paramValore>'
+        + '</param>'
+        + '<param id="3">'
+        + '<paramNome>FUORISEDE</paramNome>'
+        + '<paramValore>' + (value ('tipoOfferta') === 'OffertaFuoriSede'? 'S': 'N') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>CABI</paramNome>'
+        + '<paramValore>' + value ('istituto') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>codiceQuestionario</paramNome>'
+        + '<paramValore>' + codiceQuestionario + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>tipoOperazione</paramNome>'
+        + '<paramValore>' + value ('tipoOperazione') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>canale</paramNome>'
+        + '<paramValore>' + value ('canale') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>tipoOfferta</paramNome>'
+        + '<paramValore>' + value ('tipoOfferta') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>codicePromotore</paramNome>'
+        + '<paramValore>' + value ('codicePromotore') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>name</paramNome>'
+        + '<paramValore>' + value ('name') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>password</paramNome>'
+        + '<paramValore>' + value ('password') + '</paramValore>'
+        + '</param>'
+        + '<param id="4">'
+        + '<paramNome>branch</paramNome>'
+        + '<paramValore>' + value ('branch') + '</paramValore>'
+        + '</param>'
+        + '<param id="7">'
+        + '<paramNome>debug</paramNome>'
+        + '<paramValore>' + (booleanValue ('debug')? 'S': 'N') + '</paramValore>'
+        + '</param>'         
+        + '</parametri>'
+        + '</root>';
+            http.send(xml);
+        }
+        
+    </script>   
+
+</body>
+
+</html>
