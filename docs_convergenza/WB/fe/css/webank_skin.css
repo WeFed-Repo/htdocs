@@ -3400,6 +3400,7 @@ ul.bullet-spunta li .icon {
 .titButton.titButtonIco {
   background: #f6f4f4;
   border: 1px solid #CCCCCC;
+  margin-bottom: 30px;
 }
 .titButton.titButtonIco .row {
   display: flex;
