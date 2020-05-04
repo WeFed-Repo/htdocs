@@ -46,7 +46,7 @@
     </div>
     <div class="form-group selezioneCCNoBor det-modifica" style="display: none">
         <div class="row">
-            <div class="form-field-input col-sm-6">
+            <div class="form-field-input col-sm-5">
                 <label class="control-label">Indirizzo</label>
                 <div class="form-field">
                     <input type="text" placeholder="Es. Viale Monte Bianco, 4" class="form-control" />
@@ -91,7 +91,8 @@
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-6">
             <label>
-                <input type="checkbox" name="" id="checkedFirst" class="input-toggle-hidden">Danni al fabbricato
+                <input class="flLeft" type="checkbox" name="" id="checkedFirst" class="input-toggle-hidden">
+                <span class="text-checkbox">Danni al fabbricato</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia">Dettagli garanzia</a>  
             </div>
@@ -108,7 +109,8 @@
         <div class="row"> 
             <div class="form-field-input col-xs-12 col-sm-6">
             <label>
-                <input type="checkbox" name="" id="checkedSecond" class="input-toggle-hidden"> Furto, rapina e scippo
+                <input  class="flLeft" type="checkbox" name="" id="checkedSecond" class="input-toggle-hidden"> 
+                <span class="text-checkbox">Furto, rapina e scippo</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia2">Dettagli garanzia</a>  
             </div>
@@ -123,7 +125,8 @@
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-6">
             <label>
-                <input type="checkbox" name="" id="checkedThird" class="input-toggle-hidden"> Danni al contenuto
+                <input class="flLeft" type="checkbox" name="" id="checkedThird" class="input-toggle-hidden"> 
+                <span class="text-checkbox">Danni al contenuto</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia3">Dettagli garanzia</a>  
             </div>

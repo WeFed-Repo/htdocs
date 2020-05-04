@@ -15,7 +15,7 @@
     </div>
     <div class="form-group selezioneCCNoBor det-modifica" style="display: none">
         <div class="row">
-            <div class="form-field-input col-xs-12">
+            <div class="form-field-input col-xs-5">
                 <label class="control-label">Indirizzo</label>
                 <div class="form-field">
                     <input type="text" placeholder="Es. Viale Monte Bianco, 4" class="form-control" />
@@ -60,7 +60,7 @@
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-12">
             <label>
-                <input type="checkbox" name="" id="respCiv" class="input-toggle-hidden">Responsabilità civile verso terzi e Assistenza
+                <input class="flLeft" type="checkbox" name="" id="respCiv" class="input-toggle-hidden"><span class="text-checkbox">Responsabilità civile verso terzi e Assistenza</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia4">Dettagli garanzia</a>  
             </div>
@@ -80,7 +80,8 @@
         <div class="row">
             <div class="form-field-input col-xs-12 col-sm-12">
             <label>
-                <input type="checkbox" name="" id="tutelaCheck" class="input-toggle-hidden">Tutela legale (acquistabile solo in abbinamento con la garanzia "Responsabilità civile verso terzi e Assistenza")
+                <input class="flLeft" type="checkbox" name="" id="tutelaCheck" class="input-toggle-hidden">
+                <span class="text-checkbox">Tutela legale (acquistabile solo in abbinamento con la garanzia "Responsabilità civile verso terzi e Assistenza")</span>
             </label>
             <a class="flLeft width100 paddingForBox link-text text-underline" data-toggle="modal" data-target="#modaleGaranzia5">Dettagli garanzia</a>  
             </div>

@@ -301,8 +301,33 @@ $.validator.addMethod("docNum", function(value, element, param) {
     return this.optional(element) || check;
 }, "{3}");
 
+//calcolo del range per COVID:
+
+var getRangeCovid = function (datetoCheck) {
+    if(typeof isCovid !== "undefined" && isCovid=== true) {
+    var initCovidArray = dateCovidIni.split("/"),
+        endCovidArray =  dateCovidEnd.split("/");
+    
+    var initCovid = new Date(initCovidArray[2], initCovidArray[1]-1, initCovidArray[0]),     
+        endCovid =  new Date(endCovidArray[2], endCovidArray[1]-1, endCovidArray[0]);
+        
+        if((datetoCheck.getTime()>= initCovid.getTime() && datetoCheck.getTime() <= endCovid.getTime()))
+        {
+            return true
+        }
+        else {
+            return false
+        }  
+    }
+    else {
+        
+        return false
+    }
+}
+
 // Verifica data emissione documento
 $.validator.addMethod("docStartDate", function(value, element, param) {
+    
     var check = false,
         errorMsg,
         startDate = parseDateITA(value),
@@ -323,9 +348,15 @@ $.validator.addMethod("docStartDate", function(value, element, param) {
             nascitaDate = parseDateITA(nascitaEl.val());
             limitDate = getLimitDate(tipoDocEl.val(), startDate, nascitaDate);
             check = (today.getTime() <= limitDate.getTime());
-            if (!check) {
+            //SE E' PERIODO COVID BYPASSO LA SCADENZA
+            
+            if (!check && !getRangeCovid(limitDate)) {
                 errorMsg = "Il documento &egrave; scaduto";
             }
+            else if(!check && getRangeCovid(limitDate)) {
+                check = true;
+            }
+            
         } else {
             check = true;
         }
@@ -336,6 +367,7 @@ $.validator.addMethod("docStartDate", function(value, element, param) {
 
 // Verifica data scadenza documento
 $.validator.addMethod("docEndDate", function(value, element, param) {
+    
     var check = false,
         errorMsg = 'Verifica',
         endDate = parseDateITA(value),
@@ -345,28 +377,40 @@ $.validator.addMethod("docEndDate", function(value, element, param) {
     // Controlla che la data sia dopo oggi
     if (!endDate) {
         errorMsg = 'Verifica';
-    } else if (endDate.getTime() <= (today.getTime() + 86400000)) {
+    } 
+    else if (endDate.getTime() <= (today.getTime() + 86400000) && !getRangeCovid(endDate)) {
         errorMsg = "La data deve essere successiva a oggi.";
-    } else {
+    } 
+    
+    else {
+       
         statoDocEl = $(param[0]);
         tipoDocEl = $(param[1]);
         startDateEl = $(param[2]);
         nascitaEl = $(param[3]);
         nascitaDate =  parseDateITA(nascitaEl.val());
+        
         startDate = parseDateITA(startDateEl.val());
         if (tipoDocEl.val() !== '' && statoDocEl.val() === 'ITALIA' && nascitaDate && startDate) {
             limitDate = getLimitDate(tipoDocEl.val(), startDate, nascitaDate);
             dateDiff = limitDate.getTime() - endDate.getTime();
+           
+            //CARTA IDENTITA'
             if (/^(01|11|12)$/.test(tipoDocEl.val())) {
                 check = (dateDiff === 0 || dateDiff === 86400000);
-            } else if (/^(02|13|14)$/.test(tipoDocEl.val())) {
+            } 
+            //PATENTE
+            else if (/^(02|13|14)$/.test(tipoDocEl.val())) {
                 check = (dateDiff >= 0);
-            } else {
-                check = (dateDiff === 0);
+            } 
+            //PASSAPORTO
+            else {
+               check = (dateDiff === 0);
             }
-            if (!check) {
+            if (!check && !getRangeCovid(limitDate)) {
                 errorMsg = "Verifica";
             }
+        
         } else {
             check = true;
         }

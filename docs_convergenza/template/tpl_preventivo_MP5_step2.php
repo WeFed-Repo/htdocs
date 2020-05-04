@@ -86,28 +86,40 @@
         <div class="formWrapper garanzia-box visible">
             <div class="form-group">
                 <div class="row">
-                    <div class="form-field-input col-xs-12 col-sm-12">
-                        <div class="form-field">
-                            <div class="row">
-                                <div class="form-field-input col-xs-12 col-sm-6">
-                                    <label class="control-label">Bene/soggetto da assicurare</label>
-                                    <select name="" class="form-control bene-assicurato" id="bene-assicurato_0">
-                                        <option selected="selected" value="">Seleziona</option>
-                                        <option value="DA">Dimora abituale</option>
-                                        <option value="DS">Dimora saltuaria</option>
-                                        <option value="B">box</option>
-                                        <option value="SF">Soggetto fisico</option>
-                                    </select>
-                                </div>
-                                <div class="form-field-input col-xs-12 col-sm-6" id="datiAssicurato" style="display:none">
-                                    <label class="control-label">Assicurato
-                                        <a class="btn-icon"><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="Per la Tutela legale sono assicurati il Contraente, i figli minori anche se non conviventi, ed ogni familiare e/o persona con lui convivente se presente nello Stato di Famiglia.
-                                        Per RC e Assistenza: Il Contraente e i familiari conviventi."></i></a>
-                                    </label>
-                                    <div class="input-group"><span class="output">Lorem ipsum</span></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form-field-input col-xs-12 col-sm-5">
+                        <label class="control-label">Bene/soggetto da assicurare</label>
+                        <select name="" class="form-control bene-assicurato" id="bene-assicurato_0">
+                            <option selected="selected" value="">Seleziona</option>
+                            <option value="DA">Dimora abituale</option>
+                            <option value="DS">Dimora saltuaria</option>
+                            <option value="B">box</option>
+                            <option value="SF">Soggetto fisico</option>
+                        </select>
+                    </div>
+                    <div class="form-field-input col-xs-12 col-sm-6" id="datiAssicurato" style="display:none">
+                        <label class="control-label">Assicurato
+                            <a class="btn-icon"><i class="icon icon-info_fill icon-2x" data-toggle="tooltip"  title="Per la Tutela legale sono assicurati il Contraente, i figli minori anche se non conviventi, ed ogni familiare e/o persona con lui convivente se presente nello Stato di Famiglia.
+                            Per RC e Assistenza: Il Contraente e i familiari conviventi."></i></a>
+                        </label>
+                        <div class="input-group"><span class="output">Lorem ipsum</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-wrapper"></div>
+        </div>
+        <div class="formWrapper garanzia-box hidden">
+            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            <div class="form-group">
+                <div class="row next-select">
+                    <div class="form-field-input col-xs-12 col-sm-5">
+                        <label class="control-label">Bene/soggetto da assicurare</label>
+                        <select name="" class="form-control bene-assicurato" id="bene-assicurato_1">
+                            <option selected="selected" value="">Seleziona</option>
+                            <option value="DA">Dimora abituale</option>
+                            <option value="DS">Dimora saltuaria</option>
+                            <option value="B">box</option>
+                            <option value="SF">Soggetto fisico</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -117,45 +129,15 @@
             <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
             <div class="form-group">
                <div class="row next-select" >
-                    <div class="form-field-input col-xs-12 col-sm-6">
+                    <div class="form-field-input col-xs-12 col-sm-5">
                         <label class="control-label">Bene/soggetto da assicurare</label>
-                        <div class="form-field">
-                            <div class="row">
-                                <div class="form-field-input col-xs-12 col-sm-6">
-                                    <select name="" class="form-control bene-assicurato" id="bene-assicurato_1">
-                                        <option selected="selected" value="">Seleziona</option>
-                                        <option value="DA">Dimora abituale</option>
-                                        <option value="DS">Dimora saltuaria</option>
-                                        <option value="B">box</option>
-                                        <option value="SF">Soggetto fisico</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="add-wrapper"></div>
-        </div>
-        <div class="formWrapper garanzia-box hidden">
-            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
-            <div class="form-group">
-               <div class="row next-select" >
-                    <div class="form-field-input col-xs-12 col-sm-6">
-                        <label class="control-label">Bene/soggetto da assicurare</label>
-                        <div class="form-field">
-                            <div class="row">
-                                <div class="form-field-input col-xs-12 col-sm-6">
-                                    <select name="" class="form-control bene-assicurato" id="bene-assicurato_3">
-                                        <option selected="selected" value="">Seleziona</option>
-                                        <option value="DA">Dimora abituale</option>
-                                        <option value="DS">Dimora saltuaria</option>
-                                        <option value="B">box</option>
-                                        <option value="SF">Soggetto fisico</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        <select name="" class="form-control bene-assicurato" id="bene-assicurato_3">
+                            <option selected="selected" value="">Seleziona</option>
+                            <option value="DA">Dimora abituale</option>
+                            <option value="DS">Dimora saltuaria</option>
+                            <option value="B">box</option>
+                            <option value="SF">Soggetto fisico</option>
+                        </select>
                     </div>
                 </div>
             </div>
