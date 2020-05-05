@@ -146,6 +146,10 @@ form {
   margin-top: 0;
   margin-bottom: 0 !important;
 }
+.panel-body .note .icon-update {
+  display: inline-block;
+  transform: translate(0, -10px);
+}
 .control-label,
 .form-group .pin_testo {
   margin-top: 0;

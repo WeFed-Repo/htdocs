@@ -465,7 +465,7 @@ $tipo_op_1 = array(1,2,3);
       <br />
     </div>
     <div class="col-xs-12 col-sm-7">
-      <p class="note flRight noFloatMobile">
+      <p class="note flRight noFloatMobile marginTopMedium">
           <span class="flLeft">Ultimo Aggiornamento: <?php print ( date('d/m/Y') ) ?> ore <?php print ( date('h:i:s') ) ?></span>
           <a href="#" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn">
             <i class="icon icon-2x icon-update"></i>
@@ -477,20 +477,20 @@ $tipo_op_1 = array(1,2,3);
 
 
   <!-- TABELLA -->
-  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="3">
+  <table cellspacing="0" cellpadding="0" border="0"  id="tableOrdiniMovimenti" class="sortableTable has-fixed-cols" data-fixed-cols="2">
       <thead>
           <tr>
               <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
               <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / Fondo</th>
-              <th class="left">Mercato</th>
-              <th class="right">Q.t&agrave; in portaf.</th>
-              <th class="right">Q.t&agrave; disp.</th>
-              <th class="right">Prz. medio carico</th>
-              <th class="right">Settore</th>
-              <th class="right">Valore Y</th>
-              <th class="right">Ult. prz. ora</th>
-              <th class="right">Controval. Eur</th>
-              <th class="right">Utili /Perdite Eur VAR%</th>
+              <th class="left" data-sortable="true">Mercato</th>
+              <th class="right" data-sortable="true">Q.t&agrave; in portaf.</th>
+              <th class="right" data-sortable="true">Q.t&agrave; disp.</th>
+              <th class="right" data-sortable="true">Prz. medio carico</th>
+              <th class="right" data-sortable="true">Settore</th>
+              <th class="right" data-sortable="true">Valore Y</th>
+              <th class="right" data-sortable="true">Ult. prz. ora</th>
+              <th class="right" data-sortable="true">Controval. Eur</th>
+              <th class="right" data-sortable="true">Utili /Perdite Eur VAR%</th>
               <th class="right"></th>
           </tr>
       </thead>
@@ -524,7 +524,7 @@ $tipo_op_1 = array(1,2,3);
             <tr>
                     <td colspan="2" class="bgWhite brdWhite"></td>
                     <td><strong> Totale portafoglio</strong></td>
-                    <td colspan="7"></td>
+                    <td colspan="6"></td>
                     <td class="right">123.404,00</td>
                     <td class="right nega">-24,00<br>-0,1%</td>
                     <td class="bgWhite brdWhite"></td>
@@ -732,11 +732,11 @@ $tipo_op_1 = array(1,2,3);
                   <thead>
                     <tr>
                         <th class="left"></th>
-                        <th class="left">Descrizione</th>
-                        <th class="left">Simbolo</th>
-                        <th class="left">Codice ISIN</th>
-                        <th class="left">Mercato</th>
-                        <th class="right">Prezzo Rif. Data</th>
+                        <th class="left" data-sortable="true">Descrizione</th>
+                        <th class="left" data-sortable="true">Simbolo</th>
+                        <th class="left" data-sortable="true">Codice ISIN</th>
+                        <th class="left" data-sortable="true">Mercato</th>
+                        <th class="right" data-sortable="true">Prezzo Rif. Data</th>
                     </tr>
                   </thead>
                   <tbody>

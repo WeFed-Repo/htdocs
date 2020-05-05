@@ -250,21 +250,17 @@ function print_periodo_switch($periodo) {
               </select>
             </div>
           </div>
-
           <?php if($site != "webank") { ?>
           </div>
           <div class="row">
           <?php } ?>
-
           <div class="col-xs-12 <?php print(($site == "webank") ? 'col-md-6 no-label' : '') ?> ">
   					<div class="btn-align-right">
   						<a type="button" class="btn btn-primary" href="#">Cerca</a>
   					</div>
           </div>
-
         </div>
         <div class="row">
-
           <div class="col-xs-12">
             <p class="note flLeft noFloatMobile marginTopMedium">
                 <span class="flLeft">Ultimo Aggiornamento: <?php print(date('d/m/Y')) ?> ore <?php print(date('h:i:s')) ?></span>
@@ -272,8 +268,7 @@ function print_periodo_switch($periodo) {
                   <i class="icon icon-2x icon-update"></i>
                 </a>
             </p>
-        </div>
-
+          </div>
         </div>
 
 
@@ -284,13 +279,13 @@ function print_periodo_switch($periodo) {
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
                     <th class="left filter" data-sortable="true" id="filterTitolo">Titolo / ISIN</th>
-                    <th class="left">Tipo operazione</th>
-                    <th class="right">Q.t&agrave; immessa/ eseguita</th>
-                    <th class="right">Prezzo immesso/ eseguito</th>
-                    <th class="right">Data/ Ora</th>
-                    <th class="left">Stato ordine</th>
-                    <th class="left">Mercato</th>
-                    <th class="right">N. ordine sintetico</th>
+                    <th class="left" data-sortable="true">Tipo operazione</th>
+                    <th class="right" data-sortable="true">Q.t&agrave; immessa/ eseguita</th>
+                    <th class="right" data-sortable="true">Prezzo immesso/ eseguito</th>
+                    <th class="right" data-sortable="true">Data/ Ora</th>
+                    <th class="left" data-sortable="true">Stato ordine</th>
+                    <th class="left" data-sortable="true">Mercato</th>
+                    <th class="right" data-sortable="true">N. ordine sintetico</th>
                 </tr>
             </thead>
             <tbody>
@@ -494,15 +489,15 @@ function print_periodo_switch($periodo) {
               <thead>
                 <tr>
                   <th class="left filter" data-sortable="true" id="filterTitolo">Descrizione</th>
-                  <th class="left">Causale</th>
-                  <th class="right">Data e ora inserim.</th>
-                  <th class="right">Quantità</th>
-                  <th class="left">Divisa</th>
-                  <th class="right">Prezzo</th>
-                  <th class="right">Controv Euro</th>
-                  <th class="left">Stato</th>
-                  <th class="center">Data valuta</th>
-                  <th class="right">Numero ordine</th>
+                  <th class="left" data-sortable="true">Causale</th>
+                  <th class="right" data-sortable="true">Data e ora inserim.</th>
+                  <th class="right" data-sortable="true">Quantità</th>
+                  <th class="left" data-sortable="true">Divisa</th>
+                  <th class="right" data-sortable="true">Prezzo</th>
+                  <th class="right" data-sortable="true">Controv Euro</th>
+                  <th class="left" data-sortable="true">Stato</th>
+                  <th class="center" data-sortable="true">Data valuta</th>
+                  <th class="right" data-sortable="true">Numero ordine</th>
                 </tr>
               </thead>
               <tbody>
@@ -570,7 +565,7 @@ function print_periodo_switch($periodo) {
       $(this).parent().find('[data-inputtoggle]').toggle();
     });
 
-    
+
     // Inizializzazione tabelle di bootstrap
     $('.sortableTable').bootstrapTable({
       onPostBody: function(){
