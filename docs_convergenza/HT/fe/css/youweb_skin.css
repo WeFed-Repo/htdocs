@@ -408,6 +408,29 @@ li.linkOn a {
   color: #202d50 !important;
 }
 
+.linkFonte, .linkFonte:hover {
+  text-decoration: underline;
+}
+
+.tab-wrap .control-label + span.output,
+.tab-wrap .control-label + .tooltip + span.output,
+.control-label-output + span.output,
+.control-label-output + .tooltip + span.output {
+  font-weight: bold;
+  display: block;
+}
+
+strong .tooltip-inner, h4 .tooltip-inner {
+  font-weight: normal !important;
+}
+strong .tooltip-inner b, strong .tooltip-inner strong, h4 .tooltip-inner b, h4 .tooltip-inner strong {
+  font-weight: bold !important;
+}
+
+h4.txthelp.control-label, div.txthelp.control-label {
+  display: inline-block;
+}
+
 @media (max-width: 767px) {
   .note.flRight.noFloatMobile span.flLeft {
     display: none;
@@ -492,6 +515,22 @@ li.linkOn a {
   color: #0e977f;
 }
 
+.tab-wrap .documenti, .fundPanel {
+  margin: 0;
+}
+.tab-wrap .documenti li, .fundPanel li {
+  margin-bottom: 5px;
+}
+.tab-wrap .documenti .btn-icon, .fundPanel .btn-icon {
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  text-align: left;
+}
+.tab-wrap .documenti .btn-icon span, .fundPanel .btn-icon span {
+  padding-left: 10px;
+}
+
 /* Icone bottone nelle note in testa */
 p.note.flRight a.btn-icon {
   margin-left: 5px;
@@ -525,6 +564,7 @@ p.note.flRight a.btn-icon {
 }
 .control-label-output.txthelp {
   width: auto;
+  float: none;
 }
 
 .formGenerico {
