@@ -340,7 +340,6 @@ function print_periodo_switch($periodo) {
           <div class="form-field-input col-xs-12 col-md-6">
             <?php print_periodo_switch( $selectPeriodoFondi ); ?>
           </div>
-          <?php if($site == "webank") { ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Stato ordine</label>
@@ -351,7 +350,6 @@ function print_periodo_switch($periodo) {
           </div>
         </div>
         <div class="row">
-          <?php } ?>
           <div class="form-field-input col-xs-12 col-md-6">
             <div class="form-group">
               <label class="control-label">Tipo di operazione</label>

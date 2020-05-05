@@ -5799,6 +5799,12 @@ table tr td.td-fondo .fundName {
 .spsel.spsel-hasconsole .spsel-option {
   padding-right: 100px;
 }
+.spsel.spsel-hasconsole .spsel-option.spsel-selected {
+  padding-right: 0;
+}
+.spsel.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+  display: none;
+}
 .spsel.spsel-hasconsole .spsel-btn-console {
   position: absolute;
   top: 4px;

@@ -777,7 +777,13 @@ a.output {color: $primary;text-decoration:underline}
       }
     }
     &.spsel-hasconsole{
-        .spsel-option {padding-right:100px;}
+        .spsel-option {
+          padding-right:100px;
+          &.spsel-selected {
+            padding-right:0;
+            .spsel-btn-console {display:none;}
+          }
+        }
        .spsel-btn-console {
             position: absolute;
             top: 4px;
