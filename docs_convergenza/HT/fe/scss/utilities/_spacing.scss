@@ -158,6 +158,11 @@ p, ol, ul, hr, table, form {
     @extend .marginBottomNone;
 }
 
+.panel-body .note .icon-update {
+    display: inline-block;
+    transform: translate(0,-4px);
+}
+
 .control-label, .form-group .pin_testo {
     @extend .marginBottomNano;
 }

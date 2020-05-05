@@ -146,6 +146,10 @@ form {
   margin-top: 0;
   margin-bottom: 0 !important;
 }
+.panel-body .note .icon-update {
+  display: inline-block;
+  transform: translate(0, -10px);
+}
 .control-label,
 .form-group .pin_testo {
   margin-top: 0;
@@ -5794,6 +5798,12 @@ table tr td.td-fondo .fundName {
 }
 .spsel.spsel-hasconsole .spsel-option {
   padding-right: 100px;
+}
+.spsel.spsel-hasconsole .spsel-option.spsel-selected {
+  padding-right: 0;
+}
+.spsel.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+  display: none;
 }
 .spsel.spsel-hasconsole .spsel-btn-console {
   position: absolute;

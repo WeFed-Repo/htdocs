@@ -244,6 +244,11 @@ p, ol, ul, hr, table, form {
 }
 
 /* Elementi specifici */
+.panel-body .note .icon-update {
+  display: inline-block;
+  transform: translate(0, -4px);
+}
+
 .formGenerico.output h4 {
   margin-bottom: 20px;
 }
@@ -1363,6 +1368,12 @@ a.output {
 }
 .spsel.spsel-hasconsole .spsel-option {
   padding-right: 100px;
+}
+.spsel.spsel-hasconsole .spsel-option.spsel-selected {
+  padding-right: 0;
+}
+.spsel.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+  display: none;
 }
 .spsel.spsel-hasconsole .spsel-btn-console {
   position: absolute;
