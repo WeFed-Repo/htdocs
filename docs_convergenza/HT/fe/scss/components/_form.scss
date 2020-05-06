@@ -385,6 +385,32 @@ input[type=checkbox] {
   
 }
 
+#selContCodSettore {
+  margin: 0 -1.51%;
+  @media (max-width:767px) {
+    & {width:100%; margin: 0}
+  }
+  .selEl{
+    width:30%;
+    min-height:135px;
+    margin:0 1.51% 15px;
+    border:solid 2px #ccc;
+    padding:25px 10px 10px;
+    text-align:center !important;
+    @media (max-width:767px) {
+      & {width:100%; margin: 0 0 15px;}
+    }
+    .icon {font-size:38px; width:38px;height:38px; color:#999;margin-bottom:10px;}
+    input {display:none}
+    .selElLabel {width:100%; display:inline-block;
+      .selElName {width:100%; display:inline-block; line-height:14px;}
+      .selElTotal {width:100%; display:inline-block;}
+    }
+    &.selected {border-color:$primary;
+    .icon {color: $primary}}
+  }
+}
+
 #selContFesCategoria {
   .fesRadio {
       label {
