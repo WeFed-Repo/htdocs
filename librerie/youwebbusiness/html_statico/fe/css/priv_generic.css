@@ -1976,7 +1976,7 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   padding: 0 1px !important;
   cursor: pointer;
 }
-.ui-datepicker .ui-datepicker-calendar td a {
+.ui-datepicker .ui-datepicker-calendar td a, .ui-datepicker .ui-datepicker-calendar td span {
   transition: all 0.1s !important;
   color: #737373;
   display: block;
@@ -2202,7 +2202,7 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   height: 31px;
   cursor: default;
 }
-.dhb-calendario .ui-datepicker .ui-datepicker-calendar td a {
+.dhb-calendario .ui-datepicker .ui-datepicker-calendar td a, .dhb-calendario .ui-datepicker .ui-datepicker-calendar td span {
   max-width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
