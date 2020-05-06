@@ -835,6 +835,11 @@ input[type=checkbox] {
   display: inline-block;
   vertical-align: top;
 }
+@media (max-width: 767px) {
+  .fesSelCont .selEl {
+    width: 100%;
+  }
+}
 .fesSelCont .selEl input[type=checkbox], .fesSelCont .selEl input[type=radio] {
   position: absolute !important;
   left: 0;
@@ -886,6 +891,80 @@ input[type=checkbox] {
   display: block;
   clear: both;
   font-size: 12px;
+}
+
+#selContCodRating {
+  margin: 0 -1.51%;
+}
+@media (max-width: 767px) {
+  #selContCodRating {
+    width: 100%;
+    margin: 0;
+  }
+}
+#selContCodRating .selEl {
+  width: 30%;
+  margin: 0 1.51% 15px;
+  border: solid 2px #ccc;
+  padding: 25px 10px 10px;
+  text-align: center !important;
+}
+@media (max-width: 767px) {
+  #selContCodRating .selEl {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+#selContCodRating .selEl input {
+  display: none;
+}
+#selContCodRating .selEl .selElLabel {
+  width: 100%;
+  display: inline-block;
+}
+#selContCodRating .selEl .selElLabel .selElName {
+  width: 100%;
+  display: inline-block;
+}
+#selContCodRating .selEl .selElLabel .selElTotal {
+  width: 100%;
+  display: inline-block;
+}
+#selContCodRating .selEl.selected {
+  border-color: #0e977f;
+}
+
+#selContFesCategoria .fesRadio label {
+  cursor: pointer;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+#selContFesCategoria .fesSelect select.form-control, #selContFesCategoria .fesSelect .select-content select, .select-content #selContFesCategoria .fesSelect select {
+  margin-bottom: 20px;
+}
+#selContFesCategoria .btnConsole {
+  margin-bottom: 20px;
+}
+#selContFesCategoria .btnConsole .btn-align-right {
+  float: right;
+}
+@media (max-width: 767px) {
+  #selContFesCategoria .btnConsole .btn-align-right, #selContFesCategoria .btnConsole .btn-align-left {
+    float: none;
+    margin: 0;
+  }
+  #selContFesCategoria .btnConsole .btn-align-right .btn, #selContFesCategoria .btnConsole .btn-align-left .btn {
+    width: 100%;
+  }
+}
+#selContFesCategoria .btnConsole .btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 9px 10px 7px 10px;
+  display: inline-block;
+  height: 30px;
+  line-height: 15px;
 }
 
 #filtriAvanzatiSwitch {
@@ -1015,6 +1094,7 @@ input[type=checkbox] {
 }
 .borderFormRounded .output.txthelp {
   width: auto;
+  display: inline-block;
 }
 .borderFormRounded .output a {
   color: #0e977f;
@@ -2678,6 +2758,12 @@ div.pager .circle.current_page {
 .outerTab {
   margin-right: -35px;
   margin-left: -35px;
+}
+@media (max-width: 1023px) {
+  .outerTab {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 .outerTab .innerTab {
   background-color: #eaeded;

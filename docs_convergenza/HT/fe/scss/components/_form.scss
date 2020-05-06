@@ -301,6 +301,10 @@ input[type=checkbox] {
 
   .selEl {font-weight:normal; width:33.331%; position:relative;margin-bottom:10px; padding-left:25px; padding-right:10px;
     cursor: pointer;display:inline-block; vertical-align:top;
+
+    @media (max-width:767px) {
+      & {width:100%}
+    }
     input[type=checkbox],input[type=radio] {position:absolute !important;left:0;top:0;
       &[type=radio] {top:-3px}
     }
@@ -329,6 +333,8 @@ input[type=checkbox] {
         margin: 1%;
         font-size: 12px;
 
+
+
         &.selected {
             cursor: default;
             border-color: #202d50;
@@ -353,6 +359,59 @@ input[type=checkbox] {
         }
     }
 }
+
+#selContCodRating {
+  margin: 0 -1.51%;
+  @media (max-width:767px) {
+    & {width:100%; margin: 0}
+  }
+  .selEl{
+    width:30%;
+    margin:0 1.51% 15px;
+    border:solid 2px #ccc;
+    padding:25px 10px 10px;
+    text-align:center !important;
+    @media (max-width:767px) {
+      & {width:100%; margin: 0 0 15px;}
+    }
+
+    input {display:none}
+    .selElLabel {width:100%; display:inline-block;
+      .selElName {width:100%; display:inline-block;}
+      .selElTotal {width:100%; display:inline-block;}
+    }
+    &.selected {border-color:$primary}
+  }
+  
+}
+
+#selContFesCategoria {
+  .fesRadio {
+      label {
+        cursor: pointer;
+        padding-right:20px;
+        margin-bottom:15px;
+      }     
+  }
+  .fesSelect {
+    select.form-control {margin-bottom:20px;}
+  }
+  .btnConsole {
+    margin-bottom:20px; 
+    .btn-align-right {float:right;}
+    @media (max-width:767px) {
+      & {.btn-align-right,.btn-align-left {float:none; margin:0;
+        .btn {width:100%;}
+      }}
+    }
+    .btn {font-weight:bold; text-transform:uppercase; border-radius:15px;padding: 9px 10px 7px 10px; display:inline-block;
+    height:30px;line-height:15px;}
+  }
+} 
+
+
+
+
 #filtriAvanzatiSwitch {
   width: 100%;
   position: relative;
@@ -494,6 +553,7 @@ input[type=checkbox] {
     &.no-label{padding-top:0}
     &.txthelp {
       width:auto;
+      display:inline-block;
     }
     a{color:$primary}
 }
