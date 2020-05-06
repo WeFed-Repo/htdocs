@@ -1075,3 +1075,26 @@
     }
   }
   
+
+  /* Oggetti con trattamenti particolari */
+
+  .fesTotRes {
+      display:inline-block; padding: 10px 0;
+      span {font-weight:bold;}
+      #fesTotFiltered {font-size:16px;}
+
+  }
+  #fesMancanti {
+    padding-top: 10px;
+    display: inline-block; 
+    span {font-weight:bold;}
+  }
+  #fesRicWrap {
+      margin-bottom:30px;
+      .fesSearchMore {
+          float:right;
+          @media (max-width:767px) {
+              & {width:100%; margin-top:10px;clear:both;float:none}
+          }
+      }
+  }

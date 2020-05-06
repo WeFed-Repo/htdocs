@@ -1,1 +1,1 @@
-sass --watch --source-map .:../css/
+sass --watch --source-map .:../css/ --poll

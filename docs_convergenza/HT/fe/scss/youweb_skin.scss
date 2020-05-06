@@ -1,5 +1,5 @@
 // VARIABILI GLOBALI
-@import '_vars.scss';
+@import 'vars';
  
 // GRUPPI DI STILI
 
@@ -7,17 +7,18 @@
 // import 'fonts/_inclusions.scss';
 
 // PORTING ICONE
-@import 'fonts/_icon_remap.scss';
+@import 'fonts/icon_remap';
 
 // ICONE MANCANTI
-@import 'fonts/_icon_missing.scss';
+@import 'fonts/icon_missing';
 
 // UTILITA' TIPOGRAFICHE E DI ELEMENTI GENERICI
-@import 'utilities/_inclusions.scss';
+@import 'utilities/inclusions';
 
 // OGGETTI MODULARI (componenti)
-@import 'components/_inclusions.scss';
+@import 'components/inclusions';
+
 
 // TEMPLATES PARTICOLARI
-@import 'tpl/_inclusions.scss';
+// @import 'tpl/_inclusions.scss';
 

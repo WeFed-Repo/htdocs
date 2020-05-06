@@ -386,3 +386,10 @@ table .table-btn-more {
   border-spacing: 0;
   width: 100%;
 }
+
+/* Scroller */
+.noBootstrap-scroller {
+  width: 100%;
+  overflow: auto;
+  display: block;
+}
