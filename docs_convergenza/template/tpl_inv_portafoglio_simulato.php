@@ -457,9 +457,9 @@ $tipo_op_1 = array(1,2,3);
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-5">
-      <a href="#" class="btn-icon-simula text-link">
-        Simula compravendita
+      <a type="button" href="#" class="btn-icon-simula btn btn-primary">
         <i class="icon icon_piumeno"></i>
+        <span class="icon-text">Simula compravendita</span>
       </a>
       <br />
       <br />
