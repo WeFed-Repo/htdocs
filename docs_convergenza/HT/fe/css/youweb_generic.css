@@ -963,10 +963,15 @@ h1 .pager .circle {
 
 .ui-combobox button, .ui-combobox button:hover,
 .ui-combobox button.ui-state-hover,
-.ui-combobox button, .ui-combobox button:hover, .ui-combobox button.ui-state-hover {
+.ui-combobox button, .ui-combobox button:hover, .ui-combobox button.ui-state-hover,
+ui-combobox-button,
+ui-combobox-button.ui-state-hover,
+ui-combobox-button:hover,
+ui-combobox-button.ui-state-hover
+ {
     border: none;
     outline: 0;
-    background: transparent;
+    background: transparent!important;
     box-shadow: none;
     position: absolute;
     top: 0;
@@ -2284,7 +2289,7 @@ div.messagePanel p {
 
 
 /*ACCORDION */
-.ui-accordion .ui-state-default, #accordion .ui-widget-content .ui-state-default, #accordion .ui-widget-header .ui-state-default,
+.ui-accordion .ui-state-default:not(.ui-combobox-button), #accordion .ui-widget-content .ui-state-default:not(.ui-combobox-button), #accordion .ui-widget-header .ui-state-default:not(.ui-combobox-button),
 .accordion .panel-heading .panel-title a {
     /*background: #eaeded url('/HT/fe/img/icon_accordion_closed.png') no-repeat 98% center;*/
     background-color: #eaeded;
@@ -2348,7 +2353,10 @@ div.messagePanel p {
     float: right;
     margin-right: 20px;
 }
-
+.ui-accordion .ui-combobox-button .icon {
+    float: none;
+    margin-right: 0;
+}
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited,
 .ui-accordion .ui-state-default.ui-state-active,
 .ui-accordion .ui-state-default:hover {
