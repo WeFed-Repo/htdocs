@@ -2197,8 +2197,8 @@ div.messagePanel p {
         background: none;
     }
 
-    .formWrapper .form-group {
-        padding-bottom: 0 !important;
+    .formWrapper .form-group { 
+        /*padding-bottom: 0 !important;*/
         margin: 0;
     }
 

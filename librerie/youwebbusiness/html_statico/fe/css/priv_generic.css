@@ -1174,6 +1174,11 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
   font-weight: bold;
   line-height: 13px;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .accordion .card .card-header .card-header-icon.plus-minus:before, .accordion .acc-item .card-header .card-header-icon.plus-minus:before {
+    transform: translate(0, 3px);
+  }
+}
 .accordion .card .card-header.collapsed .card-header-title, .accordion .acc-item .card-header.collapsed .card-header-title {
   color: #737373;
 }
