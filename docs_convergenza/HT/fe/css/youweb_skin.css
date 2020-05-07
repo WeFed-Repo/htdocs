@@ -1475,9 +1475,15 @@ a.output {
 /* Selettore rapporto/deposito */
 .selectRapp {
   position: relative;
+  margin-bottom: 15px;
 }
 .selectRapp > .inputOption {
   background: #fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
+}
+@media (max-width: 991px) {
+  .selectRapp > .inputOption {
+    line-height: 27px;
+  }
 }
 
 .form-group.w100 .input-group, .form-group.w100 .input-inline {
@@ -1769,13 +1775,26 @@ a.output {
 #selDepForm span.output {
   float: right;
   width: auto;
+  text-align: right;
 }
 #selDepForm .no-label {
   padding-top: 0;
 }
 #selDepForm .no-label .output {
   float: left;
+  text-align: left;
 }
+@media (max-width: 767px) {
+  #selDepForm .form-group {
+    margin-bottom: 0;
+  }
+  #selDepForm .output {
+    max-width: 80%;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+}
+
 table,
 .table,
 .ui-dialog .table {
@@ -2891,6 +2910,11 @@ div.pager .circle.current_page {
   top: 100%;
   border-top-color: #fff;
   transform: translate(-3.5px, -10.5px);
+}
+@media (max-width: 480px) {
+  .tooltip {
+    max-width: 300px !important;
+  }
 }
 
 .htmlTooltip {
@@ -4102,22 +4126,6 @@ div.pager .circle.current_page {
     clear: both;
     float: none;
   }
-}
-
-#fesRicercaCont + .form-group.btnWrapper {
-  clear: both;
-  margin-bottom: 20px;
-}
-
-/* GRAFICI */
-#fesFondoWrap .grafico {
-  display: block;
-  width: 100%;
-  min-height: 250px;
-  position: relative;
-}
-#fesFondoWrap #grafico_fondo_space {
-  height: 250px;
 }
 
 .ui-dialog-content.ui-widget-content li a,

@@ -877,7 +877,13 @@ a.output {color: $primary;text-decoration:underline}
 /* Selettore rapporto/deposito */
 .selectRapp {
   position:relative;
-  &>.inputOption {background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center}
+  margin-bottom:15px;
+  &>.inputOption {
+    background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center; 
+    @media(max-width:991px) {
+      & {line-height:27px;}
+    }
+  }
 }
 
 .form-group.w100 {
@@ -1112,14 +1118,21 @@ a.output {color: $primary;text-decoration:underline}
 /* Selettore rapporto/deposito */
 #selDepForm {
   label.control-label-output {float:left;width:auto;}
-  span.output {float:right;width:auto;} 
+  span.output {float:right;width:auto;text-align:right;} 
   .no-label {padding-top:0;
-    .output {float:left}
+    .output {float:left;text-align:left}
   }
 
   @media (max-width:767px) {
     & {
-      
+      .form-group {
+        margin-bottom:0
+      }
+      .output {
+        max-width:80%;
+        text-align:right;
+        margin-bottom:15px;
+        }
     }    
   }
 }
