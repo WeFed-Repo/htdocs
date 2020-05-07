@@ -79,7 +79,11 @@
     </head>
 
     <body class="<?php echo $bodyClass ?>">
-    
+    <script>
+		var isCovid = true,
+			dateCovidIni = "01/03/2020",
+			dateCovidEnd = "31/08/2020";
+	</script>
     <?php if ($isAOL): ?>
 		<!-- HEADER AOL -->
 		<?php virtual("/librerie/include/struttura_wbresp/header_aol.php"); ?>

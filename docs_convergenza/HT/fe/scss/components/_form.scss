@@ -558,7 +558,15 @@ input[type=checkbox] {
     }
 
 }
-
+/* SIMULATORE PAC */
+#btnCatGroup .btn-align-left {
+  margin-bottom:20px;
+}
+@media (max-width: 767px) {
+  .autoClearWrapper { 
+    margin-bottom:20px
+  }
+}
 .ui-spinner {
   position: relative;
   display: inline-block;

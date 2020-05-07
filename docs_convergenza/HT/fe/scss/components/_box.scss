@@ -1098,3 +1098,21 @@
           }
       }
   }
+
+  #fesRicercaCont + .form-group.btnWrapper {
+      clear:both;
+      margin-bottom:20px;
+  }
+
+  /* GRAFICI */
+  #fesFondoWrap {
+    .grafico {
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    position: relative;
+    }
+    #grafico_fondo_space {
+        height: 250px;
+    }
+}

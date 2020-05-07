@@ -1128,6 +1128,16 @@ input[type=checkbox] {
     display: block;
   }
 }
+/* SIMULATORE PAC */
+#btnCatGroup .btn-align-left {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .autoClearWrapper {
+    margin-bottom: 20px;
+  }
+}
 .ui-spinner {
   position: relative;
   display: inline-block;
@@ -4074,6 +4084,22 @@ div.pager .circle.current_page {
     clear: both;
     float: none;
   }
+}
+
+#fesRicercaCont + .form-group.btnWrapper {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+/* GRAFICI */
+#fesFondoWrap .grafico {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  position: relative;
+}
+#fesFondoWrap #grafico_fondo_space {
+  height: 250px;
 }
 
 .ui-dialog-content.ui-widget-content li a,
