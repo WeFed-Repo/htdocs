@@ -796,6 +796,10 @@ input[type=checkbox] {
   height: 26px;
   line-height: 26px;
   float: left;
+  max-width: calc(100% - 10px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   cursor: pointer;
   text-decoration: underline;
   color: #0e977f;
@@ -1747,6 +1751,21 @@ a.output {
   border-top: 0 none;
 }
 
+/* Selettore rapporto/deposito */
+#selDepForm label.control-label-output {
+  float: left;
+  width: auto;
+}
+#selDepForm span.output {
+  float: right;
+  width: auto;
+}
+#selDepForm .no-label {
+  padding-top: 0;
+}
+#selDepForm .no-label .output {
+  float: left;
+}
 table,
 .table,
 .ui-dialog .table {
@@ -2860,7 +2879,6 @@ div.pager .circle.current_page {
 }
 .tooltip.in.top .tooltip-arrow {
   top: 100%;
-  left: 50% !important;
   border-top-color: #fff;
   transform: translate(-3.5px, -10.5px);
 }

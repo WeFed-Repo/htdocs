@@ -18,7 +18,7 @@ export default class extends Component {
     */
 
     
-
+    /*
     componentDidMount () {
 
         let iframe = ReactDOM.findDOMNode(this.refs.ifr);
@@ -132,13 +132,13 @@ export default class extends Component {
         iframe.src="about:blank";
       }
       
+    */
 
     render()  {
         
         return(
-            <iframe ref="ifr" className="iframe-resp" name="iframe_mifid" ></iframe>
+            <iframe ref="ifr" className="iframe-resp" name="iframe_mifid" src="/promotori/dashboard/goToMifidQuest"></iframe>
         )
-
     }
 
 }
