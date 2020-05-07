@@ -639,16 +639,13 @@ p.note.flRight a.btn-icon {
   padding: 0 5px;
   border-radius: 0;
   background-color: #DADEE1;
-  color: #fff;
+  color: #2a3d63;
 }
 .input-group-addon.date {
   color: #2a3d63;
   background-color: #fff;
   position: relative;
   min-width: 30px;
-}
-.input-group-addon.first {
-  color: #2a3d63;
 }
 
 input[type=checkbox] {
@@ -824,6 +821,9 @@ input[type=checkbox] {
 }
 
 /* Selettori generici */
+.fesSelCont {
+  /* slider */
+}
 .fesSelCont .selEl {
   font-weight: normal;
   width: 33.331%;
@@ -850,6 +850,65 @@ input[type=checkbox] {
 }
 .fesSelCont .selEl .selElName {
   font-weight: bold;
+}
+.fesSelCont .sliderRange {
+  position: relative;
+  margin: 0 0 25px;
+  padding: 0 15px;
+}
+.fesSelCont .sliderRange .ui-slider {
+  margin-top: 20px;
+  height: 4px;
+  background: #dadee1 none 0 0 !important;
+}
+.fesSelCont .sliderRange .ui-slider .ui-slider-handle {
+  background: #007c66 none no-repeat center center;
+  width: 30px;
+  border-radius: 15px;
+  height: 30px;
+  margin: -8px 0 0 -16px;
+  cursor: pointer;
+}
+.fesSelCont .sliderRange .ui-slider .ui-slider-handle:before {
+  content: "‹";
+  line-height: 26px;
+  font-size: 25px;
+  font-weight: normal;
+  color: #fff;
+}
+.fesSelCont .sliderRange .ui-slider .ui-slider-handle:last-child:before {
+  content: "›";
+}
+.fesSelCont .sliderRange .ui-slider .ui-slider-handle:focus, .fesSelCont .sliderRange .ui-slider .ui-slider-handle:active {
+  outline: none;
+  box-shadow: 0 none;
+}
+.fesSelCont .sliderRange .ui-slider .ui-slider-range {
+  background: #007c66;
+}
+.fesSelCont .sliderRange .slider-milestones {
+  width: 100%;
+  position: relative;
+}
+.fesSelCont .sliderRange .slider-milestones .milestone {
+  display: inline-block;
+  position: absolute;
+  width: 10%;
+  height: 50px;
+}
+.fesSelCont .sliderRange .slider-milestones .milestone:first-child {
+  margin-left: 0;
+}
+.fesSelCont .sliderRange .slider-milestones .milestone .thick {
+  width: 1px;
+  height: 15px;
+  background-color: #ddd;
+  margin: 10px 0 0;
+}
+.fesSelCont .sliderRange .slider-milestones .milestone .number {
+  width: 80px;
+  margin-left: -40px;
+  text-align: center;
 }
 
 /* Societa di gestione */
@@ -1018,6 +1077,22 @@ input[type=checkbox] {
   display: inline-block;
   height: 30px;
   line-height: 15px;
+}
+
+/* Speciale Volatilita' e minimi */
+#selContFesVolatilita .form-inline, #selContFesRendimento .form-inline {
+  margin-bottom: 15px;
+}
+#selContFesVolatilita .refresh.icon, #selContFesRendimento .refresh.icon {
+  color: #fff;
+  cursor: pointer;
+  background: #007c66;
+  width: 30px;
+  border-radius: 15px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 8px;
 }
 
 #filtriAvanzatiSwitch {

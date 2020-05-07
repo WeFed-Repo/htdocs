@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import "./style.scss";
 
+/*
+
+URL IFRAME MIFID: "/promotori/dashboard/goToMifidQuest"
+
+*/
 
 export default class extends Component {
 

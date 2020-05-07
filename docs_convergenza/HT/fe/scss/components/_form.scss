@@ -106,15 +106,12 @@
     padding: 0 5px;
     border-radius: 0;
     background-color: $borderColorForm;
-    color: $white;
+    color: $blue;
     &.date {
       color: $blue;
       background-color: $white;
       position: relative;
       min-width:30px;
-    }
-    &.first {
-      color: $blue;
     }
 }
 input[type=checkbox] {
@@ -311,6 +308,72 @@ input[type=checkbox] {
     .selElName {font-weight:bold}
   }
 
+  /* slider */
+  .sliderRange {
+    position:relative;
+    margin:0 0 25px;
+    padding:0 15px;
+    .ui-slider {
+      margin-top:20px;
+      height:4px; 
+      background:#dadee1 none 0 0 !important;
+      .ui-slider-handle {
+        background: #007c66 none no-repeat center center;
+        width: 30px;
+        border-radius: 15px;
+        height: 30px;
+        margin: -8px 0 0 -16px;
+        cursor: pointer;
+        &:before {
+          content: "\2039"; 
+          line-height:26px;
+          font-size: 25px;
+          font-weight:normal;
+          color:#fff;
+        }
+        &:last-child {
+          &:before {
+            content: "\203A"
+          }
+        }
+        &:focus,&:active {
+          outline:none;
+          box-shadow:0 none;
+        }
+      }
+      .ui-slider-range {
+        background: #007c66;
+      }
+    }
+    .slider-milestones {
+      width:100%;position:relative;
+      .milestone {
+        display:inline-block; 
+        position:absolute;
+        width: 10%;
+        height: 50px;
+        &:first-child{
+            margin-left: 0;
+        }
+       
+        .thick {
+            width: 1px;
+            height: 15px;
+            background-color: #ddd;
+            margin: 10px 0 0;
+        }
+        .number {
+            width: 80px;
+            margin-left: -40px;
+            text-align: center;
+        }
+
+
+      }
+    }
+  }
+  
+
 }
 
 /* Societa di gestione */
@@ -435,7 +498,23 @@ input[type=checkbox] {
   }
 } 
 
-
+/* Speciale Volatilita' e minimi */
+#selContFesVolatilita,#selContFesRendimento {
+  .form-inline {
+    margin-bottom:15px;
+  }
+  .refresh.icon { 
+    color:#fff;
+    cursor: pointer;
+    background: #007c66;
+    width: 30px;
+    border-radius: 15px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top:8px;
+  }
+}
 
 
 #filtriAvanzatiSwitch {
