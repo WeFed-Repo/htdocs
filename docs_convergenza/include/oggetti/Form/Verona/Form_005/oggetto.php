@@ -428,7 +428,7 @@
                    <input type="text" class="form-control">
                    <!-- -->
                    <span class="input-checked">
-                      <i class="icon icon icon-ico_check"></i>
+                      <i class="icon icon icon-spunta"></i>
                    </span>
                  </div>
               </div>
