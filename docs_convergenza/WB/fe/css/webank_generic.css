@@ -4065,6 +4065,23 @@ a.autoSelButt,
   font-size: 10px;
   font-weight: bold;
 }
+/*INPUT CON CHECK DI SPUNTA*/
+.input-checked-wrapper {
+  position: relative;
+}
+.input-checked-wrapper .input-checked {
+  position: absolute;
+  top: 7px;
+  right: 0.5em;
+  z-index: 3;
+  padding: 1px 5px;
+  line-height: 17px;
+  color: #8ab10b;
+  display: none;
+}
+.input-checked-wrapper.check-visible .input-checked {
+  display: block;
+}
 /*CAMPI CHECK DISABILITATI CON TOOLTIP */
 .formGenerico .hovfincont {
   position: relative;
