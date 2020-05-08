@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon_filter:before, .icon_cambi:before, .icon_piumeno:before {
+.icon-missing:before {
   font-style: normal !important;
   content: "☒" !important;
   color: red !important;
@@ -1984,7 +1984,7 @@ table tr th.filter .filter-wrap .filter-toggle,
 .ui-dialog .table tr th.filter .filter-wrap .filter-toggle {
   position: absolute;
   top: 4px;
-  right: 0;
+  right: 3px;
   width: 25px;
   height: 25px;
   line-height: 24px;
@@ -1999,17 +1999,25 @@ table tr th.filter .filter-wrap .filter-toggle .icon,
 .table tr th.filter .filter-wrap .filter-toggle .icon,
 .ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon {
   line-height: 20px;
-}
-table tr th.filter .filter-wrap .filter-toggle .icon_close,
-.table tr th.filter .filter-wrap .filter-toggle .icon_close,
-.ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon_close {
-  display: none;
-  font-weight: bold;
   color: #0E977F;
 }
-table tr th.filter .filter-wrap .filter-toggle .icon_close:before,
-.table tr th.filter .filter-wrap .filter-toggle .icon_close:before,
-.ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon_close:before {
+table tr th.filter .filter-wrap .filter-toggle .icon-filter,
+.table tr th.filter .filter-wrap .filter-toggle .icon-filter,
+.ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon-filter {
+  font-size: 14px !important;
+  line-height: 22px;
+}
+table tr th.filter .filter-wrap .filter-toggle .icon-close,
+.table tr th.filter .filter-wrap .filter-toggle .icon-close,
+.ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon-close {
+  display: none;
+  font-weight: bold;
+  font-size: 22px !important;
+  line-height: 18px;
+}
+table tr th.filter .filter-wrap .filter-toggle .icon-close:before,
+.table tr th.filter .filter-wrap .filter-toggle .icon-close:before,
+.ui-dialog .table tr th.filter .filter-wrap .filter-toggle .icon-close:before {
   content: "×";
 }
 table tr th.filter .filter-wrap input,
@@ -2048,14 +2056,14 @@ table tr th.filter.filter-opened .filter-wrap input:hover, table tr th.filter.fi
   box-shadow: 0 none;
   border-color: #202d50;
 }
-table tr th.filter.filter-opened .filter-wrap .icon_close,
-.table tr th.filter.filter-opened .filter-wrap .icon_close,
-.ui-dialog .table tr th.filter.filter-opened .filter-wrap .icon_close {
+table tr th.filter.filter-opened .filter-wrap .icon-close,
+.table tr th.filter.filter-opened .filter-wrap .icon-close,
+.ui-dialog .table tr th.filter.filter-opened .filter-wrap .icon-close {
   display: inline-block;
 }
-table tr th.filter.filter-opened .filter-wrap .icon_filter,
-.table tr th.filter.filter-opened .filter-wrap .icon_filter,
-.ui-dialog .table tr th.filter.filter-opened .filter-wrap .icon_filter {
+table tr th.filter.filter-opened .filter-wrap .icon-filter,
+.table tr th.filter.filter-opened .filter-wrap .icon-filter,
+.ui-dialog .table tr th.filter.filter-opened .filter-wrap .icon-filter {
   display: none;
 }
 table tr td,

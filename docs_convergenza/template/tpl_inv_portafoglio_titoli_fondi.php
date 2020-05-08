@@ -568,7 +568,7 @@ $(function(){
                 <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
             </div>
             <div class="btn-align-right">
-                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon-cambi"></i><span>Tasso di cambio</span></a>
             </div>
             <br class="clear">
         </div>
