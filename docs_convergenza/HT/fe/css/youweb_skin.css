@@ -3002,6 +3002,10 @@ div.pager .circle.current_page {
   clear: both;
 }
 
+.navfrontPage.navcommPage.outerTab .innerContFirstLev {
+  margin: 0 35px;
+}
+
 .navContSecondLev .outerTab {
   margin-right: 0;
   margin-left: 0;
