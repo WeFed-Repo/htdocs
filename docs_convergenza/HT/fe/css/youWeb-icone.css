@@ -33,8 +33,29 @@
 }
 
 .icon {display:inline-block; width:20px;height:20px;} 
-/* ELENCO ICONE */
 
+/* ELENCO ICONE */
+.icon-cambi:before {
+  content: "\e9ce";
+}
+.icon-datemod:before {
+  content: "\e9cf";
+}
+.icon-erase:before {
+  content: "\e9d0";
+}
+.icon-filter:before {
+  content: "\e9d1";
+}
+.icon-mod:before {
+  content: "\e9d2";
+}
+.icon-multifunz:before {
+  content: "\e9d3";
+}
+.icon-piumeno:before {
+  content: "\e9d4";
+}
 .icon-campana_fill:before {
   content: "\e9c1";
 }

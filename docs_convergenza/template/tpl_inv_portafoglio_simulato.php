@@ -458,7 +458,7 @@ $tipo_op_1 = array(1,2,3);
   <div class="row">
     <div class="col-xs-12 col-sm-5">
       <a type="button" href="#" class="btn-icon-simula btn btn-primary">
-        <i class="icon icon_piumeno"></i>
+        <i class="icon icon-piumeno"></i>
         <span class="icon-text">Simula compravendita</span>
       </a>
       <br />
@@ -540,7 +540,7 @@ $tipo_op_1 = array(1,2,3);
           <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
       </div>
       <div class="btn-align-right">
-        <a class="btn-link-icon btn-tasso-cambio" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+        <a class="btn-link-icon btn-tasso-cambio" data-toggle="modal" data-target="#layerCambio"><i class="icon icon-cambi"></i><span>Tasso di cambio</span></a>
       </div>
       <br class="clear">
   </div>
@@ -744,7 +744,7 @@ $tipo_op_1 = array(1,2,3);
                     <tr>
                       <td class="center">
                         <a class="btn-icon">
-                          <i class="icon icon-2x icon_piumeno"></i>
+                          <i class="icon icon-2x icon-piumeno"></i>
                         </a>
                       </td>
 

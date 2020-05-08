@@ -1548,12 +1548,12 @@ table th.filter .filter-wrap .filter-toggle .icon {
   color: #fff;
   line-height: 24px;
 }
-table th.filter .filter-wrap .filter-toggle .icon_close {
+table th.filter .filter-wrap .filter-toggle .icon-close {
   display: none;
   font-weight: bold;
   color: #fff;
 }
-table th.filter .filter-wrap .filter-toggle .icon_close:before {
+table th.filter .filter-wrap .filter-toggle .icon-close:before {
   content: "\00D7";
 }
 table th.filter .filter-wrap input {
@@ -1581,10 +1581,10 @@ table th.filter.filter-opened .filter-wrap input:focus {
   outline: 0 none;
   box-shadow: 0 0 3px #8ab10b;
 }
-table th.filter.filter-opened .filter-wrap .icon_close {
+table th.filter.filter-opened .filter-wrap .icon-close {
   display: inline-block;
 }
-table th.filter.filter-opened .filter-wrap .icon_filter {
+table th.filter.filter-opened .filter-wrap .icon-filter {
   display: none;
 }
 table td {

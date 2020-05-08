@@ -1067,6 +1067,8 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
     .btn {
         height: 38px;
 
+        .icon-text {top:0}
+
         &.btn-nascondi {
             .icon-hide {
                 top: -2px;
@@ -1107,6 +1109,15 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
             position: relative;
             top: -1px;
             padding-left: 5px;
+        }
+
+        &.btn-icon-simula {
+            .icon {
+                display:inline-block;
+                font-size:24px;
+                top:-4px;
+                vertical-align:top;
+            }
         }
     }
 }
