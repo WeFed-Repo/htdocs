@@ -84,6 +84,7 @@
         <h3 class="titleSection titleForm">Beni da assicurare</h3>
         <p>Puoi indicare fino ad un massimo di <strong>due fabbricati</strong> (a scelta tra abitazione abituale, saltuaria e box) e <strong>una persona</strong> (soggetto fisico).</p>        
         <div class="formWrapper garanzia-box visible">
+            <span class="titolo-box">Bene 1</span>
             <div class="form-group">
                 <div class="row">
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -108,7 +109,8 @@
             <div class="add-wrapper"></div>
         </div>
         <div class="formWrapper garanzia-box hidden">
-            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            <span class="titolo-box">Bene 2</span>
+            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina secondo bene</a>
             <div class="form-group">
                 <div class="row next-select">
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -126,7 +128,8 @@
             <div class="add-wrapper"></div>
         </div>
         <div class="formWrapper garanzia-box hidden">
-            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            <span class="titolo-box">Bene 3</span>
+            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina terzo bene</a>
             <div class="form-group">
                <div class="row next-select" >
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -146,7 +149,7 @@
         <div class="formWrapper garanzia-add hidden">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand"></i> Aggiungi bene</a>
+                <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand"></i> Aggiungi <span class="numero-bene"> secondo </span> bene </span></a>
             </div>
         </div>
     </form>
@@ -178,7 +181,15 @@
             if($(".garanzia-box.visible").length<3)
             {
                 $(".garanzia-add").removeClass("hidden");
+                if($(".garanzia-box.visible").length ===2)
+                {
+                $('.numero-bene').html("terzo");
+                }
+                else {
+                    $('.numero-bene').html("secondo");
+                }
             }
+            
             //Chiamata ad html relativo con switch di contenuto
                 switch (valSelected) {
                     case 'DA':
@@ -230,6 +241,13 @@
        var wrapperBox = $(this).closest(".garanzia-box");
        wrapperBox.removeClass("visible").addClass("hidden");
        $(".garanzia-add").removeClass("hidden");
+       if($(".garanzia-box.visible").length ===2)
+        {
+            $('.numero-bene').html("terzo");
+        }
+        else {
+            $('.numero-bene').html("secondo");
+        }
        wrapperBox.find(".bene-assicurato").val("");
        wrapperBox.find(".add-wrapper").html("");
      })

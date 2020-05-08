@@ -7454,7 +7454,7 @@ div.fixed-table-scroll-outer {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom:30px;
-    position: relative;;
+    position: relative;
 }
 
 .garanzia-add {
@@ -7474,4 +7474,12 @@ div.fixed-table-scroll-outer {
 }
 .formWrapper .form-group.det-modifica .alignLeft.btnWrapper a:first-child {
     margin-left: 0
+}
+.garanzia-box .titolo-box {
+    position: absolute;
+    right: 20px;
+    top:-10px;
+    background:#fff;
+    font-weight: bold;
+    padding: 0 5px;
 }
