@@ -4136,6 +4136,12 @@ div.pager .circle.current_page {
   }
 }
 
+#ultimiFondiDesk .row .fundBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 200px;
+}
+
 #fesRicercaCont + .form-group.btnWrapper {
   clear: both;
   margin-bottom: 20px;

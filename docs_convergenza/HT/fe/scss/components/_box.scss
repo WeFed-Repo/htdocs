@@ -1098,6 +1098,11 @@
           }
       }
   }
+#ultimiFondiDesk .row .fundBox {
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 200px;
+}
 //GRAFICI
 #fesRicercaCont + .form-group.btnWrapper {
     clear:both;
