@@ -1872,6 +1872,23 @@ span.alert, .alert {
     display: none !important;
 }
 
+/*INPUT CON CHECK DI SPUNTA*/
+.input-checked-wrapper {
+    position: relative;
+}
+.input-checked-wrapper .input-checked {
+    position: absolute;
+    top: 16px;
+    right: 0.5em;
+    z-index: 3;
+    padding: 1px 5px;
+    line-height: 17px;
+    display:none;
+} 
+.input-checked-wrapper.check-visible .input-checked 
+{
+    display:block
+}
 /*BOX DI OUTPUT */
 .resume {
     float: left;
