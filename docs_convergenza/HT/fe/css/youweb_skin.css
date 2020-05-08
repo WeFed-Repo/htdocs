@@ -4128,6 +4128,22 @@ div.pager .circle.current_page {
   }
 }
 
+#fesRicercaCont + .form-group.btnWrapper {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+/* GRAFICI */
+#fesFondoWrap .grafico {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  position: relative;
+}
+#fesFondoWrap #grafico_fondo_space {
+  height: 250px;
+}
+
 .ui-dialog-content.ui-widget-content li a,
 .ui-widget-content li a {
   color: #2a3d63 !important;
