@@ -206,9 +206,10 @@ export default class extends Component {
         }
         else {
             // Procedi con l'inserimento diretto as-is (il promotore sta uscendo dalla pratica e vuole solo salvare)
+            
             getData({
                 url: Step[getPureStep(this.state)].salva.url,
-                data: Step[getPureStep(this.state)].salva.data(this.state,true),
+                data: Step[getPureStep(this.state)].salva.data(this.state,false),
                 success: (data) => {
 
                     // Salvataggio terminato ed andato a buon fine 
