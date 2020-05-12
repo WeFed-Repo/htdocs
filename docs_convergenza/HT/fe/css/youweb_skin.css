@@ -417,7 +417,7 @@ strong .tooltip-inner b, strong .tooltip-inner strong, h4 .tooltip-inner b, h4 .
   font-weight: bold !important;
 }
 
-h4.txthelp.control-label, div.txthelp.control-label {
+h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
   display: inline-block;
 }
 
@@ -3977,6 +3977,7 @@ div.pager .circle.current_page {
 .formGenerico.fundPanel.fundPanelImg {
   padding-left: 175px;
   min-height: 150px;
+  margin-bottom: 40px;
 }
 .formGenerico.fundPanel.fundPanelImg .trend, .formGenerico.fundPanel.fundPanelImg .imgSoc {
   width: 125px;
@@ -3989,9 +3990,6 @@ div.pager .circle.current_page {
 }
 .formGenerico.fundPanel.fundPanelImg .imgSoc {
   height: auto;
-}
-.formGenerico.fundPanel.fundPanelImg + .navContSecondLev {
-  margin-top: 40px;
 }
 .formGenerico.fundPanel .icon-console {
   text-align: right;
