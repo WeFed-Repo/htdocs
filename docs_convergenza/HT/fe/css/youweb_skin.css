@@ -3990,6 +3990,9 @@ div.pager .circle.current_page {
 .formGenerico.fundPanel.fundPanelImg .imgSoc {
   height: auto;
 }
+.formGenerico.fundPanel.fundPanelImg + .navContSecondLev {
+  margin-top: 40px;
+}
 .formGenerico.fundPanel .icon-console {
   text-align: right;
   float: right;
