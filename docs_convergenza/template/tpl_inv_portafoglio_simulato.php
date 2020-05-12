@@ -68,7 +68,7 @@ $tipo_op_1 = array(1,2,3);
 <p>Esercitati nel trading online! Puoi creare fino a 8 portafogli virtuali per valutare la performance delle tue scelte di investimento in tutta sicurezza.</p>
 <br />
 
-<div id="collapse1b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1b" style="height: auto;">
+<div class="formGenerico borderFormRounded">
 
 
   <div class="form-group">
@@ -371,7 +371,7 @@ $tipo_op_1 = array(1,2,3);
                 </div>
             </div>
             <!-- Fine overlay di selezione -->
-
+          
             <!-- Attivazione Icona operativa-->
             <?php include("parts/icona_operativa.php"); ?>
             <!-- Fine attivazione icona operativa -->
@@ -455,6 +455,7 @@ $tipo_op_1 = array(1,2,3);
       </div>
     </div>
   </div>
+              </div>
   <div class="row">
     <div class="col-xs-12 col-sm-5">
       <a type="button" href="#" class="btn-icon-simula btn btn-primary">
@@ -550,7 +551,7 @@ $tipo_op_1 = array(1,2,3);
     <div class="col-xs-12 align-right marginTopMedium">Fonte dati: Borsa Italiana</div>
   </div>
 
-</div>
+
 
 <div class="modal fade" id="menuAzioni" tabindex="-1" role="dialog" aria-labelledby="menuAzioniLabel">
     <div class="modal-dialog modal-sm" role="document">

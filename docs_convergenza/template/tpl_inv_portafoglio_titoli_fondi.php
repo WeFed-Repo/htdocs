@@ -27,7 +27,7 @@ $(function(){
 <!-- WRAPPER DEI RISULTATI DI PAGINA -->
 <div id="pageData" class="loading">
     <!-- FORM CON SELETTORI PER COLONNE E STRUMENTI -->
-    <form class="formGenerico noMarginBottom">
+    <form class="formGenerico borderFormRounded">
         <div class="row">
             <div class="col-sm-6">
                 <!-- SELECT MULTIFUNZIONE -->
@@ -402,7 +402,7 @@ $(function(){
         <?php if ($site=="webank") { ?>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="form-group">
+                    <div class="form-group marginBottomNone">
                         <label class="control-label">Valorizzazione prezzi</label>
                         <div class="row">
                             <div class="col-xs-6 col-sm-3">
