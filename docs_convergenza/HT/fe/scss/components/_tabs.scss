@@ -55,6 +55,30 @@
           border-left:0;
         }
       }
+
+      /* Tab particolari */
+      &#tabConfronta {
+        word-wrap: none;
+        white-space: nowrap;
+        a.leftelement {display:inline-block;}
+        span#fesConfButt {
+          display: inline-block;
+          background: #ddd;
+          margin-left: -15px;
+          margin-right: 15px;
+          padding: 6px 35px 5px 10px;
+          position: relative;
+          .smallClose {
+            position: absolute;
+            right: 0;
+            font-size: 20px;
+            padding: 0;
+            height: 20px;
+            width: 30px;
+            top: 5px;}
+        }
+      }
+
     }
   };
   .innerContFirstLev {
@@ -119,3 +143,5 @@
     }
   }
 }
+
+ 
