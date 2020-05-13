@@ -88,6 +88,10 @@ p {
     line-height: 20px;
     padding-bottom: 20px;
     margin: 0;
+    
+}
+p>a {
+    text-decoration: underline;
 }
 
 p.small, span.small {
