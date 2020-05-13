@@ -2978,6 +2978,7 @@ div.pager .circle.current_page {
   height: 100%;
   text-align: center;
   vertical-align: middle;
+  /* Tab particolari */
 }
 .outerTab ul li a {
   text-decoration: none;
@@ -2998,6 +2999,30 @@ div.pager .circle.current_page {
 }
 .outerTab ul li:first-child a, .outerTab ul li.on + li a, .outerTab ul li.on a {
   border-left: 0;
+}
+.outerTab ul li#tabConfronta {
+  word-wrap: none;
+  white-space: nowrap;
+}
+.outerTab ul li#tabConfronta a.leftelement {
+  display: inline-block;
+}
+.outerTab ul li#tabConfronta span#fesConfButt {
+  display: inline-block;
+  background: #ddd;
+  margin-left: -15px;
+  margin-right: 15px;
+  padding: 6px 35px 5px 10px;
+  position: relative;
+}
+.outerTab ul li#tabConfronta span#fesConfButt .smallClose {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  padding: 0;
+  height: 20px;
+  width: 30px;
+  top: 5px;
 }
 .outerTab .innerContFirstLev {
   clear: both;
