@@ -360,16 +360,23 @@ button {
     text-transform: uppercase;
     border-radius: 16px;
 }
+.btn-primary.small, .btn-default.small, .btn-filtra.small, .btn-filtra-attivo.small, .btn-navigation.small,
+.btn.btn-small {
+    height: 25px;
+    padding: 5px 16px;
+    font-size: 12px;
+}
+.btn-primary.big, .btn-default.big, .btn-filtra.big, .btn-filtra-attivo.big, .btn-navigation.big, .btn-big {
+    height: 46px;
+    padding: 9px 24px;
+    font-size: 22px;
+    line-height: 27px;
+    border-radius:23px
+}
 .btn.btn-primary.btn-info, .btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus  {
     background-color: #202d50!important;
 }
-.btn.btn-primary.btn-info:hover {
 
-
-}
-.btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus {
-
-}
 .btn-filtra, .btn-filtra-attivo {
     font-size: 12px;
     letter-spacing: 0;
