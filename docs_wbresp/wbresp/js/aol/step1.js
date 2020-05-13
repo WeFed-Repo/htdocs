@@ -13,6 +13,7 @@ $(function() {
         numPanel = $('.accordion-group > .panel').length,
         mono = !numPanel,
         numInt = mono ? 1 : numPanel,
+        
         checkPanelCorrispondenza = function(i) {
             return arePartiallyCompiled([
                 "#provincia_recapito_int" + i,
