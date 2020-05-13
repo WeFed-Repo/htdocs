@@ -1084,6 +1084,39 @@
       #fesTotFiltered {font-size:16px;}
 
   }
+  .table-confronta {
+      .amcharts-main-div {
+          width:auto !important;
+          max-width:100%;
+      }
+  }
+  .td-fondo {
+    .linkVai {
+        margin-bottom: 15px;
+    }
+    .fes_cfr_imgsocges {
+        min-width: 100px;
+        min-height:100px;
+        clear: both;
+        display: inline-block;
+        margin-bottom:15px;
+      }
+    .fundName {
+        font-weight:bold;
+        font-size:16px;
+        display:inline-block;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .migliore {
+        vertical-align:text-baseline;
+        .icon {
+            vertical-align: text-bottom;
+            margin-right: 5px;
+        }
+    }
+    a.confronta {text-decoration:underline}
+  }
   #fesMancanti {
     padding-top: 10px;
     display: inline-block; 
@@ -1120,4 +1153,7 @@
   #grafico_fondo_space {
       height: 250px;
   }
+}
+#grafico_confronta_space {
+    min-height:300px;
 }

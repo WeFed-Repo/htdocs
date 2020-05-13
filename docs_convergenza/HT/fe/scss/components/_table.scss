@@ -174,7 +174,14 @@ table,
           }
       }
     }
-    td { vertical-align:middle; }
+    
+    td { 
+      vertical-align:middle; 
+      &.td-fondo {
+        padding:15px;
+        text-align:center;
+      }
+    }
   }
   
  

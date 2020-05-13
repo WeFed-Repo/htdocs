@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon-missing:before {
+.icon-missing:before, .icon-small-like:before {
   font-style: normal !important;
   content: "☒" !important;
   color: red !important;
@@ -2070,6 +2070,12 @@ table tr td,
 .table tr td,
 .ui-dialog .table tr td {
   vertical-align: middle;
+}
+table tr td.td-fondo,
+.table tr td.td-fondo,
+.ui-dialog .table tr td.td-fondo {
+  padding: 15px;
+  text-align: center;
 }
 table .tradingNewsBox,
 .table .tradingNewsBox,
@@ -4143,6 +4149,39 @@ div.pager .circle.current_page {
   font-size: 16px;
 }
 
+.table-confronta .amcharts-main-div {
+  width: auto !important;
+  max-width: 100%;
+}
+
+.td-fondo .linkVai {
+  margin-bottom: 15px;
+}
+.td-fondo .fes_cfr_imgsocges {
+  min-width: 100px;
+  min-height: 100px;
+  clear: both;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.td-fondo .fundName {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.td-fondo .migliore {
+  vertical-align: text-baseline;
+}
+.td-fondo .migliore .icon {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+.td-fondo a.confronta {
+  text-decoration: underline;
+}
+
 #fesMancanti {
   padding-top: 10px;
   display: inline-block;
@@ -4186,6 +4225,10 @@ div.pager .circle.current_page {
 }
 #fesFondoWrap #grafico_fondo_space {
   height: 250px;
+}
+
+#grafico_confronta_space {
+  min-height: 300px;
 }
 
 .ui-dialog-content.ui-widget-content li a,
