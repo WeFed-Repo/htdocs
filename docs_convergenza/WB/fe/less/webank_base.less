@@ -1825,3 +1825,68 @@ body.popup {
         }
     }
 }
+/* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
+.line-button {
+    position: relative;
+    hr {
+      position: absolute;
+      width: 100%;
+      top:17px;
+      left:0;
+      border-color: #ccc;
+    }
+    .btnWrapper {
+        position: absolute;
+        right:0;
+    }
+    .last hr {
+        display :none
+    }
+}
+@media (max-width:1024px) {
+    .line-button {
+        .icon {
+            font-size:22px!important;
+        }
+        .icon-text {
+            top: -8px;
+        }
+    }
+}
+@media (max-width:767px) {
+    .line-button {
+        position: static;
+        hr {
+          display :none;
+        }
+        
+        .btnWrapper {
+            position: static;
+            right:0;
+        }
+        .icon {
+            font-size:22px!important;
+        }
+        .icon-text {
+            top: -8px;
+        }
+        .btn-align-left {
+            text-align: center;
+            &.last {
+                position: relative;
+                hr {
+                    display :block;
+                    top: 28px;
+                }
+                .btn {
+                    position: relative;
+                }
+            }
+        }
+        .btn {
+            width: auto!important;
+            min-width: 230px;
+            text-align:left;
+        }
+    }
+}
