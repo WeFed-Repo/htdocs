@@ -2511,7 +2511,7 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   height: 34px;
   min-width: 80px;
   margin-bottom: 0;
-  padding: 6px 10px;
+  padding: 6px 12px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2523,10 +2523,10 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   white-space: nowrap;
   color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #aaa;
   background-image: none;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 400;
   /*line-height: 1.42857143;*/
   -ms-touch-action: manipulation;
@@ -2577,16 +2577,16 @@ a.btn:active {
 }
 .btn.btn-small {
   height: 25px;
-  padding: 3px 8px;
-  font-size: 0.875em;
+  padding: 3px 12px;
+  font-size: 12px;
 }
 .btn.btn-small.btn-minw {
   min-width: 30px;
 }
 .btn.btn-big {
-  height: 56px;
-  padding: 6px 14px 8px 14px;
-  font-size: 2em;
+  height: 50px;
+  padding: 6px 22px 8px 22px;
+  font-size: 24px;
 }
 .btn.btn-big.btn-minw {
   min-width: 120px;
