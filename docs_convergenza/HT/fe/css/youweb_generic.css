@@ -2483,8 +2483,9 @@ span.spanQuestionario {
     }
 
     .btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo {
-        padding: 9px 13px 7px 13px;
+        /*padding: 9px 13px 7px 13px;
         letter-spacing: -0.1px;
+        */
         margin-bottom: 30px;
     }
 
