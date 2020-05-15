@@ -27,9 +27,8 @@ table,
       &.oRight { text-align: right !important; }
       &.left {text-align: left}
       &.right {text-align: right}
-      &.center {text-align: center}
-
-      .btn-icon.btn-disabled {
+      &.center {text-align: center!important}
+     .btn-icon.btn-disabled {
         opacity:0.3;
         display: inline-block;
         width: 20px;

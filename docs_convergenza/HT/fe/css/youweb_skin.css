@@ -1887,7 +1887,7 @@ table tr td.center, table tr th.center,
 .table tr th.center,
 .ui-dialog .table tr td.center,
 .ui-dialog .table tr th.center {
-  text-align: center;
+  text-align: center !important;
 }
 table tr td .btn-icon.btn-disabled, table tr th .btn-icon.btn-disabled,
 .table tr td .btn-icon.btn-disabled,

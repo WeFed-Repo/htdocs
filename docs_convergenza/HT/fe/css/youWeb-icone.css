@@ -35,6 +35,9 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-filtra_filled:before {
+  content: "\e9d8";
+}
 .icon-small-like:before {
   content: "\e9d6";
 }
