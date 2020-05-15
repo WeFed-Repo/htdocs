@@ -36,7 +36,18 @@
     box-shadow: none;
   }
   .form-group {
-    label { min-height: 13px;}
+    label { min-height: 13px;
+    
+      .textWrapper {
+        position:relative;
+        padding-left:25px;
+        input {
+          margin-right:5px;
+          margin-right:-25px;
+        }
+      }
+    
+    }
     &.btnWrapper {
       .btn-align-left {
         margin-right: 0;
