@@ -999,12 +999,18 @@
   .boxdx.news .carouselPlus .carouselPlusPageWrap {
     padding: 0;
   }
-
+@media (max-width: 767px){
+  .carouselPlus .carouselPlusBtn {
+    position: relative;
+    top:12px
+  }
+}
   /* Declinazione oggetti particolari "trasversali" */
   .formGenerico.fundPanel {
         background: #eaeded;
         position:relative;
         padding:15px 30px;
+        margin-bottom:20px;
         &.fundPanelImg {
             padding-left:175px;
             min-height:150px;
@@ -1022,7 +1028,7 @@
         .btn-console {float:right}
   }
   @media (max-width: 767px){
-    .formGenerico.fundPanel.fundPanelImg 
+    .formGenerico.fundPanel
     {
         padding: 15px 0;
         text-align:center;
@@ -1046,6 +1052,7 @@
             }
         }
     }
+    
     
 }
 @media (max-width: 480px) {
