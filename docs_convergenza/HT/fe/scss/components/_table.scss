@@ -28,6 +28,13 @@ table,
       &.left {text-align: left}
       &.right {text-align: right}
       &.center {text-align: center}
+
+      .btn-icon.btn-disabled {
+        opacity:0.3;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
     }
     th { 
       height: 100%;
