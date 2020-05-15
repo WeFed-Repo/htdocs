@@ -353,12 +353,13 @@ button {
     line-height: 14px;
     font-weight: 600;
     border: 0;
-    padding: 9px 28px 7px 28px;
+    padding: 11px 16px 7px 16px;
     color: #fff;
     background-color: #0e977f;
     background-image: none;
     text-transform: uppercase;
-    border-radius: 16px;
+    border-radius: 17px;
+    height: 34px;
 }
 .btn-primary.small, .btn-default.small, .btn-filtra.small, .btn-filtra-attivo.small, .btn-navigation.small,
 .btn.btn-small {

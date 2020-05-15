@@ -130,3 +130,73 @@ p.note.flRight {
   text-transform: uppercase !important;
   font-weight: bold !important;
 }
+
+/* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
+.line-button {
+  position: relative;
+    hr {
+      position: absolute;
+      width: 100%;
+      top:17px;
+      left:0;
+      border-color: #ccc;
+    }
+    .btnWrapper {
+        position: absolute;
+        right:0;
+        .icon {
+          height: auto; 
+          line-height: 7px;
+          position: relative;
+          top: 3px;
+        }
+        .icon-text {
+          position: relative;
+          top: 3px;
+        }
+      }
+      .last hr {
+        display :none
+      }
+}
+
+
+
+@media (max-width:767px) {
+  .line-button {
+      position: static;
+      hr {
+        display :none;
+      }
+      
+      .btnWrapper {
+          position: static;
+          right:0;
+      }
+      .icon {
+          font-size:20px!important;
+      }
+      .btn {
+        padding: 9px 18px 7px 18px;
+      }
+      .btn-align-left {
+          text-align: center;
+          float: none;
+          &.last {
+              position: relative;
+              hr {
+                  display :block;
+                  top: 15px;
+              }
+              .btn {
+                  position: relative;
+              }
+          }
+      }
+      .btn {
+          width: auto!important;
+          min-width: 250px;
+          text-align:left;
+      }
+  }
+}

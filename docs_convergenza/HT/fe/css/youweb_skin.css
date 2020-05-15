@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon-missing:before, .icon-small-like:before {
+.icon-missing:before {
   font-style: normal !important;
   content: "☒" !important;
   color: red !important;
@@ -547,6 +547,72 @@ p.note.flRight a.btn-icon {
   font-weight: bold !important;
 }
 
+/* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
+.line-button {
+  position: relative;
+}
+.line-button hr {
+  position: absolute;
+  width: 100%;
+  top: 17px;
+  left: 0;
+  border-color: #ccc;
+}
+.line-button .btnWrapper {
+  position: absolute;
+  right: 0;
+}
+.line-button .btnWrapper .icon {
+  height: auto;
+  line-height: 7px;
+  position: relative;
+  top: 3px;
+}
+.line-button .btnWrapper .icon-text {
+  position: relative;
+  top: 3px;
+}
+.line-button .last hr {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .line-button {
+    position: static;
+  }
+  .line-button hr {
+    display: none;
+  }
+  .line-button .btnWrapper {
+    position: static;
+    right: 0;
+  }
+  .line-button .icon {
+    font-size: 20px !important;
+  }
+  .line-button .btn {
+    padding: 9px 18px 7px 18px;
+  }
+  .line-button .btn-align-left {
+    text-align: center;
+    float: none;
+  }
+  .line-button .btn-align-left.last {
+    position: relative;
+  }
+  .line-button .btn-align-left.last hr {
+    display: block;
+    top: 15px;
+  }
+  .line-button .btn-align-left.last .btn {
+    position: relative;
+  }
+  .line-button .btn {
+    width: auto !important;
+    min-width: 250px;
+    text-align: left;
+  }
+}
 .control-label-output {
   display: inline-block;
   float: left;

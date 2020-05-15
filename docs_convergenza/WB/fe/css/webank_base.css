@@ -2511,7 +2511,7 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   height: 34px;
   min-width: 80px;
   margin-bottom: 0;
-  padding: 6px 10px;
+  padding: 6px 12px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2523,10 +2523,10 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   white-space: nowrap;
   color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #aaa;
   background-image: none;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 400;
   /*line-height: 1.42857143;*/
   -ms-touch-action: manipulation;
@@ -2577,16 +2577,16 @@ a.btn:active {
 }
 .btn.btn-small {
   height: 25px;
-  padding: 3px 8px;
-  font-size: 0.875em;
+  padding: 3px 12px;
+  font-size: 12px;
 }
 .btn.btn-small.btn-minw {
   min-width: 30px;
 }
 .btn.btn-big {
-  height: 56px;
-  padding: 6px 14px 8px 14px;
-  font-size: 2em;
+  height: 50px;
+  padding: 6px 22px 8px 22px;
+  font-size: 24px;
 }
 .btn.btn-big.btn-minw {
   min-width: 120px;
@@ -3370,6 +3370,68 @@ body.popup #contenuti {
   .btn-link-icon .icon {
     font-size: 32px;
     color: #8ab10b;
+  }
+}
+/* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
+.line-button {
+  position: relative;
+}
+.line-button hr {
+  position: absolute;
+  width: 100%;
+  top: 17px;
+  left: 0;
+  border-color: #ccc;
+}
+.line-button .btnWrapper {
+  position: absolute;
+  right: 0;
+}
+.line-button .last hr {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .line-button .icon {
+    font-size: 22px!important;
+  }
+  .line-button .icon-text {
+    top: -8px;
+  }
+}
+@media (max-width: 767px) {
+  .line-button {
+    position: static;
+  }
+  .line-button hr {
+    display: none;
+  }
+  .line-button .btnWrapper {
+    position: static;
+    right: 0;
+  }
+  .line-button .icon {
+    font-size: 22px!important;
+  }
+  .line-button .icon-text {
+    top: -8px;
+  }
+  .line-button .btn-align-left {
+    text-align: center;
+  }
+  .line-button .btn-align-left.last {
+    position: relative;
+  }
+  .line-button .btn-align-left.last hr {
+    display: block;
+    top: 28px;
+  }
+  .line-button .btn-align-left.last .btn {
+    position: relative;
+  }
+  .line-button .btn {
+    width: auto!important;
+    min-width: 230px;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=webank_base.css.map */
