@@ -3947,7 +3947,7 @@ div.pager .circle.current_page {
 
 @media (max-width: 767px) {
   .formGenerico.fundPanel {
-    padding: 15px 0;
+    padding: 15px 0 !important;
     text-align: center;
   }
   .formGenerico.fundPanel .imgSoc {
@@ -3955,7 +3955,7 @@ div.pager .circle.current_page {
     display: block;
     margin: 0 auto 20px;
     clear: both;
-    position: relative;
+    position: relative !important;
   }
   .formGenerico.fundPanel .btn-console {
     float: none;
@@ -4178,13 +4178,9 @@ div.pager .circle.current_page {
   min-height: 300px;
 }
 
-/* Box OTP ereditati da WB */
+/* OGGETTO OTP */
 .otpdesc img {
-  float: none;
-  display: inline-block;
-  width: 220px;
-  text-align: center;
-  margin: 25px auto;
+  max-width: 250px;
 }
 
 .ui-dialog-content.ui-widget-content li a,
