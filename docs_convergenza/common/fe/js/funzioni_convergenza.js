@@ -3600,6 +3600,7 @@ var styleSortTable = function () {
             $table.find('.sortable').closest('th').addClass('sortableTh');
             $table.find('.sortable.both').closest('th').removeClass('sortedTh');
             $table.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
+            $table.find('*[data-toggle=tooltip].inited').removeClass("inited");
             initTooltip();
         });
     });
@@ -3653,7 +3654,16 @@ var columnBsFixed = function(){
                     $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
                 );
 
-
+                // Reinizializzazione dei tooltip
+                tbfix.find("*[data-toggle=tooltip]").each(function(){
+                  var el = $(this);
+                  el.removeClass("inited").unbind();
+                  var clone = el.clone();
+                  elPr = el.parent();
+                  el.remove();
+                  elPr.append(clone);
+                });
+                initTooltip();
             });
 
 
