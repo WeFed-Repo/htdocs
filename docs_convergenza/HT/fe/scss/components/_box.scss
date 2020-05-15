@@ -1203,9 +1203,13 @@
     min-height:300px;
 }
 
-/* OGGETTO OTP */
+/* Box OTP ereditati da WB */
 .otpdesc {
     img {
-        max-width: 250px;
+        float: none;
+        display: inline-block;
+        width: 220px;
+        text-align: center;
+        margin: 25px auto;
     }
 }
