@@ -1019,8 +1019,45 @@
             float:right;
             a.btn-icon {display:inline-block; margin-top:0}
         }
+        .btn-console {float:right}
   }
-
+  @media (max-width: 767px){
+    .formGenerico.fundPanel.fundPanelImg 
+    {
+        padding: 15px 0;
+        text-align:center;
+        .imgSoc {
+            float: none;
+            display: block;
+            margin: 0 auto 20px;
+            clear: both; 
+            position: relative;
+        }
+        .btn-console {
+            float:none;
+            margin-top:20px;
+        }
+        .icon-console {
+            float:none;
+            text-align: center;
+            margin-bottom:20px;
+            a {
+                float:none
+            }
+        }
+    }
+    
+}
+@media (max-width: 480px) {
+    .formGenerico.fundPanel.fundPanelImg{
+    .btn-console {
+        text-align:center;
+        a.btn.btn-primary {
+            margin-left:0;
+        }
+     }
+    }
+}
   /* Carousel trading news */
 .trading-news {
     width: calc(100% + 145px);
@@ -1148,11 +1185,12 @@
   display: block;
   width: 100%;
   min-height: 250px;
-  position: relative;
+  position: relative; 
   }
   #grafico_fondo_space {
       height: 250px;
   }
+  
 }
 #grafico_confronta_space {
     min-height:300px;

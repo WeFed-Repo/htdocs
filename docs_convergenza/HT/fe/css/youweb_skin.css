@@ -2962,7 +2962,7 @@ div.pager .circle.current_page {
   .navContSecondLev .outerTab {
     background-color: #ebeef0;
     margin: -20px -35px 20px -35px;
-    padding: 20px 10px 0 35px;
+    padding: 22px 10px 0 35px;
     border-bottom: 7px solid #fff;
     min-height: 75px;
     width: calc( 100% + 70px );
@@ -3934,7 +3934,43 @@ div.pager .circle.current_page {
   display: inline-block;
   margin-top: 0;
 }
+.formGenerico.fundPanel .btn-console {
+  float: right;
+}
 
+@media (max-width: 767px) {
+  .formGenerico.fundPanel.fundPanelImg {
+    padding: 15px 0;
+    text-align: center;
+  }
+  .formGenerico.fundPanel.fundPanelImg .imgSoc {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    clear: both;
+    position: relative;
+  }
+  .formGenerico.fundPanel.fundPanelImg .btn-console {
+    float: none;
+    margin-top: 20px;
+  }
+  .formGenerico.fundPanel.fundPanelImg .icon-console {
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .formGenerico.fundPanel.fundPanelImg .icon-console a {
+    float: none;
+  }
+}
+@media (max-width: 480px) {
+  .formGenerico.fundPanel.fundPanelImg .btn-console {
+    text-align: center;
+  }
+  .formGenerico.fundPanel.fundPanelImg .btn-console a.btn.btn-primary {
+    margin-left: 0;
+  }
+}
 /* Carousel trading news */
 .trading-news {
   width: calc(100% + 145px);
@@ -4203,7 +4239,7 @@ body.popup header .wrapper .btn-console {
 }
 
 .icon-corona {
-  font-size: 12px !important;
+  font-size: 12px;
   color: #cfd5d5;
 }
 .icon-corona-on {
@@ -4218,6 +4254,14 @@ body.popup header .wrapper .btn-console {
   background: #0e977f;
   color: #fff;
   text-shadow: none;
+}
+
+#fesFondoWrap .rating {
+  padding-top: 10px;
+}
+#fesFondoWrap .rating .icon-corona {
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 /* Rating-gauge */
