@@ -200,37 +200,60 @@ $(function(){
 				<label class="control-label">Versione "grafica" con due azioni a destra del testo</label>
 				<script type="text/javascript">
 
-					/* Esempio inizializzazione */
-					$(function(){
-						// Inizializza la special-select tipo "default" (esempio di callback)
-						$("#spselCTAactions").spSel(
-							function(){console.log($("input[name=spselCTAinput2]").val())}
-						);
-						// Inizializzazione personalizzata degli elementi correlati alla special select (nel caso specifico sono delle iconcine)
-						// La funzione deve essere uguale per tutti e verra' riportata anche nell'elemento selezionato
-						$("#spselCTAactions .spsel-addel.btn-icon").click(function(e){
-							e.stopPropagation();
-							alert("Elemento selezionato: " + $(this).attr("data-el"));
-						})
-					});
+                        /* Esempio inizializzazione */
+                        $(function(){
+                            // Inizializza la special-select tipo "default" (esempio di callback)
+                            $("#spselCol").spSel(
+                                function(){
+                                    console.log($("input[name=spselCTAinput]").val())
+                                }
+                            );
 
-				</script>
-				<div class="spsel spsel-hasactions nosel" id="spselCTAactions"  placeholder="Seleziona...">
-					<input type="hidden" name="spselCTAinput2">
-					<div class="spsel-options">
-						<?php for($i=0;$i<=20;$i++) { ?>
-						<div class="spsel-option" data-value="<?php print($i);?>">
-							<a class="spsel-option-el">Elemento <?php print($i);?></a>
-							<a class="spsel-addel btn-icon" data-el="icona_modifica_<?php print($i);?>">
-								<i class="icon icon-r-modifica"></i>
-							</a>
-							<a class="spsel-addel btn-icon" data-el="icona_elimina_<?php print($i);?>">
-								<i class="icon icon-r-elimina"></i>
-							</a>
-						</div>
-						<?php } ?>
-					</div>
-				</div>
+                            $("#spselCol .btn-icon[data-function=edit]").click(function(event){
+                                event.preventDefault();
+                                alert("edit");
+								event.stopPropagation();
+                            });
+
+                            $("#spselCol .btn-icon[data-function=delete]").click(function(event){
+                               event.preventDefault();
+                               alert("delete")
+                               event.stopPropagation();
+                            });
+
+                        });
+
+                    </script>
+                    <div class="spsel spsel-hasconsole nosel" id="spselCol" placeholder="Seleziona...">
+                        <input type="hidden" name="spselColinput" value="predefinite">
+                        <div class="spsel-options">
+                            <div class="spsel-option" data-value="predefinite">
+                                <a class="spsel-option-el">Predefinite</a>
+                            </div>
+                            <div class="spsel-option" data-value="mercati">
+                                <a class="spsel-option-el">Mercati e prezzi</a>
+                                <div class="spsel-btn-console">
+                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                                </div>
+                            </div>
+                            <div class="spsel-option" data-value="vista2">
+                                <a class="spsel-option-el">Vista 2</a>
+                                <div class="spsel-btn-console">
+                                    <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
+                                    <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                                </div>
+                            </div>
+                            <div class="spsel-option spsel-custom" id="selColonne">
+                                <a class="spsel-option-el">Scegli colonne</a>
+                                <div class="spsel-btn-console">
+                                    <i class="icon icon-row_expand"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+                <!-- FINE SELECT MULTIFUNZIONE -->
 			</div>
 
 		</div>

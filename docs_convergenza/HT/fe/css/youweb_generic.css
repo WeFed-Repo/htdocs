@@ -6446,13 +6446,11 @@ div[id*="popover"] .popover-content {
 .spsel.nosel .spsel-selected .spsel-option-el {
   color: #aaa;
 }
-
 .spsel .spsel-selected {
   width: 100%;
   background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
   height:48px;
 }
-
 .spsel .spsel-selected .only-detail {
   display: none;
 }
@@ -6477,7 +6475,7 @@ div[id*="popover"] .popover-content {
   border-top: none;
 }
 .spsel .spsel-options .spsel-option .selected {
-  display: none;
+      display: none;
 }
 .spsel .spsel-option {
   position: relative;
@@ -6496,7 +6494,7 @@ div[id*="popover"] .popover-content {
 }
 .spsel .spsel-option .spsel-addel .icon {
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 .spsel .spsel-option .spsel-option-el {
   width: 100%;
@@ -6507,14 +6505,14 @@ div[id*="popover"] .popover-content {
   color: #000;
   overflow: hidden;
   line-height: 20px;
-  padding: 15px 0 15px;
+  padding: 15px 0 5px;
   display: inline-block;
 }
 .spsel .spsel-option:hover {
   background-color: #f1f1f1;
 }
 .spsel.spsel-hasicon .spsel-option {
-  padding-left: 35px;
+  padding-left: 40px;
 
 }
 .spsel.spsel-hasicon.nosel .spsel-option.spsel-selected {
@@ -6537,6 +6535,7 @@ div[id*="popover"] .popover-content {
 .spsel.output .spsel-option {
   background-image: none;
   background-color: transparent;
+  padding-left:35px;
 }
 .spsel.output .spsel-option .spsel-addel {
   width: 25px;
@@ -6546,16 +6545,24 @@ div[id*="popover"] .popover-content {
 .spsel.spsel-hasconsole .spsel-option {
     position:relative;
 }
-.spsel.spsel-hasconsole .spse-option-el {
+.spsel.spsel-hasconsole .spsel-option-el {
     padding-right:100px;
 }
 
+.spsel.spsel-hasconsole .spsel-selected {
+    padding-right:0
+}
+
 .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
-    width: 100px;
+    width: 80px;
     position: absolute;
     text-align: right;
     top: 12px;
-    right: 30px;
+    right: 35px;
+}
+
+.spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
+    margin:0 0 0 10px;
 }
 
 @media (max-width: 767px) {

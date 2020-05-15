@@ -893,7 +893,7 @@ a.output {color: $primary;text-decoration:underline}
 }
 
 /* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
-
+/*
 .spsel {
     width:100%;
     background-color:#fff;
@@ -998,7 +998,8 @@ a.output {color: $primary;text-decoration:underline}
     &.opened {z-index:2;
         .spsel-options {display:block;}
     }
-    /*  Versione solo layout */
+
+    // Versione solo layout
     &.output {
         border:0 none;background-color: transparent;
         .spsel-option{
@@ -1027,6 +1028,7 @@ a.output {color: $primary;text-decoration:underline}
         border:solid 1px #f00;
     }
 }
+*/
 
 .totCols.has-error {
     color: #f00;
