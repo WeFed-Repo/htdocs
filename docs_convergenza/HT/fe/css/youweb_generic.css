@@ -672,7 +672,17 @@ input[type='checkbox']:checked:before {
     vertical-align: middle;
     color: #202D50;
 }
+/*rimozione spinner dai campi number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type=number] {
+    -moz-appearance:textfield;
+}
+/*rimozione spinner dai campi number */
 .form-control[readonly] {
     cursor: not-allowed;
     background-color: #eee;
@@ -7251,7 +7261,7 @@ div.fixed-table-scroll-outer {
 .linee-wrapper .lineaT {float:left;padding-left: 46%;height:30px;font-weight: bold}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
 .textWrapper {position:relative;}
-
+.textWrapper a { text-decoration: underline; cursor:pointer }
 .bootstrap-table {
     position:relative
 }

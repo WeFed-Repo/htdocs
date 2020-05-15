@@ -27,7 +27,7 @@ table,
       &.oRight { text-align: right !important; }
       &.left {text-align: left}
       &.right {text-align: right}
-      &.center {text-align: center}
+      &.center {text-align: center!important}
     }
     th { 
       height: 100%;
