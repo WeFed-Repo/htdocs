@@ -1148,12 +1148,20 @@
   display: block;
   width: 100%;
   min-height: 250px;
-  position: relative;
+  position: relative; 
   }
   #grafico_fondo_space {
       height: 250px;
   }
+  .btn-console {float:right}
 }
 #grafico_confronta_space {
     min-height:300px;
+}
+
+/* OGGETTO OTP */
+.otpdesc {
+    img {
+        max-width: 250px;
+    }
 }

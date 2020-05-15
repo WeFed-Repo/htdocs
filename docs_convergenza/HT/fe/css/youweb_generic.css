@@ -411,7 +411,7 @@ button {
 .btn-default:hover:active, .btn-default:active, .btn-default:focus {
     background-color: #C0C5C9;
     background-image: none;
-    padding: 9px 28px 7px 28px;
+    /*padding: 9px 28px 7px 28px;*/
     color: #fff;
     outline: 0;
     text-transform: uppercase;
@@ -1491,10 +1491,7 @@ body.modal-open {
     padding-left: 1px;
     padding-right: 0;
 }
-.modal-body .btn-primary, .modal-body .btn-default, .modal-body .btn-filtra, .modal-body .btn-filtra-attivo,.modal-body .btn-navigation9px
-{
-    padding: 9px 10px 7px 10px;
-}
+
 .ui-dialog-titlebar-close .ui-icon-closethick {
     text-indent: 0;
     margin-top: -10px
