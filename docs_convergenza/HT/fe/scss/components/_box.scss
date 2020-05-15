@@ -1157,3 +1157,14 @@
 #grafico_confronta_space {
     min-height:300px;
 }
+
+/* Box OTP ereditati da WB */
+.otpdesc {
+    img {
+        float: none;
+        display: inline-block;
+        width: 220px;
+        text-align: center;
+        margin: 25px auto;
+    }
+}

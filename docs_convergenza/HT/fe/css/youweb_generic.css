@@ -2598,9 +2598,6 @@ span.spanQuestionario {
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-    .hidden-xs {
-        display: none !important;
-    }
     .assicurazioniBtnCalcola {
         min-height: 85px !important;
     }
@@ -6498,6 +6495,7 @@ div[id*="popover"] .popover-content {
 .spsel .spsel-option .spsel-addel .icon {
   font-size: 25px;
   margin-top: 13px;
+  color: #202D50;
 }
 .spsel .spsel-option .spsel-option-el {
   width: 100%;
@@ -6566,6 +6564,29 @@ div[id*="popover"] .popover-content {
 
 .spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
     margin:0 0 0 10px;
+}
+
+/* Versione checkbox */
+.spsel.spsel-check .spsel-options label{
+    width:100%;list-style-type:none;
+    position:relative;
+    padding-left:20px;
+    padding-top:10px;
+    padding-right:10px;
+}
+.spsel.spsel-check .spsel-options label input {
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.spsel.spsel-check .spsel-options .spsel-option-el,.spsel.spsel-check .spsel-options .spse-countdetail {
+    display: inline;
+    white-space: normal;
+}
+
+
+.has-error .spsel {
+    border:solid 1px #f00;
 }
 
 @media (max-width: 767px) {
@@ -7192,7 +7213,7 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
     }
 
     .spsel .spsel-option .spsel-option-el {
-        padding: 10px 0 15px;
+        padding: 10px 0 5px;
     }
 
 
@@ -7511,4 +7532,16 @@ div.fixed-table-scroll-outer {
     background:#fff;
     font-weight: bold;
     padding: 0 5px;
+}
+
+/* PromoBox investimento */
+.promoBox .imgVisual{ float:left; margin: 0 25px 20px 0}
+@media (max-width:991px) {
+    .promoBox .imgVisual{
+        float: none;
+        margin: 0 auto 25px;
+        display: block;
+        text-align: center;
+        width: 200px;
+    }
 }
