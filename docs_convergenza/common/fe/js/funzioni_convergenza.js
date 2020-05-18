@@ -3619,7 +3619,7 @@ var columnBsFixed = function(){
         columnBsFixedResize = function() {
             $("table.has-fixed-cols").each(function(){
                 var tb = $(this);
-                var tbw = tb.width();
+                var tbw = tb.outerWidth();
                 tb.parents(".bootstrap-table").find(".fixed-columns table").css("width",tbw + "px")
             });
         }
@@ -3643,7 +3643,7 @@ var columnBsFixed = function(){
                     fixWidth += tbs.find("th").eq(x).outerWidth()
                 }
 
-                var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.width() + "px");
+                var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.outerWidth() + "px");
 
                 // Regole per il controllo dei "sortable"
                 tbfix.find('.sortable').closest('th').addClass('sortableTh');
