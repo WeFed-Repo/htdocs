@@ -20,8 +20,8 @@
 
     &.in {
         opacity: 1;
-        filter: alpha(opacity=100);
-        z-index: 1;
+        filter: alpha(opacity=100); 
+        z-index: 10!important;
     }
 
     &.top {
@@ -139,6 +139,7 @@
 .closeTooltip,
 .closeTooltip:hover {
     position: absolute;
+    z-index: 11;
     top: -10px;
     right: -10px;
     display: table;

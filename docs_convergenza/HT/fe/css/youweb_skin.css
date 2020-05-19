@@ -410,6 +410,14 @@ li.linkOn a {
   display: block;
 }
 
+@media screen and (max-width: 767px) {
+  .tab-wrap .control-label + span.output,
+.tab-wrap .control-label + .tooltip + span.output,
+.control-label-output + span.output,
+.control-label-output + .tooltip + span.output {
+    margin-bottom: 14px;
+  }
+}
 strong .tooltip-inner, h4 .tooltip-inner {
   font-weight: normal !important;
 }
@@ -3910,11 +3918,18 @@ div.pager .circle.current_page {
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  .carouselPlus .carouselPlusBtn {
+    position: relative;
+    top: 12px;
+  }
+}
 /* Declinazione oggetti particolari "trasversali" */
 .formGenerico.fundPanel {
   background: #eaeded;
   position: relative;
   padding: 15px 30px;
+  margin-bottom: 20px;
 }
 .formGenerico.fundPanel.fundPanelImg {
   padding-left: 175px;
@@ -3947,27 +3962,27 @@ div.pager .circle.current_page {
 }
 
 @media (max-width: 767px) {
-  .formGenerico.fundPanel.fundPanelImg {
-    padding: 15px 0;
+  .formGenerico.fundPanel {
+    padding: 15px 0 !important;
     text-align: center;
   }
-  .formGenerico.fundPanel.fundPanelImg .imgSoc {
+  .formGenerico.fundPanel .imgSoc {
     float: none;
     display: block;
     margin: 0 auto 20px;
     clear: both;
-    position: relative;
+    position: relative !important;
   }
-  .formGenerico.fundPanel.fundPanelImg .btn-console {
+  .formGenerico.fundPanel .btn-console {
     float: none;
     margin-top: 20px;
   }
-  .formGenerico.fundPanel.fundPanelImg .icon-console {
+  .formGenerico.fundPanel .icon-console {
     float: none;
     text-align: center;
     margin-bottom: 20px;
   }
-  .formGenerico.fundPanel.fundPanelImg .icon-console a {
+  .formGenerico.fundPanel .icon-console a {
     float: none;
   }
 }
@@ -4179,13 +4194,9 @@ div.pager .circle.current_page {
   min-height: 300px;
 }
 
-/* Box OTP ereditati da WB */
+/* OGGETTO OTP */
 .otpdesc img {
-  float: none;
-  display: inline-block;
-  width: 220px;
-  text-align: center;
-  margin: 25px auto;
+  max-width: 250px;
 }
 
 .ui-dialog-content.ui-widget-content li a,

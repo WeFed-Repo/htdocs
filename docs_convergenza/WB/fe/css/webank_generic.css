@@ -5909,7 +5909,7 @@ table tr td.td-fondo .fundName {
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
-  z-index: 1;
+  z-index: 10!important;
 }
 .tooltip.top {
   margin-top: -3px;
@@ -6010,6 +6010,7 @@ table tr td.td-fondo .fundName {
 .closeTooltip,
 .closeTooltip:hover {
   position: absolute;
+  z-index: 11;
   top: -10px;
   right: -10px;
   display: table;
