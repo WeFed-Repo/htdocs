@@ -3612,7 +3612,7 @@ var columnBsFixedResize;
 var columnBsFixed = function(){
 
     var tbHfc =  $("table.has-fixed-cols");
-
+    
     if (tbHfc.length>0) {
 
         // Handler per il resize
