@@ -637,6 +637,18 @@ table tr.sub {background:#ddd}
 table tr.sub td {background:#ddd}
 table td.indent {padding-left:25px}
 
+/* Oggettini cross per tabelle */
+table .labelpir {
+    display: inline-block;
+    width: 30px;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    height: 17px;
+    background: #202d50;
+    text-align: center;
+}
+
 input[type=checkbox] {
     width: 15px;
     height: 15px;
