@@ -55,94 +55,94 @@ resizeTab('secondTab2',0);
             <input name="selectBoxes" type="hidden" value="">
             <div class="row">
                <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="0" title="Allianz Global Investors Lux."><img src="/fe/img/lgsoc_allianz.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="0" title="Allianz Global Investors Lux."><img src="/common/fe/img/lgsoc_allianz.png" class="img-resp"></div>
 				</div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="1" title="Amundi Funds"><img src="/fe/img/lgsoc_amundi.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="1" title="Amundi Funds"><img src="/common/fe/img/lgsoc_amundi.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="2" title="Anima Asset Management ltd"><img src="/fe/img/lgsoc_prima_new.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="2" title="Anima Asset Management ltd"><img src="/common/fe/img/lgsoc_prima_new.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="3" title="Anima Sgr Spa"><img src="/fe/img/lgsoc_anima_new.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="3" title="Anima Sgr Spa"><img src="/common/fe/img/lgsoc_anima_new.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="4" title="BlackRock (Luxembourg) S.A."><img src="/fe/img/lgsoc_blackrock.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="4" title="BlackRock (Luxembourg) S.A."><img src="/common/fe/img/lgsoc_blackrock.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="5" title="Carmignac Gestion"><img src="/fe/img/lgsoc_carmignac_fondi.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="5" title="Carmignac Gestion"><img src="/common/fe/img/lgsoc_carmignac_fondi.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="6" title="Carmignac Portfolio Sicav"><img src="/fe/img/lgsoc_carmignac_port.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="6" title="Carmignac Portfolio Sicav"><img src="/common/fe/img/lgsoc_carmignac_port.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="7" title="Columbia Threadneedle"><img src="/fe/img/lgsoc_threadneedle.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="7" title="Columbia Threadneedle"><img src="/common/fe/img/lgsoc_threadneedle.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="8" title="Deutsche Asset & Wealth Man.e"><img src="/fe/img/lgsoc_dws.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="8" title="Deutsche Asset & Wealth Man.e"><img src="/common/fe/img/lgsoc_dws.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="9" title="Epsilon Sgr Spa"><img src="/fe/img/lgsoc_epsilon.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="9" title="Epsilon Sgr Spa"><img src="/common/fe/img/lgsoc_epsilon.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="10" title="Etica Sgr Spa"><img src="/fe/img/lgsoc_etica.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="10" title="Etica Sgr Spa"><img src="/common/fe/img/lgsoc_etica.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="11" title="Eurizon Capital Sgr Spa"><img src="/fe/img/lgsoc_eurizon.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="11" title="Eurizon Capital Sgr Spa"><img src="/common/fe/img/lgsoc_eurizon.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="12" title="Fidelity Investments Lux. S.A."><img src="/fe/img/lgsoc_fidelity.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="12" title="Fidelity Investments Lux. S.A."><img src="/common/fe/img/lgsoc_fidelity.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="13" title="GAM I.M. Ltd-Julius Baer Funds"><img src="/fe/img/lgsoc_jb.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="13" title="GAM I.M. Ltd-Julius Baer Funds"><img src="/common/fe/img/lgsoc_jb.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="14" title="HSBC Global Investment Funds"><img src="/fe/img/lgsoc_hsbc.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="14" title="HSBC Global Investment Funds"><img src="/common/fe/img/lgsoc_hsbc.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="15" title="Invesco Fund"><img src="/fe/img/lgsoc_invesco.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="15" title="Invesco Fund"><img src="/common/fe/img/lgsoc_invesco.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="16" title="JPMorgan Funds"><img src="/fe/img/lgsoc_jpmorganam.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="16" title="JPMorgan Funds"><img src="/common/fe/img/lgsoc_jpmorganam.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="17" title="JPMorgan Investment Funds"><img src="/fe/img/lgsoc_jpminv.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="17" title="JPMorgan Investment Funds"><img src="/common/fe/img/lgsoc_jpminv.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="18" title="Janus Capital Funds plc"><img src="/fe/img/lgsoc_janus.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="18" title="Janus Capital Funds plc"><img src="/common/fe/img/lgsoc_janus.png" class="img-resp"></div>
                 </div>
                  <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="19" title="Legg Mason Global Asset Management"><img src="/fe/img/lgsoc_legg_mason.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="19" title="Legg Mason Global Asset Management"><img src="/common/fe/img/lgsoc_legg_mason.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="20" title="Lombard Odier Funds"><img src="/fe/img/lgsoc_lombard_odier.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="20" title="Lombard Odier Funds"><img src="/common/fe/img/lgsoc_lombard_odier.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="21" title="M&G Global"><img src="/fe/img/lgsoc_mg.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="21" title="M&G Global"><img src="/common/fe/img/lgsoc_mg.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="22" title="Morgan Stanley Investment Fund"><img src="/fe/img/lgsoc_morganstanley.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="22" title="Morgan Stanley Investment Fund"><img src="/common/fe/img/lgsoc_morganstanley.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="22" title="Muzinich & Co."><img src="/fe/img/lgsoc_muzinich.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="22" title="Muzinich & Co."><img src="/common/fe/img/lgsoc_muzinich.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="23" title="NN(L) Investment Funds"><img src="/fe/img/lgsoc_nn.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="23" title="NN(L) Investment Funds"><img src="/common/fe/img/lgsoc_nn.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="23" title="Nordea"><img src="/fe/img/lgsoc_nordea.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="23" title="Nordea"><img src="/common/fe/img/lgsoc_nordea.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="24" title="Pictet Funds (Europe) S.A."><img src="/fe/img/lgsoc_pictet.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="24" title="Pictet Funds (Europe) S.A."><img src="/common/fe/img/lgsoc_pictet.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="25" title="Pimco Funds Gl.Inv. Series Plc"><img src="/fe/img/lgsoc_pimco.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="25" title="Pimco Funds Gl.Inv. Series Plc"><img src="/common/fe/img/lgsoc_pimco.png" class="img-resp"></div>
                 </div>
                 <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="26" title="Raiffeisen capital management"><img src="/fe/img/lgsoc_raffeisen.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="26" title="Raiffeisen capital management"><img src="/common/fe/img/lgsoc_raffeisen.png" class="img-resp"></div>
                 </div>
                  <div class="col-sm-2 col-xs-4 align-center">
-                    <div class="selector-box " data-value="27" title="Schroder Int. Selection Fund"><img src="/fe/img/lgsoc_schroders.png" class="img-resp"></div>
+                    <div class="selector-box " data-value="27" title="Schroder Int. Selection Fund"><img src="/common/fe/img/lgsoc_schroders.png" class="img-resp"></div>
                 </div>
             </div>
         </div>
