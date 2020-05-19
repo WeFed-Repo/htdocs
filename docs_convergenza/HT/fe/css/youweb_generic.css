@@ -639,7 +639,7 @@ table td.indent {padding-left:25px}
 
 /* Oggettini cross per tabelle */
 table .labelpir {
-    display: inline-block;
+    display: block;
     width: 30px;
     color: #fff;
     border-radius: 3px;
