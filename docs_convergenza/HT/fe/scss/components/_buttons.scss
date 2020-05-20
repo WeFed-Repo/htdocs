@@ -41,7 +41,6 @@
   // Bottone con icona
   .icon + .icon-text { 
     display: inline-block;
-    transform: translate(0, -3px);
     margin-left:5px;
   }
 }
@@ -141,7 +140,12 @@ p.note.flRight {
   text-transform: uppercase !important;
   font-weight: bold !important;
 }
-
+.btnWrapper .icon {
+  height: auto;
+  line-height: 7px;
+  position: relative;
+  top: 3px;
+}
 /* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
 .line-button {
   position: relative;
@@ -161,15 +165,17 @@ p.note.flRight {
           position: relative;
           top: 3px;
         }
-        .icon-text {
-          position: relative;
-          top: 3px;
-        }
       }
       .last hr {
         display :none
       }
 }
+@media (max-width:1200px) {
+  .line-button .btn-primary {
+    padding: 11px 10px 7px 10px;
+  }
+}
+
 
 
 

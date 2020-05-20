@@ -7520,7 +7520,7 @@ div.fixed-table-scroll-outer {
     padding: 0 20px 20px;
     margin-bottom:30px;
 }
-.garanzia-box .btn-elimina, .btn-aggiungi {
+.garanzia-box .btn-elimina, .garanzia-box .btn-aggiungi {
     position: absolute;
     top: -15px;
     background: white;
