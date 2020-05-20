@@ -35,15 +35,29 @@
     }
 }
 
-#fesFondoWrap .rating 
-   {
+#fesFondoWrap {
+    .rating 
+      {
        padding-top: 10px;
        .icon-corona {
         font-size: 20px;
         margin-right: 5px;
        }
-   }
-
+    }
+   .big-rating { 
+        background-color: #ebeef0;
+        color: #202d50;
+        border-radius: 50%;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        font-size: 75px;
+        margin: 10px auto;
+        width: 100px;
+    }
+}
+   
 
 /* Rating-gauge */
 @mixin rating-gauge($bkg:#eaeded,$disabled:lightgray,$negative:red,$positive:#5bc162) {

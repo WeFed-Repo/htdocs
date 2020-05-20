@@ -4289,6 +4289,18 @@ body.popup header .wrapper .btn-console {
   font-size: 20px;
   margin-right: 5px;
 }
+#fesFondoWrap .big-rating {
+  background-color: #ebeef0;
+  color: #202d50;
+  border-radius: 50%;
+  line-height: 100px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-size: 75px;
+  margin: 10px auto;
+  width: 100px;
+}
 
 /* Rating-gauge */
 .rating-gauge {
