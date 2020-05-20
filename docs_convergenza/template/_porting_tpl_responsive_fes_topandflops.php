@@ -1,21 +1,7 @@
 			<h2 id="id_label">Migliori e peggiori</h2>
 				
 								
-				
-
-
-
-
-
-
-
-
-
 <input type="hidden" name="pageType" id="pageType" value="top10">
-
-
-
-
 <!-- Navigazione in pagina -->
 <div class="navfrontPage navcommPage outerTab">
 	<div class="tab-content-group">
