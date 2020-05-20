@@ -2841,7 +2841,6 @@ div.pager .circle.current_page {
   display: block;
   content: "";
   position: absolute;
-  border: transparent 7px solid;
 }
 .tooltip.in.top {
   padding-bottom: 10px;
