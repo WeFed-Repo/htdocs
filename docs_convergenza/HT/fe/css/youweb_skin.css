@@ -535,6 +535,13 @@ h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
   padding-left: 10px;
 }
 
+#cercaSel .btn-icon {
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  text-align: left;
+}
+
 /* Icone bottone nelle note in testa */
 p.note.flRight a.btn-icon {
   margin-left: 5px;
@@ -2826,8 +2833,8 @@ div.pager .circle.current_page {
 }
 .tooltip.in .tooltip-inner .closeTooltip {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -8px;
+  right: -8px;
 }
 .tooltip.in .tooltip-arrow {
   position: relative;
@@ -4603,6 +4610,14 @@ body.popup header .wrapper .btn-console {
 }
 .collapse-par .collapse-par-collapse {
   padding: 0 0 15px 25px;
+}
+
+.icon-row_contract, .collapsed .icon-row_expand {
+  display: inline-block;
+}
+
+.icon-row_expand, .collapsed .icon-row_contract {
+  display: none;
 }
 
 /* Forzature da STRUTTURA */
