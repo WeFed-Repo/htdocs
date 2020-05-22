@@ -474,7 +474,6 @@ h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
 }
 .button .icon + .icon-text, .btn .icon + .icon-text {
   display: inline-block;
-  transform: translate(0, -3px);
   margin-left: 5px;
 }
 
@@ -567,6 +566,13 @@ p.note.flRight a.btn-icon {
   font-weight: bold !important;
 }
 
+.btnWrapper .icon {
+  height: auto;
+  line-height: 7px;
+  position: relative;
+  top: 3px;
+}
+
 /* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
 .line-button {
   position: relative;
@@ -588,14 +594,15 @@ p.note.flRight a.btn-icon {
   position: relative;
   top: 3px;
 }
-.line-button .btnWrapper .icon-text {
-  position: relative;
-  top: 3px;
-}
 .line-button .last hr {
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .line-button .btn-primary {
+    padding: 11px 10px 7px 10px;
+  }
+}
 @media (max-width: 767px) {
   .line-button {
     position: static;
@@ -1214,7 +1221,7 @@ input[type=checkbox] {
 #filtriAvanzatiSwitch .icon {
   position: absolute;
   right: 15px;
-  top: 3px;
+  top: 7px;
 }
 
 @media (max-width: 480px) {

@@ -48,7 +48,7 @@ $(function () {
 	<div class="innerTab">
 		<ul class="tabmedium">
 			<li class="on"><a href="#">covered warrants</a></li>
-			<li><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_responsive_ricerca_titoli_evoluta_cw_certificates.php&liv1=trading&liv2=compravendita&liv3=ricerca_titoli_evoluta&liv4=cw_e_certificates">certificates</a></li>						
+			<li><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_responsive_ricerca_titoli_evoluta_cw_certificates.php&html=mi&liv1=trading&liv2=compravendita&liv3=ricerca_titoli_evoluta&liv4=cw_e_certificates">certificates</a></li>						
 		</ul>
 	</div>
 	<div class="separator"></div>
