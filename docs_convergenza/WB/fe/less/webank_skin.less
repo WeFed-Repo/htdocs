@@ -426,9 +426,18 @@ button[disabled], html input[disabled], .btn.disabled, .btn.disabled:hover, .btn
 
 /*TABELLE*/
 .table {
-    width: 100%;
+    width: 100%; 
     max-width: 100%;
     margin-bottom: 20px;
+    &.gestisciLimitiSpesaTable
+    {
+        border: 0;
+        td, tr {
+            border: 0; 
+            padding: 10px; 
+        }
+        
+    }
 }
 table td.oRight {
     text-align: right;
@@ -504,6 +513,41 @@ table thead th.sorting_desc:before {
 table thead th.sorting_desc:before {
     transform: rotate(45deg);
     top: 12px;
+}
+
+/* tabelle scelta profilo colonne fisse */
+.fixedColumns.scelta-profilo {
+    label {
+        display: block;
+    }
+    .evidenziato, tr .highlight {
+        background-color: #DCE7B5!important; 
+    }
+}
+
+@media (max-width:767px) {
+    .fixedColumns.scelta-profilo {
+        border:0;
+        th.center.evidenziato { 
+            padding: 10px 16px; 
+        }
+        .desktop-label {display: none;}
+        .mobile-label {display: inline-block;}
+        th:first-child, td:first-child  {
+            background-color: #ddd;
+            
+        }
+        .evidenziato,.hightlight {
+            width:40px;
+            background-color: #ddd;
+        }
+        th:first-child .fht-cell {width:69px!important}
+        .evidenziato .fht-cell {width:40px!important}
+        .fixed-table-header-columns {width:216px!important}
+        .radio-mobile {display:table-row}
+        .radio-mobile input {position:static!important}
+    }
+    
 }
 
 @media screen and (max-width: 767px) {

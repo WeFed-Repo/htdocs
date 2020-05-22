@@ -1117,8 +1117,7 @@ select:hover {
 .input-group-addon {
     padding: 0;
     border-radius: 0;
-    background-color: #DADEE1;
-
+    line-height: 0
 }
 
 .input-group-addon.date.btn-icon {
@@ -2822,6 +2821,7 @@ span.spanQuestionario {
     text-align: left;
     border: 0;
     outline: 0;
+    background-color: transparent;
 }
 
 .inputSliderContainer .ui-slider-handle, .slider .ui-slider-handle {

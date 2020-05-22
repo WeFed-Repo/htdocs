@@ -2589,7 +2589,6 @@ div.fixed-table-scroll-outer {
 }
 .bootstrap-table table {
   margin-bottom: 0 !important;
-  min-width: 100%;
 }
 .fixed-table-body-columns .table-hover,
 .fixed-table-body-columns .table-hover tr:first-child td {
