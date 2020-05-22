@@ -5,15 +5,14 @@
         "description": "Errore nei parametri di richiesta"
     },
     "results": {
-        "field_anagraficablob_filiale": "filiale obbligatoria",
         "field_anagraficablob_intestatari_0_capResidenza": "cap obbligatorio",
         "field_anagraficablob_intestatari_0_cellulare": "cellulare obbligatorio",
         "field_anagraficablob_intestatari_0_cittadinanza": "cittadinanza obbligatoria",
         "field_anagraficablob_intestatari_0_codicefiscale": "codice fiscale obbligatorio",
         "field_anagraficablob_intestatari_0_codtipodocumento": "codice obbligatorio",
         "field_anagraficablob_intestatari_0_cognome": "cognome obbligatorio",
-        "field_anagraficablob_intestatari_0_comuneResidenza": "comune obbligatorio",
         "field_anagraficablob_intestatari_0_comunenascita": "comune nascita obbligatorio",
+        "field_anagraficablob_intestatari_0_comuneresidenza": "comune obbligatorio",
         "field_anagraficablob_intestatari_0_comunerilascio": "comune rilascio obbligatorio",
         "field_anagraficablob_intestatari_0_datarilasciorinnovo": "data rilascio rinnovo obbligatoria",
         "field_anagraficablob_intestatari_0_datascadenza": "data scadenza obbligatoria",
@@ -39,10 +38,10 @@
         "field_anagraficablob_intestatari_0_paesenascita": "paese nascita obbligatorio",
         "field_anagraficablob_intestatari_0_paeserilascio": "paese rilascio obbligatorio",
         "field_anagraficablob_intestatari_0_prefisso": "prefisso obbligatorio",
-        "field_anagraficablob_intestatari_0_provinciaNascita": "provincia nascita obbligatorio",
+        "field_anagraficablob_intestatari_0_provincianascita": "provincia nascita obbligatorio",
         "field_anagraficablob_intestatari_0_provinciaresidenza": "provincia obbligatoria",
         "field_anagraficablob_intestatari_0_provinciarilascio": "provincia rilascio obbligatoria",
         "field_anagraficablob_intestatari_0_residenzefiscali": "Deve essere presente la residenza fiscale italiana",
-        "field_anagraficablob_intestatari_0_tipoIndirizzoresidenza": "tipo indirizzo obbligatorio"
+        "field_anagraficablob_intestatari_0_tipoindirizzoresidenza": "tipo indirizzo obbligatorio"
     }
 }
