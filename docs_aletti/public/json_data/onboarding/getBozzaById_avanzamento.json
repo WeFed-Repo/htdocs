@@ -19,7 +19,7 @@
         "sessionFirmeBlob": {
             "idAccessToken": null,
             "idMifid": 77,
-            "depositoIncluso": true,
+            "depositoIncluso": false,
             "informativaMifid": true,
             "capitalizzazionePeriodica": {
                 "codDisclaimer": "ALETTI_CAP_PERIODICA",

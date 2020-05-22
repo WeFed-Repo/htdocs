@@ -450,7 +450,7 @@ let decodeField = (fieldkey, fieldval) => {
             outval = Functions.timestampToText(fieldval);
         }
         else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
-            outval = (fieldval) ? "true" : ""
+            outval = (fieldval===true) ? "true" : ""
         }
         else if (typeKeys["file"].indexOf(fieldkey) >= 0) {
             outval = fieldval;
@@ -470,10 +470,7 @@ let encodeField = (fieldkey, fieldval) => {
     if (fieldval !== null && fieldval !== undefined) {
 
         /* Verifica se e' una data nella mappa typeKeys */
-        if (typeKeys["timestamp"].indexOf(fieldkey) >= 0) {
-            outval = Functions.textToTimestamp(fieldval);
-        }
-        else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
+        if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
             outval = (fieldval === "true") ? true : false;
         }
         else {
