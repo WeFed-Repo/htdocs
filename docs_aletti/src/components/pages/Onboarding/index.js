@@ -292,8 +292,10 @@ export default class extends Component {
                                     if (data && data.results) {
                                         let newData = data.results
                                         this.setState({
+                                            // Inizializzazioni
                                             field_stato: "BOZZA",
                                             field_id: newData.nextId,
+                                            field_ordineintestatari: "0",
                                             field_promotore: newData.codPromotore,
                                             field_anagraficablob_filiale: newData.filiale,
                                             isLoading: false

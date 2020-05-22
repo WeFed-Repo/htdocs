@@ -386,8 +386,27 @@ let typeKeys = {
     "boolean": [
         "field_anagraficablob_privacyletta",
         "field_anagraficablob_intestatari_0_listprivacy_0_consenso",
-        "field_intestatarifirme_0_titolareeffettivo",
-        "field_intestatarifirme_1_titolareeffettivo"
+        "field_anagraficablob_intestatari_0_listprivacy_1_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_2_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_3_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_4_consenso",
+        
+        "field_anagraficablob_intestatari_1_listprivacy_0_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_1_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_2_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_3_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_4_consenso",
+
+        "field_sessionfirmeblob_depositoincluso",
+        "field_sessionfirmeblob_informativamifid",
+        "field_sessionfirmeblob_intestatarifirme_0_titolareeffettivo",
+        "field_sessionfirmeblob_intestatarifirme_0_personaesposta",
+        "field_sessionfirmeblob_intestatarifirme_0_cellcertif",
+        "field_sessionfirmeblob_intestatarifirme_0_emailcertif",
+        "field_sessionfirmeblob_intestatarifirme_1_sessioneconclusa",
+        "field_sessionfirmeblob_intestatarifirme_1_titolareeffettivo"
+        
+
     ],
     "timestamp": [
         "field_datainserimento",
@@ -403,8 +422,19 @@ let typeKeys = {
     "file" : [
         "field_anagraficablob_intestatari_0_imgcodfiscale",
         "field_anagraficablob_intestatari_0_imgdocidentita",
+        "field_anagraficablob_intestatari_0_imgfirma",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_0_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_1_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_2_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_3_imgtin",
         "field_anagraficablob_intestatari_1_imgcodfiscale",
         "field_anagraficablob_intestatari_1_imgdocidentita",
+        "field_anagraficablob_intestatari_1_imgfirma",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_0_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_1_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_2_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_3_imgtin"
+
     ]
 }
 

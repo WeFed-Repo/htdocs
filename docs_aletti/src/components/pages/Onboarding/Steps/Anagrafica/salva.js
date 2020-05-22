@@ -9,11 +9,30 @@ export default  {
 
         let val = (validazione)? validazione : false;
 
+        // Modifica l'oggetto per il salvataggio (alcuni nodi vanno convertiti da oggetto ad array 
+        // e vanno rimossi i nodi intestatario che non servono)
+        let anagrafica = jsonFromFields(form)["anagraficaBlob"];
+        // listPrivacy
+        // listResidenzeFiscale
+        if (form.field_numintestatari==="" || form.field_numintestatari==="1") {
+            // Tenere i dati di un solo intestatario
+            delete anagrafica.intestatari[1];
+        } 
+
+        // Per ogni intestatario trasforma listPrivacy e listResidenzeFiscale in Array
+        Object.keys(anagrafica.intestatari).forEach((v,i)=>{
+            ["listPrivacy","listResidenzeFiscale"].forEach((field)=>{
+                anagrafica.intestatari[v][field] = Object.keys(anagrafica.intestatari[v][field]).map((val)=>{
+                    return(anagrafica.intestatari[v][field][val])
+                })
+            });
+        });
+
         // Oggetto "data" del form
         let dataObj = {
                 "id": form.field_id,
                 "validazione": val,
-                "anagrafica": jsonFromFields(form)["anagraficaBlob"],
+                "anagrafica": anagrafica,
                 "ordineIntestatari": form.field_ordineintestatari
             }
 

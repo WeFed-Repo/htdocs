@@ -12,7 +12,7 @@ export default class extends Component {
 
     componentDidMount() {
         window.setMifid = function(obj){
-                alert("Oggetto ricevuto: verra' mostrato in console").
+                alert("Oggetto ricevuto: verra' mostrato in console");
                 console.log("-------- OGGETTO RICEVUTO --------");
                 console.log(obj);
                 console.log("----- FINE OGGETTO RICEVUTO ------");
