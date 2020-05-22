@@ -80,6 +80,7 @@ export default  {
 
         console.log("------------------- OGGETTO DATA INVIATO --------------------");
         console.log(dataObj);
+        console.log(JSON.stringify(dataObj));
        
         return dataObj;
 
