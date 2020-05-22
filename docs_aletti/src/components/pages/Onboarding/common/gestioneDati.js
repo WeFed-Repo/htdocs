@@ -472,11 +472,9 @@ let objFormTranslate = function () {
             if (typeof json[v] !== "object" || json[v] === null || typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
                 node[v] = prefisso + "_" + v.toLowerCase();
             }
-
             else {
                 node[v] = extractObject(prefisso + "_" + v.toLowerCase(), json[v])
             }
-
         });
         return node;
     }
@@ -549,4 +547,4 @@ let jsonFromFields = (objState) => {
 
 }
 
-export { defaultFields, fieldsFromJson, jsonFromFields }
+export { defaultFields, fieldsFromJson, jsonFromFields}
