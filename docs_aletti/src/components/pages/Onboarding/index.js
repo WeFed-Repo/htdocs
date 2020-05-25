@@ -139,7 +139,6 @@ export default class extends Component {
 
             let errori = {};
                 
-
             // Check campi obbligatori (la funzione viene raccolta parametricamente)
             if (this.state.svi_obbligatori) { 
                 errori = Object.assign(errori, Step[getPureStep(this.state)].validazione(this.state))
@@ -155,52 +154,55 @@ export default class extends Component {
                 Notify.error("La pratica presenta degli errori. Occorre correggerli per proseguire.");
             }
             else {
-                // Se non ci sono errori, chiama il BE per appenderne eventuali altri
-                getData({
-                    url: Step[getPureStep(this.state)].salva.url,
-                    data: Step[getPureStep(this.state)].salva.data(this.state,true),
-                    success: (data) => {
-                        if (this.state.svi_be && data && data.esito && data.esito.type === "E" && data.esito.code === "400") {
-                            // Raccoglie gli errori nel form
-                            Notify.error("La pratica inviata presenta degli errori. Occorre correggerli per proseguire.");
-                            this.setState({
-                                errors: data.results
-                            })
-                        }
-                        else {
-                            // Salvataggio terminato ed andato a buon fine
-                            // Notifica il salvataggio e richiede il nuovo stato della pratica per proseguire
-                            Notify.success(<p>Pratica <strong>n.{this.state.field_id}</strong> salvata con successo.</p>);
+                
+                // Se lo step è l'anagrafica ed il conto ha 2 intestatari occorre mostrare la modale di selezione dell'intestatario
+                if (this.state.field_stato==="BOZZA" && this.state.field_numintestatari==="2" && (this.state.field_ordineintestatari==="" || this.state.field_ordineintestatari==="0")){
+                    this.setState({
+                        modalProsegui: true
+                    });
+                }
+                else {
 
-                            // Promuove il nuovo stato bozza effettivo (bozza validata)
-                            // In caso di 2 intestatari ne richiede la selezione per valorizzare field_intestcorrente tramite la modale, 
-                            // altrimenti cambia lo stato direttamente
-                            if (this.state.field_numintestatari === "2") {
-                                if (this.state.field_stato==="BOZZA") {
-                                    // Attiva la modale ed attende il cambio di stato dalla modale
-                                    this.setState({
-                                        modalProsegui: true
-                                    });
-                                }
-                                else
-                                {
-                                    //Prosegue allo step successivo
+                    // Se non ci sono errori, chiama il BE per appenderne eventuali altri
+                    getData({
+                        url: Step[getPureStep(this.state)].salva.url,
+                        data: Step[getPureStep(this.state)].salva.data(this.state,true),
+                        success: (data) => {
+                            if (this.state.svi_be && data && data.esito && data.esito.type === "E" && data.esito.code === "400") {
+                                // Raccoglie gli errori nel form
+                                Notify.error("La pratica inviata presenta degli errori. Occorre correggerli per proseguire.");
+                                this.setState({
+                                    errors: data.results
+                                })
+                            }
+                            else {
+                                // Salvataggio terminato ed andato a buon fine
+                                // Notifica il salvataggio e richiede il nuovo stato della pratica per proseguire
+                                Notify.success(<p>Pratica <strong>n.{this.state.field_id}</strong> salvata con successo.</p>);
+
+                                // Promuove il nuovo stato bozza effettivo (bozza validata)
+                                // In caso di 2 intestatari ne richiede la selezione per valorizzare field_intestcorrente tramite la modale, 
+                                // altrimenti cambia lo stato direttamente
+                                if (this.state.field_numintestatari === "2") {
+
                                     this.setState({
                                         field_stato: getNextState(this.state),
                                         field_intestcorrente: getNextInt(this.state)
                                     });
+                                    
                                 }
-                                
-                            }
-                            else {
-                                this.setState({
-                                    field_intestcorrente: "0",
-                                    field_stato: getNextState(this.state).replace("INT0_","").replace("INT1_","")
-                                });
+                                else {
+                                    this.setState({
+                                        field_intestcorrente: "0",
+                                        field_stato: getNextState(this.state).replace("INT0_","").replace("INT1_","")
+                                    });
+                                }
                             }
                         }
-                    }
-                });
+                    });
+
+                }
+                
 
             }
         }
@@ -228,7 +230,8 @@ export default class extends Component {
     // Funzioni all'atterraggio
     componentDidMount() {
         this.setState({
-            isLoading: true
+            isLoading: true,
+            field_ordineintestatari: "0"
         });
         // Inserisce tutti i campi di default nello stato
         this.setState(

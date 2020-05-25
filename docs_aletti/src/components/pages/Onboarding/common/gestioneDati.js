@@ -180,24 +180,23 @@ const defaultFields = {
                 "telefono": "",
                 "listPrivacy": [
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_1",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_2",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_3",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
-
+                        "codDisclaimer": "ALETTI_ANAG_CONS_4",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_5",
                         "consenso": ""
                     }
                 ],
@@ -205,7 +204,6 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
@@ -283,24 +281,23 @@ const defaultFields = {
                 "telefono": "",
                 "listPrivacy": [
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_1",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_2",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_3",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
-
+                        "codDisclaimer": "ALETTI_ANAG_CONS_4",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_5",
                         "consenso": ""
                     }
                 ],
@@ -308,7 +305,6 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
@@ -422,14 +418,12 @@ let typeKeys = {
     "file" : [
         "field_anagraficablob_intestatari_0_imgcodfiscale",
         "field_anagraficablob_intestatari_0_imgdocidentita",
-        "field_anagraficablob_intestatari_0_imgfirma",
         "field_anagraficablob_intestatari_0_listresidenzefiscale_0_imgtin",
         "field_anagraficablob_intestatari_0_listresidenzefiscale_1_imgtin",
         "field_anagraficablob_intestatari_0_listresidenzefiscale_2_imgtin",
         "field_anagraficablob_intestatari_0_listresidenzefiscale_3_imgtin",
         "field_anagraficablob_intestatari_1_imgcodfiscale",
         "field_anagraficablob_intestatari_1_imgdocidentita",
-        "field_anagraficablob_intestatari_1_imgfirma",
         "field_anagraficablob_intestatari_1_listresidenzefiscale_0_imgtin",
         "field_anagraficablob_intestatari_1_listresidenzefiscale_1_imgtin",
         "field_anagraficablob_intestatari_1_listresidenzefiscale_2_imgtin",
@@ -470,7 +464,10 @@ let encodeField = (fieldkey, fieldval) => {
     if (fieldval !== null && fieldval !== undefined) {
 
         /* Verifica se e' una data nella mappa typeKeys */
-        if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
+        if (typeKeys["timestamp"].indexOf(fieldkey) >= 0) {
+            outval = Functions.textToTimestamp(fieldval);
+        }
+        else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
             outval = (fieldval === "true") ? true : false;
         }
         else {
