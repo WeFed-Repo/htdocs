@@ -706,6 +706,9 @@ select.form-control, .ui-combobox {
     position: relative;
     height: 34px;
     border: 1px solid #cccccc;
+    &[disabled] {
+        background-color: #eee!important;
+    }
 }
 
 .ui-combobox input {
@@ -879,10 +882,13 @@ input[type='checkbox']:checked:before {
 
 }
 
-.label-inline {
+.label-inline { 
     margin-right: 10px;
-    padding-top: 15px;
-    float: left;
+    padding-top: 3px; 
+    float: left; 
+    label {
+        font-weight: 600;
+    }
 }
 
 .control-label + .form-control.wauto{
@@ -1825,7 +1831,7 @@ p.small, span.small {
 }
 
 .ui-combobox .ui-widget-content.ui-combobox-input {
-    width: 90%;
+    width: 100%!important;
     top: 0;
     margin: 0;
     height: 32px !important;
@@ -1959,7 +1965,7 @@ p.small, span.small {
 .form-control[readonly] {
     cursor: not-allowed;
     background-color: #eee !important;
-    opacity: 1;
+    opacity: 1; 
 }
 
 #otp .control-label {
@@ -1971,7 +1977,9 @@ p.small, span.small {
     position: relative;
     left: 5px;
 }
-
+.form-field-input .label-inline .btn-icon .icon-info_fill {
+    top:3px;
+} 
 .btn-gen-pwd {
     margin: 20px 0 0 80px;
 }
