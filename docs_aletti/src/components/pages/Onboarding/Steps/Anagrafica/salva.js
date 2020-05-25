@@ -36,13 +36,11 @@ export default  {
                 "ordineIntestatari": form.field_ordineintestatari
             }
 
-
         console.log("------------------- OGGETTO DATA INVIATO --------------------");
         console.log(dataObj);
         console.log(JSON.stringify(dataObj));
-       
         return dataObj;
-
+        
     }
 
 }
