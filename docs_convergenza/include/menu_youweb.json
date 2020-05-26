@@ -4,8 +4,11 @@
 		"voices": [
 			{
 				"nome": "Bancomat Pay",
-				"inlavorazione": true,
 				"tpl": "tpl_pagamenti_bancomat_pay.php"
+			},
+			{
+				"nome": "Bancomat Pay Gestione",
+				"tpl": "tpl_gestione_bancomat_pay.php"
 			}
 		]
 	},

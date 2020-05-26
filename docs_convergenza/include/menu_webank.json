@@ -58,6 +58,11 @@
 				"nome": "Confronta carte",
 				"inlavorazione": true,
 				"tpl": "tpl_responsive_confronta_carte.php"
+			},
+			{
+				"nome": "Gestione Bancomat Pay",
+				"tpl": "tpl_gestione_bancomat_pay.php",
+				"html": "vr"
 			}
 		]
 	},
