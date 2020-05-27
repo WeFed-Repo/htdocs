@@ -210,6 +210,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 	var msfield = $(this);
 	msfield.wrap($("<div>").addClass("magicSearch"));
 	msphtext = msfield.attr("placeholder");
+	var msOptList = $("<ul>").addClass("msList").hide();
 
 	// Appende il pulsante per la ricerca, di fianco al campo stesso
 	var msButton = $("<a>").addClass("msButton icon icon-r-dettaglio").attr({"href":"javascript:;","title":"ricerca"});
@@ -221,6 +222,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 					$(this).removeClass("reset icon-delete_table");
 					$(this).addClass("icon-r-dettaglio");
 					msfield.val("");
+					msOptList.hide();
 					if(callBack) callBack();
 				}
 				else
@@ -235,7 +237,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 		}
 	)
 
-	var msOptList = $("<ul>").addClass("msList").hide();
+	
 	msfield.parent().append(msButton,msOptList);
 	msfield.on("keyup",function(e){
 
