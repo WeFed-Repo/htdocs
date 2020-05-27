@@ -4319,6 +4319,7 @@ label.select-button + span {
     min-height: 65px;
     overflow: hidden;
     background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center center;
+    float:left;
 }
 
 .loading * {
