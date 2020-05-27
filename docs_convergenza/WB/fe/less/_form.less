@@ -2947,7 +2947,7 @@ table tr td.td-fondo {
             color: #000;
             overflow: hidden;
             line-height: 20px;
-            padding:5px 0 5px;
+            padding:7px 0 5px;
             display: inline-block;
         }
         &:hover {background-color:#f1f1f1;}
@@ -2991,7 +2991,7 @@ table tr td.td-fondo {
       }
       .spsel-btn-console {
             position: absolute;
-            top: 4px;
+            top: 2px;
             right: 20px;
             .btn-icon {
                 margin-left:10px;
@@ -3038,6 +3038,13 @@ table tr td.td-fondo {
 
     .has-error & {
         border:solid 1px #f00;
+    }
+}
+
+@media (max-width: 1023px){
+    .spsel {height:38px;
+        .spsel-selected {height:36px}
+    
     }
 }
 

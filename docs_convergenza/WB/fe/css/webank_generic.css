@@ -5775,7 +5775,7 @@ table tr td.td-fondo .fundName {
   color: #000;
   overflow: hidden;
   line-height: 20px;
-  padding: 5px 0 5px;
+  padding: 7px 0 5px;
   display: inline-block;
 }
 .spsel .spsel-option:hover {
@@ -5825,7 +5825,7 @@ table tr td.td-fondo .fundName {
 }
 .spsel.spsel-hasconsole .spsel-btn-console {
   position: absolute;
-  top: 4px;
+  top: 2px;
   right: 20px;
 }
 .spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
@@ -5887,6 +5887,14 @@ table tr td.td-fondo .fundName {
 }
 .has-error .spsel {
   border: solid 1px #f00;
+}
+@media (max-width: 1023px) {
+  .spsel {
+    height: 38px;
+  }
+  .spsel .spsel-selected {
+    height: 36px;
+  }
 }
 @media (max-width: 767px) {
   .spsel {
