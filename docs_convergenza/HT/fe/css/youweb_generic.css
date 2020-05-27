@@ -4319,6 +4319,7 @@ label.select-button + span {
     min-height: 65px;
     overflow: hidden;
     background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center center;
+    float:left;
 }
 
 .loading * {
@@ -6733,7 +6734,7 @@ span.paddingLeft {
 
 /* Tabella_001, INIZIO */
 .icon-check_ok:before {
-    font-size: 36px;
+    font-size: 24px;
     color: #3AA746;
 }
 

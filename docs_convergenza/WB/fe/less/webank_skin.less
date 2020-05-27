@@ -58,6 +58,10 @@ p.small, span.small {
 .img-resp {
     width: 100%;
 }
+.img-fixed-badge-apps {
+    width: 15%;
+    display: inline-block;
+}
 .fLeft {
     float: left !important;
 }
@@ -111,6 +115,10 @@ section {
 
 .alignRight {
     text-align: right !important;
+    .mr-20 {
+        text-decoration: none;
+        margin-right: 20px;
+    }
 }
 
 .align-right {
@@ -331,6 +339,9 @@ button[disabled], html input[disabled], .btn.disabled, .btn.disabled:hover, .btn
 }
 
 /*TAB DI NAVIGAZIONE */
+.outerWrapperTab {
+    margin-bottom:20px; 
+}
 .innerWrapperTab {
     overflow-y: hidden;
     min-height: 40px;
@@ -3668,4 +3679,43 @@ ul.bullet-spunta {
   }
 }
 
-/**/
+/*bancomat pay*/
+#placeholderQRCode {
+    background-color: #808080;
+    width: 134px;
+    height: 134px;
+}
+#divBancomatPay {
+    background: #FFFFFF;
+    height: 120px;
+    width: 30%;
+    margin: 20px auto 0px auto;
+    padding-top: 2.5%;
+}
+
+#outputBancomatPay {
+    width: 88%;
+    font-size: 24px;
+    border-top: none;
+    border-right: none;
+    border-bottom: dashed;
+    border-left: none;
+    outline: 0;
+}
+.img-fixed {
+    height: 65%;
+    display: inline-block;
+}
+.icon-check_ok:before {
+    font-size:24px;
+    color: #3AA746;
+}
+.boxDefault.boxDefaultNoBord .row{
+    margin-bottom:10px;
+
+}
+@media (max-width: 767px) {
+    .scaricaAppBancomatPay .img-fixed-badge-apps {
+        width: 40%;
+    }
+}

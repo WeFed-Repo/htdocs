@@ -1736,6 +1736,7 @@ var resizeTab = function (idTab, indexTabOpened) {
         tabLi.each(function (index) {
             $(this).click(function (e) {
                 e.preventDefault();
+                ttHide();
                 $(this).siblings('li').removeClass('borderNoTab');
                 $(this).addClass('on').removeClass('borderNoTab').prev().addClass('borderNoTab');
                 $(this).siblings('li').removeClass('on');

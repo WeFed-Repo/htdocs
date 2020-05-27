@@ -272,7 +272,7 @@ function fesGetData(firstpage)
 
 							// Chiude eventuali tooltip aperti
 							$(".tooltip:visible").hide();
-							$(this).attr("data-toggle","tooltip");
+							$(this).attr("data-toggle","tooltip").attr("data-viewport","#fesSearchResults");
 							$(this).tooltip({trigger: "manual", html: true})
 								.attr('data-original-title', ttext)
 								.tooltip('show');
