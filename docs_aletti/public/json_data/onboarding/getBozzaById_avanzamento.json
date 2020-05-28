@@ -25,22 +25,23 @@
                 "codDisclaimer": "ALETTI_CAP_PERIODICA",
                 "consenso": true
             },
-            "naturaScopo": [
-                {
-                    "id": "15",
-                    "nome": "Affidamenti concessi aaaa"
-                }
-            ],
-            "naturaScopoDeposito": [
-                {
-                    "id": "15",
-                    "nome": "Affidamenti concessi aaaa"
-                }
-            ],
+           
             "codicePratica": null,
             "intestatariFirme": {
                 "0": {
                     "listRispAdever": {
+                        "naturaScopo": [
+                            {
+                                "id": "15",
+                                "nome": "Affidamenti concessi aaaa"
+                            }
+                        ],
+                        "naturaScopoDeposito": [
+                            {
+                                "id": "15",
+                                "nome": "Affidamenti concessi aaaa"
+                            }
+                        ],
                         "professione": [
                             {
                                 "id": "3",

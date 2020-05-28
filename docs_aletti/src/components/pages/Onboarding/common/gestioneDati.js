@@ -22,25 +22,27 @@ const defaultFields = {
             "consenso": ""
         },
         "codicePratica": "",
-        "naturaScopo": [
-            {
-                "id": "",
-                "nome": ""
-            }
-        ],
-        "naturaScopoDeposito": [
-            {
-                "id": "",
-                "nome": ""
-            }
-        ],
+        
         "intestatariFirme": {
             "0": {
+                
                 "fasciaRedditoNote":"",
                 "origineRedditoNote":"",
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
+                    "naturaScopo": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
+                    "naturaScopoDeposito": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
                     "professione": [
                         {
                             "id": "",
@@ -104,6 +106,18 @@ const defaultFields = {
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
+                    "naturaScopo": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
+                    "naturaScopoDeposito": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
                     "professione": [
                         {
                             "id": "",
