@@ -12,8 +12,7 @@
                 $(this).parents("th").toggleClass("filter-opened");
 
             }),
-            filterInput = $("<input>").attr({type:"text",maxlength:20})
-
+            filterInput = $("<input>").attr({type:"text",maxlength:20,"placeholder":"Lorem/ipsum"})
         $("th.filter").append(filter.append(toggleFilter,filterInput));
 
     }
