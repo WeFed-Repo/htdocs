@@ -4168,6 +4168,7 @@ div.pager .circle.current_page {
 
 #fesRicWrap {
   margin-bottom: 30px;
+  width: 100%;
 }
 #fesRicWrap .fesSearchMore {
   float: right;
