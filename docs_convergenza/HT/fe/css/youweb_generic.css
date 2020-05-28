@@ -7543,7 +7543,9 @@ div.fixed-table-scroll-outer {
     font-weight: bold;
     padding: 0 5px;
 }
-
+.wrapper-garanzie label {
+    width: 100%;
+}
 /* PromoBox investimento */
 .promoBox .imgVisual{ float:left; margin: 0 25px 20px 0}
 @media (max-width:991px) {
