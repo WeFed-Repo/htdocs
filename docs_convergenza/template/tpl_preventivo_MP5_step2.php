@@ -332,7 +332,7 @@
                 <li>proprietà e/o conduzione dell'abitazione (es. una tegola che si stacca dal tetto);</li>
                 <li>ambito della vita privata (danni dovuti a esercizio di sport e attività del tempo libero, danni provocati dagli animali domestici, ecc.);</li>
             </ul>
-            <p>Sono assicurati il Contraente, i suoi figli minori (anche se non conviventi) e ogni familiare o persona presente nel suo stato di famiglia.</p>
+            <p><strong>Sono assicurati il Contraente, i suoi figli minori (anche se non conviventi) e ogni familiare o persona presente nel suo stato di famiglia.</strong></p>
             <h3 class="titleSection titleForm">Assistenza</h3>
             <p class="noPadding">Prestazione di aiuto immediato nel caso in cui il Contraente si trovi in una situazione di difficoltà a seguito di un evento fortuito tra quelli previsti nella presente polizza (e avvenuto durante il periodo di copertura della polizza stessa).<br>
             Alcune casistiche:</p>
@@ -384,9 +384,9 @@
 <br>
 <strong>Sono assicurati il Contraente e i familiari conviventi.</strong>
 <br>
-La copertura è estesa anche ai figli minori anche se non conviventi e ad ogni familiare e/o persona presente nello stato di famiglia del Contraente con esso convivente.
-<strong>Assistenza</strong><br> 
-<p>Prestazione di <strong>aiuto immediato</strong> nei casi previsti dalla polizza, nel caso in cui il contraente si trovi in una situazione di difficoltà a seguito del verificarsi di un evento fortuito tra quelli previsti nella presente polizza e comunque occorso durante il periodo di copertura della polizza stessa.</p>
+La copertura è estesa anche ai figli minori anche se non conviventi e ad ogni familiare e/o persona presente nello stato di famiglia del Contraente con esso convivente.</p>
+<p class="noPadding"><strong>Assistenza</strong><br>
+Prestazione di <strong>aiuto immediato</strong> nei casi previsti dalla polizza, nel caso in cui il contraente si trovi in una situazione di difficoltà a seguito del verificarsi di un evento fortuito tra quelli previsti nella presente polizza e comunque occorso durante il periodo di copertura della polizza stessa.</p>
 <ul>
     <li>invio di elettricista in caso di sinistri all’impianto elettrico dell’abitazione</li>
     <li>invio di idraulico in caso di sinistri all’impianto idraulico dell’abitazione</li>
