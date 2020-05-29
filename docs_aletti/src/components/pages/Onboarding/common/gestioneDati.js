@@ -221,9 +221,9 @@ const defaultFields = {
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
-                        "codiceUic": "",
+                        "codiceUic": "86",
                         "tin": "",
-                        "descrizione": "",
+                        "descrizione": "ITALIA",
                         "imgTin": []
                     },
                     {
@@ -322,9 +322,9 @@ const defaultFields = {
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
-                        "codiceUic": "",
+                        "codiceUic": "86",
                         "tin": "",
-                        "descrizione": "",
+                        "descrizione": "ITALIA",
                         "imgTin": []
                     },
                     {
