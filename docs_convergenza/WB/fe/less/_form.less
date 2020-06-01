@@ -1919,6 +1919,21 @@ select#mercatop {
     }
 }
 
+// Iconcina di specifiche per check o radio
+label.textWrapper {
+    .btn-icon {
+        margin-left: 5px;
+        display: inline-block;
+        line-height: 11px;
+        margin-top: 3px;
+        .icon {font-size:25px}
+        @media (max-width:1023px) {
+            & {line-height:24px;}
+        }
+
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .formGenerico .checkbox {
         label {
@@ -1944,6 +1959,7 @@ select#mercatop {
         label.textWrapper .text {
             line-height: 20px;
         }
+        
     }
 
     .formGenerico .radio, .formGenerico .radio-inline {

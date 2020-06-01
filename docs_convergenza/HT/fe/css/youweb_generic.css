@@ -7344,6 +7344,15 @@ div.fixed-table-scroll-outer {
     position:relative
 }
 
+/* Iconcina help per checkbox e radio */
+.textWrapper .btn-icon {top: -5px;
+    border-bottom: 0 !important;
+    overflow: visible;
+    height: 17px;
+    line-height: 13px;
+    margin-bottom: 0;
+}
+
 .bootstrap-table .fixed-columns {
     position: absolute;
     top: 0;
@@ -7616,3 +7625,4 @@ div.fixed-table-scroll-outer {
         margin-bottom:0 !important;
     }
 }
+

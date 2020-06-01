@@ -400,8 +400,10 @@ function sceltaSottoRapportoFunc(option) {
                 <div class="checkbox">
                     <label class="textWrapper">
                         <input type="checkbox" name="" id="">
-                        <span class="text">Lorem ipsum dolor sit amet</span>
+                        <span class="text">Lorem ipsum tool dolor sit amet </span>
+                        <a href="javascript:"class="no-underline btn-icon"><i class="icon icon-info_fill"></i></a>
                     </label>
+                    
                 </div>
                 <div class="checkbox">
                     <label class="textWrapper">

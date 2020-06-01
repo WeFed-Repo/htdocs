@@ -4910,6 +4910,20 @@ select#mercatop {
     height: 38px !important;
   }
 }
+label.textWrapper .btn-icon {
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 11px;
+  margin-top: 3px;
+}
+label.textWrapper .btn-icon .icon {
+  font-size: 25px;
+}
+@media (max-width: 1023px) {
+  label.textWrapper .btn-icon {
+    line-height: 24px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .formGenerico .checkbox label {
     padding-left: 27px;
