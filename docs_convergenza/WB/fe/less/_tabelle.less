@@ -223,7 +223,26 @@ table {
             border-right: 1px solid @borderColorCel;
         }
     }
-
+    &.details-table{
+        border: 0; 
+        thead th {
+            background-color: #e1e1e1;
+            border: 0;
+        }
+        td {
+            border: 0;
+            border-bottom: 2px solid #e1e1e1;
+        }
+        .sub {
+            td {
+                background-color: #f2f2f2;
+                &.indent{
+                    padding-left:30px;
+                }
+            }
+        }
+       
+    }
     &.valign-middle td {
         vertical-align: middle
     }
@@ -2106,6 +2125,7 @@ table span.labelpir {
 
 .tableContainerNoBootS {
     overflow-y: auto;
+    width: 100%;
 }
 
 .tableContainerNoBootS table {

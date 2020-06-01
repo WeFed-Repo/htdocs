@@ -74,10 +74,10 @@ $(function(){
                                 <div class="modal-body">
                                 <div class="headerContainerNoBootS">
                                     <div class="tableContainerNoBootS">
-                                        <table>
+                                        <table class="details-table">
                                             <thead>
                                                 <th></th>
-                                                <th class="left">Titolo/Fondo</th>
+                                                <th class="left">Titolo</th>
                                                 <th class="left">Mercato</th>
                                                 <th class="right">Q.t&agrave; in<br>portaf.</th>
                                                 <th class="right">Ult. prz.ora</th>

@@ -631,11 +631,30 @@ table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
 table th {
     vertical-align: top !important
 }
+.headerContainerNoBootS {
+    position: relative;
+}
+.tableContainerNoBootS {
+    overflow-y: auto;
+    width: 100%;
+}
+.tableContainerNoBootS table {
+    border-spacing: 0;
+    width: 100%;
+}
 
 /* Subgroups */
-table tr.sub {background:#ddd}
-table tr.sub td {background:#ddd}
-table td.indent {padding-left:25px}
+table.details-table th{
+    background-color: #dadee2!important;
+    vertical-align: middle!important;
+}
+table.details-table td {
+    background-color: #fff;
+    border-bottom: 2px solid #dadee2!important;
+}
+table tr.sub {background:#eaeded}
+table tr.sub td {background:#eaeded}
+table td.indent {padding-left:30px}
 
 /* Oggettini cross per tabelle */
 table .labelpir {
