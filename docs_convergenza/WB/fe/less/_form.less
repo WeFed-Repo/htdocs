@@ -253,6 +253,33 @@
 
     }
 
+    /* Gruppo output in linea (label sempre a destra)*/
+    .inline-output {
+        width:100%;
+        margin-bottom:15px;
+        display:inline-table;
+        .inline-output-left {
+            display:table-cell;
+            padding-left:0;
+            padding-right:0;
+            text-align:left;
+            vertical-align:top;
+        }
+        .inline-output-right {
+            display:table-cell;
+            padding-left:5px;
+            padding-right:0;
+            text-align:right;
+            vertical-align:top;
+        }
+        .output
+        {
+            &.txthelp {display:inline;}
+            padding-top:0;
+        }
+
+    }
+
     .small {
         font-size: 0.8571428571428571em;
     }
@@ -3050,4 +3077,13 @@ table tr td.td-fondo {
 
 @media (max-width: 767px){
     .spsel {margin-bottom:14px;}
+}
+
+/* NUOVO SELETTORE RAPPORTO */
+.selettore-rapporto {
+    .selectRapp {
+        margin-bottom:20px;
+    }
+    padding-bottom:0;
+    .form-group {margin-bottom:0;}
 }

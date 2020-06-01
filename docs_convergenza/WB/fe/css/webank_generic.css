@@ -3148,6 +3148,7 @@ table .table-btn-more:hover {
         color: #F6CF00
       }
     }*/
+  /* Gruppo output in linea (label sempre a destra)*/
   /* Selettore conto */
 }
 .formGenerico .control-label,
@@ -3291,6 +3292,31 @@ table .table-btn-more:hover {
 }
 .formGenerico .icon-console a.btn-icon:first-child {
   margin-left: 0;
+}
+.formGenerico .inline-output {
+  width: 100%;
+  margin-bottom: 15px;
+  display: inline-table;
+}
+.formGenerico .inline-output .inline-output-left {
+  display: table-cell;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  vertical-align: top;
+}
+.formGenerico .inline-output .inline-output-right {
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 0;
+  text-align: right;
+  vertical-align: top;
+}
+.formGenerico .inline-output .output {
+  padding-top: 0;
+}
+.formGenerico .inline-output .output.txthelp {
+  display: inline;
 }
 .formGenerico .small {
   font-size: 0.85714286em;
@@ -5918,6 +5944,16 @@ table tr td.td-fondo .fundName {
   .spsel {
     margin-bottom: 14px;
   }
+}
+/* NUOVO SELETTORE RAPPORTO */
+.selettore-rapporto {
+  padding-bottom: 0;
+}
+.selettore-rapporto .selectRapp {
+  margin-bottom: 20px;
+}
+.selettore-rapporto .form-group {
+  margin-bottom: 0;
 }
 /* Classi aggiuntive per la griglia */
 .col-sep {
