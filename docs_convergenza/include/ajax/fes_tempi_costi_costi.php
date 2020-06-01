@@ -10,7 +10,7 @@
     		<div class="headerContainerNoBootS">
 				<div class="tableContainerNoBootS">
 
-		    		<table border="0" cellspacing="0" cellpadding="0" data-toggle="table" class="valign-middle">
+		    		<table border="0" cellspacing="0" cellpadding="0" data-toggle="table" class="valign-middle riepilogo"> 
 		    		<!-- Header -->
 		    		<tr>
 					    <th colspan="2">Operazione</th>

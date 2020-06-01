@@ -655,7 +655,28 @@ table.details-table td {
 table tr.sub {background:#eaeded}
 table tr.sub td {background:#eaeded}
 table td.indent {padding-left:30px}
+ 
+/* DI RIEPILOGO */
 
+table.riepilogo tr th {
+    background-color: #dadee2!important;
+    vertical-align: middle!important;
+    height: 50px;
+}
+table.riepilogo tr th.right {
+    text-align: right!important;
+}
+table.riepilogo tr td {
+    background-color: #fff!important;
+    border-bottom: 2px solid #f2f2f2!important;
+}
+  table.riepilogo tr td[rowspan] {
+    border-right: 2px solid #f2f2f2!important;
+  }
+ table.riepilogo tr td[rowspan]:last-child {
+    border-left: 2px solid #f2f2f2!important;
+    border-right: 0 !important;
+  }
 /* Oggettini cross per tabelle */
 table .labelpir {
     display: block;
