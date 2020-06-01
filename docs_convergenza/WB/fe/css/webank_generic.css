@@ -1550,7 +1550,7 @@ table th.filter .filter-wrap {
 table th.filter .filter-wrap .filter-toggle {
   position: absolute;
   top: 7px;
-  right: 5px;
+  right: 15px;
   width: 25px;
   height: 25px;
   line-height: 24px;
@@ -1581,7 +1581,7 @@ table th.filter.filter-opened .th-inner {
 }
 table th.filter.filter-opened .filter-wrap {
   width: 100%;
-  padding: 5px 35px 0 5px;
+  padding: 5px 45px 0 5px;
 }
 table th.filter.filter-opened .filter-wrap input {
   display: inline-block;
