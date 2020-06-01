@@ -23,10 +23,18 @@ export default  {
         Object.keys(anagrafica.intestatari).forEach((v,i)=>{
             ["listPrivacy","listResidenzeFiscale"].forEach((field)=>{
                 anagrafica.intestatari[v][field] = Object.keys(anagrafica.intestatari[v][field]).map((val)=>{
-                    return(anagrafica.intestatari[v][field][val])
+                        return(anagrafica.intestatari[v][field][val])
+                   
                 })
             });
+
+            // Rimuove le residenze fiscali vuote
+            anagrafica.intestatari[v]["listResidenzeFiscale"] =  anagrafica.intestatari[v]["listResidenzeFiscale"].filter(v=>{
+                return v.codiceUic!=""
+            })
         });
+
+    
 
         // Oggetto "data" del form
         let dataObj = {
