@@ -12270,6 +12270,11 @@ span.trovati span {
   overflow: hidden;
   padding: 0 34px 0 8px;
 }
+#contenuti .magicSearch input:active,
+#contenuti .magicSearch input:focus {
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(111, 143, 10, 0.4);
+}
 #contenuti .magicSearch .msButton {
   position: absolute;
   color: #8ab10b;
