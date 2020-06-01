@@ -1,3 +1,8 @@
+<?php 
+include("../include/oggetti/form/commons/020_nuovo_selettore_rapporto/oggetto.php");
+
+/*
+<!-- VERSIONE VALIDA FINO AL 29/05/2020 -->
 <form class="formGenerico borderFormRounded output loading" role="form" id="selDepForm">
 		<!--caso con selettore rapporto -->
 		<div class="form-group">
@@ -99,3 +104,5 @@
 			</div>
 		</div>
 	</form>
+	*/
+	?>

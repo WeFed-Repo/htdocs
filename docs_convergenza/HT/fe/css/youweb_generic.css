@@ -7597,3 +7597,22 @@ div.fixed-table-scroll-outer {
         width: 200px;
     }
 }
+
+/* Nuovo selettore rapporto */
+.selettore-rapporto .form-group {margin-bottom:10px;}
+.selettore-rapporto .selectRapp  {margin-bottom:0;}
+.selettore-rapporto .bordered-you {margin-top:-5px;}
+
+/* output inline */
+.inline-output {display:inline-table;width:100%;}
+.inline-output .output {padding:0;}
+.inline-output .output.txthelp {display:inline !important;float:none !important}
+.inline-output .inline-output-left {display:table-cell;text-align:left !important;padding-right:5px; vertical-align:top;float:none !important;max-width:100% !important}
+.inline-output .inline-output-right {display:table-cell;text-align:right; vertical-align:top;float:none !important;max-width:100% !important}
+
+@media (max-width: 921px) {
+    .inline-output {margin-bottom:13px;}
+    .inline-output .output {
+        margin-bottom:0 !important;
+    }
+}

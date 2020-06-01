@@ -3312,11 +3312,18 @@ table .table-btn-more:hover {
   text-align: right;
   vertical-align: top;
 }
+.formGenerico .inline-output label {
+  font-weight: normal;
+}
 .formGenerico .inline-output .output {
+  font-weight: 600;
   padding-top: 0;
 }
 .formGenerico .inline-output .output.txthelp {
   display: inline;
+}
+.formGenerico .inline-output .output .text-link {
+  font-weight: normal;
 }
 .formGenerico .small {
   font-size: 0.85714286em;
