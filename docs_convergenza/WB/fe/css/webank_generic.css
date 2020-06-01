@@ -1435,6 +1435,23 @@ table.commissionFuture td.bg-color-heading {
   background-color: #f2f2f2;
   border-right: 1px solid #c6c6c6;
 }
+table.details-table {
+  border: 0;
+}
+table.details-table thead th {
+  background-color: #e1e1e1;
+  border: 0;
+}
+table.details-table td {
+  border: 0;
+  border-bottom: 2px solid #e1e1e1;
+}
+table.details-table .sub td {
+  background-color: #f2f2f2;
+}
+table.details-table .sub td.indent {
+  padding-left: 30px;
+}
 table.valign-middle td {
   vertical-align: middle;
 }
@@ -2929,6 +2946,7 @@ table span.labelpir {
 }
 .tableContainerNoBootS {
   overflow-y: auto;
+  width: 100%;
 }
 .tableContainerNoBootS table {
   border-spacing: 0;
