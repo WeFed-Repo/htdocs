@@ -157,7 +157,17 @@
 			},
 			{
 				"nome": "Mercati e quotazioni",
+				
 				"voices": [
+					{
+						"nome": "Azioni",
+						"voices": [
+							{
+								"nome": "Overview",
+								"tpl": "tpl_responsive_overview.php"
+							}
+						]
+					},					
 					{
 						"nome": "Certificates",
 						"voices": [
