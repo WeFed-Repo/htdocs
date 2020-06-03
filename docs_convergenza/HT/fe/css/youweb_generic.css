@@ -670,7 +670,9 @@ table.riepilogo tr td {
     background-color: #fff!important;
     border-bottom: 2px solid #f2f2f2!important;
 }
-#mainContent table.riepilogo tr td[rowspan] {
+table.riepilogo tr.totali td { background-color: #dadee2!important; border: 0!important}
+#mainContent table.riepilogo tr td[rowspan],
+#mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
     border-right: 2px solid #f2f2f2!important;
   }
 #mainContent table.riepilogo tr td[rowspan]:last-child {
