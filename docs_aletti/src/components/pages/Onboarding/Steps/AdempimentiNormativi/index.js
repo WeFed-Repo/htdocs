@@ -29,6 +29,8 @@ class Adever extends Component {
                         [
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo",
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id",
+                            "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nsturascopodeposito_0_id",
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_professione_0_id",
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_taesettore_0_id",
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id",
@@ -55,6 +57,37 @@ class Adever extends Component {
                             ></Form.checkgroup>
                         </Col>
                     </Row>
+                    <Row>
+                        <Col sm="6">
+                                <Form.select
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"}
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
+                                    label="Scopo del rapporto di CC"
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
+                                    onChange={this.props.obchange}
+                                    placeholder="Seleziona..."
+                                    options={this.props.obdomini["adever_naturascopo"]}
+                                    output={isOutput}
+                                ></Form.select>
+                            </Col>
+                            { formstate["field_sessionfirmeblob_depositoincluso"]==="true" && 
+                            <Col sm="6">
+                                <Form.select
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopodeposito_0_id"}
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopodeposito_0_id"]}
+                                    label="Scopo del rapporto di CC"
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopodeposito_0_id"]}
+                                    onChange={this.props.obchange}
+                                    placeholder="Seleziona..."
+                                    options={this.props.obdomini["adever_naturascopo"]}
+                                    output={isOutput}
+                                ></Form.select>
+                            </Col>
+                            }
+                        </Row>
+
+
+
                 </section>
                 <section className="onboarding-block">
                     <Row>
@@ -272,34 +305,6 @@ class StepForm extends Component {
                     {!isOutput && <h3>Adempimenti normativi</h3>}
                     <section className="onboarding-block">
                         <p>Paragrafo introduttivo lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing.</p>
-                        <Row>
-                            <Col sm="6">
-                                <Form.select
-                                    name={"field_sessionfirmeblob_naturascopo_0_id"}
-                                    value={formstate["field_sessionfirmeblob_naturascopo_0_id"]}
-                                    label="Scopo del rapporto di CC"
-                                    error={formstate.errors["field_sessionfirmeblob_naturascopo_0_id"]}
-                                    onChange={this.props.obchange}
-                                    placeholder="Seleziona..."
-                                    options={this.props.obdomini["adever_naturascopo"]}
-                                    output={isOutput}
-                                ></Form.select>
-                            </Col>
-                            { formstate["field_sessionfirmeblob_depositoincluso"]==="true" && 
-                            <Col sm="6">
-                                <Form.select
-                                    name={"field_sessionfirmeblob_naturascopodeposito_0_id"}
-                                    value={formstate["field_sessionfirmeblob_naturascopodeposito_0_id"]}
-                                    label="Scopo del rapporto di custodia titoli"
-                                    error={formstate.errors["field_sessionfirmeblob_naturascopodeposito_0_id"]}
-                                    onChange={this.props.obchange}
-                                    placeholder="Seleziona..."
-                                    options={this.props.obdomini["adever_naturascopodeposito"]}
-                                    output={isOutput}
-                                ></Form.select>
-                            </Col>
-                            }
-                        </Row>
                     </section>
                     <section className="onboarding-block">
                         <Adever int="0" {...this.props}></Adever>

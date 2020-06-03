@@ -68,7 +68,7 @@ $tipo_op_1 = array(1,2,3);
 <p>Esercitati nel trading online! Puoi creare fino a 8 portafogli virtuali per valutare la performance delle tue scelte di investimento in tutta sicurezza.</p>
 <br />
 
-<div id="collapse1b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1b" style="height: auto;">
+<div class="formGenerico borderFormRounded">
 
 
   <div class="form-group">
@@ -371,7 +371,7 @@ $tipo_op_1 = array(1,2,3);
                 </div>
             </div>
             <!-- Fine overlay di selezione -->
-
+          
             <!-- Attivazione Icona operativa-->
             <?php include("parts/icona_operativa.php"); ?>
             <!-- Fine attivazione icona operativa -->
@@ -455,10 +455,11 @@ $tipo_op_1 = array(1,2,3);
       </div>
     </div>
   </div>
+              </div>
   <div class="row">
     <div class="col-xs-12 col-sm-5">
       <a type="button" href="#" class="btn-icon-simula btn btn-primary">
-        <i class="icon icon_piumeno"></i>
+        <i class="icon icon-piumeno"></i>
         <span class="icon-text">Simula compravendita</span>
       </a>
       <br />
@@ -540,7 +541,7 @@ $tipo_op_1 = array(1,2,3);
           <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
       </div>
       <div class="btn-align-right">
-        <a class="btn-link-icon btn-tasso-cambio" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+        <a class="btn-link-icon btn-tasso-cambio" data-toggle="modal" data-target="#layerCambio"><i class="icon icon-cambi"></i><span>Tasso di cambio</span></a>
       </div>
       <br class="clear">
   </div>
@@ -550,7 +551,7 @@ $tipo_op_1 = array(1,2,3);
     <div class="col-xs-12 align-right marginTopMedium">Fonte dati: Borsa Italiana</div>
   </div>
 
-</div>
+
 
 <div class="modal fade" id="menuAzioni" tabindex="-1" role="dialog" aria-labelledby="menuAzioniLabel">
     <div class="modal-dialog modal-sm" role="document">
@@ -744,7 +745,7 @@ $tipo_op_1 = array(1,2,3);
                     <tr>
                       <td class="center">
                         <a class="btn-icon">
-                          <i class="icon icon-2x icon_piumeno"></i>
+                          <i class="icon icon-2x icon-piumeno"></i>
                         </a>
                       </td>
 

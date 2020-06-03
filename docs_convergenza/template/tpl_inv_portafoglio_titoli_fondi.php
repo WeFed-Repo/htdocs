@@ -27,9 +27,11 @@ $(function(){
 <!-- WRAPPER DEI RISULTATI DI PAGINA -->
 <div id="pageData" class="loading">
     <!-- FORM CON SELETTORI PER COLONNE E STRUMENTI -->
-    <form class="formGenerico noMarginBottom">
+    <form class="formGenerico borderFormRounded">
+
         <div class="row">
             <div class="col-sm-6">
+
                 <!-- SELECT MULTIFUNZIONE -->
                 <div class="form-group">
                     <label class="control-label">Colonne visibili</label>
@@ -72,10 +74,10 @@ $(function(){
                                 <div class="modal-body">
                                 <div class="headerContainerNoBootS">
                                     <div class="tableContainerNoBootS">
-                                        <table>
+                                        <table class="details-table">
                                             <thead>
                                                 <th></th>
-                                                <th class="left">Titolo/Fondo</th>
+                                                <th class="left">Titolo</th>
                                                 <th class="left">Mercato</th>
                                                 <th class="right">Q.t&agrave; in<br>portaf.</th>
                                                 <th class="right">Ult. prz.ora</th>
@@ -402,7 +404,7 @@ $(function(){
         <?php if ($site=="webank") { ?>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="form-group">
+                    <div class="form-group marginBottomNone">
                         <label class="control-label">Valorizzazione prezzi</label>
                         <div class="row">
                             <div class="col-xs-6 col-sm-3">
@@ -489,18 +491,19 @@ $(function(){
                                 });
                             
                             attivaIconaOperativa("#tablePortafoglio");
-                                                   
+                            
                         }
                 });
 
                 // Inizializza i filtri addizionali
                 initThFilter();
+
             });
         </script>
         <table cellspacing="0" cellpadding="0" border="0"  id="tablePortafoglio" class="sortableTable has-fixed-cols" data-fixed-cols="2">
             <thead>
                 <tr>
-                    <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#layerLegenda"><i class="icon icon-2x icon-info_fill"></i></a></th>
+                    <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#contenuti"><i class="icon icon-2x icon-info_fill"></i></a></th>
                     <th class="left filter" data-sortable="true" id="filterTitolo">Titolo/Fondo</th>
                     <th class="left">Mercato</th>
                     <th class="right">Q.t&agrave; in<br>portaf.</th>
@@ -519,7 +522,20 @@ $(function(){
                 for($x=0;$x<=10;$x++) {
                     ?>
                     <tr>
-                        <td class="center"><a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a></td>
+                        <td class="center">
+                        <?php if ($x==3) {
+                            ?>
+                                <span class="btn-icon btn-disabled icon icon-2x icon-ico_azioni02A" data-toggle="tooltip" data-container=".bootstrap-table" title="Lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude"></span>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                                <a class="btn-icon btn-icon-operativa" data-isin="<?php print (999990 + $x )?>"><i class="icon icon-2x icon-ico_azioni02A"></i></a>
+                            <?php
+                        }
+                          ?>  
+                        </td>
                         <td class="left">Titolo <?php print (999990 + $x ) ?></td>
                         <td class="left"><?php 
                             if ($x==0) {
@@ -568,7 +584,7 @@ $(function(){
                 <a class="btn-link-icon" href="#"><i class="icon icon-file_pdf_fill"></i><span>Scarica in PDF</span></a>
             </div>
             <div class="btn-align-right">
-                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon_cambi"></i><span>Tasso di cambio</span></a>
+                <a class="btn-link-icon" data-toggle="modal" data-target="#layerCambio"><i class="icon icon-cambi"></i><span>Tasso di cambio</span></a>
             </div>
             <br class="clear">
         </div>

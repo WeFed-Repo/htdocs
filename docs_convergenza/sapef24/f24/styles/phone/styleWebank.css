@@ -1,0 +1,270 @@
+
+@CHARSET "ISO-8859-1";
+.container {
+    padding-left: 0!important;
+	padding-right: 0!important;
+}
+.section {
+	background: none;
+}
+.form-group label:first-child, .form-horizontal .control-label, .paddingR, .paddingR + div[class*="col-"],
+.bs-example > .form-group > .control-label, .bs-example > .form-group > .control-label + div[class*="col-"],
+form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
+	padding-top: 15px;
+}
+
+.form-group > label:not(:first-child) {
+	padding-top: 10px;
+}
+
+@media (max-width: 672px) {
+    html, body {
+		background: unset !important;
+		padding:0 10px;
+	}
+	h1 { 
+        display: none;
+        width: 100% !important;
+		color: #1F2021 !important;
+		box-shadow: none !important;
+		border-bottom: none !important;
+		padding: 0 !important;
+		font-weight: 700 !important;
+		line-height: normal !important;
+		letter-spacing: 0 !important;
+		text-transform: uppercase !important;
+		margin-bottom: 0 !important;
+		font-size: 18px !important;
+	}
+	form[name="ricercaTributiForm"] > h1 {
+		display: block;
+	}
+	.CCselezionato{
+		background-color: #F2F3F5;
+	}
+    .titleSection, .titleSectionLong {
+		/*display: inline !important;*/
+		background-color: #fff !important;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        color: #1F2021;
+		font-weight: 700 !important;
+		padding-right: 0 !important;
+    }
+    .titleSectionOff {
+        color: #1F2021;
+		padding-right: 12px;
+		background: url(../../images/phone/arrow_we.png) right no-repeat;
+    }
+    .titleSectionOff a:link, .titleSectionOff a:active, .titleSectionOff a:visited, .titleSectionOff a:hover {
+        color: #1F2021;
+        text-decoration: underline;
+    }
+    .titleSectionOff a:hover {
+        color: unset;	
+    }
+    .titleSectionOff a:active {
+        color: unset;	
+    }
+    div.form-field-btn {
+        border: 2px solid #1F2021 !important;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+    .form-control, select.form-control, .form-control:focus, .form-control:disabled {
+        border-top: unset;
+        border-right: unset;
+        border-bottom: 1px solid #DADEE1;
+        border-left: unset;
+    }
+    .form-control, select.form-control {
+        font-size: 13px;
+        padding: 10px 0px 4px 0px;
+        color: #1F2021;
+    }
+    .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #1f2021;
+    }
+    .btn, .btn:link, input.btn, .btn:hover,.btn-primary:hover, input.btn:hover {
+        background: #1F2021 none repeat scroll 0 0 !important;
+    }
+    input[value="Indietro"], input[value="Indietro"]:hover, input[value="Annulla"], input[value="Annulla"]:hover, .btn.execute + .btn, #idButton, 
+	.nominativoSelezionato.clearfix > div[class*="col-"].rightButton > .btn {
+		width: 35%;
+		background-color: #FFF !important;
+	}
+    input[value="Avanti"], input[value="Avanti"]:hover, input[value="Salva"], input[value="Salva"]:hover,
+	button.btn.btn-primary, button.btn.btn-primary:hover,
+	input[value="Elimina riga"], input[value="Elimina riga"]:hover,
+	.btn.execute, .btn.execute:hover, .btn.execute {
+		width: 55% !important;
+		background-color: #F2F3F5 !important;
+	}
+	input[value="Avanti"], input[value="Avanti"]:hover, input[value="Salva"], input[value="Salva"]:hover, 
+	input[value="Elimina riga"], input[value="Elimina riga"]:hover, button.btn.btn-primary, button.btn.btn-primary:hover,
+	.btn.btn-primary, .btn.execute, .btn.execute:hover, .btn.execute + .btn, #idButton, 
+	.nominativoSelezionato.clearfix > div[class*="col-"].rightButton > .btn {
+		padding: 15px 0px 13px 0px !important;
+		color: #1F2021;
+		border-radius: 8px;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: none;								 
+    }
+    .btn.btn-primary.pull-right, .btn.execute, .btn.execute:hover {
+        border: 2px solid #F2F3F5 !important;
+    }
+    .btn.btn-primary, .btn.execute + .btn, #idButton, .nominativoSelezionato.clearfix > div[class*="col-"].rightButton > .btn {
+        border: 1px solid #DADEE1 !important;
+    }
+    input.btn.selezionato, input.btn.nonSelezionato {		
+        border-radius: unset;
+        padding: 5px 30px;
+        font-weight: bold;
+    }
+    .btn.selezionato:focus, .btn.selezionato:active{
+        background: #1F2021 !important;
+    }
+    input.btn.nonSelezionato, .btn.nonSelezionato:hover{
+        background-color: #FFF !important;
+        color: #1F2021;
+        border-radius: 8px;
+    }
+    #myCarouselRubrica #scrollNextRubricaId > img {
+        padding-top: 3px;
+    }
+	.section.clearfix > .riquadro.clearfix > h4 {
+		font-size: 14px;
+	}
+	.section.clearfix > .riquadro.clearfix > h4 + .phone, .error strong, .error .listaErrori .table td,
+	.riquadro.clearfix > .CCselezionato.clearfix > div[class*="col-"]:last-child, .nominativoSelezionato span,
+	form[name="ricercaTributiForm"] > p {
+		font-size: 12px;
+	}
+	.riquadro.clearfix > .clearfix .evidenziato {
+		font-size: 13px;
+		color: #000;
+	}
+	.phone span {
+		color: #A0ABBE;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.section.clearfix > .riquadro.clearfix .phone strong {
+		color: #1F2021;
+		text-transform: unset;
+	}
+	#myCarouselRubrica {
+		border-bottom: 1px solid #DADEE1;
+		margin-bottom: 15px;
+	}
+	.pull-right.margin-bottom20 {
+		width: 100%;
+		text-align: right;
+	}
+	select.form-control, input.form-control {
+		font-weight: normal;
+	}
+	select.form-control, .ui-combobox {
+		background: #fff url(../../images/phone/select_down_we.png) no-repeat 94% center;
+		background-position: calc(100%) center;
+	}
+	.paddingR + div[class*="col-"] {
+		padding-left: 20px;
+	}
+	.section.clearfix:not(.error):nth-of-type(2) .titleSection, .section.clearfix:not(.error) > .section.clearfix .titleSection, .section.clearfix:nth-of-type(2) .titleSectionLong {
+		text-transform: unset;
+		font-size: 20px;
+	}
+	.paddingR > .icheckbox_minimal-blue:first-of-type + label, .paddingR + div[class*="col-"] > .icheckbox_minimal-blue:first-of-type + label {
+		text-transform: none;
+		margin-left: 15px;
+	}
+	.ui-widget-header {
+		background: #1F2021 !important;
+		border: 1px solid #F2F2F2;
+	}
+	input:read-only, input:disabled {
+		background-color: #fff !important;
+		color: #C0C5C9 !important;
+	}
+	.pull-right.margin-bottom20 > .btn.btn-primary:first-child {
+		display: none;
+	}
+	div.messagePanel.error {
+		background: url(../../images/ico_msg_error.png) #fff 50% 5px no-repeat !important;
+	}
+	.riquadro {
+		border: none !important;
+		border-radius: unset !important;
+		box-shadow: unset !important;
+	}
+	.flag.pagamentoF24 + h1 {
+		border-bottom: none;
+		box-shadow: unset;
+	}
+	.messagePanel.error > .titleSection:first-child {
+		padding-top: 5em;
+		padding-left: 0px !important;
+		text-align: center;
+	}
+	.messagePanel ul, .messagePanel p {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		color: #000 !important;
+		text-align: center;
+	}
+	.messagePanel ul b, .messagePanel p b {
+		font-weight: unset !important;
+	}
+	.error .listaErrori .table td, .error strong {
+		font-size: 14px;
+	}
+	body, .riquadro, .form-group b, h4,
+	.error .titleSection, .alert .titleSection, .success .titleSection,
+	.table-responsive.phone div,
+	a, a:link, a:visited, a:active, a:focus {
+		color: #1F2021 !important;
+	}
+}
+
+@media (max-width: 414px) {
+  .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 386px) {
+  .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
+    font-size: 11px;
+  }
+}								   
+
+/*datepicker*/
+.ui-datepicker .ui-datepicker-prev {
+    margin:  3px 0 0 7px;
+}
+.ui-datepicker-prev span {
+    background: url(../../images/phone/new_datepicher_arrow_left.png) !important;
+    width: 7px;
+    height: 12px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    margin: 3px 0 0;
+}
+.ui-datepicker-next span {
+    background: url(../../images/phone/new_datepicher_arrow_right.png) !important;
+    width: 7px;
+    height: 12px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    height: 26px;
+}
+/*datepicker*/

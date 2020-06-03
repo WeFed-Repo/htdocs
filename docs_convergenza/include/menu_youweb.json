@@ -4,8 +4,11 @@
 		"voices": [
 			{
 				"nome": "Bancomat Pay",
-				"inlavorazione": true,
 				"tpl": "tpl_pagamenti_bancomat_pay.php"
+			},
+			{
+				"nome": "Bancomat Pay Gestione",
+				"tpl": "tpl_gestione_bancomat_pay.php"
 			}
 		]
 	},
@@ -24,11 +27,235 @@
 			}
 		]
 	},
+	
 	{
 		"nome": "Investimenti",
 		"voices": [
 			{
-				"nome": "La tua posizione",
+				"nome": "Posizione",
+				"voices": [
+					{
+						"nome": "Portafoglio titoli e fondi",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
+					},
+					{
+						"nome": "Posizione fiscale"
+					},
+					{
+						"nome": "Portafoglio Simulato",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_portafoglio_simulato.php"
+					},
+
+					{
+						"nome": "Ordini e Movimenti",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_ordini_e_movimenti.php"
+					}
+					
+				]
+			},
+			{
+				"nome": "Ricerca e compravendita",
+				"voices": [
+					{
+						"nome": "Ricerca generica",
+						"tpl": "tpl_responsive_ricerca_titoli_generica.php",
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Fondi e SICAV",
+						"voices": [
+							{
+								"nome": "Ricerca/Confronta",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_responsive_inv_ricerca.php"
+							},
+							{
+								"nome": "Scheda fondo",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_responsive_inv_scheda_fondo.php"
+							},
+							{
+								"nome": "Acquisto",
+								"tpl": "inv_fes_acquisto.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Vendita",
+								"tpl": "inv_fes_vendita.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Switch",
+								"tpl": "inv_fes_switch.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Versamenti aggiuntivi PAC",
+								"tpl": "inv_fes_versamentipac.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Watchlist",
+								"html": "mi",
+								"inlavorazione": true,
+								"tpl": "tpl_responsive_inv_watchlist.php"
+							}
+						]
+					},
+					{
+						"nome": "Azioni e Obbligazioni",
+						"voices": [
+							{
+								"nome": "Azioni",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Obbligazioni",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_obbligazioni.php",
+								"inlavorazione": true,
+								"html": "mi"
+							},
+							{
+								"nome": "Derivati",
+								"tpl": "tpl_responsive_ricerca_titoli_evoluta_derivati.php",
+								"inlavorazione": true,
+								"html": "mi"
+							}
+
+						]
+					},
+					{
+						"nome": "CW e certificates",
+						"tpl": "tpl_responsive_ricerca_titoli_evoluta_cw.php",
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "ETF Plus",
+						"tpl": "tpl_responsive_ricerca_titoli_evoluta_etf.php",
+						"html": "mi",
+						"inlavorazione": true
+					}					
+				]
+			},
+			{
+				"nome": "Mercati e quotazioni",
+				"voices": [
+					{
+						"nome": "Overview sui mercati",
+						"tpl": "tpl_responsive_overview.php",
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Italia",
+						"tpl": "tpl_responsive_overview_italia.php",
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Europa",
+						"html": "mi",
+						"inlavorazione": true
+					}
+					,
+					{
+						"nome": "America",
+						"html": "mi",
+						"inlavorazione": true
+					}
+					,
+					{
+						"nome": "News",
+						"tpl": "tpl_responsive_overview_news.php",
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Watchlist",
+						"tpl": "",
+						"html": "mi",
+						"inlavorazione": true
+					}
+				
+				]
+			},
+
+			{
+				"nome": "Analisi titoli",
+				"voices": [
+					{
+						"nome": "Grafici interattivi",
+
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Analisi TraderMade",
+
+						"html": "mi",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Analisi ADB",
+
+						"html": "mi",
+						"inlavorazione": true
+					}
+					
+				]
+			},
+			{
+				"nome": "Analisi Fondi e SICAV",
+				"voices": [
+					{
+						"nome": "Migliori e peggiori",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_fes_topandflops.php"
+					},
+					{
+						"nome": "Simulatore PAC",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_priv_fes_pac_ricerca.php"
+					},
+					{
+						"nome": "Tempi e costi",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_fes_tempi_costi.php"
+					},
+					{
+						"nome": "Le case di gestione",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_responsive_nostra_offerta.php"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Investimenti OLD",
+		"voices": [
+			{
+				"nome": "Posizione",
 				"voices": [
 					{
 						"nome": "Portafoglio fondi",
@@ -42,13 +269,8 @@
 						"inlavorazione": true,
 						"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
 					},
-
-
 					{
-						"nome": "Ordini e Movimenti",
-						"html": "mi",
-						"inlavorazione": true,
-						"tpl": "tpl_inv_ordini_e_movimenti.php"
+						"nome": "Posizione fiscale"
 					},
 					{
 						"nome": "Portafoglio Simulato",
@@ -57,26 +279,23 @@
 						"tpl": "tpl_inv_portafoglio_simulato.php"
 					},
 
-
 					{
-						"nome": "Posizione fiscale"
-					},
-					{
-						"nome": "Web Advisory"
-					},
-					{
-						"nome": "Deposito titoli GPM"
-					},
-					{
-						"nome": "Fondi preferiti"
+						"nome": "Ordini e Movimenti",
+						"html": "mi",
+						"inlavorazione": true,
+						"tpl": "tpl_inv_ordini_e_movimenti.php"
 					}
-				]
+					
+								]
 			},
 			{
-				"nome": "Compravendita fondi",
+				"nome": "Ricerca e compravendita",
 				"voices": [
+					
+
+
 					{
-						"nome": "Compravendita",
+						"nome": "Fondi e SICAV",
 						"voices": [
 							{
 								"nome": "Acquisto",

@@ -10,12 +10,12 @@
     .tooltip-inner {
       opacity: 1;
       background-color: $white;
-      padding: 15px;
+      padding: 15px; 
       position: relative;
       .closeTooltip {
         position: absolute;
-        top:0;
-        right:0;
+        top: -8px;
+        right: -8px;
       }
     }
     .tooltip-arrow {
@@ -23,19 +23,21 @@
       display: block;
       content: '';
       position: absolute;
-      border: transparent $arrowSize solid;
-      //box-shadow: 0 5px 5px $grayMidLight;
+      //border: transparent $arrowSize solid;
+      //box-shadow: 0 5px 5px $grayMidLight; 
     }
     &.top {
       padding-bottom: 10px;
       .tooltip-arrow {
         top: 100%;
-        left: 50% !important;
         border-top-color: $white;
         transform: translate(-($arrowSize/2),-($arrowSize*1.5));
 
       }
     }
+  }
+  @media (max-width:480px) {
+    & {max-width:300px !important;}
   }
 }
 

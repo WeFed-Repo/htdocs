@@ -1435,6 +1435,23 @@ table.commissionFuture td.bg-color-heading {
   background-color: #f2f2f2;
   border-right: 1px solid #c6c6c6;
 }
+table.details-table {
+  border: 0;
+}
+table.details-table thead th {
+  background-color: #e1e1e1;
+  border: 0;
+}
+table.details-table td {
+  border: 0;
+  border-bottom: 2px solid #e1e1e1;
+}
+table.details-table .sub td {
+  background-color: #f2f2f2;
+}
+table.details-table .sub td.indent {
+  padding-left: 30px;
+}
 table.valign-middle td {
   vertical-align: middle;
 }
@@ -1533,7 +1550,7 @@ table th.filter .filter-wrap {
 table th.filter .filter-wrap .filter-toggle {
   position: absolute;
   top: 7px;
-  right: 5px;
+  right: 15px;
   width: 25px;
   height: 25px;
   line-height: 24px;
@@ -1548,12 +1565,12 @@ table th.filter .filter-wrap .filter-toggle .icon {
   color: #fff;
   line-height: 24px;
 }
-table th.filter .filter-wrap .filter-toggle .icon_close {
+table th.filter .filter-wrap .filter-toggle .icon-close {
   display: none;
   font-weight: bold;
   color: #fff;
 }
-table th.filter .filter-wrap .filter-toggle .icon_close:before {
+table th.filter .filter-wrap .filter-toggle .icon-close:before {
   content: "\00D7";
 }
 table th.filter .filter-wrap input {
@@ -1564,7 +1581,7 @@ table th.filter.filter-opened .th-inner {
 }
 table th.filter.filter-opened .filter-wrap {
   width: 100%;
-  padding: 5px 35px 0 5px;
+  padding: 5px 45px 0 5px;
 }
 table th.filter.filter-opened .filter-wrap input {
   display: inline-block;
@@ -1581,10 +1598,10 @@ table th.filter.filter-opened .filter-wrap input:focus {
   outline: 0 none;
   box-shadow: 0 0 3px #8ab10b;
 }
-table th.filter.filter-opened .filter-wrap .icon_close {
+table th.filter.filter-opened .filter-wrap .icon-close {
   display: inline-block;
 }
-table th.filter.filter-opened .filter-wrap .icon_filter {
+table th.filter.filter-opened .filter-wrap .icon-filter {
   display: none;
 }
 table td {
@@ -2929,6 +2946,7 @@ table span.labelpir {
 }
 .tableContainerNoBootS {
   overflow-y: auto;
+  width: 100%;
 }
 .tableContainerNoBootS table {
   border-spacing: 0;
@@ -3130,6 +3148,7 @@ table .table-btn-more:hover {
         color: #F6CF00
       }
     }*/
+  /* Gruppo output in linea (label sempre a destra)*/
   /* Selettore conto */
 }
 .formGenerico .control-label,
@@ -3273,6 +3292,38 @@ table .table-btn-more:hover {
 }
 .formGenerico .icon-console a.btn-icon:first-child {
   margin-left: 0;
+}
+.formGenerico .inline-output {
+  width: 100%;
+  margin-bottom: 15px;
+  display: inline-table;
+}
+.formGenerico .inline-output .inline-output-left {
+  display: table-cell;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  vertical-align: top;
+}
+.formGenerico .inline-output .inline-output-right {
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 0;
+  text-align: right;
+  vertical-align: top;
+}
+.formGenerico .inline-output label {
+  font-weight: normal;
+}
+.formGenerico .inline-output .output {
+  font-weight: 600;
+  padding-top: 0;
+}
+.formGenerico .inline-output .output.txthelp {
+  display: inline;
+}
+.formGenerico .inline-output .output .text-link {
+  font-weight: normal;
 }
 .formGenerico .small {
   font-size: 0.85714286em;
@@ -4065,6 +4116,23 @@ a.autoSelButt,
   font-size: 10px;
   font-weight: bold;
 }
+/*INPUT CON CHECK DI SPUNTA*/
+.input-checked-wrapper {
+  position: relative;
+}
+.input-checked-wrapper .input-checked {
+  position: absolute;
+  top: 7px;
+  right: 0.5em;
+  z-index: 3;
+  padding: 1px 5px;
+  line-height: 17px;
+  color: #8ab10b;
+  display: none;
+}
+.input-checked-wrapper.check-visible .input-checked {
+  display: block;
+}
 /*CAMPI CHECK DISABILITATI CON TOOLTIP */
 .formGenerico .hovfincont {
   position: relative;
@@ -4840,6 +4908,20 @@ select#mercatop {
   .selectRapp .inputSx.form-control {
     font-size: 16px;
     height: 38px !important;
+  }
+}
+label.textWrapper .btn-icon {
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 11px;
+  margin-top: 3px;
+}
+label.textWrapper .btn-icon .icon {
+  font-size: 25px;
+}
+@media (max-width: 1023px) {
+  label.textWrapper .btn-icon {
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -5758,7 +5840,7 @@ table tr td.td-fondo .fundName {
   color: #000;
   overflow: hidden;
   line-height: 20px;
-  padding: 5px 0 5px;
+  padding: 7px 0 5px;
   display: inline-block;
 }
 .spsel .spsel-option:hover {
@@ -5808,7 +5890,7 @@ table tr td.td-fondo .fundName {
 }
 .spsel.spsel-hasconsole .spsel-btn-console {
   position: absolute;
-  top: 4px;
+  top: 2px;
   right: 20px;
 }
 .spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
@@ -5871,10 +5953,28 @@ table tr td.td-fondo .fundName {
 .has-error .spsel {
   border: solid 1px #f00;
 }
+@media (max-width: 1023px) {
+  .spsel {
+    height: 38px;
+  }
+  .spsel .spsel-selected {
+    height: 36px;
+  }
+}
 @media (max-width: 767px) {
   .spsel {
     margin-bottom: 14px;
   }
+}
+/* NUOVO SELETTORE RAPPORTO */
+.selettore-rapporto {
+  padding-bottom: 0;
+}
+.selettore-rapporto .selectRapp {
+  margin-bottom: 20px;
+}
+.selettore-rapporto .form-group {
+  margin-bottom: 0;
 }
 /* Classi aggiuntive per la griglia */
 .col-sep {
@@ -5892,7 +5992,7 @@ table tr td.td-fondo .fundName {
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
-  z-index: 1;
+  z-index: 10!important;
 }
 .tooltip.top {
   margin-top: -3px;
@@ -5993,6 +6093,7 @@ table tr td.td-fondo .fundName {
 .closeTooltip,
 .closeTooltip:hover {
   position: absolute;
+  z-index: 11;
   top: -10px;
   right: -10px;
   display: table;
@@ -12243,6 +12344,11 @@ span.trovati span {
   height: 34px;
   overflow: hidden;
   padding: 0 34px 0 8px;
+}
+#contenuti .magicSearch input:active,
+#contenuti .magicSearch input:focus {
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(111, 143, 10, 0.4);
 }
 #contenuti .magicSearch .msButton {
   position: absolute;

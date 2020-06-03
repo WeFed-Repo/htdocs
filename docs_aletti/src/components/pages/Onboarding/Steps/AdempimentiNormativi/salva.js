@@ -27,11 +27,9 @@ export default  {
             adever[v.toString()] = returnkv(form.domini[v]);
         });
 
-        // Associa i vari "name" per le varie risposte (tramite l'oggetto adever) perchè il backend non puo' alterarle
-        form["field_sessionfirmeblob_naturascopo_0_nome"] = adever["adever_naturascopo"][form["field_sessionfirmeblob_naturascopo_0_id"]];
-        form["field_sessionfirmeblob_naturascopodeposito_0_nome"] = adever["adever_naturascopo"][form["field_sessionfirmeblob_naturascopodeposito_0_id"]];
-        
         let adeverIds = [
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_naturascopo_0_id",
+            "field_sessionfirmeblob_intestatarifirme_0_listrispadever_naturascopodeposito_0_id",
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_professione_0_id",
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_taesettore_0_id",
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_fasciareddito_0_id",
@@ -40,6 +38,8 @@ export default  {
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_originefondi_0_id",
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_nazionalita_0_id",
             "field_sessionfirmeblob_intestatarifirme_0_listrispadever_provincia_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_naturascopo_0_id",
+            "field_sessionfirmeblob_intestatarifirme_1_listrispadever_naturascopodeposito_0_id",
             "field_sessionfirmeblob_intestatarifirme_1_listrispadever_professione_0_id",
             "field_sessionfirmeblob_intestatarifirme_1_listrispadever_taesettore_0_id",
             "field_sessionfirmeblob_intestatarifirme_1_listrispadever_fasciareddito_0_id",
@@ -57,17 +57,26 @@ export default  {
             form[v.replace("_0_id","_0_nome")] = adever[dominio][form[v]];
             
         })
-        
+
         // Compone l'oggetto firme
         let sFirme =  jsonFromFields(form)["sessionFirmeBlob"];
-        let firme =  {
-            "capitalizzazionePeriodica": [{"id":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"],"nome":"ALETTI_CAPITALIZZ_PERIODICA"}],
-            "intestatariFirme":sFirme["intestatariFirme"],
-            "naturaScopo": sFirme["naturaScopo"],
-            "naturaScopoDeposito": sFirme["naturaScopoDeposito"]
-        };
-
         
+        // Converte i dati del questionario da array ad oggetti
+        ["0","1"].forEach((int)=>{
+            Object.keys(sFirme["intestatariFirme"][int]["listRispAdever"]).forEach((key)=>{
+                sFirme["intestatariFirme"][int]["listRispAdever"][key] = Array(sFirme["intestatariFirme"][int]["listRispAdever"][key][0])
+            })
+        });
+        
+        
+
+
+        // Assembla l'oggetto per la spedizione
+        let firme =  {
+            "capitalizzazionePeriodica": [{"consenso":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]==="true","nome":"ALETTI_CAPITALIZZ_PERIODICA"}],
+            "intestatariFirme":sFirme["intestatariFirme"]
+        };
+       
 
         // Oggetto "data" del form
         let dataObj = {
@@ -80,6 +89,7 @@ export default  {
 
         console.log("------------------- OGGETTO DATA INVIATO --------------------");
         console.log(dataObj);
+        console.log(JSON.stringify(dataObj));
        
         return dataObj;
 

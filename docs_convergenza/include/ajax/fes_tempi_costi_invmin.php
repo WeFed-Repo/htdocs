@@ -104,7 +104,7 @@ virtual ("/core/functions.php");
 <h3>Sottoscrizione PAC</h3>
 <div class="headerContainerNoBootS">
     <div class="tableContainerNoBootS">
-		<table>
+		<table class="riepilogo">
 			<tbody>
 				<tr>
 					<th>Classi</th>

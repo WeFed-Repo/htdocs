@@ -88,6 +88,10 @@ p {
     line-height: 20px;
     padding-bottom: 20px;
     margin: 0;
+    
+}
+p>a {
+    text-decoration: underline;
 }
 
 p.small, span.small {
@@ -349,23 +353,31 @@ button {
     line-height: 14px;
     font-weight: 600;
     border: 0;
-    padding: 9px 28px 7px 28px;
+    padding: 11px 16px 7px 16px;
     color: #fff;
     background-color: #0e977f;
     background-image: none;
     text-transform: uppercase;
-    border-radius: 16px;
+    border-radius: 17px;
+    height: 34px;
+}
+.btn-primary.small, .btn-default.small, .btn-filtra.small, .btn-filtra-attivo.small, .btn-navigation.small,
+.btn.btn-small {
+    height: 25px;
+    padding: 5px 16px;
+    font-size: 12px;
+}
+.btn-primary.big, .btn-default.big, .btn-filtra.big, .btn-filtra-attivo.big, .btn-navigation.big, .btn-big {
+    height: 46px;
+    padding: 9px 24px;
+    font-size: 22px;
+    line-height: 27px;
+    border-radius:23px
 }
 .btn.btn-primary.btn-info, .btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus  {
     background-color: #202d50!important;
 }
-.btn.btn-primary.btn-info:hover {
 
-
-}
-.btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus {
-
-}
 .btn-filtra, .btn-filtra-attivo {
     font-size: 12px;
     letter-spacing: 0;
@@ -399,7 +411,7 @@ button {
 .btn-default:hover:active, .btn-default:active, .btn-default:focus {
     background-color: #C0C5C9;
     background-image: none;
-    padding: 9px 28px 7px 28px;
+    /*padding: 9px 28px 7px 28px;*/
     color: #fff;
     outline: 0;
     text-transform: uppercase;
@@ -619,11 +631,65 @@ table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
 table th {
     vertical-align: top !important
 }
+.headerContainerNoBootS {
+    position: relative;
+}
+.tableContainerNoBootS {
+    overflow-y: auto;
+    width: 100%;
+}
+.tableContainerNoBootS table {
+    border-spacing: 0;
+    width: 100%;
+}
 
 /* Subgroups */
-table tr.sub {background:#ddd}
-table tr.sub td {background:#ddd}
-table td.indent {padding-left:25px}
+table.details-table th{
+    background-color: #dadee2!important;
+    vertical-align: middle!important;
+}
+table.details-table td {
+    background-color: #fff;
+    border-bottom: 2px solid #dadee2!important;
+}
+table tr.sub {background:#eaeded}
+table tr.sub td {background:#eaeded}
+table td.indent {padding-left:30px}
+ 
+/* DI RIEPILOGO */
+
+table.riepilogo tr th {
+    background-color: #dadee2!important;
+    vertical-align: middle!important;
+    height: 50px;
+}
+table.riepilogo tr th.right {
+    text-align: right!important;
+}
+table.riepilogo tr td {
+    background-color: #fff!important;
+    border-bottom: 2px solid #f2f2f2!important;
+}
+table.riepilogo tr.totali td { background-color: #dadee2!important; border: 0!important}
+#mainContent table.riepilogo tr td[rowspan],
+#mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
+    border-right: 2px solid #f2f2f2!important;
+  }
+#mainContent table.riepilogo tr td[rowspan]:last-child {
+    border-left: 2px solid #f2f2f2!important;
+    border-right: 0 !important;
+  }
+/* Oggettini cross per tabelle */
+table .labelpir {
+    display: block;
+    width: 30px;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    height: 17px;
+    background: #202d50;
+    text-align: center;
+}
 
 input[type=checkbox] {
     width: 15px;
@@ -660,7 +726,17 @@ input[type='checkbox']:checked:before {
     vertical-align: middle;
     color: #202D50;
 }
+/*rimozione spinner dai campi number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type=number] {
+    -moz-appearance:textfield;
+}
+/*rimozione spinner dai campi number */
 .form-control[readonly] {
     cursor: not-allowed;
     background-color: #eee;
@@ -1083,8 +1159,7 @@ select:hover {
 .input-group-addon {
     padding: 0;
     border-radius: 0;
-    background-color: #DADEE1;
-
+    line-height: 0
 }
 
 .input-group-addon.date.btn-icon {
@@ -1469,10 +1544,7 @@ body.modal-open {
     padding-left: 1px;
     padding-right: 0;
 }
-.modal-body .btn-primary, .modal-body .btn-default, .modal-body .btn-filtra, .modal-body .btn-filtra-attivo,.modal-body .btn-navigation9px
-{
-    padding: 9px 10px 7px 10px;
-}
+
 .ui-dialog-titlebar-close .ui-icon-closethick {
     text-indent: 0;
     margin-top: -10px
@@ -1872,6 +1944,23 @@ span.alert, .alert {
     display: none !important;
 }
 
+/*INPUT CON CHECK DI SPUNTA*/
+.input-checked-wrapper {
+    position: relative;
+}
+.input-checked-wrapper .input-checked {
+    position: absolute;
+    top: 16px;
+    right: 0.5em;
+    z-index: 3;
+    padding: 1px 5px;
+    line-height: 17px;
+    display:none;
+} 
+.input-checked-wrapper.check-visible .input-checked 
+{
+    display:block
+}
 /*BOX DI OUTPUT */
 .resume {
     float: left;
@@ -2447,8 +2536,9 @@ span.spanQuestionario {
     }
 
     .btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo {
-        padding: 9px 13px 7px 13px;
+        /*padding: 9px 13px 7px 13px;
         letter-spacing: -0.1px;
+        */
         margin-bottom: 30px;
     }
 
@@ -2559,9 +2649,6 @@ span.spanQuestionario {
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-    .hidden-xs {
-        display: none !important;
-    }
     .assicurazioniBtnCalcola {
         min-height: 85px !important;
     }
@@ -2776,6 +2863,7 @@ span.spanQuestionario {
     text-align: left;
     border: 0;
     outline: 0;
+    background-color: transparent;
 }
 
 .inputSliderContainer .ui-slider-handle, .slider .ui-slider-handle {
@@ -4273,6 +4361,7 @@ label.select-button + span {
     min-height: 65px;
     overflow: hidden;
     background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center center;
+    float:left;
 }
 
 .loading * {
@@ -6252,9 +6341,8 @@ ul.ui-autocomplete {
 .popover.top > .arrow, .tooltip.top > .tooltip-arrow {
     bottom: -11px;
     left: 50%;
-    margin-left: -11px;
-    border-top-color: #999!important;
-    border-top-color: rgba(0, 0, 0, .25)!important;
+    margin-left: -12px;
+    border-top-color: rgba(0, 0, 0, .15)!important;
     border-bottom-width: 0!important;
     transform:none!important;
     top:auto!important;
@@ -6410,13 +6498,11 @@ div[id*="popover"] .popover-content {
 .spsel.nosel .spsel-selected .spsel-option-el {
   color: #aaa;
 }
-
 .spsel .spsel-selected {
   width: 100%;
   background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
   height:48px;
 }
-
 .spsel .spsel-selected .only-detail {
   display: none;
 }
@@ -6441,7 +6527,7 @@ div[id*="popover"] .popover-content {
   border-top: none;
 }
 .spsel .spsel-options .spsel-option .selected {
-  display: none;
+      display: none;
 }
 .spsel .spsel-option {
   position: relative;
@@ -6460,7 +6546,8 @@ div[id*="popover"] .popover-content {
 }
 .spsel .spsel-option .spsel-addel .icon {
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 13px;
+  color: #202D50;
 }
 .spsel .spsel-option .spsel-option-el {
   width: 100%;
@@ -6471,14 +6558,14 @@ div[id*="popover"] .popover-content {
   color: #000;
   overflow: hidden;
   line-height: 20px;
-  padding: 15px 0 15px;
+  padding: 15px 0 5px;
   display: inline-block;
 }
 .spsel .spsel-option:hover {
   background-color: #f1f1f1;
 }
 .spsel.spsel-hasicon .spsel-option {
-  padding-left: 35px;
+  padding-left: 40px;
 
 }
 .spsel.spsel-hasicon.nosel .spsel-option.spsel-selected {
@@ -6501,6 +6588,7 @@ div[id*="popover"] .popover-content {
 .spsel.output .spsel-option {
   background-image: none;
   background-color: transparent;
+  padding-left:35px;
 }
 .spsel.output .spsel-option .spsel-addel {
   width: 25px;
@@ -6510,16 +6598,47 @@ div[id*="popover"] .popover-content {
 .spsel.spsel-hasconsole .spsel-option {
     position:relative;
 }
-.spsel.spsel-hasconsole .spse-option-el {
+.spsel.spsel-hasconsole .spsel-option-el {
     padding-right:100px;
 }
 
+.spsel.spsel-hasconsole .spsel-selected {
+    padding-right:0
+}
+
 .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
-    width: 100px;
+    width: 80px;
     position: absolute;
     text-align: right;
     top: 12px;
-    right: 30px;
+    right: 35px;
+}
+
+.spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
+    margin:0 0 0 10px;
+}
+
+/* Versione checkbox */
+.spsel.spsel-check .spsel-options label{
+    width:100%;list-style-type:none;
+    position:relative;
+    padding-left:20px;
+    padding-top:10px;
+    padding-right:10px;
+}
+.spsel.spsel-check .spsel-options label input {
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.spsel.spsel-check .spsel-options .spsel-option-el,.spsel.spsel-check .spsel-options .spse-countdetail {
+    display: inline;
+    white-space: normal;
+}
+
+
+.has-error .spsel {
+    border:solid 1px #f00;
 }
 
 @media (max-width: 767px) {
@@ -6657,7 +6776,7 @@ span.paddingLeft {
 
 /* Tabella_001, INIZIO */
 .icon-check_ok:before {
-    font-size: 36px;
+    font-size: 24px;
     color: #3AA746;
 }
 
@@ -7146,7 +7265,7 @@ a.tooltip-masked-link {color:#00a592;text-decoration: underline}
     }
 
     .spsel .spsel-option .spsel-option-el {
-        padding: 10px 0 15px;
+        padding: 10px 0 5px;
     }
 
 
@@ -7222,9 +7341,18 @@ div.fixed-table-scroll-outer {
 .linee-wrapper .lineaT {float:left;padding-left: 46%;height:30px;font-weight: bold}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
 .textWrapper {position:relative;}
-
+.textWrapper a { text-decoration: underline; cursor:pointer }
 .bootstrap-table {
     position:relative
+}
+
+/* Iconcina help per checkbox e radio */
+.textWrapper .btn-icon {top: -5px;
+    border-bottom: 0 !important;
+    overflow: visible;
+    height: 17px;
+    line-height: 13px;
+    margin-bottom: 0;
 }
 
 .bootstrap-table .fixed-columns {
@@ -7437,14 +7565,14 @@ div.fixed-table-scroll-outer {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom:30px;
-    position: relative;;
+    position: relative;
 }
 
 .garanzia-add {
     padding: 0 20px 20px;
     margin-bottom:30px;
 }
-.garanzia-box .btn-elimina, .btn-aggiungi {
+.garanzia-box .btn-elimina, .garanzia-box .btn-aggiungi {
     position: absolute;
     top: -15px;
     background: white;
@@ -7458,3 +7586,45 @@ div.fixed-table-scroll-outer {
 .formWrapper .form-group.det-modifica .alignLeft.btnWrapper a:first-child {
     margin-left: 0
 }
+.garanzia-box .titolo-box {
+    position: absolute;
+    right: 20px;
+    top:-10px;
+    background:#fff;
+    font-weight: bold;
+    padding: 0 5px;
+}
+.wrapper-garanzie label {
+    width: 100%;
+}
+/* PromoBox investimento */
+.promoBox .imgVisual{ float:left; margin: 0 25px 20px 0}
+@media (max-width:991px) {
+    .promoBox .imgVisual{
+        float: none;
+        margin: 0 auto 25px;
+        display: block;
+        text-align: center;
+        width: 200px;
+    }
+}
+
+/* Nuovo selettore rapporto */
+.selettore-rapporto .form-group {margin-bottom:10px;}
+.selettore-rapporto .selectRapp  {margin-bottom:0;}
+.selettore-rapporto .bordered-you {margin-top:-5px;}
+
+/* output inline */
+.inline-output {display:inline-table;width:100%;}
+.inline-output .output {padding:0;}
+.inline-output .output.txthelp {display:inline !important;float:none !important}
+.inline-output .inline-output-left {display:table-cell;text-align:left !important;padding-right:5px; vertical-align:top;float:none !important;max-width:100% !important}
+.inline-output .inline-output-right {display:table-cell;text-align:right; vertical-align:top;float:none !important;max-width:100% !important}
+
+@media (max-width: 921px) {
+    .inline-output {margin-bottom:13px;}
+    .inline-output .output {
+        margin-bottom:0 !important;
+    }
+}
+

@@ -9,7 +9,7 @@
         <div class="slider-map-graph">
             <div class="slide slide-01 slide-active">
                 <div class="map-container">
-                    <img class="map-bkg" src="/WB/fe/img/trading_world_map.png" />
+                    <img class="map-bkg" src="/<?php print ($site==="webank")? "WB" : "HT";?>/fe/img/trading_world_map.png" />
                     <div class="map-pin" id="mrk_dowjones" data-mrk="DOW JONES">
                         <div class="map-tooltip is-positivo">
                             <span class="map-tooltip--title">DowJones</span>

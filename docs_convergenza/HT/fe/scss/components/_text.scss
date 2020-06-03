@@ -19,18 +19,34 @@ h2 {
     font-weight: bold;
     display: block;
 }
+
+@media screen and (max-width:  767px) {
+    .tab-wrap .control-label + span.output, 
+    .tab-wrap .control-label + .tooltip + span.output,
+    .control-label-output + span.output,
+    .control-label-output + .tooltip + span.output
+    {
+        margin-bottom: 14px;
+    }
+}
+
 strong .tooltip-inner, h4 .tooltip-inner {
     font-weight: normal!important;
     b, strong {
         font-weight: bold!important;
     }
 }
-
-h4.txthelp.control-label, div.txthelp.control-label {
+/* tooltip inline*/
+h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
     display: inline-block;
 }
 @media (max-width:767px) {
     .note.flRight.noFloatMobile {
         span.flLeft {display:none}
     }
+}
+
+.openinfo .icon {
+    text-align:middle;
+    margin-right:5px;
 }

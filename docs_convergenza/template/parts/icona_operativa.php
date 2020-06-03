@@ -3,9 +3,8 @@
 
     var attivaIconaOperativa = function(wrapper){
         chiudiIconeOper();
-        var icoGroup = (typeof wrapper== "string")? $(wrapper +" .btn-icon-operativa") : $(".btn-icon-operativa");
-        icoGroup.click(apriBoxOperativita);
-        
+        var icoGroup = (typeof wrapper== "string")? $(wrapper +" .btn-icon-operativa"): $(".btn-icon-operativa");
+        icoGroup.not(".btn-disabled").click(apriBoxOperativita);
     }
 
     var chiudiIconeOper = function(){

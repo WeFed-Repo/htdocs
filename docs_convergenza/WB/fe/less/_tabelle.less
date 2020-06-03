@@ -223,7 +223,26 @@ table {
             border-right: 1px solid @borderColorCel;
         }
     }
-
+    &.details-table{
+        border: 0; 
+        thead th {
+            background-color: #e1e1e1;
+            border: 0;
+        }
+        td {
+            border: 0;
+            border-bottom: 2px solid #e1e1e1;
+        }
+        .sub {
+            td {
+                background-color: #f2f2f2;
+                &.indent{
+                    padding-left:30px;
+                }
+            }
+        }
+       
+    }
     &.valign-middle td {
         vertical-align: middle
     }
@@ -346,7 +365,7 @@ table {
             .filter-toggle{
                 position: absolute;
                 top: 7px;
-                right: 5px;
+                right: 15px;
                 width: 25px;
                 height: 25px;
                 line-height: 24px;
@@ -360,7 +379,7 @@ table {
                     color: #fff;
                     line-height:24px;
                 }
-                .icon_close {
+                .icon-close {
                     display: none;
                     font-weight:bold;
                     color: #fff;
@@ -371,31 +390,31 @@ table {
             
             }
             &.filter-opened {
-            .th-inner {visibility:hidden;}
-            .filter-wrap {
-                width:100%;
-                padding: 5px 35px 0 5px;
-                input {
-                display: inline-block;
-                border: solid 1px #ccc;
-                height: 30px;
-                color: #333;
-                font-weight: normal;
-                width:100%;
-                padding: 5px;
-                &:hover,&:active,&:focus {
-                    outline:0 none;
-                    box-shadow: 0 0 3px #8ab10b;
-                }
-                }
-                .icon_close {
-                display: inline-block;
-                } 
-                .icon_filter {
-                display: none;
-                }
+                .th-inner {visibility:hidden;}
+                .filter-wrap {
+                    width:100%;
+                    padding: 5px 45px 0 5px;
+                    input {
+                    display: inline-block;
+                    border: solid 1px #ccc;
+                    height: 30px;
+                    color: #333;
+                    font-weight: normal;
+                    width:100%;
+                    padding: 5px;
+                    &:hover,&:active,&:focus {
+                        outline:0 none;
+                        box-shadow: 0 0 3px #8ab10b;
+                    }
+                    }
+                    .icon-close {
+                        display: inline-block;
+                    } 
+                    .icon-filter {
+                        display: none;
+                    }
 
-            } 
+                } 
             
             }
         }
@@ -2106,6 +2125,7 @@ table span.labelpir {
 
 .tableContainerNoBootS {
     overflow-y: auto;
+    width: 100%;
 }
 
 .tableContainerNoBootS table {

@@ -62,6 +62,7 @@
                         <span class="hrTit"><span>Old</span></span>
                         <a href="http://youweb.wefed.local/">YouWeb OLD</a>
                         <a href="http://libreriewebank.wefed.local/connect.php?page=librerie.php&pag=indice&customer=ret">Webank parte privata OLD</a>
+                        <a href="http://librerieadmin.wefed.local/connect.php?page=librerie.php&pag=indice&customer=ret">Webank admin</a>
                     </div>
                 </div>
             </div>

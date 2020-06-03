@@ -504,3 +504,10 @@
     border-right: 1px solid #e3e3e3;
   }
 }
+
+@media(max-width:767px) {
+  .panel-body {
+    padding-left:0;
+    padding-right:0;
+  }
+}

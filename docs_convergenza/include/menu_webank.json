@@ -58,6 +58,11 @@
 				"nome": "Confronta carte",
 				"inlavorazione": true,
 				"tpl": "tpl_responsive_confronta_carte.php"
+			},
+			{
+				"nome": "Gestione Bancomat Pay",
+				"tpl": "tpl_gestione_bancomat_pay.php",
+				"html": "vr"
 			}
 		]
 	},
@@ -152,7 +157,17 @@
 			},
 			{
 				"nome": "Mercati e quotazioni",
+				
 				"voices": [
+					{
+						"nome": "Azioni",
+						"voices": [
+							{
+								"nome": "Overview",
+								"tpl": "tpl_responsive_overview.php"
+							}
+						]
+					},					
 					{
 						"nome": "Certificates",
 						"voices": [

@@ -3,7 +3,7 @@
   float:left;
   font-weight: normal;
   width: 100%;
-  &.txthelp {
+  &.txthelp { 
      width: auto;
      float: none;
   }
@@ -36,7 +36,18 @@
     box-shadow: none;
   }
   .form-group {
-    label { min-height: 13px;}
+    label { min-height: 13px;
+    
+      .textWrapper {
+        position:relative;
+        padding-left:25px;
+        input {
+          margin-right:5px;
+          margin-right:-25px;
+        }
+      }
+    
+    }
     &.btnWrapper {
       .btn-align-left {
         margin-right: 0;
@@ -270,6 +281,10 @@ input[type=checkbox] {
     height: 26px;
     line-height: 26px;
     float:left;
+    max-width: calc(100% - 10px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     cursor:pointer;
     text-decoration:underline;
     color: $primary;
@@ -538,7 +553,7 @@ input[type=checkbox] {
   .icon {
     position: absolute;
     right:15px;
-    top:3px;
+    top:7px;
   }
 
 }
@@ -873,7 +888,13 @@ a.output {color: $primary;text-decoration:underline}
 /* Selettore rapporto/deposito */
 .selectRapp {
   position:relative;
-  &>.inputOption {background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center}
+  margin-bottom:15px;
+  &>.inputOption {
+    background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center; 
+    @media(max-width:991px) {
+      & {line-height:27px;}
+    }
+  }
 }
 
 .form-group.w100 {
@@ -883,139 +904,10 @@ a.output {color: $primary;text-decoration:underline}
 }
 
 /* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
-
 .spsel {
-    width:100%;
-    background-color:#fff;
-    position:relative;
-    background-size:20px 20px;
-    height:50px;
-    padding: 0 !important;
-    &.loading {height:48px;}
-    .spsel-selected {
-      width: 100%;
-      height: 48px;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      display: block;
-      float: left;
-      position: relative;
-      background: transparent url(/HT/fe/img/select_down.gif) no-repeat calc(100% - 10px) center;
-      .only-detail {display:none;}
-      &.spsel-option:hover {background-color:#fff;};
-    }
-    &.nosel {.spsel-selected .spsel-option-el {color:#aaa;}}
-    .spsel-options {display:none;border: solid 1px #ccc; width: 100%;box-shadow: 0 5px 10px rgba(0,0,0,0.2);background: #fff; max-height: 320px; overflow-y: auto;z-index:1;
-        .spsel-option {border-top:solid 1px #eee;
-            &:first-child {border-top:none};
-            .selected {display:none};
-        }
-    }
-    .spsel-option {
-        position:relative; padding: 0 0 0 10px;
-        .spsel-addel { position: absolute;
-            top: 0;
-            width: 34px;
-            text-align: center;
-            height: 48px;
-            font-size: 25px;
-            line-height:50px;
-            left: 0;
-            .icon {font-size:25px;}
-        }
-        .spsel-option-el {
-           width: 100%;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            text-decoration: none;
-            color: #000;
-            overflow: hidden;
-            line-height: 40px;
-            padding:5px 0 5px;
-            display: inline-block;
-        }
-        &:hover {background-color:#f1f1f1;}
-    }
-    &.spsel-hasicon{
-        .spsel-option {padding-left:35px;}
-        &.nosel .spsel-option.spsel-selected {
-            padding-left:0;
-            .spsel-option-el {padding-left:10px;padding-right:15px;}
-        }
-    }
-    &.spsel-hasactions{
-      .spsel-option {padding-right:80px;}
-      &.nosel .spsel-option.spsel-selected {
-          padding-left:0;
-          .spsel-option-el {
-            padding-right:10px;
-            padding-left:15px;
-          }
-      }
-      .spsel-addel {
-        left: auto;
-        right:45px;
-        &:last-child {
-          right: 5px;
-        }
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-      .spsel-option.spsel-selected {
-        .spsel-option {padding-right:0;}
-        .spsel-addel { display: none; }
-      }
-    }
-    &.spsel-hasconsole{
-        .spsel-option {
-          padding-right:100px;
-          &.spsel-selected {
-            padding-right:0;
-            .spsel-btn-console {display:none;}
-          }
-        }
-       .spsel-btn-console {
-            position: absolute;
-            top: 4px;
-            right: 20px;
-            .btn-icon {
-                margin-left:10px;
-            }
-            .icon-row_expand {display:inline-block;cursor:pointer}
-        }
-    }
-    &.opened {z-index:2;
-        .spsel-options {display:block;}
-    }
-    /*  Versione solo layout */
-    &.output {
-        border:0 none;background-color: transparent;
-        .spsel-option{
-            background-image: none;
-            background-color: transparent;
-            .spsel-addel {width:25px;margin-left:0;}
-        }
-
-    }
-    &.spsel-check {
-        .spsel-option {
-            label {width: 100%;
-                position: relative;
-                padding: 8px 0 8px 20px;
-                font-weight: normal;
-                input {position:absolute; top:8px;left:0;}
-                .spsel-option-el {display:inline;
-                        .rating { display: inline-block;margin: 0 0 0 5px;}
-                }
-                .spse-countdetail {float:right; padding-right:10px; color:#aaa;}
-            }
-        }
-    }
-
-    .has-error & {
-        border:solid 1px #f00;
-    }
+   .spsel-btn-console {
+     line-height:20px;
+   }
 }
 
 .totCols.has-error {
@@ -1105,3 +997,24 @@ a.output {color: $primary;text-decoration:underline}
 
 }
 
+/* Selettore rapporto/deposito */
+#selDepForm {
+  label.control-label-output {float:left;width:auto;}
+  span.output {float:right;width:auto;text-align:right;} 
+  .no-label {padding-top:0;
+    .output {float:left;text-align:left}
+  }
+
+  @media (max-width:767px) {
+    & {
+      .form-group {
+        margin-bottom:0
+      }
+      .output {
+        max-width:80%;
+        text-align:right;
+        margin-bottom:15px;
+        }
+    }    
+  }
+}

@@ -420,6 +420,24 @@
             </div>
           </div>
         </div>
+        <!-- INPUT CON SPUNTA PER CONFERMA INSERIMENTO/TOGLIERE E AGGIUNGERE LA CLASSE check-visible ALL'OCCORRENZA PER NASCONDERE E VISUALIZZARE LA SPUNTA-->
+        <div class="form-group">
+          <div class="row ">
+              <div class="col-xs-12 col-sm-6">
+                <div class="input-checked-wrapper check-visible" id="input-to-check">  
+                   <input type="text" class="form-control">
+                   <!-- -->
+                   <span class="input-checked">
+                      <i class="icon icon icon-spunta"></i>
+                   </span>
+                 </div>
+              </div>
+              <!-- EMULAZIONE DI SPUNTA -->
+              <div class="col-xs-12 col-sm-6">
+                  <a style="text-decoration: underline; cursor pointer;" href="javascript:;" onclick="$('#input-to-check').toggleClass('check-visible')">EMULA LA SPUNTA NEL CAMPO INPUT</a>
+              </div>
+          </div>              
+        </div>
 	</div>
 
 

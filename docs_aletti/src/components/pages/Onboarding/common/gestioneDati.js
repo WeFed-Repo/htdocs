@@ -22,25 +22,27 @@ const defaultFields = {
             "consenso": ""
         },
         "codicePratica": "",
-        "naturaScopo": [
-            {
-                "id": "",
-                "nome": ""
-            }
-        ],
-        "naturaScopoDeposito": [
-            {
-                "id": "",
-                "nome": ""
-            }
-        ],
+        
         "intestatariFirme": {
             "0": {
+                
                 "fasciaRedditoNote":"",
                 "origineRedditoNote":"",
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
+                    "naturaScopo": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
+                    "naturaScopoDeposito": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
                     "professione": [
                         {
                             "id": "",
@@ -104,6 +106,18 @@ const defaultFields = {
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
+                    "naturaScopo": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
+                    "naturaScopoDeposito": [
+                        {
+                            "id": "",
+                            "nome": ""
+                        }
+                    ],
                     "professione": [
                         {
                             "id": "",
@@ -180,24 +194,23 @@ const defaultFields = {
                 "telefono": "",
                 "listPrivacy": [
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_1",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_2",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_3",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
-
+                        "codDisclaimer": "ALETTI_ANAG_CONS_4",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_5",
                         "consenso": ""
                     }
                 ],
@@ -205,13 +218,12 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
-                        "codiceUic": "",
+                        "codiceUic": "86",
                         "tin": "",
-                        "descrizione": "",
+                        "descrizione": "ITALIA",
                         "imgTin": []
                     },
                     {
@@ -283,24 +295,23 @@ const defaultFields = {
                 "telefono": "",
                 "listPrivacy": [
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_1",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_2",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_3",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
-
+                        "codDisclaimer": "ALETTI_ANAG_CONS_4",
                         "consenso": ""
                     },
                     {
-                        "codDisclaimer": "",
+                        "codDisclaimer": "ALETTI_ANAG_CONS_5",
                         "consenso": ""
                     }
                 ],
@@ -308,13 +319,12 @@ const defaultFields = {
                 "provinciaNascita": "",
                 "cittadinanza": "",
                 "comuneNascita": "",
-                "imgFirma": [],
                 "listResidenzeFiscale_length": "",
                 "listResidenzeFiscale": [
                     {
-                        "codiceUic": "",
+                        "codiceUic": "86",
                         "tin": "",
-                        "descrizione": "",
+                        "descrizione": "ITALIA",
                         "imgTin": []
                     },
                     {
@@ -386,8 +396,27 @@ let typeKeys = {
     "boolean": [
         "field_anagraficablob_privacyletta",
         "field_anagraficablob_intestatari_0_listprivacy_0_consenso",
-        "field_intestatarifirme_0_titolareeffettivo",
-        "field_intestatarifirme_1_titolareeffettivo"
+        "field_anagraficablob_intestatari_0_listprivacy_1_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_2_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_3_consenso",
+        "field_anagraficablob_intestatari_0_listprivacy_4_consenso",
+        
+        "field_anagraficablob_intestatari_1_listprivacy_0_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_1_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_2_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_3_consenso",
+        "field_anagraficablob_intestatari_1_listprivacy_4_consenso",
+
+        "field_sessionfirmeblob_depositoincluso",
+        "field_sessionfirmeblob_informativamifid",
+        "field_sessionfirmeblob_intestatarifirme_0_titolareeffettivo",
+        "field_sessionfirmeblob_intestatarifirme_0_personaesposta",
+        "field_sessionfirmeblob_intestatarifirme_0_cellcertif",
+        "field_sessionfirmeblob_intestatarifirme_0_emailcertif",
+        "field_sessionfirmeblob_intestatarifirme_1_sessioneconclusa",
+        "field_sessionfirmeblob_intestatarifirme_1_titolareeffettivo"
+        
+
     ],
     "timestamp": [
         "field_datainserimento",
@@ -403,8 +432,17 @@ let typeKeys = {
     "file" : [
         "field_anagraficablob_intestatari_0_imgcodfiscale",
         "field_anagraficablob_intestatari_0_imgdocidentita",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_0_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_1_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_2_imgtin",
+        "field_anagraficablob_intestatari_0_listresidenzefiscale_3_imgtin",
         "field_anagraficablob_intestatari_1_imgcodfiscale",
         "field_anagraficablob_intestatari_1_imgdocidentita",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_0_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_1_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_2_imgtin",
+        "field_anagraficablob_intestatari_1_listresidenzefiscale_3_imgtin"
+
     ]
 }
 
@@ -420,7 +458,7 @@ let decodeField = (fieldkey, fieldval) => {
             outval = Functions.timestampToText(fieldval);
         }
         else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
-            outval = (fieldval) ? "true" : ""
+            outval = (fieldval===true) ? "true" : ""
         }
         else if (typeKeys["file"].indexOf(fieldkey) >= 0) {
             outval = fieldval;
@@ -472,11 +510,9 @@ let objFormTranslate = function () {
             if (typeof json[v] !== "object" || json[v] === null || typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
                 node[v] = prefisso + "_" + v.toLowerCase();
             }
-
             else {
                 node[v] = extractObject(prefisso + "_" + v.toLowerCase(), json[v])
             }
-
         });
         return node;
     }
@@ -549,4 +585,4 @@ let jsonFromFields = (objState) => {
 
 }
 
-export { defaultFields, fieldsFromJson, jsonFromFields }
+export { defaultFields, fieldsFromJson, jsonFromFields}

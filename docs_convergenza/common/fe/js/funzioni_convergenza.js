@@ -1736,6 +1736,7 @@ var resizeTab = function (idTab, indexTabOpened) {
         tabLi.each(function (index) {
             $(this).click(function (e) {
                 e.preventDefault();
+                ttHide();
                 $(this).siblings('li').removeClass('borderNoTab');
                 $(this).addClass('on').removeClass('borderNoTab').prev().addClass('borderNoTab');
                 $(this).siblings('li').removeClass('on');
@@ -3438,6 +3439,7 @@ var initTooltip = function (wrapper) {
     var $wrapper = $(wrapper || 'body');
     $wrapper.find("[data-toggle='tooltip']").not(".inited").tooltipPlus().addClass("inited").on('shown.bs.tooltip', function () {
         $('.tooltip').css('z-index', getNextHighestZindex());
+        if (feBank==="youweb")  $('.tooltip').css('margin-left', "5px");
     });
 
     // html complesso per i tooltip con ID indicato
@@ -3599,6 +3601,7 @@ var styleSortTable = function () {
             $table.find('.sortable').closest('th').addClass('sortableTh');
             $table.find('.sortable.both').closest('th').removeClass('sortedTh');
             $table.find('.sortable.desc,.sortable.asc').closest('th').addClass('sortedTh');
+            $table.find('*[data-toggle=tooltip].inited').removeClass("inited");
             initTooltip();
         });
     });
@@ -3610,14 +3613,14 @@ var columnBsFixedResize;
 var columnBsFixed = function(){
 
     var tbHfc =  $("table.has-fixed-cols");
-
+    
     if (tbHfc.length>0) {
 
         // Handler per il resize
         columnBsFixedResize = function() {
             $("table.has-fixed-cols").each(function(){
                 var tb = $(this);
-                var tbw = tb.width();
+                var tbw = tb.outerWidth();
                 tb.parents(".bootstrap-table").find(".fixed-columns table").css("width",tbw + "px")
             });
         }
@@ -3641,7 +3644,7 @@ var columnBsFixed = function(){
                     fixWidth += tbs.find("th").eq(x).outerWidth()
                 }
 
-                var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.width() + "px");
+                var tbfix = tbs.clone(true).attr("id",tbs.attr("id")+"_columnsort").css("width", tbs.outerWidth() + "px");
 
                 // Regole per il controllo dei "sortable"
                 tbfix.find('.sortable').closest('th').addClass('sortableTh');
@@ -3652,7 +3655,16 @@ var columnBsFixed = function(){
                     $("<div>").addClass("fixed-columns").append(tbfix).css({"width": fixWidth + 1 + "px"})
                 );
 
-
+                // Reinizializzazione dei tooltip
+                tbfix.find("*[data-toggle=tooltip]").each(function(){
+                  var el = $(this);
+                  el.removeClass("inited").unbind();
+                  var clone = el.clone();
+                  elPr = el.parent();
+                  el.remove();
+                  elPr.append(clone);
+                });
+                initTooltip();
             });
 
 

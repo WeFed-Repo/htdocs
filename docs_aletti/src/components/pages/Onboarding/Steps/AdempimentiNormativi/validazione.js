@@ -5,16 +5,13 @@ export default function(form) {
         obbligatorimsg = "Compila";
 
     // Check campi obbligatori tramite array
-    let obbligatori = ["field_sessionfirmeblob_naturascopo_0_id","field_sessionfirmeblob_capitalizzazioneperiodica_consenso"];
-
-    // Eventuali campi obbligatori "condizionati" dalla presenza o dal valore di altri
-
-   
+    let obbligatori = ["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"];   
 
     // Campi obbligatori primo intestatario
     let obbligatori1int = [
         "field_sessionfirmeblob_intestatarifirme_0_titolareeffettivo",
         "field_sessionfirmeblob_intestatarifirme_0_personaesposta",
+        "field_sessionfirmeblob_intestatarifirme_0_listrispadever_naturascopo_0_id",        
         "field_sessionfirmeblob_intestatarifirme_0_listrispadever_professione_0_id",
         "field_sessionfirmeblob_intestatarifirme_0_listrispadever_taesettore_0_id",
         "field_sessionfirmeblob_intestatarifirme_0_listrispadever_nazionalita_0_id",
@@ -25,7 +22,7 @@ export default function(form) {
     ];
 
     // Altri campi obbligatori condizionati 
-    if (form["field_sessionfirmeblob_depositoincluso"]==="true")  obbligatori.push("field_sessionfirmeblob_naturascopodeposito_0_id");
+    if (form["field_sessionfirmeblob_depositoincluso"]==="true")  obbligatori1int.push("field_sessionfirmeblob_intestatarifirme_0_listrispadever_naturascopodeposito_0_id",);
     if (form["field_sessionfirmeblob_intestatarifirme_0_listrispadever_nazionalita_0_id"]==="86") obbligatori1int.push("field_sessionfirmeblob_intestatarifirme_0_listrispadever_provincia_0_id");
 
 

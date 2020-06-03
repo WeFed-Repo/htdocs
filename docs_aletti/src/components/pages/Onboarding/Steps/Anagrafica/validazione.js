@@ -143,14 +143,19 @@ export default function (form) {
 
     // Controllo sul codice fiscale
     //Lunghezza 16 caratteri
+    
     if (form["field_anagraficablob_intestatari_0_codicefiscale"].length !== "" && form["field_anagraficablob_intestatari_0_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_0_codicefiscale"] = codicemsgLength;
-    if (form["field_anagraficablob_intestatari_1_codicefiscale"].length !== "" && form["field_anagraficablob_intestatari_1_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_1_codicefiscale"] = codicemsgLength;
+    if (form["field_numintestatari"]==="2") {
+        if (form["field_anagraficablob_intestatari_1_codicefiscale"].length !== "" && form["field_anagraficablob_intestatari_1_codicefiscale"].length < 16) errors["field_anagraficablob_intestatari_1_codicefiscale"] = codicemsgLength;
+    }
+    
 
     // Controllo sulla mail
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     if (form["field_anagraficablob_intestatari_0_email"].length !== "" && !emailRegex.test(form["field_anagraficablob_intestatari_0_email"])) errors["field_anagraficablob_intestatari_0_email"] = mailmsgFormat;
+    if (form["field_numintestatari"]==="2") {
     if (form["field_anagraficablob_intestatari_1_email"].length !== "" && !emailRegex.test(form["field_anagraficablob_intestatari_1_email"])) errors["field_anagraficablob_intestatari_1_email"] = mailmsgFormat;
-
+    }
     // Controllo sul formato della carta d'identità
     //VA FATTO SOLO SE NON  HO SELEZIONATO UN PAESE STRANIERO COME PAESE DI EMISSIONE
 
@@ -175,7 +180,7 @@ export default function (form) {
     // Ripassa l'oggetto con tutti gli errori del form visualizzato aggiungendo gli eventuali controlli degli indirizzi
     
     errors = Object.assign(errors, validazioneIndirizzi(form, "cai"), validazioneIndirizzi(form, "domicilio"), validazioneIndirizzi(form, "corrisp"),validazioneFatca(form));
-    
+    console.log(errors)
 
     return (errors);
 

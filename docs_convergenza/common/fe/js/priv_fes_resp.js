@@ -210,6 +210,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 	var msfield = $(this);
 	msfield.wrap($("<div>").addClass("magicSearch"));
 	msphtext = msfield.attr("placeholder");
+	var msOptList = $("<ul>").addClass("msList").hide();
 
 	// Appende il pulsante per la ricerca, di fianco al campo stesso
 	var msButton = $("<a>").addClass("msButton icon icon-r-dettaglio").attr({"href":"javascript:;","title":"ricerca"});
@@ -221,6 +222,7 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 					$(this).removeClass("reset icon-delete_table");
 					$(this).addClass("icon-r-dettaglio");
 					msfield.val("");
+					msOptList.hide();
 					if(callBack) callBack();
 				}
 				else
@@ -235,7 +237,6 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 		}
 	)
 
-	var msOptList = $("<ul>").addClass("msList").hide();
 	msfield.parent().append(msButton,msOptList);
 	msfield.on("keyup",function(e){
 
@@ -249,11 +250,15 @@ $.fn.magicSearch = function(ajaxurl,callBack,options)
 			}
 			else
 			{
+				var inputJson = {svalue: msfield.val()};
+				if(typeof nameCsrf!== "undefined" && typeof valueCsrf!=="undefined"){
+					inputJson[nameCsrf] = valueCsrf;
+				}
 			$.ajax({
 				url: ajaxurl,
 				dataType: "json",
 				method: "post",
-				data: {svalue: msfield.val()},
+				data: inputJson,
 				success: function(data)
 					{
 						//Svuota l'elemento
@@ -361,7 +366,18 @@ function fesPlotGraph (conf)
 			categoryAxis.equalSpacing = true;
 			categoryAxis.fontSize = 9;
 			categoryAxis.color = "#999";
-			categoryAxis.categoryFunction = function (v) { return v ? new Date(v).format("dd mmm\nyyyy") : ''; };
+			categoryAxis.categoryFunction = function (v)
+				{
+					if($.browser.msie && conf.gIdDest == "grafico_sintesi") 
+					{
+						return v ? new Date(v).format("d mmm@yyyy").toString().replace("@","<br>") : '';
+					}
+					else
+					{
+						return v ? new Date(v).format("dd mmm\nyyyy") : '';
+					}
+					
+				}
 			categoryAxis.dashLength = 1;
 			categoryAxis.gridAlpha = 0.3;
 
@@ -506,6 +522,9 @@ var fesIcoOpeOverlay = function (){
 		"fondosicav":opelink.attr("fondosicav")
 	};
 	if (opelink.attr("idalert")) parameters["idalert"] = opelink.attr("idalert");
+	//quando arriva da Investimenti - Situazione PAC
+	if (opelink.attr("radioQuoteSitPac")) 
+		parameters["radioQuoteSitPac"] = opelink.attr("radioQuoteSitPac");
 
 	icoFrom = "";
 	if($(".fondialert").length>0) icoFrom = "alert";

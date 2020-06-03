@@ -193,6 +193,156 @@
   font-size: 128px;
 }
 /* SEZIONE KIT FONTS */
+.icon-ascend:before {
+  content: "\ea95";
+}
+.icon-cambi:before {
+  content: "\ea96";
+}
+.icon-datemod:before {
+  content: "\ea97";
+}
+.icon-descend:before {
+  content: "\ea98";
+}
+.icon-erase:before {
+  content: "\ea99";
+}
+.icon-filter:before {
+  content: "\ea9a";
+}
+.icon-mod:before {
+  content: "\ea9b";
+}
+.icon-multifunz:before {
+  content: "\ea9c";
+}
+.icon-piumeno:before {
+  content: "\ea9d";
+}
+.icon-sort:before {
+  content: "\ea9e";
+}
+.icon-ico_geosafe:before {
+  content: "\ea91";
+}
+.icon-ico_ric_automatica:before {
+  content: "\ea92";
+}
+.icon-custom:before {
+  content: "\ea51";
+}
+.icon-pin:before {
+  content: "\ea52";
+}
+.icon-websafe:before {
+  content: "\ea53";
+}
+.icon-voice_outline:before {
+  content: "\ea4c";
+}
+.icon-cat_altro:before {
+  content: "\ea3e";
+}
+.icon-cat_consumi:before {
+  content: "\ea40";
+}
+.icon-cat_energia:before {
+  content: "\ea41";
+}
+.icon-cat_finanza:before {
+  content: "\ea42";
+}
+.icon-cat_industria:before {
+  content: "\ea43";
+}
+.icon-cat_materie:before {
+  content: "\ea44";
+}
+.icon-cat_np:before {
+  content: "\ea45";
+}
+.icon-cat_sanita:before {
+  content: "\ea46";
+}
+.icon-cat_tecnologia:before {
+  content: "\ea47";
+}
+.icon-voce_fill:before {
+  content: "\ea49";
+}
+.icon-stella_fill:before {
+  content: "\ea4a";
+}
+.icon-campana_fill:before {
+  content: "\ea4b";
+}
+.icon-social_fb:before {
+  content: "\e900";
+}
+.icon-social_gplus:before {
+  content: "\e901";
+}
+.icon-social_mail:before {
+  content: "\e902";
+}
+.icon-social_tw:before {
+  content: "\e903";
+}
+.icon-ticket_side:before {
+  content: "\e904";
+}
+.icon-scrivici_device:before {
+  content: "\e9bc";
+}
+.icon-appuntamento_agenzia_device:before {
+  content: "\e9e6";
+}
+.icon-appuntamento_telefonico_device:before {
+  content: "\ea2b";
+}
+.icon-chat_device:before {
+  content: "\ea2c";
+}
+.icon-help_center_device:before {
+  content: "\ea2d";
+}
+.icon-trading_info:before {
+  content: "\ea2e";
+}
+.icon-trading_euro:before {
+  content: "\ea2f";
+}
+.icon-trading_arrow:before {
+  content: "\ea30";
+}
+.icon-trading_mondo:before {
+  content: "\ea31";
+}
+.icon-trading_chiuso:before {
+  content: "\ea32";
+}
+.icon-trading_equal:before {
+  content: "\ea33";
+}
+.icon-trading_positivo:before {
+  content: "\ea34";
+}
+.icon-trading_negativo:before {
+  content: "\ea35";
+}
+.icon-arrow_trading_right:before {
+  content: "\ea36";
+}
+.icon-menu:before {
+  content: "\ea37";
+}
+.icon-user:before {
+  content: "\ea38";
+}
+.icon-reduce_toolbox:before {
+  content: "\ea22";
+}
 .icon-carta_aggiuntiva_grid64-o:before {
   content: "\e935";
 }
@@ -1270,126 +1420,6 @@
 .icon-sicurezza_mobile:before {
   content: "\e9dc";
 }
-.icon-ico_geosafe:before {
-  content: "\ea91";
-}
-.icon-ico_ric_automatica:before {
-  content: "\ea92";
-}
-.icon-custom:before {
-  content: "\ea51";
-}
-.icon-pin:before {
-  content: "\ea52";
-}
-.icon-websafe:before {
-  content: "\ea53";
-}
-.icon-voice_outline:before {
-  content: "\ea4c";
-}
-.icon-cat_altro:before {
-  content: "\ea3e";
-}
-.icon-cat_consumi:before {
-  content: "\ea40";
-}
-.icon-cat_energia:before {
-  content: "\ea41";
-}
-.icon-cat_finanza:before {
-  content: "\ea42";
-}
-.icon-cat_industria:before {
-  content: "\ea43";
-}
-.icon-cat_materie:before {
-  content: "\ea44";
-}
-.icon-cat_np:before {
-  content: "\ea45";
-}
-.icon-cat_sanita:before {
-  content: "\ea46";
-}
-.icon-cat_tecnologia:before {
-  content: "\ea47";
-}
-.icon-voce_fill:before {
-  content: "\ea49";
-}
-.icon-stella_fill:before {
-  content: "\ea4a";
-}
-.icon-campana_fill:before {
-  content: "\ea4b";
-}
-.icon-social_fb:before {
-  content: "\e900";
-}
-.icon-social_gplus:before {
-  content: "\e901";
-}
-.icon-social_mail:before {
-  content: "\e902";
-}
-.icon-social_tw:before {
-  content: "\e903";
-}
-.icon-ticket_side:before {
-  content: "\e904";
-}
-.icon-scrivici_device:before {
-  content: "\e9bc";
-}
-.icon-appuntamento_agenzia_device:before {
-  content: "\e9e6";
-}
-.icon-appuntamento_telefonico_device:before {
-  content: "\ea2b";
-}
-.icon-chat_device:before {
-  content: "\ea2c";
-}
-.icon-help_center_device:before {
-  content: "\ea2d";
-}
-.icon-trading_info:before {
-  content: "\ea2e";
-}
-.icon-trading_euro:before {
-  content: "\ea2f";
-}
-.icon-trading_arrow:before {
-  content: "\ea30";
-}
-.icon-trading_mondo:before {
-  content: "\ea31";
-}
-.icon-trading_chiuso:before {
-  content: "\ea32";
-}
-.icon-trading_equal:before {
-  content: "\ea33";
-}
-.icon-trading_positivo:before {
-  content: "\ea34";
-}
-.icon-trading_negativo:before {
-  content: "\ea35";
-}
-.icon-arrow_trading_right:before {
-  content: "\ea36";
-}
-.icon-menu:before {
-  content: "\ea37";
-}
-.icon-user:before {
-  content: "\ea38";
-}
-.icon-reduce_toolbox:before {
-  content: "\ea22";
-}
 .icon-atm:before {
   content: "\ea4d";
 }
@@ -1846,9 +1876,7 @@ table td .icon-clessidra_stroke {
     src: url('/wscmn/font/futuraBT/27145D_2_0.eot?#iefix') format('embedded-opentype'),url('/wscmn/font/futuraBT/27145D_2_0.woff') format('woff'),url('/wscmn/font/futuraBT/27145D_2_0.ttf') format('truetype');
 }
 */
-.icon_filter:before,
-.icon_cambi:before,
-.icon_piumeno:before {
+.icon-missing:before {
   font-style: normal !important;
   content: "\2612";
   color: red !important;
@@ -2483,7 +2511,7 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   height: 34px;
   min-width: 80px;
   margin-bottom: 0;
-  padding: 6px 10px;
+  padding: 6px 12px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2495,10 +2523,10 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
   white-space: nowrap;
   color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #aaa;
   background-image: none;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 400;
   /*line-height: 1.42857143;*/
   -ms-touch-action: manipulation;
@@ -2549,16 +2577,16 @@ a.btn:active {
 }
 .btn.btn-small {
   height: 25px;
-  padding: 3px 8px;
-  font-size: 0.875em;
+  padding: 3px 12px;
+  font-size: 12px;
 }
 .btn.btn-small.btn-minw {
   min-width: 30px;
 }
 .btn.btn-big {
-  height: 56px;
-  padding: 6px 14px 8px 14px;
-  font-size: 2em;
+  height: 50px;
+  padding: 6px 22px 8px 22px;
+  font-size: 24px;
 }
 .btn.btn-big.btn-minw {
   min-width: 120px;
@@ -2722,6 +2750,9 @@ a.btn:active {
   .btn {
     height: 38px;
   }
+  .btn .icon-text {
+    top: 0;
+  }
   .btn.btn-nascondi .icon-hide {
     top: -2px;
   }
@@ -2749,6 +2780,12 @@ a.btn:active {
     position: relative;
     top: -1px;
     padding-left: 5px;
+  }
+  .btn.btn-icon-simula .icon {
+    display: inline-block;
+    font-size: 24px;
+    top: -4px;
+    vertical-align: top;
   }
 }
 @media (max-width: 767px) {
@@ -3333,6 +3370,68 @@ body.popup #contenuti {
   .btn-link-icon .icon {
     font-size: 32px;
     color: #8ab10b;
+  }
+}
+/* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
+.line-button {
+  position: relative;
+}
+.line-button hr {
+  position: absolute;
+  width: 100%;
+  top: 17px;
+  left: 0;
+  border-color: #ccc;
+}
+.line-button .btnWrapper {
+  position: absolute;
+  right: 0;
+}
+.line-button .last hr {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .line-button .icon {
+    font-size: 22px!important;
+  }
+  .line-button .icon-text {
+    top: -8px;
+  }
+}
+@media (max-width: 767px) {
+  .line-button {
+    position: static;
+  }
+  .line-button hr {
+    display: none;
+  }
+  .line-button .btnWrapper {
+    position: static;
+    right: 0;
+  }
+  .line-button .icon {
+    font-size: 22px!important;
+  }
+  .line-button .icon-text {
+    top: -8px;
+  }
+  .line-button .btn-align-left {
+    text-align: center;
+  }
+  .line-button .btn-align-left.last {
+    position: relative;
+  }
+  .line-button .btn-align-left.last hr {
+    display: block;
+    top: 28px;
+  }
+  .line-button .btn-align-left.last .btn {
+    position: relative;
+  }
+  .line-button .btn {
+    width: auto!important;
+    min-width: 230px;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=webank_base.css.map */

@@ -210,7 +210,7 @@ class ConsensoPrivacy extends Component {
                                                 </div>
                                             </div>
                                         </DefaultModal>
-                                        <Form.radiogroup
+                                         <Form.radiogroup
                                             label={optionTextDiscalimer["ALETTI_ANAG_CONS_1"]}
                                             name={anagraficaIntestatario + "listprivacy_0_consenso"}
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_0_consenso"]}

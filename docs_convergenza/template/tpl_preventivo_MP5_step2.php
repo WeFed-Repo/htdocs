@@ -84,6 +84,7 @@
         <h3 class="titleSection titleForm">Beni da assicurare</h3>
         <p>Puoi indicare fino ad un massimo di <strong>due fabbricati</strong> (a scelta tra abitazione abituale, saltuaria e box) e <strong>una persona</strong> (soggetto fisico).</p>        
         <div class="formWrapper garanzia-box visible">
+            <span class="titolo-box">Bene 1</span>
             <div class="form-group">
                 <div class="row">
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -108,7 +109,8 @@
             <div class="add-wrapper"></div>
         </div>
         <div class="formWrapper garanzia-box hidden">
-            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            <span class="titolo-box">Bene 2</span>
+            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina secondo bene</a>
             <div class="form-group">
                 <div class="row next-select">
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -126,7 +128,8 @@
             <div class="add-wrapper"></div>
         </div>
         <div class="formWrapper garanzia-box hidden">
-            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina bene</a>
+            <span class="titolo-box">Bene 3</span>
+            <a class="link-text btn-elimina" href="javascript:;"><i class="icon icon-f-row_contract"></i> Elimina terzo bene</a>
             <div class="form-group">
                <div class="row next-select" >
                     <div class="form-field-input col-xs-12 col-sm-5">
@@ -146,7 +149,7 @@
         <div class="formWrapper garanzia-add hidden">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand"></i> Aggiungi bene</a>
+                <a class="link-text btn-aggiungi" href="javascript:;"><i class="icon icon-f-row_expand"></i> Aggiungi <span class="numero-bene"> secondo </span> bene </span></a>
             </div>
         </div>
     </form>
@@ -178,7 +181,15 @@
             if($(".garanzia-box.visible").length<3)
             {
                 $(".garanzia-add").removeClass("hidden");
+                if($(".garanzia-box.visible").length ===2)
+                {
+                $('.numero-bene').html("terzo");
+                }
+                else {
+                    $('.numero-bene').html("secondo");
+                }
             }
+            
             //Chiamata ad html relativo con switch di contenuto
                 switch (valSelected) {
                     case 'DA':
@@ -230,6 +241,13 @@
        var wrapperBox = $(this).closest(".garanzia-box");
        wrapperBox.removeClass("visible").addClass("hidden");
        $(".garanzia-add").removeClass("hidden");
+       if($(".garanzia-box.visible").length ===2)
+        {
+            $('.numero-bene').html("terzo");
+        }
+        else {
+            $('.numero-bene').html("secondo");
+        }
        wrapperBox.find(".bene-assicurato").val("");
        wrapperBox.find(".add-wrapper").html("");
      })
@@ -314,7 +332,7 @@
                 <li>proprietà e/o conduzione dell'abitazione (es. una tegola che si stacca dal tetto);</li>
                 <li>ambito della vita privata (danni dovuti a esercizio di sport e attività del tempo libero, danni provocati dagli animali domestici, ecc.);</li>
             </ul>
-            <p>Sono assicurati il Contraente, i suoi figli minori (anche se non conviventi) e ogni familiare o persona presente nel suo stato di famiglia.</p>
+            <p><strong>Sono assicurati il Contraente, i suoi figli minori (anche se non conviventi) e ogni familiare o persona presente nel suo stato di famiglia.</strong></p>
             <h3 class="titleSection titleForm">Assistenza</h3>
             <p class="noPadding">Prestazione di aiuto immediato nel caso in cui il Contraente si trovi in una situazione di difficoltà a seguito di un evento fortuito tra quelli previsti nella presente polizza (e avvenuto durante il periodo di copertura della polizza stessa).<br>
             Alcune casistiche:</p>
@@ -366,9 +384,9 @@
 <br>
 <strong>Sono assicurati il Contraente e i familiari conviventi.</strong>
 <br>
-La copertura è estesa anche ai figli minori anche se non conviventi e ad ogni familiare e/o persona presente nello stato di famiglia del Contraente con esso convivente.
-<strong>Assistenza</strong><br> 
-<p>Prestazione di <strong>aiuto immediato</strong> nei casi previsti dalla polizza, nel caso in cui il contraente si trovi in una situazione di difficoltà a seguito del verificarsi di un evento fortuito tra quelli previsti nella presente polizza e comunque occorso durante il periodo di copertura della polizza stessa.</p>
+La copertura è estesa anche ai figli minori anche se non conviventi e ad ogni familiare e/o persona presente nello stato di famiglia del Contraente con esso convivente.</p>
+<p class="noPadding"><strong>Assistenza</strong><br>
+Prestazione di <strong>aiuto immediato</strong> nei casi previsti dalla polizza, nel caso in cui il contraente si trovi in una situazione di difficoltà a seguito del verificarsi di un evento fortuito tra quelli previsti nella presente polizza e comunque occorso durante il periodo di copertura della polizza stessa.</p>
 <ul>
     <li>invio di elettricista in caso di sinistri all’impianto elettrico dell’abitazione</li>
     <li>invio di idraulico in caso di sinistri all’impianto idraulico dell’abitazione</li>

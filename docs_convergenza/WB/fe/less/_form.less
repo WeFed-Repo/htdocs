@@ -253,6 +253,36 @@
 
     }
 
+    /* Gruppo output in linea (label sempre a destra)*/
+    .inline-output {
+        width:100%;
+        margin-bottom:15px;
+        display:inline-table;
+        .inline-output-left {
+            display:table-cell;
+            padding-left:0;
+            padding-right:0;
+            text-align:left;
+            vertical-align:top;
+        }
+        .inline-output-right {
+            display:table-cell;
+            padding-left:5px;
+            padding-right:0;
+            text-align:right;
+            vertical-align:top;
+        }
+        label {font-weight:normal}
+        .output
+        {
+            font-weight:600;
+            &.txthelp {display:inline;}
+            padding-top:0;
+            .text-link {font-weight:normal}
+        }
+    
+    }
+
     .small {
         font-size: 0.8571428571428571em;
     }
@@ -1030,6 +1060,23 @@ table .form-inline .input-group > .form-control {
             font-weight: bold;
         }
     }
+}
+/*INPUT CON CHECK DI SPUNTA*/
+.input-checked-wrapper {
+    position: relative;
+    .input-checked {
+        position: absolute;
+        top: 7px;
+        right: 0.5em;
+        z-index: 3;
+        padding: 1px 5px;
+        line-height: 17px;
+        color: #8ab10b;
+        display:none;
+    } 
+   &.check-visible .input-checked{
+    display:block
+   }
 }
 
 /*CAMPI CHECK DISABILITATI CON TOOLTIP */
@@ -1872,6 +1919,21 @@ select#mercatop {
     }
 }
 
+// Iconcina di specifiche per check o radio
+label.textWrapper {
+    .btn-icon {
+        margin-left: 5px;
+        display: inline-block;
+        line-height: 11px;
+        margin-top: 3px;
+        .icon {font-size:25px}
+        @media (max-width:1023px) {
+            & {line-height:24px;}
+        }
+
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .formGenerico .checkbox {
         label {
@@ -1897,6 +1959,7 @@ select#mercatop {
         label.textWrapper .text {
             line-height: 20px;
         }
+        
     }
 
     .formGenerico .radio, .formGenerico .radio-inline {
@@ -2930,7 +2993,7 @@ table tr td.td-fondo {
             color: #000;
             overflow: hidden;
             line-height: 20px;
-            padding:5px 0 5px;
+            padding:7px 0 5px;
             display: inline-block;
         }
         &:hover {background-color:#f1f1f1;}
@@ -2974,7 +3037,7 @@ table tr td.td-fondo {
       }
       .spsel-btn-console {
             position: absolute;
-            top: 4px;
+            top: 2px;
             right: 20px;
             .btn-icon {
                 margin-left:10px;
@@ -3024,6 +3087,22 @@ table tr td.td-fondo {
     }
 }
 
+@media (max-width: 1023px){
+    .spsel {height:38px;
+        .spsel-selected {height:36px}
+    
+    }
+}
+
 @media (max-width: 767px){
     .spsel {margin-bottom:14px;}
+}
+
+/* NUOVO SELETTORE RAPPORTO */
+.selettore-rapporto {
+    .selectRapp {
+        margin-bottom:20px;
+    }
+    padding-bottom:0;
+    .form-group {margin-bottom:0;}
 }

@@ -347,6 +347,16 @@ class FormCheckfile extends Component {
 }
 
 // ############################ File ##############################
+const fileMimeTypes = {
+    "PDF": "application/pdf",
+    "JPG": "image/jpeg",
+    "JPEG": "image/jpeg",
+    "PNG": "image/png",
+    "GIF": "image/gif",
+    "BMP": "image/bmp",
+    "DOC": "application/msword"
+}
+
 class FormFile extends Component {
 
     constructor(props) {
@@ -384,11 +394,11 @@ class FormFile extends Component {
                     // A seconda del tipo di file mostra il file oppure un iconcina per scaricarlo/vederlo nel browser
                     if ((["JPG","JPEG","PNG","GIF","BPM"]).indexOf(file.formato)>=0) {
                         // Se puo' visualizzarlo nel browser...
-                        this.setState({imageViewComp: <img src={data.results} className={"file-preview"}></img>});
+                        this.setState({imageViewComp: <img src={"data:" + fileMimeTypes[file.formato]+";base64,"+data.results} className={"file-preview"}></img>});
                     }
                     else {
                         // Chiede all'utente di scaricarlo...
-                        this.setState({imageViewComp: <a href={data.results} className={"file-link " + file.formato.toLowerCase()} download={"documento_"+file.idImmagine+"."+  file.formato.toLowerCase()}>Scarica {file.formato}</a>});
+                        this.setState({imageViewComp: <a href={"data:" + fileMimeTypes[file.formato]+";base64,"+data.results} className={"file-link " + file.formato.toLowerCase()} download={"documento_"+file.idImmagine+"."+  file.formato.toLowerCase()}>Scarica {file.formato}</a>});
                     }
                     
                 }
@@ -427,11 +437,12 @@ class FormFile extends Component {
 
                     let dataToSend  ={
                         "idAllegato": (currentFile.idImmagine? currentFile.idImmagine : null),
-                        "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream,
+                        "allegato": (ambiente.isLocale || ambiente.isLibrerie)? "": inputStream.replace("data:" + fileMimeTypes[extension]+";base64,",""),
                         "formatoAllegato": extension,
                         "tipoAllegato" : tipo,
                         "idWorkflowPratica": this.props.idBozza
                     }
+                    console.log(dataToSend)
                     getData({
                         url: {"svil":"/json_data/onboarding/upsertAllegato.json","prod":"/promotori/onboarding/rest/documentale/upsertAllegato"},
                         data: dataToSend,

@@ -66,6 +66,10 @@ span.small {
 .img-resp {
   width: 100%;
 }
+.img-fixed-badge-apps {
+  width: 15%;
+  display: inline-block;
+}
 .fLeft {
   float: left !important;
 }
@@ -109,6 +113,10 @@ section {
 .alignRight {
   text-align: right !important;
 }
+.alignRight .mr-20 {
+  text-decoration: none;
+  margin-right: 20px;
+}
 .align-right {
   text-align: right;
 }
@@ -116,11 +124,13 @@ section {
 button {
   outline: 0 !important;
 }
+/*CREAZIONE DI TRE TIPOLOGIE DI BOTTONI PER WEBANK HTML VERONA */
 .btn {
   display: inline-block;
+  height: 34px;
   min-width: 80px;
   margin-bottom: 0;
-  padding: 6px 10px;
+  padding: 6px 12px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -132,15 +142,26 @@ button {
   white-space: nowrap;
   color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #aaa;
   background-image: none;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 400;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   box-shadow: none;
 }
+.btn.small {
+  height: 25px;
+  padding: 3px 12px;
+  font-size: 12px;
+}
+.btn.big {
+  height: 50px;
+  padding: 6px 22px 8px 22px;
+  font-size: 24px;
+}
+/*FINE CREAZIONE DI TRE TIPOLOGIE DI BOTTONI PER WEBANK HTML VERONA */
 .ui-widget-content .btn {
   color: #fff;
 }
@@ -319,6 +340,9 @@ input[type="button"][disabled],
   color: #fff;
 }
 /*TAB DI NAVIGAZIONE */
+.outerWrapperTab {
+  margin-bottom: 20px;
+}
 .innerWrapperTab {
   overflow-y: hidden;
   min-height: 40px;
@@ -410,6 +434,14 @@ input[type="button"][disabled],
   max-width: 100%;
   margin-bottom: 20px;
 }
+.table.gestisciLimitiSpesaTable {
+  border: 0;
+}
+.table.gestisciLimitiSpesaTable td,
+.table.gestisciLimitiSpesaTable tr {
+  border: 0;
+  padding: 10px;
+}
 table td.oRight {
   text-align: right;
 }
@@ -484,6 +516,52 @@ table thead th.sorting_desc:before {
 table thead th.sorting_desc:before {
   transform: rotate(45deg);
   top: 12px;
+}
+/* tabelle scelta profilo colonne fisse */
+.fixedColumns.scelta-profilo label {
+  display: block;
+}
+.fixedColumns.scelta-profilo .evidenziato,
+.fixedColumns.scelta-profilo tr .highlight {
+  background-color: #DCE7B5 !important;
+}
+@media (max-width: 767px) {
+  .fixedColumns.scelta-profilo {
+    border: 0;
+  }
+  .fixedColumns.scelta-profilo th.center.evidenziato {
+    padding: 10px 16px;
+  }
+  .fixedColumns.scelta-profilo .desktop-label {
+    display: none;
+  }
+  .fixedColumns.scelta-profilo .mobile-label {
+    display: inline-block;
+  }
+  .fixedColumns.scelta-profilo th:first-child,
+  .fixedColumns.scelta-profilo td:first-child {
+    background-color: #ddd;
+  }
+  .fixedColumns.scelta-profilo .evidenziato,
+  .fixedColumns.scelta-profilo .hightlight {
+    width: 40px;
+    background-color: #ddd;
+  }
+  .fixedColumns.scelta-profilo th:first-child .fht-cell {
+    width: 69px !important;
+  }
+  .fixedColumns.scelta-profilo .evidenziato .fht-cell {
+    width: 40px !important;
+  }
+  .fixedColumns.scelta-profilo .fixed-table-header-columns {
+    width: 216px !important;
+  }
+  .fixedColumns.scelta-profilo .radio-mobile {
+    display: table-row;
+  }
+  .fixedColumns.scelta-profilo .radio-mobile input {
+    position: static !important;
+  }
 }
 @media screen and (max-width: 767px) {
   table td .icon.icon-chiudi_table {
@@ -631,6 +709,10 @@ select.form-control,
   position: relative;
   height: 34px;
   border: 1px solid #cccccc;
+}
+select.form-control[disabled],
+.ui-combobox[disabled] {
+  background-color: #eee !important;
 }
 .ui-combobox input {
   border: 0;
@@ -801,8 +883,11 @@ input[type='checkbox']:checked:before {
 }
 .label-inline {
   margin-right: 10px;
-  padding-top: 15px;
+  padding-top: 3px;
   float: left;
+}
+.label-inline label {
+  font-weight: 600;
 }
 .control-label + .form-control.wauto {
   display: block;
@@ -1652,7 +1737,7 @@ span.small {
   top: 10px;
 }
 .ui-combobox .ui-widget-content.ui-combobox-input {
-  width: 90%;
+  width: 100%!important;
   top: 0;
   margin: 0;
   height: 32px !important;
@@ -1770,6 +1855,9 @@ span.small {
   top: 10px;
   position: relative;
   left: 5px;
+}
+.form-field-input .label-inline .btn-icon .icon-info_fill {
+  top: 3px;
 }
 .btn-gen-pwd {
   margin: 20px 0 0 80px;
@@ -3448,5 +3536,42 @@ ul.bullet-spunta li .icon {
     padding-bottom: 20px;
   }
 }
-/**/
+/*bancomat pay*/
+#placeholderQRCode {
+  background-color: #808080;
+  width: 134px;
+  height: 134px;
+}
+#divBancomatPay {
+  background: #FFFFFF;
+  height: 120px;
+  width: 30%;
+  margin: 20px auto 0px auto;
+  padding-top: 2.5%;
+}
+#outputBancomatPay {
+  width: 88%;
+  font-size: 24px;
+  border-top: none;
+  border-right: none;
+  border-bottom: dashed;
+  border-left: none;
+  outline: 0;
+}
+.img-fixed {
+  height: 65%;
+  display: inline-block;
+}
+.icon-check_ok:before {
+  font-size: 24px;
+  color: #3AA746;
+}
+.boxDefault.boxDefaultNoBord .row {
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .scaricaAppBancomatPay .img-fixed-badge-apps {
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=webank_skin.css.map */
