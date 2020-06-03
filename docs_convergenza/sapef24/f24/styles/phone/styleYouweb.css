@@ -10,32 +10,32 @@
 .form-group label:first-child, .form-horizontal .control-label, .paddingR, .paddingR + div[class*="col-"],
 .bs-example > .form-group > .control-label, .bs-example > .form-group > .control-label + div[class*="col-"],
 form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
-  padding-top: 37px;
+	padding-top: 15px;
 }
 
 .form-group > label:not(:first-child) {
-  padding-top: 10px;
+	padding-top: 10px;
 }
 
 @media (max-width: 672px) {
-  html, body {
-    background: unset !important;
-	padding:0 10px;
-  }
-  h1 { 
-    display: none;
-    width: 100% !important;
-    color: #122e5c !important;
-    box-shadow: none !important;
-    border-bottom: none !important;
-    padding: 0 !important;
-    font-weight: 700 !important;
-    line-height: normal !important;
-    letter-spacing: 0 !important;
-    text-transform: uppercase !important;
-    margin-bottom: 0 !important;
-    font-size: 18px !important;
-  }
+	html, body {
+		background: unset !important;
+		padding:0 10px;
+	}
+	h1 { 
+		display: none;
+		width: 100% !important;
+		color: #122e5c !important;
+		box-shadow: none !important;
+		border-bottom: none !important;
+		padding: 0 !important;
+		font-weight: 700 !important;
+		line-height: normal !important;
+		letter-spacing: 0 !important;
+		text-transform: uppercase !important;
+		margin-bottom: 0 !important;
+		font-size: 18px !important;
+	}
   form[name="ricercaTributiForm"] > h1 {
     display: block;
   }
@@ -82,7 +82,7 @@ form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
 	}
   .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
     font-size: 12px;
-    line-height: 37px;
+    line-height: 25px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -223,7 +223,7 @@ form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
 
 @media (max-width: 386px) {
   .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
