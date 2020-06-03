@@ -4631,11 +4631,11 @@ body.popup header .wrapper .btn-console {
   padding: 0 0 15px 25px;
 }
 
-.icon-row_contract, .collapsed .icon-row_expand {
+.collapsed .icon-row_expand {
   display: inline-block;
 }
 
-.icon-row_expand, .collapsed .icon-row_contract {
+.collapsed .icon-row_contract {
   display: none;
 }
 

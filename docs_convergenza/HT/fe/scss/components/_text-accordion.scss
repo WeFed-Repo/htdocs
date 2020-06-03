@@ -133,10 +133,10 @@
 	}
 }
 
-.icon-row_contract, .collapsed .icon-row_expand {
+.collapsed .icon-row_expand { 
 	display: inline-block;
 }
 
-.icon-row_expand, .collapsed .icon-row_contract {
+.collapsed .icon-row_contract {
 	display: none;
 }
