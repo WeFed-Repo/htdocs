@@ -69,9 +69,9 @@
 	
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePhone.css">
 			<?php if($_REQUEST['bank'] == 'HT') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleYouweb.css">
+            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleYouweb.css">
         <?php } else if($_REQUEST['bank'] == 'WB') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleWebank.css">
+            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleWebank.css">
         <?php } ?>
 			
 		
