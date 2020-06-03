@@ -700,9 +700,13 @@
 }
 .slider-section {
     font-size: 14px;
-    margin: 15px auto;
+    margin: 15px auto 40px;
     .slider-button {
         display: none;
+        margin-left: 20px;
+        &:first-child {
+            margin-left:0;
+        }
     }
     .slider-map-graph {
         margin: 15px 0 0 0;
@@ -754,10 +758,14 @@
 
 .wrapTradInd {
     position: relative;
+    width:100%;
+    clear:both;
     margin-bottom: 20px;
+    display:inline-block;
     .wrapTabTradInd {
         margin: 0!important;
-        width :40vw;
+        width :calc(100% - 320px);
+        display:block;
         float: left;
         .tabTradInd {
             width: 100%;
@@ -788,6 +796,7 @@
               }
               .legend {
                 line-height: 18px;
+                background-color:#dadee2;
                 overflow-x: hidden;
                 .icon {
                     margin-right: 4px;
@@ -813,7 +822,8 @@
     }
     .boxTradInd {
         float: right;
-        width: 30vw;
+        width: 300px;
+        display:block;
         border: 1px solid #AFAFAF;
         .boxTradIndTop {
             border-bottom: 1px solid #AFAFAF;
@@ -869,22 +879,30 @@
     }
 }
 
-@media (max-width: 991px) {
-    .panel-heading.visible-xs {
-        display:block!important;
+@media (max-width:1024px) {
+    .legend {
+        .col-sm-3 {text-align:center;}
+        .icon {clear:both;display:block;margin:0 auto !important}
     }
 }
-@media (max-width: 1200px) {
-.wrapTabTradInd, .boxTradInd{width:30vw!important;}    
-}
-@media (max-width: 1023px) {
-    .wrapTabTradInd, .boxTradInd{width:45vw!important;}      
-}
-@media (max-width: 991px) {
-    .wrapTabTradInd, .boxTradInd{width:45vw!important;display: block!important;float: left;}   
-}
-@media (max-width: 700px) {
-    .wrapTabTradInd, .boxTradInd{width:90vw!important;display: block!important;float:none!important}   
+
+@media (max-width:767px) {
+    .legenda {padding: 10px;}
+    .wrapTradInd .wrapTabTradInd {
+        table tr {
+            td,th {padding:5px 3px;}
+        }
+        width:100%;
+        tr.grTr {background:#fff !important;
+        td {padding:0 !important;}
+        }
+        .boxTradInd {width:100%;
+            
+            .icon {font-size: 10px !important;
+                height: 18px;
+                color: #000;}
+        }
+    }
 }
 /* Fine oggetto overview */
 
@@ -986,6 +1004,7 @@
         border: none;
         .carouselPlusPageWrap {
             padding: 0;
+            overflow-x:auto;
         }
         .carouselPlusNav {
             border-top: 0 none;
@@ -1208,5 +1227,17 @@
 .otpdesc {
     img {
         max-width: 250px;
+    }
+}
+
+/* ESEMPIO DI NEWS STILE TRADING */
+.tradingNewsBox {
+    padding:15px 0;
+    border-bottom:solid 2px #dadee2;
+    .tradingNewsDate {
+        color:#999;
+    }
+    .tradingNewsLink {
+        font-weight:bold;
     }
 }
