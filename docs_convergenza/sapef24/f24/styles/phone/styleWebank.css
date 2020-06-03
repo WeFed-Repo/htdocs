@@ -10,7 +10,7 @@
 .form-group label:first-child, .form-horizontal .control-label, .paddingR, .paddingR + div[class*="col-"],
 .bs-example > .form-group > .control-label, .bs-example > .form-group > .control-label + div[class*="col-"],
 form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
-	padding-top: 37px;
+	padding-top: 15px;
 }
 
 .form-group > label:not(:first-child) {
@@ -85,10 +85,10 @@ form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
     }
     .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
         font-size: 12px;
-        line-height: 37px;
+        line-height: 25px;
         font-weight: bold;
         text-transform: uppercase;
-        color: #1F2021;
+        color: #1f2021;
     }
     .btn, .btn:link, input.btn, .btn:hover,.btn-primary:hover, input.btn:hover {
         background: #1F2021 none repeat scroll 0 0 !important;
@@ -241,7 +241,7 @@ form[name="f24MainForm"] .form-group > .control-label + div[class*="col-"] {
 
 @media (max-width: 386px) {
   .form-group label, .form-horizontal .control-label, .form-group > div[class*="col-"] {
-    font-size: 10px;
+    font-size: 11px;
   }
 }								   
 

@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon-missing:before {
+.icon-missing:before, .icon-sp_rifiutata:before {
   font-style: normal !important;
   content: "☒" !important;
   color: red !important;
@@ -2824,6 +2824,12 @@ div.pager .circle.current_page {
   border-right: 1px solid #e3e3e3;
 }
 
+@media (max-width: 767px) {
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .tooltip {
   display: none;
 }
@@ -3615,10 +3621,14 @@ div.pager .circle.current_page {
 
 .slider-section {
   font-size: 14px;
-  margin: 15px auto;
+  margin: 15px auto 40px;
 }
 .slider-section .slider-button {
   display: none;
+  margin-left: 20px;
+}
+.slider-section .slider-button:first-child {
+  margin-left: 0;
 }
 .slider-section .slider-map-graph {
   margin: 15px 0 0 0;
@@ -3673,11 +3683,15 @@ div.pager .circle.current_page {
 }
 .wrapTradInd {
   position: relative;
+  width: 100%;
+  clear: both;
   margin-bottom: 20px;
+  display: inline-block;
 }
 .wrapTradInd .wrapTabTradInd {
   margin: 0 !important;
-  width: 40vw;
+  width: calc(100% - 320px);
+  display: block;
   float: left;
 }
 .wrapTradInd .wrapTabTradInd .tabTradInd {
@@ -3710,6 +3724,7 @@ div.pager .circle.current_page {
 }
 .wrapTradInd .wrapTabTradInd .tabTradInd .legend {
   line-height: 18px;
+  background-color: #dadee2;
   overflow-x: hidden;
 }
 .wrapTradInd .wrapTabTradInd .tabTradInd .legend .icon {
@@ -3733,7 +3748,8 @@ div.pager .circle.current_page {
 }
 .wrapTradInd .boxTradInd {
   float: right;
-  width: 30vw;
+  width: 300px;
+  display: block;
   border: 1px solid #AFAFAF;
 }
 .wrapTradInd .boxTradInd .boxTradIndTop {
@@ -3788,33 +3804,40 @@ div.pager .circle.current_page {
   margin-bottom: 12px;
 }
 
-@media (max-width: 991px) {
-  .panel-heading.visible-xs {
-    display: block !important;
+@media (max-width: 1024px) {
+  .legend .col-sm-3 {
+    text-align: center;
+  }
+  .legend .icon {
+    clear: both;
+    display: block;
+    margin: 0 auto !important;
   }
 }
-@media (max-width: 1200px) {
-  .wrapTabTradInd, .boxTradInd {
-    width: 30vw !important;
+@media (max-width: 767px) {
+  .legenda {
+    padding: 10px;
   }
-}
-@media (max-width: 1023px) {
-  .wrapTabTradInd, .boxTradInd {
-    width: 45vw !important;
+
+  .wrapTradInd .wrapTabTradInd {
+    width: 100%;
   }
-}
-@media (max-width: 991px) {
-  .wrapTabTradInd, .boxTradInd {
-    width: 45vw !important;
-    display: block !important;
-    float: left;
+  .wrapTradInd .wrapTabTradInd table tr td, .wrapTradInd .wrapTabTradInd table tr th {
+    padding: 5px 3px;
   }
-}
-@media (max-width: 700px) {
-  .wrapTabTradInd, .boxTradInd {
-    width: 90vw !important;
-    display: block !important;
-    float: none !important;
+  .wrapTradInd .wrapTabTradInd tr.grTr {
+    background: #fff !important;
+  }
+  .wrapTradInd .wrapTabTradInd tr.grTr td {
+    padding: 0 !important;
+  }
+  .wrapTradInd .wrapTabTradInd .boxTradInd {
+    width: 100%;
+  }
+  .wrapTradInd .wrapTabTradInd .boxTradInd .icon {
+    font-size: 10px !important;
+    height: 18px;
+    color: #000;
   }
 }
 /* Fine oggetto overview */
@@ -3918,6 +3941,7 @@ div.pager .circle.current_page {
 }
 .carouselPlus.carouselPlus-noborder .carouselPlusPageWrap {
   padding: 0;
+  overflow-x: auto;
 }
 .carouselPlus.carouselPlus-noborder .carouselPlusNav {
   border-top: 0 none;
@@ -4211,6 +4235,18 @@ div.pager .circle.current_page {
 /* OGGETTO OTP */
 .otpdesc img {
   max-width: 250px;
+}
+
+/* ESEMPIO DI NEWS STILE TRADING */
+.tradingNewsBox {
+  padding: 15px 0;
+  border-bottom: solid 2px #dadee2;
+}
+.tradingNewsBox .tradingNewsDate {
+  color: #999;
+}
+.tradingNewsBox .tradingNewsLink {
+  font-weight: bold;
 }
 
 .ui-dialog-content.ui-widget-content li a,
