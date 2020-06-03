@@ -566,7 +566,7 @@ p.note.flRight a.btn-icon {
   font-weight: bold !important;
 }
 
-.btnWrapper .icon {
+.btnWrapper .icon, .btn .btnWrapper {
   height: auto;
   line-height: 7px;
   position: relative;

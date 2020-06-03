@@ -670,10 +670,10 @@ table.riepilogo tr td {
     background-color: #fff!important;
     border-bottom: 2px solid #f2f2f2!important;
 }
-  table.riepilogo tr td[rowspan] {
+#mainContent table.riepilogo tr td[rowspan] {
     border-right: 2px solid #f2f2f2!important;
   }
- table.riepilogo tr td[rowspan]:last-child {
+#mainContent table.riepilogo tr td[rowspan]:last-child {
     border-left: 2px solid #f2f2f2!important;
     border-right: 0 !important;
   }

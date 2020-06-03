@@ -140,7 +140,7 @@ p.note.flRight {
   text-transform: uppercase !important;
   font-weight: bold !important;
 }
-.btnWrapper .icon {
+.btnWrapper .icon, .btn .btnWrapper {
   height: auto;
   line-height: 7px;
   position: relative;
