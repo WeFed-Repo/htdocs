@@ -9,6 +9,7 @@ $(function () {
     scrollpx = bd.scrollTop();
     initModali();
     initCarousel();
+    initDropdown();
     initAccordion();
     initDatepicker();
     initTimepicker();
@@ -20,6 +21,25 @@ $(function () {
 });
 
 // INIT ELEMENTI
+
+function initDropdown() {
+	$('[data-toggle="dropdown"]').parent().on('click', function() {
+    $(this).on('show.bs.dropdown', function() {
+  		var elem = $(this);
+  		$('body').append(elem.find('.dropdown-menu').css({
+  			position: 'absolute',
+  			left: elem.offset().left,
+  			top: elem.offset().top
+  		}).detach());
+  	}).on('hidden.bs.dropdown', function() {
+  		$(this).append($('body > .dropdown-menu').css({
+  			position: false,
+  			left: false,
+  			top: false
+  		}).detach());
+  	});
+  });
+}
 
 function initAccordion() {
     // init opened

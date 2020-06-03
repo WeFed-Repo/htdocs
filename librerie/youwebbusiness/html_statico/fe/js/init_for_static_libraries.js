@@ -166,6 +166,24 @@ function initModali_static(){
 		this.find('span.output').each(function(){
 			$(this).replaceWith($(this).html());
 		});
+
+		$('[data-toggle="dropdown"]').parent().on('click', function() {
+	    $(this).on('show.bs.dropdown', function() {
+	  		var elem = $(this);
+	  		$('body').append(elem.find('.dropdown-menu').css({
+	  			position: 'absolute',
+	  			left: elem.offset().left,
+	  			top: elem.offset().top
+	  		}).detach());
+	  	}).on('hidden.bs.dropdown', function() {
+	  		$(this).append($('body > .dropdown-menu').css({
+	  			position: false,
+	  			left: false,
+	  			top: false
+	  		}).detach());
+	  	});
+	  });
+
 	}
 
 })(jQuery);
