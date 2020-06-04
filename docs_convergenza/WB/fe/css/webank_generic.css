@@ -1452,6 +1452,9 @@ table.details-table .sub td {
 table.details-table .sub td.indent {
   padding-left: 30px;
 }
+table.details-table .sub td[data-field="titolo"] {
+  padding-left: 30px!important;
+}
 table.valign-middle td {
   vertical-align: middle;
 }
