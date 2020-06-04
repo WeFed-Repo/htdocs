@@ -654,7 +654,7 @@ table.details-table td {
 }
 table tr.sub {background:#eaeded}
 table tr.sub td {background:#eaeded}
-table td.indent {padding-left:30px}
+table td.indent, table tr.sub td[data-field="titolo"] {padding-left:30px}
  
 /* DI RIEPILOGO */
 
