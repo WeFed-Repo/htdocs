@@ -651,9 +651,10 @@ table.details-table th{
 table.details-table td {
     background-color: #fff;
     border-bottom: 2px solid #dadee2!important;
+    font-size: 13px!important;
 }
 table tr.sub {background:#eaeded}
-table tr.sub td {background:#eaeded}
+table tr.sub td {background:#eaeded;  font-size:12px!important;}
 table td.indent, table tr.sub td[data-field="titolo"] {padding-left:30px}
  
 /* DI RIEPILOGO */
