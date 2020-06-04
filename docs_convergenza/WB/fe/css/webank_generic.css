@@ -1571,6 +1571,9 @@ table th.filter .filter-wrap .filter-toggle .icon {
   color: #fff;
   line-height: 24px;
 }
+table th.filter .filter-wrap .filter-toggle .icon.icon-filter {
+  line-height: 26px;
+}
 table th.filter .filter-wrap .filter-toggle .icon-close {
   display: none;
   font-weight: bold;
