@@ -32,6 +32,8 @@
 							</span>
 						</a>
 						<div class="selector" style="display: none;">
+							<?php for ($i==1;$i<30;$i++) {
+								?>
 							<span class="group">
 								<a value="xxxaaaaaa" href="javascript:;" class="selectorOptions first selected">
 									<strong>xxx/aaaaaa - Tutti i sottodepositi - Rossetti stefano, Ferraboschi Daniela</strong><br>
@@ -56,6 +58,11 @@
 										<strong>xxx/bbbbbb/1 - Rossetti stefano</strong>
 									</a>
 							</span>
+
+							<?php
+							}?>
+
+							
 						</div>
 					</div>
 				</div>
