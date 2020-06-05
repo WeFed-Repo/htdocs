@@ -2,16 +2,27 @@ import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
 import { Col, Row, Button } from 'reactstrap';
 import DefaultCollapse from "components/parts/DefaultCollapse";
-
+import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccordionErrors"
 
 class AltriRecapiti extends Component {
 
     render() {
-        
-        return (
+       return (
             <>
             {(!this.props.isOutput || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"] !== "") || (this.props.isOutput && this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"] !== "")) &&
-            <DefaultCollapse label="AGGIUNGI ALTRI RECAPITI" startsOpen={false} className="search-collapse">
+            <DefaultCollapse 
+            label="AGGIUNGI ALTRI RECAPITI" 
+            startsOpen={false} 
+            className="search-collapse"
+            hasErrors={
+                CheckAccordionErrors(this.props.formstate.errors, 
+                    [
+                        this.props.anagraficaIntestatario + "prefissofissocasa",
+                        this.props.anagraficaIntestatarioo + "numerofissocasa",
+                        this.props.anagraficaIntestatario + "prefissofissoufficio",
+                        this.props.anagraficaIntestatario + "numerofissoufficio"
+                    ])
+            }>
                 <section className="onboarding-block">
                     <p>Puoi aggiungere un ulteriore numero di telefono.</p>
                     <Row>
