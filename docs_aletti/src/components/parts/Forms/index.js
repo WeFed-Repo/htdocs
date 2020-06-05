@@ -724,7 +724,8 @@ class FormDate extends Component {
 
         super(props);
         this.state = {
-            month: new Date()
+            month: new Date(),
+            key: 0
         }
         this.changeMonth = this.changeMonth.bind(this);
     };
@@ -821,8 +822,9 @@ class FormDate extends Component {
             <div className={"form-group daypicker " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 {!output && <div className="daypicker-wrapper">
-                    <DayPickerInput
+                    <DayPickerInput key={this.state.key}
                         value={value}
+                        selectedDay={value}
                         onDayChange={(a, b, input) => {
                             let inp = input.getInput();
                             inp["cbchange"] = cbchange;
@@ -840,7 +842,7 @@ class FormDate extends Component {
                         format="DD/MM/YYYY"
                         dayPickerProps={dpProps}
                     ></DayPickerInput>
-                    {value !== "" && <div className="canc" onClick={() => this.props.onChange({ name: this.props.name, value: "" , cbchange: cbchange})}>&#215;</div>}
+                    {value !== "" && <div className="canc" onClick={() => {this.props.onChange({ name: this.props.name, value: "" , cbchange: cbchange}); this.setState({key: this.state.key+1})}}>&#215;</div>}
                 </div>
                 }
                 {output && <span className="output">{value}</span>}
