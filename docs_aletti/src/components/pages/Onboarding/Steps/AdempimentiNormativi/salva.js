@@ -62,7 +62,8 @@ export default  {
         let sFirme =  jsonFromFields(form)["sessionFirmeBlob"];
         
         // Converte i dati del questionario da array ad oggetti
-        ["0","1"].forEach((int)=>{
+        let listInt = (form["field_numintestatari"] === "2") ? ["0","1"] : ["0"];
+        listInt.forEach((int)=>{
             Object.keys(sFirme["intestatariFirme"][int]["listRispAdever"]).forEach((key)=>{
                 sFirme["intestatariFirme"][int]["listRispAdever"][key] = Array(sFirme["intestatariFirme"][int]["listRispAdever"][key][0])
             })
@@ -73,7 +74,7 @@ export default  {
 
         // Assembla l'oggetto per la spedizione
         let firme =  {
-            "capitalizzazionePeriodica": [{"consenso":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]==="true","nome":"ALETTI_CAPITALIZZ_PERIODICA"}],
+            "capitalizzazionePeriodica": [{"consenso":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]==="true","codDisclaimer":"ALETTI_CAP_PERIODICA"}],
             "intestatariFirme":sFirme["intestatariFirme"]
         };
        
