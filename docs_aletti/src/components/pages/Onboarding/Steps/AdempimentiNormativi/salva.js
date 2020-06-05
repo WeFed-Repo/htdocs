@@ -60,14 +60,26 @@ export default  {
 
         // Compone l'oggetto firme
         let sFirme =  jsonFromFields(form)["sessionFirmeBlob"];
+        let listInt = ["0","1"];
+        if (form["field_numintestatari"] !== "2") {
+            listInt = ["0"];
+            delete sFirme["intestatariFirme"]["1"];
+        }
         
         // Converte i dati del questionario da array ad oggetti
-        let listInt = (form["field_numintestatari"] === "2") ? ["0","1"] : ["0"];
+        
         listInt.forEach((int)=>{
             Object.keys(sFirme["intestatariFirme"][int]["listRispAdever"]).forEach((key)=>{
-                sFirme["intestatariFirme"][int]["listRispAdever"][key] = Array(sFirme["intestatariFirme"][int]["listRispAdever"][key][0])
+                if (sFirme["intestatariFirme"][int]["listRispAdever"][key][0]["id"] !=="") {
+                    sFirme["intestatariFirme"][int]["listRispAdever"][key] = Array(sFirme["intestatariFirme"][int]["listRispAdever"][key][0])
+                }
+                else
+                {
+                    delete sFirme["intestatariFirme"][int]["listRispAdever"][key];
+                }
             })
         });
+        
         
         
 

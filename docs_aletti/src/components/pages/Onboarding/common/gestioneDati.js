@@ -92,13 +92,8 @@ const defaultFields = {
                         }
                     ]
                 },
-                "emailPec": "",
-                "codAttivazionePec": "",
-                "sessioneConclusa": "",
                 "titolareEffettivo": "",
-                "personaEsposta": "",
-                "cellCertif": "",
-                "emailCertif": ""
+                "personaEsposta": ""
             },
             "1": {
                 "fasciaRedditoNote":"",
@@ -167,13 +162,8 @@ const defaultFields = {
                         }
                     ]
                 },
-                "emailPec": "",
-                "codAttivazionePec": "",
-                "sessioneConclusa": "",
                 "titolareEffettivo": "",
-                "personaEsposta": "",
-                "cellCertif": "",
-                "emailCertif": ""
+                "personaEsposta": ""
             }
         }
     },
