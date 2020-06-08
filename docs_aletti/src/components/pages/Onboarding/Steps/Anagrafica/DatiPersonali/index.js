@@ -326,8 +326,8 @@ class DatiPersonali extends Component {
 
                                                         this.setTypeDocumento(val);
                                                         // Reset campi date rilascio e scadenza
-                                                        this.props.obchange({"name": anagraficaIntestatario + "datarilasciorinnovo",value:"",cbchange:null});
-                                                        this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null});
+                                                        //this.props.obchange({"name": anagraficaIntestatario + "datarilasciorinnovo",value:"",cbchange:null});
+                                                        //this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null});
 
                                                     }
                                                 }
@@ -363,7 +363,16 @@ class DatiPersonali extends Component {
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
                                                         cbchange={() => {
-                                                            this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null})
+                                                            if(this.props.formstate[anagraficaIntestatario + "nascita"] === "") {
+                                                                this.setState({
+                                                                    isWarningDateVisible: true
+                                                                })
+                                                                this.props.obchange({"name": anagraficaIntestatario + "datarilasciorinnovo",value:"",cbchange:null})
+                                                                this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null})
+                                                            }
+                                                            else {
+                                                                this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null})
+                                                            }
                                                         }}
                                                         placeholder=""
                                                         className=""
