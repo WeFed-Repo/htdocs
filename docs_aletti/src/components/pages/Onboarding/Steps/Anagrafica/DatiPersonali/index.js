@@ -55,7 +55,10 @@ class DatiPersonali extends Component {
        
     }
     setDateScadenza(documentTypeSelected,val, dateType) {
-        if(typeof val !=="undefined" && val!== "") {
+
+    let dtReturn = "";
+
+    if(typeof val !=="undefined" && val!== "") {
         //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
         let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
             drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
@@ -124,16 +127,16 @@ class DatiPersonali extends Component {
             }
             if(dateType==="dateTo") {
                 
-                return this.scadenzaDoc
+                dtReturn =  this.scadenzaDoc
             }
             if (dateType==="dateFrom") {
-                return this.scadenzaDocPre
+                dtReturn = this.scadenzaDocPre
             }
          
         }
-        else {
-            return ""
-        }
+
+        return dtReturn;
+
     }
     
     
@@ -326,9 +329,10 @@ class DatiPersonali extends Component {
 
                                                         this.setTypeDocumento(val);
                                                         // Reset campi date rilascio e scadenza
-                                                        this.props.obchange({"name": anagraficaIntestatario + "datarilasciorinnovo",value:"",cbchange:null});
-                                                        this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null});
-
+                                                        this.props.setObState({
+                                                            [anagraficaIntestatario + "datarilasciorinnovo"]: "",
+                                                            [anagraficaIntestatario + "datascadenza"]: ""
+                                                        });
                                                     }
                                                 }
                                                 
@@ -363,7 +367,7 @@ class DatiPersonali extends Component {
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
                                                         cbchange={() => {
-                                                            this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null})
+                                                            this.props.setObState({[anagraficaIntestatario + "datascadenza"]:""})
                                                         }}
                                                         placeholder=""
                                                         className=""
@@ -377,7 +381,7 @@ class DatiPersonali extends Component {
                                                     {(this.state.isHelpDocVisible || this.props.formstate[anagraficaIntestatario + "codtipodocumento"] !== "") && <HelpBtn className="modal-sm" arg={this.props.formstate[anagraficaIntestatario + "codtipodocumento"] + "_dataRinnovo"} />}
                                                 </Col>
                                                 <Col xs="6" className="position-help">
-                                                    <Form.date
+                                                    <Form.date key={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         label="Data di scadenza*"
                                                         name={anagraficaIntestatario + "datascadenza"}
                                                         value={this.props.formstate[anagraficaIntestatario + "datascadenza"]}
@@ -386,7 +390,6 @@ class DatiPersonali extends Component {
                                                         className=""
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]} 
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
-                                                        
                                                         dateTo = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo")}
                                                         dateFrom = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom")}
                                                         output = {this.props.isOutput}
