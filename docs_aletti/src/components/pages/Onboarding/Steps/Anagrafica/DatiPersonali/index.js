@@ -56,13 +56,13 @@ class DatiPersonali extends Component {
     }
     setDateScadenza(documentTypeSelected,val, dateType) {
 
-    let dtReturn = "";
-
-    if(typeof val !=="undefined" && val!== "") {
+        let dtReturn = "";
+        
+        let birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"]
+        if(typeof val !=="undefined" && val!== "" && birthDate!=="") {
         //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
         let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
             drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
-            birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
             //NUMERO DI ANNI DA AGGIUNGERE
             yearsToAdd = 10,
             //CAPIRE SE MI SERVE LA DATA DI NASCITA DEL SOGGETTO
@@ -367,7 +367,18 @@ class DatiPersonali extends Component {
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
                                                         cbchange={() => {
-                                                            this.props.setObState({[anagraficaIntestatario + "datascadenza"]:""})
+                                                            if(this.props.formstate[anagraficaIntestatario + "nascita"] === "") {
+                                                                this.setState({
+                                                                    isWarningDateVisible: true
+                                                                })
+                                                                this.props.setObState({
+                                                                    [anagraficaIntestatario + "datarilasciorinnovo"]: "",
+                                                                    [anagraficaIntestatario + "datascadenza"]:""
+                                                                });
+                                                            }
+                                                            else {
+                                                                this.props.setObState({[anagraficaIntestatario + "datascadenza"]:""})
+                                                            }
                                                         }}
                                                         placeholder=""
                                                         className=""
