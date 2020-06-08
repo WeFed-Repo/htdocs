@@ -55,11 +55,11 @@ class DatiPersonali extends Component {
        
     }
     setDateScadenza(documentTypeSelected,val, dateType) {
-        if(typeof val !=="undefined" && val!== "") {
+        let birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"]
+        if(typeof val !=="undefined" && val!== "" && birthDate!=="") {
         //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
         let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
             drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
-            birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
             //NUMERO DI ANNI DA AGGIUNGERE
             yearsToAdd = 10,
             //CAPIRE SE MI SERVE LA DATA DI NASCITA DEL SOGGETTO
@@ -360,7 +360,13 @@ class DatiPersonali extends Component {
                                                         name={anagraficaIntestatario + "datarilasciorinnovo"}
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
-                                                        cbchange={() => {
+                                                        cbchange={(val) => {
+                                                            if(this.props.formstate[anagraficaIntestatario + "nascita"] === "") {
+                                                                this.setState({
+                                                                    isWarningDateVisible: true
+                                                                })
+                                                                val = "";
+                                                            }
                                                             this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
                                                         }}
                                                         placeholder=""
