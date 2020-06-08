@@ -28,6 +28,7 @@ class DatiPersonali extends Component {
 
 
     //COSTRUZIONE DELLA DATA DI VALIDITA' DEL DOCUMENTO CHE DIPENDE DAL TIPO DOCUMENTO SELEZIONATO E DA FATTORI INCROCIATI 9 febbraio 2012 campbiamento per carta identità
+    scadenze = {}
     scadenzaDoc = ""
     scadenzaDocPre = ""
     today = moment().format('DD/MM/YYYY')
@@ -53,22 +54,18 @@ class DatiPersonali extends Component {
         
        
     }
-    setDateScadenza(val) {
+    setDateScadenza(documentTypeSelected,val, dateType) {
+        if(typeof val !=="undefined" && val!== "") {
         //DATE IN CUI SONO CAMBIATE LE NORME PER I DOCUMENTI
         let identityCardChangeDate = moment("10/02/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
             drivingLicenseChangeDate = moment("17/11/2012", 'DD/MM/YYYY').format('DD/MM/YYYY'),
-            documentTypeSelected = this.typeDoc,
             birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"],
             //NUMERO DI ANNI DA AGGIUNGERE
             yearsToAdd = 10,
             //CAPIRE SE MI SERVE LA DATA DI NASCITA DEL SOGGETTO
             useBirthDate = false,
             eta = moment.duration(moment(new Date(), 'DD/MM/YYYY').diff(moment(birthDate, 'DD/MM/YYYY'))).asYears();
-            
-            this.scadenzaDoc = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
-            this.scadenzaDocPre = moment(new Date(), 'DD/MM/YYYY').format('DD/MM/YYYY');
-            //IL NUMERO DA AGGIUNGERE DIPENDE ANCHE DAL DOCUMENTO SELEZIONATO (CONTROLLI SULLA PATENTE !??)
-            
+             //IL NUMERO DA AGGIUNGERE DIPENDE ANCHE DAL DOCUMENTO SELEZIONATO (CONTROLLI SULLA PATENTE !??)
             //SE E' UNA PATENTE RINNOVATA IL LIMITE E' 50 ANNI DI ETA'
             if (documentTypeSelected == '14' && eta >=50) {
                 if (eta < 70 && eta >= 50){
@@ -81,11 +78,10 @@ class DatiPersonali extends Component {
                     yearsToAdd = 2;
                 }
              }
-            //SE LA LA PATENTE NON E' RINNOVATA iL LIMITE E' 55
+             //SE LA LA PATENTE NON E' RINNOVATA iL LIMITE E' 55
             if (/^(02|13)$/.test(documentTypeSelected) && eta >=55) {
                 yearsToAdd = 5;
             }
-            
             if (birthDate === "") {
                 //alert per indicare di specificare la data di nascita necessaria per fare i controlli sulla data di scadenza
                 this.setState({
@@ -126,7 +122,21 @@ class DatiPersonali extends Component {
                     this.scadenzaDocPre = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
                 }
             }
+            if(dateType==="dateTo") {
+                
+                return this.scadenzaDoc
+            }
+            if (dateType==="dateFrom") {
+                return this.scadenzaDocPre
+            }
+         
+        }
+        else {
+            return ""
+        }
     }
+    
+    
     //calcolo del range per COVID:
     getRangeCovid (datetoCheck) {
         var initCovid = new Date(2020, 2, 1),     
@@ -315,7 +325,6 @@ class DatiPersonali extends Component {
                                                     if (this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") {
 
                                                         this.setTypeDocumento(val);
-                                                        this.setDateEmissione(val);
                                                         this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "";
                                                         this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
                                                     }
@@ -351,18 +360,14 @@ class DatiPersonali extends Component {
                                                         name={anagraficaIntestatario + "datarilasciorinnovo"}
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
-                                                        cbchange={(val) => {
-                                                            if (this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") {
-                                                                this.setDateScadenza(val)
-                                                            }
-                                                        }
-                                                        }
+                                                        cbchange={() => {
+                                                            this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
+                                                        }}
                                                         placeholder=""
                                                         className=""
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === "" : ""}
                                                         dateTo={moment(new Date(), 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY')}
-                                                        //dateFrom= { this.emissioneDoc }
                                                         dateFrom= { this.props.formstate[anagraficaIntestatario + "codtipodocumento"] === '03' ? moment(this.dateToStart, 'DD/MM/YYYY').subtract(10, "year").add(1, "day").format('DD/MM/YYYY') : moment(this.dateToStart, 'DD/MM/YYYY').subtract(10, "year").format('DD/MM/YYYY') }
                                                         output = {this.props.isOutput}
                                                     >
@@ -379,8 +384,9 @@ class DatiPersonali extends Component {
                                                         className=""
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]} 
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
-                                                        dateTo = {this.scadenzaDoc}
-                                                        dateFrom={this.scadenzaDocPre}
+                                                        
+                                                        dateTo = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo")}
+                                                        dateFrom = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom")}
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
