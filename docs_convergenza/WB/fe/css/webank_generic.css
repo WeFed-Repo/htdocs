@@ -815,6 +815,10 @@ p {
 .txthelp.control-label {
   margin-bottom: 3px;
 }
+.txthelp.control-label.txthelp {
+  margin-bottom: 10px;
+  display: inline;
+}
 .flRight {
   float: right;
 }
