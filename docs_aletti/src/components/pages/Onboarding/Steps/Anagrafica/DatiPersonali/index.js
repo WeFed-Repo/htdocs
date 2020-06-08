@@ -28,7 +28,6 @@ class DatiPersonali extends Component {
 
 
     //COSTRUZIONE DELLA DATA DI VALIDITA' DEL DOCUMENTO CHE DIPENDE DAL TIPO DOCUMENTO SELEZIONATO E DA FATTORI INCROCIATI 9 febbraio 2012 campbiamento per carta identità
-    scadenze = {}
     scadenzaDoc = ""
     scadenzaDocPre = ""
     today = moment().format('DD/MM/YYYY')
@@ -41,21 +40,8 @@ class DatiPersonali extends Component {
         this.typeDoc = val
     }
     
-    setDateEmissione(val) {
-        //SWITCH A SECONDA DEL DOCUMENTO SELEZIONATO PER SETTARE LA DATA DI EMISSIONE DALLA QUALE PARTIRE
-        let documentTypeSelected = this.typeDoc;
-        this.emissioneDoc = moment( this.dateToStart, 'DD/MM/YYYY' ).subtract(10, "year").format('DD/MM/YYYY');
-        //CORRETTIVA PER PERIODO COVID: ABILITARE EVENTUALI DATE DI EMISSIONE DI DOCUMENTI CHE SAREBBERO GIA? SCADUTI
-        
-        //CASO PASSAPORTO 10 anni /il giorno prima
-        if (documentTypeSelected == '03') {
-            this.emissioneDoc = moment(this.dateToStart, 'DD/MM/YYYY').subtract(10, "year").add(1, "day").format('DD/MM/YYYY');
-        }
-        
-       
-    }
+   
     setDateScadenza(documentTypeSelected,val, dateType) {
-
         let dtReturn = "";
         
         let birthDate = this.props.formstate["field_anagraficablob_intestatari_" + this.props.indexInt + "_nascita"]
@@ -401,8 +387,8 @@ class DatiPersonali extends Component {
                                                         className=""
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]} 
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
-                                                        dateTo = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo")}
-                                                        dateFrom = {this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom")}
+                                                        dateTo = { this.props.formstate[anagraficaIntestatario + "codtipodocumento"!==""] ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo") : ""}
+                                                        dateFrom = { this.props.formstate[anagraficaIntestatario + "codtipodocumento"!==""] ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom") : ""}
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
