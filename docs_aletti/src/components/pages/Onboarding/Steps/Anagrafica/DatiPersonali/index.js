@@ -325,8 +325,10 @@ class DatiPersonali extends Component {
                                                     if (this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") {
 
                                                         this.setTypeDocumento(val);
-                                                        this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "";
-                                                        this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
+                                                        // Reset campi date rilascio e scadenza
+                                                        this.props.obchange({"name": anagraficaIntestatario + "datarilasciorinnovo",value:"",cbchange:null});
+                                                        this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null});
+
                                                     }
                                                 }
                                                 
@@ -360,14 +362,8 @@ class DatiPersonali extends Component {
                                                         name={anagraficaIntestatario + "datarilasciorinnovo"}
                                                         value={this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"]}
                                                         onChange={this.props.obchange}
-                                                        cbchange={(val) => {
-                                                            if(this.props.formstate[anagraficaIntestatario + "nascita"] === "") {
-                                                                this.setState({
-                                                                    isWarningDateVisible: true
-                                                                })
-                                                                val = "";
-                                                            }
-                                                            this.props.formstate[anagraficaIntestatario + "datascadenza"] = "";
+                                                        cbchange={() => {
+                                                            this.props.obchange({"name": anagraficaIntestatario + "datascadenza",value:"",cbchange:null})
                                                         }}
                                                         placeholder=""
                                                         className=""
