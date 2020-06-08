@@ -387,8 +387,8 @@ class DatiPersonali extends Component {
                                                         className=""
                                                         error={this.props.formstate.errors[anagraficaIntestatario + "datascadenza"]} 
                                                         disabled={(this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "86" || this.props.formstate[anagraficaIntestatario + "paeserilascio"] === "") ? this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] === "" || this.props.formstate[anagraficaIntestatario + "nascita"] === "" : ""}
-                                                        dateTo = { this.props.formstate[anagraficaIntestatario + "codtipodocumento"!==""] ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo") : ""}
-                                                        dateFrom = { this.props.formstate[anagraficaIntestatario + "codtipodocumento"!==""] ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom") : ""}
+                                                        dateTo = {this.props.formstate[anagraficaIntestatario + "nascita"]!== "" ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateTo") :""}
+                                                        dateFrom = {this.props.formstate[anagraficaIntestatario + "nascita"]!== "" ? this.setDateScadenza( this.props.formstate[anagraficaIntestatario + "codtipodocumento"],this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"], "dateFrom") : ""}
                                                         output = {this.props.isOutput}
                                                     >
                                                     </Form.date>
