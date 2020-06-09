@@ -20,6 +20,15 @@
       background-color: $primaryDark;
     }
   }
+  .modal-footer & {margin-bottom:0;}
+  &.btn-secondary {
+    border:0 none;
+    border-radius:20px;
+    text-transform:uppercase;
+    background-color:#92989C;
+    font-weight:600;
+    padding:8px 15px 5px;
+  }
   &.btn-default {
     margin-left: 20px;
   }

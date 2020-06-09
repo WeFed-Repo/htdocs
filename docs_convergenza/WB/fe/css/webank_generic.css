@@ -6005,7 +6005,7 @@ table tr td.td-fondo .fundName {
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
-  z-index: 10!important;
+  z-index: 10;
 }
 .tooltip.top {
   margin-top: -3px;

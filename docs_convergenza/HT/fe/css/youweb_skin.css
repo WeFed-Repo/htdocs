@@ -457,6 +457,17 @@ h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
 .button.btn-primary:hover, .button.btn-filtra:hover, .button.btn-filtra-attivo:hover, .button.btn-navigation:hover, .btn.btn-primary:hover, .btn.btn-filtra:hover, .btn.btn-filtra-attivo:hover, .btn.btn-navigation:hover {
   background-color: #007c66;
 }
+.modal-footer .button, .modal-footer .btn {
+  margin-bottom: 0;
+}
+.button.btn-secondary, .btn.btn-secondary {
+  border: 0 none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: #92989C;
+  font-weight: 600;
+  padding: 8px 15px 5px;
+}
 .button.btn-default, .btn.btn-default {
   margin-left: 20px;
 }
