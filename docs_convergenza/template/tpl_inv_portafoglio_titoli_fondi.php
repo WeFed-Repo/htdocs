@@ -364,14 +364,14 @@ $(function(){
                                 <a class="spsel-option-el">Mercati e prezzi</a>
                                 <div class="spsel-btn-console">
                                     <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                                    <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                                 </div>
                             </div>
                             <div class="spsel-option" data-value="vista2">
                                 <a class="spsel-option-el">Vista 2</a>
                                 <div class="spsel-btn-console">
                                     <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                                    <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                                    <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                                 </div>
                             </div>
                             <div class="spsel-option spsel-custom" id="selColonne">
