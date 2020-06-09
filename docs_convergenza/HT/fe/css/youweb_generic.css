@@ -667,7 +667,7 @@ table.riepilogo tr th {
 table.riepilogo tr th.right {
     text-align: right!important;
 }
-table.riepilogo tr td {
+table.riepilogo tr td, #mainContent  .riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan] {
     background-color: #fff!important;
     border-bottom: 2px solid #f2f2f2!important;
 }
@@ -676,7 +676,9 @@ table.riepilogo tr.totali td { background-color: #dadee2!important; border: 0!im
 #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
     border-right: 2px solid #f2f2f2!important;
   }
-#mainContent table.riepilogo tr td[rowspan]:last-child {
+#mainContent table.riepilogo tr td[rowspan]:last-child, 
+#mainContent table.riepilogo tbody tr td[rowspan]:last-child,
+#mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan]:last-child {
     border-left: 2px solid #f2f2f2!important;
     border-right: 0 !important;
   }

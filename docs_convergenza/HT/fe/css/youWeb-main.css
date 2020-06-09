@@ -691,7 +691,37 @@ div#new2 > .col-sm-20 > .riquadro, div#new2 > .col-md-80 > .riquadro{
 	display:none;
 }
 
-
+/* SOTTOSCRIZIONE FONDI*/
+select +  .ui-autocomplete-input {
+	background: #fff url(/HT/fe/img/select_down.gif) no-repeat 96% center;
+	background-position: calc(100% - 22px)  center;
+	
+}
+#fondiSottoscrizioneForm select +  .ui-autocomplete-input + button.ui-button-icon.btnAutoComplete{
+	width: 50px;
+    height: 50px;
+    position: relative;
+    background: transparent!important;
+    top: -50px;
+    padding: 0;
+	float: right;
+	right: 0;
+}
+@media screen and (max-width: 991px) {
+	select +  .ui-autocomplete-input {
+		background-position: calc(100% - 12px)  center;
+	}
+	#fondiSottoscrizioneForm select +  .ui-autocomplete-input + button.ui-button-icon.btnAutoComplete{
+		width: 40px;
+		height: 40px;
+		position: relative;
+		background: transparent!important;
+		top: -40px;
+		padding: 0;
+		float: right;
+		right: 0;
+	}
+}
 
 .custom-combobox-input.ui-widget.ui-widget-content.form-control.ui-autocomplete-input{
 	border-right:0px;
@@ -2662,9 +2692,13 @@ tfoot th{background-color: #dadee1}
 		border: 2px solid #202D50;
   		border-radius:2px;
   		vertical-align: middle;
-  		margin-top:0px;
+		margin-top:0px;
+		margin-right: 5px
   	}
-
+    input[type=checkbox] + label {
+		position: relative;
+		top: 3px;
+	}
   	input[type='checkbox']:before {
   		display:inline;
   		width:15px;
@@ -2751,13 +2785,17 @@ tfoot th{background-color: #dadee1}
 	.form-control:focus {border: 1px solid #122E5C;box-shadow: none!important }
 	input[type=radio],input[type=radio]:focus{
 		width:18px;height:18px;
-		margin-right:10px;
+		margin-right:5px;
 		-webkit-appearance:none;-moz-appearance:none;appearance:none;background:#D8D8D8;border:1px solid #979797;
   		border-radius:50%;
   		outline:none;
   		box-shadow: none;
 
-  	}
+	  }
+	  input[type=radio] + label,input[type=radio]:focus + label {
+		  position: relative;
+		  top: -3px;
+	  }
   	.form-field input[type=radio]{position: relative;top:3px; }
   	input[type='radio']:before {
   		content:'';
@@ -6688,6 +6726,13 @@ pre{
 #prenotazioneForm .btnSelezioneCC.open
 {background: url(/HT/fe/img/icon_accordion_opened.png) no-repeat 98% center;width: 23px;height: 23px;position: absolute;top: 18px;right: 0;background-size: cover}
 /*#fondiSottoscrizioneForm .selezioneCC.tabellaSelezioneCC  .col-sm-6.col-xs-12.clear-paddingImportant{width:100%;}*/
+
+#fondiSottoscrizioneForm .col-sm-6.col-xs-12.listato-note:first-child , #fondiSottoscrizioneForm .col-sm-6.col-xs-12.listato-note h3{
+	padding-left:0;
+}
+#fondiSottoscrizioneForm .col-sm-6.col-xs-12.listato-note:first-child .col-xs-9 {padding-left:0}
+#fondiSottoscrizioneForm input[type=checkbox]#infoPreOrdine {margin-left:15px}
+#fondiSottoscrizioneForm input[type="radio"] + label {display: inline;}
 .OUT2ColDiff.form-horizontal .form-field-resume.col-xs-4 {margin-bottom:20px;}
 .contentFull #ricercaTitoliRisultato .bs-example{padding-bottom:0;}
 .contentFull #ricercaTitoliRisultato .oRight.margin10{margin-top:0;}
