@@ -424,14 +424,14 @@ $tipo_op_1 = array(1,2,3);
                         <a class="spsel-option-el">Mercati e prezzi</a>
                         <div class="spsel-btn-console">
                             <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                         </div>
                     </div>
                     <div class="spsel-option" data-value="vista2">
                         <a class="spsel-option-el">Vista 2</a>
                         <div class="spsel-btn-console">
                             <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                            <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                            <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                         </div>
                     </div>
                     <div class="spsel-option spsel-custom" id="selColonne">
@@ -815,7 +815,7 @@ $tipo_op_1 = array(1,2,3);
             <div class="modal-body">
               <div class="row">
                 <div class="col-xs-12">
-                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br />Puoi creare altri <strong>8</strong> portafogli</label>
+                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br /><span class="txthelp" data-toggle="tooltip" title="Lorem ipsum dolor sit amet" data-viewport="#contenuti">Puoi creare altri <strong>8</strong> portafogli</span></label>
                 </div>
               </div>
               <div class="row form-group w100">
