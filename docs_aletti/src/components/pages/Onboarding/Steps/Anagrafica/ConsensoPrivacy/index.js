@@ -86,7 +86,12 @@ class ConsensoPrivacy extends Component {
                                         name={anagraficaIntestatario + "nascita"}
                                         value={this.props.formstate[anagraficaIntestatario + "nascita"]}
                                         onChange={this.props.obchange}
-                                        cbchange={() => { this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = "" }}
+                                        cbchange={() => { 
+                                            this.props.setObState({
+                                                [anagraficaIntestatario + "datarilasciorinnovo"]: "",
+                                                [anagraficaIntestatario + "datascadenza"]:""
+                                            });
+                                        }}
                                         placeholder=""
                                         className=""
                                         error={this.props.formstate.errors[anagraficaIntestatario + "nascita"]}

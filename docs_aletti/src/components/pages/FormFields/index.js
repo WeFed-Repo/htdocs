@@ -198,7 +198,7 @@ export default class extends Component {
                                 onChange={this.generalOnChange}
                                 output={this.state.allOutput}
                                 dateFrom={"07/12/1990"}
-                                dateTo={"01/03/1991"}
+                                dateTo={"07/12/1990"}
                                 disabled={this.state.allDisabled}
                             ></Form.date>
                         </Col>

@@ -107,7 +107,7 @@ export default class extends Component {
         this.setState({ isLoading: true });
 
         // Determina l'url per recuperare la bozza
-        let urlBozza = { "svil": "/json_data/onboarding/getBozzaById_avanzamento.json", "prod": "/promotori/onboarding/rest/bozze/" + this.state.field_id + "/getBozza" };
+        let urlBozza = { "svil": "/json_data/onboarding/getBozzaById_svil.json", "prod": "/promotori/onboarding/rest/bozze/" + this.state.field_id + "/getBozza" };
 
         let tthis = this;
         getData({
@@ -123,7 +123,7 @@ export default class extends Component {
 
                 // Calcolo del totale delle residenze FATCA
                 bdata["field_anagraficablob_intestatari_0_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["0"]["listResidenzeFiscale"]).length;
-                bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length;
+                bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = (typeof data.results.anagraficaBlob.intestatari["1"] !="undefined")? Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length : 0;
 
                 tthis.setState(bdata);
                 tthis.setState({ isLoading: false });

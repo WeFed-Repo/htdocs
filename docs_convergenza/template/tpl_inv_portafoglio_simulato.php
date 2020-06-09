@@ -424,14 +424,14 @@ $tipo_op_1 = array(1,2,3);
                         <a class="spsel-option-el">Mercati e prezzi</a>
                         <div class="spsel-btn-console">
                             <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                            <a class="btn-icon" data-list-name="Mercati e prezzi" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                         </div>
                     </div>
                     <div class="spsel-option" data-value="vista2">
                         <a class="spsel-option-el">Vista 2</a>
                         <div class="spsel-btn-console">
                             <a class="btn-icon" data-list-name="Vista 2" data-function="edit"><i class="icon icon-edit_fill"></i></a>
-                            <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-delete_table"></i></a>
+                            <a class="btn-icon" data-list-name="Vista 2" data-function="delete"><i class="icon icon-trash_filled"></i></a>
                         </div>
                     </div>
                     <div class="spsel-option spsel-custom" id="selColonne">
@@ -500,7 +500,7 @@ $tipo_op_1 = array(1,2,3);
         <tr>
           <td class="center">
             <a class="btn-icon btn-icon-modifica" data-isin="<?php print (999990 + $x )?>">
-              <i class="icon icon-2x icon-<?php print(($site == "webank") ? 'r-modifica' : 'edit_fill') ?>"></i>
+              <i class="icon icon-2x icon-edit_fill"></i>
             </a>
           </td>
           <td class="left"><a href="">Titolo azione <?php print($x + 1) ?></a></td>
@@ -594,7 +594,7 @@ $tipo_op_1 = array(1,2,3);
                 <div class="col-xs-4">
                   <div class="btn-align-left">
                     <a class="btn-link-icon" href="#">
-                      <i class="icon icon-<?php print (($site == "webank") ? 'r-elimina' : 'delete_table') ?>"></i>
+                      <i class="icon icon-trash_filled"></i>
                       <span>Elimina riga</span>
                     </a>
                   </div>
@@ -815,7 +815,7 @@ $tipo_op_1 = array(1,2,3);
             <div class="modal-body">
               <div class="row">
                 <div class="col-xs-12">
-                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br />Puoi creare altri <strong>8</strong> portafogli</label>
+                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br /><span class="txthelp" data-toggle="tooltip" title="Lorem ipsum dolor sit amet" data-container="<?php print ($site=="webank")? "#contenuti" : "#mainContent"; ?>">Puoi creare altri <strong>8</strong> portafogli</span></label>
                 </div>
               </div>
               <div class="row form-group w100">

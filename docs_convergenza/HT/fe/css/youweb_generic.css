@@ -651,10 +651,11 @@ table.details-table th{
 table.details-table td {
     background-color: #fff;
     border-bottom: 2px solid #dadee2!important;
+    font-size: 13px!important;
 }
 table tr.sub {background:#eaeded}
-table tr.sub td {background:#eaeded}
-table td.indent {padding-left:30px}
+table tr.sub td {background:#eaeded;  font-size:12px!important;}
+table td.indent, table tr.sub td[data-field="titolo"] {padding-left:30px}
  
 /* DI RIEPILOGO */
 
@@ -666,7 +667,7 @@ table.riepilogo tr th {
 table.riepilogo tr th.right {
     text-align: right!important;
 }
-table.riepilogo tr td {
+table.riepilogo tr td, #mainContent  .riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan] {
     background-color: #fff!important;
     border-bottom: 2px solid #f2f2f2!important;
 }
@@ -675,7 +676,9 @@ table.riepilogo tr.totali td { background-color: #dadee2!important; border: 0!im
 #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
     border-right: 2px solid #f2f2f2!important;
   }
-#mainContent table.riepilogo tr td[rowspan]:last-child {
+#mainContent table.riepilogo tr td[rowspan]:last-child, 
+#mainContent table.riepilogo tbody tr td[rowspan]:last-child,
+#mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan]:last-child {
     border-left: 2px solid #f2f2f2!important;
     border-right: 0 !important;
   }
@@ -6610,7 +6613,7 @@ div[id*="popover"] .popover-content {
     width: 80px;
     position: absolute;
     text-align: right;
-    top: 12px;
+    top: 8px;
     right: 35px;
 }
 
@@ -6650,7 +6653,7 @@ div[id*="popover"] .popover-content {
 @media (max-width: 991px) {
     .spsel.spsel-hasconsole .spsel-option {height:38px;}
     .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
-        top:8px;
+        top:6px;
     }
 }
 

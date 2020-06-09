@@ -1,0 +1,134 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "id": 2630813,
+        "dataInserimento": 1591347967000,
+        "dataUltimoAggiornamento": 1591347967000,
+        "stato": "BOZZA_VALIDATA",
+        "provenienza": "PROMOTORE",
+        "intestazione": "Davide Cioetto",
+        "numIntestatari": 1,
+        "intestCorrente": 0,
+        "promotore": "ES05495",
+        "ordineIntestatari": "0",
+        "expirationDate": 1599289567351,
+        "sessionFirmeBlob": {
+            "idMifid": null,
+            "depositoIncluso": false,
+            "informativaMifid": false,
+            "risposteMifid": null,
+            "capitalizzazionePeriodica": null,
+            "tokensFirma": null,
+            "codicePratica": null,
+            "intestatariFirme": null
+        },
+        "anagraficaBlob": {
+            "privacyletta": true,
+            "filiale": "via dei pini 12",
+            "idAccessTokenPec": "testAccessToken",
+            "nomeFirmatarioPromo": "agente1",
+            "intestatari": {
+                "0": {
+                    "nome": "Davide",
+                    "cognome": "Cioetto",
+                    "nascita": 281836800000,
+                    "sesso": "M",
+                    "codiceFiscale": "CTTDVD78T07C523E",
+                    "imgCodFiscale": [
+                        {
+                            "idImmagine": 99991,
+                            "formato": "PDF",
+                            "tipo": "UNICA"
+                        }
+                    ],
+                    "email": "davide.cioetto@gmail.com",
+                    "emailPec": "nome.cognome@test.infocert.it",
+                    "prefisso": "0039",
+                    "telefono": "3785207",
+                    "nomeFirmatario": "firmatario1_NOPEC1",
+                    "listPrivacy": [
+                        {
+                            "codDisclaimer": "ALETTI_ANAG_CONS_1",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_ANAG_CONS_2",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_ANAG_CONS_3",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_ANAG_CONS_4",
+                            "consenso": true
+                        },
+                        {
+                            "codDisclaimer": "ALETTI_ANAG_CONS_5",
+                            "consenso": true
+                        }
+                    ],
+                    "paeseNascita": "86",
+                    "provinciaNascita": "AL",
+                    "cittadinanza": "86",
+                    "comuneNascita": "ALBAREDO",
+                    "listResidenzeFiscale": [
+                        {
+                            "codiceUic": 86,
+                            "tin": "",
+                            "descrizione": "ITALIA",
+                            "imgTin": []
+                        }
+                    ],
+                    "codTipoDocumento": "11",
+                    "numDocumento": "AS033920",
+                    "dataRilascioRinnovo": 1673049600000,
+                    "dataScadenza": 1673049600000,
+                    "paeseRilascio": "86",
+                    "provinciaRilascio": "AL",
+                    "comuneRilascio": "ALTIVOLE",
+                    "imgDocIdentita": [
+                        {
+                            "idImmagine": 99991,
+                            "formato": "PDF",
+                            "tipo": "UNICA"
+                        }
+                    ],
+                    "tipoIndirizzoResidenza": "Via",
+                    "indirizzoResidenza": "Privata",
+                    "numResidenza": "27",
+                    "provinciaResidenza": "AG",
+                    "comuneResidenza": "ALBAREDO",
+                    "capResidenza": "26026",
+                    "tipoIndirizzoCAI": "",
+                    "indirizzoCAI": "",
+                    "numCAI": "",
+                    "provinciaCAI": "",
+                    "comuneCAI": "",
+                    "capCAI": "",
+                    "tipoIndirizzoDomicilio": "",
+                    "indirizzoDomicilio": "",
+                    "numDomicilio": "",
+                    "provinciaDomicilio": "",
+                    "comuneDomicilio": "",
+                    "capDomicilio": "",
+                    "tipoIndirizzoCorrisp": "",
+                    "indirizzoCorrisp": "",
+                    "numCorrisp": "",
+                    "provinciaCorrisp": "",
+                    "comuneCorrisp": "",
+                    "capCorrisp": "",
+                    "prefissoFissoCasa": "0039",
+                    "numeroFissoCasa": "029230205",
+                    "prefissoFissoUfficio": "0039",
+                    "numeroFissoUfficio": "02208122",
+                    "codTitoloStudio": ""
+                }
+            }
+        }
+    }
+}

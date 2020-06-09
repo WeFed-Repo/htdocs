@@ -2630,11 +2630,11 @@ a.btn:active {
 }
 .btn .icon {
   position: relative;
-  top: -1px;
+  top: -2px;
 }
 .btn .icon-text {
   position: relative;
-  top: -3px;
+  top: -5px;
   padding-left: 5px;
 }
 .btn.btn-large {
