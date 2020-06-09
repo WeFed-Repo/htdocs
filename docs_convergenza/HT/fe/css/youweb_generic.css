@@ -6611,7 +6611,7 @@ div[id*="popover"] .popover-content {
     width: 80px;
     position: absolute;
     text-align: right;
-    top: 12px;
+    top: 8px;
     right: 35px;
 }
 
@@ -6651,7 +6651,7 @@ div[id*="popover"] .popover-content {
 @media (max-width: 991px) {
     .spsel.spsel-hasconsole .spsel-option {height:38px;}
     .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
-        top:8px;
+        top:6px;
     }
 }
 
