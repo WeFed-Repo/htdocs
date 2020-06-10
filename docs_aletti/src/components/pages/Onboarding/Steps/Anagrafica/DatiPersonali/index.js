@@ -167,13 +167,14 @@ class DatiPersonali extends Component {
 
                 <DefaultModal show={this.state.isWarningDateVisible}
                     params={{ "modalTitle": 'Attenzione' }}>
-                    <p>Specificare la data di nascita per proseguire con la selezione della data di emisisone e scadenza dei documenti</p>
+                    <p>Specificare la data di nascita per proseguire con la selezione della data di emissione e scadenza dei documenti</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = ""; this.setState({ isWarningDateVisible: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { this.setState({ isWarningDateVisible: false }) }} title="Chiudi">Chiudi</Button>
                         </div>
                     </div>
                 </DefaultModal>
+
                 <DefaultCollapse
                     disabled={this.props.isPrivacyUnChecked && !this.props.isOutput}
                     label={!this.props.isOutput ? labelDatiPer : labelDatiPerOutput}
