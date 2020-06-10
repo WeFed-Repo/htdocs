@@ -1,7 +1,7 @@
 <html><head>
 	<title>Riepilogo F24</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	
+
 
 
 
@@ -34,58 +34,58 @@
 <script type="text/javascript" src="/sapef24/f24/javascript/funzioniHB.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/jquery.blockUI.js"></script>
 
-<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>    
+<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>
 
 
 <!--nostro-->
-	
+
 	<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/blue.css">
 	<script type="text/javascript" src="/sapef24/f24/javascript/icheck.min.js?t=1583315348896"></script>
 	<script type="text/javascript" src="/sapef24/f24/javascript/helpModal.js"></script>
-	
 
 
 
 
-	
+
+
 <script type="text/javascript">
-	
+
 		function getPathImages() { return '/sapef24/f24/images/';}
-	
+
 </script>
 <script type="text/javascript" src="/sapef24/f24/javascript/controlli.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/doubleClickPrevention.js"></script>
-	
+
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/jquery-ui.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/bootstrap.min.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/essentials.css">
-	
+
 		<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/header-default.css">
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleNew.css">
-		
+
 		<!--NUOVA GRAFICA-->
-			
+
 	<link media="print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePrint.css">
-	
+
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePhone.css">
-			<?php if($_REQUEST['bank'] == 'HT') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleYouweb.css">
-        <?php } else if($_REQUEST['bank'] == 'WB') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleWebank.css">
-        <?php } ?>
-			
-		
+		<?php if($_REQUEST['bank'] == 'HT') { $stileSito = 'styleYouweb'; }
+					else if($_REQUEST['bank'] == 'WB') { $stileSito = 'styleWebank'; }
+					else if($_REQUEST['bank'] == 'AL') { $stileSito = 'styleAletti'; }
+					if( $stileSito ) { ?>
+						<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/<?php echo $stileSito ?>.css">
+		<?php } ?>
+
 
 		<script src="/sapef24/f24/javascript/jquery.jspanel.min.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile-detect.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.pager.js?t=1583315348896"></script>
-	
+
 		<link type="text/css" href="/sapef24/f24/styles/jquery.tablesorter.pager.css?t=1583315348896" rel="stylesheet">
 
 		<script type="text/javascript">
-		(function(){   
+		(function(){
 		  if (window.addEventListener)
 		  {
 			window.addEventListener("load", nascondi_loading_mobile, false);
@@ -102,9 +102,9 @@
 		  document.getElementById("loading_mobile").style.display = 'none';
 		}
 		</script>
-		
 
-	
+
+
 
 
 
@@ -123,24 +123,24 @@
 
 
 	<script type="text/javascript">
-		
+
 		function noBack(){
 			window.history.forward();
 		}
-		
+
 		noBack();
-		
+
 		window.onload = noBack;
 		window.onpageshow = function(evt) {
 			if (evt.persisted) {
 				noBack();
 			}
 		}
-		
+
 		window.onunload = function() {
 			void(0);
 		}
-	
+
 	</script>
 
 
@@ -149,25 +149,25 @@
 
 	if (window.opera) {
 		window.opera.setOverrideHistoryNavigationMode('compatible');
-		
+
 		if (history.navigationMode) {
 			history.navigationMode = 'compatible';
 		}
 	}
-	
+
 </script>
-	
-	
- 
+
+
+
   <!--[if lt IE 9]>
   	<script type="text/javascript" src='/sapef24/f24/javascript/respond.min.js'></script>
   	<script type="text/javascript" src='/sapef24/f24/javascript/html5.js'></script>
   <![endif]-->
   <script type="text/javascript" src="/sapef24/f24/javascript/alten.js"></script>
-  
+
   <style id="style-1-cropbar-clipper">
 	/* Copyright 2014 Evernote Corporation. All rights reserved. */
-	
+
 	.en-markup-crop-options {
 		top: 18px !important;
 		left: 50% !important;
@@ -180,10 +180,10 @@
 		margin-left: 0px !important;
 	}
 </style>
- 
+
 
 <style type="text/css">
-	#loading_mobile, #loading_screen{  
+	#loading_mobile, #loading_screen{
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -194,13 +194,13 @@
 		opacity: 0.5;
 		filter: alpha(opacity=50);
 	}
-	
-		#loading_screen{  
+
+		#loading_screen{
 			background: url(/sapef24/f24/images/loading.gif) 50% no-repeat;
 		}
-	
+
 </style>
-	
+
 
 
 
@@ -209,7 +209,7 @@
 </head>
 
 <body marginwidth="0" marginheight="0" style="zoom: 1;">
-	
+
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -217,7 +217,7 @@
 						<h1>F24</h1>
 						<form name="f24MainForm" method="post" action="/sapef24/f24/spedisciModello.do" class="form-horizontal"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="c15ebc332d71ca023284478f6a603916">
 
-					  	
+
 
 
 
@@ -240,7 +240,7 @@
 
     function cercaModelli() {
 		mostra_loading_mobile();
-		
+
 		if (!getSubmitted()) {
 	           document.f24MainForm.action = '/sapef24/f24/findDeleghePhone.do';
                document.f24MainForm.submit();
@@ -249,10 +249,10 @@
 			   	   document.getElementById('erroreRiepilogo').style.display = 'none';
               }
         }
-    
+
       }
 
-      function nuovoModello() {	
+      function nuovoModello() {
       		mostra_loading_mobile();
       if (!getSubmitted()) {
    	      document.f24MainForm.action = '/sapef24/f24/inserisciNuovoModelloPhone.do?_control.tipo=S';
@@ -260,34 +260,34 @@
         }
     }
 
-	  
+
 	function duplica() {
 	  mostra_loading_mobile();
       document.f24MainForm.action = '/sapef24/f24/inserisciNuovoModelloPhone.do?_control.duplica=yes';
       document.f24MainForm.submit();
 	 }
-	
-	
-	
+
+
+
 	$( document ).ready(function() {
-		
-		
-		
+
+
+
 			var appo = null;
-		
-		
-		
-		
-		
-		if(appo != null){	
-			$("#dialog-message").css("display", "block");  
+
+
+
+
+
+		if(appo != null){
+			$("#dialog-message").css("display", "block");
 		  	$( function() {
-			    $( "#dialog-message" ).dialog({	    	
+			    $( "#dialog-message" ).dialog({
 			    	position: { my: "center center" },
 					dialogClass: "pop",
 			    	draggable: false ,
 			      	modal: true,
-			      
+
 			      	buttons: {
 			        	Ok: function() {
 			         	 $( this ).dialog( "close" );
@@ -297,12 +297,12 @@
 		  	});
  		}
 	});
- 
+
 </script>
 <div id="dialog-message" style="display:none;" title="REVOCA ACCETTATA">
   <p>
     null
-  </p> 
+  </p>
 </div>
 
 <div id="dialog-confirm" style="display:none;" title="Conferma">
@@ -327,23 +327,13 @@
             	<option value="90">Ultimi 3 mesi</option>
 					<option value="180" selected="selected">Ultimi 6 mesi</option></select>
 				</div>
-				
+
 			</div><!--form-group-->
 
-  	
+
 	  <input type="hidden" name="selectedRevoca">
 	  <input type="checkbox" name="checkedItems" style="display: none">
 
-	  
-   	  
-			
-			
-			
-			
-
-
-
-	
 
 
 
@@ -352,20 +342,30 @@
 
 
 
-			
 
-			
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -421,24 +421,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione0"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -494,24 +494,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione1"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -567,24 +567,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione2"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -640,24 +640,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione3"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -713,24 +713,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione4"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -786,24 +786,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione5"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -859,24 +859,24 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione6"></div></div><!-- /riquadro clearfix-->
-			 	
-			
+
+
 				<div class="riquadro clearfix">
 					<div class="clearfix pull-right">
-						
+
 					</div>
-			
-					
+
+
 						<div class="esitoOpe"><img src="/sapef24/f24/images/phone/ico_esitoOpeLavorazione.png" class="flex" title="delega in lavorazione" alt="delega in lavorazione"></div>
-					
-					
-					
+
+
+
 
 						<h4>ALESSANDRO VENTURELLI</h4>
 						<div class="table-responsive phone">
@@ -932,28 +932,28 @@
 								</div>
 							</div>
 						</div>
-						
-						
-							
-						
-					
+
+
+
+
+
 						<div class="table-responsive phone" id="idDatiSezione7"></div></div><!-- /riquadro clearfix-->
-			 	
-			
 
 
 
 
 
-      
-	  
+
+
+
+
 	</div><!--section clearfix-->
 
 
 <script type="text/javascript">
-	
+
 		var selectedDelegaArray = document.f24MainForm.checkedItems;
-	
+
 
 	function mostraErroriDelega(idx) {
 		window.open('/sapef24/f24/impostaAzienda.do?id_chiamata=1583330814117_01IHF24_7JrQK2RJ09449ABL&popup=true&show=errors&idx=' + idx, 'erroriDelega' , 'width=700, height=200, resizable, scrollbars, toolbar=no , menubar=no, top=180, left=240');
@@ -963,13 +963,13 @@
 	}
 
 	function isAlmenoUnaDelegaSelezionata() {
-		
+
 			for (var i=0; i<selectedDelegaArray.length; i++) {
 				if (selectedDelegaArray[i].checked) {
 					return true;
 				}
 			}
-		
+
 		return false;
 	}
 	function caricaDettaglio(indice, statoDelega) {
@@ -980,9 +980,9 @@
 		});
 		$("#espandi"+indice).hide();
 		$("#contrai"+indice).show();
-	
+
 	}
-	
+
 	function nascondiDettaglio(indice) {
 		$("#idDatiSezione"+indice).html("");
 		$("#espandi"+indice).show();
@@ -990,49 +990,49 @@
 	}
 
 
-	
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	</script>
-	
 
 
 
 
-					 	
+
+
 						</form>
 				</div><!-- /col-sm-12-->
 			</div><!-- /row-->

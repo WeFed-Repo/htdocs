@@ -1,0 +1,209 @@
+/*
+PALETTE DA ZEPLIN
+navy = rgb(0,35,69)
+darkSlateBlue = rgb(24,56,86)
+blueyGreyThree = rgb(153,167,180)
+veryLightBrown = rgb(213,189,155)
+blueyGreyFour = rgb(149,163,177)
+veryLightPinkTwo = rgb(1,251,246)
+denimBlue = rgb(52,74,134)
+paleGreyThree = rgb(232,236,239)
+stone = rgb(171,153,126)
+paleGreyFour = rgb(228,232,235)
+paleGreyFive = rgb(221,255,231)
+darkGreyBlue = rgb(50,78,105)
+*/
+
+html, body {
+    background: rgb(0,35,69) !important;
+    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
+    color: white;
+}
+
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+h1,
+.titleSection,
+.titleSectionLong,
+p {
+   background: none !important;
+   color: white !important;
+   padding-left: 15px !important;
+   padding-right: 15px !important;
+}
+
+.section,
+.riquadroForm {
+    color: rgb(52,74,134);
+    border-radius: 15px;
+    padding: 15px;
+    background: white;
+}
+
+.section h1,
+.section .titleSection,
+.section .titleSectionLong,
+.section p {
+    color: rgb(52,74,134) !important;
+    padding: 0 !important;
+}
+
+
+.riquadro {
+  margin: 15px 0;
+  border-radius: 8px;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.section .riquadro {
+  margin: 15px 0;
+  border-radius: 0;
+  border-top: 1px solid rgb(228,232,235) !important;
+  border-bottom: 1px solid rgb(228,232,235) !important;
+  padding: 15px 0;
+}
+
+/* inputs */
+
+::-webkit-input-placeholder { /* Edge */
+  color: rgb(153,167,180);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(153,167,180);
+}
+
+::placeholder {
+  color: rgb(153,167,180);
+}
+
+.form-control,
+select.form-control,
+.form-control:focus,
+select.form-control:focus {
+  border: none;
+  border-bottom: 1px solid rgba(153,167,180,0.5);
+}
+
+.form-control:focus,
+select.form-control:focus {
+  border-bottom: 1px solid rgb(52,74,134);
+}
+
+select.form-control,
+.ui-combobox {
+  background: #fff url(../../images/phone/select_down.png) no-repeat 100% center !important;
+}
+
+/* messaggi */
+
+div.messagePanel {
+  padding: 15px !important;
+  margin: 0 15px !important;
+  border-radius: 8px !important;
+}
+
+div.messagePanel h3.titleSection {
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+div.messagePanel ul,
+div.messagePanel p {
+  margin-left: 0 !important;
+  color: white;
+}
+
+div.messagePanel.error {
+  background: rgb(171,153,126) !important;
+  color: white;
+}
+
+div.messagePanel.error h3.titleSection,
+div.messagePanel.error ul,
+div.messagePanel.error p {
+  background: rgb(171,153,126) !important;
+  color: white;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* sovrascrttura verde preso dallo stile phone */
+
+  .titleSectionOff {
+    color: rgb(52,74,134);
+  }
+  .titleSectionOff a:link,
+  .titleSectionOff a:active,
+  .titleSectionOff a:visited,
+  .titleSectionOff a:hover {
+    color:rgb(52,74,134);
+  }
+  .titleSectionOff a:hover{
+    color:#17202b;
+  }
+  .titleSectionOff a:active{
+    color:#57769a;
+  }
+  .ui-state-active,
+  .ui-widget-content .ui-state-active,
+  .ui-widget-header .ui-state-active {
+  	background: rgb(52,74,134);
+  }
+   .ui-datepicker-calendar .ui-state-active{
+     background: rgb(52,74,134)!important;
+   }
+   .ui-datepicker-current-day .ui-state-default.ui-state-highlight.ui-state-active{
+     background: rgb(52,74,134)!important;
+   }
+  .ui-datepicker-title{
+  		color: rgb(52,74,134);
+  }
+  .ui-datepicker-current-day .ui-state-hover{
+  	background-color: rgb(52,74,134);
+  }
+  .ui-datepicker-current-day .ui-state-hover:active{
+  	background-color: rgb(52,74,134);
+  }
+
+  /* bottoni */
+
+  div.form-field-btn {
+    border: 1px solid rgb(24,56,86) !important;
+  }
+  .btn,
+  .btn:link,
+  input.btn {
+    background: rgb(24,56,86) none repeat scroll 0 0 !important;
+    border-radius: 8px;
+    text-transform: capitalize !important;
+  }
+  .btn:hover,
+  .btn-primary:hover,
+  input.btn:hover {
+    background: #17202b none repeat scroll 0 0 !important;
+  }
+  .btn:active,
+  .btn.active,
+  .btn-primary:active,
+  input.btn:active {
+    background: #57769a none repeat scroll 0 0 !important;
+  }
+  .btn-primary, .btn-default {
+    background: rgb(24,56,86) !important;
+  }
+  .btn.selezionato:focus,
+  .btn.selezionato:active{
+    background-color: #57769a;
+  }
+  input.btn.nonSelezionato,
+  .btn.nonSelezionato:hover{
+    color:rgb(52,74,134);
+  }
+
+/* fine sovrascritture */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

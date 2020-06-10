@@ -1,9 +1,9 @@
 
 <html><head>
-	
+
 	<title>F24 Semplificato</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	
+
 
 
 
@@ -36,58 +36,58 @@
 <script type="text/javascript" src="/sapef24/f24/javascript/funzioniHB.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/jquery.blockUI.js"></script>
 
-<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>    
+<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>
 
 
 <!--nostro-->
-	
+
 	<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/blue.css">
 	<script type="text/javascript" src="/sapef24/f24/javascript/icheck.min.js?t=1582906007487"></script>
 	<script type="text/javascript" src="/sapef24/f24/javascript/helpModal.js"></script>
-	
 
 
 
 
-	
+
+
 <script type="text/javascript">
-	
+
 		function getPathImages() { return '/sapef24/f24/images/';}
-	
+
 </script>
 <script type="text/javascript" src="/sapef24/f24/javascript/controlli.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/doubleClickPrevention.js"></script>
-	
+
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/jquery-ui.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/bootstrap.min.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/essentials.css">
-	
+
 		<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/header-default.css">
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleNew.css">
-		
+
 		<!--NUOVA GRAFICA-->
-			
+
 	<link media="print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePrint.css">
-	
+
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePhone.css">
-			<?php if($_REQUEST['bank'] == 'HT') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleYouweb.css">
-        <?php } else if($_REQUEST['bank'] == 'WB') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleWebank.css">
-        <?php } ?>
-			
-		
+		<?php if($_REQUEST['bank'] == 'HT') { $stileSito = 'styleYouweb'; }
+					else if($_REQUEST['bank'] == 'WB') { $stileSito = 'styleWebank'; }
+					else if($_REQUEST['bank'] == 'AL') { $stileSito = 'styleAletti'; }
+					if( $stileSito ) { ?>
+						<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/<?php echo $stileSito ?>.css">
+		<?php } ?>
+
 
 		<script src="/sapef24/f24/javascript/jquery.jspanel.min.js?t=1582906007487"></script>
 		<script src="/sapef24/f24/javascript/mobile.js?t=1582906007487"></script>
 		<script src="/sapef24/f24/javascript/mobile-detect.js?t=1582906007487"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.js?t=1582906007487"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.pager.js?t=1582906007487"></script>
-	
+
 		<link type="text/css" href="/sapef24/f24/styles/jquery.tablesorter.pager.css?t=1582906007487" rel="stylesheet">
 
 		<script type="text/javascript">
-		(function(){   
+		(function(){
 		  if (window.addEventListener)
 		  {
 			window.addEventListener("load", nascondi_loading_mobile, false);
@@ -104,9 +104,9 @@
 		  document.getElementById("loading_mobile").style.display = 'none';
 		}
 		</script>
-		
 
-	
+
+
 
 
 
@@ -125,24 +125,24 @@
 
 
 	<script type="text/javascript">
-		
+
 		function noBack(){
 			window.history.forward();
 		}
-		
+
 		noBack();
-		
+
 		window.onload = noBack;
 		window.onpageshow = function(evt) {
 			if (evt.persisted) {
 				noBack();
 			}
 		}
-		
+
 		window.onunload = function() {
 			void(0);
 		}
-	
+
 	</script>
 
 
@@ -151,25 +151,25 @@
 
 	if (window.opera) {
 		window.opera.setOverrideHistoryNavigationMode('compatible');
-		
+
 		if (history.navigationMode) {
 			history.navigationMode = 'compatible';
 		}
 	}
-	
+
 </script>
-	
-	
- 
+
+
+
   <!--[if lt IE 9]>
   	<script type="text/javascript" src='/sapef24/f24/javascript/respond.min.js'></script>
   	<script type="text/javascript" src='/sapef24/f24/javascript/html5.js'></script>
   <![endif]-->
   <script type="text/javascript" src="/sapef24/f24/javascript/alten.js"></script>
-  
+
   <style id="style-1-cropbar-clipper">
 	/* Copyright 2014 Evernote Corporation. All rights reserved. */
-	
+
 	.en-markup-crop-options {
 		top: 18px !important;
 		left: 50% !important;
@@ -182,10 +182,10 @@
 		margin-left: 0px !important;
 	}
 </style>
- 
+
 
 <style type="text/css">
-	#loading_mobile, #loading_screen{  
+	#loading_mobile, #loading_screen{
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -196,13 +196,13 @@
 		opacity: 0.5;
 		filter: alpha(opacity=50);
 	}
-	
-		#loading_screen{  
+
+		#loading_screen{
 			background: url(/sapef24/f24/images/loading.gif) 50% no-repeat;
 		}
-	
+
 </style>
-	
+
 
 
 
@@ -221,8 +221,8 @@ mostra_loading_mobile();
 			<div class="row">
 				<div class="col-sm-12">
 					<form name="ricercaTributiForm" method="post" action="/sapef24/f24/ricercaCodiciAction.do" class="form-horizontal"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="be8c41a88f532b6bb4dd28469feb98cf">
-					
-					
+
+
 
 
 
@@ -258,40 +258,40 @@ mostra_loading_mobile();
 	  		tributo.value='';
 	  	}
 	  }
-	  
+
 	</script>
 
 
 
 	 <input type="hidden" name="tipoRicerca" value="codiceIdentificativoCoobbligato">
 
-	 
+
 	 	<input type="hidden" name="returnField" value="contribuente.codIde">
-	 
-	
-	
+
+
+
 			<div class="flag pagamentoF24">&nbsp;</div>
 			<h1>Ricerca codici identificativi</h1>
 			<p>Per avviare la ricerca dei codici selezionare il modo di  ricerca e immettere nel campo descrizione una parola chiave.</p>
 
 		<div class="section clearfix">
 			<h3 class="titleSectionLong">
-				
-						Scegli 
-						
+
+						Scegli
+
 			</h3>
 			<div class="bs-example">
 				<div class="form-group">
 					<label class="col-xs-5 control-label">Ricerca per:</label>
-	 				<div class="col-xs-7"> 
+	 				<div class="col-xs-7">
 	          <select name="parametro" onchange="selezione(this)" class="form-control">
-	            
+
 	           		<option value="all" selected="">Mostra tutti</option>
-	            
+
 	           		<option value="codice">Codice identificativo</option>
-	            
+
 	           		<option value="descrizione">Parola chiave</option>
-	            
+
 	        	</select>
 		    	</div>
 		    </div>
@@ -303,22 +303,22 @@ mostra_loading_mobile();
 		    </div>
 			</div>
 		</div><!--section clearfix-->
-		
-		
-  
-	
-	
 
 
 
 
 
 
-					
+
+
+
+
+
+
 							<script type="text/javascript">
-							  
-								  
-							  
+
+
+
 							</script>
 							</form>
 						</div><!-- /col-sm-12 col-sm-pull-12-->
