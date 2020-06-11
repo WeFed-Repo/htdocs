@@ -56,7 +56,10 @@
 }
 
 .no-label {
-    padding-top: 20px
+    padding-top: 20px;
+    &.btn-align-left{
+        padding-top: 22px 
+    }
 }
 
 @media (max-width: 1023px) {
@@ -75,7 +78,7 @@
 
     .control-label, .control-label-output {
         display: block;
-        /*margin-bottom: 3px;*/
+        margin-bottom: 3px!important; 
         font-weight: 600;
 
         &-output {
@@ -287,12 +290,12 @@
         font-size: 0.8571428571428571em;
     }
 
-    .no-label .output, .no-label .checkbox, .no-label .radio {
+    .no-label .output, .no-label .checkbox, .no-label .radio { 
         padding-top: 11px;
     }
 
     .no-label .btn-align-center, .no-label .btn-align-left, .no-label .btn-align-right, .no-label select {
-        margin-top: 5px;
+        margin-top: 3px;
     }
 
     .form-group.selected {

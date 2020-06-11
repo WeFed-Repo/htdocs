@@ -815,7 +815,7 @@ $tipo_op_1 = array(1,2,3);
             <div class="modal-body">
               <div class="row">
                 <div class="col-xs-12">
-                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br /><span class="txthelp" data-toggle="tooltip" title="Lorem ipsum dolor sit amet" data-container="<?php print ($site=="webank")? "#contenuti" : "#mainContent"; ?>">Puoi creare altri <strong>8</strong> portafogli</span></label>
+                  <label class="control-label">Scegli un nome per il tuo portafoglio.<br /><span class="txthelp spacing-bottom" data-toggle="tooltip" title="Lorem ipsum dolor sit amet" data-container="<?php print ($site=="webank")? "#contenuti" : "#mainContent"; ?>">Puoi creare altri <strong>8</strong> portafogli</span></label>
                 </div>
               </div>
               <div class="row form-group w100">
