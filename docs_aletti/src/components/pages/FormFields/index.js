@@ -204,6 +204,7 @@ export default class extends Component {
                         </Col>
                         <Col sm="3">
                             <Form.date
+                                key={this.state.esempio_campo_data}
                                 name="esempio_campo_data_callback"
                                 value={formstate.esempio_campo_data_callback}
                                 label="Data di esempio con callback"
@@ -211,7 +212,10 @@ export default class extends Component {
                                 placeholder="Seleziona una data..."
                                 onChange={this.generalOnChange}
                                 output={this.state.allOutput}
-                                cbchange={(val)=>{alert("La data selezionata è "+ val)}}
+                                cbchange={(val)=>{
+                                    this.setState({"esempio_campo_data":""})
+                                    alert("La data selezionata è "+ val);
+                                }}
                                 disabled={this.state.allDisabled}
                             ></Form.date>
                         </Col>

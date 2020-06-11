@@ -438,7 +438,6 @@ class DatiPersonali extends Component {
                                                 ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
                                                 placeholder="Seleziona.."
                                                 output={this.props.isOutput}
-
                                             >
                                             </Form.select>
                                         </Col>
