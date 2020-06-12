@@ -29,9 +29,7 @@ class StepForm extends Component {
 
         // Eventuale nome intestatario 
         let nomeint;
-        if (formstate.field_numintestatari==="2") {
-            nomeint= " " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_nome"] +" " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_cognome"] ;
-        }
+        nomeint= " " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_nome"] +" " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_cognome"] ;
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
