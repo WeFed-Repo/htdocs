@@ -100,6 +100,10 @@ select.form-control,
   background: #fff url(../../images/phone/select_down.png) no-repeat 100% center !important;
 }
 
+.form-group label, .form-horizontal .control-label {
+    text-transform: uppercase;
+}
+
 /* messaggi */
 
 div.messagePanel {
@@ -174,6 +178,7 @@ div.messagePanel.error p {
 
   div.form-field-btn {
     border: 1px solid rgb(24,56,86) !important;
+    border-radius: 8px;
   }
   .btn,
   .btn:link,
