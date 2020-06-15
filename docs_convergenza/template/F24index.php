@@ -25,7 +25,8 @@
 		</div>
 	</header>
 	<?php
-	$pagine = array(	'F24_esitoF24Vuoto'=>'01-F24 Inseriti - Mostra ultimi (vuoto)',
+	$pagine = array( basename(__FILE__,'.php')=>'VEDI TUTTI I TEMPLATES IN IFRAMES',
+									'F24_esitoF24Vuoto'=>'01-F24 Inseriti - Mostra ultimi (vuoto)',
 									'F24_esitoF24'=>'02-F24 Inseriti - Mostra ultimi (non vuoto)',
 										'F24_nuovo'=>'03-Nuovo modulo - Step 1',
 										'F24_esito'=>'04-Nuovo modulo - Step 1 (Errore in modale)',
@@ -37,16 +38,17 @@
 										'F24_step3'=>'10-Nuovo modulo (step 3)',
 										'F24_lente3'=>'11-Nuovo modulo - Step 3 (modale di Ricerca codici tributo F24 Semplificato)',
 									'F24_errore'=>'12-Nuovo modulo - errore',
-										'F24_errore2'=>'13-Nuovo modulo - errore2'
+										'F24_errore2'=>'13-Nuovo modulo - errore2',
 								);
 
 	if( isset($_GET['iframe_test']) ) { ?>
 
 		<style>iframe {width:375px;height:667px;border:1px solid #ddd;margin:5px;}</style>
-		<a href="/template/F24index.php?bank=<?php echo $_GET['bank'] ?>" style="margin:10px" class="button btn btn-default">Torna alla lista</a><br />
-		<?php foreach ($pagine as $pagina => $titolo): ?>
+		<a href="/template/<?php echo basename(__FILE__,'.php') ?>.php?bank=<?php echo $_GET['bank'] ?>" style="margin:10px" class="button btn btn-default">Torna alla lista</a><br />
+		<?php foreach ($pagine as $pagina => $titolo):
+			if( $pagina!=basename(__FILE__,'.php') ) { ?>
 			<iframe src="/template/<?php echo $pagina ?>.php?bank=<?php echo $_GET['bank'] ?>"></iframe>
-		<?php endforeach; ?>
+		<?php } endforeach; ?>
 
 	<?php } else { ?>
 
@@ -63,9 +65,9 @@
 						<li>
 							<span><?php echo $titolo ?></span>
 							<div class="links">
-								<a href="/template/<?php echo $pagina ?>.php?bank=WB" target="_blank" class="mi">WE</a>
-								<a href="/template/<?php echo $pagina ?>.php?bank=HT" target="_blank" class="vr">YOU</a>
-								<a href="/template/<?php echo $pagina ?>.php?bank=AL" target="_blank" class="al">AL</a>
+								<a href="/template/<?php echo $pagina ?>.php?bank=WB<?php if( $pagina==basename(__FILE__,'.php') ) echo '&iframe_test'; ?>" target="_blank" class="mi">WE</a>
+								<a href="/template/<?php echo $pagina ?>.php?bank=HT<?php if( $pagina==basename(__FILE__,'.php') ) echo '&iframe_test'; ?>" target="_blank" class="vr">YOU</a>
+								<a href="/template/<?php echo $pagina ?>.php?bank=AL<?php if( $pagina==basename(__FILE__,'.php') ) echo '&iframe_test'; ?>" target="_blank" class="al">AL</a>
 							</div>
 						</li>
 						<?php endforeach; ?>
