@@ -51,9 +51,9 @@ casella di posta certificata presso InfoCert.</strong></p>
                         <Col sm="4">
                             <Form.radiogroup
                                 label="Identità accertata"
-                                name="field_sessionfirmeblob_identitaaccertata"
-                                value={formstate.field_sessionfirmeblob_identitaaccertata}
-                                error={formstate.errors["field_sessionfirmeblob_identitaaccertata"]}
+                                name={"field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_identitaaccertata"}
+                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_identitaaccertata"]}
+                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_identitaaccertata"]}
                                 onChange={this.props.obchange}
                                 options={[
                                     { "value": "true", "text": "Sì" },
