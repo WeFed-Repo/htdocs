@@ -75,8 +75,6 @@
 				</div>
 			</div>
 
-			<br /><a href="/template/F24index.php?bank=<?php echo $_GET['bank'] ?>&iframe_test" style="margin:10px 0" class="button btn btn-default">Test iframe</a>
-
 		</div>
 
 	<?php } ?>
