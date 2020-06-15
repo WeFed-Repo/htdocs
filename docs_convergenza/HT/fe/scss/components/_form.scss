@@ -558,7 +558,15 @@ input[type=checkbox] {
 
 }
 
-
+/* switch*/
+#vendImporto, #vendQuote 
+{
+  margin:0;
+  padding:0
+}
+#tbFunds th{
+  text-align: center!important;
+}
 
 @media (max-width: 480px) {
     #selContCodSocieta .selEl {
@@ -729,6 +737,11 @@ a.output {color: $primary;text-decoration:underline}
 .modal-body .selector-wrap.selector-mini{
   .selector-box { width: 111px}
   &.only-definition .selector-box {width:188px;}
+}
+#searchSocieta .selector-wrap .selector-box {
+  min-height: 187px;
+  float: left;
+  margin:0 20px 20px;
 }
 @media (max-width: 767px) {
   .modal-body .selector-wrap.selector-mini.only-definition .selector-box {width:100%;}

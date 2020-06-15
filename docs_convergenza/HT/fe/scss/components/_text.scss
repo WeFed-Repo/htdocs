@@ -11,6 +11,17 @@ h2 {
  }
 .linkFonte,.linkFonte:hover { text-decoration:underline }
 
+h4 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 100%;
+    padding-right: 0;
+    text-transform: uppercase; 
+}
+
 .tab-wrap .control-label + span.output, 
 .tab-wrap .control-label + .tooltip + span.output,
 .control-label-output + span.output,

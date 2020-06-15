@@ -402,6 +402,17 @@ li.linkOn a {
   text-decoration: underline;
 }
 
+h4 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  width: 100%;
+  padding-right: 0;
+  text-transform: uppercase;
+}
+
 .tab-wrap .control-label + span.output,
 .tab-wrap .control-label + .tooltip + span.output,
 .control-label-output + span.output,
@@ -1235,6 +1246,16 @@ input[type=checkbox] {
   top: 7px;
 }
 
+/* switch*/
+#vendImporto, #vendQuote {
+  margin: 0;
+  padding: 0;
+}
+
+#tbFunds th {
+  text-align: center !important;
+}
+
 @media (max-width: 480px) {
   #selContCodSocieta .selEl {
     width: 48%;
@@ -1399,6 +1420,12 @@ a.output {
 }
 .modal-body .selector-wrap.selector-mini.only-definition .selector-box {
   width: 188px;
+}
+
+#searchSocieta .selector-wrap .selector-box {
+  min-height: 187px;
+  float: left;
+  margin: 0 20px 20px;
 }
 
 @media (max-width: 767px) {
@@ -3007,7 +3034,7 @@ div.pager .circle.current_page {
   }
   .navContSecondLev .outerTab {
     background-color: #ebeef0;
-    margin: -20px -35px 20px -35px;
+    margin: -22px -35px 20px -35px;
     padding: 22px 10px 0 35px;
     border-bottom: 7px solid #fff;
     min-height: 75px;
