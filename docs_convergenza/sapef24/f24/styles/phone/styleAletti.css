@@ -179,6 +179,7 @@ div.messagePanel.error p {
   div.form-field-btn {
     border: 1px solid rgb(24,56,86) !important;
     border-radius: 8px;
+    overflow: hidden;
   }
   .btn,
   .btn:link,
