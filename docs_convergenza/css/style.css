@@ -232,32 +232,45 @@ header.librerie .code-console .console a.on {
 }
 
 #main.librerie .elenco-oggetti li {
-    width: 100%;
-    margin: 0;
-    position: relative;
-    padding: 0 100px 0 0;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main.librerie .elenco-oggetti li span {
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 #main.librerie .elenco-oggetti li .links {
-    width: 90px;
-    right: 0;
-    position: absolute;
-    top: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 90px;
+  text-align: right;
+  white-space: nowrap;
+  padding: 0 0 0 5px;
 }
 
 #main.librerie .elenco-oggetti li .links a {
-    float: left;
-    width: 40px;
-    height: 30px;
-    background: #333;
-    text-align: center;
-    line-height: 20px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 5px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 4px;
+  width: 40px;
+  height: 30px;
+  background: #333;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  margin: 10px 0 10px 5px;
+  display: inline-block;
 }
 
 #main.librerie .elenco-oggetti li .links a.mi {
@@ -265,14 +278,11 @@ header.librerie .code-console .console a.on {
 }
 
 #main.librerie .elenco-oggetti li .links a.vr {
-    float: right;
     background: #2A3D63;
 }
 
-#main.librerie .elenco-oggetti li span {
-    display: inline-block;
-    font-weight: bold;
-    padding: 10px 0;
+#main.librerie .elenco-oggetti li .links a.al {
+    background: #D5BD9B;
 }
 
 
@@ -416,12 +426,12 @@ section {
     margin-bottom: 25px;
 }
 
- 
+
 /* Template root */
 #main.librerie .template.template-root {margin-bottom:20px}
 #main.librerie .template.template-root li>ul {display:none !important;}
 #main.librerie .template.template-root li.has-opener.opened>ul {display:block !important;}
-.template.template-root li.has-opener a.opener {position: absolute; 
+.template.template-root li.has-opener a.opener {position: absolute;
     display: block;
     height: 30px;
     width: 30px !important;
@@ -431,7 +441,7 @@ section {
     top: 5px;
     left: 0;
     text-align:center;
-    line-height:30px; 
+    line-height:30px;
     color:#fff;
     padding:0 !important;
     margin:0;
@@ -447,7 +457,7 @@ section {
 .template.template-root li>span span {padding:6px 0 !important;}
 .template-title {position:relative;}
 .full-opener {float:right; position:absolute;right:0;top:0;display: block; height: 30px;width: 30px !important;background: #8ab10b;border-radius: 50%;cursor: pointer;text-align:center;line-height:30px; color:#fff;padding:0 !important;margin:0;}
-.full-opener:hover {text-decoration:none;color:#fff;opacity:0.8;} 
+.full-opener:hover {text-decoration:none;color:#fff;opacity:0.8;}
 .full-opener span {display:inline-block;font-size:24px;color:#fff;font-weight:normal;padding:0 !important;margin:0 !important;line-height:30px}
 .full-opener span.min {display:none;}
 .full-opener.opened span.plus {display:none;}

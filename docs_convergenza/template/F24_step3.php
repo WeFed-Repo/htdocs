@@ -2,7 +2,7 @@
 <html><head>
 	  <title>F24 Semplificato</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	  
+
 
 
 
@@ -35,58 +35,58 @@
 <script type="text/javascript" src="/sapef24/f24/javascript/funzioniHB.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/jquery.blockUI.js"></script>
 
-<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>    
+<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>
 
 
 <!--nostro-->
-	
+
 	<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/blue.css">
 	<script type="text/javascript" src="/sapef24/f24/javascript/icheck.min.js?t=1583315348896"></script>
 	<script type="text/javascript" src="/sapef24/f24/javascript/helpModal.js"></script>
-	
 
 
 
 
-	
+
+
 <script type="text/javascript">
-	
+
 		function getPathImages() { return '/sapef24/f24/images/';}
-	
+
 </script>
 <script type="text/javascript" src="/sapef24/f24/javascript/controlli.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/doubleClickPrevention.js"></script>
-	
+
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/jquery-ui.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/bootstrap.min.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/essentials.css">
-	
+
 		<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/header-default.css">
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleNew.css">
-		
+
 		<!--NUOVA GRAFICA-->
-			
+
 	<link media="print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePrint.css">
-	
+
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePhone.css">
-			<?php if($_REQUEST['bank'] == 'HT') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleYouweb.css">
-        <?php } else if($_REQUEST['bank'] == 'WB') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleWebank.css">
-        <?php } ?>
-			
-		
+		<?php if($_REQUEST['bank'] == 'HT') { $stileSito = 'styleYouweb'; }
+					else if($_REQUEST['bank'] == 'WB') { $stileSito = 'styleWebank'; }
+					else if($_REQUEST['bank'] == 'AL') { $stileSito = 'styleAletti'; }
+					if( $stileSito ) { ?>
+						<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/<?php echo $stileSito ?>.css">
+		<?php } ?>
+
 
 		<script src="/sapef24/f24/javascript/jquery.jspanel.min.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile-detect.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.pager.js?t=1583315348896"></script>
-	
+
 		<link type="text/css" href="/sapef24/f24/styles/jquery.tablesorter.pager.css?t=1583315348896" rel="stylesheet">
 
 		<script type="text/javascript">
-		(function(){   
+		(function(){
 		  if (window.addEventListener)
 		  {
 			window.addEventListener("load", nascondi_loading_mobile, false);
@@ -103,9 +103,9 @@
 		  document.getElementById("loading_mobile").style.display = 'none';
 		}
 		</script>
-		
 
-	
+
+
 
 
 
@@ -124,24 +124,24 @@
 
 
 	<script type="text/javascript">
-		
+
 		function noBack(){
 			window.history.forward();
 		}
-		
+
 		noBack();
-		
+
 		window.onload = noBack;
 		window.onpageshow = function(evt) {
 			if (evt.persisted) {
 				noBack();
 			}
 		}
-		
+
 		window.onunload = function() {
 			void(0);
 		}
-	
+
 	</script>
 
 
@@ -150,25 +150,25 @@
 
 	if (window.opera) {
 		window.opera.setOverrideHistoryNavigationMode('compatible');
-		
+
 		if (history.navigationMode) {
 			history.navigationMode = 'compatible';
 		}
 	}
-	
+
 </script>
-	
-	
- 
+
+
+
   <!--[if lt IE 9]>
   	<script type="text/javascript" src='/sapef24/f24/javascript/respond.min.js'></script>
   	<script type="text/javascript" src='/sapef24/f24/javascript/html5.js'></script>
   <![endif]-->
   <script type="text/javascript" src="/sapef24/f24/javascript/alten.js"></script>
-  
+
   <style id="style-1-cropbar-clipper">
 	/* Copyright 2014 Evernote Corporation. All rights reserved. */
-	
+
 	.en-markup-crop-options {
 		top: 18px !important;
 		left: 50% !important;
@@ -181,10 +181,10 @@
 		margin-left: 0px !important;
 	}
 </style>
- 
+
 
 <style type="text/css">
-	#loading_mobile, #loading_screen{  
+	#loading_mobile, #loading_screen{
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -195,43 +195,43 @@
 		opacity: 0.5;
 		filter: alpha(opacity=50);
 	}
-	
-		#loading_screen{  
+
+		#loading_screen{
 			background: url(/sapef24/f24/images/loading.gif) 50% no-repeat;
 		}
-	
+
 </style>
-	
 
 
 
 
 
-	  	
-			
+
+
+
 				<script type="text/javascript" src="/sapef24/f24/javascript/totaliEntiAccise.js"></script>
-			
-		
+
+
 
 
 </head>
 <body onload="
-  
-    
-      
-        
+
+
+
+
           setSaldoParziale(this);
-        
-      
-    
-  
+
+
+
+
 visualizzaSegnalazione();" onclick="deselezionaTutti();" marginwidth="0" marginheight="0" style="zoom: 1;">
 <div id="loading_mobile" style="display: none;"></div>
 <script type="text/javascript">
 mostra_loading_mobile();
 </script>
 
-	
+
 
 
 
@@ -245,54 +245,53 @@ mostra_loading_mobile();
 
 
 
-	
+
 	<input type="hidden" name="_control.reload" value="false">
 
 	  <script type="text/javascript">
 	  	function visualizzaSegnalazione() {
-	  	
+
 	  	}
 	  </script>
-	  
 
-		
+
+
 
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="flag pagamentoF24">&nbsp;</div>
-					<h1>F24 Semplificato</h1>	
-					
-						
+					<h1>F24 Semplificato</h1>
+
+
 							<div class="pager clearfix pull-right">
 								<div class="circle_line">&nbsp;</div>
 								<div class="circle
-									
+
 								">&nbsp;</div>
 								<div class="circle
-									
+
 								">&nbsp;</div>
 								<div class="circle
-									
+
 										current_page
-									
+
 								">&nbsp;</div>
 								<div class="circle
-									
+
 								">&nbsp;</div>
 								<div class="circle
-									
+
 								">&nbsp;</div>
 							</div>
-						
-					  
-			
-					
+
+
+
+
 
 
 
 					<form name="f24MainForm" method="post" action="/sapef24/f24/inserisciNuovoModelloPhone.do" class="form-horizontal"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="InvalidToken">
-						  
 
 
 
@@ -307,50 +306,6 @@ mostra_loading_mobile();
 
 
 
-	
-
-	
-		
-		
-		
-			
-			
-			
-		
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-		 			  
-					  	
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-	
-		
-	
 
 
 
@@ -364,19 +319,64 @@ mostra_loading_mobile();
 
 
 
-					  
 
-					  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 						<input type="hidden" name="DelegaUniqueToken" value="MTU4MzMxOTUxMjI0NQ==">
 						<input type="hidden" name="_control.tipo" value="S">
 						<input type="hidden" name="_control.direction" value="forward">
 
-						
-						
 
-						
-							
+
+
+
+
 
 
 
@@ -394,7 +394,7 @@ mostra_loading_mobile();
 
 <!-- Inizio sezione Semplificato -->
 
-	
+
 
 
 
@@ -414,35 +414,35 @@ mostra_loading_mobile();
 
 
 
-		
+
 
 		<div id="datiF24_0">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[0].sezione" tabindex="1" class="form-control" id="sezione_0">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[0].codiceTributo" tabindex="2" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[0].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_0).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[0].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_0).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -450,8 +450,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[0].codiceEnte" tabindex="3" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[0].ravvedimento" tabindex="4" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -511,20 +511,20 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[0].centImportoCredito" tabindex="16" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<div class="col-xs-12 clearfix" id="eliminaRiga" style="display: none;">
-			
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('0');">
-			
-				</div>
-			
 
-		
+				<div class="col-xs-12 clearfix" id="eliminaRiga" style="display: none;">
+
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('0');">
+
+				</div>
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -537,32 +537,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_1" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[1].sezione" tabindex="17" class="form-control" id="sezione_1">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[1].codiceTributo" tabindex="18" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[1].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_1).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[1].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_1).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -570,8 +570,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[1].codiceEnte" tabindex="19" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[1].ravvedimento" tabindex="20" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -631,16 +631,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[1].centImportoCredito" tabindex="32" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('1');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('1');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -653,32 +653,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_2" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[2].sezione" tabindex="33" class="form-control" id="sezione_2">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[2].codiceTributo" tabindex="34" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[2].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_2).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[2].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_2).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -686,8 +686,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[2].codiceEnte" tabindex="35" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[2].ravvedimento" tabindex="36" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -747,16 +747,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[2].centImportoCredito" tabindex="48" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('2');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('2');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -769,32 +769,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_3" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[3].sezione" tabindex="49" class="form-control" id="sezione_3">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[3].codiceTributo" tabindex="50" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[3].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_3).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[3].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_3).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -802,8 +802,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[3].codiceEnte" tabindex="51" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[3].ravvedimento" tabindex="52" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -863,16 +863,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[3].centImportoCredito" tabindex="64" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('3');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('3');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -885,32 +885,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_4" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[4].sezione" tabindex="65" class="form-control" id="sezione_4">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[4].codiceTributo" tabindex="66" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[4].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_4).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[4].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_4).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -918,8 +918,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[4].codiceEnte" tabindex="67" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[4].ravvedimento" tabindex="68" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -979,16 +979,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[4].centImportoCredito" tabindex="80" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('4');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('4');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -1001,32 +1001,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_5" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[5].sezione" tabindex="81" class="form-control" id="sezione_5">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[5].codiceTributo" tabindex="82" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[5].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_5).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[5].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_5).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -1034,8 +1034,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[5].codiceEnte" tabindex="83" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[5].ravvedimento" tabindex="84" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -1095,16 +1095,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[5].centImportoCredito" tabindex="96" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('5');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('5');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -1117,32 +1117,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_6" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[6].sezione" tabindex="97" class="form-control" id="sezione_6">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[6].codiceTributo" tabindex="98" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[6].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_6).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[6].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_6).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -1150,8 +1150,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[6].codiceEnte" tabindex="99" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[6].ravvedimento" tabindex="100" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -1211,16 +1211,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[6].centImportoCredito" tabindex="112" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('6');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('6');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -1233,32 +1233,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_7" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[7].sezione" tabindex="113" class="form-control" id="sezione_7">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[7].codiceTributo" tabindex="114" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[7].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_7).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[7].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_7).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -1266,8 +1266,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[7].codiceEnte" tabindex="115" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[7].ravvedimento" tabindex="116" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -1327,16 +1327,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[7].centImportoCredito" tabindex="128" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('7');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('7');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -1349,32 +1349,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_8" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[8].sezione" tabindex="129" class="form-control" id="sezione_8">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[8].codiceTributo" tabindex="130" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[8].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_8).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[8].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_8).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -1382,8 +1382,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[8].codiceEnte" tabindex="131" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[8].ravvedimento" tabindex="132" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -1443,16 +1443,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[8].centImportoCredito" tabindex="144" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('8');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('8');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 
 
@@ -1465,32 +1465,32 @@ mostra_loading_mobile();
 
 
 		<div id="datiF24_9" style="display: none;">
-		
+
 
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<label>Scegli:</label>
-				
-				
+
+
 					<select name="sezione(f24Semplificato2012).riga[9].sezione" tabindex="145" class="form-control" id="sezione_9">
 						<option value="" selected="selected">Scegli</option>
 						<option value="ER">ER</option>
 						<option value="RG">RG</option>
 						<option value="EL">EL</option>
 					</select>
-				
+
 			</div>
 			<div class="col-xs-7">
-				<label>Codice tributo:</label>	
+				<label>Codice tributo:</label>
 				<input type="text" name="sezione(f24Semplificato2012).riga[9].codiceTributo" tabindex="146" size="4" maxlength="4" class="form-control w-auto" id="idCodTributo">
-				
+
 					<a href="javascript: void(0);" title="Seleziona il codice tributo" class="action">
-						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[9].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_9).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">									
+						<img border="0" src="/sapef24/f24/images/ico-filter.png" name="sezione(f24Semplificato2012).riga[9].codiceTributo.image" onclick="ricercaTributoSemplificatoPhone(this, 'tributoF24Semplificato', $(sezione_9).val(), '/sapef24/f24/showHelpPhone.do');" alt="help codici">
 					</a>
-				
-		
+
+
 			</div>
-		
+
 		</div>
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
@@ -1498,8 +1498,8 @@ mostra_loading_mobile();
 					<input type="text" name="sezione(f24Semplificato2012).riga[9].codiceEnte" tabindex="147" size="4" maxlength="4" class="form-control" id="idCodEnte">
 			</div>
 		</div>
-		
-		
+
+
 		<div class="form-group">
 			<div class="col-xs-5 paddingR">
 				<div class="icheckbox_minimal-blue" style="position: relative;"><input type="checkbox" name="sezione(f24Semplificato2012).riga[9].ravvedimento" tabindex="148" class="checkbox-inline" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -1559,16 +1559,16 @@ mostra_loading_mobile();
 			<input type="number" name="sezione(f24Semplificato2012).riga[9].centImportoCredito" tabindex="160" size="2" class="form-control" id="importoDec" onblur="tot(this,'f24Semplificato2012')">
 		</div>
 	</div>
-	
-				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('9');">
-			
 
-		
+				<input type="button" class="btn pull-right" value="Elimina riga" onclick="javascript:deleteLine('9');">
+
+
+
 		 <div class="clearfix"></div>
 		<hr>
 	</div>
 
-		
+
 
 	<!-- Fine sezione Semplificato -->
 
@@ -1589,7 +1589,7 @@ mostra_loading_mobile();
 	<input type="hidden" name="sezione(f24Semplificato2012).centSaldo">
 
 
-	
+
 
 
 
@@ -1598,53 +1598,53 @@ mostra_loading_mobile();
 
 
 	$(document).ready(function(){
-			
+
 
 
 				$('#datiF24_1').hide();
 
-			
+
 
 
 				$('#datiF24_2').hide();
 
-			
+
 
 
 				$('#datiF24_3').hide();
 
-			
+
 
 
 				$('#datiF24_4').hide();
 
-			
+
 
 
 				$('#datiF24_5').hide();
 
-			
+
 
 
 				$('#datiF24_6').hide();
 
-			
+
 
 
 				$('#datiF24_7').hide();
 
-			
+
 
 
 				$('#datiF24_8').hide();
 
-			
+
 
 
 				$('#datiF24_9').hide();
 
-			
-			
+
+
 			$('input[type="checkbox"], input[type="radio"]').iCheck({
 			    checkboxClass: 'icheckbox_minimal-blue',
 			    radioClass: 'iradio_minimal-blue',
@@ -1658,16 +1658,16 @@ mostra_loading_mobile();
 
 function showLine() {
 	var mustBeDivAggiungiHidden = false;
-	
+
 	if ($('#eliminaRiga').is(':hidden')) {
 		$('#eliminaRiga').show();
 	}
-	
+
 	for (var i=0; i<10; i++) {
 		if ($('#datiF24_'+i).is(':hidden')) {
 			$('#datiF24_'+i).show();
 			//aggiungiPlaceHolder(i);
-	
+
 			if (i==9) {
 				mustBeDivAggiungiHidden = true;
 			}
@@ -1676,11 +1676,11 @@ function showLine() {
 	}
 if (mustBeDivAggiungiHidden) {
 		$('#aggiungiNuovaRiga a').css({
-				"color" : "#ccc", 
+				"color" : "#ccc",
 				"text-decoration" : "none",
-				"cursor-pointer" : "auto"  
+				"cursor-pointer" : "auto"
 			});
-		
+
 	}
 }
 
@@ -1692,10 +1692,10 @@ function aggiungiPlaceHolder(indice){
 
 	document.forms['f24MainForm'].elements['sezione(f24Semplificato2012).riga['+indice+'].codiceTributo'].id="idCodTributo_"+indice;
 	$('#idCodTributo_'+indice).attr("placeholder", "Codice tributo");
- 
+
 	document.forms['f24MainForm'].elements['sezione(f24Semplificato2012).riga['+indice+'].codiceEnte'].id="idCodEnte_"+indice;
 	$('#idCodEnte_'+indice).attr("placeholder", "Codice ente");
- 
+
  	document.forms['f24MainForm'].elements['sezione(f24Semplificato2012).riga['+indice+'].numeroImmobili'].id="idNumImm_"+indice;
 	$('#idNumImm_'+indice).attr("placeholder", "Num. immob.");
 
@@ -1785,12 +1785,12 @@ function deleteLine(par) {
 		$('#eliminaRiga').hide();
 	}
 }
-	
+
 	$('.importo').click(function(){
 				$(this).css({
 					'text-align':'right'
 					});
-			
+
 			});
 
 
@@ -1811,7 +1811,7 @@ function doValidateCode(e, element, max_chars){
 		if (e.keyCode!=8 && e.keyCode!=9 && (e.keyCode<48 || e.keyCode>57))
 			return false;
     }
-    
+
 	return true;
 }
 </script>
@@ -1822,7 +1822,7 @@ function doValidateCode(e, element, max_chars){
 
 
 
-							
+
 
 
 
@@ -1854,18 +1854,18 @@ function doValidateCode(e, element, max_chars){
 	<input type="hidden" name="centTotaleCredito" tabindex="164">
 
 
-	
+
 <script type="text/javascript">
 		$(document).ready(function(){
 				$('.dataIncassoHtml').datepicker({ minDate: '-0D', maxDate: '+364D', buttonImage: "/sapef24/f24/images/calendar.png" });
 		});
 	</script>
-	
+
 	<div class="section clearfix">
 		<h3 class="titleSectionLong">Dati Pagamento</h3>
 			<div class="bs-example">
 
-				<div class="form-group">	 				
+				<div class="form-group">
 					<label class="col-xs-5 control-label">Saldo Finale:</label>
 					<div class="col-xs-7">
 						<input type="text" name="interiSaldo" size="20" maxlength="13" class="form-control importo" id="importoInt" readonly="readonly">
@@ -1875,13 +1875,13 @@ function doValidateCode(e, element, max_chars){
 						<input type="hidden" name="flagFirmatario" value="0">
 					</div>
 				</div>
-				<div class="form-group">	 				
+				<div class="form-group">
 					<label class="col-xs-5 control-label">Data pagamento:</label>
 					<div class="col-xs-7">
-						<input type="text" name="dataIncassoHtml" tabindex="165" class="datepicker dataIncassoHtml form-control w-auto hasDatepicker" id="idDataIncasso" readonly="readonly" placeholder="gg/mm/aaaa"><img class="ui-datepicker-trigger" src="/sapef24/f24/images/calendar.png" alt="Calendario" title="Calendario">							
+						<input type="text" name="dataIncassoHtml" tabindex="165" class="datepicker dataIncassoHtml form-control w-auto hasDatepicker" id="idDataIncasso" readonly="readonly" placeholder="gg/mm/aaaa"><img class="ui-datepicker-trigger" src="/sapef24/f24/images/calendar.png" alt="Calendario" title="Calendario">
 					</div>
 				</div>
-			</div>			
+			</div>
 		</div>
 
 <script type="text/javascript">
@@ -1899,15 +1899,15 @@ function doValidateCode(e, element, max_chars){
 
 
 
-						
 
-						
 
-												
+
+
+
 					</form>
 				</div><!-- /col-sm-12 col-sm-pull-12-->
 			</div><!-- /row-->
-				
+
 
 
 
@@ -1924,21 +1924,21 @@ function doValidateCode(e, element, max_chars){
 
 	var indiceConto =0;
 	var indiceContribuente=0;
-	
+
 	$('#myCarousel').on('slid.bs.carousel', function () {
 		indiceConto = $(this).find(".active").index();
 	 })
-	 		
+
 	 $('#myCarouselRubrica').on('slid.bs.carousel', function () {
 		indiceContribuente = $(this).find(".active").index();
-	 })		
-	 		
-		  
-		  
-			  
-		      
-			  
-			  
+	 })
+
+
+
+
+
+
+
 			      function salva() {
 			      	mostra_loading_mobile();
 							if (!getSubmitted()) {
@@ -1946,7 +1946,7 @@ function doValidateCode(e, element, max_chars){
 					          document.f24MainForm.submit();
 					        }
 			      }
-		
+
 			      function invia() {
 			      	mostra_loading_mobile();
 			        if (!getSubmitted()) {
@@ -1954,15 +1954,15 @@ function doValidateCode(e, element, max_chars){
 			           document.f24MainForm.submit();
 			        }
 			      }
-		      
-		      
-		      
-	      
-	
+
+
+
+
+
 	      function stampa() {
 	         window.print();
 	      }
-	
+
 	      function nuovoModello() {
 	      	mostra_loading_mobile();
 		      if (!getSubmitted()) {
@@ -1970,7 +1970,7 @@ function doValidateCode(e, element, max_chars){
 			          document.f24MainForm.submit();
 			  }
 	      }
-	
+
 	      function annulla() {
 	      	if (!isAlreadySubmitted()) {
 		      	if (confirm('Sei sicuro?')) {
@@ -2003,7 +2003,7 @@ function doValidateCode(e, element, max_chars){
 	    	  if (!getSubmitted()) {
 		          document.f24MainForm.elements['_control.direction'].value = 'forward';
 			      //document.f24MainForm.action ='./sape2/f24/findDeleghePhone.do';
-			      document.f24MainForm.action ='/sapef24/f24/findDeleghePhone.do';      
+			      document.f24MainForm.action ='/sapef24/f24/findDeleghePhone.do';
 			      document.f24MainForm.submit();
 			  }
 	      }
@@ -2017,31 +2017,31 @@ function doValidateCode(e, element, max_chars){
 			      document.f24MainForm.submit();
 			  }
 	      }
-	      
 
 
 
 
-    	
-	      
-      
+
+
+
+
 </script>
 
 <div class="margin-bottom20">
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 		<input type="button" class="btn btn-primary" value="Indietro" onclick="javascript: inserisciNuovoModelloStepBack();">
 		<input type="button" class="btn btn-primary pull-right" value="Avanti" onclick="javascript: inserisciNuovoModelloStepForward();">
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 	</div>
 
@@ -2052,7 +2052,7 @@ function doValidateCode(e, element, max_chars){
 				<div class="clearfix"></div>
 </div><!--container-->
 
-	 
+
 
 
 

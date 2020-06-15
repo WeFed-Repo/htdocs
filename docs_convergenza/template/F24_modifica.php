@@ -1,7 +1,7 @@
-<html><head>	
+<html><head>
 	  <title>Rubrica contribuenti</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	  
+
 
 
 
@@ -34,58 +34,57 @@
 <script type="text/javascript" src="/sapef24/f24/javascript/funzioniHB.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/jquery.blockUI.js"></script>
 
-<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>    
+<script type="text/javascript" src="/sapef24/f24/javascript/jquery.dataTables.min.js"></script>
 
 
 <!--nostro-->
-	
+
 	<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/blue.css">
 	<script type="text/javascript" src="/sapef24/f24/javascript/icheck.min.js?t=1583315348896"></script>
 	<script type="text/javascript" src="/sapef24/f24/javascript/helpModal.js"></script>
-	
 
 
 
 
-	
+
+
 <script type="text/javascript">
-	
+
 		function getPathImages() { return '/sapef24/f24/images/';}
-	
+
 </script>
 <script type="text/javascript" src="/sapef24/f24/javascript/controlli.js"></script>
 <script type="text/javascript" src="/sapef24/f24/javascript/doubleClickPrevention.js"></script>
-	
+
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/jquery-ui.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/bootstrap.min.css">
 <link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/essentials.css">
-	
+
 		<link media="screen,print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/header-default.css">
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/styleNew.css">
-		
+
 		<!--NUOVA GRAFICA-->
-			
+
 	<link media="print" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePrint.css">
-	
+
 		<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/stylePhone.css">
-			<?php if($_REQUEST['bank'] == 'HT') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleYouweb.css">
-        <?php } else if($_REQUEST['bank'] == 'WB') { ?>
-            <link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/styleWebank.css">
-        <?php } ?>
-			
-		
+		<?php if($_REQUEST['bank'] == 'HT') { $stileSito = 'styleYouweb'; }
+					else if($_REQUEST['bank'] == 'WB') { $stileSito = 'styleWebank'; }
+					else if($_REQUEST['bank'] == 'AL') { $stileSito = 'styleAletti'; }
+					if( $stileSito ) { ?>
+						<link media="screen" rel="stylesheet" type="text/css" href="/sapef24/f24/styles/phone/<?php echo $stileSito ?>.css">
+		<?php } ?>
 
 		<script src="/sapef24/f24/javascript/jquery.jspanel.min.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/mobile-detect.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.js?t=1583315348896"></script>
 		<script src="/sapef24/f24/javascript/jquery.tablesorter.pager.js?t=1583315348896"></script>
-	
+
 		<link type="text/css" href="/sapef24/f24/styles/jquery.tablesorter.pager.css?t=1583315348896" rel="stylesheet">
 
 		<script type="text/javascript">
-		(function(){   
+		(function(){
 		  if (window.addEventListener)
 		  {
 			window.addEventListener("load", nascondi_loading_mobile, false);
@@ -102,9 +101,9 @@
 		  document.getElementById("loading_mobile").style.display = 'none';
 		}
 		</script>
-		
 
-	
+
+
 
 
 
@@ -123,24 +122,24 @@
 
 
 	<script type="text/javascript">
-		
+
 		function noBack(){
 			window.history.forward();
 		}
-		
+
 		noBack();
-		
+
 		window.onload = noBack;
 		window.onpageshow = function(evt) {
 			if (evt.persisted) {
 				noBack();
 			}
 		}
-		
+
 		window.onunload = function() {
 			void(0);
 		}
-	
+
 	</script>
 
 
@@ -149,25 +148,25 @@
 
 	if (window.opera) {
 		window.opera.setOverrideHistoryNavigationMode('compatible');
-		
+
 		if (history.navigationMode) {
 			history.navigationMode = 'compatible';
 		}
 	}
-	
+
 </script>
-	
-	
- 
+
+
+
   <!--[if lt IE 9]>
   	<script type="text/javascript" src='/sapef24/f24/javascript/respond.min.js'></script>
   	<script type="text/javascript" src='/sapef24/f24/javascript/html5.js'></script>
   <![endif]-->
   <script type="text/javascript" src="/sapef24/f24/javascript/alten.js"></script>
-  
+
   <style id="style-1-cropbar-clipper">
 	/* Copyright 2014 Evernote Corporation. All rights reserved. */
-	
+
 	.en-markup-crop-options {
 		top: 18px !important;
 		left: 50% !important;
@@ -180,10 +179,10 @@
 		margin-left: 0px !important;
 	}
 </style>
- 
+
 
 <style type="text/css">
-	#loading_mobile, #loading_screen{  
+	#loading_mobile, #loading_screen{
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -194,13 +193,13 @@
 		opacity: 0.5;
 		filter: alpha(opacity=50);
 	}
-	
-		#loading_screen{  
+
+		#loading_screen{
 			background: url(/sapef24/f24/images/loading.gif) 50% no-repeat;
 		}
-	
+
 </style>
-	
+
 
 
 
@@ -215,10 +214,9 @@
 	<form name="rubricaContribuentiForm" method="post" action="/sapef24/f24/modificaContribuentePhone.do" class="form-horizontal"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="7a2970f2453ab121a78d906fecfecfc0">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">				
+				<div class="col-sm-12">
 					<div class="flag pagamentoF24">&nbsp;</div>
 					<h1>Rubrica contribuenti</h1>
-					
 
 
 
@@ -227,15 +225,6 @@
 
 
 
-    
-
-
-
-
-
-
-
-	
 
 
 
@@ -244,22 +233,32 @@
 
 
 
-    
-    
-	
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<input type="hidden" name="id_chiamata" value="1583315344026_01IHF24_6dOd7oItKTNigHIR">
-	
 
-	
+
+
 		<!-- jsp:include page="./f24/phone/moduloF24/common/sezioni/inc_contoselezionato.jsp" flush="true"./ -->
-	
+
 		<h3 class="titleSectionLong">
 			Modifica contribuente
 		</h3>
-		
-			
-		
+
+
+
 
 
 
@@ -322,8 +321,8 @@
 		if (!fromRubrica) {
 			document.forms['rubricaContribuentiForm'].elements['sesso'].selectedIndex = document.forms['rubricaContribuentiForm'].elements['backupSesso'].value;
 		}
-		
-		
+
+
 		document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].disabled = false;
 		document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].className = 'form-control';
 		if (!fromRubrica) {
@@ -341,8 +340,8 @@
 		if (!fromRubrica) {
 			document.forms['rubricaContribuentiForm'].elements['aaaaDataNascita'].value = document.forms['rubricaContribuentiForm'].elements['backupAaaaDataNascita'].value;
 		}
-		
-		
+
+
 
 		document.forms['rubricaContribuentiForm'].elements['comuneNascita'].disabled = false;
 		document.forms['rubricaContribuentiForm'].elements['comuneNascita'].className = 'form-control';
@@ -412,7 +411,7 @@
 		//document.forms['rubricaContribuentiForm'].elements['dataNascitaHtml'].disabled = true;
 		//document.forms['rubricaContribuentiForm'].elements['dataNascitaHtml'].className = '';
 		//$('.dataNascitaHtml').datepicker('disable');
-		
+
 		if (!fromRubrica) {
 			//document.forms['rubricaContribuentiForm'].elements['backupDataNascita'].value = document.forms['rubricaContribuentiForm'].elements['dataNascitaHtml'].value;
 			//document.forms['rubricaContribuentiForm'].elements['backupGgDataNascita'].value = document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].value;
@@ -423,19 +422,19 @@
 		document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].value="";
 			document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].disabled = true;
 			document.forms['rubricaContribuentiForm'].elements['ggDataNascita'].className = 'solaLettura';
-			
-			
+
+
 			document.forms['rubricaContribuentiForm'].elements['mmDataNascita'].value="";
 			document.forms['rubricaContribuentiForm'].elements['mmDataNascita'].disabled = true;
 			document.forms['rubricaContribuentiForm'].elements['mmDataNascita'].className = 'solaLettura';
-			
-			
+
+
 			document.forms['rubricaContribuentiForm'].elements['aaaaDataNascita'].value="";
 			document.forms['rubricaContribuentiForm'].elements['aaaaDataNascita'].disabled = true;
 			document.forms['rubricaContribuentiForm'].elements['aaaaDataNascita'].className = 'solaLettura'
-			
-			
-			
+
+
+
 		document.forms['rubricaContribuentiForm'].elements['comuneNascita'].disabled = true;
 		document.forms['rubricaContribuentiForm'].elements['comuneNascita'].className = 'solaLettura';
 		if (!fromRubrica) {
@@ -477,8 +476,8 @@
 
 	<div class="riquadroForm clearfix">
 		<div class="bs-example">
-		
-		
+
+
 			<div class="form-group">
 				<div class="form-field-input col-xs-12">
 					<b>Tipo di persona:</b>
@@ -489,8 +488,8 @@
 					<input type="button" id="fisica" class="btn selezionato" value="Fisica" onclick="selezionaPersonaFisica(false);"><input type="button" id="giuridica" class="btn nonSelezionato" value="Giuridica" onclick="selezionaPersonaGiuridica(false);">
 				</div>
 			</div>
-					
-			
+
+
 			<input type="hidden" name="tipoContribuente" value="personaFisica" id="tipoContribuente">
 			<div class="schedaPersonaFisica" id="schedaPersonaFisica">
 				<div class="form-group">
@@ -509,12 +508,12 @@
 				</div>
 				<div class="form-group">
 					<label>Sesso:</label>
-					
+
 					    <select name="sesso" class="form-control"><option value=" ">&nbsp;</option>
 								<option value="M" selected="selected">M</option>
 								<option value="F">F</option></select>
-						
-						
+
+
 					<input type="hidden" name="backupSesso">
 				</div>
 				<div class="form-group">
@@ -525,238 +524,238 @@
 				<div class="form-group">
 					<label>Provincia di nascita:</label>
 					<select name="provinciaNascita" class="form-control"><option value="">&nbsp;</option>
-						
+
 							<option value="AG">AG&nbsp;</option>
-						
+
 							<option value="AL">AL&nbsp;</option>
-						
+
 							<option value="AN">AN&nbsp;</option>
-						
+
 							<option value="AO">AO&nbsp;</option>
-						
+
 							<option value="AP">AP&nbsp;</option>
-						
+
 							<option value="AQ">AQ&nbsp;</option>
-						
+
 							<option value="AR">AR&nbsp;</option>
-						
+
 							<option value="AT">AT&nbsp;</option>
-						
+
 							<option value="AV">AV&nbsp;</option>
-						
+
 							<option value="BA">BA&nbsp;</option>
-						
+
 							<option value="BG">BG&nbsp;</option>
-						
+
 							<option value="BI">BI&nbsp;</option>
-						
+
 							<option value="BL">BL&nbsp;</option>
-						
+
 							<option value="BN">BN&nbsp;</option>
-						
+
 							<option value="BO">BO&nbsp;</option>
-						
+
 							<option value="BR">BR&nbsp;</option>
-						
+
 							<option value="BS">BS&nbsp;</option>
-						
+
 							<option value="BT">BT&nbsp;</option>
-						
+
 							<option value="BZ">BZ&nbsp;</option>
-						
+
 							<option value="CA">CA&nbsp;</option>
-						
+
 							<option value="CB">CB&nbsp;</option>
-						
+
 							<option value="CE">CE&nbsp;</option>
-						
+
 							<option value="CH">CH&nbsp;</option>
-						
+
 							<option value="CI">CI&nbsp;</option>
-						
+
 							<option value="CL">CL&nbsp;</option>
-						
+
 							<option value="CN">CN&nbsp;</option>
-						
+
 							<option value="CO">CO&nbsp;</option>
-						
+
 							<option value="CR">CR&nbsp;</option>
-						
+
 							<option value="CS">CS&nbsp;</option>
-						
+
 							<option value="CT">CT&nbsp;</option>
-						
+
 							<option value="CZ">CZ&nbsp;</option>
-						
+
 							<option value="EE">EE&nbsp;</option>
-						
+
 							<option value="EN">EN&nbsp;</option>
-						
+
 							<option value="FC">FC&nbsp;</option>
-						
+
 							<option value="FE">FE&nbsp;</option>
-						
+
 							<option value="FG">FG&nbsp;</option>
-						
+
 							<option value="FI">FI&nbsp;</option>
-						
+
 							<option value="FM">FM&nbsp;</option>
-						
+
 							<option value="FO">FO&nbsp;</option>
-						
+
 							<option value="FR">FR&nbsp;</option>
-						
+
 							<option value="GE">GE&nbsp;</option>
-						
+
 							<option value="GO">GO&nbsp;</option>
-						
+
 							<option value="GR">GR&nbsp;</option>
-						
+
 							<option value="IM">IM&nbsp;</option>
-						
+
 							<option value="IS">IS&nbsp;</option>
-						
+
 							<option value="KR">KR&nbsp;</option>
-						
+
 							<option value="LC">LC&nbsp;</option>
-						
+
 							<option value="LE">LE&nbsp;</option>
-						
+
 							<option value="LI">LI&nbsp;</option>
-						
+
 							<option value="LO">LO&nbsp;</option>
-						
+
 							<option value="LT">LT&nbsp;</option>
-						
+
 							<option value="LU">LU&nbsp;</option>
-						
+
 							<option value="MB">MB&nbsp;</option>
-						
+
 							<option value="MC">MC&nbsp;</option>
-						
+
 							<option value="ME">ME&nbsp;</option>
-						
+
 							<option value="MI">MI&nbsp;</option>
-						
+
 							<option value="MN">MN&nbsp;</option>
-						
+
 							<option value="MO">MO&nbsp;</option>
-						
+
 							<option value="MS">MS&nbsp;</option>
-						
+
 							<option value="MT">MT&nbsp;</option>
-						
+
 							<option value="NA">NA&nbsp;</option>
-						
+
 							<option value="NO">NO&nbsp;</option>
-						
+
 							<option value="NU">NU&nbsp;</option>
-						
+
 							<option value="OG">OG&nbsp;</option>
-						
+
 							<option value="OR">OR&nbsp;</option>
-						
+
 							<option value="OT">OT&nbsp;</option>
-						
+
 							<option value="PA">PA&nbsp;</option>
-						
+
 							<option value="PC">PC&nbsp;</option>
-						
+
 							<option value="PD">PD&nbsp;</option>
-						
+
 							<option value="PE">PE&nbsp;</option>
-						
+
 							<option value="PG">PG&nbsp;</option>
-						
+
 							<option value="PI">PI&nbsp;</option>
-						
+
 							<option value="PN">PN&nbsp;</option>
-						
+
 							<option value="PO">PO&nbsp;</option>
-						
+
 							<option value="PR">PR&nbsp;</option>
-						
+
 							<option value="PS">PS&nbsp;</option>
-						
+
 							<option value="PT">PT&nbsp;</option>
-						
+
 							<option value="PU">PU&nbsp;</option>
-						
+
 							<option value="PV">PV&nbsp;</option>
-						
+
 							<option value="PZ">PZ&nbsp;</option>
-						
+
 							<option value="RA">RA&nbsp;</option>
-						
+
 							<option value="RC">RC&nbsp;</option>
-						
+
 							<option value="RE">RE&nbsp;</option>
-						
+
 							<option value="RG">RG&nbsp;</option>
-						
+
 							<option value="RI">RI&nbsp;</option>
-						
+
 							<option value="RM">RM&nbsp;</option>
-						
+
 							<option value="RN">RN&nbsp;</option>
-						
+
 							<option value="RO">RO&nbsp;</option>
-						
+
 							<option value="SA">SA&nbsp;</option>
-						
+
 							<option value="SI">SI&nbsp;</option>
-						
+
 							<option value="SO">SO&nbsp;</option>
-						
+
 							<option value="SP">SP&nbsp;</option>
-						
+
 							<option value="SR">SR&nbsp;</option>
-						
+
 							<option value="SS">SS&nbsp;</option>
-						
+
 							<option value="SU">SU&nbsp;</option>
-						
+
 							<option value="SV">SV&nbsp;</option>
-						
+
 							<option value="TA">TA&nbsp;</option>
-						
+
 							<option value="TE">TE&nbsp;</option>
-						
+
 							<option value="TN">TN&nbsp;</option>
-						
+
 							<option value="TO">TO&nbsp;</option>
-						
+
 							<option value="TP">TP&nbsp;</option>
-						
+
 							<option value="TR">TR&nbsp;</option>
-						
+
 							<option value="TS">TS&nbsp;</option>
-						
+
 							<option value="TV">TV&nbsp;</option>
-						
+
 							<option value="UD">UD&nbsp;</option>
-						
+
 							<option value="VA">VA&nbsp;</option>
-						
+
 							<option value="VB">VB&nbsp;</option>
-						
+
 							<option value="VC">VC&nbsp;</option>
-						
+
 							<option value="VE">VE&nbsp;</option>
-						
+
 							<option value="VI">VI&nbsp;</option>
-						
+
 							<option value="VR" selected="selected">VR&nbsp;</option>
-						
+
 							<option value="VS">VS&nbsp;</option>
-						
+
 							<option value="VT">VT&nbsp;</option>
-						
+
 							<option value="VV">VV&nbsp;</option></select>
 					<input type="hidden" name="backupProvinciaNascita">
 				</div>
 				<div class="form-group">
-					<label class="col-xs-12">Data di nascita:</label>				
+					<label class="col-xs-12">Data di nascita:</label>
 					<div class="col-xs-3">
 						<input type="text" name="ggDataNascita" maxlength="2" size="2" value="03" class="form-control">
 					</div>
@@ -767,8 +766,8 @@
 					<label class="col-xs-1 text-center"><strong>/</strong></label>
 					<div class="col-xs-4">
 						<input type="text" name="aaaaDataNascita" maxlength="4" size="4" value="1985" class="form-control">
-					</div>				
-					<input type="hidden" name="backupDataNascita">					
+					</div>
+					<input type="hidden" name="backupDataNascita">
 					<input type="hidden" name="backupGgDataNascita">
 					<input type="hidden" name="backupMmDataNascita">
 					<input type="hidden" name="backupAaaaDataNascita">
@@ -780,257 +779,257 @@
 				<div class="form-group">
 					<label>Denominazione:</label>
 					<input type="text" name="ragioneSociale" maxlength="30" value="" class="solaLettura" id="idRagSoc" disabled="" placeholder="Denominazione">
-					<input type="hidden" name="backupRagioneSociale">					
+					<input type="hidden" name="backupRagioneSociale">
 				</div>
 				<div class="form-group">
-					<label>Codice fiscale/partita IVA:</label>	
+					<label>Codice fiscale/partita IVA:</label>
 					<input type="text" name="codiceFiscale" maxlength="16" value="VNTLSN85R03E349S" readonly="readonly" class="form-control" id="idCodFis2" disabled="" placeholder="Cod. fiscale/partita IVA">
-					<!-- bean:write name="editabile" filter="false" / -->					
+					<!-- bean:write name="editabile" filter="false" / -->
 				</div>
 			</div><!-- /schedaPersonaGiuridica -->
-		
+
 			<div class="form-group">
 				<label>Domicilio fiscale - Indirizzo:</label>
 				<input type="text" name="indirizzoDomicilio" maxlength="34" value="VIA DEL DONATORE 54" class="form-control" id="idIndirizzo" placeholder="Indirizzo">
-				<input type="hidden" name="backupIndirizzoDomicilio">		
+				<input type="hidden" name="backupIndirizzoDomicilio">
 			</div>
 			<div class="form-group">
 					<label>Domicilio fiscale - Comune:</label>
 					<input type="text" name="comuneDomicilio" maxlength="34" value="VALEGGIO SUL MINCIO" class="form-control" id="idComDom" placeholder="Domicilio Fiscale: comune di nascita">
-					<input type="hidden" name="backupComuneDomicilio">			
+					<input type="hidden" name="backupComuneDomicilio">
 			</div>
 			<div class="form-group">
 				<label>Domicilio fiscale - Provincia:</label>
 				  <select name="provinciaDomicilio" class="form-control"><option value="">&nbsp;</option>
-					
+
 						<option value="AG">AG&nbsp;</option>
-					
+
 						<option value="AL">AL&nbsp;</option>
-					
+
 						<option value="AN">AN&nbsp;</option>
-					
+
 						<option value="AO">AO&nbsp;</option>
-					
+
 						<option value="AP">AP&nbsp;</option>
-					
+
 						<option value="AQ">AQ&nbsp;</option>
-					
+
 						<option value="AR">AR&nbsp;</option>
-					
+
 						<option value="AT">AT&nbsp;</option>
-					
+
 						<option value="AV">AV&nbsp;</option>
-					
+
 						<option value="BA">BA&nbsp;</option>
-					
+
 						<option value="BG">BG&nbsp;</option>
-					
+
 						<option value="BI">BI&nbsp;</option>
-					
+
 						<option value="BL">BL&nbsp;</option>
-					
+
 						<option value="BN">BN&nbsp;</option>
-					
+
 						<option value="BO">BO&nbsp;</option>
-					
+
 						<option value="BR">BR&nbsp;</option>
-					
+
 						<option value="BS">BS&nbsp;</option>
-					
+
 						<option value="BT">BT&nbsp;</option>
-					
+
 						<option value="BZ">BZ&nbsp;</option>
-					
+
 						<option value="CA">CA&nbsp;</option>
-					
+
 						<option value="CB">CB&nbsp;</option>
-					
+
 						<option value="CE">CE&nbsp;</option>
-					
+
 						<option value="CH">CH&nbsp;</option>
-					
+
 						<option value="CI">CI&nbsp;</option>
-					
+
 						<option value="CL">CL&nbsp;</option>
-					
+
 						<option value="CN">CN&nbsp;</option>
-					
+
 						<option value="CO">CO&nbsp;</option>
-					
+
 						<option value="CR">CR&nbsp;</option>
-					
+
 						<option value="CS">CS&nbsp;</option>
-					
+
 						<option value="CT">CT&nbsp;</option>
-					
+
 						<option value="CZ">CZ&nbsp;</option>
-					
+
 						<option value="EE">EE&nbsp;</option>
-					
+
 						<option value="EN">EN&nbsp;</option>
-					
+
 						<option value="FC">FC&nbsp;</option>
-					
+
 						<option value="FE">FE&nbsp;</option>
-					
+
 						<option value="FG">FG&nbsp;</option>
-					
+
 						<option value="FI">FI&nbsp;</option>
-					
+
 						<option value="FM">FM&nbsp;</option>
-					
+
 						<option value="FO">FO&nbsp;</option>
-					
+
 						<option value="FR">FR&nbsp;</option>
-					
+
 						<option value="GE">GE&nbsp;</option>
-					
+
 						<option value="GO">GO&nbsp;</option>
-					
+
 						<option value="GR">GR&nbsp;</option>
-					
+
 						<option value="IM">IM&nbsp;</option>
-					
+
 						<option value="IS">IS&nbsp;</option>
-					
+
 						<option value="KR">KR&nbsp;</option>
-					
+
 						<option value="LC">LC&nbsp;</option>
-					
+
 						<option value="LE">LE&nbsp;</option>
-					
+
 						<option value="LI">LI&nbsp;</option>
-					
+
 						<option value="LO">LO&nbsp;</option>
-					
+
 						<option value="LT">LT&nbsp;</option>
-					
+
 						<option value="LU">LU&nbsp;</option>
-					
+
 						<option value="MB">MB&nbsp;</option>
-					
+
 						<option value="MC">MC&nbsp;</option>
-					
+
 						<option value="ME">ME&nbsp;</option>
-					
+
 						<option value="MI">MI&nbsp;</option>
-					
+
 						<option value="MN">MN&nbsp;</option>
-					
+
 						<option value="MO">MO&nbsp;</option>
-					
+
 						<option value="MS">MS&nbsp;</option>
-					
+
 						<option value="MT">MT&nbsp;</option>
-					
+
 						<option value="NA">NA&nbsp;</option>
-					
+
 						<option value="NO">NO&nbsp;</option>
-					
+
 						<option value="NU">NU&nbsp;</option>
-					
+
 						<option value="OG">OG&nbsp;</option>
-					
+
 						<option value="OR">OR&nbsp;</option>
-					
+
 						<option value="OT">OT&nbsp;</option>
-					
+
 						<option value="PA">PA&nbsp;</option>
-					
+
 						<option value="PC">PC&nbsp;</option>
-					
+
 						<option value="PD">PD&nbsp;</option>
-					
+
 						<option value="PE">PE&nbsp;</option>
-					
+
 						<option value="PG">PG&nbsp;</option>
-					
+
 						<option value="PI">PI&nbsp;</option>
-					
+
 						<option value="PN">PN&nbsp;</option>
-					
+
 						<option value="PO">PO&nbsp;</option>
-					
+
 						<option value="PR">PR&nbsp;</option>
-					
+
 						<option value="PS">PS&nbsp;</option>
-					
+
 						<option value="PT">PT&nbsp;</option>
-					
+
 						<option value="PU">PU&nbsp;</option>
-					
+
 						<option value="PV">PV&nbsp;</option>
-					
+
 						<option value="PZ">PZ&nbsp;</option>
-					
+
 						<option value="RA">RA&nbsp;</option>
-					
+
 						<option value="RC">RC&nbsp;</option>
-					
+
 						<option value="RE">RE&nbsp;</option>
-					
+
 						<option value="RG">RG&nbsp;</option>
-					
+
 						<option value="RI">RI&nbsp;</option>
-					
+
 						<option value="RM">RM&nbsp;</option>
-					
+
 						<option value="RN">RN&nbsp;</option>
-					
+
 						<option value="RO">RO&nbsp;</option>
-					
+
 						<option value="SA">SA&nbsp;</option>
-					
+
 						<option value="SI">SI&nbsp;</option>
-					
+
 						<option value="SO">SO&nbsp;</option>
-					
+
 						<option value="SP">SP&nbsp;</option>
-					
+
 						<option value="SR">SR&nbsp;</option>
-					
+
 						<option value="SS">SS&nbsp;</option>
-					
+
 						<option value="SU">SU&nbsp;</option>
-					
+
 						<option value="SV">SV&nbsp;</option>
-					
+
 						<option value="TA">TA&nbsp;</option>
-					
+
 						<option value="TE">TE&nbsp;</option>
-					
+
 						<option value="TN">TN&nbsp;</option>
-					
+
 						<option value="TO">TO&nbsp;</option>
-					
+
 						<option value="TP">TP&nbsp;</option>
-					
+
 						<option value="TR">TR&nbsp;</option>
-					
+
 						<option value="TS">TS&nbsp;</option>
-					
+
 						<option value="TV">TV&nbsp;</option>
-					
+
 						<option value="UD">UD&nbsp;</option>
-					
+
 						<option value="VA">VA&nbsp;</option>
-					
+
 						<option value="VB">VB&nbsp;</option>
-					
+
 						<option value="VC">VC&nbsp;</option>
-					
+
 						<option value="VE">VE&nbsp;</option>
-					
+
 						<option value="VI">VI&nbsp;</option>
-					
+
 						<option value="VR" selected="selected">VR&nbsp;</option>
-					
+
 						<option value="VS">VS&nbsp;</option>
-					
+
 						<option value="VT">VT&nbsp;</option>
-					
+
 						<option value="VV">VV&nbsp;</option></select>
-				<input type="hidden" name="backupProvinciaDomicilio">				
+				<input type="hidden" name="backupProvinciaDomicilio">
 			</div>
 
 
@@ -1060,10 +1059,10 @@ var personaGiuridicaSelected = false;
 
 	$(document).ready(function(){
 
-		
-		
+
+
 			selezionaPersonaFisica(true)
-		
+
 
 
 
@@ -1141,8 +1140,6 @@ $(function() {
 
 
 
- 
-   
 
 
 
@@ -1153,8 +1150,10 @@ $(function() {
 
 
 
- 
-  
+
+
+
+
 				</div><!-- /col-sm-12 -->
 			</div><!-- /row-->
 			<div class="pull-right margin-bottom20">
