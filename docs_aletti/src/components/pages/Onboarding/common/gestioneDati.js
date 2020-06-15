@@ -93,7 +93,9 @@ const defaultFields = {
                     ]
                 },
                 "titolareEffettivo": "",
-                "personaEsposta": ""
+                "personaEsposta": "",
+
+                "identitaAccertata":""
             },
             "1": {
                 "fasciaRedditoNote":"",
@@ -163,7 +165,9 @@ const defaultFields = {
                     ]
                 },
                 "titolareEffettivo": "",
-                "personaEsposta": ""
+                "personaEsposta": "",
+
+                "identitaAccertata": ""
             }
         }
     },
@@ -404,7 +408,10 @@ let typeKeys = {
         "field_sessionfirmeblob_intestatarifirme_0_cellcertif",
         "field_sessionfirmeblob_intestatarifirme_0_emailcertif",
         "field_sessionfirmeblob_intestatarifirme_1_sessioneconclusa",
-        "field_sessionfirmeblob_intestatarifirme_1_titolareeffettivo"
+        "field_sessionfirmeblob_intestatarifirme_1_titolareeffettivo",
+
+        "field_sessionfirmeblob_intestatarifirme_0_identitaaccertata",
+        "field_sessionfirmeblob_intestatarifirme_1_identitaaccertata"
         
 
     ],

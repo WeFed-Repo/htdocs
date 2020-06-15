@@ -822,7 +822,7 @@ class FormDate extends Component {
             <div className={"form-group daypicker " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}</label>}
                 {!output && <div className="daypicker-wrapper">
-                    <DayPickerInput key={this.state.key}
+                    <DayPickerInput key={this.props.name + "_" + value}
                         value={value}
                         selectedDay={value}
                         onDayChange={(a, b, input) => {

@@ -167,13 +167,14 @@ class DatiPersonali extends Component {
 
                 <DefaultModal show={this.state.isWarningDateVisible}
                     params={{ "modalTitle": 'Attenzione' }}>
-                    <p>Specificare la data di nascita per proseguire con la selezione della data di emisisone e scadenza dei documenti</p>
+                    <p>Specificare la data di nascita per proseguire con la selezione della data di emissione e scadenza dei documenti</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { this.props.formstate[anagraficaIntestatario + "datarilasciorinnovo"] = ""; this.setState({ isWarningDateVisible: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { this.props.setObState({[anagraficaIntestatario + "datarilasciorinnovo"]:""});this.setState({ isWarningDateVisible: false }) }} title="Chiudi">Chiudi</Button>
                         </div>
                     </div>
                 </DefaultModal>
+
                 <DefaultCollapse
                     disabled={this.props.isPrivacyUnChecked && !this.props.isOutput}
                     label={!this.props.isOutput ? labelDatiPer : labelDatiPerOutput}
@@ -353,13 +354,10 @@ class DatiPersonali extends Component {
                                                         onChange={this.props.obchange}
                                                         cbchange={() => {
                                                             if (this.props.formstate[anagraficaIntestatario + "nascita"] === "") {
-                                                                this.setState({
+                                                               this.setState({
                                                                     isWarningDateVisible: true
                                                                 })
-                                                                this.props.setObState({
-                                                                    [anagraficaIntestatario + "datarilasciorinnovo"]: "",
-                                                                    [anagraficaIntestatario + "datascadenza"]: ""
-                                                                });
+    
                                                             }
                                                             else {
                                                                 this.props.setObState({ [anagraficaIntestatario + "datascadenza"]: "" })
@@ -437,7 +435,6 @@ class DatiPersonali extends Component {
                                                 ajaxfilter={this.props.formstate[anagraficaIntestatario + "provinciarilascio"]}
                                                 placeholder="Seleziona.."
                                                 output={this.props.isOutput}
-
                                             >
                                             </Form.select>
                                         </Col>

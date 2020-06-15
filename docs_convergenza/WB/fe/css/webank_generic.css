@@ -150,16 +150,6 @@ form {
   display: inline-block;
   transform: translate(0, -10px);
 }
-.control-label,
-.form-group .pin_testo {
-  margin-top: 0;
-  margin-bottom: 3px;
-}
-.control-label .txthelp,
-.form-group .pin_testo .txthelp {
-  margin-bottom: 5px;
-  display: inline-block;
-}
 .btnWrapper {
   margin-top: 0;
   margin-bottom: 8px;
@@ -820,9 +810,9 @@ p {
 .txthelp.control-label {
   margin-bottom: 3px;
 }
-.txthelp.control-label.txthelp {
-  margin-bottom: 10px;
-  display: inline;
+.txthelp.spacing-bottom {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 .flRight {
   float: right;
@@ -3150,6 +3140,9 @@ table .table-btn-more:hover {
 .no-label {
   padding-top: 20px;
 }
+.no-label.btn-align-left {
+  padding-top: 22px;
+}
 @media (max-width: 1023px) {
   .no-label {
     padding-top: 25px;
@@ -3172,7 +3165,7 @@ table .table-btn-more:hover {
 .formGenerico .control-label,
 .formGenerico .control-label-output {
   display: block;
-  /*margin-bottom: 3px;*/
+  margin-bottom: 3px!important;
   font-weight: 600;
 }
 .formGenerico .control-label-output,
@@ -3355,7 +3348,7 @@ table .table-btn-more:hover {
 .formGenerico .no-label .btn-align-left,
 .formGenerico .no-label .btn-align-right,
 .formGenerico .no-label select {
-  margin-top: 5px;
+  margin-top: 3px;
 }
 .formGenerico .form-group.selected {
   background-color: #dce7b5;
