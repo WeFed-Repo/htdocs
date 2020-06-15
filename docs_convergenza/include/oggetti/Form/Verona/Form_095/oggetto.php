@@ -1,28 +1,18 @@
 <script type="text/javascript">
-    $(document).ready(function() {
-        var pdf1 = false, pdf2 = false, i = 0;
-
-        $('[data-toggle="tooltip"]').click(function() {
-            if(!$('#flagDocumentazione').is(':disabled')) {
-                $(this).tooltip('destroy');
-            } 
-        });
-
-        $('#pdf1').click(function(e) {
-            e.preventDefault();
-            pdf1 = true;
-            if(pdf2) {
+    $(function() {
+        var pdf1 = false, 
+            pdf2 = false, 
+            i = 0 ,
+            linkDocs= $(".tooltip-masked-link");
+        
+        linkDocs.on("click", function(e){
+            pdf1 = $(this).index() === 0 ? true : pdf1
+            pdf2 = $(this).index() === 1 ? true : pdf2
+            if(pdf1 && pdf2) {
                 $('#flagDocumentazione, #flagInformativa').attr('disabled', false);
+                $(this).closest(".formWrapper").find('.tooltip-masked').remove();
             }
-        });
-
-        $('#pdf2').click(function(e) {
-            e.preventDefault();
-            pdf2 = true;
-            if(pdf1) {
-                $('#flagDocumentazione,#flagInformativa').attr('disabled', false);
-            }
-        });
+        })
     });
 </script>
 <section>
@@ -43,7 +33,7 @@
                         <label class="has-feedback tooltip-wrapper">
                             <span data-toggle="tooltip" class="tooltip-masked" title="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua."></span>
                             <input type="checkbox" name="flagDocumentazione" id="flagDocumentazione" disabled="disabled">
-                        </label><span>Dichiaro di aver letto il <a href="#" id="pdf1" class="tooltip-masked-link">Contratto trading online</a>, il  <a href="#" id="pdf2" class="tooltip-masked-link">Foglio informativa</a> e averne compreso e salvato il contenuto.</span>
+                        </label><span>Dichiaro di aver letto il <a href="#1" id="pdf1" class="tooltip-masked-link">Contratto trading online</a>, il  <a href="#2" id="pdf2" class="tooltip-masked-link">Foglio informativa</a> e averne compreso e salvato il contenuto.</span>
                     </div>
                 </div>
                 <div class="row">
