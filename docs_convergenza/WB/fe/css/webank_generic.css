@@ -10694,6 +10694,7 @@ div.select-content select:active {
   text-shadow: none;
   opacity: 100%;
   line-height: 40px;
+  background: #fff;
   width: 40px;
 }
 .trading-news .carousel-control:hover {
