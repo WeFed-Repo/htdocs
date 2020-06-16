@@ -489,6 +489,7 @@
   background-image: linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
   border: 1px solid #CCCCCC;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5), 0 3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px 0 rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 .boxTassoBox2 {
   background: #DBE9AF;
@@ -497,6 +498,7 @@
   background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid #A9B978;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5), 0 3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px 0 rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 #infoRichieste3 {
   margin: 30px 0 10px 0;
@@ -589,6 +591,18 @@
 }
 .btnWrapper.saldoButton {
   padding-top: 0;
+}
+.btnWrapper.saldoButton .btn {
+  padding: 6px;
+}
+.btnWrapper.saldoButton .btn-align-right .btn {
+  margin-left: 5px;
+}
+.btnWrapper.saldoButton .btn-align-left .btn {
+  margin-right: 5px;
+}
+.btnWrapper.saldoButton .btn .icon-text {
+  padding-left: 3px;
 }
 /* Linee attive */
 #contentRia3 .tab-wrap > section {
