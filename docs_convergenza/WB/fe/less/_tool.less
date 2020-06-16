@@ -5712,12 +5712,24 @@ div.select-content select {
 }
 
 /* TRADING NEWS CAROUSEL */
-.trading-news {width: "calc(100% + 145px)"; margin-left:-145px;
+.trading-news {width: calc(100% + 145px);margin-left: -145px;
     .carousel {border:solid 1px #ccc; background:#fff;display:block; margin-bottom:15px; height:40px; overflow:hidden;}
     .trading-news-wrapper {padding:5px 40px;width:100%; position:relative; overflow:hidden; text-overflow:ellipsis;
         .date {display: block; position: absolute; top: 5px; left: 40px; height: 27 px; padding: 0 10px 0 0; border-right: solid 1px #ccc; font-size: 12px; color: #999;line-height: 27px;}
         .title {cursor:pointer;display:inline; font-weight:bold;font-size:14px; padding:0 0 0 105px;white-space: nowrap; overflow:hidden; text-overflow: ellipsis; line-height: 25px; text-transform:uppercase;}
         .trading-news-body {display:none;}
+    }
+    .carousel-control {
+        background-image: none;
+        text-decoration: none;
+        color: #6f8f0a;
+        text-shadow: none;
+        opacity: 100%;
+        line-height:40px;
+        background:#fff;
+        width: 40px;
+        &:hover {opacity:0.6}
+        .icon {font-size:22px;font-weight:600;}
     }
 
 }

@@ -10642,7 +10642,7 @@ div.select-content select:active {
 }
 /* TRADING NEWS CAROUSEL */
 .trading-news {
-  width: "calc(100% + 145px)";
+  width: calc(100% + 145px);
   margin-left: -145px;
 }
 .trading-news .carousel {
@@ -10686,6 +10686,22 @@ div.select-content select:active {
 }
 .trading-news .trading-news-wrapper .trading-news-body {
   display: none;
+}
+.trading-news .carousel-control {
+  background-image: none;
+  text-decoration: none;
+  color: #6f8f0a;
+  text-shadow: none;
+  opacity: 100%;
+  line-height: 40px;
+  width: 40px;
+}
+.trading-news .carousel-control:hover {
+  opacity: 0.6;
+}
+.trading-news .carousel-control .icon {
+  font-size: 22px;
+  font-weight: 600;
 }
 .news-carousel .carousel-control {
   width: 40px;
