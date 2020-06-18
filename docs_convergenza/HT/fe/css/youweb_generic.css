@@ -7631,3 +7631,17 @@ div.fixed-table-scroll-outer {
     }
 }
 
+/* BOTTONE BANCOMAT PAY*/
+@media (min-width: 768px) {
+.position-wrapper-btn {position: relative;}
+.position-wrapper-btn .btn-align-right{
+    position: absolute;
+    right: 0;
+    bottom:23px;
+}
+}
+@media (max-width: 767px) {
+    .position-wrapper-btn .btn-align-right {
+       text-align:center
+    }
+}
