@@ -7597,7 +7597,7 @@ div.fixed-table-scroll-outer {
     font-weight: bold;
     padding: 0 5px;
 }
-.wrapper-garanzie label {
+.wrapper-garanzie label, .det-modifica + div label {
     width: 100%;
 }
 /* PromoBox investimento */
