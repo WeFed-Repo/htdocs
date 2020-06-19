@@ -2311,10 +2311,11 @@ div.messagePanel p {
         height: 40px;
         border: 1px solid #DADEE1;
     }
+    
     .tooltip-masked.input-text {
        height: 40px;
     }
-
+    
     .ui-combobox .form-control, .ui-combobox .form-control:hover, .input-group-addon a, .btnAggiungiBeneficiario, .btnEdit {
         height: 38px;
     }
@@ -6900,6 +6901,12 @@ div.titButton.titButtonIco {
 }
 
 a.tooltip-masked-link {color:#00a592;text-decoration: underline}
+
+.has-feedback input[type="radio"] {
+    margin-top:0;
+}
+.informativa label.has-feedback { width:100%}
+
 
 /* Form_095, FINE */
 
