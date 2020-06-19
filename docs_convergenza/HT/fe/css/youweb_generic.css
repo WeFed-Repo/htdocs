@@ -2507,7 +2507,11 @@ span.spanQuestionario {
     padding-bottom: 0px !important;
     margin-bottom: 25px;
 }
-
+@media (max-width: 1100px) {
+    .titButtonIco .btn-align-right {
+        float: left;
+    }
+}
 @media (max-width: 767px) {
     .fullScreen.modal {
         background: #fff;
@@ -4454,8 +4458,8 @@ label.select-button + span {
     font-size: 14px;
     color: #65B7A9;
     text-align: center;
-    font-weight: 500;
-    margin-bottom:0;
+    font-weight: bold;
+    margin-bottom:15px;
 }
 .box-catalogue h3 p {
     margin-bottom:0;
@@ -5940,6 +5944,7 @@ ul.ui-autocomplete {
     margin-top: 10px;
 }
 
+
 .titButtonIco.titButtonIcoWhite  {
     background-color: #fff;
 }
@@ -6537,6 +6542,9 @@ div[id*="popover"] .popover-content {
   position: relative;
   padding: 0 20px 0 7px;
   cursor:pointer;
+}
+#spselDetail .spsel-option {
+    padding-right:0;
 }
 .spsel .spsel-option .spsel-addel {
   position: absolute;
