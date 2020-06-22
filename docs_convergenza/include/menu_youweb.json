@@ -27,7 +27,6 @@
 			}
 		]
 	},
-	
 	{
 		"nome": "Investimenti",
 		"voices": [
@@ -49,14 +48,12 @@
 						"inlavorazione": true,
 						"tpl": "tpl_inv_portafoglio_simulato.php"
 					},
-
 					{
 						"nome": "Ordini e Movimenti",
 						"html": "mi",
 						"inlavorazione": true,
 						"tpl": "tpl_inv_ordini_e_movimenti.php"
 					}
-					
 				]
 			},
 			{
@@ -136,7 +133,6 @@
 								"inlavorazione": true,
 								"html": "mi"
 							}
-
 						]
 					},
 					{
@@ -150,7 +146,7 @@
 						"tpl": "tpl_responsive_ricerca_titoli_evoluta_etf.php",
 						"html": "mi",
 						"inlavorazione": true
-					}					
+					}
 				]
 			},
 			{
@@ -172,14 +168,12 @@
 						"nome": "Europa",
 						"html": "mi",
 						"inlavorazione": true
-					}
-					,
+					},
 					{
 						"nome": "America",
 						"html": "mi",
 						"inlavorazione": true
-					}
-					,
+					},
 					{
 						"nome": "News",
 						"tpl": "tpl_responsive_overview_news.php",
@@ -192,32 +186,26 @@
 						"html": "mi",
 						"inlavorazione": true
 					}
-				
 				]
 			},
-
 			{
 				"nome": "Analisi titoli",
 				"voices": [
 					{
 						"nome": "Grafici interattivi",
-
 						"html": "mi",
 						"inlavorazione": true
 					},
 					{
 						"nome": "Analisi TraderMade",
-
 						"html": "mi",
 						"inlavorazione": true
 					},
 					{
 						"nome": "Analisi ADB",
-
 						"html": "mi",
 						"inlavorazione": true
 					}
-					
 				]
 			},
 			{
@@ -278,22 +266,17 @@
 						"inlavorazione": true,
 						"tpl": "tpl_inv_portafoglio_simulato.php"
 					},
-
 					{
 						"nome": "Ordini e Movimenti",
 						"html": "mi",
 						"inlavorazione": true,
 						"tpl": "tpl_inv_ordini_e_movimenti.php"
 					}
-					
-								]
+				]
 			},
 			{
 				"nome": "Ricerca e compravendita",
 				"voices": [
-					
-
-
 					{
 						"nome": "Fondi e SICAV",
 						"voices": [
@@ -442,25 +425,23 @@
 							{
 								"nome": "Preventivo consensi",
 								"tpl": "tpl_preventivo_MP5_step1.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Preventivo beni e garanzie",
 								"tpl": "tpl_preventivo_MP5_step2.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Preventivo riepilogo",
 								"tpl": "tpl_preventivo_MP5_step3.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Preventivo esito",
 								"tpl": "tpl_preventivo_MP5_step4.php",
-								"html":"vr"
+								"html": "vr"
 							}
-
-
 						]
 					},
 					{
@@ -469,25 +450,23 @@
 							{
 								"nome": "Riepilogo/pagamento",
 								"tpl": "tpl_acquisto_MP5_riepilogo.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Pagamento ok",
 								"tpl": "tpl_acquisto_MP5_pagamento_ok.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Pagamento ko",
 								"tpl": "tpl_acquisto_MP5_pagamento_ko.php",
-								"html":"vr"
+								"html": "vr"
 							},
 							{
 								"nome": "Preventivo esito",
 								"tpl": "tpl_acquisto_esito.php",
-								"html":"vr"
+								"html": "vr"
 							}
-
-
 						]
 					}
 				]
@@ -532,7 +511,7 @@
 			},
 			{
 				"nome": "Book trading",
-				"tpl":"tpl_trading_apribook.php"
+				"tpl": "tpl_trading_apribook.php"
 			}
 		]
 	}
