@@ -16,7 +16,7 @@
         color: $greenLink;
       }
       .card-header-icon {
-        @extend [class*=" icon-"];
+        @extend [class*=" icon-"] !optional;
         @extend .icon-arrow_up;
         color: $greenLink;
         border: solid 2px $greenLink;
