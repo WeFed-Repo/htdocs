@@ -48,7 +48,7 @@ var openFundModal = function(fundname,isin) {
 			openFundModal(
 				$(this).attr("data-fundname"),
 				$(this).attr("data-isin")
-			);
+			)
 		})
 	});
 </script>
@@ -163,7 +163,37 @@ var openFundModal = function(fundname,isin) {
 											        		<!-- Nome o ISIN -->
 											        		<label class="control-label">Nome o ISIN</label>
 											        		<input type="text" id="nomeisin" class="form-control clear-x" />
-											        		<!-- Fine nome o ISIN -->
+											        		<script type="text/javascript">
+															var cacheAC = {};
+															$(function(){
+																$("#nomeisin").autoComplete([], {
+																"minLength": 3,
+																"filter": function(request, response) {
+																	var term = request.term;
+																	if (term in cacheAC) {
+																		response(cacheAC[term]);
+																		return;
+																	}
+																	$.getJSON("/librerie/include/commons/ajax/fes/fdaAutoCom.php", request, function(data) {
+																		data = $.map(data.data, function(item) {
+																			return { "label": item.nome, "value": item.isin };
+																		});
+																		cacheAC[term] = data;
+																		response(data);
+																	});
+																},
+																"selectable": false,
+																"clearable": true,
+																"renderItem": stylingResults
+															});
+
+
+
+															})
+															
+															
+															</script>
+															<!-- Fine nome o ISIN -->
 											        	</div>
 											        	<div class="col-sm-6">
 											        		<!-- Tipologia di fondo -->
