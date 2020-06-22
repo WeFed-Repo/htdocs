@@ -1155,7 +1155,8 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
           width: 48%; }
     .bootstrap-table table tbody tr, .bootstrap-table .table tbody tr {
       background-color: #FFFFFF;
-      border-top: solid 1px #EEEEEE; }
+      border: none;
+      border-bottom: solid 1px #EEEEEE; }
       .bootstrap-table table tbody tr td, .bootstrap-table .table tbody tr td {
         color: #666666;
         min-height: 60px;

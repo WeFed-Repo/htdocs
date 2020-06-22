@@ -69,7 +69,8 @@
     }
     tbody tr {
       background-color: $white;
-      border-top: solid 1px $gray7;
+      border: none;
+      border-bottom: solid 1px $gray7;
       td {
         color: $grayMid;
         min-height: 60px;
@@ -99,7 +100,6 @@
       > tr {
         background-color: $white;
         transition: background-color 0.1s;
-        border-bottom: 1px solid $gray4 !important;
         &:nth-of-type(even) {
           background-color: $tableStriped !important;
         }
