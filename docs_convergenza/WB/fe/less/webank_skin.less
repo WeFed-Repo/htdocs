@@ -1664,13 +1664,16 @@ select.ui-datepicker-month {
     color: #000;
     font-weight: normal
 }
-
+ 
 .sliderTickmarks span {
     left: 90%;
     position: relative;
 }
 
 
+.slider-no-btn .hidden-webank + .col-xs-12.col-sm-10 {
+    width: 100%;
+}
 .bgwhite {
     background-color: #fff;
     padding: 20px 23px !important;
@@ -2292,7 +2295,30 @@ ul.ui-autocomplete.suggerimenti li.ui-menu-item.ui-state-focus a,ul.ui-autocompl
 .rapportoSliderRow .value-handler {
     font-size: 0.8em;
 }
-
+/*INTERVENTI SLIDER BANCOMATPAY */
+.slider-no-btn .hidden-webank {
+    display: none;
+}
+.slider-no-btn .inputSliderContainer {
+    background: none;
+    box-shadow: none;
+    margin-bottom:40px;
+    width: 100%;
+}
+.slider-no-btn .inputSliderShifter {
+    background: rgba(236, 236, 236, 0.2)!important;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1)!important;
+    height: 32px;
+    padding: 14px 30px;
+    margin-right: 15px;  
+}
+.slider-no-btn .cardlessSliderRow .ui-widget-header, .slider-no-btn .sliderContainer .ui-widget-header {
+    top:15px
+}
+.slider-no-btn .inputSliderShifter .ui-slider-handle {
+    top:0;
+    margin-left:-15px
+}
 /*Caricamento*/
 
 .loading {

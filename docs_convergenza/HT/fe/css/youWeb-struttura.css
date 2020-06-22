@@ -327,3 +327,25 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .marginBottomNega10 {
     margin-bottom: -10px !important
 }
+
+/* test flex */
+/*
+@media (min-width : 1024px) {
+
+	#main .wrapper {
+		display:flex;
+		flex-flow: row nowrap;
+		align-items: stretch;
+		align-content: flex-start;
+	}
+	#mainContent {
+		padding-right:30px;
+	}
+	#spalla{
+		width:300px;
+		flex-shrink: 0;
+		padding:0;
+		margin:0;
+	}
+}
+*/

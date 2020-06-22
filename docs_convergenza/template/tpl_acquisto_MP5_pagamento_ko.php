@@ -27,7 +27,7 @@
 		<div class="col-sm-12">
 			<div class="messagePanel success hidden-print bgBoxBonif bgBoxError messageFirma">
 				<div class="row">
-					<div class="col-xs-12 linHeighVert"><i class="icon iconBig icon-alert_ok"></i><h3>Il pagamento non è andato a buon fine a causa di un errore tecnico temporaneo.</h3>
+					<div class="col-xs-12 linHeighVert"><i class="icon iconBig icon-alert_caution"></i><h3>Il pagamento non è andato a buon fine a causa di un errore tecnico temporaneo.</h3>
 						<div class="row">
 							<div class="col-xs-12">
 								<p>Abbiamo salvato il preventivo nella sezione "I tuoi preventivi". Riprova ad acquistare la polizza più tardi.</p>

@@ -6,13 +6,16 @@ import Notify from 'functions/Notify'
 import BtnConsole from "./btnConsole"
 import Form from 'components/parts/Forms';
 
+import { NavLink } from 'react-router-dom';
+import {Button} from "reactstrap";
+
 import "./style.scss";
 
 // Strumenti per semplificare lo sviluppo
 import ConsoleSviluppo from "./consoleSviluppo"
 
 // Gestione degli stati e dei dati
-import {getNextState,getNextInt} from "./common/gestioneStati";
+import { getNextState, getNextInt } from "./common/gestioneStati";
 import { defaultFields, fieldsFromJson } from "./common/gestioneDati";
 
 // Importazione di tutti gli steps
@@ -31,10 +34,10 @@ import Conclusa from "./Steps/Conclusa";
 
 // Assegnazione di tutti gli step ad un unico oggetto Form
 const Step = {
-    "BOZZA" : Anagrafica,
+    "BOZZA": Anagrafica,
     "RACCOLTA_PRODOTTI": RaccoltaProdotti,
     "ADEMPIMENTI_NORMATIVI": AdempimentiNormativi,
-    "RIEPILOGO_DATI" : RiepilogoDati,
+    "RIEPILOGO_DATI": RiepilogoDati,
     "CERTIF_CREDENZIALI": CertificazioneCredenziali,
 
     "IDENTIF_CLIENTE": IdentificazioneCliente,
@@ -51,8 +54,8 @@ const Step = {
 
 let getPureStep = (form) => {
 
-    let PureStep = (form.field_stato==="BOZZA")? "BOZZA" : getNextState(form);
-    PureStep = PureStep.replace("INT0_","").replace("INT1_","");
+    let PureStep = (form.field_stato === "BOZZA") ? "BOZZA" : getNextState(form);
+    PureStep = PureStep.replace("INT0_", "").replace("INT1_", "");
     return PureStep;
 
 }
@@ -69,7 +72,7 @@ export default class extends Component {
 
             // Mette il form in caricamento
             isLoading: true,
-        
+
 
             // Modali associate alla pulsantiera
             modalEsci: false,
@@ -95,7 +98,7 @@ export default class extends Component {
         this.setObState = this.setObState.bind(this);
     }
 
-    setObState(state){
+    setObState(state) {
         this.setState(state);
     }
 
@@ -123,7 +126,7 @@ export default class extends Component {
 
                 // Calcolo del totale delle residenze FATCA
                 bdata["field_anagraficablob_intestatari_0_listresidenzefiscale_length"] = Object.keys(data.results.anagraficaBlob.intestatari["0"]["listResidenzeFiscale"]).length;
-                bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = (typeof data.results.anagraficaBlob.intestatari["1"] !="undefined")? Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length : 0;
+                bdata["field_anagraficablob_intestatari_1_listresidenzefiscale_length"] = (typeof data.results.anagraficaBlob.intestatari["1"] != "undefined") ? Object.keys(data.results.anagraficaBlob.intestatari["1"]["listResidenzeFiscale"]).length : 0;
 
                 tthis.setState(bdata);
                 tthis.setState({ isLoading: false });
@@ -138,9 +141,9 @@ export default class extends Component {
         if (flagvalidazione) {
 
             let errori = {};
-                
+
             // Check campi obbligatori (la funzione viene raccolta parametricamente)
-            if (this.state.svi_obbligatori) { 
+            if (this.state.svi_obbligatori) {
                 errori = Object.assign(errori, Step[getPureStep(this.state)].validazione(this.state))
             }
 
@@ -154,9 +157,9 @@ export default class extends Component {
                 Notify.error("La pratica presenta degli errori. Occorre correggerli per proseguire.");
             }
             else {
-                
+
                 // Se lo step è l'anagrafica ed il conto ha 2 intestatari occorre mostrare la modale di selezione dell'intestatario
-                if (this.state.field_stato==="BOZZA" && this.state.field_numintestatari==="2" && (this.state.field_ordineintestatari==="" || this.state.field_ordineintestatari==="0")){
+                if (this.state.field_stato === "BOZZA" && this.state.field_numintestatari === "2" && (this.state.field_ordineintestatari === "" || this.state.field_ordineintestatari === "0")) {
                     this.setState({
                         modalProsegui: true
                     });
@@ -166,7 +169,7 @@ export default class extends Component {
                     // Se non ci sono errori, chiama il BE per appenderne eventuali altri
                     getData({
                         url: Step[getPureStep(this.state)].salva.url,
-                        data: Step[getPureStep(this.state)].salva.data(this.state,true),
+                        data: Step[getPureStep(this.state)].salva.data(this.state, true),
                         success: (data) => {
                             if (this.state.svi_be && data && data.esito && data.esito.type === "E" && data.esito.code === "400") {
                                 // Raccoglie gli errori nel form
@@ -180,38 +183,44 @@ export default class extends Component {
                                 // Notifica il salvataggio e richiede il nuovo stato della pratica per proseguire
                                 Notify.success(<p>Pratica <strong>n.{this.state.field_id}</strong> salvata con successo.</p>);
 
-                                // Promuove il nuovo stato bozza effettivo (bozza validata)
-                                // In caso di 2 intestatari ne richiede la selezione per valorizzare field_intestcorrente tramite la modale, 
-                                // altrimenti cambia lo stato direttamente
-                                if (this.state.field_numintestatari === "2") {
 
-                                    this.setState({
-                                        field_stato: getNextState(this.state),
-                                        field_intestcorrente: getNextInt(this.state)
-                                    });
-                                    
-                                }
-                                else {
-                                    this.setState({
-                                        field_intestcorrente: "0",
-                                        field_stato: getNextState(this.state).replace("INT0_","").replace("INT1_","")
-                                    });
+                                // Filtro per stati "anomali che comportano la chiusura totale della pratica"
+                                if (this.state.field_stato !== "IDENTITA_NON_ACCERTATA")  {
+
+                                    // Promuove il nuovo stato bozza effettivo (bozza validata)
+                                    // In caso di 2 intestatari ne richiede la selezione per valorizzare field_intestcorrente tramite la modale, 
+                                    // altrimenti cambia lo stato direttamente
+                                    if (this.state.field_numintestatari === "2") {
+
+                                        this.setState({
+                                            field_stato: getNextState(this.state),
+                                            field_intestcorrente: getNextInt(this.state)
+                                        });
+
+                                    }
+                                    else {
+                                        this.setState({
+                                            field_intestcorrente: "0",
+                                            field_stato: getNextState(this.state).replace("INT0_", "").replace("INT1_", "")
+                                        });
+                                    }
+
                                 }
                             }
                         }
                     });
 
                 }
-                
+
 
             }
         }
         else {
             // Procedi con l'inserimento diretto as-is (il promotore sta uscendo dalla pratica e vuole solo salvare)
-            
+
             getData({
                 url: Step[getPureStep(this.state)].salva.url,
-                data: Step[getPureStep(this.state)].salva.data(this.state,false),
+                data: Step[getPureStep(this.state)].salva.data(this.state, false),
                 success: (data) => {
 
                     // Salvataggio terminato ed andato a buon fine 
@@ -248,7 +257,7 @@ export default class extends Component {
                 let domini = {};
                 if (data && data.results) {
                     Object.keys(data.results).forEach((key) => {
-                        if (key !== "ADEVER" && key !== "DISCLAIMER" && key !=="NAZIONI_ATTIVE") {
+                        if (key !== "ADEVER" && key !== "DISCLAIMER" && key !== "NAZIONI_ATTIVE") {
                             domini[key.toLowerCase()] = data.results[key].map((obj) => {
                                 return ({ "value": obj.codice, "text": obj.descrizione })
                             })
@@ -266,7 +275,7 @@ export default class extends Component {
                         else if (key === "NAZIONI_ATTIVE") {
                             // Rimappatura ADEVER (tutti come adever_..)
                             domini["nazioni_attive"] = data.results["NAZIONI_ATTIVE"].map((obj) => {
-                                return ({ "value": obj.code, "text": obj.description ,"flagTin":obj.flagTin})
+                                return ({ "value": obj.code, "text": obj.description, "flagTin": obj.flagTin })
                             })
                         }
                         else if (key === "DISCLAIMER") {
@@ -336,28 +345,48 @@ export default class extends Component {
 
             <h3>INSERIMENTO <span style={{ color: "#ccc" }}>(ID pratica: {(this.state.field_id !== "") ? this.state.field_id : "Non assegnato"})</span></h3>
             <ConsoleSviluppo obbligatori={this.state.svi_obbligatori} backend={this.state.svi_be} setObState={this.setObState}></ConsoleSviluppo>
-            <div className={"onboarding " + ((this.state.isLoading) ? "loading" : "")}>
-            {this.state.field_stato && <Stepper form={this.state}></Stepper> }
+            {this.state.field_stato && this.state.field_stato !=="IDENTITA_NON_ACCERTATA" &&
+                    <div className={"onboarding " + ((this.state.isLoading) ? "loading" : "")}>
+                        <Stepper form={this.state} />
 
-                {this.state.field_stato === "BOZZA" && <Step.BOZZA.form {...obformprops} btnConsole={this.btnConsole}></Step.BOZZA.form>}
+                        {this.state.field_stato === "BOZZA" && <Step.BOZZA.form {...obformprops} btnConsole={this.btnConsole}></Step.BOZZA.form>}
+
+                        {getNextState(this.state) === "RACCOLTA_PRODOTTI" && this.state.field_intestcorrente !== "" && <Step.RACCOLTA_PRODOTTI.form {...obformprops} btnConsole={this.btnConsole}></Step.RACCOLTA_PRODOTTI.form>}
+                        {getNextState(this.state) === "ADEMPIMENTI_NORMATIVI" && this.state.field_intestcorrente !== "" && <Step.ADEMPIMENTI_NORMATIVI.form {...obformprops} btnConsole={this.btnConsole}></Step.ADEMPIMENTI_NORMATIVI.form>}
+
+                        {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
+                        {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
+                        {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
+                        {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
+                        {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
+                        {getNextState(this.state) === "FIRMA_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_INVESTIMENTO.form>}
+                        {getNextState(this.state) === "FIRMA_VESSATORIE_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_INVESTIMENTO.form>}
+                        {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
+
+                        {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
+
+                        <BtnConsole formprops={obformprops}></BtnConsole>
+                        
+                    </div>
+            }
+            {
+                this.state.field_stato && this.state.field_stato==="IDENTITA_NON_ACCERTATA" && 
                 
-                {getNextState(this.state) === "RACCOLTA_PRODOTTI" && this.state.field_intestcorrente !== "" && <Step.RACCOLTA_PRODOTTI.form {...obformprops} btnConsole={this.btnConsole}></Step.RACCOLTA_PRODOTTI.form>}
-                {getNextState(this.state) === "ADEMPIMENTI_NORMATIVI" && this.state.field_intestcorrente !== "" && <Step.ADEMPIMENTI_NORMATIVI.form {...obformprops} btnConsole={this.btnConsole}></Step.ADEMPIMENTI_NORMATIVI.form>}
+                    <div className="onboarding">
+                        <div className="final-error">
+                            La pratica {} è stata annullata.
+                        </div>
+                        <div className="onboarding-pulsantiera">
+                            <div className="btn-console">
+                                <div className="btn-console-right">
+                                    <NavLink to="/gestionebozze"><Button>Esci</Button></NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 
-                {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
-                {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
-                {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
-                {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
-                {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
-                {getNextState(this.state) === "FIRMA_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_INVESTIMENTO.form>}
-                {getNextState(this.state) === "FIRMA_VESSATORIE_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_INVESTIMENTO.form>}
-                {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
-                
-                {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
-                
-                <BtnConsole formprops={obformprops}></BtnConsole>
-                
-            </div>
+            }
+
         </>)
     }
 }

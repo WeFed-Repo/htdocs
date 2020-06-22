@@ -152,6 +152,10 @@
 					{
 						"nome": "Stato ordini",
 						"tpl": "tpl_responsive_stato_ordini.php"
+					},
+					{
+						"nome": "Scheda titolo",
+						"tpl": "tpl_responsive_trading_scheda_titolo.php"
 					}
 				]
 			},

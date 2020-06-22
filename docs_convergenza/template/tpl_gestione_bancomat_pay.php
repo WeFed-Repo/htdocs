@@ -273,7 +273,7 @@
 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12">
-						<form name="formBancomatPay" id="formLimiti" method="post" action="/WEBWB/bancomatPay/gestisciLimiti.do">	
+						<form name="formBancomatPay" id="formLimiti" method="post" action="/WEBWB/bancomatPay/gestisciLimiti.do" class="slider-no-btn">	
 								<div class="form-group">
 									<div class="row cardlessSliderRow">
 										<div class="col-xs-12 col-sm-12">
@@ -283,7 +283,7 @@
 								 			
 							 				<div id="slider_maxP2P" class="inputSliderContainer col-xs-12 col-sm-12">
 							 					<div class="row">
-							 						<div class="col-xs-12 col-sm-2">
+							 						<div class="col-xs-12 col-sm-2 hidden-webank">
 									 					<input type="text" name="maxP2P" value="250" class="inputSliderValue">
 							 						</div>
 							 						<div class="col-xs-12 col-sm-10 vertical-center">
@@ -305,7 +305,7 @@
 				
 											<div id="slider_maxP2B" class="inputSliderContainer col-xs-12 col-sm-12">
 												<div class="row">
-							 						<div class="col-xs-12 col-sm-2">
+							 						<div class="col-xs-12 col-sm-2 hidden-webank">
 									 					<input type="text" name="maxP2B" value="1500" class="inputSliderValue">
 							 						</div>
 							 						<div class="col-xs-12 col-sm-10 vertical-center">
@@ -327,7 +327,7 @@
 				
 											<div id="slider_maxGiorn" class="inputSliderContainer col-xs-12 col-sm-12">
 												<div class="row">
-							 						<div class="col-xs-12 col-sm-2">
+							 						<div class="col-xs-12 col-sm-2 hidden-webank">
 									 					<input type="text" name="maxGiorn" value="1500" class="inputSliderValue">
 							 						</div>
 							 						<div class="col-xs-12 col-sm-10 vertical-center">
@@ -349,7 +349,7 @@
 				
 											<div id="slider_maxMensile" class="inputSliderContainer col-xs-12 col-sm-12">
 												<div class="row">
-							 						<div class="col-xs-12 col-sm-2">
+							 						<div class="col-xs-12 col-sm-2 hidden-webank">
 									 					<input type="text" name="maxMensile" value="1500" class="inputSliderValue">
 							 						</div>
 							 						<div class="col-xs-12 col-sm-10 vertical-center">
@@ -608,10 +608,11 @@ $(document).ready(function() {
 	
 	$(".inputSliderContainer").each(function(index, element) {
 		var currentSliderDomElem = $(this);
+	
 		var currentSliderObj = new InputSlider(currentSliderDomElem.attr('id'))
 		sliders[this.id] = currentSliderObj;
 		
-		currentSliderDomElem.find('.ui-slider-handle').html('<span class="value-handler">' + currentSliderDomElem.children('.inputSliderValue').val() + '</span>');
+		currentSliderDomElem.find('.ui-slider-handle').html('<span class="value-handler">' + currentSliderDomElem.find('.inputSliderValue').val() + '</span>');
 		currentSliderDomElem.closest('.cardlessSliderRow ').find('a').click(function(){
 			
 			var inputSliderValue = currentSliderDomElem.children('.inputSliderValue');

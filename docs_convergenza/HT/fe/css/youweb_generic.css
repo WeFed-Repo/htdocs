@@ -2311,10 +2311,11 @@ div.messagePanel p {
         height: 40px;
         border: 1px solid #DADEE1;
     }
+    
     .tooltip-masked.input-text {
        height: 40px;
     }
-
+    
     .ui-combobox .form-control, .ui-combobox .form-control:hover, .input-group-addon a, .btnAggiungiBeneficiario, .btnEdit {
         height: 38px;
     }
@@ -2506,7 +2507,11 @@ span.spanQuestionario {
     padding-bottom: 0px !important;
     margin-bottom: 25px;
 }
-
+@media (max-width: 1100px) {
+    .titButtonIco .btn-align-right {
+        float: left;
+    }
+}
 @media (max-width: 767px) {
     .fullScreen.modal {
         background: #fff;
@@ -4453,8 +4458,8 @@ label.select-button + span {
     font-size: 14px;
     color: #65B7A9;
     text-align: center;
-    font-weight: 500;
-    margin-bottom:0;
+    font-weight: bold;
+    margin-bottom:15px;
 }
 .box-catalogue h3 p {
     margin-bottom:0;
@@ -5939,6 +5944,7 @@ ul.ui-autocomplete {
     margin-top: 10px;
 }
 
+
 .titButtonIco.titButtonIcoWhite  {
     background-color: #fff;
 }
@@ -6537,6 +6543,9 @@ div[id*="popover"] .popover-content {
   padding: 0 20px 0 7px;
   cursor:pointer;
 }
+#spselDetail .spsel-option {
+    padding-right:0;
+}
 .spsel .spsel-option .spsel-addel {
   position: absolute;
   top: 0;
@@ -6900,6 +6909,12 @@ div.titButton.titButtonIco {
 }
 
 a.tooltip-masked-link {color:#00a592;text-decoration: underline}
+
+.has-feedback input[type="radio"] {
+    margin-top:0;
+}
+.informativa label.has-feedback { width:100%}
+
 
 /* Form_095, FINE */
 
@@ -7597,7 +7612,7 @@ div.fixed-table-scroll-outer {
     font-weight: bold;
     padding: 0 5px;
 }
-.wrapper-garanzie label {
+.wrapper-garanzie label, .det-modifica + div label {
     width: 100%;
 }
 /* PromoBox investimento */
@@ -7631,3 +7646,17 @@ div.fixed-table-scroll-outer {
     }
 }
 
+/* BOTTONE BANCOMAT PAY*/
+@media (min-width: 768px) {
+.position-wrapper-btn {position: relative;}
+.position-wrapper-btn .btn-align-right{
+    position: absolute;
+    right: 0;
+    bottom:23px;
+}
+}
+@media (max-width: 767px) {
+    .position-wrapper-btn .btn-align-right {
+       text-align:center
+    }
+}

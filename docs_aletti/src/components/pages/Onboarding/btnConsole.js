@@ -5,6 +5,10 @@ import {getNextState,getPrevState, getPrevInt} from "./common/gestioneStati";
 
 export default class extends Component {
 
+    state= {
+        modalAnnullamento: false
+    }
+
     render() {
 
         let formprops = this.props.formprops,
@@ -43,6 +47,7 @@ export default class extends Component {
                         </>
                         }
                         {
+                            // MIFID (STATO RACCOLTA PRODOTTI)
                             formfields.field_sessionfirmeblob_depositoincluso==="true" &&
                             formfields.field_stato === "BOZZA_VALIDATA" &&
                             formfields.field_sessionfirmeblob_idmifid === "" &&
@@ -77,7 +82,44 @@ export default class extends Component {
                                         </div>
                                     </ModalBody>
                                 </Modal>
-                                <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
+                                {
+                                    // Bottone per "uscite con annullamento da identificazione"
+                                    (getNextState(formfields)==="IDENTIF_CLIENTE" && (
+                                        formfields["field_sessionfirmeblob_intestatarifirme_"+formfields["field_intestcorrente"]+ "_identitaaccertata"] === "false"
+                                    )) ? 
+                                    <>
+                                    <Modal isOpen={this.state.modalAnnullamento}>
+                                        <ModalHeader>Conferma abbandono pratica</ModalHeader>
+                                        <ModalBody>
+                                            <p>Procedendo senza l'identificazione la pratica verrà annullata.<br />
+                                            Proseguire?</p>
+                                            <div className="btn-console">
+                                                <div className="btn-console-left">
+                                                    <Button color="secondary" onClick={() => {this.setState({
+                                                           modalAnnullamento: false
+                                                        });
+                                                    }}>Annulla</Button>
+                                                </div>
+                                                <div className="btn-console-right">
+                                                    <Button color="primary" onClick={() => {
+                                                        formprops.setObState({
+                                                            field_stato: "IDENTITA_NON_ACCERTATA"
+                                                        });
+                                                        this.setState({modalAnnullamento: false})
+                                                        formprops.obsave(true);
+                                                    }}>Conferma</Button>
+                                                </div>
+                                            </div>
+                                        </ModalBody>
+                                    </Modal>
+                                    <Button color="primary" onClick={() => this.setState({modalAnnullamento:true})}>{proseguiTxt}</Button>
+
+                                    </>
+                                    :
+                                    // Bottone standard
+                                    <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
+                                }
+                                
                             </>
                         }
 
