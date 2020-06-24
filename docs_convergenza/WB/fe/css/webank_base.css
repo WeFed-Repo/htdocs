@@ -138,8 +138,10 @@
 .icon.disabled {
   color: #dfdfdf;
 }
-.control-label .icon-20 {
-  line-height: 10px;
+@media (min-width: 768px) {
+  .control-label .icon-20 {
+    line-height: 10px;
+  }
 }
 /* ICONA LOADING ROTANTE */
 .icon-loading:before {

@@ -3235,6 +3235,7 @@ table .table-btn-more:hover {
 .formGenerico textarea.form-control {
   height: auto;
   resize: none;
+  min-height: 70px;
 }
 .formGenerico .form-control::-moz-placeholder {
   opacity: 1;
