@@ -51,6 +51,9 @@ strong .tooltip-inner, h4 .tooltip-inner {
 h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
     display: inline-block;
 }
+h4.txthelp.control-label {
+    display: inline;
+}
 @media (max-width:767px) {
     .note.flRight.noFloatMobile {
         span.flLeft {display:none}

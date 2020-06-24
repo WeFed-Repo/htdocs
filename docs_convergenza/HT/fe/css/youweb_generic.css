@@ -4370,6 +4370,7 @@ label.select-button + span {
     overflow: hidden;
     background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center center;
     float:left;
+    width:100%;
 }
 
 .loading * {

@@ -441,6 +441,10 @@ h4.txthelp.control-label, div.txthelp.control-label, h4.txthelp {
   display: inline-block;
 }
 
+h4.txthelp.control-label {
+  display: inline;
+}
+
 @media (max-width: 767px) {
   .note.flRight.noFloatMobile span.flLeft {
     display: none;
@@ -693,6 +697,12 @@ p.note.flRight a.btn-icon {
 }
 .formGenerico.borderFormRounded .control-label.txthelp, .formGenerico.borderFormRounded .control-label[data-toggle=tooltip] {
   width: auto;
+}
+.formGenerico.borderFormRounded .control-label .btn-icon {
+  left: 0;
+}
+.formGenerico.borderFormRounded .control-label .btn-icon i {
+  margin-left: 0 !important;
 }
 .formGenerico.borderFormRounded .marginBottomNone, .formGenerico.borderFormRounded .panel-body form:last-child, .panel-body .formGenerico.borderFormRounded form:last-child {
   margin: 0 15px;
@@ -1360,6 +1370,17 @@ input[type=checkbox] {
   }
 }
 
+table td .ui-spinner {
+  margin: 10px 0;
+  max-height: 38px;
+}
+table td .ui-spinner input {
+  max-height: 38px;
+}
+table td .ui-spinner .ui-spinner-button .icon:before {
+  color: #fff;
+}
+
 .borderFormRounded .output {
   float: none;
   width: 100%;
@@ -1756,6 +1777,26 @@ a.output {
   }
 }
 
+textarea {
+  resize: none;
+}
+
+@media (max-width: 767px) {
+  .formGenerico .form-control, .formGenerico .select-content select, .select-content .formGenerico select {
+    margin-bottom: 15px;
+  }
+  .formGenerico .form-group {
+    margin-bottom: 0;
+  }
+  .formGenerico select.form-control, .formGenerico .select-content select, .select-content .formGenerico select {
+    float: none;
+  }
+}
+@media (max-width: 1200px) {
+  textarea {
+    min-height: 80px;
+  }
+}
 table,
 .table,
 .ui-dialog .table {
@@ -4024,6 +4065,15 @@ div.pager .circle.current_page {
 .formGenerico.fundPanel.fundPanelImg .imgSoc {
   height: auto;
 }
+.formGenerico.fundPanel .imgSoc {
+  float: left;
+  width: 128px;
+  position: absolute;
+  background: #fff;
+  border: solid 1px #cacaca;
+  top: 15px;
+  left: 15px;
+}
 .formGenerico.fundPanel .icon-console {
   text-align: right;
   float: right;
@@ -4268,6 +4318,11 @@ div.pager .circle.current_page {
 
 #grafico_confronta_space {
   min-height: 300px;
+}
+
+#chartSimPacDiv {
+  width: 100%;
+  height: 300px;
 }
 
 /* OGGETTO OTP */
