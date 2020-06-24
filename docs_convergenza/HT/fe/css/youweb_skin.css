@@ -2287,6 +2287,28 @@ table .table-btn-more:hover {
   display: block;
 }
 
+#tablePersOverlay .persGroup {
+  width: 33%;
+  float: left;
+}
+#tablePersOverlay .persGroup label {
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+#tablePersOverlay .persGroup input {
+  margin-bottom: 10px;
+  float: left;
+}
+#tablePersOverlay .persGroup .selElLabel {
+  width: 80%;
+  float: left;
+}
+#tablePersOverlay .persGroup .btn-align-center {
+  clear: left;
+}
+
 /* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */
 div.pager {
   position: relative;
@@ -4561,16 +4583,14 @@ body.popup header .wrapper .btn-console {
   width: 100%;
 }
 .tempi .tempo .milestone {
-  margin: -10px 0 5px;
   position: relative;
   height: 15px;
   color: #0e977f;
   font-weight: bold;
   border-top: solid 2px #0e977f;
   text-transform: uppercase;
-  margin-left: -15px;
   font-size: 16px;
-  margin-top: 0px;
+  margin: 0 0 5px -15px;
 }
 .tempi .tempo .milestone span {
   position: absolute;
@@ -4597,21 +4617,18 @@ body.popup header .wrapper .btn-console {
   padding-left: 15px;
 }
 .tempi .tempo .contenuto .titolo {
-  border-bottom: solid 1px #eaeded;
+  border-bottom: solid 1px #e3e3e3;
   padding-bottom: 10px;
   margin-bottom: 10px;
   margin-left: -15px;
 }
-.tempi .tempo *[class^=col-] {
-  border-left: solid 1px #eaeded;
-}
-.tempi .tempo *[class^=col-]:first-child {
-  border-left: 0;
-}
 .tempi .tempo:last-child {
   padding-bottom: 0;
 }
-.tempi .tempo:last-child .tempi .tempo *[class^=col-]:first-child {
+.tempi .tempo *[class^=col-] {
+  border-left: solid 1px #e3e3e3;
+}
+.tempi .tempo *[class^=col-]:first-child {
   border-left: 0;
 }
 .tempi .intestazioni {
@@ -4628,12 +4645,55 @@ body.popup header .wrapper .btn-console {
   font-weight: normal;
 }
 .tempi .intestazioni *[class^=col-] {
-  border-left: solid 1px #eaeded;
+  border-left: solid 1px #e3e3e3;
 }
 .tempi .intestazioni *[class^=col-]:first-child {
   border-left: 0;
 }
 
+/* Tempistiche versione "orizzontale" */
+@media (min-width: 768px) {
+  .tempi.tempi2 .tempo {
+    width: 50%;
+  }
+  .tempi.tempi3 .tempo {
+    width: 33.333%;
+  }
+  .tempi.tempi4 .tempo {
+    width: 25%;
+  }
+  .tempi.tempi5 .tempo {
+    width: 20%;
+  }
+  .tempi.tempi6 .tempo {
+    width: 16.666%;
+  }
+  .tempi.tempi7 .tempo {
+    width: 14.285%;
+  }
+  .tempi.tempi2 .tempo, .tempi.tempi3 .tempo, .tempi.tempi4 .tempo, .tempi.tempi5 .tempo, .tempi.tempi6 .tempo, .tempi.tempi7 .tempo {
+    border-left: 0 none;
+  }
+  .tempi.tempi2 .tempo .milestone span, .tempi.tempi3 .tempo .milestone span, .tempi.tempi4 .tempo .milestone span, .tempi.tempi5 .tempo .milestone span, .tempi.tempi6 .tempo .milestone span, .tempi.tempi7 .tempo .milestone span {
+    left: 9px;
+  }
+  .tempi.tempi2 .tempo .milestone .dot, .tempi.tempi3 .tempo .milestone .dot, .tempi.tempi4 .tempo .milestone .dot, .tempi.tempi5 .tempo .milestone .dot, .tempi.tempi6 .tempo .milestone .dot, .tempi.tempi7 .tempo .milestone .dot {
+    display: none;
+  }
+  .tempi.tempi2 .tempo:first-child .milestone .dot, .tempi.tempi3 .tempo:first-child .milestone .dot, .tempi.tempi4 .tempo:first-child .milestone .dot, .tempi.tempi5 .tempo:first-child .milestone .dot, .tempi.tempi6 .tempo:first-child .milestone .dot, .tempi.tempi7 .tempo:first-child .milestone .dot {
+    display: block;
+    left: -5px;
+  }
+}
+@media (max-width: 767px) {
+  .tempi .tempo .milestone span {
+    background-color: #fbfbfb;
+  }
+
+  .panel .tempi .tempo .milestone span {
+    background-color: #fff;
+  }
+}
 .text-accordion {
   display: block;
   margin-bottom: 15px;
