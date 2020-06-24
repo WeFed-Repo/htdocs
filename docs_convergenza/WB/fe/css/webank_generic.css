@@ -276,6 +276,11 @@ object,
 .paddMedium {
   padding: 20px;
 }
+@media (max-width: 767px) {
+  .form-group {
+    margin-bottom: 0;
+  }
+}
 /***********Spaziature per gestire Imposta Alert *************/
 .padTop17 {
   padding-top: 17px;
@@ -5986,6 +5991,17 @@ table tr td.td-fondo .fundName {
 }
 .selettore-rapporto .form-group {
   margin-bottom: 0;
+}
+/* Elementi trading/investimenti in porting */
+#filterSwitch {
+  margin-bottom: 20px;
+}
+/* Stili per autocomplete in overlay */
+.ui-front {
+  position: relative;
+}
+.ui-front .ui-autocomplete {
+  position: absolute;
 }
 /* Classi aggiuntive per la griglia */
 .col-sep {

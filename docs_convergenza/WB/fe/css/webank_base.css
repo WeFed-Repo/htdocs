@@ -166,6 +166,10 @@
   :not(.ui-spinner) .icon {
     font-size: 32px;
   }
+  .btn .icon {
+    font-size: 20px;
+    vertical-align: middle;
+  }
   .icon.icon-4x {
     font-size: 64px;
   }
@@ -2640,7 +2644,7 @@ a.btn:active {
 }
 .btn .icon-text {
   position: relative;
-  top: -5px;
+  top: -3px;
   padding-left: 5px;
 }
 .btn.btn-large {

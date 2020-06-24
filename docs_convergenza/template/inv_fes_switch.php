@@ -147,14 +147,14 @@ var openFundModal = function(fundname,isin) {
 										<!-- Filtra risultati -->
 										<section id="filterForm">
 											<div class="btn-align-left" id="filterSwitch">
-												<a type="button" class="btn btn-primary" title="filtra i risultati"><i class="icon icon-filtra_filled"></i><span class="icon-text">Filtra risultati</span></a>
+												<a type="button" class="btn btn-primary" title="filtra i risultati"><i class="icon icon-filter"></i><span class="icon-text">Filtra risultati</span></a>
 												<a type="button" class="btn btn-primary" title="nascondi i filtri" style="display:none"><i class="icon icon-close"></i><span class="icon-text">Nascondi filtri</span></a>
 										    </div>
 										    <br class="clear">
 											<!-- Fine filtro risultati -->
 											
 											<!-- Blocco dei filtri -->
-											<div id="filterFormFilters" class="formGenerico" style="display:none">
+											<div id="filterFormFilters" class="formGenerico ui-front" style="display:none">
 												<br class="clear">
 												<!-- Form dei filtri -->
 												 <div class="form-group">
@@ -162,7 +162,7 @@ var openFundModal = function(fundname,isin) {
 											        	<div class="col-sm-6">
 											        		<!-- Nome o ISIN -->
 											        		<label class="control-label">Nome o ISIN</label>
-											        		<input type="text" id="nomeisin" class="form-control clear-x" />
+															<input type="text" id="nomeisin" class="form-control clear-x" />
 											        		<script type="text/javascript">
 															var cacheAC = {};
 															$(function(){
