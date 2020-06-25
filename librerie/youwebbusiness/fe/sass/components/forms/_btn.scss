@@ -245,4 +245,34 @@
       text-overflow: ellipsis;
     }
   }
+  &.plus-minus {
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: $greenLink solid 1px;
+    color: $greenLink;
+    position: relative;
+    &:before {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      display: inline-block;
+      line-height: 0;
+      content: '\002B';
+      color: $greenLink;
+      font-weight: bold;
+    }
+    &.is-active {
+      border: $gray2 solid 1px;
+      color: $gray2;
+      &:before {
+        content: '\2013';
+        color: $gray2;
+      } 
+    }
+  }
 }

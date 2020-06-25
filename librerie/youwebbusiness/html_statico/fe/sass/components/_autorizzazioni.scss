@@ -5,7 +5,7 @@
             .card-header {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: nowrap; 
+                flex-wrap: nowrap;
                 justify-content: space-between;
                 align-items: center;
                 height: 100px;
@@ -36,25 +36,27 @@
                     flex-shrink: 0;
                     border: $gray2 solid 1px;
                     &, &:before {
-                        border-color: $gray2 !important;
-                        color: $gray2 !important;
+                      border-color: $gray2 !important;
+                      color: $gray2 !important;
+                      transform: translate(0,2px);
                     }
                 }
                 &.collapsed {
-                    .card-header-icon { 
+                    .card-header-icon {
                         border: $greenLink solid 1px;
                         &, &:before {
-                            border-color: $greenLink !important;
-                            color: $greenLink !important;
+                          border-color: $greenLink !important;
+                          color: $greenLink !important;
+                          transform: translate(0,2px);
                         }
-                    }     
+                    }
                 }
             }
             .card-body {
                 padding: $spacer/2 $spacer/3 $spacer $spacer/3 ;
                 //padding: 0 $spacer/3 $spacer $spacer/3;
                 //transform: translate(0px, -#{$spacer/2});
-                .c-treeview { 
+                .c-treeview {
                     transition: opacity 0.3s;
                     //opacity: 0;
                 }
@@ -64,21 +66,21 @@
                 }
         }
             //.card-body { padding-top: 0; }
-            //&.is--empty { border-top: $gray2 1px solid; }  
+            //&.is--empty { border-top: $gray2 1px solid; }
             &.is--partial {
-                border-top: $orange 3px solid; // orange or warning??? 
+                border-top: $orange 3px solid; // orange or warning???
                 margin-top:0;
                 .count {
-                    color: $orange; // orange or warning??? 
+                    color: $orange; // orange or warning???
                 }
-            }  
+            }
             &.is--full {
                 border-top: $greenLink 3px solid;
                 margin-top:0;
                 .count {
                     color: $greenLink;
                 }
-            } 
+            }
         }
     }
     &--row {
@@ -96,5 +98,5 @@
         @media (max-width:$bp_lg_max) {
             width:100%;
         }
-    } 
+    }
 }
