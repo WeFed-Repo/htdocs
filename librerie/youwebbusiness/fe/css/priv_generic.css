@@ -416,7 +416,7 @@ img.icon {
 .icon-arrow_down:before, .accordion .card .card-header.collapsed .card-header-icon:before, .accordion .acc-item .card-header.collapsed .card-header-icon:before {
   content: "\e913"; }
 
-.icon-arrow_up:before, .accordion .card .card-header .card-header-icon:before, .accordion .acc-item .card-header .card-header-icon:before {
+.icon-arrow_up:before {
   content: "\e914"; }
 
 .icon-arrow_left:before {
@@ -964,6 +964,17 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
       font-weight: bold;
       color: #2F9988; }
     .accordion .card .card-header .card-header-icon, .accordion .acc-item .card-header .card-header-icon {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       color: #2F9988;
       border: solid 2px #2F9988;
       display: block;
@@ -976,6 +987,17 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
         display: block;
         font-size: 14px; }
       .accordion .card .card-header .card-header-icon.plus-minus:before, .accordion .acc-item .card-header .card-header-icon.plus-minus:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         content: '\2013';
         font-size: 22px;
         font-weight: bold;
@@ -1176,8 +1198,7 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
               min-width: 100px; } }
   .bootstrap-table .table-striped > tbody > tr {
     background-color: #FFFFFF;
-    transition: background-color 0.1s;
-    border-bottom: 1px solid #DDDDDD !important; }
+    transition: background-color 0.1s; }
     .bootstrap-table .table-striped > tbody > tr:nth-of-type(even) {
       background-color: #fafafa !important; }
     .bootstrap-table .table-striped > tbody > tr:nth-of-type(odd) {
@@ -1190,9 +1211,9 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
   .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+3), .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+4) {
     background-color: #fafafa !important; }
   .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+2), .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+4) {
-    border-top: none !important; }
+    border-bottom: solid 1px #EEEEEE !important; }
   .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+1), .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+3) {
-    border-bottom: none !important; }
+    border-top: none !important; }
   .bootstrap-table .table-show-hidden tbody th.hidden, .bootstrap-table .table-show-hidden tbody td.hidden, .bootstrap-table .table-show-hidden thead th.hidden, .bootstrap-table .table-show-hidden thead td.hidden {
     display: table-cell; }
 
@@ -2733,6 +2754,32 @@ ul.pagination {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
+  .ico-btn.plus-minus {
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: #2F9988 solid 1px;
+    color: #2F9988;
+    position: relative; }
+    .ico-btn.plus-minus:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      line-height: 0;
+      content: '\002B';
+      color: #2F9988;
+      font-weight: bold; }
+    .ico-btn.plus-minus.is-active {
+      border: #737373 solid 1px;
+      color: #737373; }
+      .ico-btn.plus-minus.is-active:before {
+        content: '\2013';
+        color: #737373; }
 
 /* Elementi form */
 .control-label {
@@ -4226,12 +4273,14 @@ svg#MappaInterattiva {
       border: #737373 solid 1px; }
       .c-autorizzazioni .accordion.bordered-style .card .card-header .card-header-icon, .c-autorizzazioni .accordion.bordered-style .card .card-header .card-header-icon:before {
         border-color: #737373 !important;
-        color: #737373 !important; }
+        color: #737373 !important;
+        transform: translate(0, 2px); }
     .c-autorizzazioni .accordion.bordered-style .card .card-header.collapsed .card-header-icon {
       border: #2F9988 solid 1px; }
       .c-autorizzazioni .accordion.bordered-style .card .card-header.collapsed .card-header-icon, .c-autorizzazioni .accordion.bordered-style .card .card-header.collapsed .card-header-icon:before {
         border-color: #2F9988 !important;
-        color: #2F9988 !important; }
+        color: #2F9988 !important;
+        transform: translate(0, 2px); }
   .c-autorizzazioni .accordion.bordered-style .card .card-body {
     padding: 0.5rem 0.3333333333rem 1rem 0.3333333333rem; }
     .c-autorizzazioni .accordion.bordered-style .card .card-body .c-treeview {

@@ -125,11 +125,11 @@
           }
           &:nth-of-type(4n+2),
           &:nth-of-type(4n+4) {
-            border-top: none !important;
+            border-bottom: solid 1px $gray7 !important;
           }
           &:nth-of-type(4n+1),
           &:nth-of-type(4n+3) {
-            border-bottom: none !important;
+            border-top: none !important;
           }
         }
       }
