@@ -1326,7 +1326,7 @@ function fesConfShow(getData)
 	}
 	else
 	{
-		fesConfCont.removeClass("loading").empty().append("<section><div class='row'><div class='col-sm-7 col-xs-12'><p><strong>Non hai selezionato alcun fondo o sicav per il confronto!</strong></p><p>In questa pagina puoi <strong>confrontare due fondi</strong> o <strong>sicav</strong> tra loro. Seleziona i fondi che vuoi confrontare dalla pagina di &quot;<a href=\"javascript:;\" id=\"switchFondo\">ricerca</a>&quot; </strong></p><p>Puoi anche selezionare un singolo fondo e confrontarlo con il <strong>migliore</strong> della sua <strong>categoria</strong>.</p></div><div class='col-sm-5 col-xs-12'><img src='/fe/img/fes_confronta_mockup_table.png' class='img100'/></div></div></section>");
+		fesConfCont.removeClass("loading").empty().append("<section><div class='row'><div class='col-sm-7 col-xs-12'><p><strong>Non hai selezionato alcun fondo o sicav per il confronto!</strong></p><p>In questa pagina puoi <strong>confrontare due fondi</strong> o <strong>sicav</strong> tra loro. Seleziona i fondi che vuoi confrontare dalla pagina di &quot;<a href=\"javascript:;\" id=\"switchFondo\">ricerca</a>&quot; </strong></p><p>Puoi anche selezionare un singolo fondo e confrontarlo con il <strong>migliore</strong> della sua <strong>categoria</strong>.</p></div><div class='col-sm-5 col-xs-12'><img src='"+ ( feBank==="webank"? "/WB": "/HT") +"/fe/img/fes_confronta_mockup_table.png' class='img100'/></div></div></section>");
 		$('#switchFondo').click(function(){$('#tabConfronta').removeClass('active');$('#tabRicerca').addClass('active');$("#fesRicercaCont").show();$('#fesConfrontaCont').hide()});
 	}
 	
