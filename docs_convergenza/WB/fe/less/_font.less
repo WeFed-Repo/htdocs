@@ -135,7 +135,7 @@
     &.icon-20 {
         font-size: 20px;
     }
-
+    
     &.icon-rotate-90, &.icon-rotate-180, &.icon-rotate-270 {
         display: inline-block;
     }
@@ -156,7 +156,11 @@
         color: @bgColorBtnDis;
     }
 }
-
+@media (min-width: 768px) {
+.control-label .icon-20 { 
+    line-height: 10px;
+}
+}
 /* ICONA LOADING ROTANTE */
 .icon-loading:before {
     -webkit-animation: spin 2s infinite linear;
@@ -185,6 +189,12 @@
     :not(.ui-spinner) .icon {
         font-size: 32px;
     }
+    
+    .btn .icon {
+        font-size:20px;
+        vertical-align:middle;
+    }
+
     .icon.icon-4x {
         font-size: 64px;
     }

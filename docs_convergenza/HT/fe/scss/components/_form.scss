@@ -22,10 +22,16 @@
         margin-bottom: 20px;
       }
     }
-    .control-label {display: inline-block;width:100%;
+    .control-label {display: inline-block; width:100%;
       &.txthelp, &[data-toggle=tooltip] {
         width: auto;
       }
+    .btn-icon{
+      left:0;
+      i {
+        margin-left:0!important
+      }
+    }
     }
     .marginBottomNone {
       margin: 0 15px;
@@ -553,7 +559,7 @@ input[type=checkbox] {
   .icon {
     position: absolute;
     right:15px;
-    top:7px;
+    top:14px;
   }
 
 }
@@ -681,7 +687,16 @@ input[type=checkbox] {
     }
   }
 }
-
+table td .ui-spinner {
+  margin: 10px 0;
+  max-height: 38px;
+  input {
+    max-height: 38px;
+  }
+  .ui-spinner-button .icon:before{
+    color:#fff;
+  }
+}
 .borderFormRounded .output {
     float: none;
     width:100%;
@@ -1028,6 +1043,24 @@ a.output {color: $primary;text-decoration:underline}
         text-align:right;
         margin-bottom:15px;
         }
-    }    
+    }  
+    
+  }
+}
+textarea{
+  resize: none;
+}
+@media (max-width:767px) {
+  .formGenerico {
+    .form-control{ margin-bottom:15px }
+    .form-group {margin-bottom:0}
+    select.form-control {float:none}
+    
+  }
+  
+}
+@media (max-width:1200px) {
+  textarea {
+    min-height: 80px;
   }
 }

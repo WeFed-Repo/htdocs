@@ -124,7 +124,7 @@ function loadOrd(i) {
   		return;
   	}
   		
-  	//una tabella non può essere ordinabile se contenuta in un div con classe nosort
+  	//una tabella non puo' essere ordinabile se contenuta in un div con classe nosort
   	var nosort = $(i).parents("div").hasClass("nosort");
   	if(nosort){
   	  return;

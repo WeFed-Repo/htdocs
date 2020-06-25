@@ -161,7 +161,6 @@
 			},
 			{
 				"nome": "Mercati e quotazioni",
-				
 				"voices": [
 					{
 						"nome": "Azioni",
@@ -171,7 +170,7 @@
 								"tpl": "tpl_responsive_overview.php"
 							}
 						]
-					},					
+					},
 					{
 						"nome": "Certificates",
 						"voices": [
@@ -214,7 +213,6 @@
 								"inlavorazione": true,
 								"tpl": "tpl_inv_portafoglio_titoli_fondi.php"
 							},
-
 							{
 								"nome": "Ordini e Movimenti",
 								"html": "mi",
@@ -227,7 +225,6 @@
 								"inlavorazione": true,
 								"tpl": "tpl_inv_portafoglio_simulato.php"
 							}
-
 						]
 					},
 					{

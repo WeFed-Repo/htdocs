@@ -1039,6 +1039,15 @@
             .trend {text-align:center;}
             .imgSoc {height:auto;}
         }
+        .imgSoc {
+            float: left;
+            width: 128px;
+            position: absolute;
+            background: #fff;
+            border: solid 1px #cacaca;
+            top: 15px;
+            left: 15px;
+        }
         .icon-console {
             text-align:right;
             float:right;
@@ -1046,6 +1055,7 @@
         }
         .btn-console {float:right}
   }
+
   @media (max-width: 767px){
     .formGenerico.fundPanel
     {
@@ -1222,7 +1232,10 @@
 #grafico_confronta_space {
     min-height:300px;
 }
-
+#chartSimPacDiv {
+    width: 100%;
+    height: 300px;
+}
 /* OGGETTO OTP */
 .otpdesc {
     img {

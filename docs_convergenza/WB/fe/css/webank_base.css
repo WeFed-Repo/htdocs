@@ -138,6 +138,11 @@
 .icon.disabled {
   color: #dfdfdf;
 }
+@media (min-width: 768px) {
+  .control-label .icon-20 {
+    line-height: 10px;
+  }
+}
 /* ICONA LOADING ROTANTE */
 .icon-loading:before {
   -webkit-animation: spin 2s infinite linear;
@@ -162,6 +167,10 @@
 @media screen and (max-width: 1023px) {
   :not(.ui-spinner) .icon {
     font-size: 32px;
+  }
+  .btn .icon {
+    font-size: 20px;
+    vertical-align: middle;
   }
   .icon.icon-4x {
     font-size: 64px;
@@ -2637,7 +2646,7 @@ a.btn:active {
 }
 .btn .icon-text {
   position: relative;
-  top: -5px;
+  top: -3px;
   padding-left: 5px;
 }
 .btn.btn-large {

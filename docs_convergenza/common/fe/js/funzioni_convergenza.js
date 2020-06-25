@@ -4541,7 +4541,9 @@ $.fn.spSel = function (callback, clickfunction) {
 
     // Funzione di default al click sull'elemento portante della "select" (apertura tendina)
     var defaultCf = function () {
-        $(this).parents(".spsel").toggleClass("opened");
+        var sps = $(this).parents(".spsel");
+        $(".spsel").not(sps).removeClass("opened");
+        sps.toggleClass("opened");
     };
 
     var spCf = (clickfunction) ? clickfunction : defaultCf;

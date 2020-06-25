@@ -412,3 +412,25 @@ table .table-btn-more {
   overflow: auto;
   display: block;
 }
+
+#tablePersOverlay .persGroup {
+  width: 33%;
+  float: left;
+  label {
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  input {
+    margin-bottom:10px;
+    float: left;
+  }
+  .selElLabel {
+    width: 80%;
+    float: left;
+  }
+  .btn-align-center {
+    clear:left;
+  }
+}
