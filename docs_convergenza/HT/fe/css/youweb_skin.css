@@ -1194,6 +1194,8 @@ input[type=checkbox] {
 }
 #selContFesCategoria .btnConsole {
   margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
 }
 #selContFesCategoria .btnConsole .btn-align-right {
   float: right;
@@ -1233,6 +1235,76 @@ input[type=checkbox] {
   margin-top: 8px;
 }
 
+/* Filtri geografici (solo desktop) */
+@media (min-width: 768px) {
+  #selContCodArea {
+    width: 640px;
+    margin: 0 auto;
+    height: 371px;
+    background: #fff url("/HT/fe/img/fes_world_map.png") no-repeat center center;
+    margin-bottom: 25px;
+  }
+  #selContCodArea .selEl {
+    background: rgba(255, 255, 255, 0.5);
+    width: auto;
+    height: 24px;
+    padding: 5px 5px 3px 23px;
+    border: solid 1px #fff;
+    border-radius: 3px;
+    position: absolute;
+  }
+  #selContCodArea .selEl input {
+    top: 2px;
+    left: 3px;
+  }
+  #selContCodArea .selEl#id14 {
+    top: 166px;
+    left: 518px;
+  }
+  #selContCodArea .selEl#id25 {
+    top: 153px;
+    left: 100px;
+  }
+  #selContCodArea .selEl#id60 {
+    top: 120px;
+    left: 336px;
+  }
+  #selContCodArea .selEl#id61 {
+    top: 213px;
+    left: 299px;
+  }
+  #selContCodArea .selEl#id67 {
+    top: 270px;
+    left: 98px;
+  }
+  #selContCodArea .selEl#id68 {
+    top: 90px;
+    left: 505px;
+  }
+  #selContCodArea .selEl#id75 {
+    top: 150px;
+    left: 270px;
+  }
+  #selContCodArea .selEl#id81 {
+    top: 360px;
+    left: 410px;
+  }
+  #selContCodArea .selEl#id130 {
+    top: 181px;
+    left: 314px;
+  }
+  #selContCodArea .selEl#id347 {
+    top: 254px;
+    left: 410px;
+  }
+  #selContCodArea .selEl#id348 {
+    top: 150px;
+    left: 366px;
+  }
+  #selContCodArea .selEl#id-1 {
+    top: 360px;
+  }
+}
 #filtriAvanzatiSwitch {
   width: 100%;
   position: relative;
@@ -2307,6 +2379,16 @@ table .table-btn-more:hover {
 }
 #tablePersOverlay .persGroup .btn-align-center {
   clear: left;
+}
+
+/* Tabella "speciale" per ricerca fondi */
+#fesSearchTable th.sort {
+  padding-left: 0 !important;
+}
+#fesSearchTable th.sort a {
+  padding-left: 15px !important;
+  min-height: 20px;
+  display: inline-block;
 }
 
 /* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */

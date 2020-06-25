@@ -434,3 +434,16 @@ table .table-btn-more {
     clear:left;
   }
 }
+
+/* Tabella "speciale" per ricerca fondi */
+#fesSearchTable {
+  th.sort {
+     padding-left:0 !important;
+     a {
+      padding-left:15px !important;
+      min-height:20px;
+      display:inline-block;
+     }
+   }
+  
+}

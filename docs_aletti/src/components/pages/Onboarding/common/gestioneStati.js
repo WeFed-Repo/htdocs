@@ -1,7 +1,7 @@
 const stati = {
     "iniziali": [
-        "BOZZA",
-        "BOZZA_VALIDATA",
+        "BOZZA", // Salvataggio backend
+        "BOZZA_VALIDATA", // Salvataggio backend
         "RACCOLTA_PRODOTTI",
         "ADEMPIMENTI_NORMATIVI"],
     "int0" :[
@@ -12,7 +12,7 @@ const stati = {
         "INT0_FIRMA_VESSATORIE",
         "INT0_FIRMA_INVESTIMENTO",
         "INT0_FIRMA_VESSATORIE_INVESTIMENTO",
-        "INT0_FIRMA_CONSULENTE"
+        "INT0_FIRMA_CONSULENTE" // Salvataggio backend
     ],
     "int1": [
         "INT1_RIEPILOGO_DATI",
@@ -22,9 +22,9 @@ const stati = {
         "INT1_FIRMA_VESSATORIE",
         "INT1_FIRMA_INVESTIMENTO",
         "INT1_FIRMA_VESSATORIE_INVESTIMENTO",
-        "INT1_FIRMA_CONSULENTE"
+        "INT1_FIRMA_CONSULENTE" // Salvataggio backend
     ],
-    "finale" : ["CONCLUSA"]
+    "finale" : ["CONCLUSA"] // Salvataggio backend
 }
 
 // Ritorna tutti gli stati possibili per la pratica (a seconda del numero di intestatari ecc)
