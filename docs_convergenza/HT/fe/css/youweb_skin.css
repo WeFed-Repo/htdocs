@@ -445,6 +445,11 @@ h4.txthelp.control-label {
   display: inline;
 }
 
+h4.txthelp {
+  width: auto;
+  clear: both;
+}
+
 @media (max-width: 767px) {
   .note.flRight.noFloatMobile span.flLeft {
     display: none;
