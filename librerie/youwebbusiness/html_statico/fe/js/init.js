@@ -16,7 +16,6 @@ $(function () {
     initDataFilters();
     initTooltips();
     initTreeview();
-    initControlPanel();
     imgToSvg();
 });
 
@@ -174,30 +173,6 @@ function initTreeview() {
         $(this).treeviewCountTotal();
     });
 }
-
-function initControlPanel() {
-  $('[data-write-mode]').on('click',function(e){
-    e.preventDefault();
-    $(this).closest('.bordered').addClass('is-editable');
-  });
-  $('[data-read-mode]').on('click',function(e){
-    e.preventDefault();
-    $(this).closest('.bordered.is-editable').removeClass('is-editable');
-  });
-  // Forza la selezione del radiobutton all'interno del tab attivo
-  $('.c-pannello-controllo .nav label, .c-pannello-controllo .nav input').on('click',function(e){
-    e.preventDefault();
-    var input = $(this).closest('.form-check').find('input');
-    var label = $(this).closest('.form-check').find('label');
-    var tab = $(label.attr('href'));
-    var tabs = tab.closest('.tab-content').find('.tab-pane')
-    tabs.removeClass('show active');
-    tab.addClass('show active');
-    label.closest('.nav').find('label').removeClass('active');
-    label.addClass('active');
-    input.prop('checked',true);
-  });
-};
 
 function imgToSvg(img) {
     // SVG - Conversione delle immagini in SVG in pagina

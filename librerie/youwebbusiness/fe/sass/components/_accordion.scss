@@ -16,8 +16,7 @@
         color: $greenLink;
       }
       .card-header-icon {
-        @extend [class*=" icon-"];
-        @extend .icon-arrow_up;
+        @include icon-font-family();
         color: $greenLink;
         border: solid 2px $greenLink;
         display: block;
@@ -31,6 +30,7 @@
           font-size: 14px;
         }
         &.plus-minus:before {
+          @include icon-font-family();
           content: '\2013';
           font-size: 22px;
           font-weight: bold;
