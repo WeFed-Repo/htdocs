@@ -26,13 +26,16 @@ table,
       &.oCenter { text-align: left !important; }
       &.oRight { text-align: right !important; }
       &.left {text-align: left}
-      &.right {text-align: right}
+      &.right {text-align: right!important}
       &.center {text-align: center!important}
      .btn-icon.btn-disabled {
         opacity:0.3;
         display: inline-block;
         width: 20px;
         height: 20px;
+      }
+      &.colGroup{
+        padding:0;
       }
     }
     th { 
@@ -208,6 +211,7 @@ table,
   .colGroup {
     > * {
       border-bottom: 2px solid $tableStripe !important;
+      height: 100%;
     }
   }
   &.evident tr th {
@@ -447,3 +451,4 @@ table .table-btn-more {
    }
   
 }
+

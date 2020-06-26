@@ -413,6 +413,11 @@ h4 {
   text-transform: uppercase;
 }
 
+.tithelp h4 {
+  width: 90%;
+  float: left;
+}
+
 .tab-wrap .control-label + span.output,
 .tab-wrap .control-label + .tooltip + span.output,
 .control-label-output + span.output,
@@ -594,6 +599,20 @@ h4.txthelp {
 }
 .tab-wrap .documenti .btn-icon span, .fundPanel .btn-icon span {
   padding-left: 10px;
+}
+
+.tab-wrap .documenti a.btn-icon {
+  position: relative;
+  padding-left: 30px;
+}
+.tab-wrap .documenti a.btn-icon i {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tab-wrap .documenti a.btn-icon span {
+  padding-left: 0;
+  line-height: 25px;
 }
 
 #cercaSel .btn-icon {
@@ -1410,6 +1429,7 @@ input[type=checkbox] {
   padding-right: 46px;
   text-align: center;
   margin: 0;
+  min-width: 150px;
 }
 .ui-spinner .ui-spinner-button {
   /* .icomoonfont();*/
@@ -1526,6 +1546,16 @@ a.output {
   z-index: 5;
   padding: 0;
 }
+.input-group .input-group-addon.date {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  z-index: 3;
+  border: 0;
+}
+.input-group .input-group-addon.date .icon.icon-calendar_filled {
+  margin-top: 0;
+}
 
 @media screen and (max-width: 1023px) {
   .input-group .input-group-addon.btn-icon .icon {
@@ -1560,6 +1590,10 @@ a.output {
 @media (max-width: 767px) {
   .modal-body .selector-wrap.selector-mini.only-definition .selector-box {
     width: 100%;
+  }
+
+  .input-group .input-group-addon.date {
+    top: 10px;
   }
 }
 /* Selettore solo testo ad altezza automatica */
@@ -1970,7 +2004,7 @@ table tr td.right, table tr th.right,
 .table tr th.right,
 .ui-dialog .table tr td.right,
 .ui-dialog .table tr th.right {
-  text-align: right;
+  text-align: right !important;
 }
 table tr td.center, table tr th.center,
 .table tr td.center,
@@ -1988,6 +2022,13 @@ table tr td .btn-icon.btn-disabled, table tr th .btn-icon.btn-disabled,
   display: inline-block;
   width: 20px;
   height: 20px;
+}
+table tr td.colGroup, table tr th.colGroup,
+.table tr td.colGroup,
+.table tr th.colGroup,
+.ui-dialog .table tr td.colGroup,
+.ui-dialog .table tr th.colGroup {
+  padding: 0;
 }
 table tr th,
 .table tr th,
@@ -2222,6 +2263,7 @@ table .colGroup > *,
 .table .colGroup > *,
 .ui-dialog .table .colGroup > * {
   border-bottom: 2px solid #eaeded !important;
+  height: 100%;
 }
 table.evident tr th,
 .table.evident tr th,
@@ -3058,9 +3100,10 @@ div.pager .circle.current_page {
   color: #000;
   display: block;
   font-weight: bold;
-  padding: 1px 0 0 25px;
+  padding: 5px 0 0 30px;
   position: relative;
   text-decoration: none !important;
+  cursor: pointer;
 }
 .text-accordion a.text-term .icon {
   color: #0e977f;
@@ -3175,7 +3218,15 @@ div.pager .circle.current_page {
   padding: 0 0 15px 25px;
 }
 
-.collapsed .icon-row_expand {
+.btn-icon .icon-row_expand {
+  display: none;
+}
+
+.contentCrBpm .btn-icon .icon-row_expand {
+  display: inline-block;
+}
+
+.collapsed .icon-row_expand, .collapsed .btn-icon .icon-row_expand {
   display: inline-block;
 }
 
@@ -4600,6 +4651,25 @@ div.pager .circle.current_page {
 #chartSimPacDiv {
   width: 100%;
   height: 300px;
+  margin-top: 20px;
+}
+
+.legendColumn {
+  background-color: #75c2b8;
+}
+
+.legendSimPac {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.legendLine {
+  border-radius: 50%;
+  background-color: #444444;
 }
 
 /* OGGETTO OTP */
