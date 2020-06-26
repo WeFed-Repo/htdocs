@@ -18,7 +18,7 @@
     margin-right:35px;
   }
   //margin-top:-20px;
-  ul {
+  ul:not(.azioni) {
     display:table;
     margin:0;
     padding:0;
@@ -40,6 +40,9 @@
         border-left:1px solid $grayLight2;
         padding:9px 26px;
         display: block;
+      }
+      a:hover {
+        padding:9px 26px;
       }
       &.on {
         background-color: $white;

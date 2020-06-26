@@ -1,5 +1,6 @@
-/* globals $:false, setFormGroupCell:false, setFormGroupDate:false, checkForm:false */
+/* globals $:false, setFormGroupCell:false, setFormGroupDate:false, checkForm:false,  resetElementError */
 "use strict";
+
 $(function() {
 	var numPanel = $('.accordion-group > .panel').length, mono = !numPanel, numInt = mono ? 1 : numPanel, formEl = $('#aolStep5'), formRules = {
 	    "rules" : {
@@ -32,7 +33,12 @@ $(function() {
 		formRules.rules["origineRedditoAv_int" + i] = "required";
 		formRules.rules["originePatrimonioAv_int" + i] = "required";
 		formRules.rules["redditoAnnuoAv_int" + i] = "required";
-
+		formRules.rules["patrimonioAv_int" + i] = "required";
+		formRules.rules["redditoAnnuoAv_note_int" + i] = "required";
+		formRules.rules["origineRedditoAv_note_int" + i] = "required";
+		formRules.rules["patrimonioAv_note_int" + i] = "required";
+		formRules.rules["originePatrimonioAv_note_int" + i] = "required";
+		
 		/** * MESSAGES ** */
 		formRules.messages["politicEspostaAv_int" + i] = "Seleziona";
 		formRules.messages["intestatario_int" + i] = "Seleziona";
@@ -43,6 +49,11 @@ $(function() {
 		formRules.messages["origineRedditoAv_int" + i] = "Seleziona";
 		formRules.messages["originePatrimonioAv_int" + i] = "Seleziona";
 		formRules.messages["redditoAnnuoAv_int" + i] = "Seleziona";
+		formRules.messages["patrimonioAv_int" + i] = "Seleziona";
+		formRules.messages["redditoAnnuoAv_note_int" + i] ="Compila";
+		formRules.messages["origineRedditoAv_note_int" + i] ="Compila";
+		formRules.messages["patrimonioAv_note_int" + i] ="Compila";
+		formRules.messages["originePatrimonioAv_note_int" + i] ="Compila";
 	}
 
 	if (!mono) {
@@ -72,7 +83,44 @@ $(function() {
 
 	setFormGroupCell(formEl, formValidator);
 	setFormGroupDate(formEl, formValidator);
+	
+	/** * GESTIONE CAMPI NOTE DA SELECT REDDITO E PATRIMONIO ** */
+	var selectNote = $(".select-note"),
+		fieldNote = $(".field-note"),
+		ciRegexNote = /[a-zA-Z0-9/\s\u00C0-\u00F6\u00F8-\u00FF]+/;
+	
+	//controllo immissione lettere accentate e non, numeri e spazio
+	fieldNote.on('keypress', function (event) {
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+			if (!ciRegexNote.test(key)) {
+				event.preventDefault();
+				return false;
+		}
+	});	
 
+	//controllo per abilitazione/disabilitazione campo note e suo reset - deliver
+	var ckeckValueSelected = function() {
+		selectNote.each (function(){
+			var valueSelSelected = $(this).find("option:selected").text(),
+				fieldNoteSel = $(this).closest(".row").find(".field-note");
+				if(valueSelSelected.toLowerCase().indexOf("altro") !== -1) {
+					fieldNoteSel.attr("disabled",false);
+					//formValidator.element(fieldNoteSel);
+					
+				}
+				else {
+					fieldNoteSel.attr("disabled",true).val("");
+					resetElementError(fieldNoteSel)
+				}
+		});
+	}
+	ckeckValueSelected()
+	selectNote.on("change", function() {
+		ckeckValueSelected();
+	});
+	/* GESTIONE CAMPI NOTE DA SELECT REDDITO E PATRIMONIO */
+	
+	
 	$('#btnSubmit').click(function() {
 		checkForm(formEl);
 	});
@@ -81,4 +129,6 @@ $(function() {
 	$('.persPol').click(function() {
 		$('#overlaypersPol').modal();
 	});
+
+	
 });

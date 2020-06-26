@@ -215,32 +215,91 @@ $numInt = $mono? 1 : 3;
                         </select>
                     </div>
                 </div>
-				<div class="spacer-no-border hidden-xs">&nbsp;</div>
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <label for="origineRedditoAv_int<?php echo $i; ?>">Origine del reddito*</label>
-                        <select name="origineRedditoAv_int<?php echo $i; ?>" id="origineRedditoAv_int<?php echo $i; ?>" class="form-control">
-                            <option value="">seleziona</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label for="originePatrimonioAv_int<?php echo $i; ?>" class="labelTooltip">Origine dei fondi*</label>
-						<a href="#!" data-toggle="tooltip" title="" id="ttNome" class="icoinfo" data-original-title="Per 'origine dei fondi' si intende il capitale che impieghi sul conto corrente proveniente da fonti anche diverse dal reddito di lavoro (es. rendite immobiliari)"></a>
-                        <select name="originePatrimonioAv_int<?php echo $i; ?>" id="originePatrimonioAv_int<?php echo $i; ?>" class="form-control">
-                            <option value="">seleziona</option>
-                        </select>
-                    </div>
-                </div>
-				<div class="spacer-no-border hidden-xs">&nbsp;</div>
+                <div class="spacer-no-border hidden-xs">&nbsp;</div>
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="redditoAnnuoAv_int<?php echo $i; ?>">Reddito annuo netto*</label>
-                        <select name="redditoAnnuoAv_int<?php echo $i; ?>" id="redditoAnnuoAv_int<?php echo $i; ?>" class="form-control">
+                        <select name="redditoAnnuoAv_int<?php echo $i; ?>" id="redditoAnnuoAv_int<?php echo $i; ?>" class="form-control select-note">
                             <option value="">seleziona</option>
+							<option value="1|Fino a 10.000">Fino a 10.000</option>
+							<option value="2|Da 10.001  a 25.000">Da 10.001  a 25.000</option>
+							<option value="3|Da 25.001  a 40.000">Da 25.001  a 40.000</option>
+							<option value="4|Da 40.001  a 75.000">Da 40.001  a 75.000</option>
+							<option value="5|Da 75.001  a 500.000">Da 75.001  a 500.000</option>
+							<option value="6|Da 500.001  a 2.500.000">Da 500.001  a 2.500.000</option>
+                            <option value="7|Oltre 2.500.000">Oltre 2.500.000</option>
+                            <option value="8|Privo di reddito/Altro">Privo di reddito/Altro</option>
+					    </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="redditoAnnuoAv_note_int<?php echo $i; ?>">Note (max 100 caratteri)*</label>
+                        <textarea  maxlength="100" class="form-control field-note" name="redditoAnnuoAv_note_int<?php echo $i; ?>" id="redditoAnnuoAv_note_int<?php echo $i; ?>"></textarea>
+                    </div>
+                    </div>
+                    <div class="spacer-no-border hidden-xs">&nbsp;</div>
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="origineRedditoAv_int<?php echo $i; ?>">Origine del reddito*</label>
+                        <select name="origineRedditoAv_int<?php echo $i; ?>" id="origineRedditoAv_int<?php echo $i; ?>" class="form-control select-note">
+                            <option value="">seleziona</option>
+							<option value="1|Lavoro dipendente">Lavoro dipendente</option>
+							<option value="2|Lavoro autonomo">Lavoro autonomo</option>
+							<option value="3|Rendite immobiliari">Rendite immobiliari</option>
+							<option value="4|Rendite fondiarie">Rendite fondiarie</option>
+							<option value="5|Redditi finanziari">Redditi finanziari</option>
+                            <option value="6|Pensione">Pensione</option>
+                            <option value="7|Altro">Altro</option>
                         </select>
-                    </div>                        
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="origineRedditoAv_note_int<?php echo $i; ?>">Note (max 100 caratteri)*</label>
+                        <textarea  maxlength="100" class="form-control field-note" name="origineRedditoAv_note_int<?php echo $i; ?>" id="origineRedditoAv_note_int<?php echo $i; ?>"></textarea>
+                    </div>                    
                 </div>
-				<hr>
+                <div class="spacer-no-border hidden-xs">&nbsp;</div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="patrimonioAv_int<?php echo $i; ?>" class="labelTooltip">Patrimonio*</label>
+                        <a href="javascript:;" data-toggle="tooltip" title="" id="ttPatrimonio1" class="icoinfo" data-original-title="Per “Patrimonio” si intende il complesso dei beni, mobili e immobili, che possiedi"></a>
+		                <select name="patrimonioAv_int<?php echo $i; ?>" id="patrimonioAv_int<?php echo $i; ?>" class="form-control select-note">
+			            <option value="">seleziona</option>
+							<option value="1|Fino a 100.000">Fino a 100.000</option>
+							<option value="2|Da 100.001  a 300.000">Da 100.001  a 300.000</option>
+							<option value="3|Da 300.001  a 1.000.000">Da 300.001  a 1.000.000</option>
+							<option value="4|Da 1.000.001  a 3.000.000">Da 1.000.001  a 3.000.000</option>
+							<option value="5|Da 3.000.001  a 10.000.000">Da 3.000.001  a 10.000.000</option>
+                            <option value="6|Oltre 10.000.000">Oltre 10.000.000</option>
+                            <option value="8|Privo di patrimonio/Altro">Privo di patrimonio/Altro</option>
+					    </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="patrimonioAv_note_int<?php echo $i; ?>">Note (max 100 caratteri)*</label>
+                        <textarea  maxlength="100" class="form-control field-note" name="patrimonioAv_note_int<?php echo $i; ?>" id="patrimonioAv_note_int<?php echo $i; ?>"></textarea>
+                    </div>
+                </div> 
+                <div class="spacer-no-border hidden-xs">&nbsp;</div>
+                <div class="row"> 
+                    <div class="col-md-6 form-group">
+                        <label for="originePatrimonioAv_int<?php echo $i; ?>" class="labelTooltip">Origine dei fondi*</label>
+						<a href="#!" data-toggle="tooltip" title="" id="ttOrigpatrim1" class="icoinfo" data-original-title="Per 'origine dei fondi' si intende il capitale che impieghi sul conto corrente proveniente da fonti anche diverse dal reddito di lavoro (es. rendite immobiliari)"></a>
+                        <select name="originePatrimonioAv_int<?php echo $i; ?>" id="originePatrimonioAv_int<?php echo $i; ?>" class="form-control select-note">
+                        <option value="">seleziona</option>
+							<option value="1|Redditi di lavoro autonomo">Redditi di lavoro autonomo</option>
+							<option value="2|Redditi di lavoro dipendente">Redditi di lavoro dipendente</option>
+							<option value="3|Rendite fondiarie">Rendite fondiarie</option>
+							<option value="4|Redditi finanziari">Redditi finanziari</option>
+							<option value="5|Redditi d'impresa">Redditi d'impresa</option>
+							<option value="6|Lascito\eredita'\donazione">Lascito\eredita'\donazione</option>
+							<option value="7|Altro/redditi diversi (plusvalenze, premi, lotteri" selected>Altro/redditi diversi (plusvalenze, premi, lotteri</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="originePatrimonioAv_note_int<?php echo $i; ?>">Note (max 100 caratteri)*</label>
+                        <textarea  maxlength="100" class="form-control field-note" name="originePatrimonioAv_note_int<?php echo $i; ?>" id="originePatrimonioAv_note_int<?php echo $i; ?>"></textarea>
+                    </div>
+                </div>
+				<div class="spacer-no-border hidden-xs">&nbsp;</div>
+                <hr>
 				 <div class="row">
                     <div class="col-sm-12 form-section-title">
                         <h4>4. Informazioni aggiuntive (opzionali)</h4>
