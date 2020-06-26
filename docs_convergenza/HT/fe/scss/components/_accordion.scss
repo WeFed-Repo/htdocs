@@ -518,9 +518,10 @@
 		color: $black;
 		display: block;
 		font-weight: bold;
-		padding: 1px 0 0 25px;
+		padding: 5px 0 0 30px;
 		position: relative;
-		text-decoration: none !important;
+    text-decoration: none !important;
+    cursor: pointer;
 		.icon {
 			color: $primary;
 			display: block;
@@ -645,9 +646,15 @@
 	}
 }
 
-.collapsed .icon-row_expand { 
+.btn-icon .icon-row_expand {
+	display:none;
+}
+.contentCrBpm .btn-icon .icon-row_expand {
 	display: inline-block;
 }
+.collapsed .icon-row_expand,.collapsed .btn-icon .icon-row_expand { 
+	display: inline-block;
+} 
 
 .collapsed .icon-row_contract {
 	display: none;

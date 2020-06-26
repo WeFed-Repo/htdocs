@@ -3095,9 +3095,10 @@ div.pager .circle.current_page {
   color: #000;
   display: block;
   font-weight: bold;
-  padding: 1px 0 0 25px;
+  padding: 5px 0 0 30px;
   position: relative;
   text-decoration: none !important;
+  cursor: pointer;
 }
 .text-accordion a.text-term .icon {
   color: #0e977f;
@@ -3212,7 +3213,15 @@ div.pager .circle.current_page {
   padding: 0 0 15px 25px;
 }
 
-.collapsed .icon-row_expand {
+.btn-icon .icon-row_expand {
+  display: none;
+}
+
+.contentCrBpm .btn-icon .icon-row_expand {
+  display: inline-block;
+}
+
+.collapsed .icon-row_expand, .collapsed .btn-icon .icon-row_expand {
   display: inline-block;
 }
 

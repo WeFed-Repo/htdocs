@@ -1068,6 +1068,18 @@ ui-combobox-button.ui-state-hover
     overflow-y: auto;
     overflow-x: hidden;
 }
+.ui-autocomplete.ui-menu .ui-menu-item {
+    border-top: solid 1px #eee!important;
+    margin:0!important;
+    padding: 13px 10px!important;
+}
+.ui-autocomplete.ui-menu .ui-menu-item:hover, .ui-autocomplete.ui-menu .ui-menu-item:hover a {
+    background-color: #f1f1f1 !important;
+    cursor: pointer;
+}
+.ui-autocomplete.ui-menu .ui-menu-item:first-child {
+    border-top: none!important;
+}
 
 .ui-combobox .form-control {
     width: calc(100% - 30px) !important;
