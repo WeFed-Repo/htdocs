@@ -531,23 +531,28 @@ h4.txthelp {
 
 @media (max-width: 767px) {
   .btnWrapper {
-    display: flex;
+    display: inline-block;
+    vertical-align: top;
     width: 100%;
   }
   .btnWrapper .btn-align-left, .btnWrapper .btn-align-right {
     margin: 0;
+    display: inline-block;
+    max-width: 50%;
   }
   .btnWrapper .btn-align-left.btn-align-left, .btnWrapper .btn-align-right.btn-align-left {
-    float: left;
     padding-right: 8px;
     text-align: left;
+    float: left;
   }
   .btnWrapper .btn-align-left.btn-align-right, .btnWrapper .btn-align-right.btn-align-right {
-    float: right;
     padding-left: 8px;
     text-align: right;
+    float: right;
   }
   .btnWrapper .btn-align-left .btn, .btnWrapper .btn-align-right .btn {
+    margin-left: 0;
+    margin-right: 0;
     max-width: 100%;
     margin-bottom: 15px;
     clear: both;

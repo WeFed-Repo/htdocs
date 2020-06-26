@@ -77,19 +77,26 @@
 
 @media (max-width:767px) {
   .btnWrapper {
-    display:flex;
+    display: inline-block;
+    vertical-align:top;
     width:100%;
     .btn-align-left,.btn-align-right {
       margin: 0;
-      &.btn-align-left {float:left;
-      padding-right:8px;
-      text-align:left;
+      display:inline-block;
+      max-width:50%;
+      &.btn-align-left {
+        padding-right:8px;
+        text-align:left;
+        float:left;
       }
-      &.btn-align-right {float:right;
-      padding-left:8px;
+      &.btn-align-right {
+        padding-left:8px;
         text-align:right;
+        float:right;
       }
       .btn {
+        margin-left:0;
+        margin-right:0;
         max-width:100%;
         margin-bottom:15px;clear:both;
         text-overflow:ellipsis;
