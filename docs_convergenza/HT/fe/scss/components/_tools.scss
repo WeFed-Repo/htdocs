@@ -1,0 +1,341 @@
+/* Tempistiche (versione lineare) */
+.tempi {
+    padding: 0 0 0 5px;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+
+    .tempo {
+        border-left: solid 2px $primary;
+        padding: 0 0 15px 15px;
+        margin: 0 0 0 -2px;
+        float: left;
+        width: 100%;
+
+        .milestone {
+            position: relative;
+            height: 15px;
+            color: $primary;
+            font-weight: bold;
+            border-top: solid 2px $primary;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 0 0 5px -15px;
+
+            span {
+                position: absolute;
+                left: 8px;
+                background: #fff;
+                padding: 0 5px;
+                top: -12px;
+            }
+
+            .dot {
+                left: -5px;
+                top: -5px;
+                background: #fff;
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border: solid 2px $primary;
+                border-radius: 50%;
+                padding: 0
+            }
+        }
+
+        .contenuto {
+            margin-bottom: 15px;
+            width: 100%;
+            padding-left: 15px;
+
+            .titolo {
+                border-bottom: solid 1px #e3e3e3;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                margin-left: -15px;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        *[class^="col-"] {
+            border-left: solid 1px #e3e3e3;
+        }
+
+        *[class^="col-"]:first-child {
+            border-left: 0;
+        }
+
+    }
+
+    .intestazioni {
+        width: 100%;
+        padding: 0 2px 15px 15px;
+
+        .tempi-intestazione {
+            display: block;
+            font-weight: bold;
+            padding: 10px 0 0;
+            height: 50px;
+
+            span.dettagli {
+                font-weight: normal;
+            }
+        }
+
+        *[class^="col-"] {
+            border-left: solid 1px #e3e3e3;
+        }
+
+        *[class^="col-"]:first-child {
+            border-left: 0;
+        }
+    }
+
+
+}
+
+/* Tempistiche versione "orizzontale" */
+@media (min-width: 768px) {
+    .tempi {
+
+        &.tempi2 .tempo {
+            width: 50%;
+        }
+
+        &.tempi3 .tempo {
+            width: 33.333%;
+        }
+
+        &.tempi4 .tempo {
+            width: 25%;
+        }
+
+        &.tempi5 .tempo {
+            width: 20%;
+        }
+
+        &.tempi6 .tempo {
+            width: 16.666%;
+        }
+
+        &.tempi7 .tempo {
+            width: 14.285%;
+        }
+
+        &.tempi2, &.tempi3, &.tempi4, &.tempi5, &.tempi6, &.tempi7 {
+            .tempo {
+                border-left: 0 none;
+
+                .milestone {
+                    span {
+                        left: 9px;
+                    }
+
+                    .dot {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .tempo:first-child .milestone .dot {
+                display: block;
+                left: -5px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .tempi .tempo .milestone span {
+        background-color: #fbfbfb;
+    }
+
+    .panel .tempi .tempo .milestone span {
+        background-color: #fff;
+    }
+}
+
+
+/* Profilo di rischio */
+.profRisNum {
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+    margin-right: 5px;
+  }
+  .profRisBar {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: darken($tableStripe,10%);
+    margin-left: 2px;
+    border-radius: 2px;
+  }
+  .profRisBar:first-child {
+    margin-left: 0;
+  }
+  .profRisBarOn {
+    background-color: $rosso;
+  }
+  
+  /* Rating */
+  .rating {
+    white-space: nowrap;
+    .icon-corona {
+      position: relative;
+      top: 0;
+      width: 15px;
+      padding-left: 3px;
+      font-size: 12px;
+      &:first-child {
+        width: 12px;
+        padding-left: 0;
+      }
+    }
+    &.small {
+      display: none;
+    }
+  }
+  
+  .icon-corona {
+      font-size: 12px;
+      color: darken($tableStripe,10%);
+  
+      &-on {
+          color: $giallo;
+      }
+      &::-moz-selection {
+          background: $primary;
+          color: #fff;
+          text-shadow: none;
+      }
+      &::selection {
+          background: $primary;
+          color: #fff;
+          text-shadow: none;
+      }
+  }
+  
+  #fesFondoWrap {
+      .rating 
+        {
+         padding-top: 10px;
+         .icon-corona {
+          font-size: 20px;
+          margin-right: 5px;
+         }
+      }
+     .big-rating { 
+          background-color: #ebeef0;
+          color: #202d50;
+          border-radius: 50%;
+          line-height: 100px;
+          font-weight: bold;
+          text-align: center;
+          display: block;
+          font-size: 75px;
+          margin: 10px auto;
+          width: 100px;
+      }
+  }
+     
+  
+  /* Rating-gauge */
+  @mixin rating-gauge($bkg:#eaeded,$disabled:lightgray,$negative:red,$positive:#5bc162) {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+    .circle {
+        position: absolute;
+        width: 100%;
+        padding-top: 100%;
+        margin-bottom: 0;
+        border-radius: 50%;
+        background: linear-gradient(90deg, $disabled, $disabled 47%, $bkg 47.1%, $bkg 53%, $disabled 53.1%, $disabled 100%);
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 50%);
+        .pointer {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -10%;
+            &:before {
+                content: '';
+                display: block;
+                background: $bkg;
+                width: 75%;
+                height: auto;
+                padding-top: 100%;
+                transform: rotate(45deg) translate(-35%, 35%);
+                position: absolute;
+                top: 7%;
+                left: 50%;
+                z-index: 2;
+            }
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            background: $bkg;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &.status-1, &.status-2, &.status-3, &.status-4 {
+        .circle {
+            background: linear-gradient(90deg, $negative, $negative 47%, $bkg 47.1%, $bkg 53%, $disabled 53.1%, $disabled 100%);
+        }
+    }
+    &.status-9, &.status-8, &.status-7, &.status-6 {
+        .circle {
+            background: linear-gradient(90deg, $disabled, $disabled 47%, $bkg 47.1%, $bkg 53%, $positive 53.1%, $positive 100%);
+        }
+    }
+    &.status-1 .pointer {
+        transform: rotate(-75deg);
+    }
+    &.status-2 .pointer {
+        transform: rotate(-56deg);
+    }
+    &.status-3 .pointer {
+        transform: rotate(-38deg);
+    }
+    &.status-4 .pointer {
+        transform: rotate(-20deg);
+    }
+    &.status-9 .pointer { 
+        transform: rotate(75deg);
+    }
+    &.status-8 .pointer {
+        transform: rotate(56deg);
+    }
+    &.status-7 .pointer {
+        transform: rotate(38deg);
+    }
+    &.status-6 .pointer {
+        transform: rotate(20deg);
+    }
+  }
+  
+  
+  .rating-gauge {
+    @include rating-gauge();
+  }
+  

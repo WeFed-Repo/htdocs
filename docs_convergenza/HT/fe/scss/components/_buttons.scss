@@ -75,6 +75,30 @@
   margin-bottom:0;
 }
 
+@media (max-width:767px) {
+  .btnWrapper {
+    display:flex;
+    width:100%;
+    .btn-align-left,.btn-align-right {
+      margin: 0;
+      &.btn-align-left {float:left;
+      padding-right:8px;
+      text-align:left;
+      }
+      &.btn-align-right {float:right;
+      padding-left:8px;
+        text-align:right;
+      }
+      .btn {
+        max-width:100%;
+        margin-bottom:15px;clear:both;
+        text-overflow:ellipsis;
+        overflow:hidden;
+      }
+    }
+  }
+}
+
 /* Icone bottoni */
 .btn-icon {
   width: 25px;
