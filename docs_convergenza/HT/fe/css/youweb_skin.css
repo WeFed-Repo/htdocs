@@ -2461,6 +2461,7 @@ div.pager .circle.current_page {
 }
 .fixed-table-pagination .dropdown-menu .active a {
   background-color: #0e977f;
+  color: #fff;
 }
 
 [data-toggle=modal]:not(.btn), [data-toggle=modal]:not(.btn):hover, [data-toggle=modal]:not(.btn) a, [data-toggle=modal]:not(.btn) a:hover {
@@ -3008,7 +3009,7 @@ div.pager .circle.current_page {
   margin-left: 35px;
   margin-right: 35px;
 }
-.outerTab ul {
+.outerTab ul:not(.azioni) {
   display: table;
   margin: 0;
   padding: 0;
@@ -3016,7 +3017,7 @@ div.pager .circle.current_page {
   float: right;
   padding-top: 8px;
 }
-.outerTab ul li {
+.outerTab ul:not(.azioni) li {
   list-style-type: none;
   display: table-cell;
   height: 100%;
@@ -3024,7 +3025,7 @@ div.pager .circle.current_page {
   vertical-align: middle;
   /* Tab particolari */
 }
-.outerTab ul li a {
+.outerTab ul:not(.azioni) li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
@@ -3034,24 +3035,27 @@ div.pager .circle.current_page {
   padding: 9px 26px;
   display: block;
 }
-.outerTab ul li.on {
+.outerTab ul:not(.azioni) li a:hover {
+  padding: 9px 26px;
+}
+.outerTab ul:not(.azioni) li.on {
   background-color: #fff;
 }
-.outerTab ul li.on a {
+.outerTab ul:not(.azioni) li.on a {
   color: #00a592;
   border-right: 0;
 }
-.outerTab ul li:first-child a, .outerTab ul li.on + li a, .outerTab ul li.on a {
+.outerTab ul:not(.azioni) li:first-child a, .outerTab ul:not(.azioni) li.on + li a, .outerTab ul:not(.azioni) li.on a {
   border-left: 0;
 }
-.outerTab ul li#tabConfronta {
+.outerTab ul:not(.azioni) li#tabConfronta {
   word-wrap: none;
   white-space: nowrap;
 }
-.outerTab ul li#tabConfronta a.leftelement {
+.outerTab ul:not(.azioni) li#tabConfronta a.leftelement {
   display: inline-block;
 }
-.outerTab ul li#tabConfronta span#fesConfButt {
+.outerTab ul:not(.azioni) li#tabConfronta span#fesConfButt {
   display: inline-block;
   background: #ddd;
   margin-left: -15px;
@@ -3059,7 +3063,7 @@ div.pager .circle.current_page {
   padding: 6px 35px 5px 10px;
   position: relative;
 }
-.outerTab ul li#tabConfronta span#fesConfButt .smallClose {
+.outerTab ul:not(.azioni) li#tabConfronta span#fesConfButt .smallClose {
   position: absolute;
   right: 0;
   font-size: 20px;
@@ -4820,7 +4824,15 @@ body.popup header .wrapper .btn-console {
   padding: 0 0 15px 25px;
 }
 
-.collapsed .icon-row_expand {
+.btn-icon .icon-row_expand {
+  display: none;
+}
+
+.contentCrBpm .btn-icon .icon-row_expand {
+  display: inline-block;
+}
+
+.collapsed .icon-row_expand, .collapsed .btn-icon .icon-row_expand {
   display: inline-block;
 }
 
