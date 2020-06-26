@@ -5,9 +5,10 @@
 		color: $black;
 		display: block;
 		font-weight: bold;
-		padding: 1px 0 0 25px;
+		padding: 5px 0 0 30px;
 		position: relative;
 		text-decoration: none !important;
+		cursor: pointer;
 		.icon {
 			color: $primary;
 			display: block;
@@ -23,6 +24,7 @@
 	.text-definition {
 		display: none;
 		padding-left: 25px;
+		padding-top: 10px;
 	}
 }
 .text-accordion.opened {

@@ -698,6 +698,7 @@ input[type=checkbox] {
     padding-right: 46px;
     text-align: center;
     margin:0;
+    min-width: 150px;
   }
   .ui-spinner-button {
     /* .icomoonfont();*/
@@ -816,8 +817,20 @@ a.output {color: $primary;text-decoration:underline}
     width: 50px;
     z-index: 5;
     padding: 0;
+    
+  }
+  .input-group-addon.date {
+    position: absolute;
+    top:15px;
+    right: 5px;
+    z-index: 3;
+    border:0;
+    .icon.icon-calendar_filled {
+      margin-top:0;
+    }
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .input-group {
@@ -847,6 +860,9 @@ a.output {color: $primary;text-decoration:underline}
 }
 @media (max-width: 767px) {
   .modal-body .selector-wrap.selector-mini.only-definition .selector-box {width:100%;}
+  .input-group .input-group-addon.date {
+    top:10px;
+  }
 }
 /* Selettore solo testo ad altezza automatica */
 .selector-wrap.only-definition {

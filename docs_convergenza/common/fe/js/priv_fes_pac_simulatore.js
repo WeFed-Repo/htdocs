@@ -6,7 +6,9 @@ var is4s = false;
 var pacSimulatore = (function() {
     var isLibrerieOK = (typeof isLibrerie !== "undefined") && isLibrerie,
         libreriePath = "/include/ajax",
-        isConsultareOK = (typeof isConsultare !== "undefined") && isConsultare;
+        isConsultareOK = (typeof isConsultare !== "undefined") && isConsultare,
+        colorBankFill = feBank ==="webank" ? "#A7C44A"  : "#75c2b8",
+        colorBankStroke = feBank ==="webank" ? "#A8C630"  : "#0E977F";
 
     /****** PUBLIC METHODS ******/
     function thDeleteFormatter(value, row) {
@@ -529,6 +531,11 @@ var pacSimulatore = (function() {
             ajaxCallsArr = [],
             generalCall,
             whenFunc;
+        
+        if(typeof nameCsrf!== "undefined" && typeof valueCsrf!=="undefined"){
+        	paramsBase[nameCsrf] = valueCsrf;
+    	}
+        
         $("#containerSimPac").addClass("loading");
         if (tableDataSimPac.length > 1) {
             $.each(tableDataSimPac, function(index, item) {
@@ -687,7 +694,7 @@ var pacSimulatore = (function() {
                 "fillAlpha": 0.9,
                 "shadowAlpha": 0
             },
-            "colors": ["#a7c44a", "#444444"],
+            "colors": [colorBankFill, "#444444"],
             "dataProvider": chartData.data,
             "categoryField": "date",
             "categoryAxis": {
@@ -712,9 +719,9 @@ var pacSimulatore = (function() {
             "graphs": [{
                 "balloonText": balloonText,
                 "fillAlphas": 0.8,
-                "fillColors": "#A7C44A",
+                "fillColors": colorBankFill,
                 "lineAlpha": 0.8,
-                "lineColor": "#A8C630",
+                "lineColor": colorBankStroke,
                 "lineThickness": 2,
                 "columnWidth": 0.8,
                 "type": "column",
@@ -899,12 +906,16 @@ var pacSimulatore = (function() {
                 showError("Si &egrave; verificato un errore durante la cancellazione del fondo.");
             }
             modalContent.addClass('loading');
+            
+            var inputParam = {"isin": isinToDeleteSimPac};
+        	if(typeof nameCsrf!== "undefined" && typeof valueCsrf!=="undefined"){
+        		inputParam[nameCsrf] = valueCsrf;
+        	}
+            
             $.ajax(deleteUrl, {
                 method: 'POST',
                 dataType: 'json',
-                data: {
-                    "isin": isinToDeleteSimPac
-                }
+                data: inputParam
             }).done(function(data) {
                 var isOK = false;
                 try {

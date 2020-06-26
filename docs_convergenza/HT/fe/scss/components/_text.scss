@@ -19,7 +19,12 @@ h4 {
     line-height: 20px;
     width: 100%;
     padding-right: 0;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+
+}
+.tithelp h4 {
+    width: 90%;
+    float:left
 }
 
 .tab-wrap .control-label + span.output, 

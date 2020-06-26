@@ -108,7 +108,22 @@
     }
   }
 }
+.tab-wrap .documenti {
 
+  a.btn-icon {
+    position: relative;
+    padding-left: 30px;
+    i{
+      position: absolute;
+      left:0;
+      top:0;
+    }
+    span {
+      padding-left:0;
+      line-height: 25px;
+    }
+  }
+}
 #cercaSel {
   .btn-icon
   {
