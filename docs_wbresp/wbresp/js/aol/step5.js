@@ -53,7 +53,7 @@ $(function() {
 		formRules.messages["redditoAnnuoAv_note_int" + i] ="Compila";
 		formRules.messages["origineRedditoAv_note_int" + i] ="Compila";
 		formRules.messages["patrimonioAv_note_int" + i] ="Compila";
-		formRules.messages["originePatrimonioAv_note_int" + i] ="Compila";
+		formRules.messages["originePatrimonioAv_note_int" + i] ="Compila"; 
 	}
 
 	if (!mono) {
