@@ -108,7 +108,7 @@ var getDataAppuntamento = function() {
 }
 var errorDati = function() {
 	$('#formprestito').hide();
-	$('#prestCalcWrapper').append('<div class="row"><div class="col-sm-6"><div class="messagePanel alert hidden-print"><div><h3>Errore nel caricamento dei dati</h3><p>Ti invitiamo a riprovare pi&ugrave; tardi</p></div></div></div><div class="col-sm-6"><div class="btn-align-left"><a type="button" class="btn btn-primary proseguiButton" onclick="location.reload()">Fai il preventivo</a></div></div></div>')
+	$('#prestCalcWrapper').append('<div class="row"><div class="col-sm-6"><div class="messagePanel alert hidden-print"><div><h3>Al momento non &egrave; possibile fare il preventivo: contatta il tuo gestore.</h3><p>Ci scusiamo per il disagio.</p></div></div></div><div class="col-sm-6"><div class="btn-align-left"><a type="button" class="btn btn-primary proseguiButton" onclick="location.reload()">Fai il preventivo</a></div></div></div>')
 }
 var  prestGetData = function() {
 	 

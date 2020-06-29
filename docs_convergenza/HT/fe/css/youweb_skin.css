@@ -1814,6 +1814,9 @@ a.output {
 .spsel .spsel-btn-console {
   line-height: 20px;
 }
+.spsel.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+  display: none;
+}
 
 .totCols.has-error {
   color: #f00;
@@ -2709,6 +2712,16 @@ div.pager .circle.current_page {
   z-index: 2000;
   background: #fff;
   border-top: 1px solid #e3e3e3;
+}
+
+.modal-footer {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Scheda fondo in overlayer  */
+.modal #fesFondoWrap h2, .modal #fesFondoWrap h3, .modal #fesFondoWrap h4 {
+  font-weight: bold;
 }
 
 .panel-step > .panel {
