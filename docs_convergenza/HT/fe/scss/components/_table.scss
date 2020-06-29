@@ -248,6 +248,7 @@ table,
 .bootstrap-table {
   width: 100%;
   position:relative;
+  clear:both;
 }
 
 // Loader
@@ -375,11 +376,11 @@ table,
 }
 
 /* Pulsantini per testi validi solo in tabella */
-table .table-btn-more {
+table .table-btn-more,table .table-btn-more[data-toggle="modal"], .table-btn-more[data-toggle="modal"]:hover  {
   display: inline-block;
-    background: $primary;
+    background: $primary!important;
     width: 20px;
-    color: #fff;
+    color: #fff!important;
     border-radius: 4px;
     text-align: center;
     line-height: 20px;

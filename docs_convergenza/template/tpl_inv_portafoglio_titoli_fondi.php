@@ -17,7 +17,11 @@ $(function(){
     loadTableData();
 
     // Esempio interattivita' elementi
-    $("#selectStrumentiFinanziari").change(loadTableData);
+    $("#selectStrumentiFinanziari").change(function(){
+        loadTableData();
+        $(this).val().toLowerCase().indexOf("fondi") !== -1 ? $("#linkSituazionePac").show() : $("#linkSituazionePac").hide();
+        
+    });
     $("#refreshBtn").click(loadTableData);
 });
 
@@ -433,18 +437,32 @@ $(function(){
     <!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
 
     <!-- BLOCCO AGGIORNAMENTI  (differente per you e we) -->
-    <div class="row">
-        <div class="col-xs-<?php print ($site=="webank")?"12":"8"; ?> col-sm-4">
-            <a href="#" class="text-link">Situazione PAC</a>
+    <?php if ($site=="webank") { ?>
+        <div class="row">
+           <div class="col-xs-12 col-sm-12">
+                <p class="note flRight noFloatMobile">
+                    <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
+                    <!--esempio di loading -->
+                    <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
+                </p>
+            </div>
         </div>
-        <div class="col-xs-<?php print ($site=="webank")?"12":"4"; ?> col-sm-8">
-            <p class="note flRight noFloatMobile">
+
+    <?php } ?>
+    <?php if ($site=="youweb") { ?>
+        <div class="row">
+           <div class="col-xs-4 col-sm-8">
+           <p class="note flLeft noFloatMobile">
                 <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                 <!--esempio di loading -->
                 <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
             </p>
+            </div>
+            <div class="col-xs-8 col-sm-4" style="display:none" id="linkSituazionePac">
+                <a href="#" class="flRight btn btn-link">Situazione PAC <i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a>
+            </div>
         </div>
-    </div>
+    <?php } ?>
     <!-- FINE BLOCCO AGGIORNAMENTI -->
     <section>
     

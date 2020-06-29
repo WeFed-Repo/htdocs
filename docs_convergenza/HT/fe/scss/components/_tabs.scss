@@ -104,6 +104,10 @@
     top:13px;
     right:13px;
   }
+
+}
+.outerTab + .separator {
+  clear:both;
 }
 
 /* nuovo stile per inversimenti */

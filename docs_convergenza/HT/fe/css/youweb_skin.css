@@ -1569,6 +1569,7 @@ a.output {
   right: 5px;
   z-index: 3;
   border: 0;
+  height: 30px;
 }
 .input-group .input-group-addon.date .icon.icon-calendar_filled {
   margin-top: 0;
@@ -1959,6 +1960,19 @@ textarea {
     min-height: 80px;
   }
 }
+/*ELEMENTO OSCURANTE */
+.wrapper-obscurate {
+  position: relative;
+}
+.wrapper-obscurate .element-obscurate {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
 table,
 .table,
 .ui-dialog .table {
@@ -2317,6 +2331,7 @@ table .bs-checkbox,
 .bootstrap-table {
   width: 100%;
   position: relative;
+  clear: both;
 }
 
 .fixed-table-loading {
@@ -2412,11 +2427,11 @@ table .bs-checkbox,
 }
 
 /* Pulsantini per testi validi solo in tabella */
-table .table-btn-more {
+table .table-btn-more, table .table-btn-more[data-toggle=modal], .table-btn-more[data-toggle=modal]:hover {
   display: inline-block;
-  background: #0e977f;
+  background: #0e977f !important;
   width: 20px;
-  color: #fff;
+  color: #fff !important;
   border-radius: 4px;
   text-align: center;
   line-height: 20px;
@@ -2424,10 +2439,10 @@ table .table-btn-more {
   margin-left: 5px;
   cursor: pointer;
 }
-table .table-btn-more:before {
+table .table-btn-more:before, table .table-btn-more[data-toggle=modal]:before, .table-btn-more[data-toggle=modal]:hover:before {
   content: "＋";
 }
-table .table-btn-more:hover {
+table .table-btn-more:hover, table .table-btn-more[data-toggle=modal]:hover, .table-btn-more[data-toggle=modal]:hover:hover {
   opacity: 0.7;
 }
 
@@ -2647,7 +2662,7 @@ div.pager .circle.current_page {
 [data-toggle=modal]:not(.btn), [data-toggle=modal]:not(.btn):hover, [data-toggle=modal]:not(.btn) a, [data-toggle=modal]:not(.btn) a:hover {
   color: #0e977f;
   letter-spacing: 0px;
-  background-color: transparent !important;
+  background-color: transparent;
   box-shadow: none;
   cursor: pointer;
   font-weight: bold;
@@ -3414,6 +3429,10 @@ div.pager .circle.current_page {
   position: relative;
   top: 13px;
   right: 13px;
+}
+
+.outerTab + .separator {
+  clear: both;
 }
 
 /* nuovo stile per inversimenti */
@@ -4690,6 +4709,33 @@ div.pager .circle.current_page {
 .legendLine {
   border-radius: 50%;
   background-color: #444444;
+}
+
+.compLegend span.check {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+.compLegend span.check.checkVerde {
+  background-color: #18a018;
+}
+.compLegend span.check.checkBlue {
+  background-color: #0d1c34;
+}
+.compLegend span.check.checkOrange {
+  background-color: #fb6002;
+}
+.compLegend span.check.checkLightBlue {
+  background-color: #27d3ed;
+}
+.compLegend span.check.checkRed {
+  background-color: #d82818;
+}
+.compLegend span.check + span {
+  margin-right: 20px;
 }
 
 /* OGGETTO OTP */

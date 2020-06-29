@@ -1254,6 +1254,38 @@
     border-radius: 50%;
     background-color: #444444;
 }
+.compLegend span.check {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+
+    &.checkVerde {
+        background-color: #18a018;
+    }
+
+    &.checkBlue {
+        background-color: #0d1c34;
+    }
+
+    &.checkOrange {
+        background-color: #fb6002;
+    }
+
+    &.checkLightBlue {
+        background-color: #27d3ed;
+    }
+
+    &.checkRed {
+        background-color: #d82818;
+    }
+
+    + span {
+        margin-right: 20px
+    }
+}
 /* OGGETTO OTP */
 .otpdesc {
     img {

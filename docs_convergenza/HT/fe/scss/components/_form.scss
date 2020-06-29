@@ -844,6 +844,7 @@ a.output {color: $primary;text-decoration:underline}
     right: 5px;
     z-index: 3;
     border:0;
+    height: 30px;
     .icon.icon-calendar_filled {
       margin-top:0;
     }
@@ -1187,5 +1188,18 @@ textarea{
 @media (max-width:1200px) {
   textarea {
     min-height: 80px;
+  }
+}
+/*ELEMENTO OSCURANTE */
+.wrapper-obscurate {
+  position: relative;
+
+  .element-obscurate {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      opacity: 0.5;
   }
 }
