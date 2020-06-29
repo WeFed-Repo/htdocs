@@ -133,17 +133,10 @@ var selectNote = $(".select-note");
        		event.preventDefault();
        		return false;
     	}
-		});
-		fieldNote.on('paste', function (event) {
-			return false;
-		})
+	});
 	
-		
    /*FUNZIONE DI ESEMPIO PER LA GESTIONE ERRORI */
    $(function () {
-	
-         
-	
 		$("#btnProsegui").click(function () {
 			
 			var errors = [],

@@ -96,10 +96,7 @@ $(function() {
 				event.preventDefault();
 				return false;
 		}
-	});
-	fieldNote.on('paste', function (event) {
-		return false;
-	})
+	});	
 
 	//controllo per abilitazione/disabilitazione campo note e suo reset - deliver
 	var ckeckValueSelected = function() {
