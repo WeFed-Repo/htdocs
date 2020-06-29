@@ -1058,6 +1058,9 @@ a.output {color: $primary;text-decoration:underline}
    .spsel-btn-console {
      line-height:20px;
    }
+   &.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+    display: none;
+   }
 }
 
 .totCols.has-error {
