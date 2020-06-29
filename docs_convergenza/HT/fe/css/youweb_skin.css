@@ -1104,6 +1104,23 @@ input[type=checkbox] {
   text-align: center;
 }
 
+/* Personalizzazione colonne */
+#tablePersOverlay #tablePersCont {
+  width: 100%;
+  display: inline-block;
+  clear: both;
+  border-bottom: solid 1px #dedede;
+  padding: 5px 0;
+  text-align: right;
+  margin-bottom: 15px;
+}
+#tablePersOverlay .fesSelCont {
+  width: 100%;
+  clear: both;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
 /* Societa di gestione */
 #selContCodSocieta {
   max-height: 400px;
