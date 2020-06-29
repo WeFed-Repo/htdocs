@@ -1814,6 +1814,9 @@ a.output {
 .spsel .spsel-btn-console {
   line-height: 20px;
 }
+.spsel.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+  display: none;
+}
 
 .totCols.has-error {
   color: #f00;
