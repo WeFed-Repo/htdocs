@@ -2729,6 +2729,16 @@ div.pager .circle.current_page {
   border-top: 1px solid #e3e3e3;
 }
 
+.modal-footer {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Scheda fondo in overlayer  */
+.modal #fesFondoWrap h2, .modal #fesFondoWrap h3, .modal #fesFondoWrap h4 {
+  font-weight: bold;
+}
+
 .panel-step > .panel {
   padding: 0 0 6px 0;
 }

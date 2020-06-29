@@ -116,6 +116,9 @@
 .icon-close_inverted_fill1:before {
   content: "\e9b9";
 }
+.icon-close:before {
+  content: "\e9db";
+}
 .icon-star_fill:before {
   content: "\e9ba";
 }
