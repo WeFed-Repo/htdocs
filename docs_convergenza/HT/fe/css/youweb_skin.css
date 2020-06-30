@@ -31,7 +31,7 @@
   content: "";
 }
 
-.icon-missing:before, .icon-sp_rifiutata:before {
+.icon-missing:before {
   font-style: normal !important;
   content: "☒" !important;
   color: red !important;
@@ -465,6 +465,16 @@ h4.txthelp {
   margin-right: 5px;
 }
 
+/* Testo con enfasi */
+.testoIcona.emphasis .icon-arrow_emphasis {
+  color: #dadee2;
+  font-size: 40px;
+  margin-top: -10px;
+}
+.testoIcona.emphasis .leftTesto {
+  padding-left: 55px;
+}
+
 .button:hover, .btn:hover {
   background-color: #474B4E;
   color: #fff;
@@ -721,6 +731,23 @@ p.note.flRight a.btn-icon {
     text-align: left;
   }
 }
+/* Pulsante autorefresh */
+.push-button .icon-push_on {
+  display: none;
+}
+.push-button.active .icon-push_off {
+  display: none;
+}
+.push-button.active .icon-push_on {
+  display: inline-block;
+  line-height: 25px;
+  vertical-align: middle;
+  padding-top: -2px;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+
 .control-label-output {
   display: inline-block;
   float: left;

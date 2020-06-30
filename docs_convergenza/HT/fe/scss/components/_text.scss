@@ -73,3 +73,15 @@ h4.txthelp {
     text-align:middle;
     margin-right:5px;
 }
+
+/* Testo con enfasi */
+.testoIcona.emphasis {
+    .icon-arrow_emphasis {
+        color:#dadee2;
+        font-size:40px;
+        margin-top:-10px;
+    }
+    .leftTesto {
+        padding-left:55px;
+    }
+}

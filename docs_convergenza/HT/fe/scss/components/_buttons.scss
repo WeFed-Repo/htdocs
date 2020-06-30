@@ -271,3 +271,22 @@ p.note.flRight {
       }
   }
 }
+
+/* Pulsante autorefresh */
+.push-button {
+  .icon-push_on {display:none}
+  &.active {
+    .icon-push_off {
+      display:none;
+    }
+    .icon-push_on {
+      display: inline-block;
+      line-height: 25px;
+      vertical-align: middle;
+      padding-top: -2px;
+      height: 25px;
+      width: 25px;
+      text-align: center;
+    }
+  }
+}
