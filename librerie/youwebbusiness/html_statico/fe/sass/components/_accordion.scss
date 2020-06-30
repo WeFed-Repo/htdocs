@@ -17,6 +17,7 @@
       }
       .card-header-icon {
         @include icon-font-family();
+        @extend .icon-arrow_up;
         color: $greenLink;
         border: solid 2px $greenLink;
         display: block;
@@ -43,7 +44,7 @@
       &.collapsed {
         .card-header-title {
           color: $gray2;
-          }
+        }
         .card-header-icon {
           @extend .icon-arrow_down;
           line-height: 1.5rem;
