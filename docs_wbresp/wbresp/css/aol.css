@@ -1168,3 +1168,7 @@ a .invioOtp:hover {
 	margin-bottom:5px
 }
 
+textarea{
+    resize: none;
+    min-height: 70px;
+}

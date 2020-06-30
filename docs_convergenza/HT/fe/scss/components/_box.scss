@@ -620,7 +620,7 @@
                 border-width: 30px 10px 0 0;
                 left: 5px;
             }
-            .pos-bottom:after {
+            &.pos-bottom:after {
                 border-width: 0 10px 30px 0;
             }
           }   
@@ -1235,6 +1235,56 @@
 #chartSimPacDiv {
     width: 100%;
     height: 300px;
+    margin-top:20px;
+
+}
+.legendColumn {
+    background-color: #75c2b8;
+    
+}
+.legendSimPac {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.legendLine {
+    border-radius: 50%;
+    background-color: #444444;
+}
+.compLegend span.check {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+
+    &.checkVerde {
+        background-color: #18a018;
+    }
+
+    &.checkBlue {
+        background-color: #0d1c34;
+    }
+
+    &.checkOrange {
+        background-color: #fb6002;
+    }
+
+    &.checkLightBlue {
+        background-color: #27d3ed;
+    }
+
+    &.checkRed {
+        background-color: #d82818;
+    }
+
+    + span {
+        margin-right: 20px
+    }
 }
 /* OGGETTO OTP */
 .otpdesc {

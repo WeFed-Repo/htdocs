@@ -5,20 +5,20 @@
 		<form class="formGenerico borderFormRounded" role="form" id="form02">
 			<div class="form-group">			
 				<div class="row">
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-3">
 						<label class="control-label">Titolo</label>					
 						<div class="editable-input">
 							<input type="text" name="titolo" value="" class="form-control clear-x" autocomplete="off"><span class="editable-clear-x" style="display: none"><i class="icon icon-close icon-1x"></i></span>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-3">
 						<label class="control-label">Mercato</label>
 						<select class="form-control">
 							<option>tutti</option>
 							<option>lorem</option>
 						</select>
 					</div>
-					<div class="col-xs-12 col-sm-4 no-label">
+					<div class="col-xs-12 col-sm-6 no-label">
 						<div class="btn-align-left">
 							<a type="button" class="btn btn-primary" href="javascript:;" onclick="$('#cercaRisp').show();$('#cercaSel').hide();">Cerca</a>
 						</div>
@@ -33,15 +33,15 @@
 		<form class="formGenerico borderFormRounded" role="form" id="form02">
 			<div class="form-group">			
 				<div class="row">
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-3">
 						<label class="control-label-output">Titolo</label>					
 						<span class="output">Fiat</span>
 					</div>
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-3">
 						<label class="control-label-output">Mercato</label>
 						<span class="output">Tutti</span>
 					</div>
-					<div class="col-xs-12 col-sm-4 no-label">						
+					<div class="col-xs-12 col-sm-6 no-label">						
 						<div class="btn-align-left">
 				          <a type="button" class="btn btn-primary" href="javascript:;" onclick="$('#cercaRisp').hide();$('#cercaSel').show();">nuova ricerca</a>
 				          <a type="button" class="btn btn-primary" href="javascript:;" onclick="$('#cercaRisp').hide();$('#cercaSel').show();">modifica ricerca</a>
@@ -95,28 +95,20 @@
 											<ul class="azioni">
 													<li class="linkOn"><a title="C/V" href="link1.htm"><span>C/V</span></a></li>
 													<li class="linkOff"><span title="C/V">C/V</span></li>
-													<hr>
 													<li class="linkOn"><a title="Book" href="link2.htm"><span>Book</span></a></li>
 													<li class="linkOff"><span title="Book">Book</span></li>
-													<hr>
-													<li class="linkOn"><a title="Ordine Condizionato" href="link3.htm"><span>Ordine Cond.</span></a></li>
+												    <li class="linkOn"><a title="Ordine Condizionato" href="link3.htm"><span>Ordine Cond.</span></a></li>
 													<li class="linkOff"><span title="Ordine Condizionato">Ordine Cond.</span></li>
-													<hr>
 													<li class="linkOn"><a title="Analisi Tecnica" href="link4.htm"><span>Analisi Tecnica</span></a></li>
 													<li class="linkOff"><span title="Analisi Tecnica">Analisi Tecnica</span></li>
-													<hr>
 													<li class="linkOn"><a title="Alert" href="link5.htm"><span>Alert</span></a></li>
 													<li class="linkOff"><span title="Alert">Alert</span></li>
-													<hr>
 													<li class="linkOn"><a title="Carry-on" href="/connect.php?page=str_interna_priv.php&tpl=/wetrade/tpl_priv_lib_wt_carry.php&liv1=TR&tr2=0&tr3=0"><span>Carry-on</span></a></li>
 													<li class="linkOff"><span title="Carry-on">Carry-on</span></li>
-													<hr>
 													<li class="linkOn"><a title="Vendi" href="link6.htm"><span>Vendi</span></a></li>
 													<li class="linkOff"><span title="Vendi">Vendi</span></li>
-													<hr>
 													<li class="linkOn"><a title="Vendi" href="/connect.php?page=str_interna_priv.php&tpl=/wetrade/tpl_priv_lib_wt_titoli_in_portafoglio.php&liv1=TR&tr2=0&tr3=0"><span>Visualizza/Vendi</span></a></li>
 													<li class="linkOff"><span title="Vendi">Visualizza/Vendi</span></li>
-													<hr>
 													<li class="linkOn"><a title="Dettaglio fiscale" href="#1" class="close-left" data-dismiss="modal" data-toggle="modal" data-target="#fiscalita"><span>Fiscalità</span></a></li>
 													<li class="linkOff"><span title="Dettaglio fiscale">Apre un secondo overlayer Fiscalità </span></li>
 												</ul>

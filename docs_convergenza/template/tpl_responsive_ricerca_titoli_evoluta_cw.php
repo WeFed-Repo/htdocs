@@ -112,7 +112,7 @@ $(function () {
 													  <div class="input-group">
 													     <div class="input-group-addon first">Dal</div>
 													     <input type="text" id="datepickerTool1" placeholder="gg/mm/aaaa"  class="form-control clear-x"> 
-													     <div class="input-group-addon date"><i class="icon icon-calendar"></i ></div>
+													     <div class="input-group-addon date"><i class="icon icon-calendar_filled"></i ></div>
 													  </div>
 													</div>
 												</div>
@@ -123,7 +123,7 @@ $(function () {
 													  <div class="input-group">
 													     <div class="input-group-addon first">Al</div>
 													     <input type="text" id="datepickerTool3" placeholder="gg/mm/aaaa"  class="form-control clear-x"> 
-													     <div class="input-group-addon date"><i class="icon icon-calendar"></i ></div>
+													     <div class="input-group-addon date"><i class="icon icon-calendar_filled"></i ></div>
 													  </div>
 													</div>
 												</div> 

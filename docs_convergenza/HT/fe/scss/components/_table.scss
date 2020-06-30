@@ -26,7 +26,7 @@ table,
       &.oCenter { text-align: left !important; }
       &.oRight { text-align: right !important; }
       &.left {text-align: left}
-      &.right {text-align: right}
+      &.right {text-align: right!important}
       &.center {text-align: center!important}
      .btn-icon.btn-disabled {
         opacity:0.3;
@@ -34,6 +34,10 @@ table,
         width: 20px;
         height: 20px;
       }
+      &.colGroup{
+        padding:0;
+      }
+      a.schedaTitolo {text-decoration: underline;}
     }
     th { 
       height: 100%;
@@ -208,6 +212,7 @@ table,
   .colGroup {
     > * {
       border-bottom: 2px solid $tableStripe !important;
+      height: 100%;
     }
   }
   &.evident tr th {
@@ -244,6 +249,7 @@ table,
 .bootstrap-table {
   width: 100%;
   position:relative;
+  clear:both;
 }
 
 // Loader
@@ -371,11 +377,11 @@ table,
 }
 
 /* Pulsantini per testi validi solo in tabella */
-table .table-btn-more {
+table .table-btn-more,table .table-btn-more[data-toggle="modal"], .table-btn-more[data-toggle="modal"]:hover  {
   display: inline-block;
-    background: $primary;
+    background: $primary!important;
     width: 20px;
-    color: #fff;
+    color: #fff!important;
     border-radius: 4px;
     text-align: center;
     line-height: 20px;
@@ -434,3 +440,17 @@ table .table-btn-more {
     clear:left;
   }
 }
+
+/* Tabella "speciale" per ricerca fondi */
+#fesSearchTable {
+  th.sort {
+     padding-left:0 !important;
+     a {
+      padding-left:15px !important;
+      min-height:20px;
+      display:inline-block;
+     }
+   }
+  
+}
+

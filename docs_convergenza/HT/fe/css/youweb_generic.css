@@ -347,7 +347,7 @@ button {
     box-shadow: none !important;
 }
 
-.btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation {
+.btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation, .btnWrapper.tabbed-buttons .btn  {
     position: relative;
     font-size: 14px;
     line-height: 14px;
@@ -384,13 +384,13 @@ button {
     padding: 9px 20px 7px 20px;
 }
 
-.btn-primary:hover:active, .btn-primary:active, .btn-primary:focus {
+.btn-primary:hover:active, .btn-primary:active, .btn-primary:focus,.btnWrapper.tabbed-buttons .btn:focus {
     background-color: #65b7a9 !important;
     box-shadow: none;
     outline: 0 !important;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,.btnWrapper.tabbed-buttons .btn:hover {
     background-color: #007c66
 }
 
@@ -1068,6 +1068,18 @@ ui-combobox-button.ui-state-hover
     overflow-y: auto;
     overflow-x: hidden;
 }
+.ui-autocomplete.ui-menu .ui-menu-item {
+    border-top: solid 1px #eee!important;
+    margin:0!important;
+    padding: 13px 10px!important;
+}
+.ui-autocomplete.ui-menu .ui-menu-item:hover, .ui-autocomplete.ui-menu .ui-menu-item:hover a {
+    background-color: #f1f1f1 !important;
+    cursor: pointer;
+}
+.ui-autocomplete.ui-menu .ui-menu-item:first-child {
+    border-top: none!important;
+}
 
 .ui-combobox .form-control {
     width: calc(100% - 30px) !important;
@@ -1312,10 +1324,11 @@ label .btn-icon {
     margin-bottom: 0;
 }
 
-button[disabled], html input[disabled], .btn.disabled, .btn[disabled], fieldset[disabled] .btn, input[type="button"][disabled], #mainContent #dialogAbiCab input[type="button"][disabled] {
+button[disabled], button[disabled]:hover, html input[disabled], .btn.disabled, .btn[disabled], fieldset[disabled] .btn, input[type="button"][disabled], #mainContent #dialogAbiCab input[type="button"][disabled] {
     background-color: #EBEDEE !important;
     border: 0;
     opacity: 1;
+    cursor: not-allowed;
 }
 
 .odd button[disabled], html .odd input[disabled], .odd .btn.disabled, .odd .btn[disabled], .odd fieldset[disabled] .btn, .odd input[type="button"][disabled], #mainContent #dialogAbiCab .odd input[type="button"][disabled] {
@@ -7411,9 +7424,9 @@ div.fixed-table-scroll-outer {
     }
 
 
-    .bootstrap-table table {
+    /*.bootstrap-table table {
         margin-bottom: 0 !important;
-    }
+    }*/
     .bootstrap-table .fixed-table-container {
         position: relative!important;
         clear: both;

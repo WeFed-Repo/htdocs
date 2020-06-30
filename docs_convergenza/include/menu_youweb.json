@@ -193,8 +193,8 @@
 				"voices": [
 					{
 						"nome": "Grafici interattivi",
-						"html": "mi",
-						"inlavorazione": true
+						"tpl": "tpl_responsive_grafici_interattivi.php",
+						"html": "mi"
 					},
 					{
 						"nome": "Analisi TraderMade",

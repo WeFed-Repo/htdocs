@@ -75,6 +75,37 @@
   margin-bottom:0;
 }
 
+@media (max-width:767px) {
+  .btnWrapper {
+    display: inline-block;
+    vertical-align:top;
+    width:100%;
+    .btn-align-left,.btn-align-right {
+      margin: 0;
+      display:inline-block;
+      max-width:50%;
+      &.btn-align-left {
+        padding-right:8px;
+        text-align:left;
+        float:left;
+      }
+      &.btn-align-right {
+        padding-left:8px;
+        text-align:right;
+        float:right;
+      }
+      .btn {
+        margin-left:0;
+        margin-right:0;
+        max-width:100%;
+        margin-bottom:15px;clear:both;
+        text-overflow:ellipsis;
+        overflow:hidden;
+      }
+    }
+  }
+}
+
 /* Icone bottoni */
 .btn-icon {
   width: 25px;
@@ -108,7 +139,22 @@
     }
   }
 }
+.tab-wrap .documenti {
 
+  a.btn-icon {
+    position: relative;
+    padding-left: 30px;
+    i{
+      position: absolute;
+      left:0;
+      top:0;
+    }
+    span {
+      padding-left:0;
+      line-height: 25px;
+    }
+  }
+}
 #cercaSel {
   .btn-icon
   {
@@ -223,5 +269,24 @@ p.note.flRight {
           min-width: 250px;
           text-align:left;
       }
+  }
+}
+
+/* Pulsante autorefresh */
+.push-button {
+  .icon-push_on {display:none}
+  &.active {
+    .icon-push_off {
+      display:none;
+    }
+    .icon-push_on {
+      display: inline-block;
+      line-height: 25px;
+      vertical-align: middle;
+      padding-top: -2px;
+      height: 25px;
+      width: 25px;
+      text-align: center;
+    }
   }
 }

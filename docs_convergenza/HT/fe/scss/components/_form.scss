@@ -397,6 +397,25 @@ input[type=checkbox] {
 
 }
 
+/* Personalizzazione colonne */
+#tablePersOverlay {
+  #tablePersCont {  
+    width:100%;
+    display:inline-block;
+    clear:both;
+    border-bottom:solid 1px #dedede;
+    padding:5px 0;
+    text-align:right;
+    margin-bottom:15px;
+  }
+  .fesSelCont {
+    width:100%;
+    clear:both;
+    margin-bottom:15px;
+    display:inline-block;
+  }
+}
+
 /* Societa di gestione */
 #selContCodSocieta {
     max-height: 400px;
@@ -508,6 +527,8 @@ input[type=checkbox] {
   }
   .btnConsole {
     margin-bottom:20px; 
+    display:inline-block;
+    width:100%;
     .btn-align-right {float:right;}
     @media (max-width:767px) {
       & {.btn-align-right,.btn-align-left {float:none; margin:0;
@@ -534,6 +555,91 @@ input[type=checkbox] {
     text-align: center;
     line-height: 30px;
     margin-top:8px;
+  }
+}
+
+/* Filtri geografici (solo desktop) */
+@media (min-width: 768px) {
+  #selContCodArea {
+    width:640px;
+    margin:0 auto;
+    height:371px;
+    background: #fff url("/HT/fe/img/fes_world_map.png") no-repeat center center;
+    margin-bottom:25px;
+    .selEl {background: rgba(255,255,255,0.5);
+      width: auto;
+      height: 24px;
+      padding: 5px 5px 3px 23px;
+      border: solid 1px #fff;
+      border-radius: 3px;
+      position:absolute;
+    input {
+      top: 2px;
+      left: 3px;}
+
+      &#id14 {
+        top: 166px;
+        left: 518px;
+    
+    }
+
+    &#id25 {
+      top: 153px;
+      left: 100px;
+    }
+
+    &#id60 {
+      top: 120px;
+      left: 336px;
+  
+    }
+
+    &#id61 {
+      top: 213px;
+      left: 299px;
+    }
+
+    &#id67 {
+      top: 270px;
+      left: 98px;
+    }
+
+    &#id68 {
+      top: 90px;
+      left: 505px;
+
+    }
+
+    &#id75 {
+      top: 150px;
+      left: 270px;
+    }
+
+    &#id81 {
+      top: 360px;
+      left: 410px;
+    }
+
+    &#id130 {
+      top: 181px;
+      left: 314px;
+    }
+
+    &#id347 {
+      top: 254px;
+      left: 410px;
+    }
+
+    &#id348 {
+      top: 150px;
+      left: 366px;
+    }
+
+    &#id-1 {
+        top: 360px;
+    }
+
+    }
   }
 }
 
@@ -611,6 +717,7 @@ input[type=checkbox] {
     padding-right: 46px;
     text-align: center;
     margin:0;
+    min-width: 150px;
   }
   .ui-spinner-button {
     /* .icomoonfont();*/
@@ -729,8 +836,21 @@ a.output {color: $primary;text-decoration:underline}
     width: 50px;
     z-index: 5;
     padding: 0;
+    
+  }
+  .input-group-addon.date {
+    position: absolute;
+    top:15px;
+    right: 5px;
+    z-index: 3;
+    border:0;
+    height: 30px;
+    .icon.icon-calendar_filled {
+      margin-top:0;
+    }
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .input-group {
@@ -760,6 +880,9 @@ a.output {color: $primary;text-decoration:underline}
 }
 @media (max-width: 767px) {
   .modal-body .selector-wrap.selector-mini.only-definition .selector-box {width:100%;}
+  .input-group .input-group-addon.date {
+    top:10px;
+  }
 }
 /* Selettore solo testo ad altezza automatica */
 .selector-wrap.only-definition {
@@ -936,6 +1059,9 @@ a.output {color: $primary;text-decoration:underline}
    .spsel-btn-console {
      line-height:20px;
    }
+   &.spsel-hasconsole .spsel-option.spsel-selected .spsel-btn-console {
+    display: none;
+   }
 }
 
 .totCols.has-error {
@@ -1062,5 +1188,18 @@ textarea{
 @media (max-width:1200px) {
   textarea {
     min-height: 80px;
+  }
+}
+/*ELEMENTO OSCURANTE */
+.wrapper-obscurate {
+  position: relative;
+
+  .element-obscurate {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      opacity: 0.5;
   }
 }

@@ -2,7 +2,7 @@
   &, &:hover, a, a:hover {
     color: $primary;
     letter-spacing: 0px;
-    background-color: transparent!important;
+    background-color: transparent;
     box-shadow: none;
     cursor: pointer;
     font-weight: bold;
@@ -80,4 +80,11 @@
     background: #fff;
     border-top: 1px solid #e3e3e3;
   }
+}
+
+.modal-footer {display:inline-block;width:100%}
+
+/* Scheda fondo in overlayer  */
+.modal #fesFondoWrap {
+  h2,h3,h4 {font-weight:bold}
 }
