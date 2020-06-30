@@ -2031,11 +2031,6 @@ table tr.separator,
 .ui-dialog .table tr.separator {
   border-top: solid 2px #ccc;
 }
-table tr.evident td,
-.table tr.evident td,
-.ui-dialog .table tr.evident td {
-  cursor: pointer;
-}
 table tr td, table tr th,
 .table tr td,
 .table tr th,
@@ -3721,6 +3716,7 @@ div.pager .circle.current_page {
   display: block;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .cube-selector ul.wrapper li.subgroup {
   display: none;
