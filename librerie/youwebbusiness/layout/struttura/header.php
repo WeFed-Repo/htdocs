@@ -3,7 +3,6 @@
  if (!isset($isPublicPage)) $isPublicPage = false;
 ?>
 
-
 <div class="wrapper">
   <nav class="navbar navbar-expand-lg rounded">
     <div class="navbar-brand d-flex align-items-center">
