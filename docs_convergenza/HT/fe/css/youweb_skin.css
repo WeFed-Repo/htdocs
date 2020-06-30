@@ -847,6 +847,14 @@ p.note.flRight a.btn-icon {
   text-decoration: underline;
 }
 
+.no-label-output {
+  padding: 14px 5px;
+}
+.no-label-output .btn.btn-primary {
+  padding: 11px 10px 7px 10px;
+  letter-spacing: -0.5px;
+}
+
 .modal-body .selector-wrap.selector-mini .selector-box {
   width: 111px;
 }
