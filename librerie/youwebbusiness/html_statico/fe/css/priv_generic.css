@@ -416,7 +416,7 @@ img.icon {
 .icon-arrow_down:before, .accordion .card .card-header.collapsed .card-header-icon:before, .accordion .acc-item .card-header.collapsed .card-header-icon:before {
   content: "\e913"; }
 
-.icon-arrow_up:before {
+.icon-arrow_up:before, .accordion .card .card-header .card-header-icon:before, .accordion .acc-item .card-header .card-header-icon:before {
   content: "\e914"; }
 
 .icon-arrow_left:before {
@@ -3144,7 +3144,7 @@ select[disabled], select.form-control[disabled], select.form-control:not([size])
   .radio .icon, .radio img[src*=".svg"], .radio i, .checkbox .icon, .checkbox img[src*=".svg"], .checkbox i {
     float: none;
     clear: both;
-    overflow: auto;
+    overflow: hidden;
     display: block;
     width: 50px;
     height: auto;
@@ -3419,6 +3419,11 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
     transform: translate(1px, 0); }
   .dropleft .dropdown-menu .dropdown-item {
     font-size: 14px; }
+
+.dropdown-menu.show:not(.shown) {
+  opacity: 0 !important; }
+.dropdown-menu.shown {
+  opacity: 1 !important; }
 
 .carousel {
   width: 100%;

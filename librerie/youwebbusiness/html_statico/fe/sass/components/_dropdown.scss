@@ -37,3 +37,12 @@
     }
   }
 }
+
+.dropdown-menu {
+  &.show:not(.shown) {
+    opacity: 0 !important;
+  }
+  &.shown {
+    opacity: 1 !important;
+  }
+}
