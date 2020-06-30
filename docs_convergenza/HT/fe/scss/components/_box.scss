@@ -252,6 +252,7 @@
         display: block;
         margin: 0;
         padding: 0;
+        width:100%;
     } 
 
     ul.wrapper li.subgroup {
@@ -713,6 +714,7 @@
         position: relative;
         overflow: hidden;
         border: $primary 1px solid;
+        min-height: 645px;
         .slide.slide-01 {
             display: none;
           }

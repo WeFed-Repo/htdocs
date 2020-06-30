@@ -3716,6 +3716,7 @@ div.pager .circle.current_page {
   display: block;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .cube-selector ul.wrapper li.subgroup {
   display: none;
@@ -4125,6 +4126,7 @@ div.pager .circle.current_page {
   position: relative;
   overflow: hidden;
   border: #0e977f 1px solid;
+  min-height: 645px;
 }
 .slider-section .slider-map-graph .slide.slide-01 {
   display: none;

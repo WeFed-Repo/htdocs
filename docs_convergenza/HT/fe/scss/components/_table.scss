@@ -19,6 +19,9 @@ table,
       background-color: #fff !important;
     }
     &.separator {border-top:solid 2px #ccc}
+    &.evident td {
+      cursor:pointer;
+    }
     
     td, th { 
       border-top: 0;
