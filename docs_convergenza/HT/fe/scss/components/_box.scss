@@ -713,6 +713,7 @@
         position: relative;
         overflow: hidden;
         border: $primary 1px solid;
+        min-height: 645px;
         .slide.slide-01 {
             display: none;
           }

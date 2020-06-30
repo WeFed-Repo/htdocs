@@ -2004,6 +2004,11 @@ table tr.separator,
 .ui-dialog .table tr.separator {
   border-top: solid 2px #ccc;
 }
+table tr.evident td,
+.table tr.evident td,
+.ui-dialog .table tr.evident td {
+  cursor: pointer;
+}
 table tr td, table tr th,
 .table tr td,
 .table tr th,
@@ -4098,6 +4103,7 @@ div.pager .circle.current_page {
   position: relative;
   overflow: hidden;
   border: #0e977f 1px solid;
+  min-height: 645px;
 }
 .slider-section .slider-map-graph .slide.slide-01 {
   display: none;
