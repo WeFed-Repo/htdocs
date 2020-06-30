@@ -69,136 +69,69 @@
 			    }) 
 			</script>
 		</div>
-   		<div class="form-group" id="sezioneAggiungi">
-        <div class="row">
-            <div class="col-sm-12">
-                <label class="control-label">Ricerca per</label>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="row">
-	                        <div class="col-xs-3 col-sm-2">
-		                        <div class="radio inline">
-		                            <label class="textWrapper">
-		                                <input type="radio" name="tipo_ricerca" id="">
-		                                <span class="text">Indice</span>
-		                            </label>
-		                        </div>
-                   			</div>
-                   			<div class="col-xs-9 col-sm-4">
-		                       <select class="form-control">
-	                           		<option value="MI.EQCON.I_SPMIB">
-											FTSE MIB
-										</option>
-
-										<option value="MI.EQCON.I_MIBTEL">
-											FTSE Italia All Share
-										</option>
-
-										<option value="MI.EQCON.I_ALLSTAR">
-											FTSE Italia Star
-										</option>
-
-										<option value="NY.EQNY.I_DJI">
-											DOW JONES
-										</option>
-
-										<option value="NQ.EQNQ.I_NDX">
-											NASDAQ 100
-										</option>
-
-										<option value="FR.EQXET.I_GDAXI">
-											DAX 30
-										</option>
-
-										<option value="EUR.EQPA.I_FCHI">
-											CAC40
-										</option>
-
-										<option value="LON.EQLSE.I_FTSE">
-											FTSE 100
-										</option>
-
-										<option value="MA.EQIBE.I_IBEX">
-											IBEX 35
-										</option>
-
-										<option value="EUR.EQAMS.I_AEX">
-											AEX
-										</option>
-
-										<option value="EUR.EQBRU.I_BFX">
-											BEL 20
-										</option>
-
-										<option value="EUR.EQPSI.I_PSI">
-											PSI20
-										</option>
-
-										<option value="NY.EQNY.I_SP500">
-											S&amp;P 500
-										</option>
-
-										<option value="FR.EQXET.I_SX5E">
-											Euro Stoxx 50
-										</option>
-
-                       			</select>
-                   			</div>
-                   		</div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="row">
-	                        <div class="col-xs-3 col-sm-2">
-		                        <div class="radio inline">
-		                            <label class="textWrapper">
-		                                <input type="radio" name="tipo_ricerca" id="">
-		                                <span class="text">Titolo</span>
-		                            </label>
-		                        </div>
-                   			</div>
-                   			<div class="col-xs-9 col-sm-3">
-		                       <input type="text" class="form-control">
-	                         </div>
-	                        <div class="col-xs-9 col-sm-4">
-		                         <select class="form-control">
-	                           			<option>Seleziona il mercato</option>
-	                           			<optgroup label="Azioni"> 
-<option value="MI|EQCON|B">MTA</option><option value="TLX|ELX|B">EuroTLX</option><option value="FR|EQXET|B">XETRA</option><option value="EUR|EQPA|B">SBF</option><option value="LON|EQLSE|B">FTSE100</option><option value="MA|EQIBE|B">IBEX35</option><option value="EUR|EQAMS|B">AEX25</option><option value="EUR|EQBRU|B">BEL20</option><option value="EUR|EQPSI|B">PSI20</option><option value="NY|EQNY|B">NYSE</option><option value="NQ|EQNQ|B">NASDAQ</option>
-										</optgroup>	
-										<optgroup label="ETF-ETC">
-<option value="MI|EQCON|E">ETFplus</option>
-										</optgroup>	
-										<optgroup label="CW &amp; CERTIFICATES"> 
-<option value="MI|CW|C">SEDEX</option><option value="TLX|ELX|C">EuroTLX</option>
-										</optgroup>	
-										<optgroup label="DERIVATI">
-<option value="MI|DER|D">IDEM</option><option value="FR|EUREX|D">EUREX</option><option value="EUR|LIF|D">EURONEXT - LIFFE</option><option value="CME|CEQFU|D">CME</option><option value="CME|CBOFU|D">eCBOT</option><option value="CME|COMEX|D">COMEX</option><option value="CME|NYMEX|D">NYMEX</option>
-										</optgroup>	
-										<optgroup label="OBBLIGAZIONI" class="optiongroup">
-<option value="MI|MRT|O">MOT - EuroMOT</option><option value="TLX|ELX|O">EuroTLX</option><option value="MI|HIMTF|O">Hi-MTF</option>
-										</optgroup>
-									</select>
-	                         </div>
-	                         <div class="col-sm-3 col-xs-12">
-								
-								<div class="btn-align-left">
-									<a type="button" class="btn btn-primary" id="" onclick="$('#sezioneAggiungi').hide();$('#sezioneConfronta').show()">aggiungi</a>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-12">
+ 				<label class="control-label">Ricerca per</label>
+				 	<div class="form-group">
+						<div class="row">
+								<div class="col-xs-12 col-sm-12">
+									<div class="row">
+										<div class="col-xs-4 col-sm-2 mww-dom-component webank-component-radioButton">
+											<div class="radio inline">
+												<label class="textWrapper">
+													<input type="radio" name="searchType" value="indice">
+													<span class="text">Indice</span>
+												</label>	
+											</div>
+										</div>	
+										<div class="col-xs-8 col-sm-4 wrapper-obscurate mww-dom-component webank-component-combobox">
+											<select class="form-control" id="select">
+												<option value="FTSE MIB">FTSE MIB</option>
+												<option value="FTSE Italia Mid Cap">FTSE Italia Mid Cap</option>
+												<option value="FTSE Italia Star">FTSE Italia Star</option>
+												<option value="FTSE Italia All Share">FTSE Italia All Share</option>
+												<option value="Dow Jones Ind">Dow Jones Ind</option>
+												<option value="Nasdaq100">Nasdaq100</option>
+												<option value="S&amp;P 500">S&amp;P 500</option>
+												<option value="Nasdaq Comp">Nasdaq Comp</option>
+												<option value="Dax30">Dax30</option><option value="DAX100">DAX100</option>
+												<option value="Euro Stoxx 50">Euro Stoxx 50</option>
+												<option value="MDax">MDax</option> 
+												<option value="Cac40">Cac40</option><option value="Sbf80">Sbf80</option><option value="Sbf120">Sbf120</option>
+												<option value="Aex25">Aex25</option>        		    <option value="Bel20">Bel20</option>
+												<option value="Ibex35">Ibex35</option>        		    <option value="PSI20">PSI20</option>
+												<option value="Ftse100">Ftse100</option>        		    <option value="Nikkei225">Nikkei225</option>        		    <option value="AIM">AIM</option>
+											</select>
+											<div class="element-obscurate" style="width: 100%; height: 100%; z-index: 1;" hidden="">
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+					 			<div class="row">
+					 				<div class="col-xs-4 col-sm-2 mww-dom-component webank-component-radioButton">
+									 <div class="radio inline"><label class="textWrapper">
+									 <input type="radio" name="searchType" value="titolo">
+									 <span class="text">Titolo</span></label>
+									 </div>
+									 </div>
+									 <div class="col-xs-8 col-sm-7 wrapper-obscurate">
+									 <div class="mww-dom-component webank-component-composite-inserimentoOrdineSimpleSearch">
+									 <div class="form-group mww-dom-component webank-component-overlay">
+									 <div class="row">
+									 <div class="col-xs-12 col-sm-7 mww-dom-component webank-component-input">
+									 <label class="control-label mww-status-hidden" hidden="" title="" data-toggle="tooltip" data-html="true" data-trigger="focus" data-original-title="Puoi effettuare la ricerca inserendo alternativamente la descrizione, il simbolo o il codice ISIN del titolo.<br><br><strong>Codice Isin</strong>: &amp;egrave il codice alfanumerico internazionale identificativo del titolo. E' formato da 12 caratteri, i primi due richiamano il Paese di emissione del titolo.<br><br><strong>Descrizione</strong>: riporta per intero il nome dello strumento finanziario (es. BPM).<br><br><strong>Simbolo</strong>: codice di identificazione di un titolo, il pi&amp;ugrave; delle volte composto dall'abbreviazione del nome della societ&amp;agrave;. Per esempio, &quot;AMZN&quot; &amp;egrave; il simbolo di AMAZON.">Titolo</label>			<div>		<div class="editable-input">		<input class="form-control clear-x" type="text" placeholder="ISIN, simbolo o descrizione">				 			<span class="editable-clear-x" style="display: none;">				<i class="icon icon-close icon-1x"></i>			</span>			</div>	</div>			</div>		<div class="col-xs-12 col-sm-5 mww-dom-component webank-component-combobox">			<label class="control-label mww-status-hidden">Mercato</label>			<select class="form-control" id="select">    		    <option class="mww-status-highlighted" value="0">Azioni</option>        		    <option value="1">MTA</option>        		    <option value="2">BIT GEM</option>        		    <option value="3">AIM</option>        		    <option value="4">AEX25</option>        		    <option class="mww-status-highlighted" value="5">Obbligazioni</option>        		    <option value="6">MOT</option>        		    <option value="7">EuroTLX</option>        		    <option value="8">Hi-MTF</option>        		    <option value="9">EuroMOT</option>        		    <option value="10">ExtraMOT</option>        		    <option value="11">OTC</option>        		    <option class="mww-status-highlighted" value="12">SD/Certificates</option>        		    <option value="13">SEDEX</option>        		    <option value="14">EuroTLX</option>        		    <option value="15">AIM</option>        		    <option class="mww-status-highlighted" value="16">ETF-ETC</option>        		    <option value="17">ETFPlus</option>        		    <option class="mww-status-highlighted" value="18">Derivati</option>        		    <option value="19">IDEM</option>        		    <option class="mww-status-highlighted" value="20">Risparmio gestito</option>        		    <option value="21">Fondi/Sicav</option>    </select>		</div>		<div class="col-sm-4 col-xs-12 no-label" hidden="">			<div class="btn-align-left mww-dom-component webank-component-button">				<a class="btn btn-primary" type="button" title="Cerca">	Cerca</a>				<a>Ricerca evoluta</a>			</div>		</div>	</div>			<div class="row" hidden="">			Titolo <strong></strong> 			<span>|</span> 			Mercato <strong></strong>			<span>|</span>			<a>cerca altro titolo</a>			<div class="mww-status-hidden mww-dom-component webank-component-combobox"><select class="form-control" id="select"></select></div>		</div>		<div hidden="" class="mww-dom-component webank-component-button"><a class="btn btn-primary" type="button" data-toggle="modal" data-target="#searchResult">	undefined</a></div>	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="searchResult">	<div class="modal-dialog modal-lg" role="document">		<div></div>		<div class="modal-content">			<div class="modal-header">				<a class="close btn-icon" data-dismiss="modal" aria-label="Close"><i class="icon icon-alert_error_fill icon-2x"></i></a>				<h2 class="modal-title">Risultati della ricerca</h2>			</div>			<div class="modal-body"></div>			<div class="mww-confirmButtonWrapper modal-footer">			<div class="form-group">				<div class="btn-align-left mww-dom-component webank-component-button" hidden="">					<a class="btn btn-default" type="button" title="annulla">	annulla</a>				</div>				<div class="btn-align-right mww-dom-component webank-component-button">					 <a class="btn btn-primary btn-disabled" type="button" title="conferma" disabled="disabled">	conferma</a>				</div>							</div>			</div>		</div>	</div></div></div></div>												<div class="element-obscurate" style="width: 100%; height: 100%; z-index: 1;"></div>					                         </div>					                         
+									 <div class="col-sm-3 col-xs-12 no-label">																								<div class="btn-align-left mww-dom-component webank-component-button">													<a class="btn btn-primary" type="button" title="aggiungi">	aggiungi</a></div>											</div>				                   		</div>				                   					                    </div>				                  </div>				            </div>				        
+									</div>				   	
+  								</div>
+					  </div>
 
-                   		</div>
-                   	
-                    </div>
-                  </div>
-            </div>
-        </div>
-   	 </div>
+
 	
     </form>
-	<section>
-	<p style="width:100%;padding:20px;text-align:center;background-color:green;color:white;text-transform:uppercase">PER ORA INCLUDERE IFRAME AS IS </p>
-	</section>
-  
 </section>

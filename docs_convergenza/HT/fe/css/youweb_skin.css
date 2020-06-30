@@ -2064,6 +2064,13 @@ table tr td.colGroup, table tr th.colGroup,
 .ui-dialog .table tr th.colGroup {
   padding: 0;
 }
+table tr td a.schedaTitolo, table tr th a.schedaTitolo,
+.table tr td a.schedaTitolo,
+.table tr th a.schedaTitolo,
+.ui-dialog .table tr td a.schedaTitolo,
+.ui-dialog .table tr th a.schedaTitolo {
+  text-decoration: underline;
+}
 table tr th,
 .table tr th,
 .ui-dialog .table tr th {
