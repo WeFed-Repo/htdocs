@@ -104,6 +104,9 @@
       }
     }
   }
+  .btn-block{
+    margin-bottom:0;
+  }
 }
 
 /* Icone bottoni */
@@ -289,4 +292,10 @@ p.note.flRight {
       text-align: center;
     }
   }
+}
+
+/*bottone di ricerca rapida */ 
+.toggleRicercaRapida .icon {
+  margin-right :10px
+ 
 }
