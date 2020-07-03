@@ -718,11 +718,14 @@ p.note.flRight a.btn-icon {
     font-size: 20px !important;
   }
   .line-button .btn {
-    padding: 9px 18px 7px 18px;
+    padding: 11px 18px 7px 18px;
   }
   .line-button .btn-align-left {
-    text-align: center;
-    float: none;
+    text-align: center !important;
+    float: none !important;
+    max-width: none !important;
+    display: block;
+    padding-right: 0 !important;
   }
   .line-button .btn-align-left.last {
     position: relative;

@@ -3407,7 +3407,7 @@ body.popup #contenuti {
     font-size: 22px!important;
   }
   .line-button .icon-text {
-    top: -8px;
+    top: -2px;
   }
 }
 @media (max-width: 767px) {
@@ -3425,7 +3425,7 @@ body.popup #contenuti {
     font-size: 22px!important;
   }
   .line-button .icon-text {
-    top: -8px;
+    top: -2px;
   }
   .line-button .btn-align-left {
     text-align: center;
