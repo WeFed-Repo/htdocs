@@ -475,6 +475,11 @@ h4.txthelp {
   padding-left: 55px;
 }
 
+.button, .btn {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
 .button:hover, .btn:hover {
   background-color: #474B4E;
   color: #fff;
@@ -4148,7 +4153,7 @@ div.pager .circle.current_page {
   position: relative;
   overflow: hidden;
   border: #0e977f 1px solid;
-  min-height: 645px;
+  min-height: 700px;
 }
 .slider-section .slider-map-graph .slide.slide-01 {
   display: none;

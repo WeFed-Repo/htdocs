@@ -1,5 +1,8 @@
 .button, .btn {
   // copre tutti i casi compresi i doppi stati
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
   &:hover {
     background-color: $grayDark;
     color: $white;
@@ -13,6 +16,7 @@
   &.btn-navigation {
     background-color: $primary;
     margin-left: 20px;
+    
     &:first-child {
       margin-left:0;
     }
