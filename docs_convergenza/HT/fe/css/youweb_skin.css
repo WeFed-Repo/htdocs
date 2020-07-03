@@ -1887,11 +1887,12 @@ a.output {
 .select-periodo-switch > a {
   width: 28px;
   float: right;
-  margin-top: 30px;
+  margin-top: 43px;
   text-decoration: none;
   text-align: center;
   display: block;
   z-index: 6;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .select-periodo-switch > a {
