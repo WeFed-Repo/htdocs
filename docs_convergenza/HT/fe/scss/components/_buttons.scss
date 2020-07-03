@@ -84,10 +84,14 @@
     display: inline-block;
     vertical-align:top;
     width:100%;
+    div:only-child {
+      max-width:100% !important;
+    }
     .btn-align-left,.btn-align-right {
       margin: 0;
       display:inline-block;
       max-width:50%;
+      
       &.btn-align-left {
         padding-right:8px;
         text-align:left;
@@ -302,4 +306,11 @@ p.note.flRight {
 .toggleRicercaRapida .icon {
   margin-right :10px
  
+}
+
+/* Bottoni con padre no-label */
+@media (min-width: 992px) {
+  .no-label .btn {
+    margin-top:6px;
+  }
 }
