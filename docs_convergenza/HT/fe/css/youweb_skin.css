@@ -100,6 +100,10 @@ ul.azioni li, li.azioni li, ol.azioni li {
 }
 
 /* Classi per margini top generiche */
+.noMarginBottom {
+  margin-bottom: 0 !important;
+}
+
 .marginTopNone, .marginBottomIper, .marginBottomMega, .marginBottomExtra, .extraElement, section.big, hr.spacer, .marginBottomLarge, h2, video, embed, object, .largeElement, .boxesito, .panel-nofill, .marginBottomMedium, .box-generico-comunicazioni-block, .box-generico, .box-generico-border h4, .panel-group, .topBtn, .box-generico-text, .imgWrapperResponsive, p, ol, ul, hr, table, form, .marginBottomSmall, .marginBottomMini, .stepBtn, .wrapper-btn-products, .plus-small, .marginBottomMicro, .form-group.last, .btnWrapper, h4, caption, .marginBottomNano, .control-label, .form-group .pin_testo, .marginBottomNone, .panel-body form:last-child {
   margin-top: 0;
 }
@@ -555,6 +559,9 @@ h4.txthelp {
     vertical-align: top;
     width: 100%;
   }
+  .btnWrapper div:only-child {
+    max-width: 100% !important;
+  }
   .btnWrapper .btn-align-left, .btnWrapper .btn-align-right {
     margin: 0;
     display: inline-block;
@@ -765,6 +772,12 @@ p.note.flRight a.btn-icon {
   margin-right: 10px;
 }
 
+/* Bottoni con padre no-label */
+@media (min-width: 992px) {
+  .no-label .btn {
+    margin-top: 6px;
+  }
+}
 .control-label-output {
   display: inline-block;
   float: left;
@@ -1590,7 +1603,7 @@ table td .ui-spinner .ui-spinner-button .icon:before {
   width: auto;
   display: inline-block;
 }
-.borderFormRounded .output a {
+.borderFormRounded .output a:not(.btn) {
   color: #0e977f;
 }
 

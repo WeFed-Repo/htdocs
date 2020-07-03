@@ -819,7 +819,7 @@ table td .ui-spinner {
       width:auto;
       display:inline-block;
     }
-    a{color:$primary}
+    a:not(.btn){color:$primary}
 }
 a.output {color: $primary;text-decoration:underline}
 

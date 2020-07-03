@@ -40,8 +40,8 @@ $(function() {
 <div class="navContFirstLev outerTab marginBottomLarge">
 	<div class="innerTab">
 		<ul class="tabbig">
-			<li class="<?php if($cw=="cw") print "on"; ?>"><a href="/template/strutt_webank.php?tpl=tpl_responsive_cw_certificates_ricerca.php&cw=cw">CW</a></li>
-			<li class="<?php if($cw=="certificates") print "on"; ?>"><a href="/template/strutt_webank.php?tpl=tpl_responsive_cw_certificates_ricerca.php&cw=certificates">Certificates</a></li>
+			<li class="<?php if($cw=="cw") print "on"; ?>"><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_responsive_cw_certificates_ricerca.php&cw=cw&html=mi">CW</a></li>
+			<li class="<?php if($cw=="certificates") print "on"; ?>"><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_responsive_cw_certificates_ricerca.php&cw=certificates&html=mi">Certificates</a></li>
 		</ul>
 	</div>
 	<div class="separator"></div>
@@ -72,10 +72,17 @@ $(function() {
 			});
 
 			// Ricerca rapida
-			$("#ricercaRapidaBtn").click(function(){
+			$("#ricercaSempliceBtn, #ricercaAvanzataBtn").click(function(){
+				// Blocco ricerche disattivato
+				$("#blocchiRicerca, #formRicercaOut").toggle();
+				// Risultati
 				$("#searchResults").show();
-
 			});
+
+			$(".backRicercaRapida").click(function(){
+				$("#blocchiRicerca, #formRicercaOut").toggle();
+				$("#searchResults").hide();
+			})
 
 		});
 	})
@@ -210,8 +217,9 @@ $(function() {
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="borderFormRounded">
+					<div id="blocchiRicerca">
 
-						<div id="ricercaSemplice" class="form-group" class="collapse in">
+						<div id="ricercaSemplice" class="form-group noMarginBottom" class="collapse in">
 
 							<div class="row">
 								<div class="col-xs-12">
@@ -226,41 +234,27 @@ $(function() {
 
 								<div class="row">
 									<div class="col-sm-4 col-xs-12">
-										<label class="control-label" for="isin">Isin</label>
+										<label class="control-label" for="isin">Titolo</label>
 										<input class="form-control" type="text" name="isin">
 									</div>
-									<div class="col-sm-3 col-xs-12">
+									<div class="col-sm-4 col-xs-12">
 										<label class="control-label">Mercato</label>
 										<select class="form-control">
 											<option>Lorem ipsum dolor</option>
 											<option>Ipsum dolor</option>
 										</select>
 									</div>
-									<div class="col-sm-3 col-xs-12">
-										<label class="control-label">Emittente</label>
-										<select class="form-control">
-											<option>Banca Akros</option>
-											<option>Banca Imi</option>
-											<option>Banca Monte Paschi di Siena</option>
-											<option>BNP Paribas Issuance</option>
-											<option>Commerzbank</option>
-											<option>Natixis structured issuance</option>
-											<option>Societe generale</option>
-											<option>Societe generale issuer</option>
-											<option>Unicredit Bank</option>
-											<option>Vontobel financial products GM</option>
-										</select>
-									</div>
-									<div class="col-sm-2 col-xs-12 no-label">
-										<a type="button" class="btn btn-primary btn-block" id="ricercaRapidaBtn">Cerca</a>
+									<div class="col-xs-12 col-sm-3 col-sm-offset-1 no-label">
+										<a type="button" class="btn btn-primary btn-block" id="ricercaSempliceBtn">Cerca</a>
 									</div>
 								</div>
-
+							
+									
 							</form>
 
 						</div>
 
-						<div id="ricercaAvanzata" class="collapse">
+						<div id="ricercaAvanzata" class="collapse noMarginBottom">
 
 							<a href="javascript:void(0);" class="toggleRicercaRapida no-underline btn-icon btn-icon-text collapsed float-right">
 								<i class="icon icon-zoom_big"></i>
@@ -354,8 +348,8 @@ $(function() {
 
 								<div class="form-group">
 									<div class="row">
-										<div class="col-xs-12 col-sm-2 col-sm-offset-10">
-											<a type="button" class="btn btn-primary btn-block" id="ricercaRapidaBtn">Cerca</a>
+										<div class="col-xs-12 col-sm-3 col-sm-offset-9">
+											<a type="button" class="btn btn-primary btn-block" id="ricercaAvanzataBtn">Cerca</a>
 										</div>
 									</div>
 								</div>
@@ -364,9 +358,43 @@ $(function() {
 							</form>
 
 						</div>
-
 					</div>
+				
+					<!-- Blocco esempio output -->
+					<div id="formRicercaOut" style="display:none">
+						<div class="formGenerico output noMarginBottom">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4 col-xs-12">
+										<label class="control-label" for="isin">Lorem</label>
+										<span class="output">Ipsum dolor sit amet</span>
+									</div>
+									<div class="col-sm-4 col-xs-12">
+										<label class="control-label" for="isin">Lorem</label>
+										<span class="output">Ipsum dolor sit amet</span>
+									</div>
+								</div>
+							</div>
+							<!-- Blocco con pulsantiera -->
+							<div class="form-group">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="btnWrapper">
+											<div class="btn-align-right">
+												<a type="button" class="btn btn-primary backRicercaRapida">Nuova ricerca</a>
+												<a type="button" class="btn btn-primary backRicercaRapida">Modifica ricerca</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Fine blocco pulsantiera -->
+						</div>
+					</div>
+					<!-- Fine blocco esempio output -->
+
 				</div>
+			</div>
 		</div>
 	</section>
 
