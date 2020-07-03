@@ -190,6 +190,7 @@ table,
     
     td { 
       vertical-align:middle; 
+      a:not(.btn-icon) {text-decoration: underline}
       &.td-fondo {
         padding:15px;
         text-align:center;

@@ -2327,6 +2327,11 @@ table tr td,
 .ui-dialog .table tr td {
   vertical-align: middle;
 }
+table tr td a:not(.btn-icon),
+.table tr td a:not(.btn-icon),
+.ui-dialog .table tr td a:not(.btn-icon) {
+  text-decoration: underline;
+}
 table tr td.td-fondo,
 .table tr td.td-fondo,
 .ui-dialog .table tr td.td-fondo {

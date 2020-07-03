@@ -925,6 +925,7 @@ h1 .pager .circle {
 
 /*FORM */
 @media screen and (min-width: 768px) {
+    
     .boxDefault:first-child {
         border-right: 2px solid #ebeef0 !important;
     }
@@ -5043,7 +5044,7 @@ span.colAlert {
     display: none;
 }
 
-.preventivatore .mData .tassi.opened .tassi-switch .icon.icon-row_contract {
+.preventivatore .mData .tassi.opened .tassi-switch .icon.icon-row_contrhighact {
     display: inline-block;
 }
 
@@ -7371,19 +7372,30 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .center {text-align: center!important;}
 .fixedColumns.scelta-profilo .radio-mobile {display:none}
 .fixedColumns.scelta-profilo input[type=radio] {position: static!important;}
-.fixedColumns.scelta-profilo .evidenziato, .fixedColumns.scelta-profilo tr .highlight {background-color: #ddd;}
+.fixedColumns.scelta-profilo .evidenziato {background-color: #ddd;}
+.fixedColumns.scelta-profilo tr .highlight {background-color: #ecf5f3;}
 .fixedColumns.scelta-profilo .right{text-align:right!important}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 15px}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 15px}
 .linee-wrapper {border: 1px solid #ccc;border-bottom:0;width: 100%;float:left;padding-top:15px;}
-.linee-wrapper .lineaT {float:left;padding-left: 46%;height:30px;font-weight: bold}
+.linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left;padding-left: 46%;height:30px;font-weight: bold}
+.linee-wrapper .lineaTb {padding-left: 52%;}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
 .textWrapper {position:relative;}
 .textWrapper a { text-decoration: underline; cursor:pointer }
 .bootstrap-table {
     position:relative
 }
+@media screen and (max-width: 1100px) {
+    .linee-wrapper .lineaTb {padding-left: 51%;}
+    .linee-wrapper .lineaN {padding-right:4%}
 
+}
+@media screen and (max-width: 780px) {
+    .linee-wrapper .lineaTb {padding-left: 49%;}
+    .linee-wrapper .lineaN {padding-right:4%}
+
+}
 /* Iconcina help per checkbox e radio */
 .textWrapper .btn-icon {top: -5px;
     border-bottom: 0 !important;
@@ -7408,7 +7420,7 @@ div.fixed-table-scroll-outer {
 .bootstrap-table table {margin-top:0}
 
 @media (max-width:820px) {
-    .linee-wrapper .lineaT {float:left;padding-left: 40%;height:30px;}
+    .linee-wrapper .lineaT {float:left;padding-left: 37%;height:30px;}
 }
 @media (max-width:767px) {
     .fixed-table-header-columns, .fixed-table-body-columns {
@@ -7462,10 +7474,11 @@ div.fixed-table-scroll-outer {
         background-color: #ddd;
         width:58px;
      }
-    .fixedColumns.scelta-profilo .evidenziato, .fixedColumns.scelta-profilo .hightlight {width:40px;background-color: #ddd;}
+    .fixedColumns.scelta-profilo .evidenziato, 
+    .fixedColumns.scelta-profilo .hightlight {width:40px;background-color: #ddd;}
     .fixedColumns.scelta-profilo th:first-child .fht-cell {width:69px!important}
     .fixedColumns.scelta-profilo .evidenziato .fht-cell {width:40px!important}
-    .fixed-table-header-columns {width:206px!important}
+    .fixed-table-header-columns {width:206px!important; max-height: 50px}
     .fixedColumns.scelta-profilo .radio-mobile {display:table-row}
     .fixedColumns.scelta-profilo .radio-mobile input {position:static!important}
 
