@@ -74,13 +74,15 @@ $(function() {
 			// Ricerca rapida
 			$("#ricercaSempliceBtn, #ricercaAvanzataBtn").click(function(){
 				// Blocco ricerche disattivato
-				$("#blocchiRicerca, #formRicercaOut").toggle();
+				$("#blocchiRicerca").hide();
+				$("#formRicercaOut").show();
 				// Risultati
 				$("#searchResults").show();
 			});
 
 			$(".backRicercaRapida").click(function(){
-				$("#blocchiRicerca, #formRicercaOut").toggle();
+				$("#blocchiRicerca").show();
+				$("#formRicercaOut").hide();
 				$("#searchResults").hide();
 			})
 
@@ -366,11 +368,11 @@ $(function() {
 							<div class="form-group">
 								<div class="row">
 									<div class="col-sm-4 col-xs-12">
-										<label class="control-label" for="isin">Lorem</label>
+										<label class="control-label-output" for="isin">Lorem</label>
 										<span class="output">Ipsum dolor sit amet</span>
 									</div>
 									<div class="col-sm-4 col-xs-12">
-										<label class="control-label" for="isin">Lorem</label>
+										<label class="control-label-output" for="isin">Lorem</label>
 										<span class="output">Ipsum dolor sit amet</span>
 									</div>
 								</div>

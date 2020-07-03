@@ -317,3 +317,6 @@ p.note.flRight {
     margin-top:6px;
   }
 }
+@media (max-width: 991px) {
+  .tabbed-buttons {.btn-align-left {max-width:100% !important}}
+}

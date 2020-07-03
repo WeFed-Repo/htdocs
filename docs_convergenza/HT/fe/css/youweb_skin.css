@@ -778,6 +778,11 @@ p.note.flRight a.btn-icon {
     margin-top: 6px;
   }
 }
+@media (max-width: 991px) {
+  .tabbed-buttons .btn-align-left {
+    max-width: 100% !important;
+  }
+}
 .control-label-output {
   display: inline-block;
   float: left;
