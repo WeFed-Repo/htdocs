@@ -138,11 +138,7 @@ function print_periodo_switch($periodo) {
   					    <input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
                 value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
   					    <a class="input-group-addon date">
-                  <?php if($site == "webank") { ?>
-                    <i class="icon icon-calendar_filled"></i>
-                  <?php } else { ?>
-                    <img src="/HT/fe/img/calendar.png">
-                  <?php } ?>
+                  <i class="icon icon-calendar_filled"></i>
                 </a>
   	     		  </div>
           </div>
@@ -152,11 +148,7 @@ function print_periodo_switch($periodo) {
   					    <input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
                 value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
   					    <a class="input-group-addon date">
-                  <?php if($site == "webank") { ?>
-                    <i class="icon icon-calendar_filled"></i>
-                  <?php } else { ?>
-                    <img src="/HT/fe/img/calendar.png">
-                  <?php } ?>
+                  <i class="icon icon-calendar_filled"></i>
                 </a>
   	     		  </div>
           </div>
@@ -170,11 +162,7 @@ function print_periodo_switch($periodo) {
       </div>
     </div>
     <a class="print_periodo_switch">
-      <?php if($site == "webank") { ?>
         <i class="icon icon-calendario"></i>
-      <?php } else { ?>
-        <img src="/HT/fe/img/calendar.png">
-      <?php } ?>
     </a>
   </div>
 <?php } ?>

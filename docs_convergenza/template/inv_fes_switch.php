@@ -323,7 +323,9 @@ var openFundModal = function(fundname,isin) {
 											</div>
 
 											<!-- Fine blocco dei filtri -->
+											
 
+											
 
 										</section>
 

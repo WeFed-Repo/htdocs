@@ -100,6 +100,10 @@ ul.azioni li, li.azioni li, ol.azioni li {
 }
 
 /* Classi per margini top generiche */
+.noMarginBottom {
+  margin-bottom: 0 !important;
+}
+
 .marginTopNone, .marginBottomIper, .marginBottomMega, .marginBottomExtra, .extraElement, section.big, hr.spacer, .marginBottomLarge, h2, video, embed, object, .largeElement, .boxesito, .panel-nofill, .marginBottomMedium, .box-generico-comunicazioni-block, .box-generico, .box-generico-border h4, .panel-group, .topBtn, .box-generico-text, .imgWrapperResponsive, p, ol, ul, hr, table, form, .marginBottomSmall, .marginBottomMini, .stepBtn, .wrapper-btn-products, .plus-small, .marginBottomMicro, .form-group.last, .btnWrapper, h4, caption, .marginBottomNano, .control-label, .form-group .pin_testo, .marginBottomNone, .panel-body form:last-child {
   margin-top: 0;
 }
@@ -475,6 +479,11 @@ h4.txthelp {
   padding-left: 55px;
 }
 
+.button, .btn {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
 .button:hover, .btn:hover {
   background-color: #474B4E;
   color: #fff;
@@ -549,6 +558,9 @@ h4.txthelp {
     display: inline-block;
     vertical-align: top;
     width: 100%;
+  }
+  .btnWrapper div:only-child {
+    max-width: 100% !important;
   }
   .btnWrapper .btn-align-left, .btnWrapper .btn-align-right {
     margin: 0;
@@ -713,11 +725,14 @@ p.note.flRight a.btn-icon {
     font-size: 20px !important;
   }
   .line-button .btn {
-    padding: 9px 18px 7px 18px;
+    padding: 11px 18px 7px 18px;
   }
   .line-button .btn-align-left {
-    text-align: center;
-    float: none;
+    text-align: center !important;
+    float: none !important;
+    max-width: none !important;
+    display: block;
+    padding-right: 0 !important;
   }
   .line-button .btn-align-left.last {
     position: relative;
@@ -757,6 +772,17 @@ p.note.flRight a.btn-icon {
   margin-right: 10px;
 }
 
+/* Bottoni con padre no-label */
+@media (min-width: 992px) {
+  .no-label .btn {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 991px) {
+  .tabbed-buttons .btn-align-left {
+    max-width: 100% !important;
+  }
+}
 .control-label-output {
   display: inline-block;
   float: left;
@@ -1582,7 +1608,7 @@ table td .ui-spinner .ui-spinner-button .icon:before {
   width: auto;
   display: inline-block;
 }
-.borderFormRounded .output a {
+.borderFormRounded .output a:not(.btn) {
   color: #0e977f;
 }
 
@@ -1879,11 +1905,12 @@ a.output {
 .select-periodo-switch > a {
   width: 28px;
   float: right;
-  margin-top: 30px;
+  margin-top: 43px;
   text-decoration: none;
   text-align: center;
   display: block;
   z-index: 6;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .select-periodo-switch > a {
@@ -4153,7 +4180,7 @@ div.pager .circle.current_page {
   position: relative;
   overflow: hidden;
   border: #0e977f 1px solid;
-  min-height: 645px;
+  min-height: 700px;
 }
 .slider-section .slider-map-graph .slide.slide-01 {
   display: none;

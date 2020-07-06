@@ -819,7 +819,7 @@ table td .ui-spinner {
       width:auto;
       display:inline-block;
     }
-    a{color:$primary}
+    a:not(.btn){color:$primary}
 }
 a.output {color: $primary;text-decoration:underline}
 
@@ -1086,11 +1086,12 @@ a.output {color: $primary;text-decoration:underline}
  > a {
    width: 28px;
    float:right;
-   margin-top: 30px;
+   margin-top: 43px;
    text-decoration: none;
    text-align: center;
    display: block;
    z-index: 6;
+   cursor: pointer;
    @media (max-width: 991px) {
      margin-top: 25px;
    }
