@@ -3128,10 +3128,6 @@ table .table-btn-more:hover {
   border: 0;
   padding: 0;
 }
-.panel-collapse .modal-body h4 + .borderFormRounded {
-  border: 1px solid #ccc;
-  padding: 20px 20px 14px 20px;
-}
 .tithelp h4 {
   display: inline-block;
   margin: 0;
@@ -4471,7 +4467,7 @@ form .col-lg-12 {
 }
 .selectRapp .selector {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   left: 0;
   overflow: auto;
   border: 1px solid #ccc;

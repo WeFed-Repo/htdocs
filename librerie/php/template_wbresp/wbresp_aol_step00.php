@@ -202,7 +202,6 @@
 	</div>
 
    <hr>
-   <!--- vecchio HTML
     <div class="row">
         <div class="col-sm-12">
             <p>Con riferimento all'informativa resa chiediamo il tuo consenso al trattamento dei dati personali per finalit&agrave; non necessarie all'adempimento degli obblighi contrattuali descritti.
@@ -217,13 +216,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="radio radio-inline">
-                <input type="radio" name="consDatiPersonali" id="consenso1a" value="1">
+                <input type="radio" name="consenso1" id="consenso1a" value="1">
                 <label for="consenso1a">Acconsento</label>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="radio radio-inline" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipiscing elit">
-                <input type="radio" name="consDatiPersonali" id="consenso1b" value="0" >
+                <input type="radio" name="consenso1" id="consenso1b" value="0" >
                 <label for="consenso1b">Non acconsento</label>
             </div>
         </div>
@@ -237,13 +236,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="radio radio-inline">
-                <input type="radio" name="cons_5" id="consenso2a" value="1">
+                <input type="radio" name="consenso2" id="consenso2a" value="1">
                 <label for="consenso2a">Acconsento</label>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="radio radio-inline" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipiscing elit">
-                <input type="radio" name="cons_5" id="consenso2b" value="0">
+                <input type="radio" name="consenso2" id="consenso2b" value="0">
                 <label for="consenso2b">Non acconsento</label>
             </div>
         </div>
@@ -257,13 +256,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="radio radio-inline">
-                <input type="radio" name="cons_6" id="consenso3a" value="1">
+                <input type="radio" name="consenso3" id="consenso3a" value="1">
                 <label for="consenso3a">Acconsento</label>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="radio radio-inline" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipiscing elit">
-                <input type="radio" name="cons_6" id="consenso3b" value="0">
+                <input type="radio" name="consenso3" id="consenso3b" value="0">
                 <label for="consenso3b">Non acconsento</label>
             </div>
         </div>
@@ -273,7 +272,6 @@
             <p class="note">(*) I campi contrassegnati con l'asterisco sono obbligatori</p>
         </div>
     </div>
-    VECCHIO HTML-->
     <hr>
     <div class="row">
         <div class="col-md-12 col-sm-12">
