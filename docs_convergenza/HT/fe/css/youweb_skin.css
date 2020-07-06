@@ -1924,6 +1924,10 @@ a.output {
   padding-right: 20px !important;
 }
 
+.print_periodo_switch i {
+  font-size: 26px;
+}
+
 /* Elemento form tipo ricerca interattiva  */
 .magicSearch {
   width: 100%;

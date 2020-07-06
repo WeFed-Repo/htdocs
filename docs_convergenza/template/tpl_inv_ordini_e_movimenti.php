@@ -162,7 +162,8 @@ function print_periodo_switch($periodo) {
       </div>
     </div>
     <a class="print_periodo_switch">
-        <i class="icon icon-calendario"></i>
+        <i data-inputtoggle class="icon icon-calendario"></i>
+        <i data-inputtoggle class="icon icon-calendario_assist" style="display:none"></i>
     </a>
   </div>
 <?php } ?>
