@@ -4,7 +4,7 @@ const stati = {
         "BOZZA_VALIDATA", // Salvataggio backend
         "RACCOLTA_PRODOTTI",
         "ADEMPIMENTI_NORMATIVI"],
-    "int0" :[
+    "int0": [
         "INT0_RIEPILOGO_DATI",
         "INT0_CERTIF_CREDENZIALI",
         "INT0_IDENTIF_CLIENTE",
@@ -24,37 +24,35 @@ const stati = {
         "INT1_FIRMA_VESSATORIE_INVESTIMENTO",
         "INT1_FIRMA_CONSULENTE" // Salvataggio backend
     ],
-    "finale" : ["CONCLUSA"] // Salvataggio backend
+    "finale": ["CONCLUSA"] // Salvataggio backend
 }
 
 // Ritorna tutti gli stati possibili per la pratica (a seconda del numero di intestatari ecc)
-let getStatiPratica = (form)=>{
+let getStatiPratica = (form) => {
 
     let stati_pratica = stati["iniziali"];
 
-    if (form && form.field_numintestatari==="2") {
-            
+    if (form && form.field_numintestatari === "2") {
+
         // Caso con 2 intestatari
-        if(form.field_ordineintestatari==="01") {
-                
-                stati_pratica = stati_pratica.concat(stati["int0"]);
-                stati_pratica = stati_pratica.concat(stati["int1"]);
-            
-            }
-            else
-            {
+        if (form.field_ordineintestatari === "01") {
 
-                stati_pratica = stati_pratica.concat(stati["int1"]);
-                stati_pratica = stati_pratica.concat(stati["int0"]);
-
-            }
-        }
-        else
-        {
             stati_pratica = stati_pratica.concat(stati["int0"]);
+            stati_pratica = stati_pratica.concat(stati["int1"]);
+
         }
+        else {
+
+            stati_pratica = stati_pratica.concat(stati["int1"]);
+            stati_pratica = stati_pratica.concat(stati["int0"]);
+
+        }
+    }
+    else {
+        stati_pratica = stati_pratica.concat(stati["int0"]);
+    }
     stati_pratica = stati_pratica.concat(stati["finale"]);
-    return(stati_pratica);
+    return (stati_pratica);
 
 }
 
@@ -65,25 +63,23 @@ let getAvanzamentoPratica = (form) => {
     // Livelli generali (primi 4 step)
     let completo = true,
         corrente = false,
-        avanzamento =  {};
-    getStatiPratica(form).forEach((val)=>{
+        avanzamento = {};
+    getStatiPratica(form).forEach((val) => {
         if (stato === val) {
             avanzamento[val] = "completo";
             // è l'ultimo step completo
             corrente = true;
             completo = false;
         }
-        else
-        {
+        else {
             if (corrente) {
                 avanzamento[val] = "corrente";
                 corrente = false;
             }
-            else
-            {
-                avanzamento[val] = ( completo )? "completo" : "";
+            else {
+                avanzamento[val] = (completo) ? "completo" : "";
             }
-           
+
         }
     });
     return (avanzamento);
@@ -91,30 +87,29 @@ let getAvanzamentoPratica = (form) => {
 
 let stateInt = (form) => {
     let cState = form.field_stato;
-    if (stati["iniziali"].indexOf(cState)>=0 || cState ==="conclusa") {
+    if (stati["iniziali"].indexOf(cState) >= 0 || cState === "conclusa") {
         return cState
     }
-    else
-    {
-        return ("INT"+ form.field_intestcorrente + "_"+ cState);
+    else {
+        return ("INT" + form.field_intestcorrente + "_" + cState);
     }
-    
+
 }
 
 
 let getNextState = (form) => {
 
     let stati = getStatiPratica(form);
-    
-    return stati[stati.indexOf(stateInt(form))+1].replace("INT0_","").replace("INT1_","");
-    
+
+    return stati[stati.indexOf(stateInt(form)) + 1].replace("INT0_", "").replace("INT1_", "");
+
 }
 
 let getNextInt = (form) => {
     let int = "0",
         stati = getStatiPratica(form);
-    var nextState = stati[stati.indexOf(stateInt(form))+1];
-    if (nextState.indexOf("INT")>=0) {int = nextState.substring(3,4)}
+    var nextState = stati[stati.indexOf(stateInt(form)) + 1];
+    if (nextState.indexOf("INT") >= 0) { int = nextState.substring(3, 4) }
     return (int);
 }
 
@@ -122,15 +117,15 @@ let getPrevState = (form) => {
 
     // Caso con 1 intestatario 
     let stati = getStatiPratica(form);
-    return stati[stati.indexOf(stateInt(form))-1].replace("INT0_","").replace("INT1_","");
+    return stati[stati.indexOf(stateInt(form)) - 1].replace("INT0_", "").replace("INT1_", "");
 }
 
 let getPrevInt = (form) => {
     let int = "0",
-    stati = getStatiPratica(form);
-    var nextState = stati[stati.indexOf(stateInt(form))-1];
-    if (nextState.indexOf("INT")>=0) {int = nextState.substring(3,4)}
+        stati = getStatiPratica(form);
+    var nextState = stati[stati.indexOf(stateInt(form)) - 1];
+    if (nextState.indexOf("INT") >= 0) { int = nextState.substring(3, 4) }
     return (int);
 }
 
-export {getStatiPratica,getAvanzamentoPratica,getNextState,getNextInt,getPrevState,getPrevInt};
+export { getStatiPratica, getAvanzamentoPratica, getNextState, getNextInt, getPrevState, getPrevInt };
