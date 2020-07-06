@@ -22,7 +22,7 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdown() {
-  $('table[tm-bsTable-v2] [data-toggle="dropdown"]').on('click', function () {
+  $('[tm-bsTable-v2] table [data-toggle="dropdown"]').on('click', function () {
     var parent = $(this).parent();
     parent.find('.dropdown-menu').dropdown();
     parent.on('shown.bs.dropdown', function() {

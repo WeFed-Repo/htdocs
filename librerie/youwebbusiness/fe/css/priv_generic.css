@@ -3421,11 +3421,11 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
     font-size: 14px; }
 
 body > .dropdown-menu.show:not(.shown),
-table[tm-bsTable-v2] .dropdown-menu.show:not(.shown) {
+[tm-bsTable-v2] table .dropdown-menu.show:not(.shown) {
   opacity: 0 !important;
   display: none !important; }
 body > .dropdown-menu.shown,
-table[tm-bsTable-v2] .dropdown-menu.shown {
+[tm-bsTable-v2] table .dropdown-menu.shown {
   opacity: 1 !important;
   display: block !important; }
 

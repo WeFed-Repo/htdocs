@@ -39,7 +39,7 @@
 }
 
 body > .dropdown-menu,
-table[tm-bsTable-v2] .dropdown-menu {
+[tm-bsTable-v2] table .dropdown-menu {
   &.show:not(.shown) {
     opacity: 0 !important;
     display: none !important;
