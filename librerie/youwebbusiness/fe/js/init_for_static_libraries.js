@@ -198,9 +198,7 @@ function initModali_static(){
 	  		var elem = $(this);
 				var drop = elem.find('.dropdown-menu');
 				setTimeout(function(){
-					var posTop =  ( (elem.offset().top - drop.height()) < drop.height() )
-														? elem.offset().top + drop.height() + elem.height()
-														: elem.offset().top ;
+					var posTop =  elem.offset().top ;
 					var posLeft =  ( (elem.offset().left - drop.width()) < drop.width() )
 														? elem.offset().left + drop.width() + elem.width()
 														: elem.offset().left ;
