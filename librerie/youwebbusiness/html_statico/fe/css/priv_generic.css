@@ -3420,10 +3420,14 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   .dropleft .dropdown-menu .dropdown-item {
     font-size: 14px; }
 
-.dropdown-menu.show:not(.shown) {
-  opacity: 0 !important; }
-.dropdown-menu.shown {
-  opacity: 1 !important; }
+body > .dropdown-menu.show:not(.shown),
+table[tm-bsTable-v2] .dropdown-menu.show:not(.shown) {
+  opacity: 0 !important;
+  display: none !important; }
+body > .dropdown-menu.shown,
+table[tm-bsTable-v2] .dropdown-menu.shown {
+  opacity: 1 !important;
+  display: block !important; }
 
 .carousel {
   width: 100%;

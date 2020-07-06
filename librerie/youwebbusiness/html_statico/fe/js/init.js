@@ -22,7 +22,7 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdown() {
-  $('[data-toggle="dropdown"]').on('click', function () {
+  $('table[tm-bsTable-v2] [data-toggle="dropdown"]').on('click', function () {
     var parent = $(this).parent();
     parent.find('.dropdown-menu').dropdown();
     parent.on('shown.bs.dropdown', function() {
@@ -42,7 +42,7 @@ function initDropdown() {
         })
         .addClass('shown')
         .detach());
-      }, 100);
+      }, 10);
     }).on('hidden.bs.dropdown', function() {
       $(this).append($('body > .dropdown-menu').css({
         position: false,
