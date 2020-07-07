@@ -17,7 +17,7 @@
 				async: true,
 				method: "POST",
 				dataType: 'html',
-					url: '/include/oggetti/Widget/widget_N13/esempio_notifiche.php',
+					url: '/include/oggetti/Widget/Verona/widget_N13/esempio_notifiche.php',
 					success: function(response) {
 					srap.html(response);
 					srap.parents(".widget").removeClass("loading dark");

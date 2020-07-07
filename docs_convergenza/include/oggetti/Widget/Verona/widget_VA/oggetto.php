@@ -42,7 +42,7 @@
 		<div class="vaBottom"></div>
 	</div>
 </div>
-<script type="text/javascript" src="/HT/av/js/priv_va.js"></script>
+<script type="text/javascript" src="/HT/fe/js/script/assistente_virtuale.js"></script>
 <!-- FINE ASSISTENTE VIRTUALE -->
 
 <div class="riquadro clearfix">

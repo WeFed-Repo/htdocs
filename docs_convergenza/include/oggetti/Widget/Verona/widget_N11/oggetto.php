@@ -52,7 +52,7 @@
 					nconto : $("#riepcarte").val()
 				},
 				dataType: 'html',
-					url: '/include/oggetti/Widget/widget_N11/esempio_carte.php',
+					url: '/include/oggetti/Widget/Verona/widget_N11/esempio_carte.php',
 					success: function(response) {
 					srap.html(response);
 					srap.parents(".widget").removeClass("loading dark");

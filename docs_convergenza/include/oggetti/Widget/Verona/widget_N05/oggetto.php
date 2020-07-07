@@ -67,7 +67,7 @@
 					nconto : $("#riepdep").val()
 				},
 				dataType: 'html',
-					url: '/include/oggetti/Widget/widget_N05/esempio_depositi.php',
+					url: '/include/oggetti/Widget/Verona/widget_N05/esempio_depositi.php',
 					success: function(response) {
 					srap.html(response);
 					srap.parents(".widget").removeClass("loading dark");
