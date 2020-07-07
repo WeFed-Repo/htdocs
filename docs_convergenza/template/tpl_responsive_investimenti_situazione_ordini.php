@@ -150,11 +150,69 @@ $(function(){
 						<option>Lorem ipsum amet </option>
 					</select>
 				</div>
-
-
+				<div class="col-xs-12 col-sm-8">
+						<div class="form-group w100 select-periodo-switch">
+							<div>
+							<div data-inputtoggle class="input-group" style="display:none">
+								<div class="row">
+								<div class="col-xs-6">
+									<label class="control-label">Dal</label>
+											<div class="input-group">
+												<input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
+										value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
+												<a class="input-group-addon date">
+										<i class="icon icon-calendar_filled"></i>
+										</a>
+										</div>
+								</div>
+								<div class="col-xs-6">
+									<label class="control-label">Al</label>
+											<div class="input-group">
+												<input type="text" placeholder="gg/mm/aaaa"  class="periodo form-control clear-x"
+										value="<?php print (($site == "webank") ? date('d/m/Y',strtotime("-1 days")) : date('d/m/Y')) ?>">
+												<a class="input-group-addon date">
+										<i class="icon icon-calendar_filled"></i>
+										</a>
+										</div>
+								</div>
+								</div>
+							</div>
+							<div data-inputtoggle="" style="display: block;">
+								<label class="control-label">Periodo</label>
+								<select class="form-control">
+											<option value="ieri">
+							Ieri      </option>
+										<option value="1">
+							Ultimi 7 giorni      </option>
+										<option value="2">
+							Ultimi 30 giorni      </option>
+										<option value="3">
+							Ultimi 3 mesi      </option>
+										<option value="4">
+							Ultimi 6 mesi      </option>
+									</select>
+							</div>
+						</div>
+						<a class="print_periodo_switch">
+							<i data-inputtoggle class="icon icon-calendario"></i>
+							<i data-inputtoggle class="icon icon-calendario_assist" style="display:none"></i>
+						</a>
+						</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!--
 				<div class="col-xs-12 col-sm-8">
 				<!-- Periodo -->
-					<!-- Selezione tipo select -->
+					<!-- Selezione tipo select
 					<div class="row">
 						<div class="col-xs-10">
 
@@ -197,11 +255,11 @@ $(function(){
 							<a href="javascript:;" class="no-underline btn-icon" id="switchPeriodo"><i class="icon icon-2x icon-edit_fill"></i></a>
 						</div>
 					</div>
-					<!-- Selezione con datepicker -->
+					<!-- Selezione con datepicker
 				</div>
-			</div>
+			</div>-->
 		</div>
-		<!-- / Versione periodo 1 -->
+		<!-- Versione periodo 1 -->
 
 		<div class="form-group">
 			<div class="row">
@@ -830,3 +888,8 @@ confermaRevoca = function (param) {
 </div>
 
 </div>
+<script>
+$('.print_periodo_switch').click(function(e){
+      $(this).parent().find('[data-inputtoggle]').toggle();
+});
+</script>
