@@ -15,19 +15,19 @@
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor sit amet</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
+				<td class="col4 right bold positivo nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
 			</tr>
 			<tr class="pari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_down"></span></td>
+				<td class="col4 right bold negativo nowrap">99,99% <span class="icon icon-titoli_pref_down"></span></td>
 			</tr>
 			<tr class="dispari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
+				<td class="col4 right bold negativo nowrap">99,99% <span class="icon icon-titoli_pref_down"></span></td>
 			</tr>
 			<tr class="pari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
@@ -39,19 +39,19 @@
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor sit amet</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
+				<td class="col4 right bold negativo nowrap">99,99% <span class="icon icon-titoli_pref_down"></span></td>
 			</tr>
 			<tr class="pari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_down"></span></td>
+				<td class="col4 right bold positivo nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
 			</tr>
 			<tr class="dispari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
 				<td class="col2"><a href="#">Lorem ipsum dolor</a></td>
 				<td class="col3">20.059</td>
-				<td class="col4 right bold nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
+				<td class="col4 right bold positivo nowrap">99,99% <span class="icon icon-titoli_pref_up"></span></td>
 			</tr>
 			<tr class="pari">
 				<td class="col1"><a href="javascript:;" class="ico-compravendi"></a></td>
