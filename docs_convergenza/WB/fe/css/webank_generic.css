@@ -13425,7 +13425,7 @@ body.modal-print > .modal-print-content {
 .select-periodo-switch > a {
   width: 28px;
   float: right;
-  margin-top: 30px;
+  margin-top: 26px;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -13441,5 +13441,8 @@ body.modal-print > .modal-print-content {
 }
 .select-periodo-switch .hasDatepicker {
   padding-right: 20px !important;
+}
+.print_periodo_switch i {
+  font-size: 22px;
 }
 /*# sourceMappingURL=webank_generic.css.map */

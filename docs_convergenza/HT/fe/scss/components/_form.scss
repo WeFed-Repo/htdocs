@@ -1093,7 +1093,7 @@ a.output {color: $primary;text-decoration:underline}
    z-index: 6;
    cursor: pointer;
    @media (max-width: 991px) {
-     margin-top: 25px;
+     margin-top: 25px; 
    }
  }
  .input-group-addon {
@@ -1102,7 +1102,11 @@ a.output {color: $primary;text-decoration:underline}
  .hasDatepicker {
    padding-right: 20px !important;
  }
+ 
 }
+.print_periodo_switch i {
+  font-size:26px
+} 
 
 /* Elemento form tipo ricerca interattiva  */
 .magicSearch {

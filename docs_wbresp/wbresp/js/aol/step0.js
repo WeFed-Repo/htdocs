@@ -100,6 +100,23 @@ $(function() {
                 "cons_6": {
                     "required": true
                 }
+                /*,
+                "consGruppo": {
+                    "required": true
+                },
+                "consProf": {
+                    "required": true
+                },
+                 "consCommTerz": {
+                    "required": true
+                },
+                "consDatiTerz": {
+                    "required": true
+                },
+                "consDatiSens": {
+                    "required": true
+                }*/
+                
             },
             "messages": {
                 "num_intestatari": "Seleziona",

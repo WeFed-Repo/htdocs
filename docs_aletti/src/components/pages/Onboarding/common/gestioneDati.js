@@ -22,12 +22,12 @@ const defaultFields = {
             "consenso": ""
         },
         "codicePratica": "",
-        
+
         "intestatariFirme": {
             "0": {
-                
-                "fasciaRedditoNote":"",
-                "origineRedditoNote":"",
+
+                "fasciaRedditoNote": "",
+                "origineRedditoNote": "",
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
@@ -95,11 +95,11 @@ const defaultFields = {
                 "titolareEffettivo": "",
                 "personaEsposta": "",
 
-                "identitaAccertata":""
+                "identitaAccertata": ""
             },
             "1": {
-                "fasciaRedditoNote":"",
-                "origineRedditoNote":"",
+                "fasciaRedditoNote": "",
+                "origineRedditoNote": "",
                 "fasciaPatrimonioNote": "",
                 "origineFondiNote": "",
                 "listRispAdever": {
@@ -394,7 +394,7 @@ let typeKeys = {
         "field_anagraficablob_intestatari_0_listprivacy_2_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_3_consenso",
         "field_anagraficablob_intestatari_0_listprivacy_4_consenso",
-        
+
         "field_anagraficablob_intestatari_1_listprivacy_0_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_1_consenso",
         "field_anagraficablob_intestatari_1_listprivacy_2_consenso",
@@ -412,7 +412,7 @@ let typeKeys = {
 
         "field_sessionfirmeblob_intestatarifirme_0_identitaaccertata",
         "field_sessionfirmeblob_intestatarifirme_1_identitaaccertata"
-        
+
 
     ],
     "timestamp": [
@@ -426,7 +426,7 @@ let typeKeys = {
         "field_anagraficablob_intestatari_1_datarilasciorinnovo",
         "field_anagraficablob_intestatari_1_datascadenza"
     ],
-    "file" : [
+    "file": [
         "field_anagraficablob_intestatari_0_imgcodfiscale",
         "field_anagraficablob_intestatari_0_imgdocidentita",
         "field_anagraficablob_intestatari_0_listresidenzefiscale_0_imgtin",
@@ -455,7 +455,7 @@ let decodeField = (fieldkey, fieldval) => {
             outval = Functions.timestampToText(fieldval);
         }
         else if (typeKeys["boolean"].indexOf(fieldkey) >= 0) {
-            outval = (fieldval===true) ? "true" : ""
+            outval = (fieldval === true) ? "true" : ""
         }
         else if (typeKeys["file"].indexOf(fieldkey) >= 0) {
             outval = fieldval;
@@ -504,7 +504,7 @@ let objFormTranslate = function () {
         let node = {};
         Object.keys(json).forEach((v, i) => {
             // Se non e' un array,un ulteriore oggetto o un tipo FILE...
-            if (typeof json[v] !== "object" || json[v] === null || typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
+            if (typeof json[v] !== "object" || json[v] === null || typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase()) >= 0) {
                 node[v] = prefisso + "_" + v.toLowerCase();
             }
             else {
@@ -537,11 +537,10 @@ let fieldsFromJson = (json) => {
             }
             else {
                 /* Se è un file lo preserva come oggetto */
-                if (typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase())>=0) {
+                if (typeKeys["file"].indexOf(prefisso + "_" + v.toLowerCase()) >= 0) {
                     formObj[prefisso + "_" + v.toLowerCase()] = json[v];
                 }
-                else
-                {
+                else {
 
                     Object.assign(formObj, extractObject(prefisso + "_" + v.toLowerCase(), json[v], formObj));
                 }
@@ -582,4 +581,4 @@ let jsonFromFields = (objState) => {
 
 }
 
-export { defaultFields, fieldsFromJson, jsonFromFields}
+export { defaultFields, fieldsFromJson, jsonFromFields }
