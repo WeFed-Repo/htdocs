@@ -228,7 +228,7 @@ h1 + a.help-icon,h1 + a .imgSrv{left:30px;}
 	#spalla .widget.promo .promobox .promodettaglio {background-color:#122e5c;}
 	#spalla .widget.promo .promobox p {margin:0; padding:0 0 5px;}
 
-	/* iconcine reload piÃƒÆ’Ã‚Â¹ e meno */
+	/* iconcine reload piÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¹ e meno */
 	#spalla a.minibtn {color:#fff;margin-top:-5px;position:relative;cursor:pointer;float:right;display:block;width:20px;height:20px; background:#0e977f none no-repeat center center; background-size:cover;border-radius:50%;}
 	#spalla a.expander span.testo {position:absolute;right:25px;float:right; line-height:22px;text-transform:uppercase;font-weight:bold; font-size:11px;}
 	#spalla a.expander span.icon-meno, #spalla a.expander.expanded span.testo,	#spalla a.expander.expanded span.icon-piu {display:none;}
@@ -5089,7 +5089,7 @@ button.close{
 }
 
 @media ( min-width:1024px){
-/* ripristino della dimensione dei bottoni del menÃƒÆ’Ã‚Â¹ sopra 1024 */
+/* ripristino della dimensione dei bottoni del menÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¹ sopra 1024 */
 	#topNav ul.nav>li{
 		width:90px;
 	}
@@ -8425,15 +8425,4 @@ p.note {font-size:12px; font-weight:300;}
     padding: 0 5px;
     text-align: center;
 
-
-	/*position: absolute;
-	z-index:10;
-	top: -7px;
-    left: 13px;
-	width: 14px;
-    height: 14px;
-	line-height:13px;
-	border-radius:50%;
-	background-color: #122e5c;
-	padding: 3px 5px;*/
 }

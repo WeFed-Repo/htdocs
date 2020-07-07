@@ -41,9 +41,8 @@ if (!isset($pag)) {
 
                     <!-- CONTENITORE PRINCIPALE -->
 
-                    <div id="mainContent" <?php if ($strutt == "full")
-						print "class=\"full\"" ?>>
-						<?php if ($pag != "homepage") { ?>
+                    <div id="mainContent" <?php if ($strutt == "full") print "class=\"full\"" ?>>
+						<?php if ($pag != "tpl_priv_dashboard.php") { ?>
                             <!-- BREADCRUMB -->
                             <div class="breadcrumb">
                                 <span>Briciole di</span>
@@ -63,7 +62,7 @@ if (!isset($pag)) {
                     </div>
                     <!-- SPAZIO PER I CONTENUTI -->
 					<?php if ($strutt == "2col") {
-						if ($pag == "personalizza_homepage") {
+						if ($pag == "tpl_priv_personalizza_homepage.php") {
 							?>
                             <!-- SPALLA DESTRA -->
 							<?php virtual("/include/struttura_youweb/spalla_personalizza_homepage.php") ?>

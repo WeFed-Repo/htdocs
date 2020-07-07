@@ -1,0 +1,150 @@
+[
+  {
+    "data":"01/01/2017",
+    "descrizione":"Capodanno",
+    "tipo":"festivita"
+  },
+  {
+    "data":"06/01/2017",
+    "descrizione":"Epifania",
+    "tipo":"festivita"
+  },
+  {
+    "data":"16/04/2017",
+    "descrizione":"Pasqua",
+    "tipo":"festivita"
+  },
+  {
+    "data":"17/04/2017",
+    "descrizione":"Lunedi di Pasqua",
+    "tipo":"festivita"
+  },
+  {
+    "data":"25/04/2017",
+    "descrizione":"Liberazione",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/05/2017",
+    "descrizione":"Festa del lavoro",
+    "tipo":"festivita"
+  },
+  {
+    "id":"1",
+    "data":"22/05/2017",
+    "descrizione":"Tanti auguri!",
+    "tipo":"personale"
+  },
+  {
+    "data":"26/05/2017",
+    "descrizione":"Addebito Netflix",
+    "tipo":"banking"
+  },
+  {
+    "data":"02/06/2017",
+    "descrizione":"Festa della Repubblica",
+    "tipo":"festivita"
+  },
+    {
+    "data":"08/06/2017",
+    "descrizione":"Addebito Netflix",
+    "tipo":"banking"
+  },
+  {
+    "id":"2",
+    "data":"24/07/2017",
+    "descrizione":"Day-M",
+    "tipo":"personale"
+  },
+  {
+    "id":"3",
+    "data":"09/07/2017",
+    "descrizione":"Addebito Netflix",
+    "tipo":"banking"
+  },
+  {
+    "data":"15/08/2017",
+    "descrizione":"Assunzione di Maria",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/11/2017",
+    "descrizione":"Ognissanti",
+    "tipo":"festivita"
+  },
+  {
+    "data":"08/12/2017",
+    "descrizione":"Immacolata Concezione",
+    "tipo":"festivita"
+  },
+  {
+    "data":"25/12/2017",
+    "descrizione":"Natale di Gesù",
+    "tipo":"festivita"
+  },
+  {
+    "data":"26/12/2017",
+    "descrizione":"Santo Stefano",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/01/2018",
+    "descrizione":"Capodanno",
+    "tipo":"festivita"
+  },
+  {
+    "data":"06/01/2018",
+    "descrizione":"Epifania",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/04/2018",
+    "descrizione":"Pasqua",
+    "tipo":"festivita"
+  },
+  {
+    "data":"02/04/2018",
+    "descrizione":"Lunedi di Pasqua",
+    "tipo":"festivita"
+  },
+  {
+    "data":"25/04/2018",
+    "descrizione":"Liberazione",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/05/2018",
+    "descrizione":"Festa del lavoro",
+    "tipo":"festivita"
+  },
+  {
+    "data":"02/06/2018",
+    "descrizione":"Festa della Repubblica",
+    "tipo":"festivita"
+  },
+  {
+    "data":"15/08/2018",
+    "descrizione":"Assunzione di Maria",
+    "tipo":"festivita"
+  },
+  {
+    "data":"01/11/2018",
+    "descrizione":"Ognissanti",
+    "tipo":"festivita"
+  },
+  {
+    "data":"08/12/2018",
+    "descrizione":"Immacolata Concezione",
+    "tipo":"festivita"
+  },
+  {
+    "data":"25/12/2018",
+    "descrizione":"Natale di Gesù",
+    "tipo":"festivita"
+  },
+  {
+    "data":"26/12/2018",
+    "descrizione":"Santo Stefano",
+    "tipo":"festivita"
+  }
+]
