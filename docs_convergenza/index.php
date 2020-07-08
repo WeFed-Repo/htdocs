@@ -64,21 +64,26 @@
 							closedir($dh);
 							asort($elencocart);
 							foreach ($elencocart as $tipooggetto) {
-								?>
-                                <li>
-                                    <span><?php print $tipooggetto; ?></span>
-                                    <div class="links">
-										<?php if (file_exists("include/oggetti/" . $tipooggetto . "/Milano") || file_exists("include/oggetti/" . $tipooggetto . "/commons")) { ?>
-                                            <a href="./librerie_catalogo.php?html=mi&tipo=<?php print $tipooggetto; ?>&site=<?php print $site; ?>"
-                                               class="mi">MI</a>
-										<?php } ?>
-										<?php if (file_exists("include/oggetti/" . $tipooggetto . "/Verona") || file_exists("include/oggetti/" . $tipooggetto . "/commons")) { ?>
-                                            <a href="./librerie_catalogo.php?html=vr&tipo=<?php print $tipooggetto; ?>&site=<?php print $site; ?>"
-                                               class="vr">VR</a>
-										<?php } ?>
-                                    </div>
-                                </li>
-								<?php
+
+                                if ($tipooggetto !=="Widget home") {
+                                    ?>
+
+                                        <li>
+                                            <span><?php print $tipooggetto; ?></span>
+                                            <div class="links">
+                                                <?php if (file_exists("include/oggetti/" . $tipooggetto . "/Milano") || file_exists("include/oggetti/" . $tipooggetto . "/commons")) { ?>
+                                                    <a href="./librerie_catalogo.php?html=mi&tipo=<?php print $tipooggetto; ?>&site=<?php print $site; ?>"
+                                                    class="mi">MI</a>
+                                                <?php } ?>
+                                                <?php if (file_exists("include/oggetti/" . $tipooggetto . "/Verona") || file_exists("include/oggetti/" . $tipooggetto . "/commons")) { ?>
+                                                    <a href="./librerie_catalogo.php?html=vr&tipo=<?php print $tipooggetto; ?>&site=<?php print $site; ?>"
+                                                    class="vr">VR</a>
+                                                <?php } ?>
+                                            </div>
+                                        </li>
+                                    <?php
+                                }
+
 							}
 							?>
                         </ul>
