@@ -43,8 +43,7 @@
 }
 .icon-zoom_big:before {
   content: "\e9de";
-}
-
+} 
 .icon-check-ok_table:before {
   content: "\e9da";
 }
@@ -453,6 +452,9 @@
 .icon-alert_error:before {
   content: "\e94f";
 }
+.icon-chiudi_table:before {
+  content: "\e9e1";
+}
 .icon-alert_error_fill:before {
   content: "\e9a9";
 }
@@ -714,3 +716,7 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
+
+
+
+
