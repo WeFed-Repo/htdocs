@@ -192,41 +192,9 @@ function initModali_static(){
 		this.find('span.output').each(function(){
 			$(this).replaceWith($(this).html());
 		});
-
-		$('[data-toggle="dropdown"]').parent().on('click', function() {
-	    $(this).on('shown.bs.dropdown	', function() {
-	  		var elem = $(this);
-				var drop = elem.find('.dropdown-menu');
-				setTimeout(function(){
-					var posTop =  ( (elem.offset().top - drop.height()) < drop.height() )
-														? elem.offset().top + drop.height() + elem.height()
-														: elem.offset().top ;
-					var posLeft =  ( (elem.offset().left - drop.width()) < drop.width() )
-														? elem.offset().left + drop.width() + elem.width()
-														: elem.offset().left ;
-					$('body').append(drop.css({
-		  			position: 'absolute',
-						top: posTop,
-		  			left: posLeft,
-						transform: 'translate(-100%,0%)',
-		  		})
-					.addClass('shown')
-					.detach());
-				}, 100);
-
-	  	}).on('hidden.bs.dropdown', function() {
-	  		$(this).append($('body > .dropdown-menu').css({
-	  			position: false,
-					top: false,
-	  			left: false,
-	  		})
-				.removeClass('shown')
-				.detach());
-	  	});
-	  });
-
+		initDropdown();
 	}
-
+	
 })(jQuery);
 
 
