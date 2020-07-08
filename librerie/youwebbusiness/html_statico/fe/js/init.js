@@ -22,15 +22,18 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdown() {
-  $('[data-toggle="dropdown"]').parent().on('click', function() {
-    $(this).on('shown.bs.dropdown	', function() {
+  $('table[tm-bsTable-v2] [data-toggle="dropdown"]').on('click', function () {
+    var parent = $(this).parent();
+    parent.find('.dropdown-menu').dropdown();
+    parent.on('shown.bs.dropdown', function() {
       var elem = $(this);
       var drop = elem.find('.dropdown-menu');
       setTimeout(function(){
         var posTop =  elem.offset().top;
-        var posLeft =  ( (elem.offset().left - drop.width()) < drop.width() )
-                          ? elem.offset().left + drop.width() + elem.width()
-                          : elem.offset().left;
+        var posLeft = elem.offset().left;
+        if( (posLeft - drop.width()) < drop.width() ) {
+          posLeft = posLeft + drop.width() + elem.width();
+        }
         $('body').append(drop.css({
           position: 'absolute',
           top: posTop,
@@ -39,8 +42,7 @@ function initDropdown() {
         })
         .addClass('shown')
         .detach());
-      }, 100);
-
+      }, 10);
     }).on('hidden.bs.dropdown', function() {
       $(this).append($('body > .dropdown-menu').css({
         position: false,

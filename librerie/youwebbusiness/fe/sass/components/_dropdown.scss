@@ -38,11 +38,14 @@
   }
 }
 
-.dropdown-menu {
+body > .dropdown-menu,
+[tm-bsTable-v2] table .dropdown-menu {
   &.show:not(.shown) {
     opacity: 0 !important;
+    display: none !important;
   }
   &.shown {
     opacity: 1 !important;
+    display: block !important;
   }
 }
