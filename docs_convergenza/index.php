@@ -30,8 +30,9 @@
                         <ul>
                             <li><a href="./template/strutt_<?php print $site ?>.php">Pagina interna</a></li>
                             <?php if ($site == "youweb") { ?>
+                                <li><a href="./template/strutt_youweb.php?tpl=tpl_priv_dashboard.php">Home privata</a></li>
                                 <li><a href="./template/strutt_<?php print $site ?>_pub.php">Pagina pubblica</a></li>
-							<?php  }?>
+                            <?php  }?>
 							<?php if ($site == "webank") { ?>
                                 <li><a href="./template/strutt_<?php print $site ?>.php?tpl=tpl_priv_fp_placeholder.php">Front page</a></li>
                                 <li><a href="./template/strutt_<?php print $site ?>.php?tpl=tpl_priv_full_placeholder.php">Pagina Full</a></li>

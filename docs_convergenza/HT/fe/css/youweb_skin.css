@@ -100,6 +100,10 @@ ul.azioni li, li.azioni li, ol.azioni li {
 }
 
 /* Classi per margini top generiche */
+.noMarginBottom {
+  margin-bottom: 0 !important;
+}
+
 .marginTopNone, .marginBottomIper, .marginBottomMega, .marginBottomExtra, .extraElement, section.big, hr.spacer, .marginBottomLarge, h2, video, embed, object, .largeElement, .boxesito, .panel-nofill, .marginBottomMedium, .box-generico-comunicazioni-block, .box-generico, .box-generico-border h4, .panel-group, .topBtn, .box-generico-text, .imgWrapperResponsive, p, ol, ul, hr, table, form, .marginBottomSmall, .marginBottomMini, .stepBtn, .wrapper-btn-products, .plus-small, .marginBottomMicro, .form-group.last, .btnWrapper, h4, caption, .marginBottomNano, .control-label, .form-group .pin_testo, .marginBottomNone, .panel-body form:last-child {
   margin-top: 0;
 }
@@ -475,6 +479,11 @@ h4.txthelp {
   padding-left: 55px;
 }
 
+.button, .btn {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
 .button:hover, .btn:hover {
   background-color: #474B4E;
   color: #fff;
@@ -550,6 +559,9 @@ h4.txthelp {
     vertical-align: top;
     width: 100%;
   }
+  .btnWrapper div:only-child {
+    max-width: 100% !important;
+  }
   .btnWrapper .btn-align-left, .btnWrapper .btn-align-right {
     margin: 0;
     display: inline-block;
@@ -573,6 +585,10 @@ h4.txthelp {
     clear: both;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+
+  .btn-block {
+    margin-bottom: 0;
   }
 }
 /* Icone bottoni */
@@ -709,11 +725,14 @@ p.note.flRight a.btn-icon {
     font-size: 20px !important;
   }
   .line-button .btn {
-    padding: 9px 18px 7px 18px;
+    padding: 11px 18px 7px 18px;
   }
   .line-button .btn-align-left {
-    text-align: center;
-    float: none;
+    text-align: center !important;
+    float: none !important;
+    max-width: none !important;
+    display: block;
+    padding-right: 0 !important;
   }
   .line-button .btn-align-left.last {
     position: relative;
@@ -748,6 +767,22 @@ p.note.flRight a.btn-icon {
   text-align: center;
 }
 
+/*bottone di ricerca rapida */
+.toggleRicercaRapida .icon {
+  margin-right: 10px;
+}
+
+/* Bottoni con padre no-label */
+@media (min-width: 992px) {
+  .no-label .btn {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 991px) {
+  .tabbed-buttons .btn-align-left {
+    max-width: 100% !important;
+  }
+}
 .control-label-output {
   display: inline-block;
   float: left;
@@ -845,6 +880,14 @@ p.note.flRight a.btn-icon {
 .no-label > div a:not([type=button]) {
   color: #0E977F;
   text-decoration: underline;
+}
+
+.no-label-output {
+  padding: 14px 5px;
+}
+.no-label-output .btn.btn-primary {
+  padding: 11px 10px 7px 10px;
+  letter-spacing: -0.5px;
 }
 
 .modal-body .selector-wrap.selector-mini .selector-box {
@@ -1565,7 +1608,7 @@ table td .ui-spinner .ui-spinner-button .icon:before {
   width: auto;
   display: inline-block;
 }
-.borderFormRounded .output a {
+.borderFormRounded .output a:not(.btn) {
   color: #0e977f;
 }
 
@@ -1862,11 +1905,12 @@ a.output {
 .select-periodo-switch > a {
   width: 28px;
   float: right;
-  margin-top: 30px;
+  margin-top: 43px;
   text-decoration: none;
   text-align: center;
   display: block;
   z-index: 6;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .select-periodo-switch > a {
@@ -1878,6 +1922,10 @@ a.output {
 }
 .select-periodo-switch .hasDatepicker {
   padding-right: 20px !important;
+}
+
+.print_periodo_switch i {
+  font-size: 26px;
 }
 
 /* Elemento form tipo ricerca interattiva  */
@@ -2030,6 +2078,11 @@ table tr.separator,
 .table tr.separator,
 .ui-dialog .table tr.separator {
   border-top: solid 2px #ccc;
+}
+table tr.evident td,
+.table tr.evident td,
+.ui-dialog .table tr.evident td {
+  cursor: pointer;
 }
 table tr td, table tr th,
 .table tr td,
@@ -2299,6 +2352,11 @@ table tr td,
 .table tr td,
 .ui-dialog .table tr td {
   vertical-align: middle;
+}
+table tr td a:not(.btn-icon),
+.table tr td a:not(.btn-icon),
+.ui-dialog .table tr td a:not(.btn-icon) {
+  text-decoration: underline;
 }
 table tr td.td-fondo,
 .table tr td.td-fondo,
@@ -4126,7 +4184,7 @@ div.pager .circle.current_page {
   position: relative;
   overflow: hidden;
   border: #0e977f 1px solid;
-  min-height: 645px;
+  min-height: 700px;
 }
 .slider-section .slider-map-graph .slide.slide-01 {
   display: none;

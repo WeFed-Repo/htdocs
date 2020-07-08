@@ -87,7 +87,12 @@ $(function() {
 	/** * GESTIONE CAMPI NOTE DA SELECT REDDITO E PATRIMONIO ** */
 	var selectNote = $(".select-note"),
 		fieldNote = $(".field-note"),
-		ciRegexNote = /[a-zA-Z0-9/\s\u00C0-\u00F6\u00F8-\u00FF]+/;
+		
+		//CON CARATTERI ACCENTATI
+		//ciRegexNote = /[a-zA-Z0-9/\s\u00C0-\u00F6\u00F8-\u00FF]+/;
+		
+		//SENZA CARATTERI ACCENTATI
+		ciRegexNote = /[a-zA-Z0-9/\s]+/;
 	
 	//controllo immissione lettere accentate e non, numeri e spazio
 	fieldNote.on('keypress', function (event) {
@@ -96,7 +101,11 @@ $(function() {
 				event.preventDefault();
 				return false;
 		}
-	});	
+	});
+	//INIBIRE COPIA E INCOLLA
+	fieldNote.on('paste', function (event) {
+		return false;
+	})
 
 	//controllo per abilitazione/disabilitazione campo note e suo reset - deliver
 	var ckeckValueSelected = function() {

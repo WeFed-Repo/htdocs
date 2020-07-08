@@ -35,6 +35,15 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-calendario_assist:before {
+  content: "\e9e0";
+}
+.icon-calendario:before {
+  content: "\e9df";
+}
+.icon-zoom_big:before {
+  content: "\e9de";
+}
 
 .icon-check-ok_table:before {
   content: "\e9da";

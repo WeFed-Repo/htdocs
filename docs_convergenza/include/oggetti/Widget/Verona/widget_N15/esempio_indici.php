@@ -9,7 +9,7 @@
             <span class="control-label floatl long">
                <a href="#">FTSE MIB</a>
             </span>
-            <span class="bold floatr">
+            <span class="bold positivo floatr">
                99,99%
             </span>
          </div>
@@ -21,7 +21,7 @@
             <span class="control-label floatl long">
                <a href="#">FTSE Italia STAR</a>
             </span>
-            <span class="bold floatr">
+            <span class="bold negativo floatr">
                99,99%
             </span>
          </div>
@@ -33,7 +33,7 @@
             <span class="control-label floatl long">
                <a href="#">FTSE Italia Mid Cap</a>
             </span>
-            <span class="bold floatr">
+            <span class="bold negativo floatr">
                99,99%
             </span>
          </div>
@@ -45,7 +45,7 @@
             <span class="control-label floatl long">
                <a href="#">FTSE Italia Small Cap</a>
             </span>
-            <span class="bold floatr">
+            <span class="bold positivo floatr">
                99,99%
             </span>
          </div>

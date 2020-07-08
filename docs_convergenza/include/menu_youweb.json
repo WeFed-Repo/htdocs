@@ -137,13 +137,13 @@
 					},
 					{
 						"nome": "CW e certificates",
-						"tpl": "tpl_responsive_ricerca_titoli_evoluta_cw.php",
+						"tpl": "tpl_responsive_cw_certificates_ricerca.php",
 						"html": "mi",
 						"inlavorazione": true
 					},
 					{
 						"nome": "ETF Plus",
-						"tpl": "tpl_responsive_ricerca_titoli_evoluta_etf.php",
+						"tpl": "tpl_responsive_etf.php",
 						"html": "mi",
 						"inlavorazione": true
 					}

@@ -1,5 +1,8 @@
 .button, .btn {
   // copre tutti i casi compresi i doppi stati
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
   &:hover {
     background-color: $grayDark;
     color: $white;
@@ -13,6 +16,7 @@
   &.btn-navigation {
     background-color: $primary;
     margin-left: 20px;
+    
     &:first-child {
       margin-left:0;
     }
@@ -80,10 +84,14 @@
     display: inline-block;
     vertical-align:top;
     width:100%;
+    div:only-child {
+      max-width:100% !important;
+    }
     .btn-align-left,.btn-align-right {
       margin: 0;
       display:inline-block;
       max-width:50%;
+      
       &.btn-align-left {
         padding-right:8px;
         text-align:left;
@@ -103,6 +111,9 @@
         overflow:hidden;
       }
     }
+  }
+  .btn-block{
+    margin-bottom:0;
   }
 }
 
@@ -248,11 +259,14 @@ p.note.flRight {
           font-size:20px!important;
       }
       .btn {
-        padding: 9px 18px 7px 18px;
+        padding: 11px 18px 7px 18px;
       }
       .btn-align-left {
-          text-align: center;
-          float: none;
+          text-align: center!important;
+          float: none!important;
+          max-width: none!important;
+          display: block;
+          padding-right: 0!important;
           &.last {
               position: relative;
               hr {
@@ -289,4 +303,20 @@ p.note.flRight {
       text-align: center;
     }
   }
+}
+
+/*bottone di ricerca rapida */ 
+.toggleRicercaRapida .icon {
+  margin-right :10px
+ 
+}
+
+/* Bottoni con padre no-label */
+@media (min-width: 992px) {
+  .no-label .btn {
+    margin-top:6px;
+  }
+}
+@media (max-width: 991px) {
+  .tabbed-buttons {.btn-align-left {max-width:100% !important}}
 }

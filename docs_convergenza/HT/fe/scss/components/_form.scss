@@ -114,7 +114,13 @@
       }
     }
 }
-
+.no-label-output {
+  padding: 14px 5px;
+  .btn.btn-primary {
+    padding: 11px 10px 7px 10px;
+    letter-spacing: -0.5px;
+  }
+}
 .modal-body .selector-wrap.selector-mini .selector-box {
     width: 111px
 }
@@ -813,7 +819,7 @@ table td .ui-spinner {
       width:auto;
       display:inline-block;
     }
-    a{color:$primary}
+    a:not(.btn){color:$primary}
 }
 a.output {color: $primary;text-decoration:underline}
 
@@ -1080,13 +1086,14 @@ a.output {color: $primary;text-decoration:underline}
  > a {
    width: 28px;
    float:right;
-   margin-top: 30px;
+   margin-top: 43px;
    text-decoration: none;
    text-align: center;
    display: block;
    z-index: 6;
+   cursor: pointer;
    @media (max-width: 991px) {
-     margin-top: 25px;
+     margin-top: 25px; 
    }
  }
  .input-group-addon {
@@ -1095,7 +1102,11 @@ a.output {color: $primary;text-decoration:underline}
  .hasDatepicker {
    padding-right: 20px !important;
  }
+ 
 }
+.print_periodo_switch i {
+  font-size:26px
+} 
 
 /* Elemento form tipo ricerca interattiva  */
 .magicSearch {
