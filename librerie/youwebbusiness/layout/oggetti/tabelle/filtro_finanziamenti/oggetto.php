@@ -41,13 +41,13 @@ data-filter-button=form02 data-filter-form=form02
               <div class="col-12 ">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label class="control-label">Tipo di rata</label>                    
+                    <label class="control-label">Tipo di rata</label>
                     <select  class="form-control">
                       <option selected>Tutti</option>
                       <option >A</option>
                       <option >B</option>
-                      <option >C</option>                          
-                    </select>                   
+                      <option >C</option>
+                    </select>
                   </div>
 
                   <div class="form-group col">
@@ -72,7 +72,7 @@ data-filter-button=form02 data-filter-form=form02
                       </div>
                     </div>
                   </div>
-                
+
                   <div class="col-12 col-lg-4">
                     <div class="form-row">
                       <div class="form-group col-6">
@@ -86,9 +86,9 @@ data-filter-button=form02 data-filter-form=form02
                         </button>
                       </div>
                     </div>
-                  </div>                  
-                </div> 
-              </div>             
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
 
@@ -97,7 +97,7 @@ data-filter-button=form02 data-filter-form=form02
           <!-- FINE FILTRI DESKTOP -->
 
       </div>
-      <div>  
+      <div>
         <div class=" pt-0 d-none d-lg-block">
           <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-striped" data-table-mobilized-desktop="finanziamentiTable">
             <thead>
@@ -108,7 +108,7 @@ data-filter-button=form02 data-filter-form=form02
                 <th data-field="importo" data-sortable="true"  data-formatter="tableCellValue" class="right">Importo</th>
                 <th data-field="quotaCapitale" data-sortable="true" data-formatter="tableCellValue" class="right">Quota capitale</th>
                 <th data-field="quotaInteressi" data-sortable="true" data-formatter="tableCellValue" class="right">Quota interessi</th>
-                <th data-field="stato" data-sortable="true"  class="center">Stato</th>              
+                <th data-field="stato" data-sortable="true"  class="center">Stato</th>
               </tr>
             </thead>
             <tbody>
@@ -120,7 +120,7 @@ data-filter-button=form02 data-filter-form=form02
                   <td><span class="">3.216,65</span></td>
                   <td><span class="">3.216,65</span></td>
                   <td><span class="">3.216,65</span></td>
-                  <td>Pagata</td>        
+                  <td>Pagata</td>
                 </tr>
               <?php } ?>
             </tbody>
@@ -156,23 +156,23 @@ data-filter-button=form02 data-filter-form=form02
 
         <div class="table-filters-accordion" data-filter-form="filterFinanziamenti" style="display:none">
                   <form>
-                    <div class="row">              
+                    <div class="row">
                       <div class="col-12 col-lg-5">
                         <div class="form-row">
                           <div class="form-group col">
-                            <label class="control-label">Tipo di rata</label>                    
+                            <label class="control-label">Tipo di rata</label>
                             <select  class="form-control">
                               <option selected>Tutti</option>
                               <option >A</option>
                               <option >B</option>
-                              <option >C</option>                          
-                            </select>                   
-                          </div>                  
+                              <option >C</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    <div class="row">   
+                    <div class="row">
                       <div class="col-6 col-md-6 col-lg-5">
                         <label class="control-label">Periodo dal</label>
                         <div class="input-group datepicker">
@@ -194,8 +194,8 @@ data-filter-button=form02 data-filter-form=form02
                               <i class="icon icon-ico_calendario"></i>
                             </span>
                           </div>
-                        </div>     
-                      </div>            
+                        </div>
+                      </div>
                     </div>
 
                     <div class="row ">
@@ -213,14 +213,14 @@ data-filter-button=form02 data-filter-form=form02
                             </div>
                           </div>
                         </div>
-                    </div>            
+                    </div>
                   </form>
         </div>
 
         <!-- FINE FILTRI MOBILE -->
 
         <div class="mobile-data">
-          <div>  
+          <div>
             <div class="pt-md-0 pt-lg-0 pt-0 d-none d-lg-block">
               <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-striped" data-table-mobilized-desktop="finanziamentiTable">
                 <thead>
@@ -231,7 +231,7 @@ data-filter-button=form02 data-filter-form=form02
                 <th data-field="importo" data-sortable="true"  data-formatter="tableCellValue" class="right">Importo</th>
                 <th data-field="quotaCapitale" data-sortable="true" data-formatter="tableCellValue" class="right">Quota capitale</th>
                 <th data-field="quotaInteressi" data-sortable="true" data-formatter="tableCellValue" class="right">Quota interessi</th>
-                <th data-field="stato" data-sortable="true"  class="center">Stato</th>              
+                <th data-field="stato" data-sortable="true"  class="center">Stato</th>
               </tr>
             </thead>
             <tbody>
@@ -243,7 +243,7 @@ data-filter-button=form02 data-filter-form=form02
                   <td><span class="">3.216,65</span></td>
                   <td><span class="">3.216,65</span></td>
                   <td><span class="">3.216,65</span></td>
-                  <td>Pagata</td>        
+                  <td>Pagata</td>
                 </tr>
               <?php } ?>
             </tbody>
@@ -256,13 +256,11 @@ data-filter-button=form02 data-filter-form=form02
               <div class="mobile-data" data-table-mobilized-mobile="finanziamentiTable"></div>
             </div>
                 <!-- Fine contenuto mobile -->
-              
+
           </div>
         </div>
       </div>
     </div>
         <!-- Fine contenuto mobile -->
-
-  </div>
 
 </section>

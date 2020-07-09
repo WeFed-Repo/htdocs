@@ -17,7 +17,7 @@ $(window).resize(function () {
     initScroll();
 });
 
-// INIT ELEMENTI 
+// INIT ELEMENTI
 
 function initHeader() {
     /* Scrolling header su desktop */
@@ -52,7 +52,7 @@ function initTabs() {
 
 function initTabsFilters() {
     $(".nav-tabs.nav-tabs--filters label").click(function(e) {
-        var $input = $(this).find("input"); 
+        var $input = $(this).find("input");
         var $label = $(this);
         var $parent = $label.closest('.nav-tabs');
         if( $label.hasClass("all") ) {
@@ -64,7 +64,7 @@ function initTabsFilters() {
           } else {
             $label.removeClass("active");
             $parent.find('label:not(.all) input')
-                   .removeAttr("checked") // fallback per ie 
+                   .removeAttr("checked") // fallback per ie
                    .prop('checked',false);
           }
         } else {
@@ -73,7 +73,7 @@ function initTabsFilters() {
                 $parent.find('label.all')
                    .removeClass("active")
                    .find('input')
-                   .removeAttr("checked") // fallback per ie 
+                   .removeAttr("checked") // fallback per ie
                    .prop('checked',false);
             } else {
                 $label.removeClass("active");
@@ -89,14 +89,20 @@ function initScroll() {
     var overflow = elem + '-overflow';
     if ($(elem).length > 0) {
         $(elem).each(function () {
-            var e = $(this);
-            var c = e.closest(container);
-            // console.log( e.width() + ' - ' + c.width(), e.width() <= c.width() );
-            if (e.width() <= c.width()) {
-                c.removeClass('scroll-active');
-            } else {
-                c.addClass('scroll-active');
+          var e = $(this);
+          var c = e.closest(container);
+          var ew = e.width();
+          var cw = c.width();
+          if( window.document.documentMode ) { // IE
+            if( ! c.parent().hasClass('clickScroll-IE') ) {
+              c.wrap('<div class="clickScroll-IE"></div>');
             }
+          }
+          if (ew <= cw) {
+            c.removeClass('scroll-active');
+          } else {
+            c.addClass('scroll-active');
+          }
         });
     }
     // Click sulle freccine
@@ -122,7 +128,7 @@ function initScroll() {
             if (a.length > 0 && p.length > 0) {
                 //p.scrollLeft(this.position().left + p.scrollLeft()) // positione scroll
                 a.removeClass('active'); // resetta active
-                this.addClass('active'); // setta nuovo active	
+                this.addClass('active'); // setta nuovo active
             }
         }
     }
