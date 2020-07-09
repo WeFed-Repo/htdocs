@@ -15,12 +15,14 @@ then
   newfile="$newpath$newname.zip"
   zip -vr "$newfile" html_statico/ changelog.html  -x "*.DS_Store"
 
-  echo "$newfile created!"
+  echo "$newname created!"
 
   DIR="../../../../../../../../../Users/martapetrella/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
   if [ -d "$DIR" ]; then
     cp "$newpath$newfile" "$DIR"
-    echo "$newfile copied!"
+
+    echo "$newname copied!"
+
   fi
 
 else
