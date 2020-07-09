@@ -22,26 +22,33 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdown() {
-  $('table[tm-bsTable-v2] [data-toggle="dropdown"]').on('click', function () {
+  var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"]';
+  $(allDrops+':not([data-clicked])').on('click', function () {
     var parent = $(this).parent();
     parent.find('.dropdown-menu').dropdown();
+    $(allDrops).each(function(){$(this).attr('data-clicked','')});
     parent.on('shown.bs.dropdown', function() {
       var elem = $(this);
       var drop = elem.find('.dropdown-menu');
       setTimeout(function(){
         var posTop =  elem.offset().top;
         var posLeft = elem.offset().left;
-        if( (posLeft - drop.width()) < drop.width() ) {
-          posLeft = posLeft + drop.width() + elem.width();
+        var dropW = drop.width() > 0 ? drop.width() : 170;
+        var elemW = elem.width();
+        if( (posLeft - dropW) < dropW ) {
+          posLeft = posLeft + dropW + elemW;
+        } else {
+          posLeft = posLeft - dropW;
         }
         $('body').append(drop.css({
           position: 'absolute',
           top: posTop,
           left: posLeft,
-          transform: 'translate(-100%,0%)',
+          transform: 'translate(0%,0%)',
         })
         .addClass('shown')
         .detach());
+        $(allDrops).each(function(){$(this).removeAttr('data-clicked')});
       }, 10);
     }).on('hidden.bs.dropdown', function() {
       $(this).append($('body > .dropdown-menu').css({

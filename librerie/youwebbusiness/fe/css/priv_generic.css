@@ -3420,14 +3420,17 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   .dropleft .dropdown-menu .dropdown-item {
     font-size: 14px; }
 
-body > .dropdown-menu.show:not(.shown),
-[tm-bsTable-v2] table .dropdown-menu.show:not(.shown) {
-  opacity: 0 !important;
-  display: none !important; }
-body > .dropdown-menu.shown,
-[tm-bsTable-v2] table .dropdown-menu.shown {
-  opacity: 1 !important;
-  display: block !important; }
+body > .dropdown-menu,
+[tm-bsTable-v2] table .dropdown-menu {
+  transform: translate(0%, 0%) !important; }
+  body > .dropdown-menu.show:not(.shown),
+  [tm-bsTable-v2] table .dropdown-menu.show:not(.shown) {
+    opacity: 0 !important;
+    display: none !important; }
+  body > .dropdown-menu.shown,
+  [tm-bsTable-v2] table .dropdown-menu.shown {
+    opacity: 1 !important;
+    display: block !important; }
 
 .carousel {
   width: 100%;
@@ -3886,7 +3889,10 @@ body > .dropdown-menu.shown,
   .clickScroll-container .clickScroll-overflow {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
-    overflow-x: auto; }
+    overflow: auto;
+    -ms-overflow-style: none !important;
+    width: 100%;
+    display: block; }
     .clickScroll-container .clickScroll-overflow:after {
       content: "";
       display: table;
@@ -3900,9 +3906,14 @@ body > .dropdown-menu.shown,
     float: left;
     clear: both;
     -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none; }
+    overflow: -moz-scrollbars-none;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap; }
     .clickScroll-container .clickScroll::-webkit-scrollbar {
       display: none; }
+    .clickScroll-container .clickScroll > * {
+      display: inline-block !important; }
   .clickScroll-container .clickScroll-arrow {
     display: none; }
   .clickScroll-container.scroll-active {
@@ -3919,6 +3930,14 @@ body > .dropdown-menu.shown,
         left: 5px; }
       .clickScroll-container.scroll-active .clickScroll-arrow.right {
         right: 5px; }
+
+.clickScroll-IE {
+  width: 100% !important;
+  max-width: calc( 100vw - 2rem ) !important;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .clickScroll-IE::-webkit-scrollbar {
+    display: none; }
 
 .c-banner {
   display: flex;
