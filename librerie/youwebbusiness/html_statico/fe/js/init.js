@@ -26,6 +26,7 @@ function initDropdown() {
   $(allDrops+':not([data-clicked])').on('click', function () {
     var parent = $(this).parent();
     parent.find('.dropdown-menu').dropdown();
+    $(this).attr('data-dropdown-active','');
     $(allDrops).each(function(){$(this).attr('data-clicked','')});
     parent.on('shown.bs.dropdown', function() {
       var elem = $(this);
@@ -56,10 +57,30 @@ function initDropdown() {
         top: false,
         left: false,
       })
+      .removeClass('show')
       .removeClass('shown')
       .detach());
+      $('[data-dropdown-active]').removeAttr('data-dropdown-active');
     });
   });
+
+  $(window).resize(function() {
+    var active = $(allDrops+'[data-dropdown-active]');
+    if( active.length == 1 ) {
+      console.log('ok');
+      active.parent().append($('body > .dropdown-menu').css({
+        position: false,
+        top: false,
+        left: false,
+      })
+      .removeClass('show')
+      .removeClass('shown')
+      .detach());
+      active.parent().find('.dropdown-menu').removeClass('show').removeClass('shown')
+      active.removeAttr('data-dropdown-active');
+    }
+  });
+
 }
 
 function initAccordion() {
