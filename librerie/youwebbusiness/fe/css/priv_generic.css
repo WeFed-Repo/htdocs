@@ -3394,6 +3394,73 @@ input[type="range"] {
 td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   opacity: 0.3; }
 
+.dropdown-item, .dropdown-item:hover,
+a.dropdown-item,
+a.dropdown-item:hover,
+a.dropdown-item:hover,
+a.dropdown-item:hover:hover,
+a.dropdown-item:not(.btn),
+a.dropdown-item:not(.btn):hover {
+  font-size: 14px;
+  color: #666666 !important;
+  text-decoration: none; }
+  .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover.active, .dropdown-item:hover:active,
+  a.dropdown-item.active,
+  a.dropdown-item:active,
+  a.dropdown-item:hover.active,
+  a.dropdown-item:hover:active,
+  a.dropdown-item:hover.active,
+  a.dropdown-item:hover:active,
+  a.dropdown-item:hover:hover.active,
+  a.dropdown-item:hover:hover:active,
+  a.dropdown-item:not(.btn).active,
+  a.dropdown-item:not(.btn):active,
+  a.dropdown-item:not(.btn):hover.active,
+  a.dropdown-item:not(.btn):hover:active {
+    background: #2F9988 !important;
+    color: #FFFFFF !important; }
+  .dropdown-item.disabled, .dropdown-item.disabled.active, .dropdown-item.disabled:active, .dropdown-item[disabled], .dropdown-item[disabled].active, .dropdown-item[disabled]:active, .dropdown-item:hover.disabled, .dropdown-item:hover.disabled.active, .dropdown-item:hover.disabled:active, .dropdown-item:hover[disabled], .dropdown-item:hover[disabled].active, .dropdown-item:hover[disabled]:active,
+  a.dropdown-item.disabled,
+  a.dropdown-item.disabled.active,
+  a.dropdown-item.disabled:active,
+  a.dropdown-item[disabled],
+  a.dropdown-item[disabled].active,
+  a.dropdown-item[disabled]:active,
+  a.dropdown-item:hover.disabled,
+  a.dropdown-item:hover.disabled.active,
+  a.dropdown-item:hover.disabled:active,
+  a.dropdown-item:hover[disabled],
+  a.dropdown-item:hover[disabled].active,
+  a.dropdown-item:hover[disabled]:active,
+  a.dropdown-item:hover.disabled,
+  a.dropdown-item:hover.disabled.active,
+  a.dropdown-item:hover.disabled:active,
+  a.dropdown-item:hover[disabled],
+  a.dropdown-item:hover[disabled].active,
+  a.dropdown-item:hover[disabled]:active,
+  a.dropdown-item:hover:hover.disabled,
+  a.dropdown-item:hover:hover.disabled.active,
+  a.dropdown-item:hover:hover.disabled:active,
+  a.dropdown-item:hover:hover[disabled],
+  a.dropdown-item:hover:hover[disabled].active,
+  a.dropdown-item:hover:hover[disabled]:active,
+  a.dropdown-item:not(.btn).disabled,
+  a.dropdown-item:not(.btn).disabled.active,
+  a.dropdown-item:not(.btn).disabled:active,
+  a.dropdown-item:not(.btn)[disabled],
+  a.dropdown-item:not(.btn)[disabled].active,
+  a.dropdown-item:not(.btn)[disabled]:active,
+  a.dropdown-item:not(.btn):hover.disabled,
+  a.dropdown-item:not(.btn):hover.disabled.active,
+  a.dropdown-item:not(.btn):hover.disabled:active,
+  a.dropdown-item:not(.btn):hover[disabled],
+  a.dropdown-item:not(.btn):hover[disabled].active,
+  a.dropdown-item:not(.btn):hover[disabled]:active {
+    cursor: default !important;
+    opacity: 0.5 !important;
+    color: #999999 !important;
+    background: transparent !important; }
+
 .dropleft .btn {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important; }
