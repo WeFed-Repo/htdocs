@@ -1043,8 +1043,8 @@ NOTE: La classe .content-hidden-in-mobile
   /* Non-prefixed version */ }
 
 .text-break {
-  word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-break: break-all !important;
+  overflow-wrap: break-all !important; }
 
 .cursor-pointer {
   cursor: pointer; }

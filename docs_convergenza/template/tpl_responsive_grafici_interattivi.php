@@ -115,7 +115,7 @@
 							<div class="col-xs-12 col-sm-12">
 					 			<div class="row">
 					 				<div class="col-xs-4 col-sm-2 mww-dom-component webank-component-radioButton">
-									 <div class="radio inline"><label class="textWrapper">
+									 <div class="radio inline"><label class="textWrapper marginTopLarge">
 									 <input type="radio" name="searchType" value="titolo">
 									 <span class="text">Titolo</span></label>
 									 </div>

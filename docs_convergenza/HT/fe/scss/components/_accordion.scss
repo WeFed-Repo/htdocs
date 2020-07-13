@@ -637,7 +637,7 @@
 				content: "\FF0B"; 
 				transform: rotate(0); 
 			}
-			
+			 
 		}
 		
 	}
@@ -648,6 +648,10 @@
 
 .btn-icon .icon-row_expand {
 	display:none;
+}
+.spsel-btn-console .btn-icon .icon-row_expand {
+  display:block;
+  margin-left: 3px;
 }
 .contentCrBpm .btn-icon .icon-row_expand {
 	display: inline-block;

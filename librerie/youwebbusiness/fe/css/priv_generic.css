@@ -3394,6 +3394,73 @@ input[type="range"] {
 td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   opacity: 0.3; }
 
+.dropdown-item, .dropdown-item:hover,
+a.dropdown-item,
+a.dropdown-item:hover,
+a.dropdown-item:hover,
+a.dropdown-item:hover:hover,
+a.dropdown-item:not(.btn),
+a.dropdown-item:not(.btn):hover {
+  font-size: 14px;
+  color: #666666 !important;
+  text-decoration: none; }
+  .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover.active, .dropdown-item:hover:active,
+  a.dropdown-item.active,
+  a.dropdown-item:active,
+  a.dropdown-item:hover.active,
+  a.dropdown-item:hover:active,
+  a.dropdown-item:hover.active,
+  a.dropdown-item:hover:active,
+  a.dropdown-item:hover:hover.active,
+  a.dropdown-item:hover:hover:active,
+  a.dropdown-item:not(.btn).active,
+  a.dropdown-item:not(.btn):active,
+  a.dropdown-item:not(.btn):hover.active,
+  a.dropdown-item:not(.btn):hover:active {
+    background: #2F9988 !important;
+    color: #FFFFFF !important; }
+  .dropdown-item.disabled, .dropdown-item.disabled.active, .dropdown-item.disabled:active, .dropdown-item[disabled], .dropdown-item[disabled].active, .dropdown-item[disabled]:active, .dropdown-item:hover.disabled, .dropdown-item:hover.disabled.active, .dropdown-item:hover.disabled:active, .dropdown-item:hover[disabled], .dropdown-item:hover[disabled].active, .dropdown-item:hover[disabled]:active,
+  a.dropdown-item.disabled,
+  a.dropdown-item.disabled.active,
+  a.dropdown-item.disabled:active,
+  a.dropdown-item[disabled],
+  a.dropdown-item[disabled].active,
+  a.dropdown-item[disabled]:active,
+  a.dropdown-item:hover.disabled,
+  a.dropdown-item:hover.disabled.active,
+  a.dropdown-item:hover.disabled:active,
+  a.dropdown-item:hover[disabled],
+  a.dropdown-item:hover[disabled].active,
+  a.dropdown-item:hover[disabled]:active,
+  a.dropdown-item:hover.disabled,
+  a.dropdown-item:hover.disabled.active,
+  a.dropdown-item:hover.disabled:active,
+  a.dropdown-item:hover[disabled],
+  a.dropdown-item:hover[disabled].active,
+  a.dropdown-item:hover[disabled]:active,
+  a.dropdown-item:hover:hover.disabled,
+  a.dropdown-item:hover:hover.disabled.active,
+  a.dropdown-item:hover:hover.disabled:active,
+  a.dropdown-item:hover:hover[disabled],
+  a.dropdown-item:hover:hover[disabled].active,
+  a.dropdown-item:hover:hover[disabled]:active,
+  a.dropdown-item:not(.btn).disabled,
+  a.dropdown-item:not(.btn).disabled.active,
+  a.dropdown-item:not(.btn).disabled:active,
+  a.dropdown-item:not(.btn)[disabled],
+  a.dropdown-item:not(.btn)[disabled].active,
+  a.dropdown-item:not(.btn)[disabled]:active,
+  a.dropdown-item:not(.btn):hover.disabled,
+  a.dropdown-item:not(.btn):hover.disabled.active,
+  a.dropdown-item:not(.btn):hover.disabled:active,
+  a.dropdown-item:not(.btn):hover[disabled],
+  a.dropdown-item:not(.btn):hover[disabled].active,
+  a.dropdown-item:not(.btn):hover[disabled]:active {
+    cursor: default !important;
+    opacity: 0.5 !important;
+    color: #999999 !important;
+    background: transparent !important; }
+
 .dropleft .btn {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important; }
@@ -3420,10 +3487,17 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   .dropleft .dropdown-menu .dropdown-item {
     font-size: 14px; }
 
-.dropdown-menu.show:not(.shown) {
-  opacity: 0 !important; }
-.dropdown-menu.shown {
-  opacity: 1 !important; }
+body > .dropdown-menu,
+[tm-bsTable-v2] table .dropdown-menu {
+  transform: translate(0%, 0%) !important; }
+  body > .dropdown-menu.show:not(.shown),
+  [tm-bsTable-v2] table .dropdown-menu.show:not(.shown) {
+    opacity: 0 !important;
+    display: none !important; }
+  body > .dropdown-menu.shown,
+  [tm-bsTable-v2] table .dropdown-menu.shown {
+    opacity: 1 !important;
+    display: block !important; }
 
 .carousel {
   width: 100%;
@@ -3882,7 +3956,10 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   .clickScroll-container .clickScroll-overflow {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
-    overflow-x: auto; }
+    overflow: auto;
+    -ms-overflow-style: none !important;
+    width: 100%;
+    display: block; }
     .clickScroll-container .clickScroll-overflow:after {
       content: "";
       display: table;
@@ -3896,9 +3973,14 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
     float: left;
     clear: both;
     -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none; }
+    overflow: -moz-scrollbars-none;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap; }
     .clickScroll-container .clickScroll::-webkit-scrollbar {
       display: none; }
+    .clickScroll-container .clickScroll > * {
+      display: inline-block !important; }
   .clickScroll-container .clickScroll-arrow {
     display: none; }
   .clickScroll-container.scroll-active {
@@ -3915,6 +3997,14 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
         left: 5px; }
       .clickScroll-container.scroll-active .clickScroll-arrow.right {
         right: 5px; }
+
+.clickScroll-IE {
+  width: 100% !important;
+  max-width: calc( 100vw - 2rem ) !important;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .clickScroll-IE::-webkit-scrollbar {
+    display: none; }
 
 .c-banner {
   display: flex;

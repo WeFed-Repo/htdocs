@@ -1,22 +1,31 @@
 #!/bin/bash
 # PER RISOLVERE PERMISSION DENIED USARE: chmod +x version_html_statico
 
-echo -n "${STACCO}${YELLOW}Hai generato lo statico prima di far partire lo script?${NC}"
+echo -n "Hai generato lo statico prima di far partire lo script? (y/n) "
 read REPLY
 if [[ $REPLY =~ ^[y]$ ]]
 then
 
   current_time=$(date "+%y%m%d_%H%M")
 
+  # prima cartella
   #newpath="../../../../Documents/HTML_STATICO/"
   newpath="../../../../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
-
   newname="html_statico_$current_time"
+  newfile="$newpath$newname.zip"
+  zip -vr "$newfile" html_statico/ changelog.html  -x "*.DS_Store"
 
-  zip -vr "$newpath$newname.zip" html_statico/ changelog.html  -x "*.DS_Store"
+  echo "$newname created!"
 
+  DIR="../../../../../../../../../Users/martapetrella/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
+  if [ -d "$DIR" ]; then
+    cp "$newpath$newfile" "$DIR"
+
+    echo "$newname copied!"
+
+  fi
 
 else
-  echo "\n${RED}Vai e torna! :D${NC}"
+  echo "Allora vai e torna! :D "
 fi
 echo "\n"

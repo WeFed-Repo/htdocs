@@ -52,19 +52,3 @@ html, body {
 .w-66 {
   width:66.6666%!important
 }
-
-.dropdown-item,
-a.dropdown-item,
-a.dropdown-item:hover,
-a.dropdown-item:not(.btn) {
-  &, &:hover {
-    font-size: 14px;
-    color: $grayMid !important;
-    text-decoration: none;
-    &.active,
-    &:active {
-      background: $greenLink !important;
-      color: $white !important;
-    }
-  }
-}

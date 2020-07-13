@@ -22,37 +22,65 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdown() {
-  $('[data-toggle="dropdown"]').parent().on('click', function() {
-    $(this).on('shown.bs.dropdown	', function() {
+  var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"]';
+  $(allDrops+':not([data-clicked])').on('click', function () {
+    var parent = $(this).parent();
+    parent.find('.dropdown-menu').dropdown();
+    $(this).attr('data-dropdown-active','');
+    $(allDrops).each(function(){$(this).attr('data-clicked','')});
+    parent.on('shown.bs.dropdown', function() {
       var elem = $(this);
       var drop = elem.find('.dropdown-menu');
       setTimeout(function(){
-        var posTop =  ( (elem.offset().top - drop.height()) < drop.height() )
-                          ? elem.offset().top + drop.height() + elem.height()
-                          : elem.offset().top ;
-        var posLeft =  ( (elem.offset().left - drop.width()) < drop.width() )
-                          ? elem.offset().left + drop.width() + elem.width()
-                          : elem.offset().left ;
+        var posTop =  elem.offset().top;
+        var posLeft = elem.offset().left;
+        var dropW = drop.width() > 0 ? drop.width() : 170;
+        var elemW = elem.width();
+        if( (posLeft - dropW) < dropW ) {
+          posLeft = posLeft + dropW + elemW;
+        } else {
+          posLeft = posLeft - dropW;
+        }
         $('body').append(drop.css({
           position: 'absolute',
           top: posTop,
           left: posLeft,
-          transform: 'translate(-100%,0%)',
+          transform: 'translate(0%,0%)',
         })
         .addClass('shown')
         .detach());
-      }, 100);
-
+        $(allDrops).each(function(){$(this).removeAttr('data-clicked')});
+      }, 10);
     }).on('hidden.bs.dropdown', function() {
       $(this).append($('body > .dropdown-menu').css({
         position: false,
         top: false,
         left: false,
       })
+      .removeClass('show')
       .removeClass('shown')
       .detach());
+      $('[data-dropdown-active]').removeAttr('data-dropdown-active');
     });
   });
+
+  $(window).resize(function() {
+    var active = $(allDrops+'[data-dropdown-active]');
+    if( active.length == 1 ) {
+      console.log('ok');
+      active.parent().append($('body > .dropdown-menu').css({
+        position: false,
+        top: false,
+        left: false,
+      })
+      .removeClass('show')
+      .removeClass('shown')
+      .detach());
+      active.parent().find('.dropdown-menu').removeClass('show').removeClass('shown')
+      active.removeAttr('data-dropdown-active');
+    }
+  });
+
 }
 
 function initAccordion() {

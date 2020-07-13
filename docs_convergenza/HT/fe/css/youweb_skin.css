@@ -479,6 +479,12 @@ h4.txthelp {
   padding-left: 55px;
 }
 
+/* LINK A HREF STILIZZATO IN MANIERA EVIDENTE*/
+.inputFormCont.topped a {
+  color: #0E977F !important;
+  text-decoration: underline;
+}
+
 .button, .btn {
   overflow: hidden;
   max-width: 100%;
@@ -3357,6 +3363,11 @@ div.pager .circle.current_page {
 
 .btn-icon .icon-row_expand {
   display: none;
+}
+
+.spsel-btn-console .btn-icon .icon-row_expand {
+  display: block;
+  margin-left: 3px;
 }
 
 .contentCrBpm .btn-icon .icon-row_expand {

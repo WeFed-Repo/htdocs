@@ -12,8 +12,26 @@
         <!-- Straniere nuove webank -->
         <link rel="stylesheet" media="all" href="/WB/fe/css/webank_skin.css">
     <?php } ?>
-<?php } else { /* youweb */ ?>
-    <link rel="stylesheet" media="all" href="/HT/fe/css/youweb_generic.css"/>
+<?php } else { 
+        
+        /* youweb */ 
+        // Casistiche OLD
+        if ($pag=="tpl_priv_dashboard.php") { ?>
+        <link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/jquery-ui_ng.min.css" />
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.height.plugin.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/ie10-viewport.css"  />
+            <link rel="stylesheet" media="all" href="/HT/fe/css/youWeb-main.css"/>
+        <?php
+        }
+        else
+        {
+        // Casistiche "normali"
+        ?>
+            <link rel="stylesheet" media="all" href="/HT/fe/css/youweb_generic.css"/>
+        <?php
+        }
+        ?>
+    
     <link rel="stylesheet" media="all" href="/HT/fe/css/youWeb-struttura.css"/>
 	<?php if ($html == "vr" || empty($html) ) { ?>
         <!-- Proprie nuove youweb -->
