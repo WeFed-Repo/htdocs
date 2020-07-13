@@ -20,6 +20,9 @@ h4 {
     width: 100%;
     padding-right: 0;
     text-transform: uppercase;
+    &.title-table {
+        margin-bottom:10px
+    }
 
 }
 .tithelp h4 {
