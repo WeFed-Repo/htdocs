@@ -416,6 +416,9 @@ h4 {
   padding-right: 0;
   text-transform: uppercase;
 }
+h4.title-table {
+  margin-bottom: 10px;
+}
 
 .tithelp h4 {
   width: 90%;
@@ -2465,6 +2468,9 @@ table .bs-checkbox,
 }
 .formGenerico.borderFormRounded.output table.riepilogo tbody tr:nth-child(odd) {
   background-color: #fff !important;
+}
+.formGenerico.borderFormRounded.output table.riepilogo tbody tr.recap td {
+  background-color: #f2f2f2 !important;
 }
 .formGenerico.borderFormRounded.output table.riepilogo tfoot {
   background-color: #92989C !important;

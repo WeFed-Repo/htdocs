@@ -304,6 +304,11 @@ table,
             tr:nth-child(odd) {
               background-color: $white !important;
             }
+            tr.recap {
+              td {
+                background-color: #f2f2f2!important;
+              }
+            }
           }
           tfoot {
             background-color: $grayMid !important;
