@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
-import { Col, Row, Button } from 'reactstrap';
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
@@ -32,9 +31,7 @@ class StepForm extends Component {
                 </div>
             </div>
         )
-
     }
-
 }
 
 export default {

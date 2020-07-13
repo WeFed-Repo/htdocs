@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from 'components/parts/Forms';
-import { Col, Row, Button } from 'reactstrap';
+import FirmaInfoCert from '../../common/FirmaInfoCert'
 import salva from "./salva";
 import validazione from "./validazione";
 
@@ -10,7 +10,8 @@ class StepForm extends Component {
     // Eventuali stati "locali" 
     state = {
         //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true"        
+        isOutput : "true",
+        stepfirma: ""        
     }
     
 
@@ -35,7 +36,8 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Titolo step {nomeint}</h3>
+                    <h3>Firma precontrattuale {nomeint}</h3>
+                    <FirmaInfoCert step={this.state.stepfirma} obformprops={obformprops}></FirmaInfoCert>
                 </div>
             </div>
         )
