@@ -2627,6 +2627,7 @@ span.spanQuestionario {
     .polizzeAttive .icon-wrapper-assic_auto {
         width: 50px;
         height: 50px;
+        min-width: 50px;
     }
 
     .polizzeAttive .fontSize70 {
@@ -6834,7 +6835,8 @@ span.paddingLeft {
 .alignItemCenter {
     display: flex;
     align-items: center;
-    -ms-flex-pack: center;
+    /*-ms-flex-pack: center;*/
+
 }
 
 .polizzeAttive h3{
@@ -6895,9 +6897,14 @@ div.titButton.titButtonIco {
     width: fill-available;
     width:100%;
 }
-.polizzeAttive .marginTop5px.alignItemCenter {
-    align-items: flex-start;
-    margin-top: 25px;
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .polizzeAttive .marginTop5px.alignItemCenter, .widthFillAvailable  {
+        margin-top: 25px;
+    }
+    .polizzeAttive .marginTop5px.alignItemCenter .widthFillAvailable {
+        margin-top:0;
+    }
 }
 .noUppercase {
    text-transform: none;
