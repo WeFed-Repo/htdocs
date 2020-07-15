@@ -225,7 +225,7 @@ dl, .list {
 }
 
 .text-underline {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .text-primary { color: $greenLink !important;

@@ -103,119 +103,14 @@
 			</ul>
 			<!-- Fine legenda -->
 
-			<!-- Esempio tabella riassuntiva -->
-			<div class="headerContainerNoBootS">
-			        <div class="tableContainerNoBootS">
-			            <table class="riepilogo">
-			                <thead>
-			                    <tr>
-			                        <th class="left intestazione">Lorem ipsum dolor sit</th>
-			                        <th class="right">Valore €</th>
-			                        <th class="right">Valore %</th>
-			                    </tr>
-			                </thead>
-			                <tbody>
-			                    <tr>
-			                        <th class="left"><span class="txthelp" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, numquam.">Costo del ipsum dolor sit</span></th>
-			                        <th class="right">99.999,00 €</th>
-			                        <th class="right">99,99 %</th>
-			                    </tr>
-			                    <tr class="dispari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="pari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="dispari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                       <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="pari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                       <td class="right">99,99 %</td>
-			                    </tr>
-			                    <tr>
-			                        <th class="left">Costo del ipsum dolor sit</th>
-			                        <th class="right">99.999,00 €</th>
-			                        <th class="right">99,99 %</td>
-			                    </tr>
-			                    <tr class="dispari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="pari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="dispari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="pari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                </tbody>
-			                <tfoot>
-			                    <tr class="totali">
-			                       <td class="left">Totale</td>
-			                       <td class="right">99.999,00 €</td>
-			                       <td class="right">100,00 %</td>
-			                    </tr>
-			                </tfoot>
-			             </table>
-			            
-			        </div>
-			    </div>
-			<!-- Fine esempio tabella riassuntiva -->
+			<?php virtual("/template/parts/tabelle_riepilogo_dispositive.php");?>
 		</section>
 
 		<section>
 			<h4>Impatto dei costi sul rendimento</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nemo perferendis, quos dignissimos, quas temporibus et iusto. Tempora, officiis, quasi.</p>
-			<!-- Esempio tabella riassuntiva -->
-			<div class="headerContainerNoBootS">
-			        <div class="tableContainerNoBootS">
-			            <table class="riepilogo">
-			                <thead>
-			                    <tr>
-			                        <th class="left intestazione">Lorem ipsum dolor sit</th>
-			                        <th class="right">Valore €</th>
-			                        <th class="right">Valore %</th>
-			                    </tr>
-			                </thead>
-			                <tbody>
-			                    <tr>
-			                        <th class="left"><span class="txthelp" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, numquam.">Costo del ipsum dolor sit</span></th>
-			                        <th class="right">99.999,00 €</th>
-			                        <th class="right">99,99 %</th>
-			                    </tr>
-			                    <tr class="dispari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                      <tr class="pari">
-			                        <td class="left">Lorem ipsum dolor sit</td>
-			                        <td class="right">99.999,00 €</td>
-			                        <td class="right">99,99 %</td>
-			                    </tr>
-			                </tbody>
-			             </table>
-			            
-			        </div>
-			    </div>
-			<!-- Fine esempio tabella riassuntiva -->
+			
+			<?php virtual("/template/parts/tabelle_riepilogo_dispositive.php");?>
 			
 
 			<div class="row">

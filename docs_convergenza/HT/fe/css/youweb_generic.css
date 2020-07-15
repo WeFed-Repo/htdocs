@@ -1834,6 +1834,9 @@ body.modal-open {
     font-size: 0.9em;
     font-weight: 700;
 }
+.ui-datepicker table td a {
+    text-decoration:none;
+}
 
 .ui-datepicker-title {
     color: #0E977F;
