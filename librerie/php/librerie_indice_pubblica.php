@@ -21,8 +21,8 @@
 					<ul>
 						<?php
 						// Elenco delle tipologie di oggetti (riassunto)
-						asort($tipoOggetti);
-						foreach ($tipoOggetti as $key => $oggetto) {
+						asort($tipoOggettiPub);
+						foreach ($tipoOggettiPub as $key => $oggetto) {
 					    ?>
 						<li><a href="/connect.php?page=librerie.php&amp;pag=catalogo_pubblica&amp;customer=ret&amp;type=<?php print $key; ?>&amp;responsive=y"><?php print $oggetto; ?></a></li>
 						<?php

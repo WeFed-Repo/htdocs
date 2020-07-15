@@ -39,7 +39,7 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12">
-							<h2 class="color borderlightcolor">Elenco oggetti: <?php print($tipoOggetti[$type]) ?></h2>
+							<h2 class="color borderlightcolor">Elenco oggetti: <?php print($tipoOggettiPub[$type]) ?></h2>
 						</div>
 					</div>
 				</div>

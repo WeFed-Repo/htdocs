@@ -29,4 +29,17 @@
 			"testi" => "Titoli e testi",
 			"widget" => "Widget"
 		);
+
+		$tipoOggettiPub = Array(
+			
+			"bottoni" => "Bottoni",
+			"box" => "Box",
+			"form" => "Form input e output",
+			"navigazione" => "Navigazione",
+			"overlay" => "Overlay",
+			"promo" => "Promo",
+			"tabelle" => "Tabelle",
+			"testi" => "Titoli e testi",
+			"widget" => "Widget"
+		);
 ?>
