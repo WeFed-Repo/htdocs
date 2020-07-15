@@ -107,7 +107,7 @@
 		
 		<section>
 			<!-- Esempio tabella riassuntiva -->
-			<?php include("parts/tabelle_riepilogo_dispositive.php");?>
+			<?php virtual("/template/parts/tabelle_riepilogo_dispositive.php");?>
 		</section>	
 		
 
