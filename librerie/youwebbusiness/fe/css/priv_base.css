@@ -595,32 +595,6 @@ html, body {
 .w-66 {
   width: 66.6666% !important; }
 
-.dropdown-item, .dropdown-item:hover,
-a.dropdown-item,
-a.dropdown-item:hover,
-a.dropdown-item:hover,
-a.dropdown-item:hover:hover,
-a.dropdown-item:not(.btn),
-a.dropdown-item:not(.btn):hover {
-  font-size: 14px;
-  color: #666666 !important;
-  text-decoration: none; }
-  .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover.active, .dropdown-item:hover:active,
-  a.dropdown-item.active,
-  a.dropdown-item:active,
-  a.dropdown-item:hover.active,
-  a.dropdown-item:hover:active,
-  a.dropdown-item:hover.active,
-  a.dropdown-item:hover:active,
-  a.dropdown-item:hover:hover.active,
-  a.dropdown-item:hover:hover:active,
-  a.dropdown-item:not(.btn).active,
-  a.dropdown-item:not(.btn):active,
-  a.dropdown-item:not(.btn):hover.active,
-  a.dropdown-item:not(.btn):hover:active {
-    background: #2F9988 !important;
-    color: #FFFFFF !important; }
-
 /* Tag generici */
 body {
   background: #FFFFFF;
@@ -879,7 +853,7 @@ dl, .list {
     text-align: left; }
 
 .text-underline {
-  text-decoration: underline; }
+  text-decoration: underline !important; }
 
 .text-primary {
   color: #2F9988 !important; }
