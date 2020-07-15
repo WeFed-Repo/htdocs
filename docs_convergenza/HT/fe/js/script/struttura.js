@@ -411,7 +411,8 @@ $(function () {
         //setTimeout(function(){$(window).trigger("resize");},300)
 
         if(columnBsFixedResize) {
-            setTimeout(columnBsFixedResize,300)
+            setTimeout(columnBsFixedResize,500);
+            setTimeout(columnBsFixedResize,1000);
         }
     });
 
@@ -438,10 +439,18 @@ $(function () {
             if (mainCont.hasClass("expanded")) {
                 mainCont.addClass("spallahover");
             }
+            if(columnBsFixedResize) {
+                setTimeout(columnBsFixedResize,500);
+                setTimeout(columnBsFixedResize,1000);
+            }
         }
         ,
         function () {
             mainCont.removeClass("spallahover");
+            if(columnBsFixedResize) {
+                setTimeout(columnBsFixedResize,500);
+                setTimeout(columnBsFixedResize,1000);
+            }
         }
     );
 
