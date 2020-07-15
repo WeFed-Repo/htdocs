@@ -5208,6 +5208,140 @@ body.popup header .wrapper .btn-console {
   transform: rotate(20deg);
 }
 
+/* Videoplayer */
+/* Stili del videoPlayer */
+.videoPlayer {
+  width: 100%;
+  display: block;
+  height: auto;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.videoPlayer.fs {
+  float: none;
+}
+.videoPlayer.fs .console {
+  bottom: 0;
+  position: absolute;
+}
+.videoPlayer.fs .vidBtn.fullscreen {
+  background-position: 0 -72px;
+}
+.videoPlayer video {
+  width: 100%;
+  display: block;
+  height: auto;
+  clear: left;
+  float: left;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+.videoPlayer .playBig {
+  z-index: 99;
+  position: absolute;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  background: transparent url(/HT/fe/img/videoplayer_play.png) no-repeat center center;
+  width: 100%;
+}
+.videoPlayer .console {
+  border-top: solid 1px #454545;
+  float: left;
+  clear: left;
+  height: 25px;
+  background: #333 url(/HT/fe/img/videoplayer_console_bg.gif) repeat-x 0 center;
+  width: 100%;
+  padding: 0 120px 0 32px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+}
+.videoPlayer .vidBtn {
+  float: left;
+  height: 24px;
+  width: 31px;
+  background: transparent url(/HT/fe/img/videoplayer_buttons.gif) no-repeat 0 0;
+  border-right: solid 1px #333;
+  margin: 0;
+}
+.videoPlayer .vidBtn.play {
+  margin-left: -32px;
+}
+.videoPlayer .vidBtn.fullscreen {
+  float: right;
+  background-position: 0 -48px;
+  margin-right: -120px;
+  border-left: #454545;
+  border-right: 0;
+}
+.videoPlayer.pause .vidBtn.play {
+  background-position: 0 -23px;
+}
+.videoPlayer.pause .playBig {
+  display: none;
+}
+.videoPlayer .vidBox {
+  margin: 0;
+  height: 24px;
+  padding: 0;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.videoPlayer .vidBox .ui-slider-handle {
+  background-color: transparent !important;
+  top: 0 !important;
+  border: 0 !important;
+  width: 0;
+}
+.videoPlayer .vidBox.timeLine {
+  width: 100%;
+  margin: 0;
+}
+.videoPlayer .vidBox .bar {
+  background: #333 !important;
+  width: 100%;
+  margin: 0;
+  float: left;
+  height: 24px;
+  cursor: pointer;
+}
+.videoPlayer .vidBox .bar .ui-slider-range {
+  float: left;
+  height: 24px;
+  background: #0e977f url(/HT/fe/img/videoplayer_gauge.gif) repeat-x 0 center;
+}
+.videoPlayer .vidBox.volume {
+  width: 90px;
+  padding: 0;
+  margin-right: -90px;
+  float: right;
+  border-left: solid 1px #454545;
+  border-right: solid 1px #333;
+}
+.videoPlayer .vidBox.volume .volIcon {
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: transparent url(/HT/fe/img/videoplayer_buttons.gif) no-repeat -2px -96px;
+}
+.videoPlayer .vidBox.volume .bar {
+  float: right;
+  background-color: transparent;
+  width: 60px;
+  height: 24px;
+}
+.videoPlayer .vidBox.volume .ui-slider-range {
+  background: transparent url(/HT/fe/img/videoplayer_volume.gif) no-repeat 0 4px;
+}
+
+/********************************/
 /* Forzature da STRUTTURA */
 .boxAction a, .boxAction p {
   padding-top: 20px !important;
