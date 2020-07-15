@@ -2843,6 +2843,10 @@ div.pager .circle.current_page {
   font-weight: bold;
 }
 
+#layerDelete .modal-content {
+  border: 1px solid #eceef0;
+}
+
 .panel-step > .panel {
   padding: 0 0 6px 0;
 }
