@@ -3607,25 +3607,23 @@ var styleSortTable = function () {
     });
 };
 
-// Colonne fixed nelle tabelle
-var columnBsFixedResize;
+// Colonne fixed nelle tabelle (ora funzione inizializzata a livello di radice)
+var  columnBsFixedResize = function() {
+    $("table.has-fixed-cols").each(function(){
+        var tb = $(this);
+        var tbw = tb.outerWidth();
+        tb.parents(".bootstrap-table").find(".fixed-columns table").css("width",tbw + "px")
+    });
+}
 
 var columnBsFixed = function(){
 
     var tbHfc =  $("table.has-fixed-cols");
     
     if (tbHfc.length>0) {
-
+       
         // Handler per il resize
-        columnBsFixedResize = function() {
-            $("table.has-fixed-cols").each(function(){
-                var tb = $(this);
-                var tbw = tb.outerWidth();
-                tb.parents(".bootstrap-table").find(".fixed-columns table").css("width",tbw + "px")
-            });
-        }
-        // Handler per il resize
-        $(window).resize(function(){columnBsFixedResize(); if(feBank && feBank=="youweb"){setTimeout(columnBsFixedResize,250)}});
+        $(window).resize(function(){columnBsFixedResize(); if(feBank && feBank=="youweb"){setTimeout(columnBsFixedResize,300)}});
 
         tbHfc.each(function(){
 

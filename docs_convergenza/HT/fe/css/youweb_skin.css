@@ -488,6 +488,27 @@ h4.txthelp {
   text-decoration: underline;
 }
 
+/* Colori per trading */
+span.outperform {
+  color: #51c40b !important;
+}
+
+span.buy {
+  color: #0a7c1d !important;
+}
+
+span.hold {
+  color: #ffa200 !important;
+}
+
+span.underperform {
+  color: #ee0000 !important;
+}
+
+span.sell {
+  color: #a30e1c !important;
+}
+
 .button, .btn {
   overflow: hidden;
   max-width: 100%;
