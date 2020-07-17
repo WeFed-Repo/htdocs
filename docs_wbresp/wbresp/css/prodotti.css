@@ -86,6 +86,10 @@ assicurazioni.html -> Prodotti - assicurazioni
             .container06.conto_webank p {text-align:left;color:#999999;font-size:16px}
 
             
+            
+            
+            
+            
             /* PROMO 05/04 */
             /*
             .main_hero.conto_webank {height:490px; position:relative;background: #1d300c url("/wbresp/img/conto_webank/conto_webank_20160405.jpg") no-repeat right 0; background-size: cover; overflow:hidden; clear:both; float:none}
@@ -640,6 +644,42 @@ assicurazioni.html -> Prodotti - assicurazioni
 
 .carte-di-credito.container02 {margin-top:50px;min-height:575px; overflow:hidden; background: transparent url("/wbresp/img/carte/container_02_bg.png") center bottom no-repeat}
 .carte-di-credito.container02 h3 {margin: 0px 0 10px 0px; color: #cbcbcb;  font-family:"ralewaybold",arial, sans-serif; font-size:20px; text-align:center}
+
+
+
+/*slider carte di debito */
+.carte-di-credito.container02.version-b{
+    background-image: none;
+    border-bottom: 2px solid #e4f0be;
+    margin-bottom: 30px;
+}
+.carte-di-credito.container02.version-b .carousel .item h3{
+    text-align:center;
+    margin:0;
+}
+.carte-di-credito.container02.version-b ul {
+    margin: 0 60px 0 40px
+}
+.carte-di-credito.container02.version-b li {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "ralewaymedium",arial, sans-serif;
+    color: #999;
+    margin-bottom: 10px;
+}
+.carte-di-credito.container02.version-b .carousel .item img {
+    margin-top:20px;
+}
+.carte-di-credito.container02.version-b .col-sm-4 .img-responsive {
+    position:relative;
+    right:40px;
+    top:110px;
+    margin-top:0;
+}
+
+#myCarouselCarteDebito {
+    min-height:625px;
+}
 #myCarouselCarte {min-height:670px}
 #myCarouselCarte h3 {margin:0;text-align:center}
 #myCarouselCarte img {margin:10px auto 10px auto;}

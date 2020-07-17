@@ -36,7 +36,7 @@
             <div class="col-sm-12">
                 <div class="esito-inline">
                     <i class="icon iconBig icon-alert_ok flLeft"></i>
-                	<span class="esito-text">Clausule generali del contratto firmate a distanza</span>
+                	<span class="esito-text">Clausole generali del contratto firmate a distanza</span>
                 </div>		
             </div>
 		</div>

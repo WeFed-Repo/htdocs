@@ -4714,6 +4714,10 @@ div.pager .circle.current_page {
 .boxesito.attenzione {
   color: #edb54d;
 }
+.boxesito.attenzione li a {
+  color: #edb54d;
+  text-decoration: underline;
+}
 .boxesito.negativo {
   color: #eb4e62;
 }
