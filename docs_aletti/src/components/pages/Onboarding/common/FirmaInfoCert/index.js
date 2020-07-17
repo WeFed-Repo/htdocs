@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import { Col, Row, Button } from 'reactstrap';
 
 export default class extends Component {
 
@@ -14,18 +15,62 @@ export default class extends Component {
 
         return(
             <>
-                <h4>STEP {this.props.step}</h4>
+                <h4>STEP: {this.state.step}</h4>
                 {this.state.step==="INIT" &&
                 <>
-                    Elenco documenti
-                    Pulsante "Richiedi certificato"
+                    <section>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                        <Row>
+                            <Col>
+                                <ul className="elenco-documenti">
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                </ul>
+                            </Col>
+                        </Row>
+                    </section>
+                    <Row>
+                        <Col>
+                            <div class="btn-console btn-console-sub">
+                                <div class="btn-console-right">
+                                    <Button color="primary" className="sub-buttons" onClick={()=>this.setState({step: "ACCETTAZ_INFOCERT"})}>Richiedi certificato</Button>            
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </>
                 }
                  {this.state.step==="ACCETTAZ_INFOCERT" &&
                  // Inizializzazione
-                <>
-                    Elenco consensi
-                    Pulsante "Prosegui"
+                 <>
+                 <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                    <Row>
+                        <Col>
+                            <ul className="elenco-documenti">
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                                <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                            </ul>
+                        </Col>
+                    </Row>
+                </section>
+                <Row>
+                    <Col>
+                        <div class="btn-console btn-console-sub">
+                            <div class="btn-console-right">
+                                <Button color="primary" className="sub-buttons" onClick={()=>this.setState({step: "ACCETTAZ_INFOCERT"})}>Prosegui</Button>            
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
                 </>
                 }
                 {this.state.step==="FIRMADOC" &&
