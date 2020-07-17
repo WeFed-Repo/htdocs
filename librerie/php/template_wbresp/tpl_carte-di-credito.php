@@ -71,7 +71,7 @@
 
 
 							<!-- carousel 1 -->
-						<div id="myCarouselCarte" class="carousel slide greenarrows" data-ride="carousel"  data-interval="false">
+	<div id="myCarouselCarte" class="carousel slide greenarrows" data-ride="carousel"  data-interval="false">
 					  <!-- Indicators -->
 					  <ol class="carousel-indicators">
 					    <li data-target="#myCarouselCarte" data-slide-to="0" class="active"></li>
@@ -129,7 +129,7 @@
 					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					    <span class="sr-only">Next</span>
 					  </a>
-					</div>
+	</div>
 					<!-- /carousel 1 -->
 
 
@@ -143,7 +143,7 @@
 
 				<!-- container 3 inizio -->
 
-
+					<!--
 					<div class="carte-di-credito container03" id="s3">
 						<h3>CARTE DI DEBITO</h3>
 							<div class="row">
@@ -176,9 +176,107 @@
 
 
 					</div>
-
+					-->
 
 				<!-- container 3 fine -->
+
+				<!-- container 3 CON SLIDER -->
+
+				
+				<div class="carte-di-credito container02 version-b large-mob-carousel" id="s3">
+						<h3>CARTE DI DEBITO</h3>
+							<div class="row">
+							<!-- carousel 2 -->
+								<div id="myCarouselCarteDebito" class="carousel slide greenarrows" data-ride="carousel"  data-interval="false">
+					  			<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#myCarouselCarteDebito" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarouselCarteDebito" data-slide-to="1"></li>
+								</ol>	
+
+					  			<!-- Wrapper for slides -->
+					  			<div class="carousel-inner" role="listbox">
+								<div class="item active item01">
+									<h3>Carta di debito internazionale</h3>
+
+									<div class="row">
+									<div class="col-sm-8 col-xs-12">
+										<p>Con la carta di debito hai un canone gratuito e puoi fare più di quanto immagini:</p>
+										<ul>
+											<li><strong>Prelevare contante e fare pagamenti in Italia e all'estero agli sportelli e negli esercizi commerciali del circuito Bancomat, Pagobancomat e Maestro</strong></li>
+											<li><strong>Pagare contactless i tuoi acquisti in modo veloce e sicuro semplicemente avvicinando la carta agli appositi lettori che espongono il simbolo, nel caso di piccoli importi (sino a 25 Euro) non sarà necessario digitare il codice PIN</strong></li>
+											<li><strong>Prelevare senza commissioni da tutti gli sportelli automatici in Italia e area Euro</strong></li>
+											<li><strong>Usarla senza alcuna commissione per i pedaggi autostradali con la funzione FastPay</strong></li>
+											<li><strong>Versare contanti e assegni nelle aree Self service</strong></li>
+											<li><strong>Ricaricare il cellulare e le prepagate, pagare le utenze</strong> agli sportelli automatici Banco BPM</li>
+											<li>Tenere sempre sotto <strong>controllo le spese</strong> con il servizio Alert SMS, email e push</li>
+											<li><strong>Proteggerti dalle frodi</strong> con il servizio <strong>GeoBlock.</strong></li>
+
+										</ul>
+									</div>	
+									<div class="col-sm-4 hidden-xs">
+										<img src="/wbresp/img/carte/cartadebito.png" class="img-responsive hidden-xs" alt="Carta di debito internazionale" title="Carta di debito internazionale - Con la carta di debito hai un canone gratuito e puoi fare più di quanto immagini">
+								
+									</div>
+					    			</div>
+									
+
+
+								</div>
+
+					    <div class="item item02">
+					    	<h3>BANCOMAT Pay</h3>	
+							<img src="/wbresp/img/carte/bancomat_pay.png"  class="img-responsive mob100" alt="Bancomat Pay" title="Bancomat Pay" />
+							<p>L'<strong>app BANCOMAT</strong> Pay &egrave; comoda e rapida: ti basta lo smartphone!<br>
+						    E’ <strong>senza canone né commissioni</strong> per i tuoi acquisti anche online.</p>
+							
+							<ul>
+							<li><strong>Invia e ricevi</strong> denaro con i contatti della tua rubrica in <strong>tempo reale</strong>, 7 giorni su 7, <strong>non usi l’IBAN</strong></li>
+							<li><strong>Acquista nei negozi</strong> convenzionati in modo semplice e veloce <strong>senza usare la carta di debito</strong></li>
+							<li><strong>Compra online senza</strong> digitare il <strong>numero della carta</strong></li>
+							<li><strong>Paga</strong> la pubblica amministrazione <strong>con Pago PA</strong> (bollo auto, multe, mense scolastiche e molto altro).</li>
+							</ul>
+							<p>Scarica l’app BANCOMAT Pay dagli store iOS e Android.</p>
+
+					    </div>
+
+
+					  </div>
+
+					  <!-- Left and right controls -->
+					  <a class="left carousel-control" href="#!" data-target="#myCarouselCarteDebito" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#!" data-target="#myCarouselCarteDebito" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+	</div>
+					<!-- /carousel 1 -->
+
+
+
+
+						</div>
+					</div>
+				
+				<!-- container 3 CON SLIDER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<!-- container 4 inizio -->
 				<div class="carte-di-credito container04" id="s4">
 					<h4>CARTE PREPAGATE</h4>
