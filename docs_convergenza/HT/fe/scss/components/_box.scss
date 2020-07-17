@@ -1126,7 +1126,13 @@
     display: table;
     width: 100%;
     &.positivo { color: $acqua; }
-    &.attenzione { color: $giallo; }
+    &.attenzione { 
+        color: $giallo; 
+        li a {
+            color: $giallo;
+            text-decoration: underline;
+        }
+    }
     &.negativo { color: $rosso; }
     &:after {
       float: none;

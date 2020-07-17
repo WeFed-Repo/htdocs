@@ -7441,7 +7441,9 @@ div.fixed-table-scroll-outer {
     line-height: 13px;
     margin-bottom: 0;
 }
-
+.textWrapper .text.checked {
+    font-weight:bold
+}
 .bootstrap-table .fixed-columns {
     position: absolute;
     top: 0;

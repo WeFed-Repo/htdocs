@@ -8426,3 +8426,5 @@ p.note {font-size:12px; font-weight:300;}
     text-align: center;
 
 }
+/*AGGIUNTA CLASSE DI LOADING SU TABELLE IN HOME */
+.fixed-table-loading {display: none;}
