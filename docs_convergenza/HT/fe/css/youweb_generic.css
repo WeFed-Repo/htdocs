@@ -2219,7 +2219,19 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
  div.messagePanel.success .linHeighVert p, div.messagePanel.error .linHeighVert p,  div.messagePanel.alert .linHeighVert p {
     color:#fff;
  }
-
+ .esito-inline {
+     position: relative;
+     min-height: 40px;
+ }
+.esito-inline .esito-text {
+    position: absolute;
+    left: 46px;
+    top:9px;
+    font-size: 16px;
+}
+.esito-inline .icon {
+    color:#007c66;
+}
 
 
 div.messagePanel h3 {

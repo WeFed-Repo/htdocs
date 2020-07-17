@@ -30,24 +30,20 @@
 <section>
     <h3 class="titleSection titleForm">SOTTOSCRIZIONE CONDIZIONI GENERALI</h3>
     <p>In approvazione  del contenuto e delle condizioni riportate nella documentazione contrattuale, appongo la mia firma.</p>
-    
-    <section id="messaggioFirma" style="display:none">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="messagePanel success hidden-print bgBoxBonif bgBoxSucc messageFirma">
-				<div class="row">
-					<div class="col-xs-12 linHeighVert"><i class="icon iconBig icon-alert_ok"></i><span>Clausule generali del contratto firmate a distanza</span>
-						<div class="row">
-							<div class="col-xs-12">
-								<p></p>
-							</div>
-						</div>
-                    </div>					
-				</div>
-			</div>
+    <!--NUOVO OGGETTO DI FEEDBACK-->
+    <section>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="esito-inline">
+                    <i class="icon iconBig icon-alert_ok flLeft"></i>
+                	<span class="esito-text">Clausule generali del contratto firmate a distanza</span>
+                </div>		
+            </div>
 		</div>
-	</div>
     </section>
+    <!--NUOVO OGGETTO DI FEEDBACK-->
+		
+   
     <div class="row" id="condGen">
         <div class="col-xs-12 col-sm-4">
             <p>(Inserisci la Password usa e getta/OTP generata dal tuo dispositivo di sicurezza).</p>
