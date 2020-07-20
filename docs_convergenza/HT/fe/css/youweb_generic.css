@@ -7732,3 +7732,13 @@ div.fixed-table-scroll-outer {
        text-align:center
     }
 }
+
+/*clausole vessatorie */
+.clausole-art {
+    display:inline-block;
+    font-style: italic;
+    font-size: 12px;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+.clausole-art::first-letter {text-transform: capitalize;}
