@@ -91,6 +91,7 @@
   &.btn-link {
     @include btnPalette($color:$greenLink, $bkg:transparent, $bkg_hover: transparent, $color_disabled:$gray3, $bkg_disabled: transparent );
     //outline: pink dashed 3px !important;
+    text-decoration: underline;
     text-transform: none;
     padding: 0.5rem;
     @include icon {
@@ -272,7 +273,7 @@
       &:before {
         content: '\2013';
         color: $gray2;
-      } 
+      }
     }
   }
 }
