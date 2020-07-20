@@ -1,0 +1,599 @@
+body {
+    background-color: #eee;
+    font-family: Arial, Serif;
+    margin: 0;
+    padding: 0 !important;
+}
+* {
+    box-sizing: border-box
+}
+.wrapper {
+    margin: 0 auto;
+    display: block;
+    max-width: 1200px;
+    padding: 0
+}
+a {
+    color: #000;
+}
+a:hover {
+    color: #fff
+}
+
+/* HEADER */
+
+#heading {
+    width: 100%;
+    font-size: 1em;
+}
+#heading .wrapper {
+    height: 70px;
+    border-bottom: solid 5px #fff;
+    padding: 0;
+}
+#heading h1 {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    line-height: 70px;
+    color: #fff
+}
+#heading .btmenu {
+    float: left;
+    width: 38px;
+    height: 38px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 50%;
+    margin: 15px 10px 0 0px;
+    padding: 0
+}
+.navconsole {
+    width: 100%;
+    float: left;
+    font-size: 1em;
+    ;
+}
+.navconsole a {
+    text-transform: uppercase;
+    font-weight: normal;
+    float: left;
+    margin: 13px 0 0;
+    width: 100%;
+    border-radius: 10px;
+    height: 44px;
+    text-align: center;
+    line-height: 40px;
+    border: solid 2px #fff;
+    color: #fff;
+    font-size: 1em;
+    font-size: 16px;
+    text-decoration: none;
+    transition: border 0.1s
+}
+.navconsole a:hover {
+    border: solid 4px #fff;
+    line-height: 36px;
+    color: #fff !important;
+    font-size: 16px;
+}
+.navconsole a.selected {
+    background: #fff;
+    color: #000 !important;
+    border: 0;
+    font-weight: bold;
+    height: 53px;
+    border-bottom: 0 !important;
+    border-radius: 10px 10px 0 0;
+    line-height: 48px;
+}
+
+/* MAIN - V. LIBRERIE */
+
+#librerie .wrapper {
+    background-color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+#librerie h2 {
+    float: left;
+    width: 100%;
+    font-size: 1.3em;
+    font-size: 16px;
+    margin: 0;
+    border-bottom: solid 4px #fff
+}
+#librerie h2 .totals {
+    float: right;
+    color: #999;
+    font-size: 11px;
+    font-weight: normal;
+}
+#librerie ul {
+    font-size: 1em;
+    list-style-type: none;
+    margin: 0 0 10px;
+    padding: 0;
+    width: 100%;
+    float: left
+}
+#librerie ul li {
+    border-bottom: solid 1px #ccc;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+#librerie ul li a, #librerie ul li span.rowname {
+    float: left;
+    padding: 8px 0
+}
+#librerie ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+#librerie ul.multiline li a {
+    float: right;
+    width: 40px;
+    background: #999;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 5px 0 5px 5px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+    display: block;
+    border-radius: 5px;
+}
+#librerie ul.multiline li a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+#librerie ul.accordion {
+    margin-bottom: 20px;
+}
+#librerie ul.accordion li a.title {
+    width: 90%
+}
+#librerie ul.accordion li>span {
+    float: left;
+    width: 90%;
+    padding: 8px 0;
+}
+#librerie ul.accordion li a.minilink {
+    float: right;
+    height: 25px;
+    width: 35px;
+    background: #ddd;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    margin: 5px 0 0 3px;
+    padding: 0;
+    color: #fff;
+}
+#librerie ul.accordion a.minilink.resp {
+    background: #8b0;
+}
+#librerie ul.accordion a.minilink.webview {
+    background: #333;
+}
+#librerie ul.accordion a.minilink.fixed {
+    background: #fc0;
+}
+#librerie ul.accordion a.minilink.noresp {
+    width: 73px;
+    display: none;
+}
+#librerie ul.accordion a.minilink.porting {
+    width: 73px;
+    display: none;
+    background-color: #ff9999;
+    color: #fff
+}
+#librerie ul.accordion a.minilink.webview.porting {
+    width: 35px;
+    background-color: #800000;
+    width: 73px;
+}
+#librerie ul.accordion .noresp>a.minilink.noresp {
+    background: #d00;
+    display: block;
+}
+#librerie ul.accordion .noresp>a.minilink.resp, #librerie ul.accordion .noresp>a.minilink.fixed {
+    display: none;
+}
+#librerie ul.accordion .noresp.porting>a.minilink.noresp {
+    display: none;
+}
+#librerie ul.accordion .noresp.porting>a.minilink.porting {
+    display: block;
+}
+#librerie ul.accordion .noresp.porting>a.minilink.webview {
+    display: none;
+}
+#librerie ul.accordion .noresp.porting>a.minilink.webview.porting {
+    display: block;
+}
+#librerie ul.accordion li a.minilink:hover {
+    text-decoration: none;
+}
+#librerie ul.accordion li a.opener {
+    float: left;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 10px 0 0;
+    line-height: 27px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+#librerie ul.accordion li a.opener:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+#librerie ul.accordion li span.dottie {
+    float: left;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px 15px 0 5px;
+    line-height: 27px;
+    padding: 0;
+    text-align: center;
+    background-color: #ccc;
+}
+#librerie ul.accordion li a.opener .icon {
+    color: #fff;
+    font-size: 16px !important;
+}
+#librerie ul.accordion li a.opener .icon-arrow_up {
+    display: none;
+}
+#librerie ul.accordion li.opened>a.opener {
+    opacity: 0.5;
+    !important;
+}
+#librerie ul.accordion li.opened>a.opener .icon-arrow_down {
+    display: none;
+}
+#librerie ul.accordion li.opened>a.opener .icon-arrow_up {
+    display: block;
+}
+#librerie ul.accordion>li>a, #librerie ul.accordion>li>span, #librerie ul.accordion>li>ul>li>a, #librerie ul.accordion>li>ul>li>span {
+    font-weight: bold;
+}
+#librerie ul.accordion li>ul {
+    display: none;
+}
+#librerie ul.accordion li>ul li {
+    border-top: solid 1px #dedede;
+    border-bottom: none;
+}
+#librerie ul.accordion li.opened>ul {
+    display: block;
+}
+#librerie ul.accordion li.opened>a.icon-arrow_up {
+    display: block;
+}
+#main .wrapper {
+    background-color: #fff;
+    padding: 0 0 30px;
+}
+
+/* TITOLATURE PERSONALIZZATE */
+
+.lib2 {
+    background-color: #000;
+    font-size: 16px;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px 10px 0 0;
+    float: left;
+    width: 100%;
+}
+.lib2 a, .lib2 a:hover {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+.lib2 span {
+    color: #ddd;
+    float: right;
+    font-size: 13px;
+}
+.lib2 span a, .lib2 span a:hover {
+    font-size: 13px;
+}
+
+/* ICONE */
+
+.iconWrap {
+    border: solid 1px #eee;
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin: 5px;
+    float: left;
+    padding: 10px 0 0;
+}
+.iconWrap:hover {
+    background: #ddd
+}
+.iconWrap span.name {
+    display: none;
+    float: left;
+    font-size: 0.8em;
+    padding: 5px 0 5x;
+    width: 100%;
+    text-align: center;
+    overflow: ellipsis;
+    border-top: solid 2px #ccc;
+}
+.iconIndex {
+    cursor: pointer;
+    backgound: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    line-height: 40px;
+    center;
+    text-align: center;
+    margin: 0 10px 10px
+}
+.iconIndex .icon {
+    line-height: 50px
+}
+#iconOptions {
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+}
+#iconOptions .optionWrap {
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    margin: 5px;
+}
+#iconOptions span {
+    float: left;
+    line-height: 35px;
+    margin: 5px
+}
+#iconOptions a {
+    cursor: pointer;
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: #eee;
+    margin: 5px;
+    border-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+}
+#iconOptions a i {
+    color: #ccc;
+    font-size: 16px
+}
+#iconOptions a.on {
+    background: #000
+}
+#iconOptions a.on i {
+    color: #fff
+}
+#iconOptions .optionWrap.selettori a {
+    width: 60px;
+    font-size: 10px
+}
+#iconOptions .optionWrap.selettori a.on {
+    background: #000;
+    color: #fff
+}
+
+/* GLIFI */
+
+.glyphWrap {
+    width: 200px;
+    float: left;
+    display: block;
+    padding: 15px;
+    border: solid 1px #eee;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+}
+.glyphWrap .glyphIndex {
+    text-align: center;
+}
+.glyphWrap .glyphIndex .glyhp {
+    display: inline-block;
+    text-align: center;
+}
+.glyphWrap .name {
+    padding-top: 15px;
+    width: 100%;
+    clear: both;
+    float: left;
+    font-size: 11px;
+}
+
+/* ICONE - SWITCH */
+
+#iconSet.nomi .iconWrap span.name {
+    display: block;
+}
+#iconSet.ingombri .icon {
+    border: dashed 1px #f00
+}
+#iconSet.ico1x .icon {
+    font-size: 16px
+}
+#iconSet.ico2x .icon {
+    font-size: 32px
+}
+#iconSet.ico3x .icon {
+    font-size: 48px;
+    line-height: 80px;
+}
+#iconSet.ico3x .iconIndex {
+    width: 80px;
+    height: 80px
+}
+#iconSet.ico4x .icon {
+    font-size: 64px;
+    line-height: 80px
+}
+#iconSet.ico4x .iconIndex {
+    width: 80px;
+    height: 80px
+}
+
+/* OVERLAYER LIBRERIE */
+
+#libOverlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 9998
+}
+#libOverlay .overlayPopup {
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    min-width: 316px;
+    max-width: 640px;
+    border: solid 2px #ccc;
+    border-radius: 20px;
+}
+#libOverlay .overClose {
+    float: right;
+    margin: -20px -20px 0 0;
+    background: #000;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: solid 2px #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: Center;
+}
+#libOverlay .overClose i {
+    color: #fff;
+    font-size: 32px;
+    line-height: 35px;
+    margin: 0;
+    padding: 0
+}
+#libOverlay .overlayCont h2 {
+    font-size: 1.1em;
+    padding: 0 10px 5px;
+    margin: 10px 0 0;
+}
+#libOverlay .overlayCont .iconPanel .iconWrap {
+    margin: 10px;
+    padding: 5px;
+}
+#libOverlay .overlayCont .iconPanel i {
+    line-height: 50px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    margin: 5px;
+    text-align: center;
+}
+#libOverlay .overlayCont .iconPanel span {
+    clear: both;
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    text-align: center;
+    font-size: 0.8em
+}
+#libOverlay .overlayCont .details {
+    float: left;
+    clear: both;
+    margin: 10px;
+}
+#libOverlay .overlayCont .details span {
+    float: left;
+    clear: both;
+}
+#libOverlay .overlayCont .details span.title {
+    font-weight: bold
+}
+
+/* Caratteristiche trasversali */
+
+.lib2 a.libtitle, .lib2 a.libtitle:hover {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media screen and (max-width: 1023px) {
+    #heading h1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        line-height: 55px
+    }
+    #heading h1 .btmenu {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        border: solid 2px #fff;
+        margin-top: 8px;
+    }
+    #heading .wrapper {
+        height: 110px
+    }
+    .navconsole a {
+        margin-top: 0;
+        border: solid 2px #fff;
+        font-size: 1em;
+    }
+    .navconsole a:hover {
+        border: solid 3px #fff
+    }
+    .navconsole a.selected {
+        height: 51px
+    }
+    .lib2 {
+        height: auto;
+        float: left;
+        width: 100%
+    }
+    .lib2 span {
+        font-size: 12px;
+        width: 100%
+    }
+}
+
+.templateconsole {overflow:hidden;}
+.templateconsole .icon {font-size:25px !important;float:left;margin-right:10px;}
+.templateconsole .icon-f-row_contract {display:none;}
+
+a.goto {border:solid 2px #fff; width:48px;height:48px;border-radius:50%; display:block; margin:8px 0 0 20px;float:right;background-size:contain;}
+a.goto:hover {text-decoration:none;opacity:0.7}
+a.goto-specifiche {background-image:url(/librerie/img/icon_specifiche.png)}
