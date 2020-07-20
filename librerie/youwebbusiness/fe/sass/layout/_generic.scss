@@ -5,9 +5,10 @@
 }
 
 // LINKS
-a:not(.btn) {
+a:not(.btn):not([class*="btn"]) {
   color: $greenLink;
-  text-decoration: none;
+  //text-decoration: none;
+  text-decoration: underline;
   cursor:pointer;
   @include icon {
     @include svg-icon-color($greenLink);
