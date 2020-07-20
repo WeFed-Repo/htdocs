@@ -9,21 +9,18 @@ then
   current_time=$(date "+%y%m%d_%H%M")
 
   # prima cartella
-  #newpath="../../../../Documents/HTML_STATICO/"
-  newpath="../../../../../../../../../Users/martapetrella/Documents/HTML_STATICO/"
+  newpath="/Users/martapetrella/Documents/HTML_STATICO"
   newname="html_statico_$current_time"
-  newfile="$newpath$newname.zip"
-  zip -vr "$newfile" html_statico/ changelog.html  -x "*.DS_Store"
+  newfile="$newname.zip"
 
-  echo "$newname created!"
+  zip -vr "$newfile" html_statico/ changelog.html  -x "*.DS_Store" -qq
+  mv "$newfile" "$newpath"
 
-  DIR="../../../../../../../../../Users/martapetrella/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
-  if [ -d "$DIR" ]; then
-    cp "$newpath$newfile" "$DIR"
-
-    echo "$newname copied!"
-
-  fi
+ DIR="/Users/martapetrella/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
+ if [ -d "$DIR" ]; then
+   cp "$newpath/$newfile" "$DIR"
+   echo "$newname copied!"
+ fi
 
 else
   echo "Allora vai e torna! :D "

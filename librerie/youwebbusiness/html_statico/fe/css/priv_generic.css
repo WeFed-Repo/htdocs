@@ -1049,6 +1049,7 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
     white-space: nowrap;
     margin: 0;
     background: none; }
+  .nav-tabs:not(.tabsContenuti) a.nav-link,
   .nav-tabs:not(.tabsContenuti) .nav-link {
     font-size: 16px;
     padding: 0.5rem 1rem;
@@ -1064,16 +1065,26 @@ button i.icon.icon-mostra, a.btn i.icon.icon-mostra {
     border-bottom: solid 3px transparent;
     transition: all 0.3s;
     text-decoration: none; }
+    .nav-tabs:not(.tabsContenuti) a.nav-link:not(.btn),
     .nav-tabs:not(.tabsContenuti) .nav-link:not(.btn) {
       padding-top: 0; }
-    .nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
+    .nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
+    .nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled),
+    .nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
       color: #2F9988;
       margin-bottom: 3px; }
-      .nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled):hover {
+      .nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled):hover,
+      .nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled):hover,
+      .nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled):hover {
         color: #2F9988; }
+    .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
     .nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
       box-shadow: 0 3px 0 0 #2F9988; }
-    .nav-tabs:not(.tabsContenuti) .nav-link:disabled, .nav-tabs:not(.tabsContenuti) .nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti) .nav-link.disabled, .nav-tabs:not(.tabsContenuti) .nav-link.disabled:hover {
+    .nav-tabs:not(.tabsContenuti) a.nav-link:disabled, .nav-tabs:not(.tabsContenuti) a.nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled:hover,
+    .nav-tabs:not(.tabsContenuti) .nav-link:disabled,
+    .nav-tabs:not(.tabsContenuti) .nav-link:disabled:hover,
+    .nav-tabs:not(.tabsContenuti) .nav-link.disabled,
+    .nav-tabs:not(.tabsContenuti) .nav-link.disabled:hover {
       color: #DDDDDD !important;
       cursor: default !important;
       border-bottom: solid 3px transparent !important;
@@ -1645,7 +1656,10 @@ ul.pagination {
   width: 300px;
   border: solid 1px #DDDDDD !important;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
-  border-radius: 3px; }
+  border-radius: 3px;
+  z-index: 9999 !important; }
+  .ui-datepicker a {
+    text-decoration: none; }
   .ui-datepicker .ui-datepicker-calendar {
     flex: 1; }
     .ui-datepicker .ui-datepicker-calendar th {
@@ -1667,7 +1681,8 @@ ul.pagination {
         line-height: 2em;
         border-radius: 50%;
         margin: 1px auto;
-        text-align: center; }
+        text-align: center;
+        text-decoration: none; }
       .ui-datepicker .ui-datepicker-calendar td:hover a {
         color: #FFFFFF !important;
         background: #DDDDDD !important; }
@@ -2574,6 +2589,7 @@ ul.pagination {
     .btn.btn-white .icon-menu {
       transform: translate(2px, 2px); }
   .btn.btn-link {
+    text-decoration: underline;
     text-transform: none;
     padding: 0.5rem; }
     .btn.btn-link:not(:disabled):not(.disabled) {
@@ -3899,6 +3915,8 @@ body > .dropdown-menu,
   .c-anagrafica .btn.nav-link {
     font-weight: bold;
     flex-shrink: 0; }
+    .c-anagrafica .btn.nav-link, .c-anagrafica .btn.nav-link.active {
+      margin-bottom: 1rem !important; }
     .c-anagrafica .btn.nav-link.btn-white {
       color: #737373 !important; }
     .c-anagrafica .btn.nav-link.btn-white.active, .c-anagrafica .btn.nav-link.active {
@@ -3936,7 +3954,7 @@ body > .dropdown-menu,
     ul {
         width:100px;
         border:red solid 1px;
-    }        
+    }
 }
 */
 .clickScroll-container {

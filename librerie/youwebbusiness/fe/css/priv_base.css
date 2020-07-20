@@ -677,11 +677,11 @@ html.tmp-login footer {
 *:hover, *:focus, *:active {
   outline: none !important; }
 
-a:not(.btn) {
+a:not(.btn):not([class*="btn"]) {
   color: #2F9988;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer; }
-  a:not(.btn) .icon, a:not(.btn) img[src*=".svg"], a:not(.btn) i {
+  a:not(.btn):not([class*="btn"]) .icon, a:not(.btn):not([class*="btn"]) img[src*=".svg"], a:not(.btn):not([class*="btn"]) i {
     line-height: 1em;
     top: 0;
     display: inline-block;
@@ -689,10 +689,10 @@ a:not(.btn) {
     margin: 0 0.5em 0 0;
     padding: 0;
     float: left; }
-  a:not(.btn):hover {
+  a:not(.btn):not([class*="btn"]):hover {
     color: #37AD9C;
     text-decoration: underline; }
-  a:not(.btn).disabled, a:not(.btn).disabled:hover, a:not(.btn)[disabled], a:not(.btn)[disabled]:hover {
+  a:not(.btn):not([class*="btn"]).disabled, a:not(.btn):not([class*="btn"]).disabled:hover, a:not(.btn):not([class*="btn"])[disabled], a:not(.btn):not([class*="btn"])[disabled]:hover {
     color: #999999;
     text-decoration: none;
     cursor: default; }
