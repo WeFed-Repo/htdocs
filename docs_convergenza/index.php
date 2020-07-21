@@ -18,7 +18,7 @@
     <body class="<?php print($site); ?>">
         <header class="librerie"> 
             <div class="wrapper">
-                <h1>Librerie convergenza <?php print(ucwords($site)); ?><?php /* if($site==="webank") {?><a className="switch-pp" href="index_wb_pubblica.php">Parte Privata</a><?php } */ ?></h1>
+                <h1>Librerie convergenza <?php print(ucwords($site)); ?><?php if($site==="webank") {?><div class="switch-pp"><a href="index.php" class="on">Privata</a><a href="index_wb_pubblica.php">Pubblica</a></div><?php } ?></h1>
 				<?php include("./librerie_switch.php"); ?>
             </div>
         </header>

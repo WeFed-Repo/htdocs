@@ -4,7 +4,6 @@ $tipoOggettiPub = Array(
 	"bottoni" => "Bottoni",
 	"box" => "Box",
 	"navigazione" => "Navigazione",
-	"form" => "Form input e output",
 	"overlay" => "Overlay",
 	"promo" => "Promo",
 	"tabelle" => "Tabelle",
@@ -14,9 +13,8 @@ $tipoOggettiPub = Array(
 
 
 ?>
-<div id="librerie">
+<div id="main" class="librerie">
 	<div class="wrapper">
-		<div class="container-fluid">
 			<div class="row">
 				<!-- STRUTTURE -->
 				<div class="col-sm-6 col-md-3">
@@ -86,6 +84,6 @@ $tipoOggettiPub = Array(
 					
 					
 			</div>
-		</div>
+		
 	</div>
 </div>

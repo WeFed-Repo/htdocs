@@ -473,3 +473,36 @@ body.youweb .template.template-root li.has-opener a.opener, body.youweb .full-op
       transparent 10px,
       #f90 10px,
       #f90 20px); color: #fff; width: 85px; display: inline-block;  border-radius: 10px; text-align: center; right: 0; position: absolute;}
+
+
+.switch-pp {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -3px;
+}
+
+.switch-pp a {
+    font-size:12px;
+    padding:5px 15px 5px 10px;
+    text-transform:uppercase;
+    color:#999;
+    background: #fff;
+    border-radius:0 15px 15px 0;
+    display:inline-block;
+    height:30px;
+    line-height:21px;
+}
+.switch-pp a:hover {opacity:0.7;text-decoration:none}
+.switch-pp a:first-child {
+    padding:5px 10px 5px 15px;
+    border-radius:15px 0 0 15px;
+}
+.switch-pp a.on {
+    color:#fff;
+    background:#8ab10b;
+}
+
+/* Webank pubblica */
+body.webank.wb-pubblica header {background:#000;}
+body.webank.wb-pubblica header h1 {color:#fff}
