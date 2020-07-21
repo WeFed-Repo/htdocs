@@ -3,7 +3,7 @@
 	$imgBackHero= '/wbresp/img/hero/main_hero_mutuo.jpg';
 ?>
 <!--MINI HERO -->
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_010.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_010.php")?>
 <!--FINE MINI HERO -->
 
 <!--titoli e tab fissi non modificabili via content -->
@@ -17,13 +17,13 @@
 		$idCar= 'myCarouselMutuo';
 		$boxdueCol = 'myCarouselMutuoWrapper';
 	?>
-	<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+	<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 	<?php
 		$idCar= 'myCarouselMutuo2';
 		$boxdueCol = 'myCarouselMutuoWrapper2';
 		$styleDisplay = 'none'
 	?>
-	<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+	<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 </div>
 <script>
 $(document).ready(function() {

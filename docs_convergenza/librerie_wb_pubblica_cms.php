@@ -7,24 +7,24 @@
 	#librerie ul.albero span {font-weight:bold}
 </style>
 <?php
-	$pubpath = "connect.php?page=strutt_wbresp.php&tpl=";
+	$pubpath = "/template/strutt_wbresp.php?tpl=";
 ?>
 
 		<ul class="albero">
 		<li><span>Home</span>
 			<ul>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_home_cms.php">Home</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_home_cms.php">Home</a></li>
 
 			</ul>
 		</li>
 		
 		<li><span>Stato apertura conto</span>
 			<ul>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_full_cms_stato_apertura_conto.php">Stato apertura conto</a></li>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_full_cms_stato_apertura_conto2.php">Elenco delle pratiche (AS IS)</a></li>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_aol_big_tracking.php&amp;subnav=tracking&amp;promo=docaol">Elenco pratiche</a></li>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_full_cms_stato_apertura_conto_richiesta.php">Richiesta apertura conto</a></li>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_full_cms_stato_apertura_conto_bozza.php">Salvataggio bozza apertura conto</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_full_cms_stato_apertura_conto.php">Stato apertura conto</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_full_cms_stato_apertura_conto2.php">Elenco delle pratiche (AS IS)</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_big_tracking.php&amp;subnav=tracking&amp;promo=docaol">Elenco pratiche</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_full_cms_stato_apertura_conto_richiesta.php">Richiesta apertura conto</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_full_cms_stato_apertura_conto_bozza.php">Salvataggio bozza apertura conto</a></li>
 			</ul>
 		</li>
 		
@@ -57,7 +57,7 @@
 						
 						<li><span>Calcolatore Mutuo</span>
 							<ul>
-								<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_placeholder.php&amp;tpl=wbresp_calcolatore_mutui.php"><i>Step 1</i></a></li>	
+								<li><a href="/template/strutt_wbresp.php?tpl=wbresp_placeholder.php&amp;tpl=wbresp_calcolatore_mutui.php"><i>Step 1</i></a></li>	
 								<li>Step 2</li>	
 								<li><a href="<?php print $pubpath; ?>mutuo_richiesta_step1.html"><i>Step 3</i></a></li>	
 								<li><a href="<?php print $pubpath; ?>mutuo_richiesta_step2.html"><i>Step 4</i></a></li>	
@@ -97,7 +97,7 @@
 		
 		<li><span>Landing MGM</span>
 			<ul>
-				<li><a href="/connect.php?page=strutt_wbresp.php&amp;tpl=wbresp_big_cms_mgm.php">MGM</a></li>
+				<li><a href="/template/strutt_wbresp.php?tpl=wbresp_big_cms_mgm.php">MGM</a></li>
 			</ul>
 		</li>
 

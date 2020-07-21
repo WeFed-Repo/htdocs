@@ -10,7 +10,7 @@
 	
 ?>
 <!--BLOCK IN SLIDER BLACK -->
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_170.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_170.php")?>
 <!--FINE BLOCK IN SLIDER BLACK -->
 
 <!--2 RIGHE WHITE -->
@@ -18,7 +18,7 @@
 	$isBlack = false;
 	$idCar= 'carouselContoLight';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_180.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_180.php")?>
 <!--FINE 2 RIGHE WHITE -->
 
 <!--2 COLONNE SX WHITE -->
@@ -26,7 +26,7 @@
 	$imgBackLight = '/wbresp/img/sfondi-box/carte_webank_bg_blocco3.png';
 	$idCar= 'carouselContoLight2';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE SX WHITE -->
 <!--2 RIGHE Black-->
 <?php
@@ -34,7 +34,7 @@
 	$idCar= 'carouselContoDark3';
 	$imgBackDark = '/wbresp/img/sfondi-box/carte_webank_bg_blocco4.jpg';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_180.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_180.php")?>
 <!--FINE 2 RIGHE Black-->
 <!--2 COLONNE DX WHITE -->
 <?php
@@ -44,7 +44,7 @@
 	$invertiColSx = 'col-md-push-6';
 	$invertiColDx = 'col-md-pull-6';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE DX WHITE-->
 <p class="note">MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE<br>
 					Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi. Richieste soggette a valutazione ed approvazione da parte della Banca.

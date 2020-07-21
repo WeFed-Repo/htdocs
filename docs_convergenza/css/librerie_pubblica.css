@@ -10,7 +10,7 @@ body {
 .wrapper {
     margin: 0 auto;
     display: block;
-    max-width: 1200px;
+    max-width: 1400px !important;
     padding: 0
 }
 a {
@@ -25,19 +25,18 @@ a:hover {
 #heading {
     width: 100%;
     font-size: 1em;
+    background:#000;
 }
-#heading .wrapper {
-    height: 70px;
-    border-bottom: solid 5px #fff;
-    padding: 0;
-}
+
 #heading h1 {
     float: left;
     width: 100%;
-    font-size: 2em;
+    font-size: 20px;
+    font-family: Arial,Serif;
+    font-weight:bold;
     padding: 0;
     margin: 0;
-    line-height: 70px;
+    line-height: 65px;
     color: #fff
 }
 #heading .btmenu {
@@ -103,10 +102,9 @@ a:hover {
 #librerie h2 {
     float: left;
     width: 100%;
-    font-size: 1.3em;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
-    border-bottom: solid 4px #fff
+    border-bottom: solid 4px #8ab10b
 }
 #librerie h2 .totals {
     float: right;
@@ -297,7 +295,7 @@ a:hover {
 /* TITOLATURE PERSONALIZZATE */
 
 .lib2 {
-    background-color: #000;
+    background-color: #666;
     font-size: 16px;
     padding: 15px;
     margin: 20px 0;
@@ -597,3 +595,4 @@ a:hover {
 a.goto {border:solid 2px #fff; width:48px;height:48px;border-radius:50%; display:block; margin:8px 0 0 20px;float:right;background-size:contain;}
 a.goto:hover {text-decoration:none;opacity:0.7}
 a.goto-specifiche {background-image:url(/librerie/img/icon_specifiche.png)}
+

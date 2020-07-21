@@ -33,37 +33,6 @@
         <script type="text/javascript" src="/common/fe/assets/jquery/jquery.js"></script>
         <!-- / JS -->
 
-    <!-- DECLINAZIONI SPECIALI PER LIBRERIE -->
-    <style>
-
-        /* a {color:
-        <?php print $forecolor ?> } */
-        .color {
-            color: <?php print $forecolor ?> !important;
-        }
-
-        .bordercolor {
-            border-color: <?php print $forecolor ?> !important;
-        }
-
-        .bgcolor {
-            background-color: <?php print $forecolor ?> !important;
-        }
-
-        .bglightcolor {
-            background-color: <?php print $backcolor ?> !important;
-        }
-
-        .borderlightcolor {
-            border-color: <?php print $backcolor ?> !important;
-        }
-
-        .singleborderlightcolor {
-            border-bottom: 1px solid <?php print $backcolor ?> !important;
-        }
-    </style>
-    <!-- / CSS -->
-
     
 </head>
 

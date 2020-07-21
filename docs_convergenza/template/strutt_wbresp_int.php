@@ -424,7 +424,7 @@
 <!-- INIZIO TEMPLATE DI PAGINA -->
 <?php 
 	
-	if (!empty($tpl)) virtual("/librerie/php/template_wbresp/".$tpl); 
+	if (!empty($tpl)) virtual("/template/template_wbresp/".$tpl); 
 	
 ?>
 <!-- FINE TEMPLATE DI PAGINA -->

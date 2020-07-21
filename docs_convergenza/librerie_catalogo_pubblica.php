@@ -9,7 +9,6 @@
 		"box" => "Box",
 		"navigazione" => "Navigazione",
 		"form" => "Form input e output",
-		"overlay" => "Overlay",
 		"promo" => "Promo",
 		"tabelle" => "Tabelle",
 		"testi" => "Titoli e testi",
@@ -54,36 +53,7 @@
         <!--NUOVI CSS -->
     <link rel="stylesheet" href="/wbresp/css/contenuti_pubblica.css"/>
 
-    <!-- DECLINAZIONI SPECIALI PER LIBRERIE -->
-    <style>
-
-        /* a {color:
-        <?php print $forecolor ?> } */
-        .color {
-            color: <?php print $forecolor ?> !important;
-        }
-
-        .bordercolor {
-            border-color: <?php print $forecolor ?> !important;
-        }
-
-        .bgcolor {
-            background-color: <?php print $forecolor ?> !important;
-        }
-
-        .bglightcolor {
-            background-color: <?php print $backcolor ?> !important;
-        }
-
-        .borderlightcolor {
-            border-color: <?php print $backcolor ?> !important;
-        }
-
-        .singleborderlightcolor {
-            border-bottom: 1px solid <?php print $backcolor ?> !important;
-        }
-    </style>
-    <!-- / CSS -->
+   
 
     
 </head>
@@ -94,7 +64,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>
+                    <h1><a href="/index_wb_pubblica.php" class="btmenu"><</a>
                         Librerie Webank Pubblica
                 </div>
             </div>

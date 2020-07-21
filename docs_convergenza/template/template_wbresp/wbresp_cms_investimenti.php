@@ -10,7 +10,7 @@
 	
 ?>
 <!--MINI HERO -->
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_010.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_010.php")?>
 <!--FINE MINI HERO -->
 
 <!--2 COLONNE DX WHITE -->
@@ -22,7 +22,7 @@
 	$invertiColDx = 'col-md-pull-6';
 	$boxdueCol= 's2';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE DX WHITE -->
 
 <!--2 COLONNE SX WHITE -->
@@ -34,7 +34,7 @@
 	$invertiColDx = '';
 	$boxdueCol= 's3';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE SX WHITE -->
 
 <!--2 RIGHE WHITE -->
@@ -43,7 +43,7 @@
 	$idCar= 'carouselContoLight';
 	$sliderLight= 's4';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_180.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_180.php")?>
 <!--FINE 2 RIGHE WHITE -->
 
 <!--2 COLONNE DX WHITE -->
@@ -55,6 +55,6 @@
 	$invertiColDx = 'col-md-pull-6';
 	$boxdueCol= 's5';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030b.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030b.php")?>
 <!--FINE 2 COLONNE DX WHITE -->
 

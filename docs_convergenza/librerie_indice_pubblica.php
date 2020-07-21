@@ -4,7 +4,6 @@ $tipoOggettiPub = Array(
 	"bottoni" => "Bottoni",
 	"box" => "Box",
 	"navigazione" => "Navigazione",
-	"overlay" => "Overlay",
 	"promo" => "Promo",
 	"tabelle" => "Tabelle",
 	"testi" => "Titoli e testi",
@@ -17,7 +16,7 @@ $tipoOggettiPub = Array(
 	<div class="wrapper">
 			<div class="row">
 				<!-- STRUTTURE -->
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-4">
 					<!-- STRUTTURE -->
 					<h2 class="color borderlightcolor">Strutture</h2>
 					<ul>
@@ -30,7 +29,7 @@ $tipoOggettiPub = Array(
 				</div>
 
 				<!-- OGGETTI -->
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-4">
 					<h2 class="color borderlightcolor">Oggetti</h2>
 					<ul>
 						<?php
@@ -46,35 +45,24 @@ $tipoOggettiPub = Array(
 				</div>
 
 				<!-- PAGINE -->
-				<div class="col-sm-12 col-md-6">
-					
-					<h2 class="color borderlightcolor">Template</h2>
+				<div class="col-sm-12 col-md-4">
 					<script type="text/javascript">
 						$(function(){
-							$(".aprichiudi").click(function(){
-								$(this).closest('h2').nextAll('div').eq(0).toggle();
+							$(".full-opener").click(function(){
+								$($(this).parents('.template-title').attr("data-target")).toggle();
 								$(this).toggleClass("opened");
 							});
 						})
 					</script>
-					<style>
-						#pubblica {border:dashed 1px #ccc; width:100%; float:left; padding: 10px 10px 0 10px; border-top:none;border-radius: 0 0 10px 10px;}
-						.aprichiudi,.aprichiudi:focus {float:right;  height: 25px;width: 25px;cursor: pointer;border-radius: 50%;margin: 5px 0;line-height: 27px;  padding: 0;text-align: center;text-decoration:none!important;}
-						.aprichiudi.opened {opacity:0.5;}
-						.aprichiudi i {color:#fff;}
-						.aprichiudi i.icon-arrow_right,.aprichiudi.opened i.icon-arrow_down {display:block;}
-						.aprichiudi.opened i.icon-arrow_right, .aprichiudi i.icon-arrow_down {display:none;}
-						.borderlightcolor.small{font-size:15px!important;border-bottom-width:1px!important;margin-bottom:10px!important}
-					</style>
 					<div id="pubblica">
 						<!-- template divisi tra statici e CMS-->
-						<h2 class="color borderlightcolor small">Statici<a class="aprichiudi bgcolor opened" href="javascript:;"><i class="icon icon-arrow_down icon-1x"></i><i class="icon icon-arrow_right icon-1x"></i></a></h2>
+						<h2 class="template-title" data-target="#template_statici">Template statici <a class="full-opener opened" href="javascript:;"><span class="plus">+</span><span class="min">&ndash;</span></a></h2>
 						<div id="template_statici">
 							<?php
 							include("librerie_wb_pubblica.php"); 
 							?>
 						</div>
-						<h2 class="color borderlightcolor small">CMS<a class="aprichiudi bgcolor" href="javascript:;"><i class="icon icon-arrow_down icon-1x"></i><i class="icon icon-arrow_right icon-1x"></i></a></h2>
+						<h2 class="template-title"  data-target="#template_cms">CMS<a class="full-opener" href="javascript:;"><span class="plus">+</span><span class="min">&ndash;</span></a></h2>
 							<div id="template_cms"  style="display:none">
 							<?php
 							include("librerie_wb_pubblica_cms.php"); 

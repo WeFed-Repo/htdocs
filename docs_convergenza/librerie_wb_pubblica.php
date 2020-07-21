@@ -8,7 +8,7 @@
 </style>
 <?php
 	$pubpath = "/wbresp/";
-	$dynpath = "/template/strutt_wbresp.php?tpl=";
+	$dynpath = "/template/strutt_wbresp_int.php?tpl=";
 ?>
 
 <ul class="albero">
@@ -247,12 +247,6 @@
 		</ul>
 	</li>
 </ul>
-
-<style>
-	#librerie .elenco.separati {width:100%;border:solid 1px #ccc; border-radius:10px;padding:0;margin:20px 0;clear:both;float:left;} 
-	#librerie .elenco.separati .title {float:left;clear:both;width:100%; padding:5px 10px;font-weight:bold; border-radius:10px 10px 0 0;}
-	#librerie .elenco.separati a {display:inline-block; padding: 3px 10px; background-color:#eee;border-radius:10px; margin: 5px 0 5px 5px;font-size:12px;}
-</style>
 <div class="elenco separati">
 	<span class="title bglightcolor color">Altro</span>
 		<a href="/template/strutt_wbresp.php?tpl=wbresp_full_widget.php">Catalogo widget</a>

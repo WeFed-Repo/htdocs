@@ -506,3 +506,11 @@ body.youweb .template.template-root li.has-opener a.opener, body.youweb .full-op
 /* Webank pubblica */
 body.webank.wb-pubblica header {background:#000;}
 body.webank.wb-pubblica header h1 {color:#fff}
+
+/* Albero */
+ul.albero li>span {font-weight:bold}
+
+/* Non alberati */
+.elenco.separati {width:100%;border:solid 1px #ccc; border-radius:10px;padding:0;margin:20px 0;clear:both;float:left;} 
+.elenco.separati .title {float:left;clear:both;width:100%; padding:5px 10px;font-weight:bold; border-radius:10px 10px 0 0;background-color: #dce7b5 !important;}
+.elenco.separati a {color:#666; display:inline-block; padding: 3px 10px; background-color:#eee;border-radius:10px; margin: 5px 0 5px 5px;font-size:12px;}

@@ -10,7 +10,7 @@
 	
 ?>
 <!--MINI HERO -->
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_010.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_010.php")?>
 <!--FINE MINI HERO -->
 
 <!--2 COLONNE DX WHITE -->
@@ -22,7 +22,7 @@
 	$invertiColDx = '';
 	$boxdueCol= 's2';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE DX WHITE -->
 
 <!--2 COLONNE SX WHITE -->
@@ -34,7 +34,7 @@
 	$invertiColDx = 'col-md-pull-6';
 	$boxdueCol= 's3';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 COLONNE SX WHITE -->
 
 <!--2 RIGHE WHITE -->
@@ -46,7 +46,7 @@
 	$invertiColDx = 'col-md-pull-6';
 	$boxdueCol= 's4';
 ?>
-<?php virtual ("/librerie/include/oggetti_wbresp/box/box_030.php")?>
+<?php virtual ("/include/oggetti_wbresp/box/box_030.php")?>
 <!--FINE 2 RIGHE WHITE -->
 
 <!-- BOX NO CMS -->
