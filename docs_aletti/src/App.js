@@ -8,6 +8,8 @@ import { ToastContainer } from 'react-toastify';
 import getData from 'functions/getData';
 import 'react-toastify/dist/ReactToastify.min.css';
 import './App.css';
+import WrapperTheme from 'components/wrappers/withTheme';
+
 
 
 /* Fix del forEach per UncontrolledCollapse (ReactStrap) su IE */
@@ -48,7 +50,7 @@ class App extends Component {
         this.getUserData = this.getUserData.bind(this);
 
     };
-
+   
     switchPrivacyFunc() {
         this.setState({
             hiddenMode: !this.state.hiddenMode
@@ -80,19 +82,19 @@ class App extends Component {
         });
     }
 
-
+    
     
 
 
     render() {
         return (
             <BrowserRouter>
-                <div className="app">
+                <WrapperTheme>
                     <Header switchPrivacyFunc={ this.switchPrivacyFunc } hiddenMode={ this.state.hiddenMode } launchSearch={this.launchSearch} goToCustomersSearch={this.goToCustomersSearch} changefNominativo={this.changefNominativo}  getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <Menu hiddenMode={ this.state.hiddenMode } goToCustomersSearch={this.goToCustomersSearch}/>
                     <Main hiddenMode={ this.state.hiddenMode } fsNominativo={this.state.fsNominativo} searchData={this.state.searchData} goToCustomersSearch={this.goToCustomersSearch} getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <ToastContainer newestOnTop={ true }/>
-                </div>
+                </WrapperTheme>
             </BrowserRouter>
         );
     }

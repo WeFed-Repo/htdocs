@@ -1,0 +1,27 @@
+	<!-- TITOLO -->
+	<div class="row">
+	    <div class="col-xs-12">
+	        <h2>Identificazione</h2>
+	   	</div>
+	</div>
+	<!-- TITOLO -->
+
+	<!-- Intro -->
+	<div class="row">
+		 <div class="col-xs-12">
+			<p>Lorem ipsum dolor sit amet consectetur adipiscing elit <strong>summa cum laude</strong> dolor sit amet consectetur adipiscing elit summa cum laude dolor sit amet consectetur adipiscing elit summa cum laude dolor sit amet consectetur adipiscing elit summa cum laude.</p>
+		 </div>
+	</div>
+	
+	<!-- Pulsanti -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="btn-console">
+                <a class="btn-whlit btn-whlit-arrowleft fleft uppercase">INDIETRO</a>
+                <button type="submit" class="btn-grlit btn-grlit-arrow fright uppercase inlineB">SALVA E PROSEGUI</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fine pulsanti -->
+
+

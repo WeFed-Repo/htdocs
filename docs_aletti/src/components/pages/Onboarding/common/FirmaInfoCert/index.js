@@ -8,7 +8,11 @@ export default class extends Component {
     */
 
     state = {
-        step:"INIT"
+        step:"INIT",
+
+        flagAccInfocert: false,
+
+        flagFirma: false
     }
 
     render() {
@@ -66,7 +70,7 @@ export default class extends Component {
                     <Col>
                         <div class="btn-console btn-console-sub">
                             <div class="btn-console-right">
-                                <Button color="primary" className="sub-buttons" onClick={()=>this.setState({step: "ACCETTAZ_INFOCERT"})}>Prosegui</Button>            
+                                <Button color="primary" disabled={!this.state.flagAccInfocert} className="sub-buttons" onClick={()=>this.setState({step: "FIRMADOC"})}>Prosegui</Button>            
                             </div>
                         </div>
                     </Col>
