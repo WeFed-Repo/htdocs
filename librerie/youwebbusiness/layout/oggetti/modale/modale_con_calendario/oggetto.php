@@ -1,5 +1,3 @@
-<p>Esempio di modale con calendario</p>
-
 <button type="button" class="btn btn-primary" data-modal-open="cal">
   Launch demo modal
 </button>
