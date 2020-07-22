@@ -43,6 +43,13 @@ a:not(.btn):not([class*="btn"]) {
   }
 }
 
+// fallback per text decoration
+.text-decoration-none,
+a.text-decoration-none,
+a:not(.btn):not([class*="btn"]).text-decoration-none {
+  text-decoration: none;
+}
+
 img { border: 0; }
 
 .fl-right {

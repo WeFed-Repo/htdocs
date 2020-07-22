@@ -697,6 +697,11 @@ a:not(.btn):not([class*="btn"]) {
     text-decoration: none;
     cursor: default; }
 
+.text-decoration-none,
+a.text-decoration-none,
+a:not(.btn):not([class*="btn"]).text-decoration-none {
+  text-decoration: none; }
+
 img {
   border: 0; }
 
@@ -1232,6 +1237,7 @@ header {
       display: block;
       overflow: hidden; }
       #menu nav ul li a {
+        text-decoration: none;
         width: 100%;
         color: #FFFFFF;
         padding: 13px 16px;

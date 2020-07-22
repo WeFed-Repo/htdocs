@@ -79,4 +79,9 @@
   .ui-datepicker-week-end {
     opacity: 0.3;
   }
+  a,
+  a.ui-datepicker-prev,
+  a.ui-datepicker-next {
+    text-decoration: none;
+  }
 }
