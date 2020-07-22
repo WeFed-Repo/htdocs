@@ -29,28 +29,30 @@ class Main extends Component {
         return (
             <div className="main">
                 <Container fluid={ true }>
-                    <Switch>
-                        <Redirect from="/index.html" to="/"/>
-                        <Route exact path='/' component={ () => <Dashboard hiddenMode={ this.props.hiddenMode }
-                                                                           goToCustomersSearch={ this.props.goToCustomersSearch }/> }/>
-                        <Route path='/customerssearch'
-                               component={ () => <CustomersSearch searchData={ this.props.searchData }/> }/>
-                        <Route path='/customer/:ndg?' component={ Customer }/>}
-                        <Route path='/revolution' component={ Revolution }/>
-                        <Route path='/commissioning' component={ Commissioning }/>
-                        <Route path='/agenda' component={ Agenda }/>
-                        <Route path='/onboarding/:id?' component={ Onboarding }/>
-                        <Route path='/gestionebozze' component={ GestioneBozze }/>
-                        <Route path='/news' component={ News }/>
-                        <Route path='/documents' component={ Documents }/>
-                        <Route path='/test' component={ Test }/>
-                        <Route path='/personalinfo' component={ () => <PersInfo isLoadedUserData={this.props.isLoadedUserData} getUserData= {this.props.getUserData} userData ={this.props.userData}/> }  />
-                        <Route path='/personaldocuments' component={() => <PersDoc isLoadedUserData={this.props.isLoadedUserData} getUserData= {this.props.getUserData} userData ={this.props.userData}/> }  />
-                        <Route path='/userdocuments' component={ UserDoc }  />
-                        <Route path='/testiframe' component={ Testiframe }  />
-                        <Route path='/formfields' component={ FormFields }  />
-                        <Route component={ None }/>
-                    </Switch>
+                    <div className="content-wrapper">
+                        <Switch>
+                            <Redirect from="/index.html" to="/"/>
+                            <Route exact path='/' component={ () => <Dashboard hiddenMode={ this.props.hiddenMode }
+                                                                            goToCustomersSearch={ this.props.goToCustomersSearch }/> }/>
+                            <Route path='/customerssearch'
+                                component={ () => <CustomersSearch searchData={ this.props.searchData }/> }/>
+                            <Route path='/customer/:ndg?' component={ Customer }/>}
+                            <Route path='/revolution' component={ Revolution }/>
+                            <Route path='/commissioning' component={ Commissioning }/>
+                            <Route path='/agenda' component={ Agenda }/>
+                            <Route path='/onboarding/:id?' component={ Onboarding }/>
+                            <Route path='/gestionebozze' component={ GestioneBozze }/>
+                            <Route path='/news' component={ News }/>
+                            <Route path='/documents' component={ Documents }/>
+                            <Route path='/test' component={ Test }/>
+                            <Route path='/personalinfo' component={ () => <PersInfo isLoadedUserData={this.props.isLoadedUserData} getUserData= {this.props.getUserData} userData ={this.props.userData}/> }  />
+                            <Route path='/personaldocuments' component={() => <PersDoc isLoadedUserData={this.props.isLoadedUserData} getUserData= {this.props.getUserData} userData ={this.props.userData}/> }  />
+                            <Route path='/userdocuments' component={ UserDoc }  />
+                            <Route path='/testiframe' component={ Testiframe }  />
+                            <Route path='/formfields' component={ FormFields }  />
+                            <Route component={ None }/>
+                        </Switch>
+                    </div>
                 </Container>
             </div>
         );
