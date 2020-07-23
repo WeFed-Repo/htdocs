@@ -4,7 +4,34 @@ import { Col, Row, Button } from 'reactstrap';
 export default class extends Component {
 
     /*
-        STEP PER FIRMA: INIT -> ACCETTAZ_INFOCERT -> FIRMADOC
+        STEP PER FIRMA: 
+
+        -> ZERO 
+        - Esposizione documenti e testi introduttivi
+        - Pulsante RICHIEDI FIRMA -> Avvio richiesta firma infocert e chiamata INIT (raccoglie le clausole):
+            JSON DA SPEDIRE: 
+                {
+                "id":61, <- Pratica
+                "stato":"FIRMA_XXX", <- ES: FIRMA_PRECONTRATTUALE
+                "intestatarioCorrente":0, <- INTCORRENTE
+                “stepFirma”:”INIT” <- Step richiesto
+                }
+
+        
+        -> INIT (avvia la sessione di firma)
+        - Espone documenti in maniera statica
+        - Raccoglie ed espone le clausole personalizzate dinamiche (i parametri sono all'interno)
+        - Spedisce tutto ad ACCETTAZIONE_INFOCERT (in questa occasione viene spedito anche l'otp via SMS)
+
+        -> MESSAGGIO DI CONFERMA
+        
+        -> ACCETTAZ_INFOCERT
+        - Espone una tonnellata di documenti che vengono raccolti dal JSON ed il campo dell'OTP che, tuttavia, non e' come gli altri (occorre anche prevedere un "resend" dell'otp)
+        - Invia l'otp a FirmaDoc
+
+        FIRMADOC
+
+        Controllare ATTESA FIRMA CONSULENTE
     */
 
     state = {
@@ -27,9 +54,6 @@ export default class extends Component {
                         <Row>
                             <Col>
                                 <ul className="elenco-documenti">
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
                                     <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
                                     <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
                                     <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
@@ -66,6 +90,9 @@ export default class extends Component {
                         </Col>
                     </Row>
                 </section>
+                <section>
+                   CONSENSI
+                </section>
                 <Row>
                     <Col>
                         <div class="btn-console btn-console-sub">
@@ -78,6 +105,13 @@ export default class extends Component {
                 </>
                 }
                 {this.state.step==="FIRMADOC" &&
+                 // Inizializzazione
+                <>
+                    firma
+                    Firma il contratto (attiva il "prosegui totale")
+                </>
+                }
+                {this.state.step==="FIRMACONT" &&
                  // Inizializzazione
                 <>
                     firma

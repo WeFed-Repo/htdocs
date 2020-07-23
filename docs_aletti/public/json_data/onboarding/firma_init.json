@@ -1,0 +1,22 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results" : {
+        "idBozza" : 55,
+        "stato" : "FIRMA_XXX",
+        "intestatarioCorrente" : 0,
+        "info" : {
+            "clauses" : [
+                {
+                    "id": "clause1", "text": "text1", "group": "", "optional": true, "mode": "FIXED"
+                },
+                { 
+                    "id": "clause2", "text": "text2", "group": "", "optional": true, "mode": "FIXED"
+                }
+            ]
+        }
+    }
+}
