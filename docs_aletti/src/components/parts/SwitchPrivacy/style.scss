@@ -1,11 +1,30 @@
-.privacy-switch {
-    cursor:pointer;display:inline-block; float:left; margin:15px 0 0 0; background:#ccc; border-radius:50%;width:48px;height:48px;text-align:center;
-    .icon { color:#fff;line-height:49px; display:inline-block;
-        &.icon-hide {font-size:28px;display:none}
-        &.icon-show {font-size:16px}
-    }
-    &.hiddenmode {
-        .icon-hide {display:inline-block}
-        .icon-show {display:none}
+@import 'styles/theme.scss';
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            .privacy-switch {
+                cursor:pointer;
+                display:inline-block; 
+                margin:15px 0 0 15px;
+                background-color: map-get($map, switchPrivacyColor);
+                border-radius:50%;
+                width:48px;
+                height:48px;
+                text-align:center;
+                .icon { 
+                    color:#fff;
+                    line-height:49px; 
+                    display:inline-block;
+                    &.icon-hide {font-size:28px;display:none}
+                    &.icon-show {font-size:16px}
+                }
+                &.hiddenmode {
+                    .icon-hide {display:inline-block}
+                    .icon-show {display:none}
+                }
+            }
+        }
     }
 }
+@include theme(default, $default);
+@include theme(light, $light);

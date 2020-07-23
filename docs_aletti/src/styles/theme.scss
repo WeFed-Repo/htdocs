@@ -1,0 +1,49 @@
+
+/*TEMA CSS LIGHT*/
+$light: (
+    /*stili light dell'header */
+   structure: (
+       headerBgColor: #284659,
+       headerBorderTop: 10px solid #dbc099,
+       switchPrivacyColor: #d5dfe4,
+       searchBarColor:#d5dfe4,
+       searchBarTextColor:#003366,
+       menuBgColor: #284659,
+       menuTopPosition: 80px,
+       menuBtnColor:#ffffff,
+       menuNavLinkColor:#dbc099,
+       menuNavLinkColorActive:#dbc099,
+       menuNavLinkOpacityHover: 1,
+       menuBgOpenedColor: #e0eaee,
+       menuoOpenedColor: #284659
+
+    ),
+    contents: (
+       bgContentsWrapper: #e0eaee,
+       colorH1: #284659,
+       colorHeading: #dbc099,
+       
+       
+       /*STILI COMUNI CHE POSSONO ESSERE ANNIDATI*/
+       paddingWrapper: 30px 15px,
+       resetMargin: 0,
+       resetPadding:0,
+       paddingRLWidget: 15px
+    )
+);
+
+$default: (
+    structure: (
+        headerBgColor: #fff,
+        headerBorderBottom: 1px solid #003366,
+        switchPrivacyColor: #ccc,
+        searchBarColor:#003366,
+        searchBarTextColor:#003366,
+        menuBgColor: #21557e,
+        menuTopPosition: 0,
+        menuBtnColor:#fff,
+        menuNavLinkColor:#fff,
+        menuNavLinkColorActive: #fff,
+        menuNavLinkOpacityHover: 0.6
+    )
+);
