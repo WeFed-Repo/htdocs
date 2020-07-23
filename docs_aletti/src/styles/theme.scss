@@ -9,13 +9,15 @@ $light: (
        searchBarColor:#d5dfe4,
        searchBarTextColor:#003366,
        menuBgColor: #284659,
-       menuTopPosition: 80px,
+       menuTopPosition: 70px,
        menuBtnColor:#ffffff,
        menuNavLinkColor:#dbc099,
        menuNavLinkColorActive:#dbc099,
        menuNavLinkOpacityHover: 1,
        menuBgOpenedColor: #e0eaee,
-       menuoOpenedColor: #284659
+       menuoOpenedColor: #284659,
+       menuOpenedSlideLeft: 170px,
+       userMenuColor: #dbc099
 
     ),
     contents: (
@@ -44,6 +46,8 @@ $default: (
         menuBtnColor:#fff,
         menuNavLinkColor:#fff,
         menuNavLinkColorActive: #fff,
-        menuNavLinkOpacityHover: 0.6
+        menuNavLinkOpacityHover: 0.6,
+        userMenuColor: #21557e
+
     )
 );

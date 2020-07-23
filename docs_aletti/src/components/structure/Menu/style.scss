@@ -9,15 +9,22 @@
             .menu {
                 position: absolute;
                 left: 0;
-                top: map-get($map, menuTopPosition);
+                top:0;
+                padding-top: map-get($map, menuTopPosition);
+                border-top: map-get($map, headerBorderTop);
                 z-index: 20;
                 width: 80px;
                 height: 100%;
                 overflow: hidden;
                 background-color: map-get($map, menuBgColor);
                 transition-duration: 250ms;
+                .menu-list {
+                    background-color: map-get($map, menuBgColor);
+
+                }
                 &.opened {
                     width: 250px;
+                    /*background-color: transparent;*/
                     .menu-button .icon {
                         transform: rotate(180deg);
                     }
@@ -41,6 +48,9 @@
                             color: map-get($map, menuoOpenedColor);
     
                         }
+                    }
+                    + .main {
+                        left: map-get($map, menuOpenedSlideLeft);
                     }
                 }
 
@@ -117,7 +127,6 @@
         }
     }
 }
-
 
 @include theme(default, $default);
 @include theme(light, $light);
