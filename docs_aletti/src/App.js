@@ -8,9 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import getData from 'functions/getData';
 import 'react-toastify/dist/ReactToastify.min.css';
 import './App.css';
-import WrapperTheme from 'components/wrappers/withTheme';
-
-
+import { Button } from 'reactstrap';
 
 /* Fix del forEach per UncontrolledCollapse (ReactStrap) su IE */
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -42,7 +40,8 @@ class App extends Component {
             fsNominativo: "",
             searchData:{},
             userData : [],
-            isLoadedUserData : false
+            isLoadedUserData : false,
+            styleType: (typeof window !== 'undefined' && localStorage.getItem('theme')!==null)? localStorage.getItem('theme') : 'default'
         };
         this.switchPrivacyFunc = this.switchPrivacyFunc.bind(this);
         this.launchSearch = this.launchSearch.bind(this);
@@ -82,19 +81,30 @@ class App extends Component {
         });
     }
 
-    
-    
+    toggleStyle= () => {
+        let style = this.state.styleType==='default' ? 'light' : 'default'
+        this.setState({
+            styleType: style
+        },    localStorage.setItem('theme', style)
+        )
 
+    };
+    
+    
 
     render() {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('theme',this.state.styleType);
+        }
         return (
             <BrowserRouter>
-                <WrapperTheme>
-                    <Header switchPrivacyFunc={ this.switchPrivacyFunc } hiddenMode={ this.state.hiddenMode } launchSearch={this.launchSearch} goToCustomersSearch={this.goToCustomersSearch} changefNominativo={this.changefNominativo}  getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
+                <div className={"app" + " " + this.state.styleType}>
+                    <div className="style-type"><span>Stile applicato: {this.state.styleType}</span><Button onClick={ this.toggleStyle } role="button">cambia stile</Button></div>
+                    <Header styleType= { this.state.styleType } switchPrivacyFunc={ this.switchPrivacyFunc } hiddenMode={ this.state.hiddenMode } launchSearch={this.launchSearch} goToCustomersSearch={this.goToCustomersSearch} changefNominativo={this.changefNominativo}  getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <Menu hiddenMode={ this.state.hiddenMode } goToCustomersSearch={this.goToCustomersSearch}/>
                     <Main hiddenMode={ this.state.hiddenMode } fsNominativo={this.state.fsNominativo} searchData={this.state.searchData} goToCustomersSearch={this.goToCustomersSearch} getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <ToastContainer newestOnTop={ true }/>
-                </WrapperTheme>
+             </div>
             </BrowserRouter>
         );
     }
