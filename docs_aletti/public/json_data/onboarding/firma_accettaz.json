@@ -1,0 +1,23 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": { 
+        "idBozza" : 55, 
+        "stato" : "FIRMA_XXX", 
+        "intestatarioCorrente" : 0, 
+        "info": [
+            {
+                "id": "ALETTI_J400031_MF_CC ",
+                "url" : "https: //10oegsvil.intranet.servizi:4445/fe/rest10/content/15971?token=xxxxxxxx"
+                
+            },                                                     
+            {
+                "id" : "ALETTI_A230010_CC_CC  ",
+                "url" : "https://10oegsvil.intranet.servizi:4445/fe/rest10/content/33333?token=xxxxxxxx"
+            }
+        ]
+    }
+} 
