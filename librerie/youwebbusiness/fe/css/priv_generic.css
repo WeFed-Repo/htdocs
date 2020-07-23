@@ -1704,6 +1704,10 @@ ul.pagination {
     content: ">"; }
   .ui-datepicker .ui-datepicker-week-end {
     opacity: 0.3; }
+  .ui-datepicker a,
+  .ui-datepicker a.ui-datepicker-prev,
+  .ui-datepicker a.ui-datepicker-next {
+    text-decoration: none; }
 
 .dashboard [class*="col-"] {
   width: 100%;
@@ -1744,6 +1748,7 @@ ul.pagination {
       line-height: 1.1em; }
 
 .dhb-new.box,
+.dhb-new a.box,
 .dhb-new .box {
   line-height: 70px !important;
   min-height: 70px !important;
@@ -1756,6 +1761,7 @@ ul.pagination {
   background: rgba(0, 0, 0, 0.05);
   text-decoration: none; }
   .dhb-new.box:before,
+  .dhb-new a.box:before,
   .dhb-new .box:before {
     content: '+';
     display: block;

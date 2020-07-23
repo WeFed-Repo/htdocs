@@ -10,17 +10,15 @@
       </div>
       <div class="modal-body">
 
-
-          <label class="control-label">Datepicker</label>
-          <div class="input-group datepicker">
-            <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="icon icon-ico_calendario"></i>
-              </span>
-            </div>
+        <label class="control-label">Datepicker</label>
+        <div class="input-group datepicker">
+          <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="icon icon-ico_calendario"></i>
+            </span>
           </div>
-
+        </div>
 
       </div>
       <div class="modal-footer">

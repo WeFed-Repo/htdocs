@@ -15,6 +15,7 @@
         display: block;
         overflow: hidden;
         a {
+          text-decoration: none;
           width: 100%;
           color: $white;
           padding: 13px 16px;
@@ -27,7 +28,7 @@
             &:not(.disabled) {
               text-decoration: none;
               color: $white;
-              background: $greenLink_hover;  
+              background: $greenLink_hover;
             }
           }
           &.on {
@@ -89,7 +90,7 @@
             color: $white;
             &:hover, &:active, &.on {
               &:not(.disabled) {
-                background:$gray1_hover; 
+                background:$gray1_hover;
                 color: $white;
               }
             }
@@ -148,7 +149,7 @@
     padding: 16px 16px 16px;
     color: $white;
     @include icon {
-      @include svg-icon-color($white); 
+      @include svg-icon-color($white);
     }
     background-color: $gray1;
     position: relative;
@@ -173,10 +174,10 @@
     .ico-btn, a {
       width: 30px;
       height: 30px;
-      line-height: 30px; 
+      line-height: 30px;
       color: $white;
       @include icon {
-        @include svg-icon-color($white); 
+        @include svg-icon-color($white);
       }
       .btn-icon-help {
         background-color: transparent;

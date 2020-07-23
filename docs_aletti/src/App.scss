@@ -1,23 +1,33 @@
 /* BOTTONE PER PILOTARE LO STILE*/
 .style-type {
     position:absolute;
-    top: 20px;
+    top: 100px;
     right: 200px;
     z-index: 100;
+    span{
+        margin-right:30px;
+    }
 }
 
 $light: (
-   header: (
-       bg: #fff,
-       color: #000
-   )
+    /*stili light dell'header */
+   structure: (
+       bgStructure: #284659,
+       colorText: #fff,
+       colorIcon: #dbc099,
+       colorIconActive: #fff,
+       bgMenuOpened: #e0eaee,
+       colorMenuOpened: #284659
+    ),
+    contents: (
+       bgContentsWrapper: #e0eaee,
+       paddingWrapper: 30px
+    )
 );
 
-$dark: (
-   header: (
-       bg: #000,
-       color: #fff
-   )
+$default: (
+    structure: (
+    )
 );
 
 @mixin theme($theme-name, $theme-map) {
@@ -25,16 +35,44 @@ $dark: (
 
         // Loop through each of the keys (sections)
         @each $section, $map in $theme-map {
-           .header .container-fluid {
-                background-color: map-get($map, bg);
-                color: map-get($map, color);
-             }
-        }
+           .header .container-fluid, .menu, .menu-button {
+                background-color: map-get($map, bgStructure);
+                color: map-get($map, colorText);
+               
+            }
+            .menu {
+                .nav-link, .nav-link.active {
+                    color: map-get($map, colorIcon);
+                    opacity:1!important;
+                    &:hover{
+                         color: map-get($map, colorIconActive);
+                         opacity:1!important
+                    }
+                }
+                &.opened {
+                    .nav-link.active {
+                        background-color: map-get($map, bgMenuOpened);
+                        color: map-get($map, colorMenuOpened);
+
+                    }
+                }
+            }
+            .main {
+                .container-fluid {
+                    background-color: map-get($map, bgStructure);
+                }
+                .content-wrapper {
+                    background-color: map-get($map, bgContentsWrapper);
+                    border-radius:20px;
+                    padding: map-get($map, paddingWrapper);
+                }
+            }
+         }
     }
  }
  
+ @include theme(default, $default);
  @include theme(light, $light);
- @include theme(dark, $dark);
 
 
 

@@ -5,11 +5,16 @@
 }
 
 // LINKS
-a:not(.btn):not([class*="btn"]) {
+a:not(.btn) {
   color: $greenLink;
   //text-decoration: none;
   text-decoration: underline;
   cursor:pointer;
+  color: $greenLink;
+  //text-decoration: none;
+  &:not([class*="btn"]) {
+    text-decoration: underline;
+  }
   @include icon {
     @include svg-icon-color($greenLink);
     line-height: 1em;
@@ -41,6 +46,13 @@ a:not(.btn):not([class*="btn"]) {
       }
     }
   }
+}
+
+// fallback per text decoration
+.text-decoration-none,
+a.text-decoration-none,
+a:not(.btn):not([class*="btn"]).text-decoration-none {
+  text-decoration: none;
 }
 
 img { border: 0; }
