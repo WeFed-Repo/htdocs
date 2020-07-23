@@ -5,6 +5,8 @@ let limiteMese = (new Date(new Date().setMonth(new Date().getMonth() ))).getMont
 let limiteGiorno = (new Date().getDate()) +1
 </script>
 
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_calendario/oggetto.php'); ?>
+
 <div class="with-stepper">
 	<h1>
 		Bonifico singolo
