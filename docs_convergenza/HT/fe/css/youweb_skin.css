@@ -2247,8 +2247,10 @@ table tr th.sortableTh .th-inner,
 .ui-dialog .table tr th.sortableTh .th-inner {
   cursor: pointer;
   background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
-  margin-left: -15px;
-  padding-left: 15px;
+  /*margin-left: -15px;*/
+  padding-left: 20px;
+  padding-bottom: 3px;
+  display: inline;
 }
 table tr th.sortableTh .th-inner.asc,
 .table tr th.sortableTh .th-inner.asc,

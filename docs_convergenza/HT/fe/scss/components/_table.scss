@@ -90,8 +90,10 @@ table,
         .th-inner {
           cursor: pointer;
           background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
-          margin-left: -15px;
-          padding-left: 15px;
+          /*margin-left: -15px;*/
+          padding-left: 20px;
+          padding-bottom: 3px;
+          display: inline;
           &.asc {
             background: url(/HT/fe/img/icon_sort_asc.png) 0 2px no-repeat;
           }
