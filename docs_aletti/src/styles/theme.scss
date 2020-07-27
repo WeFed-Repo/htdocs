@@ -5,6 +5,7 @@ $light: (
    structure: (
        headerBgColor: #284659,
        headerBorderTop: 10px solid #dbc099,
+       headerHeight: 95px,
        switchPrivacyColor: #d5dfe4,
        searchBarColor:#d5dfe4,
        searchBarTextColor:#003366,
@@ -12,16 +13,20 @@ $light: (
        menuTopPosition: 70px,
        menuBtnColor:#ffffff,
        menuNavLinkColor:#dbc099,
-       menuNavLinkColorActive:#dbc099,
+       menuNavLinkColorActive:#284659,
        menuNavLinkOpacityHover: 1,
        menuBgOpenedColor: #e0eaee,
-       menuoOpenedColor: #284659,
-       menuOpenedSlideLeft: 170px,
+       menuOpenedColor: transparent,
+       menuOpenedSlideLeft: 155px,
+       menuWidth:95px,
        userMenuColor: #dbc099
 
     ),
     contents: (
-       bgContentsWrapper: #e0eaee,
+       mainBgColor: #284659,
+       contentsWrapperBgColor: #e0eaee,
+       contensWrapperRadius: 20px,
+       
        colorH1: #284659,
        colorHeading: #dbc099,
        
@@ -38,6 +43,7 @@ $default: (
     structure: (
         headerBgColor: #fff,
         headerBorderBottom: 1px solid #003366,
+        headerHeight: 80px,
         switchPrivacyColor: #ccc,
         searchBarColor:#003366,
         searchBarTextColor:#003366,
@@ -47,7 +53,12 @@ $default: (
         menuNavLinkColor:#fff,
         menuNavLinkColorActive: #fff,
         menuNavLinkOpacityHover: 0.6,
+        menuWidth:95px,
         userMenuColor: #21557e
 
+    ),
+    contents: (
+        mainBgColor: #f9f9f9,
+        contentsWrapperBgColor: #f9f9f9
     )
 );

@@ -1,26 +1,47 @@
-.main {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 80px 0 0 80px;
-    overflow-y: hidden;
-    transition-duration: 250ms;
 
-    .container-fluid {
-        position: relative;
-        height: 100%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        overflow-y: scroll;
+@import 'styles/theme.scss';
 
-        &.onboarding-form {
-            padding-top: 55px;
-            padding-bottom: 52px;
-            padding-right: 0;
-            overflow-y: hidden;
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+
+            .main {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding-top: map-get($map, headerHeight);
+                padding-left: map-get($map, headerHeight);
+
+                overflow-y: hidden;
+                transition-duration: 250ms;
+                background-color: map-get($map, mainBgColor);
+
+                .container-fluid {
+                    position: relative;
+                    height: 100%;
+                    padding:0;
+                    overflow-y: scroll;
+                    background-color: map-get($map, contentsWrapperBgColor);
+                    border-radius: map-get($map,contensWrapperRadius);
+                    padding:30px;
+                    &.onboarding-form {
+                        padding-top: 55px;
+                        padding-bottom: 52px;
+                        padding-right: 0;
+                        overflow-y: hidden;
+                    }
+                    .content-wrapper {
+                        background-color: map-get($map, contentsWrapperBgColor);
+                        border-radius:20px;
+                    }
+                }
+
+            }
         }
     }
-
 }
+
+@include theme(default, $default);
+@include theme(light, $light);

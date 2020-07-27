@@ -1,19 +1,19 @@
 @import 'styles/theme.scss';
-
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    padding-left: 80px;
+    transition-duration: 250ms;
+}
 @mixin theme($theme-name, $theme-map) {
     .#{$theme-name} {
         @each $section, $map in $theme-map {
            .header {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 20;
-            width: 100%;
-            height: 80px;
-            padding-left: 80px;
-            transition-duration: 250ms;
+            height: map-get($map, headerHeight);
             background-color: map-get($map, headerBgColor);
-
             .menu-open & {
                 padding-left: 250px;
             }
