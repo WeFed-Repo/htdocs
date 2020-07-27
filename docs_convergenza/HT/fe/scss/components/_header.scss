@@ -15,18 +15,19 @@ body {
       margin: 0;
       text-align: center;
       display: block;
+      position: static;
       .wrapper {
-        position: relative;
+        /*position: relative;*/
         max-width: 1110px;
-        margin: 0 auto;
+        margin: 10px 0;
         padding: 0 15px;
         .logo {
           max-height: 40px;
           overflow: hidden;
           width: 120px;
           display: block;
-          position: absolute;
-          top: 10px;
+          position: relative;
+          top: 17px;
           left: 10px;
           img {
             width: 100%;

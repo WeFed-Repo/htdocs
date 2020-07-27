@@ -8428,3 +8428,39 @@ p.note {font-size:12px; font-weight:300;}
 }
 /*AGGIUNTA CLASSE DI LOADING SU TABELLE IN HOME */
 .fixed-table-loading {display: none;}
+/*FIX GRAFICI IN HOME PAGE*/
+#chartwrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+#outercircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+#innercircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin-top: -15%;
+    margin-left: -15%;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#chartdiv {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+}
+
