@@ -30,12 +30,12 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
+                    {/*{!this.props.isOutput && <RichiestaAperturaConto formstate={formstate} isPrivacyChecked={isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto> } */}
                     {!this.props.isOutput && <InformativaDatiPersonali formstate={formstate} obchange={this.props.obchange}></InformativaDatiPersonali> }
-                    {!this.props.isOutput && <RichiestaAperturaConto formstate={formstate} isPrivacyChecked={isPrivacyChecked} obchange={this.props.obchange}></RichiestaAperturaConto> } 
                     <ConsensoPrivacy isOutput = { this.props.isOutput } indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>
                     {isSecondoIntestatario && <ConsensoPrivacy isOutput = { this.props.isOutput } indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></ConsensoPrivacy>}
-                    {!this.props.isOutput && <h2>Inserisci i dati personali </h2> }
-                    {!this.props.isOutput && <h5>Inserisci i tuoi dati e quelli di tutti i cointestatari</h5> }
+                    {!this.props.isOutput && !this.props.isPrivacyUnChecked && <h2>Inserisci i dati personali </h2> }
+                    {!this.props.isOutput && !this.props.isPrivacyUnChecked && <h5>Inserisci i tuoi dati e quelli di tutti i cointestatari</h5> }
                     <DatiPersonali isOutput = { this.props.isOutput } indexInt="0" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>
                     {isSecondoIntestatario && <DatiPersonali isOutput = { this.props.isOutput } indexInt="1" setObState={setObState} formstate={formstate} obdomini={obdomini} obchange={this.props.obchange} isPrivacyUnChecked={!isPrivacyChecked}></DatiPersonali>}
                 </div>

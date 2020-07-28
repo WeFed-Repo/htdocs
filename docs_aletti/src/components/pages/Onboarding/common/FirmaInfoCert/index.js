@@ -93,8 +93,8 @@ export default class extends Component {
                             </section>
                             <Row>
                                 <Col>
-                                    <div class="btn-console btn-console-sub">
-                                        <div class="btn-console-right">
+                                    <div className="btn-console btn-console-sub">
+                                        <div className="btn-console-right">
                                             <Button color="primary" className="sub-buttons" onClick={this.sendInit}>Richiedi certificato</Button>
                                         </div>
                                     </div>

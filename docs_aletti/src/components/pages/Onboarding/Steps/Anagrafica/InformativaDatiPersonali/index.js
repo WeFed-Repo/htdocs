@@ -20,8 +20,22 @@ class InformativaDatiPersonali extends Component {
                 label="LEGGI L'INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI"
                 startsOpen={ true }
                 className="search-collapse"
-                hasErrors={ CheckAccordionErrors (this.props.formstate.errors, ["field_anagraficablob_privacyletta"]) }>
+                hasErrors={ CheckAccordionErrors (this.props.formstate.errors, ["field_anagraficablob_privacyletta","field_numintestatari"]) }>
                 <section className="onboarding-block">
+                    <Row>
+                        <Col xs="12">
+                            <Form.radiogroup
+                            label="A chi vuoi intestare il conto"
+                            name="field_numintestatari"
+                            value={this.props.formstate["field_numintestatari"]}
+                            onChange={this.props.obchange}
+                            error={this.props.formstate.errors["field_numintestatari"]}
+                            options={[{ "value": "1", "text": "un intestatario" }, { "value": "2", "text": "due intestatari" }]}
+                            className=""
+                            >
+                            </Form.radiogroup>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col xs="12">
                             <p>Per procedere occorre presentare il documento al cliente.</p>
@@ -41,12 +55,52 @@ class InformativaDatiPersonali extends Component {
                                 error={this.props.formstate.errors["field_anagraficablob_privacyletta"]}
                                 disabled={!this.state.localfield_privacyopen}
                                 onChange={this.props.obchange}
-                                options={[{ "value": "true", "text": "Dichiaro di aver letto e visionato l’informativa privacy" }]}
+                                options={[{ "value": "true", "text": "Il cliente dichiara di aver letto e visionato l’informativa privacy" }]}
                                
                             >
                             </Form.checkgroup>
                         </Col>
                     </Row>
+                    {this.props.formstate.field_convenzione != undefined && this.props.formstate.field_convenzione != "" &&
+                    <Row>
+                        <Col xs="6">
+                            <Form.input
+                                label="Codice convenzione"
+                                name="field_convenzione"
+                                value={this.props.formstate.field_convenzione}
+                                onChange={this.props.obchange}
+                                placeholder="inserisci codice convenzione"
+                                className=""
+                            >
+                            </Form.input>
+                        </Col>
+                        <Col xs="6">
+                            <Form.input
+                                label="Codice promozione"
+                                name="field_promozione"
+                                value={this.props.formstate.field_promozione}
+                                onChange={this.props.obchange}
+                                placeholder="inserisci codice promozione"
+                                className=""
+                            >
+                            </Form.input>
+                        </Col>
+
+                    </Row>
+                }
+                <Row>
+                    <Col xs="12">
+                        <Form.input
+                            label="Filiale di riferimento"
+                            name="field_anagraficablob_filiale"
+                            value={this.props.formstate.field_anagraficablob_filiale}
+                            output="true"
+                            className=""
+                        >
+                        </Form.input>
+                    </Col>
+                </Row>
+
                 </section>
             </DefaultCollapse>
         )
