@@ -1,9 +1,20 @@
+@import 'styles/theme.scss';
 @import 'vars.scss';
 @import 'font.scss';
 @import 'font_icomoon.scss';
 @import 'form.scss';
 @import 'table.scss';
 @import 'toast.scss';
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            h1 {
+                color: map-get($map, colorH1);
+            }
+        }
+    }
+}
 
 html, body {
     font-family: $font-stack;
@@ -31,11 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin-top: 0;
-    margin-bottom: 1.75rem;
+    margin:0;
     text-transform: uppercase;
     font-size: 1.75rem;
-    color: $color-secondary;
 }
 
 h2 {
@@ -154,3 +163,6 @@ h2.bordered-block-title {
         }
 
 }
+
+@include theme(default, $default);
+@include theme(light, $light);

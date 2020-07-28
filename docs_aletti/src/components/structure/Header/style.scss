@@ -5,8 +5,24 @@
     top: 0;
     z-index: 20;
     width: 100%;
-    padding-left: 80px;
-    transition-duration: 250ms;
+    padding-left: 95px;
+    transition-duration: 250ms; 
+    .menu-open & {
+        padding-left: 250px;
+    }
+    &-logo {
+        height: 48px;
+        margin-top: 16px;
+        cursor:pointer;
+    }
+    &-menu {
+        float: right;
+    }
+    .container-fluid {
+        height: 80px;
+    }
+
+
 }
 @mixin theme($theme-name, $theme-map) {
     .#{$theme-name} {
@@ -14,19 +30,7 @@
            .header {
             height: map-get($map, headerHeight);
             background-color: map-get($map, headerBgColor);
-            .menu-open & {
-                padding-left: 250px;
-            }
-            &-logo {
-                height: 48px;
-                margin-top: 16px;
-                cursor:pointer;
-            }
-            &-menu {
-                float: right;
-            }
             .container-fluid {
-                height: 80px;
                 border-top: map-get($map, headerBorderTop);
                 border-bottom: map-get($map, headerBorderBottom);
             }
