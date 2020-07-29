@@ -2228,29 +2228,30 @@ table tr th .sorting .icon-accordion_down,
 table tr th.sort,
 .table tr th.sort,
 .ui-dialog .table tr th.sort {
-  padding: 0 0 0 15px !important;
+  /*padding:0 0 0 15px!important;*/
   cursor: pointer;
-  background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+  background: url(/HT/fe/img/icon_sort_none.png) 15px 10px no-repeat;
 }
 table tr th.sort.asc,
 .table tr th.sort.asc,
 .ui-dialog .table tr th.sort.asc {
-  background: url(/HT/fe/img/icon_sort_asc.png) 0 3px no-repeat;
+  background: url(/HT/fe/img/icon_sort_asc.png) 15px 10px no-repeat;
 }
 table tr th.sort.desc,
 .table tr th.sort.desc,
 .ui-dialog .table tr th.sort.desc {
-  background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
+  background: url(/HT/fe/img/icon_sort_desc.png) 15px 18px no-repeat;
 }
 table tr th.sortableTh .th-inner,
 .table tr th.sortableTh .th-inner,
 .ui-dialog .table tr th.sortableTh .th-inner {
   cursor: pointer;
   background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
-  margin-left: -15px;
+  /*margin-left: -15px;*/
   padding-left: 15px;
   padding-bottom: 3px;
-  /*display: inline;*/
+  display: inline-block;
+  text-align: left;
 }
 table tr th.sortableTh .th-inner.asc,
 .table tr th.sortableTh .th-inner.asc,
@@ -2420,7 +2421,7 @@ table tfoot tr th,
 table .colGroup > *,
 .table .colGroup > *,
 .ui-dialog .table .colGroup > * {
-  border-bottom: 2px solid #eaeded !important;
+  /*border-bottom: 2px solid $tableStripe !important;*/
   height: 100%;
 }
 table.evident tr th,
@@ -2439,7 +2440,7 @@ table .bs-checkbox,
   background-color: #eaeded;
 }
 #mainContent tbody tr:not(.dispari):nth-child(odd) td[rowspan], #mainContent tbody tr:not(.dispari):nth-child(odd) th[rowspan] {
-  border: 1px solid #fff !important;
+  /*border: 1px solid $white!important;*/
 }
 
 .box-generico-comunicazioni {
@@ -2623,7 +2624,7 @@ table .table-btn-more:hover, table .table-btn-more[data-toggle=modal]:hover, .ta
 
 /* Tabella "speciale" per ricerca fondi */
 #fesSearchTable th.sort {
-  padding-left: 0 !important;
+  /*padding-left:0 !important;*/
 }
 #fesSearchTable th.sort a {
   padding-left: 15px !important;
@@ -4822,6 +4823,10 @@ div.pager .circle.current_page {
 #fesRicercaCont + .form-group.btnWrapper {
   clear: both;
   margin-bottom: 20px;
+}
+
+#fesConfrontaCont {
+  clear: both;
 }
 
 /* GRAFICI */
