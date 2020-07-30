@@ -1,0 +1,67 @@
+
+/*TEMA CSS LIGHT*/
+$light: (
+    /*stili light dell'header */
+   structure: (
+       headerBgColor: #284659,
+       headerBorderTop: 10px solid #dbc099,
+       headerHeight: 95px,
+       switchPrivacyColor: #d5dfe4,
+       searchBarColor:#d5dfe4,
+       searchBarTextColor:#003366,
+       menuBgColor: #284659,
+       menuTopPosition: 70px,
+       menuBtnColor:#ffffff,
+       menuNavLinkColor:#dbc099,
+       menuNavLinkColorActive:#284659,
+       menuNavLinkOpacityHover: 1,
+       menuBgOpenedColor: #e0eaee,
+       menuOpenedColor: transparent,
+       menuOpenedSlideLeft: 155px,
+       menuWidth:95px,
+       userMenuColor: #dbc099
+
+    ),
+    contents: (
+       mainBgColor: #284659,
+       contentsWrapperBgColor: #e0eaee,
+       contensWrapperRadius: 15px,
+       boxRadius: 15px,
+       colorH1: #284659,
+       colorHeading: #ab9269,
+       
+       
+       /*STILI COMUNI CHE POSSONO ESSERE ANNIDATI*/
+       paddingWrapper: 30px 15px,
+       resetMargin: 0,
+       resetPadding:0,
+       paddingRLWidget: 15px
+    )
+);
+
+$default: (
+    structure: (
+        headerBgColor: #fff,
+        headerBorderBottom: 1px solid #003366,
+        headerHeight: 80px,
+        switchPrivacyColor: #ccc,
+        searchBarColor:#003366,
+        searchBarTextColor:#003366,
+        menuBgColor: #21557e,
+        menuTopPosition: 0,
+        menuBtnColor:#fff,
+        menuNavLinkColor:#fff,
+        menuNavLinkColorActive: #fff,
+        menuNavLinkOpacityHover: 0.6,
+        menuWidth:95px,
+        userMenuColor: #21557e
+
+    ),
+    contents: (
+        mainBgColor: #f9f9f9,
+        contentsWrapperBgColor: #f9f9f9,
+
+        colorH1: #78040f,
+        colorHeading: #a7a5a5
+    )
+);

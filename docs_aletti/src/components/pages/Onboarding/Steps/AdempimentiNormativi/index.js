@@ -45,14 +45,14 @@ class Adever extends Component {
                 <section className="onboarding-block">
                     <Row>
                         <Col>
-                            <p>Ai sensi della normativa antiriciclaggio (d.lgs 231/07) sei tenuto a compiere alcuni adempimenti e a fornire dichiarazioni e informazioni personali. Ti ricordiamo che il rilascio di false informazioni oppure omissioni può comportare conseguenze anche di natura penale.</p>
+                            <p>Ai sensi della normativa antiriciclaggio (d.lgs 231/07) il cliente è tenuto a compiere alcuni adempimenti e a fornire dichiarazioni e informazioni personali. Ti ricordiamo che il rilascio di false informazioni oppure omissioni può comportare conseguenze anche di natura penale.</p>
                             <Form.checkgroup
                                 label="Titolare effettivo"
                                 name={"field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"}
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"]}
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"]}
                                 onChange={obchange}
-                                options={[{ "value": "true", "text": "Dichiaro di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
+                                options={[{ "value": "true", "text": "Il cliente dichiara di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
                                 output={isOutput}
                             ></Form.checkgroup>
                         </Col>
@@ -93,7 +93,7 @@ class Adever extends Component {
                     <Row>
                         <Col sm="6">
                             <Form.radiogroup
-                                label="Sei una persona politicamente esposta?"
+                                label="Il cliente è una persona politicamente esposta?"
                                 name={"field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"}
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
@@ -324,7 +324,7 @@ class StepForm extends Component {
                             value={formstate["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             error={formstate.errors["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             onChange={this.props.obchange}
-                            options={[{ "value": "true", "text": "Acconsento" }, { "value": "false", "text": "Non acconsento" }]}
+                            options={[{ "value": "true", "text": "Il cliente acconsente" }, { "value": "false", "text": "Il cliente non acconsente" }]}
                             output={isOutput}
                         ></Form.radiogroup>
 

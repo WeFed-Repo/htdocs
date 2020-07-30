@@ -69,7 +69,7 @@ class StepForm extends Component {
                                 value={this.state.localfield_privacyopen}
                                 onChange={() => this.setState({ localfield_privacyopen: true })}
                                 error={formstate.errors["field_anagraficablob_fileinformativaaperto"]}
-                                filedescription="Contratti per la prestazione di Servizi ed Attività d'Investimento e Servizi AccessoriInformativa sul trattamento dei dati personali"
+                                filedescription="Informativa preliminare alla clientela"
                                 fileurl="http://www.google.it"
                                 filetype="pdf"
                                 output={isOutput}
@@ -80,7 +80,7 @@ class StepForm extends Component {
                                 error={formstate.errors["field_sessionfirmeblob_informativamifid"]}
                                 disabled={!this.state.localfield_privacyopen}
                                 onChange={this.props.obchange}
-                                options={[{ "value": "true", "text": "Dichiaro di aver preso visione dell’informativa MIFID" }]}
+                                options={[{ "value": "true", "text": "Il cliente dichiara di aver  preso visione dell’Informativa preliminare alla clientela." }]}
                                 output={isOutput}
                             >
                             </Form.checkgroup>

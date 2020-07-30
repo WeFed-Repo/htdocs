@@ -1,6 +1,22 @@
+@import 'styles/theme.scss';
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            .help {
+                .opener {
+                    color: map-get($map, colorHeading);
+                }
+            }
+        }
+    }
+}
+
 .help {
     .opener {
-        right:10px;top:5px;color:#ddd; position:absolute; cursor:pointer;
+        right:10px;top:5px;
+        color:#ddd; 
+        position:absolute; 
+        cursor:pointer;
         .icon {font-size:28px;}
         &:hover {opacity:0.5}
     };
@@ -18,3 +34,5 @@
         }
     }
 }
+@include theme(default, $default);
+@include theme(light, $light);

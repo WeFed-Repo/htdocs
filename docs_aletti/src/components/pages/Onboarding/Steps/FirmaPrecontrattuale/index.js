@@ -7,13 +7,6 @@ import validazione from "./validazione";
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
-    // Eventuali stati "locali" 
-    state = {
-        //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput: "true",
-        stepfirma: ""
-    }
-
 
     render() {
 
@@ -37,7 +30,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Firma precontrattuale {nomeint}</h3>
-                    <FirmaInfoCert step={this.state.stepfirma} obformprops={obformprops}></FirmaInfoCert>
+                    <FirmaInfoCert obformprops={obformprops}></FirmaInfoCert>
                 </div>
             </div>
         )

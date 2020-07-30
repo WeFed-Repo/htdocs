@@ -74,24 +74,27 @@ table,
       }
      
       &.sort {
-        padding:0 0 0 15px!important;
-        cursor: pointer;
-        background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+        /*padding:0 0 0 15px!important;*/
+        cursor: pointer; 
+        background: url(/HT/fe/img/icon_sort_none.png) 15px 10px no-repeat;
         &.asc {
-           background: url(/HT/fe/img/icon_sort_asc.png) 0 3px no-repeat;
+           background: url(/HT/fe/img/icon_sort_asc.png) 15px 10px no-repeat;
         }
         &.desc {
-           background: url(/HT/fe/img/icon_sort_desc.png) 0 3px no-repeat;
+           background: url(/HT/fe/img/icon_sort_desc.png) 15px 18px no-repeat;
         }
       }
 
       /* Classi bootstraptable da WB */
-      &.sortableTh {
+      &.sortableTh { 
         .th-inner {
           cursor: pointer;
           background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
-          margin-left: -15px;
+          /*margin-left: -15px;*/
           padding-left: 15px;
+          padding-bottom: 3px;
+          display:inline-block;
+          text-align:left;
           &.asc {
             background: url(/HT/fe/img/icon_sort_asc.png) 0 2px no-repeat;
           }
@@ -215,7 +218,7 @@ table,
   }
   .colGroup {
     > * {
-      border-bottom: 2px solid $tableStripe !important;
+      /*border-bottom: 2px solid $tableStripe !important;*/
       height: 100%;
     }
   }
@@ -234,7 +237,7 @@ table,
   background-color: $tableStripe;
   td, th {
     &[rowspan] {
-      border: 1px solid $white!important;
+      /*border: 1px solid $white!important;*/
     }
   }
 }
@@ -453,7 +456,7 @@ table .table-btn-more,table .table-btn-more[data-toggle="modal"], .table-btn-mor
 /* Tabella "speciale" per ricerca fondi */
 #fesSearchTable {
   th.sort {
-     padding-left:0 !important;
+     /*padding-left:0 !important;*/
      a {
       padding-left:15px !important;
       min-height:20px;

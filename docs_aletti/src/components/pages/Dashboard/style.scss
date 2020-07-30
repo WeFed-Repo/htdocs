@@ -1,5 +1,24 @@
 /*# sourceMappingURL=style.css.map */
-.dashboard {margin:-15px -15px 0; background-color:#f9f9f9;padding:10px; flex-wrap:wrap; display:flex;
-    h1 {clear:both;width:100%; margin: 5px 0 10px 10px;}
+@import 'styles/theme.scss';
+    .dashboard 
+    {
+            margin: 0;
+            padding:0;
+            flex-wrap:wrap; 
+            display:flex;
+            h1 {clear:both;width:100%;} 
+    }
+    .dashboard-order-save {display: block;position: absolute;right: 5px;top: -60px;z-index: 10}
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+
+        .dashboard {
+            background-color: map-get($map, contentsWrapperBgColor);
+        }
+        }
+    }
 }
-.dashboard-order-save {display: block;position: absolute;right: 5px;top: -60px;z-index: 10}
+@include theme(default, $default);
+@include theme(light, $light);

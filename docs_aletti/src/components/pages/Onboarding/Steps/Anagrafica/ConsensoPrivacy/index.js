@@ -222,7 +222,7 @@ class ConsensoPrivacy extends Component {
                                             onChange={this.props.obchange}
                                             cbchange = {(val) => {if(val === "false") this.setState({ isConsensoPrivacyModalOpen : true })} }
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_0_consenso"]}
-                                            options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
+                                            options={[{ "value": "true", "text": "dà il consenso" }, { "value": "false", "text": "nega il consenso" }]}
                                             className=""
                                             output = {this.props.isOutput}
                                         >
@@ -239,7 +239,7 @@ class ConsensoPrivacy extends Component {
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_1_consenso"]}
                                             onChange={this.props.obchange}
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_1_consenso"]}
-                                            options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
+                                            options={[{ "value": "true", "text": "dà il consenso" }, { "value": "false", "text": "nega il consenso" }]}
                                             className=""
                                             output = {this.props.isOutput}
                                         >
@@ -254,7 +254,7 @@ class ConsensoPrivacy extends Component {
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_2_consenso"]}
                                             onChange={this.props.obchange}
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_2_consenso"]}
-                                            options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
+                                            options={[{ "value": "true", "text": "dà il consenso" }, { "value": "false", "text": "nega il consenso" }]}
                                             className=""
                                             output = {this.props.isOutput}
                                         >
@@ -269,7 +269,7 @@ class ConsensoPrivacy extends Component {
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_3_consenso"]}
                                             onChange={this.props.obchange}
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_3_consenso"]}
-                                            options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
+                                            options={[{ "value": "true", "text": "dà il consenso" }, { "value": "false", "text": "nega il consenso" }]}
                                             className=""
                                             output = {this.props.isOutput}
                                         >
@@ -284,7 +284,7 @@ class ConsensoPrivacy extends Component {
                                             value={this.props.formstate[anagraficaIntestatario + "listprivacy_4_consenso"]}
                                             onChange={this.props.obchange}
                                             error={this.props.formstate.errors[anagraficaIntestatario + "listprivacy_4_consenso"]}
-                                            options={[{ "value": "true", "text": "do il consenso" }, { "value": "false", "text": "nego il consenso" }]}
+                                            options={[{ "value": "true", "text": "dà il consenso" }, { "value": "false", "text": "nega il consenso" }]}
                                             className=""
                                             output = {this.props.isOutput}
                                         >

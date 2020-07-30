@@ -73,6 +73,8 @@ export default class extends Component {
             // Mette il form in caricamento
             isLoading: true,
 
+            // Stato del bottone "prosegui"
+            proseguiEnabled: false,
 
             // Modali associate alla pulsantiera
             modalEsci: false,

@@ -13,9 +13,8 @@ class RichiestaAperturaConto extends Component {
             <>
             <DefaultCollapse
             label="RICHIESTA APERTURA CONTO"
-            startsOpen={ false }
+            startsOpen={ true }
             className="search-collapse"
-            disabled={!this.props.isPrivacyChecked}
             hasErrors={ CheckAccordionErrors(this.props.formstate.errors, ["field_numintestatari"])}>
             <section className="onboarding-block">
                 <Row>

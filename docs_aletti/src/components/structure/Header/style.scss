@@ -1,22 +1,14 @@
-@import 'styles/vars.scss';
-
+@import 'styles/theme.scss';
 .header {
     position: absolute;
     left: 0;
     top: 0;
     z-index: 20;
     width: 100%;
-    height: 80px;
-    padding-left: 80px;
-    background-color: #ffffff;
-    transition-duration: 250ms;
+    padding-left: 95px;
+    transition-duration: 250ms; 
     .menu-open & {
         padding-left: 250px;
-    }
-    .container-fluid {
-        background-color: #fff;
-        height: 80px;
-        border-bottom: solid 1px #003366;
     }
     &-logo {
         height: 48px;
@@ -26,4 +18,26 @@
     &-menu {
         float: right;
     }
+    .container-fluid {
+        height: 80px;
+    }
+
+
 }
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+           .header {
+            height: map-get($map, headerHeight);
+            background-color: map-get($map, headerBgColor);
+            .container-fluid {
+                border-top: map-get($map, headerBorderTop);
+                border-bottom: map-get($map, headerBorderBottom);
+            }
+          } 
+        }
+    }
+}
+@include theme(default, $default);
+@include theme(light, $light);
+

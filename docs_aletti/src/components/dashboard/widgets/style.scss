@@ -1,15 +1,54 @@
 /* CSS Trasversale a tutti i widget */
 @import 'styles/vars.scss';
+@import 'styles/theme.scss';
+
+
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            .widget {
+                .widget-box {
+                    border-radius: map-get($map, boxRadius);
+                }
+                .widget-title {
+                    color: map-get($map, colorHeading);
+                    
+                }
+            }
+        }
+    }
+}
+
 
 /* Stili generici widgets*/
 .widget {width:33.3332%;padding:10px;
-    .widget-box {padding:10px;border:solid 1px #ccc; height:390px; width:100%;position:relative;background-color: #fff; overflow:hidden;
+    .widget-box {
+        padding:10px;
+        border:solid 1px #ccc; 
+        height:390px; width:100%;
+        position:relative;
+        background-color: #fff; 
+        overflow:hidden;
 
      hr {width:100%;clear:both; border-top:solid 1px #ccc}
 
       .handle {cursor:move;display:block;width:100%;
-           .widget-title {text-transform: uppercase;font-size:24px;color:#a7a5a5;display:inline-block;width:auto;font-weight:bold;cursor:pointer;z-index:2; height:30px;overflow:hidden;width:100%; padding-right:30px; white-space:nowrap;text-overflow:ellipsis;
-            &:hover {color:#000; text-decoration:none}
+           .widget-title {
+               text-transform: uppercase;
+               font-size:24px;
+               display:inline-block;
+               width:auto;
+               font-weight:bold;
+               cursor:pointer;
+               z-index:2; 
+               height:30px;
+               overflow:hidden;
+               width:100%; 
+               padding-right:30px; 
+               white-space:nowrap;
+               text-overflow:ellipsis;
+            /*&:hover {color:#000; text-decoration:none}*/
             }
       }
 
@@ -336,3 +375,6 @@
     .orario { color:#999; font-style:italic;}
     .titolo {font-weight:bold}
 }
+
+@include theme(default, $default);
+@include theme(light, $light);

@@ -1,111 +1,132 @@
 @import 'styles/vars.scss';
+@import 'styles/theme.scss';
 
-$color-menu: #21557e;
 
-.menu {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 20;
-    width: 80px;
-    height: 100%;
-    overflow: hidden;
-    background-color: $color-menu;
-    transition-duration: 250ms;
 
-    &.opened {
-        width: 250px;
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            .menu {
+                position: absolute;
+                left: 0;
+                top:0;
+                padding-top: map-get($map, menuTopPosition);
+                border-top: map-get($map, headerBorderTop);
+                z-index: 20;
+                width: map-get($map, menuWidth);
+                height: 100%;
+                overflow: hidden;
+                background-color: map-get($map, menuBgColor);
+                transition-duration: 250ms;
+                .menu-list {
+                    background-color: map-get($map, menuBgColor);
 
-        .menu-button .icon {
-            transform: rotate(180deg);
-        }
+                }
+                &.opened {
+                    width: 250px;
+                    background-color:  map-get($map, menuOpenedColor)!important;
+                    .menu-button .icon {
+                        transform: rotate(180deg); 
+                    }
 
-        .nav-link {
-            .menu-name {
-                visibility: visible;
-            }
+                    .nav-link {
+                        .menu-name {
+                            visibility: visible;
+                        }
 
-            &.sub-nav {
-                min-height: 48px;
-                height: auto;
-                padding: 8px 12px 8px 74px;
+                        &.sub-nav {
+                            min-height: 48px;
+                            height: auto;
+                            padding: 8px 12px 8px 74px;
 
-                .menu-name {
-                    width: 145px;
+                            .menu-name {
+                                width: 145px;
+                            }
+                        }
+                        &.active {
+                            background-color: map-get($map, menuBgOpenedColor);
+                            color: map-get($map, menuNavLinkColorActive);
+    
+                        }
+                    }
+                    + .main {
+                        left: map-get($map, menuOpenedSlideLeft);
+                    }
+                }
+
+                &-button {
+                    height: 80px;
+                    padding: 24px 24px;
+                    background-color: map-get($map, menuBgColor);
+                    color: #fff;
+                    border-bottom: solid 1px get($map, menuBgColor);
+                    &:hover {
+                        opacity: map-get($map, menuNavLinkOpacityHover);
+                    }
+                    .icon {
+                        display: inline-block;
+                        line-height: 32px;
+                        cursor: pointer;
+                        transition-duration: 250ms;
+                        color:get($map, menuBtnColor);
+
+                    }
+                }
+
+                .nav-item {
+                    width: 250px;
+                }
+
+                .nav-link {
+                    padding: 16px 12px 16px 24px;
+                    color: map-get($map, menuNavLinkColor);
+                    &.active, &:hover, &focus {
+                        color: map-get($map, menuNavLinkColor);
+                        opacity: map-get($map, menuNavLinkOpacityHover); 
+
+                    }
+
+                    .icon, .menu-name {
+                        display: inline-block;
+                        line-height: 32px;
+                    }
+
+                    .menu-name {
+                        visibility: hidden;
+                        padding-left: 16px;
+                        vertical-align: top;
+                    }
+
+                    &.disabled {
+                        color: #fff;
+                        opacity: 0.2;
+                        cursor: default;
+                    }
+
+                    &.sub-nav {
+                        height: 0;
+                        padding: 0 12px 0 74px;
+                        overflow: hidden;
+                        transition-duration: 250ms;
+                    }
                 }
             }
-        }
-    }
+            /* MODALITA' NASCOSTA */
+                .hiddenmode {
+                    .hm-off {
+                        display: none
+                    }
+                }
 
-    &-button {
-        height: 80px;
-        padding: 24px 24px;
-        background-color: $color-menu;
-        color: #fff;
-        border-bottom: solid 1px #003366;
-
-        &:hover {
-            opacity: 0.8;
-        }
-
-        .icon {
-            display: inline-block;
-            line-height: 32px;
-            cursor: pointer;
-            transition-duration: 250ms;
-            color: #fff;
-        }
-    }
-
-    .nav-item {
-        width: 250px;
-    }
-
-    .nav-link {
-        padding: 16px 12px 16px 24px;
-        color: #fff;
-
-        &.active, &:hover, &focus {
-            opacity: 0.6;
-            color: #fff
-        }
-
-        .icon, .menu-name {
-            display: inline-block;
-            line-height: 32px;
-        }
-
-        .menu-name {
-            visibility: hidden;
-            padding-left: 16px;
-            vertical-align: top;
-        }
-
-        &.disabled {
-            color: #fff;
-            opacity: 0.2;
-            cursor: default;
-        }
-
-        &.sub-nav {
-            height: 0;
-            padding: 0 12px 0 74px;
-            overflow: hidden;
-            transition-duration: 250ms;
+                div.final-error {
+                    color:#900;
+                    font-size:22px;
+                    font-weight:bold;
+                    text-transform: uppercase;
+                }
         }
     }
 }
 
-/* MODALITA' NASCOSTA */
-.hiddenmode {
-    .hm-off {
-        display: none
-    }
-}
-
-div.final-error {
-    color:#900;
-    font-size:22px;
-    font-weight:bold;
-    text-transform: uppercase;
-}
+@include theme(default, $default);
+@include theme(light, $light);

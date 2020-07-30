@@ -615,10 +615,33 @@ table td.oCenter {
     text-align: center;
 }
 
-table, table td, table th {
+/*table, table td, table th {
     border: 0 !important;
+}*/
+table {
+    border:0;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+
+}
+.tabSelezioneCC table {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+table td, table th {
+    border:1px solid #ddd!important;
+    border-left:0!important;
+    border-top:0!important;
 }
 
+.tabSelezioneCC table td, .tabSelezioneCC table th {
+    border:1px solid #ccc!important;
+    border-left:0!important;
+    border-top:0!important;
+}
+.tabSelezioneCC table {
+    background-color: #fff;
+}
 table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
     font-family: 'bankFontTable', sans-serif;
     font-size: 12px;
@@ -629,7 +652,12 @@ table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
 }
 
 table th {
-    vertical-align: top !important
+    vertical-align: top!important;
+    font-weight: 600!important;
+    padding-top:5px!important;
+}
+th.checkbox {
+    display: table-cell;
 }
 .headerContainerNoBootS {
     position: relative;
@@ -689,8 +717,8 @@ table.riepilogo tr.totali td {
 #mainContent table.riepilogo tr td[rowspan]:last-child, 
 #mainContent table.riepilogo tbody tr td[rowspan]:last-child,
 #mainContent table.riepilogo tbody tr:not(.dispari):nth-child(odd) td[rowspan]:last-child {
-    border-left: 2px solid #f2f2f2!important;
-    border-right: 0 !important;
+    /*border-left: 2px solid #f2f2f2!important;
+    border-right: 0 !important;*/
   }
 /* Oggettini cross per tabelle */
 table .labelpir {
@@ -766,23 +794,23 @@ input[type=number] {
 table tr th.sorting,
 table tr th.sorting_asc,
 table tr th.sorting_desc {
-    padding-left: 15px; /*padding-left: 35px;*/
+    padding-left: 30px; /*padding-left: 35px;*/
 }
 
 table th.sorting {
     cursor: pointer;
-    background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+    background: url(/HT/fe/img/icon_sort_none.png) 15px 10px no-repeat;
 }
 
 /*15px*/
 table th.sorting_asc {
     cursor: pointer;
-    background: url(/HT/fe/img/icon_sort_asc.png) 0 3px no-repeat;
+    background: url(/HT/fe/img/icon_sort_asc.png) 15px 10px no-repeat;
 }
 
 table th.sorting_desc {
     cursor: pointer;
-    background: url(/HT/fe/img/icon_sort_desc.png) 0 11px no-repeat;
+    background: url(/HT/fe/img/icon_sort_desc.png) 15px 18px no-repeat;
 }
 
 table td.positivo {
@@ -7742,3 +7770,12 @@ div.fixed-table-scroll-outer {
     margin-bottom: 10px;
 }
 .clausole-art::first-letter {text-transform: capitalize;}
+
+.imgWrapperResponsive {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.imgWrapperResponsive img {
+    width:100%;
+}
