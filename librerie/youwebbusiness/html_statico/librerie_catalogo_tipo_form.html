@@ -82,7 +82,7 @@
     <!-- stato normale -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text</label>
+        <label class="control-label">Text</label>
         <input type="text" class="form-control" placeholder="Text">
       </div>
       <div class="form-group col-sm-6 col-md-3">
@@ -119,7 +119,7 @@
     <!-- stato disabilitato -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text disabled</label>
+        <label class="control-label">Text disabled</label>
         <input type="text" class="form-control" placeholder="Text" disabled>
       </div>
       <div class="form-group col-sm-6 col-md-3">
@@ -160,7 +160,7 @@
     <!-- validazione -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text</label>
+        <label class="control-label">Text</label>
         <input type="text" class="form-control is-invalid" placeholder="Text">
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
@@ -202,6 +202,35 @@
       </div>
     </div>
 
+    <!-- helper con modale al click -->
+    <div class="form-row">
+      <div class="form-group col-sm-6 col-md-3">
+        <label class="control-label">Helper
+          <img data-modal-open="big" class="helper-label-icon" src="./fe/img/icon/help_2.svg">
+        </label>
+        <input type="text" class="form-control" placeholder="Input with helper icon">
+      </div>
+      <!-- Modal -->
+<div class="modal fade" data-modal="big">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+                <a href="#.html.html" data-dismiss="modal" aria-label="Close" >
+          <img src="./fe/img/icon/close.svg">
+        </a>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
 
     
   </form>
@@ -411,7 +440,7 @@ ul[tm-multiselect] {
 }
 
 ul[tm-multiselect] > li.list-group-item {
-    border-color: #.html.htmlc8c8c8;
+    border-color: #c8c8c8;
 }
 
 ul[tm-multiselect] > li.title {

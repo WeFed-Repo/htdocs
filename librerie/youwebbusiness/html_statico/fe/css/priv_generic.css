@@ -2810,6 +2810,14 @@ ul.pagination {
   color: #737373;
   line-height: 21px; }
 
+label img.helper-label-icon,
+.control-label img.helper-label-icon {
+  cursor: pointer;
+  float: right;
+  width: 18px;
+  height: auto;
+  margin-top: 3px; }
+
 .form-control {
   border: solid 1px #DDDDDD; }
   .form-control:focus {
