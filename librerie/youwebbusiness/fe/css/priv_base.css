@@ -874,6 +874,11 @@ dl, .list {
   min-width: 65px;
   height: auto; }
 
+.big-icon {
+  width: 50px;
+  min-width: 50px;
+  height: auto; }
+
 .ellipsed {
   display: inline-block;
   max-width: 100%;

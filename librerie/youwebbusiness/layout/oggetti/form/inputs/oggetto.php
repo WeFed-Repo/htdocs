@@ -7,7 +7,7 @@
     <!-- stato normale -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text</label>
+        <label class="control-label">Text</label>
         <input type="text" class="form-control" placeholder="Text">
       </div>
       <div class="form-group col-sm-6 col-md-3">
@@ -44,7 +44,7 @@
     <!-- stato disabilitato -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text disabled</label>
+        <label class="control-label">Text disabled</label>
         <input type="text" class="form-control" placeholder="Text" disabled>
       </div>
       <div class="form-group col-sm-6 col-md-3">
@@ -85,7 +85,7 @@
     <!-- validazione -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text</label>
+        <label class="control-label">Text</label>
         <input type="text" class="form-control is-invalid" placeholder="Text">
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
@@ -127,13 +127,26 @@
       </div>
     </div>
 
+    <!-- helper con modale al click -->
+    <div class="form-row">
+      <div class="form-group col-sm-6 col-md-3">
+        <label class="control-label">Helper
+          <img data-modal-open="big" class="helper-label-icon" src="./fe/img/icon/help_2.svg">
+        </label>
+        <input type="text" class="form-control" placeholder="Input with helper icon">
+      </div>
+      <?php
+        // MODALE
+        virtual('/youwebbusiness/layout/oggetti/modale/modale_grande/modale.php');
+      ?>
+    </div>
 
     <?php /* * ?>
     <!-- ESEMPIO DI VALIDAZIONE -->
     <!-- test di errore validazione lato client ( campi required o con patterns )-->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label>Text</label>
+        <label class="control-label">Text</label>
         <input pattern="^[a-zA-Z0-9]{5,5}$" type="text" class="form-control" placeholder="Text" required >
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback"> Valido con 5 caratteri alfanumerici (validazione con pattern HTML5) </div>
