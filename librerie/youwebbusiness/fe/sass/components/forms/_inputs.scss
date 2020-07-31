@@ -7,6 +7,17 @@
   line-height: 21px;
 }
 
+label,
+.control-label {
+  img.helper-label-icon {
+    cursor:pointer;
+    float:right;
+    width: 18px;
+    height:auto;
+    margin-top: 3px;
+  }
+}
+
 .form-control {
   border: solid 1px $gray4;
   &:focus {

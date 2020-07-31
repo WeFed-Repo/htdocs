@@ -874,6 +874,11 @@ dl, .list {
   min-width: 65px;
   height: auto; }
 
+.big-icon {
+  width: 50px;
+  min-width: 50px;
+  height: auto; }
+
 .ellipsed {
   display: inline-block;
   max-width: 100%;
@@ -1064,6 +1069,42 @@ NOTE: La classe .content-hidden-in-mobile
 @media (min-width: 1200px) {
   .w-xl-auto {
     width: auto !important; } }
+@media (min-width: 576px) {
+  .w-sm-100 {
+    width: 100% !important; } }
+@media (min-width: 768px) {
+  .w-md-100 {
+    width: 100% !important; } }
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important; } }
+@media (min-width: 1200px) {
+  .w-xl-100 {
+    width: 100% !important; } }
+@media (min-width: 576px) {
+  .flex-sm-wrap {
+    flex-wrap: wrap !important; } }
+@media (min-width: 768px) {
+  .flex-md-wrap {
+    flex-wrap: wrap !important; } }
+@media (min-width: 992px) {
+  .flex-lg-wrap {
+    flex-wrap: wrap !important; } }
+@media (min-width: 1200px) {
+  .flex-xl-wrap {
+    flex-wrap: wrap !important; } }
+@media (min-width: 576px) {
+  .flex-sm-nowrap {
+    flex-wrap: nowrap !important; } }
+@media (min-width: 768px) {
+  .flex-md-nowrap {
+    flex-wrap: nowrap !important; } }
+@media (min-width: 992px) {
+  .flex-lg-nowrap {
+    flex-wrap: nowrap !important; } }
+@media (min-width: 1200px) {
+  .flex-xl-nowrap {
+    flex-wrap: nowrap !important; } }
 /* Header*/
 header {
   width: 100%;

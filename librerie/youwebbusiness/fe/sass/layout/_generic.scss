@@ -258,6 +258,12 @@ dl, .list {
   height: auto;
 }
 
+.big-icon {
+  width: 50px;
+  min-width: 50px;
+  height: auto;
+}
+
 .ellipsed {
   @include ellipsed();
 }
@@ -430,3 +436,21 @@ NOTE: La classe .content-hidden-in-mobile
 @media (min-width:$bp_md_min) { .w-md-auto { width:auto !important; } }
 @media (min-width:$bp_lg_min) { .w-lg-auto { width:auto !important; } }
 @media (min-width:$bp_xl_min) { .w-xl-auto { width:auto !important; } }
+
+// WIDTH 100
+@media (min-width:$bp_sm_min) { .w-sm-100 { width:100% !important; } }
+@media (min-width:$bp_md_min) { .w-md-100 { width:100% !important; } }
+@media (min-width:$bp_lg_min) { .w-lg-100 { width:100% !important; } }
+@media (min-width:$bp_xl_min) { .w-xl-100 { width:100% !important; } }
+
+// FLEX WRAP
+@media (min-width:$bp_sm_min) { .flex-sm-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_md_min) { .flex-md-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_lg_min) { .flex-lg-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_xl_min) { .flex-xl-wrap { flex-wrap: wrap !important; } }
+
+// FLEX NO WRAP
+@media (min-width:$bp_sm_min) { .flex-sm-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_md_min) { .flex-md-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_lg_min) { .flex-lg-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_xl_min) { .flex-xl-nowrap { flex-wrap: nowrap !important; } }
