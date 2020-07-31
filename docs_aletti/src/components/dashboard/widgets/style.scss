@@ -3,28 +3,9 @@
 @import 'styles/theme.scss';
 
 
-
-@mixin theme($theme-name, $theme-map) {
-    .#{$theme-name} {
-        @each $section, $map in $theme-map {
-            .widget {
-                .widget-box {
-                    border-radius: map-get($map, boxRadius);
-                }
-                .widget-title {
-                    color: map-get($map, colorHeading);
-                    
-                }
-            }
-        }
-    }
-}
-
-
 /* Stili generici widgets*/
 .widget {width:33.3332%;padding:10px;
     .widget-box {
-        padding:10px;
         border:solid 1px #ccc; 
         height:390px; width:100%;
         position:relative;
@@ -71,7 +52,8 @@
           }
       }
 
-        .widget-body {height:330px;
+        .widget-body {
+          height:330px;
 
           .scrollable {height:305px;width:100%; overflow-y:auto; overflow-x:hidden}
 
@@ -79,11 +61,10 @@
           table {
             tr {
               th {white-space:nowrap}
-              th, td {background: transparent;border: 0 none; border-left:solid 1px #ccc;
+              th, td {background: transparent;border: 0 none;
                 &:first-child {border-left: 0 none;padding-left:0}
               }
               th {font-weight:bold}
-              td {border-top:solid 1px #ccc;}
             }
           }
         }
@@ -376,5 +357,39 @@
     .titolo {font-weight:bold}
 }
 
+
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+            .widget {
+                .widget-box {
+                    border-radius: map-get($map, boxRadius);
+                    padding: map-get($map, boxPadding);
+                    .widget-body {
+                        table {
+                            tr {
+                              th, td {
+                                border-left: solid map-get($map, borderTableWidth) #ccc;
+                                &:first-child { border-left: 0 }
+                                }
+                              td { 
+                                 border-top: solid map-get($map, borderTableWidth) #ccc;
+                                }
+                            }
+                          }
+                    }
+                }
+                .widget-title {
+                    color: map-get($map, colorHeading);
+                    
+                }
+                .agg-date {
+                    background-color: map-get($map, contentsBgColor);
+                }
+            }
+        }
+    }
+}
 @include theme(default, $default);
 @include theme(light, $light);

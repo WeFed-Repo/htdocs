@@ -27,15 +27,11 @@ $light: (
        contentsWrapperBgColor: #e0eaee,
        contensWrapperRadius: 15px,
        boxRadius: 15px,
+       boxPadding:10px 20px 20px,
        colorH1: #284659,
        colorHeading: #ab9269,
-       
-       
-       /*STILI COMUNI CHE POSSONO ESSERE ANNIDATI*/
-       paddingWrapper: 30px 15px,
-       resetMargin: 0,
-       resetPadding:0,
-       paddingRLWidget: 15px
+       contentsBgColor:#fff,
+       borderTableWidth: 0
     )
 );
 
@@ -60,8 +56,9 @@ $default: (
     contents: (
         mainBgColor: #f9f9f9,
         contentsWrapperBgColor: #f9f9f9,
-
+        boxPadding:10px,
         colorH1: #78040f,
-        colorHeading: #a7a5a5
+        colorHeading: #a7a5a5,
+        borderTableWidth: 1px
     )
 );

@@ -1,4 +1,13 @@
 @import "vars.scss";
+@import 'styles/theme.scss';
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+        
+        }
+    }
+}
 
 /* Classi generiche per tabelle */
 table {
@@ -165,3 +174,6 @@ table {
         bottom: 0;
     }
 }
+
+@include theme(default, $default);
+@include theme(light, $light);
