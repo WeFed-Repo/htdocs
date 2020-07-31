@@ -24,6 +24,7 @@ $light: (
     ),
     contents: (
        mainBgColor: #284659,
+       mainColorText:#153648,
        contentsWrapperBgColor: #e0eaee,
        contensWrapperRadius: 15px,
        boxRadius: 15px,
@@ -31,7 +32,11 @@ $light: (
        colorH1: #284659,
        colorHeading: #ab9269,
        contentsBgColor:#fff,
-       borderTableWidth: 0
+       borderTableWidth: 0,
+       legendWidth: 24px,
+       legendHeight: 14px,
+       legendRadius: 10px,
+       legendPaddLeft:32px
     )
 );
 
@@ -55,10 +60,15 @@ $default: (
     ),
     contents: (
         mainBgColor: #f9f9f9,
+        mainColorText:#212529,
         contentsWrapperBgColor: #f9f9f9,
         boxPadding:10px,
         colorH1: #78040f,
         colorHeading: #a7a5a5,
-        borderTableWidth: 1px
+        borderTableWidth: 1px,
+        legendWidth: 10px,
+        legendHeight: 10px,
+        legendRadius: 50%,
+        legendPaddLeft:20px
     )
 );
