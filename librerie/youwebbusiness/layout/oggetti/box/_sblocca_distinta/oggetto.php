@@ -5,7 +5,7 @@
 				<div class="pb-3 w-100 w-sm-auto text-center">
         	<img class="big-icon" src="./fe/img/icon/disponi-bonifici.svg">
 				</div>
-				<div class="px-4 pb-3">
+				<div class="px-4 pb-3 flex-shrink-1">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
