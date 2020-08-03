@@ -877,7 +877,7 @@ dl, .list {
 .big-icon {
   width: 50px;
   min-width: 50px;
-  height: auto; }
+  height: 50px; }
 
 .ellipsed {
   display: inline-block;
