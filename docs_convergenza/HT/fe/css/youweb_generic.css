@@ -6840,9 +6840,14 @@ table a:hover .icon, table a:focus .icon ,table a:hover .icon::before {color:#00
 /* Form_085, FINE */
 
 th {
-    text-align: left !important;
+    text-align: lef;
 }
-
+th.oRight{
+    text-align: right;
+}
+th.oCenter{
+    text-align: center;
+}
 .width100 {
     width: 100%;
 }
