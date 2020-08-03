@@ -36,7 +36,7 @@ class Main extends Component {
                                                                             goToCustomersSearch={ this.props.goToCustomersSearch }/> }/>
                             <Route path='/customerssearch'
                                 component={ () => <CustomersSearch searchData={ this.props.searchData }/> }/>
-                            <Route path='/customer/:ndg?' component={ Customer }/>}
+                            <Route path='/customer/:ndg?' component={ Customer }/>
                             <Route path='/revolution' component={ Revolution }/>
                             <Route path='/commissioning' component={ Commissioning }/>
                             <Route path='/agenda' component={ Agenda }/>

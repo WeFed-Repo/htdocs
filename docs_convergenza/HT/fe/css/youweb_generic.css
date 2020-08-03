@@ -628,7 +628,7 @@ table {
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
-table td, table th {
+table:not(.ui-datepicker-calendar) td, table:not(.ui-datepicker-calendar) th {
     border:1px solid #ddd!important;
     border-left:0!important;
     border-top:0!important;
@@ -1863,7 +1863,7 @@ body.modal-open {
     font-weight: 700;
 }
 .ui-datepicker table td a {
-    text-decoration:none;
+    text-decoration:none!important;
 }
 
 .ui-datepicker-title {

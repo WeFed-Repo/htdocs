@@ -2078,6 +2078,14 @@ textarea {
   opacity: 0.5;
 }
 
+.form-control.versTot, .select-content select.versTot {
+  min-width: 60px;
+}
+
+.form-control.periodicita, .select-content select.periodicita {
+  min-width: 90px;
+}
+
 table,
 .table,
 .ui-dialog .table {

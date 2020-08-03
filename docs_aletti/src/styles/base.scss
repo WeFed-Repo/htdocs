@@ -9,6 +9,9 @@
 @mixin theme($theme-name, $theme-map) {
     .#{$theme-name} {
         @each $section, $map in $theme-map {
+            html, body {
+                color: map-get($map, mainColorText);
+            }
             h1 {
                 color: map-get($map, colorH1);
             }
@@ -21,7 +24,6 @@ html, body {
     font-weight: $font-weight-regular;
     font-size: 16px;
     overflow-x:hidden;
-
     *:focus, *:active {
         outline: 0 none
     }

@@ -113,8 +113,8 @@
                         </div>
 
                         <div class="row">
-                            <div class=" col-xs-12 col-sm-12 colorWhite alignRight ">	
-                                <span class=" marginRightLarge marginTopMedium">					
+                            <div class=" col-xs-12 col-sm-12 colorWhite alignLeft">	
+                                <span class="paddingLeftMedium marginRightLarge marginTopMedium">					
                                     *Verrai reindirizzato sul sito della compagnia		
                                 </span>                             
                             </div>

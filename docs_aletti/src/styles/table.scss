@@ -1,4 +1,22 @@
 @import "vars.scss";
+@import 'styles/theme.scss';
+
+@mixin theme($theme-name, $theme-map) {
+    .#{$theme-name} {
+        @each $section, $map in $theme-map {
+         table {
+            span.has-dot {
+                padding-left: map-get($map, legendPaddLeft);
+                .dot {
+                    width: map-get($map, legendWidth);
+                    height: map-get($map, legendHeight);
+                    border-radius: map-get($map, legendRadius);
+                }
+            }
+         }
+        }
+    }
+}
 
 /* Classi generiche per tabelle */
 table {
@@ -66,15 +84,11 @@ table {
 
     span.has-dot {
         display: inline-block;
-        padding: 0 0 0 20px;
         position: relative;
-
         .dot {
             position: absolute;
             top: 6px;
             left: 0;
-            width: 10px;
-            height: 10px;
             border-radius: 50%;
             background-color: #ccc;
             display: block;
@@ -165,3 +179,6 @@ table {
         bottom: 0;
     }
 }
+
+@include theme(default, $default);
+@include theme(light, $light);
