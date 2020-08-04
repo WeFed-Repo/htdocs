@@ -7,7 +7,6 @@ import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
         url: saveUrl.SessioneFirme,
         
         data: (form,validazione) => {
-
             
             let val = (validazione)? validazione : false;
     
