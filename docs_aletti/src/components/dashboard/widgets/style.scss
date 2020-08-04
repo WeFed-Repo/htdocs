@@ -136,7 +136,7 @@
 
     &#agenda {
         .noDisp {height:100%}
-        .DayPicker-Day {line-height:20px;width: 14.275%;
+        .DayPicker-Day {/*line-height:20px;*/width: 14.275%;
           .day-app { clear:both;padding:0;display:inline-block;width:100%;
             .dot {display:none;width:4px;height:4px;margin:1px;background-color:#ddd; border-radius:50%;
                 &.dot-Appointment {background-color:rgb(216, 150, 76)}
@@ -300,7 +300,7 @@
         }
 
         &#agenda {
-            .DayPicker-Day {line-height:16px}
+            /*.DayPicker-Day {line-height:16px}*/
             .scrollable {height:210px !important}
         }
 
@@ -321,7 +321,10 @@
             .scrollable {height:130px;}
 
             .totali {border-top:0 none;padding:0;
-                .totale {width:100%; border-top:solid 1px #ccc; padding:3px 0;
+                .totale {
+                    width:100%; 
+                    border-top:solid 1px #ccc; 
+                    padding:3px 0;
                     &.right {text-align:left;}
                     span {clear:both; display:inline-block;width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:18px;}
                     .dato {text-align:right;}
@@ -356,8 +359,6 @@
     .orario { color:#999; font-style:italic;}
     .titolo {font-weight:bold}
 }
-
-
 
 @mixin theme($theme-name, $theme-map) {
     .#{$theme-name} {

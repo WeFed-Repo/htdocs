@@ -5,7 +5,9 @@
     }
     .DayPicker-NavBar {width:100%;height:0px;position:absolute;overflow:visible;
         .DayPicker-NavButton{
-            &.DayPicker-NavButton--prev {left:0}
+            &.DayPicker-NavButton--prev {
+                left:0;
+            }
         } 
     }
 }
