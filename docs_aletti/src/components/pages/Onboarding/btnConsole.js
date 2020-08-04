@@ -117,7 +117,7 @@ export default class extends Component {
                                     </>
                                     :
                                     // Bottone standard
-                                    <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
+                                    <Button color="primary" disabled={!formprops.obstate.proseguiEnabled} onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
                                 }
                                 
                             </>

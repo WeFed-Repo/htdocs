@@ -12,7 +12,12 @@ class StepForm extends Component {
         //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
         isOutput: "true"
     }
-
+    
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: true
+        })
+    }
 
     render() {
 

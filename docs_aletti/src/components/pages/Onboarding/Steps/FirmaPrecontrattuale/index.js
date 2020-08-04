@@ -7,6 +7,12 @@ import validazione from "./validazione";
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: false
+        })
+    }
+
 
     render() {
 

@@ -7,10 +7,10 @@ import validazione from "./validazione";
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
-    // Eventuali stati "locali" 
-    state = {
-        //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true"        
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: false
+        })
     }
     
 

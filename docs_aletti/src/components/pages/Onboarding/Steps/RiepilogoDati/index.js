@@ -20,6 +20,12 @@ class StepForm extends Component {
         isOutput : "true",
         
     }
+
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: true
+        })
+    }
     
 
     render() {
