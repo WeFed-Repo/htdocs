@@ -204,7 +204,7 @@
 										<p>Con la carta di debito hai un canone gratuito e puoi fare più di quanto immagini:</p>
 										<ul>
 											<li><strong>Prelevare contante e fare pagamenti in Italia e all'estero agli sportelli e negli esercizi commerciali del circuito Bancomat, Pagobancomat e Maestro</strong></li>
-											<li><strong>Pagare contactless i tuoi acquisti in modo veloce e sicuro semplicemente avvicinando la carta agli appositi lettori che espongono il simbolo, nel caso di piccoli importi (sino a 25 Euro) non sarà necessario digitare il codice PIN</strong></li>
+											<li><strong>Pagare contactless i tuoi acquisti in modo veloce e sicuro semplicemente avvicinando la carta agli appositi lettori che espongono il simbolo, nel caso di piccoli importi (sino a 25 Euro) non sara&grave; necessario digitare il codice PIN</strong></li>
 											<li><strong>Prelevare senza commissioni da tutti gli sportelli automatici in Italia e area Euro</strong></li>
 											<li><strong>Usarla senza alcuna commissione per i pedaggi autostradali con la funzione FastPay</strong></li>
 											<li><strong>Versare contanti e assegni nelle aree Self service</strong></li>
@@ -226,17 +226,17 @@
 
 					    <div class="item item02">
 					    	<h3>BANCOMAT Pay</h3>	
-							<img src="/wbresp/img/carte/bancomat_pay.png"  class="img-responsive mob100" alt="Bancomat Pay" title="Bancomat Pay" />
+							<img src="/wbresp/img/carte/bancomat_pay.png"  class="img-responsive mob100" alt="L'app BANCOMAT Pay &egrave; comoda e rapida: ti basta lo smartphone!" title="L'app BANCOMAT Pay &egrave; comoda e rapida: ti basta lo smartphone!" />
 							<p>L'<strong>app BANCOMAT</strong> Pay &egrave; comoda e rapida: ti basta lo smartphone!<br>
 						    E’ <strong>senza canone né commissioni</strong> per i tuoi acquisti anche online.</p>
 							
 							<ul>
-							<li><strong>Invia e ricevi</strong> denaro con i contatti della tua rubrica in <strong>tempo reale</strong>, 7 giorni su 7, <strong>non usi l’IBAN</strong></li>
+							<li><strong>Invia e ricevi denaro</strong> con i contatti della tua rubrica in <strong>tempo reale</strong>, 7 giorni su 7, <strong>non usi l'IBAN</strong></li>
 							<li><strong>Acquista nei negozi</strong> convenzionati in modo semplice e veloce <strong>senza usare la carta di debito</strong></li>
 							<li><strong>Compra online senza</strong> digitare il <strong>numero della carta</strong></li>
 							<li><strong>Paga</strong> la pubblica amministrazione <strong>con Pago PA</strong> (bollo auto, multe, mense scolastiche e molto altro).</li>
 							</ul>
-							<p>Scarica l’app BANCOMAT Pay dagli store iOS e Android.</p>
+							<p>Scarica l'app BANCOMAT Pay dagli store iOS e Android.</p>
 
 					    </div>
 
