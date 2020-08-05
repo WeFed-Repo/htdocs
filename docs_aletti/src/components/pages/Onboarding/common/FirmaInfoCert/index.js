@@ -40,7 +40,9 @@ export default class extends Component {
             step: "INIT",
             loading: false,
             flagAccInfocert: false,
-            flagFirma: false
+            flagFirma: false,
+
+            accettazConsensi: null
         }
         this.sendInit = this.sendInit.bind(this);
     }
@@ -50,7 +52,7 @@ export default class extends Component {
         let obform =  this.props.obformprops.obstate;
         this.setState({ loading: true });
         getData({
-            url: {"svil":"","prod":""},
+            url: {"svil":"/json_data/onboarding/firma_init.json","prod":""},
            
             data: {
                 "id":obform.field_id, 
@@ -61,8 +63,10 @@ export default class extends Component {
                 
             success: (data) => {
                 // Preparazione del form di accettazione
+
                 this.setState({
                     step: "ACCETTAZ_INFOCERT",
+                    accettazConsensi: data.results && data.results.info && data.results.info.clauses,
                     loading: false
                 });
             }
@@ -117,11 +121,14 @@ export default class extends Component {
                                 </Row>
                             </section>
                             <section>
-                                CONSENSI
-                </section>
+                                
+                                {this.state.accettazConsensi.map((v)=>{
+                                    return <div>{v.text}</div>
+                                })}
+                            </section>
                             <Row>
                                 <Col>
-                                    <div class="btn-console btn-console-sub">
+                                    <div className="btn-console btn-console-sub">
                                         <div class="btn-console-right">
                                             <Button color="primary" disabled={!this.state.flagAccInfocert} className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" })}>Prosegui</Button>
                                         </div>
@@ -134,8 +141,16 @@ export default class extends Component {
                         // Inizializzazione
                         <>
                             firma
-                            Firma il contratto (attiva il "prosegui totale")
-                </>
+                            <Row>
+                                <Col>
+                                    <div className="btn-console btn-console-sub">
+                                        <div className="btn-console-right">
+                                            <Button color="primary" className="sub-buttons" onClick={this.sendInit}>Firma il contratto</Button>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </>
                     }
                 </div>
             </>
