@@ -7490,8 +7490,13 @@ div.fixed-table-scroll-outer {
     background: #ffffff;
 }
 
-.bootstrap-table .fixed-columns .filter-wrap {z-index:1}
+@media (max-width:991px) {
+    .bootstrap-table .fixed-columns {
+       display:none
+    }
+}
 
+.bootstrap-table .fixed-columns .filter-wrap {z-index:1}
 .bootstrap-table table {margin-top:0}
 
 @media (max-width:820px) {
