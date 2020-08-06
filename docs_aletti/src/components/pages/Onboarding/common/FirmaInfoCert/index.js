@@ -24,12 +24,14 @@ export default class extends Component {
         - Espone documenti in maniera statica
         - Raccoglie ed espone le clausole personalizzate dinamiche (i parametri sono all'interno)
         - Spedisce tutto ad ACCETTAZIONE_INFOCERT (in questa occasione viene spedito anche l'otp via SMS)
+        - In basso c'è un pulsante di invio precontrattuale via e-mail
 
         -> MESSAGGIO_CONFERMA (Step "locale" per dare messaggio di conferma)
 
         -> ACCETTAZ_INFOCERT
         - Espone una tonnellata di documenti che vengono raccolti dal JSON ed il campo dell'OTP che, tuttavia, non e' come gli altri (occorre anche prevedere un "resend" dell'otp)
         - Invia l'otp a FirmaDoc
+        - Alla pressione di "Firma il contratto" viene restituito il feedback ed il cliente può avanzare con il "prosegui"
         -> PASSA ALLO STEP "GLOBALE" successivo (attendere conferma di Caimi per sapere se c'è da fare la chiamata oppure no)
 
         Controllare ATTESA FIRMA CONSULENTE
