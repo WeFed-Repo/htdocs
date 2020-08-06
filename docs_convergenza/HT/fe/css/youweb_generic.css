@@ -328,19 +328,7 @@ button {
 .btn-align-center {
     text-align: center;
 }
-@media (max-width:767px) {
-    .btnWrapper .btn {
-        width: 100%;
-        margin-left:0!important
-    }
-    .btn-align-back {
-        float:none!important
-    }
-    .btn-align-right {
-        text-align: center;
-    }
 
-}
 .input_hidden {
     position: absolute;
     left: -9999px;
@@ -7809,7 +7797,25 @@ div.fixed-table-scroll-outer {
 .imgWrapperResponsive img {
     width:100%;
 }
+@media (max-width:767px) {
+    /*.btnWrapper .btn {
+        width: 100%;
+        margin-left:0!important
+    }
+    .btn-align-back {
+        float:none!important
+    }
+    .btn-align-right {
+        text-align: center;
+    }*/
+    .btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation, .btnWrapper.tabbed-buttons .btn {
+        padding: 11px 10px 7px 10px;
+    }
+    .btnWrapper .btn {
+        margin-left: 10px;
+    }
 
+}
 /*WEB ADVISOR */
 .result-number {
     border: 2px solid #0e977f;

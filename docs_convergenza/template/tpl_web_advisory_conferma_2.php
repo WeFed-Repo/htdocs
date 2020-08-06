@@ -43,6 +43,7 @@
 </section>
 
 <form id="formProposta" method="post" action="/WEBHT/investimenti/consulenza/propostaConfermaVerifica.do">
+	<section>
 	<div class="formWrapper">
 		<section>
 			<div class="form-group">
@@ -64,7 +65,7 @@
 						</thead>
 						<tbody>
 							<tr class="odd">
-								<td class="oCenter">
+								<td>
 									SCLAVO MAURO/ZWIRNER MARIA EMMA
 								</td>
 								<td>85</td>
@@ -7480,17 +7481,12 @@
 			</div>
 		</div>
 	</div>
-</section>
-
+	</section>
 	<section>
 		<div class="form-group btnWrapper clearfix">
 			<div class="btn-align-right">
-				
-				<input type="submit" value="prosegui" class="btn btn-primary" alt="prosegui">
-			</div>
-			<div class="btn-align-back">
-				
 				<input type="button" id="indietro" class="btn btn-default" title="Indietro" value="Indietro">
+				<input type="submit" value="prosegui" class="btn btn-primary" alt="prosegui">
 			</div>
 		</div>
 	</section>
