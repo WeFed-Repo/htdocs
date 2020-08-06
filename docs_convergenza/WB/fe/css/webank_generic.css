@@ -2643,6 +2643,11 @@ div.fixed-table-scroll-outer {
   z-index: 1;
   background: #ffffff;
 }
+@media (max-width: 767px) {
+  .bootstrap-table .fixed-columns {
+    display: none;
+  }
+}
 .fixCol {
   padding: 10px 0 !important;
 }
