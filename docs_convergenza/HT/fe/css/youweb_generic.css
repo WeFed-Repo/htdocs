@@ -328,7 +328,19 @@ button {
 .btn-align-center {
     text-align: center;
 }
+@media (max-width:767px) {
+    .btnWrapper .btn {
+        width: 100%;
+        margin-left:0!important
+    }
+    .btn-align-back {
+        float:none!important
+    }
+    .btn-align-right {
+        text-align: center;
+    }
 
+}
 .input_hidden {
     position: absolute;
     left: -9999px;
@@ -791,7 +803,9 @@ input[type=number] {
 
 @media screen and (max-width: 1200px) {
     .text-checkbox {float:left}
+   
 }
+
 table tr th.sorting,
 table tr th.sorting_asc,
 table tr th.sorting_desc {
@@ -1156,6 +1170,7 @@ select.form-control, .ui-combobox {
     float: left;
     position: relative;
     background: #fff url(/HT/fe/img/select_down.gif) no-repeat calc(100% - 10px) center;
+    font-family: inherit;
 }
 
 select.form-control::-ms-expand {
@@ -2386,6 +2401,7 @@ div.messagePanel p {
     
     .ui-combobox .form-control, .ui-combobox .form-control:hover, .input-group-addon a, .btnAggiungiBeneficiario, .btnEdit {
         height: 38px;
+        font-family: inherit;
     }
 
     select.form-control, .ui-combobox,
@@ -2533,6 +2549,7 @@ div.messagePanel p {
 
 .ui-accordion .ui-accordion-content {
     border: 0;
+    background-image: none;
 }
 
 .ui-accordion .ui-state-focus {
@@ -7789,7 +7806,13 @@ div.fixed-table-scroll-outer {
 }
 
 /*WEB ADVISOR */
-
+.result-number {
+    border: 2px solid #0e977f;
+    border-radius:5px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
 .box-line-stepper .line-stepper {
     border-top:8px solid #ddd;
     
@@ -7800,7 +7823,7 @@ div.fixed-table-scroll-outer {
 .box-line-stepper .line-stepper:last-child{
     border-radius: 0 8px 8px 0;
 }
-.box-line-stepper .line-stepper.attivo {
+.box-line-stepper .line-stepper.done {
     border-color:#202d50
 }
 .number-stepper {
@@ -7821,7 +7844,7 @@ div.fixed-table-scroll-outer {
     text-align: center;
     line-height: 30px;
 }
-.number-stepper.attivo span {
+.number-stepper.attivo span,.number-stepper.done span {
     background-color: #202d50;
     border-color:#202d50;
     color:#fff;
@@ -7872,5 +7895,8 @@ div.fixed-table-scroll-outer {
   
 }
 .txt-stepper {display: none;}
-
+.text-checkbox-mobile { width: 89% }
+.ui-state-default a, .ui-state-default  a:link, .ui-state-default a:visited {
+    padding: 0;
+}
 }
