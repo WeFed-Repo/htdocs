@@ -25,6 +25,47 @@ let limiteGiorno = (new Date().getDate()) +1
 		<div class="bordered p-3">
 			<h3>Dati autoveicolo</h3>
 			<div class="row">
+
+				<div class="col d-flex justify-content-center justify-content-lg-start p-0">
+
+					<div id="MappaForm">
+						<form class="form-grid needs-validation" novalidate="">
+							<div class="form-row mt-3">
+								<div class="form-group col">
+									<label class="control-label">Regione *</label>
+									<select class="form-control" id="MappaSelect">
+										<option value="0" selected disabled></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-row mt-3 mb-3">
+								<div class="col-12">
+									<label class="control-label">Tipologia di veicolo *</label>
+								</div>
+								<div class="form-group col-6">
+									<div class="form-check radio">
+										<input class="form-check-input" type="radio" id="autoveicolo" name="veicolo" value="autoveicolo">
+										<label class="form-check-label" for="autoveicolo">Autoveicolo</label>
+									</div>
+								</div>
+								<div class="form-group col">
+									<div class="form-check radio">
+										<input class="form-check-input" type="radio" id="motoveicolo" name="veicolo" value="motoveicolo">
+										<label class="form-check-label" for="motoveicolo">Motoveicolo</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-row mt-3">
+								<div class="form-group col">
+									<label class="control-label">Targa *</label>
+									<input class="form-control" type="text" id="MappaTarga" />
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+
 				<div class="col-6 d-none d-md-flex align-items-center justify-content-center">
 
 					<?= file_get_contents("./fe/img/cartina.svg"); ?>
@@ -60,49 +101,12 @@ let limiteGiorno = (new Date().getDate()) +1
 					</script>
 
 				</div>
-				<div class="col d-flex align-items-center justify-content-center justify-content-lg-start">
 
-					<div id="MappaForm">
-						<form class="form-grid needs-validation" novalidate="">
-							<div class="form-row">
-								<div class="form-group col">
-									<label class="control-label">Regione</label>
-									<select class="form-control" id="MappaSelect">
-										<option value="0" selected disabled></option>
-									</select>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-6">
-									<div class="form-check radio">
-										<img src="./fe/img/icon/autorizza.svg" class="icon" />
-										<input class="form-check-input" type="radio" id="autoveicolo" name="veicolo" value="autoveicolo">
-										<label class="form-check-label" for="autoveicolo">Autoveicolo</label>
-									</div>
-								</div>
-								<div class="form-group col">
-									<div class="form-check radio">
-										<img src="./fe/img/icon/autorizza.svg" class="icon" />
-										<input class="form-check-input" type="radio" id="motoveicolo" name="veicolo" value="motoveicolo">
-										<label class="form-check-label" for="motoveicolo">Motoveicolo</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<label class="control-label">Targa</label>
-									<input class="form-control" type="text" id="MappaTarga" />
-								</div>
-							</div>
-						</form>
-					</div>
-				
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<?php 
+	<?php
 	$btns = array(
 		'right' => array(
 			array(

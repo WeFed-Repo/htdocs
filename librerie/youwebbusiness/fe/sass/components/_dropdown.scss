@@ -77,3 +77,15 @@ body > .dropdown-menu,
     display: block !important;
   }
 }
+
+.dropdown-menu {
+  width: 230px !important;
+  min-width: 230px !important;
+  max-width: 230px !important;
+  .dropdown-item, a.dropdown-item {
+    white-space: normal !important;
+    line-height: 1.1em !important;
+    padding: .5rem 1.5rem !important;
+    text-decoration: none !important;
+  }
+}

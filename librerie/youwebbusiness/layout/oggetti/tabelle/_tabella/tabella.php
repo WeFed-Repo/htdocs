@@ -38,7 +38,7 @@
             </span>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
               <span class="dropdown-item disabled" disabled>Disabled</span>
               <a class="dropdown-item" href="#">Another action (<?php echo $i ?>)</a>
               <a class="dropdown-item" href="#">Something else here</a>
