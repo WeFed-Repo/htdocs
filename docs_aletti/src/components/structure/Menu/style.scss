@@ -103,6 +103,7 @@
                 }
                 &.opened {
                     background-color:  map-get($map, menuOpenedColor)!important;
+                    width: 250px;
                     .nav-link {
                         &.active {
                             background-color: map-get($map, menuBgOpenedColor);

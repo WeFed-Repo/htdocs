@@ -12,6 +12,13 @@ class StepForm extends Component {
         "localfield_privacyopen": (this.props.obstate.field_sessionfirmeblob_informativamifid === "true") ? true : false
     }
 
+
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: true
+        })
+    }
+
     render() {
 
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props

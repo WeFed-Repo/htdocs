@@ -24,12 +24,14 @@ export default class extends Component {
         - Espone documenti in maniera statica
         - Raccoglie ed espone le clausole personalizzate dinamiche (i parametri sono all'interno)
         - Spedisce tutto ad ACCETTAZIONE_INFOCERT (in questa occasione viene spedito anche l'otp via SMS)
+        - In basso c'è un pulsante di invio precontrattuale via e-mail
 
-        -> MESSAGGIO DI CONFERMA (Capire se deve essere un vero e proprio STEP oppure no)
+        -> MESSAGGIO_CONFERMA (Step "locale" per dare messaggio di conferma)
 
         -> ACCETTAZ_INFOCERT
         - Espone una tonnellata di documenti che vengono raccolti dal JSON ed il campo dell'OTP che, tuttavia, non e' come gli altri (occorre anche prevedere un "resend" dell'otp)
         - Invia l'otp a FirmaDoc
+        - Alla pressione di "Firma il contratto" viene restituito il feedback ed il cliente può avanzare con il "prosegui"
         -> PASSA ALLO STEP "GLOBALE" successivo (attendere conferma di Caimi per sapere se c'è da fare la chiamata oppure no)
 
         Controllare ATTESA FIRMA CONSULENTE
@@ -40,7 +42,9 @@ export default class extends Component {
             step: "INIT",
             loading: false,
             flagAccInfocert: false,
-            flagFirma: false
+            flagFirma: false,
+
+            accettazConsensi: null
         }
         this.sendInit = this.sendInit.bind(this);
     }
@@ -50,7 +54,7 @@ export default class extends Component {
         let obform =  this.props.obformprops.obstate;
         this.setState({ loading: true });
         getData({
-            url: {"svil":"","prod":""},
+            url: {"svil":"/json_data/onboarding/firma_init.json","prod":""},
            
             data: {
                 "id":obform.field_id, 
@@ -61,8 +65,10 @@ export default class extends Component {
                 
             success: (data) => {
                 // Preparazione del form di accettazione
+
                 this.setState({
                     step: "ACCETTAZ_INFOCERT",
+                    accettazConsensi: data.results && data.results.info && data.results.info.clauses,
                     loading: false
                 });
             }
@@ -117,13 +123,32 @@ export default class extends Component {
                                 </Row>
                             </section>
                             <section>
-                                CONSENSI
-                </section>
+                                
+                                {this.state.accettazConsensi.map((v,i)=>{
+                                    return <div key={i}>{v.text}</div>
+                                })}
+
+                            </section>
                             <Row>
                                 <Col>
-                                    <div class="btn-console btn-console-sub">
-                                        <div class="btn-console-right">
-                                            <Button color="primary" disabled={!this.state.flagAccInfocert} className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" })}>Prosegui</Button>
+                                    <div className="btn-console btn-console-sub">
+                                        <div className="btn-console-right">
+                                            <Button color="primary" disabled={!this.state.flagAccInfocert} className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </>
+                    }
+                     {this.state.step === "MESSAGGIO_CONFERMA" &&
+                        // Inizializzazione
+                        <>
+                            firma
+                            <Row>
+                                <Col>
+                                    <div className="btn-console btn-console-sub">
+                                        <div className="btn-console-right">
+                                            <Button color="primary" className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
                                         </div>
                                     </div>
                                 </Col>
@@ -134,8 +159,16 @@ export default class extends Component {
                         // Inizializzazione
                         <>
                             firma
-                            Firma il contratto (attiva il "prosegui totale")
-                </>
+                            <Row>
+                                <Col>
+                                    <div className="btn-console btn-console-sub">
+                                        <div className="btn-console-right">
+                                            <Button color="primary" className="sub-buttons" onClick={()=>alert("step successivo!")}>Firma il contratto</Button>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </>
                     }
                 </div>
             </>

@@ -36,7 +36,20 @@ $light: (
        legendWidth: 24px,
        legendHeight: 14px,
        legendRadius: 10px,
-       legendPaddLeft:32px
+       legendPaddLeft:32px,
+
+       agendaArrowBorderTop: 10px #fff,
+       agendaArrowLeftBorderLeft: 17px #ab9269,
+       agendaArrowLeftBorderRight: 17px #ab9269,
+       agendaArrowBorderBottom: 10px #fff,
+       agendaDayBgColor: transparent,
+       agendaDayBgColorInner: #153648,
+       agendaDayColor: #fff,
+       agendaDayBgColorHover: trasparent,
+       agendaDayBgColorInnerHover: #e0eaee,
+       agendaDayRadius : 50%,
+       agendaDayW: 40px,
+
     )
 );
 
@@ -69,6 +82,20 @@ $default: (
         legendWidth: 10px,
         legendHeight: 10px,
         legendRadius: 50%,
-        legendPaddLeft:20px
+        legendPaddLeft:20px,
+        agendaArrowBorderTop: 0,
+        agendaArrowLeftBorderRight: 0,
+        agendaArrowLeftBorderLeft: 0,
+        agendaArrowBorderBottom: 0,
+        agendaDayBgColor: #eee,
+        agendaDayBgColorInner: #eee,
+        agendaDayColor: #000,
+        agendaDayBgColorHover:#ccc,
+        agendaDayBgColorInnerHover: #F0F8FF,
+        agendaDayRadius : 0,
+        agendaDayW: 100%
+
+
+
     )
 );

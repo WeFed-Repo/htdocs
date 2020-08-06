@@ -6,7 +6,13 @@ import {getNextState,getPrevState, getPrevInt} from "./common/gestioneStati";
 export default class extends Component {
 
     state= {
-        modalAnnullamento: false
+        modalAnnullamento: false,
+        modalBack: false
+    }
+
+    functionIndietro() {
+        
+       
     }
 
     render() {
@@ -26,7 +32,19 @@ export default class extends Component {
                 <div className="btn-console">
                     <div className="btn-console-left">
                         {formfields.field_stato !=="BOZZA" && 
-                            <Button onClick={()=>formprops.setObState({field_stato:getPrevState(formfields), field_intestcorrente: getPrevInt(formfields)})}>Indietro</Button>
+                            <>
+                            <Modal isOpen={this.state.modalBack}>
+                                <ModalHeader>Torna indietro</ModalHeader>
+                                <ModalBody>
+                                    <p>Se torni indietro ora, perderai le tue modifiche.</p>
+                                    <div className="btn-console">
+                                        <div className="btn-console-left"><Button onClick={()=>this.setState({modalBack:false})}>Annulla</Button></div>
+                                        <div className="btn-console-right"><Button color="primary" onClick={() => { formprops.setObState({field_stato:getPrevState(formfields), field_intestcorrente: getPrevInt(formfields)}); this.setState({modalBack:false})}}>Torna indietro</Button></div>
+                                    </div>                                
+                                </ModalBody>
+                            </Modal>
+                            <Button onClick={()=>this.setState({modalBack:true})}>Indietro</Button>
+                            </>
                         }
                         <span className="svi-btn" onClick= {()=>console.log(formfields)}>Mostra stato onboarding</span>
                     </div>
@@ -117,7 +135,7 @@ export default class extends Component {
                                     </>
                                     :
                                     // Bottone standard
-                                    <Button color="primary" onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
+                                    <Button color="primary" disabled={!formprops.obstate.proseguiEnabled} onClick={() => formprops.obsave(true)}>{proseguiTxt}</Button>
                                 }
                                 
                             </>

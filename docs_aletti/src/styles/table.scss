@@ -13,6 +13,12 @@
                     border-radius: map-get($map, legendRadius);
                 }
             }
+            th, td {
+                color: map-get($map, mainColorText);
+            }
+            span.table-link {
+                color: map-get($map, mainColorText);
+            }
          }
         }
     }
@@ -35,7 +41,6 @@ table {
         text-align: left;
         padding: 5px 5px;
         line-height: 22px;
-
         &.left {
             text-align: left;
         }
@@ -50,6 +55,13 @@ table {
 
         &.withIco {
             text-align: center;
+        }
+    }
+    &.legenda {
+        th, td {
+            &.right {
+                font-weight:bold;
+            }
         }
     }
 
@@ -106,7 +118,7 @@ table {
     span.table-link {
         cursor: pointer;
         text-decoration: underline;
-        color: #000;
+        /*color: #000;*/
 
         &:hover {
             color: $color-primary

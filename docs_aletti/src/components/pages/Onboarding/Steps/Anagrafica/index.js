@@ -12,6 +12,14 @@ class StepForm extends Component {
     state = {
         "localfield_privacyopen": (this.props.obstate.field_anagraficablob_privacyletta === "true") ? true : false
     }
+
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: false
+        })
+    }
+
+
     render() {
         
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props

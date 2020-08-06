@@ -11,7 +11,6 @@ const stati = {
         "INT0_FIRMA_PRECONTRATTUALE",
         "INT0_FIRMA_VESSATORIE",
         "INT0_FIRMA_INVESTIMENTO",
-        "INT0_FIRMA_VESSATORIE_INVESTIMENTO",
         "INT0_FIRMA_CONSULENTE" // Salvataggio backend
     ],
     "int1": [
@@ -21,7 +20,6 @@ const stati = {
         "INT1_FIRMA_PRECONTRATTUALE",
         "INT1_FIRMA_VESSATORIE",
         "INT1_FIRMA_INVESTIMENTO",
-        "INT1_FIRMA_VESSATORIE_INVESTIMENTO",
         "INT1_FIRMA_CONSULENTE" // Salvataggio backend
     ],
     "finale": ["CONCLUSA"] // Salvataggio backend

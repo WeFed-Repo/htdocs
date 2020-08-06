@@ -5,6 +5,7 @@
 @import 'form.scss';
 @import 'table.scss';
 @import 'toast.scss';
+@import 'buttons.scss';
 
 @mixin theme($theme-name, $theme-map) {
     .#{$theme-name} {

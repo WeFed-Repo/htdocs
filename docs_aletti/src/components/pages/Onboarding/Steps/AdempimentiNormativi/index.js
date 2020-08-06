@@ -8,8 +8,15 @@ import CheckAccordionErrors from "components/pages/Onboarding/common/checkAccord
 
 class Adever extends Component {
 
+
+    componentDidMount() {
+        this.props.setObState({
+            proseguiEnabled: true
+        })
+    }
+
     render() {
-       
+
         let int = this.props.int,
             formstate = this.props.obstate,
             obchange = this.props.obchange,
@@ -40,37 +47,37 @@ class Adever extends Component {
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciapatrimonio_0_id",
                             "field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"
                         ])
-                   }
-                >
+                }
+            >
                 <section className="onboarding-block">
                     <Row>
                         <Col>
-                            <p>Ai sensi della normativa antiriciclaggio (d.lgs 231/07) il cliente è tenuto a compiere alcuni adempimenti e a fornire dichiarazioni e informazioni personali. Ti ricordiamo che il rilascio di false informazioni oppure omissioni può comportare conseguenze anche di natura penale.</p>
+                            <p>Ai sensi della normativa antiriciclaggio (d.lgs 231/07) sei tenuto a compiere alcuni adempimenti e a fornire dichiarazioni e informazioni personali. Ti ricordiamo che il rilascio di false informazioni oppure omissioni può comportare conseguenze anche di natura penale.</p>
                             <Form.checkgroup
                                 label="Titolare effettivo"
-                                name={"field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"}
-                                value={formstate["field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"]}
-                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_"+int+"_titolareeffettivo"]}
+                                name={"field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"}
+                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"]}
+                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"]}
                                 onChange={obchange}
-                                options={[{ "value": "true", "text": "Il cliente dichiara di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
+                                options={[{ "value": "true", "text": "Dichiaro di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
                                 output={isOutput}
                             ></Form.checkgroup>
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
-                                <Form.select
-                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"}
-                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
-                                    label="Scopo del rapporto di CC"
-                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
-                                    onChange={this.props.obchange}
-                                    placeholder="Seleziona..."
-                                    options={this.props.obdomini["adever_naturascopo"]}
-                                    output={isOutput}
-                                ></Form.select>
-                            </Col>
-                            { formstate["field_sessionfirmeblob_depositoincluso"]==="true" && 
+                            <Form.select
+                                name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"}
+                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
+                                label="Scopo del rapporto di CC"
+                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopo_0_id"]}
+                                onChange={this.props.obchange}
+                                placeholder="Seleziona..."
+                                options={this.props.obdomini["adever_naturascopo"]}
+                                output={isOutput}
+                            ></Form.select>
+                        </Col>
+                        {formstate["field_sessionfirmeblob_depositoincluso"] === "true" &&
                             <Col sm="6">
                                 <Form.select
                                     name={"field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_naturascopodeposito_0_id"}
@@ -83,8 +90,8 @@ class Adever extends Component {
                                     output={isOutput}
                                 ></Form.select>
                             </Col>
-                            }
-                        </Row>
+                        }
+                    </Row>
 
 
 
@@ -93,7 +100,7 @@ class Adever extends Component {
                     <Row>
                         <Col sm="6">
                             <Form.radiogroup
-                                label="Il cliente è una persona politicamente esposta?"
+                                label="Sei una persona politicamente esposta?"
                                 name={"field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"}
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
@@ -144,7 +151,7 @@ class Adever extends Component {
                             ></Form.select>
                         </Col>
                         {
-                            formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] === "86" && 
+                            formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_nazionalita_0_id"] === "86" &&
                             <Col sm="6">
                                 <Form.select
                                     label="Provincia svolgimento"
@@ -159,7 +166,7 @@ class Adever extends Component {
                                 ></Form.select>
                             </Col>
                         }
-                        
+
                     </Row>
                     <Row>
                         <Col sm="6">
@@ -200,7 +207,7 @@ class Adever extends Component {
                             ></Form.select>
                         </Col>
                         <Col sm="6">
-                        <Form.input
+                            <Form.input
                                 label="Note origine reddito"
                                 name={"field_sessionfirmeblob_intestatarifirme_" + int + "_origineredditonote"}
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_origineredditonote"]}
@@ -224,12 +231,12 @@ class Adever extends Component {
                                 output={isOutput}
                             ></Form.select>
                         </Col>
-                       
-                            {
-                                formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciapatrimonio_0_id"] === "4" &&
-                               
-                                <Col sm="6">
-                                    <Form.input
+
+                        {
+                            formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_fasciapatrimonio_0_id"] === "4" &&
+
+                            <Col sm="6">
+                                <Form.input
                                     label="Note patrimonio"
                                     name={"field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"}
                                     value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_fasciapatrimonionote"]}
@@ -238,10 +245,10 @@ class Adever extends Component {
                                     placeholder="Note..."
                                     output={isOutput}
                                 ></Form.input>
-                                </Col>
-                            }
-                            
-                        
+                            </Col>
+                        }
+
+
                     </Row>
                     <Row>
                         <Col sm="6">
@@ -256,22 +263,22 @@ class Adever extends Component {
                                 output={isOutput}
                             ></Form.select>
                         </Col>
-                        {formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"]==="7" &&
-                        <Col sm="6">
-                        <Form.input
-                                label="Note origine del patrimonio"
-                                name={"field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"}
-                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"]}
-                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"]}
-                                onChange={obchange}
-                                placeholder="Note..."
-                                output={isOutput}
-                            ></Form.input>
-                        </Col>
-                        
-                        
+                        {formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_listrispadever_originefondi_0_id"] === "7" &&
+                            <Col sm="6">
+                                <Form.input
+                                    label="Note origine del patrimonio"
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"}
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"]}
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_originefondinote"]}
+                                    onChange={obchange}
+                                    placeholder="Note..."
+                                    output={isOutput}
+                                ></Form.input>
+                            </Col>
+
+
                         }
-                        
+
                     </Row>
                 </section>
             </DefaultCollapse>
@@ -317,14 +324,14 @@ class StepForm extends Component {
                     }
                     <section className="onboarding-block">
                         <h3>Autorizzazione alla capitalizzazione periodica degli interessi</h3>
-                        <p dangerouslySetInnerHTML={{__html: this.props.obdomini.disclaimer["ALETTI_CAP_PERIODICA"]}}></p>
+                        <p dangerouslySetInnerHTML={{ __html: this.props.obdomini.disclaimer["ALETTI_CAP_PERIODICA"] }}></p>
                         <Form.radiogroup
                             className="no-label"
                             name={"field_sessionfirmeblob_capitalizzazioneperiodica_consenso"}
                             value={formstate["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             error={formstate.errors["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             onChange={this.props.obchange}
-                            options={[{ "value": "true", "text": "Il cliente acconsente" }, { "value": "false", "text": "Il cliente non acconsente" }]}
+                            options={[{ "value": "true", "text": "Acconsento" }, { "value": "false", "text": "Non acconsento" }]}
                             output={isOutput}
                         ></Form.radiogroup>
 
