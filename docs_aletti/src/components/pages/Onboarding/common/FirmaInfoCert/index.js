@@ -44,9 +44,10 @@ export default class extends Component {
             flagAccInfocert: false,
             flagFirma: false,
 
-            accettazConsensi: null
+            proseguiEnabled: true
         }
         this.sendInit = this.sendInit.bind(this);
+        this.firmaDoc = this.firmaDoc.bind(this);
     }
 
     /* AZIONE INIT */ 
@@ -68,6 +69,7 @@ export default class extends Component {
 
                 this.setState({
                     step: "ACCETTAZ_INFOCERT",
+                    proseguiEnabled:false,
                     accettazConsensi: data.results && data.results.info && data.results.info.clauses,
                     loading: false
                 });
@@ -75,6 +77,19 @@ export default class extends Component {
         })
 
 
+    }
+
+    firmaDoc() {
+        // Invio codice OTP
+        let obform =  this.props.obformprops.obstate;
+        this.setState({ loading: true });
+
+        this.setState({ loading: false,
+            proseguiEnabled: false});
+        
+        this.props.obformprops.setObState(
+            {proseguiEnabled: true}
+        )
     }
 
     render() {
@@ -85,18 +100,7 @@ export default class extends Component {
                 <div className={this.state.loading ? "loading" : ""}>
                     {this.state.step === "INIT" &&
                         <>
-                            <section>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                <Row>
-                                    <Col>
-                                        <ul className="elenco-documenti">
-                                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                        </ul>
-                                    </Col>
-                                </Row>
-                            </section>
+                            {this.props.preDocs}
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
@@ -111,29 +115,17 @@ export default class extends Component {
                     {this.state.step === "ACCETTAZ_INFOCERT" &&
                         // Inizializzazione
                         <>
+                            {this.props.accDocs}
                             <section>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                <Row>
-                                    <Col>
-                                        <ul className="elenco-documenti">
-                                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                        </ul>
-                                    </Col>
-                                </Row>
-                            </section>
-                            <section>
-                                
                                 {this.state.accettazConsensi.map((v,i)=>{
-                                    return <div key={i}>{v.text}</div>
+                                    return <div key={i} onClick={()=>this.setState({proseguiEnabled:true})}>{v.text}</div>
                                 })}
-
                             </section>
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" disabled={!this.state.flagAccInfocert} className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
+                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
                                         </div>
                                     </div>
                                 </Col>
@@ -143,12 +135,12 @@ export default class extends Component {
                      {this.state.step === "MESSAGGIO_CONFERMA" &&
                         // Inizializzazione
                         <>
-                            firma
+                            <p><strong>La firma è ora attiva</strong></p>
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
+                                            <Button color="primary" className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" })}>Prosegui</Button>
                                         </div>
                                     </div>
                                 </Col>
@@ -158,12 +150,12 @@ export default class extends Component {
                     {this.state.step === "FIRMADOC" &&
                         // Inizializzazione
                         <>
-                            firma
+                            Firma con OTP
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" className="sub-buttons" onClick={()=>alert("step successivo!")}>Firma il contratto</Button>
+                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>
                                         </div>
                                     </div>
                                 </Col>
