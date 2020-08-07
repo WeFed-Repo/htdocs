@@ -79,20 +79,17 @@
 		</section>
 		<section>
 			<!-- DOWNLOAD PDF PER MOBILE -->
-			<span id="downloadPdfMobile" style="display: none;">
+			<div id="downloadPdfMobile" style="display: none;">
 					<p>Puoi scaricare e salvare sul tuo device una copia PDF dell'Informativa Pre Ordine:</p>
-					<table style="width: 100%;">
-						<tbody><tr>
-							<td class="oCenter" style="width: 100%; background-color: white;">
-								<div class="divDettaglio">
-									<div>
-										<a href="/WEBHT/investimenti/consulenza/propostaDownloadPdf?tipoDocumento=IPO" target="_blank"><img src="/HT/fe/img/ico_pdf2.gif" style="vertical-align: middle;" class="">&nbsp;Informativa Pre Ordine 
-											85</a>
-									</div>
-								</div></td>
-						</tr>
-					</tbody></table> 
-			</span>
+					<div class="alignCenter">
+						<a target="_blank" href="/WEBHT/investimenti/consulenza/propostaDownloadPdf?tipoDocumento=IPO">
+							<i class="icon icon-file_pdf_fill colorVer"></i> 
+							<span class="btnLink">
+							   Informativa Pre Ordine 85
+							</span>
+						</a>
+					</div>
+			</div>
 		</section>
 		<!-- SEZIONE CON SLIDER -->
 		<div id="accordion" class="accordion nosort ui-accordion ui-widget ui-helper-reset" role="tablist">

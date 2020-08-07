@@ -84,19 +84,15 @@
 	    <section>
 			<!-- DOWNLOAD PDF PER MOBILE -->
 			<div id="downloadPdfMobile" style="display: none;">
-				<br>
-				<p>Puoi scaricare e salvare sul tuo device una copia PDF dell'Informativa Pre Contrattuale:</p>
-				<table style="width: 100%;">
-					<tbody><tr>
-						<td class="oCenter" style="width: 100%; background-color: white;">
-							<div class="divDettaglio">
-								<div>
-									<a href="/WEBHT/investimenti/consulenza/propostaDownloadPdf?tipoDocumento=CPC" target="_blank"><img src="/HT/IMAGES/ico_pdf2.gif" alt="" style="vertical-align: middle;">&nbsp;Informativa Pre Contrattuale85</a>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody></table>
+				<p>Puoi scaricare e salvare sul tuo device una copia PDF dell'Informativa Pre Ordine:</p>
+					<div class="alignCenter">
+						<a target="_blank" href="/WEBHT/investimenti/consulenza/propostaDownloadPdf?tipoDocumento=CPC">
+							<i class="icon icon-file_pdf_fill colorVer"></i> 
+							<span class="btnLink">
+								Informativa Pre Contrattuale
+							</span>
+						</a>
+					</div>
 			</div>
 	    </section>
 	    <section>
@@ -182,6 +178,7 @@
 			</div>
 		</section>
 		<section>
+		  <div class="box-otp">
 		  <div class="form-group">
 		  	<div class="row">
 					<div class="form-field-input col-xs-12 col-sm-4">
@@ -190,7 +187,7 @@
 						</div>
 					</div>
 					<div class="form-field-input col-xs-12 col-sm-4">
-						<label class="control-label paddingRightLarge">Pin</label>
+						<label class="control-label">Pin</label>
 						<input type="password" name="pin" value="" id="pin" class="form-control wauto" autocomplete="off">
 				    </div>
 					<div class="form-field-input col-xs-12 col-sm-4">
@@ -200,12 +197,12 @@
 								<a href="#" onclick="javascript:OpenHelp('/HT/HTML/HelpOtp.html')">
 
 										<i class="icon icon-info_fill icon-2x"></i>
-									</a>
+								</a>
 						</div>
 					</div>
 			</div>	
 		  </div>
-	
+			</div>
 		</section>
 		<section>
 				

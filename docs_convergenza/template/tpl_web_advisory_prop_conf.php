@@ -1,18 +1,15 @@
-
-
-
 <section>
-<div class="titolo">
-	<h1>
-		<div class="row">
-			<div class="col-sm-8">
-				<!-- TITOLO -->
-				<span>Consulenza &gt; proposte da confermare</span>
-				<!-- /TITOLO -->
-		    </div>
-        </div>
-	</h1>
-</div>
+    <div class="titolo">
+        <h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    <!-- TITOLO -->
+                    <span>Consulenza &gt; proposte da confermare</span>
+                    <!-- /TITOLO -->
+                </div>
+            </div>
+        </h1>
+    </div>
 </section>
 <section>
    <p>Seleziona il servizio di consulenza sul quale sono presenti proposte e  accedi all’iter di accettazione cliccando sulla lente di ingrandimento</p>
@@ -111,47 +108,27 @@
 					<th class="oCenter">Stato</th>
 				</tr>
 			</thead>
-			
-				
-					
-						
-					
-					
-				
-				<tbody><tr class="odd">
+			<tbody>
+                <tr class="odd">
 					<td class="oCenter">
 						<a role="button" aria-pressed="false" href="javascript:void(0)" id="loadDettaglio" data-details="360736">
 							<i class="icon icon-zoom_filled colorVer"></i> 
 						</a>
 					</td>
-					<td>
-						
-							
-							
-								Consulenza Base - SCLAVO MAURO/ZWIRNER MARIA EMMA
-							
-							
-						
-					</td>
+					<td>Consulenza Base - SCLAVO MAURO/ZWIRNER MARIA EMMA</td>
 					<td class="oCenter">85</td>
 					<td class="oCenter">03/08/2020</td>
 					<td class="oCenter">07/08/2020</td>
-					<td class="oCenter">
-						 
-							<i class="icon icon-mail_opened" title="In Valutazione"></i>
-						 
-					</td>
+					<td class="oCenter"><i class="icon icon-mail_opened" title="In Valutazione"></i></td>
 				</tr>
-			
-		</tbody></table>
+            </tbody>
+        </table>
 	</div>
 	<div class="formWrapper">
-			<div class="form-group btnWrapper clearfix">
-				<div class="btn-align-right">
-					
-					<input class="btn btn-default" type="button" id="indietro" title="Indietro" name="Indietro" value="Indietro">
-			</div>
-		</div>
+        <div class="form-group btnWrapper clearfix">
+            <div class="btn-align-right">
+                <input class="btn btn-default" type="button" id="indietro" title="Indietro" name="Indietro" value="Indietro">
+        </div>
 	</div>
     <script>
     $(document).ready(function(){

@@ -3132,6 +3132,8 @@ span.spanQuestionario {
     text-transform: uppercase;
     color: #00a592;
     font-weight: 600;
+    position: relative;
+    top:-5px;
 }
 
 .btnLink:hover {
@@ -7798,16 +7800,6 @@ div.fixed-table-scroll-outer {
     width:100%;
 }
 @media (max-width:767px) {
-    /*.btnWrapper .btn {
-        width: 100%;
-        margin-left:0!important
-    }
-    .btn-align-back {
-        float:none!important
-    }
-    .btn-align-right {
-        text-align: center;
-    }*/
     .btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation, .btnWrapper.tabbed-buttons .btn {
         padding: 11px 10px 7px 10px;
     }
@@ -7815,6 +7807,11 @@ div.fixed-table-scroll-outer {
         margin-left: 10px;
     }
 
+}
+@media (max-width:400px) {
+    .btnWrapper .btn {
+        margin-left: 3px;
+    }
 }
 /*WEB ADVISOR */
 .result-number {
@@ -7883,6 +7880,8 @@ div.fixed-table-scroll-outer {
 .txt-stepper.attivo {
     font-weight:bold;
 }
+.box-otp label {padding-right:20px}
+.box-otp img {padding-right:20px}
 @media (min-width: 767px) {
 .pos-relative {position: relative;}
 .pos-relative.boxDefault:first-child {
@@ -7899,15 +7898,17 @@ div.fixed-table-scroll-outer {
 
 }
 @media (max-width: 767px) {
-.box-stepper {
-    margin-bottom:50px;
-    padding-left: 0;
-  
-  
-}
+    .box-stepper {
+        margin-bottom:50px;
+        padding-left: 0;
+    
+    
+    }
 .txt-stepper {display: none;}
 .text-checkbox-mobile { width: 89% }
 .ui-state-default a, .ui-state-default  a:link, .ui-state-default a:visited {
     padding: 0;
 }
+.box-otp .wauto {width:50%!important}
+.box-otp label {padding-right:51px}
 }
