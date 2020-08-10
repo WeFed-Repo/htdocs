@@ -125,6 +125,11 @@ ol {
     padding: 0 15px;
 }
 
+/* FORZATURE */
+.force-break {
+    word-break: break-all !important;
+}
+
 /*TITOLI */
 
 h1 span {
@@ -7912,3 +7917,4 @@ div.fixed-table-scroll-outer {
 .box-otp .wauto {width:50%!important}
 .box-otp label {padding-right:51px}
 }
+
