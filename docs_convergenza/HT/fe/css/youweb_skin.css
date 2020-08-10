@@ -3442,8 +3442,11 @@ div.pager .circle.current_page {
 }
 .tooltip.in .tooltip-inner .closeTooltip {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: 5px;
+  right: 5px;
+}
+.tooltip.in .tooltip-inner a {
+  text-decoration: underline;
 }
 .tooltip.in .tooltip-arrow {
   position: relative;
@@ -3463,6 +3466,10 @@ div.pager .circle.current_page {
   .tooltip {
     max-width: 300px !important;
   }
+}
+
+.closeable + .tooltip.in .tooltip-inner {
+  padding: 23px;
 }
 
 .htmlTooltip {

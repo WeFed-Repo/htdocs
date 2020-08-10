@@ -7918,3 +7918,16 @@ div.fixed-table-scroll-outer {
 .box-otp label {padding-right:51px}
 }
 
+
+
+
+ol.sotto-elenco,ol.sotto-elenco ol {
+    counter-reset: item
+  }
+  ol.sotto-elenco  li {
+    display: block
+  }
+  ol.sotto-elenco  li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+  }

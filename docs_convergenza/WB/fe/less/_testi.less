@@ -1109,3 +1109,14 @@ span.sell {
     }
     .collapse-par-collapse {padding-left:25px;}
 }
+
+ol.sotto-elenco, ol.sotto-elenco ol {
+    counter-reset: item
+}
+ol.sotto-elenco  li {
+    display: block
+}
+ol.sotto-elenco  li:before {
+    content: counters(item, ".") " "; 
+    counter-increment: item
+}
