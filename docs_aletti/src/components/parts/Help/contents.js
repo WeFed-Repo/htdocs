@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 
 const helpBody =  {
 
+    "formfields": <><p>Esempio di help sulla label di un campo</p></>,
+
     "agenda": <p>Il Widget <strong>"Agenda"</strong> mostra gli eventi salvati all’interno del Sistema di posta aziendale Outlook. </p>,
 
     "rischio" : <div>

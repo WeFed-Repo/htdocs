@@ -137,6 +137,7 @@ export default class extends Component {
                                 name="esempio_campo_input"
                                 value={formstate.esempio_campo_input}
                                 label="Input di esempio"
+                                help="formfields"
                                 error={formstate.errors["esempio_campo_input"]}
                                 onChange={this.generalOnChange}
                                 output={this.state.allOutput}

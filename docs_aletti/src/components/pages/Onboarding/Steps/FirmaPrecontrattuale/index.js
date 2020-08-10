@@ -50,7 +50,7 @@ class StepForm extends Component {
                     </section>
 
 
-        // DOCUMENTI PER ACCETAZIONI
+        // DOCUMENTI PER ACCETTAZIONI
         let accDocs = <section>
                 <p>Documenti per accettazione</p>
                 <Row>
