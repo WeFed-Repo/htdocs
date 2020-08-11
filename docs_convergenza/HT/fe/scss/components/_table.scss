@@ -72,6 +72,10 @@ table,
         }
         
       }
+
+      select {
+        min-width:100px;
+      }
      
       &.sort {
         /*padding:0 0 0 15px!important;*/

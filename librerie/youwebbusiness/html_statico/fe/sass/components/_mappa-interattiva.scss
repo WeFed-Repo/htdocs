@@ -20,6 +20,13 @@ svg#MappaInterattiva {
                 opacity: 1;
                 fill: $greenLink;
             }
+            &[data-disabled] {
+              &,
+              &:active,&:hover {
+                opacity: 0.25;
+  							cursor: default;
+              }
+            }
         }
     }
 }

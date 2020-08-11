@@ -1556,6 +1556,9 @@ table th.indent {
 table th.margini-dispo {
   min-width: 250px;
 }
+table th select {
+  min-width: 100px;
+}
 table th.filter {
   position: relative;
   min-width: 150px;

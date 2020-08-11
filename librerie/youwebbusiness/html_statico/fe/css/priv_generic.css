@@ -3518,14 +3518,14 @@ a.dropdown-item:not(.btn):hover {
     font-size: 14px; }
 
 body > .dropdown-menu,
-[tm-bsTable-v2] table .dropdown-menu {
+[tm-bsTable-v2] .dropdown-menu {
   transform: translate(0%, 0%) !important; }
   body > .dropdown-menu.show:not(.shown),
-  [tm-bsTable-v2] table .dropdown-menu.show:not(.shown) {
+  [tm-bsTable-v2] .dropdown-menu.show:not(.shown) {
     opacity: 0 !important;
     display: none !important; }
   body > .dropdown-menu.shown,
-  [tm-bsTable-v2] table .dropdown-menu.shown {
+  [tm-bsTable-v2] .dropdown-menu.shown {
     opacity: 1 !important;
     display: block !important; }
 
@@ -4083,6 +4083,9 @@ svg#MappaInterattiva {
     svg#MappaInterattiva #Regioni path.selected, svg#MappaInterattiva #Regioni path.selected:hover, svg#MappaInterattiva #Regioni g.selected, svg#MappaInterattiva #Regioni g.selected:hover {
       opacity: 1;
       fill: #2F9988; }
+    svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni path[data-disabled]:active, svg#MappaInterattiva #Regioni path[data-disabled]:hover, svg#MappaInterattiva #Regioni g[data-disabled], svg#MappaInterattiva #Regioni g[data-disabled]:active, svg#MappaInterattiva #Regioni g[data-disabled]:hover {
+      opacity: 0.25;
+      cursor: default; }
 
 #MappaForm {
   width: 100%; }

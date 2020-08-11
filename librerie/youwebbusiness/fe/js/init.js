@@ -37,30 +37,34 @@ function initDropdownOnClick(clickedElement, allDrops) {
         var elem = $(this);
         var drop = elem.find('.dropdown-menu');
         setTimeout(function () {
+            var dropW = 230; //drop.width() > 0 ? drop.width() : 230;
+            var elemW = elem.width();
             var posTop = elem.offset().top;
             var posLeft = elem.offset().left;
-            var dropW = drop.width() > 0 ? drop.width() : 230;
-            var elemW = elem.width();
-            if ((posLeft - dropW) < dropW) {
-                posLeft = posLeft + dropW + elemW;
-            } else {
+            //if ((posLeft - dropW) < dropW) {
+                //posLeft = posLeft + dropW + elemW;
+            //} else {
                 posLeft = posLeft - dropW;
-            }
-            $('body').append(drop.css({
-                position: 'absolute',
-                top: posTop,
-                left: posLeft,
-                transform: 'translate(0%,0%)',
+            //}
+
+            drop.css({
+              position: 'absolute',
+              top: posTop,
+              left: posLeft,
+              transform: 'translate(0%,0%)',
             })
-                .addClass('shown')
-                .detach());
+
+            $('body').append( drop.detach() );
+
+            setTimeout(function () {
+              $('body').find(' > .dropdown-menu ').addClass('shown');
+            },100);
 
             if (allDrops != undefined) {
                 $(allDrops).each(function () { $(this).removeAttr('data-clicked') });
             } else {
                 $(this).removeAttr('data-clicked');
             }
-
         }, 10);
     }).on('hidden.bs.dropdown', function () {
         $(this).append($('body > .dropdown-menu').css({
@@ -79,6 +83,16 @@ function initDropdown() {
     var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"]';
     $(allDrops + ':not([data-clicked]):not([tm-dropdown-click])').on('click', function () {
         initDropdownOnClick($(this), allDrops);
+    });
+    $(window).resize(function () {
+      $('[data-dropdown-active]').removeAttr('data-dropdown-active').parent().append($('body > .dropdown-menu').css({
+          position: false,
+          top: false,
+          left: false,
+      })
+          .removeClass('show')
+          .removeClass('shown')
+          .detach());
     });
 }
 

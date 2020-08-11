@@ -65,8 +65,13 @@ a.dropdown-item:not(.btn) {
   }
 }
 
+// .dropdown-menu {
+//   opacity: 0 !important;
+//   display: none !important;
+// }
+
 body > .dropdown-menu,
-[tm-bsTable-v2] table .dropdown-menu {
+[tm-bsTable-v2] .dropdown-menu {
   transform: translate(0%,0%) !important;
   &.show:not(.shown) {
     opacity: 0 !important;
