@@ -75,22 +75,34 @@ let limiteGiorno = (new Date().getDate()) +1
 							var list = [];
 							var $regioni = $('#Regioni path, #Regioni g');
 							var $select = $('#MappaSelect');
+							// Scrivo le options in base ai path SVG
 							$regioni.each(function(){
 								var name = $(this).attr('id');
 								if(name) {
-									var label = name.replace(/[-]/g," ").replace(/[_]/g,"'");
+									var label = name.replace(/[-]/g," ") // converte dash in spazio
+																	.replace(/[_]/g,"'") // converte underscore in apostrofo
+																	.replace(/p'a /g,"p.a. "); // converte p.a. per le province autonome
+									var disabled = $(this).data('disabled');
 									$(this).attr('title',label).attr('alt',label);
 									list.push(name);
-									$select.append('<option value="'+name+'">'+label+'</option>');
+									if( ! disabled ) { $select.append('<option value="'+name+'" >'+label+'</option>'); }
+									// NOTE: se si vuole che le voci disabilitate nella select siano visibili ma disabilitati decommentare:
+									//else { $select.append('<option value="'+name+'" disabled >'+label+'</option>'); }
 								}
 							});
+							// Ordine alfabetico options
+							$select.html( $select.find("option").sort(
+								function (a, b) { return a.text == b.text ? 0 : a.text < b.text ? -1 : 1 }
+							) );
 							$select.on('change',function(){
 								regione = $(this).val();
 								selectRegion( regione );
 							});
 							$regioni.on('click',function(){
-								regione = $(this).attr('id');
-								selectRegion( regione );
+								if( ! $(this).data('disabled') ) {
+									regione = $(this).attr('id');
+									selectRegion( regione );
+								}
 							});
 							function selectRegion( regione ) {
 								$('#Regioni .selected').removeClass('selected');
