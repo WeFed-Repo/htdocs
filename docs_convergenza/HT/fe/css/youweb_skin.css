@@ -2233,6 +2233,11 @@ table tr th .sorting .icon-accordion_down,
 .ui-dialog .table tr th .sorting .icon-accordion_down {
   display: none !important;
 }
+table tr th select,
+.table tr th select,
+.ui-dialog .table tr th select {
+  min-width: 100px;
+}
 table tr th.sort,
 .table tr th.sort,
 .ui-dialog .table tr th.sort {
@@ -3442,8 +3447,11 @@ div.pager .circle.current_page {
 }
 .tooltip.in .tooltip-inner .closeTooltip {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: 8px;
+  right: 8px;
+}
+.tooltip.in .tooltip-inner a {
+  text-decoration: underline;
 }
 .tooltip.in .tooltip-arrow {
   position: relative;
@@ -3463,6 +3471,10 @@ div.pager .circle.current_page {
   .tooltip {
     max-width: 300px !important;
   }
+}
+
+.closeable + .tooltip.in .tooltip-inner {
+  padding: 23px;
 }
 
 .htmlTooltip {

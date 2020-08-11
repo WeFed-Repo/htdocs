@@ -10,6 +10,7 @@ import MomentLocaleUtils, { formatDate } from 'react-day-picker/moment';
 import 'moment/locale/it';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./style.scss";
+import HelpBtn from 'components/parts/Help';
 
 // Filtraggio in INPUT
 const applyMask = (value,mask) => {
@@ -71,6 +72,10 @@ let handleChange = function (component, e) {
     );
 }
 
+let helpButton = (helparg) => {
+    return helparg && <HelpBtn className="modal-sm" arg={helparg} />
+}
+
 
 // ############################ Input "basici" ##############################
 class FormInput extends Component {
@@ -91,10 +96,10 @@ class FormInput extends Component {
             placeholder = this.props.placeholder,
             cbchange = this.props.cbchange,
             mask= this.props.mask;
-
+            
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 {!output && <input disabled={this.props.disabled} type={type} maxLength={maxlength} name={this.props.name} placeholder={placeholder} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=mask;this.props.onChange(e)}} value={value} className="form-control" />}
                 {output && <span className="output">{value}</span>}
                 {error && <span className="error">{error}</span>}
@@ -212,7 +217,7 @@ class FormSelect extends Component {
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "") + (this.state.isLoading? " loading":"")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 {!output && <select disabled={this.props.disabled} name={this.props.name} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}} value={value} className={"form-control"}>
                     {placeholder && <option value="">{placeholder}</option>}
                     {options && options.map(function (val, index) {
@@ -255,7 +260,7 @@ class FormCheckgroup extends Component {
 
         return (
             <div className={"form-group checkgroup " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 <FieldMainWrapper>
                     {options && options.map((obj, ind) => {
                         return (<FieldWrapper key={ind}><label className={"checkradio " + (output? "output" : "")}><input disabled={this.props.disabled || output} type="checkbox" name={name} value={obj.value} checked={value.toString().split(",").indexOf(obj["value"]) >= 0} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
@@ -295,7 +300,7 @@ class FormRadiogroup extends Component {
 
         return (
             <div className={"form-group radiogroup " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 <FieldMainWrapper>
                     {options && options.map((obj, ind) => {
                         return (<FieldWrapper key={ind}><label className={"checkradio " + (output? "output":"")}><input disabled={this.props.disabled || output} type="radio" name={name} value={obj.value} checked={obj["value"] === value} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=null;this.props.onChange(e)}}></input><span className="text">{obj.text}</span></label></FieldWrapper>)
@@ -326,7 +331,7 @@ class FormCheckfile extends Component {
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 {!this.props.disabled && 
                     <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange , mask:null})}} href={this.props.fileurl} target="_blank">
                         <i className="icon icon-file_pdf"></i>
@@ -543,7 +548,7 @@ class FormFile extends Component {
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 
                 <Modal isOpen={this.state.modalUpload}>
                     <div className={(this.state.modalUploadLoading) ? "loading" : ""}>
@@ -820,7 +825,7 @@ class FormDate extends Component {
         return (
 
             <div className={"form-group daypicker " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 {!output && <div className="daypicker-wrapper">
                     <DayPickerInput key={this.props.name + "_" + value}
                         value={value}
@@ -956,7 +961,7 @@ class FormOtp extends Component {
 
         return (
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
-                {label && <label className="form-control-label">{this.props.label}</label>}
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 <div className={"otp-field " + (this.state.loading?"loading":"")}>
             
                     {!value && !output && this.state.status==="nootp" &&

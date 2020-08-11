@@ -86,6 +86,12 @@
 								"html": "vr",
 								"inlavorazione": true,
 								"tpl": "tpl_web_advisory_conferma_3.php"
+							},
+							{
+								"nome": "Web advisory conferma 4",
+								"html": "vr",
+								"inlavorazione": true,
+								"tpl": "tpl_web_advisory_conferma_4.php"
 							}
 							
 							

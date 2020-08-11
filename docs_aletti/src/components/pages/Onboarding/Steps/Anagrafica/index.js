@@ -15,7 +15,7 @@ class StepForm extends Component {
 
     componentDidMount() {
         this.props.setObState({
-            proseguiEnabled: false
+            proseguiEnabled: true
         })
     }
 

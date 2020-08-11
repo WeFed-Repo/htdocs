@@ -8,14 +8,17 @@
     opacity: 1;
     padding: 0;
     .tooltip-inner {
-      opacity: 1;
+      opacity: 1; 
       background-color: $white;
       padding: 15px; 
-      position: relative;
+      position: relative; 
       .closeTooltip {
         position: absolute;
-        top: -8px;
-        right: -8px;
+        top: 8px;
+        right: 8px;
+      }
+      a {
+        text-decoration: underline;
       }
     }
     .tooltip-arrow {
@@ -40,7 +43,14 @@
     & {max-width:300px !important;}
   }
 }
-
+.closeable + .tooltip {
+  &.in {
+    .tooltip-inner {
+      padding: 23px; 
+    
+    }
+  }
+}
 // Contenuto che viene trasferito nel tooltip dinamicamente con javascript
 
 .htmlTooltip {
