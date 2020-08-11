@@ -523,7 +523,17 @@ $(function(){
                 <tr>
                     <th class="center"><a class="btn-icon" data-toggle="modal" data-target="#contenuti"><i class="icon icon-2x icon-info_fill"></i></a></th>
                     <th class="left filter" data-sortable="true" id="filterTitolo">Titolo/Fondo</th>
-                    <th class="left">Mercato</th>
+                    <th class="left">Mercato<div >
+                        <div class="mww-dom-component webank-component-combobox">
+                        <select class="form-control" id="select">    		    
+                        <option value="Tutti">Tutti</option>        		    
+                        <option value="FONDI/SICAV">FONDI/SICAV</option>        		    
+                        <option value="MTA">MTA</option>        		    
+                        <option value="SEDEX">SEDEX</option>        		    
+                        <option value="EuroTLX">EuroTLX</option>    
+                        </select>
+                        </div>
+                        </div></th>
                     <th class="right">Q.t&agrave; in<br>portaf.</th>
                     <th class="right">Q.t&agrave;<br>disp.</th>
                     <th class="right">Prz. medio carico</th>
