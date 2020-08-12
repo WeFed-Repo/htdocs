@@ -173,7 +173,7 @@ function print_periodo_switch($periodo) {
 <?php include ("./parts/selettore_deposito.php"); ?>
 <!-- FINE SELETTORE DEPOSITO -->
 
-<div class="navContSecondLev" id="secondTab">
+<div class="navContSecondLev formGenerico" id="secondTab">
   <?php if($site != "webank") { ?><br /><?php } ?>
   <div class="outerTab">
     <ul class="tabWrapper tabsmall hidden-xs">

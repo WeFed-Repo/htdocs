@@ -114,6 +114,12 @@
       }
     }
 }
+
+@media (max-width:767px) {
+  .no-label {
+    padding-top: 0;
+  }
+}
 .no-label-output {
   padding: 14px 5px;
   .btn.btn-primary {
@@ -795,7 +801,7 @@ input[type=checkbox] {
     }
     @media (max-width: 1023px) {
       & {
-        height: 38px;
+        height: 40px;
       }
     }
   }
@@ -1189,10 +1195,13 @@ textarea{
 }
 @media (max-width:767px) {
   .formGenerico {
-    .form-control{ margin-bottom:15px }
+    .form-control, .input-group{ margin-bottom:15px }
     .form-group {margin-bottom:0}
     select.form-control {float:none}
     
+  }
+  .formGenerico {
+    .editable-input .form-control{ margin-bottom:0 }
   }
   
 }
