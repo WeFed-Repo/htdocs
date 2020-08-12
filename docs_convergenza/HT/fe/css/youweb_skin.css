@@ -438,7 +438,15 @@ h4.title-table {
 .tab-wrap .control-label + .tooltip + span.output,
 .control-label-output + span.output,
 .control-label-output + .tooltip + span.output {
+    margin-bottom: 25px;
+  }
+
+  .output-riepilogo span.output {
     margin-bottom: 14px;
+  }
+
+  .output-riepilogo {
+    margin-bottom: 25px;
   }
 }
 strong .tooltip-inner, h4 .tooltip-inner {
@@ -912,6 +920,11 @@ p.note.flRight a.btn-icon {
   text-decoration: underline;
 }
 
+@media (max-width: 767px) {
+  .no-label {
+    padding-top: 0;
+  }
+}
 .no-label-output {
   padding: 14px 5px;
 }
@@ -1611,7 +1624,7 @@ input[type=checkbox] {
 }
 @media (max-width: 1023px) {
   .ui-spinner .ui-spinner-button {
-    height: 38px;
+    height: 40px;
   }
 }
 
@@ -2050,7 +2063,7 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  .formGenerico .form-control, .formGenerico .select-content select, .select-content .formGenerico select {
+  .formGenerico .form-control, .formGenerico .select-content select, .select-content .formGenerico select, .formGenerico .input-group {
     margin-bottom: 15px;
   }
   .formGenerico .form-group {
@@ -2058,6 +2071,10 @@ textarea {
   }
   .formGenerico select.form-control, .formGenerico .select-content select, .select-content .formGenerico select {
     float: none;
+  }
+
+  .formGenerico .editable-input .form-control, .formGenerico .editable-input .select-content select, .select-content .formGenerico .editable-input select {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1200px) {

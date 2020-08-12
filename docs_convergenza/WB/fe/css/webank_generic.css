@@ -458,6 +458,7 @@ ul.azioni,
 li.azioni,
 ol.azioni {
   list-style-type: none;
+  text-align: left;
 }
 ul.azioni hr,
 li.azioni hr,

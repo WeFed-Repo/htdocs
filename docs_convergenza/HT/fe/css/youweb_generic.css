@@ -366,6 +366,12 @@ button {
     border-radius: 17px;
     height: 34px;
 }
+.btnWrapper.tabbed-buttons .btn-default:not(.btn-primary) {
+    background-color: #92989C;
+}
+.btnWrapper.tabbed-buttons .btn-default:not(.btn-primary):hover {
+    background-color: #474B4E!important;
+}
 .btn-primary.small, .btn-default.small, .btn-filtra.small, .btn-filtra-attivo.small, .btn-navigation.small,
 .btn.btn-small {
     height: 25px;
@@ -1222,9 +1228,11 @@ select:hover {
 .input-group-addon {
     padding: 0;
     border-radius: 0;
-    line-height: 0
+    line-height: 0;
 }
-
+@media (max-width:767px) {
+    .input-group-addon {min-width: 30px}
+}
 .input-group-addon.date.btn-icon {
     border-left: 0;
     border-color: #DADEE1;
@@ -1366,6 +1374,11 @@ label .btn-icon {
 .form-field-input input + span.note {
     position:relative;
     top: 5px;
+}
+@media (max-width:767px) {
+    .form-field-input {
+        margin-bottom: 0
+    }
 }
 
 .form-field-input .form-field-input {
@@ -2626,6 +2639,9 @@ span.spanQuestionario {
         letter-spacing: -0.1px;
         */
         margin-bottom: 30px;
+    }
+    .ricFilter .btn-primary, .ricFilter .btn-default {
+        margin-bottom:0
     }
 
     div.btn-align-right > a.btn.btn-primary {
