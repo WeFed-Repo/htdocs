@@ -1376,7 +1376,7 @@ label .btn-icon {
     top: 5px;
 }
 @media (max-width:767px) {
-    .form-field-input {
+    .formGenerico .form-field-input {
         margin-bottom: 0
     }
 }
