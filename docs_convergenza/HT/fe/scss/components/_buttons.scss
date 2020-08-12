@@ -133,6 +133,17 @@
   &.btn-icon-text {
     width:auto; font-size:14px; color: $primary;
   }
+  .note & {
+    color: #fff;
+    background-color: #0e977f;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: 0 0 0 6px;
+    position: relative;
+    top: -4px;
+    text-align: center;
+  }
 }
 .tab-wrap .documenti, .fundPanel {
   margin:0;
@@ -211,6 +222,10 @@ p.note.flRight {
   position: relative;
   top: 3px;
 }
+.btnWrapper .btn-link-icon .icon {
+  position: absolute;
+}
+
 /* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
 .line-button {
   position: relative;

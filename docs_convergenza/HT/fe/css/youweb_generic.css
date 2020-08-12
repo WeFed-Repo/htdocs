@@ -129,6 +129,16 @@ ol {
 .force-break {
     word-break: break-all !important;
 }
+@media (max-width:921px) {
+    .noFloatMobile {
+        float:none !important;
+    }
+    .btn-link.noFloatMobile {
+        padding-left:0px;
+        margin-bottom:15px;
+    }
+}
+
 
 /*TITOLI */
 

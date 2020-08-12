@@ -640,6 +640,17 @@ span.sell {
   font-size: 14px;
   color: #0e977f;
 }
+.note .btn-icon {
+  color: #fff;
+  background-color: #0e977f;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0 0 0 6px;
+  position: relative;
+  top: -4px;
+  text-align: center;
+}
 
 .tab-wrap .documenti, .fundPanel {
   margin: 0;
@@ -708,6 +719,10 @@ p.note.flRight a.btn-icon {
   line-height: 7px;
   position: relative;
   top: 3px;
+}
+
+.btnWrapper .btn-link-icon .icon {
+  position: absolute;
 }
 
 /* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
