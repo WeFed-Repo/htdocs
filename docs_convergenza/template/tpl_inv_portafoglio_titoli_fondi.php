@@ -451,15 +451,15 @@ $(function(){
     <?php } ?>
     <?php if ($site=="youweb") { ?>
         <div class="row">
-           <div class="col-xs-4 col-sm-8">
-           <p class="note flLeft noFloatMobile">
-                <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
-                <!--esempio di loading -->
-                <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
-            </p>
+            <div class="col-xs-12 col-sm-4 col-sm-push-8">
+                <a href="#" class="flRight btn btn-link noFloatMobile"  style="display:none" id="linkSituazionePac">Situazione PAC <i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a>
             </div>
-            <div class="col-xs-8 col-sm-4" style="display:none" id="linkSituazionePac">
-                <a href="#" class="flRight btn btn-link">Situazione PAC <i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a>
+            <div class="col-xs-12 col-sm-8 col-sm-pull-4">
+                <p class="note flLeft noFloatMobile">
+                    <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
+                    <!--esempio di loading -->
+                    <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
+                </p>
             </div>
         </div>
     <?php } ?>
