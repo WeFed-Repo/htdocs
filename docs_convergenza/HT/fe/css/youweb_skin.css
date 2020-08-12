@@ -4311,6 +4311,9 @@ div.pager .circle.current_page {
   display: block;
   float: left;
 }
+.wrapTradInd .wrapTabTradInd.col-sm-8 {
+  width: 66.6666666%;
+}
 .wrapTradInd .wrapTabTradInd .tabTradInd {
   width: 100%;
   margin: 0;
@@ -4343,6 +4346,7 @@ div.pager .circle.current_page {
   line-height: 18px;
   background-color: #dadee2;
   overflow-x: hidden;
+  text-align: center;
 }
 .wrapTradInd .wrapTabTradInd .tabTradInd .legend .icon {
   margin-right: 4px;
@@ -4368,6 +4372,16 @@ div.pager .circle.current_page {
   width: 300px;
   display: block;
   border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd.col-sm-4 {
+  width: 33.33333333%;
+  border: 0;
+}
+.wrapTradInd .boxTradInd.col-sm-4 .boxTradIndTop, .wrapTradInd .boxTradInd.col-sm-4 .boxTradIndMiddle, .wrapTradInd .boxTradInd.col-sm-4 .boxTradIndBottom {
+  border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd img {
+  max-width: 100%;
 }
 .wrapTradInd .boxTradInd .boxTradIndTop {
   border-bottom: 1px solid #AFAFAF;
@@ -4455,6 +4469,15 @@ div.pager .circle.current_page {
     font-size: 10px !important;
     height: 18px;
     color: #000;
+  }
+
+  .wrapTabTradInd.col-xs-12 {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+
+  .boxTradInd.col-sm-4 {
+    width: 100% !important;
   }
 }
 /* Fine oggetto overview */

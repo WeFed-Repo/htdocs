@@ -159,9 +159,30 @@
 <script type="text/javascript">
     // Esempio automazione grafici indicativa
     $(function(){
-
         $(".wrapTradInd *[data-graph]").click(function(){
+            var grLink = $(this);
+            var grFunWrapper =  grLink.closest(".wrapTradInd");
+            grFunWrapper.find("td").removeClass("status-selected");
+            grLink.closest("td").addClass("status-selected");
+            // Prepara il div con il grafico e lo appende laddove necessario
+            var graphEl = $("<div>").append(
+                  $("<div>").addClass("boxTradIndTop").html("<strong>Euro/USD FX</strong><i class=\"icon icon-arrow_trading_right\"></i>"+ grLink.attr("data-graph-name")),
+                  $("<div>").addClass("boxTradIndMiddle").html("<img src=\"/WB/fe/img/trading_chart_bg.png\" />"),
+                  $("<div>").addClass("boxTradIndBottom").html("<strong>Stato</strong><i class=\"icon icon-arrow_trading_right\"></i>aperto")
+                );
 
+            var graphSpaces = grFunWrapper.find(".boxTradInd").empty().removeClass("loading").append(graphEl);
+             // Se necessario scrolla fino al titolo
+             if($(window).width()<=767) {
+                $("html, body").animate({
+                    scrollTop: grLink.offset().top - 75
+                },500);
+            }
+            $(window).trigger("resize");
+        })
+    })    
+            
+            /*
             var grLink = $(this);
             var grFunWrapper =  grLink.parents(".wrapTradInd");
 
@@ -185,7 +206,7 @@
                 );
 
             var graphSpaces = grFunWrapper.find(".boxTradInd").empty().removeClass("loading").append(graphEl);
-
+            
             // Se necessario scrolla fino al titolo
             if($(window).width()<=767) {
                 $("html, body").animate({
@@ -195,8 +216,9 @@
             $(window).trigger("resize");
 
         }).eq(0).trigger("click");
+       
 
-    });
+    }); */
     </script>
     <!-- Fine automazioni indicative -->
 
@@ -217,7 +239,7 @@
                             <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1b" aria-expanded="false" aria-controls="collapse1b" class="collapsed">Indici<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i></a>
                         </h4> </div>
                     <div id="collapse1b" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1b">
-                        <div class="panel-body">
+                        <div class="panel-body noPadding">
                             <?php virtual("tpl_priv_fp_trading_table_indici.php"); ?>
                         </div>
                     </div>
@@ -228,7 +250,7 @@
                             <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4b" aria-expanded="false" aria-controls="collapse4b" class="collapsed">Cambi<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i></a>
                         </h4> </div>
                     <div id="collapse4b" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4b">
-                        <div class="panel-body">
+                        <div class="panel-body noPadding">
                             <div class="tab-wrap">
                                 <section class="boxesitoWrap">
                                     <div class="boxesito negativo">
@@ -320,7 +342,7 @@
                             <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5b" aria-expanded="false" aria-controls="collapse5b" class="collapsed">News<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i></a>
                         </h4> </div>
                     <div id="collapse5b" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5b">
-                        <div class="panel-body">
+                        <div class="panel-body noPadding">
                             <div class="tab-wrap">
                                 <div class="navContSecondLev" id="tradingNewsTab">
                                     <div class=" outerTab">

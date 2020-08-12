@@ -756,18 +756,22 @@
       left: 0;
     }
 }
-
 .wrapTradInd {
     position: relative;
     width:100%;
     clear:both;
     margin-bottom: 20px;
     display:inline-block;
+    
     .wrapTabTradInd {
         margin: 0!important;
         width :calc(100% - 320px);
         display:block;
         float: left;
+        
+        &.col-sm-8 {
+            width:66.6666666%
+        }
         .tabTradInd {
             width: 100%;
             margin: 0;
@@ -799,6 +803,7 @@
                 line-height: 18px;
                 background-color:#dadee2;
                 overflow-x: hidden;
+                text-align: center;
                 .icon {
                     margin-right: 4px;
                     line-height: 18px;
@@ -826,6 +831,16 @@
         width: 300px;
         display:block;
         border: 1px solid #AFAFAF;
+        &.col-sm-4 {
+            width:33.33333333%;
+            border:0;
+            .boxTradIndTop,  .boxTradIndMiddle,.boxTradIndBottom {
+                border: 1px solid #AFAFAF;
+            }
+        }
+        img {
+            max-width:100%;
+        }
         .boxTradIndTop {
             border-bottom: 1px solid #AFAFAF;
             padding: 10px;
@@ -902,6 +917,17 @@
             .icon {font-size: 10px !important;
                 height: 18px;
                 color: #000;}
+        }
+    }
+    .wrapTabTradInd {
+        &.col-xs-12 {
+            width:100%!important;
+            margin-bottom: 30px!important;
+        }
+    }
+    .boxTradInd {
+        &.col-sm-4 {
+            width:100%!important;
         }
     }
 }

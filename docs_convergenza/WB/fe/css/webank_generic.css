@@ -12915,6 +12915,9 @@ table#costi td ul {
 .wrapTradInd .wrapTabTradInd {
   margin: 0 304px 0 0;
 }
+.wrapTradInd .wrapTabTradInd.col-sm-8 {
+  margin: 0;
+}
 .wrapTradInd .tabTradInd {
   width: 100%;
   margin: 0;
@@ -12972,6 +12975,19 @@ table#costi td ul {
   right: 0;
   width: 284px;
   border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd.col-sm-4 {
+  position: static;
+  width: 33.33333333%;
+  border: 0;
+}
+.wrapTradInd .boxTradInd.col-sm-4 .boxTradIndTop,
+.wrapTradInd .boxTradInd.col-sm-4 .boxTradIndMiddle,
+.wrapTradInd .boxTradInd.col-sm-4 .boxTradIndBottom {
+  border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd.col-sm-4 img {
+  max-width: 100%;
 }
 .wrapTradInd .boxTradInd .boxTradIndTop {
   border-bottom: 1px solid #AFAFAF;
@@ -13051,6 +13067,9 @@ table#costi td ul {
   }
   .wrapTradInd .wrapTabTradInd {
     margin: 0;
+  }
+  .wrapTradInd .boxTradInd.col-xs-12 {
+    width: 100%;
   }
 }
 @media (min-width: 768px) {

@@ -115,6 +115,7 @@ var getNextHighestZindex = function () {
 
 /* VARIABILI E CONTROLLI PER DISPOSITIVI */
 var resizeModalDevice = function (modalEl) {
+   
     //if(isSmallDevice) {
     modalEl.find('.modal-content').css({
         'max-height': viewdim().height * 0.9,
@@ -2530,6 +2531,7 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
                 }
                 return res;
             };
+            
             setDimensions = function () {
                 var width = $carouselPlus.width(),
                     height = 100,
@@ -2674,7 +2676,8 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
                         startLoop();
                     }
                 }).on('cp-page-resized', '.carouselPlusPage.on', function () {
-                    setDimensions();
+                   setDimensions();
+                   
                 });
                 $pagesArr.each(function (index, page) {
                     if (typeof ResizeSensor !== 'undefined') {
@@ -2705,14 +2708,21 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
                 });
                 $(window).resize(function () {
                     refresh();
+                    setTimeout(refresh,200);
+
                 });
+                $("#spallaswitch").click(function () {
+                    setTimeout(setDimensions,100);
+                    setTimeout(setDimensions,200);
+                    setTimeout(setDimensions,300);
+                })
                 $('.slider-in-page li').click(function () {
                     setDimensions();
                 });
                 $pagesBox.css('visibility', 'visible');
 
                 setTimeout(function () {
-                    $(window).resize()
+                    $(window).resize();
                 }, 100);
 
             } else if (typeof arg1 === 'string') {
