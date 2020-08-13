@@ -816,16 +816,18 @@ table td .ui-spinner {
     color:#fff;
   }
 }
+
 .borderFormRounded .output {
-    float: none;
-    width:100%;
+  float: none;
+  width:100%;
+  display:inline-block;
+  &.no-label{padding-top:0}
+  &.txthelp {
+    width:auto;
     display:inline-block;
-    &.no-label{padding-top:0}
-    &.txthelp {
-      width:auto;
-      display:inline-block;
-    }
-    a:not(.btn){color:$primary}
+  }
+  a:not(.btn){color:$primary}
+  a:not(.btn) i{ color:#202d50 }
 }
 a.output {color: $primary;text-decoration:underline}
 

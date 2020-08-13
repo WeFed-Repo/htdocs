@@ -1669,6 +1669,9 @@ table td .ui-spinner .ui-spinner-button .icon:before {
 .borderFormRounded .output a:not(.btn) {
   color: #0e977f;
 }
+.borderFormRounded .output a:not(.btn) i {
+  color: #202d50;
+}
 
 a.output {
   color: #0e977f;

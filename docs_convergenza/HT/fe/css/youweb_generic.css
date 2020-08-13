@@ -565,6 +565,7 @@ button {
     display: inline-block;
     cursor: pointer;
 }
+.icon-ico_azioni02A.disabled { opacity:0.3 }
 
 /*TAB DI NAVIGAZIONE */
 .outerWrapperTab {
@@ -7488,6 +7489,9 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .right{text-align:right!important}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 15px}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 15px}
+#modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 13px}
+#modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 13px}
+
 .linee-wrapper {border: 1px solid #ccc;border-bottom:0;width: 100%;float:left;padding-top:15px;}
 .linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left;padding-left: 46%;height:30px;font-weight: bold}
 .linee-wrapper .lineaTb {padding-left: 52%;}
@@ -7506,6 +7510,14 @@ div.fixed-table-scroll-outer {
     .linee-wrapper .lineaTb {padding-left: 49%;}
     .linee-wrapper .lineaN {padding-right:4%}
 
+}
+@media screen and (max-width: 767px) {
+.fixedColumns.scelta-profilo label {
+    margin-bottom:0
+}
+.fixedColumns.scelta-profilo label input {
+    margin-top:3px
+}
 }
 /* Iconcina help per checkbox e radio */
 .textWrapper .btn-icon {top: -5px;
