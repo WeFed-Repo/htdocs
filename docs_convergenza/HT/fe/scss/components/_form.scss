@@ -826,6 +826,7 @@ table td .ui-spinner {
       display:inline-block;
     }
     a:not(.btn){color:$primary}
+    a:not(.btn) i{ color:#202d50 }
 }
 a.output {color: $primary;text-decoration:underline}
 
