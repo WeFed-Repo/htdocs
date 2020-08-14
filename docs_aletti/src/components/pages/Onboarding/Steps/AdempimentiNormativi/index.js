@@ -61,6 +61,7 @@ class Adever extends Component {
                                 onChange={obchange}
                                 options={[{ "value": "true", "text": "Dichiaro di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
                                 output={isOutput}
+                                help="titEffettivo"
                             ></Form.checkgroup>
                         </Col>
                     </Row>
@@ -107,6 +108,7 @@ class Adever extends Component {
                                 onChange={this.props.obchange}
                                 options={[{ "value": "true", "text": "Sì" }, { "value": "false", "text": "No" }]}
                                 output={isOutput}
+                                help="polEsp"
                             ></Form.radiogroup>
                         </Col>
                     </Row>
