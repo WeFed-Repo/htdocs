@@ -1261,10 +1261,15 @@ ol.sotto-elenco ol {
 }
 ol.sotto-elenco li {
   display: block;
+  margin-bottom: 10px;
 }
 ol.sotto-elenco li:before {
   content: counters(item, ".") " ";
   counter-increment: item;
+}
+ol.sotto-elenco ol,
+ol.sotto-elenco ol li {
+  margin-bottom: 0;
 }
 /* REGOLE COMUNI TABELLE*/
 table {

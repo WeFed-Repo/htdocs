@@ -123,7 +123,7 @@ a.fieldButton.disabled .icon {
     &.newTab {
         line-height: 15px;
     }
-}
+}  
 
 ul, li, ol {
     margin-left: 20px;
@@ -136,7 +136,7 @@ ul, li, ol {
     &.azioni {
         list-style-type: none;
         text-align:left;
-
+ 
         hr {
             margin-top: 20px;
         }
@@ -1115,9 +1115,13 @@ ol.sotto-elenco, ol.sotto-elenco ol {
     counter-reset: item
 }
 ol.sotto-elenco  li {
-    display: block
+    display: block;
+    margin-bottom:10px;
 }
-ol.sotto-elenco  li:before {
+ol.sotto-elenco  li:before { 
     content: counters(item, ".") " "; 
     counter-increment: item
+}
+ol.sotto-elenco ol, ol.sotto-elenco ol li {
+    margin-bottom:0
 }

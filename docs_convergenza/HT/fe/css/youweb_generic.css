@@ -7963,9 +7963,13 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     counter-reset: item
   }
   ol.sotto-elenco  li {
-    display: block
+    display: block;
+    margin-bottom:10px;
   }
   ol.sotto-elenco  li:before {
     content: counters(item, ".") " ";
     counter-increment: item
+  }
+  ol.sotto-elenco ol, ol.sotto-elenco ol li {
+      margin-bottom:0
   }

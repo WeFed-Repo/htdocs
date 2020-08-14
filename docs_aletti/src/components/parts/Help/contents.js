@@ -139,7 +139,9 @@ const helpBody =  {
     "13_dataScadenza" : <div className="doc-img"><img src="/img/13-scadenza.gif" alt="Data di scadenza patente cartacea"/></div>,
     "14_numero" : <div className="doc-img"><img src="/img/14-numero.gif" alt="Numero patente rinnovata"/></div>,
     "14_dataRinnovo" : <div className="doc-img"><img src="/img/14-rilascio.gif" alt="Data di rilascio patente rinnovata"/></div>,
-    "14_dataScadenza" : <div className="doc-img"><img src="/img/14-scadenza.gif" alt="Data di scadenza patente rinnovata"/></div>
+    "14_dataScadenza" : <div className="doc-img"><img src="/img/14-scadenza.gif" alt="Data di scadenza patente rinnovata"/></div>,
+    "polEsp": "",
+    "titEffettivo": ""
 
 }
 
