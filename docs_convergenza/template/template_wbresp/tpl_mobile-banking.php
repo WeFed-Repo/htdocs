@@ -41,7 +41,7 @@
 					</div>
 					-->
 
-					<!-- MINI HERO APP -->
+					<!-- OLD MINI HERO APP
 
 					<div class="main_hero app" id="s1">
 						<h2>L'App che non ti lascia mai solo</h2>
@@ -53,7 +53,17 @@
 							<li>Tieni sotto controllo anche il deposito di risparmio</li>
 						</ul>
 					</div>
-					
+
+					-- FINE OLD MINI HERO APP -->
+
+					<!-- MINI HERO APP -->
+					<div class="main_hero app" id="s1">
+						<h2>Mobile banking</h2>
+							<h3>
+								Scarica gratuitamente l'App Webank, per accedere e disporre basti tu!
+							</h3>
+					</div>
+
 					<!-- MINI HERO APP -->
 
 					<div class="mobile-banking container03" id="s2">
@@ -307,6 +317,7 @@
 						<p>
 							Effettuare operazioni bancarie, consultare i movimenti del conto e della carte, ricercare l’agenzia  a te più vicina. Qualunque sia la tua necessità ti basterà parlare con il tuo smartphone, in tutta sicurezza e con semplici comandi vocali.
 						</p>
+						<?php /*
 						<!-- BLOCCO VIDEO -->
 						<script type="text/javascript" src="/wbresp/js/pub_videoplayer.js"></script>
 						<div id="videoComandivocali"></div>
@@ -331,6 +342,18 @@
 
 						</script>
 						<!-- FINE BLOCCO VIDEO -->
+						*/ ?>
+
+						<!-- VISUAL SOSTITUTIVO DEL VIDEO -->
+						<div class="row">
+							<div class="col-xs-12">
+								<img src="/wbresp/img/app/visual_comandi_vocali.jpg" class="img100"/>
+							</div>
+						</div>
+						<!-- FINE VISUAL SOSTITUTIVO DEL VIDEO -->
+
+
+
 					</div>
 				</div>
 
@@ -342,11 +365,11 @@
 					<div class="col-md-12 col-sm-12">
 						<h4>Area download</h4>
 						<h3>Scarica l'app Webank Banking
-						<br />per iOs, Android e Windows Phone</h3>
+						<br />per iOs e Android</h3>
 					</div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12">
-							<img src="/wbresp/img/app/app_img.jpg" alt="Area download - Scarica l'app Webank Banking per iOs o Android" />
+							<img src="/wbresp/img/app/app_img.png" alt="Area download - Scarica l'app Webank Banking per iOs o Android" />
 						</div>
 					</div>
 					<div class="row no-margin">
@@ -357,7 +380,7 @@
 							<a href="#" class="btn-google"><img src="/wbresp/img/app/btn_google.png" alt="Disponibile su Google Play" /></a>
 						</div>
 						<div class="col-sm-4 col-xs-12">
-							<a href="#" class="btn-windows"><img src="/wbresp/img/app/btn_windows.png" alt="Disponibile su Windows Store" /></a>
+							<a href="#" class="btn-windows"><img src="/wbresp/img/app/btn_appgallery.png" alt="Disponibile su AppGallery" /></a>
 						</div>
 					</div>
 				</div>

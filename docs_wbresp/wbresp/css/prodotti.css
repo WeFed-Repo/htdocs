@@ -292,7 +292,7 @@ assicurazioni.html -> Prodotti - assicurazioni
 
 .investimenti .main_hero.new {position:relative;padding:50px;text-shadow: 1px 2px 1px rgba(0,0,0,1);background: #1d300c url("/wbresp/img/investimenti/minihero_investimenti_new.jpg") no-repeat right 0; background-size: cover; overflow:hidden; clear:both; float:none}
 .investimenti .main_hero.new h2 {margin:0; padding:0; max-width:400px;color:#d3ff40;}
-.investimenti .main_hero.new h3, .mobile-banking .main_hero.app h3 {color:#fff;font-size:20px; max-width:350px;margin-bottom:20px;}
+.investimenti .main_hero.new h3, .mobile-banking .main_hero.app h3 {color:#fff;font-size:20px; max-width:230px;margin-bottom:20px;}
 .investimenti .main_hero.new h3 span.big {clear:both;display:block;width:100%;font-size:80px;color:#d3ff40;font-weight:bold;margin-top:-10px;margin-bottom:10px;}
 .investimenti .main_hero.new .btn-green {position:absolute;text-shadow:none; bottom:30px; left:0;}
 .investimenti .main_hero.new p {font-size:16px; max-width:500px; color:#fff;}

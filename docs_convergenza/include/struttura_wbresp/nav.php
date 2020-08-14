@@ -124,9 +124,10 @@
                                         <br /> Consulti il tuo saldo, i movimenti ed esegui le principali operazioni di <b>banking</b>. </p>
                                 </div>
                                 <div class="bottomLink"> <a class="btn-whlit btn-whlit-arrow btn-245 fleft uppercase inlineB" href="#">Scopri di pi&ugrave;</a>
+                                    <a href="#"><img src="/wbresp/img/app/btn_appgallery.png" id="nav-appgallery-link" /></a>
                                     <a href="#"><img src="/wbresp/img/app/btn_apple.png" id="nav-apple-link" /></a>
                                     <a href="#"><img src="/wbresp/img/app/btn_google.png" id="nav-google-link" /></a>
-									<a href="#"><img src="/wbresp/img/app/btn_windows.png" id="nav-windows-link" /></a>
+									<!-- <a href="#"><img src="/wbresp/img/app/btn_windows.png" id="nav-windows-link" /></a> -->
                                 </div>
                                 <div class="dright"> <img src="/wbresp/img/header/navigator/mobile-banking.png" alt="Conto Webank" title="Le nostre App" /> </div>
                             </div>
