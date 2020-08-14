@@ -29,6 +29,7 @@ $light: (
        contensWrapperRadius: 15px,
        boxRadius: 15px,
        boxPadding:10px 20px 20px,
+       contensWrapperPadding: 20px,
        colorH1: #284659,
        colorHeading: #ab9269,
        contentsBgColor:#fff,
@@ -67,7 +68,8 @@ $default: (
         menuNavLinkColor:#fff,
         menuNavLinkColorActive: #fff,
         menuNavLinkOpacityHover: 0.6,
-        menuWidth:95px,
+        menuWidth:80px,
+    
         userMenuColor: #21557e
 
     ),
