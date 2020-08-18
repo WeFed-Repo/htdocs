@@ -56,13 +56,26 @@ class StepForm extends Component {
                 <Row>
                     <Col>       
                         <ul className="elenco-documenti">
-                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
+                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
+                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
                         </ul>
                     </Col>
                 </Row>
-            </section>
+            </section>;
+
+        let firmaDocs = <section>
+        <p>Documenti per accettazione</p>
+        <Row>
+            <Col>       
+                <ul className="elenco-documenti">
+                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                </ul>
+            </Col>
+        </Row>
+        </section>;
 
 
 
