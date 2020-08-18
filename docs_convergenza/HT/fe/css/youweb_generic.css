@@ -885,12 +885,18 @@ table tr.odd td {
     padding-bottom: 20px
 }
 
-.modal-dialog .modal-body th {
+.modal-dialog .modal-body th, .modal-dialog .modal-body td {
     padding: 10px 5px;
 }
-
+.modal-dialog .modal-body .totali td {
+    padding: 10px 4px;
+    font-size: 13px;
+}
 .modal-dialog {
     width: 590px;
+}
+.modal-dialog .modal-body th.th-first-modal {
+    width:50%
 }
 
 .modal-dialog .modal-body {
@@ -1689,9 +1695,7 @@ body.modal-open {
     left: 0;
 }
 
-.modal-header button {
 
-}
 
 .modal-dialog .modal-body .riquadro h1, #wlCreaForm h3,
 .modal-title {
