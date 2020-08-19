@@ -2279,13 +2279,16 @@ table#costi td ul {
 /* Fine carrello (provvisorio) */
 
 /* Oggetti trading */
-
+ 
 .wrapTradInd {
     position: relative;
     margin-bottom: 20px;
-
+ 
     .wrapTabTradInd {
         margin: 0 304px 0 0;
+        &.col-sm-8{
+            margin:0
+        }
     }
 
 
@@ -2356,12 +2359,22 @@ table#costi td ul {
 
 
     .boxTradInd {
-        position: absolute;
+        position: absolute; 
         top: 0;
         right: 0;
         width: 284px;
         border: 1px solid #AFAFAF;
-
+        &.col-sm-4 {
+            position: static;
+            width:33.33333333%;
+            border:0; 
+            .boxTradIndTop,  .boxTradIndMiddle,.boxTradIndBottom {
+                border: 1px solid #AFAFAF;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
         .boxTradIndTop {
             border-bottom: 1px solid #AFAFAF;
             padding: 10px;
@@ -2441,12 +2454,14 @@ table#costi td ul {
 }
 
 @media (max-width: 1023px) {
-
+    
+   
 
     .tabTradInd {
         .icon {
             font-size: 16px;
         }
+        
 
         td,
         th {
@@ -2474,6 +2489,9 @@ table#costi td ul {
 
     .wrapTradInd .wrapTabTradInd {
         margin: 0
+    }
+    .wrapTradInd .boxTradInd.col-xs-12 { 
+        width: 100%;
     }
 
 }

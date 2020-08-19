@@ -11,11 +11,13 @@
             }
 
         });
+        
     });
         
     </script>
-    <div class="wrapTradInd">
-        <div class="wrapTabTradInd">
+   
+    <div class="wrapTradInd row">
+        <div class="wrapTabTradInd col-xs-12 col-sm-8">
             <div id="carouselTables" class="carouselPlus carouselPlus-noborder" data-variableHeight="true" data-loop="false">
                 <div class="carouselPlusPages">
                     <div class="carouselPlusPage">
@@ -68,13 +70,13 @@
                                             <tr>
                                                 <td class="legend" colspan="5">
                                                     <div class="row">
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_up"></i>Rialzo</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_down"></i>Ribasso</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_np"></i>Invariato</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-sp_rifiutata"></i>Chiuso</div>
                                                     </div>
                                                 </td>
@@ -137,13 +139,13 @@
                                             <tr>
                                                 <td class="legend" colspan="5">
                                                     <div class="row">
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_up"></i>Rialzo</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_down"></i>Ribasso</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_np"></i>Invariato</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-sp_rifiutata"></i>Chiuso</div>
                                                     </div>
                                                 </td>
@@ -205,13 +207,13 @@
                                             <tr>
                                                 <td class="legend" colspan="5">
                                                     <div class="row">
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_up"></i>Rialzo</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_down"></i>Ribasso</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-trend_np"></i>Invariato</div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-xs-3">
                                                             <i class="icon icon-1x icon-sp_rifiutata"></i>Chiuso</div>
                                                     </div>
                                                 </td>
@@ -233,11 +235,12 @@
             <!-- Fine tabella modalita' carousel -->
 
         </div>
-        <div class="boxTradInd hidden-xs">
+        <div class="boxTradInd col-xs-12 col-sm-4 noPaddingRight">
             <div class="boxTradIndTop"><strong>Euro/USD FX</strong><i class="icon icon-arrow_trading_right"></i><a href="#!">FTSE MIB</a></div>
             <div class="boxTradIndMiddle"><!-- SPAZIO PER IL GRAFICO ESTERNO --><img src="/WB/fe/img/trading_chart_bg.png" /><!-- FINE SPAZIO PER IL GRAFICO ESTERNO --></div>
             <div class="boxTradIndBottom"><strong>Stato</strong><i class="icon icon-arrow_trading_right"></i>aperto</div>
         </div>
+    
     </div>
     <p class="note bottom">(*) Quotazioni mercati esteri ritardate di 15 min. ( 20 min. Nyse, Nikkei e FTSE) se non hai sottoscritto le quotazioni in tempo reale.</p>
 </div>

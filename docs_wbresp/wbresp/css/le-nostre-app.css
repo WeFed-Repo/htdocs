@@ -15,7 +15,7 @@ mobile-trading.html -> Le nostre app - mobile trading
 
 /* Nuova mini hero 22/01/2018 */
 .mobile-banking .main_hero.app {background: #1d300c url("/wbresp/img/app/mini_hero_app.jpg") no-repeat left 0;padding:30px;background-size:cover;}
-.mobile-banking .main_hero.app h2 {color:#d3ff40;text-shadow: 0 2px 1px rgba(0,0,0,0.9);margin:30px 0 20px;max-width:40%;}
+.mobile-banking .main_hero.app h2 {color:#d3ff40;text-shadow: 0 2px 1px rgba(0,0,0,0.9);margin:15px 0 20px;max-width:40%;}
 .mobile-banking .main_hero.app ul {list-style-type:none;margin:0;padding:0;width:auto;max-width:60%}
 .mobile-banking .main_hero.app ul li {list-style-type: none;color: #fff; width:100%;text-transform: none;background: transparent url(/wbresp/img/carousel/flag.png) no-repeat 0 3px;margin: 0 none;font-size: 18px;text-indent: 0;padding: 0 0 10px 31px;}
 .mobile-banking .main_hero.app ul li:before {content:"";}

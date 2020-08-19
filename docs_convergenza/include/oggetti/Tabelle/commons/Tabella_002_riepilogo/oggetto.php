@@ -1,7 +1,7 @@
 <div class="headerContainerNoBootS">
 				<div class="tableContainerNoBootS">
 
-		    		<table border="0" cellspacing="0" cellpadding="0" data-toggle="table" class="valign-middle riepilogo"> 
+		    		<table border="0" cellspacing="0" cellpadding="0" class="valign-middle riepilogo"> 
 		    		<!-- Header -->
 		    		<tbody><tr>
 					    <th colspan="2">Operazione</th>

@@ -438,7 +438,15 @@ h4.title-table {
 .tab-wrap .control-label + .tooltip + span.output,
 .control-label-output + span.output,
 .control-label-output + .tooltip + span.output {
+    margin-bottom: 25px;
+  }
+
+  .output-riepilogo span.output {
     margin-bottom: 14px;
+  }
+
+  .output-riepilogo {
+    margin-bottom: 25px;
   }
 }
 strong .tooltip-inner, h4 .tooltip-inner {
@@ -640,6 +648,17 @@ span.sell {
   font-size: 14px;
   color: #0e977f;
 }
+.note .btn-icon {
+  color: #fff;
+  background-color: #0e977f;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0 0 0 6px;
+  position: relative;
+  top: -4px;
+  text-align: center;
+}
 
 .tab-wrap .documenti, .fundPanel {
   margin: 0;
@@ -708,6 +727,10 @@ p.note.flRight a.btn-icon {
   line-height: 7px;
   position: relative;
   top: 3px;
+}
+
+.btnWrapper .btn-link-icon .icon {
+  position: absolute;
 }
 
 /* NUOVA BOTTONIERA PER INVESTIMENTI CON FILETTO*/
@@ -912,6 +935,11 @@ p.note.flRight a.btn-icon {
   text-decoration: underline;
 }
 
+@media (max-width: 767px) {
+  .no-label {
+    padding-top: 0;
+  }
+}
 .no-label-output {
   padding: 14px 5px;
 }
@@ -1611,7 +1639,7 @@ input[type=checkbox] {
 }
 @media (max-width: 1023px) {
   .ui-spinner .ui-spinner-button {
-    height: 38px;
+    height: 40px;
   }
 }
 
@@ -1640,6 +1668,9 @@ table td .ui-spinner .ui-spinner-button .icon:before {
 }
 .borderFormRounded .output a:not(.btn) {
   color: #0e977f;
+}
+.borderFormRounded .output a:not(.btn) i {
+  color: #202d50;
 }
 
 a.output {
@@ -2050,7 +2081,7 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  .formGenerico .form-control, .formGenerico .select-content select, .select-content .formGenerico select {
+  .formGenerico .form-control, .formGenerico .select-content select, .select-content .formGenerico select, .formGenerico .input-group {
     margin-bottom: 15px;
   }
   .formGenerico .form-group {
@@ -2058,6 +2089,10 @@ textarea {
   }
   .formGenerico select.form-control, .formGenerico .select-content select, .select-content .formGenerico select {
     float: none;
+  }
+
+  .formGenerico .editable-input .form-control, .formGenerico .editable-input .select-content select, .select-content .formGenerico .editable-input select {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1200px) {
@@ -4311,6 +4346,9 @@ div.pager .circle.current_page {
   display: block;
   float: left;
 }
+.wrapTradInd .wrapTabTradInd.col-sm-8 {
+  width: 66.6666666%;
+}
 .wrapTradInd .wrapTabTradInd .tabTradInd {
   width: 100%;
   margin: 0;
@@ -4343,6 +4381,7 @@ div.pager .circle.current_page {
   line-height: 18px;
   background-color: #dadee2;
   overflow-x: hidden;
+  text-align: center;
 }
 .wrapTradInd .wrapTabTradInd .tabTradInd .legend .icon {
   margin-right: 4px;
@@ -4368,6 +4407,16 @@ div.pager .circle.current_page {
   width: 300px;
   display: block;
   border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd.col-sm-4 {
+  width: 33.33333333%;
+  border: 0;
+}
+.wrapTradInd .boxTradInd.col-sm-4 .boxTradIndTop, .wrapTradInd .boxTradInd.col-sm-4 .boxTradIndMiddle, .wrapTradInd .boxTradInd.col-sm-4 .boxTradIndBottom {
+  border: 1px solid #AFAFAF;
+}
+.wrapTradInd .boxTradInd img {
+  max-width: 100%;
 }
 .wrapTradInd .boxTradInd .boxTradIndTop {
   border-bottom: 1px solid #AFAFAF;
@@ -4455,6 +4504,15 @@ div.pager .circle.current_page {
     font-size: 10px !important;
     height: 18px;
     color: #000;
+  }
+
+  .wrapTabTradInd.col-xs-12 {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+
+  .boxTradInd.col-sm-4 {
+    width: 100% !important;
   }
 }
 /* Fine oggetto overview */

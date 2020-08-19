@@ -129,6 +129,16 @@ ol {
 .force-break {
     word-break: break-all !important;
 }
+@media (max-width:921px) {
+    .noFloatMobile {
+        float:none !important;
+    }
+    .btn-link.noFloatMobile {
+        padding-left:0px;
+        margin-bottom:15px;
+    }
+}
+
 
 /*TITOLI */
 
@@ -366,6 +376,12 @@ button {
     border-radius: 17px;
     height: 34px;
 }
+.btnWrapper.tabbed-buttons .btn-default:not(.btn-primary) {
+    background-color: #92989C;
+}
+.btnWrapper.tabbed-buttons .btn-default:not(.btn-primary):hover {
+    background-color: #474B4E!important;
+}
 .btn-primary.small, .btn-default.small, .btn-filtra.small, .btn-filtra-attivo.small, .btn-navigation.small,
 .btn.btn-small {
     height: 25px;
@@ -549,6 +565,7 @@ button {
     display: inline-block;
     cursor: pointer;
 }
+.icon-ico_azioni02A.disabled { opacity:0.3 }
 
 /*TAB DI NAVIGAZIONE */
 .outerWrapperTab {
@@ -868,12 +885,18 @@ table tr.odd td {
     padding-bottom: 20px
 }
 
-.modal-dialog .modal-body th {
+.modal-dialog .modal-body th, .modal-dialog .modal-body td {
     padding: 10px 5px;
 }
-
+.modal-dialog .modal-body .totali td {
+    padding: 10px 4px;
+    font-size: 13px;
+}
 .modal-dialog {
     width: 590px;
+}
+.modal-dialog .modal-body th.th-first-modal {
+    width:50%
 }
 
 .modal-dialog .modal-body {
@@ -1222,9 +1245,11 @@ select:hover {
 .input-group-addon {
     padding: 0;
     border-radius: 0;
-    line-height: 0
+    line-height: 0;
 }
-
+@media (max-width:767px) {
+    .input-group-addon {min-width: 30px}
+}
 .input-group-addon.date.btn-icon {
     border-left: 0;
     border-color: #DADEE1;
@@ -1366,6 +1391,11 @@ label .btn-icon {
 .form-field-input input + span.note {
     position:relative;
     top: 5px;
+}
+@media (max-width:767px) {
+    .formGenerico .form-field-input {
+        margin-bottom: 0
+    }
 }
 
 .form-field-input .form-field-input {
@@ -1665,9 +1695,7 @@ body.modal-open {
     left: 0;
 }
 
-.modal-header button {
 
-}
 
 .modal-dialog .modal-body .riquadro h1, #wlCreaForm h3,
 .modal-title {
@@ -2626,6 +2654,9 @@ span.spanQuestionario {
         letter-spacing: -0.1px;
         */
         margin-bottom: 30px;
+    }
+    .ricFilter .btn-primary, .ricFilter .btn-default {
+        margin-bottom:0
     }
 
     div.btn-align-right > a.btn.btn-primary {
@@ -7462,6 +7493,9 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .right{text-align:right!important}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 15px}
 .modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 15px}
+#modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 12px}
+#modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 12px}
+
 .linee-wrapper {border: 1px solid #ccc;border-bottom:0;width: 100%;float:left;padding-top:15px;}
 .linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left;padding-left: 46%;height:30px;font-weight: bold}
 .linee-wrapper .lineaTb {padding-left: 52%;}
@@ -7471,16 +7505,42 @@ div.fixed-table-scroll-outer {
 .bootstrap-table {
     position:relative
 }
+.modal-body .linee-wrapper .lineaT {
+    padding-left:19%
+}
+@media screen and (max-width: 1200px) {
+    .modal-body .linee-wrapper .lineaT {
+        padding-left:22%
+    }
+
+}
+@media screen and (max-width: 1023px) {
+    .modal-body .linee-wrapper .lineaT {
+        padding-left:27%
+    }
+
+}
 @media screen and (max-width: 1100px) {
     .linee-wrapper .lineaTb {padding-left: 51%;}
     .linee-wrapper .lineaN {padding-right:4%}
-
+    .modal-body .linee-wrapper .lineaN {
+        padding-right:10%;
+    }
 }
 @media screen and (max-width: 780px) {
     .linee-wrapper .lineaTb {padding-left: 49%;}
     .linee-wrapper .lineaN {padding-right:4%}
 
 }
+@media screen and (max-width: 767px) {
+.fixedColumns.scelta-profilo label {
+    margin-bottom:0
+}
+.fixedColumns.scelta-profilo label input {
+    margin-top:3px
+}
+}
+
 /* Iconcina help per checkbox e radio */
 .textWrapper .btn-icon {top: -5px;
     border-bottom: 0 !important;
@@ -7925,9 +7985,13 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     counter-reset: item
   }
   ol.sotto-elenco  li {
-    display: block
+    display: block;
+    margin-bottom:10px;
   }
   ol.sotto-elenco  li:before {
     content: counters(item, ".") " ";
     counter-increment: item
+  }
+  ol.sotto-elenco ol, ol.sotto-elenco ol li {
+      margin-bottom:0
   }

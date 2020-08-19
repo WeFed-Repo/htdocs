@@ -13,15 +13,15 @@
 <br><br>
 <div class="formGenerico">
 <div class="radio-inline">
-<label class="textWrapper">
+<label class="textWrapper fLleft">
 	<input type="radio" name="rbdist" id="rbdist_1" value="0">
 	<span class="text"></span>
 </label>
-<span id="spanTooltip" class="textWrapper txthelp closeable"  data-toggle="tooltip" data-html="true" data-htmlid="#tooltipText">Sì</span>
+<p id="spanTooltip" class="fLleft textWrapper txthelp closeable"  data-toggle="tooltip" data-html="true" data-htmlid="#tooltipText">Sì</p>
 
 
 <br><br>
-<p id="tooltipText" style="display:none">lorem ipsum dolor sit <a data-toggle="modal" data-target="#modaleStatico">apri modale</a></p>
+<p id="tooltipText" style="display:none">lorem ipsum dolor sit <a data-toggle="modal" data-target="#modaleStatico" id=>apri modale</a></p>
 </div>
 </div>
 
@@ -56,3 +56,48 @@
 	})
 </script>
 <br><br>
+
+<div class="row" id="politic_esposta_1">
+	<div class="col-sm-3">
+		<div class="radio inline">
+			<label class="flLeft">
+				<input type="radio" name="politicEspostaAv_int1" id="politicEspostaAv_int1_S" onclick="openPep('1',this);setPep('1', 'S');" value="S">
+				<span class="text"></span>
+			</label>
+			<span id="spanTooltip1" class="textWrapper txthelp closeable" data-toggle="tooltip" data-html="true" data-htmlid="#tooltipText" data-original-title="" title="" data-title="Importante: stai dichiarando di essere una persona politicamente esposta, prima di procedere leggi la <a data-toggle=&quot;modal&quot; data-target=&quot;#layeralert2&quot;>definizione</a>.">Sì</span>
+			<br><br>
+			<p id="tooltipText" style="display:none" class="inited">Importante: stai dichiarando di essere una persona politicamente esposta, prima di procedere leggi la <a data-toggle="modal" data-target="#layeralert2">definizione</a>.</p>																			
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="radio inline">
+			<label class="textWrapper">
+				<input type="radio" name="politicEspostaAv_int1" id="politicEspostaAv_int1_N" onclick="setPep('1', 'N');" value="N">
+				<span class="text">No</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<ol class="sotto-elenco">
+  <li>one</li>
+  <li>ldsad
+    <ol>
+      <li>lorem</li>
+      <li>two.two</li>
+      <li>two.three</li>
+    </ol>
+  </li>
+  <li>three
+    <ol>
+      <li>three.one</li>
+      <li>three.two
+        <ol>
+          <li>three.two.one</li>
+          <li>three.two.two</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>four</li>
+</ol>

@@ -377,9 +377,10 @@
 										</div>
 										<div class="bottomLink">
 											<a class="btn-whlit btn-whlit-arrow btn-245 fleft uppercase inlineB" href="/webankpub/wbresp/t1/mobile_banking.do">Scopri di pi&ugrave;</a>
+											<a href="#" target="_blank"><img src="/wbresp/img/app/btn_appgallery.png?a=435" id="nav-appgallery-link" /></a>
 											<a href="https://itunes.apple.com/it/app/webank/id306283651?mt=8" target="_blank"><img src="/wbresp/img/app/btn_apple.png?a=435" id="nav-apple-link" /></a>
 											<a href="https://play.google.com/store/apps/details?id=com.opentecheng.android.webank&hl=it" target="_blank"><img src="/wbresp/img/app/btn_google.png?a=435" id="nav-google-link" /></a>
-											<a href="https://www.microsoft.com/store/apps/9wzdncrdnfgm" target="_blank"><img src="/wbresp/img/app/btn_windows.png?a=435" id="nav-windows-link" /></a>
+											
 										</div>
 										<div class="dright">
 											<img src="/wbresp/img/header/navigator/mobile-banking.png?a=435" alt="Conto Webank" title="Le nostre App" />

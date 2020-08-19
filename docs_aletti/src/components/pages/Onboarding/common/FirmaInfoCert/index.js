@@ -71,6 +71,7 @@ export default class extends Component {
                     step: "ACCETTAZ_INFOCERT",
                     proseguiEnabled:false,
                     accettazConsensi: data.results && data.results.info && data.results.info.clauses,
+                    accDocs: data.results,
                     loading: false
                 });
             }
@@ -96,11 +97,12 @@ export default class extends Component {
 
         return (
             <>
-                <h4>STEP: {this.state.step}</h4>
+                {/* <h4>STEP: {this.state.step}</h4> */ }
                 <div className={this.state.loading ? "loading" : ""}>
                     {this.state.step === "INIT" &&
                         <>
                             {this.props.preDocs}
+
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
@@ -135,7 +137,9 @@ export default class extends Component {
                      {this.state.step === "MESSAGGIO_CONFERMA" &&
                         // Inizializzazione
                         <>
-                            <p><strong>La firma è ora attiva</strong></p>
+                            <div class="alert alert-success" role="alert">
+                                La firma è ora attiva!
+                            </div>
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
@@ -150,7 +154,8 @@ export default class extends Component {
                     {this.state.step === "FIRMADOC" &&
                         // Inizializzazione
                         <>
-                            Firma con OTP
+                            {this.props.firmaDocs}
+
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
