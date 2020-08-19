@@ -46,7 +46,7 @@ $light: (
        agendaDayBgColor: transparent,
        agendaDayBgColorInner: #153648,
        agendaDayColor: #fff,
-       agendaDayBgColorHover: #fff,
+       agendaDayBgColorHover: trasparent,
        agendaDayBgColorInnerHover: #e0eaee,
        agendaDayRadius : 50%,
        agendaDayW: 40px,
@@ -90,12 +90,12 @@ $default: (
         agendaArrowLeftBorderLeft: 0,
         agendaArrowBorderBottom: 0,
         agendaDayBgColor: #eee,
-        agendaDayBgColorInner: transparent,
+        agendaDayBgColorInner: #eee,
         agendaDayColor: #000,
         agendaDayBgColorHover:#ccc,
-        agendaDayBgColorInnerHover: transparent ,
+        agendaDayBgColorInnerHover: #F0F8FF,
         agendaDayRadius : 0,
-        agendaDayW: auto
+        agendaDayW: 100%
 
 
 
