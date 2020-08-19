@@ -42,12 +42,14 @@
         &:hover {
             background-color: #ccc
         }
+        
     }
     .DayPicker-Day {
         border-radius: 0;
         &:hover {
             background-color: #ddd
         }
+        
     }
 
     /* DayPicker inline */
@@ -111,17 +113,25 @@
                 .DayPicker-Day {
                     border: solid map-get($map, borderTableWidth) #ccc;
                 }
+                .DayPicker-Day div:not(.day-app) {
+                    height: 36px;
+                    display: block;
+                    padding-top: 10px;
+                }
+                .DayPicker-Day--today {
+                    div {
+                        background-color: map-get($map, agendaDayBgColorInner);
+                        margin:0 auto;
+                        width: map-get($map, agendaDayW); 
+                    }
+                }
             }
             .DayPicker-Day--today {
                 background-color: map-get($map, agendaDayBgColor);
                 color: map-get($map, agendaDayColor);
                 div {
-                    background-color: map-get($map, agendaDayBgColorInner);
-                    margin:0 auto;
-                    width: map-get($map, agendaDayW); 
-
                     &:hover {
-                        background-color: map-get($map, agendaDayBgColorInnerHover); 
+                        background-color: map-get($map, agendaDayBgColorInner); 
                     }
                 }
                 &:hover {
@@ -131,6 +141,7 @@
             .DayPicker-Day {
                 div {
                     border-radius: map-get($map, agendaDayRadius);
+                   
                 }
                 &:hover {
                     background-color: map-get($map, agendaDayBgColorHover)!important;
