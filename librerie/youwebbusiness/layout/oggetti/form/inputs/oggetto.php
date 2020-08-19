@@ -130,7 +130,7 @@
     <!-- helper con modale al click -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label class="control-label">Helper
+        <label class="control-label">Helper con modale richiamato da icona
           <img data-modal-open="big" class="helper-label-icon" src="./fe/img/icon/help_2.svg">
         </label>
         <input type="text" class="form-control" placeholder="Input with helper icon">

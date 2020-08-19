@@ -1,1 +1,3 @@
-La versione mobile delle tabelle in queste librerie statiche non è esaustiva ma è gestita direttamente nell'applicativo.
+IMPORTANTE: L'HTML della versione mobile delle tabelle in queste librerie
+non deve essere presa in considerazione in quanto in realtà è direttamente
+gestita direttamente nell'applicativo.

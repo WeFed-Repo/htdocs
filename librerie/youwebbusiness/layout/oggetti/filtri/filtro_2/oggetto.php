@@ -1,4 +1,6 @@
-<!-- NOTE: gli attributi data-filter-button e data-filter-form servono per aprire e chiudere il filtro. Se in pagina c'è necessità di avere più accordion di filtri, cambiare il valore dei due attributi sia nella versione desktop che nella versione mobile.
+<!--
+
+NOTE: gli attributi data-filter-button e data-filter-form servono per aprire e chiudere il filtro. Se in pagina c'è necessità di avere più accordion di filtri, cambiare il valore dei due attributi sia nella versione desktop che nella versione mobile.
 
 esempio
 PRIMA FORM:
@@ -12,10 +14,11 @@ in desktop
 data-filter-button=form02 data-filter-form=form02
 in mobile
 data-filter-button=form02 data-filter-form=form02
+
 -->
 
-
 <section>
+  <?php /* */ ?>
   <div class="bordered pt-md-0 pt-lg-0">
     <div class="d-none d-md-block">
       <div class="table-heading table-heading-filters">
@@ -257,6 +260,7 @@ data-filter-button=form02 data-filter-form=form02
     </div>
     <!-- Fine contenuto mobile -->
 
+<?php /* */ ?>
   </div>
 
 </section>

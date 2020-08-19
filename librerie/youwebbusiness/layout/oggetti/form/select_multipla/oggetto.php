@@ -1,4 +1,4 @@
-<div class="alert alert-danger">NOTE: Multiselect è un componente in stato bozza. NON UTILIZZARLO</div>
+<p>NOTE: La select multipla è un componente in stato bozza. NON VA UTILIZZATO.</p><br />
 
 <style>
 ul[tm-multiselect] {

@@ -37,7 +37,7 @@
       </div>
       <div tm-bstable-v2="" class="px-3">
         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-striped" data-table-mobilized-desktop="NewTable">
-          <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella/tabella.php');?>
+          <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_nuova/tabella.php');?>
         </table>
         <div class="clearfix"></div>
       </div>

@@ -15,7 +15,7 @@
  </thead>
  <tbody>
    <?php // esempio ciclo per tabella in desktop ?>
-   <?php for ($i = 0; $i < 10; $i++) { ?>
+   <?php for ($i = 0; $i <= 3; $i++) { ?>
      <tr data-index="<?= $i ?>">
        <td>Lorem ipsum</td>
        <td><a href="#">28/02/2019</a></td>
@@ -23,14 +23,23 @@
         <td><span class="">3.216,65</span></td>
         <td>EUR</td>
         <td>345</td>
-        <td> Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente praesentium ipsam quae blanditiis neque </td>
+        <td>
+          Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente
+          praesentium ipsam quae blanditiis neque
+        </td>
         <td class="text-center">
-          <div class="btn-group">
-            <span type="button" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="btn-group dropdown">
+            <span type="button"
+                  class="cursor-pointer"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false">
               <img src="./fe/img/icon/more.svg">
             </span>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+              <span class="dropdown-item disabled" disabled>Disabled</span>
               <a class="dropdown-item" href="#">Another action (<?php echo $i ?>)</a>
               <a class="dropdown-item" href="#">Something else here</a>
               <div class="dropdown-divider"></div>
