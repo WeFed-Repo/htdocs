@@ -12,6 +12,8 @@ const defaultFields = {
     "ordineIntestatari": "",
     "intestCorrente": "",
     "promotore": "",
+    "nomePromotore": "",
+    "cognomePromotore": "",
     "expirationDate": "",
     "sessionFirmeBlob": {
         "idMifid": "",
