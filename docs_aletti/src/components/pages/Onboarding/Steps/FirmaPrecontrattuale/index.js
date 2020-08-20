@@ -37,44 +37,44 @@ class StepForm extends Component {
         // Prepara gli step della firma
         // DOCUMENTI INIZIALI
         let preDocs = <section>
-                        <p>Documenti iniziali "standard"</p>
-                        <Row>
-                            <Col>       
-                                <ul className="elenco-documenti">
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                </ul>
-                            </Col>
-                        </Row>
-                    </section>
+            <p>Documenti iniziali "standard"</p>
+            <Row>
+                <Col>
+                    <ul className="elenco-documenti">
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                    </ul>
+                </Col>
+            </Row>
+        </section>
 
 
         // DOCUMENTI PER ACCETTAZIONI
         let accDocs = <section>
-                <p>Documenti per accettazione</p>
-                <Row>
-                    <Col>       
-                        <ul className="elenco-documenti">
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                        </ul>
-                    </Col>
-                </Row>
-            </section>;
+            <p>Documenti per accettazione</p>
+            <Row>
+                <Col>
+                    <ul className="elenco-documenti">
+                        <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
+                    </ul>
+                </Col>
+            </Row>
+        </section>;
 
         let firmaDocs = <section>
-        <p>Documenti per accettazione</p>
-        <Row>
-            <Col>       
-                <ul className="elenco-documenti">
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                </ul>
-            </Col>
-        </Row>
+            <p>Documenti per accettazione</p>
+            <Row>
+                <Col>
+                    <ul className="elenco-documenti">
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                        <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
+                    </ul>
+                </Col>
+            </Row>
         </section>;
 
 
@@ -83,7 +83,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Firma precontrattuale {nomeint}</h3>
-                    <FirmaInfoCert {...{obformprops,preDocs,accDocs}}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, preDocs, accDocs, firmaDocs }}></FirmaInfoCert>
                 </div>
             </div>
         )
