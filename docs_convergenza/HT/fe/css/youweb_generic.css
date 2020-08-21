@@ -7501,7 +7501,7 @@ div.fixed-table-scroll-outer {
 .linee-wrapper .lineaTb {padding-left: 52%;}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
 .textWrapper {position:relative;}
-.textWrapper a { text-decoration: underline; cursor:pointer }
+.textWrapper a { text-decoration: underline; cursor:pointer } 
 .bootstrap-table {
     position:relative
 }

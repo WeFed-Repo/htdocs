@@ -9,6 +9,21 @@
     </div>
       <div class="modal-body">
       <section>
+      <div class="linee-wrapper desktop-label">
+			
+				
+				
+            <div class="lineaT">
+                LINEA ATTUALE
+            </div>
+        
+        
+        
+    
+    <div class="lineaN">
+        NUOVE LINEE DI TRADING ONLINE
+    </div>
+</div>
 <table id="tbFixedColumnB" class="fixedColumns scelta-profilo">
     <thead>
         <tr>
