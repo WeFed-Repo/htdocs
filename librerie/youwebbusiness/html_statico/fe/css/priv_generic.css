@@ -1904,6 +1904,7 @@ ul.pagination {
     background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     transition: top 0.75s;
+    z-index: 9999;
     display: flex;
     flex-direction: column; }
     .dhb-calendario .calendar-modal.is--visible {
