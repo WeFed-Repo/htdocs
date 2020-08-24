@@ -3,9 +3,10 @@ export const ambiente = function () {
     // Default
     let amb = "locale",
         url = window.location.hostname;
-
-    if (url === "aletti.wefed.local" || url === "aletti.webank.local" || url==="localhost:3000") {
+    
+    if (url === "aletti.wefed.local" || url === "aletti.webank.local" || url==="localhost:3000" || url==="localhost") {
         amb = "librerie";
+        
     } else 
     {
         if (url.match(/promotorisvi\w+web\.webank\.local/g)) {
