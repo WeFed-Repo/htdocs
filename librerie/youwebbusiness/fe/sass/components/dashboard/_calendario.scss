@@ -1,5 +1,5 @@
 .dhb-calendario {
-  $dayHeight : 31px; 
+  $dayHeight : 31px;
   overflow:hidden;
   position: relative;
   .ui-datepicker {
@@ -34,44 +34,44 @@
           &:not(.has-event) {
             &:hover a,
             &:active a {
-              background-color:$grayBG !important; 
-              color: $gray2 !important;  
+              background-color:$grayBG !important;
+              color: $gray2 !important;
             }
           }
         }
         &.ui-datepicker-current-day {
-          &:not(.has-event) a { 
-            background-color:$grayBG !important; 
-            color: $gray2 !important;  
+          &:not(.has-event) a {
+            background-color:$grayBG !important;
+            color: $gray2 !important;
           }
         }
         &.ui-datepicker-today.ui-datepicker-current-day {
-          &:not(.has-event) a { 
-            background-color:$grayBG !important; 
+          &:not(.has-event) a {
+            background-color:$grayBG !important;
           }
         }
         &.has-event {
-          cursor: pointer; 
+          cursor: pointer;
           a {
             color: $white !important;
-            background-color: $greenLink !important;  
+            background-color: $greenLink !important;
           }
           &:hover a,
-          &:active a { 
-            background-color: $greenLink_hover !important; 
+          &:active a {
+            background-color: $greenLink_hover !important;
           }
         }
         &.ui-datepicker-today:not(.has-event) {
-          & a, 
+          & a,
           &:hover a,
           &:active a {
-            background-color: transparent !important; 
+            background-color: transparent !important;
             font-weight: bold;
             color: $greenLink !important;
-          } 
+          }
           &:hover a,
           &:active a {
-            background-color:$grayBG !important; 
+            background-color:$grayBG !important;
           }
         }
       }
@@ -95,12 +95,10 @@
     background: rgba(255,255,255,0.9);
     padding: $spacer;
     transition: top 0.75s;
-
+    z-index: 9999;
     display: flex;
     flex-direction: column;
-
-
-    &.is--visible { 
+    &.is--visible {
       top:0;
     }
     .close {
@@ -126,13 +124,13 @@
       color: $greenLink;
       font-weight: bold;
       margin:0;
-      padding: 0 $spacer*2 0 0; 
+      padding: 0 $spacer*2 0 0;
       display: block;
     }
     .title {
       font-size: 1.2em;
       color: $gray2;
-      padding: 0 0 $spacer/2 0; 
+      padding: 0 0 $spacer/2 0;
       margin:0;
       display: block;
       overflow: auto;
