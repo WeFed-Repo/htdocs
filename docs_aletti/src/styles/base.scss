@@ -166,6 +166,14 @@ h2.bordered-block-title {
         }
 
 }
+.text-upperCase-capitalize {
+    text-transform: lowercase;
+    display: inline-block;
+    &::first-letter {
+        text-transform: capitalize; 
+    }
+}
+
 
 @include theme(default, $default);
 @include theme(light, $light);

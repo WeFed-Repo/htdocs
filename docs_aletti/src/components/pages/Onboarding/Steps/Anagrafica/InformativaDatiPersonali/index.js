@@ -61,6 +61,7 @@ class InformativaDatiPersonali extends Component {
                             </Form.checkgroup>
                         </Col>
                     </Row>
+                    {/*
                     {this.props.formstate.field_convenzione != undefined && this.props.formstate.field_convenzione != "" &&
                     <Row>
                         <Col xs="6">
@@ -87,7 +88,21 @@ class InformativaDatiPersonali extends Component {
                         </Col>
 
                     </Row>
-                }
+
+                 }*/}
+                 {this.props.formstate.field_promotore != undefined &&
+                     <Row>
+                        <Col xs="6">
+                        <Form.input
+                                label="Codice promotore"
+                                name="field_promotore"
+                                value={this.props.formstate.field_promotore + " - " + this.props.formstate.field_nomepromotore + " " +  this.props.formstate.field_cognomepromotore }
+                                output="true"
+                            >
+                            </Form.input>
+                        </Col>
+                    </Row>
+                 }
                 <Row>
                     <Col xs="12">
                         <Form.input
