@@ -12,7 +12,6 @@
         <!-- FILTRI -->
 
         <div class="d-flex flex-wrap justify-content-between align-items-center">
-
           <div  class="flex-grow-1 mw-100 my-2">
             <?php
             $tabs = array(
@@ -25,9 +24,7 @@
             );
             tabs_obj_filter($tabs); ?>
           </div>
-
           <div class="d-flex flex-wrap justify-content-end align-items-center flex-grow-1 mw-100">
-
             <div class="d-flex justify-flex-start flex-wrap align-items-center flex-grow-1">
               <div class="form-check radio">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1">
@@ -42,23 +39,21 @@
                 <label class="form-check-label" for="inlineRadio3">Non letti</label>
               </div>
             </div>
-            
             <div class="form-group d-flex pl-2">
               <div class="form-check  checkbox switch">
                 <input class="form-check-input" type="checkbox" id="switch1" name="notifica1" data-filter-button="filter01">
                 <label class="form-check-label" for="switch1">Estendi la ricerca</label>
               </div>
             </div>
-
           </div>
-
         </div>
 
         <!-- fine  FILTRI -->
 
       </div>
+
         <?php virtual('/youwebbusiness/layout/oggetti/filtri/filtro/accordion_filtri_avanzati.php');?>
+
       </div>
     </div>
-  </div>
 </section>
