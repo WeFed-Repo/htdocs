@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html [
+  <!ENTITY % htmlDTD
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+  %htmlDTD;
+  <!ENTITY % globalDTD
+    SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+  <!ENTITY % certerrorDTD
+    SYSTEM "chrome://browser/locale/aboutCertError.dtd">
+  %certerrorDTD;
+<!ENTITY certerror.pagetitle "Connessione non affidabile">
+<!ENTITY certerror.longpagetitle "Questa connessione non è affidabile">
+<!ENTITY certerror.introPara1 "È stata richiesta a &brandShortName; una connessione sicura con <b>#1</b>, ma non è possibile confermare la sicurezza del collegamento.">
+<!ENTITY certerror.introPara2 "Normalmente, quando si cerca di attivare un collegamento in modalità sicura, il sito web fornisce un'identificazione affidabile per garantire all'utente che sta visitando il sito corretto. Tuttavia l'identità di questo sito non può essere verificata.">
+<!ENTITY certerror.whatShouldIDo.heading "Che cosa dovrei fare?">
+<!ENTITY certerror.whatShouldIDo.content "Se generalmente è possibile collegarsi a questo sito senza problemi, è possibile che questo errore sia causato dal tentativo da parte di qualcuno di sostituirsi al sito originale. Il consiglio è di non proseguire la navigazione.">
+<!ENTITY certerror.getMeOutOfHere.label "Allontanarsi da questo sito">
+<!ENTITY certerror.expert.heading "Sono consapevole dei rischi">
+<!ENTITY certerror.expert.content "Se si comprende il motivo per cui viene mostrata questa segnalazione, è possibile fare in modo che, a partire da questo momento, l'identificazione di questo sito venga ritenuta affidabile da &brandShortName;.
+<b>Anche se si ha fiducia nel sito, questo errore potrebbe comunque significare che qualcuno sta cercando di interferire con la connessione.</b>">
+<!ENTITY certerror.expert.contentPara2 "Aggiungere un'eccezione solo nel caso in cui si conosca un motivo valido per cui questo sito non sta utilizzando una modalità di identificazione affidabile.">
+<!ENTITY certerror.addException.label "Aggiungi eccezione…">
+<!ENTITY certerror.technical.heading "Dettagli tecnici">
+
+]>
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is netError.xhtml.
+   -
+   - The Initial Developer of the Original Code is
+   - Netscape Communications Corporation.
+   - Portions created by the Initial Developer are Copyright (C) 1998
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Adam Lock <adamlock@netscape.com>
+   -   William R. Price <wrprice@alumni.rice.edu>
+   -   Henrik Skupin <mozilla@hskupin.info>
+   -   Jeff Walden <jwalden+code@mit.edu>
+   -   Johnathan Nightingale <johnath@mozilla.com>
+   -   Ehsan Akhgari <ehsan.akhgari@gmail.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Connessione non affidabile</title>
+    <link rel="stylesheet" href="activityi_data/aboutCertError_002.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="activityi_data/aboutCertError.css" type="text/css" media="all" />
+    <!-- This page currently uses the same favicon as neterror.xhtml.
+         If the location of the favicon is changed for both pages, the
+         FAVICON_ERRORPAGE_URL symbol in toolkit/components/places/src/nsFaviconService.h
+         should be updated. If this page starts using a different favicon
+         than neterror.xhtml nsFaviconService->SetAndLoadFaviconForPage
+         should be updated to ignore this one as well. -->
+    <link rel="icon" type="image/png" id="favicon" href="chrome://global/skin/icons/warning-16.png" />
+
+    <script type="application/javascript"><![CDATA[
+      // Error url MUST be formatted like this:
+      //   about:certerror?e=error&u=url&d=desc
+
+      // Note that this file uses document.documentURI to get
+      // the URL (with the format from above). This is because
+      // document.location.href gets the current URI off the docshell,
+      // which is the URL displayed in the location bar, i.e.
+      // the URI that the user attempted to load.
+
+      function getCSSClass()
+      {
+        var url = document.documentURI;
+        var matches = url.match(/s\=([^&]+)\&/);
+        // s is optional, if no match just return nothing
+        if (!matches || matches.length < 2)
+          return "";
+
+        // parenthetical match is the second entry
+        return decodeURIComponent(matches[1]);
+      }
+
+      function getDescription()
+      {
+        var url = document.documentURI;
+        var desc = url.search(/d\=/);
+
+        // desc == -1 if not found; if so, return an empty string
+        // instead of what would turn out to be portions of the URI
+        if (desc == -1)
+          return "";
+
+        return decodeURIComponent(url.slice(desc + 2));
+      }
+
+      function initPage()
+      {
+        // Replace the "#1" string in the intro with the hostname.  Trickier
+        // than it might seem since we want to preserve the <b> tags, but
+        // not allow for any injection by just using innerHTML.  Instead,
+        // just find the right target text node.
+        var intro = document.getElementById('introContentP1');
+        function replaceWithHost(node) {
+          if (node.textContent == "#1")
+            node.textContent = location.host;
+          else
+            for(var i = 0; i < node.childNodes.length; i++)
+              replaceWithHost(node.childNodes[i]);
+        };
+        replaceWithHost(intro);
+        
+        if (getCSSClass() == "expertBadCert") {
+          toggle('technicalContent');
+          toggle('expertContent');
+        }
+
+        // Disallow overrides if this is a Strict-Transport-Security
+        // host and the cert is bad (STS Spec section 7.3) or if the
+        // certerror is in a frame (bug 633691).
+        if (getCSSClass() == "badStsCert" || window != top) {
+          var ec = document.getElementById('expertContent');
+          ec.parentNode.removeChild(ec);
+        }
+        
+        var tech = document.getElementById("technicalContentText");
+        if (tech)
+          tech.textContent = getDescription();
+        
+        addDomainErrorLink();
+      }
+      
+      /* In the case of SSL error pages about domain mismatch, see if
+         we can hyperlink the user to the correct site.  We don't want
+         to do this generically since it allows MitM attacks to redirect
+         users to a site under attacker control, but in certain cases
+         it is safe (and helpful!) to do so.  Bug 402210
+      */
+      function addDomainErrorLink() {
+        // Rather than textContent, we need to treat description as HTML
+        var sd = document.getElementById("technicalContentText");
+        if (sd) {
+          var desc = getDescription();
+          
+          // sanitize description text - see bug 441169
+          
+          // First, find the index of the <a> tag we care about, being careful not to
+          // use an over-greedy regex
+          var re = /<a id="cert_domain_link" title="([^"]+)">/;
+          var result = re.exec(desc);
+          if(!result)
+            return;
+          
+          // Remove sd's existing children
+          sd.textContent = "";
+
+          // Everything up to the link should be text content
+          sd.appendChild(document.createTextNode(desc.slice(0, result.index)));
+          
+          // Now create the link itself
+          var anchorEl = document.createElement("a");
+          anchorEl.setAttribute("id", "cert_domain_link");
+          anchorEl.setAttribute("title", result[1]);
+          anchorEl.appendChild(document.createTextNode(result[1]));
+          sd.appendChild(anchorEl);
+          
+          // Finally, append text for anything after the closing </a>
+          sd.appendChild(document.createTextNode(desc.slice(desc.indexOf("</a>") + "</a>".length)));
+        }
+
+        var link = document.getElementById('cert_domain_link');
+        if (!link)
+          return;
+        
+        var okHost = link.getAttribute("title");
+        var thisHost = document.location.hostname;
+        var proto = document.location.protocol;
+
+        // If okHost is a wildcard domain ("*.example.com") let's
+        // use "www" instead.  "*.example.com" isn't going to
+        // get anyone anywhere useful. bug 432491
+        okHost = okHost.replace(/^\*\./, "www.");
+
+        /* case #1: 
+         * example.com uses an invalid security certificate.
+         *
+         * The certificate is only valid for www.example.com
+         *
+         * Make sure to include the "." ahead of thisHost so that
+         * a MitM attack on paypal.com doesn't hyperlink to "notpaypal.com"
+         *
+         * We'd normally just use a RegExp here except that we lack a
+         * library function to escape them properly (bug 248062), and
+         * domain names are famous for having '.' characters in them,
+         * which would allow spurious and possibly hostile matches.
+         */
+        if (endsWith(okHost, "." + thisHost))
+          link.href = proto + okHost;
+
+        /* case #2:
+         * browser.garage.maemo.org uses an invalid security certificate.
+         *
+         * The certificate is only valid for garage.maemo.org
+         */
+        if (endsWith(thisHost, "." + okHost))
+          link.href = proto + okHost;
+          
+        // If we set a link, meaning there's something helpful for
+        // the user here, expand the section by default
+        if (link.href && getCSSClass() != "expertBadCert")
+          toggle("technicalContent");
+      }
+      
+      function endsWith(haystack, needle) {
+        return haystack.slice(-needle.length) == needle;
+      }
+
+      function toggle(id) {
+        var el = document.getElementById(id);
+        if (el.getAttribute("collapsed"))
+          el.removeAttribute("collapsed");
+        else
+          el.setAttribute("collapsed", true);
+      }
+    ]]></script>
+  </head>
+
+  <body dir="ltr">
+
+    <!-- PAGE CONTAINER (for styling purposes only) -->
+    <div id="errorPageContainer">
+    
+      <!-- Error Title -->
+      <div id="errorTitle">
+        <h1 id="errorTitleText">Questa connessione non è affidabile</h1>
+      </div>
+      
+      <!-- LONG CONTENT (the section most likely to require scrolling) -->
+      <div id="errorLongContent">
+        <div id="introContent">
+          <p id="introContentP1">È stata richiesta a Firefox una connessione sicura con <b>3466589.fls.doubleclick.net</b>, ma non è possibile confermare la sicurezza del collegamento.</p>
+          <p>Normalmente, quando si cerca di attivare un collegamento in
+ modalità sicura, il sito web fornisce un'identificazione affidabile per
+ garantire all'utente che sta visitando il sito corretto. Tuttavia 
+l'identità di questo sito non può essere verificata.</p>
+        </div>
+        
+        <div id="whatShouldIDoContent">
+          <h2>Che cosa dovrei fare?</h2>
+          <div id="whatShouldIDoContentText">
+            <p>Se generalmente è possibile collegarsi a questo sito 
+senza problemi, è possibile che questo errore sia causato dal tentativo 
+da parte di qualcuno di sostituirsi al sito originale. Il consiglio è di
+ non proseguire la navigazione.</p>
+            <button id="getMeOutOfHereButton">Allontanarsi da questo sito</button>
+          </div>
+        </div>
+        
+        <!-- The following sections can be unhidden by default by setting the
+             "browser.xul.error_pages.expert_bad_cert" pref to true -->
+        <div id="technicalContent" collapsed="true">
+          <h2 onclick="toggle('technicalContent');" id="technicalContentHeading">Dettagli tecnici</h2>
+          <p id="technicalContentText">3466589.fls.doubleclick.net utilizza un certificato di sicurezza non valido.
+
+Il certificato non è attendibile in quanto non è stata fornita alcuna catena dell'emittente.
+
+(Codice di errore: sec_error_unknown_issuer)
+</p>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <!--
+    - Note: It is important to run the script this way, instead of using
+    - an onload handler. This is because error pages are loaded as
+    - LOAD_BACKGROUND, which means that onload handlers will not be executed.
+    -->
+    <script type="application/javascript">initPage();</script>
+
+  </body>
+</html>
