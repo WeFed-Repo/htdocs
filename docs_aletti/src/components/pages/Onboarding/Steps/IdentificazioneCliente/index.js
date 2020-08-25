@@ -43,7 +43,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Identificazione cliente</h3>
-                    <p>Il sottoscritto, ai sensi D.Lgs. 21 novembre 2007, n. 231 e successive modifiche e integrazioni,
+                    <p>Il sottoscritto <span className="text-upperCase-capitalize">{ formstate["field_nomepromotore"] }  </span> <span className="text-upperCase-capitalize">{formstate["field_cognomepromotore"]} </span>, ai sensi D.Lgs. 21 novembre 2007, n. 231 e successive modifiche e integrazioni,
                     attesta, sotto la propria responsabilità, di aver effettuato l’adeguata verifica e aver identificato il
                     soggetto di cui alla presente mediante acquisizione di idoneo documento identificativo e del codice
                     fiscale/partita iva, e che la/e firma/e é/sono stata/e personalmente apposta/e alla propria presenza

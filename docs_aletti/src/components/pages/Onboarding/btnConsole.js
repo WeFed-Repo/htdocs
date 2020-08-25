@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import {getNextState,getPrevState, getPrevInt} from "./common/gestioneStati";
+/* 
 
+ANNULLA -> SI (RIEPILOGO DATI) ->BOX : 
+- NON PIU' INTERESSATO (CHIAMATA CON ESITO ANNULLA_NON_INTERESSATO e OUT su gestione pratiche)
+- DATI ERRATI -> DOMANDA, VUOI CONTINUARE CON GLI STESSI DATI?
+-    SI -> ANNULLA DATI ERRATI MA REDIRECT SU ESITO CHIAMATA
+-    NO -> ANNULLA_DATI_ERRATI MA GESTIONE PRATICHE
+
+*/
 export default class extends Component {
 
     state= {

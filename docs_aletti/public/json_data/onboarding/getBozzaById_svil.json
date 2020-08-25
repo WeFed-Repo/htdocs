@@ -6,6 +6,8 @@
     },
     "results": {
         "id": 2630813,
+        "nomePromotore": "ROBERTO",
+        "cognomePromotore": "BAGHETTI",
         "dataInserimento": 1591347967000,
         "dataUltimoAggiornamento": 1591347967000,
         "stato": "IDENTIF_CLIENTE",

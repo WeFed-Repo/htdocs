@@ -70,7 +70,7 @@ export default class extends Component {
                 this.setState({
                     step: "ACCETTAZ_INFOCERT",
                     proseguiEnabled:false,
-                    accettazConsensi: data.results && data.results.info && data.results.info.clauses,
+                    accettazConsensi: data.results && data.results.clauses,
                     accDocs: data.results,
                     loading: false
                 });

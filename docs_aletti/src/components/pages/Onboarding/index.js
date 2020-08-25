@@ -309,6 +309,8 @@ export default class extends Component {
                                             field_id: newData.nextId,
                                             field_ordineintestatari: "0",
                                             field_promotore: newData.codPromotore,
+                                            field_nomepromotore:newData. nomePromotore,
+                                            field_cognomepromotore: newData.cognomePromotore,
                                             field_anagraficablob_filiale: newData.filiale,
                                             isLoading: false
                                         })
