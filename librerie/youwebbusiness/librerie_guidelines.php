@@ -82,7 +82,7 @@
 		        <p>I due file generati da SCSS a CSS sono <b>priv_generic</b> (per il layout generico) e <b>priv_base</b> (per i componenti).</p>
 		        <p>Sia <b>priv_generic.scss</b> che <b>priv_base.scss</b> sono liste di file importati e organizzati in varie sottocartelle.
 							Come primo import, entrambi i file hanno <b>_commons.scss</b>, che a sua volta importa i file della cartella <b>fe/sass/commons</b>.</p>
-						<p>Di seguito una lista delle cartelle distile e del loro contenuto:</p>
+						<p>Di seguito una lista delle cartelle di stile e del loro contenuto:</p>
 
 						<h3 id="commons">Commons</h3>
 		        <p>Importa i file di variabili, mixins e funzioni utili sia alla costruzione del layout che dei componenti. E' inclusa sia in <b>priv_generic.scss</b> che in <b>priv_base.scss</b></p>
