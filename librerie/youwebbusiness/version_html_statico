@@ -1,7 +1,7 @@
 #!/bin/bash
 # PER RISOLVERE PERMISSION DENIED USARE: chmod +x version_html_statico
 
-echo -n "Hai generato lo statico prima di far partire lo script e cambiato il changelog? (y/n) "
+echo -n "Hai già generato il nuovo statico e aggiornato il changelog? (y/n) "
 read REPLY
 if [[ $REPLY =~ ^[y]$ ]]
 then
@@ -16,13 +16,15 @@ then
   zip -vr "$newfile" html_statico/ changelog.html  -x "*.DS_Store" -qq
   mv "$newfile" "$newpath"
 
- DIR="/Users/martapetrella/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
+ DIR="/Volumes/Meow/GDrive_Dechit.it/WeBank/YoubBusinessweb/HTML_STATICO(versionato)"
  if [ -d "$DIR" ]; then
    cp "$newpath/$newfile" "$DIR"
-   echo "$newname copied!"
+   echo "$newname creato!"
+ else
+   echo "ERRORE: $newname non è stato creato perché la directory '$DIR' non esiste."
  fi
 
 else
-  echo "Allora vai e torna! :D "
+  echo "Allora vai e torna dopo! :D "
 fi
 echo "\n"

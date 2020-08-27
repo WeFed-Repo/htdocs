@@ -19,12 +19,16 @@
 			<div class="wrapper">
 				<div class="row">
 					<div class="col-sm-4">
-						<h2>Struttura</h2> 
+						<h2>Struttura</h2>
 						<ul class="librerie-lista">
 							<li><a href="strutt_priv.php?tpl=tpl_placeholder.php">Struttura</a></li>
 							<li data-noexport="true"><a href="strutt_priv_old.php?tpl=tpl_placeholder.php" data-noexport="true">Struttura vecchio sito</a></li>
 						</ul>
 						<div data-noexport="true">
+							<h2>Guide</h2>
+							<ul class="librerie-lista">
+								<li><a href="./librerie_guidelines.php" data-noexport="true">Guidelines</a></li>
+							</ul>
 							<h2>Tools</h2>
 							<ul class="librerie-lista">
 								<li><a href="./librerie_genera_statico.php" data-noexport="true">Genera export statico</a></li>
@@ -62,7 +66,7 @@
 						<div class="template-tree">
 							<?php include ("./librerie_build_menu_tree.php"); ?>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>

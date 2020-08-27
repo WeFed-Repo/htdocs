@@ -1,6 +1,7 @@
 /* Istruzioni generali librerie */
 body {margin:0;padding:0;font-size:16px; background:#f5f5f5;}
-body .wrapper {max-width:1600px; margin:0 auto;}
+body header.librerie { top:0; left:0; position: sticky; width: 100%; z-index: 9999999999999; }
+body .wrapper {max-width:1600px; margin:0 auto; }
 #main.librerie .librerie-lista a,
 #main.librerie .librerie-lista a:hover {color: #0B6B5B;}
 
@@ -13,7 +14,7 @@ header.librerie a.btn-bak:hover {text-decoration:none; opacity:0.7;}
 
 /* Oggetti indice e catalogo */
 /*#main.librerie {margin:60px 0 0 0;}*/
-#main.librerie {margin:0;}
+#main.librerie {margin:0;padding-top:0;}
 #main.librerie > .wrapper {background:#f5f5f5;padding:0 15px 15px 15px;}
 /* #main.librerie h2 {font-size:20px; border-bottom:solid 4px #2f9988; padding: 0 0 5px} */
 #main.librerie .template-tree ul li {width:100%; font-weight:bold}
