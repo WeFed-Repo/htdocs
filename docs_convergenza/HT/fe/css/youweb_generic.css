@@ -664,6 +664,11 @@ table:not(.ui-datepicker-calendar) td, table:not(.ui-datepicker-calendar) th {
 .tabSelezioneCC table {
     background-color: #fff;
 }
+@media screen and (max-width: 787px) {
+  .tabSelezioneCC .dataTables_wrapper {
+        overflow-x: auto;
+  }
+}
 table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
     font-family: 'bankFontTable', sans-serif;
     font-size: 12px;
@@ -2381,7 +2386,7 @@ div.messagePanel p {
     }
 
     .selezioneCC, .selezioneCC.tabellaSelezioneCC {
-        padding: 23px 20px 0 20px;
+        padding: 23px 20px 10px 20px;
         margin: 0 -20px;
     }
 
@@ -4319,6 +4324,13 @@ div.messagePanel a {color:#fff;text-decoration:underline}
 /*.IcoAzioni .pull-right i {margin-right: 8px;}*/
 .IcoAzioni .btn-link {
     margin-left: 12px;
+}
+@media (max-width: 787px) {
+    .IcoAzioni a, .IcoAzioni a:hover, .IcoAzioni a:active {
+        margin-left:0!important;
+        display: inline-block;
+        margin-bottom:10px;
+    }
 }
 
 label input[type="text"].form-control {
