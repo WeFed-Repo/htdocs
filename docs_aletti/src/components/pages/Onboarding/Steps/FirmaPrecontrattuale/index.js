@@ -83,7 +83,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Firma precontrattuale {nomeint}</h3>
-                    <FirmaInfoCert {...{obformprops,preDocs,accDocs}}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, preDocs, accDocs, firmaDocs }}></FirmaInfoCert>
                 </div>
             </div>
         )

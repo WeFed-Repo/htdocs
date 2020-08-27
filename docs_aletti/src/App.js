@@ -5,6 +5,7 @@ import Header from 'components/structure/Header';
 import Menu from 'components/structure/Menu';
 import Main from 'components/structure/Main';
 import { ToastContainer } from 'react-toastify';
+import { ambiente } from "functions/genericVars";
 import getData from 'functions/getData';
 import 'react-toastify/dist/ReactToastify.min.css';
 import './App.css';
@@ -99,7 +100,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"app" + " " + this.state.styleType}>
-                    <div className="style-type"><span>Stile applicato: {this.state.styleType}</span><Button onClick={ this.toggleStyle } role="button">cambia stile</Button></div>
+                     {ambiente.isLibrerie && <div className="style-type"><span>Stile applicato: {this.state.styleType}</span><Button onClick={ this.toggleStyle } role="button">cambia stile</Button></div>}
                     <Header styleType= { this.state.styleType } switchPrivacyFunc={ this.switchPrivacyFunc } hiddenMode={ this.state.hiddenMode } launchSearch={this.launchSearch} goToCustomersSearch={this.goToCustomersSearch} changefNominativo={this.changefNominativo}  getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <Menu hiddenMode={ this.state.hiddenMode } goToCustomersSearch={this.goToCustomersSearch}/>
                     <Main hiddenMode={ this.state.hiddenMode } fsNominativo={this.state.fsNominativo} searchData={this.state.searchData} goToCustomersSearch={this.goToCustomersSearch} getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>

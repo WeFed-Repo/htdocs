@@ -4,7 +4,7 @@ export const ambiente = function () {
     let amb = "locale",
         url = window.location.hostname;
 
-    if (url === "aletti.wefed.local" || url === "aletti.webank.local" || url==="localhost:3000") {
+    if (url === "aletti.wefed.local" || url === "aletti.webank.local" || url==="localhost:3000" || url==="localhost") {
         amb = "librerie";
     } else 
     {

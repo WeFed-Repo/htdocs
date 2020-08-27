@@ -20,7 +20,6 @@ $light: (
        menuOpenedSlideLeft: 155px,
        menuWidth:95px,
        userMenuColor: #dbc099
-
     ),
     contents: (
        mainBgColor: #284659,
@@ -33,12 +32,13 @@ $light: (
        colorH1: #284659,
        colorHeading: #ab9269,
        contentsBgColor:#fff,
-       borderTableWidth: 0,
+       borderTable: 0,
        legendWidth: 24px,
        legendHeight: 14px,
        legendRadius: 10px,
        legendPaddLeft:32px,
-
+    ),
+    agenda: (
        agendaArrowBorderTop: 10px #fff,
        agendaArrowLeftBorderLeft: 17px #ab9269,
        agendaArrowLeftBorderRight: 17px #ab9269,
@@ -47,10 +47,12 @@ $light: (
        agendaDayBgColorInner: #153648,
        agendaDayColor: #fff,
        agendaDayBgColorHover: trasparent,
-       agendaDayBgColorInnerHover: #e0eaee,
+       agendaDayBgColorInnerHover: #153648, 
        agendaDayRadius : 50%,
        agendaDayW: 40px,
-
+       agendaDayH: 40px,
+       aagendaDayPaddtop: 12px,
+       agendaBorder: 0
     )
 );
 
@@ -74,17 +76,20 @@ $default: (
 
     ),
     contents: (
-        mainBgColor: #f9f9f9,
+        mainBgColor: #fff,
         mainColorText:#212529,
-        contentsWrapperBgColor: #f9f9f9,
+        contentsWrapperBgColor: #fff,
         boxPadding:10px,
         colorH1: #78040f,
         colorHeading: #a7a5a5,
-        borderTableWidth: 1px,
+        borderTable: 1px solid #ccc,
         legendWidth: 10px,
         legendHeight: 10px,
         legendRadius: 50%,
         legendPaddLeft:20px,
+       
+    ),
+    agenda: (
         agendaArrowBorderTop: 0,
         agendaArrowLeftBorderRight: 0,
         agendaArrowLeftBorderLeft: 0,
@@ -95,9 +100,7 @@ $default: (
         agendaDayBgColorHover:#ccc,
         agendaDayBgColorInnerHover: #F0F8FF,
         agendaDayRadius : 0,
-        agendaDayW: 100%
-
-
-
+        agendaDayW: 100%,
+        agendaBorder: 1px
     )
 );

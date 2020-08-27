@@ -39,7 +39,7 @@
                 .container-fluid {
                     background-color: map-get($map, contentsWrapperBgColor);
                     border-radius: map-get($map,contensWrapperRadius);
-                    padding: map-get($map, contensWrapperPadding);
+                    padding: map-get($map, contensWrapperPadding); 
                     .content-wrapper {
                         background-color: map-get($map, contentsWrapperBgColor);
                     }
