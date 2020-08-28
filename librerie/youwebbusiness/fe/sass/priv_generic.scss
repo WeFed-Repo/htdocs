@@ -1,6 +1,6 @@
-@import 'commons'; // LET IT FIRST!
+@import 'commons'; // IMPORTARE PER PRIMO!
 
-// componenti da libreria oggetti
+// COMPONENTI
 
 @import 'components/modal';
 @import 'components/tooltips';
@@ -39,4 +39,4 @@
 @import 'components/autorizzazioni';
 @import 'components/box';
 @import 'components/filter';
-@import 'components/pannello_controllo';  
+@import 'components/pannello_controllo';

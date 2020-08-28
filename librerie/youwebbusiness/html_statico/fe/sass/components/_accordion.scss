@@ -17,7 +17,7 @@
       }
       .card-header-icon {
         @include icon-font-family();
-        @extend .icon-arrow_up;
+        content: unicode("e914"); // CLASS: .icon-arrow_up;
         color: $greenLink;
         border: solid 2px $greenLink;
         display: block;
@@ -46,7 +46,7 @@
           color: $gray2;
         }
         .card-header-icon {
-          @extend .icon-arrow_down;
+          content: unicode("e913"); // CLASS: .icon-arrow_down;
           line-height: 1.5rem;
           border-color: $gray2;
           color: $gray2;
