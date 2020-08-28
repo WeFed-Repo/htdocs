@@ -6489,6 +6489,19 @@ pre{
 #posizionePatrimoniale  .legend ul.chart-legend li span.color{box-shadow: none;border-radius:50%;display: inline-block}
 #posizionePatrimoniale .boxDefault{min-height:350px!important;margin-top:2px;}
 #posizionePatrimoniale .tableView  table tbody tr:last-child{background-color:#dadee1!important }
+#posizionePatrimoniale .tableView table {width: 100%;}
+#posizionePatrimoniale table th, #posizionePatrimoniale table td {
+    border:1px solid #ccc!important;
+    border-left:0!important;
+    border-top:0!important;
+}
+#posizionePatrimoniale table th {
+	padding-top:5px!important;
+}
+#posizionePatrimoniale table {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
 #posizionePatrimoniale .col-sm-6:nth-child(4) .boxDefault{border-right:0;}
 #formTitoliSimulati .col-xs-6,#formRinominaSelezione .form-field-input.col-xs-12,#formRinominaSelezione .form-field-input.col-xs-6{padding-left:0;}
 #formTitoliSimulati .btn,  #formInvestimentiAllarmi .actions.pull-right input[type="button"]{background-image:none;}
