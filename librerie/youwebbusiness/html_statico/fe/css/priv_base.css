@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/*
-
-!!! IMPORTANTE!!!
-!!! README!!!
-
-Ogni volta che si aggiunge un nuovo colore alla palette,
-è necessario riportare la variabile colore anche nell'array $colors e $colors_filters.
-Questi due array servono per la creazione delle funzioni che "colorano" le icone SVG in pagina.
-
-!!! README!!!
-!!! IMPORTANTE!!!
-
-*/
 /* Filtro per gradienti in IE6-9 */
 .bkg-white {
   background-color: #FFFFFF; }

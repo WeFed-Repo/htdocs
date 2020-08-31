@@ -1,12 +1,6 @@
-// VARIABILI PERSONALI
-@import 'vars';
-@import 'vars_colors';
-@import 'functions';
-//@import 'mixins_icons_color'; // vecchio metodo filtri colore icone (BACKUP)
-@import 'mixins';
-@import 'font/font';
-@import 'font/icon';
-@import 'font/icon-imgs';
+@import 'commons/vars';
+@import 'commons/functions';
+@import 'commons/mixins';
 
-// DEBUG
-//@import 'debug';
+// vecchio metodo filtri colore icone (TENUTO COME BACKUP)
+// @import 'commons/mixins_icons_color';

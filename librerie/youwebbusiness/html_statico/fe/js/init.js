@@ -85,14 +85,16 @@ function initDropdown() {
         initDropdownOnClick($(this), allDrops);
     });
     $(window).resize(function () {
-      $('[data-dropdown-active]').removeAttr('data-dropdown-active').parent().append($('body > .dropdown-menu').css({
-          position: false,
-          top: false,
-          left: false,
-      })
-          .removeClass('show')
-          .removeClass('shown')
-          .detach());
+      if( $('[data-dropdown-active]').length > 0 ) {
+        $('[data-dropdown-active]').removeAttr('data-dropdown-active').parent().append($('body > .dropdown-menu').css({
+            position: false,
+            top: false,
+            left: false,
+        })
+            .removeClass('show')
+            .removeClass('shown')
+            .detach());
+      }
     });
 }
 
