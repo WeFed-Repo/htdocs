@@ -25,7 +25,7 @@
 }
 
 .table-heading {
-  h4 { 
+  h4 {
     color: $grayMid;
     float: left;
     font-size: 1em; // 1.3em
@@ -71,7 +71,7 @@
     padding: 0 1rem;
     height: 34px;
     line-height: 34px;
-    i { margin-top: 3px; } 
+    i { margin-top: 3px; }
   }
 }
 
@@ -111,7 +111,27 @@
 
 .azioni-tabella {
   @include icon {
-    @include svg-icon-size(30px); 
+    @include svg-icon-size(30px);
     margin: 0.5rem 0 0.5rem 1rem;
-  }  
+  }
+}
+
+.custom-table-heading-with-filters {
+  margin-bottom: 15px;
+  h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .align-items-center {
+    .checkbox, .radio {
+      margin-bottom: 0;
+      padding-left: 45px;
+      margin-right: 0px;
+      min-height: 0px;
+      padding-top: 2px;
+    }
+  }
+  .title {
+    font-weight: bold;
+  }
 }

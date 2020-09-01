@@ -1,4 +1,13 @@
-@import 'commons'; // LET IT FIRST!
+@import 'commons'; // IMPORTARE PER PRIMO!
+
+// FONTS
+
+@import 'font/font';
+@import 'font/icon';
+@import 'font/icon-imgs';
+
+// LAYOUT
+
 @import 'layout/bootstrap_rewrite';
 @import 'layout/structure';
 @import 'layout/generic';
