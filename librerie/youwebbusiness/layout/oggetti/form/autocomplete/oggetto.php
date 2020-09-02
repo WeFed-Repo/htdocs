@@ -58,7 +58,7 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "20 ENERGIA LOREM IPSUM",
+    "20 ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -70,7 +70,7 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
+    "ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -78,19 +78,7 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "40 ENERGIA LOREM IPSUM",
-    "ENERGIA SPA",
-    "ENERGIA SPA BENEDETTI",
-    "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
-    "ENERGIA SPA",
-    "ENERGIA SPA BENEDETTI",
-    "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
-    "ENERGIA SPA",
-    "ENERGIA SPA BENEDETTI",
-    "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
+    "40 ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -98,7 +86,7 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "60 ENERGIA LOREM IPSUM",
+    "ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -106,7 +94,11 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
+    "ENERGIA LOREM IPSUM ",
+    "ENERGIA SPA",
+    "ENERGIA SPA BENEDETTI",
+    "ENERGIA LUCE GAS",
+    "60 ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -114,7 +106,15 @@ var srcResults = [
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
-    "ENERGIA LOREM IPSUM",
+    "ENERGIA LOREM IPSUM ",
+    "ENERGIA SPA",
+    "ENERGIA SPA BENEDETTI",
+    "ENERGIA LUCE GAS",
+    "ENERGIA LOREM IPSUM ",
+    "ENERGIA SPA",
+    "ENERGIA SPA BENEDETTI",
+    "ENERGIA LUCE GAS",
+    "ENERGIA LOREM IPSUM ",
     "ENERGIA SPA",
     "ENERGIA SPA BENEDETTI",
     "ENERGIA LUCE GAS",
@@ -128,8 +128,8 @@ var inputAutocomplete = $("#autocompleteCs"),
 
 //EMULAZIONE BOTTONE FINTA SELECT
   btnAutocomplete.on('click',function(event){
+      //console.log(isOpenMenu);
       if(!isOpenMenu) {
-        
         inputAutocomplete.trigger('keydown').focus();
         isOpenMenu = true;
       }
@@ -259,12 +259,17 @@ inputAutocomplete.autocomplete({
          
       }) 
        
+      },
+      
+      close: function(event,ui) {
+         $(".menu-bottom").hide();
+         isOpenMenu = false;
       }
 }).data("uiAutocomplete").close = function(e){
     //chiusura del menu condizonata al fatto che sia acceso il semaforo verde (no click su link bottom)
     if(readyToClose)
        {
-        this.menu.element.is(":visible") && (this.menu.element.hide(), this._trigger("close", e), $(".menu-bottom").hide(), isOpenMenu = false);
+        this.menu.element.is(":visible") && (this.menu.element.hide(), this._trigger("close", e));
         }
         
     else
