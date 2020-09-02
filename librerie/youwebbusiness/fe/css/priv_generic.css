@@ -3785,7 +3785,10 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   border-radius: 3px;
 }
 
-#wrapper-ul .menu-bottom {
+#wrapper-ul-autocomplete {
+  position: relative;
+}
+#wrapper-ul-autocomplete .menu-bottom {
   display: none;
   background-color: white;
   font-size: 12px;
@@ -3794,17 +3797,13 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   border: 1px solid #DDDDDD;
   width: 503px;
   z-index: 100;
-  /*height: 40px;
-  position: absolute;
-  top:273px;
-  margin-top:44px;*/
 }
-#wrapper-ul .menu-bottom a {
+#wrapper-ul-autocomplete .menu-bottom a {
   float: right;
+  text-decoration: none;
 }
-
-#wrapper-ul {
-  position: relative;
+#wrapper-ul-autocomplete .menu-bottom a:hover {
+  text-decoration: underline;
 }
 
 td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
