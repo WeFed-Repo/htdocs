@@ -50,22 +50,10 @@ class StepForm extends Component {
                     </section>
 
 
-        // DOCUMENTI PER ACCETTAZIONI
-        let accDocs = <section>
-                <p>Documenti per accettazione</p>
-                <Row>
-                    <Col>       
-                        <ul className="elenco-documenti">
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                            <li><a><i className="icon icon-file_pdf"></i>Accettazione ipsum dolor sit amet</a></li>
-                        </ul>
-                    </Col>
-                </Row>
-            </section>;
+       
 
         let firmaDocs = <section>
-        <p>Documenti per accettazione</p>
+        <p>Documenti per firma finale</p>
         <Row>
             <Col>       
                 <ul className="elenco-documenti">
@@ -83,7 +71,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Firma precontrattuale {nomeint}</h3>
-                    <FirmaInfoCert {...{ obformprops, preDocs, accDocs, firmaDocs }}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, preDocs, firmaDocs }}></FirmaInfoCert>
                 </div>
             </div>
         )

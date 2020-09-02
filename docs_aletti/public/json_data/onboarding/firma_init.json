@@ -5,6 +5,7 @@
         "description": null
     },
     "results": {
+        "pecEsistente" : true,
         "clauses": [
             {
                 "id": "clause1",

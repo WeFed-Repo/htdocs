@@ -41,8 +41,13 @@ export default class extends Component {
         this.state = {
             step: "INIT",
             loading: false,
+
             flagAccInfocert: false,
             flagFirma: false,
+
+            // Blocchi dati da chiamate
+            initData: null,
+
 
             proseguiEnabled: true
         }
@@ -70,8 +75,7 @@ export default class extends Component {
                 this.setState({
                     step: "ACCETTAZ_INFOCERT",
                     proseguiEnabled:false,
-                    accettazConsensi: data.results && data.results.clauses,
-                    accDocs: data.results,
+                    initData: data.results,
                     loading: false
                 });
             }
@@ -117,9 +121,15 @@ export default class extends Component {
                     {this.state.step === "ACCETTAZ_INFOCERT" &&
                         // Inizializzazione
                         <>
-                            {this.props.accDocs}
                             <section>
-                                {this.state.accettazConsensi.map((v,i)=>{
+                                <ul className="elenco-documenti">
+                                    {this.state.initData.docs.map((v,i)=>{
+                                        return <li><a href={v.url} target="_blank"><i className="icon icon-file_pdf"></i>{v.name}</a></li>
+                                    })}
+                                </ul>
+                            </section>
+                            <section>
+                                {this.state.initData.clauses.map((v,i)=>{
                                     return <div key={i} onClick={()=>this.setState({proseguiEnabled:true})}>{v.text}</div>
                                 })}
                             </section>
