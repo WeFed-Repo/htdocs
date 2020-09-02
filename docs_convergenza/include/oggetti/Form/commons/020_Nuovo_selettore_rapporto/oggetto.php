@@ -76,7 +76,7 @@
                         <div class="inline-output">
                             <label class="control-label-output inline-output-left">Saldo disp.</label>
                             <div class="inline-output-right">
-                                <span class="output txthelp" data-toggle="tooltip" data-viewport="<?php print ($site==="webank")?"#contenuti" : "#mainContent"?>"
+                                <span class="output txthelp" data-toggle="tooltip"  data-viewport="<?php print ($site==="webank")?"#contenuti" : "#mainContent"?>"
 								title='08/07/2016: <strong><span id="tot_investibile_1">4.213,46</span>&nbsp;€</strong>
                                     <br>11/07/2016: <strong><span id="tot_investibile_1a">4.213,46</span>&nbsp;€</strong>
                                     <br>12/07/2016: <strong><span id="tot_investibile_2">4.213,46</span>&nbsp;€</strong>
