@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Button } from 'reactstrap';
 import getData from "functions/getData";
+import Form from 'components/parts/Forms';
 import { getNextState, getNextInt } from "../gestioneStati";
 
 export default class extends Component {
@@ -128,9 +129,9 @@ export default class extends Component {
                                     })}
                                 </ul>
                             </section>
-                            <section>
+                            <section className="clauses">
                                 {this.state.initData.clauses.map((v,i)=>{
-                                    return <div key={i} onClick={()=>this.setState({proseguiEnabled:true})}>{v.text}</div>
+                                    return <Form.checkgroup key={i} name={i} onChange={()=>this.setState({proseguiEnabled:true})} options={[{"text": v.text, value: "true"}]}></Form.checkgroup>
                                 })}
                             </section>
                             <Row>
@@ -165,7 +166,6 @@ export default class extends Component {
                         // Inizializzazione
                         <>
                             {this.props.firmaDocs}
-
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
