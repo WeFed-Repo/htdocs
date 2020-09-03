@@ -80,9 +80,6 @@ export default  {
             })
         });
         
-        
-        
-
 
         // Assembla l'oggetto per la spedizione
         let firme =  {
@@ -98,7 +95,6 @@ export default  {
                 "intestatarioCorrente": getNextInt(form),
                 "stato": "ADEMPIMENTI_NORMATIVI"
             }
-
 
         console.log("------------------- OGGETTO DATA INVIATO --------------------");
         console.log(dataObj);
