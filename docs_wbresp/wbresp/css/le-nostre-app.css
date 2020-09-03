@@ -38,6 +38,7 @@ mobile-trading.html -> Le nostre app - mobile trading
 .mobile-banking.container03 .feat {min-height:140px; margin-bottom: 10px;}
 .mobile-banking.container03 .feat p {padding: 0 0 0 110px; font-size: 14px; color: #999;}
 .mobile-banking.container03 .feat p b {font-size: 16px; color: #666; font-family:"ralewaysemibold",arial,sans-serif; font-weight:normal;}
+.mobile-banking.container03 .feat p b.bold-light {color: #999;}
 .mobile-banking.container03 .feat1 {background: transparent url("/wbresp/img/app/feat1.png") no-repeat 0 0;}
 .mobile-banking.container03 .feat2 {background: transparent url("/wbresp/img/app/feat2.png") no-repeat 0 0;}
 .mobile-banking.container03 .feat3 {background: transparent url("/wbresp/img/app/feat3.png") no-repeat 0 0;}
