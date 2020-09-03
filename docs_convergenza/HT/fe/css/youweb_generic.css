@@ -628,6 +628,9 @@ button {
     max-width: 100%;
     margin-bottom: 20px;
 }
+.fixed-columns table.has-fixed-cols {
+    max-width: none;
+}
 
 table td.oRight {
     text-align: right;
