@@ -2,7 +2,6 @@
  <p> digitare ad esempio la parola energia</p>
 <div class="bordered mb-4">
   <form class="form-grid needs-validation" novalidate>
-  
     <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Autocomplete a caricamenti successivi</label>
         <div class="input-group autocomplete">
@@ -31,8 +30,7 @@
       <div class="modal-body">
          <p>testo ancora da verificare</p>
       </div>
-     
-    </div>
+     </div>
   </div>
 </div>
 
@@ -153,7 +151,6 @@ inputAutocomplete.on("blur", function(){
 
 
 //alla chiusura del modal resetto l'autocomplete
-
 $("#modalAutoComplete").on('hidden.bs.modal', function (e) {
   inputAutocomplete.val('');
 });
@@ -260,7 +257,6 @@ inputAutocomplete.autocomplete({
       }) 
        
       },
-      
       close: function(event,ui) {
          $(".menu-bottom").hide();
          isOpenMenu = false;
@@ -275,8 +271,4 @@ inputAutocomplete.autocomplete({
     else
         return false;    
 };
-
-
-
-
 </script>

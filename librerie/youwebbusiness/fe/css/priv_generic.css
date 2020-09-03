@@ -3768,6 +3768,10 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   cursor: pointer;
 }
 
+.ui-widget-content.ui-autocomplete .selected {
+  color: red !important;
+}
+
 .form-control.ui-autocomplete-input {
   border-right: 0;
   margin-bottom: 0;
