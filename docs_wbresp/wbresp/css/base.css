@@ -1524,20 +1524,16 @@ img.fullwidth {
 }
 
 #nav-apple-link,
-#nav-google-link,
-#nav-appgallery-link
+#nav-google-link
 {
     position: absolute;
     left: 260px;
-    top: -55px;
+    top: -10px;
     width: 180px
-}
-#nav-apple-link {
-    top: -14px
 }
 
 #nav-google-link {
-    top: 29px
+    top: 30px
 }
 
 
@@ -1695,11 +1691,6 @@ img.fullwidth {
     position: relative;
     z-index: 5;
     width: 100%;
-}
-
-.dropdown-large-view .bottomLink {
-    position:absolute;
-    bottom:25px;
 }
 
 .dropdown-large-view .dright img {
@@ -2491,18 +2482,13 @@ img.fullwidth {
     .dropdown .dropdown-toggle {
         padding-bottom: 31px !important
     }
-    #nav-appgallery-link {
-        left: 170px;
-        top: -81px;
-    }
-
     #nav-apple-link {
         left: 170px;
         top: -40px;
     }
     #nav-google-link {
         left: 170px;
-        top: 2px;
+        top: 1px;
     }
     .pnmnv,
     .anmnv {

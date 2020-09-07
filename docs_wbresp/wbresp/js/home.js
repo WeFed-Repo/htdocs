@@ -5,7 +5,7 @@ loadHomeVisual = function(){
 	var homeCarWrap = $("#homeCarousel").empty();
 	var homeCar = $("<div>").addClass("carousel slide").attr({"id":"myCarousel","data-ride":"carousel"});
 	// URL della promo
-	var urlCarousel = "/wbresp/html/home_carousel_202009.html";
+	var urlCarousel = "/wbresp/html/home_carousel_20181125.html";
 
 	// Carica l'html
 	$.ajax({
