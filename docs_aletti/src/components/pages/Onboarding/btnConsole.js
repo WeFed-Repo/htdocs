@@ -29,14 +29,24 @@ export default class extends Component {
         this.setState({annullamentoRiepilogoLoading: true});
         
         // Determina i parametri a seconda della richiesta pervenuta
-        getData({
-            data: {
+        let urlRequest = "annullaNonInteressato";
+        if (param === "ANNULLA_DATI_ERRATI") urlRequest = "annullaDatiErrati";
+        if (nuovapratica && nuovapratica===true) urlRequest += "Duplica";
 
-            },
+        let url = {"svil":"/json_data/onboarding/annullamentoBozza.json",
+            "prod": "/promotori/onboarding/rest/bozze/bozze/"+ this.props.formprops.obstate.field_id +"/" + urlRequest}
+
+        getData({
+            url: url,
+            method: "GET",
             success: (data) => {
-                this.setState({annullamentoRiepilogoLoading: false});
                  //redirect finale a valle della chiamata (se nuova pratica è attivo posiziona sulla nuova pratica, altrimenti rimanda alle varie bozze)
-                window.location.href= (nuovapratica && nuovapratica===true) ? "/onboarding/XXX": "/gestionebozze";
+                let redirectLocation = "/gestionebozze";
+                if  (nuovapratica && nuovapratica===true) {
+                    let pratica = data && data.results;
+                    redirectLocation = "/onboarding/" + pratica;
+                }
+                window.location.href = redirectLocation;
             },
             error: ()=> {
                 alert("Si e' verificato un errore bloccante.")
