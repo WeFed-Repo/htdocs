@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import getData from "functions/getData";
 import { getNextState, getPrevState, getPrevInt } from "./common/gestioneStati";
 /* 
 
@@ -23,13 +24,25 @@ export default class extends Component {
         modalBack: false
     }
 
+    // Funzione per annullamento
     annullamentoRiepilogoFunction = (param, nuovapratica)=> {
         this.setState({annullamentoRiepilogoLoading: true});
-        alert(param)
-        this.setState({annullamentoRiepilogoLoading: false});
+        
+        // Determina i parametri a seconda della richiesta pervenuta
+        getData({
+            data: {
 
-        //redirect finale a valle della chiamata (se nuova pratica è attivo posiziona sulla nuova pratica, altrimenti rimanda alle varie bozze)
-        window.location.href= (nuovapratica && nuovapratica===true) ? "/onboarding/XXX": "/gestionebozze";
+            },
+            success: (data) => {
+                this.setState({annullamentoRiepilogoLoading: false});
+                 //redirect finale a valle della chiamata (se nuova pratica è attivo posiziona sulla nuova pratica, altrimenti rimanda alle varie bozze)
+                window.location.href= (nuovapratica && nuovapratica===true) ? "/onboarding/XXX": "/gestionebozze";
+            },
+            error: ()=> {
+                alert("Si e' verificato un errore bloccante.")
+            }
+        })
+       
     }
 
 
@@ -184,7 +197,7 @@ export default class extends Component {
                                                     <ModalHeader>Conferma abbandono pratica</ModalHeader>
                                                     <ModalBody>
                                                         <p>Procedendo senza l'identificazione la pratica verrà annullata.<br />
-                                            Proseguire?</p>
+                                                        Proseguire?</p>
                                                         <div className="btn-console">
                                                             <div className="btn-console-left">
                                                                 <Button color="secondary" onClick={() => {
