@@ -6284,7 +6284,7 @@ section{margin-bottom:20px;}
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close,
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close:hover,
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close.ui-state-hover
- {background-image:none!important;background-color:#fff!important;position:absolute;top:20px!important;right:30px; color:#202d50;border:solid 2px #202d50!important;border-radius:50%; width:24px; height:24px;z-index:3;}
+ {background-image:none!important;background-color:#fff!important;position:absolute;top:20px!important;padding:0;right:30px; color:#202d50;border:solid 2px #202d50!important;border-radius:50%; width:24px; height:24px;z-index:3;}
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close,
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close.ui-state-hover,
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-titlebar-close:hover
