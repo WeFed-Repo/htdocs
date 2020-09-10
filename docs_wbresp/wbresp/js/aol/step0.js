@@ -87,7 +87,8 @@ $(function() {
 
                 "informativaKO": {
                     "required": true
-                },
+                }
+				/*,
 
                 "consDatiPersonali": {
                     "required": true
@@ -99,8 +100,8 @@ $(function() {
 
                 "cons_6": {
                     "required": true
-                }
-                /*,
+                }*/
+                ,
                 "consGruppo": {
                     "required": true
                 },
@@ -115,7 +116,7 @@ $(function() {
                 },
                 "consDatiSens": {
                     "required": true
-                }*/
+                }
                 
             },
             "messages": {
@@ -169,7 +170,7 @@ $(function() {
                     "required": "Clicca sul link per aprire l'informativa"
                 },
 
-                "consDatiPersonali": {
+                /*"consDatiPersonali": {
                     "required": "Seleziona"
                 },
 
@@ -178,6 +179,25 @@ $(function() {
                 },
 
                 "cons_6": {
+                    "required": "Seleziona"
+                }*/
+				"consGruppo": {
+                    "required": "Seleziona"
+                },
+
+                "consProf": {
+                    "required": "Seleziona"
+                },
+				
+				"consCommTerz": {
+                    "required": "Seleziona"
+                },
+
+                "consDatiTerz": {
+                    "required": "Seleziona"
+                },
+
+                "consDatiSens": {
                     "required": "Seleziona"
                 }
             }
