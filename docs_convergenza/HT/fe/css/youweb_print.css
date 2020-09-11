@@ -1,0 +1,9 @@
+/* Prototipo forzature di stampa riservate a youweb */
+header, footer {display:none !important}
+body::before {
+    content: url(/HT/fe/img/logo_youweb.png);
+    position:absolute;
+    width:80px;
+    top:0;
+    right:0;
+}

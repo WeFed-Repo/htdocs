@@ -1,6 +1,7 @@
-@import url("/HT/fe/css/ie10-viewport.css");
+﻿@import url("/HT/fe/css/ie10-viewport.css");
 @import url("/HT/fe/css/bootstrap.height.plugin.css");
 @import url("/HT/fe/css/jquery-ui_ng.min.css");
+@import url("/HT/fe/css/youweb_print.css") print;
 
 html {
     height: 100%;

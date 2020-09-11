@@ -540,6 +540,6 @@ body.modal-print > .modal-print-content {
     padding: 16px;
 }
 /*** FINE - STAMPA MODALI ESTINZIONE CARTE ***/
-
 /* Tabelle "scrollabili" */
+table tfoot{display:table-row-group;}
 .bootstrap-table .fixed-columns {display: none !important}
