@@ -5,6 +5,9 @@
 <script type="text/javascript" src="/HT/fe/js/script/dashboard_graph.js"></script>
 <!-- LOADER SCRIPT PAR-TEC -->
 <script type="text/javascript" src="/common/fe/js/trading_loader.js"></script>
+<script type="text/javascript">
+	$(document).on("isTolLoaded",function(){alert("tol loaded")})
+</script>
 <div id="dbgraphwrapper">
 	<!-- CONSOLE DEL GRAFICO -->
 	<div id="dbgraphconsole">
