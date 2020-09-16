@@ -3754,7 +3754,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   background-color: white;
   max-height: 200px;
   overflow-y: auto;
-  width: 500px;
+  width: 80% !important;
   padding: 10px;
   border: 1px solid #DDDDDD;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -3799,7 +3799,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border: 1px solid #DDDDDD;
-  width: 503px;
+  width: 80%;
   z-index: 100;
 }
 #wrapper-ul-autocomplete .menu-bottom a {
@@ -3810,6 +3810,15 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   text-decoration: underline;
 }
 
+@media (max-width: 576px) {
+  #wrapper-ul-autocomplete .menu-bottom {
+    height: auto;
+  }
+  #wrapper-ul-autocomplete .menu-bottom .action-link {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
 td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   opacity: 0.3;
 }

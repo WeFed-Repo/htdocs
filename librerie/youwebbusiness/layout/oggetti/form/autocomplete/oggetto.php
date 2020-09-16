@@ -2,7 +2,7 @@
  <p> digitare ad esempio la parola energia</p>
 <div class="bordered mb-4">
   <form class="form-grid needs-validation" novalidate>
-    <div class="form-group col-sm-6 col-md-3">
+    <div class="form-group col-sm-6 col-md-6">
         <label class="control-label">Autocomplete a caricamenti successivi</label>
         <div class="input-group autocomplete">
           <input id="autocompleteCs" type="text" class="form-control ui-autocomplete-input" role="menu" autocomplete="off">
@@ -29,6 +29,9 @@
       </div>
       <div class="modal-body">
          <p>testo ancora da verificare</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
      </div>
   </div>
@@ -154,6 +157,7 @@ inputAutocomplete.on("blur", function(){
 $("#modalAutoComplete").on('hidden.bs.modal', function (e) {
   inputAutocomplete.val('');
 });
+
 //AUTOCOMPLETE
 inputAutocomplete.autocomplete({
     minLength: 0, // numero di lettere dopo il quale si apre la tendina adeguare a valore opportuno
@@ -242,6 +246,10 @@ inputAutocomplete.autocomplete({
            NmaxRis = 20;
            }
       }) 
+      $(window).on("resize", function() {
+        readyToClose = true;
+        inputAutocomplete.autocomplete("close");
+      }) 
       //mostro il testo bottom solo dopo l'apertura del menu
       $(".menu-bottom").show();
 
@@ -271,4 +279,6 @@ inputAutocomplete.autocomplete({
     else
         return false;    
 };
+
+
 </script>
