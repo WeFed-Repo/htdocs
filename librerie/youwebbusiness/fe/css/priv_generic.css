@@ -3750,6 +3750,11 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   background: #FFFFFF url(../../fe/img/form_select.gif) no-repeat right center;
 }
 
+.is-invalid + .ui-button.ui-combobox-button.dropdown-arrow {
+  border: solid 1px #dc3545;
+  border-left: 0;
+}
+
 .ui-widget-content.ui-autocomplete {
   background-color: white;
   max-height: 200px;
