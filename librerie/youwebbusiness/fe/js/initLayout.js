@@ -18,27 +18,30 @@ $(window).resize(function () {
 });
 
 // INIT ELEMENTI
-
 function initHeader() {
+
     /* Scrolling header su desktop */
-    $(window).on("ready load scroll resize", function () {
-        var st = $(window).scrollTop();
-        if (st > 70) {
-            if (scrollpx < st) {
-                if (!bd.hasClass("scroll-down")) {
-                    bd.removeClass("scroll-up").addClass("scroll-down");
+    if(!$("header").hasClass("librerie")) {
+
+        $(window).on("ready load scroll resize", function () {
+            var st = $(window).scrollTop();
+            if (st > 70) {
+                if (scrollpx < st) {
+                    if (!bd.hasClass("scroll-down")) {
+                        bd.removeClass("scroll-up").addClass("scroll-down");
+                    }
                 }
-            }
-            else {
-                if (!bd.hasClass("scroll-up")) {
-                    bd.removeClass("scroll-down").addClass("scroll-up");
+                else {
+                    if (!bd.hasClass("scroll-up")) {
+                        bd.removeClass("scroll-down").addClass("scroll-up");
+                    }
                 }
+            } else {
+                bd.removeClass("scroll-up scroll-down");
             }
-        } else {
-            bd.removeClass("scroll-up scroll-down");
-        }
-        scrollpx = st;
-    });
+            scrollpx = st;
+        });
+    }
 }
 
 function initTabs() {

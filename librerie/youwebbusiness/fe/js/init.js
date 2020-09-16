@@ -1,7 +1,6 @@
 /* Dichiarazioni  globali */
 var bd, scrollpx, positionStep = 50;
 
-
 /* Inizializzazioni */
 $(function () {
     /* inizializzazione oggetti "generici" */
