@@ -3533,6 +3533,7 @@ label img.imgSrv{
 		color: #444;
 		font-size: 0.75em;
 		font-weight: normal;
+		padding-left:10px;
 	}
 
 	div#canvasContainer{
@@ -8476,4 +8477,7 @@ p.note {font-size:12px; font-weight:300;}
     width: 96%;
     height: 96%;
 }
-
+/* CLASSE AGGIUNTA PER SETTARE LARGHEZZA MASSIMA DEL GRAFICO*/
+.widget-sintesi-chart-wrapper {
+	max-width: 325px;
+}

@@ -158,14 +158,14 @@ p, ol, ul, hr, table, form {
 
 /* Elementi specifici */
 
-.panel-body form:last-child {
+.panel-body form:last-child { 
     @extend .marginBottomNone;
 }
 
-.panel-body .note .icon-update {
+/*.panel-body .note .icon-update {
     display: inline-block;
     transform: translate(0,-4px);
-}
+}*/
 
 .control-label, .form-group .pin_testo {
     @extend .marginBottomNano;
