@@ -1,0 +1,57 @@
+// componente con freccine di scroll orizzontale
+
+.clickScroll-container {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+  @include invisibleScroll();
+  @include clearFix();
+  .clickScroll-overflow {
+    @include clearFix();
+    @include invisibleScroll();
+    overflow: auto;
+    -ms-overflow-style: none !important;
+    width: 100%;
+    display: block;
+  }
+  .clickScroll {
+    width: auto !important;
+    float: left;
+    clear: both;
+    @include invisibleScroll();
+    display: block;
+  	word-break: keep-all;
+  	white-space: nowrap;
+    > * {
+    	display: inline-block !important;
+    }
+  }
+  // di default nascondo le freccine
+  .clickScroll-arrow { display: none; }
+  // in caso di scroll attivo, mostro le freccine e modifico il padding del padre
+  &.scroll-active {
+    overflow-x: auto;
+    padding: 0 30px;
+    .clickScroll-arrow {
+      display: block !important;
+      position: absolute;
+      top:3px;
+      cursor: pointer;
+      @include icon {
+        @include svg-icon-color($greenLink);
+        margin:0;
+      }
+      &:hover {
+        @include icon { @include svg-icon-color($greenMenu); }
+      }
+      &.left { left:5px; }
+      &.right { right:5px; }
+    }
+  }
+}
+
+.clickScroll-IE {
+	width: 100% !important;
+	max-width: calc( 100vw - 2rem ) !important;
+  @include invisibleScroll();
+}

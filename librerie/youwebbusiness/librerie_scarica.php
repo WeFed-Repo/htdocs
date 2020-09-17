@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="it" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		
 		<title>Librerie YouBusiness</title>
-
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		
 		<link href="./librerie/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" >
@@ -70,12 +68,15 @@
             $("#filetodownload").empty();
             $.each(filelist,function(i,v){
                 $.ajax({
+                    
                     url: "librerie_download_file.php",
                     datatype: "json",
                     method: "post",
+
                     data: {
                         localurl: v
                     },
+
                     success: function(data){
                         if (data.esito === "ok" ) {
                             $("#filetodownload").append(v + " ---> <b>"+data.msg+"</b></br>")

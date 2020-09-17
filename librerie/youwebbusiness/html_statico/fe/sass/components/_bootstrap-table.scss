@@ -1,0 +1,175 @@
+// BOOTSTRAP TABLE PLUGIN REWRITE
+
+.bootstrap-table {
+  margin: 0 -1rem;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .fixed-table-loading {
+    display: none;
+  }
+  table, .table {
+    border-collapse: collapse;
+    margin-bottom: 0 !important;
+    border-left: none;
+    border-right: none;
+    &.table-padded {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: calc( 100% - 2em );
+      border-left: solid 1px $gray7;
+      border-right: solid 1px $gray7;
+    }
+    tbody, thead {
+      th, td {
+        padding: 1rem 0.5rem !important;
+        &:first-child { padding-left: 1rem!important; }
+        &:last-child { padding-right: 1rem!important; }
+        &.left { text-align: left; }
+        &.right { text-align: right; }
+        &.center { text-align: center; }
+        &.hidden {display:none;}
+        &.small-width { width: 10px;}
+        &.bs-checkbox {
+          padding-top: 0!important;
+          padding-bottom: 0!important;
+        }
+      }
+      .no-records-found td {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        text-align: center;
+      }
+    }
+    thead {
+      background-color: $greenLink;
+      th {
+        color: $white;
+        font-size: 14px;
+        font-weight: normal;
+        border: none !important;
+        vertical-align: middle !important;
+        min-height: 60px;
+        white-space: nowrap;
+        .th-inner {
+          display: inline-block;
+          &.sortable {
+            background: transparent url(../../fe/img/table_order.png) no-repeat right center;
+            padding-right: 1.5rem;
+            cursor: pointer;
+            &.asc { background-image: url(../../fe/img/table_order_asc.png); }
+            &.desc { background-image: url(../../fe/img/table_order_desc.png); }
+          }
+        }
+        // casi particolari per larghezze colonne di particolari tabelle
+        &[data-field="riferimento"] { width: 48%; } // pagina documenti online
+      }
+    }
+    tbody tr {
+      background-color: $white;
+      border: none;
+      border-bottom: solid 1px $gray7;
+      td {
+        color: $grayMid;
+        min-height: 60px;
+        vertical-align: middle !important;
+        a.dropdown-item {
+          color: $grayMid;
+          text-decoration: none;
+        }
+        a:not(.dropdown-item) {
+          color: $greenLink;
+          text-decoration: underline;
+        }
+        .negativo {
+          color: $error !important;
+        }
+        .largeFieldText {
+          min-width: 130px;
+          @media (max-width:$bp_md_max) {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+  }
+  .table-striped {
+    > tbody {
+      > tr {
+        background-color: $white;
+        transition: background-color 0.1s;
+        &:nth-of-type(even) {
+          background-color: $tableStriped !important;
+        }
+        &:nth-of-type(odd) {
+          background-color: $white !important;
+        }
+        td {
+          border: none !important;
+        }
+      }
+    }
+    &.table-striped-double {
+      > tbody {
+        > tr {
+          &:nth-of-type(odd),
+          &:nth-of-type(even) {
+            border-bottom: none;
+            background-color: $white !important;
+          }
+          &:nth-of-type(4n+3),
+          &:nth-of-type(4n+4) {
+            background-color: $tableStriped !important;
+          }
+          &:nth-of-type(4n+2),
+          &:nth-of-type(4n+4) {
+            border-bottom: solid 1px $gray7 !important;
+          }
+          &:nth-of-type(4n+1),
+          &:nth-of-type(4n+3) {
+            border-top: none !important;
+          }
+        }
+      }
+    }
+  }
+  .table-show-hidden {
+    tbody, thead {
+      th, td {
+        &.hidden {
+          display:table-cell;
+        }
+      }
+    }
+  }
+}
+
+.table-hovered tr:hover td {
+  background: $greenLighter !important;
+}
+
+.table-hasScrollbar-wrapper {
+  position: relative;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:after {
+    content: '';
+    display: block;
+    @include linear-gradient(90deg, rgba( $black,0) 0%, rgba( $black,0.1) 100%);
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .bootstrap-table table:not(.table-padded) {
+    border-right: none !important;
+  }
+}

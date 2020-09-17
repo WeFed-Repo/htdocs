@@ -1,0 +1,300 @@
+@charset 'utf-8';
+
+@function unicode($str) {
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../fe/font/icomoon.eot?re3jm0');
+  src:  url('../../fe/font/icomoon.eot?re3jm0#iefix') format('embedded-opentype'),
+    url('../../fe/font/icomoon.ttf?re3jm0') format('truetype'),
+    url('../../fe/font/icomoon.woff?re3jm0') format('woff'),
+    url('../../fe/font/icomoon.svg?re3jm0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+  @include icon-font-family();
+}
+
+.icon {
+  display:inline-block;
+  @include svg-icon-size(20px);
+}
+
+img.icon {
+  display:inline-block;
+  margin-top: -3px;
+  @include svg-icon-size(24px);
+}
+
+.icon-svg {
+  display:inline-block;
+  margin-right:5px;
+  @include svg-icon-size(24px);
+  //margin-top: 2px;
+}
+
+.icon-format {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.icon-span {
+  margin: 0.5em 0.5em 0 0;
+  float: left;
+  text-decoration: underline;
+  font-family: 'roboto', sans-serif !important;
+}
+
+.icon-check {
+  margin-top: 0.2em !important;
+}
+
+// INCOLLARE I FONT ICONICI DA QUI IN AVANTI
+
+.icon-ico_dispositiva:before {
+  content: unicode("e94d");
+}
+.icon-ico_mail:before {
+  content: unicode("e94e");
+}
+.icon-ico_setting:before {
+  content: unicode("e948");
+}
+.icon-ico_logout:before {
+  content: unicode("e949");
+}
+.icon-ico_profilo:before {
+  content: unicode("e94a");
+}
+.icon-icon_setting_utente:before {
+  content: unicode("e94b");
+}
+.icon-ico_alert:before {
+  content: unicode("e94c");
+}
+.icon-icona_alert_small:before {
+  content: unicode("e946");
+}
+.icon-ico_profilo_small:before {
+  content: unicode("e947");
+}
+.icon-mail_closed:before {
+  content: unicode("e944");
+}
+.icon-mail_opened:before {
+  content: unicode("e945");
+}
+.icon-ico_il_tuo_profilo:before {
+  content: unicode("e943");
+}
+.icon-ico_bollo_auto:before {
+  content: unicode("e934");
+}
+.icon-calendario_left:before {
+  content: unicode("e935");
+}
+.icon-calendario_right:before {
+  content: unicode("e936");
+}
+.icon-ico_domiciliazioni:before {
+  content: unicode("e937");
+}
+.icon-grafico_portafoglio:before {
+  content: unicode("e938");
+}
+.icon-ico_i_tuoi_vincoli:before {
+  content: unicode("e939");
+}
+.icon-listato_portafoglio:before {
+  content: unicode("e93a");
+}
+.icon-posta_dash:before {
+  content: unicode("e93b");
+}
+.icon-riepilogo_conto_iban:before {
+  content: unicode("e93c");
+}
+.icon-ico_saldo_a_data:before {
+  content: unicode("e93d");
+}
+.icon-ico_svincola:before {
+  content: unicode("e93e");
+}
+.icon-titoli_pref_down:before {
+  content: unicode("e93f");
+}
+.icon-titoli_pref_equal:before {
+  content: unicode("e940");
+}
+.icon-titoli_pref_up:before {
+  content: unicode("e941");
+}
+.icon-ico_vincola_partite:before {
+  content: unicode("e942");
+}
+.icon-aggiorna:before {
+  content: unicode("e900");
+}
+.icon-ico_riepilogo_alert:before {
+  content: unicode("e901");
+}
+.icon-ico_gestione_beneficiari:before {
+  content: unicode("e902");
+}
+.icon-ico_bollettini_postali:before {
+  content: unicode("e903");
+}
+.icon-ico_bonifico_sepa:before {
+  content: unicode("e904");
+}
+.icon-ico_calendario:before {
+  content: unicode("e905");
+}
+.icon-ico_carte:before {
+  content: unicode("e906");
+}
+.icon-ico_carte_movimenti:before {
+  content: unicode("e907");
+}
+.icon-ico_carte_pannello_controllo:before {
+  content: unicode("e908");
+}
+.icon-ico_carte_cambio_pin:before {
+  content: unicode("e909");
+}
+.icon-ico_carte_ricarica:before {
+  content: unicode("e90a");
+}
+.icon-ico_carte_scarica:before {
+  content: unicode("e90b");
+}
+.icon-ico_gestione_contatti:before {
+  content: unicode("e90c");
+}
+.icon-ico_conti_depositi:before {
+  content: unicode("e90d");
+}
+.icon-ico_conto:before {
+  content: unicode("e90e");
+}
+.icon-documento:before {
+  content: unicode("e90f");
+}
+.icon-ico_pagamento_f24:before {
+  content: unicode("e910");
+}
+.icon-ico_finanziamenti:before {
+  content: unicode("e911");
+}
+.icon-arrow_right:before {
+  content: unicode("e912");
+}
+.icon-arrow_down:before {
+  content: unicode("e913");
+}
+.icon-arrow_up:before {
+  content: unicode("e914");
+}
+.icon-arrow_left:before {
+  content: unicode("e915");
+}
+.icon-ico_coordinate_iban:before {
+  content: unicode("e916");
+}
+.icon-ico_indici_mercati:before {
+  content: unicode("e917");
+}
+.icon-ico_investimenti:before {
+  content: unicode("e918");
+}
+.icon-logout:before {
+  content: unicode("e919");
+}
+.icon-ico_bollettino_mav:before {
+  content: unicode("e91a");
+}
+.icon-meno:before {
+  content: unicode("e91b");
+}
+.icon-menu:before {
+  content: unicode("e91c");
+}
+.icon-mostra:before {
+  content: unicode("e91d");
+}
+.icon-ico_saldo_movimenti:before {
+  content: unicode("e91e");
+}
+.icon-movimenti_42:before {
+  content: unicode("e91f");
+}
+.icon-nascondi:before {
+  content: unicode("e920");
+}
+.icon-ico_elenco_news:before {
+  content: unicode("e921");
+}
+.icon-ico_gestione_patrimoniale:before {
+  content: unicode("e922");
+}
+.icon-piu:before {
+  content: unicode("e923");
+}
+.icon-ico_posta_arrivo:before {
+  content: unicode("e924");
+}
+.icon-ico_archivio_posta:before {
+  content: unicode("e925");
+}
+.icon-ico_rapporti_predefiniti:before {
+  content: unicode("e926");
+}
+.icon-ico_bollettino_rav:before {
+  content: unicode("e927");
+}
+.icon-ico_ricariche_cellulare:before {
+  content: unicode("e928");
+}
+.icon-settings:before {
+  content: unicode("e929");
+}
+.icon-ico_titoli:before {
+  content: unicode("e92a");
+}
+.icon-ico_ordini_movimenti_titoli:before {
+  content: unicode("e92b");
+}
+.icon-ico_titoli_dossier:before {
+  content: unicode("e92c");
+}
+.icon-ico_portafoglio_simulato_titoli:before {
+  content: unicode("e92d");
+}
+.icon-ico_trasferimento_tra_conti:before {
+  content: unicode("e92e");
+}
+.icon-ico_ultime_disposizioni:before {
+  content: unicode("e92f");
+}
+.icon-user:before {
+  content: unicode("e930");
+}
+.icon-user_mobile:before {
+  content: unicode("e931");
+}
+.icon-ico_youshop:before {
+  content: unicode("e932");
+}
+.icon-ico_youwin:before {
+  content: unicode("e933");
+}
+.icon-icona_alert:before {
+  content: unicode("e946");
+}
+.icon-icona_profilo:before {
+  content: unicode("e947");
+}

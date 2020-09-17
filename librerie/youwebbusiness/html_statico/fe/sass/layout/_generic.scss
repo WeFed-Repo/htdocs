@@ -1,0 +1,456 @@
+* {
+  &:hover, &:focus, &:active {
+    outline: none !important;
+  }
+}
+
+// LINKS
+a:not(.btn) {
+  color: $greenLink;
+  //text-decoration: none;
+  text-decoration: underline;
+  cursor:pointer;
+  color: $greenLink;
+  //text-decoration: none;
+  &:not([class*="btn"]) {
+    text-decoration: underline;
+  }
+  @include icon {
+    @include svg-icon-color($greenLink);
+    line-height: 1em;
+    top: 0;
+    display: inline-block;
+    left: 0;
+    margin: 0 0.5em 0 0;
+    padding: 0;
+    //transform: translate(0, 30%);
+    //@include svg-icon-size(1em); assolutamente NO!
+    //transform: translate(0.1em, 0.1em) scale(1.5); NO NO NO
+    float: left; // TEST. DA CONTROLLARE E VALIDARE.
+  }
+  &:hover {
+    color: $green;
+    text-decoration: underline;
+    @include icon {
+      @include svg-icon-color($green);
+    }
+  }
+  &.disabled,
+  &[disabled] {
+    &, &:hover {
+      color: $gray3;
+      text-decoration: none;
+      cursor: default;
+      @include icon {
+        @include svg-icon-color($gray3);
+      }
+    }
+  }
+}
+
+// fallback per text decoration
+.text-decoration-none,
+a.text-decoration-none,
+a:not(.btn):not([class*="btn"]).text-decoration-none {
+  text-decoration: none;
+}
+
+img { border: 0; }
+
+.fl-right {
+  float: right;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Elementi strutturali */
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  &:after {
+    content: ' ';
+    display: table;
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 0px;
+  }
+}
+
+.separator {
+  width: 1px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  &:after {
+    content: '';
+    display: block;
+    border-left: dashed 1px $grayBordered;
+    width: 1px;
+    height: 100%;
+    border-left: dashed 1px $grayBordered;
+  }
+}
+
+.o-separator-line {
+  width: 100%;
+  height: 1px;
+  border-bottom: solid 2px $gray4;
+}
+
+// icone nei titoli
+h1, h2 {
+  @include icon {
+    // @include svg-icon-size(16px); // VERIFICARE
+    // transform: translate(0px, 6px); // VERIFICARE
+    @include svg-icon-size(24px);
+    @include svg-icon-color($green);
+    margin-right: $spacer/2;
+  }
+}
+
+/* Contenuti */
+
+h1 {
+  font-size: 22px;
+  font-weight: bold !important;
+  padding: 0;
+  margin: 0 0 15px;
+  color: $gray2;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 15px;
+  color: $gray2;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: $green;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: $gray2;
+}
+
+section {
+  margin-bottom: 16px;
+}
+
+p, ul, ol {
+  color: $gray2;
+}
+
+ol {
+  padding-left: 2rem;
+}
+
+.bordered {
+  @include bordered();
+  >.row {
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+@media (max-width: $bp_md_max) {
+  .separator {
+    width: 100%;
+    position: relative;
+    margin: 1rem 0 ;
+    height: 1px;
+    &:after {
+      border-left: 0;
+      border-top: solid 1px $gray4;
+      height: 1px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $bp_lg_max) {
+  .separator.separator--enable-lg {
+    width: 100%;
+    position: relative;
+    margin: 1rem 0 ;
+    height: 1px;
+    &:after {
+      border-left: 0;
+      border-top: solid 1px $gray4;
+      height: 1px;
+      width: 100%;
+    }
+  }
+}
+
+dl, .list {
+  color: $gray2;
+  padding: 0;
+  margin: 0;
+  // old solution
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+  // validate solution
+  display: table;
+  width: 100%;
+
+  dt, &-key {
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+    // validate solution
+    float:left;
+    clear:left;
+  }
+  dd, &-value {
+    text-align: right;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+    // validate solution
+    float:right;
+    clear:right;
+    word-break: break-all;
+  }
+  dt, dd, &-key, &-value {
+    &.full-w {
+      width: 100%;
+      flex-basis: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-primary { color: $greenLink !important;
+  @include icon {
+    @include svg-icon-color($greenLink);
+  }
+}
+.text-secondary { color: $gray2 !important;
+  @include icon {
+    @include svg-icon-color($gray2);
+  }
+}
+
+.display-icon {
+  width: 65px;
+  min-width: 65px;
+  height: auto;
+}
+
+.big-icon {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+}
+
+.ellipsed {
+  @include ellipsed();
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.text-primary {
+  color: $green !important;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-size-11 {
+  font-size: 1.1rem;
+}
+
+.font-size-12 {
+  font-size: 1.2rem;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+/* NOTE: sono state create le classi flex-order-* perchè le classi di bootstrap order-* funzionano solo all'interno di strutture row/cols. */
+.flex-order {
+  &-1 { order: 1 !important; }
+  &-2 { order: 2 !important; }
+  &-3 { order: 3 !important; }
+  &-4 { order: 4 !important; }
+  &-5 { order: 5 !important; }
+  &-6 { order: 6 !important; }
+  @media (min-width:$bp_sm_min) {
+    &-sm {
+      &-1 { order: 1 !important; }
+      &-2 { order: 2 !important; }
+      &-3 { order: 3 !important; }
+      &-4 { order: 4 !important; }
+      &-5 { order: 5 !important; }
+      &-6 { order: 6 !important; }
+    }
+  }
+  @media (min-width:$bp_md_min) {
+    &-md {
+      &-1 { order: 1 !important; }
+      &-2 { order: 2 !important; }
+      &-3 { order: 3 !important; }
+      &-4 { order: 4 !important; }
+      &-5 { order: 5 !important; }
+      &-6 { order: 6 !important; }
+    }
+  }
+  @media (min-width:$bp_lg_min) {
+    &-lg {
+      &-1 { order: 1 !important; }
+      &-2 { order: 2 !important; }
+      &-3 { order: 3 !important; }
+      &-4 { order: 4 !important; }
+      &-5 { order: 5 !important; }
+      &-6 { order: 6 !important; }
+    }
+  }
+  @media (min-width:$bp_xl_min) {
+    &-xl {
+      &-1 { order: 1 !important; }
+      &-2 { order: 2 !important; }
+      &-3 { order: 3 !important; }
+      &-4 { order: 4 !important; }
+      &-5 { order: 5 !important; }
+      &-6 { order: 6 !important; }
+    }
+  }
+}
+
+/*
+NOTE: La classe .content-hidden-in-mobile
+      serve ad impedire all'utente  di "stringere"
+      la pagina e sfasciare il sito in caso,
+      su desktop, ridimensioni la finestra.
+*/
+
+.content-hidden-in-mobile {
+  @media (max-width:$bp_md_max) {
+    //min-width: calc( #{$bp_md_min} - #{$spacer*2} );
+    min-height: calc( 100vh - #{$footerHeight_md_max} );
+    overflow: auto;
+    position: relative;
+    background: rgba(0,0,0,0.5);
+    padding: $spacer;
+    &:before,
+    &:after {
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    &:before {
+      content: 'Contenuto non disponibile per mobile.';
+      font-weight: bold;
+    }
+    &:after {
+      content: 'Usare un device con uno schermo più grande o allargare la finestra del browser.';
+    }
+    * {
+      position: absolute !important;
+      top: -999999px !important;
+      left: -999999px !important;
+      display: none !important;
+      visibility: hidden !important;
+      opacity: o !important;
+    }
+  }
+}
+
+.no-user-select {
+  @include no_user_select();
+}
+
+.text-break {
+  word-break: break-all !important;
+  overflow-wrap: break-all !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// ICONE PER LIBRERIA
+
+.icon-demo {
+  background: $white;
+  border: solid 1px $grayBordered;
+  color: $gray1;
+  display:inline-block;
+  width:auto;
+  margin: 0 1rem 0 0;
+  padding: 5px;
+  @include icon {
+    @include svg-icon-color($gray1);
+    @include svg-icon-size(20px);
+  }
+}
+
+// WIDTH AUTO
+.w-auto { width:auto !important; }
+@media (min-width:$bp_sm_min) { .w-sm-auto { width:auto !important; } }
+@media (min-width:$bp_md_min) { .w-md-auto { width:auto !important; } }
+@media (min-width:$bp_lg_min) { .w-lg-auto { width:auto !important; } }
+@media (min-width:$bp_xl_min) { .w-xl-auto { width:auto !important; } }
+
+// WIDTH 100
+@media (min-width:$bp_sm_min) { .w-sm-100 { width:100% !important; } }
+@media (min-width:$bp_md_min) { .w-md-100 { width:100% !important; } }
+@media (min-width:$bp_lg_min) { .w-lg-100 { width:100% !important; } }
+@media (min-width:$bp_xl_min) { .w-xl-100 { width:100% !important; } }
+
+// FLEX WRAP
+@media (min-width:$bp_sm_min) { .flex-sm-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_md_min) { .flex-md-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_lg_min) { .flex-lg-wrap { flex-wrap: wrap !important; } }
+@media (min-width:$bp_xl_min) { .flex-xl-wrap { flex-wrap: wrap !important; } }
+
+// FLEX NO WRAP
+@media (min-width:$bp_sm_min) { .flex-sm-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_md_min) { .flex-md-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_lg_min) { .flex-lg-nowrap { flex-wrap: nowrap !important; } }
+@media (min-width:$bp_xl_min) { .flex-xl-nowrap { flex-wrap: nowrap !important; } }

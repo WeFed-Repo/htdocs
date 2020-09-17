@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>02 - icon/down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02---icon/down-arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4.48528137,0.485281374 C4.76142375,0.485281374 4.98528137,0.709138999 4.98528137,0.985281374 L4.98528137,11.4852814 L15.4852814,11.4852814 C15.7614237,11.4852814 15.9852814,11.709139 15.9852814,11.9852814 C15.9852814,12.2614237 15.7614237,12.4852814 15.4852814,12.4852814 L4.48528137,12.4852814 C4.209139,12.4852814 3.98528137,12.2614237 3.98528137,11.9852814 L3.98528137,0.985281374 C3.98528137,0.709138999 4.209139,0.485281374 4.48528137,0.485281374 Z" id="Combined-Shape" fill="#2F9988" transform="translate(9.985281, 6.485281) rotate(315.000000) translate(-9.985281, -6.485281) "></path>
+    </g>
+</svg>

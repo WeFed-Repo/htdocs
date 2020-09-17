@@ -1,0 +1,187 @@
+@mixin svg-icon-color($color) {
+  // NOTE: Lasciare questa funzione anche se commentata per non rompere SCSS
+}
+
+// Wrappa le regole con tutte le classi relative alle icone
+// REF: https://sass-lang.com/documentation/at-rules/mixin#content-blocks
+@mixin icon {
+  .icon, img[src*=".svg"], i {
+      @content; 
+  }
+}
+
+@mixin icon-img-prev($color) {
+    background-position: left center !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{encodecolor($color)}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+@mixin icon-img-next($color) {
+    background-position: right center !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{encodecolor($color)}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+@mixin icon-font-family(){
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin svg-icon-size($size) {
+  width: #{$size};
+  height: #{$size};
+  min-width: #{$size};
+  font-size: #{$size};
+  &:before {
+    display: inline-block;
+    zoom: 80%;
+    transform: translate(0, -10%);
+  }
+}
+
+// FUNZIONE DI COLORE:
+// crea dinamicamente le classi in base all'array di colori (vedere file vars.scss)
+
+@each $name, $color in $colors {
+  .color#{"-" + $name}{
+    //  create variations (if not black or white)
+    @if $color != white and $color != black {
+      color: $color;
+      @include icon {
+        @include svg-icon-color($color);
+      }
+    }
+  }
+  img.color#{"-" + $name},
+  svg.color#{"-" + $name} {
+    @include svg-icon-color($color);
+  }
+  .bkg#{"-" + $name}{
+    background-color: $color;
+  }
+}
+
+// MIXIN PER CREARE UN GRADIENTE
+// ESEMPIO DI UTILIZZO:
+// .gradiente-due-colori { @include linear-gradient(90deg, #ff0000 0%, #00ff00 50%); }
+// .gradiente-quattro-colori { @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
+
+@mixin linear-gradient($direction, $color-stops...) {
+  @if is-direction($direction) == false {
+  $color-stops: ($direction, $color-stops);
+  $direction: 180deg;
+  }
+  background: nth(nth($color-stops, 1), 1);
+  background: -moz-linear-gradient(legacy-direction($direction), $color-stops);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+  filter: linear-gradient-filter($direction, $color-stops...);
+}
+
+@mixin ellipsed() {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin invisibleScroll() {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@mixin clearFix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0px;
+    width: 100%;
+  }
+}
+
+@mixin bordered($bkg:$white,$border:$grayBordered,$color:$gray2,$allpadding:false) {
+  padding: $spacer $spacer 0;
+  background: $bkg;
+  border: solid 1px $border;
+	@if $allpadding != false {
+    padding: $spacer;
+  }
+  color: $color;
+  width: 100%;
+  max-width:100%;
+  &.no-b {
+    &-t { border-top: none;}
+    &-r { border-right: none;}
+    &-l { border-left: none;}
+    &-b { border-bottom: none;}
+  }
+}
+
+@mixin no_user_select() {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version */
+}
+
+// MIXIN DEI COLORI DEI BOTTONI COI LORO STATI
+@mixin btnPalette($color,
+                  $bkg,
+                  $bkg_hover,
+                  $color_hover: false,
+                  $border: transparent,
+                  $border_hover: false,
+                  $color_disabled:$white,
+                  $bkg_disabled:$gray4,
+                  $border_disabled: transparent) {
+  &:not(:disabled):not(.disabled) {
+    opacity: 1;
+    color: $color;
+    background-color: $bkg;
+    @if $border_hover { // applica il colore del bordo in hover solo se settato;
+      border-color: $border_hover;
+    } @else {
+      border-color: $border;
+    }
+    &.active, &:active, &:focus, &:hover {
+      background-color: $bkg_hover !important;
+      @if $color_hover { // applica il colore in hover solo se settato;
+        color: $color_hover;
+      } @else {
+        color: $color;
+      }
+    }
+    @include icon {
+      @include svg-icon-color($color);
+    }
+  }
+  &:disabled, &.disabled {
+    opacity: 1;
+    &, &:hover, &:active, &:focus {
+      color: $color_disabled !important;
+      background: $bkg_disabled !important;
+      // applica il colore del bordo solo se settato, se no prende il bordo di default
+      @if $border_disabled {
+        border-color: $border_disabled !important;
+      } @else {
+        border-color: $border !important;
+      }
+      @include icon {
+        @include svg-icon-color($color_disabled);
+      }
+    }
+  }
+}

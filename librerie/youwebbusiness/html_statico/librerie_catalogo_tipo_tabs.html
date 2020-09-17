@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+
+		<!-- HEAD DELLA STRUTTURA -->
+		<title>Banco BPM Business</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Jquery -->
+<script src="./fe/assets/jquery.min.js"></script>
+
+<!-- Jquery UI -->
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<!-- Gestione Font-awesome per formattazioni "particolari" -->
+<link rel="stylesheet" href="./fe/assets/awesome/font-awesome.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox.min.css" />
+<link rel="stylesheet" href="./fe/assets/awesome/awesome-bootstrap-checkbox-styles.min.css" />
+
+<!-- BOOTSTRAP 4 CDN (EXTERNAL VENDOR) -->
+
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script-->
+
+<script src="./fe/assets/popper.min.js"></script>
+
+<script src="./fe/assets/jquery.min.js"></script>
+<script src="./fe/assets/jquery-ui.min.js"></script>
+
+<script src="./fe/assets/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
+
+<script src="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-timepicker/bootstrap-timepicker.min.css">
+
+<link rel="stylesheet" href="./fe/assets/datepicker.css">
+
+<script src="./fe/assets/bootstrap-table.js"></script>
+<link rel="stylesheet" href="./fe/assets/bootstrap-table.css">
+
+<!-- Stili -->
+<link rel="stylesheet" href="./fe/css/priv_base.css">
+<link rel="stylesheet" href="./fe/css/priv_generic.css">
+
+<!-- Interattivita' ed inizializzazioni -->
+<script src="./fe/js/script.js"></script>
+
+<!-- INIZIALIZZAZIONI -->
+<script src="./fe/js/initLayout.js"></script>
+<script src="./fe/js/init.js"></script>
+
+<!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
+<script src="./fe/js/init_for_static_libraries.js"></script>
+<script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<!-- FINE HEAD DELLA STRUTTURA -->
+		
+		<!-- DECLINAZIONI PER LIBRERIE -->
+		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
+		<!-- FINE DECLINAZIONI PER LIBRERIE -->
+
+	</head>
+	<body>
+		<header class="librerie">
+			<div class="wrapper"> 
+				<h1><a href="./index.html" class="btn-bak">&laquo;</a> Tabs - Librerie YouBusiness</h1>
+			</div>
+		</header>
+		<div id="main" class="librerie">
+			<div class="wrapper">
+															<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">anagrafica</h2>
+																						<!-- NOTE: usare la classe .btn-white per i bottoni normali 
+     e .btn-primary per il bottone attivo -->
+
+<div class="c-anagrafica">
+    <div class="c-anagrafica__cell">
+        <button class="nav-link btn btn-white btn-small mr-1">TUTTI</button>
+    </div>
+    <div class="c-anagrafica__cell">
+        <div class="nav-tabs-container clickScroll-container">
+
+        <div class="clickScroll-overflow">
+            <ul id="anag" class="nav nav-tabs clickScroll" tm-tabs-navigator>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1 active">A</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">B</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">C</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">D</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">E</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">F</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">G</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">H</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">I</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">J</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">K</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">L</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">M</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">N</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">O</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">P</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">Q</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">R</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">S</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">T</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">U</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">V</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">W</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">Y</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">X</button></li>
+                <li class="nav-item"><button class="nav-link btn btn-white btn-small mr-1">Z</button></li>
+            </ul>
+            <a class="clickScroll-arrow left">
+                <i class="icon-arrow_left"></i>
+            </a>
+            <a class="clickScroll-arrow right">
+                <i class="icon-arrow_right"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">tabs</h2>
+																						<!--
+NOTE: Per la voce aperta di default: eliminare la classe .collapsed da card-header
+-->
+
+    <div class="nav-tabs-container clickScroll-container">
+    <div class="clickScroll-overflow">
+        <ul id="tabs" class="nav nav-tabs clickScroll " tm-tabs-navigator>
+                            <li class="nav-item">
+                        <a class="nav-link  active "
+                                                href="#.html.html">
+                            Tab Link active                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link  disabled "
+                        disabled                        href="#">
+                            Tab disabled                         </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 1                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 2                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 3                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 4                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 5                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab Link 6                        </a>
+                    </li>
+                        </ul>
+        <a class="clickScroll-arrow left">
+        <i class="icon-arrow_left"></i>
+        </a>
+        <a class="clickScroll-arrow right">
+        <i class="icon-arrow_right"></i>
+        </a>
+    </div>
+    </div>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">tabs contenuti</h2>
+																						    <div class="nav-tabs-container clickScroll-container">
+    <div class="clickScroll-overflow">
+        <ul id="tabs" class="nav nav-tabs clickScroll tabsContenuti mb-0" tm-tabs-navigator>
+                            <li class="nav-item">
+                        <a class="nav-link  active "
+                                                href="#">
+                            Tab 01                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab 02                        </a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link "
+                                                href="#">
+                            Tab 03                        </a>
+                    </li>
+                        </ul>
+        <a class="clickScroll-arrow left">
+        <i class="icon-arrow_left"></i>
+        </a>
+        <a class="clickScroll-arrow right">
+        <i class="icon-arrow_right"></i>
+        </a>
+    </div>
+    </div>
+ 										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+												</div>
+			</div>
+	</body>
+</html>

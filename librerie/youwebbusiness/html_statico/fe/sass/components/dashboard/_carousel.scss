@@ -1,0 +1,88 @@
+.dhb-carousel {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  .carousel {
+    @media (min-width:$bp_sm_min) {
+      height: $dhbMinHeight;
+    } 
+    min-height: $dhbMinHeight;
+    h4 {
+      margin: 0 2rem !important;
+      font-size: 1.2em;
+    }
+    .carousel-item-centerer {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &.dhb-carousel--banner {
+    .dhb-banner__wrapper {
+      min-height: $dhbMinHeight;
+    }
+    .carousel-indicators {
+      padding: $spacer/2 0 $spacer 0;
+      background: rgba(255,255,255,0.5);
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 15px;
+    background: $white; 
+  }
+
+
+}
+
+.dhb-arrow {
+  font-size: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items:center;
+  text-decoration: none !important;
+  &.disabled {
+    color: #ddd;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+
+/** MODIFICHE E REWRITES PER CAROUSEL DI SALDO E MOVIMENTI **/
+
+.dhb-carousel--saldo-movimenti {
+  padding-bottom: 0 !important;
+  .carousel {
+    height: $dhbMinHeightInner;
+    min-height: $dhbMinHeightInner;
+    h4 {
+      font-size: 1.2em;
+      line-height: 1.2em;
+      min-height: 2.4em;
+      max-height: 3.6em;
+      overflow: hidden;
+    }
+    h4 + a {
+      margin-top:5px;
+      margin-bottom:10px;
+      border-top: 1px solid #eee;
+    }
+    .carousel-item-centerer {
+      align-items: flex-start;
+    }
+    // NOTE: TEMPORANEO: elimina ellipsed senza toccare l'html
+    h4.ellipsed {
+      height: auto !important;
+      text-overflow: none !important;
+      white-space: normal !important;
+    }
+    // NOTE: TEMPORANEO: elimina padding-bottom senza toccare l'html
+    p.font-size-11 {
+      margin-bottom:0 !important;
+    }
+  }
+}

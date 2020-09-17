@@ -1,0 +1,144 @@
+#main.librerie > .wrapper {
+  padding: 0;
+}
+main {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+main section {
+  padding: 0.5rem 1rem 1rem 3rem;
+}
+main aside {
+  background: #eee;
+  width: 30%;
+  min-width: 150px;
+  max-width: 230px;
+  min-height: calc( 100vh - 1rem );
+  padding: 1rem 0 1rem 0.5rem;
+  position: relative;
+  line-height: 1.1em;
+}
+@media (min-width:769px) {
+  main aside { min-width: 230px; }
+}
+main nav {
+  position: sticky;
+  top: calc( 60px + 2rem );
+  left: 1rem;
+  overflow: auto;
+  max-height: calc( 100vh - 2rem );
+  z-index: 9999999999998;
+}
+main nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main nav ul li {
+  margin: 0;
+  padding: 0 0.5rem 1rem 0.5rem;
+  color: #666;
+}
+main nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+}
+main nav ul li a:hover {
+  text-decoration: underline;
+}
+main nav ul li.primary a {
+  color: #0B6B5B;
+  font-weight: bold;
+}
+main nav ul li.secondary {
+  padding-left: 1.3rem;
+}
+main nav ul li.secondary a {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: normal;
+}
+main a,
+main a:hover {
+  color: #ee9314;
+  text-decoration: underline;
+  font-weight: bold;
+}
+main b {
+  color: #0B6B5B;
+  font-style: italic;
+  font-weight: bold;
+}
+main ul {
+  margin: 0;
+  padding: 0.25em 0;
+}
+main ul li {
+  margin: 0 0 0 1em;
+  padding: 0.25em 0;
+}
+main ul li ul {
+  margin-left: 1em;
+}
+main h1, main h2 {
+  margin: 0 0 0 -1.5rem;
+  padding: 1rem 0;
+  line-height: 1.2em;
+}
+main h3, main h4, main h5, main h6 {
+  margin: 0;
+  padding: 1rem 0 0.5rem 0;
+  line-height: 1.2em;
+  font-size: 1rem;
+}
+main h1 {
+  color: #0B6B5B;
+  font-weight: bolder;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+main h2 {
+  font-weight: bolder;
+  color: #0B6B5B;
+  font-size: 1.5rem;
+}
+main h3 {
+  font-weight: bolder;
+  color: #666;
+  font-size: 1.2rem;
+}
+main code {
+  font-family: monospace;
+  background: #333;
+  color: white;
+  display: inline-block;
+  padding: 0 0.5em;
+  border: white solid 1px;
+}
+main pre code {
+  margin: 1rem 0;
+  padding: 1em;
+}
+main blockquote {
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border-left: #ddd 5px solid;
+}
+main iframe {
+  width: 100%;
+  height: 300px;
+  margin:0;
+  padding:0;
+  border: #999 1px solid;
+}
+
+main nav ul li.primary a:before,
+main nav ul li.secondary a:before,
+main h2:before,
+main h3:before {
+  display: inline;
+  content: "\00BB ";
+  padding: 0 0.25ch 0 0;
+}

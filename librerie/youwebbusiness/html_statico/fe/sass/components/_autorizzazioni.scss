@@ -1,0 +1,102 @@
+.c-autorizzazioni {
+    .accordion.bordered-style {
+        .card {
+            margin-top:2px;
+            .card-header {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                height: 100px;
+                padding: $spacer;
+                margin: 0;
+                &, &.collapsed {
+                    h5 {
+                        font-size: 1.2rem;
+                        margin:0;
+                        color: $gray2;
+                        font-weight: 500;
+                        small {
+                            margin-right: $spacer/2;
+                            margin-bottom: 0.3rem;
+                        }
+                    }
+                }
+                .count {
+                    //display: none;
+                    white-space: nowrap;
+                    flex-grow: 1;
+                    padding-left: 0.5rem;
+                    padding-right: 1rem;
+                    font-size: 1rem;
+                    color: $gray3;
+                }
+                .card-header-icon {
+                    flex-shrink: 0;
+                    border: $gray2 solid 1px;
+                    &, &:before {
+                      border-color: $gray2 !important;
+                      color: $gray2 !important;
+                      transform: translate(0,2px);
+                    }
+                }
+                &.collapsed {
+                    .card-header-icon {
+                        border: $greenLink solid 1px;
+                        &, &:before {
+                          border-color: $greenLink !important;
+                          color: $greenLink !important;
+                          transform: translate(0,2px);
+                        }
+                    }
+                }
+            }
+            .card-body {
+                padding: $spacer/2 $spacer/3 $spacer $spacer/3 ;
+                //padding: 0 $spacer/3 $spacer $spacer/3;
+                //transform: translate(0px, -#{$spacer/2});
+                .c-treeview {
+                    transition: opacity 0.3s;
+                    //opacity: 0;
+                }
+                &.collapse.show {
+                    overflow: visible;
+                    //.c-treeview { opacity: 1; }
+                }
+        }
+            //.card-body { padding-top: 0; }
+            //&.is--empty { border-top: $gray2 1px solid; }
+            &.is--partial {
+                border-top: $orange 3px solid; // orange or warning???
+                margin-top:0;
+                .count {
+                    color: $orange; // orange or warning???
+                }
+            }
+            &.is--full {
+                border-top: $greenLink 3px solid;
+                margin-top:0;
+                .count {
+                    color: $greenLink;
+                }
+            }
+        }
+    }
+    &--row {
+        display: flex;
+        flex-wrap: nowrap;
+        @media (max-width:$bp_lg_max) {
+            flex-wrap: wrap;
+        }
+        margin-left: -#{$spacer/2};
+        margin-right: -#{$spacer/2};
+    }
+    &--col {
+        padding: 0 $spacer/2;
+        width:33.333%;
+        @media (max-width:$bp_lg_max) {
+            width:100%;
+        }
+    }
+}
