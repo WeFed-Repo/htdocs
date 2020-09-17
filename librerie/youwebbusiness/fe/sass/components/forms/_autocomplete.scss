@@ -21,6 +21,9 @@ ul.ui-autocomplete li, ul.ui-autocomplete
     border: solid 1px #dc3545;
     border-left:0;
 }
+.ui-helper-hidden-accessible {
+    display:none !important;
+}
 
 
 .ui-widget-content.ui-autocomplete {

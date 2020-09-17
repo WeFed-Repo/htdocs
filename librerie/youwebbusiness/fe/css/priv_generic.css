@@ -3757,6 +3757,10 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   border-left: 0;
 }
 
+.ui-helper-hidden-accessible {
+  display: none !important;
+}
+
 .ui-widget-content.ui-autocomplete {
   background-color: white;
   max-height: 200px;
