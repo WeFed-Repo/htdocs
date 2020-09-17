@@ -700,7 +700,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: unicode("e914");
   color: #2F9988;
   border: solid 2px #2F9988;
   display: block;
@@ -713,6 +712,7 @@
 .accordion .card .card-header .card-header-icon:before, .accordion .acc-item .card-header .card-header-icon:before {
   display: block;
   font-size: 14px;
+  content: "";
 }
 .accordion .card .card-header .card-header-icon.plus-minus:before, .accordion .acc-item .card-header .card-header-icon.plus-minus:before {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -740,10 +740,12 @@
   color: #737373;
 }
 .accordion .card .card-header.collapsed .card-header-icon, .accordion .acc-item .card-header.collapsed .card-header-icon {
-  content: unicode("e913");
   line-height: 1.5rem;
   border-color: #737373;
   color: #737373;
+}
+.accordion .card .card-header.collapsed .card-header-icon:before, .accordion .acc-item .card-header.collapsed .card-header-icon:before {
+  content: "";
 }
 .accordion .card .card-header.collapsed .card-header-icon.plus-minus:before, .accordion .acc-item .card-header.collapsed .card-header-icon.plus-minus:before {
   content: "+";

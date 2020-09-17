@@ -17,7 +17,6 @@
       }
       .card-header-icon {
         @include icon-font-family();
-        content: unicode("e914"); // CLASS: .icon-arrow_up;
         color: $greenLink;
         border: solid 2px $greenLink;
         display: block;
@@ -29,6 +28,7 @@
         &:before {
           display: block;
           font-size: 14px;
+          content: "\e914";
         }
         &.plus-minus:before {
           @include icon-font-family();
@@ -46,10 +46,10 @@
           color: $gray2;
         }
         .card-header-icon {
-          content: unicode("e913"); // CLASS: .icon-arrow_down;
           line-height: 1.5rem;
           border-color: $gray2;
           color: $gray2;
+          &:before {content: "\e913"}
           &.plus-minus:before {
             content: '\002B';
           }
