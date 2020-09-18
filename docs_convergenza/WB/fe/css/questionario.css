@@ -1,0 +1,243 @@
+/*.tipor {color:#6F8F0A;font-family:Verdana,sans-serif;font-size:13px;}
+.tipoc {color:#515151;font-family:Verdana,sans-serif;font-size:11px;}
+.footer {color:#333333;font-family:Verdana,sans-serif;font-size:10px;}
+.bgquattro {background:#6F8F0A none repeat scroll 0%;}
+.bgcinque {background:#cdcdcd none repeat scroll 0%;}
+.tipo2:link {color:#fff;font-family:Verdana,sans-serif;font-size:10px;}
+.tipo2:hover {color:#fff;font-family:Verdana,sans-serif;font-size:10px;}
+td.bgquattro a {text-decoration:none;}
+.tipo2 {color:#333333;font-family:Verdana,sans-serif;font-size:10px;}
+body {margin:0; padding:0;}
+.tipoo {color:#6F8F0A; font-family:Verdana,sans-serif; font-size:13px; font-weight:bold;}
+.tipom {color:#000; font-family:Verdana,sans-serif; font-size:14px; text-transform:uppercase; font-weight:bold;}
+table.box8669st1 {border-bottom:1px solid #cdcdcd; margin-bottom:5px}*/
+
+body {background:url(/WB/fe/img/str_bg_questionario.gif) 0 0; padding:0; margin:0; font-family: Tahoma, tahoma, Arial, Sans serif; color: #000; text-align: center; font-size: 12px;}
+a {outline:none;}
+#pagebg {background:url(/WB/fe/img/str_bg_quest_lati.gif) 0 0 repeat-y; padding:0 0 11px 0; margin:0 auto; width:786px;}
+#pagecontainer {margin:0 auto; padding:0; text-align:left; width:675px;}
+#header h1 {margin:0; padding:0; margin:15px 34px 0 0; float:left;}
+.esperienza {margin:15px 0 0 0; padding:0; float:right;}
+.esperienza2 {background:url(/WB/fe/img/tit_esperienza_generic.gif) 0 0 no-repeat; margin:15px -45px 0 0; padding:0; float:right; width:476px; height:66px}
+.esperienza2 p{padding:28px 0 0 0; margin:0 0 0 -1px; color:#757576; font-size:16px}
+.filetto {background: url("/WB/fe/img/str_filetto_quest.gif") repeat-x left top; clear:left; float: left; height: 2px; line-height: 0; margin: 12px 0 14px 0; width: 675px;}
+.posizione {background: url("/WB/fe/img/str_filetto_quest.gif") repeat-x left 6px; float:right; margin-right:25px}
+.bullets {float:left; margin-left:27px}
+.bullets.first {margin-left:0}
+/*#footer {text-align: center; background:url(/WB/fe/img/str_bg_quest_bottom.gif) 0 0 ; width:786px; height:36px; margin:0 auto;}
+#footer .filetto {margin:0 0 5px 54px; line-height:0; font-size:1px;}
+* html #footer .filetto {margin:0 0 5px 28px;}
+#footer p {font-size: 10px; margin-top:0; clear:left;}*/
+.boxbianco {margin: 8px 0 13px 0;}
+.boxbiancocontent {background:url(/WB/fe/img/boxbiancocontent.gif) 0 0 repeat-y; padding:25px 0 0 21px; margin:0; color: #000; font-size: 12px; float:left; width:654px; min-height:245px;}
+h4 {font-size: 13px; font-weight:normal; margin-top:0; margin-bottom:0; padding-right:10px;}
+
+.btnindietro {background:url(/WB/fe/img/btn_indietro_quest.gif) 0 0 no-repeat; padding:0 0 0 17px; margin:0; float:left; height:16px; line-height: 14px; margin-left:25px;}
+*html .btnindietro { margin-left:12px;}
+.btnindietro a {color:#707070; font-size:13px; font-weight:bold; text-decoration:none}
+.btncontinua {background:url(/WB/fe/img/btn_continua_quest.gif) right 0 no-repeat; padding:0 17px 0 0; margin:0; float:right; height:16px; line-height: 14px; margin-right:25px;}
+*html .btncontinua { margin-right:12px;}
+.btncontinua a {color:#6f8f0a; font-size:13px; font-weight:bold; text-decoration:none}
+.clear {float:none !important; background:none !important; clear:both !important; line-height:0 !important; font-size:0 !important; height:0 !important; background:none !important; margin:0px !important; padding:0px !important;}
+.boxbiancocontent .errore {color: #ff0202; background:url(/WB/fe/img/ico2inf_nosel.gif) 0 0 no-repeat; padding-left:22px; text-align:left; margin:0 auto;}
+.boxbiancocontent  div.center {text-align:center; padding-bottom:10px; padding-top:6px;}
+.boxbiancocontent span.answer {padding-top:1px; float:left; width:604px; padding-bottom:13px; }
+.boxbiancocontent input.radio {float:left; margin-right:8px;}
+.boxbiancocontent input.textmax {float:left; width:90%; border:1px solid #c2c2c2}
+.boxbiancocontent .last input.radio {float:none;}
+.boxbiancocontent form {float:left;}
+.boxbiancobottom {clear:left;}
+
+
+/* stilizzazione radio button con immagini */
+.questionario .score {background: transparent url(/WB/fe/img/range_bg.jpg) no-repeat top center; width: 100%; height:10px; padding-top:18px;}
+.questionario .score div {float:left; margin-right:2px; width:102px; text-align:center; font-size:11px; border-right:1px solid #cacaca; border-left:1px solid #cacaca}
+.questionario .score div  span{display:block; margin-bottom:7px; height:21px; line-height:11px;}
+*html.questionario .score div  span{ height:20px;}
+.questionario .score div.first {width:92px; border-left:0;}
+.questionario .score div.last {border-right:0;}
+
+.questionario  .score a  {width: 21px; display:block; height: 21px; float:left; background-repeat:no-repeat;}
+.questionario  .score a#zero{background-image:url(/WB/fe/img/range_bg0.gif); margin-right:19px;}
+.questionario  .score a#uno {background-image:url(/WB/fe/img/range_bg1.gif);}
+.questionario  .score a#due {background-image: url(/WB/fe/img/range_bg2.gif); margin-right:19px;}
+.questionario  .score a#tre {background-image:  url(/WB/fe/img/range_bg3.gif);}
+.questionario  .score a#quattro{background-image:  url(/WB/fe/img/range_bg4.gif);  margin-right:19px;}
+.questionario  .score a#cinque {background-image:  url(/WB/fe/img/range_bg5.gif);}
+.questionario  .score a#sei {background-image: url(/WB/fe/img/range_bg6.gif);  margin-right:19px;}
+.questionario  .score a#sette {background-image: url(/WB/fe/img/range_bg7.gif);}
+.questionario  .score a#otto {background-image:  url(/WB/fe/img/range_bg8.gif); margin-right:19px;}
+.questionario  .score a#nove {background-image:  url(/WB/fe/img/range_bg9.gif);}
+.questionario  .score a#novalue {background-image:  url(/WB/fe/img/range_novalue.gif); margin-left:20px;}
+*html .questionario  .score a#novalue {margin-left:10px;}
+.questionario  .score a.off {background-position:left top}
+.questionario  .score a.on  {background-position:left bottom!important}
+.questionario .errore  {color:#CD0005}
+.questionario  .score span.values  {width:61px; text-align:center; margin:0 auto; display:block;}
+.laststep {text-align:center; margin-top:60px; margin-bottom:82px;}
+
+
+/* text-area e counter */
+.boxbiancocontent textarea {width:627px; height:130px; background: url(/WB/fe/img/str_textarea.gif) #f4f4f4 repeat-x 0px 0px; border:1px solid #BABABA; overflow:auto}
+input.counter {border:0; background-color:transparent; width:32px; font-weight:bold;}
+.countercont  {padding:0; margin:0; font-size:11px;}
+
+/* 10 numeri */
+.boxbiancocontent10 {padding:25px 0 0 2px; width:673px;}
+.boxbiancocontent10 h4 {padding-left:19px}
+.bgbtnnum7 {background: url(/WB/fe/img/bg_btn_num7.gif) no-repeat 0px 0px; width:669px; height:102px; margin:39px 0 0 -18px; *margin: 49px 0 0 -18px; *position:relative;}
+.bgbtnnum7notxt {background:none; width:669px; height:122px; margin:19px 0 0 -18px; *margin: 29px 0 0 -18px; *position:relative;}
+.bgbtnnum7notxt  div {width:78px; height:51px; float:left; font-size:9px; text-align:center; font-family:Arial, Sans serif;}
+.bgbtnnum7notxt  div.uno {margin-left:62px;}
+.bgbtnnum7notxt  div.uno, .bgbtnnum7notxt  div.sette {background: url(/WB/fe/img/bg_quest_txt_comment.gif ) no-repeat 50% 100%;}
+
+.bgbtnnum7 a {width:56px; height:54px; display:block; float:left; background-repeat:no-repeat; margin-right:22px; margin-top:31px}
+.bgbtnnum7notxt  a {width:56px; height:54px; display:block; float:left; background-repeat:no-repeat; margin-right:22px; margin-top:0}
+.bgbtnnum10 a#zero {background-image:url(/WB/fe/img/btn_num0.png); margin-left:18px}
+.bgbtnnum7 a#uno {background-image:url(/WB/fe/img/btn_num1.png); margin-left:72px}
+.bgbtnnum10 a#uno {background-image:url(/WB/fe/img/btn_num1.png);}
+.bgbtnnum7 a#due, .bgbtnnum10 a#due {background-image: url(/WB/fe/img/btn_num2.png);}
+.bgbtnnum7 a#tre, .bgbtnnum10 a#tre {background-image:  url(/WB/fe/img/btn_num3.png);}
+.bgbtnnum7 a#quattro, .bgbtnnum10 a#quattro {background-image:  url(/WB/fe/img/btn_num4.png);}
+.bgbtnnum7 a#cinque, .bgbtnnum10 a#cinque {background-image:  url(/WB/fe/img/btn_num5.png);}
+.bgbtnnum7 a#sei, .bgbtnnum10 a#sei {background-image: url(/WB/fe/img/btn_num6.png);}
+.bgbtnnum7 a#sette, .bgbtnnum10 a#sette {background-image: url(/WB/fe/img/btn_num7.png);}
+.bgbtnnum10 a#otto {background-image:  url(/WB/fe/img/btn_num8.png);}
+.bgbtnnum10 a#nove {background-image:  url(/WB/fe/img/btn_num9.png);}
+.bgbtnnum10 a#dieci {background-image:  url(/WB/fe/img/btn_num10.png);}
+.bgbtnnum7  a.off, .bgbtnnum10  a.off  {background-position:left top; }
+.bgbtnnum7 a.on , .bgbtnnum10 a.on  {background-position:left bottom !important;}
+
+.bgbtnnum10 {background: url(/WB/fe/img/bg_btn_num10.gif ) no-repeat 0px 0px; width:669px; height:102px; margin: 39px 0 0 -18px; *margin: 49px 0 0 -18px; *position:relative;}
+.bgbtnnum10notxt {background: url(/WB/fe/img/bg_btn_num10_notxt.gif ) no-repeat 0 100%; height:122px; margin: 19px 0 0 -18px; *margin: 29px 0 0 -18px;}
+.bgbtnnum10 a {width:56px; height:54px; display:block; float:left; background-repeat:no-repeat; margin-right:2px; margin-top:31px}
+.bgbtnnum10notxt  a {width:56px; height:54px; display:block; float:left; background-repeat:no-repeat; margin-right:2px; margin-top:0}
+.bgbtnnum10notxt  div {width:58px; height:51px; float:left; font-size:9px; text-align:center; font-family:Arial, Sans serif;}
+.bgbtnnum10notxt  div.zero {margin-left:17px;}
+.bgbtnnum10notxt  div.zero, .bgbtnnum10notxt  div.dieci {background: url(/WB/fe/img/bg_quest_txt_comment.gif ) no-repeat 50% 100%;}
+
+
+/* fix img ie6 */
+* html .bgbtnnum10 a#zero {background-image:url(/WB/fe/img/btn_num0.gif); margin-left:8px}
+* html .bgbtnnum7 a#uno {background-image:url(/WB/fe/img/btn_num1.gif); margin-left:37px}
+* html .bgbtnnum10 a#uno {background-image:url(/WB/fe/img/btn_num1.gif);}
+* html .bgbtnnum7 a#due, .bgbtnnum10 a#due {background-image: url(/WB/fe/img/btn_num2.gif);}
+* html .bgbtnnum7 a#tre, .bgbtnnum10 a#tre {background-image:  url(/WB/fe/img/btn_num3.gif);}
+* html .bgbtnnum7 a#quattro, .bgbtnnum10 a#quattro {background-image:  url(/WB/fe/img/btn_num4.gif);}
+* html .bgbtnnum7 a#cinque, .bgbtnnum10 a#cinque {background-image:  url(/WB/fe/img/btn_num5.gif);}
+* html .bgbtnnum7 a#sei, .bgbtnnum10 a#sei {background-image: url(/WB/fe/img/btn_num6.gif);}
+* html .bgbtnnum7 a#sette, .bgbtnnum10 a#sette {background-image: url(/WB/fe/img/btn_num7.gif);}
+* html .bgbtnnum10 a#otto {background-image:  url(/WB/fe/img/btn_num8.gif);}
+* html .bgbtnnum10 a#nove {background-image:  url(/WB/fe/img/btn_num9.gif);}
+* html .bgbtnnum10 a#dieci {background-image:  url(/WB/fe/img/btn_num10.gif);}
+
+h4.altbg {height:64px}
+
+
+.laststep {text-align:center; margin-top:42px; margin-bottom:44px;}
+.filetto {background: url(/WB/fe/img/str_filetto_quest.gif) repeat-x left top; clear:left; float: left; height: 2px; line-height: 0; margin: 12px 0 14px 0; width: 675px;}
+.btncontinua {background:url(/WB/fe/img/btn_continua_quest.gif) right 0 no-repeat; padding:0 17px 0 0; margin:0; float:right; height:16px; line-height: 14px; margin-right:25px;}
+*html .btncontinua {margin-right:12px;}
+.btncontinua a {color:#6f8f0a; font-size:13px; font-weight:bold; text-decoration:none}
+/*#footer {text-align: center; background:url(../img/str_bg_quest_bottom.gif) 0 0 ; width:786px; height:36px; margin:0 auto;}
+#footer .filetto {margin:0 0 5px 54px; line-height:0; font-size:1px;}
+* html #footer .filetto {margin:0 0 5px 28px;}
+#footer p {font-size: 10px; margin-top:0; clear:left;}
+#header h1 {margin:0; padding:0; margin:15px 34px 0 0; float:left;}
+.esperienza_stepfinale {margin:49px 0 0 0; padding:0; float:right;}
+.share{padding-top:14px;margin-top:-9px;overflow:visible;float:left;background:url(../img/str_shareright.gif) 136px 0 no-repeat;}
+.shareleft{width:133px;float:left}
+.shareright{width:517px;float:left;padding-left:25px} 
+.shareright p{color:#6d6d6d;font-family:arial, tahoma, sans-serif; font-size:16px}
+.btnshare{padding:20px 0 7px 3px;float:left}
+.btnshare a {float:left;padding-right:30px}*/
+
+/*thank you page */
+/* Font face */
+@font-face {
+    font-family: 'webankTitle';
+   /* src: url('/font/webank.eot'); */
+    src: url('/font/webank.eot?#iefix') format('embedded-opentype'),
+         url('/font/webank.woff') format('woff'),
+         url('/font/webank.ttf') format('truetype'),
+         url('/font/webank.svg#webankTitle') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Fine font face */
+.share img {border:0}
+.laststep2 {text-align:center; margin-top:42px; margin-bottom:44px;}
+.filetto {background: url(/WB/fe/img/str_filetto_quest.gif) repeat-x left top; clear:left; float: left; height: 2px; line-height: 0; margin: 12px 0 14px 0; width: 675px;}
+.btncontinua {background:url(/WB/fe/img/btn_continua_quest.gif) right 0 no-repeat; padding:0 17px 0 0; margin:0; float:right; height:16px; line-height: 14px; margin-right:25px;}
+*html .btncontinua {margin-right:12px;}
+.btncontinua a {color:#6f8f0a; font-size:13px; font-weight:bold; text-decoration:none}
+#footer {text-align: center; background:url(/WB/fe/img/str_bg_quest_bottom2.gif) 0 0 ; width:786px; height:70px; margin:0 auto;}
+#footer .filetto {margin:0 0 5px 54px; line-height:0; font-size:1px;}
+* html #footer .filetto {margin:0 0 5px 28px;}
+#footer p {font-size: 10px; margin-top:0; clear:left;}
+#header h1 {margin:0; padding:0; margin:15px 34px 0 0; float:left;}
+.esperienza_stepfinale {margin:49px 0 0 0; padding:0; float:right;}
+.share{padding-top:14px;margin-top:-9px;overflow:visible;float:left;background:url(/WB/fe/img/str_shareright.gif) 136px 0 no-repeat;}
+.shareleft{width:133px;float:left}
+.shareright{width:517px;float:left;padding-left:25px} 
+.shareright p{color:#6d6d6d;font-family:arial, tahoma, sans-serif; font-size:16px}
+.btnshare{padding:20px 0 7px 3px;float:left}
+.btnshare a {float:left;padding-right:30px}
+
+/* overlayer */
+/* overlayer layerpop */
+#layerpop{background-color:#000000;height:100%;left:0;filter:alpha(opacity=70);-moz-opacity:.70;opacity:.70;position:absolute;top:0;width:100%;z-index:1}
+.overlayer {display: none; position: absolute; width: 446px; margin:0; padding:0; background-color: #dedede; clear: both;top:0;left:0;}
+.overlayer .overlayertitle {float:left; width: 446px; height: 35px; margin:0; padding:0; display: block; background: transparent url(/WB/fe/img/tit_overlayer.gif) no-repeat top left;} 
+.overlayer .overlayertitle a {background: transparent url(/WB/fe/img/str_bg_overlayer_topbutton.gif) no-repeat top left; width: 38px; height: 17px; color: #6f8f0a; font-size: 10px; text-align: center; float:right; text-decoration: none; margin: 10px 14px; line-height: 15px;}
+.overlayer .overlayerbody {float:left; width: 446px; margin:0; padding:0; display: block;background: #FFFFFF url(/WB/fe/img/str_bg_content.jpg) no-repeat scroll 0 0} 
+.overlayer h2{color:#454545;float: left;font: 17px 'webankTitle',Helvetica MS,Arial Narrow,Serif;margin: 8px 13px 9px;text-transform:uppercase}
+.overlayerbody span,.overlayerbody p{color:#6E6E6E; font-weight:bold; padding:10px;display:block;font-size:12px}
+.overlayerbody p{color:#6E6E6E; font-weight:normal;padding:5px 10px;display:block;font-size:11px;margin:0}
+.overlayerbody span.verde{color:#6f8f0a;text-transform:uppercase}
+.overlayer form{clear:left;display: block;float: left;padding:12px 0 0 14px;text-align: left}
+.overlayer form label {color: #666666;display: block;float: left;font-size:11px;margin: 0;padding: 0 0 3px;font-family:Tahoma,tahoma,Arial,Sans serif}
+.overlayer .overlayerbody a.greenbutton {text-decoration:none;background:url(/WB/fe/img/str_greenbutton_left.gif) no-repeat scroll left top transparent;float:left;display:block;color:#fff}
+.overlayer .buttoncontainer .greenbutton{margin-right:0;text-decoration:none!important;width:auto}
+.overlayer .buttoncontainer{display: block;float: right;margin-right: 25px;padding:10px 0}
+.overlayer .overlayerbody a {color:#6F8F0A}
+a.greenbutton span{background: url(/WB/fe/img/str_greenbutton_right.gif) no-repeat scroll right top transparent;cursor: pointer;display: block;float: left;height: 26px;line-height: 25px;margin-right: -20px;min-width: 60px;padding: 0 20px;text-align: center;color:#fff}
+
+/*overlayer condivisione email  e overlayer condivisione ok*/
+.condivisione .overlayerbody  p{padding:10px 0; font-family:arial, sans-serif;color:#929292;}
+.condivisione p.note{font-size:10px; color:#929292;padding:0;margin-bottom:10px}
+.overlayer .condivisione .overlayerbody {background-image:none}
+.overlayer .condivisione h2{text-transform:none}
+.condivisione .header{background:url(/WB/fe/img/str_header_condivisione.gif) repeat-x 0 0; height:36px}
+.condivisione .header h2{color:#fff;margin:0;padding:5px 0 0 20px;font:normal 14px arial, tahoma, sans-serif}
+.condivisione form{padding:0;margin-left:20px;float:left;width:400px;color:#929292;clear:left}
+*html .condivisione form{margin-left:10px}
+.condivisione form.top{border-bottom:1px dotted #c2c2c2; padding-bottom:12px}
+.condivisione form label{float:left}
+.condivisione form fieldset{border:0;margin:0 0 16px 0;padding:0}
+.condivisione form input{background:url(/WB/fe/img/str_bg_fields.gif) repeat-x 0 0;height:22px;border:1px solid #bababa;float:right;padding:0 0 0 5px;color:#929292;font:11px arial, tahoma, sans-serif}
+.condivisione form .error input{border:1px solid #CD0005}
+.condivisione form input.large{width:325px;}
+.condivisione form input.medium{width:189px;margin-bottom:28px}
+.condivisione form  span.output{padding:0;font-size:11px;color:#585858;float:right;display:block;width:332px;font-weight:bold}
+.condivisione form div.textarea{width:325px;border:1px solid #bababa;background:#f4f4f4 url(/WB/fe/img/str_bg_fields.gif) repeat-x 0 0;padding:8px 0 0 5px;float:right}
+.condivisione form div.textarea .right{width:212px;float:right; padding-right:8px}
+.condivisione form div.textarea .right strong{color:#585858}
+.condivisione .left{float:left}
+.fieldright{padding-left:68px}
+.overlayer .overlayerbody .fieldright a {font-family:arial, sans-serif;font-size:11px;color:#929292;text-decoration:underline;display:block;width:189px;float:right;line-height:15px}
+.condivisione .btncontent{clear:left;width:400px;margin-left:20px;padding-bottom:10px;float:left}
+.condivisione .btncontent span.error{color:#ce0005;font-size:10px;font-family:arial, sans-serif;float:left;padding:7px 0 0 33px;width:278px;text-align:right}
+.overlayer .overlayerbody .condivisione .greenbutton{background:url(/WB/fe/img/str_greenbutton_left.gif) no-repeat scroll left top transparent;color: #FFFFFF !important;display: block;float:right;font: bold 11px Tahoma,tahoma,Arial,Sans serif;height: 26px;margin: 0 40px 0 2px;}
+.condivisione .greenbutton span {background:url(/WB/fe/img/str_greenbutton_right.gif) no-repeat scroll right top transparent;cursor: pointer;display: block;float: left;height: 26px;line-height: 25px;margin-right: -20px;min-width: 60px;padding: 0 20px;text-align: center;}
+.overlayer form .textarea img,.condivisione .overlayerbody .condivisioneok img{float:left}
+.condivisione .overlayerbody .condivisioneok,.condivisione .overlayerbody .condivisioneko{text-align:center;margin-top:17px;padding-left:102px}
+.condivisione .overlayerbody .condivisioneok span{color:#6f8f0a;padding:0 0 0 5px;display:inline;margin:0 auto;float:left}
+.condivisione .overlayerbody .condivisioneko span{width:300px;font-weight:bold;color:#6f8f0a;padding:0 0 0 5px;margin:0 auto;text-align:left}
+.condivisione .overlayerbody .condivisioneko span{color:#6E6E6E;line-height:40px;padding-left:0}
+.condivisione .overlayerbody .condivisioneko img{float:left}
+.condivisione .filettobutton.linked .backLinked {color: #929292;float: left;margin: 3px 0 0;text-decoration: underline;font-size:11px}
+.condivisione .filettobutton {background: url(/WB/fe/img/str_filettoservizi.gif) repeat-x scroll 0 15px transparent;clear: both;float: left;margin: 0 0 12px;padding: 0;width: 400px}
+.condivisione .filettobutton.linked a.greenbutton {float:right}
+.condivisione .header img {float:right;padding-right:20px;padding-top:10px}
+.contentForm .fieldright img#captcha {width:132px;height:67px;border:1px solid #BABABA}
