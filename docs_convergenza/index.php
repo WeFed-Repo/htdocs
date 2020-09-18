@@ -39,6 +39,8 @@
                                 <li><a href="./template/strutt_webank_webview.php?tpl=tpl_priv_full_placeholder.php">Webview</a></li>
 							<?php } ?>
                         </ul>
+                        
+                       
                         <h2>Glifi</h2>
                         <ul>
                             <li><a href="librerie_icone.php?site=<?php print $site; ?>">Icomoon</a></li>
@@ -48,6 +50,28 @@
                         <ul>
                             <li><a href="index_wiki.php">Documentazione sulle librerie</a></li>
                         </ul>
+                        <?php if ($site==="webank") { ?>
+                        <h2>Questionario CS</h2>
+                        <style>
+                            div.questcs {width:100%;float:left;clear:both;padding:15px 0 5px;}
+                            div.questcs a {border:solid 1px #ccc;color:#000;padding:5px; min-width:35px;float:left; margin: 0 5px 5px 0;text-align:center}
+                        </style>
+                        <div class="questcs">
+                            <a href="/template/template_quest/tpl_pub_aol_questionario1.php">1</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario1b.php">1b</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario1c.php">1c</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario2.php">2</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario2b.php">2b</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario2c.php">2c</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario2d.php">2d</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario2e.php">2e</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario3.php">3</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario4.php">4</a>
+                            <a href="/template/template_quest/tpl_pub_aol_questionario5.php">5</a>
+                        </div>
+                       
+                        </ul>
+                        <?php } ?>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h2>Oggetti</h2>
