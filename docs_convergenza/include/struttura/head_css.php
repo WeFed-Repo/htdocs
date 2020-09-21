@@ -40,5 +40,8 @@
         <!-- Straniere nuove youweb -->
         <link rel="stylesheet" media="all" href="/HT/fe/css/youweb_skin.css">
 	<?php } ?>
+    <?php if ($app_skin_aletti == "true" ) { ?>
+        <link rel="stylesheet" media="all" href="/HT/fe/css/app_skin_aletti.css"/>
+    <?php } ?>
 <?php } ?>
 <!-- / CSS -->

@@ -1,0 +1,26 @@
+#headerDesktop, #headerMobile, #spalla, .breadcrumb, #tools, #footer {
+    display:none;
+}
+#mainContent {
+    padding:0;
+    color: rgb(52,74,134);
+    border-radius: 15px;
+    padding: 0;
+    background: white;
+    padding:15px;
+    margin-top:50px;
+}
+html, body {
+    background: rgb(0,35,69) !important;
+    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
+    color: white;
+}
+.titolo {
+    background: rgb(0,35,69) !important;
+    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
+    color: white;
+    margin-top:-50px;
+}
+#main {
+    padding-top:0 !important
+}
