@@ -1,26 +1,96 @@
+/* WRAPPER GENERICI*/
 #headerDesktop, #headerMobile, #spalla, .breadcrumb, #tools, #footer {
     display:none;
 }
 #mainContent {
     padding:0;
     color: rgb(52,74,134);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 0;
     background: white;
-    padding:15px;
+    padding:26px 16px 16px;
     margin-top:50px;
 }
 html, body {
     background: rgb(0,35,69) !important;
     background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
     color: white;
-}
-.titolo {
-    background: rgb(0,35,69) !important;
-    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
-    color: white;
-    margin-top:-50px;
+    font-size:12px;
 }
 #main {
     padding-top:0 !important
 }
+/* TESTI*/
+.titolo {
+    background: rgb(0,35,69) !important;
+    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
+    color: white;
+    margin-top:-55px;
+    line-height: 18px;
+}
+.titolo span {
+    font-size:16px;
+    display: inline-block;
+    letter-spacing: 0;
+}
+.titolo h1 {
+    margin-bottom:0;
+}
+p {
+    color: rgb(52,74,134);
+    font-size:12px;
+    line-height: 18px;
+}
+.titleSection.titleForm {
+    font-size:14px;
+    margin-bottom:13px!important;
+}
+.result-number {
+    border: 2px solid rgb(75,147,232)
+}
+
+
+/*BOTTONI */
+.btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
+.btn-primary:hover:active,
+.btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited {
+    /*background:#183856;*/
+    background: rgb(231 219 202)!important;
+    border-radius: 8px!important;
+    color: rgb(52,74,134)!important;
+    text-transform: capitalize!important;
+    min-height: 48px;
+    min-width: 103px;
+    text-align: center;
+    margin-bottom:10px;
+    box-shadow:none!important;
+    padding: 0 20px!important;
+}
+.btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited {
+    background:#fff!important;
+    color: rgb(52,74,134);
+    border:2px solid rgb(231, 219, 202)!important;
+    text-transform: none!important;
+}
+
+table a .icon, table a:active .icon, table a:focus .icon, table a .icon::before {
+    color:rgb(18, 46, 92)!important;
+}
+
+
+@media only screen and (max-width: 400px)
+{
+    .titolo span {
+       max-width: 290px;
+       white-space: nowrap;
+      overflow: hidden;
+        text-overflow: ellipsis;
+     }
+     .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
+    .btn-primary:hover:active,
+    .btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited
+    {
+        width: 100%;
+    }
+}
+

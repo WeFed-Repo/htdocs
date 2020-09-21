@@ -60,37 +60,37 @@
 							{
 								"nome": "Web advisory consulenza",
 								"html": "vr",
-								"inlavorazione": true,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory.php"
 							},
 							{
 								"nome": "Web advisory proposte",
 								"html": "vr",
-								"inlavorazione": true,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory_prop_conf.php"
 							},
 							{
 								"nome": "Web advisory conferma 1",
 								"html": "vr",
-								"inlavorazione": true,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory_conferma_1.php"
 							},
 							{
 								"nome": "Web advisory conferma 2",
 								"html": "vr",
-								"inlavorazione": true,
+								"inlavorazione": false,
 								"tpl": "tpl_web_advisory_conferma_2.php"
 							},
 							{
 								"nome": "Web advisory conferma 3",
 								"html": "vr",
-								"inlavorazione": true,
+								"inlavorazione": false,
 								"tpl": "tpl_web_advisory_conferma_3.php"
 							},
 							{
 								"nome": "Web advisory conferma 4",
 								"html": "vr",
-								"inlavorazione": true,
+								"inlavorazione": false,
 								"tpl": "tpl_web_advisory_conferma_4.php"
 							}
 							
