@@ -26,3 +26,15 @@
 body {font-family: "bankfont"}
 header h1 .logocs {background: transparent url(/WB/fe/img/quest_cs_logocs.png) no-repeat center center; background-size: cover}
 header .logo {background: transparent url(/WB/fe/img/quest_cs_logo.png) no-repeat center center; background-size: cover}
+
+/* Stepper */
+.stepper.status-2 .step:nth-child(-n+1) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-3 .step:nth-child(-n+2) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-4 .step:nth-child(-n+3) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-5 .step:nth-child(-n+4) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-6 .step:nth-child(-n+5) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-7 .step:nth-child(-n+6) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-8 .step:nth-child(-n+7) {background-color:#8aba0b;border-color:#8ab10b}
+.stepper.status-9 .step:nth-child(-n+8) {background-color:#8aba0b;border-color:#8ab10b}
+
+/* Radio button e checkbox */

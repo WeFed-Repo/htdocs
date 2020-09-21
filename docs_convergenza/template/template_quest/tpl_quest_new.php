@@ -83,8 +83,8 @@
             <footer>
                 <div class="wrapper">
                     <span class="info">
-                        &copy; BANCO BPM GRUPPO BANCARIO<br>
-                        Rappresentante del Gruppo IVA Banco BPM <nobr>Partita IVA 10537050964</nobr>
+                        Banco BPM S.p.A. - Piazza F. Meda, 4 20121 Milano - tel. 0277001 - Rappresentante del Gruppo IVA Banco BPM Partita IVA 10537050964
+                        <BR>Iscrizione al Registro IVASS (01 gennaio 2017 n° D000563706) - Gruppo Bancario Banco BPM. Tutti i diritti riservati.
                     </span>    
                 </div>
             </footer>

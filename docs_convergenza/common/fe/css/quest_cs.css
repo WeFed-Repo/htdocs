@@ -25,32 +25,17 @@ header .logo {float:right; margin-top:20px; height:60px;width:200px; background-
 .stepper {text-align:left;display:inline-block;margin:20px auto 30px;position:relative;height:14px;border-bottom:solid 3px #ccc;}
 .stepper .step {position:relative;z-index:1;width:25px;height:25px; background:#fff; display:inline-block;border:solid 3px #ccc;border-radius:50%;margin:0 0 0 20px}
 .stepper .step:first-child {margin-left:0}
+
 /* Stepper status */
 .stepper.status-1 .step:nth-child(1) {background-color:#000;border-color:#000}
-
 .stepper.status-2 .step:nth-child(2) {background-color:#000;border-color:#000}
-.stepper.status-2 .step:nth-child(-n+1) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-3 .step:nth-child(3) {background-color:#000;border-color:#000}
-.stepper.status-3 .step:nth-child(-n+2) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-4 .step:nth-child(4) {background-color:#000;border-color:#000}
-.stepper.status-4 .step:nth-child(-n+3) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-5 .step:nth-child(5) {background-color:#000;border-color:#000}
-.stepper.status-5 .step:nth-child(-n+4) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-6 .step:nth-child(6) {background-color:#000;border-color:#000}
-.stepper.status-6 .step:nth-child(-n+54) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-7 .step:nth-child(7) {background-color:#000;border-color:#000}
-.stepper.status-7 .step:nth-child(-n+6) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-8 .step:nth-child(8) {background-color:#000;border-color:#000}
-.stepper.status-8 .step:nth-child(-n+7) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-9 .step:nth-child(9) {background-color:#000;border-color:#000}
-.stepper.status-9 .step:nth-child(-n+8) {background-color:#8aba0b;border-color:#8ab10b}
 
 @media (max-width:767px){
     .stepper-wrapper {text-align:center}
