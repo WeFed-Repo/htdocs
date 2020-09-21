@@ -44,7 +44,7 @@
                     <!-- BLOCCO STEPPER -->
                     <div class="stepper-wrapper">
                         <!-- per cambiare il livello di completamento e' sufficiente cambiare la class status-X (dove X è il numero di step) -->
-                        <div class="stepper status-1">
+                        <div class="stepper status-3">
                             <span class="step step-1"></span>
                             <span class="step step-2"></span>
                             <span class="step step-3"></span>
@@ -56,14 +56,17 @@
                     <!-- /BLOCCO STEPPER -->
                     <!-- DIV QUESTIONARIO -->
                     <div class="quest">
+                        <form action="#">
                                 <!-- DOMANDA -->
-                                Quale delle seguenti affermazioni descrive meglio il tuo percorso per arrivare a questo form di richiesta?
-                                Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-                                Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-                                Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-                                Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
+                                <p class="question">Quale delle seguenti affermazioni  descrive meglio il tuo percorso per arrivare a questo form di richiesta?</p>
+                                <div class="cbr-wrapper">
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                </div>
                                 <!-- / DOMANDA -->
-                    
+                        </form>
                     </div>
                     <div class="btn-wrapper">
                         <div class="btn-align-left">
