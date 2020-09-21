@@ -514,3 +514,23 @@ ul.albero li>span {font-weight:bold}
 .elenco.separati {width:100%;border:solid 1px #ccc; border-radius:10px;padding:0;margin:20px 0;clear:both;float:left;} 
 .elenco.separati .title {float:left;clear:both;width:100%; padding:5px 10px;font-weight:bold; border-radius:10px 10px 0 0;background-color: #dce7b5 !important;}
 .elenco.separati a {color:#666; display:inline-block; padding: 3px 10px; background-color:#eee;border-radius:10px; margin: 5px 0 5px 5px;font-size:12px;}
+
+/*BOTTONE PER STILE ALETTI*/
+.aletti-style {
+    width: 20px!important;
+    height: 20px;
+    background: #333;
+    text-align: center;
+    line-height: 9px;
+    font-weight: bold;
+    font-size: 9px;
+    text-decoration: none!important;
+    color: #fff!important;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-block;
+    background: #D5BD9B;
+    position: absolute;
+    right: 90px;
+    top: 10px;
+}
