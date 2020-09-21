@@ -27,11 +27,10 @@
             <!-- HEADER -->
             <header>
                 <div class="wrapper">
-                    <div class="logo">
-                        LogoWB
-                    </div>
+                    <div class="logo"></div>
                     <div clasS="title">
                         <h1>
+                            <div class="logocs"></div>
                             <span class="main-title">Servizio Clienti: </span>
                             <span class="payoff">Raccontaci la tua esperienza!</span></h1>
                     </div>

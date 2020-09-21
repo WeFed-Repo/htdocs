@@ -24,3 +24,5 @@
 }
 
 body {font-family: "bankfont"}
+header h1 .logocs {background: transparent url(/WB/fe/img/quest_cs_logocs.png) no-repeat center center; background-size: cover}
+header .logo {background: transparent url(/WB/fe/img/quest_cs_logo.png) no-repeat center center; background-size: cover}
