@@ -50,28 +50,23 @@
                         <ul>
                             <li><a href="index_wiki.php">Documentazione sulle librerie</a></li>
                         </ul>
+                        
                         <?php if ($site==="webank") { ?>
                         <h2>Questionario CS</h2>
-                        <style>
-                            div.questcs {width:100%;float:left;clear:both;padding:15px 0 5px;}
-                            div.questcs a {border:solid 1px #ccc;color:#000;padding:5px; min-width:35px;float:left; margin: 0 5px 5px 0;text-align:center}
-                        </style>
-                        <div class="questcs">
-                            <a href="/template/template_quest/tpl_pub_aol_questionario1.php">1</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario1b.php">1b</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario1c.php">1c</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario2.php">2</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario2b.php">2b</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario2c.php">2c</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario2d.php">2d</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario2e.php">2e</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario3.php">3</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario4.php">4</a>
-                            <a href="/template/template_quest/tpl_pub_aol_questionario5.php">5</a>
-                        </div>
-                       
+                        <ul class="oldnew">
+                            <?php foreach( ["1","1a","1b","1c","2","2b","2c","2d","2e","3","4","5"] as $quest) { ?>
+                                <li>
+                                    <span>Questionario <?php print $quest ?></span>
+                                    <div class="links">
+                                        <a href="/template/template_quest/tpl_pub_aol_questionario1.php" target="_blank">OLD</a>
+                                        <?php if ($quest ==="1") {?><a class="new" href="/template/template_quest/tpl_quest_new.php">NEW</a><?php } ?> 
+                                    </div>
+                                </li>
+                            <?php } ?>
                         </ul>
                         <?php } ?>
+
+
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h2>Oggetti</h2>

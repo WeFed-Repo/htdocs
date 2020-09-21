@@ -1,2 +1,85 @@
-body {background-color:#eee}
-header {background: #000}
+/* CLASSI GENERICHE */
+body {background-color:#eee;margin:0;padding:0;font-size:14px}
+#main {max-width:1430px;margin:0 auto;padding:0 15px}
+.wrapper {max-width:1400px; margin:0 auto;display:block;padding:0}
+
+
+/* HEADER */
+header .wrapper {border-bottom: solid 1px #ccc;}
+header h1 { position:relative;max-width:calc(100% - 200px); text-transform:uppercase;font-weight:bold;color:#999; font-size:34px;margin:0;padding:10px 0; width:auto; display:inline-block; line-height:24px; padding:20px 0 20px  70px}
+header h1 .logocs {width:60px;height:60px;background: #ccc; position:absolute; left:0; top:20px;}
+header h1 .main-title {width:100%;display:inline-block;line-height:34px}
+header h1 .payoff {font-size:18px;clear:both;width:100%;line-height:14px}
+header .logo {float:right; margin-top:20px; height:60px;width:200px; background-color:#ddd;}
+
+@media (max-width:767px){
+    header {text-align:center;}
+    header .logo {margin:10px auto; width:150px;height:45px;float:none;display:inline-block;}
+    header h1 {max-width:100%; width:100%;text-align:center;float:none; padding-top:0;padding-left:0;}
+    header h1 .logocs {display:none}
+    header h1 .main-title {font-size:28px}
+}
+    
+/* Stepper */
+.stepper-wrapper {margin: 0 auto; text-align:right;}
+.stepper {text-align:left;display:inline-block;margin:20px auto 30px;position:relative;height:14px;border-bottom:solid 3px #ccc;}
+.stepper .step {position:relative;z-index:1;width:25px;height:25px; background:#fff; display:inline-block;border:solid 3px #ccc;border-radius:50%;margin:0 0 0 20px}
+.stepper .step:first-child {margin-left:0}
+/* Stepper status */
+.stepper.status-1 .step:nth-child(1) {background-color:#000;border-color:#000}
+
+.stepper.status-2 .step:nth-child(2) {background-color:#000;border-color:#000}
+.stepper.status-2 .step:nth-child(-n+1) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-3 .step:nth-child(3) {background-color:#000;border-color:#000}
+.stepper.status-3 .step:nth-child(-n+2) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-4 .step:nth-child(4) {background-color:#000;border-color:#000}
+.stepper.status-4 .step:nth-child(-n+3) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-5 .step:nth-child(5) {background-color:#000;border-color:#000}
+.stepper.status-5 .step:nth-child(-n+4) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-6 .step:nth-child(6) {background-color:#000;border-color:#000}
+.stepper.status-6 .step:nth-child(-n+54) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-7 .step:nth-child(7) {background-color:#000;border-color:#000}
+.stepper.status-7 .step:nth-child(-n+6) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-8 .step:nth-child(8) {background-color:#000;border-color:#000}
+.stepper.status-8 .step:nth-child(-n+7) {background-color:#8aba0b;border-color:#8ab10b}
+
+.stepper.status-9 .step:nth-child(9) {background-color:#000;border-color:#000}
+.stepper.status-9 .step:nth-child(-n+8) {background-color:#8aba0b;border-color:#8ab10b}
+
+@media (max-width:767px){
+    .stepper-wrapper {text-align:center}
+}
+
+/* FOOTER */
+footer .wrapper {border-top: solid 1px #ccc}
+footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
+
+/* CONTENUTI */
+
+/* Questionario */
+.quest {display:inline-block; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:15px;}
+
+/* Parti di form e input */
+input[type="radio"],input[type="checkbox"] {width:25px;height:25px;}
+.cbr {position:relative;padding:6px 0  10px 30px;}
+.cbr input {position:absolute;top:0;left:0;}
+
+/* Stili della domanda*/
+p.question {font-size:16px}
+
+/* Bottoniera e bottoni */
+.btn-wrapper {width:100%;clear:both; margin-bottom:15px;display:inline-block;}
+.btn-align-left {max-width:50%;float:left;}
+.btn-align-right {text-align:right; max-width:50%;float:right}
+
+.btn {outline:none !important;border:none !important; background:#999; padding: 10px 20px;color:#fff;margin-bottom:15px;display:inline-block; font-size:16px;font-weight:bold;text-transform:uppercase}
+.btn:active,.btn:hover,.btn:focus {box-shadow:none !important; border:none !important;}
+.btn-default:hover, .btn-default:focus, .btn-default:active { background:#aaa;color:#fff !important;}
+
+/* Errori */

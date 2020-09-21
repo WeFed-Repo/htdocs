@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
     <head>
+    
+    <title>Webank - Questionario Customer Satisfaction</title>
+
     <meta charset="utf-8">
-    <title>Questionario Customer Satisfaction</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Questionario Customer Satisfaction">
         
         <!-- CSS -->
@@ -19,44 +23,71 @@
     </head>
 
     <body>
-        <!-- HEADER -->
-        <header>
-            <div class="container">
-                Header
-            </div>
-        <header>
-        <!-- / HEADER -->
-
-        <!-- CONTENUTI -->
-        <div id="content">
-            <div class="container">
-                <div class="stepper">
-                    <span class="step-1"></step>
-                    <span class="step-2"></step>
-                    <span class="step-3"></step>
-                    <span class="step-4"></step>
-                    <span class="step-5"></step>
-                    <span class="step-6"></step>
+        <div id="main">
+            <!-- HEADER -->
+            <header>
+                <div class="wrapper">
+                    <div class="logo"></div>
+                    <div clasS="title">
+                        <h1>
+                            <div class="logocs"></div>
+                            <span class="main-title">Servizio Clienti: </span>
+                            <span class="payoff">Raccontaci la tua esperienza!</span></h1>
+                    </div>
                 </div>
-                <div class="quest">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            
+            </header>
+            <!-- / HEADER -->
+
+            <!-- CONTENUTI -->
+            <div id="contenuti">
+                <div class="wrapper">
+                    <!-- BLOCCO STEPPER -->
+                    <div class="stepper-wrapper">
+                        <!-- per cambiare il livello di completamento e' sufficiente cambiare la class status-X (dove X è il numero di step) -->
+                        <div class="stepper status-3">
+                            <span class="step step-1"></span>
+                            <span class="step step-2"></span>
+                            <span class="step step-3"></span>
+                            <span class="step step-4"></span>
+                            <span class="step step-5"></span>
+                            <span class="step step-6"></span>
                         </div>
-                Quale delle seguenti affermazioni descrive meglio il tuo percorso per arrivare a questo form di richiesta?
-
-Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
-Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit
+                    </div>
+                    <!-- /BLOCCO STEPPER -->
+                    <!-- DIV QUESTIONARIO -->
+                    <div class="quest">
+                        <form action="#">
+                                <!-- DOMANDA -->
+                                <p class="question">Quale delle seguenti affermazioni  descrive meglio il tuo percorso per arrivare a questo form di richiesta?</p>
+                                <div class="cbr-wrapper">
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                </div>
+                                <!-- / DOMANDA -->
+                        </form>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="btn-align-left">
+                            <button type="button" class="btn btn-default">Indietro</button>
+                        </div>
+                        <div class="btn-align-right">
+                            <button type="button" class="btn btn-primary">Continua</button>
+                        </div>   
+                    </div>
+                    <!-- FINE DIV QUESTIONARIO -->
                 </div>
             </div>
+            <!-- / CONTENUTI -->
+            <footer>
+                <div class="wrapper">
+                    <span class="info">
+                        &copy; BANCO BPM GRUPPO BANCARIO<br>
+                        Rappresentante del Gruppo IVA Banco BPM <nobr>Partita IVA 10537050964</nobr>
+                    </span>    
+                </div>
+            </footer>
         </div>
-        <!-- / CONTENUTI -->
-        <footer>
-            <div class="container">
-                Footer
-            </div>
-        </footer>
     </body>
 </html>

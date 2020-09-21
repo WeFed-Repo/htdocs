@@ -534,3 +534,14 @@ ul.albero li>span {font-weight:bold}
     right: 90px;
     top: 10px;
 }
+/* Questionario CS */
+
+ul.oldnew {width:100%;float:left;clear:both}
+ul.oldnew li {border-bottom: solid 1px #ddd;float:left;padding: 5px 0 !important;}
+ul.oldnew li span {float:left;max-width: calc(100% - 100px)}
+ul.oldnew .links {float:right; width:100px;}
+ul.oldnew .links a {border-radius:5px; float:left; width:45px !important;background: #666;color:#fff !important;
+    text-decoration:none !important;
+    text-align:center;                
+    font-weight:bold;}
+    ul.oldnew .links a.new {float:right; background-color:#6f8f0a}
