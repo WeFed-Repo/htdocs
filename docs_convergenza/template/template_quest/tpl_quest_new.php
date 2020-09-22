@@ -58,12 +58,15 @@
                     <div class="quest">
                         <form action="#">
                                 <!-- DOMANDA -->
+                                <p>Benvenuto nel questionario.<br>
+                                Ti chiediamo di rispondere a queste poche domande per aiutarci a migliorare il nostro servizio. Potremmo collegare le risposte al tuo nominativo e, eventualmente, contattarti nel caso sia necessario un approfondimento.
+                                <br>Grazie per il tempo che ci dedicherai!</p>
                                 <p class="question">Quale delle seguenti affermazioni  descrive meglio il tuo percorso per arrivare a questo form di richiesta?</p>
                                 <div class="cbr-wrapper">
-                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
-                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
-                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
-                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1" value="1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1" value="2"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1" value="3"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1" value="4"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
                                 </div>
                                 <!-- / DOMANDA -->
                         </form>
@@ -83,8 +86,8 @@
             <footer>
                 <div class="wrapper">
                     <span class="info">
-                        &copy; BANCO BPM GRUPPO BANCARIO<br>
-                        Rappresentante del Gruppo IVA Banco BPM <nobr>Partita IVA 10537050964</nobr>
+                        Banco BPM S.p.A. - Piazza F. Meda, 4 20121 Milano - tel. 0277001 - Rappresentante del Gruppo IVA Banco BPM Partita IVA 10537050964
+                        <BR>Iscrizione al Registro IVASS (01 gennaio 2017 n° D000563706) - Gruppo Bancario Banco BPM. Tutti i diritti riservati.
                     </span>    
                 </div>
             </footer>

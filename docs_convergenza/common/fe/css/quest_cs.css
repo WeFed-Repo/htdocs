@@ -25,32 +25,17 @@ header .logo {float:right; margin-top:20px; height:60px;width:200px; background-
 .stepper {text-align:left;display:inline-block;margin:20px auto 30px;position:relative;height:14px;border-bottom:solid 3px #ccc;}
 .stepper .step {position:relative;z-index:1;width:25px;height:25px; background:#fff; display:inline-block;border:solid 3px #ccc;border-radius:50%;margin:0 0 0 20px}
 .stepper .step:first-child {margin-left:0}
+
 /* Stepper status */
 .stepper.status-1 .step:nth-child(1) {background-color:#000;border-color:#000}
-
 .stepper.status-2 .step:nth-child(2) {background-color:#000;border-color:#000}
-.stepper.status-2 .step:nth-child(-n+1) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-3 .step:nth-child(3) {background-color:#000;border-color:#000}
-.stepper.status-3 .step:nth-child(-n+2) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-4 .step:nth-child(4) {background-color:#000;border-color:#000}
-.stepper.status-4 .step:nth-child(-n+3) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-5 .step:nth-child(5) {background-color:#000;border-color:#000}
-.stepper.status-5 .step:nth-child(-n+4) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-6 .step:nth-child(6) {background-color:#000;border-color:#000}
-.stepper.status-6 .step:nth-child(-n+54) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-7 .step:nth-child(7) {background-color:#000;border-color:#000}
-.stepper.status-7 .step:nth-child(-n+6) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-8 .step:nth-child(8) {background-color:#000;border-color:#000}
-.stepper.status-8 .step:nth-child(-n+7) {background-color:#8aba0b;border-color:#8ab10b}
-
 .stepper.status-9 .step:nth-child(9) {background-color:#000;border-color:#000}
-.stepper.status-9 .step:nth-child(-n+8) {background-color:#8aba0b;border-color:#8ab10b}
 
 @media (max-width:767px){
     .stepper-wrapper {text-align:center}
@@ -65,10 +50,12 @@ footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
 /* Questionario */
 .quest {display:inline-block; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:15px;}
 
-/* Parti di form e input */
-input[type="radio"],input[type="checkbox"] {width:25px;height:25px;}
-.cbr {position:relative;padding:6px 0  10px 30px;}
-.cbr input {position:absolute;top:0;left:0;}
+/* Parti di form e input (solo radio buttons)*/
+label.cbr {position:relative;padding:3px 0  15px 30px;cursor:pointer}
+label.cbr input {}
+label.cbr .text:before {content:"";width:25px;height:25px; border-radius:50%; display:block;position:absolute;background:transparent; border:solid 1px #999;left:0;top:0;}
+label.cbr .text:after {content:"";width:15px;height:15px; border:solid 1px #ccc; background:transparent;position:absolute;left:3px;top:3px;border-radius:50%;}
+label.cbr input:checked + label.cbr .text:before {background-color:#000}
 
 /* Stili della domanda*/
 p.question {font-size:16px}

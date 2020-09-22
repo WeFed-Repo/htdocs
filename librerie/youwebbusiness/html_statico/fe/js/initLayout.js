@@ -21,27 +21,24 @@ $(window).resize(function () {
 function initHeader() {
 
     /* Scrolling header su desktop */
-    if(!$("header").hasClass("librerie")) {
-
-        $(window).on("ready load scroll resize", function () {
-            var st = $(window).scrollTop();
-            if (st > 70) {
-                if (scrollpx < st) {
-                    if (!bd.hasClass("scroll-down")) {
-                        bd.removeClass("scroll-up").addClass("scroll-down");
-                    }
+    $(window).on("ready load scroll resize", function () {
+        var st = $(window).scrollTop();
+        if (st > 70) {
+            if (scrollpx < st) {
+                if (!bd.hasClass("scroll-down")) {
+                    bd.removeClass("scroll-up").addClass("scroll-down");
                 }
-                else {
-                    if (!bd.hasClass("scroll-up")) {
-                        bd.removeClass("scroll-down").addClass("scroll-up");
-                    }
-                }
-            } else {
-                bd.removeClass("scroll-up scroll-down");
             }
-            scrollpx = st;
-        });
-    }
+            else {
+                if (!bd.hasClass("scroll-up")) {
+                    bd.removeClass("scroll-down").addClass("scroll-up");
+                }
+            }
+        } else {
+            bd.removeClass("scroll-up scroll-down");
+        }
+        scrollpx = st;
+    });    
 }
 
 function initTabs() {
