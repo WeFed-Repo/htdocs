@@ -15,7 +15,7 @@ html, body {
     background: rgb(0,35,69) !important;
     background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
     color: white;
-    font-size:12px;
+    font-size:14px;
 }
 #main {
     padding-top:0 !important
@@ -38,17 +38,25 @@ html, body {
 }
 p {
     color: rgb(52,74,134);
-    font-size:12px;
+    font-size:14px;
     line-height: 18px;
 }
-.titleSection.titleForm {
+.titleSection.titleForm, .titleSection {
     font-size:14px;
     margin-bottom:13px!important;
+    color: rgb(52,74,134)!important;
 }
 .result-number {
-    border: 2px solid rgb(75,147,232)
+    border: 2px solid rgb(75,147,232);
+    padding:5px;
+    border-radius: 8px;
 }
-
+.pos-relative .btnWrapper {
+    bottom: -10px!important;
+}
+.btnLink{
+    color: rgb(52,74,134);
+}
 
 /*BOTTONI */
 .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
@@ -73,7 +81,9 @@ p {
     text-transform: none!important;
 }
 
-table a .icon, table a:active .icon, table a:focus .icon, table a .icon::before {
+table a .icon, table a:active .icon, table a:focus .icon, table a .icon::before,
+.icon.colorVer,
+span.colorVerde {
     color:rgb(18, 46, 92)!important;
 }
 
@@ -94,3 +104,200 @@ table a .icon, table a:active .icon, table a:focus .icon, table a .icon::before 
     }
 }
 
+/* FORM */
+.form-field input[type=radio], input[type=radio],
+.form-field input[type=radio]:focus, input[type=radio]:focus,
+.form-field input[type=radio]:checked, input[type=radio]:checked,
+.form-field input[type=checkbox], input[type=checkbox],
+.form-field input[type=checkbox]:focus, input[type=checkbox]:focus,
+.form-field input[type=checkbox]:checked, input[type=checkbox]:checked   {
+    border:2px solid rgb(52,74,134)!important;
+    background-color: white;
+    width: 24px;
+    height:24px;
+    cursor:pointer;
+    outline: 0!important;
+}
+.form-field input[type=radio]:disabled, input[type=radio]:disabled,
+.form-field input[type=radio]:disabled:focus, input[type=radio]:disabled:focus,
+.form-field input[type=radio]:disabled:checked, input[type=radio]:disabled:checked,
+.form-field input[type=checkbox]:disabled, input[type=checkbox]:disabled,
+.form-field input[type=checkbox]:disabled:focus, input[type=checkbox]:disabled:focus,
+.form-field input[type=checkbox]:disabled:checked, input[type=checkbox]:disabled:checked {
+    border:2px solid rgb(231, 219, 202)!important;
+    background-color: white!important;
+}
+.form-field input[type=radio]:checked, input[type=radio]:checked,
+.form-field input[type=checkbox]:checked, input[type=checkbox]:checked  {
+    background-color:  rgb(52,74,134);
+    color:#fff!important;
+}
+input[type='radio']:checked:before, 
+input[type='radio']:before,
+input[type='checkbox']:checked:before, 
+input[type='checkbox']:before {
+    background:  transparent url("/HT/fe/img/check_aletti.png") no-repeat 0 0;
+    /*content: "\2714";*/
+    line-height: 13px;
+    margin-left:2px;
+    color:#fff!important;
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: inline-block;
+}
+input[type='checkbox']:checked:before, 
+input[type='checkbox']:before{
+    line-height: 17px;
+    margin-top:3px;
+}
+input[type='radio']:before,
+input[type='checkbox']:before {
+    background: none;
+}
+input[type='radio'] + label {
+    position: relative;
+    top:-7px;
+}
+
+
+.text-checkbox-mobile,.text-checkbox{
+    width: 84%!important;
+}
+
+.control-label {
+    font-size: 14px;
+    color: rgb(18, 46, 92)!important;
+    text-transform:uppercase;
+    font-weight: 600!important;
+    margin-bottom:0
+}
+.control-label .text-checkbox,.control-label .text-checkbox-mobile {
+    font-weight: normal!important;
+    text-transform:none;
+    font-size: 14px;
+}
+select.form-control, .ui-combobox,
+select.form-control:focus, .ui-combobox:focus,
+input[type="text"].form-control,
+input[type="password"].form-control
+ {
+    border:0;
+    border-bottom: 1px solid rgba(153,167,180,0.5)!important;
+    background: #fff url("/HT/fe/img/arrow_aletti.png") no-repeat right bottom;
+    font-size: 16px;
+    color: black;
+   
+}
+input[type="text"].form-control,
+input[type="password"].form-control{
+    background:none;
+    padding-left:0!important;
+}
+select option {
+    background-color: white;
+    color: rgb(52, 74, 134);
+}
+input[type="text"].form-control:focus,
+input[type="password"].form-control:focus {
+    border-bottom: 1px solid rgba(18, 46, 92)!important;
+    color: rgb(31, 32, 33);
+    font-weight: bold;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eeeeee!important;
+    opacity: 1;
+}
+.ui-combobox .icon.icon-arrow_down {
+    display:none;
+}
+.ui-widget-content.ui-combobox-input.form-control.ui-autocomplete-input:focus,
+.ui-widget-content.ui-combobox-input.form-control.ui-autocomplete-input:focus + button,
+.ui-widget-content.ui-combobox-input.form-control.ui-autocomplete-input:focus + button.ui-state-hover {
+    border:0!important;
+}
+.ui-autocomplete.ui-menu {
+    background-color: #fff !important;
+    border: 0 !important;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 10px 1px #eee;
+    margin-top:3px;
+}
+.ui-autocomplete li, .ui-autocomplete li:hover, .ui-autocomplete li a, .ui-autocomplete li a:hover, .ui-autocomplete li.ui-state-focus a:hover{
+    color: rgb(52, 74, 134);
+
+}
+.box-otp label {
+    padding-right: 44px;
+}
+.box-stepper {
+    position: relative;
+    top:15px;
+}
+.number-stepper.attivo span, .number-stepper.done span,
+.box-line-stepper .line-stepper.done{
+    background-color: rgb(18, 46, 92);
+    border-color: rgb(18, 46, 92);
+}
+.number-stepper span {
+    background-color: rgb(232, 236, 239);
+}
+.box-line-stepper .line-stepper {
+    border-top: 8px solid rgb(232, 236, 239);
+}
+table tr.odd td {
+    background-color: white;
+}
+/*ACCORDION*/
+.ui-accordion .ui-state-default:not(.ui-combobox-button), #accordion .ui-widget-content .ui-state-default:not(.ui-combobox-button), #accordion .ui-widget-header .ui-state-default:not(.ui-combobox-button), .accordion .panel-heading .panel-title a {
+    background-color: white;
+    height: 54px;
+    padding:18px 0  0;
+    border-bottom:1px solid rgba(153,167,180,0.5)!important;
+}
+.ui-accordion .ui-state-default:not(.ui-combobox-button):first-child, 
+#accordion .ui-widget-content .ui-state-default:not(.ui-combobox-button):first-child, 
+#accordion .ui-widget-header .ui-state-default:not(.ui-combobox-button):first-child, 
+.accordion .panel-heading .panel-title a:first-child {
+    border-top:1px solid rgba(153,167,180,0.5)!important;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, .ui-accordion .ui-state-default.ui-state-active, .ui-accordion .ui-state-default:hover{
+    color:rgb(18, 46, 92);
+    font-size:14px;
+}
+
+.ui-accordion .ui-accordion-header .icon-accordion_down {
+    display:block;
+}
+.ui-accordion .ui-accordion-header.ui-accordion-header-active .icon-accordion_down {
+    display:none;
+}
+.ui-accordion .ui-accordion-header .icon-accordion_up {
+    display:none;
+}
+.ui-accordion .ui-accordion-header-active .icon-accordion_up {
+    display:block;
+}
+.ui-accordion .ui-accordion-header-active .icon-accordion_up, .accordion .panel-heading .panel-title a .icon-accordion_up,
+.ui-accordion .ui-accordion-header .icon-accordion_down, .accordion .panel-heading .panel-title a .icon-accordion_down {
+    background: #fff url("/HT/fe/img/arrow_aletti.png") no-repeat right center;
+    width: 30px;
+    display: inline-block;
+    margin:0;
+}
+.ui-accordion .ui-accordion-header .icon-accordion_down, .accordion .panel-heading .panel-title a .icon-accordion_down {
+    transform: rotate(-180deg);
+  
+} 
+#documentoPDF {
+    margin-bottom:30px!important;
+}
+div.messagePanel h3, div.messagePanel div p{
+  font-size: 20px;
+  color: rgb(31, 32, 33)!important;
+  text-align: center;
+  line-height: 26px;
+}

@@ -78,19 +78,19 @@
 							{
 								"nome": "Web advisory conferma 2",
 								"html": "vr",
-								"inlavorazione": false,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory_conferma_2.php"
 							},
 							{
 								"nome": "Web advisory conferma 3",
 								"html": "vr",
-								"inlavorazione": false,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory_conferma_3.php"
 							},
 							{
 								"nome": "Web advisory conferma 4",
 								"html": "vr",
-								"inlavorazione": false,
+								"alettistyle": true,
 								"tpl": "tpl_web_advisory_conferma_4.php"
 							}
 							

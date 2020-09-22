@@ -39,7 +39,7 @@
                     </thead>
                     <tbody>
                         <tr class="odd">
-                            <td><input type="radio" name="filtroRapportoProposta" value="ALL" checked="checked"></td>
+                            <td class="oCenter"><input type="radio" name="filtroRapportoProposta" value="ALL" checked="checked"></td>
                             <td colspan="4">Tutti</td>
                         </tr>
                             
