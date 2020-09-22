@@ -58,9 +58,12 @@
                     <div class="quest">
                         <form action="#">
                                 <!-- DOMANDA -->
+                                <p>Benvenuto nel questionario.<br>
+                                Ti chiediamo di rispondere a queste poche domande per aiutarci a migliorare il nostro servizio. Potremmo collegare le risposte al tuo nominativo e, eventualmente, contattarti nel caso sia necessario un approfondimento.
+                                <br>Grazie per il tempo che ci dedicherai!</p>
                                 <p class="question">Quale delle seguenti affermazioni  descrive meglio il tuo percorso per arrivare a questo form di richiesta?</p>
                                 <div class="cbr-wrapper">
-                                    <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
+                                    <label class="cbr"><input type="radio" name="ans-1" checked="checked"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
                                     <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
                                     <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>
                                     <label class="cbr"><input type="radio" name="ans-1"><span class="text">Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit Lorem ispsum dolor sit</span></label>

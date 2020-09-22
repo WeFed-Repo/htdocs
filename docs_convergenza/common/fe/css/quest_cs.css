@@ -50,10 +50,12 @@ footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
 /* Questionario */
 .quest {display:inline-block; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:15px;}
 
-/* Parti di form e input */
-input[type="radio"],input[type="checkbox"] {width:25px;height:25px;}
-.cbr {position:relative;padding:6px 0  10px 30px;}
-.cbr input {position:absolute;top:0;left:0;}
+/* Parti di form e input (solo radio buttons)*/
+label.cbr {position:relative;padding:3px 0  15px 30px;cursor:pointer}
+label.cbr input {display:none;}
+label.cbr .text::before {content:"";width:25px;height:25px; border-radius:50%; display:block;position:absolute;background:transparent; border:solid 1px #999;left:0;top:0;}
+label.cbr .text::after {content:"";width:15px;height:15px; border:solid 1px #ccc; background:transparent;position:absolute;left:3px;top:3px;border-radius:50%;}
+label.cbr input:checked+label.cbr .text::after {background-color:#000}
 
 /* Stili della domanda*/
 p.question {font-size:16px}
