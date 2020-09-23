@@ -67,11 +67,15 @@ footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
 }
 
 /* Parti di form e input (solo radio buttons)*/
-label.cbr {position:relative;padding:3px 0  15px 35px;cursor:pointer;font-weight:normal}
+label.cbr {position:relative;padding:3px 0  15px 35px;cursor:pointer;font-weight:normal;width:100%;}
 label.cbr input {display:none}
 label.cbr .text:before {content:"";width:25px;height:25px; border-radius:50%; display:block;position:absolute;background:transparent; border:solid 1px #999;left:0;top:0;}
 label.cbr .text:after {content:"";width:17px;height:17px; border:solid 1px #ccc; background:transparent;position:absolute;left:4px;top:4px;border-radius:50%;transition: all 0.3s}
 label.cbr input:checked + .text:after {background-color:#666;border:#666;}
+
+.cbr-wrapper.voto {width:100%;display:inline-block;padding:0;margin:0;position:relative}
+.cbr-wrapper.voto label.cbr {width:10%;display:inline-block;max-width:10%;margin:0 0 20px;padding:40px 0 0; overflow:visible;text-align:center}
+.cbr-wrapper.voto label.cbr .milestone {position:absolute; display:none;}
 
 /* Stili della domanda*/
 p.question {font-weight:600;}
@@ -93,3 +97,4 @@ p.question {font-weight:600;}
 .btn:hover {opacity:0.8}
 .btn:active,.btn:hover,.btn:focus {box-shadow:none !important; border:none !important;}
 .btn-default:hover, .btn-default:focus, .btn-default:active { background:#aaa;color:#fff !important;}
+,
