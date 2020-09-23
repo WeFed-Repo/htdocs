@@ -11,6 +11,7 @@
         </h1>
     </div>
 </section>
+<div class="wrapper-app-style">
 <section>
    <p>Seleziona il servizio di consulenza sul quale sono presenti proposte e  accedi all’iter di accettazione cliccando sulla lente di ingrandimento</p>
 </section>
@@ -145,3 +146,4 @@
     });
     </script>
 </section>
+</div>

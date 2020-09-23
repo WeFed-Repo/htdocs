@@ -3,13 +3,15 @@
     display:none;
 }
 #mainContent {
+    padding:20px;
+}
+#mainContent .wrapper-app-style {
     padding:0;
     color: rgb(52,74,134);
     border-radius: 20px;
     padding: 0;
     background: white;
-    padding:26px 16px 16px;
-    margin-top:50px;
+    padding: 20px 16px 16px;
 }
 html, body {
     background: rgb(0,35,69) !important;
@@ -21,13 +23,7 @@ html, body {
     padding-top:0 !important
 }
 /* TESTI*/
-.titolo {
-    background: rgb(0,35,69) !important;
-    background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
-    color: white;
-    margin-top:-55px;
-    line-height: 18px;
-}
+
 .titolo span {
     font-size:16px;
     display: inline-block;
@@ -88,19 +84,23 @@ span.colorVerde {
 }
 
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 767px)
 {
     .titolo span {
        max-width: 290px;
        white-space: nowrap;
-      overflow: hidden;
-        text-overflow: ellipsis;
+       overflow: hidden;
+       text-overflow: ellipsis;
      }
      .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
     .btn-primary:hover:active,
     .btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited
     {
         width: 100%;
+    }
+    
+    .btn-align-right.flRight{
+        float:none;
     }
 }
 

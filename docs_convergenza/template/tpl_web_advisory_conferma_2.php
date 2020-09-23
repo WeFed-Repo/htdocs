@@ -11,6 +11,7 @@
         </h1>
     </div>
 </section>
+<div class="wrapper-app-style">
 <section>
     <p>Di seguito puoi aprire ed esaminare le varie sezioni di approfondimento e compilare i campi necessari per proseguire.</p>
 </section>
@@ -7482,8 +7483,8 @@
 	<section>
 		<div class="form-group btnWrapper clearfix">
 			<div class="btn-align-right">
-				<input type="button" id="indietro" class="btn btn-default" title="Indietro" value="Indietro">
-				<input type="submit" value="prosegui" class="btn btn-primary" alt="prosegui">
+				<input type="button" id="indietro" class="btn btn-default xs-small-col" title="Indietro" value="Indietro">
+				<input type="submit" value="prosegui" class="btn btn-primary xs-large-col" alt="prosegui">
 			</div>
 		</div>
 	</section>
@@ -7644,3 +7645,4 @@
 // 	})
 	
 </script>
+</div>
