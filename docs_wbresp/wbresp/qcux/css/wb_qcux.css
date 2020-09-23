@@ -1,0 +1,44 @@
+/* Personalizzazione font */
+@font-face {
+    font-family: 'bankfont';
+    src: url('/wbresp/qcux/font/raleway-bold-webfont.eot');
+    src: url('/wbresp/qcux/font/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/wbresp/qcux/font/raleway-bold-webfont.woff') format('woff'), url('/wbresp/qcux/font/raleway-bold-webfont.ttf') format('truetype'), url('/wbresp/qcux/font/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bankfont';
+    src: url('/wbresp/qcux/font/raleway-semibold-webfont.eot');
+    src: url('/wbresp/qcux/font/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('/wbresp/qcux/font/raleway-semibold-webfont.woff') format('woff'), url('/wbresp/qcux/font/raleway-semibold-webfont.ttf') format('truetype'), url('/wbresp/qcux/font/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bankfont';
+    src: url('/wbresp/qcux/font/raleway-medium-webfont.eot');
+    src: url('/wbresp/qcux/font/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), url('/wbresp/qcux/font/raleway-medium-webfont.woff') format('woff'), url('/wbresp/qcux/font/raleway-medium-webfont.ttf') format('truetype'), url('/wbresp/qcux/font/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {font-family: "bankfont"}
+header h1 .logocs {background: transparent url(/wbresp/qcux/img/wb_qcux.png) no-repeat center center; background-size: contain}
+header .logo {background: transparent url(/wbresp/qcux/img/wb_logo.png) no-repeat center center; background-size: cover}
+
+/* Stepper */
+.stepper.status-2 .step:nth-child(-n+1) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-3 .step:nth-child(-n+2) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-4 .step:nth-child(-n+3) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-5 .step:nth-child(-n+4) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-6 .step:nth-child(-n+5) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-7 .step:nth-child(-n+6) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-8 .step:nth-child(-n+7) {background-color:#8ab10b;border-color:#8ab10b}
+.stepper.status-9 .step:nth-child(-n+8) {background-color:#8ab10b;border-color:#8ab10b}
+
+/* Radio button e checkbox */
+label.cbr input:checked + .text:after {background-color:#8ab10b;}
+
+/* Bottoni */
+.btn.btn-primary,.btn.btn-primary:hover,.btn.btn-primary:active,.btn.btn-primary:focus  {background-color:#8ab10b}

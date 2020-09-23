@@ -1,7 +1,13 @@
 /* CLASSI GENERICHE */
-body {background-color:#eee;margin:0;padding:0;font-size:14px}
-#main {max-width:1430px;margin:0 auto;padding:0 15px}
+body {background-color:#eee;margin:0;padding:0;font-size:16px}
+#main {max-width:1460px;margin:0 auto;padding:0 30px}
 .wrapper {max-width:1400px; margin:0 auto;display:block;padding:0}
+@media (max-width:767px) {
+    #main {padding:0 15px}
+}
+
+/* Reset di classi generiche "locali" */
+p {margin-top:0;}
 
 
 /* HEADER */
@@ -42,23 +48,40 @@ header .logo {float:right; margin-top:20px; height:60px;width:200px; background-
 }
 
 /* FOOTER */
-footer .wrapper {border-top: solid 1px #ccc}
+footer .wrapper {border-top: solid 1px rgb(202, 186, 186); text-align:center;}
 footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
 
 /* CONTENUTI */
 
 /* Questionario */
-.quest {display:inline-block; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:15px;}
+.quest {display:inline-block; width:100%; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:25px 25px 20px;}
+.quest.feedback {background:transparent; color:#666;border:none;border-bottom:solid 1px #ccc; padding:35px 0;}
+.quest.feedback .fb-message {max-width:545px;margin:0 auto 30px;text-align:center;}
+.quest.feedback .fb-message .title {font-size:40px;font-weight:bold;clear:both;display:block; line-height:40px;}
+.quest.feedback .fb-message .payoff {font-size: 25px;display:block;margin-top: 10px;clear:both; line-height:25px;}
+
+@media(max-width:767px) {
+    .quest {padding:15px 15px 0}
+}
 
 /* Parti di form e input (solo radio buttons)*/
-label.cbr {position:relative;padding:3px 0  15px 30px;cursor:pointer}
-label.cbr input {}
+label.cbr {position:relative;padding:3px 0  15px 35px;cursor:pointer;font-weight:normal}
+label.cbr input {display:none}
 label.cbr .text:before {content:"";width:25px;height:25px; border-radius:50%; display:block;position:absolute;background:transparent; border:solid 1px #999;left:0;top:0;}
-label.cbr .text:after {content:"";width:15px;height:15px; border:solid 1px #ccc; background:transparent;position:absolute;left:3px;top:3px;border-radius:50%;}
-label.cbr input:checked + label.cbr .text:before {background-color:#000}
+label.cbr .text:after {content:"";width:17px;height:17px; border:solid 1px #ccc; background:transparent;position:absolute;left:4px;top:4px;border-radius:50%;transition: all 0.3s}
+label.cbr input:checked + .text:after {background-color:#666;border:#666;}
 
 /* Stili della domanda*/
-p.question {font-size:16px}
+p.question {font-weight:600;}
+
+/* Errore */
+.errore {
+    color: #a94442;
+    background-color: #f2dede;
+    border:solid 1px #ebccd1;
+    margin-bottom:20px;
+    padding:15px;
+}
 
 /* Bottoniera e bottoni */
 .btn-wrapper {width:100%;clear:both; margin-bottom:15px;display:inline-block;}
@@ -66,7 +89,6 @@ p.question {font-size:16px}
 .btn-align-right {text-align:right; max-width:50%;float:right}
 
 .btn {outline:none !important;border:none !important; background:#999; padding: 10px 20px;color:#fff;margin-bottom:15px;display:inline-block; font-size:16px;font-weight:bold;text-transform:uppercase}
+.btn:hover {opacity:0.8}
 .btn:active,.btn:hover,.btn:focus {box-shadow:none !important; border:none !important;}
 .btn-default:hover, .btn-default:focus, .btn-default:active { background:#aaa;color:#fff !important;}
-
-/* Errori */

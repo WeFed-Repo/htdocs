@@ -26,8 +26,23 @@ $tipoOggettiPub = Array(
 						<li><a href="/template/strutt_wbresp.php?tpl=wbresp_full_placeholder.php">Pagina interna 100%</a></li>
 					</ul>
 					<!-- FINE STRUTTURE -->
+				
+					<!-- QCUX -->Celmax
+					<h2>Questionario CS</h2>
+					<ul class="oldnew">
+						<?php foreach( ["1","1a","1b","1c","2","2b","2c","2d","2e","3","4","5"] as $quest) { ?>
+							<li>
+								<span>Questionario <?php print $quest ?></span>
+								<div class="links">
+									<a href="/template/qcux/tpl_pub_aol_questionario1.php" target="_blank">OLD</a>
+									<?php if ($quest ==="1") {?><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=wb&tpl=tpl_quest_radio.php">NEW</a><?php } ?> 
+								</div>
+							</li>
+						<?php } ?>
+					</ul>
+					<!-- QCUX -->
+					
 				</div>
-
 				<!-- OGGETTI -->
 				<div class="col-sm-6 col-md-4">
 					<h2 class="color borderlightcolor">Oggetti</h2>

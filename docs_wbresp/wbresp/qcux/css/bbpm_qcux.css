@@ -1,0 +1,47 @@
+/* Personalizzazione font */
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-light-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-light-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-medium-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-medium-webfont.woff') format('woff');
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-semibold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style:normal;
+}
+
+body {font-family: "bankfont"}
+header h1 .logocs {background: transparent url(/wbresp/qcux/img/bbpm_qcux.png) no-repeat center center; background-size: contain}
+header .logo {background: transparent url(/wbresp/qcux/img/bbpm_logo.png) no-repeat center center; background-size: cover;
+  height:51px;  
+}
+@media (max-width: 767px) {
+    header .logo {width:168px;height:43px;}
+}
+
+
+/* Stepper */
+.stepper.status-2 .step:nth-child(-n+1) {background-color:#00785f;border-color:#00785f}
+.stepper.status-3 .step:nth-child(-n+2) {background-color:#00785f;border-color:#00785f}
+.stepper.status-4 .step:nth-child(-n+3) {background-color:#00785f;border-color:#00785f}
+.stepper.status-5 .step:nth-child(-n+4) {background-color:#00785f;border-color:#00785f}
+.stepper.status-6 .step:nth-child(-n+5) {background-color:#00785f;border-color:#00785f}
+.stepper.status-7 .step:nth-child(-n+6) {background-color:#00785f;border-color:#00785f}
+.stepper.status-8 .step:nth-child(-n+7) {background-color:#00785f;border-color:#00785f}
+.stepper.status-9 .step:nth-child(-n+8) {background-color:#00785f;border-color:#00785f}
+
+/* Radio button e checkbox */
+label.cbr input:checked + .text:after {background-color:#00785f;}
+
+/* Bottoni */
+.btn.btn-primary,.btn.btn-primary:hover,.btn.btn-primary:active,.btn.btn-primary:focus  {background-color:#00785f}

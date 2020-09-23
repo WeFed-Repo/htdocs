@@ -51,20 +51,7 @@
                             <li><a href="index_wiki.php">Documentazione sulle librerie</a></li>
                         </ul>
                         
-                        <?php if ($site==="webank") { ?>
-                        <h2>Questionario CS</h2>
-                        <ul class="oldnew">
-                            <?php foreach( ["1","1a","1b","1c","2","2b","2c","2d","2e","3","4","5"] as $quest) { ?>
-                                <li>
-                                    <span>Questionario <?php print $quest ?></span>
-                                    <div class="links">
-                                        <a href="/template/template_quest/tpl_pub_aol_questionario1.php" target="_blank">OLD</a>
-                                        <?php if ($quest ==="1") {?><a class="new" href="/template/template_quest/tpl_quest_new.php">NEW</a><?php } ?> 
-                                    </div>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                        <?php } ?>
+                        
 
 
                     </div>
