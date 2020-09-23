@@ -11,6 +11,7 @@
 		</h1>
 	</div>
 </section>
+<div class="wrapper-app-style">
 <section>
    <! --NUOVO STEPPER  -->
    <div class="box-stepper">
@@ -209,8 +210,8 @@
 	    <section>
 		<div class="form-group btnWrapper clearfix">
 			<div class="btn-align-right">
-				<input class="btn btn-default" type="button" name="" value="Indietro" onclick="document.location.href = getPathContext() + '/investimenti/consulenza/propostaConfermaApprofondimenti.do';" class="btn btn-primary">
-				<input class="btn btn-primary" type="submit" name="conferma" tabindex="2" value="Conferma" id="conferma" class="btn btn-primary execute">
+				<input class="btn btn-default xs-small-col" type="button" name="" value="Indietro" onclick="document.location.href = getPathContext() + '/investimenti/consulenza/propostaConfermaApprofondimenti.do';" class="btn btn-primary">
+				<input class="btn btn-primary xs-large-col" type="submit" name="conferma" tabindex="2" value="Conferma" id="conferma" class="btn btn-primary execute">
 			</div>		
 		</div>	
 			</section>
@@ -243,3 +244,4 @@ $(document).ready(function(){
     	}); 
 })
 </script>
+</div>

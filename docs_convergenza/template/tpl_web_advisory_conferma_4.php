@@ -10,6 +10,7 @@
         </h1>
     </div>
 </section>
+<div class="wrapper-app-style esito">
 <section>
    <! --NUOVO STEPPER  -->
    <div class="box-stepper">
@@ -51,6 +52,6 @@
 			</div>
 		</div>
 </section>
-
+</div>
 		
 		

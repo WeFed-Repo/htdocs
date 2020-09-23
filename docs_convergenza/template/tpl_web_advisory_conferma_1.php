@@ -10,6 +10,7 @@
         </h1>
     </div>
 </section>
+<div class="wrapper-app-style">
 <section>
    <! --NUOVO STEPPER  -->
    <div class="box-stepper">
@@ -149,14 +150,15 @@
 </section>
 <section>
 	<div class="form-group btnWrapper clearfix">
-		<div class="btn-align-right">
-		    <input type="button" id="indietro" class="btn btn-default" title="Indietro" value="Indietro">
+		<div class="btn-align-right flRight">
+		   
 			<input type="button" id="rifiutaProposta" class="btn btn-primary" title="Rifiuta" value="Rifiuta">
 			<input type="button" id="avanti" class="btn btn-primary" title="prosegui" value="prosegui">
+			<input type="button" id="indietro" class="btn btn-default flLeft" title="Indietro" value="Indietro">
 		</div>
 	</div>
 </section>
-
+</div>
 <script type="text/javascript">
 $(document).ready(function(){
 	
