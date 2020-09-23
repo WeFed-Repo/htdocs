@@ -60,7 +60,7 @@
       }
 
       /* Tab particolari */
-      &#tabConfronta {
+      &#tabConfronta { 
         word-wrap: none;
         white-space: nowrap;
         a.leftelement {display:inline-block;}
@@ -81,7 +81,9 @@
             top: 5px;}
         }
       }
-
+      &.no-label {
+        padding-top:0
+      }
     }
   };
   .innerContFirstLev {

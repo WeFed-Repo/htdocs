@@ -3669,6 +3669,9 @@ div.pager .circle.current_page {
   width: 30px;
   top: 5px;
 }
+.outerTab ul:not(.azioni) li.no-label {
+  padding-top: 0;
+}
 .outerTab .innerContFirstLev {
   clear: both;
 }
