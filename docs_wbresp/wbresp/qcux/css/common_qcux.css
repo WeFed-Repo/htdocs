@@ -59,9 +59,11 @@ footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
 .quest.feedback .fb-message {max-width:545px;margin:0 auto 30px;text-align:center;}
 .quest.feedback .fb-message .title {font-size:40px;font-weight:bold;clear:both;display:block; line-height:40px;}
 .quest.feedback .fb-message .payoff {font-size: 25px;display:block;margin-top: 10px;clear:both; line-height:25px;}
-
 @media(max-width:767px) {
     .quest {padding:15px 15px 0}
+    .quest.feedback .fb-message {max-width:100%}
+    .quest.feedback .fb-message .title {font-size:30px;line-height:30px;}
+    .quest.feedback .fb-message .payoff {font-size:20px;line-height:20px;}
 }
 
 /* Parti di form e input (solo radio buttons)*/
@@ -87,7 +89,6 @@ p.question {font-weight:600;}
 .btn-wrapper {width:100%;clear:both; margin-bottom:15px;display:inline-block;}
 .btn-align-left {max-width:50%;float:left;}
 .btn-align-right {text-align:right; max-width:50%;float:right}
-
 .btn {outline:none !important;border:none !important; background:#999; padding: 10px 20px;color:#fff;margin-bottom:15px;display:inline-block; font-size:16px;font-weight:bold;text-transform:uppercase}
 .btn:hover {opacity:0.8}
 .btn:active,.btn:hover,.btn:focus {box-shadow:none !important; border:none !important;}

@@ -60,26 +60,37 @@ if ( empty($bank) || $bank !=="bbpm") {
             <!-- CONTENUTI -->
             <div id="contenuti">
                 <div class="wrapper">
-                    <!-- BLOCCO STEPPER -->
-                    <div class="stepper-wrapper">
-                        <!-- per cambiare il livello di completamento e' sufficiente cambiare la class status-X (dove X è il numero di step) -->
-                        <div class="stepper status-3">
-                            <span class="step step-1"></span>
-                            <span class="step step-2"></span>
-                            <span class="step step-3"></span>
-                            <span class="step step-4"></span>
+                    <?php if($tpl !=="tpl_quest_feedback.php") { ?>
+                        <!-- BLOCCO STEPPER -->
+                        <div class="stepper-wrapper">
+                            <!-- per cambiare il livello di completamento e' sufficiente cambiare la class status-X (dove X è il numero di step) -->
+                            <div class="stepper status-3">
+                                <span class="step step-1"></span>
+                                <span class="step step-2"></span>
+                                <span class="step step-3"></span>
+                                <span class="step step-4"></span>
+                            </div>
                         </div>
-                    </div>
                     <!-- /BLOCCO STEPPER -->
+                    <?php } ?>
+                   
                     <?php include("./".$tpl); ?>
                     
                     <div class="btn-wrapper">
+                        <?php if($tpl !=="tpl_quest_feedback.php") { ?>
                         <div class="btn-align-left">
                             <button type="button" class="btn btn-default" href="#">Indietro</button>
                         </div>
                         <div class="btn-align-right">
                             <button type="button" class="btn btn-primary" href="#" onclick="setError()">Continua</button>
-                        </div>   
+                        </div>
+                        <?php }
+                        else
+                        { ?>
+                        <div class="btn-align-right">
+                            <button type="button" class="btn btn-primary" href="#" onclick="setError()">Torna al sito</button>
+                        </div>
+                        <?php } ?>   
                     </div>
                 </div>
                 
