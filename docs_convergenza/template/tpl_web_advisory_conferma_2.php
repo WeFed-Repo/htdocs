@@ -162,7 +162,7 @@
 						</div>
 						<!-- IN CASO NON SIA INSERITO IL NOME NON MOSTRO IL MESSAGGIO -->
 						<h3 class="titleSection labelIntestazioneSelezioneCC">ZWIRNER MARIA EMMA</h3>
-								Gentile ZWIRNER MARIA EMMA,
+								<span>Gentile ZWIRNER MARIA EMMA,</span>
 						<div class="form-group">
 							<div class="row">
 								<div class="col-xs-12">
@@ -204,7 +204,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="scopo0">Scopo prevalente del rapporto Fondi</label>
 									<select id="scopo0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.valoreSpecificoRapporto[0].rispostaSelezionata" "="" class="fixed-size form-control">
-											<option value=""></option>
+											<option value="">Seleziona</option>
 											
 												<option value="01">
 													Risparmio
@@ -364,7 +364,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="secondaCittadinanza0">Seconda cittadinanza </label>
 									<select id="secondaCittadinanza0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.secondaNazione" class="fixed-size form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="676">
 												ABU DHABI
