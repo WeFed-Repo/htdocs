@@ -72,10 +72,25 @@ label.cbr input {display:none}
 label.cbr .text:before {content:"";width:25px;height:25px; border-radius:50%; display:block;position:absolute;background:transparent; border:solid 1px #999;left:0;top:0;}
 label.cbr .text:after {content:"";width:17px;height:17px; border:solid 1px #ccc; background:transparent;position:absolute;left:4px;top:4px;border-radius:50%;transition: all 0.3s}
 label.cbr input:checked + .text:after {background-color:#666;border:#666;}
+label.cbr .milestone {font-weight:bold; display:inline}
+label.cbr .milestone:before {content: " - "}
 
-.cbr-wrapper.voto {width:100%;display:inline-block;padding:0;margin:0;position:relative}
-.cbr-wrapper.voto label.cbr {width:10%;display:inline-block;max-width:10%;margin:0 0 20px;padding:40px 0 0; overflow:visible;text-align:center}
-.cbr-wrapper.voto label.cbr .milestone {position:absolute; display:none;}
+@media (min-width:768px) {
+    .cbr-wrapper.voto {width:100%;display:inline-block;padding:0;margin:0;position:relative}
+    .cbr-wrapper.voto label.cbr {position:relative;width:10%;float:left;max-width:10%;margin:0 0 20px;padding:0; margin-top:15px; overflow:visible;text-align:center}
+    .cbr-wrapper.voto label.cbr .text {border-radius: 50%;border:solid 1px #ccc; font-size:20px;font-weight:bold;line-height:45px;display:inline-block;width:45px;height:45px;margin:0 auto;float:none;clear:both; position:relative; text-align:center;}
+    .cbr-wrapper.voto label.cbr .text:before {display:none;}
+    .cbr-wrapper.voto label.cbr .text:after {display:none;}
+    .cbr-wrapper.voto label.cbr input:checked + .text {color:#fff;background-color:#666; border-color:#666}
+    .cbr-wrapper.voto label.cbr .milestone {position: relative;
+    float:left;
+    font-size: 14px;
+    width: 100%;
+    color: #333;
+    font-weight: normal;}
+    .cbr-wrapper.voto label.cbr .milestone:before {display:block; width:10px;height:10px;clear:both;float:none;clear:both;display:inline-block; content:"";border:solid 10px #fff;border-bottom:solid 10px #ddd;}
+    .cbr-wrapper.voto label.cbr .milestone span {width:100%;clear:both;display:block; overflow:visible; text-overflow:ellipsis;overflow:hidden}
+}
 
 /* Stili della domanda*/
 p.question {font-weight:600;}

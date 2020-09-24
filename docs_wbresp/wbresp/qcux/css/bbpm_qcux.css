@@ -42,6 +42,11 @@ header .logo {background: transparent url(/wbresp/qcux/img/bbpm_logo.png) no-rep
 
 /* Radio button e checkbox */
 label.cbr input:checked + .text:after {background-color:#0e977f;}
+@media (min-width: 768px) {
+    .cbr-wrapper.voto label.cbr input:checked + .text {
+    border-color:#0e977f;
+    background-color:#0e977f}
+}
 
 /* Bottoni */
 .btn {height:34px;padding-top:8px;font-size:14px!important}
