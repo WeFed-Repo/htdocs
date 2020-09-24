@@ -3,7 +3,7 @@
     display:none;
 }
 #mainContent {
-    padding:20px;
+    padding:25px 20px;
 }
 #mainContent .wrapper-app-style {
     padding:0;
@@ -16,11 +16,14 @@
 html, body {
     background: rgb(0,35,69) !important;
     background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
-    color: white;
-    font-size:14px;
+    font-size:16px;
+    color: rgb(52,74,134);
 }
 #main {
     padding-top:0 !important
+}
+.ui-accordion .ui-accordion-content {
+    padding:10px;
 }
 /* TESTI*/
 
@@ -28,30 +31,41 @@ html, body {
     font-size:16px;
     display: inline-block;
     letter-spacing: 0;
+    color:#fff;
 }
 .titolo h1 {
     margin-bottom:0;
 }
-p {
-    color: rgb(52,74,134);
-    font-size:14px;
-    line-height: 18px;
+p, .ui-accordion-content {
+    color: rgb(52,74,134)!important;
+    font-size:16px;
 }
 .titleSection.titleForm, .titleSection {
-    font-size:14px;
+    font-size:18px;
     margin-bottom:13px!important;
-    color: rgb(52,74,134)!important;
+    color: rgb(18,46,92)!important;
 }
 .result-number {
     border: 2px solid rgb(75,147,232);
     padding:5px;
     border-radius: 8px;
+    min-width: 30px;
 }
 .pos-relative .btnWrapper {
     bottom: -10px!important;
 }
 .btnLink{
     color: rgb(52,74,134);
+    text-transform: none;
+    font-size:14px;
+}
+.icon + .btnLink{
+    padding-left:5px;
+    position: relative;
+    top:-13px;
+}
+.ui-accordion-content .documenti li .icon {
+    margin-bottom: 10px;
 }
 
 /*BOTTONI */
@@ -86,13 +100,7 @@ span.colorVerde {
 
 @media only screen and (max-width: 767px)
 {
-    .titolo span {
-       max-width: 290px;
-       white-space: nowrap;
-       overflow: hidden;
-       text-overflow: ellipsis;
-     }
-     .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
+    .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
     .btn-primary:hover:active,
     .btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited
     {
@@ -300,4 +308,53 @@ div.messagePanel h3, div.messagePanel div p{
   color: rgb(31, 32, 33)!important;
   text-align: center;
   line-height: 26px;
+}
+
+/*TABELLE */
+.table, td,th, table:not(.ui-datepicker-calendar) td, table:not(.ui-datepicker-calendar) th {
+    border:0!important;
+
+}
+table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
+    padding: 10px 15px;
+    height: 30px; 
+}
+table:not(.ui-datepicker-calendar) td {
+    border-bottom:1px solid rgb(235, 237, 238)!important;
+}
+table:not(.ui-datepicker-calendar) tr:last-child td {
+    border-bottom:0!important;
+}
+table:not(.ui-datepicker-calendar) th {
+    font-size:10px!important;
+    text-transform: uppercase;
+    color: rgb(136,150,173)
+}
+table:not(.ui-datepicker-calendar) td {
+    font-size:14px;
+    color: rgb(31,32,33)
+}
+.table-responsive {
+    border-top: 4px solid rgb(242,243,245);
+    border-bottom: 4px solid rgb(242,243,245);
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+.table-responsive table {
+    margin-bottom:0;
+}
+
+/* ICONE */
+.icon:before {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.icon-zoom_filled:before {
+    background:  transparent url("/HT/fe/img/icon_search_aletti.png") no-repeat 0 0;
+    content: "";
+}
+.icon-file_pdf_fill:before {
+    background:  transparent url("/HT/fe/img/icon_pdf_aletti.png") no-repeat 0 0;
+    content: "";
 }
