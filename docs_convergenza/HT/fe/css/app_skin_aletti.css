@@ -13,6 +13,9 @@
     background: white;
     padding: 20px 16px 16px;
 }
+#mainContent .wrapper-app-style.esito {
+   background: rgb(232, 236, 239)
+}
 html, body {
     background: rgb(0,35,69) !important;
     background: linear-gradient(90deg, rgb(0,35,69) 0%, rgb(153,167,180) 100%) !important;
@@ -36,7 +39,7 @@ html, body {
 .titolo h1 {
     margin-bottom:0;
 }
-p, .ui-accordion-content {
+p, .ui-accordion-content, .ui-widget-content a {
     color: rgb(52,74,134)!important;
     font-size:16px;
 }
@@ -98,7 +101,7 @@ span.colorVerde {
 }
 
 
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 768px)
 {
     .btn-primary, .btn-primary:hover,.btn-primary:active, .btn-primary:focus,.btn-primary:active,.btn-primary:visited,
     .btn-primary:hover:active,
@@ -106,7 +109,19 @@ span.colorVerde {
     {
         width: 100%;
     }
-    
+    .btn-default.xs-small-col,.btn-default.xs-small-col:hover,.btn-default.xs-small-col:active, .btn-default.xs-small-col:focus,.btn-default.xs-small-col:active,.btn-default.xs-small-col:visited
+    {
+        width: 32%;
+        margin-left:0;
+        min-width: 0;
+        padding: 0!important;
+    }
+    .btn-primary.xs-large-col, .btn-primary.xs-large-col:hover,.btn-primary.xs-large-col:active, .btn-primary.xs-large-col:focus,.btn-primary.xs-large-col:active,.btn-primary.xs-large-col:visited,
+    .btn-primary.xs-large-col:hover:active
+    {
+        width: 64%;
+        padding: 0!important;
+    }
     .btn-align-right.flRight{
         float:none;
     }
@@ -303,13 +318,27 @@ table tr.odd td {
 #documentoPDF {
     margin-bottom:30px!important;
 }
-div.messagePanel h3, div.messagePanel div p{
+div.messagePanel h3, div.messagePanel p{
   font-size: 20px;
   color: rgb(31, 32, 33)!important;
   text-align: center;
   line-height: 26px;
 }
-
+div.messagePanel p{
+    font-size: 16px;
+}
+.messagePanel.success {
+    background: transparent url("/HT/fe/img/icon_success_aletti.png") no-repeat center 0; 
+    padding-top: 150px;
+}
+.messagePanel.error {
+    background: transparent url("/HT/fe/img/icon_error_aletti.png") no-repeat center 0;
+    padding-top: 150px;
+}
+.messagePanel.alert {
+    background: transparent url("/HT/fe/img/icon_alert_aletti.png") no-repeat center 0;
+    padding-top: 150px;
+}
 /*TABELLE */
 .table, td,th, table:not(.ui-datepicker-calendar) td, table:not(.ui-datepicker-calendar) th {
     border:0!important;
@@ -357,4 +386,19 @@ table:not(.ui-datepicker-calendar) td {
 .icon-file_pdf_fill:before {
     background:  transparent url("/HT/fe/img/icon_pdf_aletti.png") no-repeat 0 0;
     content: "";
+}
+.icon-info_fill:before{
+    background:  transparent url("/HT/fe/img/icon_info_aletti.png") no-repeat 0 0;
+    content: "";
+}
+.box-otp .icon {
+    position: relative;
+    top: 10px;
+}
+/*MODALI */
+.modal-backdrop {
+  background-color: rgb(18, 46, 92);
+}
+.modal-dialog .modal-content {
+    border-radius: 8px;
 }
