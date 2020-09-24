@@ -5,7 +5,7 @@ var bd, scrollpx, positionStep = 50;
 $(function () {
     /* inizializzazione oggetti "generici" */
     bd = $("body"),
-    scrollpx = bd.scrollTop();
+        scrollpx = bd.scrollTop();
     initModali();
     initCarousel();
     initDropdown();
@@ -16,6 +16,11 @@ $(function () {
     initTooltips();
     initTreeview();
     imgToSvg();
+
+    //TODO: aggiungere queste inizializzazioni al nuovo init.js
+    //queste funzioni stanno in altri script javascript
+    initDateMin();
+    initDateMaxToday();
 });
 
 // INIT ELEMENTI

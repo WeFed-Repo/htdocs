@@ -54,6 +54,10 @@
 <!-- FILE DA NON IMPORTARE. UTILI SOLO ALLE LIBRERIE STATICHE -->
 <script src="./fe/js/init_for_static_libraries.js"></script>
 <script src="./fe/js/init_for_static_filtered_tables.js"></script>
+		<script type="text/javascript">
+			// Inizializzazioni per funzioni non condivise da sviluppo (non portare in sviluppo)
+			var initDateMin = initDateMaxToday = function(){return void(0);}
+		</script>
 	</head>
 	<body>
 				<!-- Contenitore principale -->

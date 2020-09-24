@@ -54,33 +54,49 @@ function initTabs() {
 }
 
 function initTabsFilters() {
-    $(".nav-tabs.nav-tabs--filters label").click(function(e) {
+    $(".nav-tabs.nav-tabs--filters label").click(function (e) {
         var $input = $(this).find("input");
         var $label = $(this);
         var $parent = $label.closest('.nav-tabs');
-        if( $label.hasClass("all") ) {
-          if($input.prop("checked")) {
-            $label.addClass("active");
-            $parent.find('label:not(.all)')
-                   .removeClass("active")
-                   .find('input');
-          } else {
-            $label.removeClass("active");
-            $parent.find('label:not(.all) input')
-                   .removeAttr("checked") // fallback per ie
-                   .prop('checked',false);
-          }
-        } else {
-            if($input.prop("checked")) {
-                $label.addClass("active");
-                $parent.find('label.all')
-                   .removeClass("active")
-                   .find('input')
-                   .removeAttr("checked") // fallback per ie
-                   .prop('checked',false);
+        if ($parent.hasClass("radio-button")) {
+            //lcolautti (2020/02/27) modifica per selezione singola
+            if ($input.prop("checked")) {
+                //$label.addClass("active");
+                $label.parents('.nav-item').siblings().each(function (index, item) {
+                    item = $(item);
+
+                    item.removeAttr("checked").prop('checked', false);
+                    //$('label', item).removeClass('active');
+                });
             } else {
-                $label.removeClass("active");
-          }
+                //non fare nulla perché già selezionato
+            }
+        } else {
+            //lcolautti (2020/02/27) logica precedente (selezione multipla):
+            if ($label.hasClass("all")) {
+                if ($input.prop("checked")) {
+                    $label.addClass("active");
+                    $parent.find('label:not(.all)')
+                        .removeClass("active")
+                        .find('input');
+                } else {
+                    $label.removeClass("active");
+                    $parent.find('label:not(.all) input')
+                        .removeAttr("checked") // fallback per ie 
+                        .prop('checked', false);
+                }
+            } else {
+                if ($input.prop("checked")) {
+                    $label.addClass("active");
+                    $parent.find('label.all')
+                        .removeClass("active")
+                        .find('input')
+                        .removeAttr("checked") // fallback per ie 
+                        .prop('checked', false);
+                } else {
+                    $label.removeClass("active");
+                }
+            }
         }
     });
 }

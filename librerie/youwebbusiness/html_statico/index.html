@@ -8,6 +8,10 @@
 		<link href="./librerie/css/librerie.css" rel="stylesheet" type="text/css" media="all" >
 		<script type="text/javascript" language="javascript" src="./librerie/js/jquery.min.js"></script>
 		<script type="text/javascript" language="javascript" src="./librerie/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			// Inizializzazioni per funzioni non condivise da sviluppo
+			var initDateMin = initDateMaxToday = function(){return void(0);}
+		</script>
 	</head>
 	<body>
 		<header class="librerie">

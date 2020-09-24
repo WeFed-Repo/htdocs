@@ -18,6 +18,10 @@
 <html lang="it" class="<?php if($isPublicPage) echo 'tmp-public' ?> <?php if($isLogin) echo 'tmp-login' ?>" >
 	<head>
 		<?php include 'layout/struttura/head.php'; ?>
+		<script type="text/javascript">
+			// Inizializzazioni per funzioni non condivise da sviluppo (non portare in sviluppo)
+			var initDateMin = initDateMaxToday = function(){return void(0);}
+		</script>
 	</head>
 	<body>
 		<?php if(!$isLogin) { ?>
