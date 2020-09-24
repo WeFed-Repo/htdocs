@@ -31,17 +31,19 @@ header .logo {background: transparent url(/wbresp/qcux/img/bbpm_logo.png) no-rep
 
 
 /* Stepper */
-.stepper.status-2 .step:nth-child(-n+1) {background-color:#00785f;border-color:#00785f}
-.stepper.status-3 .step:nth-child(-n+2) {background-color:#00785f;border-color:#00785f}
-.stepper.status-4 .step:nth-child(-n+3) {background-color:#00785f;border-color:#00785f}
-.stepper.status-5 .step:nth-child(-n+4) {background-color:#00785f;border-color:#00785f}
-.stepper.status-6 .step:nth-child(-n+5) {background-color:#00785f;border-color:#00785f}
-.stepper.status-7 .step:nth-child(-n+6) {background-color:#00785f;border-color:#00785f}
-.stepper.status-8 .step:nth-child(-n+7) {background-color:#00785f;border-color:#00785f}
-.stepper.status-9 .step:nth-child(-n+8) {background-color:#00785f;border-color:#00785f}
+.stepper.status-2 .step:nth-child(-n+1) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-3 .step:nth-child(-n+2) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-4 .step:nth-child(-n+3) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-5 .step:nth-child(-n+4) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-6 .step:nth-child(-n+5) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-7 .step:nth-child(-n+6) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-8 .step:nth-child(-n+7) {background-color:#0e977f;border-color:#0e977f}
+.stepper.status-9 .step:nth-child(-n+8) {background-color:#0e977f;border-color:#0e977f}
 
 /* Radio button e checkbox */
-label.cbr input:checked + .text:after {background-color:#00785f;}
+label.cbr input:checked + .text:after {background-color:#0e977f;}
 
 /* Bottoni */
-.btn.btn-primary,.btn.btn-primary:hover,.btn.btn-primary:active,.btn.btn-primary:focus  {background-color:#00785f}
+.btn {height:34px;padding-top:8px;font-size:14px!important}
+.btn.btn-primary,.btn.btn-primary:hover,.btn.btn-primary:active,.btn.btn-primary:focus  {background-color:#0e977f}
+.btn.btn-default:hover {background-color: #474B4E;}
