@@ -231,7 +231,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="scopo0">Scopo prevalente del rapporto Sicav</label>
 									<select id="scopo0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.valoreSpecificoRapporto[1].rispostaSelezionata" "="" class="fixed-size form-control">
-											<option value=""></option>
+											<option value="">Seleziona</option>
 											
 												<option value="01">
 													Risparmio
@@ -1447,7 +1447,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="professione0">Professione </label>
 									<select id="professione0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.professione" onchange="checkProfessione(0, false)" class="fixed-size professione form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="01">
 												Imprenditore
@@ -1519,7 +1519,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="nazione0">Stato di svolgimento </label>
 									<select id="nazione0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.nazioneAttivitaLavorativa" onchange="checkNazione(0)" class="fixed-size form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="238">
 												ABU DHABI
@@ -2622,7 +2622,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">		
 									<label class="control-label" for="provincia0"> Provincia di svolgimento </label>
 									<select id="provincia0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.provinciaAttivitaLavorativa" class="fixed-size provincia form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="AG">
 												Agrigento
@@ -3074,7 +3074,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="redditoAnnuoNetto0">Reddito annuo </label>
 									<select id="redditoAnnuoNetto0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.codRedditoAnnuoNetto" onchange="checkReddito(0, true)" class="fixed-size reddito form-control">
-										<option value="">-</option>
+										<option value="">Seleziona</option>
 										
 											<option value="01">
 												FINO A 10.000 EURO
@@ -3123,7 +3123,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="origineReddito0">Origine del reddito </label>
 									<select id="origineReddito0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.origineReddito" onchange="checkOrigineReddito(0, true)" class="fixed-size originereddito form-control">
-										<option value="">-</option>
+										<option value="">Seleziona</option>
 										
 											<option value="01">
 												LAVORO DIPENDENTE
@@ -3197,7 +3197,7 @@
 											</script>
 									</label>
 									<select id="patrimonio0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.codPatrimonio" onchange="checkPatrimonio(0, true)" class="fixed-size patrimonio form-control">
-										<option value="">-</option>
+										<option value="">Seleziona</option>
 										
 											<option value="01">
 												FINO A 100.000 EURO
@@ -3270,7 +3270,7 @@
 											</script>
 									</label>
 									<select id="originePatrimonio0" name="propostaConferma.listaCointestatari[0].adeguataVerificaForm.origineFondi" onchange="checkOriginePatrimonio(0, true)" class="fixed-size originepatrimonio form-control">
-										<option value="">-</option>
+										<option value="">Seleziona</option>
 										
 											<option value="01">
 												REDDITI DI LAVORO AUTONOMO
@@ -3844,7 +3844,7 @@
 									<div class="form-field-input col-sm-6 col-xs-12">
 										<label class="control-label" for="scopo1">Scopo prevalente del rapporto Fondi</label>
 										<select id="scopo1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.valoreSpecificoRapporto[0].rispostaSelezionata" "="" class="fixed-size form-control">
-											<option value=""></option>
+											<option value="">Seleziona</option>
 											
 												<option value="01">
 													Risparmio
@@ -3871,7 +3871,7 @@
 									<div class="form-field-input col-sm-6 col-xs-12">
 										<label class="control-label"for="scopo1">Scopo prevalente del rapporto Sicav </label>
 										<select id="scopo1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.valoreSpecificoRapporto[1].rispostaSelezionata" "="" class="fixed-size form-control">
-												<option value=""></option>
+												<option value="">Seleziona</option>
 												
 													<option value="01">
 														Risparmio
@@ -4005,7 +4005,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="secondaCittadinanza1">Seconda cittadinanza </label>
 									<select id="secondaCittadinanza1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.secondaNazione" class="fixed-size form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="676">
 												ABU DHABI
@@ -5088,7 +5088,7 @@
 									<div class="form-field-input col-sm-6 col-xs-12">
 										<label class="control-label" for="professione1">Professione </label>
 										<select id="professione1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.professione" onchange="checkProfessione(1, false)" class="fixed-size professione form-control">
-													<option value="-">-</option>
+													<option value="-">Selziona</option>
 													
 														<option value="01">
 															Imprenditore
@@ -5161,7 +5161,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="nazione1">Stato di svolgimento </label>
 									<select id="nazione1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.nazioneAttivitaLavorativa" onchange="checkNazione(1)" class="fixed-size form-control">
-										<option value="-">-</option>
+										<option value="-">Seleziona</option>
 										
 											<option value="238">
 												ABU DHABI
@@ -6264,7 +6264,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 								   <label class="control-label" for="provincia1">Provincia di svolgimento </label>
 									<select id="provincia1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.provinciaAttivitaLavorativa" class="fixed-size provincia form-control">
-													<option value="-">-</option>
+													<option value="-">Seleziona</option>
 													
 														<option value="AG">
 															Agrigento
@@ -6715,7 +6715,7 @@
 							<div class="form-field-input col-sm-6 col-xs-12">
 								<label class="control-label" for="redditoAnnuoNetto1">Reddito annuo</label>
 								<select id="redditoAnnuoNetto1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.codRedditoAnnuoNetto" onchange="checkReddito(1, true)" class="fixed-size reddito form-control">
-									<option value="">-</option>
+									<option value="">seleziona</option>
 									
 										<option value="01">
 											FINO A 10.000 EURO
@@ -6765,7 +6765,7 @@
 								<div class="form-field-input col-sm-6 col-xs-12">
 									<label class="control-label" for="origineReddito1">Origine del reddito </label>
 									<select id="origineReddito1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.origineReddito" onchange="checkOrigineReddito(1, true)" class="fixed-size originereddito form-control">
-										<option value="">-</option>
+										<option value="">seleziona</option>
 										
 											<option value="01">
 												LAVORO DIPENDENTE
@@ -6837,7 +6837,7 @@
 									</script>
 									</label>
 								<select id="patrimonio1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.codPatrimonio" onchange="checkPatrimonio(1, true)" class="fixed-size patrimonio form-control">
-										<option value="">-</option>
+										<option value="">seleziona</option>
 								
 									<option value="01">
 										FINO A 100.000 EURO
@@ -6911,7 +6911,7 @@
 										</script>
 									</label>
 									<select id="originePatrimonio1" name="propostaConferma.listaCointestatari[1].adeguataVerificaForm.origineFondi" onchange="checkOriginePatrimonio(1, true)" class="fixed-size originepatrimonio form-control">
-									<option value="">-</option>
+									<option value="">Seleziona</option>
 								
 									<option value="01">
 										REDDITI DI LAVORO AUTONOMO
