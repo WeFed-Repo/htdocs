@@ -74,7 +74,6 @@ label.cbr .text:after {content:"";width:17px;height:17px; border:solid 1px #ccc;
 label.cbr input:checked + .text:after {background-color:#666;border:#666;}
 label.cbr .milestone {font-weight:bold; display:inline}
 label.cbr .milestone:before {content: " - "}
-
 @media (min-width:768px) {
     .cbr-wrapper.voto {width:100%;display:inline-block;padding:0;margin:0;position:relative}
     .cbr-wrapper.voto label.cbr {position:relative;width:10%;float:left;max-width:10%;margin:0 0 20px;padding:0; margin-top:15px; overflow:visible;text-align:center}
@@ -93,6 +92,11 @@ label.cbr .milestone:before {content: " - "}
     .cbr-wrapper.voto label.cbr .milestone:before {display:block; width:10px;height:10px;clear:both;float:none;clear:both;display:inline-block; content:"";border:solid 10px #fff;border-bottom:solid 10px #ddd;}
     .cbr-wrapper.voto label.cbr .milestone span {width:100%;clear:both;display:block; overflow:visible; text-overflow:ellipsis;overflow:hidden}
 }
+.textarea-wrapper {position:relative;width:100%; clear:both;}
+.textarea-wrapper .countercont {display:inline-block;clear:both;text-align:right;width:100%;font-size:14px; color:#666;}
+.textarea-wrapper .countercont .ccount{font-weight:bold}
+.textarea-wrapper textarea {font-family:"bankfont"; border:solid 1px #ccc; width:100%;color:#666}
+.textarea-wrapper textarea:hover, .textarea-wrapper textarea:active, .textarea-wrapper textarea:focus {outline:none !important;border-radius:0 !important}
 
 /* Stili della domanda*/
 p.question {font-weight:600;}

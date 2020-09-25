@@ -50,16 +50,17 @@
                         <ul>
                             <li><a href="index_wiki.php">Documentazione sulle librerie</a></li>
                         </ul>
-                        
+                        <?php if ($site==="youweb") {?> 
                         <!-- QCUX -->
                         <h2>Questionario CS</h2>
                         <ul>
                             <li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=bbpm&tpl=tpl_quest_radio.php" target="_blank">Domanda standard (radio buttons)</a></li>
                             <li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=bbpm&tpl=tpl_quest_voto.php" target="_blank">Valutazione</a></li>
+                            <li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=bbpm&tpl=tpl_quest_textarea.php" target="_blank">Textarea</a></li>
                             <li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=bbpm&tpl=tpl_quest_feedback.php" target="_blank">Feedback</a></li>
                         </ul>
                         <!-- QCUX -->
-
+                        <?php } ?>
 
                     </div>
                     <div class="col-sm-6 col-md-4">
