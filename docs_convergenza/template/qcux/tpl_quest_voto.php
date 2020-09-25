@@ -22,16 +22,16 @@
             
             
             <div class="cbr-wrapper voto">
-                <label class="cbr"><input type="radio" name="ans-1" value="1"><span class="text">1</span><span class="milestone"><span>per nulla semplice</span></span></label>
-                <label class="cbr"><input type="radio" name="ans-1" value="2"><span class="text">2</span></label>
+                <label class="cbr cbrExt"><input type="radio" name="ans-1" value="1"><span class="text">1</span><span class="milestone"><span>per nulla semplice</span></span></label>
+                <label class="cbr cbrCol"><input type="radio" name="ans-1" value="2"><span class="text">2</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="3"><span class="text">3</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="4"><span class="text">4</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="5"><span class="text">5</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="6"><span class="text">6</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="7"><span class="text">7</span></label>
                 <label class="cbr"><input type="radio" name="ans-1" value="8"><span class="text">8</span></label>
-                <label class="cbr"><input type="radio" name="ans-1" value="9"><span class="text">9</span></label>
-                <label class="cbr"><input type="radio" name="ans-1" value="10"><span class="text">10</span><span class="milestone"><span>estremamente semplice</span></span></label>
+                <label class="cbr cbrCol"><input type="radio" name="ans-1" value="9"><span class="text">9</span></label>
+                <label class="cbr cbrExt"><input type="radio" name="ans-1" value="10"><span class="text">10</span><span class="milestone"><span>estremamente semplice</span></span></label>
             </div>
             <!-- / DOMANDA -->
     </form>
