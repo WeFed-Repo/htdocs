@@ -57,8 +57,8 @@ footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999; font-siz
 .quest {display:inline-block; width:100%; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:25px 25px 20px;}
 .quest.feedback {background:transparent; color:#666;border:none;border-bottom:solid 1px #ccc; padding:35px 0;}
 .quest.feedback .fb-message {max-width:545px;margin:0 auto 30px;text-align:center;background-color: #fff;padding: 20px;}
-.quest.feedback .fb-message .title {font-size:40px;font-weight:bold;clear:both;display:block; line-height:40px;}
-.quest.feedback .fb-message .payoff {font-size: 25px;display:block;margin-top: 10px;clear:both; line-height:25px;}
+.quest.feedback .fb-message .title {font-size:30px;font-weight:bold;clear:both;display:block; line-height:34px;}
+.quest.feedback .fb-message .payoff {font-size: 20px;display:block;margin-top: 10px;clear:both; line-height:25px;}
 @media(max-width:767px) {
     .quest {padding:15px 15px 0}
     .quest.feedback .fb-message {max-width:100%}
