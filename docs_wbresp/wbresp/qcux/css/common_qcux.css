@@ -28,8 +28,8 @@ header .logo {float:right; margin-top:20px; height:60px;width:200px; background-
     
 /* Stepper */
 .stepper-wrapper {margin: 0 auto; text-align:right;}
-.stepper {text-align:left;display:inline-block;margin:20px auto 30px;position:relative;height:14px;border-bottom:solid 3px #ccc;}
-.stepper .step {position:relative;z-index:1;width:25px;height:25px; background:#fff; display:inline-block;border:solid 3px #ccc;border-radius:50%;margin:0 0 0 20px}
+.stepper {text-align:left;display:inline-block;margin:20px auto 30px;position:relative;height:10px;border-bottom:solid 1px #ccc;}
+.stepper .step {position:relative;z-index:1;width:19px;height:19px; background:#fff; display:inline-block;border:solid 1px #ccc;border-radius:50%;margin:0 0 0 20px}
 .stepper .step:first-child {margin-left:0}
 
 /* Stepper status */
@@ -49,14 +49,14 @@ header .logo {float:right; margin-top:20px; height:60px;width:200px; background-
 
 /* FOOTER */
 footer .wrapper {border-top: solid 1px rgb(202, 186, 186); text-align:center;}
-footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999;}
+footer .wrapper .info {padding: 20px 0;display:inline-block;color:#999; font-size:14px}
 
 /* CONTENUTI */
 
 /* Questionario */
 .quest {display:inline-block; width:100%; border:solid 1px #ccc;background:#fff;clear:both;margin:0 0 30px; padding:25px 25px 20px;}
 .quest.feedback {background:transparent; color:#666;border:none;border-bottom:solid 1px #ccc; padding:35px 0;}
-.quest.feedback .fb-message {max-width:545px;margin:0 auto 30px;text-align:center;}
+.quest.feedback .fb-message {max-width:545px;margin:0 auto 30px;text-align:center;background-color: #fff;padding: 20px;}
 .quest.feedback .fb-message .title {font-size:40px;font-weight:bold;clear:both;display:block; line-height:40px;}
 .quest.feedback .fb-message .payoff {font-size: 25px;display:block;margin-top: 10px;clear:both; line-height:25px;}
 @media(max-width:767px) {
@@ -78,13 +78,15 @@ label.cbr .milestone:before {content: " - "}
 @media (min-width:768px) {
     .cbr-wrapper.voto {width:100%;display:inline-block;padding:0;margin:0;position:relative}
     .cbr-wrapper.voto label.cbr {position:relative;width:10%;float:left;max-width:10%;margin:0 0 20px;padding:0; margin-top:15px; overflow:visible;text-align:center}
-    .cbr-wrapper.voto label.cbr .text {border-radius: 50%;border:solid 1px #ccc; font-size:20px;font-weight:bold;line-height:45px;display:inline-block;width:45px;height:45px;margin:0 auto;float:none;clear:both; position:relative; text-align:center;}
+	.cbr-wrapper.voto label.cbr.cbrExt{width:11%;max-width:11%}
+	.cbr-wrapper.voto label.cbr.cbrCol{width:9%;max-width:9%}
+	.cbr-wrapper.voto label.cbr .text {border-radius: 50%;border:solid 1px #ccc; font-size:20px;font-weight:bold;line-height:45px;display:inline-block;width:45px;height:45px;margin:0 auto;float:none;clear:both; position:relative; text-align:center;}
     .cbr-wrapper.voto label.cbr .text:before {display:none;}
     .cbr-wrapper.voto label.cbr .text:after {display:none;}
     .cbr-wrapper.voto label.cbr input:checked + .text {color:#fff;background-color:#666; border-color:#666}
     .cbr-wrapper.voto label.cbr .milestone {position: relative;
     float:left;
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
     color: #333;
     font-weight: normal;}
