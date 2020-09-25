@@ -52,3 +52,6 @@ label.cbr input:checked + .text:after {background-color:#0e977f;}
 .btn {height:34px;padding-top:8px;font-size:14px!important}
 .btn.btn-primary,.btn.btn-primary:hover,.btn.btn-primary:active,.btn.btn-primary:focus  {background-color:#0e977f}
 .btn.btn-default:hover {background-color: #474B4E;}
+
+/* Feedback */
+.quest.feedback .fb-message .title {color:#75c2b8}
