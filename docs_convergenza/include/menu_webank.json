@@ -6,6 +6,20 @@
 			{
 				"nome": "Il mio patrimonio",
 				"tpl": "tpl_priv_full_patrimonio.php"
+			},
+			{
+				"nome": "Mobile",
+				"voices": [
+					{
+						"nome": "La tua banca a portata di mano",
+						"voices": [
+							{
+								"nome": "Webank Mobile",
+								"tpl": "tpl_responsive_Webank_mobile.php"
+							}
+						]
+					}
+				]
 			}
 		]
 	},
