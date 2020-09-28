@@ -108,6 +108,7 @@ span.colorVerde {
     .btn-default,.btn-default:hover,.btn-default:active, .btn-default:focus,.btn-default:active,.btn-default:visited
     {
         width: 100%;
+        margin-left:0!important;
     }
     .btn-default.xs-small-col,.btn-default.xs-small-col:hover,.btn-default.xs-small-col:active, .btn-default.xs-small-col:focus,.btn-default.xs-small-col:active,.btn-default.xs-small-col:visited
     {

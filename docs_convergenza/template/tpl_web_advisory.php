@@ -38,10 +38,10 @@
 							<div class="row">
 								<div class="col-xs-12">
 									<div class="row">
-										<div class="col-xs-10">
+										<div class="col-xs-9">
 											Numero proposte di consulenza che devi ancora <strong>visualizzare</strong> o che stai valutando
 										</div>
-										<div class="col-xs-2 alignRight">
+										<div class="col-xs-3 alignRight">
 											<strong class="result-number">1</strong>
 										</div>
 									</div>
@@ -67,8 +67,8 @@
 							<div class="row">
 								<div class="col-xs-12">
 									<div class="row">
-										<div class="col-xs-10">Numero proposte di consulenza <strong>che hai confermato</strong></div>
-										<div class="col-xs-2 alignRight"><strong class="result-number">2</strong></div>
+										<div class="col-xs-9">Numero proposte di consulenza <strong>che hai confermato</strong></div>
+										<div class="col-xs-3 alignRight"><strong class="result-number">2</strong></div>
 									</div>	
 								</div>
 							</div>
