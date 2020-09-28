@@ -258,7 +258,7 @@
 }
 .modal .modal-dialog .modal-header .close,
 .not-floated-modal .modal-dialog .modal-header .close {
-  background: transparent url(../../fe/img/modal_close.png) no-repeat center center;
+  background: transparent url(../img/modal_close.png) no-repeat center center;
   width: 2rem;
   height: 2rem;
   margin: -0.1rem -0.5rem -0.1rem 1rem;
@@ -623,7 +623,7 @@
   }
   .modal .modal-selector ul li a.on,
 .not-floated-modal .modal-show .modal-selector ul li a.on {
-    background: transparent url(../../fe/img/spunta.png) no-repeat right center;
+    background: transparent url("../img/spunta.png") no-repeat right center;
   }
 }
 /* Tooltip */
@@ -953,15 +953,15 @@
   display: inline-block;
 }
 .bootstrap-table table thead th .th-inner.sortable, .bootstrap-table .table thead th .th-inner.sortable {
-  background: transparent url(../../fe/img/table_order.png) no-repeat right center;
+  background: transparent url("../img/table_order.png") no-repeat right center;
   padding-right: 1.5rem;
   cursor: pointer;
 }
 .bootstrap-table table thead th .th-inner.sortable.asc, .bootstrap-table .table thead th .th-inner.sortable.asc {
-  background-image: url(../../fe/img/table_order_asc.png);
+  background-image: url("../img/table_order_asc.png");
 }
 .bootstrap-table table thead th .th-inner.sortable.desc, .bootstrap-table .table thead th .th-inner.sortable.desc {
-  background-image: url(../../fe/img/table_order_desc.png);
+  background-image: url("../img/table_order_desc.png");
 }
 .bootstrap-table table thead th[data-field=riferimento], .bootstrap-table .table thead th[data-field=riferimento] {
   width: 48%;
@@ -1529,7 +1529,7 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
     border-bottom: solid 1px #c8c8c8;
     padding: 16px 32px 16px 16px;
     font-size: 16px;
-    background: #FFFFFF url(../../fe/img/selector_arrow_right.png) no-repeat right center;
+    background: #FFFFFF url("../img/selector_arrow_right.png") no-repeat right center;
     border: solid 1px #c8c8c8;
   }
   .mobile-data-selector span.name {
@@ -3058,7 +3058,7 @@ label[for] {
 
 select.form-control, select.form-control:not([size]):not([multiple]) {
   height: 44px;
-  background: #F5F5F5 url(../../fe/img/form_select.gif) no-repeat right center;
+  background: #F5F5F5 url(../img/form_select.gif) no-repeat right center;
   appearance: none;
   -webkit-appearance: none;
   padding-right: 30px;
@@ -3066,7 +3066,7 @@ select.form-control, select.form-control:not([size]):not([multiple]) {
   -ms-user-select: none;
 }
 select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled] {
-  background-image: url(../../fe/img/form_select_disabled.gif);
+  background-image: url(../img/form_select_disabled.gif);
 }
 select::-ms-expand {
   display: none;
@@ -3739,7 +3739,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
 }
 
 .ui-button.ui-combobox-button.dropdown-arrow {
-  background: #F5F5F5 url(../../fe/img/form_select.gif) no-repeat right center;
+  background: #F5F5F5 url(../img/form_select.gif) no-repeat right center;
   width: 44px;
   height: 44px;
   border: solid 1px #DDDDDD;
@@ -3749,7 +3749,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   cursor: pointer;
 }
 .ui-button.ui-combobox-button.dropdown-arrow.btn-focus {
-  background: #FFFFFF url(../../fe/img/form_select.gif) no-repeat right center;
+  background: #FFFFFF url(..img/form_select.gif) no-repeat right center;
 }
 
 .is-invalid + .ui-button.ui-combobox-button.dropdown-arrow {
@@ -4102,7 +4102,7 @@ body > .dropdown-menu.shown,
   height: auto;
 }
 .login__info {
-  background: url("../../fe/img/login/info@2x.png") #2F9988 no-repeat center/cover;
+  background: url("../img/login/info@2x.png") #2F9988 no-repeat center/cover;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
 }
 .login__info, .login__info * {

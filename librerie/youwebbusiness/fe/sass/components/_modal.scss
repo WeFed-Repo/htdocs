@@ -30,7 +30,7 @@
         margin: 0.75rem;
       }
       .close {
-        background: transparent url(../../fe/img/modal_close.png) no-repeat center center;
+        background: transparent url(../img/modal_close.png) no-repeat center center;
         width: 2rem;
         height: 2rem;
         margin: -0.1rem -0.5rem -0.1rem 1rem;
@@ -291,7 +291,7 @@
               text-decoration: none;
             }
             &.on {
-              background: transparent url(../../fe/img/spunta.png) no-repeat right center;
+              background: transparent url("../img/spunta.png") no-repeat right center;
             }
           }
         }

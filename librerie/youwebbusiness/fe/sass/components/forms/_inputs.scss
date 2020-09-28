@@ -75,14 +75,14 @@ select {
   &.form-control,
   &.form-control:not([size]):not([multiple]) {
     height: $inputHeight;
-    background: $grayBG url(../../fe/img/form_select.gif) no-repeat right center;
+    background: $grayBG url(../img/form_select.gif) no-repeat right center;
     appearance: none;
     -webkit-appearance: none;
     padding-right: 30px;
     user-select: none;
     -ms-user-select: none;
     &[disabled] {
-      background-image: url(../../fe/img/form_select_disabled.gif);
+      background-image: url(../img/form_select_disabled.gif);
     }
   }
   &::-ms-expand {

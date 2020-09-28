@@ -56,11 +56,11 @@
         .th-inner {
           display: inline-block;
           &.sortable {
-            background: transparent url(../../fe/img/table_order.png) no-repeat right center;
+            background: transparent url("../img/table_order.png") no-repeat right center;
             padding-right: 1.5rem;
             cursor: pointer;
-            &.asc { background-image: url(../../fe/img/table_order_asc.png); }
-            &.desc { background-image: url(../../fe/img/table_order_desc.png); }
+            &.asc { background-image: url("../img/table_order_asc.png"); }
+            &.desc { background-image: url("../img/table_order_desc.png"); }
           }
         }
         // casi particolari per larghezze colonne di particolari tabelle

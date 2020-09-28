@@ -806,7 +806,7 @@ html.tmp-login #main {
   padding: 0;
 }
 html.tmp-login #main #maincontent {
-  background: url("../../fe/img/login/bg_2.png") no-repeat center/cover;
+  background: url("../img/login/bg_2.png") no-repeat center/cover;
 }
 html.tmp-login #main #maincontent #contenuti {
   min-height: calc( 100vh - 260px );
@@ -1643,7 +1643,7 @@ header .navbar .navbar-nav .nav-item .nav-link.skin-btn {
   cursor: default;
 }
 #menu nav ul li a.toggle span {
-  background: transparent url(../../fe/img/menu_open.gif) no-repeat right center;
+  background: transparent url("../img/menu_open.gif") no-repeat right center;
   display: inline-block;
   width: 100%;
   color: #FFFFFF;
@@ -1662,7 +1662,7 @@ header .navbar .navbar-nav .nav-item .nav-link.skin-btn {
   background: #046957;
 }
 #menu nav ul li.opened a.toggle span {
-  background-image: url(../../fe/img/menu_close.gif);
+  background-image: url("../img/menu_close.gif");
 }
 #menu nav ul li.usermenu a {
   background: #DDDDDD;
@@ -1673,10 +1673,10 @@ header .navbar .navbar-nav .nav-item .nav-link.skin-btn {
 }
 #menu nav ul li.usermenu a.toggle span {
   color: #0b2147;
-  background-image: url(../../fe/img/menu_user_open.gif);
+  background-image: url("../img/menu_user_open.gif");
 }
 #menu nav ul li.usermenu.opened a.toggle span {
-  background-image: url(../../fe/img/menu_user_close.gif);
+  background-image: url("../img/menu_user_close.gif");
 }
 #menu nav ul li.usermenu ul li a {
   background: #3e3e3e;
