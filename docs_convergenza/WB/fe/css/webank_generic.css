@@ -9871,6 +9871,15 @@ body.webview .epContainerTextWatchR {
 .slider-in-page img.img-responsive {
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .boxInfoStore2 [class*=col-] {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .boxInfoStore2 [class*=col-]:last-child {
+    margin-bottom: 0;
+  }
+}
 /* CORRETTIVE PER SELETTORE MOBILE */
 .vt-obj a.btn-icon .dis {
   display: none;

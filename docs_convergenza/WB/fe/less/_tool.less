@@ -4742,7 +4742,7 @@ body.webview {
 }
 
 .row.boxInfoStore2 .marginBottomMedium a {
-    margin-left: 10px
+    margin-left: 10px 
 }
 
 .slider-in-page {
@@ -4753,8 +4753,16 @@ body.webview {
     img.img-responsive {
         margin: 0 auto
     }
+} 
+@media (max-width: 767px) {
+    .boxInfoStore2 [class*=col-] {   
+        text-align:center;
+        margin-bottom:20px;
+    }
+    .boxInfoStore2 [class*=col-]:last-child {  
+        margin-bottom:0;
+    }
 }
-
 /* CORRETTIVE PER SELETTORE MOBILE */
 .vt-obj {
     a.btn-icon .dis {
@@ -4803,7 +4811,7 @@ body.webview {
 @media (max-width: 767px) {
     .vt-obj {
         .vt-contents a.btn-icon {
-            display: none;
+            display: none; 
         }
 
         .vt-console {

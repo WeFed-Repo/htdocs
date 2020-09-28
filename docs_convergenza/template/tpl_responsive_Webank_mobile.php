@@ -104,7 +104,7 @@ $(function(){
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-4 hidden-xs">
 		<div class="box-generico-border">
 			<div class="box-generico-text"><img alt="Device" src="/WB/fe/img/new_device_webank.png" class="img-responsive" /></div>
 		</div>
