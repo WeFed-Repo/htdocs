@@ -47,6 +47,7 @@ assicurazioni.html -> Prodotti - assicurazioni
             .container02.conto_webank .sprite.assicurazioni {height:50px; background-position:0px -1088px}
             .container02.conto_webank .sprite.trasloco {height:50px; background-position:0px -996px}
             .container02.conto_webank .sprite.temporeale {height:50px; background-position:0px -1463px}
+	    .container02.conto_webank .sprite.cbill {height:50px; background-position:0px -1570px}
             
 
             .container03.conto_webank {background: #2c2c2c url(/wbresp/img/conto_webank/conto_webank_bg_blocco3.jpg)0 0 no-repeat;margin-top:70px}
