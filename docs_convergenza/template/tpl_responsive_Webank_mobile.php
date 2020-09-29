@@ -91,7 +91,15 @@ $(function(){
 		<h3>DISPONIBILE PER TUTTI I DEVICE</h3>
 		<p>Se hai gi&agrave; l'app Webank, imposta l'aggiornamento automatico: appena disponibile sarai tra i primi ad averla.</p>
 		<p><strong>Non l'hai ancora scaricata?</strong> Clicca sul pulsante dello Store del tuo dispositivo (solo da smartphone).</p>
-		<p>Di seguito i requisiti minimi: iPhone: iOS versione 12<br /> Android: versione 6<br /> iPad: iOS versione 12<br /> Tablet Android: versione 6</p>
+		<p>Di seguito i requisiti minimi:<br />
+		iPhone/iPad: versione  12<br />
+		Apple Watch: OS 4.2<br />
+		Android/Tablet Android/Android Wear: versione  6
+
+		<!--iPhone: iOS versione 12<br /> 
+		Android: versione 6<br /> 
+		iPad: iOS versione 12<br /> 
+		Tablet Android: versione 6--></p>
 		<div class="row boxInfoStore2">
 			<div class="col-sm-4">
 				<a target="_blank" title="Iphone" href="https://itunes.apple.com/it/app/webank/id306283651?mt=8"><img alt="Iphone" src="/WB/fe/img/btn_apple_store_download_ita.png" /></a>
