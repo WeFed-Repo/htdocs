@@ -1065,6 +1065,9 @@
             .trend,.imgSoc {width:125px;position:absolute;left:15px;top:15px;}
             .trend {text-align:center;}
             .imgSoc {height:auto;}
+            .trend-detail .control-label {
+                min-height: 40px;
+            }
         }
         .imgSoc {
             float: left;

@@ -629,7 +629,7 @@ span.sell {
   }
 }
 /* Icone bottoni */
-.btn-icon {
+.btn-icon:not(.text-term) {
   width: 25px;
   display: inline-block;
   text-align: center;
@@ -638,16 +638,16 @@ span.sell {
   font-size: 20px;
   cursor: pointer;
 }
-.btn-icon .icon {
+.btn-icon:not(.text-term) .icon {
   vertical-align: text-bottom;
   line-height: 24px;
 }
-.btn-icon.btn-icon-text {
+.btn-icon:not(.text-term).btn-icon-text {
   width: auto;
   font-size: 14px;
   color: #0e977f;
 }
-.note .btn-icon {
+.note .btn-icon:not(.text-term) {
   color: #fff;
   background-color: #0e977f;
   line-height: 20px;
@@ -4719,6 +4719,9 @@ div.pager .circle.current_page {
 }
 .formGenerico.fundPanel.fundPanelImg .imgSoc {
   height: auto;
+}
+.formGenerico.fundPanel.fundPanelImg .trend-detail .control-label {
+  min-height: 40px;
 }
 .formGenerico.fundPanel .imgSoc {
   float: left;

@@ -118,7 +118,7 @@
 }
 
 /* Icone bottoni */
-.btn-icon {
+.btn-icon:not(.text-term) {
   width: 25px;
   display: inline-block;
   text-align: center;
