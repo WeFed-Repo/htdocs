@@ -81,7 +81,7 @@ html.tmp-login {
     margin: 0;
     padding: 0;
     #maincontent {
-      background: url('../../fe/img/login/bg_2.png')  no-repeat center / cover;
+      background: url('../img/login/bg_2.png')  no-repeat center / cover;
       #contenuti {
         min-height: calc( 100vh - #{$footerHeight} );
         width: 100%;

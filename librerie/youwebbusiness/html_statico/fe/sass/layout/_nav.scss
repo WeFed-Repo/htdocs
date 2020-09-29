@@ -40,7 +40,7 @@
           }
           &.toggle {
             span {
-              background: transparent url(../../fe/img/menu_open.gif) no-repeat right center;
+              background: transparent url("../img/menu_open.gif") no-repeat right center;
               display: inline-block;
               width: 100%;
               color: $white;
@@ -65,7 +65,7 @@
           }
         }
         &.opened a.toggle span {
-          background-image: url(../../fe/img/menu_close.gif);
+          background-image: url("../img/menu_close.gif");
         }
         // unica voce di menu grigia come prima voce di navigazione
         &.usermenu {
@@ -79,11 +79,11 @@
             }
             &.toggle span {
               color: $blue;
-              background-image: url(../../fe/img/menu_user_open.gif);
+              background-image: url("../img/menu_user_open.gif");
             }
           }
           &.opened a.toggle span {
-            background-image: url(../../fe/img/menu_user_close.gif);
+            background-image: url("../img/menu_user_close.gif");
           }
           ul li a {
             background:$gray1;

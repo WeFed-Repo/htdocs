@@ -65,7 +65,7 @@
 									urls.push({url: href,newurl:replaceLink(href)})
 								});
 
-								addLog ("-trovati <strong>"+ urls.length +"</strong> file da salvare");
+								addLog ("-trovati <strong>"+ urls.length +"</strong> template da salvare");
 
 								var totFileToSave = urls.length;
 
@@ -103,8 +103,12 @@
 												dataType: "json",
 													success: function(data) {
 														addLog(data.msg);
-														totFileToSave -= 1;
-														if(totFileToSave <= 0) addLog("<strong>FINE</strong>")
+													}
+												}).done(function(){
+													totFileToSave -= 1;
+													if(totFileToSave <= 0) {
+														addLog("<strong>FINE</strong>")
+														alert("CREAZIONE STATICO TERMINATA.");
 													}
 												});
 
@@ -118,6 +122,23 @@
 				}
 
 
+				checkall = function(){
+
+					var corretto = false;
+					var dd = $("#datadelta").val();
+					if(dd.length===8) {
+						if (!isNaN(dd)) {
+							if (parseInt(dd)==dd) {
+								var ds =  dd.toString().substring(0,4) + "-" +  dd.toString().substring(4,6) + "-" + dd.toString().substring(6,8);
+								if (Date.parse(ds)) corretto= true;
+							}
+						}
+						
+					}
+					$("#btngenera").toggle(corretto);
+
+				}
+
 				$(function(){
 
 					$("#btngenera").click(function(){
@@ -127,14 +148,23 @@
 							$.ajax({
 								url: "librerie_prepara_pacchetto.php",
 								dataType: "json",
-								success: salvaFilesHtml
+								method: "POST",
+								data: {
+									datadelta: $("#datadelta").val(),
+									changelist: $("#changelist").val()
+								},
+								success: function(data) {
+									addLog("Directory <strong>statiche</strong> (/fe e /librerie) copiate.");
+									addLog("Terminata scrittura di <strong>changelog.html</strong>")
+									salvaFilesHtml();
+								}
 							});
 					}) 
 
 				})
 				</script>
-				<p style="padding:30px 0">Premendo il pulsante sottostante ("genera statico") verra' creata una versione statica delle librerie sotto la root in "html_statico".<br>
-				Attendere il completamento nella finestra di log prima di procedere (viene riportata la parola "FINE").</p>
+				<p style="padding:30px 0">Selezionare una data "delta" (data di riferimento per il changelog), descrivere le lavorazioni effettuate e quindi premere il pulsante sottostante ("genera statico"): verra' creata una versione statica delle librerie sotto la root in "html_statico".<br>
+				Attendere il completamento nella finestra di log prima di procedere (viene riportata la parola "FINE" e generato un alert Js).</p>
 				<style>
 					#btngenera {
 						float:none;
@@ -160,8 +190,22 @@
 						padding:10px;
 						color:#666;
 					}
+					.form-group {width:100%;clear:both;display:inline-block;}
+					.form-group label {font-size:14px;font-weight:bold; margin-bottom:5px; width:100%;}
+					.form-group input {font-size:14px;width:100%; max-width:100px;display:inline-block;clear:both;}
+					.form-group textarea {font-size:14px;width:100%;max-width:500px;display:inline-block;clear:both;height:150px;}
 				</style>
-				<a id="btngenera">GENERA STATICO</a>
+				<form>
+					<div class="form-group">
+						<label>Data "delta" (es:20200929)</label>
+						<input name="datadelta" placeholder="AAAAMMGG" id="datadelta" maxlength="8" onkeyup="checkall()">
+					</div>
+					<div class="form-group">
+						<label>Lista dei cambiamenti effettuati (separati da "INVIO")</label>
+						<textarea name="changelist" placeholder="lista" id="changelist" onkeyup="checkall()"></textarea>
+					</div>
+				</form>
+				<a id="btngenera" style="display:none">GENERA STATICO</a>
 				<section>
 				<label class="loglabel">Log</label>
 				<div id="generalog">

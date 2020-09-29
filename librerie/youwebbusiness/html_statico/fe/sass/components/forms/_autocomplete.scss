@@ -5,7 +5,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete
     margin:0
 }
 .ui-button.ui-combobox-button.dropdown-arrow {
-    background: $grayBG url(../../fe/img/form_select.gif) no-repeat right center;
+    background: $grayBG url(../img/form_select.gif) no-repeat right center;
     width:44px;
     height:44px;
     border: solid 1px #DDDDDD;
@@ -14,7 +14,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete
     border-bottom-right-radius: 3px;
     cursor:pointer;
     &.btn-focus {
-        background: $white url(../../fe/img/form_select.gif) no-repeat right center;
+        background: $white url(..img/form_select.gif) no-repeat right center;
     }
 }
 .is-invalid + .ui-button.ui-combobox-button.dropdown-arrow {

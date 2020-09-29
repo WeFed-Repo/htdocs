@@ -1,5 +1,15 @@
 <?php
 
+$datadelta = $_POST["datadelta"];
+$changelist = $_POST["changelist"];
+
+// Calcolo della data per il delta
+$datecheck = strtotime(substr($datadelta,0,4)."-".substr($datadelta,4,2)."-".substr($datadelta,6,2));
+
+
+$filelogger = array();
+$datelog = "";
+
 function deleteDir($dirPath) {
 	if (is_dir($dirPath)) {
 		$objects = scandir($dirPath);
@@ -18,6 +28,8 @@ function deleteDir($dirPath) {
 }
 
 function recurse_copy($src,$dst) { 
+	global $filelogger;
+	global $datelog;
 	$dir = opendir($src); 
 	@mkdir($dst); 
 	while(false !== ( $file = readdir($dir)) ) { 
@@ -26,6 +38,7 @@ function recurse_copy($src,$dst) {
 				recurse_copy($src . '/' . $file,$dst . '/' . $file); 
 			} 
 			else { 
+				if(filemtime($src . '/' . $file) >= $datecheck) array_push($filelogger,$src . '/' . $file);
 				copy($src . '/' . $file,$dst . '/' . $file); 
 			} 
 		} 
@@ -51,4 +64,21 @@ foreach ($oldfolders as $id=>$value) {
 }
 */
 
-?>{"esito":"ok"}
+// Scrittura changelog
+unlink("./changelog.html");
+$clhtml = file_get_contents("cl_template.html");
+// Replacements
+$clhtml = str_replace("[*FILENAME*]", date("Ymd"), $clhtml);
+$clhtml = str_replace("[*DELTADATE*]", date("d/m/Y",$datecheck), $clhtml);
+$clhtml = str_replace("[*CHANGELIST*]", $changelist, $clhtml);
+$clhtml = str_replace("[*FILELIST*]", implode("</br>", $filelogger), $clhtml);
+
+file_put_contents("changelog.html", $clhtml);
+
+
+?>{
+	"esito":"ok",
+	"datadelta": "<?php print $datadelta; ?>",
+	"filelist":  [ "<?php print implode("\",\"", $filelogger); ?>"],
+	"datelog": "<?php print $datelog; ?>"
+}
