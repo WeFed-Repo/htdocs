@@ -1,3 +1,20 @@
+<?php
+
+	$def_datadelta = "";
+	$def_changelist = "";
+
+	// Se esiste una configurazione, raccoglie l'ultima esportazione e ne estrae i dati
+	if (file_exists("./crono_statico.json") ) {
+		if (!empty(json_decode(file_get_contents("./crono_statico.json",TRUE)))) {
+			$conf = json_decode(file_get_contents("./crono_statico.json",TRUE));
+			$lnode =array_pop($conf);
+			print_r($lnode);
+			$def_datadelta = $lnode->datapacchetto;
+			$def_changelist =  $lnode->changelist;
+		}
+	}
+		
+?>
 <!DOCTYPE html>
 <html lang="it" xmlns="http://www.w3.org/1999/xhtml">
 	<head> 
@@ -102,11 +119,11 @@
 												},
 												dataType: "json",
 													success: function(data) {
-														addLog(data.msg);
 													}
 												}).done(function(){
 													totFileToSave -= 1;
 													if(totFileToSave <= 0) {
+														addLog(data.msg);
 														addLog("<strong>FINE</strong>")
 														alert("CREAZIONE STATICO TERMINATA.");
 													}
@@ -156,7 +173,7 @@
 								success: function(data) {
 									addLog("Directory <strong>statiche</strong> (/fe e /librerie) copiate.");
 									addLog("Terminata scrittura di <strong>changelog.html</strong>")
-									salvaFilesHtml();
+									// salvaFilesHtml();
 								}
 							});
 					}) 
@@ -198,11 +215,11 @@
 				<form>
 					<div class="form-group">
 						<label>Data "delta" (es:20200929)</label>
-						<input name="datadelta" placeholder="AAAAMMGG" id="datadelta" maxlength="8" onkeyup="checkall()">
+						<input name="datadelta" placeholder="AAAAMMGG" id="datadelta" maxlength="8" onkeyup="checkall()" value="<?php print $def_datadelta; ?>">
 					</div>
 					<div class="form-group">
 						<label>Lista dei cambiamenti effettuati (separati da "INVIO")</label>
-						<textarea name="changelist" placeholder="lista" id="changelist" onkeyup="checkall()"></textarea>
+						<textarea name="changelist" placeholder="lista" id="changelist" onkeyup="checkall()"><?php print $def_changelist; ?></textarea>
 					</div>
 				</form>
 				<a id="btngenera" style="display:none">GENERA STATICO</a>

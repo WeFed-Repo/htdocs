@@ -75,6 +75,25 @@ $clhtml = str_replace("[*FILELIST*]", implode("</br>", $filelogger), $clhtml);
 
 file_put_contents("changelog.html", $clhtml);
 
+// Salva la configurazione nel json
+$conf = [];
+
+if (file_exists("./crono_statico.json") ) {
+	if (!empty(json_decode(file_get_contents("./crono_statico.json")))) { $conf = json_decode(file_get_contents("./crono_statico.json"),TRUE);}
+}
+	// Assembla l'oggetto per il json di configurazione
+$cnode = Array(
+	"datapacchetto"=>date("Ymd"),
+	"datadelta"=>$datadelta,
+	"changelist"=>$changelist
+);
+print $cnode;
+
+array_push($conf, $cnode);
+
+print( json_encode($conf));
+
+file_put_contents("crono_statico.json", json_encode($conf));
 
 ?>{
 	"esito":"ok",
