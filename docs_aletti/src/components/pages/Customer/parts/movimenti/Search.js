@@ -15,7 +15,7 @@ import momentIt from "functions/rad/momentIt";
 import { formatNumber } from 'functions/tableFunctions';
 
 /* Estrazione url per le chiamate dai vari "VEDI TUTTI" */
-const loadUrl = ambiente.isSviluppo ? window.jsonUrl.customer_movimenti_all : "/json_data/customer/movimenti_all.json";
+const loadUrl = (ambiente.isLocale || ambiente.isLibrerie) ? "/json_data/customer/movimenti_all.json" : "/promotori/dashboard/rest/banking/movimenti";
 const emptyFilters = {
     periodo: "30",
     data_da: null,
@@ -505,9 +505,9 @@ class SearchPage extends PureComponent {
                 "ndg": contoData.ndg,
                 "branch": contoData.filiale,
                 "accountNumber": contoData.numeroConto,
-                "dataInizioPeriodo": momentIt().subtract(2, "M").valueOf(),
+                "dataInizioPeriodo": momentIt().subtract(12, "M").valueOf(),
                 "dataFinePeriodo": momentIt().endOf("day").valueOf(),
-                "importoMinimo": 0,
+                "importoMinimo": -999999999,
                 "importoMassimo": 999999999
             });
         }
