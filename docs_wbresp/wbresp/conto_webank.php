@@ -112,7 +112,23 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                         </div>
                     <!-- fine container 1 DAY M -->
 
-
+                     <!-- repricing -->
+                     <div class="main_hero conto_webank new" id="s1">
+                            <div class="row">
+                                <div class="col-lg-10 col-md-10 col-sm-12">
+                                    <div class="promo_elenco">
+                                        <h2>CONTO WEBANK A </h2>
+                                        <ul>
+                                            <li>Zero canone</li>
+                                            <li>Zero spese</li>
+                                            <li>Anche su mobile</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:apriConto();" class="btn-green btn-green-arrow">Apri conto Webank</a>
+                        </div>
+                    <!-- fine container 1 DAY M -->
 
                         <!-- container 1 inizio PROMO 2016 05 25 
                         <div class="main_hero conto_webank" id="s1">

@@ -224,8 +224,7 @@
 										<div class="dleft">
 											<h2>Conto Webank</h2>
 											<p>
-												Tutto quello che cerchi in un unico conto.<br>
-												<b>Conto Webank</b> &egrave; il conto corrente <b>a zero spese</b>, accessibile ovunque tu sia e in grado di rispondere a tutte le tue esigenze: operazioni bancarie direttamente online, carte di pagamento con canone gratuito, soluzioni per la <b>gestione dei tuoi risparmi</b> e i più efficaci <b>strumenti di investimento</b>.
+												Tutto quello che cerchi in un unico conto corrente, accessibile ovunque tu sia e in grado di rispondere a tutte le tue esigenze: operazioni bancarie direttamente online, carte di pagamento con canone gratuito, soluzioni per la <b>gestione dei tuoi risparmi</b> e i più efficaci <b>strumenti di investimento</b>.
 											</p>
 										</div>
 										<div class="bottomLink">
