@@ -8,7 +8,6 @@
 		if (!empty(json_decode(file_get_contents("./crono_statico.json",TRUE)))) {
 			$conf = json_decode(file_get_contents("./crono_statico.json",TRUE));
 			$lnode =array_pop($conf);
-			print_r($lnode);
 			$def_datadelta = $lnode->datapacchetto;
 			$def_changelist =  $lnode->changelist;
 		}
@@ -108,7 +107,6 @@
 												data = data.replace('"/"'+val.basefolder, '"./' + val.basefolder)
 											});
 										
-
 											// Salva il file
 											$.ajax({
 												url: "librerie_salva_file.php",
@@ -118,14 +116,14 @@
 													"fcont": data
 												},
 												dataType: "json",
-													success: function(data) {
-													}
-												}).done(function(){
+												success: function(data) {
+													addLog(data.msg);
+													}	
+												}).done(function(savedata){
 													totFileToSave -= 1;
 													if(totFileToSave <= 0) {
-														addLog(data.msg);
-														addLog("<strong>FINE</strong>")
-														alert("CREAZIONE STATICO TERMINATA.");
+														alert("Creazione statico terminata.")
+														addLog("<strong>FINE</strong>");
 													}
 												});
 
@@ -173,14 +171,15 @@
 								success: function(data) {
 									addLog("Directory <strong>statiche</strong> (/fe e /librerie) copiate.");
 									addLog("Terminata scrittura di <strong>changelog.html</strong>")
-									// salvaFilesHtml();
+									salvaFilesHtml();
 								}
 							});
 					}) 
+					checkall();
 
 				})
 				</script>
-				<p style="padding:30px 0">Selezionare una data "delta" (data di riferimento per il changelog), descrivere le lavorazioni effettuate e quindi premere il pulsante sottostante ("genera statico"): verra' creata una versione statica delle librerie sotto la root in "html_statico".<br>
+				<p style="padding:30px 0">Selezionare una data "delta" (data di riferimento per il changelog, ricavabile dall'ultimo file salvato su DRIVE), descrivere le lavorazioni effettuate e quindi premere il pulsante sottostante ("genera statico"): verra' creata una versione statica delle librerie sotto la root in "html_statico".<br>
 				Attendere il completamento nella finestra di log prima di procedere (viene riportata la parola "FINE" e generato un alert Js).</p>
 				<style>
 					#btngenera {
@@ -211,8 +210,9 @@
 					.form-group label {font-size:14px;font-weight:bold; margin-bottom:5px; width:100%;}
 					.form-group input {font-size:14px;width:100%; max-width:100px;display:inline-block;clear:both;}
 					.form-group textarea {font-size:14px;width:100%;max-width:500px;display:inline-block;clear:both;height:150px;}
+					.loading>*{visibility:hidden;}
 				</style>
-				<form>
+				<form id="buildingform">
 					<div class="form-group">
 						<label>Data "delta" (es:20200929)</label>
 						<input name="datadelta" placeholder="AAAAMMGG" id="datadelta" maxlength="8" onkeyup="checkall()" value="<?php print $def_datadelta; ?>">
@@ -221,8 +221,9 @@
 						<label>Lista dei cambiamenti effettuati (separati da "INVIO")</label>
 						<textarea name="changelist" placeholder="lista" id="changelist" onkeyup="checkall()"><?php print $def_changelist; ?></textarea>
 					</div>
+					<a id="btngenera" style="display:none" >GENERA STATICO</a>
 				</form>
-				<a id="btngenera" style="display:none">GENERA STATICO</a>
+				
 				<section>
 				<label class="loglabel">Log</label>
 				<div id="generalog">

@@ -30,6 +30,7 @@ function deleteDir($dirPath) {
 function recurse_copy($src,$dst) { 
 	global $filelogger;
 	global $datelog;
+	global $datecheck;
 	$dir = opendir($src); 
 	@mkdir($dst); 
 	while(false !== ( $file = readdir($dir)) ) { 
@@ -67,10 +68,16 @@ foreach ($oldfolders as $id=>$value) {
 // Scrittura changelog
 unlink("./changelog.html");
 $clhtml = file_get_contents("cl_template.html");
+// Formatta la changelist
+
+
+$clarr= explode("\n",$changelist);
+
+
 // Replacements
 $clhtml = str_replace("[*FILENAME*]", date("Ymd"), $clhtml);
 $clhtml = str_replace("[*DELTADATE*]", date("d/m/Y",$datecheck), $clhtml);
-$clhtml = str_replace("[*CHANGELIST*]", $changelist, $clhtml);
+$clhtml = str_replace("[*CHANGELIST*]", "<li>".implode("</li><li>",$clarr)."</li>", $clhtml);
 $clhtml = str_replace("[*FILELIST*]", implode("</br>", $filelogger), $clhtml);
 
 file_put_contents("changelog.html", $clhtml);
@@ -84,15 +91,12 @@ if (file_exists("./crono_statico.json") ) {
 	// Assembla l'oggetto per il json di configurazione
 $cnode = Array(
 	"datapacchetto"=>date("Ymd"),
+	"datacreazionefull"=>date("d-m-Y h:m:s"),
 	"datadelta"=>$datadelta,
 	"changelist"=>$changelist
 );
-print $cnode;
 
 array_push($conf, $cnode);
-
-print( json_encode($conf));
-
 file_put_contents("crono_statico.json", json_encode($conf));
 
 ?>{
