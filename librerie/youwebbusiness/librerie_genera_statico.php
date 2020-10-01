@@ -123,6 +123,7 @@
 													totFileToSave -= 1;
 													if(totFileToSave <= 0) {
 														alert("Creazione statico terminata.")
+														$("#buildingform").removeClass("loading");
 														addLog("<strong>FINE</strong>");
 													}
 												});
@@ -157,6 +158,8 @@
 				$(function(){
 
 					$("#btngenera").click(function(){
+
+						$("#buildingform").addClass("loading");
 						$("#generalog").empty();
 						
 							// Operazioni preliminari per la preparazione della cartella
@@ -210,6 +213,7 @@
 					.form-group label {font-size:14px;font-weight:bold; margin-bottom:5px; width:100%;}
 					.form-group input {font-size:14px;width:100%; max-width:100px;display:inline-block;clear:both;}
 					.form-group textarea {font-size:14px;width:100%;max-width:500px;display:inline-block;clear:both;height:150px;}
+					.loading {background: transparent url(./librerie/img/loading.gif) no-repeat center center}
 					.loading>*{visibility:hidden;}
 				</style>
 				<form id="buildingform">
