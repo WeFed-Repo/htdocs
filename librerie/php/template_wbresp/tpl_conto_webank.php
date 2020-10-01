@@ -134,8 +134,27 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                             </div>
                         </div>
                     <!-- fine container 1 DAY F -->
-
-
+                    <hr>
+                     <!-- repricing -->
+                     <div class="main_hero conto_webank dayF" id="s1">
+                            <div class="row">
+                                <div class="col-lg-10 col-md-10 col-sm-12">
+                                    <div class="promo_elenco">
+                                        <h2>CONTO WEBANK A SOLI 2 &euro;/MESE</h2>
+                                        <ul>
+                                            <li><span class="green">Zero</span> spese</li>
+                                            <li><span class="green">Zero canone</span> carte</li>
+                                            <li><span class="green">Comandi vocali</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_hero_bottom">
+                                <a href="javascript:apriConto();" class="btn-green btn-green-arrow" title="Apri il conto">Apri il conto</a>
+                                <p class="note">Messaggio pubblicitario con finalit&agrave; promozionale. Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi. Richiesta soggetta a valutazione ed approvazione da parte della Banca.</p>
+                            </div>
+                        </div>
+                    <!-- fine container 1 DAY F -->
 
                         <!-- container 1 inizio PROMO 2016 05 25 
                         <div class="main_hero conto_webank" id="s1">
@@ -156,7 +175,6 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                         <div class="col-xs-12 nopadding container02 conto_webank" id="s2">
                             <h3>
     						UN MONDO DI SERVIZI<br />
-    						<span>Zero spese e zero canone</span>
     					</h3>
                             <div class="col-sm-12">
 								<div class="row primalinea">
