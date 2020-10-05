@@ -8011,3 +8011,23 @@ ol.sotto-elenco,ol.sotto-elenco ol {
   ol.sotto-elenco ol, ol.sotto-elenco ol li {
       margin-bottom:0
   }
+/*INTERVENTI POP UP TRADING */
+.popup #trading_area .borderFormRounded .with-trend.with-ico i,
+.popup #trading_area .borderFormRounded .with-trend.with-ico .txthelp,
+.popup #trading_area .borderFormRounded  .output.with-ico a,
+.popup #trading_area .borderFormRounded .col-sm-3.col-xs-3 .output{
+      position:relative;
+  }
+.popup .borderFormRounded .with-trend.with-ico i {
+   top:-5px
+}
+
+.popup .borderFormRounded .with-trend.with-ico .txthelp {
+    top:-10px
+}
+.popup .borderFormRounded .col-sm-3.col-xs-3 .output {
+    top: -3px;
+}
+.popup .borderFormRounded .col-sm-1.col-xs-1 .output.with-ico a {
+  top: -2px;
+}
