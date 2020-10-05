@@ -6,7 +6,7 @@ var bd, scrollpx, positionStep = 50;
 $(function () {
     /* inizializzazione oggetti "generici" */
     bd = $("body"),
-    scrollpx = bd.scrollTop();
+        scrollpx = bd.scrollTop();
     initHeader();
     initTabs();
     initTabsFilters();
@@ -21,27 +21,24 @@ $(window).resize(function () {
 function initHeader() {
 
     /* Scrolling header su desktop */
-    if(!$("header").hasClass("librerie")) {
-
-        $(window).on("ready load scroll resize", function () {
-            var st = $(window).scrollTop();
-            if (st > 70) {
-                if (scrollpx < st) {
-                    if (!bd.hasClass("scroll-down")) {
-                        bd.removeClass("scroll-up").addClass("scroll-down");
-                    }
+    $(window).on("ready load scroll resize", function () {
+        var st = $(window).scrollTop();
+        if (st > 70) {
+            if (scrollpx < st) {
+                if (!bd.hasClass("scroll-down")) {
+                    bd.removeClass("scroll-up").addClass("scroll-down");
                 }
-                else {
-                    if (!bd.hasClass("scroll-up")) {
-                        bd.removeClass("scroll-down").addClass("scroll-up");
-                    }
-                }
-            } else {
-                bd.removeClass("scroll-up scroll-down");
             }
-            scrollpx = st;
-        });
-    }
+            else {
+                if (!bd.hasClass("scroll-up")) {
+                    bd.removeClass("scroll-down").addClass("scroll-up");
+                }
+            }
+        } else {
+            bd.removeClass("scroll-up scroll-down");
+        }
+        scrollpx = st;
+    });
 }
 
 function initTabs() {
@@ -108,20 +105,20 @@ function initScroll() {
     var overflow = elem + '-overflow';
     if ($(elem).length > 0) {
         $(elem).each(function () {
-          var e = $(this);
-          var c = e.closest(container);
-          var ew = e.width();
-          var cw = c.width();
-          if( window.document.documentMode ) { // IE
-            if( ! c.parent().hasClass('clickScroll-IE') ) {
-              c.wrap('<div class="clickScroll-IE"></div>');
+            var e = $(this);
+            var c = e.closest(container);
+            var ew = e.width();
+            var cw = c.width();
+            if (window.document.documentMode) { // IE
+                if (!c.parent().hasClass('clickScroll-IE')) {
+                    c.wrap('<div class="clickScroll-IE"></div>');
+                }
             }
-          }
-          if (ew <= cw) {
-            c.removeClass('scroll-active');
-          } else {
-            c.addClass('scroll-active');
-          }
+            if (ew <= cw) {
+                c.removeClass('scroll-active');
+            } else {
+                c.addClass('scroll-active');
+            }
         });
     }
     // Click sulle freccine
@@ -142,7 +139,7 @@ function initScroll() {
     $.fn.activeTab = function () {
         var elem = '.nav-tabs';
         var p = this.closest(elem)
-        if ( this.length > 0 && !this.attr('disabled') && !p.hasClass('nav-tabs--filters') ) {
+        if (this.length > 0 && !this.attr('disabled') && !p.hasClass('nav-tabs--filters')) {
             var a = p.find('.nav-link.active').length == 1 ? p.find('.nav-link.active') : p.find('.nav-link:first-child') // fallback se ci sono active != 1
             if (a.length > 0 && p.length > 0) {
                 //p.scrollLeft(this.position().left + p.scrollLeft()) // positione scroll
