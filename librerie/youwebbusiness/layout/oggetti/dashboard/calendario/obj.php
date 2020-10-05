@@ -73,15 +73,16 @@
     })
     function isInJsonDates(date,n) {
         inarray = false;
-        date.forEach(e => {
-            if( !inarray ) {
+        date.forEach(
+            function(e) {
+                if( !inarray ) {
                 if( e.data==n ) {
                     inarray = e;
                     return true
                 }
+             }
             }
-            
-        });
+        )
         return inarray;
     }
 </script>
