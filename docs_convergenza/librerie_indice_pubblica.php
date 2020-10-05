@@ -34,6 +34,7 @@ $tipoOggettiPub = Array(
 						<li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=wb&tpl=tpl_quest_voto.php" target="_blank">Valutazione</a></li>
 						<li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=wb&tpl=tpl_quest_textarea.php" target="_blank">Textarea</a></li>
 						<li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=wb&tpl=tpl_quest_feedback.php" target="_blank">Feedback</a></li>
+						<li><a class="new" href="/template/qcux/tpl_quest_strutt.php?bank=wb&tpl=tpl_quest_dissuasione.php" target="_blank">Dissuasione</a></li>
 					</ul>
 					<!-- QCUX -->
 					

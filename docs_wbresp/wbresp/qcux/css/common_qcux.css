@@ -110,6 +110,9 @@ p.question {font-weight:600;}
     padding:15px;
 }
 
+/* Broken page (dissuasione) */
+.img-broken {width:100%; max-width:150px;height:150px; margin:0 auto;background:transparent url(../img/broken_page.png) no-repeat center center; background-size:cover;}
+
 /* Bottoniera e bottoni */
 .btn-wrapper {width:100%;clear:both; margin-bottom:15px;display:inline-block;}
 .btn-align-left {max-width:50%;float:left;}

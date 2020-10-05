@@ -77,7 +77,7 @@ if ( empty($bank) || $bank !=="bbpm") {
                     <?php include("./".$tpl); ?>
                     
                     <div class="btn-wrapper">
-                        <?php if($tpl !=="tpl_quest_feedback.php") { ?>
+                        <?php if($tpl !=="tpl_quest_feedback.php" && $tpl !=="tpl_quest_dissuasione.php") { ?>
                         <div class="btn-align-left">
                             <button type="button" class="btn btn-default" href="#">Indietro</button>
                         </div>
