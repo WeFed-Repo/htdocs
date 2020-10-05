@@ -1809,6 +1809,7 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   border-radius: 0;
   padding: 0;
   margin: 0;
+  z-index: 0 !important;
 }
 .dhb-calendario .ui-datepicker .ui-datepicker-header,
 .dhb-calendario .ui-datepicker .ui-datepicker-next,

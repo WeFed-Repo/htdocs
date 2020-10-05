@@ -3,6 +3,12 @@
         "datapacchetto": "20200929",
         "datacreazionefull": "29-09-2020 09:35:00",
         "datadelta": "20200921",
-        "changelist": "Modificati path da \"../fe/...\" a livello superiore (cartelle sorelle)"
+        "changelist": "Modificati path da \"..\/fe\/...\" a livello superiore (cartelle sorelle)"
+    },
+    {
+        "datapacchetto": "20201005",
+        "datacreazionefull": "05-10-2020 11:10:55",
+        "datadelta": "20200930",
+        "changelist": "Correttive per datepicker in HOME (rimosso z-index per oggetto \"in linea\")\nSostituita arrow function sull'oggetto datepicker non compatibile con IE"
     }
 ]

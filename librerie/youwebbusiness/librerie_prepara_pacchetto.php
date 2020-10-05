@@ -66,7 +66,7 @@ foreach ($oldfolders as $id=>$value) {
 */
 
 // Scrittura changelog
-unlink("./changelog.html");
+unlink("changelog.html");
 $clhtml = file_get_contents("cl_template.html");
 // Formatta la changelist
 
