@@ -2322,6 +2322,28 @@ h3 {
 div.messagePanel p {
     padding-bottom: 10px;
 }
+/*  BOX ESITO HTML RIVISTO*/
+.panel-esito-message {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+}
+.panel-esito-message .icon{
+    position: absolute;
+    top: 20px;
+    left:20px;
+}
+.panel-esito-message .panel-esito-message-text{
+    padding-left: 50px;
+}
+.panel-esito-message .panel-esito-message-text h3 {
+    font-size: 22px;
+}
+.panel-esito-message .panel-esito-message-text p {
+    padding-bottom: 10px;
+}
+/* FINE BOX ESITO HTML RIVIST */
+
 
 .control-label .btn-icon span {
     color: #00a592;
