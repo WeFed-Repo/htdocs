@@ -2,7 +2,18 @@
 	li span.green {
 		color: #d3ff40;
 	}
-	</style>
+	.number-large {
+		font-size: 48px;
+	}
+	@media (max-width: 991px) {
+		.number-large {
+		   font-size: 27px;
+	   }
+	   .block-mobile {
+		   display:block;
+	   }
+	}
+</style>
 	
 	<!-- PROMO CONTO -->
 	<div class="item active">
@@ -10,7 +21,7 @@
 		  <img src="/wbresp/img/home_visual_promo_conto_mobile.jpg?a=3" class="carImgMob" alt="Apri Conto Webank" />
 		  <div class="container">
 			  <div class="carousel-caption">
-				  <h2 class="green">Conto Webank a soli <strong>2 &euro;/mese</strong></h2>
+				  <h2 class="green">Conto Webank a soli <strong class="block-mobile"><span class="number-large">2</span> &euro;/mese</strong></h2>
 				  <ul class="margbottomlarge">
 					<li><span class="green">Zero</span> spese</li>
 					<li><span class="green">Zero canone</span> carte</li>
