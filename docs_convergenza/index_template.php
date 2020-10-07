@@ -26,7 +26,7 @@ $menu = json_decode($jsonstr,true);
             $liv1class = $liv1class.(($liv1["hidden-nav"])?  " hidden-nav" : "");
             $liv1key = getId($liv1["nome"]);
             $liv1html = ($liv1["html"])? "&html=".$liv1["html"] : "";
-            $liv1linkname = ($liv1["tpl"])? "<a href=\"/template/strutt_".$site.".php?tpl=".$liv1["tpl"].$liv1foreign."&liv1=".$liv1key."\" class=\"pagelink\" target=\"_blank\">".$liv1["nome"]."</a>" : "<span>".$liv1["nome"]."</span>";
+            $liv1linkname = ($liv1["tpl"] || $liv1["link"])? "<a href=\"".(($liv1["tpl"]) ? "/template/strutt_".$site.".php?tpl=".$liv1["tpl"].$liv1foreign."&liv1=".$liv1key : $liv1["link"])."\" class=\"pagelink\" target=\"_blank\">".$liv1["nome"]."</a>" : "<span>".$liv1["nome"]."</span>";
             ?>
             <li class="<?php print $liv1class ;?> <?php print $liv1["html"];?>" data-key1="<?php print("$liv1key");?>"><span><?php print $liv1opener.$liv1linkname ;?></span>
             <?php
@@ -41,7 +41,7 @@ $menu = json_decode($jsonstr,true);
 
                             $liv2key = getId($liv2["nome"]);
                             $liv2html = ($liv2["html"])? "&html=".$liv2["html"] : "";
-                            $liv2linkname = ($liv2["tpl"])? "<a href=\"/template/strutt_".$site.".php?tpl=".$liv2["tpl"].$liv2html."&liv1=".$liv1key."&liv2=".$liv2key."\" class=\"pagelink\" target=\"_blank\">".$liv2["nome"]."</a>" : "<span>".$liv2["nome"]."</span>";
+                            $liv2linkname = ($liv2["tpl"] || $liv2["link"]) ? "<a href=\"".(($liv2["tpl"] ) ? "/template/strutt_".$site.".php?tpl=".$liv2["tpl"].$liv2html."&liv1=".$liv1key."&liv2=".$liv2key : $liv2["link"] )."\" class=\"pagelink\" target=\"_blank\">".$liv2["nome"]."</a>" : "<span>".$liv2["nome"]."</span>";
                             $liv2lav = ($liv2["inlavorazione"])? $lavTpl : "";
                            
                             ?>
@@ -56,8 +56,8 @@ $menu = json_decode($jsonstr,true);
                                             $liv3opener = ($liv3["voices"])? "<a class=\"opener\"><span class='plus'>+</span><span class='min'>&minus;</span></a>" : "<span class='dot'></span>";  
                                             $liv3key = getId($liv3["nome"]);
                                             $liv3class = ($liv3["voices"])? "has-opener": ""; 
-                                             $liv3html = ($liv3["html"])? "&html=".$liv3["html"] : "";
-                                            $liv3linkname = ($liv3["tpl"])? "<a href=\"/template/strutt_".$site.".php?tpl=".$liv3["tpl"].$liv3html."&liv1=".$liv1key."&liv2=".$liv2key."&liv3=".$liv3key."\" class=\"pagelink\" target=\"_blank\">".$liv3["nome"]."</a>" : "<span>".$liv3["nome"]."</span>";
+                                            $liv3html = ($liv3["html"])? "&html=".$liv3["html"] : "";
+                                            $liv3linkname = ($liv3["tpl"] || $liv3["link"])? "<a href=\"".(($liv3["tpl"]) ? "/template/strutt_".$site.".php?tpl=".$liv3["tpl"].$liv3html."&liv1=".$liv1key."&liv2=".$liv2key."&liv3=".$liv3key : $liv3["link"] )."\" class=\"pagelink\" target=\"_blank\">".$liv3["nome"]."</a>" : "<span>".$liv3["nome"]."</span>";
                                             $liv3lav = ($liv3["inlavorazione"])?  $lavTpl : "";
                                             ?>
                                             <li class="<?php print $liv3class ;?> <?php print $liv3["html"];?>"  data-key3="<?php print("$liv3key");?>"><span><?php print $liv3opener.$liv3linkname.$liv3lav ;?></span>
@@ -71,7 +71,7 @@ $menu = json_decode($jsonstr,true);
                                                             $liv4opener = ($liv4["voices"])? "<a class=\"opener\"><span class='plus'>+</span><span class='min'>&minus;</span></a>" : "<span class='dot'></span>";  
                                                             $liv4key = getId($liv4["nome"]);
                                                             $liv4html = ($liv4["html"])? "&html=".$liv4["html"] : "";
-                                                            $liv4linkname = ($liv4["tpl"])? "<a href=\"/template/strutt_".$site.".php?tpl=".$liv4["tpl"].$liv4html."&liv1=".$liv1key."&liv2=".$liv2key."&liv3=".$liv3key."&liv4=".$liv4key."\" class=\"pagelink\" target=\"_blank\">".$liv4["nome"]."</a>" : "<span>".$liv4["nome"]."</span>";
+                                                            $liv4linkname = ($liv4["tpl"] || $liv4["link"])? "<a href=\"".(($liv4["tpl"]) ? "/template/strutt_".$site.".php?tpl=".$liv4["tpl"].$liv4html."&liv1=".$liv1key."&liv2=".$liv2key."&liv3=".$liv3key."&liv4=".$liv4key : $liv4["link"])."\" class=\"pagelink\" target=\"_blank\">".$liv4["nome"]."</a>" : "<span>".$liv4["nome"]."</span>";
                                                             $liv4lav = ($liv4["inlavorazione"])? $lavTpl : "";
                                                             $skinAletti=  ($liv4["alettistyle"])? "true" : "";
                                                             $liv4linknameAletti = ($liv4["tpl"])? "<a href=\"/template/strutt_".$site.".php?tpl=".$liv4["tpl"].$liv4html."&liv1=".$liv1key."&liv2=".$liv2key."&liv3=".$liv3key."&liv4=".$liv4key."&app_skin_aletti=".$skinAletti."\" class=\"aletti-style\" target=\"_blank\">AL</a>" : "<span>".$liv4["nome"]."</span>";
