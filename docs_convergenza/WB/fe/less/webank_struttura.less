@@ -310,3 +310,235 @@ header .userMenu .telLink {
 .siYnoW {
     display: none
 }
+
+/* CSS riservato F24 */
+body.f24 {
+    /* STRUTTURA */
+		.headerFixed .wrapperDesk .headerDesktopX {
+			display: table;
+			width: 100%;
+			font-size: 14px;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX>* {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		/* LOGO */
+		.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk {
+			padding-left: 10px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk a {
+			display: inline-block;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk a img {
+			margin: 0 !important;
+			height: 32px;
+			width: auto;
+		}
+
+		/* CLOSE */
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX,
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit {
+			width: 60px;
+			line-height: 60px;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			background-color: #8ab10b;
+			color: white;
+			transition: background 0.3s;
+			font-size: 36px;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit:hover {
+			background-color: #8ab10b;
+			cursor: pointer;
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit:after {
+			content: '\2715';
+		}
+
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit img,
+		.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit .containerIconHeadDX {
+			display: none;
+		}
+
+		/* MOBILE ONLY */
+		@media (max-width:767px) {
+
+			/* TOGGLER MENU */
+			.headerFixed .wrapperDesk .headerDesktopX #menuToggler {
+				float: left;
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				margin: 0;
+				cursor: pointer;
+				text-align: center;
+				background-size: cover;
+				transition: background 0.3s;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX #menuToggler.opened {
+				background: white;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX #menuToggler i {
+				font-size: 20px;
+			}
+
+			/* MENU */
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk {
+				position: fixed;
+				top: 60px;
+				left: -100%;
+				transition: left 0.3s;
+				width: 100%;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk.opened {
+				left: 0;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul {
+				margin: 0 20px;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li {
+				display: block;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a {
+				display: block;
+				float: left;
+				width: 100%;
+				cursor: pointer;
+				border-bottom: solid 1px #dedede;
+				padding: 1em 0;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a,
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a span {
+				font-size: 1.1em;
+				text-decoration: none;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a:hover {
+				color: #333;
+			}
+		}
+
+		/* DESKTOP AND TABLET */
+		@media (min-width:768px) {
+
+			/* TOGGLER MENU */
+			.headerFixed .wrapperDesk .headerDesktopX #menuToggler {
+				display: none;
+			}
+
+			/* LOGO */
+			header #logoWrap,
+			.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk {
+				width: auto;
+				text-align: left;
+			}
+
+			/* MENU */
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk {
+				display: table-cell;
+				padding: 5px 15px;
+				margin: 0;
+				width: 100%;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul {
+				text-align: center;
+				display: block;
+				padding: 0;
+				margin: 0;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul+br {
+				display: none
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+				border-left: 1px solid #555;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li:first-child {
+				border-left: none;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a {
+				text-align: center;
+				display: block;
+				padding: 3px 5px 3px 7px;
+				color: white;
+				text-decoration: none;
+				line-height: 1.1em;
+				transition: color 0.3s;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a:hover,
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a:active,
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a.active {
+				color: #8ab10b;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a span {
+				font-size: 1.1em !important;
+			}
+		}
+
+		/* MOBILE AND TABLET */
+		@media (max-width:991px) {
+
+			/* MENU */
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a span {
+				font-size: 0.9em !important;
+			}
+		}
+
+		/* DESKTOP ONLY */
+		@media (min-width:992px) {
+
+			/*  CLOSE */
+			.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit {
+				font-size: 46px;
+			}
+
+			header #logoWrap a img,
+			.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk a img {
+				height: 45px;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contLogoDesk {
+				height: 84px;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX,
+			.headerFixed .wrapperDesk .headerDesktopX .contImpDxDesk.contImpDxDeskX a.iconExit {
+				width: 84px;
+				line-height: 84px;
+			}
+
+			.headerFixed .wrapperDesk .headerDesktopX .contMenuDesk ul li a {
+				padding: 7px 12px 7px 15px;
+			}
+		}
+}

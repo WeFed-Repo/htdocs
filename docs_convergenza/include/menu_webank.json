@@ -29,6 +29,15 @@
 		"tpl": "tpl_priv_full_sportello.php",
 		"voices": [
 			{
+				"nome": "Bonifici ed altri pagamenti",
+				"voices": [
+					{
+						"nome": "Pagamento tributi - F24/F23",
+						"link": "/template/strutt_priv_f24.php?site=webank"					
+					}
+				]
+			},
+			{
 				"nome": "Gestione deposito",
 				"voices": [
 					{
@@ -505,7 +514,7 @@
 			},
 			{
 				"nome": "Logout",
-				"tpl": "http://convergenza.webank.local/template/tpl_priv_logoff.php"
+				"link": "/template/tpl_priv_logoff.php"
 			}
 		]
 	}
