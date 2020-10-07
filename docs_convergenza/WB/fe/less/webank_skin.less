@@ -3202,7 +3202,7 @@ div.messagePanel.success.bgBoxBonif i{display:inline-block; vertical-align:middl
 
 div.messagePanel.success.bgBoxBonif .row.lh {line-height:25px}
 
-.bgBoxSucc {border-color: #A8C630;}
+.bgBoxSucc {border-color: #A8C630!important;}
 .bgBoxError {border-color:#ef5133!important; }
 .bgBoxAlert {border-color:#F6CF00!important;}
 div.messagePanel.success.bgBoxSucc i{color: #A8C630;}
@@ -3217,8 +3217,39 @@ div.messagePanel.success.bgBoxAlert i{color: #F6CF00;}
     font-weight: normal;
 
 }
-
-/*BOX LOGOUT*/
+/*  BOX ESITO HTML RIVISTO*/
+.panel-esito-message {
+    position: relative;
+    padding: 0 20px;
+    color: #000;
+    border-left: solid 4px;
+}
+.panel-esito-message .icon{
+    position: absolute;
+    top: 0;
+    left:10px;
+}
+.panel-esito-message .panel-esito-message-text{
+    padding-left: 50px;
+} 
+.panel-esito-message .panel-esito-message-text h3 {
+    font-size: 22px; 
+}
+.panel-esito-message .panel-esito-message-text p {
+    padding-bottom: 10px;
+    margin-bottom:0;
+}
+.panel-esito-message.bgBoxSucc i {
+    color: #A8C630;
+}
+.panel-esito-message.bgBoxError i {
+    color: #ef5133;
+}
+.panel-esito-message.bgBoxAlert i {
+    color: #F6CF00;
+}
+/* FINE BOX ESITO HTML RIVIST */
+/*BOX LOGOUT*/ 
 
 .boxLout, .boxLoutPromo {
       width: 700px;
