@@ -1,0 +1,363 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it-IT" xml:lang="it-IT">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>headerF24</title>
+
+
+
+
+
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/common/fe/css/all.css" />
+	<link media="print" rel="stylesheet" type="text/css" href="/HT/fe/css/print.css" />
+
+
+
+
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/common/fe/assets/jquery/jquery-ui_ng.min.css" />
+
+	<link media="screen, print" rel="stylesheet" type="text/css" href="/HT/fe/css/bootstrap.height.plugin.css" />
+
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/ie10-viewport.css" />
+
+	<link media="screen" rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-main.css?v=070619" />
+
+	<!-- NUOVO CSS STRUTTURA-->
+	<link rel="stylesheet" type="text/css" href="/HT/fe/css/youWeb-struttura.css?v=070619" />
+	<!-- FINE NUOVO CSS STRUTTURA-->
+
+
+
+	<link media="screen and (max-width: 544px)" rel="stylesheet" type="text/css"
+		href="/HT/fe/css/youWeb-xxs-mobile.css?v=070619" />
+	<link media="screen and (max-width: 991px)" rel="stylesheet" type="text/css"
+		href="/HT/fe/css/youWeb-xs-mobile.css?v=070619" />
+	<link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css"
+		href="/HT/fe/css/youWeb-sm-desktop.css?v=070619" />
+	<!--CSS AGGIUNTO PER STILIZZARE SITO COME INDICAZIONI UI -->
+	<link media="print" rel="stylesheet" type="text/css" href="/HT/fe/css/print.css" />
+	<!--[if IE 8]>
+<link media="screen,print" rel="stylesheet" type="text/css" href="/HT/fe/css/ie8.css" />
+<![endif]-->
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-migrate-1.4.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/bootstrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/script/ie10-viewport.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/script/jsapi.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.dataTables.dateIT.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.dataTables.altImg.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.dataTables.formattedNum.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.dataTables.natural.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.form.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery.blockUI.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/jquery/jquery-ui.selectToUISlider.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script type="text/javascript" language="javascript" src="/HT/JS/script/html5.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/JS/script/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" language="javascript" src="/HT/JS/js.cookie.js"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/funzioniYW.js?v=070619"></script>
+	<script type="text/javascript" language="javascript" src="/HT/fe/js/script/struttura.js"></script>
+	<script type="text/javascript" src="/common/fe/js/funzioni_convergenza.js?r=070619"></script>
+	<script>
+		$(document).ready(function (e) {
+			var resizeTimer;
+			var servVal = false;
+			$(window).resize(function () {
+				if (servVal != isMobile() && location.href.search('login') == -1) {
+					clearTimeout(resizeTimer);
+					resizeTimer = setTimeout(function () {
+
+						$.post(getPathContext() + '/common/refreshBreakpoint.do', { device: getBreakpoint() }, function (response, status) {
+							servVal = isMobile();
+						});
+					}, 500);
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		function getPathImages() { return "/HT/IMAGES/"; }
+		function getPathImagesFe() { return "/HT/fe/img/"; }
+		function getPathContext() { return "/WEBHT"; }
+		function getPathExtContext() { return "/WEBHTEXT"; }
+		function getKBanca() { return "1"; }
+		function getLineaTol() { return ""; }
+	</script>
+	<script type="text/javascript">
+		function printContent() {
+			var fr1 = parent['frF24Center'];
+			var fr2 = fr1.frames[0];
+			var fr3 = fr2.frames[0];
+			if (fr3.name != "footerFrame") {
+				fr3.focus();
+				fr3.print();
+			} else {
+				fr2.focus();
+				fr2.print();
+			}
+		}
+	</script>
+	<style>
+		.logo {
+			display: block;
+			width: 71px;
+			height: 44px;
+			background-image: url(/HT/fe/img/logo_youweb.png);
+			margin: 15px 0 0 30px;
+		}
+		#topNav {
+			background: #FFF;
+			/* width: 100%; */
+			margin: 0px;
+			display: block;
+			overflow: visible;
+			padding: 0 300px 0 105px;
+			float: left;
+		}
+
+		ul#topMain {
+			margin: 0 auto;
+			text-align: center;
+			width: 750px;
+		}
+
+		ul#topMain>li {
+			list-style: none;
+			float: left;
+			margin-bottom: 0px !important;
+			margin: 38px 7px 0 7px;
+			font-weight: 600;
+		}
+
+		ul#topMain .ico {
+			display: none
+		}
+
+		.contLogoDesk {
+			width: 105px;
+			height: 82px;
+			float: left;
+			margin-left: -105px;
+			border-bottom: solid 2px #ebeef0;
+			margin-bottom: -2px;
+		}
+
+		.contImpDxDeskX {
+			background-color: #0E977F;
+			width: 100px;
+			height: 81px;
+			margin-right: -100px;
+			float: right;
+			right: 0;
+		}
+
+		#headerDesktop.headerDesktopX {
+			padding: 0 100px 0 105px;
+		}
+
+
+		@media (min-width:992px) {
+
+			.headerDesktopX #firstMenu {
+				width: 860px;
+			}
+
+			.firstMenuDesk>li.row2 {
+				margin: 30px 7px 0 7px
+			}
+		}
+	</style>
+
+</head>
+
+<body cz-shortcut-listen="true">
+	<div id="outerwrapper">
+		<header class="nav-down menuF24">
+			<div class="wrapper">
+				<div id="headerDesktop" class="headerDesktopX">
+					<div class="contLogoDesk">
+						<a class="logoYouWeb" title="Torna all'homepage"></a>
+					</div>
+					<div class="contMenuDesk">
+						<ul id="firstMenu" class="firstMenuDesk">
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f24/introduzione.do" title="Introduzione" target="_parent">
+									<span style="text-transform: uppercase">Introduzione</span>
+								</a>
+							</li>
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f24/modulo.do" title="Modulo F24" target="_parent">
+									<span style="text-transform: uppercase">Modulo F24</span>
+								</a>
+							</li>
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f24/moduloSemplificato.do" title="Modulo F24 Semplificato"
+									target="_parent">
+									<span style="text-transform: uppercase">Modulo F24 Semplificato</span>
+								</a>
+							</li>
+							<li class="last ">
+								<a href="/WEBHT/pagamenti/f24/moduloAuto.do" title="Modulo F24 elem. ident."
+									target="_parent">
+									<span style="text-transform: uppercase">Modulo F24 elem. ident.</span>
+								</a>
+							</li>
+						</ul>
+						<br style="clear:both">
+						<ul id="firstMenu" class="firstMenuDesk">
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f24/moduloAccise.do" title="Modulo F24 accise"
+									target="_parent">
+									<span style="text-transform: uppercase">Modulo F24 accise</span>
+								</a>
+							</li>
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f24/riepilogo.do" title="Riepilogo f24" target="_parent">
+									<span style="text-transform: uppercase">Riepilogo f24</span>
+								</a>
+							</li>
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f23/modulo.do" title="Modulo F23" target="_parent">
+									<span style="text-transform: uppercase">Modulo F23</span>
+								</a>
+							</li>
+							<li class=" ">
+								<a href="/WEBHT/pagamenti/f23/riepilogo.do" title="Riepilogo F23" target="_parent">
+									<span style="text-transform: uppercase">Riepilogo F23</span>
+								</a>
+							</li>
+							<li class="last ">
+								<a href="/WEBHT/pagamenti/f24/contribuenti.do " title="Lista contribuenti"
+									target="_parent">
+									<span style="text-transform: uppercase">Lista contribuenti</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--END Header Center -->
+
+					<!-- Header DX -->
+					<div class="contImpDxDesk contImpDxDeskX">
+						<a href="#!" class="iconExit" title="Esci"
+							onclick="javascript:top.window.close(); return false;">
+							<!-- Icon X -->
+							<div class="containerIconHeadDX">
+								<span>
+									<img src="/HT/fe/img/btn_x_uscita.png" />
+								</span>
+							</div>
+							<!-- END Icon X -->
+						</a>
+					</div>
+					<!-- END Header DX -->
+				</div>
+				<div id="headerMobile">
+					<div class="wrapperheaderMobile">
+						<div id="buttonMenuMobile" class="pushBtn">
+							<div class="lineMenuWrap">
+								<span class="lineMenu"></span>
+								<span class="lineMenu"></span>
+								<span class="lineMenu"></span>
+							</div>
+						</div>
+						<h1 id="logo-mobile"></h1>
+						<div id="buttonUserMobile" class="pushBtn">
+							<span class="">
+								<a href="javascript:top.window.close()" class="iconExit" title="Esci">
+									<img src="/HT/fe/img/btn_x_uscita.png" />
+
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- MENU -->
+		<div id="menu">
+			<!-- MENU MOBILE-->
+			<nav id="menuMainMobile" style="top: 0px;">
+				<div id="menuMainMobileWrapper">
+					<ul class="first-levelMenu mm-list">
+						<li>
+							<a href="#!" class="logoYouWeb" title="Torna all'homepage">Homepage</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/introduzione.do" title="Introduzione" target="_parent">
+								<span style="text-transform: uppercase">Introduzione</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/modulo.do" title="Modulo F24" target="_parent">
+								<span style="text-transform: uppercase">Modulo F24</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/moduloSemplificato.do" title="Modulo F24 Semplificato"
+								target="_parent">
+								<span style="text-transform: uppercase">Modulo F24 Semplificato</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/moduloAuto.do" title="Modulo F24 elem. ident."
+								target="_parent">
+								<span style="text-transform: uppercase">Modulo F24 elem. ident.</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/moduloAccise.do" title="Modulo F24 accise" target="_parent">
+								<span style="text-transform: uppercase">Modulo F24 accise</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f24/riepilogo.do" title="Riepilogo f24" target="_parent">
+								<span style="text-transform: uppercase">Riepilogo f24</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f23/modulo.do" title="Modulo F23" target="_parent">
+								<span style="text-transform: uppercase">Modulo F23</span>
+							</a>
+						</li>
+						<li class=" ">
+							<a href="/WEBHT/pagamenti/f23/riepilogo.do" title="Riepilogo F23" target="_parent">
+								<span style="text-transform: uppercase">Riepilogo F23</span>
+							</a>
+						</li>
+
+
+
+
+
+						<li class="last ">
+							<a href="/WEBHT/pagamenti/f24/contribuenti.do " title="Lista contribuenti" target="_parent">
+								<span style="text-transform: uppercase">Lista contribuenti</span>
+							</a>
+
+
+
+						</li>
+
+
+
+
+					</ul>
+				</div>
+			</nav>
+			<!-- / MENU MOBILE-->
+		</div>
+		<!-- / MENU -->
+
+
+	</div>
+</body>
+
+</html>

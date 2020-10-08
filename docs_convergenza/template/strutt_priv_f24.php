@@ -193,8 +193,6 @@ $site = $_GET["site"];
 			}
 		}
 	</script>
-
-
 	<?php
 		}
 	?>
@@ -218,14 +216,26 @@ $site = $_GET["site"];
 
 
 <body class="f24">
-	<header class="headerFixed">
+	<header class="<?php print(($site==="webank")? "headerFixed" : "menuF24");?>" >
 		<div class="wrapperDesk">
 			<div id="headerDesktop" class="headerDesktopX">
-				<a id="menuToggler" class="menuopen btn-icon">
+				<?php if ($bank==="webank") { ?>
+					<a id="menuToggler" class="menuopen btn-icon">
 					<i class="icon icon-menu"></i>
-				</a>
+					</a>
+				<?php }?>
+				
 				<div class="contLogoDesk">
-					<a href="#"><img src="/WB/fe/img/logo_bank.png" /></a>
+					<?php 
+						if ($site ==="webank"){ ?>
+							<a href="#"><img src="/WB/fe/img/logo_bank.png" /></a>
+						<?php }
+						else
+						{ ?>
+							<a class="logoYouWeb" title="Torna all'homepage"></a>	
+						<?php }
+					?>
+					
 				</div>
 				<div class="contMenuDesk" id="menuToggled">
 					<ul id="firstMenu" class="firstMenuDesk">
@@ -294,17 +304,19 @@ $site = $_GET["site"];
 								<span>Riepilogo F23</span>
 							</a>
 						</li>
-
-
-
-
-
 						<li class="last ">
 							<a href="/WEBWB/pagamenti/f24/contribuenti.do" title="Lista contribuenti" target="_parent"
 								class="text-decoration: none!important;">
 								<span>Lista contribuenti</span>
 							</a>
 						</li>
+						<li class="last ">
+							<a href="/WEBWB/pagamenti/f24/contribuenti.do" title="Lista contribuenti" target="_parent"
+								class="text-decoration: none!important;">
+								<span>Acquisizione pdf</span>
+							</a>
+						</li>
+						
 
 
 
@@ -315,6 +327,9 @@ $site = $_GET["site"];
 				<div class="contImpDxDesk contImpDxDeskX">
 					<a href="#!" class="iconExit" title="Esci" onclick="javascript:top.window.close(); return false;">
 						<div class="containerIconHeadDX">
+							<?php if($site==="youweb") {?>
+								<span><img src="/HT/fe/img/btn_x_uscita.png"></span>
+							<?php } ?>
 						</div>
 					</a>
 				</div>

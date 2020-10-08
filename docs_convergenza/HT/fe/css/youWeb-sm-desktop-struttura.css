@@ -790,10 +790,8 @@ footer{
 body:after { content: 'desktop'; display: none;}
 
 
-
 /*//////////// REGOLE HEADER MENU F24 ///////////////*/
-
-.menuF24 #headerDesktop.headerDesktopX {
+body.f24 #headerDesktop.headerDesktopX {
   display: table !important;
   padding:0 !important;
   /*width: calc( 100% - 70px ) !important;
@@ -801,7 +799,7 @@ body:after { content: 'desktop'; display: none;}
   width: 100% !important;
   margin: 0 !important;
 }
-.menuF24 #headerDesktop.headerDesktopX > * {
+body.f24 #headerDesktop.headerDesktopX > * {
   display:table-cell !important;
   vertical-align: middle;
   margin:0 !important;
@@ -816,62 +814,54 @@ body:after { content: 'desktop'; display: none;}
 }
 
 /* LOGO */
-
-.menuF24 .logoYouWeb,
-.menuF24 .logoYouWeb {
+body.f24 .logoYouWeb {
   margin: 0 0 0 15px;
 }
-
 /* ICONA CLOSE */
-
-.menuF24 .contMenuDesk .firstMenuDesk {
+body.f24 .contMenuDesk .firstMenuDesk {
   margin: 0 auto !important;
   padding: 0 !important;
   text-align: center !important;
 }
-
-.menuF24 .contMenuDesk {
+body.f24 .contMenuDesk {
   padding: 0 5px !important;
 }
-
-.menuF24 .contMenuDesk .firstMenuDesk:first-child li {
+body.f24 .contMenuDesk .firstMenuDesk:first-child li {
     margin-top: 0 !important;
+}
+body.f24 .contMenuDesk .firstMenuDesk li a {
+	text-transform:uppercase;
 }
 
 /* ICONA CLOSE */
-
-.menuF24 .contImpDxDeskX {
+body.f24 .contImpDxDeskX {
   width:100px !important;
   min-width:100px !important;
   height:81px;
   margin-right:0 !important;
   text-align: center;
 }
-
-.menuF24 .contImpDxDeskX a,
-.menuF24 .contImpDxDeskX .iconExit {
+body.f24 .contImpDxDeskX a,
+body.f24 .contImpDxDeskX .iconExit {
   width:100px !important;
   height: 100% !important;
   display: block !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-
-.menuF24 .contImpDxDeskX .containerIconHeadDX {
+body.f24 .contImpDxDeskX .containerIconHeadDX {
   padding: 0 !important;
   width:100px !important;
   height: 100% !important;
   display: table !important;
 }
-
-.menuF24 .contImpDxDeskX .containerIconHeadDX span {
+body.f24 .contImpDxDeskX .containerIconHeadDX span {
   display: table-cell !important;
   vertical-align: middle;
   padding: 0 !important;
   height:81px;
   line-height:81px;
 }
-
 /* FINE */
 
 /*VOCE NEW */

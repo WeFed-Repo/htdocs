@@ -9,7 +9,17 @@
 			{
 				"nome": "Bancomat Pay Gestione",
 				"tpl": "tpl_gestione_bancomat_pay.php"
+			},
+			{
+				"nome": "Altri pagamenti",
+				"voices": [
+					{
+						"nome": "Pagamento F23 - F 24",
+						"link": "/template/strutt_priv_f24.php?site=youweb"
+					}
+				]
 			}
+			
 		]
 	},
 	{
