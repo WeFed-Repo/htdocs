@@ -837,3 +837,19 @@ assicurazioni.html -> Prodotti - assicurazioni
 
 .investimenti.container08 a.btn-grlit-arrow  {display: block; width: 200px; margin: 10px auto 0 auto;}
 
+/* */
+.block-small-text {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #d3ff40;
+    margin-top: 0;
+    display: block;
+}
+@media (max-width: 767px) {
+    .block-small-text {
+        font-size: 15px;
+        color: #d3ff40;
+        margin-top: 0;
+        display: block;
+    }
+}
