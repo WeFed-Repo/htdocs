@@ -241,25 +241,25 @@ $site = $_GET["site"];
 					<ul id="firstMenu" class="firstMenuDesk">
 						<li class=" ">
 							<a href="#" title="Introduzione" target="_parent"
-								class="text-decoration: none!important;">
+								>
 								<span>Introduzione</span>
 							</a>
 						</li>
 						<li class=" ">
 							<a href="#" title="Modulo F24" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Modulo F24</span>
 							</a>
 						</li>
 						<li class=" ">
 							<a href="#" title="Modulo F24 Semplificato"
-								target="_parent" class="text-decoration: none!important;">
+								target="_parent"  >
 								<span>Modulo F24 Semplificato</span>
 							</a>
 						</li>
 						<li class="last ">
 							<a href="/WEBWB/pagamenti/f24/moduloAuto.do" title="Modulo F24 elem. ident."
-								target="_parent" class="text-decoration: none!important;">
+								target="_parent"  >
 								<span>Modulo F24 elem. ident.</span>
 							</a>
 						</li>
@@ -273,7 +273,7 @@ $site = $_GET["site"];
 
 						<li class=" ">
 							<a href="/WEBWB/pagamenti/f24/moduloAccise.do" title="Modulo F24 accise" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Modulo F24 accise</span>
 							</a>
 						</li>
@@ -282,7 +282,7 @@ $site = $_GET["site"];
 
 						<li class=" ">
 							<a href="/WEBWB/pagamenti/f24/riepilogo.do" title="Riepilogo F24" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Riepilogo F24</span>
 							</a>
 						</li>
@@ -291,7 +291,7 @@ $site = $_GET["site"];
 
 						<li class=" ">
 							<a href="/WEBWB/pagamenti/f23/modulo.do" title="Modulo F23" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Modulo F23</span>
 							</a>
 						</li>
@@ -300,37 +300,29 @@ $site = $_GET["site"];
 
 						<li class=" ">
 							<a href="/WEBWB/pagamenti/f23/riepilogo.do" title="Riepilogo F23" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Riepilogo F23</span>
 							</a>
 						</li>
-						<li class="last ">
+						<li>
 							<a href="/WEBWB/pagamenti/f24/contribuenti.do" title="Lista contribuenti" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Lista contribuenti</span>
 							</a>
 						</li>
 						<li class="last ">
 							<a href="/WEBWB/pagamenti/f24/contribuenti.do" title="Lista contribuenti" target="_parent"
-								class="text-decoration: none!important;">
+								 >
 								<span>Acquisizione pdf</span>
 							</a>
 						</li>
-						
-
-
-
 					</ul>
 
 				</div>
 
 				<div class="contImpDxDesk contImpDxDeskX">
 					<a href="#!" class="iconExit" title="Esci" onclick="javascript:top.window.close(); return false;">
-						<div class="containerIconHeadDX">
-							<?php if($site==="youweb") {?>
-								<span><img src="/HT/fe/img/btn_x_uscita.png"></span>
-							<?php } ?>
-						</div>
+						<div class="containerIconHeadDX"></div>
 					</a>
 				</div>
 
