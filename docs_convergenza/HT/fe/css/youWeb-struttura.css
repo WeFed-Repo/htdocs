@@ -349,3 +349,93 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 	}
 }
 */
+
+/*//////////// REGOLE HEADER MENU F24 ///////////////*/
+body.f24 .logoYouWeb {
+    display: block;
+    width: 113px;
+    height: 29px;
+    background-image: url(/HT/fe/img/logo_bancobpm@2x.png);
+    background-size: 113px 29px;
+}
+body.f24 #headerDesktop.headerDesktopX {
+	display: table !important;
+	padding:0 !important;
+	/*width: calc( 100% - 70px ) !important;
+	margin:0 35px !important;*/
+	width: 100% !important;
+	margin: 0 !important;
+	border-bottom: solid 2px rgba(0,0,0,0.07);
+  }
+  body.f24 #headerDesktop.headerDesktopX > * {
+	display:table-cell !important;
+	vertical-align: middle;
+	margin:0 !important;
+	float:none !important;
+	position:relative;
+	top:auto;
+	left:auto;
+	right:auto;
+	bottom:auto;
+	width: auto;
+	border: none !important;
+  }
+  
+  /* LOGO */
+  body.f24 .logoYouWeb {
+	margin: 0 0 0 15px;
+  }
+  /* ICONA CLOSE */
+  body.f24 .contMenuDesk .firstMenuDesk {
+	margin: 0 auto !important;
+	padding: 0 !important;
+	text-align: center !important;
+  }
+  body.f24 .contMenuDesk {
+	padding: 0 5px !important;
+  }
+  body.f24 .contMenuDesk .firstMenuDesk:first-child li {
+	  margin-top: 0 !important;
+  }
+  body.f24 .contMenuDesk .firstMenuDesk:first-child li {
+	margin-top: 0 !important;
+  }
+  body.f24 .contMenuDesk .firstMenuDesk li {
+	  margin: 14px 0 0 6px!important;
+	  padding-right:6px;
+	  list-style: none;
+	  float: left;
+	  border-right: 1px solid #ccc;
+  }
+  body.f24 .contMenuDesk .firstMenuDesk li a {
+		color:#122e5c;
+		font-weight:600;
+		font-size:13px !important;
+	  text-transform:uppercase !important;
+	  letter-spacing:-0.3px;
+	  float:none !important;
+  }
+  body.f24 .contMenuDesk .firstMenuDesk li a:hover {color: #0E977F}
+  
+  body.f24 .contMenuDesk .firstMenuDesk li:last-child {
+	border-right:none;
+  }
+  
+  /* ICONA CLOSE */
+  body.f24 .contImpDxDeskX {
+	width:100px !important;
+	min-width:100px !important;
+	height:81px;
+	margin-right:0 !important;
+	text-align: center;
+  }
+
+  body.f24 .contImpDxDeskX a {
+	background: #0E977F url("/HT/fe/img/btn_x_uscita.png") no-repeat center center;
+	width:100px;
+	height:81px;
+	display:inline-block;
+	padding:0;margin:0;
+  }
+  body.f24 .contImpDxDeskX a>* {display:none;}
+  /* FINE REGOLE MENU F24 */
