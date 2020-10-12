@@ -424,7 +424,7 @@ a.btn-navigation{color:#fff!important;}
     	padding-left:180px;
 	}
 	.contMenuDesk{
-		width: 710px;
+		width: 740px;
 	}
 	#firstMenu {
    		padding: 52px 0 0 25px;
@@ -433,6 +433,11 @@ a.btn-navigation{color:#fff!important;}
 	li .subMenuXL li.boxBottom {
 		margin-left:-180px;
 	}
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .firstMenuDesk li {
+        margin: 0 16px 0 0;
+    }
 }
 /*Box sub-menu Sinistro*/
 .subMenuBoxSx{
