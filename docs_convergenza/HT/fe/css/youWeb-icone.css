@@ -35,6 +35,9 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-play:before {
+  content: "\e9e3";
+}
 .icon-zoom_piu_filled:before {
   content: "\e9e2";
 }
