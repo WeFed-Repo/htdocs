@@ -509,6 +509,11 @@
 				"tpl": "tpl_trading_apribook.php"
 			},
 			{
+				"nome": "Pagina Widget",
+				"tpl": "tpl_pagina_widget.php",
+				"html": "vr"
+			},
+			{
 				"nome": "Test iframe",
 				"tpl": "tpl_test_iframe.php"
 			},
