@@ -7088,6 +7088,8 @@ pre{
 .col-sm-6 .dbwidget.promo a.btn {margin: 0 auto; float:none;}
 #mainContent  .dashboard-widgets a.btn {background-color:#344a86 !important}
 #mainContent  .dashboard-widgets a.btn:hover {background-color:#1f3267 !important}
+#mainContent  .dashboard-widgets a.btn.white {background-color:#fff !important; color:#2c2c2c !important}
+#mainContent  .dashboard-widgets a.btn.white:hover {background-color:#fff;opacity:0.7}
 
 /* Dashboard widget titoli preferiti */
 #mainContent .dashboard-widgets #dbtitoli .datioutput {overflow: visible;height:auto;}

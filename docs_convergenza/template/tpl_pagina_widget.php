@@ -1,7 +1,16 @@
 <?php
     $statpath = ($site === "webank")? "/WB" : "/HT"
 ?><!-- Titolo -->
-<h2>Tutte le funzionalit&agrave; della tua App</h2>
+<div class="titolo">
+    <h1>
+        <div class="row">
+            <div class="col-sm-8">
+                <span>Tutte le funzionalit&agrave; della tua App</span>
+            </div>
+            </div>
+    </h1>
+</div>
+
 <!-- / Titolo -->
 
 <!-- Box Hero -->
