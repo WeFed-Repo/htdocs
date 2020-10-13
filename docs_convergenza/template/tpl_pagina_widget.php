@@ -1,4 +1,6 @@
-<!-- Titolo -->
+<?php
+    $statpath = ($site === "webank")? "/WB" : "/HT"
+?><!-- Titolo -->
 <h2>Tutte le funzionalit&agrave; della tua App</h2>
 <!-- / Titolo -->
 
@@ -17,21 +19,21 @@
             </div>
             <div class="hero-promo-text hidden-xs">
                 <div class="bullet-hero">
-                    <img src="/HT/fe/img/bullet_ingranaggi.png" class="bullet" />
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_ingranaggi.png" class="bullet" />
                     <span class="bullet-text">
                         <span class="title">FACILE</span><br>
                         La installi con un tap
                     </span>
                 </div>
                 <div class="bullet-hero">
-                    <img src="/HT/fe/img/bullet_scudo.png" class="bullet" />
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_scudo.png" class="bullet" />
                     <span class="bullet-text">
                     <span class="title">SICURA</span><br>
                         La usi come Dispositivo di Sicurezza
                     </span>
                 </div>
                 <div class="bullet-hero">
-                    <img src="/HT/fe/img/bullet_grafico.png" class="bullet" />
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_grafico.png" class="bullet" />
                     <span class="bullet-text">
                         <span class="title">COMPLETA</span><br>
                         Gestisci le operazioni bancarie e gli investimenti
