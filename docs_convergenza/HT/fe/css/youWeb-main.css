@@ -7360,7 +7360,9 @@ label.error{color: #f16875!important;}
 		color:#FFF;
 
 	}
-
+    .contentLogin  .row.bgLoginForm  .form-control#password {
+		font-family: Arial, Helvetica, sans-serif;
+	}
 	.contentLogin .row.bgLoginForm label{
 		float:right;
 		margin-right: 7%;
@@ -7400,6 +7402,7 @@ label.error{color: #f16875!important;}
 		border:1px solid #FFF;
 		border-radius: 0px;
 		color:#202d50;
+		z-index: 10;
 	}
 
 	.row.bgLoginForm .popover.bottom>.arrow:after{
