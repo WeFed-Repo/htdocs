@@ -8244,3 +8244,4 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .link-box {background: #122e5c;padding:25px 30px; color:#fff}
 .link-box h3 .icon {color:#0E977F}
 .link-box .text-link {display:block;clear:both;margin-bottom:15px;color:#fff;text-decoration:none}
+.link-box .text-link:hover {text-decoration:underline}
