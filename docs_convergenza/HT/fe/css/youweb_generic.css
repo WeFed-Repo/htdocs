@@ -5678,7 +5678,9 @@ select:focus::-ms-value {
         letter-spacing: -0.5px;
     }
 }
-
+.firmaContrattoID input[type="password"] {
+    font-family: Arial, Helvetica, sans-serif
+}
 @media screen and (max-width: 1199px) {
 
     .firmaContrattoID p{
@@ -7605,7 +7607,10 @@ div.fixed-table-scroll-outer {
     z-index: 1;
     background: #ffffff;
 }
-
+.bootstrap-table .fixed-table-body table td, .bootstrap-table .fixed-table-body table th, .bootstrap-table .fixed-table-body .table td, .bootstrap-table .fixed-table-body .table th, .bootstrap-table .fixed-columns table td, .bootstrap-table .fixed-columns table th, .bootstrap-table .fixed-columns .table td, .bootstrap-table .fixed-columns .table th {
+    height: auto;
+    padding: 5px;
+}
 @media (max-width:991px) {
     .bootstrap-table .fixed-columns {
        display:none
