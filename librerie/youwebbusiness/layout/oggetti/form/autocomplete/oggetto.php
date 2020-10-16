@@ -95,11 +95,15 @@
 					},
 					//funzione per gestire possibili operazioni pre filtraggio
 					beforeFilter: function () {
-						console.log('stai per filtrare i risultati')
+						console.log('stai per filtrare i risultati');
 					},
 					//lingua (it-IT o En)
-					language:'it-IT'
-				}
+					language:'it-IT',
+					//funzione che intercetta l'evento di onchange
+					onChange: function () {
+						console.log('stai modificando il box-input');
+					}
+		}
 		
 		/*
 		 * Funzione per creazione componente jquery autocomplete
@@ -152,7 +156,10 @@
 			}
 			if (params.language == undefined || params.language == "") {
 				throw 'Errore su autocomplete: Settare la lingua';
-			}
+            }
+            if (params.onChange == undefined || params.onChange == $.noop) {
+                throw 'Errore su autocomplete: Settare funzione change';
+            }
 			//end verify required params
 
 			//options
@@ -285,7 +292,11 @@
 					$(".menu-bottom").css({
 						top: $("#wrapper-ul-autocomplete ul").position().top,
 						left: $("#wrapper-ul-autocomplete ul").position().left,
-						position: "relative"
+						position: "relative",
+						maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
+					})
+					$(".ui-menu").css({
+						maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
 					})
 
 					//se ho aperto la tendina senza digitare alcun carattere non compare la parte di testo "contenenti..."
@@ -320,7 +331,9 @@
 					isOpenMenu = false;
 				},
 				//gestione selezione di una opzione
-				select: params.manageSelect
+				//gestione selezione di una opzione
+				select: params.manageSelect,
+				change: params.onChange
 			}).data("uiAutocomplete").close = function (e) {
 				
 				//chiusura del menu condizonata al fatto che sia acceso il semaforo verde (no click su link bottom)
@@ -331,6 +344,6 @@
 				else
 					return false;
 			};
-    }
+       }
     _initAutocomplete(params);
   </script>
