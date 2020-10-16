@@ -67,9 +67,10 @@
         // Lista delle icone ICOMOON 
         $.ajax({
             url: "<?php print $selectionpath; ?>/fe/font/selection.json",
+            dataType:"json",
             success: function (data) {
                 // Raccoglie i dati e li ordina per il nome
-                iconData = data.icons.sort(function(v1, v2) {return (v1.properties.name > v2.properties.name) ? 1 : -1});
+                iconData = data["icons"].sort(function(v1, v2) {return (v1.properties.name > v2.properties.name) ? 1 : -1});
                 iw = $("#iconSet");
                 
                 $.each(iconData,function(i,v){
@@ -135,9 +136,10 @@
                                 // Lista delle icone MULTICOLOR64 
                                 $.ajax({
                                     url: "<?php print $selectionpath; ?>/fe/font/selection_color.json",
+                                    dataType:"json",
                                     success: function (data) {
                                         // Raccoglie i dati e li ordina per il nome
-                                        var glyphData = data.icons.sort(function(v1, v2) {return (v1.properties.name > v2.properties.name) ? 1 : -1});
+                                        var glyphData = data["icons"].sort(function(v1, v2) {return (v1.properties.name > v2.properties.name) ? 1 : -1});
                                         var iw = $("#iconSetColor");
                                         
                                         $.each(glyphData,function(i,v){

@@ -18,7 +18,6 @@
     "start-storybook": "start-storybook -p 9009 -s public,src",
     "storybook": "run-p watch-css-storybook start-storybook",
     "build-storybook": "build-storybook -s public,src",
-    "build-api": "node scripts/build.js",
     "build-frontend": "react-scripts build",
     "build": "npm-run-all build-css build-frontend",
     "test": "react-scripts test --env=jsdom",
