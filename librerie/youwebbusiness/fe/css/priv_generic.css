@@ -3750,7 +3750,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   cursor: pointer;
 }
 .ui-button.ui-combobox-button.dropdown-arrow.btn-focus {
-  background: #FFFFFF url(..img/form_select.gif) no-repeat right center;
+  background: #FFFFFF url(../img/form_select.gif) no-repeat right center;
 }
 
 .is-invalid + .ui-button.ui-combobox-button.dropdown-arrow {
