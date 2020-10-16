@@ -8,19 +8,21 @@ const stati = {
         "INT0_RIEPILOGO_DATI",
         "INT0_CERTIF_CREDENZIALI",
         "INT0_IDENTIF_CLIENTE",
-        "INT0_FIRMA_PRECONTRATTUALE",
-        "INT0_FIRMA_VESSATORIE",
-        "INT0_FIRMA_INVESTIMENTO",
-        "INT0_FIRMA_CONSULENTE" // Salvataggio backend
+        "INT0_FIRMA_TUB",
+        "INT0_FIRMA_VESSATORIE_TUB",
+        "INT0_FIRMA_TUF",
+        "INT0_FIRMA_VESSATORIE_TUF",
+        "INT0_ATTESA_FIRMA_CONSULENTE" // Salvataggio backend
     ],
     "int1": [
         "INT1_RIEPILOGO_DATI",
         "INT1_CERTIF_CREDENZIALI",
         "INT1_IDENTIF_CLIENTE",
-        "INT1_FIRMA_PRECONTRATTUALE",
-        "INT1_FIRMA_VESSATORIE",
-        "INT1_FIRMA_INVESTIMENTO",
-        "INT1_FIRMA_CONSULENTE" // Salvataggio backend
+        "INT1_FIRMA_TUB",
+        "INT1_FIRMA_VESSATORIE_TUB",
+        "INT1_FIRMA_TUF",
+        "INT1_FIRMA_VESSATORIE_TUF",
+        "INT1_ATTESA_FIRMA_CONSULENTE" // Salvataggio backend
     ],
     "finale": ["CONCLUSA"] // Salvataggio backend
 }
