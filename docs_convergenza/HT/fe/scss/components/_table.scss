@@ -469,4 +469,11 @@ table .table-btn-more,table .table-btn-more[data-toggle="modal"], .table-btn-mor
    }
   
 }
-
+/*intervento su tabella portafoglio per ridurre la select di selezione mercato*/ 
+#trading_area #mww-portfolioTable table select,
+#tablePortafoglio select,
+#tablePortafoglio_columnsort select
+{
+  height:auto;
+  padding: 5px 16px 5px 14px
+}

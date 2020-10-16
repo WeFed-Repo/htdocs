@@ -568,7 +568,7 @@ button {
     width: 20px;
     height: 20px;
     background: url(/HT/fe/img/icon_opera.png) no-repeat 0 0;
-    margin-right: 5px;
+    margin-right: 0;
     display: inline-block;
     cursor: pointer;
 }

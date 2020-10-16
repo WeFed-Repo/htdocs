@@ -2736,6 +2736,14 @@ table .table-btn-more:hover, table .table-btn-more[data-toggle=modal]:hover, .ta
   display: inline-block;
 }
 
+/*intervento su tabella portafoglio per ridurre la select di selezione mercato*/
+#trading_area #mww-portfolioTable table select,
+#tablePortafoglio select,
+#tablePortafoglio_columnsort select {
+  height: auto;
+  padding: 5px 16px 5px 14px;
+}
+
 /* Paginazione top nell'heading (reprise da youweb-main ma con restyle completo */
 div.pager {
   position: relative;
