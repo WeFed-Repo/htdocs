@@ -37,19 +37,19 @@ let getStatiPratica = (form) => {
         // Caso con 2 intestatari
         if (form.field_ordineintestatari === "01") {
 
-            stati_pratica = stati_pratica.concat(stati["int0"]);
-            stati_pratica = stati_pratica.concat(stati["int1"]);
+            stati_pratica = stati_pratica.concat(stati["int0"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
+            stati_pratica = stati_pratica.concat(stati["int1"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
 
         }
         else {
 
-            stati_pratica = stati_pratica.concat(stati["int1"]);
-            stati_pratica = stati_pratica.concat(stati["int0"]);
+            stati_pratica = stati_pratica.concat(stati["int1"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
+            stati_pratica = stati_pratica.concat(stati["int0"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
 
         }
     }
     else {
-        stati_pratica = stati_pratica.concat(stati["int0"]);
+        stati_pratica = stati_pratica.concat(stati["int0"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
     }
     stati_pratica = stati_pratica.concat(stati["finale"]);
     return (stati_pratica);
