@@ -25,9 +25,10 @@ import AdempimentiNormativi from "./Steps/AdempimentiNormativi/";
 import RiepilogoDati from "./Steps/RiepilogoDati";
 import CertificazioneCredenziali from "./Steps/CertificazioneCredenziali";
 import IdentificazioneCliente from "./Steps/IdentificazioneCliente";
-import FirmaPrecontrattuale from "./Steps/FirmaPrecontrattuale";
-import FirmaVessatorie from "./Steps/FirmaVessatorie";
-import FirmaInvestimento from "./Steps/FirmaInvestimento";
+import FirmaTub from "./Steps/FirmaTub";
+import FirmaVessatorieTub from "./Steps/FirmaVessatorieTub";
+import FirmaTuf from "./Steps/FirmaTuf";
+import FirmaVessatorieTuf from "./Steps/FirmaVessatorieTuf";
 import FirmaConsulente from "./Steps/FirmaConsulente";
 import Conclusa from "./Steps/Conclusa";
 
@@ -40,9 +41,10 @@ const Step = {
     "CERTIF_CREDENZIALI": CertificazioneCredenziali,
 
     "IDENTIF_CLIENTE": IdentificazioneCliente,
-    "FIRMA_PRECONTRATTUALE": FirmaPrecontrattuale,
-    "FIRMA_VESSATORIE": FirmaVessatorie,
-    "FIRMA_INVESTIMENTO": FirmaInvestimento,
+    "FIRMA_TUB": FirmaTub,
+    "FIRMA_VESSATORIE_TUB": FirmaVessatorieTub,
+    "FIRMA_TUF": FirmaTuf,
+    "FIRMA_VESSATORIE_TUF": FirmaVessatorieTuf,
     "FIRMA_CONSULENTE": FirmaConsulente,
 
     "CONCLUSA": Conclusa
@@ -359,10 +361,12 @@ export default class extends Component {
                         {getNextState(this.state) === "RIEPILOGO_DATI" && this.state.field_intestcorrente !== "" && <Step.RIEPILOGO_DATI.form {...obformprops} btnConsole={this.btnConsole}></Step.RIEPILOGO_DATI.form>}
                         {getNextState(this.state) === "CERTIF_CREDENZIALI" && this.state.field_intestcorrente !== "" && <Step.CERTIF_CREDENZIALI.form {...obformprops} btnConsole={this.btnConsole}></Step.CERTIF_CREDENZIALI.form>}
                         {getNextState(this.state) === "IDENTIF_CLIENTE" && this.state.field_intestcorrente !== "" && <Step.IDENTIF_CLIENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.IDENTIF_CLIENTE.form>}
-                        {getNextState(this.state) === "FIRMA_PRECONTRATTUALE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_PRECONTRATTUALE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_PRECONTRATTUALE.form>}
-                        {getNextState(this.state) === "FIRMA_VESSATORIE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE.form>}
-                        {getNextState(this.state) === "FIRMA_INVESTIMENTO" && this.state.field_intestcorrente !== "" && <Step.FIRMA_INVESTIMENTO.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_INVESTIMENTO.form>}
-                        {getNextState(this.state) === "FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
+
+                        {getNextState(this.state) === "FIRMA_TUB" && this.state.field_intestcorrente !== "" && <Step.FIRMA_TUB.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_TUB.form>}
+                        {getNextState(this.state) === "FIRMA_VESSATORIE_TUB" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_TUB.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_TUB.form>}
+                        {getNextState(this.state) === "FIRMA_TUF" && this.state.field_intestcorrente !== "" && <Step.FIRMA_TUF.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_TUF.form>}
+                        {getNextState(this.state) === "FIRMA_VESSATORIE_TUF" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_TUF.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_TUF.form>}
+                        {getNextState(this.state) === "ATTESA_FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
 
                         {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
 
