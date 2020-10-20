@@ -450,23 +450,84 @@
 		"nome": "Assicurazioni",
 		"voices": [
 			{
-				"nome": "Le mie polizze",
+				"nome" : "Le tue polizze",
 				"voices": [
 					{
-						"nome": "Il tuo profilo assicurativo",
+						"nome": "Profilo presente",
+						"tpl": "tpl_profilo_assicurativo_presente.php",
 						"voices": [
 							{
-								"nome": "Compilazione - prima pagina",
-								"tpl": "tpl_profilo_assicurativo_compilazione.php",
-								"inlavorazione": true
+								"nome": "Riepilogo - modifica",
+								"tpl": "tpl_profilo_assicurativo_riepilogo.php"
+							}
+						]
+					 },
+					{
+						"nome": "Profilo assente",
+						"tpl": "tpl_profilo_assicurativo_assente.php"
+					}
+				]
+			},
+			{
+				"nome" : "La nostra offerta",
+				"voices": [
+					{
+						"nome": "Categoria",
+						"tpl": "tpl_categoria_assicurazioni.php",
+						"voices": [
+							{
+								"nome": "Scheda prodotto",
+								"tpl": "tpl_scheda_assicurazioni.php"
+							}
+						]
+					 }
+				]
+			},
+			{
+				"nome" : "Questionario",
+				"voices": [
+					{
+						"nome": "Copilazione domande",
+						"voices": [
+							{
+								"nome": "Scelta compagnia",
+								"tpl": "tpl_scelta compagnia_assicurazioni.php"
 							},
 							{
-								"nome": "Questionario",
-								"tpl": "tpl_profilo_assicurativo_questionario.php",
+								"nome": "Prima sezione questionario",
+								"tpl": "tpl_questionario_step1_assicurazioni.php"
+							},
+							{
+								"nome": "Seconda sezione questionario",
+								"tpl": "tpl_questionario_step2_assicurazioni.php"
+							},
+							{
+								"nome": "Terza sezione questionario",
+								"tpl": "tpl_questionario_step3_assicurazioni.php"
+							}
+						]
+					 },
+					 {
+						"nome": "Riepilogo",
+						"voices": [
+							{
+								"nome": "Riepilogo e OTP",
+								"tpl": "tpl_.php",
 								"inlavorazione": true
 							}
 						]
-					}
+					 },
+					 {
+						"nome": "Esito",
+						"voices": [
+							{
+								"nome": "Esito",
+								"tpl": "tpl_esito_quest_prev.php"
+							}
+						
+						]
+						
+					 }
 				]
 			},
 			{
