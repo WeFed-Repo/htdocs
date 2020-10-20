@@ -15,7 +15,8 @@ class StepForm extends Component {
 
     componentDidMount() {
         this.props.setObState({
-            proseguiEnabled: true
+            proseguiEnabled: true,
+            field_ordineintestatari:""
         })
     }
 

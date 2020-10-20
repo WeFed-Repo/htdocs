@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./style.scss";
-import {getNextState, getAvanzamentoPratica } from "../common/gestioneStati";
+import {getNextState, getAvanzamentoPratica, getPureStep} from "../common/gestioneStati";
 
 
 export default class extends Component {
@@ -9,19 +9,25 @@ export default class extends Component {
     render() {
 
         let form = this.props.form,
-            stato = (form.field_stato !== "BOZZA") ? getNextState(form) : form.field_stato,
+            stato = (form.field_stato !== "BOZZA") ? getNextState(form) : form.field_stato.replace("INT0_","").replace("INT1_",""),
             avanzamento = getAvanzamentoPratica(form),
             nint = (form.field_numintestatari !=="") ? form.field_numintestatari : "1",
             intcorrente = form.field_intestcorrente,
-            ordineInt = form.field_ordineintestatari;
+            ordineInt = form.field_ordineintestatari,
+            deposito = (form.field_sessionfirmeblob_depositoincluso==="true"),
+            primoint = ((nint==="1")? " Mono " : ((ordineInt==="01")? "Primo" : "Secondo")) + " intestatario",
+            secondoint= ((nint==="1")? " Mono " : ((ordineInt==="01")? "Secondo" : "Primo")) + " intestatario",
+            primocomp = ordineInt.split("")[0],
+            secondocomp = (ordineInt.length>1)? ordineInt.split("")[1]: "0";
 
         return (
             <>
-                    <div className="ob-stepper">
+                <div className="ob-stepper">
                     <p>Stato: {form.field_stato}
                         - Step: {stato}
                         - Intestatario corrente: {intcorrente}
-                        - Ordine di compilazione: {ordineInt}</p>
+                        - Ordine di compilazione: {ordineInt}
+                        - Deposito titoli: {deposito}</p>
 
                     <div className="step">
 
@@ -31,16 +37,12 @@ export default class extends Component {
                                 <div className={"step " + avanzamento["BOZZA_VALIDATA"]}><span>1 (Inizio)</span></div>
                             </div>
                         </div>
+
                         {   /* MONOINTESTATARIO O ORDINE INTESTATARI NORMALE */
-                        
-                            (stato !== "BOZZA" && (ordineInt ==="01" || ordineInt==="0" || ordineInt==="")) &&  
+                            (stato !== "BOZZA") &&  
                             <>
-                                <div className={"steps-wrap " + ((avanzamento["RACCOLTA_PRODOTTI"]==="corrente" ||
-                                avanzamento["ADEMPIMENTI_NORMATIVI"] === "corrente"||
-                                avanzamento["INT0_RIEPILOGO_DATI"] === "corrente" ||
-                                avanzamento["INT0_CERTIF_CREDENZIALI"]==="corrente"
-                                )? "attivo" :"")}>
-                                        <div className="ob-owner">{nint === "1" ? "Mono" : "Primo"}<br />intestatario</div>
+                                <div className={"steps-wrap " + ((["RACCOLTA_PRODOTTI","ADEMPIMENTI_NORMATIVI","RIEPILOGO_DATI","CERTIF_CREDENZIALI"].indexOf(stato) >= 0 && primocomp===intcorrente) ? "attivo" :"")}>
+                                    <div className="ob-owner">{primoint}</div>
                                         <div className="steps">
                                             <div className={"step " + avanzamento["RACCOLTA_PRODOTTI"]}><span>2</span></div>
                                             <div className={"step " + avanzamento["ADEMPIMENTI_NORMATIVI"]}><span>3</span></div>
@@ -204,18 +206,6 @@ export default class extends Component {
                 </div>
             
             
-                <div className="ob-stepper">
-                    {
-                        Object.keys(avanzamento).map((v,i)=>{
-                            return( 
-                                <div className="step">
-                                    {v + " - " + (i+1) + "->"+avanzamento[v]}
-                                </div>
-                                )
-                            }
-                        )
-                    }
-                </div>
             
             
             </>
