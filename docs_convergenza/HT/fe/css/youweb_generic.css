@@ -1470,6 +1470,14 @@ html input.inputSliderValue[disabled] {
 .import-details .control-label, .import-details span {
     font-size:12px;
 }
+
+/*box di output per i questionari */
+.question-output {
+    padding:20px;
+}
+.question-output .output {
+    font-weight:bold;
+}
 @media (max-width: 768px) {
     .formWrapper .col-xs-8 .resume, .formWrapper .col-xs-6 .resume {
         float: right;
@@ -4745,6 +4753,7 @@ span.colAlert {
     list-style-type: none;
     padding: 0;
     margin: 0 0 20px 0;
+    float:left;
 }
 
 .top-box-promo .bullet-spunta {
@@ -6211,7 +6220,11 @@ ul.ui-autocomplete {
     .assicurazioneCasa .col-xs-5 {
         padding-left: 0px !important;
     }
-
+    .box-catalogue-right.box-catalogue-right-txt h2 {
+        margin-top:0;
+        padding-top:20px;
+    }
+    
 }
 
 
@@ -8250,3 +8263,75 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .link-box h3 .icon {color:#0E977F}
 .link-box .text-link {display:block;clear:both;margin-bottom:15px;color:#fff;text-decoration:none}
 .link-box .text-link:hover {text-decoration:underline}
+
+/*ASSICURAZIONI QUESTIONARIO */
+
+/* DISPLAY GENERICI TABLE */
+.display-table {
+    display: table;
+    width: 100%;
+}
+.display-row {
+    display:table-row; 
+}
+.display-cell {
+    vertical-align:top;
+    background-clip: padding-box;
+    border-right: 20px solid transparent;
+    display:table-cell;
+    width: 50%;
+    padding: 20px 0;
+    position: relative;
+}
+.profilo-assic .display-cell {
+    background-color: #F2F2F2;
+
+}
+.display-cell:last-child {
+    border-right: 0;
+}
+.display-cell .btnWrapper {
+    position: absolute;
+    bottom:0;
+}
+.display-cell ul {
+   margin-bottom:30px;
+}
+
+@media (max-width:767px) {
+    .display-table,.display-cell, .display-row {
+        display: block;
+    }
+    .display-cell {
+        width: 100%;
+        margin-bottom:20px;
+        border:0;
+    }
+    .display-cell .btnWrapper {
+        position: static;
+    }
+    .display-cell .btnWrapper a {
+        margin-bottom:0
+    }
+}
+
+/*CHECK CHE VANNO SU PIu' RIGHE*/
+.label-checkbox-wrapper {
+    width: 100%;
+    margin-bottom:15px!important;
+}
+.label-checkbox-wrapper input {
+    float:left;
+}
+.label-checkbox-wrapper span {
+    float:left;
+    width: 90%;
+}
+.label-checkbox-wrapper span.tooltip-text {
+    position:relative;
+    top:-5px;
+}
+label.label-checkbox-wrapper .btn-icon {
+    float:none
+}
+/*FINE ASSICURAZIONI QUESTIONARIO */
