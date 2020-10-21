@@ -7100,7 +7100,7 @@ pre{
 #mainContent .dashboard-widgets #dbtitoli table .col1 {width:16%;}
 #mainContent .dashboard-widgets #dbtitoli table .col2 {width:28%;}
 #mainContent .dashboard-widgets #dbtitoli table .col3 {width:28%;}
-#mainContent .dashboard-widgets #dbtitoli table .col4 {width:28%;}
+#mainContent .dashboard-widgets #dbtitoli table .col4 {width:28%;text-align:center}
 #mainContent .dashboard-widgets #dbtitoli .table-scroller { width:100%; max-height:305px; overflow-y:auto;}
 #mainContent .dashboard-widgets #dbtitoli table a {text-decoration:underline;}
 #mainContent .dashboard-widgets #dbtitoli a.ico-compravendi {text-decoration:none !important;height:20px;width:20px;background: transparent url(/HT/fe/img/ico_compravendi.png) no-repeat 0 0;background-size:cover;display:inline-block;}
