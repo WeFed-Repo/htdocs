@@ -523,6 +523,10 @@
 							{
 								"nome": "Esito",
 								"tpl": "tpl_esito_quest_prev.php"
+							},
+							{
+								"nome": "Esito senza riposta",
+								"tpl": "tpl_esito_quest_norisp.php"
 							}
 						
 						]
