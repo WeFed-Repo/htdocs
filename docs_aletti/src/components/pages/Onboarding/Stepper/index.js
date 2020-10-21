@@ -15,6 +15,21 @@ export default class extends Component {
             intcorrente = form.field_intestcorrente,
             ordineInt = form.field_ordineintestatari;
 
+        // Preparazione dell'oggetto per lo stepper
+        let stepObj = [
+            {
+                owner: "Prom. finan.",
+                status: avanzamento["BOZZA_VALIDATA"],
+                steps: [{
+                    name: "BOZZA",
+                    status: avanzamento["BOZZA_VALIDATA"]
+                }]
+            }
+        ];
+        console.log("------------stepper-------------");
+        console.log(stepObj)
+        console.log("-----------/stepper-------------");
+
         return (
             <>
                     <div className="ob-stepper">
