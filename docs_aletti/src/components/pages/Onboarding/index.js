@@ -100,8 +100,8 @@ export default class extends Component {
         this.setObState = this.setObState.bind(this);
     }
 
-    setObState(state) {
-        this.setState(state);
+    setObState(state,callback) {
+        this.setState(state,callback);
     }
 
 
@@ -161,7 +161,7 @@ export default class extends Component {
             else {
 
                 // Se lo step è l'anagrafica ed il conto ha 2 intestatari occorre mostrare la modale di selezione dell'intestatario
-                if (this.state.field_stato === "BOZZA" && this.state.field_numintestatari === "2" && (this.state.field_ordineintestatari === "" || this.state.field_ordineintestatari === "0")) {
+                if (this.state.field_stato === "BOZZA" && this.state.field_numintestatari === "2" && this.state.field_ordineintestatari === "" ) {
                     this.setState({
                         modalProsegui: true
                     });
@@ -196,7 +196,7 @@ export default class extends Component {
 
                                         this.setState({
                                             field_stato: getNextState(this.state),
-                                            field_intestcorrente: getNextInt(this.state)
+                                            field_intestcorrente: (this.state.field_stato!=="BOZZA") ? getNextInt(this.state): this.state.field_intestcorrente
                                         });
 
                                     }

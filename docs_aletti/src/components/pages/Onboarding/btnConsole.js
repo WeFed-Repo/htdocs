@@ -182,16 +182,15 @@ export default class extends Component {
                                                             field_intestcorrente: "0",
                                                             field_ordineintestatari: "01",
                                                             modalProsegui: false
-                                                        });
-                                                        formprops.obsave(true);
+                                                        },()=>formprops.obsave(true));
+                                                        
                                                     }}>Sessione con 1° intestatario</Button>
                                                     <Button color="primary" onClick={() => {
                                                         formprops.setObState({
                                                             field_intestcorrente: "1",
                                                             field_ordineintestatari: "10",
                                                             modalProsegui: false
-                                                        });
-                                                        formprops.obsave(true);
+                                                        },()=>formprops.obsave(true));
                                                     }}>Sessione con 2° intestatario</Button>
                                                 </div>
                                             </div>
