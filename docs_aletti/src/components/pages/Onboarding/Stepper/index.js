@@ -15,17 +15,60 @@ export default class extends Component {
             intcorrente = form.field_intestcorrente,
             ordineInt = form.field_ordineintestatari;
 
+        // Calcolo compilatori
+        let primocomp = (ordineInt.length>1)? ordineInt.split("")[0]: "0",
+            secondocomp = (ordineInt.length>1)? ordineInt.split("")[1]: "";
+
+        let primocompel = <>{"Mono"} <br/>intestatario</>
+        let secondocompel = <>{"Mono"} <br/>intestatario</>
+
         // Preparazione dell'oggetto per lo stepper
         let stepObj = [
             {
-                owner: "Prom. finan.",
-                status: avanzamento["BOZZA_VALIDATA"],
+                owner:<>Prom.<br />finan.</>,
+                status: (avanzamento["BOZZA_VALIDATA"]==="corrente")? "attivo":"",
                 steps: [{
                     name: "BOZZA",
-                    status: avanzamento["BOZZA_VALIDATA"]
+                    status: avanzamento["BOZZA_VALIDATA"],
+                    stepph: "1 (Inizio)"
                 }]
             }
         ];
+        /*
+
+        OZZA - 1->completo
+        BOZZA_VALIDATA - 2->corrente
+        RACCOLTA_PRODOTTI - 3->
+        ADEMPIMENTI_NORMATIVI - 4->
+        INT0_RIEPILOGO_DATI - 5->
+        INT0_CERTIF_CREDENZIALI - 6->
+        INT0_IDENTIF_CLIENTE - 7->
+        INT0_FIRMA_TUB - 8->
+        INT0_FIRMA_VESSATORIE_TUB - 9->
+        INT0_ATTESA_FIRMA_CONSULENTE - 10->
+        CONCLUSA
+
+        */
+        // Primo compilatore
+        stepObj.push(
+            {
+                owner: primocompel,
+                status: (avanzamento["RACCOLTA_PRODOTTI"]==="corrente")? "attivo":"",
+                steps: [{
+                    name: "RACCOLTA_PRODOTTI",
+                    status: avanzamento["RACCOLTA_PRODOTTI"],
+                    stepph: "2"
+                },
+                {
+                    name: "ADEMPIMENTI_NORMATIVI",
+                    status: avanzamento["ADEMPIMENTI_NORMATIVI"],
+                    stepph: "3"
+                }]
+            }            
+        )
+
+        // Eventuale secondo compilatore
+        
         console.log("------------stepper-------------");
         console.log(stepObj)
         console.log("-----------/stepper-------------");
@@ -37,6 +80,25 @@ export default class extends Component {
                         - Step: {stato}
                         - Intestatario corrente: {intcorrente}
                         - Ordine di compilazione: {ordineInt}</p>
+
+                    <h3>STEPPER NEW</h3>
+                    {stepObj.map((v,i)=>{
+                        return (
+                            <div className={"steps-wrap " + v.status} key={i}>
+                                <div className="ob-owner">
+                                    {v.owner}
+                                </div>
+                                <div className="steps">
+                                    {v.steps.map((step,ind)=>{return(
+                                         <div className={"step " + step.status}><span>{step.stepph}</span></div>
+                                    )})}
+                                </div>
+                            </div>
+                        )
+                    })}
+
+
+                    <h3>STEPPER OLD</h3>
 
                     <div className="step">
 
