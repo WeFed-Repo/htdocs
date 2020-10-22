@@ -52,9 +52,8 @@ if (!isset($pag)) {
                             <!-- FINE BREADCRUMB -->
 							<?php
 						}
-						*/?>
-
-						<?php
+						*/ 
+						
 						// Acquisizione del  template
 
 						virtual("/template/" . $pag);

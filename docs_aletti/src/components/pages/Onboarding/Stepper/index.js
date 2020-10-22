@@ -34,6 +34,9 @@ export default class extends Component {
                 }]
             }
         ];
+
+        let stepPrimoCom = 
+        
         /*
 
         OZZA - 1->completo
@@ -63,6 +66,40 @@ export default class extends Component {
                     name: "ADEMPIMENTI_NORMATIVI",
                     status: avanzamento["ADEMPIMENTI_NORMATIVI"],
                     stepph: "3"
+                },
+                {
+                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"],
+                    stepph: "4"
+                },
+                {
+                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"],
+                    stepph: "5"
+                }]
+            },
+            {
+                owner: primocompel,
+                status: (avanzamento["RACCOLTA_PRODOTTI"]==="corrente")? "attivo":"",
+                steps: [{
+                    name: "RACCOLTA_PRODOTTI",
+                    status: avanzamento["RACCOLTA_PRODOTTI"],
+                    stepph: "2"
+                },
+                {
+                    name: "ADEMPIMENTI_NORMATIVI",
+                    status: avanzamento["ADEMPIMENTI_NORMATIVI"],
+                    stepph: "3"
+                },
+                {
+                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"],
+                    stepph: "4"
+                },
+                {
+                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"],
+                    stepph: "5"
                 }]
             }            
         )
