@@ -19,9 +19,12 @@
                 -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);}
-            span {color:#333;background:#ccc;height:30px; display:inline-block;padding:5px;position:relative;z-index:3;text-align:center;width:100%;}
-        &.corrente {
-            background:#ccc; opacity:1}
+            span {color:#444;background:#ccc;height:30px; display:inline-block;padding:5px;position:relative;z-index:3;text-align:center;width:100%;}
+        &.corrente {opacity:1;
+            span {
+            background-color:#333; color:#fff;font-weight:bold;}
+            &:after {background-color:#333;}
+            }
         &.completo {opacity:1;
                 span, &::after {background:#7a9225;opacity:1;color:#fff}
             }

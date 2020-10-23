@@ -64,20 +64,24 @@ let getAvanzamentoPratica = (form) => {
     let completo = true,
         corrente = false,
         avanzamento = {};
-    getStatiPratica(form).forEach((val) => {
+    getStatiPratica(form).forEach((val,ind) => {
+        avanzamento[val] = {};
         if (stato === val) {
-            avanzamento[val] = "completo";
+            avanzamento[val]["status"] = "completo";
+            avanzamento[val]["stepnum"] = ind;
             // è l'ultimo step completo
             corrente = true;
             completo = false;
         }
         else {
             if (corrente) {
-                avanzamento[val] = "corrente";
+                avanzamento[val]["status"] = "corrente";
+                avanzamento[val]["stepnum"] = ind;
                 corrente = false;
             }
             else {
-                avanzamento[val] = (completo) ? "completo" : "";
+                avanzamento[val]["stepnum"] = ind;
+                avanzamento[val]["status"] = (completo) ? "completo" : "";
             }
 
         }
