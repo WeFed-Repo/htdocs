@@ -18,11 +18,25 @@
                 font-weight: bold;
             }
         }
-        img {
+        img { 
             max-width: 100%;
         }
     }
 }
 .min-w-s {
     min-width:52px;
+}
+.min-w-m  {
+    min-width:88px;
+}
+.max-w-c {
+    max-width:110px;
+}
+.max-w-i {
+    max-width:120px; 
+}
+.input-group-append { 
+   img {
+       margin-right:0!important;
+   } 
 }

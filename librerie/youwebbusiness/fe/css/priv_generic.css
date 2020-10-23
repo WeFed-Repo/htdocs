@@ -5313,4 +5313,20 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   min-width: 52px;
 }
 
+.min-w-m {
+  min-width: 88px;
+}
+
+.max-w-c {
+  max-width: 110px;
+}
+
+.max-w-i {
+  max-width: 120px;
+}
+
+.input-group-append img {
+  margin-right: 0 !important;
+}
+
 /*# sourceMappingURL=priv_generic.css.map */
