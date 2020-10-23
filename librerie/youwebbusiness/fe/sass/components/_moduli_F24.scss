@@ -1,0 +1,28 @@
+.wrapper-f {
+    hr {
+        margin-left:-1rem;
+        margin-right:-1rem;
+    }
+    &-header {
+        p {
+            font-size: 14px;
+            text-align: right;
+            float: right;
+            margin-bottom: 0;
+         }
+        span {
+            font-size: 16px;
+            &.color-light-green {
+                color: $greenLight2;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.min-w-s {
+    min-width:52px;
+}

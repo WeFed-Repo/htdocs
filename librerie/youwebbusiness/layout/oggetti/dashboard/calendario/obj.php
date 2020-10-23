@@ -73,14 +73,9 @@
     })
     function isInJsonDates(date,n) {
         inarray = false;
-<<<<<<< Updated upstream
         date.forEach(
             function(e) {
                 if( !inarray ) {
-=======
-        date.forEach(function(e){
-            if( !inarray ) {
->>>>>>> Stashed changes
                 if( e.data==n ) {
                     inarray = e;
                     return true
