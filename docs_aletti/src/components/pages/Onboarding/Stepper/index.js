@@ -19,17 +19,17 @@ export default class extends Component {
         let primocomp = (ordineInt.length>1)? ordineInt.split("")[0]: "0",
             secondocomp = (ordineInt.length>1)? ordineInt.split("")[1]: "";
 
-        let primocompel = <>{"Mono"} <br/>intestatario</>
-        let secondocompel = <>{"Mono"} <br/>intestatario</>
+        let primocompel = <>{(nint==="1") ? "Mono": ((primocomp==="0")? "Primo" : "Secondo")} <br/>intestatario</>
+        let secondocompel =  <>{(nint==="1") ? "Mono": ((primocomp==="0")? "Secondo" : "Primo")} <br/>intestatario</>
 
         // Preparazione dell'oggetto per lo stepper
         let stepObj = [
             {
                 owner:<>Prom.<br />finan.</>,
-                status: (avanzamento["BOZZA_VALIDATA"]==="corrente")? "attivo":"",
+                status: (avanzamento["BOZZA_VALIDATA"].status==="corrente")? "attivo":"",
                 steps: [{
                     name: "BOZZA",
-                    status: avanzamento["BOZZA_VALIDATA"],
+                    status: avanzamento["BOZZA_VALIDATA"].status,
                     stepph: "1 (Inizio)"
                 }]
             }
@@ -56,52 +56,85 @@ export default class extends Component {
         stepObj.push(
             {
                 owner: primocompel,
-                status: (avanzamento["RACCOLTA_PRODOTTI"]==="corrente")? "attivo":"",
+                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente")? "attivo":"",
                 steps: [{
                     name: "RACCOLTA_PRODOTTI",
-                    status: avanzamento["RACCOLTA_PRODOTTI"],
-                    stepph: "2"
+                    status: avanzamento["RACCOLTA_PRODOTTI"].status,
+                    stepph: avanzamento["RACCOLTA_PRODOTTI"].stepnum
                 },
                 {
                     name: "ADEMPIMENTI_NORMATIVI",
-                    status: avanzamento["ADEMPIMENTI_NORMATIVI"],
-                    stepph: "3"
+                    status: avanzamento["ADEMPIMENTI_NORMATIVI"].status,
+                    stepph: avanzamento["ADEMPIMENTI_NORMATIVI"].stepnum
                 },
                 {
                     name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"],
-                    stepph: "4"
+                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status,
+                    stepph: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].stepnum
                 },
                 {
                     name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"],
-                    stepph: "5"
+                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status,
+                    stepph: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].stepnum
                 }]
             },
             {
-                owner: primocompel,
-                status: (avanzamento["RACCOLTA_PRODOTTI"]==="corrente")? "attivo":"",
+                owner: <>Prom.<br />finan.</>,
+                status: (avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
                 steps: [{
-                    name: "RACCOLTA_PRODOTTI",
-                    status: avanzamento["RACCOLTA_PRODOTTI"],
-                    stepph: "2"
-                },
-                {
-                    name: "ADEMPIMENTI_NORMATIVI",
-                    status: avanzamento["ADEMPIMENTI_NORMATIVI"],
-                    stepph: "3"
-                },
-                {
-                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"],
-                    stepph: "4"
-                },
-                {
-                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"],
-                    stepph: "5"
+                    name: "INT"+  primocomp +"_IDENTIF_CLIENTE",
+                    status: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status,
+                    stepph: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].stepnum
                 }]
-            }            
+            } ,
+            // Firme
+            {
+                owner: primocompel,
+                status: (avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status==="corrente")? "attivo":"",
+                steps: (()=>{
+                    let stepFirma = [
+                        // Blocchi firma di base
+                        {
+                            name: "INT"+  primocomp +"_FIRMA_TUB",
+                            status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
+                            stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
+                        },
+                        {
+                            name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
+                            status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
+                            stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                        }
+                    ];
+                    // Eventuali blocchi firma aggiuntivi per DT
+                    if (form.field_sessionfirmeblob_depositoincluso==="true") {
+                        stepFirma.push(
+                                {
+                                    name: "INT"+  primocomp +"_FIRMA_TUB",
+                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
+                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
+                                },
+                                {
+                                    name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
+                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
+                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                                }
+                            
+                        )
+                    };   
+                
+                    return stepFirma;
+                })()
+            },
+            {
+                owner: <>Prom.<br />finan.</>,
+                status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente")? "attivo":"",
+                steps: [{
+                    name: "INT"+  primocomp +"FIRMA",
+                    status: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
+                    stepph: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
+                }]
+            } 
+                
         )
 
         // Eventuale secondo compilatore
@@ -323,7 +356,7 @@ export default class extends Component {
                         Object.keys(avanzamento).map((v,i)=>{
                             return( 
                                 <div className="step">
-                                    {v + " - " + (i+1) + "->"+avanzamento[v]}
+                                    {v + " - " + (i+1) + "->"+avanzamento[v].status + " - " + avanzamento[v].stepnum}
                                 </div>
                                 )
                             }
