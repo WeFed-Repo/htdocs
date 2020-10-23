@@ -188,116 +188,625 @@
 <!--SEZIONE ESTREMI DEL VERSAMENTO -->
 <!--CAMBIARE CLASSE PER I BORDI E RIMUOVERE DIV DI CLASS CARD ALL'INTERNO -->
 <!--MODIFICARE HTML DEI TITOLI E INSERIRLI IN FORM  -->
- <!--MODIFICARE LE CLASSI DELLE COLONNE PER ASSICURARE VISIBILITA' FINO A 680px -->
-<div class="bordered" data-bind="visible: Additional.ActiveArea() === 'libera'" style="">
-        <form class="form-grid" novalidate="">
-            <div class="form-row">
-                <div class="form-group col-12">
-                    <h4>Estremi del versamento</h4>
+ <!--MODIFICARE LE CLASSI DELLE COLONNE DEI CAMPI PER ASSICURARE VISIBILITA' FINO A 680px -->
+<div class="bordered mb-3" data-bind="visible: Additional.ActiveArea() === 'libera'" style="">
+    <form class="form-grid" novalidate="">
+        <div class="form-row">
+            <div class="form-group col-12">
+                <h4>Estremi del versamento</h4>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label></label>
+                <div class="form-check  radio">
+                    <input class="form-check-input" type="radio" id="titolareAzienda" name="v" data-bind="value: 3, checked: Disposizione.Native.EstremiVersamento.TitolarePagamento,enable: Additional.Control.IsEstremiVersamentiEnabled()" value="3">
+                    <label class="form-check-label" for="titolareAzienda">
+                        Addebito su conto attestato all'azienda mittente
+                    </label>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-sm-6">
-                    <label></label>
-                    <div class="form-check  radio">
-                        <input class="form-check-input" type="radio" id="titolareAzienda" name="v" data-bind="value: 3, checked: Disposizione.Native.EstremiVersamento.TitolarePagamento,enable: Additional.Control.IsEstremiVersamentiEnabled()" value="3">
-                        <label class="form-check-label" for="titolareAzienda">
-                            Addebito su conto attestato all'azienda mittente
-                        </label>
-                    </div>
+            <div class="form-group col-sm-6">
+                <label></label>
+                <div class="form-check radio">
+                    <input class="form-check-input" type="radio" id="titolareContribuente" name="radioTitolare" data-bind="value: 2, checked: Disposizione.Native.EstremiVersamento.TitolarePagamento,enable: Additional.Control.IsEstremiVersamentiEnabled()" value="2">
+                    <label class="form-check-label" for="titolareContribuente">
+                        Addebito su conto intestato al contribuente
+                    </label>
                 </div>
-                <div class="form-group col-sm-6">
-                    <label></label>
-                    <div class="form-check radio">
-                        <input class="form-check-input" type="radio" id="titolareContribuente" name="radioTitolare" data-bind="value: 2, checked: Disposizione.Native.EstremiVersamento.TitolarePagamento,enable: Additional.Control.IsEstremiVersamentiEnabled()" value="2">
-                        <label class="form-check-label" for="titolareContribuente">
-                            Addebito su conto intestato al contribuente
-                        </label>
-                    </div>
-                 </div>
+                </div>
+        </div>
+        <div class="form-row" data-bind="visible: Disposizione.Native.EstremiVersamento.TitolarePagamento()==3">
+            <div class="form-group col-sm-6">
+                <label class="control-label">Banca *</label>
+                <select class="form-control" data-bind="options: Domain.Banche, optionsText: 'value', optionsValue: 'id', enable: Disposizione.Native.EstremiVersamento.TitolarePagamento()==3 &amp;&amp; Additional.Control.IsEstremiVersamentiEnabled(),value: Additional.RiceventeAbiLibera"><option value="-1"></option><option value="05696">05696 - Banca Popolare di Sondrio</option><option value="01005">01005 - BANCA NAZIONALE DEL LAVORO SPA</option><option value="05034">05034 - BANCO BPM S.P.A.</option><option value="01030">01030 - BANCA MONTE DEI PASCHI DI SIENA S.P.A.</option><option value="05035">05035 - VENETO BANCA S.P.A.</option><option value="06225">06225 - CASSA DI RISPARMIO DEL VENETO</option><option value="02008">02008 - UNICREDIT SPA</option><option value="03069">03069 - INTESA SANPAOLO SPA</option></select>
             </div>
-            <div class="form-row" data-bind="visible: Disposizione.Native.EstremiVersamento.TitolarePagamento()==3">
-                <div class="form-group col-sm-6">
-                    <label class="control-label">Banca *</label>
-                    <select class="form-control" data-bind="options: Domain.Banche, optionsText: 'value', optionsValue: 'id', enable: Disposizione.Native.EstremiVersamento.TitolarePagamento()==3 &amp;&amp; Additional.Control.IsEstremiVersamentiEnabled(),value: Additional.RiceventeAbiLibera"><option value="-1"></option><option value="05696">05696 - Banca Popolare di Sondrio</option><option value="01005">01005 - BANCA NAZIONALE DEL LAVORO SPA</option><option value="05034">05034 - BANCO BPM S.P.A.</option><option value="01030">01030 - BANCA MONTE DEI PASCHI DI SIENA S.P.A.</option><option value="05035">05035 - VENETO BANCA S.P.A.</option><option value="06225">06225 - CASSA DI RISPARMIO DEL VENETO</option><option value="02008">02008 - UNICREDIT SPA</option><option value="03069">03069 - INTESA SANPAOLO SPA</option></select>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label class="control-label">C/C *</label>
-                    <select class="form-control" data-bind="options: Domain.Conti, optionsText: 'value', optionsValue: 'id', enable: Disposizione.Native.EstremiVersamento.TitolarePagamento() == 3, value : Additional.IdRapportoLibera.Hash"><option value="-1"></option><option value="6B72F964499D7BF2B3893982E9B420CF533C5749E6C7F5BCA386DEC3455B88BE">000000001722_bis1</option><option value="7D0613292A37315394F09B5E7D9B94F52DED7DA86EAB3BB52D13559E136EC3F4">000000012648_</option><option value="3B884B35E1E8BD8EFB4F5D1B5ED68A20DBF2951A5E680C557B9F55C4B2A2C50E">000000012648_alias123</option><option value="3753ADDFAE8171328F0679E50E5B990D250F0D23C2E33D3A49783BB03AD45AA1">000000036186_prova</option><option value="848587767DF20DDEA42E867839CD8E2DA61681A8731618B65B77845042E660A1">000000122822_prova</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F62ZZZ">02400 - 000000000999</option><option value="476740FC6208429253BA040492E926BDA2D4DE73DBBAEA21BA9463EF755A7733">11239 - 000004512804</option><option value="B79A97823F1E6E45C9957E2CAC206FF948752D53B573FF6D4B8D47FC9B4C1A39">11701 - 000000000626</option><option value="0B43B2D200F9E5FB46F0A971476D2794F6BC9567C22B03435C6FBAE65ECC3588">11701 - 000000386065</option><option value="2559995672243BF47591477D53B955B17DF2DBC033B44F652FDFD8F60A5EFF38">11701 - 000000503116</option><option value="90B3BCF5390C4293EE4158BFB07FDD3692546FA4A873F5C9842D34A46C86A623">11701 - 000000598345</option><option value="973237997A6DBC2E8C21F0C4AF087B8E813309AE69AA2BFFEC7924610B0664EA">11701 - 000000624926</option><option value="FA80C863336BE93B4B670A3532775584E4EEAD905EFD45D7892BE8F81159E116">11701 - 000000815942</option><option value="3E2A217C2151FA4CEB070C9BA0CF8F065C777C824B6A4BDCD8A5AFAF68BFD35D">11702 - 000000031944</option><option value="E283219D9F80CCB4D6DA244B5BC87751A9134B3A55DD3C9746364922B38C7271">11702 - 000000036832</option><option value="466B12B71C9C5ABF73FAEB38AFD987424EF7F141DD954462B74200D8ABADBBE3">11702 - 000000060316</option><option value="F6F3F7D5E7A45B477C2DEC9647ED74BFDBE3BD30891B74CF67436B6834C9762F">11702 - 000000122821</option><option value="D41C6034A4145761B312943EC294F54CB9335BFE428DF4806CDDE6DB0F10FA0B">11703 - 189570559739</option><option value="20513B1683D56101F712213A8DBFEC3739DCCA22257F40AE709F7A9E43EE743C">11707 - 000009467559</option><option value="066B26ABBF16740FC7E3A9EF5AF5A8484E2B26B5B090D15DF557C3FC9E37C4E4">11707 - 000010540248</option><option value="B6B9982113DA53D6F8A91C623457A5585F77D55F607C0FF9F4757253D051FD7E">11737 - 615220757482</option><option value="24C3746FA4D6E824F676FC7BABF6A3AA163A88F04213F982D59B9111031D97A8">11737 - 625015224868</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F6238D">11751 - 000000000342</option><option value="5A880F0F671BB86DF8A9CD5867263F2453CB63FE10DF767CA886826BFB44E3DD">11751 - 000000365990</option><option value="8EB14B2614387E34CB27A2E21CAAE8B45B3F3F0D5AFA63117962F71791D92E34">18465 - 100000001579</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F62WWW">65730 - 000000000888</option><option value="14EC44636FC0D9536D11B58D1C07DF5CB2CE95590D8AC069CBE59F6B595F5651">CONSORZIO_PLUS 1</option></select>
-                </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label">C/C *</label>
+                <select class="form-control" data-bind="options: Domain.Conti, optionsText: 'value', optionsValue: 'id', enable: Disposizione.Native.EstremiVersamento.TitolarePagamento() == 3, value : Additional.IdRapportoLibera.Hash"><option value="-1"></option><option value="6B72F964499D7BF2B3893982E9B420CF533C5749E6C7F5BCA386DEC3455B88BE">000000001722_bis1</option><option value="7D0613292A37315394F09B5E7D9B94F52DED7DA86EAB3BB52D13559E136EC3F4">000000012648_</option><option value="3B884B35E1E8BD8EFB4F5D1B5ED68A20DBF2951A5E680C557B9F55C4B2A2C50E">000000012648_alias123</option><option value="3753ADDFAE8171328F0679E50E5B990D250F0D23C2E33D3A49783BB03AD45AA1">000000036186_prova</option><option value="848587767DF20DDEA42E867839CD8E2DA61681A8731618B65B77845042E660A1">000000122822_prova</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F62ZZZ">02400 - 000000000999</option><option value="476740FC6208429253BA040492E926BDA2D4DE73DBBAEA21BA9463EF755A7733">11239 - 000004512804</option><option value="B79A97823F1E6E45C9957E2CAC206FF948752D53B573FF6D4B8D47FC9B4C1A39">11701 - 000000000626</option><option value="0B43B2D200F9E5FB46F0A971476D2794F6BC9567C22B03435C6FBAE65ECC3588">11701 - 000000386065</option><option value="2559995672243BF47591477D53B955B17DF2DBC033B44F652FDFD8F60A5EFF38">11701 - 000000503116</option><option value="90B3BCF5390C4293EE4158BFB07FDD3692546FA4A873F5C9842D34A46C86A623">11701 - 000000598345</option><option value="973237997A6DBC2E8C21F0C4AF087B8E813309AE69AA2BFFEC7924610B0664EA">11701 - 000000624926</option><option value="FA80C863336BE93B4B670A3532775584E4EEAD905EFD45D7892BE8F81159E116">11701 - 000000815942</option><option value="3E2A217C2151FA4CEB070C9BA0CF8F065C777C824B6A4BDCD8A5AFAF68BFD35D">11702 - 000000031944</option><option value="E283219D9F80CCB4D6DA244B5BC87751A9134B3A55DD3C9746364922B38C7271">11702 - 000000036832</option><option value="466B12B71C9C5ABF73FAEB38AFD987424EF7F141DD954462B74200D8ABADBBE3">11702 - 000000060316</option><option value="F6F3F7D5E7A45B477C2DEC9647ED74BFDBE3BD30891B74CF67436B6834C9762F">11702 - 000000122821</option><option value="D41C6034A4145761B312943EC294F54CB9335BFE428DF4806CDDE6DB0F10FA0B">11703 - 189570559739</option><option value="20513B1683D56101F712213A8DBFEC3739DCCA22257F40AE709F7A9E43EE743C">11707 - 000009467559</option><option value="066B26ABBF16740FC7E3A9EF5AF5A8484E2B26B5B090D15DF557C3FC9E37C4E4">11707 - 000010540248</option><option value="B6B9982113DA53D6F8A91C623457A5585F77D55F607C0FF9F4757253D051FD7E">11737 - 615220757482</option><option value="24C3746FA4D6E824F676FC7BABF6A3AA163A88F04213F982D59B9111031D97A8">11737 - 625015224868</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F6238D">11751 - 000000000342</option><option value="5A880F0F671BB86DF8A9CD5867263F2453CB63FE10DF767CA886826BFB44E3DD">11751 - 000000365990</option><option value="8EB14B2614387E34CB27A2E21CAAE8B45B3F3F0D5AFA63117962F71791D92E34">18465 - 100000001579</option><option value="24D7E6A67FEC1281D1274295EF87F072F098C724438B2AB5215C8D9D83F62WWW">65730 - 000000000888</option><option value="14EC44636FC0D9536D11B58D1C07DF5CB2CE95590D8AC069CBE59F6B595F5651">CONSORZIO_PLUS 1</option></select>
             </div>
-                <div class="form-row" data-bind="visible: Disposizione.Native.EstremiVersamento.TitolarePagamento()==2">
-                    <div class="form-group col-sm-3 col-md-2">
-                        <label>ABI *</label>
-                        <div class="input-group ">
-                            <input class="form-control " type="text" maxlength="5" data-bind="enable:(Disposizione.Native.EstremiVersamento.TitolarePagamento()=== 2 &amp;&amp; Additional.Control.IsEstremiVersamentiEnabled()), value: Disposizione.Native.EstremiVersamento.RiceventeAbiContribuente" disabled="">
-                            <div class="input-group-append">
-                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: associaABI">
-                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
-                                </a>
-                            </div>
+        </div>
+            <div class="form-row" data-bind="visible: Disposizione.Native.EstremiVersamento.TitolarePagamento()==2">
+                <div class="form-group col-sm-3 col-md-2">
+                    <label>ABI *</label>
+                    <div class="input-group ">
+                        <input class="form-control " type="text" maxlength="5" data-bind="enable:(Disposizione.Native.EstremiVersamento.TitolarePagamento()=== 2 &amp;&amp; Additional.Control.IsEstremiVersamentiEnabled()), value: Disposizione.Native.EstremiVersamento.RiceventeAbiContribuente" disabled="">
+                        <div class="input-group-append">
+                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: associaABI">
+                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                            </a>
                         </div>
                     </div>
-                    <div class="form-group col-sm-3 col-md-2">
-                        <label>CAB *</label>
-                        <div class="input-group">
-                            <input type="text" maxlength="5" class="form-control" data-bind="enable: (Disposizione.Native.EstremiVersamento.TitolarePagamento()== 2), value: Disposizione.Native.EstremiVersamento.RiceventeCabContribuente" disabled="">
-                            <div class="input-group-append">
-                                <a class="input-group-text" tm-data-modal-cab="" data-bind="click: associaCAB">
-                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checked.svg">
-                                </a>
-                            </div>
+                </div>
+                <div class="form-group col-sm-3 col-md-2">
+                    <label>CAB *</label>
+                    <div class="input-group">
+                        <input type="text" maxlength="5" class="form-control" data-bind="enable: (Disposizione.Native.EstremiVersamento.TitolarePagamento()== 2), value: Disposizione.Native.EstremiVersamento.RiceventeCabContribuente" disabled="">
+                        <div class="input-group-append">
+                            <a class="input-group-text" tm-data-modal-cab="" data-bind="click: associaCAB">
+                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checked.svg">
+                            </a>
                         </div>
                     </div>
-                    <div class="form-group col-sm-3 col-md-3">
-                        <label>C/C *</label>
-                        <input type="text" class="form-control" maxlength="12" data-bind="enable: (Disposizione.Native.EstremiVersamento.TitolarePagamento()== 2) ,  value: Disposizione.Native.EstremiVersamento.RiceventeNumeroContoContribuente" disabled="">
-                    </div>
-                    <div class="form-group col-sm-3 col-md-2 my-auto">
-                        <a href="javascript:;" data-bind="click: viewModalConosciIban">Conosci l'IBAN?</a>
-                    </div>
                 </div>
+                <div class="form-group col-sm-3 col-md-3">
+                    <label>C/C *</label>
+                    <input type="text" class="form-control" maxlength="12" data-bind="enable: (Disposizione.Native.EstremiVersamento.TitolarePagamento()== 2) ,  value: Disposizione.Native.EstremiVersamento.RiceventeNumeroContoContribuente" disabled="">
+                </div>
+                <div class="form-group col-sm-3 col-md-2 my-auto">
+                    <a href="javascript:;" data-bind="click: viewModalConosciIban">Conosci l'IBAN?</a>
+                </div>
+            </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-sm-6">
-                            <div class="form-check  radio">
-                                <input class="form-check-input" type="radio" id="add" name="radioInvio" data-bind="value: 1, checked: Disposizione.Native.EstremiVersamento.InvioAttestazione" value="1">
-                                <label class="form-check-label" for="add">Invio attestazione titolare C/C addebito</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <div class="form-check  radio">
-                                <input class="form-check-input" type="radio" id="deb" name="radioInvio" data-bind="value: 2, checked: Disposizione.Native.EstremiVersamento.InvioAttestazione" value="2">
-                                <label class="form-check-label" for="deb">
-                                    Invio attestazione destinatario di stampa (accordi banca)
-                                </label>
-                            </div>
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <div class="form-check  radio">
+                            <input class="form-check-input" type="radio" id="add" name="radioInvio" data-bind="value: 1, checked: Disposizione.Native.EstremiVersamento.InvioAttestazione" value="1">
+                            <label class="form-check-label" for="add">Invio attestazione titolare C/C addebito</label>
                         </div>
                     </div>
-                    <div class="form-row" data-bind="if: Disposizione.Native.EstremiVersamento.InvioAttestazione()==2">
-                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                            <label>Ragione sociale *</label>
-                            <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.CognomeDenRagSoc">
-                        </div>
-                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                            <label>Indirizzo *</label>
-                            <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Indirizzo">
-                        </div>
-                        <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-1">
-                            <label>CAP *</label>
-                            <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Cap">
-                        </div>
-                        <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-3">
-                            <label>Comune *</label>
-                            <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Comune">
-                        </div>
-                        <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                            <label>Provincia *</label>
-                            <input type="text" class="form-control" maxlength="2" data-bind="codiceProvinciaF24: Disposizione.Native.EstremiVersamento.Anagrafica.Provincia">
+                    <div class="form-group col-sm-6">
+                        <div class="form-check  radio">
+                            <input class="form-check-input" type="radio" id="deb" name="radioInvio" data-bind="value: 2, checked: Disposizione.Native.EstremiVersamento.InvioAttestazione" value="2">
+                            <label class="form-check-label" for="deb">
+                                Invio attestazione destinatario di stampa (accordi banca)
+                            </label>
                         </div>
                     </div>
-                </form>
-            
+                </div>
+                <div class="form-row" data-bind="if: Disposizione.Native.EstremiVersamento.InvioAttestazione()==2">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                        <label>Ragione sociale *</label>
+                        <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.CognomeDenRagSoc">
+                    </div>
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                        <label>Indirizzo *</label>
+                        <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Indirizzo">
+                    </div>
+                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-1">
+                        <label>CAP *</label>
+                        <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Cap">
+                    </div>
+                    <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-3">
+                        <label>Comune *</label>
+                        <input type="text" class="form-control" data-bind="textInput: Disposizione.Native.EstremiVersamento.Anagrafica.Comune">
+                    </div>
+                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <label>Provincia *</label>
+                        <input type="text" class="form-control" maxlength="2" data-bind="codiceProvinciaF24: Disposizione.Native.EstremiVersamento.Anagrafica.Provincia">
+                    </div>
+                </div>
+    </form>
+</div>
+
+<!-- ACCORDION ERARIO-->
+<!-- togliere la classe border-top al div card-body e modificare le classi delle colonne per visualizzare anche a 680px-->
+<!-- modificare il titolo della sezione da h2 a h4-->
+
+<div class="accordion bordered-style">
+    <div class="card collapser mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center hide collapsed" tm-erario-accordion-header="" data-toggle="collapse">
+                <h4 class="mb-0">Sezione Erario</h4>
+                <div class="d-flex justify-content-end">
+                    <p data-bind="visible: Additional.IsSezErarioPopulated()" class="mr-3 mb-0" style="display: none;">
+                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checkmark.svg">
+                        Sezione compilata
+                    </p>
+                    <span class="card-header-icon"></span>
+                </div>
+            </div>
+            <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion" tm-erario-accordion-body="" style="">
+                <div class="card-body">
+                    <form class="form-grid" novalidate="">
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12 col-md-2 my-auto">
+                                <h4>Imposte dirette - IVA</h4>
+                                <h6>Ritenute alla fonte altri tributi ed interessi</h6>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-10">
+                                <!-- HEADER ROW -->
+                                <div class="form-row mt-2">
+                                    <div class="form-group col-sm-2">
+                                        <label>Codice tributo</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Rateaz. Reg. prov. mm</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Anno</label>
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label>Importi a debito versati (A)</label>
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label>Importi a credito compensati (B)</label>
+                                    </div>
+                                </div>
+
+                                <!--  ROWS -->
+                                <div data-bind="foreach: Disposizione.Native.Erario.Sezione">
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append">
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append """>
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append """>
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append">
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append">
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append">
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2">
+                                <label>Ufficio</label>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label>Codice atto</label>
+                            </div>
+
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE A</strong></label>
+                            </div>
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE B</strong></label>
+                            </div>
+                        </div>
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2">
+                                <div class="input-group ">
+                                    <input class="form-control " type="text" maxlength="3" data-bind="value: Disposizione.Native.Erario.CodiceUfficio">
+                                    <div class="input-group-append">
+                                        <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioUfficio">
+                                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control" maxlength="11" data-bind="value: Disposizione.Native.Erario.CodiceAtto">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Erario.Totali.Debito" disabled="">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Erario.Totali.Credito" disabled="">
+                            </div>
+                        </div>
+                        <div class="form-row d-flex justify-content-start align-items-center">
+                            <div class="form-group col-sm-2">
+                            </div>
+                            <div class="form-group col-sm-2">
+                            </div>
+                            <div class="form-group col-sm-2 text-right">
+                                <label><strong>SALDO [A-B] +/-</strong></label>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="value: Disposizione.Native.Erario.Totali.Segno" disabled="">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-right" data-bind="tm-importoAbsText: Disposizione.Native.Erario.Totali.Saldo" disabled="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- ACCORDION INPS IN CORSO-->
+<!-- togliere la classe border-top al div card-body e modificare le classi delle colonne per visualizzare anche a 680px-->
+<!-- modificare il titolo della sezione da h2 a h4-->
+<!-- aggiungere la classe max-w-c nelle colonne di codice sede e causale contributo-->
+<!-- aggiungere la classe min-w-m nelle colonne di periodo-->
+
+<div class="accordion bordered-style">
+        <div class="card collapser mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center hide collapsed" tm-inps-accordion-header="" data-toggle="collapse">
+                <h4 class="mb-0">Sezione Inps</h4>
+                <div class="d-flex justify-content-end">
+                    <p data-bind="visible: Additional.IsSezInpsPopulated()" class="mr-3 mb-0" style="display: none;">
+                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checkmark.svg">
+                        Sezione compilata
+                    </p>
+                    <span class="card-header-icon"></span>
+                </div>
+            </div>
+
+            <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion" tm-inps-accordion-body="" style="">
+                <div class="card-body">
+                    <form class="form-grid" novalidate="">
+
+                        <!-- HEADER ROW 1 -->
+                        <div class="form-row mt-2">
+                            <div class="form-group col-sm-2 max-w-c">
+                                <label>Codice sede</label>
+                            </div>
+                            <div class="form-group col-sm-2 max-w-c">
+                                <label>Causale contributo</label>
+                            </div>
+                            <div class="form-group col-sm-2 text-center">
+                                <span class="text-center">
+                                    <span class="text-center">Matr./Codice </span><br>
+                                    <span class="text-center">INPS Fil. azienda</span>
+                                </span>
+                            </div>
+                            <div class="form-group col-sm-1 text-center min-w-m">
+                                <label>Periodo da</label>
+                            </div>
+                            <div class="form-group col-sm-1 text-center min-w-m">
+                                <label>Periodo a</label>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label>Importi a debito versati (C)</label>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label>Importi a credito compensati (D)</label>
+                            </div>
+                        </div>
+
+                        <!--  ROWS -->
+                        <div data-bind="foreach: Disposizione.Native.Inps.Sezione">
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control" maxlength="22" data-bind="value : MatricolaInps">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoInizio">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoFine">
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+                                </div>
+                            </div>
+                        
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control" maxlength="22" data-bind="value : MatricolaInps">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoInizio">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoFine">
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+                                </div>
+                            </div>
+                        
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control" maxlength="22" data-bind="value : MatricolaInps">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoInizio">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoFine">
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+                                </div>
+                            </div>
+                        
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2 max-w-c">
+                                    <div class="input-group ">
+                                        <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
+                                        <div class="input-group-append">
+                                            <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
+                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control" maxlength="22" data-bind="value : MatricolaInps">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoInizio">
+                                </div>
+                                <div class="form-group col-sm-1 min-w-m">
+                                    <input type="text" class="form-control" maxlength="7" data-bind="value : PeriodoFine">
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE C</strong></label>
+                            </div>
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE D</strong></label>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Inps.Totali.Debito" disabled="">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Inps.Totali.Credito" disabled="">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-3 text-right">
+                                <label><strong>SALDO [C-D] +/-</strong></label>
+                            </div>
+                            <div class="form-group col-sm-1">
+                                <input type="text" class="form-control text-right" data-bind="value: Disposizione.Native.Inps.Totali.Segno" disabled="">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-right" data-bind="tm-importoAbsText: Disposizione.Native.Inps.Totali.Saldo" disabled="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 
