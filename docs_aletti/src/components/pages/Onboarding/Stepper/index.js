@@ -17,7 +17,7 @@ export default class extends Component {
 
         // Calcolo compilatori
         let primocomp = (ordineInt.length>1)? ordineInt.split("")[0]: "0",
-            secondocomp = (ordineInt.length>1)? ordineInt.split("")[1]: "";
+            secondocomp = (ordineInt.length>1)? ordineInt.split("")[1]: "1";
 
         let primocompel = <>{(nint==="1") ? "Mono": ((primocomp==="0")? "Primo" : "Secondo")} <br/>intestatario</>
         let secondocompel =  <>{(nint==="1") ? "Mono": ((primocomp==="0")? "Secondo" : "Primo")} <br/>intestatario</>
@@ -56,7 +56,9 @@ export default class extends Component {
         stepObj.push(
             {
                 owner: primocompel,
-                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente")? "attivo":"",
+                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente"|| avanzamento["ADEMPIMENTI_NORMATIVI"].status === "corrente"
+                || avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status === "corrente" || avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status === "corrente"
+                )? "attivo":"",
                 steps: [{
                     name: "RACCOLTA_PRODOTTI",
                     status: avanzamento["RACCOLTA_PRODOTTI"].status,
@@ -73,7 +75,7 @@ export default class extends Component {
                     stepph: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].stepnum
                 },
                 {
-                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                    name: "INT"+  primocomp +"_CERTIF_CREDENZIALI",
                     status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status,
                     stepph: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].stepnum
                 }]
@@ -90,7 +92,9 @@ export default class extends Component {
             // Firme
             {
                 owner: primocompel,
-                status: (avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status==="corrente")? "attivo":"",
+                status: (avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status==="corrente" || avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status==="corrente"
+                ||(form.field_sessionfirmeblob_depositoincluso==="true" && (avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].status==="corrente" || avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUF"].status==="corrente"))
+                )? "attivo":"",
                 steps: (()=>{
                     let stepFirma = [
                         // Blocchi firma di base
@@ -109,14 +113,14 @@ export default class extends Component {
                     if (form.field_sessionfirmeblob_depositoincluso==="true") {
                         stepFirma.push(
                                 {
-                                    name: "INT"+  primocomp +"_FIRMA_TUB",
-                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
-                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
+                                    name: "INT"+  primocomp +"_FIRMA_TUF",
+                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].status,
+                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].stepnum
                                 },
                                 {
-                                    name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
-                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
-                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                                    name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUF",
+                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUF"].status,
+                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUF"].stepnum
                                 }
                             
                         )
@@ -127,24 +131,141 @@ export default class extends Component {
             },
             {
                 owner: <>Prom.<br />finan.</>,
-                status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente")? "attivo":"",
-                steps: [{
-                    name: "INT"+  primocomp +"FIRMA",
-                    status: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
-                    stepph: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
-                }]
-            } 
+                status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (nint === "1" && avanzamento["CONCLUSA"].status==="corrente"))? "attivo":"",
+                steps: (()=>{
+
+                    let firmaCons = [
+                        {
+                            name: "INT"+  primocomp +"_ATTESA_FIRMA_CONSULENTE",
+                            status: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
+                            stepph: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
+                        }
+                    ]
+
+                    // In caso di mono intestatario chiude qui la pratica
+                    if (nint === "1")
+                    firmaCons.push({
+                        name: "CONCLUSA",
+                        status: avanzamento["CONCLUSA"].status,
+                        stepph: "Conclusione"
+                    })
+
+                    return firmaCons;
+
+                })()
                 
+            }
         )
 
         // Eventuale secondo compilatore
+        if (nint==="2"){
+
+            stepObj.push(
+                    {
+                        owner: secondocompel,
+                        status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente")? "attivo":"",
+                        steps:[{
+                            name: "INT"+  secondocomp +"_RIEPILOGO_DATI",
+                            status: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status,
+                            stepph: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].stepnum
+                        },
+                        {
+                            name: "INT"+  secondocomp +"_CERTIF_CREDENZIALI",
+                            status: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status,
+                            stepph: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].stepnum
+                        }]
+                    },
+                    {
+                        owner: <>Prom.<br />finan.</>,
+                        status: (avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
+                        steps: [{
+                            name: "INT"+  secondocomp +"_IDENTIF_CLIENTE",
+                            status: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status,
+                            stepph: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].stepnum
+                        }
+                    ]
+                } ,
+                // Firme
+                {
+                    owner: secondocompel,
+                    status: (avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].status==="corrente")? "attivo":"",
+                    steps: (()=>{
+                        let stepFirma = [
+                            // Blocchi firma di base
+                            {
+                                name: "INT"+  secondocomp +"_FIRMA_TUB",
+                                status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].status,
+                                stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].stepnum
+                            },
+                            {
+                                name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUB",
+                                status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].status,
+                                stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                            }
+                        ];
+                        // Eventuali blocchi firma aggiuntivi per DT
+                        if (form.field_sessionfirmeblob_depositoincluso==="true") {
+                            stepFirma.push(
+                                    {
+                                        name: "INT"+  secondocomp +"_FIRMA_TUF",
+                                        status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].status,
+                                        stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].stepnum
+                                    },
+                                    {
+                                        name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUF",
+                                        status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].status,
+                                        stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].stepnum
+                                    }
+                                
+                            )
+                        };   
+                    
+                        return stepFirma;
+                    })()
+                },
+                {
+                    owner: <>Prom.<br />finan.</>,
+                    status: (avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente")? "attivo":"",
+                    steps: (()=>{
+    
+                        let firmaCons = [
+                            {
+                                name: "INT"+  secondocomp +"_ATTESA_FIRMA_CONSULENTE",
+                                status: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
+                                stepph: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
+                            }
+                        ]
+    
+                        // In caso di mono intestatario chiude qui la pratica
+                        if (nint === "2")
+                        firmaCons.push({
+                            name: "CONCLUSA",
+                            status: avanzamento["CONCLUSA"].status,
+                            stepph: "Conclusione"
+                        });
+    
+                        return firmaCons;
+    
+                    })()
+                    
+                }
+            )
+
+
+
+
+
+
+        }
+
+
+
         
         console.log("------------stepper-------------");
         console.log(stepObj)
         console.log("-----------/stepper-------------");
 
-        return (
-            <>
+        return (<>
                     <div className="ob-stepper">
                     <p>Stato: {form.field_stato}
                         - Step: {stato}
@@ -160,198 +281,14 @@ export default class extends Component {
                                 </div>
                                 <div className="steps">
                                     {v.steps.map((step,ind)=>{return(
-                                         <div className={"step " + step.status}><span>{step.stepph}</span></div>
+                                         <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name}><span>{step.stepph}</span></div>
                                     )})}
                                 </div>
                             </div>
                         )
                     })}
-
-
-                    <h3>STEPPER OLD</h3>
-
-                    <div className="step">
-
-                        <div className={"steps-wrap " + (avanzamento["BOZZA_VALIDATA"]==="corrente" ? "attivo" : "")}>
-                            <div className="ob-owner">Prom.<br />finan.</div>
-                            <div className="steps">
-                                <div className={"step " + avanzamento["BOZZA_VALIDATA"]}><span>1 (Inizio)</span></div>
-                            </div>
-                        </div>
-                        {   /* MONOINTESTATARIO O ORDINE INTESTATARI NORMALE */
-                        
-                            (stato !== "BOZZA" && (ordineInt ==="01" || ordineInt==="0" || ordineInt==="")) &&  
-                            <>
-                                <div className={"steps-wrap " + ((avanzamento["RACCOLTA_PRODOTTI"]==="corrente" ||
-                                avanzamento["ADEMPIMENTI_NORMATIVI"] === "corrente"||
-                                avanzamento["INT0_RIEPILOGO_DATI"] === "corrente" ||
-                                avanzamento["INT0_CERTIF_CREDENZIALI"]==="corrente"
-                                )? "attivo" :"")}>
-                                        <div className="ob-owner">{nint === "1" ? "Mono" : "Primo"}<br />intestatario</div>
-                                        <div className="steps">
-                                            <div className={"step " + avanzamento["RACCOLTA_PRODOTTI"]}><span>2</span></div>
-                                            <div className={"step " + avanzamento["ADEMPIMENTI_NORMATIVI"]}><span>3</span></div>
-                                            <div className={"step " + avanzamento["INT0_RIEPILOGO_DATI"]}><span>4</span></div>
-                                            <div className={"step " + avanzamento["INT0_CERTIF_CREDENZIALI"]}><span>5</span></div>
-                                        </div>
-                                    </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT0_IDENTIF_CLIENTE"]==="corrente")? "attivo" :"")}>
-                                    <div className="ob-owner">Prom.<br />finan.</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT0_IDENTIF_CLIENTE"]}><span>6</span></div>
-                                    </div>
-                                </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT0_FIRMA_PRECONTRATTUALE"]==="corrente" ||
-                                    avanzamento["INT0_FIRMA_VESSATORIE"]==="corrente" ||
-                                    avanzamento["INT0_FIRMA_INVESTIMENTO"] === "corrente"||
-                                    avanzamento["INT0_FIRMA_VESSATORIE_INVESTIMENTO"] === "corrente"
-                                    )? "attivo" :"")}>
-                                <div className="ob-owner">{nint === "1" ? "Mono" : "Primo"}<br />intestatario</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT0_FIRMA_PRECONTRATTUALE"]}><span>7</span></div>
-                                        <div className={"step " + avanzamento["INT0_FIRMA_VESSATORIE"]}><span>8</span></div>
-                                        <div className={"step " + avanzamento["INT0_FIRMA_INVESTIMENTO"]}><span>9</span></div>
-                                        <div className={"step " + avanzamento["INT0_FIRMA_VESSATORIE_INVESTIMENTO"]}><span>10</span></div>
-                                    </div>
-                                </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT0_FIRMA_CONSULENTE"]==="corrente")? "attivo" :"")}>
-                                    <div className="ob-owner">Prom.<br />finan.</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT0_FIRMA_CONSULENTE"]}><span>11{(nint==="1")&& " (fine)"}</span></div>
-                                        {nint==="1" && <div className={"step conclusione " + avanzamento["CONCLUSA"]}><span>Conclusa</span></div>}
-                                    </div>
-                                </div>
-                                {   // Caso con 2 intestatari: ordine normale
-                                    nint === "2" &&
-                                    <>
-                                        <div className={"steps-wrap " + ((avanzamento["INT1_RIEPILOGO_DATI"] === "corrente" ||
-                                        avanzamento["INT1_CERTIF_CREDENZIALI"] === "corrente")? "attivo" :"")}>
-                                    <div className="ob-owner">Secondo<br />intestatario</div>
-                                            <div className="steps">
-                                                <div className={"step " + avanzamento["INT1_RIEPILOGO_DATI"]}><span>12</span></div>
-                                                <div className={"step " + avanzamento["INT1_CERTIF_CREDENZIALI"]}><span>13</span></div>
-                                            </div>
-                                        </div>
-                                    <div className={"steps-wrap " + ((avanzamento["INT1_IDENTIF_CLIENTE"]==="corrente")? "attivo" :"")}>
-                                        <div className="ob-owner">Prom.<br />finan.</div>
-                                        <div className="steps">
-                                            <div className={"step " + avanzamento["INT1_IDENTIF_CLIENTE"]}><span>14</span></div>
-                                        </div>
-                                    </div>
-                                    <div className={"steps-wrap " + ((avanzamento["INT1_FIRMA_PRECONTRATTUALE"]==="corrente" ||
-                                        avanzamento["INT1_FIRMA_VESSATORIE"]==="corrente" ||
-                                        avanzamento["INT1_FIRMA_INVESTIMENTO"] === "corrente"||
-                                        avanzamento["INT1_FIRMA_VESSATORIE_INVESTIMENTO"] === "corrente"
-                                        )? "attivo" :"")}>
-                                    <div className="ob-owner">Secondo<br />intestatario</div>
-                                        <div className="steps">
-                                            <div className={"step " + avanzamento["INT1_FIRMA_PRECONTRATTUALE"]}><span>15</span></div>
-                                            <div className={"step " + avanzamento["INT1_FIRMA_VESSATORIE"]}><span>16</span></div>
-                                            <div className={"step " + avanzamento["INT1_FIRMA_INVESTIMENTO"]}><span>17</span></div>
-                                            <div className={"step " + avanzamento["INT1_FIRMA_VESSATORIE_INVESTIMENTO"]}><span>18</span></div>
-                                        </div>
-                                    </div>
-                                    <div className={"steps-wrap " + ((avanzamento["INT1_FIRMA_CONSULENTE"]==="corrente")? "attivo" :"")}>
-                                        <div className="ob-owner">Prom.<br />finan.</div>
-                                        <div className="steps">
-                                            <div className={"step " + avanzamento["INT1_FIRMA_CONSULENTE"]}><span>19 (fine)</span></div>
-                                            {nint==="2" && <div className={"step conclusione " + avanzamento["CONCLUSA"]}><span>Conclusa</span></div>}
-                                        </div>
-                                    </div>
-                                    </>
-                                }
-
-                            </>
-                        }
-
-                        {   /* DUE INTESTATARI CON PRECEDENZA SECONDO */
-                        
-                        (stato !== "BOZZA" && (ordineInt ==="10")) &&  
-                        <>
-                            <div className={"steps-wrap " + ((avanzamento["INT0_RIEPILOGO_DATI"] === "corrente" ||
-                            avanzamento["INT0_CERTIF_CREDENZIALI"]==="corrente"
-                            )? "attivo" :"")}>
-                            <div className="ob-owner">{nint === "1" ? "Mono" : "Primo"}<br />intestatario</div>
-                                <div className="steps">
-                                    
-                                    <div className={"step " + avanzamento["INT0_RIEPILOGO_DATI"]}><span>2</span></div>
-                                    <div className={"step " + avanzamento["INT0_CERTIF_CREDENZIALI"]}><span>3</span></div>
-                                </div>
-                            </div>
-                            <div className={"steps-wrap " + ((avanzamento["INT0_IDENTIF_CLIENTE"]==="corrente")? "attivo" :"")}>
-                                <div className="ob-owner">Prom.<br />finan.</div>
-                                <div className="steps">
-                                    <div className={"step " + avanzamento["INT0_IDENTIF_CLIENTE"]}><span>4</span></div>
-                                </div>
-                            </div>
-                            <div className={"steps-wrap " + ((avanzamento["INT0_FIRMA_PRECONTRATTUALE"]==="corrente" ||
-                                avanzamento["INT0_FIRMA_VESSATORIE"]==="corrente" ||
-                                avanzamento["INT0_FIRMA_INVESTIMENTO"] === "corrente"||
-                                avanzamento["INT0_FIRMA_VESSATORIE_INVESTIMENTO"] === "corrente"
-                                )? "attivo" :"")}>
-                            <div className="ob-owner">{nint === "1" ? "Mono" : "Primo"}<br />intestatario</div>
-                                <div className="steps">
-                                    <div className={"step " + avanzamento["INT0_FIRMA_PRECONTRATTUALE"]}><span>5</span></div>
-                                    <div className={"step " + avanzamento["INT0_FIRMA_VESSATORIE"]}><span>6</span></div>
-                                    <div className={"step " + avanzamento["INT0_FIRMA_INVESTIMENTO"]}><span>7</span></div>
-                                    <div className={"step " + avanzamento["INT0_FIRMA_VESSATORIE_INVESTIMENTO"]}><span>8</span></div>
-                                </div>
-                            </div>
-                            <div className={"steps-wrap " + ((avanzamento["INT0_FIRMA_CONSULENTE"]==="corrente")? "attivo" :"")}>
-                                <div className="ob-owner">Prom.<br />finan.</div>
-                                <div className="steps">
-                                    <div className={"step " + avanzamento["INT0_FIRMA_CONSULENTE"]}><span>9{(nint==="1")&& " (fine)"}</span></div>
-                                </div>
-                            </div>
-                                    <div className={"steps-wrap " + ((avanzamento["RACCOLTA_PRODOTTI"]==="corrente" ||
-                                    avanzamento["ADEMPIMENTI_NORMATIVI"] === "corrente" || avanzamento["INT1_RIEPILOGO_DATI"] === "corrente" ||
-                                    avanzamento["INT1_CERTIF_CREDENZIALI"] === "corrente")? "attivo" :"")}>
-                                <div className="ob-owner">Secondo<br />intestatario</div>
-                                        <div className="steps">
-                                            <div className={"step " + avanzamento["RACCOLTA_PRODOTTI"]}><span>10</span></div>
-                                            <div className={"step " + avanzamento["ADEMPIMENTI_NORMATIVI"]}><span>11</span></div>
-
-                                            <div className={"step " + avanzamento["INT1_RIEPILOGO_DATI"]}><span>12</span></div>
-                                            <div className={"step " + avanzamento["INT1_CERTIF_CREDENZIALI"]}><span>13</span></div>
-                                        </div>
-                                    </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT1_IDENTIF_CLIENTE"]==="corrente")? "attivo" :"")}>
-                                    <div className="ob-owner">Prom.<br />finan.</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT1_IDENTIF_CLIENTE"]}><span>14</span></div>
-                                    </div>
-                                </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT1_FIRMA_PRECONTRATTUALE"]==="corrente" ||
-                                    avanzamento["INT1_FIRMA_VESSATORIE"]==="corrente" ||
-                                    avanzamento["INT1_FIRMA_INVESTIMENTO"] === "corrente"||
-                                    avanzamento["INT1_FIRMA_VESSATORIE_INVESTIMENTO"] === "corrente"
-                                    )? "attivo" :"")}>
-                                <div className="ob-owner">Secondo<br />intestatario</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT1_FIRMA_PRECONTRATTUALE"]}><span>15</span></div>
-                                        <div className={"step " + avanzamento["INT1_FIRMA_VESSATORIE"]}><span>16</span></div>
-                                        <div className={"step " + avanzamento["INT1_FIRMA_INVESTIMENTO"]}><span>17</span></div>
-                                        <div className={"step " + avanzamento["INT1_FIRMA_VESSATORIE_INVESTIMENTO"]}><span>18</span></div>
-                                    </div>
-                                </div>
-                                <div className={"steps-wrap " + ((avanzamento["INT1_FIRMA_CONSULENTE"]==="corrente")? "attivo" :"")}>
-                                    <div className="ob-owner">Prom.<br />finan.</div>
-                                    <div className="steps">
-                                        <div className={"step " + avanzamento["INT1_FIRMA_CONSULENTE"]}><span>19</span></div>
-                                        {nint==="2" && <div className={"step conclusione " + avanzamento["CONCLUSA"]}><span>Conclusa</span></div>}
-                                    </div>
-                                </div>
-                            </>
-                        }
                     </div>
-
-
-                    
-
-                </div>
-            
-            
-                <div className="ob-stepper">
+                    <div className="ob-stepper">
                     {
                         Object.keys(avanzamento).map((v,i)=>{
                             return( 
@@ -363,9 +300,8 @@ export default class extends Component {
                         )
                     }
                 </div>
-            
-            
             </>
+                    
 
         )
     }
