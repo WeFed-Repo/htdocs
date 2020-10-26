@@ -56,7 +56,7 @@ export default class extends Component {
         stepObj.push(
             {
                 owner: primocompel,
-                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente"|| avanzamento["ADEMPIMENTI_NORMATIVI"].status === "corrente"
+                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente" || avanzamento["ADEMPIMENTI_NORMATIVI"].status === "corrente"
                 || avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status === "corrente" || avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status === "corrente"
                 )? "attivo":"",
                 steps: [{
@@ -163,7 +163,7 @@ export default class extends Component {
             stepObj.push(
                     {
                         owner: secondocompel,
-                        status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente")? "attivo":"",
+                        status: (avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status==="corrente" || avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status==="corrente")? "attivo":"",
                         steps:[{
                             name: "INT"+  secondocomp +"_RIEPILOGO_DATI",
                             status: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status,
