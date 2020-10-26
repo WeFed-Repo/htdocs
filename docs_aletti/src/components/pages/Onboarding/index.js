@@ -193,7 +193,6 @@ export default class extends Component {
                                     // In caso di 2 intestatari ne richiede la selezione per valorizzare field_intestcorrente tramite la modale, 
                                     // altrimenti cambia lo stato direttamente
                                     if (this.state.field_numintestatari === "2") {
-                                        alert(getNextInt(this.state))
                                         this.setState({
                                             field_stato: getNextState(this.state),
                                             field_intestcorrente: (this.state.field_stato!=="BOZZA") ? getNextInt(this.state): this.state.field_intestcorrente

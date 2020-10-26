@@ -113,7 +113,10 @@ let getNextInt = (form) => {
     let int = "0",
         stati = getStatiPratica(form);
     var nextState = stati[stati.indexOf(stateInt(form)) + 1];
-    if (nextState.indexOf("INT") >= 0) { int = nextState.substring(3, 4) }
+    if (nextState.indexOf("INT") >= 0) 
+        { int = nextState.substring(3, 4) }
+    else 
+        { int = form.field_intestcorrente}
     return (int);
 }
 
