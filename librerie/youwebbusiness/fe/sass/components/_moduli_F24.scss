@@ -1,4 +1,4 @@
-.wrapper-f {
+.wrapper-f24 .wrapper-f {
     hr {
         margin-left:-1rem;
         margin-right:-1rem;
@@ -22,6 +22,15 @@
             max-width: 100%;
         }
     }
+}
+.wrapper-f24 label {
+    letter-spacing: -0.5px!important;
+}
+.wrapper-f24 .input-group-text {
+    padding: .375rem .2rem;
+}
+.form-control {
+    padding: 0 2px;
 }
 .min-w-s {
     min-width:52px;

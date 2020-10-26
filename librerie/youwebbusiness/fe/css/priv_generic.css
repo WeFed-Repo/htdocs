@@ -5287,26 +5287,38 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   text-align: left;
 }
 
-.wrapper-f hr {
+.wrapper-f24 .wrapper-f hr {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-.wrapper-f-header p {
+.wrapper-f24 .wrapper-f-header p {
   font-size: 14px;
   text-align: right;
   float: right;
   margin-bottom: 0;
 }
-.wrapper-f-header span {
+.wrapper-f24 .wrapper-f-header span {
   font-size: 16px;
 }
-.wrapper-f-header span.color-light-green {
+.wrapper-f24 .wrapper-f-header span.color-light-green {
   color: #08BBCA;
   font-size: 20px;
   font-weight: bold;
 }
-.wrapper-f-header img {
+.wrapper-f24 .wrapper-f-header img {
   max-width: 100%;
+}
+
+.wrapper-f24 label {
+  letter-spacing: -0.5px !important;
+}
+
+.wrapper-f24 .input-group-text {
+  padding: 0.375rem 0.2rem;
+}
+
+.form-control {
+  padding: 0 2px;
 }
 
 .min-w-s {
