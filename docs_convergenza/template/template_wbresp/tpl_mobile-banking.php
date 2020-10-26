@@ -364,8 +364,8 @@
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<h4>Area download</h4>
-						<h3>Scarica l'app Webank Banking
-						<br />per iOs e Android</h3>
+						<h3>Scarica l'App Webank
+						<br />per iOS, Android e Huawei</h3>
 					</div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12">
@@ -384,7 +384,15 @@
 						</div>
 					</div>
 				</div>
+				
+				<br><br><p style="text-align:center"><strong>Di seguito i requisiti minimi:</strong><br>
+				iPhone/iPad: versione  12<br>
+				Apple Watch: OS 4.2<br>
+				Android/Tablet Android/Android Wear: versione  6</p>
 			</div>
+			<p class="note">MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE<br>
+				Per le condizioni economiche e contrattuali dei prodotti e servizi elencati, fare riferimento ai fogli informativi disponibili su www.webank.it
+			</p>
 		</div>
 				<!-- /colonna centrale -->
 
