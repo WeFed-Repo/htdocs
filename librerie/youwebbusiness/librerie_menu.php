@@ -42,6 +42,10 @@
 				"title": "Bonifico per detrazioni"
 			},
 			{
+				"title": "Modulo F24",
+				"tpl": "tpl_modulo_f24.php"
+			},
+			{
 				"title": "Deleghe F24"
 			},
 			{

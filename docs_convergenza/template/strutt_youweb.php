@@ -43,7 +43,7 @@ if (!isset($pag)) {
                     <!-- CONTENITORE PRINCIPALE -->
 
                     <div id="mainContent" <?php if ($strutt == "full") print "class=\"full\"" ?>>
-						<?php if ($pag != "tpl_priv_dashboard.php") { ?>
+						<?php /*if ($pag != "tpl_priv_dashboard.php") { ?>
                             <!-- BREADCRUMB -->
                             <div class="breadcrumb">
                                 <span>Briciole di</span>
@@ -52,9 +52,8 @@ if (!isset($pag)) {
                             <!-- FINE BREADCRUMB -->
 							<?php
 						}
-						?>
-
-						<?php
+						*/ 
+						
 						// Acquisizione del  template
 
 						virtual("/template/" . $pag);

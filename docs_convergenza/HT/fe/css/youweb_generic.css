@@ -946,7 +946,13 @@ table tr.odd td {
     padding-right: 0;
     text-transform: none;
 }
-
+.titleSection span {
+    font-weight: normal;
+}
+.titleSection a {
+    text-decoration: underline;
+    color:#00a592;
+}
 .btnSelezioneCC {
     background: url(/HT/fe/img/icon_accordion_closed.png);
     background-size: 23px;

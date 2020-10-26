@@ -523,6 +523,10 @@
 							{
 								"nome": "Esito",
 								"tpl": "tpl_esito_quest_prev.php"
+							},
+							{
+								"nome": "Esito senza riposta",
+								"tpl": "tpl_esito_quest_norisp.php"
 							}
 						
 						]
@@ -632,6 +636,10 @@
 			{
 				"nome": "Book trading",
 				"tpl": "tpl_trading_apribook.php"
+			},
+			{
+				"nome": "Digital Identity",
+				"tpl": "tpl_priv_digital_identity.php"
 			}
 		]
 	}

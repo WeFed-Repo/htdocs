@@ -773,7 +773,7 @@
 }
 
 /* Tabs */
-.nav-tabs:not(.tabsContenuti) {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) {
   clear: both;
   margin: 0 0 1rem 0;
   padding: 0;
@@ -785,17 +785,17 @@
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
-.nav-tabs:not(.tabsContenuti)::-webkit-scrollbar {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio)::-webkit-scrollbar {
   display: none;
 }
-.nav-tabs:not(.tabsContenuti) .nav-item {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-item {
   display: inline-block;
   white-space: nowrap;
   margin: 0;
   background: none;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link,
-.nav-tabs:not(.tabsContenuti) .nav-link {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link {
   font-size: 16px;
   padding: 0.5rem 1rem;
   color: #3e3e3e;
@@ -811,30 +811,30 @@
   transition: all 0.3s;
   text-decoration: none;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link:not(.btn),
-.nav-tabs:not(.tabsContenuti) .nav-link:not(.btn) {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:not(.btn),
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:not(.btn) {
   padding-top: 0;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
-.nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled),
-.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled),
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:hover:not(:disabled),
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled) {
   color: #2F9988;
   margin-bottom: 3px;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled):hover,
-.nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled):hover,
-.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled):hover {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled):hover,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:hover:not(:disabled):hover,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled):hover {
   color: #2F9988;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
-.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled),
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled) {
   box-shadow: 0 3px 0 0 #2F9988;
 }
-.nav-tabs:not(.tabsContenuti) a.nav-link:disabled, .nav-tabs:not(.tabsContenuti) a.nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled:hover,
-.nav-tabs:not(.tabsContenuti) .nav-link:disabled,
-.nav-tabs:not(.tabsContenuti) .nav-link:disabled:hover,
-.nav-tabs:not(.tabsContenuti) .nav-link.disabled,
-.nav-tabs:not(.tabsContenuti) .nav-link.disabled:hover {
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:disabled, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.disabled, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.disabled:hover,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:disabled,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:disabled:hover,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.disabled,
+.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.disabled:hover {
   color: #DDDDDD !important;
   cursor: default !important;
   border-bottom: solid 3px transparent !important;
@@ -878,6 +878,60 @@
 .nav-tabs-container .nav-tabs.nav-tabs--filters label > input[type=checkbox] {
   cursor: pointer;
   display: none;
+}
+
+/* TAB con radio button*/
+.tabsWithRadio.nav-tabs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.tabsWithRadio.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+.tabsWithRadio.nav-tabs .nav-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.tabsWithRadio.nav-tabs .nav-item a {
+  padding: 15px 0 15px 5rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 0;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+.tabsWithRadio.nav-tabs .nav-item a.active {
+  background-color: #EDEDED;
+}
+.tabsWithRadio.nav-tabs .nav-item a p {
+  padding-left: 7px;
+  font-size: 12px;
+  color: #3e3e3e;
+  margin-bottom: 0;
+}
+.tabsWithRadio.nav-tabs .nav-item a label {
+  font-size: 14px;
+  color: #3e3e3e;
+  text-transform: uppercase;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help {
+  position: absolute;
+  top: 15px;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help#viewModalFacilitata {
+  left: 155px;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help#viewModalLibera {
+  left: 137px;
 }
 
 .bootstrap-table {
@@ -5231,6 +5285,48 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   width: 100%;
   flex-basis: 100%;
   text-align: left;
+}
+
+.wrapper-f hr {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.wrapper-f-header p {
+  font-size: 14px;
+  text-align: right;
+  float: right;
+  margin-bottom: 0;
+}
+.wrapper-f-header span {
+  font-size: 16px;
+}
+.wrapper-f-header span.color-light-green {
+  color: #08BBCA;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrapper-f-header img {
+  max-width: 100%;
+}
+
+.min-w-s {
+  min-width: 52px;
+}
+
+.min-w-m {
+  min-width: 88px;
+}
+
+.max-w-c {
+  max-width: 110px;
+}
+
+.max-w-i {
+  max-width: 120px;
+}
+
+.input-group-append img {
+  margin-right: 0 !important;
 }
 
 /*# sourceMappingURL=priv_generic.css.map */
