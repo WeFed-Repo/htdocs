@@ -901,7 +901,7 @@ p.note.flRight a.btn-icon {
 
 .selector {
   position: absolute;
-  z-index: 4;
+  z-index: 4 !important;
   left: 0;
   overflow: auto;
   border: 1px solid #ccc;

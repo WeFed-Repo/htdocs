@@ -249,6 +249,132 @@ html{overflow-x:visible!important;}
 body:after { content: 'mobile'; display: none;}
 
 
+/*MENU F24 */
+.menuF24 #headerMobile {display:none!important;}
+.menuF24 #headerDesktop, #menuDesktop{display: block!important}
+/* Menu primo livello */
+.menuF24 .firstMenuDesk li{list-style: none;float: left;margin: 0 21px 0 0;font-weight:400}
+.menuF24 .firstMenuDesk li ul ul li{float: none}
+.menuF24 .firstMenuDesk .subMenuXL li:nth-child(5){margin-right:0}
+.menuF24 .headerDesktopX .firstMenuDesk li{
+	margin: 14px 0 0 15px!important;
+	padding-right:15px;
+	font-weight:600;
+	border-right: 1px solid #ccc;
+}
+
+.menuF24 .firstMenuDesk li.last{
+	border-right: 0;
+}
+
+.menuF24 #firstMenu{
+	margin:0;
+	padding:0 0 0 25px;
+}
+.menuF24 .firstMenuDesk li a{font-weight:600;padding:0;background:transparent;font-size: 13px; color:#122e5c;line-height:16px;display: inline-block;}
+.menuF24 .firstMenuDesk .no-children li a,.firstMenuDesk .btn-navigation{line-height:23px!important;}
+.menuF24 .firstMenuDesk li a:hover{background:transparent;}
+.menuF24 .firstMenuDesk .subMenuXL li a {font-family: 'tableFont', Arial, Helvetica,sans-serif;}
+.menuF24 .firstMenuDesk .subMenuBoxCenter li a{font-size: 14px; color:#2A3D63;}
+.menuF24 ul.firstMenuDesk>li>a {text-decoration:none !important;}
+
+.menuF24 ul.firstMenuDesk>li.selected>a,ul.firstMenuDesk>li.selected>a:hover {color:#00A592;}
+
+.menuF24 ul.firstMenuDesk>li.open>a, ul.firstMenuDesk>li.open>a:hover, ul.firstMenuDesk>li.open>a:focus, li.open>ul.firstMenuDesk>a:active{text-decoration: none;color: #00A592;text-transform:uppercase;font-weight:600;padding-bottom: 3px;border-bottom: 4px solid #00A592;}
+
+
+/*//////////// REGOLE HEADER MENU F24 ///////////////*/
+
+.menuF24 #headerDesktop.headerDesktopX {
+  display: table !important;
+  padding:0 !important;
+  /*width: calc( 100% - 70px ) !important;
+  margin:0 35px !important;*/
+  width: 100% !important;
+  margin: 0 !important;
+}
+.menuF24 #headerDesktop.headerDesktopX > * {
+  display:table-cell !important;
+  vertical-align: middle;
+  margin:0 !important;
+  float:none !important;
+  position:relative;
+  top:auto;
+  left:auto;
+  right:auto;
+  bottom:auto;
+  width: auto;
+  border: none !important;
+}
+
+/* LOGO */
+
+.menuF24 .logoYouWeb,
+.menuF24 .logoYouWeb {
+  margin: 0 0 0 15px;
+}
+
+/* ICONA CLOSE */
+
+.menuF24 .contMenuDesk .firstMenuDesk {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.menuF24 .contMenuDesk {
+  padding: 0 5px !important;
+}
+
+.menuF24 .contMenuDesk .firstMenuDesk:first-child li {
+    margin-top: 0 !important;
+}
+
+/* ICONA CLOSE */
+
+.menuF24 .contImpDxDeskX {
+  width:100px !important;
+  min-width:100px !important;
+  height:81px;
+  margin-right:0 !important;
+  text-align: center;
+}
+
+.menuF24 .contImpDxDeskX a,
+.menuF24 .contImpDxDeskX .iconExit {
+  width:100px !important;
+  height: 100% !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.menuF24 .contImpDxDeskX .containerIconHeadDX {
+  padding: 0 !important;
+  width:100px !important;
+  height: 100% !important;
+  display: table !important;
+}
+
+.menuF24 .contImpDxDeskX .containerIconHeadDX span {
+  display: table-cell !important;
+  vertical-align: middle;
+  padding: 0 !important;
+  height:81px;
+  line-height:81px;
+}
+.menuF24 .logoYouWeb {
+    display: block;
+    width: 113px;
+    height: 29px;
+    background-image: url(/HT/fe/img/logo_bancobpm@2x.png);
+    background-size: 113px 29px;
+}
+.menuF24 #headerDesktop{background:#FFF;width: 100%;margin: 0px;display:block;overflow:visible;padding:0 300px 0 0;float:left;position: relative;height:80px;border-bottom: solid 2px rgba(0,0,0,0.07);}
+
+.menuF24 .headerDesktopX #firstMenu{width:auto;}
+
+
 @media (max-width:650px){
 	div#contentF24 {top:160px;}
 }
