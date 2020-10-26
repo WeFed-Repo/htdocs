@@ -12,8 +12,8 @@
 </section>
 <!-- testo di esito questionario da preventivo-->
 <section>
-    <h3 class="titleSection">Grazie per aver compilato il tuo profilo assicurativo.</h3>
-    <h3 class="titleSection">Procedi con il preventivo del prodotto che avevi scelto.</h3>
+    <h3 class="titleSection titleForm">Grazie per aver compilato il tuo profilo assicurativo.</h3>
+    <p>Procedi con il preventivo del prodotto che avevi scelto.</p>
     <a href="#" class="btn btn-link noPaddingLeft"><span>Fai il preventivo</span><i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a>
 </section>
 <!-- fine testo di esito questionario da preventivo-->
