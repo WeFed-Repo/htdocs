@@ -260,19 +260,22 @@ export default class extends Component {
 
 
 
-        
+    /*
         console.log("------------stepper-------------");
         console.log(stepObj)
         console.log("-----------/stepper-------------");
-
+        */
         return (<>
                     <div className="ob-stepper">
-                    <p>Stato: {form.field_stato}
+                    {/* 
+                     <p>Stato: {form.field_stato}
                         - Step: {stato}
                         - Intestatario corrente: {intcorrente}
                         - Ordine di compilazione: {ordineInt}</p>
+                    
+                    */}
+                   
 
-                    <h3>STEPPER NEW</h3>
                     {stepObj.map((v,i)=>{
                         return (
                             <div className={"steps-wrap " + v.status} key={i}>
@@ -281,15 +284,15 @@ export default class extends Component {
                                 </div>
                                 <div className="steps">
                                     {v.steps.map((step,ind)=>{return(
-                                         <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name}><span>{step.stepph}</span></div>
+                                         <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name} key={ind}><span>{step.stepph}</span></div>
                                     )})}
                                 </div>
                             </div>
                         )
                     })}
                     </div>
-                    <div className="ob-stepper">
-                    {
+                    {   
+                        /*
                         Object.keys(avanzamento).map((v,i)=>{
                             return( 
                                 <div className="step">
@@ -298,8 +301,8 @@ export default class extends Component {
                                 )
                             }
                         )
+                        */
                     }
-                </div>
             </>
                     
 
