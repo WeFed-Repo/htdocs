@@ -178,23 +178,19 @@ export default class extends Component {
                                             <div className="btn-console">
                                                 <div className="btn-console-right">
                                                     <Button color="primary" onClick={() => {
-                                                        let fp = formprops;
-                                                        fp.setObState({
+                                                        formprops.setObState({
                                                             field_intestcorrente: "0",
                                                             field_ordineintestatari: "01",
                                                             modalProsegui: false
-                                                        },()=>fp.obsave(true));
+                                                        },()=>formprops.obsave(true));
                                                         
-                                                       
                                                     }}>Sessione con 1° intestatario</Button>
                                                     <Button color="primary" onClick={() => {
-                                                        let fp = formprops;
-                                                        fp.setObState({
+                                                        formprops.setObState({
                                                             field_intestcorrente: "1",
                                                             field_ordineintestatari: "10",
                                                             modalProsegui: false
-                                                        },()=>fp.obsave(true));
-                                                        
+                                                        },()=>formprops.obsave(true));
                                                     }}>Sessione con 2° intestatario</Button>
                                                 </div>
                                             </div>

@@ -160,12 +160,9 @@ export default class extends Component {
             }
             else {
 
-                console.log("salvataggio" + (new Date().valueOf()))
-
                 // Se lo step è l'anagrafica ed il conto ha 2 intestatari occorre mostrare la modale di selezione dell'intestatario
-                if (this.state.field_stato === "BOZZA" && this.state.field_numintestatari === "2" && this.state.field_ordineintestatari ==="") {
+                if (this.state.field_stato === "BOZZA" && this.state.field_numintestatari === "2" && this.state.field_ordineintestatari === "" ) {
                     this.setState({
-                        field_ordineintestatari:"",
                         modalProsegui: true
                     });
                 }
@@ -199,7 +196,7 @@ export default class extends Component {
 
                                         this.setState({
                                             field_stato: getNextState(this.state),
-                                            field_intestcorrente: getNextInt(this.state)
+                                            field_intestcorrente: (this.state.field_stato!=="BOZZA") ? getNextInt(this.state): this.state.field_intestcorrente
                                         });
 
                                     }
