@@ -8226,7 +8226,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
   /* BOX HERO */
 .box-hero {width:100%;display:inline-block; position:relative; background-color: #EBEDEE;min-height:460px;clear:both;margin-bottom:25px;}
 .box-hero .box-bg-dark {background-color:#122e5c;padding:20px 20px 20px 340px;}
-.box-hero .box-bg-dark .hero-block {position:absolute;width:300px;left:20px;top:20;}
+.box-hero .box-bg-dark .hero-block {position:absolute;width:300px;left:20px;top:20;text-align:center}
 .box-hero .box-bg-dark .hero {height: 360px; margin: 0px auto 25px; display:block;}
 .box-hero .box-bg-dark .hero-promo-text {color:#fff}
 .box-hero .box-bg-light {padding:20px 20px 20px 340px;display:block;clear:both;}
@@ -8236,7 +8236,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .box-hero .bullet-text span.title {font-size:20px; font-weight:600;}
 
 /* Bottoni app */ 
-.btn-app-console {text-align:center;}
+.btn-app-console {text-align:left;}
 .btn-app-console .btn-app {margin-left:15px}
 .btn-app-console .btn-app:first-child {margin-left:0}
 .btn-app {width:135px;height:40px;display:inline-block;background-size:contain !important;background: transparent none no-repeat center center;}
@@ -8254,9 +8254,24 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     .box-hero  .btn-app {width:125px;height:36px;margin-left:5px !important;}
 }
 
-/* Light bg box */
-.light-bg-box {background:#EBEDEE;width:100%;display:inline-block;position:relative;text-align:center; margin-bottom:15px;}
-.light-bg-box img {height:250px;display:inline-block; padding:20px;}
+
+/* Box con impaginazione automatica */
+.auto-lr-boxes {position:relative;width:100%;display:inline-block;}
+.auto-lr-boxes .lr-box {margin-bottom:30px;width:100%;display:inline-block}
+.auto-lr-boxes .lr-box .box-image {width:250px; padding:0 15px 0 0; margin:20px; float:right;display:block; text-align: center}
+.auto-lr-boxes .lr-box .box-description {width:calc(100% - 320px); float:left;display:block;}
+.auto-lr-boxes .lr-box:nth-child(even) .box-image {float:left};
+.auto-lr-boxes .lr-box:nth-child(even) .box-description {float:right;}
+
+/* Box con background "grigetto" e padding */
+.light-bg {background:#eee;padding:15px;}
+
+/* Smartphone wrapper per immagini ed animazioni */
+.smartphone-wrapper {display:inline-block;width:190px;height:368px;position:relative}
+.smartphone-wrapper img {width:172px;height: 290px;margin-top:40px;}
+.smartphone-wrapper::before {content:"";width:100%;height:100%;display:block;position:absolute;background:transparent url(/common/fe/img/smartphone_wrapper.png) no-repeat center center;background-size:cover;}
+.smartphone-wrapper.small {width:120px;height:230px}
+.smartphone-wrapper.small img {width: 108px;height: 184px;margin-top: 23px;}
 
 /* Link box */
 .link-box {background: #122e5c;padding:25px 30px; color:#fff}

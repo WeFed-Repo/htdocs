@@ -18,13 +18,9 @@
     <div class="box-hero">
         <div class="box-bg-dark">
             <div class="hero-block">
-                <img src="/common/fe/img/ph_phone.png" class="hero">
-                <!-- Pulsanti app -->
-                <div class="btn-app-console">
-                    <a href="#" class="btn-app btn-appstore"></a>
-                    <a href="#" class="btn-app btn-googleplay"></a>
+                <div class="smartphone-wrapper">
+                    <img src="/HT/fe/img/youapp/01_pre_login.gif" />
                 </div>
-                <!-- / pulsanti app -->
             </div>
             <div class="hero-promo-text hidden-xs">
                 <div class="bullet-hero">
@@ -57,6 +53,12 @@
                 Non l'hai ancora scaricata?<br>
                 Clicca sul pulsante dello Store del tuo dispositivo (solo da smartphone)!
             </p>
+             <!-- Pulsanti app -->
+             <div class="btn-app-console">
+                <a href="#" class="btn-app btn-appstore"></a>
+                <a href="#" class="btn-app btn-googleplay"></a>
+            </div>
+            <!-- / pulsanti app -->
         </div>
     </div>            
 </section>
@@ -66,127 +68,44 @@
 <script src="/common/fe/js/videoplayer.js" type="text/javascript"></script>	
 <!-- / importazione videoplayer -->
 
-<!-- Box descrittivo immagine e testo -->
+<!-- Catena di box descrittivi immagine e testo con impaginazione automatica destra/sinistra-->
 <section>
-    <div class="row">
-        <div class="col-sm-6">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div class="light-bg-box visible-xs">
-                <img src="/common/fe/img/ph_phone.png">
+
+    <div class="auto-lr-boxes">
+        <?php for($x==1;$x<=5;$x++) {
+        ?>
+        <!-- box autoimpaginato -->
+        <div clasS="lr-box">
+            <div class="box-image">
+                <!-- Wrapper smartphone -->
+                <div class="smartphone-wrapper small">
+                    <img src="/HT/fe/img/youapp/01_pre_login.gif" />
+                </div>
+                <!-- fine Wrapper smartphone -->
             </div>
-            <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
-            <ul>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-            </ul>
-            <div class="btnWrapper">
-                <div class="btn-align-left">
-                    <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
+            <div class="box-description light-bg">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
+                <ul>
+                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
+                    <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
+                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
+                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
+                </ul>
+                <div class="btnWrapper">
+                    <div class="btn-align-left">
+                        <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 hidden-xs">
-            <div class="light-bg-box">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-        </div>
+        <!-- Fine box autoimpaginato -->
+        <?php
+        }?>
     </div>
 </section>
 <!-- /Box descrittivo immagine e testo -->
 
-<!-- Box descrittivo immagine e testo -->
-<section>
-    <div class="row">
-        <div class="col-sm-6 hidden-xs">
-            <div class="light-bg-box">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div class="light-bg-box visible-xs">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-            <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
-            <ul>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-            </ul>
-            <div class="btnWrapper">
-                <div class="btn-align-left">
-                    <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /Box descrittivo immagine e testo -->
-
-
-<!-- Box descrittivo immagine e testo -->
-<section>
-    <div class="row">
-        <div class="col-sm-6">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div class="light-bg-box visible-xs">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-            <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
-            <ul>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-            </ul>
-            
-            <div class="btnWrapper">
-                <div class="btn-align-left">
-                    <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 hidden-xs">
-            <div class="light-bg-box">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /Box descrittivo immagine e testo -->
-
-<!-- Box descrittivo immagine e testo -->
-<section>
-    <div class="row">
-        <div class="col-sm-6 hidden-xs">
-            <div class="light-bg-box">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div class="light-bg-box visible-xs">
-                <img src="/common/fe/img/ph_phone.png">
-            </div>
-            <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
-            <ul>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-            </ul>
-            <div class="btnWrapper">
-                <div class="btn-align-left">
-                    <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /Box descrittivo immagine e testo -->
 
 
 <!-- Bottom linkbox -->
