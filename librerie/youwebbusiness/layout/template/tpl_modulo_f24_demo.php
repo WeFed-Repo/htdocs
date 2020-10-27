@@ -64,10 +64,10 @@
                 <div class="form-group pr-0 col-sm-6 col-md-6 col-lg-2 col-xl-3">
                     <label>Codice fiscale *</label>
                     <div class="input-group ">
-                        <input type="text" class="form-control" maxlength="16" data-bind="toUpperCase: Disposizione.Native.Contribuente.Anagrafica.CodiceFiscale,enable: Additional.ActiveArea()==='libera'" disabled="">
+                        <input type="text" class="form-control" maxlength="16" data-bind="toUpperCase: Disposizione.Native.Contribuente.Anagrafica.CodiceFiscale,enable: Additional.ActiveArea()==='libera'">
                         <div class="input-group-append" data-bind="visible: Additional.ActiveArea() === 'libera'" style="display: none;">
                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: openModalContribuente">
-                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                <img src="./fe/img/icon/search.svg">
                             </a>
                         </div>
                     </div>
@@ -75,17 +75,17 @@
 
                 <div class="form-group pr-0 col-sm-6 col-md-6 col-lg-5 col-xl-4">
                     <label>Cognome, denominazione, o ragione sociale *</label>
-                    <input class="form-control" id="denominazioneContribuente" type="text" data-bind="value: Disposizione.Native.Contribuente.Anagrafica.CognomeDenRagSoc,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input class="form-control" id="denominazioneContribuente" type="text" data-bind="value: Disposizione.Native.Contribuente.Anagrafica.CognomeDenRagSoc,enable: Additional.IsContribuenteEditable()">
                 </div>
 
                 <div class="form-group pr-0 col-sm-6 col-md-6 col-lg-2 col-xl-2">
                     <label>Nome</label>
-                    <input type="text" class="form-control" maxlength="16" data-bind="value: Disposizione.Native.Contribuente.Anagrafica.Nome,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" class="form-control" maxlength="16" data-bind="value: Disposizione.Native.Contribuente.Anagrafica.Nome,enable: Additional.IsContribuenteEditable()" >
                 </div>
 
                 <div class="form-group pr-0 my-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 pt-4">
                     <div class="form-check mb-0 checkbox">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: Disposizione.Native.Contribuente.AnnoImpostaNoAnnoSolare,enable: Additional.IsContribuenteEditable()" disabled="">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: Disposizione.Native.Contribuente.AnnoImpostaNoAnnoSolare,enable: Additional.IsContribuenteEditable()">
                         <label class="form-check-label">Barrare in caso di anno di imposta non coincidente con anno solare</label>
                     </div>
                 </div>
@@ -95,10 +95,10 @@
                 <div class="form-group pr-0 col-sm-6 col-md-3 col-lg-2 col-xl-2">
                     <label>Data di nascita</label>
                     <div class="input-group datepicker">
-                        <input tm-date="from" filter-type="datetime" range-start="" type="text" class="form-control hasDatepicker" tm-type="datepicker" data-datepicker="" autocomplete="off" data-bind="tm-dateText2: Disposizione.Native.Contribuente.Anagrafica.DataNascita,enable: Additional.IsContribuenteEditable()" id="dp1603435673352" disabled=""><button type="button" class="ui-datepicker-trigger"></button>
+                        <input tm-date="from" filter-type="datetime" range-start="" type="text" class="form-control hasDatepicker" tm-type="datepicker" data-datepicker="" autocomplete="off" data-bind="tm-dateText2: Disposizione.Native.Contribuente.Anagrafica.DataNascita,enable: Additional.IsContribuenteEditable()" id="dp1603435673352"><button type="button" class="ui-datepicker-trigger"></button>
                         <div class="input-group-append">
                             <span class="input-group-text">
-                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/calendario.svg">
+                                <img src="./fe/img/icon/calendario.svg">
                             </span>
                         </div>
                     </div>
@@ -106,17 +106,17 @@
 
                 <div class="form-group pr-0 col-sm-2 col-md-1 col-lg-1 col-xl-1">
                     <label>Sesso</label>
-                    <select class="form-control min-w-s" data-bind="options: Domain.Sessi, optionsValue: 'key', optionsText: 'value', optionsCaption: '', value: Disposizione.Native.Contribuente.Anagrafica.Sesso,enable: Additional.IsContribuenteEditable()" id="selectSesso" disabled=""><option value=""></option><option value="M">M</option><option value="F">F</option></select>
+                    <select class="form-control min-w-s" data-bind="options: Domain.Sessi, optionsValue: 'key', optionsText: 'value', optionsCaption: '', value: Disposizione.Native.Contribuente.Anagrafica.Sesso,enable: Additional.IsContribuenteEditable()" id="selectSesso"><option value=""></option><option value="M">M</option><option value="F">F</option></select>
                 </div>
 
                 <div class="form-group pr-0 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <label>Comune (o Stato estero) di nascita</label>
-                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.NascitaComune,enable: Additional.IsContribuenteEditable()" id="comuneContribuente" disabled="">
+                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.NascitaComune,enable: Additional.IsContribuenteEditable()" id="comuneContribuente" >
                 </div>
 
                 <div class="form-group pr-0 col-sm-6 col-md-4 col-lg-2 col-xl-2">
                     <label>Provincia</label>
-                    <input type="text" class="form-control" id="provinciaContribuente" maxlength="2" data-bind="codiceProvinciaF24: Disposizione.Native.Contribuente.Anagrafica.NascitaProvincia,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" class="form-control" id="provinciaContribuente" maxlength="2" data-bind="codiceProvinciaF24: Disposizione.Native.Contribuente.Anagrafica.NascitaProvincia,enable: Additional.IsContribuenteEditable()">
                 </div>
             </div>
 
@@ -131,15 +131,15 @@
             <div class="form-row">
                 <div class="form-group pr-0 col-sm-6 col-md-4 col-lg-2 col-xl-3">
                     <label>Comune *</label>
-                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.Comune,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.Comune,enable: Additional.IsContribuenteEditable()">
                 </div>
                 <div class="form-group pr-0 col-sm-6 col-md-3 col-lg-2 col-xl-2">
                     <label>Provincia *</label>
-                    <input type="text" maxlength="2" class="form-control" data-bind="codiceProvinciaF24 : Disposizione.Native.Contribuente.Anagrafica.Provincia,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" maxlength="2" class="form-control" data-bind="codiceProvinciaF24 : Disposizione.Native.Contribuente.Anagrafica.Provincia,enable: Additional.IsContribuenteEditable()">
                 </div>
                 <div class="form-group pr-0 col-sm-12 col-md-5 col-lg-5 col-xl-4">
                     <label>Via e numero civico *</label>
-                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.Indirizzo,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.Indirizzo,enable: Additional.IsContribuenteEditable()">
                 </div>
             </div>
             <div class="form-row">
@@ -151,19 +151,19 @@
                     </label>
                 </div>
                 <div class="form-group pr-0 col-sm-12 col-md-5 col-lg-4 col-xl-4 my-auto">
-                    <input type="text" maxlength="16" class="form-control" data-bind="toUpperCase : Disposizione.Native.Contribuente.CodiceFiscaleSecondo,enable: Additional.IsContribuenteEditable()" disabled="">
+                    <input type="text" maxlength="16" class="form-control" data-bind="toUpperCase : Disposizione.Native.Contribuente.CodiceFiscaleSecondo,enable: Additional.IsContribuenteEditable()">
                 </div>
                 <div class="form-group pr-0 col-sm-12 col-md-3 col-lg-3 col-xl-2">
                     <label>Codice identificativo</label>
                     <div class="input-group pb-4 mb-2">
-                        <input class="form-control " type="text" maxlength="2" data-bind="value : Disposizione.Native.Contribuente.CodiceIdentificativo,enable: Additional.IsContribuenteEditable()" disabled="">
+                        <input class="form-control " type="text" maxlength="2" data-bind="value : Disposizione.Native.Contribuente.CodiceIdentificativo,enable: Additional.IsContribuenteEditable()">
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-sm-6 col-md-4 col-lg-6 col-xl-3">
                     <div class="form-check checkbox">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: Additional.CheckAddAnagrafica,enable: Additional.IsContribuenteEditable()" disabled="">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: Additional.CheckAddAnagrafica,enable: Additional.IsContribuenteEditable()">
                         <label class="form-check-label">Aggiungi alla rubrica</label>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
                         <input class="form-control " type="text" maxlength="5" data-bind="enable:(Disposizione.Native.EstremiVersamento.TitolarePagamento()=== 2 &amp;&amp; Additional.Control.IsEstremiVersamentiEnabled()), value: Disposizione.Native.EstremiVersamento.RiceventeAbiContribuente" disabled="">
                         <div class="input-group-append">
                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: associaABI">
-                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                <img src="./fe/img/icon/search.svg">
                             </a>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
                         <input type="text" maxlength="5" class="form-control" data-bind="enable: (Disposizione.Native.EstremiVersamento.TitolarePagamento()== 2), value: Disposizione.Native.EstremiVersamento.RiceventeCabContribuente" disabled="">
                         <div class="input-group-append">
                             <a class="input-group-text" tm-data-modal-cab="" data-bind="click: associaCAB">
-                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checked.svg">
+                                <img src="./fe/img/icon/checkmark.svg">
                             </a>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -369,7 +369,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append """>
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -394,7 +394,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append """>
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -419,33 +419,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group pr-0 col-sm-2">
-                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
-                                        </div>
-                                        <div class="form-group pr-0 col-sm-2">
-                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
-                                        </div>
-                                        <div class="form-group pr-0 col-sm-3">
-                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
-                                        </div>
-                                        <div class="form-group col-sm-3">
-                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
-
-                                        </div>
-                                    </div>
-                                
-                                    <div class="form-row">
-                                        <div class="form-group pr-0 col-sm-2">
-                                            <div class="input-group ">
-                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
-                                                <div class="input-group-append">
-                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -471,7 +445,33 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group pr-0 col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value: RiferimentoTributo">
+                                        </div>
+                                        <div class="form-group pr-0 col-sm-2">
+                                            <input type="text" class="form-control" maxlength="4" data-bind="value : AnnoTributo">
+                                        </div>
+                                        <div class="form-group pr-0 col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <input type="text" class="form-control text-right" data-bind="formatImporto: Credito">
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group pr-0 col-sm-2">
+                                            <div class="input-group ">
+                                                <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
+                                                <div class="input-group-append">
+                                                    <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioCodTributo.bind($data,[$index()])">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -525,7 +525,7 @@
                                             <input class="form-control " type="text" maxlength="3" data-bind="value: Disposizione.Native.Erario.CodiceUfficio">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaErarioUfficio">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -615,7 +615,7 @@
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -625,7 +625,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -690,7 +690,7 @@
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -700,7 +700,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -765,7 +765,7 @@
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -775,7 +775,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -840,7 +840,7 @@
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCodSede.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -850,7 +850,7 @@
                                                 <input class="form-control " type="text" maxlength="4" data-bind="textInput : CausaleContributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInpsCausContrib.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -973,7 +973,7 @@
                                             <input class="form-control " type="text" maxlength="2" data-bind="codiceRegione: CodiceRegione">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodRegione.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -983,7 +983,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodTributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1008,7 +1008,7 @@
                                             <input class="form-control " type="text" maxlength="2" data-bind="codiceRegione: CodiceRegione">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodRegione.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1018,7 +1018,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodTributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1043,7 +1043,7 @@
                                             <input class="form-control " type="text" maxlength="2" data-bind="codiceRegione: CodiceRegione">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodRegione.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1053,7 +1053,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodTributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1078,7 +1078,7 @@
                                             <input class="form-control " type="text" maxlength="2" data-bind="codiceRegione: CodiceRegione">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodRegione.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1088,7 +1088,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaRegioneCodTributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1205,7 +1205,7 @@
                                                 <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaIMUCodEnteComune.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1246,7 +1246,7 @@
                                                 <input class="form-control  " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click:  $root.AssociaIMUCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1323,7 +1323,7 @@
                                                     <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
                                                     <div class="input-group-append">
                                                         <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaIMUCodEnteComune.bind($data,[$index()])">
-                                                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                            <img src="./fe/img/icon/search.svg">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1364,7 +1364,7 @@
                                                     <input class="form-control  " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                     <div class="input-group-append">
                                                         <a class="input-group-text" tm-data-modal-abi="" data-bind="click:  $root.AssociaIMUCodTributo.bind($data,[$index()])">
-                                                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                            <img src="./fe/img/icon/search.svg">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1439,7 +1439,7 @@
                                                 <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaIMUCodEnteComune.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1480,7 +1480,7 @@
                                                 <input class="form-control  " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click:  $root.AssociaIMUCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1558,7 +1558,7 @@
                                                 <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaIMUCodEnteComune.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1599,7 +1599,7 @@
                                                 <input class="form-control  " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                                 <div class="input-group-append">
                                                     <a class="input-group-text" tm-data-modal-abi="" data-bind="click:  $root.AssociaIMUCodTributo.bind($data,[$index()])">
-                                                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                        <img src="./fe/img/icon/search.svg">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1744,7 +1744,7 @@
                                             <input class="form-control " type="text" maxlength="5" data-bind="codiceSede: CodiceSede">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInailSede.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1821,7 +1821,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="textInput : Disposizione.Native.AltriEnti.CodiceEnte">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceEnte">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -1857,7 +1857,7 @@
                                             <input class="form-control " type="text" maxlength="5" data-bind="textInput : CodiceSede">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceSede.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1867,7 +1867,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="textInput : Causale">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceContributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1894,7 +1894,7 @@
                                             <input class="form-control " type="text" maxlength="5" data-bind="textInput : CodiceSede">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceSede.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -1904,7 +1904,7 @@
                                             <input class="form-control " type="text" maxlength="4" data-bind="textInput : Causale">
                                             <div class="input-group-append">
                                                 <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceContributo.bind($data,[$index()])">
-                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                    <img src="./fe/img/icon/search.svg">
                                                 </a>
                                             </div>
                                         </div>
@@ -2022,7 +2022,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2032,7 +2032,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2067,7 +2067,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2077,7 +2077,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2112,7 +2112,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2122,7 +2122,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2157,7 +2157,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2167,7 +2167,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2203,7 +2203,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2213,7 +2213,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2248,7 +2248,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2258,7 +2258,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2293,7 +2293,7 @@
                                         <input class="form-control " type="text" maxlength="2" data-bind="codiceProvinciaF24: CodiceProvincia">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodProvincia.bind($data,[$index()])">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2303,7 +2303,7 @@
                                         <input class="form-control " type="text" maxlength="4" data-bind="codiceTributo: CodiceTributo">
                                         <div class="input-group-append">
                                             <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseCodTributo.bind($data,[$index()])" )="">
-                                                <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                <img src="./fe/img/icon/search.svg">
                                             </a>
                                         </div>
                                     </div>
@@ -2339,7 +2339,7 @@
                                     <input type="text" class="form-control" maxlength="3" data-bind="textInput: Disposizione.Native.Accise.CodiceUfficio">
                                     <div class="input-group-append">
                                         <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaAcciseUfficio" )="">
-                                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                            <img src="./fe/img/icon/search.svg">
                                         </a>
                                     </div>
                                 </div>
@@ -2383,7 +2383,7 @@
                     <input tm-date="from" filter-type="datetime" tm-date-pag="" range-start="" type="text" class="form-control hasDatepicker" tm-type="datepicker" data-datepicker="" autocomplete="off" data-bind="tm-dateText2: Disposizione.Native.Saldo.DataPagamento" id="dp1603797877668"><button type="button" class="ui-datepicker-trigger"></button>
                     <div class="input-group-append">
                         <span class="input-group-text">
-                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/calendario.svg">
+                            <img src="./fe/img/icon/calendario.svg">
                         </span>
                     </div>
                 </div>

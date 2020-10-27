@@ -29,7 +29,7 @@
 .wrapper-f24 .input-group-text {
     padding: .375rem .2rem;
 }
-.form-control {
+.wrapper-f24 .form-control {
     padding: 0 2px;
 }
 
@@ -37,16 +37,6 @@
     min-width:52px;
 }
 
-/*
-.min-w-m  {
-    min-width:88px;
-}
-.max-w-c {
-    max-width:110px;
-}
-.max-w-i {
-    max-width:120px; 
-}*/
 .input-group-append {  
    img {
        margin-right:0!important;
@@ -55,6 +45,7 @@
 
 @media screen and (min-width: 992px) {
   .display-tablet {display:none!important}
+  
 }
 @media screen and (max-width: 950px) {
     .min-w-f {
@@ -63,5 +54,22 @@
     .max-w-f {
         max-width:12%
     }
+    .wrapper-f24 label {
+       font-size: 13px;
+    }
 }
-
+@media screen and (max-width: 992px) {
+    .col-md-6.pr-0:not(.nav-item),
+    .col-md-4.pr-0:last-child,
+    .col-md-3.pr-0:last-child,
+    .col-md-2.pr-0:last-child,
+    .col-md-5.pr-0 {
+        padding-right: 8px!important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .col-sm-6.pr-0:not(.nav-item)
+     {
+        padding-right: 8px!important;
+    }
+}
