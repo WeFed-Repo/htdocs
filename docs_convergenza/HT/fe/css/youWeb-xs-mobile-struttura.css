@@ -373,6 +373,8 @@ body:after { content: 'mobile'; display: none;}
 .menuF24 #headerDesktop{background:#FFF;width: 100%;margin: 0px;display:block;overflow:visible;padding:0 300px 0 0;float:left;position: relative;height:80px;border-bottom: solid 2px rgba(0,0,0,0.07);}
 
 .menuF24 .headerDesktopX #firstMenu{width:auto;}
+
+
 @media (max-width:650px){
 	div#contentF24 {top:160px;}
 }
