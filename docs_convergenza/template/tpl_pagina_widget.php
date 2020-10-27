@@ -1,5 +1,29 @@
 <?php
-    $statpath = ($site === "webank")? "/WB" : "/HT"
+    $statpath = ($site === "webank")? "/WB" : "/HT";
+
+    // Array con nomi file per animazioni
+    $anim = Array(
+        "01_pre_login.gif",
+        "02_navigazione.gif",
+        "03_silos.gif",
+        "04_fare_bonifico.gif",
+        "05_revoca_bonifico.gif",
+        "06_dettaglio_conto.gif",
+        "07_carte.gif",
+        "08_ordine_fondo.gif",
+        "09_portafoglio.gif",
+        "10_revoca_ordine.gif",
+        "11_ordine_titolo.gif",
+        "12_movimenti.gif",
+        "13_assistenza.gif",
+        "14_alert_conto.gif",
+        "15_alert_trading.gif",
+        "16_presa_appuntamento.gif",
+        "17_portafoglio_simulato.gif",
+        "18_impostazioni_funzioni_veloci.gif",
+        "19_impostazione_saldo.gif"
+    );
+
 ?><!-- Titolo -->
 <div class="titolo">
     <h1>
@@ -10,7 +34,6 @@
             </div>
     </h1>
 </div>
-
 <!-- / Titolo -->
 
 <!-- Box Hero -->
@@ -19,7 +42,7 @@
         <div class="box-bg-dark">
             <div class="hero-block">
                 <div class="smartphone-wrapper">
-                    <img src="/HT/fe/img/youapp/01_pre_login.gif" />
+                    <img src="/HT/fe/img/youapp/static.jpg" />
                 </div>
             </div>
             <div class="hero-promo-text hidden-xs">
@@ -72,14 +95,14 @@
 <section>
 
     <div class="auto-lr-boxes">
-        <?php for($x==1;$x<=5;$x++) {
+        <?php foreach ($anim as $an) { 
         ?>
         <!-- box autoimpaginato -->
         <div clasS="lr-box">
             <div class="box-image">
                 <!-- Wrapper smartphone -->
                 <div class="smartphone-wrapper small">
-                    <img src="/HT/fe/img/youapp/01_pre_login.gif" />
+                    <img src="/HT/fe/img/youapp/<?php print($an); ?>" />
                 </div>
                 <!-- fine Wrapper smartphone -->
             </div>
