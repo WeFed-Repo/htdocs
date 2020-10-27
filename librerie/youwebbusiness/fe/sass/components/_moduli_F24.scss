@@ -36,6 +36,8 @@
 .min-w-s {
     min-width:52px;
 }
+
+/*
 .min-w-m  {
     min-width:88px;
 }
@@ -44,7 +46,7 @@
 }
 .max-w-i {
     max-width:120px; 
-}
+}*/
 .input-group-append {  
    img {
        margin-right:0!important;
@@ -54,3 +56,12 @@
 @media screen and (min-width: 992px) {
   .display-tablet {display:none!important}
 }
+@media screen and (max-width: 950px) {
+    .min-w-f {
+        min-width:13%
+    }
+    .max-w-f {
+        max-width:12%
+    }
+}
+

@@ -44,9 +44,17 @@ function initHeader() {
 function initTabs() {
     if ($('.nav-tabs').length > 0) {
         $('.nav-link.active').activeTab();
+        var radioBtns = $('.nav-tabs').find("input[type=\"radio\"]");
         $('.nav-link').on('click', function () {
             $(this).activeTab();
+            var radioBtn = $(this).find("input[type=\"radio\"]");
+           
+            if(radioBtn.length>0){
+                radioBtns.removeAttr("checked")
+                radioBtn.attr("checked","checked")
+            }
         });
+        
     }
 }
 
