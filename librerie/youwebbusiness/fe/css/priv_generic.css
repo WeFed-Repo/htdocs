@@ -5341,4 +5341,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   margin-right: 0 !important;
 }
 
+@media screen and (min-width: 992px) {
+  .display-tablet {
+    display: none !important;
+  }
+}
+
 /*# sourceMappingURL=priv_generic.css.map */

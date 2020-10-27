@@ -32,6 +32,7 @@
 .form-control {
     padding: 0 2px;
 }
+
 .min-w-s {
     min-width:52px;
 }
@@ -44,8 +45,12 @@
 .max-w-i {
     max-width:120px; 
 }
-.input-group-append { 
+.input-group-append {  
    img {
        margin-right:0!important;
    } 
+}
+
+@media screen and (min-width: 992px) {
+  .display-tablet {display:none!important}
 }

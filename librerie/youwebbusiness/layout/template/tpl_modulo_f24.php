@@ -684,7 +684,28 @@
                     <div class="form-row">
                         <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                             
-                            <div class="form-row">
+                            <div class="pt-5 form-row display-tablet">
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Codice sede</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Causale contributo</label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                                    <span class="text-center">
+                                        <span class="text-center">Matr./Codice </span>
+
+                                        <span class="text-center">INPS Fil. azienda</span>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo da</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo a</label>
+                                </div>
+                            </div>
+<div class="form-row">
                                 <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                     <div class="input-group ">
                                         <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -717,7 +738,15 @@
                             </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            <div class="form-row d-flex justify-content-end">
+                            <div class="form-row d-flex justify-content-end display-tablet">
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (C)</label>
+                                    </div>
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                    <label>Importi a credito compensati (D)</label>
+                                </div>
+                            </div>
+<div class="form-row d-flex justify-content-end">
                                 <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                     <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -732,7 +761,28 @@
                     <div class="form-row">
                         <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                             
-                            <div class="form-row">
+                            <div class="pt-5 form-row display-tablet">
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Codice sede</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Causale contributo</label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                                    <span class="text-center">
+                                        <span class="text-center">Matr./Codice </span>
+
+                                        <span class="text-center">INPS Fil. azienda</span>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo da</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo a</label>
+                                </div>
+                            </div>
+<div class="form-row">
                                 <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                     <div class="input-group ">
                                         <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -765,7 +815,15 @@
                             </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            <div class="form-row d-flex justify-content-end">
+                            <div class="form-row d-flex justify-content-end display-tablet">
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (C)</label>
+                                    </div>
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                    <label>Importi a credito compensati (D)</label>
+                                </div>
+                            </div>
+<div class="form-row d-flex justify-content-end">
                                 <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                     <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -780,7 +838,28 @@
                     <div class="form-row">
                         <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                             
-                            <div class="form-row">
+                            <div class="pt-5 form-row display-tablet">
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Codice sede</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <label>Causale contributo</label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                                    <span class="text-center">
+                                        <span class="text-center">Matr./Codice </span>
+
+                                        <span class="text-center">INPS Fil. azienda</span>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo da</label>
+                                </div>
+                                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
+                                    <label>Periodo a</label>
+                                </div>
+                            </div>
+<div class="form-row">
                                 <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                     <div class="input-group ">
                                         <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -813,8 +892,15 @@
                             </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            
-                            <div class="form-row d-flex justify-content-end">
+                            <div class="form-row d-flex justify-content-end display-tablet">
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (C)</label>
+                                    </div>
+                                <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                    <label>Importi a credito compensati (D)</label>
+                                </div>
+                            </div>
+<div class="form-row d-flex justify-content-end">
                                 <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                     <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -1230,7 +1316,40 @@
 <div class="form-row">
                             <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                                 
-                                <div class="form-row">
+                                <div class="form-row pt-5 display-tablet">
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice <br>ente/comune</label>
+                                    </div>
+                                    <div class="form-group p-0 col-sm-3 col-md-3 col-lg-4 col-xl-4">
+                                        <div class="form-row">
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center align-items-center">
+                                                <label>Ravv.</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center ">
+                                                <label>Immob.<br> varianti</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center">
+                                                <label>Acc.</label>
+                                            </div>
+                                            <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">
+                                                <label>Saldo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                        <label>Num. immobili</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice trib</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Rateazione </label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                                        <label>Anno rif.</label>
+                                    </div>
+                                </div>
+<div class="form-row">
                                     <div class="form-group pr-0 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                         <div class="input-group ">
                                             <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
@@ -1294,7 +1413,15 @@
                                
                                 
                                 <div data-bind="foreach: Disposizione.Native.Imu.Sezione">
-                                     <div class="form-row d-flex justify-content-end">
+                                     <div class="form-row d-flex justify-content-end display-tablet">
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (G)</label>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a credito compensati (H)</label>
+                                    </div>
+                                </div>
+<div class="form-row d-flex justify-content-end">
                                         <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
                                         </div>
@@ -1308,7 +1435,40 @@
                         </div><div class="form-row">
                             <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                                 
-                                <div class="form-row">
+                                <div class="form-row pt-5 display-tablet">
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice <br>ente/comune</label>
+                                    </div>
+                                    <div class="form-group p-0 col-sm-3 col-md-3 col-lg-4 col-xl-4">
+                                        <div class="form-row">
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center align-items-center">
+                                                <label>Ravv.</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center ">
+                                                <label>Immob.<br> varianti</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center">
+                                                <label>Acc.</label>
+                                            </div>
+                                            <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">
+                                                <label>Saldo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                        <label>Num. immobili</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice trib</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Rateazione </label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                                        <label>Anno rif.</label>
+                                    </div>
+                                </div>
+<div class="form-row">
                                     <div class="form-group pr-0 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                         <div class="input-group ">
                                             <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
@@ -1372,7 +1532,15 @@
                                
                                 
                                 <div data-bind="foreach: Disposizione.Native.Imu.Sezione">
-                                     <div class="form-row d-flex justify-content-end">
+                                     <div class="form-row d-flex justify-content-end display-tablet">
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (G)</label>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a credito compensati (H)</label>
+                                    </div>
+                                </div>
+<div class="form-row d-flex justify-content-end">
                                         <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
                                         </div>
@@ -1386,7 +1554,40 @@
                         </div><div class="form-row">
                             <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                                 
-                                <div class="form-row">
+                                <div class="form-row pt-5 display-tablet">
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice <br>ente/comune</label>
+                                    </div>
+                                    <div class="form-group p-0 col-sm-3 col-md-3 col-lg-4 col-xl-4">
+                                        <div class="form-row">
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center align-items-center">
+                                                <label>Ravv.</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center ">
+                                                <label>Immob.<br> varianti</label>
+                                            </div>
+                                            <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center">
+                                                <label>Acc.</label>
+                                            </div>
+                                            <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">
+                                                <label>Saldo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                        <label>Num. immobili</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Codice trib</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                        <label>Rateazione </label>
+                                    </div>
+                                    <div class="form-group col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                                        <label>Anno rif.</label>
+                                    </div>
+                                </div>
+<div class="form-row">
                                     <div class="form-group pr-0 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                         <div class="input-group ">
                                             <input class="form-control" maxlength="4" type="text" data-bind="textInput : CodiceEnteComune">
@@ -1450,7 +1651,15 @@
                                
                                 
                                 <div data-bind="foreach: Disposizione.Native.Imu.Sezione">
-                                     <div class="form-row d-flex justify-content-end">
+                                     <div class="form-row d-flex justify-content-end display-tablet">
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a debito versati (G)</label>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                                        <label>Importi a credito compensati (H)</label>
+                                    </div>
+                                </div>
+<div class="form-row d-flex justify-content-end">
                                         <div class="form-group pr-0 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
                                         </div>
@@ -1518,6 +1727,352 @@
     </div>
 </div>
 
+<!--SEZIONE ALTRI ENTI -->
+<div class="accordion bordered-style">
+        <div class="card collapser mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center hide" data-bind="click: onOpenAltriEnti" tm-altrienti-accordion-header="" data-toggle="collapse">
+                <h2 class="mb-0">Sezione Altri Enti Previdenziali ed Assicurativi</h2>
+                <div class="d-flex justify-content-end">
+                    <p data-bind="visible: (Additional.IsSezAltriEntiPopulated() || Additional.IsSezInailPopulated())" class="mr-3 mb-0" style="display: none;">
+                        <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/checkmark.svg">
+                        Sezione compilata
+                    </p>
+                    <span class="card-header-icon" data-bind="click: onOpenAltriEnti"></span>
+                </div>
+            </div>
+            <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion" tm-altrienti-accordion-body="" style="">
+                <div class="card-body border-top">
+                    <form class="form-grid" novalidate="">
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-sm-1">
+                                <label>Ente</label>
+                            </div>
+                            <div class="form-group col-sm-11">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <label>Codice sede</label>
+                                    </div>
+                                    <div class="form-group col-sm-1 ">
+                                        <label>Codice ditta</label>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <label>c.c.</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>N. riferimento</label>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <label>Causale</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Importi a debito versati (I)</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Importi a credito compensati (L)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-1">
+                                <div class="input-group ">
+                                    <input class="form-control" disabled="" data-bind="value:'INAIL'" type="text">
+
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-11" data-bind="foreach: Disposizione.Native.Inail.Sezione">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="5" data-bind="codiceSede: CodiceSede">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInailSede.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control" type="text" maxlength="8" data-bind="value: CodiceDitta">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input type="text" class="form-control" maxlength="2" data-bind="value: CodiceControllo">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control" type="text" maxlength="6" data-bind="value: NumeroRiferimento">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="1" data-bind="value: Causale">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Credito">
+                                    </div>
+                                </div>
+                            
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="5" data-bind="codiceSede: CodiceSede">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInailSede.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control" type="text" maxlength="8" data-bind="value: CodiceDitta">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input type="text" class="form-control" maxlength="2" data-bind="value: CodiceControllo">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control" type="text" maxlength="6" data-bind="value: NumeroRiferimento">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="1" data-bind="value: Causale">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Credito">
+                                    </div>
+                                </div>
+                            
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="5" data-bind="codiceSede: CodiceSede">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaInailSede.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control" type="text" maxlength="8" data-bind="value: CodiceDitta">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input type="text" class="form-control" maxlength="2" data-bind="value: CodiceControllo">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control" type="text" maxlength="6" data-bind="value: NumeroRiferimento">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="1" data-bind="value: Causale">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Credito">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE I</strong></label>
+                            </div>
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE L</strong></label>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Inail.Totali.Debito" disabled="">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Inail.Totali.Credito" disabled="">
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-3 text-right">
+                                <label><strong>SALDO [I-L] +/-</strong></label>
+                            </div>
+                            <div class="form-group col-sm-1">
+                                <input type="text" class="form-control  text-right" data-bind="textInput: Disposizione.Native.Inail.Totali.Segno" disabled="">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-right" data-bind="tm-importoAbsText: Disposizione.Native.Inail.Totali.Saldo" disabled="">
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="row">
+                        <hr class="col-sm-11">
+                    </div>
+
+
+                    <form class="form-grid" novalidate="">
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-sm-2">
+                                <label>Codice ente</label>
+                            </div>
+                            <div class="form-group col-sm-10">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <label>Codice sede</label>
+                                    </div>
+                                    <div class="form-group col-sm-2 ">
+                                        <label>Causale contributo</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Codice posizione</label>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <label>Da mm/aaaa</label>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <label>A mm/aaaa</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Importi a debito versati (M)</label>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <label>Importi a credito compensati (N)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <div class="input-group ">
+                                    <input class="form-control " type="text" maxlength="4" data-bind="textInput : Disposizione.Native.AltriEnti.CodiceEnte">
+                                    <div class="input-group-append">
+                                        <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceEnte">
+                                            <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-10" data-bind="foreach: Disposizione.Native.AltriEnti.Sezione">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="5" data-bind="textInput : CodiceSede">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceSede.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="4" data-bind="textInput : Causale">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceContributo.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control" type="text" maxlength="9" data-bind="value : CodicePosizione">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="7" data-bind="value : PeriodoInizio">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="7" data-bind="value : PeriodoFine">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Credito">
+                                    </div>
+                                </div>
+                            
+                                <div class="form-row">
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="5" data-bind="textInput : CodiceSede">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceSede.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <div class="input-group ">
+                                            <input class="form-control " type="text" maxlength="4" data-bind="textInput : Causale">
+                                            <div class="input-group-append">
+                                                <a class="input-group-text" tm-data-modal-abi="" data-bind="click: $root.AssociaCodiceContributo.bind($data,[$index()])">
+                                                    <img src="/youbiz.4.ux/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/search.svg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control" type="text" maxlength="9" data-bind="value : CodicePosizione">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="7" data-bind="value : PeriodoInizio">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input class="form-control " type="text" maxlength="7" data-bind="value : PeriodoFine">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Debito">
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <input class="form-control text-right" type="text" data-bind="formatImporto: Credito">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE M</strong></label>
+                            </div>
+                            <div class="form-group col-sm-2 text-center">
+                                <label><strong>TOTALE N</strong></label>
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.AltriEnti.Totali.Debito" disabled="">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.AltriEnti.Totali.Credito" disabled="">
+                            </div>
+                        </div>
+
+                        <div class="form-row d-flex justify-content-end align-items-center">
+                            <div class="form-group col-sm-3 text-right">
+                                <label><strong>SALDO [M-N] +/-</strong></label>
+                            </div>
+                            <div class="form-group col-sm-1">
+                                <input type="text" class="form-control text-right" data-bind="textInput : Disposizione.Native.AltriEnti.Totali.Segno" disabled="">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <input type="text" class="form-control text-right" data-bind="tm-importoAbsText: Disposizione.Native.AltriEnti.Totali.Saldo" disabled="">
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
