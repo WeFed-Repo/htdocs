@@ -7630,7 +7630,12 @@ div.fixed-table-scroll-outer {
     height: auto;
     padding: 5px;
 }
-@media (max-width:991px) {
+
+/* Defreeze per overlay */
+.modal-open  .bootstrap-table .fixed-columns {display:none}
+
+/* Sparizione colonne freezed su MOBILE */
+@media (max-width:767px) {
     .bootstrap-table .fixed-columns {
        display:none
     }
