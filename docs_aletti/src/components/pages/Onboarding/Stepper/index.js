@@ -35,23 +35,6 @@ export default class extends Component {
             }
         ];
 
-
-        
-        /*
-
-        OZZA - 1->completo
-        BOZZA_VALIDATA - 2->corrente
-        RACCOLTA_PRODOTTI - 3->
-        ADEMPIMENTI_NORMATIVI - 4->
-        INT0_RIEPILOGO_DATI - 5->
-        INT0_CERTIF_CREDENZIALI - 6->
-        INT0_IDENTIF_CLIENTE - 7->
-        INT0_FIRMA_TUB - 8->
-        INT0_FIRMA_VESSATORIE_TUB - 9->
-        INT0_ATTESA_FIRMA_CONSULENTE - 10->
-        CONCLUSA
-
-        */
         // Primo compilatore
         stepObj.push(
             {
@@ -248,15 +231,7 @@ export default class extends Component {
                     
                 }
             )
-
-
-
-
-
-
         }
-
-
 
     /*
         console.log("------------stepper-------------");
@@ -290,16 +265,17 @@ export default class extends Component {
                     })}
                 </div>
                     {   
-                        
+                        /* ELEMENTO PER DEBUG */
+                        /*
                         Object.keys(avanzamento).map((v,i)=>{
                             return( 
-                                <div className="step">
+                                <div className="step" key={i}>
                                     {v + " - " + (i+1) + "->"+avanzamento[v].status + " - " + avanzamento[v].stepnum}
                                 </div>
                                 )
                             }
                         )
-                        
+                        */
                     }
             </>
         )

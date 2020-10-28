@@ -45,7 +45,7 @@ const Step = {
     "FIRMA_VESSATORIE_TUB": FirmaVessatorieTub,
     "FIRMA_TUF": FirmaTuf,
     "FIRMA_VESSATORIE_TUF": FirmaVessatorieTuf,
-    "FIRMA_CONSULENTE": FirmaConsulente,
+    "ATTESA_FIRMA_CONSULENTE": FirmaConsulente,
 
     "CONCLUSA": Conclusa
 
@@ -365,7 +365,7 @@ export default class extends Component {
                         {getNextState(this.state) === "FIRMA_VESSATORIE_TUB" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_TUB.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_TUB.form>}
                         {getNextState(this.state) === "FIRMA_TUF" && this.state.field_intestcorrente !== "" && <Step.FIRMA_TUF.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_TUF.form>}
                         {getNextState(this.state) === "FIRMA_VESSATORIE_TUF" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_TUF.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_TUF.form>}
-                        {getNextState(this.state) === "ATTESA_FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_CONSULENTE.form>}
+                        {getNextState(this.state) === "ATTESA_FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.ATTESA_FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.ATTESA_FIRMA_CONSULENTE.form>}
 
                         {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
 
