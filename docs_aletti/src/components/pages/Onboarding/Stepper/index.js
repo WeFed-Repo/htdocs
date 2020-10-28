@@ -240,30 +240,30 @@ export default class extends Component {
         */
         return (<>
                     <div className="ob-stepper">
-                    {/* 
-                     <p>Stato: {form.field_stato}
-                        - Step: {stato}
-                        - Intestatario corrente: {intcorrente}
-                        - Ordine di compilazione: {ordineInt}</p>
+                        {/* 
+                        <p>Stato: {form.field_stato}
+                            - Step: {stato}
+                            - Intestatario corrente: {intcorrente}
+                            - Ordine di compilazione: {ordineInt}</p>
+                        
+                        */}
                     
-                    */}
-                   
 
-                    {stepObj.map((v,i)=>{
-                        return (
-                            <div className={"steps-wrap " + v.status} key={i}>
-                                <div className="ob-owner">
-                                    {v.owner}
+                        {stepObj.map((v,i)=>{
+                            return (
+                                <div className={"steps-wrap " + v.status} key={i}>
+                                    <div className="ob-owner">
+                                        {v.owner}
+                                    </div>
+                                    <div className="steps">
+                                        {v.steps.map((step,ind)=>{return(
+                                            <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name} key={ind}><span>{step.stepph}</span></div>
+                                        )})}
+                                    </div>
                                 </div>
-                                <div className="steps">
-                                    {v.steps.map((step,ind)=>{return(
-                                         <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name} key={ind}><span>{step.stepph}</span></div>
-                                    )})}
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
+                            )
+                        })}
+                    </div>
                     {   
                         /* ELEMENTO PER DEBUG */
                         /*
@@ -277,7 +277,7 @@ export default class extends Component {
                         )
                         */
                     }
-            </>
+                </>
         )
     }
 
