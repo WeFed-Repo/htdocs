@@ -105,8 +105,6 @@ let getNextState = (form) => {
 
     let stati = getStatiPratica(form);
 
-    console.log(stati[stati.indexOf(stateInt(form)) + 1].replace("INT0_", "").replace("INT1_", ""));
-
     return stati[stati.indexOf(stateInt(form)) + 1].replace("INT0_", "").replace("INT1_", "");
 
 }

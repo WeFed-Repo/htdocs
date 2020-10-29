@@ -35,167 +35,76 @@ export default class extends Component {
             }
         ];
 
-        // Primo compilatore
-        stepObj.push(
-            {
-                owner: primocompel,
-                status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente" || avanzamento["ADEMPIMENTI_NORMATIVI"].status === "corrente"
-                || avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status === "corrente" || avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status === "corrente"
-                )? "attivo":"",
-                steps: [{
-                    name: "RACCOLTA_PRODOTTI",
-                    status: avanzamento["RACCOLTA_PRODOTTI"].status,
-                    stepph: avanzamento["RACCOLTA_PRODOTTI"].stepnum
-                },
-                {
-                    name: "ADEMPIMENTI_NORMATIVI",
-                    status: avanzamento["ADEMPIMENTI_NORMATIVI"].status,
-                    stepph: avanzamento["ADEMPIMENTI_NORMATIVI"].stepnum
-                },
-                {
-                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status,
-                    stepph: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].stepnum
-                },
-                {
-                    name: "INT"+  primocomp +"_RIEPILOGO_DATI",
-                    status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status,
-                    stepph: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].stepnum
-                }]
-            },
-            {
-                owner: <>Prom.<br />finan.</>,
-                status: (avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
-                steps: [{
-                    name: "INT"+  primocomp +"_IDENTIF_CLIENTE",
-                    status: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status,
-                    stepph: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].stepnum
-                }]
-            } ,
-            // Firme
-            {
-                owner: primocompel,
-                status: (avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status==="corrente")? "attivo":"",
-                steps: (()=>{
-                    let stepFirma = [
-                        // Blocchi firma di base
-                        {
-                            name: "INT"+  primocomp +"_FIRMA_TUB",
-                            status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
-                            stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
-                        },
-                        {
-                            name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
-                            status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
-                            stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
-                        }
-                    ];
-                    // Eventuali blocchi firma aggiuntivi per DT
-                    if (form.field_sessionfirmeblob_depositoincluso==="true") {
-                        stepFirma.push(
-                                {
-                                    name: "INT"+  primocomp +"_FIRMA_TUB",
-                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
-                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
-                                },
-                                {
-                                    name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
-                                    status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
-                                    stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
-                                }
-                            
-                        )
-                    };   
-                
-                    return stepFirma;
-                })()
-            },
-            {
-                owner: <>Prom.<br />finan.</>,
-                status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente")? "attivo":"",
-                steps: (()=>{
-    
-                    let firmaCons = [
-                        {
-                            name: "INT"+  primocomp +"_ATTESA_FIRMA_CONSULENTE",
-                            status: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
-                            stepph: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
-                        }
-                    ]
+        // Se e' in BOZZA_VALIDATA e oltre...
+        if (avanzamento["BOZZA_VALIDATA"].status === "completo"){
 
-                    // In caso di secondo intestatario chiude qui la pratica
-                    if (nint === "1")
-                    firmaCons.push({
-                        name: "CONCLUSA",
-                        status: avanzamento["CONCLUSA"].status,
-                        stepph: "Conclusione"
-                    });
-
-                    return firmaCons;
-
-                })()
-            } 
-                
-        )
-
-        // Eventuale secondo compilatore
-        if (nint==="2"){
-
+            // Primo compilatore
             stepObj.push(
-                    {
-                        owner: secondocompel,
-                        status: (avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status==="corrente" || avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status==="corrente")? "attivo":"",
-                        steps:[{
-                            name: "INT"+  secondocomp +"_RIEPILOGO_DATI",
-                            status: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status,
-                            stepph: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].stepnum
-                        },
-                        {
-                            name: "INT"+  secondocomp +"_CERTIF_CREDENZIALI",
-                            status: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status,
-                            stepph: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].stepnum
-                        }]
+                {
+                    owner: primocompel,
+                    status: (avanzamento["RACCOLTA_PRODOTTI"].status==="corrente" || avanzamento["ADEMPIMENTI_NORMATIVI"].status === "corrente"
+                    || avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status === "corrente" || avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status === "corrente"
+                    )? "attivo":"",
+                    steps: [{
+                        name: "RACCOLTA_PRODOTTI",
+                        status: avanzamento["RACCOLTA_PRODOTTI"].status,
+                        stepph: avanzamento["RACCOLTA_PRODOTTI"].stepnum
                     },
                     {
-                        owner: <>Prom.<br />finan.</>,
-                        status: (avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
-                        steps: [{
-                            name: "INT"+  secondocomp +"_IDENTIF_CLIENTE",
-                            status: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status,
-                            stepph: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].stepnum
-                        }
-                    ]
+                        name: "ADEMPIMENTI_NORMATIVI",
+                        status: avanzamento["ADEMPIMENTI_NORMATIVI"].status,
+                        stepph: avanzamento["ADEMPIMENTI_NORMATIVI"].stepnum
+                    },
+                    {
+                        name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                        status: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].status,
+                        stepph: avanzamento["INT"+  primocomp +"_RIEPILOGO_DATI"].stepnum
+                    },
+                    {
+                        name: "INT"+  primocomp +"_RIEPILOGO_DATI",
+                        status: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].status,
+                        stepph: avanzamento["INT"+ primocomp  +"_CERTIF_CREDENZIALI"].stepnum
+                    }]
+                },
+                {
+                    owner: <>Prom.<br />finan.</>,
+                    status: (avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
+                    steps: [{
+                        name: "INT"+  primocomp +"_IDENTIF_CLIENTE",
+                        status: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].status,
+                        stepph: avanzamento["INT"+ primocomp  +"_IDENTIF_CLIENTE"].stepnum
+                    }]
                 } ,
                 // Firme
                 {
-                    owner: secondocompel,
-                    status: (avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].status==="corrente")? "attivo":"",
+                    owner: primocompel,
+                    status: ((stato.indexOf("FIRMA_TU")>=0 || stato.indexOf("FIRMA_VESSATORIE")>=0) && intcorrente===primocomp)? "attivo":"",
                     steps: (()=>{
                         let stepFirma = [
                             // Blocchi firma di base
                             {
-                                name: "INT"+  secondocomp +"_FIRMA_TUB",
-                                status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].status,
-                                stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].stepnum
+                                name: "INT"+  primocomp +"_FIRMA_TUB",
+                                status: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].status,
+                                stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUB"].stepnum
                             },
                             {
-                                name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUB",
-                                status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].status,
-                                stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                                name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUB",
+                                status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].status,
+                                stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
                             }
                         ];
                         // Eventuali blocchi firma aggiuntivi per DT
                         if (form.field_sessionfirmeblob_depositoincluso==="true") {
                             stepFirma.push(
                                     {
-                                        name: "INT"+  secondocomp +"_FIRMA_TUF",
-                                        status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].status,
-                                        stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].stepnum
+                                        name: "INT"+  primocomp +"_FIRMA_TUF",
+                                        status: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].status,
+                                        stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].stepnum
                                     },
                                     {
-                                        name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUF",
-                                        status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].status,
-                                        stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].stepnum
+                                        name: "INT"+  primocomp +"_FIRMA_VESSATORIE_TUF",
+                                        status: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUF"].status,
+                                        stepph: avanzamento["INT"+ primocomp  +"_FIRMA_VESSATORIE_TUF"].stepnum
                                     }
                                 
                             )
@@ -206,44 +115,137 @@ export default class extends Component {
                 },
                 {
                     owner: <>Prom.<br />finan.</>,
-                    status: (avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente")? "attivo":"",
+                    status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===primocomp && avanzamento["CONCLUSA"].status==="corrente"))? "attivo":"",
                     steps: (()=>{
-    
+        
                         let firmaCons = [
                             {
-                                name: "INT"+  secondocomp +"_ATTESA_FIRMA_CONSULENTE",
-                                status: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
-                                stepph: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
+                                name: "INT"+  primocomp +"_ATTESA_FIRMA_CONSULENTE",
+                                status: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
+                                stepph: avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
                             }
                         ]
-    
+
                         // In caso di secondo intestatario chiude qui la pratica
-                        if (nint === "2")
+                        if (nint === "1")
                         firmaCons.push({
                             name: "CONCLUSA",
                             status: avanzamento["CONCLUSA"].status,
                             stepph: "Conclusione"
                         });
-    
+
                         return firmaCons;
-    
+
                     })()
+                } 
                     
-                }
             )
+
+            // Eventuale secondo compilatore
+            if (nint==="2"){
+
+                stepObj.push(
+                        {
+                            owner: secondocompel,
+                            status: (avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status==="corrente" || avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status==="corrente")? "attivo":"",
+                            steps:[{
+                                name: "INT"+  secondocomp +"_RIEPILOGO_DATI",
+                                status: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].status,
+                                stepph: avanzamento["INT"+  secondocomp +"_RIEPILOGO_DATI"].stepnum
+                            },
+                            {
+                                name: "INT"+  secondocomp +"_CERTIF_CREDENZIALI",
+                                status: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].status,
+                                stepph: avanzamento["INT"+ secondocomp  +"_CERTIF_CREDENZIALI"].stepnum
+                            }]
+                        },
+                        {
+                            owner: <>Prom.<br />finan.</>,
+                            status: (avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status==="corrente")? "attivo":"",
+                            steps: [{
+                                name: "INT"+  secondocomp +"_IDENTIF_CLIENTE",
+                                status: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].status,
+                                stepph: avanzamento["INT"+ secondocomp  +"_IDENTIF_CLIENTE"].stepnum
+                            }
+                        ]
+                    } ,
+                    // Firme
+                    {
+                        owner: secondocompel,
+                        status:((stato.indexOf("FIRMA_TU")>=0 || stato.indexOf("FIRMA_VESSATORIE")>=0) && intcorrente===secondocomp)? "attivo":"",
+                        steps: (()=>{
+                            let stepFirma = [
+                                // Blocchi firma di base
+                                {
+                                    name: "INT"+  secondocomp +"_FIRMA_TUB",
+                                    status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].status,
+                                    stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUB"].stepnum
+                                },
+                                {
+                                    name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUB",
+                                    status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].status,
+                                    stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUB"].stepnum
+                                }
+                            ];
+                            // Eventuali blocchi firma aggiuntivi per DT
+                            if (form.field_sessionfirmeblob_depositoincluso==="true") {
+                                stepFirma.push(
+                                        {
+                                            name: "INT"+  secondocomp +"_FIRMA_TUF",
+                                            status: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].status,
+                                            stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_TUF"].stepnum
+                                        },
+                                        {
+                                            name: "INT"+  secondocomp +"_FIRMA_VESSATORIE_TUF",
+                                            status: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].status,
+                                            stepph: avanzamento["INT"+ secondocomp  +"_FIRMA_VESSATORIE_TUF"].stepnum
+                                        }
+                                    
+                                )
+                            };   
+                        
+                            return stepFirma;
+                        })()
+                    },
+                    {
+                        owner: <>Prom.<br />finan.</>,
+                        status: (avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===secondocomp && avanzamento["CONCLUSA"].status==="corrente"))? "attivo":"",
+                        steps: (()=>{
+        
+                            let firmaCons = [
+                                {
+                                    name: "INT"+  secondocomp +"_ATTESA_FIRMA_CONSULENTE",
+                                    status: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status,
+                                    stepph: avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].stepnum
+                                }
+                            ]
+        
+                            // In caso di secondo intestatario chiude qui la pratica
+                            if (nint === "2")
+                            firmaCons.push({
+                                name: "CONCLUSA",
+                                status: avanzamento["CONCLUSA"].status,
+                                stepph: "Conclusione"
+                            });
+        
+                            return firmaCons;
+        
+                        })()
+                        
+                    }
+                )
+            }
         }
 
         return (<>
                     <div className="ob-stepper">
-                        {/* 
+                        
                         <p>Stato: {form.field_stato}
                             - Step: {stato}
                             - Intestatario corrente: {intcorrente}
                             - Ordine di compilazione: {ordineInt}</p>
                         
-                        */}
-                    
-
+                        
                         {stepObj.map((v,i)=>{
                             return (
                                 <div className={"steps-wrap " + v.status} key={i}>
