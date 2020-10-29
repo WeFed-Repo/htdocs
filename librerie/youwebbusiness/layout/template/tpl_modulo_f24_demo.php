@@ -114,7 +114,7 @@
                     <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.NascitaComune,enable: Additional.IsContribuenteEditable()" id="comuneContribuente" >
                 </div>
 
-                <div class="form-group  col-sm-6 col-md-4 col-lg-2 col-xl-2">
+                <div class="form-group  col-sm-2 col-md-4 col-lg-2 col-xl-2">
                     <label>Provincia</label>
                     <input type="text" class="form-control" id="provinciaContribuente" maxlength="2" data-bind="codiceProvinciaF24: Disposizione.Native.Contribuente.Anagrafica.NascitaProvincia,enable: Additional.IsContribuenteEditable()">
                 </div>
@@ -133,7 +133,7 @@
                     <label>Comune *</label>
                     <input type="text" class="form-control" data-bind="value : Disposizione.Native.Contribuente.Anagrafica.Comune,enable: Additional.IsContribuenteEditable()">
                 </div>
-                <div class="form-group  col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="form-group  col-sm-2 col-md-3 col-lg-2 col-xl-2">
                     <label>Provincia *</label>
                     <input type="text" maxlength="2" class="form-control" data-bind="codiceProvinciaF24 : Disposizione.Native.Contribuente.Anagrafica.Provincia,enable: Additional.IsContribuenteEditable()">
                 </div>
@@ -143,17 +143,17 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group  col-sm-12 col-md-4 col-lg-2 col-xl-3 my-auto">
+                <div class="form-group  col-sm-4 col-md-4 col-lg-2 col-xl-3 my-auto">
                     <label class="control-label">
                         <span>
                             Codice fiscale del coobbligato, erede, genitore, tutore o curatore fallimentare
                         </span>
                     </label>
                 </div>
-                <div class="form-group  col-sm-12 col-md-5 col-lg-4 col-xl-4 my-auto">
+                <div class="form-group  col-sm-5 col-md-5 col-lg-4 col-xl-4 my-auto">
                     <input type="text" maxlength="16" class="form-control" data-bind="toUpperCase : Disposizione.Native.Contribuente.CodiceFiscaleSecondo,enable: Additional.IsContribuenteEditable()">
                 </div>
-                <div class="form-group  col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <div class="form-group  col-sm-3 col-md-3 col-lg-3 col-xl-2">
                     <label>Codice identificativo</label>
                     <div class="input-group pb-4 mb-2">
                         <input class="form-control " type="text" maxlength="2" data-bind="value : Disposizione.Native.Contribuente.CodiceIdentificativo,enable: Additional.IsContribuenteEditable()">
@@ -600,7 +600,7 @@
                                                 <span class="text-center">Matr./Codice </span>
 
                                                 <span class="text-center">INPS Fil. azienda</span>
-</label>
+        </label>
                                         </div>
                                         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
                                             <label>Periodo da</label>
@@ -685,7 +685,7 @@
                                         </div>
                                     </div>
 
-<div class="form-row">
+        <div class="form-row">
                                         <div class="form-group  col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                             <div class="input-group ">
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -727,7 +727,7 @@
                                                 <label>Importi a credito compensati (H)</label>
                                             </div>
                                         </div>
-<div class="form-row d-flex justify-content-end">
+        <div class="form-row d-flex justify-content-end">
                                         <div class="form-group  col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -761,7 +761,7 @@
                                         </div>
                                     </div>
 
-<div class="form-row">
+        <div class="form-row">
                                         <div class="form-group  col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                             <div class="input-group ">
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -803,7 +803,7 @@
                                                 <label>Importi a credito compensati (H)</label>
                                             </div>
                                         </div>
-<div class="form-row d-flex justify-content-end">
+        <div class="form-row d-flex justify-content-end">
                                         <div class="form-group  col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -815,7 +815,7 @@
                                 </div>
                             </div>
 
-<div class="form-row">
+        <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-12 col-lg-8 col-xl-8">
                                     <div class="form-row pt-5 display-tablet">
                                         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -839,7 +839,7 @@
                                         </div>
                                     </div>
 
-<div class="form-row">
+        <div class="form-row">
                                         <div class="form-group  col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                             <div class="input-group ">
                                                 <input class="form-control" type="text" maxlength="4" data-bind="textInput : CodiceSede">
@@ -881,7 +881,7 @@
                                                 <label>Importi a credito compensati (H)</label>
                                             </div>
                                         </div>
-<div class="form-row d-flex justify-content-end">
+        <div class="form-row d-flex justify-content-end">
                                         <div class="form-group  col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                             <input type="text" class="form-control text-right" data-bind="formatImporto: Debito">
 
@@ -1804,7 +1804,7 @@
                                 </div>
                                 <div class="form-row d-flex justify-content-end align-items-center">
                                     <div class="form-group col-sm-3 text-right">
-                                        <label><strong>SALDO [M-N] +/-</strong></label>
+                                        <label><strong>SALDO [I-L] +/-</strong></label>
                                     </div>
                                     <div class="form-group  col-sm-1">
                                         <input type="text" class="form-control  text-right" data-bind="textInput: Disposizione.Native.Inail.Totali.Segno" disabled="">
