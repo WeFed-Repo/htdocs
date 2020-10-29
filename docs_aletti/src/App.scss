@@ -1,11 +1,15 @@
 /* BOTTONE PER PILOTARE LO STILE*/
 .style-type {
     position:fixed;
-    top: 100px;
-    right: 200px;
-    z-index: 1;
-    span{
-        margin-right:30px;
+    top: 22px;
+    right: 220px;
+    z-index: 30;
+    button {
+        width:auto; height:30px; font-size:12px;text-transform:uppercase;color:#333;
+        background-color:#eee;border:solid 1px #ccc;border-radius:5px;
+    }
+    .light & {
+        top:35px;
     }
 } 
 

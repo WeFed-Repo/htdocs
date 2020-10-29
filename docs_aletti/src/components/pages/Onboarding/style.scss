@@ -64,6 +64,14 @@
     padding: 15px;
     height: 70px;
     border-top: solid 1px #ccc;
+
+    .app.light & {
+        width:calc(100% - 155px);
+        background:#e0eaee;
+        border-top:solid 2px #ccc;
+        box-shadow: none;
+        padding: 15px 0;
+    }
 }
 
 

@@ -233,11 +233,6 @@ export default class extends Component {
             )
         }
 
-    /*
-        console.log("------------stepper-------------");
-        console.log(stepObj)
-        console.log("-----------/stepper-------------");
-        */
         return (<>
                     <div className="ob-stepper">
                         {/* 

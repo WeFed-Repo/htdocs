@@ -100,7 +100,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"app" + " " + this.state.styleType}>
-                     {ambiente.isLibrerie && <div className="style-type"><span>Stile applicato: {this.state.styleType}</span><Button onClick={ this.toggleStyle } role="button">cambia stile</Button></div>}
+                    {ambiente.isLibrerie && <div className="style-type"><Button onClick={ this.toggleStyle } role="button">Stile: <strong>{this.state.styleType}</strong></Button></div>}
                     <Header styleType= { this.state.styleType } switchPrivacyFunc={ this.switchPrivacyFunc } hiddenMode={ this.state.hiddenMode } launchSearch={this.launchSearch} goToCustomersSearch={this.goToCustomersSearch} changefNominativo={this.changefNominativo}  getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
                     <Menu hiddenMode={ this.state.hiddenMode } goToCustomersSearch={this.goToCustomersSearch}/>
                     <Main hiddenMode={ this.state.hiddenMode } fsNominativo={this.state.fsNominativo} searchData={this.state.searchData} goToCustomersSearch={this.goToCustomersSearch} getUserData = {this.getUserData } isLoadedUserData= {this.state.isLoadedUserData} userData ={this.state.userData}/>
