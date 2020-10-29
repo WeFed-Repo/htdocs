@@ -261,6 +261,14 @@ table,
   width: 100%;
   position:relative;
   clear:both;
+  .fixed-table-body,.fixed-columns {
+    table,.table {
+      th,td {
+       height: auto;
+       padding: 5px;
+      }
+    }
+ }
 }
 
 // Loader

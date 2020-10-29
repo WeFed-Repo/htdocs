@@ -2562,6 +2562,10 @@ table .bs-checkbox,
   position: relative;
   clear: both;
 }
+.bootstrap-table .fixed-table-body table th, .bootstrap-table .fixed-table-body table td, .bootstrap-table .fixed-table-body .table th, .bootstrap-table .fixed-table-body .table td, .bootstrap-table .fixed-columns table th, .bootstrap-table .fixed-columns table td, .bootstrap-table .fixed-columns .table th, .bootstrap-table .fixed-columns .table td {
+  height: auto;
+  padding: 5px;
+}
 
 .fixed-table-loading {
   display: none;

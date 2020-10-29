@@ -7626,10 +7626,7 @@ div.fixed-table-scroll-outer {
     z-index: 1;
     background: #ffffff;
 }
-.bootstrap-table .fixed-table-body table td, .bootstrap-table .fixed-table-body table th, .bootstrap-table .fixed-table-body .table td, .bootstrap-table .fixed-table-body .table th, .bootstrap-table .fixed-columns table td, .bootstrap-table .fixed-columns table th, .bootstrap-table .fixed-columns .table td, .bootstrap-table .fixed-columns .table th {
-    height: auto;
-    padding: 5px;
-}
+
 
 /* Defreeze per overlay */
 .modal-open  .bootstrap-table .fixed-columns {display:none}
