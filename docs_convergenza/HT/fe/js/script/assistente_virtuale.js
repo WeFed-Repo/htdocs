@@ -110,7 +110,18 @@ function vaAsking(domanda, history)
 			// Solo se la pagina non e' gia' stata caricata e la domanda risulta differente rispetto a quella di onload
 			if (vaAnswerRoot.url && !vaExtLoaded)
 			{
-				location.href = vaAnswerRoot.url + ((vaAnswerRoot.url.indexOf("?"))? "&" : "?") + "sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.position().left + "&sTop=" + vAss.position().top;
+				// Prepara l'url per il redirect
+				var redurl = vaAnswerRoot.url,
+					redanch = "";
+				if (redurl.split("#").length>1) {
+					redanch="#" + redurl.split("#")[1]
+					redurl = redurl.split("#")[0];
+				} 
+				
+				location.href = redurl + ((redurl.indexOf("?"))? "&" : "?") + "sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.position().left + "&sTop=" + vAss.position().top + redanch;
+				// Redirect old
+				// location.href = vaAnswerRoot.url + ((vaAnswerRoot.url.indexOf("?"))? "&" : "?") + "sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.position().left + "&sTop=" + vAss.position().top;
+				
 				return 0;
 			}
 			else

@@ -1,4 +1,6 @@
-{
+<?php
+	header('Content-Type: application/json');
+?>{
 		  "body": {
 <?php 
 	$msg = $_POST["userinput"];

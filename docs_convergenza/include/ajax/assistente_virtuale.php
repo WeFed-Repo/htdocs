@@ -1,4 +1,6 @@
-{
+<?php
+	header('Content-Type: application/json');
+?>{
 		  "body": {
 <?php 
 	$msg = $_POST["userinput"];
@@ -112,7 +114,7 @@ else
 	      "text": "Ti ho appena portato sulla pagina <strong><?php print str_replace("prova redirect ","",$msg);?></strong>"
 	    }
 	},
-	 "url": "/strutt_priv_new.php?pag=<?php print str_replace("prova redirect ","",$msg);?>&wdg=02"	
+	 "url": "/template/strutt_webank.php?tpl=<?php print str_replace("prova redirect ","",$msg);?>&wdg=02"	
 }
 	<?php
 }

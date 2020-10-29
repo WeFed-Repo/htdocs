@@ -233,7 +233,18 @@ function vaAsking(domanda, history)
 			// Solo se la pagina non e' gia' stata caricata e la domanda risulta differente rispetto a quella di onload
 			if (vaAnswerRoot.url && !vaExtLoaded)
 			{
-				location.href = vaAnswerRoot.url + "&sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.offset().left + "&sTop=" + vAss.offset().top;
+				// Prepara l'url per il redirect
+				var redurl = vaAnswerRoot.url,
+					redanch = "";
+				if (redurl.split("#").length>1) {
+					redanch="#" + redurl.split("#")[1]
+					redurl = redurl.split("#")[0];
+				} 
+				if (redurl.indexOf("?")<=0){
+					redurl +="?"
+				}
+				
+				location.href = redurl + "&sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.offset().left + "&sTop=" + vAss.offset().top + redanch;
 				return 0;
 			}
 			else
@@ -443,7 +454,7 @@ function vaOpen(sLeft,sTop,sQuestion)
 {
 	
 	//Indirizzo per chiamate AJAX
-	vaAJAX = (window.location.toString().indexOf("convergenza") > 0) ? "/include/ajax/priv_va.php" : ((typeof wrp_home_direct != "undefined")? wrp_home_direct + "/common/virtass/virtass.jsp" :"/WEBEXT/wrapped/goToHomeDirect/common/virtass/virtass.jsp" );
+	vaAJAX = (window.location.toString().indexOf("convergenza") > 0) ? "/include/ajax/assistente_virtuale.php" : ((typeof wrp_home_direct != "undefined")? wrp_home_direct + "/common/virtass/virtass.jsp" :"/WEBEXT/wrapped/goToHomeDirect/common/virtass/virtass.jsp" );
 
 	wStore.write("vaOpened","true");
 
