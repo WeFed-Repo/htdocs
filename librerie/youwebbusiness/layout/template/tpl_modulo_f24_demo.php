@@ -2373,8 +2373,8 @@
             </div>
         </div>
     </div>
-    <form class="form-grid" novalidate="">
-        <div class="form-row d-flex justify-content-start align-items-center">
+        <form class="form-grid" novalidate="">
+            <div class="form-row d-flex justify-content-start align-items-center">
 
             <div class="form-group col-6 col-md-4">
                 <div class="form-check mt-4 checkbox">
@@ -2398,7 +2398,7 @@
                 <input type="text" class="form-control text-right" data-bind="formatImporto: Disposizione.Native.Saldo.SaldoDelega" disabled="">
             </div>
         </div>
-</form>
+    </form>
 </div>
 
 

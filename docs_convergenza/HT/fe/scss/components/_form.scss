@@ -1007,6 +1007,9 @@ a.output {color: $primary;text-decoration:underline}
   position: absolute;
   left: 0;
 }
+.sel-adv.opened .sel-adv-options .sel-adv-voice[data-selected="true"] {
+  display: none;
+}
 @media (min-width: 768px) {
   .sel-adv.opened .sel-adv-options {
     max-height: 500px;
