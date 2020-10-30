@@ -8384,7 +8384,7 @@ label.label-checkbox-wrapper .btn-icon {
         font-size:12px;
     }
 }
-@media (min-width:767px) and (max-width:1199px) {
+@media (min-width:767px) and (max-width:1500px) {
     #tbFixedColumn th:first-child,
     #tbFixedColumnB th:first-child{
         width: 35%;
@@ -8403,7 +8403,11 @@ label.label-checkbox-wrapper .btn-icon {
         font-size: 13px;
     }
 }
-
+@media (max-width:1199px) {
+    .linee-wrapper .lineaT,.linee-wrapper .lineaTb,.linee-wrapper .lineaN {
+        font-size: 12px;
+    }
+}
 
 
 
