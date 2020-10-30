@@ -36,7 +36,7 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Firma vessatorie TUB {nomeint}</h3>
+                    <h3>Firma vessatorie TUB - {nomeint}</h3>
                 </div>
             </div>
         )

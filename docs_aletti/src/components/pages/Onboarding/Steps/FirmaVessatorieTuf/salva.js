@@ -12,7 +12,7 @@ import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
             let dataObj = 
                 {
                     "id": form.field_id,
-                    "stato": "",
+                    "stato": "ATTESA_FIRMA_CONSULENTE",
                     "intestatarioCorrente": form.field_intestcorrente
                 }
             

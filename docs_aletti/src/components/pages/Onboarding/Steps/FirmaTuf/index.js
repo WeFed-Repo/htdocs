@@ -35,7 +35,7 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Titolo step {nomeint}</h3>
+                    <h3>Firma TUF - {nomeint}</h3>
                 </div>
             </div>
         )

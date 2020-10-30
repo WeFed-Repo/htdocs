@@ -12,7 +12,7 @@ import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
             let dataObj = 
                 {
                     "id": form.field_id,
-                    "stato": (form.field_sessionfirmeblob_depositoincluso==="true")? "FIRMA_VESSATORIE_TUF": "ATTESA_FIRMA_CONSULENTE",
+                    "stato": (form.field_sessionfirmeblob_depositoincluso==="true")? "FIRMA_VESSATORIE_TUB": "ATTESA_FIRMA_CONSULENTE",
                     "intestatarioCorrente": form.field_intestcorrente
                 }
             

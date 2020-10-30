@@ -97,7 +97,7 @@ export default class extends Component {
                         if (form.field_sessionfirmeblob_depositoincluso==="true") {
                             stepFirma.push(
                                     {
-                                        name: "INT"+  primocomp +"_FIRMA_TUF",
+                                        name: "INT"+  primocomp +"_FIRMA_TUF", 
                                         status: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].status,
                                         stepph: avanzamento["INT"+ primocomp  +"_FIRMA_TUF"].stepnum
                                     },
