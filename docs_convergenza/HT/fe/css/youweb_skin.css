@@ -1874,6 +1874,10 @@ a.output {
   left: 0;
 }
 
+.sel-adv.opened .sel-adv-options .sel-adv-voice[data-selected=true] {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .sel-adv.opened .sel-adv-options {
     max-height: 500px;
@@ -2614,6 +2618,9 @@ table .bs-checkbox,
   }
   #formBook .row.visible-xs {
     display: block !important;
+  }
+  #formBook .hidden-xs {
+    display: none !important;
   }
   #formBook #filtriAvanzatiBtn .row .col-sm-4:not(.hidden-xs) {
     width: 100%;

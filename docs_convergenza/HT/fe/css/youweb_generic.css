@@ -7561,42 +7561,13 @@ div.fixed-table-scroll-outer {
 #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 12px}
 #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 12px}
 
-.linee-wrapper {border: 1px solid #ccc;border-bottom:0;width: 100%;float:left;padding-top:15px;}
-.linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left;padding-left: 46%;height:30px;font-weight: bold}
-.linee-wrapper .lineaTb {padding-left: 52%;}
-.linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
+
 .textWrapper {position:relative;}
 .textWrapper a { text-decoration: underline; cursor:pointer }
 .bootstrap-table {
     position:relative
 }
-.modal-body .linee-wrapper .lineaT {
-    padding-left:19%
-}
-@media screen and (max-width: 1200px) {
-    .modal-body .linee-wrapper .lineaT {
-        padding-left:22%
-    }
 
-}
-@media screen and (max-width: 1023px) {
-    .modal-body .linee-wrapper .lineaT {
-        padding-left:27%
-    }
-
-}
-@media screen and (max-width: 1100px) {
-    .linee-wrapper .lineaTb {padding-left: 51%;}
-    .linee-wrapper .lineaN {padding-right:4%}
-    .modal-body .linee-wrapper .lineaN {
-        padding-right:10%;
-    }
-}
-@media screen and (max-width: 780px) {
-    .linee-wrapper .lineaTb {padding-left: 49%;}
-    .linee-wrapper .lineaN {padding-right:4%}
-
-}
 @media screen and (max-width: 767px) {
 .fixedColumns.scelta-profilo label {
     margin-bottom:0
@@ -8366,3 +8337,81 @@ label.label-checkbox-wrapper .btn-icon {
     float:none
 }
 /*FINE ASSICURAZIONI QUESTIONARIO */
+
+/* TABELLA COMMISSIONI*/
+.linee-wrapper { border: 1px solid #ccc; border-bottom:0; width: 100%;float:left; padding-top:15px;}
+.linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left; font-weight: bold}
+.linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
+/*BORDO SU TABELLA COMMISSIONI */
+@media (min-width:767px) {
+    #tbFixedColumn th:first-child,
+    #tbFixedColumnB th:first-child{
+        width: 45%;
+    }
+    #tbFixedColumn th.evidenziato,
+    #tbFixedColumnB th.evidenziato{
+        width: 10%;
+    }
+    .linee-wrapper {
+        padding-top:0;
+    }
+    .linee-wrapper .lineaT,.linee-wrapper .lineaTb {
+        border-right:1px solid #cccccc;
+        padding-top:15px;
+        height: 45px;
+        padding-left:0;
+        width: 55%;
+        padding-left: 45%;
+        text-align: center;
+    }
+    .linee-wrapper .lineaN {
+        padding-top:15px;
+        height: 45px;
+    }
+
+    .modal-body #tbFixedColumn th:first-child,
+    .modal-body #tbFixedColumnB th:first-child{
+        width: 22%;
+    }
+    .modal-body #tbFixedColumn th.evidenziato,
+    .modal-body #tbFixedColumnB th.evidenziato{
+        width: 20%;
+    }
+    .modal-body .linee-wrapper .lineaT,.modal-body .linee-wrapper .lineaTb {
+        width: 42%;
+        padding-left: 22%;
+        text-align: center;
+        font-size:12px;
+    }
+}
+@media (min-width:767px) and (max-width:1500px) {
+    #tbFixedColumn th:first-child,
+    #tbFixedColumnB th:first-child{
+        width: 35%;
+    }
+    #tbFixedColumn th.evidenziato,
+    #tbFixedColumnB th.evidenziato{
+        width: 15%;
+    }
+    .linee-wrapper .lineaT,.linee-wrapper .lineaTb {
+        width: 50%;
+        padding-left: 35%;
+    }
+}
+@media (max-width:1200px) {
+    .linee-wrapper .lineaT,.linee-wrapper .lineaTb,.linee-wrapper .lineaN {
+        font-size: 13px;
+    }
+}
+@media (max-width:1199px) {
+    .linee-wrapper .lineaT,.linee-wrapper .lineaTb,.linee-wrapper .lineaN {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+/*FINE BORDO SU TABELLA COMMISSIONI */
+

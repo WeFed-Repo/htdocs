@@ -343,6 +343,10 @@ table,
       &.visible-xs {
         display: block !important;
       }
+      
+    }
+    .hidden-xs {
+      display: none !important; 
     }
     #filtriAvanzatiBtn {
       .row {
