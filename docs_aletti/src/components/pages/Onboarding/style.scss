@@ -51,7 +51,11 @@
     h4.wrapped-item-title {font-size:20px; background:#fff;display:inline-block;top:-13px; padding:0 5px; position:absolute;color:#666;left:10px;}
 
 }
-.onboarding {position:relative;}
+.onboarding {
+    position:relative;
+    .iframe-resp {height:calc(100vh - 340px);overflow-y:auto;
+    border:solid 1px #ccc}
+}
 
 .onboarding-pulsantiera {
     position: fixed;

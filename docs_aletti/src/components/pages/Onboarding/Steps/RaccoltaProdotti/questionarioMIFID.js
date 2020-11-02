@@ -13,11 +13,11 @@ export default class extends Component {
 
     render() {
 
+        console.log(ambiente)
      
-        let iframeSrc = (ambiente.name==="locale")? "/_iframe_testing.htm" : "/promotori/dashboard/goToMifidQuest";
+        let iframeSrc = (ambiente.name==="locale" || ambiente.name==="librerie")? "/_iframe_testing.htm" : "/promotori/dashboard/goToMifidQuest";
 
         return(<>
-                <button onClick={()=>window.setMifid({idQuestionario:Math.random()})}>Termina questionario</button>
                 <iframe className="iframe-resp" name="iframe_mifid" src={iframeSrc}></iframe>
             </>
         )
