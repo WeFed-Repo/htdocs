@@ -5694,7 +5694,8 @@ select:focus::-ms-value {
         letter-spacing: -0.5px;
     }
 }
-.firmaContrattoID input[type="password"] {
+.firmaContrattoID input[type="password"], #otp input[type="password"] 
+{
     font-family: Arial, Helvetica, sans-serif
 }
 @media screen and (max-width: 1199px) {
