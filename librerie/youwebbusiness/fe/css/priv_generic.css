@@ -773,7 +773,7 @@
 }
 
 /* Tabs */
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) {
+.nav-tabs:not(.tabsContenuti) {
   clear: both;
   margin: 0 0 1rem 0;
   padding: 0;
@@ -785,17 +785,17 @@
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio)::-webkit-scrollbar {
+.nav-tabs:not(.tabsContenuti)::-webkit-scrollbar {
   display: none;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-item {
+.nav-tabs:not(.tabsContenuti) .nav-item {
   display: inline-block;
   white-space: nowrap;
   margin: 0;
   background: none;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link {
+.nav-tabs:not(.tabsContenuti) a.nav-link,
+.nav-tabs:not(.tabsContenuti) .nav-link {
   font-size: 16px;
   padding: 0.5rem 1rem;
   color: #3e3e3e;
@@ -811,30 +811,30 @@
   transition: all 0.3s;
   text-decoration: none;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:not(.btn),
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:not(.btn) {
+.nav-tabs:not(.tabsContenuti) a.nav-link:not(.btn),
+.nav-tabs:not(.tabsContenuti) .nav-link:not(.btn) {
   padding-top: 0;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled),
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:hover:not(:disabled),
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled) {
+.nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled), .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
+.nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled),
+.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
   color: #2F9988;
   margin-bottom: 3px;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled):hover,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:hover:not(:disabled):hover,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled):hover {
+.nav-tabs:not(.tabsContenuti) a.nav-link:hover:not(:disabled):hover, .nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled):hover,
+.nav-tabs:not(.tabsContenuti) .nav-link:hover:not(:disabled):hover,
+.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled):hover {
   color: #2F9988;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.active:not(:disabled),
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.active:not(:disabled) {
+.nav-tabs:not(.tabsContenuti) a.nav-link.active:not(:disabled),
+.nav-tabs:not(.tabsContenuti) .nav-link.active:not(:disabled) {
   box-shadow: 0 3px 0 0 #2F9988;
 }
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:disabled, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.disabled, .nav-tabs:not(.tabsContenuti, .tabsWithRadio) a.nav-link.disabled:hover,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:disabled,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link:disabled:hover,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.disabled,
-.nav-tabs:not(.tabsContenuti, .tabsWithRadio) .nav-link.disabled:hover {
+.nav-tabs:not(.tabsContenuti) a.nav-link:disabled, .nav-tabs:not(.tabsContenuti) a.nav-link:disabled:hover, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled, .nav-tabs:not(.tabsContenuti) a.nav-link.disabled:hover,
+.nav-tabs:not(.tabsContenuti) .nav-link:disabled,
+.nav-tabs:not(.tabsContenuti) .nav-link:disabled:hover,
+.nav-tabs:not(.tabsContenuti) .nav-link.disabled,
+.nav-tabs:not(.tabsContenuti) .nav-link.disabled:hover {
   color: #DDDDDD !important;
   cursor: default !important;
   border-bottom: solid 3px transparent !important;
@@ -931,6 +931,63 @@
   left: 155px;
 }
 .tabsWithRadio.nav-tabs .nav-item .btn-icon-help#viewModalLibera {
+  left: 137px;
+}
+
+/* TAB con radio button*/
+.radio-tabs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.radio-tabs::-webkit-scrollbar {
+  display: none;
+}
+.radio-tabs .radio-tabs-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.radio-tabs .radio-tabs-item a {
+  padding: 15px 0 15px 5rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 0;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.radio-tabs .radio-tabs-item a.active {
+  background-color: #EDEDED;
+}
+.radio-tabs .radio-tabs-item a p {
+  padding-left: 7px;
+  font-size: 12px;
+  color: #3e3e3e;
+  margin-bottom: 0;
+}
+.radio-tabs .radio-tabs-item a label {
+  font-size: 14px;
+  color: #3e3e3e;
+  text-transform: uppercase;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help {
+  position: absolute;
+  top: 20px;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help#viewModalFacilitata {
+  left: 155px;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help#viewModalLibera {
   left: 137px;
 }
 

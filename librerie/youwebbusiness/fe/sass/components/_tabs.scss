@@ -1,6 +1,6 @@
 /* Tabs */
 
-.nav-tabs:not(.tabsContenuti,.tabsWithRadio) {
+.nav-tabs:not(.tabsContenuti) {
   clear: both;
   margin: 0 0 1rem 0;
   padding: 0;
@@ -108,7 +108,7 @@
     border-bottom: none;
     position: relative;
     overflow: auto;
-    display: flex;
+    display: flex; 
     flex-wrap: nowrap;
     
     @include invisibleScroll();
@@ -152,3 +152,56 @@
     
 }
 
+ /* TAB con radio button*/
+ .radio-tabs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  display: flex; 
+  flex-wrap: nowrap; 
+  @include invisibleScroll();
+  .radio-tabs-item {
+    position: relative;
+    margin:0;
+    padding:0;
+    list-style: none;
+    a {
+      padding: 15px 0 15px 5rem;
+      border:1px solid $gray4;
+      border-radius:0;
+      height:100%;
+      text-decoration: none;
+      position:relative;
+      width:100%;
+      display: inline-block;
+      &.active{
+        background-color: #EDEDED;
+      }
+      p{
+        padding-left:7px; 
+        font-size:12px;
+        color: $gray1;
+        margin-bottom:0
+      }
+      label {
+        font-size:14px;
+        color: $gray1;
+        text-transform: uppercase;
+      }
+    }
+    .btn-icon-help {
+      position:absolute;
+      top:20px;
+      &#viewModalFacilitata{
+        left:155px;
+      }
+      &#viewModalLibera{
+        left:137px;
+      }
+    }
+   }
+  
+}

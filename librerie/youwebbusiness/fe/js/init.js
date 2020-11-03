@@ -332,7 +332,20 @@ function imgToSvg(img) {
     });
     */
 }
-
+function initRadioTab() {
+    var radioRabs = $(".radio-tabs");
+    radioRabs.each(function() { 
+        var radioTabsLinks = $(this).find(".radio-tabs-link"),
+            radioTabsInputs = $(this).find("input[type=\"radio\"]");
+            radioTabsLinks.on('click', function () { 
+                var index = radioTabsLinks.index($(this));
+                radioTabsInputs.removeAttr("checked");
+                radioTabsLinks.removeClass("active");
+                radioTabsInputs.eq(index).prop("checked","checked")
+                radioTabsLinks.eq(index).addClass("active");
+            })
+    })
+}
 (function ($) {
 
     $.fn.carouselInit = function () {

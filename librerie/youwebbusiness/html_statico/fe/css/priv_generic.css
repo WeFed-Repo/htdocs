@@ -880,6 +880,117 @@
   display: none;
 }
 
+/* TAB con radio button*/
+.tabsWithRadio.nav-tabs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.tabsWithRadio.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+.tabsWithRadio.nav-tabs .nav-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.tabsWithRadio.nav-tabs .nav-item a {
+  padding: 15px 0 15px 5rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 0;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+.tabsWithRadio.nav-tabs .nav-item a.active {
+  background-color: #EDEDED;
+}
+.tabsWithRadio.nav-tabs .nav-item a p {
+  padding-left: 7px;
+  font-size: 12px;
+  color: #3e3e3e;
+  margin-bottom: 0;
+}
+.tabsWithRadio.nav-tabs .nav-item a label {
+  font-size: 14px;
+  color: #3e3e3e;
+  text-transform: uppercase;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help {
+  position: absolute;
+  top: 15px;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help#viewModalFacilitata {
+  left: 155px;
+}
+.tabsWithRadio.nav-tabs .nav-item .btn-icon-help#viewModalLibera {
+  left: 137px;
+}
+
+/* TAB con radio button*/
+.radio-tabs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.radio-tabs::-webkit-scrollbar {
+  display: none;
+}
+.radio-tabs .radio-tabs-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.radio-tabs .radio-tabs-item a {
+  padding: 15px 0 15px 5rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 0;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.radio-tabs .radio-tabs-item a.active {
+  background-color: #EDEDED;
+}
+.radio-tabs .radio-tabs-item a p {
+  padding-left: 7px;
+  font-size: 12px;
+  color: #3e3e3e;
+  margin-bottom: 0;
+}
+.radio-tabs .radio-tabs-item a label {
+  font-size: 14px;
+  color: #3e3e3e;
+  text-transform: uppercase;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help {
+  position: absolute;
+  top: 20px;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help#viewModalFacilitata {
+  left: 155px;
+}
+.radio-tabs .radio-tabs-item .btn-icon-help#viewModalLibera {
+  left: 137px;
+}
+
 .bootstrap-table {
   margin: 0 -1rem;
   overflow-x: auto;
@@ -2729,6 +2840,13 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
 }
 .btn.btn-white .icon-menu {
   transform: translate(2px, 2px);
+}
+.btn.btn-white.in-table {
+  max-height: 30px;
+  border-color: #30C9B4 !important;
+  color: #30C9B4 !important;
+  line-height: 14px;
+  margin-bottom: 0;
 }
 .btn.btn-link {
   text-decoration: underline;
@@ -5231,6 +5349,80 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   width: 100%;
   flex-basis: 100%;
   text-align: left;
+}
+
+.wrapper-f24 .wrapper-f hr {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.wrapper-f24 .wrapper-f-header p {
+  font-size: 14px;
+  text-align: right;
+  float: right;
+  margin-bottom: 0;
+}
+.wrapper-f24 .wrapper-f-header span {
+  font-size: 16px;
+}
+.wrapper-f24 .wrapper-f-header span.color-light-green {
+  color: #08BBCA;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrapper-f24 .wrapper-f-header img {
+  max-width: 100%;
+}
+
+.wrapper-f24 .input-group-text {
+  padding: 0.375rem 0.2rem;
+}
+.wrapper-f24 form-control {
+  padding: 0 2px;
+}
+.wrapper-f24 .min-w-s {
+  min-width: 52px;
+}
+.wrapper-f24 .input-group-append img {
+  margin-right: 0 !important;
+}
+.wrapper-f24 div[class*=col-]:not([class*=p-]):not([class*=px-]):not([class*=pr-]):not(.nav-item) {
+  padding-right: 4px !important;
+}
+.wrapper-f24 div[class*=col-]:not([class*=p-]):not([class*=px-]):not([class*=pl-]):not(.nav-item) {
+  padding-left: 4px !important;
+}
+.wrapper-f24 .form-group .form-row, .wrapper-f24 .input-group > .custom-file .form-row, .wrapper-f24 .input-group > .custom-select .form-row, .wrapper-f24 .input-group > .form-control .form-row, .wrapper-f24 .input-group > .input-group-prepend .form-row, .wrapper-f24 .input-group > .input-group-append .form-row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.wrapper-f24 label {
+  letter-spacing: -0.5px !important;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 992px) {
+  .display-tablet {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  .wrapper-f24 .min-w-f {
+    min-width: 13%;
+  }
+  .wrapper-f24 .max-w-f {
+    max-width: 12%;
+  }
+  .wrapper-f24 .wrapper-f24 label {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrapper-f24 .l-h {
+    margin-bottom: 27px;
+  }
+  .wrapper-f24 .col-sm-12 label {
+    max-width: 150px;
+  }
 }
 
 /*# sourceMappingURL=priv_generic.css.map */

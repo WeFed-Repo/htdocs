@@ -28,6 +28,7 @@
       background: none;
     }
   }
+  
   @include icon {
     @include svg-icon-size(25px);
     line-height: 1px !important;
@@ -53,7 +54,7 @@
         }
       }
     }
-
+    
   }
   // - - STILI PERSONALIZZATI DEI BOTTONI
   // PRIMARY & SECONDARY
@@ -85,6 +86,13 @@
     }
     .icon-menu {
       transform: translate(2px, 2px);
+    }
+    &.in-table {
+      max-height: 30px;
+      border-color: $greenLight!important;
+      color: $greenLight!important;
+      line-height: 14px;
+      margin-bottom:0;
     }
   }
   // FILTER

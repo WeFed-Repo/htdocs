@@ -183,7 +183,8 @@
                           <li><a href="tpl_bonifico_singolo.html" class="">Bonifico singolo</a></li>
                             <li><a href="tpl_info_bonifico.html" class="">Info Bonifico</a></li>
                               <li><a class="disabled">Bonifico per detrazioni</a></li>
-                                <li><a class="disabled">Deleghe F24</a></li>
+                              <li><a href="tpl_modulo_f24.html" class="">Modulo F24</a></li>
+                              <li><a class="disabled">Deleghe F24</a></li>
                                 <li><a class="disabled">F24 Elementi identificativi</a></li>
                                 <li><a class="disabled">Modulo F23 - PIN</a></li>
                                 <li><a class="disabled">Riepilogo F23 - PIN</a></li>
@@ -861,8 +862,9 @@
     })
     function isInJsonDates(date,n) {
         inarray = false;
-        date.forEach(function(e){
-            if( !inarray ) {
+        date.forEach(
+            function(e) {
+                if( !inarray ) {
                 if( e.data==n ) {
                     inarray = e;
                     return true
