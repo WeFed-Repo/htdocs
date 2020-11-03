@@ -24,11 +24,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 /* Polyfill per Reactstrap Carousel su IE11 (CustomEvent) */
 if ( typeof window.CustomEvent !== "function" ) {
     function CustomEvent ( event, params ) {
-      params = params || { bubbles: false, cancelable: false, detail: null };
-      var evt = document.createEvent( 'CustomEvent' );
-      evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-      return evt;
-     }
+        params = params || { bubbles: false, cancelable: false, detail: null };
+        var evt = document.createEvent( 'CustomEvent' );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+    }
     window.CustomEvent = CustomEvent;
 }
  
