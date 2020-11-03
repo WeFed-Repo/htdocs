@@ -23,66 +23,66 @@
         }
     }
 }
-
-
-.wrapper-f24 .input-group-text {
-    padding: .375rem .2rem; 
+.wrapper-f24 {
+    .input-group-text {
+        padding: .375rem .2rem; 
+    }
+    form-control {
+        padding: 0 2px;
+    }
+    .min-w-s {
+        min-width:52px;
+    }
+    .input-group-append {  
+        img {
+            margin-right:0!important;
+        } 
+     }
+     div[class*="col-"] { 
+        &:not([class*="p-"]):not([class*="px-"]):not([class*="pr-"]):not(.nav-item) {
+            padding-right: 4px !important;
+        }
+        &:not([class*="p-"]):not([class*="px-"]):not([class*="pl-"]):not(.nav-item) {
+            padding-left: 4px !important;
+        }
+        }
+        .form-group .form-row, .input-group > .custom-file .form-row, .input-group > .custom-select .form-row, .input-group > .form-control .form-row, .input-group > .input-group-prepend .form-row, .input-group > .input-group-append .form-row {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        label { 
+            letter-spacing: -0.5px!important;
+            font-size: 13px;
+        }
 }
-.wrapper-f24 .form-control {
-    padding: 0 2px;
-}
 
-.min-w-s {
-    min-width:52px;
-}
-
-.input-group-append {  
-   img {
-       margin-right:0!important;
-   } 
-}
 
 @media screen and (min-width: 992px) {
   .display-tablet {display:none!important}
-  
 }
 @media screen and (max-width: 950px) {
-    .min-w-f {
-        min-width:13%
+    .wrapper-f24 {
+        .min-w-f {
+            min-width:13%
+        }
+        .max-w-f {
+            max-width:12%
+        }
+        .wrapper-f24 label {
+           font-size: 13px;
+        }
     }
-    .max-w-f {
-        max-width:12%
-    }
-    .wrapper-f24 label {
-       font-size: 13px;
-    }
-}
-
-.wrapper-f24 {
-    div[class*="col-"] { 
-    &:not([class*="p-"]):not([class*="px-"]):not([class*="pr-"]):not(.nav-item) {
-        padding-right: 4px !important;
-    }
-    &:not([class*="p-"]):not([class*="px-"]):not([class*="pl-"]):not(.nav-item) {
-        padding-left: 4px !important;
-    }
-    }
-    .form-group .form-row, .input-group > .custom-file .form-row, .input-group > .custom-select .form-row, .input-group > .form-control .form-row, .input-group > .input-group-prepend .form-row, .input-group > .input-group-append .form-row {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    
 }
 
 
 @media screen and (min-width: 992px) {
-.l-h {margin-bottom:27px} 
-.col-sm-12 label {
-    max-width: 150px;
-}
-}
-.wrapper-f24 label { 
-    letter-spacing: -0.5px!important;
-    font-size: 13px;
+    .wrapper-f24 {
+        .l-h {margin-bottom:27px} 
+        .col-sm-12 label {
+            max-width: 150px;
+        }
+    }
 }
 
 

@@ -5319,36 +5319,14 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .wrapper-f24 .input-group-text {
   padding: 0.375rem 0.2rem;
 }
-
-.wrapper-f24 .form-control {
+.wrapper-f24 form-control {
   padding: 0 2px;
 }
-
-.min-w-s {
+.wrapper-f24 .min-w-s {
   min-width: 52px;
 }
-
-.input-group-append img {
+.wrapper-f24 .input-group-append img {
   margin-right: 0 !important;
-}
-
-@media screen and (min-width: 992px) {
-  .display-tablet {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 950px) {
-  .min-w-f {
-    min-width: 13%;
-  }
-
-  .max-w-f {
-    max-width: 12%;
-  }
-
-  .wrapper-f24 label {
-    font-size: 13px;
-  }
 }
 .wrapper-f24 div[class*=col-]:not([class*=p-]):not([class*=px-]):not([class*=pr-]):not(.nav-item) {
   padding-right: 4px !important;
@@ -5360,19 +5338,34 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   padding-left: 20px;
   padding-right: 20px;
 }
-
-@media screen and (min-width: 992px) {
-  .l-h {
-    margin-bottom: 27px;
-  }
-
-  .col-sm-12 label {
-    max-width: 150px;
-  }
-}
 .wrapper-f24 label {
   letter-spacing: -0.5px !important;
   font-size: 13px;
+}
+
+@media screen and (min-width: 992px) {
+  .display-tablet {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  .wrapper-f24 .min-w-f {
+    min-width: 13%;
+  }
+  .wrapper-f24 .max-w-f {
+    max-width: 12%;
+  }
+  .wrapper-f24 .wrapper-f24 label {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrapper-f24 .l-h {
+    margin-bottom: 27px;
+  }
+  .wrapper-f24 .col-sm-12 label {
+    max-width: 150px;
+  }
 }
 
 /*# sourceMappingURL=priv_generic.css.map */
