@@ -36,25 +36,11 @@ class StepForm extends Component {
         }
 
         // Prepara gli step della firma
-        // DOCUMENTI INIZIALI
-        let preDocs = <section>
-                        <p>Documenti iniziali "standard"</p>
-                        <Row>
-                            <Col>       
-                                <ul className="elenco-documenti">
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                                </ul>
-                            </Col>
-                        </Row>
-                    </section>
-
-
+       
        
 
         let firmaDocs = <section>
-        <p>Documenti per firma finale</p>
+        <p>Elemento autoconsistente per firma finale</p>
         <Row>
             <Col>       
                 <ul className="elenco-documenti">
@@ -72,7 +58,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>Firma TUB - {nomeint}</h3>
-                    <FirmaInfoCert {...{ obformprops, preDocs, firmaDocs }}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs }}></FirmaInfoCert>
                 </div>
             </div>
         )

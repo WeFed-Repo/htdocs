@@ -9,39 +9,61 @@ export default class extends Component {
     /*
         STEP PER FIRMA: 
 
-        -> ZERO 
-        - Esposizione documenti e testi introduttivi
-        - Pulsante RICHIEDI FIRMA -> Avvio richiesta firma infocert e chiamata INIT (raccoglie le clausole):
-            JSON DA SPEDIRE: 
-                {
-                "id":61, <- Pratica
-                "stato":"FIRMA_XXX", <- ES: FIRMA_PRECONTRATTUALE
-                "intestatarioCorrente":0, <- INTCORRENTE
-                “stepFirma”:”INIT” <- Step richiesto
-                }
+        url: http://promotorisvi7web.webank.local/promotori/onboarding/rest/infocert/firmaOneShot
 
-        
-        -> INIT (avvia la sessione di firma)
-        - Espone documenti in maniera statica
-        - Raccoglie ed espone le clausole personalizzate dinamiche (i parametri sono all'interno)
-        - Spedisce tutto ad ACCETTAZIONE_INFOCERT (in questa occasione viene spedito anche l'otp via SMS)
-        - In basso c'è un pulsante di invio precontrattuale via e-mail
+        -> INIT
+        - Esposizione documenti e clausole
+        - Invio tramite RICHIEDI FIRMA
+        REQUEST:
+        {
+        "id":61,
+        "stato":"FIRMA_XXX",
+        "intestatarioCorrente":0,
+        “stepFirma”:”INIT”
+        } 
 
-        -> MESSAGGIO_CONFERMA (Step "locale" per dare messaggio di conferma)
+        -> CLAUSOLE
+        - Esposizione documenti
+        - Esposizione clausole di accettazione (da flaggare)
+        - Nulla su PROSEGUI ma si abilita solo con l'attivazione delle clausole
+        REQUEST:
+            {
+            "id":61,
+            "firme":
+            "clauses": [
+            {
+            "id" : "clause1",
+            “value” : true
+            },
+            {}
+            ]
+            ,
+            "stato":"FIRMA_XXX",
+            "intestatarioCorrente":0,
+            “stepFirma”:”CLAUSOLE”
+            } 
 
-        -> ACCETTAZ_INFOCERT
-        - Espone una tonnellata di documenti che vengono raccolti dal JSON ed il campo dell'OTP che, tuttavia, non e' come gli altri (occorre anche prevedere un "resend" dell'otp)
-        - Invia l'otp a FirmaDoc
-        - Alla pressione di "Firma il contratto" viene restituito il feedback ed il cliente può avanzare con il "prosegui"
-        -> PASSA ALLO STEP "GLOBALE" successivo (attendere conferma di Caimi per sapere se c'è da fare la chiamata oppure no)
 
-        Controllare ATTESA FIRMA CONSULENTE
+        FIRMADOC -> OTP
+        {
+            "id":61,
+            “otpFirma”: "01135072",
+            "stato":"FIRMA_XXX",
+            "intestatarioCorrente":0,
+            “stepFirma”:”FIRMADOC”
+            }
+
+
+        **** EXTRA: Richiedi o ri-richiedi OTP
+        /promotori/onboarding/rest/infocert/[IDBOZZA]/[INTESTATARIOCORRENTE]/reSendOtpFirma
+
+
     */
     constructor(props) {
         super(props);
         this.state = {
             step: "INIT",
-            loading: false,
+            loading: true,
 
             flagAccInfocert: false,
             flagFirma: false,
@@ -98,16 +120,43 @@ export default class extends Component {
         )
     }
 
+    componentDidMount() {
+        // Loading iniziale di una firma (INIT)
+        getData({
+            method: "POST",
+            url: {svil: "/json_data/onboarding/firma_init.json", prod:"/promotori/onboarding/rest/infocert/firmaOneShot"},
+            error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},
+            success: (data)=> {
+                this.state.initData = data.results;
+
+                this.setState({
+                    loading:false
+                })
+            }
+        })
+
+    }
+
     render() {
 
         return (
             <>
                 {/* <h4>STEP: {this.state.step}</h4> */ }
                 <div className={this.state.loading ? "loading" : ""}>
+                    
                     {this.state.step === "INIT" &&
                         <>
-                            {this.props.preDocs}
-
+                            <ul className="elenco-documenti">
+                                {this.state.initData && this.state.initData.docs.map((doc)=>{
+                                    return <li><a href={doc.url} target="_blank"><i className="icon icon-file_pdf"></i>{doc.name}</a></li>
+                                })
+                                }
+                            </ul> 
+                            <br />
+                            <p>Elenco clausole</p>
+                            <ul>
+                               
+                            </ul>
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
@@ -119,7 +168,8 @@ export default class extends Component {
                             </Row>
                         </>
                     }
-                    {this.state.step === "ACCETTAZ_INFOCERT" &&
+
+                    {this.state.step === "CLAUSOLE" &&
                         // Inizializzazione
                         <>
                             <section>
