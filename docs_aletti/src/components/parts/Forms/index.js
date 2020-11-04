@@ -61,7 +61,7 @@ let handleChange = function (component, e) {
 
     // Appena il campo cambia rimuove il suo errore
     let errors = component.state.errors;
-    if (errors[name]) delete errors[name];
+    if (errors && errors[name]) delete errors[name];
 
     // A seconda del tipo di campo che genera l'evento si comporta in modo differente, in modo da avere sempre l'aggiornamento dello stato corretto
     component.setState(

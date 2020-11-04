@@ -94,7 +94,7 @@ export default class extends Component {
                                     {value: "PDF", text: "application/pdf"}
                                 ]
                                 }>
-                                ></Form.file>
+                                </Form.file>
                         </Col>
                         <Col sm="3">
                             <Form.file
@@ -107,7 +107,7 @@ export default class extends Component {
                                 output={this.state.allOutput}
                                 idBozza="999999999"
                                 >
-                                ></Form.file>
+                                </Form.file>
                         </Col>
                     </Row>
 
@@ -126,7 +126,7 @@ export default class extends Component {
                             idIntestatario="0"
                             btnText="Richiedi il codice di controllo"
                             >
-                            ></Form.otp>
+                            </Form.otp>
                         </Col>
                     </Row>
 
@@ -291,7 +291,7 @@ export default class extends Component {
                                     { "value": "v3", "text": "Checkbox valore 3" }
                                 ]}
                             >
-                                ></Form.checkgroup>
+                                </Form.checkgroup>
                         </Col>
                         <Col>
                             <Form.radiogroup
@@ -307,7 +307,7 @@ export default class extends Component {
                                     { "value": "radio_v2", "text": "Radio valore 2" },
                                     { "value": "radio_v3", "text": "Radio valore 3" }
                                 ]}
-                            >
+                            
                                 ></Form.radiogroup>
                         </Col>
                     </Row>
@@ -328,7 +328,7 @@ export default class extends Component {
                                     { "value": "v3", "text": "Checkbox valore 3" }
                                 ]}
                             >
-                                ></Form.checkgroup>
+                                </Form.checkgroup>
                         </Col>
                         <Col>
                             <Form.radiogroup
@@ -346,7 +346,7 @@ export default class extends Component {
                                     { "value": "radio_v3", "text": "Radio valore 3" }
                                 ]}
                             >
-                                ></Form.radiogroup>
+                                </Form.radiogroup>
                         </Col>
                     </Row>
                     <Row>
@@ -361,8 +361,7 @@ export default class extends Component {
                                 onChange={this.generalOnChange}
                                 disabled={this.state.allDisabled}
                                 options={[{ "value": "checcato", "text": "Autorizzo il checkbox ad attivarsi ai sensi di quanto scritto qui sopra" }]}
-                            >
-                                ></Form.checkgroup>
+                            ></Form.checkgroup>
                         </Col>
                         <Col>
                             <p><strong>Presa visione:</strong><br />
@@ -378,7 +377,7 @@ export default class extends Component {
                                 fileurl="http://www.google.it"
                                 filetype="pdf"
                             >
-                                ></Form.checkfile>
+                            </Form.checkfile>
                         </Col>
                     </Row>
 

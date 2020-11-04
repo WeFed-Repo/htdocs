@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Col, Row, Button } from 'reactstrap';
 import getData from "functions/getData";
 import Form from 'components/parts/Forms';
-import { getNextState, getNextInt } from "../gestioneStati";
 
 export default class extends Component {
 
@@ -10,39 +9,6 @@ export default class extends Component {
         STEP PER FIRMA: 
 
         url: http://promotorisvi7web.webank.local/promotori/onboarding/rest/infocert/firmaOneShot
-
-        -> INIT
-        - Esposizione documenti e clausole
-        - Invio tramite RICHIEDI FIRMA
-        REQUEST:
-        {
-        "id":61,
-        "stato":"FIRMA_XXX",
-        "intestatarioCorrente":0,
-        “stepFirma”:”INIT”
-        } 
-
-        -> CLAUSOLE
-        - Esposizione documenti
-        - Esposizione clausole di accettazione (da flaggare)
-        - Nulla su PROSEGUI ma si abilita solo con l'attivazione delle clausole
-        REQUEST:
-            {
-            "id":61,
-            "firme":
-            "clauses": [
-            {
-            "id" : "clause1",
-            “value” : true
-            },
-            {}
-            ]
-            ,
-            "stato":"FIRMA_XXX",
-            "intestatarioCorrente":0,
-            “stepFirma”:”CLAUSOLE”
-            } 
-
 
         FIRMADOC -> OTP
         {
@@ -71,14 +37,26 @@ export default class extends Component {
             // Blocchi dati da chiamate
             initData: null,
 
+            clausoleData: null,
+            clausoleCheckEnabled: false,
+            clausoleChecks: "",
 
             proseguiEnabled: true
         }
         this.sendClausole = this.sendClausole.bind(this);
         this.firmaDoc = this.firmaDoc.bind(this);
+        this.generalOnChange = this.generalOnChange.bind(this);
     }
 
-    
+    // OnChange dei check
+    generalOnChange(e) {
+        Form.change(this,e);         
+    }  
+
+    allChecked(checkvalue,checkarray) {
+        var checkall = (checkvalue.split(",").sort().join(",") === checkarray.sort().join(","));
+        return checkall;
+    }
 
     firmaDoc() {
         // Invio codice OTP
@@ -138,11 +116,10 @@ export default class extends Component {
             error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},    
             success: (data) => {
                 // Preparazione del form di accettazione
-
                 this.setState({
                     step: "CLAUSOLE",
                     proseguiEnabled:false,
-                    initData: data.results,
+                    clausoleData: data.results,
                     loading: false
                 });
             }
@@ -203,17 +180,25 @@ export default class extends Component {
                     {this.state.step === "CLAUSOLE" &&
                         // Inizializzazione
                         <>
+                            <h4>Dichiarazioni</h4>
                             <section>
                                 <ul className="elenco-documenti">
-                                    {this.state.initData.docs.map((v,i)=>{
-                                        return <li><a href={v.url} target="_blank"><i className="icon icon-file_pdf"></i>{v.name}</a></li>
-                                    })}
+                                   <li><a href={this.state.clausoleData.url} target="_blank" onClick={()=>this.setState({clausoleCheckEnabled: true})}><i className="icon icon-file_pdf"></i>{this.state.clausoleData.name}</a></li>
                                 </ul>
                             </section>
+                            <p><strong>Il titolare</strong></p>
                             <section className="clauses">
-                                {this.state.initData.clauses.map((v,i)=>{
-                                    return <Form.checkgroup key={i} name={i} onChange={()=>this.setState({proseguiEnabled:true})} options={[{"text": v.text, value: "true"}]}></Form.checkgroup>
-                                })}
+                                <Form.checkgroup
+                                    onChange={this.generalOnChange} 
+                                    name="clausoleChecks"
+                                    className="no-label" 
+                                    value={this.state.clausoleChecks} 
+                                    options={this.state.clausoleData.clauses.map((v)=>{return {"value": v.id,"text": v.text}})} 
+                                    orientation="vertical" 
+                                    disabled={!this.state.clausoleCheckEnabled}
+                                    cbchange={(val)=>this.setState({proseguiEnabled : this.allChecked(val, this.state.clausoleData.clauses.map((v)=>{return v.id}))})}
+                                    >
+                                </Form.checkgroup>
                             </section>
                             <Row>
                                 <Col>

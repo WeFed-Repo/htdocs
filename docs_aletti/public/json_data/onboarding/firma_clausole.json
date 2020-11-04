@@ -7,10 +7,10 @@
     "results": {
         "clauses" : [ { 
             "id" : "clause1",
-            "text" : "text1"
+            "text" : "Approva lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
         }, {
             "id" : "clause2",
-            "text" : "text2"
+            "text" : "text2  lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude lorem ipsum dolor sit amet consectetur adipiscing elit summa cum laude"
         }],
         "url": "https://topcl.infocert.it/docs/infocert-manuali/MO-ENT.pdf",
         "name": "Documentazione precontrattuale della Firma Elettronica Qualificata One Shot e della Posta Elettronica Certificata"
