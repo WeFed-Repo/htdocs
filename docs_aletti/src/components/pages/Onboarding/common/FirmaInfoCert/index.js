@@ -74,38 +74,11 @@ export default class extends Component {
 
             proseguiEnabled: true
         }
-        this.sendInit = this.sendInit.bind(this);
+        this.sendClausole = this.sendClausole.bind(this);
         this.firmaDoc = this.firmaDoc.bind(this);
     }
 
-    /* AZIONE INIT */ 
-    sendInit() {
-        let obform =  this.props.obformprops.obstate;
-        this.setState({ loading: true });
-        getData({
-            url: {"svil":"/json_data/onboarding/firma_init.json","prod":""},
-           
-            data: {
-                "id":obform.field_id, 
-                "stato":getNextState(obform), 
-                "intestatarioCorrente":getNextInt(obform),
-                "stepFirma":"INIT"
-            },
-                
-            success: (data) => {
-                // Preparazione del form di accettazione
-
-                this.setState({
-                    step: "ACCETTAZ_INFOCERT",
-                    proseguiEnabled:false,
-                    initData: data.results,
-                    loading: false
-                });
-            }
-        })
-
-
-    }
+    
 
     firmaDoc() {
         // Invio codice OTP
@@ -120,20 +93,61 @@ export default class extends Component {
         )
     }
 
+     // Loading iniziale di una firma (INIT)
     componentDidMount() {
-        // Loading iniziale di una firma (INIT)
+        let obform =  this.props.obformprops.obstate;
         getData({
             method: "POST",
             url: {svil: "/json_data/onboarding/firma_init.json", prod:"/promotori/onboarding/rest/infocert/firmaOneShot"},
+            data:  {
+                "id":obform.field_id,
+                "stato":this.props.firmatype,
+                "intestatarioCorrente":obform.field_intestcorrente,
+                "stepFirma":"INIT"
+            },
             error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},
             success: (data)=> {
                 this.state.initData = data.results;
-
                 this.setState({
                     loading:false
                 })
             }
         })
+    }
+
+    /* AZIONE INIT (CLAUSOLE) */ 
+    sendClausole() {
+        let obform =  this.props.obformprops.obstate;
+        this.setState({ loading: true });
+        getData({
+            url: {"svil":"/json_data/onboarding/firma_clausole.json","prod":""},
+            data: {
+                "id":obform.field_id,
+                "stato":this.props.firmatype,
+                "intestatarioCorrente":obform.field_intestcorrente,
+                "stepFirma":"CLAUSOLE",
+                "clauses": [
+                        this.state.initData.clauses.map(val=>{
+                            return {
+                                "id" : "clause1",
+                                "value" : true
+                                }
+                        })
+                ],
+            },
+            error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},    
+            success: (data) => {
+                // Preparazione del form di accettazione
+
+                this.setState({
+                    step: "CLAUSOLE",
+                    proseguiEnabled:false,
+                    initData: data.results,
+                    loading: false
+                });
+            }
+        })
+
 
     }
 
@@ -178,7 +192,7 @@ export default class extends Component {
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" className="sub-buttons" onClick={this.sendInit}>Richiedi certificato</Button>
+                                            <Button color="primary" className="sub-buttons" onClick={this.sendClausole}>Richiedi certificato</Button>
                                         </div>
                                     </div>
                                 </Col>

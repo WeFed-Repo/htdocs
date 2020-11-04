@@ -1,0 +1,18 @@
+{
+    "esito": {
+        "type": "OK",
+        "code": "200",
+        "description": null
+    },
+    "results": {
+        "clauses" : [ { 
+            "id" : "clause1",
+            "text" : "text1"
+        }, {
+            "id" : "clause2",
+            "text" : "text2"
+        }],
+        "url": "https://topcl.infocert.it/docs/infocert-manuali/MO-ENT.pdf",
+        "name": "Documentazione precontrattuale della Firma Elettronica Qualificata One Shot e della Posta Elettronica Certificata"
+    }
+} 

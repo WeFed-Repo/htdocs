@@ -37,28 +37,20 @@ class StepForm extends Component {
 
         // Prepara gli step della firma
        
-       
-
-        let firmaDocs = <section>
-        <p>Elemento autoconsistente per firma finale</p>
-        <Row>
-            <Col>       
-                <ul className="elenco-documenti">
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                    <li><a><i className="icon icon-file_pdf"></i>Lorem ipsum dolor sit amet</a></li>
-                </ul>
-            </Col>
-        </Row>
+        let firmaDocs = 
+        <section>
+            <p>Elemento autoconsistente per firma finale al quale viene appeso una volta valido, l'otp per la firma finale</p>
         </section>;
 
+
+        let firmatype = "FIRMA_TUB";
 
 
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Firma TUB - {nomeint}</h3>
-                    <FirmaInfoCert {...{ obformprops, firmaDocs }}></FirmaInfoCert>
+                    <h3>FIRMA TUB</h3>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}></FirmaInfoCert>
                 </div>
             </div>
         )
