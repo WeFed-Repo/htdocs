@@ -139,6 +139,8 @@ export default class extends Component {
 
     render() {
 
+        let obform =  this.props.obformprops.obstate;
+
         return (
             <>
                 {/* <h4>STEP: {this.state.step}</h4> */ }
@@ -146,16 +148,31 @@ export default class extends Component {
                     
                     {this.state.step === "INIT" &&
                         <>
+                            <h4>INFORMATIVA PRECONTRATTUALE SERVIZI FIRMA ELETTRONICA QUALIFICATA ONE SHOT E PEC</h4>
+                            <p>
+                                <strong>Cognome e nome</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_nome"] + " " + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_cognome"]}<br />
+                                <strong>Data di nascita</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_nascita"]}<br />
+                                <strong>Luogo di nascita</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_comunenascita"]}<br />
+                                <strong>Indirizzo di residenza</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_tipoindirizzoresidenza"] + " "
+                                   + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_indirizzoresidenza"] + " "
+                                   + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_numresidenza"] + " "} – {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_comuneresidenza"]}
+                            </p>
+                            <p>
+                                Per procedere il cliente deve obbligatoriamente aprire i seguenti documenti in formato pdf e confermare la presa visione.
+                            </p>
                             <ul className="elenco-documenti">
-                                {this.state.initData && this.state.initData.docs.map((doc)=>{
-                                    return <li><a href={doc.url} target="_blank"><i className="icon icon-file_pdf"></i>{doc.name}</a></li>
+                                {this.state.initData && this.state.initData.docs.map((doc,i)=>{
+                                    return <li key={i}><a href={doc.url} target="_blank"><i className="icon icon-file_pdf"></i>{doc.name}</a></li>
                                 })
                                 }
                             </ul> 
                             <br />
-                            <p>Elenco clausole</p>
+                            <p>Il cliente cliccando sul tasto <strong>"RICHIEDI IL CERTIFICATO"</strong>:</p>
                             <ul>
-                               
+                                {this.state.initData && this.state.initData.clauses.map((clause,i)=>{
+                                    return <li key={i}>{clause.text}</li>
+                                })
+                                }
                             </ul>
                             <Row>
                                 <Col>
