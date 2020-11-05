@@ -346,7 +346,9 @@ button {
 .btn-align-right {
     text-align: right;
 }
-
+.form-group.btnWrapper .btn-align-right {
+    float:right;
+}
 .btn-align-center {
     text-align: center;
 }
@@ -1734,6 +1736,15 @@ body.modal-open {
     text-transform: uppercase;
     float: left;
     letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .modal-dialog .modal-body .riquadro h1, #wlCreaForm h3,
+    .modal-title {
+        letter-spacing: 0;
+        font-size: 17px;
+        padding-right:20px;
+    }
+    
 }
 
 /*AUTOCOMPLETE */
@@ -7558,8 +7569,8 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .evidenziato {background-color: #ddd;}
 .fixedColumns.scelta-profilo tr .highlight {background-color: #ecf5f3;}
 .fixedColumns.scelta-profilo .right{text-align:right!important}
-.modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 15px}
-.modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 15px}
+.modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 8px}
+.modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 8px}
 #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 8px}
 #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 8px}
 
@@ -7670,7 +7681,7 @@ div.fixed-table-scroll-outer {
         width:58px;
      }
     .fixedColumns.scelta-profilo .evidenziato, 
-    .fixedColumns.scelta-profilo .hightlight {width:40px;background-color: #ddd;}
+    .fixedColumns.scelta-profilo .hightlight {width:76px;background-color: #ddd;font-weight:normal!important}
     .fixedColumns.scelta-profilo th:first-child .fht-cell {width:69px!important}
     .fixedColumns.scelta-profilo .evidenziato .fht-cell {width:40px!important}
     .fixed-table-header-columns {width:206px!important; max-height: 50px}
@@ -8390,6 +8401,7 @@ label.label-checkbox-wrapper .btn-icon {
     .modal-body .linee-wrapper .lineaN {
         font-size:12px;
     }
+   
 }
 @media (min-width:767px) and (max-width:1500px) {
     #tbFixedColumn th:first-child,
@@ -8415,10 +8427,59 @@ label.label-checkbox-wrapper .btn-icon {
         font-size: 12px;
     }
 }
-
-
-
-
-
 /*FINE BORDO SU TABELLA COMMISSIONI */
 
+/*SEZIONE ID FIXING */
+@media (max-width:768px) {
+    .row-gray {
+        margin:0;
+    }
+    .row-gray .alignCenter img.img-resp, .disp-tab .alignCenter img.img-resp{
+        max-width: 30%;
+    }
+    section .row .bullet-spunta {
+        margin-bottom: 0;
+    }
+    .assicurazioni .box-catalogue-left, .assicurazioni .box-catalogue-right {
+        margin: 0 20px;
+        padding-bottom:0;
+    }
+    .btn-inline {
+        margin-top:0;
+    }
+    section:last-child .btnWrapper .btn {
+        margin-bottom:0;
+    }
+    .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child {
+        float:right;
+    }
+    .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child .btn {
+        margin-right:0;
+    }
+    .alignCenter .stepOff {
+        min-height:0;
+        background-color: #fff;
+    }
+    #otpSoftwareOffline.ui-dialog-content {
+        background-color: #fff!important;
+        background-image:none;
+    }
+    #otpSoftwareOffline #codiceOTP {
+        margin-bottom:10px;
+    }
+    #otpSoftwareOffline .modal-bottom {
+        bottom:0;
+    }
+    
+}
+@media (max-width:400px) {
+    .row-gray .alignCenter img.img-resp, .disp-tab .alignCenter img.img-resp{
+        max-width: 50%;
+    }
+    .link-text i + span.btnLink {
+        max-width: 90%;
+        line-height: 20px;
+        top:0
+    }
+}
+/*FINE SEZIONE ID FIXING */
