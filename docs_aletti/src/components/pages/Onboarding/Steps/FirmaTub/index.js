@@ -3,10 +3,14 @@ import Form from 'components/parts/Forms';
 import FirmaInfoCert from '../../common/FirmaInfoCert'
 import salva from "./salva";
 import validazione from "./validazione";
-import { Col, Row, Button } from 'reactstrap';
+import FirmaDocs from "./firmaDocs";
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
+
+    state= {
+        firmaDocsValid:false
+    }
 
     componentDidMount() {
         this.props.setObState({
@@ -35,12 +39,9 @@ class StepForm extends Component {
             nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
         }
 
-        // Prepara gli step della firma
-       
-        let firmaDocs = 
-        <section>
-            <p>Elemento autoconsistente per firma finale al quale viene appeso una volta valido, l'otp per la firma finale</p>
-        </section>;
+        // BLOCCO CON STEP FIRMA AUTOCONSISTENTE (gli stati sono locali)
+        let firmaDocs = <FirmaDocs validFunction={()=>this.setState({firmaDocsValid:true})}></FirmaDocs>
+      
 
 
         let firmatype = "FIRMA_TUB";
@@ -50,7 +51,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>FIRMA TUB</h3>
-                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} firmaDocsValid={this.state.firmaDocsValid}></FirmaInfoCert>
                 </div>
             </div>
         )

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Button } from 'reactstrap';
 import getData from "functions/getData";
 import Form from 'components/parts/Forms';
+import "./firmaInfoCert.scss";
 
 export default class extends Component {
 
@@ -135,6 +136,7 @@ export default class extends Component {
         return (
             <>
                 {/* <h4>STEP: {this.state.step}</h4> */ }
+                <div className="icLogo"></div>
                 <div className={this.state.loading ? "loading" : ""}>
                     
                     {this.state.step === "INIT" &&
@@ -204,24 +206,7 @@ export default class extends Component {
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={() => this.setState({ step: "MESSAGGIO_CONFERMA" })}>Prosegui</Button>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </>
-                    }
-                     {this.state.step === "MESSAGGIO_CONFERMA" &&
-                        // Inizializzazione
-                        <>
-                            <div class="alert alert-success" role="alert">
-                                La firma è ora attiva!
-                            </div>
-                            <Row>
-                                <Col>
-                                    <div className="btn-console btn-console-sub">
-                                        <div className="btn-console-right">
-                                            <Button color="primary" className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" })}>Prosegui</Button>
+                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" ,proseguiEnabled:false})}>Prosegui</Button>
                                         </div>
                                     </div>
                                 </Col>
@@ -232,6 +217,12 @@ export default class extends Component {
                         // Inizializzazione
                         <>
                             {this.props.firmaDocs}
+                            {this.props.firmaDocsValid &&
+                                <div class="otp">
+                                    CAMPO otp
+                                    <a>Richiedi OTP</a>
+                                </div>
+                            }
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
