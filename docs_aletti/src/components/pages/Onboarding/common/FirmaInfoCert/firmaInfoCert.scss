@@ -7,3 +7,11 @@
     background: transparent url(/logo-infocert.png) no-repeat 0 0;
     background-size: cover;;
 }
+
+.otp {padding:20px;border:solid 1px #ccc;margin: 0 0 25px;border-radius:5px;
+    .otp-block {text-align:center; width:250px; margin:0 auto}
+    label {width:100%;font-style: italic}
+    input {text-align:center;width:100%;margin-bottom:10px}
+    .otp-sender {font-size:12px;text-transform:uppercase;background:#eee;border:solid 1px #ccc;width:100%;display:block; padding:5px; border-radius:5px;cursor:pointer}
+
+}

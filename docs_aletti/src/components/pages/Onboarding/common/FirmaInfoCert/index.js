@@ -42,6 +42,11 @@ export default class extends Component {
             clausoleCheckEnabled: false,
             clausoleChecks: "",
 
+            firmaOtp:"",
+            otpLoading: false,
+            otpDisabled: true,
+            callOtpText: "Richiedi codice OTP",
+
             proseguiEnabled: true
         }
         this.sendClausole = this.sendClausole.bind(this);
@@ -57,6 +62,24 @@ export default class extends Component {
     allChecked(checkvalue,checkarray) {
         var checkall = (checkvalue.split(",").sort().join(",") === checkarray.sort().join(","));
         return checkall;
+    }
+
+    // Richiede un codice OTP
+    callOtp(){
+        this.setState({
+            otpLoading: true
+        });
+        getData({
+            url: {"svil": "/json_data/simpleEsitoOk.json","prod": "/promotori/onboarding/rest/infocert/"+ this.props.obformprops.obstate.field_id + "/"+this.props.obformprops.obstate.field_intestcorrente+"/reSendOtpFirma"},
+            success: ()=>{
+                this.setState({
+                    callOtpText: "Invia nuovo codice",
+                    otpDisabled:false,
+                    otpLoading:false,
+                    firmaOtp:""
+                });
+            }
+        })
     }
 
     firmaDoc() {
@@ -218,16 +241,20 @@ export default class extends Component {
                         <>
                             {this.props.firmaDocs}
                             {this.props.firmaDocsValid &&
-                                <div class="otp">
-                                    CAMPO otp
-                                    <a>Richiedi OTP</a>
+                                <div className="otp">
+                                    <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
+                                    <div className={"otp-block " + (this.state.otpLoading? "loading":"")}>
+                                        <label>Il cliente Inserisce il codice OTP</label>
+                                        <input type="text" maxlength="6" disabled={this.state.otpDisabled} value={this.state.firmaOtp} onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
+                                        <span onClick={()=>this.callOtp()} className="otp-sender" placeholder="******">{this.state.callOtpText}</span>
+                                    </div>
                                 </div>
                             }
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>
+                                            <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>
                                         </div>
                                     </div>
                                 </Col>
