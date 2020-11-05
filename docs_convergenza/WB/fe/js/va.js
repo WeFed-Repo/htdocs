@@ -28,6 +28,33 @@ function filterText(testo) {
 	}
 }
 
+// Funzione che ritorna un url pulito per il redirect anche se dal Backend risulta malforme (05-11-2020)
+var vaRedirectUrl = function(url,sQuestion,sLeft,sTop) {
+	// Spezza l'url in un array ed estrae solo la prima parte
+	urlArray = url.split("#").join("|").split("?").join("|").split("&").join("|").split("|");
+	var baseUrl = urlArray.shift();
+	var paramsArray = [];
+	var anchor= ""
+	// Smista le casistiche a seconda del carattere contenuto
+	$.each(urlArray, function( i, v ) {
+		if (v.indexOf("=")>=0) 
+		{
+			paramsArray.push(v)
+		}
+		else
+		{
+			anchor = "#" + v;
+		}
+	});
+	//push dei parametri di default per il redirect
+	if(sQuestion && sQuestion.length>0) paramsArray.push("sQuestion=" + sQuestion);
+	if(sLeft) paramsArray.push("sLeft=" + sLeft);
+	if(sTop) paramsArray.push("sTop=" + sTop);
+
+	return baseUrl + (paramsArray.length>0 ? "?" + paramsArray.join("&") : "") + anchor;
+}
+
+
 // vaAvatar
 var vaAvatar = {
 	// Variabili globali (milestone,duration)
@@ -233,7 +260,9 @@ function vaAsking(domanda, history)
 			// Solo se la pagina non e' gia' stata caricata e la domanda risulta differente rispetto a quella di onload
 			if (vaAnswerRoot.url && !vaExtLoaded)
 			{
-				// Prepara l'url per il redirect
+				location.href = vaRedirectUrl(vaAnswerRoot.url,encodeURIComponent(btoa(filterText(domanda))), vAss.offset().left, vAss.offset().top);
+
+				/* Redirect "rivisto per ancora" prima del 05-11
 				var redurl = vaAnswerRoot.url,
 					redanch = "";
 				if (redurl.split("#").length>1) {
@@ -245,6 +274,8 @@ function vaAsking(domanda, history)
 				}
 				
 				location.href = redurl + "&sQuestion=" + encodeURIComponent(btoa(filterText(domanda))) + "&sLeft=" + vAss.offset().left + "&sTop=" + vAss.offset().top + redanch;
+				*/
+				
 				return 0;
 			}
 			else
