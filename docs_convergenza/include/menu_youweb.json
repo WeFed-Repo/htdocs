@@ -453,6 +453,10 @@
 				"nome" : "Le tue polizze",
 				"voices": [
 					{
+						"nome": "Profilo misto",
+						"tpl": "tpl_profilo_assicurativo_misto.php"
+					},
+					{
 						"nome": "Profilo presente",
 						"tpl": "tpl_profilo_assicurativo_presente.php",
 						"voices": [

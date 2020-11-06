@@ -7569,8 +7569,10 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .evidenziato {background-color: #ddd;}
 .fixedColumns.scelta-profilo tr .highlight {background-color: #ecf5f3;}
 .fixedColumns.scelta-profilo .right{text-align:right!important}
-.modal-dialog .modal-body .fixedColumns.scelta-profilo th {padding:0 8px}
-.modal-dialog .modal-body .fixedColumns.scelta-profilo td {padding:0 8px}
+.fixedColumns.scelta-profilo th {padding:0 12px}
+.fixedColumns.scelta-profilo td {padding:0 12px}
+.modal-body .fixedColumns.scelta-profilo th {padding:0 8px}
+.modal-body .fixedColumns.scelta-profilo td {padding:0 8px}
 #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 8px}
 #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 8px}
 
@@ -7672,7 +7674,7 @@ div.fixed-table-scroll-outer {
         margin-bottom: 14px;
     }
     .desktop-label {display: none;}
-    .mobile-label {display: inline-block;}
+    .mobile-label {display: inline-block;line-height: 15px;}
     /*.fixed-table-container .fixedColumns .th-inner {white-space: nowrap;}*/
     .fixedColumns.scelta-profilo th:first-child,
     .fixedColumns.scelta-profilo td:first-child
@@ -8282,7 +8284,35 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .link-box .text-link:hover {text-decoration:underline}
 
 /*ASSICURAZIONI QUESTIONARIO */
-
+.accordion-icon-wrapper h3 a {
+    position: relative;
+    display: block;
+}
+.accordion-icon-wrapper h3 span {
+    position: absolute;
+    left: 70px;
+    top:10px;
+}
+.accordion-icon-wrapper h3 .accordion-icon {
+    max-width: 30px;
+}
+.accordion-icon-wrapper h3 .icon {
+    margin-top:10px;
+}
+@media (max-width:767px) {
+    .accordion-icon-wrapper h3 span {
+        left: 40px;
+        font-size:14px;
+        padding-right:30px;
+        top:0;
+    }
+    .accordion-icon-wrapper h3  {
+        padding: 20px 10px!important;
+    }
+    .accordion-icon-wrapper h3 .icon {
+        margin:0
+    }
+} 
 /* DISPLAY GENERICI TABLE */
 .display-table {
     display: table;
