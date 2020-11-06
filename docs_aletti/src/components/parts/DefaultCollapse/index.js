@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import './style.css';
 import { Card, CardHeader, Collapse } from "reactstrap";
 
@@ -76,11 +75,5 @@ class DefaultCollapse extends PureComponent {
     }
 }
 
-DefaultCollapse.propTypes = {
-    label: PropTypes.string.isRequired,
-    disabled: PropTypes.bool,
-    startsOpen: PropTypes.bool,
-    isParent: PropTypes.bool,
-};
 
 export default DefaultCollapse;
