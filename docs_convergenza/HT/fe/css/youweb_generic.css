@@ -2511,7 +2511,7 @@ div.messagePanel p {
     }
 
     .modal-dialog .modal-body, .modal-dialog .modal-header {
-        padding: 15px;
+        padding: 13px;
     }
 
     .modal-header .close {
@@ -7560,7 +7560,7 @@ div.fixed-table-scroll-outer {
 
 .title-row td {background-color: #E4E4E4;}
 .mobile-label {display: none;}
-.fixedColumns.scelta-profilo  td, .fixedColumns.scelta-profilo  th { border:1px solid #ccc!important; vertical-align:middle!important}
+.fixedColumns.scelta-profilo  td, .fixedColumns.scelta-profilo  th {border:1px solid #ccc!important; vertical-align:middle!important}
 .fixed-table-header-columns,.fixed-table-body-columns {display:none!important}
 .fixedColumns.scelta-profilo label {display: block;}
 .fixedColumns.scelta-profilo .center {text-align: center!important;}
@@ -7571,11 +7571,12 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo .right{text-align:right!important}
 .fixedColumns.scelta-profilo th {padding:0 12px}
 .fixedColumns.scelta-profilo td {padding:0 12px}
-.modal-body .fixedColumns.scelta-profilo th {padding:0 8px}
-.modal-body .fixedColumns.scelta-profilo td {padding:0 8px}
+/*.modal-body .fixedColumns.scelta-profilo th {padding:0 8px;}
+.modal-body .fixedColumns.scelta-profilo td {padding:0 8px;}*/
 #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo th {padding:0 8px}
 #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo th {padding:0 8px}
-
+#modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo.ex-bpm td, #modaleTabellaCosti .modal-body #tbFixedColumn.fixedColumns.scelta-profilo.ex-bpm th {padding:0 12px}
+#modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo.ex-bpm td, #modaleTabellaCosti .modal-body #tbFixedColumnB.fixedColumns.scelta-profilo.ex-bpm th {padding:0 12px}
 
 .textWrapper {position:relative;}
 .textWrapper a { text-decoration: underline; cursor:pointer }
@@ -7675,20 +7676,32 @@ div.fixed-table-scroll-outer {
     }
     .desktop-label {display: none;}
     .mobile-label {display: inline-block;line-height: 15px;}
-    /*.fixed-table-container .fixedColumns .th-inner {white-space: nowrap;}*/
     .fixedColumns.scelta-profilo th:first-child,
     .fixedColumns.scelta-profilo td:first-child
      {
         background-color: #ddd;
         width:58px;
      }
+     
+     
     .fixedColumns.scelta-profilo .evidenziato, 
-    .fixedColumns.scelta-profilo .hightlight {width:76px;background-color: #ddd;font-weight:normal!important}
+    .fixedColumns.scelta-profilo .hightlight {/*width:76px;*/background-color: #ddd;font-weight:normal!important}
+    .fixedColumns.scelta-profilo .evidenziato, 
+    .fixedColumns.scelta-profilo .hightlight {width:76px;}
     .fixedColumns.scelta-profilo th:first-child .fht-cell {width:69px!important}
     .fixedColumns.scelta-profilo .evidenziato .fht-cell {width:40px!important}
-    .fixed-table-header-columns {width:206px!important; max-height: 50px}
+    .fixed-table-header-columns {width:208px!important; max-height: 50px}
+    
+    .fixed-table-header-columns {max-height: 50px}
     .fixedColumns.scelta-profilo .radio-mobile {display:table-row}
     .fixedColumns.scelta-profilo .radio-mobile input {position:static!important}
+
+    .ex-bpm .fixed-table-header-columns {width:112px!important;}
+    /*
+    .ex-bpm .fixedColumns.scelta-profilo .evidenziato, 
+    .ex-bpm .fixedColumns.scelta-profilo .hightlight {width:76px;}
+    .ex-bpm .fixedColumns.scelta-profilo th:first-child .fht-cell {width:69px!important}
+    .ex-bpm .fixedColumns.scelta-profilo .evidenziato .fht-cell {width:40px!important}*/
 
 }
 
@@ -8387,6 +8400,7 @@ label.label-checkbox-wrapper .btn-icon {
 .linee-wrapper { border: 1px solid #ccc; border-bottom:0; width: 100%;float:left; padding-top:15px;}
 .linee-wrapper .lineaT, .linee-wrapper .lineaTb {float:left; font-weight: bold}
 .linee-wrapper .lineaN {float:right;height:30px;padding-right:10%;font-weight: bold}
+.ex-bpm .linee-wrapper .lineaN {padding-right:22%;}
 /*BORDO SU TABELLA COMMISSIONI */
 @media (min-width:767px) {
     #tbFixedColumn th:first-child,
@@ -8416,15 +8430,15 @@ label.label-checkbox-wrapper .btn-icon {
 
     .modal-body #tbFixedColumn th:first-child,
     .modal-body #tbFixedColumnB th:first-child{
-        width: 22%;
+        width: 18%;
     }
     .modal-body #tbFixedColumn th.evidenziato,
     .modal-body #tbFixedColumnB th.evidenziato{
         width: 20%;
     }
     .modal-body .linee-wrapper .lineaT,.modal-body .linee-wrapper .lineaTb{
-        width: 42%;
-        padding-left: 22%;
+        width: 38%;
+        padding-left: 18%;
         text-align: center;
         font-size:12px;
     }
