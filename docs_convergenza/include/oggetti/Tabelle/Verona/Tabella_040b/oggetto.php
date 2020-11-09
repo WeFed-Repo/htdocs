@@ -1,4 +1,4 @@
-<section>
+<!--<section>
 <a href="#" data-toggle="modal"  data-target="#modaleTabellaCosti"> Apri tabella in overlayer</a>
 <div id="modaleTabellaCosti" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -21,33 +21,14 @@
 	 <thead>
 	        <tr>
 	            <th class="left" data-index="0"></th>
-	            
-		            <th class="center evidenziato" data-index="1">
-		            	
-					</th>
+	            <th class="center evidenziato" data-index="1">
 					
-	            
-	            <th class="center" data-index="2">
-					
-					Base
-					
-	            </th>
-	            <th class="center" data-index="3">
-					
-					Silver
-					
-	            </th>
-	            <th class="center" data-index="4">
-					
-					Gold
-					
-	            </th>
-	            
-		            <th class="center" data-index="5">
-		                
-		                YouBanking
-		                
-		            </th>
+					<span class="mobile-label">La tua Linea ATTUALE</span>
+				</th>
+				<th class="center" data-index="2">Base</th>
+	            <th class="center" data-index="3">Silver</th>
+	            <th class="center" data-index="4">Gold </th>
+	            <th class="center" data-index="5">YouBanking</th>
 	            
 	         </tr>
 	    </thead>
@@ -58,25 +39,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	0,00 &euro;
+		            	0,00 €
 					</td>
 				
 				
 					<td class="right">
-				    	        3,00             &euro;
+				    	        3,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        8,00             &euro;
+				    	        8,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       20,00             &euro;
+				    	       20,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						0,00&euro;
+						0,00€
 					</td>
 	            
 	        </tr>
@@ -86,25 +67,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-						0&nbsp;ese/mese
+						0 ese/mese
 					</td>
 				
 	            
 					<td class="right">
-				    	           1             &nbsp;ese/mese
+				    	           1              ese/mese
 				    </td>
 			    
 					<td class="right">
-				    	           3             &nbsp;ese/mese
+				    	           3              ese/mese
 				    </td>
 			    
 					<td class="right">
-				    	          20             &nbsp;ese/mese
+				    	          20              ese/mese
 				    </td>
 			    
 	            
 		            <td class="right">
-						15&nbsp;ese/mese
+						15 ese/mese
 					</td>
 	            
 	        </tr>
@@ -158,25 +139,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	5,00 &euro;
+		            	5,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	       13,00             &euro;
+				    	       13,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       11,00             &euro;
+				    	       11,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        5,00             &euro;
+				    	        5,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-		            	7,00&euro;
+		            	7,00€
 		            </td>
 	            
 	        </tr>
@@ -186,25 +167,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	15,00 &euro;
+		            	15,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	       28,00             &euro;
+				    	       28,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       28,00             &euro;
+				    	       28,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       15,00             &euro;
+				    	       15,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						20,00&euro;
+						20,00€
 					</td>
 	            
 	        </tr>
@@ -214,25 +195,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-						0,00 &euro;
+						0,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						0,00&euro;
+						0,00€
 					</td>
 	            
 	        </tr>
@@ -242,25 +223,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	0,00 &euro;
+		            	0,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-		            	0,00&euro;
+		            	0,00€
 		            </td>
 	            
 	        </tr>
@@ -302,7 +283,7 @@
 			    
 	            
 		            <td class="right">
-						0,1900%&euro;
+						0,1900%€
 					</td>
 	            
 	        </tr>
@@ -312,20 +293,20 @@
 				</td>
 				
 	            	<td class="center evidenziato">
-	            		0,00 &euro;
+	            		0,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        0,00             &euro;
+				    	        0,00             €
 				    </td>
 			    
 	            
@@ -340,25 +321,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	25,00 &euro;
+		            	25,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	       35,00             &euro;
+				    	       35,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       30,00             &euro;
+				    	       30,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       27,00             &euro;
+				    	       27,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						25,00&euro;
+						25,00€
 					</td>
 	            
 	        </tr>
@@ -368,25 +349,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	25,00 &euro;
+		            	25,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	       35,00             &euro;
+				    	       35,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       30,00             &euro;
+				    	       30,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       27,00             &euro;
+				    	       27,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-		            	25,00&euro;
+		            	25,00€
 		            </td>
 	            
 	        </tr>
@@ -414,7 +395,7 @@
 			    
 	            
 		            <td class="right">
-						0,1500%&euro;
+						0,1500%€
 					</td>
 	            
 	        </tr>
@@ -424,25 +405,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	1,00 &euro;
+		            	1,00 €
 					</td>
 				
 	            
 					<td class="right">
-				    	        1,00             &euro;
+				    	        1,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        1,00             &euro;
+				    	        1,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        1,00             &euro;
+				    	        1,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						1,00&euro;
+						1,00€
 					</td>
 	            
 	        </tr>
@@ -466,25 +447,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	n.d. &euro;
+		            	n.d. €
 					</td>
 				
 	            
 					<td class="right">
-				    	       12,00             &euro;
+				    	       12,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       12,00             &euro;
+				    	       12,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       12,00             &euro;
+				    	       12,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						12,00&euro;
+						12,00€
 					</td>
 	            
 	        </tr>
@@ -494,25 +475,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	n.d. &euro;
+		            	n.d. €
 					</td>
 				
 	            
 					<td class="right">
-				    	       15,00             &euro;
+				    	       15,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       15,00             &euro;
+				    	       15,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       15,00             &euro;
+				    	       15,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						15,00&euro;
+						15,00€
 					</td>
 	            
 	        </tr>
@@ -522,25 +503,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	n.d. &euro;
+		            	n.d. €
 					</td>
 				
 	            
 					<td class="right">
-				    	       10,00             &euro;
+				    	       10,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       10,00             &euro;
+				    	       10,00             €
 				    </td>
 			    
 					<td class="right">
-				    	       10,00             &euro;
+				    	       10,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						10,00&euro;				
+						10,00€				
 					</td>
 	            
 	        </tr>
@@ -550,25 +531,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	n.d. &euro;
+		            	n.d. €
 					</td>
 				
 	            
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						6,00&euro;
+						6,00€
 					</td>
 	            
 	        </tr>
@@ -578,25 +559,25 @@
 				</td>
 				
 		            <td class="center evidenziato">
-		            	n.d. &euro;
+		            	n.d. €
 					</td>
 				
 	            
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 					<td class="right">
-				    	        6,00             &euro;
+				    	        6,00             €
 				    </td>
 			    
 	            
 		            <td class="right">
-						6,00&euro;
+						6,00€
 					</td>
 	            
 	        </tr>
@@ -763,3 +744,4 @@ $(window).resize(function() {
     
 });
 </script>
+-->
