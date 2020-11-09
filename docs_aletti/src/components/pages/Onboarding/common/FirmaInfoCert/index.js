@@ -29,7 +29,8 @@ export default class extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            step: "INIT",
+            // step: "INIT", <!-- STEP DI START
+            step: "FIRMADOC",
             loading: true,
 
             flagAccInfocert: false,
