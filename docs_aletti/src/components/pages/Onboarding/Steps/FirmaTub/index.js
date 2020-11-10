@@ -40,7 +40,7 @@ class StepForm extends Component {
         }
 
         // BLOCCO CON STEP FIRMA AUTOCONSISTENTE (gli stati sono locali)
-        let firmaDocs = <FirmaDocs validFunction={()=>this.setState({firmaDocsValid:true})}></FirmaDocs>
+        let firmaDocs = <FirmaDocs validFunction={()=>this.setState({firmaDocsValid:true})} invalidFunction={()=>this.setState({firmaDocsValid:false})}></FirmaDocs>
 
         let firmatype = "FIRMA_TUB";
 

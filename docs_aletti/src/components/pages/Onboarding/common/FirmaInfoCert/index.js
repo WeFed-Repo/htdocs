@@ -88,6 +88,8 @@ export default class extends Component {
         let obform =  this.props.obformprops.obstate;
         this.setState({ loading: true });
 
+        
+
         this.setState({ loading: false,
             proseguiEnabled: false});
         

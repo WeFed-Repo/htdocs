@@ -152,3 +152,8 @@ ul.elenco-documenti {
             
         }
 }
+
+.bordered-collapse {
+    &.default-collapse-open .card-header .no-select {border:solid 1px #ccc;border-bottom:0 none;}
+    .default-collapse-wrap {border:solid 1px #ccc; padding: 0 15px 15px;border-top:0 none}
+} 

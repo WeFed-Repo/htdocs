@@ -87,10 +87,10 @@ class FirmaDocs extends Component {
                             return(
                             <DefaultCollapse key={i}
                             label={el.title}
-                            className="search-collapse">
+                            className="search-collapse bordered-collapse">
                             {el.files.map((file,i2)=>{
                                 return (
-                                    <div key={i2} className="margin-bottom-medium">
+                                    <div key={i2} className="onboarding-block margin-bottom-medium">
                                     <Form.checkfile className={"no-label " + (file.checkgroup && "no-margin-bottom")}
                                         name={"file_"+i+"_"+i2}
                                         value={this.state["file_"+i+"_"+i2]}
@@ -108,7 +108,7 @@ class FirmaDocs extends Component {
                                             value= {this.state.checkstate}
                                             disabled={!(this.state["file_"+i+"_"+i2])}
                                             orientation="vertical"
-                                            cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) this.props.validFunction()} }
+                                            cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
                                             options={file.checkgroup.map((option,index)=>{
                                            
                                                 return ({
@@ -134,7 +134,7 @@ class FirmaDocs extends Component {
                         onChange={this.generalOnChange}
                         value= {this.state.checkstate}
                         orientation="vertical"
-                        cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) this.props.validFunction()} }
+                        cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
                         options={this.docobj.checkgroup.map((option,i)=>{
                        
                             return ({
