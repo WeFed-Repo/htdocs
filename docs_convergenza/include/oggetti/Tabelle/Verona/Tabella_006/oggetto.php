@@ -1,18 +1,17 @@
 <section>
-	<div class="table-responsive tabSelezioneCarte"> 
-		<table class="table table-striped dataTable no-footer" id="DataTables_Table_10" role="grid"> 
+	<div class="table-responsive "> 
+		<table class="table table-striped dataTable no-footer" role="grid"> 
 			<thead> 
 				<tr class="hover"> 
 					<th class="alignLeft" >Data compilazione</th> 
 					<th class="alignLeft">Canale</th> 
-					<th style="width: 50%;"></th> 
-					
+					<th width="50%" style="width: 50%;"></th> 
 				</tr> 
 			</thead> 
-			<tr> 
+			<tr class="odd"> 
 				<td>23 settembre 2019</td> 
 				<td>Filiale</td> 	
-				<td class="alignRight paddingForTd" >
+				<td class="alignRight paddingForTd">
 					<a target="_blank" href="#" class="paddingRight">
 						<i class="icon icon-2x icon-file_pdf_fill colorVer" title="icona scarica pdf"></i>
 					</a>

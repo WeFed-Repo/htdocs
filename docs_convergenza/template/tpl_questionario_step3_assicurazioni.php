@@ -13,7 +13,7 @@
 
 <!-- step secondo del questionario -->
 <form method="post" action="" id="">
-    <h3>AREA_DI_BISOGNO_1</h3>
+    <div class=""> <h3><span>Area di bisogno:</span> AREA_DI_BISOGNO_1</h3></div>
     <h3 class="titleSection titleForm">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod</h3>
       <div class="form-group">
             <div class="row">

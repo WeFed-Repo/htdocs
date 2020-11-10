@@ -20,13 +20,13 @@
 <!--sezione profilo assente-->
 
 <!--fine sezione profilo assente-->
-<section>
-    <div class="row">
-        <div class="col-xs-8">
+<section class="display-table">
+    <div class="row display-row">
+        <div class="col-xs-12 col-sm-8 display-cell">
             <strong>PROFILO ASSICURATIVO NON PRESENTE</strong><br>
-            Non hai ancora compilato il questionario sui tuoi bisogni assicurativi.
+            <span>Non hai ancora compilato/completato il questionario sui tuoi bisogni assicurativi.</span>
         </div>
-        <div class="col-xs-4 btn-align-right">
+        <div class="col-xs-12 col-sm-4 btn-align-right display-cell v-align-m">
             <a type="button" href="#" class="btn btn-primary" title="prosegui">rispondi alle domande</a>
         </div>
     </div>

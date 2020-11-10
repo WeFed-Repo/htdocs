@@ -13,8 +13,7 @@
 <!-- testo di esito questionario da preventivo-->
 <section>
     <p class="large">Grazie per aver compilato il tuo profilo assicurativo.</p>
-    <p class="large">Procedi con il preventivo del prodotto che avevi scelto.</p>
-    <a type="button" class="btn btn-primary">fai il preventivo</a>
+    <p class="large">Le risposte che hai fornito <strong>NON sono coerenti</strong> con il prodotto che avevi scelto, puoi <a href="#">modificare il tuo profilo assicurativo</a>, oppure in alternativa ti consigliamo i seguenti prodotti:</p>
 </section>
 <!-- fine testo di esito questionario da preventivo-->
 <!-- altre proposte-->

@@ -167,7 +167,10 @@ h3>.icon {
     vertical-align:top;
     margin-right:10px;
 }
-
+h3>span {
+    text-transform: none;
+    padding-right:5px;
+}
 .img-resp {
     max-width: 100%;
     height: auto;
@@ -271,7 +274,9 @@ h3>.icon {
 .marginTopMedium {
     margin-top: 15px;
 }
-
+.marginTopExtraSmall {
+    margin-top: 5px;
+}
 section {
     margin-bottom: 20px;
 }
@@ -371,7 +376,7 @@ button {
     box-shadow: none !important;
 }
 
-.btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation, .btnWrapper.tabbed-buttons .btn  {
+.btn-primary, .btn-default, .btn-filtra, .btn-filtra-attivo, .btn-navigation, .btnWrapper.tabbed-buttons .btn, .ui-widget-content .btn-primary {
     position: relative;
     font-size: 14px;
     line-height: 14px;
@@ -652,7 +657,7 @@ table td.oCenter {
 /*table, table td, table th {
     border: 0 !important;
 }*/
-table {
+table:not(.no-border) {
     border:0;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
@@ -662,7 +667,7 @@ table {
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
-table:not(.ui-datepicker-calendar) td, table:not(.ui-datepicker-calendar) th {
+table:not(.ui-datepicker-calendar):not(.no-border) td, table:not(.ui-datepicker-calendar):not(.no-border) th {
     border:1px solid #ddd!important;
     border-left:0!important;
     border-top:0!important;
@@ -2715,7 +2720,7 @@ span.spanQuestionario {
         /*padding: 9px 13px 7px 13px;
         letter-spacing: -0.1px;
         */
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .ricFilter .btn-primary, .ricFilter .btn-default {
         margin-bottom:0
@@ -4987,11 +4992,11 @@ span.colAlert {
     }
 
 }
-@media screen and (max-width: 450px) {
+/*@media screen and (max-width: 450px) {
      .bullet-spunta li .icon {
         margin-bottom: 50px;
     }
-}
+}*/
 /* Progress bar */
 
 .rata-progress {
@@ -6367,7 +6372,13 @@ ul.ui-autocomplete {
     .table-scroll tfoot {
         display: none;
     }
-
+    .box-catalogue-left, .box-catalogue-right {
+        float: left;
+        display: block;
+    }
+    .assicurazioni.box-blu .bullet-spunta li span{
+        width: 84%;
+    }
     .table-scroll .fixed-table-body .title, .table-scroll .fixed-table-body .value {
         width: 30%;
         display: inline-block;
@@ -7568,6 +7579,7 @@ div.fixed-table-scroll-outer {
 .fixedColumns.scelta-profilo input[type=radio] {position: static!important;}
 .fixedColumns.scelta-profilo .evidenziato {background-color: #ddd;}
 .fixedColumns.scelta-profilo tr .highlight {background-color: #ecf5f3;}
+.modal-body .fixedColumns.scelta-profilo tr .highlight {background-color: #fff;}
 .fixedColumns.scelta-profilo .right{text-align:right!important}
 .fixedColumns.scelta-profilo th {padding:0 12px}
 .fixedColumns.scelta-profilo td {padding:0 12px}
@@ -8297,6 +8309,10 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .link-box .text-link:hover {text-decoration:underline}
 
 /*ASSICURAZIONI QUESTIONARIO */
+.accordion-icon-wrapper  .ui-accordion-content {
+    padding-left:15px;
+    padding-right:15px;
+}
 .accordion-icon-wrapper h3 a {
     position: relative;
     display: block;
@@ -8304,13 +8320,13 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .accordion-icon-wrapper h3 span {
     position: absolute;
     left: 70px;
-    top:10px;
+    top:6px;
 }
 .accordion-icon-wrapper h3 .accordion-icon {
     max-width: 30px;
 }
 .accordion-icon-wrapper h3 .icon {
-    margin-top:10px;
+    margin-top:6px;
 }
 @media (max-width:767px) {
     .accordion-icon-wrapper h3 span {
@@ -8324,6 +8340,17 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     }
     .accordion-icon-wrapper h3 .icon {
         margin:0
+    }
+    .accordion-icon-wrapper  .ui-accordion-content {
+        padding-left:0;
+        padding-right:0;
+    }
+    .accordion-icon-wrapper table.no-border td,
+    .accordion-icon-wrapper table.no-border th {
+        padding: 0 6px;
+    }
+    .accordion-icon-wrapper table.no-border td i {
+        margin-right:3px;
     }
 } 
 /* DISPLAY GENERICI TABLE */
@@ -8340,8 +8367,14 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     border-right: 20px solid transparent;
     display:table-cell;
     width: 50%;
-    padding: 20px 0;
     position: relative;
+    float:none!important;
+}
+.display-cell p {
+    padding-bottom:0;
+}
+.v-align-m {
+    vertical-align: middle;
 }
 .profilo-assic .display-cell {
     background-color: #F2F2F2;
@@ -8357,7 +8390,11 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .display-cell ul {
    margin-bottom:30px;
 }
-
+/*@media (min-width:768px) {
+    .display-cell {
+        padding: 20px 0;
+    }
+}*/
 @media (max-width:767px) {
     .display-table,.display-cell, .display-row {
         display: block;
@@ -8394,6 +8431,8 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 label.label-checkbox-wrapper .btn-icon {
     float:none
 }
+p.large {font-size:16px}
+p.large a {color:#0E977F;text-decoration: underline;}
 /*FINE ASSICURAZIONI QUESTIONARIO */
 
 /* TABELLA COMMISSIONI*/
@@ -8514,6 +8553,9 @@ label.label-checkbox-wrapper .btn-icon {
     #otpSoftwareOffline .modal-bottom {
         bottom:0;
     }
+    #divReport a.report  .btnLink{
+        width: 90%;
+    }
     
 }
 @media (max-width:400px) {
@@ -8525,5 +8567,16 @@ label.label-checkbox-wrapper .btn-icon {
         line-height: 20px;
         top:0
     }
+}
+
+#divReport a.report {
+    clear:both;
+    display:block;
+    
+
+}
+#divReport a.report  .btnLink{
+    width: 90%;
+    padding-left:10px;
 }
 /*FINE SEZIONE ID FIXING */

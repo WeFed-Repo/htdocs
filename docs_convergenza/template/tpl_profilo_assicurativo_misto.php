@@ -24,7 +24,6 @@
 
 <!--fine sezione profilo assente-->
 <section>
-    
-    </div>
+	<?php virtual ("/include/oggetti/Accordion/Verona/Accordion_005/oggetto.php"); ?>
 </section>
 

@@ -462,7 +462,8 @@
 						"voices": [
 							{
 								"nome": "Riepilogo - modifica",
-								"tpl": "tpl_profilo_assicurativo_riepilogo.php"
+								"tpl": "tpl_profilo_assicurativo_riepilogo.php",
+								"inlavorazione": true
 							}
 						]
 					 },
@@ -494,10 +495,6 @@
 						"nome": "Copilazione domande",
 						"voices": [
 							{
-								"nome": "Scelta compagnia",
-								"tpl": "tpl_scelta compagnia_assicurazioni.php"
-							},
-							{
 								"nome": "Prima sezione questionario",
 								"tpl": "tpl_questionario_step1_assicurazioni.php"
 							},
@@ -516,8 +513,8 @@
 						"voices": [
 							{
 								"nome": "Riepilogo e OTP",
-								"tpl": "tpl_.php",
-								"inlavorazione": true
+								"tpl": "tpl_questionario_otp.php"
+								
 							}
 						]
 					 },
@@ -525,12 +522,20 @@
 						"nome": "Esito",
 						"voices": [
 							{
-								"nome": "Esito",
+								"nome": "Esito coerente",
 								"tpl": "tpl_esito_quest_prev.php"
+							},
+							{
+								"nome": "Esito non coerente",
+								"tpl": "tpl_esito_quest_noc.php"
 							},
 							{
 								"nome": "Esito senza riposta",
 								"tpl": "tpl_esito_quest_norisp.php"
+							},
+							{
+								"nome": "Errore questionario",
+								"tpl": "tpl_errore_quest.php"
 							}
 						
 						]

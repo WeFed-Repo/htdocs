@@ -2,7 +2,7 @@
    //casistiche tabelle colonne
       $clientiYou = false; //bpm o ex bpm
       $allLine = false; //5 o sei colonne
-      $isOverlayer = false; //in pagina o in overlayer
+      $isOverlayer = true; //in pagina o in overlayer
    ?>
 <?php if($isOverlayer == true) {;?>
 <a href="#" data-toggle="modal"  data-target="#modaleTabellaCosti"> Apri tabella in overlayer</a>

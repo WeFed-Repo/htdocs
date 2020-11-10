@@ -10,6 +10,16 @@
         </h1>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 <!-- FINE titolo di pagina -->
 <!-- visual + testo -->
 <section>
@@ -28,22 +38,22 @@
 <!-- box call to action assicurazioni -->
 <section>
 <div class="paddingMedium backgroundBox">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
+    <div class="form-group display-table">
+        <div class="row display-row">
+            <div class="col-xs-12 col-sm-6 display-cell">
                 <p>Fai un preventivo e sottoscrivi la polizza online.</p>
             </div>
-            <div class="col-xs-12 col-sm-6 btn-align-right">
+            <div class="col-xs-12 col-sm-6 btn-align-right display-cell v-align-m">
                 <a type="button" class="btn btn-primary">fai il preventivo</a>
             </div>
         </div>
     </div>
-    <div class="form-group">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
+    <div class="form-group display-table">
+        <div class="row display-row">
+            <div class="col-xs-12 col-sm-6 display-cell">
                 <p>Puoi richiedere maggiori informazioni e sottoscrivere questo prodotto nelle filiali presso le quali hai un conto.</p>
             </div>
-            <div class="col-xs-12 col-sm-6 btn-align-right">
+            <div class="col-xs-12 col-sm-6 btn-align-right display-cell v-align-m">
                 <a type="button" class="btn btn-primary">prendi appuntamento</a>
             </div>
         </div>

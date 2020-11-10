@@ -7,17 +7,60 @@
 			<img src="/common/fe/img/logo_vera_assicurazioni.png" class="accordion-icon">
 		</a>
 	</h3>
-	<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="ui-id-3" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="false" style="display: block;">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et <strong>accumsan eros pharetra.</strong> In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien ac, lacinia pulvinar est. Cras convallis erat non purus sollicitudin vehicula. Ut sed lacinia augue. Curabitur eleifend faucibus enim, nec volutpat erat sagittis ut. <strong>Sed suscipit, ligula efficitur mattis</strong> suscipit, mauris leo euismod est, ullamcorper placerat sem lacus ac sem. Ut ante arcu, placerat eu ante id, suscipit tristique sapien.</p>
+	<div class="display-table ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="ui-id-3" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="false" style="display: block;">
+	
+		<div class="row display-row">
+			<div class="col-xs-12 col-sm-8 display-cell">
+				<strong>PROFILO ASSICURATIVO NON PRESENTE</strong><br>
+				<span>Non hai ancora compilato/completato il questionario sui tuoi bisogni assicurativi.</span>
+			</div>
+			<div class="col-xs-12 col-sm-4 btn-align-right display-cell v-align-m">
+				<a type="button" href="#" class="btn btn-primary" title="prosegui">rispondi alle domande</a>
+			</div>
+		</div>
+
 	</div>
 
-	<h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-4" aria-controls="ui-id-5" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+	<h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-2" aria-controls="ui-id-3" aria-selected="true" aria-expanded="true" tabindex="0">
 		<i class="icon icon-3x icon-accordion_down"></i>
 		<i class="icon icon-3x icon-accordion_up"></i>
-		<a href="#">I documenti che puoi ricevere</a>
+		<a href="#">
+			<span>Gruppo Bipiemme Vita</span>
+			<img src="/common/fe/img/logo_bpmvita_assicurazioni.png" class="accordion-icon">
+		</a>
 	</h3>
 	<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-5" aria-labelledby="ui-id-4" role="tabpanel" aria-hidden="true" style="display: none;">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et <strong>accumsan eros pharetra.</strong> In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien ac, lacinia pulvinar est. Cras convallis erat non purus sollicitudin vehicula. Ut sed lacinia augue. Curabitur eleifend faucibus enim, nec volutpat erat sagittis ut. <strong>Sed suscipit, ligula efficitur mattis</strong> suscipit, mauris leo euismod est, ullamcorper placerat sem lacus ac sem. Ut ante arcu, placerat eu ante id, suscipit tristique sapien.</p>
+	<div class="headerContainerNoBootS">
+		<div class="tableContainerNoBootS">
+			<table class="no-border">
+				<thead> 
+					<tr class="hover" role="row">
+						<th class="alignLeft sorting_disabled">Data compilazione</th>
+						<th class="alignLeft sorting_disabled" rowspan="1" colspan="1">Canale</th>
+						<th  class="sorting_disabled" rowspan="1" colspan="1"></th>
+					</tr> 
+				</thead> 
+				<tbody> 		
+					<tr role="row" class="odd"> 
+							<td>23 settembre 2019</td> 
+							<td>Filiale</td> 	
+							<td class="">
+								<a target="_blank" href="#">
+									<i class="icon icon-2x icon-file_pdf_fill colorVer" title="icona scarica pdf"></i>
+								</a>
+								<a title="" id="" role="button" aria-pressed="false" href="#">
+									<i class="icon icon-zoom_filled"></i>
+								</a>
+								<a role="button" aria-pressed="false">
+									<i class="icon icon-edit_fill"></i>
+								</a>
+							</td> 		
+						</tr>
+				</tbody>
+		</table>
+		</div>
+	</div> 
+	</div>
 	</div>
 	
 	
