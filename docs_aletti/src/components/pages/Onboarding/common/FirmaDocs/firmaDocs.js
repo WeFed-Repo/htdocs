@@ -13,37 +13,7 @@ class FirmaDocs extends Component {
         this.generalOnChange=this.generalOnChange.bind(this);
     }
 
-    docobj = {
-        "accordions": [
-            {
-                "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                "files": [{
-                    "name": "Informativa Privacy",
-                    "url":"####",
-                    "checkgroup" : [
-                        <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
-                        <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                    ]
-                }]
-            },
-            {
-                "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                "files": [{
-                    "name": "Informativa Privacy",
-                    "url":"####",
-                    "checkgroup" : [
-                        <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
-                        <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                    ]
-                }]
-            }]
-        ,
-        "checkgroup" : [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-            ]
-        
-        }
+    
 
     generalOnChange(e) {
         Form.change(this,e);         
@@ -70,6 +40,8 @@ class FirmaDocs extends Component {
         })
 
     }
+
+    docobj = this.props.docobj;
 
     allChecked(checkvalue,checkarray) {
         var checkall = (checkvalue.split(",").sort().join(",") === checkarray.sort().join(","));
@@ -145,9 +117,6 @@ class FirmaDocs extends Component {
                     >
                     </Form.checkgroup>
                 }    
-            
-                                                    
-                <a onClick={this.props.validFunction}>Valida firma</a>
             </section>
         )
     }
