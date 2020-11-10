@@ -46,6 +46,7 @@ export default class extends Component {
             firmaOtp:"",
             otpLoading: false,
             otpDisabled: true,
+            otpState: "TEST",
             callOtpText: "Richiedi codice OTP",
 
             proseguiEnabled: true
