@@ -12,6 +12,7 @@ class StepForm extends Component {
         // Stati riservati al TUB
         sendPrecontrattuale: false,
         abilitaPrecontrattuale: false,
+        precontSent: false,
         firmaDocsValid:false
     }
 
@@ -134,8 +135,7 @@ class StepForm extends Component {
 
         // Caso "doppio step"
         let firmaDocs = <>
-                {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={()=>this.setState({abilitaPrecontrattuale:true})} invalidFunction={()=>this.setState({abilitaPrecontrattuale:false})}></FirmaDocs>
-}
+                {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={()=>this.setState({abilitaPrecontrattuale:true})} invalidFunction={()=>this.setState({abilitaPrecontrattuale:false})}></FirmaDocs>}
                 {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={()=>this.setState({firmaDocsValid:true})} invalidFunction={()=>this.setState({firmaDocsValid:false})}></FirmaDocs>}
             </>
 
@@ -145,13 +145,17 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>FIRMA TUB</h3> 
-                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} firmaDocsValid={this.state.firmaDocsValid} functionPrecontrattuale={()=>this.inviaPrecontrattuale()} precontEnabled={this.state.abilitaPrecontrattuale}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} 
+                        firmaDocsValid={this.state.firmaDocsValid} 
+                        functionPrecontrattuale={()=>this.inviaPrecontrattuale()} 
+                        precontEnabled={this.state.abilitaPrecontrattuale}
+                        precontSent={this.state.sendPrecontrattuale}>
+                    </FirmaInfoCert>
                 </div>
             </div>
         )
 
     }
-
 }
 
 export default {

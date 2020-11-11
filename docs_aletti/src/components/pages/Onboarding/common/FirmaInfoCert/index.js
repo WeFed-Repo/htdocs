@@ -88,12 +88,12 @@ export default class extends Component {
         // Invio codice OTP
         let obform =  this.props.obformprops.obstate;
         this.setState({ loading: true });
-
-        
-
         this.setState({ loading: false,
             proseguiEnabled: false});
+
+        // Check OTP
         
+        alert("PROSEGUI")
         this.props.obformprops.setObState(
             {proseguiEnabled: true}
         )
@@ -259,7 +259,10 @@ export default class extends Component {
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
                                             {this.props.functionPrecontrattuale && 
-                                                <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>
+                                                <>
+                                                    {!this.props.precontSent && <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>}
+                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                                </>
                                             }
                                             {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                         </div>

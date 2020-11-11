@@ -60,40 +60,40 @@ class FirmaDocs extends Component {
                             <DefaultCollapse key={i}
                             label={el.title}
                             className="search-collapse bordered-collapse">
-                            {el.files.map((file,i2)=>{
-                                return (
-                                    <div key={i2} className="onboarding-block margin-bottom-medium">
-                                    <Form.checkfile className={"no-label " + (file.checkgroup && "no-margin-bottom")}
-                                        name={"file_"+i+"_"+i2}
-                                        value={this.state["file_"+i+"_"+i2]}
-                                        onChange={this.generalOnChange}
-                                        filedescription={file.name}
-                                        fileurl={file.url}
-                                        filetype="pdf"
-                                    >
-                                    </Form.checkfile>
-                                    {file.checkgroup && 
-                                        // Se esistono "sottofiles"
-                                        <Form.checkgroup className="no-label"
-                                            name="checkstate"
-                                            onChange={this.generalOnChange}
-                                            value= {this.state.checkstate}
-                                            disabled={!(this.state["file_"+i+"_"+i2])}
-                                            orientation="vertical"
-                                            cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
-                                            options={file.checkgroup.map((option,index)=>{
-                                           
-                                                return ({
-                                                    "text":option,
-                                                    "value": "check_"+i+"_"+i2+"_"+index
-                                                })
-                                            })}
-                                        >
-                                        </Form.checkgroup>
-                                    }
-                                    </div>
-                                )
-                            })}
+                                <div className="onboarding-block margin-bottom-medium">    
+                                { el.files.map((file,i2)=>{
+                                    return (
+                                        <div key={i2}>
+                                            <Form.checkfile className="no-label no-margin-bottom"
+                                                name={"file_"+i+"_"+i2}
+                                                value={this.state["file_"+i+"_"+i2]}
+                                                onChange={this.generalOnChange}
+                                                filedescription={file.name}
+                                                fileurl={file.url}
+                                                filetype="pdf"
+                                            >
+                                            </Form.checkfile>
+                                            {file.checkgroup && 
+                                                // Se esistono "sottofiles"
+                                                <Form.checkgroup className="no-label"
+                                                    name="checkstate"
+                                                    onChange={this.generalOnChange}
+                                                    value= {this.state.checkstate}
+                                                    disabled={!(this.state["file_"+i+"_"+i2])}
+                                                    orientation="vertical"
+                                                    cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
+                                                    options={file.checkgroup.map((option,index)=>{
+                                                
+                                                        return ({
+                                                            "text":option,
+                                                            "value": "check_"+i+"_"+i2+"_"+index
+                                                        })
+                                                    })}
+                                                >
+                                                </Form.checkgroup>
+                                            }
+                                       </div>)})}
+                                </div>
                             </DefaultCollapse>
                            )
                     })
