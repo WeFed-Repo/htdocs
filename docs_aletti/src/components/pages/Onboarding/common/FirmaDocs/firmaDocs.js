@@ -24,14 +24,14 @@ class FirmaDocs extends Component {
 
         // Costruisce l'array per il confronto dei checkbox
         let cca = [];
-        this.docobj["accordions"].forEach((v,i)=>{
-            v.files.forEach((val,i2)=>{
-                val.checkgroup.forEach((value,i3)=>{
+        this.docobj["accordions"] && this.docobj["accordions"].forEach((v,i)=>{
+            v.files && v.files.forEach((val,i2)=>{
+                val.checkgroup && val.checkgroup.forEach((value,i3)=>{
                     cca.push("check_"+i+"_"+i2+"_"+i3)
                 })
             })
         });
-        this.docobj["checkgroup"].forEach((v,i)=>{
+        this.docobj["checkgroup"] && this.docobj["checkgroup"].forEach((v,i)=>{
             cca.push("check_"+ i)
         })
 

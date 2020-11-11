@@ -22,6 +22,13 @@ class StepForm extends Component {
         })
     }
 
+    inviaPrecontrattuale() {
+        alert("invia precontrattuale");
+        this.setState({
+            sendPrecontrattuale:true
+        })
+    }
+
 
     render() {
 
@@ -43,7 +50,57 @@ class StepForm extends Component {
         }
 
         // BLOCCHI CON STEP FIRMA AUTOCONSISTENTE (gli stati sono locali)
-        let docobj1 = {
+        // PRECONTRATTUALE
+        let docprecont = {
+            "accordions": [
+                {
+                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
+                    "files": [{
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    }]
+                },
+                {
+                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
+                    "files": [{
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    },
+                    {
+                        "name": "Informativa Privacy",
+                        "url":"####"
+                    }]
+                }]
+            ,
+            "checkgroup" : [
+                    <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
+                    <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
+                ]
+            
+            }
+        
+            // MODULI
+         let docobj = {
             "accordions": [
                 {
                     "title": <>Documentazione informativa <strong>Privacy</strong></>,
@@ -77,8 +134,9 @@ class StepForm extends Component {
 
         // Caso "doppio step"
         let firmaDocs = <>
-                {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj1} validFunction={()=>this.setState({abilitaPrecontrattuale:true})} invalidFunction={()=>this.setState({abilitaPrecontrattuale:false})}></FirmaDocs>}
-                {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj1} validFunction={()=>this.setState({firmaDocsValid:true})} invalidFunction={()=>this.setState({firmaDocsValid:false})}></FirmaDocs>}
+                {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={()=>this.setState({abilitaPrecontrattuale:true})} invalidFunction={()=>this.setState({abilitaPrecontrattuale:false})}></FirmaDocs>
+}
+                {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={()=>this.setState({firmaDocsValid:true})} invalidFunction={()=>this.setState({firmaDocsValid:false})}></FirmaDocs>}
             </>
 
         let firmatype = "FIRMA_TUB";
@@ -87,7 +145,7 @@ class StepForm extends Component {
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
                     <h3>FIRMA TUB</h3> 
-                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} firmaDocsValid={this.state.firmaDocsValid}></FirmaInfoCert>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} firmaDocsValid={this.state.firmaDocsValid} functionPrecontrattuale={()=>this.inviaPrecontrattuale()} precontEnabled={this.state.abilitaPrecontrattuale}></FirmaInfoCert>
                 </div>
             </div>
         )

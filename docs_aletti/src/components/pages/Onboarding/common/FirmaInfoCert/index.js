@@ -258,7 +258,10 @@ export default class extends Component {
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>
+                                            {this.props.functionPrecontrattuale && 
+                                                <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>
+                                            }
+                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                         </div>
                                     </div>
                                 </Col>
