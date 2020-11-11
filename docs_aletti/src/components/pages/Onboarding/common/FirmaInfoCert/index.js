@@ -248,8 +248,10 @@ export default class extends Component {
                                 <div className="otp">
                                     <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
                                     <div className={"otp-block " + (this.state.otpLoading? "loading":"")}>
-                                        <label>Il cliente Inserisce il codice OTP</label>
-                                        <input type="text" maxLength="6" disabled={this.state.otpDisabled} value={this.state.firmaOtp} onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
+                                        {!this.state.otpDisabled && <>
+                                            <label>Il cliente Inserisce il codice OTP</label>
+                                            <input type="text" maxLength="6" value={this.state.firmaOtp} onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
+                                        </>}
                                         <span onClick={()=>this.callOtp()} className="otp-sender" placeholder="******">{this.state.callOtpText}</span>
                                     </div>
                                 </div>
