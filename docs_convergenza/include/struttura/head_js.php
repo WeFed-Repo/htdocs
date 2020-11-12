@@ -112,7 +112,10 @@
         function getLineaTol() {
             return "";
         }
+
+
     </script>
+     <script src="/HT/fe/js/script/gtag.js"></script>
 <?php 
 
     } else { ?>
