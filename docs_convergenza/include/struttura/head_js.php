@@ -112,7 +112,13 @@
         function getLineaTol() {
             return "";
         }
+
+        // Variabili GTM
+        var X = "<?php print rand(11111111,99999999);?>",
+            UACode = "UA-77073122-2"
+
     </script>
+    <script src="/HT/fe/js/script/gtag.js"></script>
 <?php 
 
     } else { ?>
