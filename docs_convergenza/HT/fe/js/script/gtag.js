@@ -5,9 +5,9 @@ var gtmTrack = function (href,action,params) {
     if (typeof gtag !== "undefined") {
         
         // Tagged
-        //setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
+        setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
         // Appende ai params anche la callback
-        params["event-callback"] = function() {console.log("callback eseguita")};
+        params["event_callback"] = gtaglocfunction;
         // gtag("event", action, params);
         gtag("event", action, params);
     }
@@ -32,7 +32,7 @@ $(function () {
             sv14: window.location.href
         }
     });
-    /* ANALYTICS - DA FORNITORE
+    /* ANALYTICS - DA FORNITORE */
     (function () {
         var s = document.createElement('script'); s.type =
             'text/javascript'; s.async = true; s.src =
@@ -40,20 +40,17 @@ $(function () {
                     document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     })();
-    */
-    /* GTAG RIELABORATO
+    
+
+    /* GTAG RIELABORATO */
     (function () {
         var s = document.createElement('script'); s.type =
-            'text/javascript'; s.async = true; s.src =
+            'text/javascript'; s.async= true; s.src =
                 'https://www.googletagmanager.com/gtag/js?id='+ UACode; var x =
                     document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
-    })();
-    */
-    /* VIA JQUERY CON CALLBACK */
-    $.getScript("https://www.googletagmanager.com/gtag/js?id="+ UACode).done(
-        function(){
-            // Tag analytics ed inizializzazione per tracking (generico)
+
+        // Tag analytics ed inizializzazione per tracking (generico)
         window.dataLayer = window.dataLayer || [];
         gtag = function() { dataLayer.push(arguments); }
         gtag('js', new Date());
@@ -66,7 +63,7 @@ $(function () {
                 }
             });
         }
-    })
 
+    })();
     
 });
