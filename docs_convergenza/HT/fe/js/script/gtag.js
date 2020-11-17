@@ -1,25 +1,31 @@
 // Inizializzazioni per la funzione wrapper
-var gtmTrack = function (href,action,params) {
+var gotoTrack = function (action,params,link) {
+    var e = this.event;
+    e.preventDefault();
+
+    var href = (link) ? link : $(e.target).attr("href"),
+    params = params? params : {};
 
     var gtaglocfunction = function() { document.location.href = href;};
+    setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
     if (typeof gtag !== "undefined") {
-        
-        // Tagged
-        setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
+        console.log("GTAG - Tracciatura in corso");    
         // Appende ai params anche la callback
-        params["event_callback"] = gtaglocfunction;
+        if ( href!== null ) params["event_callback"] = function() { console.log("GTAG - Tracciatura eseguita (" + action + ")"); gtaglocfunction()};
         // gtag("event", action, params);
         gtag("event", action, params);
+    
     }
     else {
         // gtag non ancora inizializzato
+        console.log("GTAG - Tracciatura non eseguita");
         gtaglocfunction();
     }
 }
 
 $(function () {
 
-    // Codice per taggatura
+    // Codice per taggatura (se X non e' presente viene inviato un vuoto)
     window._adftrack = Array.isArray(window._adftrack) ?
         window._adftrack : (window._adftrack ? [window._adftrack] : []);
     window._adftrack.push({
@@ -32,7 +38,7 @@ $(function () {
             sv14: window.location.href
         }
     });
-    /* ANALYTICS - DA FORNITORE */
+    /* ANALYTICS - CODICE DA FORNITORE */
     (function () {
         var s = document.createElement('script'); s.type =
             'text/javascript'; s.async = true; s.src =
@@ -42,26 +48,30 @@ $(function () {
     })();
     
 
-    /* GTAG RIELABORATO */
+    /* GTAG */
     (function () {
-        var s = document.createElement('script'); s.type =
-            'text/javascript'; s.async= true; s.src =
-                'https://www.googletagmanager.com/gtag/js?id='+ UACode; var x =
-                    document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
+        if ( typeof UACode !=="undefined") {
+            var s = document.createElement('script'); s.type =
+                'text/javascript'; s.async= true; s.src =
+                    'https://www.googletagmanager.com/gtag/js?id='+ UACode; var x =
+                        document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
 
-        // Tag analytics ed inizializzazione per tracking (generico)
-        window.dataLayer = window.dataLayer || [];
-        gtag = function() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        if (typeof X !== "undefined" && typeof UACode !=="undefined") {
-            gtag('config', UACode, {
-                'dimension6': X,
-                'user_id': X,
-                'linker': {
-                    'domains': ['bancobpm.it', 'webank.it']
-                }
-            });
+            // Tag analytics ed inizializzazione per tracking (generico)
+            window.dataLayer = window.dataLayer || [];
+            gtag = function() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            if (typeof X !== "undefined") {
+                // Configurazione
+                gtag('config', UACode, {
+                    'dimension6': X,
+                    'user_id': X,
+                    'linker': {
+                        'domains': ['bancobpm.it', 'webank.it']
+                    }
+                });
+                console.log("GTAG - Pagina tracciata")
+            }
         }
 
     })();

@@ -605,9 +605,12 @@
 		"hidden-nav": true,
 		"voices": [
 			{
+				"nome": "Tracciatura e analytics",
+				"tpl": "tpl_tracciatura.php"
+			},
+			{
 				"nome": "Pagina Widget",
-				"tpl": "tpl_pagina_widget.php",
-				"html": "vr"
+				"tpl": "tpl_pagina_widget.php"
 			}
 			,
 			{
