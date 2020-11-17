@@ -9,16 +9,16 @@ var gotoTrack = function (action,params,link) {
     var gtaglocfunction = function() { document.location.href = href;};
     setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
     if (typeof gtag !== "undefined") {
-        console.log("GTAG - Tracciatura in corso");    
+        //console.log("GTAG - Tracciatura in corso");    
         // Appende ai params anche la callback
-        if ( href!== null ) params["event_callback"] = function() { console.log("GTAG - Tracciatura eseguita (" + action + ")"); gtaglocfunction()};
+        if ( href!== null ) params["event_callback"] = gtaglocfunction;
         // gtag("event", action, params);
         gtag("event", action, params);
     
     }
     else {
         // gtag non ancora inizializzato
-        console.log("GTAG - Tracciatura non eseguita");
+        // console.log("GTAG - Tracciatura non eseguita");
         gtaglocfunction();
     }
 }
@@ -70,7 +70,7 @@ $(function () {
                         'domains': ['bancobpm.it', 'webank.it']
                     }
                 });
-                console.log("GTAG - Pagina tracciata")
+                // console.log("GTAG - Pagina tracciata")
             }
         }
 
