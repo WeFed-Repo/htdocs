@@ -1,12 +1,15 @@
 <!--BOX DI ESITO POSITIVO -->
-<section>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="messagePanel alert hidden-print">
-                    <p class="note">Non risultano polizze attive sulla tua posizione</p>
+<h2>Dettagli polizza</h2>
+<section class="boxesitoWrap">
+	<div class="boxesito attenzione">
+		<div class="text">
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="note">Non risultano polizze attive sulla tua posizione</p>
 				</div>
 			</div>
 		</div>
+	</div>
 </section>
 <section>
     <div class="navContSecondLev" id="secondTab">
@@ -37,7 +40,7 @@
                                 <div class="panel panel-default panel-accordion">
                                     <div class="panel-heading" role="tab" id="heading_1_1">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse_1_1" aria-expanded="false" aria-controls="collapse_1_1">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse_1_1" aria-expanded="false" aria-controls="collapse_1_1">
                                          Denuncia di un sinistro<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i>
                                         </a>
                                     </h4>
@@ -99,7 +102,7 @@
                                 <div class="panel panel-default panel-accordion">
                                     <div class="panel-heading" role="tab" id="heading_2_1">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse_2_1" aria-expanded="false" aria-controls="collapse_2_1">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse_2_1" aria-expanded="false" aria-controls="collapse_2_1">
                                          Denuncia di un sinistro<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i>
                                         </a>
                                     </h4>
@@ -161,7 +164,7 @@
                                 <div class="panel panel-default panel-accordion">
                                     <div class="panel-heading" role="tab" id="heading_3_1">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse_3_1" aria-expanded="false" aria-controls="collapse_3_1">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse_3_1" aria-expanded="false" aria-controls="collapse_3_1">
                                          Denuncia di un sinistro<i class="icon icon-arrow_down"></i><i class="icon icon-arrow_up"></i>
                                         </a>
                                     </h4>
@@ -209,7 +212,7 @@
          </div>
     </div>
 <script>
-//inizializzazione dei tab-accordion con parametro che cambia a seconda del tipo di polizza da visualizzare
+//inizializzazione dei tab-accordion con parametro che cambia a seconda del tipo di polizza da visualizzare in base al link di provenienza dalla pagina di Front page
 
 $(function(){
     var nSlide = "";
