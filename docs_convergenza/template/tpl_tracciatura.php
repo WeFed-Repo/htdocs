@@ -16,6 +16,15 @@ Per tracciare un evento &egrave; sufficiente usare la funzione <code>gotoTrack(<
 <a onClick="gotoTrack('CLICK ANCORA',{'par1':'esempio ancora'})" href="/template/strutt_youweb.php?tpl=tpl_tracciatura.php">Link con invio parametri</a><br><br>
 <!-- FINE ANCORA -->
 
+
 <!-- BOTTONE -->
-<button onClick="gotoTrack('CLICK BOTTONE',{'par1':'esempio bottone'},'/template/strutt_youweb.php?tpl=tpl_tracciatura.php')" >Bottone con invio parametri</button>
+<button onClick="gotoTrack('CLICK BOTTONE',{'par1':'esempio bottone'},'/template/strutt_youweb.php?tpl=tpl_tracciatura.php')" >Bottone con invio parametri</button><br><br>
+<!-- FINE BOTTONE -->
+
+<!-- BOTTONE -->
+<button onClick="gotoTrack('CLICK BOTTONE CALLBACK',{'par1':'esempio bottone callback'}, function(){alert('callback!')})" >Bottone con evento callback</button><br><br>
+<!-- FINE BOTTONE -->
+
+<!-- BOTTONE -->
+<button onClick="gotoTrack('CLICK BOTTONE SOLA TRACCIATURA',{'par1':'esempio bottone solo tracciatura'}, function(){alert('callback!')})" >Bottone con sola tracciatura</button>
 <!-- FINE BOTTONE -->

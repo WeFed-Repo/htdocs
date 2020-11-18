@@ -1,25 +1,44 @@
 // Inizializzazioni per la funzione wrapper
-var gotoTrack = function (action,params,link) {
-    var e = this.event;
-    e.preventDefault();
+var gotoTrack = function (action,params,cb) {
+    var e = this.event,
+        cbdone = false;
 
-    var href = (link) ? link : $(e.target).attr("href"),
-    params = params? params : {};
+    if (e) { 
+        e.preventDefault() 
+        if (e.target && $(e.target).attr("href")) {
+            cb = $(e.target).attr("href");
+        }
+    }
 
-    var gtaglocfunction = function() { document.location.href = href;};
-    setTimeout(gtaglocfunction,5000); // Dopo 5 secondi passa comunque alla pagina
+    // Prepara la callback
+    var gtagcb = function () {return void(0)};
+    if (typeof cb !== "undefined") {
+        // Se è una funzione la callback e' quella, altrimenti e' un href
+        if (typeof cb === "string") {
+            gtagcb = function() {document.location.href = cb};
+        }
+        else 
+        {
+            gtagcb = cb;
+        }
+    }
+
     if (typeof gtag !== "undefined") {
-        //console.log("GTAG - Tracciatura in corso");    
+        setTimeout(function(){if (!cbdone) gtagcb()},5000); // Dopo 5 secondi esegue comunque la callback
+        console.log("GTAG - Tracciatura in corso");    
         // Appende ai params anche la callback
-        if ( href!== null ) params["event_callback"] = gtaglocfunction;
-        // gtag("event", action, params);
+        params["event_callback"] = function(){
+                cbdone = true; 
+                gtagcb();
+                // console.log("Tracciatura eseguita")
+            };
         gtag("event", action, params);
     
     }
     else {
         // gtag non ancora inizializzato
         // console.log("GTAG - Tracciatura non eseguita");
-        gtaglocfunction();
+        gtagcb();
     }
 }
 
