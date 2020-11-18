@@ -150,7 +150,6 @@ $(document).ready(function(e) {
 	
 	/* tastiera mobile */
 	if (isMobile()) {
-		$(":input[id='importo']").not(':hidden').prop('type', 'tel');
 		$(":input[id='importoInt']").prop('type', 'tel');
 		$(":input[id='decimali']").prop('type', 'tel');
 		$(":input[id='importoIntero']").prop('type', 'tel');
@@ -1838,7 +1837,7 @@ function sendFeedback(esito, campagna, codiceazione, canale) {
 		method: "POST",
 		data: { campagna: campagna, esito : esito, canale: canale, codiceazione : codiceazione}, 
 		success: function(result){
-			return result;
+			//console.log(result);
 		}
 	});
 }
