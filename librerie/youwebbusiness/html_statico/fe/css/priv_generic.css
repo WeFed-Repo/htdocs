@@ -3953,6 +3953,61 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   opacity: 0.3;
 }
 
+.appuntamento-wrapper textarea {
+  height: 88.5%;
+  resize: none;
+}
+.appuntamento-wrapper .ca-calendario .ui-datepicker {
+  width: 100% !important;
+  z-index: 9 !important;
+}
+.appuntamento-wrapper .ca-calendario .ui-datepicker td.ui-datepicker-week-end {
+  opacity: 1;
+}
+.appuntamento-wrapper .ca-calendario .ui-datepicker td.ui-datepicker-week-end a, .appuntamento-wrapper .ca-calendario .ui-datepicker td.ui-datepicker-week-end span {
+  color: red;
+}
+.appuntamento-wrapper .form-check.radio.w-field .form-check-label::before, .appuntamento-wrapper .form-check.radio.w-field .form-check-input {
+  position: absolute;
+  bottom: -37px;
+  left: 23px;
+}
+.appuntamento-wrapper .form-check.radio.w-field .form-check-input {
+  position: absolute;
+  bottom: 26px;
+  left: 23px;
+}
+.appuntamento-wrapper .form-check.radio.w-field .form-check-label::after {
+  position: absolute;
+  bottom: -26px;
+  top: auto;
+  left: 26px;
+}
+.appuntamento-wrapper .form-check.radio.w-field .form-check-label {
+  margin-left: -23px;
+  padding-left: 0;
+}
+.appuntamento-wrapper .form-check.radio.w-field select, .appuntamento-wrapper .form-check.radio.w-field input[type=text] {
+  width: 99%;
+}
+@media screen and (max-width: 992px) {
+  .appuntamento-wrapper .form-check.radio.w-field select, .appuntamento-wrapper .form-check.radio.w-field input[type=text] {
+    float: right;
+    width: 96%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .appuntamento-wrapper textarea {
+    height: auto;
+    min-height: 120px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .appuntamento-wrapper .form-check-label {
+    letter-spacing: -0.5px;
+  }
+}
+
 .dropdown-item, .dropdown-item:hover,
 a.dropdown-item,
 a.dropdown-item:hover,

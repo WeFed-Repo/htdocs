@@ -371,6 +371,11 @@
 						"nome": "Il tuo profilo assicurativo",
 						"voices": [
 							{
+								"nome": "Dettagli polizze",
+								"tpl": "tpl_profilo_assicurativo_dettagli.php",
+								"html": "vr"
+							},
+							{
 								"nome": "Compilazione - prima pagina",
 								"tpl": "tpl_profilo_assicurativo_compilazione.php",
 								"inlavorazione": true,

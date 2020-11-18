@@ -1721,14 +1721,15 @@ var wStore = (function () {
 //possono coesistere più gruppo di tab/accordion in pagina
 //parametri: id contenitore e incice tab ch edeve essere aperto al load
 var resizeTab = function (idTab, indexTabOpened) {
+    
     //definizioni di variabili
     var tabContainer = $('#' + idTab);
     indexTabOpened = (typeof indexTabOpened === "undefined") ? 0 : indexTabOpened;
     tabContainer.each(function () {
         var el = $(this),
             tabLi = el.find('.tabWrapper:first li'),
-            aAccordion = el.find('.panel-group:first > .panel > .panel-heading .panel-title a[data-toggle="collapse"]'),
-            panelAccordion = el.find('.panel-group:first > .panel > .panel-collapse');
+            aAccordion = el.find('.panel-group:first > .panel > .panel-heading.visible-xs .panel-title a[data-toggle="collapse"]'),
+            panelAccordion = el.find('.panel-group:first > .panel:not(.panel-accordion) > .panel-collapse');
         //inizializza il tab che deve essere aperto
         tabLi.eq(indexTabOpened).addClass('on');
         tabLi.eq(indexTabOpened).prev().addClass('borderNoTab');
