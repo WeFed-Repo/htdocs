@@ -1,0 +1,21 @@
+/* Personalizzazione font */
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-light-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-light-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-medium-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-medium-webfont.woff') format('woff');
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {font-family: 'bankfont';
+	src: url('/HT/fe/font/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('/HT/fe/font/montserrat-semibold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style:normal;
+}

@@ -19,9 +19,14 @@ if ( empty($bank) || $bank !=="bbpm") {
         <!-- CSS -->
         <link rel="stylesheet" href="/wbresp/qcux/css/bootstrap.css" />
         <link rel="stylesheet" href="/wbresp/qcux/css/common_qcux.css" />
-            <!-- Css diverso per banca -->
-            <link rel="stylesheet" href="/wbresp/qcux/css/<?php print($bank);?>_qcux.css" />
-            <!-- Css diverso per banca -->
+        
+        <!-- Css diverso per banca -->
+        <?php if ($bank==="bbpm"){ ?>
+        <link rel="stylesheet" href="/HT/fe/css/qcux.css" />
+        <?php } ?>
+        <link rel="stylesheet" href="/wbresp/qcux/css/<?php print($bank);?>_qcux.css" />
+        <!-- Css diverso per banca -->
+        
         <!-- / CSS -->
         
         <!-- JS -->

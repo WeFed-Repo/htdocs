@@ -1,25 +1,3 @@
-/* Personalizzazione font */
-@font-face {font-family: 'bankfont';
-	src: url('/wbresp/qcux/font/montserrat-light-webfont.woff2') format('woff2'),
-         url('/wbresp/qcux/font/montserrat-light-webfont.woff') format('woff');
-	font-weight:normal;
-	font-style:normal;
-}
-
-@font-face {font-family: 'bankfont';
-	src: url('/wbresp/qcux/font/montserrat-medium-webfont.woff2') format('woff2'),
-         url('/wbresp/qcux/font/montserrat-medium-webfont.woff') format('woff');
-	font-weight:600;
-	font-style:normal;
-}
-
-@font-face {font-family: 'bankfont';
-	src: url('/wbresp/qcux/font/montserrat-semibold-webfont.woff2') format('woff2'),
-         url('/wbresp/qcux/font/montserrat-semibold-webfont.woff') format('woff');
-	font-weight: bold;
-	font-style:normal;
-}
-
 body {font-family: "bankfont", Arial, sans-serif}
 header h1 .logocs {background: transparent url(/wbresp/qcux/img/bbpm_qcux.png) no-repeat center center; background-size: contain}
 header .logo {background: transparent url(/wbresp/qcux/img/bbpm_logo.png) no-repeat center center; background-size: cover;

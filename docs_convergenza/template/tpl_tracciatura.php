@@ -17,5 +17,5 @@ Per tracciare un evento &egrave; sufficiente usare la funzione <code>gotoTrack(<
 <!-- FINE ANCORA -->
 
 <!-- BOTTONE -->
-<button onClick="gotoTrack('CLICK BOTTONE',{'par1':'esempio bottone'},'/template/strutt_youweb.php?tpl=tpl_tracciatura.php')" >Bottone con invio parametri</a>
+<button onClick="gotoTrack('CLICK BOTTONE',{'par1':'esempio bottone'},'/template/strutt_youweb.php?tpl=tpl_tracciatura.php')" >Bottone con invio parametri</button>
 <!-- FINE BOTTONE -->
