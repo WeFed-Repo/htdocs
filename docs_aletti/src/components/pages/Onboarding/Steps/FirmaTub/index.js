@@ -8,12 +8,12 @@ import FirmaDocs from "../../common/FirmaDocs/firmaDocs";
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
-    state= {
+    state = {
         // Stati riservati al TUB
         sendPrecontrattuale: false,
         abilitaPrecontrattuale: false,
         precontSent: false,
-        firmaDocsValid:false
+        firmaDocsValid: false
     }
 
     componentDidMount() {
@@ -26,7 +26,7 @@ class StepForm extends Component {
     inviaPrecontrattuale() {
         alert("invia precontrattuale");
         this.setState({
-            sendPrecontrattuale:true
+            sendPrecontrattuale: true
         })
     }
 
@@ -58,58 +58,58 @@ class StepForm extends Component {
                     "title": <>Documentazione informativa <strong>Privacy</strong></>,
                     "files": [{
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     }]
                 },
                 {
                     "title": <>Documentazione informativa precontrattuale del conto corrente</>,
                     "files": [{
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     },
                     {
                         "name": "Informativa Privacy",
-                        "url":"####"
+                        "url": "####"
                     }]
                 }]
             ,
-            "checkgroup" : [
-                    <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
-                    <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                ]
-            
-            }
-        
-            // MODULI
-         let docobj = {
+            "checkgroup": [
+                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
+                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
+            ]
+
+        }
+
+        // MODULI
+        let docobj = {
             "accordions": [
                 {
                     "title": <>Documentazione informativa <strong>Privacy</strong></>,
                     "files": [{
                         "name": "Informativa Privacy",
-                        "url":"####",
-                        "checkgroup" : [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
+                        "url": "####",
+                        "checkgroup": [
+                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
                             <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
                         ]
                     }]
@@ -118,36 +118,36 @@ class StepForm extends Component {
                     "title": <>Documentazione informativa precontrattuale del conto corrente</>,
                     "files": [{
                         "name": "Informativa Privacy",
-                        "url":"####",
-                        "checkgroup" : [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
+                        "url": "####",
+                        "checkgroup": [
+                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
                             <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
                         ]
                     }]
                 }]
             ,
-            "checkgroup" : [
-                    <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</> ,
-                    <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                ]
-            
-            }
+            "checkgroup": [
+                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
+                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
+            ]
+
+        }
 
         // Caso "doppio step"
         let firmaDocs = <>
-                {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={()=>this.setState({abilitaPrecontrattuale:true})} invalidFunction={()=>this.setState({abilitaPrecontrattuale:false})}></FirmaDocs>}
-                {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={()=>this.setState({firmaDocsValid:true})} invalidFunction={()=>this.setState({firmaDocsValid:false})}></FirmaDocs>}
-            </>
+            {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={() => this.setState({ abilitaPrecontrattuale: true })} invalidFunction={() => this.setState({ abilitaPrecontrattuale: false })}></FirmaDocs>}
+            {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>}
+        </>
 
         let firmatype = "FIRMA_TUB";
 
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>FIRMA TUB</h3> 
-                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }} 
-                        firmaDocsValid={this.state.firmaDocsValid} 
-                        functionPrecontrattuale={()=>this.inviaPrecontrattuale()} 
+                    <h3>FIRMA TUB</h3>
+                    <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}
+                        firmaDocsValid={this.state.firmaDocsValid}
+                        functionPrecontrattuale={() => this.inviaPrecontrattuale()}
                         precontEnabled={this.state.abilitaPrecontrattuale}
                         precontSent={this.state.sendPrecontrattuale}>
                     </FirmaInfoCert>

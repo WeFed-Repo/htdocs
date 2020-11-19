@@ -92,13 +92,13 @@ class StepForm extends Component {
                             >
                             </Form.checkgroup>
                         </section>
-                        {formstate.field_sessionfirmeblob_idmifid !=="" &&
+                        {formstate.field_sessionfirmeblob_idmifid !== "" &&
                             <section className="onboarding-block">
                                 <p>Questionario MIFID già <strong>compilato</strong>.</p>
-                                {!isOutput && <Button className="form-inline-request" onClick={()=>this.props.setObState({field_sessionfirmeblob_idmifid: "", questMifid: true})}>Ricompila il questionario MIFID</Button>}
+                                {!isOutput && <Button className="form-inline-request" onClick={() => this.props.setObState({ field_sessionfirmeblob_idmifid: "", questMifid: true })}>Ricompila il questionario MIFID</Button>}
                             </section>
                         }
-                        </div>
+                    </div>
                 </div>
             }
             {formstate.questMifid && <QuestMifid setObState={this.props.setObState}></QuestMifid>}
@@ -109,7 +109,7 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm,
+    form: StepForm,
     validazione: validazione,
     salva: salva
 }

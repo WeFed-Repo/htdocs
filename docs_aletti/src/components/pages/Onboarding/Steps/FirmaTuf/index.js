@@ -15,7 +15,7 @@ class StepForm extends Component {
     }
 
     render() {
-        
+
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props
         let formstate = this.props.obstate;
         // Cattura i domini tramite le props
@@ -29,8 +29,8 @@ class StepForm extends Component {
 
         // Eventuale nome intestatario 
         let nomeint;
-        if (formstate.field_numintestatari==="2") {
-            nomeint= " " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_nome"] +" " + formstate["field_anagraficablob_intestatari_"+ formstate["field_intestcorrente"] +"_cognome"] ;
+        if (formstate.field_numintestatari === "2") {
+            nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
         }
         return (
             <div className="onboarding-wrapper">
@@ -45,7 +45,7 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm,
+    form: StepForm,
     validazione: validazione,
     salva: salva
 }

@@ -7,7 +7,7 @@ import AdempimentiNormativi from '../AdempimentiNormativi';
 import salva from "./salva";
 
 const FieldOutput = {
-    "ANAGRAFICA" : Anagrafica,
+    "ANAGRAFICA": Anagrafica,
     "RACCOLTAPRODOTTI": RaccoltaProdotti,
     "ADEMPIMENTINORMATIVI": AdempimentiNormativi,
 }
@@ -17,8 +17,8 @@ class StepForm extends Component {
     // Eventuali stati "locali" 
     state = {
         //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true",
-        
+        isOutput: "true",
+
     }
 
     componentDidMount() {
@@ -26,10 +26,10 @@ class StepForm extends Component {
             proseguiEnabled: true
         })
     }
-    
+
 
     render() {
-        
+
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props
         let formstate = this.props.obstate;
         // Cattura i domini tramite le props
@@ -44,20 +44,20 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                <h3>Riepilogo dati</h3>
+                    <h3>Riepilogo dati</h3>
                     <p>Ecco il riepilogo dei dati inseriti. Verifica che siano tutti corretti: se ci sono variazioni, puoi ancora modificarli.</p>
                     <section className="onboarding-block">
                         <div className="wrapped-item">
                             <h4 className="wrapped-item-title">Dati anagrafici</h4>
-                            <FieldOutput.ANAGRAFICA.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.ANAGRAFICA.form>
+                            <FieldOutput.ANAGRAFICA.form {...obformprops} isOutput={this.state.isOutput} btnConsole={this.btnConsole}></FieldOutput.ANAGRAFICA.form>
                         </div>
                         <div className="wrapped-item">
                             <h4 className="wrapped-item-title">Prodotti</h4>
-                            <FieldOutput.RACCOLTAPRODOTTI.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.RACCOLTAPRODOTTI.form>
+                            <FieldOutput.RACCOLTAPRODOTTI.form {...obformprops} isOutput={this.state.isOutput} btnConsole={this.btnConsole}></FieldOutput.RACCOLTAPRODOTTI.form>
                         </div>
                         <div className="wrapped-item">
                             <h4 className="wrapped-item-title">Adempimenti normativi</h4>
-                            <FieldOutput.ADEMPIMENTINORMATIVI.form {...obformprops} isOutput = { this.state.isOutput } btnConsole={this.btnConsole}></FieldOutput.ADEMPIMENTINORMATIVI.form>
+                            <FieldOutput.ADEMPIMENTINORMATIVI.form {...obformprops} isOutput={this.state.isOutput} btnConsole={this.btnConsole}></FieldOutput.ADEMPIMENTINORMATIVI.form>
                         </div>
                     </section>
                     {/*<p>Il sottoscritto, consapevole delle responsabilità penali derivanti da mendaci affermazioni in tal sede, dichiara di aver fornito nel presente modulo tutte le informazioni necessarie ed aggiornate di cui è a conoscenza, anche relativamente al titolare effettivo del rapporto / dell’operazione, garantisce che le stesse sono esatte e veritiere e si impegna a comunicarne ogni futura ed eventuale modifica.</p>*/}
@@ -70,7 +70,7 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm,
-    validazione: ()=>{return {}},
+    form: StepForm,
+    validazione: () => { return {} },
     salva: salva
 }
