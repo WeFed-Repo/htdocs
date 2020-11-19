@@ -354,6 +354,9 @@ button {
 .form-group.btnWrapper .btn-align-right {
     float:right;
 }
+.alignRight.btnWrapper .btn-align-right {
+     float:right;
+}
 .btn-align-center {
     text-align: center;
 }
@@ -667,7 +670,7 @@ table:not(.no-border) {
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
-table:not(.ui-datepicker-calendar):not(.no-border) td, table:not(.ui-datepicker-calendar):not(.no-border) th {
+table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo) td, table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo) th {
     border:1px solid #ddd!important;
     border-left:0!important;
     border-top:0!important;
@@ -8530,9 +8533,9 @@ p.large a {color:#0E977F;text-decoration: underline;}
     .btn-inline {
         margin-top:0;
     }
-    section:last-child .btnWrapper .btn {
+    /*section:last-child .btnWrapper .btn {
         margin-bottom:0;
-    }
+    }*/
     .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child {
         float:right;
     }

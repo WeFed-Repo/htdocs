@@ -1,8 +1,8 @@
 <?php
    //casistiche tabelle colonne
-      $clientiYou = false; //bpm o ex bpm
-      $allLine = false; //5 o sei colonne
-      $isOverlayer = true; //in pagina o in overlayer
+      $clientiYou = true; //bpm o ex bpm
+      $allLine = true; //5 o sei colonne
+      $isOverlayer = false; //in pagina o in overlayer
    ?>
 <?php if($isOverlayer == true) {;?>
 <a href="#" data-toggle="modal"  data-target="#modaleTabellaCosti"> Apri tabella in overlayer</a>
@@ -521,15 +521,20 @@
                            <?php }?>
                            <td class="center">
                               Base
+                              <?php if($isOverlayer != true) {;?><label><input class="radioVerify" type="radio" data-column="cgp" name="linea" value="Base"></label><?php }?>
                            </td>
                            <td class="center">
                               Silver
+                              <?php if($isOverlayer != true) {;?><label><input class="radioVerify" type="radio" data-column="cgp" name="linea" value="Silver"></label><?php }?>
                            </td>
                            <td class="center">
                               Gold
+                              <?php if($isOverlayer != true) {;?><label><input class="radioVerify" type="radio" data-column="cgp" name="linea" value="Gold"></label><?php }?>
                            </td>
                            <?php if($allLine == true) {;?> 
-                           <td class="center">YouBanking</td>
+                           <td class="center">YouBanking
+                           <?php if($isOverlayer != true) {;?><label><input class="radioVerify" type="radio" data-column="cgp" name="linea" value="YouBanking"></label><?php }?>
+                           </td>
                            <?php }?>
                         </tr>
                      </tbody>
