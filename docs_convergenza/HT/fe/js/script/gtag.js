@@ -25,7 +25,7 @@ var gotoTrack = function (action,params,cb) {
 
     if (typeof gtag !== "undefined") {
         setTimeout(function(){if (!cbdone) gtagcb()},5000); // Dopo 5 secondi esegue comunque la callback
-        console.log("GTAG - Tracciatura in corso");    
+        // console.log("GTAG - Tracciatura in corso");    
         // Appende ai params anche la callback
         params["event_callback"] = function(){
                 cbdone = true; 
@@ -44,7 +44,7 @@ var gotoTrack = function (action,params,cb) {
 
 $(function () {
 
-    // Codice per taggatura (se X non e' presente viene inviato un vuoto)
+    /* ANALYTICS - CODICE DA FORNITORE */
     window._adftrack = Array.isArray(window._adftrack) ?
         window._adftrack : (window._adftrack ? [window._adftrack] : []);
     window._adftrack.push({
@@ -57,7 +57,6 @@ $(function () {
             sv14: window.location.href
         }
     });
-    /* ANALYTICS - CODICE DA FORNITORE */
     (function () {
         var s = document.createElement('script'); s.type =
             'text/javascript'; s.async = true; s.src =
@@ -65,7 +64,7 @@ $(function () {
                     document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     })();
-    
+    /* FINE ANALYTICS - CODICE DA FORNITORE */
 
     /* GTAG */
     (function () {
