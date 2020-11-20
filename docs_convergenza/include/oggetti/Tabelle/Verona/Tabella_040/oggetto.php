@@ -1,7 +1,7 @@
 <?php
    //casistiche tabelle colonne
       $clientiYou = true; //bpm o ex bpm
-      $allLine = true; //5 o sei colonne
+      $allLine = false; //5 o sei colonne
       $isOverlayer = false; //in pagina o in overlayer
    ?>
 <?php if($isOverlayer == true) {;?>
@@ -21,7 +21,7 @@
                <section>
                   <div class="linee-wrapper desktop-label">
                      <?php if($clientiYou == true) {;?> 
-                     <div class="lineaT">LINEA ATTUALE</div>
+                     <div class="lineaT bordered"><span>LINEA ATTUALE</span></div>
                      <?php }?>
                      <div class="lineaN">NUOVE LINEE DI TRADING ONLINE</div>
                   </div>
