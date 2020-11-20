@@ -47,10 +47,22 @@ class FirmaDocs extends Component {
         var checkall = (checkvalue.split(",").sort().join(",") === checkarray.sort().join(","));
         return checkall;
     }
+
+    checkedAllFiles(form,allfiles) {
+        console.log(allfiles);
+        console.log(form);
+        let statusok = true;
+        allfiles.forEach((v)=>{
+            if (v.indexOf("file_")<0 || statusok) {
+                if (form[v]!==true) statusok = false;
+            }
+        });
+        return (statusok)
+    }
     
     render(){
 
-        
+        let allfiles = [];
 
         return(
             <section>
@@ -62,6 +74,7 @@ class FirmaDocs extends Component {
                             className="search-collapse bordered-collapse">
                                 <div className="onboarding-block margin-bottom-medium">    
                                 { el.files.map((file,i2)=>{
+                                    allfiles.push("file_"+i+"_"+i2)
                                     return (
                                         <div key={i2}>
                                             <Form.checkfile className="no-label no-margin-bottom"
@@ -99,12 +112,13 @@ class FirmaDocs extends Component {
                     })
                 } 
                 { this.docobj.checkgroup && 
-                    
+                    // Checkbox "liberi" condizionati a tutti i file da vedere
             
                     <Form.checkgroup className="no-label"
                         name="checkstate"
                         onChange={this.generalOnChange}
                         value= {this.state.checkstate}
+                        disabled={!this.checkedAllFiles(this.state,allfiles)}
                         orientation="vertical"
                         cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
                         options={this.docobj.checkgroup.map((option,i)=>{

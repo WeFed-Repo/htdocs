@@ -29,6 +29,8 @@ export default class extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
+            
             // step: "INIT", <!-- STEP DI START
             step: "FIRMADOC",
             loading: true,
@@ -263,10 +265,10 @@ export default class extends Component {
                                             {this.props.functionPrecontrattuale && 
                                                 <>
                                                     {!this.props.precontSent && <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>}
-                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length<6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                                 </>
                                             }
-                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length<6} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length<6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                         </div>
                                     </div>
                                 </Col>
