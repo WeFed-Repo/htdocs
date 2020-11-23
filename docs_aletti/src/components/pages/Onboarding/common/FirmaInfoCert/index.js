@@ -58,6 +58,9 @@ export default class extends Component {
         this.generalOnChange = this.generalOnChange.bind(this);
     }
 
+    // URL Firma oneshot produzione
+    oneshoturlprod = "/promotori/onboarding/rest/infocert/firmaOneShot";
+
     // OnChange dei check
     generalOnChange(e) {
         Form.change(this,e);         
@@ -86,27 +89,14 @@ export default class extends Component {
         })
     }
 
-    firmaDoc() {
-        // Invio codice OTP
-        let obform =  this.props.obformprops.obstate;
-        this.setState({ loading: true });
-        this.setState({ loading: false,
-            proseguiEnabled: false});
-
-        // Check OTP
-        
-        alert("PROSEGUI")
-        this.props.obformprops.setObState(
-            {proseguiEnabled: true}
-        )
-    }
+    
 
      // Loading iniziale di una firma (INIT)
     componentDidMount() {
         let obform =  this.props.obformprops.obstate;
         getData({
             method: "POST",
-            url: {svil: "/json_data/onboarding/firma_init.json", prod:"/promotori/onboarding/rest/infocert/firmaOneShot"},
+            url: {svil: "/json_data/onboarding/firma_init.json", prod: this.oneshoturlprod},
             data:  {
                 "id":obform.field_id,
                 "stato":this.props.firmatype,
@@ -128,7 +118,7 @@ export default class extends Component {
         let obform =  this.props.obformprops.obstate;
         this.setState({ loading: true });
         getData({
-            url: {"svil":"/json_data/onboarding/firma_clausole.json","prod":""},
+            url: {"svil":"/json_data/onboarding/firma_clausole.json","prod":this.oneshoturlprod},
             data: {
                 "id":obform.field_id,
                 "stato":this.props.firmatype,
@@ -156,6 +146,43 @@ export default class extends Component {
         })
 
 
+    }
+
+
+    // FIRMA FINALE CON FEEDBACK
+    firmaDoc() {
+        // Invio codice OTP
+        let obform =  this.props.obformprops.obstate;
+        this.setState({ loading: true });
+        
+
+        // Check OTP
+        getData({
+            url: {"prod" : this.oneshoturlprod,"svil":"/json_data/simpleEsitoOk.json"},
+            data: {
+                "id":61,
+                "otpFirma": "01135072",
+                "stato":"FIRMA_XXX",
+                "intestatarioCorrente":0,
+                "stepFirma":"FIRMADOC"
+                },
+            success: (data)=>{
+                this.props.obformprops.setObState(
+                    {proseguiEnabled: true}
+                );
+                this.setState({ 
+                    loading: false,
+                    proseguiEnabled: false
+                });
+            },
+            error: ()=>{
+
+            }
+
+        })
+        
+    
+       
     }
 
     render() {
