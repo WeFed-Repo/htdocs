@@ -19,9 +19,16 @@ class StepForm extends Component {
     }
 
     componentDidMount() {
+        
+        let fstate = this.props.obstate;
+        this.setState({
+            // Determina se ha gia' inviato la precontrattuale
+            sendPrecontrattuale:(fstate.field_numintestatari === "2" && (fstate.field_intestcorrente.toString()!==fstate.field_ordineintestatari.split("")[0])) 
+        });
         this.props.setObState({
             // Sblocco e blocco interfaccia (true per Bypass, default a false)
-            proseguiEnabled: true
+            proseguiEnabled: true,
+            
         })
     }
 
@@ -120,7 +127,7 @@ class StepForm extends Component {
 
         }
 
-        // Caso "doppio step"
+
         let firmaDocs = <>
             {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={() => this.setState({ abilitaPrecontrattuale: true })} invalidFunction={() => this.setState({ abilitaPrecontrattuale: false })}></FirmaDocs>}
             {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>}
