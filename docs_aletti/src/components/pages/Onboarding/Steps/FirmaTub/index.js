@@ -32,7 +32,7 @@ class StepForm extends Component {
             abilitaPrecontrattuale: false
         });
         getData({
-            url: {"prod":"","svil":""},
+            url: {"prod":"/promotori/onboarding/rest/documentale/sendDocPrecontrattuale","svil":"/json_data/simpleEsitoOk.json"},
             success: (data)=>{
                 this.setState({
                     sendPrecontrattuale: true
@@ -74,39 +74,8 @@ class StepForm extends Component {
         let docprecont = {
             "accordions": [
                 {
-                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    }]
-                },
-                {
                     "title": <>Documentazione informativa precontrattuale del conto corrente</>,
                     "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    },
-                    {
                         "name": "Informativa Privacy",
                         "url": "####"
                     }]
@@ -114,7 +83,6 @@ class StepForm extends Component {
             ,
             "checkgroup": [
                 <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
             ]
 
         }
