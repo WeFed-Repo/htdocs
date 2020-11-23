@@ -276,13 +276,30 @@ export default class extends Component {
                             {this.props.firmaDocsValid &&
                                 <div className="otp">
                                     <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
-                                    <div className={"otp-block " + (this.state.otpLoading? "loading":"")}>
+                                    {
+                                    this.state.otpState==="TEST" &&
+                                        <div className={"otp-block " + (this.state.otpLoading? "loading":"")}>
                                         {!this.state.otpDisabled && <>
                                             <label>Il cliente Inserisce il codice OTP</label>
-                                            <input type="text" maxLength="6" value={this.state.firmaOtp} onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
+                                            <input type="text" maxLength="6" value={this.state.firmaOtp} placeholder="******" onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
                                         </>}
-                                        <span onClick={()=>this.callOtp()} className="otp-sender" placeholder="******">{this.state.callOtpText}</span>
+                                        <span onClick={()=>this.callOtp()} className="otp-sender" >{this.state.callOtpText}</span>
+                                        
                                     </div>
+                                    }
+                                    {
+                                        this.state.otpState==="KO" && 
+                                        <div class="otp-feedback ko">
+                                            OTP OK
+                                        </div>
+                                    }
+                                    {
+                                        this.state.otpState==="OK" && 
+                                        <div class="otp-feedback ok">
+                                            OTP OK
+                                        </div>
+                                    }
+
                                 </div>
                             }
                             <Row>
