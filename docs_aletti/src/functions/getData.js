@@ -41,14 +41,19 @@ export default function getData(params){
                 try {
                     return response.json()
                 } catch {
-                    console.log("Errore nel ricevimento dati")
+                    console.log("Errore nel ricevimento dati");
+                    params.error();
                 }
             }
             else
             {
                 console.log("* Errore " + response.status + " -> " + fetchUrl);
+                params.error();
             }
         }).then(function(json) {
-            params.success(json);
+            if(json) { 
+                params.success(json);
+            }
+            
         })
 }

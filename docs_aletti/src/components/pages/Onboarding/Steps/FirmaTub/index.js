@@ -4,6 +4,7 @@ import FirmaInfoCert from '../../common/FirmaInfoCert'
 import salva from "./salva";
 import validazione from "./validazione";
 import FirmaDocs from "../../common/FirmaDocs/firmaDocs";
+import getData from "functions/getData";
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
@@ -13,6 +14,7 @@ class StepForm extends Component {
         sendPrecontrattuale: false,
         abilitaPrecontrattuale: false,
         precontSent: false,
+        loading: false,
         firmaDocsValid: false
     }
 
@@ -23,11 +25,28 @@ class StepForm extends Component {
         })
     }
 
+    // Invio materiale precontrattuale
     inviaPrecontrattuale() {
-        alert("invia precontrattuale");
+        // Servizio di invio precontrattuale
         this.setState({
-            sendPrecontrattuale: true
+            abilitaPrecontrattuale: false
+        });
+        getData({
+            url: {"prod":"","svil":""},
+            success: (data)=>{
+                this.setState({
+                    sendPrecontrattuale: true
+                });
+            },
+            error: ()=>{
+                alert("Si sono verificati errori durante l'invio della precontrattuale");
+                this.setState({
+                    abilitaPrecontrattuale: true
+                });
+            }
         })
+
+      
     }
 
 
@@ -143,7 +162,7 @@ class StepForm extends Component {
 
         return (
             <div className="onboarding-wrapper">
-                <div className="onboarding-form">
+                <div className={"onboarding-form " + (this.state.loading?"loading":"")}>
                     <h3>FIRMA TUB</h3>
                     <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}
                         firmaDocsValid={this.state.firmaDocsValid}
