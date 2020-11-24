@@ -1,0 +1,7 @@
+{
+    "esito": {
+        "type": "E",
+        "code": "400",
+        "description": "Otp errato"
+    }
+}

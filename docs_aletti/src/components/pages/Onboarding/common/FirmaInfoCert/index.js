@@ -30,9 +30,9 @@ export default class extends Component {
         super(props);
         this.state = {
 
-            
+
             // step: "INIT", <!-- STEP DI START
-            step: "INIT",
+            step: "FIRMADOC",
             loading: true,
 
             flagAccInfocert: false,
@@ -45,7 +45,7 @@ export default class extends Component {
             clausoleCheckEnabled: false,
             clausoleChecks: "",
 
-            firmaOtp:"",
+            firmaOtp: "",
             otpLoading: false,
             otpDisabled: true,
             otpState: "TEST",
@@ -63,82 +63,80 @@ export default class extends Component {
 
     // OnChange dei check
     generalOnChange(e) {
-        Form.change(this,e);         
-    }  
+        Form.change(this, e);
+    }
 
-    allChecked(checkvalue,checkarray) {
+    allChecked(checkvalue, checkarray) {
         var checkall = (checkvalue.split(",").sort().join(",") === checkarray.sort().join(","));
         return checkall;
     }
 
-    // Richiede un codice OTP
-    callOtp(){
+    // Richiede l'invio di un codice OTP
+    callOtp() {
         this.setState({
             otpLoading: true
         });
         getData({
-            url: {"svil": "/json_data/simpleEsitoOk.json","prod": "/promotori/onboarding/rest/infocert/"+ this.props.obformprops.obstate.field_id + "/"+this.props.obformprops.obstate.field_intestcorrente+"/reSendOtpFirma"},
-            success: ()=>{
+            url: { "svil": "/json_data/simpleEsitoOk.json", "prod": "/promotori/onboarding/rest/infocert/" + this.props.obformprops.obstate.field_id + "/" + this.props.obformprops.obstate.field_intestcorrente + "/reSendOtpFirma" },
+            success: () => {
                 this.setState({
                     callOtpText: "Invia nuovo codice",
-                    otpDisabled:false,
-                    otpLoading:false,
-                    firmaOtp:""
+                    otpDisabled: false,
+                    otpLoading: false,
+                    firmaOtp: ""
                 });
             }
         })
     }
 
-    
-
-     // Loading iniziale di una firma (INIT)
+    // Loading iniziale di una firma (INIT)
     componentDidMount() {
-        let obform =  this.props.obformprops.obstate;
+        let obform = this.props.obformprops.obstate;
         getData({
             method: "POST",
-            url: {svil: "/json_data/onboarding/firma_init.json", prod: this.oneshoturlprod},
-            data:  {
-                "id":obform.field_id,
-                "stato":this.props.firmatype,
-                "intestatarioCorrente":obform.field_intestcorrente,
-                "stepFirma":"INIT"
+            url: { svil: "/json_data/onboarding/firma_init.json", prod: this.oneshoturlprod },
+            data: {
+                "id": obform.field_id,
+                "stato": this.props.firmatype,
+                "intestatarioCorrente": obform.field_intestcorrente,
+                "stepFirma": "INIT"
             },
-            error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},
-            success: (data)=> {
+            error: () => { alert("Si sono verificati errori nella ricezione dei dati.") },
+            success: (data) => {
                 this.state.initData = data.results;
                 this.setState({
-                    loading:false
+                    loading: false
                 })
             }
         })
     }
 
-    /* AZIONE INIT (CLAUSOLE) */ 
+    /* AZIONE INIT (CLAUSOLE) */
     sendClausole() {
-        let obform =  this.props.obformprops.obstate;
+        let obform = this.props.obformprops.obstate;
         this.setState({ loading: true });
         getData({
-            url: {"svil":"/json_data/onboarding/firma_clausole.json","prod":this.oneshoturlprod},
+            url: { "svil": "/json_data/onboarding/firma_clausole.json", "prod": this.oneshoturlprod },
             data: {
-                "id":obform.field_id,
-                "stato":this.props.firmatype,
-                "intestatarioCorrente":obform.field_intestcorrente,
-                "stepFirma":"CLAUSOLE",
+                "id": obform.field_id,
+                "stato": this.props.firmatype,
+                "intestatarioCorrente": obform.field_intestcorrente,
+                "stepFirma": "CLAUSOLE",
                 "clauses": [
-                        this.state.initData.clauses.map(val=>{
-                            return {
-                                "id" : "clause1",
-                                "value" : true
-                                }
-                        })
+                    this.state.initData.clauses.map(val => {
+                        return {
+                            "id": "clause1",
+                            "value": true
+                        }
+                    })
                 ],
             },
-            error: ()=>{alert("Si sono verificati errori nella ricezione dei dati.")},    
+            error: () => { alert("Si sono verificati errori nella ricezione dei dati.") },
             success: (data) => {
                 // Preparazione del form di accettazione
                 this.setState({
                     step: "CLAUSOLE",
-                    proseguiEnabled:false,
+                    proseguiEnabled: false,
                     clausoleData: data.results,
                     loading: false
                 });
@@ -152,49 +150,73 @@ export default class extends Component {
     // FIRMA FINALE CON FEEDBACK
     firmaDoc() {
         // Invio codice OTP
-        let obform =  this.props.obformprops.obstate;
+        let obform = this.props.obformprops.obstate;
         this.setState({ loading: true });
-        
+
 
         // Check OTP
         getData({
-            url: {"prod" : this.oneshoturlprod,"svil":"/json_data/simpleEsitoOk.json"},
+            url: { "prod": this.oneshoturlprod, "svil": "/json_data/simpleEsitoOk.json" },
             data: {
-                "id":61,
-                "otpFirma": "01135072",
-                "stato":"FIRMA_XXX",
-                "intestatarioCorrente":0,
-                "stepFirma":"FIRMADOC"
-                },
-            success: (data)=>{
-                this.props.obformprops.setObState(
-                    {proseguiEnabled: true}
-                );
-                this.setState({ 
+                "id": 61,
+                "otpFirma": this.state.firmaOtp,
+                "stato": this.props.firmatype ,
+                "intestatarioCorrente": 0,
+                "stepFirma": "FIRMADOC"
+            },
+            success: (data) => {
+
+                if (data.esito && data.esito.type ==="OK"){
+                    this.props.obformprops.setObState(
+                        { proseguiEnabled: true }
+                    );
+                    this.setState({
+                        loading: false,
+                        otpState: "OK",
+                        proseguiEnabled: false
+                    });
+                }
+                else
+                {
+                    this.setState({
+                        loading: false,
+                        firmaOtp: "",
+                        otpState: "KO",
+                        proseguiEnabled: false
+                    });
+                    this.props.obformprops.setObState(
+                        { proseguiEnabled: false }
+                    );
+                }
+            },
+            error: () => {
+                this.setState({
                     loading: false,
+                    firmaOtp: "",
+                    otpState: "KO",
                     proseguiEnabled: false
                 });
-            },
-            error: ()=>{
-
+                this.props.obformprops.setObState(
+                    { proseguiEnabled: false }
+                );
             }
 
         })
-        
-    
-       
+
+
+
     }
 
     render() {
 
-        let obform =  this.props.obformprops.obstate;
+        let obform = this.props.obformprops.obstate;
 
         return (
             <>
-                {/* <h4>STEP: {this.state.step}</h4> */ }
+                {/* <h4>STEP: {this.state.step}</h4> */}
                 <div className="icLogo"></div>
                 <div className={this.state.loading ? "loading" : ""}>
-                    
+
                     {this.state.step === "INIT" &&
                         <>
                             <h4>INFORMATIVA PRECONTRATTUALE SERVIZI FIRMA ELETTRONICA QUALIFICATA ONE SHOT E PEC</h4>
@@ -203,22 +225,22 @@ export default class extends Component {
                                 <strong>Data di nascita</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_nascita"]}<br />
                                 <strong>Luogo di nascita</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_comunenascita"]}<br />
                                 <strong>Indirizzo di residenza</strong>: {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_tipoindirizzoresidenza"] + " "
-                                   + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_indirizzoresidenza"] + " "
-                                   + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_numresidenza"] + " "} – {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_comuneresidenza"]}
+                                    + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_indirizzoresidenza"] + " "
+                                    + obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_numresidenza"] + " "} – {obform["field_anagraficablob_intestatari_" + obform["field_intestcorrente"] + "_comuneresidenza"]}
                             </p>
                             <p>
                                 Per procedere il cliente deve obbligatoriamente aprire i seguenti documenti in formato pdf e confermare la presa visione.
                             </p>
                             <ul className="elenco-documenti">
-                                {this.state.initData && this.state.initData.docs.map((doc,i)=>{
+                                {this.state.initData && this.state.initData.docs.map((doc, i) => {
                                     return <li key={i}><a href={doc.url} target="_blank"><i className="icon icon-file_pdf"></i>{doc.name}</a></li>
                                 })
                                 }
-                            </ul> 
+                            </ul>
                             <br />
                             <p>Il cliente cliccando sul tasto <strong>"RICHIEDI IL CERTIFICATO"</strong>:</p>
                             <ul>
-                                {this.state.initData && this.state.initData.clauses.map((clause,i)=>{
+                                {this.state.initData && this.state.initData.clauses.map((clause, i) => {
                                     return <li key={i}>{clause.text}</li>
                                 })
                                 }
@@ -241,28 +263,28 @@ export default class extends Component {
                             <h4>Dichiarazioni</h4>
                             <section>
                                 <ul className="elenco-documenti">
-                                   <li><a href={this.state.clausoleData.url} target="_blank" onClick={()=>this.setState({clausoleCheckEnabled: true})}><i className="icon icon-file_pdf"></i>{this.state.clausoleData.name}</a></li>
+                                    <li><a href={this.state.clausoleData.url} target="_blank" onClick={() => this.setState({ clausoleCheckEnabled: true })}><i className="icon icon-file_pdf"></i>{this.state.clausoleData.name}</a></li>
                                 </ul>
                             </section>
                             <p><strong>Il titolare</strong></p>
                             <section className="clauses">
                                 <Form.checkgroup
-                                    onChange={this.generalOnChange} 
+                                    onChange={this.generalOnChange}
                                     name="clausoleChecks"
-                                    className="no-label" 
-                                    value={this.state.clausoleChecks} 
-                                    options={this.state.clausoleData.clauses.map((v)=>{return {"value": v.id,"text": v.text}})} 
-                                    orientation="vertical" 
+                                    className="no-label"
+                                    value={this.state.clausoleChecks}
+                                    options={this.state.clausoleData.clauses.map((v) => { return { "value": v.id, "text": v.text } })}
+                                    orientation="vertical"
                                     disabled={!this.state.clausoleCheckEnabled}
-                                    cbchange={(val)=>this.setState({proseguiEnabled : this.allChecked(val, this.state.clausoleData.clauses.map((v)=>{return v.id}))})}
-                                    >
+                                    cbchange={(val) => this.setState({ proseguiEnabled: this.allChecked(val, this.state.clausoleData.clauses.map((v) => { return v.id })) })}
+                                >
                                 </Form.checkgroup>
                             </section>
                             <Row>
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC" ,proseguiEnabled:false})}>Prosegui</Button>
+                                            <Button color="primary" disabled={!this.state.proseguiEnabled} className="sub-buttons" onClick={() => this.setState({ step: "FIRMADOC", proseguiEnabled: false })}>Prosegui</Button>
                                         </div>
                                     </div>
                                 </Col>
@@ -277,26 +299,27 @@ export default class extends Component {
                                 <div className="otp">
                                     <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
                                     {
-                                    this.state.otpState==="TEST" &&
-                                        <div className={"otp-block " + (this.state.otpLoading? "loading":"")}>
-                                        {!this.state.otpDisabled && <>
-                                            <label>Il cliente Inserisce il codice OTP</label>
-                                            <input type="text" maxLength="6" value={this.state.firmaOtp} placeholder="******" onChange={(e)=>this.setState({firmaOtp: e.target.value})}></input>
-                                        </>}
-                                        <span onClick={()=>this.callOtp()} className="otp-sender" >{this.state.callOtpText}</span>
-                                        
-                                    </div>
-                                    }
-                                    {
-                                        this.state.otpState==="KO" && 
-                                        <div class="otp-feedback ko">
-                                            OTP OK
+                                       ( this.state.otpState === "TEST" || this.state.otpState === "KO") &&
+
+                                        <div className={"otp-block " + (this.state.otpLoading ? "loading" : "")}>
+
+                                            {!this.state.otpDisabled && <>
+                                                <label>Il cliente Inserisce il codice OTP</label>
+                                                <input type="text" maxLength="6" value={this.state.firmaOtp} placeholder="******" onChange={(e) => this.setState({ firmaOtp: e.target.value })}></input>
+                                            </>}
+                                            {
+                                                this.state.otpState === "KO" && <div class="otp-feedback ko">
+                                                    Codice OTP Errato
+                                                </div>
+                                            }
+                                            <span onClick={() => this.callOtp()} className="otp-sender" >{this.state.callOtpText}</span>
                                         </div>
                                     }
+
                                     {
-                                        this.state.otpState==="OK" && 
+                                        this.state.otpState === "OK" &&
                                         <div class="otp-feedback ok">
-                                            OTP OK
+                                            Intestatario 1 ha firmato correttamente 
                                         </div>
                                     }
 
@@ -306,13 +329,13 @@ export default class extends Component {
                                 <Col>
                                     <div className="btn-console btn-console-sub">
                                         <div className="btn-console-right">
-                                            {this.props.functionPrecontrattuale && 
+                                            {this.props.functionPrecontrattuale &&
                                                 <>
                                                     {!this.props.precontSent && <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>}
-                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length<6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                                 </>
                                             }
-                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length<6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                         </div>
                                     </div>
                                 </Col>
