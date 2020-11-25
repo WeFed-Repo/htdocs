@@ -15,3 +15,15 @@
     .otp-sender {font-size:12px;text-transform:uppercase;background:#eee;border:solid 1px #ccc;width:100%;display:block; padding:5px; border-radius:5px;cursor:pointer}
 
 }
+.otp-feedback.ko {color:#900;font-weight:bold;margin-bottom:10px;}
+
+.otp-feedback.ok {
+    background:#dce7b5;
+    border:solid 1px #090;
+    padding:15px;text-align:center;
+    display:block;width:100px;
+    font-weight:bold;
+    margin-bottom:30px;
+    border-radius:5px;
+    width:100%;
+}

@@ -94,6 +94,7 @@ class FirmaDocs extends Component {
                                                     value= {this.state.checkstate}
                                                     disabled={!(this.state["file_"+i+"_"+i2])}
                                                     orientation="vertical"
+                                                    output={this.allChecked(this.state.checkstate,this.state.checkcontrolarray)}
                                                     cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
                                                     options={file.checkgroup.map((option,index)=>{
                                                 
@@ -120,6 +121,7 @@ class FirmaDocs extends Component {
                         value= {this.state.checkstate}
                         disabled={!this.checkedAllFiles(this.state,allfiles)}
                         orientation="vertical"
+                        output={this.allChecked(this.state.checkstate,this.state.checkcontrolarray)}
                         cbchange={(val)=>{ if (this.allChecked(val,this.state.checkcontrolarray)) { this.props.validFunction()} else {this.props.invalidFunction()}} }
                         options={this.docobj.checkgroup.map((option,i)=>{
                        

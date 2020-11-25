@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Button } from 'reactstrap';
 import getData from "functions/getData";
 import Form from 'components/parts/Forms';
+
 import "./firmaInfoCert.scss";
 
 export default class extends Component {
@@ -83,6 +84,7 @@ export default class extends Component {
                     callOtpText: "Invia nuovo codice",
                     otpDisabled: false,
                     otpLoading: false,
+                    otpState: "TEST",
                     firmaOtp: ""
                 });
             }
@@ -153,10 +155,10 @@ export default class extends Component {
         let obform = this.props.obformprops.obstate;
         this.setState({ loading: true });
 
-
+        console.log("FIRMA")
         // Check OTP
         getData({
-            url: { "prod": this.oneshoturlprod, "svil": "/json_data/simpleEsitoOk.json" },
+            url: { "prod": this.oneshoturlprod, "svil": "/json_data/simpleEsitoOk.json" /* "/json_data/onboarding/firma_firmadoc_errore.json" */ },
             data: {
                 "id": 61,
                 "otpFirma": this.state.firmaOtp,
@@ -165,8 +167,9 @@ export default class extends Component {
                 "stepFirma": "FIRMADOC"
             },
             success: (data) => {
-
+               
                 if (data.esito && data.esito.type ==="OK"){
+                    console.log("Esito OK")
                     this.props.obformprops.setObState(
                         { proseguiEnabled: true }
                     );
@@ -178,6 +181,7 @@ export default class extends Component {
                 }
                 else
                 {
+                    console.log("Esito KO")
                     this.setState({
                         loading: false,
                         firmaOtp: "",
@@ -296,34 +300,35 @@ export default class extends Component {
                         <>
                             {this.props.firmaDocs}
                             {this.props.firmaDocsValid &&
-                                <div className="otp">
-                                    <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
-                                    {
+                                <>
+                                   {
                                        ( this.state.otpState === "TEST" || this.state.otpState === "KO") &&
+                                       <div className="otp">
+                                            <p>Il cliente può ora apporre la sua firma digitale sui contratti richiedendo l'invio del codice OTP via SMS sul proprio cellulare ed inserendolo nello spazio sottostante.</p>
+                                            <div className={"otp-block " + (this.state.otpLoading ? "loading" : "")}>
 
-                                        <div className={"otp-block " + (this.state.otpLoading ? "loading" : "")}>
-
-                                            {!this.state.otpDisabled && <>
-                                                <label>Il cliente Inserisce il codice OTP</label>
-                                                <input type="text" maxLength="6" value={this.state.firmaOtp} placeholder="******" onChange={(e) => this.setState({ firmaOtp: e.target.value })}></input>
-                                            </>}
-                                            {
-                                                this.state.otpState === "KO" && <div class="otp-feedback ko">
-                                                    Codice OTP Errato
-                                                </div>
-                                            }
-                                            <span onClick={() => this.callOtp()} className="otp-sender" >{this.state.callOtpText}</span>
+                                                {!this.state.otpDisabled && <>
+                                                    <label>Il cliente Inserisce il codice OTP</label>
+                                                    <input type="text" maxLength="6" value={this.state.firmaOtp} placeholder="******" onChange={(e) => this.setState({ firmaOtp: e.target.value })}></input>
+                                                </>}
+                                                {
+                                                    this.state.otpState === "KO" && <div className="otp-feedback ko">
+                                                        Codice OTP Errato
+                                                    </div>
+                                                }
+                                                <span onClick={() => this.callOtp()} className="otp-sender" >{this.state.callOtpText}</span>
+                                            </div>
                                         </div>
                                     }
 
                                     {
                                         this.state.otpState === "OK" &&
-                                        <div class="otp-feedback ok">
+                                        <div className="otp-feedback ok">
                                             Intestatario 1 ha firmato correttamente 
                                         </div>
                                     }
 
-                                </div>
+                                </>
                             }
                             <Row>
                                 <Col>
@@ -332,10 +337,10 @@ export default class extends Component {
                                             {this.props.functionPrecontrattuale &&
                                                 <>
                                                     {!this.props.precontSent && <Button color="primary" disabled={!this.props.precontEnabled} className="sub-buttons" onClick={this.props.functionPrecontrattuale}>Invia precontrattuale</Button>}
-                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                                    {this.props.precontSent && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid || this.state.otpState==="OK"} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                                 </>
                                             }
-                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
+                                            {!this.props.functionPrecontrattuale && <Button color="primary" disabled={this.state.firmaOtp.length < 6 || !this.props.firmaDocsValid || this.state.otpState==="OK"} className="sub-buttons" onClick={this.firmaDoc}>Firma il contratto</Button>}
                                         </div>
                                     </div>
                                 </Col>

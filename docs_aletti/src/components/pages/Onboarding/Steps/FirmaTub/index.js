@@ -96,6 +96,7 @@ class StepForm extends Component {
 
         // MODULI
         let docobj = {
+            /*
             "accordions": [
                 {
                     "title": <>Documentazione informativa <strong>Privacy</strong></>,
@@ -119,7 +120,7 @@ class StepForm extends Component {
                         ]
                     }]
                 }]
-            ,
+            ,*/
             "checkgroup": [
                 <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
                 <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
