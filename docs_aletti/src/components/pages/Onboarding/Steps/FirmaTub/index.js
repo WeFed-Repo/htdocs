@@ -27,7 +27,7 @@ class StepForm extends Component {
         });
         this.props.setObState({
             // Sblocco e blocco interfaccia (true per Bypass, default a false)
-            proseguiEnabled: true,
+            proseguiEnabled: false,
             
         })
     }
