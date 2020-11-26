@@ -349,3 +349,6 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 	}
 }
 */
+
+/*CONTATTO NASCOSTO */
+.cont-hidden {display:none ;}

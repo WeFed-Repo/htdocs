@@ -2452,6 +2452,10 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
     display: none;
   }
 }
+.toolbtns-fourth,
+.userMenuMobile-seventh {
+  display: none;
+}
 .onTop {
   z-index: 15000;
 }
