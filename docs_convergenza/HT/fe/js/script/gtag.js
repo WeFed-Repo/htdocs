@@ -44,7 +44,7 @@ var gotoTrack = function (action,params,cb) {
 
 $(function () {
 
-    /* ANALYTICS - CODICE DA FORNITORE */
+    /* DMP - CODICE DA FORNITORE 
     window._adftrack = Array.isArray(window._adftrack) ?
         window._adftrack : (window._adftrack ? [window._adftrack] : []);
     window._adftrack.push({
@@ -64,7 +64,10 @@ $(function () {
                     document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     })();
-    /* FINE ANALYTICS - CODICE DA FORNITORE */
+    FINE ANALYTICS - CODICE DA FORNITORE */
+    
+    /* DMP */
+    $("body").append($("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm=1687685&ADFPageName=BancoBPM_Area%20Privata_Tracking_Website&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"}));
 
     /* GTAG */
     (function () {
