@@ -4,58 +4,24 @@ import FirmaInfoCert from '../../common/FirmaInfoCert'
 import salva from "./salva";
 import validazione from "./validazione";
 import FirmaDocs from "../../common/FirmaDocs/firmaDocs";
-import getData from "functions/getData";
 
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
     state = {
         // Stati riservati al TUB
-        sendPrecontrattuale: false,
-        abilitaPrecontrattuale: false,
-        precontSent: false,
         loading: false,
         firmaDocsValid: false
     }
 
     componentDidMount() {
         
-        let fstate = this.props.obstate;
-        this.setState({
-            // Determina se ha gia' inviato la precontrattuale
-            sendPrecontrattuale:(fstate.field_numintestatari === "2" && (fstate.field_intestcorrente.toString()!==fstate.field_ordineintestatari.split("")[0])) 
-        });
         this.props.setObState({
             // Sblocco e blocco interfaccia (true per Bypass, default a false)
             proseguiEnabled: false,
             
         })
     }
-
-    // Invio materiale precontrattuale
-    inviaPrecontrattuale() {
-        // Servizio di invio precontrattuale
-        this.setState({
-            abilitaPrecontrattuale: false
-        });
-        getData({
-            url: {"prod":"/promotori/onboarding/rest/documentale/sendDocPrecontrattuale","svil":"/json_data/simpleEsitoOk.json"},
-            success: (data)=>{
-                this.setState({
-                    sendPrecontrattuale: true
-                });
-            },
-            error: ()=>{
-                alert("Si sono verificati errori durante l'invio della precontrattuale");
-                this.setState({
-                    abilitaPrecontrattuale: true
-                });
-            }
-        })
-
-      
-    }
-
 
     render() {
 
@@ -74,24 +40,6 @@ class StepForm extends Component {
         let nomeint;
         if (formstate.field_numintestatari === "2") {
             nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
-        }
-
-        // BLOCCHI CON STEP FIRMA AUTOCONSISTENTE (gli stati sono locali)
-        // PRECONTRATTUALE
-        let docprecont = {
-            "accordions": [
-                {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####"
-                    }]
-                }]
-            ,
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-            ]
-
         }
 
         // MODULI
@@ -129,17 +77,14 @@ class StepForm extends Component {
         }
 
 
-        let firmaDocs = <>
-            {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={() => this.setState({ abilitaPrecontrattuale: true })} invalidFunction={() => this.setState({ abilitaPrecontrattuale: false })}></FirmaDocs>}
-            {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>}
-        </>
+        let firmaDocs = <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>
 
-        let firmatype = "FIRMA_TUB";
+        let firmatype = "FIRMA_VESSATORIE_TUB";
 
         return (
             <div className="onboarding-wrapper">
                 <div className={"onboarding-form " + (this.state.loading?"loading":"")}>
-                    <h3>FIRMA TUB</h3>
+                    <h3>FIRMA VESSATORIE TUB</h3>
                     <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}
                         firmaDocsValid={this.state.firmaDocsValid}
                         functionPrecontrattuale={() => this.inviaPrecontrattuale()}
