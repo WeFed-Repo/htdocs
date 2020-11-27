@@ -15,12 +15,9 @@
 
 			<!-- Pulsantiera -->
 			<ul id="toolbtns">
-				<li class="toolbtn"><a href="javascript:;" title="Assistente virtuale" class="icon" id="toolbtnpaolo" data-toolid="virtAss"><img src="/WB/fe/img/priv_tool_paolo.png"></a></li>
-				<li class="toolbtn"><a href="#" title="Servizio clienti" class="icon icon-helpcenter" ></a></li>
-				<span id="vvcButton"></span>
-				<li class="toolbtn"><a href="javascript:;" title="Webank ti richiama" class="icon icon-prenota" id="toolCmbBtn" data-toolid="tool2"></a></li>
-				<li class="toolbtn"><a href="#" title="Scrivici" class="icon icon-scrivici"></a></li>
-				<!-- <li class="toolbtn"><a href="javascript:;" title="Appuntamento in agenzia" class="icon icon-appuntamento" id="toolAppuntamentoBtn" data-toolid="tool9"></a></li>-->
+				<li class="toolbtn toolbtns-first"><a href="javascript:;" title="Assistente virtuale" class="icon " id="toolbtnpaolo" data-toolid="virtAss"><img src="/WB/fe/img/priv_tool_paolo.png"> </a></li>
+				<li class="toolbtn toolbtns-second"><a href="/WEBWB/wb/content/helpcenterContatti.do" class="icon icon-helpcenter" title="Servizio clienti"></a></li>
+				<li class="toolbtn toolbtns-fourth"><a href="/WEBWB/wb/content/contattaci.do" class="icon icon-scrivici" title="Scrivici"></a></li>
 			</ul>
 
 		</div>

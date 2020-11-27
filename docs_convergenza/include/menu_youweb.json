@@ -462,8 +462,7 @@
 						"voices": [
 							{
 								"nome": "Riepilogo - modifica",
-								"tpl": "tpl_profilo_assicurativo_riepilogo.php",
-								"inlavorazione": true
+								"tpl": "tpl_profilo_assicurativo_riepilogo.php"
 							}
 						]
 					 },

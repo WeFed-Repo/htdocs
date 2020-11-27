@@ -8326,7 +8326,8 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     top:6px;
 }
 .accordion-icon-wrapper h3 .accordion-icon {
-    max-width: 30px;
+    max-width: 40px;
+    margin-top:-10px;
 }
 .accordion-icon-wrapper h3 .icon {
     margin-top:6px;
@@ -8436,6 +8437,22 @@ label.label-checkbox-wrapper .btn-icon {
 }
 p.large {font-size:16px}
 p.large a {color:#0E977F;text-decoration: underline;}
+
+/*NUOVO BOX DI RIEPILOGO*/
+.box-question {
+    border:1px solid #ccc;
+}
+.box-question .box-question-title {
+    font-weight: bold;
+    background-color: #ebedec;
+    border-bottom:1px solid #ccc;
+    padding:20px;
+}
+.box-question .box-question-content {
+    padding:20px;
+    
+}
+
 /*FINE ASSICURAZIONI QUESTIONARIO */
 
 /* TABELLA COMMISSIONI*/

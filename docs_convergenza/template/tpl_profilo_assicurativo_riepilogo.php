@@ -12,69 +12,10 @@
 </section>
 <!-- FINE titolo di pagina -->
 
-<!-- box di esito risultati assicurativi -->
-<section>
-    <div class="formWrapper borderFormRoundedWrapper">
-        <div class="row">
-            <div class="col-xs-6">
-                <label class="control-label">Intestatario</label>
-            </div>
-            <div class="col-xs-6">
-                <span class="resume">Mario Rossi</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
-                <label class="control-label">NDG</label>
-            </div>
-            <div class="col-xs-6">
-                <span class="resume">12345678901234</span>
-            </div>
-        </div>
-    </div>
-    <div class="formWrapper question-output">
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label class="control-label-output">Lorem ipsum dolor sit amet, consectetur</label>
-                </div>
-                <div class="col-sm-6">
-                    <span class="output">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur</span>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label class="control-label-output">Lorem ipsum dolor sit amet, consectetur</label>
-                </div>
-                <div class="col-sm-6">
-                    <span class="output">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur</span>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label class="control-label-output">Lorem ipsum dolor sit amet, consectetur</label>
-                </div>
-                <div class="col-sm-6">
-                    <span class="output">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur</span>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label class="control-label-output">Lorem ipsum dolor sit amet, consectetur</label>
-                </div>
-                <div class="col-sm-6">
-                    <span class="output">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- box di esito risultati assicurativi NUOVA GRAFICA DOMANDA/RISPOSTA-->
+<?php virtual ("/include/oggetti/Box/Verona/Box_110/oggetto.php"); ?>
+<?php virtual ("/include/oggetti/Box/Verona/Box_110/oggetto.php"); ?>
+<?php virtual ("/include/oggetti/Box/Verona/Box_110/oggetto.php"); ?>
 <!-- box di esito risultati assicurativi -->
 <!-- pulsanti operativi -->
 <section>
