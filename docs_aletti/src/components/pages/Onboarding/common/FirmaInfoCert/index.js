@@ -127,7 +127,7 @@ export default class extends Component {
                 "clauses": [
                     this.state.initData.clauses.map(val => {
                         return {
-                            "id": "clause1",
+                            "id": val.id,
                             "value": true
                         }
                     })
@@ -162,8 +162,9 @@ export default class extends Component {
             data: {
                 "id": 61,
                 "otpFirma": this.state.firmaOtp,
-                "stato": this.props.firmatype ,
-                "intestatarioCorrente": 0,
+                "id": obform.field_id,
+                "stato": this.props.firmatype,
+                "intestatarioCorrente": obform.field_intestcorrente,
                 "stepFirma": "FIRMADOC"
             },
             success: (data) => {
