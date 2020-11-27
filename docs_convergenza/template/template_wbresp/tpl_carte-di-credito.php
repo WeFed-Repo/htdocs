@@ -71,116 +71,134 @@
 
 
 							<!-- carousel 1 -->
-	<div id="myCarouselCarte" class="carousel slide greenarrows" data-ride="carousel"  data-interval="false">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
-					    <li data-target="#myCarouselCarte" data-slide-to="0" class="active"></li>
-					    <li data-target="#myCarouselCarte" data-slide-to="1"></li>
-					  </ol>
+		<div id="myCarouselCarte" class="carousel slide greenarrows" data-ride="carousel"  data-interval="false">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarouselCarte" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarouselCarte" data-slide-to="1"></li>
+							<li data-target="#myCarouselCarte" data-slide-to="2"></li>
+						</ol>
 
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+						
+							<div class="item active item00">
+								<h3>Carta Nexi</h3>
 
-					    <div class="item active item01">
-					    	<h3>Cartaimpronta ONE</h3>
+								<img src="/wbresp/img/carte/sl3.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Carta Nexi" />
 
-							<img src="/wbresp/img/carte/sl2.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Cartaimpronta ONE - E' la carta di credito con canone gratuito di Webank" />
-
-							<p>E' la carta di credito con <b>canone gratuito</b> di Webank:</p>
-							<ul>
-							<li><b>la utilizzi ovunque</b> in Italia, all'estero e sul web </li>
-							<li><b>nessuna commissione in area Euro</b> su circuito Master Card o Visa</li>
-							<li>grazie alla tecnologia contactless paghi avvicinando la carta al lettore e per le spese fino a 25&euro; non &egrave; necessario firmare la ricevuta</li>
-							<li>SMS Alert <b>ti avvisa sul cellulare</b> a ogni acquisto</li>
-							<li>3D SecureCode <b>protegge i tuoi acquisti</b> su Internet e con il portafoglio digitale BPM MasterPass &egrave; ancora pi&ugrave; facile e veloce</li>
-							<li>estratto conto online <b>gratuito</b></li>
-							<li><b>tieni sotto controllo le tue spese</b>, consultando i movimenti della carta dal sito e dall'app.</li>
-							</ul>
-
-
-					    </div>
-
-					    <div class="item item02">
-					    	<h3>Cartaimpronta GOLD PLUS</h3>
-
-							<img src="/wbresp/img/carte/sl1.png"  class="img-responsive mob100" alt="Cartaimpronta GOLD PLUS" title="Cartaimpronta GOLD PLUS - &Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa" />
+								<p>Lorem ipsum dolor sit amet dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </p>
+								<ul>
+									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+								</ul>
 
 
-							<p><span>&Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa.</p>
-							<ul>
-							<li><b>Maxi plafond</b> a partire da 5.200 &euro;</li>
-							<li><b>Extra-sicurezza</b> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
-							<li><b>Zero commissioni</b> sui rifornimenti di carburante</li>
-							<li><b>Zero spese</b> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
-							</ul>
+							</div>
+
+							<div class="item item01">
+								<h3>Cartaimpronta ONE</h3>
+
+								<img src="/wbresp/img/carte/sl2.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Cartaimpronta ONE - E' la carta di credito con canone gratuito di Webank" />
+
+								<p>E' la carta di credito con <b>canone gratuito</b> di Webank:</p>
+								<ul>
+								<li><b>la utilizzi ovunque</b> in Italia, all'estero e sul web </li>
+								<li><b>nessuna commissione in area Euro</b> su circuito Master Card o Visa</li>
+								<li>grazie alla tecnologia contactless paghi avvicinando la carta al lettore e per le spese fino a 25&euro; non &egrave; necessario firmare la ricevuta</li>
+								<li>SMS Alert <b>ti avvisa sul cellulare</b> a ogni acquisto</li>
+								<li>3D SecureCode <b>protegge i tuoi acquisti</b> su Internet e con il portafoglio digitale BPM MasterPass &egrave; ancora pi&ugrave; facile e veloce</li>
+								<li>estratto conto online <b>gratuito</b></li>
+								<li><b>tieni sotto controllo le tue spese</b>, consultando i movimenti della carta dal sito e dall'app.</li>
+								</ul>
 
 
-					    </div>
+							</div>
+
+							<div class="item item02">
+								<h3>Cartaimpronta GOLD PLUS</h3>
+
+								<img src="/wbresp/img/carte/sl1.png"  class="img-responsive mob100" alt="Cartaimpronta GOLD PLUS" title="Cartaimpronta GOLD PLUS - &Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa" />
 
 
-					  </div>
+								<p><span>&Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa.</p>
+								<ul>
+								<li><b>Maxi plafond</b> a partire da 5.200 &euro;</li>
+								<li><b>Extra-sicurezza</b> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
+								<li><b>Zero commissioni</b> sui rifornimenti di carburante</li>
+								<li><b>Zero spese</b> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
+								</ul>
 
-					  <!-- Left and right controls -->
-					  <a class="left carousel-control" href="#!" data-target="#myCarouselCarte" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					  </a>
-					  <a class="right carousel-control" href="#!" data-target="#myCarouselCarte" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					  </a>
-	</div>
-					<!-- /carousel 1 -->
+
+							</div>
+
+
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#!" data-target="#myCarouselCarte" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#!" data-target="#myCarouselCarte" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+						</div>
+						<!-- /carousel 1 -->
+
+
+
+
+							</div>
+						</div>
+
+
+					<!-- container 2 fine -->
+
+					<!-- container 3 inizio -->
+
+						<!--
+						<div class="carte-di-credito container03" id="s3">
+							<h3>CARTE DI DEBITO</h3>
+								<div class="row">
+										<div class="col-md-12 col-sm-12">
+											<h3>Carta di debito internazionale</h3>
+										</div>
+										<div class="col-md-7 col-sm-12">
+												<p>Con la carta di debito hai un <b>canone gratuito</b> e puoi fare pi&ugrave; di quanto immagini:</p>
+												<ul>
+												<li><b>pagare e prelevare in tutto il mondo</b> con circuito Bancomat, PagoBancomat e Maestro</li>
+												<li><b>prelevare senza commissioni</b> da tutti gli sportelli automatici in Italia e area Euro</li>
+												<li><b> versare contanti e assegni</b> nelle aree Self Service</li>
+												<li><b>pagare le utenze, ricaricare cellulare o le prepagate</b> pressogli sportelli automatici BPM</li>
+												<li>tenere sempre sotto <b>controllo le spese</b> con il servizio Alert SMS, email e push</li>
+												<li><b>consultare i movimenti</b> della carta dal sito e dall'app</li>
+												<li><b>puoi proteggerti dalle frodi</b> con il servizio GeoBlock.</li>
+
+												</ul>
+												<a class="btn-grlit btn-grlit-arrow btn-fs14  uppercase" href="#">Apri conto Webank</a>
+
+										</div>
+										<div class="col-md-5 col-sm-12">
+												<img src="/wbresp/img/carte/cartadebito.png"  class="img-responsive" alt="Carta di debito internazionale" title="Carta di debito internazionale - Con la carta di debito hai un canone gratuito e puoi fare pi&ugrave; di quanto immagini" />
+										</div>
+								</div>
+
+
 
 
 
 
 						</div>
-					</div>
+						-->
 
+					<!-- container 3 fine -->
 
-				<!-- container 2 fine -->
-
-				<!-- container 3 inizio -->
-
-					<!--
-					<div class="carte-di-credito container03" id="s3">
-						<h3>CARTE DI DEBITO</h3>
-							<div class="row">
-									<div class="col-md-12 col-sm-12">
-										<h3>Carta di debito internazionale</h3>
-									</div>
-									<div class="col-md-7 col-sm-12">
-											<p>Con la carta di debito hai un <b>canone gratuito</b> e puoi fare pi&ugrave; di quanto immagini:</p>
-											<ul>
-											<li><b>pagare e prelevare in tutto il mondo</b> con circuito Bancomat, PagoBancomat e Maestro</li>
-											<li><b>prelevare senza commissioni</b> da tutti gli sportelli automatici in Italia e area Euro</li>
-											<li><b> versare contanti e assegni</b> nelle aree Self Service</li>
-											<li><b>pagare le utenze, ricaricare cellulare o le prepagate</b> pressogli sportelli automatici BPM</li>
-											<li>tenere sempre sotto <b>controllo le spese</b> con il servizio Alert SMS, email e push</li>
-											<li><b>consultare i movimenti</b> della carta dal sito e dall'app</li>
-											<li><b>puoi proteggerti dalle frodi</b> con il servizio GeoBlock.</li>
-
-											</ul>
-											<a class="btn-grlit btn-grlit-arrow btn-fs14  uppercase" href="#">Apri conto Webank</a>
-
-									</div>
-									<div class="col-md-5 col-sm-12">
-											<img src="/wbresp/img/carte/cartadebito.png"  class="img-responsive" alt="Carta di debito internazionale" title="Carta di debito internazionale - Con la carta di debito hai un canone gratuito e puoi fare pi&ugrave; di quanto immagini" />
-									</div>
-							</div>
-
-
-
-
-
-
-					</div>
-					-->
-
-				<!-- container 3 fine -->
-
-				<!-- container 3 CON SLIDER -->
+					<!-- container 3 CON SLIDER -->
 
 				
 				<div class="carte-di-credito container02 version-b large-mob-carousel" id="s3">
