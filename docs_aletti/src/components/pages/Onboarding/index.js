@@ -47,7 +47,7 @@ const Step = {
     "FIRMA_VESSATORIE_TUF": FirmaVessatorieTuf,
     "ATTESA_FIRMA_CONSULENTE": FirmaConsulente,
 
-    "CONCLUSA": Conclusa
+    "INSERITA_DA_INVIARE": Conclusa
 
 }
 
@@ -122,6 +122,9 @@ export default class extends Component {
 
                 // Prepara l'oggetto dal nodo "results 0"
                 var bdata = fieldsFromJson(data && data.results);
+
+                // Gestisce lo stato "intermedio" bozza da completare
+                if (bdata["field_stato"]==="BOZZA_DA_COMPLETARE") bdata["field_stato"]="ATTESA_FIRMA_CONSULENTE";
 
                 // Assegna valori di default ai campi che sono stati "appesi" manualmente (es: flag dei documenti) e,magari, dipendono da altri campi
                 bdata["field_anagraficablob_fileinformativaaperto"] = (bdata["field_anagraficablob_privacyletta"]) === "true";
@@ -367,7 +370,7 @@ export default class extends Component {
                         {getNextState(this.state) === "FIRMA_VESSATORIE_TUF" && this.state.field_intestcorrente !== "" && <Step.FIRMA_VESSATORIE_TUF.form {...obformprops} btnConsole={this.btnConsole}></Step.FIRMA_VESSATORIE_TUF.form>}
                         {getNextState(this.state) === "ATTESA_FIRMA_CONSULENTE" && this.state.field_intestcorrente !== "" && <Step.ATTESA_FIRMA_CONSULENTE.form {...obformprops} btnConsole={this.btnConsole}></Step.ATTESA_FIRMA_CONSULENTE.form>}
 
-                        {getNextState(this.state) === "CONCLUSA" && this.state.field_intestcorrente !== "" && <Step.CONCLUSA.form {...obformprops} btnConsole={this.btnConsole}></Step.CONCLUSA.form>}
+                        {getNextState(this.state) === "INSERITA_DA_INVIARE" && this.state.field_intestcorrente !== "" && <Step.INSERITA_DA_INVIARE.form {...obformprops} btnConsole={this.btnConsole}></Step.INSERITA_DA_INVIARE.form>}
 
                         <BtnConsole formprops={obformprops}></BtnConsole>
                         

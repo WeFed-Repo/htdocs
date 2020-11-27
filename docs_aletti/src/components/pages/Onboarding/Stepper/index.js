@@ -115,7 +115,7 @@ export default class extends Component {
                 },
                 {
                     owner: <>Prom.<br />finan.</>,
-                    status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===primocomp && avanzamento["CONCLUSA"].status==="corrente"))? "attivo":"",
+                    status: (avanzamento["INT"+ primocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===primocomp && avanzamento["INSERITA_DA_INVIARE"].status==="corrente"))? "attivo":"",
                     steps: (()=>{
         
                         let firmaCons = [
@@ -129,8 +129,8 @@ export default class extends Component {
                         // In caso di secondo intestatario chiude qui la pratica
                         if (nint === "1")
                         firmaCons.push({
-                            name: "CONCLUSA",
-                            status: avanzamento["CONCLUSA"].status,
+                            name: "INSERITA_DA_INVIARE",
+                            status: avanzamento["INSERITA_DA_INVIARE"].status,
                             stepph: "Conclusione"
                         });
 
@@ -209,7 +209,7 @@ export default class extends Component {
                     },
                     {
                         owner: <>Prom.<br />finan.</>,
-                        status: (avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===secondocomp && avanzamento["CONCLUSA"].status==="corrente"))? "attivo":"",
+                        status: (avanzamento["INT"+ secondocomp  +"_ATTESA_FIRMA_CONSULENTE"].status==="corrente" || (intcorrente===secondocomp && avanzamento["INSERITA_DA_INVIARE"].status==="corrente"))? "attivo":"",
                         steps: (()=>{
         
                             let firmaCons = [
@@ -223,8 +223,8 @@ export default class extends Component {
                             // In caso di secondo intestatario chiude qui la pratica
                             if (nint === "2")
                             firmaCons.push({
-                                name: "CONCLUSA",
-                                status: avanzamento["CONCLUSA"].status,
+                                name: "INSERITA_DA_INVIARE",
+                                status: avanzamento["INSERITA_DA_INVIARE"].status,
                                 stepph: "Conclusione"
                             });
         
@@ -254,7 +254,7 @@ export default class extends Component {
                                     </div>
                                     <div className="steps">
                                         {v.steps.map((step,ind)=>{return(
-                                            <div className={"step " + step.status + (step.name==="CONCLUSA" ? " conclusione":"")} title={step.name} key={ind}><span>{step.stepph}</span></div>
+                                            <div className={"step " + step.status + (step.name==="INSERITA_DA_INVIARE" ? " conclusione":"")} title={step.name} key={ind}><span>{step.stepph}</span></div>
                                         )})}
                                     </div>
                                 </div>

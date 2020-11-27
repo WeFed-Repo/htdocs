@@ -24,7 +24,7 @@ const stati = {
         "INT1_FIRMA_VESSATORIE_TUF",
         "INT1_ATTESA_FIRMA_CONSULENTE" // Salvataggio backend
     ],
-    "finale": ["CONCLUSA"] // Salvataggio backend
+    "finale": ["INSERITA_DA_INVIARE"] // Salvataggio backend
 }
 
 // Ritorna tutti gli stati possibili per la pratica (a seconda del numero di intestatari ecc)
@@ -36,16 +36,12 @@ let getStatiPratica = (form) => {
 
         // Caso con 2 intestatari
         if (form.field_ordineintestatari === "01") {
-
             stati_pratica = stati_pratica.concat(stati["int0"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
             stati_pratica = stati_pratica.concat(stati["int1"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
-
         }
         else {
-
             stati_pratica = stati_pratica.concat(stati["int1"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
             stati_pratica = stati_pratica.concat(stati["int0"].filter((v)=>{return (form.field_sessionfirmeblob_depositoincluso!=="true") ? v.indexOf("TUF")<0: true}));
-
         }
     }
     else {
@@ -91,7 +87,7 @@ let getAvanzamentoPratica = (form) => {
 
 let stateInt = (form) => {
     let cState = form.field_stato;
-    if (stati["iniziali"].indexOf(cState) >= 0 || cState === "conclusa") {
+    if (stati["iniziali"].indexOf(cState) >= 0 || cState === "INSERITA_DA_INVIARE") {
         return cState
     }
     else {
@@ -105,7 +101,7 @@ let getNextState = (form) => {
 
     let stati = getStatiPratica(form);
 
-    return stati[stati.indexOf(stateInt(form)) + 1].replace("INT0_", "").replace("INT1_", "");
+    return (stateInt(form) !== "INSERITA_DA_INVIARE") ? stati[stati.indexOf(stateInt(form)) + 1].replace("INT0_", "").replace("INT1_", ""): "INSERITA_DA_INVIARE";
 
 }
 

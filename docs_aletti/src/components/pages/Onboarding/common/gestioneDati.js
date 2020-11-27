@@ -97,7 +97,10 @@ const defaultFields = {
                 "titolareEffettivo": "",
                 "personaEsposta": "",
 
-                "identitaAccertata": ""
+                "identitaAccertata": "",
+
+                "otpcons":"",
+                "pincons":""
             },
             "1": {
                 "fasciaRedditoNote": "",
@@ -169,7 +172,10 @@ const defaultFields = {
                 "titolareEffettivo": "",
                 "personaEsposta": "",
 
-                "identitaAccertata": ""
+                "identitaAccertata": "",
+                
+                "otpcons":"",
+                "pincons":""
             }
         }
     },

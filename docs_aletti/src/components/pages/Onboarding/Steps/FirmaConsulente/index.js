@@ -35,7 +35,15 @@ class StepForm extends Component {
         return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>Firma consulente - {nomeint}</h3>
+                    <h3> ATTESTAZIONE DI RICONOSCIMENTO {nomeint} DA PARTE DELL’INTERMEDIARIO </h3>
+                   <p>
+                        Il cliente, ai sensi D.Lgs. 21 novembre 2007, n. 231 e successive modifiche e integrazioni, attesta,
+                        sotto la propria responsabilità, di aver effettuato l’adeguata verifica e
+                        aver identificato il soggetto di cui alla presente mediante acquisizione di idoneo documento
+                        identificativo e del codice fi scale/partita iva, e che la/e firma/e é/sono stata/e
+                        personalmente apposta/e alla propria presenza dal/i citato/i soggetto/i, le cui generalità sono
+                        state esattamente riportate.
+                    </p>
                 </div>
             </div>
         )
