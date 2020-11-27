@@ -7,11 +7,34 @@ import validazione from "./validazione";
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
-    // Eventuali stati "locali" 
-    state = {
-        //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true"        
+    constructor(props){
+        super(props);
+        this.state = {
+            //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
+            isOutput : "true"        
+        };
+        this.newOtp = this.newOtp.bind(this);
     }
+
+    // Eventuali stati "locali" 
+    
+
+    componentDidMount() {
+        
+        this.props.setObState({
+            // Sblocco e blocco interfaccia (true per Bypass, default a false)
+            proseguiEnabled: false            
+        })
+    }
+
+    newOtp(){
+        this.props.setObState({
+            // Sblocco e blocco interfaccia (true per Bypass, default a false)
+            proseguiEnabled: false,
+            ["field_sessionfirmeblob_intestatarifirme_" + this.props.obstate.field_intestcorrente +"_otpcons"] : ""          
+        })
+    }
+
     
 
     render() {
@@ -44,6 +67,38 @@ class StepForm extends Component {
                         personalmente apposta/e alla propria presenza dal/i citato/i soggetto/i, le cui generalità sono
                         state esattamente riportate.
                     </p>
+                    <Row>
+                        <Col sm="3">
+                            <Form.input
+                                    label="Inserisci il PIN di firma"
+                                    name={"field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"}
+                                    maxlength="6"
+                                    mask="numero"
+                                    value={formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"]}
+                                    error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"]}
+                                    cbchange={(val)=>{this.props.setObState({proseguiEnabled: (val.length>=6 && formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"].length>=6)})}}
+                                    onChange={this.props.obchange}
+                                >
+                            </Form.input>
+                        </Col>
+                        <Col sm="3">
+                            <>
+                                <Form.input
+                                        label="Inserisci il Codice OTP"
+                                        name={"field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"}
+                                        maxlength="6"
+                                        mask="numero"
+                                        value={formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"]}
+                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"]}
+                                        cbchange={(val)=>{this.props.setObState({proseguiEnabled: (val.length>=6 && formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"].length>=6)})}}
+                                        onChange={this.props.obchange}
+                                    >
+                                </Form.input>
+                                <button onClick={()=>this.newOtp()}>Richiedi nuovo codice</button>
+                            </>
+                        </Col>
+
+                    </Row>
                 </div>
             </div>
         )

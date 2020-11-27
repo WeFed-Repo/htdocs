@@ -99,7 +99,7 @@ class StepForm extends Component {
                                         idIntestatario={formstate.field_intestcorrente}
                                         btnText="Richiedi il codice di controllo"
                                     >
-                                    ></Form.otp>
+                                    </Form.otp>
                             </Col>
                         </Row>
                     </section>
