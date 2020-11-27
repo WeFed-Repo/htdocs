@@ -81,13 +81,15 @@ $menu = json_decode($jsonstr,true);
                                 </ul>
                             </div>
                             <ul id="userMenuMobile">
-                                <li><span class="nameConto">Massimiliano Rossi Vincenzi</span></li>
-                                <li><a href="#"><span>I miei dati</span><i class="icon icon-imieidati_mobile"></i></a></li>
-                                <li><a href="#"><span>Alert</span><i class="icon icon-alert_mobile"></i></a></li>
-                                <li><a href="#"><span>Sicurezza</span><i class="icon icon-sicurezza_mobile"></i></a></li>
-                                <li><a href="#"><span>Consultare e disporre</span><i class="icon icon-consultare_mobile"></i></a></li>
-                                <li><a href="#"><span>Esci</span><i class="icon icon-esci_mobile"></i></a></li>
-                            </ul>
+                <li class="userMenuMobile-first"><span class="nameConto">Mario Rossi</span></li>
+                <li class="userMenuMobile-second"><a href="/WEBWB/serviziPerTe/contattiERecapiti.do" title="I Miei dati"><span>I miei dati</span><i class="icon icon-imieidati_mobile"></i></a></li>
+                <li class="userMenuMobile-third"><a href="/WEBWB/sm/riepilogo.do" title="Alert"><span>Alert</span><i class="icon icon-alert_mobile"></i></a></li>
+                <li class="userMenuMobile-fourth"><a href="/WEBWB/wb/content/sicurezzaInfo.do" title="Sicurezza"><span>Sicurezza</span><i class="icon icon-sicurezza_mobile"></i></a></li>
+                <li class="userMenuMobile-fifth"><a href="/WEBWB/serviziPerTe/ilMioCalendario.do" title="Calendario"><span>Calendario</span><i class="icon icon-calendar"></i></a></li>
+                <li class="userMenuMobile-sixth"><a href="/WEBWB/wb/content/helpcenterContatti.do" title="Servizio clienti"><span>Servizio clienti</span><i class="icon icon-helpcenter"></i></a></li>
+                <li class="userMenuMobile-seventh"><a href="/WEBWB/wb/content/contattaci.do" title="Scrivici"><span>Scrivici</span><i class="icon icon-scrivici"></i></a></li>
+                <li class="userMenuMobile-eighth"><a href="#" title="Esci" onclick="$('form#logout').submit(); return false;"><span>Esci</span><i class="icon icon-esci_mobile"></i></a></li>
+</ul>
                         </div>
                     </div>
                     <!-- FINE HEADER DESKTOP -->
