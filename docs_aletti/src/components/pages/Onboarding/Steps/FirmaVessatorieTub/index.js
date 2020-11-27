@@ -18,7 +18,7 @@ class StepForm extends Component {
         
         this.props.setObState({
             // Sblocco e blocco interfaccia (true per Bypass, default a false)
-            proseguiEnabled: false,
+            proseguiEnabled: false
             
         })
     }
@@ -87,9 +87,7 @@ class StepForm extends Component {
                     <h3>FIRMA VESSATORIE TUB</h3>
                     <FirmaInfoCert {...{ obformprops, firmaDocs, firmatype }}
                         firmaDocsValid={this.state.firmaDocsValid}
-                        functionPrecontrattuale={() => this.inviaPrecontrattuale()}
-                        precontEnabled={this.state.abilitaPrecontrattuale}
-                        precontSent={this.state.sendPrecontrattuale}>
+                    >
                     </FirmaInfoCert>
                 </div>
             </div>
