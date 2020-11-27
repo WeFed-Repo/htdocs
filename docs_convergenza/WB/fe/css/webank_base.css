@@ -1450,6 +1450,12 @@
 .icon-meno:before {
   content: "\ea9f";
 }
+.icon-pagamenti_con_smartphone-grid64-o:before {
+  content: "\eaa0";
+}
+.icon-pagamenti_con_smartphone-grid64-f:before {
+  content: "\eaa1";
+}
 .glyph-arrow_trading_fill .path1:before {
   content: "\e94d";
   color: #000000;
