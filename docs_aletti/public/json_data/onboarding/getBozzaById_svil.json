@@ -10,7 +10,7 @@
         "cognomePromotore": "BAGHETTI",
         "dataInserimento": 1591347967000,
         "dataUltimoAggiornamento": 1591347967000,
-        "stato": "FIRMA_VESSATORIE_TUB",
+        "stato": "IDENTIF_CLIENTE",
         "provenienza": "PROMOTORE",
         "intestazione": "Davide Cioetto",
         "numIntestatari": 2,
@@ -20,7 +20,7 @@
         "expirationDate": 1599289567351,
         "sessionFirmeBlob": {
             "idMifid": null,
-            "depositoIncluso": false,
+            "depositoIncluso": true,
             "informativaMifid": false,
             "risposteMifid": null,
             "capitalizzazionePeriodica": null,

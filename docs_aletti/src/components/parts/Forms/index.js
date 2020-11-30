@@ -333,7 +333,7 @@ class FormCheckfile extends Component {
             <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
                 {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
                 {!this.props.disabled && 
-                    <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange , mask:null})}} href={this.props.fileurl} target="_blank">
+                    <a className={"checkfile " + ((value) ? " clicked" : "")} onClick={() => {this.props.onChange({ name: name, value: true, cbchange:cbchange , mask:null})}} href={this.props.fileurl} download={this.props.download} target="_blank">
                         <i className="icon icon-file_pdf"></i>
                         <span className="text">{this.props.filedescription}</span>
                     </a>

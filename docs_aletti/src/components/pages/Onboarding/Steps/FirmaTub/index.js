@@ -84,7 +84,7 @@ class StepForm extends Component {
                     "title": <>Documentazione informativa precontrattuale del conto corrente</>,
                     "files": [{
                         "name": "Informativa Privacy",
-                        "url": "####"
+                        "id": "AAA-BB-32109"
                     }]
                 }]
             ,

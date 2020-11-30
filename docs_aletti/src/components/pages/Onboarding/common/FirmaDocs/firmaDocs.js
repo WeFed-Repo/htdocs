@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DefaultCollapse from "components/parts/DefaultCollapse";
 import Form from 'components/parts/Forms';
+import { ambiente } from 'functions/genericVars';
 
 class FirmaDocs extends Component {
 
@@ -82,7 +83,8 @@ class FirmaDocs extends Component {
                                                 value={this.state["file_"+i+"_"+i2]}
                                                 onChange={this.generalOnChange}
                                                 filedescription={file.name}
-                                                fileurl={file.url}
+                                                fileurl={(ambiente.isLocale || ambiente.isLibrerie)? "/json_data/pdf_stream" : "/promotori/onboarding/rest/documentale/"+file.id+"/getDoc"}
+                                                download={file.name.replace(" ","_").toLowerCase() + ".pdf"}
                                                 filetype="pdf"
                                             >
                                             </Form.checkfile>
