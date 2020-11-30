@@ -12535,6 +12535,10 @@ body.webview .hidePrint {
   font-weight: 300;
   padding: 0 0 15px;
 }
+#cardSelection .feature:not(.col-sm-2) {
+  width: 14%;
+  float: left;
+}
 #cardSelection #btConfrontaCarteDisabled {
   display: block;
 }
