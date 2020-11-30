@@ -325,7 +325,7 @@ export default class extends Component {
                                     {
                                         this.state.otpState === "OK" &&
                                         <div className="otp-feedback ok">
-                                            Intestatario 1 ha firmato correttamente 
+                                            Intestatario {(obform["field_intestcorrente"]==="0")?"1": "2"} ha firmato correttamente 
                                         </div>
                                     }
 

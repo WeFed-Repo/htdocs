@@ -4,6 +4,7 @@ import { Col, Row, Button } from 'reactstrap';
 import salva from "./salva";
 import validazione from "./validazione";
 
+
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
@@ -23,7 +24,8 @@ class StepForm extends Component {
         
         this.props.setObState({
             // Sblocco e blocco interfaccia (true per Bypass, default a false)
-            proseguiEnabled: false            
+            proseguiEnabled: false,
+            ["field_sessionfirmeblob_intestatarifirme_" + this.props.obstate.field_intestcorrente +"_otpcons"]: ""            
         })
     }
 
@@ -33,6 +35,7 @@ class StepForm extends Component {
             proseguiEnabled: false,
             ["field_sessionfirmeblob_intestatarifirme_" + this.props.obstate.field_intestcorrente +"_otpcons"] : ""          
         })
+
     }
 
     
