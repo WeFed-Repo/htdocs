@@ -29,9 +29,8 @@ class StepForm extends Component {
                 <div className="onboarding-form">
                     <h3>TERMINE ATTIVIT&Agrave; CON IL CLIENTE</h3>
                     <p className="feedback-end"><span className="big">La richiesta è stata salvata correttamente.</span><br />
-A breve sarà inviata una mail di conferma sulla casella di posta personale e sulla
-casella PEC del cliente.</p>
-
+                    A breve sarà inviata una mail di conferma sulla casella di posta personale e sulla
+                    casella PEC del cliente.</p>
                 </div>
             </div>
         )
