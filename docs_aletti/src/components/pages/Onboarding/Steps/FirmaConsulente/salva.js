@@ -23,8 +23,8 @@ import {saveUrl} from "components/pages/Onboarding/common/parametri.js";
                     "stato": localState,
                     "intestatarioCorrente": form.field_intestcorrente,
                     "firme": {
-                            "otpCons": "",
-                            "pinCons" : ""
+                            "otpCons": form["field_sessionfirmeblob_intestatarifirme_" + form.field_intestcorrente +"_otpcons"],
+                            "pinCons" : form["field_sessionfirmeblob_intestatarifirme_" + form.field_intestcorrente +"_pincons"]
                     }
                 }
             
