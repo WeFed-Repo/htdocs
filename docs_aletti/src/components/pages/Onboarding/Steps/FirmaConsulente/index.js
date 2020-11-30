@@ -81,21 +81,28 @@ class StepForm extends Component {
                                 >
                             </Form.input>
                         </Col>
-                        <Col sm="3">
-                            <>
-                                <Form.input
-                                        label="Inserisci il Codice OTP"
-                                        name={"field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"}
-                                        maxlength="6"
-                                        mask="numero"
-                                        value={formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"]}
-                                        error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"]}
-                                        cbchange={(val)=>{this.props.setObState({proseguiEnabled: (val.length>=6 && formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"].length>=6)})}}
-                                        onChange={this.props.obchange}
-                                    >
-                                </Form.input>
-                                <button onClick={()=>this.newOtp()}>Richiedi nuovo codice</button>
-                            </>
+                            <Col sm="5">
+                                <Row>
+                                    <Col xs="8">
+                                        <div className={"form-group" + ((formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"] && formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"].length>0)? "error":"")}>
+                                            <label className="form-control-label">Inserisci codice OTP</label>
+                                            <Form.input
+                                                className="no-label"
+                                                name={"field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"}
+                                                maxlength="6"
+                                                mask="numero"
+                                                value={formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"]}
+                                                error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_otpcons"] }
+                                                cbchange={(val)=>{this.props.setObState({proseguiEnabled: (val.length>=6 && formstate["field_sessionfirmeblob_intestatarifirme_" + formstate.field_intestcorrente +"_pincons"].length>=6)})}}
+                                                onChange={this.props.obchange}
+                                                >
+                                            </Form.input>
+                                        </div>
+                                    </Col>
+                                    <Col xs="4">
+                                        <button onClick={()=>this.newOtp()} className="otp-new-code">Richiedi nuovo codice OTP</button>
+                                    </Col>
+                                </Row>
                         </Col>
 
                     </Row>

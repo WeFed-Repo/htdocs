@@ -157,3 +157,25 @@ ul.elenco-documenti {
     &.default-collapse-open .card-header .no-select {border:solid 1px #ccc;border-bottom:0 none;}
     .default-collapse-wrap {border:solid 1px #ccc; padding: 0 15px 15px;border-top:0 none}
 } 
+
+.feedback-end {
+    position:relative;
+    background: #dce7b5;
+    padding:15px 15px 15px 70px;
+    span.big {font-size:25px;color:#060}
+    &::before {
+        display:block;
+        position:absolute;
+        border:solid 2px #060;
+        width:40px;
+        height:40px;
+        top:15px;
+        left:15px;
+        border-radius:20px;
+        color:#060;
+        font-size:30px;
+        text-align:center;
+        line-height:40px;
+        content:"\2713"
+    }    
+}

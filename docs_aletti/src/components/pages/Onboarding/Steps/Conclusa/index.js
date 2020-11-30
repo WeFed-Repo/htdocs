@@ -7,12 +7,12 @@ class StepForm extends Component {
     // Eventuali stati "locali" 
     state = {
         //"localfield_xxxx": (this.props.obstate.field_campo_collegato === "true") ? true : false
-        isOutput : "true"        
+        isOutput: "true"
     }
-    
+
 
     render() {
-        
+
         // Cattura lo stato del form (inclusivo di errori, ecc) tramite le props
         let formstate = this.props.obstate;
         // Cattura i domini tramite le props
@@ -24,10 +24,14 @@ class StepForm extends Component {
             setObState: this.props.setObState,
         }
 
-       return (
+        return (
             <div className="onboarding-wrapper">
                 <div className="onboarding-form">
-                    <h3>PRATICA CONCLUSA</h3>
+                    <h3>TERMINE ATTIVIT&Agrave; CON IL CLIENTE</h3>
+                    <p className="feedback-end"><span className="big">La richiesta è stata salvata correttamente.</span><br />
+A breve sarà inviata una mail di conferma sulla casella di posta personale e sulla
+casella PEC del cliente.</p>
+
                 </div>
             </div>
         )
@@ -35,5 +39,5 @@ class StepForm extends Component {
 }
 
 export default {
-    form : StepForm
+    form: StepForm
 }
