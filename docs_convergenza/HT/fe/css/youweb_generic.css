@@ -8373,6 +8373,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     width: 50%;
     position: relative;
     float:none!important;
+    padding:0;
 }
 .display-cell p {
     padding-bottom:0;

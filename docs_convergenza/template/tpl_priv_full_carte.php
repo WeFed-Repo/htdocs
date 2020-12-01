@@ -49,7 +49,29 @@ if ($carte) {
                 </div>
             </div>
             <!-- scheda carousel -->
-
+              <!-- scheda carousel carta NEXI -->
+              <div class="item">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="/WB/fe/img/carta_big_cartanexi.png" alt="Immagine carta">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>Carta di Nexi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt autem laudantium, ipsa vel
+                            maxime inventore exercitationem odit doloribus nostrum repellat qui placeat repellendus.<br>
+                            <br>
+                            Voluptatem, harum, illo! Eius cumque officiis exercitationem molestias, eum voluptatem
+                            dolores animi iure quo deserunt itaque quod, voluptas ipsa doloribus est minima, porro
+                            similique eaque earum deleniti rerum!</p>
+                        <div class="btn-align-left">
+                            <a type="button" class="btn btn-primary" id="">Richiedi subito</a>
+                            <a type="button" class="btn btn-primary" id="">Scopri di pi&ugrave;</a>
+                            <br class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- scheda carousel -->
             <!-- scheda carousel -->
             <div class="item">
                 <div class="row">
@@ -73,10 +95,11 @@ if ($carte) {
                 </div>
             </div>
             <!-- scheda carousel -->
-
+            
+           
 
             <!-- scheda carousel -->
-            <!--
+            
             <div class="item">
                 <div class="row">
                     <div class="col-sm-4">
@@ -98,7 +121,7 @@ if ($carte) {
                     </div>
                 </div>
             </div>
-            -->
+            
             <!-- scheda carousel -->
 
             <!-- scheda carousel -->
@@ -128,24 +151,26 @@ if ($carte) {
         <!-- Carousel indicators -->
         <hr class="hidden-xs hidden-sm">
         <div class="row">
-            <div class="col-md-4 hidden-sm hidden-xs"></div>
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-3 hidden-sm hidden-xs"></div>
+            <div class="col-md-9 col-xs-12">
                 <div class="carousel-indicators">
                     <a data-target="#carouselCarte" data-slide-to="0" class="active">
                         <img src="/WB/fe/img/carta_small_bancomat.gif" alt="Immagine carta">
                         <span>Bancomat</span>
                     </a>
                     <a data-target="#carouselCarte" data-slide-to="1">
+                        <img src="/WB/fe/img/carta_small_cartanexi.gif" alt="Immagine carta">
+                        <span>Carta Nexi</span>
+                    </a>
+                    <a data-target="#carouselCarte" data-slide-to="2">
                         <img src="/WB/fe/img/carta_small_cartiprone.gif" alt="Immagine carta">
                         <span>Carta di credito</span>
                     </a>
-                    <!--
-                    <a data-target="#carouselCarte" data-slide-to="2">
+                    <a data-target="#carouselCarte" data-slide-to="3">
                         <img src="/WB/fe/img/carta_small_cartaprepaid.gif" alt="Immagine carta">
                         <span>Carta prepagata</span>
                     </a>
-                    -->
-                    <a data-target="#carouselCarte" data-slide-to="2">
+                    <a data-target="#carouselCarte" data-slide-to="4">
                         <img src="/WB/fe/img/news_icon.png" alt="Immagine carta">
                     </a>
                     <br class="clear">

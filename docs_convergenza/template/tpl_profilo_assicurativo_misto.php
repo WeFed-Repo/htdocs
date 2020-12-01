@@ -13,7 +13,7 @@
 <!-- fine titolo di pagina -->
 <!-- intro testuale -->
 <section>
-    <p>Prima di procedere con il preventivo o l'acquisto di un prodotto assicurativo, <strong>siamo tenuti a verificare le tue esigenze in modo da offrirti un prodotto coerente con le tue necessit&agrave;.</strong>
+    <p>Prima di procedere con il preventivo o l'acquisto di un prodotto assicurativo, <strong>siamo tenuti a farti compilare un questionario per verificare le tue esigenze in modo da offrirti un prodotto coerente con le tue necessit&agrave;.</strong>
     <br>Ricorda che potrai modificare il tuo profilo assicurativo in qualsiasi momento.</p>
     <p>
         I clienti con rapporti di conto corrente presso filiali che offrono sia prodotti Vera sia prodotti Bipiemme Vita, avranno a disposizione <strong>due profili assicurativi</strong> per verificare la coerenza dei propri bisogni con l’offerta di ciascuna compagnia.
