@@ -5,6 +5,8 @@ import salva from "./salva";
 import validazione from "./validazione";
 import FirmaDocs from "../../common/FirmaDocs/firmaDocs";
 
+import docobj from "./docobj.js"
+
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
@@ -41,42 +43,8 @@ class StepForm extends Component {
             nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
         }
 
-        // MODULI
-        let docobj = {
-            /*
-            "accordions": [
-                {
-                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                },
-                {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                }]
-            ,*/
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-            ]
-
-        }
-
-
-        let firmaDocs = <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>
+       
+        let firmaDocs = <FirmaDocs docobj={docobj(formstate["field_sessionfirmeblob_depositoincluso"])} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>
 
         let firmatype = "FIRMA_VESSATORIE_TUB";
 
