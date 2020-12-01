@@ -8894,6 +8894,15 @@ body.webview .epContainerTextWatchR {
 .carousel-catalogo .carousel-indicators a.active span {
   color: #000;
 }
+@media screen and (max-width: 768px) {
+  .carousel-catalogo .carousel-indicators a {
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+  .carousel-catalogo .carousel-indicators a.active {
+    height: auto!important;
+  }
+}
 @media screen and (max-width: 1023px) {
   .carousel-catalogo {
     margin: 0 -15px;
@@ -12542,6 +12551,11 @@ body.webview .hidePrint {
 #cardSelection #btConfrontaCarteDisabled {
   display: block;
 }
+@media screen and (max-width: 767px) {
+  #cardSelection .feature:not(.col-sm-2) {
+    width: 100%;
+  }
+}
 #cardResults {
   text-align: center;
   padding-top: 20px;
@@ -12566,6 +12580,7 @@ body.webview .hidePrint {
 #cardResults .carta img {
   margin: 0 auto 5px;
   width: 160px;
+  max-width: 100%;
 }
 #cardResults .carta span {
   clear: both;
@@ -12599,6 +12614,15 @@ body.webview .hidePrint {
 #noCardSelected img.imgright {
   margin: 10px 10px 0 -40px;
   float: right;
+}
+@media screen and (max-width: 768px) {
+  #noCardSelected img {
+    display: none;
+  }
+  #noCardSelected span {
+    line-height: 22px;
+    height: 44px;
+  }
 }
 /* Fondi e sicav ricerca e confronta */
 #fesRicWrap {

@@ -12,8 +12,7 @@
 </section>
 <!-- testo di esito questionario da preventivo-->
 <section>
-    <p class="large">Grazie per aver compilato il tuo profilo assicurativo.<br>
-    Avendo scelto di non rispondere non è possibile procedere con il preventivo del prodotto che avevi scelto.</p>
+    <p class="large">Grazie, il tuo profilo assicurativo è stato salvato, ma avendo scelto di non rispondere ad alcune domande del questionario non è possibile procedere con il preventivo del prodotto che avevi scelto.</p>
     <p class="large">Puoi <a href="#">modificare il tuo profilo assicurativo</a> in qualsiasi momento.</p>
 </section>
 <!-- fine testo di esito questionario da preventivo-->
