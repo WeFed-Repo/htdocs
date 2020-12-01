@@ -13,8 +13,8 @@
 				<div class="col-xs-4 align-center">
 					<label class="confronta-carte">
 						<span class="cartaGold"></span>
-						<input type="checkbox" data-column="cgp" value="nav_priv_wbx_compara_carte_cartiprGoldPlus">
-						<p class="note">CARTIMPRONTA GOLD PLUS</p>
+						<input type="checkbox" data-column="cnexi" value="nav_priv_wbx_compara_carte_cartinexi">
+						<p class="note">CARTA NEXI</p>
 					</label>
 				</div>
 				<div class="col-xs-4 align-center">
@@ -38,7 +38,7 @@
 								<th data-field="primaColonna" width="20%">&nbsp;</th>
 								<th id="cartaOneTitle" data-field="cartaOneTitle" width="20%">Cartimpronta ONE</th>
 								<th data-field="bancomatTitle" width="20%">&nbsp;</th>
-								<th data-field="cartaGoldTitle" width="20%">&nbsp;</th>
+								<th data-field="cartaNexiTitle" width="20%">&nbsp;</th>
 								<th data-field="cartaJeansTitle" width="20%">&nbsp;</th>
 						</tr>
 					</thead>
@@ -178,18 +178,18 @@
 		    btn : '<div class="form-group btnWrapper"><div><a type="button" class="btn btn-primary btn-small" href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/action/nsf/RichiestaCartimprontaOneFdr.action\',null,\'OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_cartimpr_one_rich&amp;OBSKEY3=nav_priv_wbx_rich_emiss_cartimpr_one&amp;OBS_REF=Card_confr_btn_imprntone_richiesta\');">richiedi ora</a></div></div><a href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/action/wbOnetoone/schedaProdotto.action\',null,\'COL=carte&amp;OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_cartimpr_one_rich&amp;OBSKEY3=nav_priv_wbx_scheda_prod_cartimpr_one&amp;OBS_REF=Card_confr_link_imprntone_scheda\');">leggi di più</a>'
 										
 		},
-		"cgp" : {
-			titolo : 'Cartimpronta Gold Plus',
-			tipologia : 'Carta di credito ORO',
-			canone : '<strong>€ 49 (Gratuito se effettui una spesa minima di € 9.000/anno)</strong>',
-			costoPrel: '---',
-			costoAntCont: '3% del valore con un minimo di € 3 in tutto il mondo (prelievo all\'ATM); 3% del valore con un minimo di € 4 (prelievo allo sportello)',
-		    commPag : 'Maggiorazione dell\'1.5% sul tasso di cambio per gli acquisti in valuta diversa dall\'Euro',
-		    platfond : 'Min. € 5.200 / Max € 30.000',
+		"cnexi" : {
+			titolo : 'Carta Nexi',
+			tipologia : 'Carta di credito',
+			canone : '<strong>Gratuita se richiesta entro il 31/01/2021 <br>&euro; 50,00 Carta principale<br>&euro; 35,00 Carta familiare*<br>&euro;25,82 Carta aggiuntiva*<br>(carta intestata allo stesso titolare della principale, di circuito complementare)<br>*La carta può essere richiesta come carta principale oppure in versione aggiuntiva o familiare in presenza di una carta principale.</strong>',
+			costoPrel: '4 % <br>Min. 0,52 &euro; per operazioni effettuare in euro<br>Min. 5,16 &euro; per operazioni effettuate in valute diverse dall’euro',
+			costoAntCont: '25,00 &euro; in Italia e all’estero',
+		    commPag : '0 per pagamenti in area euro. <br>Maggiorazione tasso di cambio per operazioni in valuta diversa dall’euro<br>Tasso applicato dai circuiti internazionali determinato all’atto della conversione, maggiorato di una commissione per il servizio non superiore al 2%.',
+		    platfond : 'Max &euro; 3.000',
 		    utilizzoOnline: '<i class="icon icon-alert_ok icon-2x stato-ok"></i>',
 		    cartaAgg : '<i class="icon icon-alert_ok icon-2x stato-ok"></i>',
 		    promozioni : '<i class="icon icon-alert_ok icon-2x stato-ok"></i>',
-		    btn: '<div class="form-group btnWrapper"><div><a type="button" class="btn btn-primary btn-small" href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/do/wbOnetoone/schedaProdotto.do\',null,\'OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_cartimpr_gold_plus_rich&amp;OBSKEY3=nav_priv_wbx_rich_emiss_cartimpr_gold_plus&amp;OBS_REF=Card_confr_btn_imprntgold_richiesta\');">richiedi ora</a></div></div><a href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/action/wbOnetoone/schedaProdotto.action\',null,\'OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_cartimpr_gold_plus_rich&amp;OBSKEY3=nav_priv_wbx_scheda_prod_cartimpr_gold_plus&amp;OBS_REF=Card_confr_link_imprntgold_scheda\');">leggi di più</a>'
+		    btn: '<div class="form-group btnWrapper"><div><a type="button" class="btn btn-primary btn-small" href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/do/wbOnetoone/schedaProdotto.do\',null,\'OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_carta_nexi_rich&amp;OBSKEY3=nav_priv_wbx_rich_emiss_carta_nexi&amp;OBS_REF=Card_confr_btn_cartanexi_richiesta\');">richiedi ora</a></div></div><a href="javascript:void(0);" onclick="callJSP(\'/wbOnetoone/3l/action/wbOnetoone/schedaProdotto.action\',null,\'OBSCNT=TAB&amp;tabId=nav_priv_wbx_carte&amp;OBSKEY=nav_priv_wbx_cartanexi_rich&amp;OBSKEY3=nav_priv_wbx_scheda_prod_cartanexi&amp;OBS_REF=Card_confr_link_cartanexi_scheda\');">leggi di più</a>'
 		},
 		"cprep" :  {
 			titolo : 'Carta Kje@ns',
@@ -253,18 +253,18 @@
 					    	trBtn = htmlTable.banc.btn
 
 					  break;
-					  case "cgp":
-					  		trTitolo = htmlTable.cgp.titolo,
-					  		trTipologia = htmlTable.cgp.tipologia,
-					    	trCanone = htmlTable.cgp.canone,
-					    	trCostoPrel = htmlTable.cgp.costoPrel,
-					    	trCostoAntCont = htmlTable.cgp.costoAntCont,
-					    	trCommPag = htmlTable.cgp.commPag,
-					    	trPlatfond= htmlTable.cgp.platfond,
-					    	trUtilizzoOnline= htmlTable.cgp.utilizzoOnline,
-					    	trCartaAgg= htmlTable.cgp.cartaAgg,
-					    	trPromozioni = htmlTable.cgp.promozioni,
-					    	trBtn = htmlTable.cgp.btn
+					  case "cnexi":
+					  		trTitolo = htmlTable.cnexi.titolo,
+					  		trTipologia = htmlTable.cnexi.tipologia,
+					    	trCanone = htmlTable.cnexi.canone,
+					    	trCostoPrel = htmlTable.cnexi.costoPrel,
+					    	trCostoAntCont = htmlTable.cnexi.costoAntCont,
+					    	trCommPag = htmlTable.cnexi.commPag,
+					    	trPlatfond= htmlTable.cnexi.platfond,
+					    	trUtilizzoOnline= htmlTable.cnexi.utilizzoOnline,
+					    	trCartaAgg= htmlTable.cnexi.cartaAgg,
+					    	trPromozioni = htmlTable.cnexi.promozioni,
+					    	trBtn = htmlTable.cnexi.btn
 					  break;
 					  case "cprep":
 					  		trTitolo = htmlTable.cprep.titolo,
