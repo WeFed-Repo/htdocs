@@ -43,37 +43,56 @@ class StepForm extends Component {
 
         // MODULI
         let docobj = {
-            /*
             "accordions": [
                 {
-                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
+                    "title": <>Documentazione MIFID</>,
+                    "files": [
+                        {
+                            "name": "Questionario Mifid",
+                            "id": "J400031_000319_OFS_MF",
+                            "checkgroup": [
+                                <>
+                                   Il cliente sottoscrive il questionario MIFID
+                                </>
+                            ]
+                        },
+                        {
+                            "name": "Lettera di classificazione",
+                            "id": "J220023_000319_OFS_LC",
+                            "checkgroup": [
+                                <>
+                                   Il cliente sottoscrive la lettera di classificazione
+                                </>
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                }]
-            ,*/
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
+                    "title": <>Documentazione contrattuale sui servizi investimento</>,
+                    "files": [
+                        {
+                            "name": "Informativa preliminare alla clientela",
+                            "id": "J700000_000319_OFS_IPC",
+                            "checkgroup": [
+                                <>
+                                   Il cliente ha letto e sottoscritto integralmente il contenuto dell’informativa preliminare alla clientela
+                                </>
+                            ]
+                        },
+                        {
+                            "name": "Condizioni economiche e contrattuali dei servizi di investimento",
+                            "id": "J700000_000319_OFS_SI",
+                            "checkgroup": [
+                                <>
+                                   Il cliente ha letto e approvato integralmente il contenuto delle condizioni economiche e contrattuali del contratto sui servizi di Investimento.
+                                </>
+                            ]
+                        }
+                    ]
+                }
             ]
 
-        }
+        };
 
 
         let firmaDocs = <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>

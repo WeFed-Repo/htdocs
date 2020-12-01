@@ -41,39 +41,26 @@ class StepForm extends Component {
             nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
         }
 
-        // MODULI
-        let docobj = {
-            /*
-            "accordions": [
-                {
-                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
+       // MODULI
+       let docobj = {
+        "accordions": [
+            {
+                "title": <>Clausole vessatorie</>,
+                "files": [
+                    {
+                        "name": "Clausole vessatorie contratto sui servizi di investimento",
+                        "id": "J700000_00319_OFS_SI",
                         "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
+                            <>
+                               Il cliente ha letto e approvato specificatamente le clausole rilevanti ai sensi degli artt. Xxxx e xxx c.c.
+                            </>
                         ]
-                    }]
-                },
-                {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                }]
-            ,*/
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-            ]
+                    }
+                ]
+            }
+        ]
 
-        }
+    };
 
 
         let firmaDocs = <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>
