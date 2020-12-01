@@ -3525,10 +3525,9 @@ body.webview {
             vertical-align: top;
             float: left; 
             margin: -1px 40px 0 0;
-            padding: 30px 0 0;
+            padding: 30px 0 0; 
             background: transparent none no-repeat center -60px;
-            height: auto;
-
+           
             img {
                 width: 100%;
             }
@@ -3548,16 +3547,25 @@ body.webview {
             }
 
             &.active {
-                background-image: url(/WB/fe/img/arrow_piega.png)
+                background-image: url(/WB/fe/img/arrow_piega.png);
             }
 
             &.active span {
                 color: #000
+            } 
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .carousel-catalogo {
+        .carousel-indicators {
+            a {padding-top:15px;  margin-bottom:15px;  }
+            a.active {
+                height: auto!important; 
             }
         }
     }
 }
-
 @media screen and (max-width: 1023px) {
     .carousel-catalogo {
         margin: 0 -15px;

@@ -1800,6 +1800,15 @@ body.webview {
         display: block
     }
 }
+@media screen and (max-width: 767px) {
+    #cardSelection {
+        .feature {
+            &:not(.col-sm-2){
+                width: 100%; 
+            }
+        }
+    } 
+}
 
 #cardResults {
     text-align: center;
@@ -1813,6 +1822,7 @@ body.webview {
         vertical-align: top;
         max-width: 25%;
         margin: 0;
+        
 
         &.disabled {
             opacity: 0.3;
@@ -1827,6 +1837,7 @@ body.webview {
         img {
             margin: 0 auto 5px;
             width: 160px;
+            max-width: 100%; 
         }
 
         span {
@@ -1865,12 +1876,22 @@ body.webview {
 
         &.imgright {
             margin: 10px 10px 0 -40px;
-            float: right
+            float: right;
         }
     }
 
 }
-
+@media screen and (max-width: 768px) {
+    #noCardSelected{
+        img {
+        display: none; 
+        }
+     span {
+         line-height: 22px;
+         height: 44px;
+     }
+    }
+}
 
 /* Fondi e sicav ricerca e confronta */
 #fesRicWrap {
