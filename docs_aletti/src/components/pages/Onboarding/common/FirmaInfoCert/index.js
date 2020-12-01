@@ -33,7 +33,7 @@ export default class extends Component {
 
 
             // step: "INIT", <!-- STEP DI START
-            step: "INIT",
+            step: "FIRMADOC",
             loading: true,
 
             flagAccInfocert: false,

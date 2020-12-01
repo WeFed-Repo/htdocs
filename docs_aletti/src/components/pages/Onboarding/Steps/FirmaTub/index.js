@@ -6,6 +6,9 @@ import validazione from "./validazione";
 import FirmaDocs from "../../common/FirmaDocs/firmaDocs";
 import getData from "functions/getData";
 
+import docobj from "./docobj.js"
+import docprecont from "./docprecont.js"
+
 // FORM PRINCIPALE 
 class StepForm extends Component {
 
@@ -76,62 +79,9 @@ class StepForm extends Component {
             nomeint = " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_nome"] + " " + formstate["field_anagraficablob_intestatari_" + formstate["field_intestcorrente"] + "_cognome"];
         }
 
-        // BLOCCHI CON STEP FIRMA AUTOCONSISTENTE (gli stati sono locali)
-        // PRECONTRATTUALE
-        let docprecont = {
-            "accordions": [
-                {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "id": "AAA-BB-32109"
-                    }]
-                }]
-            ,
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-            ]
-
-        }
-
-        // MODULI
-        let docobj = {
-            /*
-            "accordions": [
-                {
-                    "title": <>Documentazione informativa <strong>Privacy</strong></>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                },
-                {
-                    "title": <>Documentazione informativa precontrattuale del conto corrente</>,
-                    "files": [{
-                        "name": "Informativa Privacy",
-                        "url": "####",
-                        "checkgroup": [
-                            <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                            <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-                        ]
-                    }]
-                }]
-            ,*/
-            "checkgroup": [
-                <>Il cliente dichiara di aver preso visione della documentazione informativa precontrattuale che Banca Aletti ha consegnato.</>,
-                <><strong>Ricezione copia proposta del contratto unitamente a copia di tutti i relativi allegati.</strong><br />Il cliente dichiara di aver ricevuto una copia di tutti i documenti contrattuali</>
-            ]
-
-        }
-
-
         let firmaDocs = <>
-            {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont} validFunction={() => this.setState({ abilitaPrecontrattuale: true })} invalidFunction={() => this.setState({ abilitaPrecontrattuale: false })}></FirmaDocs>}
-            {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>}
+            {!this.state.sendPrecontrattuale && <FirmaDocs docobj={docprecont(formstate["field_sessionfirmeblob_depositoincluso"])} validFunction={() => this.setState({ abilitaPrecontrattuale: true })} invalidFunction={() => this.setState({ abilitaPrecontrattuale: false })}></FirmaDocs>}
+            {this.state.sendPrecontrattuale && <FirmaDocs docobj={docobj(formstate["field_sessionfirmeblob_depositoincluso"])} validFunction={() => this.setState({ firmaDocsValid: true })} invalidFunction={() => this.setState({ firmaDocsValid: false })}></FirmaDocs>}
         </>
 
         let firmatype = "FIRMA_TUB";
