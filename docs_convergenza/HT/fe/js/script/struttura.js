@@ -455,3 +455,27 @@ $(function () {
     );
 
 });
+
+// Fallback per tracking GTM (non collegato)
+var gotoTrack = function(action,params,cb) {
+    var e = this.event,
+        cbdone = false;
+
+    if (e) { 
+        e.preventDefault() 
+        if (e.target && $(e.target).attr("href")) {
+            cb = $(e.target).attr("href");
+        }
+    }
+    if (typeof cb !== "undefined") {
+        // Se è una funzione la callback e' quella, altrimenti e' un href
+        if (typeof cb === "string") {
+            gtagcb = function() {document.location.href = cb};
+        }
+        else 
+        {
+            gtagcb = cb;
+        }
+    }
+    gtagcb();
+}

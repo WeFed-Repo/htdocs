@@ -1,5 +1,10 @@
-// Inizializzazioni per la funzione wrapper
-var gotoTrack = function (action,params,cb) {
+// Parametri generici
+let dmp_pm = 1687685,
+    dmp_pagename = encodeURIComponent('BancoBPM_Area Privata_Tracking_Website');
+
+
+// Re-inizializzazione per la funzione wrapper
+gotoTrack = function (action,params,cb) {
     var e = this.event,
         cbdone = false;
 
@@ -32,7 +37,15 @@ var gotoTrack = function (action,params,cb) {
                 gtagcb();
                 // console.log("Tracciatura eseguita")
             };
-        gtag("event", action, params);
+        // TRACCIA CON DMP
+        var dmpImg = $("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm=1687685&ADFPageName=BancoBPM_Area%20Privata_Tracking_Website&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
+        dmpImg.on("load",function(){
+            // TRACCIA CON GTAG    
+            gtag("event", action, params);
+        });
+        $("body").append(dmpImg);
+        
+       
     
     }
     else {
@@ -44,57 +57,46 @@ var gotoTrack = function (action,params,cb) {
 
 $(function () {
 
-    /* DMP - CODICE DA FORNITORE 
+    /* DMP (versione "indipendente" - codice da fornitore) */
+    // Prepara i parametri
     window._adftrack = Array.isArray(window._adftrack) ?
-        window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack : (window._adftrack ? [window._adftrack] : []);
     window._adftrack.push({
         HttpHost: 'track.adform.net',
-        pm: 1687685,
+        pm: dmp_pm,
         divider: encodeURIComponent('|'),
-        pagename: encodeURIComponent('BancoBPM_Area Privata_Tracking_Website'),
+        pagename: dmp_pagename,
         order: {
             sv9: (typeof X !== "undefined") ? X : "",
             sv14: window.location.href
         }
     });
-    (function () {
-        var s = document.createElement('script'); s.type =
-            'text/javascript'; s.async = true; s.src =
-                'https://s2.adform.net/banners/scripts/st/trackpoint-async.js'; var x =
-                    document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-    })();
-    FINE ANALYTICS - CODICE DA FORNITORE */
-    
-    /* DMP */
-    $("body").append($("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm=1687685&ADFPageName=BancoBPM_Area%20Privata_Tracking_Website&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"}));
+    var dmpImg = $("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm="+ dmp_pm +"&ADFPageName="+ dmp_pagename +"&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
+    $("body").append(dmpImg);
 
     /* GTAG */
-    (function () {
-        if ( typeof UACode !=="undefined") {
-            var s = document.createElement('script'); s.type =
-                'text/javascript'; s.async= true; s.src =
-                    'https://www.googletagmanager.com/gtag/js?id='+ UACode; var x =
-                        document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
+    if ( typeof UACode !=="undefined") {
+        var s = document.createElement('script'); s.type =
+            'text/javascript'; s.async= true; s.src =
+                'https://www.googletagmanager.com/gtag/js?id='+ UACode; var x =
+                    document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
 
-            // Tag analytics ed inizializzazione per tracking (generico)
-            window.dataLayer = window.dataLayer || [];
-            gtag = function() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            if (typeof X !== "undefined") {
-                // Configurazione
-                gtag('config', UACode, {
-                    'dimension6': X,
-                    'user_id': X,
-                    'linker': {
-                        'domains': ['bancobpm.it', 'webank.it']
-                    }
-                });
-                // console.log("GTAG - Pagina tracciata")
-            }
+        // Tag analytics ed inizializzazione per tracking (generico)
+        window.dataLayer = window.dataLayer || [];
+        gtag = function() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        if (typeof X !== "undefined") {
+            // Configurazione
+            gtag('config', UACode, {
+                'dimension6': X,
+                'user_id': X,
+                'linker': {
+                    'domains': ['bancobpm.it', 'webank.it']
+                }
+            });
+            // console.log("GTAG - Pagina tracciata")
         }
-
-    })();
+    }
     
 });
