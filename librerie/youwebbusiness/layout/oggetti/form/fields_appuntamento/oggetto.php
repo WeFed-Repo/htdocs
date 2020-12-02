@@ -1,10 +1,21 @@
 <div class="bordered mb-4 appuntamento-wrapper">
     <form class="form-grid needs-validation" novalidate="">
+    <div class="form-row">
+        <div class="form-group col-sm-12 col-md-12">
+            <select class="form-control" id="argApp">
+                <option selected="" value="0">Seleziona un argomento</option>
+                <option value="1">lorem ispum</option>
+                <option value="2">lorem ispum</option>
+                <option value="3">lorem ispum</option>
+          </select>
+        </div>
+    </div>
+    
     <!-- stato normale -->
         <div class="form-row">
             <div class="form-group col-sm-12 col-md-6">
                 <label class="control-label">Maggiori dettagli sul motivo dell'appuntamento</label>
-                <textarea id="" name="" rows="4" cols="50" class="form-control"></textarea>
+                <textarea id="dettApp" name="" rows="4" cols="50" class="form-control"></textarea>
             </div>
             <div class="form-group col-sm-12 col-md-6">
                 <div class="form-row">
@@ -14,7 +25,7 @@
                     </div>
                     <div class="form-group col-sm-12 col-md-12">
                     <label class="control-label">Orari disponibili</label>
-                        <select class="form-control">
+                        <select class="form-control" id="orApp">
                             <option selected=""></option>
                             <option>08.00</option>
                         </select>
@@ -56,21 +67,55 @@
 
 <script>
     // DATI DI TEST
-    var dateArrayNotAvailable = ['25/11/2020','13/11/2020', '30/11/2020']; //eventuale lista di date non disponibili
-    $(function(){
+    var dateArrayNotAvailable = ['10/12/2020','13/12/2020', '30/12/2020']; //eventuale lista di date non disponibili
+
+    //gestione disabilitazione campi textarea e select orari legata alla select scelta argomenti
+    var checkFieldsDisabled = function(val) {
+        areFieldsDisabled = false;
+        val==="0" ? areFieldsDisabled=true : areFieldsDisabled=false;
+        if(areFieldsDisabled) {
+            $("#dettApp,#orApp").prop("disabled",true);
+        }
+        else {
+            $("#dettApp,#orApp").prop("disabled",false);
+        }
+    }
+    var datePickerFunction = function() {
         $(".ca-calendario").datepicker({
             dateFormat: 'dd-mm-yy', //escludere date antecedenti ad oggi
             minDate: new Date(),
+            //se deve essere disabilitato bloccare la possibilità di andare al mese successivo
+            maxDate: areFieldsDisabled ? 0 : "",
             beforeShowDay: function(e){
+               
                 var day = e.getDay();
                 var d = ( '0' + e.getDate() ).slice(-2)
                 var m = ( '0' + (e.getMonth()+1) ).slice(-2);
                 var y = e.getFullYear();
                 var n = d+'/'+m+'/'+y;
-               return [  dateArrayNotAvailable.indexOf(n) == -1 && day != 0 && day !=6] ;
-             },
-            
+                //controllo che il campo non debba essere completamente disabilitato
+                if(!areFieldsDisabled) {
+                    return [  dateArrayNotAvailable.indexOf(n) == -1 && day != 0 && day !=6] ;
+                }
+                else {
+                    $('.ui-datepicker').addClass("disabled");
+                    return [false, "", "Unavailable"];
+                }
+             }
+         })
+    }
+    $(function(){
+        //richiamo la disabilitazione dei campi legata alla select scelta argomenti
+        checkFieldsDisabled($("#argApp").val());
+        $("#argApp").on("change",function(){
+            checkFieldsDisabled($(this).val());
+            //al change ricostruisco il calendario
+            $(".ca-calendario").datepicker( "destroy");
+            datePickerFunction();
+           
         })
+        //al load costruisco il calendario
+        datePickerFunction();
     });
     
     
