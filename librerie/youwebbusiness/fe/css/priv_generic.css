@@ -3967,6 +3967,12 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
 .appuntamento-wrapper .ca-calendario .ui-datepicker td.ui-datepicker-week-end a, .appuntamento-wrapper .ca-calendario .ui-datepicker td.ui-datepicker-week-end span {
   color: red;
 }
+.appuntamento-wrapper .ca-calendario .ui-datepicker.disabled {
+  opacity: 0.5;
+}
+.appuntamento-wrapper .ca-calendario .ui-datepicker.disabled .ui-datepicker-prev, .appuntamento-wrapper .ca-calendario .ui-datepicker.disabled .ui-datepicker-next {
+  cursor: default;
+}
 .appuntamento-wrapper .form-check.radio.w-field .form-check-label::before, .appuntamento-wrapper .form-check.radio.w-field .form-check-input {
   position: absolute;
   bottom: -37px;

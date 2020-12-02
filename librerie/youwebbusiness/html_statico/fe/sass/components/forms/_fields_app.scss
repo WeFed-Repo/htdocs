@@ -13,10 +13,16 @@
                     color: red; 
                 }
                
-            } 
+            }
+            &.disabled {
+                opacity:0.5;
+                .ui-datepicker-prev, .ui-datepicker-next{
+                    cursor: default;
+                }
+            }
         }
     }
-    .form-check.radio.w-field {
+    .form-check.radio.w-field { 
         .form-check-label::before, .form-check-input {
             position: absolute;
             bottom:-37px;
