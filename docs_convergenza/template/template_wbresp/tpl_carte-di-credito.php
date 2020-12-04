@@ -38,21 +38,27 @@
 							<img src="/wbresp/img/carte/c1.png" class="img-responsive" alt="Carte di credito" title="LE CARTE DI WEBANK - Carte di credito" />
 							<h5>Carte di credito</h5>
 							<p>
-								preferisci la convenienza del canone gratuito di <b>Cartimpronta ONE</b> o la completezza di <b>Cartimpronta Gold Plus</b>, con il suo plafond elevato per i clienti pi&ugrave; esigenti? Entrambe, grazie alla tecnologia contactless, permettono di effettuare piccole spese fino a 25 &euro; senza inserire la carta o aspettare per firmare lo scontrino.
-							</p>
+								Scegli la carta giusta per le tue esigenze, disponibili su circuito Visa e Mastercard.<br>
+								<br>
+								<strong>Nexi Classic</strong> la carta di credito contactless che ti permette di <strong>pagare anche tramite smartphone</strong>. <br>
+								Il canone &egrave; gratuito per sempre se la richiedi entro il 31/01/2021.<br>
+								<br>
+								<strong>Cartimpronta ONE</strong> contactless e dal <strong>canone gratuito</strong> sempre oppure <strong>Cartimpronta Gold Plus</strong>, completa e dal <strong>plafond elevato</strong> per i pi&ugrave; esigenti.
+							<p>
 						</div>
 						<div class="col-md-4 col-sm-12">
 							<img src="/wbresp/img/carte/c2.png" class="img-responsive"  alt="Carte di debito" title="LE CARTE DI WEBANK - Carte di debito" />
 							<h5>Carte di debito</h5>
 							<p>
-								la <b>Carta di debito internazionale</b> con canone gratuito ti consente di prelevare e pagare in tutto il mondo, attraverso i circuiti Bancomat, PagoBancomat e Maestro. Puoi prelvare gratuitamente dagli sportelli automatici di tutte le banche in Italia e in area Euro.
+								la <strong>Carta di debito internazionale</strong> con canone gratuito ti consente di prelevare e pagare in tutto il mondo, attraverso i circuiti Bancomat, PagoBancomat e Maestro.
+								In più con l'App BANCOMAT Pay paghi, invii e ricevi denaro direttamente dal tuo smartphone.
 							</p>
 						</div>
 						<div class="col-md-4 col-sm-12">
-							<img src="/wbresp/img/carte/c3.png" class="img-responsive"  alt="Carte prepagate" title="LE CARTE DI WEBANK - Carte prepagate" />
+							<img src="/wbresp/img/carte/c3.png" class="img-responsive" alt="Carte prepagate" title="LE CARTE DI WEBANK - Carte prepagate">
 							<h5>Carte prepagate</h5>
 							<p>
-								Carta Je@ns &egrave; la carta prepagata ricaricabile con canone gratuito. Grazie al circuito MasterCard la puoi utilizzare in tutto il mondo, anche per gli acquisti online.
+								<strong>Carta Prep@id by Banco BPM</strong> &egrave; l'alternativa semplice al denaro contante. La carta contactless con PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 € in modo manuale o automatico.
 							</p>
 						</div>
 
@@ -83,20 +89,18 @@
 						<div class="carousel-inner" role="listbox">
 						
 							<div class="item active item00">
-								<h3>Carta Nexi</h3>
-
-								<img src="/wbresp/img/carte/sl3.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Carta Nexi" />
-
-								<p>Lorem ipsum dolor sit amet dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </p>
+								<h3>Nexi Classic</h3>
+								<img src="/wbresp/img/carte/sl3.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Nexi Classic" />
+								<p>&Egrave; la carta di credito evoluta e versatile per i tuoi pagamenti anche digitali:</p>
 								<ul>
-									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
-									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
-									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
-									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
-									<li>Lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem dolor lorem </li>
+									<li>tramite smartphone e smartwatch con <strong>Apple Pay</strong>, <strong>Samsung Pay</strong>, <strong>Google Pay</strong> e <strong>Garmin Pay</strong></li>
+									<li><strong>contactless</strong> e con <strong>servizio 3D Secure</strong> tramite riconoscimento biometrico per lo shopping online</li>
+									<li><strong>servizio gratuito Spending Control</strong> incluso nell'App Nexi Pay per gestire la carta in base alle tue esigenze di spesa (ad esempio mettere in pausa la tua carta per 48 ore)</li>
+									<li><strong>alert personalizzabili</strong> via email, Push, SMS per essere informato su ogni pagamento effettuato</li>
+									<li><strong>coperture assicurative gratuite</strong> previste dal Programma Multirischi Classic</li>
+									<li>programma fedeltà <strong>ios&igrave; e ioS&igrave; Plus</strong> per ottenere promozioni e vantaggi</li>
 								</ul>
-
-
+								<p>Richiedila entro il 31/01/2021, il canone annuo &egrave; <strong>gratuito per sempre</strong>.</p>
 							</div>
 
 							<div class="item item01">
@@ -104,15 +108,15 @@
 
 								<img src="/wbresp/img/carte/sl2.png"  class="img-responsive mob100" alt="Cartaimpronta ONE" title="Cartaimpronta ONE - E' la carta di credito con canone gratuito di Webank" />
 
-								<p>E' la carta di credito con <b>canone gratuito</b> di Webank:</p>
+								<p>E' la carta di credito con <strong>canone gratuito</strong> di Webank:</p>
 								<ul>
-								<li><b>la utilizzi ovunque</b> in Italia, all'estero e sul web </li>
-								<li><b>nessuna commissione in area Euro</b> su circuito Master Card o Visa</li>
+								<li><strong>la utilizzi ovunque</strong> in Italia, all'estero e sul web </li>
+								<li><strong>nessuna commissione in area Euro</strong> su circuito Master Card o Visa</li>
 								<li>grazie alla tecnologia contactless paghi avvicinando la carta al lettore e per le spese fino a 25&euro; non &egrave; necessario firmare la ricevuta</li>
-								<li>SMS Alert <b>ti avvisa sul cellulare</b> a ogni acquisto</li>
-								<li>3D SecureCode <b>protegge i tuoi acquisti</b> su Internet e con il portafoglio digitale BPM MasterPass &egrave; ancora pi&ugrave; facile e veloce</li>
-								<li>estratto conto online <b>gratuito</b></li>
-								<li><b>tieni sotto controllo le tue spese</b>, consultando i movimenti della carta dal sito e dall'app.</li>
+								<li>SMS Alert <strong>ti avvisa sul cellulare</strong> a ogni acquisto</li>
+								<li>3D SecureCode <strong>protegge i tuoi acquisti</strong> su Internet e con il portafoglio digitale BPM MasterPass &egrave; ancora pi&ugrave; facile e veloce</li>
+								<li>estratto conto online <strong>gratuito</strong></li>
+								<li><strong>tieni sotto controllo le tue spese</strong>, consultando i movimenti della carta dal sito e dall'app.</li>
 								</ul>
 
 
@@ -126,10 +130,10 @@
 
 								<p><span>&Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa.</p>
 								<ul>
-								<li><b>Maxi plafond</b> a partire da 5.200 &euro;</li>
-								<li><b>Extra-sicurezza</b> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
-								<li><b>Zero commissioni</b> sui rifornimenti di carburante</li>
-								<li><b>Zero spese</b> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
+								<li><strong>Maxi plafond</strong> a partire da 5.200 &euro;</li>
+								<li><strong>Extra-sicurezza</strong> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
+								<li><strong>Zero commissioni</strong> sui rifornimenti di carburante</li>
+								<li><strong>Zero spese</strong> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
 								</ul>
 
 
@@ -169,15 +173,15 @@
 											<h3>Carta di debito internazionale</h3>
 										</div>
 										<div class="col-md-7 col-sm-12">
-												<p>Con la carta di debito hai un <b>canone gratuito</b> e puoi fare pi&ugrave; di quanto immagini:</p>
+												<p>Con la carta di debito hai un <strong>canone gratuito</strong> e puoi fare pi&ugrave; di quanto immagini:</p>
 												<ul>
-												<li><b>pagare e prelevare in tutto il mondo</b> con circuito Bancomat, PagoBancomat e Maestro</li>
-												<li><b>prelevare senza commissioni</b> da tutti gli sportelli automatici in Italia e area Euro</li>
-												<li><b> versare contanti e assegni</b> nelle aree Self Service</li>
-												<li><b>pagare le utenze, ricaricare cellulare o le prepagate</b> pressogli sportelli automatici BPM</li>
-												<li>tenere sempre sotto <b>controllo le spese</b> con il servizio Alert SMS, email e push</li>
-												<li><b>consultare i movimenti</b> della carta dal sito e dall'app</li>
-												<li><b>puoi proteggerti dalle frodi</b> con il servizio GeoBlock.</li>
+												<li><strong>pagare e prelevare in tutto il mondo</strong> con circuito Bancomat, PagoBancomat e Maestro</li>
+												<li><strong>prelevare senza commissioni</strong> da tutti gli sportelli automatici in Italia e area Euro</li>
+												<li><strong> versare contanti e assegni</strong> nelle aree Self Service</li>
+												<li><strong>pagare le utenze, ricaricare cellulare o le prepagate</strong> pressogli sportelli automatici BPM</li>
+												<li>tenere sempre sotto <strong>controllo le spese</strong> con il servizio Alert SMS, email e push</li>
+												<li><strong>consultare i movimenti</strong> della carta dal sito e dall'app</li>
+												<li><strong>puoi proteggerti dalle frodi</strong> con il servizio GeoBlock.</li>
 
 												</ul>
 												<a class="btn-grlit btn-grlit-arrow btn-fs14  uppercase" href="#">Apri conto Webank</a>
@@ -303,12 +307,12 @@
 						<div class="col-md-12">
 							<img src="/wbresp/img/carte/jeans.png" class="img-responsive" alt="Carta Je@ns" title="CARTE PREPAGATE - Carta Je@ns" />
 
-							<p><b>Carta Je@ns</b> &egrave; la ricaricabile con <b>canone gratuito</b> di Webank. Con Carta Je@ns puoi:
+							<p><strong>Carta Je@ns</strong> &egrave; la ricaricabile con <strong>canone gratuito</strong> di Webank. Con Carta Je@ns puoi:
 							<ul>
-								<li><span><b>ricaricare la carta fino a 2.500 &euro;</b> attraverso il sito, l'app, un bonifico o presso gli sportelli automatici</span></li>
-								<li><span><b>pagare e prelevare in tutto il mondo</b> con MasterCard</span></li>
-								<li><span><b>pagare senza commissioni</b> in area Euro</span></li>
-								<li><span><b>tenere sempre sotto controllo le tue spese</b> consultando il saldo e i movimenti della carta dal sito e dall'app.</span></li>
+								<li><span><strong>ricaricare la carta fino a 2.500 &euro;</strong> attraverso il sito, l'app, un bonifico o presso gli sportelli automatici</span></li>
+								<li><span><strong>pagare e prelevare in tutto il mondo</strong> con MasterCard</span></li>
+								<li><span><strong>pagare senza commissioni</strong> in area Euro</span></li>
+								<li><span><strong>tenere sempre sotto controllo le tue spese</strong> consultando il saldo e i movimenti della carta dal sito e dall'app.</span></li>
 							</ul>
 
 							<a class="btn-grlit btn-grlit-arrow  btn-hover-white btn-fs14  uppercase" href="#">Apri conto Webank</a>
@@ -325,7 +329,7 @@
 						<h3>BPM MASTERPASS</h3>
 							<div class="row">
 									<div class="col-md-12 col-sm-12">
-										<h3>&Egrave; la soluzione <b>per fare shopping online in pochi clic!</b></h3>
+										<h3>&Egrave; la soluzione <strong>per fare shopping online in pochi clic!</strong></h3>
 									</div>
 
 									<div class="col-sm-5 hidden-xs">
@@ -333,9 +337,9 @@
 									</div>
 									<div class="col-sm-7 col-xs-12">
 
-											<p>Con BPM MasterPass <b>non dovrai pi&ugrave; inserire ogni volta i tuoi dati sensibili</b> quando acquisti online.</p>
+											<p>Con BPM MasterPass <strong>non dovrai pi&ugrave; inserire ogni volta i tuoi dati sensibili</strong> quando acquisti online.</p>
 
-											<p>Ti baster&agrave; creare <b>un account che custodisce – protetto dalla tecnologia MasterCard –</b> tutti i dati delle tue carte e gli indirizzi di spedizione.</p>
+											<p>Ti baster&agrave; creare <strong>un account che custodisce – protetto dalla tecnologia MasterCard –</strong> tutti i dati delle tue carte e gli indirizzi di spedizione.</p>
 
 											<p>Che tu sia a casa o in movimento, tramite pc, tablet o smartphone, potrai sempre fare shopping online nello stesso modo.</p>
 
