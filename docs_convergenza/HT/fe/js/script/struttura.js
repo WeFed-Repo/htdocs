@@ -457,10 +457,8 @@ $(function () {
 });
 
 // Fallback per tracking GTM (non collegato)
-var gotoTrack = function(action,params,cb) {
-    var e = this.event,
-        cbdone = false;
-
+var gotoTrack = function(fp1,fp2,cb) {
+    var e = this.event;
     if (e) { 
         e.preventDefault() 
         if (e.target && $(e.target).attr("href")) {

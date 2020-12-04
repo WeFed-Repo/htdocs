@@ -1,10 +1,30 @@
 // Parametri generici
 let dmp_pm = 1687685,
-    dmp_pagename = encodeURIComponent('BancoBPM_Area Privata_Tracking_Website');
+    dmp_pagename = encodeURIComponent('BancoBPM_Area Privata_Tracking_Website'),
+    dmp_baseurl = "https://track.adform.net/Serving/TrackPoint/?pm="+ dmp_pm +"&ADFPageName="+ dmp_pagename +"&ADFdivider=|";
 
+
+// Filtraggio oggetto parametri
+var filterParams = function(obj){
+    var gt = {}, dmp = [];
+    // Smista gtag (oggetto) e dmp (stringa di testo da appendere all'url pretrattata come array) in base alla key dell'oggetto ricevuto
+    $.each(Object.keys(obj),function(i,v){
+        if (v.match(/sv\d/)) {
+            // Se e' di tipo "sv.." finisce nell'array dmp che verra' reso come testo
+            dmp.push("'"+ encodeURIComponent(v) +"':'"+ encodeURIComponent(obj[v]) +"'");
+        }
+        else
+        {
+            // Altrimenti finisce in gtag come oggetto
+            gt[v]= obj[v];
+        }
+    });
+    return {gtag:gt, dmp: "&itm{"+ dmp.join(",") + "}"};
+}
 
 // Re-inizializzazione per la funzione wrapper
 gotoTrack = function (action,params,cb) {
+
     var e = this.event,
         cbdone = false;
 
@@ -30,27 +50,25 @@ gotoTrack = function (action,params,cb) {
 
     if (typeof gtag !== "undefined") {
         setTimeout(function(){if (!cbdone) gtagcb()},5000); // Dopo 5 secondi esegue comunque la callback
-        // console.log("GTAG - Tracciatura in corso");    
-        // Appende ai params anche la callback
-        params["event_callback"] = function(){
+        // Smista i parametri tra gtag e dmp
+        var pars = filterParams(params);
+        pars["gtag"]["event_callback"] = function(){
                 cbdone = true; 
                 gtagcb();
                 // console.log("Tracciatura eseguita")
             };
         // TRACCIA CON DMP
-        var dmpImg = $("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm=1687685&ADFPageName=BancoBPM_Area%20Privata_Tracking_Website&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
+        var dmpImg = $("<img>").attr("src", dmp_baseurl+pars["dmp"]).css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
         dmpImg.on("load",function(){
             // TRACCIA CON GTAG    
-            gtag("event", action, params);
+            gtag("event", action, pars["gtag"]);
         });
         $("body").append(dmpImg);
-        
-       
-    
     }
     else {
         // gtag non ancora inizializzato
         // console.log("GTAG - Tracciatura non eseguita");
+        cbdone = true;
         gtagcb();
     }
 }
@@ -71,7 +89,7 @@ $(function () {
             sv14: window.location.href
         }
     });
-    var dmpImg = $("<img>").attr("src", "https://track.adform.net/Serving/TrackPoint/?pm="+ dmp_pm +"&ADFPageName="+ dmp_pagename +"&ADFdivider=|").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
+    var dmpImg = $("<img>").attr("src", "").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
     $("body").append(dmpImg);
 
     /* GTAG */
