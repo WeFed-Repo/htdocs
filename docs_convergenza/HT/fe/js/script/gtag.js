@@ -76,20 +76,11 @@ gotoTrack = function (action,params,cb) {
 $(function () {
 
     /* DMP (versione "indipendente" - codice da fornitore) */
-    // Prepara i parametri
-    window._adftrack = Array.isArray(window._adftrack) ?
-    window._adftrack : (window._adftrack ? [window._adftrack] : []);
-    window._adftrack.push({
-        HttpHost: 'track.adform.net',
-        pm: dmp_pm,
-        divider: encodeURIComponent('|'),
-        pagename: dmp_pagename,
-        order: {
-            sv9: (typeof X !== "undefined") ? X : "",
-            sv14: window.location.href
-        }
+    var params = filterParams({
+        sv9: (typeof X !== "undefined") ? X : "",
+        sv14: window.location.href
     });
-    var dmpImg = $("<img>").attr("src", "").css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
+    var dmpImg = $("<img>").attr("src", dmp_baseurl + params["dmp"]).css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});
     $("body").append(dmpImg);
 
     /* GTAG */
