@@ -629,7 +629,7 @@ span.sell {
   }
 }
 /* Icone bottoni */
-.btn-icon:not(.text-term) {
+.btn-icon:not(.text-term):not(.plusmin) {
   width: 25px;
   display: inline-block;
   text-align: center;
@@ -638,16 +638,16 @@ span.sell {
   font-size: 20px;
   cursor: pointer;
 }
-.btn-icon:not(.text-term) .icon {
+.btn-icon:not(.text-term):not(.plusmin) .icon {
   vertical-align: text-bottom;
   line-height: 24px;
 }
-.btn-icon:not(.text-term).btn-icon-text {
+.btn-icon:not(.text-term):not(.plusmin).btn-icon-text {
   width: auto;
   font-size: 14px;
   color: #0e977f;
 }
-.note .btn-icon:not(.text-term) {
+.note .btn-icon:not(.text-term):not(.plusmin) {
   color: #fff;
   background-color: #0e977f;
   line-height: 20px;
