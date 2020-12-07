@@ -6906,6 +6906,22 @@ div[id*="popover"] .popover-content {
 .ui-accordion-content .documenti {padding-top:0}
 .ui-accordion-content .documenti li {padding-bottom:10px}
 .ui-accordion-content .documenti li .icon {margin-right:10px}
+/*STILIZZAZIONE DOCUMENTI SPUNTATI */
+.documenti.format-spunta a{text-decoration: none;}
+.documenti.format-spunta a[data-clicked=false] {font-weight:bold}
+.documenti.format-spunta a[data-clicked=true] {font-weight:normal}
+.documenti.format-spunta a[data-clicked=false] .icon {
+    display:block;
+}
+.documenti.format-spunta a[data-clicked=false] .icon.checked {
+    display:none;
+}
+.documenti.format-spunta a[data-clicked=true] .icon {
+    display:none;
+}
+.documenti.format-spunta a[data-clicked=true] .icon.checked {
+    display:block;
+}
 #contenuti.col-sm-12.resp{
     width:100%;
     padding:0;

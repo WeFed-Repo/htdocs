@@ -123,18 +123,20 @@
                                         Dichiaro di aver preso visione del documento sintetico dello strumento contenente le informazioni chiave (KID/KIID) e di averne acquisito copia su supporto duraturo.
                                     </span>
                                 </label>
-                                <div class="documenti">
+                                <div class="documenti format-spunta">
                                     <ul>
                                         <li>
                                             <a target="_blank" class="moduloKid" data-clicked="false" href="/WEBHT/KidDownloadDocFinServlet?strumento=IT0005086191&amp;versione=2&amp;lingua=IT">
-                                                <i class="icon icon-file_pdf_fill colorVer fLeft"></i> 
-                                                <span class="colorVerde">Informazione Chiave (KID/KIID IT0005086191)</span>
+												<i class="icon icon-file_pdf_fill_nochecked fLeft"></i>
+												<i class="icon icon-file_pdf_fill_checked checked fLeft"></i>  
+                                                <span class="">Informazione Chiave (KID/KIID IT0005086191)</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a target="_blank" class="moduloKid" data-clicked="false" href="/WEBHT/KidDownloadDocFinServlet?strumento=IT0005126815&amp;versione=16&amp;lingua=IT">
-                                                <i class="icon icon-file_pdf_fill colorVer fLeft"></i> 
-                                                <span class="colorVerde">Informazione Chiave (KID/KIID IT0005126815)</span>
+												<i class="icon icon-file_pdf_fill_nochecked fLeft"></i> 
+												<i class="icon icon-file_pdf_fill_checked fLeft checked"></i>  
+                                                <span class="">Informazione Chiave (KID/KIID IT0005126815)</span>
                                             </a>
                                         </li>
                                     </ul>
