@@ -1,6 +1,6 @@
 body {font-family: "bankfont", Arial, sans-serif}
-header h1 .logocs {background: transparent url(/wbresp/qcux/img/bbpm_qcux.png) no-repeat center center; background-size: contain}
-header .logo {background: transparent url(/wbresp/qcux/img/bbpm_logo.png) no-repeat center center; background-size: cover;
+header h1 .logocs {background: transparent url(/HT/fe/img/qcux_bbpm.png) no-repeat center center; background-size: contain}
+header .logo {background: transparent url(/HT/fe/img/qcux_bbpm_logo.png) no-repeat center center; background-size: cover;
   height:51px;  
 }
 @media (max-width: 767px) {
