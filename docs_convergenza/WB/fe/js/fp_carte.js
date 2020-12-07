@@ -23,19 +23,19 @@ var cardFeatures = {
         "title": "Acquisti in tutto il mondo",
         "icona": "acquisti_mondo_grid64-f",
         "iconasel": "acquisti_mondo_grid64-o",
-        "cards": ["cartiprOne", "cartaPrepaid"]
+        "cards": ["cartiprOne", "cartaPrepaid","cartaNexi"]
     },
     "Acqonline": {
         "title": "Acquisti online",
         "icona": "acquisti_online_grid64-f",
         "iconasel": "acquisti_online_grid64-o",
-        "cards": ["cartaPrepaid", "cartiprOne"]
+        "cards": ["cartaPrepaid", "cartiprOne","cartaNexi"]
     },
     "Promo": {
         "title": "Promozioni",
         "icona": "promozioni_grid64-f",
         "iconasel": "promozioni_grid64-o",
-        "cards": ["cartiprOne", "cartaPrepaid"]
+        "cards": ["cartiprOne", "cartaPrepaid","cartaNexi"]
     },
     "Mass": {
         "title": "Massimali elevati",
@@ -47,17 +47,25 @@ var cardFeatures = {
         "title": "Carta aggiuntiva",
         "icona": "carta_aggiuntiva_grid64-f",
         "iconasel": "carta_aggiuntiva_grid64-o",
-        "cards": ["cartaPrepaid", "cartiprOne"]
+        "cards": ["cartaPrepaid", "cartiprOne","cartaNexi"]
+    },
+    "PagamentoSmart": {
+        "title": "Pagamento con smartphone",
+        "icona": "pagamenti_con_smartphone-grid64-f",
+        "iconasel": "pagamenti_con_smartphone-grid64-o",
+        "cards": ["cartaNexi"]
     }
+
 
 };
 
 /* Array contenente le sole carte da mostrare */
 /*
-Nascondere per il momento la cartaPrepaid, perché ancora non disponibile
+Nascondere per il momento la cartaPrepaid, perchÃ© ancora non disponibile
 var cardsToShow = ["bancomat", "cartaPrepaid", "cartiprOne", "cartiprGoldPlus"];
 */
-var cardsToShow = ["bancomat", "cartiprOne", "cartiprGoldPlus"];
+var cardsToShow = ["bancomat","cartaNexi","cartiprOne","cartaPrepaid"];
+//var cardsToShow = ["bancomat", "cartiprOne", "cartiprGoldPlus", "cartaPrepaid"];
 
 /* Prefisso per il navigatore */
 var cardNavPrefix = "nav_priv_wbx_compara_carte_";
@@ -72,9 +80,11 @@ function featClick() {
     /* Recheck tra carte e features */
     cResults.find("a.carta").addClass("disabled");
     var selFeat = cardSelWrap.find(".selected");
+    
     $.each(selFeat, function (i, v) {
         $.each(cardFeatures[$(v).attr("data-feat")].cards, function (ind, val) {
             var cel = $("#card_" + val);
+           
             if ($.inArray(cardNavPrefix + val, selectedCards) < 0) selectedCards.push(cardNavPrefix + val);
             if (cel.hasClass("disabled")) cel.switchClass("disabled", "", 200);
             btConfSubmit.addClass("btn-primary").removeClass("btn-disabled");
@@ -114,7 +124,8 @@ function cardConfSubmit() {
                 var delaySecs = 0;
                 $.each(cardFeatures, function (k, v) {
                     var clickIcon = $("<a>").addClass("bigTapIcon").attr("data-feat", k).append($("<i>").addClass("icon icon-" + v.icona), $("<i>").addClass("icon active icon-" + v.iconasel)).click(featClick);
-                    var cFeat = $("<div>").addClass("feature col-sm-2").hide().append(clickIcon, $("<span>").html(v.title));
+                    var cFeat = $("<div>").addClass("feature").hide().append(clickIcon, $("<span>").html(v.title));
+                    //var cFeat = $("<div>").addClass("feature col-sm-2").hide().append(clickIcon, $("<span>").html(v.title));
                     cardSelWrap.append(cFeat.delay(delaySecs).fadeIn());
                     delaySecs = delaySecs + 150;
                 });
