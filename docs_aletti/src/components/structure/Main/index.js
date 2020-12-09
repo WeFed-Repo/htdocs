@@ -21,6 +21,7 @@ const PersInfo= loader(()=> import('components/pages/UserPages/persInfo'));
 const PersDoc = loader(()=> import('components/pages/UserPages/persDoc'));
 const Testiframe = loader(()=> import('components/pages/Testiframe'));
 const FormFields = loader(() => import('components/pages/FormFields'));
+const Debug = loader(() => import('components/pages/Debug'));
 
 class Main extends Component {
 
@@ -50,6 +51,7 @@ class Main extends Component {
                             <Route path='/userdocuments' component={ UserDoc }  />
                             <Route path='/testiframe' component={ Testiframe }  />
                             <Route path='/formfields' component={ FormFields }  />
+                            <Route path='/debug' component={ Debug }  />
                             <Route component={ None }/>
                         </Switch>
                     </div>

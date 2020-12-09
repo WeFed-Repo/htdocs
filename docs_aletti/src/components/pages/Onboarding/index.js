@@ -350,7 +350,7 @@ export default class extends Component {
         return (<>
 
             <h3>INSERIMENTO <span style={{ color: "#ccc" }}>(ID pratica: {(this.state.field_id !== "") ? this.state.field_id : "Non assegnato"})</span></h3>
-            <ConsoleSviluppo obbligatori={this.state.svi_obbligatori} backend={this.state.svi_be} setObState={this.setObState}></ConsoleSviluppo>
+            {window.localStorage.debugstate && window.localStorage.debugstate==="attivo" && <ConsoleSviluppo obbligatori={this.state.svi_obbligatori} backend={this.state.svi_be} setObState={this.setObState}></ConsoleSviluppo>}
             {this.state.field_stato && this.state.field_stato !=="IDENTITA_NON_ACCERTATA" &&
                     <div className={"onboarding " + ((this.state.isLoading) ? "loading" : "")}>
                         <Stepper form={this.state} />

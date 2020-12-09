@@ -239,12 +239,12 @@ export default class extends Component {
 
         return (<>
                     <div className="ob-stepper">
-                        
+                        {window.localStorage.debugstate && window.localStorage.debugstate==="attivo" &&
                         <p>Stato: {form.field_stato}
                             - Step: {stato}
                             - Intestatario corrente: {intcorrente}
                             - Ordine di compilazione: {ordineInt}</p>
-                        
+                        }
                         
                         {stepObj.map((v,i)=>{
                             return (

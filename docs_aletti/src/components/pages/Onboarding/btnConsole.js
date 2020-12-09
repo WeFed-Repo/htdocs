@@ -87,7 +87,7 @@ export default class extends Component {
                                 <Button onClick={() => this.setState({ modalBack: true })}>Indietro</Button>
                             </>
                         }
-                        <span className="svi-btn" onClick={() => console.log(formfields)}>Mostra stato onboarding</span>
+                        {window.localStorage.debugstate && window.localStorage.debugstate==="attivo" && <span className="svi-btn" onClick={() => console.log(formfields)}>Mostra stato onboarding</span>}
                     </div>
                     {getNextState(formfields) !== "CONCLUSA" &&
                         <div className="btn-console-right">
