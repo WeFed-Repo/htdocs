@@ -399,11 +399,11 @@ class FormFile extends Component {
                     // A seconda del tipo di file mostra il file oppure un iconcina per scaricarlo/vederlo nel browser
                     if ((["JPG","JPEG","PNG","GIF","BPM"]).indexOf(file.formato)>=0) {
                         // Se puo' visualizzarlo nel browser...
-                        this.setState({imageViewComp: <img src={"data:" + fileMimeTypes[file.formato]+";base64,"+data.results} className={"file-preview"}></img>});
+                        this.setState({imageViewComp: <img src={"data:" + fileMimeTypes[file.formato]+";base64,"+ (data.results && data.results.allegato)} className={"file-preview"}></img>});
                     }
                     else {
                         // Chiede all'utente di scaricarlo...
-                        this.setState({imageViewComp: <a href={"data:" + fileMimeTypes[file.formato]+";base64,"+data.results} className={"file-link " + file.formato.toLowerCase()} download={"documento_"+file.idImmagine+"."+  file.formato.toLowerCase()}>Scarica {file.formato}</a>});
+                        this.setState({imageViewComp: <a href={"data:" + fileMimeTypes[file.formato]+";base64,"+(data.results && data.results.allegato)} className={"file-link " + file.formato.toLowerCase()} download={"documento_"+file.idImmagine+"."+  file.formato.toLowerCase()}>Scarica {file.formato}</a>});
                     }
                     
                 }
