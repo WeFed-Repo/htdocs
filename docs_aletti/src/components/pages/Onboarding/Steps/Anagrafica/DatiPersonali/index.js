@@ -160,7 +160,7 @@ class DatiPersonali extends Component {
                     <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
                     <div className="btn-console">
                         <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] !== "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Close">Close</Button>
+                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] !== "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Chiudi">Chiudi</Button>
                         </div>
                     </div>
                 </DefaultModal>

@@ -69,7 +69,7 @@ class Menu extends Component {
                             className="icon icon-2x icon-big-movimenti"/><span
                             className='menu-name'>Sit. portafoglio</span></NavLink>
                     </NavItem>
-                    {(ambiente.name === "locale") && <>
+                    {(window.localStorage["debugstate"] && window.localStorage["debugstate"]==="attivo") && <>
                     <NavItem title="Onboarding">
                         <NavLink className='nav-link' activeClassName='active' to="/onboarding">
                             <i className="icon icon-2x icon-attualita_filled"/><span

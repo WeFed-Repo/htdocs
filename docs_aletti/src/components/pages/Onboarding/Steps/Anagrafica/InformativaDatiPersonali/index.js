@@ -25,7 +25,7 @@ class InformativaDatiPersonali extends Component {
                     <Row>
                         <Col xs="12">
                             <Form.radiogroup
-                            label="A chi vuoi intestare il conto"
+                            label="A chi vuoi intestare il conto?"
                             name="field_numintestatari"
                             value={this.props.formstate["field_numintestatari"]}
                             onChange={this.props.obchange}

@@ -211,7 +211,7 @@ class ConsensoPrivacy extends Component {
                                             <p> Se non presti il consenso non sarai aggiornato sulle offerte riservate ai nostri clienti</p>
                                             <div className="btn-console">
                                                 <div className="btn-console-right">
-                                                    <Button color="primary" className="center" onClick={() => this.setState({ isConsensoPrivacyModalOpen: false })} title="Close">Close</Button>
+                                                    <Button color="primary" className="center" onClick={() => this.setState({ isConsensoPrivacyModalOpen: false })} title="Chiudi">Chiudi</Button>
                                                 </div>
                                             </div>
                                         </DefaultModal>
