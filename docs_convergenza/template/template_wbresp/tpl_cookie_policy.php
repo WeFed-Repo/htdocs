@@ -50,28 +50,32 @@
                                     <span class="lastleaf">Cookie policy</span>
                                   </div>
 
-                                <div class="basic-content content content-small">
-
-                                        <h2>Cookie policy</h2>
-                                        <p>Utilizziamo cookie e tecnologie simili, anche di terze parti autorizzate, per offrirti una migliore esperienza d’uso e navigazione del sito cercando di mettere a disposizione i contenuti realizzati secondo i tuoi interessi, preferenze, percorsi di navigazione . Da questa pagina puoi approfondire tutte le tipologie di cookies che utilizziamo, esprimere le tue preferenze di consenso e modificarle in qualsiasi momento.</p>
+                                <style>
+                                    .simple-format h3 {font-size:22px; margin-bottom:20px;}
+                                    ul.normal-format {font-size: 16px;margin:0;padding:0 0 0 20px;}
+                                    ul.normal-format li {margin-bottom:15px;}
+                                </style>
+                                <div class="basic-content content simple-format">
                                         
-                                        BOTTONI AZIONE
-
-
-                                        <h4>Cookie che non richiedono il consenso dell'utente</h4>
-                                        <p><strong>Cookie tecnici</strong><br>
-                                        I cookie tecnici possono essere di due tipi:</p>
-                                        <ul>
-                                            <li><strong>Cookie "di navigazione" o "di sessione"</strong>: non vengono memorizzati in modo persistente sul computer dell’utente e svaniscono con la chiusura del browser. Vengono utilizzati unicamente per la trasmissione di identificativi di sessione, necessari per consentire l’esplorazione sicura ed efficiente del sito, evitando il ricorso ad altre tecniche informatiche più invasive per gli utenti, e non consentono l’acquisizione di dati personali identificativi dell’utente;</li>
-                                            <li><strong>Cookie "di funzionalità"</strong>: adattano la presentazione del sito alle preferenze di visualizzazione del computer dell’utente (ad esempio la lingua, la risoluzione dello schermo, il sistema operativo utilizzato, ecc.).</li>
-                                        </ul>
-                                        <p>Per l’installazione dei cookie tecnici non è necessario il consenso dell’utente.</p>
-                                        <p>Rientrano tra i cookie tecnici anche i cookie "analytics" o "di monitoraggio" (Google Analytics)</p>
-                                        <p>Questo sito si avvale del servizio Google Analytics della Società Google Inc. (di seguito Google) per la generazione di statistiche sull’utilizzo del portale web, senza fornire informazioni personali sui singoli utenti.<br>Per consultare l’informativa privacy della Società Google, relativa al servizio Google Analytics, si prega di visitare il sito Internet <a href="http://www.google.com/analytics/terms/it.html" target="_blank">http://www.google.com/analytics/terms/it.html</a></p>
-                                        <p>Per conoscere le norme sulla privacy di Google, si invita a visitare il sito Internet <a href="http://www.google.com/intl/it/policies/privacy/" target="_blank">http://www.google.com/intl/it/policies/privacy/</a></p>
-                                        <p>Utilizzando il presente sito web si acconsente al trattamento dei propri dati da parte di Google secondo quanto riportato nella relativa informativa.</p>
-                                        
-                                        
+                                            <h2>Cookie policy</h2>
+                                            <p>Utilizziamo cookie e tecnologie simili, anche di terze parti autorizzate, per offrirti una migliore esperienza d’uso e navigazione del sito cercando di mettere a disposizione i contenuti realizzati secondo i tuoi interessi, preferenze, percorsi di navigazione . Da questa pagina puoi approfondire tutte le tipologie di cookies che utilizziamo, esprimere le tue preferenze di consenso e modificarle in qualsiasi momento.</p>
+                                            
+                                            <br>BOTTONI AZIONE
+                                            <br>
+                                            <h3>Cookie che non richiedono il consenso dell'utente</h3>
+                                            <p><strong>Cookie tecnici</strong><br>
+                                            I cookie tecnici possono essere di due tipi:</p>
+                                            <ul class="normal-format">
+                                                <li><strong>Cookie "di navigazione" o "di sessione"</strong>: non vengono memorizzati in modo persistente sul computer dell’utente e svaniscono con la chiusura del browser. Vengono utilizzati unicamente per la trasmissione di identificativi di sessione, necessari per consentire l’esplorazione sicura ed efficiente del sito, evitando il ricorso ad altre tecniche informatiche più invasive per gli utenti, e non consentono l’acquisizione di dati personali identificativi dell’utente;</li>
+                                                <li><strong>Cookie "di funzionalità"</strong>: adattano la presentazione del sito alle preferenze di visualizzazione del computer dell’utente (ad esempio la lingua, la risoluzione dello schermo, il sistema operativo utilizzato, ecc.).</li>
+                                            </ul>
+                                            <p>Per l’installazione dei cookie tecnici non è necessario il consenso dell’utente.</p>
+                                            <p>Rientrano tra i cookie tecnici anche i cookie "analytics" o "di monitoraggio" (Google Analytics)</p>
+                                            <p>Questo sito si avvale del servizio Google Analytics della Società Google Inc. (di seguito Google) per la generazione di statistiche sull’utilizzo del portale web, senza fornire informazioni personali sui singoli utenti.<br>Per consultare l’informativa privacy della Società Google, relativa al servizio Google Analytics, si prega di visitare il sito Internet <a href="http://www.google.com/analytics/terms/it.html" target="_blank">http://www.google.com/analytics/terms/it.html</a></p>
+                                            <p>Per conoscere le norme sulla privacy di Google, si invita a visitare il sito Internet <a href="http://www.google.com/intl/it/policies/privacy/" target="_blank">http://www.google.com/intl/it/policies/privacy/</a></p>
+                                            <p>Utilizzando il presente sito web si acconsente al trattamento dei propri dati da parte di Google secondo quanto riportato nella relativa informativa.</p>
+                                            
+                                        </section>
                                         <!-- separatore -->
                                         <div class="spacerdark"></div>
                                         <!-- fine separatore -->
