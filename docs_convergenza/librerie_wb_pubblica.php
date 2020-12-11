@@ -254,6 +254,7 @@
 		<a href="<?php print $dynpath; ?>tpl_errore-login.php">Errore login</a>
 		<a href="<?php print $dynpath; ?>tpl_servizio-non-disponibile.php">Servizio non disponibile</a>
 		<a href="<?php print $dynpath; ?>tpl_lavori-in-corso.php">Lavori in corso</a>
+		<a href="<?php print $dynpath; ?>tpl_cookie_policy.php">Cookie policy</a>
 		<a href="<?php print $dynpath; ?>tpl_errore-404.php">Errore 404</a>
 </div>
 
