@@ -156,7 +156,7 @@ function mCheckVal(field,fv)
 
 
 	/* Blocco valore immobile surroga=9999999 (era il default) oppure 700000 */
-	var dLimit = (mFinalita === "Acquisto") ? 700000: 9999999;
+	var dLimit = (mFinalita === "Acquisto") ? 2000000: 9999999;
 	
 
 	if (field.attr("id") == "mValore" && fv > dLimit) {
