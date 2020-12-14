@@ -3130,3 +3130,12 @@ div.custom-row.custom-5 .custom-col {width:20%;padding:0 7px;float:left;margin:0
 
 /*NEW LOGO*/
 .navbar-brand {padding: 13px 15px 15px 15px}
+
+.simple-format {font-size:14px}
+.simple-format h3 {font-size:22px; margin-bottom:10px;}
+.simple-format p {font-size:14px;}
+.simple-format section {margin-bottom: 15px;}
+ul.normal-format {font-size: 14px;margin:0;padding:0 0 0 20px;}
+ul.normal-format li {margin-bottom:10px;}
+
+.break-word {word-wrap: break-word }
