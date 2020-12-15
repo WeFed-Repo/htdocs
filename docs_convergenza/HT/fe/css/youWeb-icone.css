@@ -32,7 +32,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon {display:inline-block; width:20px;height:20px;} 
+.icon, .glyph {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
 .icon-play:before {
@@ -724,5 +724,51 @@
 }
 
 
+@font-face {
+  font-family: 'icomoon_color';
+  src:  url('/HT/fe/font/icomoon_color.eot?jcg1in');
+  src:  url('/HT/fe/font/icomoon_color.eot?jcg1in#iefix') format('embedded-opentype'),
+    url('/HT/fe/font/icomoon_color.ttf?jcg1in') format('truetype'),
+    url('/HT/fe/font/icomoon_color.woff?jcg1in') format('woff'),
+    url('/HT/fe/font/icomoon_color.svg?jcg1in#icomoon_color') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="glyph-"], [class*=" glyph-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon_color' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:30px;
+}
+
+.glyph-read_pdf .path1:before {
+  content: "\e952";
+  color: rgb(29, 41, 79);
+}
+.glyph-read_pdf .path2:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(29, 41, 79);
+}
+.glyph-read_pdf .path3:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(126, 211, 33);
+}
+.glyph-uread_pdf:before {
+  content: "\e955";
+  color: #1d294f;
+}
 
 

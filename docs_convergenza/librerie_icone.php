@@ -128,7 +128,7 @@
                 
                     <div id="icone">
                         <div id="iconSet"></div>
-                    <?php if ($site=="webank") { ?>
+                   
                          <script type="text/javascript">  
 
                             $(function(){
@@ -170,7 +170,7 @@
                         </script>
                         <h2>Elenco glifi colorati <span class="note" id="glifitotale"></span></h2>
                         <div id="iconSetColor"></div>
-                    <?php } ?>
+                   
                 </div>
             </div>
         </div>

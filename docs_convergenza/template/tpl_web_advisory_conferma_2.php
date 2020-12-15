@@ -124,22 +124,22 @@
                                     </span>
                                 </label>
                                 <div class="documenti format-spunta">
-                                    <ul>
-                                        <li>
-                                            <a target="_blank" class="moduloKid" data-clicked="false" href="/WEBHT/KidDownloadDocFinServlet?strumento=IT0005086191&amp;versione=2&amp;lingua=IT">
-												<i class="icon icon-file_pdf_fill_nochecked fLeft"></i>
-												<i class="icon icon-file_pdf_fill_checked checked fLeft"></i>  
-                                                <span class="">Informazione Chiave (KID/KIID IT0005086191)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" class="moduloKid" data-clicked="false" href="/WEBHT/KidDownloadDocFinServlet?strumento=IT0005126815&amp;versione=16&amp;lingua=IT">
-												<i class="icon icon-file_pdf_fill_nochecked fLeft"></i> 
-												<i class="icon icon-file_pdf_fill_checked fLeft checked"></i>  
-                                                <span class="">Informazione Chiave (KID/KIID IT0005126815)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
+								<ul>
+									<li>
+										<a target="_blank" class="moduloKid" data-clicked="false" href="#">
+											<span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
+											<span class="glyph glyph-read_pdf" title="glyph-read_pdf"></span>
+											<span class="text">Informazione Chiave (KID/KIID IT0005086191)</span>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" class="moduloKid" data-clicked="false" href="#">
+											<span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
+											<span class="glyph glyph-read_pdf" title="glyph-read_pdf"></span>
+											<span class="text">Informazione Chiave (KID/KIID IT0005126815)</span>
+										</a>
+									</li>
+								</ul>
                                 </div>
                             </div>
                            

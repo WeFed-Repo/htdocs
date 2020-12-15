@@ -384,7 +384,7 @@ section {
 #icone .iconWrap {width:10%; display:inline-block; text-align:center; padding: 10px; text-align:center;overflow:hidden;}
 #icone .iconWrap .icon {display:inline-block;margin: 15px 0;font-size:32px;color:#333;}
 #icone .iconWrap span.name { width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display: inline-block;font-size:12px;}
-.youweb #icone .iconWrap .icon {font-size:20px;}
+.youweb #icone .iconWrap .icon,.youweb #icone .glyph {font-size:20px;}
 #icone h2 {margin: 15px;color: #fff;padding: 5px 15px; background: #333;}
 #icone .glyphWrap {width:10%;display:inline-block;text-align:center;padding:10px; margin:15px 0 25px;;}
 #icone .glyphWrap .glyph {margin: 10px auto;}

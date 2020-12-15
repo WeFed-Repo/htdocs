@@ -6907,20 +6907,26 @@ div[id*="popover"] .popover-content {
 .ui-accordion-content .documenti li {padding-bottom:10px}
 .ui-accordion-content .documenti li .icon {margin-right:10px}
 /*STILIZZAZIONE DOCUMENTI SPUNTATI */
-.documenti.format-spunta a{text-decoration: none;}
+.documenti.format-spunta a {text-decoration: none;position: relative;display:inline-block;margin-bottom:20px}
+.documenti.format-spunta .text {padding-left:35px;display: inline-block;padding-top:5px}
+.documenti.format-spunta a [class*=" glyph-"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .documenti.format-spunta a[data-clicked=false] {font-weight:bold}
 .documenti.format-spunta a[data-clicked=true] {font-weight:normal}
-.documenti.format-spunta a[data-clicked=false] .icon {
-    display:block;
+.documenti.format-spunta a[data-clicked=false] .glyph-uread_pdf {
+    display:inline-block;
 }
-.documenti.format-spunta a[data-clicked=false] .icon.checked {
+.documenti.format-spunta a[data-clicked=false] .glyph-read_pdf {
     display:none;
 }
-.documenti.format-spunta a[data-clicked=true] .icon {
+.documenti.format-spunta a[data-clicked=true] .glyph-uread_pdf {
     display:none;
 }
-.documenti.format-spunta a[data-clicked=true] .icon.checked {
-    display:block;
+.documenti.format-spunta a[data-clicked=true] .glyph-read_pdf {
+    display:inline-block;
 }
 #contenuti.col-sm-12.resp{
     width:100%;
