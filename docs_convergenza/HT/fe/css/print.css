@@ -883,3 +883,7 @@ canvas#piechart{
 .fixed-table-loading {
     display:none;
 }
+
+#kampyleButtonContainer {
+    display:none !important;
+}
