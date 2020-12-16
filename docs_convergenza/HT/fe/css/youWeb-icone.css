@@ -35,6 +35,9 @@
 .icon, .glyph {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-ico_assistenza_legale:before {
+  content: "\e9e4";
+}
 .icon-play:before {
   content: "\e9e3";
 }

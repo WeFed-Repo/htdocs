@@ -1,4 +1,4 @@
- <div class="sectionTitle">
+<div class="sectionTitle">
             <div class="container">
                 <!-- Example row of columns -->
                 <div class="row">
@@ -134,27 +134,8 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                             </div>
                         </div>
                     <!-- fine container 1 DAY F -->
-                    <hr>
-                     <!-- repricing -->
-                     <div class="main_hero conto_webank dayF" id="s1">
-                            <div class="row">
-                                <div class="col-lg-10 col-md-10 col-sm-12">
-                                    <div class="promo_elenco">
-                                        <h2>CONTO WEBANK A SOLI 2 &euro;/MESE</h2>
-                                        <ul>
-                                            <li><span class="green">Zero</span> spese</li>
-                                            <li><span class="green">Zero canone</span> carte</li>
-                                            <li><span class="green">Comandi vocali</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main_hero_bottom">
-                                <a href="javascript:apriConto();" class="btn-green btn-green-arrow" title="Apri il conto">Apri il conto</a>
-                                <p class="note">Messaggio pubblicitario con finalit&agrave; promozionale. Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi. Richiesta soggetta a valutazione ed approvazione da parte della Banca.</p>
-                            </div>
-                        </div>
-                    <!-- fine container 1 DAY F -->
+
+
 
                         <!-- container 1 inizio PROMO 2016 05 25 
                         <div class="main_hero conto_webank" id="s1">
@@ -175,6 +156,7 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                         <div class="col-xs-12 nopadding container02 conto_webank" id="s2">
                             <h3>
     						UN MONDO DI SERVIZI<br />
+    						<span>Zero spese e zero canone</span>
     					</h3>
                             <div class="col-sm-12">
 								<div class="row primalinea">
@@ -257,34 +239,69 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                             </div>
                             <div class="col-xs-12 alignCenter"> <a class="btn-grlit btn-grlit-arrow btn-fs14  uppercase" href="#">Apri conto Webank</a> </div>
                         </div>
+
+
+
+                        <!-- BOX CARTE DI CREDITO -->
                         <div class="col-xs-12 nopadding container03 conto_webank" id="s3">
-                            <h3>
-    						CARTE DI CREDITO<br />
-    						<span>
-    							Non esiste la carta giusta per tutti.<br />
-    							Ma esiste la carta giusta per te!
-    						</span>
-    					</h3>
-                            <h4>
-    						Per questo Webank ti mette a disposizione un'offerta di Bancomat e <a href="carte-di-credito.html">Carte di credito</a> che hanno tutte le caratteristiche per diventare le tue Carte.
-    					</h4>
-                            <div class="col-xs-12 nopadding b3-container">
-                                <div class="col-sm-4 col-xs-12"> <img src="/wbresp/img/conto_webank/conto_webank-bancomat.png" class="carta" alt="Bancomat Webank" />
-                                    <p> <b>Bancomat Webank</b> Senza canone puoi prelevare gratuitamente in Italia e nell&rsquo;area Euro. </p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12"> <img src="/wbresp/img/conto_webank/conto_webank-cartimpronta.png" class="carta" alt="Cartimpronta ONE" />
-                                    <p> <b>Cartimpronta ONE</b> La carta di credito gratuita di Webank per pagare in Italia e in area Euro su circuiti MasterCard e Visa senza commissioni e anche in modalit&agrave; contactless. </p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12"> <img src="/wbresp/img/conto_webank/conto_webank-cartajeans.png" class="carta" alt="Carta Je@ns" />
-                                    <p> <b>Carta Je@ns</b> Carta Je@ns &egrave; la carta prepagata ricaricabile con canone gratuito. Grazie al circuito MasterCard la puoi utilizzare in tutto il mondo anche per gli acquisti online. </p>
-                                </div>
+                        <h3>
+                            Le carte di Webank<br>
+                            <span>
+                                Non esiste la carta giusta per tutti.<br>
+                                Ma esiste la carta giusta per te!
+                            </span>
+                        </h3>
+                        <h4>Sceglila tra le carte di credito, debito e prepagate proposte da Webank.</h4>
+                        <div class="col-xs-12 nopadding b3-container">
+
+                            <div class="col-sm-4 col-xs-12">
+                                <img src="/wbresp/img/conto_webank/conto_webank-nexi-impronta.png" class="carta" alt="Nexi Classic e Cartimpronta ONE">
+                                <p>
+                                    <b>Carte di credito</b><br>
+                                    Disponibili su circuito Visa e Mastercard.<br>
+                                    <br>
+                                    <strong>Nexi Classic</strong> la carta di credito contactless che ti permette di <strong>pagare anche tramite smartphone</strong>. <br>
+                                    Il canone &egrave; gratuito per sempre se la richiedi entro il 31/01/2021.<br>
+                                    <br>
+                                    <strong>Cartimpronta ONE</strong> contactless e dal <strong>canone gratuito sempre</strong> oppure <strong>Cartimpronta Gold Plus</strong>, completa e dal <strong>plafond elevato</strong> per i pi&ugrave; esigenti.
+                                </p>
                             </div>
-                            <div class="col-sm-6 col-xs-12 alignCenter"> <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-gray-border uppercase" href="#">Scopri le nostre carte</a>
-                                <br> </div>
-                            <div class="col-sm-6 col-xs-12 alignCenter"> <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-hover-white uppercase" href="#">Apri conto Webank</a>
-                                <br> </div>
-                            <div class="col-xs-12 alignCenter">&nbsp;</div>
+                            <div class="col-sm-4 col-xs-12">
+                                <img src="/wbresp/img/conto_webank/conto_webank-bancomat.png" class="carta" alt="Bancomat Webank">
+                                <p>
+                                    <b>Carte di debito</b><br>
+                                    <strong>Carta di debito internazionale</strong> con canone gratuito. Prelievi gratuiti presso gli sportelli automatici di tutte le banche in Italia e in area Euro.
+                                </p>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <img src="/wbresp/img/conto_webank/conto_webank-cartaprepaid.png" class="carta" alt="Carta Prep@id by Banco BPM">
+                                <p>
+                                    <b>Carte prepagate</b><br>
+                                    <strong>Carta Prep@id by Banco BPM</strong> &egrave; l'alternativa semplice al denaro contante. La carta contactless con PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 &euro; in modo manuale o automatico.
+                                </p>
+                            </div>
+
                         </div>
+                        <div class="col-sm-6 col-xs-12 alignCenter">
+                            <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-gray-border uppercase" href="/webankpub/wbresp/t1/carte_di_credito.do">Scopri le nostre carte</a>
+                            <br>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 alignCenter">
+                            <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-hover-white uppercase" href="javascript:apriConto();">Apri Conto Webank</a>
+                            <br>
+                        </div>
+                        <div class="col-xs-12 alignCenter">&nbsp;</div>
+                    </div>
+
+
+
+
+                        <!-- FINE BOX CARTE DI CREDITO -->
+
+
+
+
+
                         <div class="col-xs-12 nopadding container04 conto_webank" id="s4">
                             <h3>
     						SEMPRE CON TE<br />
