@@ -111,7 +111,7 @@
 								<p>E' la carta di credito con <strong>canone gratuito</strong> di Webank:</p>
 								<ul>
 								<li><strong>la utilizzi ovunque</strong> in Italia, all'estero e sul web </li>
-								<li><strong>nessuna commissione in area Euro</strong> su circuito Master Card o Visa</li>
+								<li><strong>nessuna commissione sui pagamenti in area Euro</strong> su circuito Master Card o Visa</li>
 								<li>grazie alla tecnologia contactless paghi avvicinando la carta al lettore e per le spese fino a 25&euro; non &egrave; necessario firmare la ricevuta</li>
 								<li>SMS Alert <strong>ti avvisa sul cellulare</strong> a ogni acquisto</li>
 								<li>3D SecureCode <strong>protegge i tuoi acquisti</strong> su Internet e con il portafoglio digitale BPM MasterPass &egrave; ancora pi&ugrave; facile e veloce</li>
@@ -131,9 +131,9 @@
 								<p><span>&Egrave; la carta di credito per le esigenze pi&ugrave; esclusive, grazie alla sua elevata disponibilit&agrave; di spesa.</p>
 								<ul>
 								<li><strong>Maxi plafond</strong> a partire da 5.200 &euro;</li>
-								<li><strong>Extra-sicurezza</strong> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
-								<li><strong>Zero commissioni</strong> sui rifornimenti di carburante</li>
-								<li><strong>Zero spese</strong> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
+								<li><strong>extra-protezione</strong> per i tuoi acquisti, con le tecnologie 3D SecureCode, SMS Alert e BPM MasterPass</li>
+								<li><strong>zero commissioni</strong> sui rifornimenti di carburante</li>
+								<li><strong>zero spese</strong> su estratto conto, attivando la funzione per consultare i rendiconti in formato digitale</li>
 								</ul>
 
 
@@ -354,7 +354,15 @@
 
 
 					</div>
+					<p class="note">MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE<br>
+				Per le condizioni economiche e contrattuali delle carte di pagamento Webank, anche dei servizi di messaggistica e alert, fare riferimento ai Fogli Informativi disponibili sui siti <a href="https://www.webank.it" target="_blank">www.webank.it</a> e <a target="_blank" href="https://www.bancobpm.it">www.bancobpm.it</a> nella sezione Trasparenza.<br>
+				In merito al servizio 3D Secure di Cartimpronta One e Gold Plus fare riferimento al portale dedicato <a target="_blank" href="https://carte.bancobpm.it/portal/portal/portale/titolari">https://carte.bancobpm.it/portal/portal/portale/titolari</a>.<br>
+				Per le condizioni economiche e contrattuali della carta di credito Nexi Classic, anche dei servizi di messaggistica e alert, fare riferimento ai Fogli Informativi disponibili presso le filiali Banco BPM e sui siti www.bancobpm.it, www.webank.it e www.nexi.it nella sezione Trasparenza. Promozione valida fino al 31/01/2021. <br>Il servizio Spending Control &egrave; riservato ai titolari di una carta Nexi Classic iscritti all'area personale del sito nexi.it e all'App Nexi Pay, per maggiori informazioni consulta il link <a href="">https://www.nexi.it/content/dam/nexi/download/trasparenza/regolamenti/terms-and-conditions-spending-control.pdf</a>
+				I servizi Ios&igrave; sono regolati dal D. Lgs. N. 206/2005 – Codice del Consumo. La quota di iscrizione annuale al programma Iosì pari a 3,60 &euro; e di Ios&igrave; Plus, pari a 19,50 &euro; sar&agrave; addebitato sul primo estratto conto disponibile, salvo iniziative  promozionali. Il regolamento del Programma fedelt&agrave; e la relativa informativa sul trattamento dei dati personali sono disponibili sul sito nexi.it e sull'App Nexi Pay, per maggiori informazioni consulta il link <a href="">https://www.nexi.it/content/dam/nexi/download/trasparenza/regolamenti/iosi-regolamento-adesione.pdf </a><br>
+			    <br>
+				Di seguito i requisiti minimi necessari per richiedere le carte di credito ai fini valutativi da parte di Webank: accredito dello stipendio da almeno 2 mesi, saldo di conto corrente superiore a 5.000 &euro;, accrediti mensili ricorrenti superiori a 1.500 &euro;. Il rilascio delle carte di credito è sempre subordinato alla positiva valutazione di merito da parte della banca.
 
+				</p>
 
 				<!-- container 5 fine -->
 

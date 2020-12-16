@@ -242,7 +242,7 @@
 											<p>
 												Webank ti offre un'ampia scelta di <b>carte di pagamento</b>.<br>
 												<b>Carte di debito, carte di credito e ricaricabili</b> con <b>canone gratuito</b>, per ogni tua esigenza di spesa.<br>
-												Per gli acquisti di ogni giorno come per lo shopping online, sempre con massima comodit&agrave; e sicurezza.
+												Per gli acquisti di ogni giorno come per lo shopping online, sempre con massima comodit&agrave; e semplicit&agrave;.
 											</p>
 										</div>
 										<div class="bottomLink">
