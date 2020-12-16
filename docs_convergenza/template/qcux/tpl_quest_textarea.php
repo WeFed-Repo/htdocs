@@ -41,7 +41,7 @@
             });
 
             /*FUNZIONE PER IMPEDIRE L'INSERIMENTO DI CARATTERI SPECIALI: CONSENTITE LETTERE/NUMERI/SPAZIO/ACCENTI */
-	        var ciRegexNote = /[a-zA-Z0-9/\s\u00C0-\u00F6\u00F8-\u00FF]+/,
+	        var ciRegexNote = /[a-zA-Z0-9/\s\.\,\?\'\!\:\(\)\-\%\u00C0-\u00F6\u00F8-\u00FF]+/, 
 		    fieldNote = $("textarea");
 		    fieldNote.on('keypress', function (event) {
 		    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
