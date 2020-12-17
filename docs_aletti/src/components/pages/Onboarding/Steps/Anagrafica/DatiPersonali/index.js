@@ -155,16 +155,6 @@ class DatiPersonali extends Component {
             listaNazioni = this.props.obdomini["nazioni_attive"];
         return (
             <>
-                <DefaultModal show={this.state.showModalFatcaDisabled}
-                    params={{ "modalTitle": 'Attenzione' }}>
-                    <p>In qualità di soggetto (anche) fiscalmente non residente in Italia ovvero di sussistenza di indizi di residenza all’estero ti informiamo che non è possibile procedere con l'apertura del rapporto. Rivolgiti alla tua filiale di riferimento per scoprire i prodotti a te riservati. Il tuo Consulente Finanziario ti guiderà nella scelta.</p>
-                    <div className="btn-console">
-                        <div className="btn-console-right">
-                            <Button color="primary" className="center" onClick={() => { if (this.props.formstate[anagraficaIntestatario + "paesenascita"] !== "86") this.props.formstate[anagraficaIntestatario + "paesenascita"] = ""; if (this.props.formstate[anagraficaIntestatario + "cittadinanza"] !== "86") this.props.formstate[anagraficaIntestatario + "cittadinanza"] = ""; this.setState({ showModalFatcaDisabled: false }) }} title="Chiudi">Chiudi</Button>
-                        </div>
-                    </div>
-                </DefaultModal>
-
                 <DefaultModal show={this.state.isWarningDateVisible}
                     params={{ "modalTitle": 'Attenzione' }}>
                     <p>Specificare la data di nascita per proseguire con la selezione della data di emissione e scadenza dei documenti</p>
@@ -213,8 +203,8 @@ class DatiPersonali extends Component {
                                         error={this.props.formstate.errors[anagraficaIntestatario + "paesenascita"]}
                                         onChange={this.props.obchange}
                                         cbchange={(val) => {
-                                            if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) }
-                                            if (val !== "86" && this.state.fatcaEnable) { this.props.formstate[anagraficaIntestatario + "provincianascita"] = "" }
+                                            
+                                            if (val !== "86") { this.props.formstate[anagraficaIntestatario + "provincianascita"] = "";this.props.formstate[anagraficaIntestatario + "comunenascita"] = "" }
                                         }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
@@ -231,7 +221,6 @@ class DatiPersonali extends Component {
                                         value={this.props.formstate[anagraficaIntestatario + "cittadinanza"]}
                                         error={this.props.formstate.errors[anagraficaIntestatario + "cittadinanza"]}
                                         onChange={this.props.obchange}
-                                        cbchange={(val) => { if (val !== "86" && !this.state.fatcaEnable) { this.setState({ showModalFatcaDisabled: true }) } }}
                                         ajaxoptions="nazioni"
                                         placeholder="Seleziona"
                                         output={this.props.isOutput}

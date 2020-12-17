@@ -52,7 +52,7 @@ class AltriRecapiti extends Component {
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissocasa"]}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissocasa"]}
                                         onChange={this.props.obchange}
-                                        placeholder=""
+                                        placeholder="Numero"
                                         mask="telefono"
                                         output={this.props.isOutput}
                                     >
@@ -86,7 +86,7 @@ class AltriRecapiti extends Component {
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "numerofissoufficio"]}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "numerofissoufficio"]}
                                         onChange={this.props.obchange}
-                                        placeholder=""
+                                        placeholder="Numero"
                                         mask="telefono"
                                         output={this.props.isOutput}
                                     >
