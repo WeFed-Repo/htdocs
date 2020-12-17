@@ -8356,7 +8356,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 }
 @media (max-width:767px) {
     .accordion-icon-wrapper h3 span {
-        left: 40px;
+        left: 50px;
         font-size:14px;
         padding-right:30px;
         top:0;
@@ -8395,7 +8395,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     width: 50%;
     position: relative;
     float:none!important;
-    padding:0;
+   
 }
 .display-cell p {
     padding-bottom:0;
@@ -8417,19 +8417,21 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .display-cell ul {
    margin-bottom:30px;
 }
-/*@media (min-width:768px) {
+@media (min-width:768px) {
     .display-cell {
-        padding: 20px 0;
+        padding:0;
     }
-}*/
+}
 @media (max-width:767px) {
     .display-table,.display-cell, .display-row {
         display: block;
+       
     }
     .display-cell {
         width: 100%;
         margin-bottom:20px;
         border:0;
+        float: left;
     }
     .display-cell .btnWrapper {
         position: static;
