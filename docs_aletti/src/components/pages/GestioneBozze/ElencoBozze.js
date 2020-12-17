@@ -131,12 +131,9 @@ export default class extends Component {
    
     render() {
         
-        let optionName = [
-            { "value": "", "text": "Seleziona" },
-            { "value": "BOZZA", "text": "BOZZA" },
-            { "value": "BOZZA_VALIDATA", "text": "BOZZA VALIDATA" }
-        ]
         
+        
+       
         return (<>
             <DefaultCollapse label="RICERCA AVANZATA" startsOpen={this.state.collapseOpened}
                 className="search-collapse">
@@ -157,7 +154,7 @@ export default class extends Component {
                             label="Stato" 
                             value={this.state.form_stato} 
                             name="form_stato" 
-                            options={optionName} 
+                            options={this.props.statiPratica} 
                             onChange={(e) => Form.change(this, e)}
                             >
                         </Form.select>
@@ -188,7 +185,7 @@ export default class extends Component {
                 </form>
             </DefaultCollapse>
             <div>
-                <ListaBozzeTable data={this.state.localData} getListaBozze={this.props.getListaBozze} selectedRow={this.setSelectedRow}></ListaBozzeTable>
+                <ListaBozzeTable data={this.state.localData} getListaBozze={this.props.getListaBozze} selectedRow={this.setSelectedRow} ></ListaBozzeTable>
             </div>
             <div className="d-flex justify-content-end console">
                 <Button className="btn-primary" onClick={this.openModalBozza.bind(this, 0)}>Elimina</Button>

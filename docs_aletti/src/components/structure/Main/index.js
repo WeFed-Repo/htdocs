@@ -21,6 +21,7 @@ const PersInfo= loader(()=> import('components/pages/UserPages/persInfo'));
 const PersDoc = loader(()=> import('components/pages/UserPages/persDoc'));
 const Testiframe = loader(()=> import('components/pages/Testiframe'));
 const FormFields = loader(() => import('components/pages/FormFields'));
+const Comportamento = loader(() => import('components/pages/Comportamento'));
 const Debug = loader(() => import('components/pages/Debug'));
 
 class Main extends Component {
@@ -42,6 +43,7 @@ class Main extends Component {
                             <Route path='/commissioning' component={ Commissioning }/>
                             <Route path='/agenda' component={ Agenda }/>
                             <Route path='/onboarding/:id?' component={ Onboarding }/>
+                            <Route path='/comportamento/:id?' component={ Comportamento }/>
                             <Route path='/gestionebozze' component={ GestioneBozze }/>
                             <Route path='/news' component={ News }/>
                             <Route path='/documents' component={ Documents }/>

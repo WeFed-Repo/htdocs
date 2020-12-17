@@ -123,6 +123,11 @@ class Menu extends Component {
                               rel="noopener noreferrer"><i className="icon icon-2x icon-scheda_titolo"/><span
                             className='menu-name'>Vai a Market Connect</span></a>
                     </NavItem>
+                    <NavItem title="Vai a GESPRO">
+                        <a className='nav-link' href="http://portalnew.intranet.servizi/portale/gestappl.nsf/jumppageLCL?OpenForm&APPL=AF007" target="_blank"
+                              rel="noopener noreferrer"><i className="icon icon-2x icon-scienza_filled"/><span
+                            className='menu-name'>Vai a Vai a GESPRO</span></a>
+                    </NavItem>
                 </Nav>
             </nav>
         );

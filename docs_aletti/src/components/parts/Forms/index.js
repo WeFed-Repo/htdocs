@@ -524,8 +524,6 @@ class FormFile extends Component {
                 modalViewFile: file
             },()=>this.imageBlock(file))
         }
-        
-
     }
 
     render() {

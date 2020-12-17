@@ -8,3 +8,28 @@
 .right.btn {
     float:right;
 }
+
+// Colonna pratica
+span.stato {
+    font-weight:bold; color:#333;
+    &.avanzamento {color:#fa0}
+    &.annullata {color:#c00;}
+    &.comportamento {color:#380}
+}
+
+// Colonna stati
+span.bozza {
+    display:inline-block;
+    padding:3px 10px;
+    font-weight:bold; color:#333;
+    &.annullata {color:#c00;}
+}
+a.edit {
+    display:inline-block;
+    padding:3px 10px;
+    color:#fff;
+    font-weight:bold;
+    border-radius:3px;
+    &.avanzamento {background-color:#fa0}
+    &.comportamento {background-color:#380;}
+}

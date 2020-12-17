@@ -15,10 +15,55 @@
             "expirationDate": 1579949725000
         },
         {
-            "id": 4,
+            "id": 46,
             "dataInserimento": 1579906800000,
             "dataUltimoAggiornamento": 1579993200000,
             "stato": "BOZZA_VALIDATA",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        },
+        {
+            "id": 45,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "INSERITA_DA_INVIARE",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        },
+        {
+            "id": 44,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "BOZZA_DA_COMPLETARE",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        },
+        {
+            "id": 43,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "ANNULLA_DATI_ERRATI",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        },
+        {
+            "id": 42,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "SCADUTA",
+            "intestazione": "PIETRO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1580836979169
+        },
+        {
+            "id": 41,
+            "dataInserimento": 1579906800000,
+            "dataUltimoAggiornamento": 1579993200000,
+            "stato": "CONCLUSA",
             "intestazione": "PIETRO VERDI",
             "numIntestatari": 2,
             "expirationDate": 1580836979169

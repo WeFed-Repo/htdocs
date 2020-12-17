@@ -4,16 +4,24 @@ import DefaultTable from 'components/parts/DefaultTable';
 import momentIt from "functions/rad/momentIt";
 import { NavLink } from 'react-router-dom';
 
-
 function apriPratica(cell, row) {
-    return (<NavLink to={"/onboarding/" + cell}><span className="table-link">{cell}</span></NavLink>)
+    // A seconda dello status mostra un azione differente
+    let el = <span className={"bozza " + row.status}>{cell}</span>;
+    if (row.status ==="avanzamento" || row.status==="comportamento") {
+        el = <NavLink to={"/" + ((row.status==="comportamento")? "comportamento":"onboarding") +"/" + cell} className={"edit " + row.status }>{cell}</NavLink>;
+    }
+    
+    return el;
+    // return ()
+
 }
 const tableReturnData = date => {
     return momentIt(date).format("DD-MM-YYYY");
 };
-const tableReturnStato = stato => {
-    return stato.split("_").join(' ');
+const tableReturnStato = (stato,row) => {
+    return <span className={"stato " + row.status}>{stato}</span>;
 };
+
 
 const ListaBozzeColumns = [
     {
@@ -46,6 +54,15 @@ const ListaBozzeColumns = [
         sort: true,
         formatter: tableReturnStato
     }
+    /*
+     ,
+    {
+        text: 'status',
+        dataField: 'status',
+        sortName: 'status',
+        sort: true
+    }
+    */
 ]
 
 class ListaBozzeTable extends Component {
@@ -69,7 +86,12 @@ class ListaBozzeTable extends Component {
         }
     }
 
+    
+
     render() {
+
+ 
+
         return (
             <Row>
                 <Col xs="12">

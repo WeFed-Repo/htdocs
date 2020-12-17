@@ -89,7 +89,7 @@ export default class extends Component {
                         }
                         {window.localStorage.debugstate && window.localStorage.debugstate==="attivo" && <span className="svi-btn" onClick={() => console.log(formfields)}>Mostra stato onboarding</span>}
                     </div>
-                    {getNextState(formfields) !== "CONCLUSA" &&
+                    {formfields.field_stato !== "CONCLUSA" && formfields.field_stato !== "INSERITA_DA_INVIARE" && getNextState(formfields) !== "INSERITA_DA_INVIARE" &&
                         <div className="btn-console-right">
                             {formfields.field_anagraficablob_privacyletta === "true" && <>
                                 <Modal isOpen={formfields.modalEsci}>
@@ -241,9 +241,10 @@ export default class extends Component {
                         </div>
                     }
                     {
-                        getNextState(formfields) === "CONCLUSA" &&
+                        (formfields.field_stato==="INSERITA_DA_INVIARE" || formfields.field_stato==="CONCLUSA" || getNextState(formfields) === "INSERITA_DA_INVIARE") &&
                         <div className="btn-console-right">
-                            <Button color="primary" onClick={() => window.location.href = "/gestionebozze"}>Fine</Button>
+                            <Button color="primary" onClick={() => window.location.href = "/gestionebozze"}>Esci</Button>
+                            <Button color="primary" onClick={() => window.location.href = "/comportamento/"+formfields.field_id}>Rilevazione comportamento</Button>
                         </div>
                     }
 
