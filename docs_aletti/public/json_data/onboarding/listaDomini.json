@@ -347,8 +347,7 @@
                 "description": "CAMERUN",
                 "flagTin": "N",
                 "codiceIsoAlpha2": "CM"
-    
-        },
+            },
             {
                 "code": 139,
                 "description": "CAMPIONE D'ITALIA",
@@ -690,8 +689,7 @@
                 "description": "HAITI",
                 "flagTin": "N",
                 "codiceIsoAlpha2": "HT"
-      
-      },
+            },
             {
                 "code": 284,
                 "description": "HEARD E MCDONALD ISOLE",
@@ -1033,8 +1031,7 @@
                 "description": "MOLDAVIA",
                 "flagTin": "N",
                 "codiceIsoAlpha2": "MD"
-          
-  },
+            },
             {
                 "code": 91,
                 "description": "MONACO",
@@ -1368,8 +1365,7 @@
             {
                 "code": 187,
                 "description": "SAO TOME' E PRINCIPE",
-                "flagTin":
- "N",
+                "flagTin": "N",
                 "codiceIsoAlpha2": "ST"
             },
             {
@@ -1994,8 +1990,7 @@
                     "nome": "Produzione, trasformazione carta e cartone"
                 },
                 {
-   
-                 "id": "473",
+                    "id": "473",
                     "nome": "Prodotti stampa ed editoria"
                 },
                 {
@@ -2263,8 +2258,7 @@
                 {
                     "id": "5",
                     "nome": "Da 75.001  a 500.000"
-        
-        },
+                },
                 {
                     "id": "6",
                     "nome": "Da 500.001  a 2.500.000"
@@ -2616,7 +2610,6 @@
                 {
                     "id": "192",
                     "nome": "DOMINICA"
-
                 },
                 {
                     "id": "240",
@@ -2979,8 +2972,7 @@
                     "nome": "MICRONESIA"
                 },
                 {
-                 
-   "id": "177",
+                    "id": "177",
                     "nome": "MIDWAY ISOLE"
                 },
                 {
@@ -3328,8 +3320,7 @@
                     "nome": "THAILANDIA"
                 },
                 {
-                
-    "id": "287",
+                    "id": "287",
                     "nome": "TIMOR"
                 },
                 {
@@ -3709,8 +3700,7 @@
                 {
                     "id": "PO",
                     "nome": "PO"
-    
-            },
+                },
                 {
                     "id": "PR",
                     "nome": "PR"
@@ -3899,6 +3889,24 @@
             {
                 "codice": "F",
                 "descrizione": "F"
+            }
+        ],
+        "RILEV_COMPORTAMENTO": [
+            {
+                "codice": "1",
+                "descrizione": "NORMALE"
+            },
+            {
+                "codice": "2",
+                "descrizione": "RILUTTANTE"
+            },
+            {
+                "codice": "3",
+                "descrizione": "Ha modificato l'operazione in funzione delle informazioni richieste"
+            },
+            {
+                "codice":"4",
+                "descrizione": "Accompagnato da soggetti terzi non giustificati"
             }
         ]
     }
