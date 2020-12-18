@@ -111,6 +111,40 @@ class FormInput extends Component {
 }
 
 
+// ############################ Textarea ##############################
+class FormTextarea extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        // parametri del campo: vengono cambiati tramite le sue props
+        let label = (this.props.label) ? this.props.label : "",
+            type = (this.props.label) ? this.props.label : "text",
+            maxlength = (this.props.maxlength) ? this.props.maxlength : 1500,
+            error = this.props.error,
+            output = this.props.output ? true : false,
+            value = this.props.value,
+            placeholder = this.props.placeholder,
+            cbchange = this.props.cbchange,
+            mask= this.props.mask;
+            
+        return (
+            <div className={"form-group " + this.props.className + " " + ((error) ? "error" : "")}>
+                {label && <label className="form-control-label">{this.props.label}{helpButton(this.props.help)}</label>}
+                <div className="textarea-counter">Caratteri disponibili <strong>{maxlength - value.length}/{maxlength}</strong></div>
+                {!output && <textarea disabled={this.props.disabled} type={type} name={this.props.name} placeholder={placeholder} onChange={(e)=>{e["cbchange"]=cbchange;e["mask"]=mask;this.props.onChange(e)}} value={value} maxLength={maxlength} className="form-control" />}
+                {output && <span className="output">{value}</span>}
+                {error && <span className="error">{error}</span>}
+            </div>
+        );
+
+    }
+
+}
+
 // ############################ Select ##############################
 class FormSelect extends Component {
     
@@ -720,6 +754,7 @@ class FormDateMonthSelector extends Component {
 
     }
 }
+
 // Componente "campo" vero e proprio
 class FormDate extends Component {
 
@@ -1002,6 +1037,7 @@ const Form = {
     file: FormFile,
     date: FormDate,
     otp: FormOtp,
+    textarea: FormTextarea,
 
     /* Funzione generica per gestire gli onchange */
     change: handleChange

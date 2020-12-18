@@ -13,6 +13,24 @@
         overflow:hidden;
     }
 
+    textarea.form-control {
+        width:100%;
+        position:relative;
+        display:inline-block;
+        border-radius:4px;
+        z-index:1;
+    }
+    .textarea-counter {
+        position:absolute;
+        padding:0 5px;
+        right:10px;
+        margin-top:-9px;
+        height:12px;
+        background-color: #fff;
+        border-radius: 4px 0 0 4px;
+        font-size:12px;
+        z-index:2;
+    }
     .otp-field {
         display:inline-block;
         width:100%;
