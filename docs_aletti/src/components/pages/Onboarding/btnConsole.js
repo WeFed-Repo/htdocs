@@ -95,10 +95,24 @@ export default class extends Component {
                                 <Modal isOpen={formfields.modalEsci}>
                                     <ModalHeader>Esci</ModalHeader>
                                     <ModalBody>
-                                        <p>Stai abbandonando la procedura di apertura conto. Cosa vuoi fare?</p>
+                                        <p>Stai <strong>abbandonando</strong> la procedura di apertura conto.<br/> {
+                                            /* Frase per stati non salvabili */
+                                            !(formfields.field_stato === "BOZZA" || formfields.field_stato === "BOZZA_VALIDATA" || formfields.field_stato === "ADEMPIMENTI_NORMATIVI" || formfields.field_stato === "ATTESA_FIRMA_CONSULENTE" ) &&
+                                            <>
+                                                Il mancato completamento riporterà la pratica all'ultimo stato salvato.
+                                            </>
+                                        } Cosa vuoi fare?</p>
                                         <div className="btn-console">
-                                            <div className="btn-console-left"><NavLink to="/"><Button>Esci senza salvare</Button></NavLink></div>
-                                            <div className="btn-console-right"><Button color="primary" onClick={() => formprops.obsave(false)}>Salva ed esci</Button></div>
+                                            <div className="btn-console-left"><Button color="secondary" onClick={()=>{this.props.formprops.setObState({modalEsci:false})}}>Annulla</Button></div>
+                                            <div className="btn-console-right">
+                                                <NavLink to="/"><Button color="primary">Esci <strong>senza salvare</strong></Button></NavLink>
+                                                {
+                                                    (formfields.field_stato === "BOZZA" || formfields.field_stato === "BOZZA_VALIDATA" || formfields.field_stato === "ADEMPIMENTI_NORMATIVI" || formfields.field_stato === "ATTESA_FIRMA_CONSULENTE" ) && 
+                                                    // Solo negli stati dove e' possibile
+                                                    <Button color="primary" onClick={() => formprops.obsave(false)}><strong>Salva</strong> ed esci</Button>
+                                                }
+                                                
+                                            </div>
                                         </div>
                                     </ModalBody>
                                 </Modal>
