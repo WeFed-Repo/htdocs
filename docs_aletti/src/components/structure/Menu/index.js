@@ -46,87 +46,58 @@ class Menu extends Component {
 
     render() {
         return (
-            <nav className={ "menu " + ((this.state.isMenuOpened) ? "opened" : "") }>
-                <div className='menu-button'><i className="icon icon-2x icon-arrow_right_filled"
-                                                onClick={ this.toggleMenu }/></div>
-                <Nav vertical className={ "menu-list" + ((this.props.hiddenMode) ? " hiddenmode" : "") }
-                     onClick={ this.closeMenu }>
-                    <NavItem  title="Dashboard">
-                        <NavLink className='nav-link' activeClassName='active' to="/" exact><i
-                            className="icon icon-2x icon-grafico_torta_filled"/><span
-                            className='menu-name'>Cruscotto</span></NavLink>
+            <nav className={"menu " + ((this.state.isMenuOpened) ? "opened" : "")}>
+                <div className='menu-button'>
+                    <i className="icon icon-2x icon-arrow_right" onClick={this.toggleMenu} />
+                </div>
+                <Nav vertical className={"menu-list" + ((this.props.hiddenMode) ? " hiddenmode" : "")}
+                    onClick={this.closeMenu}>
+                    <NavItem title="Dashboard">
+                        <NavLink className='nav-link' activeClassName='active' to="/" exact><div className="dot dashboard"></div><span
+                                className='menu-name'>Cruscotto</span></NavLink>
                     </NavItem>
-                    <NavItem  title="Portafoglio clienti">
+                    <NavItem title="Portafoglio clienti">
                         <NavLink className='nav-link' activeClassName='active' to="/customerssearch"
-                                 onClick={ () => this.props.goToCustomersSearch({ categoria: "TUTTI" }) }><i
-                            className="icon icon-2x icon-r-famiglia"/><span
-                            className='menu-name'>Portafoglio clienti</span></NavLink>
+                            onClick={() => this.props.goToCustomersSearch({ categoria: "TUTTI" })}><div className="dot portafoglioclienti"></div><span
+                                    className='menu-name'>Portafoglio clienti</span></NavLink>
                     </NavItem>
-                    <NavItem style={ { display: "none" } }>
-                        <span className='nav-link disabled'><i className="icon icon-2x icon-big-movimenti"/><span
-                            className='menu-name'>Sit. portafoglio</span></span>
-                        <NavLink className='nav-link hidden' activeClassName='active' to="/commissioning"><i
-                            className="icon icon-2x icon-big-movimenti"/><span
-                            className='menu-name'>Sit. portafoglio</span></NavLink>
-                    </NavItem>
-                    {(window.localStorage["debugstate"] && window.localStorage["debugstate"]==="attivo") && <>
-                    <NavItem title="Onboarding">
-                        <NavLink className='nav-link' activeClassName='active' to="/onboarding">
-                            <i className="icon icon-2x icon-attualita_filled"/><span
-                            className='menu-name'>Onboarding</span>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem title="Gestione bozze">
-                        <NavLink className='nav-link' activeClassName='active' to="/gestionebozze">
-                            <i className="icon icon-2x icon-attach_filled"/><span className='menu-name'>Gestione bozze</span>
-                        </NavLink>
-                    </NavItem>
+                    {(window.localStorage["debugstate"] && window.localStorage["debugstate"] === "attivo") && <>
+                        <NavItem title="Onboarding">
+                            <NavLink className='nav-link' activeClassName='active' to="/onboarding">
+                            <div className="dot onboarding"></div><span
+                                    className='menu-name'>Onboarding</span>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem title="Gestione bozze">
+                            <NavLink className='nav-link' activeClassName='active' to="/gestionebozze">
+                            <div className="dot gestionebozze"></div><span className='menu-name'>Gestione bozze</span>
+                            </NavLink>
+                        </NavItem>
                     </>
                     }
-                    {/*
-                    <NavItem style={ { display: "none" } }>
-                        <NavLink className='nav-link' activeClassName='active' to="/onboarding/ricerca"><i
-                            className="icon icon-2x icon-attualita_filled"/><span
-                            className='menu-name'>Onboarding</span></NavLink>
-                        <NavLink className='nav-link sub-nav' activeClassName='active' to="/onboarding/ricerca"><i
-                            className="icon icon-arrow_right"/><span
-                            className='menu-name'>Ricerca richieste</span></NavLink>
-                        <NavLink className='nav-link sub-nav' activeClassName='active' to="/onboarding/inserimento"><i
-                            className="icon icon-arrow_right"/><span
-                            className='menu-name'>Inserisci nuova richiesta</span></NavLink>
-                    </NavItem>
-                     */}
-                    <NavItem style={ { display: "none" } }>
-                        <span className='nav-link disabled'><i className="icon icon-2x icon-document_table"/><span
-                            className='menu-name'>Gestione pratiche</span></span>
-                        <NavLink className='nav-link hidden' activeClassName='active' to="/documents"><i
-                            className="icon icon-2x icon-document_table"/><span
-                            className='menu-name'>Gestione pratiche</span></NavLink>
-                    </NavItem>
                     <NavItem title="Agenda">
-                        {/* <span className='nav-link disabled'><i className="icon icon-2x icon-book"/><span className='menu-name'>Agenda</span></span>*/ }
-                        <NavLink className='nav-link' activeClassName='active' to="/agenda"><i
-                            className="icon icon-2x icon-book"/><span className='menu-name'>Agenda</span></NavLink>
+                        {/* <span className='nav-link disabled'><i className="icon icon-2x icon-book"/><span className='menu-name'>Agenda</span></span>*/}
+                        <NavLink className='nav-link' activeClassName='active' to="/agenda"><div className="dot agenda"></div><span className='menu-name'>Agenda</span></NavLink>
                     </NavItem>
                     <NavItem title="Vai a R-Evolution">
-                        <a className='nav-link' href={"http://portale.intranet.servizi/portale/GestAppl.nsf/jumppageLCL?openform&appl=" + ((ambiente.isSviluppo)? "ALETTI_REV_COLL" : "ALETTI_REV")} target="_blank"
-                           rel="noopener noreferrer"><i className="icon icon-2x icon-scienza_filled"/><span
-                            className='menu-name'>Vai a R-Evolution</span></a>
+                        <a className='nav-link' href={"http://portale.intranet.servizi/portale/GestAppl.nsf/jumppageLCL?openform&appl=" + ((ambiente.isSviluppo) ? "ALETTI_REV_COLL" : "ALETTI_REV")} target="_blank"
+                            rel="noopener noreferrer"><div className="dot revolution"></div><span
+                                className='menu-name'>Vai a R-Evolution</span></a>
                     </NavItem>
                     <NavItem title="Vai a EuroVita">
                         <a className='nav-link' href="https://www.eurovita.it/" target="_blank"
-                              rel="noopener noreferrer"><i className="icon icon-2x icon-trading_mondo"/><span
-                            className='menu-name'>Vai a EuroVita</span></a>
+                            rel="noopener noreferrer"><div className="dot eurovita"></div><span
+                                className='menu-name'>Vai a EuroVita</span></a>
                     </NavItem>
                     <NavItem title="Vai a Market Connect">
                         <a className='nav-link' href="http://portale.intranet.servizi/portale/GestAppl.nsf/jumppageLCL?openform&appl=MCWEB_N" target="_blank"
-                              rel="noopener noreferrer"><i className="icon icon-2x icon-scheda_titolo"/><span
-                            className='menu-name'>Vai a Market Connect</span></a>
+                            rel="noopener noreferrer"><div className="dot marketconnect"></div><span
+                                className='menu-name'>Vai a Market Connect</span></a>
                     </NavItem>
                     <NavItem title="Vai a GESPRO">
                         <a className='nav-link' href="http://portalnew.intranet.servizi/portale/gestappl.nsf/jumppageLCL?OpenForm&APPL=AF007" target="_blank"
-                              rel="noopener noreferrer"><i className="icon icon-2x icon-scienza_filled"/><span
-                            className='menu-name'>Vai a Vai a GESPRO</span></a>
+                            rel="noopener noreferrer"><div className="dot gespro"></div><span
+                                className='menu-name'>Vai a Vai a GESPRO</span></a>
                     </NavItem>
                 </Nav>
             </nav>

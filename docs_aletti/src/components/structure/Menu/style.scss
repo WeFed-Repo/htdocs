@@ -9,6 +9,56 @@
     height: 100%;
     overflow: hidden;
     transition-duration: 250ms;
+
+    .menu-button {
+
+        .default & {
+            width: 50px;
+            background-color: #33649c !important;
+            height: 50px;
+            top: 20px;
+            text-align: center;
+            vertical-align: middle;
+            padding:10px 0;
+            margin: 15px;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+
+    .nav-link {
+        position:relative;
+        opacity:0.6;
+        &:hover,&:active, &.active {
+            opacity:1 !important;
+        }
+        
+    }
+
+    .dot {display:block;
+    width:50px;
+    position:absolute;
+    left:14px;
+    height:50px;
+    top:7px;
+    cursor:pointer;
+    border-radius:50%;
+    background-color: #33649c !important;
+    background-size:cover !important;
+    background-position: center center;
+
+        &.dashboard {background-image:url("/img/menu_dashboard.png")};
+        &.agenda {background-image:url("/img/menu_agenda.png")};
+        &.gestionebozze {background-image: url("/img/menu_gestionebozze.png")};
+        &.onboarding {background-image: url("/img/menu_onboarding.png")};
+        &.portafoglioclienti {background-image: url("/img/menu_portafoglioclienti.png")};
+        &.revolution {background-image: url("/img/menu_revolution.png")};
+        &.marketconnect {background-image: url("/img/menu_marketconnect.png")};
+        &.eurovita {background-image: url("/img/menu_eurovita.png")};
+        &.gespro {background-image: url("/img/menu_gespro.png")};
+
+    }
+
     &.opened {
         width: 250px;
         .menu-button .icon {
@@ -16,6 +66,7 @@
         }
 
         .nav-link {
+
             .menu-name {
                 visibility: visible;
             }
@@ -58,7 +109,7 @@
 
         .menu-name {
             visibility: hidden;
-            padding-left: 16px;
+            padding-left: 56px;
             vertical-align: top;
         }
 
@@ -74,6 +125,7 @@
             overflow: hidden;
             transition-duration: 250ms;
         }
+        
     }
 }
 /* MODALITA' NASCOSTA */
