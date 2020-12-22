@@ -8384,6 +8384,10 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     display: table;
     width: 100%;
 }
+/* fix per accordion*/
+.display-table.ui-accordion-content-active {
+    display: table!important
+}
 .display-row {
     display:table-row; 
 }
