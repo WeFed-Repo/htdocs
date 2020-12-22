@@ -13,16 +13,18 @@
       <div class="modal-body">
       <script type="text/javascript">
         <!-- solo quando apro l'overlayer si fa la chiimata alla jsp -->
-        $("#modaleCallMeBack").on('shown.bs.modal',function(){
-          var today = new Date();
-          var now =  today.getHours().toString() + ":" + today.getMinutes().toString();
-          $(this).find( ".modal-body" ).addClass("loading");
-          var getCallBackTpl = $.post( "/template/call_me_back.php", { time: now }, function( data ) {
-             $( ".modal-body" ).removeClass("loading").html(data);
-  			  });
+       
+        $("#modaleCallMeBack").on('show.bs.modal',function(){
+          var today = new Date(),
+              thisModal = $(this),
+              thisModalBody = thisModal.find( ".modal-body"),
+              now = today.getHours().toString() + ":" + today.getMinutes().toString();
+              thisModalBody.empty().addClass("loading");
+              var getCallBackTpl = $.post( "/template/call_me_back.php", { time: now }, function( data ) {
+                thisModalBody.removeClass("loading").html(data);
+              });
         })
-	  	 	
-	 	  </script>
+        </script>
       </div>
      </div>
 	</div>

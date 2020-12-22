@@ -5012,7 +5012,7 @@ label.textWrapper .btn-icon .icon {
     font-family: 'icomoon', serif;
     content: "\e966";
     font-size: 20px;
-    line-height: 16px;
+    line-height: 18px;
     text-indent: -2px;
   }
   .formGenerico .radio label.textWrapper .text,
@@ -12592,6 +12592,12 @@ body.webview .hidePrint {
   font-size: 0.93em;
   text-decoration: underline;
   font-weight: 300;
+}
+#cardResults .carta#card_cartaNexi span {
+  text-transform: lowercase;
+}
+#cardResults .carta#card_cartaNexi span::first-line {
+  text-transform: capitalize;
 }
 #noCardSelected {
   text-align: center;

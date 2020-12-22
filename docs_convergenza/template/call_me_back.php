@@ -35,130 +35,143 @@
          display:none
       }
       .selected .btn-dispo {
-         display: inline-block;
-         line-height:14px;
+        line-height:14px;
       }
       .selected .text-dispo{
          display:none
+      }
+      .step-cmb {
+         display:none;
       }
 </style>
 
 <!--recupero l'orario passato dall'overlayer per chiamare i servizi in base all'ora -->
 <?php
  $time = $_POST['time'];
- //print $time;
-
 ?>
 <script type="text/javascript">
-   
-   dati_call = {
-     "esito":"ok",
-     "fasce_orario_dispo": [
-         {
-            "orario" : "ora",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "11.00-12.00",
-            "is-dispo" : "true",
-            "ndispo": 3
-         },
-         {
-            "orario" : "12.00-13.00",
-            "is-dispo" : "true",
-            "ndispo": 3
-         },
-         {
-            "orario" : "12.00-13.00",
-            "is-dispo" : "true",
-            "ndispo": 3
-         },
-         {
-            "orario" : "13.00-14.00",
-            "is-dispo" : "false",
-            "ndispo": 0
-         },
-         {
-            "orario" : "14.00-15.00",
-            "is-dispo" : "true",
-            "ndispo": 3
-         },
-         {
-            "orario" : "15.00-16.00",
-            "is-dispo" : "false",
-            "ndispo": 0
-         },
-         {
-            "orario" : "16.00-17.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "17.00-18.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "17.00-18.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "18.00-19.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "19.00-20.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "20.00-21.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         },
-         {
-            "orario" : "21.00-22.00",
-            "is-dispo" : "true",
-            "ndispo": 10
-         }
-        
-     ],
-     "arg" :[
-        "argomento uno",
-        "argomento due"
-     ]
-   }
-   //leggo il json di dati degli orari disponibili che mi torna il servizio e costruisco dinamicamente i blocchi di orario
-   var orariDispoWrapper = $("#orariDispoWrapper"),
-       nOr = dati_call.fasce_orario_dispo;
-   
-       //costruzione dell'html per accogliere i dati che provengono dal servizio
-   $.each(nOr,function(i,v){
-      var classDis = v.ndispo === 0 ? "disabled" : "";
-       $(orariDispoWrapper).append('<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + v.orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>' + '<button class="btn-dispo">Prenota</button>' + '</div>')
-   })
-   $(orariDispoWrapper).append('<input name="orarioSel" type="hidden" value=></input>')
+   //chiamata a servizio per restituire gli orari disponibili
+   var dispoUrl = "/include/ajax/cmb_json.php?rand=" + Math.random(),
+       orariDispoWrapper = $("#orariDispoWrapper"),
+       argWrapper =  $("#argWrapper");
+       
+   $.ajax({
+		url: dispoUrl,
+		method: "post",
+		data: {
+			time: $('input[name="time"]').val()
+		},
+		dataType: "json",
+		success: function(data) {
+         var dati_call = data,
+            nOr = dati_call.fasce_orario_dispo,
+            arg=  dati_call.arg;
+            //leggo il json di dati degli orari disponibili che mi torna il servizio e costruisco dinamicamente i blocchi di orario
+            //costruzione dell'html per accogliere i dati che provengono dal servizio per lo step 1
+            $.each(nOr,function(i,v){
+               var classDis = v.ndispo === 0 ? "disabled" : "";
+               $(orariDispoWrapper).append('<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + v.orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>' + '<button class="btn-dispo">Seleziona</button>' + '</div>')
+            })
+            $(orariDispoWrapper).append('<input id="orarioSel" name="orarioSel" type="hidden" val=""></input>');
+            $('.step-cmb').eq(0).show();
+            //call back sul singolo elemento selezionato
+             var  btnSel = $(".orari-select:not(.disabled)"),
+                  orarioSelVal = $("input[name='orarioSel']").val(),
+                  setNextStepVisible = function(el) {
+                        $(el).hide();
+                        $(el).next('.step-cmb').show();
+                  }
+                  btnSel.on("click", function(event){
+                     el = $(this);
+                     if(el.hasClass("selected"))
+                     {
+                        return false
+                     }
+                     else {
+                        btnSel.removeClass("selected").find(".btn-dispo").hide();
+                        el.addClass("selected").find(".btn-dispo").show(300);
+                        orarioSelVal = el.find(".text-time").text();
+                     }
+                  })
+                  //step 2: costruzione dell'html per accogliere i dati che provengono dal servizio
+                  $(".btn-dispo").on("click",function(){
+                     $.each(arg,function(i,v){
+                        $(argWrapper).append ('<div class="radio inline"><label class="textWrapper"><input type="radio" name="arg"><span class="text"> ' + v + '</span></label></div>')
+                     })
+                     setNextStepVisible('#step-prenota');
+                  })
+                  //step3: riepilogo
+                     $("#btn-conferma").on("click",function(){
+                        setNextStepVisible('#step-argomento');
+                        var msgTime = orarioSelVal === "ora" ? "«Chiamami ora!»." : "l'orario " + orarioSelVal;
+                        $(".selected-time").html(msgTime);
+                     })
 
-   //call back sul singolo elemento selezionato
-   var btnSel = $(".orari-select:not(.disabled)");
-   btnSel.on("click", function(){
-      el = $(this);
-      btnSel.removeClass("selected");
-      el.addClass("selected");
-      $("input[name='orarioSel']").val(el.find(".text-time").text());
-   })    
+                     //step4:conferma
+                     $("#btn-prenota").on("click",function(){
+                        setNextStepVisible('#step-riepilogo');
+                     
+                     })
+              }
+   })
+   
+   
+   
+       
+
+   
+
+   
+
+   
+
 </script>
 
 <!-- step 1: scelta della fascia oraria-->
-<section id="prenotaStep1">
-   <h4 class="align-center">Vuoi parlare con un nostro operatore oggi? <br>
-   Indicaci a che ora, ti chiamiamo noi.</h4>
-   <div id="orariDispoWrapper"></div>
-   <div class="text-footer">
-      <p>Il servizio &egrave; disponibile dal luned&igrave; al venerd&igrave; XX - XX e il sabato XX – XX.
-      Sono esclusi i giorni festivi. </p>
-   </div>
-</section>
+<form class="formGenerico" action="">
+   <?php print '<input type="hidden" name="time" value="' . $time . '"/>' ?>
+  
+   
+   <section id="step-prenota" class="step-cmb">
+      <h4 class="align-center">Vuoi parlare con un nostro operatore oggi? <br>
+      Indicaci a che ora, ti chiamiamo noi.</h4>
+      <div id="orariDispoWrapper"></div>
+      <div class="text-footer">
+         <p>Il servizio &egrave; disponibile dal luned&igrave; al venerd&igrave; XX - XX e il sabato XX – XX.
+         Sono esclusi i giorni festivi. </p>
+      </div>
+   </section>
+   <section id="step-argomento" class="step-cmb">
+      <h4 class="align-center">Per quale argomento vuoi essere ricontattato?</h4>
+      <div id="argWrapper"></div>
+      <div class="btn-align-right">
+          <div>
+            <a type="button" id="btn-conferma" class="btn btn-primary">prosegui</a>
+          </div>
+      </div>
+   </section>
+   <section id="step-riepilogo" class="step-cmb">
+      <p>Nome_Cliente, hai selezionato <span class="selected-time"></span><p>
+      <p>Un nostro operatore ti contatter&agrave; nella fascia oraria stabilita.</p>
+      <p class="noMargin">Il numero da cui riceverai la chiamata &egrave; il: <br>
+      +39 xxx xxx xxx <br> </p>
+      <ul class="note">
+        <li>Effettueremo un massimo di 3 tentativi</li>
+        <li>La chiamata sar&agrave; soggetta a registrazione</li>
+      </ul>
+      <p>Ti chiameremo al seguente numero: <br>
+      numero_cliente_cert. <br>
+      <span class="note">(Questo &egrave; il tuo numero certificato, se  &grave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</span>
+      </p>
+      <p>Per confermare la prenotazione clicca su «prenota».</p>
+       <div class="btn-align-right">
+          <div>
+            <a type="button" id="btn-prenota" class="btn btn-primary">prenota</a>
+          </div>
+      </div>
+   </section>
+   <section id="step-conferma" class="step-cmb">
+      <p>OK<p>
+      
+   </section>
+</form>
