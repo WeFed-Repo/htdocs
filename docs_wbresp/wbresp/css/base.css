@@ -3139,3 +3139,43 @@ ul.normal-format {font-size: 14px;margin:0;padding:0 0 0 20px;}
 ul.normal-format li {margin-bottom:10px;}
 
 .break-word {word-wrap: break-word }
+
+/* Fascione cookies */
+.cookie-banner {position: fixed;
+    bottom: 0;
+    display: block;
+    left: 0;
+    color: #ddd;
+    width: 100%;
+    background: #000; 
+    z-index:99;
+}
+.cookie-banner .wrapper {
+    max-width:1360px;
+    margin:0 auto;
+    padding: 15px;
+    position:relative;
+}
+
+.cookie-banner .cookie-console {
+    display:block;
+    width:100%;
+    text-align:right;
+}
+
+.cookie-banner .cookie-console button {
+    width:auto;
+    border:solid 2px #8ab10b;
+    border-radius:20px;
+    padding:8px 20px;
+    background:transparent;
+    color:#fff;
+    margin:0 0 0 10px;
+    display:inline-block;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.cookie-banner .cookie-console button.evidente {
+    background-color:#8ab10b
+}

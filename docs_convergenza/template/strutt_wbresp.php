@@ -211,5 +211,9 @@
 	<script src="/wbresp/js/aol/aol.js"></script>
 	<?php endif; ?>
 
+	<!-- Cookie bar -->
+	<script src="/wbresp/js/cookiebar.js"></script>
+	<!-- Cookie bar -->
+
     </body>
 </html>
