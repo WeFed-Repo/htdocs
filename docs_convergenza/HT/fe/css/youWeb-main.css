@@ -8511,7 +8511,11 @@ p.note {font-size:12px; font-weight:300;}
 	text-transform:uppercase;padding:5px 15px; border-radius:20px;  font-weight: bold;
 	background-color:#008D79; color: #fff;border:solid 2px #008D79;
 }
+.cookie-banner .cookie-console button:hover {
+	background-color: #007c66; border-color:#007c66;
+}
 .cookie-banner .cookie-console button.evidente {
 	background-color:#fff; color: #008D79;border:solid 2px #fff;
 }
+.cookie-banner .cookie-console button.evidente:hover {background-color:#ddd; border-color:#ddd}
 /* FINE COOKIEBAR 2021 */
