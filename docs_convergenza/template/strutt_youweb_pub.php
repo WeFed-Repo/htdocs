@@ -65,5 +65,6 @@ else
 	
 
 	</div>
+	<script type="text/javascript" src="/HT/fe/js/script/cookiebar.js"></script>
 </body>
 </html>

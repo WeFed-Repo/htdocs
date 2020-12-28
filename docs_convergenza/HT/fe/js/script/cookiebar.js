@@ -1,4 +1,4 @@
-var ckdomain = "webank.it";
+var ckdomain = "bancobpm.it";
 var ckfun = {
 
     read (label) {
@@ -38,7 +38,7 @@ $(function(){
     if(typeof ckfun.read("consent_mktg") === "undefined") {
         
         // Link della pagina di configurazione
-        var ckconfigurl = "######";        
+        var ckconfigurl = "https://www.bancobpm.it/cookie-policy"        
         
         var cookiebanner = $("<div>").attr("id","cookie_banner").addClass("cookie-banner");
         var cookiebtnpersonalizza = $("<button>").html("Personalizza").on("click",function(){location.href=ckconfigurl});

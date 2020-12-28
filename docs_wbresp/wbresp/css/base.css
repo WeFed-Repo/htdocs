@@ -3145,21 +3145,29 @@ ul.normal-format li {margin-bottom:10px;}
     bottom: 0;
     display: block;
     left: 0;
-    color: #ddd;
+    color:#fff;
+    background-color: #333;
+    z-index: 9999;
+    border-top: solid 2px #555;
     width: 100%;
-    background: #000; 
     z-index:99;
 }
 .cookie-banner .wrapper {
-    max-width:1360px;
+    max-width:1170px;
     margin:0 auto;
-    padding: 15px;
+    align-items:center;
+    padding: 15px 15px 0;
     position:relative;
+}
+
+.cookie-banner .cookie-text {
+    display:block;
+    text-align:left;
+    padding-bottom:10px;
 }
 
 .cookie-banner .cookie-console {
     display:block;
-    width:100%;
     text-align:right;
 }
 
@@ -3168,14 +3176,25 @@ ul.normal-format li {margin-bottom:10px;}
     border:solid 2px #8ab10b;
     border-radius:20px;
     padding:8px 20px;
-    background:transparent;
-    color:#fff;
-    margin:0 0 0 10px;
+    background:#fff;
+    color:#8ab10b;
+    margin:0 0 15px 15px;
     display:inline-block;
     font-weight:bold;
     text-transform:uppercase;
 }
+.cookie-banner .cookie-console button:hover {
+    border-color:#000;
+    color:#000;
+}
 
 .cookie-banner .cookie-console button.evidente {
-    background-color:#8ab10b
+    background-color:#8ab10b;
+    color:#fff;
+}
+
+.cookie-banner .cookie-console button.evidente:hover {
+    color: #8ab10b;
+    background-color:#222;
+    border-color:#222
 }

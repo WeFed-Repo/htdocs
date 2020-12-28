@@ -8486,3 +8486,32 @@ p.note {font-size:12px; font-weight:300;}
 .widget-sintesi-chart-wrapper {
 	max-width: 325px;
 }
+
+/* COOKIEBAR 2021 */
+.cookie-banner {
+    background-color: #122e5c;
+    position: fixed;
+    z-index: 10;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+.cookie-banner .wrapper {
+	width:100%;
+	display:block;
+	max-width:1680px;
+	margin:0 auto;
+	padding:10px;
+}
+
+.cookie-banner p {margin-bottom:15px;}
+
+.cookie-banner .cookie-console { width:100%;clear:both; text-align:right;}
+.cookie-banner .cookie-console button {padding: 5px;margin: 0 0 10px 10px;display:inline-block;
+	text-transform:uppercase;padding:5px 15px; border-radius:20px;  font-weight: bold;
+	background-color:#008D79; color: #fff;border:solid 2px #008D79;
+}
+.cookie-banner .cookie-console button.evidente {
+	background-color:#fff; color: #008D79;border:solid 2px #fff;
+}
+/* FINE COOKIEBAR 2021 */
