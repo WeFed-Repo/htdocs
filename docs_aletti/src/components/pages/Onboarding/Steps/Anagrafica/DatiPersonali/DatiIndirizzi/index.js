@@ -126,7 +126,7 @@ class DatiIndirizzi extends Component {
                                 </Col>
                                 <Col xs="2">
                                     <Form.input
-                                        label="Cap cai*"
+                                        label="Cap*"
                                         name={this.props.anagraficaIntestatario + "cap" + tpyeIndirizzo}
                                         value={this.props.formstate[this.props.anagraficaIntestatario + "cap" + tpyeIndirizzo]}
                                         error={this.props.formstate.errors[this.props.anagraficaIntestatario + "cap" + tpyeIndirizzo]}

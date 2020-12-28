@@ -59,7 +59,7 @@ class Adever extends Component {
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"]}
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"]}
                                 onChange={obchange}
-                                options={[{ "value": "true", "text": "Dichiaro di essere titolare effettivo del conto e di agire esclusivamente per conto mio." }]}
+                                options={[{ "value": "true", "text": "Il cliente dichiara di essere titolare effettivo del conto e di agire esclusivamente per conto proprio." }]}
                                 output={isOutput}
                                 help="titEffettivo"
                             ></Form.checkgroup>
@@ -101,7 +101,7 @@ class Adever extends Component {
                     <Row>
                         <Col sm="6">
                             <Form.radiogroup
-                                label="Sei una persona politicamente esposta?"
+                                label="Il cliente e' una persona politicamente esposta?"
                                 name={"field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"}
                                 value={formstate["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}
                                 error={formstate.errors["field_sessionfirmeblob_intestatarifirme_" + int + "_personaesposta"]}

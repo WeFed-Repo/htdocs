@@ -140,7 +140,36 @@ const helpBody =  {
     "14_numero" : <div className="doc-img"><img src="/img/14-numero.gif" alt="Numero patente rinnovata"/></div>,
     "14_dataRinnovo" : <div className="doc-img"><img src="/img/14-rilascio.gif" alt="Data di rilascio patente rinnovata"/></div>,
     "14_dataScadenza" : <div className="doc-img"><img src="/img/14-scadenza.gif" alt="Data di scadenza patente rinnovata"/></div>,
-    "polEsp": "",
+    "polEsp": <div>
+        <strong>PERSONA POLITICAMENTE ESPOSTA</strong><br />
+        Art. 1 comma 2 lettera dd) del D.lgs. 231/2007 e s.m.i.<br />
+        dd) persone politicamente esposte: le persone fisiche che occupano o hanno cessato di occupare da meno di un anno importanti cariche pubbliche, nonchè i loro familiari e coloro che con i predetti soggetti intrattengono notoriamente stretti legami, come di seguito elencate:<br />
+        <ul>
+            <li>sono persone fisiche che occupano o hanno occupato importanti cariche pubbliche coloro che ricoprono o hanno ricoperto(*) la carica di:
+                <ul>
+                    <li>Presidente della Repubblica, Presidente del Consiglio, Ministro, Vice-Ministro e Sottosegretario, Presidente di Regione, assessore regionale, Sindaco di capoluogo di provincia o città metropolitana, Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonchè cariche analoghe in Stati esteri;</li>
+                    <li>deputato, senatore, parlamentare europeo, consigliere regionale nonchè cariche analoghe in Stati esteri;</li>
+                    <li>membro degli organi direttivi centrali di partiti politici;</li>
+                    <li>giudice della Corte Costituzionale, magistrato della Corte di Cassazione o della Corte dei conti, consigliere di Stato e altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonchè cariche analoghe in Stati esteri;</li>
+                    <li>membro degli organi direttivi delle banche centrali e delle autorità indipendenti;</li>
+                    <li>ambasciatore, incaricato d'affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri;</li>
+                    <li>componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti;</li>
+                    <li>direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale;</li>
+                    <li>direttore, vicedirettore e membro dell'organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali.</li>
+                </ul>    
+            </li>    
+            <li>Sono familiari di persone politicamente esposte: i genitori, il coniuge o la persona legata in unione civile o convivenza di fatto o istituti assimilabili alla persona politicamente esposta, i figli e i loro coniugi nonchè le persone legate ai figli in unione civile o convivenza di fatto o istituti assimilabili;</li>
+            <li>Sono soggetti con i quali le persone politicamente esposte intrattengono notoriamente stretti legami:
+                <ul>
+                    <li>le persone fisiche legate alla persona politicamente esposta per via della titolarità effettiva congiunta di enti giuridici o di altro stretto rapporto di affari;</li>
+                    <li>le persone fisiche che detengono solo formalmente il controllo totalitario di un'entità notoriamente costituita, di fatto, nell'interesse e a beneficio di una persona politicamente esposta;</li>
+                </ul>
+            </li>
+        </ul>
+        (*) Il gruppo BANCO BPM estende prudenzialmente la definizione di persone politicamente esposte alle persone fisiche che occupano o hanno cessato di occupare cariche pubbliche da meno di tre anni, applicando in coerenza le relative previsioni normative.<br />
+        Art. 24 comma 6 del D.lgs. 231/2007 e s.m.i.<br />
+        6. I soggetti obbligati, in presenza di un elevato rischio di riciclaggio o di finanziamento del terrorismo applicano misure di adeguata verifica rafforzata di clienti che, originariamente individuati come persone politicamente esposte, abbiano cessato di rivestire le relative cariche pubbliche da più di un anno. La medesima disposizione si applica anche nelle ipotesi in cui il beneficiario della prestazione assicurativa o il titolare effettivo del beneficiario siano state persone politicamente esposte.
+    </div>,
     "titEffettivo": ""
 
 }
