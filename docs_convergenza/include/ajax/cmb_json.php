@@ -2,9 +2,13 @@
    header("content-type: application/json; charset=utf-8");
    $orarioSel = $_POST['orarioSel'];
    $alreadyBooked = $_POST['isAlreadyBooked'];
+   $annullaFlag = $_POST['annullaFlag'];
+   $disservizioFlag = $_POST['disservizioFlag'];
+   $fuoriOrario = $_POST['fuoriOrario'];
+   $nCellulareCert = $_POST['nCellulareCert'];
 ?>
 <?php //se non ho prenotazioni in corso e non ho ancora scelto l'orario torna i dati per costruire il form di scelta ?>
-<?php if  ($alreadyBooked === 'false' && $orarioSel === "") { ?>
+   <?php if  ($nCellulareCert !=="" && $alreadyBooked === 'false' &&  $orarioSel === "" && $annullaFlag=== 'false' && $disservizioFlag === "false" && $fuoriOrario !=="true") { ?>
       {
          "esito":"ok",
          "stato" : "disponibile",
@@ -90,9 +94,9 @@
       }
       <?php
       }
-      ?>
+   ?>
    <?php //se non ho prenotazioni in corso e ho scelto l'orario torna i dati per la conferma della scelta ?>
-   <?php if  ($alreadyBooked === 'false' && $orarioSel !== "") { ?>
+   <?php if  ($nCellulareCert!=="" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
       {
          "esito":"ok",
          "stato" : "prenotato",
@@ -105,13 +109,53 @@
    ?>
    
    <?php //se ho prenotazioni in corso torna i dati relativi alla prenotazione attuale ?>
-   <?php if  ($alreadyBooked === "true") { ?>
+   <?php if  ($nCellulareCert!=="" && $alreadyBooked === "true" && $annullaFlag === 'false') { ?>
       {
          "esito":"ok",
          "stato" : "occupato",
          "orarioSel":"<?php print $orarioSel ?>",
          "isAlreadyBooked": "true"
       }
+      <?php
+      }
+   ?>
+   <?php //se chiedo di annullare ?>
+   <?php if  ($annullaFlag === "true") { ?>
+      {
+         "esito":"ok",
+         "stato" : "annullato",
+         "orarioSel":"<?php print $orarioSel ?>",
+         "isAlreadyBooked": "false"
+      }
+      <?php
+      }
+   ?>
+
+<?php //se c'è un disservizio tecnico ?>
+   <?php if  ($nCellulareCert!=="" && $disservizioFlag === 'true' && $alreadyBooked === 'false' ) { ?>
+      {
+         "esito":"ok",
+         "stato" : "disservizio"
+       }
+      <?php
+      }
+   ?>
+<?php //fuori orario ?>
+   <?php if  ($nCellulareCert!=="" && $fuoriOrario === 'true') { ?>
+      {
+         "esito":"ok",
+         "stato" : "fuoriOrario"
+       }
+      <?php
+      }
+   ?>
+
+<?php //se numero non certificato ?>
+   <?php if  ($nCellulareCert==="") { ?>
+      {
+         "esito":"ok",
+         "stato" : "nonCertificato"
+       }
       <?php
       }
    ?>

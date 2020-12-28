@@ -5,16 +5,24 @@ Qui si assume che lo sia
  -->
 <?php
    $nameCliente= "Mario Rossi";
-   $nCellulareCert = "33379320390";
+   $nCellulareCert = "3476532233";
+   
 ?>
 <form id="hiddenInput" class="formGenerico" action="">
   <?php print '<input type="hidden" name="nameCliente" value="' . $nameCliente . '"/>' ?>
   <?php print '<input type="hidden" name="nCellulareCert" value="' . $nCellulareCert . '"/>' ?>
-  <input id="orarioSel" name="orarioSel" type="hidden" val=""></input>
+
+   <!--QUESTE INFORMAZIONI: GIA' PRENOTATO; ORARIO SEZIONATO, DISSERVIZIO TECNICO; FUORI ORARIO SI HANNO FIN DA SUBITO? -->
+  <?php print '<input type="hidden" name="isAlreadyBooked" value=""/>' ?>
+  <?php print '<input type="hidden" name="orarioSel" value=""/>' ?>
+  <?php print '<input type="hidden" name="disservizioFlag" value=""/>' ?>
+  <?php print '<input type="hidden" name="fuoriOrario" value=""/>' ?>
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
 <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb" title="Servizio clienti">CMB</a>
 <a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb-ok" title="Servizio clienti">CMB già prenotato</a>
+<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb-ko" title="Servizio clienti">CMB con disservizio</a>
+
 <!-- Modale da mettere in pagina in cui includere la pagina html -->
 
 <div id="modaleCallMeBack" class="modal fade" role="dialog">
@@ -35,12 +43,36 @@ Qui si assume che lo sia
               }
             return i;
         }
+        
+        
+        
+        var setStatoPrenotazione = function() {
+          var isAlreadyBookedVal = $('input[name="isAlreadyBooked"]').val(),
+              orarioSelVal =  $('input[name="orarioSel"]').val(),
+              disservizioFlagVal =  $('input[name="disservizioFlag"]').val()
+             
+          if(isAlreadyBookedVal === "true") {
+            $(".icon-cmb,.icon-cmb-ko").hide();
+            $(".icon-cmb-ok").show();
+          }
+          else if( disservizioFlagVal === "true" && isAlreadyBookedVal !== "true") {
+            $(".icon-cmb,.icon-cmb-ok").hide();
+            $(".icon-cmb-ko").show();
+          }
+          
+          else {
+              $(".icon-cmb").show();
+              $(".icon-cmb-ok,.icon-cmb-ko").hide();
+          }
+        }
         $("#modaleCallMeBack").on('show.bs.modal',function(){
           var today = new Date(),
               thisModal = $(this),
               thisModalBody = thisModal.find( ".modal-body"),
               nameCliente = $('input[name="nameCliente"]').val(),
               nCellulareCert = $('input[name="nCellulareCert"]').val(),
+              isAlreadyBooked = $('input[name="isAlreadyBooked"]').val(),
+              orarioSel = $('input[name="orarioSel"]').val(),
               timeNow = formatHourMin(today.getHours()) + ":" + formatHourMin(today.getMinutes());
               
 			        
@@ -58,9 +90,9 @@ Qui si assume che lo sia
               
         })
         $("#modaleCallMeBack").on('hidden.bs.modal',function(){
-           
            isModalOpened = false;
         })
+        setStatoPrenotazione();
         </script>
       </div>
      </div>
