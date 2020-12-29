@@ -580,6 +580,15 @@
 	<script src="/wbresp/js/cookiebar.js"></script>
 	<!-- Cookie bar -->
 
+	<!--- SOLO PER LIBRERIE -->
+	<script>
+	/// SOLO PER LIBRERIE
+	ckdomain =  location.hostname;    
+    /// FINE SOLO PER LIBRERIE
+	</script>
+	<!--- FINE SOLO PER LIBRERIE -->
+
+
 
 </body>
 </html>

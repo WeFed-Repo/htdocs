@@ -4,10 +4,6 @@
 var consent_mktg, consent_glassbox; 
 $(function(){
 
-    /// SOLO PER LIBRERIE
-    ckdomain =  location.hostname;    
-    /// FINE SOLO PER LIBRERIE
-
     // Inizializzazione dei campi
     consent_mktg = $("input[name=consent_mktg]");
     consent_glassbox = $("input[name=consent_glassbox]");
