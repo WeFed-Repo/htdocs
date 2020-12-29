@@ -110,9 +110,9 @@ class DatiPersonali extends Component {
                 if (/^(01|11|12)$/.test(documentTypeSelected)) {
                     this.scadenzaDocPre = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
                 }
-                 //SE E' PATENTE IL LIMITE DA CUI PARTE E' DUE GIORNI DOPO OGGI
+                 //SE E' PATENTE IL LIMITE DA CUI PARTE E' UN GIORN0 DOPO OGGI
                  if (/^(02|13|14)$/.test(documentTypeSelected)) {
-                    this.scadenzaDocPre = moment(this.today, 'DD/MM/YYYY').add(2, "day").format('DD/MM/YYYY');
+                    this.scadenzaDocPre = moment(this.today, 'DD/MM/YYYY').add(1, "day").format('DD/MM/YYYY');
                 }
             }
             if (dateType === "dateTo") {
