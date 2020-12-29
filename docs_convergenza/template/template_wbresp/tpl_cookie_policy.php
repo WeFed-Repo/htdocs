@@ -1,3 +1,55 @@
+<!-- AUTOMAZIONI -->
+<script type="text/javascript">
+// Variabili con i valori dei campi
+var consent_mktg, consent_glassbox; 
+$(function(){
+
+    /// SOLO PER LIBRERIE
+    ckdomain =  location.hostname;    
+    /// FINE SOLO PER LIBRERIE
+
+    // Inizializzazione dei campi
+    consent_mktg = $("input[name=consent_mktg]");
+    consent_glassbox = $("input[name=consent_glassbox]");
+
+    // Funzione accetta/rifiuta tutto
+    consentCookies = function(par){
+        consent_mktg.attr("checked",false);
+        consent_glassbox.attr("checked",false);
+
+        $("#consent_mktg_"+par).trigger("click");
+        $("#consent_glassbox_"+par).trigger("click");
+    }
+
+    // Rifiuta tutto
+    $("#cookieRifiuta").on("click",function(){
+        consentCookies("no");
+    });
+
+    // Accetta tutto
+    $("#cookieAccetta").on("click",function(){
+        consentCookies("yes");
+    });
+
+    // Salva le impostazioni
+    $(".cookieSalva").on("click",function(){
+        var c_mktg = consent_mktg.filter(":checked").val(),
+            c_glassbox = consent_glassbox.filter(":checked").val();
+
+        if (typeof ckfun !== "undefined") {
+            ckfun.write("consent_mktg", (c_mktg==="yes").toString());
+            ckfun.write("consent_glassbox", (c_mktg==="yes").toString());
+        }    
+
+        // Pagina di reindirizzamento
+        location.href = "####"
+        
+    });
+
+});
+</script>
+
+<!-- FINE AUTOMAZIONI -->
 <div class="sectionTitle">
 	<div class="container">
 		<!-- Example row of columns -->
@@ -5,11 +57,9 @@
 			<div class="col-sm-6 col-xs-6">
 				<h1>Cookie policy</h1>
 			</div>
-
 			<div class="col-sm-6 col-xs-6">
 				<a href="#" class="btn-white btn-arrow">Apri conto <span class="hidden-xs">Webank</span></a>
 			</div>
-
 		</div>
 	</div>
 	<!-- /container -->
@@ -54,9 +104,9 @@
                                             <h2>Cookie policy</h2>
                                             <p>Utilizziamo cookie e tecnologie simili, anche di terze parti autorizzate, per offrirti una migliore esperienza d'uso e navigazione del sito cercando di mettere a disposizione i contenuti realizzati secondo i tuoi interessi, preferenze, percorsi di navigazione . Da questa pagina puoi approfondire tutte le tipologie di cookies che utilizziamo, esprimere le tue preferenze di consenso e modificarle in qualsiasi momento.</p>
                                             <div class="btn-multi">
-                                                <button class="btn-whlit">Rifiuta tutto</button>
-                                                <button class="btn-grlit">Accetta tutto</button>
-                                                <button class="btn-grlit">Salva le impostazioni</button>
+                                                <button class="btn-whlit" id="cookieRifiuta">Rifiuta tutto</button>
+                                                <button class="btn-grlit" id="cookieAccetta">Accetta tutto</button>
+                                                <button class="btn-grlit cookieSalva">Salva le impostazioni</button>
                                             </div>
                                         </section>
                                         <section>
@@ -145,7 +195,7 @@
                                     
                                             <div class="row">
                                                 <div class="col-xs-12">
-                                                    <button class="btn-grlit btn-auto fright">Salva le impostazioni</button>
+                                                    <button class="btn-grlit btn-auto fright cookieSalva">Salva le impostazioni</button>
                                                 </div>
                                             </div>
                                         </section>

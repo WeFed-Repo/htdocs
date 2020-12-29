@@ -840,7 +840,7 @@ $(function () {
     /* Carica widgets*/
     loadWidget();
     /* Check cokies */
-    $.getScript("/wbresp/js/checkCookie.js");
+    // $.getScript("/wbresp/js/checkCookie.js");
     //modal apertura su mobile
     setModalMobile();
     // Apertura login su variabile in GET

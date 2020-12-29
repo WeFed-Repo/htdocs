@@ -576,7 +576,9 @@
 		}
 	</script>
 	
-
+	<!-- Cookie bar -->
+	<script src="/wbresp/js/cookiebar.js"></script>
+	<!-- Cookie bar -->
 
 
 </body>
