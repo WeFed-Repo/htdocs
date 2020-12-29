@@ -67,7 +67,7 @@ class DatiPersonali extends Component {
                     yearsToAdd = 2;
                 }
             }
-            //SE LA LA PATENTE NON E' RINNOVATA iL LIMITE E' 55
+            //SE LA PATENTE NON E' RINNOVATA iL LIMITE E' 55
             if (/^(02|13)$/.test(documentTypeSelected) && eta >= 55) {
                 yearsToAdd = 5;
             }
@@ -110,13 +110,17 @@ class DatiPersonali extends Component {
                 if (/^(01|11|12)$/.test(documentTypeSelected)) {
                     this.scadenzaDocPre = moment(this.scadenzaDoc, 'DD/MM/YYYY').subtract(1, "day").format('DD/MM/YYYY');
                 }
+                 //SE E' PATENTE IL LIMITE DA CUI PARTE E' DUE GIORNI DOPO OGGI
+                 if (/^(02|13|14)$/.test(documentTypeSelected)) {
+                    this.scadenzaDocPre = moment(this.today, 'DD/MM/YYYY').add(2, "day").format('DD/MM/YYYY');
+                }
             }
             if (dateType === "dateTo") {
 
-                dtReturn = this.scadenzaDoc
+                dtReturn = this.scadenzaDoc;
             }
             if (dateType === "dateFrom") {
-                dtReturn = this.scadenzaDocPre
+                dtReturn = this.scadenzaDocPre;
             }
 
         }
