@@ -52,7 +52,11 @@ class Adever extends Component {
                 <section className="onboarding-block">
                     <Row>
                         <Col>
-                            <p>Ai sensi della normativa antiriciclaggio (d.lgs 231/07) sei tenuto a compiere alcuni adempimenti e a fornire dichiarazioni e informazioni personali. Ti ricordiamo che il rilascio di false informazioni oppure omissioni può comportare conseguenze anche di natura penale.</p>
+                            <p>
+                                Ai sensi della normativa antiriciclaggio (d.lgs 231/07) il cliente è tenuto a compiere alcuni adempimenti e a
+                                fornire dichiarazioni e informazioni personali. Ricordiamo che il rilascio di false informazioni oppure omissioni
+                                può comportare conseguenze anche di natura penale.
+                            </p>
                             <Form.checkgroup
                                 label="Titolare effettivo"
                                 name={"field_sessionfirmeblob_intestatarifirme_" + int + "_titolareeffettivo"}
@@ -313,9 +317,6 @@ class StepForm extends Component {
                 <div className="onboarding-form">
                     {!isOutput && <h3>Adempimenti normativi</h3>}
                     <section className="onboarding-block">
-                        <p>Paragrafo introduttivo lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing.</p>
-                    </section>
-                    <section className="onboarding-block">
                         <Adever int="0" {...this.props}></Adever>
                     </section>
                     {
@@ -333,7 +334,7 @@ class StepForm extends Component {
                             value={formstate["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             error={formstate.errors["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]}
                             onChange={this.props.obchange}
-                            options={[{ "value": "true", "text": "Acconsento" }, { "value": "false", "text": "Non acconsento" }]}
+                            options={[{ "value": "true", "text": "Il cliente acconsente" }, { "value": "false", "text": "Non acconsente" }]}
                             output={isOutput}
                         ></Form.radiogroup>
 

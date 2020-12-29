@@ -18,17 +18,7 @@ export default (hasdt) => {
                     },
                     {
                         "name": "Normativa Antiriciclaggio Conto corrente",
-                        "id": "J210018_000319_OFS_ADV",
-                        "checkgroup": [
-                            <>Il cliente dichiara nella piena consapevolezza della responsabilità civile e penale che
-                            comporta il rilascio di dichiarazioni mendaci e non veritiere, di aver preso visione
-                            dell’informativa sugli obblighi antiriciclaggio, di cui al D. Lgs. 231/07 e successive integrazione
-                            e modifiche, e di aver fornito tutte le informazioni necessarie ed aggiornate di cui è a
-                            conoscenza, anche relativamente al titolare effettivo del rapporto/dell'operazione, garantisce
-                            che le stesse sono esatte e veritiere e si impegna a comunicarne ogni futura ed eventuale
-                            modifica.
-                            </>
-                        ]
+                        "id": "J210018_000319_OFS_ADV"
                     }, {
                         "name": "Normativa Antiriciclaggio Deposito titoli a custodia ed amministrazione",
                         "id": "J210018_000319_OFS_ADV",
