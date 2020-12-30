@@ -65,6 +65,18 @@ else
 	
 
 	</div>
+	
+	<!-- NUOVA COOKIE BAR -->
 	<script type="text/javascript" src="/HT/fe/js/script/cookiebar.js"></script>
+	<!-- FINE NUOVA COOKIE BAR -->
+
+	<!--- SOLO PER LIBRERIE -->
+	<script>
+	/// SOLO PER LIBRERIE
+	ckdomain =  location.hostname;    
+    /// FINE SOLO PER LIBRERIE
+	</script>
+	<!--- FINE SOLO PER LIBRERIE -->
+
 </body>
 </html>
