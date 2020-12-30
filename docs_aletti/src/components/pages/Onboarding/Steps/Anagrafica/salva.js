@@ -41,7 +41,7 @@ export default  {
                 "id": form.field_id,
                 "validazione": val,
                 "anagrafica": anagrafica,
-                "ordineIntestatari": form.field_ordineintestatari
+                "ordineIntestatari": (form.field_ordineintestatari === "")? "0" : form.field_ordineintestatari
             }
 
         console.log("------------------- OGGETTO DATA INVIATO --------------------");
