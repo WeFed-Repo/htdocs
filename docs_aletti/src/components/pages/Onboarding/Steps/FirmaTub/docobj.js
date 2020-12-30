@@ -78,13 +78,13 @@ export default (hasdt) => {
                 "title": <>Documentazione contrattuale del deposito titoli a custodia ed amministrazione</>,
                 "files": [
                     {
-                    "name": "Condizioni economiche e contrattuali del Deposito Titoli a custodia ed amministrazione", 
-                    "id": "J700000_000319_OFS_DT",
-                    "checkgroup": [
-                        <>
-                           Il cliente ha letto e approvato integralmente il contenuto delle condizioni economiche e contrattuali del Deposito Titoli a custodia ed amministrazione
-                        </>
-                    ]
+                        "name": "Condizioni economiche e contrattuali del Deposito Titoli a custodia ed amministrazione",
+                        "id": "J700000_000319_OFS_DT",
+                        "checkgroup": [
+                            <>
+                                Il cliente ha letto e approvato integralmente il contenuto delle condizioni economiche e contrattuali del Deposito Titoli a custodia ed amministrazione
+                            </>
+                        ]
                     }
                 ]
             }
