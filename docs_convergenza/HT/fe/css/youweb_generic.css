@@ -8593,6 +8593,15 @@ p.large a {color:#0E977F;text-decoration: underline;}
         margin: 0 20px;
         padding-bottom:0;
     }
+    .box-catalogue.assicurazioni .box-catalogue-left, .assicurazioni .box-catalogue-right {
+        margin: 0;
+        width:100%;
+    }
+    .assicurazioni .box-catalogue-right .box-catalogue-right {
+        margin: 0;
+        width:100%;
+     }
+     
     .btn-inline {
         margin-top:0;
     }
