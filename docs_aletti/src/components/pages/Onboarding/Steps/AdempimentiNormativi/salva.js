@@ -83,7 +83,7 @@ export default  {
 
         // Assembla l'oggetto per la spedizione
         let firme =  {
-            "capitalizzazionePeriodica": [{"consenso":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]==="true","codDisclaimer":"ALETTI_CAP_PERIODICA"}],
+            "capitalizzazionePeriodica": {"consenso":form["field_sessionfirmeblob_capitalizzazioneperiodica_consenso"]==="true","codDisclaimer":"ALETTI_CAP_PERIODICA"},
             "intestatariFirme":sFirme["intestatariFirme"]
         };
        
