@@ -8283,14 +8283,15 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 
 /* Bottoni app */ 
 .btn-app-console {text-align:left;}
-.btn-app-console .btn-app {margin-left:15px}
-.btn-app-console .btn-app:first-child {margin-left:0 !important}
-.btn-app {width:135px;height:40px;display:inline-block;background-size:contain !important;background: transparent none no-repeat center center;}
-.btn-appstore {background-image: url("/common/fe/img/btn_appstore.png");}
-.btn-googleplay {background-image: url("/common/fe/img/btn_googleplay.png");}
+.btn-app-console .btn-app {margin-right:10px; margin-bottom:10px;}
+.btn-app {width:135px;height:40px;display:inline-block;background-size:cover !important;background: transparent none no-repeat center center; border:solid 1px #ddd; border-radius:7px}
+.btn-appstore {background-image: url("/common/fe/img/bdg_applestore.png");}
+.btn-googleplay {background-image: url("/common/fe/img/bdg_googleplay.png");}
+.btn-appgallery {background-image: url("/common/fe/img/bdg_appgallery.png");}
 
 @media (max-width:767px) {
     /* Hero smart */
+    .btn-app-console {text-align:center;}
     .box-hero {min-height:auto !important}
     .box-bg-dark,.box-bg-light {padding-left:20px !important}
     .box-hero .box-bg-light {padding-top:90px}

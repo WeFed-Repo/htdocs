@@ -80,6 +80,7 @@
              <div class="btn-app-console">
                 <a href="#" class="btn-app btn-appstore"></a>
                 <a href="#" class="btn-app btn-googleplay"></a>
+                <a href="#" class="btn-app btn-appgallery"></a>
             </div>
             <!-- / pulsanti app -->
         </div>
