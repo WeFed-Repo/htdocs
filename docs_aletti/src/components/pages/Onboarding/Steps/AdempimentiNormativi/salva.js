@@ -4,7 +4,7 @@ import {getNextInt} from "components/pages/Onboarding/common/gestioneStati.js";
  
 export default  {
 
-    url: saveUrl.Anagrafica,
+    url: saveUrl.SessioneFirme,
     
     data: (form,validazione) => {
 
