@@ -71,7 +71,6 @@ class StepForm extends Component {
                                         otpType="sms"
                                         idIntestatario={formstate.field_intestcorrente}
                                         btnText="Richiedi il codice di controllo"
-                                    >
                                     ></Form.otp>
                             </Col>
                         </Row>
