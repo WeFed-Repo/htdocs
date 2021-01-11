@@ -35,7 +35,8 @@ export default class extends Component {
         { "value": "IDENTITA_NON_ACCERTATA", "text": "Identità non accertata" , "status":"annullata"},
         { "value": "SCADUTA", "text": "Scaduta" , "status":"annullata"},
 
-        { "value": "CONCLUSA", "text": "Conclusa" , "status":"conclusa"}
+        { "value": "CONCLUSA", "text": "Conclusa" , "status":"conclusa"},
+        { "value": "RILEVAMENTO_COMPORTAMENTO", "text": "Rilevamento comportamento" , "status":"conclusa"}
         
     ]
 

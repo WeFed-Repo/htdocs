@@ -67,6 +67,78 @@
             "intestazione": "PIETRO VERDI",
             "numIntestatari": 2,
             "expirationDate": 1580836979169
+        },
+        {
+            "id": 2631643,
+            "dataInserimento": 1605094325000,
+            "dataUltimoAggiornamento": 1605095104000,
+            "stato": "BOZZA_VALIDATA",
+            "intestazione": "Andrea Caimi , CLAUDIO ROSSI",
+            "numIntestatari": 2,
+            "expirationDate": 1605135599000
+        },
+        {
+            "id": 2631648,
+            "dataInserimento": 1605174285000,
+            "dataUltimoAggiornamento": 1608720740000,
+            "stato": "RILEVAMENTO_COMPORTAMENTO",
+            "intestazione": "Andrea Caimi , CLAUDIO ROSSI",
+            "numIntestatari": 2,
+            "expirationDate": 1608764399000
+        },
+        {
+            "id": 2631789,
+            "dataInserimento": 1608720955000,
+            "dataUltimoAggiornamento": 1608721907000,
+            "stato": "RILEVAMENTO_COMPORTAMENTO",
+            "intestazione": "Andrea Caimi",
+            "numIntestatari": 1,
+            "expirationDate": 1608764399000
+        },
+        {
+            "id": 2631810,
+            "dataInserimento": 1609149984000,
+            "dataUltimoAggiornamento": 1609150454000,
+            "stato": "RILEVAMENTO_COMPORTAMENTO",
+            "intestazione": "Andrea Caimi",
+            "numIntestatari": 1,
+            "expirationDate": 1609196399000
+        },
+        {
+            "id": 2631812,
+            "dataInserimento": 1609152878000,
+            "dataUltimoAggiornamento": 1609166083000,
+            "stato": "RILEVAMENTO_COMPORTAMENTO",
+            "intestazione": "Andrea Caimi , CLAUDIO ROSSI",
+            "numIntestatari": 2,
+            "expirationDate": 1609196399000
+        },
+        {
+            "id": 2631826,
+            "dataInserimento": 1609342839000,
+            "dataUltimoAggiornamento": 1609342992000,
+            "stato": "BOZZA_VALIDATA",
+            "intestazione": "Andrea Caimi , CLAUDIO ROSSI",
+            "numIntestatari": 2,
+            "expirationDate": 1617115238000
+        },
+        {
+            "id": 2631828,
+            "dataInserimento": 1609346451000,
+            "dataUltimoAggiornamento": 1610375215000,
+            "stato": "BOZZA_VALIDATA",
+            "intestazione": "Pietro Bini , CLAUDIO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1617118851000
+        },
+        {
+            "id": 2631857,
+            "dataInserimento": 1610375957000,
+            "dataUltimoAggiornamento": 1610376397000,
+            "stato": "BOZZA_VALIDATA",
+            "intestazione": "Marta Bini , CLAUDIO VERDI",
+            "numIntestatari": 2,
+            "expirationDate": 1618148357000
         }
     ]
 }
