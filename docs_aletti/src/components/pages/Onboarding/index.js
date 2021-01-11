@@ -372,7 +372,7 @@ export default class extends Component {
 
                         {getNextState(this.state) === "INSERITA_DA_INVIARE" && this.state.field_intestcorrente !== "" && <Step.INSERITA_DA_INVIARE.form {...obformprops} btnConsole={this.btnConsole}></Step.INSERITA_DA_INVIARE.form>}
 
-                        <BtnConsole formprops={obformprops}></BtnConsole>
+                        {!this.state.isLoading && <BtnConsole formprops={obformprops}></BtnConsole>}
                         
                     </div>
             }
