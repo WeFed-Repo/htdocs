@@ -331,7 +331,14 @@ Saldo Disponibile
  
 </th><th class="hidden sorting" style="width: 0px;" tabindex="0" aria-controls="DataTables_Table_10" rowspan="1" colspan="1" aria-label="&amp;nbsp;: ordinamento crescente">&nbsp;</th></tr>
 </thead>
-</table><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_10_paginate"><a class="paginate_button previous disabled" aria-controls="DataTables_Table_10" data-dt-idx="0" tabindex="0" id="DataTables_Table_10_previous">Prec.</a><span><a class="paginate_button current" aria-controls="DataTables_Table_10" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="DataTables_Table_10" data-dt-idx="2" tabindex="0" id="DataTables_Table_10_next">Succ.</a></div></div>
+</table>
+  <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_10_paginate">
+    <a class="paginate_button previous disabled" aria-controls="DataTables_Table_10" data-dt-idx="0" tabindex="0" id="DataTables_Table_10_previous">Prec.</a>
+    <span><a class="paginate_button current" aria-controls="DataTables_Table_10" data-dt-idx="1" tabindex="0">1</a></span>
+    <a class="paginate_button next disabled" aria-controls="DataTables_Table_10" data-dt-idx="2" tabindex="0" id="DataTables_Table_10_next">Succ.</a>
+  </div>
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit <a href="#">sed do eiusmod tempor incididunt</a></p>
+</div>
 </div>
 </div>
 </div>

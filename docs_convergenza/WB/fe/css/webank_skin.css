@@ -584,6 +584,10 @@ table thead th.sorting_desc:before {
   border-radius: 0;
   background-color: #fff;
 }
+.selezioneCC + .wrapper-link-carte-bottom {
+  position: relative;
+  top: -20px;
+}
 .titleSection {
   font-size: 1.28em;
   font-weight: 500;

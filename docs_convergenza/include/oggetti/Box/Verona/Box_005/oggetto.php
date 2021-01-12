@@ -11,4 +11,5 @@
 				</div>
 			</div>
 		</div>
+		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit <a href="#">sed do eiusmod tempor incididunt</a></p>
 </section>

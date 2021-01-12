@@ -8656,3 +8656,9 @@ p.large a {color:#0E977F;text-decoration: underline;}
     padding-left:10px;
 }
 /*FINE SEZIONE ID FIXING */
+
+/*selettore carte */
+
+.wrapper-link-carte-bottom .link-carte-bottom {position: relative;z-index:1;top:10px}
+.wrapper-link-carte-bottom  .outerWrapperTab {position: relative;top:-20px}
+.wrapper-link-carte-bottom .innerWrapperTab  {min-height: 95px;padding-top:40px}
