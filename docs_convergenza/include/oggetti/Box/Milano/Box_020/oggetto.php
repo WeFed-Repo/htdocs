@@ -12,7 +12,7 @@ var arrCarte = [
         urlRichiestaInCorso:'/carte/aperturaCartaBancomatStatoRichiesta.do',
         urlRichiedi:'/carte/aperturaCartaBancomatInserimento.do',
         urlScheda:'wb/content/debitoScheda.do',
-        verificaRequisiti:true  
+        mancanzaRequisiti:false  
 	},
 	{
         tipo:'cartimpronta',
@@ -37,7 +37,7 @@ var arrCarte = [
 	{
         tipo:'schedaNews',
         possiede:false,
-        richiestaCarta:'false',
+        richiestaCarta:false,
         idFormMovimenti:'',
         urlRichiestaInCorso:'',
         urlRichiedi:'',
@@ -124,7 +124,7 @@ var arrCarte = [
 <!-- fine carousel -->
 <!--SCRIPT PER LA GESTIONE/COSTRUZIONE BOTTONI -->
 <script>
-	//controlla se c'è l'array delle carte costruito in pagina dallo sviluppo
+	//controlla se c'è l'array delle carte
 	if (typeof arrCarte !=="undefined") {
 		//elementi in pagina di classe arrCarte-btn da popolare con i bottoni
 		var arrCarteBtn = $(".arrCarte-btn");
@@ -136,13 +136,13 @@ var arrCarte = [
 				thisBtnWrapper.append($("<div>").addClass("btn-align-left"));
 				
 				//se possiede la carta deve apparire il bottone con tutti i movimenti per il successivo submit del form
-				if(k.possiede.toString()==="true" && k.idFormMovimenti!=="") {
+				if(k.possiede===true && k.idFormMovimenti!=="") {
 					var btnMovimenti = '<a type="button" title="lista movimenti" onclick="submitForm(' + k.idFormMovimenti +')" class="btn btn-primary">Lista movimenti	</a>'
 					thisBtnWrapper.find(".btn-align-left").append(btnMovimenti)
 				}
 				//se non possiede la carta e non ha richieste in corso ci sarà scopri di più ed eventualmente richiedi carta
-				else if (k.richiestaCarta.toString() !=="true")  {
-					if(k.urlRichiedi!=="" && k.mancanzaRequisiti.toString()!=="true")
+				else if (k.richiestaCarta !==true)  {
+					if(k.urlRichiedi!=="" && k.mancanzaRequisiti!==true)
 					{
 						var btnRichiedi = '<a type="button" title="Richiedi subito" class="btn btn-primary"  href="' + k.urlRichiedi +'">Richiedi subito</a>';
 						thisBtnWrapper.find(".btn-align-left").append(btnRichiedi);
@@ -154,8 +154,10 @@ var arrCarte = [
 					}
 				}
 				//se ha una rischiesta in corso
-				else if (k.richiestaCarta.toString() ==="true") {
-            }
+				else if (k.richiestaCarta ===true && k.urlRichiestaInCorso!=="") {
+					var btnVerifica = '<a type="button" title="Verifica" class="btn btn-primary"  href="' + k.urlRichiestaInCorso +'">Verifica</a>';
+					thisBtnWrapper.find(".btn-align-left").append(btnVerifica);
+				}
 					
 				
 			}
