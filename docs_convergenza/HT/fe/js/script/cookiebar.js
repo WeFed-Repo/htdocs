@@ -11,7 +11,7 @@ var ckfun = {
     },
 
     write (cname,cvalue) {
-        document.cookie = cname + "=" + cvalue + ";path=/;domain=" + ckdomain;
+        document.cookie = cname + "=" + cvalue + ";path=/;domain=" + ckdomain +";expires=" + (new Date(new Date().setFullYear(new Date().getFullYear() + 1)));
     },
 
     delete (cname) {
@@ -23,6 +23,8 @@ var ckfun = {
 var ckaccept = function(){
 
     ckfun.write("consent_mktg","true");
+    ckfun.write("consent_glassbox","true");
+    ckfun.write("BPM_TRACK","S");
 
     // Chiude il fascione
     var cookiebanner = $("#cookie_banner");
@@ -35,10 +37,10 @@ var ckaccept = function(){
 /* Funzioni cookiebar */
 $(function(){
     // Testa se e' possibile erogare il fascione
-    if(typeof ckfun.read("consent_mktg") === "undefined") {
+    if((typeof ckfun.read("consent_mktg") === "undefined") || (typeof ckfun.read("consent_glassbox")==="undefined") || (typeof ckfun.read("BPM_TRACK")  === "undefined")) {
         
         // Link della pagina di configurazione
-        var ckconfigurl = "https://www.bancobpm.it/cookie-policy"        
+        var ckconfigurl = "https://www.bancobpm.it/cookie-policy";       
         
         var cookiebanner = $("<div>").attr("id","cookie_banner").addClass("cookie-banner");
         var cookiebtnpersonalizza = $("<button>").html("Personalizza").on("click",function(){location.href=ckconfigurl});
