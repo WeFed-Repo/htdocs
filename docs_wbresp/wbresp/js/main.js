@@ -562,6 +562,22 @@ var noLoginHttp = function () {
 $(noLoginHttp);
 /* Fine blocco da rimuovere in caso di malfunzionamenti */
 
+var setCookieLogin = function() {
+    $('#accessoClienti').bind('click', function() {
+        if($('#formLoginNav').is(':visible'))
+        {	
+            wStore.write("loginOpened","true");
+        }
+        else {
+            wStore.write("loginOpened","false");
+        }
+    })
+    
+    if (wStore.read("loginOpened")=='true') {
+        $('#accessoClienti').trigger('click');
+    }
+}
+
 /* isMobile */
 $(function () {
     var isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone/i.test(navigator.userAgent)) ? true : false;
@@ -839,8 +855,10 @@ $(function () {
     });
     /* Carica widgets*/
     loadWidget();
+
     /* Check cokies */
-    // $.getScript("/wbresp/js/checkCookie.js");
+    setCookieLogin();
+    
     //modal apertura su mobile
     setModalMobile();
     // Apertura login su variabile in GET
@@ -851,6 +869,11 @@ $(function () {
             $('#accessoClientiMob').trigger("click");
         }
     }
+
+    // Apertura login per localStorage
+    
+
+
     // ALERT PER IE 7
     /*
     if (document.all && !document.querySelector) {

@@ -23,6 +23,14 @@ var ckfun = {
 var ckaccept = function(){
 
     ckfun.write("consent_mktg","true");
+    ckfun.write("consent_glassbox","true");
+    ckfun.write("BPM_TRACK","S");
+
+    // Scatena, se possibile, gli eventi GTM
+    if (typeof dataLayer !== "undefined") {
+        dataLayer.push({'event': 'consent_mktg'});
+        dataLayer.push({'event': 'consent_glassbox'});
+    }
 
     // Chiude il fascione
     var cookiebanner = $("#cookie_banner");
@@ -35,7 +43,7 @@ var ckaccept = function(){
 /* Funzioni cookiebar */
 $(function(){
     // Testa se e' possibile erogare il fascione
-    if(typeof ckfun.read("consent_mktg") === "undefined") {
+    if((typeof ckfun.read("consent_mktg") === "undefined") || (typeof ckfun.read("consent_glassbox")==="undefined") || (typeof ckfun.read("BPM_TRACK")  === "undefined")) {
         
         // Link della pagina di configurazione
         var ckconfigurl = "######";        

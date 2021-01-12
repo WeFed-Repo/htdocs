@@ -26,6 +26,12 @@ var ckaccept = function(){
     ckfun.write("consent_glassbox","true");
     ckfun.write("BPM_TRACK","S");
 
+    // Scatena, se possibile, gli eventi GTM
+    if (typeof dataLayer !== "undefined") {
+        dataLayer.push({'event': 'consent_mktg'});
+        dataLayer.push({'event': 'consent_glassbox'});
+    }
+
     // Chiude il fascione
     var cookiebanner = $("#cookie_banner");
     if (cookiebanner.length>0){
