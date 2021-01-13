@@ -34,11 +34,18 @@ $(function(){
 
         if (typeof ckfun !== "undefined") {
             ckfun.write("consent_mktg", (c_mktg==="yes").toString());
-            ckfun.write("consent_glassbox", (c_mktg==="yes").toString());
+            ckfun.write("consent_glassbox", (c_glassbox==="yes").toString());
+            ckfun.write("BPM_TRACK", (c_glassbox==="yes")? "S" : "N");
+
+            // Scatena, se possibile, gli eventi GTM
+            if (typeof dataLayer !== "undefined") {
+                if (c_mktg==="yes") dataLayer.push({'event': 'consent_mktg'});
+                if (c_glassbox==="yes") dataLayer.push({'event': 'consent_glassbox'});
+            }
         }    
 
-        // Pagina di reindirizzamento
-        location.href = "####"
+        // Pagina di reindirizzamento a valle del salvataggio
+        location.href = "www.webank.it";
         
     });
 
