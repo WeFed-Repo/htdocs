@@ -1,5 +1,6 @@
 <?php
     $statpath = ($site === "webank")? "/WB" : "/HT";
+    $gifanimpath = ($site === "webank")? "/WB/fe/img/wbapp/" : "/HT/fe/img/youapp/";
 
     // Array con nomi file per animazioni
     $anim = Array(
@@ -103,7 +104,7 @@
             <div class="box-image">
                 <!-- Wrapper smartphone -->
                 <div class="smartphone-wrapper small">
-                    <img src="/HT/fe/img/youapp/<?php print($an); ?>" />
+                    <img src="<?php print($gifanimpath.$an); ?>" />
                 </div>
                 <!-- fine Wrapper smartphone -->
             </div>
