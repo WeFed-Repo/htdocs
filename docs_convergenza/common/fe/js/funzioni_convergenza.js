@@ -3923,6 +3923,9 @@ var modificaStep = function (el) {
     parentPanel.removeClass('editable').addClass('unclosable');
     //parentPanel.find('input, textarea,select').prop("disabled", false);
     parentPanel.find('input:not("#adever input"), textarea:not("#adever textarea"), select:not("#adever select")').prop("disabled", false);
+    $("#adever textarea").each(function() {
+        if($(this).val()!=="") $(this).prop({"disabled": false});
+    });
     nextPanel.removeClass('unclosable').addClass('disabled');
     nextPanelTitle.attr('data-toggle', 'collapse');
     nextPanelTitle.trigger('click');
