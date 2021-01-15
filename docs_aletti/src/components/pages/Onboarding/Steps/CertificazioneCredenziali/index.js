@@ -105,9 +105,7 @@ class StepForm extends Component {
                 </div>
             </div>
         )
-
     }
-
 }
 
 export default {
