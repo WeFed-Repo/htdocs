@@ -7,13 +7,13 @@ var arrCarte = [
     {
         tipo:'bancomat',
         possiede:true,
-        richiestaCarta:false,
+        richiestaCarta:true,
         idFormMovimenti:'movimentiBancomatForm',
         urlRichiestaInCorso:'/carte/aperturaCartaBancomatStatoRichiesta.do',
         urlRichiedi:'/carte/aperturaCartaBancomatInserimento.do',
         urlScheda:'wb/content/debitoScheda.do',
         mancanzaRequisiti:false  
-	},
+    },
 	{
         tipo:'cartimpronta',
         possiede:false,
@@ -27,7 +27,7 @@ var arrCarte = [
 	{
         tipo:'prepagata',
         possiede:false,
-        richiestaCarta:true,
+        richiestaCarta:false,
         idFormMovimenti:'movimentiPrepagataForm',
         urlRichiestaInCorso:'/cartaConto/aperturaK4StatoRichiesta.do',
         urlRichiedi:'/cartaConto/aperturaK4Inserimento.do',
@@ -39,6 +39,16 @@ var arrCarte = [
         possiede:false,
         richiestaCarta:false,
         idFormMovimenti:'',
+        urlRichiestaInCorso:'',
+        urlRichiedi:'',
+        urlScheda:'/wb/content/cardNews.do',
+        mancanzaRequisiti:false
+    },
+    {
+        tipo:'schedaNexi',
+        possiede:true,
+        richiestaCarta:false,
+        idFormMovimenti:'movimentiNexi',
         urlRichiestaInCorso:'',
         urlRichiedi:'',
         urlScheda:'/wb/content/cardNews.do',
@@ -57,74 +67,70 @@ var arrCarte = [
 <!-- Fine testo introduttivo --> <!-- Carousel -->
 <section>
 <div id="carouselCarte" class="carousel carousel-catalogo slide"><!-- Lista elementi del carousel -->
-    <div class="carousel-inner"><!-- scheda carousel -->
-        <div class="item active" id="schedaBancomat">
-            <div class="row">
-                <div class="col-sm-4"><img src="/WB/fe/img/carta_big_bancomat.png" /></div>
-                <div class="col-sm-8">
-                    <h3>LO UTILIZZI OVUNQUE, SENZA COMMISSIONI</h3>
-                    <p>Puoi tenere sotto controllo, quando vuoi, i movimenti della tua Carta. <br />Consulta la lista movimenti!</p>
-                    <!--BOTTONE/I PER BANCOMAT -->
-                    <div class="arrCarte-btn" arrCarte-btn-id="bancomat"></div>
-                </div>
-            </div>
-        </div>
-        <!-- scheda carousel --> 
-        <!-- scheda carousel -->
-        <div class="item" id="schedaCredito">
-            <div class="row">
-                <div class="col-sm-4"><img src="/WB/fe/img/carta_big_impronta.png" /></div>
-                <div class="col-sm-8">
-                    <h3>TANTI VANTAGGI IN UN'UNICA CARTA</h3>
-                    <ul>
-                        <li><b>CONVENIENTE: zero commissioni</b> sugli acquisti in area Euro</li>
-                        <li><b>VANTAGGIOSA</b>: sconti, convenzioni e coperture assicurative offerte da MasterCard</li>
-                        <li><b>SICURA</b>: microchip integrato e <b>alert SMS</b> dopo ogni acquisto</li>
-                    </ul>
-                    <!--BOTTONE/I PER C.IMPRONTA -->
-                    <div class="arrCarte-btn" arrCarte-btn-id="cartimpronta"></div>
-                </div>
-            </div>
-        </div>
-        <!-- scheda carousel --> 
-        <!-- scheda carousel -->
-        <div class="item" id="schedaPrepagata">
-            <div class="row">
-                <div class="col-sm-4"><img src="/WB/fe/img/carta_big_prepaid.png" /></div>
-                <div class="col-sm-8">
-                    <h3>LA NUOVA ALTERNATIVA AL DENARO CONTANTE</h3>
-                    <p>Puoi tenere sotto controllo, quando vuoi, i movimenti della tua Carta. <br />Consulta la lista movimenti!</p>
-                     <!--BOTTONE/I PER C.PREPAGATA -->
-                    <div class="arrCarte-btn" arrCarte-btn-id="prepagata"></div>   
-                </div>
-            </div>
-        </div>
-        <!-- scheda carousel -->
-        <div class="item" id="schedaNews">
-            <div class="row">
-                <div class="col-sm-4"><img src="/WB/fe/img/vis_cards_640.png" /></div>
-                <div class="col-sm-8">
-                    <p>Aggiornati su sconti, promozioni e programmi fedelt&agrave;, nuove funzioni e servizi utili! <br /> Tutto quello che devi sapere sul mondo delle carte Webank.</p>
-                    <!--BOTTONE NEWS-->
-                    <div class="arrCarte-btn" arrCarte-btn-id="schedaNews"></div>
-                </div>
-            </div>
-        </div>
-    <!-- scheda carousel -->
-    </div>
-    <!-- Carousel indicators --><hr class="hidden-xs hidden-sm" />
-    <div class="row">
-        <div class="col-md-4 hidden-sm hidden-xs"></div>
-            <div class="col-md-8 col-xs-12">
-            <div class="carousel-indicators"><a data-target="#carouselCarte" data-slide-to="0" class="active"> <img src="/WB/fe/img/carta_small_bancomat.gif" /> <span> Carta di debito </span> </a> <a data-target="#carouselCarte" data-slide-to="1"> <img src="/WB/fe/img/carta_small_cartiprone.gif" /> <span> Carta di credito </span> </a> <a data-target="#carouselCarte" data-slide-to="2"> <img src="/WB/fe/img/carta_small_cartaprepaid.gif" /> <span> Carta prepagata </span> </a> <a data-target="#carouselCarte" data-slide-to="3"> <img src="/WB/fe/img/news_icon.png" /> </a></div>
-        </div>
-    </div>
+<div class="carousel-inner"><!-- scheda carousel -->
+<div class="item active" id="schedaBancomat">
+<div class="row">
+<div class="col-sm-4"><img src="/WB/fe/img/carta_big_bancomat.png" /></div>
+<div class="col-sm-8">
+<h3>LO UTILIZZI OVUNQUE, SENZA COMMISSIONI</h3>
+<p>Puoi tenere sotto controllo, quando vuoi, i movimenti della tua Carta. <br />Consulta la lista movimenti!</p>
+<!--BOTTONE/I PER BANCOMAT -->
+<div class="arrCarte-btn" arrcarte-btn-id="bancomat"></div>
+</div>
+</div>
+</div>
+<!-- scheda carousel --> <!-- scheda carousel -->
+<div class="item" id="schedaCredito">
+<div class="row">
+<div class="col-sm-4"><img src="/WB/fe/img/carta_big_impronta.png" /></div>
+<div class="col-sm-8">
+<h3>TANTI VANTAGGI IN UN'UNICA CARTA</h3>
+<ul>
+<li><b>CONVENIENTE: zero commissioni</b> sugli acquisti in area Euro</li>
+<li><b>VANTAGGIOSA</b>: sconti, convenzioni e coperture assicurative offerte da MasterCard</li>
+<li><b>SICURA</b>: microchip integrato e <b>alert SMS</b> dopo ogni acquisto</li>
+</ul>
+<!--BOTTONE/I PER C.IMPRONTA -->
+<div class="arrCarte-btn" arrcarte-btn-id="cartimpronta"></div>
+</div>
+</div>
+</div>
+<!-- scheda carousel --> <!-- scheda carousel -->
+<div class="item" id="schedaPrepagata">
+<div class="row">
+<div class="col-sm-4"><img src="/WB/fe/img/carta_big_prepaid.png" /></div>
+<div class="col-sm-8">
+<h3>LA NUOVA ALTERNATIVA AL DENARO CONTANTE</h3>
+<p>Puoi tenere sotto controllo, quando vuoi, i movimenti della tua Carta. <br />Consulta la lista movimenti!</p>
+<!--BOTTONE/I PER C.PREPAGATA -->
+<div class="arrCarte-btn" arrcarte-btn-id="prepagata"></div>
+</div>
+</div>
+</div>
+<!-- scheda carousel -->
+<div class="item" id="schedaNews">
+<div class="row">
+<div class="col-sm-4"><img src="/WB/fe/img/vis_cards_640.png" /></div>
+<div class="col-sm-8">
+<p>Aggiornati su sconti, promozioni e programmi fedelt&agrave;, nuove funzioni e servizi utili! <br /> Tutto quello che devi sapere sul mondo delle carte Webank.</p>
+<!--BOTTONE NEWS-->
+<div class="arrCarte-btn" arrcarte-btn-id="schedaNews"></div>
+</div>
+</div>
+</div>
+<!-- scheda carousel --></div>
+<!-- Carousel indicators --><hr class="hidden-xs hidden-sm" />
+<div class="row">
+<div class="col-md-4 hidden-sm hidden-xs"></div>
+<div class="col-md-8 col-xs-12">
+<div class="carousel-indicators"><a data-target="#carouselCarte" data-slide-to="0" class="active"> <img src="/WB/fe/img/carta_small_bancomat.gif" /> <span> Carta di debito </span> </a> <a data-target="#carouselCarte" data-slide-to="1"> <img src="/WB/fe/img/carta_small_cartiprone.gif" /> <span> Carta di credito </span> </a> <a data-target="#carouselCarte" data-slide-to="2"> <img src="/WB/fe/img/carta_small_cartaprepaid.gif" /> <span> Carta prepagata </span> </a> <a data-target="#carouselCarte" data-slide-to="3"> <img src="/WB/fe/img/news_icon.png" /> </a></div>
+</div>
+</div>
 </div>
 </section>
-<!-- fine carousel -->
-<!--SCRIPT PER LA GESTIONE/COSTRUZIONE BOTTONI -->
-<script>
-	//controlla se c'è l'array delle carte
+<!-- fine carousel --> <!--SCRIPT PER LA GESTIONE/COSTRUZIONE BOTTONI -->
+<script type="text/javascript">// <![CDATA[
+//controlla se c'? l'array delle carte
 	if (typeof arrCarte !=="undefined") {
 		//elementi in pagina di classe arrCarte-btn da popolare con i bottoni
 		var arrCarteBtn = $(".arrCarte-btn");
@@ -136,11 +142,11 @@ var arrCarte = [
 				thisBtnWrapper.append($("<div>").addClass("btn-align-left"));
 				
 				//se possiede la carta deve apparire il bottone con tutti i movimenti per il successivo submit del form
-				if(k.possiede===true && k.idFormMovimenti!=="") {
+				if(k.possiede===true && k.idFormMovimenti!=="" && k.richiestaCarta===false) {
 					var btnMovimenti = '<a type="button" title="lista movimenti" onclick="submitForm(' + k.idFormMovimenti +')" class="btn btn-primary">Lista movimenti	</a>'
 					thisBtnWrapper.find(".btn-align-left").append(btnMovimenti)
 				}
-				//se non possiede la carta e non ha richieste in corso ci sarà scopri di più ed eventualmente richiedi carta
+				//se non possiede la carta e non ha richieste in corso ci sar? scopri di pi? ed eventualmente richiedi carta
 				else if (k.richiestaCarta !==true)  {
 					if(k.urlRichiedi!=="" && k.mancanzaRequisiti!==true)
 					{
@@ -168,7 +174,7 @@ var arrCarte = [
 			el.submit();
 		}
 	}
-</script>
+// ]]></script>
 <script type="text/javascript" src="/WB/fe/js/fp_carte.js"></script>
 
 <?php
