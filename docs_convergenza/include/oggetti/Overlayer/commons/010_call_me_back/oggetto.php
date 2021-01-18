@@ -27,10 +27,10 @@ Qui si assume che lo sia
 
 <div id="modaleCallMeBack" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
-	<div class="modal-content">
+	<div class="modal-content modal-call-me-back">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <h1 class="modal-title align-center">Prenota una chiamata</h1>
+        <h3 class="modal-title align-center">PRENOTA UNA CHIAMATA</h3>
       </div>
       <div class="modal-body">
       <script type="text/javascript">
@@ -74,8 +74,6 @@ Qui si assume che lo sia
               isAlreadyBooked = $('input[name="isAlreadyBooked"]').val(),
               orarioSel = $('input[name="orarioSel"]').val(),
               timeNow = formatHourMin(today.getHours()) + ":" + formatHourMin(today.getMinutes());
-              
-			        
               if(!isModalOpened)
               {
                 thisModalBody.empty().addClass("loading");
@@ -93,6 +91,7 @@ Qui si assume che lo sia
            isModalOpened = false;
         })
         setStatoPrenotazione();
+      
         </script>
       </div>
      </div>

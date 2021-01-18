@@ -408,6 +408,10 @@ a.disabled {
   color: #ccc;
   cursor: default;
 }
+a.disabled.btn-primary {
+  background-color: #dfdfdf;
+  color: #fff;
+}
 h1 a,
 h2 a,
 h3 a,

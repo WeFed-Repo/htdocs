@@ -422,3 +422,87 @@ div.tool {
 .toolbtns-fourth, .userMenuMobile-seventh { 
   display: none; 
 }
+
+/*Servizio CMB */
+.modal-call-me-back {
+    h4 { 
+      margin-bottom:20px; 
+    }
+    #orariDispoWrapper {
+      margin: 0 -1%;
+      .text-time {font-size:16px;display:inline-block;margin-bottom:10px}  
+      .orari-select { 
+        width:18%;
+        float:left;
+        border:2px solid #999; 
+        cursor:pointer;
+        margin-bottom:20px;
+        text-align:center; 
+        margin: 0 1% 20px 1%;
+        padding:15px;
+        min-height:50px;
+          span {
+            display:inline-block;
+            width:100%;
+          } 
+          &.disabled {
+            cursor:not-allowed;
+            background-color:#eaeaea;
+            border-color:#eaeaea; 
+            color:#fff; 
+          }
+          &.selected {
+            background-color:#8ab10b;
+            border-color:#8ab10b;
+            color:#fff; 
+         }
+        }
+       .spsel { 
+         font-size:18px;
+          .only-detail{
+          font-size:16px;
+         }
+       }
+    }
+    input[type="radio"]:checked + span {
+      color: #8ab10b;
+    }
+    .btn-default + .btn-primary { 
+       margin-left:20px;
+    }
+    .esito-ok {
+      color: #8ab10b; 
+    }
+    .text-footer {
+        clear:both;
+        text-align:center;
+    }
+    
+    .selected .btn-dispo {
+      line-height:14px; 
+    }
+      
+    .step-cmb {
+        display:none; 
+    }
+   
+}
+@media (max-width:767px) {
+  .modal-call-me-back {
+    .btn-default + .btn-primary { 
+      margin-left:0
+    }
+  }
+}
+.helpDialog .modal-header button.close, .modal-header button.close  { 
+  border-radius: 50%;
+  border: 0;
+  background: #8ab10b;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  span {
+    font-weight: 300;
+    font-size: 25px;
+  }
+}

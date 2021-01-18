@@ -8658,7 +8658,30 @@ p.large a {color:#0E977F;text-decoration: underline;}
 /*FINE SEZIONE ID FIXING */
 
 /*selettore carte */
-
 .wrapper-link-carte-bottom .link-carte-bottom {position: relative;z-index:1;top:10px}
 .wrapper-link-carte-bottom  .outerWrapperTab {position: relative;top:-20px}
 .wrapper-link-carte-bottom .innerWrapperTab  {min-height: 95px;padding-top:40px}
+
+/*Servizio CMB */
+.modal-call-me-back h4 {
+    margin-bottom:20px; 
+}
+#orariDispoWrapper { 
+    margin: 0 -1%;
+}
+.modal-call-me-back .text-time {font-size:16px;display:inline-block;margin-bottom:10px}  
+.modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:50px; }
+.modal-call-me-back .orari-select span {display:inline-block;width:100%;}
+.modal-call-me-back .orari-select.disabled {cursor:not-allowed; background-color:#eaeaea;border-color:#eaeaea; color:#fff; }      
+.modal-call-me-back .orari-select.selected { background-color:#65b7a9;border-color:#65b7a9;color:#fff;}         
+.modal-call-me-back .spsel { font-size:18px;}
+.modal-call-me-back .only-detail{font-size:16px;}
+.modal-call-me-back input[type="radio"]:checked + span {color: #65b7a9;}      
+.modal-call-me-back .btn-default + .btn-primary {margin-left:20px;}
+.modal-call-me-back .esito-ok {color: #65b7a9;}
+.modal-call-me-back .text-footer { clear:both;text-align:center;}
+.modal-call-me-back .selected .btn-dispo {line-height:14px;}
+.modal-call-me-back .step-cmb {display:none}
+@media (max-width:767px) {
+  .modal-call-me-back .btn-default + .btn-primary {margin-left:0}
+}
