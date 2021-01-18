@@ -46,7 +46,7 @@ $(function(){
     if((typeof ckfun.read("consent_mktg") === "undefined") || (typeof ckfun.read("consent_glassbox")==="undefined") || (typeof ckfun.read("BPM_TRACK")  === "undefined")) {
         
         // Link della pagina di configurazione
-        var ckconfigurl = "######";        
+        var ckconfigurl = "https://www.webank.it/webankpub/wbresp/t2/cookie_policy.do";        
         
         var cookiebanner = $("<div>").attr("id","cookie_banner").addClass("cookie-banner");
         var cookiebtnpersonalizza = $("<button>").html("Personalizza").on("click",function(){location.href=ckconfigurl});

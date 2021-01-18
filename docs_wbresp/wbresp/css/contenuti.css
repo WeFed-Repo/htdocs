@@ -14,6 +14,6 @@
 @import 'stato-apertura-conto.css';
 @import 'serve-aiuto.css';
 @import 'widget.css';
-@import 'buttons.css';
+@import 'buttons.css?a=1';
 /* Print CSS */
 @import 'print.css' print;
