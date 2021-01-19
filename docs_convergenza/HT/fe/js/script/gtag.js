@@ -95,13 +95,14 @@ $(function () {
         window.dataLayer = window.dataLayer || [];
         gtag = function() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        if (typeof X !== "undefined") {
+        if ((typeof X !== "undefined") && (typeof X2 !== "undefined")) {
             // Configurazione
             gtag('config', UACode, {
                 'dimension6': X,
-                'user_id': X,
+                'dimension7': X2,
+                'user_id': X2,
                 'linker': {
-                    'domains': ['bancobpm.it', 'webank.it']
+                    'domains': ['bancobpm.it', 'webank.it','ibbweb.tecmarket.it']
                 }
             });
             // console.log("GTAG - Pagina tracciata")

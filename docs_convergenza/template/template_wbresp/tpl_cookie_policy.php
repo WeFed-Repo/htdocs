@@ -6,15 +6,21 @@ $(function(){
 
     // Inizializzazione dei campi
     consent_mktg = $("input[name=consent_mktg]");
+
+    /*
     consent_glassbox = $("input[name=consent_glassbox]");
+    */
 
     // Funzione accetta/rifiuta tutto
     consentCookies = function(par){
         consent_mktg.attr("checked",false);
+        /*
         consent_glassbox.attr("checked",false);
-
+        */
         $("#consent_mktg_"+par).trigger("click");
+        /*
         $("#consent_glassbox_"+par).trigger("click");
+        */
     }
 
     // Rifiuta tutto
@@ -29,23 +35,28 @@ $(function(){
 
     // Salva le impostazioni
     $(".cookieSalva").on("click",function(){
-        var c_mktg = consent_mktg.filter(":checked").val(),
-            c_glassbox = consent_glassbox.filter(":checked").val();
+        var c_mktg = consent_mktg.filter(":checked").val();
+        /*    
+        var c_glassbox = consent_glassbox.filter(":checked").val();
+        */
 
         if (typeof ckfun !== "undefined") {
             ckfun.write("consent_mktg", (c_mktg==="yes").toString());
+            /*
             ckfun.write("consent_glassbox", (c_glassbox==="yes").toString());
             ckfun.write("BPM_TRACK", (c_glassbox==="yes")? "S" : "N");
-
+            */
             // Scatena, se possibile, gli eventi GTM
             if (typeof dataLayer !== "undefined") {
                 if (c_mktg==="yes") dataLayer.push({'event': 'consent_mktg'});
+                /*
                 if (c_glassbox==="yes") dataLayer.push({'event': 'consent_glassbox'});
+                */
             }
         }    
 
         // Pagina di reindirizzamento a valle del salvataggio
-        location.href = "www.webank.it";
+        location.href = "https://www.webank.it";
         
     });
 
@@ -133,14 +144,15 @@ $(function(){
                                             <h4>Cookie "di profilazione"</h4>
                                             <p>Tali cookie permettono di tracciare un profilo degli utenti raccogliendo informazioni sulle loro preferenze di navigazione, per poi inviare contenuti personalizzati (banner promozionali e/o offerte dedicate).<br>Per i clienti che accedono all'area internet banking mediante l'uso dei codici personali di identificazione, le informazioni ricavate dai cookie potranno essere aggregate a quelle che la Banca gi&agrave; detiene e – sulla base dei consensi forniti – utilizzate anche per integrarne il profilo personale.<br>Per l'installazione dei cookie di profilazione &egrave; richiesto il consenso dell'utente.</p>
                                             
+                                            <!-- GLASSBOX
                                             <section>
+                                               
                                                 <h4>Cookie gestiti direttamente dal titolare:</h4>
                                                 <p>
                                                 <strong>GLASSBOX</strong><br>
                                                 L'installazione &egrave; finalizzata alla raccolta di informazioni sulle preferenze di navigazione e all'invio di comunicazioni personalizzate e/o offerte commerciali, sulla base degli interessi manifestati attraverso la navigazione in internet.
                                                 </p>
                                                 
-                                                <!-- CONSENSO -->
                                                 <div class="row">
                                                     <div class="col-sm-3">
                                                         <div class="radio radio-inline">
@@ -155,11 +167,10 @@ $(function(){
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- FINE CONSENSO -->
                                             </section>
-
+                                            -->
                                             <section>
-                                                <p><strong>Cookie gestiti da terze parti:</strong></p>
+                                                <h4>Cookie gestiti da terze parti:</h4>
                                                 <p>Su questo sito sono installati anche cookie rilasciati e gestiti da “terze parti” che, tramite tali cookie, possono raccogliere informazioni dai terminali di navigazione che visitano il sito.<br>Le principali categorie di cookie gestiti da terze parti ed installati su questo sito sono:</p>
                                                 <ul class="normal-format">
                                                     <li>Cookie di profilazione pubblicitaria: utilizzati per erogare pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione in internet.</li>
@@ -172,7 +183,7 @@ $(function(){
                                                 <p><strong>Taboola</strong><br>L'installazione &egrave; finalizzata all' ottimizzazione della navigazione, migliorando la qualit&agrave; e la funzionalit&agrave; del sito web, alla modifica/cancellazione di contenuti e servizi esistenti e/o ad altri scopi interni e statistici. L'installazione &egrave; finalizzata altres&igrave; all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet anche su siti di terze parti.<br><a href="https://www.taboola.com/privacy-policy#user-choices-and-optout" target="_blank" class="break-word">https://www.taboola.com/privacy-policy#user-choices-and-optout</a></p>
                                                 <p><strong>Payclick</strong><br>L'installazione &egrave; finalizzata all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione sul sito web al fine di inviare offerte personalizzate su altri prodotti e/o servizi.<br><a href="https://payclick.it/en/privacy" target="_blank">https://payclick.it/en/privacy</a></p>
                                                 <p><strong>Ligatus</strong><br>L'installazione &egrave; finalizzata all' ottimizzazione della navigazione, migliorando la qualit&agrave; e la funzionalit&agrave; del sito web, alla modifica/cancellazione di contenuti e servizi esistenti e/o ad altri scopi interni e statistici. L'installazione &egrave; finalizzata altres&igrave; all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet anche su siti di terze parti.<br><a href="https://www.ligatus.com/it/privacy-policy" target="_blank" class="break-word">https://www.ligatus.com/it/privacy-policy</a></p>
-                                                <p><strong>Bing</strong><br>L'installazione &egrave; finalizzata all'ottimizzazione della navigazione, all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet anche su siti di terze parti, all'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato il sito www.bancobpm.it e alla personalizzazione dei contenuti.<br><a href="http://www.microsoft.com/privacystatement/it-it/MicrosoftOnlineAdvertising/Default.aspx" target="_blank" class="break-word">http://www.microsoft.com/privacystatement/it-it/MicrosoftOnlineAdvertising/Default.aspx</a></p>
+                                                <p><strong>Bing</strong><br>L'installazione &egrave; finalizzata all'ottimizzazione della navigazione, all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet anche su siti di terze parti, all'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato il sito e alla personalizzazione dei contenuti.<br><a href="http://www.microsoft.com/privacystatement/it-it/MicrosoftOnlineAdvertising/Default.aspx" target="_blank" class="break-word">http://www.microsoft.com/privacystatement/it-it/MicrosoftOnlineAdvertising/Default.aspx</a></p>
                                                 <p><strong>Google Advertising</strong><br>L'installazione &egrave; finalizzata all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet, all'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato il sito, alla personalizzazione dei contenuti, all'ottimizzazione della navigazione e alla condivisione di contenuti sui social network.<br><a href="https://policies.google.com/technologies/ads?hl=it" target="_blank" class="break-word">https://policies.google.com/technologies/ads?hl=it</a></p>
                                                 <p><strong>Facebook</strong><br>L'installazione &egrave; finalizzata all'ottimizzazione della navigazione, all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet anche su siti di terze parti, all'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato il sito, alla personalizzazione dei contenuti, e alla condivisione di contenuti sui social network.<br><a href="https://www.facebook.com/policies/cookies/" target="_blank" class="break-word">https://www.facebook.com/policies/cookies/</a></p>
                                                 <p><strong>Criteo</strong><br>L'installazione &egrave; finalizzata all'ottimizzazione della navigazione, all'invio di pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione internet, all'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato il sito, alla personalizzazione dei contenuti.<br><a href="https://www.criteo.com/it/privacy/" target="_blank" class="break-word">https://www.criteo.com/it/privacy/</a></p>
