@@ -78,6 +78,7 @@ $(function () {
     /* DMP (versione "indipendente" - codice da fornitore) */
     var params = filterParams({
         sv9: (typeof X !== "undefined") ? X : "",
+        sv25: (typeof X2 !== "undefined") ? X2 : "",
         sv14: window.location.href
     });
     var dmpImg = $("<img>").attr("src", dmp_baseurl + params["dmp"]).css({"width":"1px","height":"1px", "visibility":"hidden","position":"absolute","bottom":"0","left":"0"});

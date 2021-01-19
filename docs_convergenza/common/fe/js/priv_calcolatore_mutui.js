@@ -133,10 +133,10 @@ function mCheckVal(field,fv)
 			mForm.find("input[name=valoreimmobile]").val(formatMigliaia(Math.ceil((mImp/mLtv) * 100)));
 			noerror = false;
 		}
-		// Limitazione a 700k esclusiva per YouWeb/Acquisto
-		if (feBank === "youweb" & fv>700000 & mFinalita === "Acquisto" && mAss === "CAT") {
-			field.val(700000);
-			mShowError(mForm.find("input[name=valoreimmobile]"),"La polizza casa utilizzata per la simulazione online prevede un valore di ricostruzione massimo pari a 700.000&euro;. Verifica in filiale le opzioni di assicurazione del tuo immobile.");
+		// Limitazione a 2 Milioni di Euro esclusiva per YouWeb/Acquisto + CATTOLICA
+		if (feBank === "youweb" && fv>2000000 && mFinalita === "Acquisto" && mAss === "CAT") {
+			field.val(2000000);
+			mShowError(mForm.find("input[name=valoreimmobile]"),"La polizza casa utilizzata per la simulazione online prevede un valore di ricostruzione massimo pari a 2.000.000&euro;. Verifica in filiale le opzioni di assicurazione del tuo immobile.");
 			noerror = false;
 		}
 	}

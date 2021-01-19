@@ -23,3 +23,13 @@ h2.titFinalita span {color:#002e60;}
 .mData .scheda {background-image: url(../../fe/img/blue_freccia_link.png);}
 #mCalcCons .sliderBlock .slider-handle {background-image: url(../../fe/img/blue_mutui_cursore.png);}
 a.icoinfo {background-image:url(../../fe/img/blue_icon_info.png);}
+
+/* Cookie bar 2021 */
+.cookie-banner .cookie-console button {
+    background-color:#8096AE; color: #fff;border:solid 2px #8096AE;
+}
+.cookie-banner .cookie-console button:hover {opacity:0.8;}
+.cookie-banner .cookie-console button.evidente {
+	background-color:#fff; color: #666;border:solid 2px #fff;
+}
+/* Fine cookie bar 2021 */

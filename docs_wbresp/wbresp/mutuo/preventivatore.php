@@ -334,33 +334,7 @@ else
     </footer>
     <!-- FINE FOOTER -->  
 
-    <!-- Funzioni fascione cookie -->
-    <script type="text/javascript">
-    var closeFascioneCookie = function() {
-      if (window.localStorage) {
-        localStorage.setItem("lsCookie","accept");
-      }
-      $("#cookie-bar").hide();
-    }
-
-    $(function(){
-
-      // Inizializzazione del fascione a seconda dell'informazione contenuta nel localStorage
-      var lsCookie = false;
-      if (window.localStorage) {
-         lsCookie = (localStorage.getItem("lsCookie") == "accept") ? true : false;
-      }     
-
-      $("#cookie-bar .cb-enable").click(closeFascioneCookie);
-      $("#cookie-bar").toggle(!lsCookie);
-    
-    });
-    </script>
-    <!-- Fine funzioni fascione cookie -->
-
-    <!-- COOKIE BAR -->
-    <div id="cookie-bar" class="fixed bottom" style="display:none"><p>Questo sito utilizza i cookie per migliorare l'esperienza di navigazione degli utenti e per raccogliere informazioni sull'utilizzo del sito stesso. Vengono utilizzati solo cookie tecnici e non anche cookie di profilazione. E' possibile conoscere i dettagli consultando la nostra privacy policy <a style="text-decoration: underline;" href="http://www.bancobpmspa.com/media/Privacy_Policy.pdf" target="_blank">qui</a>. Proseguendo nella navigazione si accetta l'uso dei cookie; in caso contrario è possibile abbandonare il sito.</p><a href="http://mutuo.bancobpm.it/" class="cb-enable">Conferma</a></div>
-    <!-- FINE COOKIE BAR -->
+    <script type="text/javascript" src="./fe/js/cookiebar.js"></script>
 
  </body>
 </html>

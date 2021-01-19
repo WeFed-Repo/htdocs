@@ -514,3 +514,31 @@ label.error { position: absolute;
     footer p {background-position: center top;width:100%;padding:0 15px 20px;text-align:center;}
 
 }
+
+/* COOKIEBAR 2021 */
+.cookie-banner {
+    background-color: #122e5c;
+    position: fixed;
+    z-index: 10;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+.cookie-banner .wrapper {
+	width:100%;
+	display:block;
+	max-width:1130px;
+	margin:0 auto;
+	padding:10px;
+}
+
+.cookie-banner p {margin-bottom:15px; font-size:14px;}
+
+.cookie-banner .cookie-console { width:100%;clear:both; text-align:right;}
+.cookie-banner .cookie-console button {padding: 5px;margin: 0 0 10px 10px;display:inline-block;
+	text-transform:uppercase;padding:5px 15px; border-radius:20px;  font-weight: bold; font-size:16px;
+	
+}
+
+.cookie-banner .cookie-console button.evidente:hover {background-color:#ddd; border-color:#ddd}
+/* FINE COOKIEBAR 2021 */

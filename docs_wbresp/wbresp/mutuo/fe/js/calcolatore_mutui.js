@@ -155,7 +155,7 @@ function mCheckVal(field,fv)
 	var errMsg = "";
 
 
-	/* Blocco valore immobile surroga=9999999 (era il default) oppure 700000 */
+	/* Blocco valore immobile surroga=9999999 (era il default) oppure 2000000 */
 	var dLimit = (mFinalita === "Acquisto") ? 2000000: 9999999;
 	
 
