@@ -750,6 +750,7 @@ nav ul.level2 li.active ul li.selected a {
   text-overflow: ellipsis;
   width: 100%;
 }
+/*Servizio CMB */
 /* MEDIA QUERIES */
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
@@ -2455,6 +2456,88 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 .toolbtns-fourth,
 .userMenuMobile-seventh {
   display: none;
+}
+/*Servizio CMB */
+.modal-call-me-back h4 {
+  margin-bottom: 20px;
+}
+.modal-call-me-back #orariDispoWrapper {
+  margin: 0 -1%;
+}
+.modal-call-me-back #orariDispoWrapper .text-time {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.modal-call-me-back #orariDispoWrapper .orari-select {
+  width: 18%;
+  float: left;
+  border: 2px solid #999;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 0 1% 20px 1%;
+  padding: 15px;
+  min-height: 50px;
+}
+.modal-call-me-back #orariDispoWrapper .orari-select span {
+  display: inline-block;
+  width: 100%;
+}
+.modal-call-me-back #orariDispoWrapper .orari-select.disabled {
+  cursor: not-allowed;
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  color: #fff;
+}
+.modal-call-me-back #orariDispoWrapper .orari-select.selected {
+  background-color: #8ab10b;
+  border-color: #8ab10b;
+  color: #fff;
+}
+.modal-call-me-back #orariDispoWrapper .spsel {
+  font-size: 18px;
+}
+.modal-call-me-back #orariDispoWrapper .spsel .only-detail {
+  font-size: 16px;
+}
+.modal-call-me-back input[type="radio"]:checked + span {
+  color: #8ab10b;
+}
+.modal-call-me-back .btn-default + .btn-primary {
+  margin-left: 20px;
+}
+.modal-call-me-back .esito-ok {
+  color: #8ab10b;
+}
+.modal-call-me-back .text-footer {
+  clear: both;
+  text-align: center;
+}
+.modal-call-me-back .selected .btn-dispo {
+  line-height: 14px;
+}
+.modal-call-me-back .step-cmb {
+  display: none;
+}
+@media (max-width: 767px) {
+  .modal-call-me-back .btn-default + .btn-primary {
+    margin-left: 0;
+  }
+}
+.helpDialog .modal-header button.close,
+.modal-header button.close {
+  border-radius: 50%;
+  border: 0;
+  background: #8ab10b;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
+.helpDialog .modal-header button.close span,
+.modal-header button.close span {
+  font-weight: 300;
+  font-size: 25px;
 }
 .onTop {
   z-index: 15000;

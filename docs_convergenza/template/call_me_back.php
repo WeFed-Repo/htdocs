@@ -1,49 +1,7 @@
 <!--codice per la jsp del prenota una chiamata-->
 <!--fare una chiamata per invare l'ora attuale -->
 
-<style>
-   #orariDispoWrapper {
-      margin: 0 -1%;
-   }
-   .orari-select {
-      width:18%;
-      float:left;
-      border:2px solid #999; 
-      cursor:pointer;
-      margin-bottom:20px;
-      text-align:center; 
-      margin: 0 1% 20px 1%;
-      padding:15px;
-      min-height:50px;
-      }
-      .orari-select span {
-         display:inline-block;
-         width:100%;
-      }
-      .orari-select.disabled {
-         cursor:not-allowed;
-         background-color:#eee;
-      }
-      .orari-select.selected {
-         border-color:#8ab10b;
-      }
-      .text-footer {
-         clear:both;
-         text-align:center;
-      }
-      .btn-dispo{
-         display:none
-      }
-      .selected .btn-dispo {
-        line-height:14px;
-      }
-      .selected .text-dispo{
-         display:none
-      }
-      .step-cmb {
-         display:none;
-      }
-</style>
+
 
 <?php
    $nameCliente = $_POST['nameCliente'];
@@ -77,11 +35,80 @@
           $('.step-cmb .btn-default').hide();
        }
        else {
-           var msgTime = "l'orario " + orarioSelVal;
+           var msgTime = "l'orario " + "<strong>" + orarioSelVal + "</strong>";
               $('.step-cmb .btn-default').show();
       }
       $(".selected-time").html(msgTime);
    }
+
+   //funzione per costruire HTML (desktop e mobile ) in caso di orario disponibile
+   var setHtmlOrariDisponibili = function(orariDisponibili) {
+    
+    $(orariDispoWrapper).empty();
+    $("#btn-seleziona-orario").addClass("disabled").prop("disabled",true);
+    if(typeof orariDisponibili !== 'undefined') {
+      var htmlDeskTablet ="",
+        htmlMobile = '<div class="spsel nosel" id="selectOrariDisponibili"  placeholder="Seleziona Orario"><input type="hidden" name="selectOrariDisponibiliInput"><div class="spsel-options"></div></div>';
+        if(isSmallDevice) {
+            $(orariDispoWrapper).append(htmlMobile);
+         }
+      $.each(orariDisponibili,function(i,v){
+         var isNotDisp = v.ndispo === 0 ? true : false,
+             classDis = isNotDisp ? "disabled" : "",
+             orario = (v.orario!=="ora") ? v.orario : "Chiamami ora!",
+             htmlDeskTablet = '<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>'  + '</div>';
+             InnerHtmlMobile = v.ndispo!==0 ? '<div class="spsel-option" data-value="' + v.orario + '"><a class="spsel-option-el">' + orario + '<span class="text-dispo only-detail"> (' + v.ndispo +  ' disponibili)</span>' + '</a></div>' : '';
+             if(isSmallDevice) {
+                $('.spsel-options').append(InnerHtmlMobile);
+             }
+             else {
+               $(orariDispoWrapper).append(htmlDeskTablet);
+            }
+       })
+
+       $("#selectOrariDisponibili").spSel(
+          function(){ 
+             var SelectedOrario = $("input[name=selectOrariDisponibiliInput]").val();
+                 orarioSelVal = SelectedOrario;
+                 if(SelectedOrario!="") {
+                  $("#btn-seleziona-orario").removeClass("disabled").prop("disabled",false);
+                 }
+               }
+       );
+    }
+    
+   }
+   //funzione di selezione orario 
+   var handleSelectOrari = function() {
+      var   btnSelectable = $(".orari-select:not(.disabled)"),
+            selectSelectable = $("#selectOrariDisponibili .spsel-option-el");
+     btnSelectable.on("click", function(event){
+         el = $(this);
+         if(el.hasClass("selected"))
+         {
+            return false;
+         }
+         else {
+            btnSelectable.removeClass("selected");
+            el.addClass("selected");
+            $("#btn-seleziona-orario").removeClass("disabled").prop("disabled",false);
+            orarioSelVal = el.find(".text-time").text();
+         }
+       })
+       selectSelectable.on("click", function(event){
+         
+          //alert($(this).html());
+      
+       })
+   }
+
+   //funzione di selezione argomenti
+   var handleSelectArg = function() {
+      $('input[name="arg"]').on("click",function(e){
+          $("#btn-conferma").removeClass("disabled").attr("disabled",false)
+      })
+   }
+   var orariDisponibili;
    var callDipso = function(dispoUrl) {
       
       $.ajax({
@@ -101,20 +128,29 @@
 		success: function(data) {
          
           var dati_call = data,
-            nOr = dati_call.fasce_orario_dispo,
             arg=  dati_call.arg,
             stato = dati_call.stato;
-            //orarioSelVal = $("input[name='orarioSel']").val();
+            orariDisponibili = dati_call.fasce_orario_dispo;
             //leggo il json di dati degli orari disponibili che mi torna il servizio e se mi tornano i dati costruisco dinamicamente i blocchi di orario
             //costruzione dell'html per accogliere i dati che provengono dal servizio per lo step 1
             // se la chiamata è success e mi resituisce gli orari disponibili
+            //step 2: costruzione dell'html per accogliere i dati che provengono dal servizio (argomenti)
+            $("#btn-seleziona-orario").on("click",function(e){
+                  e.preventDefault();
+                  $(argWrapper).empty();
+                  $("#btn-conferma:not('disabled')").addClass("disabled").attr("disabled",true);
+                  $.each(arg,function(i,v){
+                     $(argWrapper).append ('<div class="radio inline"><label class="textWrapper"><input type="radio" name="arg"><span class="text"> ' + v + '</span></label></div>')
+                  })
+                  handleSelectArg();
+                  setNextStepVisible('#step-argomento');
+            })
+
+            
             
             if(stato === 'disponibile')
             {
-               $.each(nOr,function(i,v){
-                  var classDis = v.ndispo === 0 ? "disabled" : "";
-                  $(orariDispoWrapper).append('<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + v.orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>' + '<button class="btn-dispo">Seleziona</button>' + '</div>')
-               })
+               setHtmlOrariDisponibili(orariDisponibili);
                $('.step-cmb').eq(0).show();
             }
             // se la chiamata è success e mi restituisce la conferma di prenotazione
@@ -122,7 +158,7 @@
                setOrarioSelected(dati_call.orarioSel);
                $('input[name="isAlreadyBooked"]').val("true"),
                setStatoPrenotazione();
-               setNextStepVisible('#step-conferma-prenotato',"Chiamata prenotata");
+               setNextStepVisible('#step-conferma-prenotato','<span class="esito-ok">Chiamata prenotata</span>');
             }
             if(stato ==="occupato") {
                setOrarioSelected (dati_call.orarioSel);
@@ -149,27 +185,7 @@
             if(stato ==="nonCertificato") {
                setNextStepVisible('#step-nonCertificato');
             }
-             //call back sul singolo elemento selezionato
-             var  btnSel = $(".orari-select:not(.disabled)");
-                 btnSel.on("click", function(event){
-                        el = $(this);
-                        if(el.hasClass("selected"))
-                        {
-                           return false;
-                        }
-                        else {
-                           btnSel.removeClass("selected").find(".btn-dispo").hide();
-                           el.addClass("selected").find(".btn-dispo").show(300);
-                           orarioSelVal = el.find(".text-time").text();
-                  }
-               })
-               //step 2: costruzione dell'html per accogliere i dati che provengono dal servizio
-               $(".btn-dispo").on("click",function(){
-                  $.each(arg,function(i,v){
-                     $(argWrapper).append ('<div class="radio inline"><label class="textWrapper"><input type="radio" name="arg"><span class="text"> ' + v + '</span></label></div>')
-                  })
-                  setNextStepVisible('#step-argomento');
-               })
+            handleSelectOrari(); 
           },
           error: function() {
              alert("error")
@@ -177,43 +193,55 @@
       })
       }  
    $(function () {
+      
       //chiamata a servizio per restituire gli orari disponibili
       var dispoUrl = "/include/ajax/cmb_json.php?rand=" + Math.random(),
          orariDispoWrapper = $("#orariDispoWrapper"),
          argWrapper =  $("#argWrapper");
          callDipso(dispoUrl);
-
       
-   //step3: riepilogo
-   $("#btn-conferma").on("click",function(){
-         setOrarioSelected (orarioSelVal);
-         setNextStepVisible('#step-riepilogo');
-         
+      
+      
+      //step3: riepilogo
+      $("#btn-conferma").on("click",function(){
+            setOrarioSelected (orarioSelVal);
+            setNextStepVisible('#step-riepilogo');
       })
-
       //step4:conferma
       $("#btn-prenota").on("click",function(){
          orarioSel = orarioSelVal;
          callDipso(dispoUrl);
       })
-      
-       //annulla prenotazione
+      //annulla prenotazione
       $(".annulla-pre").on("click",function(){
          setNextStepVisible('#step-annullaPre');
       
       })
-      //annulla prenotazione step 1
-      $("#annullaBack").on("click",function(){
-         setNextStepVisible('#step-conferma-prenotato');
-      })
+      
       //conferma di annulla prenotazione 
       $("#annullaPreConf").on("click",function(){
          annullaFlag = "true";
          callDipso(dispoUrl);
       })
+
+      //click sul bottone indietro
+      $(".btn-back").on("click",function(){
+         var stepPrev = $(this).attr("data-back")
+         setNextStepVisible('#' + stepPrev);
+      })
     })
-    
- </script>
+    //se si passa da desktop a mobil e viceversa chiudo overlayer per ricostruire con il corretto html
+    var isOnOpeningSmallDevice = isSmallDevice;
+    $(window).resize(function() {
+         findSmartDevice();
+         
+         if(isOnOpeningSmallDevice !== isSmallDevice )  {
+            setHtmlOrariDisponibili(orariDisponibili);
+            handleSelectOrari();
+            isOnOpeningSmallDevice=isSmallDevice
+      }
+   });
+</script>
 
 
 <form class="formGenerico" action="">
@@ -221,21 +249,25 @@
   
    <!-- step 1: scelta della fascia oraria-->
    <section id="step-prenota" class="step-cmb">
-      <h4 class="align-center">Vuoi parlare con un nostro operatore oggi? <br>
-      Indicaci a che ora, ti chiamiamo noi.</h4>
+      <h4>Vuoi parlare con un nostro operatore oggi? Indicaci a che ora, ti chiamiamo noi.</h4>
       <div id="orariDispoWrapper"></div>
       <div class="text-footer">
          <p>Il servizio &egrave; disponibile dal luned&igrave; al venerd&igrave; XX - XX e il sabato XX – XX.
          Sono esclusi i giorni festivi. </p>
       </div>
+      <div class="btn-align-center">
+          <a id="btn-seleziona-orario" type="button" class="btn btn-primary disabled">Seleziona</a>
+          <br class="clear">
+      </div>
    </section>
    <!-- step 2: scelta argomento-->
    <section id="step-argomento" class="step-cmb">
-      <h4 class="align-center">Per quale argomento vuoi essere ricontattato?</h4>
+      <h4>Per quale argomento vuoi essere ricontattato?</h4>
       <div id="argWrapper"></div>
-      <div class="btn-align-right">
+      <div class="btn-align-center">
           <div>
-            <a type="button" id="btn-conferma" class="btn btn-primary">prosegui</a>
+             <a type="button" id="btn-indietro" class="btn btn-default btn-back" data-back="step-prenota">indietro</a>
+             <a type="button" id="btn-conferma" class="btn btn-primary disabled" disabled>prosegui</a>
           </div>
       </div>
    </section>
@@ -244,86 +276,88 @@
       <p> <?php print $nameCliente ?>, hai selezionato <span class="selected-time"></span><p>
       <p>Un nostro operatore ti contatter&agrave; nella fascia oraria stabilita.</p>
       <p class="noMargin">Il numero da cui riceverai la chiamata &egrave; il: <br>
-      +39<?php print $nCellulareCert ?> <br> </p>
-      <ul class="note">
-        <li>Effettueremo un massimo di 3 tentativi</li>
-        <li>La chiamata sar&agrave; soggetta a registrazione</li>
-      </ul>
+      <?php print '<strong>'.$nCellulareCert.'</strong>' ?> <br> </p>
+         <span class="note">Effettueremo un massimo di 3 tentativi</span>
+         <span class="note">La chiamata sar&agrave; soggetta a registrazione</span>
+     
       <p>Ti chiameremo al seguente numero: <br>
-      <?php print $nCellulareCert ?>. <br>
-      <span class="note">(Questo &egrave; il tuo numero certificato, se  &grave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</span>
+      <?php print '<strong>' .$nCellulareCert.'</strong>' ?>. <br>
+      <span class="note">(Questo &egrave; il tuo numero certificato, se  &egrave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</span>
       </p>
       <p>Per confermare la prenotazione clicca su «prenota».</p>
-       <div class="btn-align-right">
+      <div class="btn-align-center">
           <div>
+            <a type="button" id="btn-indietro" class="btn btn-default btn-back" data-back="step-argomento">indietro</a>
             <a type="button" id="btn-prenota" class="btn btn-primary">prenota</a>
           </div>
       </div>
    </section>
    <!-- step 4: conferma e warning già prenotato cambia solo il titolo che è settato dinamicamente-->
    <section id="step-conferma-prenotato" class="step-cmb">
-      <div class="align-center">
-         <h4 class="intro"></h4>
-         <p>Per: <?php print $nameCliente ?><br>
-         Al numero: <?php print $nCellulareCert ?><br>
-         Fascia oraria: <span class="selected-time"></span></p>
-         <p>
-         Ti ricordiamo che verrai contattato da questo numero: <br>
-         +39 xxx xxx xxx <span class="note">( effettueremo fino a 3 tentativi)</span></p>
-         <p class="note">RICORDA: potrai annullare la chiamata fino a tutta l’ora precedente la fascia oraria concordata.</p>
-        <div>
-            <a type="button"  class="btn btn-default annulla-pre">annulla prenotazione</a>
-            <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
-         </div>
+     <h4 class="intro"></h4>
+      <p>Per: <?php print '<strong>' .$nameCliente.'</strong>' ?><br>
+      Al numero: <?php print '<strong>'.$nCellulareCert.'</strong>' ?><br>
+      Fascia oraria: <span class="selected-time"></span></p>
+      <p>
+      Ti ricordiamo che verrai contattato da questo numero: <br>
+      <?php print '<strong>'.$nCellulareCert.'</strong>' ?> <span class="note">( effettueremo fino a 3 tentativi)</span></p>
+      <p class="note">RICORDA: potrai annullare la chiamata fino a tutta l’ora precedente la fascia oraria concordata.</p>
+      <div class="btn-align-center">
+         <a type="button"  class="btn btn-default annulla-pre">annulla prenotazione</a>
+         <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
       </div>
+      
    </section>
    <!-- step 5: annulla prenotazione-->
    <section id="step-annullaPre" class="step-cmb">
-         <h4>Sei sicuro di voler annullare la prenotazione?</h4>
-      <div>
-         <a id="annullaBack" type="button"  class="btn btn-default">indietro</a>
+      <h4>Sei sicuro di voler annullare la prenotazione?</h4>
+      <div class="btn-align-center">
+         
+         <a type="button" id="btn-indietro" class="btn btn-default btn-back" data-back="step-conferma-prenotato">indietro</a>
          <a id="annullaPreConf" type="button" id="btn-close" class="btn btn-primary">annulla prenotazione</a>
       </div>
    </section>
+   
    <!-- step 5: annulla prenotazione-->
    <section id="step-annullato" class="step-cmb">
-         <h4>Prenotazione annullata</h4>
-      <div>
+     <h4>Prenotazione annullata</h4>
+      <div class="btn-align-center">
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
       </div>
    </section>
    <!-- step 6: annulla disservizio-->
    <section id="step-disservizio" class="step-cmb">
-      <p>Il servizio di prenotazione chiamata non è al momento disponibile.</p>
-      <p>Stiamo aggiornando i nostri sistemi per poterti offrire un servizio sempre più accurato.</p>
-      <p>Ci scusiamo per il disagio, riprova più tardi.</p>
-
-      <div>
-         <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
+      <div class="align-center">
+         <p>Il servizio di prenotazione chiamata non è al momento disponibile.</p>
+         <p>Stiamo aggiornando i nostri sistemi per poterti offrire un servizio sempre più accurato.</p>
+         <p>Ci scusiamo per il disagio, riprova più tardi.</p>
+         <div>
+            <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
+          </div>
       </div>
    </section>
    <!-- step 7: fuori orario-->
    <section id="step-fuoriOrario" class="step-cmb">
-      <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
-      
-      <p>Ti ricordiamo che il servizio è disponibile:</p>
-      <p><strong>dal lunedì al venerdì dalle XX:XX alle XX:XX e il sabato dalle XX:XX alle XX:XX.
-      Sono esclusi i giorni festivi.</strong>
-
-
-      <div>
-         <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
+      <div class="align-center">
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
+         
+         <p>Ti ricordiamo che il servizio &egrave; disponibile:</p>
+         <p><strong>dal lunedì al venerdì dalle XX:XX alle XX:XX e il sabato dalle XX:XX alle XX:XX.
+         Sono esclusi i giorni festivi.</strong>
+         <div><a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a></div>
       </div>
    </section>
    <!-- step 8: cell- non certificato-->
-   <section id="step-nonCertificato" class="step-cmb"> 
-      <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
-      <p>Per poterti contattare abbiamo bisogno di un numero di cellullare valido.</p>
-      <p>Il numero in nostro possesso non risulta certificato.<p>
-         Clicca sul pulsante qui sotto per certificarlo ora.
-      <div>
-         <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
-         <a type="button" id="btn-close" class="btn btn-primary">certifica cellulare</a>
+   <section id="step-nonCertificato" class="step-cmb">
+      <div class="align-center">
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
+         <p>Per poterti contattare abbiamo bisogno di un numero di cellullare valido.</p>
+         <p>Il numero in nostro possesso non risulta certificato.<p>
+            Clicca sul pulsante qui sotto per certificarlo ora.
+         <div>
+            <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
+            <a type="button" id="btn-close" class="btn btn-primary">certifica cellulare</a>
+         </div>
       </div>
    </section>
 </form>
