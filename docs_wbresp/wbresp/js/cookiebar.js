@@ -1,7 +1,7 @@
 var ckdomain = "webank.it";
 var ckfun = {
 
-    read (label) {
+    read: function (label) {
         var cs = {};
         $.each(decodeURIComponent(document.cookie).split("; "),function(i,v){
             var det = v.split("=");
@@ -10,11 +10,11 @@ var ckfun = {
         return (label)? cs[label]: cs;
     },
 
-    write (cname,cvalue) {
+    write: function (cname,cvalue) {
         document.cookie = cname + "=" + cvalue + ";path=/;domain=" + ckdomain +";expires=" + (new Date(new Date().setFullYear(new Date().getFullYear() + 1)));
     },
 
-    delete (cname) {
+    delete: function (cname) {
         document.cookie = cname + "=;domain=" + ckdomain +";expires=Thu, 01 Jan 1970 00:00:01 GMT";
     }
 
