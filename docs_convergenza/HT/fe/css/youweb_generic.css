@@ -8524,16 +8524,34 @@ p.large a {color:#0E977F;text-decoration: underline;}
     .modal-body #tbFixedColumnB th:first-child{
         width: 18%;
     }
+    /* aggiunto per allargare in caso ex bpm*/
+
+   
+    .modal-body #tbFixedColumn.ex-bpm th:first-child,
+    .modal-body #tbFixedColumnB.ex-bpm th:first-child{
+        width: 40%;
+    }
+    /* fine aggiunto per allargare in caso ex bpm*/
+    
+    
     .modal-body #tbFixedColumn th.evidenziato,
     .modal-body #tbFixedColumnB th.evidenziato{
         width: 20%;
     }
-    .modal-body .linee-wrapper .lineaT,.modal-body .linee-wrapper .lineaTb{
+    .modal-body .linee-wrapper .lineaT,.modal-body .linee-wrapper .lineaTb {
         width: 38%;
         padding-left: 18%;
         text-align: center;
         font-size:12px;
     }
+    /* aggiunto per allargare in caso ex bpm*/
+    .modal-body .ex-bpm .linee-wrapper .lineaT,.modal-body .ex-bpm .linee-wrapper .lineaTb {
+        width: 60%;
+        padding-left: 40%;
+        text-align: center;
+        font-size:12px;
+    }
+    /* fine aggiunto per allargare in caso ex bpm*/
     .modal-body .linee-wrapper .lineaN {
         font-size:12px;
     }
@@ -8558,6 +8576,12 @@ p.large a {color:#0E977F;text-decoration: underline;}
     #tbFixedColumnB th:first-child{
         width: 20%;
     }
+    /* aggiunto per allargare in caso ex bpm*/
+    #tbFixedColumn.ex-bpm th:first-child,
+    #tbFixedColumnB.ex-bpm th:first-child{
+        width: 40%;
+    }
+    /* fine aggiunto per allargare in caso ex bpm*/
     #tbFixedColumn th.evidenziato,
     #tbFixedColumnB th.evidenziato{
         width: 15%;
