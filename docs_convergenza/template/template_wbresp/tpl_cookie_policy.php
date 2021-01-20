@@ -4,6 +4,13 @@
 var consent_mktg, consent_glassbox; 
 $(function(){
 
+    // Lettura stato cookies
+    c_mktg = ckfun.read("consent_mktg");
+    // Assegnazione valori di default
+    if (typeof c_mktg==="undefined") c_mktg = "true";
+    // Inizializzazione dei valori da cookies ai radio button
+    $("#consent_mktg_"+(c_mktg==="true"? "yes": "no")).trigger("click");
+
     // Inizializzazione dei campi
     consent_mktg = $("input[name=consent_mktg]");
 
@@ -60,6 +67,9 @@ $(function(){
         
     });
 
+    // Sblocca il form
+    $("#cpForm").removeClass("loading")
+
 });
 </script>
 
@@ -114,8 +124,10 @@ $(function(){
                                     <span class="lastleaf">Cookie policy</span>
                                 </div>
                                 <div class="basic-content content simple-format">
+                                    <h2>Cookie policy</h2>
+                                    <!-- CPFORM -->
+                                    <div id="cpForm" class="loading">
                                         <section>
-                                            <h2>Cookie policy</h2>
                                             <p>Utilizziamo cookie e tecnologie simili, anche di terze parti autorizzate, per offrirti una migliore esperienza d'uso e navigazione del sito cercando di mettere a disposizione i contenuti realizzati secondo i tuoi interessi, preferenze, percorsi di navigazione . Da questa pagina puoi approfondire tutte le tipologie di cookies che utilizziamo, esprimere le tue preferenze di consenso e modificarle in qualsiasi momento.</p>
                                             <div class="btn-multi">
                                                 <button class="btn-whlit" id="cookieRifiuta">Rifiuta tutto</button>
@@ -213,6 +225,8 @@ $(function(){
                                                 </div>
                                             </div>
                                         </section>
+                                        </div>
+                                         <!-- /CPFORM -->
                                         <hr>
                                         <!-- INFORMATIVA FINALE -->
                                         <section>
