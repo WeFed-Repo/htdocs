@@ -3921,6 +3921,7 @@ var modificaStep = function (el) {
         parentPanel.find('.panel-title a').trigger('click');
     }
     parentPanel.removeClass('editable').addClass('unclosable');
+    $("#idModifica").hide();
     //parentPanel.find('input, textarea,select').prop("disabled", false);
     parentPanel.find('input:not("#adever input"), textarea:not("#adever textarea"), select:not("#adever select")').prop("disabled", false);
     $("#adever textarea").each(function() {
