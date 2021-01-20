@@ -1,8 +1,8 @@
 <?php
    //casistiche tabelle colonne
-      $clientiYou = true; //bpm o ex bpm
+      $clientiYou = false; //bpm o ex bpm
       $allLine = false; //5 o sei colonne
-      $isOverlayer = false; //in pagina o in overlayer
+      $isOverlayer = true; //in pagina o in overlayer
    ?>
 <?php if($isOverlayer == true) {;?>
 <a href="#" data-toggle="modal"  data-target="#modaleTabellaCosti"> Apri tabella in overlayer</a>
@@ -360,9 +360,28 @@
                            <td class="right">1,00&euro;</td>
                            <?php }?>
                         </tr>
-                        <tr class="pari title-row hidden-xs">
+                        <!--inserire qui ultima riga -->
+                        <tr class="pari">
                            <td class="left">
-                              INFORMATIVE IN TEMPO REALE
+                              Analisi tecnica e fondamentale
+                           </td>
+                           <?php if($clientiYou == true) {;?>
+                           <td class="center evidenziato">
+                              Inclusa
+                           </td>
+                           <?php }?>
+                           <td class="right">Non inclusa</td>
+                           <td class="right">Inclusa</td>
+                           <td class="right">Inclusa</td>
+                           <?php if($allLine == true) {;?> 
+                           <td class="right">Inclusa</td>
+                           <?php }?>
+                        </tr>
+                        
+                        <tr class="dispari title-row hidden-xs">
+                           <td class="left" data-colspan="all">
+                              INFORMATIVE IN TEMPO REALE - CANONE MENSILE <br>
+                              <span>(servizi opzionali, possono essere attivati successivamene in filiale)</span>
                            </td>
                            <?php if($clientiYou == true) {;?>
                            <td class="center evidenziato"></td>
@@ -374,7 +393,7 @@
                            <td class="right">;</td>
                            <?php }?>
                         </tr>
-                        <tr class="dispari">
+                        <tr class="pari">
                            <td class="left">
                               Quotazioni New York (NYSE, NASDAQ, AMEX) in tempo reale
                            </td>
@@ -396,7 +415,7 @@
                            <td class="right">12,00&euro;</td>
                            <?php }?>
                         </tr>
-                        <tr class="pari">
+                        <tr class="dispari">
                            <td class="left">
                               Quotazioni Francoforte in tempo reale
                            </td>
@@ -418,7 +437,7 @@
                            <td class="right">15,00&euro;</td>
                            <?php }?>
                         </tr>
-                        <tr class="dispari">
+                        <tr class="pari">
                            <td class="left">
                               Quotazioni Parigi e Amsterdam in tempo reale
                            </td>
@@ -440,7 +459,7 @@
                            <td class="right">10,00&euro;</td>
                            <?php }?>
                         </tr>
-                        <tr class="pari">
+                        <tr class="dispari">
                            <td class="left">
                               Quotazioni NYSE in tempo reale
                            </td>
@@ -462,7 +481,7 @@
                            <td class="right">6,00&euro;</td>
                            <?php }?>
                         </tr>
-                        <tr class="dispari">
+                        <tr class="pari">
                            <td class="left">
                               Quotazioni Nasdaq in tempo reale
                            </td>
@@ -482,22 +501,6 @@
                            </td>
                            <?php if($allLine == true) {;?> 
                            <td class="right">6,00&euro;</td>
-                           <?php }?>
-                        </tr>
-                        <tr class="pari">
-                           <td class="left">
-                              Analisi tecnica e fondamentale
-                           </td>
-                           <?php if($clientiYou == true) {;?>
-                           <td class="center evidenziato">
-                              Inclusa
-                           </td>
-                           <?php }?>
-                           <td class="right">Non inclusa</td>
-                           <td class="right">Inclusa</td>
-                           <td class="right">Inclusa</td>
-                           <?php if($allLine == true) {;?> 
-                           <td class="right">Inclusa</td>
                            <?php }?>
                         </tr>
                         <tr class="radio-mobile">
@@ -572,14 +575,22 @@
     else {
         $('#tbFixedColumn').bootstrapTable('destroy').bootstrapTable({
             fixedColumns: false,
-               fixedNumber: isExBpm ? 1 : 2,
-            onPostBody : selectRadioColumn
+            fixedNumber: isExBpm ? 1 : 2,
+            onPostBody : function() {selectRadioColumn(); handleColspan()}
         });
     }
    }
-   
+   var handleColspan = function() {
+      $("td").each(function() {
+         if($(this).attr('data-colspan')){
+            attrCols = $(this).attr('data-colspan'),
+            nCols = attrCols=== "all" ? $(this).closest("tr").find("td").length : attrCols;
+            $(this).attr("colspan",nCols).siblings("td").hide();
+         }
+      });
+   }
    var selectRadioColumn = function() {
-    var tableC = $('#tbFixedColumn'),
+     var tableC = $('#tbFixedColumn'),
         trTable = tableC.find('tr'),
         tdTable = trTable.find('td'),
         thTable = tableC.find('th'),
