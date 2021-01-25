@@ -2525,6 +2525,14 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
     margin-left: 0;
   }
 }
+@media (min-width: 768px) and (max-width: 1000px) {
+  .modal-call-me-back .modal-body {
+    padding: 0;
+  }
+  .modal-call-me-back .orari-select {
+    padding: 7px;
+  }
+}
 .helpDialog .modal-header button.close,
 .modal-header button.close {
   border-radius: 50%;
