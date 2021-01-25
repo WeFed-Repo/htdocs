@@ -52,7 +52,7 @@ $(function(){
         var cookiebtnpersonalizza = $("<button>").html("Personalizza").on("click",function(){location.href=ckconfigurl});
         var cookiebtnaccetta = $("<button>").on("click",ckaccept).html("Accetta").addClass("evidente");
         var cookiebtconsole = $("<div>").addClass("cookie-console").append(cookiebtnpersonalizza,cookiebtnaccetta)
-        var cookieText = $("<div>").addClass("cookie-text").html("<p>Questo sito utilizza i cookie (tecnici e di profilazione, propri e di terze parti) per garantirti una migliore esperienza di navigazione e inviare materiale informativo in linea con le tue preferenze. L'uso dei cookie ha la durata di&nbsp;1 anno.<br>E' possibile consultare l'informativa estesa e modificare il consenso ai cookie di profilazione, propri e di terze parti, nella sezione dedicata.</p>");
+        var cookieText = $("<div>").addClass("cookie-text").html("<p>Questo sito utilizza i cookie (tecnici e di profilazione, propri e di terze parti) per garantirti una migliore esperienza di navigazione e proporti materiale informativo in linea con le tue preferenze. L'uso dei cookie ha la durata di&nbsp;1 anno.<br>E' possibile consultare l'informativa estesa e modificare il consenso ai cookie di profilazione, propri e di terze parti, nella sezione dedicata.</p>");
         // Assembla il fascione
         cookiebanner.append($("<div>").addClass("wrapper").append(cookieText,cookiebtconsole));
         $("body").append(cookiebanner);
