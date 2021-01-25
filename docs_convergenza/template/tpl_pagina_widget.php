@@ -43,7 +43,7 @@
         <div class="box-bg-dark">
             <div class="hero-block">
                 <div class="smartphone-wrapper">
-                    <img src="/HT/fe/img/youapp/static.jpg" />
+                    <img src="<?php print($gifanimpath); ?>static.jpg" />
                 </div>
             </div>
             <div class="hero-promo-text hidden-xs">
@@ -117,11 +117,13 @@
                     <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
                     <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
                 </ul>
-                <div class="btnWrapper">
-                    <div class="btn-align-left">
-                        <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
+                <?php if ($site!=="webank") { ?>
+                    <div class="btnWrapper">
+                        <div class="btn-align-left">
+                            <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
         <!-- Fine box autoimpaginato -->
@@ -132,7 +134,7 @@
 <!-- /Box descrittivo immagine e testo -->
 
 
-
+<?php if ($site==="youweb") { ?>
 <!-- Bottom linkbox -->
 <div class="link-box">
     <h3><i class="icon icon-play"></i><span>Guarda tutti i video tutorial</span></h3>
@@ -156,3 +158,6 @@
     </div>
 </div>
 <!-- / linkbox -->
+<?php 
+}
+?>

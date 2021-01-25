@@ -1608,7 +1608,7 @@ div.messagePanel.success { background: url(/sapef24/f24/images/ico_msg_ok.png) #
     top: 10px !important;
 	}
 	.pull-right img{position:absolute !important; z-index:100; margin-left:-2px;}
-	img.lampadina{position:absolute}/*Simona:queto va messo altrimenti la lampadina non è allineata*/
+	img.lampadina{position:absolute}/*Simona:queto va messo altrimenti la lampadina non � allineata*/
 
 	input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"],.form-control{
 	    line-height: normal !important;
@@ -1840,3 +1840,5 @@ a.diagnostica,a.diagnostica:link, a.diagnostica:visited, a.diagnostica:active, a
 /*Codice modifica $16128$*/
 /*Codice modifica $16355$*/
 /*Codice modifica $16595$*/
+
+.fileUpload:hover {margin-bottom:0 !important}

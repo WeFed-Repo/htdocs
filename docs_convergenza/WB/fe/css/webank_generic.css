@@ -11092,6 +11092,212 @@ div.select-content select:active {
 #boxTabLineeVincolate .offertaPromoLV .sepLV2 {
   border-top-color: #7EA3CC;
 }
+/* BOX HERO */
+.box-hero {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background-color: #EBEDEE;
+  min-height: 460px;
+  clear: both;
+  margin-bottom: 25px;
+}
+.box-hero .box-bg-dark {
+  background-color: #8ab10b;
+  padding: 20px 20px 20px 340px;
+}
+.box-hero .box-bg-dark .hero-block {
+  position: absolute;
+  width: 300px;
+  left: 20px;
+  top: 20;
+  text-align: center;
+}
+.box-hero .box-bg-dark .hero {
+  height: 360px;
+  margin: 0px auto 25px;
+  display: block;
+}
+.box-hero .box-bg-dark .hero-promo-text {
+  color: #fff;
+}
+.box-hero .box-bg-light {
+  padding: 20px 20px 20px 340px;
+  display: block;
+  clear: both;
+}
+.box-hero .bullet-hero {
+  padding: 0 0 20px 80px;
+  position: relative;
+  min-height: 60px;
+}
+.box-hero .bullet-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+}
+.box-hero .bullet-text {
+  padding: 8px 0 5px 0;
+  font-size: 14px;
+  display: inline-block;
+}
+.box-hero .bullet-text span.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Bottoni app */
+.btn-app-console {
+  text-align: left;
+}
+.btn-app-console .btn-app {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.btn-app {
+  width: 135px;
+  height: 40px;
+  display: inline-block;
+  background-size: cover !important;
+  background: transparent none no-repeat center center;
+  border: solid 1px #ddd;
+  border-radius: 7px;
+}
+.btn-appstore {
+  background-image: url("/common/fe/img/bdg_applestore.png");
+}
+.btn-googleplay {
+  background-image: url("/common/fe/img/bdg_googleplay.png");
+}
+.btn-appgallery {
+  background-image: url("/common/fe/img/bdg_appgallery.png");
+}
+@media (max-width: 767px) {
+  /* Hero smart */
+  .btn-app-console {
+    text-align: center;
+  }
+  .box-hero {
+    min-height: auto !important;
+  }
+  .box-bg-dark,
+  .box-bg-light {
+    padding-left: 20px !important;
+  }
+  .box-hero .box-bg-light {
+    padding-top: 90px;
+  }
+  .box-hero .box-bg-dark .hero-block {
+    width: 100%;
+    left: 0;
+    top: 15px;
+  }
+  .box-hero .box-bg-dark {
+    height: 180px;
+    padding: 0 !important;
+  }
+  .box-hero .box-bg-dark .hero {
+    height: 220px;
+  }
+  .box-hero .box-bg-dark .hero-promo-text {
+    display: none;
+  }
+  .box-hero .btn-app {
+    width: 125px;
+    height: 36px;
+    margin-left: 5px !important;
+  }
+}
+/* Box con impaginazione automatica */
+.auto-lr-boxes {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.auto-lr-boxes .lr-box {
+  margin-bottom: 30px;
+  width: 100%;
+  display: inline-block;
+}
+.auto-lr-boxes .lr-box .box-image {
+  width: 250px;
+  padding: 0 15px 0 0;
+  margin: 20px;
+  float: right;
+  display: block;
+  text-align: center;
+}
+.auto-lr-boxes .lr-box .box-description {
+  width: calc(100% - 320px);
+  float: left;
+  display: block;
+}
+.auto-lr-boxes .lr-box:nth-child(even) .box-image {
+  float: left;
+}
+.auto-lr-boxes .lr-box:nth-child(even) .box-description {
+  float: right;
+}
+@media (max-width: 767px) {
+  .auto-lr-boxes .lr-box .box-image {
+    float: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 0 25px !important;
+    clear: both;
+    display: inline-block;
+  }
+  .auto-lr-boxes .lr-box .box-description {
+    float: none !important;
+    width: 100%;
+  }
+}
+/* Box con background "grigetto" e padding */
+.light-bg {
+  background: #eee;
+  padding: 15px;
+}
+/* Smartphone wrapper per immagini ed animazioni */
+.smartphone-wrapper {
+  display: inline-block;
+  width: 190px;
+  height: 368px;
+  position: relative;
+}
+.smartphone-wrapper img {
+  width: 172px;
+  height: 290px;
+  margin-top: 40px;
+}
+.smartphone-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: transparent url(/common/fe/img/smartphone_wrapper.png) no-repeat center center;
+  background-size: cover;
+}
+.smartphone-wrapper.small {
+  width: 120px;
+  height: 230px;
+}
+.smartphone-wrapper.small img {
+  width: 108px;
+  height: 184px;
+  margin-top: 23px;
+}
+@media (max-width: 767px) {
+  .smartphone-wrapper {
+    width: 120px;
+    height: 230px;
+  }
+  .smartphone-wrapper img {
+    width: 108px;
+    height: 184px;
+    margin-top: 23px;
+  }
+}
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
   body #contenuti {

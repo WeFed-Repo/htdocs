@@ -1,0 +1,267 @@
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Modulo F24 Enti</title>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript" src='/sapef24/f24/javascript/jquery-1.9.0.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/scroll.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/jquery-migrate-1.0.0.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/bootstrap.min.js'></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script type="text/javascript" src='/sapef24/f24/javascript/ie10-viewport-bug-workaround.js'></script>
+
+
+<!--<script type="text/javascript" src='/sapef24/f24/javascript/jquery.tablesorter.js'></script>-->
+<script type="text/javascript" src='/sapef24/f24/javascript/jquery-ui.min.js'></script>
+
+<!--nostro-->
+	<script type="text/javascript"  src='/sapef24/f24/javascript/jquery.ui.touch-punch.min.js'></script>
+<!-- * -->
+<script type="text/javascript" src='/sapef24/f24/javascript/swfobject.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/funzioniHT.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/funzioniHB.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/jquery.blockUI.js'></script>
+
+<script type="text/javascript" src='/sapef24/f24/javascript/jquery.dataTables.min.js'></script>    
+
+
+<!--nostro-->
+
+	<script type="text/javascript" src='/sapef24/f24/javascript/help.js'></script>
+	
+
+
+
+
+	
+<script type="text/javascript">
+	
+		function getPathImages() { return '/sapef24/f24/images/';}
+	
+</script>
+<script type="text/javascript" src='/sapef24/f24/javascript/controlli.js'></script>
+<script type="text/javascript" src='/sapef24/f24/javascript/doubleClickPrevention.js'></script>
+	
+<link media="screen,print" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/jquery-ui.css' />
+<link media="screen,print" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/bootstrap.min.css' />
+<link media="screen,print" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/essentials.css' />
+	
+		<link media="screen,print" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/header-default.css' />
+		<link media="screen" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/styleNew.css' />
+		
+		<!--NUOVA GRAFICA-->
+			
+	<link media="print" rel="stylesheet" type="text/css" href='/sapef24/f24/styles/stylePrint.css' />
+	
+		<script type="text/javascript">
+			(function(){   
+			  if (window.addEventListener)
+			  {
+			    window.addEventListener("load", nascondi_loading_screen, false);
+			  }else{
+			    window.attachEvent("onload", nascondi_loading_screen);
+			  }
+			})();
+			function mostra_loading_screen()
+			{
+			  document.getElementById("loading_screen").style.display = 'block';
+			}
+			function nascondi_loading_screen()
+			{
+			  document.getElementById("loading_screen").style.display = 'none';
+			}
+		</script>
+		
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		
+		function noBack(){
+			window.history.forward();
+		}
+		
+		noBack();
+		
+		window.onload = noBack;
+		window.onpageshow = function(evt) {
+			if (evt.persisted) {
+				noBack();
+			}
+		}
+		
+		window.onunload = function() {
+			void(0);
+		}
+	
+	</script>
+
+
+
+<script type="text/javascript">
+
+	if (window.opera) {
+		window.opera.setOverrideHistoryNavigationMode('compatible');
+		
+		if (history.navigationMode) {
+			history.navigationMode = 'compatible';
+		}
+	}
+	
+</script>
+	
+	
+ 
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src='/sapef24/f24/javascript/respond.min.js'></script>
+  	<script type="text/javascript" src='/sapef24/f24/javascript/html5.js'></script>
+  <![endif]-->
+  <script type="text/javascript" src='/sapef24/f24/javascript/alten.js'></script>
+  
+  <style id="style-1-cropbar-clipper">
+	/* Copyright 2014 Evernote Corporation. All rights reserved. */
+	
+	.en-markup-crop-options {
+		top: 18px !important;
+		left: 50% !important;
+		margin-left: -100px !important;
+		width: 200px !important;
+		border: 2px rgba(255,255,255,.38) solid !important;
+		border-radius: 4px !important;
+	}
+	.en-markup-crop-options div div:first-of-type {
+		margin-left: 0px !important;
+	}
+</style>
+ 
+
+<style type="text/css">
+	#loading_mobile, #loading_screen{  
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: #fff url(/sapef24/f24/images/phone/loading.gif) 50% no-repeat;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+	
+		#loading_screen{  
+			background: url(/sapef24/f24/images/loading.gif) 50% no-repeat;
+		}
+	
+</style>
+	
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="loading_screen"></div>
+
+
+
+
+
+<form name="UploadPdfForm" method="post" action="/sapef24/f24/caricaPdf.do" enctype="multipart/form-data" target="frCenter"><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="InvalidToken">
+
+ 	<input type="hidden" name="uploaded" value="false" />
+
+
+	
+
+
+		<div class="main row">
+			<div class="container">
+				<div id="mainContent" class="center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="riquadro clearfix"> 
+						<div class="section clearfix" id="idFile">
+							<h3 class="titleSection">Acquisisci Pdf delega</h3>
+								<div class="form-group row">
+									<div class="form-field-input col-md-9 col-lg-9 col-sm-9 col-xs-9">
+										<label class="control-label">
+											Se sei in possesso di una modulo F24 (qualsiasi tipo) in formato elettronico (.PDF) puoi caricarlo in questa pagina. 
+											Il sistema lo leggerà e ti mostrerà nella pagina successiva i dati letti che dovrai confermare per poi procedere con il pagamento.<br />
+											<Strong>Attenzione</Strong> la lettura funziona solo con il formato PDF testuale (non con una foto o una scansione semplice). 
+											Il formato PDF testuale è quello normalmente inviato dal commercialista o altri professionisti che utilizzano una sistema elettronico di produzione del modulo.
+										</label>
+										<div  class="marginfileUpload">
+											Carica file:
+											<input id="uploadFile" placeholder="" disabled="disabled" />
+	    									<div class="fileUpload btn btn-primary" ><!-- id="buttonSfoglia" -->
+	    										<span>Sfoglia</span>
+	    										<input id="uploadBtn" name="filePdf" type="file" class="upload" /> 
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="pull-right margin-bottom20 margin-right80">
+									<input type="submit" name="importa" value="Prosegui" onclick="javascript: return importaFlusso();" class="btn btn-primary">
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+
+	var fileInput = document.querySelector('input[type=file]');
+	var uploadFile = document.querySelector('#uploadFile');
+	
+	$(document).ready(function(){
+		fileInput.addEventListener('change', function() {
+			uploadFile.value = fileInput.value.split('\\').pop();
+		});
+	});
+</script>
+
