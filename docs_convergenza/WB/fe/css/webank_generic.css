@@ -11097,13 +11097,13 @@ div.select-content select:active {
   width: 100%;
   display: inline-block;
   position: relative;
-  background-color: #EBEDEE;
+  background-color: #8ab10b;
   min-height: 460px;
   clear: both;
   margin-bottom: 25px;
 }
 .box-hero .box-bg-dark {
-  background-color: #8ab10b;
+  background-color: #2c2c2c;
   padding: 20px 20px 20px 340px;
 }
 .box-hero .box-bg-dark .hero-block {
@@ -11145,6 +11145,7 @@ div.select-content select:active {
 .box-hero .bullet-text span.title {
   font-size: 20px;
   font-weight: 600;
+  color: #8ab10b;
 }
 /* Bottoni app */
 .btn-app-console {

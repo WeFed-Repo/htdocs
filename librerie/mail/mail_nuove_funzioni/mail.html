@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Newsletter</title>
+		<script type="text/javascript">
+			function VerificaDevice (){
+				if (navigator.userAgent.match(/iPhone/i)) {
+					document.getElementById("cambioDevice").href = "http://link1";
+				}else if(navigator.userAgent.match(/iPad/i)){
+					document.getElementById("cambioDevice").href = "http://link2";
+				}else {
+					document.getElementById("cambioDevice").href = "http://link3";
+				}
+			}				  
+		</script>
+	</head>
+	<body style="margin:0 auto; padding:0; text-align: center; font-family: tahoma, verdana, serif; font-size: 11px; color:#333; background-color:#fff">
+		<table cellpadding="0" cellspacing="0" style="width: 572px; font-family: tahoma, verdana, serif; font-size: 11px; text-align:left; line-height: 14px;" align="center">
+			<tr>
+				<td style="padding:0;"><img src="img/header.jpg" alt="Webank ti semplifica la vita, scopri i nuovi servizi pensati per te!" style="font-size: 18px; color:#8ab10b; font-weight: bold; line-height:20px; border:0;"></td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 15px;color:#666666">Gentile NOME COGNOME,	
+				<br><br>
+					lavoriamo per offrirti <strong>soluzioni comode</strong> e <strong>veloci</strong>, per questo, siamo lieti di presentarti <strong>due nuovi servizi</strong> 
+					disponibili all'interno della tua area privata:
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;"><img src="img/banner_atm.jpg" alt="Ricarica il tuo abbonamento atm, inserisci il numero della tessera da ricaricare, paghi con addebito diretto sul conto, attivi subito l'abbonamento presso i parcometri e i totem in metropolitana!" style="font-size: 18px; color:#8ab10b; font-weight: bold; line-height:20px; border:0;"></td>
+			</tr>
+			<tr>
+				<td style="padding:10px 0 0 0;"><img src="img/banner_bollo.jpg" alt="Paga il bollo auto, inserisci la targa o motociclo e la regione di residenza e verifica l'importo" style="font-size: 18px; color:#8ab10b; font-weight: bold; line-height:20px; border:0;"></td>
+			</tr>
+			<tr>
+				<td style="padding:10px 0 0 0;">
+					<table cellpadding="0" cellspacing="0" width="572">
+						<tr><td colspan="5" width="572"><img src="img/banner_top.jpg" style="border:0" alt="usali anche da mobile"/></td></tr>
+						<tr>
+							<td width="334"><img src="img/banner_bottom1.jpg" style="border:0" alt="i nuovi servizi sono disponibili anche sull'app Webank"/></td>
+							<td width="101"><a id="cambioDevice" href="javascript:;" onclick="VerificaDevice();" style="text-underline:none"><img src="img/banner_bottom2.jpg" style="border:0" alt="App store"/></a></td>
+							<td width="21"><img src="img/banner_bottom3.jpg" style="border:0" alt=""/></td>
+							<td width="101"><a href="#" style="text-underline:none"><img src="img/banner_bottom4.jpg" style="border:0" alt="Google play"/></a></td>
+							<td width="15"><img src="img/banner_bottom5.jpg" style="border:0" alt=""/></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:10px 0 0 15px;color:#666666">Continua a seguirci, altre novit&agrave; in arrivo!</td>
+			</tr>
+			<tr>
+				<td style="padding:10px 0 0 15px;color:#666666">Un saluto cordiale,<br>il team di Webank</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+#set($map=$content.map)
+<div style="width:502px;margin:0 auto;padding:0;background:#fff;text-align:left;border-right:1px solid #6f8e0a;border-left:1px solid #6f8e0a;padding:10px 0">
+<div style="padding:0 40px">
+
+<p style="margin:0;padding:0;width:100%;text-align:right;margin-bottom:33px;margin-top:10px;"><img src="/img/ret/logo_mail.gif" /></p>
+
+<p class="titolo" style="margin:0;padding:0 0 10px 0;font: normal 9.5pt helvetica,verdana,sans-serif;line-height:14pt; font-weight:bold;"></p>
+<p style="margin:0;padding:0;font: normal 9.5pt helvetica,verdana,sans-serif;line-height:14pt;color:#000;text-align:justify">
+Gentile $map.get("NOME") $map.get("COGNOME"),<br />
+<strong>a seguito dell'acquisizione di TotalErg da parte di api anonima petroli italiana S.p.A., vengono sostituiti i Buoni Carburante Web TotalErg con i Buoni Carburante Virtuali IP.<br />
+Al fine di consentire la massima spendibilit&agrave; del buono, abbiamo esteso la sua validit&agrave; a 12 mesi a decorrere dall'attivazione.</strong>
+<br /><br />
+Siamo quindi felici di inviarti il tuo buono carburante del valore di $map.get("IMPORTO") euro.
+<br /><br/>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td border="0"><img src="/img/ret/IPcard.jpg" style="float:left"></td>
+<td border="0" valign="top" style="padding-left:15px"><p style="margin:0;padding:0;font: normal 9.5pt helvetica,verdana,sans-serif;line-height:14pt;color:#000;text-align:justify"><strong>Codice buono: $map.get("CODICE")<br />
+Codice PIN: $map.get("PIN") &euro;<br />
+Scadenza: $map.get("SCADENZA")</strong></p></td>
+<tr>
+</table>
+<br />
+<strong>Utilizzo del Buono</strong><br />
+Il Buono Carburante Virtuale IP d&agrave; diritto all'acquisto di Gasolio, Benzina, GPL e Metano presso uno dei Punti Vendita IP abilitati su tutto il territorio nazionale. &Egrave; spendibile in uno o pi&ugrave; 
+rifornimenti in modalit&agrave; servito sino all'esaurimento del credito.<br />
+Trovi i Punti Vendita IP abilitati (che verranno progressivamente completati con la nuova rete acquisita) scaricando l'app gratuita Stazioni IP oppure utilizzando questo <a href="">link</a> $map.get("MODULO") .
+<br /><br />
+<strong>Indicazioni per il Cliente</strong><br />
+Prima del rifornimento, informa il Gestore IP che intendi pagare con questo Buono. Digita sul POS le 19 cifre del tuo Buono Virtuale e le 4 cifre del PIN. Il Buono non pu&ograve; essere utilizzato 
+per l'acquisto di carburante in modalit&agrave; self. Il Buono non &egrave; rimborsabile n&eacute; sostituibile neppure in caso di furto o smarrimento, e non pu&ograve; essere convertito in denaro.
+<br /><br />
+
+<strong>Servizio clienti IP</strong><br />
+<i>numero verde:  800 994750<br />
+lun - ven  8.00 - 12.30  / 15.00 - 19.00<br />
+mail: <a href="mailto:buonicarburante@gruppoapi.com">buonicarburante@gruppoapi.com</a><br /></i>
+</p>
+
+<p style="font: normal 9.5pt helvetica,verdana,sans-serif;color:#000;margin-top:20px">Buon rifornimento!<br />Il team di Webank</p>
+</div>
+</div>

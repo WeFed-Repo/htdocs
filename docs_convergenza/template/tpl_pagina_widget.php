@@ -48,14 +48,14 @@
             </div>
             <div class="hero-promo-text hidden-xs">
                 <div class="bullet-hero">
-                    <img src="<?php print $statpath; ?>/fe/img/bullet_ingranaggi.png" class="bullet" />
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_dito.png" class="bullet" />
                     <span class="bullet-text">
                         <span class="title">FACILE</span><br>
                         La installi con un tap
                     </span>
                 </div>
                 <div class="bullet-hero">
-                    <img src="<?php print $statpath; ?>/fe/img/bullet_scudo.png" class="bullet" />
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_cassaforte.png" class="bullet" />
                     <span class="bullet-text">
                     <span class="title">SICURA</span><br>
                         La usi come Dispositivo di Sicurezza
@@ -89,10 +89,6 @@
 </section>
 <!-- / Box Hero -->
 
-<!-- Importazione videoplayer -->
-<script src="/common/fe/js/videoplayer.js" type="text/javascript"></script>	
-<!-- / importazione videoplayer -->
-
 <!-- Catena di box descrittivi immagine e testo con impaginazione automatica destra/sinistra-->
 <section>
 
@@ -100,7 +96,7 @@
         <?php foreach ($anim as $an) { 
         ?>
         <!-- box autoimpaginato -->
-        <div clasS="lr-box">
+        <div class="lr-box">
             <div class="box-image">
                 <!-- Wrapper smartphone -->
                 <div class="smartphone-wrapper small">
@@ -120,7 +116,7 @@
                 <?php if ($site!=="webank") { ?>
                     <div class="btnWrapper">
                         <div class="btn-align-left">
-                            <a class="btn-link-icon text-mobile"  data-video-url="/template/video/video_esempio.mp4" data-toggle="video-overlay" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
+                            <a class="btn-link-icon text-mobile" href="#" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
                         </div>
                     </div>
                 <?php } ?>
