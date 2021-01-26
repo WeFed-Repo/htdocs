@@ -8,7 +8,7 @@
    $nCellulareCert = $_POST['nCellulareCert'];
 ?>
 <?php //se non ho prenotazioni in corso e non ho ancora scelto l'orario torna i dati per costruire il form di scelta ?>
-   <?php if  ($nCellulareCert !=="" && $alreadyBooked === 'false' &&  $orarioSel === "" && $annullaFlag=== 'false' && $disservizioFlag === "false" && $fuoriOrario !=="true") { ?>
+   <?php if  ($nCellulareCert !=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' &&  $orarioSel === "" && $annullaFlag=== 'false' && $disservizioFlag === "false" && $fuoriOrario !=="true") { ?>
       {
          "esito":"ok",
          "stato" : "disponibile",
@@ -96,7 +96,7 @@
       }
    ?>
    <?php //se non ho prenotazioni in corso e ho scelto l'orario torna i dati per la conferma della scelta ?>
-   <?php if  ($nCellulareCert!=="" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
+   <?php if  ($nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
       {
          "esito":"ok",
          "stato" : "prenotato",
@@ -109,7 +109,7 @@
    ?>
    
    <?php //se ho prenotazioni in corso torna i dati relativi alla prenotazione attuale ?>
-   <?php if  ($nCellulareCert!=="" && $alreadyBooked === "true" && $annullaFlag === 'false') { ?>
+   <?php if  ($nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === "true" && $annullaFlag === 'false') { ?>
       {
          "esito":"ok",
          "stato" : "occupato",
@@ -132,7 +132,7 @@
    ?>
 
 <?php //se c'è un disservizio tecnico ?>
-   <?php if  ($nCellulareCert!=="" && $disservizioFlag === 'true' && $alreadyBooked === 'false' ) { ?>
+   <?php if  ($nCellulareCert!=="" && $nCellulareCert!="false" && $disservizioFlag === 'true' && $alreadyBooked === 'false' ) { ?>
       {
          "esito":"ok",
          "stato" : "disservizio"
@@ -141,7 +141,7 @@
       }
    ?>
 <?php //fuori orario ?>
-   <?php if  ($nCellulareCert!=="" && $fuoriOrario === 'true') { ?>
+   <?php if  ($nCellulareCert!=="" && $nCellulareCert!="false" && $fuoriOrario === 'true') { ?>
       {
          "esito":"ok",
          "stato" : "fuoriOrario"
@@ -151,7 +151,7 @@
    ?>
 
 <?php //se numero non certificato ?>
-   <?php if  ($nCellulareCert==="") { ?>
+   <?php if  ($nCellulareCert==="false") { ?>
       {
          "esito":"ok",
          "stato" : "nonCertificato"
@@ -159,5 +159,13 @@
       <?php
       }
    ?>
-
+<?php //se numero non certificato ?>
+   <?php if  ($nCellulareCert==="") { ?>
+      {
+         "esito":"ok",
+         "stato" : "numeroNd"
+       }
+      <?php
+      }
+   ?>
 

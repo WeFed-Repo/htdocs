@@ -481,6 +481,22 @@ ol.azioni li {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+ul.ul-small,
+li.ul-small,
+ol.ul-small {
+  margin-left: 0;
+}
+ul.ul-small li,
+li.ul-small li,
+ol.ul-small li {
+  font-size: 13px;
+  list-style: none;
+}
+ul.ul-small li:before,
+li.ul-small li:before,
+ol.ul-small li:before {
+  content: "- ";
+}
 .tooltip-inner li {
   margin-bottom: 0;
 }
@@ -679,6 +695,12 @@ p {
   font-size: 1em;
   font-weight: normal;
   line-height: 22px;
+}
+p.p-small {
+  font-size: 13px;
+}
+span.span-small {
+  font-size: 13px;
 }
 .note {
   font-size: 1em;
@@ -1281,6 +1303,7 @@ table {
   /*margin: 30px 0 20px;*/
   border-collapse: collapse;
   border: 1px solid #afafaf;
+  /*tabella confronta caarte amex */
   /*td:first-child {
         border-left-style: none;
     }*/
@@ -1360,6 +1383,13 @@ table.table-sceltaprofilo td .ico-fix {
   height: 20px;
   width: 23px;
   margin-right: 10px;
+}
+table.table-confronta-costi thead th img {
+  max-width: 55%;
+}
+table.table-confronta-costi thead th span {
+  display: inline-block;
+  width: 100%;
 }
 table.table-tipoprofilo th {
   background-color: #fff;
