@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Cartimpronta</title>
+		<meta name="description" content="Webank - Cartimpronta"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#333;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff url("/wbapp/promo/mutuo/img/top_arrow.png") no-repeat top left; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:90%;margin:0 0 5% 5%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 4% 0 0}
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 2px #8ab10b;border-radius:8px;background-position:center center;background-repeat:no-repeat;background-size:cover;height:2em;width:9em;margin:0 auto 2em;padding:0.5em 0}
+			.visimg.off {border-color:#babab9;}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1Left span {text-align:left;}
+			/*.banner {background-image: url('/wbapp/promo/bancomat/img/banner.png'); background-position:0 0;background-repeat:no-repeat;height:9em;width:9em; margin-left:-0.4em;margin-top:1em;}
+			.bannerOff {background-image: url('/wbapp/promo/bancomat/img/banner_off.png');}*/
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.green {color:#8ab10b}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em}
+			span.piccolo {font-size:.75em}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/bancomat/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/bancomat/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:40%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+			
+			.col1 span.fascione {width:90%;text-align:left;float:left;line-height:1.2em;font-size:1.2em;margin:0 0 0 9%;padding:1.5% 0;color:#FFF}
+			.col1 span.fascione.primo {padding:4% 0}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:0.4em;padding-bottom:13.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/bancomat/img/banner.png');background-size: 100% 100%;margin-top:0.8em;}
+			
+			
+			.bubbles {float:left;width:100%;border:solid 2px #8ab10b; border-radius: 7px; margin-bottom:0px;}
+			.bubbles .title {color:#666;margin:-30px auto 15px; font-size:30px; height:70px; display:block;width:85%;float:none; background:#fff;border:solid 2px #8ab10b; line-height:30px;border-radius:50px;padding-top:5px;}
+
+			/* Media queries */
+			@media (max-width : 639px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				#content .col3 .col {width:44%;float:left;margin:0 5% 0 0} 
+				#content .col3 .col:nth-child(3) {width:92%;margin:0} 
+				#content .col3 .col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.1em}
+				.visimg {height:2em;width:9em;}
+				#content .col3 .col.mese {width:28%;float:left;margin:0 5% 0 0}
+				/*.banner {background-image: url('/wbapp/promo/bancomat/img/banner2.png'); height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}
+				.bannerOff {background-image: url('/wbapp/promo/bancomat/img/banner2_off.png');}*/
+				#content .col3 .col .banner span.grande {font-size:1.4em;text-align: left;padding-left:1.8em}
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/bancomat/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/bancomat/img/frecciaSu2.gif')}
+				
+				.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:0.4em;padding-bottom:13.86941580%;position:relative}
+				
+
+				.bubbles {margin-bottom:10px;}
+				.bubbles .title {  font-size: 15px;margin-top: -18px;height: 40px;line-height: 16px}
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/mutuo/img/top_fisso.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="grande">A giugno hai perso la possibilit&agrave; di partecipare all'<strong>estrazione di un buono</strong> acquisto del <strong>valore di 120 Euro</strong> ma puoi ancora vincere! Hai altre due possibilit&agrave;:</span>
+				</div>				
+				<!-- fine spazio per testo -->				
+								
+				<!-- spazio per promo -->
+				<div class="col1 col1Left">
+					<span class="grande"><strong>Ogni mese</strong>, infatti, hai la possibilit&agrave; di vincere un buono da <strong>120 Euro</strong> a scelta fra <strong>Media World, eBay</strong> oppure <strong>TotalErg</strong></span>
+				</div>
+				<!-- fine spazio per promo -->
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+								<!-- REGOLAMENTO -->
+								<span class="maintitle">CONCORSO A PREMI DENOMINATO<br>&ldquo;VINCI IN PARTENZA&rdquo;</span>
+
+								<span class="title">SOGGETTO PROMOTORE</span>
+								<p>Banca Popolare di Milano s.c. a r.l. con sede legale in Piazza F. Meda, 4 – 20121 Milano CF e PI 00715120150</p>
+								
+								<span class="title">SOGGETTO DELEGATO</span>
+								<p>GRUPO ADMA Marketing Advertising s.r.l. con sede legale in Via Conchetta, 6 – 20136 Milano CF e PI 07648100969</p>
+
+								<span class="title">AMBITO TERRITORIALE</span>
+								<p>Territorio Nazionale</p>
+								
+								<div class="leggiReg" id="vedi">
+									<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+								</div>
+								
+								
+								<div id="hiddenRegolamento" style="display:none">
+								<span class="title">DURATA DELLA MANIFESTAZIONE</span>
+								<p>
+									La manifestazione avr&agrave; durata complessiva dal 13 Ottobre 2016 al 31 Marzo 2017 con estrazione finale entro il 15 Maggio 2017. Nel dettaglio, il Mutuo ipotecario per privati dovr&agrave; essere richiesto nel periodo compreso tra il 13 Ottobre 2016 e il 31 Dicembre 2016 e dovr&agrave; essere erogato entro il 31 Marzo 2017.<br>
+									Banca Popolare di Milano si impegna a non dare inizio alla presente manifestazione a premi prima dell'avvenuta comunicazione al Ministero dello Sviluppo Economico.
+								</p>
+								
+								<span class="title">PRODOTTO PROMOZIONATO</span>
+								<p>
+									Il Concorso ha il fine di incentivare la richiesta e la sottoscrizione di Mutuo ipotecario a privati, presso le filiali del Gruppo Bipiemme (Banca Popolare di Milano e Banca Popolare di Mantova), ad esclusione dei mutui ipotecari privati Webank.
+								</p>
+								
+								<span class="title">DESTINATARI</span>
+								<p>
+									Soggetti residenti sul territorio nazionale di et&agrave; uguale o superiore a 18 anni, nel dettaglio:<br>
+									- i nuovi clienti del Gruppo Bipiemme<br>
+									- i gi&agrave; clienti del Gruppo Bipiemme non ancora titolari di un Mutuo ipotecario per privati<br>
+									- i gi&agrave; clienti del Gruppo Bipiemme titolari di un Mutuo ipotecario per privati gi&agrave; stipulato ed erogato e che faranno richiesta di un nuovo Mutuo ipotecario per privati nel periodo compreso tra il 13 Ottobre 2016 e il 31 Dicembre 2016 e che verrà loro erogato entro il 31 Marzo 2017.<br><br>
+									Non potranno beneficiare di questa iniziativa:<br>
+									- i gi&agrave; clienti del Gruppo Bipiemme che abbiano richiesto un Mutuo ipotecario per privati prima del 13 Ottobre 2016 e lo stesso non sia stato ancora erogato<br>
+									- I clienti che richiedano un Mutuo ipotecario Webank<br>
+									- i lavoratori dipendenti del Gruppo Bipiemme, Promotori Finanziari, Agenti Profamily, Agenti Reti Mediatori e di tutti gli altri soggetti coinvolti nella organizzazione e gestione del concorso.<br>
+									- coloro ai quali verr&agrave; rifiutata la domanda di apertura del Mutuo ipotecario per privati per mancanza dei requisiti richiesti dalla banca ovvero del rispetto delle disposizioni normative vigenti in materia 
+								</p>
+								
+								<span class="title">COMUNICAZIONE</span>
+								<p>
+									Il Concorso sar&agrave; veicolato tramite Dem, Cartoline pubblicitarie, siti web del Gruppo Bipiemme.<br>Il regolamento completo del Concorso sar&agrave; disponibile alla pagina www.bpm.it e www.bpmantova.it
+								</p>
+								
+								<span class="title">MODALIT&Agrave; DI SVOLGIMENTO DELLA MANIFESTAZIONE</span>
+								<p>
+									Tutti coloro che, nel periodo compreso tra il 13 Ottobre 2016 e il 31 Dicembre 2016, richiederanno un Mutuo ipotecario per privati presso le filiali del Gruppo Bipiemme e la cui erogazione avverr&agrave; entro il 31 Marzo 2017 potranno partecipare al presente concorso, che mette in palio ad estrazione un Superpremio finale, ossia un Buono IKEA (sotto forma di gift card denominate "Carta Regalo IKEA") del valore di &euro; 10.000,00 iva inclusa e ulteriori 36 Buoni IKEA del valore di &euro; 2.500,00 cad iva inclusa.<br><br>
+									<strong>La domanda di Mutuo ipotecario,</strong> predisposta in presenza della documentazione prevista per le operazioni di Mutuo ipotecario a privati, dovr&agrave; essere sottoscritta dal richiedente/i, eventuale/i garante/i, eventuali datore/i di ipoteca tramite un'Agenzia del Gruppo Bipiemme.<br><br>
+									Solitamente, nel Mutuo ipotecario, l'oggetto del contratto consiste in denaro che, al momento della stipula, o al momento del consolidamento dell'ipoteca, viene erogato a favore della parte mutuataria.<br><br>
+									<strong>Per erogazione</strong> si intende il momento in cui viene messo a disposizione del Cliente il finanziamento di cui alla domanda di Mutuo ipotecario.<br><br>
+									<strong>La Stipula</strong> (o <strong>Stipulazione</strong>) &egrave; il termine con cui si definisce la conclusione di un contratto, e cio&egrave; il momento in cui le parti si obbligano a quanto ivi contenuto.<br><br>
+									Le condizioni economiche sono reperibili sui Fogli Informativi presso le agenzie del Gruppo Bipiemme e su www.bpm.it e www.bpmantova.it. Si invitano pertanto i Destinatari della presente manifestazione a prendere visione di tale materiale informativo prima di aderire all'iniziativa e a prestare attenzione all'iter procedurale di richiesta ed erogazione del Mutuo ipotecario per privati.<br><br>
+									Il Gruppo Bipiemme non si assume alcuna responsabilit&agrave; nel caso di ritardi o inadempienze dovute a cause imputabili a terzi (Notaio, contraente etc).<br><br>
+									Nell'eventualit&agrave; in cui il Cliente abbia richiesto e ottenuto l'erogazione di pi&ugrave; di un Mutuo ipotecario per privati nel corso del periodo di validit&agrave; della presente manifestazione, potr&agrave; partecipare all'estrazione finale il numero di volte corrispondente al numero di Mutui ipotecari per privati di cui &egrave; titolare, posto che per ognuno vengano soddisfatte le condizioni sopra indicate.<br><br>
+									Nel corso della presente manifestazione non sar&agrave; per&ograve; data facolt&agrave; al singolo Cliente di poter vincere pi&ugrave; di un premio.<br><br>
+									Ai fini della partecipazione alla presente manifestazione, nel caso di Mutui ipotecari per privati co-intestati, verr&agrave; considerato esclusivamente un solo nominativo Titolare (nel specifico si far&agrave; riferimento al primo) e verr&agrave; erogato sempre un solo premio.<br><br>
+									Per Mutui ipotecari per privati co-intestati, nessuno dei due titolari dovr&agrave; essere dipendente del Gruppo Bipiemme, Promotore Finanziario, Agente Profamily, Agente Reti Mediatori o altro soggetto coinvolto nella organizzazione e gestione del concorso.<br><br>
+									<strong>La partecipazione potr&agrave; avvenire solamente qualora la richiesta di Mutuo ipotecario per privati e la sua erogazione avvengano all'interno del periodo di validit&agrave; della presente manifestazione.</strong><br><br>
+								</p>	
+								<span class="title">TECNICA DI PREMIAZIONE</span>	
+								<p>
+										Terminato il periodo di adesione alla manifestazione, il sistema produrr&agrave; n&deg; 1 file contenente l'elenco dei nominativi di tutti coloro che avranno rispettato i requisiti di partecipazione precedentemente descritti e dall'elenco verranno individuati n&deg; 37 vincitori che si aggiudicheranno, in ordine di estrazione:<br>
+										<strong>1&deg; estratto</strong>: n&deg; 1 Buono Acquisto IKEA del valore di &euro; 10.000,00 iva inclusa<br>
+										<strong>Dal 2&deg; al 37&deg; estratto</strong>: n&deg; 1 Buono Acquisto IKEA del valore di &euro; 2.500,00 iva inclusa<br>
+										<strong>L'estrazione finale avverr&agrave; a Milano in Via Conchetta, 6 presso la sede della Societ&agrave; delegata GRUPO ADMA Marketing Advertising S.r.l., davanti ad un funzionario delegato dal tutore della fede pubblica o Notaio entro il 15 Maggio 2017. Saranno inoltre previste n&deg; 20 riserve, che subentreranno in ordine di estrazione in caso di irregolarit&agrave; o irreperibilit&agrave; del vincitore.</strong><br>
+										<br>
+								</p>		
+								<span class="title">COMUNICAZIONE DI VINCITA</span>
+								<p>
+										I vincitori saranno avvisati dalla societ&agrave; delegata GRUPO ADMA telefonicamente (per n. 2 tentativi al giorno effettuati in n. 2 giorni differenti e in orari diversi) e la comunicazione ufficiale verr&agrave; inviata entro 5 giorni lavorativi dalla data di estrazione via email (solo nel caso non fosse presente un indirizzo email verrà inviata raccomandata r.r.) ai recapiti presenti negli archivi della societ&agrave; promotrice e comunicati in sede di sottoscrizione del Mutuo e/o modificati successivamente, fornendo tutte le informazioni utili ai fini della fruizione del premio. I partecipanti sono quindi invitati a controllare con particolare attenzione la propria casella di posta elettronica (anche tra le spam).<br>
+										<br>
+										Nella comunicazione i vincitori saranno invitati a rispondere entro 5 giorni lavorativi dal ricevimento della comunicazione di vincita, inviando:<br>
+										- il modulo di accettazione/rinuncia premio allegato alla suddetta comunicazione, compilato in ogni sua parte e sottoscritto
+										- copia del proprio documento d'identit&agrave; (fronte/retro) in corso di validit&agrave;<br>
+										a mezzo fax al n&deg; 02/8375812 o scansionati al seguente indirizzo email: concorsi@grupoadma.com.<br><br>
+										<strong>Il mancato invio entro il suddetto termine del modulo debitamente compilato e sottoscritto e del documento d'identit&agrave; sar&agrave; considerato formale rinuncia al premio e si passer&agrave; alle riserve, che dovranno soddisfare le medesime tempistiche di accettazione</strong><br><br>
+										La societ&agrave; promotrice si riserva di escludere le partecipazioni che presentano dati non veritieri o non corretti, anche in momenti successivi l'iscrizione, l'assegnazione dei premi o a conferma degli stessi.<br>
+										L'indicazione di dati personali non esattamente riscontrabili da un documento d'identit&agrave; (di cui la Societ&agrave; promotrice si riserva di chiedere copia in ogni momento al fine di verificare la correttezza della partecipazione), comporta la perdita del diritto al premio eventualmente vinto.<br><br>L’erogazione del premio verr&agrave; effettuata ai soggetti estratti che avranno inviato nel termine sopra citato i documenti di accettazione, solo se gli stessi risulteranno in regola alla data dell'estrazione con il pagamento delle rate del Mutuo ipotecario.<br><br>
+										Banca Popolare di Milano non si assume nessuna responsabilit&agrave; in caso di mancato contatto con i partecipanti o di mancato recapito dell'avviso di vincita dovuti all'indicazione da parte dei vincitori di indirizzi e/o dati personali errati, incompleti, non veritieri o non aggiornati.<br>
+										Il vincitore che non potesse o volesse usufruire del premio non avr&agrave; diritto ad alcuna somma di denaro.<br><br>
+								</p>		
+								<span class="title">PREMI</span>
+								<p>
+									<strong>1&deg; ESTRATTO</strong><br>
+										n&deg; 1 Buono acquisto IKEA del valore di &euro; 10.000,00 iva inclusa (Carta regalo IKEA)<br>
+									<strong>DAL 2&deg; AL 37° ESTRATTO</strong><br>
+										n&deg; 1 Buono acquisto IKEA del valore di &euro; 2.500,00 iva inclusa (Carta regalo IKEA)<br><br>
+										Il premio &egrave; personale e non &egrave; cedibile a terzi.<br>
+										Il premio in palio non pu&ograve; essere convertito n&acute; in denaro n&eacute; in gettoni d’oro.<br>
+										La Carta regalo IKEA potr&agrave; essere utilizzata in un'unica soluzione o per pi&ugrave; acquisti. L'utilizzo parziale della Carta dar&agrave; diritto a spendere l'ammontare del valore residuo nelle transazioni successive e il saldo potr&agrave; essere verificato in ciascun punto vendita IKEA in Italia presso il Servizio Clienti, alle casse prima di ogni utilizzo e usando uno dei canali di contatto indicati sul sito www.ikea.it alla pagina Servizio Clienti.
+										La Carta sar&agrave; valida come modalit&agrave; di pagamento per l'acquisto dei prodotti dell'assortimento IKEA e di alcuni servizi, in tutti i punti vendita IKEA, on-line sul sito www.ikea.it ed in generale sui siti IKEA di e-commerce che accettano tale strumento come mezzo di pagamento.<br>
+										La Carta avr&agrave; una validit&agrave; di 12 mesi dall'attivazione, salvo esaurimento del credito prima di tale termine. La data di attivazione sar&agrave; indicata sulla Carta e/o sulla lettera di accompagnamento che il soggetto promotore invier&agrave; ad ogni avente diritto al premio unitamente alla Carta stessa.
+										La scadenza della Carta sar&agrave; stampata sullo scontrino di cassa ad ogni acquisto effettuato con la stessa presso i punti vendita IKEA in Italia, o potr&agrave; essere verificata in ciascun punto vendita IKEA in Italia presso il Servizio Clienti, alle casse prima di ogni utilizzo e utilizzando uno dei canali di contatto indicati sul sito www.ikea.it alla pagina Servizio Clienti.<br>
+										Allo scadere del periodo di validit&agrave; della Carta, la stessa non sar&agrave; pi&ugrave; ammessa come forma di pagamento e non sar&agrave; soggetta ad alcuna forma di rimborso.<br><br>
+										Il vincitore non pu&ograve; contestare il premio assegnato, n&eacute; richiedere il valore corrispondente in denaro per nessun motivo. Tuttavia, nel caso che la Societ&agrave; Promotrice, per motivi non dipendenti dalla propria volont&agrave;, non sia in grado di consegnare il premio vinto, si riserva il diritto di sostituire il premio annunciato con premi della stessa natura e di valore uguale o simile.<br><br>
+								</p>		
+								<span class="title">MONTEPREMI</span>
+								<p>
+									<strong>Il montepremi complessivo ammonta a &euro; 100.000,00 iva inclusa.</strong><br><br>
+										Su tale importo, Banca Popolare di Milano presta idonea garanzia a favore del Ministero dello Sviluppo Economico, in ragione del 100% dell'ammontare.<br><br>
+								</p>		
+								<span class="title">MODALIT&Agrave; DI CONSEGNA DEI PREMI</span>
+								<p>	
+										I premi verranno consegnati entro 180 gg. dalla conclusione della manifestazione tramite posta (raccomandata postale), email o apposito evento di premiazione.<br><br>
+								</p>		
+								<span class="title">I PREMI NON RICHIESTI O NON ASSEGNATI</span>
+								<p>	
+										I premi non richiesti e non assegnati, diversi da quelli rifiutati, verranno devoluti a: ANMIC Associazione Nazionale Mutilati Invalidi Civili, via Boltraffio n. 7 - 20159 Milano - tel. 02/865598 fax 02/89011045 www.anmicmilano.org info@anmicmilano.org - codice fiscale 97015620152 anche sotto forma di premi alternativi di pari o superiore valore.<br><br>
+								</p>		
+								<span class="title">RINUNCIA ALLA FACOLT&Agrave; DI RIVALSA</span>
+								<p>
+										La Societ&agrave; organizzatrice dichiara di rinunciare alla facolt&agrave; di rivalsa della ritenuta alla fonte di cui all'ex art. 30 DPR 600 del 29/09/1973 a favore dei vincitori.<br><br>
+								</p>		
+								<span class="title">TRATTAMENTO DEI DATI</span>
+								<p>	
+										Banca Popolare di Milano s.c. a r.l. dichiara che la partecipazione al presente concorso a premi presuppone il trattamento dei dati personali dei partecipanti nel rispetto del Decreto Legislativo del 30/06/2003 n&deg;196 "Codice in materia di protezione dei dati personali" e successive modifiche, così come dettagliato e specificato dall'informativa ai sensi dell'art. 13 di detto Decreto, che &egrave; stata resa ai partecipanti al concorso a premi in fase di sottoscrizione del Mutuo.<br>
+										Il conseguimento delle finalit&agrave; di cui al presente regolamento potr&agrave; avvenire anche per mezzo di trasmissione e comunicazione di dati a terzi, con ci&ograve; si intende terzi autorizzati al correlato trattamento dei dati stessi, in quanto svolgono o forniscono specifici servizi strettamente funzionali all'esecuzione del concorso a premi ovvero in quanto nominati responsabili del trattamento ai sensi dell'art. 29 del Decreto. La lista completa dei responsabili &egrave; disponibile presso la societ&agrave;.<br><br>
+								</p>		
+								<span class="title">VARIE</span>
+								<p>	
+										Il responsabile tecnico incaricato dalla Societ&egrave; promotrice dell'estrazione dei dati sui sistemi informatici per la partecipazione al presente concorso, rilascia dichiarazione sostitutiva di atto notorio relativamente a:
+										- l'adozione di opportuni accorgimenti per impedire interventi esterni per modificare il sistema e/o influenzare le vincite;
+										- l'adozione di opportune misure di sicurezza del sistema necessarie e sufficienti a garantire la tutela della fede pubblica;
+										- i dati utilizzati per l'estrazione risiedono in basi dati ubicate nel territorio italiano.<br><br>
+										La Societ&agrave; promotrice non si assume alcuna responsabilit&agrave;:<br>
+										- per cause a lei non imputabili (es. sovraccarico di rete, assenza di rete…) che comportino l'impossibilit&agrave; ad accedere al sito;
+										- per caselle di posta elettronica piene che non consentono pertanto la ricezione di e-mail inviate da Banca Popolare di Milano;
+										- per indirizzi e-mail errati o incompleti indicati dal partecipante in fase di sottoscrizione del Mutuo;
+										- per mancata risposta dall'host computer dopo l'invio di e-mail da parte di Banca Popolare di Milano.
+										I partecipanti sono quindi invitati a controllare la propria casella di posta elettronica (anche tra le spam).<br>
+										La partecipazione al concorso &egrave; gratuita.<br><br>
+								</p>		
+								<span class="title">ARTICOLI</span>
+								<p>	
+										Per quanto non espressamente indicato nel presente regolamento, trova attuazione il D.P.R. 430 del 26/10/2001.<br><br>
+										Milano, 27 Settembre 2016<br>									
+								</p>
+															
+								<div class="leggiReg" id="chiudi">
+									<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span>
+					<span class="footnote">Concorso a premi valido dal 01/06/2015 al 31/08/2016. Estrazione finale entro 15/10/2016. Montepremi Euro 3.600,00 Iva inclusa. Prendere visione delle condizioni economiche mediante i Fogli Informativi disponibili sul sito www.webank.it</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>	

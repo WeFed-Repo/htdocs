@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Cartimpronta</title>
+		<meta name="description" content="Webank - Cartimpronta"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#333;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff url("/wbapp/promo/cartimpronta_totalerg/img/top_arrow.png") no-repeat center -1em; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:90%;margin:0 0 5% 5%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 4% 0 0}
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 2px #8ab10b;border-radius:8px;background-position:center center;background-repeat:no-repeat;background-size:cover;height:2em;width:9em;margin:0 auto 2em;padding:0.5em 0}
+			.visimg.off {border-color:#babab9;}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1Left span {text-align:left;}
+			/*.banner {background-image: url('/wbapp/promo/bancomat/img/banner.png'); background-position:0 0;background-repeat:no-repeat;height:9em;width:9em; margin-left:-0.4em;margin-top:1em;}
+			.bannerOff {background-image: url('/wbapp/promo/bancomat/img/banner_off.png');}*/
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.green {color:#8ab10b}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em}
+			span.piccolo {font-size:.75em}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/bancomat/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/bancomat/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:40%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+			
+			.col1 span.fascione {width:90%;text-align:left;float:left;line-height:1.2em;font-size:1.2em;margin:0 0 0 9%;padding:1.5% 0;color:#FFF}
+			.col1 span.fascione.primo {padding:4% 0}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:0.4em;padding-bottom:13.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/bancomat/img/banner.png');background-size: 100% 100%;margin-top:0.8em;}
+			
+			
+			.bubbles {float:left;width:100%;border:solid 2px #8ab10b; border-radius: 7px; margin-bottom:0px;}
+			.bubbles .title {color:#666;margin:-30px auto 15px; font-size:30px; height:70px; display:block;width:85%;float:none; background:#fff;border:solid 2px #8ab10b; line-height:30px;border-radius:50px;padding-top:5px;}
+
+			/* Media queries */
+			@media (max-width : 639px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				#content .col3 .col {width:44%;float:left;margin:0 5% 0 0} 
+				#content .col3 .col:nth-child(3) {width:92%;margin:0} 
+				#content .col3 .col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.1em}
+				.visimg {height:2em;width:9em;}
+				#content .col3 .col.mese {width:28%;float:left;margin:0 5% 0 0}
+				/*.banner {background-image: url('/wbapp/promo/bancomat/img/banner2.png'); height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}
+				.bannerOff {background-image: url('/wbapp/promo/bancomat/img/banner2_off.png');}*/
+				#content .col3 .col .banner span.grande {font-size:1.4em;text-align: left;padding-left:1.8em}
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/bancomat/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/bancomat/img/frecciaSu2.gif')}
+				
+				.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:0.4em;padding-bottom:13.86941580%;position:relative}
+				
+
+				.bubbles {margin-bottom:10px;}
+				.bubbles .title {  font-size: 15px;margin-top: -18px;height: 40px;line-height: 16px}
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/bancomat/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="grande">A luglio hai perso la possibilit&agrave; di partecipare all'<strong>estrazione di un buono</strong> del <strong>valore di 120 Euro</strong>. Ma puoi <strong>ancora vincere</strong> partecipando all'ultimo periodo!</span>
+				</div>
+				<div class="col1">
+					<span class="mega green">PARTECIPARE &Egrave; SEMPLICE</span>
+				</div>
+				<!-- fine spazio per testo -->
+				<br>
+				<!-- Box 3 cerchi info -->
+				<div class="col1">
+					<div class="bubbles">
+						<span class="title">Fai almeno un acquisto<br> con la tua carta di debito e scegli se:</span>
+						<div class="col1">
+							<div class="banner banner01">
+								<span class="fascione primo">effettuare zero prelievi</span>
+							</div>
+							<div class="banner banner01">						
+								<span class="fascione">prelevare senza limiti solo presso gli sportelli del Gruppo BPM</span>
+							</div>
+							<div class="banner banner01">						
+								<span class="fascione">prelevare massimo 3 volte presso gli sportelli di altri istituti</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fine box 3 cerchi info -->
+							
+				<!-- blocco a 3 colonne -->
+				<div class="col3">
+					<div class="col mese">
+						<div class="visimg off">	
+							<div class="banner bannerOff">						
+								<span class="grande"><strong>GIUGNO</strong></span>
+							</div>
+						</div>
+					</div>
+					<div class="col mese">
+						<div class="visimg off">	
+							<div class="banner bannerOff">						
+								<span class="grande"><strong>LUGLIO</strong></span>
+							</div>
+						</div>
+					</div>
+					<div class="col mese">
+						<div class="visimg">	
+							<div class="banner">						
+								<span class="grande"><strong>AGOSTO</strong></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- fine blocco a 3 colonne -->
+				
+				<!-- spazio per promo -->
+				<div class="col1 col1Left">
+					<span class="grande"><strong>Ad Agosto</strong>, infatti, hai l'ultima possibilit&agrave; per vincere un buono da <strong>120 Euro</strong> a scelta tra <strong>Media World, eBay</strong> oppure <strong>TotalErg</strong>.</span>
+				</div>
+				<!-- fine spazio per promo -->
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+								<!-- REGOLAMENTO -->
+								<span class="maintitle">denominato &ldquo;Spendi, tieni d&rsquo;occhio i tuoi prelievi e vinci!&rdquo;</span>
+
+								<span class="title">SOGGETTO PROMOTORE:</span>
+								<p>
+									Banca Popolare di Milano S.c.a.r.l<br>
+									Piazza Meda 4 - 20121 Milano<br>
+									CF e PI: 00715120150 
+								</p>
+
+								<span class="title">AMBITO TERRITORIALE:</span>
+								<p>
+									Territorio della Repubblica Italiana (di seguito &ldquo;Italia&rdquo; o &ldquo;Territorio&rdquo;).
+								</p>
+								
+								<div class="leggiReg" id="vedi">
+									<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+								</div>
+								
+								
+								<div id="hiddenRegolamento" style="display:none">
+								<span class="title">DURATA DELLA MANIFESTAZIONE:</span>
+								<p>
+									La manifestazione avr&agrave; durata complessiva dal 01/06/2016 al 31/08/2016 e si articoler&agrave; in 3 periodi di partecipazione e altrettante estrazioni, che si svolgeranno in un&rsquo;unica data entro il 15/10/2016.<br>
+									Nel dettaglio:
+									- 1&deg; periodo di partecipazione dal 01/06/2016 al 30/06/2016 con estrazione entro il 15/10/2016;<br>
+									- 2&deg; periodo di partecipazione dal 01/07/2016 al 31/07/2016 con estrazione entro il 15/10/2016;<br>
+									- 3&deg; periodo di partecipazione dal 01/08/2016 al 31/08/2016 con estrazione entro il 15/10/2016;<br>
+									Banca Popolare di Milano si impegna a non dare inizio alla presente manifestazione a premi prima dell&rsquo;avvenuta comunicazione al Ministero dello Sviluppo Economico.
+								</p>
+								
+								<span class="title">PRODOTTO PROMOZIONATO:</span>
+								<p>
+									Carta di Debito Webank
+								</p>
+								
+								<span class="title">DESTINATARI:</span>
+								<p>
+									Il concorso &egrave; rivolto a tutti i clienti Webank possessori di una carta di debito Webank in stato attivo alla data di avvio della manifestazione. Per stato attivo si intende una carta che &egrave; stata attivata in autonomia dal cliente attraverso l&rsquo;area privata del sito Webank.<br>
+									In caso di conto cointestato, potranno partecipare tutti i cointestatari purch&eacute; titolari ognuno di una Carta di Debito. Diversamente, parteciper&agrave; solo il nominativo del cointestatario titolare della Carta di Debito. Ai fini della partecipazione alla manifestazione non verranno presi in considerazione i prelievi effettuati tramite circuito Maestro. Sono esclusi i clienti Webank che per tutta la durata del concorso presenteranno situazioni di scoperto sul conto corrente, i dipendenti e i promotori finanziari di Banca Popolare di Milano e delle Societ&agrave; del Gruppo BPM (Banca Popolare di Mantova, Banca Akros e ProFamily). 
+								</p>
+								
+								<span class="title">COMUNICAZIONE:</span>
+								<p>
+									A partire dal 01 giugno 2016 il Concorso sar&agrave; veicolato tramite comunicazioni all&rsquo;interno dell&rsquo;area privata del sito internet www.webank.it, attraverso l&rsquo;invio di email e di SMS.<br>
+									Il regolamento completo del Concorso sar&agrave; disponibile alla pagina www.webank.it/ <strong>Spendi, tieni d&rsquo;occhio i tuoi prelievi e vinci!</strong>. Il link del regolamento sar&agrave; inviato via mail.
+								</p>
+								
+								<span class="title">MODALIT&Agrave; DI SVOLGIMENTO DELLA MANIFESTAZIONE:</span>
+								<p>
+									I destinatari potranno aderire alla presente manifestazione a premi a partire dal 01 giugno 2016 e fino al 31 agosto 2016, se rispetteranno uno dei seguenti requisiti:<br><br>
+									<strong>REQUISITI A</strong>:<br>
+										i destinatari effettuano almeno una transazione POS di qualsiasi importo e un numero illimitato di prelievi <strong>unicamente</strong> presso sportelli ATM del gruppo BPM;<br><br>
+									<strong>REQUISITI B</strong>:<br>
+										i destinatari effettuano almeno una transazione POS di qualsiasi importo e nessun prelievo oppure effettuano almeno una transazione POS di qualsiasi importo e un numero massimo di 3 prelievi, di cui almeno uno presso un qualsiasi sportello ATM di altri istituti non appartenenti al Gruppo BPM.<br><br>
+										In particolare, potranno partecipare all&rsquo;estrazioni finali dedicate in base al periodo in cui hanno soddisfatto i requisiti A o B, secondo il seguente calendario:<br>
+										- 1&deg; periodo di partecipazione dal 01/06/2016 al 30/06/2016;<br>
+										- 2&deg; periodo di partecipazione dal 01/07/2016 al 31/07/2016;<br>
+										- 3&deg; periodo di partecipazione dal 01/08/2016 al 31/08/2016.<br>
+										<br>
+										I destinatari potranno vincere N&deg;30 Buoni Acquisto in palio (10 per ogni periodo di partecipazione) del valore di 120€ ciascuno.<br><br>
+										La partecipazione potr&agrave; avvenire solamente qualora siano rispettati i requisiti A oppure B all&rsquo;interno del periodo di validit&agrave; della presente manifestazione a premi e nei relativi periodi di partecipazione. Il rispetto dei requisiti oltre le date precedentemente indicate, non consentir&agrave; la partecipazione al concorso.<br>
+										Non verranno presi in considerazione i prelievi effettuati tramite circuito Maestro.<br>
+										Per transazione POS si intende un&rsquo;operazione di pagamento effettuata con la carta di debito tramite uno strumento automatico presente in numerose attivit&agrave; commerciali.<br>
+										La transazione potr&agrave; essere di qualsiasi importo, cos&igrave; come i prelievi.<br>
+										Per sportelli ATM del gruppo BPM si intendono gli sportelli appartenenti a: Banca Popolare di Milano e Banca Popolare di Mantova.<br><br>
+										<strong>Per ogni singolo periodo di partecipazione</strong>, sar&agrave; sufficiente effettuare:<br>
+										- almeno una transazione POS di qualsiasi importo e un numero di prelievi illimitato, se questi ultimi avvengono esclusivamente tramite sportelli ATM del gruppo BPM,<br>
+										oppure<br>
+										- almeno una transazione POS di qualsiasi importo e nessun prelievo o un numero massimo di 3 prelievi, di cui almeno uno presso un qualsiasi sportello ATM di altri istituti non appartenenti al Gruppo BPM.<br><br>
+										Per ogni singolo periodo di partecipazione, il prelievo effettuato presso un qualsiasi altro istituto che non appartenga al gruppo BPM, esclude automaticamente il destinatario dal soddisfacimento dei requisiti A pur a fronte di un numero illimitato di prelievi effettuati presso sportelli ATM del gruppo BPM. Inoltre, per poter adempiere alle condizioni previste dai requisiti B, il numero di prelievi consentiti, compresi anche quelli effettuati presso sportelli ATM del gruppo BPM, dovr&agrave; comunque essere massimo di N&deg; 3.<br>
+										La mancata transazione POS escluder&agrave; automaticamente il destinatario dal soddisfacimento dei requisiti A o B.<br><br>
+										<strong>ESEMPIO REQUISITI A</strong>:<br>
+										- Il destinatario effettua N&deg;1 transazione POS e solo N&deg;5 prelievi <strong>unicamente</strong> presso sportelli ATM del gruppo BPM<br>
+										- Il destinatario effettua N&deg;4 transazioni POS e solo N&deg;1 prelievo <strong>unicamente</strong> presso sportelli ATM del gruppo BPM<br><br>
+										<strong>ESEMPIO REQUISITI B</strong>:<br>
+										- Il destinatario effettua N&deg;1 transazione POS e N&deg;2 prelievi di cui N&deg;1 presso sportelli ATM BPM e N&deg;1 presso sportelli ATM di altri istituti oppure N&deg;5 transazioni POS e N&deg;2 prelievi presso sportelli ATM di altri istituti non appartenenti al Gruppo BPM<br>
+										- Il destinatario effettua N&deg;2 transazioni POS e N&deg;3 prelievi presso sportelli ATM di altri istituti non appartenenti al Gruppo BPM<br>
+										- Il destinatario effettua N&deg;1 transazione POS e nessun prelievo<br><br>
+										Per ciascun periodo di partecipazione, non saranno ritenuti validi per il soddisfacimento dei soli requisiti B prelievi in numero superiore a N&deg;3. Es: si effettuano N&deg;4 prelievi (di cui N&deg;3 presso sportelli ATM del gruppo BPM e N&deg;1 presso sportello ATM di altri istituti).<br><br>
+										Ogni Cliente potr&agrave; prendere parte e vincere i premi in palio per ciascuno dei N&deg;3 periodi di partecipazione, posto che per ognuno abbia soddisfatto le condizioni richieste.<br>
+										Inoltre, se il Cliente risultasse titolare di pi&ugrave; carte di Debito, potr&agrave; partecipare alla presente manifestazione con ognuna.<br><br>
+										Nel corso della presente manifestazione sar&agrave; pertanto data facolt&agrave; ad ogni Cliente di poter vincere pi&ugrave; di un premio.
+								</p>
+								
+								<span class="title">TECNICA DI PREMIAZIONE E COMUNICAZIONE DI VINCITA:</span>
+								<p>
+									Terminato il periodo di partecipazione alla manifestazione, per ognuna delle N&deg;3 estrazioni previste, il sistema produrr&agrave; un file in formato excel con un elenco contenente i nominativi di tutti coloro che avranno rispettato i requisiti di partecipazione descritti sopra e da ogni elenco verranno estratti N&deg;10 vincitori e N&deg;10 nominativi di riserva, per un totale complessivo di N&deg;30 vincitori e N&deg;30 riserve. Queste ultime saranno contattate, in ordine di estrazione, nel caso in cui i nominativi estratti non fossero in regola con le norme del concorso o non siano reperibili o rifiutino per iscritto.<br><br>
+									<strong>Le N&deg; 3 estrazioni avverranno a Milano entro il 15 ottobre 2016 alla presenza di un Notaio o Funzionario Camerale.</strong><br><br>
+									La comunicazione ufficiale di vincita verr&agrave; inviata entro 5 giorni lavorativi dall&rsquo;estrazione finale.<br>
+									I soggetti estratti verranno informati via e-mail e telefonicamente (per n&deg; 2 tentativi al giorno effettuati in 2 giorni differenti) ai recapiti rilasciati durante la sottoscrizione del conto, o eventualmente a quelli successivamente comunicati alla Banca. Per convalidare la vincita &egrave; necessario inviare una e-mail di accettazione entro 5 giorni lavorativi dall&rsquo;avviso di vincita, accedendo all&rsquo;area privata del sito Webank dell&rsquo;intestatario della Carta di Debito estratta, pena l&rsquo;annullamento della vincita. Le istruzioni per la convalida e per la scelta del premio saranno indicate nella mail che i vincitori riceveranno. Una volta effettuata la scelta, la stessa non potr&agrave; essere pi&ugrave; modificata.<br><br>
+									L&rsquo;erogazione del premio verr&agrave; effettuata al soggetto estratto che avr&agrave; inviato nel termine sopra citato e-mail di accettazione, solo se lo stesso non presenter&agrave; situazioni di scoperto sul conto corrente per tutta la durata del concorso. La societ&agrave; promotrice si riserva la facolt&agrave; di effettuare tutti gli opportuni controlli al fine di verificare la corretta posizione dei Titolari risultati vincitori dei premi in palio.
+								</p>
+								
+								<span class="title">MONTEPREMI:</span>
+								<p>
+									I premi in palio sono <strong>N. 30 Buoni a scelta tra i seguenti:</strong><br><br>
+									<strong>Buono Carburante Web TotalErg</strong> del valore di 120,00€ IVA inclusa spendibile per rifornimenti nei Punti vendita TotalErg abilitati ed in presenza del Gestore* entro 6 mesi dalla data di emissione del buono.<br>
+									<strong>Buono acquisto online MediaWorld**</strong> del valore di 120,00€ IVA inclusa spendibile sul sito di MediaWorld compra on-line (http://compraonline.MediaWorld.it) e usufruibile entro dieci mesi dalla data di consegna.<br>
+									<strong>Buono Acquisto online eBay ***</strong> del valore di 120,00€ IVA inclusa spendibile sul Sito www.ebay.it e usufruibile entro quattro mesi dalla data di consegna.<br><br>
+									<strong>Totale montepremi complessivo: Euro 3.600,00 IVA inclusa.</strong><br><br>
+									Banca Popolare di Milano presta idonea garanzia a favore del Ministero dello Sviluppo Economico, in ragione del 100% di tale importo.<br><br>
+									*L&rsquo;elenco dei punti vendita TotalErg presso i quali sar&agrave; possibile utilizzare i Buoni Carburante Web e le relative istruzioni per l&rsquo;utilizzo sono disponibili sul sito www.totalerg.it. Gli stessi dovranno essere stampati e consegnati al Gestore del Punto Vendita TotalErg per l&rsquo;utilizzo al momento del rifornimento.<br>
+									** Per utilizzare il “Buono acquisto” MediaWorld &egrave; sufficiente scegliere il bene desiderato fra quelli disponibili sul sito, arrivare alla schermata degli strumenti di pagamento, inserire il codice e il valore del “Buono acquisto” nella pagina che comparir&agrave; selezionando l'opzione “Buoni e carte EasyGift”. Qualora l&rsquo;ammontare complessivo della transazione, comprensiva di spese di spedizione, dovesse avere un valore superiore a quello del Buono, sar&agrave; necessario integrare la differenza utilizzando altri strumenti di pagamento. L&rsquo;utilizzo parziale del Buono dar&agrave; diritto a spendere l&rsquo;ammontare del valore residuo nelle transazioni successive.<br>
+									*** Per utilizzare il “Buono acquisto” eBay &egrave; sufficiente scegliere i prodotti desiderati fra quelli disponibili sul sito eBay, arrivare alla schermata degli strumenti di pagamento, inserire il codice “Buono acquisto” ed effettuare il pagamento mediante PayPal. Il Buono acquisto deve essere utilizzato in un&rsquo;unica soluzione. Un eventuale utilizzo parziale non dar&agrave; diritto al rimborso dell&rsquo;importo non utilizzato. L&rsquo;utilizzo del Buono acquisto &egrave; soggetto ai termini e condizioni pubblicati alla pagina http://pages.ebay.it/buono_sconto/
+								</p>
+								
+								<span class="title">MODALIT&Agrave; DI CONSEGNA DEI PREMI:</span>
+								<p>
+									Banca Popolare di Milano, entro 180 giorni dalla data dell&rsquo;estrazione, come previsto dall&rsquo;art. 1 comma 3 del D.P.R. n. 430 - 26 Ottobre 2001, consegner&agrave; al partecipante vincente e avente diritto, il premio tramite email all&rsquo;indirizzo di posta elettronica precedentemente inserito dal cliente e memorizzato nella sezione “dati e impostazioni personali” della parte privata del sito www.webank.it. Banca Popolare di Milano non si assume nessuna responsabilit&agrave; in caso di mancato contatto con i partecipanti o di mancato recapito dell&rsquo;avviso di vincita e/o del premio dovuti all&rsquo;indicazione da parte dei vincitori di indirizzi e/o dati personali errati o non veritieri o non aggiornati.<br>
+									Il vincitore che non potesse o volesse usufruire del premio non avr&agrave; diritto ad alcuna somma di denaro.<br>
+									Il premio in palio non pu&ograve; essere convertito n&eacute; in denaro n&eacute; in gettoni d&rsquo;oro.
+								</p>
+								
+								<span class="title">RICHIESTA DI PREMI NON PI&Ugrave; DISPONIBILI SUL MERCATO O MODIFICATI RISPETTO A QUELLI PROMESSI:</span>
+								<p>
+									L&rsquo;avente diritto, una volta maturato il premio, non potr&agrave; pretendere in alcun modo che il premio indicato e raffigurato originariamente sul materiale pubblicitario a lui sottoposto preventivamente, gli sia consegnato se al momento dell&rsquo; invio il premio non sar&agrave; disponibile per impossibilit&agrave; sopravvenuta o per causa non imputabile al soggetto promotore.<br>
+									Verr&agrave; pertanto inviato un premio della stessa natura di valore uguale o superiore.
+								</p>
+								
+								<span class="title">I PREMI NON RICHIESTI O NON ASSEGNATI:</span>
+								<p>
+									I premi non richiesti e/o non assegnati, diversamente da quelli rifiutati verranno devoluti a: Associazione Children in Crisis Italy Onlus, Foro Buonaparte, 76 - 20121 Milano - C.F: 97242500151.
+								</p>
+								
+								<span class="title">RINUNCIA ALLA FACOLT&Agrave; DI RIVALSA:</span>
+								<p>
+									Banca Popolare di Milano dichiara di rinunciare fin d&rsquo;ora al diritto di rivalsa per quanto attiene il versamento dell&rsquo;IRPEF di cui all&rsquo;art. precedente come previsto dell&rsquo;art. 30 DPR 600/1973.
+								</p>
+								
+								<span class="title">TRATTAMENTO DATI PERSONALI:</span>
+								<p>
+									Banca Popolare di Milano dichiara che la partecipazione al presente concorso a premi presuppone il trattamento dei dati personali dei partecipanti nel rispetto del Decreto Legislativo del 30/06/2003 n&deg;196 “Codice in materia di protezione dei dati personali” e successive modifiche, cos&igrave; come dettagliato e specificato dall&rsquo;informativa ai sensi dell&rsquo;art. 13 di detto Decreto, che verr&agrave; resa ai partecipanti al concorso a premi in fase di apertura del “Conto Webank”.<br>
+									Il conseguimento delle finalit&agrave; di cui al presente regolamento potr&agrave; avvenire anche per mezzo di trasmissione e comunicazione di dati a terzi, con ci&ograve; si intende terzi autorizzati al correlato trattamento dei dati stessi, in quanto svolgono o forniscono specifici servizi strettamente funzionali all&rsquo;esecuzione del concorso a premi ovvero in quanto nominati responsabili del trattamento ai sensi dell'art. 29 del Decreto. La lista completa dei responsabili &egrave; disponibile presso la societ&agrave;.
+								</p> 
+								
+								<span class="title">ULTERIORI INFORMAZIONI:</span>
+								<p>
+									Per qualsiasi informazione inerente il presente Concorso si potranno contattare il numero verde WeBank 800.148.149 o scrivere all&rsquo;indirizzo e-mail: webank@webank.it.
+								</p>
+								
+								<span class="title">VARIE:</span>
+								<p>
+									Il responsabile tecnico incaricato dalla Societ&agrave; promotrice dell&rsquo;estrazione dei dati sui sistemi informatici per la partecipazione al presente concorso, rilascia dichiarazione sostitutiva di atto notorio relativamente a: <br>
+									- l&rsquo;adozione di opportuni accorgimenti per impedire interventi esterni per modificare il sistema e/o influenzare le vincite;<br>
+									- l&rsquo;adozione di opportune misure di sicurezza del sistema necessarie e sufficienti a garantire la tutela della fede pubblica;<br>
+									- i dati utilizzati per l&rsquo;estrazione risiedono in basi dati ubicate nel territorio italiano.<br><br>
+									La Societ&agrave; promotrice non si assume alcuna responsabilit&agrave;:<br>
+									- per cause a lei non imputabili (es. sovraccarico di rete, assenza di rete&hellip;) che comportino l&rsquo;impossibilit&agrave; ad accedere al sito;<br>
+									- per caselle di posta elettronica piene che non consentono pertanto la ricezione di e-mail inviate da Banca Popolare di Milano;<br>
+									- per indirizzi e-mail errati o incompleti indicati dal partecipante in fase di apertura del conto;<br>
+									- per mancata risposta dall&rsquo;host computer dopo l&rsquo;invio di e-mail da parte di Banca Popolare di Milano.<br>
+									I partecipanti sono quindi invitati a controllare la propria casella di posta elettronica (anche tra le spam).
+								</p>
+								
+								<span class="title">ARTICOLI:</span>
+								<p>
+									Per quanto non espressamente indicato nel presente regolamento, trova attuazione il D.P.R. 430 del 26/10/2001. <br>
+									<br>
+									Milano, 17 maggio 2016
+								</p>							
+								<div class="leggiReg" id="chiudi">
+									<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span>
+					<span class="footnote">Concorso a premi valido dal 01/06/2015 al 31/08/2016. Estrazione finale entro 15/10/2016. Montepremi Euro 3.600,00 Iva inclusa. Prendere visione delle condizioni economiche mediante i Fogli Informativi disponibili sul sito www.webank.it</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>	

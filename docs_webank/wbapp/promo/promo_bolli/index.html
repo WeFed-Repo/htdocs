@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>   
+		<!-- / MOBILE -->
+		<title>Webank - Promo Bolli</title>
+		<meta name="description" content="Webank - Promo Bolli"/>
+		<!-- / SEO -->
+		<style>
+			/* WEB FONT BARIOL */
+			@font-face {
+				font-family: 'Bariol';
+				src: url('/font/BariolRegular.eot');
+				src: local('BariolRegular'), url('/font/BariolRegular.woff') format('woff'), url('/font/BariolRegular.ttf') format('truetype');
+			}
+
+			body {margin:0;background:#eee;font-family:"Bariol",Arial,Serif;font-size:20px;color:#999}
+
+			/* Wrappers */
+			#main {max-width:640px;margin: 0 auto}
+
+			/* Heading */
+			#heading {float:left;width:100%;background-color:#FFF;height:17em}
+			#heading a {float:left;width:100%;line-height:0}
+			#heading img {width:100%;}
+
+			/* CTA goto */
+			#goto {position:fixed;bottom:0px; width:100%;background:#fff;line-height:2em;font-size:1.9em}
+			#goto .cta {margin:0 auto;max-width:640px;display:block;background: transparent url(/img/app_goto_green.png) no-repeat right center}
+			#goto .cta span {padding:0 5%}
+			#goto .cta span .new {display:none;font-size:0.7em;font-weight:bold;color:#333}
+
+			/* Contenuti */
+			#content {display:none;padding:2em 0;float:left;width:100%;background: #fff; min-height:30em}
+
+			/* Suddivisione in colonne */
+			#content .col1 {width:91%;margin:0 0 0 4%;float:left;text-align:center} 
+			#content .col1Left {text-align:left} 
+			/*#content .col3 {width:95%;margin:0 0 0 5%;float:left}
+			#content .col3 .col {width:28.332%;float:left;margin:0 5% 0 0}*/
+
+			/* Forme e decliazione dei contenuti */
+			.visimg {border:solid 1px #bbb;border-radius:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;height:8em;width:8em;margin:0 auto 0.5em}
+			.col span {width:100%;text-align:center;float:left;line-height:1.4em;font-size:1.2em}
+			.col1 span {width:100%;text-align:center;float:left;line-height:1.6em;font-size:1.2em}
+			.col1 span.fascione {width:80%;text-align:left;float:left;line-height:1.4em;font-size:1.1em;margin:0 0 0 18%;padding:2% 0;color:#333}
+			.col1Left span {text-align:left;}
+			.banner {background-position:0 0;background-repeat:no-repeat;height:0;width:100%; margin-left:-0.4em;margin-top:1em;padding-bottom:17.86941580%;position:relative}
+			.banner01 {background-image: url('/wbapp/promo/promo_bolli/img/banner_01.png');background-size: 100% 100%;}
+			.banner02 {background-image: url('/wbapp/promo/promo_bolli/img/banner_02.png');background-size: 100% 100%;}
+			.banner03 {background-image: url('/wbapp/promo/promo_bolli/img/banner_03.png');background-size: 100% 100%;}
+			.wrapper{position:absolute;top:0;right:0;bottom:0;left:0;display:table-cell;vertical-align:middle}
+
+			/* Declinazioni del font*/
+			span.grande {font-size:1.4em}
+			span.mega {font-size:1.5em;font-weight:bold}
+			span.iper {font-size:1.9em;font-weight:bold}
+			span.green {color:#8ab10b}
+			span.dark {color:#666}
+			span.white {color:#fff}
+			span.footnote {font-style:italic;line-height:1.2em;font-size:1.1em}
+			span.piccolo {font-size:0.9em}
+
+			/* Contenitore con scroll */
+			.scrollable {width:100%;float:left;box-sizing:border-box;margin:0.5em 0 1em;-webkit-box-sizing:border-box;}
+			.scrollable .top{width:100%;border:solid 1px #ccc;line-height:1.8em;background-color:#ccc;border-radius:1em 1em 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;font-size:1.5em;color:#666;text-transform:uppercase}
+			.scrollable .area {width:100%;border:solid 1px #ccc;border-radius:0 0 1em 1em;box-sizing:border-box;padding:0 0 0;float:left;box-sizing:border-box;-webkit-box-sizing:border-box}
+			.scrollable .area .scroller{/*height:200px;overflow-y:scroll;overflow:auto;overflow-x:hidden;*/width:100%;/*float:left;*/text-align:left}
+			.leggiReg {background:#eae8e8; background-image: url('/wbapp/promo/promo_bolli/img/frecciaGiu.gif'); background-position:90% 50%;background-repeat:no-repeat; border-radius:0 0 1em 1em; text-align:center; padding:0.7em 0}
+			.leggiReg#chiudi {background-image: url('/wbapp/promo/promo_bolli/img/frecciaSu.gif');}
+			.leggiReg a, .leggiReg a:hover {color:#8ab10b; text-decoration:none; font-size:1.2em}
+
+
+			/* Formattazione tendine descrittive (es: regolamento)*/
+			.scrollable .area .scroller .maintitle {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold;font-size:1.2em;margin:0.5em 0}
+			.scrollable .area .scroller .title {padding:0 2.5%;text-align:left;width:95%;color:#8ab10b;font-weight:bold; font-size:1.1em}
+			.scrollable .area .scroller p {padding:0 2.5%; font-size:1.1em}
+
+			/* CTA */
+			a.btn {display:inline-block;float:none;margin:0.5em auto;width:50%;background-color:#8ab10b;clear:both;font-size:1.7em; line-height:2em;color:#fff;text-decoration:none;text-transform:uppercase;border-radius:0.3em;border-bottom:solid 0.1em #6f8f0a}
+
+			/* Separatori */
+			hr.dashed {border:0;border-bottom:dashed 0.1em #bbb;width:100%;float:left;margin: 1em 0}
+
+			/* DECLINAZIONI PER STATUS */
+			body.dettagli #goto {display:none}
+			body.dettagli #heading {height:auto !important}
+			body.dettagli #content {display:block !important}
+
+			body.nuovo #goto .new {display:inline}
+
+
+			/* Media queries */
+			@media (max-width : 640px ) {
+				body {font-size:10px}
+				#content {background-position: center -3em}
+				/*.banner {height:13em;width:13em; margin-left:-0.45em;margin-top:1.2em;}*/
+				span.piccolo {margin-top:1em;}
+				.leggiReg {background-image: url('/wbapp/promo/promo_bolli/img/frecciaGiu2.gif');}
+				.leggiReg#chiudi {background-image: url('/wbapp/promo/promo_bolli/img/frecciaSu2.gif');}
+				
+			}
+
+		</style>
+		<!-- FINE STYLESHEET -->
+		<!-- JS FRAMEWORK E FUNZIONI GENERALI -->
+		<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+		<script type="text/javascript" src="/wbapp/js/wv_promo.js"></script>
+		<!-- FINE  JS FRAMEWORK E FUNZIONI GENERALI -->
+	</head>
+	<body>
+		
+		<!-- INTERPRETA LA VARIABILE DA URL E DECIDE SE MOSTRARE O NO IL CONTENUTO -->
+		<script type="text/javascript">
+		$(function(){
+			if (getUrlVar("status")=="dettagli")
+				{
+					$("body").addClass("dettagli");
+				}
+			if (getUrlVar("status")=="nuovo")
+				{
+					$("body").addClass("nuovo");
+				}
+		});
+		</script>
+	
+		<div id="goto">
+			<div class="cta">
+				<span>Scopri di pi&ugrave;<span class="new">NEW</span></span>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div id="heading">
+				<a href="javascript:;">
+					<img src="/wbapp/promo/promo_bolli/img/top.png">
+				</a>
+			</div>
+			
+			<div id="content">
+				<!-- spazio per testo -->
+				<div class="col1 col1Left">
+					<span class="grande dark">Non hai ancora richiesto l'apertura del deposito titoli?<br>
+					Hai tempo fino al 31 ottobre 2015 e ricorda di <br>inviarci tutta la documentazione firmata entro <br>il 15 novembre 2015. Per te:</span>
+				</div>
+				<!-- fine spazio per testo -->
+
+				<!-- blocco a 3 righe -->
+				<div class="col1">
+					<div class="banner banner01">
+						<div class="pippo">
+							<span class="fascione"><strong>Rimborso dell'imposta di bollo sul deposito titoli</strong> per il 2015 e, 
+							se il saldo titoli 2016 &egrave; maggiore o uguale al saldo titoli 2015, anche per il 2016</span>
+						</div>
+					</div>
+					<div class="banner banner02">						
+						<span class="fascione">Un <strong>buono d'acquisto da 100 Euro</strong> Unieuro, TotalErg o LaFeltrinelli ogni 50.000 euro in Fondi o Sicav sul deposito titoli al 31.12.2015</span>
+					</div>
+					<div class="banner banner03">						
+						<span class="fascione"><strong>Bonus</strong> commissionale <strong>trading</strong> da <strong>100 Euro</strong> valido fino al 31.12.2015</span>
+					</div>
+				</div>
+				<!-- fine blocco a 3 righe -->
+				
+				<!-- separatore  -->
+				<!hr class="dashed" />
+				<!-- fine separatore -->
+				
+				<!-- spazio per promo -->
+				<div class="col1"><br>
+					<span class="mega green">PER MAGGIORI INFORMAZIONI</span>
+					<a class="btn" href="tel:800060070">CHIAMA</a>
+					<span class="iper green">800 060 070</span>
+					<span>luned&igrave; - venerd&igrave; 8:30 - 21:00, sabato 9:00 - 17:00</span>
+				</div>
+				<!-- fine spazio per promo -->
+				
+				<!-- separatore  -->
+				<!hr class="dashed" />
+				<!-- fine separatore -->
+				
+				<!-- regolamento e chiusura -->
+					<div class="col1">
+					<div class="scrollable">
+						<div class="top">Regolamento operazione a premi</div>
+						<div class="area">
+							<div class="scroller">
+								<div>
+									<!-- REGOLAMENTO -->
+									<!--span class="maintitle">denominata &ldquo;Webank ti Premia&rdquo;</span-->
+
+									
+									<span class="title">MODIFICA BIS DEL REGOLAMENTO OPERAZIONE A PREMI</span>
+									<span class="maintitle">denominata &ldquo;Webank ti Premia&rdquo;</span>
+									<p><strong>Il soggetto promotore, ai sensi e per gli effetti dell'art 10 comma 4 del D.P.R. n. 430/2001, 
+									intende comunicare a tutti i destinatari la modifica del presente regolamento, 
+									in particolare, viene prolungato il periodo entro cui soddisfare alcune delle condizioni
+									necessarie per maturare il diritto al premio, con relativo adeguamento dell'attribuzione e validit&agrave; 
+									del bonus commissionale per la componente &quot;bonus trading&quot;.<br>
+									Oltre alle modifiche indicate ed evidenziate nel testo, nessun altro punto del regolamento &egrave; stato variato.<br><br>
+									Oltre agli adempimenti di legge, le suddette modifiche verranno portate a conoscenza degli interessati tramite 
+									l'apposito materiale pubblicitario.<br><br>
+									Inoltre, dal momento che il Soggetto Promotore ritiene che le stime dei premi da assegnare non debbano essere 
+									variate a seguito di tali modifiche, il montepremi stimato non subisce variazioni. A tale scopo il Soggetto 
+									Promotore rilascia dichiarazione sostitutiva di atto notorio.<br><br>
+									Si riporta per ragioni di chiarezza il testo integrale del regolamento con le modifiche di cui sopra 
+									ed evidenziate nel testo.</strong>
+									<p>
+									
+									<div class="leggiReg" id="vedi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#chiudi').show();$('#vedi').hide();">leggi tutto il regolamento</a>
+									</div>
+									<div id="hiddenRegolamento" style="display:none">
+									
+									<span class="title">MODIFICA DEL REGOLAMENTO OPERAZIONE A PREMI</span>
+									<span class="maintitle">denominata &ldquo;Webank ti Premia&rdquo;</span>
+									<p><strong>Il soggetto promotore, ai sensi e per gli effetti dell'art 10 comma 4 del D.P.R. n. 430/2001, 
+									intende comunicare a tutti i destinatari la modifica del presente regolamento, in particolare, 
+									per impossibilit&agrave; sopravvenuta, vengono sostituiti per la componente B dell'iniziativa ("Bonus Gestito") 
+									i premi a scelta costituiti da Buoni Acquisto Pay-Pal Ebay con Buoni Acquisto LaFeltrinelli.<br><br>
+									Oltre alla modifica indicata ed evidenziata nel testo, nessun altro punto del regolamento &egrave; stato variato.<br>
+									Oltre agli adempimenti di legge, la suddetta modifica verr&agrave; portata a conoscenza degli interessati 
+									tramite l'apposito materiale pubblicitario.<br><br>
+									Si riporta per ragioni di chiarezza il testo integrale del regolamento con la modifica di cui sopra 
+									ed evidenziata nel testo.</strong>
+									</p>
+									
+									
+									<span class="title">SOGGETTO PROMOTORE</span>
+									<p>
+										Banca Popolare di Milano S.c.a.r.l<br>
+										Piazza Meda 4 - 20121 Milano<br>
+										CF e PI: 00715120150 
+									</p>
+
+									<span class="title">AMBITO TERRITORIALE</span>
+									<p>
+										Territorio della Repubblica Italiana
+									</p>
+									
+									<span class="title">DENOMINAZIONE DELLA MANIFESTAZIONE</span>
+									<p>
+										Webank ti Premia
+									</p>
+									
+									<span class="title">PRODOTTO PROMOZIONATO</span>
+									<p>
+										Conto corrente e deposito titoli Webank
+									</p>
+									
+									<span class="title">DURATA DELLA MANIFESTAZIONE</span>
+									<p>
+										Dal 16 giugno 2015 al 31 dicembre 2016. Banca Popolare di Milano si impegna a non dare inizio alla presente 
+										manifestazione a premi prima dell'avvenuta comunicazione al Ministero dello Sviluppo Economico.
+									</p>
+									
+									<span class="title">DESTINATARI</span>
+									<p>
+										Soggetti residenti sul territorio nazionale di et&agrave; maggiore o uguale a 18 anni.<br><br>
+										
+										Non potranno beneficiare di questa iniziativa:
+									</p>
+									<ul>
+											<li>Coloro che alla data di richiesta di apertura del conto corrente e/o del deposito titoli 
+										Webank <strong>i)</strong> risultino essere gi&agrave; titolari o cointestatari di un deposito titoli in una 
+										delle banche del gruppo Bipiemme (Banca Popolare di Milano e Banca Popolare di Mantova) o 
+										<strong>ii)</strong> abbiano chiuso un conto corrente e/o un deposito titoli presso una delle banche del 
+										gruppo Bipiemme (Banca Popolare di Milano e Banca Popolare di Mantova) dopo il 30 novembre 2014. 
+										In caso di conto corrente o deposito titoli cointestati nessuno dei cointestatari dovr&agrave; 
+										essere gi&agrave; titolare o cointestatario di un deposito titoli presso una delle banche del gruppo Bipiemme.</li>
+										<li>lavoratori dipendenti e i promotori finanziari Bipiemme</li>
+										</ul>
+									<p>
+										L'accoglimento della richiesta di apertura dei rapporti con la banca (corredata dalla modulistica 
+										debitamente compilata e sottoscritta oltre ai documenti richiesti) &egrave; soggetta a valutazione 
+										discrezionale della banca e al rispetto delle disposizioni normative vigenti in materia.
+									</p>
+									
+									<span class="title">OGGETTO DELL'INIZIATIVA</span>
+									<p>
+										L'iniziativa prevede tre componenti, tra loro cumulabili:<br>
+										
+										A. <strong>Imposta di Bollo sul Deposito Titoli</strong>: esenzione dell'imposta di bollo per 
+										l'anno 2015, in misura dello 0,2% annuo sul controvalore dei titoli detenuti alla data di produzione 
+										dell'estratto conto titoli e per un massimo di 1.500,00 Euro, per i clienti aderenti all'iniziativa 
+										che faranno richiesta di apertura del deposito titoli entro il 31.10.2015, che procederanno 
+										ad attivare il deposito titoli entro il 15.11.2015, che avranno trasferito o acquistato su tale 
+										deposito strumenti finanziari entro il 30.11.2015 e che alla data del 31.12.2015 possederanno 
+										un controvalore in titoli o fondi pari ad almeno 10.000,00 Euro. Inoltre, gli stessi clienti aderenti 
+										all'iniziativa potranno beneficiare dell'esenzione dell'imposta di bollo per 2016, in misura 
+										dello 0,2% sul controvalore dei titoli detenuti alla data di produzione dell'estratto conto 
+										titoli e per un massimo di 1.500,00 Euro, se alla data di produzione dell'estratto conto titoli 
+										2016 deterranno un controvalore in strumenti finanziari maggiore o uguale al controvalore 
+										detenuto alla data di produzione dell'ultimo estratto conto titoli 2015<br>
+										B. "<strong>Bonus Gestito</strong>": verr&agrave; corrisposto ai clienti aderenti all'iniziativa un bonus in buoni d'acquisto, 
+										con le limitazioni e modalit&agrave; di seguito definite, per un importo definito in funzione 
+										del controvalore in fondi e sicav posseduti dal cliente sul deposito titoli Webank al 31.12.2015, 
+										come valorizzati all'ultimo estratto conto 2015, e per un massimo di 5.000,00 Euro.<br>
+										C. "<strong>Bonus Trading</strong>": attribuzione di un bonus commissionale del valore di 100 Euro da utilizzare 
+										per operazioni di negoziazione in strumenti finanziari (esclusi fondi comuni e sicav).
+									</p>
+
+									
+									<span class="title">MODALIT&Agrave; DI PARTECIPAZIONE</span>
+									<p>
+										Imposta di bollo sul deposito titoli: tutti i nuovi clienti che effettueranno la richiesta di 
+										apertura del conto corrente e del deposito titoli Webank e i gi&agrave; clienti che effettueranno la richiesta 
+										di apertura del deposito titoli Webank tra il 16.06.2015 e il 31.10.2015, procederanno ad attivare 
+										il deposito titoli entro il 15.11.2015, trasferiscano o acquistino strumenti finanziari valorizzando 
+										tale deposito entro il 30.11.2015 e abbiano al 31.12.2015 un saldo in strumenti finanziari maggiore o 
+										uguale a 10.000,00&euro;, potranno beneficiare dell'esenzione dall'imposta di bollo sul deposito 
+										titoli per l'anno 2015 come definita dalla Legge 27/12/2013 n&deg; 147 (0,2% annuo del controvalore 
+										in strumenti finanziari detenuti alla data di produzione dell'estratto conto titoli) e per un 
+										massimo di 1.500,00&euro;.<br>
+										Per l'anno 2016 gli stessi clienti aderenti all'iniziativa beneficeranno dell'esenzione dall'imposta 
+										di bollo sul deposito titoli, come sopra definita, nel caso in cui al 31.12.2016 il controvalore 
+										detenuto in strumenti finanziari, se maggiore o uguale a 10.000&euro;, sia pari o superiore al 
+										controvalore posseduto a 31.12.2015.<br>
+										L'imposta di bollo sul deposito titoli dovuta dal cliente sar&agrave; pertanto a carico di BPM fino 
+										ad un importo massimo di 1.500,00 Euro, per valori totali di imposta di bollo sul deposito titoli 
+										superiori a 1.500,00 Euro BPM si far&agrave; carico del pagamento fino ad un massimo pari a 1.500,00 Euro 
+										mentre la differenza rispetto a quanto dovuto sar&agrave; addebitata sul conto corrente del cliente.<br><br>
+										Esempi:<br>
+										controvalore in strumenti finanziari al 31.12.2015: 500.000&euro;<br>
+										imposta dovuta per l'anno 2015: 1.000&euro; (500.000&euro; * 0.2%)<br>
+										imposta addebitata al cliente: 0&euro;<br>
+										imposta in capo a BPM: 1.000&euro;<br><br>
+										controvalore in strumenti finanziari al 31.12.2016: 800.000&euro;<br>
+										imposta dovuta per l'anno 2016: 1.600&euro; (800.000&euro; * 0.2%)<br>
+										imposta addebitata al cliente: 100&euro;<br>
+										imposta in capo a BPM: 1.500&euro;
+										<br><br>
+										"<strong>Bonus Gestito</strong>": tutti i nuovi clienti che effettueranno la richiesta di apertura 
+										del conto corrente e del deposito titoli Webank e i gi&agrave; clienti che effettueranno la richiesta 
+										di apertura del deposito titoli Webank tra il 16.06.2015 e il 31.10.2015, procederanno ad attivare 
+										il deposito titoli entro il 15.11.2015 e che al 31.12.2015 risulteranno aver trasferito o acquistato 
+										quote di fondi comuni o sicav sul deposito titoli Webank (viene ritenuto valido qualsiasi acquisto 
+										o trasferimento di quote di fondi e sicav tra quelli acquistabili tramite il servizio Webank. 
+										Sul sito www.webank.it &egrave; disponibile l'elenco di tutte le case di gestione e i relativi comparti di 
+										investimento disponibili per i clienti Webank) avranno diritto ad un bonus, sotto forma di buono d'acquisto, 
+										il cui valore verr&agrave; definito in funzione del controvalore in fondi o sicav detenuto al 31.12.2015, 
+										come valorizzati all'ultimo estratto conto 2015, per un massimo di 5.000&euro;. Il valore minimo del 
+										saldo in fondi e/o sicav al 31.12.2015 per poter avere diritto alla ricezione di buoni d'acquisto 
+										dovr&agrave; essere uguale o superiore a 50.000&euro;.<br>
+										Il bonus verr&agrave; riconosciuto sotto forma di buono d'acquisto alternativamente TotalErg, 
+										Unieuro o LaFeltrinelli.<br>
+										<br>
+										L'importo dei buoni d'acquisto viene calcolato per singolo deposito titoli secondo la seguente tabella:
+										</p>
+										<table style="border:1px solid #ccc;margin:0 0 0 5px" border="1" cellpadding="5" cellspacing="0" width="95%">
+										<tr>
+											<td>Controvalore Fondi e Sicav al 31.12.2015</td>
+											<td>Importo buono d'acquisto</td>
+										</tr>
+										<tr>
+											<td>Da 50.000 a 99.999,99 Euro</td>
+											<td>100 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 100.000 a 149.999,99 Euro</td>
+											<td>200 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 150.000 a 199.999,99 Euro</td>
+											<td>300 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 200.000 a 249.999,99 Euro</td>
+											<td>400 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 250.000 a 299.999,99 Euro</td>
+											<td>500 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 300.000 a 499.999,99 Euro</td>
+											<td>600 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 500.000 a 999.999,99 Euro</td>
+											<td>1.000 Euro</td>
+										</tr>
+										<tr>
+											<td>Da 1.000.000 a 2.499.999,99 Euro</td>
+											<td>2.000 Euro</td>
+										</tr>
+										<tr>
+											<td>Oltre i 2.500.000 Euro</td>
+											<td>5.000 Euro</td>
+										</tr>
+									</table>
+									<p>
+									Esempio: saldo, a valore di mercato, in Fondi e Sicav al 31.12.2015 pari a 125.000,00&euro;: Buono da 200 Euro.<br><br>
+									&quot;Bonus Trading&quot;: a tutti i nuovi clienti che effettueranno la richiesta di apertura del conto corrente 
+									e del depostito titoli Webank e i gi&agrave; clienti Webank che effettueranno la richiesta di apertura del 
+									deposito titoli Webank tra il 16.06.2015 e il 31.10.2015, e procederanno ad attivare il deposito titoli entro 
+									il 15.11.2015, verr&agrave; attribuito un &quot;bonus commissionale&quot; del valore di 100 Euro con scadenza 
+									29.02.2016. L'attribuzione del bonus commissionale avverr&agrave; entro e non oltre il 01.12.2015. 
+									Il bonus commissionale potr&agrave; essere utilizzato, a scalare fino alla concorrenza del totale accreditato, 
+									per operazioni di compravendita su tutti gli strumenti per i quali &egrave permessa la negoziazione per tramite 
+									di Webank ad esclusione di Fondi e Sicav.
+									</p>
+									
+									<span class="title">TECNICA DI PREMIAZIONE E COMUNICAZIONE</span>
+									<p>
+										L'esenzione dal bollo per l'anno 2015 avverr&agrave; tramite azzeramento dell'imposta dovuta dal cliente, 
+										come sopra definita, fino ad un importo massimo di 1.500&euro;. L'imposta sar&agrave; a carico di BPM, 
+										eventuali imposte di importi superiore al massimo di 1.500&euro; saranno a carico di BPM fino al 
+										valore massimo e la differenza sar&agrave; addebitata al cliente in conto corrente. Relativamente all'anno 
+										2016 l'esenzione dall'imposta di bollo sul dossier titoli avverr&agrave; con le stesse modalit&agrave; 
+										previste per l'anno 2015, nel caso in cui il controvalore del saldo titoli al 31.12.2016, come 
+										riportato in estratto conto, sia maggiore o uguale a 10.000&euro; e sia maggiore o uguale al 
+										controvalore del saldo titoli al 31.12.2015.<br>
+										Il Bonus commissionale non verr&agrave; corrisposto tramite alcun accredito, ma sar&agrave; reso 
+										disponibile sotto forma di operazioni di compravendita di strumenti finanziari (eccezion fatta per 
+										fondi e sicav) prive di commissioni.<br><br>
+										L'importo del bonus &egrave; scalare e potr&agrave; essere utilizzato entro e non oltre il 29.02.2016 e 
+										non potr&agrave; in alcun modo essere convertito in altre agevolazioni, buoni d'acquisto e/o denaro contante.<br>
+										Limitatamente alla consegna dei buoni d'acquisto, al 31.12.2015 verr&agrave; effettuata la verifica del 
+										controvalore in fondi e sicav posseduti dal cliente. Successivamente a tutti i clienti che abbiano 
+										un saldo in fondi e sicav superiore o uguale a 50.000&euro;, entro il 25.01.2016, verr&agrave; inviata ai 
+										clienti che abbiano rispettato i termini previsti dal presente regolamento una comunicazione 
+										email riportante il valore del buono, come da tabella sopra riportata, e la possibilit&agrave; di scegliere 
+										il buono tra i seguenti:
+										<ul>
+											<li>TotalErg<br>
+											Buoni Carburante Web TotalErg a spendibili per rifornimenti nei Punti vendita TotalErg abilitati ed in 
+											presenza del Gestore dalla data di emissione del buono. L'elenco degli punti vendita TotalErg presso 
+											i quali sar&agrave; possibile utilizzare i Buoni Carburante Web e le relative istruzioni per l'utilizzo 
+											sono disponibili sul sito www.totalerg.it. Gli stessi dovranno essere stampati e consegnati al Gestore 
+											del Punto Vendita TotalErg per l'utilizzo al momento del rifornimento. La scadenza dei Buoni Carburante 
+											&egrave; di cinque mesi successivi alla data di consegna (la data di scadenza &egrave; riportata sui buoni stessi).</li>
+											<li>Unieuro<br>
+											Buoni d'acquisto spendibili sul sito www.unieuro.it, usufruibili entro 10 mesi dalla data di consegna 
+											(la data di consegna riportata sul buono stesso). Per utilizzare il &quot;Coupon Sconto&quot; Unieuro &egrave; 
+											sufficiente scegliere i prodotti desiderati sul sito, arrivare nella pagina della cassa, inserire il 
+											codice &quot;Coupon Sconto&quot; per ottenere lo sconto. Qualora l'ammontare complessivo della transazione, 
+											comprensiva di spese di spedizione, dovesse avere un valore superiore a quello del Coupon, sar&agrave; necessario 
+											integrare la differenza utilizzando altri strumenti di pagamento. L'utilizzo parziale del Buono non dar&agrave; 
+											diritto a spendere l'ammontare del valore residuo nelle transazioni successive</li>
+											<li>La Feltrinelli<br>
+											Buoni d'acquisto &quot;la Feltrinelli&quot; spendibili unicamente sul sito di LaFeltrinelli 
+											(http://www.lafeltrinelli.it) entro 10 mesi dalla data di consegna. Per utilizzare il &quot;Buono acquisto&quot; 
+											LaFeltrinelli &egrave; sufficiente scegliere il bene desiderato fra quelli disponibili sul sito, arrivare alla 
+											schermata degli strumenti di pagamento, inserire il codice e il valore del &quot;Buono acquisto&quot; nella pagina che 
+											comparir&agrave; selezionando l'opzione &quot;Carta Regalo&quot;. Qualora l'ammontare complessivo della 
+											transazione, comprensiva di spese di spedizione, dovesse avere un valore superiore a quello del Buono, 
+											sar&agrave; necessario integrare la differenza utilizzando altri strumenti di pagamento. L'utilizzo 
+											parziale del Buono dar&agrave; diritto a spendere l'ammontare del valore residuo nelle transazioni successive.</li>
+										</ul>
+									</p>
+									<p>
+										Entro il 31.01.2016 il cliente dovr&agrave; esprimere la propria preferenza, tramite il form digitale 
+										presente nella comunicazione inviata a mezzo email, relativamente a quale buono d'acquisto desidera 
+										ricevere. In caso di mancata risposta verr&agrave; inviato il buono benzina TotalErg<br>
+										I buoni d'acquisto saranno spediti entro il 31.03.2016 all'indirizzo email indicato dal cliente in fase 
+										di apertura del conto corrente e/o all'indirizzo memorizzato nella sezione &quot;dati e impostazioni 
+										personali&quot; dell'area personale del sito Webank.it.
+									</p>
+									
+									<span class="title">AVVERTENZE</span>
+									<p>
+										Prima di aderire all'iniziativa si invita il cliente a prendere visione sul sito www.webank.it 
+										della documentazione precontrattuale e contrattuale relativa ai prodotti e servizi &quot;Webank&quot;, 
+										dei fogli informativi nonch&eacute; dell'informativa preliminare MiFid e a prestare attenzione ai rischi 
+										collegati all'operativit&agrave; in strumenti finanziari.<br><br>
+										Le imposte di bollo per i rapporti bancari e d'investimento sono dovute da normativa tempo per tempo 
+										vigente, per maggiori informazioni si rinvia alla documentazione precontrattuale e contrattuale relativa 
+										ai prodotti e servizi Webank.<br><br>
+										Sulle somme non vincolate in conto corrente &egrave; dovuta l'imposta di bollo fissa, sulle linee 
+										vincolate in conto corrente &egrave; dovuta l'imposta di bollo proporzionale come da normativa tempo per tempo 
+										in vigore. Alla remunerazione delle giacenze &egrave; applicata la ritenuta fiscale come da normativa 
+										tempo per tempo in vigore. Imposte e oneri fiscali sono a carico del cliente.<br><br>
+										Dall'esenzione dall'imposta di bollo sul deposito titoli restano in ogni caso esclusi eventuali 
+										addebiti relativi alla rendicontazione di somme vincolate sul deposito di risparmio Webank.<br><br>
+										L'esenzione dall'imposta di bollo seguir&agrave; esclusivamente quanto normato dalla legge 
+										27/12/2013 n&deg; 147. Non saranno esenti imposte previste in caso di eventuali future variazioni 
+										normative non preventivabili alla data di redazione del presente regolamento.
+									</p>
+									
+									<span class="title">MONTEPREMI</span>
+									<p>
+										La societ&agrave; BPM prevede di assegnare complessivamente un montepremi stimato di 40.000,00&euro; iva inclusa.<br>
+										Sul 20% di tale importo sar&agrave; prestata la dovuta garanzia a favore del Ministero dello Sviluppo Economico.<br>
+										BPM assicura in ogni caso l'assegnazione dei premi a tutti i partecipanti all'operazione a premi che 
+										soddisferanno le condizioni indicate nel presente &quot;regolamento&quot;.
+									</p>
+									
+									<span class="title">VARIE</span><br>
+										<ul>
+											<li>Per apertura di conto corrente Webank si intende la conclusione del contratto ai sensi della 
+											Sezione denominata &quot;Norme generali che regolano il servizio a distanza WeBank&quot; contenuta 
+											nella &quot;Condizioni generali WeBank&quot;.</li>
+											<li>Per periodo di validit&agrave; si intende il periodo entro il quale il cliente deve procedere 
+											ad effettuare la richiesta di apertura del conto corrente e/o deposito titoli Webank.</li>
+											<li>L'iniziativa non &egrave; cumulabile con altre promozioni e/o convenzioni.</li>
+											<li>Sulle somme non vincolate in conto corrente &egrave; dovuta l'imposta di bollo fissa, 
+											sulle linee vincolate in conto corrente &egrave; dovuta l'imposta di bollo proporzionale come 
+											da normativa tempo per tempo in vigore. Alla remunerazione delle giacenze &egrave; applicata la 
+											ritenuta fiscale come da normativa tempo per tempo in vigore. Imposte e oneri fiscali sono a carico 
+											del cliente.</li>
+											<li>I benefici oggetto della presente operazione a premi verranno riconosciuti a condizione 
+											che i relativi beneficiari non risultino inadempienti degli obblighi contrattuali assunti con 
+											l'apertura dei rapporti con BPM al momento in cui verificano le altre condizioni per poter 
+											beneficiare dei premi in palio (es. ritardo o mancato pagamento di quanto dovuto alla banca 
+											per la fruizione dei servizi Webank, ecc.)</li>
+											<li>Ogni premio/singolo buono non &egrave; cedibile a terzi n&eacute; rivendibile ad altro soggetto.</li>
+											<li>I premi non possono essere convertiti in denaro contante n&eacute; in gettoni d'oro.</li>
+											<li>Il vincitore che non potesse o volesse usufruire del premio non avr&agrave; diritto ad alcuna 
+											somma in denaro.</li>
+											<li>BPM non si assume responsabilit&agrave; per:
+											<ul>
+												<li>Cause a lei non imputabili (es. sovraccarico di rete, assenza di rete...) che comportino 
+												l'impossibilit&agrave; ad accedere al sito per la compilazione dei rapporti bancari e/o d'investimento.</li>
+												<li>Per caselle di poste elettronica piene che non consentano pertanto la ricezione di 
+												mail inviate da BPM;</li>
+												<li>Per indirizzi e-mail errati e/o incompleti indicati dal partecipante in fase di registrazione</li>
+												<li>Nell'eventualit&agrave; in cui, per impossibilit&agrave; sopravvenuta o per causa non imputabile 
+												al soggetto promotore, il premio spettante non sia disponibile, BPM metter&agrave; a disposizione 
+												un premio della stessa natura e di medesimo valore.</li>
+											</ul>
+										</ul>
+									
+									<span class="title">PUBBLICIT&Agrave;</span>
+									<p>
+										Attraverso la comunicazione via e-mail, banner, social media e pagine dedicate sul sito www.webank.it.
+									</p>
+									
+									<span class="title">MEZZI E MODALIT&Agrave; DI CONSULTAZIONE DEL REGOLAMENTO</span>
+									<p>
+										Il regolamento completo &egrave; a disposizione degli utenti finali alla pagina www.webank.it/webanktipremia<br><br>
+										Ulteriori informazioni sull'iniziativa possono essere richieste contattando il Numero Verde Webank 800.148.149 
+										oppure scrivendo all'indirizzo e-mail webank@webank.it.<br><br>
+										Prima di aderire all'iniziativa si invita il Cliente a prendere visione sul sito www.webank.it delle condizioni 
+										economiche e contrattuali, dei Fogli Informativi e dell'Informativa Precontrattuale.
+									</p>
+								
+									<div class="leggiReg" id="chiudi">
+										<a href="javascript:;" onclick="$('#hiddenRegolamento').slideToggle();$('#vedi').show();$('#chiudi').hide();">chiudi il regolamento</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--span>MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE</span-->
+					<span class="footnote"><br>Per ottenere il rimborso dell'imposta di bollo 2015 &egrave; necessario che il deposito titoli 
+					sia movimentato entro il 30.11.2015 e che il controvalore in strumenti finanziari posseduti al 31.12.2015 
+					sia maggiore o uguale a 10.000&euro;. Per il rimborso dell'imposta di bollo sul deposito titoli del 2016 
+					il controvalore in strumenti finanziari posseduti al 31.12.2016 dovr&agrave; essere maggiore o uguale 
+					al controvalore posseduto al 31.12.2015. Il rimborso massimo sar&agrave; pari a 1.500&euro;, eventuali 
+					maggiori imposte saranno a carico del cliente. L'esenzione dall'imposta di bollo seguir&agrave; esclusivamente 
+					quanto previsto dalla legge 27/12/2013 n&deg; 147 (in misura dello 0,2% sul controvalore totale in titoli alla 
+					data di produzione dell'estratto conto). Non saranno rimborsate maggiori imposte derivanti da eventuali future 
+					variazioni normative.</span>
+				</div>
+				<!-- fine regolamento e chiusura -->
+			</div>
+		</div>
+	</body>
+</html>	
