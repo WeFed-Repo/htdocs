@@ -10,6 +10,9 @@ html {
 [class^="icon-"], [class*=" icon-"] {
     font-size: 20px;
 }
+.icon-2x {
+    font-size: 32px;
+}
 /* FONT MONTSERRAT */
 @font-face {
     font-family: 'bankFont';
@@ -117,7 +120,9 @@ a, a:hover, a:active {
     text-decoration: none;
     color: #202d50;
 }
-
+a.underline, a.underline:hover, a.underline:active{
+    text-decoration: underline;
+}
 .link-text, .link-text:hover, .link-text:active, .link-text:focus {
     color: #0E977F!important;
 }
@@ -594,8 +599,10 @@ button {
 .outerWrapperTab.no-backgr {
     background-color: #fff;
 }
-
-.innerWrapperTab {
+.navfrontPage {
+    margin-top:20px!important;
+}
+.innerWrapperTab,.navfrontPage  {
     background-color: #ebeef0;
     margin: -20px -35px 0 -35px;
     padding: 20px 10px 0 35px;
@@ -603,7 +610,7 @@ button {
     min-height: 75px;
 }
 
-.innerWrapperTab ul {
+.innerWrapperTab ul,.navfrontPage ul {
     display: table;
     margin: 0;
     padding: 8px 0 0 0;
@@ -611,16 +618,16 @@ button {
     float: right;
 }
 
-.innerWrapperTab ul li {
+.innerWrapperTab ul li, .navfrontPage ul li {
     list-style-type: none;
     display: table-cell;
 }
 
-.innerWrapperTab li.on {
+.innerWrapperTab li.on, .navfrontPage ul li.on {
     background-color: #fff;
 }
 
-.innerWrapperTab ul li a {
+.innerWrapperTab ul li a, .navfrontPage ul li a {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
@@ -631,11 +638,11 @@ button {
     text-decoration: none;
 }
 
-.innerWrapperTab li.on a {
+.innerWrapperTab li.on a, .navfrontPage ul li.on a {
     color: #00a592;
 }
 
-.innerWrapperTab .separator {
+.innerWrapperTab .separator, .navfrontPage .separator {
     display: none;
 }
 
@@ -4814,7 +4821,9 @@ span.colAlert {
 .leftTesto {
     padding-left: 75px;
 }
-
+.leftTesto.ico-fp {
+    padding-left: 47px;
+}
 .icon-wrapper .icon {
     color: #fff;
     font-size: 60px
@@ -6900,7 +6909,7 @@ div[id*="popover"] .popover-content {
 }
 .tab-wrap .ui-accordion {padding:20px;}
 .btn-inline {margin-top:20px;}
-.documenti{padding-top:10px;}
+.documenti{padding-top:10px;padding-left:0}
 .documenti li {padding:0;list-style-type: none;float:none;clear:both;}
 .documenti ul {padding:0;}
 .ui-accordion-content .documenti {padding-top:0}
@@ -8693,8 +8702,8 @@ p.large a {color:#0E977F;text-decoration: underline;}
 #orariDispoWrapper { 
     margin: 0 -1%;
 }
-.modal-call-me-back .text-time {font-size:16px;display:inline-block;margin-bottom:10px}  
-.modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:50px; }
+.modal-call-me-back .text-time {display:inline-block;margin-bottom:10px}  
+.modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:65px; }
 .modal-call-me-back .orari-select span {display:inline-block;width:100%;}
 .modal-call-me-back .orari-select.disabled {cursor:not-allowed; background-color:#eaeaea;border-color:#eaeaea; color:#fff; }      
 .modal-call-me-back .orari-select.selected { background-color:#65b7a9;border-color:#65b7a9;color:#fff;}         
@@ -8702,10 +8711,22 @@ p.large a {color:#0E977F;text-decoration: underline;}
 .modal-call-me-back .only-detail{font-size:16px;}
 .modal-call-me-back input[type="radio"]:checked + span {color: #65b7a9;}      
 .modal-call-me-back .btn-default + .btn-primary {margin-left:20px;}
-.modal-call-me-back .esito-ok {color: #65b7a9;}
+.modal-call-me-back .esito-ok {color: #65b7a9;display: block;  text-align:center;font-size: 30px; text-transform:uppercase;}
 .modal-call-me-back .text-footer { clear:both;text-align:center;}
 .modal-call-me-back .selected .btn-dispo {line-height:14px;}
-.modal-call-me-back .step-cmb {display:none}
+.modal-call-me-back .selected .text-dispo {display:none}
+.modal-call-me-back .step-cmb,.modal-call-me-back .btn-dispo {display:none}
+.modal-call-me-back .formGenerico {padding-bottom: 0; }
 @media (max-width:767px) {
   .modal-call-me-back .btn-default + .btn-primary {margin-left:0}
 }
+@media (min-width:768px) and (max-width:1000px) { 
+    .modal-call-me-back .orari-select {
+          padding:5px; 
+          font-size:13px; 
+        }
+}
+/* tebella costi carta American express*/
+table.table-confronta-costi thead th {text-align:center;padding-bottom:5px}
+table.table-confronta-costi thead th img { max-width: 40%;} 
+table.table-confronta-costi thead th span { display: inline-block; width: 100%;}

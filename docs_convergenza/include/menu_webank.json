@@ -62,7 +62,6 @@
 					{
 						"nome": "Ricarica",
 						"html": "vr",
-						"inlavorazione": true,
 						"tpl": "tpl_carte_ricarica_manuale.php"
 					}
 				]
@@ -74,18 +73,29 @@
 			},
 			{
 				"nome": "Richiesta carta Prepaid",
-				"inlavorazione": true,
 				"tpl": "tpl_responsive_richiesta_carta_prepagata.php"
 			},
 			{
 				"nome": "Confronta carte",
-				"inlavorazione": true,
 				"tpl": "tpl_responsive_confronta_carte.php"
 			},
 			{
 				"nome": "Gestione Bancomat Pay",
 				"tpl": "tpl_gestione_bancomat_pay.php",
 				"html": "vr"
+			},
+			{
+				"nome": "Carte American Express",
+				"voices": [
+					{
+						"nome": "Scheda prodotto",
+						"tpl": "tpl_responsive_scheda_carta_amex.php"
+					},
+					{
+						"nome": "Costi e condizioni",
+						"tpl": "tpl_responsive_costi_condizioni_amex.php"
+					}
+				]
 			}
 		]
 	},

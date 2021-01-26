@@ -34,6 +34,19 @@
 						"tpl": "tpl_carte_ricarica_manuale.php"
 					}
 				]
+			},
+			{
+				"nome": "Carte American Express",
+				"voices": [
+					{
+						"nome": "Scheda prodotto",
+						"tpl": "tpl_responsive_scheda_carta_amex.php"
+					},
+					{
+						"nome": "Costi e condizioni",
+						"tpl": "tpl_responsive_costi_condizioni_amex.php"
+					}
+				]
 			}
 		]
 	},
