@@ -8,6 +8,22 @@ Qui si assume che lo sia
    $nCellulareCert = "3476532233";
    
 ?>
+<?php
+if (isset($_GET['disservizio'])) {
+    $disservizio =  $_GET['disservizio'];
+} 
+else {
+  $disservizio =  "false";
+}
+?>
+<?php
+if (isset($_GET['fuoriOrario'])) {
+    $fuoriOrario =  $_GET['fuoriOrario'];
+} 
+else {
+  $fuoriOrario =  "false";
+}
+?>
 <form id="hiddenInput" class="formGenerico" action="">
   <?php print '<input type="hidden" name="nameCliente" value="' . $nameCliente . '"/>' ?>
   <?php print '<input type="hidden" name="nCellulareCert" value="' . $nCellulareCert . '"/>' ?>
@@ -15,13 +31,14 @@ Qui si assume che lo sia
    <!--QUESTE INFORMAZIONI: GIA' PRENOTATO; ORARIO SEZIONATO, DISSERVIZIO TECNICO; FUORI ORARIO SI HANNO FIN DA SUBITO? -->
   <?php print '<input type="hidden" name="isAlreadyBooked" value=""/>' ?>
   <?php print '<input type="hidden" name="orarioSel" value=""/>' ?>
-  <?php print '<input type="hidden" name="disservizioFlag" value=""/>' ?>
-  <?php print '<input type="hidden" name="fuoriOrario" value=""/>' ?>
+  <?php print '<input type="hidden" name="disservizioFlag" value="'.$disservizio.'"/>' ?>
+  <?php print '<input type="hidden" name="fuoriOrario" value="'.$fuoriOrario.'"/>' ?>
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
 <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb" title="Servizio clienti">CMB</a>
 <a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb-ok" title="Servizio clienti">CMB già prenotato</a>
 <a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb-ko" title="Servizio clienti">CMB con disservizio</a>
+<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon icon icon-cmb-fo" title="Servizio clienti">CMB fuori orario</a>
 
 <!-- Modale da mettere in pagina in cui includere la pagina html -->
 
@@ -49,20 +66,26 @@ Qui si assume che lo sia
         var setStatoPrenotazione = function() {
           var isAlreadyBookedVal = $('input[name="isAlreadyBooked"]').val(),
               orarioSelVal =  $('input[name="orarioSel"]').val(),
-              disservizioFlagVal =  $('input[name="disservizioFlag"]').val()
+              disservizioFlagVal =  $('input[name="disservizioFlag"]').val(),
+              fuoriOrario = $('input[name="fuoriOrario"]').val();
              
           if(isAlreadyBookedVal === "true") {
-            $(".icon-cmb,.icon-cmb-ko").hide();
+            $(".icon-cmb,.icon-cmb-ko,.icon-cmb-fo").hide();
             $(".icon-cmb-ok").show();
           }
-          else if( disservizioFlagVal === "true" && isAlreadyBookedVal !== "true") {
-            $(".icon-cmb,.icon-cmb-ok").hide();
+          if( disservizioFlagVal === "true" && isAlreadyBookedVal !== "true") {
+            $(".icon-cmb,.icon-cmb-ok,.icon-cmb-fo").hide();
             $(".icon-cmb-ko").show();
           }
-          
+         
+         if( fuoriOrario === "true" && isAlreadyBookedVal !== "true") {
+            
+            $(".icon-cmb,.icon-cmb-ok,.icon-cmb-ko").hide();
+            $(".icon-cmb-fo").show();
+          }
           else {
               $(".icon-cmb").show();
-              $(".icon-cmb-ok,.icon-cmb-ko").hide();
+              $(".icon-cmb-ok,.icon-cmb-ko,.icon-cmb-fo").hide();
           }
         }
         $("#modaleCallMeBack").on('show.bs.modal',function(){

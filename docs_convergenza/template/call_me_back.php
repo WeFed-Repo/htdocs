@@ -48,7 +48,7 @@
     $("#btn-seleziona-orario").addClass("disabled").prop("disabled",true);
     if(typeof orariDisponibili !== 'undefined') {
       var htmlDeskTablet ="",
-        htmlMobile = '<div class="spsel nosel" id="selectOrariDisponibili"  placeholder="Seleziona Orario"><input type="hidden" name="selectOrariDisponibiliInput"><div class="spsel-options"></div></div>';
+        htmlMobile = '<div class="spsel nosel" id="selectOrariDisponibili"  placeholder="Seleziona Orario"><input type="hidden" name="selectOrariDisponibiliInput"><div class="spsel-options"></div></div><div class="btn-align-center"><a id="btn-seleziona-orario" type="button" class="btn btn-primary disabled">Seleziona</a><br class="clear"></div>';
         if(isSmallDevice) {
             $(orariDispoWrapper).append(htmlMobile);
          }
@@ -56,7 +56,7 @@
          var isNotDisp = v.ndispo === 0 ? true : false,
              classDis = isNotDisp ? "disabled" : "",
              orario = (v.orario!=="ora") ? v.orario : "Chiamami ora!",
-             htmlDeskTablet = '<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>'  + '</div>';
+             htmlDeskTablet = '<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>'  +  '<button class="btn-dispo">Seleziona</button>' + '</div>';
              InnerHtmlMobile = v.ndispo!==0 ? '<div class="spsel-option" data-value="' + v.orario + '"><a class="spsel-option-el">' + orario + '<span class="text-dispo only-detail"> (' + v.ndispo +  ' disponibili)</span>' + '</a></div>' : '';
              if(isSmallDevice) {
                 $('.spsel-options').append(InnerHtmlMobile);
@@ -83,17 +83,16 @@
       var   btnSelectable = $(".orari-select:not(.disabled)"),
             selectSelectable = $("#selectOrariDisponibili .spsel-option-el");
      btnSelectable.on("click", function(event){
-         el = $(this);
-         if(el.hasClass("selected"))
-         {
-            return false;
-         }
-         else {
-            btnSelectable.removeClass("selected");
-            el.addClass("selected");
-            $("#btn-seleziona-orario").removeClass("disabled").prop("disabled",false);
-            orarioSelVal = el.find(".text-time").text();
-         }
+            el = $(this);
+            if(el.hasClass("selected"))
+            {
+               return false;
+            }
+            else {
+               btnSelectable.removeClass("selected").find(".btn-dispo").hide();
+               el.addClass("selected").find(".btn-dispo").show(300);
+               orarioSelVal = el.find(".text-time").text();
+            }
        })
        selectSelectable.on("click", function(event){
          
@@ -135,7 +134,15 @@
             //costruzione dell'html per accogliere i dati che provengono dal servizio per lo step 1
             // se la chiamata è success e mi resituisce gli orari disponibili
             //step 2: costruzione dell'html per accogliere i dati che provengono dal servizio (argomenti)
-            $("#btn-seleziona-orario").on("click",function(e){
+            
+
+            
+            
+            if(stato === 'disponibile')
+            {
+               setHtmlOrariDisponibili(orariDisponibili);
+               $('.step-cmb').eq(0).show();
+               $("#btn-seleziona-orario,.btn-dispo").on("click",function(e){
                   e.preventDefault();
                   $(argWrapper).empty();
                   $("#btn-conferma:not('disabled')").addClass("disabled").attr("disabled",true);
@@ -144,14 +151,7 @@
                   })
                   handleSelectArg();
                   setNextStepVisible('#step-argomento');
-            })
-
-            
-            
-            if(stato === 'disponibile')
-            {
-               setHtmlOrariDisponibili(orariDisponibili);
-               $('.step-cmb').eq(0).show();
+               })
             }
             // se la chiamata è success e mi restituisce la conferma di prenotazione
             if(stato ==="prenotato") {
@@ -255,10 +255,10 @@
          <p>Il servizio &egrave; disponibile dal luned&igrave; al venerd&igrave; XX - XX e il sabato XX – XX.
          Sono esclusi i giorni festivi. </p>
       </div>
-      <div class="btn-align-center">
+      <!--<div class="btn-align-center">
           <a id="btn-seleziona-orario" type="button" class="btn btn-primary disabled">Seleziona</a>
           <br class="clear">
-      </div>
+      </div>-->
    </section>
    <!-- step 2: scelta argomento-->
    <section id="step-argomento" class="step-cmb">

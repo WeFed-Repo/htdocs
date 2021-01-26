@@ -2479,6 +2479,9 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   padding: 15px;
   min-height: 50px;
 }
+.modal-call-me-back #orariDispoWrapper .orari-select .btn-dispo {
+  display: none;
+}
 .modal-call-me-back #orariDispoWrapper .orari-select span {
   display: inline-block;
   width: 100%;
@@ -2493,6 +2496,9 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   background-color: #8ab10b;
   border-color: #8ab10b;
   color: #fff;
+}
+.modal-call-me-back #orariDispoWrapper .orari-select.selected .text-dispo {
+  display: none;
 }
 .modal-call-me-back #orariDispoWrapper .spsel {
   font-size: 18px;
