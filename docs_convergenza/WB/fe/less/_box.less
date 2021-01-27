@@ -255,3 +255,52 @@
     .smartphone-wrapper {width:120px;height:230px}
     .smartphone-wrapper img {width: 108px;height: 184px;margin-top: 23px;}
 }
+
+/* BOX DI FEEDBACK NUOVA VERSIONE */
+/* con filetto */
+.box-feedback-bordered {
+    border-left: solid 4px #ddd; 
+    padding: 0 0 0 14px;
+    margin-bottom:20px;
+    &.success {
+        border-color:#A8C630;  
+    } 
+    &.error {
+        border-color:#ef5133;
+    }
+    &.alert {
+        border-color: #F6CF00; 
+    }
+    div {
+        padding-bottom:20px
+    }
+    p:last-child {
+        margin-bottom:0
+    }
+}
+/* senza filetto */
+.box-feedback {
+    margin-bottom:20px;
+    &.success {
+        h3, div p {
+            color:#A8C630;
+        } 
+    }
+    &.error {
+        h3, div p {
+            color:#ef5133;
+        } 
+    }
+    &.alert {
+        h3, div p {
+            color: #F6CF00;
+        } 
+    }
+    
+    div {
+        padding-bottom:20px
+    }
+    p:last-child {
+        margin-bottom:0
+    }
+}

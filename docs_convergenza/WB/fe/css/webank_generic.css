@@ -481,6 +481,22 @@ ol.azioni li {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+ul.ul-small,
+li.ul-small,
+ol.ul-small {
+  margin-left: 0;
+}
+ul.ul-small li,
+li.ul-small li,
+ol.ul-small li {
+  font-size: 13px;
+  list-style: none;
+}
+ul.ul-small li:before,
+li.ul-small li:before,
+ol.ul-small li:before {
+  content: "- ";
+}
 .tooltip-inner li {
   margin-bottom: 0;
 }
@@ -679,6 +695,12 @@ p {
   font-size: 1em;
   font-weight: normal;
   line-height: 22px;
+}
+p.p-small {
+  font-size: 13px;
+}
+span.span-small {
+  font-size: 13px;
 }
 .note {
   font-size: 1em;
@@ -1281,6 +1303,7 @@ table {
   /*margin: 30px 0 20px;*/
   border-collapse: collapse;
   border: 1px solid #afafaf;
+  /*tabella confronta caarte amex */
   /*td:first-child {
         border-left-style: none;
     }*/
@@ -1360,6 +1383,13 @@ table.table-sceltaprofilo td .ico-fix {
   height: 20px;
   width: 23px;
   margin-right: 10px;
+}
+table.table-confronta-costi thead th img {
+  max-width: 55%;
+}
+table.table-confronta-costi thead th span {
+  display: inline-block;
+  width: 100%;
 }
 table.table-tipoprofilo th {
   background-color: #fff;
@@ -11306,6 +11336,50 @@ div.select-content select:active {
     height: 184px;
     margin-top: 23px;
   }
+}
+/* BOX DI FEEDBACK NUOVA VERSIONE */
+/* con filetto */
+.box-feedback-bordered {
+  border-left: solid 4px #ddd;
+  padding: 0 0 0 14px;
+  margin-bottom: 20px;
+}
+.box-feedback-bordered.success {
+  border-color: #A8C630;
+}
+.box-feedback-bordered.error {
+  border-color: #ef5133;
+}
+.box-feedback-bordered.alert {
+  border-color: #F6CF00;
+}
+.box-feedback-bordered div {
+  padding-bottom: 20px;
+}
+.box-feedback-bordered p:last-child {
+  margin-bottom: 0;
+}
+/* senza filetto */
+.box-feedback {
+  margin-bottom: 20px;
+}
+.box-feedback.success h3,
+.box-feedback.success div p {
+  color: #A8C630;
+}
+.box-feedback.error h3,
+.box-feedback.error div p {
+  color: #ef5133;
+}
+.box-feedback.alert h3,
+.box-feedback.alert div p {
+  color: #F6CF00;
+}
+.box-feedback div {
+  padding-bottom: 20px;
+}
+.box-feedback p:last-child {
+  margin-bottom: 0;
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
