@@ -22,8 +22,16 @@ table,
     &.evident td {
       cursor:pointer;
     }
+
+    &.pushed {
+      td {
+        transition: background-color 0s;
+        background-color: #dadee2 !important;
+      }
+    }
     
     td, th { 
+      transition: background-color 0.8s;
       border-top: 0;
       vertical-align:middle;
       &.oCenter { text-align: left !important; }

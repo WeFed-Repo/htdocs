@@ -492,7 +492,9 @@ $(function(){
         </div>
 
     <?php } ?>
-    <?php if ($site=="youweb") { ?>
+    
+    <?php 
+    if ($site=="youweb") { ?>
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-sm-push-8">
                 <a href="#" class="flRight btn btn-link noFloatMobile"  style="display:none" id="linkSituazionePac">Situazione PAC <i class="icon icon-arrow_right" title="icon-freccia_dx"></i></a>
@@ -501,8 +503,8 @@ $(function(){
                 <p class="note flLeft noFloatMobile">
                     <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                     <!--esempio di loading -->
-                    <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
-                    <a href="#1" class="no-underline btn-icon flLeft marginLeft_10 push-button" id="samplePushIcon" title="push"><i class="icon icon-2x icon-push_off"></i><i class="icon icon-2x icon-push_on"></i></a>
+                    <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-update"></i></a>
+                    <a href="#1" class="no-underline btn-icon flLeft marginLeft_10 push-button" id="samplePushIcon" title="push"><i class="icon icon-push_off"></i><i class="icon icon-push_on"></i></a>
                 </p>
             </div>
         </div>

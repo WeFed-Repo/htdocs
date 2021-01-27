@@ -304,6 +304,10 @@ p.note.flRight {
 /* Pulsante autorefresh */
 .push-button {
   .icon-push_on {display:none}
+  &.disabled {
+    background-color:#ccc !important;
+    opacity:0.8;
+  }
   &.active {
     .icon-push_off {
       display:none;

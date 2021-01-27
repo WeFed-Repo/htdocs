@@ -806,6 +806,10 @@ p.note.flRight a.btn-icon {
 .push-button .icon-push_on {
   display: none;
 }
+.push-button.disabled {
+  background-color: #ccc !important;
+  opacity: 0.8;
+}
 .push-button.active .icon-push_off {
   display: none;
 }
@@ -2217,11 +2221,18 @@ table tr.evident td,
 .ui-dialog .table tr.evident td {
   cursor: pointer;
 }
+table tr.pushed td,
+.table tr.pushed td,
+.ui-dialog .table tr.pushed td {
+  transition: background-color 0s;
+  background-color: #dadee2 !important;
+}
 table tr td, table tr th,
 .table tr td,
 .table tr th,
 .ui-dialog .table tr td,
 .ui-dialog .table tr th {
+  transition: background-color 0.8s;
   border-top: 0;
   vertical-align: middle;
 }
