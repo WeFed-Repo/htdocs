@@ -5699,10 +5699,16 @@ div.select-content select {
 
     .icon {
         position: absolute;
-
         &.icon-push_on {
             display: none;
             animation: spin 5s linear infinite;
+        }
+    }
+
+    &.disabled {
+        .icon {
+            color:#ccc !important;
+            opacity:0.5;
         }
     }
 

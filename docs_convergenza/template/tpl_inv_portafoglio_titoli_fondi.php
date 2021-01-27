@@ -437,14 +437,57 @@ $(function(){
     <!-- FINE CON SELETTORI PER COLONNE E STRUMENTI -->
 
     <!-- BLOCCO AGGIORNAMENTI  (differente per you e we) -->
+    <script type="text/javascript">
+        /* Esempio automazione icona PUSH */
+        var pushIndexRow, tbPush, pushInterval;
+        $(function(){
+            // A seconda dello stato attiva o disattiva la "rotazione"
+            $("#samplePushIcon").click(function(){
+                var btn = $(this);
+                if (!btn.hasClass("disabled")){
+                    if(!btn.hasClass("active")){
+                        // Push non attivo: lo attiva (ma prima risulta disabilitato)
+                        btn.addClass("disabled").attr("title","Temporaneamente disabilitato");
+                        
+                        // Emula l'attivazione del push con la classe "pushed" sulle righe della tabella (utilizzato, nel caso specifico, il data-index del <TR>);
+                        setTimeout(function(){
+                            btn.addClass("active").removeClass("disabled").attr("title","Push attivo");
+                            tbPush = $("#tablePortafoglio").parents(".bootstrap-table");
+
+                            // Push ogni 2 secondi (esempio);
+                            pushInterval= setInterval(function(){
+                                pushIndexRow = Math.floor(Math.random() * $("#tablePortafoglio tbody").find("tr").length);
+                                console.log(pushIndexRow)
+                                tbPush.find("tr[data-index="+pushIndexRow+"]").addClass("pushed").delay(800);
+                                // Rimozione della classe dopo 0.8 secondi
+                                setTimeout(function(){
+                                    tbPush.find("tbody tr").removeClass("pushed")
+                                },800)
+                            },2000)
+
+                        },2000);
+                    }
+                    else
+                    {
+                        // Stop push
+                        clearInterval(pushInterval);
+                        btn.removeClass("active").attr("title","Attiva push");
+                        
+                    }
+
+                }
+            }
+            )
+        });
+    </script>
     <?php if ($site=="webank") { ?>
         <div class="row">
            <div class="col-xs-12 col-sm-12">
-                <p class="note flRight noFloatMobile">
-                    <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
-                    <!--esempio di loading -->
-                    <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
-                </p>
+           <p class="note flRight noFloatMobile">
+				<span class="flLeft">Ultimo Aggiornamento: 02/01/2021 ore 10:44:24</span> 
+				<a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn" title="aggiorna"><i class="icon icon-2x icon-update"></i></a>
+				<a href="#1" class="no-underline btn-icon flLeft marginLeft_10 push-button" id="samplePushIcon" title="Attiva push"><i class="icon icon-2x icon-push_off"></i><i class="icon icon-2x icon-push_on"></i></a>
+			</p>
             </div>
         </div>
 
@@ -459,6 +502,7 @@ $(function(){
                     <span class="flLeft">Ultimo Aggiornamento: 02/08/2016 ore 10:44:24</span> 
                     <!--esempio di loading -->
                     <a href="#1" class="no-underline btn-icon flLeft padding-l-m" id="refreshBtn"><i class="icon icon-2x icon-update"></i></a>
+                    <a href="#1" class="no-underline btn-icon flLeft marginLeft_10 push-button" id="samplePushIcon" title="push"><i class="icon icon-2x icon-push_off"></i><i class="icon icon-2x icon-push_on"></i></a>
                 </p>
             </div>
         </div>

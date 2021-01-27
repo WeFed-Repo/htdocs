@@ -1641,7 +1641,11 @@ table th.filter.filter-opened .filter-wrap .icon-close {
 table th.filter.filter-opened .filter-wrap .icon-filter {
   display: none;
 }
+table tr.pushed td {
+  background-color: #dce7b5 !important;
+}
 table td {
+  transition: background-color 1s;
   min-height: 40px;
   padding: 10px;
   border-left: solid 1px #c6c6c6;
@@ -10693,6 +10697,10 @@ div.select-content select:active {
 .btn-icon.push-button .icon.icon-push_on {
   display: none;
   animation: spin 5s linear infinite;
+}
+.btn-icon.push-button.disabled .icon {
+  color: #ccc !important;
+  opacity: 0.5;
 }
 .btn-icon.push-button.active .icon-push_on {
   display: block;
