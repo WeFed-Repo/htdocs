@@ -64,10 +64,10 @@ ul.ui-autocomplete li, ul.ui-autocomplete
         border-radius: 3px;
     }
 }
-
-#wrapper-ul-autocomplete {
+ 
+#wrapper-ul-autocomplete, .wrapper-ul-autocomplete {
     position:relative;
-    .menu-bottom {
+    .menu-bottom, .menu-bottom-multiplo {
         display:none;
         background-color: white;
         font-size: 12px;
@@ -91,7 +91,7 @@ ul.ui-autocomplete li, ul.ui-autocomplete
 
 @media (max-width: $bp_sm_min) {
     #wrapper-ul-autocomplete {
-       .menu-bottom {
+       .menu-bottom, .menu-bottom-multiplo  {
         height: auto;
          .action-link {
              display: block;

@@ -3919,10 +3919,10 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   border-radius: 3px;
 }
 
-#wrapper-ul-autocomplete {
+#wrapper-ul-autocomplete, .wrapper-ul-autocomplete {
   position: relative;
 }
-#wrapper-ul-autocomplete .menu-bottom {
+#wrapper-ul-autocomplete .menu-bottom, #wrapper-ul-autocomplete .menu-bottom-multiplo, .wrapper-ul-autocomplete .menu-bottom, .wrapper-ul-autocomplete .menu-bottom-multiplo {
   display: none;
   background-color: white;
   font-size: 12px;
@@ -3932,19 +3932,19 @@ ul.ui-autocomplete li, ul.ui-autocomplete {
   width: 80%;
   z-index: 100;
 }
-#wrapper-ul-autocomplete .menu-bottom a {
+#wrapper-ul-autocomplete .menu-bottom a, #wrapper-ul-autocomplete .menu-bottom-multiplo a, .wrapper-ul-autocomplete .menu-bottom a, .wrapper-ul-autocomplete .menu-bottom-multiplo a {
   float: right;
   text-decoration: none;
 }
-#wrapper-ul-autocomplete .menu-bottom a:hover {
+#wrapper-ul-autocomplete .menu-bottom a:hover, #wrapper-ul-autocomplete .menu-bottom-multiplo a:hover, .wrapper-ul-autocomplete .menu-bottom a:hover, .wrapper-ul-autocomplete .menu-bottom-multiplo a:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 576px) {
-  #wrapper-ul-autocomplete .menu-bottom {
+  #wrapper-ul-autocomplete .menu-bottom, #wrapper-ul-autocomplete .menu-bottom-multiplo {
     height: auto;
   }
-  #wrapper-ul-autocomplete .menu-bottom .action-link {
+  #wrapper-ul-autocomplete .menu-bottom .action-link, #wrapper-ul-autocomplete .menu-bottom-multiplo .action-link {
     display: block;
     padding-bottom: 20px;
   }
