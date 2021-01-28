@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>YouApp</title>
+  <meta name="description" content="YouApp">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Stili della pagina -->
+  <style>
+      /* Font face */
+    @font-face {font-family: 'bankFont';
+        src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+            url('./font/montserrat-light-webfont.woff') format('woff');
+        font-weight:normal;
+        font-style:normal;
+    }
+    @font-face {font-family: 'bankFont';
+        src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+            url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+        font-weight:normal;
+        font-style:italic;
+    }
+
+    @font-face {font-family: 'bankFont';
+        src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+            url('./font/montserrat-semibold-webfont.woff') format('woff');
+        font-weight: bold;
+        font-style:normal;
+    }
+    @font-face {font-family: 'bankFont';
+        src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+            url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+        font-weight:bold;
+        font-style:italic;
+    }
+
+      /* */
+      body {background-color:#fff;margin:0;padding:0; font-family: 'bankFont',Arial,Serif; font-size:14px;height:100%}
+
+      /* Back */
+      #back {
+          position:fixed;
+        background:#ddd;
+        width:40px;height:40px;
+        top:20px;
+        border-radius:20px;
+        text-align:center;
+        text-decoration:none;
+        margin-left:20px;
+      }
+      
+      #main {margin:0 auto; height:100%;max-width:640px;background:#fff;}
+      #contenuto .hero {display:inline-block; height:320px;width:100%; background:#eee;}
+      #main .pagecont {padding:15px 15px 80px}
+      /* Contenuti */
+      footer {position:fixed;bottom:0; left:0;text-align:center;width:100%; margin:0 auto; }
+      #footer-cta {max-width:640px; margin:0 auto;}
+      #footer-cta .cta {display:inline-block;margin: 0 0 20px;background:#333; line-height:15px; text-decoration:none; font-weight:bold;max-width:280px; min-width:200px;padding:10px; color:#fff; border-radius:8px;}
+  </style>
+  <script type="text/javascript">
+    /* Inizializzazioni automazioni */
+    window.addEventListener('load', function(event) {
+        // Inizializzazione accordion (cambia classe al parent)
+
+
+    });
+    
+    var sh = 0;
+
+    window.addEventListener('scroll', function(event) {
+       // Inizializzazione freccetta a scorrimento
+       sh +=1;
+        console.log(sh)
+    });
+  </script>
+</head>
+<body>
+    <div id="main">
+        <div id="back">
+            <a class="cta-back" href=""><-</a>
+        </div>
+        <div id="contenuto">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                </div>
+            </div>
+            <div class="pagecont">
+                <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
+                <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
+                <!-- Box con accordion -->
+                <div class="boxedcont accordion">
+                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                </div>
+                <!-- Fine box con accordion -->
+                <!-- Box semplice -->
+                <div class="boxedcont">
+                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                </div>
+                <!-- Fine box semplice -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer-cta">
+            <a class="cta" href="#">Lorem ipsum</a>
+        </div>
+    </footer>
+</body>
+</html>
