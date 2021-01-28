@@ -28,9 +28,9 @@
     <section>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon icon-2x flLeft icon-ico_club_membership_rewards" title="ico_rewards"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>CLUB MEMBERSHIP REWARDS&reg; </strong>
                         <p>Con l'iscrizione automatica al Club Membreship Rewards, accumuli punti con le tue spese.</p>
                     </div>	
@@ -39,9 +39,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon icon-2x flLeft icon-ico_protezione_acquisto" title="ico_protezione_acquisto"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>PROTEZIONE D'ACQUISTO </strong>
                         <p>Protezione per 90 giorni fino a 1.300&euro; sugli acquisti con Carta (escluse alcune categorie merceologiche), in caso di furto o danneggiamento del bene.</p>
                     </div>	
@@ -50,9 +50,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
-                    <i class="icon icon-2x flLeft icon-ico_protezione_acquisto" title="ico_protezione_acquisto"></i>
-                    <div class="leftTesto ico-fp">
+                <div class="testoIcona  ico-fp">
+                    <i class="icon icon-2x flLeft icon-ico_protezione_antifrode" title="ico_protezione_antifrode"></i>
+                    <div class="leftTesto">
                         <strong>PROTEZIONE ANTIFRODE</strong>
                         <p>Protezione in caso di uso illecito della Carta da parte di terzi, per utilizzare la Carta in tutta tranquillit&agrave;.</p>
                     </div>	
@@ -86,9 +86,9 @@
     <section>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                    <i class="icon flLeft icon-2x icon-ico_priority_pass" title="priority pass"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>PRIORITY PASS&trade; LIVELLO PRESTIGE </strong>
                         <p>Iscrizione gratuita al livello Prestige del Programma Priority Pass, per accedere ad oltre 1.300 VIP Lounge aeroportuali nel mondo.</p>
                     </div>	
@@ -97,9 +97,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon flLeft icon-2x icon-ico_regalo_ogni_anno" title="regalo ogni anno"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>UN REGALO OGNI ANNO</strong>
                         <p>150&euro; di voucher ogni anno per i tuoi viaggi.</p>
                     </div>	
@@ -108,9 +108,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                    <i class="icon flLeft icon-2x icon-ico_servizio_concierge" title="servizio concierge"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>SERVIZIO CONCIERGE</strong>
                         <p>Un servizio dedicato, 24/7 a tua disposizione per ogni esigenza, dai viaggi al lifestyle. </p>
                     </div>	
@@ -144,9 +144,9 @@
     <section>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon flLeft icon-2x icon-ico_priority_pass" title="priority pass"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>PRIORITY PASS</strong>
                         <p>Iscrizione gratuita al Programma Priority Pass, per accedere ad oltre 1.300 VIP Lounge aeroportuali nel mondo.</p>
                     </div>	
@@ -155,9 +155,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon flLeft icon-2x icon-ico_regalo_ogni_anno" title="regalo ogni anno"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>UN REGALO OGNI ANNO</strong>
                         <p>50&euro; di voucher ogni anno per i tuoi viaggi.</p>
                     </div>	
@@ -166,9 +166,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="testoIcona">
+                <div class="testoIcona ico-fp">
                     <i class="icon flLeft icon-2x icon-ico_eventi_2_1" title="eventi 2x1"></i>
-                    <div class="leftTesto ico-fp">
+                    <div class="leftTesto">
                         <strong>EVENTI 2X1</strong>
                         <p>Biglietti 2x1 per i migliori eventi e una Card per andare al Cinema The Space con chi vuoi. </p>
                     </div>	

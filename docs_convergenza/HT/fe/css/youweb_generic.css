@@ -10,9 +10,7 @@ html {
 [class^="icon-"], [class*=" icon-"] {
     font-size: 20px;
 }
-.icon-2x {
-    font-size: 32px;
-}
+
 /* FONT MONTSERRAT */
 @font-face {
     font-family: 'bankFont';
@@ -4823,8 +4821,11 @@ span.colAlert {
 .leftTesto {
     padding-left: 75px;
 }
-.leftTesto.ico-fp {
+.ico-fp .leftTesto {
     padding-left: 47px;
+}
+.ico-fp .icon-2x {
+    font-size:32px
 }
 .icon-wrapper .icon {
     color: #fff;
