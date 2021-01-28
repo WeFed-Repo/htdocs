@@ -559,15 +559,23 @@ function mGetData()
 			mMutuoMin = 1000000;
 			mMutuoMax = 0;
 
-
-			// Prepara il nodo promo 123 se necessario
-			
+			/*
+			// Promo 123
 			var promo123 = $("<div>").addClass("promo-msg").append(
 				$("<h3>").html("1 2 3 Mutuo"),
 				$("<div>").addClass("boxed").append(
 					$("<p>").html("Se stai cercando casa, puoi conoscere in anticipo l'importo del mutuo che potrai ottenere per acquistarla.<br>Chiedi in Filiale o compila il form online per essere ricontattato e avere maggiori informazioni.")
 					)
 				);
+			*/
+			
+			// Promo mutuo green
+			var mPromoGreen = $("<div>").addClass("promo-msg").append(
+					$("<h3>").html("GREEN"),
+					$("<div>").addClass("boxed").append(
+						$("<p>").html("Ricorda che se migliori l'efficienza energetica della tua abitazione puoi ottenere uno sconto sul tasso.")
+						)
+					);
 
 
 			var erroreGenericoMsg = "";
@@ -738,7 +746,7 @@ function mGetData()
 								$("<p>").html("Per il calcolo del TAEG &egrave; stata utilizzata una delle polizze collocate dal Gruppo Banco BPM.")
 							));
 
-							if(mFinalita == "Acquisto") mNode.append(promo123);
+							if(mFinalita == "Acquisto") mNode.append(mPromoGreen);
 							
 							//Pulsanti generici
 							//Confronta i mutui
@@ -834,7 +842,7 @@ function mGetData()
 			else
 			{
 				// Messaggio 123 per comparatore 
-				if(!isDetail) if(mFinalita == "Acquisto") mRes.append(promo123);
+				if(!isDetail) if(mFinalita == "Acquisto") mRes.append(mPromoGreen);
 			}
 
 			
