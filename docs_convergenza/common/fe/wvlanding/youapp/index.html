@@ -35,29 +35,61 @@
     }
 
       /* */
-      body {background-color:#fff;margin:0;padding:0; font-family: 'bankFont',Arial,Serif; font-size:14px;height:100%}
+      body {background-color:#fff;margin:0;padding:0; font-family: 'bankFont',Arial,Serif; font-size:16px;height:100%;color: #1f2021;counter-reset: ol}
 
       /* Back */
       #back {
-          position:fixed;
-        background:#ddd;
-        width:40px;height:40px;
+        z-index:1;
+        position:absolute;
+        background:transparent url("./img/btn_back.png") no-repeat center center;
+        background-size: 15px 15px;
+        width:35px;height:35px;
         top:20px;
         border-radius:20px;
         text-align:center;
-        text-decoration:none;
-        margin-left:20px;
+        text-decoration:none !important;
+        margin-left:15px;
+      }
+      #back.fixed {
+        background-color:#fff;
+        position:fixed;
+        top:15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3)
       }
       
       #main {margin:0 auto; height:100%;max-width:640px;background:#fff;}
-      #contenuto .hero {display:inline-block; height:320px;width:100%; background:#eee;}
-      #main .pagecont {padding:15px 15px 80px}
+      #contenuto .hero {display:inline-block; height:320px;width:100%; background:#eee url(./img/hero.jpg) no-repeat center center; background-size:cover; position:relative;}
+      .hero .hero-text {position:absolute;bottom:0; padding: 0 30px 15px;}
+      #contenuto .hero h1 {font-size: 24px; line-height: 29px}
+      #main .pagecont {padding:15px 15px 60px}
+  
       /* Contenuti */
+      .boxedcont {padding:15px;background: #f4f5f4; border-radius:10px;margin:0 0 15px;}
+
+      /* Generici */
+      h2 {font-size: 18px; line-height:22px; color:#212122;margin:0 0 15px;}
+      h3 {font-size: 16px; line-height:19px; color:#344a86;margin:0 0 15px;}
+      p {margin:0 0 10px;clear:both; line-height:22px;}
+
+      /* Bullet reset */
+      
+      ol,ul,ol li, ul li {margin:0;padding:0;list-style-type:none}
+
+      /* Bullet rivisti */
+      ol li, ul li {position:relative;padding: 0 0 5px 20px; line-height:22px}
+      /* Bullet "normali" */
+      ul li::before {display: block;width:6px;height:6px; background-color:#1f2021;border-radius:4px;top:8px;left:4px;content:"";position:absolute;}
+      /* Bullet "ordinali" */
+      ol li::before {display: block;width:16px;height:16px; background-color:#344a86; font-size:10px; text-align:center; line-height:16px;border-radius:8px;top:3px;left:0;counter-increment:ol;content:counter(ol);position:absolute;color:#fff;}
+      
+      /* Footer */
       footer {position:fixed;bottom:0; left:0;text-align:center;width:100%; margin:0 auto; }
       #footer-cta {max-width:640px; margin:0 auto;}
-      #footer-cta .cta {display:inline-block;margin: 0 0 20px;background:#333; line-height:15px; text-decoration:none; font-weight:bold;max-width:280px; min-width:200px;padding:10px; color:#fff; border-radius:8px;}
+      #footer-cta .cta {display:inline-block;margin: 0 0 15px;background:#344a86; line-height:15px; font-size:14px; text-decoration:none; font-weight:bold;max-width:280px; min-width:200px;padding:14px; color:#fff; border-radius:8px;}
+  
   </style>
   <script type="text/javascript">
+  
     /* Inizializzazioni automazioni */
     window.addEventListener('load', function(event) {
         // Inizializzazione accordion (cambia classe al parent)
@@ -65,20 +97,24 @@
 
     });
     
-    var sh = 0;
-
     window.addEventListener('scroll', function(event) {
        // Inizializzazione freccetta a scorrimento
-       sh +=1;
-        console.log(sh)
+       var btnback = document.getElementById("back"); 
+       if(window.scrollY>=315) {
+           // Cambia classe alla freccetta
+           btnback.classList.add("fixed");
+       }
+       else
+       {
+            btnback.classList.remove("fixed");
+       }
     });
   </script>
 </head>
 <body>
     <div id="main">
-        <div id="back">
-            <a class="cta-back" href=""><-</a>
-        </div>
+        <a id="back" href="#">
+        </a>
         <div id="contenuto">
             <div class="hero">
                 <div class="hero-text">
@@ -86,16 +122,32 @@
                 </div>
             </div>
             <div class="pagecont">
-                <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
-                <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
+               
                 <!-- Box con accordion -->
                 <div class="boxedcont accordion">
-                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                    <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
+                    <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor  sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor  sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
                 </div>
                 <!-- Fine box con accordion -->
                 <!-- Box semplice -->
                 <div class="boxedcont">
+                    <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
+                    <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                    </ol>
                 </div>
                 <!-- Fine box semplice -->
             </div>
