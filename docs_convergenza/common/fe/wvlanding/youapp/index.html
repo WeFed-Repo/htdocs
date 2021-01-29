@@ -1,116 +1,338 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>YouApp</title>
-  <meta name="description" content="YouApp">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Stili della pagina -->
-  <style>
-      /* Font face */
-    @font-face {font-family: 'bankFont';
-        src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
-            url('./font/montserrat-light-webfont.woff') format('woff');
-        font-weight:normal;
-        font-style:normal;
-    }
-    @font-face {font-family: 'bankFont';
-        src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
-            url('./font/montserrat-lightitalic-webfont.woff') format('woff');
-        font-weight:normal;
-        font-style:italic;
-    }
+    <meta charset="utf-8">
+    <title>YouApp</title>
+    <meta name="description" content="YouApp">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Stili della pagina -->
+    <style>
+        /* Font face */
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+                url('./font/montserrat-light-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    @font-face {font-family: 'bankFont';
-        src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
-            url('./font/montserrat-semibold-webfont.woff') format('woff');
-        font-weight: bold;
-        font-style:normal;
-    }
-    @font-face {font-family: 'bankFont';
-        src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
-            url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
-        font-weight:bold;
-        font-style:italic;
-    }
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+        }
 
-      /* */
-      body {background-color:#fff;margin:0;padding:0; font-family: 'bankFont',Arial,Serif; font-size:16px;height:100%;color: #1f2021;counter-reset: ol}
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibold-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
 
-      /* Back */
-      #back {
-        z-index:1;
-        position:absolute;
-        background:transparent url("./img/btn_back.png") no-repeat center center;
-        background-size: 15px 15px;
-        width:35px;height:35px;
-        top:20px;
-        border-radius:20px;
-        text-align:center;
-        text-decoration:none !important;
-        margin-left:15px;
-      }
-      #back.fixed {
-        background-color:#fff;
-        position:fixed;
-        top:15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3)
-      }
-      
-      #main {margin:0 auto; height:100%;max-width:640px;background:#fff;}
-      #contenuto .hero {display:inline-block; height:320px;width:100%; background:#eee url(./img/hero.jpg) no-repeat center center; background-size:cover; position:relative;}
-      .hero .hero-text {position:absolute;bottom:0; padding: 0 30px 15px;}
-      #contenuto .hero h1 {font-size: 24px; line-height: 29px}
-      #main .pagecont {padding:15px 15px 60px}
-  
-      /* Contenuti */
-      .boxedcont {padding:15px;background: #f4f5f4; border-radius:10px;margin:0 0 15px;}
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }
 
-      /* Generici */
-      h2 {font-size: 18px; line-height:22px; color:#212122;margin:0 0 15px;}
-      h3 {font-size: 16px; line-height:19px; color:#344a86;margin:0 0 15px;}
-      p {margin:0 0 10px;clear:both; line-height:22px;}
+        /* */
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'bankFont', Arial, Serif;
+            font-size: 15px;
+            height: 100%;
+            color: #1f2021;
+        }
 
-      /* Bullet reset */
-      
-      ol,ul,ol li, ul li {margin:0;padding:0;list-style-type:none}
+        /* Back */
+        #back {
+            z-index: 1;
+            position: fixed;
+            transition: background-color 0.3s;
+            background: transparent url("./img/btn_back.png") no-repeat center center;
+            background-size: 15px 15px;
+            width: 35px;
+            height: 35px;
+            top: 20px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none !important;
+            margin-left: 15px;
+        }
 
-      /* Bullet rivisti */
-      ol li, ul li {position:relative;padding: 0 0 5px 25px; line-height:22px}
-      /* Bullet "normali" */
-      ul li::before {display: block;width:6px;height:6px; background-color:#1f2021;border-radius:4px;top:8px;left:4px;content:"";position:absolute;}
-      /* Bullet "ordinali" */
-      ol li::before {display: block;width:16px;height:16px; background-color:#344a86; font-size:12px; text-align:center; line-height:16px;border-radius:8px;top:3px;left:0;counter-increment:ol;content:counter(ol);position:absolute;color:#fff;}
-      
-      /* Footer */
-      footer {position:fixed;bottom:0; left:0;text-align:center;width:100%; margin:0 auto; }
-      #footer-cta {max-width:640px; margin:0 auto;}
-      #footer-cta .cta {display:inline-block;margin: 0 0 15px;background:#344a86; line-height:15px; font-size:14px; text-decoration:none; font-weight:bold;max-width:280px; min-width:200px;padding:14px; color:#fff; border-radius:8px;}
-  
-  </style>
-  <script type="text/javascript">
-  
-    /* Inizializzazioni automazioni */
-    window.addEventListener('load', function(event) {
-        // Inizializzazione accordion (cambia classe al parent)
+        #back.fixed {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+        }
 
+        #main {
+            margin: 0 auto;
+            height: 100%;
+            max-width: 640px;
+            background: #fff;
+        }
 
-    });
-    
-    window.addEventListener('scroll', function(event) {
-       // Inizializzazione freccetta a scorrimento
-       var btnback = document.getElementById("back"); 
-       if(window.scrollY>=315) {
-           // Cambia classe alla freccetta
-           btnback.classList.add("fixed");
-       }
-       else
-       {
-            btnback.classList.remove("fixed");
-       }
-    });
-  </script>
+        #contenuto .hero {
+            display: inline-block;
+            height: 320px;
+            width: 100%;
+            background: #eee url(./img/hero.jpg) no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero .hero-text {
+            position: absolute;
+            bottom: 0;
+            padding: 0 25px 15px;
+        }
+
+        #contenuto .hero h1 {
+            font-size: 24px;
+            line-height: 29px
+        }
+
+        #main .pagecont {
+            padding: 15px 25px 80px
+        }
+
+        /* Contenuti */
+        .boxedcont {
+            padding: 15px 15px 5px;
+            background: #f4f5f4;
+            border-radius: 10px;
+            margin: 0 -10px 15px;
+        }
+
+        /* Generici */
+        a {
+            color: #344a86;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 22px;
+            color: #212122;
+            margin: 0 0 15px;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 19px;
+            color: #344a86;
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            clear: both;
+            line-height: 20px;
+        }
+
+        p.note {color:#1f2021;font-size:13px; line-height:18px;}
+
+        /* Bullet reset */
+        ol,
+        ul,
+        ol li,
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none
+        }
+
+        /* Bullet rivisti */
+        ol {
+            counter-reset: ol;
+        }
+
+        ol li,
+        ul li {
+            position: relative;
+            padding: 0 0 10px 25px;
+            line-height: 20px
+        }
+
+        /* Bullet "normali" */
+        ul li::before {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #1f2021;
+            border-radius: 4px;
+            top: 8px;
+            left: 4px;
+            content: "";
+            position: absolute;
+        }
+
+        /* Bullet "ordinali" */
+        ol li::before {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-color: #344a86;
+            font-size: 13px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 10px;
+            top: 0px;
+            left: 0;
+            counter-increment: ol;
+            content: counter(ol);
+            position: absolute;
+            color: #fff;
+        }
+
+        /* Accordion */
+        .accordion .accordion-content {
+            display: none;
+        }
+
+        .accordion .accordion-abstract {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .accordion.opened .accordion-content {
+            display: inline-block;
+            width: 100%;
+            overflow: visible;
+        }
+
+        .accordion.opened .accordion-abstract {
+            display: none;
+        }
+
+        .accordion .accordion-toggle {
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom:10px;
+        }
+
+        .accordion .accordion-toggle span {
+            font-size: 13px;
+            position: relative;
+            padding-right: 20px;
+            display: inline-block;
+            color: #344a86;
+            position: relative;
+        }
+
+        .accordion .accordion-toggle span::after {
+            content: "+";
+            width: 16px;
+            height: 16px;
+            background: transparent url("./img/vedi_piu.png") no-repeat center center;
+            border-radius: 8px;
+            background-size: 16px 16px;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            display: block;
+        }
+
+        .accordion .accordion-toggle span.opened {
+            display: none;
+        }
+
+        .accordion .accordion-toggle span.opened::after {
+            background-image: url("./img/vedi_meno.png");
+        }
+
+        .accordion.opened .accordion-toggle span.closed {
+            display: none;
+        }
+
+        .accordion.opened .accordion-toggle span.opened {
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height:0;
+            overflow:visible;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        footer .cta {
+            display: inline-block;
+            margin: 0 0 15px;
+            background: #344a86;
+            line-height: 15px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            width: 240px;
+            position:absolute;
+            margin-left:-135px;
+            margin-top:-65px;
+            padding: 15px;
+            color: #fff;
+            border-radius: 8px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        /* Piccolo framework */
+        function getParent(element, selector) {
+            if (!element) { return element };
+            element.matches(selector) || (element = (element.nodeName.toLowerCase() === 'html' ? false : getParent(element.parentNode, selector)));
+            return element;
+        }
+
+        /* Inizializzazioni automazioni */
+        window.addEventListener('load', function (event) {
+            // Inizializzazione accordion (cambia classe al parent)
+            var acctoggle = document.querySelectorAll(".accordion-toggle"), x;
+            for (x = 0; x < acctoggle.length; x++) {
+                // Inizializza uno per uno tutti gli accordion
+                acctoggle[x].addEventListener("click", function () {
+                    var acc = getParent(this, ".accordion");
+                    if (acc.className.indexOf("opened") >= 0) {
+                        // Aperto - lo chiude
+                        acc.classList.remove("opened");
+                    }
+                    else {
+                        // Chiuso - lo apre
+                        acc.classList.add("opened");
+                    }
+                });
+            }
+        });
+
+        window.addEventListener('scroll', function (event) {
+            // Inizializzazione freccetta a scorrimento
+            var btnback = document.getElementById("back");
+            if (window.scrollY >= 1) {
+                // Cambia classe alla freccetta
+                btnback.classList.add("fixed");
+            }
+            else {
+                btnback.classList.remove("fixed");
+            }
+        });
+    </script>
 </head>
+
 <body>
     <div id="main">
         <a id="back" href="#">
@@ -122,34 +344,92 @@
                 </div>
             </div>
             <div class="pagecont">
-               
-                <!-- Box con accordion -->
+                <!-- Box con accordion solo testo -->
                 <div class="boxedcont accordion">
-                    <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
-                    <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor  sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                    <h2><a name="ancora"></a>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
+                    <div class="accordion-abstract">
+                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
+                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
+                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum sit amet...
+                        </p>
+                    </div>
+                    <div class="accordion-content">
+                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
+                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
+                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur
+                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
+                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
+                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
+                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
+                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
+                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
+                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
+                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
+                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
+                            dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                    </div>
+                    <!-- Accordion toggle -->
+                    <div class="accordion-toggle"><span class="closed">Vedi di pi&ugrave;</span><span
+                            class="opened">Vedi di meno</span></div>
+                    <!-- /accordion toggle -->
+                </div>
+                <!-- Fine box con accordion solo testo -->
+
+                <!-- Box solo elenco puntato -->
+                <div class="boxedcont">
                     <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
                         <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum doloramet consectetur ipsum dolor sit amet <a href="#">consectetur
+                                ipsum</a> ipsum dolor</li>
                         <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor  sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
                 </div>
-                <!-- Fine box con accordion -->
-                <!-- Box semplice -->
+                <!-- Fine box solo elenco puntato -->
+
+                <!-- Box solo testo con vari link -->
                 <div class="boxedcont">
-                    <h2>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
-                    <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                    </ol>
+                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
+                   Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                   Esempio <strong>link tipo</strong>: <a href="http://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                   Esempio <strong>link tipo</strong>: <a href="http://www.google.it" target="_blank">link a google.it (nuova
+                            finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                   Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
+                            xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
+                   Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
+                </p>
                 </div>
-                <!-- Fine box semplice -->
+                <!-- Fine box solo testo con vari link -->
+                
+                 <!-- Box solo elenco numerato -->
+                 <div class="boxedcont">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                   </ol>
+                </div>
+                <!-- Fine box solo elenco numerato -->
+
+                 <!-- Box solo testo con link dopo elenco numerato -->
+                 <div class="boxedcont">
+                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
+                    Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                    Esempio <strong>link tipo</strong>: <a href="http://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                    Esempio <strong>link tipo</strong>: <a href="http://www.google.it" target="_blank">link a google.it (nuova
+                             finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
+                    Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
+                             xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
+                    Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
+                 </p>
+                </div>
+                <!-- Fine solo testo con link dopo elenco numerato -->
+
+                <!-- Non boxati -->
+                <p class="note">Note lorem ipsum dolor  sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</p>
+                <!-- Fine non boxati -->
             </div>
         </div>
     </div>
@@ -159,4 +439,5 @@
         </div>
     </footer>
 </body>
+
 </html>
