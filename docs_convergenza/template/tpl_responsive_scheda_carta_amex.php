@@ -18,7 +18,9 @@
                 <div class="col-sm-8">
                 <h3><br>CARTA VERDE AMERICAN EXPRESS</h3>
                 <h4>BONUS DI BENVENUTO</h4>
-                <p>Effettuando una trasazione con Carta entro 90 giorni dall'emissione, otterrai un bonus di benvenuto di <strong>12500 punti Menbership Rewards&reg;</strong></p>
+                <p>Effettuando una transazione con Carta entro 90 giorni dall'emissione, otterrai un bonus di <strong>12.500 punti Membership Rewards&reg;</strong>, per ridurre il saldo del tuo conto Carta <strong>fino a &euro;50</strong> con gli Sconti Shop with Points. </p>
+                <p>Quota ridotta a <strong>&euro;30 il 1&deg; anno</strong>, rimborsata alla prima transazione con Carta entro 45 giorni dall'emissione. Dal 2&deg; anno, &euro;75.
+</p>
                 <div>
             </div>
             <br class="clear">
@@ -76,7 +78,8 @@
                 <div class="col-sm-8">
                 <h3><br>CARTA PLATINO AMERICAN EXPRESS</h3>
                 <h4>BONUS DI BENVENUTO</h4>
-                <p>Spendendo &euro; 5.000 con Carta entro 90 giorni dall'emissione, otterrai un bonus di benvenuto di <strong>80.000 punti Membership Rewards&reg;.</strong></p>
+                <p>Spendendo &euro; 5.000 con Carta entro 90 giorni dall'emissione, otterrai un bonus di benvenuto di <strong>80.000 punti Membership Rewards&reg;</strong>, per ridurre il saldo del tuo conto Carta <strong>fino a &euro;320</strong> con gli Sconti Shop with Points. </p>
+                <p>Quota mensile &euro;60</p>
                 <div>
             </div>
             <br class="clear">
@@ -87,10 +90,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                   <i class="icon flLeft icon-2x icon-ico_priority_pass" title="priority pass"></i>
+                   <i class="icon flLeft icon-2x icon-ico_muoviti_con_free_now" title="muoviti con free now"></i>
                     <div class="leftTesto">
-                        <strong>PRIORITY PASS&trade; LIVELLO PRESTIGE </strong>
-                        <p>Iscrizione gratuita al livello Prestige del Programma Priority Pass, per accedere ad oltre 1.300 VIP Lounge aeroportuali nel mondo.</p>
+                        <strong>MUOVITI CON FREE NOW</strong>
+                        <p>Per te un credito fino a 120&euro; l'anno per gli spostamenti in taxi con FREE NOW.</p>
                     </div>	
                 </div>
             </div>
@@ -134,7 +137,8 @@
                 <div class="col-sm-8">
                 <h3><br>CARTA ORO AMERICAN EXPRESS</h3>
                 <h4>BONUS DI BENVENUTO</h4>
-                <p>Spendendo &euro; 500 con Carta entro 60 giorni dall'emissione, otterrai un bonus di benvenuto di <strong>25.000 punti Membership Rewards&reg;</strong>.</p>
+                <p>Spendendo &euro; 500 con Carta entro 60 giorni dall'emissione, otterrai un bonus di benvenuto di <strong>25.000 punti Membership Rewards&reg;</strong>, per ridurre il saldo del tuo conto Carta <strong>fino a &euro;100</strong> con gli Sconti Shop with Points.</p>
+                <p>Quota ridotta a <strong>&euro;20 il 1&deg; anno</strong>, rimborsata alla prima transazione con Carta entro 3 mesi dall'emissione. Dal 2&deg; anno, &euro;165.</p>
                 <div>
             </div>
             <br class="clear">
@@ -145,10 +149,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon flLeft icon-2x icon-ico_priority_pass" title="priority pass"></i>
+                    <i class="icon flLeft icon-2x icon-ico_protezione_acquisto" title="protezione acquisto"></i>
                     <div class="leftTesto">
-                        <strong>PRIORITY PASS</strong>
-                        <p>Iscrizione gratuita al Programma Priority Pass, per accedere ad oltre 1.300 VIP Lounge aeroportuali nel mondo.</p>
+                        <strong>AMEX OFFERS</strong>
+                        <p>Ricevi gli sconti dei partner di American Express direttamente sull'estratto conto della tua Carta.</p>
                     </div>	
                 </div>
             </div>

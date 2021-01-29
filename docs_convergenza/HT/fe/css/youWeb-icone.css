@@ -35,6 +35,9 @@
 .icon, .glyph {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-ico_muoviti_con_free_now:before {
+  content: "\e9ef";
+}
 .icon-ico_eventi_2_1:before {
   content: "\e9e5";
 }
