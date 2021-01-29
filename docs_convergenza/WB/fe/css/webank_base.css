@@ -1486,6 +1486,9 @@
 .icon-ico_protezione_antifrode:before {
   content: "\eaab";
 }
+.icon-ico_muoviti_con_free_now:before {
+  content: "\eaac";
+}
 .glyph-arrow_trading_fill .path1:before {
   content: "\e94d";
   color: #000000;

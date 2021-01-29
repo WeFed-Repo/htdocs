@@ -25,7 +25,25 @@
 		</div>
 	  </form>
 	</div>
-	<div class="modal fade" data-modal="default" id="modalAutoComplete">
+	<div class="modal fade" data-modal="default" id="modalAutoCompleteautocomplete1"> 
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title">Pagamento a favore di</h5>
+					<a href="#.html.html.html.html" data-dismiss="modal" aria-label="Close" >
+			  <img src="./fe/img/icon/close.svg">
+			</a>
+		  </div>
+		  <div class="modal-body">
+			 <p>testo ancora da verificare</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  </div>
+		 </div>
+	  </div>
+  </div>
+	<div class="modal fade" data-modal="default" id="modalAutoCompleteautocomplete2"> 
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -99,8 +117,8 @@
 					//param : oggetto autocomplete
 					manageModal: function (inputAutocomplete) {
 						
-						$('#modalAutoComplete').modal('show');
-						console.log('Apertura modale');
+						$('#modalAutoComplete' + params1.inputId).modal('show');
+						console.log('apertura modale' + params1.inputId);
 						//gestione modale non trovi ...
 						inputAutocomplete.val('');
 							
@@ -161,8 +179,8 @@
 					//param : oggetto autocomplete
 					manageModal: function (inputAutocomplete) {
 						
-						$('#modalAutoComplete').modal('show');
-						console.log('Apertura modale');
+						$('#modalAutoComplete' + params2.inputId).modal('show');
+						console.log('apertura modale' + params2.inputId);
 						//gestione modale non trovi ...
 						inputAutocomplete.val('');
 							
@@ -227,216 +245,223 @@
 		 *
 		*/
 		
-		var _initAutocompleteMultiplo=function(params){
 		
-		   //start verify required params
-			if (params.inputId == undefined || params.inputId == "") {
-				throw 'Errore su autocomplete: Settare Id input autocomplete';
-			}
-			if (params.manageSelect == undefined || params.manageSelect == $.noop) {
-				throw 'Errore su autocomplete: Settare gestione selezione di una opzione';
-			}
-			if (params.filterFunction == undefined || params.filterFunction == $.noop) {
-				throw 'Errore su autocomplete: Settare funzione per filtraggio opzioni';
-			}
-			if (params.language == undefined || params.language == "") {
-				throw 'Errore su autocomplete: Settare la lingua';
-            }
-            if (params.onChange == undefined || params.onChange == $.noop) {
-                throw 'Errore su autocomplete: Settare funzione change';
-            }
-			//end verify required params
+		var _initAutocompleteMultiplo = function (params) {
 
-			//options
-			var srcResults = params.objectsToBeFiltered;
-			//language
-			var language = params.language;
-           
-			var inputAutocomplete = $("#"+params.inputId),
-				btnAutocomplete = inputAutocomplete.next('button'),
-				isOpenMenu = false,
-				readyToClose = false;
+//start verify required params
+if (params.inputId == undefined || params.inputId == "") {
+	throw 'Errore su autocomplete: Settare Id input autocomplete';
+}
+if (params.manageSelect == undefined || params.manageSelect == $.noop) {
+	throw 'Errore su autocomplete: Settare gestione selezione di una opzione';
+}
+if (params.filterFunction == undefined || params.filterFunction == $.noop) {
+	throw 'Errore su autocomplete: Settare funzione per filtraggio opzioni';
+}
+if (params.language == undefined || params.language == "") {
+	throw 'Errore su autocomplete: Settare la lingua';
+}
+if (params.onChange == undefined || params.onChange == $.noop) {
+	throw 'Errore su autocomplete: Settare funzione change';
+}
+//end verify required params
+
+//options
+var srcResults = params.objectsToBeFiltered;
+//language
+var language = params.language;
+
+var inputAutocomplete = $("#" + params.inputId),
+	btnAutocomplete = inputAutocomplete.next('button'),
+	isOpenMenu = false,
+	readyToClose = false;
+
+//start DEFAULT UX
+//EMULAZIONE BOTTONE FINTA SELECT
+btnAutocomplete.on('click', function (event) {
+	if (!isOpenMenu) {
+		inputAutocomplete.trigger('keydown').focus();
+		isOpenMenu = true;
+	}
+	else {
+		inputAutocomplete.autocomplete("close");
+		NmaxRis = 20;
+		isOpenMenu = false;
+	}
+});
+//GESTIONE CLASSI  PER DARE IL FOCUS/BLUR ANCHE AL BOTTONE
+inputAutocomplete.on("focus", function () {
+	$(this).closest(".input-group").addClass("focus");
+	btnAutocomplete.addClass("btn-focus");
+});
+
+inputAutocomplete.on("blur", function () {
+	$(this).closest(".input-group").removeClass("focus");
+	btnAutocomplete.removeClass("btn-focus");
+
+});
+//end DEFAULT UX
+
+inputAutocomplete.autocomplete({
+	minLength: (params.minLength) ? params.minLength : 0, // numero di lettere dopo il quale si apre la tendina adeguare a valore opportuno
+	source: function (request, response) {
+
+		params.beforeFilter();
+
+		$.ui.autocomplete.filter = params.filterFunction;
+
+		var results = $.ui.autocomplete.filter(srcResults, request);
+		//numero di risultati da caricare
+		NmaxRis = typeof (NmaxRis) !== "undefined" ? NmaxRis : 20;
+		//corrispondente testo da mostrare con il numero dei risultati
+		textNmaxRis = NmaxRis.toString();
+		//corrispondente testo iniziale, variabile in base al numero dei risultati
+		textIn = (language.indexOf("it-IT") != -1) ? "Primi" : "First";
+		//azione sul link nell'elenco
+		var actionMostra = "actionMostra" + params.inputId;
+		actionLink = (language.indexOf("it-IT") != -1) ? "<a href=\"javascript:;\"  id=\"" + actionMostra + "\" >Mostra di pi&ugrave;</a>" : "<a href=\"javascript:;\" id=\"" + actionMostra+"\" >Show more</a>";
+		//se il numero dei risultati totali è inferiore al numero massimo da visualizzare o se si è già superata la soglia dei 40...carico tutti i risultati
+
+		//id wrapper da appendere dinamico
+
+		wrapperUlAutocomplete = 'wrapper-ul-autocomplete-' + params.inputId;
+		wrapperUlAutocompleteId = '#wrapper-ul-autocomplete-' + params.inputId;
+
+		if (results.length <= NmaxRis || NmaxRis > 40) {
+
+			textIn = (language.indexOf("it-IT") != -1) ? "Tutti i" : "All";
+			actionModale = "actionModale" + params.inputId;
 			
-			//start DEFAULT UX
-			//EMULAZIONE BOTTONE FINTA SELECT
-			btnAutocomplete.on('click', function (event) {
-				if (!isOpenMenu) {
-					inputAutocomplete.trigger('keydown').focus();
-					isOpenMenu = true;
-				}
-				else {
-					inputAutocomplete.autocomplete("close");
-					NmaxRis = 20;
-					isOpenMenu = false;
-				}
-			});
-			//GESTIONE CLASSI  PER DARE IL FOCUS/BLUR ANCHE AL BOTTONE
-			inputAutocomplete.on("focus", function () {
-				$(this).closest(".input-group").addClass("focus");
-				btnAutocomplete.addClass("btn-focus");
-			});
+			textNmaxRis = "",
+				actionLink = (language.indexOf("it-IT") != -1) ? "<a  id=" + actionModale + " href=\"javascript:;\">Non trovi quello che cerchi?</a>" : "<a  id=" + actionModale + " href=\"javascript:;\">Not found what you are looking for?</a>";
 
-			inputAutocomplete.on("blur", function () {
-				$(this).closest(".input-group").removeClass("focus");
-				btnAutocomplete.removeClass("btn-focus");
+		}
+		//altrimenti ne carico solo il mnumero massimo consentito
+		if (NmaxRis <= 40) {
+			response(
+				results.slice(0, NmaxRis)
+			);
+		}
+		else {
+			response(results);
+		}
 
-			});
-			 //end DEFAULT UX
+	},
+	create: function (event, ui) {
 
-			inputAutocomplete.autocomplete ({
-				minLength: (params.minLength) ? params.minLength: 0, // numero di lettere dopo il quale si apre la tendina adeguare a valore opportuno
-				source: function (request, response) {
+		$(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+			//nel creare gli <li> stilizzo in grassetto le lettere ricercate
+			return $("<li>")
+				.append(item.text.replace($("#" + params.inputId).val().toUpperCase(), "<strong>" + $("#" + params.inputId).val().toUpperCase() + "</strong>"))
+				.attr("role", "option")
+				.addClass('ui-menu-item')
+				.appendTo(ul);
+		}
+		var menuUl = $.ui.autocomplete.prototype._renderMenu;
 
-					params.beforeFilter();
+		$(this).data('ui-autocomplete')._renderMenu = function (ul, items) {
 
-					$.ui.autocomplete.filter = params.filterFunction;
-					
-					var results = $.ui.autocomplete.filter(srcResults, request);
-					//numero di risultati da caricare
-					NmaxRis = typeof (NmaxRis) !== "undefined" ? NmaxRis : 20;
-					//corrispondente testo da mostrare con il numero dei risultati
-					textNmaxRis = NmaxRis.toString();
-					//corrispondente testo iniziale, variabile in base al numero dei risultati
-					textIn = (language.indexOf("it-IT") != -1) ? "Primi" : "First";
-					//azione sul link nell'elenco
-					actionLink = (language.indexOf("it-IT") != -1) ? "<a href=\"javascript:;\"  id=\"actionMostra\" >Mostra di pi&ugrave;</a>" : "<a href=\"javascript:;\" id=\"actionMostra\" >Show more</a>";
-					//se il numero dei risultati totali è inferiore al numero massimo da visualizzare o se si è già superata la soglia dei 40...carico tutti i risultati
-					
-					//id wrapper da appendere dinamico
+			menuUl.apply(this, [ul, items]);
+			//html bottom contentente il testo dinamico e il link (mostra o overlayer)
+			var htmlToAppend = "<div class=\"menu-bottom-multiplo\">" + "<span class=\"text-search\"></span>" + " " + "<span class=\"input-value\"></span>" + "</span>" + "<span class=\"action-link\"></span></div>";
+			//per poter posizionare l'html bottom wrappo l'ul con un contenitore
+			if ($(wrapperUlAutocompleteId).length === 0) {
+				ul.attr("role", "listbox").wrap("<div class=\"wrapper-ul-autocomplete\" id=" + wrapperUlAutocomplete + ">");
+				$(wrapperUlAutocompleteId).append(htmlToAppend);
+			}
+			//costruisco l'html dinamico
+			var contenenti = (language.indexOf("it-IT") != -1) ? "contenenti " : "containing ";
+			var risultati = (language.indexOf("it-IT") != -1) ? " risultati " : " results ";
+			$(wrapperUlAutocompleteId).find(".input-value").html(contenenti + "<strong>\"" + $("#" + params.inputId).val() + "\"</strong>");
+			$(wrapperUlAutocompleteId).find(".text-search").html(textIn + " " + "<strong>" + textNmaxRis + "</strong>" + risultati);
+			$(wrapperUlAutocompleteId).find(".action-link").html(actionLink);
 
-					wrapperUlAutocomplete = 'wrapper-ul-autocomplete-' + params.inputId;
-					wrapperUlAutocompleteId = '#wrapper-ul-autocomplete-' + params.inputId;
-					
-					if (results.length <= NmaxRis || NmaxRis > 40) {
+			//creazione modale
+			if (params.manageModal != undefined && params.manageModal != $.noop) {
+				"actionModale" + params.inputId;
+				$("#actionModale" + params.inputId).on('click', function () {
+					params.manageModal(inputAutocomplete);
+				});
 
-						textIn =(language.indexOf("it-IT") != -1) ? "Tutti i": "All";
-						actionModale = "actionModale" + params.inputId;
-						
-						textNmaxRis = "",
-							actionLink = (language.indexOf("it-IT") != -1) ? "<a  id=" + actionModale + " href=\"javascript:;\">Non trovi quello che cerchi?</a>" :"<a  id=" + actionModale + " href=\"javascript:;\">Not found what you are looking for?</a>";
+			} else {
+				$("#actionModale" + params.inputId).on('click', function () {
+					$('#modalAutoComplete' + params.inputId).modal('show');
+				});
 
-					}
-					//altrimenti ne carico solo il mnumero massimo consentito
-					if (NmaxRis <= 40) {
-						response(
-							results.slice(0, NmaxRis)
-						);
-					}
-					else {
-						response(results);
-					}
+			}
 
-				},
-				create: function (event, ui) {
+		}
+	},
+	open: function (event, ui) {
 
-					$(this).data('ui-autocomplete')._renderItem = function (ul, item) {
-						//nel creare gli <li> stilizzo in grassetto le lettere ricercate
-						return $("<li>")
-							.append(item.text.replace($("#" + params.inputId).val().toUpperCase(), "<strong>" + $("#" + params.inputId).val().toUpperCase() + "</strong>"))
-							.attr("role", "option")
-							.addClass('ui-menu-item')
-							.appendTo(ul);
-					}
-					var menuUl = $.ui.autocomplete.prototype._renderMenu;
+		//inizializzo la modale che eventualmente dovrà aprirsi
+		initModali();
+		//variabile che gestisce il semaforo per la chiusura del menu
+		readyToClose = false;
+		isOpenMenu = true;
+		//posiziono il testo bottom rispetto alla tendina aperta
+		var actionMostra = "actionMostra" + params.inputId;
+		var actionModale = "actionModale" + params.inputId;
+		$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").css({
+			top: $(wrapperUlAutocompleteId).find("ul").position().top,
+			left: $(wrapperUlAutocompleteId).find("ul").position().left,
+			position: "relative",
+			maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
+		})
+		$(".ui-menu").css({
+			maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
+		})
 
-					$(this).data('ui-autocomplete')._renderMenu = function (ul, items) {
+		//se ho aperto la tendina senza digitare alcun carattere non compare la parte di testo "contenenti..."
+		$("#" + params.inputId).val() === "" ? $(wrapperUlAutocompleteId).find(".input-value").hide() : $(wrapperUlAutocompleteId).find(".input-value").show()
 
-						menuUl.apply(this, [ul, items]);
-						//html bottom contentente il testo dinamico e il link (mostra o overlayer)
-						var htmlToAppend = "<div class=\"menu-bottom-multiplo\">" + "<span class=\"text-search\"></span>" + " " + "<span class=\"input-value\"></span>" + "</span>" + "<span class=\"action-link\"></span></div>";
-						//per poter posizionare l'html bottom wrappo l'ul con un contenitore
-						if ($(wrapperUlAutocompleteId).length === 0) {
-							ul.attr("role", "listbox").wrap("<div class=\"wrapper-ul-autocomplete\" id=" + wrapperUlAutocomplete +">");
-							$(wrapperUlAutocompleteId).append(htmlToAppend);
-						}
-						//costruisco l'html dinamico
-						var contenenti = (language.indexOf("it-IT") != -1) ? "contenenti " : "containing ";
-						var risultati = (language.indexOf("it-IT") != -1) ? " risultati " : " results ";
-						$(wrapperUlAutocompleteId).find(".input-value").html(contenenti+"<strong>\"" + $("#" + params.inputId).val() + "\"</strong>");
-						$(wrapperUlAutocompleteId).find(".text-search").html(textIn + " " + "<strong>" + textNmaxRis + "</strong>" + risultati);
-						$(wrapperUlAutocompleteId).find (".action-link").html(actionLink);
+		//condiziono la chiusura automatica del menu al fatto di non cliccare sul link posizionato in bottom. Se clicco altrove si chiude come di default
+		$(document).on("click", function (event) {
+			if (!readyToClose && event.target.id !== actionMostra && event.target.id !== actionModale) {
+				//se, a menu aperto, clicco altrove che non siano i link in bottom il comportamento è usuale, il menu si chiude e ripristino il numero di risultati da mostrare a 20
+				readyToClose = true;
+				inputAutocomplete.autocomplete("close"); //chiudo come da comportamento normale
+				NmaxRis = 20;
+			}
+		})
+		//mostro il testo bottom solo dopo l'apertura del menu
+		$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").show();
 
-						//creazione modale
-						if (params.manageModal != undefined && params.manageModal != $.noop) {
-							"actionModale" + params.inputId;
-							$("#actionModale" + params.inputId).on('click', function () {
-								params.manageModal(inputAutocomplete);                                   
-							});
+		//azioni al click sul link "mostra"
+		$("#" + actionMostra).on("click", function () {
+			//incremento il numero di risultati da mostrare di venti unità
+			NmaxRis += 20;
+			readyToClose = true;
+			inputAutocomplete.autocomplete("close"); //forzo la chiusura per  permettere di ricostruire l'elenco dei risultati
+			inputAutocomplete.trigger('keydown').focus(); // rinizializza l'autocomplete
+			isOpenMenu = true;
 
-						}else{
-							$("#actionModale" + params.inputId).on('click', function () {
-								$('#modalAutoComplete').modal('show');
-							});
-							
-						}						
-						
-					}
-				},
-				open: function (event, ui) {
-                   
-					//inizializzo la modale che eventualmente dovrà aprirsi
-					initModali();
-					//variabile che gestisce il semaforo per la chiusura del menu
-					readyToClose = false;
-					isOpenMenu = true;
-					//posiziono il testo bottom rispetto alla tendina aperta
-					
-					$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").css({
-						top: $(wrapperUlAutocompleteId).find("ul").position().top,
-						left: $(wrapperUlAutocompleteId).find("ul").position().left,
-						position: "relative",
-						maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
-					})
-					$(".ui-menu").css({
-						maxWidth: inputAutocomplete.closest(".autocomplete").innerWidth() + "px"
-					})
+		})
 
-					//se ho aperto la tendina senza digitare alcun carattere non compare la parte di testo "contenenti..."
-					$("#" + params.inputId).val() === "" ? $(wrapperUlAutocompleteId).find(".input-value").hide() : $(wrapperUlAutocompleteId).find(".input-value").show()
+	},
+	close: function (event, ui) {
+		$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").hide();
+		isOpenMenu = false;
+	},
+	//gestione selezione di una opzione
+	//gestione selezione di una opzione
+	select: params.manageSelect,
+	change: params.onChange
+}).data("uiAutocomplete").close = function (e) {
 
-					//condiziono la chiusura automatica del menu al fatto di non cliccare sul link posizionato in bottom. Se clicco altrove si chiude come di default
-					$(document).on("click", function (event) {
-						if (!readyToClose && event.target.id !== "actionMostra" && event.target.id !== "actionModale") {
-							//se, a menu aperto, clicco altrove che non siano i link in bottom il comportamento è usuale, il menu si chiude e ripristino il numero di risultati da mostrare a 20
-							readyToClose = true;
-							inputAutocomplete.autocomplete("close"); //chiudo come da comportamento normale
-							NmaxRis = 20;
-						}
-					})
-					//mostro il testo bottom solo dopo l'apertura del menu
-					$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").show();
+	//chiusura del menu condizonata al fatto che sia acceso il semaforo verde (no click su link bottom)
+	if (readyToClose) {
+		this.menu.element.is(":visible") && (this.menu.element.hide(), this._trigger("close", e));
+	}
 
-					//azioni al click sul link "mostra"
-					$("#actionMostra").on("click", function () {
-						//incremento il numero di risultati da mostrare di venti unità
-						NmaxRis += 20;
-						readyToClose = true;
-						inputAutocomplete.autocomplete("close"); //forzo la chiusura per  permettere di ricostruire l'elenco dei risultati
-						inputAutocomplete.trigger('keydown').focus(); // rinizializza l'autocomplete
-						isOpenMenu = true;
-
-					})
-
-				},
-				close: function (event, ui) {
-					$(wrapperUlAutocompleteId).find(".menu-bottom-multiplo").hide();
-					isOpenMenu = false;
-				},
-				//gestione selezione di una opzione
-				//gestione selezione di una opzione
-				select: params.manageSelect,
-				change: params.onChange
-			}).data("uiAutocomplete").close = function (e) {
-				
-				//chiusura del menu condizonata al fatto che sia acceso il semaforo verde (no click su link bottom)
-				if (readyToClose) {
-					this.menu.element.is(":visible") && (this.menu.element.hide(), this._trigger("close", e));
-				}
-
-				else
-					return false;
-			};
-       }
-    _initAutocompleteMultiplo(params1);
+	else
+		return false;
+};
+}
+	
+	
+	
+	
+	_initAutocompleteMultiplo(params1);
 	_initAutocompleteMultiplo(params2);
   </script>	
