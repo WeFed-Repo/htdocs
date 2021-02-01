@@ -1442,9 +1442,19 @@ nav ul.level2 li.active ul li.selected a {
     cursor: pointer;
     border-bottom: solid 1px #dedede;
   }
+  #userMenu ul li a .icon-text {
+    font-size: 18px!important;
+    font-family: "bankFont", Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -5px;
+  }
   #userMenu ul li a .icon {
     margin-left: 14px;
     vertical-align: middle;
+  }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper .icon {
+    color: #6f8f0a !important;
+    margin-left: 0!important;
   }
   #userMenu ul li span.nameConto {
     float: right;
@@ -2458,6 +2468,62 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   display: none;
 }
 /*Servizio CMB */
+.icona-call-me-back-wrapper .icon-stato {
+  display: none;
+}
+.icona-call-me-back-wrapper a {
+  text-decoration: none;
+}
+.icona-call-me-back-wrapper.stato-attivo .icon-cmb {
+  display: block;
+}
+.icona-call-me-back-wrapper.stato-attivo .icon-cmb i {
+  top: 2px;
+  position: relative;
+}
+.icona-call-me-back-wrapper.stato-attivo i {
+  font-size: 32px!important;
+  color: #8ab10b;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb {
+  display: none;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok {
+  display: block;
+  top: 7px;
+  left: -2px;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph {
+  font-size: 34px!important;
+  top: 7px;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path1:before {
+  color: #8ab10b;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before,
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path3:before {
+  color: #fff;
+  opacity: 1;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb {
+  display: none;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko {
+  display: block;
+  top: 7px;
+  left: -2px;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph {
+  font-size: 34px!important;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path1:before {
+  color: #8ab10b;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path2:before,
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path3:before {
+  color: #fff;
+  opacity: 1;
+}
 .modal-call-me-back h4 {
   margin-bottom: 20px;
 }
@@ -2477,7 +2543,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   text-align: center;
   margin: 0 1% 20px 1%;
   padding: 15px;
-  min-height: 65px;
+  min-height: 90px;
 }
 .modal-call-me-back .orariDispoWrapper .orari-select .btn-dispo {
   display: none;
@@ -2493,9 +2559,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   color: #fff;
 }
 .modal-call-me-back .orariDispoWrapper .orari-select.selected {
-  background-color: #8ab10b;
-  border-color: #8ab10b;
-  color: #fff;
+  border-top-color: #8ab10b;
 }
 .modal-call-me-back .orariDispoWrapper .orari-select.selected .text-dispo {
   display: none;
@@ -2512,12 +2576,33 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 .modal-call-me-back .btn-default + .btn-primary {
   margin-left: 20px;
 }
-.modal-call-me-back .esito-ok {
-  color: #8ab10b;
+.modal-call-me-back .esito {
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   text-transform: uppercase;
+}
+.modal-call-me-back .esito .icon {
+  font-size: 64px;
+  color: #8ab10b;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+.modal-call-me-back .esito span {
+  display: block;
+}
+.modal-call-me-back .esito span.glyph {
+  font-size: 160px;
+  position: relative;
+  top: -10px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  display: inline;
+}
+.modal-call-me-back .esito span.glyph span {
+  display: inline;
 }
 .modal-call-me-back .text-footer {
   clear: both;
@@ -2536,13 +2621,17 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   .modal-call-me-back .btn-default + .btn-primary {
     margin-left: 0;
   }
+  .modal-call-me-back .esito {
+    font-size: 18px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1000px) {
   .modal-call-me-back .modal-body {
     padding: 0;
   }
   .modal-call-me-back .orariDispoWrapper .orari-select {
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 13px;
   }
 }

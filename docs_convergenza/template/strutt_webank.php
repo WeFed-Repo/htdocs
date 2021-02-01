@@ -86,7 +86,27 @@ $menu = json_decode($jsonstr,true);
                 <li class="userMenuMobile-third"><a href="/WEBWB/sm/riepilogo.do" title="Alert"><span>Alert</span><i class="icon icon-alert_mobile"></i></a></li>
                 <li class="userMenuMobile-fourth"><a href="/WEBWB/wb/content/sicurezzaInfo.do" title="Sicurezza"><span>Sicurezza</span><i class="icon icon-sicurezza_mobile"></i></a></li>
                 <li class="userMenuMobile-fifth"><a href="/WEBWB/serviziPerTe/ilMioCalendario.do" title="Calendario"><span>Calendario</span><i class="icon icon-calendar"></i></a></li>
+                <!--codice call me back mobile -->
+                <li class="userMenuMobile-prenota-chiamata">
+                    <span class="icona-call-me-back-wrapper stato-attivo">
+                        <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb" title="Prenota una chiamata">
+                            <span class="icon-text">Prenota una chiamata</span>
+                            <i class="icon icon-ico_cmb_outline" title="Prenota una chiamata"></i>
+                        </a>
+                        <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok" title="Prenota una chiamata-già prenotato">
+                            <span class="icon-text">Prenota una chiamata</span>
+                            <span class="glyph glyph-ico_cmb_badge" title="Prenota una chiamata-già prenotato"></span>
+                        </a>
+                        <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko" title="Prenota una chiamata disservizio"> 
+                            <span class="icon-text">Prenota una chiamata</span> 
+                            <span class="glyph glyph-ico_cmb_alert" title="Prenota una chiamata disservizio"></span>
+                        </a>
+                    </span>
+                </li>
+                <!--codice call me back mobile -->
+                 
                 <li class="userMenuMobile-sixth"><a href="/WEBWB/wb/content/helpcenterContatti.do" title="Servizio clienti"><span>Servizio clienti</span><i class="icon icon-helpcenter"></i></a></li>
+               
                 <li class="userMenuMobile-seventh"><a href="/WEBWB/wb/content/contattaci.do" title="Scrivici"><span>Scrivici</span><i class="icon icon-scrivici"></i></a></li>
                 <li class="userMenuMobile-eighth"><a href="#" title="Esci" onclick="$('form#logout').submit(); return false;"><span>Esci</span><i class="icon icon-esci_mobile"></i></a></li>
 </ul>

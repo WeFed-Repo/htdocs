@@ -11,7 +11,6 @@
 ?>
 
 <script type="text/javascript">
-   
    var isAlreadyBooked = ($('input[name="isAlreadyBooked"]').length>0 && $('input[name="isAlreadyBooked"]').val()!="") ? $('input[name="isAlreadyBooked"]').val() : 'false',
        orarioSel =  $('input[name="orarioSel"]').length>0 ? $('input[name="orarioSel"]').val() : '',
        annullaFlag = (typeof annullaFlag === 'undefined') ? 'false' : annullaFlag,
@@ -24,6 +23,7 @@
           $(elToShow).find(".intro").html(textIntro);
           $(elToShow).show();
    }
+  
    //funzione per settare orario selezionato e relativo testo
    var setOrarioSelected = function(orario) {
       
@@ -56,7 +56,7 @@
                var isNotDisp = v.ndispo === 0 ? true : false,
                   classDis = isNotDisp ? "disabled" : "",
                   orario = (v.orario!=="ora") ? v.orario : "Chiamami ora!",
-                  htmlDeskTablet = '<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>'  +  '<button class="btn-dispo">Seleziona</button>' + '</div>';
+                  htmlDeskTablet = '<div class="orari-select ' + classDis + '">' + '<span class="text-time">' + orario  +  '</span>' + '<span class="text-dispo">(' + v.ndispo +  ' disponibili)</span>'  +  '<button class="btn-dispo btn btn-primary btn-small">Seleziona</button>' + '</div>';
                   InnerHtmlMobile = v.ndispo!==0 ? '<div class="spsel-option" data-value="' + v.orario + '"><a class="spsel-option-el">' + orario + '<span class="text-dispo only-detail"> (' + v.ndispo +  ' disponibili)</span>' + '</a></div>' : '';
                   if(isSmallDevice) {
                      $('.spsel-options').append(InnerHtmlMobile);
@@ -137,8 +137,7 @@
 		},
 		dataType: "json",
 		success: function(data) {
-         
-          var dati_call = data,
+         var dati_call = data,
             stato = dati_call.stato;
             orariDisponibili = dati_call.fasce_orario_dispo;
             arg=  dati_call.arg;
@@ -154,19 +153,19 @@
             // se la chiamata è success e mi restituisce la conferma di prenotazione
             if(stato ==="prenotato") {
                setOrarioSelected(dati_call.orarioSel);
-               $('input[name="isAlreadyBooked"]').val("true"),
+               $('input[name="isAlreadyBooked"]').val("true");
                setStatoPrenotazione();
-               setNextStepVisible('#step-conferma-prenotato','<span class="esito-ok">Chiamata prenotata</span>');
+               setNextStepVisible('#step-conferma-prenotato','<p class="esito"><i class="icon icon-ico_cmb_prenotata_fill" title="chiamata prenotata"></i><span>Chiamata prenotata</span></p>');
             }
             if(stato ==="occupato") {
                setOrarioSelected (dati_call.orarioSel);
-               $('input[name="isAlreadyBooked"]').val("true"),
+               $('input[name="isAlreadyBooked"]').val("true");
                setStatoPrenotazione();
-               setNextStepVisible('#step-conferma-prenotato','<span class="esito-ok">Hai una prenotazione in corso…</span>');
+               setNextStepVisible('#step-conferma-prenotato','<p class="esito"><i class="icon icon-ico_cmb_attesa_fill" title="prenotazione in corso"></i><span>Hai una prenotazione in corso…</p>');
             }
             if(stato ==="annullato") {
                annullaFlag = "false";
-               $('input[name="isAlreadyBooked"]').val("false"),
+               $('input[name="isAlreadyBooked"]').val("false");
                setStatoPrenotazione();
                setOrarioSelected("");
                setNextStepVisible('#step-annullato');
@@ -175,6 +174,7 @@
                $('input[name="disservizioFlag"]').val("true");
                setStatoPrenotazione();
                setNextStepVisible('#step-disservizio');
+               
             }
             if(stato ==="fuoriOrario") {
                $('input[name="fuoriOrario"]').val("true");
@@ -290,7 +290,7 @@
    </section>
    <!-- step 4: conferma e warning già prenotato cambia solo il titolo che è settato dinamicamente-->
    <section id="step-conferma-prenotato" class="step-cmb">
-     <h4 class="intro"></h4>
+      <h4 class="intro"></h4>
       <p>Per: <?php print '<strong>' .$nameCliente.'</strong>' ?><br>
       Al numero: <?php print '<strong>'.$nCellulareCert.'</strong>' ?><br>
       Fascia oraria: <span class="selected-time"></span></p>
@@ -308,7 +308,6 @@
    <section id="step-annullaPre" class="step-cmb">
       <h4>Sei sicuro di voler annullare la prenotazione?</h4>
       <div class="btn-align-center">
-         
          <a type="button" id="btn-indietro" class="btn btn-default btn-back" data-back="step-conferma-prenotato">indietro</a>
          <a id="annullaPreConf" type="button" id="btn-close" class="btn btn-primary">annulla prenotazione</a>
       </div>
@@ -316,7 +315,10 @@
    
    <!-- step 5: annulla prenotazione-->
    <section id="step-annullato" class="step-cmb">
-     <h4 class="intro"><span class="esito-ok">Prenotazione annullata</span></h4>
+      <p class="esito">
+         <i class="icon icon-ico_cmb_cancellata_fill" title="prenotazione annullata"></i>
+         <span>Prenotazione annullata</span>
+      </p>
       <div class="btn-align-center">
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
       </div>
@@ -324,6 +326,9 @@
    <!-- step 6: annulla disservizio-->
    <section id="step-disservizio" class="step-cmb">
       <div>
+         <p class="esito">
+            <span class="glyph glyph-ico_cmb_disservizio" title=""><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+         </p>
          <p>Il servizio di prenotazione chiamata non è al momento disponibile.</p>
          <p>Stiamo aggiornando i nostri sistemi per poterti offrire un servizio sempre più accurato.</p>
          <p>Ci scusiamo per il disagio, riprova più tardi.</p>
@@ -335,6 +340,9 @@
    <!-- step 7: fuori orario-->
    <section id="step-fuoriOrario" class="step-cmb">
       <div>
+         <p class="esito">
+            <i class="icon icon-ico_cmb_indisponibile_fill" title="fuori orario"></i>
+         </p>
          <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
          <p>Ti ricordiamo che il servizio &egrave; disponibile:</p>
          <p><strong>dal lunedì al venerdì dalle XX:XX alle XX:XX e il sabato dalle XX:XX alle XX:XX.

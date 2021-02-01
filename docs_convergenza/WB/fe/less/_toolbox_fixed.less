@@ -13,7 +13,7 @@
 #toolcontainer {
     position:absolute; right:28px; top:125px;
 }
-#toolhandle {
+#toolhandle { 
     display: block; position: absolute; top: 0; left: 0; width: 100%; height: @toolboxHeight; text-align: center; line-height: 44px;
 }
 #toolbtns {
@@ -29,6 +29,7 @@
         text-decoration: none; color: #999;
         &.disabled,&.disabled:hover {color:#666 !important}
     }
+    
 }
 .selected #toolbtnpaolo, .selected #toolbtnpaolo:hover {
     top: 2px; left: -2px; width: 36px; height: 36px; border: 2px solid @textColorBank2; border-radius: 50%;
@@ -422,9 +423,61 @@ div.tool {
 .toolbtns-fourth, .userMenuMobile-seventh { 
   display: none; 
 }
-
+ 
 /*Servizio CMB */
-.modal-call-me-back {
+.icona-call-me-back-wrapper { 
+  .icon-stato {display:none;}
+  a {text-decoration:none;} 
+  &.stato-attivo { 
+    .icon-cmb {
+      display:block;
+      i {top:2px;position: relative;}
+    }
+    i {font-size:32px!important;color:#8ab10b; }
+  }
+  &.stato-prenotato {
+    .icon-cmb {display:none;}
+    .icon-cmb-ok {
+      display:block;
+      top:7px;
+      left:-2px;  
+        .glyph { 
+          font-size:34px!important;
+          top: 7px; 
+          .path1:before {  
+            color:#8ab10b; 
+          } 
+          .path2:before,.path3:before {  
+            color:#fff;
+            opacity:1;
+          }
+        
+        }
+        
+      }
+  }
+  &.stato-disservizio {
+    .icon-cmb {display:none;} 
+    .icon-cmb-ko {
+      display:block;
+      top:7px;
+      left:-2px;
+        .glyph { 
+          font-size:34px!important;
+          .path1:before {  
+            color:#8ab10b;
+          }  
+          .path2:before,.path3:before {  
+            color:#fff;
+            opacity:1;
+          }
+        
+        } 
+      }
+  }
+}
+.modal-call-me-back { 
+  
   h4 { 
     margin-bottom:20px; 
   }
@@ -440,9 +493,9 @@ div.tool {
       text-align:center; 
       margin: 0 1% 20px 1%; 
       padding:15px;
-      min-height:65px;
+      min-height:90px;
       .btn-dispo {
-        display: none; 
+        display: none;  
       } 
         span {
           display:inline-block;
@@ -455,9 +508,7 @@ div.tool {
           color:#fff; 
         }
         &.selected {
-          background-color:#8ab10b;
-          border-color:#8ab10b;
-          color:#fff; 
+          border-top-color:#8ab10b;
           .text-dispo {
             display:none;
           }
@@ -470,40 +521,62 @@ div.tool {
        }
      }
   }
-  input[type="radio"]:checked + span {
+  input[type="radio"]:checked + span { 
     color: #8ab10b;
   }
   .btn-default + .btn-primary { 
      margin-left:20px;
   }
-  .esito-ok { 
-    color: #8ab10b; 
-    display: block;  
+  .esito { 
+    display: block;   
     text-align:center;
-    font-size: 30px; 
+    font-size: 22px; 
     text-transform:uppercase;
+    .icon { 
+      font-size:64px; 
+      color: #8ab10b;
+      width:60px; 
+      height:60px;  
+      display:inline-block; 
+    } 
+    span { 
+      display: block;
+      &.glyph {
+      font-size: 160px;
+      position: relative;
+      top: -10px;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      display: inline;
+      }
+      &.glyph span {display: inline;}
+    }
   }
   .text-footer { 
       clear:both;
       text-align:center; 
   }
   
-  .selected .btn-dispo {
-    line-height:14px; 
-  }
-    
+  .selected .btn-dispo { 
+    line-height:14px;
+  } 
+     
   .step-cmb {
       display:none; 
   }
   .formGenerico {
     padding-bottom: 0; 
   }
- 
+  
 }
 @media (max-width:767px) {
 .modal-call-me-back {
   .btn-default + .btn-primary { 
     margin-left:0
+  } 
+  .esito {  
+     font-size: 18px;
   }
 }
 }
@@ -512,9 +585,10 @@ div.tool {
   .modal-body{ 
     padding:0;
   }
-  .orariDispoWrapper {
+  .orariDispoWrapper { 
     .orari-select {
-      padding:5px; 
+      padding-left:5px;
+      padding-right:5px;
       font-size:13px; 
     }
   }

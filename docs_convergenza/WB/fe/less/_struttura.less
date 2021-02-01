@@ -42,7 +42,7 @@ header {
                     line-height: 30px;
                 }
             }
-
+ 
             & li:first-child {
                 padding-left: 0;
             }
@@ -673,15 +673,31 @@ nav {
                     float: right;
                     width: 100%;
                     padding: 5px 0;
-                    cursor: pointer;
-                    border-bottom: solid 1px #dedede;
+                    cursor: pointer; 
+                    border-bottom: solid 1px #dedede; 
+                    .icon-text {
+                        font-size:18px!important;
+                        font-family: "bankFont", Arial, Helvetica, sans-serif;
+                        position: relative;
+                        top:-5px;
+                    } 
 
-                    .icon {
+                    .icon { 
                         margin-left: 14px;
-                        vertical-align: middle;
+                        vertical-align: middle; 
+                    }
+                    
+                }
+                &.userMenuMobile-prenota-chiamata { 
+                    .icona-call-me-back-wrapper {
+                        .icon {
+                            color: #6f8f0a!important;  
+                            margin-left:0!important;
+                        }
                     }
                 }
 
+ 
                 span.nameConto {
                     float: right;
                     width: 100%;

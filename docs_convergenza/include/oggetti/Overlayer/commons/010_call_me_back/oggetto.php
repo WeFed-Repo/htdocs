@@ -8,15 +8,15 @@ Qui si assume che lo sia
    $nCellulareCert = "333333333";
    $disservizio =  "false";
    $fuoriOrario =  $_GET['fuoriOrario'];
-   $nCellNonCertificato = $_GET['nonCertificato'];
+   $nCellNonCertificato = $_GET['ncertificato'];
    if (isset($_GET['disservizio'])) {
        $disservizio =  $_GET['disservizio'];
    } 
    if (isset($_GET['fuoriOrario'])) {
     $fuoriOrario =  $_GET['fuoriOrario'];
    } 
-   if (isset($_GET['nonCertificato'])) {
-    $nCellulareCert =  $_GET['nonCertificato'];
+   if (isset($_GET['ncertificato'])) {
+    $nCellulareCert =  $_GET['ncertificato'];
    } 
 ?>
 
@@ -29,15 +29,22 @@ Qui si assume che lo sia
   <?php print '<input type="hidden" name="isAlreadyBooked" value=""/>' ?>
   <?php print '<input type="hidden" name="orarioSel" value=""/>' ?>
   <?php print '<input type="hidden" name="disservizioFlag" value="'.$disservizio.'"/>' ?>
-  <?php print '<input type="hidden" name="fuoriOrario" value="'.$fuoriOrario.'"/>' ?>
+  <?php print '<input type="hidden" name="fuoriOrario" value="'.$fuoriOrario.'"/>' ?> 
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
-<a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb" title="Servizio clienti">CMB</a>
-<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok" title="Servizio clienti">CMB già prenotato</a>
-<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko" title="Servizio clienti">CMB con disservizio</a>
-<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-fo" title="Servizio clienti">CMB fuori orario</a>
-<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-nc" title="Servizio clienti">CMB numero non certificato</a>
-<a style="display:none" data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-nd" title="Servizio clienti">CMB numero non esistente</a>
+
+<span class="icona-call-me-back-wrapper stato-attivo">
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb" title="Prenota una chiamata">
+    <i class="icon icon-ico_cmb_outline" title="Prenota una chiamata"></i>
+  </a>
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok" title="Prenota una chiamata-già prenotato">
+      <span class="glyph glyph-ico_cmb_badge" title="Prenota una chiamata-già prenotato"></span>
+  </a>
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko" title="Prenota una chiamata disservizio"> 
+    <span class="glyph glyph-ico_cmb_alert" title="Prenota una chiamata disservizio"></span>
+  </a>
+</span>
+
 <!-- Modale da mettere in pagina in cui includere la pagina html -->
 
 <div id="modaleCallMeBack" class="modal fade" role="dialog">
@@ -49,7 +56,9 @@ Qui si assume che lo sia
       </div>
       <div class="modal-body">
       <script type="text/javascript">
+       
         /*solo quando apro l'overlayer si fa la chiamata alla jsp*/
+        
         var isModalOpened = false,
             timeNow ="",
             formatHourMin = function(i) {
@@ -59,35 +68,11 @@ Qui si assume che lo sia
             return i;
         }
         
-        /*definisce quale stato/icona debba essere presente */
-        var setStatoPrenotazione = function() {
-          var isAlreadyBookedVal = $('input[name="isAlreadyBooked"]').val(),
-              orarioSelVal =  $('input[name="orarioSel"]').val(),
-              disservizioFlagVal =  $('input[name="disservizioFlag"]').val(),
-              fuoriOrario = $('input[name="fuoriOrario"]').val();
-              nCellulareCert = $('input[name="nCellulareCert"]').val();
+        //madalInHeader = $("#modaleCallMeBack").html();
+        
+       $("#modaleCallMeBack").appendTo("body");
+       $("#modaleCallMeBack").on('shown.bs.modal',function(){
           
-          $(".icon-stato").hide();
-          if(isAlreadyBookedVal === "true") {
-            $(".icon-cmb-ok").show();
-          }
-          else if(disservizioFlagVal === "true" && isAlreadyBookedVal !== "true") {
-            $(".icon-cmb-ko").show();
-          }
-          else if( fuoriOrario === "true" && isAlreadyBookedVal !== "true") {
-            $(".icon-cmb-fo").show();
-          }
-          else if(nCellulareCert==="false" && isAlreadyBookedVal !== "true") {
-            $(".icon-cmb-nc").show();
-          }
-          else if(nCellulareCert==="" && isAlreadyBookedVal !== "true") {
-            $(".icon-cmb-nd").show();
-          }
-          else {
-            $(".icon-cmb").show();
-          }
-        }
-        $("#modaleCallMeBack").on('show.bs.modal',function(){
           var today = new Date(),
               thisModal = $(this),
               thisModalBody = thisModal.find( ".modal-body"),
@@ -98,7 +83,8 @@ Qui si assume che lo sia
               timeNow = formatHourMin(today.getHours()) + ":" + formatHourMin(today.getMinutes());
               if(!isModalOpened)
               {
-                thisModalBody.empty().addClass("loading");
+                
+                thisModalBody.addClass("loading");
                 var getCallBackTpl = $.post( "/template/call_me_back.php", {nameCliente:nameCliente,nCellulareCert:nCellulareCert, timeNow:timeNow}, function( data ) {
                    thisModalBody.removeClass("loading").html(data); isModalOpened = true;
                 });
@@ -110,11 +96,32 @@ Qui si assume che lo sia
               
         })
         $("#modaleCallMeBack").on('hidden.bs.modal',function(){
+           $(this).find(".modal-body").empty();
            isModalOpened = false;
         })
-        setStatoPrenotazione();
-      
-        </script>
+         /*definisce quale stato/icona debba essere presente */
+         var setStatoPrenotazione = function() {
+           
+             var isAlreadyBookedVal = $('input[name="isAlreadyBooked"]').val(),
+                    orarioSelVal =  $('input[name="orarioSel"]').val(),
+                    disservizioFlagVal =  $('input[name="disservizioFlag"]').val(),
+                    fuoriOrario = $('input[name="fuoriOrario"]').val();
+                    nCellulareCert = $('input[name="nCellulareCert"]').val(),
+                    iconaCallMeBackWrapper =  $(".icona-call-me-back-wrapper");
+                
+                if(isAlreadyBookedVal === "true") {
+                  iconaCallMeBackWrapper.removeClass('stato-attivo').addClass('stato-prenotato');
+                }
+                else if(disservizioFlagVal === "true" && isAlreadyBookedVal !== "true") {
+                   iconaCallMeBackWrapper.removeClass('stato-attivo').addClass('stato-disservizio');
+                }
+               
+                else {
+                  iconaCallMeBackWrapper.removeClass('stato-prenotato').addClass('stato-attivo');
+                }
+              }
+          setStatoPrenotazione();
+       </script>
       </div>
      </div>
 	</div>

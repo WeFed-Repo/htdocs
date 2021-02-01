@@ -15,6 +15,11 @@
 
 			<!-- Pulsantiera -->
 			<ul id="toolbtns">
+			     <!--codice call me back desktop -->
+				<li class="toolbtn toolbtns-prenota-chiamata">
+					<?php virtual("/include/oggetti/Overlayer/commons/010_call_me_back/oggetto.php"); ?>
+				</li>
+				<!--fine codice call me back desktop -->
 				<li class="toolbtn toolbtns-first"><a href="javascript:;" title="Assistente virtuale" class="icon " id="toolbtnpaolo" data-toolid="virtAss"><img src="/WB/fe/img/priv_tool_paolo.png"> </a></li>
 				<li class="toolbtn toolbtns-second"><a href="/WEBWB/wb/content/helpcenterContatti.do" class="icon icon-helpcenter" title="Servizio clienti"></a></li>
 				<li class="toolbtn toolbtns-fourth"><a href="/WEBWB/wb/content/contattaci.do" class="icon icon-scrivici" title="Scrivici"></a></li>
