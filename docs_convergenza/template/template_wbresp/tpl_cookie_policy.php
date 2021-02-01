@@ -135,6 +135,15 @@ $(function(){
                                                 <button class="btn-grlit cookieSalva">Salva le impostazioni</button>
                                             </div>
                                         </section>
+
+                                        <!-- Sezione introduttiva -->
+                                        <section>
+                                            <h3>Caratteristiche e finalit&agrave; dei cookie</h3>
+                                            <p>I "cookie" sono piccoli file di testo che i siti visitati dall’utente inviano al terminale dell’utente (computer, smartphone, tablet, o qualunque altro strumento utilizzato per accedere a Internet), dove vengono memorizzati al fine di essere ritrasmessi agli stessi siti alla successiva visita del medesimo utente.</p>
+                                            <p>Nel corso della navigazione l’utente potrebbe ricevere sul suo terminale anche cookie di siti web diversi (c.d. cookie di "terze parti"), impostati direttamente dai gestori di detti siti e utilizzati per le finalit&agrave; e secondo le modalit&agrave; da questi definiti.</p>
+                                        </section>
+                                        <!-- Fine sezione introduttiva -->
+
                                         <section>
                                             <h3>Cookie che non richiedono il consenso dell'utente</h3>
                                             <p><strong>Cookie tecnici</strong><br>
@@ -183,7 +192,7 @@ $(function(){
                                             -->
                                             <section>
                                                 <h4>Cookie gestiti da terze parti:</h4>
-                                                <p>Su questo sito sono installati anche cookie rilasciati e gestiti da “terze parti” che, tramite tali cookie, possono raccogliere informazioni dai terminali di navigazione che visitano il sito.<br>Le principali categorie di cookie gestiti da terze parti ed installati su questo sito sono:</p>
+                                                <p>Su questo sito sono installati anche cookie rilasciati e gestiti da "terze parti" che, tramite tali cookie, possono raccogliere informazioni dai terminali di navigazione che visitano il sito.<br>Le principali categorie di cookie gestiti da terze parti ed installati su questo sito sono:</p>
                                                 <ul class="normal-format">
                                                     <li>Cookie di profilazione pubblicitaria: utilizzati per erogare pubblicit&agrave; basata sugli interessi manifestati attraverso la navigazione in internet.</li>
                                                     <li>Cookie di retargeting: utilizzati per l'invio di pubblicit&agrave; a soggetti che hanno precedentemente visitato questo sito.</li>
@@ -232,7 +241,7 @@ $(function(){
                                         <section>
                                             <h3>Scelte relative ai cookie</h3>
                                             <p>Questo sito esprime le migliori performance se i cookie sono abilitati. Puoi comunque decidere di non consentire l’impostazione dei cookie anche dal tuo computer.</p>
-                                            <p>Per informazioni su come modificare le impostazioni dei cookie di seguito vengono forniti i link che spiegano come gestire i cookie per i browser più diffusi:</p>
+                                            <p>Per informazioni su come modificare le impostazioni dei cookie di seguito vengono forniti i link che spiegano come gestire i cookie per i browser pi&ugrave; diffusi:</p>
                                             <p><strong>Internet Explorer TM</strong><br>
                                             <a href="http://windows.microsoft.com/it-IT/windows-vista/Block-or-allow-cookies" target="_blank" class="break-word">http://windows.microsoft.com/it-IT/windows-vista/Block-or-allow-cookies</a></p>
                                             <p><strong>Google Chrome TM</strong><br>
