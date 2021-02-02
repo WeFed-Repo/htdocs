@@ -637,7 +637,8 @@ assicurazioni.html -> Prodotti - assicurazioni
    CARTE DI CREDITO INIZIO
 ========================================================================== */
 .carte-di-credito.container01 {background: #2c2c2c url("/wbresp/img/carte/container_01_bg.jpg") no-repeat 0 0; background-size: cover;min-height:610px; overflow:hidden; margin-top:0px;padding:5px 30px 0 30px;text-align:center}
-.carte-di-credito.container01 h4 {text-align:center;margin: 55px auto 10px auto; color: #cbcbcb; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:20px;font-weight:normal}
+.carte-di-credito.container01 h4 {text-align:center;margin: 30px auto 10px auto; color: #cbcbcb; text-transform:uppercase; font-family:"ralewaysemibold",arial, sans-serif; font-size:20px;font-weight:normal}
+.carte-di-credito.container01 h4.subtitle {text-transform:none;font-size: 15px; margin: 20px 0; text-align: left}
 .carte-di-credito.container01 h3 {margin: 20px auto 30px auto; font-size:32px; font-family:"ralewaysemibold",arial, sans-serif; color: #ffffff; }
 .carte-di-credito.container01 h5 {text-align:left;margin: 30px auto 0px auto; color: #FFF; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:14px;font-weight:normal}
 .carte-di-credito.container01 p {text-align:left;margin: 10px auto 10px auto; color: #999999; font-family:"ralewaymedium",arial, sans-serif; font-size:14px;font-weight:normal}
@@ -761,6 +762,14 @@ assicurazioni.html -> Prodotti - assicurazioni
 
 
 }
+
+/*NUOVO OGGETTO CONTAINER 06 CARTE */
+.carte-di-credito.container06 {overflow: hidden;background:#fff url("/wbresp/img/carte/container_06_bg.jpg") no-repeat 0 0;background-size: 100% 100%;height:580px;margin-top:20px;padding-bottom:50px;clear:both;float: none;}
+.carte-di-credito.container06 h3 {margin: 0; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-align:center}
+.carte-di-credito.container06 img {margin:10px auto 10px auto}
+.carte-di-credito.container06 p {font-size: 16px;color: #999;line-height: 24px;}
+.carte-di-credito.container06 ul li {font-size: 14px;line-height: 18px;font-family: "ralewaymedium",arial, sans-serif;color: #999;margin-bottom: 10px;}
+
 /* ==========================================================================
    CARTE DI CREDITO FINE
 ========================================================================== */

@@ -20,9 +20,9 @@
 					<ul class="submenu">
 						<li><a href="#s1">LE CARTE DI WEBANK</a></li>
 						<li><a href="#s2">CARTE DI CREDITO</a></li>
-						<li><a href="#s3">CARTE DI DEBITO</a></li>
-						<li><a href="#s4">CARTE PREPAGATE</a></li>
-						<li><a href="#s5">BPM MASTERPASS</a></li>
+						<li><a href="#s3">CARTA DI DEBITO</a></li>
+						<li><a href="#s4">CARTA PREPAGATA</a></li>
+						<li><a href="#s5">CARTE AMERICAN EXPRESS</a></li>
 					</ul>
 				</div>
 				<!-- /colonna sinistra -->
@@ -33,22 +33,16 @@
 				<div class="carte-di-credito container01" id="s1">
 					<h4>LE CARTE DI WEBANK</h4>
 					<h3>Scegli la carta giusta per te!</h3>
+					<h4 class="subtitle">Con le carte proposte da Webank aderisci al&nbsp;Cashback di Stato, registrandole nell'App IO, e ottieni la restituzione del 10% delle somme spese.</h4>
 					<div class="row">
 						<div class="col-md-4 col-sm-12">
-							<img src="/wbresp/img/carte/c1.png" class="img-responsive" alt="Carte di credito" title="LE CARTE DI WEBANK - Carte di credito" />
+						    <img src="/wbresp/img/carte/c1.png?a=461" class="img-responsive" alt="Carte di credito" title="LE CARTE DI WEBANK - Carte di credito">
 							<h5>Carte di credito</h5>
-							<p>
-								Scegli la carta giusta per le tue esigenze, disponibili su circuito Visa e Mastercard.<br>
-								<br>
-								<strong>Nexi Classic</strong> la carta di credito contactless che ti permette di <strong>pagare anche tramite smartphone</strong>. <br>
-								Il canone &egrave; gratuito per sempre se la richiedi entro il 31/01/2021.<br>
-								<br>
-								<strong>Cartimpronta ONE</strong> contactless e dal <strong>canone gratuito</strong> sempre oppure <strong>Cartimpronta Gold Plus</strong>, completa e dal <strong>plafond elevato</strong> per i pi&ugrave; esigenti.
-							<p>
+							<p>preferisci la convenienza del canone gratuito di <b>Cartimpronta ONE</b> o la completezza di <b>Cartimpronta Gold Plus</b>, con il suo plafond elevato per i clienti più esigenti?</p>
 						</div>
 						<div class="col-md-4 col-sm-12">
 							<img src="/wbresp/img/carte/c2.png" class="img-responsive"  alt="Carte di debito" title="LE CARTE DI WEBANK - Carte di debito" />
-							<h5>Carte di debito</h5>
+							<h5>Carta di debito</h5>
 							<p>
 								la <strong>Carta di debito internazionale</strong> con canone gratuito ti consente di prelevare e pagare in tutto il mondo, attraverso i circuiti Bancomat, PagoBancomat e Maestro.
 								In più con l'App BANCOMAT Pay paghi, invii e ricevi denaro direttamente dal tuo smartphone.
@@ -56,9 +50,9 @@
 						</div>
 						<div class="col-md-4 col-sm-12">
 							<img src="/wbresp/img/carte/c3.png" class="img-responsive" alt="Carte prepagate" title="LE CARTE DI WEBANK - Carte prepagate">
-							<h5>Carte prepagate</h5>
+							<h5>Carta prepagata</h5>
 							<p>
-								<strong>Carta Prep@id by Banco BPM</strong> &egrave; l'alternativa semplice al denaro contante. La carta contactless con PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 € in modo manuale o automatico.
+								<strong>Carta Prep@id by Banco BPM</strong> &egrave; l'alternativa semplice al denaro contante. La carta <strong>contactless</strong> con <strong>canone gratuito</strong> e PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 € in modo manuale o automatico.
 							</p>
 						</div>
 
@@ -325,7 +319,7 @@
 				<!-- container 5 inizio -->
 
 
-					<div class="carte-di-credito container05" id="s5">
+					<div class="carte-di-credito container05">
 						<h3>BPM MASTERPASS</h3>
 							<div class="row">
 									<div class="col-md-12 col-sm-12">
@@ -354,6 +348,26 @@
 
 
 					</div>
+					<!-- NUOVO BOX CARTE DI CREDITO-->
+					<div class="carte-di-credito container06" id="s5">
+						<h3>American Express</h3>
+						<img src="/wbresp/img/carte/carte_american_express.png" class="icon" alt="American Express">
+						<div class="row">
+							<div class="col-sm-12 col-xs-12">
+								 <p>Le carte <strong>American Express</strong> ti consentono di effettuare <strong>qualsiasi spesa senza limiti</strong> ai tuoi desideri:</p>
+								 <ul>
+									 <li>tecnologia Contactless e paghi anche con ApplePay</li>
+									 <li>servizio SMS Alert gratuito</li>
+									 <li>monitori le tue spese con l'App Amex</li>
+									 <li>protezione d’acquisto: tutela per 90 giorni sugli acquisti (escluse alcune categorie merceologiche) in caso di furto o danneggiamento del bene</li>
+									  <li>protezione antifrode in caso di uso illecito della Carta da parte di terzi</li>
+									  <li>servizio clienti American Express ogni giorno disponibile 24 ore su 24, dall'Italia e dall'Estero </li>
+								</ul>
+							</div>
+						</div>
+                    </div>
+				
+				    <!-- FINE NUOVO BOX CARTE DI CREDITO-->
 					<p class="note">MESSAGGIO PUBBLICITARIO CON FINALIT&Agrave; PROMOZIONALE<br>
 				Per le condizioni economiche e contrattuali delle carte di pagamento Webank, anche dei servizi di messaggistica e alert, fare riferimento ai Fogli Informativi disponibili sui siti <a href="https://www.webank.it" target="_blank">www.webank.it</a> e <a target="_blank" href="https://www.bancobpm.it">www.bancobpm.it</a> nella sezione Trasparenza.<br>
 				In merito al servizio 3D Secure di Cartimpronta One e Gold Plus fare riferimento al portale dedicato <a target="_blank" href="https://carte.bancobpm.it/portal/portal/portale/titolari">https://carte.bancobpm.it/portal/portal/portale/titolari</a>.<br>

@@ -236,6 +236,8 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                                     </div>
                                 </div>
 								
+
+
                             </div>
                             <div class="col-xs-12 alignCenter"> <a class="btn-grlit btn-grlit-arrow btn-fs14  uppercase" href="#">Apri conto Webank</a> </div>
                         </div>
@@ -251,39 +253,34 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                                 Ma esiste la carta giusta per te!
                             </span>
                         </h3>
-                        <h4>Sceglila tra le carte di credito, debito e prepagate proposte da Webank.</h4>
+                        <h4>Scegli tra le carte di credito, debito e prepagate proposte da Webank. <br><br>
+                        Puoi aderire al <strong>Cashback di Stato</strong>, registrandole nell’App IO, e ottieni la restituzione del 10% delle somme spese.
+                        </h4>
                         <div class="col-xs-12 nopadding b3-container">
 
                             <div class="col-sm-4 col-xs-12">
-                                <img src="/wbresp/img/conto_webank/conto_webank-nexi-impronta.png" class="carta" alt="Nexi Classic e Cartimpronta ONE">
-                                <p>
-                                    <b>Carte di credito</b><br>
-                                    Disponibili su circuito Visa e Mastercard.<br>
-                                    <br>
-                                    <strong>Nexi Classic</strong> la carta di credito contactless che ti permette di <strong>pagare anche tramite smartphone</strong>. <br>
-                                    Il canone &egrave; gratuito per sempre se la richiedi entro il 31/01/2021.<br>
-                                    <br>
-                                    <strong>Cartimpronta ONE</strong> contactless e dal <strong>canone gratuito sempre</strong> oppure <strong>Cartimpronta Gold Plus</strong>, completa e dal <strong>plafond elevato</strong> per i pi&ugrave; esigenti.
-                                </p>
+                                <img src="/wbresp/img/conto_webank/conto_webank-cartimpronta.png?a=461" class="carta" alt="Cartimpronta ONE">
+                                <p><b>Carte di credito</b><br>
+                                Cartimpronta ONE con canone gratuito e Cartimpronta Gold Plus con plafond elevato per i clienti più esigenti. Paghi in Italia e in area Euro su circuito MasterCard o Visa senza commissione e anche in modalità contactless.</p>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <img src="/wbresp/img/conto_webank/conto_webank-bancomat.png" class="carta" alt="Bancomat Webank">
                                 <p>
-                                    <b>Carte di debito</b><br>
+                                    <b>Carta di debito</b><br>
                                     <strong>Carta di debito internazionale</strong> con canone gratuito. Prelievi gratuiti presso gli sportelli automatici di tutte le banche in Italia e in area Euro.
                                 </p>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <img src="/wbresp/img/conto_webank/conto_webank-cartaprepaid.png" class="carta" alt="Carta Prep@id by Banco BPM">
                                 <p>
-                                    <b>Carte prepagate</b><br>
-                                    <strong>Carta Prep@id by Banco BPM</strong> &egrave; l'alternativa semplice al denaro contante. La carta contactless con PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 &euro; in modo manuale o automatico.
+                                    <b>Carta prepagata</b><br>
+                                    <strong>Carta Prep@id by Banco BPM</strong> con <strong>canone gratuito</strong>, l'alternativa semplice al denaro contante. La carta contactless con PIN personalizzabile che utilizzi online e nel mondo. Puoi ricaricare fino a 10.000 &euro; in modo manuale o automatico.
                                 </p>
                             </div>
 
                         </div>
                         <div class="col-sm-6 col-xs-12 alignCenter">
-                            <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-gray-border uppercase" href="/webankpub/wbresp/t1/carte_di_credito.do">Scopri le nostre carte</a>
+                            <a class="btn-grlit btn-grlit-arrow btn-fs14 btn-gray-border uppercase" href="/webankpub/wbresp/t1/carte_di_credito.do">Scopri tutte le carte</a>
                             <br>
                         </div>
                         <div class="col-sm-6 col-xs-12 alignCenter">
