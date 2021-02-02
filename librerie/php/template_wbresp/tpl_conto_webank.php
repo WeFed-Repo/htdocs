@@ -343,22 +343,18 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
                                 <div class="col-lg-4 hidden-md hidden-sm hidden-xs"> &nbsp; </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-7 col-md-12 nopadding-xs"> <img src="/wbresp/img/conto_webank/conto_webank-b5-2.png" alt="" class="img-responsive" />
-                                    <p class="nota"> Messaggio promozionale. Tassi validi sino al XXXXX.
-                                        <br /> Il tasso dell'1,25% sulla linea vincolata a 18 mesi &egrave; lordo annuo, il tasso sull'intera durata del vincolo &egrave; pari all'1,875% lordo. </p>
-                                </div>
-                                <div class="col-lg-5 col-md-12 nopadding-xs">
+                               
+                                <div class="col-lg-12 col-md-12 nopadding-xs">
                                     <h3>
-										<span>
-											Con le Linee
-											Vincolate
-											il guadagno
-											aumenta!
-										</span>
+										<span>Con le Linee Vincolate il guadagno aumenta!</span>
 									</h3>
                                     <p> Con le <b>linee vincolate</b> ottieni rendimenti vantaggiosi, svincoli quando vuoi, anche parzialmente e senza penali.
                                         <br /> Scegli la durata che preferisci fra 3,6,12 e 18 mesi e ottieni sino all&rsquo;1,25% lordo annuo. </p>
                                     <p class="nota2"> Il tasso &egrave; fisso per tutta la durata del vincolo con interessi posticipati. Importo massimo vincolabile per conto: 1.000.000 &euro;. </p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 nopadding-xs">
+                                    <p class="nota"> Messaggio promozionale. Tassi validi sino al XXXXX.
+                                        <br /> Il tasso dell'1,25% sulla linea vincolata a 18 mesi &egrave; lordo annuo, il tasso sull'intera durata del vincolo &egrave; pari all'1,875% lordo. </p>
                                 </div>
                             </div>
                             <div class="row">
