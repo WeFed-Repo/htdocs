@@ -3,6 +3,39 @@
 var mPrevData,
 mAss = "CAT";
 
+/* Funzione per il tracking */
+function mTrackData() {
+
+	if (typeof gotoTrack !== "undefined") {
+		
+		// Oggetto che viene tracciato
+		var tdata = {
+			val: $("#mValore").val(),
+			imp: $("#mImporto").val(),
+			dur: $("#mDur").val(),
+			fin: mFinalita.toUpperCase()
+		} 
+
+		var trackaction = tdata.val + "_" + tdata.imp,
+			trackobj = {
+			"event_category": "CALCOLA LA RATA",
+			"event_label": tdata.dur,
+			"dimension8": tdata.fin,
+
+			"sv20": "CALCOLA LA RATA",
+			"sv18": tdata.dur,
+			"sv19": tdata.fin,
+			"svn1": tdata.val,
+			"svn2": tdata.imp
+		}
+
+		// Track senza callback, per sicurezza
+		gotoTrack(trackaction,trackobj);
+
+	}
+
+}
+
 /* Mostra l'html del calcolatore */
 function mCalcShow()
 {
@@ -231,7 +264,14 @@ function mCalcInit()
 	mRes =  $("#mResults");
 	mButton = $("#mutuoButton");
 	mButton.click(function(){
-		if(!$(this).hasClass("btn-disabled")) {mGetData(),mResetErrors()}
+		if(!$(this).hasClass("btn-disabled")) {
+			
+			// Tracking solo per you
+			if (feBank==="youweb") mTrackData(); 
+
+			mGetData();
+			mResetErrors();
+		}
 	});
 	$("#mAcquisto").click(function(){
 		mFinalita = "Acquisto";

@@ -9,7 +9,7 @@ var filterParams = function(obj){
     var gt = {}, dmp = [];
     // Smista gtag (oggetto) e dmp (stringa di testo da appendere all'url pretrattata come array) in base alla key dell'oggetto ricevuto
     $.each(Object.keys(obj),function(i,v){
-        if (v.match(/sv\d/)) {
+        if (v.match(/sv\d/) || v.match(/svn\d/)) {
             // Se e' di tipo "sv.." finisce nell'array dmp che verra' reso come testo
             dmp.push("'"+ encodeURIComponent(v) +"':'"+ encodeURIComponent(obj[v]) +"'");
         }
