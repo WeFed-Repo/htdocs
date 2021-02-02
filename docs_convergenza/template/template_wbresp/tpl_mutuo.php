@@ -23,7 +23,8 @@
 						<li><a href="#s2">Scegli il mutuo</a></li>
 						<li><a href="#s3">Come richiedere il mutuo</a></li>
 						<li><a href="#s4">Assicurazioni sul mutuo</a></li>
-						<li><a href="#s5">Calcola la rata online</a></li>
+						<li><a href="#s5">Fattore green</a></li>
+						<li><a href="#s6">Calcola la rata online</a></li>
 					</ul>
 				</div>
 				<!-- /colonna sinistra -->
@@ -421,9 +422,28 @@
 							
 						</div>
 					</div>
-
-
-					<div class="mutuo container05" id="s5">
+					
+					<!-- nuovo box fattore green -->
+					<div class="mutuo container06" id="s5">
+						<h4>FATTORE GREEN</h4>
+						<h3>Lorem ipsum</h3>
+						<div class="row">
+							<div class="col-sm-12 col-xs-12">
+								 <p>Per tutta la durata del mutuo, grazie al fattore &quot;green&quot;, puoi ottenere uno sconto sul tasso: ti basta effettuare in qualsiasi momento interventi di riqualificazione energetica sull'immobile che intendi acquistare.</p>
+								 <p>Per beneficiare dello sconto sul tasso di interesse hai due opzioni:</p>
+								 <ul>
+									 <li>ridurre i consumi di almeno il 30%*</li>
+									 <li>migliorare di due classi energetiche la tua abitazione.</li>
+								</ul>
+								<p class="note">* La riduzione dei consumi &egrave; misurata come variazione dell'Indice di Prestazione Energetica non rinnovabile Globale tra Attestato di Prestazione Energetica rilevato prima e post lavori.</p>
+							</div>
+						</div>
+                    </div>
+					<!-- fine nuovo box fattore green --> 
+					
+					
+					
+					<div class="mutuo container05" id="s6">
 
 					<!-- BLOCCO PREVENTIVATORE MUTUI -->
 						<link rel="stylesheet" href="/wbresp/css/preventivatoremutui.css" />

@@ -81,6 +81,14 @@ border-top-right-radius: 15px}
 .mutuo.container04 h5 span {color: #666; font-size:14px}
 .mutuo#s4 p {padding:0;}
 
+/*NUOVO OGGETTO CONTAINER 06 MUTUI */
+.mutuo.container06 {overflow: hidden;background:#fff url("/wbresp/img/mutuo/container_06_bg.jpg") no-repeat 0 0;background-size: 100% 100%;margin-top:20px;padding-bottom:50px;clear:both;float: none;}
+.mutuo.container06 h4 {margin: 10px 0 10px 0; color: #999; text-transform:uppercase; font-family:"ralewaybold",arial, sans-serif; font-size:16px; text-transform:uppercase; text-align:center}
+.mutuo.container06 h3 { font-size:0 0 20px 0; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-align:center}
+.mutuo.container06 img {margin:10px auto 10px auto}
+.mutuo.container06 p {font-size: 16px;color: #999;line-height: 24px;}
+.mutuo.container06 ul li {font-size: 16px;line-height: 18px;font-family: "ralewaymedium",arial, sans-serif;color: #999;margin-bottom: 5px;}
+
 /* Tabella riepilogo*/
 /*.tabular table {width:100%}
 .tabular td {padding:10px 15px 5px 15px}
