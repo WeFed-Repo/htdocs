@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>YouApp</title>
     <meta name="description" content="YouApp">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Stili della pagina -->
     <style>
         /* Font face */
@@ -41,7 +41,7 @@
             font-style: italic;
         }
 
-        /* */
+        /*  */
         body {
             background-color: #fff;
             margin: 0;
@@ -52,7 +52,7 @@
             color: #1f2021;
         }
 
-        /* Back */
+        /* Back  - Out safe area 30px top su iOs (per notch) */
         #back {
             z-index: 1;
             position: fixed;
@@ -61,7 +61,7 @@
             background-size: 15px 15px;
             width: 35px;
             height: 35px;
-            top: 20px;
+            top: 40px;
             border-radius: 20px;
             text-align: center;
             text-decoration: none !important;
@@ -224,6 +224,7 @@
         }
 
         .accordion .accordion-toggle span {
+            line-height:16px;
             font-size: 13px;
             position: relative;
             padding-right: 20px;
@@ -335,7 +336,8 @@
 
 <body>
     <div id="main">
-        <a id="back" href="#">
+        <!-- Pulsante back -->
+        <a id="back" href="native://dismiss">
         </a>
         <div id="contenuto">
             <div class="hero">
