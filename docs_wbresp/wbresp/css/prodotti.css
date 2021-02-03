@@ -766,7 +766,7 @@ assicurazioni.html -> Prodotti - assicurazioni
 /*NUOVO OGGETTO CONTAINER 06 CARTE */
 .carte-di-credito.container06 {overflow: hidden;background:#fff url("/wbresp/img/carte/container_06_bg.jpg") no-repeat 0 0;background-size: 100% 100%;height:580px;margin-top:20px;padding-bottom:50px;clear:both;float: none;}
 .carte-di-credito.container06 h3 {margin: 0; font-size:30px; font-family:"ralewaysemibold",arial, sans-serif; color: #666; text-align:center}
-.carte-di-credito.container06 img {margin:10px auto 10px auto}
+.carte-di-credito.container06 img {margin:10px auto 10px auto;display: block;}
 .carte-di-credito.container06 p {font-size: 16px;color: #999;line-height: 24px;}
 .carte-di-credito.container06 ul li {font-size: 14px;line-height: 18px;font-family: "ralewaymedium",arial, sans-serif;color: #999;margin-bottom: 10px;}
 
