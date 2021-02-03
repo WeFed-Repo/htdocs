@@ -1,4 +1,4 @@
-<?php breadcrumb() ?>
+
 <!-- BLOCCO PREVENTIVATORE MUTUI -->
 <link rel="stylesheet" href="/wbresp/css/preventivatoremutui.css" />
 <script type="text/javascript" src="/wbresp/js/calcolatore_mutui.js"></script>
@@ -14,7 +14,7 @@ var mCodice = "",
 	mFinalita  = "Acquisto",
 	mPrimacasa = "SI",
 	mPagetopost  = "/webankpub/wb/simulazioneMutui.do?tabId=nav_pub_wb_finanziamenti_nw&richiedi=&OBS_KEY=pro_wbn_mutui_nw1&KEY4=pro4_calcola_rata",
-	mUrl = "/librerie/include/commons/ajax/calcolatore_mutui_json.php";
+	mUrl = "/include/ajax/calcolatore_mutui_json.php";
 
 </script>
 <div id="mutuiWrap" class="loading"></div>

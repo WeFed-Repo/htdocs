@@ -460,7 +460,7 @@
 							mFinalita  = "Acquisto",
 							mPrimacasa = "SI",
 							mPagetopost  = "/connect.php?page=strutt_wbresp.php&tpl=wbresp_placeholder.php&tpl=wbresp_calcolatore_mutui.php",
-							mUrl = "/librerie/include/commons/ajax/calcolatore_mutui_json.php";
+							mUrl = "/include/ajax/calcolatore_mutui_json.php";
 
 						// Attenzione: questa variabile mette il preventivatore in modo "promo", affinche' non carichi direttamente
 						// il dettaglio dei mutui ma reindirizzi i dati in post verso una eventuale pagina di dettaglio e ricalcolo
