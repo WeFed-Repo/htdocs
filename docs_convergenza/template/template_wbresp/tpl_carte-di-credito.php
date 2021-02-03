@@ -351,7 +351,7 @@
 					<!-- NUOVO BOX CARTE DI CREDITO-->
 					<div class="carte-di-credito container06" id="s5">
 						<h3>American Express</h3>
-						<img src="/wbresp/img/carte/carte_american_express.png" class="icon" alt="American Express">
+						<img src="/wbresp/img/carte/carte_american_express.png" class="img-responsive" alt="American Express">
 						<div class="row">
 							<div class="col-sm-12 col-xs-12">
 								 <p>Le carte <strong>American Express</strong> ti consentono di effettuare <strong>qualsiasi spesa senza limiti</strong> ai tuoi desideri:</p>
