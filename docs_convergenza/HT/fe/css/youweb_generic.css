@@ -6997,8 +6997,8 @@ label.select-button:not(.imgLabel):not(.btn) span{
 }
 
 /* Forzatura colore icone in tabelle 12/11/2019 */
-table a .icon, table a:active .icon,table a:focus .icon, table a .icon::before {color:#0E977F}
-table a:hover .icon, table a:focus .icon ,table a:hover .icon::before {color:#007C66}
+table a .icon, table a:active .icon,table a:focus .icon, table a .icon:not(.disabled)::before {color:#0E977F}
+table a:hover .icon, table a:focus .icon ,table a:hover .icon:not(.disabled)::before {color:#007C66}
 
 /* Form_085, INIZIO */
 #dataInizioValidita1:focus, #dataFineValidita1:focus, #dataInizioValidita2:focus, #dataFineValidita2:focus {

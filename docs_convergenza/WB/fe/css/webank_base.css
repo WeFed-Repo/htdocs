@@ -1519,6 +1519,12 @@
 .icon-ico_cmb_prenotata_outline:before {
   content: "\eab5";
 }
+.icon-carte_new:before {
+  content: "\e994";
+}
+.icon-trading_noDT:before {
+  content: "\e9e9";
+}
 .glyph-arrow_trading_fill .path1:before {
   content: "\e94d";
   color: #000000;
