@@ -35,6 +35,7 @@
 #myCarousel .carousel-caption h2 {font-size:23px; line-height:21px; padding:0 0 10px;margin:0}
 #myCarousel .carousel-caption h2 span.secondary {font-size:23px}
 #myCarousel .carousel-caption ul li {margin-bottom:3px;}
+#myCarousel .carousel-caption p {max-width:100%}
 #myCarousel .carousel-caption p.note {line-height:12px;padding-top:10px;}
 #myCarousel .carousel-caption ul.margbottomlarge {margin-bottom:0px;}
 }
@@ -56,6 +57,7 @@
      #myCarousel .carousel-caption ul {padding-left:18px; padding-right:0;}
      #myCarousel .carousel-caption ul.margbottomlarge {margin-bottom:0;}
      #myCarousel .carousel-caption ul li { line-height: 15px;font-size: 15px;}
+     #myCarousel .carousel-caption p {font-size:14px;line-height:16px;}
      #myCarousel .carousel-caption p.note {position:absolute;bottom:0;}
 }
 

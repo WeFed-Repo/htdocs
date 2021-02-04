@@ -73,9 +73,9 @@
                             <div class="dropdown-large-view hiddenDiv pnmnv" id="pnmn5v">
                                 <div class="dleft">
                                     <h2>Mutuo Webank</h2>
-                                    <p> Stai pensando di acquistare casa oppure di rinnovarla?
-                                        <br> Qualunque sia la tua esigenza, ti seguiremo passo passo fino alla stipula del mutuo. E anche dopo.
-                                        <br> E se vuoi rottamare il tuo vecchio mutuo, Webank ha la proposta giusta per te. </p>
+                                    <p> Stai pensando di <strong>acquistare casa</strong>?
+                                        <br>Qualunque sia la tua esigenza, un nostro specialista mutui ti seguir&agrave; fino alla stipula. E con il fattore <strong>Green</strong> ottieni uno <strong>sconto sul tasso</strong> in caso di efficientamento energetico della casa che intendi acquistare.
+                                        <br>Vuoi rottamare il tuo vecchio mutuo? Webank ha la proposta giusta per te. </p>
                                 </div>
                                 <div class="bottomLink"> <a class="btn-whlit btn-whlit-arrow btn-245 fleft uppercase inlineB" href="#">Scopri di pi&ugrave;</a> <a class="btn-grlit btn-grlit-arrow btn-245 fleft uppercase inlineB" href="#">Calcola la rata</a> </div>
                                 <div class="dright"> <img src="/wbresp/img/header/navigator/mutui.png" alt="Mutuo Webank" title="Mutuo Webank" /> </div>
