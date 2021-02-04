@@ -17,7 +17,8 @@
 #myCarousel .carousel-caption ul {padding:0 30px 20px;font-size:20px;list-style-image: url(/wbresp/img/carousel/flag.png);text-transform:uppercase;}
 #myCarousel .carousel-caption ul.margbottomlarge {margin-bottom:30px;}
 #myCarousel .carousel-caption ul li {margin-bottom:5px;font-size:20px;}
-#myCarousel .carousel-caption p.note {clear: both;font-size: 11px !important;padding: 20px 0 0;max-width: 550px;line-height: 13px;color:#eee !important;}
+#myCarousel .carousel-caption p.note {clear: both;font-size: 11px !important;padding: 20px 0 0;max-width: 630px;line-height: 13px;color:#eee !important; text-transform:none !important}
+#myCarousel .carousel-caption p {font-size:18px; max-width:60%;text-transform:uppercase;}
 #myCarousel .carousel-caption p.note a {color:#fff;text-decoration:underline;}
 
 /* APP */
