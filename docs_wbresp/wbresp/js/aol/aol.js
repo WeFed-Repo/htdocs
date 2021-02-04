@@ -234,7 +234,7 @@ var btnFileLoadFunc = function() {
             var accTypes = $(this).attr("accept").replace(" ", "").split(",");
             var typeOk = false;
             $.each(accTypes, function(i, v) {
-                if (filename.match(v + "$")) typeOk = true;
+                if (filename.match(v + "$")) typeOk = true; 
             });
             if (!typeOk) loadModal("Hai scelto di caricare un <strong>tipo di file non valido</strong>.<br>Se continui potrebbero esserci errori. Ti chiediamo di controllare che il tipo del file che hai scelto sia indicato tra quelli corretti (" + accTypes.join(",") + ").", "Tipo di file non valido");
         }
@@ -285,11 +285,19 @@ var initAolForms = function() {
         }
     });
 };
-var checkForm = function(formEl) {
+var checkForm = function(formEl,isTinReq) {
+    var isTinReq = typeof(isTinReq) ==="undefined" ? false : isTinReq;
     // Tolgo l'errore dai campi composti
     formEl.find('.input-date, .input-tel, .input-address, .btn-file-group').find('.ignore, .btn-file-name').removeClass('error');
     // Testo che il form sia valido prima di fare il submit
-    if (formEl.valid()) {
+    if (formEl.valid()&& !isTinReq ) {
+        //controlli americanita se la cittadinanza + disabilitata la riabilito
+        var fieldCittadinanzaAmericanaDis = $(".cittadinanza-americana-disabled");
+        if(fieldCittadinanzaAmericanaDis.length>0)
+         {
+            fieldCittadinanzaAmericanaDis.attr("disabled",false);
+         }
+        //fine controlli americanita se la cittadinanza + disabilitata la riabilito
         formEl.submit();
         setTimeout(openWaitOverlay, 2000);
     } else {
