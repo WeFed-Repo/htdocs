@@ -69,7 +69,7 @@ assicurazioni.html -> Prodotti - assicurazioni
             .container04.conto_webank img.carta{max-width:130px;margin-bottom:15px}
 
             .container05.conto_webank {background: #fff url(/wbresp/img/conto_webank/conto_webank_bg_blocco5.jpg)0 0 no-repeat;background-size: 100%;margin-top:20px;border-bottom:1px solid #a6cc28;border-top:1px solid #a6cc28}
-            .container05.conto_webank h3{font-family:'ralewaybold',arial;text-transform:uppercase;font-size:20px;color:#999999;width:100%;text-align:left;margin-bottom:10px;padding:0 15px}
+            .container05.conto_webank h3{font-family:'ralewaybold',arial;text-transform:uppercase;font-size:20px;color:#999999;width:100%;text-align:left;margin-bottom:20px;padding:0 15px}
             .container05.conto_webank h3 span{color:#666666;font-size:32px;font-family:'ralewaysemibold', arial;text-transform:none}
             .container05.conto_webank p {text-align:left;padding-left:15px}
             .container05.conto_webank p.nota{font-size:12px;padding-top:0}
@@ -216,7 +216,7 @@ assicurazioni.html -> Prodotti - assicurazioni
             }
 
 
-            .container05.conto_webank .row05-1 {background: transparent url('/wbresp/img/conto_webank/conto_webank-b5-1.jpg') no-repeat right 0; min-height:330px; background-size:55% }
+            .container05.conto_webank .row05-1 {background: transparent url('/wbresp/img/conto_webank/conto_webank-b5-1.jpg') no-repeat right 0; min-height:290px; background-size:55% }
             .container03.conto_webank h4 a:hover  {color: #8ab10b !important}
             .container06.conto_webank p a:hover  {color: #8ab10b !important} 
 

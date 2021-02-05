@@ -335,13 +335,18 @@ Promozione valida a fronte di accredito stipendio/pensione o domiciliazione uten
     									di risparmio di Conto
     									Webank guadagni sempre
     								</span>
-    							</h3>
-                                    <p> Le somme sul tuo <b>deposito libero</b> sono sempre disponibili e remunerate al tasso base BCE + 0,10%.
+    							   </h3>
+                                   
+                                </div>
+                                <div class="col-lg-4 hidden-md hidden-sm hidden-xs"> &nbsp; </div>
+                                
+                                <div class="col-lg-12 col-md-12 nopadding-xs">
+                                <p> Le somme sul tuo <b>deposito libero</b> sono sempre disponibili e remunerate al tasso base BCE + 0,10%.
                                         <br> Interessi corrisposti in base alla periodicit&agrave; della rendicontazione.
                                         <br> I trasferimenti da e verso il conto sono gratuiti e immediati. </p>
                                 </div>
-                                <div class="col-lg-4 hidden-md hidden-sm hidden-xs"> &nbsp; </div>
                             </div>
+                            
                             <div class="row">
                                
                                 <div class="col-lg-12 col-md-12 nopadding-xs">
