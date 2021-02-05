@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>YouApp</title>
-    <meta name="description" content="YouApp">
+    <title>App Webank</title>
+    <meta name="description" content="App Webank">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Stili della pagina -->
@@ -114,7 +114,7 @@
 
         /* Generici */
         a {
-            color: #344a86;
+            color: #94c11f;
             text-decoration: none;
         }
 
@@ -125,14 +125,14 @@
         h2 {
             font-size: 18px;
             line-height: 22px;
-            color: #212122;
+            color: #1f2021;
             margin: 0 0 15px;
         }
 
         h3 {
             font-size: 16px;
             line-height: 19px;
-            color: #344a86;
+            color: #1f2021;
             margin: 0 0 15px;
         }
 
@@ -182,9 +182,10 @@
         /* Bullet "ordinali" */
         ol li::before {
             display: block;
-            width: 18px;
-            height: 18px;
-            background-color: #344a86;
+            width: 17px;
+            height: 17px;
+            color:#94c11f;
+            border: solid 1px #94c11f;
             font-size: 13px;
             text-align: center;
             line-height: 20px;
@@ -194,7 +195,6 @@
             counter-increment: ol;
             content: counter(ol);
             position: absolute;
-            color: #fff;
         }
 
         /* Accordion */
@@ -229,15 +229,15 @@
             position: relative;
             padding-right: 20px;
             display: inline-block;
-            color: #344a86;
+            color: #94c11f;
             position: relative;
         }
 
         .accordion .accordion-toggle span::after {
-            content: "+";
+            content: "";
             width: 16px;
             height: 16px;
-            background: transparent url("./img/vedi_piu.png") no-repeat center center;
+            background: transparent url("./img/webank_vedi_piu.png") no-repeat center center;
             border-radius: 8px;
             background-size: 16px 16px;
             position: absolute;
@@ -251,7 +251,7 @@
         }
 
         .accordion .accordion-toggle span.opened::after {
-            background-image: url("./img/vedi_meno.png");
+            background-image: url("./img/webank_vedi_meno.png");
         }
 
         .accordion.opened .accordion-toggle span.closed {
@@ -277,7 +277,7 @@
         footer .cta {
             display: inline-block;
             margin: 0 0 15px;
-            background: #344a86;
+            background: #1f2021;
             line-height: 15px;
             font-size: 14px;
             text-decoration: none;

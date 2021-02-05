@@ -60,7 +60,7 @@
                                         <br>
                                         Pianifica i tuoi obiettivi di risparmio usando il <strong>Simulatore Pac</strong> e personalizza il tuo piano di accumulo in pochi click.</p>
                                         <a href="#!" class="btn btn-primary">Vai alla ricerca fondi</a>
-                                        <a href="#!" class="btn btn-primary" data-video-url="https://media.webank.it/vod/pac_commerciale_cta.mp4" data-toggle="video-overlay">Guarda il video</a>
+                                        <a href="#!" class="btn btn-primary" data-video-id="508344880">Guarda il video</a>
 
                                     </div>
                                 </div>
@@ -286,9 +286,8 @@
     </div>
 </div>
 <!--FINE overlayer tabella saldi -->
-<script type="text/javascript" src="/wscmn/fe/js/priv_videoplayer.js"></script>  
-<script type="text/javascript" src="/wscmn/fe/js/jquery.webticker.min.js?r=<?php echo $random ?>"></script>
-<script type="text/javascript" src="/wscmn/fe/js/fp/fp_investimenti.js?r=<?php echo $random ?>"></script>
+<script type="text/javascript" src="/common/fe/js/jquery.webticker.min.js?r=<?php echo $random ?>"></script>
+<script type="text/javascript" src="/common/fe/js/fp/fp_investimenti.js?r=<?php echo $random ?>"></script>
 <script>
     function sceltaRapportoFunc (option) {
         // Testo selezione: option.text

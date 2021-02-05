@@ -4484,9 +4484,16 @@ var openVideo = function (url, addparams) {
 /* Inizializzazione degli url */
 $(function () {
 
+    // Vecchio video embedding
     $("*[data-toggle='video-overlay']").click(function () {
         var url = $(this).attr("data-video-url");
         openVideo(url);
+    });
+
+    // Nuovo video embedding VIMEO (05/02/2021)
+    $("*[data-video-id]").click(function () {
+        var id = $(this).attr("data-video-id");
+        showVideo(id);
     });
 
 });
@@ -4648,6 +4655,46 @@ var resizeIframe = function () {
     });
 
 };
+
+/* Embed video Vimeo */
+var showVideo = function(vimeoid) {
+
+        $.getScript("https://player.vimeo.com/api/player.js",function(){
+            var vimeoIframe = $("<iframe>").attr({
+                src: "https://player.vimeo.com/video/"+ vimeoid,
+                frameborder:"0", 
+                allow:'autoplay; fullscreen; picture-in-picture', 
+                allowfullscreen: true
+            }).css({background: "transparent url(/common/fe/img/gen_preloader.gif) no-repeat center center",position:"absolute",top:"0",left:"0",width:"100%",height:"100%"})
+            var mdVimeo = getModal({body: $("<div>").css({padding:"56.25% 0 0 0",position:"relative", minHeight:"200px"}).append(vimeoIframe)});
+            mdVimeo.modal("show");
+            mdVimeo.on("hide.bs.modal",function(e){
+                $(e.target).remove();
+            });
+        })
+   
+    /*
+    var vimeoFactor = 360/640;
+    var ifrWidth = (typeof feBank !== "undefined" && feBank==="webank")? 532: 610;
+    // Modale con il video
+    var vimeoIframe = $("<iframe>").attr({
+        src: "https://player.vimeo.com/video/"+ vimeoid,
+        width:ifrWidth,
+        height: Math.floor(ifrWidth * vimeoFactor),
+        frameborder:"0", 
+        allow:'autoplay; fullscreen; picture-in-picture', 
+        allowfullscreen: true
+    }).css({background: "transparent url(/common/fe/img/gen_preloader.gif) no-repeat center center"})
+    var mdVimeo = getModal({
+        body: vimeoIframe  
+    });
+    mdVimeo.modal("show");
+    mdVimeo.on("hide.bs.modal",function(e){
+        $(e.target).remove();
+    })
+    */
+
+}
 
 //inizializzazioni al load della pagina
 $(function () {

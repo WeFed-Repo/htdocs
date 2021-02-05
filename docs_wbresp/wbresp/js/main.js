@@ -917,7 +917,7 @@ $(function () {
     });
 });
 
-/* Apre un video in una modale*/
+/* Apre un video in una modale (video embedded con player nativo)*/
 var overPlayVideo = function (url) {
 
     if (typeof videolayer == "undefined") {
@@ -937,6 +937,22 @@ var overPlayVideo = function (url) {
         initialVolume: 0.8
     });
 };
+
+// Nuova funzione di embedding video nelle modali
+var showVideo = function(vimeoid) {
+    $.getScript("https://player.vimeo.com/api/player.js",function(){
+        var vimeoIframe = $("<iframe>").attr({
+            src: "https://player.vimeo.com/video/"+ vimeoid,
+            frameborder:"0", 
+            allow:'autoplay; fullscreen; picture-in-picture', 
+            allowfullscreen: true
+        }).css({background: "transparent url(/wbresp/img/loading.gif) no-repeat center center",position:"absolute",top:"0",left:"0",width:"100%",height:"100%"})
+        var mdVimeo = loadModal($("<div>").css({padding:"56.25% 0 0 0",position:"relative",marginTop:"20px"}).append(vimeoIframe));
+        mdVimeo.on("hide.bs.modal",function(e){
+            $(e.target).remove();
+        });
+    })
+}
 
 /* TOOL TRACCIATURA GOOGLE */
 $(function () {
