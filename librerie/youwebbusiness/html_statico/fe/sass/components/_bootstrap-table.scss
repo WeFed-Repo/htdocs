@@ -53,7 +53,7 @@
         vertical-align: middle !important;
         min-height: 60px;
         white-space: nowrap;
-        .th-inner {
+        .th-inner { 
           display: inline-block;
           &.sortable {
             background: transparent url("../img/table_order.png") no-repeat right center;
@@ -65,6 +65,19 @@
         }
         // casi particolari per larghezze colonne di particolari tabelle
         &[data-field="riferimento"] { width: 48%; } // pagina documenti online
+      }
+      &.error { 
+        background-color: $error;
+        th {
+          .th-inner {
+            &.sortable {
+              background: transparent url("../img/table_order_white.png") no-repeat right center;
+              &.asc { background-image: url("../img/table_order_asc_white.png"); }
+              &.desc { background-image: url("../img/table_order_desc_white.png"); }
+            }
+          } 
+         
+        }
       }
     }
     tbody tr {

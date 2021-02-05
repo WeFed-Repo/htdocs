@@ -1077,6 +1077,18 @@
 .bootstrap-table table thead th[data-field=riferimento], .bootstrap-table .table thead th[data-field=riferimento] {
   width: 48%;
 }
+.bootstrap-table table thead.error, .bootstrap-table .table thead.error {
+  background-color: #CC1615;
+}
+.bootstrap-table table thead.error th .th-inner.sortable, .bootstrap-table .table thead.error th .th-inner.sortable {
+  background: transparent url("../img/table_order_white.png") no-repeat right center;
+}
+.bootstrap-table table thead.error th .th-inner.sortable.asc, .bootstrap-table .table thead.error th .th-inner.sortable.asc {
+  background-image: url("../img/table_order_asc_white.png");
+}
+.bootstrap-table table thead.error th .th-inner.sortable.desc, .bootstrap-table .table thead.error th .th-inner.sortable.desc {
+  background-image: url("../img/table_order_desc_white.png");
+}
 .bootstrap-table table tbody tr, .bootstrap-table .table tbody tr {
   background-color: #FFFFFF;
   border: none;

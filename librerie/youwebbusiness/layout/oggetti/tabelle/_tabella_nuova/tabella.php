@@ -1,4 +1,4 @@
- <thead>
+ <thead class="error">
     <tr>
       <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
       <th data-field="titolo" class="center data-mobilized-title">Titolo</th>
