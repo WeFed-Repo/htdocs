@@ -350,6 +350,7 @@
 					</div>
 					<!-- NUOVO BOX CARTE DI CREDITO-->
 					<div class="carte-di-credito container06" id="s5">
+						<h4>LOREM IPSUM</h4>
 						<h3>American Express</h3>
 						<img src="/wbresp/img/carte/carte_american_express.png" class="img-responsive" alt="American Express">
 						<div class="row">
