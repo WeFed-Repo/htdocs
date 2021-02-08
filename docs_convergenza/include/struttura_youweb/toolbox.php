@@ -82,9 +82,10 @@
 			<div class="shadow"></div>
 			<a href="javascript:;" class="toolbox-toggle">Hai bisogno di aiuto?</a>
 			<div class="toolbox-console">
-			    <?php virtual("/include/oggetti/Overlayer/commons/010_call_me_back/oggetto.php"); ?>
-				<a class="tool-btn virtass"><span class="tool-icon"></span>Chiedi a Paolo</a>
+			    <a class="tool-btn virtass"><span class="tool-icon"></span>Chiedi a Paolo</a>
 				<div id="chatBtn"></div>
+				<!-- PRENOTA UNA CHIAMATA DESKTOP-->
+				<?php virtual("/include/oggetti/Overlayer/commons/010_call_me_back/oggetto.php"); ?>
 			</div>
 		</div>
 	</div>

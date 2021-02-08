@@ -89,7 +89,7 @@
                }
                else {
                   btnSelectable.removeClass("selected").find(".btn-dispo").hide();
-                  el.addClass("selected").find(".btn-dispo").show(300);
+                  el.addClass("selected").find(".btn-dispo").show(200);
                   orarioSelVal = el.find(".text-time").text()=== "Chiamami ora!" ? "ora" : el.find(".text-time").text();
                  
                }
@@ -269,14 +269,14 @@
    <section id="step-riepilogo" class="step-cmb">
       <p> <?php print $nameCliente ?>, hai selezionato <span class="selected-time"></span><p>
       <p>Un nostro operatore ti contatter&agrave; nella fascia oraria stabilita.</p>
-      <p class="noMargin">Il numero da cui riceverai la chiamata &egrave; il: <br>
+      <p class="noMargin noPadding">Il numero da cui riceverai la chiamata &egrave; il: <br>
       <?php print '<strong>'.$nCellulareCert.'</strong>' ?>
       </p>
       <ul class="ul-small">
          <li>Effettueremo un massimo di 3 tentativi</li>
          <li>La chiamata sar&agrave; soggetta a registrazione</li>
       </ul>
-      <p class="noMargin">Ti chiameremo al seguente numero: <br>
+      <p class="noMargin noPadding">Ti chiameremo al seguente numero: <br>
       <?php print '<strong>' .$nCellulareCert.'</strong>' ?>.
       <p class="p-small">(Questo &egrave; il tuo numero certificato, se  &egrave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</p>
       </p>
