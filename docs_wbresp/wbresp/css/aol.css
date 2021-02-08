@@ -106,6 +106,9 @@ a.ico-pdf {
 .boxalert {
     margin: 10px 0
 }
+.boxalert ul {
+    padding-left:14px;
+}
 
 .boxalert .middle {
     background-color: #f8eec5;
@@ -1170,5 +1173,5 @@ a .invioOtp:hover {
 
 textarea{
     resize: none;
-    min-height: 70px;
+    min-height: 95px;
 }

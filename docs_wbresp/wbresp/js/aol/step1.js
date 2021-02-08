@@ -760,12 +760,12 @@
                 //SE HO INDICATO CITTADINANZA USA MA NON IL TIN
                 if(isCittadinanzaAmericana[i]===true && isFatcaFieldFilled[i]===false) {
                     isTinReq = true;
-                    var txtMess = 'Poich&eacute; hai dichiarato di possedere la cittadinanza americana ti invitiamo ad indicare Stati Uniti d\'America come secondo Paese di residenza fiscale e il tuo codice fiscale estero, il cosiddetto TIN (Tax Identification Number), all\'interno della sezione FATCA-CRS. Diversamente non potrai proseguire con la richiesta.';
+                    var txtMess = 'Hai indicato STATI UNITI D\'AMERICA nel campo Cittadinanza.<br>Per proseguire con la richiesta, nella sezione Altri dati FATCA-CRS, &egrave; necessario indicare:';
                     //SE HO INDICATO ANCCHE DI ESSERE NATO IN USA MA NON IL TIN
                     if(isNatoAmericano[i]===true) {
-                        var txtMess = 'Poich&eacute; hai dichiarato di essere nato negli Stati Uniti d\'America automaticamente hai acquisito la cittadinanza americana. Ti invitiamo, pertanto, ad indicare  Stati Uniti d\'America come secondo Paese di residenza fiscale e il tuo codice fiscale estero, il cosiddetto TIN (Tax Identification Number), all\'interno della sezione FATCA-CRS. Diversamente non potrai proseguire con la richiesta';
+                        var txtMess = 'Hai indicato STATI UNITI D\'AMERICA come Paese di nascita e quindi hai acquisito automaticamente la cittadinanza americana.';
                     }
-                    var boxMessage = '<div class="boxalert americano" id="boxalert' + indexIntestatario +'"><div class="boxcont"><p>' + txtMess + '</p></div></div>';
+                    var boxMessage = '<div class="boxalert americano" id="boxalert' + indexIntestatario +'"><div class="boxcont"><p>' + txtMess + '</p><p>Per proseguire con la richiesta, nella sezione Altri dati FATCA-CRS, &egrave; necessario indicare:</p><ul><li>STATI UNITI D\'AMERICA nel campo <strong>paese estero di residenza fiscale</strong> </li><li>Il tuo codice TIN (Tax Identification Number) nel campo <strong>Codice Fiscale estero</strong></li></ul></div></div>';
                     $(boxMessage).insertAfter($(".fatcaContainer[data-tit="+ indexIntestatario  +"]"));
                      
                     //se gli accordion di fatca sono chiusi li apro
