@@ -20,6 +20,15 @@ Qui si assume che lo sia
    } 
 ?>
 
+<!--classe aggiuntiva e testo per integrare nella struttura di youweb --->
+<?php
+    $classToAdd = "";
+    $txtToAdd ="";
+    if ($site==="youweb") {
+       $classToAdd = "tool-btn prenota-chiamata";
+       $txtToAdd = "Prenota una chiamata";
+    }
+?>
 
 <form id="hiddenInput" class="formGenerico" action="">
   <?php print '<input type="hidden" name="nameCliente" value="' . $nameCliente . '"/>' ?>
@@ -33,15 +42,16 @@ Qui si assume che lo sia
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
 
+
 <span class="icona-call-me-back-wrapper stato-attivo">
-  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb" title="Prenota una chiamata">
-    <i class="icon icon-ico_cmb_outline" title="Prenota una chiamata"></i>
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb  <?php print $classToAdd ?>" title="Prenota una chiamata">
+     <i class="icon icon-ico_cmb_outline" title="Prenota una chiamata"></i> <?php print $txtToAdd ?>
   </a>
-  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok" title="Prenota una chiamata-già prenotato">
-      <span class="glyph glyph-ico_cmb_badge" title="Prenota una chiamata-già prenotato"></span>
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok <?php print $classToAdd ?>" title="Prenota una chiamata-già prenotato">
+      <span class="glyph glyph-ico_cmb_badge" title="Prenota una chiamata-già prenotato"></span> <?php print $txtToAdd ?>
   </a>
-  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko" title="Prenota una chiamata disservizio"> 
-    <span class="glyph glyph-ico_cmb_alert" title="Prenota una chiamata disservizio"></span>
+  <a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko <?php print $classToAdd ?>" title="Prenota una chiamata disservizio"> 
+    <span class="glyph glyph-ico_cmb_alert" title="Prenota una chiamata disservizio"></span> <?php print $txtToAdd ?>
   </a>
 </span>
 
