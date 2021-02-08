@@ -364,10 +364,10 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
     margin: 0 -1%;
 }
 .modal-call-me-back .text-time {display:inline-block;margin-bottom:10px}  
-.modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:65px; }
+.modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:90px; }
 .modal-call-me-back .orari-select span {display:inline-block;width:100%;}
 .modal-call-me-back .orari-select.disabled {cursor:not-allowed; background-color:#eaeaea;border-color:#eaeaea; color:#fff; }      
-.modal-call-me-back .orari-select.selected { background-color:#65b7a9;border-color:#65b7a9;color:#fff;}         
+.modal-call-me-back .orari-select.selected {border-top-color:#65b7a9;}         
 .modal-call-me-back .spsel { font-size:18px;}
 .modal-call-me-back .only-detail{font-size:16px;}
 .modal-call-me-back input[type="radio"]:checked + span {color: #65b7a9;}      
@@ -377,12 +377,22 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .selected .btn-dispo {line-height:14px;}
 .modal-call-me-back .selected .text-dispo {display:none}
 .modal-call-me-back .step-cmb,.modal-call-me-back .btn-dispo {display:none}
-.modal-call-me-back .formGenerico {padding-bottom: 0; }
+.modal-call-me-back .formGenerico,.toolbox-console .formGenerico {padding-bottom: 0;}
+.modal-call-me-back h4 {margin-left: 1%}
+.modal-call-me-back .ul-small {padding: 0;margin:0 0 20px 0}
+.modal-call-me-back .ul-small li {font-size: 13px;list-style: none;}
+.modal-call-me-back .ul-small li:before { content: "- "}
+
+
 .icona-call-me-back-wrapper .icon-stato, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn {display: none;}
 .icona-call-me-back-wrapper.stato-attivo .icon-cmb, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn.icon-cmb {display: block;}
-.icona-call-me-back-wrapper a {text-decoration: none;cursor: pointer;}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper.stato-prenotato .icon-stato.tool-btn.icon-cmb {display: none;}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper.stato-prenotato .icon-stato.tool-btn.icon-cmb-ok{ display: block;top: 7px;left: -2px;}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper.stato-disservizio .icon-stato.tool-btn.icon-cmb {display: none;}
+.icona-call-me-back-wrapper a {text-decoration: none;cursor: pointer;width:30px;height:30px}
+.icona-call-me-back-wrapper .icon-stato i, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn i {font-size:30px;width:30px;height:30px;position:relative; top:10px;margin-right:7px}
+.icona-call-me-back-wrapper .tool-btn-text { font-family: 'bankFont', Arial, Helvetica, sans-serif;}
 
-.icona-call-me-back-wrapper.stato-prenotato .icon-cmb {display: none;}
 
 @media (max-width:767px) {
   .modal-call-me-back .btn-default + .btn-primary {margin-left:0}

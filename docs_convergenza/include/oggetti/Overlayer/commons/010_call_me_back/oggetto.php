@@ -25,8 +25,8 @@ Qui si assume che lo sia
     $classToAdd = "";
     $txtToAdd ="";
     if ($site==="youweb") {
-       $classToAdd = "tool-btn prenota-chiamata";
-       $txtToAdd = "Prenota una chiamata";
+       $classToAdd = 'tool-btn prenota-chiamata';
+       $txtToAdd = '<span class="tool-btn-text">Prenota una chiamata</span>';
     }
 ?>
 

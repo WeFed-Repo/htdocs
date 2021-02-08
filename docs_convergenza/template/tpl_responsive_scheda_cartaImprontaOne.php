@@ -81,7 +81,7 @@
                             </div>
                             <div class="col-sm-3">
                                 <a href="javascript:">
-                                    <img id="" class="img-responsive" src="/WB/fe/img/img_securecode.gif">
+                                    <img id="" class="img-responsive" src="/WB/fe/img/img_code_sicurezza.jpg" alt="securcode">
                                 </a>
                             </div>
                         </div>

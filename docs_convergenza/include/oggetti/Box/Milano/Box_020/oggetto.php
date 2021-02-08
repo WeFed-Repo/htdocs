@@ -16,7 +16,7 @@ var arrCarte = [
     },
 	{
         tipo:'cartimpronta',
-        possiede:false,
+        possiede: true,
         richiestaCarta:false,
         idFormMovimenti:'dettagliCartaCreditoForm',
         urlRichiestaInCorso:'/carte/richiestaCartaCreditoStatoRichiesta.do',
@@ -39,7 +39,7 @@ var arrCarte = [
         possiede:false,
         richiestaCarta:false,
         idFormMovimenti:'',
-        urlRichiestaInCorso:'',
+        urlRichiestaInCorso:'ff',
         urlRichiedi:'',
         urlScheda:'/wb/content/cardNews.do',
         mancanzaRequisiti:false
@@ -47,9 +47,9 @@ var arrCarte = [
     {
         tipo:'schedaNexi',
         possiede:true,
-        richiestaCarta:false,
+        richiestaCarta:true,
         idFormMovimenti:'movimentiNexi',
-        urlRichiestaInCorso:'',
+        urlRichiestaInCorso:'ff',
         urlRichiedi:'',
         urlScheda:'/wb/content/cardNews.do',
         mancanzaRequisiti:false
@@ -61,6 +61,7 @@ var arrCarte = [
 <!-- Testo introduttivo -->
 
 <section>
+<div id="testoCartaImpronta"></div>
 <h4>NON ESISTE LA CARTA GIUSTA PER TUTTI. MA <strong>ESISTE LA CARTA GIUSTA PER TE!</strong></h4>
 <p>Per questo ti mettiamo a disposizione un'offerta di Carte di debito e Carte di credito che hanno tutte le caratteristiche per diventare <b>le tue Carte.</b></p>
 </section>
@@ -134,9 +135,18 @@ var arrCarte = [
 	if (typeof arrCarte !=="undefined") {
 		//elementi in pagina di classe arrCarte-btn da popolare con i bottoni
 		var arrCarteBtn = $(".arrCarte-btn");
+
+       
+
 		//ciclo su array delle carte 
 		$.each(arrCarte, function(i,k) {
-			//e se l'attributo arrCarte-btn-id corrisponde al type di un oggetto di questo array....
+			 //appendo il testo se ha carta di credito
+             if(arrCarte[i].tipo=="cartimpronta" && arrCarte[i].possiede=== true) {
+                var testoCi = '<section><h4>HAI CARTIMPRONTA? RENDI ANCORA PI&Ugrave; SICURI I TUOI PAGAMENTI</h4><p>&Egrave; necessario confermare l\'operazione con il codice usa e getta inviato via SMS sul tuo cellulare certificato e con il <strong>codice e-PIN.</strong></p><h4>NON HAI ANCORA CERTIFICATO IL TUO NUMERO DI CELLULARE?</h4><ul><li>Recupera il <strong>&quot;Codice Posizione&quot;</strong>: &egrave; composto da 10 cifre, lo trovi in alto a sinistra nel rendiconto di Cartimpronta o nella descrizione del movimento di addebito di Cartimpronta che trovi in Saldo e movimenti. Tieni a portata di mano la Carta, il tuo Codice Fiscale e il numero del Conto Corrente.</li><li>Clicca su &laquo;Vai al Portale&raquo; e segui i passaggi per certificarlo.</li><li>Seleziona la voce <strong>&quot;Protezione acquisti online&quot;</strong> per abilitare il 3D Secure e creare il tuo e-PIN.</li></ul><h4>HAI GI&Agrave; CERTIFICATO IL TUO NUMERO DI CELLULARE?</h4><p><strong>Ti basta creare il tuo e-PIN:</strong> tieni a portata di mano il cellulare, clicca sul pulsante &laquoVai al Portale&raquo;, seleziona la voce <strong>&quot;Protezione acquisti online&quot;</strong> e segui le istruzioni.</p></div></section>'
+                $("#testoCartaImpronta").html(testoCi);
+             }
+            
+            //e se l'attributo arrCarte-btn-id corrisponde al type di un oggetto di questo array....
 			if($(".arrCarte-btn").eq(i).attr("arrCarte-btn-id") === k.tipo) {
 				var thisBtnWrapper = arrCarteBtn.eq(i);
 				thisBtnWrapper.append($("<div>").addClass("btn-align-left"));
