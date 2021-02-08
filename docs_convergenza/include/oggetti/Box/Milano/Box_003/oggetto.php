@@ -14,6 +14,7 @@
 	 			<ul class="bullet-spunta">
 	 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona posta_arrivo"></i> Ogni mese il tasso applicato segue la variazione del parametro di riferimento utilizzato (Euribor 3 mesi)</li>
 	 				<li><i class="icon icon-ico_check fLeft colorVer" title="icona posta_arrivo"></i> Ogni mese il tasso applicato segue la variazione del parametro di riferimento utilizzato (Euribor 3 mesi)</li>
+					 <li><i class="icon icon-green_fill fLeft colorVer" title="icona green"></i> Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor</li>
 	 			</ul>
 	 			<div class="row">
 	 				<div class="col-sm-9">
