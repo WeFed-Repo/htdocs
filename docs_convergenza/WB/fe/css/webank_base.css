@@ -202,6 +202,9 @@
   font-size: 128px;
 }
 /* SEZIONE KIT FONTS */
+.icon-ico_check:before {
+  content: "\eabb";
+}
 .icon-green_fill:before {
   content: "\eab9";
 }
@@ -466,14 +469,26 @@
 .icon-ico_mutuofisso:before {
   content: "\ea54";
 }
+.icon-ico_mutuofissogreen:before {
+  content: "\eabc";
+}
 .icon-ico_mutuofissoconopzione:before {
   content: "\ea55";
+}
+.icon-ico_mutuofissoconopzionegreen:before {
+  content: "\eabd";
 }
 .icon-ico_mutuovariabileconopzione:before {
   content: "\ea56";
 }
+.icon-ico_mutuovariabileconopzionegreen:before {
+  content: "\eabe";
+}
 .icon-ico_mutuovariabile:before {
   content: "\ea57";
+}
+.icon-ico_mutuovariabilegreen:before {
+  content: "\eabf";
 }
 .icon-close_toolbox:before {
   content: "\ea23";

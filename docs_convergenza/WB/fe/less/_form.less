@@ -2811,9 +2811,19 @@ table tr td.td-fondo {
 .box-catalogue.assicurazioni {margin-bottom:20px;}
 
 .bullet-spunta li {
+    /*
     background: url(/WB/fe/img/img-icon-ico_check.png) no-repeat 0 0;
+    */
+    position:relative;
     padding-left: 30px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+
+    i.icon {
+        position:absolute;
+        left:0;
+        color:#6f8f0a;
+        font-size:21px;
+    }
 }
 
 .bullet-spunta {
@@ -2949,7 +2959,10 @@ table tr td.td-fondo {
     font-size: 22px;
 }
 @media (max-width: 767px) {
+    /* Sostituito con glifo */
+    /*
     .box-catalogue.assicurazioni .icon {display: none!important}
+    */
     .box-catalogue.assicurazioni h3 {margin-bottom:0;}
 }
 

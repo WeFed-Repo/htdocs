@@ -428,29 +428,56 @@
 .icon-ico_mutuofisso:before {
   content: "\e968";
 }
+.icon-ico_mutuofissogreen:before {
+  content: "\e9fc";
+}
 .icon-ico_mutuotassofissofinito:before {
   content: "\e98b";
+}
+.icon-ico_mutuotassofissofinito1:before {
+  content: "\e9fd";
 }
 .icon-ico_mutuosurrogatassofisso:before {
   content: "\e98d";
 }
+.icon-ico_mutuosurrogatassofissogreen:before {
+  content: "\e9fe";
+}
 .icon-ico_mutuotassofissolastminute:before {
   content: "\e98f";
+}
+.icon-ico_mutuotassofissolastminutegreen:before {
+  content: "\e9ff";
 }
 .icon-ico_mutuofissoconopzione:before {
   content: "\e969";
 }
+.icon-ico_mutuofissoconopzionegreen:before {
+  content: "\ea00";
+}
 .icon-ico_mutuovariabileconopzione:before {
   content: "\e96a";
+}
+.icon-ico_mutuovariabileconopzionegreen:before {
+  content: "\ea01";
 }
 .icon-ico_mutuovariabile:before {
   content: "\e96b";
 }
+.icon-ico_mutuovariabilegreen:before {
+  content: "\ea02";
+}
 .icon-ico_mutuopromotassovariabile:before {
   content: "\e98c";
 }
+.icon-ico_mutuopromotassovariabilegreen:before {
+  content: "\ea03";
+}
 .icon-ico_mutuosurrogatassovariabile:before {
   content: "\e98e";
+}
+.icon-ico_mutuosurrogatassovariabilegreen:before {
+  content: "\ea04";
 }
 .icon-ico_stampa:before {
   content: "\e96c";
@@ -794,6 +821,7 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
+
 
 /* FINE ICONE */
 
