@@ -16,18 +16,28 @@ function mTrackData() {
 			fin: mFinalita.toUpperCase()
 		} 
 
+		// Calcolo di nmutuocod, se possibile
+		var nmutuocod = "";
+		if($("#codiceMutuo").val().length>0) {
+			nmutuocod = mPrevData.nome+ "_"+ mPrevData.codicemutuo
+		}
+
+
 		var trackaction = tdata.val + "_" + tdata.imp,
 			trackobj = {
 			"event_category": "CALCOLA LA RATA",
 			"event_label": tdata.dur,
 			"dimension8": tdata.fin,
+			"dimension9": nmutuocod,
 
 			"sv20": "CALCOLA LA RATA",
 			"sv18": tdata.dur,
 			"sv19": tdata.fin,
 			"svn1": tdata.val,
-			"svn2": tdata.imp
+			"svn2": tdata.imp,
+			"sv26": nmutuocod
 		}
+
 
 		// Track senza callback, per sicurezza
 		gotoTrack(trackaction,trackobj);
