@@ -106,6 +106,9 @@ a.ico-pdf {
 .boxalert {
     margin: 10px 0
 }
+.boxalert ul {
+    padding-left:14px;
+}
 
 .boxalert .middle {
     background-color: #f8eec5;

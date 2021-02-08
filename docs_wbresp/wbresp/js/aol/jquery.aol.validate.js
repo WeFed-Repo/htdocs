@@ -83,7 +83,7 @@ $(function() {
 		}
 		return validaIbanNoImel(value);
 
-	}, $.validator.format("L\'Iban inserito &egrave; di un conto corrente aperto presso un Istituto di Monetica Elettronica e non consente l\'identificazione tramite bonifico. Inserisci l\'Iban di un conto corrente aperto presso una banca."));
+	}, $.validator.format("L\'IBAN che hai indicato &egrave; riferito a un Istituto da cui non &egrave; consentita l\'identificazione tramite bonifico. Per proseguire, inserisci l\'IBAN di un conto corrente aperto presso una Banca italiana."));
 });
 
 var validaIbanNoImel = function(value) {
