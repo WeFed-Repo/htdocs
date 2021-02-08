@@ -35,6 +35,13 @@
 .icon, .glyph {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+
+.icon-green_outline:before {
+  content: "\e9f0";
+}
+.icon-green_fill:before {
+  content: "\e9f1";
+}
 .icon-ico_muoviti_con_free_now:before {
   content: "\e9ef";
 }
@@ -85,7 +92,7 @@
 }
 .icon-zoom_big:before {
   content: "\e9de";
-} 
+}
 .icon-check-ok_table:before {
   content: "\e9da";
 }
@@ -758,6 +765,8 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
+
+/* FINE ICONE */
 
 
 @font-face {
