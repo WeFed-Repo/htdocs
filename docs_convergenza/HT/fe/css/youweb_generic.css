@@ -8694,10 +8694,14 @@ p.large a {color:#0E977F;text-decoration: underline;}
 /*FINE SEZIONE ID FIXING */
 
 /*selettore carte */
-.wrapper-link-carte-bottom .link-carte-bottom {position: relative;z-index:1;top:10px}
-.wrapper-link-carte-bottom  .outerWrapperTab {position: relative;top:-20px}
-.wrapper-link-carte-bottom .innerWrapperTab  {min-height: 95px;padding-top:40px}
-
+.wrapper-link-carte-bottom {
+	background-color: #ebeef0;
+    margin:0 -35px 0 -35px;
+    padding-top:15px;
+}
+.wrapper-link-carte-bottom p {
+    padding-left:35px;
+}
 
 /* tabella costi carta American express*/
 table.table-confronta-costi thead th {text-align:center;padding-bottom:5px}
