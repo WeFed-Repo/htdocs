@@ -750,6 +750,7 @@ nav ul.level2 li.active ul li.selected a {
   text-overflow: ellipsis;
   width: 100%;
 }
+/*Servizio CMB */
 /* MEDIA QUERIES */
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
@@ -2482,7 +2483,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 }
 .icona-call-me-back-wrapper.stato-attivo i {
   font-size: 32px!important;
-  color: #8ab10b;
+  color: #fff;
 }
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb {
   display: none;
@@ -2642,6 +2643,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   color: #fff;
   width: 32px;
   height: 32px;
+  outline: none;
 }
 .helpDialog .modal-header button.close span,
 .modal-header button.close span {

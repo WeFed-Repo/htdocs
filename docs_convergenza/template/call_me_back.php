@@ -353,10 +353,10 @@
    <!-- step 8: cell- non certificato-->
    <section id="step-nonCertificato" class="step-cmb">
       <div>
-         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.</p>
          <p>Per poterti contattare abbiamo bisogno di un numero di cellullare valido.</p>
-         <p><strong>Il numero in nostro possesso non risulta certificato.</strong><p>
-            Clicca sul pulsante qui sotto per certificarlo ora.
+         <p><strong>Il numero in nostro possesso non risulta certificato.</strong></p>
+            <p>Clicca sul pulsante qui sotto per certificarlo ora.</p>
          <div class="align-center">
             <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
             <a type="button" id="btn-close" class="btn btn-primary">certifica cellulare</a>
@@ -366,10 +366,10 @@
    <!-- step 8: cell- non certificato-->
    <section id="step-numeroNd" class="step-cmb">
       <div>
-         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.</p>
          <p>Per poterti contattare abbiamo bisogno di un numero di cellullare valido.</p>
-         <p><strong>Non risulta alcun numero nei nostri archivi.</strong><p>
-            Clicca sul pulsante qui sotto per certificarlo ora.
+         <p><strong>Non risulta alcun numero nei nostri archivi.</strong></p>
+            <p>Clicca sul pulsante qui sotto per certificarlo ora.</p>
          <div class="align-center">
             <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
             <a type="button" id="btn-close" class="btn btn-primary">inserisci numero</a>

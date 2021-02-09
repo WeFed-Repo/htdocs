@@ -46,7 +46,24 @@
 							automatico è attivo 24 ore <br>
 							su 24, 7 giorni su 7
 						</p>
-					</div>
+						<!-- CMB mobile -->
+						<span class="icona-call-me-back-wrapper stato-attivo">
+  							<a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb  tool-btn prenota-chiamata" title="Prenota una chiamata">
+     							<i class="icon icon-ico_cmb_outline" title="Prenota una chiamata"></i> 
+							 	<span class="tool-btn-text">Prenota una chiamata</span>  
+							</a>
+  							<a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ok tool-btn prenota-chiamata" title="Prenota una chiamata-già prenotato">
+							  <span class="glyph glyph-ico_cmb_badge" title="Prenota una chiamata-già prenotato"></span> 
+							  <span class="tool-btn-text">Prenota una chiamata</span>  
+							</a>
+							<a data-toggle="modal" data-target="#modaleCallMeBack" class="icon-stato icon icon icon-cmb-ko" title="Prenota una chiamata disservizio"> 
+								<span class="glyph glyph-ico_cmb_alert" title="Prenota una chiamata disservizio"></span>
+								<span class="icon-text">Prenota una chiamata</span>
+							</a>
+						</span>
+
+					
+               		</div>
 					<div class="col-md-1 col-sm-1 hidden-xs"></div>
 				</div>	
 				<div class="row"> 
