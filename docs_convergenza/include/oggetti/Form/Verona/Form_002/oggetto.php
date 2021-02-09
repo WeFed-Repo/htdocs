@@ -1,4 +1,6 @@
 <!-- SELETTORE RAPPORTO -->
+
+
 <section>
 	<form id="" method="post" action="">
 		<div class="selezioneCC tabellaSelezioneCC">
@@ -30,7 +32,8 @@
 		</div>
 		<div class="wrapper-link-carte-bottom">
 			<p class="link-carte-bottom">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit <a href="#">sed do eiusmod tempor incididunt</a></p>
-			<div class="section outerWrapperTab no-backgr">
+		</div>	
+		<div class="section outerWrapperTab no-backgr">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="innerWrapperTab">
@@ -42,7 +45,7 @@
 						<div class="separator"></div>
 					</div>
 				</div>
-			</div>
 		</div>
+		
 	</form>
 </section>
