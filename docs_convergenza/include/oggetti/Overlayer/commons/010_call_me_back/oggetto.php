@@ -60,10 +60,10 @@ Qui si assume che lo sia
 <div id="modaleCallMeBack" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 	<div class="modal-content modal-call-me-back">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3 class="modal-title align-center">PRENOTA UNA CHIAMATA</h3>
-      </div>
+      <div class="modal-header clearfix">
+	        <button type="submit" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h3 class="modal-title">Prenota una chiamata</h3>
+	    </div>
       <div class="modal-body">
       <script type="text/javascript">
        

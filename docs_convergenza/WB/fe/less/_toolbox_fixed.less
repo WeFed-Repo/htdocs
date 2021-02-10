@@ -431,7 +431,7 @@ div.tool {
   &.stato-attivo { 
     .icon-cmb {
       display:block;
-      i {top:2px;position: relative;}
+      i {top:0;position: relative;left:0;}
     }
     i {font-size:32px!important;color:#fff; } 
   }
@@ -439,19 +439,24 @@ div.tool {
     .icon-cmb {display:none;}
     .icon-cmb-ok {
       display:block;
-      top:7px;
-      left:-2px;  
+      top:4px;
+      left:0; 
         .glyph { 
-          font-size:34px!important;
-          top: 7px; 
+          font-size:32px;
+          top: 0; 
           .path1:before {  
-            color:#8ab10b; 
+            color:#fff; 
           } 
-          .path2:before,.path3:before {  
-            color:#fff;
+          .path2:before {  
+            color:#fff; 
             opacity:1;
           }
-        
+          &:hover .path1::before {  
+            color:#8ab10b!important;
+          }     
+          &:hover .path2::before {  
+            color:#8ab10b!important; 
+          }
         }
         
       }
@@ -460,24 +465,33 @@ div.tool {
     .icon-cmb {display:none;} 
     .icon-cmb-ko {
       display:block;
-      top:7px;
-      left:-2px;
+      top:4px;
+      left:0;
         .glyph { 
-          font-size:34px!important;
-          .path1:before {  
-            color:#8ab10b;
-          }  
-          .path2:before,.path3:before {  
+          font-size:32px;
+          .path1::before {  
+            color:#fff;
+          }   
+          .path2::before {   
             color:#fff;
             opacity:1;
           }
+          &:hover .path1::before {  
+            color:#8ab10b!important;
+          }     
+          &:hover .path2::before {  
+            color:#8ab10b!important; 
+            opacity:1; 
+          }
+        }
         
-        } 
       }
   }
-}
+} 
 .modal-call-me-back { 
-  
+  .modal-title {
+    font-size:25px;
+  }
   h4 { 
     margin-bottom:20px; 
   }
@@ -504,13 +518,15 @@ div.tool {
         &.disabled {
           cursor:not-allowed;
           background-color:#eaeaea;
-          border-color:#eaeaea; 
+          border-color:#eaeaea;  
           color:#fff; 
         }
         &.selected {
-          border-top-color:#8ab10b;
+          border-top: 4px solid #8ab10b;
+          margin-top:-2px;
+          min-height:92px;
           .text-dispo {
-            display:none;
+            display:none; 
           }
        }
       }
@@ -522,7 +538,7 @@ div.tool {
      }
   }
   input[type="radio"]:checked + span { 
-    color: #8ab10b;
+    color: #8ab10b; 
   }
   .btn-default + .btn-primary { 
      margin-left:20px;
@@ -532,6 +548,7 @@ div.tool {
     text-align:center;
     font-size: 22px; 
     text-transform:uppercase;
+    margin-bottom:40px;
     .icon { 
       font-size:64px; 
       color: #8ab10b;
@@ -541,7 +558,7 @@ div.tool {
     } 
     span { 
       display: block;
-      &.glyph {
+      &.glyph { 
       font-size: 160px;
       position: relative;
       top: -10px;

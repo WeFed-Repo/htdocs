@@ -60,6 +60,9 @@
   content: "\e9f9";
 }
 .icon-ico_cmb_outline:before {
+  content: "\ea05";
+}
+.icon-ico_cmb_outline_small:before {
   content: "\e9fa";
 }
 .icon-ico_cmb_fill:before {
@@ -854,23 +857,53 @@
   font-size:30px;
 }
 
-.glyph-read_pdf .path1:before {
-  content: "\e952";
-  color: rgb(29, 41, 79);
+.glyph-ico_cmb_alert .path1:before {
+  content: "\e915";
+  color: rgb(0, 0, 0);
 }
-.glyph-read_pdf .path2:before {
-  content: "\e953";
+.glyph-ico_cmb_alert .path2:before {
+  content: "\e916";
   margin-left: -1em;
-  color: rgb(29, 41, 79);
+  color: rgb(0, 0, 0);
 }
-.glyph-read_pdf .path3:before {
-  content: "\e954";
+.glyph-ico_cmb_alert .path3:before {
+  content: "\e917";
   margin-left: -1em;
-  color: rgb(186, 247, 60);
+  color: rgb(242, 221, 107);
 }
-.glyph-uread_pdf:before {
-  content: "\e955";
-  color: #1d294f;
+.glyph-ico_cmb_alert .path4:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.glyph-ico_cmb_alert .path5:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.glyph-ico_cmb_alert .path6:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.glyph-ico_cmb_badge .path1:before {
+  content: "\e91b";
+  color: rgb(0, 0, 0);
+}
+.glyph-ico_cmb_badge .path2:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.glyph-ico_cmb_badge .path3:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(255, 0, 0);
+}
+.glyph-ico_cmb_badge .path4:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
 }
 .glyph-ico_cmb_disservizio .path1:before {
   content: "\e900";
@@ -891,64 +924,64 @@
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
-.glyph-ico_cmb_badge .path1:before {
+.glyph-ico_cmb_badge_small .path1:before {
   content: "\e904";
   color: rgb(0, 0, 0);
 }
-.glyph-ico_cmb_badge .path2:before {
+.glyph-ico_cmb_badge_small .path2:before {
   content: "\e905";
   margin-left: -1em;
   color: rgb(255, 255, 255);
   opacity: 0.3;
 }
-.glyph-ico_cmb_badge .path3:before {
+.glyph-ico_cmb_badge_small .path3:before {
   content: "\e906";
   margin-left: -1em;
   color: rgb(255, 255, 255);
   opacity: 0.3;
 }
-.glyph-ico_cmb_badge .path4:before {
+.glyph-ico_cmb_badge_small .path4:before {
   content: "\e907";
   margin-left: -1em;
   color: rgb(255, 0, 0);
 }
-.glyph-ico_cmb_badge .path5:before {
+.glyph-ico_cmb_badge_small .path5:before {
   content: "\e908";
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
-.glyph-ico_cmb_alert .path1:before {
+.glyph-ico_cmb_alert_small .path1:before {
   content: "\e909";
   color: rgb(0, 0, 0);
 }
-.glyph-ico_cmb_alert .path2:before {
+.glyph-ico_cmb_alert_small .path2:before {
   content: "\e90a";
   margin-left: -1em;
   color: rgb(255, 255, 255);
   opacity: 0.3;
 }
-.glyph-ico_cmb_alert .path3:before {
+.glyph-ico_cmb_alert_small .path3:before {
   content: "\e90b";
   margin-left: -1em;
   color: rgb(255, 255, 255);
   opacity: 0.3;
 }
-.glyph-ico_cmb_alert .path4:before {
+.glyph-ico_cmb_alert_small .path4:before {
   content: "\e90c";
   margin-left: -1em;
   color: rgb(242, 221, 107);
 }
-.glyph-ico_cmb_alert .path5:before {
+.glyph-ico_cmb_alert_small .path5:before {
   content: "\e90d";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
-.glyph-ico_cmb_alert .path6:before {
+.glyph-ico_cmb_alert_small .path6:before {
   content: "\e90e";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
-.glyph-ico_cmb_alert .path7:before {
+.glyph-ico_cmb_alert_small .path7:before {
   content: "\e90f";
   margin-left: -1em;
   color: rgb(0, 0, 0);
@@ -977,4 +1010,21 @@
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
-
+.glyph-read_pdf .path1:before {
+  content: "\e952";
+  color: rgb(29, 41, 79);
+}
+.glyph-read_pdf .path2:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(29, 41, 79);
+}
+.glyph-read_pdf .path3:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(126, 211, 33);
+}
+.glyph-uread_pdf:before {
+  content: "\e955";
+  color: #1d294f;
+}

@@ -316,7 +316,7 @@
    <!-- step 5: annulla prenotazione-->
    <section id="step-annullato" class="step-cmb">
       <p class="esito">
-         <i class="icon icon-ico_cmb_cancellata_fill" title="prenotazione annullata"></i>
+         <i class="icon icon-trash_filled" title="prenotazione annullata"></i>
          <span>Prenotazione annullata</span>
       </p>
       <div class="btn-align-center">

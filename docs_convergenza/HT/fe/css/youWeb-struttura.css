@@ -383,7 +383,7 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .ul-small li {font-size: 13px;list-style: none;}
 .modal-call-me-back .ul-small li:before { content: "- "}
 .modal-call-me-back .esito .icon {font-size: 64px;color: #0e977f;width: 60px;height: 90px;display: inline-block;}
-.modal-call-me-back .esito {display: block;text-align: center;font-size: 22px;text-transform: uppercase;}
+.modal-call-me-back .esito {display: block;text-align: center;font-size: 22px;text-transform: uppercase;margin-bottom:20px}
 .modal-call-me-back .esito span {display: block;}
 .modal-call-me-back .align-center {text-align: center;}
 
@@ -395,11 +395,11 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper.stato-disservizio .icon-stato.tool-btn.icon-cmb-ko{ display: block;top: 7px;left: -2px;}
 .icona-call-me-back-wrapper a {text-decoration: none;cursor: pointer;width:30px;height:30px}
 .icona-call-me-back-wrapper .icon-stato i, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn i {font-size:30px;width:30px;height:30px;position:relative; top:10px;margin-right:7px}
-.icona-call-me-back-wrapper .icon-stato .glyph, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn .glyph {font-size: 34px;width: 32px;height: 34px;position: relative;top: 10px;margin-right: 7px;left: -4px;}
-.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before, .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path3:before {color: #fff;opacity: 1;}
+.icona-call-me-back-wrapper .icon-stato .glyph, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn .glyph {font-size: 30px;width: 30px;height: 30px;position: relative;top: 10px;margin-right: 7px;left: 0;}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before {color: #fff;opacity: 1;}
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path1:before,
 .icona-call-me-back-wrapper.stato-disservizio .glyph .path1:before {color: #75c2b8;}
-.icona-call-me-back-wrapper.stato-disservizio  .glyph .path2:before, .icona-call-me-back-wrapper.stato-disservizio .glyph .path3:before {color: #fff;opacity: 1;}
+.icona-call-me-back-wrapper.stato-disservizio  .glyph .path2:before {color: #fff;opacity: 1;}
 .modal-call-me-back .esito span.glyph {font-size: 160px;position: relative;top: -10px;width: 100px;height: 100px;line-height: 100px;display: inline;}
 .modal-call-me-back .esito span.glyph span {display: inline;}
 .icona-call-me-back-wrapper .tool-btn-text { font-family: 'bankFont', Arial, Helvetica, sans-serif;}

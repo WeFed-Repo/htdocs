@@ -221,6 +221,9 @@
   content: "\eab6";
 }
 .icon-ico_cmb_outline:before {
+  content: "\eac0";
+}
+.icon-ico_cmb_outline_small:before {
   content: "\eaad";
 }
 .icon-ico_cmb_attesa_fill:before {
@@ -1546,6 +1549,159 @@
 .icon-reduce_toolbox:before {
   content: "\ea22";
 }
+.glyph-ico_cmb_badge .path1:before {
+  content: "\e967";
+  color: #000000;
+}
+.glyph-ico_cmb_badge .path2:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_badge .path3:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: #ff0000;
+}
+.glyph-ico_cmb_badge .path4:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: #ffffff;
+}
+.glyph-ico_cmb_alert .path1:before {
+  content: "\e96b";
+  color: #000000;
+}
+.glyph-ico_cmb_alert .path2:before {
+  content: "\e96c";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert .path3:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: #f2dd6b;
+}
+.glyph-ico_cmb_alert .path4:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert .path5:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert .path6:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio .path1:before {
+  content: "\e95e";
+  color: #f2dd6b;
+}
+.glyph-ico_cmb_disservizio .path2:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio .path3:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio .path4:before {
+  content: "\e961";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio_fill .path1:before {
+  content: "\e962";
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio_fill .path2:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: #f2dd6b;
+}
+.glyph-ico_cmb_disservizio_fill .path3:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio_fill .path4:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_disservizio_fill .path5:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert_small .path1:before {
+  content: "\e952";
+  color: #000000;
+}
+.glyph-ico_cmb_alert_small .path2:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.glyph-ico_cmb_alert_small .path3:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.glyph-ico_cmb_alert_small .path4:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: #f2dd6b;
+}
+.glyph-ico_cmb_alert_small .path5:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert_small .path6:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_alert_small .path7:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: #000000;
+}
+.glyph-ico_cmb_badge_small .path1:before {
+  content: "\e959";
+  color: #000000;
+}
+.glyph-ico_cmb_badge_small .path2:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.glyph-ico_cmb_badge_small .path3:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.glyph-ico_cmb_badge_small .path4:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: #ff0000;
+}
+.glyph-ico_cmb_badge_small .path5:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: #ffffff;
+}
 .glyph-arrow_trading_fill .path1:before {
   content: "\e94d";
   color: #000000;
@@ -1726,7 +1882,7 @@
 .glyph-promo .path2:before {
   content: "\e923";
   margin-left: -1em;
-  color: #99cc66;
+  color: #339685;
 }
 .glyph-insurance .path1:before {
   content: "\e924";
@@ -1936,111 +2092,6 @@
   content: "\e919";
   margin-left: -1em;
   color: #d4eabb;
-}
-.glyph-ico_cmb_alert .path1:before {
-  content: "\e952";
-  color: #000000;
-}
-.glyph-ico_cmb_alert .path2:before {
-  content: "\e953";
-  margin-left: -1em;
-  color: #ffffff;
-  opacity: 0.3;
-}
-.glyph-ico_cmb_alert .path3:before {
-  content: "\e954";
-  margin-left: -1em;
-  color: #ffffff;
-  opacity: 0.3;
-}
-.glyph-ico_cmb_alert .path4:before {
-  content: "\e955";
-  margin-left: -1em;
-  color: #f2dd6b;
-}
-.glyph-ico_cmb_alert .path5:before {
-  content: "\e956";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_alert .path6:before {
-  content: "\e957";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_alert .path7:before {
-  content: "\e958";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_badge .path1:before {
-  content: "\e959";
-  color: #000000;
-}
-.glyph-ico_cmb_badge .path2:before {
-  content: "\e95a";
-  margin-left: -1em;
-  color: #ffffff;
-  opacity: 0.3;
-}
-.glyph-ico_cmb_badge .path3:before {
-  content: "\e95b";
-  margin-left: -1em;
-  color: #ffffff;
-  opacity: 0.3;
-}
-.glyph-ico_cmb_badge .path4:before {
-  content: "\e95c";
-  margin-left: -1em;
-  color: #ff0000;
-}
-.glyph-ico_cmb_badge .path5:before {
-  content: "\e95d";
-  margin-left: -1em;
-  color: #ffffff;
-}
-.glyph-ico_cmb_disservizio .path1:before {
-  content: "\e95e";
-  color: #f2dd6b;
-}
-.glyph-ico_cmb_disservizio .path2:before {
-  content: "\e95f";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio .path3:before {
-  content: "\e960";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio .path4:before {
-  content: "\e961";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio_fill .path1:before {
-  content: "\e962";
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio_fill .path2:before {
-  content: "\e963";
-  margin-left: -1em;
-  color: #f2dd6b;
-}
-.glyph-ico_cmb_disservizio_fill .path3:before {
-  content: "\e964";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio_fill .path4:before {
-  content: "\e965";
-  margin-left: -1em;
-  color: #000000;
-}
-.glyph-ico_cmb_disservizio_fill .path5:before {
-  content: "\e966";
-  margin-left: -1em;
-  color: #000000;
 }
 /* Glifi "fissati" */
 .icon-corona {

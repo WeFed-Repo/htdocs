@@ -2478,8 +2478,9 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   display: block;
 }
 .icona-call-me-back-wrapper.stato-attivo .icon-cmb i {
-  top: 2px;
+  top: 0;
   position: relative;
+  left: 0;
 }
 .icona-call-me-back-wrapper.stato-attivo i {
   font-size: 32px!important;
@@ -2490,39 +2491,53 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 }
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok {
   display: block;
-  top: 7px;
-  left: -2px;
+  top: 4px;
+  left: 0;
 }
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph {
-  font-size: 34px!important;
-  top: 7px;
+  font-size: 32px;
+  top: 0;
 }
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path1:before {
-  color: #8ab10b;
+  color: #fff;
 }
-.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before,
-.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path3:before {
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before {
   color: #fff;
   opacity: 1;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph:hover .path1::before {
+  color: #8ab10b !important;
+}
+.icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph:hover .path2::before {
+  color: #8ab10b !important;
 }
 .icona-call-me-back-wrapper.stato-disservizio .icon-cmb {
   display: none;
 }
 .icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko {
   display: block;
-  top: 7px;
-  left: -2px;
+  top: 4px;
+  left: 0;
 }
 .icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph {
-  font-size: 34px!important;
+  font-size: 32px;
 }
-.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path1:before {
-  color: #8ab10b;
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path1::before {
+  color: #fff;
 }
-.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path2:before,
-.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path3:before {
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph .path2::before {
   color: #fff;
   opacity: 1;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph:hover .path1::before {
+  color: #8ab10b !important;
+}
+.icona-call-me-back-wrapper.stato-disservizio .icon-cmb-ko .glyph:hover .path2::before {
+  color: #8ab10b !important;
+  opacity: 1;
+}
+.modal-call-me-back .modal-title {
+  font-size: 25px;
 }
 .modal-call-me-back h4 {
   margin-bottom: 20px;
@@ -2559,7 +2574,9 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   color: #fff;
 }
 .modal-call-me-back .orariDispoWrapper .orari-select.selected {
-  border-top-color: #8ab10b;
+  border-top: 4px solid #8ab10b;
+  margin-top: -2px;
+  min-height: 92px;
 }
 .modal-call-me-back .orariDispoWrapper .orari-select.selected .text-dispo {
   display: none;
@@ -2581,6 +2598,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   text-align: center;
   font-size: 22px;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .modal-call-me-back .esito .icon {
   font-size: 64px;
