@@ -582,8 +582,6 @@
                         nextFatcaBox.find('.textinput').remove();
                         fatcaFormGroup.append('<input type="text" name="TIN2_int' + numTit + '" id="TIN2_int' + numTit + '" class="textinput form-control" maxlength="20">').val('').prop('disabled', true);
                         nextFatcaBox.find('select').prop('disabled', false);
-                         //disabilitato aggiungi - fix bug in produzione
-                        fatcaBox.find('.fatcaLinkButton .add').attr("disabled",true)
                         nextFatcaBox.show();
                     } else {
                         fatcaBox.find('select').prop('disabled', true);
@@ -601,12 +599,15 @@
                 numRes = parseInt(fatcaBox.attr('data-res'), 10);
                 
                 if (numRes === 2) {
+                    //disabilitato aggiungi - fix bug in produzione
+                    fatcaBox.find('.add').addClass("disabled")
                     fatcaBox.hide();
                     $('#TIN2_int' + numTit).unmask().val('').attr('placeholder', '').prop('disabled', true);
                     //aggiunto reset eventuale errore - bug in produzione
                     $('#TIN2_int' + numTit+"-error").remove();
                     $('#sel_residenzaFiscale2_int' + numTit).val('').prop('disabled', true);
                     $('#residenzaFiscale2_int' + numTit).val('');
+                    
                     prevFatcaBox.show();
                 } else {
                     prevFatcaBox.find('.fatcaLinkButton').show();
@@ -630,9 +631,12 @@
                     if (valArr[2] === 'N') {
                         tinInput.unmask().val('Non previsto').attr('placeholder', '').prop('disabled', true).removeClass('tinUsa');
                     } else if (valArr[0] === '69' || valArr[0] === '701') {
+                        //FIX MASK IE11
+                        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+                        var placeholderEl = isIE11 ? "" : "_________";
                         // definisco tutti i caratteri alfanumerici e simboli della tastiera
                         tinInput.mask("000-00-0000", {
-                            "placeholder": "_________"
+                            "placeholder": placeholderEl
                         }).val('').prop('disabled', false).addClass('tinUsa');
                     } else {
                         tinInput.unmask().val('').attr('placeholder', '').prop('disabled', false).removeClass('tinUsa');
@@ -748,19 +752,22 @@
             for (i = 1; i <= numInt; ++i) {
                 var indexArray = i-1;
                  //per ciascun instestatario controllo se ha scelto USA come residenza aggiuntiva
-                $(".fatcaContainer[data-tit="+i +"]").find("input[type='hidden']").val() === "69|STATI UNITI D'AMERICA|S" ? handlePushArray(indexArray,isFatcaFieldFilled,true) : handlePushArray(indexArray,isFatcaFieldFilled,false);
+                $(".fatcaContainer[data-tit="+i +"]").find("input[type='hidden']").each(function(){
+                    if($(this).val() === "69|STATI UNITI D'AMERICA|S") {handlePushArray(indexArray,isFatcaFieldFilled,true)}
+                })
                 //per ciascun instestatario controllo se ha scelto USA come stato di nascita
                  $("#stato_nascita_int" +i).val().indexOf("STATI UNITI")!==-1 ? handlePushArray(indexArray,isNatoAmericano,true) : handlePushArray(indexArray,isNatoAmericano,false);
                 //per ciascun instestatario controllo se ha scelto cittadinanza americana ma non stato di nsacita americano
                 $("#cittadinanza_int" +i).val().indexOf("STATI UNITI")!==-1 ? handlePushArray(indexArray,isCittadinanzaAmericana,true) : handlePushArray(indexArray,isCittadinanzaAmericana,false);
             }
+            
             //per ogni componente dell'array di nascita eseguo controlli incrociati
             $(isNatoAmericano).each(function(i){
                 var indexIntestatario = i+1;
                 //SE HO INDICATO CITTADINANZA USA MA NON IL TIN
                 if(isCittadinanzaAmericana[i]===true && isFatcaFieldFilled[i]===false) {
                     isTinReq = true;
-                    var txtMess = 'Hai indicato STATI UNITI D\'AMERICA nel campo Cittadinanza.<br>Per proseguire con la richiesta, nella sezione Altri dati FATCA-CRS, &egrave; necessario indicare:';
+                    var txtMess = 'Hai indicato STATI UNITI D\'AMERICA nel campo Cittadinanza.';
                     //SE HO INDICATO ANCCHE DI ESSERE NATO IN USA MA NON IL TIN
                     if(isNatoAmericano[i]===true) {
                         var txtMess = 'Hai indicato STATI UNITI D\'AMERICA come Paese di nascita e quindi hai acquisito automaticamente la cittadinanza americana.';
@@ -772,16 +779,16 @@
                      if(!($('#accordion2_int'+ indexIntestatario).find('.collapse')).hasClass("in")) {
                         $('#accordion2_int'+ indexIntestatario).find('.panel-title a').trigger('click');
                     }
-                    //se gli accordion principali in cui il box è inserito sono chiusi li apro
+                    //se gli accordion principali in cui il box Ã¨ inserito sono chiusi li apro
                     if(!$('#collapse_int'+ indexIntestatario).hasClass("in")) {
                        $('#headingOne_int'+ indexIntestatario).find('a').trigger('click');
                         
                     }
                 }
              })
-              //caso di controllo simultaneo errori e americanità eventualmente gestire gli scroll
+              //caso di controllo simultaneo errori e americanitÃ  eventualmente gestire gli scroll
               checkForm(formEl,isTinReq);
-              //se c'è il box di alert la pagina scrolla fino al primo che incontra
+              //se c'Ã¨ il box di alert la pagina scrolla fino al primo che incontra
               moveToElement($(".boxalert.americano").first());
            
         }
