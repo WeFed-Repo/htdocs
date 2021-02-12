@@ -84,7 +84,7 @@
             display: inline-block;
             height: 320px;
             width: 100%;
-            background: #eee url(./img/hero.jpg) no-repeat center center;
+            background: #eee url(./img/visual_web_view_YA_amex_oro.jpg) no-repeat center center;
             background-size: cover;
             position: relative;
         }
@@ -121,7 +121,11 @@
         a:hover {
             text-decoration: underline;
         }
-
+		
+		h1 {
+			text-transform: uppercase;
+        }
+		
         h2 {
             font-size: 18px;
             line-height: 22px;
@@ -290,6 +294,20 @@
             color: #fff;
             border-radius: 8px;
         }
+
+        /* Declinazione dark */
+        .dark #contenuto .hero h1{
+            color:#fff;
+			text-transform: uppercase;
+        }
+
+        .dark #back {
+            background-image: url(./img/btn_back_white.png)
+        }
+        .dark #back.fixed {
+            background-color:#212121; 
+            opacity:0.8;
+        }
     </style>
     <script type="text/javascript">
 
@@ -335,40 +353,53 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" class="dark">
         <!-- Pulsante back -->
         <a id="back" href="native://dismiss">
         </a>
         <div id="contenuto">
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                    <h1>Carta Oro American Express</h1>
                 </div>
             </div>
             <div class="pagecont">
+				<!-- Box solo testo con vari link -->
+                <div class="boxedcont">
+                   <h2>La tua finestra su un mondo di vantaggi!</h2>
+                   <p>Richiedi <strong>Carta Oro American Express. </strong> Solo per te: 
+                </p>
+                </div>
+                <!-- Fine box solo testo con vari link -->
+				
+				<!-- Box solo elenco puntato -->
+                <div class="boxedcont">
+                    <ul>
+                        <li>un <strong>bonus di 25.000 punti Membership Rewards&reg;</strong><sup>1</sup> per ridurre 
+						il saldo del tuo conto Carta fino a 100 Euro, con gli Sconti Shop with Points<sup>1</sup>;</li>
+						<li><strong>quota ridotta</strong><sup>2</sup> <strong>a 20 Euro il 1&deg; anno</strong>, riaccreditata<sup>3</sup> 
+						se effettui una spesa con la carta entro 3 mesi dall'emissione.</li>
+                    </ul>
+                </div>
+                <!-- Fine box solo elenco puntato -->
+			
                 <!-- Box con accordion solo testo -->
                 <div class="boxedcont accordion">
-                    <h2><a name="ancora"></a>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
                     <div class="accordion-abstract">
-                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum sit amet...
+                        <p>
+							Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti <strong>vantaggi</strong>.
                         </p>
                     </div>
                     <div class="accordion-content">
-                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur
-                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
-                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
-                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
+                        <p>Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti <strong>vantaggi</strong>.<br><br>
+						<strong>PROTEZIONE D'ACQUISTO</strong>: tutela i tuoi acquisti in caso di furto o danneggiamento del bene per 90 giorni fino a 2.600 Euro per evento e di 7.800 Euro per ciascun anno solare<sup>4</sup>.<br><br>
+						<strong>VOUCHER 50 EURO</strong>: da utilizzare per i tuoi prossimi viaggi sul sito American Express Viaggi<sup>5</sup>.<br><br>
+
+						<strong>SICUREZZA</strong>: sei protetto in caso di uso illecito della Carta da parte di terzi<sup>6</sup>.<br><br>
+
+						<strong>VIAGGI IN TRANQUILLIT&Agrave;</strong>: quando organizzerai i tuoi prossimi viaggi all'estero potrai contare sulle coperture assicurative incluse nella quota<sup>4</sup>. 
+
+						</p>
                     </div>
                     <!-- Accordion toggle -->
                     <div class="accordion-toggle"><span class="closed">Vedi di pi&ugrave;</span><span
@@ -377,69 +408,66 @@
                 </div>
                 <!-- Fine box con accordion solo testo -->
 
-                <!-- Box solo elenco puntato -->
-                <div class="boxedcont">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum doloramet consectetur ipsum dolor sit amet <a href="#">consectetur
-                                ipsum</a> ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                    </ul>
-                </div>
-                <!-- Fine box solo elenco puntato -->
-
-                <!-- Box solo testo con vari link -->
-                <div class="boxedcont">
-                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
-                   Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                   Esempio <strong>link tipo</strong>: <a href="https://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.
-                   Esempio <strong>link tipo</strong>: <a href="https://www.google.it" target="_blank">link a google.it (nuova
-                            finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                   Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
-                            xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
-                   Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
-                </p>
-                </div>
-                <!-- Fine box solo testo con vari link -->
-                
-                 <!-- Box solo elenco numerato -->
+                <!-- Box solo testo con link dopo elenco numerato -->
                  <div class="boxedcont">
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                   </ol>
-                </div>
-                <!-- Fine box solo elenco numerato -->
-
-                 <!-- Box solo testo con link dopo elenco numerato -->
-                 <div class="boxedcont">
-                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
-                    Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                    Esempio <strong>link tipo</strong>: <a href="https://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.
-                    Esempio <strong>link tipo</strong>: <a href="https://www.google.it" target="_blank">link a google.it (nuova
-                             finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                    Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
-                             xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
-                    Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
+                   <p>
+				   Per ulteriori informazioni vai su  <a href="https://www.bancobpm.it/privati/carte-e-telepass/carte-di-credito/american-express-oro/" target="_blank">xxx</a> di Carta Oro American Express
+					<br><br>
+					<strong>Ora puoi richiederla anche online sul tuo YouWeb!</strong>
+					<br><br>
+					Per informazioni <strong><a href="tel:000000">chiama il Servizio Clienti</a></strong>
                  </p>
                 </div>
                 <!-- Fine solo testo con link dopo elenco numerato -->
 
                 <!-- Non boxati -->
-                <p class="note">Note lorem ipsum dolor  sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</p>
+                <p class="note">
+					<strong>Messaggio pubblicitario con finalit&agrave; promozionali.</strong><br>
+					Offerta valida fino al 28/2/2021. Dati aggiornati a gennaio 2021. Per maggiori informazioni prima 
+					della sottoscrizione consulta i Fogli Informativi disponibili sui siti americanexpress.it/terminiecondizioni, 
+					bancobpm.it e presso le filiali Banco BPM. L'approvazione della Carta rimane a discrezione di American Express.
+					<br><br>
+					1 Pari a 25.000 punti Membership Rewards. Offerta riservata a chi, al momento della richiesta non sia, 
+					o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express iscritta al Programma Membership Rewards. 
+					L'attuale Operazione a premi Membership Rewards &egrave; valida fino al 31/3/2021, rivolta a tutti 
+					i Titolari di una Carta Base American Express in corso di validit&agrave; e in regola con i pagamenti, 
+					e che siano altres&igrave; iscritti al Club Membership Rewards. Regolamento completo dell'iniziativa 
+					disponibile sul sito internet americanexpress.it/clubmr. Il bonus di 25.000 punti Membership Rewards sar&agrave; 
+					accreditato sul tuo conto Membership Rewards entro 8 settimane dalla registrazione sul medesimo conto di tutte 
+					quelle transazioni che, effettuate entro i primi 60 giorni di emissione della Carta, hanno contribuito al 
+					raggiungimento della soglia di spesa pari a 500 Euro. Non concorrono al raggiungimento della soglia di 
+					spesa di 500 Euro i prelievi e gli anticipi di contante, penali, commissioni e gli importi successivamente 
+					riaccreditati su Conto Carta come rimborsi. &Egrave; possibile utilizzare i punti per richiedere Sconti Shop 
+					with Points per ridurre il saldo del tuo conto Carta fino a 100 Euro o per richiedere i premi del 
+					catalogo sul sito internet americanexpress.it/premi. Per le modalit&agrave; di accumulo punti, esclusioni 
+					e validit&agrave; delle diverse iniziative, consulta il Regolamento completo del Club Membership Rewards, 
+					dell'Operazione a Premi Membership Rewards e dell'Iniziativa Pay with Points sul sito 
+					www.americanexpress.it/clubmr. Per maggiori dettagli sull'Iniziativa Pay with Points e sullo 
+					Sconto Shop with Points, consulta Termini e Condizioni su americanexpress.it/shopwithpoints.<br>
+					2 Quota annuale Carta Base ridotta a 20 Euro per il 1&deg; anno. Dal 2&deg; anno la quota annuale di Carta Oro 
+					sar&agrave; di 165 Euro. Questa offerta &egrave; dedicata esclusivamente a chi, al momento della richiesta non sia, 
+					o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express (ad eccezioni di Carte di 
+					Credito ad Opzione, Business, Corporate, Carta PAYBACK American Express e Carta Centurion). A chi, al momento 
+					della richiesta sia gi&agrave;, o lo sia stato negli ultimi 12 mesi, Titolare di una Carta nei termini 
+					di cui sopra, verr&agrave; addebitata dal primo anno di emissione la quota annuale della Carta Base indicata (165 Euro).<br>
+					3 Riceverai in estratto conto un riaccredito di 20 Euro entro 8 settimane dalla prima transazione di 
+					qualsiasi importo effettuata entro 90 giorni dall'emissione della Carta. Offerta riservata a chi al 
+					momento della richiesta non sia, o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express 
+					iscritta al Club Membership Rewards&reg;<br>
+					4 Copertura assicurativa soggetta a Termini e Condizioni. Tutti i dettagli della copertura assicurativa 
+					sono indicati negli estratti delle condizioni di Polizza che possono essere visualizzati sul sito 
+					internet americanexpress.it/terminiecondizioni; si prega di prenderne visione prima della sottoscrizione 
+					per conoscere limiti ed esclusioni della copertura stessa.<br>
+					5 Termini e condizioni possono essere visualizzati sul sito internet americanexpress.it/oro<br>
+					6 Nessuna limitazione di responsabilit&agrave; sar&agrave; comunque riconosciuta al Titolare nel caso in cui 
+					l'uso illecito di terzi sia imputabile a un comportamento doloso o gravemente colposo del Titolare, 
+					rispetto agli obblighi previsti dal Regolamento, ovvero nel caso di ingiustificato ritardo nella 
+					segnalazione ad American Express dello smarrimento, furto o uso illecito della Carta.
+				</p>
                 <!-- Fine non boxati -->
             </div>
         </div>
     </div>
-    <footer>
-        <div id="footer-cta">
-            <a class="cta" href="native://menu?idMenu=app_bonifico_ordinario">Lorem ipsum</a>
-        </div>
-    </footer>
 </body>
 
 </html>

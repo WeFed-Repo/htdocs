@@ -84,7 +84,7 @@
             display: inline-block;
             height: 320px;
             width: 100%;
-            background: #eee url(./img/hero.jpg) no-repeat center center;
+            background: #eee url(./img/visual_web_view_WB_nexi.jpg) no-repeat center center;
             background-size: cover;
             position: relative;
         }
@@ -121,7 +121,11 @@
         a:hover {
             text-decoration: underline;
         }
-
+		
+		h1 {
+			text-transform: uppercase;
+        }
+		
         h2 {
             font-size: 18px;
             line-height: 22px;
@@ -290,6 +294,19 @@
             color: #fff;
             border-radius: 8px;
         }
+
+        /* Declinazione dark */
+        .dark #contenuto .hero h1{
+            color:#fff;
+        }
+
+        .dark #back {
+            background-image: url(./img/btn_back_white.png)
+        }
+        .dark #back.fixed {
+            background-color:#212121; 
+            opacity:0.8;
+        }
     </style>
     <script type="text/javascript">
 
@@ -335,109 +352,67 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" class="dark">
         <!-- Pulsante back -->
         <a id="back" href="native://dismiss">
         </a>
         <div id="contenuto">
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                    <h1>Carta di credito Nexi</h1>
                 </div>
             </div>
             <div class="pagecont">
-                <!-- Box con accordion solo testo -->
-                <div class="boxedcont accordion">
-                    <h2><a name="ancora"></a>Titolo lorem ipsum dolor sit amet cosectetur.</h2>
-                    <div class="accordion-abstract">
-                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum sit amet...
-                        </p>
-                    </div>
-                    <div class="accordion-content">
-                        <h3>Sottotitolo lorem ipsum dolor sit amet cosectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet <a href="#">consectetur ipsum</a> dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur
-                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
-                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet
-                            consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consecteturconsectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor
-                            sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum
-                            dolor sit amet consectetur ipsum dolor sit amet consectetur </p>
-                    </div>
-                    <!-- Accordion toggle -->
-                    <div class="accordion-toggle"><span class="closed">Vedi di pi&ugrave;</span><span
-                            class="opened">Vedi di meno</span></div>
-                    <!-- /accordion toggle -->
+				<!-- Box solo testo con vari link -->
+                <div class="boxedcont">
+					<h2>Richiedila ora per te &egrave; gratis!</h2>
+                   <p>Vuoi una <strong>carta di credito versatile</strong>, con cui <strong>pagare</strong> anche 
+					<strong>tramite smartphone</strong>? Con <strong>Nexi Classic</strong> hai:
+                </p>
                 </div>
-                <!-- Fine box con accordion solo testo -->
-
+                <!-- Fine box solo testo con vari link -->
+			
                 <!-- Box solo elenco puntato -->
                 <div class="boxedcont">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum doloramet consectetur ipsum dolor sit amet <a href="#">consectetur
-                                ipsum</a> ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
+                        <li><strong><i>Apple Pay, Samsung Pay, Google Pay e Garmin Pay</i></strong></li>
+						<li>la <strong>protezione dei tuoi acquisti online</strong> grazie al servizio 3D Secure</li>
+						<li>un'<strong>app dedicata</strong> per personalizzare la gestione della carta</li>
+						<li>gli <strong>avvisi</strong> per essere informato sulle operazioni</li>
                     </ul>
                 </div>
                 <!-- Fine box solo elenco puntato -->
 
                 <!-- Box solo testo con vari link -->
                 <div class="boxedcont">
-                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
-                   Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                   Esempio <strong>link tipo</strong>: <a href="https://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.
-                   Esempio <strong>link tipo</strong>: <a href="https://www.google.it" target="_blank">link a google.it (nuova
-                            finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                   Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
-                            xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
-                   Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
+					<h2>RICHIEDILA ENTRO IL 31/05/2021: PER TE IL CANONE &Egrave; GRATUITO! </h2>
+					<p><a href="tel:0000000">Chiama ora il Servizio clienti</a> per richiederla subito.<br><br>
+					<strong>Se vuoi indicazioni sui requisiti per richiederla, chiedi a <a href="">Paolo</a></strong>:  
+					Il nostro assistente virtuale</strong> ti fornir&agrave; informazioni sulle caratteristiche e i requisiti 
+					di richiesta Carta Nexi.<br><br>
+					Oppure invia una <a href="mailto:webank@webank.it?subject=Soggetto della mail">mail</a>
                 </p>
                 </div>
                 <!-- Fine box solo testo con vari link -->
-                
-                 <!-- Box solo elenco numerato -->
-                 <div class="boxedcont">
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                        <li>Lorem ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</li>
-                   </ol>
-                </div>
-                <!-- Fine box solo elenco numerato -->
-
-                 <!-- Box solo testo con link dopo elenco numerato -->
-                 <div class="boxedcont">
-                   <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.<br>
-                    Esempio <strong>link tipo</strong>: <a href="#ancora">link interno (ancora)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                    Esempio <strong>link tipo</strong>: <a href="https://www.google.it">link a google.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.
-                    Esempio <strong>link tipo</strong>: <a href="https://www.google.it" target="_blank">link a google.it (nuova
-                             finestra)</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit. 
-                    Esempio <strong>link tipo</strong>: <a href="mailto:xxx.yyy@bancobpm.it?subject=Soggetto della mail">invio mail a
-                             xxx.yyy@bancobpm.it</a> ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit.ipsum dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit
-                    Esempio <strong>link tipo</strong>: <a href="tel:339999999">effettua chiamata al numero 339999999</a>.
-                 </p>
-                </div>
-                <!-- Fine solo testo con link dopo elenco numerato -->
-
+ 
                 <!-- Non boxati -->
-                <p class="note">Note lorem ipsum dolor  sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor amet consectetur ipsum dolor sit amet consectetur ipsum dolor</p>
+                <p class="note">
+					<strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong> Per le condizioni economiche e contrattuali 
+					fare riferimento ai Fogli Informativi disponibili presso le filiali di Banco BPM e sui siti 
+					www.bancobpm.it, www.webank.it e www.nexi.it nella sezione Trasparenza. Promozione valida fino al 31/05/2021.<br>
+					Il servizio Spending Control &egrave; riservato ai titolari di una carta iscritti all'area personale 
+					del sito nexi.it e all'App Nexi Pay, per maggiori informazioni vai alla 
+					<a href="https://www.nexi.it/content/dam/nexi/download/trasparenza/regolamenti/terms-and-conditions-spending-control.pdf" target="_blank">Trasparenza</a>
+
+				
+				</p>
                 <!-- Fine non boxati -->
             </div>
         </div>
     </div>
     <footer>
         <div id="footer-cta">
-            <a class="cta" href="native://menu?idMenu=app_bonifico_ordinario">Lorem ipsum</a>
+            <a class="cta" href="tel:0000000">Servizio clienti</a>
         </div>
     </footer>
 </body>
