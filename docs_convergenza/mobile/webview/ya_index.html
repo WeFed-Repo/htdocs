@@ -1,473 +1,862 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
+
     <title>YouApp</title>
+
     <meta name="description" content="YouApp">
+
     <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Stili della pagina -->
+
     <style>
+
         /* Font face */
+
         @font-face {
+
             font-family: 'bankFont';
-            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
-                url('./font/montserrat-light-webfont.woff') format('woff');
+
+            src: url('/mobile/webview/font/montserrat-light-webfont.woff2') format('woff2'),
+
+                url('/mobile/webview/font/montserrat-light-webfont.woff') format('woff');
+
             font-weight: normal;
+
             font-style: normal;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
-            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
-                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+
+            src: url('/mobile/webview/font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+
+                url('/mobile/webview/font/montserrat-lightitalic-webfont.woff') format('woff');
+
             font-weight: normal;
+
             font-style: italic;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
-            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
-                url('./font/montserrat-semibold-webfont.woff') format('woff');
+
+            src: url('/mobile/webview/font/montserrat-semibold-webfont.woff2') format('woff2'),
+
+                url('/mobile/webview/font/montserrat-semibold-webfont.woff') format('woff');
+
             font-weight: bold;
+
             font-style: normal;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
-            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
-                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+
+            src: url('/mobile/webview/font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+
+                url('/mobile/webview/font/montserrat-semibolditalic-webfont.woff') format('woff');
+
             font-weight: bold;
+
             font-style: italic;
+
         }
+
+
 
         /*  */
+
         body {
+
             background-color: #fff;
+
             margin: 0;
+
             padding: 0;
+
             font-family: 'bankFont', Arial, Serif;
+
             font-size: 15px;
+
             height: 100%;
+
             color: #1f2021;
+
         }
 
-        /* Back  - Out safe area 30px top su iOs (per notch) */
-        #back {
-            z-index: 1;
-            position: fixed;
-            transition: background-color 0.3s;
-            background: transparent url("./img/btn_back.png") no-repeat center center;
-            background-size: 15px 15px;
-            width: 35px;
-            height: 35px;
-            top: 40px;
-            border-radius: 20px;
-            text-align: center;
-            text-decoration: none !important;
-            margin-left: 15px;
-        }
 
-        #back.fixed {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
-        }
 
         #main {
+
             margin: 0 auto;
+
             height: 100%;
+
             max-width: 640px;
+
             background: #fff;
+
         }
+
+
 
         #contenuto .hero {
+
             display: inline-block;
+
             height: 320px;
+
             width: 100%;
-            background: #eee url(./img/visual_web_view_YA_amex_oro.jpg) no-repeat center center;
+
+            background: #eee url(/mobile/webview/img/visual_web_view_YA_amex_oro.jpg) no-repeat center center;
+
             background-size: cover;
+
             position: relative;
+
         }
+
+
 
         .hero .hero-text {
+
             position: absolute;
+
             bottom: 0;
+
             padding: 0 25px 15px;
+
         }
+
+
 
         #contenuto .hero h1 {
+
             font-size: 24px;
+
             line-height: 29px
+
         }
+
+
 
         #main .pagecont {
+
             padding: 15px 25px 80px
+
         }
+
+
 
         /* Contenuti */
+
         .boxedcont {
+
             padding: 15px 15px 5px;
+
             background: #f4f5f4;
+
             border-radius: 10px;
+
             margin: 0 -10px 15px;
+
         }
+
+
 
         /* Generici */
+
         a {
+
             color: #344a86;
+
             text-decoration: none;
+
         }
+
+
 
         a:hover {
+
             text-decoration: underline;
+
         }
+
 		
+
 		h1 {
+
 			text-transform: uppercase;
+
         }
+
 		
+
         h2 {
+
             font-size: 18px;
+
             line-height: 22px;
+
             color: #212122;
+
             margin: 0 0 15px;
+
         }
+
+
 
         h3 {
+
             font-size: 16px;
+
             line-height: 19px;
+
             color: #344a86;
+
             margin: 0 0 15px;
+
         }
 
+
+
         p {
+
             margin: 0 0 10px;
+
             clear: both;
+
             line-height: 20px;
+
         }
+
+
 
         p.note {color:#1f2021;font-size:13px; line-height:18px;}
 
+
+
         /* Bullet reset */
+
         ol,
+
         ul,
+
         ol li,
+
         ul li {
+
             margin: 0;
+
             padding: 0;
+
             list-style-type: none
+
         }
+
+
 
         /* Bullet rivisti */
+
         ol {
+
             counter-reset: ol;
+
         }
+
+
 
         ol li,
+
         ul li {
+
             position: relative;
+
             padding: 0 0 10px 25px;
+
             line-height: 20px
+
         }
+
+
 
         /* Bullet "normali" */
+
         ul li::before {
+
             display: block;
+
             width: 6px;
+
             height: 6px;
+
             background-color: #1f2021;
+
             border-radius: 4px;
+
             top: 8px;
+
             left: 4px;
+
             content: "";
+
             position: absolute;
+
         }
+
+
 
         /* Bullet "ordinali" */
+
         ol li::before {
+
             display: block;
+
             width: 18px;
+
             height: 18px;
+
             background-color: #344a86;
+
             font-size: 13px;
+
             text-align: center;
+
             line-height: 20px;
+
             border-radius: 10px;
+
             top: 0px;
+
             left: 0;
+
             counter-increment: ol;
+
             content: counter(ol);
+
             position: absolute;
+
             color: #fff;
+
         }
+
+
 
         /* Accordion */
+
         .accordion .accordion-content {
+
             display: none;
+
         }
+
+
 
         .accordion .accordion-abstract {
+
             display: inline-block;
+
             width: 100%;
+
         }
+
+
 
         .accordion.opened .accordion-content {
+
             display: inline-block;
+
             width: 100%;
+
             overflow: visible;
+
         }
+
+
 
         .accordion.opened .accordion-abstract {
+
             display: none;
+
         }
+
+
 
         .accordion .accordion-toggle {
+
             display: inline-block;
+
             cursor: pointer;
+
             margin-bottom:10px;
+
         }
+
+
 
         .accordion .accordion-toggle span {
+
             line-height:16px;
+
             font-size: 13px;
+
             position: relative;
+
             padding-right: 20px;
+
             display: inline-block;
+
             color: #344a86;
+
             position: relative;
+
         }
+
+
 
         .accordion .accordion-toggle span::after {
+
             content: "";
+
             width: 16px;
+
             height: 16px;
-            background: transparent url("./img/youweb_vedi_piu.png") no-repeat center center;
+
+            background: transparent url("/mobile/webview/img/youweb_vedi_piu.png") no-repeat center center;
+
             border-radius: 8px;
+
             background-size: 16px 16px;
+
             position: absolute;
+
             top: -2px;
+
             right: 0;
+
             display: block;
+
         }
+
+
 
         .accordion .accordion-toggle span.opened {
+
             display: none;
+
         }
+
+
 
         .accordion .accordion-toggle span.opened::after {
-            background-image: url("./img/youweb_vedi_meno.png");
+
+            background-image: url("/mobile/webview/img/youweb_vedi_meno.png");
+
         }
+
+
 
         .accordion.opened .accordion-toggle span.closed {
+
             display: none;
+
         }
+
+
 
         .accordion.opened .accordion-toggle span.opened {
+
             display: inline-block;
+
         }
+
+
 
         /* Footer */
+
         footer {
+
             position: fixed;
+
             bottom: 0;
+
             left: 0;
+
             height:0;
+
             overflow:visible;
+
             text-align: center;
+
             width: 100%;
+
             margin: 0 auto;
+
         }
+
+
 
         footer .cta {
+
             display: inline-block;
+
             margin: 0 0 15px;
+
             background: #344a86;
+
             line-height: 15px;
+
             font-size: 14px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             width: 240px;
+
             position:absolute;
+
             margin-left:-135px;
+
             margin-top:-65px;
+
             padding: 15px;
+
             color: #fff;
+
             border-radius: 8px;
+
         }
+
+
 
         /* Declinazione dark */
+
         .dark #contenuto .hero h1{
+
             color:#fff;
+
 			text-transform: uppercase;
+
         }
 
-        .dark #back {
-            background-image: url(./img/btn_back_white.png)
-        }
-        .dark #back.fixed {
-            background-color:#212121; 
-            opacity:0.8;
-        }
+
+
     </style>
+
     <script type="text/javascript">
 
+
+
         /* Piccolo framework */
+
         function getParent(element, selector) {
+
             if (!element) { return element };
+
             element.matches(selector) || (element = (element.nodeName.toLowerCase() === 'html' ? false : getParent(element.parentNode, selector)));
+
             return element;
+
         }
 
+
+
         /* Inizializzazioni automazioni */
+
         window.addEventListener('load', function (event) {
+
             // Inizializzazione accordion (cambia classe al parent)
+
             var acctoggle = document.querySelectorAll(".accordion-toggle"), x;
+
             for (x = 0; x < acctoggle.length; x++) {
+
                 // Inizializza uno per uno tutti gli accordion
+
                 acctoggle[x].addEventListener("click", function () {
+
                     var acc = getParent(this, ".accordion");
+
                     if (acc.className.indexOf("opened") >= 0) {
+
                         // Aperto - lo chiude
+
                         acc.classList.remove("opened");
+
                     }
+
                     else {
+
                         // Chiuso - lo apre
+
                         acc.classList.add("opened");
+
                     }
+
                 });
+
             }
+
         });
 
-        window.addEventListener('scroll', function (event) {
-            // Inizializzazione freccetta a scorrimento
-            var btnback = document.getElementById("back");
-            if (window.scrollY >= 1) {
-                // Cambia classe alla freccetta
-                btnback.classList.add("fixed");
-            }
-            else {
-                btnback.classList.remove("fixed");
-            }
-        });
-    </script>
+
+
+     </script>
+
 </head>
 
+
+
 <body>
-    <div id="main" class="dark">
-        <!-- Pulsante back -->
-        <a id="back" href="native://dismiss">
-        </a>
+
+    <div id="main" class="dark"> 
+
         <div id="contenuto">
+
             <div class="hero">
+
                 <div class="hero-text">
+
                     <h1>Carta Oro American Express</h1>
+
                 </div>
+
             </div>
+
             <div class="pagecont">
+
 				<!-- Box solo testo con vari link -->
+
                 <div class="boxedcont">
+
                    <h2>La tua finestra su un mondo di vantaggi!</h2>
+
                    <p>Richiedi <strong>Carta Oro American Express. </strong> Solo per te: 
+
                 </p>
+
                 </div>
+
                 <!-- Fine box solo testo con vari link -->
+
 				
+
 				<!-- Box solo elenco puntato -->
+
                 <div class="boxedcont">
+
                     <ul>
+
                         <li>un <strong>bonus di 25.000 punti Membership Rewards&reg;</strong><sup>1</sup> per ridurre 
+
 						il saldo del tuo conto Carta fino a 100 Euro, con gli Sconti Shop with Points<sup>1</sup>;</li>
+
 						<li><strong>quota ridotta</strong><sup>2</sup> <strong>a 20 Euro il 1&deg; anno</strong>, riaccreditata<sup>3</sup> 
+
 						se effettui una spesa con la carta entro 3 mesi dall'emissione.</li>
+
                     </ul>
+
                 </div>
+
                 <!-- Fine box solo elenco puntato -->
+
 			
+
                 <!-- Box con accordion solo testo -->
+
                 <div class="boxedcont accordion">
+
                     <div class="accordion-abstract">
+
                         <p>
+
 							Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti <strong>vantaggi</strong>.
+
                         </p>
+
                     </div>
+
                     <div class="accordion-content">
+
                         <p>Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti <strong>vantaggi</strong>.<br><br>
+
 						<strong>PROTEZIONE D'ACQUISTO</strong>: tutela i tuoi acquisti in caso di furto o danneggiamento del bene per 90 giorni fino a 2.600 Euro per evento e di 7.800 Euro per ciascun anno solare<sup>4</sup>.<br><br>
+
 						<strong>VOUCHER 50 EURO</strong>: da utilizzare per i tuoi prossimi viaggi sul sito American Express Viaggi<sup>5</sup>.<br><br>
+
+
 
 						<strong>SICUREZZA</strong>: sei protetto in caso di uso illecito della Carta da parte di terzi<sup>6</sup>.<br><br>
 
+
+
 						<strong>VIAGGI IN TRANQUILLIT&Agrave;</strong>: quando organizzerai i tuoi prossimi viaggi all'estero potrai contare sulle coperture assicurative incluse nella quota<sup>4</sup>. 
 
+
+
 						</p>
+
                     </div>
+
                     <!-- Accordion toggle -->
+
                     <div class="accordion-toggle"><span class="closed">Vedi di pi&ugrave;</span><span
+
                             class="opened">Vedi di meno</span></div>
+
                     <!-- /accordion toggle -->
+
                 </div>
+
                 <!-- Fine box con accordion solo testo -->
 
+
+
                 <!-- Box solo testo con link dopo elenco numerato -->
+
                  <div class="boxedcont">
+
                    <p>
+
 				   Per ulteriori informazioni vai su  <a href="https://www.bancobpm.it/privati/carte-e-telepass/carte-di-credito/american-express-oro/" target="_blank">xxx</a> di Carta Oro American Express
+
 					<br><br>
+
 					<strong>Ora puoi richiederla anche online sul tuo YouWeb!</strong>
+
 					<br><br>
-					Per informazioni <strong><a href="tel:000000">chiama il Servizio Clienti</a></strong>
+
+					Per informazioni <strong><a href="tel:800024024">chiama il Servizio Clienti</a></strong>
+
                  </p>
+
                 </div>
+
                 <!-- Fine solo testo con link dopo elenco numerato -->
 
+
+
                 <!-- Non boxati -->
+
                 <p class="note">
+
 					<strong>Messaggio pubblicitario con finalit&agrave; promozionali.</strong><br>
+
 					Offerta valida fino al 28/2/2021. Dati aggiornati a gennaio 2021. Per maggiori informazioni prima 
+
 					della sottoscrizione consulta i Fogli Informativi disponibili sui siti americanexpress.it/terminiecondizioni, 
+
 					bancobpm.it e presso le filiali Banco BPM. L'approvazione della Carta rimane a discrezione di American Express.
+
 					<br><br>
+
 					1 Pari a 25.000 punti Membership Rewards. Offerta riservata a chi, al momento della richiesta non sia, 
+
 					o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express iscritta al Programma Membership Rewards. 
+
 					L'attuale Operazione a premi Membership Rewards &egrave; valida fino al 31/3/2021, rivolta a tutti 
+
 					i Titolari di una Carta Base American Express in corso di validit&agrave; e in regola con i pagamenti, 
+
 					e che siano altres&igrave; iscritti al Club Membership Rewards. Regolamento completo dell'iniziativa 
+
 					disponibile sul sito internet americanexpress.it/clubmr. Il bonus di 25.000 punti Membership Rewards sar&agrave; 
+
 					accreditato sul tuo conto Membership Rewards entro 8 settimane dalla registrazione sul medesimo conto di tutte 
+
 					quelle transazioni che, effettuate entro i primi 60 giorni di emissione della Carta, hanno contribuito al 
+
 					raggiungimento della soglia di spesa pari a 500 Euro. Non concorrono al raggiungimento della soglia di 
+
 					spesa di 500 Euro i prelievi e gli anticipi di contante, penali, commissioni e gli importi successivamente 
+
 					riaccreditati su Conto Carta come rimborsi. &Egrave; possibile utilizzare i punti per richiedere Sconti Shop 
+
 					with Points per ridurre il saldo del tuo conto Carta fino a 100 Euro o per richiedere i premi del 
+
 					catalogo sul sito internet americanexpress.it/premi. Per le modalit&agrave; di accumulo punti, esclusioni 
+
 					e validit&agrave; delle diverse iniziative, consulta il Regolamento completo del Club Membership Rewards, 
+
 					dell'Operazione a Premi Membership Rewards e dell'Iniziativa Pay with Points sul sito 
+
 					www.americanexpress.it/clubmr. Per maggiori dettagli sull'Iniziativa Pay with Points e sullo 
+
 					Sconto Shop with Points, consulta Termini e Condizioni su americanexpress.it/shopwithpoints.<br>
+
 					2 Quota annuale Carta Base ridotta a 20 Euro per il 1&deg; anno. Dal 2&deg; anno la quota annuale di Carta Oro 
+
 					sar&agrave; di 165 Euro. Questa offerta &egrave; dedicata esclusivamente a chi, al momento della richiesta non sia, 
+
 					o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express (ad eccezioni di Carte di 
+
 					Credito ad Opzione, Business, Corporate, Carta PAYBACK American Express e Carta Centurion). A chi, al momento 
+
 					della richiesta sia gi&agrave;, o lo sia stato negli ultimi 12 mesi, Titolare di una Carta nei termini 
+
 					di cui sopra, verr&agrave; addebitata dal primo anno di emissione la quota annuale della Carta Base indicata (165 Euro).<br>
+
 					3 Riceverai in estratto conto un riaccredito di 20 Euro entro 8 settimane dalla prima transazione di 
+
 					qualsiasi importo effettuata entro 90 giorni dall'emissione della Carta. Offerta riservata a chi al 
+
 					momento della richiesta non sia, o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express 
+
 					iscritta al Club Membership Rewards&reg;<br>
+
 					4 Copertura assicurativa soggetta a Termini e Condizioni. Tutti i dettagli della copertura assicurativa 
+
 					sono indicati negli estratti delle condizioni di Polizza che possono essere visualizzati sul sito 
+
 					internet americanexpress.it/terminiecondizioni; si prega di prenderne visione prima della sottoscrizione 
+
 					per conoscere limiti ed esclusioni della copertura stessa.<br>
+
 					5 Termini e condizioni possono essere visualizzati sul sito internet americanexpress.it/oro<br>
+
 					6 Nessuna limitazione di responsabilit&agrave; sar&agrave; comunque riconosciuta al Titolare nel caso in cui 
+
 					l'uso illecito di terzi sia imputabile a un comportamento doloso o gravemente colposo del Titolare, 
+
 					rispetto agli obblighi previsti dal Regolamento, ovvero nel caso di ingiustificato ritardo nella 
+
 					segnalazione ad American Express dello smarrimento, furto o uso illecito della Carta.
+
 				</p>
+
                 <!-- Fine non boxati -->
+
             </div>
+
         </div>
+
     </div>
+
 </body>
 
+
+
 </html>
+
