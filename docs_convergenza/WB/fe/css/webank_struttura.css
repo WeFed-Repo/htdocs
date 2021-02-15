@@ -2622,6 +2622,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   font-size: 22px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  line-height: 25px;
 }
 .modal-call-me-back .esito .icon {
   font-size: 64px;

@@ -1549,6 +1549,15 @@
 .icon-reduce_toolbox:before {
   content: "\ea22";
 }
+.icon-trash_outline:before {
+  content: "\eac1";
+}
+.icon-cellulare_big:before {
+  content: "\eac2";
+}
+.icon-alert_outline:before {
+  content: "\eac3";
+}
 .glyph-ico_cmb_badge .path1:before {
   content: "\e967";
   color: #000000;

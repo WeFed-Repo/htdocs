@@ -328,7 +328,7 @@
       <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon icon-cellulare" title=""></i>
+                    <i class="icon icon-2x flLeft icon icon-cellulare_big" title=""></i>
                     <div class="leftTesto">
                         <p>Ti chiameremo al seguente numero: <?php print '<strong>' .$nCellulareCert.'</strong>' ?>.</p>
                         <p>(Questo &egrave; il tuo numero certificato, se  &egrave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</p>
@@ -383,12 +383,15 @@
    <!-- step 6: annulla disservizio-->
    <section id="step-disservizio" class="step-cmb">
       <div class="align-center">
-         <p class="esito">
-            <span class="glyph glyph-ico_cmb_disservizio" title=""><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
-         </p>
-         <p>Il servizio di prenotazione chiamata non è al momento disponibile.</p>
-         <p>Stiamo aggiornando i nostri sistemi per poterti offrire un servizio sempre più accurato.</p>
-         <p>Ci scusiamo per il disagio, riprova più tardi.</p>
+         <h4 class="intro">
+            <p class="esito">
+               <i class="icon icon-alert_outline" title=""></i>
+               <span>Il servizio di prenotazione chiamata <br>non &egrave; al momento disponibile.</span>
+            </p>
+         </h4>
+         
+         <p>Stiamo aggiornando i nostri sistemi per poterti offrire un servizio sempre più accurato.<br>
+         Ci scusiamo per il disagio, riprova più tardi.</p>
          <div class="btn-align-center">
             <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
           </div>
@@ -402,7 +405,7 @@
          </p>
          <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
          <p>Ti ricordiamo che il servizio &egrave; disponibile:</p>
-         <p><strong>dal lunedì al venerdì dalle XX:XX alle XX:XX e il sabato dalle XX:XX alle XX:XX.
+         <p><strong>dal lunedì al venerdì dalle XX:XX alle XX:XX <br> il sabato dalle XX:XX alle XX:XX.
          Sono esclusi i giorni festivi.</strong>
          <div class="btn-align-center"><a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a></div>
       </div>
