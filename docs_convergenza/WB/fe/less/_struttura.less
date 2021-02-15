@@ -694,7 +694,29 @@ nav {
                             color: #6f8f0a!important;  
                             margin-left:0!important;
                         }
-                    }
+                        &.stato-prenotato {
+                            .icon-cmb-ok {
+                               .glyph {   
+                                  font-size:32px;
+                                  top: 0; 
+                                  .path1:before {  
+                                    color:#6f8f0a; 
+                                  } 
+                                  .path2:before {  
+                                    color:#6f8f0a; 
+                                    opacity:1;
+                                  }
+                                  &:hover .path1::before {   
+                                    color:#6f8f0a!important;
+                                  }     
+                                  &:hover .path2::before {  
+                                    color:#6f8f0a!important; 
+                                  }
+                                }
+                                 
+                              }
+                        }
+                    } 
                 }
 
  

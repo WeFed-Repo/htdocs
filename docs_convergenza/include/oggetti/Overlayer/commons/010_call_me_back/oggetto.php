@@ -9,6 +9,7 @@ Qui si assume che lo sia
    $disservizio =  "false";
    $fuoriOrario =  $_GET['fuoriOrario'];
    $nCellNonCertificato = $_GET['ncertificato'];
+   $orarioNonDispo = $_GET['orarioNonDispo'];
    if (isset($_GET['disservizio'])) {
        $disservizio =  $_GET['disservizio'];
    } 
@@ -17,6 +18,9 @@ Qui si assume che lo sia
    } 
    if (isset($_GET['ncertificato'])) {
     $nCellulareCert =  $_GET['ncertificato'];
+   } 
+   if(isset($_GET['orarioNonDispo'])) {
+    $orarioNonDispo =  $_GET['orarioNonDispo'];
    } 
 ?>
 
@@ -39,6 +43,9 @@ Qui si assume che lo sia
   <?php print '<input type="hidden" name="orarioSel" value=""/>' ?>
   <?php print '<input type="hidden" name="disservizioFlag" value="'.$disservizio.'"/>' ?>
   <?php print '<input type="hidden" name="fuoriOrario" value="'.$fuoriOrario.'"/>' ?> 
+  <?php print '<input type="hidden" name="orarioNonDispo" value="'.$orarioNonDispo.'"/>' ?> 
+  <?php print '<input type="hidden" name="argomento" value="'.$argomento.'"/>' ?> 
+
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
 

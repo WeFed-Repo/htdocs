@@ -1456,6 +1456,23 @@ nav ul.level2 li.active ul li.selected a {
     color: #6f8f0a !important;
     margin-left: 0!important;
   }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph {
+    font-size: 32px;
+    top: 0;
+  }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path1:before {
+    color: #6f8f0a;
+  }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph .path2:before {
+    color: #6f8f0a;
+    opacity: 1;
+  }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph:hover .path1::before {
+    color: #6f8f0a !important;
+  }
+  #userMenu ul li.userMenuMobile-prenota-chiamata .icona-call-me-back-wrapper.stato-prenotato .icon-cmb-ok .glyph:hover .path2::before {
+    color: #6f8f0a !important;
+  }
   #userMenu ul li span.nameConto {
     float: right;
     width: 100%;
@@ -2541,6 +2558,12 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 }
 .modal-call-me-back h4 {
   margin-bottom: 20px;
+}
+.modal-call-me-back .leftTesto {
+  margin-bottom: 20px;
+}
+.modal-call-me-back .leftTesto p {
+  margin-bottom: 5px;
 }
 .modal-call-me-back .orariDispoWrapper {
   margin: 0 -1%;
