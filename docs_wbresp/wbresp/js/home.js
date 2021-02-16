@@ -5,7 +5,7 @@ loadHomeVisual = function(){
 	var homeCarWrap = $("#homeCarousel").empty();
 	var homeCar = $("<div>").addClass("carousel slide").attr({"id":"myCarousel","data-ride":"carousel"});
 	// URL della promo
-	var urlCarousel = "/wbresp/html/home_carousel_20210216.html";
+	var urlCarousel = "/wbresp/html/home_carousel_20210225.html";
 
 	// Carica l'html
 	$.ajax({
@@ -50,7 +50,7 @@ loadHomeVisual = function(){
 // Promo (fascione centrale)
 loadHomePromo = function(){
 	// Url della promo
-	homePromoUrl = "/wbresp/html/home_promo_20210216.html";
+	homePromoUrl = "/wbresp/html/home_promo_20210225.html";
 	// Carica l'html
 	$.ajax({
 		url: homePromoUrl,
