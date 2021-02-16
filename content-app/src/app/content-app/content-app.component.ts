@@ -1,4 +1,4 @@
-import { Component,OnInit, Input} from '@angular/core';
+import { Component,OnInit, Input, HostBinding} from '@angular/core';
 
 @Component({
   selector: 'content-app',
@@ -11,9 +11,23 @@ export class ContentAppComponent  implements OnInit {
   @Input() contenuto = "default";
 
   constructor() {}
+  
+  // Variabili "stato"
+  loadingclass: string = "loading";
 
   // Inizializzazione
   ngOnInit(){
+
+    let tthis  = this;
+
+    // Test caricamento
+    setTimeout(
+      function(){
+        tthis.loadingclass = "";
+      },1000
+    )
+   
+    
 
   }
 

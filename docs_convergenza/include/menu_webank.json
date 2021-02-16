@@ -292,6 +292,10 @@
 						]
 					},
 					{
+						"nome": "Soluzioni guidate",
+						"tpl": "tpl_priv_full_inv_soluzioni_guidate.php"
+					},
+					{
 						"nome": "Soluzioni self",
 						"voices": [
 							{

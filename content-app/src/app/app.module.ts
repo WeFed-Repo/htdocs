@@ -6,7 +6,6 @@ import { ContentAppComponent } from './content-app/content-app.component';
 
 @NgModule({
   declarations: [
-   
     ContentAppComponent
   ],
   imports: [
