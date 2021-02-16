@@ -312,7 +312,7 @@
       <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon-utente" title=""></i>
+                    <i class="icon icon-2x flLeft icon-operatore" title=""></i>
                     <div class="leftTesto">
                         <p>Un nostro operatore ti contatter&agrave; nella fascia oraria stabilita.</p>
                         <p>Il numero da cui riceverai la chiamata &egrave; il: <?php print '<strong>'.$nCellulareCert.'</strong>' ?></p>

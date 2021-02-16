@@ -4751,8 +4751,13 @@ span.colAlert {
     text-transform: none;
 }
 
-.assicurazioni.box-blu .box-catalogue-right .bullet-spunta{
+.assicurazioni.box-blu .box-catalogue-right .bullet-spunta,
+.assicurazioni.box-blu .box-catalogue-right p,
+.assicurazioni.box-blu .box-catalogue-right a, .assicurazioni.box-blu .box-catalogue-right a:hover, .assicurazioni.box-blu .box-catalogue-right a:active{
     color: #fff;
+}
+.assicurazioni.box-blu .box-catalogue-right a{
+    text-decoration:underline
 }
 
 .box-catalogue-right {
@@ -6920,6 +6925,7 @@ div[id*="popover"] .popover-content {
 .documenti{padding-top:10px;padding-left:0}
 .documenti li {padding:0;list-style-type: none;float:none;clear:both;}
 .documenti ul {padding:0;}
+.documenti li a + .btn-icon {position:relative;top:-3px;left:10px;}
 .ui-accordion-content .documenti {padding-top:0}
 .ui-accordion-content .documenti li {padding-bottom:10px}
 .ui-accordion-content .documenti li .icon {margin-right:10px}

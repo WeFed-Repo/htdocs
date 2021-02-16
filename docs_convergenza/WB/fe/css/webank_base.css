@@ -1561,6 +1561,9 @@
 .icon-cellulare_outline:before {
   content: "\eac4";
 }
+.icon-operatore:before {
+  content: "\eac5";
+}
 .glyph-ico_cmb_badge .path1:before {
   content: "\e967";
   color: #000000;
