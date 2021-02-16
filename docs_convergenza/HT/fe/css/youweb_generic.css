@@ -412,7 +412,7 @@ button {
     height: 46px;
     padding: 9px 24px;
     font-size: 22px;
-    line-height: 27px;
+    line-height: 31px;
     border-radius:23px
 }
 @media (max-width:767px) {
