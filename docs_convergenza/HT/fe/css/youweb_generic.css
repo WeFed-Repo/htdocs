@@ -415,6 +415,11 @@ button {
     line-height: 27px;
     border-radius:23px
 }
+@media (max-width:767px) {
+    .btn-primary.big, .btn-default.big, .btn-filtra.big, .btn-filtra-attivo.big, .btn-navigation.big, .btn-big {
+        font-size: 17px;
+    }
+ }
 .btn.btn-primary.btn-info, .btn.btn-primary.btn-info:active, .btn.btn-primary.btn-info:focus  {
     background-color: #202d50!important;
 }

@@ -456,6 +456,16 @@
 						"html": "mi"
 					}
 				]
+			},
+			{
+				"nome": "Prestiti",
+				"voices": [
+					{
+						"nome": "Tutti i dettagli Prestito Versatilo",
+						"tpl": "tpl_finanziamenti_versatilo.php",
+						"html": "mi"
+					}
+				]
 			}
 		]
 	},

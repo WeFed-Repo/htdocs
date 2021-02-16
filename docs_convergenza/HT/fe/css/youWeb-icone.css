@@ -1028,3 +1028,18 @@
   content: "\e955";
   color: #1d294f;
 }
+.icon-trash_outline:before {
+  content: "\ea06";
+}
+.icon-cellulare:before {
+  content: "\ea07";
+}
+.icon-alert_outline:before {
+  content: "\ea08";
+}
+.icon-cellulare_outline:before {
+  content: "\ea09";
+}
+.icon-cellulare_big:before {
+  content: "\ea0a";
+}
