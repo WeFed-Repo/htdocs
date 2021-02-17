@@ -1,13 +1,640 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="it">
+
+<head>
+    <title>Webank</title>
+
     <meta charset="utf-8">
-    <title>ContentApp</title>
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css"></head>
-  <body>
-    <content-app contenuto="contenuto di prova"></content-app>
-  <script src="runtime.js" defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills.js" defer></script><script src="main.js" defer></script></body>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- MOBILE -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Allows fullscreen mode from the Homescreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Sets the color of the text/battery, wireless icons etc -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <!-- / MOBILE -->
+
+    <!-- FAVICON -->
+    <meta name="apple-mobile-web-app-title" content="Webank Resp">
+    <meta name="application-name" content="Webank Resp">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="http://convergenza.wefed.local/WB/fe/img/favicon.ico">
+    <link rel="manifest" href="http://convergenza.wefed.local/manifest.json">
+    <!-- / FAVICON -->
+
+
+
+
+    <!-- CSS -->
+    <!-- Tutte le pagine, sia webank che youweb -->
+    <link rel="stylesheet" media="all" href="http://convergenza.wefed.local/common/fe/css/all.css">
+
+    <!-- Tutte webank -->
+    <link rel="stylesheet" media="all" href="http://convergenza.wefed.local/WB/fe/css/default.css">
+    <!-- Proprie nuove webank -->
+    <link rel="stylesheet" media="all" href="http://convergenza.wefed.local/WB/fe/css/resp.css">
+    <!-- / CSS -->
+    <!-- JS -->
+    <!-- Tutte le pagine, sia webank che youweb -->
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery-ui.min.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.dataTables.min.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.dataTables.dateIT.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.dataTables.altImg.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.dataTables.formattedNum.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.form.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery.blockUI.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jquery/jquery-ui.selectToUISlider.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/bootstrap/bootstrap.min.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/bootstrap/bootstrap-table.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/ie10-viewport.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/assets/jsapi.js"></script>
+    <script src="http://convergenza.wefed.local/common/fe/js/funzioni_convergenza.js"></script>
+
+    <!-- JS CONFIG -->
+    <!-- Tutte le pagine webank -->
+    <script>
+        // Variabili per ambiente, riporta le chiavi del navigatore selezionate
+        var sectionTitle = "Webank";
+
+        // Variabili per emulazione
+        var isLib = true;
+        var librerie = true;
+        var cgi_script = "/webankpri";
+        var wrp_script = "/webankpri";
+        var imgPath = '/WB/fe/img/';
+        var pathLibrerie = '/include/ajax';
+        var isWebank = true;
+        var hasCarte = false;
+        var isComunita200Mov = true;
+        var rbfLinkObj = {
+            'bonifico': 'BON',
+            'giroconto': 'GIR',
+            'carta': 'PRJ'
+        };
+
+        function getPathImages() {
+            return "/WB/fe/img/";
+        }
+
+        function getPathImagesFe() {
+            return "/WB/fe/img/";
+        }
+    </script>
+    <script src="http://convergenza.wefed.local/WB/fe/js/struttura.js"></script>
+
+    <!-- Tutte le pagine proprie webank -->
+    <script src="http://convergenza.wefed.local/WB/fe/js/funzioniWB.js"></script>
+
+    <script>
+        var cgi_script = "";
+
+        function getPathImages() {
+            return "http://convergenza.wefed.local/WB/fe/img/";
+        }
+    </script>
+
+
+    <!-- JS LIBRERIE (non includere in sviluppo) -->
+    <script src="http://convergenza.wefed.local/js/priv_librerie.js"></script>
+    <!-- / JS LIBRERIE -->
+<link rel="stylesheet" href="styles.css"></head>
+
+<body class="myhome">
+
+    <!-- ESEMPIO MENU STATICO MOBILE -->
+    <div id="mobileMenu">
+        <div id="mobileDetailTree">
+
+        </div>
+        <!-- Menu secondo livello -->
+        <ul id="liv2mobile">
+
+
+            <li><a role="menuitem"><i class="icon icon-myhome"></i><span>My home</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / My home</span></a>
+                    <a class="fplink " href="/template/strutt_webank.php?tpl=tpl_priv_fp_myhome.php&amp;liv1=my_home">Vista
+                        generale My home</a>
+                    <ul role="menu">
+                        <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_priv_full_patrimonio.php&amp;liv1=my_home&amp;liv2=il_mio_patrimonio">Il
+                                mio patrimonio</a>
+                        </li>
+                        <li><span>Mobile</span>
+                            <ul>
+                                <li><span>La tua banca a portata di mano</span></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            <li><a role="menuitem"><i class="icon icon-sportello"></i><span>Sportello</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Sportello</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_full_sportello.php&amp;liv1=sportello">Vista generale
+                        Sportello</a>
+                    <ul role="menu">
+                        <li><span>Bonifici ed altri pagamenti</span>
+                            <ul>
+                                <li><span>Pagamento tributi - F24/F23</span></li>
+                            </ul>
+
+                        </li>
+                        <li><span>Gestione deposito</span>
+                            <ul>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=sportello/tpl_linee_attive.php&amp;liv1=sportello&amp;liv2=gestione_deposito&amp;liv3=linee_attive">Linee
+                                        attive</a></li>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=sportello/tpl_apertura_nuova_linea.php&amp;liv1=sportello&amp;liv2=gestione_deposito&amp;liv3=apertura_nuova_linea">Apertura
+                                        nuova linea</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            <li><a role="menuitem"><i class="icon icon-carte"></i><span>Carte</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Carte</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_full_carte.php&amp;liv1=carte">Vista generale
+                        Carte</a>
+                    <ul role="menu">
+                        <li><span>Ricariche</span>
+                            <ul>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_carte_ricarica_manuale.php&amp;liv1=carte&amp;liv2=ricariche&amp;liv3=ricarica">Ricarica</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_scheda_cartaImprontaOne.php&amp;liv1=carte&amp;liv2=estinzione_cartimpronta_one">Estinzione
+                                Cartimpronta ONE</a>
+                        </li>
+                        <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_richiesta_carta_prepagata.php&amp;liv1=carte&amp;liv2=richiesta_carta_prepaid">Richiesta
+                                carta Prepaid</a>
+                        </li>
+                        <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_confronta_carte.php&amp;liv1=carte&amp;liv2=confronta_carte">Confronta
+                                carte</a>
+                        </li>
+                        <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_gestione_bancomat_pay.php&amp;html=vr&amp;liv1=carte&amp;liv2=gestione_bancomat_pay">Gestione
+                                Bancomat Pay</a>
+                        </li>
+
+                    </ul>
+                </div>
+            <li><a role="menuitem"><i class="icon icon-trading"></i><span>Trading</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Trading</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_fp_trading.php&amp;liv1=trading">Vista generale
+                        Trading</a>
+                    <ul role="menu">
+                        <li><span>Portafoglio</span>
+                            <ul>
+                                <li><span>Titoli</span></li>
+                            </ul>
+
+                        </li>
+                        <li><span>Compravendita</span>
+                            <ul>
+                                <li><span>Ricerca titoli evoluta</span></li>
+                                <li><span>Inserimento ordini</span></li>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_stato_ordini.php&amp;liv1=trading&amp;liv2=compravendita&amp;liv3=stato_ordini">Stato
+                                        ordini</a></li>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_trading_scheda_titolo.php&amp;liv1=trading&amp;liv2=compravendita&amp;liv3=scheda_titolo">Scheda
+                                        titolo</a></li>
+                            </ul>
+
+                        </li>
+                        <li><span>Mercati e quotazioni</span>
+                            <ul>
+                                <li><span>Azioni</span></li>
+                                <li><span>Certificates</span></li>
+                                <li><span>ETF</span></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            <li class="selected"><a role="menuitem"><i class="icon icon-investimenti"></i><span>Investimenti</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Investimenti</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_fp_investimenti.php&amp;liv1=investimenti">Vista
+                        generale Investimenti</a>
+                    <ul role="menu">
+                        <li><span>I miei investimenti</span>
+                            <ul>
+                                <li class="selected"><span>Portafoglio</span></li>
+                                <li><span>Situazione ordini</span></li>
+                            </ul>
+
+                        </li>
+                        <li><span>Fondi e sicav</span>
+                            <ul>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_cosa_sono_fondi.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=perchè_investire_in_fondi">Perch&egrave;
+                                        investire in fondi</a></li>
+                                <li><span>Le case di gestione</span></li>
+                                <li><span>Soluzioni self</span></li>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_cosa_sono_fondi.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=piani_di_accumulo_(pac)">Piani
+                                        di accumulo (PAC)</a></li>
+                                <li><span>Compravendita</span></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            <li><a role="menuitem"><i class="icon icon-finanziamenti"></i><span>Finanziamenti</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Finanziamenti</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_fp_finanziamenti.php&amp;liv1=finanziamenti">Vista
+                        generale Finanziamenti</a>
+                    <ul role="menu">
+                        <li><span>Mutui</span>
+                            <ul>
+                                <li><a role="menuitem" href="/template/strutt_webank.php?tpl=tpl_responsive_calcolatore_mutui.php&amp;liv1=finanziamenti&amp;liv2=mutui&amp;liv3=fai_il_preventivo">Fai
+                                        il preventivo</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            <li><a role="menuitem"><i class="icon icon-assicurazioni"></i><span>Assicurazioni</span></a>
+                <div class="liv3mobile">
+                    <a href="#" class="back"><i class="icon icon-arrow_left"></i><span>Menu / Assicurazioni</span></a>
+                    <a class="fplink hidden-xs" href="/template/strutt_webank.php?tpl=tpl_priv_fp_assic.php&amp;liv1=assicurazioni">Vista generale
+                        Assicurazioni</a>
+                    <ul role="menu">
+                        <li><span>Le mie polizze</span>
+                            <ul>
+                                <li><span>Il tuo profilo assicurativo</span></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+        </ul>
+    </div>
+    <!-- FINE MENU STATICO MOBILE -->
+
+
+    <!-- HEADING -->
+    <header class="headerFixed">
+        <div class="wrapper">
+            <div class="container-fluid">
+                <div class="printlogoNew">
+                    <img src="/WB/fe/img/logo_print.gif" alt="Logo">
+                </div>
+                <!-- HEADER DESKTOP -->
+                <div class="row hidden-xs hidden-sm no-gutter-left">
+                    <div class="col-md-3 col-md-offset-0 ">
+                        <div id="logoWrap">
+                            <a href="#"><img src="/WB/fe/img/logo_bank.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="userMenu">
+                            <ul class="userMenuConsole">
+                                <li><a class="userMenuLink telLink" href="tel:800060070"><i class="icon icon-numeroverde_desktop"></i><span class="userMenuLabel">800
+                                            060 070</span></a></li>
+                                <li><a class="userMenuLink" href="#"><i class="icon icon-consultare_desktop"></i><span class="userMenuLabel">Consultare e disporre</span></a>
+                                </li>
+                                <li><a class="userMenuLink" href="#"><i class="icon icon-esci_desktop"></i><span class="userMenuLabel">Esci</span></a>
+                                </li>
+                            </ul>
+                            <ul class="userMenuInfo">
+                                <li class="nameConto"><span>Massimiliano Rossi Vincenzi</span></li>
+                                <li><a href="#"><i class="icon icon-imieidati_desktop"></i><span>I miei dati</span></a>
+                                </li>
+                                <li><a href="#"><i class="icon icon-alert_desktop"></i><span>Alert</span></a></li>
+                                <li><a href="#"><i class="icon icon-sicurezza_desktop"></i><span>Sicurezza</span></a>
+                                </li>
+                                <li><a href="#"><i class="icon icon-calendar"></i><span>Calendario</span></a></li>
+                            </ul>
+                        </div>
+                        <ul id="userMenuMobile">
+                            <li class="userMenuMobile-first"><span class="nameConto">Mario Rossi</span></li>
+                            <li class="userMenuMobile-second"><a href="/WEBWB/serviziPerTe/contattiERecapiti.do" title="I Miei dati"><span>I miei dati</span><i class="icon icon-imieidati_mobile"></i></a></li>
+                            <li class="userMenuMobile-third"><a href="/WEBWB/sm/riepilogo.do" title="Alert"><span>Alert</span><i class="icon icon-alert_mobile"></i></a></li>
+                            <li class="userMenuMobile-fourth"><a href="/WEBWB/wb/content/sicurezzaInfo.do" title="Sicurezza"><span>Sicurezza</span><i class="icon icon-sicurezza_mobile"></i></a></li>
+                            <li class="userMenuMobile-fifth"><a href="/WEBWB/serviziPerTe/ilMioCalendario.do" title="Calendario"><span>Calendario</span><i class="icon icon-calendar"></i></a>
+                            </li>
+                            <li class="userMenuMobile-sixth"><a href="/WEBWB/wb/content/helpcenterContatti.do" title="Servizio clienti"><span>Servizio clienti</span><i class="icon icon-helpcenter"></i></a></li>
+                            <li class="userMenuMobile-seventh"><a href="/WEBWB/wb/content/contattaci.do" title="Scrivici"><span>Scrivici</span><i class="icon icon-scrivici"></i></a></li>
+                            <li class="userMenuMobile-eighth"><a href="#" title="Esci" onclick="$('form#logout').submit(); return false;"><span>Esci</span><i class="icon icon-esci_mobile"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FINE HEADER DESKTOP -->
+
+                <!-- HEADER MOBILE -->
+                <div class="headerMobile">
+                    <div class="row hidden-md hidden-lg no-gutter">
+                        <div class="col-xs-2">
+                            <a class="headbtn menuopen btn-icon"><i class="icon icon-menu"></i></a>
+                        </div>
+                        <div class="col-xs-8">
+                            <span id="logomyhome" onclick="location.reload();"><img src="/WB/fe/img/logo_mobile.png" alt="Logo"></span>
+                            <span id="sectionName" onclick="location.reload();">Lorem ipsum dolor</span>
+                        </div>
+                        <div class="col-xs-2">
+                            <a class="headbtn usermenuopen btn-icon"><i class="icon icon-user"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- FINE HEADER MOBILE -->
+            </div>
+        </div>
+    </header>
+    <!-- FINE HEADING -->
+
+    <!-- MENU -->
+    <nav role="navigation">
+        <div class="wrapper">
+            <!-- MENU DESKTOP -->
+            <!-- PRIMO LIVELLO -->
+            <ul class="level1" role="menubar" aria-hidden="false">
+                <li class=" "><a href="/template/strutt_webank.php?tpl=tpl_priv_fp_myhome.php&amp;liv1=my_home" title="My home"><span class="voice">My home</span></a></li>
+                <li class=" new"><a href="/template/strutt_webank.php?tpl=tpl_priv_full_sportello.php&amp;liv1=sportello" title="Sportello"><span class="voice">Sportello</span></a><span class="new">New</span></li>
+                <li class=" "><a href="/template/strutt_webank.php?tpl=tpl_priv_full_carte.php&amp;liv1=carte" title="Carte"><span class="voice">Carte</span></a></li>
+                <li class=" "><a href="/template/strutt_webank.php?tpl=tpl_priv_fp_trading.php&amp;liv1=trading" title="Trading"><span class="voice">Trading</span></a></li>
+                <li class="selected "><a href="/template/strutt_webank.php?tpl=tpl_priv_fp_investimenti.php&amp;liv1=investimenti" title="Investimenti"><span class="voice">Investimenti</span></a></li>
+                <li class=" "><a href="/template/strutt_webank.php?tpl=tpl_priv_fp_finanziamenti.php&amp;liv1=finanziamenti" title="Finanziamenti"><span class="voice">Finanziamenti</span></a></li>
+                <li class=" "><a href="/template/strutt_webank.php?tpl=tpl_priv_fp_assic.php&amp;liv1=assicurazioni" title="Assicurazioni"><span class="voice">Assicurazioni</span></a></li>
+            </ul>
+            <!-- FINE PRIMO LIVELLO -->
+
+            <!-- SECONDO LIVELLO -->
+            <ul class="level2" role="menubar" aria-hidden="false">
+
+                <li class="selected">
+                    <a href="#" aria-expanded="false" aria-haspopup="true" id="level2_0" aria-owns="level2_0_sub" aria-hidden="false" aria-controls="level2_0_sub"><span class="voice">I miei
+                            investimenti</span></a>
+                    <div class="tlWrap">
+                        <!-- TERZO LIVELLO -->
+                        <ul id="level2_0_sub" aria-labelledby="level2_0" aria-expanded="false">
+                            <li class="selected"><a href="/template/strutt_webank.php?tpl=tpl_responsive_investimenti_portafoglio.php&amp;liv1=investimenti&amp;liv2=i_miei_investimenti&amp;liv3=portafoglio&amp;liv4=strumenti_in_portafoglio" aria-expanded="false" title="Portafoglio"><span class="voice">Portafoglio</span></a>
+                            </li>
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_investimenti_situazione_ordini.php&amp;liv1=investimenti&amp;liv2=i_miei_investimenti&amp;liv3=situazione_ordini&amp;liv4=situazione_ordini" aria-expanded="false" title="Situazione ordini"><span class="voice">Situazione
+                                        ordini</span></a></li>
+
+                        </ul>
+                        <!-- FINE TERZO LIVELLO -->
+                    </div>
+                </li>
+                <li class="">
+                    <a href="#" aria-expanded="false" aria-haspopup="true" id="level2_1" aria-owns="level2_0_sub" aria-hidden="false" aria-controls="level2_0_sub"><span class="voice">Fondi e sicav</span></a>
+                    <div class="tlWrap">
+                        <!-- TERZO LIVELLO -->
+                        <ul id="level2_1_sub" aria-labelledby="level2_1" aria-expanded="false">
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_cosa_sono_fondi.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=perchè_investire_in_fondi" aria-expanded="false" title="Perchè investire in fondi"><span class="voice">Perch&egrave; investire in fondi</span></a></li>
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_nostra_offerta.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=le_case_di_gestione&amp;liv4=la_nostra_offerta" aria-expanded="false" title="Le case di gestione"><span class="voice">Le case di
+                                        gestione</span></a></li>
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_fes_topandflops.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=soluzioni_self&amp;liv4=migliori_e_peggiori" aria-expanded="false" title="Soluzioni self"><span class="voice">Soluzioni
+                                        self</span></a></li>
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_cosa_sono_fondi.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=piani_di_accumulo_(pac)" aria-expanded="false" title="Piani di accumulo (PAC)"><span class="voice">Piani di
+                                        accumulo (PAC)</span></a></li>
+                            <li class=""><a href="/template/strutt_webank.php?tpl=tpl_responsive_inv_ricerca.php&amp;liv1=investimenti&amp;liv2=fondi_e_sicav&amp;liv3=compravendita&amp;liv4=ricerca" aria-expanded="false" title="Compravendita"><span class="voice">Compravendita</span></a></li>
+
+                        </ul>
+                        <!-- FINE TERZO LIVELLO -->
+                    </div>
+                </li>
+        </div>
+    </nav>
+    <!-- FINE MENU -->
+
+    <!-- TOOLBOX -->
+
+    <!-- TOOLBOX -->
+    <div id="toolbox">
+        <script src="/WB/fe/js/toolbox.js" type="text/javascript"></script>
+        <div id="toolwrap">
+            <div id="toolhandle"><a class="btn-icon"><i class="icon icon-ellipsis-h"></i></a></div>
+            <div id="toolcontainer">
+                <!-- Vari tool -->
+                <!-- ASSISTENTE VIRTUALE -->
+                <div id="virtAss" style="display:none">
+                    <div id="vaExtended" style="display:none">
+                        <div class="vaExtTop">
+                            <a href="javascript:;" id="vaLinguetta" title="Espandi"></a>
+                        </div>
+                        <div id="vaExtConsole" style="display:none">
+                        </div>
+                        <div class="vaExtBody"></div>
+                    </div>
+                    <div class="vaContainer">
+                        <div class="vaTop">
+                            <span id="vaTitle">Paolo, l'assistente virtuale</span>
+                            <a href="javascript:;" class="vaChiudi" title="Chiudi">&nbsp;</a>
+                            <a href="javascript:;" class="vaWindow" title="Espandi/Riduci">&nbsp;</a>
+                        </div>
+                        <div class="vaFiletto" style="display:none"></div>
+                        <div class="vaBody">
+                            <div id="vaSpace"></div>
+                            <div class="vaConsole">
+                                <a href="javascript:;" class="vaAudio" title="Mute on/off"></a>
+                                <div id="vaSlider">
+                                    <a href="javascript:;" id="vaSliderCursor" title="Volume"></a>
+                                </div>
+                                <a id="vaTextControl" href="javascript:;"></a>
+                            </div>
+                            <div id="vaDialog">
+                            </div>
+                            <form autocomplete="off" id="vaFormTag" onsubmit="vaAsking(vaDomanda.val())" action="javascript:;" method="post">
+                                <div id="vaForm">
+                                    <input type="text" id="vaDom" maxlength="200" name="campo" class="waiting" value="fammi una domanda..."/>
+                                    <a title="Chiedi" class="btnformright" href="javascript:;" id="vaAsking"><span>chiedi</span></a>
+                                </div>
+                            </form>
+                            <br class="clear"/>
+                        </div>
+                        <div class="vaBottom"></div>
+                    </div>
+                </div>
+                <script type="text/javascript" src="/WB/fe/js/va.js"></script>
+                <!-- FINE ASSISTENTE VIRTUALE -->
+                <!-- TOOL CALL ME BACK -->
+                <div class="tool" id="tool2">
+                    <div class="toolhead" title="Lorem ipsum dolor sit amet consectetur adipiscing elit. Summa cum laude.">
+                        <span class="tooltit handle"></span><img src="/WB/fe/img/xtool2.gif" onclick="closetools()" class="close" alt="Chiudi" title="Chiudi"/>
+                    </div>
+
+                    <div class="toolmiddle loading" id="formtbxCallMeBack">
+                        <form class="formoperatori" method="post" action="" id="cmbForm">
+                            <p class="operatori"><strong>Gli operatori del Customer Care ti richiamano quando vuoi
+                                    tu.</strong></p>
+                            <p><label>Tel.</label>
+                                <span class="alRgFields"><input type="text" size="4" maxlength="4" onclick="this.focus()"/><input type="text" maxlength="16" size="16" style="" onclick="this.focus()"/></span>
+                            </p>
+                            <p><label>Giorno</label>
+                                <span class="alRgFields"><select class="txtgiorno" name="giorno">
+                                        <option selected="selected" value="uno">12/07/2007 - gio.</option>
+                                        <option value="due">13/07/2007 - ven.</option>
+                                        <option value="tre">16/07/2007 - lun.</option>
+                                    </select></span>
+                            </p>
+                            <p><label>Fascia oraria</label>
+                                <span class="alRgFields"><select class="txtfascia" name="fascia">
+                                        <option selected="selected" value="uno">09.00 - 10.00</option>
+                                        <option value="due">10.00 - 11.00</option>
+                                        <option value="tre">11.00 - 12.00</option>
+                                    </select></span>
+                            </p>
+                            <p><label><strong>Argomento</strong></label><br/>
+                                <input type="radio" value="1" class="rd" name="canale"/>
+                                <span class="rdtxt">sportello e carte</span><br class="clear"/>
+                                <input type="radio" value="2" class="rd" name="canale"/>
+                                <span class="rdtxt">trading</span><br class="clear"/>
+                                <input type="radio" value="3" class="rd" name="canale"/>
+                                <span class="rdtxt">altro</span><br class="clear"/>
+                            </p>
+                            <p class="pswchiamata"><label><strong>Password chiamata</strong></label><br/>
+                                <input type="text" class="txtpswchiamata" maxlength="12" size="14" value="" id="password" name="password" onclick="this.focus()"/><br/>
+                                <span>(solo per info sul conto o sul deposito titoli)</span>
+                            </p>
+                            <a href="javascript:void(0);" class="btnformright posiz" title="Invia" id="btnCmbInvia"><span>Invia</span></a>
+
+                        </form>
+                        <div id="cmbFb" stule="display:none">
+                            <!-- ESEMPIO ESITI -->
+
+                            <!-- NEGATIVO -->
+                            <div class="boxesito negativo">
+                                <div class="text">
+                                    <p><strong>Esito negativo</strong><br>Negativo at vero eos et accusamus et iusto
+                                        odio.</p>
+                                </div>
+                            </div>
+                            <!-- FINE ESITO NEGATIVO -->
+
+                            <!-- POSITIVO -->
+                            <div class="boxesito positivo">
+                                <div class="text">
+                                    <p><strong>Esito positivo</strong><br>Positivo at vero eos et accusamus et iusto
+                                        odio.</p>
+                                </div>
+                            </div>
+                            <!-- FINE ESITO POSITIVO -->
+
+                            <!-- POSITIVO -->
+                            <div class="boxesito attenzione">
+                                <div class="text">
+                                    <p><strong>Esito "attenzione"</strong><br>Attenzione at vero eos et accusamus et
+                                        iusto odio.</p>
+                                </div>
+                            </div>
+                            <!-- FINE ESITO POSITIVO -->
+
+                            <!-- FINE ESEMPIO ESITI -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ESEMPIO INTERATTIVITA' CMB -->
+                <script type="text/javascript">
+
+                    $(function () {
+
+                        // Esempio di inizializzazione
+
+                        $("#toolCmbBtn").click(function () {
+                            // Simulazione chiamata di inizializzazione del form (ed eventuale "reset");
+                            $("#formtbxCallMeBack").addClass("loading")
+                            $("#cmbFb").hide();
+                            $("#cmbForm").show();
+                            setTimeout(function () { $("#formtbxCallMeBack").removeClass("loading") }, 1000);
+                        });
+
+                        $("#btnCmbInvia").click(function () {
+
+                            $("#formtbxCallMeBack").addClass("loading");
+                            // Nasconde il form
+                            $("#cmbForm").hide();
+                            // Mostra i risultati
+                            $("#cmbFb").show();
+                            setTimeout(function () { $("#formtbxCallMeBack").removeClass("loading") }, 1000);
+
+                        });
+
+
+
+
+                    })
+                </script>
+                <!-- FINE ESEMPIO INTERATTIVITA' CMB -->
+                <!-- FINE CALL ME BACK -->
+                <!-- Fine dei vari tool -->
+            </div>
+
+            <!-- Pulsantiera -->
+            <ul id="toolbtns">
+                <li class="toolbtn toolbtns-first"><a href="javascript:;" title="Assistente virtuale" class="icon " id="toolbtnpaolo" data-toolid="virtAss"><img src="/WB/fe/img/priv_tool_paolo.png"> </a></li>
+                <li class="toolbtn toolbtns-second"><a href="/WEBWB/wb/content/helpcenterContatti.do" class="icon icon-helpcenter" title="Servizio clienti"></a></li>
+                <li class="toolbtn toolbtns-fourth"><a href="/WEBWB/wb/content/contattaci.do" class="icon icon-scrivici" title="Scrivici"></a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- FINE TOOLBOX -->
+
+
+    <div class="scrollable">
+        <!-- CONTENT (dinamico a seconda del tipo di pagina da visualizzare - front page, pagina standard, pagina estesa) -->
+        <div id="main">
+            <div class="wrapper">
+                <div class="container-fluid">
+
+                    <!-- WRAPPER DELL'INTERO CONTENUTO DELLA PAGINA -->
+                    <div class="row">
+                        
+                            <!-- Nodo che contiene l'applicativo Angular -->
+                            <content-app></content-app>
+                            <!-- Fine del nodo -->
+                        <!-- FINE DEI CONTENUTI -->
+                    </div>
+                    <!-- FINE WRAPPER DELL'INTERO CONTENUTO DELLA PAGINA -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="footerFixed">
+            <div class="footermenu">
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="#" title="Qui informazioni sulla trasparenza"><img src="/WB/fe/img/img_trasparenza_menu_footer.png" alt="#"></a></li>
+                        <li><a href="#" title="Eventi e corsi">Eventi
+                                e corsi</a></li>
+                        <li><a href="/template/strutt_webank.php?tpl=tpl_responsive_fogli_informativi.php&amp;responsive=y&amp;liv0=8&amp;liv1=0" title="Fogli Informativi">Fogli informativi</a></li>
+                        <li><a href="/template/strutt_webank.php?tpl=tpl_responsive_privacy.php&amp;responsive=y&amp;liv0=8&amp;liv2=1" title="Privacy">Privacy</a>
+                        </li>
+                        <li><a href="#" title="Reclami">Reclami</a></li>
+                        <li><strong><a target="_blank" href="http://www.faresolidale.it/" title="Solidarietà">Solidariet&agrave;</a></strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <p>Banca Popolare di Milano Societ&agrave; Cooperativa a r.l. Piazza F. Meda, 4 - 20121 Milano - tel. 02
+                    77001<br> P. IVA
+                    00715120150 Gruppo Bipiemme. Tutti i diritti riservati. </p>
+            </div>
+        </footer> <!-- /FOOTER -->
+    </div>
+<script src="runtime.js" defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+
 </html>

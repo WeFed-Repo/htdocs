@@ -5,16 +5,20 @@
         <!-- MENU STATICO QUARTO LIVELLO  -->
         <h2>Soluzioni guidate</h2>
         <ul>
-            <li class=""><a href="#">Overview</a></li>
-            <li class=""><a href="#">Top Selection</a></li>
-            <li class=""><a href="#">Portafoglio modello</a></li>
+            <li [ngClass]="{'selected': contenuto === 'overview'}"><a title="Overview" (click)="naviga('overview')">Overview</a></li>
+            <li [ngClass]="{'selected': contenuto === 'topselection'}"><a title="Top Selection" (click)="naviga('topselection')">Top Selection</a></li>
+            <li [ngClass]="{'selected': contenuto === 'pmodello'}"><a title="Portafoglio modello" (click)="naviga('pmodello')">Portafoglio modello</a></li>
         </ul>
     </div>
     <!-- Fine navigatore spalla -->
     <!-- Wrapper con il routing dell' applicazione -->
     <div id="contenuti" class="contenuti col-sm-12 col-md-10">
     <!-- Fine wrapper con il routing dell'applicazione -->
-
-    Qui sarà presente il codice dell'applicativo per i contenuti.
     Contenuto richiesto: <strong>{{contenuto}}</strong>
+    <!-- Template root -->
+        <overview *ngIf="contenuto==='overview'" [navto]="naviga"></overview>
+        <top-selection *ngIf="contenuto==='topselection'"></top-selection>
+        <pmodello *ngIf="contenuto==='pmodello'"></pmodello>
+    <!-- Fine template root -->
+    </div> 
 </div>

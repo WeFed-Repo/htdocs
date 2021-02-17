@@ -1,4 +1,4 @@
-import { Component,OnInit, Input, HostBinding} from '@angular/core';
+import { Component,OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'content-app',
@@ -8,9 +8,23 @@ import { Component,OnInit, Input, HostBinding} from '@angular/core';
 
 export class ContentAppComponent  implements OnInit {
 
-  @Input() contenuto = "default";
+  // Contenuto di default
+  @Input() contenuto = "overview";
 
   constructor() {}
+
+  // Funzioni locali
+  naviga = (cont:string) => {
+    this.setloading();
+    this.contenuto = cont;
+    // Azione
+    this.setloading(false);
+  }
+
+  setloading = (state?:boolean)=> {
+    state = (typeof state!=="undefined" && state=== false)? false : true;
+    this.loadingclass = (state)? "loading": "";
+  }
   
   // Variabili "stato"
   loadingclass: string = "loading";
@@ -18,17 +32,7 @@ export class ContentAppComponent  implements OnInit {
   // Inizializzazione
   ngOnInit(){
 
-    let tthis  = this;
-
-    // Test caricamento
-    setTimeout(
-      function(){
-        tthis.loadingclass = "";
-      },1000
-    )
-   
+    this.naviga(this.contenuto);
     
-
   }
-
 }
