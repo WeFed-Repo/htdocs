@@ -11,14 +11,11 @@
         </ul>
     </div>
     <!-- Fine navigatore spalla -->
-    <!-- Wrapper con il routing dell' applicazione -->
     <div id="contenuti" class="contenuti col-sm-12 col-md-10">
-    <!-- Fine wrapper con il routing dell'applicazione -->
-    Contenuto richiesto: <strong>{{contenuto}}</strong>
-    <!-- Template root -->
-        <overview *ngIf="contenuto==='overview'" [navto]="naviga"></overview>
-        <top-selection *ngIf="contenuto==='topselection'"></top-selection>
+        <!-- Template root -->
+        <overview *ngIf="contenuto==='overview'" [navto]="naviga" ></overview>
+        <top-selection *ngIf="contenuto==='topselection'" [setloading]="setloading"></top-selection>
         <pmodello *ngIf="contenuto==='pmodello'"></pmodello>
-    <!-- Fine template root -->
+        <!-- Fine template root -->
     </div> 
 </div>

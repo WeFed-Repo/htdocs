@@ -1,3 +1,4 @@
+import { StaticReflector } from '@angular/compiler';
 import { Component,OnInit, Input} from '@angular/core';
 
 @Component({
@@ -9,21 +10,19 @@ import { Component,OnInit, Input} from '@angular/core';
 export class ContentAppComponent  implements OnInit {
 
   // Contenuto di default
-  @Input() contenuto = "overview";
+  @Input() contenuto = "topselection";
 
   constructor() {}
 
   // Funzioni locali
   naviga = (cont:string) => {
-    this.setloading();
     this.contenuto = cont;
-    // Azione
-    this.setloading(false);
   }
 
   setloading = (state?:boolean)=> {
     state = (typeof state!=="undefined" && state=== false)? false : true;
     this.loadingclass = (state)? "loading": "";
+    return(state);
   }
   
   // Variabili "stato"

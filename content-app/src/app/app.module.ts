@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import  { Injector} from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import  { createCustomElement } from '@angular/elements';
 import { ContentAppComponent } from './content-app/content-app.component';
+
 
 // Viste e pagine
 import { Overview} from "./content-app/overview/overview.component";
@@ -13,11 +15,16 @@ import { PModello} from "./content-app/pmodello/pmodello.component";
   declarations: [
     // Componente principale
     ContentAppComponent, 
+
     // Sottocomponenti
     Overview, TopSelection,PModello
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    // Componenti funzionali
+    HttpClientModule
   ],
   providers: []
 })
