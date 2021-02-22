@@ -1,5 +1,5 @@
 <!-- Nodo che contiene l'applicativo Angular -->
-<content-app contenuto="fida|prova"></content-app>
+<content-app></content-app>
 <!-- Fine del nodo -->
 <!-- Importazione degli assets -->
 <script src="/common/fe/content-app/runtime.js" defer></script>

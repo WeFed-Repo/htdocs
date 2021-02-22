@@ -4439,56 +4439,16 @@ var getVideo = function (obj) {
     }
 };
 
-/* Apertura automatica in overlayer */
-var olVid;
-var vidWrap;
-
-var openVideo = function (url, addparams) {
-
-    // Check esistenza overlay
-    if (typeof olVid == "undefined") {
-        vidWrap = $("<div>").attr("id", "videowrapper");
-        olVid = getModal({
-            id: "layerVideo",
-            body: vidWrap
-        });
-
-        olVid.find("a.close").click(function () {
-            vidWrap.empty();
-        });
-    }
-
-    // Svuota il contenitore
-    vidWrap.empty();
-
-    // Inizializzazione di default
-    var params = {
-        autostart: false
-    };
-
-    // Sovrascrive eventuali parametri di default
-    if (addparams) {
-        if (typeof addparams.autostart != "undefined") params.autostart = addparams.autostart;
-    }
-
-    getVideo({
-        wrapper: "#videowrapper",
-        videopath: url,
-        autoplay: params.autostart,
-        initialVolume: 0.8
-    });
-
-    olVid.modal("show");
-};
-
 /* Inizializzazione degli url */
 $(function () {
 
     // Vecchio video embedding
+    /*
     $("*[data-toggle='video-overlay']").click(function () {
         var url = $(this).attr("data-video-url");
         openVideo(url);
     });
+    */
 
     // Nuovo video embedding VIMEO (05/02/2021)
     $("*[data-video-id]").click(function () {
@@ -4672,27 +4632,6 @@ var showVideo = function(vimeoid) {
                 $(e.target).remove();
             });
         })
-   
-    /*
-    var vimeoFactor = 360/640;
-    var ifrWidth = (typeof feBank !== "undefined" && feBank==="webank")? 532: 610;
-    // Modale con il video
-    var vimeoIframe = $("<iframe>").attr({
-        src: "https://player.vimeo.com/video/"+ vimeoid,
-        width:ifrWidth,
-        height: Math.floor(ifrWidth * vimeoFactor),
-        frameborder:"0", 
-        allow:'autoplay; fullscreen; picture-in-picture', 
-        allowfullscreen: true
-    }).css({background: "transparent url(/common/fe/img/gen_preloader.gif) no-repeat center center"})
-    var mdVimeo = getModal({
-        body: vimeoIframe  
-    });
-    mdVimeo.modal("show");
-    mdVimeo.on("hide.bs.modal",function(e){
-        $(e.target).remove();
-    })
-    */
 
 }
 
