@@ -184,7 +184,8 @@
                                     </p>
                                 </div>
                                 <div class="col-sm-12 col-xs-12">
-                                    <a class="btn-grlit btn-grlit-arrow btn-fs14 uppercase" href="javascript:;" onclick="overPlayVideo('https://media.webank.it/vod/Accesso_tramite_token_fisico.mp4')">Guarda il video</a>
+                                    <!-- OLD PLAYER <a class="btn-grlit btn-grlit-arrow btn-fs14 uppercase" href="javascript:;" onclick="overPlayVideo('https://media.webank.it/vod/Accesso_tramite_token_fisico.mp4')">Guarda il video</a> -->
+                                    <a class="btn-grlit btn-grlit-arrow btn-fs14 uppercase" href="javascript:;" onclick="showVideo('508344880')">Guarda il video</a>
                                 </div>
                         </div>
                     </div>

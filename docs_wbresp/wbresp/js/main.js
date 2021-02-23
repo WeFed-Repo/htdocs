@@ -945,8 +945,10 @@ var showVideo = function(vimeoid) {
             src: "https://player.vimeo.com/video/"+ vimeoid,
             frameborder:"0", 
             allow:'autoplay; fullscreen; picture-in-picture', 
-            allowfullscreen: true
-        }).css({background: "transparent url(/wbresp/img/loading.gif) no-repeat center center",position:"absolute",top:"0",left:"0",width:"100%",height:"100%"})
+            allowfullscreen: true,
+            display:"inline-block",
+            height:"100%"
+        }).css({background: "transparent url(/wbresp/img/loading.gif) no-repeat center center",position:"absolute",top:"0",left:"0",width:"100%",height:"100%",minHeight:"auto"})
         var mdVimeo = loadModal($("<div>").css({padding:"56.25% 0 0 0",position:"relative",marginTop:"20px"}).append(vimeoIframe));
         mdVimeo.on("hide.bs.modal",function(e){
             $(e.target).remove();
