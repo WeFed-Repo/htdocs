@@ -231,14 +231,17 @@ var setOverlayerIconaOpertiva = function (contIconaOper) { /* Tolto parametro mo
     });
 };
 
-var setLoadingOnObject = function (idobj) {
+var setLoadingOnObject = function (idobj,idMessLoading) {
+    
     traceOld("setLoadingOnObject()");
     $('#' + idobj).addClass('loading');
+    if(typeof(idMessLoading)!=='undefined') $('#' + idMessLoading).show();
 };
 
-var unsetLoadingOnObject = function (idobj) {
+var unsetLoadingOnObject = function (idobj,idMessLoading) {
     traceOld("unsetLoadingOnObject()");
     $('#' + idobj).removeClass('loading');
+    if(typeof(idMessLoading)!=='undefined') $('#' + idMessLoading).hide();
 };
 
 var setStatus = function (xml, _divId, _htmlCode) {

@@ -2323,6 +2323,11 @@ body.webview.webapp #contenuti {
 .loading-small * {
   visibility: hidden;
 }
+.txt-loading {
+  display: none;
+  text-align: center;
+  font-weight: 600;
+}
 /* MAIN */
 #main {
   min-height: 300px;
