@@ -1,4 +1,5 @@
 @import "youWeb-icone.css";
+@import "youWeb-icone_color.css";
 @import "youWeb-xs-mobile-struttura.css" screen and (max-width: 1023px);
 @import "youWeb-sm-desktop-struttura.css" screen and (min-width: 1024px);
 
@@ -418,3 +419,187 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
           font-size:13px; 
         }
 }
+/* Select "speciali" */
+/* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
+.spsel {
+	width: 100%;
+	position: relative;
+	padding: 0 !important;
+	border-radius: 0;
+	background:#fff;
+	height: 50px;
+	font-size: 1em;
+	border: 1px solid #DADEE1;
+	box-shadow: none;
+	display: inline-block;
+	color:#555;
+  }
+  
+  .spsel.loading {
+	height: 50px;
+  }
+  .spsel:hover {
+	  border:1px solid #122E5C;
+  }
+  
+  .spsel.nosel .spsel-selected .spsel-option-el {
+	color: #aaa;
+  }
+  .spsel .spsel-selected {
+	width: 100%;
+	background:#fff url(/HT/fe/img/select_down.gif) no-repeat 98% center;
+	height:48px;
+  }
+  .spsel .spsel-selected .only-detail {
+	display: none;
+  }
+  .spsel .spsel-selected.spsel-option:hover {
+	background-color: #fff;
+  }
+  .spsel .spsel-options {
+	  display: none;
+	  border: solid 1px #ccc;
+	  width: 100%;
+	  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	  background: #fff;
+	  max-height: 320px;
+	  overflow-y: auto;
+	  z-index: 1;
+	  position: absolute;
+  }
+  .spsel .spsel-options .spsel-option {
+	border-top: solid 1px #eee;
+  }
+  .spsel .spsel-options .spsel-option:first-child {
+	border-top: none;
+  }
+  .spsel .spsel-options .spsel-option .selected {
+		display: none;
+  }
+  .spsel .spsel-option {
+	position: relative;
+	padding: 0 20px 0 7px;
+	cursor:pointer;
+  }
+  #spselDetail .spsel-option {
+	  padding-right:0;
+  }
+  .spsel .spsel-option .spsel-addel {
+	position: absolute;
+	top: 0;
+	width: 34px;
+	text-align: center;
+	height: 32px;
+	font-size: 25px;
+	line-height: 34px;
+	left: 0;
+  }
+  .spsel .spsel-option .spsel-addel .icon {
+	font-size: 25px;
+	margin-top: 13px;
+	color: #202D50;
+  }
+  .spsel .spsel-option .spsel-option-el {
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	color: #000;
+	overflow: hidden;
+	line-height: 20px;
+	padding: 15px 0 5px;
+	display: inline-block;
+  }
+  .spsel .spsel-option:hover {
+	background-color: #f1f1f1;
+  }
+  .spsel.spsel-hasicon .spsel-option {
+	padding-left: 40px;
+  
+  }
+  .spsel.spsel-hasicon.nosel .spsel-option.spsel-selected {
+	padding-left: 0;
+  }
+  .spsel.spsel-hasicon.nosel .spsel-option.spsel-selected .spsel-option-el {
+	padding-left: 10px;
+	padding-right: 15px;
+  }
+  .spsel.opened {
+	z-index: 2;
+  }
+  .spsel.opened .spsel-options {
+	display: block;
+  }
+  .spsel.output {
+	border: 0 none;
+	background-color: transparent;
+  }
+  .spsel.output .spsel-option {
+	background-image: none;
+	background-color: transparent;
+	padding-left:35px;
+  }
+  .spsel.output .spsel-option .spsel-addel {
+	width: 25px;
+	margin-left: 0;
+  }
+  
+  .spsel.spsel-hasconsole .spsel-option {
+	  position:relative;
+  }
+  .spsel.spsel-hasconsole .spsel-option-el {
+	  padding-right:100px;
+  }
+  
+  .spsel.spsel-hasconsole .spsel-selected {
+	  padding-right:0
+  }
+  
+  .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
+	  width: 80px;
+	  position: absolute;
+	  text-align: right;
+	  top: 8px;
+	  right: 35px;
+  }
+  
+  .spsel.spsel-hasconsole .spsel-btn-console .btn-icon {
+	  margin:0 0 0 10px;
+  }
+  
+  /* Versione checkbox */
+  .spsel.spsel-check .spsel-options label{
+	  width:100%;list-style-type:none;
+	  position:relative;
+	  padding-left:20px;
+	  padding-top:10px;
+	  padding-right:10px;
+  }
+  .spsel.spsel-check .spsel-options label input {
+	  position: absolute;
+	  left: 0;
+	  top: 10px;
+  }
+  .spsel.spsel-check .spsel-options .spsel-option-el,.spsel.spsel-check .spsel-options .spse-countdetail {
+	  display: inline;
+	  white-space: normal;
+  }
+  
+  
+  .has-error .spsel {
+	  border:solid 1px #f00;
+  }
+  
+  @media (max-width: 767px) {
+	.spsel {
+	  margin-bottom: 14px;
+	}
+  }
+  
+  @media (max-width: 991px) {
+	  .spsel.spsel-hasconsole .spsel-option {height:38px;}
+	  .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
+		  top:6px;
+	  }
+  }
