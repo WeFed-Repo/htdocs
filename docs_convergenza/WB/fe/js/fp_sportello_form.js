@@ -213,6 +213,23 @@ var resetPin2 = function (pos1, pos2, numcod) {
             }
             else {
                 // Check caratteri particolari (se presenti)
+                var icval = $inputCausale.val().split(""),
+                    validchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                if (icval.filter(function(v){return (validchars.indexOf(v)>=0)}).length<4) {
+                    // Controllo lunghezza minima
+                    errors.push({ field: $inputCausale, text: "la causale deve contenere almeno 4 caratteri alfanumerici" });
+                }
+                else
+                {
+                    // Controllo caratteri presenti
+                    var invalidchars = "";
+                    validchars += "/()?+-,.:' ";
+                    if (icval.length>icval.filter(function(v){
+                        var vctest = (validchars.indexOf(v)>=0);
+                        if (!vctest && invalidchars.indexOf(v)<0) invalidchars += v;
+                        return vctest;
+                    }).length) errors.push({ field: $inputCausale, text: "la causale contiene caratteri non validi ( " + invalidchars + " )" })
+                }
                
             }
             setErrorsWithResize(errors, $bonificoForm);
