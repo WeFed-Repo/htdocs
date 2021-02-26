@@ -273,6 +273,7 @@
     //se si passa da desktop a mobil e viceversa chiudo overlayer per ricostruire con il corretto html
     var isOnOpeningSmallDevice = isSmallDevice;
     $(window).resize(function() {
+         resizeModalDevice($('#modaleCallMeBack'));
          findSmartDevice();
          if(isOnOpeningSmallDevice !== isSmallDevice )  {
             setHtmlOrariDisponibili(orariDisponibiliStored,arg);
@@ -401,6 +402,7 @@
          <p>Ti ricordiamo che il servizio &egrave; disponibile:<br>
          <strong>dal lunedì al venerdì dalle XX:XX alle XX:XX;<br> il sabato dalle XX:XX alle XX:XX.</strong><br>
          Sono esclusi i giorni festivi.
+         </p>
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
       </div>
    </section>
@@ -409,12 +411,12 @@
       <div class="align-center">
          <h4 class="intro">
             <p class="esito">
-               <i class="icon icon-cellulare_outline" title=""></i>
+               <i class="icon icon-cellulare_outline" title=""></i> 
                <span>Certifica il tuo numero</span>
             </p>
          </h4>
          <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.</p>
-          <p>Certifica il tuo numero per procedere con la prenotazione della chiamata</p>
+         <p>Certifica il tuo numero per procedere con la prenotazione della chiamata</p>
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
          <a type="button" id="btn-close" class="btn btn-primary">certifica cellulare</a>
       </div>

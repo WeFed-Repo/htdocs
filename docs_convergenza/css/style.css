@@ -545,3 +545,10 @@ ul.oldnew .links a {border-radius:5px; float:left; width:45px !important;backgro
     text-align:center;                
     font-weight:bold;}
     ul.oldnew .links a.new {float:right; background-color:#6f8f0a}
+
+    
+.libwe_style {background-color: #000;float: left;width: 60px; text-align: center;padding-top: 10px;padding-bottom:10px}
+.libwe_style .formGenerico, .libyou_style .formGenerico {padding-bottom:0}
+.libyou_style {background-color: #0E977F;float: left;width: 60px; text-align: center;padding-top: 10px;padding-bottom:10px}
+.libyou_style .tool-btn-text{display: none;}
+.libyou_style .icon-stato {margin-right:0}

@@ -365,6 +365,9 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
     margin: 0 -1%;
 }
 .modal-call-me-back .text-time {display:inline-block;margin-bottom:10px}  
+.modal-call-me-back  .modal-title {padding: 0;font-size: 18px;font-weight: 600;text-transform: uppercase;float: left;letter-spacing: 1px;}
+.modal-call-me-back input[type=radio], .modal-call-me-back input[type=radio]:focus, .modal-call-me-back input[type=radio]:hover {position:relative;top:3px;margin-right: 10px;appearance: none;background: #D8D8D8;border: 1px solid #979797!important;cursor:pointer;border-radius: 50%;outline: none;box-shadow: none;}
+.modal-call-me-back .btn-align-center .btn-primary, .modal-call-me-back .btn-align-center .btn-default {letter-spacing:0;margin-right:0!important;margin-bottom:0!important;padding:11px 16px 7px 16px!important}
 .modal-call-me-back .orari-select{ width:18%;float:left;border:2px solid #999; cursor:pointer;margin-bottom:20px;text-align:center; margin: 0 1% 20px 1%;padding:15px;min-height:90px; }
 .modal-call-me-back .orari-select span {display:inline-block;width:100%;}
 .modal-call-me-back .orari-select.disabled {cursor:not-allowed; background-color:#eaeaea;border-color:#eaeaea; color:#fff; }      
@@ -372,10 +375,10 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .spsel { font-size:18px;}
 .modal-call-me-back .only-detail{font-size:16px;}
 .modal-call-me-back input[type="radio"]:checked + span {color: #65b7a9;}      
-.modal-call-me-back .btn-default + .btn-primary {margin-left:20px;}
+.modal-call-me-back .btn-default + .btn-primary {margin-left:20px!important;}
 .modal-call-me-back .esito-ok {color: #65b7a9;display: block;  text-align:center;font-size: 30px; text-transform:uppercase;}
 .modal-call-me-back .text-footer { clear:both;text-align:center;}
-.modal-call-me-back .selected .btn-dispo {line-height:14px;margin-left:0}
+.modal-call-me-back .selected .btn-dispo {line-height:14px;margin-left:0;margin-bottom: 0;padding: 5px 16px;font-size: 12px;letter-spacing: 0;}
 .modal-call-me-back .selected .text-dispo {display:none}
 .modal-call-me-back .step-cmb,.modal-call-me-back .btn-dispo {display:none}
 .modal-call-me-back .formGenerico,.toolbox-console .formGenerico {padding-bottom: 0;padding-top: 0;margin:0}
@@ -388,8 +391,25 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .esito span {display: block;}
 .modal-call-me-back .align-center {text-align: center;}
 .modal-call-me-back .leftTesto {margin-bottom:20px}
-.modal-call-me-back .leftTesto p {clear:none;padding-bottom:5px}
-
+.modal-call-me-back .leftTesto p {clear:none;padding-bottom:5px;margin-bottom:0}
+.modal-call-me-back .flLeft {float: left;}
+.modal-call-me-back .btn-align-center {text-align: center;}
+.modal-call-me-back .modal-header .close, .modal-call-me-back .ui-dialog .ui-dialog-titlebar-close.ui-state-default,
+.modal-call-me-back .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {background-image: none !important;background-color: #fff !important;position: absolute;top: 20px !important;right: 30px;color: #202d50;border: solid 2px #202d50 !important;border-radius: 50%;width: 24px;height: 24px;z-index: 3;text-indent: -2px;line-height: 21px;font-size: 25px;margin-top: 0 !important;padding-left: 1px;padding-right: 0;}
+@media screen and (max-width: 991px) {
+    .modal-call-me-back {
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+#modaleCallMeBack .modal-dialog {
+	width: 100% !important;
+	margin: 0;
+}
+.modal-call-me-back .text-footer {
+	margin-top:20px;
+}
+}
 .icona-call-me-back-wrapper .icon-stato, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn {display: none;}
 .icona-call-me-back-wrapper.stato-attivo .icon-cmb, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper .icon-stato.tool-btn.icon-cmb {display: block;}
 .icona-call-me-back-wrapper.stato-prenotato .icon-cmb, #tools .toolbox-wrap .toolbox .icona-call-me-back-wrapper.stato-prenotato .icon-stato.tool-btn.icon-cmb {display: none;}
@@ -602,4 +622,20 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 	  .spsel.spsel-hasconsole .spsel-option .spsel-btn-console {
 		  top:6px;
 	  }
+  }
+  /* import di grafica da generic */
+  .leftTesto {
+    padding-left: 75px;
+	}
+	.ico-fp .leftTesto {
+		padding-left: 47px;
+	}
+	.ico-fp .icon-2x {
+		font-size:32px
+	}
+/* visibilità footer sm*/
+@media (min-width: 768px) and (max-width: 1023px) {
+	#footer .hidden-sm {
+	  display: block !important;
+	}
   }

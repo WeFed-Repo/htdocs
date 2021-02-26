@@ -1,3 +1,5 @@
+
+
 <!--informazioni all'atterraggio nella pagina: nome cliente, numero certificato e il fatto che il servizio sia già stato prenotato.
 Questa info sarà di fatto disponibile?
 a seconda che lo sia o meno vi è la possibilità di inserire icone che variano in base allo stato. 
@@ -28,12 +30,14 @@ Qui si assume che lo sia
 <?php
     $classToAdd = "";
     $txtToAdd ="";
+    $libClass="libwe_style";
     if ($site==="youweb") {
        $classToAdd = 'tool-btn prenota-chiamata';
        $txtToAdd = '<span class="tool-btn-text">Prenota una chiamata</span>';
+       $libClass="libyou_style";
     }
 ?>
-
+<div class="<?php print $libClass ?>">
 <form id="hiddenInput" class="formGenerico" action="">
   <?php print '<input type="hidden" name="nameCliente" value="' . $nameCliente . '"/>' ?>
   <?php print '<input type="hidden" name="nCellulareCert" value="' . $nCellulareCert . '"/>' ?>
@@ -143,3 +147,4 @@ Qui si assume che lo sia
      </div>
 	</div>
 </div>
+            </div>
