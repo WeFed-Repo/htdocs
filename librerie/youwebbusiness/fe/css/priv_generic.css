@@ -5297,6 +5297,49 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   }
 }
 
+.box-bonifico {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  margin-left: -1rem !important;
+  margin-right: -1rem !important;
+}
+.box-bonifico .col-md:first-child {
+  padding-left: 1.5rem !important;
+}
+.box-bonifico .col-md:last-child {
+  padding-right: 1.5rem !important;
+}
+.box-bonifico .radio {
+  padding-top: 1rem;
+}
+.box-bonifico .highlight {
+  background: rgba(49, 157, 141, 0.06) url(../img/bck_bon_istant.png) no-repeat right bottom;
+  background-size: 30%;
+}
+.box-bonifico .highlight .text-highlight {
+  text-transform: uppercase;
+  color: #37AD9C;
+  font-weight: bold;
+}
+.box-bonifico .highlight .radio.control-group label {
+  background: url(../img/ico_bon_ista.png) no-repeat 10px 0;
+  background-size: 25px;
+  padding-left: 45px;
+}
+.box-bonifico .separator:after {
+  border-left: 1px solid #f2f2f2;
+}
+
+@media (max-width: 767px) {
+  .box-bonifico .highlight {
+    background-size: 20%;
+    min-height: 160px;
+    margin-top: 1rem;
+  }
+  .box-bonifico .highlight .separator {
+    display: none;
+  }
+}
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;

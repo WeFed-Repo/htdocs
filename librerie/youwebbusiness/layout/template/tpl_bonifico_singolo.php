@@ -86,7 +86,7 @@ let limiteGiorno = (new Date().getDate()) +1
 			    </div>
 			  <!--/div-->
 			</div>
-			<div class="row mb-3">
+			<div class="row mb-3 box-bonifico">
 			  <div class="col-md px-md-3">
 			    <div class="separator d-block d-sm-none"></div>
 			      <div class="radio control-group no-margin-bottom big">
@@ -139,14 +139,14 @@ let limiteGiorno = (new Date().getDate()) +1
 	          </div>
 			    </div>
 			  </div>
-			  <div class="col-md px-md-3">
+			  <div class="col-md px-md-3 highlight">
 			    <div class="separator"></div>
 			    <div class="radio control-group no-margin-bottom big">
 			      <input type="radio" id="tipobon3" name="tipobon">
-			      <label class="control control-checkbox" for="tipobon3">Bonifico istantaneo</label>
+				  <label class="control control-checkbox" for="tipobon3">Bonifico istantaneo</label>
 			    </div>
 			    <p>
-			      L'accredito della somma al beneficiario avviene entro 10 secondi (importo max 15.000 &euro; per operazione). Non revocabile.
+			      L'accredito della somma al beneficiario <span class="text-highlight">avviene entro 10 secondi</span> (importo max 15.000 &euro; per operazione). Non revocabile.
 			    </p>
 			    <div class="separator d-block d-sm-none"></div>
 			  </div>
