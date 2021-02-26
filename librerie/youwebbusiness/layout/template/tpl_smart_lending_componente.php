@@ -16,9 +16,11 @@
   <!-- /// SEPARARE -->
   <style>
     /* Oggetti generici */
-    .loading {background: transparent url("./fe/img/loader.gif") no-repeat center center}
-    .loading>* {visibility:hidden}
+    .loading {background-image: url("./fe/img/loading.gif");
+    background-repeat:no-repeat;
+    background-position:center center}
     
+    .loading>* {visibility:hidden}
     .sml.loading {min-height:200px}
 
   </style>
@@ -26,7 +28,8 @@
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
   <script type="text/javascript" >
     confLending({
-      id: "#configuraPrestito"
+      id: "#configuraPrestito",
+      scadenza: 1614556800000
     })
   </script>
   <!-- Blocco contentente il configuratore -->
