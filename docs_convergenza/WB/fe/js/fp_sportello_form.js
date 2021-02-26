@@ -211,6 +211,10 @@ var resetPin2 = function (pos1, pos2, numcod) {
             if (this.isEmpty($inputCausale)) {
                 errors.push({ field: $inputCausale, text: "occorre specificare una causale" });
             }
+            else {
+                // Check caratteri particolari (se presenti)
+               
+            }
             setErrorsWithResize(errors, $bonificoForm);
             if (isContatto && errors.length) {
                 $(errors[0].field).trigger('focus');
