@@ -8331,6 +8331,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .auto-lr-boxes .lr-box .box-image {width:300px; flex-grow: 0; flex-shrink:0; padding:0 15px 0; margin:20px; float:right;display:block; text-align: center}
 .auto-lr-boxes .lr-box .box-description {flex:auto;display:block;}
 .auto-lr-boxes .lr-box .box-description p {padding-bottom:0;margin-bottom:10px}
+.auto-lr-boxes .lr-box .box-description .btnWrapper {margin-top:15px}
 .auto-lr-boxes .lr-box:nth-child(even) {
     flex-direction:row-reverse;
 }

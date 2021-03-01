@@ -1,21 +1,3 @@
- <?php
-/*
- 1 ACCESSO FACILE e VELOCE  
-
-2 SEMPRE AL TUO FIANCO
-
-3 MENU DI NAVIGAZIONE SEMPRE CON TE
-
-4 NUOVI MODI DI INTERAGIRE CON L’APP
-
-5 COME FARE UN BONIFICO  
-
-6 PORTAFOGLIO PER PRODOTTI POSSEDUTI E ASSET CLASS   
-
-
-
-*/?>
-
 <!-- ACCESSO FACILE E VELOCE -->
  <!-- box autoimpaginato -->
  <div class="lr-box">
@@ -30,6 +12,11 @@
         <h3>Accesso facile e veloce</h3>
         <p>Grazie al <strong>riconoscimento biometrico</strong>, per accedere e disporre basta la tua <strong>impronta digitale</strong> o il riconoscimento del tuo <strong>viso</strong>.</p>
         <p>Dopo aver effettuato l'accesso, nella  <i>Home </i> hai una visione immediata del Conto corrente, delle Carte, degli Investimenti e dei Finanziamenti attivi.</p>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('487138384');" ><i class="icon icon-play"></i><span>Comoda, sicura, veloce: &egrave; You App!</span></a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Fine box autoimpaginato -->
@@ -54,6 +41,11 @@
             <li>parla con l'<strong>assistente vocale</strong></li>
             <li><strong>chiama l'assistenza clienti</strong></li>
         </ul>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489824861');" ><i class="icon icon-play"></i><span>Da You App tutto l'aiuto di cui hai bisogno</span></a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Fine box autoimpaginato -->
@@ -71,7 +63,8 @@
     <div class="box-description light-bg">
         <h3>Men&ugrave; di navigazione sempre con te</h3>
         <p><strong>Stai esplorando l'app?</strong><br><br>
-            <strong>Il menu di navigazione è sempre in primo piano</strong>.<br>Utilizzalo per accedere velocemente a: <i>Home, Spese, Investimenti, Filiale e Altro</i>.</p>  
+            <strong>Il menu di navigazione è sempre in primo piano</strong>.
+            <br>Utilizzalo per accedere velocemente a: <i>Home, Spese, Investimenti, Filiale e Altro</i>. 
         </p>
     </div>
 </div>
@@ -97,6 +90,11 @@
             <li><strong>accedere alle <i>Funzioni Veloci</i></strong>. Se le hai già impostate le trovi <strong>trascinando verso il basso la linguetta</strong> e in pochi tap puoi ricaricare il cellulare o la carta prepagata</li>
         </ul>
         <p>Una volta effettuato l'accesso, puoi operare con il <strong>pulsante dispositivo</strong> che trovi nelle diverse aree.</p>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('487136160');" ><i class="icon icon-play"></i><span>You App: la tua banca in una mano</span></a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Fine box autoimpaginato -->
@@ -114,6 +112,11 @@
     <div class="box-description light-bg">
         <h3>Come fare un bonifico</h3>
         <p>Dall’area <i>Home</i>, selezionando il <strong>pulsante dispositivo</strong>, che trovi sempre in primo piano, puoi inserire i tuoi Bonifici: scegli fra <strong>Ordinario</strong> o <strong>Veloce</strong>, <strong>Italiano</strong> o <strong>Estero</strong>.</p>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489822710');" ><i class="icon icon-play"></i><span>Con You App il bonifico &egrave; semplice e intuitivo</span></a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Fine box autoimpaginato -->
@@ -132,6 +135,11 @@
         <h3>Portafoglio per prodotti posseduti e asset class</h3>
         <p>L’area <i>Investimenti</i> ti offre una visione d’insieme del tuo portafoglio in base agli strumenti che hai acquistato, suddivisa fra: azioni, obbligazioni, ETF, fondi, CW/certificate e derivati.<br>
         Seleziona una di queste categorie per entrare nel <strong>dettaglio</strong> del tuo portafoglio ed eventualmente modificare le tue posizioni.</p>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489824222');" ><i class="icon icon-play"></i><span>La nuova sezione Investimenti di You App</span></a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Fine box autoimpaginato -->

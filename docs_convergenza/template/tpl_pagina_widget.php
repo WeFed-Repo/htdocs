@@ -143,30 +143,21 @@
 <!-- /Box descrittivo immagine e testo -->
 
 
-<?php /* if ($site==="youweb") {  ?>
+<?php if ($site==="youweb") {  ?>
 <!-- Bottom linkbox -->
 <div class="link-box">
     <h3><i class="icon icon-play"></i><span>Guarda tutti i video tutorial</span></h3>
     <div class="row">
-        <div class="col-sm-6">
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-        </div>
-        <div class="col-sm-6">
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
-            <a href="#" class="text-link">Nome_video_tutorial</a>
+        <div class="col-xs-12">
+            <a href="javascript:;" class="text-link" onclick="showVideo('487138384')">Comoda, sicura, veloce: &egrave; You App!</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489824861')">Da You App tutto l'aiuto di cui hai bisogno</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('487136160')">You App: la tua banca in una mano</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489822710')">Con You App il bonifico &egrave; semplice e intuitivo</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489824222')">La nuova sezione Investimenti di You App</a>
         </div>
     </div>
 </div>
 <!-- / linkbox -->
 <?php 
- } */
+ } 
 ?>

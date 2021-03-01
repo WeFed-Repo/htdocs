@@ -35,7 +35,6 @@
 <!-- Fine box autoimpaginato -->
 
 
-
 <!-- SEMPRE AL TUO FIANCO -->
  <!-- box autoimpaginato -->
  <div class="lr-box">
@@ -71,7 +70,7 @@
     <div class="box-description light-bg">
         <h3>Men&ugrave; di navigazione sempre con te</h3>
         <p><strong>Stai esplorando l'app?</strong><br><br>
-            <strong>Il menu di navigazione è sempre in primo piano</strong>.<br>Utilizzalo per accedere velocemente a: <i>Home, Spese, Investimenti, Filiale e Altro</i>.</p>  
+            <strong>Il menu di navigazione è sempre in primo piano</strong>.<br>Utilizzalo per accedere velocemente a: <i>Home, Spese, Investimenti, Filiale e Altro</i>.
         </p>
     </div>
 </div>
