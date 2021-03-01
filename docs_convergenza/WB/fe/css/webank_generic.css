@@ -11266,28 +11266,30 @@ div.select-content select:active {
 .auto-lr-boxes .lr-box {
   margin-bottom: 30px;
   width: 100%;
-  display: inline-block;
+  display: flex;
 }
 .auto-lr-boxes .lr-box .box-image {
-  width: 250px;
+  width: 300px;
   padding: 0 15px 0 0;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin: 20px;
   float: right;
   display: block;
   text-align: center;
 }
 .auto-lr-boxes .lr-box .box-description {
-  width: calc(100% - 320px);
+  flex: auto;
   float: left;
   display: block;
 }
-.auto-lr-boxes .lr-box:nth-child(even) .box-image {
-  float: left;
-}
-.auto-lr-boxes .lr-box:nth-child(even) .box-description {
-  float: right;
+.auto-lr-boxes .lr-box:nth-child(even) {
+  flex-direction: row-reverse;
 }
 @media (max-width: 767px) {
+  .auto-lr-boxes .lr-box {
+    display: inline-block;
+  }
   .auto-lr-boxes .lr-box .box-image {
     float: none !important;
     width: 100% !important;

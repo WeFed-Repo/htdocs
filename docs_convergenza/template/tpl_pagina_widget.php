@@ -51,14 +51,7 @@
                     <img src="<?php print $statpath; ?>/fe/img/bullet_dito.png" class="bullet" />
                     <span class="bullet-text">
                         <span class="title">FACILE</span><br>
-                        La installi con un tap
-                    </span>
-                </div>
-                <div class="bullet-hero">
-                    <img src="<?php print $statpath; ?>/fe/img/bullet_cassaforte.png" class="bullet" />
-                    <span class="bullet-text">
-                    <span class="title">SICURA</span><br>
-                        La usi come Dispositivo di Sicurezza
+                        La installi con un tap e operi con un gesto!
                     </span>
                 </div>
                 <div class="bullet-hero">
@@ -68,15 +61,24 @@
                         Gestisci le operazioni bancarie e gli investimenti
                     </span>
                 </div>
+                <div class="bullet-hero">
+                    <img src="<?php print $statpath; ?>/fe/img/bullet_cassaforte.png" class="bullet" />
+                    <span class="bullet-text">
+                    <span class="title">SICURA</span><br>
+                        La puoi usare come Token app gratuito
+                    </span>
+                </div>
             </div>
         </div>
         <div class="box-bg-light">    
             <p>
-                <strong>SEMPRE CON TE</strong><br>
-                Se hai gi&agrave; l'app, aggiornala ora per avere tutte le novit&agrave;.<br>
-                Non l'hai ancora scaricata?<br>
-                Clicca sul pulsante dello Store del tuo dispositivo (solo da smartphone)!
+                <strong>LA BANCA SEMPRE A PORTATA DI MANO</strong><br>
+                Scaricala o aggiornala subito per scoprire tutte le novità!
             </p>
+            <p>Di seguito i requisiti minimi:<br>
+                iPhone/iPad: versione 12<br>
+                Apple Watch: OS 4.2<br>
+                Android/Tablet Android/Android Wear: versione 6</p>
              <!-- Pulsanti app -->
              <div class="btn-app-console">
                 <a href="#" class="btn-app btn-appstore"></a>
@@ -89,9 +91,20 @@
 </section>
 <!-- / Box Hero -->
 
-<!-- Catena di box descrittivi immagine e testo con impaginazione automatica destra/sinistra-->
 <section>
 
+    <!-- Catena di box descrittivi immagine e testo con impaginazione automatica destra/sinistra-->
+    <div class="auto-lr-boxes">
+
+    <?php include ("tpl_pagina_widget_box_".$site.".php"); ?>
+
+    </div>
+    <!-- Fine catena do box descrittivi -->
+
+</section>
+
+
+    <?php /* 
     <div class="auto-lr-boxes">
         <?php foreach ($anim as $an) { 
         ?>
@@ -126,11 +139,11 @@
         <?php
         }?>
     </div>
-</section>
+    */ ?>
 <!-- /Box descrittivo immagine e testo -->
 
 
-<?php if ($site==="youweb") { ?>
+<?php /* if ($site==="youweb") {  ?>
 <!-- Bottom linkbox -->
 <div class="link-box">
     <h3><i class="icon icon-play"></i><span>Guarda tutti i video tutorial</span></h3>
@@ -155,5 +168,5 @@
 </div>
 <!-- / linkbox -->
 <?php 
-}
+ } */
 ?>
