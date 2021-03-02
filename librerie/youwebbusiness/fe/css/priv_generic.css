@@ -5336,8 +5336,8 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     min-height: 160px;
     margin-top: 1rem;
   }
-  .box-bonifico .highlight .separator {
-    display: none;
+  .box-bonifico .highlight .separator, .box-bonifico .highlight .separator.d-block, .box-bonifico .highlight .separator.d-block:after {
+    display: none !important;
   }
 }
 .c-filter .nav-tabs {

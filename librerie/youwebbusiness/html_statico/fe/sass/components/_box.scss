@@ -10,7 +10,7 @@
   }
   
   .borderRight {
-    border-right: 1px solid $grayBordered;
+    border-right: 1px solid $grayBordered; 
   }
    
   @media (max-width: 767px)
@@ -25,3 +25,41 @@
     }
   }
 } 
+
+.box-bonifico {
+    border-top:1px solid $grayLightBorder;
+    border-bottom:1px solid $grayLightBorder;
+    margin-left: -1rem!important;
+    margin-right: -1rem!important;
+    .col-md:first-child {padding-left: 1.5rem!important;}
+    .col-md:last-child {padding-right: 1.5rem!important;}
+    .radio {
+      padding-top:1rem;
+    }
+   .highlight {
+    background: rgba(49, 157, 141, 0.06) url(../img/bck_bon_istant.png) no-repeat right bottom ;
+    background-size: 30% ;
+    .text-highlight{
+      text-transform:uppercase;
+      color:$green;
+      font-weight: bold;
+    }
+    .radio.control-group label{ background: url(../img/ico_bon_ista.png) no-repeat 10px 0; background-size:25px; padding-left:45px}
+   }
+   .separator:after {
+     border-left:1px solid $grayLightBorder;
+   }
+   
+}
+@media (max-width: 767px) {
+  .box-bonifico {
+    .highlight {
+      background-size: 20%;
+      min-height: 160px;
+      margin-top:1rem;
+      .separator, .separator.d-block, .separator.d-block:after { 
+        display: none!important;
+      }
+    }
+   }
+  }

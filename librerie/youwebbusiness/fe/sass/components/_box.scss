@@ -52,14 +52,14 @@
    
 }
 @media (max-width: 767px) {
-.box-bonifico {
-  .highlight {
-    background-size: 20%;
-    min-height: 160px;
-    margin-top:1rem;
-    .separator {
-      display: none;
+  .box-bonifico {
+    .highlight {
+      background-size: 20%;
+      min-height: 160px;
+      margin-top:1rem;
+      .separator, .separator.d-block, .separator.d-block:after { 
+        display: none!important;
+      }
     }
+   }
   }
- }
-}
