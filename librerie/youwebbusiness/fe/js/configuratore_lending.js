@@ -14,17 +14,24 @@ var refreshContdowns = function() {
 }
 
 var getCountdownHtml = function(scadenza){
-    scad =  parseFloat(scadenza); 
+    scad =  parseFloat(scadenza);
+        
+    var ddiff = scad - new Date().valueOf(),
+        cdcomp = $("<div>").addClass("scaduto").html("L'offerta &egrave; scaduta.")
 
-    var emudate = new Date (scad - new Date().valueOf());
-    var cdo = {
-        giorni: Math.floor(emudate.valueOf()/(1000*60*60*24)),
-        ore: emudate.getHours(),
-        minuti: emudate.getMinutes(),
-        secondi: emudate.getSeconds()
+
+    if (ddiff>=0) {
+        var emudate = new Date (ddiff);
+        var cdo = {
+            giorni: Math.floor(emudate.valueOf()/(1000*60*60*24)),
+            ore: emudate.getHours(),
+            minuti: emudate.getMinutes(),
+            secondi: emudate.getSeconds()
+        } 
+        cdcomp = $("<div>").html(cdo.giorni + "-"+ cdo.ore + ":" + cdo.minuti + ":" + cdo.secondi);
     }
 
-    return $("<div>").html(cdo.giorni + "-"+ cdo.ore + ":" + cdo.minuti + ":" + cdo.secondi);
+    return cdcomp;
 }
 
 var getCountdown = function (scadenza) {
@@ -46,13 +53,18 @@ var startLending = function(params) {
 
     // Inizializzazione dei parametri e dei vari oggetti del configuratore
     sml = new Object({
-            wrap: $(params.id).addClass("loading")
+            wrap: $(params.id).addClass("loading"),
+            importo: $("<div>").addClass("slider").slider({min:1,max:100,value:20}),
+            rate: $("<div>").addClass("slider").slider({min:1,max:100,value:20})
         }
     );
     
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
-        ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) :"")
+        ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) :""),
+            // Range importo
+            sml.importo,
+            sml.rate
     ));
 
     setTimeout(function(){
