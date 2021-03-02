@@ -5,7 +5,25 @@
 	<div class="row">
 		<div class="form-field-input col-xs-12">
 			<label class="control-label" for="">lorem ispum</label>
-			<input type="text" name="note" maxlength="50" size="55" value="Opzionale" id="note" class="form-control placeh clear-x">
+			<input type="text" name="note" maxlength="50" size="55" value="Opzionale"  class="form-control placeh clear-x">
+		</div>
+    </div>
+	<div class="row">
+		<div class="form-field-input col-xs-12">
+			<label class="control-label" for="">lorem ispum</label>
+			<select name="note" class="form-control"><option>lorm ipsum</option><option>lorm ipsum</option></select>
+		</div>
+    </div> 
+	<div class="row">
+		<div class="form-field-input col-xs-12">
+			<label class="control-label" for="">lorem ispum</label>
+			<input type="text" name="note" maxlength="50" size="55" value="Opzionale"  class="form-control placeh clear-x">
+		</div>
+    </div>
+	<div class="row">
+		<div class="form-field-input col-xs-12">
+			<label class="control-label" for="">lorem ispum</label>
+			<input type="text" name="note" maxlength="50" size="55" value="Opzionale"  class="form-control placeh clear-x">
 		</div>
     </div>
 </form>

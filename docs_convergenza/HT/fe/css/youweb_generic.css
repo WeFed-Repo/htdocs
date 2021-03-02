@@ -8739,5 +8739,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .box-feedback.alert h3, .box-feedback.alert div p { color:#edb54d;}
 
 
-/*loading con testo */
+
+/*loading con testo */ 
 .txt-loading {display:none;text-align: center;font-weight: bold;}
+.loading .txt-loading {visibility:visible;width: 100%;position: absolute;top:45%}

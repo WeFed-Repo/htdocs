@@ -235,7 +235,10 @@ var setLoadingOnObject = function (idobj,idMessLoading) {
     
     traceOld("setLoadingOnObject()");
     $('#' + idobj).addClass('loading');
-    if(typeof(idMessLoading)!=='undefined') $('#' + idMessLoading).show();
+    if(typeof(idMessLoading)!=='undefined') {
+        $('#' + idobj).prepend($('#' + idMessLoading)); 
+        $('#' + idMessLoading).show();
+    }
 };
 
 var unsetLoadingOnObject = function (idobj,idMessLoading) {
