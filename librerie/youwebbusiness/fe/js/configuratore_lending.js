@@ -42,7 +42,7 @@ var getCountdown = function (scadenza) {
     clearInterval(smcdrefresh);  
     smcdrefresh = setInterval(function(){
         refreshContdowns()
-    },1000);
+    },5000);
 
     return cdown;
 }
@@ -54,17 +54,31 @@ var startLending = function(params) {
     // Inizializzazione dei parametri e dei vari oggetti del configuratore
     sml = new Object({
             wrap: $(params.id).addClass("loading"),
-            importo: $("<div>").addClass("slider").slider({min:1,max:100,value:20}),
-            rate: $("<div>").addClass("slider").slider({min:1,max:100,value:20})
+            scadenza: $("<div>").addClass("top-evidente").append(
+                    ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) : ""),
+                    $("<p>").html("Calcola il preventivo del tuo finanziamento selezionando l'importo richiesto, la durata, la periodicit&agrave; ed il preammortamento: <strong class='green'>la tua rata</strong> premendo su \"Calcola\" la tua rata si aggiorner&agrave;.")
+                )
+            ,
+            importo: $("<div>").addClass("slider").slider({range:"min",min:1000,max:50000,value:20000,step:5000}),
+            durata: $("<div>").addClass("slider").slider({range:"min",min:1,max:30,value:20,step:1})
         }
     );
     
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
-        ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) :""),
+            sml.scadenza,
             // Range importo
-            sml.importo,
-            sml.rate
+            $("<div>").addClass("form-row").append(
+                $("<div>").addClass("form-group col-md-6").append( 
+                    $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
+                    sml.importo
+                ),
+                $("<div>").addClass("form-group col-md-6").append(
+                    $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
+                    sml.durata
+                )
+            )
+            
     ));
 
     setTimeout(function(){

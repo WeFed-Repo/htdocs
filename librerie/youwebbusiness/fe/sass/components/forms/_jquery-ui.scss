@@ -1,3 +1,32 @@
 td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
     opacity: 0.3;
 }
+
+/* Slider */
+.ui-slider {
+    
+    position:relative;
+    background:#ccc;
+    height:10px;
+    border-radius:5px;
+    margin:10px 0 10px;
+    clear:both;
+
+    .ui-slider-handle {
+        width:25px;
+        height:25px;
+        border-radius:50px;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+        margin: -8px 0 0 -12px;
+        display:block;
+        position:absolute;
+        background-color:#fff;
+    }
+
+    .ui-slider-range {
+        background-image: linear-gradient(to right, #1b2f52, #2F9988);
+        position: absolute;
+        height: 10px;
+        border-radius: 5px;
+    }
+}
