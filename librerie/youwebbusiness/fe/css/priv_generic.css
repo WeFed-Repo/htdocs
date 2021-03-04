@@ -5372,6 +5372,70 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   background-color: #f4f8f7;
 }
 
+/* BOX PROMO*/
+.box-promo {
+  background-color: #FFFFFF;
+  box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.08);
+}
+.box-promo-left {
+  padding: 28px;
+  background-color: #f5f9fc;
+}
+.box-promo-left img {
+  max-width: 134px;
+}
+.box-promo-top, .box-promo-bottom {
+  padding-left: 16px;
+  padding-right: 22px;
+}
+.box-promo-top .pull-right a, .box-promo-bottom .pull-right a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.box-promo .box-promo-doc {
+  font-size: 14px;
+  line-height: 24px;
+}
+.box-promo .box-promo-doc a {
+  text-decoration: none;
+  margin-right: 15px;
+}
+.box-promo h4 {
+  color: #0b2147;
+}
+.box-promo p {
+  font-size: 14px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+.box-promo p.text-ellipsed {
+  max-height: 70px;
+}
+.box-promo hr {
+  margin-left: -32px;
+  margin-right: -22px;
+  color: #e1e1e1;
+}
+.box-promo .col-md {
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  .box-promo .col-md hr {
+    margin-left: -16px;
+  }
+}
+/* BOX OUTPUT*/
+.box-output {
+  padding-bottom: 1rem;
+}
+.box-output .list {
+  font-size: 15px;
+}
+.box-output h4 {
+  padding-left: 8px;
+}
+
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
