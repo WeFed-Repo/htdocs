@@ -759,6 +759,7 @@ var vaProfile = "standard";
 
 // Variabili locali di inizializzazione default (on click)
 vaMessBenvenuto = "Buongiorno! Sono Paolo e sono qui per aiutarti rispondendo alle tue richieste.<br>Scrivi domande brevi e semplici oppure scrivi <a onclick=\"vaAsking('- Guidami')\" href='javascript:;'><b>Guidami</b></a>, e ti aprir&ograve; il men&ugrave; delle funzioni pi&ugrave; utilizzate.";
+
 if (readCookie("vaAudioOn") != "")
 {
 	//Valori da cookie

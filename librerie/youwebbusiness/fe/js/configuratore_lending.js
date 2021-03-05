@@ -13,6 +13,20 @@ var refreshContdowns = function() {
     });
 }
 
+var smlCleanNumber = function(field){
+    var val = $(field).val();
+    // Rimuove caratteri estranei
+    $(field).val(val.split("").filter(function(v){return("0123456789").indexOf(v)>=0}).join(""));
+}
+
+var smlCheckImporto = function(){
+    var field = $(this),
+        val = parseFloat(field.val().split(".").join(""));
+    if (val <= sml.importomin) {val = sml.importomin}
+    if (val>= sml.importomax) {val = sml.importomax}
+    field.val(val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+}
+
 var getCountdownHtml = function(scadenza){
     scad =  parseFloat(scadenza);
         
@@ -43,7 +57,6 @@ var getCountdown = function (scadenza) {
     smcdrefresh = setInterval(function(){
         refreshContdowns()
     },5000);
-
     return cdown;
 }
 
@@ -51,18 +64,36 @@ var getCountdown = function (scadenza) {
 /* Avvio del configuratore con parametri */
 var startLending = function(params) {
 
-    // Inizializzazione dei parametri e dei vari oggetti del configuratore
+    // Crea l'oggetto con i valori di default ricalcolati dai parametri
     sml = new Object({
-            wrap: $(params.id).addClass("loading"),
-            scadenza: $("<div>").addClass("top-evidente").append(
+        importomin: 1000,
+        importomax: 50000, 
+        importo: 20000,
+
+        duratamin: 10,
+        duratamax:72,
+        durata: 60
+    });
+    
+    
+    // Inizializzazione dei parametri e dei vari oggetti del configuratore in base ai dati provenienti dall'esterno
+    sml["wrap"]=  $(params.id).addClass("loading"),
+    sml["scadenza"]= $("<div>").addClass("top-evidente").append(
                     ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) : ""),
                     $("<p>").html("Calcola il preventivo del tuo finanziamento selezionando l'importo richiesto, la durata, la periodicit&agrave; ed il preammortamento: <strong class='green'>la tua rata</strong> premendo su \"Calcola\" la tua rata si aggiorner&agrave;.")
-                )
-            ,
-            importo: $("<div>").addClass("slider").slider({range:"min",min:1000,max:50000,value:20000,step:5000}),
-            durata: $("<div>").addClass("slider").slider({range:"min",min:1,max:30,value:20,step:1})
-        }
-    );
+                );
+    sml["importoinput"]= $("<input>").addClass("slider-input").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto);
+    
+    sml["sliderimporto"]= $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:1000, slide: function(e,ui){
+        var imp = ui.value;
+        sml.importo = imp;
+        sml.importoinput.val(imp).trigger("blur");
+    }});
+    sml["sliderdurata"]= $("<div>").addClass("slider").slider({range:"min",min:1,max:30,value:sml.durata,step:1});
+   
+
+    // Inizializzazioni
+    sml.importoinput.trigger("blur");
     
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
@@ -71,11 +102,12 @@ var startLending = function(params) {
             $("<div>").addClass("form-row").append(
                 $("<div>").addClass("form-group col-md-6").append( 
                     $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
-                    sml.importo
+                    sml.importoinput,
+                    sml.sliderimporto
                 ),
                 $("<div>").addClass("form-group col-md-6").append(
                     $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
-                    sml.durata
+                    sml.sliderdurata
                 )
             )
             
