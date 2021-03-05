@@ -4572,6 +4572,7 @@ label.select-button + span {
     background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center center;
     float:left;
     width:100%;
+    position: relative;
 }
 
 .loading * {
@@ -8742,4 +8743,4 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /*loading con testo */ 
 .txt-loading {display:none;text-align: center;font-weight: bold;}
-.loading .txt-loading {visibility:visible;width: 100%;position: absolute;top:45%}
+.loading .txt-loading {visibility:visible;width: 100%;position: absolute;top:37%}

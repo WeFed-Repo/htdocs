@@ -2310,6 +2310,7 @@ body.webview.webapp #contenuti {
   max-height: 700px;
   overflow: hidden;
   background: transparent url(/WB/fe/img/gen_preloader.gif) no-repeat center center;
+  position: relative;
 }
 .loading * {
   visibility: hidden;
@@ -2332,7 +2333,7 @@ body.webview.webapp #contenuti {
   visibility: visible;
   width: 100%;
   position: absolute;
-  top: 45%;
+  top: 32%;
 }
 /* MAIN */
 #main {

@@ -9,6 +9,7 @@
     border-bottom: 1px solid $grayBordered;
   }
   
+  
   .borderRight {
     border-right: 1px solid $grayBordered; 
   }
@@ -51,7 +52,7 @@
    }
    
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
   .box-bonifico {
     .highlight {
       background-size: 20%;
@@ -69,3 +70,91 @@
     margin: -14px -14px 14px;
     background-color: #f4f8f7;
   }
+
+  /* BOX PROMO*/
+  .box-promo {
+    background-color: $white;
+    box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.08);
+    &-left {
+      padding: 28px;
+      background-color: $blueLight;
+      img {
+        max-width: 134px;
+      }
+    }
+    &-top, &-bottom {
+      padding-left:16px;
+      padding-right:22px;
+      .pull-right a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+    .box-promo-doc {
+      /*font-size: 14px;*/
+      line-height: 24px;
+      a {
+        text-decoration: none;
+        margin-right:15px;
+      }
+    }
+    h4 { color:$blue;}
+    p { /*font-size: 14px;*/ line-height: 24px; padding-bottom:10px;
+      &.text-ellipsed {
+        max-height:70px
+      }
+    }
+      hr {
+        margin-left:-32px;
+        margin-right:-22px;
+        color:#e1e1e1;
+      }
+    .col-md {
+      padding: 16px;
+    }
+}
+@media (max-width: 767px) {  
+  .box-promo{
+    .col-md {
+      hr {
+        margin-left:-16px;
+      }
+    }
+}
+}
+
+/* BOX OUTPUT*/
+.box-output {
+  padding-bottom:1rem;
+  .list {
+    /*font-size:15px;*/
+  }
+  .list-key {
+    font-weight:normal;
+    color: $gray1;
+  }
+  h4 {
+    padding-left:8px;
+  }
+}
+
+/* BOX DI ESITO */
+.esito-inline {
+  position:relative;
+  .esito-icon {
+    width: 40px;
+  }
+  .esito-text {
+    position: absolute;
+    left: 58px;
+    top: 8px;
+  }
+}
+
+/*BOX */
+
+hr.m-neg {
+  margin-left: -22px;
+  margin-right: -22px;
+  color: $gray9;
+}

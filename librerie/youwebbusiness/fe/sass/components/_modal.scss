@@ -18,7 +18,7 @@
     }
     .modal-content {
       border-radius: 0;
-      h1, h2, h3 {
+      h1, h2:not(.modal-title-grey), h3 {
         color: $greenLink;
       }
     }
