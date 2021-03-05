@@ -91,7 +91,7 @@
       }
     }
     .box-promo-doc {
-      font-size: 14px;
+      /*font-size: 14px;*/
       line-height: 24px;
       a {
         text-decoration: none;
@@ -99,7 +99,7 @@
       }
     }
     h4 { color:$blue;}
-    p { font-size: 14px; line-height: 24px; padding-bottom:10px;
+    p { /*font-size: 14px;*/ line-height: 24px; padding-bottom:10px;
       &.text-ellipsed {
         max-height:70px
       }
@@ -127,9 +127,26 @@
 .box-output {
   padding-bottom:1rem;
   .list {
-    font-size:15px;
+    /*font-size:15px;*/
+  }
+  .list-key {
+    font-weight:normal;
+    color: $gray1;
   }
   h4 {
     padding-left:8px;
+  }
+}
+
+/* BOX DI ESITO */
+.esito-inline {
+  position:relative;
+  .esito-icon {
+    width: 40px;
+  }
+  .esito-text {
+    position: absolute;
+    left: 58px;
+    top: 8px;
   }
 }

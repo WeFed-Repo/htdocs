@@ -240,9 +240,9 @@
 .not-floated-modal .modal-dialog .modal-content {
   border-radius: 0;
 }
-.modal .modal-dialog .modal-content h1, .modal .modal-dialog .modal-content h2, .modal .modal-dialog .modal-content h3,
+.modal .modal-dialog .modal-content h1, .modal .modal-dialog .modal-content h2:not(.modal-title-grey), .modal .modal-dialog .modal-content h3,
 .not-floated-modal .modal-dialog .modal-content h1,
-.not-floated-modal .modal-dialog .modal-content h2,
+.not-floated-modal .modal-dialog .modal-content h2:not(.modal-title-grey),
 .not-floated-modal .modal-dialog .modal-content h3 {
   color: #2F9988;
 }
@@ -5393,7 +5393,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   text-decoration: none;
 }
 .box-promo .box-promo-doc {
-  font-size: 14px;
+  /*font-size: 14px;*/
   line-height: 24px;
 }
 .box-promo .box-promo-doc a {
@@ -5404,7 +5404,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   color: #0b2147;
 }
 .box-promo p {
-  font-size: 14px;
+  /*font-size: 14px;*/
   line-height: 24px;
   padding-bottom: 10px;
 }
@@ -5430,10 +5430,27 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   padding-bottom: 1rem;
 }
 .box-output .list {
-  font-size: 15px;
+  /*font-size:15px;*/
+}
+.box-output .list-key {
+  font-weight: normal;
+  color: #3e3e3e;
 }
 .box-output h4 {
   padding-left: 8px;
+}
+
+/* BOX DI ESITO */
+.esito-inline {
+  position: relative;
+}
+.esito-inline .esito-icon {
+  width: 40px;
+}
+.esito-inline .esito-text {
+  position: absolute;
+  left: 58px;
+  top: 8px;
 }
 
 .c-filter .nav-tabs {
