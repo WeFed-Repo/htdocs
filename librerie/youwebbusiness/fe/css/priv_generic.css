@@ -1544,7 +1544,7 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
 .with-stepper {
   overflow: auto;
 }
-.with-stepper h1 {
+.with-stepper h1, .with-stepper h2 {
   display: inline-block;
   width: auto;
 }
@@ -1555,6 +1555,8 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   margin-top: 5px;
   margin-bottom: 1rem;
   white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
 }
 .stepper .dot {
   display: inline-block;
@@ -1566,6 +1568,9 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
 }
 .stepper .dot.on {
   background-color: #2F9988;
+}
+.stepper .number {
+  font-size: 18px;
 }
 
 /* Selettore tipo mobile collapse */
@@ -5451,6 +5456,13 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   position: absolute;
   left: 58px;
   top: 8px;
+}
+
+/*BOX */
+hr.m-neg {
+  margin-left: -22px;
+  margin-right: -22px;
+  color: #c8c8c8;
 }
 
 .c-filter .nav-tabs {
