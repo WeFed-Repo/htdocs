@@ -9,7 +9,7 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
     background:#ccc;
     height:10px;
     border-radius:5px;
-    margin:10px 0 10px;
+    margin:10px 13px 10px;
     clear:both;
 
     .ui-slider-handle {
@@ -28,5 +28,22 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
         position: absolute;
         height: 10px;
         border-radius: 5px;
+    }
+
+}
+
+.slider-milestones {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    .milestone {
+    
+        width:auto;   
+        text-align:center; 
+        font-size:12px;
+        &:first-child {text-align:left}
+        &:last-child {text-align:right}
+    
     }
 }

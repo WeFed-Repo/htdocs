@@ -23,6 +23,13 @@
     .loading>* {visibility:hidden}
     .sml.loading {min-height:200px}
 
+    /* Oggetti dedicati */
+    .slider-input {display:block;font-size:20px;font-weight:bold; width:100px;padding: 5px 10px; border:solid 1px #ccc;border-radius:5px; position:relative;
+    margin:0 auto;float:none;clear:both;}
+    .slider-input::after {position:absolute;content: "&euro"}
+    .slider-output {font-size:20px;font-weight:bold; width:100px;padding: 6px 10px; position:relative; display:block;
+    margin:0 auto;float:none;clear:both;}
+
   </style>
   <!-- /// FINE SEPARARE -->
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
