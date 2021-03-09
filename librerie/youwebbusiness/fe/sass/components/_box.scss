@@ -69,7 +69,7 @@
     margin: -14px -14px 14px;
     background-color: #f4f8f7;
   }
-
+ 
   /* BOX PROMO*/
   .box-promo {
     background-color: $white;
@@ -90,19 +90,14 @@
       }
     }
     .box-promo-doc {
-      /*font-size: 14px;*/
+      font-size: 14px; 
       line-height: 24px;
       a {
         text-decoration: none;
         margin-right:15px;
       }
     }
-    h4 { color:$blue;}
-    p { /*font-size: 14px;*/ line-height: 24px; padding-bottom:10px;
-      &.text-ellipsed {
-        max-height:70px
-      }
-    }
+    p { padding-bottom:10px;}
       hr {
         margin-left:-32px;
         margin-right:-22px;
@@ -111,15 +106,41 @@
     .col-md {
       padding: 16px;
     }
-}
+    &.no-promo {
+      .box-promo-left {
+        padding: 74px 0 0 0;
+        img {
+          max-width: 445px;
+         
+        }
+      }
+      
+      h4 {display: block;}
+    }
+  }
+  
 @media (max-width: 767px) {  
   .box-promo{
+    &-left {
+      img {
+        max-width: 184px;
+      }
+    }
     .col-md {
       hr {
         margin-left:-16px;
       }
     }
-}
+    p { padding-bottom:0;}
+    &.no-promo {
+      .box-promo-left {
+      img {
+        max-width: 267px;
+       
+      }
+      }
+    }
+ }
 }
 
 /* BOX OUTPUT*/

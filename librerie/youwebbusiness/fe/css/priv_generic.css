@@ -5416,23 +5416,15 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   text-decoration: none;
 }
 .box-promo .box-promo-doc {
-  /*font-size: 14px;*/
+  font-size: 14px;
   line-height: 24px;
 }
 .box-promo .box-promo-doc a {
   text-decoration: none;
   margin-right: 15px;
 }
-.box-promo h4 {
-  color: #0b2147;
-}
 .box-promo p {
-  /*font-size: 14px;*/
-  line-height: 24px;
   padding-bottom: 10px;
-}
-.box-promo p.text-ellipsed {
-  max-height: 70px;
 }
 .box-promo hr {
   margin-left: -32px;
@@ -5442,10 +5434,28 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .box-promo .col-md {
   padding: 16px;
 }
+.box-promo.no-promo .box-promo-left {
+  padding: 74px 0 0 0;
+}
+.box-promo.no-promo .box-promo-left img {
+  max-width: 445px;
+}
+.box-promo.no-promo h4 {
+  display: block;
+}
 
 @media (max-width: 767px) {
+  .box-promo-left img {
+    max-width: 184px;
+  }
   .box-promo .col-md hr {
     margin-left: -16px;
+  }
+  .box-promo p {
+    padding-bottom: 0;
+  }
+  .box-promo.no-promo .box-promo-left img {
+    max-width: 267px;
   }
 }
 /* BOX OUTPUT*/

@@ -960,6 +960,9 @@ h4 {
   font-weight: bold;
   color: #737373;
 }
+h4.title-blue {
+  color: #0b2147;
+}
 
 section {
   margin-bottom: 16px;
@@ -967,6 +970,11 @@ section {
 
 p, ul, ol {
   color: #737373;
+}
+p.text-box, ul.text-box, ol.text-box {
+  font-size: 14px;
+  line-height: 24px;
+  color: #797979;
 }
 
 ol {

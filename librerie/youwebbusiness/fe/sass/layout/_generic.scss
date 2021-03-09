@@ -146,6 +146,9 @@ h4 {
   font-size: 18px;
   font-weight: bold;
   color: $gray2;
+  &.title-blue {
+    color:$blue
+  }
 }
 
 section {
@@ -154,6 +157,9 @@ section {
 
 p, ul, ol {
   color: $gray2;
+  &.text-box {
+    font-size: 14px; line-height: 24px; color: $gray8;
+  }
 }
 
 ol {
