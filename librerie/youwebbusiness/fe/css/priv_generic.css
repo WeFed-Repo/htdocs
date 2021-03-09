@@ -5462,12 +5462,16 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .box-output {
   padding-bottom: 1rem;
 }
-.box-output .list {
-  /*font-size:15px;*/
+.box-output .row {
+  min-height: 0;
 }
-.box-output .list-key {
-  font-weight: normal;
+.box-output .label-output {
+  font-size: 15px;
   color: #3e3e3e;
+}
+.box-output .value-output {
+  color: #737373;
+  text-align: right;
 }
 .box-output h4 {
   padding-left: 8px;

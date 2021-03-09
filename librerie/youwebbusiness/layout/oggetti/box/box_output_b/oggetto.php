@@ -3,26 +3,30 @@
 		<h4>Lorem ipsum dolor sit</h4>
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div class="list">
-					<dt class="list-key">Importo</dt>
-					<dd class="list-value">30.000 &euro;</dd>
+				<div class="row">
+					<div class="col label-output">Importo</div>
+					<div class="col value-output">30.000 &euro;</div>
 				</div>
-				<div class="list">
-					<dt class="list-key">Periodicit&agrave; ammortamento</dt>
-					<dd class="list-value">Trimestrale</dd>
-				</div>
-				
 			</div>
 			<div class="col-12 col-md-6">
-				<div class="list">
-					<dt class="list-key">Durata</dt>
-					<dd class="list-value">180 mesi</dd>
-				</div>
-				<div class="list">
-					<dt class="list-key">Durata preammortamento</dt>
-					<dd class="list-value">24 mesi</dd>
+				<div class="row">
+					<div class="col label-output">Durata</div>
+					<div class="col value-output">180 mesi</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div>	
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="row">
+					<div class="col label-output">Periodicit&agrave; rata</div>
+					<div class="col value-output">Trimestrale</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="row">
+					<div class="col label-output">Preammortamento</div>
+					<div class="col value-output">24 mesi</div>
+				</div>
+			</div>
+		</div>				
 </section>

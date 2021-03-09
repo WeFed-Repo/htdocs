@@ -145,13 +145,15 @@
 
 /* BOX OUTPUT*/
 .box-output {
+  .row {min-height:0}
   padding-bottom:1rem;
-  .list {
-    /*font-size:15px;*/
+  .label-output {
+    font-size:15px;
+    color:$gray1;
   }
-  .list-key {
-    font-weight:normal;
-    color: $gray1;
+  .value-output {
+    color: $gray2;
+    text-align: right;
   }
   h4 {
     padding-left:8px;
