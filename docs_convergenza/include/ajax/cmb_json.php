@@ -7,9 +7,10 @@
    $fuoriOrario = $_POST['fuoriOrario'];
    $nCellulareCert = $_POST['nCellulareCert'];
    $orarioNonDispo = $_POST['orarioNonDispo'];
+   $noFasce =  $_POST['noFasce'];
 ?>
 <?php //se non ho prenotazioni in corso e non ho ancora scelto l'orario torna i dati per costruire il form di scelta ?>
-   <?php if  ( $nCellulareCert !=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' &&  $orarioSel === "" && $annullaFlag=== 'false' && $disservizioFlag === "false" && $fuoriOrario !=="true") { ?>
+   <?php if  ( $noFasce!== 'true' && $nCellulareCert !=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' &&  $orarioSel === "" && $annullaFlag=== 'false' && $disservizioFlag === "false" && $fuoriOrario !=="true") { ?>
       {
          "esito":"ok",
          "stato" : "disponibile",
@@ -97,7 +98,7 @@
       }
    ?>
    <?php //se non ho prenotazioni in corso e ho scelto l'orario e lo slot è ancora disponibile conferma la scelta?>
-   <?php if  ($orarioNonDispo !== 'true'&& $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
+   <?php if  ($noFasce!== 'true' && $orarioNonDispo !== 'true'&& $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
       {
          "esito":"ok",
          "stato" : "prenotato",
@@ -110,7 +111,7 @@
    ?>
    
    <?php //se non ho prenotazioni in corso e ho scelto l'orario e lo slot NON è più disponibile scelta altro orario?>
-   <?php if  ($orarioNonDispo === 'true' && $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
+   <?php if  ($noFasce!== 'true' && $orarioNonDispo === 'true' && $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === 'false' && $orarioSel !== "" && $annullaFlag=== 'false') { ?>
       {
          "esito":"ok",
          "stato" : "orarioNd",
@@ -123,7 +124,7 @@
    ?>
    
    <?php //se ho prenotazioni in corso torna i dati relativi alla prenotazione attuale ?>
-   <?php if  ($orarioNonDispo !== 'true'&& $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === "true" && $annullaFlag === 'false') { ?>
+   <?php if  ($noFasce!== 'true' && $orarioNonDispo !== 'true'&& $nCellulareCert!=="" && $nCellulareCert!="false" && $alreadyBooked === "true" && $annullaFlag === 'false') { ?>
       {
          "esito":"ok",
          "stato" : "occupato",
@@ -183,5 +184,15 @@
       }
    ?>
 
+<?php //se non ho prenotazioni in corso e non ci sono fasce disponbili?>
+   <?php if  ($noFasce==="true") { ?>
+      {
+         "esito":"ok",
+         "stato" : "noFasce",
+         "isAlreadyBooked": "false"
+      }
 
+      <?php
+      }
+   ?>
 

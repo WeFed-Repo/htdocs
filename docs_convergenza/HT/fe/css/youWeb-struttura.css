@@ -383,6 +383,7 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .step-cmb,.modal-call-me-back .btn-dispo {display:none}
 .modal-call-me-back .formGenerico,.toolbox-console .formGenerico {padding-bottom: 0;padding-top: 0;margin:0}
 .modal-call-me-back h4 {margin-left: 1%}
+.p-big {font-size:16px}
 .modal-call-me-back .ul-small {padding: 0;margin:0 0 20px 0}
 .modal-call-me-back .ul-small li {font-size: 13px;list-style: none;}
 .modal-call-me-back .ul-small li:before { content: "- "}
@@ -429,6 +430,9 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 #footer .tool-btn-text {font-size:12px}
 #footer .icona-call-me-back-wrapper a {width: auto;text-decoration: none;}
 #footer .icona-call-me-back-wrapper h5+p {padding-bottom:0}
+.modal-call-me-back p>a {
+    text-decoration: underline;
+}
 
 @media (max-width:767px) {
   .modal-call-me-back .btn-default + .btn-primary {margin-left:0}

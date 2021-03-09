@@ -699,6 +699,10 @@ p {
 p.p-small {
   font-size: 13px;
 }
+p.p-big,
+p .p-big {
+  font-size: 1.2em;
+}
 span.span-small {
   font-size: 13px;
 }

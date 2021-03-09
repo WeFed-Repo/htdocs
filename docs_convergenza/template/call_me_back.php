@@ -17,7 +17,8 @@
        disservizioFlag = $('input[name="disservizioFlag"]').length>0 && $('input[name="disservizioFlag"]').val()!="" ? $('input[name="disservizioFlag"]').val() : 'false',
        fuoriOrario = $('input[name="fuoriOrario"]').length>0 && $('input[name="fuoriOrario"]').val()!="" ? $('input[name="fuoriOrario"]').val() : 'false',
        orarioNonDispo = $('input[name="orarioNonDispo"]').length>0 && $('input[name="orarioNonDispo"]').val()!="" ? $('input[name="orarioNonDispo"]').val() : 'false',
-       argomento =  $('input[name="argomento"]').length>0 && $('input[name="argomento"]').val()!="" ? $('input[name="argomento"]').val() : '';
+       argomento =  $('input[name="argomento"]').length>0 && $('input[name="argomento"]').val()!="" ? $('input[name="argomento"]').val() : '',
+       noFasce = $('input[name="noFasce"]').length>0 && $('input[name="noFasce"]').val()!="" ? $('input[name="noFasce"]').val() : 'false';
 
    //funzione  per visualizzare un dato step: 2 parametri: elemento da mostrare, eventuale testo introduttivo,
    var setNextStepVisible = function(elToShow,textIntro) {
@@ -150,7 +151,8 @@
          annullaFlag: annullaFlag,
          fuoriOrario: fuoriOrario,
          orarioNonDispo: orarioNonDispo,
-         argomento: argomento
+         argomento: argomento,
+         noFasce: noFasce
 		},
 		dataType: "json",
 		success: function(data) {
@@ -227,6 +229,9 @@
                  handleSelectOrari();
                  
               })
+            }
+            if(stato=='noFasce') {
+               setNextStepVisible('#step-noFasce');
             }
             
             
@@ -309,7 +314,7 @@
    </section>
    <!-- step 3: riepilogo-->
    <section id="step-riepilogo" class="step-cmb">
-      <p> <?php print $nameCliente ?>, hai selezionato <span class="selected-time"></span><p>
+      <p class="p-big"> <?php  print $nameCliente ?>, hai selezionato <span class="selected-time"></span></p>
       <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
@@ -328,7 +333,7 @@
                 <div class="testoIcona ico-fp">
                     <i class="icon icon-2x flLeft icon icon-cellulare_big" title=""></i>
                     <div class="leftTesto">
-                        <p>Ti chiameremo al seguente numero: <?php print '<strong>' .$nCellulareCert.'</strong>' ?>.</p>
+                        <p>Ti chiameremo al seguente numero: <?php print '<strong class="p-big">' .$nCellulareCert.'</strong>' ?>.</p>
                         <p>(Questo &egrave; il tuo numero certificato, se  &egrave; cambiato <a href="#">aggiornalo prima di prenotare</a>).</p>
                     </div>	
                 </div>
@@ -347,13 +352,13 @@
    <section id="step-conferma-prenotato" class="step-cmb">
       <div class="align-center">
          <h4 class="intro"></h4>
-         <p>Per: <?php print '<strong>' .$nameCliente.'</strong>' ?><br>
+         <p class="p-big">Per: <?php print '<strong>' .$nameCliente.'</strong>' ?><br>
          Al numero: <?php print '<strong>'.$nCellulareCert.'</strong>' ?><br>
          Fascia oraria: <span class="selected-time"></span></p>
          <p>
          Ti ricordiamo che verrai contattato da questo numero: <br>
          <?php print '<strong>'.$nCellulareCert.'</strong>' ?> <span class="span-small">(effettueremo fino a 3 tentativi)</span></p>
-         <p class="p-small">RICORDA: potrai annullare la chiamata fino a tutta l’ora precedente la fascia oraria concordata.</p>
+         <p>RICORDA: potrai annullare la chiamata fino a tutta l’ora precedente la fascia oraria concordata.</p>
          <a type="button"  class="btn btn-default annulla-pre">annulla prenotazione</a>
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
       </div>
@@ -383,7 +388,7 @@
          <h4 class="intro">
             <p class="esito">
                <i class="icon icon-alert_outline" title=""></i>
-               <span>Il servizio di prenotazione chiamata <br>non &egrave; al momento disponibile.</span>
+               <span>Il servizio di prenotazione chiamata <br>non &egrave; al momento disponibile</span>
             </p>
          </h4>
          
@@ -398,9 +403,9 @@
          <p class="esito">
             <i class="icon icon-ico_cmb_indisponibile_outline" title="fuori orario"></i>
          </p>
-         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.<p>
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere <br> quando essere ricontatto da un nostro operatore.<p>
          <p>Ti ricordiamo che il servizio &egrave; disponibile:<br>
-         <strong>dal lunedì al venerdì dalle XX:XX alle XX:XX;<br> il sabato dalle XX:XX alle XX:XX.</strong><br>
+         <strong class="p-big">dal lunedì al venerdì dalle XX:XX alle XX:XX;<br> il sabato dalle XX:XX alle XX:XX.</strong><br>
          Sono esclusi i giorni festivi.
          </p>
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
@@ -415,7 +420,7 @@
                <span>Certifica il tuo numero</span>
             </p>
          </h4>
-         <p>Il servizio di prenotazione chiamata ti permette di scegliere quando essere ricontatto da un nostro operatore.</p>
+         <p>Il servizio di prenotazione chiamata ti permette di scegliere <br> quando essere ricontatto da un nostro operatore.</p>
          <p>Certifica il tuo numero per procedere con la prenotazione della chiamata</p>
          <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-default">chiudi</a>
          <a type="button" id="btn-close" class="btn btn-primary">certifica cellulare</a>
@@ -439,5 +444,31 @@
          <p>Puoi sceglierne un'altra tra quelle rimaste</p>
          <a type="button" id="btn-altro-orario" class="btn btn-primary">scegli un altro orario</a>
       </div>
+   </section>
+    <!-- step nessuna fascia disponibile-->
+    <section id="step-noFasce" class="step-cmb">
+      
+      <div class="align-center">
+         <p class="esito">
+            <i class="icon icon-ico_cmb_indisponibile_outline" title="fuori orario"></i>
+            <span>AL MOMENTO TUTTE LE FASCE ORARIE<br> RISULTANO PRENOTATE</span>
+         </p>
+         <p>Riprova più tardi oppure utilizza gli altri servizi di assistenza.<p>
+       </div>
+       <div class="row">
+               <div class="col-sm-12">
+                     <strong>Assistente virtuale</strong>
+                     <p>Paolo, il nostro assistente virtuale sempre pronto ad aiutarti</p>
+               </div>
+       </div>
+       <div class="row">
+         <div class="col-sm-12">
+            <strong>Numero verde</strong>
+            <div class="row">
+               <div class="col-sm-6">
+                  <p>Per chiamate dall'Italia</p>
+               </div>
+          </div>
+       </div>
    </section>
 </form>

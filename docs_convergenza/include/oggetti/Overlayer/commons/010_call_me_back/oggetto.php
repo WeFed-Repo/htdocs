@@ -12,6 +12,7 @@ Qui si assume che lo sia
    $fuoriOrario =  $_GET['fuoriOrario'];
    $nCellNonCertificato = $_GET['ncertificato'];
    $orarioNonDispo = $_GET['orarioNonDispo'];
+   $noFasce =  $_GET['noFasce'];
    if (isset($_GET['disservizio'])) {
        $disservizio =  $_GET['disservizio'];
    } 
@@ -23,7 +24,10 @@ Qui si assume che lo sia
    } 
    if(isset($_GET['orarioNonDispo'])) {
     $orarioNonDispo =  $_GET['orarioNonDispo'];
-   } 
+   }
+   if(isset($_GET['noFasce'])) {
+    $noFasce = $_GET['noFasce'];
+   }
 ?>
 
 <!--classe aggiuntiva e testo per integrare nella struttura di youweb --->
@@ -47,7 +51,8 @@ Qui si assume che lo sia
   <?php print '<input type="hidden" name="orarioSel" value=""/>' ?>
   <?php print '<input type="hidden" name="disservizioFlag" value="'.$disservizio.'"/>' ?>
   <?php print '<input type="hidden" name="fuoriOrario" value="'.$fuoriOrario.'"/>' ?> 
-  <?php print '<input type="hidden" name="orarioNonDispo" value="'.$orarioNonDispo.'"/>' ?> 
+  <?php print '<input type="hidden" name="orarioNonDispo" value="'.$orarioNonDispo.'"/>' ?>
+  <?php print '<input type="hidden" name="noFasce" value="'.$noFasce.'"/>' ?> 
   <?php print '<input type="hidden" name="argomento" value="'.$argomento.'"/>' ?> 
 
 </form>
