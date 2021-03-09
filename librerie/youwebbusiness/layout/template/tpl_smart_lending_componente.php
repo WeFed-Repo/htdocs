@@ -32,16 +32,33 @@
 
   </style>
   <!-- /// FINE SEPARARE -->
+  
+  <script type="text/javascript">
+
+      var esempioHandlerCalcola = function(dataToSend,callback) {
+        var dataObject = {
+          "taeg": 123.321,
+          "tan": 21.3123
+        }
+        // Esempio tracciatura dei dati ricevuti
+        console.log(dataToSend);
+        setTimeout(function(){callback(dataObject)},1000);
+
+      }
+  </script>
+
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      scadenza: 1614556800000
+      scadenza: 1614556800000,
+      handlerCalcola: esempioHandlerCalcola
     })
   </script>
   <!-- Blocco contentente il configuratore -->
   <section id="configuraPrestito" class="bordered sml loading"></section>
   <!-- Fine blocco contentente il configuratore -->
+  
   <!-- Fine configuratore prestito -->
 
   <!-- INFORMATIVE -->

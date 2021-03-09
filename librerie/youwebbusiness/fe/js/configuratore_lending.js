@@ -25,7 +25,9 @@ var smlCheckImporto = function(){
     if (val <= sml.importomin || isNaN(val)) {val = sml.importomin}
     if (val>= sml.importomax) {val = sml.importomax}
     field.val(val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
-    sml.sliderimporto.slider("value",val)
+    sml.importo = val;
+    sml.sliderimporto.slider("value",val);
+    sml.calcola.removeClass("disabled");
 }
 
 var getCountdownHtml = function(scadenza){
@@ -71,6 +73,13 @@ var getMilestones = function(obj) {
     return (mso);
 }
 
+// Acquisizione dei dati dall'handler esterno
+var getLendingData = function(data) {
+
+    console.log(data);
+    sml.wrap.removeClass("loading");
+}
+
 
 /* Avvio del configuratore con parametri */
 var startLending = function(params) {
@@ -91,7 +100,7 @@ var startLending = function(params) {
     sml["wrap"]=  $(params.id).addClass("loading"),
     sml["scadenza"]= $("<div>").addClass("top-evidente").append(
                     ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) : ""),
-                    $("<p>").html("Calcola il preventivo del tuo finanziamento selezionando l'importo richiesto, la durata, la periodicit&agrave; ed il preammortamento: <strong class='green'>la tua rata</strong> premendo su \"Calcola\" la tua rata si aggiorner&agrave;.")
+                    $("<p>").html("Calcola il preventivo del tuo finanziamento selezionando l'importo richiesto, la durata, la periodicit&agrave; ed il preammortamento:  premendo su \"Calcola\" <strong class='green'>la tua rata</strong> si aggiorner&agrave;.")
                 );
    
     sml["importoinput"]= $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto);
@@ -99,6 +108,7 @@ var startLending = function(params) {
         var imp = ui.value;
         sml.importo = imp;
         sml.importoinput.val(imp).trigger("blur");
+        sml.calcola.removeClass("disabled");
     }});
     sml["importomilestones"] = getMilestones({min:sml.importomin,max:sml.importomax,steps: 6});
     
@@ -107,17 +117,34 @@ var startLending = function(params) {
         var dur = ui.value;
         sml.durata = dur;
         sml.durataoutput.html(dur);
+        sml.calcola.removeClass("disabled");
     }});
     sml["duratamilestones"] = getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2});
+    sml["calcola"] = $("<button>").addClass("btn btn-primary disabled").html("calcola").click(function(){
+        var btn = $(this);
+        if(!btn.hasClass("disabled")) {
+            btn.addClass("disabled");
+            // Blocco dell'interfaccia
+            sml.wrap.addClass("loading");
+            // Dati da inviare all'handler esterno
+            var data = {
+                durata: sml.durata,
+                importo: sml.importo
+            }
+            params.handlerCalcola(data,getLendingData);
+        }
+    })
    
     // Inizializzazioni
     sml.importoinput.trigger("blur");
+    sml.calcola.addClass("disabled");
     
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
             
             $("<div>").addClass("form-row").append(
+
                 // Range importo
                 $("<div>").addClass("form-group col-md-6").append( 
                     $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
@@ -125,6 +152,7 @@ var startLending = function(params) {
                     sml.sliderimporto,
                     sml.importomilestones
                 ),
+
                 // Range slider
                 $("<div>").addClass("form-group col-md-6").append(
                     
@@ -132,7 +160,13 @@ var startLending = function(params) {
                     sml.durataoutput,
                     sml.sliderdurata,
                     sml.duratamilestones
-                )
+                ),
+              
+            ),
+
+            // Bottone di calcolo
+            $("<div>").addClass("form-row").append(
+                $("<div>").addClass("form-group col-md-2").append(sml.calcola)
             )
             
     ));

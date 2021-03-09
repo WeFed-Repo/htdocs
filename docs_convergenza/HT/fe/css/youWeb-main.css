@@ -7079,13 +7079,20 @@ pre{
 
 /* Dashboard widget promo */
 .dbwidget.promo {margin:-25px;background-color:#eee;float:none;height:500px;width:auto;background-size:cover;background-position:center center;color:#fff;position:relative;}
-.dbwidget.promo .promo-wrapper {bottom:0;position:absolute;display:block;padding:0 40px 40px; max-width:75%;}
-.dbwidget.promo .promo-wrapper p {line-height:30px;}
+.dbwidget.promo .promo-wrapper {position:absolute;display:block;padding:40px; top:0;max-width:65%}
+.dbwidget.promo .promo-wrapper p {line-height:25px;}
 #mainContent .dashboard-widgets .dbwidget.promo .promo-wrapper h2 {color:#fff;padding-bottom:10px;}
 .col-sm-12 .dbwidget.promo {height:300px;}
-.col-sm-6 .dbwidget.promo .promo-wrapper {bottom:0;position:absolute;display:block;padding:0 40px 40px; max-width:100%}
-.col-sm-6 .dbwidget.promo .btn-wrapper {width:100%;text-align:center;}
-.col-sm-6 .dbwidget.promo a.btn {margin: 0 auto; float:none;}
+.col-sm-6 .dbwidget.promo .promo-wrapper {bottom:0;position:absolute;display:block;padding: 40px; max-width:100%}
+
+.promo-background-image .promo-image {opacity:0.3;height:300px;width:100%;background-size:cover; background-position:center center; display:block;}
+.promo-background-image .promo-image.stretch {height:500px}
+.col-sm-6 .promo-background-image .promo-image {display:none;}
+.col-sm-6 .promo-background-image .promo-image.stretch {display:block;}
+.col-sm-12 .promo-background-image .promo-image.stretch {display:none;}
+
+
+
 #mainContent  .dashboard-widgets a.btn {background-color:#344a86 !important}
 #mainContent  .dashboard-widgets a.btn:hover {background-color:#1f3267 !important}
 #mainContent  .dashboard-widgets a.btn.white {background-color:#fff !important; color:#2c2c2c !important}
@@ -7146,7 +7153,9 @@ pre{
 	#mainContent  .dashboard-widgets .row>.col-sm-6.col-xs-12:first-child {border-right:0 none}
 	#mainContent  .dashboard-widgets .row>.col-xs-12 .dbwidget.promo {height:500px; }
 	#mainContent .dashboard-widgets .dbwidget .datioutput,#mainContent .dashboard-widgets .legenda-wrap {max-height:none !important;}
-	.col-xs-12  .dbwidget.promo .promo-wrapper {bottom:0;position:absolute;display:block;padding:0 40px 40px; max-width:100%}
+	.col-xs-12  .dbwidget.promo .promo-wrapper {max-width:100%}
+	.col-xs-12  .dbwidget.promo .promo-image {display:none}
+	.col-xs-12  .dbwidget.promo .promo-image.stretch {display:block}
 	.col-xs-12  .dbwidget.promo .btn-wrapper {width:100%;text-align:center;}
 	.col-xs-12  .dbwidget.promo a.btn {margin: 0 auto; float:none;}
 	.cta.personalizza {margin: 0 -20px}
