@@ -5490,13 +5490,44 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   top: 8px;
 }
 
-/*BOX */
-hr.m-neg {
-  margin-left: -22px;
-  margin-right: -22px;
-  color: #c8c8c8;
+/*BOX DOCUMENTI*/
+.box-document-style .card {
+  background: #FFFFFF;
+  border: solid 1px #c8c8c8;
+}
+.box-document-style .card .card-header {
+  background: transparent;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  background: none;
+  border-bottom: 1px solid #c8c8c8;
+  background: #FFFFFF;
+}
+.box-document-style .card .card-header.collapsed {
+  border-bottom: 0;
+}
+.box-document-style .card .card-header .card-header-title {
+  font-size: 18px;
+  color: #737373;
+}
+.box-document-style .card .card-body {
+  background: transparent;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
+/*
+@media (max-width: 767px) {  
+  .box-document-style { 
+    .card {
+      .card-header {
+        padding-left:0;
+        padding-right:0;
+        margin: 0 1rem; 
+    }
+  }
+}
+}
+*/
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
