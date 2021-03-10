@@ -41,6 +41,14 @@
       </div>
     </div>
 
+    <!--SEPARATORE ALL'INTERNO DEI FORM -->
+    <div class="form-row">
+      <div class="form-group col-sm-12">
+        <hr>
+      </div>
+    </div>
+    
+    
     <!-- stato disabilitato -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">

@@ -8,16 +8,17 @@
         </a>
       </div>
       <div class="modal-body">
-          <div class="row">
-              <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <div class="row mb-5">
+              <div class="col-12 col-lg-4 mb-lg-0 mb-4 d-flex justify-content-center">
                 <img src="./fe/img/img_exit.png" alt="esci" class="img-fluid">
               </div>
-              <div class="col-12 col-md-8 pl-5 pr-3">
+              <div class="col-12 col-lg-8 text-lg-left text-center pl-lg-5 pr-3">
                   <h2 class="modal-title-grey">Lorem ipsum dolor</h2>
                   <p class="mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                   </p>
-                  <button type="button" class="btn btn-primary">S&igrave;, sono sicuro</button>
+                  <!--<button type="button" class="btn btn-primary mb-0">Lorem ispum</button>-->
+                  <button type="button" class="btn btn-primary mb-0 btn-block">Lorem ispum</button>
               </div>
           </div>
       </div>

@@ -173,10 +173,42 @@
   }
 }
 
-/*BOX */
-
-hr.m-neg {
-  margin-left: -22px;
-  margin-right: -22px;
-  color: $gray9;
+/*BOX DOCUMENTI*/
+.box-document-style { 
+  .card {
+    background: $white;
+    border: solid 1px $grayBordered;
+    .card-header {
+      background: transparent;
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
+      background: none;
+      border-bottom: 1px solid $grayBordered;
+      background: $white;
+      &.collapsed {
+        border-bottom: 0
+      }
+      .card-header-title {
+        font-size: 18px;
+        color:$gray2;
+      } 
+    }
+    .card-body {
+      background: transparent;
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
 }
+/*
+@media (max-width: 767px) {  
+  .box-document-style { 
+    .card {
+      .card-header {
+        padding-left:0;
+        padding-right:0;
+        margin: 0 1rem; 
+    }
+  }
+}
+}
+*/

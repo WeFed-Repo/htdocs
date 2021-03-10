@@ -3441,6 +3441,24 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   margin-top: 0.25rem;
 }
 
+/*stilizzazione campi di input in campi di output */
+.field-output select, .field-output input, .field-output textarea {
+  border: 0 !important;
+  background-color: transparent !important;
+  color: #3e3e3e !important;
+  padding-left: 0;
+  font-weight: bold;
+}
+.field-output button + .input-group-append {
+  display: none;
+}
+.field-output .timepicker .input-group-append {
+  display: none;
+}
+.field-output .timepicker .input-group-addon {
+  cursor: default;
+}
+
 .form-grid {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
@@ -3455,6 +3473,10 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   padding-right: 1.25rem;
   padding-left: 1.25rem;
   margin-bottom: 0;
+}
+
+.form-row hr {
+  color: #c8c8c8;
 }
 
 /* Checkbox e radio (restyling awesome) */
@@ -3768,6 +3790,35 @@ table .checkbox.radio label {
 .radio.buttonchoice input:checked + label {
   color: white;
   background-color: #2F9988;
+}
+
+/* finti campi di output*/
+.field-output .radio label,
+.field-output .checkbox label,
+.field-output .checkbox.switch label {
+  color: #3e3e3e !important;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1 !important;
+  margin-left: -24px;
+  padding-left: 0;
+  user-select: text;
+  cursor: default;
+}
+.field-output .radio label::before, .field-output .radio label::after,
+.field-output .checkbox label::before,
+.field-output .checkbox label::after,
+.field-output .checkbox.switch label::before,
+.field-output .checkbox.switch label::after {
+  display: none;
+}
+.field-output .radio input,
+.field-output .checkbox input,
+.field-output .checkbox.switch input {
+  cursor: default !important;
+}
+.field-output .checkbox.switch label {
+  margin-left: -68px;
 }
 
 input[type=range] {
@@ -5490,13 +5541,44 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   top: 8px;
 }
 
-/*BOX */
-hr.m-neg {
-  margin-left: -22px;
-  margin-right: -22px;
-  color: #c8c8c8;
+/*BOX DOCUMENTI*/
+.box-document-style .card {
+  background: #FFFFFF;
+  border: solid 1px #c8c8c8;
+}
+.box-document-style .card .card-header {
+  background: transparent;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  background: none;
+  border-bottom: 1px solid #c8c8c8;
+  background: #FFFFFF;
+}
+.box-document-style .card .card-header.collapsed {
+  border-bottom: 0;
+}
+.box-document-style .card .card-header .card-header-title {
+  font-size: 18px;
+  color: #737373;
+}
+.box-document-style .card .card-body {
+  background: transparent;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
+/*
+@media (max-width: 767px) {  
+  .box-document-style { 
+    .card {
+      .card-header {
+        padding-left:0;
+        padding-right:0;
+        margin: 0 1rem; 
+    }
+  }
+}
+}
+*/
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
