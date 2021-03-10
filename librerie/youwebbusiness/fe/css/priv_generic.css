@@ -3457,6 +3457,10 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   margin-bottom: 0;
 }
 
+.form-row hr {
+  color: #c8c8c8;
+}
+
 /* Checkbox e radio (restyling awesome) */
 .radio,
 .checkbox {
