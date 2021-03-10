@@ -465,6 +465,7 @@ var gotoTrack = function(fp1,fp2,cb) {
             cb = $(e.target).attr("href");
         }
     }
+    var gtagcb = function () {return void(0)};
     if (typeof cb !== "undefined") {
         // Se è una funzione la callback e' quella, altrimenti e' un href
         if (typeof cb === "string") {
