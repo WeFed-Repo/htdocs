@@ -8,11 +8,11 @@
         </a>
       </div>
       <div class="modal-body">
-          <div class="row">
+          <div class="row mb-5">
               <div class="col-12 col-lg-4 mb-lg-0 mb-4 d-flex justify-content-center">
                 <img src="./fe/img/img_exit.png" alt="esci" class="img-fluid">
               </div>
-              <div class="col-12 col-lg-8 text-lg-left text-center pl-5 pr-3">
+              <div class="col-12 col-lg-8 text-lg-left text-center pl-lg-5 pr-3">
                   <h2 class="modal-title-grey">Lorem ipsum dolor</h2>
                   <p class="mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam

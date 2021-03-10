@@ -202,6 +202,7 @@ select, input, textarea {
       }
     }
   }
+ 
 }
 
 .datepicker {
@@ -222,6 +223,7 @@ select, input, textarea {
     opacity: 0;
     cursor: disabled;
   }
+  
 }
 
 .bootstrap-timepicker-widget {
@@ -262,3 +264,27 @@ select, input, textarea {
   transform: translate(0,-1em);
   margin-top: .25rem;
 }
+
+
+ 
+/*stilizzazione campi di input in campi di output */ 
+.field-output {
+   select, input, textarea {
+    border:0!important;
+    background-color:transparent!important;
+    color: $gray1!important;
+    padding-left:0;
+    font-weight:bold;
+  }
+  button + .input-group-append {
+    display:none
+  }
+  .timepicker {
+     .input-group-append {
+      display:none;
+     }
+     .input-group-addon {
+      cursor:default;
+    }
+  }
+} 

@@ -3441,6 +3441,24 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   margin-top: 0.25rem;
 }
 
+/*stilizzazione campi di input in campi di output */
+.field-output select, .field-output input, .field-output textarea {
+  border: 0 !important;
+  background-color: transparent !important;
+  color: #3e3e3e !important;
+  padding-left: 0;
+  font-weight: bold;
+}
+.field-output button + .input-group-append {
+  display: none;
+}
+.field-output .timepicker .input-group-append {
+  display: none;
+}
+.field-output .timepicker .input-group-addon {
+  cursor: default;
+}
+
 .form-grid {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
@@ -3772,6 +3790,35 @@ table .checkbox.radio label {
 .radio.buttonchoice input:checked + label {
   color: white;
   background-color: #2F9988;
+}
+
+/* finti campi di output*/
+.field-output .radio label,
+.field-output .checkbox label,
+.field-output .checkbox.switch label {
+  color: #3e3e3e !important;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 1 !important;
+  margin-left: -24px;
+  padding-left: 0;
+  user-select: text;
+  cursor: default;
+}
+.field-output .radio label::before, .field-output .radio label::after,
+.field-output .checkbox label::before,
+.field-output .checkbox label::after,
+.field-output .checkbox.switch label::before,
+.field-output .checkbox.switch label::after {
+  display: none;
+}
+.field-output .radio input,
+.field-output .checkbox input,
+.field-output .checkbox.switch input {
+  cursor: default !important;
+}
+.field-output .checkbox.switch label {
+  margin-left: -68px;
 }
 
 input[type=range] {
