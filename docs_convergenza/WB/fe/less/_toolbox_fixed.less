@@ -555,7 +555,7 @@ div.tool {
     text-align:center;
     font-size: 22px; 
     text-transform:uppercase;
-    margin-bottom:40px;
+    margin-bottom:30px;
     line-height: 25px;
     .icon {  
       font-size:64px; 
@@ -593,17 +593,69 @@ div.tool {
   .formGenerico {
     padding-bottom: 0; 
   }
-  
+  .btn-assistente-callback {
+    height: 34px;
+    background: url('/WB/fe/img/priv_tool_paolo.png') no-repeat 15px 3px;
+    background-size:26px;
+    padding-right:25px;
+    .icon-text {
+      top: 0px;
+      padding-left: 40px;
+    }
+  }
+  .visible-desktop {display: none;}
+  .box-generico-border { 
+    padding-top:0;
+    margin-top:5px;
+    min-height: 226px;
+    position:relative;
+    h4 {
+      padding: 10px 18px 10px 18px;
+    }
+    .tel-number {
+      margin-bottom:0;
+      padding-bottom:5px;
+      padding-top:0; 
+      .icon,  a {
+        color:#444444;
+        font-size: 24px;
+       }
+       &.pos-abs {
+         position:absolute;
+         top:50%;
+         left:25%;
+       }
+    } 
+    .tel-stati {
+      font-size:14px;
+    }
+  }
+
 }
-@media (max-width:767px) { 
+
+@media (min-width:1024px) {    
+	.modal-call-me-back .visible-desktop {
+	  display: block;
+	}
+} 
+@media (max-width:767px) {   
 .modal-call-me-back {
   .btn-default + .btn-primary {  
     margin-left:0
   } 
-  .esito {  
+  .esito {    
      font-size: 18px;
   }
- 
+  .box-generico-border { 
+    min-height: 0;
+    .tel-number {
+      
+       &.pos-abs {
+        position: static
+      }
+    } 
+    
+  }
 } 
 }
 @media (min-width:768px) and (max-width:1000px) {
@@ -618,9 +670,26 @@ div.tool {
       font-size:13px; 
     }
   }
+  .box-generico-border { 
+    min-height: 246px;
+    .tel-number {
+      
+      .icon,  a {
+        font-size: 22px;
+       }
+        a {
+        margin-left: 10px;
+       }
+      
+    } 
+    .tel-stati {
+      font-size:13px;
+    }
+  }
 } 
 
 }
+
 .helpDialog .modal-header button.close, .modal-header button.close  { 
   border-radius: 50%;
   border: 0;

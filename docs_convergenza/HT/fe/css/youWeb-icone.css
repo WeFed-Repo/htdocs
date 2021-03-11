@@ -842,3 +842,9 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
+.icon-numeroverde_desktop:before {
+  content: "\ea0c";
+}
+.icon-ico_alert_non_disponibile:before {
+  content: "\ea0d";
+}

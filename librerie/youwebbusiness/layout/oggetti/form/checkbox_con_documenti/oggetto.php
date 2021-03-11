@@ -3,7 +3,7 @@
 <div class="bordered">
   <div class="with-stepper">
     <h2>Lorem ipsum </h2>
-    <div class="stepper">Lorem <span class="number">1</span> di <span class="number">4</span></div>
+    <div class="stepper text">Lorem <span class="number">1</span> di <span class="number">4</span></div>
   </div>
   <form class="form-grid">
     <div class="form-row">

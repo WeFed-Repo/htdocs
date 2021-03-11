@@ -32,4 +32,13 @@
   .number{
     font-size:18px;
   }
+  
+}
+@media (max-width: 767px) { 
+.stepper {
+  &.text{
+    width:100%
+  }
+  
+}
 }

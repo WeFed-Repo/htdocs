@@ -287,4 +287,9 @@ select, input, textarea {
       cursor:default;
     }
   }
+  .autocomplete {
+    button {
+      display:none
+    }
+  }
 } 

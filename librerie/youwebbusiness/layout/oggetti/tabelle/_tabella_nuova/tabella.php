@@ -17,8 +17,8 @@
    <?php // esempio ciclo per tabella in desktop ?>
    <?php for ($i = 0; $i <= 3; $i++) { ?>
      <tr data-index="<?= $i ?>">
-       <td>Lorem ipsum</td>
-       <td><a href="#">28/02/2019</a></td>
+        <td><a href="#" class="color-warning">Lorem ipsum</a></td>
+        <td><a href="#">28/02/2019</a></td>
         <td>28/02/2019</td>
         <td><span class="">3.216,65</span></td>
         <td>EUR</td>

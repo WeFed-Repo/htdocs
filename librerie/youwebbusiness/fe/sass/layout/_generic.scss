@@ -46,6 +46,9 @@ a:not(.btn) {
       }
     }
   }
+  &.color-warning, &.color-warning:hover {
+    color:$warning!important;
+  }
 }
 
 // fallback per text decoration

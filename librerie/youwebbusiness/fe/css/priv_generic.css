@@ -1573,6 +1573,11 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   font-size: 18px;
 }
 
+@media (max-width: 767px) {
+  .stepper.text {
+    width: 100%;
+  }
+}
 /* Selettore tipo mobile collapse */
 .opt-mobile-data-collapse .mobile-data-selector {
   display: none;
@@ -3457,6 +3462,9 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
 }
 .field-output .timepicker .input-group-addon {
   cursor: default;
+}
+.field-output .autocomplete button {
+  display: none;
 }
 
 .form-grid {

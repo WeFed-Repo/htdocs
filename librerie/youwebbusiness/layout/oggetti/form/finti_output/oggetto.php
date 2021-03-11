@@ -41,29 +41,32 @@
       <div class="form-group col-sm-3">
          <div class="form-check  radio">
            <input class="form-check-input" type="radio"  name="inlineRadioOptions" value="" id="radioField">
-           <label class="form-check-label" for="radioField">Input radio</label>
+           <label class="form-check-label" for="radioField">Lorem ipsum</label>
          </div>
        </div>
        <div class="form-group col-sm-3">
          <div class="form-check  checkbox">
            <input class="form-check-input" type="checkbox" id="checkField" name="inlineRadioOptions" value="">
-           <label class="form-check-label" for="checkField">Input checkbox</label>
+           <label class="form-check-label" for="checkField">Lorem ipsum</label>
          </div>
        </div>
        <div class="form-group col-sm-3">
          <div class="form-check  checkbox switch">
            <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch">
-           <label class="form-check-label" for="checkSwitch">Input Switch</label>
+           <label class="form-check-label" for="checkSwitch">Lorem ipsum</label>
          </div>
        </div>
-      
+       <div class="form-group col-sm-7">
+          <label class="control-label">Textarea</label>
+           <textarea id="textareaField" name="" rows="4" cols="50" class="form-control">lorem ipsum</textarea>
+        </div>
     </div>
 </form>
 </div>
 <!--EMULARE LA TRASFORMAZIONE IN FINTI OUTPUT DI CAMPI IN INPUT -->
 <script>
    $("#emulateLink").on("click", function() {
-      var idFieldToTransform = ['inputField','selectField', 'dateField', 'timeField', 'radioField', 'checkField', 'checkSwitch'];
+      var idFieldToTransform = ['inputField','selectField', 'dateField', 'timeField', 'radioField', 'checkField', 'checkSwitch','textareaField'];
       $.each(idFieldToTransform,function(key,value){
         setOutputField(value)
       })

@@ -54,7 +54,7 @@ Qui si assume che lo sia
   <?php print '<input type="hidden" name="orarioNonDispo" value="'.$orarioNonDispo.'"/>' ?>
   <?php print '<input type="hidden" name="noFasce" value="'.$noFasce.'"/>' ?> 
   <?php print '<input type="hidden" name="argomento" value="'.$argomento.'"/>' ?> 
-
+  <?php print '<input type="hidden" name="site" value="'.$site.'"/>' ?> 
 </form>
 <!-- ICONA CHE POI DEVE ESSERE PERSONALIZZATA; per webank andrà posizionata nell'header-->
 
@@ -106,12 +106,13 @@ Qui si assume che lo sia
               nCellulareCert = $('input[name="nCellulareCert"]').val(),
               isAlreadyBooked = $('input[name="isAlreadyBooked"]').val(),
               orarioSel = $('input[name="orarioSel"]').val(),
-              timeNow = formatHourMin(today.getHours()) + ":" + formatHourMin(today.getMinutes());
+              timeNow = formatHourMin(today.getHours()) + ":" + formatHourMin(today.getMinutes()),
+              site = $('input[name="site"]').val();
               if(!isModalOpened)
               {
                 
                 thisModalBody.addClass("loading");
-                var getCallBackTpl = $.post( "/template/call_me_back.php", {nameCliente:nameCliente,nCellulareCert:nCellulareCert, timeNow:timeNow}, function( data ) {
+                var getCallBackTpl = $.post( "/template/call_me_back.php", {nameCliente:nameCliente,nCellulareCert:nCellulareCert, timeNow:timeNow, site:site}, function( data ) {
                    thisModalBody.removeClass("loading").html(data); isModalOpened = true;
                 });
               }
