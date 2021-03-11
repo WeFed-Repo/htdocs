@@ -1687,6 +1687,9 @@ body.modal-open {
     padding-left: 1px;
     padding-right: 0;
 }
+.modal-header a.close.btn-icon {
+    border: none !important;
+}
 
 .ui-dialog-titlebar-close .ui-icon-closethick {
     text-indent: 0;
