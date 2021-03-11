@@ -92,16 +92,25 @@ var startLending = function(params) {
 
         duratamin: 6,
         duratamax:72,
-        durata: 60
+        durata: 60,
+
+        periodicita: 1
+        
     });
     
     
     // Inizializzazione dei parametri e dei vari oggetti del configuratore in base ai dati provenienti dall'esterno
     sml["wrap"]=  $(params.id).addClass("loading"),
-    sml["scadenza"]= $("<div>").addClass("top-evidente").append(
-                    ((typeof params.scadenza != "undefined") ? getCountdown(params.scadenza) : ""),
-                    $("<p>").html("Calcola il preventivo del tuo finanziamento selezionando l'importo richiesto, la durata, la periodicit&agrave; ed il preammortamento:  premendo su \"Calcola\" <strong class='green'>la tua rata</strong> si aggiorner&agrave;.")
-                );
+
+    sml["scadenza"]= 
+                    ((typeof params.scadenza == "undefined") ? "" :
+                    $("<div>").addClass("top-evidente").append(
+                        $("<div>").addClass("cd-block").append(
+                            $("<span>").html("L'offerta scade tra"),
+                            getCountdown(params.scadenza))
+                        )
+                        
+                    );
    
     sml["importoinput"]= $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto);
     sml["sliderimporto"]= $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:1000, slide: function(e,ui){
@@ -120,7 +129,13 @@ var startLending = function(params) {
         sml.calcola.removeClass("disabled");
     }});
     sml["duratamilestones"] = getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2});
-    sml["calcola"] = $("<button>").addClass("btn btn-primary disabled").html("calcola").click(function(){
+
+
+
+
+    sml["preammortamento"] = $("<span>").addClass("output").html("24 mesi");
+    
+    sml["calcola"] = $("<button>").addClass("btn btn-primary disabled w-100").html("calcola").click(function(){
         var btn = $(this);
         if(!btn.hasClass("disabled")) {
             btn.addClass("disabled");
@@ -143,6 +158,7 @@ var startLending = function(params) {
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
             
+            // RIGA 1
             $("<div>").addClass("form-row").append(
 
                 // Range importo
@@ -163,13 +179,45 @@ var startLending = function(params) {
                 ),
               
             ),
-
-            // Bottone di calcolo
-            $("<div>").addClass("form-row").append(
-                $("<div>").addClass("form-group col-md-2").append(sml.calcola)
-            )
+        
+            // RIGA 2
             
-    ));
+            $("<div>").addClass("form-row").append(
+                $("<div>").addClass("form-group col-md-6").append(
+                    // Radio button selezione
+                    $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
+                
+                    $("<div>").addClass("row").append(
+                        $("<div>").addClass("col-sm-4").append(
+                            $("<div>").addClass("form-check radio").append(
+                                $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
+                                $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
+                            )
+                        ),
+                        $("<div>").addClass("col-sm-8").append(
+                            $("<div>").addClass("form-check radio").append(
+                                $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
+                                $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
+                            )
+                        )
+                    )
+                  )
+                ,
+
+                $("<div>").addClass("form-group col-md-4").append(
+                    // Preammortamento
+                    $("<label>").addClass("control-label").html("Preammortamento"),
+                    sml.preammortamento
+                ),
+
+                // Bottone di calcolo
+                $("<div>").addClass("form-group no-label col-md-2").append(
+                    // Bottone di calcolo
+                    sml.calcola
+                )
+            )
+        )    
+    );
 
     // Emulazione
     setTimeout(function(){
