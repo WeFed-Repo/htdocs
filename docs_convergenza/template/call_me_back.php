@@ -7,7 +7,8 @@
    $nameCliente = $_POST['nameCliente'];
    $nCellulareCert = $_POST['nCellulareCert'];
    $timeNow = $_POST['timeNow'];
-
+   $site= $_POST['site']
+  
 ?>
 
 <script type="text/javascript">
@@ -136,6 +137,7 @@
 
    
    var orariDisponibili,
+       orariDisponibiliStored,
        arg;
    var callDipso = function(dispoUrl) {
       $.ajax({
@@ -322,7 +324,7 @@
                     <div class="leftTesto">
                         <p>Un nostro operatore ti contatter&agrave; nella fascia oraria stabilita.</p>
                         <p>Il numero da cui riceverai la chiamata &egrave; il: <?php print '<strong>'.$nCellulareCert.'</strong>' ?></p>
-                        <p>Effettueremo un massimo di 3 tentativi; la chiamata sar&agrave; soggetta a registrazione </p>
+                        <p>Effettueremo un massimo di 3 tentativi; <strong>la chiamata sar&agrave; soggetta a registrazione*</strong> </p>
                     </div>	
                 </div>
             </div>
@@ -347,6 +349,8 @@
             <a type="button" id="btn-prenota" class="btn btn-primary">prenota</a>
           </div>
       </div>
+      <p class="note marginTopMedium">*La chiamata sarà registrata e potrà essere utilizzata per controlli sulla qualità e per il miglioramento del servizio. I tuoi dati saranno trattati nel rispetto della normativa sulla protezione dei dati personali, in particolare, Regolamento UE 2016/679. L’informativa completa è disponibile sul sito istituzionale, sezione privacy.</p>
+           
    </section>
    <!-- step 4: conferma e warning già prenotato cambia solo il titolo che è settato dinamicamente-->
    <section id="step-conferma-prenotato" class="step-cmb">
@@ -447,28 +451,86 @@
    </section>
     <!-- step nessuna fascia disponibile-->
     <section id="step-noFasce" class="step-cmb">
-      
       <div class="align-center">
          <p class="esito">
-            <i class="icon icon-ico_cmb_indisponibile_outline" title="fuori orario"></i>
+            <i class="icon icon-ico_alert_non_disponibile" title="fuori orario"></i>
             <span>AL MOMENTO TUTTE LE FASCE ORARIE<br> RISULTANO PRENOTATE</span>
          </p>
-         <p>Riprova più tardi oppure utilizza gli altri servizi di assistenza.<p>
+         <p>Riprova pi&ugrave; tardi oppure utilizza gli altri servizi di assistenza.<p>
        </div>
-       <div class="row">
-               <div class="col-sm-12">
-                     <strong>Assistente virtuale</strong>
-                     <p>Paolo, il nostro assistente virtuale sempre pronto ad aiutarti</p>
+       <div class="row visible-desktop">
+         <div class="col-sm-12">
+               <strong>Assistente virtuale</strong>
+               <p>Paolo, il nostro assistente virtuale sempre pronto ad aiutarti</p>
+               <div class="form-group btnWrapper">
+                 <div class="btn-align-left">
+                     <a type="button" href="#!" class="btn btn-primary btn-assistente-callback" title="Chiedi a Paolo" onclick="$('#modaleCallMeBack').modal('hide'); vaOpen();"><span class="icon-text">chiedi a Paolo</span></a>
+                  </div>
+                  <br class="clear">
                </div>
+         </div>
        </div>
        <div class="row">
          <div class="col-sm-12">
-            <strong>Numero verde</strong>
+            <strong>Chiamaci</strong>
             <div class="row">
-               <div class="col-sm-6">
-                  <p>Per chiamate dall'Italia</p>
-               </div>
-          </div>
-       </div>
+                  <div class="col-sm-6">
+                     <div class="box-generico-border">
+                           <h4 class="align-center lineBottom">Per chiamate dall'Italia</h4>
+                           
+                           <?php
+                           if ($site == "webank") 
+                           {
+                              ?>
+                              <div class="box-generico-text">
+                                 <p class="tel-number pos-abs"><i class="icon icon-numeroverde_desktop hidden-xs"></i><a href="tel:800 060 070">800 060 070</a></p>
+                              </div>
+                              <?php
+                           }?>
+                           <?php
+                           if ($site == "youweb") 
+                           {
+                              ?>
+                              <div class="box-generico-text">
+                                 <p class="tel-number pos-abs"><i class="icon icon-numeroverde_desktop hidden-xs"></i><a href="tel:800 024 024">800 024 024</a></p>
+                              </div>
+                              <?php
+                           }?>		
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="box-generico-border">
+                           <h4 class="align-center lineBottom">Per chiamate dall'estero</h4>
+                           <?php
+                           if ($site == "webank") 
+                           {
+                              ?>
+                           <div class="box-generico-text">
+                              <p class="tel-number"><i class="icon icon-numeroverde_desktop hidden-xs"></i><a href="tel:00800 1155 1155">00800 1155 1155</a></p>
+                              <p class="align-center tel-stati">Da Belgio, Danimarca, Francia, Germania, Giappone, Olanda, Portogallo, Spagna, Svizzera </p>
+                           </div>
+                           <div class="box-generico-text">
+                              <p class="tel-number"><i class="icon icon-numeroverde_desktop hidden-xs"></i><a href="tel:+39 02 4337 1293">+39 02 4337 1293</a></p>
+                              <p class="align-center tel-stati">(a pagamento) Da tutti gli altri paesi</p>
+                           </div>
+                           <?php
+                           }?>
+                             <?php
+                           if ($site == "youweb") 
+                           {
+                              ?>
+                              <div class="box-generico-text">
+                                 <p class="tel-number pos-abs"><i class="icon icon-numeroverde_desktop hidden-xs"></i><a href="tel:+39 02 43 37 12 34">+39 02 43 37 12 34</a></p>
+                              </div>
+                              <?php
+                           }?>
+                     </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <div class="align-center">
+         <a type="button" id="btn-close" data-dismiss="modal" class="btn btn-primary">chiudi</a>
+      </div>
    </section>
 </form>

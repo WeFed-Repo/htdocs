@@ -1564,6 +1564,9 @@
 .icon-operatore:before {
   content: "\eac5";
 }
+.icon-ico_alert_non_disponibile:before {
+  content: "\eac6";
+}
 .glyph-ico_cmb_badge .path1:before {
   content: "\e967";
   color: #000000;

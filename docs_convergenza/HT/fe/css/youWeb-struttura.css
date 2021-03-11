@@ -397,6 +397,23 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .btn-align-center {text-align: center;}
 .modal-call-me-back .modal-header .close, .modal-call-me-back .ui-dialog .ui-dialog-titlebar-close.ui-state-default,
 .modal-call-me-back .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {background-image: none !important;background-color: #fff !important;position: absolute;top: 20px !important;right: 30px;color: #202d50;border: solid 2px #202d50 !important;border-radius: 50%;width: 24px;height: 24px;z-index: 3;text-indent: -2px;line-height: 21px;font-size: 25px;margin-top: 0 !important;padding-left: 1px;padding-right: 0;}
+.modal-call-me-back .btn-assistente-callback,.modal-call-me-back .btn-assistente-callback:hover {margin-bottom:30px;margin-left:0; height: 34px; background: url('/HT/fe/img/tool_btn_virtass.png') no-repeat 15px 6px; background-size:22px; padding-right:25px;}
+.modal-call-me-back .btn-assistente-callback .icon-text {position:relative; top:4px; padding-left: 20px; font-family: 'bankFont', Arial, sans-serif!important;font-size: 14px;letter-spacing: 0;}
+.modal-call-me-back  .visible-desktop {display: none;}
+.modal-call-me-back .box-generico-border { border: 1px solid #1a2857;  margin: 5px 0 25px 0;}
+.modal-call-me-back .box-generico-border h4 { padding: 10px 18px 10px 18px;margin:0}
+.modal-call-me-back .box-generico-border .lineBottom  {border-bottom: 1px solid #1a2857;margin-bottom:20px}
+.modal-call-me-back .tel-number a {text-decoration: none;color: #1a2855;margin-left: 20px;text-decoration: none;font-size:24px;}
+.modal-call-me-back .tel-number {text-align:center}
+.modal-call-me-back.box-generico-text {
+    padding: 0 18px 0 18px;
+}
+
+@media (min-width:1024px) {   
+	.modal-call-me-back .visible-desktop {
+	  display: block;
+	}
+   } 
 @media screen and (max-width: 991px) {
     .modal-call-me-back {
         font-size: 12px;

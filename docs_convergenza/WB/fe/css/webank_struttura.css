@@ -2621,7 +2621,7 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   text-align: center;
   font-size: 22px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   line-height: 25px;
 }
 .modal-call-me-back .esito .icon {
@@ -2659,12 +2659,63 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
 .modal-call-me-back .formGenerico {
   padding-bottom: 0;
 }
+.modal-call-me-back .btn-assistente-callback {
+  height: 34px;
+  background: url('/WB/fe/img/priv_tool_paolo.png') no-repeat 15px 3px;
+  background-size: 26px;
+  padding-right: 25px;
+}
+.modal-call-me-back .btn-assistente-callback .icon-text {
+  top: 0px;
+  padding-left: 40px;
+}
+.modal-call-me-back .visible-desktop {
+  display: none;
+}
+.modal-call-me-back .box-generico-border {
+  padding-top: 0;
+  margin-top: 5px;
+  min-height: 226px;
+  position: relative;
+}
+.modal-call-me-back .box-generico-border h4 {
+  padding: 10px 18px 10px 18px;
+}
+.modal-call-me-back .box-generico-border .tel-number {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 0;
+}
+.modal-call-me-back .box-generico-border .tel-number .icon,
+.modal-call-me-back .box-generico-border .tel-number a {
+  color: #444444;
+  font-size: 24px;
+}
+.modal-call-me-back .box-generico-border .tel-number.pos-abs {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+.modal-call-me-back .box-generico-border .tel-stati {
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  .modal-call-me-back .visible-desktop {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
   .modal-call-me-back .btn-default + .btn-primary {
     margin-left: 0;
   }
   .modal-call-me-back .esito {
     font-size: 18px;
+  }
+  .modal-call-me-back .box-generico-border {
+    min-height: 0;
+  }
+  .modal-call-me-back .box-generico-border .tel-number.pos-abs {
+    position: static;
   }
 }
 @media (min-width: 768px) and (max-width: 1000px) {
@@ -2674,6 +2725,19 @@ div.tool#tool9 p[style="float:left"] + p .alRgFields select {
   .modal-call-me-back .orariDispoWrapper .orari-select {
     padding-left: 5px;
     padding-right: 5px;
+    font-size: 13px;
+  }
+  .modal-call-me-back .box-generico-border {
+    min-height: 246px;
+  }
+  .modal-call-me-back .box-generico-border .tel-number .icon,
+  .modal-call-me-back .box-generico-border .tel-number a {
+    font-size: 22px;
+  }
+  .modal-call-me-back .box-generico-border .tel-number a {
+    margin-left: 10px;
+  }
+  .modal-call-me-back .box-generico-border .tel-stati {
     font-size: 13px;
   }
 }
