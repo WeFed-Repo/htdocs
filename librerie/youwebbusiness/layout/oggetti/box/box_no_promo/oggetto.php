@@ -2,7 +2,7 @@
 <section>
 	<div class="box-promo no-promo">
 		<div class="row">
-			<div class="col-md col-sm-12">
+			<div class="col-md col-sm-12 pt-0">
 				<div class="h-100 box-promo-left d-flex justify-content-center align-items-center">
 					<img src="./fe/img/placeholder_box_no_promo.png" alt="immagine box mo promo"/>
 				</div>
@@ -11,7 +11,7 @@
 		<div class="row">	
 			<div class="col-md col-sm-12 text-center">
 				<h4 class="title-blue">Lorem ipsum dolor sit</h4>
-				<p class="text-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</p>
+				<p class="text-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</p>
 			</div>
 		</div>
 		

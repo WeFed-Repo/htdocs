@@ -860,6 +860,10 @@ a:not(.btn).disabled, a:not(.btn).disabled:hover, a:not(.btn)[disabled], a:not(.
   text-decoration: none;
   cursor: default;
 }
+a:not(.btn).color-warning, a:not(.btn).color-warning:hover {
+  color: #CF9418 !important;
+}
+
 .text-decoration-none,
 a.text-decoration-none,
 a:not(.btn):not([class*=btn]).text-decoration-none {
