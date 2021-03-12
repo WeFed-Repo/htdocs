@@ -13,6 +13,7 @@ var refreshContdowns = function() {
     });
 }
 
+
 var smlCleanNumber = function(field){
     var val = $(field).val();
     // Rimuove caratteri estranei
@@ -27,7 +28,13 @@ var smlCheckImporto = function(){
     field.val(val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
     sml.importo = val;
     sml.sliderimporto.slider("value",val);
+    smlResetResults();
+}
+
+
+var smlResetResults = function(){
     sml.calcola.removeClass("disabled");
+    smlSetResults({})
 }
 
 var getCountdownHtml = function(scadenza){
@@ -45,7 +52,26 @@ var getCountdownHtml = function(scadenza){
             minuti: emudate.getMinutes(),
             secondi: emudate.getSeconds()
         } 
-        cdcomp = $("<div>").html(cdo.giorni + "-"+ cdo.ore + ":" + cdo.minuti + ":" + cdo.secondi);
+        cdcomp = $("<div>").addClass("countdown-inline").append(
+
+            // Giorni
+            $("<div>").addClass("cdblock giorni").append(
+                $("<span>").addClass("time-countdown").html(cdo.giorni),
+                $("<span>").addClass("time-label").html("giorn" + ((cdo.giorni===1) ? "o" : "i"))
+            ),
+
+            // Ore
+            $("<div>").addClass("cdblock ore").append(
+                $("<span>").addClass("time-countdown").html(cdo.ore),
+                $("<span>").addClass("time-label").html("or" + ((cdo.ore===1) ? "a" : "e"))
+            ),
+
+            // Minuti
+            $("<div>").addClass("cdblock minuti").append(
+                $("<span>").addClass("time-countdown").html(cdo.minuti),
+                $("<span>").addClass("time-label").html("minut" + ((cdo.minuti===1) ? "o" : "i"))
+            )
+        )
     }
 
     return cdcomp;
@@ -75,9 +101,18 @@ var getMilestones = function(obj) {
 
 // Acquisizione dei dati dall'handler esterno
 var getLendingData = function(data) {
-
-    console.log(data);
+    smlSetResults(data);
     sml.wrap.removeClass("loading");
+}
+
+var smlSetResults = function (data) {
+    sml.results.addClass("disabled");
+    $.each(sml.results.find(".result"),function(i,v){
+            var id = $(v).attr("id").replace("result_","");
+            if (data && data[id]) sml.results.removeClass("disabled");
+            $(v).html((data && data[id])? data[id] : " - ");
+        })
+    
 }
 
 
@@ -100,7 +135,7 @@ var startLending = function(params) {
     
     
     // Inizializzazione dei parametri e dei vari oggetti del configuratore in base ai dati provenienti dall'esterno
-    sml["wrap"]=  $(params.id).addClass("loading"),
+    sml["wrap"]=  $(params.id).addClass("loading configuratore"),
 
     sml["scadenza"]= 
                     ((typeof params.scadenza == "undefined") ? "" :
@@ -117,7 +152,7 @@ var startLending = function(params) {
         var imp = ui.value;
         sml.importo = imp;
         sml.importoinput.val(imp).trigger("blur");
-        sml.calcola.removeClass("disabled");
+        smlResetResults();
     }});
     sml["importomilestones"] = getMilestones({min:sml.importomin,max:sml.importomax,steps: 6});
     
@@ -126,12 +161,9 @@ var startLending = function(params) {
         var dur = ui.value;
         sml.durata = dur;
         sml.durataoutput.html(dur);
-        sml.calcola.removeClass("disabled");
+        smlResetResults();
     }});
     sml["duratamilestones"] = getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2});
-
-
-
 
     sml["preammortamento"] = $("<span>").addClass("output").html("24 mesi");
     
@@ -148,12 +180,26 @@ var startLending = function(params) {
             }
             params.handlerCalcola(data,getLendingData);
         }
-    })
-   
-    // Inizializzazioni
-    sml.importoinput.trigger("blur");
-    sml.calcola.addClass("disabled");
+    });
+
+    // Risultati
+    sml["results"] = $("<div>").addClass("results disabled").append(
+        $.map([
+            {"id": "spese","label":"Spese", "modal": true},
+            {"id": "taeg","label":"Taeg", "modal": false},
+            {"id": "tan","label":"Tan", "modal": false},
+            {"id": "rate","label":"Rate mensili", "modal": false},
+            {"id": "rata","label":"La tua rata", "modal": true}
+        ],function(div){
+            return $("<div>").addClass("result-box " + div.id).append(
+                $("<span>").addClass("result-label").html(div.label),
+                $("<span>").addClass("result").attr({id: "result_"+div.id}).html(" - ")
+            )
+        })
+        )
     
+   
+  
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
@@ -215,16 +261,21 @@ var startLending = function(params) {
                     // Bottone di calcolo
                     sml.calcola
                 )
+            ),
+
+            // Riga 3 (risultati)
+            $("<div>").addClass("form-row").append(
+                $("<div>").addClass("col-sm-12").append(
+                    sml.results
+                )
             )
         )    
     );
 
-    // Emulazione
-    setTimeout(function(){
-        // Fine caricamento oggetto
-        sml.wrap.removeClass("loading");
-    },
-    1000);
+
+    // Inizializzazioni
+    sml.importoinput.trigger("blur");
+    sml.calcola.trigger("click");
 
 }
    

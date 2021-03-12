@@ -23,12 +23,41 @@
     .loading>* {visibility:hidden}
     .sml.loading {min-height:200px}
 
+    /* Countdown */
+     
+
     /* Oggetti dedicati */
+    .configuratore .top-evidente {text-align:center}
     .slider-input {display:block;font-size:20px;font-weight:bold; width:100px;padding: 5px 10px; border:solid 1px #ccc;border-radius:5px; position:relative;
     margin:0 auto;float:none;clear:both;}
     .slider-input::after {position:absolute;content: "&euro"}
     .slider-output {font-size:20px;font-weight:bold; width:100px;padding: 6px 10px; position:relative; display:block;
     margin:0 auto;float:none;clear:both;}
+
+    /* Offerta */
+    .cd-block {width:auto; margin:0 auto; display:inline-block; vertical-align:top;}
+    .cd-block span {    font-weight: bold;
+    text-transform: uppercase;
+    width: 110px;
+    padding: 18px 20px 0 0;
+    text-align: right;
+    float: left;}
+    .cd-block .countdown {font-weight:bold; text-transform:uppercase; text-align:right;display:inline-block; background-color:blue; padding:0 0 0 70px;
+      background: transparent url(./fe/img/scadenza_countdown.png) no-repeat 0 0; background-size: 53px 68px;
+      text-align:left;
+      }
+    .cd-block .countdown div.cdblock {width:70px; display:inline-block; text-align:center;}
+    .cd-block .countdown div.cdblock span {text-align:center;width:100%;padding:0;font-weight:normal;font-size:12px}
+    .cd-block .countdown div.cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;}
+    .cd-block .countdown div.cdblock.giorni {color: #2F9988}
+    
+    /* Risultati */
+    .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
+    .results.disabled {opacity:0.6}
+    .results .result-box {flex-grow:1;padding:15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;}
+    .results .result-box:first-child {margin-left:0;}
+    .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:14px;font-weight:bold;}
+    .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:21px;}
 
   </style>
   <!-- /// FINE SEPARARE -->
@@ -37,8 +66,11 @@
 
       var esempioHandlerCalcola = function(dataToSend,callback) {
         var dataObject = {
-          "taeg": 123.321,
-          "tan": 21.3123
+          "spese": Math.round(Math.random()*3000*100)/100,
+          "taeg": Math.round(Math.random()*10*100)/100,
+          "tan": Math.round(Math.random()*10*100)/100,
+          "rate":parseInt( Math.random()*11)+1,
+          "rata":Math.round(Math.random()*1000*100)/100
         }
         // Esempio tracciatura dei dati ricevuti
         console.log(dataToSend);
@@ -51,7 +83,7 @@
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      scadenza: 1614556800000,
+      scadenza: 1617141600000,
       handlerCalcola: esempioHandlerCalcola
     })
   </script>
@@ -103,214 +135,3 @@
 <!-- Fine pulsantiera -->
 
 <!-- END FORM DI RICHIESTA FINANZIAMENTO -->
-
-<!-- MODALE HELP -->
-  <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_help/modale.php'); ?>
-<!-- END MODALE HELP -->
-
-
-<!-- MODALE di info TAN -->
-<div class="modal fade" data-modal="tan">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">TAN</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-          aliquet nec, vulputate eget, arcu.</p>
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-          Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras 
-          dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. 
-          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper 
-          ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget 
-          condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque 
-          sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-          Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero 
-          venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus 
-          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
-          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit 
-          cursus nunc,</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE di info TAN -->
-
-<!-- MODALE di info TAEG -->
-<div class="modal fade" data-modal="taeg">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">TAEG</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-          aliquet nec, vulputate eget, arcu.</p>
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-          Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras 
-          dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. 
-          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper 
-          ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget 
-          condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque 
-          sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-          Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero 
-          venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus 
-          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
-          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit 
-          cursus nunc,</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE di info TAEG -->
-
-<!-- MODALE DOCUMENTO 1 -->
-<div class="modal fade" data-modal="doc1">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">Foglio informativo</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body"> 
-        <div id="doc1" class="c-scrolled-doc">
-          <div class="c-scrolled-doc__innerWrap">
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-          </div>
-        </div>
-        <div class="alert-to-scroll">Visualizza il documento sino alla fine per procedere.</div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary c-scrolled-doc__confirm" data-confirm="doc1" disabled data-dismiss="modal" aria-label="Close">
-          Ho letto la documentazione
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE DOCUMENTO 1 -->
-
-<!-- MODALE DOCUMENTO 2 -->
-<div class="modal fade" data-modal="doc2">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">Minuta di contratto</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <div id="doc2" class="c-scrolled-doc">
-          <div class="c-scrolled-doc__innerWrap">
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-          </div>
-        </div>
-        <div class="alert-to-scroll">Visualizza il documento sino alla fine per procedere.</div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary c-scrolled-doc__confirm" data-confirm="doc2" disabled data-dismiss="modal" aria-label="Close">
-          Ho letto la documentazione
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE DOCUMENTO 2 -->
