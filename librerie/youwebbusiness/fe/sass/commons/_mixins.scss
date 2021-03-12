@@ -147,7 +147,7 @@
                   $color_disabled:$white,
                   $bkg_disabled:$gray4,
                   $border_disabled: transparent) {
-  &:not(:disabled):not(.disabled) {
+  &:not(:disabled):not(.disabled):not(.btn-stepper) {
     opacity: 1;
     color: $color;
     background-color: $bkg;

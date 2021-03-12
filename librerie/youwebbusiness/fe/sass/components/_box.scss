@@ -90,7 +90,7 @@
       }
     }
     .box-promo-doc {
-      font-size: 14px; 
+     
       line-height: 24px;
       a {
         text-decoration: none;
@@ -212,3 +212,191 @@
 }
 }
 */
+
+/* STEPPER */
+.step-wrapper {
+    margin:0 -6px;
+    font-size: 14px;
+
+    .btn-stepper, .btn-stepper:hover {
+      border-radius:16px;
+      padding: 8px 16px;
+      height: 30px;
+      font-size:13px;
+      line-height: 13px;
+      background-color: transparent;
+      border: 2px solid;
+      cursor: default;
+      font-weight: bold;
+      margin:0;
+      min-width: 125px;
+     }
+    .row {
+        
+        .col-12 {
+            &:not(:first-child) {
+              border-bottom:1px solid #d9dce6;
+            }
+            &:first-child {
+              background-color: #f2faf8;
+            }
+        }
+       
+    }
+    .state-active {
+        .step-number {
+          box-shadow: 0 4px 8px 0 #dde0ec;
+          background-color: #0e977f;
+          color:$white;
+        }
+        .btn-stepper, .btn-stepper:hover {
+          border-color:#c4314b;
+          color:#c4314b;
+        }
+        .step-date,.step-output {
+          display: none;
+        }
+      }
+      .state-done { 
+        .btn-stepper, .btn-stepper:hover {
+          border-color:#2f9988;
+          color:#2f9988;
+        }
+        .step-number {
+          color:$white;
+          background:  #135358 url(../img/icon/checkmark.svg) no-repeat;
+         
+          span {
+            display: none;
+          }
+        }
+      }
+      .state-disactive {
+        background-color: #f5f5f5;
+        .step-reas{
+          opacity:0.5;
+        }
+        .step-date,.step-output {
+          display: none;
+        }
+        .step-number {
+          color:#afd4cd;
+          border-color:#afd4cd;
+          background-color: $white;
+        }
+        .btn-stepper, .btn-stepper:hover {
+          border-color:#dddddd;
+          color:#707070;
+        }
+      }
+      .step-separator {
+        width: 1px;
+        right: 0;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        &:after {
+            content: "";
+            display: block;
+            border-left: 1px solid $grayBordered2;
+            height: 100%;
+            width: 1px;
+        }
+      }
+      .step-name, .step-state {
+        position:relative;
+        padding: 28px 40px 0 33px;
+        height: 100%;
+        min-height: 77px;
+      }
+      .step-name {
+       div { 
+          text-align: right;
+          &.step-reas {
+            font-weight: bold;
+            color:#1d2d53;
+           
+           
+          }
+          &.step-date {
+            color:$gray9;
+            font-weight: normal;
+          }
+        }
+      .step-number {
+        position: absolute;
+        right:-14px;
+        top:35%;
+        width: 28px;
+        height: 28px;
+        border:1px solid $grayBordered2;
+        border-radius:50%;
+        text-align:center;
+        z-index:1;
+        line-height: 24px;
+        
+      }
+    }
+    .step-point {
+        padding: 0 8px;
+        &:after { 
+          content: "";
+          position:absolute;
+          bottom:-3px;
+          left:-3px;
+          color:#ccc;
+          width:6px;
+          height:6px;
+          background:#a1a4ae;
+          border-radius:50%;
+          z-index:4;
+      }
+    }
+    .step-state {
+      span {
+        margin-right:60px;
+      }
+      .step-separator {
+        &:after {
+          display:none
+          }
+        }
+      
+    }
+    .step-output {
+
+    }
+}
+@media (max-width: 767px) {  
+  .step-wrapper {
+    .step-separator {
+       left:32px;
+     }
+    .step-name {
+      div { 
+        &.step-reas, &.step-date {
+          text-align: left;
+          padding-left: 30px;
+        }
+      
+      }
+    .step-number {
+      left:19px;
+     }
+  }
+  .step-point {
+      &:after { 
+       left:38px;
+    }
+  }
+  .step-state {
+   .step-separator {
+      left:32px;
+      &:after {
+        display:block
+        }
+      }
+    
+  }
+}
+}
