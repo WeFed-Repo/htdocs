@@ -217,13 +217,12 @@
 .step-wrapper {
     margin:0 -6px;
     font-size: 14px;
-
     .btn-stepper, .btn-stepper:hover {
       border-radius:16px;
       padding: 8px 16px;
       height: 30px;
       font-size:13px;
-      line-height: 13px;
+      line-height: 10px;
       background-color: transparent;
       border: 2px solid;
       cursor: default;
@@ -232,16 +231,19 @@
       min-width: 125px;
      }
     .row {
-        
-        .col-12 {
+        min-height: 77px;
+        color:#183f55;
+        &:not(:last-child) {
+          .col-12 {
             &:not(:first-child) {
               border-bottom:1px solid #d9dce6;
             }
             &:first-child {
               background-color: #f2faf8;
             }
+          }
         }
-       
+      
     }
     .state-active {
         .step-number {
@@ -253,30 +255,29 @@
           border-color:#c4314b;
           color:#c4314b;
         }
-        .step-date,.step-output {
-          display: none;
-        }
-      }
-      .state-done { 
+     }
+    .state-done {
+        background-color: #e5f4f2;
         .btn-stepper, .btn-stepper:hover {
           border-color:#2f9988;
           color:#2f9988;
         }
         .step-number {
           color:$white;
-          background:  #135358 url(../img/icon/checkmark.svg) no-repeat;
-         
+          background:  #135358 url(../img/check_white.png) no-repeat 7px 7px;
+          background-size:11px; 
           span {
             display: none;
           }
         }
-      }
-      .state-disactive {
+       
+    }
+    .state-disactive {
         background-color: #f5f5f5;
         .step-reas{
           opacity:0.5;
         }
-        .step-date,.step-output {
+        .step-date, .step-edit {
           display: none;
         }
         .step-number {
@@ -288,8 +289,11 @@
           border-color:#dddddd;
           color:#707070;
         }
+        .step-date,.step-output-name,.step-output-doc,.step-output-edit {
+          display: none;
+        }
       }
-      .step-separator {
+    .step-separator {
         width: 1px;
         right: 0;
         top: 0;
@@ -302,15 +306,22 @@
             height: 100%;
             width: 1px;
         }
-      }
-      .step-name, .step-state {
-        position:relative;
-        padding: 28px 40px 0 33px;
-        height: 100%;
-        min-height: 77px;
-      }
-      .step-name {
-       div { 
+    }
+    .step-name, .step-state, .step-output {
+      position:relative;
+      padding: 26px 0px 0 0px;
+      height: 100%;
+    }
+    .step-state {
+      padding: 23px 0px 0 33px;
+    }
+    .step-name {
+      padding-right: 25px;
+    }
+    .step-output {padding-right: 10px;}
+    .step-name {
+      min-height: 77px;
+      div { 
           text-align: right;
           &.step-reas {
             font-weight: bold;
@@ -322,11 +333,11 @@
             color:$gray9;
             font-weight: normal;
           }
-        }
+      }
       .step-number {
         position: absolute;
         right:-14px;
-        top:35%;
+        top:24px;
         width: 28px;
         height: 28px;
         border:1px solid $grayBordered2;
@@ -334,7 +345,6 @@
         text-align:center;
         z-index:1;
         line-height: 24px;
-        
       }
     }
     .step-point {
@@ -343,7 +353,7 @@
           content: "";
           position:absolute;
           bottom:-3px;
-          left:-3px;
+          left:-11px;
           color:#ccc;
           width:6px;
           height:6px;
@@ -354,7 +364,7 @@
     }
     .step-state {
       span {
-        margin-right:60px;
+        margin-right:30px;
       }
       .step-separator {
         &:after {
@@ -364,10 +374,74 @@
       
     }
     .step-output {
-
+      text-align: right;
+      .step-point{
+        display:none
+      }
+      .step-separator {
+        &:after {
+          display:none
+          }
+        }
+      .step-output-edit,.step-output-doc {
+        font-weight:bold;
+        line-height: 14px;
+        a {
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          width: 100%;
+         
+        }
+        img {float:none}
+      }
+      .step-output-edit {
+        width: 30%;
+        float: right;
+        padding-top:2px;
+     }
+      .step-output-name,.step-output-doc {
+         width: 70%;
+         float: left;
+         padding: 2px 5% 5px 0;
+      }
+      .step-output-firme {
+        padding: 5px 0 5px 0;
+      }
+      .step-output-doc {
+        border-right: solid 1px #d9dce6;
+      }
     }
 }
+@media (min-width: 768px) and (max-width: 991px) {  
+  .step-wrapper {
+    .step-state,.step-output {
+      padding: 22px 10px 0 20px;
+    }
+    .step-output {
+      padding-left:0;
+    }
+    .step-state span{
+      margin-right:10px;
+    }
+    .step-output {
+      .step-output-doc {
+        span{
+          padding-left:25px;
+          display: block;
+          text-align: left;
+        }
+        img {
+          float: left;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 767px) {  
+  .step-wrapper .row .col-12:not(:first-child):not(:last-child) {
+    border-bottom:0;
+  }
   .step-wrapper {
     .step-separator {
        left:32px;
@@ -376,9 +450,7 @@
       div { 
         &.step-reas, &.step-date {
           text-align: left;
-          padding-left: 30px;
         }
-      
       }
     .step-number {
       left:19px;
@@ -386,17 +458,61 @@
   }
   .step-point {
       &:after { 
-       left:38px;
+       left:30px;
     }
   }
-  .step-state {
+  .step-state,.step-name  {
+    padding-left:56px;
+    span {
+      margin-right:0;
+      margin-bottom:10px;
+      display:block;
+    }
+  }
+  .step-output {
+    padding-left:56px;
+    text-align: left;
+    .step-output-name,.step-output-doc,.step-output-firme {
+      margin-bottom:10px;
+    }
+    .step-output-doc {
+      border-right:0;
+      span{
+       padding-left:25px;
+       display: block;
+       text-align: left;
+      }
+      img {
+        float: left;
+      }
+    }
+  }
+  .step-state .step-point {display:none}
+  .step-output .step-point {display:block}
+  .step-state,.step-output {
    .step-separator {
       left:32px;
       &:after {
         display:block
         }
       }
-    
+   }
   }
 }
+
+@media (max-width: 400px) {  
+  .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
+    width: 60%;
+  }
+  .step-wrapper .step-output .step-output-edit {
+    width: 40%;
+  }
+}
+@media (min-width: 1400px) {  
+  .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
+    width: 80%;
+  }
+  .step-wrapper .step-output .step-output-edit {
+    width: 20%;
+  }
 }

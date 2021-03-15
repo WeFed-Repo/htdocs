@@ -5596,7 +5596,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   padding: 8px 16px;
   height: 30px;
   font-size: 13px;
-  line-height: 13px;
+  line-height: 10px;
   background-color: transparent;
   border: 2px solid;
   cursor: default;
@@ -5604,10 +5604,14 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   margin: 0;
   min-width: 125px;
 }
-.step-wrapper .row .col-12:not(:first-child) {
+.step-wrapper .row {
+  min-height: 77px;
+  color: #183f55;
+}
+.step-wrapper .row:not(:last-child) .col-12:not(:first-child) {
   border-bottom: 1px solid #d9dce6;
 }
-.step-wrapper .row .col-12:first-child {
+.step-wrapper .row:not(:last-child) .col-12:first-child {
   background-color: #f2faf8;
 }
 .step-wrapper .state-active .step-number {
@@ -5619,8 +5623,8 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border-color: #c4314b;
   color: #c4314b;
 }
-.step-wrapper .state-active .step-date, .step-wrapper .state-active .step-output {
-  display: none;
+.step-wrapper .state-done {
+  background-color: #e5f4f2;
 }
 .step-wrapper .state-done .btn-stepper, .step-wrapper .state-done .btn-stepper:hover {
   border-color: #2f9988;
@@ -5628,7 +5632,8 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .step-wrapper .state-done .step-number {
   color: #FFFFFF;
-  background: #135358 url(../img/icon/checkmark.svg) no-repeat;
+  background: #135358 url(../img/check_white.png) no-repeat 7px 7px;
+  background-size: 11px;
 }
 .step-wrapper .state-done .step-number span {
   display: none;
@@ -5639,7 +5644,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .step-wrapper .state-disactive .step-reas {
   opacity: 0.5;
 }
-.step-wrapper .state-disactive .step-date, .step-wrapper .state-disactive .step-output {
+.step-wrapper .state-disactive .step-date, .step-wrapper .state-disactive .step-edit {
   display: none;
 }
 .step-wrapper .state-disactive .step-number {
@@ -5650,6 +5655,9 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .step-wrapper .state-disactive .btn-stepper, .step-wrapper .state-disactive .btn-stepper:hover {
   border-color: #dddddd;
   color: #707070;
+}
+.step-wrapper .state-disactive .step-date, .step-wrapper .state-disactive .step-output-name, .step-wrapper .state-disactive .step-output-doc, .step-wrapper .state-disactive .step-output-edit {
+  display: none;
 }
 .step-wrapper .step-separator {
   width: 1px;
@@ -5665,10 +5673,21 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   height: 100%;
   width: 1px;
 }
-.step-wrapper .step-name, .step-wrapper .step-state {
+.step-wrapper .step-name, .step-wrapper .step-state, .step-wrapper .step-output {
   position: relative;
-  padding: 28px 40px 0 33px;
+  padding: 26px 0px 0 0px;
   height: 100%;
+}
+.step-wrapper .step-state {
+  padding: 23px 0px 0 33px;
+}
+.step-wrapper .step-name {
+  padding-right: 25px;
+}
+.step-wrapper .step-output {
+  padding-right: 10px;
+}
+.step-wrapper .step-name {
   min-height: 77px;
 }
 .step-wrapper .step-name div {
@@ -5685,7 +5704,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .step-wrapper .step-name .step-number {
   position: absolute;
   right: -14px;
-  top: 35%;
+  top: 24px;
   width: 28px;
   height: 28px;
   border: 1px solid #d9dce6;
@@ -5701,7 +5720,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   content: "";
   position: absolute;
   bottom: -3px;
-  left: -3px;
+  left: -11px;
   color: #ccc;
   width: 6px;
   height: 6px;
@@ -5710,30 +5729,141 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   z-index: 4;
 }
 .step-wrapper .step-state span {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 .step-wrapper .step-state .step-separator:after {
   display: none;
 }
+.step-wrapper .step-output {
+  text-align: right;
+}
+.step-wrapper .step-output .step-point {
+  display: none;
+}
+.step-wrapper .step-output .step-separator:after {
+  display: none;
+}
+.step-wrapper .step-output .step-output-edit, .step-wrapper .step-output .step-output-doc {
+  font-weight: bold;
+  line-height: 14px;
+}
+.step-wrapper .step-output .step-output-edit a, .step-wrapper .step-output .step-output-doc a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.step-wrapper .step-output .step-output-edit img, .step-wrapper .step-output .step-output-doc img {
+  float: none;
+}
+.step-wrapper .step-output .step-output-edit {
+  width: 30%;
+  float: right;
+  padding-top: 2px;
+}
+.step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
+  width: 70%;
+  float: left;
+  padding: 2px 5% 5px 0;
+}
+.step-wrapper .step-output .step-output-firme {
+  padding: 5px 0 5px 0;
+}
+.step-wrapper .step-output .step-output-doc {
+  border-right: solid 1px #d9dce6;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .step-wrapper .step-state, .step-wrapper .step-output {
+    padding: 22px 10px 0 20px;
+  }
+  .step-wrapper .step-output {
+    padding-left: 0;
+  }
+  .step-wrapper .step-state span {
+    margin-right: 10px;
+  }
+  .step-wrapper .step-output .step-output-doc span {
+    padding-left: 25px;
+    display: block;
+    text-align: left;
+  }
+  .step-wrapper .step-output .step-output-doc img {
+    float: left;
+  }
+}
 @media (max-width: 767px) {
+  .step-wrapper .row .col-12:not(:first-child):not(:last-child) {
+    border-bottom: 0;
+  }
+
   .step-wrapper .step-separator {
     left: 32px;
   }
   .step-wrapper .step-name div.step-reas, .step-wrapper .step-name div.step-date {
     text-align: left;
-    padding-left: 30px;
   }
   .step-wrapper .step-name .step-number {
     left: 19px;
   }
   .step-wrapper .step-point:after {
-    left: 38px;
+    left: 30px;
   }
-  .step-wrapper .step-state .step-separator {
+  .step-wrapper .step-state, .step-wrapper .step-name {
+    padding-left: 56px;
+  }
+  .step-wrapper .step-state span, .step-wrapper .step-name span {
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .step-wrapper .step-output {
+    padding-left: 56px;
+    text-align: left;
+  }
+  .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc, .step-wrapper .step-output .step-output-firme {
+    margin-bottom: 10px;
+  }
+  .step-wrapper .step-output .step-output-doc {
+    border-right: 0;
+  }
+  .step-wrapper .step-output .step-output-doc span {
+    padding-left: 25px;
+    display: block;
+    text-align: left;
+  }
+  .step-wrapper .step-output .step-output-doc img {
+    float: left;
+  }
+  .step-wrapper .step-state .step-point {
+    display: none;
+  }
+  .step-wrapper .step-output .step-point {
+    display: block;
+  }
+  .step-wrapper .step-state .step-separator, .step-wrapper .step-output .step-separator {
     left: 32px;
   }
-  .step-wrapper .step-state .step-separator:after {
+  .step-wrapper .step-state .step-separator:after, .step-wrapper .step-output .step-separator:after {
     display: block;
+  }
+}
+@media (max-width: 400px) {
+  .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
+    width: 60%;
+  }
+
+  .step-wrapper .step-output .step-output-edit {
+    width: 40%;
+  }
+}
+@media (min-width: 1400px) {
+  .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
+    width: 80%;
+  }
+
+  .step-wrapper .step-output .step-output-edit {
+    width: 20%;
   }
 }
 .c-filter .nav-tabs {
