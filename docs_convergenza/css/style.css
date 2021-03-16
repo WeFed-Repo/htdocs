@@ -155,6 +155,11 @@ header.librerie .code-console .console a.on {
     font-size: 20px;
     margin: 20px 0;
 }
+@media (max-width: 767px) { 
+    #main h2.oggettolib span {
+        display:none;
+    }
+ }
 
 #main h2.oggettolib.convergenza {
     background: #900;
