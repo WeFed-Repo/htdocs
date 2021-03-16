@@ -15,7 +15,7 @@
 					<div class="panel-body">
 						<div class="tab-wrap">
 							<h4>Le guide viaggi</h4>
-							<p>Tutte le informazioni che devi avere prima di intraprendere il tuo viaggio.<p>
+							<p>Tutte le informazioni che devi avere prima di intraprendere il tuo viaggio.</p>
 							<div class="box-link">
 								<div class="row">
 									<div class="col-xs-6 col-sm-10"><p>AUSTRIA<p></div>
@@ -38,7 +38,7 @@
 						<!--ZONA TESTO CONTENUTO PRIMO TAB -->
 					    <div class="tab-wrap">
 							<h4>Orientati meglio e tutela i tuoi diritti nella vita di tutti i giorni</h4>
-							<p>Il rapporto di lavoro domestico, la responsabilit&agrave; civile per i danni cagionati da animali, la legittima difesa, ecc.<p>
+							<p>Il rapporto di lavoro domestico, la responsabilit&agrave; civile per i danni cagionati da animali, la legittima difesa, ecc.</p>
 							<div class="box-link">
 								<div class="row">
 									<div class="col-xs-6 col-sm-10"><p>Il nuovo concetto di famiglia, tra interventi normativi e giurisprudenziali<p></div>
@@ -61,7 +61,7 @@
 					<div class="panel-body">
 					<div class="tab-wrap">
 							<h4>Le normative attualmente in vigore in Italia</h4>
-							<p>Le regole principali, i casi di ritiro, sospensione o revoca della patente, come funziona la patente a punti e molto altro.<p>
+							<p>Le regole principali, i casi di ritiro, sospensione o revoca della patente, come funziona la patente a punti e molto altro.</p>
 							<div class="box-link">
 								<div class="row">
 									<div class="col-xs-6 col-sm-10"><p>Guida alle violazioni e sanzioni del codice della strada<p></div>
