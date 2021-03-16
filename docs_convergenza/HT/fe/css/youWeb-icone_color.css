@@ -24,7 +24,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.glyph { width:20px;height:20px;} 
 .glyph-ico_cmb_alert .path1:before {
   content: "\e915";
   color: rgb(0, 0, 0);

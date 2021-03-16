@@ -171,10 +171,10 @@ ol {
 
 .bordered {
   @include bordered();
-  >.row {
+  /*>.row {
     margin-left:0;
     margin-right:0;
-  }
+  }*/
 }
 
 @media (max-width: $bp_md_max) {

@@ -992,6 +992,10 @@ ol {
   color: #737373;
   width: 100%;
   max-width: 100%;
+  /*>.row {
+    margin-left:0;
+    margin-right:0;
+  }*/
 }
 .bordered.no-b-t {
   border-top: none;
@@ -1004,10 +1008,6 @@ ol {
 }
 .bordered.no-b-b {
   border-bottom: none;
-}
-.bordered > .row {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 @media (max-width: 767px) {
