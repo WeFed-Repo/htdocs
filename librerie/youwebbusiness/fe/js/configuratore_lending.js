@@ -156,11 +156,11 @@ var startLending = function(params) {
     }});
     sml["importomilestones"] = getMilestones({min:sml.importomin,max:sml.importomax,steps: 6});
     
-    sml["durataoutput"]= $("<span>").addClass("slider-output durata").html(sml.durata);
+    sml["durataoutput"]= $("<span>").addClass("slider-output durata").html(sml.durata + " mesi");
     sml["sliderdurata"]= $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step:6,slide: function(e,ui){
         var dur = ui.value;
         sml.durata = dur;
-        sml.durataoutput.html(dur);
+        sml.durataoutput.html(dur + " mesi");
         smlResetResults();
     }});
     sml["duratamilestones"] = getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2});
@@ -203,70 +203,71 @@ var startLending = function(params) {
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
-            
-            // RIGA 1
-            $("<div>").addClass("form-row").append(
+            $("<div>").addClass("flex-bordered").append(
+                // RIGA 1
+                $("<div>").addClass("bordered-between").append(
 
-                // Range importo
-                $("<div>").addClass("form-group col-md-6").append( 
-                    $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
-                    sml.importoinput,
-                    sml.sliderimporto,
-                    sml.importomilestones
-                ),
+                    // Range importo
+                    $("<div>").addClass("form-group flex-element").append( 
+                        $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
+                        $("<div>").addClass("editable-field-wrapper importo").append(sml.importoinput),
+                        sml.sliderimporto,
+                        sml.importomilestones
+                    ),
 
-                // Range slider
-                $("<div>").addClass("form-group col-md-6").append(
-                    
-                    $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
-                    sml.durataoutput,
-                    sml.sliderdurata,
-                    sml.duratamilestones
-                ),
-              
-            ),
-        
-            // RIGA 2
-            
-            $("<div>").addClass("form-row").append(
-                $("<div>").addClass("form-group col-md-6").append(
-                    // Radio button selezione
-                    $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
+                    // Range slider
+                    $("<div>").addClass("form-group flex-element").append(
+                        
+                        $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
+                        sml.durataoutput,
+                        sml.sliderdurata,
+                        sml.duratamilestones
+                    ),
                 
-                    $("<div>").addClass("row").append(
-                        $("<div>").addClass("col-sm-4").append(
-                            $("<div>").addClass("form-check radio").append(
-                                $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
-                                $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
-                            )
-                        ),
-                        $("<div>").addClass("col-sm-8").append(
-                            $("<div>").addClass("form-check radio").append(
-                                $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
-                                $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
+                ),
+            
+                // RIGA 2
+                
+                $("<div>").addClass("form-row bordered-top").append(
+                    $("<div>").addClass("form-group col-md-6").append(
+                        // Radio button selezione
+                        $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
+                    
+                        $("<div>").addClass("row").append(
+                            $("<div>").addClass("col-sm-4").append(
+                                $("<div>").addClass("form-check radio").append(
+                                    $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
+                                    $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
+                                )
+                            ),
+                            $("<div>").addClass("col-sm-8").append(
+                                $("<div>").addClass("form-check radio").append(
+                                    $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
+                                    $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
+                                )
                             )
                         )
                     )
-                  )
-                ,
+                    ,
 
-                $("<div>").addClass("form-group col-md-4").append(
-                    // Preammortamento
-                    $("<label>").addClass("control-label").html("Preammortamento"),
-                    sml.preammortamento
+                    $("<div>").addClass("form-group col-md-4").append(
+                        // Preammortamento
+                        $("<label>").addClass("control-label").html("Preammortamento"),
+                        sml.preammortamento
+                    ),
+
+                    // Bottone di calcolo
+                    $("<div>").addClass("form-group no-label col-md-2").append(
+                        // Bottone di calcolo
+                        sml.calcola
+                    )
                 ),
 
-                // Bottone di calcolo
-                $("<div>").addClass("form-group no-label col-md-2").append(
-                    // Bottone di calcolo
-                    sml.calcola
-                )
-            ),
-
-            // Riga 3 (risultati)
-            $("<div>").addClass("form-row").append(
-                $("<div>").addClass("col-sm-12").append(
-                    sml.results
+                // Riga 3 (risultati)
+                $("<div>").addClass("form-row").append(
+                    $("<div>").addClass("col-sm-12").append(
+                        sml.results
+                    )
                 )
             )
         )    
@@ -282,7 +283,7 @@ var startLending = function(params) {
     
 /* inserisce onload il configuratore */
 var confLending = function(params){
-
+    console.log(params);
     $(function(){startLending(params)});
 
 } 
