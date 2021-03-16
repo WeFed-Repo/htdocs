@@ -1,16 +1,75 @@
 /* Oggetti relativi alla smart lending */
-var sml,
-    smcdrefresh;
+var sml;
 
 /* Countdown autoconsistente */
-var refreshContdowns = function() {
-    // Attiva il refresh rapido di tutti i cd dinamici in pagina
-    $.each($(".countdown[data-scadenza]"),function(i,cdw){
-        // differenza tra data e scadenza
-        cdw  = $(cdw);
-        var scadenza = cdw.attr("data-scadenza");
-        cdw.html(getCountdownHtml(scadenza));
-    });
+var countdown = {
+
+    // Variabili "locali"
+    refreshfunc: function(){},
+
+    // Refresh totale
+    refreshAll: function() {
+        // Attiva il refresh rapido di tutti i cd dinamici in pagina
+        $.each($(".countdown[data-scadenza]"),function(i,cdw){
+            // differenza tra data e scadenza
+            cdw  = $(cdw);
+            var scadenza = cdw.attr("data-scadenza");
+            cdw.html(countdown.getHtml(scadenza));
+        })
+    },
+
+
+    getHtml : function(scadenza){
+        scad =  parseFloat(scadenza);
+            
+        var ddiff = scad - new Date().valueOf(),
+            cdcomp = $("<div>").addClass("scaduto").html("L'offerta &egrave; scaduta.")
+    
+    
+        if (ddiff>=0) {
+            var emudate = new Date (ddiff);
+            var cdo = {
+                giorni: Math.floor(emudate.valueOf()/(1000*60*60*24)),
+                ore: emudate.getHours(),
+                minuti: emudate.getMinutes(),
+                secondi: emudate.getSeconds()
+            } 
+            cdcomp = $("<div>").addClass("countdown-inline").append(
+    
+                // Giorni
+                $("<div>").addClass("cdblock giorni").append(
+                    $("<span>").addClass("time-countdown").html(cdo.giorni),
+                    $("<span>").addClass("time-label").html("giorn" + ((cdo.giorni===1) ? "o" : "i"))
+                ),
+    
+                // Ore
+                $("<div>").addClass("cdblock ore").append(
+                    $("<span>").addClass("time-countdown").html(cdo.ore),
+                    $("<span>").addClass("time-label").html("or" + ((cdo.ore===1) ? "a" : "e"))
+                ),
+    
+                // Minuti
+                $("<div>").addClass("cdblock minuti").append(
+                    $("<span>").addClass("time-countdown").html(cdo.minuti),
+                    $("<span>").addClass("time-label").html("minut" + ((cdo.minuti===1) ? "o" : "i"))
+                )
+            )
+        }
+    
+        return cdcomp;
+    },
+    
+    get: function (scadenza) {
+    
+        var cdown = $("<div>").addClass("countdown").attr("data-scadenza", scadenza).html(countdown.getHtml(scadenza));
+       
+        // Refresh del countdown (previa distruzione dell'evento as-is se esistente)  
+        clearInterval(countdown.refreshfunc);  
+        countdown.refreshfunc = setInterval(function(){
+            countdown.refreshAll()
+        },5000);
+        return cdown;
+    }
 }
 
 
@@ -37,57 +96,6 @@ var smlResetResults = function(){
     smlSetResults({})
 }
 
-var getCountdownHtml = function(scadenza){
-    scad =  parseFloat(scadenza);
-        
-    var ddiff = scad - new Date().valueOf(),
-        cdcomp = $("<div>").addClass("scaduto").html("L'offerta &egrave; scaduta.")
-
-
-    if (ddiff>=0) {
-        var emudate = new Date (ddiff);
-        var cdo = {
-            giorni: Math.floor(emudate.valueOf()/(1000*60*60*24)),
-            ore: emudate.getHours(),
-            minuti: emudate.getMinutes(),
-            secondi: emudate.getSeconds()
-        } 
-        cdcomp = $("<div>").addClass("countdown-inline").append(
-
-            // Giorni
-            $("<div>").addClass("cdblock giorni").append(
-                $("<span>").addClass("time-countdown").html(cdo.giorni),
-                $("<span>").addClass("time-label").html("giorn" + ((cdo.giorni===1) ? "o" : "i"))
-            ),
-
-            // Ore
-            $("<div>").addClass("cdblock ore").append(
-                $("<span>").addClass("time-countdown").html(cdo.ore),
-                $("<span>").addClass("time-label").html("or" + ((cdo.ore===1) ? "a" : "e"))
-            ),
-
-            // Minuti
-            $("<div>").addClass("cdblock minuti").append(
-                $("<span>").addClass("time-countdown").html(cdo.minuti),
-                $("<span>").addClass("time-label").html("minut" + ((cdo.minuti===1) ? "o" : "i"))
-            )
-        )
-    }
-
-    return cdcomp;
-}
-
-var getCountdown = function (scadenza) {
-
-    var cdown = $("<div>").addClass("countdown").attr("data-scadenza", scadenza).html(getCountdownHtml(scadenza));
-   
-    // Refresh del countdown (previa distruzione dell'evento as-is se esistente)  
-    clearInterval(smcdrefresh);  
-    smcdrefresh = setInterval(function(){
-        refreshContdowns()
-    },5000);
-    return cdown;
-}
 
 var getMilestones = function(obj) {
     var mso = $("<div>").addClass("slider-milestones");
@@ -119,8 +127,9 @@ var smlSetResults = function (data) {
 /* Avvio del configuratore con parametri */
 var startLending = function(params) {
 
-    // Crea l'oggetto con i valori di default ricalcolati dai parametri
+    // Crea l'oggetto con i valori di default ricalcolati dai parametri in ingresso
     sml = new Object({
+
         importomin: 5000,
         importomax: 30000, 
         importo: 20000,
@@ -141,8 +150,8 @@ var startLending = function(params) {
                     ((typeof params.scadenza == "undefined") ? "" :
                     $("<div>").addClass("top-evidente").append(
                         $("<div>").addClass("cd-block").append(
-                            $("<span>").html("L'offerta scade tra"),
-                            getCountdown(params.scadenza))
+                            $("<span>").html("L'offerta scade tra:"),
+                            countdown.get(params.scadenza))
                         )
                         
                     );
@@ -198,12 +207,15 @@ var startLending = function(params) {
         })
         )
     
+    // Disclaimer
+    sml["disclaimer"] = $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>")
    
   
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
             $("<div>").addClass("flex-bordered").append(
+
                 // RIGA 1
                 $("<div>").addClass("bordered-between").append(
 
@@ -263,13 +275,20 @@ var startLending = function(params) {
                     )
                 ),
 
+                $("<hr>"),
+
                 // Riga 3 (risultati)
                 $("<div>").addClass("form-row").append(
                     $("<div>").addClass("col-sm-12").append(
                         sml.results
                     )
-                )
-            )
+                ),
+
+                
+            ),
+
+            // Disclaimer
+            sml.disclaimer
         )    
     );
 

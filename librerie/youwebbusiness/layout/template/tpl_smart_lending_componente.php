@@ -303,40 +303,42 @@ var defSim = {
     .sml.loading {min-height:200px} 
 
     /* Bordature */
-    .bordered-top {border-top: solid 2px #eee; padding-top:20px;}
+    .bordered-top {border-top: solid 1px #eee; padding-top:20px;}
 
     /* Inner bordered blocks */
     .flex-bordered {padding:0 30px 30px 30px}
     .bordered-between {display:flex;margin:0 -40px;}
-    .bordered-between .flex-element {flex:1; padding:20px 40px; border-left: solid 2px #eee;margin-bottom:0;}
+    .bordered-between .flex-element {flex:1; padding:20px 40px; border-left: solid 1px #eee;margin-bottom:0;}
     .bordered-between .flex-element:first-child {border-left:0 none;}
 
     /* Oggetti dedicati */
     .configuratore .top-evidente {text-align:center}
     .slider-input {display:block;font-size:18px;width:120px;padding: 5px 0 5px 10px; border:solid 1px #ccc;border-radius:5px; position:relative;
-    margin:0;float:none;clear:both; }
+    margin:0;float:none;clear:both; background:transparent; }
     .slider-output {font-size:18px; width:100px;padding: 6px 10px; position:relative; display:block; color:#2f9988;
     margin:10px auto 20px;float:none;clear:both;}
 
     /* Offerta */
-    .cd-block {width:auto; margin:0 auto; display:inline-block; vertical-align:top;}
-    .cd-block span {    font-weight: bold;
-    text-transform: uppercase;
-    width: 110px;
-    padding: 18px 20px 0 0;
-    text-align: right;
-    float: left;}
+    .cd-block {width:400px; margin:0 auto; display:inline-block; vertical-align:top;}
+    .cd-block span {
+		font-weight: bold;
+		color:#1d2d53;
+		font-size:16px;
+		width: 100%;
+		padding: 0; 
+		margin-bottom:10px;}
     .cd-block .countdown {font-weight:bold; text-transform:uppercase; text-align:right;display:inline-block; background-color:blue; padding:0 0 0 70px;
       background: transparent url(./fe/img/scadenza_countdown.png) no-repeat 0 0; background-size: 53px 68px;
-      text-align:left;
+      text-align:center;
       }
+	  .cd-block .countdown .countdown-inline {width:300px;}
     .cd-block .countdown div.cdblock {width:70px; display:inline-block; text-align:center;}
     .cd-block .countdown div.cdblock span {text-align:center;width:100%;padding:0;font-weight:normal;font-size:12px}
     .cd-block .countdown div.cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;}
     .cd-block .countdown div.cdblock.giorni {color: #2F9988}
 
     /* Blocchi di input */
-    .editable-field-wrapper { border: solid 1px #ddd; position:relative;width:150px; padding:0 40px 0 0; margin: 10px auto 20px; border-radius:4px;}
+    .editable-field-wrapper { border: solid 1px #ddd; position:relative;width:150px; padding:0 40px 0 0; margin: 10px auto 20px; border-radius:4px; background:#fbfbfb}
     .editable-field-wrapper.importo::after { content: '\20AC';
     position: absolute;
     top: 5px;
