@@ -650,13 +650,13 @@ button {
 }
 /* tab di contenuti modalita responsive*/
 @media screen and (max-width: 768px) {
-.innerWrapperTab.tab-content ul {
+.innerWrapperTab.content-tab ul {
     float: none;
 }
-.innerWrapperTab.tab-content ul li {
+.innerWrapperTab.content-tab ul li {
     vertical-align: middle;
 }
-.innerWrapperTab.tab-content {
+.innerWrapperTab.content-tab {
     overflow-x: auto;
 }
 
@@ -8768,7 +8768,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     width: 100%;
     margin-bottom:10px;
 }
-.box-link p,.btn {
+.box-link p,.box-link .btn {
     padding: 0;
     font-weight: bold;
 }
@@ -8776,7 +8776,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     .box-link .row {
         display: table-row;
     }
-    .box-link p,.btn {
+    .box-link p,.box-link .btn {
         padding: 0;
         font-weight: bold;
     }

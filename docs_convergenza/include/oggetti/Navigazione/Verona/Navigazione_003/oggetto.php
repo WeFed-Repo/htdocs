@@ -1,7 +1,7 @@
 <!--i link dei tab devono corrisppndere all'attributo  aria-labelledby dei contenitori del testo (esempio: viaggi)-->
 <div class="section outerWrapperTab no-backgr">
 	<div class="navContSecondLev" id="secondTab">
-		<div class="innerWrapperTab tab-content">
+		<div class="innerWrapperTab content-tab">
 			<ul class="tabWrapper">
 				<li class=""><a href="#viaggi">Viaggi</a></li>
 				<li class=""><a href="#vita_privata">Vita privata</a></li>
