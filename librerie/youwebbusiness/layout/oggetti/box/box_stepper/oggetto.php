@@ -14,7 +14,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">DA COMPILARE</button>
@@ -22,7 +22,7 @@
                       <div class="step-point"></div>
                   </div>
                </div>
-               <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+               <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-separator"></div>
                     <div class="step-point"></div>
@@ -41,7 +41,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">COMPILATO</button>
@@ -49,7 +49,7 @@
                       <div class="step-point"></div>
                   </div>
               </div>
-              <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+              <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-output-name">Compilato da: <strong>Mario Rossi</strong></div>
                     <div class="step-output-edit"><a href="#"><img src="./fe/img/icon/icon-22.svg">Modifica</a></div>
@@ -70,7 +70,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">DA COMPILARE</button>
@@ -78,7 +78,7 @@
                       <div class="step-point"></div>
                   </div>
               </div>
-              <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+              <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-separator"></div>
                     <div class="step-point"></div>
@@ -95,7 +95,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">COMPILATO</button>
@@ -103,7 +103,7 @@
                       <div class="step-point"></div>
                   </div>
               </div>
-              <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+              <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-output-doc"><a href="#"><img src="./fe/img/icon/pdf.svg"><span>Adeguata verifica.pdf</span></a></div>
                     <div class="step-output-edit"><a href="#"><img src="./fe/img/icon/icon-22.svg">Modifica</a></div>
@@ -121,7 +121,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">COMPILATO</button>
@@ -129,7 +129,7 @@
                       <div class="step-point"></div>
                   </div>
               </div>
-              <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+              <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-output-doc"><a href="#"><img src="./fe/img/icon/pdf.svg"><span>Richiesta di Finanziamento…23 e ss.ll.mm.pdf</span></a></div>
                     <div class="step-output-edit"><a href="#"><img src="./fe/img/icon/icon-22.svg">Modifica</a></div>
@@ -149,7 +149,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">COMPILATO</button>
@@ -157,7 +157,7 @@
                       <div class="step-point"></div>
                   </div>
               </div>
-              <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+              <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                    
                     <div class="step-separator"></div>
@@ -174,7 +174,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">DA FIRMARE</button>
@@ -182,7 +182,7 @@
                       <div class="step-point"></div>
                   </div>
                </div>
-               <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+               <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-output-firme"><strong>Documenti firmati 0/4</strong></div>
                     <div class="step-separator"></div>
@@ -199,7 +199,7 @@
                     <div class="step-separator"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="col-12 col-md-4 col-lg-4 col-xl-3">
                   <div class="step-state">
                       <span>Stato:</span>
                       <button class="btn btn-stepper">FIRMATO</button>
@@ -207,7 +207,7 @@
                       <div class="step-point"></div>
                   </div>
                </div>
-               <div class="col-12 col-md-5 col-lg-5 col-xl-5">
+               <div class="col-12 col-md-5 col-lg-5 col-xl-6">
                   <div class="step-output">
                     <div class="step-output-firme color-green"><strong>Documenti firmati 4/4</strong></div>
                     <div class="step-separator"></div>

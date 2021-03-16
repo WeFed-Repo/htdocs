@@ -1,6 +1,10 @@
 <section>
 	<div class="bordered box-output">
-		<h4>Lorem ipsum dolor sit</h4>
+		<div class="row">
+			<div class="col-12">
+				<h2>Lorem ipsum dolor sit</h2>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-12 col-md-6">
 				<div class="row">

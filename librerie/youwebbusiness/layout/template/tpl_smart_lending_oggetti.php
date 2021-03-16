@@ -19,4 +19,6 @@
 <hr>
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_conferma/oggetto.php');?>
 <hr>
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_firma/oggetto.php');?>
+<hr>
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_stepper/oggetto.php');?>

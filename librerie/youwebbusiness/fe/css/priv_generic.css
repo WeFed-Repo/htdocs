@@ -3048,6 +3048,10 @@ h1 .btn-icon-help, h1 .btn-icon-info {
 .btn-icon-help:before {
   content: "?";
 }
+.btn-icon-help.position-absolute {
+  right: 0;
+  top: -30px;
+}
 .btn-config {
   text-transform: none !important;
   border-top-left-radius: 15px;
@@ -3465,6 +3469,9 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
 }
 .field-output .autocomplete button {
   display: none;
+}
+.field-output textarea {
+  height: 25px;
 }
 
 .form-grid {
@@ -5531,9 +5538,6 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   color: #737373;
   text-align: right;
 }
-.box-output h4 {
-  padding-left: 8px;
-}
 
 /* BOX DI ESITO */
 .esito-inline {
@@ -5565,8 +5569,9 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border-bottom: 0;
 }
 .box-document-style .card .card-header .card-header-title {
-  font-size: 18px;
+  font-size: 20px;
   color: #737373;
+  font-weight: bold;
 }
 .box-document-style .card .card-body {
   background: transparent;
@@ -5611,7 +5616,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .step-wrapper .row:not(:last-child) .col-12:not(:first-child) {
   border-bottom: 1px solid #d9dce6;
 }
-.step-wrapper .row:not(:last-child) .col-12:first-child {
+.step-wrapper .row .col-12:first-child {
   background-color: #f2faf8;
 }
 .step-wrapper .state-active .step-number {
@@ -5679,7 +5684,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   height: 100%;
 }
 .step-wrapper .step-state {
-  padding: 23px 0px 0 33px;
+  padding: 23px 0px 0 23px;
 }
 .step-wrapper .step-name {
   padding-right: 25px;
@@ -5729,7 +5734,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   z-index: 4;
 }
 .step-wrapper .step-state span {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .step-wrapper .step-state .step-separator:after {
   display: none;
@@ -5857,7 +5862,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     width: 40%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
     width: 80%;
   }

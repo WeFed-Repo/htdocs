@@ -155,9 +155,7 @@
     color: $gray2;
     text-align: right;
   }
-  h4 {
-    padding-left:8px;
-  }
+ 
 }
 
 /* BOX DI ESITO */
@@ -189,8 +187,9 @@
         border-bottom: 0
       }
       .card-header-title {
-        font-size: 18px;
+        font-size: 20px;
         color:$gray2;
+        font-weight: bold;
       } 
     }
     .card-body {
@@ -238,10 +237,12 @@
             &:not(:first-child) {
               border-bottom:1px solid #d9dce6;
             }
-            &:first-child {
-              background-color: #f2faf8;
-            }
-          }
+           }
+        }
+        .col-12 {
+        &:first-child {
+          background-color: #f2faf8;
+        }
         }
       
     }
@@ -313,7 +314,7 @@
       height: 100%;
     }
     .step-state {
-      padding: 23px 0px 0 33px;
+      padding: 23px 0px 0 23px;
     }
     .step-name {
       padding-right: 25px;
@@ -364,7 +365,7 @@
     }
     .step-state {
       span {
-        margin-right:30px;
+        margin-right:20px;
       }
       .step-separator {
         &:after {
@@ -508,7 +509,7 @@
     width: 40%;
   }
 }
-@media (min-width: 1400px) {  
+@media (min-width: 1200px) {  
   .step-wrapper .step-output .step-output-name, .step-wrapper .step-output .step-output-doc {
     width: 80%;
   }
