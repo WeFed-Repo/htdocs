@@ -12,6 +12,12 @@
 <?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_dossier/oggetto.php'); ?>
 <!-- END SELETTORE DOSSIER DI ESEMPIO -->
 
+<!-- PROMO BOX -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_promo/oggetto.php');?>
+<!-- FINE PROMO BOX -->
+
+<h2>Calcola la rata del finanziamento</h2>
+
 <script type="text/javascript">
 var defSim = {
 	"simulatore": {
@@ -369,6 +375,12 @@ var defSim = {
   
   <script type="text/javascript">
 
+	  // Esempio handler di blocco dell'interfaccia
+	  var esempioHandlerBlocco = function(){
+		$("#prestitoSubmit").attr("disabled",true);
+	  }
+
+	  // Esempio handler di calcolo (con sblocco finale dell'interfaccia)
       var esempioHandlerCalcola = function(dataToSend,callback) {
         var dataObject = {
           "spese": Math.round(Math.random()*3000*100)/100,
@@ -379,7 +391,13 @@ var defSim = {
         }
         // Esempio tracciatura dei dati ricevuti
         console.log(dataToSend);
-        setTimeout(function(){callback(dataObject)},1000);
+        setTimeout(function(){
+			// Lancio della callback
+			callback(dataObject)
+			// Sblocco dell'interfaccia di richiesta
+			$("#prestitoSubmit").attr("disabled",false);
+		}
+		,1000);
 
       }
   </script>
@@ -390,7 +408,8 @@ var defSim = {
       id: "#configuraPrestito",
       scadenza: 1617141600000,
       objConf: defSim,
-      handlerCalcola: esempioHandlerCalcola
+      handlerCalcola: esempioHandlerCalcola,
+	  handlerBloccoInterfaccia: esempioHandlerBlocco
     })
   </script>
   <!-- Blocco contentente il configuratore -->
@@ -419,24 +438,18 @@ var defSim = {
   </section>
   <!-- END INFORMATIVE -->
 
-
-<!-- FORM DI RICHIESTA FINANZIAMENTO (campi hidden) -->
-<!-- 
-  NOTE IMPORTANTI: 
-  NELLA POST, RECUPERARE SOLO IL VALORE DEI CAMPI IN QUESTA FORM. 
-  Il range NON serve. 
--->
-
 <!-- Pulsantiera -->
-<div class="w-100">
-  <form id="prestitoForm" action="" method="POST">
-    <input type="hidden" id='prestitoValue'>
-    <input type="hidden" id='foglio_informativo' data-control="doc1" value="0">
-    <input type="hidden" id='minuta_di_contratto' data-control="doc2" value="0">
-    <button class="btn btn-primary float-right" id="prestitoSubmit" disabled>
-      RICHIEDI FINANZIAMENTO
-    </button>
-  </form>
+<div class="row justify-content-end">
+	<div class="col-sm-6">
+		<div class="form-row d-flex justify-content-end">
+			<div class="form-group col-6">
+				<button class="btn btn-secondary btn-block ">VISUALIZZA ALTRI PRODOTTI</button>
+			</div>
+			<div class="form-group col-6">
+				<button class="btn btn-primary btn-block "  id="prestitoSubmit" disabled>RICHIEDI FINANZIAMENTO</button>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Fine pulsantiera -->
 

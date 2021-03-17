@@ -1,6 +1,3 @@
-/* Oggetti relativi alla smart lending */
-var sml;
-
 /* Countdown autoconsistente */
 var countdown = {
 
@@ -87,14 +84,9 @@ var smlCheckImporto = function(){
     field.val(val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
     sml.importo = val;
     sml.sliderimporto.slider("value",val);
-    smlResetResults();
+    sml.resetResults();
 }
 
-
-var smlResetResults = function(){
-    sml.calcola.removeClass("disabled");
-    smlSetResults({})
-}
 
 
 var getMilestones = function(obj) {
@@ -102,32 +94,27 @@ var getMilestones = function(obj) {
     // Calcolo degli incrementi
     var msoinc = (obj.max-obj.min)/(obj.steps-1);
     for(i=0;i<obj.steps; i++) {
-        mso.append($("<span>").addClass("milestone").html(Math.round(obj.min + (i*msoinc))));
+        var unit = (obj.unit)? obj.unit : 1;
+        var mstxt = Math.round((obj.min + (i*msoinc))/unit*100)/100;
+        
+        mso.append($("<span>").addClass("milestone").html(mstxt));
+    
     }
     return (mso);
 }
 
-// Acquisizione dei dati dall'handler esterno
-var getLendingData = function(data) {
-    smlSetResults(data);
-    sml.wrap.removeClass("loading");
-}
 
-var smlSetResults = function (data) {
-    sml.results.addClass("disabled");
-    $.each(sml.results.find(".result"),function(i,v){
-            var id = $(v).attr("id").replace("result_","");
-            if (data && data[id]) sml.results.removeClass("disabled");
-            $(v).html((data && data[id])? data[id] : " - ");
-        })
-    
-}
+
+
+/* Oggetti relativi alla smart lending */
+var sml;
 
 
 /* Avvio del configuratore con parametri */
 var startLending = function(params) {
 
-    // Crea l'oggetto con i valori di default ricalcolati dai parametri in ingresso
+    
+    // Crea l'oggetto con i valori di default
     sml = new Object({
 
         importomin: 5000,
@@ -138,79 +125,162 @@ var startLending = function(params) {
         duratamax:72,
         durata: 60,
 
+        durpreamm: 24,
+
         periodicita: 1
-        
-    });
-    
-    
-    // Inizializzazione dei parametri e dei vari oggetti del configuratore in base ai dati provenienti dall'esterno
-    sml["wrap"]=  $(params.id).addClass("loading configuratore"),
 
-    sml["scadenza"]= 
-                    ((typeof params.scadenza == "undefined") ? "" :
-                    $("<div>").addClass("top-evidente").append(
-                        $("<div>").addClass("cd-wrapper").append(
-                            $("<span>").addClass("cd-label").html("L'offerta scade tra:"),
-                            countdown.get(params.scadenza))
-                        )
-                        
-                    );
-   
-    sml["importoinput"]= $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto);
-    sml["sliderimporto"]= $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:1000, slide: function(e,ui){
-        var imp = ui.value;
-        sml.importo = imp;
-        sml.importoinput.val(imp).trigger("blur");
-        smlResetResults();
-    }});
-    sml["importomilestones"] = getMilestones({min:sml.importomin,max:sml.importomax,steps: 6});
+    })
     
-    sml["durataoutput"]= $("<span>").addClass("slider-output durata").html(sml.durata + " mesi");
-    sml["sliderdurata"]= $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step:6,slide: function(e,ui){
-        var dur = ui.value;
-        sml.durata = dur;
-        sml.durataoutput.html(dur + " mesi");
-        smlResetResults();
-    }});
-    sml["duratamilestones"] = getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2});
+    
+    // Assegna i valori di default leggendo l'oggetto di configurazione in ingresso (se ricevuto)
+    if (params.objConf) {
+        sml["products"] = params.objConf.simulatore.prodottiElise;
 
-    sml["preammortamento"] = $("<span>").addClass("output").html("24 mesi");
-    
-    sml["calcola"] = $("<button>").addClass("btn btn-primary disabled w-100").html("calcola").click(function(){
-        var btn = $(this);
-        if(!btn.hasClass("disabled")) {
-            btn.addClass("disabled");
-            // Blocco dell'interfaccia
-            sml.wrap.addClass("loading");
-            // Dati da inviare all'handler esterno
-            var data = {
-                durata: sml.durata,
-                importo: sml.importo
+        $.each(sml.products,function(i,prod){
+
+            // Default
+            if(prod.default){
+                sml.durata = prod.durataFinanziamento.default;
+                sml.importo = prod.importo.default;
+                sml.periodicita =prod.periodicita.default;
+                sml.durpreamm =  prod.durataPreammortamento.default;
             }
-            params.handlerCalcola(data,getLendingData);
+
+            if (i===0) {
+                sml.duratamin = prod.durataFinanziamento.min;
+                sml.duratamax = prod.durataFinanziamento.max;
+                sml.importomin = prod.importo.min;
+                sml.importomax = prod.importo.max;
+            }
+            else
+            {
+                if(prod.durataFinanziamento.min<sml.duratamin) sml.duratamin = prod.durataFinanziamento.min;
+                if(prod.durataFinanziamento.min>sml.duratamax) sml.duratamax = prod.durataFinanziamento.max;
+                if(prod.importo.min<sml.importomin) sml.importomin = prod.importo.min;
+                if(prod.importo.min>sml.importomax) sml.importomax = prod.importo.max;
+            }
+            
+
+            console.log(prod);
+        })
+
+    }
+    
+
+    
+    
+    
+
+
+    // Estensione dell'oggetto base
+    $.extend(sml, {
+
+        // ############################## OGGETTI #############################
+
+        wrap: $(params.id).addClass("loading configuratore"),
+
+        scadenza:  ((typeof params.scadenza == "undefined") ? "" :
+        $("<div>").addClass("top-evidente").append(
+            $("<div>").addClass("cd-wrapper").append(
+                $("<span>").addClass("cd-label").html("L'offerta scade tra:"),
+                countdown.get(params.scadenza))
+            )
+            
+        ),
+
+        importoinput: $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto),
+
+        sliderimporto: $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:1000, slide: function(e,ui){
+            var imp = ui.value;
+            sml.importo = imp;
+            sml.importoinput.val(imp).trigger("blur");
+            sml.resetResults();
+        }}),
+
+        importomilestones: getMilestones({min:sml.importomin,max:sml.importomax,steps: 6,unit:1000}),
+
+        durataoutput:  $("<span>").addClass("slider-output durata").html(sml.durata + " mesi"),
+
+        sliderdurata: $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step:6,slide: function(e,ui){
+            var dur = ui.value;
+            sml.durata = dur;
+            sml.durataoutput.html(dur + " mesi");
+            sml.resetResults();
+        }}),
+
+        duratamilestones:  getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2}),
+    
+        preammortamento: $("<span>").addClass("output").html(sml.durpreamm + " mesi"),
+        
+        calcola: $("<button>").addClass("btn btn-primary disabled w-100").html("calcola").click(function(){
+                var btn = $(this);
+                if(!btn.hasClass("disabled")) {
+                    btn.addClass("disabled");
+                    // Blocco dell'interfaccia
+                    sml.wrap.addClass("loading");
+                    // Dati da inviare all'handler esterno
+                    var data = {
+                        durata: sml.durata,
+                        importo: sml.importo
+                    }
+                    params.handlerCalcola(data,sml.getLendingData);
+                }
+            }),
+
+     
+    
+        results: $("<div>").addClass("results disabled").append(
+            $.map([
+                {"id": "spese","label":"Spese", "modal": true},
+                {"id": "taeg","label":"Taeg", "modal": false},
+                {"id": "tan","label":"Tan", "modal": false},
+                {"id": "rate","label":"Rate mensili", "modal": false},
+                {"id": "rata","label":"La tua rata", "modal": true}
+            ],function(div){
+                return $("<div>").addClass("result-box " + div.id).append(
+                    $("<span>").addClass("result-label").html(div.label),
+                    $("<span>").addClass("result").attr({id: "result_"+div.id}).html(" - ")
+                )
+            })
+            ),
+    
+
+        // Disclaimer
+        disclaimer:  $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>"),
+    
+
+        // ################## FUNZIONI ########################
+        // Acquisizione dei dati dall'handler esterno
+        getLendingData : function(data) {
+            sml.setResults(data);
+            sml.wrap.removeClass("loading");
+        },
+
+        setResults : function (data) {
+            sml.results.addClass("disabled");
+            var units = {
+                "spese": "&euro;",
+                "taeg":  "%",
+                "tan": "%",
+                "rate": "",
+                "rata": "&euro;"
+            }
+            $.each(sml.results.find(".result"),function(i,v){
+                    var id = $(v).attr("id").replace("result_","");
+                    if (data && data[id]) sml.results.removeClass("disabled");
+                    $(v).html((data && data[id])? data[id] + units[id] : " - ");
+                })
+            
+        },
+
+        resetResults: function(){
+            sml.calcola.removeClass("disabled");
+            sml.setResults({});
+            params.handlerBloccoInterfaccia();
         }
+
     });
 
-    // Risultati
-    sml["results"] = $("<div>").addClass("results disabled").append(
-        $.map([
-            {"id": "spese","label":"Spese", "modal": true},
-            {"id": "taeg","label":"Taeg", "modal": false},
-            {"id": "tan","label":"Tan", "modal": false},
-            {"id": "rate","label":"Rate mensili", "modal": false},
-            {"id": "rata","label":"La tua rata", "modal": true}
-        ],function(div){
-            return $("<div>").addClass("result-box " + div.id).append(
-                $("<span>").addClass("result-label").html(div.label),
-                $("<span>").addClass("result").attr({id: "result_"+div.id}).html(" - ")
-            )
-        })
-        )
-    
-    // Disclaimer
-    sml["disclaimer"] = $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>")
-   
-  
     // Costruzione degli oggetti 
     sml.wrap.empty().append($("<div>").append(
             sml.scadenza,
@@ -302,7 +372,5 @@ var startLending = function(params) {
     
 /* inserisce onload il configuratore */
 var confLending = function(params){
-    console.log(params);
     $(function(){startLending(params)});
-
 } 
