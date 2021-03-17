@@ -86,6 +86,8 @@
     margin-left: $checkboxSizeGap;
     margin-bottom: $checkboxSizeGap;
   }
+ 
+  
 }
 
 // posizione messaggio validazione
@@ -305,3 +307,34 @@
     background-color: $greenLink;
   }
 }
+/* finti campi di output*/
+.field-output {
+    .radio,
+    .checkbox,
+    .checkbox.switch {
+      label {
+        color: $gray1!important;
+        font-weight:bold;
+        font-size: 14px;
+        opacity:1!important;
+        margin-left:-24px;
+        padding-left:0;
+        user-select: text;
+        cursor:default;
+        &::before, &::after {
+          display:none;
+        }
+        
+      }
+      input {
+        cursor:default!important;
+      }
+    }
+    .checkbox.switch {
+      label {
+          margin-left:-68px;
+      }
+    }
+}
+
+   

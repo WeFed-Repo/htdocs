@@ -3,7 +3,7 @@
 		<div class="card-header">
 			<h5 class="card-header-title mb-0">Lorem ipsum dolor sit<h5>
 		</div>
-		<div class="card-body">
+		<div class="card-body pb-2">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
 			<div class="row">
 				<div class="col-12 col-md-6 pb-2">
