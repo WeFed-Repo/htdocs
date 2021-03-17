@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="92" viewBox="0 0 56 92">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-772 -718) translate(256 536) translate(516 182)">
+                    <path fill="#FFF" stroke="#DDD" stroke-width="1.2" d="M27.5.6C19.027.6 10.877 2.533 3.048 6.398c-3.275 21.778-3.267 40.271.038 55.475 3.272 15.048 8.772 24.293 16.682 27.59 2.587 1.294 5.499 1.937 8.732 1.937 3.22 0 6.119-.637 8.698-1.92 7.224-4.607 12.437-13.837 15.718-27.619 3.305-13.879 3.31-32.362.037-55.449C44.469 2.538 35.985.6 27.5.6z"/>
+                    <rect width="34" height="12" x="10.5" y="13" fill="#F5F5F5" stroke="#DDD" rx="1"/>
+                    <circle cx="15.5" cy="38" r="4" fill="#DDD"/>
+                    <circle cx="28.5" cy="38" r="4" fill="#DDD"/>
+                    <circle cx="41.5" cy="38" r="4" fill="#DDD"/>
+                    <circle cx="15.5" cy="51" r="4" fill="#DDD"/>
+                    <circle cx="28.5" cy="51" r="4" fill="#DDD"/>
+                    <circle cx="41.5" cy="51" r="4" fill="#DDD"/>
+                    <circle cx="15.5" cy="64" r="4" fill="#DDD"/>
+                    <circle cx="28.5" cy="64" r="4" fill="#DDD"/>
+                    <circle cx="21.5" cy="76" r="4" fill="#DDD"/>
+                    <circle cx="34.5" cy="76" r="4" fill="#DDD"/>
+                    <circle cx="41.5" cy="64" r="4" fill="#DDD"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

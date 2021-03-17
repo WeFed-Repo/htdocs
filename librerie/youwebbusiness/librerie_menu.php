@@ -213,6 +213,10 @@
 			{
 				"title": "Finanziamenti rateali Pre Ammortamento",
 				"tpl": "tpl_finanziamenti_rateali_pre_ammortamento.php"
+			},
+			{
+				"title": "Oggetti template finanziamenti",
+				"tpl": "tpl_smart_lending_oggetti.php"
 			}
 		]
 	},

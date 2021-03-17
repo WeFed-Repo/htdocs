@@ -3472,6 +3472,7 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
 }
 .field-output textarea {
   height: 25px;
+  resize: none;
 }
 
 .form-grid {
@@ -5480,6 +5481,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .box-promo-top .pull-right a, .box-promo-bottom .pull-right a {
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 16px;
 }
 .box-promo .box-promo-doc {
   line-height: 24px;
@@ -5575,7 +5577,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .box-document-style .card .card-body {
   background: transparent;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 /*
@@ -5637,7 +5639,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .step-wrapper .state-done .step-number {
   color: #FFFFFF;
-  background: #135358 url(../img/check_white.png) no-repeat 7px 7px;
+  background: #135358 url(../img/check_white.png) no-repeat 7px 8px;
   background-size: 11px;
 }
 .step-wrapper .state-done .step-number span {
@@ -5660,6 +5662,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .step-wrapper .state-disactive .btn-stepper, .step-wrapper .state-disactive .btn-stepper:hover {
   border-color: #dddddd;
   color: #707070;
+  border-width: 1px;
 }
 .step-wrapper .state-disactive .step-date, .step-wrapper .state-disactive .step-output-name, .step-wrapper .state-disactive .step-output-doc, .step-wrapper .state-disactive .step-output-edit {
   display: none;
@@ -5716,7 +5719,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border-radius: 50%;
   text-align: center;
   z-index: 1;
-  line-height: 24px;
+  line-height: 26px;
 }
 .step-wrapper .step-point {
   padding: 0 8px;
@@ -5725,7 +5728,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   content: "";
   position: absolute;
   bottom: -3px;
-  left: -11px;
+  left: -12px;
   color: #ccc;
   width: 6px;
   height: 6px;
@@ -5773,6 +5776,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .step-wrapper .step-output .step-output-firme {
   padding: 5px 0 5px 0;
+  color: #737373;
+}
+.step-wrapper .step-output .step-output-firme.color-green {
+  color: #2F9988;
 }
 .step-wrapper .step-output .step-output-doc {
   border-right: solid 1px #d9dce6;
@@ -5812,7 +5819,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     left: 19px;
   }
   .step-wrapper .step-point:after {
-    left: 30px;
+    left: 29px;
   }
   .step-wrapper .step-state, .step-wrapper .step-name {
     padding-left: 56px;

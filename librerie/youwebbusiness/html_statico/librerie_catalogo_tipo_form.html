@@ -30,6 +30,8 @@
 <script src="./fe/assets/jquery.min.js"></script>
 <script src="./fe/assets/jquery-ui.min.js"></script>
 
+<script src="./fe/assets/jquery.ui.touch-punch.min.js"></script>
+
 <script src="./fe/assets/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./fe/assets/bootstrap.min.css">
 
@@ -906,6 +908,35 @@ inputAutocomplete.autocomplete({
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">checkbox con documenti</h2>
+																						
+<section>
+<div class="bordered">
+  <div class="with-stepper">
+    <h2>Lorem ipsum </h2>
+    <div class="stepper text">Lorem <span class="number">1</span> di <span class="number">4</span></div>
+  </div>
+  <form class="form-grid">
+    <div class="form-row">
+       <div class="form-group col-md">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+        <a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum1.pdf</a>
+        <div class="form-check checkbox mt-3">
+          <input class="form-check-input" type="checkbox" id="check1" name="inlineRadioOptions" value="">
+          <label class="form-check-label" for="check1">Lorem ipsum dolor sit</label>
+        </div>
+       </div>
+     </div>
+  </form>
+</div>
+</section>
+
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">fields appuntamento</h2>
 																						<div class="bordered mb-4 appuntamento-wrapper">
     <form class="form-grid needs-validation" novalidate="">
@@ -1034,6 +1065,92 @@ inputAutocomplete.autocomplete({
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">finti output</h2>
+																						
+<a href="javascript:;" id="emulateLink">Trasforma in output</a>
+<br>
+<br>
+<div class="bordered mb-4">
+ <form class="form-grid needs-validation" novalidate>
+    <div class="form-row">
+      <div class="form-group col-sm-3">
+        <label class="control-label">Text</label>
+        <input type="text" class="form-control" placeholder="Text" id="inputField" value="Text">
+      </div>
+      <div class="form-group col-sm-3">
+        <label class="control-label">Select</label>
+        <select class="form-control" id="selectField">
+          <option selected>Lorem</option>
+          <option>Ipsum</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-3">
+        <label class="control-label">Datepicker</label>
+        <div class="input-group datepicker">
+          <input type="text" id="dateField" class="form-control" data-datepicker autocomplete="off" placeholder="Data" value="30/03/2021"/>
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="icon icon-ico_calendario"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-3">
+        <label class="control-label">Timepicker</label>
+        <div class="input-group bootstrap-timepicker timepicker">
+          <input type="text" id="timeField" class="input-group-addon form-control hasTimepicker" placeholder="00:00" data-timepicker="" value="2:15">
+          <div class="input-group-append input-group-addon">
+            <span class="input-group-text">
+              <img src="./fe/img/icon/orologio.svg">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-3">
+         <div class="form-check  radio">
+           <input class="form-check-input" type="radio"  name="inlineRadioOptions" value="" id="radioField">
+           <label class="form-check-label" for="radioField">Lorem ipsum</label>
+         </div>
+       </div>
+       <div class="form-group col-sm-3">
+         <div class="form-check  checkbox">
+           <input class="form-check-input" type="checkbox" id="checkField" name="inlineRadioOptions" value="">
+           <label class="form-check-label" for="checkField">Lorem ipsum</label>
+         </div>
+       </div>
+       <div class="form-group col-sm-3">
+         <div class="form-check  checkbox switch">
+           <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch">
+           <label class="form-check-label" for="checkSwitch">Lorem ipsum</label>
+         </div>
+       </div>
+       <div class="form-group col-sm-7">
+          <label class="control-label">Textarea</label>
+           <textarea id="textareaField" name="" rows="4" cols="50" class="form-control">lorem ipsum</textarea>
+        </div>
+    </div>
+</form>
+</div>
+<!--EMULARE LA TRASFORMAZIONE IN FINTI OUTPUT DI CAMPI IN INPUT -->
+<script>
+   $("#emulateLink").on("click", function() {
+      var idFieldToTransform = ['inputField','selectField', 'dateField', 'timeField', 'radioField', 'checkField', 'checkSwitch','textareaField'];
+      $.each(idFieldToTransform,function(key,value){
+        setOutputField(value)
+      })
+   })
+   
+   function setOutputField(idElTo) {
+     var el = $('#' + idElTo);
+        el.prop('disabled',true).closest('.form-group').addClass('field-output');
+  }
+  
+</script>										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">inputs</h2>
 																						<!-- notr: la griglia di form-row è creata a solo scopo esemplificativo. -->
 
@@ -1077,6 +1194,14 @@ inputAutocomplete.autocomplete({
       </div>
     </div>
 
+    <!--SEPARATORE ALL'INTERNO DEI FORM -->
+    <div class="form-row">
+      <div class="form-group col-sm-12">
+        <hr>
+      </div>
+    </div>
+    
+    
     <!-- stato disabilitato -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
@@ -1591,15 +1716,6 @@ ul[tm-multiselect] > li[value] {
 </div>
 
 </div>
-										</div>
-									</div>
-									<!-- Fine blocco oggetto -->
-																	<!-- Blocco oggetto -->
-									<div class="row">
-										<div class="col-sm-12">
-																							<h2 class="titolo-oggetto">stepper</h2>
-																						<br />
-<b>Warning</b>:  virtual(): Unable to include 'layout/oggetti/form/stepper/oggetto.php' - request execution failed in <b>D:\WeFed-Repo\htdocs\librerie\youwebbusiness\librerie_catalogo.php</b> on line <b>66</b><br />
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->

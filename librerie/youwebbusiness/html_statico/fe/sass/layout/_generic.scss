@@ -46,6 +46,9 @@ a:not(.btn) {
       }
     }
   }
+  &.color-warning, &.color-warning:hover {
+    color:$warning!important;
+  }
 }
 
 // fallback per text decoration
@@ -146,6 +149,9 @@ h4 {
   font-size: 18px;
   font-weight: bold;
   color: $gray2;
+  &.title-blue {
+    color:$blue
+  }
 }
 
 section {
@@ -154,6 +160,9 @@ section {
 
 p, ul, ol {
   color: $gray2;
+  &.text-box {
+    font-size: 14px; line-height: 24px; color: $gray8;
+  }
 }
 
 ol {
@@ -162,10 +171,10 @@ ol {
 
 .bordered {
   @include bordered();
-  >.row {
+  /*>.row {
     margin-left:0;
     margin-right:0;
-  }
+  }*/
 }
 
 @media (max-width: $bp_md_max) {

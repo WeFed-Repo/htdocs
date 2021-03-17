@@ -87,6 +87,7 @@
       .pull-right a {
         text-transform: uppercase;
         text-decoration: none;
+        font-size: 16px;
       }
     }
     .box-promo-doc {
@@ -98,7 +99,7 @@
       }
     }
     p { padding-bottom:10px;}
-      hr {
+      hr { 
         margin-left:-32px;
         margin-right:-22px;
         color:#e1e1e1;
@@ -194,7 +195,7 @@
     }
     .card-body {
       background: transparent;
-      padding: 1rem 1rem 2rem 1rem;
+      padding: 1rem 1rem 0 1rem;
     }
   }
 }
@@ -265,7 +266,7 @@
         }
         .step-number {
           color:$white;
-          background:  #135358 url(../img/check_white.png) no-repeat 7px 7px;
+          background:  #135358 url(../img/check_white.png) no-repeat 7px 8px;
           background-size:11px; 
           span {
             display: none;
@@ -289,6 +290,7 @@
         .btn-stepper, .btn-stepper:hover {
           border-color:#dddddd;
           color:#707070;
+          border-width: 1px;
         }
         .step-date,.step-output-name,.step-output-doc,.step-output-edit {
           display: none;
@@ -345,7 +347,7 @@
         border-radius:50%;
         text-align:center;
         z-index:1;
-        line-height: 24px;
+        line-height: 26px;
       }
     }
     .step-point {
@@ -354,7 +356,7 @@
           content: "";
           position:absolute;
           bottom:-3px;
-          left:-11px;
+          left:-12px;
           color:#ccc;
           width:6px;
           height:6px;
@@ -408,6 +410,10 @@
       }
       .step-output-firme {
         padding: 5px 0 5px 0;
+        color:$gray2;
+        &.color-green {
+          color:$greenLink;
+        }
       }
       .step-output-doc {
         border-right: solid 1px #d9dce6;
@@ -459,7 +465,7 @@
   }
   .step-point {
       &:after { 
-       left:30px;
+       left:29px;
     }
   }
   .step-state,.step-name  {

@@ -860,6 +860,10 @@ a:not(.btn).disabled, a:not(.btn).disabled:hover, a:not(.btn)[disabled], a:not(.
   text-decoration: none;
   cursor: default;
 }
+a:not(.btn).color-warning, a:not(.btn).color-warning:hover {
+  color: #CF9418 !important;
+}
+
 .text-decoration-none,
 a.text-decoration-none,
 a:not(.btn):not([class*=btn]).text-decoration-none {
@@ -960,6 +964,9 @@ h4 {
   font-weight: bold;
   color: #737373;
 }
+h4.title-blue {
+  color: #0b2147;
+}
 
 section {
   margin-bottom: 16px;
@@ -967,6 +974,11 @@ section {
 
 p, ul, ol {
   color: #737373;
+}
+p.text-box, ul.text-box, ol.text-box {
+  font-size: 14px;
+  line-height: 24px;
+  color: #797979;
 }
 
 ol {
@@ -980,6 +992,10 @@ ol {
   color: #737373;
   width: 100%;
   max-width: 100%;
+  /*>.row {
+    margin-left:0;
+    margin-right:0;
+  }*/
 }
 .bordered.no-b-t {
   border-top: none;
@@ -992,10 +1008,6 @@ ol {
 }
 .bordered.no-b-b {
   border-bottom: none;
-}
-.bordered > .row {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 @media (max-width: 767px) {
