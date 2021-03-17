@@ -149,8 +149,8 @@ var startLending = function(params) {
     sml["scadenza"]= 
                     ((typeof params.scadenza == "undefined") ? "" :
                     $("<div>").addClass("top-evidente").append(
-                        $("<div>").addClass("cd-block").append(
-                            $("<span>").html("L'offerta scade tra:"),
+                        $("<div>").addClass("cd-wrapper").append(
+                            $("<span>").addClass("cd-label").html("L'offerta scade tra:"),
                             countdown.get(params.scadenza))
                         )
                         

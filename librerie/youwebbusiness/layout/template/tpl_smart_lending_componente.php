@@ -319,24 +319,23 @@ var defSim = {
     margin:10px auto 20px;float:none;clear:both;}
 
     /* Offerta */
-    .cd-block {width:400px; margin:0 auto; display:inline-block; vertical-align:top;}
-    .cd-block span {
+    .cd-wrapper {width:340px; margin:0 auto; display:inline-block; vertical-align:top; 
+	background:transparent url(./fe/img/scadenza_countdown.png) no-repeat left center; background-size: 58px;}
+	.cd-wrapper span.cd-label {
 		font-weight: bold;
 		color:#1d2d53;
 		font-size:16px;
 		width: 100%;
 		padding: 0; 
-		margin-bottom:10px;}
-    .cd-block .countdown {font-weight:bold; text-transform:uppercase; text-align:right;display:inline-block; background-color:blue; padding:0 0 0 70px;
-      background: transparent url(./fe/img/scadenza_countdown.png) no-repeat 0 0; background-size: 53px 68px;
-      text-align:center;
-      }
-	  .cd-block .countdown .countdown-inline {width:300px;}
-    .cd-block .countdown div.cdblock {width:70px; display:inline-block; text-align:center;}
-    .cd-block .countdown div.cdblock span {text-align:center;width:100%;padding:0;font-weight:normal;font-size:12px}
-    .cd-block .countdown div.cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;}
-    .cd-block .countdown div.cdblock.giorni {color: #2F9988}
-
+		margin-bottom:10px;
+	}
+	.countdown {width:210px;margin:0 auto}
+	.countdown-inline {width:210px; display:inline-block;}
+	.countdown-inline .cdblock {width:33.3331%;margin:0;padding:0;display:inline-block; text-align:center;}
+	.countdown-inline .cdblock span {width:100%;clear:both;display:block; text-transform:uppercase; font-weight:bold;font-size:12px;}
+	.countdown-inline .cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;font-weight:normal;width:100%;clear:both;}
+    .countdown-inline div.cdblock.giorni span.time-countdown {font-weight:bold; color: #2F9988}
+	
     /* Blocchi di input */
     .editable-field-wrapper { border: solid 1px #ddd; position:relative;width:150px; padding:0 40px 0 0; margin: 10px auto 20px; border-radius:4px; background:#fbfbfb}
     .editable-field-wrapper.importo::after { content: '\20AC';
@@ -351,11 +350,19 @@ var defSim = {
     /* Risultati */
     .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
     .results.disabled {opacity:0.6}
-    .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;}
+    .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;
+		background: transparent none no-repeat left bottom;background-size:auto 80%;}
     .results .result-box:first-child {margin-left:0;}
     .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:16px;font-weight:bold;}
-    .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;}
+    .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;line-height:25px;}
     .results .result-box.rata {color:#00987f;}
+
+	.results .result-box.spese {background-image: url(./fe/img/prev_spese.png)}
+	.results .result-box.tan {background-image: url(./fe/img/prev_tan.png)}
+	.results .result-box.taeg {background-image: url(./fe/img/prev_taeg.png)}
+	.results .result-box.rate {background-image: url(./fe/img/prev_rate.png)}
+
+	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
 
   </style>
   <!-- /// FINE SEPARARE -->
