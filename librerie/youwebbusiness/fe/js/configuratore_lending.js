@@ -120,10 +120,12 @@ var startLending = function(params) {
         importomin: 5000,
         importomax: 30000, 
         importo: 20000,
+        importostep: 1,
 
         duratamin: 6,
         duratamax:72,
         durata: 60,
+        duratastep: 1,
 
         durpreamm: 24,
 
@@ -141,9 +143,12 @@ var startLending = function(params) {
             // Default
             if(prod.default){
                 sml.durata = prod.durataFinanziamento.default;
+                sml.duratastep = prod.durataFinanziamento.step;
                 sml.importo = prod.importo.default;
+                sml.importostep = prod.importo.step;
                 sml.periodicita =prod.periodicita.default;
                 sml.durpreamm =  prod.durataPreammortamento.default;
+                
             }
 
             if (i===0) {
@@ -190,7 +195,7 @@ var startLending = function(params) {
 
         importoinput: $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto),
 
-        sliderimporto: $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:1000, slide: function(e,ui){
+        sliderimporto: $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:sml.importostep, slide: function(e,ui){
             var imp = ui.value;
             sml.importo = imp;
             sml.importoinput.val(imp).trigger("blur");
@@ -201,7 +206,7 @@ var startLending = function(params) {
 
         durataoutput:  $("<span>").addClass("slider-output durata").html(sml.durata + " mesi"),
 
-        sliderdurata: $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step:6,slide: function(e,ui){
+        sliderdurata: $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step: sml.duratastep,slide: function(e,ui){
             var dur = ui.value;
             sml.durata = dur;
             sml.durataoutput.html(dur + " mesi");

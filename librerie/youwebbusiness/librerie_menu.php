@@ -217,6 +217,10 @@
 			{
 				"title": "Oggetti template finanziamenti",
 				"tpl": "tpl_smart_lending_oggetti.php"
+			},
+			{
+				"title": "Smart lending configuratore",
+				"tpl": "tpl_smart_lending_componente.php"
 			}
 		]
 	},
@@ -264,10 +268,6 @@
 			{
 				"title": "CONFIGURA",
 				"tpl": "tpl_configura.php"
-			},
-			{
-				"title": "SMART LENDING",
-				"tpl": "tpl_smart_lending.php"
 			},
 			{
 				"title": "LOGIN",
