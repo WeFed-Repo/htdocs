@@ -658,29 +658,6 @@ function mGetData()
 
 				var mRichiediAction = function() {
 					var mRichiediForm = $("#formPrevData").empty(),
-					/* VERSIONE "CABULA"
-					mAppObj= {
-						"Assicurazione": mPrevData.assicurazioni,
-						"Codice mutuo": mPrevData.codicemutuo,
-						"Nome mutuo": mPrevData.nome,
-						"Costo totale del credito": mPrevData.costototcred,
-						"Durata": mPrevData.durata,
-						"Importo mutuo": mPrevData.importomutuo,
-						"imposta sostitutiva": mPrevData.imposta,
-						"Importo totale dovuto dal Consumatore": mPrevData.imptotcons,
-						"Incasso rata": mPrevData.incassorata,
-						"Indice": mPrevData.indice,
-						"Istruttoria": mPrevData.istruttoria,
-						"Perizia": mPrevData.perizia,
-						"Polizza casa": mPrevData.polizza,
-						"Prima casa": mPrevData.primacasa,
-						"Importo rata": mPrevData.rata,
-						"Spread": mPrevData.spread,
-						"TAEG": mPrevData.taeg,
-						"Tasso": mPrevData.tasso,
-						"Valore immobile": mPrevData.valoreimmobile
-					};
-					*/
 
 					/* RICHIESTA B.M. SCOTTI */
 					mAppObj = {
@@ -710,8 +687,6 @@ function mGetData()
 						}
 					});
 					
-					
-										
 					/* $.each(mPrevData,function(k,v){
 						mRichiediForm.append(
 							$("<input>").attr({"name":k,"type":"hidden"}).val(v)
@@ -719,12 +694,25 @@ function mGetData()
 					});
 					*/
 
-
 					mRichiediForm.append(
 						$("<input>").attr({"name":"dati_simulazione","type":"hidden"}).val(JSON.stringify(mAppObj))
 					)
-
-					mRichiediForm.submit();
+					// Tracking analytics e DMP
+					var trackData = {
+						"event_category": "PRENDI APPUNTAMENTO MUTUO",
+						"event_label": mPrevData.durata,
+						"dimension8": mPrevData.finalita,
+						"dimension9": mPrevData.codicemutuo + "_" + mPrevData.nome
+					};
+					
+					gotoTrack(
+						mPrevData.valoreimmobile + "_" + mPrevData.importomutuo, 
+						trackData,
+						function(){
+							mRichiediForm.submit()
+						}
+					)
+					
 				}
 
 				var mRichiediForm = $("<form>").attr({"id":"formPrevData","action":mEndUrl,"method":"post"}).hide();
