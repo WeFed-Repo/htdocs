@@ -237,13 +237,14 @@
                             <li><a class="disabled">Lorem ipsum</a></li>
                                 <li><a class="disabled">Lorem ipsum</a></li>
                           </ul>
-              <li class="">
+              <li class="opened">
                 <a class="toggle"><span>Finanziamenti</span></a>
-          <ul style="display:none;">
+          <ul >
                           <li><a href="tpl_finanziamenti_rateali.html" class="">Finanziamenti rateali</a></li>
                             <li><a href="tpl_finanziamenti_rateali_ammortamento.html" class="">Finanziamenti rateali Ammortamento</a></li>
                             <li><a href="tpl_finanziamenti_rateali_pre_ammortamento.html" class="">Finanziamenti rateali Pre Ammortamento</a></li>
                             <li><a href="tpl_smart_lending_oggetti.html" class="">Oggetti template finanziamenti</a></li>
+                            <li><a href="tpl_smart_lending_componente.html" class="on">Smart lending configuratore</a></li>
                         </ul>
               <li class="">
                 <a class="toggle"><span>Dati e disposizioni</span></a>
@@ -257,12 +258,11 @@
                                 <li><a class="disabled">Strutture libere</a></li>
                                 <li><a class="disabled">Monitoraggio flussi CBI</a></li>
                           </ul>
-              <li class="opened">
+              <li class="">
                 <a class="toggle"><span>PARTE PUBBLICA E VARI<br /><u>(non includere in menu)</u></span></a>
-          <ul >
+          <ul style="display:none;">
                           <li><a href="tpl_home_configurator.html" class="">HOME - Configuratore</a></li>
                             <li><a href="strutt_priv.php?tpl=tpl_configura.php" class="">CONFIGURA</a></li>
-                            <li><a href="tpl_smart_lending.html" class="on">SMART LENDING</a></li>
                             <li><a href="strutt_priv.php?tpl=tpl_login.php" class="">LOGIN</a></li>
                               <li><a class="disabled">Profilatura Utenti</a></li>
                               <li><a href="tpl_login_help.html" class="">LOGIN HELP</a></li>
@@ -615,60 +615,505 @@
 
 <!-- END SELETTORE DOSSIER DI ESEMPIO -->
 
-  <!-- SETTAGGI FINANZIAMENTO -->
-  <section class="no-margin-section bordered mt-3 mb-3 p-x-3 py-4">
-  <div class="row">
-    <div class="col-12 m-auto">
-      <div class="row justify-content-around">
-        <div class="col-12 col-md-6 col-xl-5 mb-3 mb-md-0 text-center">
-          <div id="prestitoTitle"></div>
-          <ul id="prestitoCountDown" class="c-countdown"> <!-- countdown --> </ul>
-          <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Iste ea optio quo excepturi veniam amet, labore dolores odit consequatur
-          iusto alias. Veritatis hic ipsum fugit cum, quod quo eveniet.</p>
-          <h4>Trascina per aumentare/diminuire l'importo</h4>
-          <div class="c-range">
-            <h3 class="mb-0 mt-3 p-0" id="prestitoLabel"></h3>
-            <input id="prestitoRange" type="range" step="1" value="1" class="c-range-field">
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-5 mt-3 pr-xl-4 mt-md-0">
-          <!-- per avere cambiare il colore ad una voce, usare la classe .item--higlighted --> 
+<!-- PROMO BOX -->
+<!-- BOX PROMO VIA CONTENT-->
+<section class="no-margin-section">
+	<div class="box-promo">
+		<div class="row">
+			<div class="col-md-auto col-sm-12">
+				<div class="h-100 box-promo-left  d-flex justify-content-center align-items-center">
+						<img src="./fe/img/placeholder_box_promo.png" alt="immagine box promo"/>
+				</div>
+			</div>
+			<div class="col-md col-sm-12">
+				<div class="box-promo-top">
+					<h4 class="title-blue">Lorem ipsum dolor sit</h4>
+					<p id="text-to-ellipse" class="text-box text-ellipsed">Con la conversione in legge del D.L. n.23 dell’8 aprile 2020 (Decreto Liquidità), sono state introdotte ulteriori novità sui finanziamenti agevolati assistiti dalla garanzia del Fondo di Garanzia per le Piccole e Medie Imprese. Se sei una micro, piccola o media impresa, una persona fisica esercente attività di impresa, arti o professioni, puoi presentare richiesta</p>
+					<hr>
+				</div>
+				<div class="box-promo-bottom">
+					<div class="box-promo-doc pull-left">
+						<span class="pull-left"><a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum1.pdf</a></span>
+						<span class="pull-left"><a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum2.pdf</a></span>
+						<span class="pull-left"><a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum3.pdf</a></span>
+					</div>
+					<span class="pull-right"><a href="#" aria-label="Dettagli">Dettagli</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FINE BOX PROMO VIA CONTENT-->
 
-<ul class="c-calcolo c-calcolo--oneline" id="prestitoResult">
-    <li class="item" id="calcolo-spese">
-        <span class="key">Spese</span>
-        <span class="output"><span class="value">450</span>&euro;</span>
-        <img class="icon" src="./fe/img/icon/spese.svg">
-    </li>
-    <li class="item" id="calcoloTag">
-        <span class="key" >TAN</span>
-        <span class="output"><span class="value">5,10</span>%</span>
-        <img class="icon" src="./fe/img/icon/tan.svg">
-        <button type="button" class="btn-icon-info" data-modal-open="tan"></button>
-    </li>
-    <li class="item" id="calcolo-taeg">
-        <span class="key">TAEG</span>
-        <span class="output"><span class="value">4,00</span>%</span>
-        <img class="icon" src="./fe/img/icon/taeg.svg">
-        <button type="button" class="btn-icon-info" data-modal-open="taeg"></button>
-    </li>
-    <li class="item" id="calcolo-rate">
-        <span class="key">Rate</span>
-        <span class="output"><span class="value">12</span></span>
-        <img class="icon" src="./fe/img/icon/rate_mensili.svg">
-    </li>
-    <li class="item item--higlighted" id="calcolo-totale">
-        <span class="key">La tua rata:</span>
-        <span class="output"><span class="value">2500</span>&euro;</span>
-        <img class="icon" src="./fe/img/icon/la_tua_rata.svg">
-    </li>
-</ul>        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-  <!-- END SETTAGGI FINANZIAMENTO -->
+<!--- POSSIBILE FUNZIONE PER IL TRONCAMENTO se è presente la classe text-ellipsed---->
+<script>
+    //definizione di variabili: testo da troncare, altezza massima del testo su desktop, altezza massima del testo su mobile.
+	var txt = $('#text-to-ellipse').html(),
+		hMaxDesktop = '90', //massimo tre righe
+		hMaxMobile = '190'; //massimo sette righe
+
+	/* Verifica se schermo minore di... */
+	var viewdim = function () {
+		var e, a;
+
+		if (!('innerWidth' in window)) {
+			e = document.documentElement || document.body;
+			a = 'client';
+		} else {
+			e = window;
+			a = 'inner';
+		}
+
+		return { width: e[a + 'Width'], height: e[a + 'Height'] };
+		};
+		
+	
+	function ellipsizeTextPromo(id,txt) {
+		var hMax = viewdim().width < 768 ? hMaxMobile : hMaxDesktop;
+		
+		var el = $('#' + id);
+		el.html(txt);
+		if(el.hasClass('text-ellipsed'))
+			{
+				var textArray = txt.split(' ');
+				while(el.prop('scrollHeight') > hMax ) {
+					textArray.pop();
+					el.html(textArray.join(' ') + '...');
+				}
+			}
+		}
+	$( window ).resize(function() {
+		ellipsizeTextPromo('text-to-ellipse',txt);
+		
+	})
+  ellipsizeTextPromo('text-to-ellipse',txt);
+ 
+</script>
+
+
+
+
+<!-- FINE PROMO BOX -->
+
+<h2>Calcola la rata del finanziamento</h2>
+
+<script type="text/javascript">
+var defSim = {
+	"simulatore": {
+		"discriminanti": "durataFinanziamento",
+		"prodottiElise": [{
+			"classe": "CHAGE",
+			"codice": "CVSLDEF0",
+			"periodicita": {
+				"options": [{
+					"value": "1",
+					"lbl": "Mensile"
+				},
+				{
+					"value": "3",
+					"lbl": "Trimestrale"
+				}],
+				"default": 3.0,
+				"modificabile": true
+			},
+			"importo": {
+				"min": 1000.0,
+				"max": 30000.0,
+				"default": 30000.0,
+				"step": 1000.0,
+				"modificabile": true
+			},
+			"valuta": "euro",
+			"tipoRata": {
+				"options": [{
+					"value": "1",
+					"lbl": "Francese"
+				}],
+				"default": 1.0,
+				"modificabile": false
+			},
+			"durataFinanziamento": {
+				"min": 27.0,
+				"max": 42.0,
+				"default": 42.0,
+				"step": 1.0,
+				"modificabile": true
+			},
+			"durataAmmortamento": {
+				"min": 3.0,
+				"max": 18.0,
+				"default": 18.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"durataPreammortamento": {
+				"min": 24.0,
+				"max": 39.0,
+				"default": 24.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"default": false
+		},
+		{
+			"classe": "CHAGE",
+			"codice": "CVSLDFF0",
+			"periodicita": {
+				"options": [{
+					"value": "1",
+					"lbl": "Mensile"
+				},
+				{
+					"value": "3",
+					"lbl": "Trimestrale"
+				}],
+				"default": 3.0,
+				"modificabile": true
+			},
+			"importo": {
+				"min": 1000.0,
+				"max": 30000.0,
+				"default": 30000.0,
+				"step": 1000.0,
+				"modificabile": true
+			},
+			"valuta": "euro",
+			"tipoRata": {
+				"options": [{
+					"value": "1",
+					"lbl": "Francese"
+				}],
+				"default": 1.0,
+				"modificabile": false
+			},
+			"durataFinanziamento": {
+				"min": 43.0,
+				"max": 78.0,
+				"default": 78.0,
+				"step": 1.0,
+				"modificabile": true
+			},
+			"durataAmmortamento": {
+				"min": 6.0,
+				"max": 54.0,
+				"default": 54.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"durataPreammortamento": {
+				"min": 24.0,
+				"max": 72.0,
+				"default": 24.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"default": false
+		},
+		{
+			"classe": "CHAGE",
+			"codice": "CVSLDGF0",
+			"periodicita": {
+				"options": [{
+					"value": "1",
+					"lbl": "Mensile"
+				},
+				{
+					"value": "3",
+					"lbl": "Trimestrale"
+				}],
+				"default": 3.0,
+				"modificabile": true
+			},
+			"importo": {
+				"min": 1000.0,
+				"max": 30000.0,
+				"default": 30000.0,
+				"step": 1000.0,
+				"modificabile": true
+			},
+			"valuta": "euro",
+			"tipoRata": {
+				"options": [{
+					"value": "1",
+					"lbl": "Francese"
+				}],
+				"default": 1.0,
+				"modificabile": false
+			},
+			"durataFinanziamento": {
+				"min": 79.0,
+				"max": 102.0,
+				"default": 102.0,
+				"step": 1.0,
+				"modificabile": true
+			},
+			"durataAmmortamento": {
+				"min": 18.0,
+				"max": 78.0,
+				"default": 78.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"durataPreammortamento": {
+				"min": 24.0,
+				"max": 84.0,
+				"default": 24.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"default": false
+		},
+		{
+			"classe": "CHAGE",
+			"codice": "CVSLDHF0",
+			"periodicita": {
+				"options": [{
+					"value": "1",
+					"lbl": "Mensile"
+				},
+				{
+					"value": "3",
+					"lbl": "Trimestrale"
+				}],
+				"default": 3.0,
+				"modificabile": true
+			},
+			"importo": {
+				"min": 1000.0,
+				"max": 30000.0,
+				"default": 30000.0,
+				"step": 1000.0,
+				"modificabile": true
+			},
+			"valuta": "euro",
+			"tipoRata": {
+				"options": [{
+					"value": "1",
+					"lbl": "Francese"
+				}],
+				"default": 1.0,
+				"modificabile": false
+			},
+			"durataFinanziamento": {
+				"min": 103.0,
+				"max": 150.0,
+				"default": 120.0,
+				"step": 1.0,
+				"modificabile": true
+			},
+			"durataAmmortamento": {
+				"min": 18.0,
+				"max": 126.0,
+				"default": 126.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"durataPreammortamento": {
+				"min": 24.0,
+				"max": 132.0,
+				"default": 24.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"default": true
+		},
+		{
+			"classe": "CHAGE",
+			"codice": "CVSLDIF0",
+			"periodicita": {
+				"options": [{
+					"value": "1",
+					"lbl": "Mensile"
+				},
+				{
+					"value": "3",
+					"lbl": "Trimestrale"
+				}],
+				"default": 3.0,
+				"modificabile": true
+			},
+			"importo": {
+				"min": 1000.0,
+				"max": 30000.0,
+				"default": 30000.0,
+				"step": 1000.0,
+				"modificabile": true
+			},
+			"valuta": "euro",
+			"tipoRata": {
+				"options": [{
+					"value": "1",
+					"lbl": "Francese"
+				}],
+				"default": 1.0,
+				"modificabile": false
+			},
+			"durataFinanziamento": {
+				"min": 151.0,
+				"max": 180.0,
+				"default": 180.0,
+				"step": 1.0,
+				"modificabile": true
+			},
+			"durataAmmortamento": {
+				"min": 18.0,
+				"max": 156.0,
+				"default": 156.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"durataPreammortamento": {
+				"min": 24.0,
+				"max": 162.0,
+				"default": 24.0,
+				"step": 1.0,
+				"modificabile": false
+			},
+			"default": false
+		}]
+	},
+	"importoMassimoCRM": 0.0
+}
+</script>
+
+  <!-- Configuratore prestito -->
+  <!-- /// SEPARARE -->
+  <style>
+    /* Oggetti generici */
+    .loading {background-image: url("./fe/img/loading.gif");
+    background-repeat:no-repeat;
+    background-position:center center}
+
+	
+    
+    .loading>* {visibility:hidden}
+    .sml.loading {min-height:200px} 
+
+    /* Bordature */
+    .bordered-top {border-top: solid 1px #eee; padding-top:20px;}
+
+    /* Inner bordered blocks */
+    .flex-bordered {padding:0 30px 30px 30px}
+    .bordered-between {display:flex;margin:0 -40px;}
+    .bordered-between .flex-element {flex:1; padding:20px 40px; border-left: solid 1px #eee;margin-bottom:0;}
+    .bordered-between .flex-element:first-child {border-left:0 none;}
+
+    /* Oggetti dedicati */
+    .configuratore .top-evidente {text-align:center}
+    .slider-input {display:block;font-size:18px;width:120px;padding: 5px 0 5px 10px; border:solid 1px #ccc;border-radius:5px; position:relative;
+    margin:0;float:none;clear:both; background:transparent; }
+    .slider-output {font-size:18px; width:100px;padding: 6px 10px; position:relative; display:block; color:#2f9988;
+    margin:10px auto 20px;float:none;clear:both;}
+
+    /* Offerta */
+    .cd-wrapper {width:340px; margin:0 auto; display:inline-block; vertical-align:top; 
+	background:transparent url(./fe/img/scadenza_countdown.png) no-repeat left center; background-size: 58px;}
+	.cd-wrapper span.cd-label {
+		font-weight: bold;
+		color:#1d2d53;
+		font-size:16px;
+		width: 100%;
+		padding: 0; 
+		margin-bottom:10px;
+	}
+	.countdown {width:210px;margin:0 auto}
+	.countdown-inline {width:210px; display:inline-block;}
+	.countdown-inline .cdblock {width:33.3331%;margin:0;padding:0;display:inline-block; text-align:center;}
+	.countdown-inline .cdblock span {width:100%;clear:both;display:block; text-transform:uppercase; font-weight:bold;font-size:12px;}
+	.countdown-inline .cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;font-weight:normal;width:100%;clear:both;}
+    .countdown-inline div.cdblock.giorni span.time-countdown {font-weight:bold; color: #2F9988}
+	
+    /* Blocchi di input */
+    .editable-field-wrapper { border: solid 1px #ddd; position:relative;width:150px; padding:0 40px 0 0; margin: 10px auto 20px; border-radius:4px; background:#fbfbfb}
+    .editable-field-wrapper.importo::after { content: '\20AC';
+    position: absolute;
+    top: 5px;
+    font-size: 18px;
+    right: 10px;
+    color: #2f9988;
+    border-radius: 3px;}
+    .editable-field-wrapper input {border: 0; color:#2f9988;}
+
+    /* Risultati */
+    .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
+    .results.disabled {opacity:0.6}
+    .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;
+		background: transparent none no-repeat left bottom;background-size:auto 80%;}
+    .results .result-box:first-child {margin-left:0;}
+    .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:16px;font-weight:bold;}
+    .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;line-height:25px;}
+    .results .result-box.rata {color:#00987f;}
+
+	.results .result-box.spese {background-image: url(./fe/img/prev_spese.png)}
+	.results .result-box.tan {background-image: url(./fe/img/prev_tan.png)}
+	.results .result-box.taeg {background-image: url(./fe/img/prev_taeg.png)}
+	.results .result-box.rate {background-image: url(./fe/img/prev_rate.png)}
+
+	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
+
+	@media (max-width:767px) {
+
+		/* Fix no margin per bordered */
+		.no-margin-section.bordered {width:auto; max-width:none;}
+
+		.flex-bordered {padding:0}
+		.bordered-between {flex-direction:column;margin: 0;}
+		.bordered-between .flex-element{border: 0 none; border-top:solid 1px #eee;padding:25px 0 25px;}
+		.bordered-between .flex-element:first-child {border-top:none;}
+
+		.cd-wrapper {padding:0 0 0 60px; width:270px;}
+
+
+		.results {flex-direction:column; padding-top:20px;}
+		.results .result-box {margin:0 0 15px}
+	}
+
+  </style>
+  <!-- /// FINE SEPARARE -->
+  
+  <script type="text/javascript">
+
+	  // Esempio handler di blocco dell'interfaccia
+	  var esempioHandlerBlocco = function(){
+		$("#prestitoSubmit").attr("disabled",true);
+	  }
+
+	  // Esempio handler di calcolo (con sblocco finale dell'interfaccia)
+      var esempioHandlerCalcola = function(dataToSend,callback) {
+        var dataObject = {
+          "spese": Math.round(Math.random()*3000*100)/100,
+          "taeg": Math.round(Math.random()*10*100)/100,
+          "tan": Math.round(Math.random()*10*100)/100,
+          "rate":parseInt( Math.random()*11)+1,
+          "rata":Math.round(Math.random()*1000*100)/100
+        }
+        // Esempio tracciatura dei dati ricevuti
+        console.log(dataToSend);
+        setTimeout(function(){
+			// Lancio della callback
+			callback(dataObject)
+			// Sblocco dell'interfaccia di richiesta
+			$("#prestitoSubmit").attr("disabled",false);
+		}
+		,1000);
+      }
+  </script>
+
+  <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
+  <script type="text/javascript" >
+    confLending({
+      id: "#configuraPrestito",
+      scadenza: 1617141600000,
+      objConf: defSim,
+      handlerCalcola: esempioHandlerCalcola,
+	  handlerBloccoInterfaccia: esempioHandlerBlocco
+    })
+  </script>
+  <!-- Blocco contentente il configuratore -->
+  <section id="configuraPrestito" class="no-margin-section bordered sml loading"></section>
+  <!-- Fine blocco contentente il configuratore -->
+  
+  <!-- Fine configuratore prestito -->
 
   <!-- INFORMATIVE -->
   <section class="no-margin-section bordered mt-3 mb-3 p-3">
@@ -690,446 +1135,23 @@
   </section>
   <!-- END INFORMATIVE -->
 
-
-<!-- FORM DI RICHIESTA FINANZIAMENTO (campi hidden) -->
-<!-- 
-  NOTE IMPORTANTI: 
-  NELLA POST, RECUPERARE SOLO IL VALORE DEI CAMPI IN QUESTA FORM. 
-  Il range NON serve. 
--->
-
 <!-- Pulsantiera -->
-<div class="w-100">
-  <form id="prestitoForm" action="" method="POST">
-    <input type="hidden" id='prestitoValue'>
-    <input type="hidden" id='foglio_informativo' data-control="doc1" value="0">
-    <input type="hidden" id='minuta_di_contratto' data-control="doc2" value="0">
-    <button class="btn btn-primary float-right" id="prestitoSubmit" disabled>
-      RICHIEDI FINANZIAMENTO
-    </button>
-  </form>
+<div class="row justify-content-end">
+	<div class="col-sm-6">
+		<div class="form-row d-flex justify-content-end">
+			<div class="form-group col-6">
+				<button class="btn btn-secondary btn-block ">VISUALIZZA ALTRI PRODOTTI</button>
+			</div>
+			<div class="form-group col-6">
+				<button class="btn btn-primary btn-block "  id="prestitoSubmit" disabled>RICHIEDI FINANZIAMENTO</button>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Fine pulsantiera -->
 
 <!-- END FORM DI RICHIESTA FINANZIAMENTO -->
-
-<!-- MODALE HELP -->
-  <!-- Modal -->
-<div class="modal fade" data-modal="help">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header  d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">Help</h5>
-        </div>
-        <div class="modal-toolbar">
-          <a href="#" aria-label="CSV" >
-            <img src="./fe/img/icon/excel.svg">
-          </a>
-          <a href="#" aria-label="Print" >
-            <img src="./fe/img/icon/print.svg">
-          </a>
-          <a href="#" data-dismiss="modal" aria-label="Close" >
-            <img src="./fe/img/icon/close.svg">
-          </a>
-        </div>
-      </div>
-      <div class="modal-body">
-        <h2>Dossier Titoli</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE HELP -->
-
-
-<!-- MODALE di info TAN -->
-<div class="modal fade" data-modal="tan">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">TAN</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-          aliquet nec, vulputate eget, arcu.</p>
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-          Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras 
-          dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. 
-          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper 
-          ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget 
-          condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque 
-          sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-          Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero 
-          venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus 
-          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
-          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit 
-          cursus nunc,</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE di info TAN -->
-
-<!-- MODALE di info TAEG -->
-<div class="modal fade" data-modal="taeg">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">TAEG</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-          aliquet nec, vulputate eget, arcu.</p>
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-          Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras 
-          dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. 
-          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper 
-          ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget 
-          condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque 
-          sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-          Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero 
-          venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus 
-          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
-          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit 
-          cursus nunc,</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE di info TAEG -->
-
-<!-- MODALE DOCUMENTO 1 -->
-<div class="modal fade" data-modal="doc1">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">Foglio informativo</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body"> 
-        <div id="doc1" class="c-scrolled-doc">
-          <div class="c-scrolled-doc__innerWrap">
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-          </div>
-        </div>
-        <div class="alert-to-scroll">Visualizza il documento sino alla fine per procedere.</div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary c-scrolled-doc__confirm" data-confirm="doc1" disabled data-dismiss="modal" aria-label="Close">
-          Ho letto la documentazione
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE DOCUMENTO 1 -->
-
-<!-- MODALE DOCUMENTO 2 -->
-<div class="modal fade" data-modal="doc2">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between">
-        <div>
-          <h5 class="modal-title">Minuta di contratto</h5>
-        </div>
-        <a href="#" data-dismiss="modal" aria-label="Close" >
-          <img src="./fe/img/icon/close.svg">
-        </a>
-      </div>
-      <div class="modal-body">
-        <div id="doc2" class="c-scrolled-doc">
-          <div class="c-scrolled-doc__innerWrap">
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-            Lorem ipsum dolor sit amet <br>
-            Consectetuer augue nibh lacus at <br>
-            Pretium Donec felis dolor penatibus <br>
-            Phasellus consequat Vivamus dui lacinia <br>
-            Ornare nonummy laoreet lacus Donec <br>
-            Ut ut libero Curabitur id <br>
-            Dui pretium hendrerit sapien Pellentesque <br>
-          </div>
-        </div>
-        <div class="alert-to-scroll">Visualizza il documento sino alla fine per procedere.</div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary c-scrolled-doc__confirm" data-confirm="doc2" disabled data-dismiss="modal" aria-label="Close">
-          Ho letto la documentazione
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END MODALE DOCUMENTO 2 -->
-
-<!-- Comportamento range + dati mokkati -->
-<script>
-  var mocks = {
-		'expiryOLD': '2019-10-26 19:37',
-		'expiry2': '2020-11-02T23:59:59.000Z',
-		'expiry': {
-			'year': 2020,
-			'month': 11,
-			'day': 02,
-			'hour': 23,
-			'minute': 59,
-			'second': 59,
-		},
-    'range': {
-      'startIndex': 1,
-      'data': [
-        {'key':'5','value':'5.000','spese':'450','tan':'4,00','taeg':'5,10','rate':'12','totale':'2500'},
-        {'key':'10','value':'10.000','spese':'2','tan':'2','taeg':'2','rate':'2','totale':'3000'},
-        {'key':'15','value':'15.000','spese':'3','tan':'3','taeg':'3','rate':'3','totxale':'4000'},
-        {'key':'20','value':'20.000','spese':'4','tan':'4','taeg':'4','rate':'4','totale':'5600'},
-        {'key':'25','value':'25.000','spese':'5','tan':'5','taeg':'5','rate':'5','totale':'6700'},
-        {'key':'30','value':'30.000','spese':'6','tan':'6','taeg':'6','rate':'6','totale':'8000'},
-      ]
-    }
-  }
-
-	var countVal;
-
-  $(function(){
-
-  // SETTING DEL RANGE
-
-    var range = $('#prestitoRange');
-    // crea la lista
-    range.after('<ul class="c-range-legenda"></ul>')
-    // la salva in una variabile
-    var ul = range.next('ul');
-    // calcola gli elementi totali
-    var mr = mocks.range
-    var length = mr.data.length
-    var index = length-1
-    // calcola il valore iniziale del range input, se non è presente o se è incorretto.
-    var start = mr.startIndex ? ( mr.startIndex < length ) ? mr.startIndex : length : 1
-    // mette allo step range gli attributi secondo i valori dell'array
-    range.val( start )
-          .attr('step', 1)
-          .attr('min', 1)
-          .attr('max', length)
-    // crea la lista della legenda
-    mr.data.forEach(function(mock) {
-      ul.append('<li class="c-range-legenda__item">'+mock.key+'</li>')
-    });
-    // inizializza i box
-    fillCalcolo( range.val() );
-    // aggiorna in caso di change
-    range.on('input, click, change',function(){
-			fillCalcolo( range.val() )
-		})
-
-  // SETTING DEL COUNTDOWN
-    // inizializza il countdown, poi lo aggiorna ogni secondo
-    showCountdown();
-    countVal = setInterval(function() { showCountdown() }, 1000);
-
-  // SETTING SCROLL DOCS
-
-  // Controllo SE il documento nella modale aperta corremtemente si deve scrollare
-  // per essere letto sino alla fine. se è corto e non ha bisogno di scroll,
-  // abilita il bottone di conferma in automatico.
-  $('[data-modal]').on('shown.bs.modal', function () {
-    if( ! $(this).find('.c-scrolled-doc').hasScrollBarVert() ) {
-      confirm = $(this).find('[data-confirm]');
-      confirm.removeAttr('disabled');
-    }
-  })
-
-  // in caso di documento in cui è necessario scrollare:
-  $('.c-scrolled-doc').bind('scroll',
-    function(){
-      var id = $(this).attr('id');
-      var confirm = $('[data-confirm="'+id+'"]');
-      // se l'utente scrolla tutto il docuemnto, il bottone di conferma viene abilitato.
-      if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight) {
-        confirm.removeAttr('disabled');
-      }
-    });
-
-    // bottone di conferma di lettura del documento
-    // (si abilita SE l'utente scrolla tutta la modale)
-    $('[data-confirm]').on('click', function(){
-      id = $(this).data('confirm');
-      var control = $('[data-control="'+id+'"]');
-      if(control.length>0) {
-        control.val(1);
-      } else {
-        console.error('ERRORE: [data-control="'+id+'"] non esiste.')
-      }
-      // controlla se tutti i documenti sono stati confermati e, in caso, abilita il submit
-      var isEmpty = false;
-
-      $("[data-control]").filter(function () {
-        var v = parseInt($(this).val());
-        if( !isEmpty && v <= 0 ) isEmpty = true;
-        // mostra spunta nel bottone se è già stato letto
-        var btn = $('#'+$(this).data('control')+'-button');
-        if( v && ! btn.hasClass('is--confirmed') ) {
-          btn.addClass('is--confirmed');
-        }
-      }).length == 0;
-      if( !isEmpty ) $('#prestitoSubmit').removeAttr('disabled')
-    });
-
-    $('#prestitoSubmit').on('click', function(e){
-      e.preventDefault();
-      // CREARE QUI LA CHIAMATA POST SOSTITUENDOLA AL LOCATION HREF.
-      location.href = "strutt_priv.php?tpl=tpl_smart_lending_2.php";
-    });
-
-  });
-
-  // riporto i calcoli corretti nei box secondo il valore impostato nel rangeInput.
-  function fillCalcolo(value) {
-    var boxContainer = $('#prestitoResult')
-    var resultValue = $('#prestitoValue')
-    var label = $('#prestitoLabel')
-    var index = value-1
-    var result = mocks.range.data[index]
-    boxContainer.find('#calcolo-spese').find('.value').html(result.spese)
-    boxContainer.find('#calcolo-tan').find('.value').html(result.tan)
-    boxContainer.find('#calcolo-taeg').find('.value').html(result.taeg)
-    boxContainer.find('#calcolo-rate').find('.value').html(result.rate)
-    boxContainer.find('#calcolo-totale').find('.value').html(result.totale)
-    // !!! IMPORTANTE: NELLA POST, RECUPERARE IL VALORE DI #prestitoValue,
-    // non utilizzare il valore del range #prestitoRange !!!
-    resultValue.val( result.value )
-    label.html( result.value+'&euro;' )
-  }
-
-  function showCountdown() {
-    var countdown = $('#prestitoCountDown');
-    var mc = mocks.countdown
-    // Settare la data nel json
-		var exp = mocks.expiry;
-		var countDownDate = new Date(exp.year, exp.month, exp.day, exp.hour, exp.minute, exp.second).getTime();
-    var title = $('#prestitoTitle');
-    // cerca la data odierna
-    var now = new Date().getTime();
-    // Fai un diff tra le date
-    var distance = countDownDate - now;
-    // Calcola la data
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    // Scrivi il counter o il placeholder in caso sia scaduta l'offerta
-    if (distance > 0) {
-      // scrivi il titolo
-      title.html( "<h3>Scegli l'importo, l'offerta scade tra:</h3>" );
-      // resetta il counter
-      countdown.empty();
-      // riscrive il counter
-      fillTimeBox(countdown,days,'giorni','giorno')
-      fillTimeBox(countdown,hours,'ore','ora')
-      fillTimeBox(countdown,minutes,'minuti','minuto')
-      //fillTimeBox(countdown,seconds,'secondi','secondo')
-    } else {
-      clearInterval(countVal);
-      title.html( "<h3>L'offerta è scaduta.</h3>" )
-    }
-  }
-
-  function fillTimeBox(countdown,time,plural,singular) {
-    countdown.append("<li class='c-countdown__item'> \
-                        <span class='value'>"+time+"</span> \
-                        <span class='key'>"+( time == 1 ? singular : plural )+"</span> \
-                      </li>");
-  }
-</script>						</div>
+						</div>
 					</div>
 					<!-- Fine spazio dei contenuti -->
 				</div>

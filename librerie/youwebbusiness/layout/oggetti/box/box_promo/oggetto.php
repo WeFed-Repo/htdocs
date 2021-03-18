@@ -1,5 +1,5 @@
 <!-- BOX PROMO VIA CONTENT-->
-<section>
+<section class="no-margin-section">
 	<div class="box-promo">
 		<div class="row">
 			<div class="col-md-auto col-sm-12">

@@ -304,6 +304,8 @@ var defSim = {
     .loading {background-image: url("./fe/img/loading.gif");
     background-repeat:no-repeat;
     background-position:center center}
+
+	
     
     .loading>* {visibility:hidden}
     .sml.loading {min-height:200px} 
@@ -370,6 +372,23 @@ var defSim = {
 
 	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
 
+	@media (max-width:767px) {
+
+		/* Fix no margin per bordered */
+		.no-margin-section.bordered {width:auto; max-width:none;}
+
+		.flex-bordered {padding:0}
+		.bordered-between {flex-direction:column;margin: 0;}
+		.bordered-between .flex-element{border: 0 none; border-top:solid 1px #eee;padding:25px 0 25px;}
+		.bordered-between .flex-element:first-child {border-top:none;}
+
+		.cd-wrapper {padding:0 0 0 60px; width:270px;}
+
+
+		.results {flex-direction:column; padding-top:20px;}
+		.results .result-box {margin:0 0 15px}
+	}
+
   </style>
   <!-- /// FINE SEPARARE -->
   
@@ -398,7 +417,6 @@ var defSim = {
 			$("#prestitoSubmit").attr("disabled",false);
 		}
 		,1000);
-
       }
   </script>
 
@@ -413,7 +431,7 @@ var defSim = {
     })
   </script>
   <!-- Blocco contentente il configuratore -->
-  <section id="configuraPrestito" class="bordered sml loading"></section>
+  <section id="configuraPrestito" class="no-margin-section bordered sml loading"></section>
   <!-- Fine blocco contentente il configuratore -->
   
   <!-- Fine configuratore prestito -->

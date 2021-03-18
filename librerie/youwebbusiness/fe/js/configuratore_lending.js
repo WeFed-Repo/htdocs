@@ -165,6 +165,8 @@ var startLending = function(params) {
                 if(prod.importo.min>sml.importomax) sml.importomax = prod.importo.max;
             }
             
+            // Forzature
+            sml.importomin =5000;
 
             console.log(prod);
         })
@@ -321,21 +323,24 @@ var startLending = function(params) {
                         $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
                     
                         $("<div>").addClass("row").append(
-                            $("<div>").addClass("col-sm-4").append(
+                            $("<div>").addClass("col-xs-4").append(
                                 $("<div>").addClass("form-check radio").append(
                                     $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
                                     $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
                                 )
                             ),
-                            $("<div>").addClass("col-sm-8").append(
+                            
+                            $("<div>").addClass("col-xs-8").append(
                                 $("<div>").addClass("form-check radio").append(
                                     $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
                                     $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
                                 )
                             )
-                        )
+                        ),
+                        $("<hr>").addClass("d-block d-md-none")
                     )
                     ,
+                   
 
                     $("<div>").addClass("form-group col-md-4").append(
                         // Preammortamento
