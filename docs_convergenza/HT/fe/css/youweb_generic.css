@@ -648,6 +648,9 @@ button {
 .innerWrapperTab .separator, .navfrontPage .separator {
     display: none;
 }
+.innerWrapperTab.content-tab {
+    margin-top:30px;
+}
 /* tab di contenuti modalita responsive*/
 @media screen and (max-width: 768px) {
 .innerWrapperTab.content-tab ul {

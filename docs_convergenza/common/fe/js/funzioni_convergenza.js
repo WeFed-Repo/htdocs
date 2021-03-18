@@ -4640,7 +4640,28 @@ var showVideo = function(vimeoid) {
         })
 
 }
-
+/*FUNZIONE GENERICA PER LEGGERE I PARAMETRI DELL'URL PASSATO */
+ var getUrlParameter = function(urlToCheck) {
+    parUrlArray = new Array()
+    var url = urlToCheck,
+        urlSplit = url.split('&');
+    for (arg in urlSplit) {
+        var parts = urlSplit[arg].split('=');
+        parUrlArray[unescape(parts[0])] = unescape(parts[1])
+    }
+    return parUrlArray;
+}
+/* FUNZIONE GENERICA PER SCROLLARE LA PAGINA IN BASE AL PARAMETRO ancorTo*/
+var scrollToAnchor = function() {
+    getUrlParameter(location.href);
+    if(typeof parUrlArray.ancorTo !== 'undefined') {
+    var target = $('#' + parUrlArray.ancorTo),
+            targetOffset = target.offset().top;
+            $('html, body').animate({
+                scrollTop: targetOffset
+        }, 500);
+    }
+}
 //inizializzazioni al load della pagina
 $(function () {
     setZindexModal();
