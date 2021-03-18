@@ -184,7 +184,7 @@ body.webview {
         margin-bottom: 0;
     }
 }
-
+.txt-loading {display:none;text-align: center;font-weight: 600;}
 .loading {
     min-height: 65px;
     max-height: 700px;
@@ -194,6 +194,11 @@ body.webview {
 
     * {
         visibility: hidden
+    }
+    .txt-loading {visibility:visible;width: 100%;position: absolute;top:32%} 
+    &.loading-top {
+        background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center 50px!important;
+        .txt-loading {top:20px} 
     }
 }
 
@@ -208,8 +213,8 @@ body.webview {
     width: 16px; 
     height: 16px; 
 }
-.txt-loading {display:none;text-align: center;font-weight: 600;}
-.loading .txt-loading {visibility:visible;width: 100%;position: absolute;top:32%} 
+
+
 /* MAIN */
 
 #main {

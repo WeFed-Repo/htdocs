@@ -49,7 +49,7 @@
 	 <div class="box-catalogue assicurazioni">
 	 	<div class="row">
 	 		<div class="col-sm-3 box-catalogue-left box-catalogue-white">
-	 			<i class="icon icon-ico_dettagli_versatilo"></i>
+	 			<i class="icon icon-ico_versatilo"></i>
 	 			<h3>LOREM IPSUM</h3>
 	 		</div>
              <div class="col-sm-9 box-catalogue-right">

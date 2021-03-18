@@ -231,19 +231,21 @@ var setOverlayerIconaOpertiva = function (contIconaOper) { /* Tolto parametro mo
     });
 };
 
-var setLoadingOnObject = function (idobj,idMessLoading) {
-    
+var setLoadingOnObject = function (idobj,idMessLoading, classToAdd) {
     traceOld("setLoadingOnObject()");
-    $('#' + idobj).addClass('loading');
+    var classToAdd = typeof classToAdd !=='undefined' ? 'loading ' + classToAdd : 'loading';
+    $('#' + idobj).addClass(classToAdd);
+    
     if(typeof(idMessLoading)!=='undefined') {
         $('#' + idobj).prepend($('#' + idMessLoading)); 
         $('#' + idMessLoading).show();
     }
 };
 
-var unsetLoadingOnObject = function (idobj,idMessLoading) {
+var unsetLoadingOnObject = function (idobj,idMessLoading, classToRemove) {
     traceOld("unsetLoadingOnObject()");
-    $('#' + idobj).removeClass('loading');
+    var classToRemove = typeof classToRemove !=='undefined' ? 'loading ' + classToRemove : 'loading';
+    $('#' + idobj).removeClass(classToRemove);
     if(typeof(idMessLoading)!=='undefined') $('#' + idMessLoading).hide();
 };
 
@@ -4644,11 +4646,12 @@ var showVideo = function(vimeoid) {
  var getUrlParameter = function(urlToCheck) {
     parUrlArray = new Array()
     var url = urlToCheck,
-        urlSplit = url.split('&');
+        urlSplit = url.split('?');
     for (arg in urlSplit) {
         var parts = urlSplit[arg].split('=');
         parUrlArray[unescape(parts[0])] = unescape(parts[1])
     }
+    console.log(parUrlArray);
     return parUrlArray;
 }
 /* FUNZIONE GENERICA PER SCROLLARE LA PAGINA IN BASE AL PARAMETRO ancorTo*/

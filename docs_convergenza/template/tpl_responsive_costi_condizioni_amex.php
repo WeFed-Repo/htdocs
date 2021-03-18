@@ -86,9 +86,16 @@
     <section>
        <ul class="documenti">
             <li><a target="_blank" class="btn-icon" href="#" title="Note legali carte american express"><i class="icon icon-file_pdf_fill fLeft" title="Note legali carte american express"></i> 
-                <span class="fLeft btnLink paddingLeftSmall">Note legali carte american express</span>
+                <span class="fLeft btnLink paddingLeftSmall">Note legali Carte american express</span>
             </a></li>
-		    <li><a target="_blank" class="btn-icon" href="#" title="Foglio informativo"><i class="icon icon-file_pdf_fill fLeft" title="icona posta_arrivo"></i> <span class="fLeft btnLink paddingLeftSmall">Foglio informativo</span></a></li>
+		    <li><a target="_blank" class="btn-icon" href="#" title="Foglio Informativo, Documento di Sintesi e Documentazione precontrattuale"><i class="icon icon-file_pdf_fill fLeft" title="icona posta_arrivo"></i> <span class="fLeft btnLink paddingLeftSmall">Foglio Informativo, Documento di Sintesi e Documentazione precontrattuale</span></a></li>
 		</ul>
+    </section>
+    <section>
+       <br class="clear">
+        <p class="note">Messaggio pubblicitario con finalit&agrave; promozionale. <br>
+        Per le condizioni economiche e contrattuali, prima della sottoscrizione, consulta i F.I. disponibili su americanexpress.it/terminiecondizioni, bancobpm.it, presso le filiali bancoBPM e su WeBank.it. <br>
+        L'approvazione della carta rimane a discrezione di American Express.
+     </p>
     </section>
 </div>

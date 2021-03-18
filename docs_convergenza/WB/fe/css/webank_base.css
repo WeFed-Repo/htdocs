@@ -2308,6 +2308,11 @@ body.webview.webapp #contenuti {
 .last-row.form-group {
   margin-bottom: 0;
 }
+.txt-loading {
+  display: none;
+  text-align: center;
+  font-weight: 600;
+}
 .loading {
   min-height: 65px;
   max-height: 700px;
@@ -2318,6 +2323,18 @@ body.webview.webapp #contenuti {
 .loading * {
   visibility: hidden;
 }
+.loading .txt-loading {
+  visibility: visible;
+  width: 100%;
+  position: absolute;
+  top: 32%;
+}
+.loading.loading-top {
+  background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center 50px !important;
+}
+.loading.loading-top .txt-loading {
+  top: 20px;
+}
 .loading-small {
   background: transparent url(/WB/fe/img/gen_preloader.gif) no-repeat center center;
   background-size: contain !important;
@@ -2326,17 +2343,6 @@ body.webview.webapp #contenuti {
 }
 .loading-small * {
   visibility: hidden;
-}
-.txt-loading {
-  display: none;
-  text-align: center;
-  font-weight: 600;
-}
-.loading .txt-loading {
-  visibility: visible;
-  width: 100%;
-  position: absolute;
-  top: 32%;
 }
 /* MAIN */
 #main {

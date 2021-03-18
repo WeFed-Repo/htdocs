@@ -444,7 +444,7 @@
     <!-- step orario non più disponibile mentre si fa la chiamata-->
     <section id="step-orarioNd" class="step-cmb">
       <div class="align-center">
-         <p>La fascia oraria che avevi selezionato non &egrave; pi&ugrave; disponibile</p>
+         <p class="p-big">La fascia oraria che avevi selezionato non &egrave; pi&ugrave; disponibile</p>
          <p>Puoi sceglierne un'altra tra quelle rimaste</p>
          <a type="button" id="btn-altro-orario" class="btn btn-primary">scegli un altro orario</a>
       </div>

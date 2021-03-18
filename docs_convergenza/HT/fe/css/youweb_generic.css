@@ -4592,7 +4592,9 @@ label.select-button + span {
     width:100%;
     position: relative;
 }
-
+.loading.loading-top {
+    background: transparent url(/HT/fe/img/caricamento.gif) no-repeat center 50px;
+} 
 .loading * {
     visibility: hidden;
 }
@@ -8762,7 +8764,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /*loading con testo */ 
 .txt-loading {display:none;text-align: center;font-weight: bold;}
 .loading .txt-loading {visibility:visible;width: 100%;position: absolute;top:37%}
-
+.loading.loading-top .txt-loading {visibility:visible;width: 100%;position: absolute;top:20px}
 /* box-link elemnento di content */
 .box-link {
     background-color: #ebeef0;
