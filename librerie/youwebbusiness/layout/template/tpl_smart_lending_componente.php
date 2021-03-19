@@ -359,11 +359,14 @@ var defSim = {
     .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
     .results.disabled {opacity:0.6}
     .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;
-		background: transparent none no-repeat left bottom;background-size:auto 80%;}
+		background: transparent none no-repeat left bottom;background-size:auto 80%; position:relative;}
     .results .result-box:first-child {margin-left:0;}
     .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:16px;font-weight:bold;}
     .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;line-height:25px;}
     .results .result-box.rata {color:#00987f;}
+
+	.results .result-box .btn-icon-help {text-decoration:none; position:absolute; right:5px;top:5px;}
+	.results.disabled .result-box .btn-icon-help {display:none}
 
 	.results .result-box.spese {background-image: url(./fe/img/prev_spese.png)}
 	.results .result-box.tan {background-image: url(./fe/img/prev_tan.png)}
