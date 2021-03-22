@@ -67,11 +67,41 @@
 	 			<div class="row">
 	 				<div class="col-sm-9 box-catalogue-right">	 			
 			 			<div class="row">
-			                <div class="form-field-input col-xs-12 col-sm-6">
+			                <div class="form-field-input col-xs-12 col-sm-12">
 			                    <label class="control-label">Cellulare</label> 
-			                    <div class="input-group"><span class="output">3493328654</span></div>
-			                </div>
-			               
+								<div class="input-group"><span class="output">3493328654</span></div>
+							</div>
+			             </div>				
+					</div>
+					<div class="col-sm-3 box-catalogue-right">	 			
+			 			<div class="form-group btnWrapper clearfix">
+					        <div class="btn-align-right">
+					          <div>
+					            <a type="button" href="#" class="btn btn-primary" title="prosegui" id="btnInvio">lorem ipsum</a>
+					          </div>
+					        </div>
+					    </div>		
+					</div>
+				 </div>
+			</div>
+		</div>
+	 </div>
+	  <div class="box-catalogue assicurazioni">
+
+	 	<div class="row">
+	 		<div class="col-sm-3 box-catalogue-left">
+	 			<h3>Email</h3>
+	 			<i class="icon icon-messaggio"></i>
+	 		</div>
+	 		<div class="col-sm-9 box-catalogue-right">	 			
+	 			<p><strong>STATO: </strong> <span class="colSucc">CERTIFICATO</span></p>
+	 			<div class="row">
+	 				<div class="col-sm-9 box-catalogue-right">	 			
+			 			<div class="row">
+			                <div class="form-field-input col-xs-12 col-sm-12">
+			                    <label class="control-label">Indirizzo email</label> 
+								<div class="input-group"><span class="output">mario.rossi@mail.it</span></div>
+							</div>
 			             </div>				
 					</div>
 					<div class="col-sm-3 box-catalogue-right">	 			
@@ -87,9 +117,30 @@
 	 		</div>
 		</div>
 	 </div>
-	  <div class="box-catalogue assicurazioni">
-
-	 	<div class="row">
+	 <div class="box-catalogue assicurazioni">
+		<div class="row">
+	 		<div class="col-sm-3 box-catalogue-left">
+	 			<h3>cellulare</h3>
+	 			<i class="icon icon-cellulare"></i>
+	 		</div>
+	 		<div class="col-sm-9 box-catalogue-right">	 			
+	 			<p><strong>STATO: </strong> <span class="colSucc">CERTIFICATO</span></p>
+	 			<div class="row">
+	 				<div class="col-sm-12">	 			
+			 			<div class="row">
+			                <div class="col-xs-12 col-sm-12">
+			                    <label class="control-label">Cellulare</label> 
+								<div class="input-group"><span class="output">3493328654</span></div>
+								<p>Se vuoi modificare il numero di cellulare <a href="#">clicca qui</a></p>
+							</div>
+			             </div>				
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+	 <div class="box-catalogue assicurazioni">
+		<div class="row">
 	 		<div class="col-sm-3 box-catalogue-left">
 	 			<h3>Email</h3>
 	 			<i class="icon icon-messaggio"></i>
@@ -97,26 +148,17 @@
 	 		<div class="col-sm-9 box-catalogue-right">	 			
 	 			<p><strong>STATO: </strong> <span class="colSucc">CERTIFICATO</span></p>
 	 			<div class="row">
-	 				<div class="col-sm-9 box-catalogue-right">	 			
+	 				<div class="col-sm-12">	 			
 			 			<div class="row">
-			                <div class="form-field-input col-xs-12 col-sm-6">
-			                    <label class="control-label">Indirizzo email</label> 
-			                    <div class="input-group"><span class="output">mario.rossi@mail.it</span></div>
-			                </div>
-			               
+			                <div class="col-xs-12 col-sm-12">
+								<label class="control-label">Indirizzo email</label> 
+								<div class="input-group"><span class="output">mario.rossi@mail.it</span></div>
+								<p>Se vuoi modificare l'indirizzo email <a href="#">clicca qui</a></p>
+							</div>
 			             </div>				
 					</div>
-					<div class="col-sm-3 box-catalogue-right">	 			
-			 			<div class="form-group btnWrapper clearfix">
-					        <div class="btn-align-right">
-					          <div>
-					            <a type="button" href="#" class="btn btn-primary" title="prosegui" id="btnInvio">lorem ipsum</a>
-					          </div>
-					        </div>
-					    </div>		
-					</div>
-	 			</div>
-	 		</div>
+				</div>
+			</div>
 		</div>
 	 </div>
 </section>
