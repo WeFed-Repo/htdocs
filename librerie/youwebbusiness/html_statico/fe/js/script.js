@@ -51,3 +51,37 @@
 	var formatLink = function(value,row) {
 		return "<a href='"+ row.link + "'>"+ value +"</a>";
 	}
+
+	// Costruzione dinamica di una modale
+	/* 
+	params = {
+		id [opzionale]: id della modale
+		class [opzionale]: classi aggiuntive per la modala
+		title [opzionale]: titolo della modale
+		body: corpo della modale
+		footer [opzionale]: footer della modale
+	}
+	*/
+	var getModal = function (params) {
+
+		var modal = $("<div>").addClass("modal fade").attr({"data-modal":"default", "id": (params.id ? params.id : "modal_"+  Math.round(Math.random()*999999999) )});
+		
+		// Assembla l'header
+		var modalHeader = $("<div>").addClass("modal-header").append(
+			((params.title)? $("<h5>").addClass("modal-title").html(params.title) : ""),
+			$("<a>").attr({"data-dismiss":"modal","arial-label":"close"}).append("<img src='./fe/img/icon/close.svg'>")
+		);
+		
+		modal.append(
+			$("<div>").addClass("modal-dialog modal-dialog-centered " + ((params.class ? params.class : ""))).attr("role","document").append(
+				$("<div>").addClass("modal-content").append(
+					modalHeader,
+					$("<div>").addClass("modal-body").append(params.body),
+					((params.footer)? $("<div>").addClass("modal-footer").append(params.footer): "")
+				)
+			)
+		)
+
+		return modal;
+
+	}

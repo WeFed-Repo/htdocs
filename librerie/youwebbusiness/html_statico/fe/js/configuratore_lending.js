@@ -165,7 +165,7 @@ var startLending = function(params) {
                 if(prod.importo.min>sml.importomax) sml.importomax = prod.importo.max;
             }
             
-            // Forzature
+            // Forzature per prove layout
             sml.importomin =5000;
 
             console.log(prod);
@@ -245,17 +245,21 @@ var startLending = function(params) {
                 {"id": "rata","label":"La tua rata", "modal": true}
             ],function(div){
                 return $("<div>").addClass("result-box " + div.id).append(
+                    ((div.modal)? $("<a>").addClass("btn-icon-help").click(function(){
+                        sml.showModal(div.id);
+                    }) : ""),
                     $("<span>").addClass("result-label").html(div.label),
                     $("<span>").addClass("result").attr({id: "result_"+div.id}).html(" - ")
                 )
             })
             ),
-    
+        
+        // Modali
+        modal: {},    
 
         // Disclaimer
         disclaimer:  $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>"),
     
-
         // ################## FUNZIONI ########################
         // Acquisizione dei dati dall'handler esterno
         getLendingData : function(data) {
@@ -284,7 +288,64 @@ var startLending = function(params) {
             sml.calcola.removeClass("disabled");
             sml.setResults({});
             params.handlerBloccoInterfaccia();
-        }
+        },
+
+        offertaScaduta: function() {
+            alert("Offerta scaduta!");
+            sml.wrap.empty().html("<h3>Offerta scaduta!</h3>")
+            params.handlerBloccoInterfaccia();
+        },
+
+        // modali
+        showModal: function(modaltype){
+           
+            // Prepara il contenuto della modale
+            var modalTitle, modalBody;
+            switch(modaltype) {
+
+                case "spese":
+
+                    modalTitle= "Spese"; 
+                    modalBody = $("<div>").append(
+                        $("<p>").html("Spese Istruttoria: 200,00 &euro;<br>" +
+                        "Commissione Erogazione: 0,00 &euro;<br>"+
+                        "Spese Incasso Rata: 2,75 &euro;<br>"+
+                        "Spese Avvisatura: 1,25 &euro;*<br>"),
+                        $("<p>").addClass("note").html("*applicate solo nel caso in cui la rata non venga pagata mediante addebito su un conto corrente accesso presso l’istituto erogato.")
+                    )
+                break;
+
+                case "rata":
+
+                    modalTitle= "La tua rata";
+                    modalBody = $("<div>").append($("<p>").html("La durata complessiva del finanziamento a " + sml.durata + " mesi di cui " + sml.durpreamm + " di preammortamento."));
+                    
+                    var tableammortamento = $("<table>").addClass("table").append(
+
+                        $("<thead>").append(
+                            $("<tr>").append(
+                                $("<th>").html("Numero"),
+                                $("<th>").html("Quota interessi"),
+                                $("<th>").html("Quota capitale"),
+                                $("<th>").html("Debito residuo"),
+                            )
+                        )
+                    )
+
+                    modalBody.append(tableammortamento)
+
+                break;
+
+            }
+
+            // Se la modale non esiste, la costruisce
+            if (!sml.modal[modaltype]) {
+                sml.modal[modaltype] = getModal({title: modalTitle})
+            }
+            sml.modal[modaltype].find(".modal-body").empty().append(modalBody);
+            sml.modal[modaltype].modal()
+            
+        },
 
     });
 

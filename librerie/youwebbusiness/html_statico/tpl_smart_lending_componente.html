@@ -622,7 +622,9 @@
 		<div class="row">
 			<div class="col-md-auto col-sm-12">
 				<div class="h-100 box-promo-left  d-flex justify-content-center align-items-center">
-						<img src="./fe/img/placeholder_box_promo.png" alt="immagine box promo"/>
+					<img src="./fe/img/placeholder_box_promo.png" alt="immagine box promo"/>
+					<!-- immagin ebox altri prodotti-->
+					<img src="./fe/img/placeholder_box_altri_prodotti.png" alt="immagine box altri prodotti"/>
 				</div>
 			</div>
 			<div class="col-md col-sm-12">
@@ -637,7 +639,10 @@
 						<span class="pull-left"><a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum2.pdf</a></span>
 						<span class="pull-left"><a href="#" aria-label="PDF"><span><img src="./fe/img/icon/pdf.svg"></span>lorem ipsum3.pdf</a></span>
 					</div>
-					<span class="pull-right"><a href="#" aria-label="Dettagli">Dettagli</a></span>
+					<span class="pull-right">
+						<a href="#" class="number-info"><span class="number">2</span>Richieste da completare</a>
+						<a href="#" aria-label="Dettagli">Dettagli</a>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -1038,11 +1043,14 @@ var defSim = {
     .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
     .results.disabled {opacity:0.6}
     .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;
-		background: transparent none no-repeat left bottom;background-size:auto 80%;}
+		background: transparent none no-repeat left bottom;background-size:auto 80%; position:relative;}
     .results .result-box:first-child {margin-left:0;}
     .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:16px;font-weight:bold;}
     .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;line-height:25px;}
     .results .result-box.rata {color:#00987f;}
+
+	.results .result-box .btn-icon-help {text-decoration:none; position:absolute; right:5px;top:5px;}
+	.results.disabled .result-box .btn-icon-help {display:none}
 
 	.results .result-box.spese {background-image: url(./fe/img/prev_spese.png)}
 	.results .result-box.tan {background-image: url(./fe/img/prev_tan.png)}

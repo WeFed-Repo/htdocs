@@ -863,6 +863,21 @@ a:not(.btn).disabled, a:not(.btn).disabled:hover, a:not(.btn)[disabled], a:not(.
 a:not(.btn).color-warning, a:not(.btn).color-warning:hover {
   color: #CF9418 !important;
 }
+a:not(.btn).number-info {
+  text-decoration: none;
+  font-size: 14px;
+}
+a:not(.btn).number-info .number {
+  background-color: #2F9988;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  line-height: 23px;
+}
 
 .text-decoration-none,
 a.text-decoration-none,

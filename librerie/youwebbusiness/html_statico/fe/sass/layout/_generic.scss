@@ -49,6 +49,21 @@ a:not(.btn) {
   &.color-warning, &.color-warning:hover {
     color:$warning!important;
   }
+  &.number-info {
+    text-decoration: none;
+    font-size:14px;
+    .number {
+      background-color: $greenLink;
+      color:$white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      margin-right: 10px;
+      line-height: 23px;
+    }
+   }
 }
 
 // fallback per text decoration
