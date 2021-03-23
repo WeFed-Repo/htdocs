@@ -87,8 +87,6 @@ var smlCheckImporto = function(){
     sml.resetResults();
 }
 
-
-
 var getMilestones = function(obj) {
     var mso = $("<div>").addClass("slider-milestones");
     // Calcolo degli incrementi
@@ -102,8 +100,6 @@ var getMilestones = function(obj) {
     }
     return (mso);
 }
-
-
 
 
 /* Oggetti relativi alla smart lending */
@@ -148,7 +144,10 @@ var startLending = function(params) {
                 sml.importostep = prod.importo.step;
                 sml.periodicita =prod.periodicita.default;
                 sml.durpreamm =  prod.durataPreammortamento.default;
-                
+
+                sml.classe = prod.classe;
+                sml.codice = prod.codice;
+                sml.valuta = prod.valuta;
             }
 
             if (i===0) {
@@ -166,7 +165,7 @@ var startLending = function(params) {
             }
             
             // Forzature per prove layout
-            sml.importomin =5000;
+            // sml.importomin =5000;
 
             console.log(prod);
         })
@@ -213,6 +212,7 @@ var startLending = function(params) {
             sml.durata = dur;
             sml.durataoutput.html(dur + " mesi");
             sml.resetResults();
+            sml.refreshInterface();
         }}),
 
         duratamilestones:  getMilestones({min:sml.duratamin,max:sml.duratamax,steps: 2}),
@@ -234,6 +234,20 @@ var startLending = function(params) {
                 }
             }),
 
+        
+        periodicitaradio:  $("<div>").addClass("row").append( $("<div>").addClass("col-xs-4").append(
+                $("<div>").addClass("form-check radio").append(
+                    $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
+                    $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
+                )
+            ),
+            $("<div>").addClass("col-xs-8").append(
+                $("<div>").addClass("form-check radio").append(
+                    $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
+                    $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
+                )
+            )
+        ),
      
     
         results: $("<div>").addClass("results disabled").append(
@@ -260,6 +274,8 @@ var startLending = function(params) {
         // Disclaimer
         disclaimer:  $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>"),
     
+
+
         // ################## FUNZIONI ########################
         // Acquisizione dei dati dall'handler esterno
         getLendingData : function(data) {
@@ -347,6 +363,19 @@ var startLending = function(params) {
             
         },
 
+
+        //######################### CONTROLLO DELL'INTERFACCIA ###################################
+        // Controllo dell'interfaccia con i vari cambiamenti
+        refreshInterface: function() {
+            // Modifica l'interfaccia a seconda della selezione
+           
+            
+            // Determina il prodotto dai dati raccolti (durata finanziamento) ed, eventualmente, ricostruisce l'interfaccia
+            $.each(sml.products, function(prod){
+
+            });
+
+        }
     });
 
     // Costruzione degli oggetti 
@@ -382,22 +411,7 @@ var startLending = function(params) {
                     $("<div>").addClass("form-group col-md-6").append(
                         // Radio button selezione
                         $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
-                    
-                        $("<div>").addClass("row").append(
-                            $("<div>").addClass("col-xs-4").append(
-                                $("<div>").addClass("form-check radio").append(
-                                    $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
-                                    $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
-                                )
-                            ),
-                            
-                            $("<div>").addClass("col-xs-8").append(
-                                $("<div>").addClass("form-check radio").append(
-                                    $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
-                                    $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
-                                )
-                            )
-                        ),
+                          sml.periodicitaradio,
                         $("<hr>").addClass("d-block d-md-none")
                     )
                     ,
