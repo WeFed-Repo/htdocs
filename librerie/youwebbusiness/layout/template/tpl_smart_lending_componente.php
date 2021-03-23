@@ -439,26 +439,6 @@ var defSim = {
   
   <!-- Fine configuratore prestito -->
 
-  <!-- INFORMATIVE -->
-  <section class="no-margin-section bordered mt-3 mb-3 p-3">
-  <div class="row">
-    <div class="col-12">
-      <h2>Leggi i documenti informativi per proseguire</h2>
-      <div class="d-flex align-items-center ">
-        <button class="btn btn-link mb-0 mr-4 pl-0" id="doc1-button" data-modal-open="doc1">
-          <img src="./fe/img/icon/pdf.svg">
-          Foglio informativo
-        </button>
-        <button class="btn btn-link mb-0 mr-4 pl-0" id="doc2-button" data-modal-open="doc2">
-          <img src="./fe/img/icon/pdf.svg">
-          Minuta di contratto
-        </button>
-      </div>
-    </div>
-  </div>  
-  </section>
-  <!-- END INFORMATIVE -->
-
 <!-- Pulsantiera -->
 <div class="row justify-content-end">
 	<div class="col-sm-6">
