@@ -84,14 +84,14 @@
     &-top, &-bottom {
       padding-left:16px;
       padding-right:22px;
-      .pull-right a {
+      .pull-right a:not(.number-info) {
         text-transform: uppercase;
         text-decoration: none;
         font-size: 16px;
       }
     }
     .box-promo-doc {
-     
+      margin-bottom:16px;
       line-height: 24px;
       a {
         text-decoration: none;
@@ -118,6 +118,20 @@
       
       h4 {display: block;}
     }
+    .col-md {
+      padding-bottom: 0;
+    }
+    .number-info {
+      padding: 7px 20px 7px 0;
+      border-right: 1px solid #e1e1e1;
+      margin-right:20px;
+    }
+    .box-promo-bottom {
+      .pull-right {
+        margin-bottom:16px;
+      }
+    }
+    
   }
   
 @media (max-width: 767px) {  
@@ -140,6 +154,19 @@
        
       }
       }
+    }
+    .box-promo-bottom {
+      .pull-right {
+        width: 100%;
+        a:not(.number-info){
+          float: right;
+        }
+      }
+    }
+    .number-info {
+      padding: 0;
+      border-right: 0;
+      margin-right:0;
     }
  }
 }
