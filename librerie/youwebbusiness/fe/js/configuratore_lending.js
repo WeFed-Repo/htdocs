@@ -69,6 +69,40 @@ var countdown = {
     }
 }
 
+/* OGGETTI FORM PARAMETRICI */
+var FormObj = {
+
+    // RADIO BUTTONS 
+    radio: function(params){
+
+        var radiocode;
+        
+        if (params.options.length>1) {
+            
+            radiocode = $("<div>").addClass("row").append( 
+                
+                
+                    $.map(params.options,function(radio){
+                        return ($("<div>").addClass(radio.class? radio.class : "col-xs-12").append(
+                                $("<div>").addClass("form-check radio").append(
+                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.value, checked: (params.value==radio.value),id: params.name+"_"+radio.value}).addClass("form-check-input").on("change",params.change),
+                                    $("<label>").attr({for: params.name+"_"+radio.value}).addClass("form-check-label").html(radio.label)
+                            )
+                        ))
+
+                    })
+                )
+
+            }
+                else
+                {
+                    radiocode = $("<span>").addClass("output").html(params.options[0].label);
+                }
+        
+        return (radiocode);
+    }
+}
+
 
 var smlCleanNumber = function(field){
     var val = $(field).val();
@@ -88,8 +122,24 @@ var smlCheckImporto = function(){
 }
 
 var getMilestones = function(obj) {
-    var mso = $("<div>").addClass("slider-milestones");
-    // Calcolo degli incrementi
+    var mso = $("<div>").addClass("slider-milestones"),
+        multiplier = obj.multiplier? obj.multiplier : 1;
+
+    // Se non ci sono unit mette solo la prima e l'ultima milestone
+    if (obj.unit){
+       
+    }
+    else
+    {
+        mso.append(
+            $("<div>").addClass("milestone").css({"left":"0%"}).append($("<span>").html(obj.min/multiplier)),
+            $("<div>").addClass("milestone").css({"left":"100%"}).append($("<span>").html(obj.max/multiplier))
+        )   
+    }
+    
+    
+    // Calcolo delle posizioni
+    /*
     var msoinc = (obj.max-obj.min)/(obj.steps-1);
     for(i=0;i<obj.steps; i++) {
         var unit = (obj.unit)? obj.unit : 1;
@@ -98,6 +148,7 @@ var getMilestones = function(obj) {
         mso.append($("<span>").addClass("milestone").html(mstxt));
     
     }
+    */
     return (mso);
 }
 
@@ -203,7 +254,7 @@ var startLending = function(params) {
             sml.resetResults();
         }}),
 
-        importomilestones: getMilestones({min:sml.importomin,max:sml.importomax,steps: 6,unit:1000}),
+        importomilestones: getMilestones({min:sml.importomin,max:sml.importomax,unit: 5000, multiplier:1000}),
 
         durataoutput:  $("<span>").addClass("slider-output durata").html(sml.durata + " mesi"),
 
@@ -228,26 +279,34 @@ var startLending = function(params) {
                     // Dati da inviare all'handler esterno
                     var data = {
                         durata: sml.durata,
-                        importo: sml.importo
+                        importo: sml.importo,
+                        periodicita: sml.periodicita
                     }
                     params.handlerCalcola(data,sml.getLendingData);
                 }
             }),
 
         
-        periodicitaradio:  $("<div>").addClass("row").append( $("<div>").addClass("col-xs-4").append(
-                $("<div>").addClass("form-check radio").append(
-                    $("<input>").attr({"type":"radio", name: "periodicita", value:1, checked: true,id: "periodicita1"}).addClass("form-check-input"),
-                    $("<label>").attr({for: "periodicita1"}).addClass("form-check-label").html("Mensile")
-                )
-            ),
-            $("<div>").addClass("col-xs-8").append(
-                $("<div>").addClass("form-check radio").append(
-                    $("<input>").attr({"type":"radio", name: "periodicita", "value":2,id: "periodicita2"}).addClass("form-check-input"),
-                    $("<label>").attr({for: "periodicita2"}).addClass("form-check-label").html("Trimestrale")
-                )
-            )
-        ),
+        periodicitaradio:  FormObj.radio({
+            name: "periodicita",
+            change: function(){
+                sml.periodicita = $(this).val();
+                sml.resetResults();
+            },
+            value: sml.periodicita,
+            options: [ 
+                {
+                    "value": "1",
+                    "label": "Mensile",
+                    "class": "col-xs-4"
+                },
+                {
+                    "value": "3",
+                    "label": "Trimestrale",
+                    "class": "col-xs-6"
+                }
+            ]
+        }),
      
     
         results: $("<div>").addClass("results disabled").append(
