@@ -9,27 +9,38 @@ var countdown = {
         // Attiva il refresh rapido di tutti i cd dinamici in pagina
         $.each($(".countdown[data-scadenza]"),function(i,cdw){
             // differenza tra data e scadenza
-            cdw  = $(cdw);
+            var cdw  = $(cdw);
             var scadenza = cdw.attr("data-scadenza");
-            cdw.html(countdown.getHtml(scadenza));
+            
+            if(new Date().valueOf()> scadenza){
+                cdw.html(countdown.getHtml(scadenza));
+
+                // Se la scadenza e' stata raggiunta o superata attiva l'handler di callback
+                if (cdw.attr("data-timeout-handler") && cdw.attr("data-timeout-handler").length>0) {
+                    countdown["toutfunction_" + cdw.attr("data-timeout-handler")]();
+                } 
+            }
         })
     },
 
 
     getHtml : function(scadenza){
         scad =  parseFloat(scadenza);
-            
+
         var ddiff = scad - new Date().valueOf(),
-            cdcomp = $("<div>").addClass("scaduto").html("L'offerta &egrave; scaduta.")
-    
+            
+        cdcomp = $("<div>").addClass("scaduto").html("L'offerta &egrave; scaduta.")
+           
+
     
         if (ddiff>=0) {
             var emudate = new Date (ddiff);
+            
             var cdo = {
                 giorni: Math.floor(emudate.valueOf()/(1000*60*60*24)),
-                ore: emudate.getHours(),
-                minuti: emudate.getMinutes(),
-                secondi: emudate.getSeconds()
+                ore: emudate.getUTCHours(),
+                minuti: emudate.getUTCMinutes(),
+                secondi: emudate.getUTCSeconds()
             } 
             cdcomp = $("<div>").addClass("countdown-inline").append(
     
@@ -56,10 +67,17 @@ var countdown = {
         return cdcomp;
     },
     
-    get: function (scadenza) {
+    get: function (scadenza, cb) {
     
         var cdown = $("<div>").addClass("countdown").attr("data-scadenza", scadenza).html(countdown.getHtml(scadenza));
-       
+        if (typeof cb === "function") {
+            // Istanzia un handler per la scadenza
+            console.log("hasHandler");
+            var cbhandler = Math.round(Math.random()*99999999);
+            cdown.attr({"data-timeout-handler" : cbhandler});
+            countdown["toutfunction_" + cbhandler] = cb;
+        }
+
         // Refresh del countdown (previa distruzione dell'evento as-is se esistente)  
         clearInterval(countdown.refreshfunc);  
         countdown.refreshfunc = setInterval(function(){
@@ -86,7 +104,7 @@ var FormObj = {
                         return ($("<div>").addClass(radio.class? radio.class : "col-xs-12").append(
                                 $("<div>").addClass("form-check radio").append(
                                     $("<input>").attr({"type":"radio", name: params.name, value:radio.value, checked: (params.value==radio.value),id: params.name+"_"+radio.value}).addClass("form-check-input").on("change",params.change),
-                                    $("<label>").attr({for: params.name+"_"+radio.value}).addClass("form-check-label").html(radio.label)
+                                    $("<label>").attr({for: params.name+"_"+radio.value}).addClass("form-check-label").html(radio.lbl)
                             )
                         ))
 
@@ -96,7 +114,7 @@ var FormObj = {
             }
                 else
                 {
-                    radiocode = $("<span>").addClass("output").html(params.options[0].label);
+                    radiocode = $("<span>").addClass("output").html(params.options[0].lbl);
                 }
         
         return (radiocode);
@@ -127,7 +145,12 @@ var getMilestones = function(obj) {
 
     // Se non ci sono unit mette solo la prima e l'ultima milestone
     if (obj.unit){
-       
+        var msref = obj.max-obj.min;
+        for(var ind=obj.min;ind<=obj.max;ind+=multiplier) {
+            if(ind % obj.unit === 0 ) {
+                mso.append($("<div>").addClass("milestone").css({"left": ((ind-obj.min)/msref*100) + "%"}).append($("<span>").html(ind/multiplier)));
+            }
+        }
     }
     else
     {
@@ -137,18 +160,6 @@ var getMilestones = function(obj) {
         )   
     }
     
-    
-    // Calcolo delle posizioni
-    /*
-    var msoinc = (obj.max-obj.min)/(obj.steps-1);
-    for(i=0;i<obj.steps; i++) {
-        var unit = (obj.unit)? obj.unit : 1;
-        var mstxt = Math.round((obj.min + (i*msoinc))/unit*100)/100;
-        
-        mso.append($("<span>").addClass("milestone").html(mstxt));
-    
-    }
-    */
     return (mso);
 }
 
@@ -196,9 +207,7 @@ var startLending = function(params) {
                 sml.periodicita =prod.periodicita.default;
                 sml.durpreamm =  prod.durataPreammortamento.default;
 
-                sml.classe = prod.classe;
-                sml.codice = prod.codice;
-                sml.valuta = prod.valuta;
+                sml.currentprod = prod;
             }
 
             if (i===0) {
@@ -216,15 +225,17 @@ var startLending = function(params) {
             }
             
             // Forzature per prove layout
-            // sml.importomin =5000;
+            // sml.importomin =4000;
 
-            console.log(prod);
         })
 
     }
     
 
-    
+    smlOffertaScaduta =  function() {
+        params.handlerBloccoInterfaccia();
+        sml.wrap.empty().removeClass("loading").append($("<div>").addClass("offerta-scaduta").append("Offerta scaduta"));
+    };
     
     
 
@@ -240,7 +251,7 @@ var startLending = function(params) {
         $("<div>").addClass("top-evidente").append(
             $("<div>").addClass("cd-wrapper").append(
                 $("<span>").addClass("cd-label").html("L'offerta scade tra:"),
-                countdown.get(params.scadenza))
+                countdown.get(params.scadenza, smlOffertaScaduta))
             )
             
         ),
@@ -276,37 +287,31 @@ var startLending = function(params) {
                     btn.addClass("disabled");
                     // Blocco dell'interfaccia
                     sml.wrap.addClass("loading");
+
                     // Dati da inviare all'handler esterno
                     var data = {
                         durata: sml.durata,
                         importo: sml.importo,
-                        periodicita: sml.periodicita
+                        periodicita: sml.periodicita,
+                        codice: sml.currentprod.codice,
+                        classe: sml.currentprod.classe,
+                        preammortamento: sml.durpreamm
+
                     }
                     params.handlerCalcola(data,sml.getLendingData);
                 }
             }),
 
         
-        periodicitaradio:  FormObj.radio({
+        periodicitaradio:  $("<div>").append(FormObj.radio({
             name: "periodicita",
             change: function(){
-                sml.periodicita = $(this).val();
+                sml.periodicita = Number($(this).val());
                 sml.resetResults();
             },
             value: sml.periodicita,
-            options: [ 
-                {
-                    "value": "1",
-                    "label": "Mensile",
-                    "class": "col-xs-4"
-                },
-                {
-                    "value": "3",
-                    "label": "Trimestrale",
-                    "class": "col-xs-6"
-                }
-            ]
-        }),
+            options: sml.currentprod.periodicita.options
+        })),
      
     
         results: $("<div>").addClass("results disabled").append(
@@ -365,11 +370,7 @@ var startLending = function(params) {
             params.handlerBloccoInterfaccia();
         },
 
-        offertaScaduta: function() {
-            alert("Offerta scaduta!");
-            sml.wrap.empty().html("<h3>Offerta scaduta!</h3>")
-            params.handlerBloccoInterfaccia();
-        },
+        
 
         // modali
         showModal: function(modaltype){
@@ -402,7 +403,7 @@ var startLending = function(params) {
                                 $("<th>").html("Numero"),
                                 $("<th>").html("Quota interessi"),
                                 $("<th>").html("Quota capitale"),
-                                $("<th>").html("Debito residuo"),
+                                $("<th>").html("Debito residuo")
                             )
                         )
                     )
@@ -426,90 +427,116 @@ var startLending = function(params) {
         //######################### CONTROLLO DELL'INTERFACCIA ###################################
         // Controllo dell'interfaccia con i vari cambiamenti
         refreshInterface: function() {
-            // Modifica l'interfaccia a seconda della selezione
-           
+
+
+            // Refresh in base alla durata
+            if(sml.durata > sml.currentprod.durataFinanziamento.max || sml.durata<sml.currentprod.durataFinanziamento.min) {
+                // Cambio prodotto e interfaccia (periodicita e preammortamento)
+                sml["currentprod"] = sml.products.filter(function(prod){
+                    return (sml.durata >= prod.durataFinanziamento.min && sml.durata<=prod.durataFinanziamento.max)
+                })[0];
+
+                // Attiva il refresh dei campi correlati al cambio di durata (rimodulati sul default)
+                // Periodicita
+                sml.periodicita = sml["currentprod"].periodicita.default;
+                sml.periodicitaradio.empty().append(FormObj.radio({
+                    name: "periodicita",
+                    change: function(){
+                        sml.periodicita = Number($(this).val());
+                        sml.resetResults();
+                    },
+                    value: sml.periodicita,
+                    options: sml.currentprod.periodicita.options
+                }));
+
+                // Preammortamento
+                sml.durpreamm = sml.currentprod.durataPreammortamento.default;
+                sml.preammortamento.html(sml.currentprod.durataPreammortamento.default + " mesi")
+
+            }
             
-            // Determina il prodotto dai dati raccolti (durata finanziamento) ed, eventualmente, ricostruisce l'interfaccia
-            $.each(sml.products, function(prod){
-
-            });
-
         }
     });
 
-    // Costruzione degli oggetti 
-    sml.wrap.empty().append($("<div>").append(
-            sml.scadenza,
-            $("<div>").addClass("flex-bordered").append(
+    // Costruzione degli oggetti (se l'offerta non è specificata e non è scaduta)
+    if (typeof params.scadenza=== "undefined" || params.scadenza > new Date().valueOf()) {
+            sml.wrap.empty().append($("<div>").append(
+                sml.scadenza,
+                $("<div>").addClass("flex-bordered").append(
 
-                // RIGA 1
-                $("<div>").addClass("bordered-between").append(
+                    // RIGA 1
+                    $("<div>").addClass("bordered-between").append(
 
-                    // Range importo
-                    $("<div>").addClass("form-group flex-element").append( 
-                        $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
-                        $("<div>").addClass("editable-field-wrapper importo").append(sml.importoinput),
-                        sml.sliderimporto,
-                        sml.importomilestones
-                    ),
+                        // Range importo
+                        $("<div>").addClass("form-group flex-element").append( 
+                            $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
+                            $("<div>").addClass("editable-field-wrapper importo").append(sml.importoinput),
+                            sml.sliderimporto,
+                            sml.importomilestones
+                        ),
 
-                    // Range slider
-                    $("<div>").addClass("form-group flex-element").append(
-                        
-                        $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
-                        sml.durataoutput,
-                        sml.sliderdurata,
-                        sml.duratamilestones
+                        // Range slider
+                        $("<div>").addClass("form-group flex-element").append(
+                            
+                            $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire la durata"),
+                            sml.durataoutput,
+                            sml.sliderdurata,
+                            sml.duratamilestones
+                        )
+                    
                     ),
                 
-                ),
-            
-                // RIGA 2
-                
-                $("<div>").addClass("form-row bordered-top").append(
-                    $("<div>").addClass("form-group col-md-6").append(
-                        // Radio button selezione
-                        $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
-                          sml.periodicitaradio,
-                        $("<hr>").addClass("d-block d-md-none")
-                    )
-                    ,
-                   
+                    // RIGA 2
+                    
+                    $("<div>").addClass("form-row bordered-top").append(
+                        $("<div>").addClass("form-group col-md-6").append(
+                            // Radio button selezione
+                            $("<label>").addClass("control-label").html("Periodicit&agrave; rata"),
+                            sml.periodicitaradio,
+                            $("<hr>").addClass("d-block d-md-none")
+                        )
+                        ,
+                    
 
-                    $("<div>").addClass("form-group col-md-4").append(
-                        // Preammortamento
-                        $("<label>").addClass("control-label").html("Preammortamento"),
-                        sml.preammortamento
-                    ),
+                        $("<div>").addClass("form-group col-md-4").append(
+                            // Preammortamento
+                            $("<label>").addClass("control-label").html("Preammortamento"),
+                            sml.preammortamento
+                        ),
 
-                    // Bottone di calcolo
-                    $("<div>").addClass("form-group no-label col-md-2").append(
                         // Bottone di calcolo
-                        sml.calcola
+                        $("<div>").addClass("form-group no-label col-md-2").append(
+                            // Bottone di calcolo
+                            sml.calcola
+                        )
+                    ),
+
+                    $("<hr>"),
+
+                    // Riga 3 (risultati)
+                    $("<div>").addClass("form-row").append(
+                        $("<div>").addClass("col-sm-12").append(
+                            sml.results
+                        )
                     )
+
+                    
                 ),
 
-                $("<hr>"),
-
-                // Riga 3 (risultati)
-                $("<div>").addClass("form-row").append(
-                    $("<div>").addClass("col-sm-12").append(
-                        sml.results
-                    )
-                ),
-
-                
-            ),
-
-            // Disclaimer
-            sml.disclaimer
-        )    
-    );
-
-
-    // Inizializzazioni
-    sml.importoinput.trigger("blur");
-    sml.calcola.trigger("click");
+                // Disclaimer
+                sml.disclaimer
+            )    
+        );
+        // Inizializzazioni
+        sml.importoinput.trigger("blur");
+        sml.calcola.trigger("click");
+    }
+    else
+    {
+        // OFFERTA SCADUTA !
+        smlOffertaScaduta();
+    }
+    
 
 }
    

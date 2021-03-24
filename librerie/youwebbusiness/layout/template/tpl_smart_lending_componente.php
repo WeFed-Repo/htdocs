@@ -242,10 +242,7 @@ var defSim = {
 			"classe": "CHAGE",
 			"codice": "CVSLDIF0",
 			"periodicita": {
-				"options": [{
-					"value": "1",
-					"lbl": "Mensile"
-				},
+				"options": [
 				{
 					"value": "3",
 					"lbl": "Trimestrale"
@@ -286,7 +283,7 @@ var defSim = {
 			"durataPreammortamento": {
 				"min": 24.0,
 				"max": 162.0,
-				"default": 24.0,
+				"default": 36.0,
 				"step": 1.0,
 				"modificabile": false
 			},
@@ -308,7 +305,19 @@ var defSim = {
 	
     
     .loading>* {visibility:hidden}
-    .sml.loading {min-height:200px} 
+    .sml.loading {min-height:200px}
+	
+	/* Offerta scaduta */
+	.sml div.offerta-scaduta {
+		width:100%;
+		padding: 60px 15px;
+		font-size:30px;
+		text-transform:uppercase;
+		font-weight:bold;
+		text-align:center;
+		display:inline-block;
+		color:#ccc;
+	}
 
     /* Bordature */
     .bordered-top {border-top: solid 1px #eee; padding-top:20px;}
@@ -427,7 +436,10 @@ var defSim = {
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      scadenza: 1617141600000,
+      scadenza:  // Scadenza tra 30 giorni
+	  			(new Date().valueOf()) + (30*24*60*60*1000) ,
+				// Scadenza tra 10 secondi
+				// (new Date().valueOf()) + (15*1000) ,
       objConf: defSim,
       handlerCalcola: esempioHandlerCalcola,
 	  handlerBloccoInterfaccia: esempioHandlerBlocco
