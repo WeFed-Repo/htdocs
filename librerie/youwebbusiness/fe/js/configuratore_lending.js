@@ -72,7 +72,6 @@ var countdown = {
         var cdown = $("<div>").addClass("countdown").attr("data-scadenza", scadenza).html(countdown.getHtml(scadenza));
         if (typeof cb === "function") {
             // Istanzia un handler per la scadenza
-            console.log("hasHandler");
             var cbhandler = Math.round(Math.random()*99999999);
             cdown.attr({"data-timeout-handler" : cbhandler});
             countdown["toutfunction_" + cbhandler] = cb;
@@ -244,6 +243,7 @@ var startLending = function(params) {
     $.extend(sml, {
 
         // ############################## OGGETTI #############################
+        isWaiting: false,
 
         wrap: $(params.id).addClass("loading configuratore"),
 
@@ -344,6 +344,7 @@ var startLending = function(params) {
         // Acquisizione dei dati dall'handler esterno
         getLendingData : function(data) {
             sml.setResults(data);
+            sml.isWaiting = false;
             sml.wrap.removeClass("loading");
         },
 
@@ -365,9 +366,12 @@ var startLending = function(params) {
         },
 
         resetResults: function(){
-            sml.calcola.removeClass("disabled");
-            sml.setResults({});
-            params.handlerBloccoInterfaccia();
+            if (!sml.isWaiting) {
+                sml.calcola.removeClass("disabled");
+                sml.setResults({});
+                params.handlerBloccoInterfaccia();
+                sml.isWaiting = true;
+            }
         },
 
         
