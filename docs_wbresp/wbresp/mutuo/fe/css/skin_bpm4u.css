@@ -1,6 +1,5 @@
 /* Skin colore primario #ffc300 */
 a,a:hover,a:focus {color:#888888;}
-.titFinalita {display:none !important;}
 
 /*.main-visual {border-top:solid 6px #888888;}*/
 .main-visual .fascione, .main-visual .promo-box {background: #007c66;color:#fff}
@@ -11,8 +10,9 @@ ul.mTabs li a,ul.mTabs li a:focus {border-bottom: solid 2px #888888;}
 #mCalcCons .sliderBlock .slider-selection, .radio label::after,#mCalcCons .sliderBlock .tooltip.top .tooltip-inner,.mData .mGauge, .btn-grlit, .btn,.btn:active,.btn:hover,.btn:focus  {background-color:#007c66 !important;}
 h3.tipomutuo-title {display:none;}
 
-h2.titFinalita {border-color:#888888; display:none !important;}
+h2.titFinalita {border-color:#888888;}
 h2.titFinalita span {color:#888888;}
+ul.mTabs {display: none !important}
 
 .only-yellow {display:inline;}
 .mData .mGauge .rata {color:#fff;}
@@ -30,3 +30,16 @@ footer p,footer p a  {color: #fff;}
 .mData .scheda {background-image: url(../../fe/img/bpm4U_freccia_link.png);}
 #mCalcCons .sliderBlock .slider-handle {background-image: url(../../fe/img/bpm4U_mutui_cursore.png);}
 a.icoinfo {background-image:url(../../fe/img/bpm4U_icon_info.png);}
+
+/* Cookie bar 2021 */
+.cookie-banner {
+    background-color:#888888;
+}
+.cookie-banner .cookie-console button {
+    background-color:#007c66; color: #fff;border:solid 2px #007c66;
+}
+.cookie-banner .cookie-console button:hover {opacity:0.8;}
+.cookie-banner .cookie-console button.evidente {
+	background-color:#fff; color: #666;border:solid 2px #fff;
+}
+/* Fine cookie bar 2021 */
