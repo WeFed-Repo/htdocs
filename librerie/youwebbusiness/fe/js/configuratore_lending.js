@@ -102,8 +102,8 @@ var FormObj = {
                     $.map(params.options,function(radio){
                         return ($("<div>").addClass(radio.class? radio.class : "col-xs-12").append(
                                 $("<div>").addClass("form-check radio").append(
-                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.value, checked: (params.value==radio.value),id: params.name+"_"+radio.value}).addClass("form-check-input").on("change",params.change),
-                                    $("<label>").attr({for: params.name+"_"+radio.value}).addClass("form-check-label").html(radio.lbl)
+                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.value, checked: (params.value==radio.Value),id: params.name+"_"+radio.Value}).addClass("form-check-input").on("change",params.change),
+                                    $("<label>").attr({for: params.name+"_"+radio.Value}).addClass("form-check-label").html(radio.Lbl)
                             )
                         ))
 
@@ -113,7 +113,7 @@ var FormObj = {
             }
                 else
                 {
-                    radiocode = $("<span>").addClass("output").html(params.options[0].lbl);
+                    radiocode = $("<span>").addClass("output").html(params.options[0].Lbl);
                 }
         
         return (radiocode);
@@ -193,34 +193,34 @@ var startLending = function(params) {
     
     // Assegna i valori di default leggendo l'oggetto di configurazione in ingresso (se ricevuto)
     if (params.objConf) {
-        sml["products"] = params.objConf.simulatore.prodottiElise;
+        sml["products"] = params.objConf.Simulatore.ProdottiElise;
 
         $.each(sml.products,function(i,prod){
 
             // Default
-            if(prod.default){
-                sml.durata = prod.durataFinanziamento.default;
-                sml.duratastep = prod.durataFinanziamento.step;
-                sml.importo = prod.importo.default;
-                sml.importostep = prod.importo.step;
-                sml.periodicita =prod.periodicita.default;
-                sml.durpreamm =  prod.durataPreammortamento.default;
+            if(prod.Default){
+                sml.durata = prod.DurataFinanziamento.Default;
+                sml.duratastep = prod.DurataFinanziamento.Step;
+                sml.importo = prod.Importo.Default;
+                sml.importostep = prod.Importo.Step;
+                sml.periodicita =prod.Periodicita.Default;
+                sml.durpreamm =  prod.DurataPreammortamento.Default;
 
                 sml.currentprod = prod;
             }
 
             if (i===0) {
-                sml.duratamin = prod.durataFinanziamento.min;
-                sml.duratamax = prod.durataFinanziamento.max;
-                sml.importomin = prod.importo.min;
-                sml.importomax = prod.importo.max;
+                sml.duratamin = prod.DurataFinanziamento.Min;
+                sml.duratamax = prod.DurataFinanziamento.Max;
+                sml.importomin = prod.Importo.Min;
+                sml.importomax = prod.Importo.Max;
             }
             else
             {
-                if(prod.durataFinanziamento.min<sml.duratamin) sml.duratamin = prod.durataFinanziamento.min;
-                if(prod.durataFinanziamento.min>sml.duratamax) sml.duratamax = prod.durataFinanziamento.max;
-                if(prod.importo.min<sml.importomin) sml.importomin = prod.importo.min;
-                if(prod.importo.min>sml.importomax) sml.importomax = prod.importo.max;
+                if(prod.DurataFinanziamento.Min<sml.duratamin) sml.duratamin = prod.DurataFinanziamento.Min;
+                if(prod.DurataFinanziamento.Min>sml.duratamax) sml.duratamax = prod.DurataFinanziamento.Max;
+                if(prod.Importo.min<sml.importomin) sml.importomin = prod.Importo.Min;
+                if(prod.Importo.min>sml.importomax) sml.importomax = prod.Importo.Max;
             }
             
             // Forzature per prove layout
@@ -293,8 +293,8 @@ var startLending = function(params) {
                         durata: sml.durata,
                         importo: sml.importo,
                         periodicita: sml.periodicita,
-                        codice: sml.currentprod.codice,
-                        classe: sml.currentprod.classe,
+                        codice: sml.currentprod.Codice,
+                        classe: sml.currentprod.Classe,
                         preammortamento: sml.durpreamm
 
                     }
@@ -310,7 +310,7 @@ var startLending = function(params) {
                 sml.resetResults();
             },
             value: sml.periodicita,
-            options: sml.currentprod.periodicita.options
+            options: sml.currentprod.Periodicita.Options
         })),
      
     
@@ -434,15 +434,14 @@ var startLending = function(params) {
 
 
             // Refresh in base alla durata
-            if(sml.durata > sml.currentprod.durataFinanziamento.max || sml.durata<sml.currentprod.durataFinanziamento.min) {
+            if(sml.durata > sml.currentprod.DurataFinanziamento.Max || sml.durata<sml.currentprod.DurataFinanziamento.Min) {
                 // Cambio prodotto e interfaccia (periodicita e preammortamento)
                 sml["currentprod"] = sml.products.filter(function(prod){
-                    return (sml.durata >= prod.durataFinanziamento.min && sml.durata<=prod.durataFinanziamento.max)
+                    return (sml.durata >= prod.DurataFinanziamento.Min && sml.durata<=prod.DurataFinanziamento.Max)
                 })[0];
-
                 // Attiva il refresh dei campi correlati al cambio di durata (rimodulati sul default)
                 // Periodicita
-                sml.periodicita = sml["currentprod"].periodicita.default;
+                sml.periodicita = sml["currentprod"].Periodicita.Default;
                 sml.periodicitaradio.empty().append(FormObj.radio({
                     name: "periodicita",
                     change: function(){
@@ -450,12 +449,12 @@ var startLending = function(params) {
                         sml.resetResults();
                     },
                     value: sml.periodicita,
-                    options: sml.currentprod.periodicita.options
+                    options: sml.currentprod.Periodicita.Options
                 }));
 
                 // Preammortamento
-                sml.durpreamm = sml.currentprod.durataPreammortamento.default;
-                sml.preammortamento.html(sml.currentprod.durataPreammortamento.default + " mesi")
+                sml.durpreamm = sml.currentprod.DurataPreammortamento.Default;
+                sml.preammortamento.html(sml.currentprod.DurataPreammortamento.Default + " mesi")
 
             }
             

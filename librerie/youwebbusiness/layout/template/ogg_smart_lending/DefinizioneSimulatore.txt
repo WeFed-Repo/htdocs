@@ -1,0 +1,376 @@
+{
+  "Simulatore": {
+    "Discriminanti": "durataFinanziamento",
+    "ProdottiElise": [
+      {
+        "Classe": "CHAGE",
+        "Codice": "CVSLDEF0",
+        "Periodicita": {
+          "Options": [
+            {
+              "Value": 3,
+              "Lbl": "Trimestrale"
+            }
+          ],
+          "Default": 3,
+          "Modificabile": true
+        },
+        "Importo": {
+          "Min": 1000,
+          "Max": 30000,
+          "Default": 1000,
+          "Step": 1000,
+          "Modificabile": true
+        },
+        "Valuta": "euro",
+        "TipoRata": {
+          "Options": [
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            }
+          ],
+          "Default": 1,
+          "Modificabile": false
+        },
+        "DurataFinanziamento": {
+          "Min": 27,
+          "Max": 42,
+          "Default": 42,
+          "Step": 1,
+          "Modificabile": true
+        },
+        "DurataAmmortamento": {
+          "Min": 3,
+          "Max": 18,
+          "Default": 18,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "DurataPreammortamento": {
+          "Min": 24,
+          "Max": 39,
+          "Default": 24,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "Default": false
+      },
+      {
+        "Classe": "CHAGE",
+        "Codice": "CVSLDFF0",
+        "Periodicita": {
+          "Options": [
+            {
+              "Value": 1,
+              "Lbl": "Mensile"
+            },
+            {
+              "Value": 3,
+              "Lbl": "Trimestrale"
+            }
+          ],
+          "Default": 3,
+          "Modificabile": true
+        },
+        "Importo": {
+          "Min": 1000,
+          "Max": 30000,
+          "Default": 1000,
+          "Step": 1000,
+          "Modificabile": true
+        },
+        "Valuta": "euro",
+        "TipoRata": {
+          "Options": [
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            }
+          ],
+          "Default": 1,
+          "Modificabile": false
+        },
+        "DurataFinanziamento": {
+          "Min": 43,
+          "Max": 78,
+          "Default": 78,
+          "Step": 1,
+          "Modificabile": true
+        },
+        "DurataAmmortamento": {
+          "Min": 6,
+          "Max": 54,
+          "Default": 54,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "DurataPreammortamento": {
+          "Min": 24,
+          "Max": 72,
+          "Default": 24,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "Default": false
+      },
+      {
+        "Classe": "CHAGE",
+        "Codice": "CVSLDGF0",
+        "Periodicita": {
+          "Options": [
+            {
+              "Value": 1,
+              "Lbl": "Mensile"
+            },
+            {
+              "Value": 3,
+              "Lbl": "Trimestrale"
+            }
+          ],
+          "Default": 3,
+          "Modificabile": true
+        },
+        "Importo": {
+          "Min": 1000,
+          "Max": 30000,
+          "Default": 1000,
+          "Step": 1000,
+          "Modificabile": true
+        },
+        "Valuta": "euro",
+        "TipoRata": {
+          "Options": [
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            }
+          ],
+          "Default": 1,
+          "Modificabile": false
+        },
+        "DurataFinanziamento": {
+          "Min": 79,
+          "Max": 102,
+          "Default": 102,
+          "Step": 1,
+          "Modificabile": true
+        },
+        "DurataAmmortamento": {
+          "Min": 18,
+          "Max": 78,
+          "Default": 78,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "DurataPreammortamento": {
+          "Min": 24,
+          "Max": 84,
+          "Default": 24,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "Default": false
+      },
+      {
+        "Classe": "CHAGE",
+        "Codice": "CVSLDHF0",
+        "Periodicita": {
+          "Options": [
+            {
+              "Value": 1,
+              "Lbl": "Mensile"
+            },
+            {
+              "Value": 3,
+              "Lbl": "Trimestrale"
+            }
+          ],
+          "Default": 3,
+          "Modificabile": true
+        },
+        "Importo": {
+          "Min": 1000,
+          "Max": 30000,
+          "Default": 1000,
+          "Step": 1000,
+          "Modificabile": true
+        },
+        "Valuta": "euro",
+        "TipoRata": {
+          "Options": [
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            }
+          ],
+          "Default": 1,
+          "Modificabile": false
+        },
+        "DurataFinanziamento": {
+          "Min": 103,
+          "Max": 150,
+          "Default": 120,
+          "Step": 1,
+          "Modificabile": true
+        },
+        "DurataAmmortamento": {
+          "Min": 18,
+          "Max": 126,
+          "Default": 126,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "DurataPreammortamento": {
+          "Min": 24,
+          "Max": 132,
+          "Default": 24,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "Default": true
+      },
+      {
+        "Classe": "CHAGE",
+        "Codice": "CVSLDIF0",
+        "Periodicita": {
+          "Options": [
+            {
+              "Value": 1,
+              "Lbl": "Mensile"
+            },
+            {
+              "Value": 3,
+              "Lbl": "Trimestrale"
+            }
+          ],
+          "Default": 3,
+          "Modificabile": true
+        },
+        "Importo": {
+          "Min": 1000,
+          "Max": 30000,
+          "Default": 1000,
+          "Step": 1000,
+          "Modificabile": true
+        },
+        "Valuta": "euro",
+        "TipoRata": {
+          "Options": [
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            },
+            {
+              "Value": "1",
+              "Lbl": "Francese"
+            }
+          ],
+          "Default": 1,
+          "Modificabile": false
+        },
+        "DurataFinanziamento": {
+          "Min": 151,
+          "Max": 180,
+          "Default": 180,
+          "Step": 1,
+          "Modificabile": true
+        },
+        "DurataAmmortamento": {
+          "Min": 18,
+          "Max": 156,
+          "Default": 156,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "DurataPreammortamento": {
+          "Min": 24,
+          "Max": 162,
+          "Default": 24,
+          "Step": 1,
+          "Modificabile": false
+        },
+        "Default": false
+      }
+    ]
+  },
+  "ImportoMassimoCRM": 0,
+  "DataScadenza": "2099-01-01T00:00:00+01:00",
+  "CodiceProdotto": "SMALEN10K"
+}
