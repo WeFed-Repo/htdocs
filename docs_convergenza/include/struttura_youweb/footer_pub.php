@@ -110,8 +110,9 @@ Piazza F. Meda, 4 - 20121 Milano - <br/>tel. 02 77001 - P.IVA 09722490969 <br/> 
 	<div class="col-sm-6 hidden-xs">
 		<span class="pull-right">
 			<span class="scaricaFooter">Scarica l'app:</span>
-			<a href="https://play.google.com/store/apps/details?id=com.lynxspa.bancopopolare&amp;hl=it" title="Scarica l" app="" per="" android'=""><img src="/HT/fe/img/ico_apple.png"></a> 
-			<a href="https://itunes.apple.com/it/app/youapp/id739705959?mt=8" title="Scarica l" app="" per="" apple'=""><img src="/HT/fe/img/ico_android.png"></a> 
+			<a href="https://play.google.com/store/apps/details?id=com.lynxspa.bancopopolare&amp;hl=it" title="Scarica l'app per Android"><img src="/HT/fe/img/ico_apple.png"></a> 
+			<a href="https://itunes.apple.com/it/app/youapp/id739705959?mt=8" title="Scarica l'app per Apple"><img src="/HT/fe/img/ico_android.png"></a>
+			<a href="" title="Scarica l'app per Huawei"><img src="/HT/fe/img/ico_huawei.png"></a>  
 		</span>
 	</div>	
 </div>

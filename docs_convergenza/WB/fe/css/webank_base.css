@@ -2713,6 +2713,21 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
     max-width: 900px !important;
   }
 }
+/* modale con footer fixed*/
+@media screen and (max-width: 767px) {
+  .modal-footer.fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 100%;
+  }
+  .modal-footer.fixed .align-right {
+    text-align: center;
+  }
+  .modal-content {
+    border: 0;
+  }
+}
 .webview #datePickerWrapper .modal-content {
   padding: 0;
 }
