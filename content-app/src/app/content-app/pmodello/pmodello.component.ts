@@ -6,13 +6,13 @@ import { Component,OnInit, Input} from '@angular/core';
 })
 
 export class PModello  implements OnInit {
-
+  tabLabels: string[] = ['Difensivo','Prudente','Moderato']; //label dei tab da portere in un 'istanza
+  
   constructor() {}
 
   // Inizializzazione
   ngOnInit(){
-
-    console.log("pmodello");
-    
+   console.log("pmodello");
+  
   }
 }

@@ -10,6 +10,8 @@ import { ContentAppComponent } from './content-app/content-app.component';
 import { Overview} from "./content-app/overview/overview.component";
 import { TopSelection} from "./content-app/topselection/topselection.component";
 import { PModello} from "./content-app/pmodello/pmodello.component";
+import { TabsComponent } from './content-app/tabs/tabs.component';
+import { TabLabelComponent } from './content-app/tabs/tab/tab-label/tab-label.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { PModello} from "./content-app/pmodello/pmodello.component";
     ContentAppComponent, 
 
     // Sottocomponenti
-    Overview, TopSelection,PModello
+    Overview, TopSelection,PModello,
+
+    //componenti generici
+    TabsComponent,TabLabelComponent
 
   ],
   imports: [
