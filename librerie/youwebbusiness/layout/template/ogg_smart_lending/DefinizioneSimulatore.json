@@ -8,11 +8,11 @@
         "Periodicita": {
           "Options": [
             {
-              "Value": 3,
+              "Value": "03",
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": 3,
+          "Default": "03",
           "Modificabile": true
         },
         "Importo": {
@@ -78,15 +78,15 @@
         "Periodicita": {
           "Options": [
             {
-              "Value": 1,
+              "Value": "01",
               "Lbl": "Mensile"
             },
             {
-              "Value": 3,
+              "Value": "03",
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": 3,
+          "Default": "03",
           "Modificabile": true
         },
         "Importo": {
@@ -152,15 +152,15 @@
         "Periodicita": {
           "Options": [
             {
-              "Value": 1,
+              "Value": "01",
               "Lbl": "Mensile"
             },
             {
-              "Value": 3,
+              "Value": "03",
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": 3,
+          "Default": "03",
           "Modificabile": true
         },
         "Importo": {
@@ -226,15 +226,15 @@
         "Periodicita": {
           "Options": [
             {
-              "Value": 1,
+              "Value": "01",
               "Lbl": "Mensile"
             },
             {
-              "Value": 3,
+              "Value": "03",
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": 3,
+          "Default": "03",
           "Modificabile": true
         },
         "Importo": {
@@ -300,15 +300,15 @@
         "Periodicita": {
           "Options": [
             {
-              "Value": 1,
+              "Value": "01",
               "Lbl": "Mensile"
             },
             {
-              "Value": 3,
+              "Value": "03",
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": 3,
+          "Default": "03",
           "Modificabile": true
         },
         "Importo": {
@@ -371,6 +371,6 @@
     ]
   },
   "ImportoMassimoCRM": 0,
-  "DataScadenza": "2099-01-01T00:00:00+01:00",
+  "DataScadenza": "2021-06-01T00:00:00+01:00",
   "CodiceProdotto": "SMALEN10K"
 }

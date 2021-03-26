@@ -19,7 +19,7 @@
 <h2>Calcola la rata del finanziamento</h2>
 
 <script type="text/javascript">
-var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/DefinizioneSimulatore.txt")); ?>
+var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/DefinizioneSimulatore.json")); ?>
 </script>
 
   <!-- Configuratore prestito -->
@@ -34,6 +34,24 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
 
 	  // Esempio handler di calcolo (con sblocco finale dell'interfaccia)
       var esempioHandlerCalcola = function(dataToSend,callback) {
+
+        console.log("- DATI INVIATI -");
+        console.log(dataToSend);
+
+        $.ajax({
+          url: "./layout/template/ogg_smart_lending/RispostaSimulatore.json",
+          dataType: "json",
+          data: dataToSend,
+          success: function(data){
+              console.log("- DATI RICEVUTI -");
+              console.log(data);
+              callback(data);
+              // Sblocco dell'interfaccia di richiesta
+			        $("#prestitoSubmit").attr("disabled",false);
+          }
+        })        
+        
+        /*
         var dataObject = {
           "spese": Math.round(Math.random()*3000*100)/100,
           "taeg": Math.round(Math.random()*10*100)/100,
@@ -42,14 +60,9 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
           "rata":Math.round(Math.random()*1000*100)/100
         }
         // Esempio tracciatura dei dati ricevuti
-        console.log(dataToSend);
-        setTimeout(function(){
-			// Lancio della callback
-			callback(dataObject)
-			// Sblocco dell'interfaccia di richiesta
-			$("#prestitoSubmit").attr("disabled",false);
-		}
-		,1000);
+        // Lancio della callback
+			  callback(dataObject)
+        */
       }
   </script>
 

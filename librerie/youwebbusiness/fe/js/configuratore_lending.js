@@ -102,7 +102,7 @@ var FormObj = {
                     $.map(params.options,function(radio){
                         return ($("<div>").addClass(radio.class? radio.class : "col-xs-12").append(
                                 $("<div>").addClass("form-check radio").append(
-                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.value, checked: (params.value==radio.Value),id: params.name+"_"+radio.Value}).addClass("form-check-input").on("change",params.change),
+                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.Value, checked: (params.value==radio.Value),id: params.name+"_"+radio.Value}).addClass("form-check-input").on("change",params.change),
                                     $("<label>").attr({for: params.name+"_"+radio.Value}).addClass("form-check-label").html(radio.Lbl)
                             )
                         ))
@@ -132,7 +132,7 @@ var smlCheckImporto = function(){
         val = parseFloat(field.val().split(".").join(""));
     if (val <= sml.importomin || isNaN(val)) {val = sml.importomin}
     if (val>= sml.importomax) {val = sml.importomax}
-    field.val(val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+    field.val(sml.formatNumber(val));
     sml.importo = val;
     sml.sliderimporto.slider("value",val);
     sml.resetResults();
@@ -186,14 +186,24 @@ var startLending = function(params) {
 
         durpreamm: 24,
 
-        periodicita: 1
+        periodicita: "01",
+
+        prodotto: "",
+
+        datascadenza: undefined,
+
+        modaldata: {}
 
     })
     
     
     // Assegna i valori di default leggendo l'oggetto di configurazione in ingresso (se ricevuto)
     if (params.objConf) {
+
         sml["products"] = params.objConf.Simulatore.ProdottiElise;
+        sml.prodotto = params.objConf.CodiceProdotto;
+        sml.datascadenza = new Date(params.objConf.DataScadenza).valueOf()
+
 
         $.each(sml.products,function(i,prod){
 
@@ -222,9 +232,6 @@ var startLending = function(params) {
                 if(prod.Importo.min<sml.importomin) sml.importomin = prod.Importo.Min;
                 if(prod.Importo.min>sml.importomax) sml.importomax = prod.Importo.Max;
             }
-            
-            // Forzature per prove layout
-            // sml.importomin =4000;
 
         })
 
@@ -247,11 +254,11 @@ var startLending = function(params) {
 
         wrap: $(params.id).addClass("loading configuratore"),
 
-        scadenza:  ((typeof params.scadenza == "undefined") ? "" :
+        scadenza:  ((typeof sml.datascadenza == "undefined") ? "" :
         $("<div>").addClass("top-evidente").append(
             $("<div>").addClass("cd-wrapper").append(
                 $("<span>").addClass("cd-label").html("L'offerta scade tra:"),
-                countdown.get(params.scadenza, smlOffertaScaduta))
+                countdown.get(sml.datascadenza, smlOffertaScaduta))
             )
             
         ),
@@ -290,13 +297,13 @@ var startLending = function(params) {
 
                     // Dati da inviare all'handler esterno
                     var data = {
-                        durata: sml.durata,
-                        importo: sml.importo,
-                        periodicita: sml.periodicita,
-                        codice: sml.currentprod.Codice,
-                        classe: sml.currentprod.Classe,
-                        preammortamento: sml.durpreamm
-
+                        "prodotto": sml.prodotto,
+                        "classeProdottoElise": sml.currentprod.Classe,
+                        "codiceProdottoElise": sml.currentprod.Codice,
+                        "importo": sml.importo,
+                        "periodicitaRata": sml.periodicita,
+                        "durataFinanziamento": sml.durata,
+                        "durataPreAmmortamento": sml.durpreamm
                     }
                     params.handlerCalcola(data,sml.getLendingData);
                 }
@@ -306,7 +313,7 @@ var startLending = function(params) {
         periodicitaradio:  $("<div>").append(FormObj.radio({
             name: "periodicita",
             change: function(){
-                sml.periodicita = Number($(this).val());
+                sml.periodicita = $(this).val();
                 sml.resetResults();
             },
             value: sml.periodicita,
@@ -316,18 +323,18 @@ var startLending = function(params) {
     
         results: $("<div>").addClass("results disabled").append(
             $.map([
-                {"id": "spese","label":"Spese", "modal": true},
-                {"id": "taeg","label":"Taeg", "modal": false},
-                {"id": "tan","label":"Tan", "modal": false},
-                {"id": "rate","label":"Rate mensili", "modal": false},
-                {"id": "rata","label":"La tua rata", "modal": true}
+                {"id": "spese","label":"Spese", "field": "speseTotali","modal": true},
+                {"id": "taeg","label":"Taeg",  "field": "ISC", "modal": false},
+                {"id": "tan", "label":"Tan",  "field": "tassoAmm","modal": false},
+                {"id": "rate","label":"Rate mensili",  "field": "numeroRate", "modal": false},
+                {"id": "rata","label":"La tua rata",  "field": "importoPrimaRataAmm", "modal": true}
             ],function(div){
                 return $("<div>").addClass("result-box " + div.id).append(
                     ((div.modal)? $("<a>").addClass("btn-icon-help").click(function(){
                         sml.showModal(div.id);
                     }) : ""),
                     $("<span>").addClass("result-label").html(div.label),
-                    $("<span>").addClass("result").attr({id: "result_"+div.id}).html(" - ")
+                    $("<span>").addClass("result").attr({id: div.id,"data-field":div.field}).html(" - ")
                 )
             })
             ),
@@ -335,14 +342,24 @@ var startLending = function(params) {
         // Modali
         modal: {},    
 
+
         // Disclaimer
         disclaimer:  $("<div>").addClass("disclaimer").html("<h4>Disclaimer</h4><p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>"),
     
-
+        
 
         // ################## FUNZIONI ########################
         // Acquisizione dei dati dall'handler esterno
         getLendingData : function(data) {
+            // Eventuali rielaborazioni dei dati ricevuti
+            if (data && !isNaN(data["speseIstruttoria"])) {
+                data["speseTotali"] = 0;
+                data["speseTotali"] += (!isNaN(data["speseIstruttoria"])) ?  data["speseIstruttoria"] : 0;
+                data["speseTotali"] += (!isNaN(data["speseErogazione"])) ?  data["speseErogazione"] : 0;
+                data["speseTotali"] += (!isNaN(data["speseInvio"])) ?  data["speseInvio"] : 0;
+                data["speseTotali"] += (!isNaN(data["speseRata"])) ?  data["speseRata"] : 0;
+            }
+
             sml.setResults(data);
             sml.isWaiting = false;
             sml.wrap.removeClass("loading");
@@ -357,11 +374,30 @@ var startLending = function(params) {
                 "rate": "",
                 "rata": "&euro;"
             }
+
             $.each(sml.results.find(".result"),function(i,v){
-                    var id = $(v).attr("id").replace("result_","");
-                    if (data && data[id]) sml.results.removeClass("disabled");
-                    $(v).html((data && data[id])? data[id] + units[id] : " - ");
-                })
+                var block = $(v);
+                var dataField = block.attr("data-field"),
+                    id = block.attr("id");
+                if (data && data[dataField]) sml.results.removeClass("disabled");
+                $(v).html((data && !isNaN(data[dataField]))? sml.formatNumber(data[dataField]) + units[id] : " - ");
+            });
+
+            // Dettagli dei risultati (modali)
+            // Istanzia l'oggetto spese totali
+            if (data && !isNaN(data["speseTotali"])) {
+                sml.modaldata["spese"] = {
+                    speseIstruttoria: sml.formatNumber(data["speseIstruttoria"]),
+                    speseErogazione: sml.formatNumber(data["speseErogazione"]),
+                    speseInvio: sml.formatNumber(data["speseInvio"]),
+                    speseRata: sml.formatNumber(data["speseRata"])
+                }
+            };
+
+            // Istanzia l'oggetto con i dati della modale per il piano di ammortamento
+            if (data && data["rate"]) {
+                sml.modaldata["rata"] = data.rate;              
+            };
             
         },
 
@@ -371,26 +407,48 @@ var startLending = function(params) {
                 sml.setResults({});
                 params.handlerBloccoInterfaccia();
                 sml.isWaiting = true;
+                sml.modaldata = {};
             }
         },
 
-        
+        // Formattazione
+        formatNumber: function(value,ndecimali) {
+            var fvalue = "";
+            if (!isNaN(value)) {
+                var ndec = (ndecimali)? ndecimali : 2;
+                var decmulti = Math.pow(10,ndec);
+                var value = Math.round(value*decmulti)/decmulti;
+                var fvalueArr = value.toString().split(".");
+
+                // Formatta l'intero
+                fvalue = fvalueArr[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                
+                // Aggiunge, se presenti, i decimali
+                if (fvalueArr[1]) {
+                    fvalue += (","+ fvalueArr[1]);
+                }
+
+            }
+
+            return (fvalue);
+        },
+
 
         // modali
         showModal: function(modaltype){
            
             // Prepara il contenuto della modale
-            var modalTitle, modalBody;
+            var modalTitle, modalBody, mdata = sml.modaldata[modaltype];
             switch(modaltype) {
 
                 case "spese":
 
-                    modalTitle= "Spese"; 
+                    modalTitle= "Spese";
                     modalBody = $("<div>").append(
-                        $("<p>").html("Spese Istruttoria: 200,00 &euro;<br>" +
-                        "Commissione Erogazione: 0,00 &euro;<br>"+
-                        "Spese Incasso Rata: 2,75 &euro;<br>"+
-                        "Spese Avvisatura: 1,25 &euro;*<br>"),
+                        $("<p>").html("Spese Istruttoria: "+ mdata.speseIstruttoria +" &euro;<br>" +
+                        "Commissione Erogazione: "+ mdata.speseErogazione +" &euro;<br>"+
+                        "Spese Incasso Rata: "+ mdata.speseRata +" &euro;<br>"+
+                        "Spese Avvisatura: "+mdata.speseInvio +" &euro;*<br>"),
                         $("<p>").addClass("note").html("*applicate solo nel caso in cui la rata non venga pagata mediante addebito su un conto corrente accesso presso l’istituto erogato.")
                     )
                 break;
@@ -400,19 +458,40 @@ var startLending = function(params) {
                     modalTitle= "La tua rata";
                     modalBody = $("<div>").append($("<p>").html("La durata complessiva del finanziamento a " + sml.durata + " mesi di cui " + sml.durpreamm + " di preammortamento."));
                     
-                    var tableammortamento = $("<table>").addClass("table").append(
-
-                        $("<thead>").append(
-                            $("<tr>").append(
-                                $("<th>").html("Numero"),
-                                $("<th>").html("Quota interessi"),
-                                $("<th>").html("Quota capitale"),
-                                $("<th>").html("Debito residuo")
-                            )
-                        )
+                    var tableammortamento = $("<table>").addClass("table table-striped");
+                        modalBody.append($("<div>").addClass("bootstrap-table").append(tableammortamento)
                     )
-
-                    modalBody.append(tableammortamento)
+                    var tbformatter = function(val){return sml.formatNumber(val)};
+                    tableammortamento.bootstrapTable({
+                        data: mdata,
+                        /*
+                        pagination: true,
+                        pageList: [10,20,50,100],
+                        paginationVAlign: "top",
+                        */
+                        columns: [
+                            {
+                                field: 'numero',
+                                title: 'Numero'
+                            },
+                            {
+                                field: 'quotaInteressi',
+                                title: 'Quota interessi',
+                                formatter: tbformatter
+                            },
+                            {
+                                field: 'quotaCapitale',
+                                title: 'Quota capitale',
+                                formatter: tbformatter
+                            },
+                            {
+                                field: 'debitoResiduo',
+                                title: 'Debito residuo',
+                                formatter: tbformatter
+                            }
+                    
+                        ]
+                    });
 
                 break;
 
@@ -445,7 +524,7 @@ var startLending = function(params) {
                 sml.periodicitaradio.empty().append(FormObj.radio({
                     name: "periodicita",
                     change: function(){
-                        sml.periodicita = Number($(this).val());
+                        sml.periodicita = $(this).val();
                         sml.resetResults();
                     },
                     value: sml.periodicita,

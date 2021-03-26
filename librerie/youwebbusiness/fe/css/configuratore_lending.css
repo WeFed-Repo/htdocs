@@ -3,11 +3,15 @@
     background-repeat:no-repeat;
     background-position:center center}
 
-	
-    
-    .loading>* {visibility:hidden}
+	/* Loading */
+	.loading>* {visibility:hidden}
     .sml.loading {min-height:200px}
 	
+	/* BT in modale */
+	.modal .table-hasScrollbar-wrapper, .modal .bootstrap-table {margin:0;padding:0}
+	.modal .bootstrap-table table {border:solid 1px #eee}
+
+
 	/* Offerta scaduta */
 	.sml div.offerta-scaduta {
 		width:100%;
