@@ -460,6 +460,9 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
           font-size:13px; 
         }
 }
+.marginTopMedium {
+	margin-top: 15px;
+}
 /* Select "speciali" */
 /* Classi "select" speciali: sono oggetti stilizzati come select ma non lo sono */
 .spsel {
