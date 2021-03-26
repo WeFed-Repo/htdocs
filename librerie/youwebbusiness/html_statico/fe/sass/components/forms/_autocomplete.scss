@@ -1,0 +1,102 @@
+
+ul.ui-autocomplete li, ul.ui-autocomplete 
+    {list-style-type:none; 
+    padding:0; 
+    margin:0
+}
+.ui-button.ui-combobox-button.dropdown-arrow {
+    background: $grayBG url(../img/form_select.gif) no-repeat right center;
+    width:44px;
+    height:44px;
+    border: solid 1px #DDDDDD;
+    border-left:0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor:pointer;
+    &.btn-focus {
+        background: $white url(../img/form_select.gif) no-repeat right center;
+    }
+}
+.is-invalid + .ui-button.ui-combobox-button.dropdown-arrow {
+    border: solid 1px #dc3545;
+    border-left:0;
+}
+.ui-helper-hidden-accessible {
+    display:none !important;
+}
+
+
+.ui-widget-content.ui-autocomplete {
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 80%!important; 
+    padding: 10px;
+    border: 1px solid #DDDDDD;
+    box-shadow:  1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    li {
+        font-size:14px;
+        margin-bottom:5px;
+        &:hover {
+            cursor:pointer;
+        }
+        
+    }
+
+}
+.ui-widget-content.ui-autocomplete .selected {
+    color:red!important;
+}
+.form-control.ui-autocomplete-input {
+    border-right:0;
+    margin-bottom:0;
+    &:focus {
+        box-shadow: none!important;
+       
+    }
+}
+.input-group.autocomplete {
+    margin-bottom:16px;
+    position: relative;
+    &.focus {
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        border-radius: 3px;
+    }
+}
+ 
+#wrapper-ul-autocomplete, .wrapper-ul-autocomplete {
+    position:relative;
+    .menu-bottom, .menu-bottom-multiplo {
+        display:none;
+        background-color: white;
+        font-size: 12px;
+        box-shadow:  1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border: 1px solid #DDDDDD;
+        width: 80%;
+       
+        z-index: 100;
+        a { 
+            float:right;
+            text-decoration:none;
+            &:hover {
+                text-decoration:underline;
+            } 
+        }
+        
+    
+    }
+}
+
+@media (max-width: $bp_sm_min) {
+    #wrapper-ul-autocomplete {
+       .menu-bottom, .menu-bottom-multiplo  {
+        height: auto;
+         .action-link {
+             display: block;
+             padding-bottom:20px;
+         }
+    }
+    }
+  }

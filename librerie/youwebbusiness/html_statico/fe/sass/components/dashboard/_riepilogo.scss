@@ -1,0 +1,78 @@
+.dhb-riepilogo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: $dhbMinHeightInner;
+    display:flex;
+    flex-direction: column;
+    align-content:  center;
+
+    li {
+      list-style: none;
+      display: flex;
+      min-height: 50px;
+      align-items: center;
+      border-bottom: $grayBordered dashed 1px;
+      padding: 0;
+      flex: 1 1 auto;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      > * {
+        flex-grow: 1;
+        padding: 0 5px;
+
+        &:first-child,
+        &:last-child {
+          flex-grow: 0;
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      @include icon {
+        @include svg-icon-color($blue);
+      }
+
+      a {
+        text-decoration: underline;
+        display: inline-block;
+        margin-top: 0.25em;
+      }
+
+      .text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-height: 1.2em;
+        max-height: 3.6em;
+        max-width: 200px;
+      }
+    }
+
+    &__num {
+      color: $blue;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  }
+}

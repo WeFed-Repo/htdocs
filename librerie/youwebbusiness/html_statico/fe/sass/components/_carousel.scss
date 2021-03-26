@@ -1,0 +1,80 @@
+.carousel {
+  $arrowWidth : 25px;
+  $arrowHeright: 25px;
+  width: 100%;
+  min-height: $arrowHeright;
+  &-inner {
+    height: 100%;
+  }
+  &-item {
+    height: 100%;
+    &-centerer {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > div {
+        width: 100%;
+      }
+    }
+  }
+  &-indicators {
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    li {
+      height: 5px;
+      width: 35px;
+      background: $green;
+      opacity: 0.5;
+      cursor: pointer;
+      &.active,
+      &:hover {
+        background: $green;
+        opacity: 1;
+      }
+    }
+  }
+  &-control-prev,
+  &-control-next {
+    opacity: 1;
+    height: $arrowHeright;
+    width: $arrowWidth;
+    top: 50%;
+    z-index: 3; 
+    transform: translate(0,-50%);
+    &-icon {
+      display: block;
+      height: $arrowHeright;
+      width: $arrowWidth;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &-control-prev-icon {
+    @include icon-img-prev($green);
+    @at-root [disabled] & {
+      @include icon-img-prev($gray3); 
+    } 
+    @at-root .disabled & {
+      @include icon-img-prev($gray3); 
+    } 
+  }
+  &-control-next-icon {
+    @include icon-img-next($green);
+    @at-root [disabled] & {
+      @include icon-img-next($gray3); 
+    } 
+    @at-root .disabled & {
+      @include icon-img-next($gray3); 
+    } 
+  }
+  &-arrows-outside {
+    margin: 0 calc(#{$arrowWidth} + #{$spacer});
+    width: calc( 100% - (#{$arrowWidth*2} + #{$spacer*2}) );
+    .carousel-control-prev { left: calc( -#{$arrowWidth} - #{$spacer}); }
+    .carousel-control-next { right: calc( -#{$arrowWidth} - #{$spacer}); }
+  }
+}

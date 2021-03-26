@@ -1,0 +1,76 @@
+/* Istruzioni generali librerie */
+body {margin:0;padding:0;font-size:16px; background:#f5f5f5;}
+body header.librerie { top:0; left:0; position: sticky; width: 100%; z-index: 9999999999999; }
+body .wrapper {max-width:1600px; margin:0 auto; }
+#main.librerie .librerie-lista a,
+#main.librerie .librerie-lista a:hover {color: #0B6B5B;}
+
+/* Oggetti generali */
+header.librerie {background:#0B6B5B; color:#fff; height:60px; top:0}
+header.librerie > .wrapper {padding: 0 15px;}
+header.librerie h1 {font-size:30px;margin:10px 0; display:inline-block;color:#fff!important;}
+header.librerie a.btn-bak {text-decoration:none;border:solid 2px #fff; height:40px;width:40px; display:inline-block; margin: 0 5px 0 0; color:#fff;border-radius:50%; text-align:center;line-height:30px;}
+header.librerie a.btn-bak:hover {text-decoration:none; opacity:0.7;}
+
+/* Oggetti indice e catalogo */
+/*#main.librerie {margin:60px 0 0 0;}*/
+#main.librerie {margin:0;padding-top:0;}
+#main.librerie > .wrapper {background:#f5f5f5;padding:0 15px 15px 15px;}
+/* #main.librerie h2 {font-size:20px; border-bottom:solid 4px #2f9988; padding: 0 0 5px} */
+#main.librerie .template-tree ul li {width:100%; font-weight:bold}
+#main.librerie .template-tree ul li .disabled {opacity:0.2;font-weight:normal}
+#main.librerie h2.titolo-oggetto {font-size:25px; text-align:center; margin: 30px 0 ;text-transform:uppercase;background:#000; color:#fff; padding:10px;border-bottom:none;}
+#main.librerie .col-sm-4 h2 { margin-top: 30px; }
+
+/* Nuovo template tree */
+#main.librerie .template-tree h3 {cursor:pointer; font-size:22px;background:#ddd; padding: 5px; border-radius:20px 5px 5px 20px;position:relative;height:40px;padding-left:50px}
+#main.librerie .template-tree h3 .opener {transition: transform 0.3s;transform:rotate(360deg);position:absolute;top:0;left:0; width:40px;height:40px;display:block;font-size:30px;background-color:#000;border-radius:50%;height:40px; text-align:center;color:#fff;text-decoration:none}
+#main.librerie .template-tree h3:hover .opener {color:#fff;opacity:0.8}
+#main.librerie .template-tree h3 .opener:before {content: "+"}
+#main.librerie .template-tree h3 .tips {position: absolute;right: 10px;top: 8px;background: #666;color: #fff;padding: 5px;border-radius: 5px;font-size: 12px;text-transform: uppercase;font-weight: normal;}
+#main.librerie .template-tree h3 .tips:hover {color:#fff;opacity:0.8}
+#main.librerie .template-tree ul {padding: 0 0 0 10px;list-style-type:none}
+#main.librerie .template-tree-group>ul {display:none}
+#main.librerie .template-tree li {position:relative;padding:0 0 5px 25px;min-height:20px}
+#main.librerie .template-tree .dot {display:block; position:absolute; top:2px;left:0;background-color:#ccc;width:20px;height:20px;border-radius:10px}
+#main.librerie .template-tree .dot.dot-enabled {background-color:#999;cursor:pointer}
+#main.librerie .template-tree .dot.dot-enabled.lavorazione {background-color:#fc0}
+#main.librerie .template-tree .dot.dot-enabled.completato {background-color:#28c34c}
+#main.librerie .template-tree .template-tree-group.opened h3 .opener {transform:rotate(0deg)}
+#main.librerie .template-tree .template-tree-group.opened h3 .opener:before {content: "\2013"}
+#main.librerie .template-tree .template-tree-group.opened>ul {display:block}
+#main.librerie .template-tree li a {font-weight:normal; color: #0B6B5B;}
+#main.librerie .template-tree li span {font-weight:normal;color:#aaa}
+
+.modal span.output {clear:both;font-weight:bold;display:inline-block;width:100%}
+
+/*.btn-primary,.btn-primary:hover,.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:focus {background-color:#0B6B5B;border:0 none;box-shadow:none}*/
+
+@media (min-width: 992px) {
+  #main.librerie .demo-container {
+    border: #777 dashed 1px;
+    width: 100%;
+    float:right;
+    max-width: 1600px;
+    padding: 1rem 0;
+    display: flex;
+  }
+  #main.librerie .demo-container:before {
+    display:block;
+    content: 'DEMO MENU PLACEHOLDER';
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 1rem;
+    flex-basis: calc( 240px - 1rem );
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}
+
+/*
+ul.liv01 li.liv01, ul.liv02 li.liv02, ul.liv03 li.liv03{margin:0 0 5px 0}
+a {font-weight: normal;}
+.inlav{color:orange}
+.fatto{color:#0B6B5B}
+.aggan{color:#000}
+*/

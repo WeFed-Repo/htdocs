@@ -38,6 +38,7 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
         console.log("- DATI INVIATI -");
         console.log(dataToSend);
 
+        /*
         $.ajax({
           url: "./layout/template/ogg_smart_lending/RispostaSimulatore.json",
           dataType: "json",
@@ -49,20 +50,21 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
               // Sblocco dell'interfaccia di richiesta
 			        $("#prestitoSubmit").attr("disabled",false);
           }
-        })        
+        })
+        */        
         
-        /*
-        var dataObject = {
-          "spese": Math.round(Math.random()*3000*100)/100,
-          "taeg": Math.round(Math.random()*10*100)/100,
-          "tan": Math.round(Math.random()*10*100)/100,
-          "rate":parseInt( Math.random()*11)+1,
-          "rata":Math.round(Math.random()*1000*100)/100
-        }
-        // Esempio tracciatura dei dati ricevuti
-        // Lancio della callback
-			  callback(dataObject)
-        */
+        setTimeout(function(){
+          var dataObject = <?php include ("ogg_smart_lending/RispostaSimulatore.json"); ?>
+          // Esempio tracciatura dei dati ricevuti
+          console.log("- DATI RICEVUTI -");
+          console.log(dataObject);
+          callback(dataObject);
+          // Sblocco dell'interfaccia di richiesta
+          $("#prestitoSubmit").attr("disabled",false);
+
+        },500);
+        
+        
       }
   </script>
 

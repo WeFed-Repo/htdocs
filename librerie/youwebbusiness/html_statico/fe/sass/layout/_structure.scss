@@ -1,0 +1,105 @@
+/* Tag generici */
+
+body {
+  background: $white;
+  font-family: 'roboto', sans-serif;
+  font-size: 100%;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: $gray1;
+  background-color: $grayBG;
+}
+
+#main {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 70px;
+  position: relative;
+  @media (max-width: $bp_md_max) {
+    padding-top: 60px;
+  }
+  #maincontent {
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 240px;
+    float: right;
+    background-color: $grayBG;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: $bp_tablet_max) {
+      padding: 0;
+    }
+    @media (min-width: $bp_tablet_min) {
+      padding: 0;
+      display: flex;
+      flex: 0 0 auto;
+    }
+    #contenuti {
+      width: 100%;
+      padding: 10px 0 20px;
+      float: right;
+      min-height: calc( 100vh - #{$headerHeight} - #{$footerHeight} );
+      @media (min-width: $bp_tablet_min) {
+        width: calc( 100% - 240px );
+      }
+      @media (max-width:$bp_md_max) {
+        min-height: calc( 100vh - #{$headerHeight} - #{$footerHeight_md_max} );
+      }
+      @media (max-width:$bp_sm_max) {
+        min-height: auto;
+      }
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Eccezioni se ho la struttura vuota delle pagine non loggate (senza menu)
+
+html.tmp-public {
+  #main {
+    #maincontent {
+      #menu {
+        background: $gray4; 
+      }
+      #contenuti {
+        float: none;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Eccezioni se ho la struttura vuota del login
+
+html.tmp-login {
+  #main {
+    margin: 0;
+    padding: 0;
+    #maincontent {
+      background: url('../img/login/bg_2.png')  no-repeat center / cover;
+      #contenuti {
+        min-height: calc( 100vh - #{$footerHeight} );
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        @media (max-width:$bp_sm_max) {
+          min-height: auto;
+          padding: 0;
+          .container-fluid {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    border-top: 2px solid $gray4;
+  }
+}

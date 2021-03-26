@@ -1,0 +1,110 @@
+/* Selettore tipo mobile collapse */
+
+.opt-mobile-data-collapse .mobile-data-selector {
+  display: none;
+}
+
+.mobile-data-block {
+  border-top: solid 1px $gray4;
+  padding: 16px;
+  &:first-child { border-top: 0 none; }
+  label {
+    color: $gray1_hover;
+  }
+  span.output {
+    color: $gray2;
+    height: auto;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 8px;
+    min-height: auto;
+    span.negativo {
+      color: $error;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+  span.output-title {
+    color: $greenLink;
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .output-inline {
+    width: 100%;
+    label {
+      float: left;
+      width: auto;
+    }
+    span.output {
+      float: right;
+      width: auto;
+    }
+    &.left {
+      span.output {
+        float:left;
+      }
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.mobile-data-heading {
+  border-bottom: solid 1px $gray4;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 16px;
+}
+
+@media (max-width: $bp_md_max) {
+  .no-margin-section {
+    margin-left: -17px !important;
+    margin-right: -17px !important;
+  }
+  .mobile-form {
+    background-color: $white;
+    display: block;
+    padding: 16px 16px 20px;
+    float: none !important;
+    border: solid 1px $grayBordered;
+    .bordered {
+      border: 0;
+      padding: 0;
+    }
+  }
+  .mobile-data-selector {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: solid 1px $grayBordered;
+    padding: 16px 32px 16px 16px;
+    font-size: 16px;
+    background: $white url("../img/selector_arrow_right.png") no-repeat right center;
+    border: solid 1px $grayBordered;
+    span {
+      &.name {
+        display: inline-block;
+        clear: both;
+        font-weight: bold;
+        width: 100%;
+      }
+      &.detail {
+        display: inline-block;
+        clear: both;
+        width: 100%;
+        color: $gray3;
+      }
+    }
+    .form-group {
+      font-size: 14px;
+      margin-top: 8px;
+      span.output {
+        padding: 0;
+        margin: 0;
+        min-height: 20px;
+      }
+    }
+  }
+}

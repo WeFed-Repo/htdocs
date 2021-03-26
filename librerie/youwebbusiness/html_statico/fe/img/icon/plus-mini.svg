@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>02 - icon/plus-mini</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02---icon/plus-mini" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,5 C10.3313708,5 10.6,5.26862915 10.6,5.6 L10.5994,9.4 L14.4,9.4 C14.7313708,9.4 15,9.66862915 15,10 C15,10.3313708 14.7313708,10.6 14.4,10.6 L10.5994,10.6 L10.6,14.4 C10.6,14.7313708 10.3313708,15 10,15 C9.66862915,15 9.4,14.7313708 9.4,14.4 L9.3994,10.6 L5.6,10.6 C5.26862915,10.6 5,10.3313708 5,10 C5,9.66862915 5.26862915,9.4 5.6,9.4 L9.3994,9.4 L9.4,5.6 C9.4,5.26862915 9.66862915,5 10,5 Z" id="Path" fill="#2F9988"></path>
+    </g>
+</svg>
