@@ -1,4 +1,5 @@
-﻿vaAJAX = ""; 
+﻿vaAJAX = "",
+vaAudioPath = "";
 
 // Variabili globali 
 var vaIsMobile = ($(window).width()<1024)? true : false;
@@ -290,9 +291,9 @@ function vaAsking(domanda, history)
 			if (vaAnswerBody)
 				{
 
-				vaJsonAudio = (vaAnswerBody.audiopath)? ((typeof wrp_home_direct != "undefined")? wrp_home_direct : "/WEBEXT/wrapped/goToHomeDirect") + vaAnswerBody.audiopath : "";
+				// vaJsonAudio = (vaAnswerBody.audiopath)? ((typeof wrp_home_direct != "undefined")? wrp_home_direct : "/WEBEXT/wrapped/goToHomeDirect") + vaAnswerBody.audiopath : "";
 				// Parametri testing locale: vaJsonAudio = (vaAnswerBody.audiopath)? ((typeof wrp_home_direct != "undefined")? wrp_home_direct : "") + vaAnswerBody.audiopath : "";
-
+				vaJsonAudio = (vaAnswerBody.audiopath)? vaAudioPath + vaAnswerBody.audiopath : "";
 
 				//Legge l'emotion di Paolo
 				vaEmotion = vaAnswerBody.emotion;
@@ -485,7 +486,7 @@ function vaOpen(sLeft,sTop,sQuestion)
 {
 	
 	//Indirizzo per chiamate AJAX
-	vaAJAX = (window.location.toString().indexOf("convergenza") > 0) ? "/include/ajax/assistente_virtuale.php" : ((typeof wrp_home_direct != "undefined")? wrp_home_direct + "/common/virtass/virtass.jsp" :"/WEBEXT/wrapped/goToHomeDirect/common/virtass/virtass.jsp" );
+	vaAJAX = (typeof urlVa != "undefined") ? urlVa :  "/include/ajax/assistente_virtuale.php";
 
 	wStore.write("vaOpened","true");
 

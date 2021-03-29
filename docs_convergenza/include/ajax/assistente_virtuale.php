@@ -87,7 +87,7 @@
     	?>
 
 		"answer": {
-	      "audiopath": "/wscmn/fe/audio/paolo_avatar_test.mp3",
+	      "audiopath": "/include/ajax/audio/paolo_avatar_test.mp3",
 	      "text": "Ciao, sono Paolo, l'assistente virtuale. Questa &egrave; una prova.",
 	      "emotion": "happy"
 	    }
