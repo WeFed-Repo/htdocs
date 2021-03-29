@@ -1,12 +1,11 @@
 <div class="navContSecondLev">
 	<div class=" outerTab">
 		<ul class="tabWrapper tabsmall">
-			<li *ngFor="let tabLabel of tabLabels"><a>{{ tabLabel }}</a></li>
+			<li *ngFor="let tab of tabsList" (click)="selectTab(tab)" [class.on]="tab.active"><a>{{ tab.tabTitle }}</a></li>
 		</ul>
-		
 	</div>
 	<div class="separator"></div>
 </div>
-
+<ng-content></ng-content>
 
 
