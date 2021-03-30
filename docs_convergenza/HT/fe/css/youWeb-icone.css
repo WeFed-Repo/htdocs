@@ -848,3 +848,15 @@
 .icon-ico_alert_non_disponibile:before {
   content: "\ea0d";
 }
+.icon-contatti:before {
+  content: "\ea0e";
+}
+.icon-dove_siamo:before {
+  content: "\ea0f";
+}
+.icon-orari:before {
+  content: "\ea10";
+}
+.icon-servizi:before {
+  content: "\ea11";
+}
