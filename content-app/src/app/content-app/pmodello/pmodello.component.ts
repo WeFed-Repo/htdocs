@@ -1,18 +1,25 @@
 import { Component,OnInit, Input} from '@angular/core';
+import { Pmodello } from './pmodello.model';
+import { PmodelloService } from './pmodello.service';
 
 @Component({
   selector: 'pmodello',
-  templateUrl: './pmodello.component.html'
+  templateUrl: './pmodello.component.html',
+  providers:[PmodelloService]
 })
 
 export class PModello  implements OnInit {
-  tabLabels: string[] = ['Difensivo','Prudente','Moderato']; //label dei tab da portere in un 'istanza
+  //array di testi iniziali
   
-  constructor() {}
-
+  public pModelli:Array<Pmodello>
+ 
+  
+  constructor(private pmodelloService: PmodelloService) { }
+  
   // Inizializzazione
   ngOnInit(){
-   console.log("pmodello");
+    this.pModelli=this.pmodelloService.returnPmodelArray();
+    console.log("pmodello");
   
   }
 }

@@ -1,4 +1,8 @@
 <div>
     <h2>Portafoglio modello</h2>
-    <tabs [tabLabels]="tabLabels"></tabs>
+    <tabs>
+        <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
+             <pmodello-content [textIntro]="pModelli[i].pintro"></pmodello-content>
+        </tab>
+    </tabs>
 </div>
