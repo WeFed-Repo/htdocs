@@ -6732,6 +6732,9 @@ div[id*="popover"] .popover-content {
 .testoIconasmall {
     margin-bottom:15px;
 }
+.testoIconasmall .icon {
+    font-size:24px;
+}
 .borderFormRounded .output {
     float: right;
     font-weight: bold;

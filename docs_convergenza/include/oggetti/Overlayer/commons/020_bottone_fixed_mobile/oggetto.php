@@ -18,7 +18,7 @@
           <div class="row">
               <div class="col-xs-12 col-sm-6">
                 <div class="testoIconasmall">
-                    <i class="icon icon-numeroverde_mobile flLeft" title=""></i>
+                    <i class="icon icon-contatti flLeft" title=""></i>
                     <div class="leftTesto">
                         <h4 class="marginBottom5px"><strong>Contatti </strong></h4>
                         <p class="noPadding noMargin">Tel 02724051</p>

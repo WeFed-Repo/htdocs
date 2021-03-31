@@ -72,13 +72,9 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      scadenza:  // Scadenza tra 30 giorni
-	  			(new Date().valueOf()) + (30*24*60*60*1000) ,
-				// Scadenza tra 10 secondi
-				// (new Date().valueOf()) + (15*1000) ,
       objConf: defSim,
       handlerCalcola: esempioHandlerCalcola,
-	  handlerBloccoInterfaccia: esempioHandlerBlocco
+	    handlerBloccoInterfaccia: esempioHandlerBlocco
     })
   </script>
   <!-- Blocco contentente il configuratore -->
