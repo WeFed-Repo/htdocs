@@ -1,0 +1,3061 @@
+{
+    "AnagInstruments": [
+        {
+            "Fidacode": "ALCROPAT",
+            "Name": "Allianz Credit Opportunities AT Cap EUR",
+            "Isin": "LU1951921383",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALFRA206",
+            "Name": "Allianz Dyn. Multi Asset St. SRI 15 AT Cap EUR",
+            "Isin": "LU1548496022",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BLK24907",
+            "Name": "BSF Global Event Driven E2 Cap EUR Hdg",
+            "Isin": "LU1278928574",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWSKALDL",
+            "Name": "DWS Concept Kaldemorgen LC Cap EUR",
+            "Isin": "LU0599946893",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FD1436",
+            "Name": "Fidelity Global Multi Asset Income A Cap EUR Hdg",
+            "Isin": "LU0987487336",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBALA1EU",
+            "Name": "Janus Hend. Balanced A Cap EUR Hdg",
+            "Isin": "IE0009514989",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "LOFALRP",
+            "Name": "LO Funds All Roads P EUR",
+            "Isin": "LU0718509606",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSGBRCAE",
+            "Name": "MSIF Global Balanced Risk Control FoF A EUR",
+            "Isin": "LU0694238501",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "NORGFIAE",
+            "Name": "Nordea 1 Flexible Fixed Income BP Cap EUR",
+            "Isin": "LU0915365364",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PI956",
+            "Name": "Pictet-Multi Asset Global Opportunities R EUR",
+            "Isin": "LU0941349275",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMGLME",
+            "Name": "PIMCO Global Core Asset Allocation E Cap EUR Hdg",
+            "Isin": "IE00B4YYY703",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RAIBIL",
+            "Name": "Raiffeisen Bilanciato Sostenibile R EUR",
+            "Isin": "AT0000785381",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RF1277",
+            "Name": "Raiffeisenfonds Sicherheit VTA EUR",
+            "Isin": "AT0000743562",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SFORZE",
+            "Name": "Anima Sforzesco A",
+            "Isin": "IT0000380722",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SMITH672",
+            "Name": "M&G (Lux) Optimal Income A Cap EUR",
+            "Isin": "LU1670724373",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI144",
+            "Name": "FIDA FFI Obbl Area Euro Gov (1-3Y)",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPEGSD",
+            "Name": "JPM Euro Government Short Duration Bond D Acc EUR",
+            "Isin": "LU0408877842",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SSTACA",
+            "Name": "SISF Euro Short Term Bond A Cap. EUR",
+            "Isin": "LU0106234643",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ETICMON",
+            "Name": "Etica Obbligazionario Breve Termine R",
+            "Isin": "IT0003409171",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPEGSAI",
+            "Name": "JPM Euro Government Short Duration Bond A Dis EUR",
+            "Isin": "LU0408877503",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SSTACB",
+            "Name": "SISF Euro Short Term Bond B Cap. EUR",
+            "Isin": "LU0106234726",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI129",
+            "Name": "FIDA FFI Monetari Euro",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "CARCOURT",
+            "Name": "Carmignac Court Terme A EUR Acc",
+            "Isin": "FR0010149161",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BRLIQP",
+            "Name": "Anima Liquidity Prestige EUR",
+            "Isin": "IE00B5KS8150",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDCASHA",
+            "Name": "Fidelity Euro Cash A Cap EUR",
+            "Isin": "LU0261953490",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBECUCAS",
+            "Name": "GAM Multicash Money Market Euro B EUR",
+            "Isin": "LU0032254962",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPLIQRES",
+            "Name": "JPM EUR Money Market VNAV D Acc EUR",
+            "Isin": "LU0252500524",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PEUCAR",
+            "Name": "Pictet-Short-Term Money Market EUR-R",
+            "Isin": "LU0128495834",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TEEMMF",
+            "Name": "Franklin Euro Short Term Money Market A EUR",
+            "Isin": "LU0454936104",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BRLIQB",
+            "Name": "Anima Liquidity Silver EUR",
+            "Isin": "IE00B07Q3S96",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBECUCAE",
+            "Name": "GAM Multicash Money Market Euro E EUR",
+            "Isin": "LU0129122262",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFSOVPR",
+            "Name": "Pictet-Sovereign Short-Term Money Market EUR-R",
+            "Isin": "LU0366536984",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BGFERE",
+            "Name": "BGF Euro Reserve E2 Cap EUR",
+            "Isin": "LU0432366952",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "CARM01",
+            "Name": "Carmignac Court Terme A CHF Acc Hdg",
+            "Isin": "FR0011269323",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI140",
+            "Name": "FIDA FFI Obbl Euro Corp",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWEC13LC",
+            "Name": "DWS Invest Euro Corporate Bonds LC Cap EUR",
+            "Isin": "LU0300357554",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TECBA",
+            "Name": "Franklin European Corporate Bond A EUR",
+            "Isin": "LU0496369546",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDECOA",
+            "Name": "Fidelity Euro Corporate Bond A Cap EUR",
+            "Isin": "LU0370787193",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWSECLD",
+            "Name": "DWS Invest Euro Corporate Bonds LD Dis EUR",
+            "Isin": "LU0441433728",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWEC13NC",
+            "Name": "DWS Invest Euro Corporate Bonds NC Cap EUR",
+            "Isin": "LU0300357638",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIECBAMD",
+            "Name": "Fidelity Euro Corporate Bond AM Dis EUR",
+            "Isin": "LU0605514487",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSCORBA",
+            "Name": "MSIF Euro Corporate Bond A EUR",
+            "Isin": "LU0132601682",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSCOBAX",
+            "Name": "MSIF Euro Corporate Bond AX EUR",
+            "Isin": "LU0239680886",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSCORCE",
+            "Name": "MSIF Euro Corporate Bond C EUR",
+            "Isin": "LU0176164985",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MGEUBA",
+            "Name": "M&G European Corporate Bond A EUR",
+            "Isin": "GB0032178856",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPECOD",
+            "Name": "JPM Euro Corporate Bond D Acc EUR",
+            "Isin": "LU0408847936",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MLCORPE",
+            "Name": "BGF Euro Corporate Bond E2 Cap EUR",
+            "Isin": "LU0162659931",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MLCORPE5",
+            "Name": "BGF Euro Corporate Bond E5 Dis EUR",
+            "Isin": "LU0500207542",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "GESCOBE",
+            "Name": "Anima Obbligazionario Corporate A EUR",
+            "Isin": "IT0001223095",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TECBAE",
+            "Name": "Franklin European Corporate Bond N EUR",
+            "Isin": "LU0496370635",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SISFHIA",
+            "Name": "SISF EURO Corporate Bond A Cap. EUR",
+            "Isin": "LU0113257694",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SISF0055",
+            "Name": "SISF EURO Corporate Bond A Dis EUR SF",
+            "Isin": "LU0425487740",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFIFGLOR",
+            "Name": "Pictet-EUR Corporate Bonds-R",
+            "Isin": "LU0128473435",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBCORE",
+            "Name": "GAM Multibond Diversified Income Bond B EUR",
+            "Isin": "LU0159196806",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFECBEF",
+            "Name": "Pictet-Global Sustainable Credit-RH EUR",
+            "Isin": "LU0503630310",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIECEE",
+            "Name": "PIMCO Euro Credit E Cap EUR",
+            "Isin": "IE00B3KR3M49",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBCOREE",
+            "Name": "GAM Multibond Diversified Income Bond E EUR",
+            "Isin": "LU0159197101",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SCHINC",
+            "Name": "SISF EURO Corporate Bond B Cap. EUR",
+            "Isin": "LU0113257934",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SPBONC",
+            "Name": "Eurizon Obbligazioni Euro Corporate",
+            "Isin": "IT0003459473",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SECBBD",
+            "Name": "SISF EURO Corporate Bond B Dis EUR SF",
+            "Isin": "LU0512749036",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "CORED",
+            "Name": "Eurizon Obbligazioni Euro Corporate Breve Termine",
+            "Isin": "IT0001051694",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PI1721",
+            "Name": "Pictet-EUR Corporate Bonds-R dm",
+            "Isin": "LU0592907975",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDCOEMD",
+            "Name": "Fidelity Euro Corporate Bond E MDis EUR",
+            "Isin": "LU0840139355",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MAND64",
+            "Name": "M&G European Corporate Bond A Dis EUR",
+            "Isin": "GB00B959HG95",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JB1299",
+            "Name": "GAM Multibond Diversified Income Bond E Cap $",
+            "Isin": "LU0474694147",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBCOBEME",
+            "Name": "GAM Multibond Diversified Income Bond EM Dis EUR",
+            "Isin": "LU0474692794",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FRASC001",
+            "Name": "GAM Multibond Diversified Income Bond B Cap $",
+            "Isin": "LU0474693768",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "CT1227",
+            "Name": "Pictet-EUR Short Term Corporate Bonds-R",
+            "Isin": "LU0954602917",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI150",
+            "Name": "FIDA FFI Obbl Europa Corp e Gov HY",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIEHYACC",
+            "Name": "Fidelity European High Yield A Cap EUR",
+            "Isin": "LU0251130802",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MGEHYA",
+            "Name": "M&G European High Yield Bond A EUR",
+            "Isin": "GB0031288243",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TEMGGBX",
+            "Name": "Franklin Euro High Yield A Cap EUR",
+            "Isin": "LU0131126574",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDE54",
+            "Name": "Fidelity European High Yield AM Dis EUR",
+            "Isin": "LU0168053600",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "KLIELM",
+            "Name": "Franklin Euro High Yield A DisM EUR",
+            "Isin": "LU0300744835",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDEHIE",
+            "Name": "Fidelity European High Yield E Cap EUR",
+            "Isin": "LU0238209786",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FLEHIG",
+            "Name": "JPM Europe High Yield Bond A Dis EUR",
+            "Isin": "LU0091079839",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FRHYBX",
+            "Name": "Franklin Euro High Yield N EUR",
+            "Isin": "LU0122613572",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FFFHYD",
+            "Name": "JPM Europe High Yield Bond D Acc EUR",
+            "Isin": "LU0117897578",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFIF03",
+            "Name": "Pictet-EUR High Yield-R",
+            "Isin": "LU0133807916",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PI1203",
+            "Name": "Pictet-EUR High Yield-R dm",
+            "Isin": "LU0592898299",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "KLIEL",
+            "Name": "Franklin Euro High Yield A Dis EUR",
+            "Isin": "LU0109395268",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALLEHBA",
+            "Name": "Allianz Euro High Yield Bond A Dis EUR",
+            "Isin": "LU0482909818",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "COMCOR",
+            "Name": "Eurizon Obbligazioni Euro High Yield",
+            "Isin": "IT0001280541",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALEHYB",
+            "Name": "Allianz Euro High Yield Bond AT Cap EUR",
+            "Isin": "LU0482909909",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ANMF17",
+            "Name": "Anima Obbligazionario High Yield AD Dis",
+            "Isin": "IT0004896954",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ANMOBHY",
+            "Name": "Anima Obbligazionario High Yield A EUR",
+            "Isin": "IT0000382207",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FILEHYEM",
+            "Name": "Fidelity European High Yield EM Dis EUR",
+            "Isin": "LU0718468068",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MAND82",
+            "Name": "M&G European High Yield Bond A Dis EUR",
+            "Isin": "GB00B9G4ML32",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI145",
+            "Name": "FIDA FFI Obbl Area Euro Gov (5-10Y)",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DIEGLC",
+            "Name": "DWS Invest Euro-Gov Bonds LC Cap EUR",
+            "Isin": "LU0145652052",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "QUINCO",
+            "Name": "Epsilon QIncome",
+            "Isin": "IT0001496071",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMEBE",
+            "Name": "PIMCO Euro Bond E Cap EUR",
+            "Isin": "IE00B11XYY66",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DIEGLD",
+            "Name": "DWS Invest Euro-Gov Bonds LD Dis EUR",
+            "Isin": "LU0145652300",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMEBEI",
+            "Name": "PIMCO Euro Bond E Dis EUR",
+            "Isin": "IE00B0M2YC33",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBEUBOND",
+            "Name": "GAM Multibond Euro Bond B EUR",
+            "Isin": "LU0012197660",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSTBONE",
+            "Name": "BGF Euro Bond E2 Cap $",
+            "Isin": "LU0171279937",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALLEBSCT",
+            "Name": "Allianz Euro Bond Strategy CT Cap EUR",
+            "Isin": "LU0484424394",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DIEGNC",
+            "Name": "DWS Invest Euro-Gov Bonds NC Cap EUR",
+            "Isin": "LU0145652649",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "VALEUR",
+            "Name": "Pictet-EUR Bonds-R",
+            "Isin": "LU0128492732",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "EUBONA",
+            "Name": "SISF Euro Government Bond A Dis EUR AV",
+            "Isin": "LU0053903893",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBEUBONE",
+            "Name": "GAM Multibond Euro Bond E EUR",
+            "Isin": "LU0129120563",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "AMEUBON",
+            "Name": "TLux European Strategic Bond AE EUR",
+            "Isin": "LU0096353940",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MERBONE",
+            "Name": "BGF Euro Bond E2 Cap EUR",
+            "Isin": "LU0090830810",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MERBONE5",
+            "Name": "BGF Euro Bond E5 Dis EUR",
+            "Isin": "LU0500207468",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SEUBACA",
+            "Name": "SISF Euro Government Bond A Cap. EUR",
+            "Isin": "LU0106235962",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALLEBSC",
+            "Name": "Allianz Euro Bond Strategy C Dis EUR",
+            "Isin": "LU0484424121",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "EUANTA",
+            "Name": "Eurizon Obbligazioni Euro",
+            "Isin": "IT0000380540",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DBEURO",
+            "Name": "DWS Eurorenta Dis EUR",
+            "Isin": "LU0003549028",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPEUGOA",
+            "Name": "JPM EU Government Bond A Acc EUR",
+            "Isin": "LU0363447680",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MEXBOD",
+            "Name": "TLux European Strategic Bond DE EUR",
+            "Isin": "LU0096354914",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFGOVBOR",
+            "Name": "Pictet-EUR Government Bonds-R",
+            "Isin": "LU0241468122",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SEUBACB",
+            "Name": "SISF Euro Government Bond B Cap. EUR",
+            "Isin": "LU0106236002",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "EUROBOB",
+            "Name": "SISF Euro Government Bond B Dis EUR AV",
+            "Isin": "LU0063575632",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPEUGOD",
+            "Name": "JPM EU Government Bond D Acc EUR",
+            "Isin": "LU0355584037",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBGOVE",
+            "Name": "GAM Multibond Euro Government Bond B EUR",
+            "Isin": "LU0100842615",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BAMBON",
+            "Name": "Anima Medium Term Bond Prestige EUR",
+            "Isin": "IE0007998929",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BIPIUOB",
+            "Name": "Anima Capitale Piu' Obbligazionario A",
+            "Isin": "IT0004350663",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBGOVEE",
+            "Name": "GAM Multibond Euro Government Bond E EUR",
+            "Isin": "LU0129119987",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ANOBE",
+            "Name": "Anima Obbligazionario Euro A EUR",
+            "Isin": "IT0001415899",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BRIMEB",
+            "Name": "Anima Medium Term Bond Silver EUR",
+            "Isin": "IE00B07Q3T04",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TL1740",
+            "Name": "TLux European Strategic Bond AEP EUR",
+            "Isin": "LU0713493574",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TL1712",
+            "Name": "TLux European Strategic Bond DEP Dis EUR",
+            "Isin": "LU0849392427",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI116",
+            "Name": "FIDA FFI Diversificati Prudenti",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "INCONT",
+            "Name": "Invesco Pan European High Income A Cap. EUR",
+            "Isin": "LU0243957239",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALLFB101",
+            "Name": "Allianz Adv.Fixed Inc.Short Duration AT Cap EUR",
+            "Isin": "LU1504571149",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWRENG",
+            "Name": "DWS Floating Rate Notes LC Cap EUR",
+            "Isin": "LU0034353002",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ANMRISPA",
+            "Name": "Anima Risparmio A",
+            "Isin": "IT0005002636",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "NORDEUBO",
+            "Name": "Nordea 1 European Covered Bond BP Cap EUR",
+            "Isin": "LU0076315455",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "INVECBRC",
+            "Name": "Invesco Euro Corporate Bond R Cap EUR",
+            "Isin": "LU0607521928",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI163",
+            "Name": "FIDA FFI Obbl Gl Gov",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RAF153",
+            "Name": "Raiffeisen Conservative R Cap EUR",
+            "Isin": "AT0000A0QQ64",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PMC085",
+            "Name": "PIMCO Income E Cap EUR Hdg",
+            "Isin": "IE00B84J9L26",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "AMFGASHE",
+            "Name": "Amundi F. Gl. Aggregate Bond G EUR",
+            "Isin": "LU0613076990",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "CARGBON",
+            "Name": "Carmignac Unconstrained Global Bond A EUR Acc",
+            "Isin": "LU0336083497",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI143",
+            "Name": "FIDA FFI Obbl Area Euro Gov",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPUSDBD",
+            "Name": "JPM US Short Duration Bond D Acc $",
+            "Isin": "LU0562248079",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIGLIBA",
+            "Name": "Fidelity Global Infl. Linked Bond A Cap EUR",
+            "Isin": "LU0353649279",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPGOVD",
+            "Name": "JPM Global Government Bond D Acc EUR",
+            "Isin": "LU0406674589",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PMCO5026",
+            "Name": "PIMCO Global Low Dur. Real Return E Cap EUR Hdg",
+            "Isin": "IE00BJ7B9456",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RF1050",
+            "Name": "Raiffeisen Obb. Fondamentale Globale R EUR",
+            "Isin": "AT0000A0P7X4",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI51",
+            "Name": "FIDA FFI Az Gl (Mer Sv) Large e Mid",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FFGDIAH",
+            "Name": "Fidelity Global Dividend A Cap EUR Hdg",
+            "Isin": "LU0605515377",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ETIAZ",
+            "Name": "Etica Azionario R",
+            "Isin": "IT0004097405",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MS0802",
+            "Name": "MSIF Global Quality A $",
+            "Isin": "LU0955010870",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFMGRE",
+            "Name": "Pictet-Global Megatrend Selection-R EUR",
+            "Isin": "LU0391944815",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FFGLDA",
+            "Name": "Fidelity Global Demographics A Cap $",
+            "Isin": "LU0528227936",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALL58983",
+            "Name": "Allianz Best Styles Global Eq. AT-H Cap EUR Hdg",
+            "Isin": "LU1322973477",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSGOPA$",
+            "Name": "MSIF Global Opportunity A $",
+            "Isin": "LU0552385295",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI270",
+            "Name": "FIDA FFI Az Gl (Mer Em) Frontier Mkts",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MSTEMEU",
+            "Name": "BGF Emerging Markets E2 Cap EUR",
+            "Isin": "LU0171276081",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SIAGEMD",
+            "Name": "SISF Global Emerg. Mkts Opps A Cap. EUR",
+            "Isin": "LU0279459456",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPMOAAE",
+            "Name": "JPM Emerging Markets Opportunities A Acc EUR",
+            "Isin": "LU0759999336",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPM0403",
+            "Name": "JPM Emerging Markets Dividend A Acc $",
+            "Isin": "LU0862449427",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FFEMAE",
+            "Name": "Fidelity Emerging Markets A Dis EUR",
+            "Isin": "LU0307839646",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI165",
+            "Name": "FIDA FFI Obbl Gl (Mer Em) Corp e Gov",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TOP1459",
+            "Name": "Franklin Gulf Wealth Bond A $",
+            "Isin": "LU0962741061",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "GIU_3933",
+            "Name": "LO Funds Asia Value Bond P EUR Hdg",
+            "Isin": "LU1480986204",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SMITH615",
+            "Name": "M&G (Lux) Emerging Markets Bond AH Cap EUR",
+            "Isin": "LU1670631289",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "INGHPX",
+            "Name": "NN (L) Em. Markets Debt HC X CapEUR Hdg i",
+            "Isin": "LU0546915215",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI4",
+            "Name": "FIDA FFI Az Area Euro Large e Mid",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "AMFEMVFE",
+            "Name": "Amundi F. European Equity Conserv. F2 EUR",
+            "Isin": "LU0755950184",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "LOEURR",
+            "Name": "LO Funds Europe High Conviction R EUR",
+            "Isin": "LU0357520724",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "AMSMEAE",
+            "Name": "TLux Pan European Small Cap Opp.AE EUR",
+            "Isin": "LU0282719219",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MLCONTE",
+            "Name": "BGF Continental European Flexible E2 Cap EUR",
+            "Isin": "LU0224105980",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PSUSTAR",
+            "Name": "Pictet-Quest Europe Sustainable Equities R EUR",
+            "Isin": "LU0144510053",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PC1465",
+            "Name": "Pictet-EUR Short Term High Yield R EUR",
+            "Isin": "LU0726357873",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "HG0673",
+            "Name": "HSBC GIF Global Short Dur. HY Bond EHEUR EUR",
+            "Isin": "LU0930307532",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "HGIEHBEE",
+            "Name": "HSBC GIF Euro High Yield Bond E EUR",
+            "Isin": "LU0165092213",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "DWSEHYLC",
+            "Name": "DWS Invest Euro High Yield Corp. LC Cap EUR",
+            "Isin": "LU0616839501",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALGEBRC",
+            "Name": "Algebris Financial Credit R EUR",
+            "Isin": "IE00B8J38129",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI128",
+            "Name": "FIDA FFI Monetari Dollaro Usa",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MESUE",
+            "Name": "BGF US Dollar Reserve E2 Cap $",
+            "Isin": "LU0090845503",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBCASH$",
+            "Name": "GAM Multicash Money Market Dollar B $",
+            "Isin": "LU0032254707",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FIDEUSCA",
+            "Name": "Fidelity US Dollar Cash A Cap $",
+            "Isin": "LU0261952922",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBCASHE",
+            "Name": "GAM Multicash Money Market Dollar E $",
+            "Isin": "LU0129121967",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TUSRES",
+            "Name": "Franklin U.S. Dollar Short-Term Money Mkt A $",
+            "Isin": "LU0128526901",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "USDCAR",
+            "Name": "Pictet-Short-Term Money Market $-R",
+            "Isin": "LU0128497889",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PFSOVDR",
+            "Name": "Pictet-Sovereign Short-Term Money Market $-R",
+            "Isin": "LU0366537875",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "TEMLIBX",
+            "Name": "Franklin U.S. Dollar Short-Term Money Mkt N $",
+            "Isin": "LU0122614463",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI176",
+            "Name": "FIDA FFI Obbl Usa Gov (Med Lungo Term)",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPUSBD",
+            "Name": "JPM US Bond D Acc $",
+            "Isin": "LU0115104423",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBDOLBO",
+            "Name": "GAM Multibond Dollar Bond B $",
+            "Isin": "LU0012197074",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "VALUSR",
+            "Name": "Pictet-USD Government Bonds-R",
+            "Isin": "LU0128489860",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBDOLBE",
+            "Name": "GAM Multibond Dollar Bond E $",
+            "Isin": "LU0129118237",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMTRE",
+            "Name": "PIMCO Total Return Bond E Cap $",
+            "Isin": "IE00B11XZ988",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMTREI",
+            "Name": "PIMCO Total Return Bond E Dis $",
+            "Isin": "IE00B0M2Y900",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "MLUGM",
+            "Name": "BGF US Government Mortgage E2 Cap $",
+            "Isin": "LU0147385842",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMTREH",
+            "Name": "PIMCO Total Return Bond E Cap EUR Hdg",
+            "Isin": "IE00B11XZB05",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FRAUSBX",
+            "Name": "Franklin U.S. Government N $",
+            "Isin": "LU0128529913",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FRANGOBX",
+            "Name": "Franklin U.S. Government N DisM $",
+            "Isin": "LU0098867376",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BRIFID",
+            "Name": "Anima Bond Dollar Prestige EUR",
+            "Isin": "IE0032477295",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "BRIFIDB",
+            "Name": "Anima Bond Dollar Silver EUR",
+            "Isin": "IE00B07Q3Q72",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PMC108",
+            "Name": "PIMCO Total Return Bond E Cap CHF Hdg",
+            "Isin": "IE00B884NX39",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMC4010",
+            "Name": "PIMCO Total Return Bond E Dis EUR Hdg",
+            "Isin": "IE00B7KBLB99",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI110",
+            "Name": "FIDA FFI Az Usa Large e Mid",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALBSUSAT",
+            "Name": "Allianz Best Styles US Equity AT Cap EUR",
+            "Isin": "LU0933100637",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PTFUSAR",
+            "Name": "Pictet-USA Index-R $",
+            "Isin": "LU0130733172",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JPMSTVD",
+            "Name": "JPM US Value D Acc $",
+            "Isin": "LU0119066727",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "LMCLUSLA",
+            "Name": "Legg Mason Clear. US Large Cap Growth A $",
+            "Isin": "IE00B19Z9505",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMSPLHA",
+            "Name": "PIMCO StocksPLUS E Cap $",
+            "Isin": "IE00B1D7YP71",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI136",
+            "Name": "FIDA FFI Obbl Convertibili Euro",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ALI1041",
+            "Name": "Allianz Convertible Bond AT Cap EUR",
+            "Isin": "LU0706716387",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SIGHBA",
+            "Name": "SISF Global Conv. Bond EUR Hedg. A Cap. EUR",
+            "Isin": "LU0352097439",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "LOMCONR",
+            "Name": "LO Funds Convertible Bond R EUR",
+            "Isin": "LU0357533545",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI39",
+            "Name": "FIDA FFI Az Giappone Large e Mid",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FASGRAE",
+            "Name": "Templeton Asian Growth A EUR",
+            "Isin": "LU0229940001",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "JBMSJSBH",
+            "Name": "GAM Multistock Japan Equity B EUR Hdg",
+            "Isin": "LU0915179062",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "HAJSCED",
+            "Name": "HSBC GIF Asia Ex Japan Eq. Sm. Comp. E $",
+            "Isin": "LU0164870239",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SPACEAE",
+            "Name": "SISF Asian Opportunities A Cap EUR",
+            "Isin": "LU0248184466",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "INVF25",
+            "Name": "Invesco Japanese Equity Core A Cap $",
+            "Isin": "IE00B40W5Y20",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SISADMA",
+            "Name": "SISF Asian Dividend Maximiser A Cap EUR",
+            "Isin": "LU0955662357",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PI1214",
+            "Name": "Pictet-Japan Index-R EUR",
+            "Isin": "LU0474966834",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "FFJAPADV",
+            "Name": "Fidelity Japan Advantage A Cap EUR",
+            "Isin": "LU0413543058",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "ISCI122",
+            "Name": "FIDA FFI Diversificati Euro Aggressivi",
+            "Isin": "",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        }
+    ],
+    "AssetClass": [
+        {
+            "presentInModelPortfolio": 0,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2502,
+                    "Date": "0001-01-01T00:00:00",
+                    "FidaCodes": [
+                        "ALCROPAT",
+                        "ALFRA206",
+                        "BLK24907",
+                        "DWSKALDL",
+                        "FD1436",
+                        "JBALA1EU",
+                        "LOFALRP",
+                        "MSGBRCAE",
+                        "NORGFIAE",
+                        "PI956",
+                        "PIMGLME",
+                        "RAIBIL",
+                        "RF1277",
+                        "SFORZE",
+                        "SMITH672"
+                    ]
+                },
+                {
+                    "AssetClassID": 2502,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "ALCROPAT",
+                        "NORGFIAE",
+                        "RF1277",
+                        "SFORZE",
+                        "PI956",
+                        "SMITH672",
+                        "ALFRA206",
+                        "LOFALRP",
+                        "FD1436",
+                        "DWSKALDL",
+                        "MSGBRCAE",
+                        "RAIBIL",
+                        "PIMGLME",
+                        "JBALA1EU",
+                        "BLK24907"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "TopPicksWeBank",
+                    "Name": "TopPicksWeBank"
+                }
+            ],
+            "ID": 2502,
+            "Type": 2,
+            "MacroCode": null,
+            "MacroDescription": [],
+            "Benchmark": null,
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 666,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2503,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "JPEGSD",
+                        "SSTACA",
+                        "ETICMON",
+                        "JPEGSAI",
+                        "SSTACB"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionari euro governativi breve termine",
+                    "Name": "Euro Obbl. Breve Termine"
+                }
+            ],
+            "ID": 2503,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:29:00",
+                    "Description": "FIDA FFI Obbl Area Euro Gov (1-3Y)",
+                    "FidaCode": "ISCI144",
+                    "ID": 573,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 176,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2504,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "CARCOURT",
+                        "BRLIQP",
+                        "FIDCASHA",
+                        "JBECUCAS",
+                        "JPLIQRES",
+                        "PEUCAR",
+                        "TEEMMF",
+                        "BRLIQB",
+                        "JBECUCAE",
+                        "PFSOVPR",
+                        "BGFERE",
+                        "CARM01"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Fondi di liquidita area euro",
+                    "Name": "Euro Cash"
+                }
+            ],
+            "ID": 2504,
+            "Type": 1,
+            "MacroCode": "927",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Monetari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Money Market"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:28:00",
+                    "Description": "FIDA FFI Monetari Euro",
+                    "FidaCode": "ISCI129",
+                    "ID": 568,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 148,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2505,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "DWEC13LC",
+                        "TECBA",
+                        "FIDECOA",
+                        "DWSECLD",
+                        "DWEC13NC",
+                        "FIECBAMD",
+                        "MSCORBA",
+                        "MSCOBAX",
+                        "MSCORCE",
+                        "MGEUBA",
+                        "JPECOD",
+                        "MLCORPE",
+                        "MLCORPE5",
+                        "GESCOBE",
+                        "TECBAE",
+                        "SISFHIA",
+                        "SISF0055",
+                        "PFIFGLOR",
+                        "JBCORE",
+                        "PFECBEF",
+                        "PIECEE",
+                        "JBCOREE",
+                        "SCHINC",
+                        "SPBONC",
+                        "SECBBD",
+                        "CORED",
+                        "PI1721",
+                        "FIDCOEMD",
+                        "MAND64",
+                        "JB1299",
+                        "JBCOBEME",
+                        "FRASC001",
+                        "CT1227"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionari euro corporate investment grade",
+                    "Name": "Euro Corporate Lungo Termine"
+                }
+            ],
+            "ID": 2505,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:28:00",
+                    "Description": "FIDA FFI Obbl Euro Corp",
+                    "FidaCode": "ISCI140",
+                    "ID": 569,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 351,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2506,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "FIEHYACC",
+                        "MGEHYA",
+                        "TEMGGBX",
+                        "FIDE54",
+                        "KLIELM",
+                        "FIDEHIE",
+                        "FLEHIG",
+                        "FRHYBX",
+                        "FFFHYD",
+                        "PFIF03",
+                        "PI1203",
+                        "KLIEL",
+                        "ALLEHBA",
+                        "COMCOR",
+                        "ALEHYB",
+                        "ANMF17",
+                        "ANMOBHY",
+                        "FILEHYEM",
+                        "MAND82"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionari euro high yield",
+                    "Name": "Euro High Yield"
+                }
+            ],
+            "ID": 2506,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:28:00",
+                    "Description": "FIDA FFI Obbl Europa Corp e Gov HY",
+                    "FidaCode": "ISCI150",
+                    "ID": 570,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 438,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2507,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "DIEGLC",
+                        "QUINCO",
+                        "PIMEBE",
+                        "DIEGLD",
+                        "PIMEBEI",
+                        "JBEUBOND",
+                        "MSTBONE",
+                        "ALLEBSCT",
+                        "DIEGNC",
+                        "VALEUR",
+                        "EUBONA",
+                        "JBEUBONE",
+                        "AMEUBON",
+                        "MERBONE",
+                        "MERBONE5",
+                        "SEUBACA",
+                        "ALLEBSC",
+                        "EUANTA",
+                        "DBEURO",
+                        "JPEUGOA",
+                        "MEXBOD",
+                        "PFGOVBOR",
+                        "SEUBACB",
+                        "EUROBOB",
+                        "JPEUGOD",
+                        "JBGOVE",
+                        "BAMBON",
+                        "BIPIUOB",
+                        "JBGOVEE",
+                        "ANOBE",
+                        "BRIMEB",
+                        "TL1740",
+                        "TL1712"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionari euro governativi medio/lungo termine",
+                    "Name": "Euro Obbl. Lungo Termine"
+                }
+            ],
+            "ID": 2507,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:30:00",
+                    "Description": "FIDA FFI Obbl Area Euro Gov (5-10Y)",
+                    "FidaCode": "ISCI145",
+                    "ID": 574,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 20,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2508,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "RF1277",
+                        "SFORZE",
+                        "SMITH672",
+                        "PI956",
+                        "ALFRA206",
+                        "DWSKALDL",
+                        "FD1436",
+                        "INCONT"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Flessibili Prudenti",
+                    "Name": "Flessibili Prudenti"
+                }
+            ],
+            "ID": 2508,
+            "Type": 1,
+            "MacroCode": "926",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Diversificati"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Diversified"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:31:00",
+                    "Description": "FIDA FFI Diversificati Prudenti",
+                    "FidaCode": "ISCI116",
+                    "ID": 576,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 30,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2509,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "ALCROPAT",
+                        "ALLFB101",
+                        "DWRENG",
+                        "ANMRISPA"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Liquidita'",
+                    "Name": "Monetario"
+                }
+            ],
+            "ID": 2509,
+            "Type": 1,
+            "MacroCode": "927",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Monetari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Money Market"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:31:00",
+                    "Description": "FIDA FFI Monetari Euro",
+                    "FidaCode": "ISCI129",
+                    "ID": 577,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 29,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2510,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "NORDEUBO",
+                        "SISFHIA",
+                        "GESCOBE",
+                        "PFIFGLOR",
+                        "INVECBRC"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario Corporate",
+                    "Name": "Obbligazionario Corporate"
+                }
+            ],
+            "ID": 2510,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:33:00",
+                    "Description": "FIDA FFI Obbl Euro Corp",
+                    "FidaCode": "ISCI140",
+                    "ID": 580,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 30,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2511,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "NORGFIAE",
+                        "RAF153",
+                        "PMC085",
+                        "AMFGASHE",
+                        "CARGBON"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario Globale",
+                    "Name": "Obbligazionario Globale"
+                }
+            ],
+            "ID": 2511,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:35:00",
+                    "Description": "FIDA FFI Obbl Gl Gov",
+                    "FidaCode": "ISCI163",
+                    "ID": 582,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 24,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2512,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "JPUSDBD",
+                        "FIGLIBA",
+                        "JPGOVD",
+                        "PMCO5026",
+                        "RF1050"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario Governativo",
+                    "Name": "Obbligazionario Governativo"
+                }
+            ],
+            "ID": 2512,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:36:00",
+                    "Description": "FIDA FFI Obbl Area Euro Gov",
+                    "FidaCode": "ISCI143",
+                    "ID": 583,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 24,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2513,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "FFGDIAH",
+                        "ETIAZ",
+                        "MS0802",
+                        "PFMGRE",
+                        "FFGLDA",
+                        "ALL58983",
+                        "MSGOPA$"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionario Globale",
+                    "Name": "Azionario Globale"
+                }
+            ],
+            "ID": 2513,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:32:00",
+                    "Description": "FIDA FFI Az Gl (Mer Sv) Large e Mid",
+                    "FidaCode": "ISCI51",
+                    "ID": 578,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 332,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2514,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "MSTEMEU",
+                        "SIAGEMD",
+                        "JPMOAAE",
+                        "JPM0403",
+                        "FFEMAE"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionario Emergenti/Frontier",
+                    "Name": "Azionario Emergenti/Frontier"
+                }
+            ],
+            "ID": 2514,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:27:00",
+                    "Description": "FIDA FFI Az Gl (Mer Em) Frontier Mkts",
+                    "FidaCode": "ISCI270",
+                    "ID": 566,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 162,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2515,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "TOP1459",
+                        "GIU_3933",
+                        "SMITH615",
+                        "INGHPX"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario Emergenti",
+                    "Name": "Obbligazionario Emergenti"
+                }
+            ],
+            "ID": 2515,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:34:00",
+                    "Description": "FIDA FFI Obbl Gl (Mer Em) Corp e Gov",
+                    "FidaCode": "ISCI165",
+                    "ID": 581,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 455,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2516,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "AMFEMVFE",
+                        "LOEURR",
+                        "AMSMEAE",
+                        "MLCONTE",
+                        "PSUSTAR"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionario Europa",
+                    "Name": "Azionario Europa"
+                }
+            ],
+            "ID": 2516,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:27:00",
+                    "Description": "FIDA FFI Az Area Euro Large e Mid",
+                    "FidaCode": "ISCI4",
+                    "ID": 567,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 24,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2517,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "PC1465",
+                        "HG0673",
+                        "HGIEHBEE",
+                        "DWSEHYLC",
+                        "ALGEBRC"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario High Yield",
+                    "Name": "Obbligazionario High Yield"
+                }
+            ],
+            "ID": 2517,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:36:00",
+                    "Description": "FIDA FFI Obbl Europa Corp e Gov HY",
+                    "FidaCode": "ISCI150",
+                    "ID": 584,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 48,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2518,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "MESUE",
+                        "JBCASH$",
+                        "FIDEUSCA",
+                        "JBCASHE",
+                        "TUSRES",
+                        "USDCAR",
+                        "PFSOVDR",
+                        "TEMLIBX"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Fondi di liquidita area dollaro",
+                    "Name": "America Cash Dollaro"
+                }
+            ],
+            "ID": 2518,
+            "Type": 1,
+            "MacroCode": "927",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Monetari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Money Market"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:12:00",
+                    "Description": "FIDA FFI Monetari Dollaro Usa",
+                    "FidaCode": "ISCI128",
+                    "ID": 561,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 124,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2519,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "JPUSBD",
+                        "JBDOLBO",
+                        "VALUSR",
+                        "JBDOLBE",
+                        "PIMTRE",
+                        "PIMTREI",
+                        "MLUGM",
+                        "PIMTREH",
+                        "FRAUSBX",
+                        "FRANGOBX",
+                        "BRIFID",
+                        "BRIFIDB",
+                        "PMC108",
+                        "PIMC4010"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionari dollaro governativi medio/lungo termine",
+                    "Name": "America Obbl. Lungo Termine"
+                }
+            ],
+            "ID": 2519,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:25:00",
+                    "Description": "FIDA FFI Obbl Usa Gov (Med Lungo Term)",
+                    "FidaCode": "ISCI176",
+                    "ID": 562,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 155,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2520,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "ALBSUSAT",
+                        "PTFUSAR",
+                        "JPMSTVD",
+                        "LMCLUSLA",
+                        "PIMSPLHA"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionari America",
+                    "Name": "Azionario America"
+                }
+            ],
+            "ID": 2520,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:26:00",
+                    "Description": "FIDA FFI Az Usa Large e Mid",
+                    "FidaCode": "ISCI110",
+                    "ID": 563,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 3,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2521,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "ALI1041",
+                        "SIGHBA",
+                        "LOMCONR"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Obbligazionario Convertibile",
+                    "Name": "Obbligazionario Convertibile"
+                }
+            ],
+            "ID": 2521,
+            "Type": 1,
+            "MacroCode": "928",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Obbligazionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Bond"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:33:00",
+                    "Description": "FIDA FFI Obbl Convertibili Euro",
+                    "FidaCode": "ISCI136",
+                    "ID": 579,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 59,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2522,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "FASGRAE",
+                        "JBMSJSBH",
+                        "HAJSCED",
+                        "SPACEAE",
+                        "INVF25"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionario Asia & Japan",
+                    "Name": "Azionario Asia & Japan"
+                }
+            ],
+            "ID": 2522,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:26:00",
+                    "Description": "FIDA FFI Az Giappone Large e Mid",
+                    "FidaCode": "ISCI39",
+                    "ID": 564,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 5,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2523,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "SISADMA",
+                        "PI1214",
+                        "SPACEAE",
+                        "FFJAPADV"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Azionario Asia & Japan",
+                    "Name": "Azionario Asia & Japan"
+                }
+            ],
+            "ID": 2523,
+            "Type": 1,
+            "MacroCode": "924",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Azionari"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Equity"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:27:00",
+                    "Description": "FIDA FFI Az Giappone Large e Mid",
+                    "FidaCode": "ISCI39",
+                    "ID": 565,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 5,
+            "BestInClass": [
+                {
+                    "AssetClassID": 2524,
+                    "Date": "2005-01-01T00:00:00",
+                    "FidaCodes": [
+                        "BLK24907",
+                        "RAIBIL",
+                        "MSGBRCAE",
+                        "LOFALRP",
+                        "JBALA1EU",
+                        "PIMGLME"
+                    ]
+                }
+            ],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Flessibili Aggressivi",
+                    "Name": "Flessibili Aggressivi"
+                }
+            ],
+            "ID": 2524,
+            "Type": 1,
+            "MacroCode": "926",
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Diversificati"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Diversified"
+                }
+            ],
+            "Benchmark": [
+                {
+                    "Date": "2020-10-06T14:30:00",
+                    "Description": "FIDA FFI Diversificati Euro Aggressivi",
+                    "FidaCode": "ISCI122",
+                    "ID": 575,
+                    "Order": 0,
+                    "Type": "7"
+                }
+            ],
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 0,
+            "BestInClass": [],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Liquidità",
+                    "Name": "Liquidità"
+                },
+                {
+                    "Language": "en",
+                    "Description": "Cash",
+                    "Name": "Cash"
+                }
+            ],
+            "ID": 2530,
+            "Type": -10,
+            "MacroCode": null,
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Liquidità"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Cash"
+                }
+            ],
+            "Benchmark": null,
+            "Definition": null
+        },
+        {
+            "presentInModelPortfolio": 0,
+            "BestInClass": [],
+            "FavouriteCode": null,
+            "Description": [
+                {
+                    "Language": "it",
+                    "Description": "Liquidità",
+                    "Name": "Liquidità"
+                },
+                {
+                    "Language": "en",
+                    "Description": "Cash",
+                    "Name": "Cash"
+                }
+            ],
+            "ID": 2531,
+            "Type": -10,
+            "MacroCode": null,
+            "MacroDescription": [
+                {
+                    "Language": "it",
+                    "Description": null,
+                    "Name": "Liquidità"
+                },
+                {
+                    "Language": "en",
+                    "Description": null,
+                    "Name": "Cash"
+                }
+            ],
+            "Benchmark": null,
+            "Definition": null
+        }
+    ],
+    "Position": null,
+    "IsEditable": false,
+    "DeclaredProfile": [],
+    "Classification": null,
+    "IsGood": false,
+    "BRealePunteggioMifid": 0.0,
+    "LastPositionDate": null,
+    "LastPositionPublished": false,
+    "Error": null,
+    "ID": 8,
+    "Description": [
+        {
+            "Language": "it",
+            "Description": "TopPicksWeBank",
+            "Name": "TopPicksWeBank"
+        }
+    ],
+    "Currency": null,
+    "Typology": null,
+    "Type": "ASSET",
+    "IsPublic": true,
+    "MarketDrift": 0,
+    "IdModelPortfolioReplica": 0,
+    "Benchmark": []
+}
