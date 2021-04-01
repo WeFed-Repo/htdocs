@@ -4,7 +4,6 @@
 var userAgent =  window.navigator.userAgent,
     isIE = /msie/.test( userAgent ) && !/opera/.test( userAgent );
 
-
 function thisMovie(movieName) {
 	var movie = $("#" + movieName)[0];
 	if (movie) return movie;
@@ -37,6 +36,8 @@ var feUserId = function(){
 
 
 /* Framework */
+var vaIsMobile = ($(window).width()<1024)? true : false;
+
 function getNextHighestZindex()
 {
 	var highestIndex = 0;
@@ -62,6 +63,120 @@ function getBank()
 	return bankname;
 }
 
+// vaAvatar
+var vaAvatar = {
+	// Variabili globali (milestone,duration)
+	mileLoop :[30.4,8.3],
+	mileLip : [23.6,7.0],
+	emotions :{
+		"neutral": [1.4,7.4],
+		"happy" : [8.8,7.5],
+		"angry" : [16.2,7.4]
+	},
+	inited: false,
+	started: false,
+	init: function() {
+		// Inizializza il video
+		vaVideoTag= $("<video>").attr({"poster":"/WB/fe/img/paolo_avatar.jpg","muted":"muted"});
+		vaVideoSource = $("<source>").attr({	
+			"src":"/WB/fe/video/paolo_avatar.mp4",
+			"type":"video/mp4"
+			});
+		vaAudioTag = $('<audio>').attr("autoplay","autoplay");
+
+		//Mette il video online 
+		$("#vaSpace").empty().append(vaVideoTag.append(vaVideoSource),vaAudioTag);
+		// Quando il video e' completamente scaricato lo inizializza
+		vaVid = $("#vaSpace video")[0];
+		vaAudio = $("#vaSpace audio")[0];
+		vaVideoTag.on("loadedmetadata", function(){
+			// Loop da "fermo"
+			vaAvatar.getPlay(vaAvatar.mileLoop,true);
+		});
+		vaAvatar.inited = true;
+		
+		// Forzatura per inizializzazione audio onload
+		vaVideoTag.on("canplaythrough", function(){
+			// Se sta "parlando" ma non e' ancora partito la prima volta
+			if(!vaAvatar.started){
+				if(!vaAudio.paused) {
+					vaAvatar.talk();
+				}
+				else {
+					vaAvatar.getPlay(vaAvatar.mileLoop,true);
+				}
+				vaAvatar.started = true;
+			}
+		});
+	
+	},
+	getPlay : function(vidparams,loop) {
+		if(vaAvatar.inited) {
+			// Distrugge l'evento loop corrente (qualsiasi esso sia);
+			try {
+				if (typeof vaLooping != "undefined") clearTimeout(vaLooping);
+				vaVid.currentTime = vidparams[0];
+				vaVid.play();
+				if (loop) {
+					vaLooping = setTimeout(function(){vaVid.pause();vaAvatar.getPlay(vidparams,true)}, vidparams[1] * 1000);
+				}
+			}
+			catch(err) {
+				console.log("Errore nel flusso video:  " + err)
+			}
+		}
+	},
+	talk : function() {
+		// vaVid.pause();
+		vaAvatar.getPlay(vaAvatar.mileLip,true);
+	},
+	setEmotion : function(emotion) {
+		if(vaAvatar.inited) {
+			if (typeof emotion == "undefined") {
+				emotion = "neutral"}
+			else
+				{
+					if (emotion != "neutral" && emotion != "happy" && emotion != "angry" ) emotion = "neutral";
+				}
+			if (typeof vaLooping != "undefined") clearTimeout(vaLooping);
+			
+			vaVid.currentTime = 0;
+			vaAvatar.getPlay(vaAvatar.emotions[emotion]);
+			vaLooping = setTimeout(function(){vaAvatar.getPlay(vaAvatar.mileLoop,true)},vaAvatar.emotions[emotion][1] * 1000);
+		}
+	},
+	setUrl : function (mp3,emotion) {
+		if (!vaIsMobile) {
+			vaAudio.src = mp3;
+			vaAvatar.talk();
+			$(vaAudio).on("ended error", function(){
+			    vaVid.currentTime = 0;
+			    vaAvatar.setEmotion(emotion);
+			});
+			$(vaAudio).on("error",function(){
+				console.log("File audio non raggiungibile: " + mp3);
+			});
+		}
+	},
+	setVolume : function(vol) {
+		if (!vaIsMobile && vaAvatar.inited) {
+			vaAudio.volume = vol/100;
+		}
+	},
+	stop: function() {
+		if (!vaIsMobile && vaAvatar.inited) {
+			vaAudio.pause();
+			vaAvatar.getPlay(vaAvatar.mileLoop,true);
+		}
+	},
+	pauseAll: function() {
+		if (!vaIsMobile && vaAvatar.inited) {
+			vaAudio.pause();
+			vaVid.pause();
+		}
+	}
+}
+
 // Funzione con immissione domanda (può essere passato dall'esterno tramite "domanda")
 function vaAsking(domanda, history)
 {
@@ -81,7 +196,7 @@ function vaAsking(domanda, history)
 		vaExtCons.hide();
 		
 		//Reinizializza vTTS 
-		vTTS = (vaMute.hasClass("off") || isBusiness) ? false : true;
+		vTTS = !vaMute.hasClass("off");
 				
 		//## Nasconde quanto presente nella casella di dialogo (togliere hide per lasciare cronologia)
 		// vaDiag.select(".sent").each (function(vs) {vs.hide()});
@@ -145,7 +260,31 @@ function vaAsking(domanda, history)
 				//Legge l'emotion di Paolo
 				vaEmotion = vaAnswerBody.emotion;
 				
-				if(!isBusiness) vAssObj[0].src = vaJsonAudio;
+				//Inizializza il flusso audio, se presente
+				if (vaJsonAudio && vaJsonAudio.length>0)
+				{
+					if(vaAudioOn) {
+							vaAvatar.setUrl(vaJsonAudio,vaEmotion)
+						}
+					else
+						{
+							vaAvatar.setEmotion(vaEmotion);
+						}
+					// Mostra l'interfaccia - temporaneamente rimosso
+					vaCons.show();
+				}
+				else
+				{
+					vaAvatar.setEmotion(vaEmotion);
+				}
+				//Inizializza anche gli altri parametri (ev. mute)
+				if (vaAudioOn) {
+					vaAvatar.setVolume(vaVolume);
+				}
+				else
+				{
+					vaAvatar.setVolume(0);
+				}
 				
 				// Se l'audio non perviene nonostante venga richiesto mostra un overlay di errore
 				if (vaAudioOn && vaJsonAudio == "")
@@ -473,23 +612,16 @@ function vaLoad(sLeft,sTop,sQuestion, history)
 			vAss.fadeOut(300);
 			$(".tooltcons.toolassistente, .tooltcons.toolassistente2, #assVirtuale a.btnVirtass").removeClass("opened");
 			wStore.write("vaOpened","false");
+			vaAvatar.stop();
 		});
 		var vaBody = vAss.find(".vaBody");
 		var vaFiletto = vAss.find(".vaFiletto");
 		
-		//## AREA DINAMICA SWF
 		
-		// Area Assistente virtuale SWF
-		//Istanza l'audio player HTML5 (se possibile)
-		vaSpacex = $("#vaSpace");
-		vAssObj = $('<audio>').attr("autoplay","autoplay");
-		// Audioplayer
-		vaSpacex.append(vAssObj);
-		// Sostitutivo immagine
-		vaImgSost = "/wscmn/img/ret/virtass.jpg";
-		vaSpacex.append($("<img>").attr("src",vaImgSost));
-		
-			//Console
+		// Avatar
+		vaAvatar.init();
+			
+		//Console
 		vaCons = $(".vaConsole");
 		
 		// Volume on-off
@@ -503,14 +635,15 @@ function vaLoad(sLeft,sTop,sQuestion, history)
 			{
 				// Spegne audio
 				vaMute.addClass("off");
-				vAssObj[0].muted = true;
+				vaSetVol(0);
+				vaAvatar.stop();
 				vaAudioOn = false;
 			}
 			else
 			{
 				// Accende audio
 				vaMute.removeClass("off");
-				vAssObj[0].muted = false;
+				vaSetVol(vaSlid.slider("getValue"));
 				vaAudioOn = true;
 			}
 		});
@@ -518,11 +651,13 @@ function vaLoad(sLeft,sTop,sQuestion, history)
 		// Slider
 		vaSlid = $("#vaSlider");
 		
+
 		//Funzione per il setting del volume
 		vaSetVol = function(vol){
-			vAssObj[0].volume = vol/100;
+			vaAvatar.setVolume(vol);
 			vaVolume = vol;
 		};
+
 		try {
 	    	vaSlid.slider({
 			  orientation: "horizontal",
@@ -536,7 +671,6 @@ function vaLoad(sLeft,sTop,sQuestion, history)
 				});
 		}
 		catch (err) {}
-		//## AREA DINAMICA SWF
 		
 		// Switch mostra/nascondi testo
 		vaTextSwitch = $("#vaTextControl");

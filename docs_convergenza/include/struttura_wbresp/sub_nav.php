@@ -5,7 +5,7 @@
         case "aol": 
 
         // Identifica lo step "corrente" dal TPL e crea il componente
-
+		$tpl = isset($tpl)? $tpl : "";
         preg_match_all('!\d+!', $tpl, $matches);
         $aolstep = (int)implode(tpl, $matches[0]);
         // Array con nomi step
