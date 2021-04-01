@@ -6,14 +6,17 @@ import  { createCustomElement } from '@angular/elements';
 import { ContentAppComponent } from './content-app/content-app.component';
 
 
-// Viste e pagine
+// Viste e pagine (diverranno moduli)
 import { Overview} from "./content-app/pages/overview/overview.component";
 import { TopSelection} from "./content-app/pages/topselection/topselection.component";
 import { PModello} from "./content-app/pages/pmodello/pmodello.component";
 
+// Componenti contestuali
 import { TabsComponent } from './content-app/components/tabs/tabs.component';
 import { TabComponent } from './content-app/components/tabs/tab/tab.component';
+
 import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
+// Componenti funzionali trasversali
 
 
  
