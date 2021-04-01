@@ -10,12 +10,15 @@
         },
 
         apiUrl: {
-            "dev": "http://apim.fidainformatica.it/webank",
+            "dev": "https://fondievoluzione.webank.it/",
             "prod": "https://apim.fidainformatica.it/webank"
         }
 
         
     }  
+    
+
+
     
 $(function(){
 
@@ -23,10 +26,11 @@ $(function(){
     var destUrl = "/api/modelportfolios/bpm/OverviewPorfolios";
 
     $.ajax({
-        dataType: "json",
+        dataType: "jsonp",
+        type: "GET",
         url: Fida.apiUrl[Fida.ambiente] + destUrl,
         headers: {
-           apikey: Fida.apiKey[Fida.ambiente]
+           "apikey": Fida.apiKey[Fida.ambiente]
         },
         success: function(data){
             console.log(data)

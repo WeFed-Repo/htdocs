@@ -1,7 +1,7 @@
 import { Component,OnInit, Input} from '@angular/core';
 // Client Http
 import { HttpClient } from '@angular/common/http';
-import {ElencoFondi} from './elencofondi/elencofondi';
+// import {ElencoFondi} from './elencofondi/elencofondi';
 
 @Component({
   selector: 'top-selection',

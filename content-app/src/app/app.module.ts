@@ -7,12 +7,13 @@ import { ContentAppComponent } from './content-app/content-app.component';
 
 
 // Viste e pagine
-import { Overview} from "./content-app/overview/overview.component";
-import { TopSelection} from "./content-app/topselection/topselection.component";
-import { PModello} from "./content-app/pmodello/pmodello.component";
-import { TabsComponent } from './content-app/tabs/tabs.component';
-import { TabComponent } from './content-app/tabs/tab/tab.component';
-import { PModelloContent } from './content-app/pmodello/pmodelloContent/pmodellocontent';
+import { Overview} from "./content-app/pages/overview/overview.component";
+import { TopSelection} from "./content-app/pages/topselection/topselection.component";
+import { PModello} from "./content-app/pages/pmodello/pmodello.component";
+
+import { TabsComponent } from './content-app/components/tabs/tabs.component';
+import { TabComponent } from './content-app/components/tabs/tab/tab.component';
+import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
 
 
  
