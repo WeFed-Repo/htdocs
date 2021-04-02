@@ -11,6 +11,9 @@
 	.modal .table-hasScrollbar-wrapper, .modal .bootstrap-table {margin:0;padding:0}
 	.modal .bootstrap-table table {border:solid 1px #eee}
 
+	/* Declinazioni form disabilitati */
+	.radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {background-color:#aaa}
+
 
 	/* Offerta scaduta */
 	.sml div.offerta-scaduta {
@@ -91,8 +94,13 @@
 
 
 	/* Caso disabilitato */
-	.sml.disabled .editable-field-wrapper {}
-
+	.sml.disabled .editable-field-wrapper { background:#eee;color:#aaa}
+	.sml.disabled .editable-field-wrapper input {color:#aaa; background:transparent}
+	.sml.disabled .editable-field-wrapper::after {color:#aaa}
+	.sml.disabled .slider-output {color:#737373}
+	.sml.disabled .ui-slider .ui-slider-range {background-image: linear-gradient(to right, #666, #ccc)}
+	.sml.disabled .ui-slider {background-color: #eee}
+	.sml.disabled .results .result-box.rata {color:#737373 !important}
 
 
 	@media (max-width:767px) {

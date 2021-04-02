@@ -179,14 +179,14 @@ var startLending = function(params) {
         importo: 30000,
         importostep: 1,
 
-        duratamin: 6,
-        duratamax:72,
-        durata: 60,
+        duratamin: 27,
+        duratamax:180,
+        durata: 180,
         duratastep: 1,
 
         durpreamm: 24,
 
-        periodicita: "01",
+        periodicita: "03",
 
         prodotto: "",
 
@@ -571,7 +571,7 @@ var startLending = function(params) {
 
     // Costruzione degli oggetti (se l'offerta non è specificata e non è scaduta)
     if (typeof params.scadenza=== "undefined" || params.scadenza > new Date().valueOf()) {
-            sml.wrap.empty().append($("<div>").append(
+            sml.wrap.removeClass("disabled").empty().append($("<div>").append(
                 sml.scadenza,
                 $("<div>").addClass("flex-bordered").append(
 
@@ -646,7 +646,7 @@ var startLending = function(params) {
         else
         {
             sml.calcola.addClass("disabled");
-            sml.wrap.removeClass("loading");
+            sml.wrap.removeClass("loading").addClass("disabled");
         }
     }
     else

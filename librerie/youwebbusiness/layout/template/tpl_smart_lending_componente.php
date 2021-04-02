@@ -59,7 +59,7 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
       id: "#configuraPrestito",
 
       // Se objConf e' assente il preventivatore non e' abilitato
-      // objConf: defSim,
+      objConf: defSim,
 
       handlerCalcola: esempioHandlerCalcola,
 	    handlerBloccoInterfaccia: esempioHandlerBlocco
