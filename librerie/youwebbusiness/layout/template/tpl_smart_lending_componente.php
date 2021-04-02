@@ -37,21 +37,6 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
 
         console.log("- DATI INVIATI -");
         console.log(dataToSend);
-
-        /*
-        $.ajax({
-          url: "./layout/template/ogg_smart_lending/RispostaSimulatore.json",
-          dataType: "json",
-          data: dataToSend,
-          success: function(data){
-              console.log("- DATI RICEVUTI -");
-              console.log(data);
-              callback(data);
-              // Sblocco dell'interfaccia di richiesta
-			        $("#prestitoSubmit").attr("disabled",false);
-          }
-        })
-        */        
         
         setTimeout(function(){
           var dataObject = <?php include ("ogg_smart_lending/RispostaSimulatore.json"); ?>
@@ -72,7 +57,10 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      objConf: defSim,
+
+      // Se objConf e' assente il preventivatore non e' abilitato
+      // objConf: defSim,
+
       handlerCalcola: esempioHandlerCalcola,
 	    handlerBloccoInterfaccia: esempioHandlerBlocco
     })

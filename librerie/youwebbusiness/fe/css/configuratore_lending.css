@@ -89,6 +89,12 @@
 
 	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
 
+
+	/* Caso disabilitato */
+	.sml.disabled .editable-field-wrapper {}
+
+
+
 	@media (max-width:767px) {
 
 		/* Fix no margin per bordered */

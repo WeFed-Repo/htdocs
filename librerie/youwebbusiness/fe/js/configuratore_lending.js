@@ -102,7 +102,7 @@ var FormObj = {
                     $.map(params.options,function(radio){
                         return ($("<div>").addClass(radio.class? radio.class : "col-xs-12").append(
                                 $("<div>").addClass("form-check radio").append(
-                                    $("<input>").attr({"type":"radio", name: params.name, value:radio.Value, checked: (params.value==radio.Value),id: params.name+"_"+radio.Value}).addClass("form-check-input").on("change",params.change),
+                                    $("<input>").attr({"type":"radio", disabled: params.disabled, name: params.name, value:radio.Value, checked: (params.value==radio.Value),id: params.name+"_"+radio.Value}).addClass("form-check-input").on("change",params.change),
                                     $("<label>").attr({for: params.name+"_"+radio.Value}).addClass("form-check-label").html(radio.Lbl)
                             )
                         ))
@@ -171,12 +171,12 @@ var sml;
 var startLending = function(params) {
 
     
-    // Crea l'oggetto con i valori di default
+    // Crea l'oggetto con i valori di default (che valgono, eventualmente anche per il caso disabilitato)
     sml = new Object({
 
-        importomin: 5000,
+        importomin: 1000,
         importomax: 30000, 
-        importo: 20000,
+        importo: 30000,
         importostep: 1,
 
         duratamin: 6,
@@ -191,14 +191,20 @@ var startLending = function(params) {
         prodotto: "",
 
         datascadenza: undefined,
+        
+        modaldata: {},
 
-        modaldata: {}
+        // Caso disabled
+        disabled: false
 
     })
     
     
     // Assegna i valori di default leggendo l'oggetto di configurazione in ingresso (se ricevuto)
+    // Configurazione presente: il simulatore e' abilitato
     if (params.objConf) {
+
+        sml.disabled = false;
 
         sml["products"] = params.objConf.Simulatore.ProdottiElise;
         sml.prodotto = params.objConf.CodiceProdotto;
@@ -236,6 +242,28 @@ var startLending = function(params) {
         })
 
     }
+    else
+    {
+        // Senza objconf tutto e' disabilitato
+        sml.disabled = true;
+
+        // Imposta dei dati fake addizionali per le configurazioni varie
+        sml.currentprod = {
+            Periodicita : {
+                Default: "03",
+                Options: [
+                    {
+                        "Value": "01",
+                        "Lbl": "Mensile"
+                    },
+                    {
+                        "Value": "03",
+                        "Lbl": "Trimestrale"
+                    }
+                ]
+            }
+        }
+    }
     
 
     smlOffertaScaduta =  function() {
@@ -263,9 +291,9 @@ var startLending = function(params) {
             
         ),
 
-        importoinput: $("<input>").addClass("slider-input importo").attr({maxLength:"8"}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto),
+        importoinput: $("<input>").addClass("slider-input importo").attr({maxLength:"8",disabled: sml.disabled}).val(sml.importo).on("keyup click focus",function() {smlCleanNumber(this)}).on("blur change",smlCheckImporto),
 
-        sliderimporto: $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, max: sml.importomax, value:sml.importo,step:sml.importostep, slide: function(e,ui){
+        sliderimporto: $("<div>").addClass("slider").slider({range:"min", min:sml.importomin, disabled: sml.disabled, max: sml.importomax, value:sml.importo,step:sml.importostep, slide: function(e,ui){
             var imp = ui.value;
             sml.importo = imp;
             sml.importoinput.val(imp).trigger("blur");
@@ -276,7 +304,7 @@ var startLending = function(params) {
 
         durataoutput:  $("<span>").addClass("slider-output durata").html(sml.durata + " mesi"),
 
-        sliderdurata: $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,max:sml.duratamax,value:sml.durata,step: sml.duratastep,slide: function(e,ui){
+        sliderdurata: $("<div>").addClass("slider").slider({range:"min",min:sml.duratamin,disabled: sml.disabled, max:sml.duratamax,value:sml.durata,step: sml.duratastep,slide: function(e,ui){
             var dur = ui.value;
             sml.durata = dur;
             sml.durataoutput.html(dur + " mesi");
@@ -312,6 +340,7 @@ var startLending = function(params) {
         
         periodicitaradio:  $("<div>").append(FormObj.radio({
             name: "periodicita",
+            disabled: sml.disabled,
             change: function(){
                 sml.periodicita = $(this).val();
                 sml.resetResults();
@@ -611,7 +640,14 @@ var startLending = function(params) {
         );
         // Inizializzazioni
         sml.importoinput.trigger("blur");
-        sml.calcola.trigger("click");
+        if(!sml.disabled) {
+            sml.calcola.trigger("click");
+        }
+        else
+        {
+            sml.calcola.addClass("disabled");
+            sml.wrap.removeClass("loading");
+        }
     }
     else
     {
