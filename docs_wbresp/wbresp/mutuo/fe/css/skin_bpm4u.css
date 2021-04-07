@@ -17,7 +17,7 @@ ul.mTabs {display: none !important}
 .only-yellow {display:inline;}
 .mData .mGauge .rata {color:#fff;}
 
-.box-captcha, .box-captcha-right input.form-control {border-color: #888888 !important;}
+.box-captcha, .box-captcha-right input.form-control {border-color: #888888 !important;} 
 
 header {padding: 0px;}
 header .container{background-color: #888888;padding: 25px;}
