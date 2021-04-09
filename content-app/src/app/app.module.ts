@@ -16,6 +16,8 @@ import { TabsComponent } from './content-app/components/tabs/tabs.component';
 import { TabComponent } from './content-app/components/tabs/tab/tab.component';
 
 import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
+import { BoxLinkComponent } from './content-app/components/boxLink/boxLink.component';
+import { SimpleTableComponent } from './content-app/components/table/simpleTable.component';
 // Componenti funzionali trasversali
 
 
@@ -32,7 +34,7 @@ import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pm
     PModelloContent,
 
     //componenti generici
-    TabsComponent,TabComponent
+    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent
 
   ],
   imports: [

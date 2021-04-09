@@ -1,0 +1,7 @@
+<div [ngClass]="backgroundBox=== true ? 'borderFormRounded boxEvident': 'borderFormRounded'">
+	<h3 class="titleSection titleForm noMargin" *ngIf="titleBox">{{titleBox}}</h3>
+	<p class="noMargin">{{textBox}}</p>
+	<a [attr.href]="gotoBox">{{ linkBox }}</a>
+</div>
+
+

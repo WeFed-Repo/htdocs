@@ -11,9 +11,13 @@ import { PmodelloService } from './pmodello.service';
 export class PModello  implements OnInit {
   //array di testi iniziali
   
-  public pModelli:Array<Pmodello>
+  public pModelli:Array<Pmodello>;
+  //elementi dei box
+  public titleBox:string;
+  public textBox:string;
+  public linkBox:string;
+  public gotoBox:string;
  
-  
   constructor(private pmodelloService: PmodelloService) { }
   
   // Inizializzazione

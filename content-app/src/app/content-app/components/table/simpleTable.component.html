@@ -1,0 +1,34 @@
+<div class="headerContainerNoBootS">
+    <div class="tableContainerNoBootS">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let col of TableColumnsLabel;index as i" id="{{ columsid[i] }}"> 
+                      {{col}}
+                      <div *ngIf='columsid[i]==="Importo"'>
+                            <input class="form-control" type="text" maxlength="10" size="9">
+                      </div> 
+                    </th>
+                </tr>
+            </thead> 
+            <tbody> 
+             <tr *ngFor="let el of dateTable;index as i" [ngClass]="{'pari': i %2 == 1,'v-align-middle': !isObject(el[col])}">
+                <td *ngFor="let col of columns"  [ngClass]="{'pad_0': isObject(el[col])}">
+                    <ng-container *ngIf='isObject(el[col]); else simplecell'>
+                        <div class="block-table" *ngFor="let el of el[col]">
+                            <span class="block-cell-table">
+                                {{el}}
+                            </span>
+                        </div>
+                    </ng-container>
+                    <ng-template #simplecell>
+                        {{el[col]}}
+                    </ng-template>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+     </div>
+</div>
+
+

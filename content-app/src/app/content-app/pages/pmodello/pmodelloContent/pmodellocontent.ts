@@ -9,6 +9,8 @@ import { Component,Input,OnInit} from '@angular/core';
 
 export class PModelloContent  implements OnInit {
   @Input() textIntro;
+  @Input() dataTable;
+  @Input() TableColumnsLabel;
   
   constructor() { }
   

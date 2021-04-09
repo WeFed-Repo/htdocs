@@ -1,8 +1,24 @@
 <div>
     <h2>Portafoglio modello</h2>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>&Egrave; la soluzione guidata che <strong>ti supporta nella costruzione del tuo portafoglio</strong> in modo semplice e intuitivo:</p>
+            <ul>
+                <li><strong>scegli uno dei 5 Portafogli Modello</strong> (difensivo, prudente, moderato, attivo, dinamico);</li>
+                <li><strong>seleziona uno o più Fondi e comparti di SICAV</strong> associati a ciascun portafoglio modello.</li>
+            </ul>
+            <p>I <strong>Portafogli Modello</strong> sono ripartiti <strong>per macro asset</strong> class (azionario, obbligazionario e monetario) e <strong>aree geografiche</strong> (Europa, USA, Giappone, Paesi emergenti, etc.) con livelli di rischio differenziati, sulla base di <strong>analisi quantitative e qualitative aggiornate mensilmente</strong> e in funzione dell’andamento dei mercati finanziari.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <box-link [backgroundBox]=true [textBox]="'Vuoi investire in più fondi?'" [linkBox]="'vai al portafoglio modello'" [gotoBox]="'#'"></box-link>
+            <box-link [titleBox]="'Alert'" [textBox]="'Ricevi aggiornamenti email sulla Top selection'" [linkBox]="'attiva alert'" [gotoBox]="'#'"></box-link>
+        </div>
+    </div>
+   
     <tabs>
         <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
-             <pmodello-content [textIntro]="pModelli[i].pintro"></pmodello-content>
+             <pmodello-content [textIntro]="pModelli[i].pintro" [dataTable]="pModelli[i].dataTable" [TableColumnsLabel]="pModelli[i].TableColumnsLabel"></pmodello-content>
         </tab>
     </tabs>
 </div>
