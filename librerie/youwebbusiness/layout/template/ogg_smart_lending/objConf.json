@@ -8,6 +8,10 @@
         "Periodicita": {
           "Options": [
             {
+              "Value": "01",
+              "Lbl": "Mensile"
+            },
+            {
               "Value": "03",
               "Lbl": "Trimestrale"
             }
@@ -18,29 +22,13 @@
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -92,29 +80,13 @@
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -160,35 +132,19 @@
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": "03",
+          "Default": "01",
           "Modificabile": true
         },
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -234,35 +190,19 @@
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": "03",
+          "Default": "01",
           "Modificabile": true
         },
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -314,29 +254,13 @@
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -371,6 +295,6 @@
     ]
   },
   "ImportoMassimoCRM": 0,
-  "DataScadenza": "2021-06-01T00:00:00+01:00",
-  "CodiceProdotto": "SMALEN10K"
+  "DataScadenza": "2021-07-01T00:00:00+01:00",
+  "CodiceProdotto": "SMALEN30K"
 }

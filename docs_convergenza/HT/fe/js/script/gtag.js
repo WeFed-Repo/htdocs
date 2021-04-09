@@ -19,7 +19,7 @@ var filterParams = function(obj){
             gt[v]= obj[v];
         }
     });
-    return {gtag:gt, dmp: "&itm{"+ dmp.join(",") + "}"};
+    return {gtag:gt, dmp: "&itm={"+ dmp.join(",") + "}"};
 }
 
 // Re-inizializzazione per la funzione wrapper

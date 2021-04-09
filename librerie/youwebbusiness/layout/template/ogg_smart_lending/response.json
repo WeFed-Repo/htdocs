@@ -1,0 +1,286 @@
+{
+  "NumeroRate": 26,
+  "ImportoPrimaRataAmm": 1112.87,
+  "InteressiPreAmm": 81.1,
+  "InteressiAmm": 31.97,
+  "TassoAmm": 0.2,
+  "Isc": 0.2,
+  "Durata": 42,
+  "SpeseErogazione": 0,
+  "DataInizioAmm": "2023-02-26T00:00:00",
+  "DataScadenza": "2024-08-25T00:00:00",
+  "SpeseRata": 0,
+  "SpeseIstruttoria": 0,
+  "TipoIndiceAmm": "R18",
+  "ImportoRichiesta": 20000,
+  "ImportoFinanziato": 20000,
+  "ImportoCPI": 0,
+  "ImportoIS": 0,
+  "UrlEsis": "Errore nel caricamento dei dati documentali",
+  "TegMora": 0.2,
+  "CategoriaUsura": "020",
+  "SpeseInvio": 0,
+  "TegEstesoPolizze": 0,
+  "Rate": [
+    {
+      "Tipo": "2",
+      "Numero": 1,
+      "DataScadenza": "20210525",
+      "Totale": 9.89,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 9.89,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 2,
+      "DataScadenza": "20210825",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 3,
+      "DataScadenza": "20211125",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 4,
+      "DataScadenza": "20220225",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 5,
+      "DataScadenza": "20220525",
+      "Totale": 9.89,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 9.89,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 6,
+      "DataScadenza": "20220825",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 7,
+      "DataScadenza": "20221125",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 8,
+      "DataScadenza": "20230225",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "3",
+      "Numero": 1,
+      "DataScadenza": "20230325",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.76,
+      "QuotaInteressi": 3.11,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 18890.24
+    },
+    {
+      "Tipo": "3",
+      "Numero": 2,
+      "DataScadenza": "20230425",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.62,
+      "QuotaInteressi": 3.25,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 17780.62
+    },
+    {
+      "Tipo": "3",
+      "Numero": 3,
+      "DataScadenza": "20230525",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.91,
+      "QuotaInteressi": 2.96,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 16670.71
+    },
+    {
+      "Tipo": "3",
+      "Numero": 4,
+      "DataScadenza": "20230625",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110,
+      "QuotaInteressi": 2.87,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 15560.71
+    },
+    {
+      "Tipo": "3",
+      "Numero": 5,
+      "DataScadenza": "20230725",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.28,
+      "QuotaInteressi": 2.59,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 14450.43
+    },
+    {
+      "Tipo": "3",
+      "Numero": 6,
+      "DataScadenza": "20230825",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.38,
+      "QuotaInteressi": 2.49,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 13340.05
+    },
+    {
+      "Tipo": "3",
+      "Numero": 7,
+      "DataScadenza": "20230925",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.57,
+      "QuotaInteressi": 2.3,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 12229.48
+    },
+    {
+      "Tipo": "3",
+      "Numero": 8,
+      "DataScadenza": "20231025",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.83,
+      "QuotaInteressi": 2.04,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 11118.65
+    },
+    {
+      "Tipo": "3",
+      "Numero": 9,
+      "DataScadenza": "20231125",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.96,
+      "QuotaInteressi": 1.91,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 10007.69
+    },
+    {
+      "Tipo": "3",
+      "Numero": 10,
+      "DataScadenza": "20231225",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.2,
+      "QuotaInteressi": 1.67,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 8896.49
+    },
+    {
+      "Tipo": "3",
+      "Numero": 11,
+      "DataScadenza": "20240125",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.34,
+      "QuotaInteressi": 1.53,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 7785.15
+    },
+    {
+      "Tipo": "3",
+      "Numero": 12,
+      "DataScadenza": "20240225",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.53,
+      "QuotaInteressi": 1.34,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 6673.62
+    },
+    {
+      "Tipo": "3",
+      "Numero": 13,
+      "DataScadenza": "20240325",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.79,
+      "QuotaInteressi": 1.08,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 5561.83
+    },
+    {
+      "Tipo": "3",
+      "Numero": 14,
+      "DataScadenza": "20240425",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.91,
+      "QuotaInteressi": 0.96,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 4449.92
+    },
+    {
+      "Tipo": "3",
+      "Numero": 15,
+      "DataScadenza": "20240525",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.13,
+      "QuotaInteressi": 0.74,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 3337.79
+    },
+    {
+      "Tipo": "3",
+      "Numero": 16,
+      "DataScadenza": "20240625",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.3,
+      "QuotaInteressi": 0.57,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 2225.49
+    },
+    {
+      "Tipo": "3",
+      "Numero": 17,
+      "DataScadenza": "20240725",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.5,
+      "QuotaInteressi": 0.37,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 1112.99
+    },
+    {
+      "Tipo": "3",
+      "Numero": 18,
+      "DataScadenza": "20240825",
+      "Totale": 1113.18,
+      "QuotaCapitale": 1112.99,
+      "QuotaInteressi": 0.19,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 0
+    }
+  ]
+}

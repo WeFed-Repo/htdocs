@@ -11,6 +11,24 @@
 	.modal .table-hasScrollbar-wrapper, .modal .bootstrap-table {margin:0;padding:0}
 	.modal .bootstrap-table table {border:solid 1px #eee}
 
+	/* Declinazioni form disabilitati */
+	.radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {background-color:#aaa}
+
+	/* Replacement glifo modale */
+	.modal .modal-header .iconclose {
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		border-radius: 50%;
+		border: solid 2px #555;
+		line-height: 25px;
+		text-align: center;
+		font-size: 26px;
+		margin: 0;
+		display: inline-block;
+		color: #555;
+		text-decoration: none !important;
+	}
 
 	/* Offerta scaduta */
 	.sml div.offerta-scaduta {
@@ -88,6 +106,17 @@
 	.results .result-box.rate {background-image: url(../img/prev_rate.png)}
 
 	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
+
+
+	/* Caso disabilitato */
+	.sml.disabled .editable-field-wrapper { background:#eee;color:#aaa}
+	.sml.disabled .editable-field-wrapper input {color:#aaa; background:transparent}
+	.sml.disabled .editable-field-wrapper::after {color:#aaa}
+	.sml.disabled .slider-output {color:#737373}
+	.sml.disabled .ui-slider .ui-slider-range {background-image: linear-gradient(to right, #666, #ccc)}
+	.sml.disabled .ui-slider {background-color: #eee}
+	.sml.disabled .results .result-box.rata {color:#737373 !important}
+
 
 	@media (max-width:767px) {
 

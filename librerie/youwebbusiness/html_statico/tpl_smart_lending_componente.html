@@ -713,6 +713,10 @@ var defSim = {
         "Periodicita": {
           "Options": [
             {
+              "Value": "01",
+              "Lbl": "Mensile"
+            },
+            {
               "Value": "03",
               "Lbl": "Trimestrale"
             }
@@ -723,29 +727,13 @@ var defSim = {
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -797,29 +785,13 @@ var defSim = {
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -865,35 +837,19 @@ var defSim = {
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": "03",
+          "Default": "01",
           "Modificabile": true
         },
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -939,35 +895,19 @@ var defSim = {
               "Lbl": "Trimestrale"
             }
           ],
-          "Default": "03",
+          "Default": "01",
           "Modificabile": true
         },
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -1019,29 +959,13 @@ var defSim = {
         "Importo": {
           "Min": 1000,
           "Max": 30000,
-          "Default": 1000,
+          "Default": 30000,
           "Step": 1000,
           "Modificabile": true
         },
         "Valuta": "euro",
         "TipoRata": {
           "Options": [
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
-            {
-              "Value": "1",
-              "Lbl": "Francese"
-            },
             {
               "Value": "1",
               "Lbl": "Francese"
@@ -1076,8 +1000,8 @@ var defSim = {
     ]
   },
   "ImportoMassimoCRM": 0,
-  "DataScadenza": "2021-06-01T00:00:00+01:00",
-  "CodiceProdotto": "SMALEN10K"
+  "DataScadenza": "2021-07-01T00:00:00+01:00",
+  "CodiceProdotto": "SMALEN30K"
 }</script>
 
   <!-- Configuratore prestito -->
@@ -1095,310 +1019,294 @@ var defSim = {
 
         console.log("- DATI INVIATI -");
         console.log(dataToSend);
-
-        /*
-        $.ajax({
-          url: "./layout/template/ogg_smart_lending/RispostaSimulatore.json",
-          dataType: "json",
-          data: dataToSend,
-          success: function(data){
-              console.log("- DATI RICEVUTI -");
-              console.log(data);
-              callback(data);
-              // Sblocco dell'interfaccia di richiesta
-			        $("#prestitoSubmit").attr("disabled",false);
-          }
-        })
-        */        
         
         setTimeout(function(){
           var dataObject = {
-    "errori": [],
-    "numeroRate": 26,
-    "importoPrimaRataAmm": 1112.87,
-    "interessiPreAmm": 81.1,
-    "interessiAmm": 31.97,
-    "tassoAmm": 0.2,
-    "ISC": 0.2,
-    "durata": 42,
-    "speseErogazione": 0,
-    "dataInizioAmm": "20230226",
-    "dataScadenza": "20240825",
-    "speseRata": 0.11,
-    "speseIstruttoria": 1.2,
-    "tipoIndiceAmm": "R18",
-    "importoRichiesta": 20000,
-    "importoFinanziato": 20000,
-    "importoCPI": 0,
-    "importoIS": 0,
-    "urlEsis": "Errore nel caricamento dei dati documentali",
-    "tegMora": 0.2,
-    "categoriaUsura": "020",
-    "speseInvio": 2.33,
-    "tegEstesoPolizze": 0,
-    "rate": [
-      {
-        "tipo": "2",
-        "numero": 1,
-        "dataScadenza": "20210525",
-        "totale": 9.89,
-        "quotaCapitale": 0,
-        "quotaInteressi": 9.89,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 2,
-        "dataScadenza": "20210825",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 3,
-        "dataScadenza": "20211125",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 4,
-        "dataScadenza": "20220225",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 5,
-        "dataScadenza": "20220525",
-        "totale": 9.89,
-        "quotaCapitale": 0,
-        "quotaInteressi": 9.89,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 6,
-        "dataScadenza": "20220825",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 7,
-        "dataScadenza": "20221125",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "2",
-        "numero": 8,
-        "dataScadenza": "20230225",
-        "totale": 10.22,
-        "quotaCapitale": 0,
-        "quotaInteressi": 10.22,
-        "speseCalcolate": 0,
-        "debitoResiduo": 20000
-      },
-      {
-        "tipo": "3",
-        "numero": 1,
-        "dataScadenza": "20230325",
-        "totale": 1112.87,
-        "quotaCapitale": 1109.76,
-        "quotaInteressi": 3.11,
-        "speseCalcolate": 0,
-        "debitoResiduo": 18890.24
-      },
-      {
-        "tipo": "3",
-        "numero": 2,
-        "dataScadenza": "20230425",
-        "totale": 1112.87,
-        "quotaCapitale": 1109.62,
-        "quotaInteressi": 3.25,
-        "speseCalcolate": 0,
-        "debitoResiduo": 17780.62
-      },
-      {
-        "tipo": "3",
-        "numero": 3,
-        "dataScadenza": "20230525",
-        "totale": 1112.87,
-        "quotaCapitale": 1109.91,
-        "quotaInteressi": 2.96,
-        "speseCalcolate": 0,
-        "debitoResiduo": 16670.71
-      },
-      {
-        "tipo": "3",
-        "numero": 4,
-        "dataScadenza": "20230625",
-        "totale": 1112.87,
-        "quotaCapitale": 1110,
-        "quotaInteressi": 2.87,
-        "speseCalcolate": 0,
-        "debitoResiduo": 15560.71
-      },
-      {
-        "tipo": "3",
-        "numero": 5,
-        "dataScadenza": "20230725",
-        "totale": 1112.87,
-        "quotaCapitale": 1110.28,
-        "quotaInteressi": 2.59,
-        "speseCalcolate": 0,
-        "debitoResiduo": 14450.43
-      },
-      {
-        "tipo": "3",
-        "numero": 6,
-        "dataScadenza": "20230825",
-        "totale": 1112.87,
-        "quotaCapitale": 1110.38,
-        "quotaInteressi": 2.49,
-        "speseCalcolate": 0,
-        "debitoResiduo": 13340.05
-      },
-      {
-        "tipo": "3",
-        "numero": 7,
-        "dataScadenza": "20230925",
-        "totale": 1112.87,
-        "quotaCapitale": 1110.57,
-        "quotaInteressi": 2.3,
-        "speseCalcolate": 0,
-        "debitoResiduo": 12229.48
-      },
-      {
-        "tipo": "3",
-        "numero": 8,
-        "dataScadenza": "20231025",
-        "totale": 1112.87,
-        "quotaCapitale": 1110.83,
-        "quotaInteressi": 2.04,
-        "speseCalcolate": 0,
-        "debitoResiduo": 11118.65
-      },
-      {
-        "tipo": "3",
-        "numero": 9,
-        "dataScadenza": "20231125",
-        "totale": 1112.87,
-        "quotaCapitale": 1110.96,
-        "quotaInteressi": 1.91,
-        "speseCalcolate": 0,
-        "debitoResiduo": 10007.69
-      },
-      {
-        "tipo": "3",
-        "numero": 10,
-        "dataScadenza": "20231225",
-        "totale": 1112.87,
-        "quotaCapitale": 1111.2,
-        "quotaInteressi": 1.67,
-        "speseCalcolate": 0,
-        "debitoResiduo": 8896.49
-      },
-      {
-        "tipo": "3",
-        "numero": 11,
-        "dataScadenza": "20240125",
-        "totale": 1112.87,
-        "quotaCapitale": 1111.34,
-        "quotaInteressi": 1.53,
-        "speseCalcolate": 0,
-        "debitoResiduo": 7785.15
-      },
-      {
-        "tipo": "3",
-        "numero": 12,
-        "dataScadenza": "20240225",
-        "totale": 1112.87,
-        "quotaCapitale": 1111.53,
-        "quotaInteressi": 1.34,
-        "speseCalcolate": 0,
-        "debitoResiduo": 6673.62
-      },
-      {
-        "tipo": "3",
-        "numero": 13,
-        "dataScadenza": "20240325",
-        "totale": 1112.87,
-        "quotaCapitale": 1111.79,
-        "quotaInteressi": 1.08,
-        "speseCalcolate": 0,
-        "debitoResiduo": 5561.83
-      },
-      {
-        "tipo": "3",
-        "numero": 14,
-        "dataScadenza": "20240425",
-        "totale": 1112.87,
-        "quotaCapitale": 1111.91,
-        "quotaInteressi": 0.96,
-        "speseCalcolate": 0,
-        "debitoResiduo": 4449.92
-      },
-      {
-        "tipo": "3",
-        "numero": 15,
-        "dataScadenza": "20240525",
-        "totale": 1112.87,
-        "quotaCapitale": 1112.13,
-        "quotaInteressi": 0.74,
-        "speseCalcolate": 0,
-        "debitoResiduo": 3337.79
-      },
-      {
-        "tipo": "3",
-        "numero": 16,
-        "dataScadenza": "20240625",
-        "totale": 1112.87,
-        "quotaCapitale": 1112.3,
-        "quotaInteressi": 0.57,
-        "speseCalcolate": 0,
-        "debitoResiduo": 2225.49
-      },
-      {
-        "tipo": "3",
-        "numero": 17,
-        "dataScadenza": "20240725",
-        "totale": 1112.87,
-        "quotaCapitale": 1112.5,
-        "quotaInteressi": 0.37,
-        "speseCalcolate": 0,
-        "debitoResiduo": 1112.99
-      },
-      {
-        "tipo": "3",
-        "numero": 18,
-        "dataScadenza": "20240825",
-        "totale": 1113.18,
-        "quotaCapitale": 1112.99,
-        "quotaInteressi": 0.19,
-        "speseCalcolate": 0,
-        "debitoResiduo": 0
-      }
-    ]
-  }          // Esempio tracciatura dei dati ricevuti
+  "NumeroRate": 26,
+  "ImportoPrimaRataAmm": 1112.87,
+  "InteressiPreAmm": 81.1,
+  "InteressiAmm": 31.97,
+  "TassoAmm": 0.2,
+  "Isc": 0.2,
+  "Durata": 42,
+  "SpeseErogazione": 0,
+  "DataInizioAmm": "2023-02-26T00:00:00",
+  "DataScadenza": "2024-08-25T00:00:00",
+  "SpeseRata": 0,
+  "SpeseIstruttoria": 0,
+  "TipoIndiceAmm": "R18",
+  "ImportoRichiesta": 20000,
+  "ImportoFinanziato": 20000,
+  "ImportoCPI": 0,
+  "ImportoIS": 0,
+  "UrlEsis": "Errore nel caricamento dei dati documentali",
+  "TegMora": 0.2,
+  "CategoriaUsura": "020",
+  "SpeseInvio": 0,
+  "TegEstesoPolizze": 0,
+  "Rate": [
+    {
+      "Tipo": "2",
+      "Numero": 1,
+      "DataScadenza": "20210525",
+      "Totale": 9.89,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 9.89,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 2,
+      "DataScadenza": "20210825",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 3,
+      "DataScadenza": "20211125",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 4,
+      "DataScadenza": "20220225",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 5,
+      "DataScadenza": "20220525",
+      "Totale": 9.89,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 9.89,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 6,
+      "DataScadenza": "20220825",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 7,
+      "DataScadenza": "20221125",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "2",
+      "Numero": 8,
+      "DataScadenza": "20230225",
+      "Totale": 10.22,
+      "QuotaCapitale": 0,
+      "QuotaInteressi": 10.22,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 20000
+    },
+    {
+      "Tipo": "3",
+      "Numero": 1,
+      "DataScadenza": "20230325",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.76,
+      "QuotaInteressi": 3.11,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 18890.24
+    },
+    {
+      "Tipo": "3",
+      "Numero": 2,
+      "DataScadenza": "20230425",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.62,
+      "QuotaInteressi": 3.25,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 17780.62
+    },
+    {
+      "Tipo": "3",
+      "Numero": 3,
+      "DataScadenza": "20230525",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1109.91,
+      "QuotaInteressi": 2.96,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 16670.71
+    },
+    {
+      "Tipo": "3",
+      "Numero": 4,
+      "DataScadenza": "20230625",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110,
+      "QuotaInteressi": 2.87,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 15560.71
+    },
+    {
+      "Tipo": "3",
+      "Numero": 5,
+      "DataScadenza": "20230725",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.28,
+      "QuotaInteressi": 2.59,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 14450.43
+    },
+    {
+      "Tipo": "3",
+      "Numero": 6,
+      "DataScadenza": "20230825",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.38,
+      "QuotaInteressi": 2.49,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 13340.05
+    },
+    {
+      "Tipo": "3",
+      "Numero": 7,
+      "DataScadenza": "20230925",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.57,
+      "QuotaInteressi": 2.3,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 12229.48
+    },
+    {
+      "Tipo": "3",
+      "Numero": 8,
+      "DataScadenza": "20231025",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.83,
+      "QuotaInteressi": 2.04,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 11118.65
+    },
+    {
+      "Tipo": "3",
+      "Numero": 9,
+      "DataScadenza": "20231125",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1110.96,
+      "QuotaInteressi": 1.91,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 10007.69
+    },
+    {
+      "Tipo": "3",
+      "Numero": 10,
+      "DataScadenza": "20231225",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.2,
+      "QuotaInteressi": 1.67,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 8896.49
+    },
+    {
+      "Tipo": "3",
+      "Numero": 11,
+      "DataScadenza": "20240125",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.34,
+      "QuotaInteressi": 1.53,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 7785.15
+    },
+    {
+      "Tipo": "3",
+      "Numero": 12,
+      "DataScadenza": "20240225",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.53,
+      "QuotaInteressi": 1.34,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 6673.62
+    },
+    {
+      "Tipo": "3",
+      "Numero": 13,
+      "DataScadenza": "20240325",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.79,
+      "QuotaInteressi": 1.08,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 5561.83
+    },
+    {
+      "Tipo": "3",
+      "Numero": 14,
+      "DataScadenza": "20240425",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1111.91,
+      "QuotaInteressi": 0.96,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 4449.92
+    },
+    {
+      "Tipo": "3",
+      "Numero": 15,
+      "DataScadenza": "20240525",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.13,
+      "QuotaInteressi": 0.74,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 3337.79
+    },
+    {
+      "Tipo": "3",
+      "Numero": 16,
+      "DataScadenza": "20240625",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.3,
+      "QuotaInteressi": 0.57,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 2225.49
+    },
+    {
+      "Tipo": "3",
+      "Numero": 17,
+      "DataScadenza": "20240725",
+      "Totale": 1112.87,
+      "QuotaCapitale": 1112.5,
+      "QuotaInteressi": 0.37,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 1112.99
+    },
+    {
+      "Tipo": "3",
+      "Numero": 18,
+      "DataScadenza": "20240825",
+      "Totale": 1113.18,
+      "QuotaCapitale": 1112.99,
+      "QuotaInteressi": 0.19,
+      "SpeseCalcolate": 0,
+      "DebitoResiduo": 0
+    }
+  ]
+}          // Esempio tracciatura dei dati ricevuti
           console.log("- DATI RICEVUTI -");
           console.log(dataObject);
           callback(dataObject);
@@ -1409,19 +1317,92 @@ var defSim = {
         
         
       }
+    
   </script>
+  <!-- ESEMPIO DI CONTROLLO DELLE MODALI -->
+  <script type="text/javascript">
+
+      // Attenzione: funzioni fake da rimuovere
+      _openSpese = _openPianoAmmortamento = function(data) {
+        alert("apertura modale");
+      }
+
+    // Esempio oggetto di controllo "locale" delle modali
+      var esempioModalObj = {
+
+            // Modale delle spese
+            "spese": function(modaldata) {
+                _openSpese(modaldata);
+
+                /*
+                // Dati ricevuti per la modale
+                console.log("- DATI MODALE SPESE");
+                console.log(modaldata);
+                // Esempio compilazione delle spese
+                $("#esempio_modale_spese").find(".modal-body").empty().append(
+                        $("<p>").html("Spese Istruttoria: "+ modaldata.SpeseIstruttoria +" &euro;<br>" +
+                        "Commissione Erogazione: "+ modaldata.SpeseErogazione +" &euro;<br>"+
+                        "Spese Incasso Rata: "+ modaldata.SpeseRata +" &euro;<br>"+
+                        "Spese Avvisatura: "+modaldata.SpeseInvio +" &euro;*<br>"),
+                        $("<p>").addClass("note").html("*applicate solo nel caso in cui la rata non venga pagata mediante addebito su un conto corrente accesso presso l’istituto erogato.")
+                )
+                $("#esempio_modale_spese").modal();
+                */
+            },
+
+            // Modale con il piano di ammortamento
+            "rata": function(modaldata) {
+              _openPianoAmmortamento(modaldata);
+
+              /*  
+              console.log("- DATI MODALE PIANO DI AMMORTAMENTO");
+                console.log(modaldata);
+                
+                // Alterazione runtime del corpo della modale, prima dell'innesco della stessa (es: costruzione tabella, ecc...)
+                $("#esempio_corpo_modale_rata").empty().append($("<p>").append("Rate da mostrare = " + modaldata.NumeroRate));
+
+                // Innesco della modale a valle del tutto
+                $("#esempio_modale_rata").modal();
+              */
+            }
+
+      }
+  </script>
+  <!-- Esempio modale rata 
+  <div class="modal fade" data-modal="default" id="esempio_modale_rata">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale rata</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
+      <div class="modal-body" id="esempio_corpo_modale_rata"></div></div>
+    </div>
+  </div>
+  Fine modale rata -->
+  <!-- Esempio modale spese
+  <div class="modal fade" data-modal="default" id="esempio_modale_spese">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale spese</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
+      <div class="modal-body">
+      </div></div>
+    </div>
+  </div>
+ Fine modale spese -->
+  <!-- FINE ESEMPIO DI CONTROLLO DELLE MODALI -->
+
 
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
   <script type="text/javascript" >
     confLending({
       id: "#configuraPrestito",
-      scadenza:  // Scadenza tra 30 giorni
-	  			(new Date().valueOf()) + (30*24*60*60*1000) ,
-				// Scadenza tra 10 secondi
-				// (new Date().valueOf()) + (15*1000) ,
+
+      // Se objConf e' assente il preventivatore non e' abilitato
       objConf: defSim,
+      configuration: { countDownVisible: true },
+      
       handlerCalcola: esempioHandlerCalcola,
-	  handlerBloccoInterfaccia: esempioHandlerBlocco
+	    handlerBloccoInterfaccia: esempioHandlerBlocco,
+      
+      // Handler delle modali
+      handlerModal: esempioModalObj
+    
     })
   </script>
   <!-- Blocco contentente il configuratore -->

@@ -19,7 +19,7 @@
 <h2>Calcola la rata del finanziamento</h2>
 
 <script type="text/javascript">
-var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/DefinizioneSimulatore.json")); ?>
+var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/objConf.json")); ?>
 </script>
 
   <!-- Configuratore prestito -->
@@ -39,7 +39,7 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
         console.log(dataToSend);
         
         setTimeout(function(){
-          var dataObject = <?php include ("ogg_smart_lending/RispostaSimulatore.json"); ?>
+          var dataObject = <?php include ("ogg_smart_lending/response.json"); ?>
           // Esempio tracciatura dei dati ricevuti
           console.log("- DATI RICEVUTI -");
           console.log(dataObject);
@@ -51,7 +51,76 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
         
         
       }
+    
   </script>
+  <!-- ESEMPIO DI CONTROLLO DELLE MODALI -->
+  <script type="text/javascript">
+
+      // Attenzione: funzioni fake da rimuovere
+      _openSpese = _openPianoAmmortamento = function(data) {
+        alert("apertura modale");
+      }
+
+    // Esempio oggetto di controllo "locale" delle modali
+      var esempioModalObj = {
+
+            // Modale delle spese
+            "spese": function(modaldata) {
+                _openSpese(modaldata);
+
+                /*
+                // Dati ricevuti per la modale
+                console.log("- DATI MODALE SPESE");
+                console.log(modaldata);
+                // Esempio compilazione delle spese
+                $("#esempio_modale_spese").find(".modal-body").empty().append(
+                        $("<p>").html("Spese Istruttoria: "+ modaldata.SpeseIstruttoria +" &euro;<br>" +
+                        "Commissione Erogazione: "+ modaldata.SpeseErogazione +" &euro;<br>"+
+                        "Spese Incasso Rata: "+ modaldata.SpeseRata +" &euro;<br>"+
+                        "Spese Avvisatura: "+modaldata.SpeseInvio +" &euro;*<br>"),
+                        $("<p>").addClass("note").html("*applicate solo nel caso in cui la rata non venga pagata mediante addebito su un conto corrente accesso presso l’istituto erogato.")
+                )
+                $("#esempio_modale_spese").modal();
+                */
+            },
+
+            // Modale con il piano di ammortamento
+            "rata": function(modaldata) {
+              _openPianoAmmortamento(modaldata);
+
+              /*  
+              console.log("- DATI MODALE PIANO DI AMMORTAMENTO");
+                console.log(modaldata);
+                
+                // Alterazione runtime del corpo della modale, prima dell'innesco della stessa (es: costruzione tabella, ecc...)
+                $("#esempio_corpo_modale_rata").empty().append($("<p>").append("Rate da mostrare = " + modaldata.NumeroRate));
+
+                // Innesco della modale a valle del tutto
+                $("#esempio_modale_rata").modal();
+              */
+            }
+
+      }
+  </script>
+  <!-- Esempio modale rata 
+  <div class="modal fade" data-modal="default" id="esempio_modale_rata">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale rata</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
+      <div class="modal-body" id="esempio_corpo_modale_rata"></div></div>
+    </div>
+  </div>
+  Fine modale rata -->
+  <!-- Esempio modale spese
+  <div class="modal fade" data-modal="default" id="esempio_modale_spese">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale spese</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
+      <div class="modal-body">
+      </div></div>
+    </div>
+  </div>
+ Fine modale spese -->
+  <!-- FINE ESEMPIO DI CONTROLLO DELLE MODALI -->
+
 
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
   <script type="text/javascript" >
@@ -60,9 +129,14 @@ var defSim = <?php print(file_get_contents("./layout/template/ogg_smart_lending/
 
       // Se objConf e' assente il preventivatore non e' abilitato
       objConf: defSim,
-
+      configuration: { countDownVisible: true },
+      
       handlerCalcola: esempioHandlerCalcola,
-	    handlerBloccoInterfaccia: esempioHandlerBlocco
+	    handlerBloccoInterfaccia: esempioHandlerBlocco,
+      
+      // Handler delle modali
+      handlerModal: esempioModalObj
+    
     })
   </script>
   <!-- Blocco contentente il configuratore -->
