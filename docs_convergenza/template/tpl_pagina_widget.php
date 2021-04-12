@@ -2,28 +2,6 @@
     $statpath = ($site === "webank")? "/WB" : "/HT";
     $gifanimpath = ($site === "webank")? "/WB/fe/img/wbapp/" : "/HT/fe/img/youapp/";
 
-    // Array con nomi file per animazioni
-    $anim = Array(
-        "01_pre_login.gif",
-        "02_navigazione.gif",
-        "03_silos.gif",
-        "04_fare_bonifico.gif",
-        "05_revoca_bonifico.gif",
-        "06_dettaglio_conto.gif",
-        "07_carte.gif",
-        "08_ordine_fondo.gif",
-        "09_portafoglio.gif",
-        "10_revoca_ordine.gif",
-        "11_ordine_titolo.gif",
-        "12_movimenti.gif",
-        "13_assistenza.gif",
-        "14_alert_conto.gif",
-        "15_alert_trading.gif",
-        "16_presa_appuntamento.gif",
-        "17_portafoglio_simulato.gif",
-        "18_impostazioni_funzioni_veloci.gif",
-        "19_impostazione_saldo.gif"
-    );
 
 ?><!-- Titolo -->
 <div class="titolo">
@@ -116,11 +94,11 @@
             <a href="javascript:;" class="text-link" onclick="showVideo('489824222')">La nuova sezione Investimenti di You App</a>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Il tuo conto su You App</a>
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Le tue carte su You App</a>
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Con You App zero sorprese, controlli tu le spese</a>
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Gestisci le impostazioni e gli Alert in You App</a>
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Grazie a You App la Filiale &egrave; più vicina</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489823051')">Il tuo conto su You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489823407')">Le tue carte su You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489824602')">Con You App zero sorprese, controlli tu le spese</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489825070')">Gestisci le impostazioni e gli Alert in You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('489825373')">Grazie a You App la Filiale &egrave; pi&ugrave; vicina</a>
         </div>
     </div>
 </div>

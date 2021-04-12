@@ -14,7 +14,7 @@
         <p>Dopo aver effettuato l'accesso, nella  <i>Home </i> hai una visione immediata del Conto corrente, delle Carte, degli Investimenti e dei Finanziamenti attivi.</p>
         <div class="btnWrapper">
             <div class="btn-align-left">
-                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('487138384');" ><i class="icon icon-play"></i><span>Comoda, sicura, veloce: &egrave; You App!</span></a>
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('487138384');" ><i class="icon icon-play"></i><span>Comoda, sicura, veloce: &egrave; You App!</span></a>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
         </ul>
         <div class="btnWrapper">
             <div class="btn-align-left">
-                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489824861');" ><i class="icon icon-play"></i><span>Da You App tutto l'aiuto di cui hai bisogno</span></a>
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('489824861');" ><i class="icon icon-play"></i><span>Da You App tutto l'aiuto di cui hai bisogno</span></a>
             </div>
         </div>
     </div>
@@ -56,22 +56,31 @@
     <div class="box-image">
         <!-- Wrapper smartphone -->
         <div class="smartphone-wrapper small">
-            <img src="/HT/fe/img/youapp/03_silos.gif" />
+            <img src="/HT/fe/img/youapp/16_presa_appuntamento.gif" />
         </div>
         <!-- fine Wrapper smartphone -->
     </div>
     <div class="box-description light-bg">
-        <h3>Menu di navigazione sempre con te</h3>
-        <p><strong>Stai esplorando l'app?</strong><br><br>
-            <strong>Il menu di navigazione è sempre in primo piano</strong>.
-            <br>Utilizzalo per accedere velocemente a: <i>Home, Spese, Investimenti, Filiale e Altro</i>. 
-        </p>
+
+        <h3>Prendi appuntamento in filiale</h3>
+        <p>YouApp ti porta nella tua filiale Banco BPM:</p>
+        <ul>
+            <li>seleziona <i>Filiale</i> dal menu in basso, in questa sezione trovi <strong>tutte le informazioni relative alla tua filiale di riferimento</strong></li>
+            <li>tappa su <i>Prendi appuntamento</i> e specifica il tipo di supporto di cui hai bisogno</li>
+            <li>fissa la <strong>data</strong>, l'<strong>orario</strong> ed invia la tua richiesta!</li>
+        </ul>
+        <div class="btnWrapper">
+            <div class="btn-align-left">
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('489825373');" ><i class="icon icon-play"></i><span>Grazie a You App la Filiale &egrave; pi&ugrave; vicina</span></a>
+            </div>
+        </div>
+    
     </div>
 </div>
 <!-- Fine box autoimpaginato -->
 
 
-<!-- NUOVI MODI DI INTERAGIRE CON L’APP -->
+<!-- NUOVI MODI DI INTERAGIRE CON L'APP -->
  <!-- box autoimpaginato -->
  <div class="lr-box">
     <div class="box-image">
@@ -92,7 +101,7 @@
         <p>Una volta effettuato l'accesso, puoi operare con il <strong>pulsante dispositivo</strong> che trovi nelle diverse aree.</p>
         <div class="btnWrapper">
             <div class="btn-align-left">
-                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('487136160');" ><i class="icon icon-play"></i><span>You App: la tua banca in una mano</span></a>
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('487136160');" ><i class="icon icon-play"></i><span>You App: la tua banca in una mano</span></a>
             </div>
         </div>
     </div>
@@ -111,10 +120,10 @@
     </div>
     <div class="box-description light-bg">
         <h3>Come fare un bonifico</h3>
-        <p>Dall’area <i>Home</i>, selezionando il <strong>pulsante dispositivo</strong>, che trovi sempre in primo piano, puoi inserire i tuoi Bonifici: scegli fra <strong>Ordinario</strong> o <strong>Veloce</strong>, <strong>Italiano</strong> o <strong>Estero</strong>.</p>
+        <p>Dall'area <i>Home</i>, selezionando il <strong>pulsante dispositivo</strong>, che trovi sempre in primo piano, puoi inserire i tuoi Bonifici: scegli fra <strong>Ordinario</strong> o <strong>Veloce</strong>, <strong>Italiano</strong> o <strong>Estero</strong>.</p>
         <div class="btnWrapper">
             <div class="btn-align-left">
-                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489822710');" ><i class="icon icon-play"></i><span>Con You App il bonifico &egrave; semplice e intuitivo</span></a>
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('489822710');" ><i class="icon icon-play"></i><span>Con You App il bonifico &egrave; semplice e intuitivo</span></a>
             </div>
         </div>
     </div>
@@ -133,11 +142,11 @@
     </div>
     <div class="box-description light-bg">
         <h3>Portafoglio per prodotti posseduti e asset class</h3>
-        <p>L’area <i>Investimenti</i> ti offre una visione d’insieme del tuo portafoglio in base agli strumenti che hai acquistato, suddivisa fra: azioni, obbligazioni, ETF, fondi, CW/certificate e derivati.<br>
+        <p>L'area <i>Investimenti</i> ti offre una visione d'insieme del tuo portafoglio in base agli strumenti che hai acquistato, suddivisa fra: azioni, obbligazioni, ETF, fondi, CW/certificate e derivati.<br>
         Seleziona una di queste categorie per entrare nel <strong>dettaglio</strong> del tuo portafoglio ed eventualmente modificare le tue posizioni.</p>
         <div class="btnWrapper">
             <div class="btn-align-left">
-                <a class="btn-link-icon text-mobile" href="javsacript:;" onclick="showVideo('489824222');" ><i class="icon icon-play"></i><span>La nuova sezione Investimenti di You App</span></a>
+                <a class="btn-link-icon text-mobile" href="javascript:;" onclick="showVideo('489824222');" ><i class="icon icon-play"></i><span>La nuova sezione Investimenti di You App</span></a>
             </div>
         </div>
     </div>
