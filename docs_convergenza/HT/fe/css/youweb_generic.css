@@ -8368,7 +8368,7 @@ ol.sotto-elenco,ol.sotto-elenco ol {
     .box-bg-dark,.box-bg-light {padding-left:20px !important}
     .box-hero .box-bg-light {padding-top:90px}
     .box-hero .box-bg-dark .hero-block {width:100%;left:0;top:15px;}
-    .box-hero .box-bg-dark {height:180px;padding:0 !important}
+    .box-hero .box-bg-dark {height:230px;padding:0 !important}
     .box-hero .box-bg-dark .hero {height:220px}
     .box-hero .box-bg-dark .hero-promo-text {display:none}
     .box-hero  .btn-app {width:125px;height:36px;margin-left:5px !important;}
@@ -8399,6 +8399,10 @@ ol.sotto-elenco,ol.sotto-elenco ol {
 .smartphone-wrapper::before {content:"";width:100%;height:100%;display:block;position:absolute;background:transparent url(/common/fe/img/smartphone_wrapper.png) no-repeat center center;background-size:cover;}
 .smartphone-wrapper.small {width:140px;height:270px}
 .smartphone-wrapper.small img {width: 126px;height: 215px;margin-top: 28px;}
+@media (max-width:767px) {
+    .smartphone-wrapper {width:140px;height:270px}
+    .smartphone-wrapper img {width: 126px;height: 215px;margin-top: 28px;}
+}
 
 /* Link box */
 .link-box {background: #122e5c;padding:25px 30px; color:#fff}

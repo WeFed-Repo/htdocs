@@ -11246,7 +11246,7 @@ div.select-content select:active {
     top: 15px;
   }
   .box-hero .box-bg-dark {
-    height: 180px;
+    height: 230px;
     padding: 0 !important;
   }
   .box-hero .box-bg-dark .hero {
@@ -11334,23 +11334,23 @@ div.select-content select:active {
   background-size: cover;
 }
 .smartphone-wrapper.small {
-  width: 120px;
-  height: 230px;
+  width: 140px;
+  height: 270px;
 }
 .smartphone-wrapper.small img {
-  width: 108px;
-  height: 184px;
-  margin-top: 23px;
+  width: 126px;
+  height: 215px;
+  margin-top: 28px;
 }
 @media (max-width: 767px) {
   .smartphone-wrapper {
-    width: 120px;
-    height: 230px;
+    width: 140px;
+    height: 270px;
   }
   .smartphone-wrapper img {
-    width: 108px;
-    height: 184px;
-    margin-top: 23px;
+    width: 126px;
+    height: 215px;
+    margin-top: 28px;
   }
 }
 /* BOX DI FEEDBACK NUOVA VERSIONE */
