@@ -23,9 +23,9 @@
 
             font-family: 'bankFont';
 
-            src: url('/mobile/webview/font/montserrat-light-webfont.woff2') format('woff2'),
+            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
 
-                url('/mobile/webview/font/montserrat-light-webfont.woff') format('woff');
+                url('./font/montserrat-light-webfont.woff') format('woff');
 
             font-weight: normal;
 
@@ -39,9 +39,9 @@
 
             font-family: 'bankFont';
 
-            src: url('/mobile/webview/font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
 
-                url('/mobile/webview/font/montserrat-lightitalic-webfont.woff') format('woff');
+                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
 
             font-weight: normal;
 
@@ -55,9 +55,9 @@
 
             font-family: 'bankFont';
 
-            src: url('/mobile/webview/font/montserrat-semibold-webfont.woff2') format('woff2'),
+            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
 
-                url('/mobile/webview/font/montserrat-semibold-webfont.woff') format('woff');
+                url('./font/montserrat-semibold-webfont.woff') format('woff');
 
             font-weight: bold;
 
@@ -71,9 +71,9 @@
 
             font-family: 'bankFont';
 
-            src: url('/mobile/webview/font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
 
-                url('/mobile/webview/font/montserrat-semibolditalic-webfont.woff') format('woff');
+                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
 
             font-weight: bold;
 
@@ -127,7 +127,7 @@
 
             width: 100%;
 
-            background: #eee url(/mobile/webview/img/visual_web_view_YA_amex_oro.jpg) no-repeat center center;
+            background: #eee url(./img/visual_web_view_zero_commissioni.jpg) no-repeat center center;
 
             background-size: cover;
 
@@ -360,166 +360,25 @@
         }
 
 
-
-        /* Accordion */
-
-        .accordion .accordion-content {
-
-            display: none;
-
-        }
-
-
-
-        .accordion .accordion-abstract {
-
-            display: inline-block;
+        #wrapper-cta {
 
             width: 100%;
 
+            display: flex;
+
+            justify-content: space-around;
+
+            margin-bottom: 30px;
+
+            margin-top: 30px;
+
         }
 
-
-
-        .accordion.opened .accordion-content {
+        #wrapper-cta .cta {
 
             display: inline-block;
-
-            width: 100%;
-
-            overflow: visible;
-
-        }
-
-
-
-        .accordion.opened .accordion-abstract {
-
-            display: none;
-
-        }
-
-
-
-        .accordion .accordion-toggle {
-
-            display: inline-block;
-
-            cursor: pointer;
-
-            margin-bottom: 10px;
-
-        }
-
-
-
-        .accordion .accordion-toggle span {
-
-            line-height: 16px;
-
-            font-size: 13px;
-
-            position: relative;
-
-            padding-right: 20px;
-
-            display: inline-block;
-
-            color: #344a86;
-
-            position: relative;
-
-        }
-
-
-
-        .accordion .accordion-toggle span::after {
-
-            content: "";
-
-            width: 16px;
-
-            height: 16px;
-
-            background: transparent url("/mobile/webview/img/youweb_vedi_piu.png") no-repeat center center;
-
-            border-radius: 8px;
-
-            background-size: 16px 16px;
-
-            position: absolute;
-
-            top: -2px;
-
-            right: 0;
-
-            display: block;
-
-        }
-
-
-
-        .accordion .accordion-toggle span.opened {
-
-            display: none;
-
-        }
-
-
-
-        .accordion .accordion-toggle span.opened::after {
-
-            background-image: url("/mobile/webview/img/youweb_vedi_meno.png");
-
-        }
-
-
-
-        .accordion.opened .accordion-toggle span.closed {
-
-            display: none;
-
-        }
-
-
-
-        .accordion.opened .accordion-toggle span.opened {
-
-            display: inline-block;
-
-        }
-
-
-
-        /* Footer */
-
-        footer {
-
-            position: fixed;
-
-            bottom: 0;
-
-            left: 0;
-
-            height: 0;
-
-            overflow: visible;
-
-            text-align: center;
-
-            width: 100%;
 
             margin: 0 auto;
-
-        }
-
-
-
-        footer .cta {
-
-            display: inline-block;
-
-            margin: 0 0 15px;
 
             background: #344a86;
 
@@ -529,17 +388,11 @@
 
             text-decoration: none;
 
+            text-align: center;
+
             font-weight: bold;
 
-            width: 240px;
-
-            position: absolute;
-
-            margin-left: -135px;
-
-            margin-top: -65px;
-
-            padding: 15px;
+            padding: 15px 30px;
 
             color: #fff;
 
@@ -548,77 +401,19 @@
         }
 
 
-
         /* Declinazione dark */
 
         .dark #contenuto .hero h1 {
 
             color: #fff;
 
-            text-transform: uppercase;
+            text-transform: none;
+
+            font-weight: normal;
 
         }
+
     </style>
-
-    <script type="text/javascript">
-
-
-
-        /* Piccolo framework */
-
-        function getParent(element, selector) {
-
-            if (!element) { return element };
-
-            element.matches(selector) || (element = (element.nodeName.toLowerCase() === 'html' ? false : getParent(element.parentNode, selector)));
-
-            return element;
-
-        }
-
-
-
-        /* Inizializzazioni automazioni */
-
-        window.addEventListener('load', function (event) {
-
-            // Inizializzazione accordion (cambia classe al parent)
-
-            var acctoggle = document.querySelectorAll(".accordion-toggle"), x;
-
-            for (x = 0; x < acctoggle.length; x++) {
-
-                // Inizializza uno per uno tutti gli accordion
-
-                acctoggle[x].addEventListener("click", function () {
-
-                    var acc = getParent(this, ".accordion");
-
-                    if (acc.className.indexOf("opened") >= 0) {
-
-                        // Aperto - lo chiude
-
-                        acc.classList.remove("opened");
-
-                    }
-
-                    else {
-
-                        // Chiuso - lo apre
-
-                        acc.classList.add("opened");
-
-                    }
-
-                });
-
-            }
-
-        });
-
-
-
-    </script>
 
 </head>
 
@@ -634,7 +429,7 @@
 
                 <div class="hero-text">
 
-                    <h1>Carta Oro American Express</h1>
+                    <h1><strong>Attiva un PAC entro il 30 giugno</strong> per te commisioni di ingresso a ZERO!</h1>
 
                 </div>
 
@@ -646,9 +441,7 @@
 
                 <div class="boxedcont">
 
-                    <h2>La tua finestra su un mondo di vantaggi!</h2>
-
-                    <p>Richiedi <strong>Carta Oro American Express. </strong> Solo per te:
+                    <p>Vuoi raggiungere i tuoi obiettivi di risparmio con <strong>piccole somme da investire</strong> nel tempo?
 
                     </p>
 
@@ -662,17 +455,20 @@
 
                 <div class="boxedcont">
 
+                    <p><strong>Ti offriamo soluzioni</strong> intuitive e facili per costruire il tuo capitale:</p>
+
                     <ul>
 
-                        <li>un <strong>bonus di 25.000 punti Membership Rewards&reg;</strong><sup>1</sup> per ridurre
-
-                            il saldo del tuo conto Carta fino a 100 Euro, con gli Sconti Shop with Points<sup>1</sup>;
+                        <li>più di <strong>30 Case di Gestione</strong>;
+                        
                         </li>
 
-                        <li><strong>quota ridotta</strong><sup>2</sup> <strong>a 20 Euro il 1&deg; anno</strong>,
-                            riaccreditata<sup>3</sup>
+                        <li><strong>oltre 5.000</strong> Fondi e SICAV
+                        </li>
 
-                            se effettui una spesa con la carta entro 3 mesi dall'emissione.</li>
+                        <li>puoi <strong>scegliere la durata</strong>, la <strong>frequenza</strong>
+                             e l'<strong>importo</strong> dei tuoi versamenti a partire da 50&euro; al mese.
+                        </li>
 
                     </ul>
 
@@ -681,197 +477,40 @@
                 <!-- Fine box solo elenco puntato -->
 
 
-
-                <!-- Box con accordion solo testo -->
-
-                <div class="boxedcont accordion">
-
-                    <div class="accordion-abstract">
-
-                        <p>
-
-                            Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti
-                            <strong>vantaggi</strong>.
-
-                        </p>
-
-                    </div>
-
-                    <div class="accordion-content">
-
-                        <p>Richiedi <strong>Carta Oro American Express</strong> ti offre ancora tanti
-                            <strong>vantaggi</strong>.<br><br>
-
-                            <strong>PROTEZIONE D'ACQUISTO</strong>: tutela i tuoi acquisti in caso di furto o
-                            danneggiamento del bene per 90 giorni fino a 2.600 Euro per evento e di 7.800 Euro per
-                            ciascun anno solare<sup>4</sup>.<br><br>
-
-                            <strong>VOUCHER 50 EURO</strong>: da utilizzare per i tuoi prossimi viaggi sul sito American
-                            Express Viaggi<sup>5</sup>.<br><br>
-
-
-
-                            <strong>SICUREZZA</strong>: sei protetto in caso di uso illecito della Carta da parte di
-                            terzi<sup>6</sup>.<br><br>
-
-
-
-                            <strong>VIAGGI IN TRANQUILLIT&Agrave;</strong>: quando organizzerai i tuoi prossimi viaggi
-                            all'estero potrai contare sulle coperture assicurative incluse nella quota<sup>4</sup>.
-
-
-
-                        </p>
-
-                    </div>
-
-                    <!-- Accordion toggle -->
-
-                    <div class="accordion-toggle"><span class="closed">Vedi di pi&ugrave;</span><span
-                            class="opened">Vedi di meno</span></div>
-
-                    <!-- /accordion toggle -->
-
-                </div>
-
-                <!-- Fine box con accordion solo testo -->
-
-
-
                 <!-- Box solo testo con link dopo elenco numerato -->
 
                 <div class="boxedcont">
 
                     <p>
 
-                        Per ulteriori informazioni vai su <a
-                            href="https://www.bancobpm.it/privati/carte-e-telepass/carte-di-credito/american-express-oro/"
-                            target="_blank">xxx</a> di Carta Oro American Express
-
-                        <br><br>
-
-                        <strong>Ora puoi richiederla anche online sul tuo YouWeb!</strong>
-
-                        <br><br>
-
-                        Per informazioni <strong><a href="tel:800024024">chiama il Servizio Clienti</a></strong>
+                        <strong>Attiva un PAC:</strong> accantoni un capitale per il tuo futuro e non cadi nella trappola 
+                        dell'emotività che spinge a comprare quando i valori sono vicini ai massimi e a vendere quando le 
+                        quotazioni scendono.
 
                     </p>
 
                 </div>
-
+                
                 <!-- Fine solo testo con link dopo elenco numerato -->
 
+
+                <!-- Inizio Bottone con CTA -->
+                
+                <div id="wrapper-cta">
+                    <a class="cta" href="#">Vai alla ricerca Fondi</a>
+                </div>
+
+                <!-- Fine Bottone con CTA -->
 
 
                 <!-- Non boxati -->
 
                 <p class="note">
 
-                    <strong>Messaggio pubblicitario con finalit&agrave; promozionali.</strong><br>
+                    Messaggio pubblicitario con finalit&agrave; promozionali, prima
 
-                    Offerta valida fino al 28/2/2021. Dati aggiornati a gennaio 2021. Per maggiori informazioni prima
-
-                    della sottoscrizione consulta i Fogli Informativi disponibili sui siti
-                    americanexpress.it/terminiecondizioni,
-
-                    bancobpm.it e presso le filiali Banco BPM. L'approvazione della Carta rimane a discrezione di
-                    American Express.
-
-                    <br><br>
-
-                    1 Pari a 25.000 punti Membership Rewards. Offerta riservata a chi, al momento della richiesta non
-                    sia,
-
-                    o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express iscritta al Programma
-                    Membership Rewards.
-
-                    L'attuale Operazione a premi Membership Rewards &egrave; valida fino al 31/3/2021, rivolta a tutti
-
-                    i Titolari di una Carta Base American Express in corso di validit&agrave; e in regola con i
-                    pagamenti,
-
-                    e che siano altres&igrave; iscritti al Club Membership Rewards. Regolamento completo dell'iniziativa
-
-                    disponibile sul sito internet americanexpress.it/clubmr. Il bonus di 25.000 punti Membership Rewards
-                    sar&agrave;
-
-                    accreditato sul tuo conto Membership Rewards entro 8 settimane dalla registrazione sul medesimo
-                    conto di tutte
-
-                    quelle transazioni che, effettuate entro i primi 60 giorni di emissione della Carta, hanno
-                    contribuito al
-
-                    raggiungimento della soglia di spesa pari a 500 Euro. Non concorrono al raggiungimento della soglia
-                    di
-
-                    spesa di 500 Euro i prelievi e gli anticipi di contante, penali, commissioni e gli importi
-                    successivamente
-
-                    riaccreditati su Conto Carta come rimborsi. &Egrave; possibile utilizzare i punti per richiedere
-                    Sconti Shop
-
-                    with Points per ridurre il saldo del tuo conto Carta fino a 100 Euro o per richiedere i premi del
-
-                    catalogo sul sito internet americanexpress.it/premi. Per le modalit&agrave; di accumulo punti,
-                    esclusioni
-
-                    e validit&agrave; delle diverse iniziative, consulta il Regolamento completo del Club Membership
-                    Rewards,
-
-                    dell'Operazione a Premi Membership Rewards e dell'Iniziativa Pay with Points sul sito
-
-                    www.americanexpress.it/clubmr. Per maggiori dettagli sull'Iniziativa Pay with Points e sullo
-
-                    Sconto Shop with Points, consulta Termini e Condizioni su americanexpress.it/shopwithpoints.<br>
-
-                    2 Quota annuale Carta Base ridotta a 20 Euro per il 1&deg; anno. Dal 2&deg; anno la quota annuale di
-                    Carta Oro
-
-                    sar&agrave; di 165 Euro. Questa offerta &egrave; dedicata esclusivamente a chi, al momento della
-                    richiesta non sia,
-
-                    o non sia stato negli ultimi 12 mesi, Titolare di una Carta American Express (ad eccezioni di Carte
-                    di
-
-                    Credito ad Opzione, Business, Corporate, Carta PAYBACK American Express e Carta Centurion). A chi,
-                    al momento
-
-                    della richiesta sia gi&agrave;, o lo sia stato negli ultimi 12 mesi, Titolare di una Carta nei
-                    termini
-
-                    di cui sopra, verr&agrave; addebitata dal primo anno di emissione la quota annuale della Carta Base
-                    indicata (165 Euro).<br>
-
-                    3 Riceverai in estratto conto un riaccredito di 20 Euro entro 8 settimane dalla prima transazione di
-
-                    qualsiasi importo effettuata entro 90 giorni dall'emissione della Carta. Offerta riservata a chi al
-
-                    momento della richiesta non sia, o non sia stato negli ultimi 12 mesi, Titolare di una Carta
-                    American Express
-
-                    iscritta al Club Membership Rewards&reg;<br>
-
-                    4 Copertura assicurativa soggetta a Termini e Condizioni. Tutti i dettagli della copertura
-                    assicurativa
-
-                    sono indicati negli estratti delle condizioni di Polizza che possono essere visualizzati sul sito
-
-                    internet americanexpress.it/terminiecondizioni; si prega di prenderne visione prima della
-                    sottoscrizione
-
-                    per conoscere limiti ed esclusioni della copertura stessa.<br>
-
-                    5 Termini e condizioni possono essere visualizzati sul sito internet americanexpress.it/oro<br>
-
-                    6 Nessuna limitazione di responsabilit&agrave; sar&agrave; comunque riconosciuta al Titolare nel
-                    caso in cui
-
-                    l'uso illecito di terzi sia imputabile a un comportamento doloso o gravemente colposo del Titolare,
-
-                    rispetto agli obblighi previsti dal Regolamento, ovvero nel caso di ingiustificato ritardo nella
-
-                    segnalazione ad American Express dello smarrimento, furto o uso illecito della Carta.
+                    dell'adesione leggere attentamente i prospetti informativi disponibili online, nonchè sul sito internet dell'offerente 
+                    le quote/azioni dei Fondi/Sicav.
 
                 </p>
 
