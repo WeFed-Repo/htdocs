@@ -120,7 +120,7 @@
             <a href="javascript:;" class="text-link" onclick="showVideo('')">Le tue carte su You App</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('')">Con You App zero sorprese, controlli tu le spese</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('')">Gestisci le impostazioni e gli Alert in You App</a>
-            <a href="javascript:;" class="text-link" onclick="showVideo('')">Grazie a You App la Filiale è&egrave; più vicina</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Grazie a You App la Filiale &egrave; più vicina</a>
         </div>
     </div>
 </div>
