@@ -102,58 +102,25 @@
     <!-- Fine catena do box descrittivi -->
 
 </section>
-
-
-    <?php /* 
-    <div class="auto-lr-boxes">
-        <?php foreach ($anim as $an) { 
-        ?>
-        <!-- box autoimpaginato -->
-        <div class="lr-box">
-            <div class="box-image">
-                <!-- Wrapper smartphone -->
-                <div class="smartphone-wrapper small">
-                    <img src="<?php print($gifanimpath.$an); ?>" />
-                </div>
-                <!-- fine Wrapper smartphone -->
-            </div>
-            <div class="box-description light-bg">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p><strong>Dolor</strong> lorem dolor ipsum sit amet consectetur adipiscing elit summa cum laude. </p>
-                <ul>
-                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                    <li>Lorem dolor sit amet consectetur <strong>adipiscing</strong> elit summa</li>
-                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                    <li>Lorem dolor sit amet consectetur adipiscing elit summa</li>
-                </ul>
-                <?php if ($site!=="webank") { ?>
-                    <div class="btnWrapper">
-                        <div class="btn-align-left">
-                            <a class="btn-link-icon text-mobile" href="#" ><i class="icon icon-play"></i><span>Nome_video_tutorial</span></a>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-        <!-- Fine box autoimpaginato -->
-        <?php
-        }?>
-    </div>
-    */ ?>
-<!-- /Box descrittivo immagine e testo -->
-
-
+  
 <?php if ($site==="youweb") {  ?>
 <!-- Bottom linkbox -->
 <div class="link-box">
     <h3><i class="icon icon-play"></i><span>Guarda tutti i video tutorial</span></h3>
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6">
             <a href="javascript:;" class="text-link" onclick="showVideo('487138384')">Comoda, sicura, veloce: &egrave; You App!</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('489824861')">Da You App tutto l'aiuto di cui hai bisogno</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('487136160')">You App: la tua banca in una mano</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('489822710')">Con You App il bonifico &egrave; semplice e intuitivo</a>
             <a href="javascript:;" class="text-link" onclick="showVideo('489824222')">La nuova sezione Investimenti di You App</a>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Il tuo conto su You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Le tue carte su You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Con You App zero sorprese, controlli tu le spese</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Gestisci le impostazioni e gli Alert in You App</a>
+            <a href="javascript:;" class="text-link" onclick="showVideo('')">Grazie a You App la Filiale è&egrave; più vicina</a>
         </div>
     </div>
 </div>
