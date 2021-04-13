@@ -962,13 +962,13 @@ table tr.odd td {
     padding-bottom: 20px;
 }
 @media screen and (max-width: 767px) {
-    .modal-footer.fixed {
+    .modal-footer-fixed .modal-footer {
         position: fixed;
         width: 100%;
         background-color:#fff;
         top:100%;
     }
-    .modal-footer.fixed .align-right {
+    .modal-footer-fixed .modal-footer .align-right {
         text-align:center;
     }
 }
@@ -6979,6 +6979,7 @@ div[id*="popover"] .popover-content {
 .ui-accordion-content .documenti li {padding-bottom:10px}
 .ui-accordion-content .documenti li .icon {margin-right:10px}
 /*STILIZZAZIONE DOCUMENTI SPUNTATI */
+.documenti.format-spunta .glyph {font-size: 32px;}
 .documenti.format-spunta a {text-decoration: none;position: relative;display:inline-block;margin-bottom:20px}
 .documenti.format-spunta .text {padding-left:35px;display: inline-block;padding-top:5px}
 .documenti.format-spunta a [class*=" glyph-"] {
