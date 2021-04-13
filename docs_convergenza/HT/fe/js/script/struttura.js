@@ -216,7 +216,7 @@ $(window).resize(function () {
     if ($('#overlayMenu').length === 1) {
         menuPushMobile.resetMenuResize()
     }
-    resizeModals();
+//    resizeModals();
 });
 // Ricalcola le dimensioni della modale
 
@@ -334,7 +334,7 @@ function makeFocusable(overlay) {
     overlay = $(overlay);
     // Prototipizza l'oggetto in modo che si possa passare anche solo l'ID
     var overlay = $(overlay);
-    // L'evento viene istanziato come propriet� dell'oggetto, solo se necessario
+    // L'evento viene istanziato come proprietï¿½ dell'oggetto, solo se necessario
     if (!overlay.mF) {
         overlay.mF = overlay.on("click", function () {
             nzi = getNextHighestZindex();
@@ -367,7 +367,7 @@ playVideo = function (videourl) {
     if (!$("#videoLayer").length) {
         videoLayer = $("<div>").addClass("modal fade bs-example-modal-lg helpDialog").attr({ "id": "videoLayer" }).hide();
         videoLayerBody = $("<div>").addClass("modal-body");
-        videoLayerClose = $("<button>").addClass("close").attr("data-dismiss", "modal").append("<span aria-hidden='true'><span class='sm'>×</span><span class='xs'>chiudi</span></span>").click(function () {
+        videoLayerClose = $("<button>").addClass("close").attr("data-dismiss", "modal").append("<span aria-hidden='true'><span class='sm'>Ã—</span><span class='xs'>chiudi</span></span>").click(function () {
             videoLayerBody.empty();
         });
         videoLayer.append($("<div>").addClass("modal-dialog modal-lg").append($("<div>").addClass("modal-content").append(
@@ -500,7 +500,7 @@ var gotoTrack = function(fp1,fp2,cb) {
     }
     var gtagcb = function () {return void(0)};
     if (typeof cb !== "undefined") {
-        // Se è una funzione la callback e' quella, altrimenti e' un href
+        // Se Ã¨ una funzione la callback e' quella, altrimenti e' un href
         if (typeof cb === "string") {
             gtagcb = function() {document.location.href = cb};
         }
