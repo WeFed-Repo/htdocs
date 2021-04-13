@@ -115,7 +115,7 @@ var getNextHighestZindex = function () {
 
 /* VARIABILI E CONTROLLI PER DISPOSITIVI */
 var resizeModalDevice = function (modalEl) {
-   
+    
     //if(isSmallDevice) {
     modalEl.find('.modal-content').css({
         'max-height': viewdim().height * 0.9,
@@ -4665,8 +4665,44 @@ var scrollToAnchor = function() {
         }, 500);
     }
 }
+
+/*FUNZIONE PER FISSARE IL FOOTER DEGLI OVERLAYER IN MOBILE */
+var renderOverlayerFooterFixed = function() {
+   var modalToResize = $('.modal-footer-fixed');
+   if(modalToResize.length>0) {
+        $(modalToResize).each(function() { 
+            var el = $(this);
+            el.on('shown.bs.modal', function(){
+                if(isSmallDevice) {
+                setDinHeightOverlayer($(this))
+                }
+            });
+            $(window).resize(function() {
+                if(el.hasClass('in')) {
+                    resizeModalDevice(el);
+                    findSmartDevice();
+                    if(isSmallDevice) {
+                        
+                        setDinHeightOverlayer(el);
+                    }
+                    else {
+                        el.find('.modal-content').css({"maxHeight":'auto'});
+                    }
+                }
+            })
+        });
+        var setDinHeightOverlayer = function(el) {
+            var displayHeight = viewdim().height,
+                modalFooterHeight = $(el).find('.modal-footer').innerHeight(),
+                maxOvHeight = displayHeight-modalFooterHeight;
+                el.find('.modal-content').css({"maxHeight":maxOvHeight +'px'});
+               
+        }
+    }
+}
 //inizializzazioni al load della pagina
 $(function () {
+    renderOverlayerFooterFixed();
     setZindexModal();
     findSmartDevice();
     iconMultilayer();

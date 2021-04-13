@@ -2715,13 +2715,13 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
 }
 /* modale con footer fixed*/
 @media screen and (max-width: 767px) {
-  .modal-footer.fixed {
+  .modal-footer-fixed .modal-footer {
     position: fixed;
     width: 100%;
     background-color: #fff;
     top: 100%;
   }
-  .modal-footer.fixed .align-right {
+  .modal-footer-fixed .modal-footer .align-right {
     text-align: center;
   }
   .modal-content {
