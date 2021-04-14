@@ -1,4 +1,5 @@
 import { Component,Input,OnInit, Output, EventEmitter} from '@angular/core';
+import { isArray } from 'util';
 
 
 @Component({
@@ -7,20 +8,20 @@ import { Component,Input,OnInit, Output, EventEmitter} from '@angular/core';
 })
 //finti rowspan
 export class SimpleTableComponent  implements OnInit {
-  @Input() dateTable;
-  @Input() TableColumnsLabel;
-  columns;
-  columsid;
+  @Input() headingsCol:Array<object>;
+  @Input() rowData:Array<object>;
+  @Input() colsTemplate;
+  @Input() colsThTemplate;
+  
   
   
   isObject(val): boolean { return typeof val === 'object'; }
- 
+  
+  isArray(val):  boolean { return Array.isArray(val) }
    constructor() { 
   }
   ngOnInit(){
-    this.columns = Object.keys(this.dateTable[0]);
-    this.columsid = this.columns;
-    console.log(this.dateTable);
    
+    console.log(this.colsThTemplate);
   }
 }
