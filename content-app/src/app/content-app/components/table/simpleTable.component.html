@@ -3,18 +3,18 @@
         <table>
             <thead>
                 <tr>
-                    <th *ngFor="let col of headingsCol;index as i"> 
-                       <ng-container [ngTemplateOutlet]="colsThTemplate" [ngTemplateOutletContext]="{data:col}"></ng-container>
+                   <th *ngFor="let col of headingsCol;index as i" [ngClass]="col.class"> 
+                        <ng-container [ngTemplateOutlet]="colsThTemplate" [ngTemplateOutletContext]="{data:col}"></ng-container>
                     </th>
                 </tr>
             </thead>
             
             <tbody> 
-            <tr *ngFor="let el of rowData;index as i" [ngClass]="{'pari': i %2 == 1}">
-                <td *ngFor="let colTemplate of colsTemplate"  [ngClass]="'pad_0'">
-                   <ng-container [ngTemplateOutlet]="colTemplate" [ngTemplateOutletContext]="{data:el}"></ng-container>
-                 </td>
-            </tr>
+                <tr *ngFor="let el of rowData;index as i" [ngClass]="{'pari': i %2 == 1}">
+                <td *ngFor="let colTemplate of colsTemplate;index as j" [ngClass]="isObject(el[columnssref[j]]) ? ('pad_0 ' + cellClassName[j]) : cellClassName[j]" headers="{{columnssref[j]}}">
+                        <ng-container [ngTemplateOutlet]="colTemplate" [ngTemplateOutletContext]="{data:el}"></ng-container>
+                    </td>
+                </tr>
             </tbody>
           </table>
      </div>

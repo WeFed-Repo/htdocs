@@ -9,12 +9,16 @@ import { Component,OnInit, Input, ViewChild, TemplateRef} from '@angular/core';
 
 export class PModelloContent  implements OnInit {
   @Input() textIntro;
-  @Input() headingsCol:Array<object>;
+  @Input() headingsCol:Array<any>;
+  @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;
   @Input() DataFromService;
  
   
   constructor() { }
+  dos() {
+    alert('');
+  }
   @ViewChild('MacroAssetClass', { static: true }) MacroAssetClass;
   @ViewChild('Peso', { static: true }) Peso;
   @ViewChild('AssetClass', { static: true }) AssetClass;
@@ -38,5 +42,6 @@ export class PModelloContent  implements OnInit {
     this.colsTemplate.push(this.Importo);
     this.colsTemplate.push(this.Fondo);
     this.colsTemplate.push(this.btnId);
+    console.log(this.DataFromService);
   }
 }

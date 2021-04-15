@@ -1,10 +1,10 @@
 <div>
     <p [innerHTML]="textIntro"></p>
-    <simple-table  [headingsCol]="headingsCol" [rowData]="rowData" [colsTemplate]="colsTemplate" [colsThTemplate]="colsThTemplate"></simple-table>
+    <simple-table  [headingsCol]="headingsCol" [rowData]="rowData" [cellClassName]="cellClassName" [colsTemplate]="colsTemplate" [colsThTemplate]="colsThTemplate"></simple-table>
     <!--template header-->
-    <ng-template #importi let-data="data" >
+    <ng-template #importi let-data="data" [DataFromService]="DataFromService">
         {{data.title}}
-        <input class="form-control" type="text" maxlength="10" size="9" *ngIf="data.id==='importi'" >
+        <input class="form-control" type="text" name="totinv{{DataFromService[0].idaa}}" id= "totinv{{DataFromService[0].idaa}}" maxlength="10" size="9" *ngIf="data.id==='importi'" (click)="dos()">
      </ng-template>
 
     <!--template row-->

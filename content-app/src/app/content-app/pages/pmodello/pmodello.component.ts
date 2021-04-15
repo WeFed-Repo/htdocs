@@ -31,14 +31,14 @@ export class PModello  implements OnInit {
   //dati per le tabelle
 
   //instestazioni di colonna
-  headingsCol:Array<object> = [
-     {title:'Macro Asset Class', class:""},
-     {title:'Peso', class:""},
-     {title:'Asset Class', class:""},
-     {title:'Peso', class:""},
-     {title:'Importo da investire', class:"",id:'importi'},
-     {title:'Fondo', class:""},
-     {title:'', class:""}
+  headingsCol:Array<any> = [
+     {title:'Macro Asset Class', class:"center"},
+     {title:'Peso',  class:"center"},
+     {title:'Asset Class',  class:"center"},
+     {title:'Peso',  class:"center"},
+     {title:'Importo da investire',  class:"center",id:'importi'},
+     {title:'Fondo',  class:"center"},
+     {title:'',  class:"center"}
    ]
   
   //dati per le righe di tutte le tabelle rowspan costruiti tramite span in html
@@ -107,7 +107,10 @@ export class PModello  implements OnInit {
         },
       ],
   }
- 
+  //array di classi per le calle delle tabelle
+  cellClassName:Array<any> = [
+    'left', 'right','left','right','right','left','center'
+  ]
   // Inizializzazione
   ngOnInit(){
     this.pModelli=this.pmodelloService.returnPmodelArray();
