@@ -35,6 +35,21 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-ico_ass_previdenza:before {
+  content: "\ea12";
+}
+.icon-ico_ass_protezione_finanziamento:before {
+  content: "\ea13";
+}
+.icon-ico_ass_vita_1:before {
+  content: "\ea14";
+}
+.icon-ico_ass_vita_2:before {
+  content: "\ea15";
+}
+.icon-ico_ass_persona:before {
+  content: "\ea16";
+}
 .icon-operatore:before {
   content: "\ea0b";
 }
