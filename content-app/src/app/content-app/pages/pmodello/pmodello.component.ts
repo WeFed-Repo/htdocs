@@ -24,10 +24,28 @@ export class PModello  implements OnInit {
   getArrayValori = (index,minI, maxI) => {
     let ArrayValori = []
     for (let i = minI; i <=maxI; i++) {
-      ArrayValori.push(Number([this.pmodelloService.returnPmodelArray()[index].dataFromService[i].value]));
+      ArrayValori.push(Number(
+        [
+          this.pmodelloService.returnPmodelArray()[index].dataFromService[i].value
+        ]
+        )
+      );
     }
     return ArrayValori;
   }
+  getArrayIdac = (index,minI, maxI) => {
+    let ArrayIdac = []
+    for (let i = minI; i <=maxI; i++) {
+      ArrayIdac.push(Number(
+        [
+          this.pmodelloService.returnPmodelArray()[index].dataFromService[i].idac
+        ]
+        )
+      );
+    }
+    return ArrayIdac;
+  }
+ 
   //dati per le tabelle
 
   //instestazioni di colonna
@@ -54,9 +72,9 @@ export class PModello  implements OnInit {
           }), 
           AssetClass: ['Liquidita'], 
           Pesi: this.getArrayValori(0,0,0),
-          Importo:['0'],
-          Fondo:[],
-          btnId:['']
+          Importo:this.getArrayIdac(0,0,0),
+          Fondo:this.getArrayIdac(0,0,0),
+          btnId: {idac: this.getArrayIdac(0,0,0),labelOv:'SIC'}
         },
         { 
           MacroAssetClass: 'Obbligazionario	', 
@@ -65,9 +83,9 @@ export class PModello  implements OnInit {
           }), 
           AssetClass: ['Obbligazionario Governativo', 'Obbligazionario Globale', 'Obbligazionario Corporate'], 
           Pesi: this.getArrayValori(0,1,3),
-          Importo:['0','0','0'],
-          Fondo:['','',''],
-          btnId:[]
+          Importo:this.getArrayIdac(0,1,3),
+          Fondo: this.getArrayIdac(0,1,3),
+          btnId: {idac: this.getArrayIdac(0,1,3),labelOv:'SIC'}
         }
       ],
       1:
@@ -79,9 +97,9 @@ export class PModello  implements OnInit {
           }), 
           AssetClass: ['Azionario Europa','Azionari America','Azionario Globale'], 
           Pesi: this.getArrayValori(1,0,2),
-          Importo:['0','0','0'],
-          Fondo:['','',''],
-          btnId:['','','']
+          Importo:this.getArrayIdac(1,0,2),
+          Fondo:this.getArrayIdac(1,0,2),
+          btnId: {idac: this.getArrayIdac(1,0,2),labelOv:'PRU'}
         },
         { 
           MacroAssetClass: 'Obbligazionario	', 
@@ -90,9 +108,9 @@ export class PModello  implements OnInit {
           }),
           AssetClass: ['Obbligazionario Emergenti', 'Obbligazionario High Yield', 'Obbligazionario Governativo','Obbligazionario Globale','Obbligazionario Corporate'], 
           Pesi: this.getArrayValori(1,3,7),
-          Importo:['0','0','0','0','0'],
-          Fondo:['','','','',''],
-          btnId:[]
+          Importo:this.getArrayIdac(1,3,7),
+          Fondo:this.getArrayIdac(1,3,7),
+          btnId: {idac: this.getArrayIdac(1,3,7),labelOv:'PRU'}
         },
         { 
             MacroAssetClass: 'Monetario', 
@@ -101,12 +119,14 @@ export class PModello  implements OnInit {
             }),
             AssetClass: ['Liquidita'], 
             Pesi: this.getArrayValori(1,8,8),
-            Importo:['0'],
-            Fondo:[],
-            btnId:[]
+            Importo:this.getArrayIdac(1,8,8),
+            Fondo:this.getArrayIdac(1,8,8),
+            btnId: {idac: this.getArrayIdac(1,8,8),labelOv:'PRU'}
         },
       ],
   }
+
+  
   //array di classi per le calle delle tabelle
   cellClassName:Array<any> = [
     'left', 'right','left','right','right','left','center'

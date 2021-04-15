@@ -1,5 +1,5 @@
 import { Component,OnInit, Input, ViewChild, TemplateRef} from '@angular/core';
-
+declare function calcolaPerc(valori,importo);
 
 @Component({
   selector: 'pmodello-content',
@@ -14,11 +14,15 @@ export class PModelloContent  implements OnInit {
   @Input() rowData:Array<object>;
   @Input() DataFromService;
  
+ 
   
   constructor() { }
-  dos() {
-    alert('');
+  calcImporti(e,valori) {
+    const c = e.target.value.replace(/[^0-9]/g ,'');
+    e.target.value = c;
+    calcolaPerc(valori, c)
   }
+ 
   @ViewChild('MacroAssetClass', { static: true }) MacroAssetClass;
   @ViewChild('Peso', { static: true }) Peso;
   @ViewChild('AssetClass', { static: true }) AssetClass;
@@ -42,6 +46,7 @@ export class PModelloContent  implements OnInit {
     this.colsTemplate.push(this.Importo);
     this.colsTemplate.push(this.Fondo);
     this.colsTemplate.push(this.btnId);
-    console.log(this.DataFromService);
+   
+    
   }
 }
