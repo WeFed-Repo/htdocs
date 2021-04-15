@@ -121,7 +121,8 @@
         #main .pagecont {
             /* Il padding verticale permette di scorrere il content senza che resti nascosto dall'area promo
                 decidere se ricavarlo in maniera dinamica dall'altezza di tale area*/
-            padding: 15px 25px 200px 15px;
+            padding: 15px 25px 250px 15px;
+            background: #344a86;
         }
 
 
@@ -311,11 +312,25 @@
 
         .bottom-promo {
             width:100%; 
-            height:200px; 
-            background-color: #fcfcfc; 
+            background: url(./img/marmo_background.jpg) no-repeat center center;
+            background-size: cover; 
             position: fixed; 
             bottom: 0px;
             max-width: 640px;
+        }
+
+        .wrapper-visual {
+            max-width: 380px;
+            width:100%;
+            margin: 0 auto;
+        }
+
+        .wrapper-visual .visual {
+            background: url(./img/bg_blue_stories_card@2x.png) no-repeat center center;
+            background-size: contain;
+            width:80%;
+            padding-bottom: 55%;
+            margin: -40px auto 20px auto;            
         }
 
         .wrapper-cta {
@@ -323,14 +338,13 @@
             width:100%;
             justify-content: space-around;
             margin-bottom: 20px;
-            margin-top: 20px;
-            position: absolute; 
+            margin-top: 20px; 
             bottom: 0px;
         }
 
         .wrapper-cta .cta {
             display: inline-block;
-            margin: 0px 10px;
+            margin: 0px 20px;
             background: #344a86;
             line-height: 15px;
             font-size: 14px;
@@ -372,13 +386,18 @@
 
                 <h1><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></h1>
                 
-                <p>Nulla ornare rutrum neque, vitae cursus tortor dignissim id. Suspendisse eget feugiat eros. Cras non maximus eros.</p>    
+                <p>Nulla ornare rutrum neque, vitae cursus tortor dignissim id. Suspendisse eget feugiat eros. Cras non maximus eros.</p>
+
+                <p>Nulla ornare rutrum neque, vitae cursus tortor dignissim id. Suspendisse eget feugiat eros. Cras non maximus eros.</p>
 
             </div>   
 
         </div>        
 
         <div class="bottom-promo">
+            <div class="wrapper-visual">
+                <div class="visual"></div>
+            </div>
             <div class="wrapper-cta">
                 <a class="cta" href="#">CTA very long long text</a>
             </div>
