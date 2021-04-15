@@ -1,136 +1,235 @@
- /* Oggetti generici */
-    .loading {background-image: url("../img/loading.gif");
-    background-repeat:no-repeat;
-    background-position:center center}
+@charset "UTF-8";
+/* Offerta scaduta */
+.sml div.offerta-scaduta {
+  width: 100%;
+  padding: 60px 15px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  color: #ccc;
+}
+.sml .disclaimer {
+  border-top: solid 1px #eee;
+  padding: 20px 14px 10px;
+  margin: 0 -14px;
+}
+.sml.disabled {
+  /* Caso disabilitato */
+}
+.sml.disabled .editable-field-wrapper {
+  background: #eee;
+  color: #aaa;
+}
+.sml.disabled .editable-field-wrapper input {
+  color: #aaa;
+  background: transparent;
+}
+.sml.disabled .editable-field-wrapper::after {
+  color: #aaa;
+}
+.sml.disabled .editable-field-wrapper .slider-output {
+  color: #737373;
+}
+.sml.disabled .editable-field-wrapper .ui-slider {
+  background-color: #eee;
+}
+.sml.disabled .editable-field-wrapper .ui-slider .ui-slider-range {
+  background-image: linear-gradient(to right, #666, #ccc);
+}
+.sml.disabled .results .result-box.rata {
+  color: #737373 !important;
+}
 
-	/* Loading */
-	.loading>* {visibility:hidden}
-    .sml.loading {min-height:200px}
-	
-	/* BT in modale */
-	.modal .table-hasScrollbar-wrapper, .modal .bootstrap-table {margin:0;padding:0}
-	.modal .bootstrap-table table {border:solid 1px #eee}
+/* Oggetti dedicati */
+.configuratore .top-evidente {
+  text-align: center;
+}
 
-	/* Declinazioni form disabilitati */
-	.radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {background-color:#aaa}
+/* Countdown */
+.cd-wrapper {
+  width: 340px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+  background: transparent url(../img/scadenza_countdown.png) no-repeat left center;
+  background-size: 58px;
+}
+.cd-wrapper span.cd-label {
+  font-weight: bold;
+  color: #1d2d53;
+  font-size: 16px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
 
-	/* Replacement glifo modale */
-	.modal .modal-header .iconclose {
-		width: 30px;
-		height: 30px;
-		background-color: transparent;
-		border-radius: 50%;
-		border: solid 2px #555;
-		line-height: 25px;
-		text-align: center;
-		font-size: 26px;
-		margin: 0;
-		display: inline-block;
-		color: #555;
-		text-decoration: none !important;
-	}
+.countdown {
+  width: 210px;
+  margin: 0 auto;
+}
 
-	/* Offerta scaduta */
-	.sml div.offerta-scaduta {
-		width:100%;
-		padding: 60px 15px;
-		font-size:30px;
-		text-transform:uppercase;
-		font-weight:bold;
-		text-align:center;
-		display:inline-block;
-		color:#ccc;
-	}
+.countdown-inline {
+  width: 210px;
+  display: inline-block;
+}
+.countdown-inline .cdblock {
+  width: 33.3331%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+}
+.countdown-inline .cdblock span {
+  width: 100%;
+  clear: both;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+.countdown-inline .cdblock span.time-countdown {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -3px;
+  font-weight: normal;
+  width: 100%;
+  clear: both;
+}
+.countdown-inline .cdblock.giorni span.time-countdown {
+  font-weight: bold;
+  color: #2F9988;
+}
 
-    /* Bordature */
-    .bordered-top {border-top: solid 1px #eee; padding-top:20px;}
+@media (max-width: 767px) {
+  .cd-wrapper {
+    padding: 0 0 0 60px;
+    width: 270px;
+  }
+}
+/* Blocchi di input */
+.slider-input {
+  display: block;
+  font-size: 18px;
+  width: 120px;
+  padding: 5px 0 5px 10px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin: 0;
+  float: none;
+  clear: both;
+  background: transparent;
+}
 
-    /* Inner bordered blocks */
-    .flex-bordered {padding:0 30px 30px 30px}
-    .bordered-between {display:flex;margin:0 -40px;}
-    .bordered-between .flex-element {flex:1; padding:20px 40px; border-left: solid 1px #eee;margin-bottom:0;}
-    .bordered-between .flex-element:first-child {border-left:0 none;}
+.slider-output {
+  font-size: 18px;
+  width: 100px;
+  padding: 6px 10px;
+  position: relative;
+  display: block;
+  color: #2f9988;
+  margin: 10px auto 20px;
+  float: none;
+  clear: both;
+}
 
-    /* Oggetti dedicati */
-    .configuratore .top-evidente {text-align:center}
-    .slider-input {display:block;font-size:18px;width:120px;padding: 5px 0 5px 10px; border:solid 1px #ccc;border-radius:5px; position:relative;
-    margin:0;float:none;clear:both; background:transparent; }
-    .slider-output {font-size:18px; width:100px;padding: 6px 10px; position:relative; display:block; color:#2f9988;
-    margin:10px auto 20px;float:none;clear:both;}
+.editable-field-wrapper {
+  border: solid 1px #ddd;
+  position: relative;
+  width: 150px;
+  padding: 0 40px 0 0;
+  margin: 10px auto 20px;
+  border-radius: 4px;
+  background: #fbfbfb;
+}
+.editable-field-wrapper.importo::after {
+  content: "€";
+  position: absolute;
+  top: 5px;
+  font-size: 18px;
+  right: 10px;
+  color: #2f9988;
+  border-radius: 3px;
+}
+.editable-field-wrapper input {
+  border: 0;
+  color: #2f9988;
+}
 
-    /* Offerta */
-    .cd-wrapper {width:340px; margin:0 auto; display:inline-block; vertical-align:top; 
-	background:transparent url(../img/scadenza_countdown.png) no-repeat left center; background-size: 58px;}
-	.cd-wrapper span.cd-label {
-		font-weight: bold;
-		color:#1d2d53;
-		font-size:16px;
-		width: 100%;
-		padding: 0; 
-		margin-bottom:10px;
-	}
-	.countdown {width:210px;margin:0 auto}
-	.countdown-inline {width:210px; display:inline-block;}
-	.countdown-inline .cdblock {width:33.3331%;margin:0;padding:0;display:inline-block; text-align:center;}
-	.countdown-inline .cdblock span {width:100%;clear:both;display:block; text-transform:uppercase; font-weight:bold;font-size:12px;}
-	.countdown-inline .cdblock span.time-countdown {font-weight:bold; font-size:50px;line-height:50px;letter-spacing:-3px;font-weight:normal;width:100%;clear:both;}
-    .countdown-inline div.cdblock.giorni span.time-countdown {font-weight:bold; color: #2F9988}
-	
-    /* Blocchi di input */
-    .editable-field-wrapper { border: solid 1px #ddd; position:relative;width:150px; padding:0 40px 0 0; margin: 10px auto 20px; border-radius:4px; background:#fbfbfb}
-    .editable-field-wrapper.importo::after { content: '\20AC';
-    position: absolute;
-    top: 5px;
-    font-size: 18px;
-    right: 10px;
-    color: #2f9988;
-    border-radius: 3px;}
-    .editable-field-wrapper input {border: 0; color:#2f9988;}
+/* Risultati */
+.results {
+  width: 100%;
+  display: flex;
+  min-height: 30px;
+  justify-content: space-between;
+}
+.results.disabled {
+  opacity: 0.6;
+}
+.results.disabled .result-box .btn-icon-help {
+  display: none;
+}
+.results .result-box {
+  flex-grow: 1;
+  padding: 8px 15px;
+  border: solid 1px #ccc;
+  flex-basis: 20%;
+  margin: 0 0 15px 15px;
+  text-align: center;
+  background: transparent none no-repeat left bottom;
+  background-size: auto 80%;
+  position: relative;
+}
+.results .result-box:first-child {
+  margin-left: 0;
+}
+.results .result-box.rata {
+  color: #00987f;
+}
+.results .result-box span.result-label {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+.results .result-box span.result {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  font-size: 25px;
+  line-height: 25px;
+}
+.results .result-box .btn-icon-help {
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.results .result-box.spese {
+  background-image: url(../img/prev_spese.png);
+}
+.results .result-box.tan {
+  background-image: url(../img/prev_tan.png);
+}
+.results .result-box.taeg {
+  background-image: url(../img/prev_taeg.png);
+}
+.results .result-box.rate {
+  background-image: url(../img/prev_rate.png);
+}
+@media (max-width: 767px) {
+  .results {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .results .result-box {
+    margin: 0 0 15px;
+  }
+}
 
-    /* Risultati */
-    .results {width:100%;display:flex;min-height:30px;justify-content:space-between}
-    .results.disabled {opacity:0.6}
-    .results .result-box {flex-grow:1;padding:8px 15px;border: solid 1px #ccc;flex-basis:20%;margin:0 0 15px 15px;text-align:center;
-		background: transparent none no-repeat left bottom;background-size:auto 80%; position:relative;}
-    .results .result-box:first-child {margin-left:0;}
-    .results .result-box span.result-label {clear:both;display:inline-block;width:100%;text-transform:uppercase; font-size:16px;font-weight:bold;}
-    .results .result-box span.result {clear:both;display:inline-block;width:100%;font-size:25px;line-height:25px;}
-    .results .result-box.rata {color:#00987f;}
-
-	.results .result-box .btn-icon-help {text-decoration:none; position:absolute; right:5px;top:5px;}
-	.results.disabled .result-box .btn-icon-help {display:none}
-
-	.results .result-box.spese {background-image: url(../img/prev_spese.png)}
-	.results .result-box.tan {background-image: url(../img/prev_tan.png)}
-	.results .result-box.taeg {background-image: url(../img/prev_taeg.png)}
-	.results .result-box.rate {background-image: url(../img/prev_rate.png)}
-
-	.sml .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
-
-
-	/* Caso disabilitato */
-	.sml.disabled .editable-field-wrapper { background:#eee;color:#aaa}
-	.sml.disabled .editable-field-wrapper input {color:#aaa; background:transparent}
-	.sml.disabled .editable-field-wrapper::after {color:#aaa}
-	.sml.disabled .slider-output {color:#737373}
-	.sml.disabled .ui-slider .ui-slider-range {background-image: linear-gradient(to right, #666, #ccc)}
-	.sml.disabled .ui-slider {background-color: #eee}
-	.sml.disabled .results .result-box.rata {color:#737373 !important}
-
-
-	@media (max-width:767px) {
-
-		/* Fix no margin per bordered */
-		.no-margin-section.bordered {width:auto; max-width:none;}
-
-		.flex-bordered {padding:0}
-		.bordered-between {flex-direction:column;margin: 0;}
-		.bordered-between .flex-element{border: 0 none; border-top:solid 1px #eee;padding:25px 0 25px;}
-		.bordered-between .flex-element:first-child {border-top:none;}
-
-		.cd-wrapper {padding:0 0 0 60px; width:270px;}
-
-
-		.results {flex-direction:column; padding-top:20px;}
-		.results .result-box {margin:0 0 15px}
-	}
+/*# sourceMappingURL=configuratore_lending.css.map */

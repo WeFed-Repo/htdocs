@@ -337,4 +337,6 @@
     }
 }
 
-   
+/* Declinazioni form disabilitati */
+.radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {background-color:#aaa}
+

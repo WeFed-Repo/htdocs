@@ -236,7 +236,6 @@ var startLending = function (params) {
         sml.prodotto = params.objConf.CodiceProdotto;
         sml.datascadenza = (params.objConf.DataScadenza) ? new Date(params.objConf.DataScadenza).valueOf() : null;
 
-        console.log(params)
         // Visibilita' del countdown
         sml.countdownVisible = (params.configuration && typeof params.configuration.countDownVisible != "undefined") ? params.configuration.countDownVisible : true;
 
@@ -412,20 +411,27 @@ var startLending = function (params) {
         // ################## FUNZIONI ########################
         // Acquisizione dei dati dall'handler esterno
         getLendingData: function (data) {
-
-            // Eventuali rielaborazioni dei dati ricevuti
-            if (data && !isNaN(data["SpeseIstruttoria"])) {
-                data["SpeseTotali"] = 0;
-                data["SpeseTotali"] += (!isNaN(data["SpeseIstruttoria"])) ? data["SpeseIstruttoria"] : 0;
-                data["SpeseTotali"] += (!isNaN(data["SpeseErogazione"])) ? data["SpeseErogazione"] : 0;
-                data["SpeseTotali"] += (!isNaN(data["SpeseInvio"])) ? data["SpeseInvio"] : 0;
-                data["SpeseTotali"] += (!isNaN(data["SpeseRata"])) ? data["SpeseRata"] : 0;
-            }
-
-            sml.setResults(data);
-            sml.modaldata = data;
-            sml.modaldata["RichiestaSimulazione"] = sml.request;
             sml.isWaiting = false;
+            if (data) {
+                // Eventuali rielaborazioni dei dati ricevuti
+                if (data && !isNaN(data["SpeseIstruttoria"])) {
+
+                    data["SpeseTotali"] = 0;
+                    data["SpeseTotali"] += (!isNaN(data["SpeseIstruttoria"])) ? data["SpeseIstruttoria"] : 0;
+                    data["SpeseTotali"] += (!isNaN(data["SpeseErogazione"])) ? data["SpeseErogazione"] : 0;
+                    data["SpeseTotali"] += (!isNaN(data["SpeseInvio"])) ? data["SpeseInvio"] : 0;
+                    data["SpeseTotali"] += (!isNaN(data["SpeseRata"])) ? data["SpeseRata"] : 0;
+
+                }
+                sml.setResults(data);
+                sml.modaldata = data;
+                sml.modaldata["RichiestaSimulazione"] = sml.request;
+            }
+            else
+            {
+                sml.resetResults();             
+                
+            }
             sml.wrap.removeClass("loading");
         },
 

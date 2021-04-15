@@ -3,28 +3,17 @@
         <table>
             <thead>
                 <tr>
-                    <th *ngFor="let col of TableColumnsLabel;index as i" id="{{ columsid[i] }}"> 
-                      {{col}}
-                      <div *ngIf='columsid[i]==="Importo"'>
-                            <input class="form-control" type="text" maxlength="10" size="9">
-                      </div> 
+                    <th *ngFor="let col of headingsCol;index as i"> 
+                       <ng-container [ngTemplateOutlet]="colsThTemplate" [ngTemplateOutletContext]="{data:col}"></ng-container>
                     </th>
                 </tr>
-            </thead> 
+            </thead>
+            
             <tbody> 
-             <tr *ngFor="let el of dateTable;index as i" [ngClass]="{'pari': i %2 == 1}">
-                <td *ngFor="let col of columns"  [ngClass]="{'pad_0': isObject(el[col])}">
-                    <ng-container *ngIf='isObject(el[col]); else simplecell'>
-                        <div class="block-table" *ngFor="let el of el[col]">
-                            <span class="block-cell-table">
-                                {{el}}
-                            </span>
-                        </div>
-                    </ng-container>
-                    <ng-template #simplecell>
-                        {{el[col]}}
-                    </ng-template>
-                </td>
+            <tr *ngFor="let el of rowData;index as i" [ngClass]="{'pari': i %2 == 1}">
+                <td *ngFor="let colTemplate of colsTemplate"  [ngClass]="'pad_0'">
+                   <ng-container [ngTemplateOutlet]="colTemplate" [ngTemplateOutletContext]="{data:el}"></ng-container>
+                 </td>
             </tr>
             </tbody>
           </table>

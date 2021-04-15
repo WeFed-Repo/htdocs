@@ -1011,7 +1011,7 @@ var defSim = {
 
 	  // Esempio handler di blocco dell'interfaccia
 	  var esempioHandlerBlocco = function(){
-		$("#prestitoSubmit").attr("disabled",true);
+		  $("#prestitoSubmit").attr("disabled",true);
 	  }
 
 	  // Esempio handler di calcolo (con sblocco finale dell'interfaccia)
@@ -1310,7 +1310,8 @@ var defSim = {
           console.log("- DATI RICEVUTI -");
           console.log(dataObject);
           callback(dataObject);
-          // Sblocco dell'interfaccia di richiesta
+          
+          // Sblocco dell'interfaccia di richiesta (o blocco nel caso di mancato invio dell'oggetto dataObject)
           $("#prestitoSubmit").attr("disabled",false);
 
         },500);
@@ -1333,60 +1334,16 @@ var defSim = {
             // Modale delle spese
             "spese": function(modaldata) {
                 _openSpese(modaldata);
-
-                /*
-                // Dati ricevuti per la modale
-                console.log("- DATI MODALE SPESE");
-                console.log(modaldata);
-                // Esempio compilazione delle spese
-                $("#esempio_modale_spese").find(".modal-body").empty().append(
-                        $("<p>").html("Spese Istruttoria: "+ modaldata.SpeseIstruttoria +" &euro;<br>" +
-                        "Commissione Erogazione: "+ modaldata.SpeseErogazione +" &euro;<br>"+
-                        "Spese Incasso Rata: "+ modaldata.SpeseRata +" &euro;<br>"+
-                        "Spese Avvisatura: "+modaldata.SpeseInvio +" &euro;*<br>"),
-                        $("<p>").addClass("note").html("*applicate solo nel caso in cui la rata non venga pagata mediante addebito su un conto corrente accesso presso l’istituto erogato.")
-                )
-                $("#esempio_modale_spese").modal();
-                */
             },
 
             // Modale con il piano di ammortamento
             "rata": function(modaldata) {
               _openPianoAmmortamento(modaldata);
 
-              /*  
-              console.log("- DATI MODALE PIANO DI AMMORTAMENTO");
-                console.log(modaldata);
-                
-                // Alterazione runtime del corpo della modale, prima dell'innesco della stessa (es: costruzione tabella, ecc...)
-                $("#esempio_corpo_modale_rata").empty().append($("<p>").append("Rate da mostrare = " + modaldata.NumeroRate));
-
-                // Innesco della modale a valle del tutto
-                $("#esempio_modale_rata").modal();
-              */
             }
 
       }
   </script>
-  <!-- Esempio modale rata 
-  <div class="modal fade" data-modal="default" id="esempio_modale_rata">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale rata</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
-      <div class="modal-body" id="esempio_corpo_modale_rata"></div></div>
-    </div>
-  </div>
-  Fine modale rata -->
-  <!-- Esempio modale spese
-  <div class="modal fade" data-modal="default" id="esempio_modale_spese">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content"><div class="modal-header"><h5 class="modal-title">Titolo della modale spese</h5><a data-dismiss="modal" arial-label="close"><img src="./fe/img/icon/close.svg"></a></div>
-      <div class="modal-body">
-      </div></div>
-    </div>
-  </div>
- Fine modale spese -->
-  <!-- FINE ESEMPIO DI CONTROLLO DELLE MODALI -->
-
 
   <script type="text/javascript" src="./fe/js/configuratore_lending.js"></script>
   <script type="text/javascript" >

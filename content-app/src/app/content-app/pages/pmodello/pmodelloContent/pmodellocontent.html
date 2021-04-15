@@ -1,4 +1,52 @@
 <div>
     <p [innerHTML]="textIntro"></p>
-    <simple-table [dateTable]="dataTable" [TableColumnsLabel]="TableColumnsLabel"></simple-table>
+    <simple-table  [headingsCol]="headingsCol" [rowData]="rowData" [colsTemplate]="colsTemplate" [colsThTemplate]="colsThTemplate"></simple-table>
+    <!--template header-->
+    <ng-template #importi let-data="data" >
+        {{data.title}}
+        <input class="form-control" type="text" maxlength="10" size="9" *ngIf="data.id==='importi'" >
+     </ng-template>
+
+    <!--template row-->
+    <ng-template #MacroAssetClass let-data="data">
+       {{data.MacroAssetClass}}
+    </ng-template>
+    <ng-template #Peso let-data="data">
+        {{data.Peso}}%
+    </ng-template>
+    <ng-template #AssetClass let-data="data">
+        <div class="block-table" *ngFor="let el of data.AssetClass">
+            <span class="block-cell-table">
+                {{el}}
+            </span>
+        </div>
+    </ng-template>
+    <ng-template #Pesi let-data="data">
+       <div class="block-table" *ngFor="let el of data.Pesi">
+            <span class="block-cell-table">
+                {{el}}%
+            </span>
+        </div>
+    </ng-template>
+    <ng-template #Importo let-data="data" [DataFromService]="DataFromService">
+        <div class="block-table" *ngFor="let el of data.Importo">
+            <span class="block-cell-table">
+                {{el}}
+            </span>
+        </div>
+     </ng-template>
+     <ng-template #Fondo let-data="data">
+        <div class="block-table" *ngFor="let el of data.Fondo">
+            <span class="block-cell-table">
+                {{el}}
+            </span>
+        </div>
+     </ng-template>
+     <ng-template #btnId let-data="data">
+        <div class="block-table" *ngFor="let el of data.btnId">
+            <span class="block-cell-table">
+                {{el}}
+            </span>
+        </div>
+     </ng-template>
 </div>

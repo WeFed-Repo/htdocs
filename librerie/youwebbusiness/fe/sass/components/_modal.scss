@@ -41,6 +41,21 @@
         }
         span { display: none; }
       }
+      /* Replacement per glifo modali "runtime" */
+      .iconclose {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 2px #555;
+        line-height: 25px;
+        text-align: center;
+        font-size: 26px;
+        margin: 0;
+        display: inline-block;
+        color: #555;
+        text-decoration: none !important;
+      }
       .modal-next {
         @include btnPalette($color:$greenLink, $bkg:$white, $bkg_hover:$gray7);
         border-radius: 1rem;

@@ -251,6 +251,7 @@
   position: relative;
   border: none;
   align-items: center;
+  /* Replacement per glifo modali "runtime" */
 }
 .modal .modal-dialog .modal-header .stepper,
 .not-floated-modal .modal-dialog .modal-header .stepper {
@@ -272,6 +273,21 @@
 .modal .modal-dialog .modal-header .close span,
 .not-floated-modal .modal-dialog .modal-header .close span {
   display: none;
+}
+.modal .modal-dialog .modal-header .iconclose,
+.not-floated-modal .modal-dialog .modal-header .iconclose {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: solid 2px #555;
+  line-height: 25px;
+  text-align: center;
+  font-size: 26px;
+  margin: 0;
+  display: inline-block;
+  color: #555;
+  text-decoration: none !important;
 }
 .modal .modal-dialog .modal-header .modal-next,
 .not-floated-modal .modal-dialog .modal-header .modal-next {
@@ -3837,6 +3853,11 @@ table .checkbox.radio label {
   margin-left: -68px;
 }
 
+/* Declinazioni form disabilitati */
+.radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {
+  background-color: #aaa;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -5901,6 +5922,64 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     width: 20%;
   }
 }
+/* Bordature */
+.bordered-top {
+  border-top: solid 1px #eee;
+  padding-top: 20px;
+}
+
+/* Inner bordered blocks */
+.flex-bordered {
+  padding: 0 30px 30px 30px;
+}
+
+.bordered-between {
+  display: flex;
+  margin: 0 -40px;
+}
+.bordered-between .flex-element {
+  flex: 1;
+  padding: 20px 40px;
+  border-left: solid 1px #eee;
+  margin-bottom: 0;
+}
+.bordered-between .flex-element:first-child {
+  border-left: 0 none;
+}
+
+@media (max-width: 767px) {
+  /* Fix no margin per bordered */
+  .no-margin-section.bordered {
+    width: auto;
+    max-width: none;
+  }
+
+  .flex-bordered {
+    padding: 0;
+  }
+
+  .bordered-between {
+    flex-direction: column;
+    margin: 0;
+  }
+  .bordered-between .flex-element {
+    border: 0 none;
+    border-top: solid 1px #eee;
+    padding: 25px 0 25px;
+  }
+  .bordered-between .flex-element:first-child {
+    border-top: none;
+  }
+}
+/* Loading */
+.loading > * {
+  visibility: hidden;
+}
+
+.sml.loading {
+  min-height: 200px;
+}
+
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
