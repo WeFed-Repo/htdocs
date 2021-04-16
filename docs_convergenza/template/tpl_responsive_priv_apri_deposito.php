@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/wscmn/js/ret/pdfobject.js"></script>
+<script type="text/javascript" src="/common/fe/assets/pdfobject.js"></script>
 <h2>Deposito titoli</h2>
 <div class="navfrontPage outerTab">
 	<div class="innerTab">

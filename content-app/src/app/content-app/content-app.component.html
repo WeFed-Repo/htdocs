@@ -13,7 +13,7 @@
     <!-- Fine navigatore spalla -->
     <div id="contenuti" class="contenuti col-sm-12 col-md-10">
         <!-- Template root -->
-        <overview *ngIf="contenuto==='overview'" [navto]="naviga" ></overview>
+        <overview *ngIf="contenuto==='overview'" [navto]="naviga" [setloading]="setloading"></overview>
         <top-selection *ngIf="contenuto==='topselection'" [setloading]="setloading"></top-selection>
         <pmodello *ngIf="contenuto==='pmodello'"></pmodello>
         <!-- Fine template root -->

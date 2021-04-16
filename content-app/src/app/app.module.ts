@@ -18,8 +18,9 @@ import { TabComponent } from './content-app/components/tabs/tab/tab.component';
 import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
 import { BoxLinkComponent } from './content-app/components/boxLink/boxLink.component';
 import { SimpleTableComponent } from './content-app/components/table/simpleTable.component';
-// Componenti funzionali trasversali
 
+// Componenti funzionali trasversali
+import { Disclaimer } from './content-app/components/disclaimer/disclaimer.component';
 
  
 @NgModule({  
@@ -34,7 +35,7 @@ import { SimpleTableComponent } from './content-app/components/table/simpleTable
     PModelloContent,
 
     //componenti generici
-    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent
+    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent, Disclaimer
 
   ],
   imports: [

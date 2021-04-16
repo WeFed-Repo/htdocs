@@ -20,7 +20,6 @@ export class TopSelection  implements OnInit {
 
   // Lettura dei dati
   updateData(){
-    this.setloading();
     this.httpClient.get(this.tsUrl).subscribe((data: any[])=>{
 
       // Controllo e manipolazione dei dati
@@ -29,15 +28,16 @@ export class TopSelection  implements OnInit {
       // Rimuove il loading
       this.setloading(false);
       
-    })  
+    })
   }
 
 
   // Inizializzazione
   ngOnInit(){
     console.log("top selection");
-    
-    this.updateData();
-    
   }
+
+  ngAfterViewInit() {
+    this.updateData();
+  };
 }

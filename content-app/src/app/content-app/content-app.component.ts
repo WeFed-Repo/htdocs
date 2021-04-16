@@ -1,4 +1,3 @@
-import { StaticReflector } from '@angular/compiler';
 import { Component,OnInit, Input} from '@angular/core';
 
 @Component({
@@ -10,7 +9,7 @@ import { Component,OnInit, Input} from '@angular/core';
 export class ContentAppComponent  implements OnInit {
 
   // Contenuto di default
-  @Input() contenuto = "topselection";
+  @Input() contenuto = "overview";
 
   constructor() {}
 
