@@ -3,6 +3,9 @@ import { Component,OnInit, Input} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import {ElencoFondi} from './elencofondi/elencofondi';
 
+// Variabili e funzioni globali
+import { GlobalVars } from "../../core/globalVars.js";
+
 @Component({
   selector: 'top-selection',
   templateUrl: './topselection.component.html'
@@ -11,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class TopSelection  implements OnInit {
 
   // Variabili di configurazione
-  tsUrl = "/assets/json/top_selection.json";
+  tsUrl = GlobalVars.apibaseurl + "/fida/top_selection.json";
 
   constructor(private httpClient: HttpClient) {}
 

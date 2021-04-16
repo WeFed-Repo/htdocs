@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import  { createCustomElement } from '@angular/elements';
 import { ContentAppComponent } from './content-app/content-app.component';
 
-
 // Viste e pagine (diverranno moduli)
 import { Overview} from "./content-app/pages/overview/overview.component";
 import { TopSelection} from "./content-app/pages/topselection/topselection.component";
@@ -28,6 +27,9 @@ import { Disclaimer } from './content-app/components/disclaimer/disclaimer.compo
     // Componente principale
     ContentAppComponent, 
 
+    // Variabili e funzioni "trasversali"
+   
+
     // Sottocomponenti
     Overview, TopSelection,PModello,
 
@@ -42,7 +44,8 @@ import { Disclaimer } from './content-app/components/disclaimer/disclaimer.compo
     BrowserModule,
 
     // Componenti funzionali
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: []
 })
