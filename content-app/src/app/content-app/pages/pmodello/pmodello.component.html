@@ -18,18 +18,22 @@
    
     <tabs>
         <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
-             <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsCol" [rowData]="rowsData[i]" [cellClassName]="cellClassName"></pmodello-content>
+             <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsCol" [rowData]="rowsData[i]" [cellClassName]="cellClassName" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
         </tab>
     </tabs>
-    <div id="modaleFondiSuggeriti" class="modal fade" role="dialog">
+
+    <!-- modale per i fondi suggeriti -->
+    <div id="modaleFondiSuggeriti" class="modal fade" role="dialog" #modaleFondiSuggeriti>
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">×</button>
-              <h1 class="modal-title">TITOLO MODALE</h1>
+              <h1 class="modal-title">Fondi selezionati per l'asset class Liquidit&agrave; del portafoglio {{typePortafoglio}}.</h1>
             </div>
             <div class="modal-body">
-              Contenuto modale
+               <div id="lef-cont" #modaleFondiSuggeritiContent>
+                    <p>Questi sono i <strong>migliori tre</strong> fondi corrispondenti al profilo di investimento selezionato.</p>
+                </div>
             </div>
             <div class="modal-footer">
                  <div class="align-right">

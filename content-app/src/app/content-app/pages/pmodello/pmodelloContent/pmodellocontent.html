@@ -2,7 +2,7 @@
     <p [innerHTML]="textIntro"></p>
     <simple-table  [headingsCol]="headingsCol" [rowData]="rowData" [cellClassName]="cellClassName" [colsTemplate]="colsTemplate" [colsThTemplate]="colsThTemplate"></simple-table>
     <!--template header-->
-    <ng-template #importi let-data="data" [DataFromService]="DataFromService">
+    <ng-template #importi let-data="data">
         {{data.title}}
         <input class="form-control" type="text" name="totinv{{DataFromService[0].idaa}}" id= "totinv{{DataFromService[0].idaa}}" maxlength="10" size="9" *ngIf="data.id==='importi'" (keyup)="calcImporti($event,DataFromService)">
      </ng-template>
@@ -29,11 +29,11 @@
         </div>
     </ng-template>
     
-    <ng-template #Importo let-data="data" [DataFromService]="DataFromService">
+    <ng-template #Importo let-data="data">
         <div class="block-table" *ngFor="let el of data.Importo;let i=index">
            <span class="block-cell-table">
-               <span id="val{{DataFromService[0].idaa}}-{{el}}"></span>
-               <input type="hidden" value="" id="hval{{DataFromService[0].idaa}}-{{el}}">
+               <span id="val{{DataFromService[0].idaa}}-{{el}}">0</span>
+               <input type="hidden" value="" id="hval{{DataFromService[0].idaa}}-{{el}}" #importoValue>
             </span>
         </div>
      </ng-template>
@@ -41,15 +41,15 @@
         <div class="block-table" *ngFor="let el of data.Fondo">
             <span class="block-cell-table">
                 <span id="txt{{DataFromService[0].idaa}}-{{el}}"></span>
-                <input type="hidden" value="" id="hisin{{DataFromService[0].idaa}}-{{el}}" class="pf-isin-{{DataFromService[0].idaa}}">
+                <input type="hidden" value="" id="hisin{{DataFromService[0].idaa}}-{{el}}" class="pf-isin-{{DataFromService[0].idaa}}" #isinValue>
             </span>
         </div>
      </ng-template>
      <ng-template #btnId let-data="data">
         <div class="block-table" *ngFor="let el of data.btnId.idac">
             <span class="block-cell-table">
-                <!-- (click)="openAlert(data.btnId.labelOv,DataFromService[0].idaa,el)" -->
-                <a type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#modaleFondiSuggeriti"  id="btn{{DataFromService[0].idaa}}-{{el}}">Seleziona Fondo</a>
+                <!-- (click)="openAlert(data.btnId.labelOv,DataFromService[0].idaa,el)" data-toggle="modal" data-target="#modaleFondiSuggeriti"-->
+                <a type="button" class="btn btn-primary btn-small"  id="btn{{DataFromService[0].idaa}}-{{el}}" data-toggle="modal" data-target="#modaleFondiSuggeriti" (click)="setFondiSuggeriti(data.btnId.labelOv,DataFromService[0].idaa,el)">Seleziona Fondo</a>
             </span>
         </div>
      </ng-template>

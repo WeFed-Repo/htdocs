@@ -1,12 +1,18 @@
 //servizio dove caricare i dati dei poratfogli modello
+import { Injectable } from '@angular/core';
 import { Pmodello } from './pmodello.model';
+import { HttpClient } from '@angular/common/http';
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}
 aValori['valori11'] = [{"idaa":"11","idac":"246","value":25},{"idaa":"11","idac":"247","value":20},{"idaa":"11","idac":"248","value":35},{"idaa":"11","idac":"404","value":20},{}]
 aValori['valori12'] = [{"idaa":"12","idac":"38","value":0},{"idaa":"12","idac":"70","value":0},{"idaa":"12","idac":"256","value":7},{"idaa":"12","idac":"65","value":12},{"idaa":"12","idac":"251","value":7},{"idaa":"12","idac":"252","value":10},{"idaa":"12","idac":"253","value":20},{"idaa":"12","idac":"254","value":12},{"idaa":"12","idac":"250","value":20},{"idaa":"12","idac":"255","value":12},{}]
-
+@Injectable({
+  //da angualar 6 non si inserisce più nell'array provider
+  providedIn: 'root'
+})
 export class PmodelloService {
+  constructor(private httpClient: HttpClient) {}
   private pmodelli:Array<Pmodello> = [
       new  Pmodello(
           "Difensivo", 
@@ -25,6 +31,16 @@ export class PmodelloService {
   //costruiamo un array che mi restituisca una copia
   returnPmodelArray() {
       return this.pmodelli.slice();
-      
   }
+  //funzione di chiamata per recuperare i fondi suggeriti dovrà essere in post per passare i
+ 
+  pmsUrl = "/assets/json/...";
+  callFondiSuggeriti(params) {
+     //chiamata in post per i fondi suggeriti
+    this.httpClient.post(this.pmsUrl,params).subscribe((data: any[])=>{
+
+      console.log(data);
+    })
+ }
+ 
 }

@@ -1,22 +1,25 @@
-import { Component,OnInit, Input, ViewChild, TemplateRef} from '@angular/core';
+import { Component,OnInit,ElementRef,ViewChild} from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 
 @Component({
   selector: 'pmodello',
   templateUrl: './pmodello.component.html',
-  providers:[PmodelloService]
+  
 })
 
 export class PModello  implements OnInit {
   //array di testi iniziali
   
   public pModelli:Array<Pmodello>;
+ 
+  
   //elementi dei box
   public titleBox:string;
   public textBox:string;
   public linkBox:string;
   public gotoBox:string;
+  public typePortafoglio:string;
  
   constructor(private pmodelloService: PmodelloService) { 
      
@@ -131,9 +134,33 @@ export class PModello  implements OnInit {
   cellClassName:Array<any> = [
     'left', 'right','left','right','right','left','center'
   ]
+  @ViewChild("modaleFondiSuggeriti") modaleFondiSuggeriti: ElementRef;
+  @ViewChild("modaleFondiSuggeritiContent") modaleFondiSuggeritiContent: ElementRef;
+  handleFondiSuggeriti(params) {
+  
+  //setto il tipo di portafoglio da includere nel testo della modale
+  switch(params.aa) {
+    case '11':
+      this.typePortafoglio = 'difensivo'
+      break;
+      case '12':
+        this.typePortafoglio = 'prudente'
+      break;
+    default:
+      
+  }
+  
+  //setto il loading alla modale
+  this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
+  //funzione di chiamata iniettata dal servizio
+  //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
+  this.pmodelloService.callFondiSuggeriti(params);
+
+  }
+  
+
   // Inizializzazione
   ngOnInit(){
     this.pModelli=this.pmodelloService.returnPmodelArray();
-   
   }
 }
