@@ -1,0 +1,61 @@
+{
+    "fondi" : [
+       
+        {
+            "Fidacode": "MSGBRCAE",
+            "Name": "MSIF Global Balanced Risk Control FoF A EUR",
+            "Isin": "LU0694238501",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "NORGFIAE",
+            "Name": "Nordea 1 Flexible Fixed Income BP Cap EUR",
+            "Isin": "LU0915365364",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PI956",
+            "Name": "Pictet-Multi Asset Global Opportunities R EUR",
+            "Isin": "LU0941349275",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "PIMGLME",
+            "Name": "PIMCO Global Core Asset Allocation E Cap EUR Hdg",
+            "Isin": "IE00B4YYY703",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RAIBIL",
+            "Name": "Raiffeisen Bilanciato Sostenibile R EUR",
+            "Isin": "AT0000785381",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "RF1277",
+            "Name": "Raiffeisenfonds Sicherheit VTA EUR",
+            "Isin": "AT0000743562",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        },
+        {
+            "Fidacode": "SFORZE",
+            "Name": "Anima Sforzesco A",
+            "Isin": "IT0000380722",
+            "AssetManagerCode": null,
+            "AssetManagerName": null,
+            "isPreferred": false
+        }
+    ]
+}
