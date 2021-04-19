@@ -631,6 +631,23 @@
 				"tpl": "tpl_tracciatura.php"
 			},
 			{
+				"nome": "Documenti",
+				"voices": [
+					{
+						"nome": "Contratti e proposte",
+						"voices" : [
+							{
+								"nome": "Firma",
+								"tpl": "tpl_documenti_firma.php",
+								"inlavorazione": true
+							}
+						]
+					}
+					 
+				]
+
+			},
+			{
 				"nome": "Pagina Widget",
 				"tpl": "tpl_pagina_widget.php"
 			}
