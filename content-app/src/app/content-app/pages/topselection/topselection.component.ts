@@ -14,7 +14,8 @@ import { GlobalVars } from "../../core/globalVars.js";
 export class TopSelection  implements OnInit {
 
   // Variabili di configurazione
-  tsUrl = GlobalVars.apibaseurl + "/fida/top_selection.json";
+  tsUrl = GlobalVars.apibaseurl + "/top_selection.json";
+  incomingData = {};
 
   constructor(private httpClient: HttpClient) {}
 
@@ -23,10 +24,12 @@ export class TopSelection  implements OnInit {
 
   // Lettura dei dati
   updateData(){
+
     this.httpClient.get(this.tsUrl).subscribe((data: any[])=>{
 
       // Controllo e manipolazione dei dati
-      console.log(data);
+      
+      this.incomingData = data;
 
       // Rimuove il loading
       this.setloading(false);
@@ -34,6 +37,8 @@ export class TopSelection  implements OnInit {
     })
   }
 
+
+  
 
   // Inizializzazione
   ngOnInit(){

@@ -1,8 +1,8 @@
 // Inizializzazione funzionale "locale"
-var ambiente  = ()=>{
+var ambiente  = function (){
     var ambiente = "local";
     return ambiente;
-}
+}();
 
 export const GlobalVars = {
     amb: ambiente,
