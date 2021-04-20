@@ -659,6 +659,15 @@ span.sell {
   text-align: center;
 }
 
+#fesFondoWrap .fundPanel.fundPanelImg .btn-icon {
+  width: auto;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: left;
+  height: auto;
+}
+
 .tab-wrap .documenti, .fundPanel {
   margin: 0;
 }
