@@ -1,4 +1,4 @@
-import { Component,OnInit,ElementRef,ViewChild} from '@angular/core';
+import { Component,OnInit,ElementRef,ViewChild,TemplateRef} from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 
@@ -20,7 +20,9 @@ export class PModello  implements OnInit {
   public linkBox:string;
   public gotoBox:string;
   public typePortafoglio:string;
- 
+  public dataFondiSel:string;
+  
+  
   constructor(private pmodelloService: PmodelloService) { 
      
   }
@@ -49,10 +51,10 @@ export class PModello  implements OnInit {
     return ArrayIdac;
   }
  
-  //dati per le tabelle
-
+  //elementi per la tabella del portafoglio
+ 
   //instestazioni di colonna
-  headingsCol:Array<any> = [
+  headingsColTablePm:Array<any> = [
      {title:'Macro Asset Class', class:"center"},
      {title:'Peso',  class:"center"},
      {title:'Asset Class',  class:"center"},
@@ -64,7 +66,7 @@ export class PModello  implements OnInit {
   
   //dati per le righe di tutte le tabelle rowspan costruiti tramite span in html
   //ogni array è una tabella per ogni tab
-  rowsData:any = {
+  rowsDataTablePm:any = {
     //prima tabella
      0:
       [
@@ -128,12 +130,28 @@ export class PModello  implements OnInit {
         },
       ],
   }
-
-  
-  //array di classi per le calle delle tabelle
-  cellClassName:Array<any> = [
+ //array di classi per le calle delle tabelle
+  cellClassNameTablePm:Array<any> = [
     'left', 'right','left','right','right','left','center'
   ]
+  
+  //elementi per la tabella dei suggeriti
+  headingsColTabellaSugg :Array<any> = [
+    {title:'', class:"center"},
+    {title:'Nome',  class:"center"},
+    {title:'Importo minimo prima sottoscrizione',  class:"center"}
+  ]
+  rowDataTabellaSugg: any = 
+   [
+    { 
+      RadioCell: '', 
+      Nome: '',
+      Importo: '' 
+    }
+   ]
+  
+ 
+  
   @ViewChild("modaleFondiSuggeriti") modaleFondiSuggeriti: ElementRef;
   @ViewChild("modaleFondiSuggeritiContent") modaleFondiSuggeritiContent: ElementRef;
   handleFondiSuggeriti(params) {
@@ -154,8 +172,12 @@ export class PModello  implements OnInit {
   this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
   //funzione di chiamata iniettata dal servizio
   //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
-  this.pmodelloService.callFondiSuggeriti(params);
-
+  this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
+    this.dataFondiSel = data['fondiSuggeriti'][0].Fidacode;
+    this.modaleFondiSuggeritiContent.nativeElement.classList.remove('loading')
+    console.log(data)
+  });
+  
   }
   
 

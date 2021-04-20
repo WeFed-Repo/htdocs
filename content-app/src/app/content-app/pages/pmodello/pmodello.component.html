@@ -18,7 +18,7 @@
    
     <tabs>
         <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
-             <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsCol" [rowData]="rowsData[i]" [cellClassName]="cellClassName" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
+             <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
         </tab>
     </tabs>
 
@@ -32,7 +32,10 @@
             </div>
             <div class="modal-body">
                <div id="lef-cont" #modaleFondiSuggeritiContent>
-                    <p>Questi sono i <strong>migliori tre</strong> fondi corrispondenti al profilo di investimento selezionato.</p>
+                    <p>Questi sono i <strong>migliori tre</strong> fondi corrispondenti al profilo di investimento selezionato.<br>
+                    Puoi <strong>aggiungerne uno</strong> al portafoglio o <strong>visualizzarne altri</strong> disponibili per questa categoria.</p>
+                    <simple-table [headingsCol]="headingsColTabellaSugg" [rowData]="rowDataTabellaSugg"></simple-table>   
+                     
                 </div>
             </div>
             <div class="modal-footer">

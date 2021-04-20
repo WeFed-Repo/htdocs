@@ -18,6 +18,8 @@ export class SimpleTableComponent  implements OnInit {
   isObject(val): boolean { return typeof val === 'object'; }
   
   ngOnInit(){
-    this.columnssref = Object.keys(this.rowData[0]);
-  }
+  
+     this.columnssref = Object.keys(this.rowData[0]);
+     console.log(this.colsThTemplate);
+ }
 }

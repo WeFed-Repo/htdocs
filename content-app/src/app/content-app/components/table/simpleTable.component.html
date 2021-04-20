@@ -4,7 +4,9 @@
             <thead>
                 <tr>
                    <th *ngFor="let col of headingsCol;index as i" [ngClass]="col.class"> 
-                        <ng-container [ngTemplateOutlet]="colsThTemplate" [ngTemplateOutletContext]="{data:col}"></ng-container>
+                      <ng-container  [ngTemplateOutlet]="colsThTemplate" [ngTemplateOutletContext]="{data:col}">
+                                {{col.title}}
+                        </ng-container>
                     </th>
                 </tr>
             </thead>
