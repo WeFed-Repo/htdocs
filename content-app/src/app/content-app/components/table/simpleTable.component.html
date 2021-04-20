@@ -12,9 +12,9 @@
             </thead>
             
             <tbody> 
-                <tr *ngFor="let el of rowData;index as i" [ngClass]="{'pari': i %2 == 1}">
-                <td *ngFor="let colTemplate of colsTemplate;index as j" [ngClass]="isObject(el[columnssref[j]]) ? ('pad_0 ' + cellClassName[j]) : cellClassName[j]" headers="{{columnssref[j]}}">
-                        <ng-container [ngTemplateOutlet]="colTemplate" [ngTemplateOutletContext]="{data:el}"></ng-container>
+                <tr *ngFor="let el of rowData;index as i" [ngClass]="i %2 == 1 ? 'pari ' +  classTrSimpleTable[i] :  classTrSimpleTable[i]">
+                    <td *ngFor="let colTemplate of colsTemplate;index as j" [ngClass]="isObject(el[columnssref[j]]) ? ('pad_0 ' + classTdSimpleTable[j]) : classTdSimpleTable[j]" [headers]="headers[j]">
+                        <ng-container [ngTemplateOutlet]="colTemplate" [ngTemplateOutletContext]="{data:el,id:i}"></ng-container>
                     </td>
                 </tr>
             </tbody>

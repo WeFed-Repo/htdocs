@@ -1,7 +1,7 @@
 import { Component,OnInit,ElementRef,ViewChild,TemplateRef,Input} from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
-
+declare function apriSchedaFondoFida(codiceFida);
 @Component({
   selector: 'pmodello',
   templateUrl: './pmodello.component.html',
@@ -9,8 +9,6 @@ import { PmodelloService } from './pmodello.service';
 })
 
 export class PModello  implements OnInit {
-
-
   // Input
   @Input() setloading: any;
 
@@ -27,7 +25,9 @@ export class PModello  implements OnInit {
   public typePortafoglio:string;
   public dataFondiSel:string;
   
-  
+  //gestione numero righe da mostrare nella tabella dei sugegriti
+  public onlySomeRow: boolean = true;
+  public isRenderingReady:boolean=false;
   constructor(private pmodelloService: PmodelloService) { 
      
   }
@@ -67,7 +67,7 @@ export class PModello  implements OnInit {
      {title:'Importo da investire',  class:"center",id:'importi'},
      {title:'Fondo',  class:"center"},
      {title:'',  class:"center"}
-   ]
+  ]
   
   //dati per le righe di tutte le tabelle rowspan costruiti tramite span in html
   //ogni array è una tabella per ogni tab
@@ -154,43 +154,67 @@ export class PModello  implements OnInit {
       Importo: '' 
     }
    ]
-  
- 
+  cellClassNameTabellaSugg:Array<any> = [
+    'left', 'left','right'
+  ]
+  rowClassNameTabellaSugg:Array<any> = []
   
   @ViewChild("modaleFondiSuggeriti") modaleFondiSuggeriti: ElementRef;
   @ViewChild("modaleFondiSuggeritiContent") modaleFondiSuggeritiContent: ElementRef;
+  @ViewChild('radiobtnCell', { static: true }) radiobtnCell;
+  @ViewChild('descCell', { static: true }) descCell;
+  @ViewChild('impMinCell', { static: true }) impMinCell;
+  
+
+  colsTemplateTabellaSugg: TemplateRef<any>[] = [];
+  
+  //funzione di chiamata fondi suggeriti
   handleFondiSuggeriti(params) {
-  
-  //setto il tipo di portafoglio da includere nel testo della modale
-  switch(params.aa) {
-    case '11':
-      this.typePortafoglio = 'difensivo'
-      break;
-      case '12':
-        this.typePortafoglio = 'prudente'
-      break;
-    default:
-      
-  }
-  
-  //setto il loading alla modale
-  this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
-  //funzione di chiamata iniettata dal servizio
-  //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
-  this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
-    this.dataFondiSel = data['fondiSuggeriti'][0].Fidacode;
-    this.modaleFondiSuggeritiContent.nativeElement.classList.remove('loading')
-    console.log(data)
-  });
-  
-  }
-  
+    //setto il tipo di portafoglio da includere nel testo della modale
+    switch(params.aa) {
+      case '11':
+        this.typePortafoglio = 'difensivo'
+        break;
+        case '12':
+          this.typePortafoglio = 'prudente'
+        break;
+      default:
+        
+    }
+    //setto il loading alla modale
+    this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
+    //funzione di chiamata iniettata dal servizio
+    //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
+    this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
+        if(data['fondiSuggeriti']) {
+          this.modaleFondiSuggeritiContent.nativeElement.classList.remove('loading');
+          this.rowDataTabellaSugg = data['fondiSuggeriti'];
+          //aggiungo la la classe hidden all'array delle classi di riga
+          this.rowDataTabellaSugg .forEach((element,index) => {
+            let classToAdd = index<3 ? '' : 'hidden'
+            this.rowClassNameTabellaSugg.push(classToAdd)
+          });
+          this.isRenderingReady = true
+       }
+     });
+    
+    }
+    
+    //funzione chiamata dal carrello
+    apriPdfFondo(codpdf) {
+      apriSchedaFondoFida(codpdf);
+    }
+    //toogle row table
+    toggleRow() {
+       this.rowClassNameTabellaSugg = this.rowClassNameTabellaSugg.map(x => {return x= ''});
+   }
 
   // Inizializzazione
   ngOnInit(){
     this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
-  }
+    this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
+   }
 
   ngAfterViewInit() {
     this.setloading(false);

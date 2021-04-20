@@ -1,4 +1,4 @@
-import { Component,Input,OnInit, Output, EventEmitter} from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 
 
 
@@ -11,15 +11,38 @@ export class SimpleTableComponent  implements OnInit {
   @Input() headingsCol:Array<any>;
   @Input() rowData:Array<object>;
   @Input() cellClassName:Array<any>;
+  @Input() rowClassName:Array<any>;
   @Input() colsTemplate:Array<any>;
   @Input() colsThTemplate;
   columnssref;
+  classTdSimpleTable = [];
+  classTrSimpleTable = [];
+  headers = []
   
-  isObject(val): boolean { return typeof val === 'object'; }
+  isObject(val): boolean { 
+    return typeof val === 'object'; 
+  }
   
   ngOnInit(){
-  
-     this.columnssref = Object.keys(this.rowData[0]);
-     console.log(this.colsThTemplate);
- }
+    if (this.rowData[0]) {
+        this.columnssref = Object.keys(this.rowData[0]);
+        this.columnssref.forEach((element,index) => {
+          this.headers.push(element);
+        });
+     }
+    if(this.cellClassName) {
+      this.cellClassName.forEach(element => {
+        this.classTdSimpleTable.push(element);
+      });
+    }
+    
+  }
+  ngOnChanges() {
+    if(this.rowClassName) {
+      this.rowClassName.forEach(element => {
+        this.classTrSimpleTable.push(element);
+        //console.log(this.classTrSimpleTable)
+      });
+    }
+  }
 }
