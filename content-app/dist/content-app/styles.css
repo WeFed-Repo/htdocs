@@ -1,4 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Stili da importare */
 
+/* PLACEHOLDER */
+
+.placeholder.grafico-topselection {
+    min-height:300px;
+    width:100%;
+    background:#eee;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.placeholder.grafico-topselection:before {
+    content:"placeholder";
+    text-transform: uppercase;
+    color:#fff;
+}
 
 /*# sourceMappingURL=styles.css.map*/

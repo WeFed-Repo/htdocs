@@ -1,4 +1,4 @@
-import { Component,OnInit,ElementRef,ViewChild} from '@angular/core';
+import { Component,OnInit,ElementRef,ViewChild, Input} from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 
@@ -9,6 +9,11 @@ import { PmodelloService } from './pmodello.service';
 })
 
 export class PModello  implements OnInit {
+
+
+  // Input
+  @Input() setloading: any;
+
   //array di testi iniziali
   
   public pModelli:Array<Pmodello>;
@@ -161,6 +166,11 @@ export class PModello  implements OnInit {
 
   // Inizializzazione
   ngOnInit(){
+    this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
   }
+
+  ngAfterViewInit() {
+    this.setloading(false);
+  };
 }

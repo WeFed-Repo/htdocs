@@ -10,5 +10,5 @@ export const GlobalVars = {
         "local": "/assets/json",
         "lib": "/include/ajax/fida",
         "prod": "/pathdiproduzione"
-    }
+    }[ambiente]
 };

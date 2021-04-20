@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/common/fe/content-app/styles.css"></link>
 <!-- Nodo che contiene l'applicativo Angular -->
 <content-app></content-app>
 <!-- Fine del nodo -->

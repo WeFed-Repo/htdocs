@@ -15,7 +15,7 @@
         <!-- Template root -->
         <overview *ngIf="contenuto==='overview'" [navto]="naviga" [setloading]="setloading"></overview>
         <top-selection *ngIf="contenuto==='topselection'" [setloading]="setloading"></top-selection>
-        <pmodello *ngIf="contenuto==='pmodello'"></pmodello>
+        <pmodello *ngIf="contenuto==='pmodello'" [setloading]="setloading"></pmodello>
         <!-- Fine template root -->
     </div> 
 </div>

@@ -31,6 +31,6 @@ export class ContentAppComponent  implements OnInit {
   ngOnInit(){
 
     this.naviga(this.contenuto);
-    
+    this.setloading(false);
   }
 }
