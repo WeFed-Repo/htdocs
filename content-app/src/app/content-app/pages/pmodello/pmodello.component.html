@@ -21,7 +21,7 @@
              <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
         </tab>
     </tabs>
-
+  
     <!-- modale per i fondi suggeriti -->
     <div id="modaleFondiSuggeriti" class="modal fade" role="dialog" #modaleFondiSuggeriti>
         <div class="modal-dialog">
@@ -31,11 +31,25 @@
               <h1 class="modal-title">Fondi selezionati per l'asset class Liquidit&agrave; del portafoglio {{typePortafoglio}}.</h1>
             </div>
             <div class="modal-body">
-               <div id="lef-cont" #modaleFondiSuggeritiContent>
+               <div id="lef-cont" class="formGenerico" #modaleFondiSuggeritiContent>
                     <p>Questi sono i <strong>migliori tre</strong> fondi corrispondenti al profilo di investimento selezionato.<br>
                     Puoi <strong>aggiungerne uno</strong> al portafoglio o <strong>visualizzarne altri</strong> disponibili per questa categoria.</p>
-                    <simple-table [headingsCol]="headingsColTabellaSugg" [rowData]="rowDataTabellaSugg"></simple-table>   
-                     
+                    <div *ngIf="isRenderingReady">
+                        <simple-table [headingsCol]="headingsColTabellaSugg" [rowData]="rowDataTabellaSugg" [colsTemplate]="colsTemplateTabellaSugg" [cellClassName]="cellClassNameTabellaSugg" [rowClassName]="rowClassNameTabellaSugg"></simple-table> 
+                    </div>
+                     <ng-template #radiobtnCell let-data="data" let-i="id">
+                        <label class="textWrapper">
+                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}">
+                            <span class="text">{{i+1}}</span>
+                        </label>
+                    </ng-template>
+                    <ng-template #descCell let-data="data">
+                        <a (click)="apriPdfFondo(data.pdf)">{{data.description}}</a>
+                    </ng-template>
+                    <ng-template #impMinCell let-data="data">
+                        {{data.impMin}}
+                    </ng-template>
+                    <a (click)="toggleRow()">Vedi altri fondi</a>
                 </div>
             </div>
             <div class="modal-footer">

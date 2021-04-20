@@ -37,11 +37,11 @@ export class PmodelloService {
   //funzione di chiamata per recuperare i fondi suggeriti get con parametri
  
   pmsUrl = "/assets/json/fondi_suggeriti.json";
-  
+ 
   callFondiSuggeriti(params):Observable<any> {
     let httpParams = new HttpParams();
     Object.keys(params).forEach(function (key) {
-        httpParams = httpParams.append(key, params[key]);
+        httpParams = httpParams.append(key.toString(), params[key]);
       });
     return this.httpClient.get<any>(this.pmsUrl,{
      params: httpParams
