@@ -1,7 +1,9 @@
 //servizio dove caricare i dati dei poratfogli modello
 import { Injectable } from '@angular/core';
 import { Pmodello } from './pmodello.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpParams  } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators' //libreria per gli observable
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}
@@ -32,15 +34,18 @@ export class PmodelloService {
   returnPmodelArray() {
       return this.pmodelli.slice();
   }
-  //funzione di chiamata per recuperare i fondi suggeriti dovrà essere in post per passare i
+  //funzione di chiamata per recuperare i fondi suggeriti get con parametri
  
-  pmsUrl = "/assets/json/...";
-  callFondiSuggeriti(params) {
-     //chiamata in post per i fondi suggeriti
-    this.httpClient.post(this.pmsUrl,params).subscribe((data: any[])=>{
-
-      console.log(data);
+  pmsUrl = "/assets/json/fondi_suggeriti.json";
+  
+  callFondiSuggeriti(params):Observable<any> {
+    let httpParams = new HttpParams();
+    Object.keys(params).forEach(function (key) {
+        httpParams = httpParams.append(key, params[key]);
+      });
+    return this.httpClient.get<any>(this.pmsUrl,{
+     params: httpParams
     })
- }
- 
+  }
 }
+
