@@ -1,5 +1,5 @@
 import { Component,Input,OnInit } from '@angular/core';
-declare function ttInit();
+declare function initTooltip();
 
 
 @Component({
@@ -47,6 +47,6 @@ export class SimpleTableComponent  implements OnInit {
     }
   }
   ngAfterViewChecked() {
-    ttInit();
+    initTooltip();
   };
 }

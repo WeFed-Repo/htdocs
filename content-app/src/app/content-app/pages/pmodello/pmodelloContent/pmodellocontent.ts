@@ -49,7 +49,7 @@ export class PModelloContent  implements OnInit {
   setFondiSuggeriti(id,idaa,idac) {
     let importoToSend:string,
         isinToSend: string;
-       
+        //funzione da usare come generica da spostare nel servizio
         let getArrayList = (ArrayList,idInput) => {
           let valToSend="";
           ArrayList.forEach(element => {

@@ -2800,7 +2800,8 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
                     openedTooltips.tooltip('hide');
                     //hack per i tooltip contenenti immagini
                     $tooltipPlus.tooltip('show');
-                    if ($tooltipPlus.closest('.modal').length > 0) {
+                    //se non serve il riposizionamento in modale aggiungere la calsse no-rendering-position al target dell'evento
+                    if ($tooltipPlus.closest('.modal').length > 0 && !$tooltipPlus.hasClass('no-rendering-position')) {
                         openedTooltips.css('left', 0);
                         openedTooltips.find('.tooltip-arrow').css('left', '30%');
                         $('.webview').find('.tooltip.in').closest('.fixed-table-body').removeClass('fixed-table-body').addClass('fixed-table-body-static');
@@ -3459,6 +3460,7 @@ var initTooltip = function (wrapper) {
     $wrapper.find("[data-toggle='tooltip']").not(".inited").tooltipPlus().addClass("inited").on('shown.bs.tooltip', function () {
         $('.tooltip').css('z-index', getNextHighestZindex());
         if (feBank==="youweb")  $('.tooltip').css('margin-left', "5px");
+        
     });
 
     // html complesso per i tooltip con ID indicato

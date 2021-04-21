@@ -1,8 +1,8 @@
-import { Component,OnInit,ElementRef,ViewChild,TemplateRef,Input} from '@angular/core';
+import { Component,OnInit,ElementRef,ViewChild,ViewChildren,QueryList,TemplateRef,Input} from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 declare function apriSchedaFondoFida(codiceFida);
-declare function initTooltip()
+declare function ttInit();
   
 
 @Component({
@@ -23,13 +23,17 @@ export class PModello  implements OnInit {
   public linkBox:string;
   public gotoBox:string;
   public typePortafoglio:string;
-  public dataFondiSel:string;
-  
+  public idaaSelected:string;
+  public idacSelected:string;
   //gestione numero righe da mostrare nella tabella dei sugegriti
   public onlySomeRow: boolean = true;
   //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
+  //stato dei radio
+  isRadioChecked:boolean= false;
 
+  public descrToFullfill:string="";
+  public impToFullfill;
   //inietto il servizio
   constructor(private pmodelloService: PmodelloService) {}
   
@@ -172,9 +176,14 @@ export class PModello  implements OnInit {
   @ViewChild('descCell', { static: true }) descCell;
   @ViewChild('impMinCell', { static: true }) impMinCell;
   colsTemplateTabellaSugg: TemplateRef<any>[] = [];
-  
+
+  //controllo dei valori inseriti nelll'overlayer
+ 
+  @ViewChildren("descriptionSel") descriptionSelList: QueryList<ElementRef>;
+  @ViewChildren("importoSel") impSelList: QueryList<ElementRef>;
   //funzione di chiamata fondi suggeriti
   handleFondiSuggeriti(params) {
+   
     //setto il tipo di portafoglio da includere nel testo della modale
     switch(params.aa) {
       case '11':
@@ -197,12 +206,14 @@ export class PModello  implements OnInit {
           this.rowDataTabellaSugg = data['fondiSuggeriti'];
           //aggiungo la la classe hidden all'array delle classi di riga
           this.onlySomeRow = true;
+          this.isRadioChecked= false;
           //nascondo le righe oltre la terza
           this.getTrTableSuggRow();
           //semaforo di rendering
           this.isRenderingReady = true;
-          
-       }
+          this.idaaSelected = params.aa;
+          this.idacSelected = params.ac;
+      }
      });
     
     }
@@ -228,16 +239,60 @@ export class PModello  implements OnInit {
        this.onlySomeRow= !this.onlySomeRow;
        this.getTrTableSuggRow();
     }
-
+    //funzione per abilitare il salva alla selezione del radio btn
+    setBtnSalva(el) {
+        this.isRadioChecked= true;
+        let value = el.target.value;
+       
+        this.descriptionSelList.forEach(element => {
+          if(element.nativeElement.id===('name-' + value)) {
+            this.descrToFullfill = element.nativeElement.innerHTML;
+          }
+        })
+        this.impSelList.forEach(element => {
+          if(element.nativeElement.id===('minp-' + value)) {
+             this.impToFullfill = element.nativeElement.innerHTML;
+          }
+        })
+    }
+    salva(idaa, idac) {
+      console.log(idaa);
+      console.log(idac);
+      console.log(this.descrToFullfill);
+      console.log(this.impToFullfill);
+      document.body.querySelector("#txt" + idaa + "-" + idac).innerHTML = this.descrToFullfill;
+      document.body.querySelector("#txt" + idaa + "-" + idac).addEventListener('click',()=>this.apriPdfFondo(''))
+    }
+    /*salva(idaa, idac) {
+      //var isin = $('input[@name=idxfondo]:checked').val();
+      //if (isin === undefined) return false;
+      //var name = $('.name-' + isin).html();
+      //var minp = $('.minp-' + isin).html();
+      setValueInRow(idaa,idac,name,isin,minp);
+      $.modal.close();
+      enableCart(idaa,false);
+      c = $('#totinv' + idaa).val().replace(/[^0-9]/g, '');
+      calcolaPerc(aValori['valori' + idaa], c);
+    }*/
+    /*
+    function setValueInRow(idaa,idac,name,isin,minp) {
+        $("#txt" + idaa + "-" + idac).html(name);
+        $("#hisin" + idaa + "-" + idac).val(isin);
+        $("#hmin" + idaa + "-" + idac).val(minp);
+        var srcimg = '/content/images/camFondo.png';
+        $("#btn" + idaa + "-" + idac).attr('src', srcimg);
+    }
+    */
   // Inizializzazione
   ngOnInit(){
     this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
     this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
+    ttInit();
    }
   
   ngAfterViewInit() {
     this.setloading(false);
-    initTooltip();
+   
   };
 }

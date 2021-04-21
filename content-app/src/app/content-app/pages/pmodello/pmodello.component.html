@@ -21,7 +21,7 @@
              <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
         </tab>
     </tabs>
-    
+  
     <!-- modale per i fondi suggeriti -->
     <div id="modaleFondiSuggeriti" class="modal fade" role="dialog" #modaleFondiSuggeriti>
         <div class="modal-dialog">
@@ -39,16 +39,16 @@
                     </div>
                      <ng-template #radiobtnCell let-data="data" let-i="id">
                         <label class="textWrapper">
-                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}">
+                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event)">
                             <span class="text">{{i+1}}</span>
                         </label>
                     </ng-template>
                     <ng-template #descCell let-data="data">
-                        <a (click)="apriPdfFondo(data.pdf)">{{data.description}}</a>
+                        <span><a (click)="apriPdfFondo(data.pdf)" #descriptionSel id="name-{{data.value}}">{{data.description}}</a></span>
                     </ng-template>
                     <ng-template #impMinCell let-data="data">
-                        <a *ngIf="data.warning==='y'" class="btn-icon"><i  data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline" title=""></i></a>
-                        {{data.impMin}}
+                        <a *ngIf="data.warning==='y'" class="btn-icon"><i data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline no-rendering-position" title=""></i></a>
+                        <span id="minp-{{data.value}}" #importoSel>{{data.impMin}} </span>
                     </ng-template>
                     <a (click)="toggleRow()">
                         <span *ngIf="this.onlySomeRow;else hideRow"><i class="icon icon-f-row_expand"></i> Vedi altri fondi</span>
@@ -57,10 +57,16 @@
                 </div>
             </div>
             <div class="modal-footer">
-                 <div class="align-right">
-                  <input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
-              </div>
-              </div>
+                <div class="form-group btnWrapper">
+                    <div class="btn-align-left">
+                        <a type="button" class="btn btn-default" data-dismiss="modal">chiudi</a>
+                    </div>
+                    <div class="btn-align-right">
+                        <a type="button" [ngClass]="!isRadioChecked ? 'btn btn-disabled' : 'btn btn-primary' " id=""  ng-disabled="!isRadioChecked" (click)="salva(idaaSelected,idacSelected)">Salva</a>
+                    </div>
+                    <br class="clear">
+                </div>
+            </div>
           </div>
           </div>
       </div>

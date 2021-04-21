@@ -39,7 +39,7 @@
      <ng-template #Fondo let-data="data">
         <div class="block-table" *ngFor="let el of data.Fondo">
             <span class="block-cell-table">
-                <span id="txt{{DataFromService[0].idaa}}-{{el}}"></span>
+                <a id="txt{{DataFromService[0].idaa}}-{{el}}"></a>
                 <input type="hidden" value="" id="hisin{{DataFromService[0].idaa}}-{{el}}" class="pf-isin-{{DataFromService[0].idaa}}" #isinValue>
             </span>
         </div>

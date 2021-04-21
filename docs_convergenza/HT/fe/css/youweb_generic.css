@@ -5494,6 +5494,23 @@ th.radio, th.checkbox {
 /*.tooltip.in.top{
     padding-bottom:0!important;
 }*/
+/* posizionamento x di chiusura*/
+.tooltip.in .tooltip-inner {position: relative;}
+.tooltip.in .tooltip-inner .closeTooltip {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.control-label.with-tooltip {
+    width:100%;
+}
+.control-label.with-tooltip .btn-icon {
+    left:0;
+}
+
+.tooltip.in .tooltip-inner {
+    padding:15px 26px;
+}
 
 .polizzeAttive .tooltip.in.top{
     padding-bottom: 15px !important;
@@ -6673,7 +6690,7 @@ div[id*="popover"] .popover-content {
 .tooltip.popover.bottom,.tooltip.bottom {
     margin-top: 15px;
 }
-.tooltip {padding:15px}
+.tooltip {padding:0}
 
 
 /*fine tooltip */
