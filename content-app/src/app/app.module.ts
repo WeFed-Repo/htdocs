@@ -11,12 +11,8 @@ import { TopSelection} from "./content-app/pages/topselection/topselection.compo
 import { PModello} from "./content-app/pages/pmodello/pmodello.component";
 
 // Componenti contestuali
-import { TabsComponent } from './content-app/components/tabs/tabs.component';
-import { TabComponent } from './content-app/components/tabs/tab/tab.component';
-
 import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
-import { BoxLinkComponent } from './content-app/components/boxLink/boxLink.component';
-import { SimpleTableComponent } from './content-app/components/table/simpleTable.component';
+
 
 // Modulo con oggetti di pagina
 import {PageComponents} from './content-app/components/pagecomponents.module'
@@ -32,11 +28,7 @@ import {PageComponents} from './content-app/components/pagecomponents.module'
     Overview, TopSelection,PModello,
 
     //contenuti dei sottocomponenti
-    PModelloContent,
-
-    //componenti generici
-    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent,
-
+    PModelloContent
 
   ],
   imports: [
