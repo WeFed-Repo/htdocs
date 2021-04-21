@@ -15,8 +15,7 @@ import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pm
 
 
 // Modulo con oggetti di pagina
-import {PageComponents} from './content-app/components/pagecomponents.module'
-
+import {PageComponents} from './content-app/components/pagecomponents.module';
 
  
 @NgModule({  

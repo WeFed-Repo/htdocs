@@ -2,30 +2,32 @@
 <!-- Elenco dei fondi -->
 
 <!-- Fine elenco dei fondi -->
-<div class="grafico-top10" *ngIf="incomingData!=={}">
-    GRAFICO
-    <!--<div *ngFor="let fondo of incomingData?.fondi" class="fondo">
-        <span>{{fondo.Name}}</span>
-    </div>let 
+<div class="grafico-top10" *ngIf="top10fondi.length>0">
+    <div *ngFor="let fondo of top10fondi" class="fondo">
+        <span (click)="selectFund(fondo)">{{fondo.Name}}</span>
+    </div> 
 </div>
 
 <!-- Dettagli del fondo prescelto -->
-<div class="dettagli-fondo">
-    <form-select 
-        label="Periodo"
-        placeholder="Seleziona un valore..."
-        options="[
-            {
-                'text':'valore di prova',
-                'value': 'v1'
-            },
-            {
-                'text':'secondo valore di prova',
-                'value': 'v2'
-            }            
-        ]"
-    ></form-select>
-</div>
+<section *ngIf="(selectedFund | keyvalue)?.length">
+    <div class="dettagli-fondo bordered">
+        <!-- <h3>{{selectedFund.Name}}</h3> -->
+        <form-select 
+            label="Periodo"
+            placeholder="Seleziona un valore..."
+            options="[
+                {
+                    'text':'valore di prova',
+                    'value': 'v1'
+                },
+                {
+                    'text':'secondo valore di prova',
+                    'value': 'v2'
+                }            
+            ]"
+        ></form-select>
+    </div>
+</section>
 <!-- Fine dettagli del fondo prescelto -->
 
 <disclaimer></disclaimer>

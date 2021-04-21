@@ -15,7 +15,10 @@ export class TopSelection  implements OnInit {
 
   // Variabili di configurazione
   tsUrl = GlobalVars.apibaseurl + "/top_selection.json";
-  incomingData = {};
+  top10fondi = [];
+
+  // Variabili locali
+  selectedFund = {};
 
   constructor(private httpClient: HttpClient) {}
 
@@ -25,11 +28,11 @@ export class TopSelection  implements OnInit {
   // Lettura dei dati
   updateData(){
 
-    this.httpClient.get(this.tsUrl).subscribe((data: any[])=>{
+    this.httpClient.get(this.tsUrl).subscribe((data: any)=>{
 
       // Controllo e manipolazione dei dati
       
-      this.incomingData = data;
+      this.top10fondi = data && data.fondi;
 
       // Rimuove il loading
       this.setloading(false);
@@ -37,7 +40,10 @@ export class TopSelection  implements OnInit {
     })
   }
 
-
+  // Dettagli di un fondo
+  selectFund(fondo) {
+    this.selectedFund = fondo;
+  }
   
 
   // Inizializzazione

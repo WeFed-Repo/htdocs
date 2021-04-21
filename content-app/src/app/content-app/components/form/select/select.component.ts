@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'form-select',
@@ -6,17 +6,22 @@ import { Component, Input, OnInit} from '@angular/core';
 })
 export class Select implements OnInit {
   
+    // Variabili locali
+    seloptions = [];
+
+    // Input
     @Input() label: string;
     @Input() placeholder: string;
     @Input() options: any;
     @Input() value: any;
     @Input() error: string;
 
-    seloptions = [];
-
+    // Output
+    @Output() newvalue = new EventEmitter<string>(); 
+    
     //Interattivita'
-    onChange(){
-        alert("Cambiato")
+    onChange(e){
+        this.newvalue.emit(e.target.value)
     }
 
     ngOnInit(){
