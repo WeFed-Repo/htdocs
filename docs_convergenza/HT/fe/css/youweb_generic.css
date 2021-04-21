@@ -6982,12 +6982,17 @@ div[id*="popover"] .popover-content {
     margin-bottom:0 !important;
 }
 
+/* Classi bottone in-linea con e senza label*/
+.btn-inline {margin-top:20px;}
+.btn-inline.btn-no-label {margin-top:8px;}
+
 /*fdr*/
 .tab-wrap ol {
     margin-left:20px
 }
 .tab-wrap .ui-accordion {padding:20px;}
-.btn-inline {margin-top:20px;}
+
+
 .documenti{padding-top:10px;padding-left:0}
 .documenti li {padding:0;list-style-type: none;float:none;clear:both;}
 .documenti ul {padding:0;}
