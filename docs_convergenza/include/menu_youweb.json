@@ -645,6 +645,11 @@
 								"nome": "Conferma e riepilogo",
 								"tpl": "tpl_documenti_conferma.php",
 								"inlavorazione": true
+							},
+							{
+								"nome": "Stati e Casistiche",
+								"tpl": "tpl_documenti_stati_e_casistiche.php",
+								"inlavorazione": true
 							}
 							
 						]
