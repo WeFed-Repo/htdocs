@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label *ngIf="label" class="control-label">{{label}}</label>
+    <select class="form-control" (change)="onChange()">
+        <option *ngFor="let option of seloptions" value="option.value">{{option.text}}</option>
+    </select>
+</div>

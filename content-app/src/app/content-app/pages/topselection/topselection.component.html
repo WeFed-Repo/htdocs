@@ -3,9 +3,29 @@
 
 <!-- Fine elenco dei fondi -->
 <div class="grafico-top10" *ngIf="incomingData!=={}">
+    MAURIZIO
     <!--<div *ngFor="let fondo of incomingData?.fondi" class="fondo">
         <span>{{fondo.Name}}</span>
     </div>let 
 </div>
+
 <!-- Dettagli del fondo prescelto -->
+<div class="dettagli-fondo">
+    <form-select 
+        label="Periodo"
+        placeholder="Seleziona un valore..."
+        options="[
+            {
+                'text':'valore di prova',
+                'value': 'v1'
+            },
+            {
+                'text':'secondo valore di prova',
+                'value': 'v2'
+            }            
+        ]"
+    ></form-select>
+</div>
+<!-- Fine dettagli del fondo prescelto -->
+
 <disclaimer></disclaimer>

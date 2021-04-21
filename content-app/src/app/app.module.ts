@@ -18,17 +18,15 @@ import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pm
 import { BoxLinkComponent } from './content-app/components/boxLink/boxLink.component';
 import { SimpleTableComponent } from './content-app/components/table/simpleTable.component';
 
-// Componenti funzionali trasversali
-import { Disclaimer } from './content-app/components/disclaimer/disclaimer.component';
+// Modulo con oggetti di pagina
+import {PageComponents} from './content-app/components/pagecomponents.module'
+
 
  
 @NgModule({  
   declarations: [
     // Componente principale
     ContentAppComponent, 
-
-    // Variabili e funzioni "trasversali"
-   
 
     // Sottocomponenti
     Overview, TopSelection,PModello,
@@ -37,7 +35,8 @@ import { Disclaimer } from './content-app/components/disclaimer/disclaimer.compo
     PModelloContent,
 
     //componenti generici
-    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent, Disclaimer
+    TabsComponent,TabComponent,BoxLinkComponent, SimpleTableComponent,
+
 
   ],
   imports: [
@@ -45,6 +44,9 @@ import { Disclaimer } from './content-app/components/disclaimer/disclaimer.compo
 
     // Componenti funzionali
     HttpClientModule,
+
+    // Componenti di pagina
+    PageComponents
 
   ],
   providers: []
