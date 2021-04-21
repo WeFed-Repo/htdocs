@@ -1,8 +1,9 @@
 <style>
-    /* Titolo Area */
+    /* Titolo Area
     .titolo {
         margin-bottom: 50px;
-    }
+    } */
+    
     /* Iframe PDF with title and Document Index*/
     #pdf{
         height: 500px;
