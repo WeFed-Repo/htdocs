@@ -2,6 +2,9 @@ import { Component,OnInit,ElementRef,ViewChild,TemplateRef,Input} from '@angular
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 declare function apriSchedaFondoFida(codiceFida);
+declare function initTooltip()
+  
+
 @Component({
   selector: 'pmodello',
   templateUrl: './pmodello.component.html',
@@ -13,10 +16,7 @@ export class PModello  implements OnInit {
   @Input() setloading: any;
 
   //array di testi iniziali
-  
   public pModelli:Array<Pmodello>;
- 
-  
   //elementi dei box
   public titleBox:string;
   public textBox:string;
@@ -27,10 +27,13 @@ export class PModello  implements OnInit {
   
   //gestione numero righe da mostrare nella tabella dei sugegriti
   public onlySomeRow: boolean = true;
+  //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
-  constructor(private pmodelloService: PmodelloService) { 
-     
-  }
+
+  //inietto il servizio
+  constructor(private pmodelloService: PmodelloService) {}
+  
+  //funzioni per costruire le tabelle di atterraggio
   getArrayValori = (index,minI, maxI) => {
     let ArrayValori = []
     for (let i = minI; i <=maxI; i++) {
@@ -56,8 +59,7 @@ export class PModello  implements OnInit {
     return ArrayIdac;
   }
  
-  //elementi per la tabella del portafoglio
- 
+  //elementi per le tabella  di atterraggio
   //instestazioni di colonna
   headingsColTablePm:Array<any> = [
      {title:'Macro Asset Class', class:"center"},
@@ -135,17 +137,19 @@ export class PModello  implements OnInit {
         },
       ],
   }
- //array di classi per le calle delle tabelle
+ //array di classi per le celle delle tabelle di atterraggio
   cellClassNameTablePm:Array<any> = [
     'left', 'right','left','right','right','left','center'
   ]
   
   //elementi per la tabella dei suggeriti
+  //intestazioni colonne
   headingsColTabellaSugg :Array<any> = [
     {title:'', class:"center"},
     {title:'Nome',  class:"center"},
     {title:'Importo minimo prima sottoscrizione',  class:"center"}
   ]
+  //schema di dati delle celle tabella suggeriti da popolare con la chiamata
   rowDataTabellaSugg: any = 
    [
     { 
@@ -153,19 +157,20 @@ export class PModello  implements OnInit {
       Nome: '',
       Importo: '' 
     }
-   ]
+  ]
+  //classi celle tabella suggeriti
   cellClassNameTabellaSugg:Array<any> = [
     'left', 'left','right'
   ]
+  //classi right tabella suggeriti
   rowClassNameTabellaSugg:Array<any> = []
   
+  //costruzione html tramite il controllo del figlio
   @ViewChild("modaleFondiSuggeriti") modaleFondiSuggeriti: ElementRef;
   @ViewChild("modaleFondiSuggeritiContent") modaleFondiSuggeritiContent: ElementRef;
   @ViewChild('radiobtnCell', { static: true }) radiobtnCell;
   @ViewChild('descCell', { static: true }) descCell;
   @ViewChild('impMinCell', { static: true }) impMinCell;
-  
-
   colsTemplateTabellaSugg: TemplateRef<any>[] = [];
   
   //funzione di chiamata fondi suggeriti
@@ -186,28 +191,43 @@ export class PModello  implements OnInit {
     //funzione di chiamata iniettata dal servizio
     //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
     this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
+        
         if(data['fondiSuggeriti']) {
           this.modaleFondiSuggeritiContent.nativeElement.classList.remove('loading');
           this.rowDataTabellaSugg = data['fondiSuggeriti'];
           //aggiungo la la classe hidden all'array delle classi di riga
-          this.rowDataTabellaSugg .forEach((element,index) => {
-            let classToAdd = index<3 ? '' : 'hidden'
-            this.rowClassNameTabellaSugg.push(classToAdd)
-          });
-          this.isRenderingReady = true
+          this.onlySomeRow = true;
+          //nascondo le righe oltre la terza
+          this.getTrTableSuggRow();
+          //semaforo di rendering
+          this.isRenderingReady = true;
+          
        }
      });
     
     }
-    
+    //funzione per popolare l'array delle classi dinamiche di riga della tabella
+    getTrTableSuggRow() {
+      this.rowClassNameTabellaSugg = [];
+      this.rowDataTabellaSugg .forEach((element,index) => {
+        if(this.onlySomeRow) {
+          let classToAdd = index<3 ? '' : 'hidden'
+          this.rowClassNameTabellaSugg.push(classToAdd)
+        }
+        else {
+          this.rowClassNameTabellaSugg.push("");
+        }
+      });
+    }
     //funzione chiamata dal carrello
     apriPdfFondo(codpdf) {
       apriSchedaFondoFida(codpdf);
     }
     //toogle row table
     toggleRow() {
-       this.rowClassNameTabellaSugg = this.rowClassNameTabellaSugg.map(x => {return x= ''});
-   }
+       this.onlySomeRow= !this.onlySomeRow;
+       this.getTrTableSuggRow();
+    }
 
   // Inizializzazione
   ngOnInit(){
@@ -215,8 +235,9 @@ export class PModello  implements OnInit {
     this.pModelli=this.pmodelloService.returnPmodelArray();
     this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
    }
-
+  
   ngAfterViewInit() {
     this.setloading(false);
+    initTooltip();
   };
 }

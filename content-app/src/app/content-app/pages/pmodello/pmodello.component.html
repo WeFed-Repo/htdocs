@@ -21,7 +21,7 @@
              <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
         </tab>
     </tabs>
-  
+    
     <!-- modale per i fondi suggeriti -->
     <div id="modaleFondiSuggeriti" class="modal fade" role="dialog" #modaleFondiSuggeriti>
         <div class="modal-dialog">
@@ -47,9 +47,13 @@
                         <a (click)="apriPdfFondo(data.pdf)">{{data.description}}</a>
                     </ng-template>
                     <ng-template #impMinCell let-data="data">
+                        <a *ngIf="data.warning==='y'" class="btn-icon"><i  data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline" title=""></i></a>
                         {{data.impMin}}
                     </ng-template>
-                    <a (click)="toggleRow()">Vedi altri fondi</a>
+                    <a (click)="toggleRow()">
+                        <span *ngIf="this.onlySomeRow;else hideRow"><i class="icon icon-f-row_expand"></i> Vedi altri fondi</span>
+                        <ng-template #hideRow><span><i class="icon icon-f-row_contract"></i> Nascondi</span></ng-template>
+                    </a>
                 </div>
             </div>
             <div class="modal-footer">

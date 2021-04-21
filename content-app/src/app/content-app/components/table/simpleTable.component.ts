@@ -1,5 +1,5 @@
 import { Component,Input,OnInit } from '@angular/core';
-
+declare function ttInit();
 
 
 @Component({
@@ -14,7 +14,7 @@ export class SimpleTableComponent  implements OnInit {
   @Input() rowClassName:Array<any>;
   @Input() colsTemplate:Array<any>;
   @Input() colsThTemplate;
-  columnssref;
+  columnssref=[];
   classTdSimpleTable = [];
   classTrSimpleTable = [];
   headers = []
@@ -37,12 +37,16 @@ export class SimpleTableComponent  implements OnInit {
     }
     
   }
+  
   ngOnChanges() {
-    if(this.rowClassName) {
-      this.rowClassName.forEach(element => {
+   if(this.rowClassName) {
+      this.classTrSimpleTable = [];
+       this.rowClassName.forEach(element => {
         this.classTrSimpleTable.push(element);
-        //console.log(this.classTrSimpleTable)
       });
     }
   }
+  ngAfterViewChecked() {
+    ttInit();
+  };
 }
