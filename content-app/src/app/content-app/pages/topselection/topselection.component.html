@@ -9,9 +9,9 @@
 </div>
 
 <!-- Dettagli del fondo prescelto -->
-<section *ngIf="(selectedFund | keyvalue)?.length">
+<section *ngIf="selectedFund">
     <div class="dettagli-fondo bordered">
-        <!-- <h3>{{selectedFund.Name}}</h3> -->
+        <h3>{{selectedFund.Name}}</h3>
         <form-select 
             label="Periodo"
             placeholder="Seleziona un valore..."
@@ -26,7 +26,7 @@
                 }            
             ]"
         ></form-select>
-    </div>
+    </div> 
 </section>
 <!-- Fine dettagli del fondo prescelto -->
 

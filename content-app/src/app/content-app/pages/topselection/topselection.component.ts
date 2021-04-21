@@ -18,7 +18,7 @@ export class TopSelection  implements OnInit {
   top10fondi = [];
 
   // Variabili locali
-  selectedFund = {};
+  selectedFund = null;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -43,6 +43,8 @@ export class TopSelection  implements OnInit {
   // Dettagli di un fondo
   selectFund(fondo) {
     this.selectedFund = fondo;
+
+    console.log((this.selectedFund))
   }
   
 
