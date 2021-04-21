@@ -640,7 +640,13 @@
 								"nome": "Firma",
 								"tpl": "tpl_documenti_firma.php",
 								"inlavorazione": true
+							},
+							{
+								"nome": "Conferma e riepilogo",
+								"tpl": "tpl_documenti_conferma.php",
+								"inlavorazione": true
 							}
+							
 						]
 					}
 					 
