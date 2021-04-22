@@ -279,22 +279,12 @@ export class PModello  implements OnInit {
      
     }
     /*salva(idaa, idac) {
-      //var isin = $('input[@name=idxfondo]:checked').val();
-      //if (isin === undefined) return false;
-      //var name = $('.name-' + isin).html();
-      //var minp = $('.minp-' + isin).html();
-      //setValueInRow(idaa,idac,name,isin,minp);
-      //$.modal.close();
+    
       enableCart(idaa,false);
       c = $('#totinv' + idaa).val().replace(/[^0-9]/g, '');
       calcolaPerc(aValori['valori' + idaa], c);
     }*/
-    /*
-    function setValueInRow(idaa,idac,name,isin,minp) {
-         var srcimg = '/content/images/camFondo.png'; //cambaia il bottone
-        $("#btn" + idaa + "-" + idac).attr('src', srcimg); //popola l'importo minimo
-    }
-    */
+    
   // Inizializzazione
   ngOnInit(){
     this.setloading();
