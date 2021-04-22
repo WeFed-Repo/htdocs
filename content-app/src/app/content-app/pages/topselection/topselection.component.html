@@ -8,7 +8,9 @@
             Uno strumento semplice ed intuitivo, supportato da <strong>un rigoroso processo di selezione</strong> dei fondi basato su <strong>analisi quantitative e qualitative</strong> relative al loro livello di rischio/rendimento, con particolare attenzione alla filosofia di gestione e alle performance nel tempo.</p>
         <!-- Fine testo introduttivo -->    
         <!-- Link a PDF -->
-        <a href="###">Guida alla Top Selection</a>
+        <ul class="documenti">
+            <li><a href="#" class="btn-icon"><i class="icon icon icon-pdf_circle_filled"></i><span>Guida alla Top Selection</span></a></li>
+        </ul>
         <!-- Fine link a PDF -->
         </div>
     <div class="col-sm-4">
@@ -35,12 +37,18 @@
 <!-- Dettagli del fondo prescelto -->
 <section *ngIf="selectedFund">
     <div class="dettagli-fondo">
-        <h3>{{selectedFund.Name}}</h3>
-        <a href="#">PULSANTE ACTION "COMPRA"</a>
+        <div class="row">
+            <div class="col-sm-10"><h3>{{selectedFund.Name}}</h3></div>
+            <div class="col-sm-2">
+                <div class="btn-align-right">
+                   <a type="button" title="Compra" class="btn btn-primary fleft" href="###FUNZIONECOMPRA###">Compra</a>
+                </div>
+            </div>
+        </div>
+        <!-- Parte descrittiva -->
         <p>Parte descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato </p>
-        
         <h4>Andamento grafico</h4>
-        <div class="bordered">
+        <div class="borderFormRounded">
             <div class="row">
                 <div class="col-sm-4">
                     <form-select 
@@ -132,13 +140,14 @@
                     GRAFICO
                 </div>
             </div>
-            <!-- LINK A DOCUMENTAZIONE DEL FONDO (elenco di PDF) -->
-                <!--
-                        Scheda fondo
-                        Informazioni chiave per l’investitore (KIID) AT0000743562
-                        Modulo di sottoscrizione AT0000743562
-                    -->
-
+            <!-- Link elenco documenti -->
+            <ul class="documenti">
+                <li><a href="#" class="btn-icon"><i class="icon icon icon-pdf_circle_filled"></i><span>Scheda fondo</span></a></li>
+                <li><a href="#" class="btn-icon"><i class="icon icon icon-pdf_circle_filled"></i><span>Informazioni chiave per l'investitore (KIID) AT0000743562</span></a></li>
+                <li><a class="btn-icon" href="#"><i class="icon icon icon-pdf_circle_filled"></i><span>Modulo di sottoscrizione AT0000743562</span></a></li>
+            </ul>
+            <!-- Fine elenco documenti -->
+          
         </div>
     </div> 
     <hr>
