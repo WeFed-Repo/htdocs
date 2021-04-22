@@ -14,7 +14,7 @@ export class PModelloContent  implements OnInit {
   @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;
   @Input() DataFromService;
-  
+ 
  
   
   constructor(private pmodelloService: PmodelloService) { }
@@ -48,31 +48,30 @@ export class PModelloContent  implements OnInit {
   colsThTemplate: TemplateRef<any>
   
   optionTemplateRef?: TemplateRef<any>;
-  /*codSel = []*/
-  setFondiSuggeriti(id,idaa,idac) {
-    
-    let importoToSend:string,
+  
+  setFondiSuggeriti(ev,id,idaa,idac) {
+     let importoToSend:string,
         isinToSend: string;
   
   //recupero importo e isni da mandare alla chiamata in post per recuperare i fondi suggeriti        
   importoToSend = this.pmodelloService.getArrayListV(this.importiList,'hval'+idaa+'-'+idac);
   isinToSend = this.pmodelloService.getArrayListV(this.isinList,'hisin'+idaa+'-'+idac);
-    let params= {
+    let objToPass= {
       p:id,
       aa:idaa,
       ac:idac,
       t: isinToSend,
       i:importoToSend
     }
-    this.handleFondiSuggeriti.emit(params);
+    this.handleFondiSuggeriti.emit(objToPass);
   }
 
-  /*setDescFromOverlay() {
-    console.log();
-  }*/
+  
   // Inizializzazione
   ngOnInit(){
     this.colsThTemplate=this.importi;
     this.colsTemplate.push(this.MacroAssetClass,this.Peso,this.AssetClass,this.Pesi,this.Importo,this.Fondo,this.btnId);
+  
+    
  }
 }

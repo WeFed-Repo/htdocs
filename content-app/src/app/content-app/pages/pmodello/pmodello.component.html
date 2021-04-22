@@ -40,8 +40,9 @@
                         <simple-table [headingsCol]="headingsColTabellaSugg" [rowData]="rowDataTabellaSugg" [colsTemplate]="colsTemplateTabellaSugg" [cellClassName]="cellClassNameTabellaSugg" [rowClassName]="rowClassNameTabellaSugg"></simple-table> 
                     </div>
                      <ng-template #radiobtnCell let-data="data" let-i="id">
+                         {{data.t}}
                         <label class="textWrapper">
-                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event,data.pdf,data.impMin)">
+                            <input [attr.checked]="data.value === t ? '' : null"  #radioFondo type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event,data.pdf,data.impMin)">
                             <span class="text">{{i+1}}</span>
                         </label>
                     </ng-template>
@@ -64,6 +65,7 @@
                         <a type="button" class="btn btn-default" data-dismiss="modal">chiudi</a>
                     </div>
                     <div class="btn-align-right">
+                        <a *ngIf="isRoleModifica" type="button" class='btn btn-primary'>Rimuovi</a>
                         <a type="button" [ngClass]="!isRadioChecked ? 'btn btn-disabled' : 'btn btn-primary' " id=""  ng-disabled="!isRadioChecked" (click)="salva(idaaSelected,idacSelected)">Salva</a>
                     </div>
                     <br class="clear">

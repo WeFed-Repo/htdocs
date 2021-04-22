@@ -31,7 +31,9 @@ export class PModello  implements OnInit {
   //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
   //stato dei radio
-  isRadioChecked:boolean= true;
+  isRadioChecked:boolean;
+  isRoleModifica:boolean;
+  t:string;
 
   //stato della modale
   
@@ -189,10 +191,13 @@ export class PModello  implements OnInit {
  
   @ViewChildren("descriptionSel") descriptionSelList: QueryList<ElementRef>;
   @ViewChildren("importoSel") impSelList: QueryList<ElementRef>;
+  @ViewChildren("radioFondo") radioFondoList: QueryList<ElementRef>;
+
   
   //funzione di chiamata fondi suggeriti
+
+
   handleFondiSuggeriti(params) {
-   
     //setto il tipo di portafoglio da includere nel testo della modale
     switch(params.aa) {
       case '11':
@@ -208,6 +213,12 @@ export class PModello  implements OnInit {
     this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
     //funzione di chiamata iniettata dal servizio
     //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
+    params.t ==='' ? this.isRadioChecked= false : this.isRadioChecked= true;
+    params.t ==='' ? this.isRoleModifica= false : this.isRoleModifica= true;
+   
+    
+  
+    //delete params.isRoleModifica;
     this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
         
         if(data['fondiSuggeriti']) {
@@ -215,13 +226,15 @@ export class PModello  implements OnInit {
           this.rowDataTabellaSugg = data['fondiSuggeriti'];
           //aggiungo la la classe hidden all'array delle classi di riga
           this.onlySomeRow = true;
-          this.isRadioChecked= false;
+          
           //nascondo le righe oltre la terza
           this.getTrTableSuggRow();
+          
           //semaforo di rendering
           this.isRenderingReady = true;
           this.idaaSelected = params.aa;
           this.idacSelected = params.ac;
+          this.t = params.t;
       }
      });
     
@@ -248,6 +261,8 @@ export class PModello  implements OnInit {
        this.onlySomeRow= !this.onlySomeRow;
        this.getTrTableSuggRow();
     }
+
+    
     //funzione per abilitare il salva alla selezione del radio btn
     setBtnSalva(el,dataPdf,impMin) {
         this.isRadioChecked= true;
@@ -289,6 +304,7 @@ export class PModello  implements OnInit {
   ngOnInit(){
     this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
+  
     this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
     ttInit();
    }

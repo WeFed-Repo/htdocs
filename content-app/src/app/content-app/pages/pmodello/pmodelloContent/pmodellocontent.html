@@ -48,7 +48,7 @@
      <ng-template #btnId let-data="data">
        <div class="block-table" *ngFor="let el of data.btnId.idac">
             <span class="block-cell-table">
-               <a type="button" class="btn btn-primary btn-small"  id="btn{{DataFromService[0].idaa}}-{{el}}" data-toggle="modal" data-target="#modaleFondiSuggeriti" (click)="setFondiSuggeriti(data.btnId.labelOv,DataFromService[0].idaa,el)">Seleziona Fondo</a>
+               <a type="button" class="btn btn-primary btn-small"  id="btn{{DataFromService[0].idaa}}-{{el}}" data-toggle="modal" data-target="#modaleFondiSuggeriti" (click)="setFondiSuggeriti($event, data.btnId.labelOv,DataFromService[0].idaa,el)">Seleziona Fondo</a>
             </span>
         </div>
      </ng-template>
