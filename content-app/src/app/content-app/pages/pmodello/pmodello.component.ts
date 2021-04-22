@@ -11,6 +11,7 @@ declare function ttInit();
   
 })
 
+
 export class PModello  implements OnInit {
   // Input
   @Input() setloading: any;
@@ -30,12 +31,16 @@ export class PModello  implements OnInit {
   //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
   //stato dei radio
-  isRadioChecked:boolean= false;
+  isRadioChecked:boolean= true;
 
-  public descrToFullfill:string="";
-  public impToFullfill;
+  //stato della modale
+  
+
+  public valuesToSave: {}
   //inietto il servizio
   constructor(private pmodelloService: PmodelloService) {}
+  
+ 
   
   //funzioni per costruire le tabelle di atterraggio
   getArrayValori = (index,minI, maxI) => {
@@ -175,12 +180,16 @@ export class PModello  implements OnInit {
   @ViewChild('radiobtnCell', { static: true }) radiobtnCell;
   @ViewChild('descCell', { static: true }) descCell;
   @ViewChild('impMinCell', { static: true }) impMinCell;
+  @ViewChild('composizionePort', { static: true }) composizionePort;
+  @ViewChild('closebuttonModal') closebutton;
+  
   colsTemplateTabellaSugg: TemplateRef<any>[] = [];
 
   //controllo dei valori inseriti nelll'overlayer
  
   @ViewChildren("descriptionSel") descriptionSelList: QueryList<ElementRef>;
   @ViewChildren("importoSel") impSelList: QueryList<ElementRef>;
+  
   //funzione di chiamata fondi suggeriti
   handleFondiSuggeriti(params) {
    
@@ -240,47 +249,50 @@ export class PModello  implements OnInit {
        this.getTrTableSuggRow();
     }
     //funzione per abilitare il salva alla selezione del radio btn
-    setBtnSalva(el) {
+    setBtnSalva(el,dataPdf,impMin) {
         this.isRadioChecked= true;
-        let value = el.target.value;
-       
-        this.descriptionSelList.forEach(element => {
-          if(element.nativeElement.id===('name-' + value)) {
-            this.descrToFullfill = element.nativeElement.innerHTML;
-          }
-        })
-        this.impSelList.forEach(element => {
-          if(element.nativeElement.id===('minp-' + value)) {
-             this.impToFullfill = element.nativeElement.innerHTML;
-          }
-        })
+        this.valuesToSave = {
+           'value': el.target.value,
+           'descrToFullfill' : this.pmodelloService.getArrayListH(this.descriptionSelList,'name-' + el.target.value),
+           'impToFullfill' :  this.pmodelloService.getArrayListH(this.impSelList,'minp-' + el.target.value),
+           'pdfToFullfill': dataPdf,
+           'impMin': impMin
+        } 
     }
+   
     salva(idaa, idac) {
-      console.log(idaa);
-      console.log(idac);
-      console.log(this.descrToFullfill);
-      console.log(this.impToFullfill);
-      document.body.querySelector("#txt" + idaa + "-" + idac).innerHTML = this.descrToFullfill;
-      document.body.querySelector("#txt" + idaa + "-" + idac).addEventListener('click',()=>this.apriPdfFondo(''))
+      //popolo il campo della descrizione nella tabella del portafoglio
+      const descSel = this.composizionePort.nativeElement.querySelector("#txt" + idaa + "-" + idac),
+            isinSel = this.composizionePort.nativeElement.querySelector("#hisin" + idaa + "-" + idac),
+            hminSel = this.composizionePort.nativeElement.querySelector("#hmin" + idaa + "-" + idac),
+            btnSel = this.composizionePort.nativeElement.querySelector("#btn" + idaa + "-" + idac)
+      descSel.innerHTML = this.valuesToSave['descrToFullfill'];
+      descSel.addEventListener('click',()=>this.apriPdfFondo(this.valuesToSave['pdfToFullfill']));
+      isinSel.value =  this.valuesToSave['value']
+      hminSel.value = this.valuesToSave['impMin']
+      btnSel.setAttribute('class','btn btn-defalut btn-small');
+      btnSel.innerHTML="cambia fondo"
+
+      //switc del bottone nella tabella
+      //chiudo la modale
+      this.closebutton.nativeElement.click();
+     
     }
     /*salva(idaa, idac) {
       //var isin = $('input[@name=idxfondo]:checked').val();
       //if (isin === undefined) return false;
       //var name = $('.name-' + isin).html();
       //var minp = $('.minp-' + isin).html();
-      setValueInRow(idaa,idac,name,isin,minp);
-      $.modal.close();
+      //setValueInRow(idaa,idac,name,isin,minp);
+      //$.modal.close();
       enableCart(idaa,false);
       c = $('#totinv' + idaa).val().replace(/[^0-9]/g, '');
       calcolaPerc(aValori['valori' + idaa], c);
     }*/
     /*
     function setValueInRow(idaa,idac,name,isin,minp) {
-        $("#txt" + idaa + "-" + idac).html(name);
-        $("#hisin" + idaa + "-" + idac).val(isin);
-        $("#hmin" + idaa + "-" + idac).val(minp);
-        var srcimg = '/content/images/camFondo.png';
-        $("#btn" + idaa + "-" + idac).attr('src', srcimg);
+         var srcimg = '/content/images/camFondo.png'; //cambaia il bottone
+        $("#btn" + idaa + "-" + idac).attr('src', srcimg); //popola l'importo minimo
     }
     */
   // Inizializzazione

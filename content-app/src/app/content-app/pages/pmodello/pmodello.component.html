@@ -1,4 +1,4 @@
-<div>
+<div #composizionePort>
     <h2>Portafoglio modello</h2>
     <div class="row">
         <div class="col-sm-8">
@@ -18,7 +18,9 @@
    
     <tabs>
         <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
-             <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
+            <!--sezione composizione portafoglio tabella e richiamo ad overlayer-->
+            <pmodello-content [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService" [headingsCol]="headingsColTablePm" [rowData]="rowsDataTablePm[i]" [cellClassName]="cellClassNameTablePm" (handleFondiSuggeriti)="handleFondiSuggeriti($event)"></pmodello-content>
+            <!--fine sezione composizione portafoglio tabella e overlayer-->
         </tab>
     </tabs>
   
@@ -27,7 +29,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">×</button>
+              <button type="button" class="close" data-dismiss="modal" #closebuttonModal>×</button>
               <h1 class="modal-title">Fondi selezionati per l'asset class Liquidit&agrave; del portafoglio {{typePortafoglio}}.</h1>
             </div>
             <div class="modal-body">
@@ -39,7 +41,7 @@
                     </div>
                      <ng-template #radiobtnCell let-data="data" let-i="id">
                         <label class="textWrapper">
-                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event)">
+                            <input type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event,data.pdf,data.impMin)">
                             <span class="text">{{i+1}}</span>
                         </label>
                     </ng-template>
@@ -69,5 +71,5 @@
             </div>
           </div>
           </div>
-      </div>
+    </div>
 </div>
