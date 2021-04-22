@@ -1,0 +1,42 @@
+{
+    "fondiSuggeriti" : [
+       
+        {
+            "value": "LU0562248079",
+            "description": "JPM US Short Duration Bond D Acc $",
+            "pdf": "JPUSDBD",
+            "impMin": 0,
+            "warning":"y"
+        },
+        {
+            "value": "LU1504571149",
+            "description": "Allianz Adv.Fixed Inc.Short Duration AT Cap EUR",
+            "pdf": "ALLFB101",
+            "impMin": 0,
+            "warning":"n"
+        },
+        {
+            "value": "LU0034353002",
+            "description": "DWS Floating Rate Notes LC Cap EUR",
+            "pdf": "DWRENG",
+            "impMin": 0,
+            "warning":"n"
+        },
+        {
+            "value": "IT0005002636",
+            "description": "Anima Risparmio A",
+            "pdf": "ANMRISPA",
+            "impMin": 0,
+            "warning":"n"
+        },
+        {
+            "value": "IT0005002640",
+            "description": "lorm ipsum",
+            "pdf": "ANMRISPA",
+            "impMin": 0,
+            "warning":"y"
+        }
+        
+        
+    ]
+}

@@ -2,20 +2,45 @@
 
 /* PLACEHOLDER */
 
-.placeholder.grafico-topselection {
-    min-height:300px;
-    width:100%;
-    background:#eee;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
-    align-items:center;
+.grafico-top10 {
+    background-color:#eee;
+    border:solid 1px #ddd;
+
 }
 
-.placeholder.grafico-topselection:before {
-    content:"placeholder";
-    text-transform: uppercase;
-    color:#fff;
+.grafico-top10 .fondo {
+    width:100%;
+    display:block;
+    display:inline-block;
+    text-align:right;
+    margin:0;
+    padding:0;
+}
+
+.grafico-top10 .fondo-index {
+    display:inline-block; 
+    min-width:30px;
+    background: #dce7b5;
+    height:30px;
+    margin:0;
+    padding:0;
+}
+
+.grafico-top10 .fondo-label {
+    display:inline-block;
+    height:30px;
+    line-height:15px;
+    max-width:45%;
+    position:relative;
+}
+
+.grafico-top10 .fondo-label .fondo-dot {
+    width:25px;height:25px;border:solid 2px #8ab10b;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+    right:0;
+    top:0;
 }
 
 /*# sourceMappingURL=styles.css.map*/

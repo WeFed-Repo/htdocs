@@ -30,7 +30,7 @@ export class Select implements OnInit {
         this.seloptions.push(
             {value: "", text: (this.placeholder)? this.placeholder : "Seleziona..."}
         );
-        this.seloptions = this.seloptions.concat((typeof this.options ==="string")? eval(this.options): this.options);
+        this.seloptions = this.seloptions.concat(this.options);
     }
 
 }

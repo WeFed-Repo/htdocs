@@ -1,6 +1,7 @@
 /* Stili da importare */
 
 /* PLACEHOLDER */
+
 .placeholder-errore {
     color: #d00;
     background: #fee;
@@ -14,12 +15,14 @@
 }
 
 /* GRAFICO TOP SELECTION */
+
 .grafico-top10 {
     background-color:#eee;
     border:solid 1px #ddd;
     padding:5px 0;
     margin-bottom:15px;
 }
+
 .grafico-top10 .fondo {
     width:100%;
     display:block;
@@ -29,6 +32,7 @@
     padding:0;
     position:relative;
 }
+
 .grafico-top10 .fondo-index {
     display:inline-block; 
     min-width:30px;
@@ -39,16 +43,24 @@
     position:relative;
     z-index:1;
 }
-.grafico-top10 .fpos2 .fondo-index {width: calc(30px + 5%)}
-.grafico-top10 .fpos3 .fondo-index {width: calc(30px + 10%)}
-.grafico-top10 .fpos4 .fondo-index {width: calc(30px + 15%)}
-.grafico-top10 .fpos5 .fondo-index {width: calc(30px + 20%)}
-.grafico-top10 .fpos6 .fondo-index {width: calc(30px + 25%)}
-.grafico-top10 .fpos7 .fondo-index {width: calc(30px + 30%)}
-.grafico-top10 .fpos8 .fondo-index {width: calc(30px + 35%)}
-.grafico-top10 .fpos9 .fondo-index {width: calc(30px + 40%)}
-.grafico-top10 .fpos10 .fondo-index {width: calc(30px + 45%)}
 
+.grafico-top10 .fpos2 .fondo-index {width: calc(30px + 5%)}
+
+.grafico-top10 .fpos3 .fondo-index {width: calc(30px + 10%)}
+
+.grafico-top10 .fpos4 .fondo-index {width: calc(30px + 15%)}
+
+.grafico-top10 .fpos5 .fondo-index {width: calc(30px + 20%)}
+
+.grafico-top10 .fpos6 .fondo-index {width: calc(30px + 25%)}
+
+.grafico-top10 .fpos7 .fondo-index {width: calc(30px + 30%)}
+
+.grafico-top10 .fpos8 .fondo-index {width: calc(30px + 35%)}
+
+.grafico-top10 .fpos9 .fondo-index {width: calc(30px + 40%)}
+
+.grafico-top10 .fpos10 .fondo-index {width: calc(30px + 45%)}
 
 .grafico-top10 .fondo-label {
     cursor: pointer;
@@ -62,13 +74,14 @@
     z-index:2;
     margin: 0 -15px 0 0;
 }
+
 .grafico-top10 .fondo.selected .fondo-label {
     font-weight:bold;
 }
+
 .grafico-top10 .fondo.selected .fondo-dot {
     border:solid 2px #333;
 }
-
 
 .grafico-top10 .fondo-label .fondo-dot {
     width:25px;height:25px;border:solid 2px #8ab10b;
@@ -78,3 +91,6 @@
     right:0;
     top:2px;
 }
+
+
+/*# sourceMappingURL=styles.css.map*/

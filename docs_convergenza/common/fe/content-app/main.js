@@ -72,6 +72,7 @@ __webpack_require__.r(__webpack_exports__);
 // Inizializzazione funzionale "locale"
 var ambiente = function () {
   var ambiente = "local";
+  if (location.href.indexOf("wefed.local") > 0 || location.href.indexOf("webank.local") > 0) ambiente = "lib";
   return ambiente;
 }();
 
@@ -79,7 +80,7 @@ var GlobalVars = {
   amb: ambiente,
   apibaseurl: {
     "local": "/assets/json",
-    "lib": "/include/ajax/fida",
+    "lib": "/common/fe/content-app/assets/json",
     "prod": "/pathdiproduzione"
   }[ambiente]
 };
@@ -741,7 +742,7 @@ var Select = /** @class */ (function () {
     Select.prototype.ngOnInit = function () {
         // Costruisce i valori della select inserendo anche il placeholder in testa
         this.seloptions.push({ value: "", text: (this.placeholder) ? this.placeholder : "Seleziona..." });
-        this.seloptions = this.seloptions.concat((typeof this.options === "string") ? eval(this.options) : this.options);
+        this.seloptions = this.seloptions.concat(this.options);
     };
     Select.ɵfac = function Select_Factory(t) { return new (t || Select)(); };
     Select.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Select, selectors: [["form-select"]], inputs: { label: "label", placeholder: "placeholder", options: "options", value: "value", error: "error" }, outputs: { newvalue: "newvalue" }, decls: 4, vars: 2, consts: [[1, "form-group"], ["class", "control-label", 4, "ngIf"], [1, "form-control", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], [1, "control-label"], [3, "value"]], template: function Select_Template(rf, ctx) { if (rf & 1) {
@@ -968,9 +969,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _core_globalVars_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/globalVars.js */ "5vyl");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _components_disclaimer_disclaimer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/disclaimer/disclaimer.component */ "xR47");
-/* harmony import */ var _components_form_select_select_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/form/select/select.component */ "Xn7H");
+/* harmony import */ var _components_boxLink_boxLink_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/boxLink/boxLink.component */ "GqBo");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _components_disclaimer_disclaimer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/disclaimer/disclaimer.component */ "xR47");
+/* harmony import */ var _components_form_select_select_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/form/select/select.component */ "Xn7H");
 
 // import {ElencoFondi} from './elencofondi/elencofondi';
 // Variabili e funzioni globali
@@ -980,45 +982,153 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function TopSelection_div_2_div_1_Template(rf, ctx) { if (rf & 1) {
-    var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+function TopSelection_div_25_div_1_Template(rf, ctx) { if (rf & 1) {
+    var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TopSelection_div_2_div_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); var fondo_r3 = ctx.$implicit; var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r5.selectFund(fondo_r3); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TopSelection_div_25_div_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); var fondo_r5 = ctx.$implicit; var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r7.selectFund(fondo_r5); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "div", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    var fondo_r3 = ctx.$implicit;
-    var ind_r4 = ctx.index;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"]("fondo fpos" + (ind_r4 + 1));
+    var fondo_r5 = ctx.$implicit;
+    var ind_r6 = ctx.index;
+    var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"]("fondo fpos" + (ind_r6 + 1) + " " + (ctx_r4.selectedFund && ctx_r4.selectedFund.Isin == fondo_r5.Isin ? "selected" : ""));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](fondo_r3.Name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](fondo_r5.Name);
 } }
-function TopSelection_div_2_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, TopSelection_div_2_div_1_Template, 5, 3, "div", 3);
+function TopSelection_div_25_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, TopSelection_div_25_div_1_Template, 5, 3, "div", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.top10fondi);
 } }
-function TopSelection_section_3_Template(rf, ctx) { if (rf & 1) {
+function TopSelection_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Al momento non \u00C8 possibile visualizzare i dati.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+var _c0 = function () { return { "text": "Ultimo anno", "value": "1" }; };
+var _c1 = function () { return { "text": "Ultimi 3 anni", "value": "3" }; };
+var _c2 = function () { return { "text": "Ultimi 5 anni", "value": "5" }; };
+var _c3 = function (a0, a1, a2) { return [a0, a1, a2]; };
+function TopSelection_section_31_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "form-select", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "PULSANTE ACTION \"COMPRA\"");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Parte descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato descrittiva generale del fondo selezionato ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Andamento grafico");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "form-select", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "table", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "tbody");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "td", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Rendimento");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " 6,91 % ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Rendimento 2021");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " 0,83 % ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Rendimento 2020");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " 0,12 % ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Rendimento 2019");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " 8,36 % ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Valore Quota / Nav");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " 163,370 Eur ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Indice di Sharpe");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " 3,61 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "Volatilit\u00E0");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " 2,14 % ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "Data");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, " 21/04/2021 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Categoria Assogestioni");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "td", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " Bilanciati Obbligazionari ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, " GRAFICO ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](63, "hr");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r1.selectedFund.Name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.selectedFund.Name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("options", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"](5, _c3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](2, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c1), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c2)));
 } }
 var TopSelection = /** @class */ (function () {
     function TopSelection(httpClient) {
@@ -1053,19 +1163,61 @@ var TopSelection = /** @class */ (function () {
     };
     ;
     TopSelection.ɵfac = function TopSelection_Factory(t) { return new (t || TopSelection)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
-    TopSelection.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TopSelection, selectors: [["top-selection"]], inputs: { setloading: "setloading" }, decls: 5, vars: 2, consts: [["class", "grafico-top10", 4, "ngIf"], [4, "ngIf"], [1, "grafico-top10"], [3, "class", 4, "ngFor", "ngForOf"], [1, "fondo-label", 3, "click"], [1, "fondo-dot"], [1, "fondo-index"], [1, "dettagli-fondo", "bordered"], ["label", "Periodo", "placeholder", "Seleziona un valore...", "options", "[\n                {\n                    'text':'Ultimi 3 mesi',\n                    'value': '3m'\n                },\n                {\n                    'text':'Ultimo anno',\n                    'value': '1a'\n                }            \n            ]"]], template: function TopSelection_Template(rf, ctx) { if (rf & 1) {
+    TopSelection.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TopSelection, selectors: [["top-selection"]], inputs: { setloading: "setloading" }, decls: 33, vars: 11, consts: [[1, "row"], [1, "col-sm-8"], ["href", "###"], [1, "col-sm-4"], [3, "backgroundBox", "textBox", "linkBox", "gotoBox"], [3, "titleBox", "textBox", "linkBox", "gotoBox"], ["class", "grafico-top10", 4, "ngIf", "ngIfElse"], ["graficoErrore", ""], [1, "note"], [4, "ngIf"], [1, "grafico-top10"], [3, "class", 4, "ngFor", "ngForOf"], [1, "fondo-label", 3, "click"], [1, "fondo-dot"], [1, "fondo-index"], [1, "placeholder-errore"], [1, "dettagli-fondo"], ["href", "#"], [1, "bordered"], ["label", "Periodo", "placeholder", "Seleziona un valore...", 3, "options"], [1, "pf-tbstat-table"], [2, "width", "60%"], [1, "right"]], template: function TopSelection_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h2");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Top Selection");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, TopSelection_div_2_Template, 2, 1, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, TopSelection_section_3_Template, 5, 1, "section", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "disclaimer");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " \u00C8 la soluzione guidata che ti offre una ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "selezione dei Fondi e comparti di SICAV collocati da Webank con il migliore rapporto rischio/rendimento");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, ", sulla base di un ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "monitoraggio trimestrale");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, ". ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Uno strumento semplice ed intuitivo, supportato da ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "un rigoroso processo di selezione");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " dei fondi basato su ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "analisi quantitative e qualitative");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " relative al loro livello di rischio/rendimento, con particolare attenzione alla filosofia di gestione e alle performance nel tempo.");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Guida alla Top Selection");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "box-link", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "box-link", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, TopSelection_div_25_Template, 2, 1, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, TopSelection_ng_template_26_Template, 2, 0, "ng-template", null, 7, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "p", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "I fondi sono riportati nell\u2019immagine in modo esemplificativo in funzione delle caratteristiche rischio/rendimento.");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "hr");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, TopSelection_section_31_Template, 64, 9, "section", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "disclaimer");
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.top10fondi.length > 0);
+            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("backgroundBox", true)("textBox", "Vuoi investire in pi\u00F9 fondi?")("linkBox", "vai al portafoglio modello")("gotoBox", "#");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("titleBox", "Alert")("textBox", "Ricevi aggiornamenti email sulla Top selection")("linkBox", "attiva alert")("gotoBox", "#");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.top10fondi.length > 0)("ngIfElse", _r1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selectedFund);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _components_disclaimer_disclaimer_component__WEBPACK_IMPORTED_MODULE_4__["Disclaimer"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _components_form_select_select_component__WEBPACK_IMPORTED_MODULE_5__["Select"]], encapsulation: 2 });
+        } }, directives: [_components_boxLink_boxLink_component__WEBPACK_IMPORTED_MODULE_3__["BoxLinkComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _components_disclaimer_disclaimer_component__WEBPACK_IMPORTED_MODULE_5__["Disclaimer"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _components_form_select_select_component__WEBPACK_IMPORTED_MODULE_6__["Select"]], encapsulation: 2 });
     return TopSelection;
 }());
 
@@ -1924,16 +2076,27 @@ __webpack_require__.r(__webpack_exports__);
 var Disclaimer = /** @class */ (function () {
     function Disclaimer() {
     }
-    Disclaimer.prototype.ngOnInit = function () {
-    };
     Disclaimer.ɵfac = function Disclaimer_Factory(t) { return new (t || Disclaimer)(); };
-    Disclaimer.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Disclaimer, selectors: [["disclaimer"]], decls: 5, vars: 0, consts: [[1, "disclaimer"], [1, "note"]], template: function Disclaimer_Template(rf, ctx) { if (rf & 1) {
+    Disclaimer.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Disclaimer, selectors: [["disclaimer"]], decls: 15, vars: 0, consts: [[1, "disclaimer"], [1, "note"]], template: function Disclaimer_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Lorem ipsum dolor");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "NOTA LEGALE");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit sit amet Lorem ipsum dolor sit amet consectetur adipiscing elit.");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Le soluzioni guidate ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "non costituiscono una raccomandazione o un consiglio personalizzato di investire");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " nei singoli fondi comuni d\u2019investimento e/o comparti di Sicav in quanto servono solo per aiutare il Cliente ad orientarsi rispetto ai profili oggettivi di rischio/rendimento indicati nei singoli prospetti informativi. Il Cliente deve valutare autonomamente se un profilo oggettivo di investimento \u00E8 affine alle proprie esigenze soggettive di investimento. I singoli fondi comuni d\u2019investimento e/o comparti di Sicav inclusi nei Portafogli Modello sono coerenti con il singolo profilo di investimento, ma potrebbero non essere adeguati alla situazione finanziaria, agli obiettivi di investimento e alla conoscenza ed esperienza di un potenziale investitore. Il Cliente, inoltre, deve considerare che i singoli fondi comuni d\u2019investimento e/o comparti di Sicav che compongono i Portafogli Modello possono avere caratteristiche e profili di rischio diversi, facilmente individuabili dalla lettura del KIID (Key Investor Information Document) che resta la prima fonte di informazioni per il sottoscrittore. In ogni caso ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Portafogli Modello non sono vincolanti, non sono personalizzati, e rappresentano una mera esemplificazione");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " di come poter effettuare investimenti in pi\u00F9 fondi. Ciascun investimento resta nella totale disponibilit\u00E0 del Cliente il quale deve anche avere cura nel tempo di seguirne l\u2019andamento in modo autonomo rispetto al portafoglio. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "strong");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Prima dell'adesione occorre sempre leggere attentamente la documentazione d\u2019offerta");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " disponibile sul sito. I rendimenti passati non sono indicativi di quelli futuri. Tutti i dati e le informazioni presenti su questa pagina sono di titolarit\u00E0 o nella piena disponibilit\u00E0 di BPM e/o di FIDA e qualsiasi riproduzione, diffusione, comunicazione o utilizzo dei medesimi \u00E8 vietata fuori dalle finalit\u00E0 private per cui sono forniti. ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } }, encapsulation: 2 });

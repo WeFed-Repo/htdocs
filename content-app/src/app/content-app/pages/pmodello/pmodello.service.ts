@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { HttpClient,HttpParams  } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators' //libreria per gli observable
+// import { map } from 'rxjs/operators' //libreria per gli observable
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}

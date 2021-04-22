@@ -1,33 +1,147 @@
 <h2>Top Selection</h2>
 <!-- Elenco dei fondi -->
+<div class="row">
+    <div class="col-sm-8">
+        <!-- Testo introduttivo -->
+        <p> È la soluzione guidata che ti offre una <strong>selezione dei Fondi e comparti di SICAV collocati da Webank con il migliore rapporto rischio/rendimento</strong>, sulla base di un <strong>monitoraggio trimestrale</strong>.
+            <br>
+            Uno strumento semplice ed intuitivo, supportato da <strong>un rigoroso processo di selezione</strong> dei fondi basato su <strong>analisi quantitative e qualitative</strong> relative al loro livello di rischio/rendimento, con particolare attenzione alla filosofia di gestione e alle performance nel tempo.</p>
+        <!-- Fine testo introduttivo -->    
+        <!-- Link a PDF -->
+        <a href="###">Guida alla Top Selection</a>
+        <!-- Fine link a PDF -->
+        </div>
+    <div class="col-sm-4">
+        <box-link [backgroundBox]=true [textBox]="'Vuoi investire in più fondi?'" [linkBox]="'vai al portafoglio modello'" [gotoBox]="'#'"></box-link>
+        <box-link [titleBox]="'Alert'" [textBox]="'Ricevi aggiornamenti email sulla Top selection'" [linkBox]="'attiva alert'" [gotoBox]="'#'"></box-link>
+    </div>
+</div>
+<!-- Parte descrittiva e promo varie -->
 
-<!-- Fine elenco dei fondi -->
-<div class="grafico-top10" *ngIf="top10fondi.length>0">
-    <div *ngFor="let fondo of top10fondi" class="fondo">
-        <span (click)="selectFund(fondo)">{{fondo.Name}}</span>
+<!-- Grafico-->
+<div class="grafico-top10" *ngIf="top10fondi.length>0; else graficoErrore">
+    <div *ngFor="let fondo of top10fondi; index as ind" [class]="'fondo fpos' + (ind + 1) + ' ' + (selectedFund && selectedFund.Isin==fondo.Isin ? 'selected' : '')">
+        <div (click)="selectFund(fondo)" class="fondo-label">{{fondo.Name}}<div class="fondo-dot"></div></div>
+        <div class="fondo-index"></div>
     </div> 
 </div>
+<ng-template #graficoErrore><div class="placeholder-errore">Al momento non &Egrave; possibile visualizzare i dati.</div></ng-template>
+<!-- Fine grafico -->
 
+<!-- Note grafico -->
+<p class="note">I fondi sono riportati nell’immagine in modo esemplificativo in funzione delle caratteristiche rischio/rendimento.</p>
+<!-- Fine note grafico -->
+<hr>
 <!-- Dettagli del fondo prescelto -->
 <section *ngIf="selectedFund">
-    <div class="dettagli-fondo bordered">
+    <div class="dettagli-fondo">
         <h3>{{selectedFund.Name}}</h3>
-        <form-select 
-            label="Periodo"
-            placeholder="Seleziona un valore..."
-            options="[
-                {
-                    'text':'valore di prova',
-                    'value': 'v1'
-                },
-                {
-                    'text':'secondo valore di prova',
-                    'value': 'v2'
-                }            
-            ]"
-        ></form-select>
+        <a href="#">PULSANTE ACTION "COMPRA"</a>
+        <p>Parte descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato  descrittiva generale del fondo selezionato </p>
+        
+        <h4>Andamento grafico</h4>
+        <div class="bordered">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form-select 
+                        label="Periodo"
+                        placeholder="Seleziona un valore..."
+                        [options]="[
+                            {
+                                'text':'Ultimo anno',
+                                'value': '1'
+                            },
+                            {
+                                'text':'Ultimi 3 anni',
+                                'value': '3'
+                            },   
+                            {
+                                'text':'Ultimi 5 anni',
+                                'value': '5'
+                            }            
+                        ]"
+                    ></form-select>
+                    
+                    <table class="pf-tbstat-table">
+                        <tbody>
+                            <tr>
+                                <td style="width: 60%">Rendimento</td>
+                                <td class="right">
+                                    6,91 % 
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rendimento 2021</td>
+                                <td class="right">
+                                    0,83 % 
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rendimento 2020</td>
+                                <td class="right">
+                                    0,12 % 
+
+                                </td>
+                            </tr>                                
+                            <tr>
+                                <td>Rendimento 2019</td>
+                                <td class="right">
+                                    8,36 % 
+
+                                </td>
+                            </tr>                                
+                            <tr>
+                                <td>Valore Quota / Nav</td>
+                                <td class="right">
+                                    163,370 
+     Eur
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Indice di Sharpe</td>
+                                <td class="right">
+                                    3,61 
+    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Volatilità</td>
+                                <td class="right">
+                                    2,14 % 
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Data</td>
+                                <td class="right">
+                                    21/04/2021
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Categoria Assogestioni</td>
+                                <td class="right">
+                                    Bilanciati Obbligazionari
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-8">
+                    GRAFICO
+                </div>
+            </div>
+            <!-- LINK A DOCUMENTAZIONE DEL FONDO (elenco di PDF) -->
+                <!--
+                        Scheda fondo
+                        Informazioni chiave per l’investitore (KIID) AT0000743562
+                        Modulo di sottoscrizione AT0000743562
+                    -->
+
+        </div>
     </div> 
+    <hr>
 </section>
 <!-- Fine dettagli del fondo prescelto -->
-
 <disclaimer></disclaimer>
