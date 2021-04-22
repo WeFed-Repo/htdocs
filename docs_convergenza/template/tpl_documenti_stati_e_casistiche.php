@@ -125,9 +125,9 @@
         color: black;
     }
 
-    /* .accord-content .history-element:first-of-type .bullet-route{
-        background-color:red;
-    } */
+    .accord-content .history-elements>*:first-child .bullet-route{
+        display:none;
+    }
 
     .bullet-wrapper {
         position:relative; 
@@ -257,88 +257,89 @@
             <!-- END ROW 1.1 -->
 
             <!-- ROW 1.2 -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="accord-content">
-                        <h3>NOME_PRATICA_UNIVOCO_1</h3>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
-                        eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
-                        pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
-                    
-                        <!-- ROW 1.2.1 -->
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <!-- NEW ELEMENT -->
-                                <div class="history-element">
-                                    <div class="bullet-wrapper">
-                                        <div class="bullet"></div> 
-                                        <div class="bullet-route"></div>                               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="accord-content">
+                            <h3>NOME_PRATICA_UNIVOCO_1</h3>
+                            <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                            eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
+                            pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
+                            <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                            <div class="history-elements">
+                                <!-- ROW 1.2.1 -->
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- NEW ELEMENT -->
+                                        <div class="history-element">
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon" style="display:inline-block;">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_1</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- Casistica Icon -->
-                                    <div class="text-with-icon" style="display:inline-block;">
-                                        <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                        <a href="#">Nome_documento_1</a>
+                                    <div class="col-sm-2">
+                                        <span class="icon icon-check_ok"></span>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <span class="text">20/03/2021</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="icon icon-check_ok"></span>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="text">20/03/2021</span>
-                            </div>
-                        </div>
-                        <!-- END ROW 1.2.1 -->
+                                <!-- END ROW 1.2.1 -->
 
-                        <!-- ROW 1.2.2 -->
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <!-- NEW ELEMENT -->
-                                <div class="history-element">
-                                    <div class="bullet-wrapper">
-                                        <div class="bullet"></div> 
-                                        <div class="bullet-route"></div>                               
+                                <!-- ROW 1.2.2 -->
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- NEW ELEMENT -->
+                                        <div class="history-element">
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon" style="display:inline-block;">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_2</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- Casistica Icon -->
-                                    <div class="text-with-icon" style="display:inline-block;">
-                                        <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                        <a href="#">Nome_documento_2</a>
+                                    <div class="col-sm-2">
+                                        <span class="icon icon-check_ok"></span>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="icon icon-check_ok"></span>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="text">20/03/2021</span>
-                            </div>
-                        </div>
-                        <!-- END ROW 1.2.2 -->
-                        <!-- ROW 1.2.3 -->
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <!-- NEW ELEMENT -->
-                                <div class="history-element inactive">
-                                    <div class="bullet-wrapper">
-                                        <div class="bullet"></div> 
-                                        <div class="bullet-route"></div>                                 
-                                    </div>
-                                    <!-- Casistica Icon -->
-                                    <div class="text-with-icon" style="display:inline-block;">
-                                        <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                        <a href="#">Nome_documento_3</a>
+                                    <div class="col-sm-2">
+                                        <span class="text">20/03/2021</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="text"> - </span>
-                            </div>
-                            <div class="col-sm-2">
-                                <span class="text"> - </span>
-                            </div>
+                                <!-- END ROW 1.2.2 -->
+                                <!-- ROW 1.2.3 -->
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- NEW ELEMENT -->
+                                        <div class="history-element inactive">
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                                 
+                                            </div>
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon" style="display:inline-block;">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <span class="text"> - </span>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <span class="text"> - </span>
+                                    </div>
+                                </div>
+                                <!-- END ROW 1.2.3 -->
                         </div>
-                        <!-- END ROW 1.2.3 -->
                     </div>
                 </div>
             </div>
