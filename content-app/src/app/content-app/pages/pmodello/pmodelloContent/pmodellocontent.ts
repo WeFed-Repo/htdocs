@@ -27,6 +27,7 @@ export class PModelloContent  implements OnInit {
   }
   @ViewChildren("importoValue") importiList: QueryList<ElementRef>;
   @ViewChildren("isinValue") isinList: QueryList<ElementRef>;
+  @ViewChildren("descrizioneToAppend") descrizioneToAppendlList:QueryList<ElementRef>;
   @Output() handleFondiSuggeriti = new EventEmitter();
 
   
@@ -41,27 +42,21 @@ export class PModelloContent  implements OnInit {
   @ViewChild('btnId', { static: true }) btnId;
   @ViewChild('importi', { static: true }) importi;
  
+  
+ 
   colsTemplate: TemplateRef<any>[] = [];
   colsThTemplate: TemplateRef<any>
   
   optionTemplateRef?: TemplateRef<any>;
-
+  /*codSel = []*/
   setFondiSuggeriti(id,idaa,idac) {
+    
     let importoToSend:string,
         isinToSend: string;
-        //funzione da usare come generica da spostare nel servizio
-        let getArrayList = (ArrayList,idInput) => {
-          let valToSend="";
-          ArrayList.forEach(element => {
-            if(element.nativeElement.id===(idInput+idaa+'-'+idac)) {
-              valToSend = element.nativeElement.value
-            }
-          })
-          return valToSend;
-        }
+  
   //recupero importo e isni da mandare alla chiamata in post per recuperare i fondi suggeriti        
-  importoToSend = getArrayList(this.importiList,'hval');
-  isinToSend = getArrayList(this.isinList,'hisin');
+  importoToSend = this.pmodelloService.getArrayListV(this.importiList,'hval'+idaa+'-'+idac);
+  isinToSend = this.pmodelloService.getArrayListV(this.isinList,'hisin'+idaa+'-'+idac);
     let params= {
       p:id,
       aa:idaa,
@@ -71,18 +66,13 @@ export class PModelloContent  implements OnInit {
     }
     this.handleFondiSuggeriti.emit(params);
   }
+
+  /*setDescFromOverlay() {
+    console.log();
+  }*/
   // Inizializzazione
   ngOnInit(){
     this.colsThTemplate=this.importi;
-    this.colsTemplate.push(this.MacroAssetClass);
-    this.colsTemplate.push(this.Peso);
-    this.colsTemplate.push(this.AssetClass);
-    this.colsTemplate.push(this.Pesi);
-    this.colsTemplate.push(this.Importo);
-    this.colsTemplate.push(this.Fondo);
-    this.colsTemplate.push(this.btnId);
-   
-    
-    
-  }
+    this.colsTemplate.push(this.MacroAssetClass,this.Peso,this.AssetClass,this.Pesi,this.Importo,this.Fondo,this.btnId);
+ }
 }

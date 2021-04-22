@@ -2,8 +2,8 @@
 import { Injectable } from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { HttpClient,HttpParams  } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators' //libreria per gli observable
+
+
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}
@@ -38,14 +38,36 @@ export class PmodelloService {
  
   pmsUrl = "/assets/json/fondi_suggeriti.json";
  
-  callFondiSuggeriti(params):Observable<any> {
+  callFondiSuggeriti(params) {
     let httpParams = new HttpParams();
     Object.keys(params).forEach(function (key) {
         httpParams = httpParams.append(key.toString(), params[key]);
       });
     return this.httpClient.get<any>(this.pmsUrl,{
-     params: httpParams
+      params: httpParams
     })
+  }
+
+  //funzione per scorrere le liste di children
+  getArrayListV = (ArrayList,valueToCheck) => {
+    
+    let valToSend="";
+    ArrayList.forEach(element => {
+      if(element.nativeElement.id===valueToCheck) {
+        valToSend = element.nativeElement.value
+      }
+    })
+    return valToSend;
+  }
+  getArrayListH = (ArrayList,valueToCheck) => {
+    
+    let valToSend="";
+    ArrayList.forEach(element => {
+      if(element.nativeElement.id===valueToCheck) {
+        valToSend = element.nativeElement.innerHTML
+      }
+    })
+    return valToSend;
   }
 }
 

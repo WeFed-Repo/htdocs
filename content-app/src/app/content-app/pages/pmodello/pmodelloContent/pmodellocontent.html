@@ -33,6 +33,7 @@
            <span class="block-cell-table">
                <span id="val{{DataFromService[0].idaa}}-{{el}}">0</span>
                <input type="hidden" value="" id="hval{{DataFromService[0].idaa}}-{{el}}" #importoValue>
+               <input type="hidden" value="" id="hmin{{DataFromService[0].idaa}}-{{el}}">
             </span>
         </div>
      </ng-template>
@@ -45,7 +46,7 @@
         </div>
      </ng-template>
      <ng-template #btnId let-data="data">
-        <div class="block-table" *ngFor="let el of data.btnId.idac">
+       <div class="block-table" *ngFor="let el of data.btnId.idac">
             <span class="block-cell-table">
                <a type="button" class="btn btn-primary btn-small"  id="btn{{DataFromService[0].idaa}}-{{el}}" data-toggle="modal" data-target="#modaleFondiSuggeriti" (click)="setFondiSuggeriti(data.btnId.labelOv,DataFromService[0].idaa,el)">Seleziona Fondo</a>
             </span>
