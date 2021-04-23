@@ -8,11 +8,13 @@
     #pdf{
         height: 500px;
         width: 100%;
+        display:block;
     }
 
     #pdfFrame {
         height: 100%;
         width: 100%;
+        display:block;
     }
 
     /* Titoletto con index container */
@@ -34,7 +36,8 @@
         font-size: 16px;
         font-weight: normal;
         text-align: right;
-        margin:0px;
+        margin: 0px;
+        display: block;
     }
 
     /* Acceptance element*/
@@ -57,6 +60,7 @@
 
     .accept-wrapper .text {
         padding-left: 30px;
+        display: block;
     }
 
     .accept-wrapper.accepted .text {
@@ -114,6 +118,12 @@
     /* Note */
     p.note.to-right{
         text-align: right;
+    }
+
+    @media only screen and (max-width: 770px) {
+        #pdf, #pdfFrame, .documentTitleContainer{
+            display:none;
+        }
     }
 </style>
 

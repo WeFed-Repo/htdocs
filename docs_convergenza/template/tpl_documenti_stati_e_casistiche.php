@@ -218,7 +218,7 @@
         margin-bottom: 16px;
     }
 
-    @media only screen and (max-width: 780px) {
+    @media only screen and (max-width: 770px) {
         .header-col{
             display:none;
         }

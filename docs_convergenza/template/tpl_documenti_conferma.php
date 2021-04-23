@@ -49,7 +49,19 @@
         text-decoration: underline;
         color: #0e977f;
         padding-left: 24px;
+        width: 100%;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
     }
+
+    @media only screen and (max-width: 770px) {
+        .form-group.btnWrapper .btn-align-right {
+            float: none;
+            text-align: center;
+        }
+    }
+    
 
 </style>
 
