@@ -100,17 +100,30 @@
         display: block;
     }
 
+    /* # All Accords Header */
+    .header-col{
+        display:block;
+    }   
+
+    .ellips {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }       
+
     /* # Accordion Header # */
-    .pract-toggle-head .right-space{
-        padding-right:40px; 
+    .pract-toggle .right-space{
+        padding-right:60px; 
         position:relative;
     }
 
-    .pract-toggle-head .wrapper-icon-fixed {
-        position:absolute; right:20px; top:6px;"
+    .pract-toggle .wrapper-icon-fixed {
+        position:absolute; 
+        right:20px; 
+        top:6px;
     }
 
-    .pract-toggle-head .mobile-label{
+    .pract-toggle .mobile-label{
         display: none; 
     }
 
@@ -131,6 +144,10 @@
     }
 
     /* ## Bullet Route ## */
+    .accord-content .history-element{
+        display:inline-block;
+    }
+
     .accord-content .history-element.inactive .bullet, .accord-content .history-element.inactive .bullet-route {
         background-color:#EBEDEE;
     }
@@ -183,6 +200,10 @@
     }
 
     @media only screen and (max-width: 780px) {
+        .header-col{
+            display:none;
+        }
+
         .accord-content .group-element{
             display: block; 
             margin: 0px 20px;
@@ -192,8 +213,26 @@
             margin-bottom: 10px;
         }
 
+        .pract-toggle .right-space{
+            padding-right:0px; 
+        }
+
         .pract-toggle-head .mobile-label{
             display: block; 
+            margin-top: 16px;
+        }
+
+        .pract-toggle-head .btnWrapper{ 
+            margin-top: 30px;
+        }
+
+        .pract-toggle-head>div:nth-child(1){
+            padding-right:50px; 
+        }
+
+        /* CHild mobile elements align*/
+        .pract-toggle-head>div:nth-child(2), .pract-toggle-head>div:nth-child(4){
+            padding-left: 40px;
         }
     }
 
@@ -241,7 +280,7 @@
 <!-- NEW -->
 <section>
     <!-- ROW 0 -->
-    <div class="row">       
+    <div class="row header-col">       
         <div class="col-sm-12">
             <!-- ROW 0.1 -->
             <div class="row">
@@ -265,13 +304,13 @@
     </div>
     <!-- END ROW 0 -->
     <!-- ROW 1 -->
-    <div class="row pract-toggle-head boxed">       
+    <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
-            <div class="row right-space">
+            <div class="row pract-toggle-head right-space">
                 <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->                    
-                    <div class="text-with-icon">
+                    <div class="text-with-icon ellips">
                         <a class="linker" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_1</span>
@@ -283,7 +322,7 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon">
+                    <div class="text-with-icon ellips">
                         <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
                         <a href="#">Gestore</a>
                     </div>
@@ -291,12 +330,12 @@
 
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text">20/03/2021</span>
+                    <span class="text ellips">20/03/2021</span>
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon">
+                    <div class="text-with-icon right-icon ellips">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora iniziato la sottoscrizione di questa pratica. Clicca il pulsante SOTTOSCRIVI per cominciare."></span>
                             <span class="text">NUOVA</span>
@@ -310,7 +349,7 @@
                             <div>
                                 <!-- <a type="button" href="#" class="btn btn-default disabled" title="sottoscrivi">sottoscrivi</a> -->
                                 <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
-                                <a type="button" href="#" class="btn btn-primary" title="sottoscrivii">Sottoscrivi</a>
+                                <a type="button" href="#" class="btn btn-primary ellips" title="sottoscrivi">Sottoscrivi</a>
                             </div>
                         </div>
                     </div>            
@@ -339,7 +378,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
-                                    <div class="history-element" style="display: inline-block;" >
+                                    <div class="history-element" >
                                         <div class="bullet-wrapper">
                                             <div class="bullet"></div> 
                                             <div class="bullet-route"></div>                               
@@ -366,7 +405,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
-                                    <div class="history-element" style="display: inline-block;">
+                                    <div class="history-element">
                                         <div class="bullet-wrapper">
                                             <div class="bullet"></div> 
                                             <div class="bullet-route"></div>                               
@@ -392,7 +431,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
-                                    <div class="history-element inactive" style="display: inline-block;">
+                                    <div class="history-element inactive">
                                         <div class="bullet-wrapper">
                                             <div class="bullet"></div> 
                                             <div class="bullet-route"></div>                                 
@@ -424,35 +463,35 @@
     <!-- END ROW 1 -->
 
     <!-- ROW 2 -->
-    <div class="row pract-toggle-head boxed">       
+    <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 2.1 -->
-            <div class="row right-space">
+            <div class="row pract-toggle-head right-space">
                 <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon">
+                    <div class="text-with-icon ellips">
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
-                            <span class="text underline">NOME_PRATICA_UNIVOCO_1</span>
-                            <span class="sub-text">INV-0018</span>
+                            <span class="text underline">NOME_PRATICA_UNIVOCO_2</span>
+                            <span class="sub-text">INV-0019</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon">
+                    <div class="text-with-icon ellips">
                         <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
                         <a href="#">Gestore</a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text">20/03/2021</span>
+                    <span class="text ellips">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon">
+                    <div class="text-with-icon right-icon ellips">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></span>
                             <span class="text">NUOVA</span>
@@ -464,7 +503,7 @@
                     <div class="form-group btnWrapper clearfix">     
                         <div class="btn-align-center">
                             <div>
-                                <a type="button" href="#" class="btn btn-default disabled" title="sottoscrivi">sottoscrivi</a> 
+                                <a type="button" href="#" class="btn btn-default disabled ellips" title="sottoscrivi">sottoscrivi</a> 
                                 <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
                                 <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
                             </div>
