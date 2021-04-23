@@ -1,20 +1,24 @@
 //servizio dove caricare i dati dei poratfogli modello
-import { Injectable } from '@angular/core';
+import { Injectable,
+  ComponentFactoryResolver } from '@angular/core';
 import { Pmodello } from './pmodello.model';
 import { HttpClient,HttpParams  } from '@angular/common/http';
+// Variabili e funzioni globali
+import { GlobalVars } from "../../core/globalVars.js";
 
 // import { map } from 'rxjs/operators' //libreria per gli observable
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}
-aValori['valori11'] = [{"idaa":"11","idac":"246","value":25},{"idaa":"11","idac":"247","value":20},{"idaa":"11","idac":"248","value":35},{"idaa":"11","idac":"404","value":20},{}]
-aValori['valori12'] = [{"idaa":"12","idac":"38","value":0},{"idaa":"12","idac":"70","value":0},{"idaa":"12","idac":"256","value":7},{"idaa":"12","idac":"65","value":12},{"idaa":"12","idac":"251","value":7},{"idaa":"12","idac":"252","value":10},{"idaa":"12","idac":"253","value":20},{"idaa":"12","idac":"254","value":12},{"idaa":"12","idac":"250","value":20},{"idaa":"12","idac":"255","value":12},{}]
+aValori['valori11'] = [{"idaa":"11","idac":"246","value":25},{"idaa":"11","idac":"247","value":20},{"idaa":"11","idac":"248","value":35},{"idaa":"11","idac":"404","value":20}]
+aValori['valori12'] = [{"idaa":"12","idac":"38","value":0},{"idaa":"12","idac":"70","value":0},{"idaa":"12","idac":"256","value":7},{"idaa":"12","idac":"65","value":12},{"idaa":"12","idac":"251","value":7},{"idaa":"12","idac":"252","value":10},{"idaa":"12","idac":"253","value":20},{"idaa":"12","idac":"254","value":12},{"idaa":"12","idac":"250","value":20}]
 @Injectable({
   //da angualar 6 non si inserisce più nell'array provider
   providedIn: 'root'
 })
 export class PmodelloService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient,private factoryResolver: ComponentFactoryResolver) {}
+  
   private pmodelli:Array<Pmodello> = [
       new  Pmodello(
           "Difensivo", 
@@ -36,7 +40,8 @@ export class PmodelloService {
   }
   //funzione di chiamata per recuperare i fondi suggeriti get con parametri
  
-  pmsUrl = "/assets/json/fondi_suggeriti.json";
+ 
+  pmsUrl = GlobalVars.apibaseurl + "/fondi_suggeriti.json";
  
   callFondiSuggeriti(params) {
     let httpParams = new HttpParams();
@@ -67,5 +72,8 @@ export class PmodelloService {
     })
     return valToSend;
   }
+
+  //funzione per iniettare un compontente
+  
 }
 

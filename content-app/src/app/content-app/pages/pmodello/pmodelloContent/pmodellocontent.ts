@@ -1,6 +1,5 @@
 import { Component,OnInit, Input, ViewChild, TemplateRef,ViewChildren,QueryList,ElementRef, Output,EventEmitter} from '@angular/core';
 import { PmodelloService } from '../pmodello.service';
-declare function calcolaPerc(valori,importo);
 
 @Component({
   selector: 'pmodello-content',
@@ -14,8 +13,8 @@ export class PModelloContent  implements OnInit {
   @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;
   @Input() DataFromService;
- 
- 
+  @Output() handleFondiSuggeriti = new EventEmitter();
+  @Output() handlecalcolaPerc= new EventEmitter();
   
   constructor(private pmodelloService: PmodelloService) { }
 
@@ -23,12 +22,17 @@ export class PModelloContent  implements OnInit {
   calcImporti(e,valori) {
     const c = e.target.value.replace(/[^0-9]/g ,'');
     e.target.value = c;
-    calcolaPerc(valori, c)
+    //calcolaPerc(valori, c);
+    let objToPass= {
+      valori:valori,
+      c:c
+    }
+    this.handlecalcolaPerc.emit(objToPass);
   }
   @ViewChildren("importoValue") importiList: QueryList<ElementRef>;
   @ViewChildren("isinValue") isinList: QueryList<ElementRef>;
   @ViewChildren("descrizioneToAppend") descrizioneToAppendlList:QueryList<ElementRef>;
-  @Output() handleFondiSuggeriti = new EventEmitter();
+  
 
   
 

@@ -5,7 +5,7 @@
             "value": "LU0562248079",
             "description": "JPM US Short Duration Bond D Acc $",
             "pdf": "JPUSDBD",
-            "impMin": 0,
+            "impMin": 1000,
             "warning":"y"
         },
         {

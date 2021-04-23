@@ -3,6 +3,7 @@ import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 declare function apriSchedaFondoFida(codiceFida);
 declare function ttInit();
+
   
 
 @Component({
@@ -24,6 +25,7 @@ export class PModello  implements OnInit {
   public linkBox:string;
   public gotoBox:string;
   public typePortafoglio:string;
+  public indexValori: number;
   public idaaSelected:string;
   public idacSelected:string;
   //gestione numero righe da mostrare nella tabella dei sugegriti
@@ -193,18 +195,63 @@ export class PModello  implements OnInit {
   @ViewChildren("importoSel") impSelList: QueryList<ElementRef>;
   @ViewChildren("radioFondo") radioFondoList: QueryList<ElementRef>;
 
+  numFormatMigliaia(nStr) {
+    nStr += '';
+    const x = nStr.split('.');
+    let x1 = x[0];
+    const x2 = x.length > 1 ? ',' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + '.' + '$2');
+    }
+    return x1 + x2;
+  }
+
+  returnSelector(el) {
+    let selector = this.composizionePort.nativeElement.querySelector(el);
+    return selector;
+  }
+
+  //funzione calcola percentuale
+  calcolaPercentuale(params) {
+    let newValue,
+        valori = params.valori,
+        importo = params.c;
+        valori.forEach(value => {
+          let valueField = "#val"  + value.idaa + "-" + value.idac,
+              hField = "#hval"  + value.idaa + "-" + value.idac,
+              hFieldmin = "#hmin"  + value.idaa + "-" + value.idac
+              
+          if(this.returnSelector("#totinv" + value.idaa)!="") {
+            newValue = importo * (value.value / 100);
+            this.returnSelector(valueField).innerHTML = this.numFormatMigliaia(parseInt(newValue).toString())
+            this.returnSelector(hField).value = parseInt(newValue);
+            if (parseFloat(this.returnSelector(hFieldmin).value) > parseFloat(newValue)) {
+              this.returnSelector(valueField).innerHTML = '<i data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline no-rendering-position" title=""></i>' + this.returnSelector(valueField).innerHTML
+            }
+          }
+          else {
+            this.returnSelector(valueField).innerHTML = "0"
+            this.returnSelector(hField).value = "0"
+          }
+        });
+  }
   
+  handlecalcolaPerc(params) {
+     this.calcolaPercentuale(params);
+  }
+
   //funzione di chiamata fondi suggeriti
-
-
   handleFondiSuggeriti(params) {
     //setto il tipo di portafoglio da includere nel testo della modale
     switch(params.aa) {
       case '11':
-        this.typePortafoglio = 'difensivo'
+        this.typePortafoglio = 'difensivo',
+        this.indexValori = 0
         break;
         case '12':
-          this.typePortafoglio = 'prudente'
+          this.typePortafoglio = 'prudente',
+          this.indexValori = 1
         break;
       default:
         
@@ -277,27 +324,33 @@ export class PModello  implements OnInit {
    
     salva(idaa, idac) {
       //popolo il campo della descrizione nella tabella del portafoglio
-      const descSel = this.composizionePort.nativeElement.querySelector("#txt" + idaa + "-" + idac),
-            isinSel = this.composizionePort.nativeElement.querySelector("#hisin" + idaa + "-" + idac),
-            hminSel = this.composizionePort.nativeElement.querySelector("#hmin" + idaa + "-" + idac),
-            btnSel = this.composizionePort.nativeElement.querySelector("#btn" + idaa + "-" + idac)
+      let descSel = this.returnSelector("#txt" + idaa + "-" + idac),
+            isinSel = this.returnSelector("#hisin" + idaa + "-" + idac),
+            hminSel = this.returnSelector("#hmin" + idaa + "-" + idac),
+            btnSel = this.returnSelector("#btn" + idaa + "-" + idac),
+            c = this.returnSelector("#totinv" + idaa);
       descSel.innerHTML = this.valuesToSave['descrToFullfill'];
       descSel.addEventListener('click',()=>this.apriPdfFondo(this.valuesToSave['pdfToFullfill']));
       isinSel.value =  this.valuesToSave['value']
       hminSel.value = this.valuesToSave['impMin']
       btnSel.setAttribute('class','btn btn-defalut btn-small');
       btnSel.innerHTML="cambia fondo"
-
-      //switc del bottone nella tabella
+      
+      let valori = this.pmodelloService.returnPmodelArray()[this.indexValori].dataFromService;
+      
+      c = c.value.replace(/[^0-9]/g, '');   
+      this.calcolaPercentuale({valori,c})
       //chiudo la modale
       this.closebutton.nativeElement.click();
+
+     
      
     }
     /*salva(idaa, idac) {
     
       enableCart(idaa,false);
       c = $('#totinv' + idaa).val().replace(/[^0-9]/g, '');
-      calcolaPerc(aValori['valori' + idaa], c);
+      //calcolaPerc(aValori['valori' + idaa], c);
     }*/
     
   // Inizializzazione
