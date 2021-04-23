@@ -110,6 +110,10 @@
         position:absolute; right:20px; top:6px;"
     }
 
+    .pract-toggle-head .mobile-label{
+        display: none; 
+    }
+
     /* # Accordion Content # */
     .accord-content {
         padding: 20px 24px;
@@ -187,6 +191,10 @@
         .accord-content .group-element .text{
             margin-bottom: 10px;
         }
+
+        .pract-toggle-head .mobile-label{
+            display: block; 
+        }
     }
 
 
@@ -261,8 +269,8 @@
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
             <div class="row right-space">
-                <div class="col-sm-4">
-                    <!-- Text with Icon + sub-text -->
+                <div class="col-sm-4 col-xs-12">
+                    <!-- Text with Icon + sub-text -->                    
                     <div class="text-with-icon">
                         <a class="linker" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
@@ -272,7 +280,8 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon">
                         <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
@@ -280,11 +289,13 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
                     <span class="text">20/03/2021</span>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora iniziato la sottoscrizione di questa pratica. Clicca il pulsante SOTTOSCRIVI per cominciare."></span>
@@ -293,7 +304,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-12">
                     <div class="form-group btnWrapper clearfix">     
                         <div class="btn-align-center">
                             <div>
@@ -417,7 +428,7 @@
         <div class="col-sm-12">
             <!-- ROW 2.1 -->
             <div class="row right-space">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon">
                         <a class="linker" href="#">
@@ -427,17 +438,20 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon">
                         <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
                         <a href="#">Gestore</a>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
                     <span class="text">20/03/2021</span>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></span>
@@ -446,7 +460,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-12">
                     <div class="form-group btnWrapper clearfix">     
                         <div class="btn-align-center">
                             <div>
