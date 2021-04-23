@@ -650,6 +650,11 @@
 								"nome": "Stati e Casistiche",
 								"tpl": "tpl_documenti_stati_e_casistiche.php",
 								"inlavorazione": true
+							},
+							{
+								"nome": "Archivio",
+								"tpl": "tpl_documenti_archivio.php",
+								"inlavorazione": true
 							}
 							
 						]
