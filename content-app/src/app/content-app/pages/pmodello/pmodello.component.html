@@ -65,8 +65,8 @@
                         <a type="button" class="btn btn-default" data-dismiss="modal">chiudi</a>
                     </div>
                     <div class="btn-align-right">
-                        <a *ngIf="isRoleModifica" type="button" class='btn btn-primary'>Rimuovi</a>
-                        <a type="button" [ngClass]="!isRadioChecked ? 'btn btn-disabled' : 'btn btn-primary' " id=""  ng-disabled="!isRadioChecked" (click)="salva(idaaSelected,idacSelected)">Salva</a>
+                        <a *ngIf="isRoleModifica" type="button" class='btn btn-primary' (click)="setCarrValue(idaaSelected,idacSelected,false)">Rimuovi</a>
+                        <a type="button" [ngClass]="!isRadioChecked ? 'btn btn-disabled' : 'btn btn-primary' " id=""  ng-disabled="!isRadioChecked" (click)="setCarrValue(idaaSelected,idacSelected,true)">Salva</a>
                     </div>
                     <br class="clear">
                 </div>
@@ -74,5 +74,5 @@
           </div>
           </div>
     </div>
-    <div #wrapperTooltip></div>
+    
 </div>

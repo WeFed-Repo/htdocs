@@ -13,8 +13,10 @@ export class PModelloContent  implements OnInit {
   @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;
   @Input() DataFromService;
+  @Input() valueInput;
   @Output() handleFondiSuggeriti = new EventEmitter();
   @Output() handlecalcolaPerc= new EventEmitter();
+ 
   
   constructor(private pmodelloService: PmodelloService) { }
 
@@ -22,21 +24,18 @@ export class PModelloContent  implements OnInit {
   calcImporti(e,valori) {
     const c = e.target.value.replace(/[^0-9]/g ,'');
     e.target.value = c;
-    //calcolaPerc(valori, c);
     let objToPass= {
       valori:valori,
       c:c
     }
     this.handlecalcolaPerc.emit(objToPass);
   }
+  
+  
   @ViewChildren("importoValue") importiList: QueryList<ElementRef>;
   @ViewChildren("isinValue") isinList: QueryList<ElementRef>;
-  @ViewChildren("descrizioneToAppend") descrizioneToAppendlList:QueryList<ElementRef>;
-  
 
   
-
-
   @ViewChild('MacroAssetClass', { static: true }) MacroAssetClass;
   @ViewChild('Peso', { static: true }) Peso;
   @ViewChild('AssetClass', { static: true }) AssetClass;
@@ -75,7 +74,7 @@ export class PModelloContent  implements OnInit {
   ngOnInit(){
     this.colsThTemplate=this.importi;
     this.colsTemplate.push(this.MacroAssetClass,this.Peso,this.AssetClass,this.Pesi,this.Importo,this.Fondo,this.btnId);
-  
+    
     
  }
 }

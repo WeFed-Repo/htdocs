@@ -3,7 +3,7 @@
     <simple-table  [headingsCol]="headingsCol" [rowData]="rowData" [cellClassName]="cellClassName" [colsTemplate]="colsTemplate" [colsThTemplate]="colsThTemplate"></simple-table>
     <!--template header-->
     <ng-template #importi let-data="data">
-        <input class="form-control" type="text" name="totinv{{DataFromService[0].idaa}}" id= "totinv{{DataFromService[0].idaa}}" maxlength="10" size="9" *ngIf="data.id==='importi'" (keyup)="calcImporti($event,DataFromService)" #inputImporto>
+        <input  class="form-control" type="text" name="totinv{{DataFromService[0].idaa}}" id= "totinv{{DataFromService[0].idaa}}" maxlength="10" size="9" *ngIf="data.id==='importi'" (keyup)="calcImporti($event,DataFromService)" #inputImporto>
      </ng-template>
 
     <!--template row-->
