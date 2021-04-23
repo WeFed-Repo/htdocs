@@ -11277,7 +11277,7 @@ div.select-content select:active {
   padding: 0 15px 0 0;
   flex-grow: 0;
   flex-shrink: 0;
-  margin: 20px;
+  margin: 0 20px;
   float: right;
   display: block;
   text-align: center;
