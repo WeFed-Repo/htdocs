@@ -37,7 +37,7 @@ export class PModello  implements OnInit {
   isRoleModifica:boolean;
   t:string;
 
-  //stato della modale
+
   
 
   public valuesToSave: {}
@@ -240,6 +240,7 @@ export class PModello  implements OnInit {
   handlecalcolaPerc(params) {
      this.calcolaPercentuale(params);
   }
+ 
 
   //funzione di chiamata fondi suggeriti
   handleFondiSuggeriti(params) {
@@ -322,44 +323,44 @@ export class PModello  implements OnInit {
         } 
     }
    
-    salva(idaa, idac) {
-      //popolo il campo della descrizione nella tabella del portafoglio
-      let descSel = this.returnSelector("#txt" + idaa + "-" + idac),
+    setCarrValue(idaa, idac, toSave) {
+      //se sto salvando
+      let   descSel = this.returnSelector("#txt" + idaa + "-" + idac),
             isinSel = this.returnSelector("#hisin" + idaa + "-" + idac),
             hminSel = this.returnSelector("#hmin" + idaa + "-" + idac),
             btnSel = this.returnSelector("#btn" + idaa + "-" + idac),
             c = this.returnSelector("#totinv" + idaa);
-      descSel.innerHTML = this.valuesToSave['descrToFullfill'];
-      descSel.addEventListener('click',()=>this.apriPdfFondo(this.valuesToSave['pdfToFullfill']));
-      isinSel.value =  this.valuesToSave['value']
-      hminSel.value = this.valuesToSave['impMin']
-      btnSel.setAttribute('class','btn btn-defalut btn-small');
-      btnSel.innerHTML="cambia fondo"
-      
+      if(toSave===true) {
+        descSel.innerHTML = this.valuesToSave['descrToFullfill'];
+        descSel.addEventListener('click',()=>this.apriPdfFondo(this.valuesToSave['pdfToFullfill']));
+        isinSel.value =  this.valuesToSave['value'];
+        hminSel.value = this.valuesToSave['impMin'];
+        btnSel.setAttribute('class','btn btn-defalut btn-small');
+        btnSel.innerHTML="cambia fondo"
+      }
+      else {
+        descSel.innerHTML = '';
+        isinSel.value =  '';
+        hminSel.value= '';
+        btnSel.setAttribute('class','btn btn-primary btn-small');
+        btnSel.innerHTML="seleziona fondo"
+      }
       let valori = this.pmodelloService.returnPmodelArray()[this.indexValori].dataFromService;
       
       c = c.value.replace(/[^0-9]/g, '');   
       this.calcolaPercentuale({valori,c})
-      //chiudo la modale
+      //ancaora da integrare enableCart
+      //enableCart(idaa,false);
       this.closebutton.nativeElement.click();
-
-     
-     
     }
-    /*salva(idaa, idac) {
-    
-      enableCart(idaa,false);
-      c = $('#totinv' + idaa).val().replace(/[^0-9]/g, '');
-      //calcolaPerc(aValori['valori' + idaa], c);
-    }*/
-    
-  // Inizializzazione
+   // Inizializzazione
   ngOnInit(){
     this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
   
     this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
     ttInit();
+    
    }
   
   ngAfterViewInit() {
