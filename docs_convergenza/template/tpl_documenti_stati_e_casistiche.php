@@ -148,6 +148,24 @@
         display:inline-block;
     }
 
+    .accord-content .history-element .bullet-wrapper-target{
+        position: absolute;
+        left: 0px;
+    }
+
+    .accord-content .history-element .text-with-icon-target{
+        position: absolute;
+        left: 34px;
+        width: calc(100% - 150px);
+    }
+
+    .accord-content .history-element .text-with-icon{
+        display:inline-block;
+        text-overflow: ellipsis;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .accord-content .history-element.inactive .bullet, .accord-content .history-element.inactive .bullet-route {
         background-color:#EBEDEE;
     }
@@ -171,7 +189,8 @@
         position:absolute; 
         width:10px; 
         height: 10px; 
-        left:11px; top: 22px; 
+        left:11px; 
+        top: 8px; 
         background-color:#0e977f; 
         border-radius:5px;
         z-index:1;
@@ -182,7 +201,7 @@
         width:2px; 
         height: 40px; 
         left:15px; 
-        top: -18px; 
+        top: -30px; 
         background-color:#0e977f;
     }
 
@@ -378,17 +397,21 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
-                                    <div class="history-element" >
-                                        <div class="bullet-wrapper">
-                                            <div class="bullet"></div> 
-                                            <div class="bullet-route"></div>                               
+                                    <div class="history-element">
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
                                         </div>
-                                        <!-- Casistica Icon -->
-                                        <div class="text-with-icon" style="display:inline-block;">
-                                            <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                            <a href="#">Nome_documento_1</a>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_1</a>
+                                            </div>
                                         </div>
-                                    </div>                                
+                                    </div>                            
                                     <div class="group-wrapper">
                                         <div class="group-element">
                                             <span class="icon icon-check_ok"></span>
@@ -406,16 +429,20 @@
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
                                     <div class="history-element">
-                                        <div class="bullet-wrapper">
-                                            <div class="bullet"></div> 
-                                            <div class="bullet-route"></div>                               
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
                                         </div>
-                                        <!-- Casistica Icon -->
-                                        <div class="text-with-icon" style="display:inline-block;">
-                                            <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                            <a href="#">Nome_documento_2</a>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_2</a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div>     
                                     <div class="group-wrapper">
                                         <div class="group-element">
                                             <span class="icon icon-check_ok"></span>
@@ -432,16 +459,20 @@
                                 <div class="col-sm-12">
                                     <!-- NEW ELEMENT -->
                                     <div class="history-element inactive">
-                                        <div class="bullet-wrapper">
-                                            <div class="bullet"></div> 
-                                            <div class="bullet-route"></div>                                 
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
                                         </div>
-                                        <!-- Casistica Icon -->
-                                        <div class="text-with-icon" style="display:inline-block;">
-                                            <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
-                                            <a href="#">Nome_documento_3</a>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_3</a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div>     
                                     <div class="group-wrapper">
                                         <div class="group-element">
                                             <span class="icon icon-check_ok"></span>
