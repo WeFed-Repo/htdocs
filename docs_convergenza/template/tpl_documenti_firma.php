@@ -74,18 +74,25 @@
         display: inline-block;
     }
     
-    /* Text-with-Icon Element, wrapper and right float*/
-    .list-icon-wrapper.to-right .text-with-icon {
-        float: right;
-        margin-right: 14px;
+     /* # Text-with-Icon Element, wrapper and right float # */
+    /* ## List Container ## */
+    .list-icon-wrapper {
+        margin-bottom: 30px;
     }
 
-    .list-icon-wrapper.to-right .text-with-icon:first-child {
-        margin-right: 0px;
+    .list-icon-wrapper.not-inline .text-with-icon{
+        margin-bottom: 6px;
     }
 
+    /* ## Text with icon Element ## */
     .text-with-icon {
         position: relative;
+        width: fit-content;
+    }
+
+    .text-with-icon .linker {
+        text-decoration: none;
+        padding-left: 0px;
     }
 
     .text-with-icon .glyph {
@@ -107,11 +114,80 @@
         color: #0e977f;
     }
 
+    .text-with-icon .image {
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: lightgray;
+    }
+
+    /* Change Positions */
+    .text-with-icon.right-icon .text, .text-with-icon.right-icon .sub-text{
+        padding-left: 0px;
+        padding-right: 24px;
+    }
+
+    .text-with-icon.right-icon .image, .text-with-icon.right-icon .glyph, .text-with-icon.right-icon .icon{
+        right: 0px;
+        left: auto;
+    }
+
+    /* Text-with-Icon Element right float*/
+    .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
+        float: right;
+    }
+    .list-icon-wrapper.to-right .text-with-icon {
+        margin-right: 14px;
+    }
+
+
+    .list-icon-wrapper.to-right .text-with-icon:first-child {
+        margin-right: 0px;
+    }
+
+    
+
+    /* Change Texts */
     .text-with-icon a {
         font-size: 16px;
         text-decoration: underline;
         color: #0e977f;
         padding-left: 24px;
+    }
+
+    .text-with-icon .text {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: 24px;
+        color: black;
+    }
+
+    /* ## Declinazione All Link ## */
+    .text-with-icon .underline {
+        text-decoration: underline;
+    }
+
+    .text-with-icon .sub-text {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+        padding-left: 24px;
+        color: black;
+        display: block;
+    }
+
+    .text-with-icon.ellips{
+        width: 100%;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
     }
 
 
@@ -120,9 +196,30 @@
         text-align: right;
     }
 
+    .no-mobile-label{
+        display:auto;
+    }
+
     @media only screen and (max-width: 770px) {
-        #pdf, #pdfFrame, .documentTitleContainer{
+        #pdf, #pdfFrame, .documentTitleContainer, .no-mobile-label{
             display:none;
+        }
+        .form-group.btnWrapper .btn-align-right {
+            float: none;
+            text-align: center;
+        }
+
+        .form-group.btnWrapper .btn{
+            display: block;
+        }
+
+        p.note.to-right{
+            text-align: center;
+        }
+        
+        .mobile-reverse{
+            display:flex; 
+            flex-direction:column-reverse;
         }
     }
 </style>
@@ -133,12 +230,16 @@
 	    <div class="col-sm-12">
             <div class="list-icon-wrapper to-right">
                 <div class="text-with-icon">
-                    <i class="icon icon-trash_filled" title="icon-trash_filled"></i>
-                    <a href="#">Rifiuta pratica</a>
+                    <a href="#">
+                        <span class="icon icon-trash_filled" title="icon-trash_filled"></span>
+                        <span class="no-mobile-label">Rifiuta pratica</span>
+                    </a>
                 </div>
                 <div class="text-with-icon">
-                    <i class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></i>
-                    <a href="#">Contatti</a>
+                    <a href="#">
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <span class="no-mobile-label">Contatti</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -173,7 +274,7 @@
 
 <!-- NEW -->
 <section>
-    <div class="row">
+    <div class="row mobile-reverse">
         <div class="col-sm-11">
             <!-- Confirmation -->
             <div class="accept-wrapper">

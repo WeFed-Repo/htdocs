@@ -1,5 +1,7 @@
 <style>   
-    /* Text-with-Icon Element, wrapper and right float*/
+
+     /* # Text-with-Icon Element, wrapper and right float # */
+    /* ## List Container ## */
     .list-icon-wrapper {
         margin-bottom: 30px;
     }
@@ -8,8 +10,15 @@
         margin-bottom: 6px;
     }
 
+    /* ## Text with icon Element ## */
     .text-with-icon {
         position: relative;
+        width: fit-content;
+    }
+
+    .text-with-icon .linker {
+        text-decoration: none;
+        padding-left: 0px;
     }
 
     .text-with-icon .glyph {
@@ -44,11 +53,56 @@
         background-color: lightgray;
     }
 
+    /* Change Positions */
+    .text-with-icon.right-icon .text, .text-with-icon.right-icon .sub-text{
+        padding-left: 0px;
+        padding-right: 24px;
+    }
+
+    .text-with-icon.right-icon .image, .text-with-icon.right-icon .glyph, .text-with-icon.right-icon .icon{
+        right: 0px;
+        left: auto;
+    }
+
+    /* Text-with-Icon Element right float*/
+    .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
+        float: right;
+    }
+    .list-icon-wrapper.to-right .text-with-icon {
+        margin-right: 14px;
+    }
+
+    /* Change Texts */
     .text-with-icon a {
         font-size: 16px;
         text-decoration: underline;
         color: #0e977f;
         padding-left: 24px;
+    }
+
+    .text-with-icon .text {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: 24px;
+        color: black;
+    }
+
+    /* ## Declinazione All Link ## */
+    .text-with-icon .underline {
+        text-decoration: underline;
+    }
+
+    .text-with-icon .sub-text {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+        padding-left: 24px;
+        color: black;
+        display: block;
+    }
+
+    .text-with-icon.ellips{
         width: 100%;
         text-overflow: ellipsis;
         display: block;
@@ -100,20 +154,20 @@
             <div class="list-icon-wrapper not-inline">
                 <h3>RIEPILOGO DOCUMENTI</h3>
                 <!-- Casistica Image -->
-                <div class="text-with-icon">
+                <div class="text-with-icon ellips">
                     <span class="image image-uread_pdf" title="image-uread_pdf"></span>
                     <a href="#">Nome_Documento_1_Da_Visionare</a>
                 </div>
                 <!-- Casistica Glifo -->
-                <div class="text-with-icon">
+                <div class="text-with-icon ellips">
                     <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
                     <a href="#">Nome_Documento_2_Da_Firmare</a>
                 </div>
-                <div class="text-with-icon">
+                <div class="text-with-icon ellips">
                     <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
                     <a href="#">Nome_Documento_3_Da_Visionare_e_Firmare</a>
                 </div>
-                <div class="text-with-icon">
+                <div class="text-with-icon ellips">
                     <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
                     <a href="#">Nome_Documento_4_Da_Firmare</a>
                 </div>

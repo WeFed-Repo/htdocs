@@ -70,6 +70,14 @@
         left: auto;
     }
 
+    /* Text-with-Icon Element right float*/
+    .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
+        float: right;
+    }
+    .list-icon-wrapper.to-right .text-with-icon {
+        margin-right: 14px;
+    }
+
     /* Change Texts */
     .text-with-icon a {
         font-size: 16px;
@@ -98,6 +106,13 @@
         padding-left: 24px;
         color: black;
         display: block;
+    }
+
+    .text-with-icon.ellips{
+        width: 100%;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
     }
 
     /* # All Accords Header */
