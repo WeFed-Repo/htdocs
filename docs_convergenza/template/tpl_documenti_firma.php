@@ -166,7 +166,7 @@
         font-weight: bold;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
     }
 
     /* ## Declinazione All Link ## */
@@ -179,7 +179,7 @@
         font-weight: normal;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
         display: block;
     }
 
@@ -220,6 +220,17 @@
         .mobile-reverse{
             display:flex; 
             flex-direction:column-reverse;
+        }
+
+        .ellips{
+            width: 100%;
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .accept-wrapper{
+            margin-top:30px;
         }
     }
 </style>
@@ -288,9 +299,10 @@
         </div>
         <div class="col-sm-1">
              <!-- Icon with text -->
-            <div class="text-with-icon">
-                <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
-                <a href="#">PDF</a>
+            <div class="text-with-icon ellips">
+                <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>                
+                <a href="#" class="hidden-xs">PDF</a>
+                <a href="#" class="visible-xs ellips">NOME_DOCUMENTO_3_DA_VISIONARE_E_FIRMARE</a>                
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <style>
     /* # Utility Only for display # */
     .row.boxed {
-        border: 1px solid black;
+        border: 1px solid #202d50;
         padding-top: 10px;
         margin-bottom: 5px;
     }
@@ -91,7 +91,7 @@
         font-weight: bold;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
     }
 
     /* ## Declinazione All Link ## */
@@ -104,7 +104,7 @@
         font-weight: normal;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
         display: block;
     }
 
@@ -186,7 +186,7 @@
     }
 
     .accord-content .history-element.inactive a{
-        color: black;
+        color: #202d50;
     }
 
     .accord-content .history-elements>*:first-child .bullet-route{
@@ -571,3 +571,29 @@
 </section>
 
 <p>Non trovi una pratica? Le pratiche <strong>vengono spostate nell’Archivio a partire dal giorno successivo</strong> la sottoscrizione, scadenza o rifiuto.</p>
+
+<script>
+    $('.pract-toggle-head a[data-toggle="collapse"]').click(function(){
+        let accHead = $(this).find('span.icon');
+        // Gestione Arrow
+        if(accHead.hasClass('icon-arrow_down')){
+            accHead.addClass('icon-arrow_up');
+            accHead.removeClass('icon-arrow_down');
+        }else if(accHead.hasClass('icon-arrow_up')){
+            accHead.addClass('icon-arrow_down');
+            accHead.removeClass('icon-arrow_up');
+        }
+
+        // Simulazione Data Loading
+        let collapsID = $(this).attr('href');
+        let loader='<div id="" class="caricamentoAjax" style="display: block; margin:60px"><img src="/HT/fe/img/loading.gif"></div>';
+        $(loader).insertBefore($(collapsID).find('.accord-content'));
+        $(collapsID).find('.accord-content').hide();
+        
+        var StopLoading = function() {
+            $(collapsID).find('.accord-content').show();
+            $(collapsID).find('.caricamentoAjax').remove();
+        }
+        setTimeout(StopLoading, 2000);
+    });
+</script>

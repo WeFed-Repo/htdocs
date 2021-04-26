@@ -85,7 +85,7 @@
         font-weight: bold;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
     }
 
     /* ## Declinazione All Link ## */
@@ -98,7 +98,7 @@
         font-weight: normal;
         text-decoration: none;
         padding-left: 24px;
-        color: black;
+        color: #202d50;
         display: block;
     }
 
