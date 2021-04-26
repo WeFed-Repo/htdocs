@@ -18,7 +18,7 @@ export class comPortafoglioTable  implements OnInit {
   @Input() isBtnupDateCarVisible;
   @Output() handleFondiSuggeriti = new EventEmitter();
   @Output() handlecalcolaPerc= new EventEmitter();
- 
+  @Output() handleaddCart= new EventEmitter();
   
   constructor(private pmodelloService: PmodelloService) { }
 
@@ -71,6 +71,10 @@ export class comPortafoglioTable  implements OnInit {
     this.handleFondiSuggeriti.emit(objToPass);
   }
 
+  addToCart(postfix) {
+    this.handleaddCart.emit(postfix);
+  }
+  
   
   // Inizializzazione
   ngOnInit(){

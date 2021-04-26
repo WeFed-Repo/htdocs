@@ -9,6 +9,7 @@
             <li [ngClass]="{'selected': contenuto === 'topselection'}"><a title="Top Selection" (click)="naviga('topselection')">Top Selection</a></li>
             <li [ngClass]="{'selected': contenuto === 'pmodello'}"><a title="Portafoglio modello" (click)="naviga('pmodello')">Portafoglio modello</a></li>
         </ul>
+        <carrello *ngIf="carrelloService.isCarrelloVisible"></carrello>
     </div>
     <!-- Fine navigatore spalla -->
     <div id="contenuti" class="contenuti col-sm-12 col-md-10">

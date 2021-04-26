@@ -16,6 +16,7 @@ import { comPortafoglioTable } from './content-app/pages/pmodello/comPortafoglio
 
 // Modulo con oggetti di pagina
 import {PageComponents} from './content-app/components/pagecomponents.module';
+import { Carrello } from './content-app/pages/pmodello/carrello/carrello.component';
 
  
 @NgModule({  
@@ -27,7 +28,8 @@ import {PageComponents} from './content-app/components/pagecomponents.module';
     Overview, TopSelection,PModello,
 
     //contenuti dei sottocomponenti
-    comPortafoglioTable
+    comPortafoglioTable,
+    Carrello
 
   ],
   imports: [

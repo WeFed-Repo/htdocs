@@ -1,4 +1,5 @@
 import { Component,OnInit, Input} from '@angular/core';
+import { CarrelloService } from './pages/pmodello/carrello.service';
 
 @Component({
   selector: 'content-app',
@@ -11,7 +12,7 @@ export class ContentAppComponent  implements OnInit {
   // Contenuto di default
   @Input() contenuto = "overview";
 
-  constructor() {}
+  constructor(public  carrelloService: CarrelloService) {}
 
   // Funzioni locali
   naviga = (cont:string) => {
@@ -32,5 +33,6 @@ export class ContentAppComponent  implements OnInit {
 
     this.naviga(this.contenuto);
     this.setloading(false);
-  }
+    this.carrelloService.isCarrelloVisible;
+ }
 }
