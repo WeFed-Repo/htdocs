@@ -2,18 +2,20 @@ import { Component,OnInit, Input, ViewChild, TemplateRef,ViewChildren,QueryList,
 import { PmodelloService } from '../pmodello.service';
 
 @Component({
-  selector: 'pmodello-content',
-  templateUrl: 'pmodellocontent.html',
+  selector: 'comPortafoglioTable',
+  templateUrl: 'comPortafoglioTable.component.html',
  
 })
 
-export class PModelloContent  implements OnInit {
+export class comPortafoglioTable  implements OnInit {
   @Input() textIntro;
   @Input() headingsCol:Array<any>;
   @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;
   @Input() DataFromService;
   @Input() valueInput;
+  @Input() isBtnaddCarVisible;
+  @Input() isBtnupDateCarVisible;
   @Output() handleFondiSuggeriti = new EventEmitter();
   @Output() handlecalcolaPerc= new EventEmitter();
  

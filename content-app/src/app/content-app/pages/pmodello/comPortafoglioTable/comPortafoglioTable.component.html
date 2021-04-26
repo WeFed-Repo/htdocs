@@ -52,5 +52,15 @@
             </span>
         </div>
      </ng-template>
-     
+
+     <!-- bottoni del carrello-->
+     <div class="form-group btnWrapper">
+         <div class="btn-align-right" id="addcar{{DataFromService[0].idaa}}" *ngIf="isBtnaddCarVisible">
+            <a type="button" class="btn btn-primary">aggiungi al carrello</a>
+        </div>
+        <div class="btn-align-right" id="updcar{{DataFromService[0].idaa}}" *ngIf="isBtnupDateCarVisible">
+            <a type="button" class="btn btn-primary" id="">aggiorna il carrello</a>
+            <a type="button" class="btn btn-primary" id="">vedi il carrello</a>
+        </div>
+    </div>
 </div>

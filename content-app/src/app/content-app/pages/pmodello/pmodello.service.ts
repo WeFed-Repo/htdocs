@@ -1,12 +1,11 @@
 //servizio dove caricare i dati dei poratfogli modello
-import { Injectable,
-  ComponentFactoryResolver } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { Pmodello } from './pmodello.model';
-import { HttpClient,HttpParams  } from '@angular/common/http';
+import { HttpClient,HttpParams } from '@angular/common/http';
 // Variabili e funzioni globali
 import { GlobalVars } from "../../core/globalVars.js";
 
-// import { map } from 'rxjs/operators' //libreria per gli observable
+
 //servizio per ora con dati statici da costruire a seguito delle chiamate
 //valori recuperati da collaudo
 const aValori = {}
@@ -17,7 +16,7 @@ aValori['valori12'] = [{"idaa":"12","idac":"38","value":0},{"idaa":"12","idac":"
   providedIn: 'root'
 })
 export class PmodelloService {
-  constructor(private httpClient: HttpClient,private factoryResolver: ComponentFactoryResolver) {}
+  constructor(private httpClient: HttpClient) {}
   
   private pmodelli:Array<Pmodello> = [
       new  Pmodello(
@@ -39,10 +38,7 @@ export class PmodelloService {
       return this.pmodelli.slice();
   }
   //funzione di chiamata per recuperare i fondi suggeriti get con parametri
- 
- 
   pmsUrl = GlobalVars.apibaseurl + "/fondi_suggeriti.json";
- 
   callFondiSuggeriti(params) {
     let httpParams = new HttpParams();
     Object.keys(params).forEach(function (key) {
@@ -52,6 +48,8 @@ export class PmodelloService {
      params: httpParams
     })
   }
+  
+  //funzioni generiche per scorrere i children
   getArrayListV = (ArrayList,valueToCheck) => {
     
     let valToSend="";
@@ -73,7 +71,9 @@ export class PmodelloService {
     return valToSend;
   }
 
-  //funzione per iniettare un compontente
+  //funzioni ausiliare per il carrello//importate e riviste dai file js inclusi nella versione old
+
+  
   
 }
 

@@ -33,9 +33,14 @@ export class PModello  implements OnInit {
   //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
   //stato dei radio
-  isRadioChecked:boolean;
-  isRoleModifica:boolean;
-  t:string;
+  public isRadioChecked:boolean;
+  public isRoleModifica:boolean;
+  public t:string;
+  
+  //stato dei bottoni del carrello:
+  public isBtnaddCarVisible:boolean[] =  [false,false];
+  public isBtnupDateCarVisible:boolean[] =  [false,false];
+
 
 
   
@@ -211,7 +216,10 @@ export class PModello  implements OnInit {
     let selector = this.composizionePort.nativeElement.querySelector(el);
     return selector;
   }
-
+  returnSelectors(el) {
+    let selector = this.composizionePort.nativeElement.querySelectorAll(el);
+    return selector;
+  }
   //funzione calcola percentuale
   calcolaPercentuale(params) {
     let newValue,
@@ -261,12 +269,13 @@ export class PModello  implements OnInit {
     this.modaleFondiSuggeritiContent.nativeElement.classList.add('loading')
     //funzione di chiamata iniettata dal servizio
     //parametri in post da passare: id, idaa, idac, importoToSend, isinToSend
+
     params.t ==='' ? this.isRadioChecked= false : this.isRadioChecked= true;
     params.t ==='' ? this.isRoleModifica= false : this.isRoleModifica= true;
    
     
   
-    //delete params.isRoleModifica;
+    
     this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
         
         if(data['fondiSuggeriti']) {
@@ -289,8 +298,9 @@ export class PModello  implements OnInit {
     }
     //funzione per popolare l'array delle classi dinamiche di riga della tabella
     getTrTableSuggRow() {
+      /*let checkedRadio =document.querySelectorAll("input[type='radio']:checked")*/
       this.rowClassNameTabellaSugg = [];
-      this.rowDataTabellaSugg .forEach((element,index) => {
+      this.rowDataTabellaSugg.forEach((element,index) => {
         if(this.onlySomeRow) {
           let classToAdd = index<3 ? '' : 'hidden'
           this.rowClassNameTabellaSugg.push(classToAdd)
@@ -312,9 +322,9 @@ export class PModello  implements OnInit {
 
     
     //funzione per abilitare il salva alla selezione del radio btn
-    setBtnSalva(el,dataPdf,impMin) {
+    setBtnSalva(el,dataPdf,impMin,row) {
         this.isRadioChecked= true;
-        this.valuesToSave = {
+         this.valuesToSave = {
            'value': el.target.value,
            'descrToFullfill' : this.pmodelloService.getArrayListH(this.descriptionSelList,'name-' + el.target.value),
            'impToFullfill' :  this.pmodelloService.getArrayListH(this.impSelList,'minp-' + el.target.value),
@@ -350,9 +360,30 @@ export class PModello  implements OnInit {
       c = c.value.replace(/[^0-9]/g, '');   
       this.calcolaPercentuale({valori,c})
       //ancaora da integrare enableCart
-      //enableCart(idaa,false);
+      this.enableCart(idaa,false);
       this.closebutton.nativeElement.click();
     }
+    enableCart(aa,forceUpd) {
+      if(!forceUpd) {
+        let vis = false;
+        const pfIsinFields = this.returnSelectors(".pf-isin-" + aa);
+        pfIsinFields.forEach(element => {
+           if (element.value!== '') { vis = (vis || true); }
+        });
+        if(vis) {
+          !this.isBtnupDateCarVisible[this.indexValori] ? this.isBtnaddCarVisible[this.indexValori] = true :  this.isBtnaddCarVisible[this.indexValori] = false
+        }
+        else {
+          this.isBtnupDateCarVisible[this.indexValori] = false;
+          this.isBtnaddCarVisible[this.indexValori] = false;
+        }
+      }
+      else {
+        this.isBtnaddCarVisible[this.indexValori] = false;
+        this.isBtnupDateCarVisible[this.indexValori] = true;
+      }
+    }
+    
    // Inizializzazione
   ngOnInit(){
     this.setloading();

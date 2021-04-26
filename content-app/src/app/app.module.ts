@@ -11,7 +11,7 @@ import { TopSelection} from "./content-app/pages/topselection/topselection.compo
 import { PModello} from "./content-app/pages/pmodello/pmodello.component";
 
 // Componenti contestuali
-import { PModelloContent } from './content-app/pages/pmodello/pmodelloContent/pmodellocontent';
+import { comPortafoglioTable } from './content-app/pages/pmodello/comPortafoglioTable/comPortafoglioTable.component';
 
 
 // Modulo con oggetti di pagina
@@ -27,7 +27,7 @@ import {PageComponents} from './content-app/components/pagecomponents.module';
     Overview, TopSelection,PModello,
 
     //contenuti dei sottocomponenti
-    PModelloContent
+    comPortafoglioTable
 
   ],
   imports: [
