@@ -366,18 +366,66 @@
     </div>
 </section>
 
+<script src="./statici/pdfobject.js"></script>
 <script>
-
-    window.onload = function() {
+    function clipPDF(PDFlink,PDFanchor) {
         /*With IE only <IFRAME> work with Open PDF Params and Only with In-Link Params
         IMPORTANT: Use only Named Destinations, NOT anchors or bookmarks for IE
         add anchors for all modern browsers */
         var target = document.getElementById("pdf");
-        var newFrame = document.createElement("iframe");
-        newFrame.setAttribute("id", "pdfFrame");
-        newFrame.setAttribute("src", "./statici/PDF_named_destinations.pdf");
-        newFrame.setAttribute("type", "application/pdf");
-        target.appendChild(newFrame);
+        
+        if (window.document.documentMode) {
+            // ## Do IE stuff ##
+
+            /* Define an initial focus (if needed)
+            In all browser except IE named destination use zoom level of PDF created
+            best solution is to use named dest with IE and standard anchors with
+            with the others */
+            if(PDFanchor == false){
+                var OPPFocus = "";
+            }else{
+                var OPPFocus = "#nameddest=" + PDFanchor;
+            }
+
+            // # INIT
+            var newFrame = document.createElement("iframe");
+            newFrame.setAttribute("id", "pdfFrame");
+            newFrame.setAttribute("src", PDFlink + OPPFocus);
+            newFrame.setAttribute("type", "application/pdf");
+            target.appendChild(newFrame);
+
+            // ATTENTION: For Anchor Effect in IE
+            //IE11 Iframe reload not working, so after removing old iframe, we create a new iframe with the updated SRC
+            
+            //IE11 not support [.remove()]
+            /* var child = document.getElementById("pdfFrame");
+            child.parentNode.removeChild(child); */
+
+            // APPEND new Iframe
+            /* var newFrame = document.createElement("iframe");
+            newFrame.setAttribute("id", "pdfFrame");
+            newFrame.setAttribute("src", PDFlink + OPPFocus);
+            newFrame.setAttribute("type", "application/pdf");
+            target.appendChild(newFrame); */
+            
+        }else{
+            // ## Do Modern Browsers stuff ##
+            var options = {
+                pdfOpenParams: {
+                    navpanes: 0,
+                    toolbar: 0,
+                    statusbar: 0,
+                    pagemode: "thumbs",
+                },
+            };
+            if(PDFanchor == false){
+                var OPPFocus = "";
+            }else{
+                var OPPFocus = "#" + PDFanchor;
+            }
+            var myPDF = PDFObject.embed(PDFlink + OPPFocus, "#pdf", options);
+        }
     }
-</script>
+    window.onload = clipPDF("./statici/PDF_named_destinations.pdf", false);
+</script>	
 
