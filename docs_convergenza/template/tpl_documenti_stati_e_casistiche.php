@@ -587,13 +587,18 @@
         // Simulazione Data Loading
         let collapsID = $(this).attr('href');
         let loader='<div id="" class="caricamentoAjax" style="display: block; margin:60px"><img src="/HT/fe/img/loading.gif"></div>';
-        $(loader).insertBefore($(collapsID).find('.accord-content'));
-        $(collapsID).find('.accord-content').hide();
-        
-        var StopLoading = function() {
-            $(collapsID).find('.accord-content').show();
-            $(collapsID).find('.caricamentoAjax').remove();
+
+        if($(collapsID).find('.caricamentoAjax').length == 0){
+            $(loader).insertBefore($(collapsID).find('.accord-content'));
+            $(collapsID).find('.accord-content').hide();
         }
-        setTimeout(StopLoading, 2000);
+        
+        if($(collapsID).find('.accord-content').is(":hidden")){
+            var StopLoading = function() {
+                $(collapsID).find('.accord-content').show();
+                $(collapsID).find('.caricamentoAjax').hide();
+            }
+            setTimeout(StopLoading, 2000);
+        }
     });
 </script>
