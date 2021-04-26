@@ -118,7 +118,11 @@
     /* # All Accords Header */
     .header-col{
         display:block;
-    }   
+    }  
+
+    .header-col.right-space{
+        padding-right:60px;
+    }  
 
     .ellips {
         max-width: 100%;
@@ -127,7 +131,7 @@
     }       
 
     /* # Accordion Header # */
-    .pract-toggle .right-space{
+    .pract-toggle .right-space {
         padding-right:60px; 
         position:relative;
     }
@@ -314,7 +318,7 @@
 <!-- NEW -->
 <section>
     <!-- ROW 0 -->
-    <div class="row header-col">       
+    <div class="row header-col right-space">       
         <div class="col-sm-12">
             <!-- ROW 0.1 -->
             <div class="row">
