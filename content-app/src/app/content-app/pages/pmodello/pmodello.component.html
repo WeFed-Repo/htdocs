@@ -28,7 +28,8 @@
             [isBtnupDateCarVisible] = isBtnupDateCarVisible[i]
             [isBtnaddCarVisible] = isBtnaddCarVisible[i]
             (handleFondiSuggeriti)="handleFondiSuggeriti($event)" 
-            (handlecalcolaPerc)="handlecalcolaPerc($event)">
+            (handlecalcolaPerc)="handlecalcolaPerc($event)"
+            (handleaddCart) = "handleaddCart($event)">
             </comPortafoglioTable>
             <!--fine sezione composizione portafoglio tabella e overlayer-->
         </tab>
@@ -51,7 +52,7 @@
                     </div>
                      <ng-template #radiobtnCell let-data="data" let-i="id" let-row="row">
                         <label class="textWrapper">
-                            <input [attr.checked]="data.value === t ? '' : null"  #radioFondo type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event,data.pdf,data.impMin,row)">
+                            <input [attr.checked]="data.value === t ? '' : null"  #radioFondo type="radio" name="" id="rb{{i+1}}"  name="idxfondo"  value="{{data.value}}" (click)="setBtnSalva($event,data.pdf,data.impMin,i)">
                             <span class="text">{{i+1}}</span>
                         </label>
                     </ng-template>

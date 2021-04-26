@@ -1,18 +1,14 @@
 import { Component,OnInit,ElementRef,ViewChild,ViewChildren,QueryList,TemplateRef,Input} from '@angular/core';
+import { CarrelloService } from './carrello.service';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
 declare function apriSchedaFondoFida(codiceFida);
 declare function ttInit();
-
-  
-
 @Component({
   selector: 'pmodello',
   templateUrl: './pmodello.component.html',
   
 })
-
-
 export class PModello  implements OnInit {
   // Input
   @Input() setloading: any;
@@ -28,8 +24,11 @@ export class PModello  implements OnInit {
   public indexValori: number;
   public idaaSelected:string;
   public idacSelected:string;
-  //gestione numero righe da mostrare nella tabella dei sugegriti
+  
+  //gestione numero index righe da mostrare nella tabella dei suggeriti
   public onlySomeRow: boolean = true;
+  public indexRowVis:string;
+  
   //variabile di semaforo per la renderizzazione della tabella
   public isRenderingReady:boolean=false;
   //stato dei radio
@@ -40,18 +39,11 @@ export class PModello  implements OnInit {
   //stato dei bottoni del carrello:
   public isBtnaddCarVisible:boolean[] =  [false,false];
   public isBtnupDateCarVisible:boolean[] =  [false,false];
-
-
-
-  
-
   public valuesToSave: {}
   //inietto il servizio
-  constructor(private pmodelloService: PmodelloService) {}
+  constructor(private pmodelloService: PmodelloService, private  carrelloService: CarrelloService) {}
   
- 
-  
-  //funzioni per costruire le tabelle di atterraggio
+ //funzioni per costruire le tabelle di atterraggio
   getArrayValori = (index,minI, maxI) => {
     let ArrayValori = []
     for (let i = minI; i <=maxI; i++) {
@@ -273,9 +265,6 @@ export class PModello  implements OnInit {
     params.t ==='' ? this.isRadioChecked= false : this.isRadioChecked= true;
     params.t ==='' ? this.isRoleModifica= false : this.isRoleModifica= true;
    
-    
-  
-    
     this.pmodelloService.callFondiSuggeriti(params).subscribe(data=>{
         
         if(data['fondiSuggeriti']) {
@@ -296,13 +285,13 @@ export class PModello  implements OnInit {
      });
     
     }
+    
     //funzione per popolare l'array delle classi dinamiche di riga della tabella
     getTrTableSuggRow() {
-      /*let checkedRadio =document.querySelectorAll("input[type='radio']:checked")*/
-      this.rowClassNameTabellaSugg = [];
+     this.rowClassNameTabellaSugg = [];
       this.rowDataTabellaSugg.forEach((element,index) => {
         if(this.onlySomeRow) {
-          let classToAdd = index<3 ? '' : 'hidden'
+          let classToAdd = (index<3 || index=== this.indexRowVis) ? '' : 'hidden'
           this.rowClassNameTabellaSugg.push(classToAdd)
         }
         else {
@@ -322,7 +311,8 @@ export class PModello  implements OnInit {
 
     
     //funzione per abilitare il salva alla selezione del radio btn
-    setBtnSalva(el,dataPdf,impMin,row) {
+    setBtnSalva(el,dataPdf,impMin,i) {
+       this.indexRowVis=i;
         this.isRadioChecked= true;
          this.valuesToSave = {
            'value': el.target.value,
@@ -333,7 +323,11 @@ export class PModello  implements OnInit {
         } 
     }
    
+    
+    //prepare i campi per il successivo ed eventuale carrello
+    public pfIsinFields= [];
     setCarrValue(idaa, idac, toSave) {
+      
       //se sto salvando
       let   descSel = this.returnSelector("#txt" + idaa + "-" + idac),
             isinSel = this.returnSelector("#hisin" + idaa + "-" + idac),
@@ -353,21 +347,23 @@ export class PModello  implements OnInit {
         isinSel.value =  '';
         hminSel.value= '';
         btnSel.setAttribute('class','btn btn-primary btn-small');
-        btnSel.innerHTML="seleziona fondo"
+        btnSel.innerHTML="seleziona fondo";
+        this.indexRowVis="";
       }
       let valori = this.pmodelloService.returnPmodelArray()[this.indexValori].dataFromService;
       
       c = c.value.replace(/[^0-9]/g, '');   
       this.calcolaPercentuale({valori,c})
-      //ancaora da integrare enableCart
+      this.pfIsinFields= this.returnSelectors(".pf-isin-" + idaa);
       this.enableCart(idaa,false);
       this.closebutton.nativeElement.click();
     }
+    
+    
     enableCart(aa,forceUpd) {
       if(!forceUpd) {
         let vis = false;
-        const pfIsinFields = this.returnSelectors(".pf-isin-" + aa);
-        pfIsinFields.forEach(element => {
+        this.pfIsinFields.forEach(element => {
            if (element.value!== '') { vis = (vis || true); }
         });
         if(vis) {
@@ -383,12 +379,24 @@ export class PModello  implements OnInit {
         this.isBtnupDateCarVisible[this.indexValori] = true;
       }
     }
-    
+    handleaddCart(aa){
+      let numFondi = 0;
+      this.pfIsinFields.forEach(element => {
+        if(element.value!== '')  numFondi++;
+      });
+      let cart = {
+        'profilo' : this.typePortafoglio,
+        'numFondi': numFondi,
+        'quantita': this.returnSelector("#totinv" + aa).value!=='' ?  Number(this.returnSelector("#totinv" + aa).value) : 0
+      }
+      this.carrelloService.callCarrello(cart);
+    }
+
+   
    // Inizializzazione
   ngOnInit(){
     this.setloading();
     this.pModelli=this.pmodelloService.returnPmodelArray();
-  
     this.colsTemplateTabellaSugg.push(this.radiobtnCell,this.descCell,this.impMinCell);
     ttInit();
     
