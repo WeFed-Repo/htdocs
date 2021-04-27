@@ -163,7 +163,7 @@ var tData = [
         // Dati fake randomizzati 
         ?>{
         pratica: "<?php print scramble("INVESCO GLOBAL FLEXIBLE BOND FUND LOREM DOLOR PLACET IPSUM DOLOR AMET SUMMA CONSECTETUR INVESTING ALLIANCE SICAV",4,6);?>",
-        codpratica: "<?php scramble("a682002b");?>"+"-"+"<?php scramble("db58");?>"+"-"+"<?php scramble("4325");?>"+"-"+"<?php scramble("ba7d");?>"+"-"+"<?php scramble("51166868a68f");?>",
+        codpratica: "a682002b-db58-4325-ba7d-51166868a68f",
         categoria:"<?php print scramble(["Conti","Carte","Finanziamenti","Investimenti","Assicurazioni"]); ?>",
         avviatada: "<?php print scramble(["Cliente","Filiale","Gestore","Contact Center"]); ?>",
         stato: "<?php print scramble(["SOTTOSCRITTA","SCADUTA","REVOCATA DA GESTORE","RIFIUTATA DA CLIENTE"]); ?>",
