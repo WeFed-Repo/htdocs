@@ -15,14 +15,8 @@
 
 <section>
     <div class="row">
-        <div class="col-sm-12">
-            <!-- Box_005 -->
-            <div class="box-feedback-bordered success hidden-print">
-                <div>
-                    <h3>Grazie!</h3>
-                    <p>Hai completato l’accettazione di tutti i documenti che trovi qui di seguito riepilogati.</p>
-                </div>
-            </div>
+        <div class="col-sm-12">                   
+            <p><strong>Grazie!</strong> Hai completato l’accettazione di tutti i documenti che trovi qui di seguito riepilogati.</p>
         </div>
     </div>
 </section>

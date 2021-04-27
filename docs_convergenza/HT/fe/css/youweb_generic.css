@@ -8852,7 +8852,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* ## Template Documents- Contratti e proposte ## */
 /* # Utility Only for display # */
 .row.boxed {
-    border: 1px solid #202d50;
+    border: 1px solid #c1c1c1;
     padding-top: 10px;
     margin-bottom: 5px;
 }
@@ -8876,6 +8876,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .linker {
     text-decoration: none;
     padding-left: 0px;
+    position: relative;
 }
 
 .text-with-icon .glyph {
@@ -8964,7 +8965,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 
 .text-with-icon.ellips{
-    width: 100%;
+    width: fit-content;
     text-overflow: ellipsis;
     display: block;
     overflow: hidden;

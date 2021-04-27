@@ -1,3 +1,30 @@
+<style>
+.row.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.row-eq-height > [class*='col-'] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row.boxed {
+    border: 1px solid #c1c1c1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 5px;
+}
+
+.btnWrapper {
+    margin-bottom: 0px;
+    width: 100%;
+    display: inline-block;
+}
+</style>
 
 <section>
     <!-- Titolo_001 -->
@@ -56,7 +83,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
-            <div class="row pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space">
                 <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->                    
                     <div class="text-with-icon ellips">
@@ -227,7 +254,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 2.1 -->
-            <div class="row pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space">
                 <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ellips">
@@ -283,6 +310,235 @@
         </div>
     </div>
     <!-- END ROW 2 -->
+
+    <!-- ROW 3 -->
+    <div class="row pract-toggle boxed">       
+        <div class="col-sm-12">
+            <!-- ROW 3.1 -->
+            <div class="row row-eq-height pract-toggle-head right-space">
+                <div class="col-sm-4 col-xs-12">
+                    <!-- Text with Icon + sub-text -->
+                    <div class="text-with-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
+                            <span class="text underline">NOME_PRATICA_UNIVOCO_3</span>
+                            <span class="sub-text">INV-0019</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
+                    <!-- Casistica Icon -->
+                    <div class="text-with-icon ellips">
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <a href="#">Filiale</a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
+                    <span class="text ellips">20/03/2021</span>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
+                    <div class="text-with-icon right-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></span>
+                            <span class="text">Firmata parzialmente</span>
+                            <span class="sub-text">in attesa cointestatario</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="form-group btnWrapper clearfix">     
+                        <div class="btn-align-center">
+                            <div>
+                                <a type="button" href="#" class="btn btn-default disabled ellips" title="sottoscrivi">sottoscrivi</a> 
+                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
+                                <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-icon-fixed">
+                    <div class="linked-icon disabled">
+                        <a href="#">
+                            <span class="icon icon-trash_filled"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END ROW 3 -->
+
+    <!-- ROW 4 -->
+    <div class="row pract-toggle boxed">       
+        <div class="col-sm-12">
+            <!-- ROW 4.1 -->
+            <div class="row row-eq-height pract-toggle-head right-space">
+                <div class="col-sm-4 col-xs-12">
+                    <!-- Text with Icon + sub-text -->
+                    <div class="text-with-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
+                            <span class="text underline">NOME_PRATICA_UNIVOCO_4</span>
+                            <span class="sub-text">INV-0019</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
+                    <!-- Casistica Icon -->
+                    <div class="text-with-icon ellips">
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <a href="#">Gestore</a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
+                    <span class="text ellips">20/03/2021</span>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
+                    <div class="text-with-icon right-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="La data di scadenza per la sottoscrizione di questa pratica è trascorsa."></span>
+                            <span class="text">Scaduta</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div style="text-align:center; margin-left:20px; color:#ffc199">
+                        <span class="icon icon-close" title="icon-close" ></span>
+                    </div>
+                </div>
+
+                <div class="wrapper-icon-fixed">
+                    <div class="linked-icon disabled hidden">
+                        <a href="#">
+                            <span class="icon icon-trash_filled"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END ROW 4 -->
+
+    <!-- ROW 5 -->
+    <div class="row pract-toggle boxed">       
+        <div class="col-sm-12">
+            <!-- ROW 5.1 -->
+            <div class="row row-eq-height pract-toggle-head right-space">
+                <div class="col-sm-4 col-xs-12">
+                    <!-- Text with Icon + sub-text -->
+                    <div class="text-with-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
+                            <span class="text underline">NOME_PRATICA_UNIVOCO_5</span>
+                            <span class="sub-text">INV-0019</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
+                    <!-- Casistica Icon -->
+                    <div class="text-with-icon ellips">
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <a href="#">Gestore</a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
+                    <span class="text ellips">20/03/2021</span>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
+                    <div class="text-with-icon right-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora completato la sottoscrizione di questa pratica. Clicca sul pulsante RIPRENDI per proseguire."></span>
+                            <span class="text">Firmata Parzialmente</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="form-group btnWrapper clearfix">     
+                        <div class="btn-align-center">
+                            <div>
+                                <a type="button" href="#" class="btn btn-primary ellips" title="riprendi">riprendi</a> 
+                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
+                                <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-icon-fixed">
+                    <div class="linked-icon">
+                        <a href="#">
+                            <span class="icon icon-trash_filled"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END ROW 5 -->
+
+    <!-- ROW 6 -->
+    <div class="row pract-toggle boxed">       
+        <div class="col-sm-12">
+            <!-- ROW 6.1 -->
+            <div class="row  row-eq-height pract-toggle-head right-space">
+                <div class="col-sm-4 col-xs-12">
+                    <!-- Text with Icon + sub-text -->
+                    <div class="text-with-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
+                            <span class="text underline">NOME_PRATICA_UNIVOCO_6</span>
+                            <span class="sub-text">INV-0019</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
+                    <!-- Casistica Icon -->
+                    <div class="text-with-icon ellips">
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <a href="#">Gestore</a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div>
+                    <span class="text ellips">20/03/2021</span>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="mobile-label">Stato</div>
+                    <div class="text-with-icon right-icon ellips">
+                        <a class="linker" href="#">
+                            <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora completato la sottoscrizione di questa pratica. Clicca sul pulsante RIPRENDI per proseguire."></span>
+                            <span class="text">Firmata Parzialmente</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div style="text-align:center; margin-left:20px; color:#00a11a">
+                        <span class="icon icon-check-ok_table" title="icon-check-ok_table" ></span>
+                    </div>                
+                </div>
+                <div class="wrapper-icon-fixed disabled hidden">
+                    <div class="linked-icon">
+                        <a href="#">
+                            <span class="icon icon-trash_filled"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END ROW 6 -->
+    
 </section>
 
 <p>Non trovi una pratica? Le pratiche <strong>vengono spostate nell’Archivio a partire dal giorno successivo</strong> la sottoscrizione, scadenza o rifiuto.</p>
