@@ -124,31 +124,36 @@ var tData = [
     <?php 
     
     // Funzione di randomizzazione
-    function scramble($par) {
+    function scramble($par,$minwords=null,$maxwords=null) {
         $scrambled = "";
+        $separator = " ";
         // Se $par e' un numero scrive il numero indicato di parole random
         if (is_numeric($par)){
             for($x=0;$x<$par;$x++) {
-
+                $scrarray = explode(" ","Lorem ipsum dolor sit amet consectetur");
+                shuffle($scrarray);
+                $scrambled = implode(" ", $scrarray);
             }
         }
         else
         {
-            if (is_array($par)){
-                // Altrimenti randomizza l'array ricevuto
-                $scrambled = $par[rand(0,sizeof($par)-1)];
+            if (!is_array($par)){
+               // Trasforma il testo in un array diverso a seconda della presenza o meno degli spazi
+               if (strrpos($par," ")<=0) {
+                    $separator = "";
+               }
+               $scrarray = explode( $separator, $par);
+               shuffle($scrarray);
+               if(is_numeric($minwords)) $scrarray = array_slice($scrarray,0, rand($minwords,$maxwords)-1);
+               $scrambled = implode($separator,$scrarray);
+
             }
-            else{
-                // Randomizza il testo ricevuto: se ha spazi taglia sugli spazi altrimenti per singola lettera
-                if (strrpos($par," ")>0) {
-                    $scrambled = "aaaa";
-                }
-                else
-                {
-                    $scrambled = "bbb";
-                }
+            else
+            {
+                $scrarray = $par;
+                $scrambled = $scrarray[rand(0,sizeof($scrarray)-1)];
             }
-            
+           
         }
         return $scrambled;
     };
@@ -157,8 +162,8 @@ var tData = [
         print (($x>0)? ",":"") ;
         // Dati fake randomizzati 
         ?>{
-        pratica: "INVESCO GLOBAL FLEXIBLE BOND FUND",
-        codpratica: "INV-0014",
+        pratica: "<?php print scramble("INVESCO GLOBAL FLEXIBLE BOND FUND LOREM DOLOR PLACET IPSUM DOLOR AMET SUMMA CONSECTETUR INVESTING ALLIANCE SICAV",4,6);?>",
+        codpratica: "<?php scramble("a682002b");?>"+"-"+"<?php scramble("db58");?>"+"-"+"<?php scramble("4325");?>"+"-"+"<?php scramble("ba7d");?>"+"-"+"<?php scramble("51166868a68f");?>",
         categoria:"<?php print scramble(["Conti","Carte","Finanziamenti","Investimenti","Assicurazioni"]); ?>",
         avviatada: "<?php print scramble(["Cliente","Filiale","Gestore","Contact Center"]); ?>",
         stato: "<?php print scramble(["SOTTOSCRITTA","SCADUTA","REVOCATA DA GESTORE","RIFIUTATA DA CLIENTE"]); ?>",
@@ -170,10 +175,43 @@ var tData = [
 
 // Esempio formattazione dati
 var tableFormat = {
-        "data": function(obj) {
-            return obj.split("-").reverse().join("/");
+        "data": function(val) {
+            return val.split("-").reverse().join("/");
+        },
+        "acc": function(val,row) {
+            // Assembla l'accordion
+            var obj = $("<div>").append(
+                $("<a>").addClass("linker").append(
+                    $("<span>").addClass("icon icon-arrow_down"),
+                    $("<span>").addClass("text underline").html(val),
+                    $("<span>").addClass("sub-text").html(row.codpratica)
+                ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica})
+            );
+            return "<div class='text-with-icon ellips'>"+ obj.html()+"</div>"
+
         }
     }
+
+// Handler carico dati esterni
+var caricaDocs = function(obj){
+    var obj = $(obj);
+    var codpratica = obj.attr("data-codpratica");
+    var tr = obj.parents("tr");
+    var extcont = $("<td>").addClass("loading").attr({colspan: tr.find("td").length});
+    tr.after(
+        $("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(
+            extcont
+        )
+    );
+
+    // Emulazione della chiamata per il dettaglio dei contenuti
+    setTimeout(function(){
+        // Esempio caricamento dei contenuti
+        extcont.html("ipp").removeClass("loading");
+    },500)
+    
+
+}
 
     
 // Costruzione della tabella
@@ -182,15 +220,19 @@ var costruisciTabella = function() {
     $("#tableArchivio").bootstrapTable({
         pagination: true,
         pageSize: 50,
+        rowStyle: function(r,i) {
+            return {classes: (i%2==0)? "odd":"even"}
+        },
         columns: [
             {
                 field: 'pratica',
                 title: 'Pratica',
-                sortable:true
+                sortable: true,
+                formatter: tableFormat.acc
             },
             {
                 field: 'categoria',
-                title: 'Categoria',
+                title: 'Categoria' ,
                 sortable:true
             },
             {
@@ -229,8 +271,16 @@ $(function(){
 </script>
 <style>
     /* Stili Bootstrap table non importati */
-    .bootstrap-table tbody tr:nth-child(odd) td {background:#eaeded}
+    .bootstrap-table tbody tr.odd td {background:#eaeded}
     
+    .bootstrap-table .th-inner.sortable {cursor: pointer;
+    background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+    padding-left:15px;
+    display:inline-block;
+    min-height:20px;
+    }
+    .bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
+    .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
     .pagination-info .label-group {display:none}
@@ -243,9 +293,8 @@ $(function(){
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.disabled {display:none;}
-    
-    
+    .bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
+    .bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
     
     
     
