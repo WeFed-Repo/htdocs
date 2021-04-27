@@ -104,7 +104,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_1</span>
-                            <span class="sub-text">INV-0018</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>
@@ -275,7 +275,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_2</span>
-                            <span class="sub-text">INV-0019</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>
@@ -443,7 +443,7 @@
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_3</span>
-                            <span class="sub-text">INV-0019</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>
@@ -498,7 +498,7 @@
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_4</span>
-                            <span class="sub-text">INV-0019</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>
@@ -552,7 +552,7 @@
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_5</span>
-                            <span class="sub-text">INV-0019</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>
@@ -612,7 +612,7 @@
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_6</span>
-                            <span class="sub-text">INV-0019</span>
+                            <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
                 </div>

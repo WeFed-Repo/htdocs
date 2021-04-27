@@ -120,8 +120,10 @@
             <div class="form-field-input">
                 <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 no-label">
-                        <input type="text" id="" value="" name="" autocomplete="off" class="form-control"> 
+                    <div class="col-xs-12 col-sm-3 no-label" style="position:relatve;">
+                        <input type="text" id="txtPassword" value="" name="" autocomplete="off" class="form-control">
+                        <span class="toggle_pwd icon icon-alert_ok" style="position:absolute;right:30px; top:15px"></span>
+                        <span class="toggle_pwd icon icon-alert_error hidden" style="position:absolute;right:30px; top:15px"></span>
                     </div>
                     <div class="col-xs-12 col-sm-9 no-label">
                         <a type="button" href="#" class="btn btn-primary  btn-inline btn-no-label" title="Firma">Firma</a>
@@ -150,6 +152,15 @@
     </div>
 </section>
 
+<script>
+    $(function () {
+        $(".toggle_pwd").click(function () {
+            $(".toggle_pwd").toggleClass("hidden ");
+            var type = ($("#txtPassword").attr("type")=="password") ? "text" : "password";
+            $("#txtPassword").attr("type", type);
+        });
+    });
+</script>
 <script src="/common/fe/assets/pdfobject_VV2021.js"></script>
 <script>
     function clipPDF(PDFlink,PDFanchor) {
