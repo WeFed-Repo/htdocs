@@ -24,6 +24,20 @@
     width: 100%;
     display: inline-block;
 }
+
+.pract-toggle .center-wrapper {
+    text-align:center; 
+    margin-left:20px;
+}
+
+.pract-toggle .center-wrapper.green {
+    color:#00a11a
+}
+
+.pract-toggle .center-wrapper.light-red {
+    color:#ffc199
+}
+
 </style>
 
 <section>
@@ -258,7 +272,7 @@
                 <div class="col-sm-4 col-xs-12">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ellips">
-                        <a class="linker" href="#">
+                        <a class="linker" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_2</span>
                             <span class="sub-text">INV-0019</span>
@@ -307,6 +321,113 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ROW 2.2 -->
+            <div class="row collapse" id="collapse2">
+                <div class="col-sm-12">
+                    <div class="accord-content">
+                        <h3>NOME_PRATICA_UNIVOCO_1</h3>
+                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
+                        pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <div class="history-elements">
+                            <!-- ROW 2.2.1 -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- NEW ELEMENT -->
+                                    <div class="history-element">
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
+                                        </div>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_1</a>
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <div class="group-wrapper">
+                                        <div class="group-element">
+                                            <span class="icon icon-check_ok"></span>
+                                        </div>
+                                        <div class="group-element">
+                                            <span class="text">20/03/2021</span>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <!-- END ROW 2.2.1 -->
+
+                            <!-- ROW 2.2.2 -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- NEW ELEMENT -->
+                                    <div class="history-element">
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
+                                        </div>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_2</a>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <div class="group-wrapper">
+                                        <div class="group-element">
+                                            <span class="icon icon-check_ok"></span>
+                                        </div>
+                                        <div class="group-element">
+                                            <span class="text">20/03/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END ROW 2.2.2 -->
+                            <!-- ROW 2.2.3 -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- NEW ELEMENT -->
+                                    <div class="history-element inactive">
+                                        <div class="bullet-wrapper-target">                                  
+                                            <div class="bullet-wrapper">
+                                                <div class="bullet"></div> 
+                                                <div class="bullet-route"></div>                               
+                                            </div>
+                                        </div>
+                                        <div class="text-with-icon-target">
+                                            <!-- Casistica Icon -->
+                                            <div class="text-with-icon">
+                                                <span class="glyph glyph-uread_pdf layered" title="glyph-uread_pdf layered"></span>
+                                                <a href="#">Nome_documento_3</a>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <div class="group-wrapper">
+                                        <div class="group-element">
+                                            <span class="icon icon-check_ok"></span>
+                                        </div>
+                                        <div class="group-element">
+                                            <span class="text">20/03/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END ROW 2.2.3 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END ROW 2.2 -->
         </div>
     </div>
     <!-- END ROW 2 -->
@@ -349,19 +470,13 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="form-group btnWrapper clearfix">     
-                        <div class="btn-align-center">
-                            <div>
-                                <a type="button" href="#" class="btn btn-default disabled ellips" title="sottoscrivi">sottoscrivi</a> 
-                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
-                                <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
-                            </div>
-                        </div>
-                    </div>
+                    <div class="center-wrapper">
+                        <span class="icon icon-ico_ultime_disposizioni" title="icon-ico_ultime_disposizioni" ></span>
+                    </div> 
                 </div>
 
                 <div class="wrapper-icon-fixed">
-                    <div class="linked-icon disabled">
+                    <div class="linked-icon disabled hidden">
                         <a href="#">
                             <span class="icon icon-trash_filled"></span>
                         </a>
@@ -409,7 +524,7 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div style="text-align:center; margin-left:20px; color:#ffc199">
+                    <div class="center-wrapper light-red">
                         <span class="icon icon-close" title="icon-close" ></span>
                     </div>
                 </div>
@@ -518,12 +633,12 @@
                     <div class="text-with-icon right-icon ellips">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora completato la sottoscrizione di questa pratica. Clicca sul pulsante RIPRENDI per proseguire."></span>
-                            <span class="text">Firmata Parzialmente</span>
+                            <span class="text">Sottoscritta</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div style="text-align:center; margin-left:20px; color:#00a11a">
+                    <div class="center-wrapper green">
                         <span class="icon icon-check-ok_table" title="icon-check-ok_table" ></span>
                     </div>                
                 </div>
