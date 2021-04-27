@@ -197,20 +197,38 @@ var caricaDocs = function(obj){
     var obj = $(obj);
     var codpratica = obj.attr("data-codpratica");
     var tr = obj.parents("tr");
-    var extcont = $("<td>").addClass("loading").attr({colspan: tr.find("td").length});
-    tr.after(
-        $("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(
-            extcont
-        )
-    );
-
-    // Emulazione della chiamata per il dettaglio dei contenuti
-    setTimeout(function(){
-        // Esempio caricamento dei contenuti
-        extcont.html("ipp").removeClass("loading");
-    },500)
-    
-
+    if (obj.hasClass("opened")){
+        // Distrugge il tr appeso ed il suo contenuto
+        tr.next().remove();
+        
+    }
+    else
+    {
+        var contwrapper = $("<div>").addClass("loading");
+        var exttr = $("<td>").attr({colspan: tr.find("td").length}).append(contwrapper);
+        tr.after($("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(exttr));
+        // Emulazione della chiamata per il dettaglio dei contenuti
+        setTimeout(function(){
+            // Esempio caricamento dei contenuti
+            $.ajax({
+                dataType: "json",
+                url: "/include/ajax/archivio_documenti_el_pdf.php",    
+                success: function(data){
+                    contwrapper.append(
+                        $("<span>").html(data.docname),
+                        $("<div>").addClass("list-icon-wrapper not-inline").append(
+                                $.map(data.docs,function(obj){
+                                return $("<div>").addClass("text-with-icon ellips").append(
+                                    $("<span>").addClass("image image-uread_pdf"),
+                                    $("<a>").attr("href",obj.url).html(obj.name)
+                                )
+                            }))
+                        ).removeClass("loading");
+                }
+            })
+        },500)
+    }
+    obj.toggleClass("opened");
 }
 
     
@@ -254,6 +272,15 @@ var costruisciTabella = function() {
         ],
         data: tData
     }).removeClass("loading");
+
+    // Evento resize
+    $(window).on("resize",function(){
+        var iscv = $("#tableArchivio .card-view").length>0;
+        console.log($(window).width()<=480)
+        if (($(window).width()<=480 && !iscv) || iscv) { $("#tableArchivio").bootstrapTable("toggleView")};
+        
+        
+    })
 }
 
 
@@ -280,6 +307,7 @@ $(function(){
     min-height:20px;
     }
     .bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
+    .bootstrap-table tr td {vertical-align:top;}
     .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
