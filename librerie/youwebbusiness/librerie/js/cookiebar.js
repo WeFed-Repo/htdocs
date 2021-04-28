@@ -1,4 +1,13 @@
 var ckdomain = "bancobpm.it";
+
+var ckstyles = {
+    cookie_banner : 'position: fixed; border-top: solid 2px #ddd; background: #eee; bottom: 0; z-index: 10; width: 100%; padding: 0; font-size:14px',
+    wrapper: 'max-width: 930px; padding:15px; margin: 0 auto;',
+    cookie_console: 'text-align:right; width:100%;',
+    btn : 'display:inline-block; cursor: pointer; margin-left:15px; border: none;background: #737373; color: #fff; padding:8px 15px; border-radius:4px; min-width:100px; text-transform:uppercase;',
+    btn_evidente: 'background: #2F9988'
+}
+
 var ckfun = {
 
     read: function(label) {
@@ -48,13 +57,13 @@ $(function(){
         // Link della pagina di configurazione
         var ckconfigurl = "https://www.bancobpm.it/cookie-policy";       
         
-        var cookiebanner = $("<div>").attr("id","cookie_banner").addClass("cookie-banner");
-        var cookiebtnpersonalizza = $("<button>").html("Personalizza").on("click",function(){location.href=ckconfigurl});
-        var cookiebtnaccetta = $("<button>").on("click",ckaccept).html("Accetta").addClass("evidente");
-        var cookiebtconsole = $("<div>").addClass("cookie-console").append(cookiebtnpersonalizza,cookiebtnaccetta)
+        var cookiebanner = $("<div>").attr({"id":"cookie_banner","style": ckstyles.cookie_banner});
+        var cookiebtnpersonalizza = $("<button>").attr({"style": ckstyles.btn}).html("Personalizza").on("click",function(){location.href=ckconfigurl});
+        var cookiebtnaccetta = $("<button>").attr({"style": ckstyles.btn + ckstyles.btn_evidente}).on("click",ckaccept).html("Accetta").addClass("evidente");
+        var cookiebtconsole = $("<div>").addClass("cookie-console").attr({"style":ckstyles.cookie_console}).append(cookiebtnpersonalizza,cookiebtnaccetta)
         var cookieText = $("<div>").addClass("cookie-text").html("<p>Questo sito utilizza i cookie (tecnici e di profilazione, propri e di terze parti) per garantirti una migliore esperienza di navigazione e proporti materiale informativo in linea con le tue preferenze. L'uso dei cookie ha la durata di&nbsp;1 anno.<br>E' possibile consultare l'informativa estesa e modificare il consenso ai cookie di profilazione, propri e di terze parti, nella sezione dedicata.</p>");
         // Assembla il fascione
-        cookiebanner.append($("<div>").addClass("wrapper").append(cookieText,cookiebtconsole));
+        cookiebanner.append($("<div>").addClass("wrapper").attr({"style": ckstyles.wrapper}).append(cookieText,cookiebtconsole));
         $("body").append(cookiebanner);
     }
     
