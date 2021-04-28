@@ -8,7 +8,6 @@ import { PmodelloService } from '../pmodello.service';
 })
 
 export class comPortafoglioTable  implements OnInit {
-  @Input() textIntro;
   @Input() headingsCol:Array<any>;
   @Input() cellClassName:Array<any>;
   @Input() rowData:Array<object>;

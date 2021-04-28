@@ -13,13 +13,13 @@ import { GlobalVars } from "../../core/globalVars.js";
 export class CarrelloService {
   constructor(private httpClient: HttpClient) {}
   //componente carrello
-  callbackprocess = true;
+  callbackprocess:boolean;
 
   callCarrello(cart) {
     console.log(cart)
     //varie chiamate al carrello
-    
-    /*callbackprocess = true;
+    this.callbackprocess = true;
+    /*
     top.setCarrello(carr, callbackSet);
     callbacktimeout = window.setTimeout(waitForCallback, 30000);*/
     

@@ -227,7 +227,7 @@ export class PModello  implements OnInit {
             this.returnSelector(valueField).innerHTML = this.numFormatMigliaia(parseInt(newValue).toString())
             this.returnSelector(hField).value = parseInt(newValue);
             if (parseFloat(this.returnSelector(hFieldmin).value) > parseFloat(newValue)) {
-              this.returnSelector(valueField).innerHTML = '<i data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline no-rendering-position" title=""></i>' + this.returnSelector(valueField).innerHTML
+              this.returnSelector(valueField).innerHTML = '<a class="no-underline"><i data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline no-rendering-position" title=""></i></a>' + this.returnSelector(valueField).innerHTML
             }
           }
           else {

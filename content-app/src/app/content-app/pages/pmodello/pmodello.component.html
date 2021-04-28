@@ -11,16 +11,20 @@
             </p>
         </div>
         <div class="col-sm-4">
-            <box-link [backgroundBox]=true [textBox]="'Vuoi investire in più fondi?'" [linkBox]="'vai al portafoglio modello'" [gotoBox]="'#'"></box-link>
+            <box-link [backgroundBox]=true [textBox]="'Vuoi investire in più fondi?'" [linkBox]="'vai alla top selection'" [gotoBox]="'#'"></box-link>
             <box-link [titleBox]="'Alert'" [textBox]="'Ricevi aggiornamenti email sulla Top selection'" [linkBox]="'attiva alert'" [gotoBox]="'#'"></box-link>
         </div>
     </div>
-   
+    <h3>Visualizza i portafogli relativi ai diversi profili</h3>
     <tabs>
         <tab *ngFor="let tab of pModelli;index as i" [tabTitle]="pModelli[i].description" [active]="pModelli[i].active">
+            
+            <!--sezione testo introduttivo + grafico a torta-->
+            <comPortafoglioGraph [textIntro]="pModelli[i].pintro" [DataFromService]="pModelli[i].dataFromService"></comPortafoglioGraph>
+            
             <!--sezione composizione portafoglio tabella e richiamo ad overlayer-->
+            <h4>Composizione portafoglio</h4>
             <comPortafoglioTable 
-            [textIntro]="pModelli[i].pintro" 
             [DataFromService]="pModelli[i].dataFromService" 
             [headingsCol]="headingsColTablePm" 
             [rowData]="rowsDataTablePm[i]" 
@@ -63,7 +67,7 @@
                         <a *ngIf="data.warning==='y'" class="btn-icon"><i data-toggle="tooltip" data-title="L’importo minimo della prima sottoscrizione è superiore all’importo da investire per il fondo selezionato. Scegli un altro fondo per questa asset class o modifica l’importo da investire." class="icon icon-alert_outline no-rendering-position" title=""></i></a>
                         <span id="minp-{{data.value}}" #importoSel>{{data.impMin}} </span>
                     </ng-template>
-                    <a (click)="toggleRow()">
+                    <a (click)="toggleRow()" class="no-underline">
                         <span *ngIf="this.onlySomeRow;else hideRow"><i class="icon icon-f-row_expand"></i> Vedi altri fondi</span>
                         <ng-template #hideRow><span><i class="icon icon-f-row_contract"></i> Nascondi</span></ng-template>
                     </a>
