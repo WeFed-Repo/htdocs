@@ -13,9 +13,18 @@ import { GlobalVars } from "../../core/globalVars.js";
 export class CarrelloService {
   constructor(private httpClient: HttpClient) {}
   //componente carrello
+  callbackprocess = true;
+
   callCarrello(cart) {
-    //chiamata al carrello
     console.log(cart)
+    //varie chiamate al carrello
+    
+    /*callbackprocess = true;
+    top.setCarrello(carr, callbackSet);
+    callbacktimeout = window.setTimeout(waitForCallback, 30000);*/
+    
+    
+   
     //this.isCarrelloVisible = true
   }
   public isCarrelloVisible: boolean= false;

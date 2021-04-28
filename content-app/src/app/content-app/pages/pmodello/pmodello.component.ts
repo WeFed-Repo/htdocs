@@ -2,7 +2,7 @@ import { Component,OnInit,ElementRef,ViewChild,ViewChildren,QueryList,TemplateRe
 import { CarrelloService } from './carrello.service';
 import { Pmodello } from './pmodello.model';
 import { PmodelloService } from './pmodello.service';
-declare function apriSchedaFondoFida(codiceFida);
+
 declare function ttInit();
 @Component({
   selector: 'pmodello',
@@ -300,9 +300,10 @@ export class PModello  implements OnInit {
       });
     }
     //funzione chiamata dal carrello
-    apriPdfFondo(codpdf) {
-      apriSchedaFondoFida(codpdf);
+    apriPdfFondo(codiceFida) {
+      this.pmodelloService.apriPdfFondo(codiceFida);
     }
+    
     //toogle row table
     toggleRow() {
        this.onlySomeRow= !this.onlySomeRow;
@@ -326,6 +327,7 @@ export class PModello  implements OnInit {
     
     //prepare i campi per il successivo ed eventuale carrello
     public pfIsinFields= [];
+    public pfPercFields= [];
     setCarrValue(idaa, idac, toSave) {
       
       //se sto salvando
@@ -355,6 +357,7 @@ export class PModello  implements OnInit {
       c = c.value.replace(/[^0-9]/g, '');   
       this.calcolaPercentuale({valori,c})
       this.pfIsinFields= this.returnSelectors(".pf-isin-" + idaa);
+      this.pfPercFields = this.returnSelectors(".pf-perc-" + idaa);
       this.enableCart(idaa,false);
       this.closebutton.nativeElement.click();
     }
@@ -387,8 +390,25 @@ export class PModello  implements OnInit {
       let cart = {
         'profilo' : this.typePortafoglio,
         'numFondi': numFondi,
-        'quantita': this.returnSelector("#totinv" + aa).value!=='' ?  Number(this.returnSelector("#totinv" + aa).value) : 0
+        'quantita': this.returnSelector("#totinv" + aa).value!=='' ?  Number(this.returnSelector("#totinv" + aa).value) : 0,
+        'fondi': null
       }
+      cart.fondi = new Array(numFondi);
+      let fondi = {}
+      this.pfIsinFields.forEach((element,i) => {
+        if(element.value!== '') {
+          cart.fondi[i] = Object.create(fondi, {
+            isin : {
+              value: element.value
+            },
+            percentuale: {
+              value: this.pfPercFields[i].value
+            }
+            
+          })
+          numFondi++;
+        }
+      })
       this.carrelloService.callCarrello(cart);
     }
 

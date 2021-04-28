@@ -69,6 +69,19 @@ export class PmodelloService {
     })
     return valToSend;
   }
-
+  
+  //costanti per aperture pagine
+  cgi_protocol=window.location.protocol  + "//";
+  cgi_host=window.location.hostname;
+  wrp_script = '/WEBEXT/wrapped/goToInvest';
+  obs = "OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto_new&";
+  
+  apriPdfFondo(codiceFida){
+    {
+      const action = "/wbOnetoone/2l/action/investywb/RicercaFondi.action?" + this.obs;
+      const param = "codicefida=" + codiceFida + "&fondo=true";
+      top.document.location.href = this.cgi_protocol + this.cgi_host + this.wrp_script + action + param + "&cf=" + Math.random();
+    }
+  }
 }
 

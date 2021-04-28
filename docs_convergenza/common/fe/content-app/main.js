@@ -1042,6 +1042,11 @@ var PmodelloService = /** @class */ (function () {
             });
             return valToSend;
         };
+        //costanti per aperture pagine
+        this.cgi_protocol = window.location.protocol + "//";
+        this.cgi_host = window.location.hostname;
+        this.wrp_script = '/WEBEXT/wrapped/goToInvest';
+        this.obs = "OBSCNT=FNZ_NAV&tabId=nav_priv_wbx_investimenti&OBSKEY=nav_priv_wbx_acquisto_new&";
     }
     //costruiamo un array che mi restituisca una copia
     PmodelloService.prototype.returnPmodelArray = function () {
@@ -1055,6 +1060,13 @@ var PmodelloService = /** @class */ (function () {
         return this.httpClient.get(this.pmsUrl, {
             params: httpParams
         });
+    };
+    PmodelloService.prototype.apriPdfFondo = function (codiceFida) {
+        {
+            var action = "/wbOnetoone/2l/action/investywb/RicercaFondi.action?" + this.obs;
+            var param = "codicefida=" + codiceFida + "&fondo=true";
+            top.document.location.href = this.cgi_protocol + this.cgi_host + this.wrp_script + action + param + "&cf=" + Math.random();
+        }
     };
     PmodelloService.ɵfac = function PmodelloService_Factory(t) { return new (t || PmodelloService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
     PmodelloService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: PmodelloService, factory: PmodelloService.ɵfac, providedIn: 'root' });
@@ -1405,6 +1417,7 @@ var PModello = /** @class */ (function () {
         this.colsTemplateTabellaSugg = [];
         //prepare i campi per il successivo ed eventuale carrello
         this.pfIsinFields = [];
+        this.pfPercFields = [];
     }
     PModello.prototype.numFormatMigliaia = function (nStr) {
         nStr += '';
@@ -1500,8 +1513,8 @@ var PModello = /** @class */ (function () {
         });
     };
     //funzione chiamata dal carrello
-    PModello.prototype.apriPdfFondo = function (codpdf) {
-        apriSchedaFondoFida(codpdf);
+    PModello.prototype.apriPdfFondo = function (codiceFida) {
+        this.pmodelloService.apriPdfFondo(codiceFida);
     };
     //toogle row table
     PModello.prototype.toggleRow = function () {
@@ -1544,6 +1557,7 @@ var PModello = /** @class */ (function () {
         c = c.value.replace(/[^0-9]/g, '');
         this.calcolaPercentuale({ valori: valori, c: c });
         this.pfIsinFields = this.returnSelectors(".pf-isin-" + idaa);
+        this.pfPercFields = this.returnSelectors(".pf-perc-" + idaa);
         this.enableCart(idaa, false);
         this.closebutton.nativeElement.click();
     };
@@ -1569,6 +1583,7 @@ var PModello = /** @class */ (function () {
         }
     };
     PModello.prototype.handleaddCart = function (aa) {
+        var _this = this;
         var numFondi = 0;
         this.pfIsinFields.forEach(function (element) {
             if (element.value !== '')
@@ -1577,8 +1592,24 @@ var PModello = /** @class */ (function () {
         var cart = {
             'profilo': this.typePortafoglio,
             'numFondi': numFondi,
-            'quantita': this.returnSelector("#totinv" + aa).value !== '' ? Number(this.returnSelector("#totinv" + aa).value) : 0
+            'quantita': this.returnSelector("#totinv" + aa).value !== '' ? Number(this.returnSelector("#totinv" + aa).value) : 0,
+            'fondi': null
         };
+        cart.fondi = new Array(numFondi);
+        var fondi = {};
+        this.pfIsinFields.forEach(function (element, i) {
+            if (element.value !== '') {
+                cart.fondi[i] = Object.create(fondi, {
+                    isin: {
+                        value: element.value
+                    },
+                    percentuale: {
+                        value: _this.pfPercFields[i].value
+                    }
+                });
+                numFondi++;
+            }
+        });
         this.carrelloService.callCarrello(cart);
     };
     // Inizializzazione
@@ -1964,12 +1995,16 @@ __webpack_require__.r(__webpack_exports__);
 var CarrelloService = /** @class */ (function () {
     function CarrelloService(httpClient) {
         this.httpClient = httpClient;
+        //componente carrello
+        this.callbackprocess = true;
         this.isCarrelloVisible = false;
     }
-    //componente carrello
     CarrelloService.prototype.callCarrello = function (cart) {
-        //chiamata al carrello
         console.log(cart);
+        //varie chiamate al carrello
+        /*callbackprocess = true;
+        top.setCarrello(carr, callbackSet);
+        callbacktimeout = window.setTimeout(waitForCallback, 30000);*/
         //this.isCarrelloVisible = true
     };
     CarrelloService.ɵfac = function CarrelloService_Factory(t) { return new (t || CarrelloService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
@@ -2066,14 +2101,20 @@ function comPortafoglioTable_ng_template_11_div_0_Template(rf, ctx) { if (rf & 1
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var el_r30 = ctx.$implicit;
+    var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", el_r30, "% ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("pf-perc-", ctx_r29.DataFromService[0].idaa, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", el_r30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate2"]("id", "hperc", ctx_r29.DataFromService[0].idaa, "-", el_r30, "");
 } }
 function comPortafoglioTable_ng_template_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, comPortafoglioTable_ng_template_11_div_0_Template, 3, 1, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, comPortafoglioTable_ng_template_11_div_0_Template, 4, 7, "div", 15);
 } if (rf & 2) {
     var data_r28 = ctx.data;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", data_r28.Pesi);
@@ -2081,11 +2122,11 @@ function comPortafoglioTable_ng_template_11_Template(rf, ctx) { if (rf & 1) {
 function comPortafoglioTable_ng_template_13_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "0");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "input", 19, 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "input", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "input", 20, 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "input", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -2107,8 +2148,8 @@ function comPortafoglioTable_ng_template_13_Template(rf, ctx) { if (rf & 1) {
 function comPortafoglioTable_ng_template_15_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "a", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 19, 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "a", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 20, 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -2130,7 +2171,7 @@ function comPortafoglioTable_ng_template_17_div_0_Template(rf, ctx) { if (rf & 1
     var _r45 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function comPortafoglioTable_ng_template_17_div_0_Template_a_click_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r45); var el_r42 = ctx.$implicit; var data_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().data; var ctx_r43 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r43.setFondiSuggeriti($event, data_r40.btnId.labelOv, ctx_r43.DataFromService[0].idaa, el_r42); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Seleziona Fondo");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2150,8 +2191,8 @@ function comPortafoglioTable_ng_template_17_Template(rf, ctx) { if (rf & 1) {
 } }
 function comPortafoglioTable_div_20_Template(rf, ctx) { if (rf & 1) {
     var _r47 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function comPortafoglioTable_div_20_Template_a_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r47); var ctx_r46 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r46.addToCart(ctx_r46.DataFromService[0].idaa); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "aggiungi al carrello");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2161,11 +2202,11 @@ function comPortafoglioTable_div_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("id", "addcar", ctx_r16.DataFromService[0].idaa, "");
 } }
 function comPortafoglioTable_div_21_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "aggiorna il carrello");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "vedi il carrello");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2237,7 +2278,7 @@ var comPortafoglioTable = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.importi = _t.first);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.importiList = _t);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.isinList = _t);
-        } }, inputs: { textIntro: "textIntro", headingsCol: "headingsCol", cellClassName: "cellClassName", rowData: "rowData", DataFromService: "DataFromService", valueInput: "valueInput", isBtnaddCarVisible: "isBtnaddCarVisible", isBtnupDateCarVisible: "isBtnupDateCarVisible" }, outputs: { handleFondiSuggeriti: "handleFondiSuggeriti", handlecalcolaPerc: "handlecalcolaPerc", handleaddCart: "handleaddCart" }, decls: 22, vars: 8, consts: [[3, "innerHTML"], [3, "headingsCol", "rowData", "cellClassName", "colsTemplate", "colsThTemplate"], ["importi", ""], ["MacroAssetClass", ""], ["Peso", ""], ["AssetClass", ""], ["Pesi", ""], ["Importo", ""], ["Fondo", ""], ["btnId", ""], [1, "form-group", "btnWrapper"], ["class", "btn-align-right", 3, "id", 4, "ngIf"], ["class", "form-control", "type", "text", "maxlength", "10", "size", "9", 3, "name", "id", "keyup", 4, "ngIf"], ["type", "text", "maxlength", "10", "size", "9", 1, "form-control", 3, "name", "id", "keyup"], ["inputImporto", ""], ["class", "block-table", 4, "ngFor", "ngForOf"], [1, "block-table"], [1, "block-cell-table"], [3, "id"], ["type", "hidden", "value", "", 3, "id"], ["importoValue", ""], ["isinValue", ""], ["type", "button", "data-toggle", "modal", "data-target", "#modaleFondiSuggeriti", 1, "btn", "btn-primary", "btn-small", 3, "id", "click"], [1, "btn-align-right", 3, "id"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", "id", "", 1, "btn", "btn-primary"]], template: function comPortafoglioTable_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { textIntro: "textIntro", headingsCol: "headingsCol", cellClassName: "cellClassName", rowData: "rowData", DataFromService: "DataFromService", valueInput: "valueInput", isBtnaddCarVisible: "isBtnaddCarVisible", isBtnupDateCarVisible: "isBtnupDateCarVisible" }, outputs: { handleFondiSuggeriti: "handleFondiSuggeriti", handlecalcolaPerc: "handlecalcolaPerc", handleaddCart: "handleaddCart" }, decls: 22, vars: 8, consts: [[3, "innerHTML"], [3, "headingsCol", "rowData", "cellClassName", "colsTemplate", "colsThTemplate"], ["importi", ""], ["MacroAssetClass", ""], ["Peso", ""], ["AssetClass", ""], ["Pesi", ""], ["Importo", ""], ["Fondo", ""], ["btnId", ""], [1, "form-group", "btnWrapper"], ["class", "btn-align-right", 3, "id", 4, "ngIf"], ["class", "form-control", "type", "text", "maxlength", "10", "size", "9", 3, "name", "id", "keyup", 4, "ngIf"], ["type", "text", "maxlength", "10", "size", "9", 1, "form-control", 3, "name", "id", "keyup"], ["inputImporto", ""], ["class", "block-table", 4, "ngFor", "ngForOf"], [1, "block-table"], [1, "block-cell-table"], ["type", "hidden", 3, "value", "id"], [3, "id"], ["type", "hidden", "value", "", 3, "id"], ["importoValue", ""], ["isinValue", ""], ["type", "button", "data-toggle", "modal", "data-target", "#modaleFondiSuggeriti", 1, "btn", "btn-primary", "btn-small", 3, "id", "click"], [1, "btn-align-right", 3, "id"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", "id", "", 1, "btn", "btn-primary"]], template: function comPortafoglioTable_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "p", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "simple-table", 1);
