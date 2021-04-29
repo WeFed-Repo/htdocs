@@ -101,10 +101,10 @@
 </section>
 
 <!-- add to body overflow-y: hidden; -->
-<div id="maurizio" class="fhw-mobile-overlay">
+<div id="fhw-mo-1" class="fhw-mobile-overlay">
     <div class="fhw-mobile-overlay-header">
-        <div class="closer">
-            <i class="icon icon-close_inverted_fill" title="icon-close_inverted_fill"></i>
+        <div class="closer fhw-close">
+            <a class="icon icon-close_inverted_fill" title="icon-close_inverted_fill"></a>
         </div>
     </div>
     <div class="fhw-mobile-overlay-content">
@@ -116,7 +116,7 @@
         <div class="form-group btnWrapper clearfix">     
             <div class="btn-align-right">
                 <div>
-                    <a type="button" href="#" class="btn btn-primary" title="chiudi">Chiudi</a>
+                    <a type="button" href="#" class="btn btn-primary fhw-close" title="chiudi">Chiudi</a>
                 </div>
             </div>
         </div>
@@ -124,5 +124,12 @@
 </div>
 
 <script type="text/javascript">
-    $(function(){$("body").append($("#maurizio"))})
+    $(function(){$("body").append($("#fhw-mo-1"))})
+</script>
+
+<script type="text/javascript">
+    $(".fhw-mobile-overlay .fhw-close").click(function () {
+        let fhwsel = $(this).closest('.fhw-mobile-overlay');
+        fhwsel.hide();
+    });
 </script>
