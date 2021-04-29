@@ -47,22 +47,22 @@
         // Inizializzazione del PDF
         var pdfdoc = $("#pdfCont").pdf({url:"./statici/documento_prova.pdf"});
     </script>
-
+    
 </section>
 <!-- Fine box pdf -->
-
+<form id="firmeForm">
 <!-- NEW -->
 <section>
     <div class="row mobile-reverse">
-        <div class="col-sm-11">
+        <div class="col-sm-11" id="checkDoc">
             <!-- Confirmation -->
             <div class="accept-wrapper">
-                <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');"></i>
+                <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');$('.accept-wrapper').hide();$('.accept-wrapper.accepted').show();"></i>
                 <!-- link con esempio ancora -->
                 <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE" (click per test ancoraggio pdf)</strong></span>
                 <!-- fine link con esempio ancora -->
             </div>
-            <div class="accept-wrapper accepted">                
+            <div class="accept-wrapper accepted" style="display:none">                
                 <i class="icon icon-spunta" title="icon-spunta"></i>
                 <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE"</strong></span>
             </div>           	           
@@ -132,11 +132,34 @@
   		 	<div>
                 <a type="button" href="#" class="btn btn-default disabled" title="prosegui">riprendi dopo</a>
                 <a type="button" href="#" class="btn btn-default">riprendi dopo</a>
-  				<a type="button" href="#" class="btn btn-primary" title="prosegui">prosegui</a>
+  				<a type="button" href="#" class="btn btn-primary" title="prosegui" id="btnProsegui">prosegui</a>
   			</div>
         </div>
     </div>
 </section>
+</form>
+<script>
+     /*FUNZIONE DI ESEMPIO PER LA GESTIONE ERRORI */
+     $(function () {
+		$("#btnProsegui").click(function () {
+            var errors = [],
+                fieldpwd = $('#txtPassword'),
+                fieldpv = $('#checkDoc')
+            if(!(fieldpv.find('.accept-wrapper:visible').hasClass('accepted'))) {
+                errors.push({ field: fieldpv, text: "Seleziona per proseguire" });
+            }
+            if (fieldpwd.val() === "") {
+                errors.push({ field: fieldpwd, text: "Firma per proseguire" });
+            }
+            setHasErrors(errors, "#firmeForm");
+			if (errors.length) {
+				$(errors[0].field).find('input').trigger('focus');
+			}
+			
+			return (!errors.length);
+        })
+    })
+    </script>
 
 <script>
     $(function () {
