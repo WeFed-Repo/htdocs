@@ -44,8 +44,8 @@
 <section>
    <div id="pdfCont" class="pdf-container loading"></div>
     <script>
-    // Inizializzazione del PDF
-    var pdfdoc = $("#pdfCont").pdf({url:"./statici/documento_prova.pdf"});
+        // Inizializzazione del PDF
+        var pdfdoc = $("#pdfCont").pdf({url:"./statici/documento_prova.pdf"});
     </script>
 
 </section>
