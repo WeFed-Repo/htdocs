@@ -63,7 +63,29 @@
 
 <!-- Box wrapper pdf -->
 <section>
-    <div id="pdf"></div>
+    <style>
+        .pdf-container, .pdf-container iframe {height:500px;width:100%;border:0 none;}
+    </style>
+    <div id="pdfCont" class="pdf-container loading"></div>
+    <!-- <div id="pdf"></div> -->
+    <script>
+    // Gestione pdf
+    $.fn.extend({
+        pdf: function(par){
+            var pdfCont = $(this).empty();
+            var pdfIframe = $("<iframe>").attr({"src": par.url, "type": "application/pdf"});
+            pdfCont.append(pdfIframe);
+            pdfCont["goto"] = function(anchor) {
+                $("#pdfCont").pdf({url: pdfIframe.attr("src").split("#")[0] + anchor});
+            }
+            return pdfCont.removeClass("loading");
+        }
+    });
+
+    // Inizializzazione del PDF
+    var pdfdoc = $("#pdfCont").pdf({url:"./statici/documento_prova.pdf"});
+    </script>
+
 </section>
 <!-- Fine box pdf -->
 
@@ -73,8 +95,10 @@
         <div class="col-sm-11">
             <!-- Confirmation -->
             <div class="accept-wrapper">
-                <i class="icon css-square" title="css-square"></i>
-                <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE"</strong></span>
+                <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');"></i>
+                <!-- link con esempio ancora -->
+                <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE" (click per test ancoraggio pdf)</strong></span>
+                <!-- fine link con esempio ancora -->
             </div>
             <div class="accept-wrapper accepted">                
                 <i class="icon icon-spunta" title="icon-spunta"></i>
@@ -161,21 +185,18 @@
         });
     });
 </script>
+<?php
+
+/*
 <script src="/common/fe/assets/pdfobject_VV2021.js"></script>
 <script>
     function clipPDF(PDFlink,PDFanchor) {
-        /*With IE only <IFRAME> work with Open PDF Params and Only with In-Link Params
-        IMPORTANT: Use only Named Destinations, NOT anchors or bookmarks for IE
-        add anchors for all modern browsers */
+    
         var target = document.getElementById("pdf");
         
         if (window.document.documentMode) {
             // ## Do IE stuff ##
 
-            /* Define an initial focus (if needed)
-            In all browser except IE named destination use zoom level of PDF created
-            best solution is to use named dest with IE and standard anchors with
-            with the others */
             if(PDFanchor == false){
                 var OPPFocus = "";
             }else{
@@ -193,15 +214,8 @@
             //IE11 Iframe reload not working, so after removing old iframe, we create a new iframe with the updated SRC
             
             //IE11 not support [.remove()]
-            /* var child = document.getElementById("pdfFrame");
-            child.parentNode.removeChild(child); */
-
+          
             // APPEND new Iframe
-            /* var newFrame = document.createElement("iframe");
-            newFrame.setAttribute("id", "pdfFrame");
-            newFrame.setAttribute("src", PDFlink + OPPFocus);
-            newFrame.setAttribute("type", "application/pdf");
-            target.appendChild(newFrame); */
             
         }else{
             // ## Do Modern Browsers stuff ##
@@ -221,6 +235,7 @@
             var myPDF = PDFObject.embed(PDFlink + OPPFocus, "#pdf", options);
         }
     }
-    window.onload = clipPDF("./statici/PDF_named_destinations.pdf", false);
+    // window.onload = clipPDF("./statici/PDF_named_destinations.pdf", false);
 </script>	
-
+*/
+?>
