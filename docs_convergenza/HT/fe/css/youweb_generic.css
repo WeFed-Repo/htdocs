@@ -9198,7 +9198,7 @@ i.css-square {
     border: 2px solid #0e977f;
     display: inline-block;
 }
-.error i.css-square {
+.has-error i.css-square {
     border-color: #f16875;
 }
 /* Note */
