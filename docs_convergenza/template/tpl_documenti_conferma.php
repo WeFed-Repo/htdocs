@@ -1,3 +1,42 @@
+<style>
+    .fhw-mobile-overlay{
+        display:none;
+        position:fixed;
+        top:62px; 
+        left:0px; 
+        width:100%;
+        height:calc(100% - 62px); 
+        background-color:#fff; 
+    }
+    .fhw-mobile-overlay-header{
+        margin:10px; 
+        position:relative;
+        padding-right:40px;
+        height: 40px;
+    }
+    .fhw-mobile-overlay-header .closer{
+        position:absolute; 
+        right:0px; 
+        top:5px; 
+        width:30px; 
+        height:30px; 
+    }
+    .fhw-mobile-overlay-content{
+        margin:10px 10px 10px 10px ; 
+        height:calc(100% - 120px); 
+        overflow: scroll;
+    }
+    .fhw-mobile-overlay-footer{
+        margin:10px; 
+        height: 40px;
+    }
+    @media only screen and (max-width: 770px) {
+        .fhw-mobile-overlay{
+            display:block;
+        }
+    }
+</style>
+
 <section>
     <!-- Titolo_001 -->
     <div class="titolo">
@@ -62,12 +101,25 @@
 </section>
 
 <!-- add to body overflow-y: hidden; -->
-<div id="maurizio" style="z-index:0.8; position:fixed;top:62px; left:0px; width:100%;height:calc(100% - 62px); background-color:blue; opacity:0.8;">
-    <div style="margin:20px; background-color:red; height:calc(100% - 100px); overflow: scroll;">
+<div id="maurizio" class="fhw-mobile-overlay">
+    <div class="fhw-mobile-overlay-header">
+        <div class="closer">
+            <i class="icon icon-close_inverted_fill" title="icon-close_inverted_fill"></i>
+        </div>
+    </div>
+    <div class="fhw-mobile-overlay-content">
         <!-- <div style="margin:10px 0px;height:1200px; background-color:orange;"></div> -->
         <div class="pdf-container loading" data-url="./statici/documento_prova.pdf"></div>
     </div>
-    <div style="margin:20px; background-color:green; height: 40px;">
+    <div class="fhw-mobile-overlay-footer">
+         <!-- Bottone_002 --> 
+        <div class="form-group btnWrapper clearfix">     
+            <div class="btn-align-right">
+                <div>
+                    <a type="button" href="#" class="btn btn-primary" title="chiudi">Chiudi</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

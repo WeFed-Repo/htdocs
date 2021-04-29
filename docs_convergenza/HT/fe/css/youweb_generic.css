@@ -8881,7 +8881,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .text-with-icon .glyph {
     position: absolute;
-    z-index: 1;
     top: 0px;
     left: 0px;
     display: block;
@@ -8890,7 +8889,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .text-with-icon .icon {
     position: absolute;
-    z-index: 1;
     top: 0px;
     left: 0px;
     display: block;
