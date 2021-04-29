@@ -35,6 +35,9 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-hide:before {
+  content: "\ea17";
+}
 .icon-ico_ass_previdenza:before {
   content: "\ea12";
 }
@@ -50,6 +53,27 @@
 .icon-ico_ass_persona:before {
   content: "\ea16";
 }
+.icon-contatti:before {
+  content: "\ea0e";
+}
+.icon-dove_siamo:before {
+  content: "\ea0f";
+}
+.icon-orari:before {
+  content: "\ea10";
+}
+.icon-servizi:before {
+  content: "\ea11";
+}
+.icon-numeroverde_desktop:before {
+  content: "\ea0c";
+}
+.icon-ico_alert_non_disponibile:before {
+  content: "\ea0d";
+}
+.icon-cellulare_outline:before {
+  content: "\ea09";
+}
 .icon-operatore:before {
   content: "\ea0b";
 }
@@ -64,9 +88,6 @@
 }
 .icon-alert_outline:before {
   content: "\ea08";
-}
-.icon-cellulare_outline:before {
-  content: "\ea09";
 }
 .icon-ico_cmb_outline:before {
   content: "\ea05";
@@ -857,21 +878,6 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
-.icon-numeroverde_desktop:before {
-  content: "\ea0c";
-}
-.icon-ico_alert_non_disponibile:before {
-  content: "\ea0d";
-}
-.icon-contatti:before {
-  content: "\ea0e";
-}
-.icon-dove_siamo:before {
-  content: "\ea0f";
-}
-.icon-orari:before {
-  content: "\ea10";
-}
-.icon-servizi:before {
-  content: "\ea11";
+.icon-show:before {
+  content: "\ea18";
 }

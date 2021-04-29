@@ -4707,7 +4707,7 @@ var renderOverlayerFooterFixed = function() {
 $.fn.extend({
     pdf: function(par){
         var pdfCont = $(this).empty();
-        var pdfIframe = $("<iframe>").attr({"src": par.url, "type": "application/pdf"});
+        var pdfIframe = $("<embed>").attr({"src": par.url, "type": "application/pdf"});
         pdfCont.append(pdfIframe);
         pdfCont["goto"] = function(anchor) {
             this.addClass("loading").pdf({url: pdfIframe.attr("src").split("#")[0] + anchor});

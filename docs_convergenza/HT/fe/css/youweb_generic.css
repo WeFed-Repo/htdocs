@@ -9243,5 +9243,5 @@ p.note.to-right{
 }
 
 /* Pdf */
-.pdf-container, .pdf-container iframe {height:500px;width:100%; border:0 none;}
+.pdf-container, .pdf-container iframe, .pdf-container embed {height:500px;width:100%; border:0 none;}
 .pdf-container {border:solid 1px #cacaca}

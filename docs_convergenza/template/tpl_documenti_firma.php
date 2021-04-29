@@ -108,8 +108,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 no-label" style="position:relatve;">
                         <input type="text" id="txtPassword" value="" name="" autocomplete="off" class="form-control">
-                        <span class="toggle_pwd icon icon-alert_ok" style="position:absolute;right:30px; top:15px"></span>
-                        <span class="toggle_pwd icon icon-alert_error hidden" style="position:absolute;right:30px; top:15px"></span>
+                        <span class="toggle_pwd icon icon-show" style="position:absolute;right:30px; top:15px"></span>
+                        <span class="toggle_pwd icon icon-hide hidden" style="position:absolute;right:30px; top:15px"></span>
                     </div>
                     <div class="col-xs-12 col-sm-9 no-label">
                         <a type="button" href="#" class="btn btn-primary  btn-inline btn-no-label" title="Firma">Firma</a>
@@ -170,57 +170,3 @@
         });
     });
 </script>
-<?php
-
-/*
-<script src="/common/fe/assets/pdfobject_VV2021.js"></script>
-<script>
-    function clipPDF(PDFlink,PDFanchor) {
-    
-        var target = document.getElementById("pdf");
-        
-        if (window.document.documentMode) {
-            // ## Do IE stuff ##
-
-            if(PDFanchor == false){
-                var OPPFocus = "";
-            }else{
-                var OPPFocus = "#nameddest=" + PDFanchor;
-            }
-
-            // # INIT
-            var newFrame = document.createElement("iframe");
-            newFrame.setAttribute("id", "pdfFrame");
-            newFrame.setAttribute("src", PDFlink + OPPFocus);
-            newFrame.setAttribute("type", "application/pdf");
-            target.appendChild(newFrame);
-
-            // ATTENTION: For Anchor Effect in IE
-            //IE11 Iframe reload not working, so after removing old iframe, we create a new iframe with the updated SRC
-            
-            //IE11 not support [.remove()]
-          
-            // APPEND new Iframe
-            
-        }else{
-            // ## Do Modern Browsers stuff ##
-            var options = {
-                pdfOpenParams: {
-                    navpanes: 0,
-                    toolbar: 0,
-                    statusbar: 0,
-                    pagemode: "thumbs",
-                },
-            };
-            if(PDFanchor == false){
-                var OPPFocus = "";
-            }else{
-                var OPPFocus = "#" + PDFanchor;
-            }
-            var myPDF = PDFObject.embed(PDFlink + OPPFocus, "#pdf", options);
-        }
-    }
-    // window.onload = clipPDF("./statici/PDF_named_destinations.pdf", false);
-</script>	
-*/
-?>
