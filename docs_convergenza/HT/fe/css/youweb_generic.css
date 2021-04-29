@@ -8900,7 +8900,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .text-with-icon .image {
     position: absolute;
-    z-index: 1;
     top: 0px;
     left: 0px;
     width: 20px;

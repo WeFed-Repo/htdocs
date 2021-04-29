@@ -1,4 +1,3 @@
-
 <section>
     <!-- Titolo_001 -->
     <div class="titolo">
@@ -61,3 +60,12 @@
         </div>
     </div>
 </section>
+
+<!-- add to body overflow-y: hidden; -->
+<div style="z-index:0.8; position:fixed;top:62px; left:0px; width:100%;height:calc(100% - 62px); background-color:blue; opacity:0.8;">
+    <div style="margin:20px; background-color:red; height:calc(100% - 100px); overflow: scroll;">
+        <div style="margin:10px 0px;height:1200px; background-color:orange;"></div>
+    </div>
+    <div style="margin:20px; background-color:green; height: 40px;">
+    </div>
+</div>
