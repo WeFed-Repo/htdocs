@@ -1,24 +1,3 @@
-<style>
-    /* Iframe PDF with title and Document Index*/
-    #pdf{
-        height: 500px;
-        width: 100%;
-        display:block;
-    }
-
-    #pdfFrame {
-        height: 100%;
-        width: 100%;
-        display:block;
-    }
-
-    @media only screen and (max-width: 770px) {
-        #pdf, #pdfFrame{
-            display:none;
-        }
-    }
-</style>
-
 <!-- Titolo_001 -->
 <section>
     <div class="row">
@@ -63,25 +42,8 @@
 
 <!-- Box wrapper pdf -->
 <section>
-    <style>
-        .pdf-container, .pdf-container iframe {height:500px;width:100%;border:0 none;}
-    </style>
-    <div id="pdfCont" class="pdf-container loading"></div>
-    <!-- <div id="pdf"></div> -->
+   <div id="pdfCont" class="pdf-container loading"></div>
     <script>
-    // Gestione pdf
-    $.fn.extend({
-        pdf: function(par){
-            var pdfCont = $(this).empty();
-            var pdfIframe = $("<iframe>").attr({"src": par.url, "type": "application/pdf"});
-            pdfCont.append(pdfIframe);
-            pdfCont["goto"] = function(anchor) {
-                $("#pdfCont").pdf({url: pdfIframe.attr("src").split("#")[0] + anchor});
-            }
-            return pdfCont.removeClass("loading");
-        }
-    });
-
     // Inizializzazione del PDF
     var pdfdoc = $("#pdfCont").pdf({url:"./statici/documento_prova.pdf"});
     </script>

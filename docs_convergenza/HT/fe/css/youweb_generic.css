@@ -9242,3 +9242,7 @@ p.note.to-right{
         margin-top:30px;
     }
 }
+
+/* Pdf */
+.pdf-container, .pdf-container iframe {height:500px;width:100%; border:0 none;}
+.pdf-container {border:solid 1px #cacaca}

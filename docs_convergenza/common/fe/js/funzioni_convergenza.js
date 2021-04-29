@@ -4702,6 +4702,21 @@ var renderOverlayerFooterFixed = function() {
         }
     }
 }
+
+// Gestione pdf
+$.fn.extend({
+    pdf: function(par){
+        var pdfCont = $(this).empty();
+        var pdfIframe = $("<iframe>").attr({"src": par.url, "type": "application/pdf"});
+        pdfCont.append(pdfIframe);
+        pdfCont["goto"] = function(anchor) {
+            this.addClass("loading").pdf({url: pdfIframe.attr("src").split("#")[0] + anchor});
+        }
+        return pdfCont.removeClass("loading");
+    }
+});
+
+
 //inizializzazioni al load della pagina
 $(function () {
     renderOverlayerFooterFixed();
