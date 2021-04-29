@@ -8892,7 +8892,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     top: 0px;
     left: 0px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #0e977f;
 }
 
@@ -8906,6 +8906,9 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     background-repeat: no-repeat;
     background-size: contain;
     background-color: lightgray;
+}
+.text-with-icon .transform-uppercase {
+    text-transform: uppercase;
 }
 
 /* Change Positions */
@@ -8933,17 +8936,19 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /* Change Texts */
 .text-with-icon a {
-    font-size: 16px;
+    /*font-size: 16px;*/
     text-decoration: underline;
     color: #0e977f;
-    padding-left: 24px;
+    padding-left: 21px;
 }
-
+.text-with-icon a.no-underline {
+    text-decoration: none
+}
 .text-with-icon .text {
-    font-size: 16px;
+    /*font-size: 16px;*/
     font-weight: bold;
     text-decoration: none;
-    padding-left: 24px;
+    padding-left: 21px;
     color: #202d50;
 }
 
@@ -8994,7 +8999,23 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     right:20px; 
     top:6px;
 }
-
+/* spostato per risoluzioni intermedie*/
+@media screen and (min-width: 1024px) and (max-width: 1400px) { 
+    .pract-toggle .wrapper-icon-fixed {
+       top:16px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) { 
+    .pract-toggle .wrapper-icon-fixed {
+       top:16px;
+       right: 5px;
+    }
+    .row-eq-height .btn {
+        height: 25px;
+        padding: 5px 16px;
+        font-size: 12px;
+    }
+} 
 .pract-toggle .mobile-label{
     display: none; 
 }
@@ -9245,3 +9266,38 @@ p.note.to-right{
 /* Pdf */
 .pdf-container, .pdf-container iframe, .pdf-container embed {height:500px;width:100%; border:0 none;}
 .pdf-container {border:solid 1px #cacaca}
+/*tpl in corso */
+.row.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.row-eq-height > [class*='col-'] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .row.boxed {
+      border: 1px solid #c1c1c1;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin-bottom: 5px;
+  }
+  
+ 
+  
+  .pract-toggle .center-wrapper {
+      text-align:center; 
+      margin-left:20px;
+  }
+  
+  .pract-toggle .center-wrapper.green {
+      color:#00a11a
+  }
+  
+  .pract-toggle .center-wrapper.light-red {
+      color:#ffc199
+  }

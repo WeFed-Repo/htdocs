@@ -1,45 +1,3 @@
-<style>
-.row.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-}
-.row.row-eq-height > [class*='col-'] {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.row.boxed {
-    border: 1px solid #c1c1c1;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-bottom: 5px;
-}
-
-.btnWrapper {
-    margin-bottom: 0px;
-    width: 100%;
-    display: inline-block;
-}
-
-.pract-toggle .center-wrapper {
-    text-align:center; 
-    margin-left:20px;
-}
-
-.pract-toggle .center-wrapper.green {
-    color:#00a11a
-}
-
-.pract-toggle .center-wrapper.light-red {
-    color:#ffc199
-}
-
-</style>
-
 <section>
     <!-- Titolo_001 -->
     <div class="titolo">
@@ -98,9 +56,9 @@
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
             <div class="row row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->                    
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_1</span>
@@ -112,37 +70,32 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Gestore</a>
+                    <div class="text-with-icon ">
+                         <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
 
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora iniziato la sottoscrizione di questa pratica. Clicca il pulsante SOTTOSCRIVI per cominciare."></span>
-                            <span class="text">NUOVA</span>
+                            <span class="text transform-uppercase">Nuova</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
-                    <div class="form-group btnWrapper clearfix">     
-                        <div class="btn-align-center">
-                            <div>
-                                <!-- <a type="button" href="#" class="btn btn-default disabled" title="sottoscrivi">sottoscrivi</a> -->
-                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
-                                <a type="button" href="#" class="btn btn-primary ellips" title="sottoscrivi">Sottoscrivi</a>
-                            </div>
-                        </div>
-                    </div>            
+                    <div class="btn-align-center">
+                        <!-- <a type="button" href="#" class="btn btn-default disabled noMargin" title="sottoscrivi">sottoscrivi</a> -->
+                        <!-- <a type="button" href="#" class="btn btn-default noMargin">sottoscrivi</a> -->
+                        <a type="button" href="#" class="btn btn-primary noMargin" title="sottoscrivi">Sottoscrivi</a>
+                    </div>
                 </div>
                 <div class="wrapper-icon-fixed">
                     <div class="linked-icon">
@@ -269,9 +222,9 @@
         <div class="col-sm-12">
             <!-- ROW 2.1 -->
             <div class="row row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_2</span>
@@ -282,34 +235,29 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Gestore</a>
+                    <div class="text-with-icon ">
+                        <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></span>
-                            <span class="text">NUOVA</span>
+                            <span class="text transform-uppercase">Rifiutata da cliente</span>
                             <span class="sub-text">in attesa cointestatario</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="form-group btnWrapper clearfix">     
-                        <div class="btn-align-center">
-                            <div>
-                                <a type="button" href="#" class="btn btn-default disabled ellips" title="sottoscrivi">sottoscrivi</a> 
-                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
-                                <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
-                            </div>
-                        </div>
+                     <div class="btn-align-center">
+                         <a type="button" href="#" class="btn btn-default disabled noMargin" title="sottoscrivi">sottoscrivi</a> 
+                         <!-- <a type="button" href="#" class="btn btn-default noMargin">sottoscrivi</a> -->
+                        <!-- <a type="button" href="#" class="btn btn-primary noMargin" title="sottoscrivi">Sottoscrivi</a> -->
                     </div>
                 </div>
 
@@ -437,9 +385,9 @@
         <div class="col-sm-12">
             <!-- ROW 3.1 -->
             <div class="row row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_3</span>
@@ -450,21 +398,20 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Filiale</a>
+                    <div class="text-with-icon ">
+                        <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></span>
-                            <span class="text">Firmata parzialmente</span>
+                            <span class="text transform-uppercase">Firmata parzialmente</span>
                             <span class="sub-text">in attesa cointestatario</span>
                         </a>
                     </div>
@@ -492,9 +439,9 @@
         <div class="col-sm-12">
             <!-- ROW 4.1 -->
             <div class="row row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_4</span>
@@ -505,18 +452,17 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Gestore</a>
+                    <div class="text-with-icon ">
+                        <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="La data di scadenza per la sottoscrizione di questa pratica è trascorsa."></span>
                             <span class="text">Scaduta</span>
@@ -546,9 +492,9 @@
         <div class="col-sm-12">
             <!-- ROW 5.1 -->
             <div class="row row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_5</span>
@@ -559,18 +505,17 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Gestore</a>
+                    <div class="text-with-icon ">
+                        <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora completato la sottoscrizione di questa pratica. Clicca sul pulsante RIPRENDI per proseguire."></span>
                             <span class="text">Firmata Parzialmente</span>
@@ -578,14 +523,10 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="form-group btnWrapper clearfix">     
-                        <div class="btn-align-center">
-                            <div>
-                                <a type="button" href="#" class="btn btn-primary ellips" title="riprendi">riprendi</a> 
-                                <!-- <a type="button" href="#" class="btn btn-default">sottoscrivi</a> -->
-                                <!-- <a type="button" href="#" class="btn btn-primary" title="sottoscrivi">Sottoscrivi</a> -->
-                            </div>
-                        </div>
+                    <div>
+                        <a type="button" href="#" class="btn btn-primary noMargin" title="riprendi">riprendi</a> 
+                        <!-- <a type="button" href="#" class="btn btn-default noMargin">sottoscrivi</a> -->
+                        <!-- <a type="button" href="#" class="btn btn-primary noMargin" title="sottoscrivi">Sottoscrivi</a> -->
                     </div>
                 </div>
 
@@ -606,9 +547,9 @@
         <div class="col-sm-12">
             <!-- ROW 6.1 -->
             <div class="row  row-eq-height pract-toggle-head right-space">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
-                    <div class="text-with-icon ellips">
+                    <div class="text-with-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="text underline">NOME_PRATICA_UNIVOCO_6</span>
@@ -619,18 +560,17 @@
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
-                    <div class="text-with-icon ellips">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <a href="#">Gestore</a>
+                    <div class="text-with-icon ">
+                        <a href="#" class="no-underline"><span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div>
-                    <span class="text ellips">20/03/2021</span>
+                    <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon ellips">
+                    <div class="text-with-icon right-icon ">
                         <a class="linker" href="#">
                             <span class="icon icon-info_fill" data-toggle="tooltip" title="" data-original-title="Non hai ancora completato la sottoscrizione di questa pratica. Clicca sul pulsante RIPRENDI per proseguire."></span>
                             <span class="text">Sottoscritta</span>
