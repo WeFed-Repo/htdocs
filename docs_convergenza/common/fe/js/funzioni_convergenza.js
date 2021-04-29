@@ -4718,7 +4718,7 @@ $.fn.extend({
 
 // Inserisce i pdf inline tramite l'apposita funzione
 var setPdfInline= function(){
-    $.each($(".pdf-container[data-url=]"),function(){
+    $.each($(".pdf-container[data-url]"),function(){
         var pdfC = $(this);
         pdfC.pdf({url: pdfC.attr("data-url")})
     });
