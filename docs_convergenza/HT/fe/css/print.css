@@ -887,3 +887,12 @@ canvas#piechart{
 #kampyleButtonContainer {
     display:none !important;
 }
+
+.nega {
+    color: red!important;
+}
+  
+.posi {
+    color: green!important;
+}
+  
