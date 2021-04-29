@@ -1,0 +1,36 @@
+
+    {
+            "valori11":  [
+                
+                {"idaa":"11","idac":"246","value":25},
+                {"idaa":"11","idac":"247","value":20},
+                {"idaa":"11","idac":"248","value":35},
+                {"idaa":"11","idac":"404","value":20}
+               
+            ],
+            "valori12" : [
+                {"idaa":"12","idac":"38","value":0},
+                {"idaa":"12","idac":"70","value":0},
+                {"idaa":"12","idac":"256","value":7},
+                {"idaa":"12","idac":"65","value":12},
+                {"idaa":"12","idac":"251","value":7},
+                {"idaa":"12","idac":"252","value":10},
+                {"idaa":"12","idac":"253","value":20},
+                {"idaa":"12","idac":"254","value":12},
+                {"idaa":"12","idac":"250","value":20}
+            ],
+            "valori13" : [
+
+            ],
+            "valori14" : [
+
+            ],
+            "valori15" : [
+
+            ]
+     }
+    
+
+
+
+
