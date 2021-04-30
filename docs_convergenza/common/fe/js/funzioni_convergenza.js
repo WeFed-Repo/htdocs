@@ -4707,10 +4707,11 @@ var renderOverlayerFooterFixed = function() {
 $.fn.extend({
     pdf: function(par){
         var pdfCont = $(this).empty();
-        var pdfIframe = $("<embed>").attr({"src": par.url, "type": "application/pdf"});
+        var pdfViewerBase = "/common/fe/assets/pdf/web/viewer.html?file=";
+        pdfIframe = $("<iframe>").attr({src: pdfViewerBase + par.url });
         pdfCont.append(pdfIframe);
         pdfCont["goto"] = function(anchor) {
-            this.addClass("loading").pdf({url: pdfIframe.attr("src").split("#")[0] + anchor});
+            this.addClass("loading").pdf({url: pdfIframe.attr("src").replace("/common/fe/assets/pdf/web/viewer.html?file=","").split("#")[0] + anchor});
         }
         return pdfCont.removeClass("loading");
     }
