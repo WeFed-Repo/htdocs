@@ -355,7 +355,7 @@ var startLending = function (params) {
                 var hasError = false;
                 if ((sml.durata % parseInt(sml.periodicita)) !== 0) {
                     hasError = true;
-                    setAlert({ title: "Attenzione!", body: "<p><strong>La durata richiesta non risulta compatibile con il tipo di periodicit&agrave; selezionato</strong>.<br>Selezionare una durata oppure una periodicit&agrave; differenti.</p>" }).modal();
+                    setAlert({ title: "Attenzione!", body: "<p><strong>La durata richiesta non risulta compatibile con il tipo di periodicit&agrave; selezionato</strong>.<br>Selezionare una durata o una periodicit&agrave; differente.</p>" }).modal();
                 }
                 
                 if (!hasError) {
