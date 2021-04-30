@@ -108,8 +108,7 @@
         </div>
     </div>
     <div class="fhw-mobile-overlay-content">
-        <!-- <div style="margin:10px 0px;height:1200px; background-color:orange;"></div> -->
-        <div class="pdf-container loading" data-url="./statici/documento_prova.pdf"></div>
+        <div class="pdf-container loading" data-url="/template/statici/documento_prova.pdf"></div>
     </div>
     <div class="fhw-mobile-overlay-footer">
          <!-- Bottone_002 --> 
@@ -122,8 +121,15 @@
         </div>
     </div>
 </div>
+<!-- Mobile overlay -->
 
 <script type="text/javascript">
+
+    var showMobileDoc = function(){
+        if ($(window).width()>=124) {
+            getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+ $(window).width()+ "</strong>px.</p>")}).modal("show");
+        }
+    }
     $(function(){$("body").append($("#fhw-mo-1"))})
 </script>
 
