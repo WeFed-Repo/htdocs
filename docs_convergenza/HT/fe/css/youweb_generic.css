@@ -9264,8 +9264,9 @@ p.note.to-right{
 }
 
 /* Pdf */
-.pdf-container, .pdf-container iframe, .pdf-container embed {height:500px;width:100%; border:0 none;}
-.pdf-container {border:solid 1px #cacaca}
+.pdf-container, .pdf-container iframe {height:500px;width:100%; border:0 none;}
+.pdf-container iframe {border:solid 1px #cacaca}
+
 /*tpl in corso */
 .row.row-eq-height {
     display: -webkit-box;
