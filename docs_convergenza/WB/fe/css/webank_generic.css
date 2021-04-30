@@ -11396,6 +11396,16 @@ div.select-content select:active {
 .box-feedback p:last-child {
   margin-bottom: 0;
 }
+/* Pdf */
+.pdf-container,
+.pdf-container iframe {
+  height: 500px;
+  width: 100%;
+  border: 0 none;
+}
+.pdf-container iframe {
+  border: solid 1px #cacaca;
+}
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
   body #contenuti {
