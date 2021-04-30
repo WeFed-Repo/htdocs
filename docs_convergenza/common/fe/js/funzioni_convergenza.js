@@ -4708,7 +4708,7 @@ $.fn.extend({
     pdf: function(par){
         var pdfCont = $(this).empty();
         var pdfViewerBase = "/common/fe/assets/pdf/web/viewer.html?file=";
-        pdfIframe = $("<iframe>").attr({src: pdfViewerBase + par.url });
+        pdfIframe = $("<iframe>").attr({src: pdfViewerBase + par.url + (par.url.indexOf("#")>0 ? "": "#page=1")});
         pdfCont.append(pdfIframe);
         pdfCont["goto"] = function(anchor) {
             this.addClass("loading").pdf({url: pdfIframe.attr("src").replace("/common/fe/assets/pdf/web/viewer.html?file=","").split("#")[0] + anchor});
