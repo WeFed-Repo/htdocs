@@ -3131,3 +3131,35 @@ table tr td.td-fondo {
     position:relative;
     .ui-autocomplete {position:absolute}
 }
+
+/* Nuovo campo password */
+.password-toggle {
+    position:relative;
+    input {
+        padding-right: 40px;
+        &::-ms-reveal ,&::-ms-clear{
+            display: none;
+        }
+    }
+    .toggle-pwd {
+        position:absolute; right:0; width:40px; padding: 0px 0 0; height:34px; top:0px;overflow:hidden; text-align:center; cursor:pointer;
+        .icon-hide {
+            display:none;
+        }
+        .icon-show {
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+    &.password-hide {
+        .toggle-pwd {
+            .icon-show {
+                display:none;                
+            }
+            .icon-hide {
+                display:inline-block;
+                margin-top: 2px;
+            }
+        }
+    }
+}
