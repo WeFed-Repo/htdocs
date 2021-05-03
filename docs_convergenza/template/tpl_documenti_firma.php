@@ -169,7 +169,7 @@
 
 
 <!-- add to body overflow-y: hidden; -->
-<div id="fhw-mo-1" class="fhw-mobile-overlay">
+<div id="fhw-mo-1" class="fhw-mobile-overlay" style="display:none">
     <div class="fhw-mobile-overlay-header">
         <div class="closer fhw-close">
             <a class="icon icon-close_inverted_fill" title="icon-close_inverted_fill"></a>
@@ -192,17 +192,20 @@
 <!-- Mobile overlay -->
 
 <script type="text/javascript">
-
+    // Embed documenti in overlayer Solo su Mobile
     var showMobilePdf = function(url){
         var wwitdh = $(window).width();
-        if (wwitdh <=1024) {
+        if (wwitdh>=1024) {
             getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+ $(window).width()+ "</strong>px.</p>")}).modal("show");
         }
         else{
-            
+            // Overlay documento
+
+            $(function(){$("body").append($("#fhw-mo-1"))})
+            $("#fhw-mo-1").show();
         }
     }
-    $(function(){$("body").append($("#fhw-mo-1"))})
+
 </script>
 
 <script type="text/javascript">
