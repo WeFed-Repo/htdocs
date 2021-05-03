@@ -1149,3 +1149,144 @@ ol.sotto-elenco  li:before {
 ol.sotto-elenco ol, ol.sotto-elenco ol li {
     margin-bottom:0
 }
+
+/* # Oggetto: Text-with-Icon Convergenza: 010# */
+/* ## List Container ## */
+.list-icon-wrapper {
+    margin-bottom: 30px;
+    &.not-inline .text-with-icon{
+        margin-bottom: 6px;
+    }
+/* ### Change Positions ### */
+    &.to-right{
+        float: right;
+        .text-with-icon {
+            float: right;
+            margin-right: 14px;
+            &:first-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    &.to-left{
+        float: left;
+        .text-with-icon {
+            float: left;
+            margin-left: 14px;
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+/* ## Text with icon Element ## */
+.text-with-icon {
+    position: relative;
+    width: fit-content;
+    .linker {
+        text-decoration: none;
+        padding-left: 0px;
+        position: relative;
+        .icon-arrow_down {
+            display:none;
+        }
+        &[aria-expanded=false] {
+            .icon-arrow_up {
+                display:none;
+            }
+            .icon-arrow_down {
+                display:block;
+            }
+        }
+    }
+    .glyph, .icon {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        font-size: 18px;
+        color: #6f8f0a;
+    }
+    .image {
+        position: absolute;
+        left: 0px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: lightgray;
+    }
+    .transform-uppercase {
+        text-transform: uppercase;
+    }
+/* ### Change Positions ### */
+    &.right-icon{
+        .sub-text {
+            padding-right:0;
+        }
+        .image, .glyph, .icon{
+            right: 0px;
+            left: auto;
+        }
+        .wrapper-icon-left{
+            .image, .glyph, .icon{
+                left:0;
+                right:auto
+            } 
+        }
+        &.with-tooltip{
+            .linker, .text {
+                display: inline-block;
+            }
+            .linker .icon{
+               cursor:pointer;
+               z-index: 1;
+            }
+        }
+    }
+/* ### Change Texts ### */
+    a {
+        text-decoration: underline;
+        color: #6f8f0a;
+        padding-left: 24px;
+        &.no-underline {
+            text-decoration: none
+        }
+    }
+    .text {
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: 26px;
+        color: #202d50;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+    .sub-text {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+        padding-left: 26px;
+        color: #202d50;
+        display: block;
+    }
+    &.ellips{
+        width: fit-content;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+    }     
+}
+
+/* spostato per risoluzioni intermedie*/
+@media screen and (min-width: 768px) and (max-width: 1200px) { 
+    .text-with-icon {
+        &.right-icon {
+            &.with-tooltip {
+                .text {
+                    letter-spacing: -1px;
+                }
+            }
+        }
+    }
+} 

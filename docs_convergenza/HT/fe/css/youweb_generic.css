@@ -8959,6 +8959,18 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     margin-right: 0px;
 }
 
+/* Text-with-Icon Element left float*/
+.list-icon-wrapper.to-left, .list-icon-wrapper.to-left .text-with-icon {
+    float: left;
+}
+.list-icon-wrapper.to-left .text-with-icon {
+    margin-left: 14px;
+}
+
+.list-icon-wrapper.to-left .text-with-icon:first-child {
+    margin-left: 0px;
+}
+
 /* Change Texts */
 .text-with-icon a {
     /*font-size: 16px;*/

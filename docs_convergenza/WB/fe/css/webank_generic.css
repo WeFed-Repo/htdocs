@@ -1301,6 +1301,136 @@ ol.sotto-elenco ol,
 ol.sotto-elenco ol li {
   margin-bottom: 0;
 }
+/* # Oggetto: Text-with-Icon Convergenza: 010# */
+/* ## List Container ## */
+.list-icon-wrapper {
+  margin-bottom: 30px;
+  /* ### Change Positions ### */
+}
+.list-icon-wrapper.not-inline .text-with-icon {
+  margin-bottom: 6px;
+}
+.list-icon-wrapper.to-right {
+  float: right;
+}
+.list-icon-wrapper.to-right .text-with-icon {
+  float: right;
+  margin-right: 14px;
+}
+.list-icon-wrapper.to-right .text-with-icon:first-child {
+  margin-right: 0px;
+}
+.list-icon-wrapper.to-left {
+  float: left;
+}
+.list-icon-wrapper.to-left .text-with-icon {
+  float: left;
+  margin-left: 14px;
+}
+.list-icon-wrapper.to-left .text-with-icon:first-child {
+  margin-left: 0px;
+}
+/* ## Text with icon Element ## */
+.text-with-icon {
+  position: relative;
+  width: fit-content;
+  /* ### Change Positions ### */
+  /* ### Change Texts ### */
+}
+.text-with-icon .linker {
+  text-decoration: none;
+  padding-left: 0px;
+  position: relative;
+}
+.text-with-icon .linker .icon-arrow_down {
+  display: none;
+}
+.text-with-icon .linker[aria-expanded=false] .icon-arrow_up {
+  display: none;
+}
+.text-with-icon .linker[aria-expanded=false] .icon-arrow_down {
+  display: block;
+}
+.text-with-icon .glyph,
+.text-with-icon .icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  font-size: 18px;
+  color: #6f8f0a;
+}
+.text-with-icon .image {
+  position: absolute;
+  left: 0px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: lightgray;
+}
+.text-with-icon .transform-uppercase {
+  text-transform: uppercase;
+}
+.text-with-icon.right-icon .sub-text {
+  padding-right: 0;
+}
+.text-with-icon.right-icon .image,
+.text-with-icon.right-icon .glyph,
+.text-with-icon.right-icon .icon {
+  right: 0px;
+  left: auto;
+}
+.text-with-icon.right-icon .wrapper-icon-left .image,
+.text-with-icon.right-icon .wrapper-icon-left .glyph,
+.text-with-icon.right-icon .wrapper-icon-left .icon {
+  left: 0;
+  right: auto;
+}
+.text-with-icon.right-icon.with-tooltip .linker,
+.text-with-icon.right-icon.with-tooltip .text {
+  display: inline-block;
+}
+.text-with-icon.right-icon.with-tooltip .linker .icon {
+  cursor: pointer;
+  z-index: 1;
+}
+.text-with-icon a {
+  text-decoration: underline;
+  color: #6f8f0a;
+  padding-left: 24px;
+}
+.text-with-icon a.no-underline {
+  text-decoration: none;
+}
+.text-with-icon .text {
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 26px;
+  color: #202d50;
+}
+.text-with-icon .underline {
+  text-decoration: underline;
+}
+.text-with-icon .sub-text {
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  padding-left: 26px;
+  color: #202d50;
+  display: block;
+}
+.text-with-icon.ellips {
+  width: fit-content;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+/* spostato per risoluzioni intermedie*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .text-with-icon.right-icon.with-tooltip .text {
+    letter-spacing: -1px;
+  }
+}
 /* REGOLE COMUNI TABELLE*/
 table {
   width: 100%;
