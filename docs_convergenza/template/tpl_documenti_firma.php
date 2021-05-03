@@ -99,14 +99,15 @@
 <!-- Blocco firma -->
 <section>
 
-    <div class="titleIndexContainer">Firma <span>3</span> di <span>3</span></div>
+    <div class="titleIndexContainer">Firma <span>3</span> di <span>3</span></div>&nbsp;&nbsp;&nbsp;
+    <a class="link-text underline hidden-md hidden-lg hidden-xl" onclick="showMobilePdf('/template/statici/documento_prova.pdf#ancora');">Visualizza punto firma 3</a>
 
     <div class="formWrapper">
         <div class="form-group">
             <div class="form-field-input">
                 <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 no-label">
+                    <div class="col-xs-8 col-sm-3 no-label">
                         <!-- Esempio campo password -->
                         <div class="form-field password-toggle">
                             <input type="password" value="" name="" autocomplete="off" class="form-control">
@@ -114,7 +115,7 @@
                         </div>
                         <!-- Fine esempio campo password -->
                     </div>
-                    <div class="col-xs-12 col-sm-9 no-label">
+                    <div class="col-xs-4 col-sm-9 no-label">
                         <a type="button" href="#" class="btn btn-primary  btn-inline btn-no-label" title="Firma">Firma</a>
                     </div>
                    
@@ -165,12 +166,48 @@
     })
     </script>
 
-<script>
-    $(function () {
-        $(".toggle_pwd").click(function () {
-            $(".toggle_pwd").toggleClass("hidden ");
-            var type = ($("#txtPassword").attr("type")=="password") ? "text" : "password";
-            $("#txtPassword").attr("type", type);
-        });
+
+
+<!-- add to body overflow-y: hidden; -->
+<div id="fhw-mo-1" class="fhw-mobile-overlay">
+    <div class="fhw-mobile-overlay-header">
+        <div class="closer fhw-close">
+            <a class="icon icon-close_inverted_fill" title="icon-close_inverted_fill"></a>
+        </div>
+    </div>
+    <div class="fhw-mobile-overlay-content loading">
+       CONT
+    </div>
+    <div class="fhw-mobile-overlay-footer">
+         <!-- Bottone_002 --> 
+        <div class="form-group btnWrapper clearfix">     
+            <div class="btn-align-right">
+                <div>
+                    <a type="button" href="#" class="btn btn-primary fhw-close" title="chiudi">Chiudi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile overlay -->
+
+<script type="text/javascript">
+
+    var showMobilePdf = function(url){
+        var wwitdh = $(window).width();
+        if (wwitdh <=1024) {
+            getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+ $(window).width()+ "</strong>px.</p>")}).modal("show");
+        }
+        else{
+            
+        }
+    }
+    $(function(){$("body").append($("#fhw-mo-1"))})
+</script>
+
+<script type="text/javascript">
+    $(".fhw-mobile-overlay .fhw-close").click(function () {
+        let fhwsel = $(this).closest('.fhw-mobile-overlay');
+        fhwsel.hide();
     });
 </script>

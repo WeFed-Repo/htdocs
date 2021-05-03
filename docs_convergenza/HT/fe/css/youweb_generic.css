@@ -6985,6 +6985,9 @@ div[id*="popover"] .popover-content {
 /* Classi bottone in-linea con e senza label*/
 .btn-inline {margin-top:20px;}
 .btn-inline.btn-no-label {margin-top:8px;}
+@media (max-width: 1023px) {
+    .btn-inline.btn-no-label {margin-top:2px}
+}
 
 /*fdr*/
 .tab-wrap ol {
@@ -9228,6 +9231,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /* Titoletto con index container */
 .titleIndexContainer {
+    display:inline-block;
     text-align: left;
     font-size: 14px;
     font-weight: 600;
@@ -9383,3 +9387,45 @@ p.note.to-right{
   .password-toggle .toggle-pwd .icon-hide {display:none}
   .password-toggle.password-hide .toggle-pwd .icon-show {display:none}
   .password-toggle.password-hide .toggle-pwd .icon-hide {display:inline-block}
+
+  @media (max-width: 1023px) {
+    .password-toggle .toggle-pwd {top:0}
+  }
+
+  /* Overlay documenti */
+  .fhw-mobile-overlay{
+    display:none;
+    position:fixed;
+    top:62px; 
+    left:0px; 
+    width:100%;
+    height:calc(100% - 62px); 
+    background-color:#fff; 
+}
+.fhw-mobile-overlay-header{
+    margin:10px; 
+    position:relative;
+    padding-right:40px;
+    height: 40px;
+}
+.fhw-mobile-overlay-header .closer{
+    position:absolute; 
+    right:0px; 
+    top:5px; 
+    width:30px; 
+    height:30px; 
+}
+.fhw-mobile-overlay-content{
+    margin:10px 10px 10px 10px ; 
+    height:calc(100% - 120px); 
+    overflow: scroll;
+}
+.fhw-mobile-overlay-footer{
+    margin:10px; 
+    height: 40px;
+}
+@media only screen and (max-width: 770px) {
+    .fhw-mobile-overlay{
+        display:block;
+    }
+}

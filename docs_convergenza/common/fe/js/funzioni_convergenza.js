@@ -4787,5 +4787,6 @@ $(function () {
     addRemoveField();
     openPdfEmbed();
     setPwdFields();
+    
     setPdfInline();
 });
