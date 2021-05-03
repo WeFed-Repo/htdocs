@@ -6089,6 +6089,42 @@ table tr td.td-fondo .fundName {
 .ui-front .ui-autocomplete {
   position: absolute;
 }
+/* Nuovo campo password */
+.password-toggle {
+  position: relative;
+}
+.password-toggle input {
+  padding-right: 40px;
+}
+.password-toggle input::-ms-reveal,
+.password-toggle input::-ms-clear {
+  display: none;
+}
+.password-toggle .toggle-pwd {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  padding: 0px 0 0;
+  height: 34px;
+  top: 0px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+.password-toggle .toggle-pwd .icon-hide {
+  display: none;
+}
+.password-toggle .toggle-pwd .icon-show {
+  margin-top: 10px;
+  display: inline-block;
+}
+.password-toggle.password-hide .toggle-pwd .icon-show {
+  display: none;
+}
+.password-toggle.password-hide .toggle-pwd .icon-hide {
+  display: inline-block;
+  margin-top: 2px;
+}
 /* Classi aggiuntive per la griglia */
 .col-sep {
   margin-left: -1px;
