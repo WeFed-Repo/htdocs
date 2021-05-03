@@ -8900,7 +8900,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     top: 0px;
     left: 0px;
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     color: #0e977f;
 }
 .text-without-icon span {
@@ -8963,7 +8963,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     /*font-size: 16px;*/
     text-decoration: underline;
     color: #0e977f;
-    padding-left: 21px;
+    padding-left: 24px;
 }
 .text-with-icon a.no-underline {
     text-decoration: none
@@ -9216,6 +9216,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* # Linked Icon */
 .linked-icon .icon {
     color: #0e977f;
+    font-size:18px;
 }
 
 .linked-icon.disabled .icon {

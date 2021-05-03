@@ -72,7 +72,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
 
@@ -217,7 +217,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -230,7 +230,7 @@
                         <div class="light-red visible-mobile wrapper-icon-left">
                             <span class="icon icon-close" title="icon-close" ></span>
                         </div>
-                        <a class="linker" href="javascript:;">
+                        <a class="linker">
                             <span class="text transform-uppercase">Rifiutata da cliente</span>
                             <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
                         </a>
@@ -389,7 +389,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -399,7 +399,7 @@
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
-                       <a class="linker" href="javascript:;">
+                       <a class="linker">
                             <span class="text transform-uppercase">Firmata parzialmente</span>
                             <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
                         </a>
@@ -580,7 +580,7 @@
                         <div class="green visible-mobile wrapper-icon-left">
                             <span class="icon icon-check-ok_table"></span>
                         </div>
-                       <a class="linker" href="javascript:;">
+                       <a class="linker">
                             <span class="text transform-uppercase">Sottoscritta</span>
                             <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip"  data-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
                         </a>
@@ -624,7 +624,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
                     </div>
                 </div>
 
@@ -767,7 +767,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -780,7 +780,7 @@
                         <div class="light-red visible-mobile wrapper-icon-left">
                             <span class="icon icon-close" title="icon-close" ></span>
                         </div>
-                        <a class="linker" href="javascript:;">
+                        <a class="linker">
                             <span class="text transform-uppercase">Revocata dal gestore</span>
                             <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
                         </a>
@@ -939,7 +939,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-numeroverde_fill" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -952,7 +952,7 @@
                         <div class="visible-mobile wrapper-icon-left">
                             <span class="icon icon-attesa" title="icon-attesa" ></span>
                         </div>
-                        <a class="linker" href="javascript:;">
+                        <a class="linker">
                             <span class="text transform-uppercase">Firmata parzialmente</span>
                             <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
                             <span class="sub-text">In attesa di cointestatario</span>
