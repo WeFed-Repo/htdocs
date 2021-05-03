@@ -1,3 +1,4 @@
+
 <section>
     <!-- Titolo_001 -->
     <div class="titolo">
@@ -950,7 +951,7 @@
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
                         <div class="visible-mobile wrapper-icon-left">
-                            <span class="icon icon-attesa" title="icon-attesa" ></span>
+                            <span class="glyph glyph-ico_clock_validate" title=""></span>
                         </div>
                         <a class="linker">
                             <span class="text transform-uppercase">Firmata parzialmente</span>
@@ -961,7 +962,7 @@
                 </div>
                 <div class="col-sm-2 col-xs-12">
                      <div class="center-wrapper visible-desktop">
-                        <span class="icon icon-attesa" title="icon-attesa" ></span>
+                        <span class="glyph glyph-ico_clock_validate" title=""></span>
                     </div>
                 </div>
             </div>
