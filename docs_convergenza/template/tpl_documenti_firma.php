@@ -106,14 +106,18 @@
             <div class="form-field-input">
                 <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 no-label" style="position:relatve;">
-                        <input type="text" id="txtPassword" value="" name="" autocomplete="off" class="form-control">
-                        <span class="toggle_pwd icon icon-show" style="position:absolute;right:30px; top:15px"></span>
-                        <span class="toggle_pwd icon icon-hide hidden" style="position:absolute;right:30px; top:15px"></span>
+                    <div class="col-xs-12 col-sm-3 no-label">
+                        <!-- Esempio campo password -->
+                        <div class="form-field password-toggle">
+                            <input type="password" value="" name="" autocomplete="off" class="form-control">
+                            <span class="toggle-pwd"></span>
+                        </div>
+                        <!-- Fine esempio campo password -->
                     </div>
                     <div class="col-xs-12 col-sm-9 no-label">
                         <a type="button" href="#" class="btn btn-primary  btn-inline btn-no-label" title="Firma">Firma</a>
                     </div>
+                   
                 </div>
             </div>
         </div>

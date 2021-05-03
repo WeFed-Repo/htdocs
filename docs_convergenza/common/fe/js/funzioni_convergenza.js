@@ -4726,6 +4726,21 @@ var setPdfInline= function(){
     });
 }
 
+// Inizializzazione campi password
+var setPwdFields = function() {
+    $(".password-toggle .toggle-pwd").not(".password-inited").empty().append(
+        $("<i>").addClass("icon icon-show"),
+        $("<i>").addClass("icon icon-hide")
+    ).click(function(){
+            var wrapper = $(this).parents(".password-toggle");
+            var input = wrapper.find("input");
+            var status = input.attr("type");
+            // Switch
+            input.attr("type", (status =="password"? "text" : "password"));
+            wrapper.toggleClass("password-hide", function(){return status === "password";});
+    }).parents(".password-toggle").addClass("password-inited");
+}
+
 //inizializzazioni al load della pagina
 $(function () {
     renderOverlayerFooterFixed();
@@ -4771,6 +4786,6 @@ $(function () {
     abilitaBtnField();
     addRemoveField();
     openPdfEmbed();
-
+    setPwdFields();
     setPdfInline();
 });

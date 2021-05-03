@@ -9373,3 +9373,12 @@ p.note.to-right{
   .pract-toggle .light-red .icon{
       color:#ffc199
   }
+
+  /* Nuovo campo password */
+  .password-toggle {position:relative}
+  .password-toggle input {padding-right: 40px;}
+  .password-toggle input::-ms-reveal, .password-toggle input::-ms-clear { display: none }
+  .password-toggle .toggle-pwd {position:absolute; right:0; width:40px; padding: 9px 0 0;height:40px; top:5px;overflow:hidden; text-align:center; cursor:pointer;}
+  .password-toggle .toggle-pwd .icon-hide {display:none}
+  .password-toggle.password-hide .toggle-pwd .icon-show {display:none}
+  .password-toggle.password-hide .toggle-pwd .icon-hide {display:inline-block}
