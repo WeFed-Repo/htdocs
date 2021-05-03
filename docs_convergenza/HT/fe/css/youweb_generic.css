@@ -9271,7 +9271,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .accept-wrapper .icon {
     position: absolute;
-    z-index: 1;
     top: 0px;
     left: 0px;
     display: block;
