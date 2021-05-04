@@ -2377,6 +2377,7 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
      position: relative;
      min-height: 40px;
      display: flex;
+     display: -ms-flexbox;
      justify-content: center;
      flex-direction: column;
  }
@@ -2389,11 +2390,6 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
     position: absolute;
     width: 36px;
     height: 36px;
-}
-@media all and (-ms-high-contrast:none) {
-    .esito-inline .esito-text {
-        padding-top:10px;
-    }
 }
 
 div.messagePanel h3 {
