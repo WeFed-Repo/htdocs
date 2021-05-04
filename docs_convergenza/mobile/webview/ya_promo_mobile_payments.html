@@ -1,0 +1,510 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>YouApp</title>
+
+    <meta name="description" content="YouApp">
+
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Stili della pagina -->
+
+    <style>
+        /* Font face */
+
+        @font-face {
+
+            font-family: 'bankFont';
+
+            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+
+                url('./font/montserrat-light-webfont.woff') format('woff');
+
+            font-weight: normal;
+
+            font-style: normal;
+
+        }
+
+
+
+        @font-face {
+
+            font-family: 'bankFont';
+
+            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+
+                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+
+            font-weight: normal;
+
+            font-style: italic;
+
+        }
+
+
+
+        @font-face {
+
+            font-family: 'bankFont';
+
+            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+
+                url('./font/montserrat-semibold-webfont.woff') format('woff');
+
+            font-weight: bold;
+
+            font-style: normal;
+
+        }
+
+
+
+        @font-face {
+
+            font-family: 'bankFont';
+
+            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+
+                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+
+            font-weight: bold;
+
+            font-style: italic;
+
+        }
+
+
+
+        /*  */
+
+        body {
+
+            background-color: #fff;
+
+            margin: 0;
+
+            padding: 0;
+
+            font-family: 'bankFont', Arial, Serif;
+
+            font-size: 15px;
+
+            height: 100%;
+
+            color: #1f2021;
+
+        }
+
+
+
+        #main {
+
+            margin: 0 auto;
+
+            height: 100%;
+
+            max-width: 640px;
+
+            background: #fff;
+
+        }
+
+
+
+        #contenuto .hero {
+
+            display: inline-block;
+
+            height: 320px;
+
+            width: 100%;
+
+            background: #eee url(./img/visual_web_view_mobile_payments.jpg) no-repeat center center;
+
+            background-size: cover;
+
+            position: relative;
+
+        }
+
+
+
+        .hero .hero-text {
+
+            position: absolute;
+
+            bottom: 0;
+
+            padding: 0 25px 15px;
+
+        }
+
+
+
+        #contenuto .hero h1 {
+
+            font-size: 24px;
+
+            line-height: 29px
+        }
+
+
+
+        #main .pagecont {
+
+            padding: 15px 25px 25px
+        }
+
+
+
+        /* Contenuti */
+
+        .boxedcont {
+
+            padding: 15px 15px 5px;
+
+            background: #f4f5f4;
+
+            border-radius: 10px;
+
+            margin: 0 -10px 15px;
+
+        }
+
+
+
+        /* Generici */
+
+        a {
+
+            color: #344a86;
+
+            text-decoration: none;
+
+        }
+
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+
+        h1 {
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        h2 {
+
+            font-size: 18px;
+
+            line-height: 22px;
+
+            color: #212122;
+
+            margin: 0 0 15px;
+
+        }
+
+
+
+        h3 {
+
+            font-size: 16px;
+
+            line-height: 19px;
+
+            color: #344a86;
+
+            margin: 0 0 15px;
+
+        }
+
+
+
+        p {
+
+            margin: 0 0 10px;
+
+            clear: both;
+
+            line-height: 20px;
+
+        }
+
+
+
+        p.note {
+            color: #1f2021;
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+
+
+        /* Bullet reset */
+
+        ol,
+
+        ul,
+
+        ol li,
+
+        ul li {
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style-type: none
+        }
+
+
+
+        /* Bullet rivisti */
+
+        ol {
+
+            counter-reset: ol;
+
+        }
+
+
+
+        ol li,
+
+        ul li {
+
+            position: relative;
+
+            padding: 0 0 10px 25px;
+
+            line-height: 20px
+        }
+
+
+
+        /* Bullet "normali" */
+
+        ul li::before {
+
+            display: block;
+
+            width: 6px;
+
+            height: 6px;
+
+            background-color: #1f2021;
+
+            border-radius: 4px;
+
+            top: 8px;
+
+            left: 4px;
+
+            content: "";
+
+            position: absolute;
+
+        }
+
+
+
+        /* Bullet "ordinali" */
+
+        ol li::before {
+
+            display: block;
+
+            width: 18px;
+
+            height: 18px;
+
+            background-color: #344a86;
+
+            font-size: 13px;
+
+            text-align: center;
+
+            line-height: 20px;
+
+            border-radius: 10px;
+
+            top: 0px;
+
+            left: 0;
+
+            counter-increment: ol;
+
+            content: counter(ol);
+
+            position: absolute;
+
+            color: #fff;
+
+        }
+
+
+        .wrapper-cta {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-around;
+
+            margin-bottom: 30px;
+
+            margin-top: 30px;
+
+        }
+
+        .wrapper-cta .cta {
+
+            display: inline-block;
+
+            margin: 0 auto;
+
+            background: #344a86;
+
+            line-height: 15px;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            padding: 15px 30px;
+
+            color: #fff;
+
+            border-radius: 8px;
+
+        }
+
+
+        /* Declinazione dark */
+
+        .dark #contenuto .hero h1 {
+
+            color: #fff;
+
+            text-transform: none;
+
+            font-weight: normal;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div id="main" class="dark">
+
+        <div id="contenuto">
+
+            <div class="hero">
+
+                <div class="hero-text">
+
+                    <h1><strong>Più semplice di così!</strong></h1>
+
+                </div>
+
+            </div>
+
+            <div class="pagecont">
+
+                <!-- Box solo testo -->
+
+                <div class="boxedcont">
+
+                    <p>Lascia a casa la carta di debito e compra ovunque, senza problemi!</p>
+
+                </div>
+
+                <!-- Fine box solo testo -->
+
+
+
+                <!-- Box solo testo -->
+
+                <div class="boxedcont">
+
+                    <p>Grazie a <strong>Samsung</strong> Pay, <strong>Google</strong> Pay, <strong>Garmin</strong> Pay, <strong>Fitbit</strong> Pay,
+                         ti basta utilizzare lo smartphone o lo smartwatch per pagare in tutti i negozi con POS contactless!</p>
+
+                </div>
+
+                <!-- Fine box solo testo -->
+
+
+                <!-- Box solo testo -->
+
+                <div class="boxedcont">
+
+                    <p>
+                        Entra nel tuo store, <strong>scarica gratis l'app</strong> e <strong>abbina</strong> la tua <strong>carta di debito.</strong>
+                    </p>
+
+                </div>
+                
+                <!-- Fine solo testo-->
+
+                <!-- Box solo testo -->
+
+                <div class="boxedcont">
+
+                    <p>
+                        Scoprirai un'esperienza di pagamento ancora <strong>più comoda e veloce:</strong> non potrai più farne a meno!
+                    </p>
+
+                </div>
+                
+                <!-- Fine solo testo-->
+
+                <!-- Non boxati -->
+
+                <p class="note">
+
+                    <strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong><br>
+                    Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi disponibili 
+                    (unitamente alla Guida operativa ai servizi) presso le filiali Banco BPM e sul sito bancobpm.it.
+
+                </p>
+
+                <!-- Fine non boxati -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>
