@@ -2376,17 +2376,25 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
  .esito-inline {
      position: relative;
      min-height: 40px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
  }
 .esito-inline .esito-text {
-    position: absolute;
-    left: 46px;
-    top:9px;
     font-size: 16px;
+    padding:0 0  0 47px;
 }
 .esito-inline .icon {
     color:#007c66;
+    position: absolute;
+    width: 36px;
+    height: 36px;
 }
-
+@media all and (-ms-high-contrast:none) {
+    .esito-inline .esito-text {
+        padding-top:10px;
+    }
+}
 
 div.messagePanel h3 {
     font-size: 16px;
