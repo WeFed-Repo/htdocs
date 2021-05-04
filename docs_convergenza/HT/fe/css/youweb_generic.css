@@ -9233,6 +9233,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     .text-with-icon.right-icon.with-tooltip .text {
         letter-spacing: -1px;
     }
+    .center-wrapper.visible-desktop span {
+        margin-left: 15px;
+        min-width: 100px;
+    }
 } 
 /* # Linked Icon */
 .linked-icon .icon {
