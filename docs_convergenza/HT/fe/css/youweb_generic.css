@@ -9415,7 +9415,7 @@ p.note.to-right{
     margin:10px; 
     position:relative;
     padding-right:40px;
-    height: 40px;
+    height: 30px;
 }
 .fhw-mobile-overlay-header .closer{
     position:absolute; 
@@ -9425,12 +9425,16 @@ p.note.to-right{
     height:30px; 
 }
 .fhw-mobile-overlay-content{
-    margin:10px 10px 10px 10px ; 
-    height:calc(100% - 120px); 
-    overflow: scroll;
+    margin: 0; 
+    height:calc(100% - 110px); 
+    width:100%;
+    overflow:scroll;
+}
+.fhw-mobile-overlay-content .pdf-container, .fhw-mobile-overlay-content .pdf-container iframe {
+    height:100%;
 }
 .fhw-mobile-overlay-footer{
-    margin:10px; 
+    margin:13px 15px 0; 
     height: 40px;
 }
 @media only screen and (max-width: 770px) {
@@ -9438,3 +9442,4 @@ p.note.to-right{
         display:block;
     }
 }
+body.fhw-opened {overflow-y:hidden}

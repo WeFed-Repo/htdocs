@@ -4703,6 +4703,37 @@ var renderOverlayerFooterFixed = function() {
     }
 }
 
+// Embed documenti in overlayer Solo su Mobile
+var showMobilePdf = function(url){
+    var wwitdh = $(window).width();
+    if (wwitdh>=1024) {
+        getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+ $(window).width()+ "</strong>px.</p>")}).modal("show");
+    }
+    else{
+        // Overlay documento
+        var fhwORemove = function(){
+            $("body").removeClass("fhw-opened");
+            $(this).parents(".fhw-mobile-overlay").remove();
+        }
+        var  fhwOPdfCont = $("<div>").addClass("pdf-container loading");
+        var fhwO = $("<div>").addClass("fhw-mobile-overlay").hide().append(
+            // Header
+            $("<div>").addClass("fhw-mobile-overlay-header").append(
+                $("<a>").addClass("closer fhw-close").append($("<i>").addClass("icon icon-close_inverted_fill")).click(fhwORemove).attr({title: "Chiudi"})
+            ),
+            $("<div>").addClass("fhw-mobile-overlay-content").append(fhwOPdfCont),
+            $("<div>").addClass("fhw-mobile-overlay-footer").append(
+                $("<div>").addClass("form-group btnWrapper clearfix").append(
+                    $("<div>").addClass("btn-align-right").append($("<a>").addClass("btn btn-primary fhw-close").click(fhwORemove).html("chiudi").attr({title: "Chiudi"}))
+                )
+            )
+        )
+
+        $("body").append($(fhwO).show()).addClass("fhw-opened");
+        fhwOPdfCont.pdf({url:url});
+    }
+}
+
 // Gestione pdf
 $.fn.extend({
     pdf: function(par){
