@@ -4706,8 +4706,9 @@ var renderOverlayerFooterFixed = function() {
 // Embed documenti in overlayer Solo su Mobile
 var showMobilePdf = function(url){
     var wwitdh = $(window).width();
-    if (wwitdh>=1024) {
-        getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+ $(window).width()+ "</strong>px.</p>")}).modal("show");
+    var minwidth = 1024;
+    if (wwitdh>=minwidth) {
+        getModal({titolo: "Attenzione!", body: $("<p>").html("Questo tipo di visualizzazione &egrave; riservato a risoluzioni orizzontali inferiori a <strong>"+  minwidth + "</strong> px.</p>")}).modal("show");
     }
     else{
         // Overlay documento
