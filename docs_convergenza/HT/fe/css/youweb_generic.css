@@ -9081,9 +9081,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     background-color:#EBEDEE;
 }
 .accord-content .history-element a {
-    padding-left:10px;
+    padding-left:30px;
+    line-height: 20px;
 }
-.accord-content .history-element.inactive a{
+.accord-content .history-element.inactive a { 
     color: #202d50;
 }
 
