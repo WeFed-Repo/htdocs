@@ -68,11 +68,9 @@
             </div>           	           
         </div>
         <div class="col-sm-1">
-             <!-- Icon with text -->
-            <div class="text-with-icon ellips">
-                <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>                
-                <a href="#" class="hidden-xs">PDF</a>
-                <a href="#" class="visible-xs ellips">NOME_DOCUMENTO_3_DA_VISIONARE_E_FIRMARE</a>                
+            <!-- Icon with text -->
+            <div class="list-icon-wrapper to-right">
+                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>PDF</a></div>
             </div>
         </div>
     </div>
@@ -110,7 +108,7 @@
                     <div class="col-xs-8 col-sm-3 no-label">
                         <!-- Esempio campo password -->
                         <div class="form-field password-toggle">
-                            <input type="password" value="" name="" autocomplete="off" class="form-control">
+                            <input type="password" value="" id="txtPassword" name="" autocomplete="off" class="form-control">
                             <span class="toggle-pwd"></span>
                         </div>
                         <!-- Fine esempio campo password -->

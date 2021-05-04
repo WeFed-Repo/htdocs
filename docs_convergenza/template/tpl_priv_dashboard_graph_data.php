@@ -1,6 +1,6 @@
 <?php
 
-	date_default_timezone_set(UTC);
+	date_default_timezone_set("UTC");
 	$giorno =   date(time());
 	$saldo = rand(-500,15000) + (rand(0,100)/100);
 	$bloccogiorni = (rand(0,5)>3)? rand(1,30) : 180;

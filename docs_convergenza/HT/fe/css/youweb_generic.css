@@ -8911,11 +8911,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 .text-with-icon .image {
     position: absolute;
-    left: 0px;
+    left: 0;
     display: block;
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: lightgray;
+    height:20px;
+    width:20px;
 }
 .text-with-icon .transform-uppercase {
     text-transform: uppercase;
@@ -9009,6 +9010,9 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     display: block;
     overflow: hidden;
 }
+
+/* Casistiche immagine text-with-icon */
+.text-with-icon .image.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
 
 /* # All Accords Header */
 .header-col{
