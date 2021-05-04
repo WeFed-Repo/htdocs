@@ -35,12 +35,10 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
-.icon-numeroverde_fill:before {
-  content: "\ea1a";
-}
-.icon-attesa:before {
+.icon-checkbox_spunta:before {
   content: "\ea19";
 }
+
 .icon-hide:before {
   content: "\ea17";
 }

@@ -26,24 +26,10 @@
 	    <div class="col-sm-12">
             <div class="list-icon-wrapper not-inline">
                 <h3>RIEPILOGO DOCUMENTI</h3>
-                <!-- Casistica Image -->
-                <div class="text-with-icon ellips">
-                    <span class="image image-uread_pdf" title="image-uread_pdf"></span>
-                    <a href="#">Nome_Documento_1_Da_Visionare</a>
-                </div>
-                <!-- Casistica Glifo -->
-                <div class="text-with-icon ellips">
-                    <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
-                    <a href="#">Nome_Documento_2_Da_Firmare</a>
-                </div>
-                <div class="text-with-icon ellips">
-                    <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
-                    <a href="#">Nome_Documento_3_Da_Visionare_e_Firmare</a>
-                </div>
-                <div class="text-with-icon ellips">
-                    <span class="glyph glyph-uread_pdf" title="glyph-uread_pdf"></span>
-                    <a href="#">Nome_Documento_4_Da_Firmare</a>
-                </div>
+                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_1_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_2_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_3_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_4_Da_Firmare</a></div>
             </div>
         </div>
     </div>

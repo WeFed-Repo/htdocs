@@ -5238,6 +5238,7 @@ span.colAlert {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
 .preventivatore .mData .documenti li {
@@ -6987,7 +6988,7 @@ div[id*="popover"] .popover-content {
 .tab-wrap .ui-accordion {padding:20px;}
 
 
-.documenti{padding-top:10px;padding-left:0}
+.documenti{padding-top:10px;padding-left:0;}
 .documenti li {padding:0;list-style-type: none;float:none;clear:both;}
 .documenti ul {padding:0;}
 .documenti li a + .btn-icon {position:relative;top:-3px;left:10px;}
@@ -9444,3 +9445,40 @@ p.note.to-right{
     }
 }
 body.fhw-opened {overflow-y:hidden}
+
+/*carta debit business */
+.ul-align-left,.sub-ul-check {
+   padding: 0 15px;
+   margin:0 0 20px 0;
+}
+.ul-align-left li{
+    padding: 0 0 10px;
+ }
+.sub-ul-check {
+    margin: 10px 0 0;
+}
+.sub-ul-check li {
+    padding: 0 0 5px;
+    list-style: none;
+}
+.sub-ul-check li:last-child, .ul-align-left li:last-child {
+    padding: 0;
+}
+.sub-ul-check li .icon {
+   font-size: 10px;
+}
+a.flex-wrapper {position: relative;display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    flex-direction: column;}
+a.flex-wrapper .icon {
+    position: absolute;
+    left:0;
+    top:0;
+}
+a.flex-wrapper .btnLink {
+    float: none;
+    position: static;
+    padding-left:30px;
+    line-height: inherit;
+}

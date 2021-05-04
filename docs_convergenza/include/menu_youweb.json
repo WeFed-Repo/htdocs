@@ -47,6 +47,19 @@
 						"tpl": "tpl_responsive_costi_condizioni_amex.php"
 					}
 				]
+			},
+			{
+				"nome": "Carta Debit Business",
+				"voices": [
+					{
+						"nome": "Scheda prodotto",
+						"tpl": "tpl_responsive_scheda_cdb.php"
+					},
+					{
+						"nome": "Costi e condizioni",
+						"tpl": "tpl_responsive_costi_condizioni_cdb.php"
+					}
+				]
 			}
 		]
 	},
