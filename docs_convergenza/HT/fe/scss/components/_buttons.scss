@@ -32,7 +32,7 @@
     background-color:#92989C;
     font-weight:600;
     padding:8px 15px 5px;
-  }
+  } 
   &.btn-default {
     margin-left: 20px;
   }
@@ -40,7 +40,8 @@
   &.btn-disabled {
     &, &:hover, &:focus, &:active, &.active {
       cursor: default;
-      background : $grayLight !important;
+      background : $grayLight3 !important;
+      color:$grayLight4!important;
       box-shadow: none !important;
     }
   }

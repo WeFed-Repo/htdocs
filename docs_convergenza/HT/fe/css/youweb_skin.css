@@ -554,7 +554,8 @@ span.sell {
 }
 .button.btn-disable, .button.btn-disable:hover, .button.btn-disable:focus, .button.btn-disable:active, .button.btn-disable.active, .button.btn-disabled, .button.btn-disabled:hover, .button.btn-disabled:focus, .button.btn-disabled:active, .button.btn-disabled.active, .btn.btn-disable, .btn.btn-disable:hover, .btn.btn-disable:focus, .btn.btn-disable:active, .btn.btn-disable.active, .btn.btn-disabled, .btn.btn-disabled:hover, .btn.btn-disabled:focus, .btn.btn-disabled:active, .btn.btn-disabled.active {
   cursor: default;
-  background: #d7d7d7 !important;
+  background: #ececec !important;
+  color: #c1c1c1 !important;
   box-shadow: none !important;
 }
 .button.slider-button, .btn.slider-button {

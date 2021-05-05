@@ -652,6 +652,9 @@ button {
 }
 /* tab di contenuti modalita responsive*/
 @media screen and (max-width: 768px) {
+.navfrontPage {
+    float:left
+}
 .innerWrapperTab.content-tab ul {
     float: none;
 }
@@ -1461,10 +1464,11 @@ label .btn-icon {
 }
 
 button[disabled], button[disabled]:hover, html input[disabled], .btn.disabled, .btn[disabled], fieldset[disabled] .btn, input[type="button"][disabled], #mainContent #dialogAbiCab input[type="button"][disabled] {
-    background-color: #EBEDEE !important;
+    background-color: #ececec !important;
     border: 0;
     opacity: 1;
     cursor: not-allowed;
+    color:#c1c1c1!important;
 }
 
 .odd button[disabled], html .odd input[disabled], .odd .btn.disabled, .odd .btn[disabled], .odd fieldset[disabled] .btn, .odd input[type="button"][disabled], #mainContent #dialogAbiCab .odd input[type="button"][disabled] {
@@ -9237,7 +9241,9 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     color: #EBEDEE;
     cursor: default;
 }
-
+.pract-toggle .text-with-icon .image + .text {
+    line-height: 22px;
+}
 /* ## Elementi FIRMA ## */
 
 /* Titoletto con index container */
@@ -9460,17 +9466,32 @@ body.fhw-opened {overflow-y:hidden}
 .sub-ul-check li {
     padding: 0 0 5px;
     list-style: none;
+    position: relative;
 }
 .sub-ul-check li:last-child, .ul-align-left li:last-child {
     padding: 0;
 }
 .sub-ul-check li .icon {
    font-size: 10px;
+   position: absolute;
+   top:4px;
+   width: auto;
+   height: auto;
 }
-a.flex-wrapper {position: relative;display: flex;
+.sub-ul-check li span {
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: left;
+    padding-left: 20px;
+}
+a.flex-wrapper {
+    position: relative;
+    display: flex;
     display: -ms-flexbox;
     justify-content: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 a.flex-wrapper .icon {
     position: absolute;
     left:0;

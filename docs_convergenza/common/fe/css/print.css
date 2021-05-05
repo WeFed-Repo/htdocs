@@ -217,11 +217,11 @@ table.fixed {
     page-break-inside: avoid;
 }
 
-table td.nega,.negativo {
+table td.nega,.negativo,.nega {
     color: #ff0000 !important;
 }
 
-table td.posi,.positivo {
+table td.posi,.positivo,.posi {
     color: #00a651 !important;
 }
 
