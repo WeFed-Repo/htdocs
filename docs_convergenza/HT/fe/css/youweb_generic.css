@@ -652,8 +652,11 @@ button {
 }
 /* tab di contenuti modalita responsive*/
 @media screen and (max-width: 768px) {
-.navfrontPage {
+.navfrontPage .tabbig {
     float:left
+}
+.navfrontPage .tabbig .innerTab {
+    overflow-x: auto;
 }
 .innerWrapperTab.content-tab ul {
     float: none;
@@ -8793,6 +8796,7 @@ p.large a {color:#0E977F;text-decoration: underline;}
 table.table-confronta-costi thead th {text-align:center;padding-bottom:5px}
 table.table-confronta-costi thead th img { max-width: 40%;} 
 table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
+.table-confronta-costi .right {text-align: right;}
 
 /* BOX DI FEEDBACK NUOVA VERSIONE */
 .box-feedback-bordered.alert p, .box-feedback.alert p {color:#202d50}
@@ -8921,7 +8925,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* Change Positions */
 .text-with-icon.right-icon .text, .text-with-icon.right-icon .sub-text{
     padding-left: 0px;
-    padding-right: 24px;
+    padding-right: 5px;
 }
 .text-with-icon.right-icon .sub-text {
     padding-right:0;
@@ -8943,6 +8947,15 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
    cursor:pointer;
    z-index: 1;
 }
+.text-with-icon.text-with-icon.with-tooltip .linker {
+    display: flex;
+    align-items: center;
+}
+
+.text-with-icon.with-tooltip .image, .text-with-icon.with-tooltip .glyph, .text-with-icon.with-tooltip .icon {
+    position: relative;
+}
+
 
 /* Text-with-Icon Element right float*/
 .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
@@ -9160,7 +9173,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         margin: 16px 0 3px 0;
     }
     .pract-toggle .visible-mobile{
-        display: block; 
+        display: block;
+        margin-right:5px;
     }
     .pract-toggle .visible-desktop {
         display: none;
@@ -9221,12 +9235,14 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         margin-left: 15px!important;
     }
     .pract-toggle .text-with-icon .text {
-        max-width: 120px;
+        max-width: 110px;
     }
-    .text-with-icon.right-icon.with-tooltip .text {
-        letter-spacing: -1px;
+    .pract-toggle .text-with-icon.right-icon.with-tooltip .text{
+        letter-spacing: -0.5px;
+        font-size:12px;
     }
-    .center-wrapper.visible-desktop span {
+   
+    .center-wrapper.visible-desktop{
         margin-left: 15px;
         min-width: 100px;
     }
@@ -9452,7 +9468,16 @@ p.note.to-right{
 }
 body.fhw-opened {overflow-y:hidden}
 
+/*overlayer info */
+.text-info h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
 /*carta debit business */
+
+/* punto elenco con sub fake check */
 .ul-align-left,.sub-ul-check {
    padding: 0 15px;
    margin:0 0 20px 0;
@@ -9485,6 +9510,8 @@ body.fhw-opened {overflow-y:hidden}
     text-align: left;
     padding-left: 20px;
 }
+
+/* link documenti*/
 a.flex-wrapper {
     position: relative;
     display: flex;
@@ -9502,4 +9529,40 @@ a.flex-wrapper .btnLink {
     position: static;
     padding-left:30px;
     line-height: inherit;
+}
+
+/* elemento icona con immagine*/
+
+.box-inline {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    flex-direction: column;
+}
+.box-inline img.icon, .box-inline .icon {
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+.box-inline-text {
+    padding:0 0  0 47px;
+}
+a.box-inline-text {
+   color:#0e977f;
+   text-decoration: underline;
+}
+/* elemento contatti*/
+.box-contatti h4 {
+    font-weight: bold;
+    margin:0 0 5px;
+}
+.box-contatti p {
+    padding-bottom: 5px;
+}
+.box-contatti a[href*="tel"] {
+    text-decoration: none!important;
+}
+.box-contatti div[class*="col-sm-"] {
+    margin-bottom:10px;
 }

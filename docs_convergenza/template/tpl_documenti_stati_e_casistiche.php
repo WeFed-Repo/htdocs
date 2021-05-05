@@ -73,7 +73,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
 
@@ -86,8 +86,11 @@
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
                         <a class="linker">
-                            <span class="text transform-uppercase">Nuova</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                            <div><span class="text transform-uppercase">Nuova</span></div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -218,7 +221,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -228,12 +231,17 @@
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
-                        <div class="light-red visible-mobile wrapper-icon-left">
-                            <span class="icon icon-close" title="icon-close" ></span>
-                        </div>
                         <a class="linker">
-                            <span class="text transform-uppercase">Rifiutata da cliente</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                            <div class="light-red visible-mobile wrapper-icon-left">
+                                <span class="icon icon-close" title="icon-close" ></span>
+                            </div>
+                            <div>
+                                <span class="text transform-uppercase">Rifiutata da cliente</span>
+                            </div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -390,7 +398,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -401,8 +409,11 @@
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
                        <a class="linker">
-                            <span class="text transform-uppercase">Firmata parzialmente</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                            <div><span class="text transform-uppercase">Firmata parzialmente</span></div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -578,12 +589,15 @@
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
-                        <div class="green visible-mobile wrapper-icon-left">
-                            <span class="icon icon-check-ok_table"></span>
-                        </div>
                        <a class="linker">
-                            <span class="text transform-uppercase">Sottoscritta</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip"  data-title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                            <div class="green visible-mobile wrapper-icon-left">
+                                <span class="icon icon-check-ok_table"></span>
+                            </div>
+                            <div><span class="text transform-uppercase">Sottoscritta</span></div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -625,7 +639,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
                     </div>
                 </div>
 
@@ -635,15 +649,20 @@
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                        <a class="linker">
-                            <span class="text transform-uppercase">Nuova</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                            <span class="sub-text">In attesa di cointestatario</span>
-                        </a>
-                    </div>
-                </div>
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon right-icon with-tooltip">
+                            <a class="linker">
+                                <div>
+                                    <span class="text transform-uppercase">Nuova</span>
+                                    <span class="sub-text">In attesa di cointestatario</span>
+                                </div>
+                                <div>
+                                    <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                    <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                                </div>
+                            </a>
+                        </div>    
+                 </div>
 
                 <div class="col-sm-2 col-xs-12">
                     <div class="btn-align-center visible-desktop">
@@ -768,7 +787,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -778,12 +797,15 @@
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
-                        <div class="light-red visible-mobile wrapper-icon-left">
-                            <span class="icon icon-close" title="icon-close" ></span>
-                        </div>
                         <a class="linker">
-                            <span class="text transform-uppercase">Revocata dal gestore</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                            <div class="light-red visible-mobile wrapper-icon-left">
+                                <span class="icon icon-close" title="icon-close" ></span>
+                            </div>
+                            <div><span class="text transform-uppercase">Revocata dal gestore</span></div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -940,7 +962,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assic_assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -950,13 +972,19 @@
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
                     <div class="text-with-icon right-icon with-tooltip">
-                        <div class="visible-mobile wrapper-icon-left">
-                            <span class="glyph glyph-ico_clock_validate" title=""></span>
-                        </div>
                         <a class="linker">
-                            <span class="text transform-uppercase">Firmata parzialmente</span>
-                            <i class="icon icon-ico_help_filled_tab" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                            <span class="sub-text">In attesa di cointestatario</span>
+                            <div class="visible-mobile wrapper-icon-left">
+                                <span class="glyph glyph-ico_clock_validate" title=""></span>
+                            </div>
+                            <div>
+                                <span class="text transform-uppercase">Firmata parzialmente</span>
+                                <span class="sub-text">In attesa di cointestatario</span>
+                            </div>
+                            <div>
+                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
+                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
+                            </div>
+                            
                         </a>
                     </div>
                 </div>
@@ -1174,6 +1202,39 @@
                 </div>
               </div>
           </div>
+      </div>
+     <div class="modal-footer">
+       	<div class="align-right">
+			  <input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
+		  </div>
+		</div>
+    </div>
+	</div>
+</div>
+
+<!--modale info -->
+<div id="modaleInfo" class="modal fade modal-footer-fixed" role="dialog">
+  <div class="modal-dialog">
+	<div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h1 class="modal-title">Informazione sugli stati</h1>
+      </div>
+      <div class="modal-body">
+          <div class="text-info">
+                <h4>Nuova</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+          </div>
+          <div class="text-info">
+                <h4>Lorem ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+          </div>
+          <div class="text-info">
+                <h4>Lorem ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+          </div>
+          
       </div>
      <div class="modal-footer">
        	<div class="align-right">
