@@ -2378,6 +2378,8 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
      display: -ms-flexbox;
      justify-content: center;
      flex-direction: column;
+     margin-bottom: 25px;
+     clear:both;
  }
 .esito-inline .esito-text {
     font-size: 16px;
@@ -9360,7 +9362,7 @@ p.note.to-right{
     }
     
     .accept-wrapper{
-        margin-top:30px;
+        margin-top:5px;
     }
     .accord-content .group-element .text {
         text-align: center;

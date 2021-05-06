@@ -41,13 +41,12 @@
 </div>
 
 <!-- Box wrapper pdf -->
-<section>
+<section class="hidden-xs">
    <div id="pdfCont" class="pdf-container loading"></div>
     <script>
         // Inizializzazione del PDF
         var pdfdoc = $("#pdfCont").pdf({url:"/template/statici/documento_prova.pdf"});
     </script>
-    
 </section>
 <!-- Fine box pdf -->
 <form id="firmeForm">
@@ -69,8 +68,11 @@
         </div>
         <div class="col-sm-2">
             <!-- Icon with text -->
-            <div class="list-icon-wrapper to-right">
+            <div class="list-icon-wrapper to-right hidden-xs">
                 <div class="text-with-icon"><a href="#"><span class="image pdf"></span>PDF</a></div>
+            </div>
+            <div class="list-icon-wrapper visible-xs">
+                <div class="text-with-icon"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image pdf"></span>NOME_DOCUMENTO_1_DA_VISIONARE</a></div>
             </div>
         </div>
     </div>
