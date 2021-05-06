@@ -43,7 +43,7 @@ header.librerie .librerie-switch {
     position: absolute;
     top: 0;
     right: 0;
-    width: 95px;
+    width: 145px;
     margin-top: 10px;
     text-align: right;
 }
@@ -52,6 +52,7 @@ header.librerie .librerie-switch a {
     text-decoration: none;
     font-size: 16px;
     background: #fff;
+    color:#999;
     font-weight: bold;
     border-radius: 50%;
     height: 40px;
@@ -61,9 +62,9 @@ header.librerie .librerie-switch a {
     text-align: center;
     overflow: hidden;
     line-height: 38px;
-    border: solid 2px #ddd;
+    border: solid 2px #999;
 }
-
+/*
 header.librerie .librerie-switch a.webank {
     border: solid 2px #8ab01b;
     color: #8ab01b;
@@ -73,6 +74,12 @@ header.librerie .librerie-switch a.youweb {
     border: solid 2px #2A3D63;
     color: #2A3D63;
 }
+
+header.librerie .librerie-switch a.aletti {
+    border: solid 2px #002345;
+    color:#002345;
+}
+*/
 
 header.librerie a.back {
     display: inline-block;
@@ -307,6 +314,7 @@ body.webank #main.librerie h2 {
 body.webank .librerie-switch a.webank {
     background: #8ab01b;
     color: #fff;
+    border-color: #8ab10b;
 }
 
 body.webank #main.librerie ul li a {
@@ -330,6 +338,7 @@ body.youweb #main.librerie h2 {
 body.youweb .librerie-switch a.youweb {
     background: #2A3D63;
     color: #fff;
+    border-color: #2A3D63;
 }
 
 body.youweb header a.back {
@@ -557,3 +566,23 @@ ul.oldnew .links a {border-radius:5px; float:left; width:45px !important;backgro
 .libyou_style {background-color: #0E977F;float: left;width: 60px; text-align: center;padding-top: 10px;padding-bottom:10px}
 .libyou_style .tool-btn-text{display: none;}
 .libyou_style .icon-stato {margin-right:0}
+
+/* Skin librerie AL */
+body.aletti .librerie-switch a.aletti {
+
+    color:#fff;
+    background-color: #002345;
+    border-color: #002345;
+}
+
+body.aletti a, 
+body.aletti .template.template-root li.has-opener a.opener>span, body.aletti .full-opener span {color:#002345}
+
+body.aletti header.librerie,
+body.aletti .template.template-root li.has-opener a.opener, 
+body.aletti .full-opener
+{background: #d5bd9b}
+
+body.aletti #main.librerie h2 {
+    border-bottom: solid 4px #d5bd9b;
+}

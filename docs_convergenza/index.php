@@ -30,7 +30,7 @@
                         <ul>
                             <li><a href="./template/strutt_<?php print $site ?>.php">Pagina interna</a></li>
                             <?php if ($site == "youweb" || $site == "aletti") { ?>
-                                <li><a href="./template/strutt_youweb.php?tpl=tpl_priv_dashboard.php">Home privata</a></li>
+                                <li><a href="./template/strutt_<?php print $site ?>.php?tpl=tpl_priv_dashboard.php">Home privata</a></li>
                                 <li><a href="./template/strutt_<?php print $site ?>_pub.php">Pagina pubblica</a></li>
                             <?php  }?>
 							<?php if ($site == "webank") { ?>

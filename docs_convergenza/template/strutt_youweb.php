@@ -28,7 +28,7 @@ if (!isset($pag)) {
 	*/
 	?>
     <!-- / HEAD -->
-    <body>
+    <body <?php if(!empty($decl) && $decl=="aletti") { ?>class="aletti"<?php }?>>
 	    <div id="outerwrapper">
             <!-- HEADER -->
 			<?php virtual("/include/struttura_youweb/header.php") ?>

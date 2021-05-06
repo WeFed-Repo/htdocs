@@ -43,5 +43,10 @@
     <?php if ($app_skin_aletti == "true" ) { ?>
         <link rel="stylesheet" media="all" href="/HT/fe/css/app_skin_aletti.css"/>
     <?php } ?>
+    <?php if ((!empty($decl)) && $decl=="aletti") { ?>
+        <!-- Skin Aletti -->
+        <link rel="stylesheet" media="all" href="/HT/fe/css/aletti_skin.css"/>
+        <!-- / Skin Aletti -->
+    <?php } ?>
 <?php } ?>
 <!-- / CSS -->
