@@ -7,7 +7,9 @@ function getId($name) {
     return $id;
 }
 
-$jsonstr = file_get_contents("include/menu_".$site.".json");
+$menusite = ($site === "aletti")? "youweb" : $site;
+
+$jsonstr = file_get_contents("include/menu_".$menusite.".json");
 $menu = json_decode($jsonstr,true);
 
 ?>

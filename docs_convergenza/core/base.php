@@ -2,7 +2,7 @@
 /* Funzioni e variabili comuni */
 
 $site = $_GET["site"];
-if ($site != "webank" && $site != "youweb") {
+if ($site != "webank" && $site != "youweb"  && $site != "aletti") {
 	$site = "webank";
 }
 $html = $_GET["html"];

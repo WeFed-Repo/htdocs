@@ -29,7 +29,7 @@
                         <h2>Strutture</h2>
                         <ul>
                             <li><a href="./template/strutt_<?php print $site ?>.php">Pagina interna</a></li>
-                            <?php if ($site == "youweb") { ?>
+                            <?php if ($site == "youweb" || $site == "aletti") { ?>
                                 <li><a href="./template/strutt_youweb.php?tpl=tpl_priv_dashboard.php">Home privata</a></li>
                                 <li><a href="./template/strutt_<?php print $site ?>_pub.php">Pagina pubblica</a></li>
                             <?php  }?>
@@ -105,8 +105,7 @@
                     </div>   
                     <div class="col-xs-12 col-md-4">
                         <?php include("index_template.php"); ?>
-                        <?php ($site === "youweb") && include("index_template_pubblica.php"); ?>
-                        
+                        <?php ($site === "youweb") && include("index_template_pubblica.php"); ?>                        
                     </div>
                 </div>
             </div>

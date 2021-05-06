@@ -10,10 +10,19 @@
 			$url = $url."&site=webank";
 		}
 	}
-	$url_webank = str_replace("site=youweb","site=webank",$url);
-	$url_youweb = str_replace("site=webank","site=youweb",$url); 
+	$sitesdic = ["site=webank","site=youweb","site=aletti"];
+
+	$url_webank = str_replace($sitesdic,"site=webank",$url);
+	
+	$url_youweb = str_replace($sitesdic,"site=youweb",$url); 
+	
+	$url_aletti = str_replace($sitesdic,"site=aletti",$url); 
+
 ?>
 <div class="librerie-switch">
 	<a href="<?php print $url_webank; ?>" class="webank">WB</a>
 	<a href="<?php print $url_youweb; ?>" class="youweb">YW</a>
+	<?php if ($_SERVER["HTTP_HOST"] == "convergenza.wefed.local")  { ?>
+		<a href="<?php print $url_aletti; ?>" class="aletti">AL</a>
+	<?php } ?>
 </div>

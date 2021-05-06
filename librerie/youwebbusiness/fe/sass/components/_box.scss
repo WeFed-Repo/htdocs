@@ -171,6 +171,44 @@
  }
 }
 
+/* BOX PUSH */
+.box-push {
+  background-color: $white;
+  &-left {
+    padding: 1.5rem;
+    img {
+      max-width: 134px;
+    }
+  }
+  &-right {
+    padding: 1rem 1rem 1rem 0; 
+    h4 {
+      text-transform: uppercase;
+      margin-bottom:16px;
+    }
+  }
+  p {
+    font-size: 14px;
+  }
+  .col-md {
+    padding: 16px;
+  }
+  .col-md {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {  
+  .box-push {
+    &-right {
+      padding: 1rem; 
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+
 /* BOX OUTPUT*/
 .box-output {
   .row {min-height:0}
