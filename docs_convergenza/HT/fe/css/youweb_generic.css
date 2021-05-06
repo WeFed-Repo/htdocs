@@ -9219,6 +9219,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         padding-bottom:10px;
         padding-top:10px;
     }
+    /* fit di contenuto mobile */
+    .text-with-icon.with-tooltip {
+        width:fit-content;
+    }
      
 }
 @media only screen and (max-width: 400px) {
@@ -9264,6 +9268,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 .pract-toggle .text-with-icon .image + .text {
     line-height: 22px;
+}
+.pract-toggle .text-with-icon .icon + span:not(.icon){
+    display: inline-block;
+    padding-left:24px;
+}
+.pract-toggle .text-with-icon a.no-underline {
+    padding-left: 0;
 }
 /* ## Elementi FIRMA ## */
 
