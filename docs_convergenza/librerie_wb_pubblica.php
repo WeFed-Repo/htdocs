@@ -22,7 +22,7 @@
 				<ul>
 					<li>
 						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
-						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01_mono_prod.php"><strong>Produzione Step 01</strong> Monointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01_mono_prod.php&amp;subnav=aol&amp;promo=aol&amp;"><strong>Produzione Step 01</strong> Monointestato</a>
 				     </li>
 					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
 				</ul>
