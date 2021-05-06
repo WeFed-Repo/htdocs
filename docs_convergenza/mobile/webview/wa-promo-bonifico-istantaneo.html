@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App Webank</title>
+    <meta name="description" content="App Webank">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Stili della pagina -->
+    <style>
+        /* Font face */
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+                url('./font/montserrat-light-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibold-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /*  */
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'bankFont', Arial, Serif;
+            font-size: 15px;
+            height: 100%;
+            color: #1f2021;
+        }
+
+        /* Back  - Out safe area 30px top su iOs (per notch) */
+        #back {
+            z-index: 1;
+            position: fixed;
+            transition: background-color 0.3s;
+            background: transparent url("./img/btn_back.png") no-repeat center center;
+            background-size: 15px 15px;
+            width: 35px;
+            height: 35px;
+            top: 40px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none !important;
+            margin-left: 15px;
+        }
+
+        #back.fixed {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+        }
+
+        #main {
+            margin: 0 auto;
+            height: 100%;
+            max-width: 640px;
+            background: #fff;
+        }
+
+        #contenuto .hero {
+            display: inline-block;
+            height: 320px;
+            width: 100%;
+            background: #eee url(./img/visual_web_view_bonifico_istantaneo_WB.jpg) no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero .hero-text {
+            position: absolute;
+            bottom: 0;
+            padding: 0 25px 15px;
+        }
+
+        #contenuto .hero h1 {
+            font-size: 24px;
+            line-height: 29px
+        }
+
+        #main .pagecont {
+            padding: 15px 25px 25px
+        }
+
+        /* Contenuti */
+        .boxedcont {
+            padding: 15px 15px 5px;
+            background: #f4f5f4;
+            border-radius: 10px;
+            margin: 0 -10px 15px;
+        }
+
+        /* Generici */
+        a {
+            color: #94c11f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+		
+		h1 {
+			text-transform: uppercase;
+        }
+		
+        h2 {
+            font-size: 18px;
+            line-height: 22px;
+            color: #1f2021;
+            margin: 0 0 15px;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 19px;
+            color: #1f2021;
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            clear: both;
+            line-height: 20px;
+        }
+
+        p.note {color:#1f2021;font-size:13px; line-height:18px;}
+
+        /* Bullet reset */
+        ol,
+        ul,
+        ol li,
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none
+        }
+
+        /* Bullet rivisti */
+        ol {
+            counter-reset: ol;
+        }
+
+        ol li,
+        ul li {
+            position: relative;
+            padding: 0 0 10px 25px;
+            line-height: 20px
+        }
+
+        /* Bullet "normali" */
+        ul li::before {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #1f2021;
+            border-radius: 4px;
+            top: 8px;
+            left: 4px;
+            content: "";
+            position: absolute;
+        }
+
+        /* Bullet "ordinali" */
+        ol li::before {
+            display: block;
+            width: 17px;
+            height: 17px;
+            color:#94c11f;
+            border: solid 1px #94c11f;
+            font-size: 13px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 10px;
+            top: 0px;
+            left: 0;
+            counter-increment: ol;
+            content: counter(ol);
+            position: absolute;
+        }
+
+        /* Accordion */
+        .accordion .accordion-content {
+            display: none;
+        }
+
+        .accordion .accordion-abstract {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .accordion.opened .accordion-content {
+            display: inline-block;
+            width: 100%;
+            overflow: visible;
+        }
+
+        .accordion.opened .accordion-abstract {
+            display: none;
+        }
+
+        .accordion .accordion-toggle {
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom:10px;
+        }
+
+        .accordion .accordion-toggle span {
+            line-height:16px;
+            font-size: 13px;
+            position: relative;
+            padding-right: 20px;
+            display: inline-block;
+            color: #94c11f;
+            position: relative;
+        }
+
+        .accordion .accordion-toggle span::after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: transparent url("./img/webank_vedi_piu.png") no-repeat center center;
+            border-radius: 8px;
+            background-size: 16px 16px;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            display: block;
+        }
+
+        .accordion .accordion-toggle span.opened {
+            display: none;
+        }
+
+        .accordion .accordion-toggle span.opened::after {
+            background-image: url("./img/webank_vedi_meno.png");
+        }
+
+        .accordion.opened .accordion-toggle span.closed {
+            display: none;
+        }
+
+        .accordion.opened .accordion-toggle span.opened {
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height:0;
+            overflow:visible;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        footer .cta {
+            display: inline-block;
+            margin: 0 0 15px;
+            background: #1f2021;
+            line-height: 15px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            width: 240px;
+            position:absolute;
+            margin-left:-135px;
+            margin-top:-65px;
+            padding: 15px;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        /* Declinazione dark */
+        .dark #contenuto .hero h1{
+            color:#fff;
+        }
+
+        .dark #back {
+            background-image: url(./img/btn_back_white.png)
+        }
+        .dark #back.fixed {
+            background-color:#212121; 
+            opacity:0.8;
+        }
+
+        .wrapper-cta {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-around;
+
+            margin-bottom: 30px;
+
+            margin-top: 30px;
+
+            }
+
+        .wrapper-cta .cta {
+
+            display: inline-block;
+
+            margin: 0 auto;
+
+            background: #1f2021;;
+
+            line-height: 15px;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            padding: 15px 30px;
+
+            color: #fff;
+
+            border-radius: 8px;
+
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        /* Piccolo framework */
+        function getParent(element, selector) {
+            if (!element) { return element };
+            element.matches(selector) || (element = (element.nodeName.toLowerCase() === 'html' ? false : getParent(element.parentNode, selector)));
+            return element;
+        }
+
+        /* Inizializzazioni automazioni 
+        window.addEventListener('load', function (event) {
+            // Inizializzazione accordion (cambia classe al parent)
+            var acctoggle = document.querySelectorAll(".accordion-toggle"), x;
+            for (x = 0; x < acctoggle.length; x++) {
+                // Inizializza uno per uno tutti gli accordion
+                acctoggle[x].addEventListener("click", function () {
+                    var acc = getParent(this, ".accordion");
+                    if (acc.className.indexOf("opened") >= 0) {
+                        // Aperto - lo chiude
+                        acc.classList.remove("opened");
+                    }
+                    else {
+                        // Chiuso - lo apre
+                        acc.classList.add("opened");
+                    }
+                });
+            }
+        });*/
+
+        window.addEventListener('scroll', function (event) {
+            // Inizializzazione freccetta a scorrimento
+            var btnback = document.getElementById("back");
+            if (window.scrollY >= 1) {
+                // Cambia classe alla freccetta
+                btnback.classList.add("fixed");
+            }
+            else {
+                btnback.classList.remove("fixed");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="main" class="dark">
+        <!-- Pulsante back -->
+        <a id="back" href="native://dismiss">
+        </a>
+        <div id="contenuto">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1><strong>Prova il bonifico istantaneo</strong> <br>e invii fino a 15.000 in 10 secondi!</h1>
+                </div>
+            </div>
+            <div class="pagecont">
+				<!-- Box solo testo -->
+                <div class="boxedcont">
+					<p>
+                        Con il <strong>bonifico istantaneo</strong> accorci le distanze e raggiungi il tuo obiettivo in tempo reale!
+                    </p>
+                </div>
+                <!-- Fine box solo testo -->
+			
+               <!-- Box solo testo -->
+                <div class="boxedcont">
+                    <p>
+                        Puoi trasferire denaro <strong>fino a 15.000 Euro in area SEPA (Area Unica dei Pagamenti in Euro)</strong> in modo semplice e veloce: 
+                        verso i <strong>conti correnti aderenti all’iniziativa l’accredito è istantaneo.</strong> In alternativa, il bonifico viene inviato 
+                        come urgente e accreditato in giornata.
+                    </p>
+                </div>
+                <!-- Fine Box solo testo -->
+
+                <!-- Box solo testo -->
+                <div class="boxedcont">
+					<p>
+                        Il servizio è attivo 24/24 ed è sempre disponibile dall’area privata di Webank e dall’app Webank!
+                    </p>
+                </div>
+                <!-- Fine Box solo testo -->
+                
+                <!-- Inizio Bottone con CTA -->
+                
+                <div class="wrapper-cta">
+                    <a class="cta" href="#">PROVA IL BONIFICO ISTANTANEO</a>
+                </div>
+
+                <!-- Fine Bottone con CTA -->
+                
+                <!-- Non boxati -->
+                <p class="note">
+					Messaggio pubblicitario con finalit&agrave; promozionali. 
+                    Per le condizioni economiche e contrattuali si rimanda ai Fogli Informativi disponibili nella 
+                    sezione Trasparenza del sito webank.it
+				</p>
+                <!-- Fine non boxati -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
