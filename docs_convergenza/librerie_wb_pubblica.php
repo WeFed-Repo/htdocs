@@ -1,7 +1,7 @@
 <style type="text/css">
 	#librerie ul.albero {margin:0;padding:0;}
 	#librerie ul.albero li {padding:2px 0;border:0; float:left}
-	#librerie ul.albero li a {border:0;padding:0;display:inline;}
+	#librerie ul.albero li a {border:0;padding:0;display:inline;} 
 	#librerie ul.albero ul {padding:2px 0 0 20px;margin:0;}
 	#librerie ul.albero ul li {list-style-type:disc;}
 	#librerie ul.albero span {font-weight:bold}
@@ -14,10 +14,16 @@
 <ul class="albero">
 	<li><span>AOL</span>	
 		<ul>
-			<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step00.php&amp;subnav=aol&amp;promo=aol"><strong>Step 0</strong> - APERTURA CONTO</a></li>
+			<li>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step00.php&amp;subnav=aol&amp;promo=aol"><strong>Step 0</strong> - APERTURA CONTO</a>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step00_prod.php&amp;subnav=aol&amp;promo=aol"><strong>Produzione Step 0</strong> - APERTURA CONTO</a>
+			</li>
 			<li><span><strong>Step 1</strong> - DATI PERSONALI</span>
 				<ul>
-					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a></li>
+					<li>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01_mono_prod.php"><strong>Produzione Step 01</strong> Monointestato</a>
+				     </li>
 					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
 				</ul>
 			</li>
