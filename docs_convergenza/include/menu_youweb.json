@@ -651,18 +651,15 @@
 						"voices" : [
 							{
 								"nome": "Firma",
-								"tpl": "tpl_documenti_firma.php",
-								"inlavorazione": true
+								"tpl": "tpl_documenti_firma.php"
 							},
 							{
 								"nome": "Conferma e riepilogo",
-								"tpl": "tpl_documenti_conferma.php",
-								"inlavorazione": true
+								"tpl": "tpl_documenti_conferma.php"
 							},
 							{
 								"nome": "Stati e Casistiche",
-								"tpl": "tpl_documenti_stati_e_casistiche.php",
-								"inlavorazione": true
+								"tpl": "tpl_documenti_stati_e_casistiche.php"
 							},
 							{
 								"nome": "Archivio",

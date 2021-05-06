@@ -35,13 +35,9 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
-.icon-assistenza_telefono:before {
-  content: "\ea1a";
-}
 .icon-checkbox_spunta:before {
   content: "\ea19";
 }
-
 .icon-hide:before {
   content: "\ea17";
 }
@@ -431,6 +427,9 @@
 }
 .icon-assic_assistenza_telefono:before {
   content: "\e97d";
+}
+.icon-assistenza_telefono:before {
+  content: "\ea1a";
 }
 .icon-assic_assistenza_tutelalegale:before {
   content: "\e97e";
