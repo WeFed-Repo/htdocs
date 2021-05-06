@@ -54,13 +54,13 @@
                             <li><strong>tutela legale</strong>
                                 <ul class="sub-ul-check">
                                     <li>
-                                        <i class="icon icon-checkbox_spunta" title="icon-checkbox_spunta"></i>
+                                        <i class="icon icon-check-ok_table"></i>
                                         <span>controversie contrattuali relative all'acquisto di beni e servizi</span>
                                     </li>
-                                    <li><i class="icon icon-checkbox_spunta" title="icon-checkbox_spunta"></i>
+                                    <li><i class="icon icon-check-ok_table"></i>
                                         <span>circolazione stradale quando alla guida di veicoli noleggiati con la carta</span>
                                     </li>
-                                    <li><i class="icon icon-checkbox_spunta" title="icon-checkbox_spunta"></i><span>patente sicura</span></li>
+                                    <li><i class="icon icon-check-ok_table"></i><span>patente sicura</span></li>
                                 </ul>
                             </li>
                             <li><strong>furto/scippo/rapina del denaro prelevato presso sportello ATM</strong></li>

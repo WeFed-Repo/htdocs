@@ -18,6 +18,8 @@ let limiteGiorno = (new Date().getDate()) +1
 		<div class="dot"></div>
 	</div>
 </div>
+	<!--nuovo oggetto push -->
+	<?php virtual('/youwebbusiness/layout/oggetti/box/box_push/oggetto.php'); ?>
 
 	<!-- SELETTORE RAPPORTO DI ESEMPIO -->
 	<?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_rapporti/oggetto.php'); ?>
