@@ -54,7 +54,7 @@
 <!-- NEW -->
 <section>
     <div class="row mobile-reverse">
-        <div class="col-sm-11" id="checkDoc">
+        <div class="col-sm-10" id="checkDoc">
             <!-- Confirmation -->
             <div class="accept-wrapper">
                 <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');$('.accept-wrapper').hide();$('.accept-wrapper.accepted').show();"></i>
@@ -67,7 +67,7 @@
                 <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE"</strong></span>
             </div>           	           
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <!-- Icon with text -->
             <div class="list-icon-wrapper to-right">
                 <div class="text-with-icon"><a href="#"><span class="image pdf"></span>PDF</a></div>
