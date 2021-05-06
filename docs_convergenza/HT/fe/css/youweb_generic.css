@@ -8957,7 +8957,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon.with-tooltip .image, .text-with-icon.with-tooltip .glyph, .text-with-icon.with-tooltip .icon {
     position: relative;
 }
-
+/* fit minimo di contenuto */
+.text-with-icon.with-tooltip {
+    width: min-content;
+}
 
 /* Text-with-Icon Element right float*/
 .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
