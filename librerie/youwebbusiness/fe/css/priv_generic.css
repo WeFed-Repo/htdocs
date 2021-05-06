@@ -5569,6 +5569,41 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     margin-right: 0;
   }
 }
+/* BOX PUSH */
+.box-push {
+  background-color: #FFFFFF;
+}
+.box-push-left {
+  padding: 1.5rem;
+}
+.box-push-left img {
+  max-width: 134px;
+}
+.box-push-right {
+  padding: 1rem 1rem 1rem 0;
+}
+.box-push-right h4 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.box-push p {
+  font-size: 14px;
+}
+.box-push .col-md {
+  padding: 16px;
+}
+.box-push .col-md {
+  padding-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .box-push-right {
+    padding: 1rem;
+  }
+  .box-push-right h4 {
+    text-align: center;
+  }
+}
 /* BOX OUTPUT*/
 .box-output {
   padding-bottom: 1rem;
