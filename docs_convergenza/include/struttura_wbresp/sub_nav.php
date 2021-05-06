@@ -7,7 +7,7 @@
         // Identifica lo step "corrente" dal TPL e crea il componente
 		$tpl = isset($tpl)? $tpl : "";
         preg_match_all('!\d+!', $tpl, $matches);
-        $aolstep = (int)implode(tpl, $matches[0]);
+        $aolstep = (int)implode($tpl, $matches[0]);
         // Array con nomi step
         $aolsteps = array("Apertura conto","Dati personali","Verifiche","Personalizza","Identificati","Adempimenti legali","Conferma dati","Informative","Riepilogo");
         ?>
