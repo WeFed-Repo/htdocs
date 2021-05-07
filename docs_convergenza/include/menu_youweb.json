@@ -24,14 +24,16 @@
 	},
 	{
 		"nome": "Carte",
+		"aletti": true,
 		"voices": [
 			{
 				"nome": "Ricariche",
+				"aletti": true,
 				"voices": [
 					{
 						"nome": "Ricarica",
-						"inlavorazione": true,
-						"tpl": "tpl_carte_ricarica_manuale.php"
+						"tpl": "tpl_carte_ricarica_manuale.php",
+						"aletti": true
 					}
 				]
 			},
