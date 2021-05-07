@@ -199,7 +199,9 @@ h3>span {
 .paddingLeftSmall {
     padding-left: 5px;
 }
-
+.paddingBottomSmall {
+    padding-bottom: 5px!important;
+}
 .paddingLeftLarge {
     padding-left: 20px !important
 }
@@ -9152,6 +9154,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .accord-content .group-element .text{
     margin-bottom: 16px;
+    min-width: 80px;
+    text-align: center;
 }
 .pract-toggle-head .btn {
     min-width: 127px;
@@ -9345,7 +9349,9 @@ p.note.to-right{
 .no-mobile-label{
     display:auto;
 }
-
+a.no-underline {
+    text-decoration:none!important
+}
 @media only screen and (max-width: 767px) {
     .documentTitleContainer, .no-mobile-label{
         display:none;
@@ -9380,6 +9386,7 @@ p.note.to-right{
     }
     .accord-content .group-element .text {
         text-align: center;
+        min-width: 0;
     }
     .accord-content .group-wrapper.with-spunta {
         margin-top:-10px;

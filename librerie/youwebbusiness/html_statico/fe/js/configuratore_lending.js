@@ -350,21 +350,33 @@ var startLending = function (params) {
         calcola: $("<button>").addClass("btn btn-primary disabled w-100").html("calcola").click(function () {
             var btn = $(this);
             if (!btn.hasClass("disabled")) {
-                btn.addClass("disabled");
-                // Blocco dell'interfaccia
-                sml.wrap.addClass("loading");
 
-                // Dati da inviare all'handler esterno
-                sml.request = {
-                    "Prodotto": sml.prodotto,
-                    "ClasseProdottoElise": sml.currentprod.Classe,
-                    "CodiceProdottoElise": sml.currentprod.Codice,
-                    "Importo": sml.importo,
-                    "PeriodicitaRata": sml.periodicita,
-                    "DurataFinanziamento": sml.durata,
-                    "DurataPreAmmortamento": sml.durpreamm
+                // Verifica la coerenza dei dati richiesti
+                var hasError = false;
+                if ((sml.durata % parseInt(sml.periodicita)) !== 0) {
+                    hasError = true;
+                    setAlert({ title: "Attenzione!", body: "<p><strong>La durata richiesta non risulta compatibile con il tipo di periodicit&agrave; selezionato</strong>.<br>Selezionare una durata o una periodicit&agrave; differente.</p>" }).modal();
                 }
-                params.handlerCalcola(sml.request, sml.getLendingData);
+                
+                if (!hasError) {
+
+                    btn.addClass("disabled");
+
+                    // Blocco dell'interfaccia
+                    sml.wrap.addClass("loading");
+
+                    // Dati da inviare all'handler esterno
+                    sml.request = {
+                        "Prodotto": sml.prodotto,
+                        "ClasseProdottoElise": sml.currentprod.Classe,
+                        "CodiceProdottoElise": sml.currentprod.Codice,
+                        "Importo": sml.importo,
+                        "PeriodicitaRata": sml.periodicita,
+                        "DurataFinanziamento": sml.durata,
+                        "DurataPreAmmortamento": sml.durpreamm
+                    }
+                    params.handlerCalcola(sml.request, sml.getLendingData);
+                }
             }
         }),
 
@@ -386,7 +398,7 @@ var startLending = function (params) {
                 { "id": "spese", "label": "Spese", "field": "SpeseTotali", "modal": true },
                 { "id": "taeg", "label": "Taeg", "field": "Isc", "modal": false },
                 { "id": "tan", "label": "Tan", "field": "TassoAmm", "modal": false },
-                { "id": "rate", "label": "Rate mensili", "field": "NumeroRate", "modal": false },
+                { "id": "rate", "label": "Rate", "field": "NumeroRate", "modal": false },
                 { "id": "rata", "label": "La tua rata", "field": "ImportoPrimaRataAmm", "modal": true }
             ], function (div) {
                 return $("<div>").addClass("result-box " + div.id).append(
