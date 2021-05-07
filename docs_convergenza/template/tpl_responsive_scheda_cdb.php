@@ -14,7 +14,7 @@
     <section id="cartaVerde">
         <div class="box-generico">
             <div class="row">
-                <div class="col-sm-4"><br><img src="/common/fe/img/img_carta_db.jpg" alt="Carta verde american express"></div>
+                <div class="col-sm-4"><br><img src="/common/fe/img/img_carta_db.jpg" alt="carta Debit Business"></div>
                 <div class="col-sm-8">
                 <h3><br>CARTA DEBIT BUSINESS</h3>
                     <p><strong>Debit Business</strong> &egrave; la carta di debito internazionale dedicata a <strong>professionisti, artigiani e piccole e medie imprese</strong>, semplice da utilizzare e all'avanguardia nei servizi. &egrave; un prodotto che permette di prelevare e fare acquisti in tutto il mondo in completa sicurezza, anche <strong>online</strong>, in modalit&agrave; <strong>contactless</strong> e in forma <strong>digitalizzata</strong> su smartphone all'interno dei principali wallet digitali.</p>

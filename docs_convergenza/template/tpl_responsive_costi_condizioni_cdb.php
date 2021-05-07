@@ -17,7 +17,7 @@
                     <thead>
                         <tr>
                             <th  width="75%" colspan="2"></th>
-                            <th  width="25%"><span>CARTA DEBIT BUSINESS</span><img src="/common/fe/img/carta_small_db.gif" alt="carta Debit Business"></th>
+                            <th  width="25%"><span>CARTA DEBIT BUSINESS</span><img src="/common/fe/img/carta_small_db.jpg" alt="carta Debit Business"></th>
                         </tr>
                     </thead>
                     <tbody>
