@@ -2,6 +2,7 @@
 <?php
 /* Parametri specifici librerie */
 $tipo = $_GET["tipo"];
+if ($site == "aletti") $decl = "aletti";
 
 /* Parametri generati per la pagina */
 ?>

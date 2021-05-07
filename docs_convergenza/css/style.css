@@ -574,7 +574,7 @@ body.aletti .librerie-switch a.aletti {
     border-color: #002345;
 }
 
-body.aletti a, 
+body.aletti .librerie a, 
 body.aletti .template.template-root li.has-opener a.opener>span, body.aletti .full-opener span {color:#002345}
 
 body.aletti header.librerie,
