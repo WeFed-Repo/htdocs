@@ -586,3 +586,5 @@ body.aletti .full-opener
 body.aletti #main.librerie h2 {
     border-bottom: solid 4px #d5bd9b;
 }
+
+body.aletti .aletti-hidden {display:none !important}

@@ -522,9 +522,9 @@ var fesIcoOpeOverlay = function (){
 		"fondosicav":opelink.attr("fondosicav")
 	};
 	if (opelink.attr("idalert")) parameters["idalert"] = opelink.attr("idalert");
+	if (opelink.attr("deposito")) parameters["deposito"] = opelink.attr("deposito");
 	//quando arriva da Investimenti - Situazione PAC
-	if (opelink.attr("radioQuoteSitPac")) 
-		parameters["radioQuoteSitPac"] = opelink.attr("radioQuoteSitPac");
+	if (opelink.attr("radioQuoteSitPac")) parameters["radioQuoteSitPac"] = opelink.attr("radioQuoteSitPac");
 
 	icoFrom = "";
 	if($(".fondialert").length>0) icoFrom = "alert";
