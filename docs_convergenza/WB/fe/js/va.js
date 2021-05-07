@@ -221,7 +221,8 @@ function vaAsking(domanda, history)
 		if(vaExtLoaded) {
 
 			par.append("cf", Math.random());
-			par.append("history", "history");
+			// par.append("history", "history"); --- Cambio su richiesta sviluppo
+			par.append("historyFromRedirect", "history");
 			par.append("doTts", vTTS);
 
 		} else {
