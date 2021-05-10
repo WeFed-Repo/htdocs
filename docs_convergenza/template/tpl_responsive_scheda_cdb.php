@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon-ico_protezione_antifrode" title="coperture assicurative incluse"></i>
+                    <i class="icon icon-2x flLeft icon-ico_protezione" title="coperture assicurative incluse"></i>
                     <div class="leftTesto">
                         <strong>COPERTURE ASSICURATIVE INCLUSE</strong>
                         <p>L'utilizzo della carta ti permette di fruire delle seguenti coperture assicurative incluse:</p>
@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon-operatore" title="Servizi di emergenza"></i>
+                    <i class="icon icon-2x flLeft icon-ico_emergenza" title="Servizi di emergenza"></i>
                     <div class="leftTesto">
                         <strong>SERVIZI DI EMERGENZA</strong>
                         <p>In caso di <strong>furto o smarrimento della carta all'estero</strong>, la carta Debit Business beneficia dei servizi di emergenza garantiti dal circuito internazionale di appartenenza (Mastercard o Visa).
@@ -87,7 +87,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon-movimenti_42" title="Elenco movimenti"></i>
+                    <i class="icon icon-2x flLeft icon-ico_movimenti" title="Elenco movimenti"></i>
                     <div class="leftTesto">
                         <strong>VISUALIZZAZIONE DELL’ELENCO MOVIMENTI DI CONTO CORRENTE</strong>
                         <p>Inserendo la carta <strong>presso gli ATM della Banca</strong>, &egrave; possibile visualizzare l'<strong>elenco movimenti</strong> dei conti correnti abilitati. L’abilitazione della carta a questa funzione deve essere richiesta in Filiale.</p>
@@ -99,7 +99,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testoIcona ico-fp">
-                    <i class="icon icon-2x flLeft icon-cash-cheque" title="Versamento di contanti e assegni"></i>
+                    <i class="icon icon-2x flLeft icon-ico_cash" title="Versamento di contanti e assegni"></i>
                     <div class="leftTesto">
                         <strong>VERSAMENTO DI CONTANTI E DI ASSEGNI</strong>
                         <p>Presso gli <strong>ATM evoluti della Banca.</strong></p>

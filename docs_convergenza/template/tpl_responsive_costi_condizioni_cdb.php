@@ -91,7 +91,7 @@
     <section>
         <div class="box-inline">
             <img src="/common/fe/img/nexi_pay.png"  class="icon" />
-            <a href="" class="box-inline-text"><strong>App Nexi Pay</strong></a>
+            <a href="" class="box-inline-text p-medium"><strong>App Nexi Pay</strong></a>
         </div>
     </section>
     <!-- nuovo oggetto contatti -->

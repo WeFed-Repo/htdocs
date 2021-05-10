@@ -35,6 +35,21 @@
 .icon {display:inline-block; width:20px;height:20px;} 
 
 /* ELENCO ICONE */
+.icon-ico_alert_sms:before {
+  content: "\ea1b";
+}
+.icon-ico_cash:before {
+  content: "\ea1c";
+}
+.icon-ico_emergenza:before {
+  content: "\ea1d";
+}
+.icon-ico_movimenti:before {
+  content: "\ea1e";
+}
+.icon-ico_protezione:before {
+  content: "\ea1f";
+}
 .icon-checkbox_spunta:before {
   content: "\ea19";
 }

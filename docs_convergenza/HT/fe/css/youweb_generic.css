@@ -8798,7 +8798,7 @@ p.large a {color:#0E977F;text-decoration: underline;}
 
 /* tabella costi carta American express*/
 table.table-confronta-costi thead th {text-align:center;padding-bottom:5px}
-table.table-confronta-costi thead th img { max-width: 40%;} 
+table.table-confronta-costi thead th img { max-width: 40%; min-width: 80px;} 
 table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .table-confronta-costi .right {text-align: right;}
 
@@ -9562,20 +9562,55 @@ a.flex-wrapper .btnLink {
     display: -ms-flexbox;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 10px;
 }
-.box-inline img.icon, .box-inline .icon {
+.box-inline img.icon, .box-inline .icon, .box-inline .status-point {
     position: absolute;
     width: auto;
     height: auto;
 }
-.box-inline-text {
+.box-inline-text.p-medium {
     padding:0 0  0 47px;
+}
+.box-inline-text.p-small {
+    padding:0 0  0 30px;
 }
 a.box-inline-text {
    color:#0e977f;
    text-decoration: underline;
 }
-/* elemento contatti*/
+.box-inline .status-point {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.to-act .status-point {
+    background-color: #06987e;
+}
+.to-act.box-inline span {
+    color:#06987e;
+    font-weight: bold;
+}
+
+.act .status-point {
+    background-color: #89b10b;
+}
+.act.box-inline span {
+    color:#89b10b;
+    font-weight: bold;
+}
+.blc .status-point {
+    background-color: #f07f07;
+}
+.blc.box-inline span {
+    color:#f07f07;
+    font-weight: bold;
+}
+.to-act.box-inline p, .act.box-inline p, .blc.box-inline p {
+    text-transform: uppercase;
+}
+/* elemento contatti*/ 
 .box-contatti h4 {
     font-weight: bold;
     margin:0 0 5px;
