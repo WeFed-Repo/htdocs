@@ -34,84 +34,137 @@
 
 <!-- Blocco filtri -->
 <script>
-/* Esempio */
+    $(function(){
+        $(".mobile-switchable-toggler").click(function(){
+            var btn = $(this);
+            btn.parents(".mobile-switchable").toggleClass("opened")
+        })
+    })
 </script>
-<div class="formWrapper">
-    <div class="form-group">
-        <div class="row">
-            <div class="form-field-input col-sm-3">
-                <label class="control-label">Stato</label>
-                <select class="form-control">
-                    <option selected>Tutti</option>
-                    <option>Lorem ipsum</option>
-                    <option>Dolor sit</option>
-                    <option>Amet consectetur</option>
-                </select>
-            </div>
-            <div class="form-field-input col-sm-3">
-                <label class="control-label">Categoria</label>
-                <select class="form-control">
-                    <option selected>Tutte</option>
-                    <option>Lorem ipsum</option>
-                    <option>Dolor sit</option>
-                    <option>Amet consectetur</option>
-                </select>
-            </div>
-            <div class="form-field-input col-sm-3">
-                <label class="control-label">Avviata da</label>
-                <select class="form-control">
-                    <option selected>Tutti</option>
-                    <option>Lorem ipsum</option>
-                    <option>Dolor sit</option>
-                    <option>Amet consectetur</option>
-                </select>
-            </div>
-        </div>
 
+<style>
+.mobile-switchable-console {display:none;} 
+@media (max-width: 1023px) {
+    .mobile-switchable .closer {display:none;}
+    .mobile-switchable-console {display:block;}
+    .mobile-switchable-form {display:none}
+    
+    .mobile-switchable.opened .closer {display: inline-block}
+    .mobile-switchable.opened .opener {display: none;}
+    .mobile-switchable.opened .mobile-switchable-form {display:block; padding-right:60px;}
+}
+
+/* Bottoni con glifo per VR */
+.btn .icon {font-size:20px; font-weight:normal;line-height: 13px; margin-right:5px}
+.btn span.icon-text {    font-family: "bankFont" !important;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    text-transform: uppercase;}
+</style>
+
+<div class="formWrapper mobile-switchable">
+
+    <div class="mobile-switchable-console">
         <div class="row">
-            <div class="form-field-input col-sm-3">
-                <label class="control-label">Periodo</label>
-                <select class="form-control" onchange="$('#dateRange').toggle($(this).val()=='scegli')">
-                    <option selected>Ultimi 12 mesi</option>
-                    <option>Lorem ipsum</option>
-                    <option>Dolor sit</option>
-                    <option value="scegli">Scegli date</option>
-                </select>
+            <div class="col-xs-8">
+                <h4>Tutte le pratiche</h4>
             </div>
-            <!-- Blocco selezione date -->
-            <script type="text/javascript">
-                // Inizializzazione datepickers
-                $(function(){
-                    $("#dataDal, #dataAl").datepicker({
-                        buttonImage: '/common/fe/img/pixel_trasp.gif'
-                    });
-                });
-            </script>
-            <div id="dateRange" style="display:none">
-                <div class="form-field-input col-sm-2">
-                    <label class="control-label">Dal</label>
-					<div class="form-field">
-                        <div class="input-group">
-                            <input type="text" name="dataDal" size="12" id="dataDal" class="form-control datepicker input-inline clear-x wauto input-required">
-                            <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
-                        </div>
-                    </div>
-			    </div>
-                <div class="form-field-input col-sm-2">
-                    <label class="control-label">Al</label>
-					<div class="form-field">
-                        <div class="input-group">
-                            <input type="text" name="dataAl" size="12" id="dataAl" class="form-control datepicker input-inline clear-x wauto input-required">
-                            <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
-                        </div>
-                    </div>
-			    </div>
-            </div>
-            <!-- Fine blocco selezione date -->
-            <div class="col-sm-1">
-                <a type="button" href="#" class="btn btn-primary" title="Filtra" id="filtra">Filtra</a>
+            <div class="col-xs-4">
+                <div class="btn-align-right mobile-switchable-toggler">
+                    <a class="btn btn-primary no-label opener"><i class="icon icon-add"></i><span class="icon-text">Filtri</span></a>
+                    <a class="btn btn-primary no-label closer">X</a>
+                </div>
             </div>
         </div>
+    </div>
+    
+    <div class="mobile-switchable-form">
+        
+        <div class="form-group">
+
+            <div class="row">
+                <div class="form-field-input col-sm-3">
+                    <label class="control-label">Stato</label>
+                    <select class="form-control">
+                        <option selected>Tutti</option>
+                        <option>Lorem ipsum</option>
+                        <option>Dolor sit</option>
+                        <option>Amet consectetur</option>
+                    </select>
+                </div>
+                <div class="form-field-input col-sm-3">
+                    <label class="control-label">Categoria</label>
+                    <select class="form-control">
+                        <option selected>Tutte</option>
+                        <option>Lorem ipsum</option>
+                        <option>Dolor sit</option>
+                        <option>Amet consectetur</option>
+                    </select>
+                </div>
+                <div class="form-field-input col-sm-3">
+                    <label class="control-label">Avviata da</label>
+                    <select class="form-control">
+                        <option selected>Tutti</option>
+                        <option>Lorem ipsum</option>
+                        <option>Dolor sit</option>
+                        <option>Amet consectetur</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-field-input col-sm-3">
+                    <label class="control-label">Periodo</label>
+                    <select class="form-control" onchange="$('#dateRange').toggle($(this).val()=='scegli')">
+                        <option selected>Ultimi 12 mesi</option>
+                        <option>Lorem ipsum</option>
+                        <option>Dolor sit</option>
+                        <option value="scegli">Scegli date</option>
+                    </select>
+                </div>
+                <!-- Blocco selezione date -->
+                <script type="text/javascript">
+                    // Inizializzazione datepickers
+                    $(function(){
+                        $("#dataDal, #dataAl").datepicker({
+                            buttonImage: '/common/fe/img/pixel_trasp.gif'
+                        });
+                    });
+                </script>
+                <div id="dateRange" style="display:none">
+                    <div class="form-field-input col-sm-2">
+                        <label class="control-label">Dal</label>
+                        <div class="form-field">
+                            <div class="input-group">
+                                <input type="text" name="dataDal" size="12" id="dataDal" class="form-control datepicker input-inline clear-x wauto input-required">
+                                <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field-input col-sm-2">
+                        <label class="control-label">Al</label>
+                        <div class="form-field">
+                            <div class="input-group">
+                                <input type="text" name="dataAl" size="12" id="dataAl" class="form-control datepicker input-inline clear-x wauto input-required">
+                                <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fine blocco selezione date -->
+                <div class="col-sm-1">
+                    <div class="btn-align-left">
+                        <a type="button" href="#" class="btn btn-primary" title="Cerca" id="cerca">Cerca</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
     </div>
 </div>
 <!-- Fine blocco filtri -->
@@ -287,8 +340,8 @@ var costruisciTabella = function() {
 // Inizializzazione tabella 
 $(function(){
     
-    // Emulazione "Filtra"
-    $("#filtra").click(function(){
+    // Emulazione "cerca"
+    $("#cerca").click(function(){
         costruisciTabella();
     });
     costruisciTabella();
