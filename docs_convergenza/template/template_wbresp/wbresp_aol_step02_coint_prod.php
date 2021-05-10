@@ -4,12 +4,7 @@
 	var dateCovidIni = "01/02/2020";
 	var dateCovidEnd = "30/09/2021";
 </script>
-
-<body class="aol">
-
-
-
-		<div class="row rowArea1">
+	<div class="row rowArea1">
 
 		<!-- contenitore principale colonna centrale -->
 		
@@ -68,31 +63,9 @@
 		<div class="spacer-no-border hidden-xs">&nbsp;</div>
 		<div id="boxCertificazione">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-	var userVerifiedCell = [], userVerifiedEmail = [];
-</script>
-
-
-
+		<script type="text/javascript">
+			var userVerifiedCell = [], userVerifiedEmail = [];
+		</script>
 
 		<div class="panel-group accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
 		
@@ -209,17 +182,10 @@
 		</div>
 		</div>
 		<!-- FINE - CHIUSURA ACCORDION -->
-
-
-
 <script type="text/javascript">
 	userVerifiedCell.push(false);
 	userVerifiedEmail.push(false);
 </script>
-
-
-
-
 		<div class="panel-group accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
 		
 		<!-- INTESTAZIONE ACCORDION -->
@@ -495,7 +461,7 @@
 </div>
 <!-- Overlay consenso negato - fine -->
 </div>
-		<div class="spacer-no-border">&nbsp;</div>
+<div class="spacer-no-border">&nbsp;</div>
 		
 		<!-- Footnotes -->
 		<div class="row">
@@ -513,13 +479,8 @@
 		        </div>
 		    </div>
 		</div>
-
-		
-		<!-- fine contenitore principale  -->
-
-	
-
-		</div>
+	<!-- fine contenitore principale  -->
+</div>
 	
 		
 
