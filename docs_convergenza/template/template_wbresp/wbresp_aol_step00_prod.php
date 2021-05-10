@@ -5,8 +5,6 @@
 	var dateCovidEnd = "30/09/2021";
 </script>
 
-<!-- contenitore principale colonna centrale -->
-		
 <!-- Template contatti -->
 <div class="row">
     <div class="col-md-12">
@@ -22,11 +20,8 @@
     <div class="col-sm-12 form-section-title">1. A chi vuoi intestare il conto?</div>
 </div>
 <div class="spacer-no-border hidden-xs">&nbsp;</div>
-			
 <form id="aolStep0" action="/webankpub/aol/step1.do?BV_UseBVCookie=Yes&fromPageName=0&save=true" method="POST" class="validate">
-
     <input type="hidden" name="presaVisione" id="presaVisione" value="" />
-    
     <div class="row">
         <div class="col-md-6">
             <select name="num_intestatari" id="num_intestatari" class="form-control" >
@@ -41,7 +36,6 @@
         <div class="col-sm-12 form-section-title">2. Inserisci i tuoi dati</div>
     </div>
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
-    
     <div class="row">
         <div class="col-md-6 form-group">
             <label for="nome_int1" class="labelTooltip">Nome*</label> 
@@ -55,7 +49,6 @@
         </div>
     </div>
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
-    
     <div class="row">
         <div class="col-md-6 form-group">
             <label for="gg_nascita_int1">Data di nascita*</label>
@@ -79,7 +72,6 @@
         </div>
     </div>
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
-    
     <div class="row">
         <div class="col-md-6 form-group">
             <label for="cod_fiscale_int1">Codice fiscale*</label>
@@ -92,7 +84,6 @@
         </div>
     </div>
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
-    
     <div class="row">
         <div class="col-md-6 form-group input-tel">
             <label for="telefono_3_int1" class="labelTooltip">Numero di cellulare*</label>
@@ -125,13 +116,10 @@
             </select>
         </div>
     </div>
-    
     <hr>
-    
     <div class="row">
         <div class="col-sm-12 form-section-title">3. Indica se hai un codice promozione o convenzione</div>
     </div>
-    
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
     <div class="row">
         <div class="col-md-6 form-group">
@@ -143,7 +131,6 @@
             <input type="tel" placeholder="opzionale" maxlength="10" name="cod_promotore" id="cod_promotore" value="" class="textinput form-control">
         </div>
     </div>
-    
     <div class="spacer-no-border hidden-xs">&nbsp;</div>
     <div class="row">
         <div class="col-md-6 form-group">
@@ -152,8 +139,6 @@
         </div>
     </div>
     <hr>
-    
-
     <div class="row">
         <div class="col-sm-12 form-section-title">4. Leggi l'informativa sul trattamento dei dati personali</div>
     </div>
@@ -166,24 +151,20 @@
     <div class="row">
         <div class="col-sm-12">
             <a id="lnkInformativa" href="/webankpub/common/apriDocumento.do?isPDF=true&id=66" class="ico-pdf" target="_blank">Informativa sul trattamento dei dati personali*</a>
-            
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
             <div class="checkbox check-inline">
-
                 <input type="checkbox" name="informativaPrivacy" id="informativaOK" value="1" class="ignore">
                 <input type="checkbox" name="informativaKO" id="informativaKO" class="hidden-input">
                 <input type="checkbox" name="informativaDis" id="informativaDis" disabled >
-
                 <label for="informativaOK">
                 Dichiaro di aver letto attentamente l'informativa disponibile su documento elettronico (supporto durevole), di averne compreso e salvato il contenuto.</label>
             </div>
         </div>
     </div>
     <hr>
-    
     <div class="row">
         <div class="col-sm-12">
             <p>
@@ -191,8 +172,7 @@
             </p>
         </div>
     </div>
-   
-    <div class="row">
+   <div class="row">
         <div class="col-sm-12">
             <p id="CONS_PRIV_GRUPPO">il trattamento dei miei dati a fini di ricerche di mercato, informazione commerciale, offerte dirette di prodotti o servizi della Banca e/o del Gruppo Banco BPM</p>
         </div>
@@ -211,7 +191,6 @@
             </div>
         </div>
     </div>
-    
     <div class="row">
         <div class="col-sm-12">
             <p id="CONS_PRIV_PROFILAZIONE">il trattamento dei miei dati a fini di elaborazione di informazioni che consentano di analizzare preferenze, abitudini, scelte di consumo (profilazione), onde individuare prodotti e servizi in linea con i miei interessi</p>
@@ -231,7 +210,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-sm-12">
             <p id="CONS_PRIV_COMMERC_TERZI">il trattamento dei miei dati a fini di rilevazione della qualità dei servizi erogati, ricerche di mercato, informazione commerciale, offerte dirette di prodotti o servizi di società terze</p>
@@ -251,7 +229,6 @@
             </div>
         </div>
     </div>
-    
     <div class="row">
         <div class="col-sm-12">
             <p id="CONS_PRIV_DATI_TERZI">la comunicazione, da parte della Banca, dei miei dati a società terze a fini di rilevazione della qualità dei servizi erogati, ricerche di mercato, informazione commerciale, offerte dirette di loro prodotti o servizi</p>
@@ -271,7 +248,6 @@
             </div>
         </div>
     </div>
-    
     <div class="row">
         <div class="col-sm-12">
             <p id="CONS_PRIV_DATI_SENSIBILI">il trattamento di categorie particolari di dati (es. iscrizione a sindacati, partiti o altre associazioni, dati relativi alla salute), che potrebbero essere acquisiti dalla Banca per l’esecuzione di operazioni o di contratti.</p>
@@ -291,7 +267,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-sm-12">
             <p class="obbligatorio">
@@ -326,6 +301,5 @@
 <!-- Overlay  -->
 <!-- SCRIPT -->
 <script type="text/javascript" src="/wbresp/js/aol/step0.js"></script>
-
 
 

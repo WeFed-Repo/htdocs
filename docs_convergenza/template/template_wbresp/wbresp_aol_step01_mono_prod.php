@@ -4,7 +4,6 @@
 	var dateCovidIni = "01/02/2020";
 	var dateCovidEnd = "30/09/2021";
 </script>
-
 <div class="row">
 	<div class="col-md-12">
 		<h2>Inserisci i dati personali</h2>
@@ -5221,14 +5220,12 @@
 </div>
 <!-- Overlay  -->
 
-<script type="text/javascript"
-	src="/wbresp/js/aol/statiprovinciecomuni.js?a=464"></script>
-    <script type="text/javascript" src="/wbresp/js/aol/step_utils.js?a=464"></script>
+<script type="text/javascript" src="/wbresp/js/aol/statiprovinciecomuni.js?a=464"></script>
+<script type="text/javascript" src="/wbresp/js/aol/step_utils.js?a=464"></script>
 <script type="text/javascript" src="/wbresp/js/aol/step1.js?a=464"></script>
 
 <script type="text/javascript">
 $(function(){
-	
 	noBack();
 	impostaValoriSelect();
 	impostaResidenzaFiscale();
@@ -5247,69 +5244,21 @@ $(function(){
 });
 
 function disableForMol() {	
-		
 }
 
 function impostaValoriSelect() {
+	impostaValoreSelect('stato_nascita_int1', 'ITALIA');
+	impostaValoreSelect('stato_emissione_int1', 'ITALIA');
 	
-	
-		impostaValoreSelect('stato_nascita_int1', 'ITALIA');
-	
-	
-	
-	
-	
-		impostaValoreSelect('stato_emissione_int1', 'ITALIA');
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-
-
-
 }
 
 function impostaResidenzaFiscale() {
-	
 	var collapse_int1B =  $('#collapse_int1B');
-	
 	//Seconda residenza fiscale
-	
-	
-	
-
 	//Terza residenza fiscale
-	
-	
-	
-	
 	//Quarta residenza fiscale
-	
-	
-	
-	
 	//Quinta residenza fiscale
-	
-
-
-
-
-	}
+}
 </script>
 
 

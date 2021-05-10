@@ -24,21 +24,36 @@
 						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
 						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01_mono_prod.php&amp;subnav=aol&amp;promo=aol&amp;"><strong>Produzione Step 01</strong> Monointestato</a>
 				     </li>
-					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
+					<li>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01.php&amp;subnav=aol&amp;promo=aol">Cointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step01_coint_prod.php&amp;subnav=aol&amp;promo=aol&amp;"><strong>Produzione Step 01</strong> Cointestato</a>
+				</li>
 				</ul>
 			</li>
 			<li><span><strong>Step 2</strong> - VERIFICHE</span>
 				<ul>
-					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a></li>
-					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
+					<li>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02_mono_prod.php&amp;subnav=aol&amp;promo=aol&amp;mono=true"><strong>Produzione Verifiche</strong> Monointestato</a>
+				    </li>
+					<li>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02.php&amp;subnav=aol&amp;promo=aol">Cointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step02_coint_prod.php&amp;subnav=aol&amp;promo=aol&amp;mono=true"><strong>Produzione Verifiche</strong> Cointestato</a>
+					</li>
 				</ul>
 			</li>
-			<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step03.php&amp;subnav=aol&amp;promo=aol"><strong>Step 3</strong> - PERSONALIZZAZIONE</a></li>
+			<li>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step03.php&amp;subnav=aol&amp;promo=aol"><strong>Step 3</strong> - PERSONALIZZAZIONE</a>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step03_prod.php&amp;subnav=aol&amp;promo=aol"><strong>Produzione Step 3</strong> - PERSONALIZZAZIONE</a>
+			</li>
 			<li><span><strong>Step 4</strong> - IDENTIFICAZIONE</span>
 				<ul>
 					<li><span>Selezione modalit&agrave; identificazione</span>
 						<ul>
-							<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04.php&amp;subnav=aol&amp;promo=aol">Monointestato</a>
+							<li>
+								<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04.php&amp;subnav=aol&amp;promo=aol">Monointestato</a>
+								<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_prod.php&amp;subnav=aol&amp;promo=aol"><strong>Produzione Step 4</strong> Monointestato</a>
+							</li>
 							<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04.php&amp;subnav=aol&amp;promo=aol&amp;aoltype=fuoriorario">Monointestato Fuori orario</a></li>
 							<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04.php&amp;subnav=aol&amp;promo=aol&amp;aoltype=fuoriorario&amp;aoldec=fomessage">Monointestato Fuori orario (con messaggio onload)</a></li>
 							<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04.php&amp;subnav=aol&amp;promo=aol&amp;aoltype=misti">Clienti misti (NO FDR)</a></li>
@@ -49,8 +64,14 @@
 						<ul>
 							<li><span>Bonifico</span>
 								<ul>
-									<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a></li>
-									<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
+									<li>
+									<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
+									<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico_prod.php&amp;subnav=aol&amp;promo=aol&amp;mono=true"><strong>Produzione riconoscimento bonifico</strong> Monointestato</a>
+								</li>
+									<li>
+										<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico.php&amp;subnav=aol&amp;promo=aol">Cointestato</a>
+										<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step04_bonifico_coint_prod.php&amp;subnav=aol&amp;promo=aol"><strong>Produzione riconoscimento bonifico</strong> Cointestato</a>
+									</li>
 								</ul>
 							</li>
 							<li><span>FDR</span>
@@ -74,14 +95,21 @@
 			<li><span ><strong>Step 5</strong> - ADEMPIMENTI LEGALI Normativa antiriciclaggio</span>
 				<ul>
 					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05.php&amp;subnav=aol&amp;promo=aol&amp;mono=true">Monointestato</a>
-						<ul>
+					<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05_prod.php&amp;subnav=aol&amp;promo=aol&amp;mono=true"><strong>Step 5 produzione</strong> Monointestato</a>
+					    <ul>
 							<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05_webcam.php&amp;subnav=aol&amp;promo=aol">Webcam</a></li>
 						</ul>
 					</li>
-					<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05.php&amp;subnav=aol&amp;promo=aol">Cointestato</a></li>
+					<li>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05.php&amp;subnav=aol&amp;promo=aol">Cointestato</a>
+						<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step05_coint_prod.php&amp;subnav=aol&amp;promo=aol"> <strong>Step 5 produzione</strong> Cointestato</a>
+					</li>
 				</ul>
 			</li>
-			<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step06.php&amp;subnav=aol&amp;promo=aol"><strong>Step 6</strong> - CONFERMA DATI</a></li>
+			<li>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step06.php&amp;subnav=aol&amp;promo=aol"><strong>Step 6</strong> - CONFERMA DATI</a>
+				<a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step06_prod.php&amp;subnav=aol&amp;promo=aol"><strong>Step 6 Produzione</strong> - CONFERMA DATI</a>
+			</li>
 			<!--<li><a href="/template/strutt_wbresp.php?tpl=wbresp_aol_step07.php&amp;subnav=aol&amp;promo=aol"><strong>Step 7</strong> - INFORMATIVE</a></li>-->
 			<li><span><strong>Step 7</strong> - INFORMATIVE</span>
 				<ul>
