@@ -19,7 +19,7 @@
 	</div>
 	<p class="cta-claim"><strong>Testo che suppporta alla Call To Action</strong></p>
 	<div class="row align-items-center justify-content-center p-2">
-		<button class="btn btn-primary">CALL TO ACTION</button>
+		<button class="col-sm-auto btn btn-primary">CALL TO ACTION</button>
     </div>
 	<div class="note mt-3">
 		<p><strong>Messaggio pubblicitario con finalità promozionale.</strong></br>Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi disponibili presso le filiali Banco BPM e nella sezione Trasparenza del sito bancobpm.it.</p>
