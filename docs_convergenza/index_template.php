@@ -37,7 +37,7 @@ $menu = json_decode($jsonstr,true);
                         <?php
                             foreach($liv1["voices"] as $key2=>$liv2) {
                             $liv2aletti = ($liv2["aletti"])? "" : "aletti-hidden";
-                            $liv2opener = ($liv2["voices"])? "<a class=\"opener ".$liv2aletti."\"><span class='plus'>+</span><span class='min'>&minus;</span></a>" : "<span class='dot".$liv2aletti."'></span>";  
+                            $liv2opener = ($liv2["voices"])? "<a class=\"opener\"><span class='plus'>+</span><span class='min'>&minus;</span></a>" : "<span class='dot'></span>";  
                             $liv2class = ($liv2["voices"])? "has-opener": ""; 
 
                             $liv2key = getId($liv2["nome"]);

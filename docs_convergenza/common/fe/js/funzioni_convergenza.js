@@ -4735,8 +4735,12 @@ var showMobilePdf = function(url){
     }
 }
 
-// Gestione pdf
+
+
+// Estensioni di jquery
 $.fn.extend({
+
+    // PDF
     pdf: function(par){
         var pdfCont = $(this).empty();
         var pdfViewerBase = "/common/fe/assets/pdf/web/viewer.html?file=";
@@ -4746,6 +4750,34 @@ $.fn.extend({
             this.addClass("loading").pdf({url: pdfIframe.attr("src").replace("/common/fe/assets/pdf/web/viewer.html?file=","").split("#")[0] + anchor});
         }
         return pdfCont.removeClass("loading");
+    },
+
+    // BOOTSTRAP TABLES
+    bst: function(params){
+        var tb = $(this);
+        // Componenti oggetto di default (vanno ad integrare o ad essere sovrascritte con params)
+        var conf = {
+            pagination: true,
+            pageSize: 50,
+            cardView: function(){ return $(window).width()<480 }(),
+            mobileResponsive: true,
+            rowStyle: function(r,i) {
+                return {classes: (i%2==0)? "odd":"even"}
+            }
+        }
+        tb.bootstrapTable($.extend(conf,params));
+
+        if (params.mobileCardView) {
+            // Evento resize
+            var defaultcwwidth = 767;
+            $(window).on("resize",function(){
+                var cvval = $(window).width()<(defaultcwwidth);
+                var tbo = tb.bootstrapTable("getOptions");
+                if (tbo.cardView != cvval) tb.bootstrapTable("toggleView");
+            })
+        }
+
+        return tb.removeClass("loading");
     }
 });
 

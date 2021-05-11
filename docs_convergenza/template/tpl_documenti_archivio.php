@@ -330,12 +330,10 @@ var caricaDocs = function(obj){
 // Costruzione della tabella
 var costruisciTabella = function() {
 
-    $("#tableArchivio").bootstrapTable({
-        pagination: true,
-        pageSize: 50,
-        rowStyle: function(r,i) {
-            return {classes: (i%2==0)? "odd":"even"}
-        },
+    // Esempio tabella bootstrap wrappata
+    $("#tableArchivio").bst({
+        pageSize:10,
+        mobileCardView: true,
         columns: [
             {
                 field: 'pratica',
@@ -366,16 +364,9 @@ var costruisciTabella = function() {
             }
         ],
         data: tData
-    }).removeClass("loading");
+    });
 
-    // Evento resize
-    $(window).on("resize",function(){
-        var iscv = $("#tableArchivio .card-view").length>0;
-        console.log($(window).width()<=480)
-        if (($(window).width()<=480 && !iscv) || iscv) { $("#tableArchivio").bootstrapTable("toggleView")};
-        
-        
-    })
+    
 }
 
 
