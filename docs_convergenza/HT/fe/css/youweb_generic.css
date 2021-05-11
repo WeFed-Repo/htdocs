@@ -8927,6 +8927,11 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 
 /* Change Positions */
+.text-with-icon.right-icon a {
+    padding-left:0;
+    padding-right:24px;
+}
+
 .text-with-icon.right-icon .text, .text-with-icon.right-icon .sub-text{
     padding-left: 0px;
     padding-right: 5px;
