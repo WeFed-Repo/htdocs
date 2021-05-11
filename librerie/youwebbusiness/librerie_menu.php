@@ -256,7 +256,19 @@
 			}
 		]
 	},
-
+    {
+		"title": "Landing",
+		"voices": [
+			{
+				"title": "Landing con immagine",
+				"tpl": "tpl_landing_base.php"
+			},
+			{
+				"title": "Landing con video",
+				"tpl": "tpl_landing_video.php"
+			}
+            ]
+	},
 
 	{
 		"title": "PARTE PUBBLICA E VARI<br /><u>(non includere in menu)</u>",
