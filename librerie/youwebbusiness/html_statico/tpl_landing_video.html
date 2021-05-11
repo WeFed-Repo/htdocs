@@ -258,11 +258,11 @@
                                 <li><a class="disabled">Strutture libere</a></li>
                                 <li><a class="disabled">Monitoraggio flussi CBI</a></li>
                           </ul>
-              <li class="">
+              <li class="opened">
                 <a class="toggle"><span>Landing</span></a>
-          <ul style="display:none;">
+          <ul >
                           <li><a href="tpl_landing_base.html" class="">Landing con immagine</a></li>
-                            <li><a href="tpl_landing_video.html" class="">Landing con video</a></li>
+                            <li><a href="tpl_landing_video.html" class="on">Landing con video</a></li>
                         </ul>
               <li class="">
                 <a class="toggle"><span>PARTE PUBBLICA E VARI<br /><u>(non includere in menu)</u></span></a>
@@ -285,112 +285,94 @@
 					<div id="contenuti">
 					 	<div class="container-fluid">
 													 		<span class="breadcrumb d-none d-md-block"><span class="verde">Home</span> / Lorem / Ipsum / Dolor amet</span>
-														<div class="with-stepper">
-	<h1>
-		RiBa: conferma inserimento
-	</h1>
-	<div class="stepper">
-		<div class="dot on"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
+														<!-- Oggetto Box Landing -->
+<div class="box-landing bordered mt-3 mb-3 p-3 pb-4 pt-4">
+	<h2>Titolo prodotto</h2>
+	<h3>Sottotitolo</h3>
+	<p id="text-to-ellipse" class="text-ellipsed" >Con <strong>Pay‑by‑Link trasformi il tuo POS Nexi </strong>in uno strumento per incassare anche a distanza in modo semplice e sicuro.</p>
+	<div class="row pt-3">
+		<div class="col-md-12 col-12 pb-3 left-text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis diam quis purus tempor cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam tincidunt tempus accumsan. Fusce pharetra ac neque vitae venenatis. Curabitur eu eleifend urna. </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis diam quis purus tempor cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam tincidunt tempus accumsan. Fusce pharetra ac neque vitae venenatis. Curabitur eu eleifend urna. </p>
+		</div>
 	</div>
-</div>
-
-<div class="alert alert-success">
-	Disposizione eseguita correttamente.<br />
-	Per poter inviare la disposizione è necessario
-	<!-- NOTE: inserire link alla pagina di creazione distinta -->
-	<a href="#">creare la distinta</a>,
-	aggrega do le disposizioni.
-
-
-</div>
-
-<div class="row">
-	<div class="col-12 col-md-6">
-		<div class="bordered pb-3 mt-3">
-			<h3>Ordinante</h3>
-			<div class="list">
-				<dt class="list-key">Intestato a</dt>
-				<dd class="list-value">Nome azienda</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">IBAN</dt>
-				<dd class="list-value">IT24V03237464463443253425</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">Banca</dt>
-				<dd class="list-value">Banca Popolare S.p.a.</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">Filiale</dt>
-				<dd class="list-value">Filiale n. nome città</dd>
+	<div class="row pb-5 pt-3">
+		<div class="col-md-12 col-12">
+			<div class="row justify-content-center">
+				<div id="video-container-1" class="col-12 col-sm-12 col-md-10 col-lg-6">
+					 
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-12 col-md-6">
-		<div class="bordered pb-3 mt-3">
-			<h3>Debitore</h3>
-			<div class="list">
-				<dt class="list-key">Intestato a</dt>
-				<dd class="list-value">Nome azienda</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">IBAN</dt>
-				<dd class="list-value">IT24V03237464463443253425</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">Banca</dt>
-				<dd class="list-value">Banca Popolare S.p.a.</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">Filiale</dt>
-				<dd class="list-value">Filiale n. nome città</dd>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="bordered pb-2 mt-3">
-	<h3>Dati RiBa</h3>
-	<div class="row">
-		<div class="col-12 col-md-6 pr-md-4">
-			<div class="list">
-				<dt class="list-key">Importo</dt>
-				<dd class="list-value">123,00</dd>
-			</div>
-			<div class="list">
-				<dt class="list-key">Descrizione</dt>
-				<dd class="list-value">Lorem ipsum dolor sit amet, consectetur adipisicing elit</dd>
-			</div>
-		</div>
-		<div class="col-12 col-md-6 pr-md-4">
-			<div class="list">
-				<dt class="list-key">Data scadenza</dt>
-				<dd class="list-value">21/12/2020</dd>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Pulsantiera -->
-<div class="row justify-content-end mt-3">
-  <div class="col-12 px-1 mx-0 d-flex justify-content-end">
-    <div class="form-row d-flex justify-content-end">
-			<div class="form-group mx-2">
-        <a href="strutt_priv.php?tpl=tpl_riba.php" class="btn btn-secondary btn-block mb-0">Nuovo RiBa</a>
-      </div>
-			<div class="form-group mx-2">
-        <a href="strutt_priv.php?tpl=tpl_riba.php" class="btn btn-primary btn-block mb-0">Nuovo RiBa con dati precedenti</a>
-      </div>
-			<div class="form-group mx-2">
-        <a href="strutt_priv.php?tpl=tpl_riba.php" class="btn btn-primary btn-block mb-0">Crea Distinta</a>
-      </div>
+	<p class="cta-claim"><strong>Testo che suppporta alla Call To Action</strong></p>
+	<div class="row align-items-center justify-content-center p-2">
+		<button class="col-sm-auto btn btn-primary">CALL TO ACTION</button>
     </div>
-  </div>
+	<div class="note mt-3">
+		<p><strong>Messaggio pubblicitario con finalità promozionale.</strong></br>Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi disponibili presso le filiali Banco BPM e nella sezione Trasparenza del sito bancobpm.it.</p>
+	</div>
 </div>
-<!-- Fine pulsantiera -->
-						</div>
+
+<!--- POSSIBILE FUNZIONE PER IL TRONCAMENTO se è presente la classe text-ellipsed---->
+<script>
+    //definizione di variabili: testo da troncare, altezza massima del testo su desktop, altezza massima del testo su mobile.
+	var txt = $('#text-to-ellipse').html(),
+		hMaxDesktop = '90', //massimo tre righe
+		hMaxMobile = '190'; //massimo sette righe
+
+	/* Verifica se schermo minore di... */
+	var viewdim = function () {
+		var e, a;
+
+		if (!('innerWidth' in window)) {
+			e = document.documentElement || document.body;
+			a = 'client';
+		} else {
+			e = window;
+			a = 'inner';
+		}
+
+		return { width: e[a + 'Width'], height: e[a + 'Height'] };
+		};
+		
+	
+	function ellipsizeTextPromo(id,txt) {
+		var hMax = viewdim().width < 768 ? hMaxMobile : hMaxDesktop;
+		
+		var el = $('#' + id);
+		el.html(txt);
+		if(el.hasClass('text-ellipsed'))
+			{
+				var textArray = txt.split(' ');
+				while(el.prop('scrollHeight') > hMax ) {
+					textArray.pop();
+					el.html(textArray.join(' ') + '...');
+				}
+			}
+		}
+	$( window ).resize(function() {
+		ellipsizeTextPromo('text-to-ellipse',txt);
+		
+	})
+  ellipsizeTextPromo('text-to-ellipse',txt);
+ 
+</script>
+
+<script>
+/* Gestione del Video(proporzionato e responsive)
+/* Embed video Vimeo */
+	$.getScript("https://player.vimeo.com/api/player.js",function(){
+		var vimeoIframe = $("<iframe>").attr({
+			src: "https://player.vimeo.com/video/56282283",
+			frameborder:"0", 
+			allow:'autoplay; fullscreen; picture-in-picture', 
+			allowfullscreen: true
+		}).css({background: "transparent no-repeat center center",position:"absolute",top:"0",left:"0",width:"100%",height:"100%"})
+		var blVimeo = $("<div>").css({padding:"56.25% 0 0 0",position:"relative", minHeight:"200px"}).append(vimeoIframe);
+		$("#video-container-1").append(blVimeo);
+	})
+</script>						</div>
 					</div>
 					<!-- Fine spazio dei contenuti -->
 				</div>
