@@ -4754,12 +4754,15 @@ $.fn.extend({
 
     // BOOTSTRAP TABLES
     bst: function(params){
-        var tb = $(this);
+        var tb = $(this),
+        defaultcwwidth = 767;
+
+
         // Componenti oggetto di default (vanno ad integrare o ad essere sovrascritte con params)
         var conf = {
             pagination: true,
             pageSize: 50,
-            cardView: function(){ return $(window).width()<480 }(),
+            cardView:  params.mobileCardView && $(window).width()<defaultcwwidth,
             mobileResponsive: true,
             rowStyle: function(r,i) {
                 return {classes: (i%2==0)? "odd":"even"}
@@ -4769,7 +4772,7 @@ $.fn.extend({
 
         if (params.mobileCardView) {
             // Evento resize
-            var defaultcwwidth = 767;
+           
             $(window).on("resize",function(){
                 var cvval = $(window).width()<(defaultcwwidth);
                 var tbo = tb.bootstrapTable("getOptions");
