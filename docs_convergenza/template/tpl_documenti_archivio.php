@@ -64,6 +64,10 @@
     position: relative;
     top: -4px;
     text-transform: uppercase;}
+
+/* Bottone icona grande */
+.btn-icon-big {background: #0e977f; border-radius:50%; width:34px;height:34px; color:#fff; text-align:center; display:inline-block; margin:0;}
+.btn-icon-big i.icon {line-height:32px;}
 </style>
 
 <div class="formWrapper mobile-switchable">
@@ -76,7 +80,7 @@
             <div class="col-xs-4">
                 <div class="btn-align-right mobile-switchable-toggler">
                     <a class="btn btn-primary no-label opener"><i class="icon icon-add"></i><span class="icon-text">Filtri</span></a>
-                    <a class="btn btn-primary no-label closer">X</a>
+                    <a class="btn-icon btn-icon-big closer"><i class="icon icon-close"></i></a>
                 </div>
             </div>
         </div>
@@ -85,16 +89,17 @@
     <div class="mobile-switchable-form">
         
         <div class="form-group">
-
             <div class="row">
                 <div class="form-field-input col-sm-3">
                     <label class="control-label">Stato</label>
-                    <select class="form-control">
-                        <option selected>Tutti</option>
-                        <option>Lorem ipsum</option>
-                        <option>Dolor sit</option>
-                        <option>Amet consectetur</option>
-                    </select>
+                    <div class="form-field">
+                        <select class="form-control">
+                            <option selected>Tutti</option>
+                            <option>Lorem ipsum</option>
+                            <option>Dolor sit</option>
+                            <option>Amet consectetur</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-field-input col-sm-3">
                     <label class="control-label">Categoria</label>
