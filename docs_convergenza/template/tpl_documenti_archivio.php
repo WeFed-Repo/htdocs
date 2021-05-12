@@ -22,7 +22,7 @@
 		<div class="col-xs-12">
 			<div class="innerWrapperTab">
 				<ul>
-					<li><a href="#" title="" role="button">In corso</a></li>
+					<li><a href="/template/strutt_<?php print ($site); ?>.php?html=vr&tpl=tpl_documenti_stati_e_casistiche.php" title="" role="button">In corso</a></li>
 					<li class="on"><a role="button">Archivio</a></li>
 				</ul>
 			</div>

@@ -18,7 +18,7 @@
 			<div class="innerWrapperTab">
 				<ul>
 					<li class="on"><a href="#" title="" role="button">In corso</a></li>
-					<li><a href="#"  role="button">Archivio</a></li>
+					<li><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_documenti_archivio.php&html=vr"  role="button">Archivio</a></li>
 				</ul>
 			</div>
 			<div class="separator"></div>
