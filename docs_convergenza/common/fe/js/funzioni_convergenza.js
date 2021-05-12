@@ -4762,7 +4762,8 @@ $.fn.extend({
         var conf = {
             pagination: true,
             pageSize: 50,
-            paginationSuccessivelySize:100,
+            paginationPreText: "<i class='icon icon-arrow_left'></i>",
+            paginationNextText: "<i class='icon icon-arrow_right'></i>",
             cardView:  params.mobileCardView && $(window).width()<defaultcwwidth,
             rowStyle: function(r,i) {
                 return {classes: (i%2==0)? "odd":"even"}
@@ -4835,6 +4836,13 @@ var setPwdFields = function() {
     }).parents(".password-toggle").addClass("password-inited");
 }
 
+// Switchable toggler
+var mobileSwitchable = function() {
+    $(".mobile-switchable-toggler").click(function(){
+        $(this).parents(".mobile-switchable").toggleClass("opened")
+    })
+}
+
 //inizializzazioni al load della pagina
 $(function () {
     renderOverlayerFooterFixed();
@@ -4876,6 +4884,9 @@ $(function () {
 
     // Funzione per colonne fixed delle tabelle
     columnBsFixed();
+
+    // Switchable toggler
+    mobileSwitchable();
 
     abilitaBtnField();
     addRemoveField();

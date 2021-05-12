@@ -365,6 +365,30 @@ button {
 .btn-align-center {
     text-align: center;
 }
+/* Bottoni con glifo per VR */
+@media (min-width:768px) {
+    .btn.btn-inline {margin-top:7px;}
+    .btn.btn-no-label.btn-inline {margin-top:35px;}  
+}
+.btn .icon {font-size:20px; font-weight:normal;line-height: 13px; margin-right:5px}
+.btn span.icon-text {    font-family: "bankFont" !important;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    text-transform: uppercase;}
+
+/* Bottone icona grande */
+.btn-icon-big {background: #0e977f; border-radius:50%; width:34px;height:34px; color:#fff; text-align:center; display:inline-block; margin:0;}
+.btn-icon-big i.icon {line-height:32px;}
+@media (max-width:768px) {
+    .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child {float:none}
+    .formWrapper .form-group.btnWrapper {margin: 15px 0}
+    .btnWrapper .btn-align-left {float:none;}
+    .btnWrapper .btn {width:100%;margin:0 15px;}
+} 
 
 .input_hidden {
     position: absolute;
@@ -8884,6 +8908,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     text-decoration: none;
     padding-left: 0px;
     position: relative;
+    cursor: pointer;
 }
 .text-with-icon  .linker .icon-arrow_down {
     display:none;
@@ -9628,4 +9653,25 @@ a.box-inline-text {
 }
 .box-contatti div[class*="col-sm-"] {
     margin-bottom:10px;
+}
+
+/* Classi generiche css per determinare comportamenti di aperture/chiusure */
+.opened-visible {display:none}
+.opened-hidden {display:block}
+.opened .opened-hidden {display:none;}
+.opened .opened-visible {display:block;}
+
+
+/* Mobile switchable "es: filtri" */
+.mobile-switchable-console {display:none;} 
+@media (max-width: 767px) {
+    .mobile-switchable {margin-bottom:15px}
+
+    .mobile-switchable-toggler {margin-top:-10px;}
+    .mobile-switchable .closer {display:none;}
+    .mobile-switchable-console {display:block;}
+    .mobile-switchable-form {display:none}
+    .mobile-switchable.opened .closer {display: inline-block}
+    .mobile-switchable.opened .opener {display: none;}
+    .mobile-switchable.opened .mobile-switchable-form {display:block; padding-right:45px;}
 }

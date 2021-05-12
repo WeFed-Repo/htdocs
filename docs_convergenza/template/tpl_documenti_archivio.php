@@ -32,65 +32,6 @@
 </div>
 <!-- Fine tabs -->
 
-<!-- Blocco filtri -->
-<script>
-    $(function(){
-        $(".mobile-switchable-toggler").click(function(){
-            var btn = $(this);
-            btn.parents(".mobile-switchable").toggleClass("opened")
-        })
-    })
-</script>
-
-<style>
-
-/* Classi generiche css per determinare comportamenti di aperture/chiusure */
-.opened-visible {display:none}
-.opened-hidden {display:block}
-.opened .opened-hidden {display:none;}
-.opened .opened-visible {display:block;}
-
-.mobile-switchable-console {display:none;} 
-
-@media (max-width: 767px) {
-    .mobile-switchable {margin-bottom:15px}
-
-    .mobile-switchable-toggler {margin-top:-10px;}
-    .mobile-switchable .closer {display:none;}
-    .mobile-switchable-console {display:block;}
-    .mobile-switchable-form {display:none}
-    
-    .mobile-switchable.opened .closer {display: inline-block}
-    .mobile-switchable.opened .opener {display: none;}
-    .mobile-switchable.opened .mobile-switchable-form {display:block; padding-right:45px;}
-}
-
-/* Bottoni con glifo per VR */
-@media (min-width:768px) {
-    .btn.btn-inline {margin-top:7px;}
-    .btn.btn-no-label.btn-inline {margin-top:35px;}  
-}
-
-.btn .icon {font-size:20px; font-weight:normal;line-height: 13px; margin-right:5px}
-.btn span.icon-text {    font-family: "bankFont" !important;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 14px;
-    display: inline-block;
-    position: relative;
-    top: -4px;
-    text-transform: uppercase;}
-
-/* Bottone icona grande */
-.btn-icon-big {background: #0e977f; border-radius:50%; width:34px;height:34px; color:#fff; text-align:center; display:inline-block; margin:0;}
-.btn-icon-big i.icon {line-height:32px;}
-@media (max-width:768px) {
-    .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child {float:none}
-    .formWrapper .form-group.btnWrapper {margin: 15px 0}
-    .btnWrapper .btn-align-left {float:none;}
-    .btnWrapper .btn {width:100%;margin:0 15px;}
-}
-</style>
 
 <div class="formWrapper mobile-switchable">
     <h3 class="titleSection titleForm hidden-xs">Cerca pratica</h3>
@@ -257,33 +198,64 @@ var tData = [
         print (($x>0)? ",":"") ;
         // Dati fake randomizzati 
         ?>{
-        pratica: "<?php print scramble("INVESCO GLOBAL FLEXIBLE BOND FUND LOREM DOLOR PLACET IPSUM DOLOR AMET SUMMA CONSECTETUR INVESTING ALLIANCE SICAV",4,6);?>",
+        pratica: "<?php print scramble("Invesco Global Protect Flexible Conto Carta Prepaid Standard Bond Equivalent Lorem Dolor Summa Cum Laude",4,6);?>",
         codpratica: "a682002b-db58-4325-ba7d-51166868a68f",
         categoria:"<?php print scramble(["Conti","Carte","Finanziamenti","Investimenti","Assicurazioni"]); ?>",
         avviatada: "<?php print scramble(["Cliente","Filiale","Gestore","Contact Center"]); ?>",
         stato: "<?php print scramble(["SOTTOSCRITTA","SCADUTA","REVOCATA DA GESTORE","RIFIUTATA DA CLIENTE"]); ?>",
         data: "2021-<?php print "0".rand(1,5)."-".rand(11,28); ?>"
+        <?php if ($x%3==0 && $x!=0) print (', pdfurl : "../pdf/documentopdf.pdf"') ?>
     }
     <?php } ?>
 ];
 
 
-// Esempio formattazione dati
+// Esempio formattazione dei dati delle colonne
 var tableFormat = {
+
+        // Formato data
         "data": function(val) {
             return val.split("-").reverse().join("/");
         },
-        "acc": function(val,row) {
-            // Assembla l'accordion
-            var obj = $("<div>").append(
-                $("<a>").addClass("linker").append(
-                    $("<span>").addClass("icon icon-arrow_down"),
-                    $("<span>").addClass("text underline").html(val),
-                    $("<span>").addClass("sub-text").html(row.codpratica)
-                ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica})
-            );
-            return "<div class='text-with-icon ellips'>"+ obj.html()+"</div>"
 
+        // Formato link/accordion
+        "acc": function(val,row) {
+
+            var formattedval = "";
+
+            // Se e' un singolo PDF...
+            if (row.pdfurl) {
+                formattedval = '<div class="text-with-icon "><a class="linker" href="'+ row.pdfurl +'"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
+            }
+            else
+            {
+                // Assembla l'accordion 
+                var obj = $("<div>").append(
+                    $("<a>").attr("aria-expanded", "false").addClass("linker").append(
+                        $("<i>").addClass("icon icon-arrow_down"),
+                        $("<i>").addClass("icon icon-arrow_up"),
+                        $("<span>").addClass("text underline").html(val.toUpperCase()),
+                        $("<span>").addClass("sub-text").html(row.codpratica)
+                    ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica})
+                );
+                formattedval += "<div class='text-with-icon ellips'>"+ obj.html()+"</div>";
+            }
+            
+            return formattedval;
+        },
+
+        // Formato "avviatada"
+        "avviatada": function(val,row) {
+            if (val !=="Cliente") {
+                val = '<div class="text-with-icon "><a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#infoPratiche"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span></a><span>'+val +'</span></div>'
+                
+            }
+            return val;
+        },
+
+        // Stato
+        "stato": function (val) {
+            return "<b>" + val.toUpperCase() +"</b>";
         }
     }
 
@@ -292,16 +264,18 @@ var caricaDocs = function(obj){
     var obj = $(obj);
     var codpratica = obj.attr("data-codpratica");
     var tr = obj.parents("tr");
+    // Cambio classe
+    obj.attr("aria-expanded",obj.attr("aria-expanded")==="false"? "true" : "false" );
+
     if (obj.hasClass("opened")){
         // Distrugge il tr appeso ed il suo contenuto
         tr.next().remove();
-        
     }
     else
     {
         var contwrapper = $("<div>").addClass("loading");
         var exttr = $("<td>").attr({colspan: tr.find("td").length}).append(contwrapper);
-        tr.after($("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(exttr));
+        tr.after($("<tr>").attr({class: "detail-row column-text-with-icon "+ tr.attr("class")}).append(exttr));
         // Emulazione della chiamata per il dettaglio dei contenuti
         setTimeout(function(){
             // Esempio caricamento dei contenuti
@@ -330,16 +304,18 @@ var caricaDocs = function(obj){
 // Costruzione della tabella
 var costruisciTabella = function() {
 
-    // Esempio tabella bootstrap wrappata
+    // Esempio tabella bootstrap wrappata (estensione $("#idoggetto").bst())
     $("#tableArchivio").bst({
         pageSize:10,
         mobileCardView: true,
         mobileCardWidth: 767,
+        // Formattazione dell'header
         columns: [
             {
                 field: 'pratica',
                 title: 'Pratica',
                 sortable: true,
+                class: "padding-text-with-icon",
                 formatter: tableFormat.acc,
                 cardClass: 'card-view-full card-view-notitle'
             },
@@ -351,11 +327,13 @@ var costruisciTabella = function() {
             {
                 field: 'avviatada',
                 title: 'Avviata da',
+                formatter: tableFormat.avviatada,
                 sortable:true
             },
             {
                 field: 'stato',
                 title: 'Stato',
+                formatter: tableFormat.stato,
                 sortable:true
             },
             {
@@ -419,20 +397,23 @@ $(function(){
     .bootstrap-table .fixed-table-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-number {display:none}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active {display:inline-block} 
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto;}
+    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-first a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
     .bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
-    .bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px}
+    .bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
+    .bootstrap-table .fixed-table-pagination .pagination .page-pre .icon, .bootstrap-table .fixed-table-pagination .pagination .page-next .icon{width:20px; font-size: 14px;
+    line-height: 20px;}
 
     /* Formattazioni per card-view (default 50% larghezza) */
     .bst .card-view  {display: inline-block; width: 50%;text-align:left}
     .bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%}
     .bst .card-view.card-view-notitle .title {display:none}
     .bst .card-view-full {width:100%}
+    .bst th.padding-text-with-icon {padding-left:42px;}
 
 </style>
 <!-- Informazioni sullo stato delle pratiche -->
