@@ -253,7 +253,7 @@ var tData = [
         return $scrambled;
     };
 
-    for($x==0;$x<100;$x++) {
+    for($x==0;$x<93;$x++) {
         print (($x>0)? ",":"") ;
         // Dati fake randomizzati 
         ?>{
@@ -334,12 +334,14 @@ var costruisciTabella = function() {
     $("#tableArchivio").bst({
         pageSize:10,
         mobileCardView: true,
+        mobileCardWidth: 767,
         columns: [
             {
                 field: 'pratica',
                 title: 'Pratica',
                 sortable: true,
-                formatter: tableFormat.acc
+                formatter: tableFormat.acc,
+                cardClass: 'card-view-full card-view-notitle'
             },
             {
                 field: 'categoria',
@@ -360,6 +362,7 @@ var costruisciTabella = function() {
                 field: 'data',
                 title: 'Data',
                 sortable:true,
+                class: 'center',
                 formatter: tableFormat.data
             }
         ],
@@ -403,7 +406,9 @@ $(function(){
     min-height:20px;
     }
     .bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
-    .bootstrap-table tr td {vertical-align:top;}
+    .bootstrap-table td {vertical-align:middle;}
+    .bst th {vertical-align:middle !important}
+    .bootstrap-table .center {text-align:center}
     .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
     .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
@@ -412,16 +417,22 @@ $(function(){
     .bootstrap-table .fixed-table-pagination .pagination ul {display:inline-block;text-align:center;list-style-type:none !important}
     .bootstrap-table .fixed-table-pagination .pagination ul li {text-align:center;margin:0 5px;display:inline-block;}
     .bootstrap-table .fixed-table-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold;}
+    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number {display:none}
+    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active {display:inline-block} 
+    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto;}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-first a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
     .bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
     .bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
-    
-    
-    
+    .bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px}
+
+    /* Formattazioni per card-view (default 50% larghezza) */
+    .bst .card-view  {display: inline-block; width: 50%;text-align:left}
+    .bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%}
+    .bst .card-view.card-view-notitle .title {display:none}
+    .bst .card-view-full {width:100%}
 
 </style>
 <!-- Informazioni sullo stato delle pratiche -->

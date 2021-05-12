@@ -4752,35 +4752,62 @@ $.fn.extend({
         return pdfCont.removeClass("loading");
     },
 
-    // BOOTSTRAP TABLES
+    // Bootstrap tables riparametrizzate
     bst: function(params){
         var tb = $(this),
-        defaultcwwidth = 767;
+        defaultcwwidth = (params.mobileCardWidth)? params.mobileCardWidth : 767;
 
 
         // Componenti oggetto di default (vanno ad integrare o ad essere sovrascritte con params)
         var conf = {
             pagination: true,
             pageSize: 50,
+            paginationSuccessivelySize:100,
             cardView:  params.mobileCardView && $(window).width()<defaultcwwidth,
-            mobileResponsive: true,
             rowStyle: function(r,i) {
                 return {classes: (i%2==0)? "odd":"even"}
             }
         }
-        tb.bootstrapTable($.extend(conf,params));
 
-        if (params.mobileCardView) {
+        $.extend(conf,params);
+
+        // Modifiche alla paginazione per UX
+        if (conf.pagination) {
+            tb.on("post-body.bs.table",function(){
+                // Totale pagine
+                var ptotal = $("<li>").addClass("page-total").html("di <span class='tot'>" + Math.ceil(conf.data.length / conf.pageSize) + "</span>")
+                var pcont = tb.parents(".bootstrap-table").find("ul.pagination");
+                pcont.find(".page-total").remove();
+                pcont.find(".page-next").before(ptotal)
+            })
+        }
+        
+        // Se e' richiesta la visualizzazione in "cards"
+        if (conf.mobileCardView) {
             // Evento resize
-           
             $(window).on("resize",function(){
                 var cvval = $(window).width()<(defaultcwwidth);
                 var tbo = tb.bootstrapTable("getOptions");
                 if (tbo.cardView != cvval) tb.bootstrapTable("toggleView");
             })
-        }
 
-        return tb.removeClass("loading");
+            // Formatter per cardView
+            tb.on("post-body.bs.table",function(){
+                if (tb.bootstrapTable("getOptions")["cardView"] || conf.mobileCardView && $(window).width()<defaultcwwidth) {
+                    // Riassembla le colonne in modo da poter rivedere come formattare tutto nella cardview
+                    $.each(conf.columns, function(i,c) {
+                        if (c.cardClass) {
+                            tb.find(".card-view:nth-child("+ (i+1) +")").addClass(c.cardClass)
+                        }
+                    })
+                }
+            })
+
+        }
+        
+        // Render della tabella
+        tb.bootstrapTable(conf);
+        return tb.removeClass("loading").addClass("bst");
     }
 });
 
