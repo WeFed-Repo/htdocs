@@ -3198,3 +3198,21 @@ ul.normal-format li {margin-bottom:10px;}
     background-color:#222;
     border-color:#222
 }
+
+/* box di login per warning*/
+.formLogin .wrapper-login.warning {
+    padding: 0 10px;
+}
+.formLogin .wrapper-login.warning hr {
+    margin: -10px 0 20px!important;
+}
+.formLogin .wrapper-login.warning h3 {
+    text-align: center; font-size: 15px; color:#fff; line-height: 21px;margin-bottom:0
+}
+.formLogin .wrapper-login.warning p {
+    font-weight: normal!important;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px 5px;
+    font-family: 'ralewaymedium', arial;
+}
