@@ -170,7 +170,7 @@ var tableFormat = {
 
             // Se e' un singolo PDF...
             if (row.pdfurl) {
-                formattedval = '<div class="text-with-icon "><a class="linker" href="'+ row.pdfurl +'" target="_blank"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
+                formattedval = '<div class="text-with-icon pinned"><a class="linker" href="'+ row.pdfurl +'" target="_blank"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
             }
             else
             {
@@ -183,7 +183,7 @@ var tableFormat = {
                         $("<span>").addClass("sub-text").html(row.codpratica)
                     ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica, "data-nomepratica": val.toUpperCase()})
                 );
-                formattedval += "<div class='text-with-icon'>"+ obj.html()+"</div>";
+                formattedval += "<div class='text-with-icon pinned'>"+ obj.html()+"</div>";
             }
             
             return formattedval;

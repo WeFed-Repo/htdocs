@@ -9127,6 +9127,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* Casistiche immagine text-with-icon */
 .text-with-icon .image.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
 
+/* Casistica con icona fissa in alto */
+.text-with-icon.pinned .text, .text-with-icon.pinned .sub-text {
+    display:inline-block;
+    clear:both;
+    width:100%;
+}
+
 /* # All Accords Header */
 .header-col{
     display:block;
