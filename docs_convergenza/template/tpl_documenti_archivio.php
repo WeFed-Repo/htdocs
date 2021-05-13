@@ -192,8 +192,11 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon"><a class="no-underline" data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span></a><span>'+val +'</span></div>'
-                
+                val = '<div class="text-with-icon pinned"><a class="linker no-underline" data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
+            }
+            else
+            {
+                val = "<b>"+val+"</b>";
             }
             return val;
         },
