@@ -38,7 +38,7 @@
         return $scrambled;
     };
 
-    if (rand(0,5)>1) {
+    if (rand(0,5)>0) {
     for($x==0;$x<rand(30,199);$x++) {
         print (($x>0)? ",":"") ;
         // Dati fake randomizzati 

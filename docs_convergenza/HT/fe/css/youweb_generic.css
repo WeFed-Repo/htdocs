@@ -7125,7 +7125,7 @@ table a:hover .icon, table a:focus .icon ,table a:hover .icon:not(.disabled)::be
 /* Form_085, FINE */
 
 th {
-    text-align: lef;
+    text-align: left;
 }
 th.oRight{
     text-align: right;
@@ -7793,13 +7793,20 @@ line-height: 20px;}
 .bst .detail-row div.loading {min-height:100px}
 .bst tr.no-records-found td {background: #eaeded}
 
-/* Formattazioni per card-view (default 50% larghezza) */
-.bst .card-view  {display: inline-block; width: 50%;text-align:left}
-.bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%}
-.bst .card-view.card-view-notitle .title {display:none}
-.bst .card-view-full {width:100%}
+/* Trattamento padding text-with-icon */
 .bst .padding-text-with-icon {padding-left:42px;}
 .bst .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
+
+/* Formattazioni per card-view (default 50% larghezza) */
+.bst .card-view  {display: inline-block; width: 50%;text-align:left;padding:0;margin:15px 0 0;}
+.bst .card-view:last-child {margin-bottom:15px;}
+.bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%;padding:0;margin:0;}
+.bst .card-view .value {font-weight:bold}
+.bst .card-view.padding-text-with-icon, .bst .card-view .padding-text-with-icon {padding-left:25px;}
+.bst .card-view.card-view-notitle .title {display:none}
+.bst .card-view-full {width:100%}
+
+
 
 
 /* Formattazione header */

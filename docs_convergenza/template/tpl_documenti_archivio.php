@@ -183,7 +183,7 @@ var tableFormat = {
                         $("<span>").addClass("sub-text").html(row.codpratica)
                     ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica, "data-nomepratica": val.toUpperCase()})
                 );
-                formattedval += "<div class='text-with-icon ellips'>"+ obj.html()+"</div>";
+                formattedval += "<div class='text-with-icon'>"+ obj.html()+"</div>";
             }
             
             return formattedval;
