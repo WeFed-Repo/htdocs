@@ -7791,6 +7791,7 @@ line-height: 20px;}
 /* Tabella di bootstrap versione "nuova" */
 .bst .detail-row td {padding-top:15px;}
 .bst .detail-row div.loading {min-height:100px}
+.bst tr.no-records-found td {background: #eaeded}
 
 /* Formattazioni per card-view (default 50% larghezza) */
 .bst .card-view  {display: inline-block; width: 50%;text-align:left}
@@ -8957,6 +8958,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon {
     position: relative;
     width: fit-content;
+}
+
+.text-with-icon a {
+    cursor:pointer;
 }
 
 .text-with-icon .linker {

@@ -4807,6 +4807,7 @@ $.fn.extend({
         }
         
         // Render della tabella
+        tb.bootstrapTable("destroy");
         tb.bootstrapTable(conf);
         return tb.removeClass("loading").addClass("bst");
     }
