@@ -1,0 +1,363 @@
+/* Font face */
+@font-face {
+    font-family: 'bankFont';
+    src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+        url('./font/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bankFont';
+    src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+        url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'bankFont';
+    src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+        url('./font/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bankFont';
+    src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+        url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*  */
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'bankFont', Arial, Serif;
+    font-size: 15px;
+    height: 100%;
+    color: #1f2021;
+}
+
+/* Back  - Out safe area 30px top su iOs (per notch) */
+#back {
+    z-index: 1;
+    position: fixed;
+    transition: background-color 0.3s;
+    background: transparent url("../img/btn_back.png") no-repeat center center;
+    background-size: 15px 15px;
+    width: 35px;
+    height: 35px;
+    top: 40px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none !important;
+    margin-left: 15px;
+}
+
+#back.fixed {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+
+
+/* OPZIONI DI DESIGN */
+#main {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 640px;
+    background: #fff;
+}
+
+#main .pagecont {
+    padding: 15px 25px 20px
+}
+
+#main .pagecont.bottomfixedimage {
+    /* Il padding verticale permette di scorrere il content senza che resti nascosto dall'area promo
+        decidere se ricavarlo in maniera dinamica dall'altezza di tale area*/
+    padding: 15px 25px 300px 25px;
+}
+
+#main .pagecont.bottomfixedcta {
+    /* Il padding verticale permette di scorrere il content senza che resti nascosto dalla CTA */
+    padding: 15px 25px 80px
+}
+
+/* HEADER */
+#contenuto .hero {
+    display: inline-block;
+    height: 320px;
+    width: 100%;
+    background: #eee;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .hero-text {
+    position: absolute;
+    bottom: 0;
+    padding: 0 25px 15px;
+}
+
+#contenuto .hero h1 {
+    font-size: 24px;
+    line-height: 29px
+}
+
+
+/* GENERICI */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    margin: 0 0 15px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 19px;
+    color: #a0abbe;
+    margin: 0 0 15px;
+}
+
+p {
+    margin: 0 0 10px;
+    clear: both;
+    line-height: 20px;
+}
+
+p.note {
+    color:#1f2021;
+    font-size:13px; 
+    line-height:18px;
+}
+
+/* Bullet reset */
+ol,
+ul,
+ol li,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+/* Bullet rivisti */
+ol {
+    counter-reset: ol;
+}
+
+ol li,
+ul li {
+    position: relative;
+    padding: 0 0 10px 25px;
+    line-height: 20px
+}
+
+/* Bullet "normali" */
+ul li::before {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #1f2021;
+    border-radius: 4px;
+    top: 8px;
+    left: 4px;
+    content: "";
+    position: absolute;
+}
+
+/* Bullet "ordinali" */
+ol li::before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    top: 0px;
+    left: 0;
+    counter-increment: ol;
+    content: counter(ol);
+    position: absolute;
+    color: #fff;
+}
+
+/* # BLOCCHI DI CONTENUTO # */
+/* ## Contenuti ## */
+.boxedcont {
+    padding: 15px 15px 5px;
+    background: #f4f5f4;
+    border-radius: 10px;
+    margin: 0 -10px 15px;
+}
+
+/* ## Accordion ##*/
+.accordion .accordion-content {
+    display: none;
+}
+
+.accordion .accordion-abstract {
+    display: inline-block;
+    width: 100%;
+}
+
+.accordion.opened .accordion-content {
+    display: inline-block;
+    width: 100%;
+    overflow: visible;
+}
+
+.accordion.opened .accordion-abstract {
+    display: none;
+}
+
+.accordion .accordion-toggle {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom:10px;
+}
+
+.accordion .accordion-toggle span {
+    line-height:16px;
+    font-size: 13px;
+    position: relative;
+    padding-right: 20px;
+    display: inline-block;
+    color: #000;
+    position: relative;
+}
+
+.accordion .accordion-toggle span::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: transparent url("../img/default_vedi_piu.png") no-repeat center center;
+    background-size: 16px 16px;
+    border-radius: 8px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    display: block;
+}
+
+.accordion .accordion-toggle span.opened {
+    display: none;
+}
+
+.accordion .accordion-toggle span.opened::after {
+    background-image: url("../img/default_vedi_meno.png");
+}
+
+.accordion.opened .accordion-toggle span.closed {
+    display: none;
+}
+
+.accordion.opened .accordion-toggle span.opened {
+    display: inline-block;
+}
+
+/* # FIXED BOTTOM # */
+/* ## Bottom Promo Visual Version ## */
+
+.bottom-promo {
+    width:100%; 
+    background: #eee;
+    background-size: cover; 
+    position: fixed; 
+    bottom: 0px;
+    max-width: 640px;
+}
+
+.wrapper-visual {
+    max-width: 380px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.wrapper-visual .visual {
+    background: #eee;
+    background-size: contain;
+    width:80%;
+    padding-bottom: 55%;
+    margin: -40px auto 20px auto;            
+}
+
+.wrapper-cta {
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    bottom: 0px;
+}
+
+.wrapper-cta .cta {
+    display: inline-block;
+    margin: 0px 20px;
+    background: #000;
+    line-height: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+/* ## Footer ## */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height:0;
+    overflow:visible;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .cta {
+    display: inline-block;
+    margin: 0 0 15px;
+    background: #000;
+    line-height: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 240px;
+    position:absolute;
+    margin-left:-135px;
+    margin-top:-65px;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+}
+/* Declinazione dark */
+.dark #contenuto .hero h1{
+    color:#fff;
+}
+
+.dark #back {
+    background-image: url("../img/btn_back_white.png")
+}
+.dark #back.fixed {
+    background-color:#212121; 
+    opacity:0.8;
+}
