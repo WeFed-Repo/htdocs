@@ -7755,6 +7755,61 @@ div.fixed-table-scroll-outer {
 }
 }
 
+/* Stili Bootstrap table non importati */
+.bootstrap-table tbody tr.odd td {background:#eaeded}
+.bootstrap-table .th-inner.sortable {cursor: pointer;
+    background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
+    padding-left:15px;
+    display:inline-block;
+    min-height:20px;
+}
+.bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
+.bootstrap-table td {vertical-align:middle;}
+.bst th {vertical-align:middle !important}
+.bootstrap-table .center {text-align:center}
+.bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
+.bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
+.bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
+.pagination-info .label-group {display:none}
+.bootstrap-table .fixed-table-pagination .pagination {width:100%;text-align:center;}
+.bootstrap-table .fixed-table-pagination .pagination ul {display:inline-block;text-align:center;list-style-type:none !important}
+.bootstrap-table .fixed-table-pagination .pagination ul li {text-align:center;margin:0 5px;display:inline-block;}
+.bootstrap-table .fixed-table-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-number {display:none}
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active {display:inline-block} 
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-first a,
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
+.bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
+.bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
+.bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
+.bootstrap-table .fixed-table-pagination .pagination .page-pre .icon, .bootstrap-table .fixed-table-pagination .pagination .page-next .icon{width:20px; font-size: 14px;
+line-height: 20px;}
+
+/* Tabella di bootstrap versione "nuova" */
+.bst .detail-row td {padding-top:15px;}
+.bst .detail-row div.loading {min-height:100px}
+
+/* Formattazioni per card-view (default 50% larghezza) */
+.bst .card-view  {display: inline-block; width: 50%;text-align:left}
+.bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%}
+.bst .card-view.card-view-notitle .title {display:none}
+.bst .card-view-full {width:100%}
+.bst .padding-text-with-icon {padding-left:42px;}
+.bst .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
+
+
+/* Formattazione header */
+.bst .th-inner .inline-icon {display: inline-block;
+    height: 20px;
+    margin-top: 0;
+    margin-left: 5px;
+    vertical-align: middle;}
+    .bst .th-inner .inline-icon .icon {line-height:14px;margin-top:1px}
+
+
 /* Iconcina help per checkbox e radio */
 .textWrapper .btn-icon {top: -5px;
     border-bottom: 0 !important;

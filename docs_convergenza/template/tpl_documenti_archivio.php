@@ -225,7 +225,7 @@ var tableFormat = {
 
             // Se e' un singolo PDF...
             if (row.pdfurl) {
-                formattedval = '<div class="text-with-icon "><a class="linker" href="'+ row.pdfurl +'"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
+                formattedval = '<div class="text-with-icon "><a class="linker" href="'+ row.pdfurl +'" target="_blank"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
             }
             else
             {
@@ -236,7 +236,7 @@ var tableFormat = {
                         $("<i>").addClass("icon icon-arrow_up"),
                         $("<span>").addClass("text underline").html(val.toUpperCase()),
                         $("<span>").addClass("sub-text").html(row.codpratica)
-                    ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica})
+                    ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica, "data-nomepratica": val.toUpperCase()})
                 );
                 formattedval += "<div class='text-with-icon ellips'>"+ obj.html()+"</div>";
             }
@@ -247,7 +247,7 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon "><a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#infoPratiche"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span></a><span>'+val +'</span></div>'
+                val = '<div class="text-with-icon "><a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span></a><span>'+val +'</span></div>'
                 
             }
             return val;
@@ -263,6 +263,7 @@ var tableFormat = {
 var caricaDocs = function(obj){
     var obj = $(obj);
     var codpratica = obj.attr("data-codpratica");
+    var nomepratica = obj.attr("data-nomepratica");
     var tr = obj.parents("tr");
     // Cambio classe
     obj.attr("aria-expanded",obj.attr("aria-expanded")==="false"? "true" : "false" );
@@ -274,8 +275,8 @@ var caricaDocs = function(obj){
     else
     {
         var contwrapper = $("<div>").addClass("loading");
-        var exttr = $("<td>").attr({colspan: tr.find("td").length}).append(contwrapper);
-        tr.after($("<tr>").attr({class: "detail-row column-text-with-icon "+ tr.attr("class")}).append(exttr));
+        var exttr = $("<td>").addClass("padding-text-with-icon").attr({colspan: tr.find("td").length}).append(contwrapper);
+        tr.after($("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(exttr));
         // Emulazione della chiamata per il dettaglio dei contenuti
         setTimeout(function(){
             // Esempio caricamento dei contenuti
@@ -284,12 +285,14 @@ var caricaDocs = function(obj){
                 url: "/include/ajax/archivio_documenti_el_pdf.php",    
                 success: function(data){
                     contwrapper.append(
-                        $("<span>").html(data.docname),
-                        $("<div>").addClass("list-icon-wrapper not-inline").append(
+                        $("<p>").addClass("paddingBottomSmall").html(nomepratica),
+                            $("<div>").addClass("list-icon-wrapper not-inline").append(
                                 $.map(data.docs,function(obj){
-                                return $("<div>").addClass("text-with-icon ellips").append(
-                                    $("<span>").addClass("image image-uread_pdf"),
-                                    $("<a>").attr("href",obj.url).html(obj.name)
+                                return $("<div>").addClass("text-with-icon").append(
+                                    $("<a>").attr("href",obj.url).append(
+                                        $("<span>").addClass("image pdf"),
+                                        obj.name
+                                    )
                                 )
                             }))
                         ).removeClass("loading");
@@ -322,7 +325,8 @@ var costruisciTabella = function() {
             {
                 field: 'categoria',
                 title: 'Categoria' ,
-                sortable:true
+                sortable:true,
+                cardClass: 'padding-text-with-icon'
             },
             {
                 field: 'avviatada',
@@ -332,9 +336,11 @@ var costruisciTabella = function() {
             },
             {
                 field: 'stato',
-                title: 'Stato',
+                title: 'Stato <a class="inline-icon hidden-xs" onclick="$(\'#modaleInfo\').modal(\'show\');event.stopPropagation()"><i class="icon icon-ico_help_filled_tab"></i></a>',
                 formatter: tableFormat.stato,
-                sortable:true
+                headerformatter: function(){return "maurizio"},
+                sortable:true,
+                cardClass: 'padding-text-with-icon'
             },
             {
                 field: 'data',
@@ -373,83 +379,13 @@ $(function(){
 });
 
 </script>
-<style>
-    /* Stili Bootstrap table non importati */
-    .bootstrap-table tbody tr.odd td {background:#eaeded}
-    
-    .bootstrap-table .th-inner.sortable {cursor: pointer;
-    background: url(/HT/fe/img/icon_sort_none.png) 0 3px no-repeat;
-    padding-left:15px;
-    display:inline-block;
-    min-height:20px;
-    }
-    .bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
-    .bootstrap-table td {vertical-align:middle;}
-    .bst th {vertical-align:middle !important}
-    .bootstrap-table .center {text-align:center}
-    .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
-    .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
-    .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
-    .pagination-info .label-group {display:none}
-    .bootstrap-table .fixed-table-pagination .pagination {width:100%;text-align:center;}
-    .bootstrap-table .fixed-table-pagination .pagination ul {display:inline-block;text-align:center;list-style-type:none !important}
-    .bootstrap-table .fixed-table-pagination .pagination ul li {text-align:center;margin:0 5px;display:inline-block;}
-    .bootstrap-table .fixed-table-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number {display:none}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active {display:inline-block} 
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-first a,
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
-    .bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
-    .bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
-    .bootstrap-table .fixed-table-pagination .pagination .page-pre .icon, .bootstrap-table .fixed-table-pagination .pagination .page-next .icon{width:20px; font-size: 14px;
-    line-height: 20px;}
+<!-- Modali -->
+<?php include ("parts/documenti_modali.php"); ?>
+<!-- Fine modali -->
 
-    /* Formattazioni per card-view (default 50% larghezza) */
-    .bst .card-view  {display: inline-block; width: 50%;text-align:left}
-    .bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%}
-    .bst .card-view.card-view-notitle .title {display:none}
-    .bst .card-view-full {width:100%}
-    .bst th.padding-text-with-icon {padding-left:42px;}
-
-</style>
 <!-- Informazioni sullo stato delle pratiche -->
-<div id="infoPratiche" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-	<div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h1 class="modal-title">Informazioni sugli stati</h1>
-      </div>
-      <div class="modal-body">
-        <p>
-            <strong>SOTTOSCRITTA</strong><br>
-            Lorem ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum.<br>
-            <br>
-            <strong>LOREM IPSUM</strong><br>
-            Lorem ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum.<br>
-            <br>
-            <strong>LOREM IPSUM</strong><br>
-            Lorem ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum.<br>
-            <br>
-            <strong>LOREM IPSUM</strong><br>
-            Lorem ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum ipsum lorem ipsum lorem ipsum.<br>
-            
-        </p>
-      </div>
-      <div class="modal-footer">
-       	<div class="align-right">
-			<input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
-		</div>
-		</div>
-    </div>
-	</div>
-</div>
 <section class="visible-xs">
-    <div class="text-with-icon right-icon"><a data-toggle="modal" data-target="#infoPratiche">Informazioni sugli stati delle pratiche<i class="icon icon-ico_help_filled_tab"></i></a></div>
+    <div class="text-with-icon right-icon"><a data-toggle="modal" data-target="#modaleInfo">Informazioni sugli stati delle pratiche<i class="icon icon-ico_help_filled_tab"></i></a></div>
 </section>
 <!-- Fine informazioni sullo stato delle pratiche -->
 <table class="loading" id="tableArchivio"></table>
