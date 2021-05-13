@@ -497,6 +497,59 @@ li.ul-small li:before,
 ol.ul-small li:before {
   content: "- ";
 }
+ul.ul-align-left,
+li.ul-align-left,
+ol.ul-align-left {
+  padding: 0 15px;
+  margin: 0 0 20px 0;
+}
+ul.ul-align-left li,
+li.ul-align-left li,
+ol.ul-align-left li {
+  padding: 0 0 10px;
+}
+ul.ul-align-left li:last-child,
+li.ul-align-left li:last-child,
+ol.ul-align-left li:last-child {
+  padding: 0;
+}
+ul.sub-ul-check,
+li.sub-ul-check,
+ol.sub-ul-check {
+  padding: 0 15px;
+  margin: 0 0 20px 0;
+  margin: 10px 0 0;
+}
+ul.sub-ul-check li,
+li.sub-ul-check li,
+ol.sub-ul-check li {
+  padding: 0 0 5px;
+  list-style: none;
+  position: relative;
+}
+ul.sub-ul-check li:last-child,
+li.sub-ul-check li:last-child,
+ol.sub-ul-check li:last-child {
+  padding: 0;
+}
+ul.sub-ul-check li .icon,
+li.sub-ul-check li .icon,
+ol.sub-ul-check li .icon {
+  font-size: 8px;
+  position: absolute;
+  top: 5px;
+  width: auto;
+  height: auto;
+}
+ul.sub-ul-check li span,
+li.sub-ul-check li span,
+ol.sub-ul-check li span {
+  display: block;
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding-left: 15px;
+}
 .tooltip-inner li {
   margin-bottom: 0;
 }
@@ -1430,6 +1483,65 @@ ol.sotto-elenco ol li {
   .text-with-icon.right-icon.with-tooltip .text {
     letter-spacing: -1px;
   }
+}
+/*testi con informazione di stato */
+/* elemento icona con immagine*/
+.box-inline {
+  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.box-inline img.icon,
+.box-inline .icon,
+.box-inline .status-point {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+.box-inline-text.p-medium {
+  padding: 0 0  0 47px;
+  margin: 0;
+}
+.box-inline-text.p-small {
+  padding: 0 0  0 30px;
+  margin: 0;
+}
+.box-inline .status-point {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.box-inline a.box-inline-text {
+  color: #0e977f;
+  text-decoration: underline;
+}
+.box-inline .box-inline span {
+  font-weight: bold;
+}
+.box-inline.to-act .status-point {
+  background-color: #06987e;
+}
+.box-inline.to-act .box-inline span {
+  color: #06987e;
+}
+.box-inline.act .status-point {
+  background-color: #89b10b;
+}
+.box-inline.act .box-inline span {
+  color: #89b10b;
+}
+.box-inline.blc .status-point {
+  background-color: #f07f07;
+}
+.box-inline.blc .box-inline span {
+  color: #f07f07;
+}
+.box-inline .box-inline p {
+  text-transform: uppercase;
 }
 /* REGOLE COMUNI TABELLE*/
 table {

@@ -163,6 +163,43 @@ ul, li, ol {
           &:before { 
             content:"- ";
         }
+        } 
+    }
+    &.ul-align-left {
+        padding: 0 15px;
+        margin:0 0 20px 0;
+        li {
+            padding: 0 0 10px;
+            &:last-child{
+                padding: 0;
+            } 
+        }
+    }
+    &.sub-ul-check {
+        padding: 0 15px;
+        margin:0 0 20px 0;
+        margin: 10px 0 0;
+        li{
+            padding: 0 0 5px;
+            list-style: none;
+            position: relative;
+            &:last-child{
+                padding: 0;
+            }
+            .icon {
+                font-size: 8px;
+                position: absolute;
+                top:5px;
+                width: auto;
+                height: auto;
+            }
+            span {
+                display: block; 
+                width: auto;
+                height: auto;
+                text-align: left;
+                padding-left: 15px;
+            }
         }
     }
 }
@@ -1290,3 +1327,67 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         }
     }
 } 
+
+/*testi con informazione di stato */
+/* elemento icona con immagine*/
+.box-inline {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    img.icon,.icon,.status-point {
+        position: absolute;
+        width: auto;
+        height: auto;
+    }
+    &-text.p-medium {
+        padding:0 0  0 47px;
+        margin:0;
+    }
+    &-text.p-small {
+        padding:0 0  0 30px;
+        margin:0;
+    }
+    .status-point {
+        display: inline-block; 
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    a.box-inline-text {
+        color:#0e977f;
+        text-decoration: underline;
+    }
+    .box-inline span {
+        font-weight: bold;
+    }
+    &.to-act {
+        .status-point {
+            background-color: #06987e;
+        }
+        .box-inline span {
+            color:#06987e;
+        }
+    }
+    &.act {
+        .status-point {
+            background-color: #89b10b;
+        }
+        .box-inline span {
+            color:#89b10b;
+        }
+    }
+    &.blc {
+        .status-point {
+            background-color: #f07f07;
+        }
+        .box-inline span {
+            color:#f07f07;
+        }
+    } 
+    .box-inline p {
+        text-transform: uppercase;
+    }
+}
