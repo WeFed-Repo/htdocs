@@ -3,9 +3,22 @@
 		"nome": "Pagamenti",
 		"voices": [
 			{
+				"nome": "Bonifico ordinario/veloce",
+				"voices": [
+					{
+						"nome": "Bonifico step 1",
+						"tpl": "tpl_bonifico_ordinario_veloce_01.php",
+						"html": "vr",
+						"inlavorazione": true
+					}
+				]
+				
+			},
+			{
 				"nome": "Bancomat Pay",
 				"tpl": "tpl_pagamenti_bancomat_pay.php"
 			},
+			
 			{
 				"nome": "Bancomat Pay Gestione",
 				"tpl": "tpl_gestione_bancomat_pay.php"

@@ -34,6 +34,16 @@
 					{
 						"nome": "Pagamento tributi - F24/F23",
 						"link": "/template/strutt_priv_f24.php?site=webank"					
+					},
+					{
+						"nome": "Bonifico ordinario/veloce",
+						"voices": [
+							{
+								"nome": "Bonifico step 1",
+								"tpl": "tpl_bonifico_ordinario_veloce_01.php",
+								"html": "vr"
+							}
+						]		
 					}
 				]
 			},

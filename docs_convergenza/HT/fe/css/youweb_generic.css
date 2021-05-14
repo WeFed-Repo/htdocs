@@ -9751,3 +9751,97 @@ a.box-inline-text {
     .mobile-switchable.opened .opener {display: none;}
     .mobile-switchable.opened .mobile-switchable-form {display:block; padding-right:45px;}
 }
+
+/* BONIFICI ORDINARI/VELOCI*/
+/*selettore conti */
+.selettore-conti .selector {
+    position: absolute;
+    z-index: 4!important;
+    left: 0;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-top: 0 none;
+    background-color: #fff;
+    width: 100%;
+    margin: 0;
+}
+.selettore-rapporto.selettore-conti .selectRapp {
+	position:relative;
+}
+.selettore-rapporto.selettore-conti .selector .group a {
+    display: block;
+    padding: 15px;
+    outline:none;
+}
+.selettore-rapporto.selettore-conti .group {
+    display: block;
+	border-bottom:1px solid #DADEE1
+}
+.selettore-rapporto.selettore-conti .inputOption {
+    background: none;
+}
+.selettore-rapporto.selettore-conti .inputOption span.input{
+	font-weight:bold;
+    padding-right:20px;
+    display: inline-block;
+}
+.selettore-rapporto.selettore-conti .selettore-row {
+	display:block;
+	padding: 5px 0;
+	font-size:12px;
+}
+
+.selettore-rapporto.selettore-conti .selettore-row strong {
+	padding-right:5px;
+}
+.selettore-rapporto.selettore-conti .bordered {
+    padding:12px 16px 3px 14px;
+    margin-top:0;
+    border: solid 1px #ddd;
+    margin-bottom: 25px;
+}
+.selettore-rapporto.selettore-conti .bordered .inline-output {
+    margin-bottom:0!important;
+}
+.selettore-rapporto.selettore-conti .form-control {
+    height:auto;
+    min-height: 40px;
+    padding:12px 16px 12px 14px!important;
+}
+.selettore-rapporto.selettore-conti .selectRapp .icon {
+    position:absolute;
+    right:15px;
+    color:#202d50;
+}
+.selettore-rapporto.selettore-conti .selectRapp .icon-arrow_up {
+    display: none;
+}
+.selettore-rapporto.selettore-conti .selectRapp.highZ .icon-arrow_up {
+    display: block;
+}
+.selettore-rapporto.selettore-conti .selectRapp.highZ .icon-arrow_down {
+    display: none;
+}
+/* stile selcted ereditato dal trading*/
+.selettore-rapporto.selettore-conti .selector .group.selected a.selected {
+    border-left: #0e977f solid 5px;
+}
+.selettore-rapporto.selettore-conti .selector .group.selected a {
+    background-color: #eaeded;
+    border-color: #fff;
+}
+@media screen and (max-width: 767px) {
+    /*.selettore-row strong {
+        display:inline-block;
+        width:100%;
+    }*/
+    .selettore-row span {
+        padding-bottom:5px
+    }
+  }
+@media screen and (min-width: 768px) {
+  .selettore-rapporto.selettore-conti .selettore-row span {
+    width:auto;
+}
+}
+

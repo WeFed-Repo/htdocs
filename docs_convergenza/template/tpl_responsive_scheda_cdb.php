@@ -132,9 +132,4 @@
      </p>
     </section>
 </div>
-<script>
-   $(function(){ 
-     scrollToAnchor();
-   })  
-</script>
-<!--https://youapppprod.bancobpm.it/WEBHT/carte/amex/schedaCarta.do?ancorTo=cartaOro -->
+

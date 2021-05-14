@@ -6313,12 +6313,65 @@ table tr td.td-fondo .fundName {
 /* NUOVO SELETTORE RAPPORTO */
 .selettore-rapporto {
   padding-bottom: 0;
+  /*con variante per i conti*/
 }
 .selettore-rapporto .selectRapp {
   margin-bottom: 20px;
 }
 .selettore-rapporto .form-group {
   margin-bottom: 0;
+}
+.selettore-rapporto.selettore-conti .selectRapp .inputOption.inputSx {
+  background: none;
+}
+.selettore-rapporto.selettore-conti .inputOption span.input {
+  font-weight: 600;
+  padding-right: 20px;
+  display: inline-block;
+  white-space: normal;
+}
+.selettore-rapporto.selettore-conti .selettore-row {
+  display: block;
+  padding: 5px 0;
+  font-size: 12px;
+}
+.selettore-rapporto.selettore-conti .selettore-row strong {
+  padding-right: 5px;
+}
+.selettore-rapporto.selettore-conti .form-control,
+.selettore-rapporto.selettore-conti .bordered {
+  height: auto!important;
+  min-height: 40px;
+  padding: 12px 16px 12px 14px!important;
+  border: 1px solid #ccc;
+}
+.selettore-rapporto.selettore-conti .form-control .inline-output,
+.selettore-rapporto.selettore-conti .bordered .inline-output {
+  margin-bottom: 0!important;
+}
+.selettore-rapporto.selettore-conti .selectRapp {
+  margin-bottom: 10px;
+}
+.selettore-rapporto.selettore-conti .selectRapp .icon {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  color: #6f8f0a;
+  font-size: 32px;
+}
+.selettore-rapporto.selettore-conti .selectRapp .icon.icon-arrow_up {
+  display: none;
+}
+.selettore-rapporto.selettore-conti .selectRapp.highZ .icon-arrow_up {
+  display: block;
+}
+.selettore-rapporto.selettore-conti .selectRapp.highZ .icon-arrow_down {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .selettore-rapporto.selettore-conti .selettore-row span {
+    width: auto;
+  }
 }
 /* Elementi trading/investimenti in porting */
 #filterSwitch {
