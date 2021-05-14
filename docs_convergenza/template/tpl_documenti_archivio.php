@@ -116,7 +116,7 @@
                         <label class="control-label">Dal</label>
                         <div class="form-field">
                             <div class="input-group">
-                                <input type="text" name="dataDal" size="12" id="dataDal" class="form-control datepicker input-inline clear-x wauto input-required">
+                                <input type="text" name="dataDal" id="dataDal" maxlength="10" class="form-control datepicker input-inline">
                                 <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                         <label class="control-label">Al</label>
                         <div class="form-field">
                             <div class="input-group">
-                                <input type="text" name="dataAl" size="12" id="dataAl" class="form-control datepicker input-inline clear-x wauto input-required">
+                                <input type="text" name="dataAl" id="dataAl" maxlength="10" class="form-control datepicker input-inline">
                                 <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ var caricaDocs = function(obj){
                 url: "/include/ajax/archivio_documenti_el_pdf.php",    
                 success: function(data){
                     contwrapper.append(
-                        $("<p>").addClass("paddingBottomSmall").html(nomepratica),
+                        $("<p>").addClass("paddingBottomMedium").html(nomepratica),
                             $("<div>").addClass("list-icon-wrapper not-inline").append(
                                 $.map(data.docs,function(obj){
                                 return $("<div>").addClass("text-with-icon").append(

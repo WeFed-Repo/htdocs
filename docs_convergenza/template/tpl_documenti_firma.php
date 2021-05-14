@@ -116,7 +116,7 @@
                         <!-- Fine esempio campo password -->
                     </div>
                     <div class="col-xs-4 col-sm-9 no-label">
-                        <a type="button" href="#" class="btn btn-primary  btn-inline btn-no-label" title="Firma">Firma</a>
+                        <a type="button" href="#" class="btn btn-primary  btn-inline" title="Firma">Firma</a>
                     </div>
                    
                 </div>

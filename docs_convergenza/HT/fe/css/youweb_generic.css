@@ -8958,7 +8958,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 
 .list-icon-wrapper.not-inline .text-with-icon{
-    margin-bottom: 6px;
+    margin-bottom: 15px;
 }
 
 /* ## Text with icon Element ## */
@@ -9503,7 +9503,7 @@ a.no-underline {
 }
 
 /* Pdf */
-.pdf-container, .pdf-container iframe {height:500px;width:100%; border:0 none;}
+.pdf-container, .pdf-container iframe {height:350px;width:100%; border:0 none;}
 .pdf-container iframe {border:solid 1px #cacaca}
 
 /*tpl in corso */
