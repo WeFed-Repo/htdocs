@@ -8976,6 +8976,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     padding-left: 0px;
     position: relative;
     cursor: pointer;
+    display: inline-block;
 }
 .text-with-icon  .linker .icon-arrow_down {
     display:none;
@@ -9161,7 +9162,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .pract-toggle .wrapper-icon-fixed {
     position:absolute; 
     right:20px; 
-    top:25%;
+    top:50%;
+    margin-top:-10px;
 }
 
 
@@ -9308,6 +9310,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     }
     .pract-toggle .wrapper-icon-fixed {
         top: 5px;
+        margin-top:0;
      }
      .btn-align-center {
          padding: 21px 21px 10px 21px;
