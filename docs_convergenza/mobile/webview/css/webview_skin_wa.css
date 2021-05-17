@@ -1,0 +1,64 @@
+/* HEADER */
+#contenuto .hero {
+    background: #eee url("../img/visual_web_view_bonifico_istantaneo_WB.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#contenuto .hero h1 {
+    font-size: 24px;
+    line-height: 29px;
+}
+                
+/* GENERICI */
+a {
+    color: #94c11f;
+    text-decoration: none;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #212122;
+    margin: 0 0 15px;
+}
+
+/* Bullet "ordinali" */
+ol li::before {
+    background-color: #94c11f;
+}
+
+/* Accordion */
+.accordion .accordion-toggle span {
+    color: #94c11f;
+}
+
+.accordion .accordion-toggle span::after {
+    background: transparent url("../img/webank_vedi_piu.png") no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.accordion .accordion-toggle span.opened::after {
+    background-image: url("../img/webank_vedi_meno.png");
+}
+
+/* Bottom*/
+.bottom-promo { 
+    background: url("../img/marmo_background.jpg") no-repeat center center;
+    background-size: cover; 
+}
+
+.wrapper-visual .visual {
+    background: url("../img/bg_blue_stories_card@2x.png") no-repeat center center;
+    background-size: contain;           
+}
+.wrapper-cta .cta {
+    background: #1f2021;
+}
+
+footer .cta {
+    background: #1f2021;
+}
