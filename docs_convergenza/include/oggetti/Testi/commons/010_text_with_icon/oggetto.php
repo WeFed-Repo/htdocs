@@ -60,7 +60,8 @@
     <p><b>Testo con icona a destra</b></p>
     <div  class="list-icon-wrapper">
         <div class="text-with-icon right-icon"><a href="#"><span class="image-icon pdf"></span>Lorem ipsum</a></div>
-        <div class="text-with-icon right-icon"><a href="#"><i class="icon icon-ico_help_filled_tab"></i>Testo su piu' righe<br>su piu' righe lorem dolor ipsum</a></div>
+        <div class="text-with-icon right-icon"><a href="#"><i class="icon icon-ico_help_filled_tab"></i>Testo su piu' righe<br>su piu' righe lorem dolor ipsum<br>
+            <span class="sub-text">Con sottotesto minimale<br>su piu' righe</span></a></div>
         <div class="text-with-icon right-icon"><a href="#"><span class="image-icon pdf v-centered"></span>Testo su piu' righe<br>con icona centrata<br>verticalmente</a></div>
     <div>
 </section>

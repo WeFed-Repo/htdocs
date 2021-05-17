@@ -8961,7 +8961,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* ## Text with icon Element ## */
 .text-with-icon {
     position: relative;
-    width:min-content;
+    width:auto;
     padding-left:25px;
     line-height:20px;
     display:inline-block;
@@ -8991,7 +8991,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .sub-text {font-size:12px; 
     text-decoration:none !important;
     color: #202d50;
-    clear:both;display:inline-block;
+    display:inline-block;
     line-height:16px;
 }
 
