@@ -49,7 +49,7 @@
             </div>
             <div class="col-xs-4">
                 <div class="btn-align-right mobile-switchable-toggler">
-                    <a class="btn btn-primary no-label opener"><i class="icon icon-add"></i><span class="icon-text">Filtri</span></a>
+                    <a class="btn btn-primary no-label opener"><i class="icon icon-filter"></i><span class="icon-text">Filtri</span></a>
                     <a class="btn-icon btn-icon-big closer"><i class="icon icon-close"></i></a>
                 </div>
             </div>
@@ -170,7 +170,7 @@ var tableFormat = {
 
             // Se e' un singolo PDF...
             if (row.pdfurl) {
-                formattedval = '<div class="text-with-icon pinned"><a class="linker" href="'+ row.pdfurl +'" target="_blank"><span class="image pdf"></span><span class="text underline">'+val+'</span></a></div>';
+                formattedval = '<div class="text-with-icon"><a href="'+ row.pdfurl +'" target="_blank"><span class="image-icon pdf"></span><span class="text underline">'+val+'</span></a></div>';
             }
             else
             {
@@ -179,11 +179,11 @@ var tableFormat = {
                     $("<a>").attr("aria-expanded", "false").addClass("linker").append(
                         $("<i>").addClass("icon icon-arrow_down"),
                         $("<i>").addClass("icon icon-arrow_up"),
-                        $("<span>").addClass("text underline").html(val.toUpperCase()),
-                        $("<span>").addClass("sub-text").html(row.codpratica)
+                        $("<span>").addClass("dark ellipsis").append($("<b>").html(val.toUpperCase())),
+                        $("<span>").addClass("sub-text ellipsis").html(row.codpratica)
                     ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica, "data-nomepratica": val.toUpperCase()})
                 );
-                formattedval += "<div class='text-with-icon pinned'>"+ obj.html()+"</div>";
+                formattedval += "<div class='text-with-icon'>"+ obj.html()+"</div>";
             }
             
             return formattedval;
@@ -192,11 +192,7 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon pinned"><a class="linker no-underline" data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
-            }
-            else
-            {
-                val = "<b>"+val+"</b>";
+                val = '<div class="text-with-icon"><a data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span>'+val+'</a></div>'
             }
             return val;
         },
@@ -233,12 +229,12 @@ var caricaDocs = function(obj){
                 url: "/include/ajax/archivio_documenti_el_pdf.php",    
                 success: function(data){
                     contwrapper.append(
-                        $("<p>").addClass("paddingBottomMedium").html(nomepratica),
+                        $("<p>").addClass("accordion-title").html(nomepratica),
                             $("<div>").addClass("list-icon-wrapper not-inline").append(
                                 $.map(data.docs,function(obj){
                                 return $("<div>").addClass("text-with-icon").append(
                                     $("<a>").attr("href",obj.url).append(
-                                        $("<span>").addClass("image pdf"),
+                                        $("<span>").addClass("image-icon pdf"),
                                         obj.name
                                     )
                                 )

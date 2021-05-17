@@ -7789,24 +7789,24 @@ div.fixed-table-scroll-outer {
 line-height: 20px;}
 
 /* Tabella di bootstrap versione "nuova" */
-.bst .detail-row td {padding-top:15px;}
+.bst .detail-row td {padding-top:15px;border-top: none !important;}
 .bst .detail-row div.loading {min-height:100px}
 .bst tr.no-records-found td {background: #eaeded}
 
-/* Trattamento padding text-with-icon */
-.bst .padding-text-with-icon {padding-left:42px;}
+/* Trattamento text-with-icon */
+.bst .padding-text-with-icon {padding-left:35px;}
 .bst .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
+.bst .text-with-icon {line-height:16px;}
+.bst .accordion-title {padding-bottom:10px;}
 
 /* Formattazioni per card-view (default 50% larghezza) */
-.bst .card-view  {display: inline-block; width: 50%;text-align:left;padding:0;margin:15px 0 0;}
+.bst .card-view  {display: inline-block; width: 50%;text-align:left;padding:0;margin:15px 0 0; vertical-align:top;}
 .bst .card-view:last-child {margin-bottom:15px;}
 .bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%;padding:0;margin:0;}
 .bst .card-view .value {font-weight:bold}
 .bst .card-view.padding-text-with-icon, .bst .card-view .padding-text-with-icon {padding-left:25px;}
 .bst .card-view.card-view-notitle .title {display:none}
 .bst .card-view-full {width:100%}
-
-
 
 
 /* Formattazione header */
@@ -8988,6 +8988,11 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     width:100%;
 }
 
+.text-with-icon a .text {
+    text-decoration:underline
+}
+
+
 .text-with-icon .sub-text {font-size:12px; 
     text-decoration:none !important;
     color: #202d50;
@@ -9037,13 +9042,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon.right-icon .image-icon {background-position: top right}
 
 /* Accordion */
-.text-with-icon .linker[aria-expanded=false] .icon-arrow_up {
+.text-with-icon *[aria-expanded=false] .icon-arrow_up {
     display:none;
 }
-.text-with-icon .linker[aria-expanded=false] .icon-arrow_down {
+.text-with-icon *[aria-expanded=false] .icon-arrow_down {
     display:block;
 }
-.text-with-icon .linker[aria-expanded=true] .icon-arrow_down {
+.text-with-icon *[aria-expanded=true] .icon-arrow_down {
     display:none;
 }
 
@@ -9051,15 +9056,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* Iconcine immagine */
 .text-with-icon .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
 
-/* Casistica con icona fissa in alto */
-.text-with-icon.pinned a, .text-with-icon.pinned .linker{
-    display:inline-block;
-}
-.text-with-icon.pinned .text, .text-with-icon.pinned .sub-text {
-    display:inline-block;
-    clear:both;
-    width:100%;
-}
 
 /* # All Accords Header */
 .header-col{
@@ -9670,7 +9666,6 @@ a.box-inline-text {
 .mobile-switchable-console {display:none;} 
 @media (max-width: 767px) {
     .mobile-switchable {margin-bottom:15px}
-
     .mobile-switchable-toggler {margin-top:-10px;}
     .mobile-switchable .closer {display:none;}
     .mobile-switchable-console {display:block;}
@@ -9678,6 +9673,7 @@ a.box-inline-text {
     .mobile-switchable.opened .closer {display: inline-block}
     .mobile-switchable.opened .opener {display: none;}
     .mobile-switchable.opened .mobile-switchable-form {display:block; padding-right:45px;}
+    .mobile-switchable.opened .mobile-switchable-form .btnWrapper .btn-align-left:last-child:first-child {width:100%}
 }
 
 /* BONIFICI ORDINARI/VELOCI*/
