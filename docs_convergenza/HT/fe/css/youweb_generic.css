@@ -8961,8 +8961,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* ## Text with icon Element ## */
 .text-with-icon {
     position: relative;
+    width:min-content;
     padding-left:25px;
-    width:auto;
     line-height:20px;
     display:inline-block;
     margin-right:15px;
@@ -8976,6 +8976,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon a {
     color: #00a592;
     text-decoration:underline;
+    cursor:pointer;
+
 }
 
 .text-with-icon .ellipsis {
@@ -8984,6 +8986,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     overflow:hidden;
     text-overflow:ellipsis;
     max-width:100%;
+}
+
+.text-with-icon .sub-text {font-size:12px; 
+    text-decoration:none !important;
+    color: #202d50;
+    clear:both;display:inline-block;
+    line-height:16px;
 }
 
 .text-with-icon a.dark, .text-with-icon a .dark {
@@ -9020,7 +9029,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /* Icona a destra */
 .text-with-icon.right-icon {
-    width:auto;
     padding-left:0;
     padding-right:25px;
 }

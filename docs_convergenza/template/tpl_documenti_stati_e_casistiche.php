@@ -437,13 +437,11 @@
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                       <a class="linker">
-                            <div><span class="text transform-uppercase">Firmata parzialmente</span></div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
+                    <div class="text-with-icon right-icon">
+                       <a data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                            <span class="text transform-uppercase">Firmata parzialmente</span>
+                            <i class="icon icon-ico_help_filled_tab hidden-xs"></i>
+                            <i class="icon icon-ico_help_filled_tab visible-xs" data-toggle="modal" data-target="#modaleInfo"></i>
                         </a>
                     </div>
                 </div>
@@ -1031,22 +1029,21 @@
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                        <a class="linker">
-                            <div class="visible-mobile wrapper-icon-left">
+                    <!-- Esempio text-with-icon complesso -->
+                    <div class="text-with-icon right-icon">
+                        <a data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                            <div class="visible-xs wrapper-icon-left">
                                 <span class="glyph glyph-ico_clock_validate" title=""></span>
                             </div>
-                            <div>
-                                <span class="text transform-uppercase">Firmata parzialmente</span>
+                            <span class="hidden-xs">
+                                Firmata parzialmente
                                 <span class="sub-text">In attesa di cointestatario</span>
-                            </div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
-                            
+                                <i class="icon icon-ico_help_filled_tab hidden-xs v-centered"></i>
+                                <i class="icon icon-ico_help_filled_tab visible-xs"></i>
+                            </span>
                         </a>
                     </div>
+                    <!-- Fine esempio text-with-icon complesso -->
                 </div>
                 <div class="col-sm-2 col-xs-12">
                      <div class="center-wrapper visible-desktop">

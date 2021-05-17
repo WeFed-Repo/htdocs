@@ -2794,7 +2794,8 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
                 return title + closeIcoTooltip;
             };
             setOpenHandlers = function () {
-                $tooltipPlus.on('click focusin', function () {
+                $tooltipPlus.on('click focusin', function (e) {
+                    e.stopPropagation();
                     var openedTooltips = $(".tooltip.in");
                     // Chiude gli altri tooltip aperti
                     openedTooltips.tooltip('hide');
@@ -3460,7 +3461,6 @@ var initTooltip = function (wrapper) {
     $wrapper.find("[data-toggle='tooltip']").not(".inited").tooltipPlus().addClass("inited").on('shown.bs.tooltip', function () {
         $('.tooltip').css('z-index', getNextHighestZindex());
         if (feBank==="youweb")  $('.tooltip').css('margin-left', "5px");
-        
     });
 
     // html complesso per i tooltip con ID indicato
