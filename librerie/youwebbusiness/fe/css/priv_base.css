@@ -197,15 +197,18 @@
   background-color: #DDDDDD;
 }
 
+.color-input_disabled_color {
+  color: #495057;
+}
 .bkg-input_disabled_color {
-  background-color: #FFFFFF;
+  background-color: #495057;
 }
 
 .color-input_disabled_placeholder {
-  color: #EEEEEE;
+  color: #495057;
 }
 .bkg-input_disabled_placeholder {
-  background-color: #EEEEEE;
+  background-color: #495057;
 }
 
 .color-tableStriped {

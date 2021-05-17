@@ -9014,6 +9014,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
+.text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
 
 /* Declinazione tipo "elenco" */
@@ -9127,7 +9128,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     padding-left:20px;
 }
 
-.accord-content .history-element .text-with-icon{
+.accord-content .history-element .text-with-icon {
     display:inline-block;
     text-overflow: ellipsis;
     font-size:12px;
@@ -9280,9 +9281,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         min-width: 100px;
         margin-left: 15px!important;
     }
-    .pract-toggle .text-with-icon .text {
-        max-width: 110px;
-    }
+    
     .pract-toggle .text-with-icon.right-icon.with-tooltip .text{
         letter-spacing: -0.5px;
         font-size:12px;

@@ -197,15 +197,18 @@
   background-color: #DDDDDD;
 }
 
+.color-input_disabled_color {
+  color: #495057;
+}
 .bkg-input_disabled_color {
-  background-color: #FFFFFF;
+  background-color: #495057;
 }
 
 .color-input_disabled_placeholder {
-  color: #EEEEEE;
+  color: #495057;
 }
 .bkg-input_disabled_placeholder {
-  background-color: #EEEEEE;
+  background-color: #495057;
 }
 
 .color-tableStriped {
@@ -3316,7 +3319,7 @@ select:-moz-placeholder, select.form-control:-moz-placeholder, select.form-contr
 select[disabled], select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled], input[disabled], input.form-control[disabled], input.form-control:not([size]):not([multiple])[disabled], textarea[disabled], textarea.form-control[disabled], textarea.form-control:not([size]):not([multiple])[disabled] {
   border: #DDDDDD;
   background-color: #DDDDDD;
-  color: #FFFFFF;
+  color: #495057;
 }
 select[disabled] + .input-group-append,
 select[disabled] + .input-group-append .input-group-text,
@@ -3396,19 +3399,19 @@ textarea.form-control:not([size]):not([multiple])[disabled] + button + .input-gr
 }
 select[disabled]::-webkit-input-placeholder, select.form-control[disabled]::-webkit-input-placeholder, select.form-control:not([size]):not([multiple])[disabled]::-webkit-input-placeholder, input[disabled]::-webkit-input-placeholder, input.form-control[disabled]::-webkit-input-placeholder, input.form-control:not([size]):not([multiple])[disabled]::-webkit-input-placeholder, textarea[disabled]::-webkit-input-placeholder, textarea.form-control[disabled]::-webkit-input-placeholder, textarea.form-control:not([size]):not([multiple])[disabled]::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #EEEEEE;
+  color: #495057;
 }
 select[disabled]::-moz-placeholder, select.form-control[disabled]::-moz-placeholder, select.form-control:not([size]):not([multiple])[disabled]::-moz-placeholder, input[disabled]::-moz-placeholder, input.form-control[disabled]::-moz-placeholder, input.form-control:not([size]):not([multiple])[disabled]::-moz-placeholder, textarea[disabled]::-moz-placeholder, textarea.form-control[disabled]::-moz-placeholder, textarea.form-control:not([size]):not([multiple])[disabled]::-moz-placeholder {
   /* Firefox 19+ */
-  color: #EEEEEE;
+  color: #495057;
 }
 select[disabled]:-ms-input-placeholder, select.form-control[disabled]:-ms-input-placeholder, select.form-control:not([size]):not([multiple])[disabled]:-ms-input-placeholder, input[disabled]:-ms-input-placeholder, input.form-control[disabled]:-ms-input-placeholder, input.form-control:not([size]):not([multiple])[disabled]:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, textarea.form-control[disabled]:-ms-input-placeholder, textarea.form-control:not([size]):not([multiple])[disabled]:-ms-input-placeholder {
   /* IE 10+ */
-  color: #EEEEEE;
+  color: #495057;
 }
 select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholder, select.form-control:not([size]):not([multiple])[disabled]:-moz-placeholder, input[disabled]:-moz-placeholder, input.form-control[disabled]:-moz-placeholder, input.form-control:not([size]):not([multiple])[disabled]:-moz-placeholder, textarea[disabled]:-moz-placeholder, textarea.form-control[disabled]:-moz-placeholder, textarea.form-control:not([size]):not([multiple])[disabled]:-moz-placeholder {
   /* Firefox 18- */
-  color: #EEEEEE;
+  color: #495057;
 }
 
 .datepicker input + button {
