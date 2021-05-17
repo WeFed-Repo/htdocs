@@ -3,16 +3,16 @@
     <div class="row">
 	    <div class="col-sm-12">
             <div class="list-icon-wrapper to-right">
-                <div class="text-with-icon">
+               <div class="text-with-icon">
                     <a href="#">
-                        <span class="icon icon-trash_filled" title="icon-trash_filled"></span>
-                        <span class="no-mobile-label">Rifiuta pratica</span>
+                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
+                        <span class="hidden-xs">Contatti</span>
                     </a>
                 </div>
                 <div class="text-with-icon">
                     <a href="#">
-                        <span class="icon icon-numeroverde_desktop" title="icon-numeroverde_desktop"></span>
-                        <span class="no-mobile-label">Contatti</span>
+                        <span class="icon icon-trash_filled" title="icon-trash_filled"></span>
+                        <span class="hidden-xs">Rifiuta pratica</span>
                     </a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
         <div class="col-sm-2">
             <!-- Icon with text -->
             <div class="list-icon-wrapper to-right hidden-xs">
-                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>PDF</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span>PDF</a></div>
             </div>
             <div class="list-icon-wrapper visible-xs">
                 <div class="text-with-icon"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image pdf"></span>NOME_DOCUMENTO_1_DA_VISIONARE</a></div>

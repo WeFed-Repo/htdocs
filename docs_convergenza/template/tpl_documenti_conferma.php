@@ -26,10 +26,10 @@
 	    <div class="col-sm-12">
             <div class="list-icon-wrapper not-inline">
                 <h3>RIEPILOGO DOCUMENTI</h3>
-                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_1_Da_Firmare</a></div>
-                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_2_Da_Firmare</a></div>
-                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_3_Da_Firmare</a></div>
-                <div class="text-with-icon"><a href="#"><span class="image pdf"></span>Nome_Documento_4_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span>Nome_Documento_1_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span>Nome_Documento_2_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span>Nome_Documento_3_Da_Firmare</a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span>Nome_Documento_4_Da_Firmare</a></div>
             </div>
         </div>
     </div>
