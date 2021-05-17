@@ -8955,17 +8955,81 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* ## List Container ## */
 .list-icon-wrapper {
     margin-bottom: 30px;
-}
 
-.list-icon-wrapper.not-inline .text-with-icon{
-    margin-bottom: 15px;
 }
 
 /* ## Text with icon Element ## */
 .text-with-icon {
     position: relative;
-    width: fit-content;
+    padding-left:25px;
+    width:auto;
+    line-height:20px;
+    display:inline-block;
+    margin-right:15px;
+    padding-top:1px;
+    vertical-align:top;
 }
+.text-with-icon:last-child {
+    margin-right:0;
+}
+
+.text-with-icon a {
+    color: #00a592;
+    text-decoration:underline;
+}
+
+.text-with-icon .ellipsis {
+    display:inline-block;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:100%;
+}
+
+.text-with-icon a.dark, .text-with-icon a .dark {
+    color: #202d50;
+    text-decoration:underline;
+}
+
+.text-with-icon .image-icon {
+    width:20px;
+    height:20px;
+    background-size:contain;
+    display:block;
+    background-repeat:no-repeat;
+}
+
+.text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
+.text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
+
+/* Declinazione tipo "elenco" */
+.list-icon-wrapper.not-inline {
+    margin-bottom:5px;
+}
+.list-icon-wrapper.not-inline .text-with-icon{
+    margin-bottom: 15px;
+    clear:both;
+    width:100%;
+    margin-right:0;
+}
+
+/* Allineamento a destra */
+.list-icon-wrapper.to-right {
+    text-align:right;
+}
+
+/* Icona a destra */
+.text-with-icon.right-icon {
+    width:auto;
+    padding-left:0;
+    padding-right:25px;
+}
+
+.text-with-icon.right-icon .icon, .text-with-icon.right-icon .image-icon {right:0; left: auto;} 
+.text-with-icon.right-icon .image-icon {background-position: top right}
+
+/* Elenco  */
+/*
 
 .text-with-icon a {
     cursor:pointer;
@@ -9019,7 +9083,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     text-transform: uppercase;
 }
 
-/* Change Positions */
+
 .text-with-icon.right-icon a {
     padding-left:0;
     padding-right:24px;
@@ -9041,7 +9105,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     right:auto
 } 
 
-/* casistica con il tooltip*/
 .text-with-icon.right-icon.with-tooltip .linker,.text-with-icon.right-icon.with-tooltip .text {
     display: inline-block;
 }
@@ -9057,12 +9120,11 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon.with-tooltip .image, .text-with-icon.with-tooltip .glyph, .text-with-icon.with-tooltip .icon {
     position: relative;
 }
-/* fit minimo di contenuto */
 .text-with-icon.with-tooltip {
     width: min-content;
 }
 
-/* Text-with-Icon Element right float*/
+
 .list-icon-wrapper.to-right, .list-icon-wrapper.to-right .text-with-icon {
     float: right;
 }
@@ -9074,7 +9136,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     margin-right: 0px;
 }
 
-/* Text-with-Icon Element left float*/
 .list-icon-wrapper.to-left, .list-icon-wrapper.to-left .text-with-icon {
     float: left;
 }
@@ -9086,9 +9147,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     margin-left: 0px;
 }
 
-/* Change Texts */
 .text-with-icon a {
-    /*font-size: 16px;*/
     text-decoration: underline;
     color: #0e977f;
     padding-left: 24px;
@@ -9097,14 +9156,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     text-decoration: none
 }
 .text-with-icon .text {
-    /*font-size: 16px;*/
     font-weight: bold;
     text-decoration: none;
     padding-left: 26px;
     color: #202d50;
 }
 
-/* ## Declinazione All Link ## */
 .text-with-icon .underline {
     text-decoration: underline;
 }
@@ -9125,8 +9182,11 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     overflow: hidden;
 }
 
-/* Casistiche immagine text-with-icon */
-.text-with-icon .image.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
+*/
+
+
+/* Iconcine immagine */
+.text-with-icon .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
 
 /* Casistica con icona fissa in alto */
 .text-with-icon.pinned a, .text-with-icon.pinned .linker{
