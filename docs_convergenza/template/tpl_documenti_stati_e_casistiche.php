@@ -342,7 +342,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -378,7 +378,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -531,7 +531,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -567,7 +567,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -986,7 +986,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                            <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1022,7 +1022,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1057,7 +1057,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1178,7 +1178,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1214,7 +1214,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                            <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1249,7 +1249,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>

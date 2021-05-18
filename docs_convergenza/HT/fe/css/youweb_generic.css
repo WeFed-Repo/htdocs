@@ -9034,7 +9034,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     background-repeat:no-repeat;
     margin:0 auto;
 }
-
+.group-element .image-icon {
+    width:15px;
+    height:15px;
+}
 
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
@@ -9196,7 +9199,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     height: 10px; 
     left:11px; 
     top: 8px; 
-    background-color:#0e977f; 
+    background-color:#00a11a; 
     border-radius:5px;
     z-index:1;
 }
@@ -9207,7 +9210,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     height: 40px; 
     left:15px; 
     top: -30px; 
-    background-color:#0e977f;
+    background-color:#00a11a;
 }
 
 .accord-content .group-wrapper.with-spunta{
