@@ -9403,9 +9403,10 @@ p.note.to-right{
 .no-mobile-label{
     display:auto;
 }
-a.no-underline {
+.no-underline {
     text-decoration:none!important
 }
+
 @media only screen and (max-width: 767px) {
     .documentTitleContainer, .no-mobile-label{
         display:none;
