@@ -4780,6 +4780,11 @@ $.fn.extend({
                 var pcont = tb.parents(".bootstrap-table").find("ul.pagination");
                 pcont.find(".page-total").remove();
                 pcont.find(".page-next").before(ptotal)
+
+                // Al click sugli elementi di paginazione non disabilitati riconduce in alto
+                pcont.find(".page-pre:not(.disabled) a , .page-next:not(.disabled) a").click(function(){
+                    $('html, body').scrollTop(tb.offset().top - 110);
+                })
             })
         }
         
