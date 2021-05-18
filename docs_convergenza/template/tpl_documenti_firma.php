@@ -135,10 +135,10 @@
   		<!-- Fine testo introduttivo per i bottoni -->
         <div class="btn-align-right">
   		 	<div>
+                <a type="button" href="#" class="btn btn-primary f-r-d" title="prosegui" id="btnProsegui">prosegui</a> 
+                <a type="button" href="#" class="btn btn-default f-r-d">riprendi dopo</a>
                 <a type="button" href="#" class="btn btn-default disabled" title="prosegui">riprendi dopo</a>
-                <a type="button" href="#" class="btn btn-default">riprendi dopo</a>
-  				<a type="button" href="#" class="btn btn-primary" title="prosegui" id="btnProsegui">prosegui</a>
-  			</div>
+            </div>
         </div>
     </div>
 </section>
