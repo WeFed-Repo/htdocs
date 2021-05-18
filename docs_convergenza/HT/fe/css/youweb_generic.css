@@ -7806,13 +7806,18 @@ line-height: 20px;}
 .bst .accordion-title {padding-bottom:10px;}
 
 /* Formattazioni per card-view (default 50% larghezza) */
-.bst .card-view  {display: inline-block; width: 50%;text-align:left;padding:0;margin:15px 0 0; vertical-align:top;}
-.bst .card-view:last-child {margin-bottom:15px;}
-.bst .card-view .title,.bst .card-view .value {display:inline-block;text-align:left;width:100%;padding:0;margin:0;}
+.bst.is-card-view tr td {padding:15px 10px 0;}
+.bst.is-card-view tr.detail-view-opened td {border-bottom: none !important}
+.bst.is-card-view tr.detail-row td {border-bottom: solid 1px #ddd !important}
+
+.bst .card-view  {display: inline-block; width: 50%; text-align:left;padding:0;margin:0 0 15px; vertical-align:top;}
+.bst .card-view .title,.bst .card-view .value {display:block;text-align:left;width:100%;padding:0;margin:0;}
 .bst .card-view .value {font-weight:bold}
 .bst .card-view.padding-text-with-icon, .bst .card-view .padding-text-with-icon {padding-left:25px;}
+.bst.is-card-view tr.detail-row td.padding-text-with-icon {padding-left:35px;}
 .bst .card-view.card-view-notitle .title {display:none}
 .bst .card-view-full {width:100%}
+.bst .detail-view-opened:not(.detail-row) {border-bottom:0 none !important}
 
 
 /* Formattazione header */

@@ -4794,18 +4794,26 @@ $.fn.extend({
             $(window).on("resize",function(){
                 var cvval = $(window).width()<(defaultcwwidth);
                 var tbo = tb.bootstrapTable("getOptions");
-                if (tbo.cardView != cvval) tb.bootstrapTable("toggleView");
+                if (tbo.cardView != cvval) {
+                    tb.bootstrapTable("toggleView");
+                    
+                }
             })
 
             // Formatter per cardView
             tb.on("post-body.bs.table",function(){
                 if (tb.bootstrapTable("getOptions")["cardView"] || conf.mobileCardView && $(window).width()<defaultcwwidth) {
                     // Riassembla le colonne in modo da poter rivedere come formattare tutto nella cardview
+                    tb.addClass("is-card-view");
                     $.each(conf.columns, function(i,c) {
                         if (c.cardClass) {
                             tb.find(".card-view:nth-child("+ (i+1) +")").addClass(c.cardClass)
                         }
                     })
+                }
+                else
+                {
+                    tb.removeClass("is-card-view")
                 }
             })
 
@@ -4814,7 +4822,7 @@ $.fn.extend({
         // Render della tabella
         tb.bootstrapTable("destroy");
         tb.bootstrapTable(conf);
-        return tb.removeClass("loading").addClass("bst");
+        return tb.removeClass("loading").addClass("bst " + ($(window).width()<(defaultcwwidth)? "is-card-view" : ""));
     }
 });
 

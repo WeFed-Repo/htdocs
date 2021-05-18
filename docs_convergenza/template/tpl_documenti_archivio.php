@@ -215,12 +215,13 @@ var caricaDocs = function(obj){
     if (obj.hasClass("opened")){
         // Distrugge il tr appeso ed il suo contenuto
         tr.next().remove();
+        tr.removeClass("detail-view-opened")
     }
     else
     {
         var contwrapper = $("<div>").addClass("loading");
         var exttr = $("<td>").addClass("padding-text-with-icon").attr({colspan: tr.find("td").length}).append(contwrapper);
-        tr.after($("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(exttr));
+        tr.addClass("detail-view-opened").after($("<tr>").attr({class: "detail-row "+ tr.attr("class")}).append(exttr));
         // Emulazione della chiamata per il dettaglio dei contenuti
         setTimeout(function(){
             // Esempio caricamento dei contenuti
