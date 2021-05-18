@@ -36,7 +36,7 @@
     <div class="row header-col right-space">       
         <div class="col-sm-12">
             <!-- ROW 0.1 -->
-            <div class="row">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4">
                     <h3 class="titleSection titleForm">Pratica</h3>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="col-sm-2">
                     <h3 class="titleSection titleForm">Scadenza</h3>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-lg-3 col-sm-2">
                     <h3 class="titleSection titleForm">Stato</h3>
                 </div>
                 <div class="col-sm-2">   
@@ -60,7 +60,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->                    
                     <div class="text-with-icon ">
@@ -77,7 +77,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
 
@@ -86,13 +86,13 @@
                     <span class="text ">20/03/2021</span>
                 </div>
 
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                     <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                <span class="text"><span class="dark"><strong>Nuova</strong></span></span>
+                                <span class="text no-underline"><span class="dark"><strong>Nuova</strong></span></span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
                         </div>
@@ -100,7 +100,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text"><span class="dark"><strong>Nuova</strong></span></span>
+                                <span class="text no-underline"><span class="dark"><strong>Nuova</strong></span></span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
                         </div>
@@ -251,7 +251,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 2.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon">
@@ -267,14 +267,14 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div> 
                     <span class="text ">20/03/2021</span>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                    <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
@@ -282,7 +282,7 @@
                                 <div class="light-red visible-mobile wrapper-icon-left image-icon">
                                     <span class="icon icon-close image-icon" title="icon-close" ></span>
                                  </div>
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Rifiutata da cliente</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
@@ -292,7 +292,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Rifiutata da cliente</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
@@ -436,7 +436,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 3.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ">
@@ -452,23 +452,23 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div> 
                     <span class="text ">20/03/2021</span>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                 <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
                                     <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
-                                    <span class="text">
-                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
-                                </span>
+                                    <span class="text no-underline">
+                                        <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
                         </div>
@@ -476,7 +476,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Firmata parzialmente</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
@@ -630,7 +630,7 @@
     <div class="row pract-toggle no-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 4.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ">
@@ -651,14 +651,14 @@
                     <div class="mobile-label">Scadenza</div>
                     <span class="text ">20/03/2021</span>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                 <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
                                 <span class="icon icon-check-ok_table image-icon" title=""></span>
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Sottoscritta</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
@@ -668,7 +668,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Sottoscritta</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
@@ -697,7 +697,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 1.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->                    
                     <div class="text-with-icon ">
@@ -714,7 +714,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
                     </div>
                 </div>
 
@@ -723,7 +723,7 @@
                     <span class="text ">20/03/2021</span>
                 </div>
 
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
 
                         
                         <div class="visible-xs">
@@ -731,8 +731,8 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                    <span class="text">
-                                    <span class="dark"><strong>Nuova</strong></span>
+                                    <span class="text no-underline">
+                                        <span class="dark"><strong>Nuova</strong></span>
                                      <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
@@ -743,8 +743,9 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
-                                    <span class="dark"><strong>Nuova</strong></span>
+                                <span class="text no-underline">
+                                    <span class="dark no-underline"><strong>Nuova</strong></span>
+                                    <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
@@ -894,7 +895,7 @@
     <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 6.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ">
@@ -910,14 +911,14 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div> 
                     <span class="text ">20/03/2021</span>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                 <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
@@ -925,7 +926,7 @@
                                 <div class="light-red visible-mobile wrapper-icon-left image-icon">
                                     <span class="icon icon-close image-icon" title="icon-close" ></span>
                                  </div>
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Revocata dal gestore</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
@@ -935,7 +936,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Revocata dal gestore</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
@@ -1080,7 +1081,7 @@
    <div class="row pract-toggle boxed">       
         <div class="col-sm-12">
             <!-- ROW 7.1 -->
-            <div class="row row-eq-height pract-toggle-head right-space">
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
                 <div class="col-sm-4 col-xs-12 ellips">
                     <!-- Text with Icon + sub-text -->
                     <div class="text-with-icon ">
@@ -1096,14 +1097,14 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div class="mobile-label">Scadenza</div> 
                     <span class="text ">20/03/2021</span>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
                     <!-- Esempio text-with-icon complesso -->
                     <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
@@ -1111,7 +1112,7 @@
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
                                 <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Firmata parzialmente</strong></span>
                                     <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
@@ -1123,8 +1124,9 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text">
+                                <span class="text no-underline">
                                     <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>

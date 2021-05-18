@@ -7169,9 +7169,15 @@ span.paddingLeft {
     display: flex;
     align-items: center;
     /*-ms-flex-pack: center;*/
-
 }
+@media screen and (min-width: 768px) {
+.alignItemCenter-desktop {
 
+    display: flex;
+    align-items: center;
+    /*-ms-flex-pack: center;*/
+}
+}
 .polizzeAttive h3{
     margin-bottom: 0px;
     margin-left: 15px;
