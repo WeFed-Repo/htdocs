@@ -279,8 +279,8 @@
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
-                                <div class="light-red visible-mobile wrapper-icon-left image-icon">
-                                    <span class="icon icon-close image-icon" title="icon-close" ></span>
+                                <div class="visible-mobile wrapper-icon-left">
+                                    <span class="image-icon stato-ko" title="rifiutata"></span>
                                  </div>
                                 <span class="text no-underline">
                                     <span class="dark"><strong>Rifiutata da cliente</strong></span>
@@ -303,8 +303,8 @@
                 
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                     <div class="center-wrapper light-red visible-desktop">
-                        <span class="icon icon-close" title="icon-close" ></span>
+                     <div class="center-wrapper visible-desktop">
+                        <span class="image-icon stato-ko" title="rifiutata"></span>
                     </div>
                 </div>
                 
@@ -342,7 +342,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -378,7 +378,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -465,7 +465,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                    <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
+                                    
                                     <span class="text no-underline">
                                         <span class="dark"><strong>Firmata parzialmente</strong></span>
                                     </span>
@@ -531,7 +531,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -567,7 +567,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok" title="sottoscritta"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -657,7 +657,9 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                <span class="icon icon-check-ok_table image-icon" title=""></span>
+                                <div class="visible-mobile wrapper-icon-left">
+                                    <span class="image-icon stato-ok" title="sottoscritta"></span>
+                                 </div>
                                 <span class="text no-underline">
                                     <span class="dark"><strong>Sottoscritta</strong></span>
                                 </span>
@@ -677,8 +679,8 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="center-wrapper green visible-desktop">
-                        <span class="icon icon-check-ok_table" title=""></span>
+                    <div class="center-wrapper visible-desktop">
+                        <span class="image-icon stato-ok" title="sottoscritta"></span>
                     </div>
                 </div>
 
@@ -923,8 +925,8 @@
                         <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
-                                <div class="light-red visible-mobile wrapper-icon-left image-icon">
-                                    <span class="icon icon-close image-icon" title="icon-close" ></span>
+                                <div class="visible-mobile wrapper-icon-left">
+                                    <span class="image-icon stato-ko" title="revocata"></span>
                                  </div>
                                 <span class="text no-underline">
                                     <span class="dark"><strong>Revocata dal gestore</strong></span>
@@ -945,8 +947,8 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                     <div class="center-wrapper light-red visible-desktop">
-                        <span class="icon icon-close" title="icon-close" ></span>
+                     <div class="center-wrapper visible-desktop">
+                        <span class="image-icon stato-ko" title="revocata"></span>
                     </div>
                 </div>
                
@@ -984,7 +986,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                            <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1020,7 +1022,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1055,7 +1057,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1111,7 +1113,9 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
+                                <div class="visible-mobile wrapper-icon-left">
+                                    <span class="image-icon stato-wait" title="in attesa"></span>
+                                 </div>
                                 <span class="text no-underline">
                                     <span class="dark"><strong>Firmata parzialmente</strong></span>
                                     <br>
@@ -1136,8 +1140,8 @@
                     <!-- Fine esempio text-with-icon complesso -->
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                     <div class="center-wrapper visible-desktop">
-                        <span class="glyph glyph-ico_clock_validate" title=""></span>
+                    <div class="center-wrapper visible-desktop">
+                        <span class="image-icon stato-wait" title="in attesa"></span>
                     </div>
                 </div>
             </div>
@@ -1174,7 +1178,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1210,7 +1214,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                            <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1245,7 +1249,7 @@
                                     <div class="col-xs-2 col-sm-3 noPaddingMob">                           
                                         <div class="group-wrapper  with-spunta">
                                             <div class="group-element">
-                                                <span class="icon icon-check_ok"></span>
+                                                <span class="image-icon stato-ok"></span>
                                             </div>
                                         </div>
                                     </div>
