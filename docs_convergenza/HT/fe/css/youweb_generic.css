@@ -8969,6 +8969,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     padding-top:1px;
     vertical-align:top;
     max-width: 100%;
+    text-align: left;
 }
 .text-with-icon:last-child {
     margin-right:0;
@@ -8986,19 +8987,31 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     white-space: nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    width:100%;
+    max-width:100%;
 }
 
+.text-with-icon .text {    
+    width:auto;
+    float:left;
+    clear:both;
+}
+
+
 .text-with-icon a .text {
-    text-decoration:underline
+    text-decoration:underline;
 }
 
 
 .text-with-icon .sub-text {font-size:12px; 
     text-decoration:none !important;
     color: #202d50;
-    display:inline-block;
+    float:left;
+    clear:both;
     line-height:16px;
+}
+.text-with-icon .sub-text::before {
+    content: "";
+    display:block;
 }
 
 .text-with-icon a.dark, .text-with-icon a .dark {

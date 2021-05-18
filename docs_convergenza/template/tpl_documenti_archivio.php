@@ -41,7 +41,7 @@
                 <!-- label dinamica -->
                 <div class="opened-hidden">
                     <h3 class="titleSection titleForm" id="tutteLePratiche">Tutte le pratiche</h3>
-                    <div class="text-with-icon" id="rimuoviFiltri" style="display:none"><a><i class="icon icon-close_inverted_fill"></i>Rimuovi filtri selezionati</a></div>
+                    <div class="text-with-icon" id="rimuoviFiltri" style="display:none"><a><i class="icon icon-close_inverted_fill"></i><span class="text">Rimuovi filtri selezionati</span></a></div>
                 </div>
                 <h3 class="titleSection titleForm opened-visible">Cerca pratica</h3>
                 
@@ -170,7 +170,7 @@ var tableFormat = {
 
             // Se e' un singolo PDF...
             if (row.pdfurl) {
-                formattedval = '<div class="text-with-icon"><a href="'+ row.pdfurl +'" target="_blank"><span class="image-icon pdf"></span><span class="text underline">'+val+'</span></a></div>';
+                formattedval = '<div class="text-with-icon"><a href="'+ row.pdfurl +'" target="_blank"><span class="image-icon pdf"></span><span class="text">'+val+'</span></a></div>';
             }
             else
             {
@@ -179,7 +179,7 @@ var tableFormat = {
                     $("<a>").attr("aria-expanded", "false").addClass("linker").append(
                         $("<i>").addClass("icon icon-arrow_down"),
                         $("<i>").addClass("icon icon-arrow_up"),
-                        $("<span>").addClass("dark ellipsis").append($("<b>").html(val.toUpperCase())),
+                        $("<span>").addClass("text dark ellipsis").append($("<b>").html(val.toUpperCase())),
                         $("<span>").addClass("sub-text ellipsis").html(row.codpratica)
                     ).attr({"onclick":"caricaDocs(this)","data-codpratica":row.codpratica, "data-nomepratica": val.toUpperCase()})
                 );
@@ -192,7 +192,7 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon"><a data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span>'+val+'</a></div>'
+                val = '<div class="text-with-icon"><a data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
             }
             return val;
         },
@@ -339,7 +339,7 @@ $(function(){
 
 <!-- Informazioni sullo stato delle pratiche -->
 <section class="visible-xs">
-    <div class="text-with-icon right-icon"><a data-toggle="modal" data-target="#modaleInfo">Informazioni sugli stati delle pratiche<i class="icon icon-ico_help_filled_tab"></i></a></div>
+    <div class="text-with-icon right-icon"><a data-toggle="modal" data-target="#modaleInfo"><span class="text">Informazioni sugli stati delle pratiche</span><i class="icon icon-ico_help_filled_tab"></i></a></div>
 </section>
 <!-- Fine informazioni sullo stato delle pratiche -->
 <table class="loading" id="tableArchivio"></table>
