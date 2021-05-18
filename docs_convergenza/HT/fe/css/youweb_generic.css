@@ -8968,6 +8968,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     margin-right:15px;
     padding-top:1px;
     vertical-align:top;
+    max-width: 100%;
 }
 .text-with-icon:last-child {
     margin-right:0;
@@ -8997,9 +8998,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .text-with-icon a.dark, .text-with-icon a .dark {
     color: #202d50;
+}
+.text-with-icon a.dark:not(.no-underline), .text-with-icon a:not(.no-underline) .dark {
     text-decoration:underline;
 }
-
 .text-with-icon .image-icon {
     width:20px;
     height:20px;
@@ -9011,6 +9013,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
+.visible-xs  .text-with-icon {padding-left:0}
+.visible-xs  .text-with-icon .image-icon + .text {padding-left:26px;display:inline-block}
 
 /* Declinazione tipo "elenco" */
 .list-icon-wrapper.not-inline {
@@ -9069,7 +9073,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .header-col.right-space{
     padding-right:60px;
-}  
+} 
+.header-col.right-space .row .col-sm-4:first-child h3 {
+    padding-left:20px;
+}
 
 .ellips {
     max-width: 100%;
@@ -9081,8 +9088,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .pract-toggle .right-space {
     padding-right:60px; 
     position:relative;
-}
 
+}
+.pract-toggle .right-space .ellips {
+    position:relative;
+    left:-5px;
+}
 .pract-toggle .wrapper-icon-fixed {
     position:absolute; 
     right:20px; 
@@ -9115,7 +9126,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /* ## Bullet Route ## */
 .accord-content .history-elements {
-    padding-left:15px;
+    padding-left:22px;
 }
 
 .accord-content .history-element{
@@ -9141,13 +9152,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 
 .accord-content .history-element.inactive .bullet, .accord-content .history-element.inactive .bullet-route {
-    background-color:#EBEDEE;
+    background-color: #ccc;
 }
 .accord-content .history-element a {
     line-height: 20px;
 }
 .accord-content .history-element.inactive a { 
-    color: #202d50;
+    color: #7F7F7F;
 }
 
 .accord-content .history-elements>*:first-child .bullet-route{
@@ -9197,6 +9208,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .pract-toggle-head .btn {
     min-width: 127px;
 }
+
 @media only screen and (max-width: 767px) {
     .header-col{
         display:none;
@@ -9431,6 +9443,7 @@ a.no-underline {
 .pdf-container iframe {border:solid 1px #cacaca}
 
 /*tpl in corso */
+/*
 .row.row-eq-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9443,13 +9456,14 @@ a.no-underline {
     justify-content: center;
     flex-direction: column;
   }
-  
+  */
   .row.boxed {
       border: 1px solid #c1c1c1;
-      padding-top: 6px;
-      padding-bottom: 6px;
+      padding-top: 15px;
+      padding-bottom: 8px;
       margin-bottom: 5px;
       min-height: 51px;
+      margin-bottom:14px;
   }
   
  

@@ -9,9 +9,10 @@
     </div>
 	<div class="separator"></div>
 </div>
+
+<!---INIZIO CONTENUTI PER IL CONTENT --->
 <div class="panel-nofill">
-    <!--CARTA VERDE -->
-    <section id="cartaVerde">
+    <section>
         <div class="box-generico">
             <div class="row">
                 <div class="col-sm-4"><br><img src="/common/fe/img/img_carta_db.jpg" alt="carta Debit Business"></div>
@@ -132,4 +133,4 @@
      </p>
     </section>
 </div>
-
+<!---FINE CONTENUTI PER IL CONTENT --->

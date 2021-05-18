@@ -67,7 +67,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="icon icon-arrow_up" title="icon-arrow_up"></span>
-                            <span class="text underline ellipsis dark">NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1</span>
+                            <span class="text underline ellipsis dark"><strong>NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1 NOME_PRATICA_UNIVOCO_1</strong></span>
                             <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
@@ -87,17 +87,25 @@
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    
-                    <div class="text-with-icon right-icon with-tooltip">
-                        <a class="linker">
-                            <div><span class="text transform-uppercase">Nuova</span></div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
-                        </a>
+                    <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <!-- immagine di stato-->
+                                <span class="text"><span class="dark"><strong>Nuova</strong></span></span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
                     </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text"><span class="dark"><strong>Nuova</strong></span></span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
+                    </div>
+                   
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
@@ -250,7 +258,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="icon icon-arrow_up" title="icon-arrow_up"></span>
-                            <span class="underline ellipsis dark">NOME_PRATICA_UNIVOCO_2NOME_PRATICA_UNIVOCO_2NOME_PRATICA_UNIVOCO_2</span>
+                            <span class="underline ellipsis dark"><strong>NOME_PRATICA_UNIVOCO_2NOME_PRATICA_UNIVOCO_2NOME_PRATICA_UNIVOCO_2</strong></span>
                             <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
@@ -267,21 +275,32 @@
                     <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                        <a class="linker">
-                            <div class="light-red visible-mobile wrapper-icon-left">
-                                <span class="icon icon-close" title="icon-close" ></span>
-                            </div>
-                            <div>
-                                <span class="text transform-uppercase">Rifiutata da cliente</span>
-                            </div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
-                        </a>
+                   <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <div class="light-red visible-mobile wrapper-icon-left image-icon">
+                                    <span class="icon icon-close image-icon" title="icon-close" ></span>
+                                 </div>
+                                <span class="text">
+                                    <span class="dark"><strong>Rifiutata da cliente</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
                     </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Rifiutata da cliente</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fine esempio text-with-icon complesso -->
+                
                 </div>
                 <div class="col-sm-2 col-xs-12">
                      <div class="center-wrapper light-red visible-desktop">
@@ -424,7 +443,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="icon icon-arrow_up" title="icon-arrow_up"></span>
-                            <span class="text underline">NOME_PRATICA_UNIVOCO_3</span>
+                            <span class="text underline ellipsis dark"><strong>NOME_PRATICA_UNIVOCO_3 NOME_PRATICA_UNIVOCO_3 NOME_PRATICA_UNIVOCO_3 NOME_PRATICA_UNIVOCO_3</strong></span>
                             <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
@@ -441,14 +460,30 @@
                     <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon">
-                       <a data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                            <span class="text transform-uppercase">Firmata parzialmente</span>
-                            <i class="icon icon-ico_help_filled_tab hidden-xs"></i>
-                            <i class="icon icon-ico_help_filled_tab visible-xs" data-toggle="modal" data-target="#modaleInfo"></i>
-                        </a>
+                <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <!-- immagine di stato-->
+                                    <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
+                                    <span class="text">
+                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
                     </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fine esempio text-with-icon complesso -->
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="btn-align-center visible-desktop">
@@ -601,7 +636,7 @@
                     <div class="text-with-icon ">
                         <a class="linker">
                             <span class="image-icon pdf"></span>
-                            <span class="text underline">NOME_documento</span>
+                            <span class="text underline dark ellipsis"><strong>NOME_documento NOME_documento NOME_documento NOME_documento</strong></span>
                         </a>
                     </div>
                 </div>
@@ -617,18 +652,28 @@
                     <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                       <a class="linker">
-                            <div class="green visible-mobile wrapper-icon-left">
-                                <span class="icon icon-check-ok_table"></span>
-                            </div>
-                            <div><span class="text transform-uppercase">Sottoscritta</span></div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
-                        </a>
+                <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <!-- immagine di stato-->
+                                <span class="icon icon-check-ok_table image-icon" title=""></span>
+                                <span class="text">
+                                    <span class="dark"><strong>Sottoscritta</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Sottoscritta</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
@@ -659,7 +704,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse5" role="button" aria-expanded="false" aria-controls="collapse5">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="icon icon-arrow_up" title="icon-arrow_up"></span>
-                            <span class="text underline">NOME_PRATICA_UNIVOCO_4</span>
+                            <span class="text underline dark ellipsis"><strong>NOME_PRATICA_UNIVOCO_4 NOME_PRATICA_UNIVOCO_4 NOME_PRATICA_UNIVOCO_4</strong></span>
                             <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
@@ -679,19 +724,34 @@
                 </div>
 
                 <div class="col-sm-2 col-xs-12">
+
+                        
+                        <div class="visible-xs">
                         <div class="mobile-label">Stato</div>
-                        <div class="text-with-icon right-icon with-tooltip">
-                            <a class="linker">
-                                <div>
-                                    <span class="text transform-uppercase">Nuova</span>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <!-- immagine di stato-->
+                                    <span class="text">
+                                    <span class="dark"><strong>Nuova</strong></span>
+                                     <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
-                                </div>
-                                <div>
-                                    <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                    <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                                </div>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
-                        </div>    
+                        </div>
+                    </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Nuova</strong></span>
+                                    <span class="sub-text">In attesa di cointestatario</span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
+                    </div>
+                        
                  </div>
 
                 <div class="col-sm-2 col-xs-12">
@@ -841,7 +901,7 @@
                         <a class="linker" data-toggle="collapse" href="#collapse6" role="button" aria-expanded="false" aria-controls="collapse6">
                             <span class="icon icon-arrow_down" title="icon-arrow_down"></span>
                             <span class="icon icon-arrow_up" title="icon-arrow_up"></span>
-                            <span class="text underline">NOME_PRATICA_UNIVOCO_5</span>
+                            <span class="text underline dark ellipsis"><strong>NOME_PRATICA_UNIVOCO_5 NOME_PRATICA_UNIVOCO_5 NOME_PRATICA_UNIVOCO_5</strong></span>
                             <span class="sub-text">a682002b-db58-4325-ba7d-51166868a68f</span>
                         </a>
                     </div>
@@ -858,18 +918,29 @@
                     <span class="text ">20/03/2021</span>
                 </div>
                 <div class="col-sm-2 col-xs-12">
-                    <div class="mobile-label">Stato</div>
-                    <div class="text-with-icon right-icon with-tooltip">
-                        <a class="linker">
-                            <div class="light-red visible-mobile wrapper-icon-left">
-                                <span class="icon icon-close" title="icon-close" ></span>
-                            </div>
-                            <div><span class="text transform-uppercase">Revocata dal gestore</span></div>
-                            <div>
-                                <i class="icon icon-ico_help_filled_tab visible-desktop" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte."></i>
-                                <i class="icon icon-ico_help_filled_tab visible-mobile" data-toggle="modal" data-target="#modaleInfo"></i>
-                            </div>
-                        </a>
+                <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <div class="light-red visible-mobile wrapper-icon-left image-icon">
+                                    <span class="icon icon-close image-icon" title="icon-close" ></span>
+                                 </div>
+                                <span class="text">
+                                    <span class="dark"><strong>Revocata dal gestore</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Revocata dal gestore</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
@@ -1035,23 +1106,27 @@
                 <div class="col-sm-2 col-xs-12">
                     <!-- Esempio text-with-icon complesso -->
                     <div class="visible-xs">
-                        <div>Stato</div>
+                        <div class="mobile-label">Stato</div>
                         <div class="text-with-icon">
-                            <a data-target="#modaleInfo" data-toggle="modal">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
                                 <span class="glyph glyph-ico_clock_validate image-icon v-centered" title=""></span>
-                                <span class="dark"><strong>Firmata parzialmente</strong></span>
-                                <br>
-                                <span class="sub-text">In attesa di cointestatario</span>
+                                <span class="text">
+                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <br>
+                                    <span class="sub-text">In attesa di cointestatario</span>
+                                </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
                         </div>
                     </div>
                     <div class="hidden-xs">
                         <div class="text-with-icon">
-                            <a data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="dark"><strong>Firmata parzialmente</strong></span>
-                                <span class="sub-text">In attesa di cointestatario</span>
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text">
+                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <span class="sub-text">In attesa di cointestatario</span>
+                                </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
                         </div>
