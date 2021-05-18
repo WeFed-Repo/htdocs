@@ -9026,19 +9026,21 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon a.dark:not(.no-underline), .text-with-icon a:not(.no-underline) .dark {
     text-decoration:underline;
 }
-.text-with-icon .image-icon {
+.text-with-icon .image-icon,.image-icon {
     width:20px;
     height:20px;
     background-size:contain;
     display:block;
     background-repeat:no-repeat;
+    margin:0 auto;
 }
+
 
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
 .visible-xs  .text-with-icon {padding-left:0}
-.visible-xs  .text-with-icon .image-icon + .text {padding-left:26px;display:inline-block}
+.visible-xs  .text-with-icon .wrapper-icon-left + .text {padding-left:30px;display:inline-block}
 
 /* Declinazione tipo "elenco" */
 .list-icon-wrapper.not-inline {
@@ -9078,9 +9080,10 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 
 /* Iconcine immagine */
-.text-with-icon .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
-
-
+.image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
+.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;}
+.image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");background-size: 100%;}
+.image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png");background-size: 100%;width: 30px;height: 30px;}
 /* # All Accords Header */
 .header-col{
     display:block;
