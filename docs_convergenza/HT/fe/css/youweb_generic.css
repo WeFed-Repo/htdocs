@@ -1093,7 +1093,8 @@ h1 .pager .circle {
     }
 
     .boxDefault:last-child {
-        padding-left: 15px !important
+        padding-left: 15px !important;
+        padding-right:0;
     }
    
     .boxDefault:first-child {
@@ -1127,6 +1128,7 @@ h1 .pager .circle {
 
 .boxDefault:last-child {
     border-right: 0 !important;
+   
 }
 
 .upload-wrapper input[type="file"] {
@@ -8989,9 +8991,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     color: #00a592;
     text-decoration:underline;
     cursor:pointer;
-
 }
-
+.history-element .text-with-icon a {
+    color:#00a11a;
+}
+.text-with-icon a[data-toggle="tooltip"] {
+    display: inline-block;
+}
 .text-with-icon .ellipsis {
     display:inline-block;
     white-space: nowrap;

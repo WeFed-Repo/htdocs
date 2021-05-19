@@ -73,6 +73,10 @@
 					{
 						"nome": "Costi e condizioni",
 						"tpl": "tpl_responsive_costi_condizioni_cdb.php"
+					},
+					{
+						"nome": "Pannello di controllo",
+						"tpl": "tpl_responsive_pannello_controllo_cdb.php"
 					}
 				]
 			}
