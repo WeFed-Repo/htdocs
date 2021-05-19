@@ -104,9 +104,7 @@
                 <script type="text/javascript">
                     // Inizializzazione datepickers
                     $(function(){
-                        $("#dataDal, #dataAl").datepicker({
-                            buttonImage: '/common/fe/img/pixel_trasp.gif'
-                        });
+                        $("#dataDal, #dataAl").datepicker();
                     });
                 </script>
                 <div id="dateRange" style="display:none">
@@ -115,18 +113,16 @@
                         <div class="form-field-input col-sm-6 col-xs-6">
                         <label class="control-label">Dal</label>
                         <div class="form-field">
-                            <div class="input-group">
-                                <input type="text" name="dataDal" id="dataDal" maxlength="10" class="form-control datepicker input-inline">
-                                <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
+                            <div class="datepicker-inline">
+                                <input type="text" name="dataDal" id="dataDal" maxlength="10" class="form-control datepicker">
                             </div>
                         </div>
                     </div>
                     <div class="form-field-input col-sm-6 col-xs-6">
                         <label class="control-label">Al</label>
                         <div class="form-field">
-                            <div class="input-group">
-                                <input type="text" name="dataAl" id="dataAl" maxlength="10" class="form-control datepicker input-inline">
-                                <a class="input-group-addon date btn-icon" href="#"><i class="icon icon-calendar_filled"></i></a>
+                            <div class="datepicker-inline">
+                                <input type="text" name="dataAl" id="dataAl" maxlength="10" class="form-control datepicker">
                             </div>
                         </div>
                     </div>
@@ -170,13 +166,13 @@ var tableFormat = {
 
             // Se e' un singolo PDF...
             if (row.pdfurl) {
-                formattedval = '<div class="text-with-icon"><a href="'+ row.pdfurl +'" target="_blank"><span class="image-icon pdf"></span><span class="text">'+val+'</span></a></div>';
+                formattedval = '<div class="text-with-icon"><a href="'+ row.pdfurl +'" target="_blank"><span class="image-icon pdf"></span><span class="text dark">'+val+'</span></a></div>';
             }
             else
             {
                 // Assembla l'accordion 
                 var obj = $("<div>").append(
-                    $("<a>").attr("aria-expanded", "false").addClass("linker").append(
+                    $("<a>").attr("aria-expanded", "false").append(
                         $("<i>").addClass("icon icon-arrow_down"),
                         $("<i>").addClass("icon icon-arrow_up"),
                         $("<span>").addClass("text dark ellipsis").append($("<b>").html(val.toUpperCase())),

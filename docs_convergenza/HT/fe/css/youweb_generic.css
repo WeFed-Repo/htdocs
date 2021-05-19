@@ -7796,6 +7796,7 @@ div.fixed-table-scroll-outer {
 line-height: 20px;}
 
 /* Tabella di bootstrap versione "nuova" */
+.bst tbody tr td {padding: 15px 10px}
 .bst .detail-row td {padding-top:15px;border-top: none !important;}
 .bst .detail-row div.loading {min-height:100px}
 .bst tr.no-records-found td {background: #eaeded}
@@ -7803,8 +7804,10 @@ line-height: 20px;}
 /* Trattamento text-with-icon */
 .bst .padding-text-with-icon {padding-left:35px;}
 .bst .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
-.bst .text-with-icon {line-height:16px;}
+.bst .text-with-icon {line-height:16px;min-height:20px;}
+.bst .text-with-icon .sub-text {font-size:11px; font-weight: normal !important}
 .bst .accordion-title {padding-bottom:10px;}
+.bst.is-card-view tr.no-records-found td {padding:15px 8px}
 
 /* Formattazioni per card-view (default 50% larghezza) */
 .bst.is-card-view tr td {padding:15px 10px 0;}
@@ -7813,7 +7816,7 @@ line-height: 20px;}
 
 .bst .card-view  {display: inline-block; width: 50%; text-align:left;padding:0;margin:0 0 15px; vertical-align:top;}
 .bst .card-view .title,.bst .card-view .value {display:block;text-align:left;width:100%;padding:0;margin:0;}
-.bst .card-view .value {font-weight:bold}
+.bst .card-view .value {font-weight:bold; padding-right:5px;}
 .bst .card-view.padding-text-with-icon, .bst .card-view .padding-text-with-icon {padding-left:25px;}
 .bst.is-card-view tr.detail-row td.padding-text-with-icon {padding-left:35px;}
 .bst .card-view.card-view-notitle .title {display:none}
@@ -9733,6 +9736,25 @@ a.box-inline-text {
     .mobile-switchable.opened .mobile-switchable-form .btnWrapper .btn-align-left:last-child:first-child {width:100%}
 }
 
+/* Correttive per datepicker */
+.datepicker-inline {width: 150px; max-width:100%; cursor:pointer;position:relative;}
+.datepicker-inline input.form-control {padding-right: 35px; cursor:pointer;}
+.datepicker-inline::after {content: "";
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    background: transparent url(/HT/fe/img/calendar.png) no-repeat center center;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+}
+.datepicker-inline img {display: none !important;}
+@media (max-width:991px) {
+    .datepicker-inline::after {top: 8px}
+}
+
+
 /* BONIFICI ORDINARI/VELOCI*/
 /*selettore conti */
 .selettore-conti .selector {
@@ -9825,4 +9847,6 @@ a.box-inline-text {
     width:auto;
 }
 }
+
+
 
