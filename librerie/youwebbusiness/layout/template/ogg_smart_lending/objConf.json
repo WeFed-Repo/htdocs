@@ -24,7 +24,7 @@
           "Max": 30000,
           "Default": 30000,
           "Step": 1000,
-          "Modificabile": true
+          "Modificabile": false
         },
         "Valuta": "euro",
         "TipoRata": {
@@ -75,7 +75,7 @@
             }
           ],
           "Default": "03",
-          "Modificabile": true
+          "Modificabile": false
         },
         "Importo": {
           "Min": 1000,
@@ -93,7 +93,7 @@
             }
           ],
           "Default": 1,
-          "Modificabile": false
+          "Modificabile": true
         },
         "DurataFinanziamento": {
           "Min": 43,

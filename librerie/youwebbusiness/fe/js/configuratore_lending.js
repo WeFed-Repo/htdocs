@@ -101,8 +101,8 @@ var FormObj = {
 
                 $.map(params.options, function (radio) {
                     return ($("<div>").addClass(radio.class ? radio.class : "col-xs-12").append(
-                        $("<div>").addClass("form-check radio").append(
-                            $("<input>").attr({ "type": "radio", disabled: params.disabled, name: params.name, value: radio.Value, checked: (params.value == radio.Value), id: params.name + "_" + radio.Value }).addClass("form-check-input").on("change", params.change),
+                        $("<div>").addClass("form-check radio " + (params.readonly? "readonly" : "")).append(
+                            $("<input>").attr({ "type": "radio", disabled: ( params.disabled || params.readonly ), name: params.name, value: radio.Value, checked: (params.value == radio.Value), id: params.name + "_" + radio.Value }).addClass("form-check-input").on("change", params.change),
                             $("<label>").attr({ for: params.name + "_" + radio.Value }).addClass("form-check-label").html(radio.Lbl)
                         )
                     ))
@@ -287,7 +287,8 @@ var startLending = function (params) {
                         "Value": "03",
                         "Lbl": "Trimestrale"
                     }
-                ]
+                ],
+                Modificabile: true
             }
         }
     }
@@ -318,10 +319,10 @@ var startLending = function (params) {
 
         ),
 
-        importoinput: $("<input>").addClass("slider-input importo").attr({ maxLength: "8", disabled: sml.disabled }).val(sml.importo).on("keyup click focus", function () { smlCleanNumber(this) }).on("blur change", smlCheckImporto),
+        importoinput: $("<input>").addClass("slider-input importo").attr({ maxLength: "8", disabled: sml.disabled || !sml.currentprod.Importo.Modificabile}).val(sml.importo).on("keyup click focus", function () { smlCleanNumber(this) }).on("blur change", smlCheckImporto),
 
         sliderimporto: $("<div>").addClass("slider").slider({
-            range: "min", min: sml.importomin, disabled: sml.disabled, max: sml.importomax, value: sml.importo, step: sml.importostep, slide: function (e, ui) {
+            range: "min", min: sml.importomin, disabled: (sml.disabled  || !sml.currentprod.Importo.Modificabile), max: sml.importomax, value: sml.importo, step: sml.importostep, slide: function (e, ui) {
                 var imp = ui.value;
                 sml.importo = imp;
                 sml.importoinput.val(imp).trigger("blur");
@@ -334,7 +335,7 @@ var startLending = function (params) {
         durataoutput: $("<span>").addClass("slider-output durata").html(sml.durata + " mesi"),
 
         sliderdurata: $("<div>").addClass("slider").slider({
-            range: "min", min: sml.duratamin, disabled: sml.disabled, max: sml.duratamax, value: sml.durata, step: sml.duratastep, slide: function (e, ui) {
+            range: "min", min: sml.duratamin, disabled: sml.disabled,  max: sml.duratamax, value: sml.durata, step: sml.duratastep, slide: function (e, ui) {
                 var dur = ui.value;
                 sml.durata = dur;
                 sml.durataoutput.html(dur + " mesi");
@@ -384,6 +385,7 @@ var startLending = function (params) {
         periodicitaradio: $("<div>").append(FormObj.radio({
             name: "periodicita",
             disabled: sml.disabled,
+            readonly: !sml.currentprod.Periodicita.Modificabile,
             change: function () {
                 sml.periodicita = $(this).val();
                 sml.resetResults();
@@ -528,10 +530,12 @@ var startLending = function (params) {
                     return (sml.durata >= prod.DurataFinanziamento.Min && sml.durata <= prod.DurataFinanziamento.Max)
                 })[0];
                 // Attiva il refresh dei campi correlati al cambio di durata (rimodulati sul default)
+                
                 // Periodicita
                 sml.periodicita = sml["currentprod"].Periodicita.Default;
                 sml.periodicitaradio.empty().append(FormObj.radio({
                     name: "periodicita",
+                    readonly: !sml.currentprod.Periodicita.Modificabile,
                     change: function () {
                         sml.periodicita = $(this).val();
                         sml.resetResults();
@@ -539,6 +543,11 @@ var startLending = function (params) {
                     value: sml.periodicita,
                     options: sml.currentprod.Periodicita.Options
                 }));
+
+                // Importo
+                sml.wrap.find(".wrapper-importo").toggleClass("disabled", !sml.currentprod.Importo.Modificabile)
+                sml.importoinput.attr("disabled", !sml.currentprod.Importo.Modificabile), 
+                sml.sliderimporto.slider("option", {"disabled": !sml.currentprod.Importo.Modificabile });
 
                 // Preammortamento
                 sml.durpreamm = sml.currentprod.DurataPreammortamento.Default;
@@ -559,7 +568,7 @@ var startLending = function (params) {
                 $("<div>").addClass("bordered-between").append(
 
                     // Range importo
-                    $("<div>").addClass("form-group flex-element").append(
+                    $("<div>").addClass("form-group flex-element wrapper-importo " + (sml.currentprod && sml.currentprod.Importo && sml.currentprod.Importo.Modificabile ? "" :"disabled")).append(
                         $("<label>").addClass("control-label").html("Trascina per aumentare/diminuire l'importo"),
                         $("<div>").addClass("editable-field-wrapper importo").append(sml.importoinput),
                         sml.sliderimporto,
