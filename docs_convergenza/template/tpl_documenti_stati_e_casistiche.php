@@ -77,7 +77,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
-                                <span class="text no-underline"><span class="dark"><strong>Nuova</strong></span></span>
+                                <span class="text no-underline"><span class="dark"><strong>NUOVA</strong></span></span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
                         </div>
@@ -100,7 +100,7 @@
                     <div class="hidden-xs">
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
-                                <span class="text no-underline"><span class="dark"><strong>Nuova</strong></span></span>
+                                <span class="text no-underline"><span class="dark"><strong>NUOVA</strong></span></span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
                         </div>
@@ -267,7 +267,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -283,7 +283,7 @@
                                     <span class="image-icon stato-ko" title="rifiutata"></span>
                                  </div>
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Rifiutata da cliente</strong></span>
+                                    <span class="dark"><strong>RIFIUTATA DA CLIENTE</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
@@ -293,7 +293,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Rifiutata da cliente</strong></span>
+                                    <span class="dark"><strong>RIFIUTATA DA CLIENTE</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
@@ -452,7 +452,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -467,7 +467,7 @@
                                 <!-- immagine di stato-->
                                     
                                     <span class="text no-underline">
-                                        <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                        <span class="dark"><strong>FIRMATA PARZIALMENTE</strong></span>
                                     </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
@@ -477,7 +477,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <span class="dark"><strong>FIRMATA PARZIALMENTE</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
@@ -636,7 +636,7 @@
                     <div class="text-with-icon ">
                         <a class="linker">
                             <span class="image-icon pdf"></span>
-                            <span class="text underline dark ellipsis"><strong>NOME_documento NOME_documento NOME_documento NOME_documento</strong></span>
+                            <span class="text underline ellipsis"><strong>NOME_documento NOME_documento NOME_documento NOME_documento</strong></span>
                         </a>
                     </div>
                 </div>
@@ -661,7 +661,7 @@
                                     <span class="image-icon stato-ok" title="sottoscritta"></span>
                                  </div>
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Sottoscritta</strong></span>
+                                    <span class="dark"><strong>SOTTOSCRITTA</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
@@ -671,7 +671,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Sottoscritta</strong></span>
+                                    <span class="dark"><strong>SOTTOSCRITTA</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
@@ -716,7 +716,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Contact center</span></a>
+                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Contact center</span></a>
                     </div>
                 </div>
 
@@ -734,7 +734,7 @@
                             <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
                                 <!-- immagine di stato-->
                                     <span class="text no-underline">
-                                        <span class="dark"><strong>Nuova</strong></span>
+                                        <span class="dark"><strong>NUOVA</strong></span>
                                      <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
@@ -746,7 +746,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark no-underline"><strong>Nuova</strong></span>
+                                    <span class="dark no-underline"><strong>NUOVA</strong></span>
                                     <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
@@ -913,7 +913,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Gestore</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -929,7 +929,7 @@
                                     <span class="image-icon stato-ko" title="revocata"></span>
                                  </div>
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Revocata dal gestore</strong></span>
+                                    <span class="dark"><strong>REVOCATA DAL GESTORE</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab v-centered right"></i>
                             </a>
@@ -939,7 +939,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Revocata dal gestore</strong></span>
+                                    <span class="dark"><strong>REVOCATA DAL GESTORE</strong></span>
                                 </span>
                                 <i class="icon icon-ico_help_filled_tab  v-centered"></i>
                             </a>
@@ -1099,7 +1099,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span>Filiale</span></a>
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -1117,7 +1117,7 @@
                                     <span class="image-icon stato-wait" title="in attesa"></span>
                                  </div>
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <span class="dark"><strong>FIRMATA PARZIALMENTE</strong></span>
                                     <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>
@@ -1129,7 +1129,7 @@
                         <div class="text-with-icon">
                             <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
                                 <span class="text no-underline">
-                                    <span class="dark"><strong>Firmata parzialmente</strong></span>
+                                    <span class="dark"><strong>FIRMATA PARZIALMENTE</strong></span>
                                     <br>
                                     <span class="sub-text">In attesa di cointestatario</span>
                                 </span>

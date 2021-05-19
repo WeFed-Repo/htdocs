@@ -9323,12 +9323,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         margin-left: 15px!important;
     }
     
-    .pract-toggle .text-with-icon.right-icon.with-tooltip .text{
+    .pract-toggle .text-with-icon  .text{
         letter-spacing: -0.5px;
         font-size:12px;
     }
    
-    .center-wrapper.visible-desktop{
+    .center-wrapper.visible-desktop {
         margin-left: 15px;
         min-width: 100px;
     }
