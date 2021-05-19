@@ -9237,7 +9237,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     text-align: center;
 }
 .pract-toggle-head .btn {
-    min-width: 127px;
+    min-width: 110px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -9355,6 +9355,14 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .pract-toggle .text-with-icon a.no-underline {
     padding-left: 0;
+}
+
+/*font-small */
+.font-small, .font-small .pract-toggle.boxed, .font-small .pract-toggle.boxed .btn {
+    font-size:12px;
+}
+.font-small, .font-small .header-col .titleSection {
+    font-size:14px;
 }
 /* ## Elementi FIRMA ## */
 

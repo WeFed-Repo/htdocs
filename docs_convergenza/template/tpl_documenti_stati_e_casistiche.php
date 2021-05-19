@@ -31,7 +31,7 @@
 </div>
 
 <!-- NEW -->
-<section>
+<section class="font-small">
     <!-- ROW 0 -->
     <div class="row header-col right-space">       
         <div class="col-sm-12">
