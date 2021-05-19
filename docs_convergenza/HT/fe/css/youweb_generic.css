@@ -3301,14 +3301,16 @@ span.spanQuestionario {
     margin-left: 3px;
 }
 
-.btnLink {
+a .btnLink,.btnLink {
     text-transform: uppercase;
     color: #00a592;
     font-weight: 600;
+}
+a i + .btnLink {
     position: relative;
     top:-5px;
+    line-height: 30px;
 }
-
 .btnLink:hover {
     color: #007c66;
 }
@@ -3316,14 +3318,6 @@ span.spanQuestionario {
 .btnLink:active {
     color: #65b7a9;
 }
-
-.btnLink {
-    text-transform: uppercase;
-    color: #00a592;
-    font-weight: 600;
-    line-height: 30px
-}
-
 
 /* WIDGET SPALLA DESTRA */
 /* Selettore rapporti */
@@ -9281,7 +9275,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         padding-left: 40px;
     }
     .pract-toggle .wrapper-icon-fixed {
-        top: 5px;
+        top: 10px;
         margin-top:0;
      }
      .btn-align-center {

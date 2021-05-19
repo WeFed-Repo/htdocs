@@ -150,3 +150,12 @@ if (trovataDifferenza)
 
 </script>
 </section>
+<!--elemento testuale bottom di warning-->
+<section>
+ 	<div class="flRight">
+		<p class="btnLink flLeft noPaddingBottom paddingRightLarge">NON RICONOSCI UN MOVIMENTO?</p> 
+		<p class="flLeft">Contatta il servizio di assistenza Nexi al numero XXX XXX XXX</p>
+	</div>
+	<br class="clear">
+</section>
+<hr>
