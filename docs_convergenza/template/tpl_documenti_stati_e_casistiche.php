@@ -13,7 +13,20 @@
 </section>
 
 
-
+<script type="text/javascript">
+    // Esempio handler modale con contenuto dinamico (previsti Tipo "cc" e "fg")
+    var apriModaleContatti = function(tipo){
+        getAjaxModal({
+            url: "parts/modali_contenuti_contatti.php",
+            method: "POST",
+            title: "Contattaci",
+            class: "modal-footer-fixed",
+            data: {
+                tipocontatto: tipo
+            }
+        });
+    }
+</script>
 
 
 <div class="section outerWrapperTab no-backgr">
@@ -77,7 +90,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                         <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
 
@@ -267,7 +280,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -452,7 +465,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -716,7 +729,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a data-toggle="modal" data-target="#modaleContatti2" href="javascript:;" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Contact center</span></a>
+                         <a onclick="apriModaleContatti('cc')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Contact center</span></a>
                     </div>
                 </div>
 
@@ -913,7 +926,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -1099,7 +1112,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
+                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -1288,7 +1301,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
+                        <a class="no-underline"onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">

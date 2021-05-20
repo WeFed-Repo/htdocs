@@ -133,7 +133,7 @@ var setZindexModal = function () {
     var nZindex = getNextHighestZindex();
     $('.modal').on('show.bs.modal', function () {
         $(this).css('z-index', nZindex + 1);
-        resizeModalDevice($(this));
+        if (!$(this).hasClass("modal-footer-fixed")) resizeModalDevice($(this));
     })
         .on('shown.bs.modal', function () {
             $('.modal-backdrop').css('z-index', nZindex);
@@ -1659,6 +1659,68 @@ var getModal = function (obj) {
     }
     return (modalOl);
 };
+
+/* Innesca modali dinamiche che restituiscono un HTML */
+/*
+es: getAjaxModal({
+
+    // Crea la modale coi parametri previsti
+    title: "Titolo della modale", <-- Titolo della modale
+    id: "idmodale", <!-- Id della modale [opzionale],
+    class: "classecss". <!-- Classi addittive per la modale [opzionali]
+    url : "path/url.html", <- Url di destinazione 
+    data: { par1: "aaaa"}, <!-- Parametri da passare [opzionali]
+    method: "POST", <!-- Metodo per il passaggio dei dati [default = get],
+    callback: function() {} <!-- Funzione che viene invocata a valle del caricamento [opzionale]
+})
+*/
+var getAjaxModal = function(params) {
+
+    var modalobj = {
+        class : "modal fade " + (params.class? " "+ params.class: ""),
+        id: (params.id) ? params.id : "modalajax_"+ parseInt(Math.random()*9999999999),
+        ajaxmethod: params.method? params.method : "GET",
+        ajaxdata: params.data? params.data : {}
+    };
+    var modalHeader = $("<div>").addClass("modal-header").append(
+        $("<a>").addClass("close btn-icon").attr({
+            "data-dismiss": "modal",
+            "aria-label": "close"
+        }).append($("<i>").addClass("icon icon-alert_error_fill icon-2x")), $("<h2>").addClass("modal-title").attr("id", modalobj.id + "Label").html(params.title? params.title : ""));;
+    var modalCont = $("<div>").addClass("loading").css("minHeight","150px");
+
+    var modalToOpen = $("<div>").addClass(modalobj.class).attr({
+        "id": modalobj.id,
+        "tabindex": -1,
+        "role": "dialog",
+        "aria-labelledby": modalobj.id + "Label"
+    }).append(
+        $("<div>").addClass("modal-dialog").append(
+            $("<div>").addClass("modal-content").append(modalHeader, modalCont)
+        )
+    );
+
+    $.ajax({
+        url: params.url,
+        method: modalobj.ajaxmethod,
+        dataType: "html",
+        data: modalobj.ajaxdata,
+        success: function(html) {
+            // Dati recuperati
+            modalCont.replaceWith(html);
+            if (params.callback) params.callback();
+            modalCont.removeClass("loading")
+        },
+        error: function(){
+            // Messaggio di errore nel recupero dati
+            modalCont.html(
+                "<h3>Attenzione!</h3>"+
+                "<p>Si e' verificato un errore in fase di recupero del messaggio.<br>Chiudere la finestra e riprovare.</p>"
+            ).removeClass("loading").addClass("modalajax-error");
+        }
+    })
+    modalToOpen.modal("show").on("hidden.bs.modal",function(){$(this).remove()})
+}
 
 /* Lettura e scrittura localstorage o cookies */
 // Scrittura/lettura dati su localStorage o cookie statico
@@ -4669,6 +4731,7 @@ var scrollToAnchor = function() {
 }
 
 /*FUNZIONE PER FISSARE IL FOOTER DEGLI OVERLAYER IN MOBILE */
+/*
 var renderOverlayerFooterFixed = function() {
    var modalToResize = $('.modal-footer-fixed');
    if(modalToResize.length>0) {
@@ -4702,6 +4765,7 @@ var renderOverlayerFooterFixed = function() {
         }
     }
 }
+*/
 
 // Embed documenti in overlayer Solo su Mobile
 var showMobilePdf = function(url){
@@ -4859,7 +4923,7 @@ var mobileSwitchable = function() {
 
 //inizializzazioni al load della pagina
 $(function () {
-    renderOverlayerFooterFixed();
+    // renderOverlayerFooterFixed();
     setZindexModal();
     findSmartDevice();
     iconMultilayer();

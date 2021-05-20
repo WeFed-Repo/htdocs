@@ -984,9 +984,16 @@ table tr.odd td {
     font-size: 1.4em;
 }
 
+.modal-dialog .modalajax-error {
+    padding: 30px;
+    color:#d00;
+}
+
 .modal-bottom {
     padding-bottom: 20px;
 }
+
+/* Footer fixed
 @media screen and (max-width: 767px) {
     .modal-footer-fixed .modal-footer {
         position: fixed;
@@ -994,6 +1001,58 @@ table tr.odd td {
         background-color:#fff;
         top:100%;
     }
+    .modal-footer-fixed .modal-footer .align-right {
+        text-align:center;
+    }
+}
+*/
+
+@media screen and (max-width: 767px) {
+
+    .modal-footer-fixed {
+        width: 100% !important;
+    }
+
+    .modal-footer-fixed .modal-dialog{
+        width:100%;
+        height:100%
+    }
+
+    .modal-footer-fixed .modal-content {
+        position: relative;
+        height:100% !important;
+        max-height:100% !important;
+        width:100%;
+    }
+
+    .modal-footer-fixed .modal-body {
+        display:block;
+        width:100%;
+        max-height: calc(100% - 110px) !important;
+        overflow-y:auto;
+    }
+
+    .modal-footer-fixed .modal-header {
+        height:60px; overflow:hidden;
+    }
+    .modal-footer-fixed .modal-title {
+        padding: 7px 0 0;
+        letter-spacing: 0;
+        font-size: 17px;
+        padding-right: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        max-width: calc(100% - 8px);
+    }
+    .modal-footer-fixed .modal-footer {
+        position: fixed;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+    }
+    
     .modal-footer-fixed .modal-footer .align-right {
         text-align:center;
     }

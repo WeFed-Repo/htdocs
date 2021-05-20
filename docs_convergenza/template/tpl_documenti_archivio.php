@@ -188,7 +188,7 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon"><a data-toggle="modal" data-target="#modaleContatti'+ ((val=="Contact Center")? "2":"") +'"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
+                val = '<div class="text-with-icon"><a onclick="apriModaleContatti(\''+val+ '\')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
             }
             return val;
         },
@@ -242,6 +242,19 @@ var caricaDocs = function(obj){
         },500)
     }
     obj.toggleClass("opened");
+}
+
+// Esempio handler modale con contenuto dinamico
+var apriModaleContatti = function(tipo){
+    getAjaxModal({
+        url: "parts/modali_contenuti_contatti.php",
+        method: "POST",
+        title: "Contattaci",
+        class: "modal-footer-fixed",
+        data: {
+            tipocontatto: (tipo=="Contact Center") ? "cc":"fg"
+        }
+    });
 }
 
     
