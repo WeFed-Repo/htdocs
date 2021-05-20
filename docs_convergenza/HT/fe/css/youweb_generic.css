@@ -3313,11 +3313,11 @@ a i + .btnLink {
     top:-5px;
     line-height: 30px;
 }
-.btnLink:hover {
+a .btnLink:hover {
     color: #007c66;
 }
 
-.btnLink:active {
+a .btnLink:active {
     color: #65b7a9;
 }
 

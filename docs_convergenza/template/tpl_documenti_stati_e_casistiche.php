@@ -636,7 +636,7 @@
                     <div class="text-with-icon ">
                         <a class="linker">
                             <span class="image-icon pdf"></span>
-                            <span class="text underline ellipsis"><strong>NOME_documento NOME_documento NOME_documento NOME_documento</strong></span>
+                            <span class="text dark underline ellipsis"><strong>NOME_documento NOME_documento NOME_documento NOME_documento</strong></span>
                         </a>
                     </div>
                 </div>
@@ -1270,7 +1270,66 @@
         </div>
     </div> 
     <!-- END ROW 7 -->
+    
 
+
+    <!-- ROW 8 caso anatocismo -->
+   <div class="row pract-toggle boxed">       
+        <div class="col-sm-12">
+            <!-- ROW 8.1 -->
+            <div class="row row-eq-height pract-toggle-head right-space alignItemCenter-desktop">
+                <div class="col-sm-4 col-xs-12 ellips">
+                    <!-- Text with Icon + sub-text -->
+                    <div class="text-with-icon ">
+                        <span class="text ellipsis dark"><strong>LOREM IPSUM</strong></span>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Avviata da</div>
+                    <!-- Casistica Icon -->
+                    <div class="text-with-icon ">
+                        <a href="javascript:;" class="no-underline" data-toggle="modal" data-target="#modaleContatti"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="mobile-label">Scadenza</div> 
+                    <span class="text ">-</span>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-xs-12">
+                    <!-- Esempio text-with-icon complesso -->
+                    <div class="visible-xs">
+                        <div class="mobile-label">Stato</div>
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-target="#modaleInfo" data-toggle="modal">
+                                <!-- immagine di stato-->
+                               <span class="text no-underline">
+                                    <span class="dark"><strong>NUOVA</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab v-centered right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs">
+                        <div class="text-with-icon">
+                            <a class="no-underline" data-toggle="tooltip" title="Potrai iniziare la sottoscrizione della pratica una volta che il cointestatario avrà completato la sua parte.">
+                                <span class="text no-underline">
+                                    <span class="dark"><strong>NUOVA</strong></span>
+                                </span>
+                                <i class="icon icon-ico_help_filled_tab  v-centered"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fine esempio text-with-icon complesso -->
+                </div>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="btn-align-center">
+                       <a type="button" href="#" class="btn btn-primary noMargin" title="sottoscrivi">Sottoscrivi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- END ROW 8 -->
 </section>
 
 <p>Non trovi una pratica? Le pratiche <strong>vengono spostate nell’Archivio a partire dal giorno successivo</strong> la sottoscrizione, scadenza o rifiuto.</p>
