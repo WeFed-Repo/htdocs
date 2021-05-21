@@ -50,34 +50,66 @@
 </section>
 <!-- Fine box pdf -->
 <form id="firmeForm">
-<!-- NEW -->
-<section>
-    <div class="row mobile-reverse">
-        <div class="col-sm-10" id="checkDoc">
-            <!-- Confirmation -->
-            <div class="accept-wrapper">
-                <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');$('.accept-wrapper').hide();$('.accept-wrapper.accepted').show();"></i>
-                <!-- link con esempio ancora -->
-                <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE" (click per test ancoraggio pdf)</strong></span>
-                <!-- fine link con esempio ancora -->
-            </div>
-            <div class="accept-wrapper accepted" style="display:none">                
-                <i class="icon icon-spunta" title="icon-spunta"></i>
-                <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE"</strong></span>
-            </div>           	           
-        </div>
-        <div class="col-sm-2">
-            <!-- Icon with text -->
-            <div class="list-icon-wrapper to-right hidden-xs">
-                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">PDF</span></a></div>
-            </div>
-            <div class="list-icon-wrapper visible-xs">
-                <div class="text-with-icon"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image-icon pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
-            </div>
-        </div>
+    <!-- PDF per Mobile -->
+    <div class="list-icon-wrapper ">
+        <div class="text-with-icon visible-xs marginBottomMedium"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image-icon pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
     </div>
-</section>
 
+    <div class="sub-indent-mobile">
+        <section>
+            <div class="row">
+                <div class="col-sm-10 col-xs-12" id="checkDoc">
+                    <!-- Confirmation -->
+                    <div class="accept-wrapper">
+                        <i class="icon css-square" title="css-square" onclick="pdfdoc.goto('#ancora');$('.accept-wrapper').hide();$('.accept-wrapper.accepted').show();"></i>
+                        <!-- link con esempio ancora -->
+                        <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE" (click per test ancoraggio pdf)</strong></span>
+                        <!-- fine link con esempio ancora -->
+                    </div>
+                    <div class="accept-wrapper accepted" style="display:none">                
+                        <i class="icon icon-spunta" title="icon-spunta"></i>
+                        <span class="text">Ho preso visione del documento <strong>"NOME_DOCUMENTO_1_DA_VISIONARE"</strong></span>
+                    </div>           	           
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                    <!-- Icon with text -->
+                    <div class="list-icon-wrapper to-right hidden-xs">
+                        <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">PDF</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blocco firma -->
+        <section class="noMargin">
+
+        <div class="titleIndexContainer smaller">Firma <span>3</span> di <span>3</span></div>&nbsp;&nbsp;&nbsp;
+        <a class="link-text underline hidden-md hidden-lg hidden-xl" onclick="showMobilePdf('/template/statici/documento_prova.pdf#ancora');">Visualizza punto firma 3</a>
+
+        <div class="formWrapper">
+            <div class="form-group">
+                <div class="form-field-input">
+                    <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-3 no-label">
+                            <!-- Esempio campo password -->
+                            <div class="form-field password-toggle">
+                                <input type="password" value="" id="txtPassword" name="" autocomplete="off" class="form-control">
+                                <span class="toggle-pwd"></span>
+                            </div>
+                            <!-- Fine esempio campo password -->
+                        </div>
+                        <div class="col-xs-4 col-sm-9 no-label">
+                            <a type="button" href="#" class="btn btn-primary  btn-inline" title="Firma">Firma</a>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- Fine blocco firma -->
+</div>
 <!-- Signature 1-->  
 <section>         
     <div class="esito-inline">
@@ -95,36 +127,6 @@
     </div>
 </section>
 <!-- Fine signature 2-->
-
-<!-- Blocco firma -->
-<section>
-
-    <div class="titleIndexContainer">Firma <span>3</span> di <span>3</span></div>&nbsp;&nbsp;&nbsp;
-    <a class="link-text underline hidden-md hidden-lg hidden-xl" onclick="showMobilePdf('/template/statici/documento_prova.pdf#ancora');">Visualizza punto firma 3</a>
-
-    <div class="formWrapper">
-        <div class="form-group">
-            <div class="form-field-input">
-                <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
-                <div class="row">
-                    <div class="col-xs-8 col-sm-3 no-label">
-                        <!-- Esempio campo password -->
-                        <div class="form-field password-toggle">
-                            <input type="password" value="" id="txtPassword" name="" autocomplete="off" class="form-control">
-                            <span class="toggle-pwd"></span>
-                        </div>
-                        <!-- Fine esempio campo password -->
-                    </div>
-                    <div class="col-xs-4 col-sm-9 no-label">
-                        <a type="button" href="#" class="btn btn-primary  btn-inline" title="Firma">Firma</a>
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Fine blocco firma -->
 
 <section>
     <!-- Testo_010 -->

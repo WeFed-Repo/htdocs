@@ -275,6 +275,9 @@ h3>span {
     margin-bottom: 5px !important;
 }
 
+.marginBottomMedium {
+    margin-bottom: 15px !important;
+}
 
 .marginTopMedium {
     margin-top: 15px;
@@ -9446,6 +9449,13 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     font-size: 18px;
 }
 
+.titleIndexContainer.smaller {
+    font-size: 12px;
+} 
+.titleIndexContainer.smaller span {
+    font-size: 14px;
+}
+
 /* Titolo di documento sulla destra */
 .documentTitleContainer {
     padding-bottom: 5px;
@@ -9545,7 +9555,7 @@ p.note.to-right{
 }
 
 /* Pdf */
-.pdf-container, .pdf-container iframe {height:350px;width:100%; border:0 none;}
+.pdf-container, .pdf-container iframe {height:300px;width:100%; border:0 none;}
 .pdf-container iframe {border:solid 1px #cacaca}
 
 /*tpl in corso */
@@ -9911,5 +9921,7 @@ a.box-inline-text {
 }
 }
 
-
+@media (max-width:767px) {
+    .sub-indent-mobile {padding-left:25px}
+}
 
