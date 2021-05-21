@@ -458,7 +458,7 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 	{
 
 		//Caricamento eventuali parametri in loading
-		vaDiagDefaultHeight = 114;
+		// vaDiagDefaultHeight = 114;
 		//Oggetti comuni
 		vAss.css({"visibility":"hidden", "display" : "block" , "z-index" : getNextHighestZindex()});
 		$("body").prepend(vAss);
@@ -613,13 +613,12 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 		
 		vaReadHistory = function(history, historyStop)
 			{
-
-
-			// Carica tutta la history oppure la frase di benvenuto qualora questa non fosse presente
+			
+				// Carica tutta la history oppure la frase di benvenuto qualora questa non fosse presente
 			if (history!= null && history[0]!=null)
 			{
-				//Allunga gi� l'interfaccia
-				vaDiag.animate ({"height" : vaDiagDefaultHeight + "px"},300);
+				//Allunga l'interfaccia
+				// vaDiag.animate ({"height" : vaDiagDefaultHeight + "px"},300);
 				for (x=history.length-historyStop; x>=0;x--)
 				{
 					if (vaDiag.find("div:first-child").length > 0)
@@ -696,7 +695,7 @@ function vaBenvenuto() {
 	vaDiagHeight = "";
 	//Ingrandisce la casella di testo
 	vaOpen();
-	//Se occorre l'audio e questo � attivo, lo riproduce quando e se l'assistente e' disponibile
+	//Se occorre l'audio e questo e' attivo, lo riproduce quando e se l'assistente e' disponibile
 	var startMp3 = function()
 	{
 		if (vaAudioOn)

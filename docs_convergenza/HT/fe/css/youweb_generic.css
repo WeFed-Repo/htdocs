@@ -7831,7 +7831,7 @@ div.fixed-table-scroll-outer {
 }
 .bootstrap-table .th-inner.sortable.asc {background-image: url(/HT/fe/img/icon_sort_asc.png)}
 .bootstrap-table td {vertical-align:middle;}
-.bst th {vertical-align:middle !important}
+.bst thead tr th {vertical-align:middle !important;padding: 0 10px;}
 .bootstrap-table .center {text-align:center}
 .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
 .bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
@@ -9114,7 +9114,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
-.visible-xs  .text-with-icon {padding-left:0}
 .visible-xs  .text-with-icon .wrapper-icon-left + .text {padding-left:30px;display:inline-block}
 
 /* Declinazione tipo "elenco" */

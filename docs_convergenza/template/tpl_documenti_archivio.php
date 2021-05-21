@@ -188,7 +188,7 @@ var tableFormat = {
         // Formato "avviatada"
         "avviatada": function(val,row) {
             if (val !=="Cliente") {
-                val = '<div class="text-with-icon"><a onclick="apriModaleContatti(\''+val+ '\')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">'+val+'</span></a></div>'
+                val = '<div class="text-with-icon"><a onclick="apriModaleContatti(\''+val+ '\')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">'+val+'</span></a></div>'
             }
             return val;
         },
@@ -232,7 +232,7 @@ var caricaDocs = function(obj){
                                 return $("<div>").addClass("text-with-icon").append(
                                     $("<a>").attr("href",obj.url).append(
                                         $("<span>").addClass("image-icon pdf"),
-                                        obj.name
+                                        $("<span>").addClass("text dark").html(obj.name)
                                     )
                                 )
                             }))
