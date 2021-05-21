@@ -9148,6 +9148,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 .text-with-icon *[aria-expanded=false] .icon-arrow_down {
     display:block;
+    left: -3px;
+    top: 2px;
 }
 .text-with-icon *[aria-expanded=true] .icon-arrow_down {
     display:none;
@@ -9168,7 +9170,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     padding-right:60px;
 } 
 .header-col.right-space .row .col-sm-4:first-child h3 {
-    padding-left:20px;
+    padding-left:25px;
 }
 
 .ellips {
@@ -9183,10 +9185,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     position:relative;
 
 }
-.pract-toggle .right-space .ellips {
-    position:relative;
-    left:-5px;
-}
+
 .pract-toggle .wrapper-icon-fixed {
     position:absolute; 
     right:20px; 
@@ -9204,11 +9203,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 /* # Accordion Content # */
 .accord-content {
     padding: 10px 24px 0 24px;
-}
-
-.accord-content .text {
-    margin-bottom: 20px;
-    display: block;
 }
 
 .accord-content .read-more {
@@ -9300,6 +9294,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 }
 .pract-toggle-head .btn {
     min-width: 110px;
+  
 }
 
 @media only screen and (max-width: 767px) {
@@ -9378,6 +9373,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     }
   
 }
+@media screen and (min-width: 1200px) and (max-width: 1400px) { 
+    .pract-toggle-head .btn {
+        min-width: 95px;
+        padding: 11px 10px 7px 10px;
+    }
+}
 /* spostato per risoluzioni intermedie*/
 @media screen and (min-width: 768px) and (max-width: 1200px) { 
     .pract-toggle .wrapper-icon-fixed {
@@ -9400,6 +9401,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
         margin-left: 15px;
         min-width: 100px;
     }
+    
 } 
 /* # Linked Icon */
 .linked-icon .icon {
@@ -9419,11 +9421,14 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     padding-left: 0;
 }
 
-/*font-small */
-.font-small, .font-small .pract-toggle.boxed, .font-small .pract-toggle.boxed .btn {
-    font-size:12px;
+/*font-small-table */
+.font-table, .font-table .pract-toggle.boxed, .font-table .pract-toggle.boxed .btn, .font-table, .font-table .header-col .titleSection  {
+    /*font-family: 'bankFontTable', sans-serif;
+    font-weight: 500;
+    */
+    font-size: 12px;
 }
-.font-small, .font-small .header-col .titleSection {
+.font-table, .font-table .header-col .titleSection {
     font-size:14px;
 }
 /* ## Elementi FIRMA ## */
@@ -9561,7 +9566,7 @@ p.note.to-right{
   */
   .row.boxed {
       border: 1px solid #c1c1c1;
-      padding-top: 15px;
+      padding-top: 8px;
       padding-bottom: 8px;
       margin-bottom: 5px;
       min-height: 51px;

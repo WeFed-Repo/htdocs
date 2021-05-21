@@ -44,7 +44,7 @@
 </div>
 
 <!-- NEW -->
-<section class="font-small">
+<section class="font-table">
     <!-- ROW 0 -->
     <div class="row header-col right-space">       
         <div class="col-sm-12">
@@ -90,7 +90,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                         <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Gestore</span></a>
                     </div>
                 </div>
 
@@ -141,10 +141,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 1.2.1 -->
                                 <div class="row">
@@ -280,7 +280,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -328,10 +328,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 1.2.1 -->
                                 <div class="row">
@@ -465,7 +465,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -517,10 +517,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 1.2.1 -->
                                 <div class="row">
@@ -729,7 +729,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                         <a onclick="apriModaleContatti('cc')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Contact center</span></a>
+                         <a onclick="apriModaleContatti('cc')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Contact center</span></a>
                     </div>
                 </div>
 
@@ -790,10 +790,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_4</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 1.2.1 -->
                                 <div class="row">
@@ -926,7 +926,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Gestore</span></a>
+                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Gestore</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -972,10 +972,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 6.2.1 -->
                                 <div class="row">
@@ -1112,7 +1112,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
+                        <a class="no-underline" onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
@@ -1164,10 +1164,10 @@
                 <div class="col-sm-12">
                     <div class="accord-content">
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
-                        <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
                         pellentesque. Mauris turpis sapien, vestibulum a egestas ut, luctus sed justo. Aenean felis nisl, molestie id sapien 
-                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></span>
+                        <a class="read-more" href="#">VEDI DI PI&#218; ></a></p>
                         <div class="history-elements">
                             <!-- ROW 7.2.1 -->
                                 <div class="row">
@@ -1301,7 +1301,7 @@
                     <div class="mobile-label">Avviata da</div>
                     <!-- Casistica Icon -->
                     <div class="text-with-icon ">
-                        <a class="no-underline"onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text">Filiale</span></a>
+                        <a class="no-underline"onclick="apriModaleContatti('fg')"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline">Filiale</span></a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
