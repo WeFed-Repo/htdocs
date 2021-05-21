@@ -72,7 +72,7 @@
                 <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">PDF</span></a></div>
             </div>
             <div class="list-icon-wrapper visible-xs">
-                <div class="text-with-icon"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
+                <div class="text-with-icon"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image-icon pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
             </div>
         </div>
     </div>
