@@ -39,7 +39,8 @@ function recurse_copy($src,$dst) {
 				recurse_copy($src . '/' . $file,$dst . '/' . $file); 
 			} 
 			else { 
-				if(filemtime($src . '/' . $file) >= $datecheck) array_push($filelogger,$src . '/' . $file);
+				// Rimosso tracciamento changes file librerie
+				if(( filemtime($src . '/' . $file) >= $datecheck) && (strpos($src,"librerie") === false)) array_push($filelogger,$src . '/' . $file);
 				copy($src . '/' . $file,$dst . '/' . $file); 
 			} 
 		} 
@@ -64,6 +65,7 @@ foreach ($oldfolders as $id=>$value) {
 	recurse_copy($value["basefolder"],"html_statico/".$value["basefolder"]);
 }
 */
+
 
 // Scrittura changelog
 unlink("changelog.html");

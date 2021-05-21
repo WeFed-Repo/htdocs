@@ -6,6 +6,7 @@ docs_webank/wbresp
 docs_webank/wscmn
 librerie/wscmn
 librerie/youwebbusiness/node_modules
+librerie/youwebbusiness/html_statico
 .DS_Store
 *.DS_Store
 .DS_Store?
