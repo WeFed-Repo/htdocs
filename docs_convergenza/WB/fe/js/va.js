@@ -184,8 +184,6 @@ function vaAsking(domanda, history)
 		
 		// Rimuove la frase di Benvenuto se presente
 		if ($("#vaBenvenuto").length) { $("#vaBenvenuto").hide(); }
-
-		//Nasconde l'extended view e la reinizializza
 		
 		//Nasconde l'extended view e la reinizializza
 		vAss.removeClass("extended extended-opened");
@@ -346,13 +344,6 @@ function vaAsking(domanda, history)
 				vaReadHistory(vaAnswerRoot.body.history,2);
 
 				vaJsonAns = vaAnswerBody.text;
-
-				// Elaborazione codici speciali nelle risposte "in linea" di Paolo
-				/*
-				if (vaJsonAns.indexOf ("{")){
-					vaJsonAns = vaSpecialAns(vaJsonAns);
-				}
-				*/
 
 				vaInsSentence(vaJsonAns,"Paolo");
 				

@@ -1,0 +1,15 @@
+{
+    "body": {
+        "answer": null,
+        "history": [
+            {
+                "question": "Ciao",
+                "answer": "Ah, sei ancora lì! Pensavo che non ci fosse più nessuno!"
+            },
+            {
+                "question": "Ancora ciao",
+                "answer": "Ciao! Che piacere vederti!"
+            }
+        ]
+    }
+}

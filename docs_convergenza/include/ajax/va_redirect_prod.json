@@ -3,23 +3,19 @@
         "answer": {
             "emotion": null,
             "text": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>",
-            "audiopath": "/common/virtass/virtassVoice.jsp?file=20210525-160608-857_76_linear.mp3",
+            "audiopath": "/common/virtass/virtassVoice.jsp?file=20210524-150934-125_49_linear.mp3",
             "history": [
                 {
-                    "question": "Ciao",
-                    "answer": "Ah, sei ancora lì! Pensavo che non ci fosse più nessuno!"
-                },
-                {
-                    "question": "Ancora ciao",
+                    "question": "ciao",
                     "answer": "Ciao! Che piacere vederti!"
                 },
                 {
-                    "question": "bonifico",
-                    "answer": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>"
+                    "question": "scusa non ho capito",
+                    "answer": "Mmm, mi sa che non mi sto spiegando bene, allora facciamo un altro tentativo: prova a riformulare la tua domanda in modo semplice."
                 },
                 {
-                    "question": "carte",
-                    "answer": " In questa pagina puoi visualizzare tutti i dettagli e le condizioni della carta di credito; scopri i vantaggi che ti riserva Webank.\r\n <br>Scegli una carta dal menù a sinistra,  e scopri subito la soluzione migliore sulla base delle tue esigenze."
+                    "question": "ok aspetta",
+                    "answer": "Quanto vuoi tu!"
                 },
                 {
                     "question": "bonifico",
