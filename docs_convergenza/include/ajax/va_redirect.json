@@ -1,0 +1,27 @@
+{
+    "body": {
+        "answer": {
+            "emotion": null,
+            "text": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>",
+            "audiopath": "/common/virtass/virtassVoice.jsp?file=20210524-150934-125_49_linear.mp3",
+            "history": [
+                {
+                    "question": "ciao",
+                    "answer": "Ciao! Che piacere vederti!"
+                },
+                {
+                    "question": "scusa non ho capito",
+                    "answer": "Mmm, mi sa che non mi sto spiegando bene, allora facciamo un altro tentativo: prova a riformulare la tua domanda in modo semplice."
+                },
+                {
+                    "question": "ok aspetta",
+                    "answer": "Quanto vuoi tu!"
+                },
+                {
+                    "question": "bonifico",
+                    "answer": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>"
+                }
+            ]
+        }
+    }
+}

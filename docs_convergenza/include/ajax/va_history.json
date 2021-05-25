@@ -1,0 +1,19 @@
+{
+    "body": {
+        "answer": null,
+        "history": [
+            {
+                "question": "ciao",
+                "answer": "Ciao! Che piacere vederti!"
+            },
+            {
+                "question": "scusa non ho capito",
+                "answer": "Mmm, mi sa che non mi sto spiegando bene, allora facciamo un altro tentativo: prova a riformulare la tua domanda in modo semplice."
+            },
+            {
+                "question": "ok aspetta",
+                "answer": "Quanto vuoi tu!"
+            }
+        ]
+    }
+}

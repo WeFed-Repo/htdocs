@@ -598,7 +598,7 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 				vaDiagOffset = vaDiagOffset + $(vaAllQuest[x]).outerHeight();
 				if (x == vaAllQuest.length-1)
 				{
-					// se l'ultima risposta � pi� lunga dello schermo sottrae l'overflow della risposta 
+					// se l'ultima risposta e' piu' lunga dello schermo sottrae l'overflow della risposta 
 					// rispetto al resto in modo da riposizionarsi all'inizio della stessa
 					vaOffDiff = ($(vaAllQuest[x]).outerHeight()) - vaDiag.outerHeight();
 					if (vaOffDiff>0)
