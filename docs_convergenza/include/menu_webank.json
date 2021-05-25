@@ -42,6 +42,11 @@
 								"nome": "Bonifico step 1",
 								"tpl": "tpl_bonifico_ordinario_veloce_01.php",
 								"html": "vr"
+							},
+							{
+								"nome": "Bonifico step 2",
+								"tpl": "tpl_bonifico_ordinario_veloce_02.php",
+								"html": "vr"
 							}
 						]		
 					}

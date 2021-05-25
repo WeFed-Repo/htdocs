@@ -8977,11 +8977,15 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .box-feedback-bordered.alert p, .box-feedback.alert p {color:#202d50}
 .box-feedback-bordered { border-left: solid 4px #ddd; padding: 0 0 0 14px;margin-bottom:10px;}
 .box-feedback-bordered div, .box-feedback div {padding-bottom:10px}
+.box-feedback-bordered div:last-child, .box-feedback div:last-child {padding-bottom:0px}
 .box-feedback-bordered h3, .box-feedback h3 {margin-bottom:10px}
 .box-feedback-bordered p:last-child, .box-feedback p:last-child {padding-bottom:0}
 .box-feedback-bordered.success {border-color:#75c2b8;}
+.box-feedback-bordered.success h3{color:#75c2b8;}
 .box-feedback-bordered.error {border-color:#f16875;}
+.box-feedback-bordered.error h3{color:#f16875;}
 .box-feedback-bordered.alert {border-color:#edb54d;}
+
 /* senza filetto */
 .box-feedback {margin-bottom:20px;}
 .box-feedback.success h3, .box-feedback.success div p { color:#75c2b8;}
@@ -9933,3 +9937,19 @@ a.box-inline-text {
     .sub-indent-mobile {padding-left:25px}
 }
 
+/*tabelle in bonifici */
+.table-upper th {
+   text-transform: uppercase;
+   background-color: #f9f9f9;
+   vertical-align: middle!important;
+   padding: 0 10px!important;
+}
+.text-light {
+    color:#aaa;
+}
+.table-upper .right {
+    text-align:right;
+}
+table.table.table-upper td.bb-0, .bb-0 {
+    border-bottom:0!important
+}
