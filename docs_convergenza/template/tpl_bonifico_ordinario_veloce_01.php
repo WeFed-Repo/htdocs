@@ -1,6 +1,5 @@
 <!-- dubbi template: 
-non è chiaro se autocomplete nuovo beneficiario debba comportarsi as is oppure non debba più comparire il suggerimento nella combo box durante la
-digitazione-->
+comportamento tabella gestione massimale---progettazione contempla fino a 560, sotto non ci sta come deve comportarsi?-->
 
 <!--nuova sezione bonifici ordinari e veloci -->
 <!-- titolo e stepper oggetti già esistenti-->
@@ -46,7 +45,7 @@ digitazione-->
 				<!--importo-->
 			    <div class="form-field-input col-xs-12 col-sm-6">
 					<label class="control-label" for="importo">Importo*</label>
-					<a title="Verifica massimali" class="link-text fRight" data-target="#verificaMassimali" data-toggle="modal" href="javascript:;">Verifica massimali</a>
+					<a title="Verifica massimali" class="link-text fRight" onclick="apriGestioneMassimali()">Verifica massimali</a>
 					<div class="form-field">
 						<div class="editable-input">
 							<!-- per il trattamento lato bck del campo importo vedere progettazione-->
@@ -2368,44 +2367,6 @@ La banca è sollevata da ogni responsabilità derivante da un’errata digitazio
 </p>
 </section>
 
-<!-- modale massimali bonifico su mobile come diventa? da progettazione la tabella non ha alcun comportamento ma a 320px non ci sta-->
-<div id="verificaMassimali" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-	<div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h1 class="modal-title">Massimali bonifico</h1>
-      </div>
-      <div class="modal-body">
-	  	<table id="tableMassimali">
-			<thead>
-				<th>Rapporto</th>
-				<th>Filiale</th>
-				<th width="20%">Massimale singolo bonifico</th>
-				<th width="20%">Massimale giornaliero</th>
-				<th width="20%">Massimale mensile</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td rowspan="2">Conto Corrente n. 00001234 intestato a MARIO ROSSI</td>
-					<td rowspan="2">MILANO - SEMPIONE - 0645</td>
-					<td>50.000€* (ordinario e urgente)</td>
-					<td rowspan="2">Residuo giornaliero** 45.500€ Limite impostato 370.600€</td>
-					<td rowspan="2">Residuo mensile** 175.500€ Limite impostato 500.000€</td>
-				</tr>
-				<tr><td>15.000€* (istantaneo)</td></tr>
-			</tbody>
-		</table>
-      </div>
-      <div class="modal-footer">
-       	<div class="align-right">
-			<input type="button" name="chiudi" value="Chiudi" data-dismiss="modal" class="btn  btn-primary" alt="Chiudi">
-		</div>
-		</div>
-    </div>
-	</div>
-</div>
-
 <script type="text/javascript">
 	//script di emulazione dei comportamenti
 	var inputAutocomplete =  $("#autocompletamentoBonificoInput"),
@@ -2588,18 +2549,28 @@ function updateField(value,idEl,iban,ui) {
 		$("#indirizzoBeneficiario").val(ui.item.indirizzoBeneficiario);
 		$("#localitaBeneficiario").val(ui.item.localitaBeneficiario);
 	}
-	//hide e show di iban o conto a seonda se iban obbligatorio o meno
+	//hide e show di iban o conto a seconda se iban obbligatorio o meno
 	showHideIban();
 	!isValutaEuro() || !isDestItalia() ? $("#datiBeneficiarioValEstera").show() : $("#datiBeneficiarioValEstera").hide();
  }
 
-		// Esempio handler modale 
+		//  handler modale usa
 		var apriModaleUsa = function(tipo){
 			getAjaxModal({
 				url: "parts/modali_contenuti_destinazioneUsa.php",
 				method: "GET",
-				title: "Bonifico verso un conto USA",
-				class: "modal-footer-fixed"
+				title: "Bonifico verso un conto USA"
+				
+			});
+		}
+
+		//  handler modale gestione massimali
+		var apriGestioneMassimali = function(tipo){
+			getAjaxModal({
+				url: "parts/tabella_gestione_massimali.php",
+				method: "GET",
+				title: "Massimali bonifico",
+				class:"modal-lg"
 			});
 		}
 	

@@ -995,7 +995,14 @@ table tr.odd td {
 .modal-bottom {
     padding-bottom: 20px;
 }
-
+@media (min-width: 992px) {
+/*reset regola bootstrap se classe applicata alla classe modal, continua a valere se applicata a classe modal-dialog */
+.modal.modal-lg {max-width: none!important}
+.modal-lg .modal-dialog {
+    width: 900px !important;
+    max-width: 900px;
+}
+}
 /* Footer fixed
 @media screen and (max-width: 767px) {
     .modal-footer-fixed .modal-footer {
@@ -9118,6 +9125,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
 .visible-xs  .text-with-icon .wrapper-icon-left + .text {padding-left:30px;display:inline-block}
+.visible-xs .text-with-icon {padding-left:0;}
 
 /* Declinazione tipo "elenco" */
 .list-icon-wrapper.not-inline {

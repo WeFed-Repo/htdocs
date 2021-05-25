@@ -662,10 +662,16 @@ SE NON SI VUOLE CHE IL TASTO ESCAPE SOTTO CHIUDA L'OVERLAYER: data-keyboard="fal
 @media (min-width: 992px) {
     .modal-lg {
         max-width: 900px !important;
+        .modal-dialog {
+            max-width: 900px !important;
+        }
+        &.modal {
+            max-width: none !important;
+        }
     }
 }
 /* modale con footer fixed*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { 
     .modal-footer-fixed .modal-footer {
         position: fixed;
         width: 100%;
