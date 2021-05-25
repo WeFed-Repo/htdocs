@@ -390,7 +390,7 @@ footer {width: 100%;overflow: hidden; position:relative; clear:both}
 .modal-call-me-back .esito .icon {font-size: 64px;color: #0e977f;width: 60px;height: 90px;display: inline-block;}
 .modal-call-me-back .esito {display: block;text-align: center;font-size: 22px;text-transform: uppercase;margin-bottom:20px}
 .modal-call-me-back .esito span {display: block;}
-.modal-call-me-back .align-center {text-align: center;}
+.align-center {text-align: center;}
 .modal-call-me-back .leftTesto {margin-bottom:20px}
 .modal-call-me-back .leftTesto p {clear:none;padding-bottom:5px;margin-bottom:0}
 .modal-call-me-back .flLeft {float: left;}

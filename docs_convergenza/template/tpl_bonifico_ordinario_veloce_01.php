@@ -1,6 +1,8 @@
 <!-- dubbi template: 
-comportamento tabella gestione massimale---progettazione contempla fino a 560, sotto non ci sta come deve comportarsi?-->
-
+1) comportamento tabella gestione massimale---progettazione contempla fino a 560, sotto non ci sta come deve comportarsi?
+2) lo stepper che per Y è in top di pagina, deve o non deve essere presente per WE in bottom?
+3) gestione degli errori: creare un'estenzione della funzione già esistente setHasError con un box invece dell'errore puntuale o lasciare come in produzione chiedendo di aggiungere la classe error al campo specifico?
+-->
 <!--nuova sezione bonifici ordinari e veloci -->
 <!-- titolo e stepper oggetti già esistenti-->
 <section>
@@ -18,9 +20,9 @@ comportamento tabella gestione massimale---progettazione contempla fino a 560, s
                 <div class="col-sm-4">	
 			 		<div class="pager pull-right">
 						<div class="circle current_page">1</div>
-						<div class="circle ">2</div>
-						<div class="circle ">3</div>
-                        <div class="circle ">4</div>
+						<div class="circle">2</div>
+						<div class="circle">3</div>
+                        <div class="circle">4</div>
 					</div>
 				</div>
                 <?php
@@ -30,6 +32,23 @@ comportamento tabella gestione massimale---progettazione contempla fino a 560, s
 		</h1>
 	</div>
 </section>
+<!-- eventuale box di errore che compare come attualmente in produzione (usare stesso meccanismo di scroll, ma evidenziare acnche con la classe error il campo in errore)-->
+<section>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="box-feedback-bordered error hidden-print">
+				<div>
+					<h3>ATTENZIONE</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing </strong>elit.<br>
+					<a href="#" class="link-text underline">lorem ipsum dolor sit amet</a>
+				     </p>
+				</div>
+			</div>
+		</div>
+		</div>
+
+</section>
+
 
 <!-- selettore rapporto skinnato per selezione conti-->
 <?php virtual ("/include/oggetti/Form/commons/021_Nuovo_selettore_rapporto_dispo/oggetto.php"); ?>
@@ -43,9 +62,9 @@ comportamento tabella gestione massimale---progettazione contempla fino a 560, s
 		<div class="form-group">						
 			<div class="row">
 				<!--importo-->
-			    <div class="form-field-input col-xs-12 col-sm-6">
+			    <div class="form-field-input col-xs-12 col-sm-6 has-error">
 					<label class="control-label" for="importo">Importo*</label>
-					<a title="Verifica massimali" class="link-text fRight" onclick="apriGestioneMassimali()">Verifica massimali</a>
+					<a title="Verifica massimali" href="javasvcript:;" class="link-text fRight" onclick="apriGestioneMassimali()">Verifica massimali</a>
 					<div class="form-field">
 						<div class="editable-input">
 							<!-- per il trattamento lato bck del campo importo vedere progettazione-->
@@ -1187,7 +1206,7 @@ comportamento tabella gestione massimale---progettazione contempla fino a 560, s
 		          <div class="row"> 
 		            <!-- NUMC CONTO -->
 		            <div class="form-field-input col-xs-6">
-		              <label class="control-label">
+		              <label class="control-label with-tooltip">
 					  	Numero conto* 
 						<a class="no-underline btn-icon" id="modalUsa" onclick="apriModaleUsa()">
 							<i class="icon icon-info_fill marginLeft_10 icon-20 closeable"></i>
