@@ -9074,9 +9074,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     text-decoration:underline;
     cursor:pointer;
 }
-.history-element .text-with-icon a {
-    color:#00a11a;
-}
+
 .text-with-icon a[data-toggle="tooltip"] {
     display: inline-block;
 }
@@ -9271,10 +9269,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .accord-content .history-element a {
     line-height: 20px;
 }
-.accord-content .history-element.inactive a { 
-    color: #7F7F7F;
-}
-
 .accord-content .history-elements>*:first-child .bullet-route{
     display:none;
 }

@@ -159,8 +159,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -192,8 +194,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -224,8 +228,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_14</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -346,8 +352,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                   <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -382,8 +390,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -417,8 +427,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -535,8 +547,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -571,8 +585,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -606,8 +622,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -808,8 +826,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -839,8 +859,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -870,8 +892,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_14</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -990,8 +1014,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -1026,8 +1052,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -1061,8 +1089,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -1182,8 +1212,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -1218,8 +1250,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                   <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text positive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -1253,8 +1287,10 @@
                                             <div class="text-with-icon-target">
                                                 <!-- Casistica Icon -->
                                                 <div class="text-with-icon">
-                                                    <span class="image-icon pdf"></span>
-                                                    <a href="#">Nome_documento_1</a>
+                                                    <a href="#">
+                                                        <span class="image-icon pdf"></span>
+                                                        <span class="text inactive">Nome_documento_1</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div> 
