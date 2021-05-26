@@ -9839,21 +9839,13 @@ a.box-inline-text {
 
 /* Correttive per datepicker */
 .datepicker-inline {width: 150px; max-width:100%; cursor:pointer;position:relative;}
-.datepicker-inline input.form-control {padding-right: 35px; cursor:pointer;}
-.datepicker-inline::after {content: "";
-    display: block;
-    position: absolute;
-    right: 8px;
-    top: 12px;
-    background: transparent url(/HT/fe/img/calendar.png) no-repeat center center;
-    width: 25px;
-    height: 25px;
-    background-size: 25px;
+.datepicker-inline input.form-control {
+    padding-right: 35px; cursor:pointer;
+    cursor: pointer;
+    background: transparent url(/HT/fe/img/calendar.png) no-repeat right 7px center;
+    background-size: 25px 25px;
 }
 .datepicker-inline img {display: none !important;}
-@media (max-width:991px) {
-    .datepicker-inline::after {top: 8px}
-}
 
 
 /* BONIFICI ORDINARI/VELOCI*/
