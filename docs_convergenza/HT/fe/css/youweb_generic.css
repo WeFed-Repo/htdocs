@@ -9543,7 +9543,7 @@ p.note.to-right{
     }
     
     .mobile-reverse{
-        display:flex; 
+        display:flex;  
         flex-direction:column-reverse;
     }
 
@@ -9563,6 +9563,9 @@ p.note.to-right{
     }
     .accord-content .group-wrapper.with-spunta {
         margin-top:-10px;
+    }
+    .pract-toggle.boxed .mobile-label + .text, .pract-toggle.boxed .mobile-label + .text-with-icon, .pract-toggle.boxed .mobile-label + .text-without-icon  {
+        font-weight:bold
     }
 }
 
