@@ -1,6 +1,5 @@
 <?php
 	header('Content-Type: application/json');
-	
 	$msg = $_POST["userinput"];
 	$history = $_POST["history"];
 	$historyFromRedirect = $_POST["historyFromRedirect"];
@@ -8,7 +7,7 @@
 {
 <?php
 	
-	if (strrpos($msg, "prova redirect") === false ){
+	if (strrpos($msg, "prova redirect") === false && empty($historyFromRedirect )){
 		
 	?>	"body": {
 		<?php 
@@ -141,14 +140,14 @@
 		// Verifica se e' la richiesta o la destinazione del redirect
 		if ($_POST["historyFromRedirect"] == "history") {
 			?>
-		body: {
+		"body": {
 			"answer": {
 				"emotion": null,
 				"text": "Prova di atterraggio con history attiva!",
 				"audiopath": "",
 				"history": [
 					{
-						"question": "ciao",
+						"question": "Ciao",
 						"answer": "Ciao! Che piacere vederti!"
 					},
 					{
@@ -157,7 +156,7 @@
 					},
 					{
 						"question": "ok aspetta",
-						"answer": "Quanto vuoi tu!"
+						"answer": "Questa e' history from redirect"
 					},
 					{
 						"question": "bonifico",
@@ -191,7 +190,7 @@
 					"answer": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>"
 				}
 			]},
-		"url": ""	
+		"url": "/template/strutt_webank.php?tpl=link_va.php"	
 		<?php
 		}
 	}

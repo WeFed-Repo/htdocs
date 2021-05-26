@@ -4,16 +4,6 @@ vaAudioPath = "";
 // Variabili globali 
 var vaIsMobile = ($(window).width()<1024)? true : false;
 
-// Porting funzioni esclusive
-function thisMovie(movieName) {
-    var movie = $("#" + movieName)[0];
-    if (movie) return movie;
-    else if ($.browser.msie) {
-        return window[movieName];
-    } else {
-        return document[movieName];
-    }
-}
 
 // Funzione che filtra i testi per evitare problemi
 function filterText(testo) {
@@ -184,6 +174,8 @@ function vaAsking(domanda, history)
 		
 		// Rimuove la frase di Benvenuto se presente
 		if ($("#vaBenvenuto").length) { $("#vaBenvenuto").hide(); }
+
+		//Nasconde l'extended view e la reinizializza
 		
 		//Nasconde l'extended view e la reinizializza
 		vAss.removeClass("extended extended-opened");
@@ -341,9 +333,16 @@ function vaAsking(domanda, history)
 				}
 				
 				//Legge la history
-				vaReadHistory(vaAnswerRoot.body.history,2);
+				vaReadHistory(vaAnswerBody.history,2);
 
 				vaJsonAns = vaAnswerBody.text;
+
+				// Elaborazione codici speciali nelle risposte "in linea" di Paolo
+				/*
+				if (vaJsonAns.indexOf ("{")){
+					vaJsonAns = vaSpecialAns(vaJsonAns);
+				}
+				*/
 
 				vaInsSentence(vaJsonAns,"Paolo");
 				
@@ -453,7 +452,7 @@ function vaAsking(domanda, history)
 			}
 			else
 			{
-				vaReadHistory(vaAnswerRoot.body.history,1);
+				vaReadHistory(vaAnswerBody.history,1);
 			}
 				
 				vaDomanda[0].disabled = false;	
@@ -1009,6 +1008,5 @@ $(function(){
 	}
 
 });
-
 
 

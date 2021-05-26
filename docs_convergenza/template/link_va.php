@@ -1,14 +1,13 @@
 <h2>Esempio funzionalit&agrave;</h2>
 <?php
-	$sQuestion = $_GET["sQuestion"];
 	$sTop = $_GET["sTop"];
 	$sLeft = $_GET["sLeft"];
-	
+	$sQuestion = $_GET["sQuestion"];
 
 	if ($sQuestion != "") { ?>
 	<script>
 	$(function(){
-		vaOpenOnStart(<?php print $sLeft ?>,<?php print $sTop ?>,"<?php print $sQuestion; ?>");
+		vaOpenOnStart(<?php print $sLeft ?>,<?php print $sTop ?>,"cHJvdmEgYXR0ZXJyYWdnaW8=");
 	});
 	</script>
 	<?php

@@ -71,7 +71,7 @@ var vaInsSentence = function (sent, user, benvenuto)
 
 }
 
-// Funzione con immissione domanda (pu� essere passato dall'esterno tramite "domanda")
+// Funzione con immissione domanda (puï¿½ essere passato dall'esterno tramite "domanda")
 function vaAsking(domanda, history)
 {
 	// Se l'utente ha effettivamente fatto una domanda
@@ -168,7 +168,7 @@ function vaAsking(domanda, history)
 			if (vaAnswerBody)
 				{
 				//Legge la history
-				vaReadHistory(vaAnswerRoot.body.history,2);
+				vaReadHistory(vaAnswerBody.history,2);
 
 				vaJsonAns = vaAnswerBody.text;
 				vaInsSentence(vaJsonAns,"paolo");
@@ -376,7 +376,7 @@ function vaAsking(domanda, history)
 			}
 			else
 			{
-				vaReadHistory(vaAnswerRoot.body.history,1);
+				vaReadHistory(vaAnswerBody.history,1);
 			}
 				vaDomanda[0].disabled = false;	
 				vaDomanda[0].focus();
@@ -403,6 +403,7 @@ function vaOpen(sLeft,sTop,sQuestion)
 
 	// Elemento generico (indipendente dal load per non bloccare tutto).
 	vAss = $("#virtAss"); 
+
 	if (!vaInit && !vaFirstCall && !vaExtLoaded && !vaFirstAss) 
 	{
 		
@@ -431,18 +432,15 @@ function vaOpen(sLeft,sTop,sQuestion)
 				success: function (data) {
 					
 					vaLoad(sLeft,sTop,sQuestion, data.body.history);	
-					// $("body").prepend(vAss.show());
 				},
 				error: function()
 				{
 
 					vaLoad(sLeft,sTop,sQuestion,'',true);
-					// $("body").prepend(vAss.show());
 				}
 			});
 	} else {
 		vaLoad(sLeft,sTop,sQuestion,null);	
-		// $("body").prepend(vAss.show());
 	}
 	
 	$(".tool-btn.virtass").addClass("active");
@@ -457,8 +455,6 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 	if (!vaInit)
 	{
 
-		//Caricamento eventuali parametri in loading
-		// vaDiagDefaultHeight = 114;
 		//Oggetti comuni
 		vAss.css({"visibility":"hidden", "display" : "block" , "z-index" : getNextHighestZindex()});
 		$("body").prepend(vAss);
@@ -598,7 +594,7 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 				vaDiagOffset = vaDiagOffset + $(vaAllQuest[x]).outerHeight();
 				if (x == vaAllQuest.length-1)
 				{
-					// se l'ultima risposta e' piu' lunga dello schermo sottrae l'overflow della risposta 
+					// se l'ultima risposta ï¿½ piï¿½ lunga dello schermo sottrae l'overflow della risposta 
 					// rispetto al resto in modo da riposizionarsi all'inizio della stessa
 					vaOffDiff = ($(vaAllQuest[x]).outerHeight()) - vaDiag.outerHeight();
 					if (vaOffDiff>0)
@@ -613,23 +609,32 @@ function vaLoad(sLeft,sTop,sQuestion, history, errormode)
 		
 		vaReadHistory = function(history, historyStop)
 			{
-			
-				// Carica tutta la history oppure la frase di benvenuto qualora questa non fosse presente
+
+			var getdialogo = function(sub,sentence){
+				return ($("<div>").addClass("dialogo " + (sub=="paolo" ? "paolo" : "you")).append(
+					$("<div>").addClass("iconcina " + (sub=="paolo" ? "paolobot" : "icon icon-riepilogo_conto_iban")),
+					$("<div>").addClass("arrow"),
+					$("<div>").addClass("fumetto").html(sentence)
+
+				))
+			}
+
+			// Carica tutta la history oppure la frase di benvenuto qualora questa non fosse presente
 			if (history!= null && history[0]!=null)
 			{
-				//Allunga l'interfaccia
-				// vaDiag.animate ({"height" : vaDiagDefaultHeight + "px"},300);
+				// Inserisce il dialogo come history
 				for (x=history.length-historyStop; x>=0;x--)
 				{
-					if (vaDiag.find("div:first-child").length > 0)
+					if (vaDiag.find("div.dialogo:first-child").length > 0)
 					{
-						vaDiag.find("div:first-child").before($("<div>").addClass("sent answer").html("<p><strong>Paolo:</strong> " + history[x].answer.split("{}").join("") + "</p>"));
+						vaDiag.find("div.dialogo:first-child").before(getdialogo("paolo","<p>" + history[x].answer.split("{}").join("") + "</p>"));
 					}
 					else
 					{
-						vaDiag.append($("<div>").addClass("sent answer").html("<p><strong>Paolo:</strong> " + history[x].answer.split("{}").join("") + "</p>"));
+						vaDiag.append(getdialogo("paolo","<p>" + history[x].answer.split("{}").join("") + "</p>"));
 					}
-					vaDiag.find("div:first-child").before($("<div>").addClass("sent").html("<p><strong>Tu scrivi:</strong> " + history[x].question + "</p>"));
+					// Richiesta utente
+					vaDiag.find("div.dialogo:first-child").before(getdialogo("you","<p>" + history[x].question + "</p>"));
 				}
 				setTimeout(vaScrollLast,300);
 			}
@@ -695,7 +700,7 @@ function vaBenvenuto() {
 	vaDiagHeight = "";
 	//Ingrandisce la casella di testo
 	vaOpen();
-	//Se occorre l'audio e questo e' attivo, lo riproduce quando e se l'assistente e' disponibile
+	//Se occorre l'audio e questo ï¿½ attivo, lo riproduce quando e se l'assistente e' disponibile
 	var startMp3 = function()
 	{
 		if (vaAudioOn)
