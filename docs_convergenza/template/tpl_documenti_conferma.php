@@ -26,10 +26,10 @@
 	    <div class="col-sm-12">
             <div class="list-icon-wrapper not-inline">
                 <h3>RIEPILOGO DOCUMENTI</h3>
-                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">Nome_Documento_1_Da_Firmare</span></a></div>
-                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">Nome_Documento_2_Da_Firmare ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit</span></a></div>
-                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">Nome_Documento_3_Da_Firmare</span></a></div>
-                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">Nome_Documento_4_Da_Firmare</span></a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text positive">Nome_Documento_1_Da_Firmare</span></a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text positive">Nome_Documento_2_Da_Firmare ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit ipsum dolor lorem ipsum dolor sit</span></a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text positive">Nome_Documento_3_Da_Firmare</span></a></div>
+                <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text inactive">Nome_Documento_4_Da_Firmare</span></a></div>
             </div>
         </div>
     </div>

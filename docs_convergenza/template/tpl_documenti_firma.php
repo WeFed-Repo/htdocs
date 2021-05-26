@@ -80,6 +80,25 @@
             </div>
         </section>
 
+        <!-- Signature 1-->  
+        <section>         
+            <div class="esito-inline">
+                <i class="icon iconBig icon-alert_ok flLeft"></i>
+                <p class="esito-text"><i><strong>FIRMA 1&nbsp; &nbsp;&nbsp;Firmato digitalmente</strong></i></p>
+            </div>
+        </section>
+        <!-- Fine signature 1-->
+
+        <!-- Signature 2 -->  
+        <section>         
+            <div class="esito-inline">
+                <i class="icon iconBig icon-alert_ok flLeft"></i>
+                <p class="esito-text"><i><strong>FIRMA 2&nbsp; &nbsp;&nbsp;Firmato digitalmente</strong></i></p>
+            </div>
+        </section>
+        <!-- Fine signature 2-->
+
+
         <!-- Blocco firma -->
         <section class="noMargin">
 
@@ -110,23 +129,6 @@
         </section>
         <!-- Fine blocco firma -->
 </div>
-<!-- Signature 1-->  
-<section>         
-    <div class="esito-inline">
-        <i class="icon iconBig icon-alert_ok flLeft"></i>
-        <p class="esito-text"><i><strong>FIRMA 1&nbsp; &nbsp;&nbsp;Firmato digitalmente</strong></i></p>
-    </div>
-</section>
-<!-- Fine signature 1-->
-
-<!-- Signature 2 -->  
-<section>         
-    <div class="esito-inline">
-        <i class="icon iconBig icon-alert_ok flLeft"></i>
-        <p class="esito-text"><i><strong>FIRMA 2&nbsp; &nbsp;&nbsp;Firmato digitalmente</strong></i></p>
-    </div>
-</section>
-<!-- Fine signature 2-->
 
 <section>
     <!-- Testo_010 -->

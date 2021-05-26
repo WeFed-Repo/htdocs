@@ -2470,7 +2470,7 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
  }
  .esito-inline {
      position: relative;
-     min-height: 40px;
+     min-height: 30px;
      display: flex;
      display: -ms-flexbox;
      justify-content: center;
@@ -2482,11 +2482,17 @@ div.messagePanel.alert h3, div.messagePanel.alert div p {
     font-size: 16px;
     padding:0 0  0 47px;
 }
+
 .esito-inline .icon {
     color:#007c66;
     position: absolute;
     width: 36px;
     height: 36px;
+}
+
+@media (max-width: 767px) {
+    .esito-inline .icon {height:30px;}
+    .esito-inline .esito-text {font-size:14px; padding-left:40px; line-height:18px;}
 }
 
 div.messagePanel h3 {
@@ -9106,9 +9112,6 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     display:block;
 }
 
-.text-with-icon a.dark, .text-with-icon a .dark {
-    color: #202d50;
-}
 .text-with-icon a.dark:not(.no-underline), .text-with-icon a:not(.no-underline) .dark {
     text-decoration:underline;
 }
@@ -9169,6 +9172,16 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     display:none;
 }
 
+/* Classi colore addittive */
+.text-with-icon .dark {
+    color: #202d50;
+}
+.text-with-icon .positive {
+    color: #00a11a;
+}
+.text-with-icon .inactive {
+    color: #7F7F7F;
+}
 
 /* Iconcine immagine */
 .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
