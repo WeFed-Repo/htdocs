@@ -29,7 +29,7 @@
 <!-- BOX DI SCELTA BONIFICO
 servono tre classi: available, active, not-available-->
 <section>
-  <div class="row">
+  <div class="row flex-desktop has-bottom-tip"> <!-- la classe has-bottom-tip appenderla solo se c'è il tip di suggerimento-->
         <div class="col-xs-12 col-sm-4 ">
             <div class="box-type available">
                  <div class="box-type-header">
@@ -39,9 +39,9 @@ servono tre classi: available, active, not-available-->
                 </div>
                  </div>
                  <div class="box-type-body">
-                    <div class="form-group">						
+                   						
 					    <div class="row">
-						    <div class="col-sm-6">
+						    <div class="col-xs-6 col-sm-12 col-lg-6 field-space noPaddingRight">
                                 <label class="control-label" for="causale">Data esecuzione</label>
                                 <div class="form-field">
                                     <div class="datepicker-inline">
@@ -49,24 +49,24 @@ servono tre classi: available, active, not-available-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-xs-6 col-sm-12 col-lg-6 field-space">
                                 <label class="control-label" for="causale">Data accredito</label>
+                                <div>
+                                    <a href="#" class="text-link"><strong>Tempi di esecuzione</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-12 col-lg-6 field-space">
+                                <label class="control-label" for="causale">Commissione</label>
                                 <div class="form-field">
-                                   <strong>21/04/2021</strong>
+                                   <span class="field-output">0,51 EUR</span>
                                 </div>
                             </div>
                         </div>
-                </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label class="control-label" for="causale">Commissione</label>
-                                    <div class="form-field">
-                                        <strong>0,51 EUR</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
                  </div>
                  <div class="box-type-footer">SCEGLI</div>
             </div>
@@ -91,12 +91,56 @@ servono tre classi: available, active, not-available-->
                          <span>Ho molta fretta!</span>
                     </div>
                  </div>
-                 <div class="box-type-body"></div>
-                 <div class="box-type-footer">SCEGLI</div>
+                 <div class="box-type-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-12 col-lg-6 field-space noPaddingRight">
+                            <label class="control-label" for="causale">Data esecuzione</label>
+                            <div class="form-field">
+                                <span class="field-output">15/04/2021</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-12 col-lg-6 field-space">
+                            <label class="control-label" for="causale">Data accredito</label>
+                            <div class="form-field">
+                                <span class="field-output">10 SECONDI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-12 col-lg-6 field-space">
+                            <label class="control-label" for="causale">Commissione</label>
+                            <div class="form-field">
+                                <span class="field-output">1,00 EUR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-type-footer">SCEGLI</div>
+                <!--elemento tip -->
+               
+                <div class="tip bottom">
+                    <div class="tip-arrow"></div>
+                    <div class="tip-text w-align-right">Scegli il bonifico istantaneo, è conveniente!</div>
+                </div>
+               
             </div>
         </div>
    </div>                
 </section>
+<section>
+    <div class="form-group btnWrapper clearfix">
+        <div class="btn-align-left">
+          <div>
+            <a type="button" href="#" class="btn btn-default" title="prosegui" id="btnInvio">lorem ipsum</a>
+          </div>
+        </div>
+        <div class="btn-align-right">
+          <div>
+            <a type="button" href="#" class="btn btn-default" title="prosegui" id="btnInvio">lorem ipsum</a>
+          </div>
+        </div>
+    </div>
+ </section>
 <script type="text/javascript">
 // Inizializzazione datepicker
 $(function(){

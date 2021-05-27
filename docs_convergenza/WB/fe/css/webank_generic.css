@@ -6728,6 +6728,19 @@ td.ui-state-disabled:hover {
   outline: 1px solid #b6ca77;
   background-color: #c4d885 !important;
 }
+/* Correttive per datepicker */
+.datepicker-inline {
+  width: 150px;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.datepicker-inline input.form-control {
+  padding-right: 30px;
+  cursor: pointer;
+  background: transparent url(/WB/fe/img/calendar.png) no-repeat right 7px center;
+  background-size: 20px 20px;
+}
 @media screen and (-ms-high-contrast: active) and (max-width: 30em), (-ms-high-contrast: none) and (max-width: 30em) {
   td a,
   td a:hover,
@@ -11308,6 +11321,72 @@ div.select-content select:active {
 .icoope-overlay .icoope-functions ul li a:hover {
   background: #eee;
 }
+/* elemento tip*/
+.has-bottom-tip {
+  position: relative;
+  padding-bottom: 50px;
+}
+.tip {
+  position: absolute;
+  min-width: 100%;
+  overflow: visible;
+}
+.tip.bottom {
+  top: 100%;
+}
+.tip.bottom .tip-text {
+  top: 0;
+  margin-top: 13px;
+}
+.tip.bottom .tip-arrow {
+  border-bottom: 13px solid #edf4db;
+  top: 0;
+}
+.tip.top {
+  top: 0;
+}
+.tip.top .tip-text {
+  bottom: 0;
+  margin-bottom: 13px;
+}
+.tip.top .tip-arrow {
+  border-top: 13px solid #edf4db;
+  bottom: 0;
+}
+.tip .tip-text {
+  background-color: #edf4db;
+  width: auto;
+  overflow: visible;
+  padding: 15px 15px 15px 50px;
+  position: absolute;
+  white-space: nowrap;
+}
+.tip .tip-text.w-align-right {
+  right: 0;
+}
+.tip .tip-text.w-align-left {
+  left: 0;
+}
+.tip .tip-text.w-align-center {
+  left: 0;
+  margin-left: -15%;
+  min-width: 130%;
+  white-space: normal;
+}
+.tip .tip-arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -13px;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+@media (max-width: 767px) {
+  .tip .tip-text {
+    width: 100%!important;
+    margin-left: 0!important;
+    white-space: normal!important;
+  }
+}
 /* Box linee vincolate */
 #boxTabLineeVincolateWrap {
   width: 100%;
@@ -11739,10 +11818,9 @@ div.select-content select:active {
 }
 /*box di selezione per bonifici */
 .box-type {
-  border: 1px solid #ebedee;
-  border-radius: 5px;
   height: 100%;
   position: relative;
+  border-radius: 5px;
 }
 .box-type.available:hover,
 .box-type.selected {
@@ -11758,16 +11836,25 @@ div.select-content select:active {
   color: #8ab10b;
 }
 .box-type .box-type-body {
-  padding: 16px;
-  min-height: 230px;
+  padding: 20px 16px 20px;
+  min-height: calc(100% - 77px);
+  border: 1px solid #ebedee;
+  border-radius: 0 0 5px;
+}
+.box-type .box-type-body p {
+  margin-bottom: 0;
 }
 .box-type.not-available .box-type-body {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+.box-type.not-available .box-type-body p {
+  padding-top: 18px;
+}
 .box-type .box-type-header {
-  border-bottom: 2px solid #ebedee;
+  border: 1px solid #ebedee;
+  border-radius: 5px 5px 0 0;
   height: 77px;
 }
 .box-type .box-type-header div {
@@ -11788,6 +11875,17 @@ div.select-content select:active {
   color: #fff;
   text-align: center;
   font-weight: bold;
+}
+.box-type .field-space {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .flex-desktop {
+    display: flex;
+  }
+  .box-type {
+    margin-bottom: 15px;
+  }
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
