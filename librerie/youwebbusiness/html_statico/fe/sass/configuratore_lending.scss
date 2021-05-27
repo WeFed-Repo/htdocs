@@ -11,18 +11,19 @@
         color:#ccc;
     }
     .disclaimer {border-top: solid 1px #eee;padding: 20px 14px 10px; margin: 0 -14px;}
-    &.disabled{
+    &.disabled, .disabled {
         /* Caso disabilitato */
         .editable-field-wrapper { background:#eee;color:#aaa;
             input {color:#aaa; background:transparent}
             &::after {color:#aaa}
-            .slider-output {color:#737373}
-            .ui-slider {background-color: #eee;
-                .ui-slider-range {background-image: linear-gradient(to right, #666, #ccc)}
-            }
+        }
+        .slider-output {color:#737373}
+        .ui-slider {background-color: #eee;
+            .ui-slider-range {background-image: linear-gradient(to right, #666, #ccc)}
         }
         .results .result-box.rata {color:#737373 !important}
     }
+
  } 
 
  /* Oggetti dedicati */

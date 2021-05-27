@@ -364,6 +364,15 @@ td.ui-state-disabled:hover {
     outline: 1px solid @borderSelected;
     background-color: @bckSelected !important;
 }
+/* Correttive per datepicker */
+.datepicker-inline {width: 150px; max-width:100%; cursor:pointer;position:relative;
+    input.form-control {
+        padding-right: 30px; cursor:pointer;
+        cursor: pointer;
+        background: transparent url(/WB/fe/img/calendar.png) no-repeat right 7px center;
+        background-size: 20px 20px;
+    }
+}
 
 @media screen and (-ms-high-contrast: active) and (max-width: 30em),
 (-ms-high-contrast: none) and (max-width: 30em) {
@@ -5855,3 +5864,36 @@ div.select-content select {
     }
     
 }
+
+/* elemento tip*/
+.has-bottom-tip {position:relative; padding-bottom:50px;}
+.tip {
+    position: absolute;min-width: 100%;overflow: visible;
+    &.bottom {
+        top:100%;
+        .tip-text{top:0;margin-top:13px;}
+        .tip-arrow {border-bottom: 13px solid #edf4db;top:0;}
+    }
+    &.top {
+        top:0;
+        .tip-text{bottom:0;margin-bottom:13px;}
+        .tip-arrow{border-top: 13px solid #edf4db;bottom:0}
+    }
+   .tip-text{
+       background-color:  #edf4db;width: auto;overflow: visible; padding:15px 15px 15px 50px;position: absolute;white-space: nowrap;
+       &.w-align-right{
+        right:0;
+       }
+       &.w-align-left{
+        left:0;
+       }
+       &.w-align-center{ 
+        left:0;margin-left:-15%;min-width: 130%;white-space: normal;
+       }
+    }
+    .tip-arrow{ position: absolute; left:50%;margin-left:-13px;border-left: 13px solid transparent;border-right: 13px solid transparent;}
+}
+@media (max-width:767px) {
+    .tip .tip-text {width: 100%!important;margin-left:0!important;white-space: normal!important;}
+}
+    
