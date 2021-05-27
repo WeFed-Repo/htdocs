@@ -7,6 +7,8 @@
     <div class="text-with-icon"><span class="image-icon pdf"></span><span class="text">Testo senza link</span></div>
     <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text">Lorem ipsum</span></a></div>
     <div class="text-with-icon"><a href="#"><i class="icon icon-trash_filled" title="icon-trash_filled"></i><span class="text dark">Link tipo scuro</span></a></div>
+    <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text positive">Link tipo "positivo"</span></a></div>
+    <div class="text-with-icon"><a href="#"><span class="image-icon pdf"></span><span class="text inactive">Link tipo "inattivo"</span></a></div>
     <div class="text-with-icon"><a href="#"><span class="image-icon pdf v-centered"></span><span class="text">Link su piu' righe con<br>icona centrata verticalmente</span></a></div>
 </div>
 </section>
