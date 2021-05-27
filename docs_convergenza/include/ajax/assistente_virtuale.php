@@ -3,6 +3,8 @@
 	$msg = $_POST["userinput"];
 	$history = $_POST["history"];
 	$historyFromRedirect = $_POST["historyFromRedirect"];
+
+	$strutt = (strpos($_SERVER['HTTP_REFERER'],"strutt_webank.php") !== false) ? "webank" : "youweb";
 ?>
 {
 <?php
@@ -190,7 +192,7 @@
 					"answer": "In questa pagina puoi disporre <b>bonifici</b> verso l'Italia e l'estero.<br>\r\nSe hai registrato dei beneficiari nella <b>Rubrica</b>, potrai selezionarli dal menù a tendina nel campo <b>Nome Beneficiario.</b>\r\n<br>\r\nCompila tutti i campi e inoltra l'ordine.\r\nTi ricordo, che un bonifico disposto con data futura, non genera l'impegno del saldo.\r\n<br><a onclick=\"vaAsking('- Quando arriva il bonifico')\" href='javascript:;'> \r\nVuoi sapere quando <u><br>arriva il bonifico ordinario?</u></a>\r\n<br>\r\nOppure, ti ricordo che puoi selezionare l'opzione\r\n<a onclick=\"vaAsking('- Bonifico veloce')\" href='javascript:;'> \r\n<br> <u><b>\"Bonifico veloce\"</b></u></a>"
 				}
 			]},
-		"url": "/template/strutt_webank.php?tpl=link_va.php"	
+		"url": "/template/strutt_<?php print $strutt; ?>.php?tpl=link_va.php"	
 		<?php
 		}
 	}

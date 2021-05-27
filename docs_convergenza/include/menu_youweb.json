@@ -665,6 +665,10 @@
 		"hidden-nav": true,
 		"voices": [
 			{
+				"nome": "Assistente virtuale",
+				"tpl": "link_va.php"
+			},
+			{
 				"nome": "Tracciatura e analytics",
 				"tpl": "tpl_tracciatura.php"
 			},
