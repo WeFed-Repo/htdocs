@@ -164,7 +164,7 @@ var vaAvatar = {
 function vaAsking(domanda, history)
 {
 	// Se l'utente ha effettivamente fatto una domanda
-	if (filterText(domanda) != "" && domanda != "fammi una domanda...")
+	if (filterText(domanda) != "" && domanda != "fammi una domanda..."  && filterText(domanda).split(" ").join("").length >= 2 )
 	{
 		//Altezza casella dialogo in azione
 		vaTextSwitch.show();

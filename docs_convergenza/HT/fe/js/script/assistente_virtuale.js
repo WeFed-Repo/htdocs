@@ -75,7 +75,7 @@ var vaInsSentence = function (sent, user, benvenuto)
 function vaAsking(domanda, history)
 {
 	// Se l'utente ha effettivamente fatto una domanda
-	if (filterText(domanda) != "" && domanda != "Scrivi quello di cui hai bisogno")
+	if (filterText(domanda) != "" && domanda != "Scrivi quello di cui hai bisogno" && filterText(domanda).split(" ").join("").length >= 2 )
 	{
 		
 		// Rimuove la frase di Benvenuto se presente
@@ -254,123 +254,8 @@ function vaAsking(domanda, history)
 						}
 
 					});
-
-					/*
-						
-					for (x=0;x<vaExtC.length;x++)
-					{
-						
-						// Push dei contenuti nell'extended view
-
-
-
-						
-						//Creazione del contenitore e del pulsante 
-						// Pulsante
-						if (!$("#vaExt" + vaExtC[x].type).length)
-						{
-							
-							vabt = $("<a>").addClass("consBtn").attr({"href":"javascript:;", "id":"vaExt" + vaExtC[x].type});
-							if (x==0) vabt.addClass("selected");
-							vabt.click( function() {
-								vaExtBody.find(".extCont").hide();
-								// vaExtCons.find(".consBtn").removeClass("selected");
-								$(this).addClass("selected");
-								$("#" + $(this).attr("id") + "Cont").fadeIn(300);
-							});
-						
-							// vaExtCons.append(vabt);
-							
-							//Contenitore
-							
-							
-							vaco = $("<div>").attr("id","vaExt"+ vaExtC[x].type +"Cont").addClass("extCont");
-							
-
-							vacoInnerHTML = "";
-							if (vaExtC[x].type != "Faq")
-							{	
-								// HTML GENERICO
-								if (vaExtC[x].title == "EXTSURVEY"){
-									var vaextTit = $("<span>").addClass("vaExtTitle").html("Lasciami il tuo feedback").css("background-image","none");
-									var vaSurvey = $("<div>").addClass("vaSurvey");
-									vaValutazione = $("<div>").addClass("valutazione").on("mouseout",function(){if(!vaSurveyVoted) $(this).find(".vaStar").removeClass("on")});
-									vaSurveyVoted = false;
-									vaStarEvi = function(voto){
-											$.each(vaValutazione.find(".vaStar"),function(i,v) {
-											v = $(v);
-											v.toggleClass("on",(i<voto));
-										});
-									}
-
-									var vaStar = $("<a>").addClass("vaStar").click(
-										function(){
-											var star = $(this);
-											var voto = star.attr("voto");
-											vaStarEvi(voto); 
-											vaAsking("- Hai Votato: " + voto + " stell" + ((voto>1)? "e":"a"));
-											vaSurveyVoted = true;
-										}).hover(function(){
-											vaStarEvi( $(this).attr("voto")); 
-										});
-
-									for (var y=0;y<=4;y++) {
-									vaValutazione.append(vaStar.clone(true).attr("voto",y+1));
-									}
-									
-									vaSurvey.append(
-										$("<img>").attr("src","/img/va_survey.gif"),
-										$("<p>").html("<strong>Esprimi la tua opinione</strong> e assegnami un punteggio, grazie al tuo contributo potr&ograve; ampliare le mie conoscenze."),
-										vaValutazione
-										);
-									vaco.empty().append(vaextTit,vaSurvey);
-								}
-								else
-								{
-									vacoInnerHTML = "<span class=\"vaExtTitle\">"+ vaExtC[x].title +"</span>";
-									vaco.html(vacoInnerHTML + vaExtC[x].content);
-								}
-							}
-							else
-							{
-								//Mette solo il titolo e la FAQ viene caricata in seguito
-								vaco.append($("<span>").addClass("vaExtTitle").html("F.A.Q."));
-								var vaFaqUl = $("<ul>");
-								vaco.append(vaFaqUl);
-							}
-							if (x>0) vaco.hide();
-							vaExtBody.append(vaco);
-						}
-						*/
-						
-						//Carica le FAQ
-						/*
-						if (vaExtC[x].type == "Faq")
-							{
-								vaFaqLi = $("<li>").html ("<a href=\"javascript:;\">"+vaExtC[x].title+"</a>");
-								//Click sulla FAQ
-								vaFaqLi.click(function()
-								{
-									var FaqValue = $(this).find("a")[0].innerHTML;
-									//Inserisce il valore nel campo e fa partire la domanda
-									vaDomandaInit();
-									vaDomanda.val(FaqValue);
-									vaAsking(FaqValue);
-								});
-								vaFaqUl.append(vaFaqLi);
-							}
-							
-					}
-					*/
 					//Apre l'extended view
 					vaLingSwitch();
-					
-					//Se c'e' un bottone solo non lo rende linkabile
-					/*vaConsButt = vaExtCons.select("a");
-					if (vaConsButt.length == 1) {vaConsButt[0].style.cursor = "default"};
-					*/
-
-
 
 				}
 			}
