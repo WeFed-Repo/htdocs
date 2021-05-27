@@ -18,109 +18,236 @@
 
     <style>
         /* Font face */
+
         @font-face {
+
             font-family: 'bankFont';
+
             src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+
                 url('./font/montserrat-light-webfont.woff') format('woff');
+
             font-weight: normal;
+
             font-style: normal;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
+
             src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+
                 url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+
             font-weight: normal;
+
             font-style: italic;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
+
             src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+
                 url('./font/montserrat-semibold-webfont.woff') format('woff');
+
             font-weight: bold;
+
             font-style: normal;
+
         }
 
+
+
         @font-face {
+
             font-family: 'bankFont';
+
             src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+
                 url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+
             font-weight: bold;
+
             font-style: italic;
+
         }
+
+
 
         /*  */
+
         body {
+
             background-color: #fff;
+
             margin: 0;
+
             padding: 0;
+
             font-family: 'bankFont', Arial, Serif;
-            font-size: 20px;
+
+            font-size: 15px;
+
             height: 100%;
+
             color: #1f2021;
+
         }
+
+
 
         #main {
-            margin: 0 auto;  
-			height: 100vh;
+
+            margin: 0 auto;
+
+            height: 100%;
+
             max-width: 640px;
-            background: #344a86;
+
+            background: #fff;
+
         }
 
-        #main .pagecont {
-            /* Il padding verticale permette di scorrere il content senza che resti nascosto dall'area promo
-                decidere se ricavarlo in maniera dinamica dall'altezza di tale area*/
-            padding: 40px 40px 250px 40px;
-            background: #344a86;
+
+
+        #contenuto .hero {
+
+            display: inline-block;
+
+            height: 320px;
+
+            width: 100%;
+
+            background: #eee url(./img/visual_web_view_identita_digitale.jpg) no-repeat center center;
+
+            background-size: cover;
+
+            position: relative;
+
         }
+
+
+
+        .hero .hero-text {
+
+            position: absolute;
+
+            bottom: 0;
+
+            padding: 0 25px 15px;
+
+        }
+
+
+
+        #contenuto .hero h1 {
+
+            font-size: 24px;
+
+            line-height: 29px
+        }
+
+
+
+        #main .pagecont {
+
+            padding: 15px 25px 25px
+        }
+
 
 
         /* Contenuti */
+
         .boxedcont {
+
             padding: 15px 15px 5px;
+
             background: #f4f5f4;
+
             border-radius: 10px;
+
             margin: 0 -10px 15px;
+
         }
+
+
 
         /* Generici */
+
         a {
+
             color: #344a86;
+
             text-decoration: none;
+
         }
+
+
 
         a:hover {
+
             text-decoration: underline;
+
         }
 
+
+
         h1 {
-            font-size: 24px;
-			line-height:28px;
+
             text-transform: uppercase;
-			font-weight: bold;
+
         }
+
 
 
         h2 {
+
             font-size: 18px;
+
             line-height: 22px;
+
             color: #212122;
+
             margin: 0 0 15px;
+
         }
+
+
 
         h3 {
+
             font-size: 16px;
+
             line-height: 19px;
+
             color: #344a86;
+
             margin: 0 0 15px;
+
         }
 
+
+
         p {
+
             margin: 0 0 10px;
+
             clear: both;
-            line-height: 27px;
+
+            line-height: 20px;
+
         }
+
+
 
         p.note {
             color: #1f2021;
@@ -128,116 +255,162 @@
             line-height: 18px;
         }
 
+
+
         /* Bullet reset */
+
         ol,
+
         ul,
+
         ol li,
+
         ul li {
+
             margin: 0;
+
             padding: 0;
+
             list-style-type: none
         }
 
+
+
         /* Bullet rivisti */
+
         ol {
+
             counter-reset: ol;
+
         }
+
+
 
         ol li,
+
         ul li {
+
             position: relative;
+
             padding: 0 0 10px 25px;
+
             line-height: 20px
-       }
+        }
+
+
 
         /* Bullet "normali" */
+
         ul li::before {
+
             display: block;
+
             width: 6px;
+
             height: 6px;
+
             background-color: #1f2021;
+
             border-radius: 4px;
+
             top: 8px;
+
             left: 4px;
+
             content: "";
+
             position: absolute;
+
         }
+
+
 
         /* Bullet "ordinali" */
+
         ol li::before {
+
             display: block;
+
             width: 18px;
+
             height: 18px;
+
             background-color: #344a86;
+
             font-size: 13px;
+
             text-align: center;
+
             line-height: 20px;
+
             border-radius: 10px;
+
             top: 0px;
+
             left: 0;
+
             counter-increment: ol;
+
             content: counter(ol);
+
             position: absolute;
+
             color: #fff;
+
         }
 
-        .bottom-promo {
-            width:100%; 
-            background: url(./img/marmo_background.jpg) no-repeat center center;
-            background-size: cover; 
-            position: fixed; 
-            bottom: 0px;
-            max-width: 640px;
-        }
-
-        .wrapper-visual {
-            max-width: 380px;
-            width:100%;
-            margin: 0 auto;
-        }
-
-        .wrapper-visual .visual {
-            background: url(./img/bg_blue_stories_card@2x.png) no-repeat center center;
-            background-size: contain;
-            width:80%;
-            padding-bottom: 55%;
-            margin: -40px auto 20px auto;            
-        }
 
         .wrapper-cta {
+
+            width: 100%;
+
             display: flex;
-            width:100%;
+
             justify-content: space-around;
-            margin-bottom: 20px;
-            margin-top: 20px; 
-            bottom: 0px;
+
+            margin-bottom: 30px;
+
+            margin-top: 30px;
+
         }
 
         .wrapper-cta .cta {
+
             display: inline-block;
-            margin: 0px 20px;
+
+            margin: 0 auto;
+
             background: #344a86;
+
             line-height: 15px;
+
             font-size: 14px;
+
             text-decoration: none;
+
             text-align: center;
+
             font-weight: bold;
+
             padding: 15px 30px;
+
             color: #fff;
+
             border-radius: 8px;
+
         }
+
 
         /* Declinazione dark */
 
-        .dark #contenuto h1 {
-            color: #fff;
-            text-transform: none;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
+        .dark #contenuto .hero h1 {
 
-        .dark #contenuto p {
             color: #fff;
+
+            text-transform: none;
+
+            font-weight: normal;
+
         }
 
     </style>
@@ -252,29 +425,78 @@
 
         <div id="contenuto">
 
+            <div class="hero">
+
+                <div class="hero-text">
+
+                    <h1><strong>Insieme a te la tua banca è più green: scopri l’Identità Digitale!</strong></h1>
+
+                </div>
+
+            </div>
+
             <div class="pagecont">
 
-                <h1><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></h1>
-                
-                <p>Nulla ornare rutrum neque, vitae cursus tortor dignissim id. Suspendisse eget feugiat eros. Cras non maximus eros.</p>
+                <!-- Box solo testo -->
 
-                <p>Nulla ornare rutrum neque, vitae cursus tortor dignissim id. Suspendisse eget feugiat eros. Cras non maximus eros.</p>
+                <div class="boxedcont">
 
-            </div>   
+                    <p>Per te che sei digital, ora mettiamo a tua
+                        disposizione l'<strong>Identità Digitale: lo strumento
+                        per completare la tua esperienza su tutti i
+                        canali</strong>, affiancando all'Internet e App Banking
+                        un nuovo modo di interagire anche in filiale.</p>
 
-        </div>        
+                </div>
 
-        <div class="bottom-promo">
-            <div class="wrapper-visual">
-                <div class="visual"></div>
+                <!-- Fine box solo testo -->
+
+                <!-- Box solo elenco puntato -->
+                <div class="boxedcont">
+                    <p><strong>LA NUOVA IDENTITÀ DIGITALE È:</strong></p>
+                    <ul>
+                        <li><strong>COMODA:</strong> presto potrai sottoscrivere online
+                            anche i contratti di <strong>nuovi prodotti e servizi.</strong></li>
+                        <li><strong>GREEN:</strong> hai un <strong>archivio online</strong> per gestire in
+                            modo comodo le <strong>contabili</strong> e i <strong>documenti
+                            sottoscritti</strong>, anche in filiale!</li>
+                        <li><strong>EFFICIENTE:</strong> <strong>riduci tempi e costi</strong> attraverso
+                            una gestione più semplice di tutti i tuoi
+                            rapporti e attività.</li>
+                    </ul>
+                </div>
+                <!-- Fine box solo elenco puntato -->
+
+                <!-- Box solo testo -->
+
+                <div class="boxedcont">
+
+                    <p><strong>ATTIVALA SUBITO! Accedi a YouWeb, clicca sul
+                        banner dedicato che trovi a destra nella Home
+                        e segui i passaggi.</strong></p>
+
+                </div>
+
+                <!-- Fine box solo testo -->
+
+                <!-- Non boxati -->
+
+                <p class="note">
+
+                    <strong>Messaggio pubblicitario con finalit&agrave; promozionale.</strong><br>
+                    Per le condizioni economiche e contrattuali fare riferimento ai Fogli Informativi disponibili 
+                    (unitamente alla Guida operativa ai servizi) presso le filiali Banco BPM e sul sito bancobpm.it.
+
+                </p>
+
+                <!-- Fine non boxati -->
+
             </div>
-            <div class="wrapper-cta">
-                <a class="cta" href="#">CTA very long long text</a>
-            </div>
+
         </div>
 
     </div>
-    
+
 </body>
 
 
