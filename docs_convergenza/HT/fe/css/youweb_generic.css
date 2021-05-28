@@ -9946,6 +9946,7 @@ a.box-inline-text {
 table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 
 /*step bonifico di scelta tipologia */
+.box-type-wrapper {margin-bottom:40px;}
 .box-type {height: 100%;position: relative;border-radius: 5px;}
 .box-type.available:hover, .box-type.selected {box-shadow: 0px 0px 15px rgb(228 228 228);cursor:pointer;}
 .box-type.selected .box-type-footer,.box-type.available:hover .box-type-footer {box-shadow: 0px 7px 15px rgb(228 228 228);cursor:pointer;}
@@ -9963,23 +9964,27 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 .field-output{font-weight:bold}
 
 /*elemento tip */
-.has-bottom-tip {position:relative; padding-bottom:50px;}
+.has-bottom-tip {position:relative; margin-bottom: 90px;}
+.has-top-tip {position:relative; margin-top: 90px;}
 .tip{position: absolute;min-width: 100%;overflow: visible;}
 .tip.bottom {top:100%}
 .tip.bottom .tip-text{top:0;margin-top:13px;}
 .tip.top {top:0;}
 .tip.top .tip-text{bottom:0;margin-bottom:13px;}
-.tip .tip-text{background-color:  #d8f0ed;width: auto;overflow: visible; padding:15px 50px;position: absolute;height: 50px;white-space: nowrap;}
+.tip .tip-text{background-color:  #d8f0ed;width: auto;min-width:100%; visible; padding:15px 50px;position: absolute;height: 50px;white-space: nowrap;}
 .w-align-right {right:0;}
 .w-align-left {left:0;}
-.tip .tip-text.w-align-center{left:0;margin-left:-10%;min-width: 120%;white-space: normal}
+.tip .tip-text.w-align-center{left:0;margin-left:-10%;min-width: 120%;white-space: normal;height:auto;}
 .tip .tip-arrow{ position: absolute; left:50%;margin-left:-13px;border-left: 13px solid transparent;border-right: 13px solid transparent;}
 .tip.bottom .tip-arrow{border-bottom: 13px solid #d8f0ed;top:0;}
 .tip.top .tip-arrow{border-top: 13px solid #d8f0ed;bottom:0}
 
+/*btn-wrapper con testo in colonna middle */
+.btn-wrapper-text-in p{margin:0;padding:0}
+
 @media (max-width:767px) {
 .box-type {margin-bottom:15px}
-.tip .tip-text {width: 100%!important;margin-left:0!important;white-space: normal!important;}
+.tip .tip-text {width: 100%!important;margin-left:0!important;white-space: normal!important;min-width: 0!important;}
 }
 
 

@@ -11377,7 +11377,11 @@ div.select-content select:active {
 /* elemento tip*/
 .has-bottom-tip {
   position: relative;
-  padding-bottom: 50px;
+  margin-bottom: 90px!important;
+}
+.has-top-tip {
+  position: relative;
+  margin-top: 90px!important;
 }
 .tip {
   position: absolute;
@@ -11870,6 +11874,9 @@ div.select-content select:active {
   border: solid 1px #cacaca;
 }
 /*box di selezione per bonifici */
+.box-type-wrapper {
+  margin-bottom: 40px;
+}
 .box-type {
   height: 100%;
   position: relative;
@@ -11936,6 +11943,8 @@ div.select-content select:active {
   .flex-desktop {
     display: flex;
   }
+}
+@media screen and (max-width: 768px) {
   .box-type {
     margin-bottom: 15px;
   }
