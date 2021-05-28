@@ -1360,123 +1360,168 @@ ol.sotto-elenco ol li {
   margin-bottom: 30px;
   /* ### Change Positions ### */
 }
+.list-icon-wrapper.not-inline {
+  margin-bottom: 5px;
+}
 .list-icon-wrapper.not-inline .text-with-icon {
-  margin-bottom: 6px;
+  margin-bottom: 15px;
+  clear: both;
+  width: 100%;
+  margin-right: 0;
 }
 .list-icon-wrapper.to-right {
-  float: right;
-}
-.list-icon-wrapper.to-right .text-with-icon {
-  float: right;
-  margin-right: 14px;
-}
-.list-icon-wrapper.to-right .text-with-icon:first-child {
-  margin-right: 0px;
-}
-.list-icon-wrapper.to-left {
-  float: left;
-}
-.list-icon-wrapper.to-left .text-with-icon {
-  float: left;
-  margin-left: 14px;
-}
-.list-icon-wrapper.to-left .text-with-icon:first-child {
-  margin-left: 0px;
+  text-align: right;
 }
 /* ## Text with icon Element ## */
 .text-with-icon {
   position: relative;
-  width: fit-content;
-  /* ### Change Positions ### */
+  width: auto;
+  padding-left: 25px;
+  line-height: 20px;
+  display: inline-block;
+  margin-right: 15px;
+  padding-top: 1px;
+  vertical-align: top;
+  max-width: 100%;
+  text-align: left;
+  /* ### Icona a destra ### */
   /* ### Change Texts ### */
+  /* Accordion */
+  /* Classi colore addittive */
 }
-.text-with-icon .linker {
-  text-decoration: none;
-  padding-left: 0px;
-  position: relative;
+.text-with-icon:last-child {
+  margin-right: 0;
 }
-.text-with-icon .linker .icon-arrow_down {
-  display: none;
+.text-with-icon.right-icon {
+  padding-left: 0;
+  padding-right: 25px;
 }
-.text-with-icon .linker[aria-expanded=false] .icon-arrow_up {
-  display: none;
-}
-.text-with-icon .linker[aria-expanded=false] .icon-arrow_down {
-  display: block;
-}
-.text-with-icon .glyph,
-.text-with-icon .icon {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  font-size: 18px;
-  color: #6f8f0a;
-}
-.text-with-icon .image {
-  position: absolute;
-  left: 0px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: lightgray;
-}
-.text-with-icon .transform-uppercase {
-  text-transform: uppercase;
-}
-.text-with-icon.right-icon .sub-text {
-  padding-right: 0;
-}
-.text-with-icon.right-icon .image,
-.text-with-icon.right-icon .glyph,
-.text-with-icon.right-icon .icon {
-  right: 0px;
+.text-with-icon.right-icon .icon,
+.text-with-icon.right-icon .image-icon {
+  right: 0;
   left: auto;
 }
-.text-with-icon.right-icon .wrapper-icon-left .image,
-.text-with-icon.right-icon .wrapper-icon-left .glyph,
-.text-with-icon.right-icon .wrapper-icon-left .icon {
-  left: 0;
-  right: auto;
-}
-.text-with-icon.right-icon.with-tooltip .linker,
-.text-with-icon.right-icon.with-tooltip .text {
-  display: inline-block;
-}
-.text-with-icon.right-icon.with-tooltip .linker .icon {
-  cursor: pointer;
-  z-index: 1;
+.text-with-icon.right-icon .image-icon {
+  background-position: top right;
 }
 .text-with-icon a {
-  text-decoration: underline;
   color: #6f8f0a;
-  padding-left: 24px;
+  text-decoration: underline;
+  cursor: pointer;
 }
-.text-with-icon a.no-underline {
-  text-decoration: none;
+.text-with-icon a.dark:not(.no-underline),
+.text-with-icon a:not(.no-underline) .dark {
+  text-decoration: underline;
+}
+.text-with-icon a .text {
+  text-decoration: underline;
+}
+.text-with-icon a[data-toggle="tooltip"] {
+  display: inline-block;
 }
 .text-with-icon .text {
-  font-weight: bold;
-  text-decoration: none;
-  padding-left: 26px;
-  color: #202d50;
-}
-.text-with-icon .underline {
-  text-decoration: underline;
+  width: auto;
+  float: left;
+  clear: both;
 }
 .text-with-icon .sub-text {
   font-size: 12px;
-  font-weight: normal;
-  text-decoration: none;
-  padding-left: 26px;
+  text-decoration: none !important;
   color: #202d50;
+  float: left;
+  clear: both;
+  line-height: 16px;
+}
+.text-with-icon .sub-text::before {
+  content: "";
   display: block;
 }
-.text-with-icon.ellips {
-  width: fit-content;
-  text-overflow: ellipsis;
-  display: block;
+.text-with-icon .ellipsis {
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.text-with-icon .image-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  display: block;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.text-with-icon .image-icon,
+.text-with-icon .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.text-with-icon .icon.right,
+.text-with-icon .image-icon.right {
+  left: auto;
+  right: -25px;
+}
+.text-with-icon .icon.v-centered,
+.text-with-icon .icon.v-centered {
+  top: calc(50% - 10px);
+}
+.text-with-icon *[aria-expanded=false] .icon-arrow_up {
+  display: none;
+}
+.text-with-icon *[aria-expanded=false] .icon-arrow_down {
+  display: block;
+  left: -3px;
+  top: 2px;
+}
+.text-with-icon *[aria-expanded=true] .icon-arrow_down {
+  display: none;
+}
+.text-with-icon .dark {
+  color: #202d50;
+}
+.text-with-icon .positive {
+  color: #00a11a;
+}
+.text-with-icon .inactive {
+  color: #7F7F7F;
+}
+.visible-xs .text-with-icon .wrapper-icon-left + .text {
+  padding-left: 30px;
+  display: inline-block;
+}
+.visible-xs .text-with-icon {
+  padding-left: 0;
+}
+.image-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  display: block;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.group-element .image-icon {
+  width: 15px;
+  height: 15px;
+}
+/* Iconcine immagine */
+.image-icon.pdf {
+  background-image: url("/common/fe/img/pdf_icon.png");
+}
+.image-icon.stato-ko {
+  background: url("/common/fe/img/icon-stato-ko.png");
+  background-size: 100%;
+}
+.image-icon.stato-ok {
+  background: url("/common/fe/img/icon-stato-ok.png");
+  background-size: 100%;
+}
+.image-icon.stato-wait {
+  background: url("/common/fe/img/icon-stato-wait.png");
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
 }
 /* spostato per risoluzioni intermedie*/
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -11824,7 +11869,7 @@ div.select-content select:active {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px rgb(228 228 228);
+  box-shadow: 0px 0px 15px #e4e4e4;
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,
