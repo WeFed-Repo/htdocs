@@ -1191,129 +1191,159 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
 /* ## List Container ## */
 .list-icon-wrapper {
     margin-bottom: 30px;
-    &.not-inline .text-with-icon{
-        margin-bottom: 6px;
+    &.not-inline {
+        margin-bottom:5px;
+        .text-with-icon {
+            margin-bottom: 15px;
+            clear:both;
+            width:100%;
+            margin-right:0;
+        }
     }
-/* ### Change Positions ### */
+    /* ### Change Positions ### */
     &.to-right{
-        float: right;
-        .text-with-icon {
-            float: right;
-            margin-right: 14px;
-            &:first-child {
-                margin-right: 0px;
-            }
-        }
-    }
-    &.to-left{
-        float: left;
-        .text-with-icon {
-            float: left;
-            margin-left: 14px;
-            &:first-child {
-                margin-left: 0px;
-            }
-        }
+        text-align:right;
     }
 }
 
 /* ## Text with icon Element ## */
 .text-with-icon {
     position: relative;
-    width: fit-content;
-    .linker {
-        text-decoration: none;
-        padding-left: 0px;
-        position: relative;
+    width:auto;
+    padding-left:25px;
+    line-height:20px;
+    display:inline-block;
+    margin-right:15px;
+    padding-top:1px;
+    vertical-align:top;
+    max-width: 100%;
+    text-align: left;
+    
+    &:last-child {
+        margin-right:0;
+    }
+    /* ### Icona a destra ### */
+    &.right-icon {
+        padding-left:0;
+        padding-right:25px;
+        .icon, .image-icon {
+            right:0; 
+            left: auto;
+        }
+        .image-icon {
+            background-position: top right;
+        }
+    }
+    /* ### Change Texts ### */
+    a {
+        color: #6f8f0a;
+        text-decoration:underline;
+        cursor:pointer;
+        &.dark:not(.no-underline), &:not(.no-underline) .dark {
+            text-decoration:underline;
+        }
+        .text {
+            text-decoration:underline;
+        }
+    }
+    a[data-toggle="tooltip"] {
+        display: inline-block;
+    }
+    .text {
+        width:auto;
+        float:left;
+        clear:both;
+    }
+    .sub-text {
+        font-size:12px; 
+        text-decoration:none !important;
+        color: #202d50;
+        float:left;
+        clear:both;
+        line-height:16px;
+        &::before {
+            content: "";
+            display:block;
+        }
+    }
+    .ellipsis {
+        display:inline-block;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        max-width:100%;
+    }
+    .image-icon {
+        width:20px;
+        height:20px;
+        background-size:contain;
+        display:block;
+        background-repeat:no-repeat;
+        margin:0 auto;
+    }
+    .image-icon, .icon {
+        position: absolute; 
+        top:0; 
+        left:0;
+    }
+    .icon.right, .image-icon.right {
+        left:auto; 
+        right: -25px;
+    }
+    .icon.v-centered, .icon.v-centered {
+        top: calc(50% - 10px);
+    }
+    /* Accordion */
+    & *[aria-expanded=false] {
+        .icon-arrow_up {
+            display:none;
+        }
+        .icon-arrow_down {
+            display:block;
+            left: -3px;
+            top: 2px;
+        }
+    }
+    & *[aria-expanded=true] {
         .icon-arrow_down {
             display:none;
         }
-        &[aria-expanded=false] {
-            .icon-arrow_up {
-                display:none;
-            }
-            .icon-arrow_down {
-                display:block;
-            }
-        }
     }
-    .glyph, .icon {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        display: block;
-        font-size: 18px;
-        color: #6f8f0a;
-    }
-    .image {
-        position: absolute;
-        left: 0px;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: lightgray;
-    }
-    .transform-uppercase {
-        text-transform: uppercase;
-    }
-/* ### Change Positions ### */
-    &.right-icon{
-        .sub-text {
-            padding-right:0;
-        }
-        .image, .glyph, .icon{
-            right: 0px;
-            left: auto;
-        }
-        .wrapper-icon-left{
-            .image, .glyph, .icon{
-                left:0;
-                right:auto
-            } 
-        }
-        &.with-tooltip{
-            .linker, .text {
-                display: inline-block;
-            }
-            .linker .icon{
-               cursor:pointer;
-               z-index: 1;
-            }
-        }
-    }
-/* ### Change Texts ### */
-    a {
-        text-decoration: underline;
-        color: #6f8f0a;
-        padding-left: 24px;
-        &.no-underline {
-            text-decoration: none
-        }
-    }
-    .text {
-        font-weight: bold;
-        text-decoration: none;
-        padding-left: 26px;
+    /* Classi colore addittive */
+    .dark {
         color: #202d50;
     }
-    .underline {
-        text-decoration: underline;
+    .positive {
+        color: #00a11a;
     }
-    .sub-text {
-        font-size: 12px;
-        font-weight: normal;
-        text-decoration: none;
-        padding-left: 26px;
-        color: #202d50;
-        display: block;
+    .inactive {
+        color: #7F7F7F;
     }
-    &.ellips{
-        width: fit-content;
-        text-overflow: ellipsis;
-        display: block;
-        overflow: hidden;
-    }     
 }
+
+.visible-xs  .text-with-icon .wrapper-icon-left + .text {padding-left:30px;display:inline-block}
+.visible-xs .text-with-icon {padding-left:0;}
+
+.image-icon {
+    width:20px;
+    height:20px;
+    background-size:contain;
+    display:block;
+    background-repeat:no-repeat;
+    margin:0 auto;
+}
+
+.group-element .image-icon {
+    width:15px;
+    height:15px;
+}
+
+/* Iconcine immagine */
+.image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
+.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;}
+.image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");background-size: 100%;}
+.image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png");background-size: 100%;width: 30px;height: 30px;}
+
 
 /* spostato per risoluzioni intermedie*/
 @media screen and (min-width: 768px) and (max-width: 1200px) { 
