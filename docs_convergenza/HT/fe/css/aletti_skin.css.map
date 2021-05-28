@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"aletti_skin.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/aletti_skin.scss"],"names":[],"mappings":"AAAA;AAKA;AACA;AAEI;EACI,kBARE;;AAWN;EACI,kBAVC;;;AAcT;AAEI;EACI,kBAlBQ;;AAmBR;EAAO;;AACH;EACI;;AACA;EAAO;;;AAMvB;AACA;EACI,kBA/BM","file":"aletti_skin.css"}

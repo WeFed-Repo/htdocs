@@ -1,0 +1,34 @@
+/* Variabili colore */
+$primary: #ab9a7c;
+$primary-light: #d5bd9b;
+$bgdark: #092442;
+
+/* STRUTTURA */
+/* Header */
+header {
+    .contImpDxDesk {
+        background-color: $primary;
+    }
+
+    #headerdesktop {
+        background-color: $bgdark;
+    }
+}
+
+/* Spalla */
+#spalla{
+    .widget.widget-top {
+        background-color: $primary-light;
+        ul li {border-color:#fff;
+            a, a:hover {
+                color:#fff;
+                .icon {color:#fff}
+            }
+        }
+    }
+}
+
+/* Contenuti */
+#mainContent .dashboard-widgets .dbwidget .titlebar a.minibtn {
+    background-color: $primary;
+}

@@ -1,3 +1,30 @@
-     
+/* Variabili colore */
+/* STRUTTURA */
+/* Header */
+header .contImpDxDesk {
+  background-color: #ab9a7c;
+}
+header #headerdesktop {
+  background-color: #092442;
+}
+
+/* Spalla */
+#spalla .widget.widget-top {
+  background-color: #d5bd9b;
+}
+#spalla .widget.widget-top ul li {
+  border-color: #fff;
+}
+#spalla .widget.widget-top ul li a, #spalla .widget.widget-top ul li a:hover {
+  color: #fff;
+}
+#spalla .widget.widget-top ul li a .icon, #spalla .widget.widget-top ul li a:hover .icon {
+  color: #fff;
+}
+
+/* Contenuti */
+#mainContent .dashboard-widgets .dbwidget .titlebar a.minibtn {
+  background-color: #ab9a7c;
+}
 
 /*# sourceMappingURL=aletti_skin.css.map */
