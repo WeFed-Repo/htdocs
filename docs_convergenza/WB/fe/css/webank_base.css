@@ -3045,6 +3045,11 @@ a.btn:active {
 .btn-align-left .btn {
   margin-right: 10px;
 }
+/*btn-wrapper con testo in colonna middle */
+.btn-wrapper-text-in p {
+  margin: 0;
+  padding: 0;
+}
 /* link alert */
 .link-alert {
   display: inline-block;

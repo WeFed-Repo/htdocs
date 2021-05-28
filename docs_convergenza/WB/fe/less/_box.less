@@ -320,6 +320,7 @@
 }
 
 /*box di selezione per bonifici */
+.box-type-wrapper {margin-bottom:40px;}
 .box-type {
     height: 100%;position: relative;;border-radius: 5px;
     &.available:hover, &.selected { 
@@ -341,16 +342,19 @@
         }
     }
     .box-type-header{border:1px solid #ebedee;border-radius: 5px 5px 0 0;height: 77px;
-        div {padding:20px}
+        div {padding:20px} 
         h3 {margin-bottom: 0;}  
     }
     .box-type-footer {height: 38px;line-height:38px;position:absolute;bottom: 0;left: 0;background: #a2a2a2;width: 100%;border-radius: 0 0 5px 5px;color:#fff;text-align: center;font-weight:bold}
     .field-space {margin-bottom:20px;}
 }
-    @media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
     .flex-desktop { 
         display: flex;
     }
+   
+} 
+@media screen and (max-width: 768px) {
+   
     .box-type {margin-bottom:15px}
 } 
-
