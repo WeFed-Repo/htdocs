@@ -1257,7 +1257,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     .sub-text {
         font-size:12px; 
         text-decoration:none !important;
-        color: #202d50;
+        color: #000;
         float:left;
         clear:both;
         line-height:16px;
@@ -1286,11 +1286,14 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         top:0; 
         left:0;
     }
+    i.icon{
+        top:2px;
+    }
     .icon.right, .image-icon.right {
         left:auto; 
         right: -25px;
     }
-    .icon.v-centered, .icon.v-centered {
+    .icon.v-centered, .image-icon.v-centered {
         top: calc(50% - 10px);
     }
     /* Accordion */
@@ -1311,13 +1314,19 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     }
     /* Classi colore addittive */
     .dark {
-        color: #202d50;
+        color: #000;
     }
     .positive {
         color: #00a11a;
     }
     .inactive {
         color: #7F7F7F;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .text-with-icon .icon{
+        font-size: 20px;
     }
 }
 

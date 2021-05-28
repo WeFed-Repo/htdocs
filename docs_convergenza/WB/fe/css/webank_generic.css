@@ -1427,7 +1427,7 @@ ol.sotto-elenco ol li {
 .text-with-icon .sub-text {
   font-size: 12px;
   text-decoration: none !important;
-  color: #202d50;
+  color: #000;
   float: left;
   clear: both;
   line-height: 16px;
@@ -1457,13 +1457,16 @@ ol.sotto-elenco ol li {
   top: 0;
   left: 0;
 }
+.text-with-icon i.icon {
+  top: 2px;
+}
 .text-with-icon .icon.right,
 .text-with-icon .image-icon.right {
   left: auto;
   right: -25px;
 }
 .text-with-icon .icon.v-centered,
-.text-with-icon .icon.v-centered {
+.text-with-icon .image-icon.v-centered {
   top: calc(50% - 10px);
 }
 .text-with-icon *[aria-expanded=false] .icon-arrow_up {
@@ -1478,13 +1481,18 @@ ol.sotto-elenco ol li {
   display: none;
 }
 .text-with-icon .dark {
-  color: #202d50;
+  color: #000;
 }
 .text-with-icon .positive {
   color: #00a11a;
 }
 .text-with-icon .inactive {
   color: #7F7F7F;
+}
+@media screen and (max-width: 1023px) {
+  .text-with-icon .icon {
+    font-size: 20px;
+  }
 }
 .visible-xs .text-with-icon .wrapper-icon-left + .text {
   padding-left: 30px;
