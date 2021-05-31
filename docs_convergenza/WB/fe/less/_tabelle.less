@@ -235,7 +235,7 @@ table {
             background-color: @bgColorHeading;
             border-right: 1px solid @borderColorCel;
         }
-    }
+    } 
     &.details-table{
         border: 0; 
         thead th {
@@ -284,7 +284,29 @@ table {
             }
         }
     }
+    /*tabella confronta bonifici */
 
+    &.table-mobile-estesa{
+        th {
+            text-align: center;
+            vertical-align: middle!important;
+            text-transform: uppercase;
+        }
+        td, th {
+            vertical-align: middle;
+            &.label-row{
+                font-weight: bold;
+            }
+        }
+        
+    }
+    .line-text-table {
+        display:block;
+        padding-bottom:10px;
+    }
+    .font-table-small{
+        font-size: 12px;
+    }
     th {
         min-height: 40px;
         min-width: 40px;
@@ -442,7 +464,8 @@ table {
             
             }
         }
-
+    
+       
 
     }
 
@@ -843,6 +866,52 @@ table {
     }
 }
 
+/* versione responsive tabella confronto bonifici veloci*/
+
+@media (max-width:767px) {
+    .table-estesa-wrapper {
+        overflow-x:auto;
+        .table-mobile-estesa {
+             border-collapse: separate;
+             border-spacing: 15px 0;
+             margin-left:-14px;
+             border:0;
+             thead.visible-xs{
+                display: table-header-group!important;
+            }
+            td.label-row {
+                border-bottom: 0;
+                border-right: 0;
+                position: relative;
+                &:after {
+                    content:" ";
+                    display: inline-block;
+                    height: 1px;
+                    width: calc(100% + 16px);
+                    border-bottom: 1px solid #c6c6c6;
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                }
+            }
+            th {
+                border: 1px solid #c6c6c6;
+                &.no-border-bottom {
+                    border-bottom: 0;
+                }
+            }
+            td {
+                border-top:0;
+                border-right: solid 1px #c6c6c6;
+                border-bottom: 1px solid #c6c6c6;
+                
+            }
+           
+            
+        }
+    }
+   
+}
 .has-error table.table-sceltaprofilo {
     border-bottom: 1px solid @borderColorCel;
 }

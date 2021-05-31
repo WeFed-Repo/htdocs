@@ -1603,6 +1603,7 @@ table {
   border-collapse: collapse;
   border: 1px solid #afafaf;
   /*tabella confronta caarte amex */
+  /*tabella confronta bonifici */
   /*td:first-child {
         border-left-style: none;
     }*/
@@ -1829,6 +1830,26 @@ table.no-border-topLeft td.no-border-topLeft {
 }
 table.no-border-topLeft td.no-border-topLeft:last-child {
   border-right: 1px solid #fff;
+}
+table.table-mobile-estesa th {
+  text-align: center;
+  vertical-align: middle!important;
+  text-transform: uppercase;
+}
+table.table-mobile-estesa td,
+table.table-mobile-estesa th {
+  vertical-align: middle;
+}
+table.table-mobile-estesa td.label-row,
+table.table-mobile-estesa th.label-row {
+  font-weight: bold;
+}
+table .line-text-table {
+  display: block;
+  padding-bottom: 10px;
+}
+table .font-table-small {
+  font-size: 12px;
 }
 table th {
   min-height: 40px;
@@ -2277,6 +2298,47 @@ table .nodet .txthelp {
 table .nodet .icon-clessidra_stroke {
   color: #8ab10b;
   cursor: pointer;
+}
+/* versione responsive tabella confronto bonifici veloci*/
+@media (max-width: 767px) {
+  .table-estesa-wrapper {
+    overflow-x: auto;
+  }
+  .table-estesa-wrapper .table-mobile-estesa {
+    border-collapse: separate;
+    border-spacing: 15px 0;
+    margin-left: -14px;
+    border: 0;
+  }
+  .table-estesa-wrapper .table-mobile-estesa thead.visible-xs {
+    display: table-header-group !important;
+  }
+  .table-estesa-wrapper .table-mobile-estesa td.label-row {
+    border-bottom: 0;
+    border-right: 0;
+    position: relative;
+  }
+  .table-estesa-wrapper .table-mobile-estesa td.label-row:after {
+    content: " ";
+    display: inline-block;
+    height: 1px;
+    width: calc(100% + 16px);
+    border-bottom: 1px solid #c6c6c6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .table-estesa-wrapper .table-mobile-estesa th {
+    border: 1px solid #c6c6c6;
+  }
+  .table-estesa-wrapper .table-mobile-estesa th.no-border-bottom {
+    border-bottom: 0;
+  }
+  .table-estesa-wrapper .table-mobile-estesa td {
+    border-top: 0;
+    border-right: solid 1px #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+  }
 }
 .has-error table.table-sceltaprofilo {
   border-bottom: 1px solid #c6c6c6;
@@ -11884,7 +11946,7 @@ div.select-content select:active {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px #e4e4e4;
+  box-shadow: 0px 0px 15px rgb(228 228 228);
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,

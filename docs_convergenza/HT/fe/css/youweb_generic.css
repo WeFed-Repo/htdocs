@@ -729,7 +729,7 @@ table:not(.no-border) {
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
-table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo) td, table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo) th {
+table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) td, table:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) th {
     border:1px solid #ddd!important;
     border-left:0!important;
     border-top:0!important;
@@ -9985,6 +9985,69 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 @media (max-width:767px) {
 .box-type {margin-bottom:15px}
 .tip .tip-text {width: 100%!important;margin-left:0!important;white-space: normal!important;min-width: 0!important;}
+}
+
+/*tabella di confronto dei bonifici */
+
+.table-mobile-estesa th,.table-mobile-estesa td {
+    border: 1px solid #c6c6c6!important;
+    border-left: 0!important;
+    border-top: 0!important;
+}
+.table-mobile-estesa th {
+    text-align: center;
+    vertical-align: middle!important;
+    text-transform: uppercase;
+}
+.table-mobile-estesa .no-border-bottom {
+    border-bottom:0!important;
+}
+.table-mobile-estesa td {
+    padding:10px 15px;
+}
+.line-text-table {
+    display:block;
+    padding-bottom:10px;
+}
+.font-table-small{
+    font-size: 10px;
+}
+.label-row{
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    .table-estesa-wrapper {
+        overflow-x:auto;
+    }
+    .table-mobile-estesa {
+	   border-collapse: separate;
+    	border-spacing: 15px 0;
+		border:0!important;
+		margin-left:-14px;
+   }
+   thead.visible-xs{
+    display: table-header-group!important;
+    }
+    .table-mobile-estesa tr td.label-row:after {
+        content:" ";
+        display: inline-block;
+        height: 1px;
+        width: calc(100% + 16px);
+        border-bottom: 1px solid #c6c6c6;
+        position: absolute;
+        bottom:0;
+        left:0;
+    }
+    table.table-mobile-estesa tr td.label-row {
+		border-left: 1px solid #c6c6c6!important;
+		border-bottom:0!important;
+		border-right:1px solid #c6c6c6!important;
+		position: relative;
+    }
+    .table-mobile-estesa th {
+        border: 1px solid #c6c6c6!important;
+      
+    }
 }
 
 
