@@ -3645,6 +3645,35 @@ table .checkbox.radio label {
   transform: translate(-24px, 0);
 }
 
+.check-options-wrapper {
+  max-height: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.check-options-list {
+  padding: 15px 15px 15px 30px;
+  width: 100%;
+  min-height: 60px;
+  margin-bottom: 16px;
+  border: 1px solid #DDDDDD;
+}
+.check-options-list label {
+  color: #2F9988;
+  padding-left: 15px;
+}
+.check-options-list .checkbox {
+  margin: 0;
+  padding-top: 0;
+}
+.check-options-list .label {
+  font-weight: bold;
+  display: block;
+}
+.check-options-list .output {
+  font-weight: normal;
+  padding: 0;
+}
+
 .radio label::before, .radio + label::before,
 .radio input[type=radio] label::before,
 .radio input[type=radio] + label::before {

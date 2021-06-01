@@ -97,6 +97,43 @@
     transform: translate(-$checkboxSize,0);
   }
 }
+//check-options-list
+.check-options{
+  &-wrapper {
+    max-height: 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &-list {
+    padding:15px 15px 15px 30px;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom:16px;
+    border:1px solid $gray4;
+    label{
+      color:$greenLink;
+      padding-left:15px;
+    }
+    .checkbox {
+      margin:0;
+      padding-top:0;
+    }
+    .label {
+      font-weight: bold;
+      display: block;
+      
+    }
+    .output{
+      font-weight: normal;
+      padding:0;
+    }
+  }
+
+}
+
+
+
+
 
 // ONLY RADIO STYLE
 
@@ -156,6 +193,7 @@
     }
   }
 }
+
 .output-title .checkbox input + label::after {
   margin-top: 1px !important;
 }
