@@ -112,6 +112,20 @@
     <h2>Pile</h2>
     <div class="bordered">
         <div id="istrogrammaPile" class="graph-space"></div>
+        <!--
+
+        Uguale all'altro ma con in valueAxis
+
+        "stackType": "regular"
+
+        Incassate #2f9988 (dato molto alto)
+        In scadenza #f6cf49 (circa metà di In scadenza)
+        Scadute #7d48aa (poche, max 15%)
+
+        Per mese (tipo Gen '20)
+
+
+        -->
     </div>
 </section>
 
