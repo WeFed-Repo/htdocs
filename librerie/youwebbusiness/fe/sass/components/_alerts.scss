@@ -77,3 +77,28 @@
   padding: 1rem;
   @include icon { @include svg-icon-color($green); }
 }
+
+// Nuovo Alert Deny
+.alert {
+  &-deny {
+    // Clear
+    min-height: 0;
+    // End Clear
+    font-size: 1.1rem;
+    background: $grayBG;
+    color: $gray1;
+    position:relative;
+    padding : 13px 13px 15px 56px;
+    border-radius: 0px;
+    .alert-icon{
+      position:absolute;
+      left:15px;
+      top:12px;
+      width:26px;
+      height:auto;
+      img {
+        width:100%;
+      }
+    }
+  }
+}

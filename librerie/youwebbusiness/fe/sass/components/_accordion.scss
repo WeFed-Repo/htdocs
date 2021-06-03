@@ -80,6 +80,25 @@
       }
     }
   }
- 
+  &.always-active {
+    .card, .acc-item {
+      .card-header {
+        &.collapsed {
+          .card-header-title {
+            color: $greenLink;
+          }
+          .card-header-icon {
+            line-height: 1.5rem;
+            border-color: $greenLink;
+            color: $greenLink;
+            &:before {content: "\e913"}
+            &.plus-minus:before {
+              content: '\002B';
+            }
+          }
+        }
+      }
+    }
+  } 
 }
  
