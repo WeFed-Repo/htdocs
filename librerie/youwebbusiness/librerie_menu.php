@@ -253,6 +253,15 @@
 			},
 			{
 				"title": "Monitoraggio flussi CBI"
+			},
+			{
+				"title": "Gestione Finanziaria",
+				"voices": [
+					{
+						"title": "Test creazione grafici",
+						"tpl": "tpl_prova_grafici.php"
+					}
+				]
 			}
 		]
 	},
