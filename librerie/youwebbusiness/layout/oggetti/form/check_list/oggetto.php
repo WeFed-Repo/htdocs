@@ -1,6 +1,6 @@
 <form class="form-grid">
       <div class="form-row">
-        <div class="form-group col-sm-4">
+        <div class="form-group col-12 col-lg-4">
             <select class="form-control" id="selectSoc">
                 <option selected="">Seleziona</option>
                 <option>Ipsum</option>
@@ -13,8 +13,8 @@
       <div class="form-row">
         <div class="form-group col-sm-4">
           <div class="form-check checkbox">
-              <input class="form-check-input" type="checkbox"  name="checkSelectorAll" value="">
-              <label>Seleziona tutti</span></label>
+              <input class="form-check-input" type="checkbox"  name="checkSelectorAll" value="" id="checkSelectorAll">
+              <label for="checkSelectorAll">Seleziona tutti</span></label>
             </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
                           <div class="form-group col-lg-3 col-xl-3">
                               <div class="form-check checkbox">
                                   <input class="form-check-input" type="checkbox" id="sel<?= $i ?>" name="checkSelector" value="">
-                                  <label>Conto lorem ipsum dolor</span></label>
+                                  <label for="sel<?= $i ?>">Conto lorem ipsum dolor</span></label>
                               </div>
                           </div>
                           <div class="form-group col-lg-3 col-xl-3">
@@ -46,15 +46,69 @@
                   </div>
                  <?php } ?>
               </div>
-          </div>
+            </div>
       </div>
+
+      <!--paginazione presente solo in versione mobile -->
+      
+    <div class="row d-block d-lg-none pb-2">
+        <div class="col-sm-12 d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item page-item-arrow">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <i class="icon-arrow_left"></i>
+                    </a>
+                </li>
+                <!-- il link attivo deve avere un tag span e non un tag a -->
+                <li class="page-item active"><span class="page-link">1</span></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item page-item-arrow">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <i class="icon-arrow_right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12">
+            <hr>
+        </div>
+    </div>
+        
+                 
+    <div class="form-row d-flex justify-content-end">
+        <div class="col col-lg-2 ">
+            <button class="btn btn-white btn-block fl-right" id="btnApplica">
+                <img class="icon icon-autorizza" src="./fe/img/icon-reload.png" />Applica
+            </button>
+        </div>
+    </div>
 </form>
 
 <!-- emulazione funzioni di check -->
 <script type="text/javascript">
+    var  allChecks = $('input[name="checkSelector"]');
     $('input[name="checkSelectorAll"]').on("click",function(){
-     var isChecked = $(this).is(":checked"),
-          allChecks = $('input[name="checkSelector"]');
-          isChecked ? allChecks.prop( "checked", true ) : allChecks.prop( "checked", false )
+     var isChecked = $(this).is(":checked");
+         isChecked ? allChecks.prop( "checked", true ) : allChecks.prop( "checked", false );
+        
     })
+
+    $("#btnApplica").on("click",function(e){
+        e.preventDefault();
+        returnNumberOfChecked();
+    })
+    var returnNumberOfChecked = function() {
+        var nChecked = 0;
+        var valueRapporti = $(".dati-value.rapporti");
+        for(var i=0; i< allChecks.length; i++) {
+            if(allChecks[i].checked)
+            nChecked++
+        }
+        nChecked === 0 ? valueRapporti.html("Nessuno") : valueRapporti.html(nChecked + " " + "conti visualizzati")
+      
+    }
+ 
 </script>

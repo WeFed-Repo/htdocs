@@ -1536,6 +1536,18 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   color: #2F9988;
   font-weight: bold;
 }
+.selettore-entrate-uscite .checkbox {
+  margin: 0;
+  padding-top: 0;
+}
+.selettore-entrate-uscite .checkbox input:checked + label::before {
+  border-color: #2F9988;
+}
+@media (max-width: 991px) {
+  .selettore-entrate-uscite .dati-value:not(.rapporti) {
+    font-weight: bold;
+  }
+}
 @media (max-width: 991px) {
   .selettore .dati-key,
 .selettore .dati-value,
@@ -3646,20 +3658,53 @@ table .checkbox.radio label {
 }
 
 .check-options-wrapper {
-  max-height: 360px;
+  max-height: 372px;
   overflow-y: auto;
   overflow-x: hidden;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .check-options-wrapper {
+    max-height: none;
+    overflow-y: visible;
+  }
 }
 .check-options-list {
-  padding: 15px 15px 15px 30px;
+  padding: 6px 15px 6px 30px;
   width: 100%;
   min-height: 60px;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
   border: 1px solid #DDDDDD;
+}
+.check-options-list .form-row {
+  align-items: center;
+  min-height: 50px;
+}
+.check-options-list:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .check-options-list:first-child {
+    border-top: 1px solid #DDDDDD;
+    padding-top: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .check-options-list {
+    border: 0;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 16px;
+    margin-bottom: 8px;
+  }
 }
 .check-options-list label {
   color: #2F9988;
-  padding-left: 15px;
+  padding-left: 1rem;
+}
+@media (max-width: 991px) {
+  .check-options-list label {
+    padding-left: 0.5rem;
+  }
 }
 .check-options-list .checkbox {
   margin: 0;
@@ -3669,9 +3714,22 @@ table .checkbox.radio label {
   font-weight: bold;
   display: block;
 }
-.check-options-list .output {
+@media (max-width: 991px) {
+  .check-options-list .label {
+    display: inline-block;
+  }
+}
+.check-options-list .text-output {
   font-weight: normal;
   padding: 0;
+}
+@media (max-width: 991px) {
+  .check-options-list .text-output {
+    float: right;
+    max-width: 70%;
+    margin-bottom: 5px;
+    text-align: right;
+  }
 }
 
 .radio label::before, .radio + label::before,

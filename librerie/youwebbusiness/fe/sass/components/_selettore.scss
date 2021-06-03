@@ -29,6 +29,20 @@
     color: $greenLink;
     font-weight: bold;
   }
+  &-entrate-uscite {
+    .checkbox {
+      margin:0;
+      padding-top:0;
+      input:checked + label::before {
+          border-color:$greenLink;
+      }
+    }
+    @media (max-width: $bp_lg_max) {
+      .dati-value:not(.rapporti) {
+        font-weight:bold;
+      }
+    }
+  }
   @media (max-width: $bp_lg_max) {
     .dati-key,
     .dati-value,
