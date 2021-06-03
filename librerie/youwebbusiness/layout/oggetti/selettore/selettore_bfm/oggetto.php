@@ -1,9 +1,9 @@
  <!-- SELETTORE -->
-  <section class="selettore selettore-entrate-uscite mb-0 mb-md-2">
+  <section class="selettore selettore-entrate-uscite">
   
     <!-- testata filtri desktop-->
     <div class=" d-none d-lg-block">
-      <section class="bordered p-3 m-0">
+      <section class="bordered p-3">
         <div class="row d-flex justify-content-between align-items-center">
             <div class="col col-md-10">
               <div class="row">
@@ -12,8 +12,8 @@
                     <span class="dati-value">Nessuno</span>
                   </div>
                   <div class="col col-md-7 col-lg-7">
-                    <span class="dati-key">Dossier:</span> 
-                    <span class="dati-value">Nessuno</span>
+                    <span class="dati-key">Rapporti:</span> 
+                    <span class="dati-value rapporti">Nessuno</span>
                   </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
       <div class="row" data-filter-button="filter-entrate-uscite">
           <div class="col-10">
           <div class="pb-0"><span class="dati-value d-inline">Nessuno</span></div>
-          <div class="pb-3"><span class="dati-value d-inline">Nessuno</span></div>
+          <div class="pb-3"><span class="dati-value d-inline rapporti">Nessuno</span></div>
           </div>
           <div class="col-2 align-self-stretch">
           <span class="btn-mobile-arrow d-flex align-items-center justify-content-end pb-3">
