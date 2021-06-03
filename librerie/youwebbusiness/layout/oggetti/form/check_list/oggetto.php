@@ -27,7 +27,7 @@
                           <div class="form-group col-lg-3 col-xl-3">
                               <div class="form-check checkbox">
                                   <input class="form-check-input" type="checkbox" id="sel<?= $i ?>" name="checkSelector" value="">
-                                  <label for="sel<?= $i ?>">Conto lorem ipsum dolor</span></label>
+                                  <label for="sel<?= $i ?>"><span>Conto lorem ipsum dolor lorem ipsum dolor</span></label>
                               </div>
                           </div>
                           <div class="form-group col-lg-3 col-xl-3">

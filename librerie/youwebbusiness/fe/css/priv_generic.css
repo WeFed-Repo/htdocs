@@ -3704,6 +3704,14 @@ table .checkbox.radio label {
 @media (max-width: 991px) {
   .check-options-list label {
     padding-left: 0.5rem;
+    display: block;
+  }
+  .check-options-list label span {
+    white-space: nowrap;
+    width: calc(100% - 0.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
   }
 }
 .check-options-list .checkbox {
@@ -5860,8 +5868,8 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border: 1px solid #2F9988;
   border-radius: 50%;
   text-align: center;
-  z-index: 1;
   line-height: 26px;
+  z-index: 1;
 }
 .step-wrapper .step-output-firme {
   text-align: right;
@@ -5892,6 +5900,55 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     padding-right: 0;
   }
 }
+/* box numerato per blocchi successivi*/
+.sub-title-block .sub-title-block-right {
+  color: #737373;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.sub-title-block .sub-title-block-right span {
+  color: #2F9988;
+  font-size: 18px;
+  padding-left: 0.5rem;
+}
+@media (max-width: 767px) {
+  .sub-title-block .sub-title-block-left {
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+
+.numbered-block .block-number {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2F9988;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  background-color: #2F9988;
+  color: #FFFFFF;
+  display: inline-block;
+}
+.numbered-block .block-number-title {
+  text-decoration: none !important;
+  font-size: 17px;
+  font-weight: bold;
+}
+.numbered-block-inner {
+  padding-left: 26px;
+  padding-top: 1.5rem;
+  position: relative;
+}
+.numbered-block-inner:before {
+  content: "";
+  height: 100%;
+  border-left: 1px solid #2F9988;
+  position: absolute;
+  left: 13px;
+  top: 6px;
+}
+
 /* Bordature */
 .bordered-top {
   border-top: solid 1px #eee;

@@ -86,9 +86,7 @@
     margin-left: $checkboxSizeGap;
     margin-bottom: $checkboxSizeGap;
   }
- 
-  
-}
+ }
 
 // posizione messaggio validazione
 .form-check  {
@@ -100,19 +98,53 @@
 //check-options-list
 .check-options{
   &-wrapper {
-    max-height: 360px;
+    max-height: 372px;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-bottom:20px;
+    @media (max-width: $bp_lg_max) {
+      max-height: none;
+      overflow-y: visible
+   }
+   
   }
   &-list {
-    padding:15px 15px 15px 30px;
+    .form-row {
+      align-items: center;
+      min-height: 50px;
+    }
+    padding:6px 15px 6px 30px;
     width: 100%;
     min-height: 60px;
-    margin-bottom:16px;
+    margin-bottom:13px;
+    &:last-child{margin-bottom:0;}
     border:1px solid $gray4;
+    &:first-child {
+      @media (max-width: $bp_lg_max) {
+       border-top: 1px solid $gray4;
+       padding-top:15px;
+      }
+    }
+    @media (max-width: $bp_lg_max) {
+       border:0;
+       border-bottom: 1px solid $gray4;
+       padding-left:16px;
+       margin-bottom:8px;
+    }
     label{
       color:$greenLink;
-      padding-left:15px;
+      padding-left:1rem;
+      @media (max-width: $bp_lg_max) {
+        padding-left:0.5rem;
+        display:block;
+        span {
+          white-space: nowrap; 
+          width: calc(100% - 0.5rem);
+          overflow: hidden;
+          text-overflow: ellipsis; 
+          display:inline-block;
+        }
+      } 
     }
     .checkbox {
       margin:0;
@@ -121,16 +153,26 @@
     .label {
       font-weight: bold;
       display: block;
+      @media (max-width: $bp_lg_max) {
+        display: inline-block;
+      } 
       
     }
-    .output{
+    .text-output{
       font-weight: normal;
       padding:0;
+      @media (max-width: $bp_lg_max) {
+         float:right;
+         max-width: 70%;
+         margin-bottom:5px;
+         text-align: right;
+      } 
     }
   }
+  
+  
 
 }
-
 
 
 
