@@ -68,6 +68,7 @@
         fontSize: 12,
         color: "#737373",
         addClassNames:true,
+        panEventsEnabled: false,
         balloon: {
             adjustBorderColor: true,
             borderThickness:0,
@@ -148,6 +149,7 @@
         type: "serial",
         dataProvider: piledata,
         categoryField: "mese",
+        panEventsEnabled: false,
         decimalSeparator:",",
         thousandsSeparator: "",
         fontFamily: "roboto, sans-serif",
