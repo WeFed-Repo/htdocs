@@ -287,6 +287,10 @@
           text-align: center;
           width: 100%;
           border: none !important;
+          // SG per risolvere il problema dell'altezza fissa
+          &.fit-content {
+            height: fit-content;
+          }
         }
       }
     }

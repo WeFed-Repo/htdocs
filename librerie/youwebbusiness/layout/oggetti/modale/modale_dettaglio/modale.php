@@ -317,14 +317,14 @@
 
       
       <!-- Variante 1 -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">associa fattura</button>
-        <button type="button" class="btn btn-primary">rendi ricorrente</button>
+      <div class="modal-footer fit-content d-block d-sm-flex">
+        <button type="button" class="btn btn-primary d-block d-sm-flex btn-xs-full">associa fattura</button>
+        <button type="button" class="btn btn-primary d-block d-sm-flex btn-xs-full">rendi ricorrente</button>
       </div>
       <!-- Variante 2 -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" disabled>associa fattura</button>
-        <button type="button" class="btn btn-primary">rendi ricorrente</button>
+      <div class="modal-footer fit-content d-block d-sm-flex">
+        <button type="button" class="btn btn-primary d-block d-sm-flex btn-xs-full" disabled>associa fattura</button>
+        <button type="button" class="btn btn-primary d-block d-sm-flex btn-xs-full">rendi ricorrente</button>
       </div>
       <!-- Alert -->
       <div class="m-3">
