@@ -941,6 +941,17 @@ img {
   border-bottom: solid 2px #DDDDDD;
 }
 
+.arrow-separator {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-45deg) skew(-7deg, -7deg);
+}
+
 h1 .icon, h1 img[src*=".svg"], h1 i, h2 .icon, h2 img[src*=".svg"], h2 i {
   width: 24px;
   height: 24px;

@@ -138,9 +138,7 @@
       span {
         white-space: nowrap; 
         width: calc(100% - 1rem);
-        overflow: hidden;
-        text-overflow: ellipsis; 
-        display:inline-block;
+        @include ellipsed();
       }
       @media (max-width: $bp_lg_max) {
         padding-left:0.5rem;

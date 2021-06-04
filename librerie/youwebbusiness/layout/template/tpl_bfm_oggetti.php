@@ -9,3 +9,7 @@
 <!-- MODALE DETTAGLIO MOVIMENTO -->
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_dettaglio/oggetto.php'); ?>
 <!-- ./ MODALE DETTAGLIO MOVIMENTO -->
+
+<!-- BOX ASSOCIA PROGETTO -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_block_arrow/oggetto.php'); ?>
+<!-- ./ BOX ASSOCIA PROGETTO-->

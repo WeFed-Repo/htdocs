@@ -3758,9 +3758,11 @@ table .checkbox.radio label {
 .check-options-list label span {
   white-space: nowrap;
   width: calc(100% - 1rem);
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: inline-block;
 }
 @media (max-width: 991px) {
   .check-options-list label {
