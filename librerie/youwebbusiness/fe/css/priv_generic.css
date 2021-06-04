@@ -1598,9 +1598,6 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   .selettore-entrate-uscite .dati-value:not(.rapporti) {
     font-weight: bold;
   }
-  .selettore-entrate-uscite .btn {
-    width: 100%;
-  }
 }
 @media (max-width: 991px) {
   .selettore .dati-key,
