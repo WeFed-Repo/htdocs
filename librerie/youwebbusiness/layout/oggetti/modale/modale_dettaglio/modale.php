@@ -68,7 +68,7 @@
                   </div>
                   <div class="list">
                     <dt class="list-key">Importo</dt>
-                    <dd class="list-value">-102,86</dd>
+                    <dd class="list-value color-error">-102,86</dd>
                   </div>
                   <div class="list">
                     <dt class="list-key">Divisa</dt>
