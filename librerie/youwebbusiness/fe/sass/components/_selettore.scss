@@ -41,6 +41,9 @@
       .dati-value:not(.rapporti) {
         font-weight:bold;
       }
+      .btn {
+        width: 100%;
+      }
     }
   }
   @media (max-width: $bp_lg_max) {

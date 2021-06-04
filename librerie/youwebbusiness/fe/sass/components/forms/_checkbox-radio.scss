@@ -134,15 +134,18 @@
     label{
       color:$greenLink;
       padding-left:1rem;
+      display:block;
+      span {
+        white-space: nowrap; 
+        width: calc(100% - 1rem);
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        display:inline-block;
+      }
       @media (max-width: $bp_lg_max) {
         padding-left:0.5rem;
-        display:block;
         span {
-          white-space: nowrap; 
           width: calc(100% - 0.5rem);
-          overflow: hidden;
-          text-overflow: ellipsis; 
-          display:inline-block;
         }
       } 
     }
@@ -153,6 +156,7 @@
     .label {
       font-weight: bold;
       display: block;
+      padding-bottom:5px;
       @media (max-width: $bp_lg_max) { 
         display: inline-block;
       } 
@@ -169,9 +173,6 @@
       } 
     }
   }
-  
-  
-
 }
 
 

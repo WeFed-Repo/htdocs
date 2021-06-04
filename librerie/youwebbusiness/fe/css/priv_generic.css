@@ -1581,6 +1581,9 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   .selettore-entrate-uscite .dati-value:not(.rapporti) {
     font-weight: bold;
   }
+  .selettore-entrate-uscite .btn {
+    width: 100%;
+  }
 }
 @media (max-width: 991px) {
   .selettore .dati-key,
@@ -3737,18 +3740,21 @@ table .checkbox.radio label {
 .check-options-list label {
   color: #2F9988;
   padding-left: 1rem;
+  display: block;
+}
+.check-options-list label span {
+  white-space: nowrap;
+  width: calc(100% - 1rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 @media (max-width: 991px) {
   .check-options-list label {
     padding-left: 0.5rem;
-    display: block;
   }
   .check-options-list label span {
-    white-space: nowrap;
     width: calc(100% - 0.5rem);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
   }
 }
 .check-options-list .checkbox {
@@ -3758,6 +3764,7 @@ table .checkbox.radio label {
 .check-options-list .label {
   font-weight: bold;
   display: block;
+  padding-bottom: 5px;
 }
 @media (max-width: 991px) {
   .check-options-list .label {
