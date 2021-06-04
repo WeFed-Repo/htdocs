@@ -153,7 +153,7 @@
     .label {
       font-weight: bold;
       display: block;
-      @media (max-width: $bp_lg_max) {
+      @media (max-width: $bp_lg_max) { 
         display: inline-block;
       } 
       

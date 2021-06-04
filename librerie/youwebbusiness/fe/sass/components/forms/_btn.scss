@@ -78,6 +78,9 @@
     @include btnPalette($color:$greenLink, $bkg:$white, $bkg_hover: $grayBG, $border: $grayBordered, $color_disabled:$gray3 );
     border-color: $grayBordered !important; // TODO: sistemare.....
     text-transform: none;
+    &.brd-green {
+      border-color: $greenLink !important;
+    }
     &:disabled, &.disabled {
       border-color: transparent !important; // TODO: sistemare.....
     }

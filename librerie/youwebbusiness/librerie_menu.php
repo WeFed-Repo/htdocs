@@ -278,7 +278,15 @@
 			}
             ]
 	},
-
+    {
+		"title": "BFM",
+		"voices": [
+			{
+				"title": "Oggetti Bfm",
+				"tpl": "tpl_bfm_oggetti.php"
+			}
+        ]
+	},
 	{
 		"title": "PARTE PUBBLICA E VARI<br /><u>(non includere in menu)</u>",
 		"voices": [

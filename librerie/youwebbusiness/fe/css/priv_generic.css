@@ -2911,6 +2911,9 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   background: #DDDDDD !important;
   border-color: transparent !important;
 }
+.btn.btn-white.brd-green {
+  border-color: #2F9988 !important;
+}
 .btn.btn-white:disabled, .btn.btn-white.disabled {
   border-color: transparent !important;
 }
@@ -3692,20 +3695,47 @@ table .checkbox.radio label {
 }
 
 .check-options-wrapper {
-  max-height: 360px;
+  max-height: 372px;
   overflow-y: auto;
   overflow-x: hidden;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .check-options-wrapper {
+    max-height: none;
+    overflow-y: visible;
+  }
 }
 .check-options-list {
-  padding: 15px 15px 15px 30px;
+  padding: 6px 15px 6px 30px;
   width: 100%;
   min-height: 60px;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
   border: 1px solid #DDDDDD;
+}
+.check-options-list .form-row {
+  align-items: center;
+  min-height: 50px;
+}
+.check-options-list:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .check-options-list:first-child {
+    border-top: 1px solid #DDDDDD;
+    padding-top: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .check-options-list {
+    border: 0;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 16px;
+    margin-bottom: 8px;
+  }
 }
 .check-options-list label {
   color: #2F9988;
-<<<<<<< Updated upstream
   padding-left: 1rem;
 }
 @media (max-width: 991px) {
@@ -3720,9 +3750,6 @@ table .checkbox.radio label {
     text-overflow: ellipsis;
     display: inline-block;
   }
-=======
-  padding-left: 15px;
->>>>>>> Stashed changes
 }
 .check-options-list .checkbox {
   margin: 0;
@@ -3732,9 +3759,22 @@ table .checkbox.radio label {
   font-weight: bold;
   display: block;
 }
-.check-options-list .output {
+@media (max-width: 991px) {
+  .check-options-list .label {
+    display: inline-block;
+  }
+}
+.check-options-list .text-output {
   font-weight: normal;
   padding: 0;
+}
+@media (max-width: 991px) {
+  .check-options-list .text-output {
+    float: right;
+    max-width: 70%;
+    margin-bottom: 5px;
+    text-align: right;
+  }
 }
 
 .radio label::before, .radio + label::before,
@@ -5926,6 +5966,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   background-color: #2F9988;
   color: #FFFFFF;
   display: inline-block;
+  margin-right: 0.5rem;
 }
 .numbered-block .block-number-title {
   text-decoration: none !important;
@@ -5935,15 +5976,29 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .numbered-block-inner {
   padding-left: 26px;
   padding-top: 1.5rem;
+  padding-bottom: 40px;
   position: relative;
+}
+.numbered-block-inner .btn-add {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
 }
 .numbered-block-inner:before {
   content: "";
-  height: 100%;
+  height: calc(100% - 12px);
   border-left: 1px solid #2F9988;
   position: absolute;
   left: 13px;
   top: 6px;
+}
+@media (max-width: 767px) {
+  .numbered-block-inner {
+    padding-bottom: 0;
+  }
+  .numbered-block .btn-add {
+    position: static;
+  }
 }
 
 /* Bordature */
