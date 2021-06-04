@@ -17,7 +17,7 @@
     <hr class="up-body-separator">
     <div class="card-body">
       <div class="row">
-        <div class="col-6 col-md-6">
+        <div class="col-sm-12 col-md-6">
           <div class="list">
             <dt class="list-key">Lorem Ipsum</dt>
             <dd class="list-value">Lorem Ipsum</dd>
@@ -27,7 +27,7 @@
             <dd class="list-value">Lorem Ipsum</dd>
           </div>
         </div>
-        <div class="col-6 col-md-6">
+        <div class="col-sm-12 col-md-6">
           <div class="list">
             <dt class="list-key">Lorem Ipsum</dt>
             <dd class="list-value">Lorem Ipsum</dd>
