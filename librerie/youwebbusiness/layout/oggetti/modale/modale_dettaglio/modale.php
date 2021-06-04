@@ -31,7 +31,7 @@
               <h2>Rapporto</h2>
 
               <div class="row">
-                <div class="col-6 col-md-6">
+                <div class="col-sm-12 col-md-6">
                   <div class="list">
                     <dt class="list-key">Ragione sociale</dt>
                     <dd class="list-value">Automobile 24</dd>
@@ -41,7 +41,7 @@
                     <dd class="list-value">Conto cassa</dd>
                   </div>
                 </div>
-                <div class="col-6 col-md-6">
+                <div class="col-sm-12 col-md-6">
                   <div class="list">
                     <dt class="list-key">ABI - Banca</dt>
                     <dd class="list-value">0534 - Banco BPM SPA</dd>
@@ -61,7 +61,7 @@
             <div class="detail-panel p-3 md-0">
               <h2>Movimento</h2>
               <div class="row">
-                <div class="col-6 col-md-6">
+                <div class="col-sm-12 col-md-6">
                   <div class="list">
                     <dt class="list-key">Data contabile</dt>
                     <dd class="list-value">18/02/2021</dd>
@@ -79,7 +79,7 @@
                     <dd class="list-value">110</dd>
                   </div>
                 </div>
-                <div class="col-6 col-md-6">
+                <div class="col-sm-12 col-md-6">
                   <div class="list">
                     <dt class="list-key">Descrizione</dt>
                     <dd class="list-value">pag. utenze varie</dd>
@@ -120,7 +120,7 @@
               <div class="card-body">
                 
                 <div class="row">
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
@@ -146,7 +146,7 @@
                       <dd class="list-value">Lorem Ipsum</dd>
                     </div>
                   </div>
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
@@ -195,7 +195,7 @@
               <div class="card-body">
                 
                 <div class="row">
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
@@ -221,7 +221,7 @@
                       <dd class="list-value">Lorem Ipsum</dd>
                     </div>
                   </div>
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
@@ -262,7 +262,7 @@
               <div class="card-body">
                 
                 <div class="row">
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
@@ -288,7 +288,7 @@
                       <dd class="list-value">Lorem Ipsum</dd>
                     </div>
                   </div>
-                  <div class="col-6 col-md-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="list">
                       <dt class="list-key">Lorem Ipsum</dt>
                       <dd class="list-value">Lorem Ipsum</dd>
