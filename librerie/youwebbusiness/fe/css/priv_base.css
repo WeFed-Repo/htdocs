@@ -310,6 +310,18 @@ img.icon:before {
   margin-top: 0.2em !important;
 }
 
+.icon-ico_applica:before {
+  content: "";
+}
+
+.icon-ico_arrow_right_text:before {
+  content: "";
+}
+
+.icon-ico_dividi:before {
+  content: "";
+}
+
 .icon-ico_gestione_contatti:before {
   content: "";
 }
@@ -942,14 +954,30 @@ img {
 }
 
 .arrow-separator {
-  border: solid black;
+  border: solid #2F9988;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
   vertical-align: middle;
   width: 30px;
   height: 30px;
-  transform: rotate(-45deg) skew(-7deg, -7deg);
+  transform: rotate(-45deg) skew(-15deg, -15deg);
+  opacity: 0.2;
+}
+@media (max-width: 767px) {
+  .arrow-separator {
+    transform: rotate(45deg) skew(-15deg, -15deg);
+    position: relative;
+    top: -0.5rem;
+  }
+}
+.arrow-separator-row {
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .arrow-separator-row {
+    text-align: center;
+  }
 }
 
 h1 .icon, h1 img[src*=".svg"], h1 i, h2 .icon, h2 img[src*=".svg"], h2 i {
@@ -1098,6 +1126,23 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 
 .text-underline {
   text-decoration: underline !important;
+}
+
+.text-output {
+  font-weight: bold;
+}
+.text-big {
+  font-size: 1.3rem;
+}
+.text-small {
+  font-size: 0.9rem;
+}
+.text-small .icon {
+  position: relative;
+  top: 5px;
+}
+.text-green {
+  color: #2F9988;
 }
 
 .text-primary {

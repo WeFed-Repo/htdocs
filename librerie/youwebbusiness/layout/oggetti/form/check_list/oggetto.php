@@ -81,7 +81,7 @@
     <div class="form-row d-flex justify-content-end">
         <div class="col col-lg-2">
             <button class="btn btn-white brd-green fl-right" id="btnApplica">
-                <img class="icon icon-reload" src="./fe/img/icon-reload.png" />Applica
+                    <i class="icon icon-ico_applica"></i>Applica
             </button>
         </div>
     </div>

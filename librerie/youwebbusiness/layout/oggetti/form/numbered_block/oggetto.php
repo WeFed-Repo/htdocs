@@ -102,8 +102,7 @@
                 </div>
               </form>
               <div class="d-flex justify-content-end">
-               <button class="btn brd-green btn-white btn-small btn-add">
-                        <img class="icon icon-dividi" src="./fe/img/icon-dividi.png">Aggiungi divisione
+               <button class="btn brd-green btn-white btn-small btn-add"><i class="icon icon-ico_dividi"></i>Aggiungi divisione
                 </button>
               </div>
       </div>

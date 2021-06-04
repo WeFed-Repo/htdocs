@@ -53,8 +53,16 @@ img.icon {
   margin-top: 0.2em !important;
 }
 
-// INCOLLARE I FONT ICONICI DA QUI IN AVANTI
-
+// INCOLLARE I FONT ICONICI DA QUI IN AVANTI 
+.icon-ico_applica:before {
+  content: "\e952";
+}
+.icon-ico_arrow_right_text:before {
+  content: "\e951";
+}
+.icon-ico_dividi:before {
+  content: "\e950";
+}
 .icon-ico_gestione_contatti:before {
   content: "\e904";
 }
