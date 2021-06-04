@@ -249,6 +249,10 @@
 .not-floated-modal .modal-dialog .modal-content h3 {
   color: #2F9988;
 }
+.modal .modal-dialog .modal-content .modal-body-title h1,
+.not-floated-modal .modal-dialog .modal-content .modal-body-title h1 {
+  color: #737373;
+}
 .modal .modal-dialog .modal-header,
 .not-floated-modal .modal-dialog .modal-header {
   position: relative;
@@ -707,6 +711,9 @@
   font-weight: bold;
   color: #2F9988;
 }
+.accordion .card .card-header .full-contain, .accordion .acc-item .card-header .full-contain {
+  width: max-content;
+}
 .accordion .card .card-header .card-header-icon, .accordion .acc-item .card-header .card-header-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -772,6 +779,12 @@
 .accordion .card .card-body, .accordion .acc-item .card-body {
   padding: 1rem;
   font-size: 14px;
+}
+.accordion .card .up-body-separator, .accordion .acc-item .up-body-separator {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .accordion.bordered-style .card {
   background: #FFFFFF;

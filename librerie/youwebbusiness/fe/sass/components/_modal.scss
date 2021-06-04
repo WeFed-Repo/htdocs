@@ -21,6 +21,13 @@
       h1, h2:not(.modal-title-grey), h3 {
         color: $greenLink;
       }
+      // SG modal Title
+      .modal-body-title {
+        h1 {
+          color: $gray2;
+        }        
+      }
+      // end
     }
     .modal-header {
       position: relative;

@@ -15,6 +15,11 @@
         font-weight: bold;
         color: $greenLink;
       }
+      // SG Multi Elements Header Contain
+      .full-contain {
+        width: max-content;
+      }
+      // End
       .card-header-icon {
         @include icon-font-family();
         color: $greenLink;
@@ -60,6 +65,12 @@
       padding: 1rem;
       font-size: $bodyFontSize;
     }
+    .up-body-separator {
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
   &.bordered-style {
     .card {
@@ -80,6 +91,7 @@
       }
     }
   }
+  // SG New Style
   &.always-active {
     .card, .acc-item {
       .card-header {
