@@ -2,31 +2,6 @@
 <div class="modal fade" data-modal="simpledetail">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-
-
-      <!--<div class="modal-header d-flex justify-content-between pb-0">
-        <div class="d-flex justify-content-between w-100">
-          <div>
-            <h5 class="modal-title mt-2">
-              Dettaglio movimento
-            </h5>
-          </div>
-          <div>
-            <p class="text-right mt-3">
-              Creato il : 20/02/2021 da Mario Rosside
-            </p>
-          </div>
-        </div>        
-        <div class="modal-toolbar">
-          <a href="#" aria-label="Print" >
-            <img src="./fe/img/icon/print.svg">
-          </a>
-          <a href="#" data-dismiss="modal" aria-label="Close" >
-            <img src="./fe/img/icon/close.svg">
-          </a>
-        </div>
-      </div>-->
-
       <div class="modal-header fit-content d-flex justify-content-between pb-0">
         <div class="row d-flex justify-content-between align-items-center w-100">
           <h5 class="col-sm-6 modal-title mt-2">
