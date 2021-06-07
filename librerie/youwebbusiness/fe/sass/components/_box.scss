@@ -422,7 +422,7 @@
 .sub-title-block {
   .sub-title-block-right {
     color:$gray2;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 20px;
     span{
@@ -449,7 +449,7 @@
     margin-right:0.5rem;
     &-title {
       text-decoration: none!important;
-      font-size:17px;
+      font-size:20px;
       font-weight:bold;
     }
   }
@@ -485,6 +485,13 @@
 
 }
 
+/*arrow-box-wrapper */
+.arrow-box-wrapper {
+  p>.icon {position: relative;top:4px;}
+  .control-label,.text-output:not(.text-big) {
+    font-size: 16px;
+  }
+}
 
 
 

@@ -1,11 +1,11 @@
 <section class="no-margin-section">
   <div class="bordered pr-4">
     <section>
-      <h5><strong>Suddividi la tua spesa</strong></h5>
+      <h4>Suddividi la tua spesa</h4>
       <div class="sub-title-block">
         <div class="row">
             <div class="col-12 col-md-8">
-              <span class="sub-title-block-left">Potrai suddividere l'importo con un massimo di 5 transazioni</span>
+              <span class="sub-title-block-left text-small">Potrai suddividere l'importo con un massimo di 5 transazioni</span>
             </div>
            <div class="col-12 col-md-4 text-md-right">
               <span class="sub-title-block-right">
@@ -116,7 +116,7 @@
   <div class="bordered pr-4 pb-4 pt-4">
     <div class="row">
         <div class="col-12 col-md-10">
-          <h5 class="mt-1"><strong>Vuoi ripristinare il movimento d'origine eliminando tutte le spese suddivise?</strong></h5>
+          <h4 class="mt-1">Vuoi ripristinare il movimento d'origine eliminando tutte le spese suddivise?</h4>
         </div>
         <div class="col-12 col-md-2">
               <button class="btn brd-green btn-white btn-small float-right m-0">ELIMINA TUTTE</button>

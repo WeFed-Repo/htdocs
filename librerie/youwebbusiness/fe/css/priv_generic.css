@@ -1443,9 +1443,6 @@
   font-weight: bold;
   line-height: calc( 55px - 0.2em );
 }
-.alert-outline.warning {
-  border: 1px solid #CF9418;
-}
 
 .table-alert {
   z-index: 2;
@@ -1476,6 +1473,32 @@
 }
 .alert-deny .alert-icon img {
   width: 100%;
+}
+.alert-outline {
+  font-size: 1.1rem;
+  background-color: #FFFFFF;
+  color: #737373;
+  display: block;
+  border-radius: 0;
+  padding: 1.5rem;
+}
+.alert-outline .icon {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.alert-outline .text {
+  padding-left: 20px;
+  display: block;
+}
+.alert-outline .control-label {
+  font-size: 1rem;
+}
+.alert-outline .text-output {
+  font-size: 1.3rem;
+}
+.alert-outline.warning {
+  border: 1px solid #CF9418;
 }
 
 ul.pagination {
@@ -3793,7 +3816,6 @@ table .checkbox.radio label {
   }
 }
 .check-options-list label {
-  color: #2F9988;
   padding-left: 1rem;
   display: block;
 }
@@ -6004,7 +6026,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 /* box numerato per blocchi successivi*/
 .sub-title-block .sub-title-block-right {
   color: #737373;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 20px;
 }
@@ -6034,7 +6056,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .numbered-block .block-number-title {
   text-decoration: none !important;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
 }
 .numbered-block-inner {
@@ -6063,6 +6085,15 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   .numbered-block .btn-add {
     position: static;
   }
+}
+
+/*arrow-box-wrapper */
+.arrow-box-wrapper p > .icon {
+  position: relative;
+  top: 4px;
+}
+.arrow-box-wrapper .control-label, .arrow-box-wrapper .text-output:not(.text-big) {
+  font-size: 16px;
 }
 
 /* Bordature */
