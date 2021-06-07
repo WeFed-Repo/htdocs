@@ -113,12 +113,14 @@
     border-radius: 0;
     padding : 1.5rem;
     .icon {
-      top:0;
+      top:50%;
       left:0;
       position: absolute;
+      margin-top:-15px;
+      font-size: 30px;
     }
     .text {
-      padding-left: 20px;
+      padding-left: 30px;
       display: block;
     }
     .control-label {
@@ -129,6 +131,9 @@
     }
     &.warning {
       border: 1px solid  $warning;
+      .icon {
+        color:$warning;
+      }
     }
   } 
 }

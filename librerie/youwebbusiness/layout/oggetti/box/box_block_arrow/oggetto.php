@@ -33,7 +33,7 @@
   </div>
 </section>
 
-<section>
+<section class="no-margin-section">
   <div class="alert alert-outline warning">
         <div class="row align-items-center">
             <div class="col-12 col-md-8">
@@ -48,7 +48,7 @@
     </div>
 </section>
  
-<section>
+<section class="no-margin-section">
   <div class="bordered pr-3 pb-3 pt-3">
     <div class="row">
         <div class="col-12 col-md-12">

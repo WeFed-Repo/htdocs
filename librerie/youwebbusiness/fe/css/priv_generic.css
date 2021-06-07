@@ -1486,12 +1486,14 @@
   padding: 1.5rem;
 }
 .alert-outline .icon {
-  top: 0;
+  top: 50%;
   left: 0;
   position: absolute;
+  margin-top: -15px;
+  font-size: 30px;
 }
 .alert-outline .text {
-  padding-left: 20px;
+  padding-left: 30px;
   display: block;
 }
 .alert-outline .control-label {
@@ -1502,6 +1504,9 @@
 }
 .alert-outline.warning {
   border: 1px solid #CF9418;
+}
+.alert-outline.warning .icon {
+  color: #CF9418;
 }
 
 ul.pagination {
@@ -6061,6 +6066,13 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   text-decoration: none !important;
   font-size: 20px;
   font-weight: bold;
+}
+.numbered-block .block-number-title .icon {
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 5px;
 }
 .numbered-block-inner {
   padding-left: 26px;

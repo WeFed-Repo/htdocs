@@ -54,6 +54,12 @@ img.icon {
 }
 
 // INCOLLARE I FONT ICONICI DA QUI IN AVANTI 
+.icon-ico_modifica:before {
+  content: "\e954";
+}
+.icon-ico_warning:before {
+  content: "\e955";
+}
 .icon-ico_divieto:before {
   content: "\e953";
 }

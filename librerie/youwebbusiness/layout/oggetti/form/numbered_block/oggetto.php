@@ -19,7 +19,9 @@
     <section>
       <div class="numbered-block">
           <div class="block-number"><span data-number="1">1</span></div>
-          <a href="#" class="block-number-title">Movimento <span data-number="1">1</span><img src="./fe/img/icon/icon-22.svg" class="icon float-none ml-2 mb-2"></a>
+          <a href="#" class="block-number-title">Movimento <span data-number="1">1</span>
+          <i class="icon icon-ico_modifica float-none ml-2 "></i>
+        </a>
           <div class="numbered-block-inner">
               <form class="form-grid">
                 <div class="form-row">
@@ -62,7 +64,7 @@
       </div>
       <div class="numbered-block">
           <div class="block-number"><span data-number="2">2</span></div>
-          <a href="#" class="block-number-title">Movimento <span data-number="2">2</span><img src="./fe/img/icon/icon-22.svg" class="icon float-none ml-2 mb-2"></a>
+          <a href="#" class="block-number-title">Movimento <span data-number="2">2</span> <i class="icon icon-ico_modifica float-none ml-2"></i></a>
           <div class="numbered-block-inner">
               <form class="form-grid">
                 <div class="form-row">
