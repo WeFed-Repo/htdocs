@@ -63,11 +63,7 @@
       line-height: calc( #{$iconDimension} - 0.2em );
     }
   }
-  &-outline {
-    &.warning {
-      border: 1px solid  $warning;
-    }
-  }
+  
 }
 
 .table-alert {
@@ -83,7 +79,7 @@
   @include icon { @include svg-icon-color($green); }
 }
 
-// Nuovo Alert Deny
+// Nuovo Alert Deny e outline
 .alert {
   &-deny {
     // Clear
@@ -109,4 +105,31 @@
       }
     }
   }
+  &-outline {
+    font-size: 1.1rem;
+    background-color: $white;
+    color:$gray2;
+    display: block;
+    border-radius: 0;
+    padding : 1.5rem;
+    .icon {
+      top:0;
+      left:0;
+      position: absolute;
+    }
+    .text {
+      padding-left: 20px;
+      display: block;
+    }
+    .control-label {
+      font-size:1rem;
+    }
+    .text-output {
+      font-size:1.3rem;
+    }
+    &.warning {
+      border: 1px solid  $warning;
+    }
+  }
+  
 }

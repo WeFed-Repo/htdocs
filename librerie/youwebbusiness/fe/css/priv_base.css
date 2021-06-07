@@ -1145,9 +1145,6 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   position: relative;
   top: 5px;
 }
-.text-green {
-  color: #2F9988;
-}
 
 .text-primary {
   color: #2F9988 !important;
