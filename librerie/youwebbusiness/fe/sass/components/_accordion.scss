@@ -94,6 +94,9 @@
   // SG New Style
   &.always-active {
     .card, .acc-item {
+      /* Border-color differente per coerenza con i bordi dei bordi 
+      degli altri elementi (#DDDDDD) */
+      border: solid 1px $gray4;
       .card-header {
         &.collapsed {
           .card-header-title {

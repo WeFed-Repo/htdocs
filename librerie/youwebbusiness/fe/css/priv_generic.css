@@ -807,6 +807,11 @@
   background: transparent;
   padding: 1rem 1rem 2rem 1rem;
 }
+.accordion.always-active .card, .accordion.always-active .acc-item {
+  /* Border-color differente per coerenza con i bordi dei bordi 
+  degli altri elementi (#DDDDDD) */
+  border: solid 1px #DDDDDD;
+}
 .accordion.always-active .card .card-header.collapsed .card-header-title, .accordion.always-active .acc-item .card-header.collapsed .card-header-title {
   color: #2F9988;
 }
