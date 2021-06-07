@@ -2,7 +2,9 @@
 <div class="modal fade" data-modal="simpledetail">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-      <div class="modal-header d-flex justify-content-between pb-0">
+
+
+      <!--<div class="modal-header d-flex justify-content-between pb-0">
         <div class="d-flex justify-content-between w-100">
           <div>
             <h5 class="modal-title mt-2">
@@ -23,7 +25,29 @@
             <img src="./fe/img/icon/close.svg">
           </a>
         </div>
+      </div>-->
+
+      <div class="modal-header fit-content d-flex justify-content-between pb-0">
+        <div class="row d-flex justify-content-between align-items-center w-100">
+          <h5 class="col-sm-6 modal-title mt-2">
+            Dettaglio movimento
+          </h5>
+          <p class="col-sm-6 pr-4 text-sm-left text-md-right mt-3">
+            Creato il : 20/02/2021 da Mario Rosside
+          </p>
+        </div>
+        <div class="d-flex justify-content-start h-100">
+          <div class="modal-toolbar align-items-start pt-2">
+            <a href="#" aria-label="Print" >
+              <img src="./fe/img/icon/print.svg">
+            </a>
+            <a href="#" data-dismiss="modal" aria-label="Close" >
+              <img src="./fe/img/icon/close.svg">
+            </a>
+          </div>
+        </div>
       </div>
+
       <div class="modal-body">
         <div class="row pb-3">
           <div class="col-12 col-md-12">

@@ -590,6 +590,11 @@
     margin: 5px 0;
     padding: 0;
   }
+  .modal .modal-dialog .modal-content .modal-header.fit-content,
+.not-floated-modal .modal-show .modal-dialog .modal-content .modal-header.fit-content {
+    min-height: fit-content;
+    height: fit-content;
+  }
   .modal .modal-dialog .modal-content .modal-body,
 .not-floated-modal .modal-show .modal-dialog .modal-content .modal-body {
     height: 100%;
