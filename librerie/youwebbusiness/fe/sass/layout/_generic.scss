@@ -315,6 +315,33 @@ dl, .list {
   }
 }
 
+// SG Nuovo Elemento Text-Width-Icon
+.text-with-icon {
+  font-size: 1.1rem;
+  color: $gray2;
+  position:relative;
+  width: fit-content;
+  &.left-icon{
+      padding : 13px 15px 13px 48px;
+      .icon {
+          position:absolute;
+          left:15px;
+          top:12px;
+          font-size: 26px;
+      }
+  }
+  &.right-icon{
+    padding: 13px 48px 13px 15px;
+      .icon {
+          position:absolute;
+          right:15px;
+          top:12px;
+          font-size: 26px;
+      }
+  }
+}
+// End Text-Width-Icon
+
 .display-icon {
   width: 65px;
   min-width: 65px;

@@ -1160,6 +1160,31 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 .text-secondary {
   color: #737373 !important;
 }
+.text-with-icon {
+  font-size: 1.1rem;
+  color: #737373;
+  position: relative;
+  width: fit-content;
+}
+.text-with-icon.left-icon {
+  padding: 13px 15px 13px 48px;
+}
+.text-with-icon.left-icon .icon {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 26px;
+}
+.text-with-icon.right-icon {
+  padding: 13px 48px 13px 15px;
+}
+.text-with-icon.right-icon .icon {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 26px;
+}
+
 .display-icon {
   width: 65px;
   min-width: 65px;
