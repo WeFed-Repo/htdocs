@@ -1464,18 +1464,21 @@
   background: #F5F5F5;
   color: #3e3e3e;
   position: relative;
-  padding: 13px 13px 15px 56px;
+  padding: 13px 13px 15px 48px;
   border-radius: 0px;
 }
 .alert-deny .alert-icon {
   position: absolute;
   left: 15px;
   top: 12px;
-  width: 26px;
   height: auto;
 }
 .alert-deny .alert-icon img {
   width: 100%;
+}
+.alert-deny .alert-icon.icon, .alert-deny .alert-icon .icon {
+  font-size: 26px;
+  color: #3e3e3e;
 }
 
 ul.pagination {

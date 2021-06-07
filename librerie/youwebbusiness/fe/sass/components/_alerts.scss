@@ -93,16 +93,19 @@
     background: $grayBG;
     color: $gray1;
     position:relative;
-    padding : 13px 13px 15px 56px;
+    padding : 13px 13px 15px 48px;
     border-radius: 0px;
     .alert-icon{
       position:absolute;
       left:15px;
       top:12px;
-      width:26px;
       height:auto;
       img {
         width:100%;
+      }
+      &.icon, .icon {
+        font-size: 26px;
+        color: $gray1;
       }
     }
   }

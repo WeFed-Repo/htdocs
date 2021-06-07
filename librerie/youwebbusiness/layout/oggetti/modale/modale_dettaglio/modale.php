@@ -2,12 +2,12 @@
 <div class="modal fade" data-modal="simpledetail">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-      <div class="modal-header fit-content d-flex justify-content-between pb-0">
-        <div class="row d-flex justify-content-between align-items-center w-100">
+      <div class="modal-header fit-content d-flex justify-content-between pb-1">
+        <div class="row d-flex justify-content-between align-items-start w-100">
           <h5 class="col-sm-6 modal-title mt-2">
             Dettaglio movimento
           </h5>
-          <p class="col-sm-6 pr-4 text-sm-left text-md-right mt-3">
+          <p class="col-sm-6 pr-4 text-sm-left text-md-right mt-2 pt-1">
             Creato il : 20/02/2021 da Mario Rosside
           </p>
         </div>
@@ -328,9 +328,9 @@
       <!-- Alert -->
       <div class="m-3">
         <div class="alert alert-deny">
-          <div class="alert-icon">
-              <img src="./fe/img/icon/divieto.svg">
-          </div>
+          <div class="alert-icon ">
+            <i class="icon icon-ico_divieto"></i>
+          </div> 
           Ci dispiace, al momento non sei abilitato alla funzione di Associa Fattura. Rivolgiti al master per attivare le abilitazioni sul tuo profilo.
       </div>
       </div>
