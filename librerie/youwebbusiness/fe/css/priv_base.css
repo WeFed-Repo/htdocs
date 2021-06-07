@@ -310,6 +310,10 @@ img.icon:before {
   margin-top: 0.2em !important;
 }
 
+.icon-ico_help:before {
+  content: "";
+}
+
 .icon-ico_modifica:before {
   content: "";
 }
