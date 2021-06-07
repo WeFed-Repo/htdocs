@@ -56,11 +56,16 @@
   }
   &-danger {
     background: $error;
-    &:before {
+    &:before { 
       content: "!";
       font-size: 1.8rem;
       font-weight: bold;
       line-height: calc( #{$iconDimension} - 0.2em );
+    }
+  }
+  &-outline {
+    &.warning {
+      border: 1px solid  $warning;
     }
   }
 }

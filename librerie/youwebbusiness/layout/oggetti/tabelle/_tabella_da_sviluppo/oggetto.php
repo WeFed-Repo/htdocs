@@ -19,21 +19,21 @@
         
         <a href="javascript:void(0);" tm-action-link="Pdf" class="tm-norows-hide" style="text-decoration: none !important;">
             <span>
-                <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/pdf.svg">
+                <img src="fe/img/icon/pdf.svg">
                 
             </span>
         </a>
         
         <a href="javascript:void(0);" tm-action-link="CSV" class="tm-norows-hide" style="text-decoration: none !important;">
             <span>
-                <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/excel.svg">
+                <img src="fe/img/icon/excel.svg">
                 
             </span>
         </a>
         
         <a href="javascript:void(0);" tm-action-link="CSV2000" class="tm-norows-hide" style="text-decoration: none !important;">
             <span>
-                <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/excel2000.svg">
+                <img src="fe/img/icon/excel2000.svg">
                 
             </span>
         </a>
@@ -104,8 +104,7 @@
         
     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
     <td>
-
-        AUTOMOBILE CLUB - A.C. - MODEN
+        <a href="javascript:;" data-toggle="tooltip" title="lorem ipum dolor sit" data-trigger="focus" data-container="#tableDistinteInLavorazione">tooltip al focus</a>
     </td>
     <td>05034</td>
     <td>000000047661                                      </td>
@@ -122,7 +121,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -157,16 +156,13 @@
     <td class="right"><span class="tm-importo ">99,00 EUR</span></td>
 
         <td>
-            
-            
-            <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/warning-red.svg" tm-modal-error-message="1" style="cursor:pointer;">
-            
+            <img src="fe/img/icon/warning-red.svg" tm-modal-error-message="1" style="cursor:pointer;">
         </td>
         <td class="center">
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -210,7 +206,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -252,7 +248,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -294,7 +290,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -336,7 +332,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -378,7 +374,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -420,7 +416,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -462,7 +458,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     
@@ -504,7 +500,7 @@
             
             <div class="btn-group">
                 <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/Youbiz.Sdk.Web/StaticContents/ybw/00000/it-IT/skins/skin1/img/icon/more.svg">
+                    <img src="fe/img/icon/more.svg">
                 </a>
                 <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                     

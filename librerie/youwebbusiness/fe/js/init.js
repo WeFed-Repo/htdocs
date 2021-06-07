@@ -281,13 +281,25 @@ function initDataFilters() {
 }
 
 function initTooltips() {
+    /*
     $("[data-toggle=tooltip]").tooltip({
         trigger: 'click',
         container: $('#main'),
         html:true
     }).on('show.bs.tooltip', function (e) {
         $(".tooltip").tooltip('hide');
-    });
+    });*/
+    $("[data-toggle=tooltip]").each(function(){
+        var dataTrigger = typeof $(this).attr("data-trigger")=== "undefined" ? 'click' : $(this).attr("data-trigger");
+            datacontainer = typeof $(this).attr("data-container")=== "undefined" ? '#main' : $(this).attr("data-container");
+        $(this).tooltip({
+            trigger: dataTrigger,
+            container: datacontainer,
+            html:true
+        }).on('show.bs.tooltip', function (e) {
+            $(".tooltip").tooltip('hide');
+        });
+    })
 }
 
 function initTreeview() {

@@ -1433,6 +1433,9 @@
   font-weight: bold;
   line-height: calc( 55px - 0.2em );
 }
+.alert-outline.warning {
+  border: 1px solid #CF9418;
+}
 
 .table-alert {
   z-index: 2;
