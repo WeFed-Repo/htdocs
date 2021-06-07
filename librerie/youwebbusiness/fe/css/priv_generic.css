@@ -590,6 +590,11 @@
     margin: 5px 0;
     padding: 0;
   }
+  .modal .modal-dialog .modal-content .modal-header.fit-content,
+.not-floated-modal .modal-show .modal-dialog .modal-content .modal-header.fit-content {
+    min-height: fit-content;
+    height: fit-content;
+  }
   .modal .modal-dialog .modal-content .modal-body,
 .not-floated-modal .modal-show .modal-dialog .modal-content .modal-body {
     height: 100%;
@@ -806,6 +811,11 @@
 .accordion.bordered-style .card .card-body {
   background: transparent;
   padding: 1rem 1rem 2rem 1rem;
+}
+.accordion.always-active .card, .accordion.always-active .acc-item {
+  /* Border-color differente per coerenza con i bordi dei bordi 
+  degli altri elementi (#DDDDDD) */
+  border: solid 1px #DDDDDD;
 }
 .accordion.always-active .card .card-header.collapsed .card-header-title, .accordion.always-active .acc-item .card-header.collapsed .card-header-title {
   color: #2F9988;
