@@ -56,13 +56,14 @@
   }
   &-danger {
     background: $error;
-    &:before {
+    &:before { 
       content: "!";
       font-size: 1.8rem;
       font-weight: bold;
       line-height: calc( #{$iconDimension} - 0.2em );
     }
   }
+  
 }
 
 .table-alert {
@@ -76,4 +77,63 @@
   min-height:75px;
   padding: 1rem;
   @include icon { @include svg-icon-color($green); }
+}
+
+// Nuovo Alert Deny e outline
+.alert {
+  &-deny {
+    // Clear
+    min-height: 0;
+    // End Clear
+    font-size: 1.1rem;
+    background: $grayBG;
+    color: $gray1;
+    position:relative;
+    padding : 13px 13px 15px 48px;
+    border-radius: 0px;
+    .alert-icon{
+      position:absolute;
+      left:15px;
+      top:12px;
+      height:auto;
+      img {
+        width:100%;
+      }
+      &.icon, .icon {
+        font-size: 26px;
+        color: $gray1;
+      }
+    }
+  }
+  &-outline {
+    font-size: 1.1rem;
+    background-color: $white;
+    color:$gray2;
+    display: block;
+    border-radius: 0;
+    padding : 1.5rem;
+    .icon {
+      top:50%;
+      left:0;
+      position: absolute;
+      margin-top:-15px;
+      font-size: 30px;
+    }
+    .text {
+      padding-left: 30px;
+      display: block;
+    }
+    .control-label {
+      font-size:1rem;
+    }
+    .text-output {
+      font-size:1.3rem;
+    }
+    &.warning {
+      border: 1px solid  $warning;
+      .icon {
+        color:$warning;
+      }
+    }
+  } 
 }

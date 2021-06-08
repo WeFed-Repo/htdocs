@@ -185,3 +185,12 @@
     }
   }
 }
+//per stepper/numbered ecc..
+@mixin numbered-block {
+    width: 28px;
+    height: 28px;
+    border: 1px solid $greenLink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+}

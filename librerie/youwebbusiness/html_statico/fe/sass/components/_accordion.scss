@@ -15,6 +15,11 @@
         font-weight: bold;
         color: $greenLink;
       }
+      // SG Multi Elements Header Contain
+      .full-contain {
+        width: max-content;
+      }
+      // End
       .card-header-icon {
         @include icon-font-family();
         color: $greenLink;
@@ -60,6 +65,12 @@
       padding: 1rem;
       font-size: $bodyFontSize;
     }
+    .up-body-separator {
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
   &.bordered-style {
     .card {
@@ -80,6 +91,29 @@
       }
     }
   }
- 
+  // SG New Style
+  &.always-active {
+    .card, .acc-item {
+      /* Border-color differente per coerenza con i bordi dei bordi 
+      degli altri elementi (#DDDDDD) */
+      border: solid 1px $gray4;
+      .card-header {
+        &.collapsed {
+          .card-header-title {
+            color: $greenLink;
+          }
+          .card-header-icon {
+            line-height: 1.5rem;
+            border-color: $greenLink;
+            color: $greenLink;
+            &:before {content: "\e913"}
+            &.plus-minus:before {
+              content: '\002B';
+            }
+          }
+        }
+      }
+    }
+  } 
 }
  

@@ -163,6 +163,288 @@
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">selettore bfm</h2>
+																						 <!-- SELETTORE -->
+  <section class="selettore selettore-entrate-uscite">
+  
+    <!-- testata filtri desktop-->
+    <div class=" d-none d-lg-block">
+      <section class="bordered p-3">
+        <div class="row d-flex justify-content-between align-items-center">
+            <div class="col col-md-10">
+              <div class="row">
+                  <div class="col col-md-5 col-lg-5">
+                    <span class="dati-key">Ragione sociale:</span> 
+                    <span class="dati-value">Nessuno</span>
+                  </div>
+                  <div class="col col-md-7 col-lg-7">
+                    <span class="dati-key">Rapporti:</span> 
+                    <span class="dati-value rapporti">Nessuno</span>
+                  </div>
+              </div>
+            </div>
+            <div class="col col-lg-2">
+                <a href="javascript:void(0)" class="btn btn-white fl-right mb-0" data-filter-button="filter-entrate-uscite">
+                    <i class="icon icon-arrow_down" title="icon-aggiorna"></i> Cambia
+                </a>
+            </div>
+        </div>
+      </section>
+    </div>
+    <!-- testata filtri mobile-->
+    <div class="d-block d-lg-none no-margin-section">
+      <section class="bordered m-0">
+      <div class="row" data-filter-button="filter-entrate-uscite">
+          <div class="col-10">
+          <div class="pb-0"><span class="dati-value d-inline">Nessuno</span></div>
+          <div class="pb-3"><span class="dati-value d-inline rapporti">Nessuno</span></div>
+          </div>
+          <div class="col-2 align-self-stretch">
+          <span class="btn-mobile-arrow d-flex align-items-center justify-content-end pb-3">
+              <i class="icon-arrow_right"></i>
+          </span>
+          </div>
+      </div>
+      </section>
+    </div>
+    
+    
+    <!-- parte con la select e i checkbox -->
+    <div class="no-margin-section">
+      <section data-filter-form="filter-entrate-uscite" style="display:none;">
+          <div class="bordered no-b-t">
+            <form class="form-grid">
+      <div class="form-row">
+        <div class="form-group col-12 col-lg-4">
+            <select class="form-control" id="selectSoc">
+                <option selected="">Seleziona</option>
+                <option>Ipsum</option>
+                <option>Ipsum</option>
+                <option>Ipsum</option>
+                <option>Ipsum</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-sm-4">
+          <div class="form-check checkbox">
+              <input class="form-check-input" type="checkbox"  name="checkSelectorAll" value="" id="checkSelectorAll">
+              <label for="checkSelectorAll">Seleziona tutti</span></label>
+            </div>
+        </div>
+      </div>
+      <div class="form-row">
+          <div class="col-sm-12">
+              <div class="check-options-wrapper">
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel0" name="checkSelector" value="">
+                                  <label for="sel0"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel1" name="checkSelector" value="">
+                                  <label for="sel1"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel2" name="checkSelector" value="">
+                                  <label for="sel2"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel3" name="checkSelector" value="">
+                                  <label for="sel3"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel4" name="checkSelector" value="">
+                                  <label for="sel4"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                                   <div class="bordered check-options-list">
+                      <div class="form-row">
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <div class="form-check checkbox">
+                                  <input class="form-check-input" type="checkbox" id="sel5" name="checkSelector" value="">
+                                  <label for="sel5"><span class="color-greenLink">Conto lorem ipsum dolor lorem ipsum dolor</span></label>
+                              </div>
+                          </div>
+                          <div class="form-group col-lg-3 col-xl-3">
+                              <span class="label">Banca:</span>
+                              <span class="text-output">0534 - Banco BPM SPA</span>
+                          </div>
+                          <div class="form-group col-lg-2 col-xl-2">
+                            <span class="label">Rapporto:</span>
+                            <span class="text-output">8949 - 000000000356</span>
+                          </div>
+                          <div class="form-group col-lg-4 col-xl-4">
+                            <span class="label">Iban:</span>
+                            <span class="text-output">IT60X0542811101000000123456</span>
+                          </div>
+                      </div>
+                  </div>
+                               </div>
+            </div>
+      </div>
+
+      <!--paginazione presente solo in versione mobile -->
+      
+    <div class="row d-block d-lg-none pb-2">
+        <div class="col-sm-12 d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item page-item-arrow">
+                    <a class="page-link" href="#.html.html" aria-label="Previous">
+                    <i class="icon-arrow_left"></i>
+                    </a>
+                </li>
+                <!-- il link attivo deve avere un tag span e non un tag a -->
+                <li class="page-item active"><span class="page-link">1</span></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item page-item-arrow">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <i class="icon-arrow_right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12">
+            <hr>
+        </div>
+    </div>
+        
+                 
+    <div class="form-row d-flex justify-content-end">
+        <div class="col col-lg-2">
+            <button class="btn btn-white brd-green fl-right btn-xs-full" id="btnApplica">
+                    <i class="icon icon-ico_applica"></i>Applica
+            </button>
+        </div>
+    </div>
+</form>
+
+<!-- emulazione funzioni di check -->
+<script type="text/javascript">
+    var  allChecks = $('input[name="checkSelector"]');
+    $('input[name="checkSelectorAll"]').on("click",function(){
+     var isChecked = $(this).is(":checked");
+         isChecked ? allChecks.prop( "checked", true ) : allChecks.prop( "checked", false );
+        
+    })
+
+    $("#btnApplica").on("click",function(e){
+        e.preventDefault();
+        returnNumberOfChecked();
+    })
+    var returnNumberOfChecked = function() {
+        var nChecked = 0;
+        var valueRapporti = $(".dati-value.rapporti");
+        for(var i=0; i< allChecks.length; i++) {
+            if(allChecks[i].checked)
+            nChecked++
+        }
+        nChecked === 0 ? valueRapporti.html("Nessuno") : valueRapporti.html(nChecked + " " + "conti visualizzati")
+      
+    }
+ 
+</script>          </div>
+      </section>
+    </div>
+</section>
+
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">selettore dossier</h2>
 																						
   <!-- SELETTORE -->
@@ -216,7 +498,7 @@
                 <!-- PAGINATION -->
                 <ul class="pagination">
   <li class="page-item page-item-arrow">
-    <a class="page-link" href="#.html.html" aria-label="Previous">
+    <a class="page-link" href="#" aria-label="Previous">
       <i class="icon-arrow_left"></i>
     </a>
   </li>

@@ -78,6 +78,9 @@
     @include btnPalette($color:$greenLink, $bkg:$white, $bkg_hover: $grayBG, $border: $grayBordered, $color_disabled:$gray3 );
     border-color: $grayBordered !important; // TODO: sistemare.....
     text-transform: none;
+    &.brd-green {
+      border-color: $greenLink !important;
+    }
     &:disabled, &.disabled {
       border-color: transparent !important; // TODO: sistemare.....
     }
@@ -290,5 +293,35 @@
         color: $gray2;
       }
     }
+  }
+}
+
+// SG Classi da ottimizzare per bottoni full
+@media (max-width: $bp_sm_max) {
+  .btn-xs-full {
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+@media (min-width: $bp_sm_min) and (max-width: $bp_md_max) {
+  .btn-sm-full {
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+@media (min-width: $bp_md_min) and (max-width: $bp_lg_max) {
+  .btn-md-full {
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+@media (min-width: $bp_lg_min) {
+  .btn-lg-full {
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 }

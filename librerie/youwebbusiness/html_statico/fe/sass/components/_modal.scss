@@ -21,6 +21,13 @@
       h1, h2:not(.modal-title-grey), h3 {
         color: $greenLink;
       }
+      // SG modal Title
+      .modal-body-title {
+        h1 {
+          color: $gray2;
+        }        
+      }
+      // end
     }
     .modal-header {
       position: relative;
@@ -259,6 +266,11 @@
             margin: 5px 0;
             padding: 0;
           }
+          // SG per risolvere il problema dell'altezza fissa
+          &.fit-content {
+            min-height: fit-content;
+            height: fit-content;
+          }
         }
         .modal-body {
           height: 100%;
@@ -280,6 +292,10 @@
           text-align: center;
           width: 100%;
           border: none !important;
+          // SG per risolvere il problema dell'altezza fissa
+          &.fit-content {
+            height: fit-content;
+          }
         }
       }
     }
