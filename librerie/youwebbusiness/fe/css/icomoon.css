@@ -1,3 +1,6 @@
+.icon-ico_circle_plus:before {
+  content: "\e959";
+}
 .icon-ico_close:before {
   content: "\e957";
 }
