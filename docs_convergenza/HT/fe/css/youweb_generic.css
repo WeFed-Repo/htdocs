@@ -7850,24 +7850,24 @@ div.fixed-table-scroll-outer {
 .bst thead tr th {vertical-align:middle !important;padding: 0 10px;}
 .bootstrap-table .center {text-align:center}
 .bootstrap-table .th-inner.sortable.desc {background: url(/HT/fe/img/icon_sort_desc.png) 0 12px no-repeat}
-.bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
-.bootstrap-table .fixed-table-pagination .pagination-detail {display:none}
-.pagination-info .label-group {display:none}
-.bootstrap-table .fixed-table-pagination .pagination {width:100%;text-align:center;}
-.bootstrap-table .fixed-table-pagination .pagination ul {display:inline-block;text-align:center;list-style-type:none !important}
-.bootstrap-table .fixed-table-pagination .pagination ul li {text-align:center;margin:0 5px;display:inline-block;}
-.bootstrap-table .fixed-table-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-number {display:none}
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active {display:inline-block} 
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-first a,
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-pre a,
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-next a,
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
-.bootstrap-table .fixed-table-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
-.bootstrap-table .fixed-table-pagination .pagination ul li.page-first, .bootstrap-table .fixed-table-pagination .pagination ul li.page-last {display:none}
-.bootstrap-table .fixed-table-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
-.bootstrap-table .fixed-table-pagination .pagination .page-pre .icon, .bootstrap-table .fixed-table-pagination .pagination .page-next .icon{width:20px; font-size: 14px;
+.bst-pagination .pagination-detail {display:none}
+.bst-pagination .pagination-detail {display:none}
+.bst-pagination .pagination-info .label-group {display:none}
+.bst-pagination .pagination {width:100%;text-align:center;}
+.bst-pagination .pagination ul {display:inline-block;text-align:center;list-style-type:none !important}
+.bst-pagination .pagination ul li {text-align:center;margin:0 5px;display:inline-block;}
+.bst-pagination .pagination ul li a {display:inline-block;width:20px;height:20px;text-align:center;}
+.bst-pagination .pagination ul li.page-number {display:none}
+.bst-pagination .pagination ul li.page-number.active {display:inline-block} 
+.bst-pagination .pagination ul li.page-number.active a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
+.bst-pagination .pagination ul li.page-first a,
+.bst-pagination .pagination ul li.page-pre a,
+.bst-pagination .pagination ul li.page-next a,
+.bst-pagination .pagination ul li.page-last a {border-radius: 50%; background-color: #0E977F; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
+.bst-pagination .pagination ul li.disabled a {background-color:#ccc;opacity:0.5}
+.bst-pagination .pagination ul li.page-first, .bst-pagination  .pagination ul li.page-last {display:none}
+.bst-pagination .pagination .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
+.bst-pagination .pagination .page-pre .icon, .bst-pagination  .pagination .page-next .icon{width:20px; font-size: 14px;
 line-height: 20px;}
 
 /* Tabella di bootstrap versione "nuova" */

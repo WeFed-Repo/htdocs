@@ -4841,7 +4841,7 @@ $.fn.extend({
             tb.on("post-body.bs.table",function(){
                 // Totale pagine
                 var ptotal = $("<li>").addClass("page-total").html("di <span class='tot'>" + Math.ceil(conf.data.length / conf.pageSize) + "</span>")
-                var pcont = tb.parents(".bootstrap-table").find("ul.pagination");
+                var pcont = tb.parents(".bootstrap-table").find(".fixed-table-pagination").addClass("bst-pagination").find("ul.pagination");
                 pcont.find(".page-total").remove();
                 pcont.find(".page-next").before(ptotal)
 
