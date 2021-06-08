@@ -1,35 +1,15 @@
 <!-- Importazione assets per grafici -->
+<!--
 <script type="text/javascript" src="./fe/assets/amcharts/amcharts.js"></script>
 <script type="text/javascript" src="./fe/assets/amcharts/serial.js"></script>
 <script type="text/javascript" src="./fe/assets/amcharts/pie.js"></script>
+-->
+<!-- Script per gestione grafici -->
+<script type="text/javascript" src="./fe/js/grafici.js"></script>
+
 
 <!-- Fine importazione assets per grafici -->
-<style>
-/* Css dei grafici */
-.graph-space {height:250px; width:100%;display:block;}
-.graph-space-donut {height:250px; width:250px;max-width:100%; margin:0 auto 13px;position:relative}
-.graph-space-donut .donut-title {display: flex;
-    line-height: 22px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    left: 0;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
-    font-size:18px;
-    font-weight:bold;
-    color:#999}
-    .graph-space-donut .donut-title .value {
-        font-size:22px;
-        color:#333;
-    }
-/* Classi per trasformare i dati visualizzati  */
-.graph-space .amcharts-axis-label.selected {font-weight:bold;fill:#097562;}
-.graph-space .amcharts-graph-column.previsione {opacity:0.2}
-</style>
+<link rel="stylesheet" href="./fe/css/grafici.css" />
 
 <section>
     <h2>Movimenti</h2>
@@ -57,65 +37,38 @@
         ];
 
         // Rendering del dataset
-        AmCharts.makeChart( "istogrammaEntrateUscite", {
-        type: "serial",
-        dataProvider: iodata,
-        categoryField: "giorno",
-        decimalSeparator:",",
-        thousandsSeparator: "",
-        fontFamily: "roboto, sans-serif",
-        columnSpacing:0,
-        fontSize: 12,
-        color: "#737373",
-        addClassNames:true,
-        panEventsEnabled: false,
-        balloon: {
-            adjustBorderColor: true,
-            borderThickness:0,
-            color: "#fff",
-            borderColor: "#000",
-            fillColor: "#000",
-            pointerWidth: 5,
-            verticalPadding:10,
-            horizontalPadding:15,
-            offsetY:5
-        },
-        categoryAxis: {
-            gridAlpha: 0,
-            minHorizontalGap:1,
-            tickLength:0,
-            labelOffset:10,
-            axisColor: "#eee",
-            classNameField: "classi"
-        },
-        valueAxes: [{
-            dashLength:0,
-            axisAlpha:0,
-            labelFunction: function(val) {
-                return val + " \u20AC"
-            },
-            labelOffset:10
-        }],
-        graphs: [ {
-            valueField: "entrate",
-            type: "column",
-            fillAlphas:1,
-            lineColor: "#2f9988",
-            balloonText: "[[value]] &euro;",
-            classNameField: "classi"
-        },
-        {
-            valueField: "uscite",
-            type: "column",
-            fillAlphas:1,
-            lineColor: "#c84757",
-            balloonText: "-[[value]] &euro;",
-            classNameField: "classi"
-        } ]
-        } );
-
-        </script>
         
+        Graph.plot({
+            graphtype: "histogram",
+            idcontainer: "istogrammaEntrateUscite",
+            dataProvider: iodata,
+            categoryField: "giorno",
+            categoryAxis: {
+                classNameField: "classi"
+            },
+            valueAxis: {
+                    labelFunction: function(val) {
+                        return val + " \u20AC"
+                    }
+                },
+            graphs: [ {
+                    valueField: "entrate",
+                    type: "column",
+                    fillAlphas:1,
+                    lineColor: "#2f9988",
+                    balloonText: "[[value]] &euro;",
+                    classNameField: "classi"
+                },
+                {
+                    valueField: "uscite",
+                    type: "column",
+                    fillAlphas:1,
+                    lineColor: "#c84757",
+                    balloonText: "-[[value]] &euro;",
+                    classNameField: "classi"
+                } ]
+        });
+        </script>
         <!-- Fine istogramma lineare con 2 colonne -->
     </div>
 </section>
@@ -145,50 +98,23 @@
         ];
 
         // Rendering del grafico a "pile"
-        AmCharts.makeChart( "istogrammaPile", {
-        type: "serial",
-        dataProvider: piledata,
-        categoryField: "mese",
-        panEventsEnabled: false,
-        decimalSeparator:",",
-        thousandsSeparator: "",
-        fontFamily: "roboto, sans-serif",
-        columnSpacing:0,
-        fontSize: 12,
-        color: "#737373",
-        addClassNames:true,
-        balloon: {
-            adjustBorderColor: true,
-            borderThickness:0,
-            color: "#fff",
-            borderColor: "#000",
-            fillColor: "#000",
-            pointerWidth: 5,
-            verticalPadding:10,
-            horizontalPadding:15,
-            offsetY:5
-        },
-        categoryAxis: {
-            gridAlpha: 0,
-            minHorizontalGap:1,
-            tickLength:0,
-            labelOffset:10,
-            axisColor: "#eee",
-            labelFunction: function(category){
+        Graph.plot({
+            graphtype: "piles",
+            idcontainer: "istogrammaPile",
+            dataProvider: piledata,
+            categoryField: "mese",
+            categoryAxis: {
+                labelFunction: function(category){
                 var mesedata = new Date(category);
                 return mesi[mesedata.getMonth()] + " " + mesedata.getFullYear();
-            }
-        },
-        valueAxes: [{
-            dashLength:0,
-            axisAlpha:0,
-            labelFunction: function(val) {
-                return val + " \u20AC"
+                }
             },
-            labelOffset:10,
-            stackType: "regular"
-        }],
-        graphs: [ {
+            valueAxis: {
+                labelFunction: function(val) {
+                    return val + " \u20AC"
+                }
+            },
+            graphs: [ {
             valueField: "incassate",
             type: "column",
             fillAlphas:1,
@@ -210,7 +136,8 @@
             balloonText: "[[value]] &euro;"
         }
         ]
-        } );
+        });
+
         </script>
     </div>
 </section>
@@ -252,29 +179,19 @@
             ]
         </script>
         <script type="text/javascript">
-            var donutChart = AmCharts.makeChart("donut",{
-            type    : "pie",
+
+        Graph.plot({
+            idcontainer: "donut",
+            graphtype: "donut",
+            dataProvider: donutData,
             titleField  : "label",
             valueField  : "value",
-            labelsEnabled: false,
-            showBalloon: false,
             colorField: "color",
-            radius:"49%",
-            startDuration: 0,
-            innerRadius: "75%",
-            dataProvider : donutData,
-            listeners: [
-                {
-                    "event": "rendered",
-                    "method": function(){
-                        $("#donut").append($("<div>").addClass("donut-title").append(
-                            $("<span>").addClass("label").html("Totale uscite"),
-                            $("<span>").addClass("value").html("25.000,36 &euro;")
-                        ))
-                    }
-                }
-            ]           
-            });
+            donutLabel: {
+                title: "Totale uscite",
+                value: "25.003,36 &euro;"
+            }
+        });
 
         </script>
     </div>

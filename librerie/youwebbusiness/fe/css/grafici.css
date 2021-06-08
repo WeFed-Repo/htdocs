@@ -1,0 +1,24 @@
+/* Css dei grafici */
+.graph-space {height:250px; width:100%;display:block;}
+.graph-space-donut {height:250px; width:250px;max-width:100%; margin:0 auto 13px;position:relative}
+.graph-space-donut .donut-title {display: flex;
+    line-height: 22px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 0;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size:18px;
+    font-weight:bold;
+    color:#999}
+    .graph-space-donut .donut-title .value {
+        font-size:22px;
+        color:#333;
+    }
+/* Classi per trasformare i dati visualizzati  */
+.graph-space .amcharts-axis-label.selected {font-weight:bold;fill:#097562;}
+.graph-space .amcharts-graph-column.previsione {opacity:0.2}
