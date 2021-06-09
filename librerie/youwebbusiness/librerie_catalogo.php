@@ -20,7 +20,13 @@
 			// Inizializzazioni per funzioni non condivise da sviluppo
 			var initDateMin = initDateMaxToday = function(){return void(0);}
 		</script>
-		
+
+		<style>
+			body.scroll-down header {
+    			margin-top: 0 !important;
+  			}
+			
+		</style>		
 	</head>
 	<body>
 		<header class="librerie">
