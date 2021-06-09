@@ -186,12 +186,16 @@
         availableTags[0]= "";
         $(this).val(''); 
         return false;
+      },
+      open: function(event, ui) {
+        let widthctl = ($(this).width() + 18);
+        $(this).autocomplete("widget").attr('style', function(i,s) { return (s || '') + 'width: '+ widthctl + 'px !important;' });
       }
     });  
 
     $('input[name=htag-input]').keyup(function() {
       availableTags[0]=('#' + $(this).val());        
     });
-});
+  });
 </script>
 
