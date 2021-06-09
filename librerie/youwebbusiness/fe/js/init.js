@@ -281,24 +281,16 @@ function initDataFilters() {
 }
 
 function initTooltips() {
-    /*
-    $("[data-toggle=tooltip]").tooltip({
-        trigger: 'click',
-        container: $('#main'),
-        html:true
-    }).on('show.bs.tooltip', function (e) {
-        $(".tooltip").tooltip('hide');
-    });*/
-    $("[data-toggle=tooltip]").each(function(){
-        var dataTrigger = typeof $(this).attr("data-trigger")=== "undefined" ? 'click' : $(this).attr("data-trigger");
-            datacontainer = typeof $(this).attr("data-container")=== "undefined" ? '#main' : $(this).attr("data-container");
-        $(this).tooltip({
+     $("[data-toggle=tooltip]").each(function(){
+        var dataTrigger = typeof $(this).attr("data-trigger")=== "undefined" ? 'click' : $(this).attr("data-trigger"), //eventuale evento personalizzato
+            dataContainer = typeof $(this).attr("data-container")=== "undefined" ? '#main' : $(this).attr("data-container"), //eventuale container personalizzato
+            dataCustomClass= typeof $(this).attr("data-toogle-class")=== "undefined" ? '' : $(this).attr("data-toogle-class"); //eventuale classe aggiuntiva
+         $(this).tooltip({
             trigger: dataTrigger,
-            container: datacontainer,
-            html:true
-        }).on('show.bs.tooltip', function (e) {
-            $(".tooltip").tooltip('hide');
-        });
+            container: dataContainer,
+            html:true,
+            template: '<div class="tooltip ' + dataCustomClass + '"role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        })
     })
 }
 

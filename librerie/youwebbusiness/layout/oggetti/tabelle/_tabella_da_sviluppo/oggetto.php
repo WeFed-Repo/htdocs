@@ -61,7 +61,7 @@
                <div class="col-auto">
                <!--bottone operazioni massive-->
                <!-- BOX ASSOCIA PROGETTO -->
-                <?php virtual('/youwebbusiness/layout/oggetti/bottoni/bottone_dropdown_select/oggetto.php'); ?>
+                
                 <!-- ./ BOX ASSOCIA PROGETTO-->
                <!-- ko if: Control.enableAutorizzazioneMultipla() && Control.isCheckAllMobileVisible() --><!-- /ko -->
             </div>
@@ -139,18 +139,25 @@
                               </thead>
                               <tbody class="accordion">
                                  <tr data-index="0" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center"><div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
+                                    <td class="text-center tooltip-wrapper-element">
+                                      <a class="tooltip-border-element" href="javascript:;" data-toogle-class="tooltip-dark" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="click"></a>
+                                      <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
-                                    <td>
-                                       <a href="javascript:;" data-toggle="tooltip" title="lorem ipum dolor sit" data-trigger="focus" data-container="#tableDistinteInLavorazione">tooltip al focus</a>
-                                    </td>
+                                    <td></td>
                                     <td>05034</td>
                                     <td>000000047661                                      </td>
                                     <td class="center">1</td>
                                     <td>F24</td>
                                     <td>In modifica <br> </td>
                                     <td class="right"><span class="tm-importo ">123,00 EUR</span></td>
-                                    <td></td>
+                                    <td>
+                                        <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus/  data-offset aggiunto per spostarlo un poco sulla sinistra--->
+                                          <div class="btn-group">
+                                             <a data-offset="-100 0" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
+                                                <i class="icon icon-movimenti_42"></i>
+                                             </a>
+                                          </div>
+                                    </td>
                                     <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -161,6 +168,7 @@
                                           </div>
                                        </div>
                                     </td>
+                                    
                                  </tr>
                                  <tr>
                                     <td class="slide-col-0" style="display:none;"></td>
@@ -182,7 +190,12 @@
                                     <td>Da autorizzare <br> </td>
                                     <td class="right"><span class="tm-importo ">99,00 EUR</span></td>
                                     <td>
-                                       <img src="fe/img/icon/warning-red.svg" tm-modal-error-message="1" style="cursor:pointer;">
+                                        <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus--->
+                                          <div class="btn-group">
+                                             <a  data-offset="-100 0" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato manualmente</strong></p>" data-trigger="focus">
+                                                <i class="icon icon-movimenti_42"></i>
+                                             </a>
+                                          </div>
                                     </td>
                                     <td class="center">
                                        <div class="btn-group">

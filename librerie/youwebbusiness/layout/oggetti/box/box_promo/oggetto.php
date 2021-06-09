@@ -6,7 +6,7 @@
 				<div class="h-100 box-promo-left  d-flex justify-content-center align-items-center">
 					<img src="./fe/img/placeholder_box_promo.png" alt="immagine box promo"/>
 					<!-- immagin ebox altri prodotti-->
-					<img src="./fe/img/placeholder_box_altri_prodotti.png" alt="immagine box altri prodotti"/>
+					<!--<img src="./fe/img/placeholder_box_altri_prodotti.png" alt="immagine box altri prodotti"/>-->
 				</div>
 			</div>
 			<div class="col-md col-sm-12">
