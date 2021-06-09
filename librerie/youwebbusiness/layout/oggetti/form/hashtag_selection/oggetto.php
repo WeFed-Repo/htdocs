@@ -64,6 +64,9 @@
     right: auto;
     margin: 0px;
   }
+  .input-all-border.ui-autocomplete-input{
+    border:solid 1px #DDDDDD;
+  }
 
 </style>
 
@@ -115,7 +118,7 @@
           <div class="form-row">
             <div class="form-group col-12">
                 <label class="control-label"><strong>Scrivi qui l’hashtag</strong></label>
-                <input type="text" class="form-control" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
+                <input type="text" class="form-control input-all-border" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
             </div>
           </div>
         </form>
@@ -143,7 +146,7 @@
 </section>
 
 <script>
-  $(document).ready(function(){
+  $(function(){
     // Funzione per gestire l'Append
     function htagAppendOn() {
       if($(this).attr('id').slice(0,-4)=="-add") {
