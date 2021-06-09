@@ -1,3 +1,9 @@
+.icon-ico_circle_arrow_up:before {
+  content: "\e95a";
+}
+.icon-ico_circle_arrow_down:before {
+  content: "\e95b";
+}
 .icon-ico_circle_plus:before {
   content: "\e959";
 }
@@ -27,15 +33,6 @@
 }
 .icon-ico_dividi:before {
   content: "\e950";
-}
-.icon-ico_gestione_contatti:before {
-  content: "\e904";
-}
-.icon-ico_bonifico_sepa:before {
-  content: "\e90c";
-}
-.icon-ico_dispositiva:before {
-  content: "\ea18";
 }
 .icon-ico_setting:before {
   content: "\e948";
@@ -270,4 +267,13 @@
 }
 .icon-ico_youwin:before {
   content: "\e933";
+}
+.icon-ico_gestione_contatti:before {
+  content: "\e904";
+}
+.icon-ico_bonifico_sepa:before {
+  content: "\e90c";
+}
+.icon-ico_dispositiva:before {
+  content: "\ea18";
 }

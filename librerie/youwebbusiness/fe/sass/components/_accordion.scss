@@ -18,6 +18,8 @@
       // SG Multi Elements Header Contain
       .full-contain {
         width: max-content;
+        //IE11 Force NOBR
+        white-space: nowrap;
       }
       // End
       .card-header-icon {
@@ -104,16 +106,28 @@
           }
           .card-header-icon {
             line-height: 1.5rem;
-            border-color: $greenLink;
+            border:none;
             color: $greenLink;
-            &:before {content: "\e913"}
-            &.plus-minus:before {
-              content: '\002B';
+            width: 30px; // IE 100% problem
+            &:before {
+              content: "\e95b";
+              font-size: 21px;
+              font-weight: 600;
             }
+          }
+        }
+        .card-header-icon {
+          line-height: 1.5rem;
+          border:none;
+          color: $greenLink;
+          width: 30px; // IE 100% problem
+          &:before {
+            content: "\e95a";
+            font-size: 21px;
+            font-weight: 600;
           }
         }
       }
     }
   } 
 }
- 
