@@ -722,6 +722,7 @@
 }
 .accordion .card .card-header .full-contain, .accordion .acc-item .card-header .full-contain {
   width: max-content;
+  white-space: nowrap;
 }
 .accordion .card .card-header .card-header-icon, .accordion .acc-item .card-header .card-header-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -822,14 +823,25 @@
 }
 .accordion.always-active .card .card-header.collapsed .card-header-icon, .accordion.always-active .acc-item .card-header.collapsed .card-header-icon {
   line-height: 1.5rem;
-  border-color: #2F9988;
+  border: none;
   color: #2F9988;
+  width: 30px;
 }
 .accordion.always-active .card .card-header.collapsed .card-header-icon:before, .accordion.always-active .acc-item .card-header.collapsed .card-header-icon:before {
-  content: "";
+  content: "";
+  font-size: 21px;
+  font-weight: 600;
 }
-.accordion.always-active .card .card-header.collapsed .card-header-icon.plus-minus:before, .accordion.always-active .acc-item .card-header.collapsed .card-header-icon.plus-minus:before {
-  content: "+";
+.accordion.always-active .card .card-header .card-header-icon, .accordion.always-active .acc-item .card-header .card-header-icon {
+  line-height: 1.5rem;
+  border: none;
+  color: #2F9988;
+  width: 30px;
+}
+.accordion.always-active .card .card-header .card-header-icon:before, .accordion.always-active .acc-item .card-header .card-header-icon:before {
+  content: "";
+  font-size: 21px;
+  font-weight: 600;
 }
 
 /* Tabs */
