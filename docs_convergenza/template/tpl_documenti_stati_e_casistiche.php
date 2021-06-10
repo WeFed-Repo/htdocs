@@ -140,6 +140,18 @@
             <div class="row collapse" id="collapse1">
                 <div class="col-sm-12">
                     <div class="accord-content">
+                        <!--nuovo box di alert -->
+                        <div class="box-alert-inline warning">
+                             <div class="box-alert-inline-esito">
+                                <i class="icon icon-alert_caution" title="icon-alert_caution"></i>
+                                 <p>SI È VERIFICATO UN PROBLEMA NEL CARICAMENTO DELLE INFORMAZIONI</p>
+                             </div>
+                             <div class="text-with-icon"><a href="#"><i class="icon icon-reload" title="icon-trash_filled"></i>
+                                <span class="text">Ricarica la pagina</span></a>
+                            </div>
+                        </div>
+                    
+                    
                         <h4>NOME_PRATICA_UNIVOCO_1</h4>
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ex id erat pretium, et accumsan 
                         eros pharetra. In vitae dolor condimentum, fringilla nunc vitae, molestie sem. Nulla maximus fermentum mauris congue 
