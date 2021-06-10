@@ -1,3 +1,4 @@
+
 .accordion {
   .card, .acc-item {
     border-radius: 0;
@@ -13,7 +14,7 @@
       .card-header-title {
         font-size: $bodyFontSize;
         font-weight: bold;
-        color: $greenLink;
+        color: $greenLink; 
       }
       // SG Multi Elements Header Contain
       .full-contain {
@@ -95,6 +96,10 @@
   }
   // SG New Style
   &.always-active {
+  // Importa icomoon per fruire delle variabili icona (solo qui, diversamente)
+  @import "../../css/icomoon";
+
+
     .card, .acc-item {
       /* Border-color differente per coerenza con i bordi dei bordi 
       degli altri elementi (#DDDDDD) */
@@ -105,27 +110,42 @@
             color: $greenLink;
           }
           .card-header-icon {
+            @extend .icon-circle_arrow_down; 
             line-height: 1.5rem;
             border:none;
             color: $greenLink;
             width: 30px; // IE 100% problem
             &:before {
-              content: "\e95b";
-              font-size: 21px;
-              font-weight: 600;
+              font-size:20px;
             }
+                /*
+                &:before {
+                
+                content: "\e95b";
+                font-size: 21px;
+                font-weight: 600;
+                }
+                */
+              
+            
           }
         }
         .card-header-icon {
+          @extend .icon-circle_arrow_up;
           line-height: 1.5rem;
           border:none;
           color: $greenLink;
           width: 30px; // IE 100% problem
           &:before {
+            font-size:20px;
+          }
+          /*
+          &:before {
             content: "\e95a";
             font-size: 21px;
             font-weight: 600;
           }
+          */
         }
       }
     }
