@@ -88,29 +88,33 @@
         </div>      
         <div class="htag-wall">
           <div id="tg-1" class="htag-tag">
-            <i class="icon icon-ico_round_check"></i>
+            <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto1</span>
           </div>
           <div id="tg-2" class="htag-tag selected">
-            <i class="icon icon-ico_round_check"></i>
+            <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto2</span>
           </div>
           <div id="tg-3" class="htag-tag">
-            <i class="icon icon-ico_round_check"></i>
+            <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo3</span>
           </div>
           <div id="tg-4" class="htag-tag htag-hide">
-            <i class="icon icon-ico_round_check"></i>
+            <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto4</span>
           </div> 
           <div id="tg-5" class="htag-tag selected htag-hide">
-            <i class="icon icon-ico_round_check"></i>
+            <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
           </div>        
         </div>
-        <a id="more-htag" class="plus-htag text-with-icon right-icon float-right">
-          <span class="icon icon-ico_circle_plus"></span>
+        <a id="more-htag" class="text-with-icon right-icon float-right">
+          <span class="icon icon-circle_plus"></span>
           Vedi tutti
+        </a>
+        <a id="minus-htag" class="text-with-icon right-icon float-right d-none">
+          <span class="icon icon-circle_minus"></span>
+          Vedi meno
         </a>
       </div>
       <div class="col-12 col-md-6">
@@ -135,11 +139,11 @@
         </div> 
         <div class="htag-added-wall">
           <div id="tg-2-add" class="htag-tag selected">
-            <i class="icon icon-ico_close"></i>
+            <i class="icon icon-close"></i>
             <span class="htag-text">#progetto2</span>
           </div>
           <div id="tg-5-add" class="htag-tag selected">
-            <i class="icon icon-ico_close"></i>
+            <i class="icon icon-close"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
           </div>
         </div>
@@ -166,7 +170,7 @@
         $(".htag-added-wall").find('#' + $(this).attr('id') + '-add').remove();        
       } else {
         $(this).toggleClass("selected");
-        let $newtag = '<div id="'+ $(this).attr('id') + '-add" class="htag-tag selected"><i class="icon icon-ico_close"></i><span class="htag-text">' + $(this).find(".htag-text").text() + '</span></div>';
+        let $newtag = '<div id="'+ $(this).attr('id') + '-add" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + $(this).find(".htag-text").text() + '</span></div>';
         $(".htag-added-wall").append($newtag);      
       }        
     });
@@ -184,7 +188,7 @@
       source: availableTags,
       select: function() {
         newTagsCount++;
-        let $newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-ico_close"></i><span class="htag-text">#' + $('input[name=htag-input]').val() + '</span></div>';
+        let $newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">#' + $('input[name=htag-input]').val() + '</span></div>';
         $(".htag-added-wall").append($newtag);
         availableTags[0]= "";
         $(this).val(''); 
@@ -202,16 +206,16 @@
 
     // Show-Hide Default Tags
     $("#more-htag").click(function () {
-      if($(this).hasClass("plus-htag")) {
-        $(".htag-wall .htag-tag.htag-hide").addClass("htag-show");
-        $(".htag-wall .htag-tag.htag-hide").removeClass("htag-hide");        
-        $(this).text("Vedi meno");
-      }else{
-        $(".htag-wall .htag-tag.htag-show").addClass("htag-hide");
-        $(".htag-wall .htag-tag.htag-show").removeClass("htag-show");        
-        $(this).text("Vedi tutti");
-      };      
-      $(this).toggleClass("plus-htag");
+      $("#more-htag").toggleClass("d-none");
+      $("#minus-htag").toggleClass("d-none");
+      $(".htag-wall .htag-tag.htag-hide").addClass("htag-show");
+      $(".htag-wall .htag-tag.htag-hide").removeClass("htag-hide");      
+    });
+    $("#minus-htag").click(function () {
+      $("#more-htag").toggleClass("d-none");
+      $("#minus-htag").toggleClass("d-none");
+      $(".htag-wall .htag-tag.htag-show").addClass("htag-hide");
+      $(".htag-wall .htag-tag.htag-show").removeClass("htag-show");      
     });
   });
 </script>
