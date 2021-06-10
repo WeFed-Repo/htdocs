@@ -427,6 +427,11 @@
   display: block;
   margin-left: 1rem;
 }
+.modal .modal-dialog .modal-body,
+.not-floated-modal .modal-dialog .modal-body {
+  height: 100%;
+  overflow-y: auto;
+}
 .modal .modal-dialog .modal-body .modal-img,
 .not-floated-modal .modal-dialog .modal-body .modal-img {
   -webkit-touch-callout: none;
@@ -662,11 +667,14 @@
 /* Tooltip */
 .tooltip {
   opacity: 1 !important;
+  position: absolute !important;
+  z-index: 1051;
 }
 .tooltip .tooltip-inner {
   padding: 12px;
   border-radius: 0;
   min-width: 280px;
+  width: 300px;
   max-width: calc(100vw - 1rem);
   background: #FFFFFF;
   color: #3e3e3e;
@@ -684,11 +692,16 @@
 .tooltip.tooltip-xl .tooltip-inner {
   width: 650px;
 }
-.tooltip .arrow:before {
+.tooltip.bs-tooltip-top .arrow:before {
   top: -1px;
   left: -3px;
   border-width: 0.7rem 0.7rem 0;
   border-top-color: white;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+  top: -4px;
+  left: -3px;
+  border-width: 0.7rem 0.7rem 0.7rem 0;
 }
 .tooltip-dark .tooltip-inner {
   background: #3e3e3e;
@@ -699,11 +712,19 @@
 .tooltip-dark .tooltip-inner p {
   color: #FFFFFF;
 }
-.tooltip-dark .arrow:before {
+.tooltip-dark.bs-tooltip-top .arrow:before {
   border-top-color: #3e3e3e;
+}
+.tooltip-dark.bs-tooltip-right .arrow:before {
+  border-right-color: #3e3e3e;
 }
 .tooltip-w-auto .tooltip-inner {
   width: auto;
+}
+.tooltip-m-h-td .tooltip-inner {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
 }
 .tooltip-wrapper-element {
   position: relative;
@@ -712,10 +733,12 @@
   width: 8px;
   display: block;
   height: 100%;
-  background-color: #3e3e3e;
   position: absolute;
   left: 0;
   top: 0;
+}
+.tooltip-border-element[data-toogle-class~=tooltip-dark] {
+  background-color: #3e3e3e;
 }
 
 .btn-group a[data-toggle=tooltip] .icon {
