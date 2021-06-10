@@ -20,7 +20,7 @@
       <div class="numbered-block">
           <div class="block-number"><span data-number="1">1</span></div>
           <a href="#" class="block-number-title">Movimento <span data-number="1">1</span>
-          <i class="icon icon-ico_modifica float-none ml-2 "></i>
+          <i class="icon icon-modifica float-none ml-2 "></i>
         </a>
           <div class="numbered-block-inner">
               <form class="form-grid">
@@ -31,7 +31,7 @@
                           <input disabled type="text" class="form-control hasDatepicker" data-datepicker="" autocomplete="off" placeholder="Data"><button type="button" class="ui-datepicker-trigger"></button>
                           <div class="input-group-append">
                             <span class="input-group-text">
-                              <i class="icon icon-ico_calendario"></i>
+                              <i class="icon icon-calendario"></i>
                             </span>
                           </div>
                         </div>
@@ -64,7 +64,7 @@
       </div>
       <div class="numbered-block">
           <div class="block-number"><span data-number="2">2</span></div>
-          <a href="#" class="block-number-title">Movimento <span data-number="2">2</span> <i class="icon icon-ico_modifica float-none ml-2"></i></a>
+          <a href="#" class="block-number-title">Movimento <span data-number="2">2</span> <i class="icon icon-modifica float-none ml-2"></i></a>
           <div class="numbered-block-inner">
               <form class="form-grid">
                 <div class="form-row">
@@ -74,7 +74,7 @@
                           <input disabled type="text" class="form-control hasDatepicker" data-datepicker="" autocomplete="off" placeholder="Data"><button type="button" class="ui-datepicker-trigger"></button>
                           <div class="input-group-append">
                             <span class="input-group-text">
-                              <i class="icon icon-ico_calendario"></i>
+                              <i class="icon icon-calendario"></i>
                             </span>
                           </div>
                         </div>
@@ -104,7 +104,7 @@
                 </div>
               </form>
               <div class="d-flex justify-content-end">
-               <button class="btn brd-green btn-white btn-small btn-add"><i class="icon icon-ico_dividi"></i>Aggiungi divisione
+               <button class="btn brd-green btn-white btn-small btn-add"><i class="icon icon-dividi"></i>Aggiungi divisione
                 </button>
               </div>
       </div>

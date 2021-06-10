@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-12">
              <h4>Progetto: lorem ipsum dolor </h4>
-             <p class="color-greenLink">02 marzo   <i class="icon icon-ico_arrow_right_text"></i> 30 novembre</p>
+             <p class="color-greenLink">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p>
           </div>
         </div>
       </section>
@@ -37,7 +37,7 @@
   <div class="alert alert-outline warning">
         <div class="row align-items-center">
             <div class="col-12 col-md-8">
-              <i class="icon icon-ico_warning"></i>
+              <i class="icon icon-warning"></i>
               <span class="text"><strong>Il budget disponibile sul progetto potrebbe essere eroso con l'associazione della nuova transazione in uscita</strong></span>
             </div>
             <div class="col-12 col-md-4">

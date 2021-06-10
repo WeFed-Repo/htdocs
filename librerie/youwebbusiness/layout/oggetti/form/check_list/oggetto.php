@@ -81,7 +81,7 @@
     <div class="form-row d-flex justify-content-end">
         <div class="col col-lg-2">
             <button class="btn btn-white brd-green fl-right btn-xs-full" id="btnApplica">
-                    <i class="icon icon-ico_applica"></i>Applica
+                    <i class="icon icon-refresh"></i>Applica
             </button>
         </div>
     </div>
