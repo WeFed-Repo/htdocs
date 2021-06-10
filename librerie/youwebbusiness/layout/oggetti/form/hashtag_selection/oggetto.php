@@ -34,6 +34,9 @@
   .htag-tag .icon {
     display:none;
   }
+  .htag-tag.htag-hide{
+    display:none;
+  }
   .htag-tag.selected, .htag-tag.solid {
     background-color: #2f9988;
     color: #fff;
@@ -96,16 +99,16 @@
             <i class="icon icon-ico_round_check"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo3</span>
           </div>
-          <div id="tg-4" class="htag-tag">
+          <div id="tg-4" class="htag-tag htag-hide">
             <i class="icon icon-ico_round_check"></i>
             <span class="htag-text">#progetto4</span>
           </div> 
-          <div id="tg-5" class="htag-tag selected">
+          <div id="tg-5" class="htag-tag selected htag-hide">
             <i class="icon icon-ico_round_check"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
           </div>        
         </div>
-        <a class="text-with-icon right-icon float-right">
+        <a id="more-htag" class="plus-htag text-with-icon right-icon float-right">
           <span class="icon icon-ico_circle_plus"></span>
           Vedi tutti
         </a>
@@ -149,7 +152,7 @@
   $(function(){
     // Funzione per gestire l'Append
     function htagAppendOn() {
-      if($(this).attr('id').slice(0,-4)=="-add") {
+      if($(this).attr('id').slice(-4)=="-add") {
         $(".htag-wall").find('#' + $(this).attr('id').slice(0,-4)).toggleClass("selected");
       }      
       $(this).remove();
@@ -195,6 +198,20 @@
 
     $('input[name=htag-input]').keyup(function() {
       availableTags[0]=('#' + $(this).val());        
+    });
+
+    // Show-Hide Default Tags
+    $("#more-htag").click(function () {
+      if($(this).hasClass("plus-htag")) {
+        $(".htag-wall .htag-tag.htag-hide").addClass("htag-show");
+        $(".htag-wall .htag-tag.htag-hide").removeClass("htag-hide");        
+        $(this).text("Vedi meno");
+      }else{
+        $(".htag-wall .htag-tag.htag-show").addClass("htag-hide");
+        $(".htag-wall .htag-tag.htag-show").removeClass("htag-show");        
+        $(this).text("Vedi tutti");
+      };      
+      $(this).toggleClass("plus-htag");
     });
   });
 </script>
