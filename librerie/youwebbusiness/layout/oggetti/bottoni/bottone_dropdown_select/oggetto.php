@@ -7,7 +7,6 @@
           <li><a href="javascript:;" data-value="">Associa progetto</a></li>
           <li><a href="javascript:;" data-value="">Modifica Categoria/Sottoprodotto</a></li>
       </ul>
-     </div>
 </div>
 <script>
 
