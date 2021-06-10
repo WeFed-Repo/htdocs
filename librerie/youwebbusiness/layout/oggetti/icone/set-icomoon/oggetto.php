@@ -10,20 +10,24 @@
   left:0;
   position:absolute;
   background: #fff;
-  width:30px;
-  height:30px;
+  width:40px;
+  height:40px;
   border:solid 1px #ccc;
   text-align:center;
-  padding: 3px;
+  padding: 7px;
 }
+.icon-set-demo .lib-ico-wrap .lib-ico-ph .icon {
+  font-size:25px;
+}
+
 .lib-ico-name {width:100%;
   display:block;
   word-break:break-all;
   font-family: "roboto", "sans serif";
 }
 .lib-ico-cont {
-  padding: 5px 0 5px 40px;
-  min-height:30px;
+  padding: 12px 0 5px 45px;
+  min-height:40px;
   width:100%;
   position:relative;
   margin-bottom:15px;
