@@ -14,7 +14,7 @@
         <div class="d-flex justify-content-start h-100">
           <div class="modal-toolbar align-items-start pt-2">
             <a href="#" aria-label="Print" >
-              <img src="./fe/img/icon/print.svg">
+              <i class="icon icon-printer"></i>
             </a>
             <a href="#" data-dismiss="modal" aria-label="Close" >
               <img src="./fe/img/icon/close.svg">
@@ -335,7 +335,7 @@
       <div class="m-3">
         <div class="alert alert-deny">
           <div class="alert-icon ">
-            <i class="icon icon-ico_divieto"></i>
+            <i class="icon icon-divieto"></i>
           </div> 
           Ci dispiace, al momento non sei abilitato alla funzione di Associa Fattura. Rivolgiti al master per attivare le abilitazioni sul tuo profilo.
         </div>
