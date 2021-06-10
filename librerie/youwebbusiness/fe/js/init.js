@@ -163,6 +163,8 @@ function initDropdown() {
                 .removeClass('shown')
                 .detach());
         }
+        //al resize tolgo il focus sul tooltip 
+        $("[data-toggle=tooltip]").blur();
     });
 }
 
@@ -211,6 +213,7 @@ function initModali() {
 
     // Inizializzazione modali
     $('[data-modal-default]').on('click', function () {
+        
         var index = $(this).data('modal-default');
         if (!index || index != '') {
             $('[data-modal="default"]').modal('show');
@@ -235,6 +238,12 @@ function initModali() {
             $('[data-modal="' + index + '"]').modal('show');
         }
     });
+
+    //inizializzazione dell'evenutale tooltip all'apertura della modale
+    $('.modal').on('shown.bs.modal', function () {
+        initTooltips();
+    })
+    
 }
 
 function initCarousel() {
@@ -281,17 +290,26 @@ function initDataFilters() {
 }
 
 function initTooltips() {
-     $("[data-toggle=tooltip]").each(function(){
-        var dataTrigger = typeof $(this).attr("data-trigger")=== "undefined" ? 'click' : $(this).attr("data-trigger"), //eventuale evento personalizzato
-            dataContainer = typeof $(this).attr("data-container")=== "undefined" ? '#main' : $(this).attr("data-container"), //eventuale container personalizzato
-            dataCustomClass= typeof $(this).attr("data-toogle-class")=== "undefined" ? '' : $(this).attr("data-toogle-class"); //eventuale classe aggiuntiva
-         $(this).tooltip({
+  $("[data-toggle=tooltip]").each(function(){
+        var tooltipBtn = $(this),
+            dataTrigger = typeof tooltipBtn.attr("data-trigger")=== "undefined" ? 'click' : tooltipBtn.attr("data-trigger"), //eventuale evento personalizzato
+            dataCustomClass= typeof tooltipBtn.attr("data-toogle-class")=== "undefined" ? '' : tooltipBtn.attr("data-toogle-class"), //eventuale classe aggiuntiva
+            dataContainer,
+            isInmodal = tooltipBtn.parents(".modal").length > 0 ? true  : false;
+        //datacontainer 
+        if(typeof tooltipBtn.attr("data-container")=== "undefined") {
+            isInmodal ? dataContainer=tooltipBtn.parents(".modal") : dataContainer="#main"
+        }
+        else {
+            dataContainer = tooltipBtn.attr("data-container");
+        }
+        tooltipBtn.tooltip({
             trigger: dataTrigger,
             container: dataContainer,
             html:true,
             template: '<div class="tooltip ' + dataCustomClass + '"role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         })
-    })
+     })
 }
 
 function initTreeview() {

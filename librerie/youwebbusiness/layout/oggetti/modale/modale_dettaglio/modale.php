@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" data-modal="simpledetail">
+<div class="modal fade" data-modal="simpledetail"" id="myModal">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header fit-content d-flex justify-content-between pb-1">
@@ -80,7 +80,13 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <div class="list">
-                    <dt class="list-key">Descrizione</dt>
+                    <dt class="list-key">Descrizione  
+                        <div class="btn-group">
+                            <a data-trigger="focus" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>lorem ipsum dolor sit</strong></p>">
+                              <i class="icon icon-movimenti_42"></i>
+                            </a>
+                        </div>
+                    </dt>
                     <dd class="list-value">pag. utenze varie</dd>
                   </div>
                   <div class="list">
@@ -332,7 +338,7 @@
             <i class="icon icon-ico_divieto"></i>
           </div> 
           Ci dispiace, al momento non sei abilitato alla funzione di Associa Fattura. Rivolgiti al master per attivare le abilitazioni sul tuo profilo.
-      </div>
+        </div>
       </div>
     </div>
   </div>

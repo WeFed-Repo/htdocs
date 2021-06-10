@@ -142,6 +142,8 @@
       }
     }
     .modal-body {
+      height: 100%;
+      overflow-y: auto;
       .modal-img {
         @include no_user_select();
       }
@@ -168,6 +170,7 @@
           font-size: 0.9em;
         }
       }
+      
     }
     .modal-footer {
       border: none !important;

@@ -140,7 +140,7 @@
                               <tbody class="accordion">
                                  <tr data-index="0" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center tooltip-wrapper-element">
-                                      <a class="tooltip-border-element" href="javascript:;" data-toogle-class="tooltip-dark" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="click"></a>
+                                      <a class="tooltip-border-element" href="javascript:;" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus"></a>
                                       <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
@@ -153,7 +153,7 @@
                                     <td>
                                         <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus/  data-offset aggiunto per spostarlo un poco sulla sinistra--->
                                           <div class="btn-group">
-                                             <a data-offset="-100 0" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
+                                             <a data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
                                                 <i class="icon icon-movimenti_42"></i>
                                              </a>
                                           </div>
@@ -176,9 +176,9 @@
                                     </td>
                                  </tr>
                                  <tr data-index="1" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
-                                    </td>
+                                    <td class="text-center tooltip-wrapper-element">
+                                      <a class="tooltip-border-element" href="javascript:;" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus"></a>
+                                      <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="1" tm-link-detail="">07/04/2021</a></td>
                                     <td>
                                        AUTOMOBILE CLUB - A.C. - MODEN
@@ -192,7 +192,7 @@
                                     <td>
                                         <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus--->
                                           <div class="btn-group">
-                                             <a  data-offset="-100 0" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato manualmente</strong></p>" data-trigger="focus">
+                                             <a  data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato manualmente</strong></p>" data-trigger="focus">
                                                 <i class="icon icon-movimenti_42"></i>
                                              </a>
                                           </div>
@@ -205,6 +205,8 @@
                                           <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
                                              <a role="button" class="dropdown-item" tm-copy-index="1">Copia</a>
                                              <a role="button" class="dropdown-item" tm-delete-index="1">Elimina</a>
+                                             <div class="dropdown-divider"></div>
+                                             <a class="dropdown-item" href="#">Separated link</a>
                                           </div>
                                        </div>
                                     </td>
