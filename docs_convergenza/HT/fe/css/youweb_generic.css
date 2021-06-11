@@ -386,7 +386,7 @@ button {
 /* Bottone icona grande */
 .btn-icon-big {background: #0e977f; border-radius:50%; width:34px;height:34px; color:#fff; text-align:center; display:inline-block; margin:0;}
 .btn-icon-big i.icon {line-height:32px;}
-@media (max-width:768px) {
+@media (max-width:767px) {
     .col-xs-12 .btnWrapper .btn-align-left:last-child:first-child {float:none}
     .formWrapper .form-group.btnWrapper {margin: 15px 0}
     .btnWrapper .btn-align-left {float:none;}
@@ -4752,7 +4752,7 @@ label.select-button + span {
     float: right;
 }
 /* float right solo dsk*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 767px){
 .f-r-d {
     float: right;
 }
@@ -10066,7 +10066,6 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 }
 
 .img-otp {
-    
     margin-left:20px;
     display: flex;
     align-items: center;
@@ -10075,5 +10074,15 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
     min-width: 70px;
 }
 
+@media (max-width:767px) {
+    .img-otp {
+        margin-left:0px;
+    }
+}
+@media (max-width:500px) {
+    .img-otp {
+       display:none;
+    }
+}
 
 

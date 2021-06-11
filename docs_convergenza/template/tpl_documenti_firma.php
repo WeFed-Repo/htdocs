@@ -131,7 +131,7 @@
         <div class="formWrapper">
             <div class="form-group">
                 <div class="row">
-                    <div class="col-xs-8 col-sm-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="form-field-input">
                             <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
                             <div class="row">
@@ -152,7 +152,7 @@
                             <div class="col-xs-2 img-otp">
                                 <img src="/HT/fe/img/ban_strong_token_fisico.png"  class="img-resp"/>
                             </div>
-                            <div class="col-xs-6 col-sm-12">
+                            <div class="col-xs-12 col-sm-12">
                                 <div class="form-field-input">
                                     <label class="control-label">Inserisci la Password usa e getta generata dal tuo token di sicurezza.</label>
                                     <div class="row">
