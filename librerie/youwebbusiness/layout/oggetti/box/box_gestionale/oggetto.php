@@ -15,33 +15,9 @@
 				<img class="sftw-image" src="./fe/img/placeholder-gestionale-sw-3.png" alt="immagine azienda box-gestionale">
 			</div>
 			<div class="col-md-4 col-12 pr-3 pl-3">
-				<div class="row align-items-top justify-content-center">			
-					<img class="d-flex img-fluid w-50" src="./fe/img/placeholder_box_gestionale.png" alt="immagine box box-gestionale">				
+				<div class="row align-items-top justify-content-center h-100 w-100">			
+					<img class="h-100" src="./fe/img/placeholder_box_gestionale.png" alt="immagine box box-gestionale">				
 				</div>
-				<!-- Bottoni Opzione 1-->
-				<div class="row justify-content-end mt-4">
-					<div class="col-sm-12">
-						<div class="form-row d-flex justify-content-end">
-							<div class="form-group col-6 col-lg-6">
-								<a href="#" class="btn btn-primary btn-block disabled" >COLLEGA</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row justify-content-end mt-4">
-					<div class="col-sm-12">
-						<div class="form-row d-flex justify-content-end">
-							<div class="form-group col-6 col-lg-6">
-								<a href="#" class="btn btn-primary btn-block " >MODIFICA</a>
-							</div>
-							<div class="form-group col-6 col-lg-6">
-								<a href="#" class="btn btn-secondary btn-block ">SCOLLEGA</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- End Bottoni Opzione 1 -->	
 			</div>
 		</div>
 		<!-- Bottoni Opzione 2-->
@@ -55,7 +31,7 @@
 			</div>
 		</div>
 
-		<div class="row justify-content-end mt-3">
+		<div class="row justify-content-end mt-4">
 			<div class="col-sm-6">
 				<div class="form-row d-flex justify-content-end">
 					<div class="form-group col-6 col-lg-4">
