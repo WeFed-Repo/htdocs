@@ -22,5 +22,16 @@
 <?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_azienda/oggetto.php'); ?>
 <!-- ./ SELETTORE AZIENDA -->
 
+<!-- TEXT WITH ICON -->
+<div class="row">
+	<div class="col-sm-12">
+	    <div class="text-with-icon right-icon color-greenLink">
+            <i class="icon icon-help"></i>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+    </div>
+</div>
+<!-- ./ TEXT WITH ICON -->
+
 
 
