@@ -15,8 +15,8 @@
 		<div class="col-xs-12">
 			<div class="innerWrapperTab">
 				<ul>
-					<li class="on"><a href="#" title="" role="button">Comunicazioni commerciali</a></li>
-					<li><a href="#"  role="button">Consensi privacy</a></li>
+					<li class="on"><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_privacy_commerciali.php&html=vr"  title="" role="button">Comunicazioni commerciali</a></li>
+					<li><a href="/template/strutt_<?php print $site; ?>.php?tpl=tpl_privacy_consensi.php&html=vr" role="button">Consensi privacy</a></li>
 				</ul>
 			</div>
 			<div class="separator"></div>
