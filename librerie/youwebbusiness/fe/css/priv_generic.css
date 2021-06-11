@@ -6652,6 +6652,13 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   line-height: 1.67;
 }
 
+.box-gestionale .sftw-image {
+  height: 40px;
+}
+.box-gestionale .note {
+  font-size: 13px;
+}
+
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
