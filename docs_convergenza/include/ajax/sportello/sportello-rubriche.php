@@ -166,7 +166,8 @@ EOD;
       "numeroCarta": "9455501229",
       "tipo": "atm"
     }
-  ]
+  ],
+  "rubricaTesseraATM":[]
 }
 EOD;
 }
