@@ -158,10 +158,9 @@
                                     <div class="row">
                                         <div class="col-xs-8 col-sm-8 no-label">
                                             <!-- Esempio campo password -->
-                                            <div class="form-field password-toggle">
+                                            <div class="form-field">
                                                 <input type="password" value="" id="txtPasswordFisico" name="" autocomplete="off" class="form-control">
-                                                <span class="toggle-pwd"></span>
-                                            </div>
+                                             </div>
                                             <!-- Fine esempio campo password -->
                                         </div>
                                         <div class="col-xs-4 col-sm-4 no-label">

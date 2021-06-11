@@ -3083,14 +3083,17 @@ var printLog = function (msg) {
                 rubricaTesATM.length = 0;
                 $inputBenAtm = $('#inputBenAtm').html('');
                 $inputBenAtm.append($('<option selected="selected">').val('').text('digita o scegli da rubrica'));
-                $contatti = data.rubricaPrepagate.filter(function (contatto) {
+                /*$contatti = data.rubricaPrepagate.filter(function (contatto) {
                     return contatto.tipo === 'CATM';
-                });
+                });*/
+                $contatti = data.rubricaTesseraATM;
                 if ($contatti.length) {
                     rubricheOK.inputBenAtm = true;
                     $contatti.forEach(function (contatto) {
+                        /*var nome = contatto.nome,
+                            numeroTessera = contatto.numeroCarta;*/
                         var nome = contatto.nome,
-                            numeroTessera = contatto.numeroCarta;
+                            numeroTessera = contatto.tesseraATM;
                         $inputBenAtm.append($('<option>').val(numeroTessera + '|' + nome).text(numeroTessera));
                         rubricaTesATM.push(numeroTessera);
                     });
