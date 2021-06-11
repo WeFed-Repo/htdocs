@@ -1,5 +1,5 @@
 <!-- BOX GESTIONALE-->
-<section>
+<section class="no-margin-section">
 	<div class="box-gestionale bordered mt-3 mb-3 p-3 pb-4 pt-4">
 		
 		<div class="row row-eq-height align-items-top">

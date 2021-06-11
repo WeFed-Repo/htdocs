@@ -3,6 +3,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header d-flex justify-content-end">
+        <h5 class="modal-title modal-title-grey text-center">Stiamo caricando i dati del tuo gestionale</h2>
         <a href="#" data-dismiss="modal" aria-label="Close" >
           <img src="./fe/img/icon/close.svg">
         </a>
@@ -10,7 +11,6 @@
       <div class="modal-body mb-5">       
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 text-center pl-lg-5 pr-3">
-            <h2 class="modal-title-grey">Stiamo caricando i dati del tuo gestionale</h2>
             <p class="mb-4">
             È in corso il caricamento dei dati del tuo gestionale di fatturazione elettronica, puoi visualizzare l’esito nella sezione Gestione Fatture
             </p>
@@ -26,8 +26,7 @@
             <button type="button" class="btn btn-primary mb-0 btn-block">VAI A GESTIONE FATTURE</button>
           </div>
         </div>
-      </div>
-     
+      </div>     
     </div>
   </div>
 </div>
