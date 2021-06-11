@@ -16,7 +16,7 @@
 			</div>
 			<div class="col-md-4 col-12 pr-3 pl-3 d-flex flex-column justify-content-end">
 				<div class="align-items-top justify-content-center d-flex flex-row">			
-					<img class="img-fluid" src="./fe/img/placeholder_box_gestionale.png" alt="immagine box box-gestionale">				
+					<img class="img-fluid" src="./fe/img/image_box_gestionale.png" alt="immagine box box-gestionale">				
 				</div>
 			</div>
 		</div>
