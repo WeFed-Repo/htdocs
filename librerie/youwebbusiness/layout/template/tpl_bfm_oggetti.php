@@ -14,5 +14,13 @@
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_block_arrow/oggetto.php'); ?>
 <!-- ./ BOX ASSOCIA PROGETTO-->
 
+<!-- BOX GESTIONALE -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_gestionale/oggetto.php'); ?>
+<!-- ./ BOX GESTIONALE-->
+
+<!-- SELETTORE AZIENDA -->
+<?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_azienda/oggetto.php'); ?>
+<!-- ./ SELETTORE AZIENDA -->
+
 
 
