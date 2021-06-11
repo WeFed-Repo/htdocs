@@ -9051,6 +9051,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 }
 
+.list-icon-wrapper.more-spaced .text-with-icon {padding-left:35px;margin-bottom:25px}
+.list-icon-wrapper .mode-input {display:none}
+.list-icon-wrapper.mode-input .mode-output {display:none}
+.list-icon-wrapper.mode-input .mode-input {display:block}
+
+
 /* ## Text with icon Element ## */
 .text-with-icon {
     position: relative;
@@ -9115,7 +9121,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .image-icon,.image-icon {
     width:20px;
     height:20px;
-    background-size:contain;
+    background-size: contain !important;
     display:block;
     background-repeat:no-repeat;
     margin:0 auto;
@@ -9124,7 +9130,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     width:15px;
     height:15px;
 }
-
+.text-with-icon .twi-checkbox {position:absolute; top:1px;left:0}
+.text-with-icon .twi-checkbox:active,.text-with-icon .twi-checkbox:focus,.text-with-icon .twi-checkox:hover {outline:0 none}
 .text-with-icon .icon, .text-with-icon .image-icon {position: absolute; top:0; left:0;}
 .text-with-icon .icon.right, .text-with-icon .image-icon.right {left:auto; right: -25px}
 .text-with-icon .icon.v-centered, .text-with-icon .image-icon.v-centered {top: calc(50% - 10px)}
@@ -9156,6 +9163,8 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon.right-icon .icon, .text-with-icon.right-icon .image-icon {right:0; left: auto;} 
 .text-with-icon.right-icon .image-icon {background-position: top right}
 
+.text-with-icon .icon-inline {position: relative; margin: -2px 0 0 8px;}
+
 /* Accordion */
 .text-with-icon *[aria-expanded=false] .icon-arrow_up {
     display:none;
@@ -9182,9 +9191,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 /* Iconcine immagine */
 .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
-.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;}
-.image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");background-size: 100%;}
-.image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png");background-size: 100%;width: 30px;height: 30px;}
+.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");}
+.image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");}
+.image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png"); width:30px;height:30px;}
+.image-icon.stato-neutro {background: url("/common/fe/img/icon-stato-neutro.png");}
+
+
 /* # All Accords Header */
 .header-col{
     display:block;
@@ -10086,3 +10098,42 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 }
 
 
+/* Infobox */
+.infobox {
+    margin: 0 50px 25px;
+    position:relative;
+    clear:both; 
+    float:none;
+    background:#eee;
+    padding:15px 55px 0 25px;
+    border-radius:10px;
+    font-size:13px;
+    
+ }
+ .infobox h3 {font-size:13px; margin-bottom:5px;text-transform:none;width:100%;}
+ .infobox p {padding-bottom:15px; color:#000;line-height:18px;}
+ .infobox .infobox-close {
+     cursor:pointer;
+     position:absolute;
+     width:30px;
+     height:30px;
+     right:15px;
+     top:17px;
+ }
+ .infobox .infobox-close .icon {
+     font-size:14px
+ }
+ @media (max-width:767px) {
+     .infobox {margin: 0 0 25px;}
+ 
+ }
+ 
+ /* Declinazioni infobox */
+ .infobox {background: #fef3de}
+ .infobox.infobox-warning h3, .infobox.infobox-warning .infobox-close .icon{
+     color: #EEAA27;
+ }
+
+ 
+ /* Indentazione */
+.indented {padding-left: 35px}

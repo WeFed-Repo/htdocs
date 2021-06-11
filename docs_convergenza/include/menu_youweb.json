@@ -669,6 +669,21 @@
 				"tpl": "link_va.php"
 			},
 			{
+				"nome": "Gestione privacy",
+				"voices": [
+					{
+						"nome": "Comunicazioni commerciali",
+						"tpl": "tpl_privacy_commerciali.php",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Consensi privacy",
+						"tpl": "tpl_privacy_consensi.php",
+						"inlavorazione": true
+					}	
+				]	
+			},
+			{
 				"nome": "Tracciatura e analytics",
 				"tpl": "tpl_tracciatura.php"
 			},
@@ -692,13 +707,10 @@
 							},
 							{
 								"nome": "Archivio",
-								"tpl": "tpl_documenti_archivio.php",
-								"inlavorazione": true
+								"tpl": "tpl_documenti_archivio.php"
 							}
-							
 						]
 					}
-					 
 				]
 
 			},
