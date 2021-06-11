@@ -146,25 +146,25 @@ EOD;
       "nome": "Restelli",
       "note": "test",
       "numeroCarta": "4082009509828301",
-      "tipo": "jeans"
+      "tipo": "CJEAN"
     },
     {
       "nome": "Vertemara",
       "note": "attiva",
       "numeroCarta": "5359218000001697",
-      "tipo": "kjeans"
+      "tipo": "KJEAN"
     },
     {
       "nome": "Fabio Rob",
       "note": "prova atm",
       "numeroCarta": "0238409328403284",
-      "tipo": "atm"
+      "tipo": "K4WB"
     },
     {
       "nome": "Prova Atm nome",
       "note": "prova atm",
-      "numeroCarta": "9455501229",
-      "tipo": "atm"
+      "numeroCarta": "0238409328403286",
+      "tipo": "K4WB"
     }
   ],
   "rubricaTesseraATM":[]

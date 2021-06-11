@@ -2534,7 +2534,7 @@ var printLog = function (msg) {
             }
         };
         updateDettPrepagata = function ($page, isContatto) {
-            var outputArr = $page.find('.saldoVal'), inputArr, carta;
+            var outputArr = $page.find('.saldoVal'), inputArr, carta,inputArrHTML;
             if (isContatto) {
                 carta = getContattoInfo('carta');
                 outputArr.eq(0).html(carta.numero);
@@ -2543,7 +2543,21 @@ var printLog = function (msg) {
                 inputArr = getInputPrepagata();
                 outputArr.eq(0).html(inputArr[1]);
                 outputArr.eq(1).html(inputArr[0]);
-                outputArr.eq(2).html(inputArr[2] === 'CJEAN' ? 'Carta Je@ns' : 'Carta Kje@ns');
+                switch(inputArr[2]) {
+                    case 'CJEAN': 
+                        inputArrHTML = 'Carta Je@ns';
+                      break;
+                      case 'K4WB':
+                        inputArrHTML= 'Prep@id by Banco BPM';
+                      break;
+                      case 'KJEAN':
+                        inputArrHTML = 'Carta Kje@ns';
+                      break;
+                    default:
+                        inputArrHTML = '';
+                }
+                outputArr.eq(2).html(inputArrHTML);
+                //outputArr.eq(2).html(inputArr[2] === 'CJEAN' ? 'Carta Je@ns' : 'Carta Kje@ns');
                 outputArr.eq(3).html(formattaNumeriOutput($('#inputImportoPrepagata').val().replace(',', '.')));
             }
         };
@@ -3701,7 +3715,22 @@ $(function () {
             val = $el.comboboxPlus('getValue');
             valArr = val.split('|');
             tipo = valArr[2];
-            tipoHTML = tipo === 'CJEAN' ? 'Carta Je@ns' : 'Carta Kje@ns';
+            switch(tipo) {
+                case 'CJEAN': 
+                    tipoHTML = 'Carta Je@ns';
+                  break;
+                  case 'K4WB':
+                    tipoHTML = 'Prep@id by Banco BPM';
+                  break;
+                  case 'KJEAN':
+                    tipoHTML = 'Carta Kje@ns';
+                  break;
+                default:
+                    tipoHTML = '';
+              }
+            //tipoHTML = tipo === 'CJEAN' ? 'Carta Je@ns' : 'Carta Kje@ns';
+            
+            
             $inputTypePrepagata.val('').hide();
             $('#outputTypePrepagata').attr('data-tipo', tipo).html(tipoHTML).show();
             $('#boxIntestPrepagata').show();
