@@ -33,5 +33,8 @@
 </div>
 <!-- ./ TEXT WITH ICON -->
 
+<!-- MODALE IMMAGINE VERTICALE -->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_immagine_verticale/oggetto.php');?>
+<!-- ./ MODALE IMMAGINE VERTICALE -->
 
 
