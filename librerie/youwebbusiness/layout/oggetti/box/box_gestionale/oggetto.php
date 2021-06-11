@@ -14,9 +14,9 @@
 				<img class="sftw-image" src="./fe/img/placeholder-gestionale-sw-2.png" alt="immagine azienda box-gestionale">
 				<img class="sftw-image" src="./fe/img/placeholder-gestionale-sw-3.png" alt="immagine azienda box-gestionale">
 			</div>
-			<div class="col-md-4 col-12 pr-3 pl-3">
-				<div class="row align-items-top justify-content-center h-100 w-100">			
-					<img class="h-100" src="./fe/img/placeholder_box_gestionale.png" alt="immagine box box-gestionale">				
+			<div class="col-md-4 col-12 pr-3 pl-3 d-flex flex-column justify-content-end">
+				<div class="align-items-top justify-content-center d-flex flex-row">			
+					<img class="img-fluid" src="./fe/img/placeholder_box_gestionale.png" alt="immagine box box-gestionale">				
 				</div>
 			</div>
 		</div>
