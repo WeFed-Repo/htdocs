@@ -18,6 +18,7 @@
           </div>
         </div>
 
+        <!-- Form Group con checkbox -->
         <div class="form-row justify-content-center mt-4">
           <div class="form-group">
 
@@ -52,8 +53,32 @@
               </div>
             </div>
 
+            <div class="form-group col-12 px-sm-5 mt-5">
+              <label class="control-label">Api UID</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col-12 px-sm-5">
+              <label class="control-label">Api Key</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+
           </div>
         </div>
+        <!-- END Form Group con checkbox -->
+        
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center">
+            <p class="mb-4">
+              Disclaimer: relativo a ...
+            </p>
+          </div>
+        </div>
+
+        <!-- IN BODY ALERT -->
+        <div class="alert alert-danger full-h-n1">
+          Ci dispiace, il collegamento non è andato a buon fine. Riprova più tardi.
+        </div>
+        <!-- END IN BODY ALERT -->
 
       </div> 
       <!-- Caso 1 -->
