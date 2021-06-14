@@ -1211,7 +1211,7 @@ NOTE: La classe .content-hidden-in-mobile
 }
 .full-h-n1 {
   margin-left: calc(-1rem - 1px);
-  width: calc(100% + 2rem + 2px) !important;
+  width: calc(100% + 2rem + 1px) !important;
 }
 
 /* Header*/
