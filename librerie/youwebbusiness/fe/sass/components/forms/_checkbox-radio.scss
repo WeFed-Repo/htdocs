@@ -96,7 +96,7 @@
   }
 }
 //check-options-list
-.check-options{
+table .checkbox .check-options,  .check-options{
   &-wrapper {
     max-height: 372px;
     overflow-y: auto;
@@ -117,6 +117,7 @@
     width: 100%;
     min-height: 60px;
     margin-bottom:13px;
+    overflow-x:hidden;
     &:last-child{margin-bottom:0;}
     border:1px solid $gray4;
     &:first-child {

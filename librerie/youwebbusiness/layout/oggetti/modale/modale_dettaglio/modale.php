@@ -80,7 +80,13 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <div class="list">
-                    <dt class="list-key">Descrizione</dt>
+                    <dt class="list-key">Descrizione  
+                        <div class="btn-group ml-2" >
+                            <a data-offset="100 0" data-trigger="focus" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='mb-0'><strong>Fattura riconciliata parzialmente</strong></p>">
+                              <i class="icon icon-document_percent color-warning"></i>
+                            </a>
+                        </div>
+                    </dt>
                     <dd class="list-value">pag. utenze varie</dd>
                   </div>
                   <div class="list">

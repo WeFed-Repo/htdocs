@@ -41,4 +41,9 @@
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_checkbox/oggetto.php');?>
 <!-- ./ MODALE CON CHECKBOX -->
 
+<!-- BOX CON BOTTONI; ACCORDION; TABELLA -->
+<!-- MODALE CON CHECKBOX -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_accordion_with_table/oggetto.php');?>
+<!-- ./ MODALE CON CHECKBOX -->
+
 

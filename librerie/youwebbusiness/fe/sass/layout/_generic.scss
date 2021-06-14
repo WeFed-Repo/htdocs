@@ -347,7 +347,6 @@ dl, .list {
 
 .text-with-squared {
   position:relative;
-  font-size: 20px;
   display: block;
   display: flex;
   align-items: center;
@@ -362,8 +361,19 @@ dl, .list {
     top:0;
   }
   .text {
-    padding-left: 50px;
+    padding-left: 45px;
     display:inline-block;
+  }
+  @media (max-width:$bp_sm_min) {
+    min-height: 0;
+    margin-bottom: 0.5rem;
+    .squared {
+      width: 20px;
+      height:20px;
+    }
+    .text {
+      padding-left: 25px;
+    }
   }
 }
 
