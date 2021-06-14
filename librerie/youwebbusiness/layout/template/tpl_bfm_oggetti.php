@@ -37,4 +37,8 @@
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_immagine_verticale/oggetto.php');?>
 <!-- ./ MODALE IMMAGINE VERTICALE -->
 
+<!-- MODALE CON CHECKBOX -->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_checkbox/oggetto.php');?>
+<!-- ./ MODALE CON CHECKBOX -->
+
 
