@@ -25,7 +25,7 @@
               <div class="form-check radio">
                 <input class="form-check-input" type="radio" id="radio1" name="inlineRadioOptions" value="">
                 <label class="form-check-label" for="radio1"></label>
-                <img src="./fe/img/placeholder-gestionale-sw-1.png">
+                <img class="form-check-img" src="./fe/img/placeholder-gestionale-sw-1.png">
               </div>
             </div>
 
@@ -33,7 +33,7 @@
               <div class="form-check radio">
                 <input class="form-check-input" type="radio" id="radio2" name="inlineRadioOptions" value="">
                 <label class="form-check-label" for="radio2" ></label>
-                <img src="./fe/img/placeholder-gestionale-sw-2.png">
+                <img class="form-check-img" src="./fe/img/placeholder-gestionale-sw-2.png">
               </div>
             </div>
 
@@ -41,7 +41,7 @@
               <div class="form-check radio">
                 <input class="form-check-input" type="radio" id="radio3" name="inlineRadioOptions" value="">
                 <label class="form-check-label" for="radio3" ></label>
-                <img src="./fe/img/placeholder-gestionale-sw-3.png">
+                <img class="form-check-img" src="./fe/img/placeholder-gestionale-sw-3.png">
               </div>
             </div>
 
@@ -63,3 +63,14 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(function(){
+    // Funzione per gestire il bordo Verde e l'attivazione dell'input da click sulla card intera
+    $(".radio-card").click(function () {        
+        $(".radio-card").removeClass("selected");
+        $(this).addClass("selected");
+        $(this).find('.radio input[type="radio"]').prop('checked', true);      
+    });
+  });
+</script>

@@ -4562,6 +4562,9 @@ table .checkbox.radio label {
   justify-content: center;
   max-width: 100%;
 }
+.radio-card.selected {
+  border: solid 1px #2f9988;
+}
 @media (max-width: 575px) {
   .radio-card {
     padding: 0 10px 0 20px;
