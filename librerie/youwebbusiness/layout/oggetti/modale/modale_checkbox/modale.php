@@ -56,21 +56,24 @@
         </div>
 
       </div> 
+      <!-- Caso 1 -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary">INDIETRO</button>
-        <button type="button" class="btn btn-primary">CONFERMA</button>
-      </div>    
+        <button type="button" class="btn btn-primary" disabled>CONFERMA</button>
+      </div>     
     </div>
   </div>
 </div>
 
 <script>
   $(function(){
-    // Funzione per gestire il bordo Verde e l'attivazione dell'input da click sulla card intera
+    // Funzione per gestire il bordo Verde, l'attivazione dell'input da click sulla card intera e l'attivazione del bottone nel footer
     $(".radio-card").click(function () {        
         $(".radio-card").removeClass("selected");
         $(this).addClass("selected");
-        $(this).find('.radio input[type="radio"]').prop('checked', true);      
+        $(this).find('.radio input[type="radio"]').prop('checked', true);
+
+        $(".modal-footer button[disabled]").prop('disabled', false);      
     });
   });
 </script>
