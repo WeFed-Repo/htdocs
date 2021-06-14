@@ -804,6 +804,9 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 .text-big {
   font-size: 1.3rem;
 }
+.text-extra-large {
+  font-size: 1.4rem;
+}
 .text-small {
   font-size: 0.9rem;
 }
@@ -841,6 +844,28 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   right: 15px;
   top: 12px;
   font-size: 26px;
+}
+
+.text-with-squared {
+  position: relative;
+  font-size: 20px;
+  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.text-with-squared .squared {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border-radius: 3px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+.text-with-squared .text {
+  padding-left: 50px;
+  display: inline-block;
 }
 
 .display-icon {

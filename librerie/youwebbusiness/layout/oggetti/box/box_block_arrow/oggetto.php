@@ -37,7 +37,7 @@
   <div class="alert alert-outline warning">
         <div class="row align-items-center">
             <div class="col-12 col-md-8">
-              <i class="icon icon-warning"></i>
+              <i class="icon icon-attenzione"></i>
               <span class="text"><strong>Il budget disponibile sul progetto potrebbe essere eroso con l'associazione della nuova transazione in uscita</strong></span>
             </div>
             <div class="col-12 col-md-4">

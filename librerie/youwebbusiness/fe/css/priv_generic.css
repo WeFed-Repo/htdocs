@@ -602,7 +602,6 @@
   }
   .modal .modal-dialog .modal-content .modal-body,
 .not-floated-modal .modal-show .modal-dialog .modal-content .modal-body {
-    height: 100%;
     overflow-y: auto;
     border: 0 none;
   }
