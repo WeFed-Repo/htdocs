@@ -66,6 +66,14 @@
         </div>
         <!-- END Form Group con checkbox -->
         
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center">
+            <p class="mb-4">
+              Disclaimer: relativo a ...
+            </p>
+          </div>
+        </div>
+
         <!-- IN BODY ALERT -->
         <div class="alert alert-danger full-h-n1">
           Ci dispiace, il collegamento non è andato a buon fine. Riprova più tardi.
