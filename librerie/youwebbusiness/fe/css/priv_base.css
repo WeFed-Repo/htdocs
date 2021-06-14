@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* bfm colori */
 /* Filtro per gradienti in IE6-9 */
 @import "../css/icomoon.css";
 .bkg-white {
@@ -217,6 +218,13 @@
 }
 .bkg-tableStriped {
   background-color: #fafafa;
+}
+
+.color-bfm_conferma {
+  color: #e9ce96;
+}
+.bkg-bfm_conferma {
+  background-color: #e9ce96;
 }
 
 @font-face {
@@ -858,7 +866,6 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   height: 32px;
   display: inline-block;
   border-radius: 3px;
-  background-color: black;
   position: absolute;
   top: 0;
 }

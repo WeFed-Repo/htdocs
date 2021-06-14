@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* bfm colori */
 /* Filtro per gradienti in IE6-9 */
 .bkg-white {
   background-color: #FFFFFF;
@@ -216,6 +217,13 @@
 }
 .bkg-tableStriped {
   background-color: #fafafa;
+}
+
+.color-bfm_conferma {
+  color: #e9ce96;
+}
+.bkg-bfm_conferma {
+  background-color: #e9ce96;
 }
 
 /* Modali */

@@ -3,11 +3,11 @@
     <div class="row d-flex justify-content-between align-items-center w-100">
       <h5 class="col-sm-8 card-header-title mb-0">
         <span class="text-with-squared">
-          <span class="squared color-warning"></span>
+          <span class="squared bkg-bfm_conferma"></span>
           <span class="text color-gray1">Da confermare</span>
         </span>
       </h5>
-      <p class="col-sm-2 pr-4 text-sm-left text-md-right mb-0">
+      <p class="col-sm-4 pr-4 text-sm-left text-md-right mb-0">
         4 transazioni
       </p>
     </div>
@@ -18,7 +18,7 @@
   </div>
   <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
     <div class="card-body">
-      
+        <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_row/oggetto.php');?>
     </div>
   </div>
 </div>
