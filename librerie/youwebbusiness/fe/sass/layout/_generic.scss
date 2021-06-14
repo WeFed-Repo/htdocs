@@ -569,3 +569,11 @@ NOTE: La classe .content-hidden-in-mobile
 @media (min-width:$bp_md_min) { .flex-md-nowrap { flex-wrap: nowrap !important; } }
 @media (min-width:$bp_lg_min) { .flex-lg-nowrap { flex-wrap: nowrap !important; } }
 @media (min-width:$bp_xl_min) { .flex-xl-nowrap { flex-wrap: nowrap !important; } }
+
+
+// SG Class For Full-Width-Horizontal content for an element in an element with BS standard margin or padding
+.full-h-n1 {
+  margin-left: calc(-1rem - 1px);
+  // Width + Margin + Border 
+  width: calc(100% + 2rem + 2px) !important;
+}
