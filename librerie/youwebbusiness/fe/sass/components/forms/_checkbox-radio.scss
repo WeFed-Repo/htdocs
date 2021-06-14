@@ -418,3 +418,39 @@
 /* Declinazioni form disabilitati */
 .radio:disabled:checked label::after, .radio:disabled:checked + label::after, .radio input[type=radio]:disabled:checked label::after, .radio input[type=radio]:disabled:checked + label::after {background-color:#aaa}
 
+/* Radio/Check Card Style With Image */
+.radio-card {
+  border-radius: 2px;
+  border: solid 1px #dddddd;
+  padding: 0 30px 0 30px;
+  margin: 0 10px 10px 10px;
+  min-height: 80px;
+  /* IE FIX*/
+  height:1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width:100%;
+  @media (max-width: $bp_sm_max) {
+    padding: 0 10px 0 20px;
+  }
+  .form-check {
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+  img {
+    height: 60px;
+    padding-left: 10px;
+    @media (max-width: $bp_sm_max) {
+      height: 50px;
+      padding-left: 0px;
+    }
+  }
+  label:not(:empty) {
+    padding-left: 30px;
+    @media (max-width: $bp_sm_max) {
+      padding-left: 10px;
+    }
+  }
+}
+

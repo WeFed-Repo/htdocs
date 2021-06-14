@@ -4548,6 +4548,48 @@ table .checkbox.radio label {
   background-color: #aaa;
 }
 
+/* Radio/Check Card Style With Image */
+.radio-card {
+  border-radius: 2px;
+  border: solid 1px #dddddd;
+  padding: 0 30px 0 30px;
+  margin: 0 10px 10px 10px;
+  min-height: 80px;
+  /* IE FIX*/
+  height: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+@media (max-width: 575px) {
+  .radio-card {
+    padding: 0 10px 0 20px;
+  }
+}
+.radio-card .form-check {
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+.radio-card img {
+  height: 60px;
+  padding-left: 10px;
+}
+@media (max-width: 575px) {
+  .radio-card img {
+    height: 50px;
+    padding-left: 0px;
+  }
+}
+.radio-card label:not(:empty) {
+  padding-left: 30px;
+}
+@media (max-width: 575px) {
+  .radio-card label:not(:empty) {
+    padding-left: 10px;
+  }
+}
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;

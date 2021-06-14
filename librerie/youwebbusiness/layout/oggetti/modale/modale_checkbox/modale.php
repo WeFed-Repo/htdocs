@@ -1,47 +1,4 @@
 <!-- Modal -->
-
-<style>
-  .radio-card{
-    border-radius: 2px;
-    border: solid 1px #dddddd;
-    padding: 0 30px 0 30px;
-    margin: 0 10px 10px 10px;
-    min-height: 80px;
-    /* IE FIX*/
-    height:1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width:100%;
-  }
-  .radio-card .form-check{
-    margin-bottom: 0px;
-    padding-top: 0px;
-  }
-  .radio-card img{
-    height: 60px;
-    padding-left: 10px;
-  }
-  .radio-card label:not(:empty){
-    padding-left: 30px;
-  }
-
-  /* @media (max-width: $bp_sm_max) { */
-  @media (max-width: 500px) {
-    .radio-card{
-      padding: 0 10px 0 20px;
-    }
-    .radio-card label:not(:empty){
-      padding-left: 10px;
-    }
-    .radio-card img{
-      height: 50px;
-      padding-left: 0px;
-    }
-  }
-
-</style>
-
 <div class="modal fade modale-checkbox" data-modal="check-box">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
