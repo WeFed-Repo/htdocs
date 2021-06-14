@@ -4251,52 +4251,51 @@ table .checkbox.radio label {
   transform: translate(-24px, 0);
 }
 
-table .checkbox .check-options-wrapper, .check-options-wrapper {
+.check-options-wrapper {
   max-height: 372px;
   overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: 20px;
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-wrapper, .check-options-wrapper {
+  .check-options-wrapper {
     max-height: none;
     overflow-y: visible;
   }
 }
-table .checkbox .check-options-list, .check-options-list {
+.check-options-list {
   padding: 6px 15px 6px 30px;
   width: 100%;
   min-height: 60px;
   margin-bottom: 13px;
-  overflow-x: hidden;
   border: 1px solid #DDDDDD;
 }
-table .checkbox .check-options-list .form-row, .check-options-list .form-row {
+.check-options-list .form-row {
   align-items: center;
   min-height: 50px;
 }
-table .checkbox .check-options-list:last-child, .check-options-list:last-child {
+.check-options-list:last-child {
   margin-bottom: 0;
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-list:first-child, .check-options-list:first-child {
+  .check-options-list:first-child {
     border-top: 1px solid #DDDDDD;
     padding-top: 15px;
   }
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-list, .check-options-list {
+  .check-options-list {
     border: 0;
     border-bottom: 1px solid #DDDDDD;
     padding-left: 16px;
     margin-bottom: 8px;
   }
 }
-table .checkbox .check-options-list label, .check-options-list label {
+.check-options-list label {
   padding-left: 1rem;
   display: block;
 }
-table .checkbox .check-options-list label span, .check-options-list label span {
+.check-options-list label span {
   white-space: nowrap;
   width: calc(100% - 1rem);
   display: inline-block;
@@ -4306,33 +4305,33 @@ table .checkbox .check-options-list label span, .check-options-list label span {
   text-overflow: ellipsis;
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-list label, .check-options-list label {
+  .check-options-list label {
     padding-left: 0.5rem;
   }
-  table .checkbox .check-options-list label span, .check-options-list label span {
+  .check-options-list label span {
     width: calc(100% - 0.5rem);
   }
 }
-table .checkbox .check-options-list .checkbox, .check-options-list .checkbox {
+.check-options-list .checkbox {
   margin: 0;
   padding-top: 0;
 }
-table .checkbox .check-options-list .label, .check-options-list .label {
+.check-options-list .label {
   font-weight: bold;
   display: block;
   padding-bottom: 5px;
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-list .label, .check-options-list .label {
+  .check-options-list .label {
     display: inline-block;
   }
 }
-table .checkbox .check-options-list .text-output, .check-options-list .text-output {
+.check-options-list .text-output {
   font-weight: normal;
   padding: 0;
 }
 @media (max-width: 991px) {
-  table .checkbox .check-options-list .text-output, .check-options-list .text-output {
+  .check-options-list .text-output {
     float: right;
     max-width: 70%;
     margin-bottom: 5px;
