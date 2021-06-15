@@ -226,6 +226,13 @@
   background-color: #e9ce96;
 }
 
+.color-bfm_bollette {
+  color: #00755c;
+}
+.bkg-bfm_bollette {
+  background-color: #00755c;
+}
+
 /* Modali */
 [data-toggle=modal] {
   cursor: pointer;
@@ -874,12 +881,28 @@
   background: transparent;
   padding: 1rem 1rem 2rem 1rem;
 }
-.accordion.with-squared .text {
+.accordion.with-squared .card-header .text {
   font-size: 20px;
 }
-@media (max-width: 576px) {
-  .accordion.with-squared .text {
-    font-size: 16px;
+.accordion.ico-close-pa .card-header {
+  position: relative;
+}
+.accordion.ico-close-pa .card-header-icon {
+  position: absolute;
+  right: 1.5rem;
+}
+@media (max-width: 768px) {
+  .accordion.ico-close-pa .card-header-icon {
+    top: 1.5rem;
+    right: 0.5rem;
+  }
+}
+.accordion.ico-close-pa .card-header {
+  padding-right: 3rem;
+}
+@media (max-width: 768px) {
+  .accordion.ico-close-pa .card-header {
+    padding-right: 0;
   }
 }
 .accordion.always-active .icon-refresh:before {
@@ -1654,6 +1677,15 @@
     min-width: 100px;
   }
 }
+.bootstrap-table table.table-header-light th .th-inner.sortable, .bootstrap-table .table.table-header-light th .th-inner.sortable {
+  background: transparent url("../img/table_order_grey.png") no-repeat right center;
+}
+.bootstrap-table table.table-header-light th .th-inner.sortable.asc, .bootstrap-table .table.table-header-light th .th-inner.sortable.asc {
+  background-image: url("../img/table_order_asc_grey.png");
+}
+.bootstrap-table table.table-header-light th .th-inner.sortable.desc, .bootstrap-table .table.table-header-light th .th-inner.sortable.desc {
+  background-image: url("../img/table_order_desc_grey.png");
+}
 .bootstrap-table .table-striped > tbody > tr {
   background-color: #FFFFFF;
   transition: background-color 0.1s;
@@ -1853,6 +1885,36 @@
 .bootstrap-table table-space-row, .bootstrap-table .table-space-row, .table-space-row {
   border-collapse: separate !important;
   border-spacing: 0 1em;
+  background-color: #FFFFFF;
+}
+.bootstrap-table table-space-row tbody td, .bootstrap-table .table-space-row tbody td, .table-space-row tbody td {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+}
+.bootstrap-table table-space-row tbody td:first-child, .bootstrap-table .table-space-row tbody td:first-child, .table-space-row tbody td:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left: 1px solid #DDDDDD;
+}
+.bootstrap-table table-space-row tbody td:last-child, .bootstrap-table .table-space-row tbody td:last-child, .table-space-row tbody td:last-child {
+  border-radius: 0 5px 5px 0;
+  border-right: 1px solid #DDDDDD;
+}
+.bootstrap-table table-space-row tbody tr, .bootstrap-table .table-space-row tbody tr, .table-space-row tbody tr {
+  border: 1px solid #999999;
+}
+.bootstrap-table table.table-header-light thead, .bootstrap-table .table.table-header-light thead, .table.table-header-light thead {
+  background-color: #FFFFFF;
+  color: #737373;
+  text-transform: uppercase;
+}
+.bootstrap-table table.table-header-light thead th, .bootstrap-table .table.table-header-light thead th, .table.table-header-light thead th {
+  color: #737373;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.bootstrap-table table.table-header-light th, .bootstrap-table table.table-header-light td, .bootstrap-table .table.table-header-light th, .bootstrap-table .table.table-header-light td, .table.table-header-light th, .table.table-header-light td {
+  font-size: 12px;
 }
 
 .detail-panel {
@@ -3573,6 +3635,11 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   color: #FFFFFF !important;
   background: #DDDDDD !important;
   border-color: transparent !important;
+}
+.btn.btn-filter.m-w-s {
+  min-width: 100px;
+  text-align: center;
+  font-size: 12px;
 }
 .btn.is--confirmed:before {
   content: "✓";
@@ -6723,6 +6790,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .box-gestionale .note {
   font-size: 13px;
+}
+
+.no-promo-info {
+  background-color: #f5f9fc;
 }
 
 .c-filter .nav-tabs {

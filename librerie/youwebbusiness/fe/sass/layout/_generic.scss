@@ -360,22 +360,26 @@ dl, .list {
     border-radius: 3px;
     position: absolute;
     top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.ico-wrapper {
+      color:$white;
+      .icon {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+      }
+     
+    }
   }
   .text {
     padding-left: 45px;
     display:inline-block;
   }
-  @media (max-width:$bp_sm_min) {
-    min-height: 0;
-    margin-bottom: 0.5rem;
-    .squared {
-      width: 20px;
-      height:20px;
-    }
-    .text {
-      padding-left: 25px;
-    }
-  }
+ 
 }
 
 .display-icon {
@@ -393,7 +397,11 @@ dl, .list {
 .ellipsed {
   @include ellipsed();
 }
-
+td.ellipsed {
+  @include ellipsed();
+  max-width: 100px;
+  display: table-cell;
+}
 .flex-grow-0 {
   flex-grow: 0 !important;
 }

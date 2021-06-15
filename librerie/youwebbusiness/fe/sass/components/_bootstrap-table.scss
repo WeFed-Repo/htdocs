@@ -107,6 +107,17 @@
         }
       }
     }
+    &.table-header-light {
+      th {
+        .th-inner {
+          &.sortable {
+            background: transparent url("../img/table_order_grey.png") no-repeat right center;
+            &.asc { background-image: url("../img/table_order_asc_grey.png"); }
+            &.desc { background-image: url("../img/table_order_desc_grey.png"); }
+          }
+        } 
+      }
+    }
   }
   .table-striped {
     > tbody {

@@ -95,12 +95,30 @@
     }
   }
   &.with-squared {
-    .text {
+    .card-header .text {
       font-size: 20px;
     }
-    @media (max-width:$bp_sm_min) {
-      .text {
-        font-size: 16px;
+    
+  }
+
+  &.ico-close-pa {
+    .card-header {
+      position: relative;
+    }
+   
+    .card-header-icon {
+      position: absolute;
+      right: 1.5rem;
+      @media (max-width:$bp_md_min) {
+        top: 1.5rem;
+        right: 0.5rem;
+      }
+    }
+    
+    .card-header {
+       padding-right:3rem;
+       @media (max-width:$bp_md_min) {
+        padding-right:0;
       }
     }
   }

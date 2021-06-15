@@ -1,4 +1,4 @@
-<section class="no-margin-section">
+<section>
 <div class="row">
     <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
         <h2 class="color-gray1">Elenco ricorrenti</h2>
@@ -12,13 +12,13 @@
     <div class="clickScroll-container scroll-active">
             <div class="clickScroll-overflow">
                 <div class="clickScroll">
-                    <button class="btn btn-filter is-selected mr-2">Tutti</button>
-                    <button class="btn btn-filter mr-2">Settimanale</button>
-                    <button class="btn btn-filter mr-2">2 volte al mese</button>
-                    <button class="btn btn-filter mr-2">mensile</button>
-                    <button class="btn btn-filter mr-2">bimestrale</button>
-                    <button class="btn btn-filter mr-2">trimestrale</button>
-                    <button class="btn btn-filter mr-2">semestrale</button>
+                    <button class="btn btn-filter m-w-s is-selected mr-2">Tutti</button>
+                    <button class="btn btn-filter m-w-s mr-2">Settimanale</button>
+                    <button class="btn btn-filter m-w-s mr-2">2 volte al mese</button>
+                    <button class="btn btn-filter m-w-s mr-2">mensile</button>
+                    <button class="btn btn-filter m-w-s mr-2">bimestrale</button>
+                    <button class="btn btn-filter m-w-s mr-2">trimestrale</button>
+                    <button class="btn btn-filter m-w-s mr-2">semestrale</button>
                 </div>
                 <a class="clickScroll-arrow left">
                     <i class="icon-arrow_left"></i>
@@ -30,7 +30,7 @@
         </div>
     </div>
 </div>
-
-
+</section>
+<section class="no-margin-section">
 <?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_with_squared/oggetto.php');?>
 </section>

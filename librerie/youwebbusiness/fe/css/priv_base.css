@@ -227,6 +227,13 @@
   background-color: #e9ce96;
 }
 
+.color-bfm_bollette {
+  color: #00755c;
+}
+.bkg-bfm_bollette {
+  background-color: #00755c;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("../font/Roboto-Regular-webfont.eot");
@@ -869,23 +876,22 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   border-radius: 3px;
   position: absolute;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-with-squared .squared.ico-wrapper {
+  color: #FFFFFF;
+}
+.text-with-squared .squared.ico-wrapper .icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
 }
 .text-with-squared .text {
   padding-left: 45px;
   display: inline-block;
-}
-@media (max-width: 576px) {
-  .text-with-squared {
-    min-height: 0;
-    margin-bottom: 0.5rem;
-  }
-  .text-with-squared .squared {
-    width: 20px;
-    height: 20px;
-  }
-  .text-with-squared .text {
-    padding-left: 25px;
-  }
 }
 
 .display-icon {
@@ -906,6 +912,16 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+td.ellipsed {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  display: table-cell;
 }
 
 .flex-grow-0 {

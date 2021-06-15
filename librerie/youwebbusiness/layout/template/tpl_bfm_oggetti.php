@@ -46,4 +46,7 @@
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_accordion_with_table/oggetto.php');?>
 <!-- ./ MODALE CON CHECKBOX -->
 
+<!-- BOX CON INFO E BOTTONE -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_no_promo_info/oggetto.php');?>
+<!-- ./ BOX CON INFO E BOTTONE-->
 
