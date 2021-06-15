@@ -1,17 +1,21 @@
-<!-- TABELLA RISTILIZZATA -->
+<!-- TABELLA RISTILIZZATA  classi aggiuntive:
+table-space-row => crea spazio tra le righe
+table-header-light => stile chiaro dell'header
+table-font-small => font-size 12px
+-->
 
 <div tm-bstable-v2="" class="px-3">
         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-space-row table-header-light table-font-small" data-table-mobilized-desktop="NewTable">
     <thead>
     <tr>
       <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
-      <th data-field="Categoria" class="left">Categoria</th>
-      <th data-field="contabile" data-formatter="formatLink" class="center">Rapporto</th>
-      <th data-field="valuta" data-sortable="true" class="center">Descrizione</th>
-      <th data-field="importo" data-sortable="true" data-formatter="tableCellValue" class="right">Data prevista</th>
-      <th data-field="divisa" data-sortable="true" class="center">Periodicità</th>
-      <th data-field="causale" data-sortable="true" class="left">Importo</th>
-     <th data-field="azioni" data-sortable="false">Azioni</th>
+      <th data-field="Categoria">Categoria</th>
+      <th data-field="contabile" data-sortable="true">Rapporto</th>
+      <th data-field="valuta" data-sortable="true">Descrizione</th>
+      <th data-field="importo" data-sortable="true">Data prevista</th>
+      <th data-field="divisa" data-sortable="true">Periodicità</th>
+      <th data-field="causale" data-sortable="true">Importo</th>
+     <th  data-field="azioni" data-sortable="false"></th>
     </tr>
  </thead>
  <tbody>
@@ -24,9 +28,12 @@
               <a href="#" class="text color-greenLink">Bollette</a>
             </span>
         </td>
-        <td><a href="#">28/02/2019</a></td>
-        <td>28/02/2019</td>
-        <td><span class="">3.216,65</span></td>
+        <td>lorem ipsum</td>
+        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+        <td class="ellipsed">
+            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+        </td>
+        <td>01/02/2021</td>
         <td>EUR</td>
         <td>345</td>
         <td class="text-center">
@@ -54,4 +61,7 @@
 </tbody>
 </table>
         <div class="clearfix"></div>
+</div>
+<div class="row justify-content-end mr-1">
+  <a href="#">Vedi tutte</a>
 </div>

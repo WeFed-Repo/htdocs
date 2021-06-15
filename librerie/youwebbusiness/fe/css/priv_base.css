@@ -887,9 +887,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   font-size: 24px;
   width: 24px;
   height: 24px;
-}
-.text-with-squared .squared.ico-wrapper .icon:before {
-  zoom: 100%;
+  text-align: center;
 }
 .text-with-squared .text {
   padding-left: 45px;
@@ -914,6 +912,16 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+td.ellipsed {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  display: table-cell;
 }
 
 .flex-grow-0 {

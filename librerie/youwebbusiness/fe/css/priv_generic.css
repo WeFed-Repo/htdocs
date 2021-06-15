@@ -891,7 +891,7 @@
   position: absolute;
   right: 1.5rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .accordion.ico-close-pa .card-header-icon {
     top: 1.5rem;
     right: 0.5rem;
@@ -900,7 +900,7 @@
 .accordion.ico-close-pa .card-header {
   padding-right: 3rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .accordion.ico-close-pa .card-header {
     padding-right: 0;
   }
@@ -3635,6 +3635,11 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   color: #FFFFFF !important;
   background: #DDDDDD !important;
   border-color: transparent !important;
+}
+.btn.btn-filter.m-w-s {
+  min-width: 100px;
+  text-align: center;
+  font-size: 12px;
 }
 .btn.is--confirmed:before {
   content: "✓";

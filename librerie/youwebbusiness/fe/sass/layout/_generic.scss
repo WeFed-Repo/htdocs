@@ -370,10 +370,7 @@ dl, .list {
         font-size: 24px;
         width: 24px;
         height: 24px;
-        &:before {
-          zoom:100%;
-        }
-       
+        text-align: center;
       }
      
     }
@@ -400,7 +397,11 @@ dl, .list {
 .ellipsed {
   @include ellipsed();
 }
-
+td.ellipsed {
+  @include ellipsed();
+  max-width: 100px;
+  display: table-cell;
+}
 .flex-grow-0 {
   flex-grow: 0 !important;
 }

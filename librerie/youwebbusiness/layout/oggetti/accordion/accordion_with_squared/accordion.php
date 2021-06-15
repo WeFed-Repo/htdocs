@@ -25,9 +25,8 @@
     </div>
   </div>
   <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-    <div class="card-body">
-      
-        <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_row/oggetto.php');?>
+    <div class="card-body pt-0">
+      <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_row/oggetto.php');?>
     </div>
   </div>
 </div>
