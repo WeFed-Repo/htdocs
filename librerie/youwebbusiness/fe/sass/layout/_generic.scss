@@ -596,3 +596,18 @@ NOTE: La classe .content-hidden-in-mobile
   // Width + Margin + Border 
   width: calc(100% + 2rem + 1px) !important;
 } 
+
+/*elemento decorativo o funzionale con tooltip per td tabelle o box */
+.wrapper-border-element {position: relative;} 
+  .border-element {
+    width: 8px;display: block;height: 100%;position: absolute;left:0;top:0;
+    
+    &.b-r-l {
+      border-radius:5px 0 0 5px;
+    }
+   
+  }
+  td .border-element {
+    min-height: 62px;
+    top:-1px;
+  }

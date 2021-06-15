@@ -53,6 +53,7 @@ $greenLight : #30C9B4;
 $greenLight2: #08BBCA;
 $greenLighter : #e1f3f0;
 $greenLightBordered : #afd4cd;
+$greenLighterTh : #e9f3f1;
 $grayBordered : #c8c8c8;
 $grayBordered2:#d9dce6;
 $grayLightBorder: #f2f2f2;
@@ -80,11 +81,28 @@ $input_placeholder: #AAAAAA;
 $input_disabled_bkg: #DDDDDD;
 $input_disabled_color: #495057;
 $input_disabled_placeholder:  #495057;
-$tableStriped : #fafafa; 
-/* bfm colori */
-$bfm_conferma: #e9ce96;
-$bfm_bollette: #00755c;
+$tableStriped : #fafafa;
+$greenLighter_border: #afdbd4;
+/* bfm colori status*/
+$bfm_status_confermare: #e9ce96;
+$bfm_status_attive: #37ad9c;
+$bfm_status_categorizzare:#f5f5f5;
 
+/* bfm colori categorie*/
+$bfm_bollette: #00755c;
+$bfm_fornitori: #8fc7ff;
+$bfm_operazionifinanziarie: #5094ff;
+$bfm_ricavi: #003cac;
+$bfm_assicurazione: #2ec5e9;
+$bfm_altrespese: #94eade;
+$bfm_servizi: #98d1c9;
+$bfm_tasse: #37ad9c;
+$bfm_trasporti: #178494;
+$bfm_immobilizzazioni: #6570c0;
+$bfm_intercompany: #a575ac;
+$bfm_altrepassivita: #ef98dc;
+$bfm_altriproventi: #bcbcbc;
+$bfm_risorseumane: #186bee;
 // Array per le classi .color-NOMECOLORE e .bkg-NOMECOLORE ( vedere "FUNZIONE DI COLORE" in _mixins.scss )
 
 $colors:(
@@ -97,6 +115,7 @@ $colors:(
     greenMenu_hover     : $greenMenu_hover,
     greenLight          : $greenLight,
     greenLighter        : $greenLighter,
+    greenLighterTh     : $greenLighterTh,
     grayBordered        : $grayBordered,
     gray1               : $gray1,
     gray1_hover         : $gray1_hover,
@@ -120,7 +139,23 @@ $colors:(
     input_disabled_color : $input_disabled_color,
     input_disabled_placeholder : $input_disabled_placeholder,
     tableStriped :      $tableStriped,
-    bfm_conferma : $bfm_conferma,
-    bfm_bollette: $bfm_bollette
+    greenLighter_border: $greenLighter_border,
+    bfm_status_confermare : $bfm_status_confermare,
+    bfm_status_attive :$bfm_status_attive,
+    bfm_status_categorizzare :$bfm_status_categorizzare,
+    bfm_bollette: $bfm_bollette,
+    bfm_fornitori: $bfm_fornitori,
+    bfm_operazionifinanziarie: $bfm_operazionifinanziarie,
+    bfm_ricavi: $bfm_ricavi,
+    bfm_assicurazione: $bfm_assicurazione,
+    bfm_altrespese: $bfm_altrespese,
+    bfm_servizi : $bfm_servizi,
+    bfm_tasse : $bfm_tasse,
+    bfm_trasporti : $bfm_trasporti,
+    bfm_immobilizzazioni : $bfm_immobilizzazioni,
+    bfm_intercompany: $bfm_intercompany,
+    bfm_altrepassivita: $bfm_altrepassivita,
+    bfm_altriproventi: $bfm_altriproventi,
+    bfm_risorseumane: $bfm_risorseumane
 
 );

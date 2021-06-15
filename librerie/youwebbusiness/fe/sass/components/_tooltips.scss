@@ -79,15 +79,6 @@
       align-items: center;
     }
   }
-  &-wrapper-element {position: relative;} 
-  &-border-element {
-    width: 8px;display: block;height: 100%;position: absolute;left:0;top:0;
-    &[data-toogle-class~="tooltip-dark"] {
-      background-color: $gray1;
-    }
-   
-  }
- 
 }
 .btn-group a[data-toggle="tooltip"] .icon {
   margin:0;

@@ -9,6 +9,7 @@ table-font-small => font-size 12px
     <thead>
     <tr>
       <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
+      <th data-field=""></th>
       <th data-field="Categoria">Categoria</th>
       <th data-field="contabile" data-sortable="true">Rapporto</th>
       <th data-field="valuta" data-sortable="true">Descrizione</th>
@@ -20,12 +21,17 @@ table-font-small => font-size 12px
  </thead>
  <tbody>
    <?php // esempio ciclo per tabella in desktop ?>
-   <?php for ($i = 0; $i <= 3; $i++) { ?>
+   <!-- CLASSI COLORE PER LE CATEGORIE-->
+   <?php $array = array("bollette","fornitori", "operazionifinanziarie","ricavi","assicurazione","altrespese","servizi","tasse","trasporti","immobilizzazioni","intercompany","altrepassivita","altriproventi","risorseumane"); ?>
+   <?php for ($i = 0; $i <= 13; $i++) { ?>
      <tr data-index="<?= $i ?>">
+        <td class="wrapper-border-element">
+          <span class="border-element b-r-l bkg-greenLighter_border"></span>
+        </td>
         <td>
             <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_bollette "><i class="icon icon-category_bollette"></i></span>
-              <a href="#" class="text color-greenLink">Bollette</a>
+              <span class="squared ico-wrapper bkg-bfm_<?= $array[$i] ?>"><i class="icon icon-category_<?= $array[$i] ?>"></i></span>
+              <a href="#" class="text color-greenLink"><?= $array[$i] ?></a>
             </span>
         </td>
         <td>lorem ipsum</td>

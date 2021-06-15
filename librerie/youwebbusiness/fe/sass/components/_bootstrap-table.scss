@@ -75,8 +75,9 @@
               &.asc { background-image: url("../img/table_order_asc_white.png"); }
               &.desc { background-image: url("../img/table_order_desc_white.png"); }
             }
+            
           } 
-         
+          
         }
       }
     }
@@ -84,6 +85,7 @@
       background-color: $white;
       border: none;
       border-bottom: solid 1px $gray7;
+      
       td {
         color: $grayMid;
         min-height: 60px;
@@ -154,6 +156,9 @@
           &:nth-of-type(4n+1),
           &:nth-of-type(4n+3) {
             border-top: none !important;
+          }
+          &.highlight {
+            background-color: $greenLighterTh!important;
           }
         }
       }

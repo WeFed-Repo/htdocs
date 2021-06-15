@@ -135,12 +135,16 @@
                                        <div class="th-inner "></div>
                                        <div class="fht-cell"></div>
                                     </th>
+                                    <th style="" data-field="11">
+                                       <div class="th-inner "></div>
+                                       <div class="fht-cell"></div>
+                                    </th>
                                  </tr>
                               </thead>
                               <tbody class="accordion">
-                                 <tr data-index="0" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center tooltip-wrapper-element">
-                                      <a data-container="#tableEsempioSviluppo" class="tooltip-border-element" href="javascript:;" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus"></a>
+                                 <tr class="highlight" data-index="0">
+                                    <td class="text-center wrapper-border-element">
+                                      <a data-container="#tableEsempioSviluppo" class="border-element bkg-gray1" href="javascript:;" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus"></a>
                                       <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
@@ -159,6 +163,14 @@
                                           </div>
                                     </td>
                                     <td class="center">
+                                        <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus/  data-offset aggiunto per spostarlo un poco sulla sinistra--->
+                                          <div class="btn-group">
+                                             <a data-container="#tableEsempioSviluppo" data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
+                                                <i class="icon icon-dividi color-gray3"></i>
+                                             </a>
+                                          </div>
+                                    </td>
+                                    <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                           <img src="fe/img/icon/more.svg">
@@ -172,13 +184,12 @@
                                  </tr>
                                  <tr>
                                     <td class="slide-col-0" style="display:none;"></td>
-                                    <td class="slide-col-0" style="display:none;" colspan="11">
+                                    <td class="slide-col-0" style="display:none;" colspan="12">
                                     </td>
                                  </tr>
                                  <tr data-index="1" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center tooltip-wrapper-element">
-                                      
-                                      <a class="tooltip-border-element" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
+                                    <td class="text-center wrapper-border-element">
+                                      <a class="border-element bkg-gray1" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
                                       </a>
                                       <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="1" tm-link-detail="">07/04/2021</a></td>
@@ -200,6 +211,14 @@
                                           </div>
                                     </td>
                                     <td class="center">
+                                        <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus/  data-offset aggiunto per spostarlo un poco sulla sinistra--->
+                                          <div class="btn-group">
+                                             <a data-container="#tableEsempioSviluppo" data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
+                                                <i class="icon icon-dividi"></i>
+                                             </a>
+                                          </div>
+                                    </td>
+                                    <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                           <img src="fe/img/icon/more.svg">
@@ -215,7 +234,7 @@
                                  </tr>
                                  <tr>
                                     <td class="slide-col-1" style="display:none;"></td>
-                                    <td class="slide-col-1" style="display:none;" colspan="11">
+                                    <td class="slide-col-1" style="display:none;" colspan="12">
                                     </td>
                                  </tr>
                                  <tr data-index="2" style="border-bottom: solid 1px #eeeeee;">
@@ -232,8 +251,8 @@
                                     <td>F24</td>
                                     <td>In modifica <br> </td>
                                     <td class="right"><span class="tm-importo ">124,68 EUR</span></td>
-                                    <td>
-                                    </td>
+                                    <td></td>
+                                    <td></td>
                                     <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -247,7 +266,7 @@
                                  </tr>
                                  <tr>
                                     <td class="slide-col-2" style="display:none;"></td>
-                                    <td class="slide-col-2" style="display:none;" colspan="11">
+                                    <td class="slide-col-2" style="display:none;" colspan="12">
                                     </td>
                                  </tr>
                                  <tr data-index="3" style="border-bottom: solid 1px #eeeeee;">
@@ -266,6 +285,7 @@
                                     <td class="right"><span class="tm-importo ">20,00 EUR</span></td>
                                     <td>
                                     </td>
+                                    <td></td>
                                     <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -279,7 +299,7 @@
                                  </tr>
                                  <tr>
                                     <td class="slide-col-3" style="display:none;"></td>
-                                    <td class="slide-col-3" style="display:none;" colspan="11">
+                                    <td class="slide-col-3" style="display:none;" colspan="12">
                                     </td>
                                  </tr>
                                  <tr data-index="4" style="border-bottom: solid 1px #eeeeee;">
@@ -298,6 +318,7 @@
                                     <td class="right"><span class="tm-importo ">2,47 EUR</span></td>
                                     <td>
                                     </td>
+                                    <td></td>
                                     <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -311,7 +332,7 @@
                                  </tr>
                                  <tr>
                                     <td class="slide-col-4" style="display:none;"></td>
-                                    <td class="slide-col-4" style="display:none;" colspan="11">
+                                    <td class="slide-col-4" style="display:none;" colspan="12">
                                     </td>
                                  </tr>
                                  <tr data-index="5" style="border-bottom: solid 1px #eeeeee;">
@@ -330,6 +351,7 @@
                                     <td class="right"><span class="tm-importo ">2,47 EUR</span></td>
                                     <td>
                                     </td>
+                                    <td></td>
                                     <td class="center">
                                        <div class="btn-group">
                                           <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -341,139 +363,7 @@
                                        </div>
                                     </td>
                                  </tr>
-                                 <tr>
-                                    <td class="slide-col-5" style="display:none;"></td>
-                                    <td class="slide-col-5" style="display:none;" colspan="11">
-                                    </td>
-                                 </tr>
-                                 <tr data-index="6" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
-                                    </td>
-                                    <td class="center"><a href="javascript:;" data-modal-detail="6" tm-link-detail="">30/03/2021</a></td>
-                                    <td>
-                                       AUTOMOBILE CLUB - A.C. - MODEN
-                                    </td>
-                                    <td>05034</td>
-                                    <td>000000047661                                      </td>
-                                    <td class="center">1</td>
-                                    <td>F24</td>
-                                    <td>In modifica <br> </td>
-                                    <td class="right"><span class="tm-importo ">12.345,67 EUR</span></td>
-                                    <td>
-                                    </td>
-                                    <td class="center">
-                                       <div class="btn-group">
-                                          <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <img src="fe/img/icon/more.svg">
-                                          </a>
-                                          <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
-                                             <a role="button" class="dropdown-item" tm-delete-index="6">Elimina</a>
-                                          </div>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="slide-col-6" style="display:none;"></td>
-                                    <td class="slide-col-6" style="display:none;" colspan="11">
-                                    </td>
-                                 </tr>
-                                 <tr data-index="7" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
-                                    </td>
-                                    <td class="center"><a href="javascript:;" data-modal-detail="7" tm-link-detail="">23/03/2021</a></td>
-                                    <td>
-                                       AUTOMOBILE CLUB - A.C. - MODEN
-                                    </td>
-                                    <td>05034</td>
-                                    <td>Multiconto</td>
-                                    <td class="center">3</td>
-                                    <td>F24</td>
-                                    <td>In modifica <br> </td>
-                                    <td class="right"><span class="tm-importo ">116,12 EUR</span></td>
-                                    <td>
-                                    </td>
-                                    <td class="center">
-                                       <div class="btn-group">
-                                          <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <img src="fe/img/icon/more.svg">
-                                          </a>
-                                          <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
-                                             <a role="button" class="dropdown-item" tm-delete-index="7">Elimina</a>
-                                          </div>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="slide-col-7" style="display:none;"></td>
-                                    <td class="slide-col-7" style="display:none;" colspan="11">
-                                    </td>
-                                 </tr>
-                                 <tr data-index="8" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
-                                    </td>
-                                    <td class="center"><a href="javascript:;" data-modal-detail="8" tm-link-detail="">18/03/2021</a></td>
-                                    <td>
-                                       AUTOMOBILE CLUB - A.C. - MODEN
-                                    </td>
-                                    <td>05034</td>
-                                    <td>000000047659                                      </td>
-                                    <td class="center">2</td>
-                                    <td>F24</td>
-                                    <td>In modifica <br> </td>
-                                    <td class="right"><span class="tm-importo ">2,46 EUR</span></td>
-                                    <td>
-                                    </td>
-                                    <td class="center">
-                                       <div class="btn-group">
-                                          <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <img src="fe/img/icon/more.svg">
-                                          </a>
-                                          <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
-                                             <a role="button" class="dropdown-item" tm-delete-index="8">Elimina</a>
-                                          </div>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="slide-col-8" style="display:none;"></td>
-                                    <td class="slide-col-8" style="display:none;" colspan="11">
-                                    </td>
-                                 </tr>
-                                 <tr data-index="9" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
-                                    </td>
-                                    <td class="center"><a href="javascript:;" data-modal-detail="9" tm-link-detail="">16/03/2021</a></td>
-                                    <td>
-                                       AUTOMOBILE CLUB - A.C. - MODEN
-                                    </td>
-                                    <td>01000</td>
-                                    <td>Multiconto</td>
-                                    <td class="center">2</td>
-                                    <td>F24</td>
-                                    <td>In modifica <br> </td>
-                                    <td class="right"><span class="tm-importo ">2,46 EUR</span></td>
-                                    <td>
-                                    </td>
-                                    <td class="center">
-                                       <div class="btn-group">
-                                          <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <img src="fe/img/icon/more.svg">
-                                          </a>
-                                          <div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
-                                             <a role="button" class="dropdown-item" tm-delete-index="9">Elimina</a>
-                                          </div>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="slide-col-9" style="display:none;"></td>
-                                    <td class="slide-col-9" style="display:none;" colspan="11">
-                                    </td>
-                                 </tr>
+                                
                               </tbody>
                            </table>
                         </div>
