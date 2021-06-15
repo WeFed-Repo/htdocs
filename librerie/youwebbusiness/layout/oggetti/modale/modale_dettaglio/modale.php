@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" data-modal="simpledetail"" id="myModal">
+<div class="modal fade" data-modal="simpledetail"" id="modaleDettaglio">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header fit-content d-flex justify-content-between pb-1">
@@ -81,9 +81,9 @@
                 <div class="col-sm-12 col-md-6">
                   <div class="list">
                     <dt class="list-key">Descrizione  
-                        <div class="btn-group">
-                            <a data-trigger="focus" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>lorem ipsum dolor sit</strong></p>">
-                              <i class="icon icon-movimenti_42"></i>
+                        <div class="btn-group ml-2" >
+                            <a data-offset="100 0" data-trigger="focus" data-toogle-class="tooltip-dark" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='mb-0'><strong>Fattura riconciliata parzialmente</strong></p>">
+                              <i class="icon icon-document_percent color-warning"></i>
                             </a>
                         </div>
                     </dt>

@@ -1,9 +1,6 @@
 <!-- TABELLA RISTILIZZATA -->
 <style>
-    .table-space-row {
-        border-collapse: separate!important;
-        border-spacing: 0 1em;
-    }
+   
     .table-space-row td{
         background-color:#ddd;
     }
@@ -70,7 +67,6 @@
      </tr>
    <?php } ?>
 </tbody>
-
-        </table>
+</table>
         <div class="clearfix"></div>
 </div>

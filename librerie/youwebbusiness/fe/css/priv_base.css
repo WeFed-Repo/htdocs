@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* bfm colori */
 /* Filtro per gradienti in IE6-9 */
 @import "../css/icomoon.css";
 .bkg-white {
@@ -217,6 +218,13 @@
 }
 .bkg-tableStriped {
   background-color: #fafafa;
+}
+
+.color-bfm_conferma {
+  color: #e9ce96;
+}
+.bkg-bfm_conferma {
+  background-color: #e9ce96;
 }
 
 @font-face {
@@ -804,6 +812,9 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 .text-big {
   font-size: 1.3rem;
 }
+.text-extra-large {
+  font-size: 1.4rem;
+}
 .text-small {
   font-size: 0.9rem;
 }
@@ -823,6 +834,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   color: #737373;
   position: relative;
   width: fit-content;
+  display: table;
 }
 .text-with-icon.left-icon {
   padding: 13px 15px 13px 48px;
@@ -841,6 +853,39 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   right: 15px;
   top: 12px;
   font-size: 26px;
+}
+
+.text-with-squared {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.text-with-squared .squared {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+}
+.text-with-squared .text {
+  padding-left: 45px;
+  display: inline-block;
+}
+@media (max-width: 576px) {
+  .text-with-squared {
+    min-height: 0;
+    margin-bottom: 0.5rem;
+  }
+  .text-with-squared .squared {
+    width: 20px;
+    height: 20px;
+  }
+  .text-with-squared .text {
+    padding-left: 25px;
+  }
 }
 
 .display-icon {
@@ -1172,6 +1217,11 @@ NOTE: La classe .content-hidden-in-mobile
     flex-wrap: nowrap !important;
   }
 }
+.full-h-n1 {
+  margin-left: calc(-1rem - 1px);
+  width: calc(100% + 2rem + 1px) !important;
+}
+
 /* Header*/
 header {
   width: 100%;

@@ -22,6 +22,8 @@
     margin: 0;
     min-height: 0;
   }
+
+  
 }
 
 .table-heading {
@@ -133,5 +135,12 @@
   }
   .title {
     font-weight: bold;
+  }
+}
+
+.bootstrap-table table, .bootstrap-table .table, .table {
+  &-space-row {
+    border-collapse: separate!important;
+    border-spacing: 0 1em;
   }
 }

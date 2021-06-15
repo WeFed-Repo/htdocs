@@ -94,6 +94,16 @@
       }
     }
   }
+  &.with-squared {
+    .text {
+      font-size: 20px;
+    }
+    @media (max-width:$bp_sm_min) {
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
   // SG New Style
   &.always-active {
   // Importa icomoon per fruire delle variabili icona (solo qui, diversamente)
@@ -149,5 +159,6 @@
         }
       }
     }
-  } 
+  }
+ 
 }

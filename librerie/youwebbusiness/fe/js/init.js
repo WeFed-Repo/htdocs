@@ -163,8 +163,8 @@ function initDropdown() {
                 .removeClass('shown')
                 .detach());
         }
-        //al resize tolgo il focus sul tooltip 
-        $("[data-toggle=tooltip]").blur();
+        //al resize tolgo il focus sul tooltip e lo nascondo se visibile
+        resetTooltips();
     });
 }
 
@@ -295,10 +295,11 @@ function initTooltips() {
             dataTrigger = typeof tooltipBtn.attr("data-trigger")=== "undefined" ? 'click' : tooltipBtn.attr("data-trigger"), //eventuale evento personalizzato
             dataCustomClass= typeof tooltipBtn.attr("data-toogle-class")=== "undefined" ? '' : tooltipBtn.attr("data-toogle-class"), //eventuale classe aggiuntiva
             dataContainer,
-            isInmodal = tooltipBtn.parents(".modal").length > 0 ? true  : false;
+            isInmodal = tooltipBtn.parents(".modal").length > 0 ? true  : false,
+            modalBodyEl = $(window).width()< 768 ? $('.modal.show .modal-body') : $('.modal.show');
         //datacontainer 
         if(typeof tooltipBtn.attr("data-container")=== "undefined") {
-            isInmodal ? dataContainer=tooltipBtn.parents(".modal") : dataContainer="#main"
+            isInmodal ? dataContainer="body" : dataContainer="#main" //tootlip on modal da fixare
         }
         else {
             dataContainer = tooltipBtn.attr("data-container");
@@ -308,8 +309,25 @@ function initTooltips() {
             container: dataContainer,
             html:true,
             template: '<div class="tooltip ' + dataCustomClass + '"role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        }).on('show.bs.tooltip', function (e) {
+           //reset tootlip on modal da fixare
+            if(typeof modalBodyEl !== "undefined") {
+                modalBodyEl.on('scroll', function (e) {
+                    resetTooltips();
+                 });
+             }
+            if(typeof $(".bootstrap-table") !== "undefined") {
+                $(".bootstrap-table").on('scroll', function (e) {
+                     resetTooltips();
+                 });
+             }
         })
-     })
+    })
+}
+
+function resetTooltips() {
+    $(".tooltip.show").tooltip("hide");
+    $("[data-toggle=tooltip]").blur();
 }
 
 function initTreeview() {
