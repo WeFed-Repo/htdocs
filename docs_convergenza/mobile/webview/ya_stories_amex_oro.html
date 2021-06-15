@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>YouApp</title>
+    <meta name="description" content="YouApp">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Stili della pagina -->
+    <style>
+        /* Font face */
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-light-webfont.woff2') format('woff2'),
+                url('./font/montserrat-light-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-lightitalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-lightitalic-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibold-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibold-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bankFont';
+            src: url('./font/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+                url('./font/montserrat-semibolditalic-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /*  */
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'bankFont', Arial, Serif;
+            font-size: 20px;
+            height: 100%;
+            color: #1f2021;
+        }
+
+        #main {
+            margin: 0 auto;  
+			height: 100vh;
+            max-width: 640px;
+            background: #344a86;
+        }
+
+        #main .pagecont {
+            /* Il padding verticale permette di scorrere il content senza che resti nascosto dall'area promo
+                decidere se ricavarlo in maniera dinamica dall'altezza di tale area*/
+            padding: 40px 40px 250px 40px;
+            background: #344a86;
+        }
+
+
+        /* Contenuti */
+        .boxedcont {
+            padding: 15px 15px 5px;
+            background: #f4f5f4;
+            border-radius: 10px;
+            margin: 0 -10px 15px;
+        }
+
+        /* Generici */
+        a {
+            color: #344a86;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 24px;
+			line-height:28px;
+            text-transform: uppercase;
+			font-weight: bold;
+        }
+
+
+        h2 {
+            font-size: 18px;
+            line-height: 22px;
+            color: #212122;
+            margin: 0 0 15px;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 19px;
+            color: #344a86;
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            clear: both;
+            line-height: 27px;
+        }
+
+        p.note {
+            color: #1f2021;
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        /* Bullet reset */
+        ol,
+        ul,
+        ol li,
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none
+        }
+
+        /* Bullet rivisti */
+        ol {
+            counter-reset: ol;
+        }
+
+        ol li,
+        ul li {
+            position: relative;
+            padding: 0 0 10px 25px;
+            line-height: 20px
+       }
+
+        /* Bullet "normali" */
+        ul li::before {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #1f2021;
+            border-radius: 4px;
+            top: 8px;
+            left: 4px;
+            content: "";
+            position: absolute;
+        }
+
+        /* Bullet "ordinali" */
+        ol li::before {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-color: #344a86;
+            font-size: 13px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 10px;
+            top: 0px;
+            left: 0;
+            counter-increment: ol;
+            content: counter(ol);
+            position: absolute;
+            color: #fff;
+        }
+
+        .bottom-promo {
+            width:100%; 
+            background: url(./img/marmo_background.jpg) no-repeat center center;
+            background-size: cover; 
+            position: fixed; 
+            bottom: 0px;
+            max-width: 640px;
+        }
+
+        .wrapper-visual {
+            max-width: 380px;
+            width:100%;
+            margin: 0 auto;
+        }
+
+        .wrapper-visual .visual {
+            background: url(./img/bg_blue_stories_card@2x.png) no-repeat center center;
+            background-size: contain;
+            width:80%;
+            padding-bottom: 55%;
+            margin: -40px auto 20px auto;            
+        }
+
+        .wrapper-cta {
+            display: flex;
+            width:100%;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            margin-top: 20px; 
+            bottom: 0px;
+        }
+
+        .wrapper-cta .cta {
+            display: inline-block;
+            margin: 0px 20px;
+            background: #344a86;
+            line-height: 15px;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px 30px;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        /* Declinazione dark */
+
+        .dark #contenuto h1 {
+            color: #fff;
+            text-transform: none;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .dark #contenuto p {
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="main" class="dark">
+        <div id="contenuto">
+            <div class="pagecont">
+                <h1>CARTA ORO AMERICAN EXPRESS</h1>
+                <p>La carta che ti offre <strong>un mondo di vantaggi esclusivi!</strong> Richiedila online entro il 30.9.2021 e scopri come <strong>ottenere uno Smart TV in premio!</strong></p>
+            </div>   
+        </div>        
+        <div class="bottom-promo">
+            <div class="wrapper-visual">
+                <div class="visual"></div>
+            </div>
+            <div class="wrapper-cta">
+                <a class="cta" href="#">Scopri Carta Oro American Express</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
