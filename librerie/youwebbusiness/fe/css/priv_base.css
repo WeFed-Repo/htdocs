@@ -1375,7 +1375,7 @@ NOTE: La classe .content-hidden-in-mobile
   border-radius: 5px 0 0 5px;
 }
 
-td .border-element {
+.table-space-row .border-element {
   min-height: 62px;
   top: -1px;
 }

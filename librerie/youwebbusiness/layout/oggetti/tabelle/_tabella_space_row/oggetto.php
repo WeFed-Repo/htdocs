@@ -1,11 +1,12 @@
 <!-- TABELLA RISTILIZZATA  classi aggiuntive:
 table-space-row => crea spazio tra le righe
 table-header-light => stile chiaro dell'header
+table-bkg-grayBG => colore grigio celle
 table-font-small => font-size 12px
 -->
 
 <div tm-bstable-v2="" class="px-3">
-        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-space-row table-header-light table-font-small" data-table-mobilized-desktop="NewTable">
+        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
     <thead>
     <tr>
       <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->

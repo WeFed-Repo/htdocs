@@ -996,10 +996,10 @@
 .accordion.ico-close-pa .card-header-icon {
   position: absolute;
   right: 1.5rem;
+  top: 2rem;
 }
 @media (max-width: 768px) {
   .accordion.ico-close-pa .card-header-icon {
-    top: 1.5rem;
     right: 0.5rem;
   }
 }
@@ -1783,13 +1783,13 @@
     min-width: 100px;
   }
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable, .bootstrap-table .table.table-header-light th .th-inner.sortable {
+.bootstrap-table table.header-light th .th-inner.sortable, .bootstrap-table .table.header-light th .th-inner.sortable {
   background: transparent url("../img/table_order_grey.png") no-repeat right center;
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable.asc, .bootstrap-table .table.table-header-light th .th-inner.sortable.asc {
+.bootstrap-table table.header-light th .th-inner.sortable.asc, .bootstrap-table .table.header-light th .th-inner.sortable.asc {
   background-image: url("../img/table_order_asc_grey.png");
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable.desc, .bootstrap-table .table.table-header-light th .th-inner.sortable.desc {
+.bootstrap-table table.header-light th .th-inner.sortable.desc, .bootstrap-table .table.header-light th .th-inner.sortable.desc {
   background-image: url("../img/table_order_desc_grey.png");
 }
 .bootstrap-table .table-striped > tbody > tr {
@@ -1991,38 +1991,42 @@
   font-weight: bold;
 }
 
-.bootstrap-table table-space-row, .bootstrap-table .table-space-row, .table-space-row {
+.bootstrap-table table.space-row, .bootstrap-table .table.space-row, .table.space-row {
   border-collapse: separate !important;
   border-spacing: 0 1em;
   background-color: #FFFFFF;
 }
-.bootstrap-table table-space-row tbody td, .bootstrap-table .table-space-row tbody td, .table-space-row tbody td {
+.bootstrap-table table.space-row tbody tr, .bootstrap-table .table.space-row tbody tr, .table.space-row tbody tr {
+  border: 1px solid #999999;
+}
+.bootstrap-table table.b-r-small tbody td:first-child, .bootstrap-table .table.b-r-small tbody td:first-child, .table.b-r-small tbody td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.bootstrap-table table.b-r-small tbody td:last-child, .bootstrap-table .table.b-r-small tbody td:last-child, .table.b-r-small tbody td:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.bootstrap-table table.bkg-grayBG tbody td, .bootstrap-table .table.bkg-grayBG tbody td, .table.bkg-grayBG tbody td {
   background-color: #F5F5F5;
   border-bottom: 1px solid #DDDDDD;
   border-top: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody td:first-child, .bootstrap-table .table-space-row tbody td:first-child, .table-space-row tbody td:first-child {
-  border-radius: 5px 0 0 5px;
+.bootstrap-table table.bkg-grayBG tbody td.b-r-small:first-child, .bootstrap-table .table.bkg-grayBG tbody td.b-r-small:first-child, .table.bkg-grayBG tbody td.b-r-small:first-child {
   border-left: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody td:last-child, .bootstrap-table .table-space-row tbody td:last-child, .table-space-row tbody td:last-child {
-  border-radius: 0 5px 5px 0;
+.bootstrap-table table.bkg-grayBG tbody td.b-r-small:last-child, .bootstrap-table .table.bkg-grayBG tbody td.b-r-small:last-child, .table.bkg-grayBG tbody td.b-r-small:last-child {
   border-right: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody tr, .bootstrap-table .table-space-row tbody tr, .table-space-row tbody tr {
-  border: 1px solid #999999;
-}
-.bootstrap-table table.table-header-light thead, .bootstrap-table .table.table-header-light thead, .table.table-header-light thead {
+.bootstrap-table table.header-light thead, .bootstrap-table .table.header-light thead, .table.header-light thead {
   background-color: #FFFFFF;
   color: #737373;
   text-transform: uppercase;
 }
-.bootstrap-table table.table-header-light thead th, .bootstrap-table .table.table-header-light thead th, .table.table-header-light thead th {
+.bootstrap-table table.header-light thead th, .bootstrap-table .table.header-light thead th, .table.header-light thead th {
   color: #737373;
   text-transform: uppercase;
   font-weight: bold;
 }
-.bootstrap-table table.table-header-light th, .bootstrap-table table.table-header-light td, .bootstrap-table .table.table-header-light th, .bootstrap-table .table.table-header-light td, .table.table-header-light th, .table.table-header-light td {
+.bootstrap-table table.font-small th, .bootstrap-table table.font-small td, .bootstrap-table .table.font-small th, .bootstrap-table .table.font-small td, .table.font-small th, .table.font-small td {
   font-size: 12px;
 }
 

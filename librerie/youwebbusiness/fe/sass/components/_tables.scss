@@ -139,28 +139,41 @@
 }
 
 .bootstrap-table table, .bootstrap-table .table, .table {
-  &-space-row {
+  &.space-row {
     border-collapse: separate!important;
     border-spacing: 0 1em;
     background-color: $white;
-    tbody td{
-      background-color:$grayBG;
-      border-bottom:1px solid $gray4;
-      border-top:1px solid $gray4;
-      &:first-child{
-        border-radius: 5px 0 0 5px;
-        border-left:1px solid $gray4;
-      }
-      &:last-child{
-        border-radius: 0 5px 5px 0;
-        border-right:1px solid $gray4;
-      }
-    }
     tbody tr {
       border:1px solid $gray3;
     }
   }
-  &.table-header-light {
+  &.b-r-small {
+    tbody td{
+      &:first-child{
+        border-radius: 5px 0 0 5px;
+      
+      }
+      &:last-child{
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+  &.bkg-grayBG {
+    tbody td{
+      background-color:$grayBG;
+      border-bottom:1px solid $gray4;
+      border-top:1px solid $gray4;
+      &.b-r-small{
+        &:first-child{
+         border-left:1px solid $gray4;
+        }
+        &:last-child{
+          border-right:1px solid $gray4;
+        }
+      }
+    }
+  }
+  &.header-light {
     thead {
       background-color:$white;
       color:$gray2;
@@ -172,7 +185,7 @@
       }
     }
   }
-  &.table-header-light {
+  &.font-small {
     th,td  {
       font-size: 12px;
     }
