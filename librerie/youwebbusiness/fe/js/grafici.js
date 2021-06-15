@@ -79,7 +79,6 @@ var Graph = {
                     radius:"49%",
                     startDuration: 0,
                     innerRadius: "75%",
-                    dataProvider : donutData,
                     listeners: []
                 }
             }[(params.graphtype==="donut"? "donut" : "serial")];
