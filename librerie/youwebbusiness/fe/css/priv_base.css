@@ -1011,7 +1011,24 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 }
 .text-with-squared .text {
   padding-left: 45px;
-  display: inline-block;
+  display: block;
+  width: 100%;
+}
+.text-with-squared .text.with-progress {
+  position: relative;
+  top: -5px;
+}
+@media (max-width: 768px) {
+  .text-with-squared .text.with-progress {
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.text-with-squared .progress {
+  width: 100%;
+  height: 6px;
+  position: relative;
+  top: 10px;
 }
 
 .display-icon {
@@ -1074,6 +1091,10 @@ td.ellipsed {
 
 .font-size-12 {
   font-size: 1.2rem;
+}
+
+.font-size-16 {
+  font-size: 16px;
 }
 
 .overflow-hidden {
@@ -1375,7 +1396,7 @@ NOTE: La classe .content-hidden-in-mobile
   border-radius: 5px 0 0 5px;
 }
 
-.table-space-row .border-element {
+.space-row .border-element {
   min-height: 62px;
   top: -1px;
 }
