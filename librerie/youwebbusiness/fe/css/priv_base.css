@@ -841,6 +841,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   color: #737373;
   position: relative;
   width: fit-content;
+  display: table;
 }
 .text-with-icon.left-icon {
   padding: 13px 15px 13px 48px;

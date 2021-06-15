@@ -324,6 +324,8 @@ dl, .list {
   color: $gray2;
   position:relative;
   width: fit-content;
+  // IE11 FIX
+  display: table;
   &.left-icon{
       padding : 13px 15px 13px 48px;
       .icon {
