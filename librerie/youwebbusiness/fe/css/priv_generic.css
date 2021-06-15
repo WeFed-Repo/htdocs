@@ -6792,6 +6792,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   font-size: 13px;
 }
 
+.no-promo-info {
+  background-color: #f5f9fc;
+}
+
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
