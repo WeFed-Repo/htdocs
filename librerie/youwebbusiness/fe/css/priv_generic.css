@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* bfm colori */
+/* bfm colori status*/
+/* bfm colori categorie*/
 /* Filtro per gradienti in IE6-9 */
 .bkg-white {
   background-color: #FFFFFF;
@@ -56,6 +57,13 @@
 }
 .bkg-greenLighter {
   background-color: #e1f3f0;
+}
+
+.color-greenLighterTh {
+  color: #e9f3f1;
+}
+.bkg-greenLighterTh {
+  background-color: #e9f3f1;
 }
 
 .color-grayBordered {
@@ -219,11 +227,32 @@
   background-color: #fafafa;
 }
 
-.color-bfm_conferma {
+.color-greenLighter_border {
+  color: #afdbd4;
+}
+.bkg-greenLighter_border {
+  background-color: #afdbd4;
+}
+
+.color-bfm_status_confermare {
   color: #e9ce96;
 }
-.bkg-bfm_conferma {
+.bkg-bfm_status_confermare {
   background-color: #e9ce96;
+}
+
+.color-bfm_status_attive {
+  color: #37ad9c;
+}
+.bkg-bfm_status_attive {
+  background-color: #37ad9c;
+}
+
+.color-bfm_status_categorizzare {
+  color: #f5f5f5;
+}
+.bkg-bfm_status_categorizzare {
+  background-color: #f5f5f5;
 }
 
 .color-bfm_bollette {
@@ -231,6 +260,97 @@
 }
 .bkg-bfm_bollette {
   background-color: #00755c;
+}
+
+.color-bfm_fornitori {
+  color: #8fc7ff;
+}
+.bkg-bfm_fornitori {
+  background-color: #8fc7ff;
+}
+
+.color-bfm_operazionifinanziarie {
+  color: #5094ff;
+}
+.bkg-bfm_operazionifinanziarie {
+  background-color: #5094ff;
+}
+
+.color-bfm_ricavi {
+  color: #003cac;
+}
+.bkg-bfm_ricavi {
+  background-color: #003cac;
+}
+
+.color-bfm_assicurazione {
+  color: #2ec5e9;
+}
+.bkg-bfm_assicurazione {
+  background-color: #2ec5e9;
+}
+
+.color-bfm_altrespese {
+  color: #94eade;
+}
+.bkg-bfm_altrespese {
+  background-color: #94eade;
+}
+
+.color-bfm_servizi {
+  color: #98d1c9;
+}
+.bkg-bfm_servizi {
+  background-color: #98d1c9;
+}
+
+.color-bfm_tasse {
+  color: #37ad9c;
+}
+.bkg-bfm_tasse {
+  background-color: #37ad9c;
+}
+
+.color-bfm_trasporti {
+  color: #178494;
+}
+.bkg-bfm_trasporti {
+  background-color: #178494;
+}
+
+.color-bfm_immobilizzazioni {
+  color: #6570c0;
+}
+.bkg-bfm_immobilizzazioni {
+  background-color: #6570c0;
+}
+
+.color-bfm_intercompany {
+  color: #a575ac;
+}
+.bkg-bfm_intercompany {
+  background-color: #a575ac;
+}
+
+.color-bfm_altrepassivita {
+  color: #ef98dc;
+}
+.bkg-bfm_altrepassivita {
+  background-color: #ef98dc;
+}
+
+.color-bfm_altriproventi {
+  color: #bcbcbc;
+}
+.bkg-bfm_altriproventi {
+  background-color: #bcbcbc;
+}
+
+.color-bfm_risorseumane {
+  color: #186bee;
+}
+.bkg-bfm_risorseumane {
+  background-color: #186bee;
 }
 
 /* Modali */
@@ -740,20 +860,6 @@
   display: flex;
   align-items: center;
 }
-.tooltip-wrapper-element {
-  position: relative;
-}
-.tooltip-border-element {
-  width: 8px;
-  display: block;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.tooltip-border-element[data-toogle-class~=tooltip-dark] {
-  background-color: #3e3e3e;
-}
 
 .btn-group a[data-toggle=tooltip] .icon {
   margin: 0;
@@ -890,10 +996,10 @@
 .accordion.ico-close-pa .card-header-icon {
   position: absolute;
   right: 1.5rem;
+  top: 2rem;
 }
 @media (max-width: 768px) {
   .accordion.ico-close-pa .card-header-icon {
-    top: 1.5rem;
     right: 0.5rem;
   }
 }
@@ -1677,13 +1783,13 @@
     min-width: 100px;
   }
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable, .bootstrap-table .table.table-header-light th .th-inner.sortable {
+.bootstrap-table table.header-light th .th-inner.sortable, .bootstrap-table .table.header-light th .th-inner.sortable {
   background: transparent url("../img/table_order_grey.png") no-repeat right center;
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable.asc, .bootstrap-table .table.table-header-light th .th-inner.sortable.asc {
+.bootstrap-table table.header-light th .th-inner.sortable.asc, .bootstrap-table .table.header-light th .th-inner.sortable.asc {
   background-image: url("../img/table_order_asc_grey.png");
 }
-.bootstrap-table table.table-header-light th .th-inner.sortable.desc, .bootstrap-table .table.table-header-light th .th-inner.sortable.desc {
+.bootstrap-table table.header-light th .th-inner.sortable.desc, .bootstrap-table .table.header-light th .th-inner.sortable.desc {
   background-image: url("../img/table_order_desc_grey.png");
 }
 .bootstrap-table .table-striped > tbody > tr {
@@ -1711,6 +1817,9 @@
 }
 .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+1), .bootstrap-table .table-striped.table-striped-double > tbody > tr:nth-of-type(4n+3) {
   border-top: none !important;
+}
+.bootstrap-table .table-striped.table-striped-double > tbody > tr.highlight {
+  background-color: #e9f3f1 !important;
 }
 .bootstrap-table .table-show-hidden tbody th.hidden, .bootstrap-table .table-show-hidden tbody td.hidden, .bootstrap-table .table-show-hidden thead th.hidden, .bootstrap-table .table-show-hidden thead td.hidden {
   display: table-cell;
@@ -1882,38 +1991,42 @@
   font-weight: bold;
 }
 
-.bootstrap-table table-space-row, .bootstrap-table .table-space-row, .table-space-row {
+.bootstrap-table table.space-row, .bootstrap-table .table.space-row, .table.space-row {
   border-collapse: separate !important;
   border-spacing: 0 1em;
   background-color: #FFFFFF;
 }
-.bootstrap-table table-space-row tbody td, .bootstrap-table .table-space-row tbody td, .table-space-row tbody td {
+.bootstrap-table table.space-row tbody tr, .bootstrap-table .table.space-row tbody tr, .table.space-row tbody tr {
+  border: 1px solid #999999;
+}
+.bootstrap-table table.b-r-small tbody td:first-child, .bootstrap-table .table.b-r-small tbody td:first-child, .table.b-r-small tbody td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.bootstrap-table table.b-r-small tbody td:last-child, .bootstrap-table .table.b-r-small tbody td:last-child, .table.b-r-small tbody td:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.bootstrap-table table.bkg-grayBG tbody td, .bootstrap-table .table.bkg-grayBG tbody td, .table.bkg-grayBG tbody td {
   background-color: #F5F5F5;
   border-bottom: 1px solid #DDDDDD;
   border-top: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody td:first-child, .bootstrap-table .table-space-row tbody td:first-child, .table-space-row tbody td:first-child {
-  border-radius: 5px 0 0 5px;
+.bootstrap-table table.bkg-grayBG tbody td.b-r-small:first-child, .bootstrap-table .table.bkg-grayBG tbody td.b-r-small:first-child, .table.bkg-grayBG tbody td.b-r-small:first-child {
   border-left: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody td:last-child, .bootstrap-table .table-space-row tbody td:last-child, .table-space-row tbody td:last-child {
-  border-radius: 0 5px 5px 0;
+.bootstrap-table table.bkg-grayBG tbody td.b-r-small:last-child, .bootstrap-table .table.bkg-grayBG tbody td.b-r-small:last-child, .table.bkg-grayBG tbody td.b-r-small:last-child {
   border-right: 1px solid #DDDDDD;
 }
-.bootstrap-table table-space-row tbody tr, .bootstrap-table .table-space-row tbody tr, .table-space-row tbody tr {
-  border: 1px solid #999999;
-}
-.bootstrap-table table.table-header-light thead, .bootstrap-table .table.table-header-light thead, .table.table-header-light thead {
+.bootstrap-table table.header-light thead, .bootstrap-table .table.header-light thead, .table.header-light thead {
   background-color: #FFFFFF;
   color: #737373;
   text-transform: uppercase;
 }
-.bootstrap-table table.table-header-light thead th, .bootstrap-table .table.table-header-light thead th, .table.table-header-light thead th {
+.bootstrap-table table.header-light thead th, .bootstrap-table .table.header-light thead th, .table.header-light thead th {
   color: #737373;
   text-transform: uppercase;
   font-weight: bold;
 }
-.bootstrap-table table.table-header-light th, .bootstrap-table table.table-header-light td, .bootstrap-table .table.table-header-light th, .bootstrap-table .table.table-header-light td, .table.table-header-light th, .table.table-header-light td {
+.bootstrap-table table.font-small th, .bootstrap-table table.font-small td, .bootstrap-table .table.font-small th, .bootstrap-table .table.font-small td, .table.font-small th, .table.font-small td {
   font-size: 12px;
 }
 

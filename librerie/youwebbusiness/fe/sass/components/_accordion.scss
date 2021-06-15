@@ -109,8 +109,8 @@
     .card-header-icon {
       position: absolute;
       right: 1.5rem;
+      top: 2rem;
       @media (max-width:$bp_md_min) {
-        top: 1.5rem;
         right: 0.5rem;
       }
     }
