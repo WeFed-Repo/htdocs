@@ -1,4 +1,4 @@
-<section class="no-margin-section">
+<section>
 <div class="row">
     <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
         <h2 class="color-gray1">Elenco ricorrenti</h2>
@@ -30,7 +30,8 @@
         </div>
     </div>
 </div>
-
+</section>
+<section class="no-margin-section">
 
 <?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_with_squared/oggetto.php');?>
 </section>

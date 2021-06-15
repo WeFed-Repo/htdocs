@@ -1,49 +1,34 @@
 <!-- TABELLA RISTILIZZATA -->
-<style>
-   
-    .table-space-row td{
-        background-color:#ddd;
-    }
-    .table-space-row td:first-child{
-        border-radius: 5px 0 0 5px;
-    }
-    .table-space-row td:last-child{
-        border-radius: 0px 5px 5px 0;
-    }
-   
-</style>
 
 <div tm-bstable-v2="" class="px-3">
-        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-space-row" data-table-mobilized-desktop="NewTable">
-        <thead>
+        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table table-space-row table-header-light table-font-small" data-table-mobilized-desktop="NewTable">
+    <thead>
     <tr>
       <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
-      <th data-field="titolo" class="center data-mobilized-title">Titolo</th>
-      <th data-field="contabile" data-formatter="formatLink" class="center"><span class="d-inline d-md-none">Data </span>Contabile</th>
-      <th data-field="valuta" data-sortable="true" class="center"><span class="d-inline d-md-none">Data </span>Valuta</th>
-      <th data-field="importo" data-sortable="true" data-formatter="tableCellValue" class="right">Importo</th>
-      <th data-field="divisa" data-sortable="true" class="center">Divisa</th>
-      <th data-field="causale" data-sortable="true" class="left">Causale</th>
-      <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA IN FULL WIDTH
-           (non titolo a sx e valore a dx ma con 2 righe separate), USARE LA CLASSE .data-mobilized-fullwidth -->
-       <th data-field="descrizione" data-sortable="false" class="data-mobilized-fullwidth">Descrizione movimento</th>
-       <th data-field="azioni" data-sortable="false">Azioni</th>
+      <th data-field="Categoria" class="left">Categoria</th>
+      <th data-field="contabile" data-formatter="formatLink" class="center">Rapporto</th>
+      <th data-field="valuta" data-sortable="true" class="center">Descrizione</th>
+      <th data-field="importo" data-sortable="true" data-formatter="tableCellValue" class="right">Data prevista</th>
+      <th data-field="divisa" data-sortable="true" class="center">Periodicità</th>
+      <th data-field="causale" data-sortable="true" class="left">Importo</th>
+     <th data-field="azioni" data-sortable="false">Azioni</th>
     </tr>
  </thead>
  <tbody>
    <?php // esempio ciclo per tabella in desktop ?>
    <?php for ($i = 0; $i <= 3; $i++) { ?>
      <tr data-index="<?= $i ?>">
-        <td><a href="#" class="color-warning">Lorem ipsum</a></td>
+        <td>
+            <span class="text-with-squared">
+              <span class="squared ico-wrapper bkg-bfm_bollette "><i class="icon icon-category_bollette"></i></span>
+              <a href="#" class="text color-greenLink">Bollette</a>
+            </span>
+        </td>
         <td><a href="#">28/02/2019</a></td>
         <td>28/02/2019</td>
         <td><span class="">3.216,65</span></td>
         <td>EUR</td>
         <td>345</td>
-        <td>
-          Ipsum sit amet consectetur elit nulla voluptas odit iure sapiente
-          praesentium ipsam quae blanditiis neque
-        </td>
         <td class="text-center">
           <div class="btn-group dropdown">
             <span type="button"

@@ -142,5 +142,39 @@
   &-space-row {
     border-collapse: separate!important;
     border-spacing: 0 1em;
+    background-color: $white;
+    tbody td{
+      background-color:$grayBG;
+      border-bottom:1px solid $gray4;
+      border-top:1px solid $gray4;
+      &:first-child{
+        border-radius: 5px 0 0 5px;
+        border-left:1px solid $gray4;
+      }
+      &:last-child{
+        border-radius: 0 5px 5px 0;
+        border-right:1px solid $gray4;
+      }
+    }
+    tbody tr {
+      border:1px solid $gray3;
+    }
+  }
+  &.table-header-light {
+    thead {
+      background-color:$white;
+      color:$gray2;
+      text-transform: uppercase;
+      th {
+        color:$gray2;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+  &.table-header-light {
+    th,td  {
+      font-size: 12px;
+    }
   }
 }

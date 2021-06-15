@@ -82,7 +82,8 @@ $input_disabled_color: #495057;
 $input_disabled_placeholder:  #495057;
 $tableStriped : #fafafa; 
 /* bfm colori */
-$bfm_conferma : #e9ce96;
+$bfm_conferma: #e9ce96;
+$bfm_bollette: #00755c;
 
 // Array per le classi .color-NOMECOLORE e .bkg-NOMECOLORE ( vedere "FUNZIONE DI COLORE" in _mixins.scss )
 
@@ -119,5 +120,7 @@ $colors:(
     input_disabled_color : $input_disabled_color,
     input_disabled_placeholder : $input_disabled_placeholder,
     tableStriped :      $tableStriped,
-    bfm_conferma : $bfm_conferma
+    bfm_conferma : $bfm_conferma,
+    bfm_bollette: $bfm_bollette
+
 );
