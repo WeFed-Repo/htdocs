@@ -418,7 +418,8 @@ var startLending = function (params) {
 
 
         // Disclaimer
-        disclaimer: $("<div>").addClass("disclaimer").html("<p>L'erogazione del finanziamento è subordinata alla valutazione di merito creditizio effettuata dalla Banca.</p>"),
+        disclaimer: (params.objConf && params.objConf.Simulatore.Disclaimer) ? 
+             $("<div>").addClass("disclaimer").html("<p>"+ params.objConf.Simulatore.Disclaimer +"</p>"): "",
 
 
 

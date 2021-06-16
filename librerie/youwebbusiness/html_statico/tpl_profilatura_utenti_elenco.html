@@ -257,8 +257,12 @@
                                 <li><a class="disabled">Estrai dati</a></li>
                                 <li><a class="disabled">Strutture libere</a></li>
                                 <li><a class="disabled">Monitoraggio flussi CBI</a></li>
-                                <li><a class="disabled">Gestione Finanziaria</a></li>
                           </ul>
+              <li class="">
+                <a class="toggle"><span>Gestione Finanziaria</span></a>
+          <ul style="display:none;">
+                          <li><a href="tpl_prova_grafici.html" class="">Test creazione grafici</a></li>
+                        </ul>
               <li class="">
                 <a class="toggle"><span>Landing</span></a>
           <ul style="display:none;">
@@ -341,6 +345,7 @@
     <thead>
         <tr>
           <th data-field="stato" class="left">Stato</th>
+          <th data-field="stato_2" class="left">Stato</th>
           <th data-field="codice" data-formatter="formatLink" class="left">Codice Utente</th>
           <th data-field="nome" class="left">Nome Utente</th>
           <th data-field="gruppo" class="left">Gruppo</th>
@@ -350,11 +355,13 @@
         </tr>
     </thead>
     <tbody>
-                    <tr data-index="0">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
+                          <tr data-index="0">
+        <td> 
+            <!--array per la classe colore dello stato fatturazione -->
+            <div class="wrapper-icon-bullet"><span class="color-bfm_status_inscadenza icon-bullet"></span> <span class="text">inscadenza</span></div>
           </td>
+           <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
+          <td><span class="color-warning icon-bullet"></span></td>
           <td><a href="#">UP5AD</a></td>
           <td>Amministratore</td>
           <td>Operatore Master</td>
@@ -363,10 +370,12 @@
           <td> &nbsp; </td>
         </tr>
               <tr data-index="1">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
+        <td> 
+            <!--array per la classe colore dello stato fatturazione -->
+            <div class="wrapper-icon-bullet"><span class="color-bfm_status_scaduta icon-bullet"></span> <span class="text">scaduta</span></div>
           </td>
+           <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
+          <td><span class="color-warning icon-bullet"></span></td>
           <td><a href="#">UP5AD</a></td>
           <td>Amministratore</td>
           <td>Operatore Master</td>
@@ -375,46 +384,12 @@
           <td> &nbsp; </td>
         </tr>
               <tr data-index="2">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
+        <td> 
+            <!--array per la classe colore dello stato fatturazione -->
+            <div class="wrapper-icon-bullet"><span class="color-bfm_status_incassata icon-bullet"></span> <span class="text">incassata</span></div>
           </td>
-          <td><a href="#">UP5AD</a></td>
-          <td>Amministratore</td>
-          <td>Operatore Master</td>
-          <td>Operatore Master</td>
-          <td> <img class="icon color-greenLink" src="./fe/img/icon/autorizza.svg"> </td>
-          <td> &nbsp; </td>
-        </tr>
-              <tr data-index="3">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
-          </td>
-          <td><a href="#">UP5AD</a></td>
-          <td>Amministratore</td>
-          <td>Operatore Master</td>
-          <td>Operatore Master</td>
-          <td> <img class="icon color-greenLink" src="./fe/img/icon/autorizza.svg"> </td>
-          <td> &nbsp; </td>
-        </tr>
-              <tr data-index="4">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
-          </td>
-          <td><a href="#">UP5AD</a></td>
-          <td>Amministratore</td>
-          <td>Operatore Master</td>
-          <td>Operatore Master</td>
-          <td> <img class="icon color-greenLink" src="./fe/img/icon/autorizza.svg"> </td>
-          <td> &nbsp; </td>
-        </tr>
-              <tr data-index="5">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
-          </td>
+           <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
+          <td><span class="color-warning icon-bullet"></span></td>
           <td><a href="#">UP5AD</a></td>
           <td>Amministratore</td>
           <td>Operatore Master</td>
