@@ -9,6 +9,7 @@ virtual('/youwebbusiness/layout/template/tpl_profilatura_utenti/dati.php');
     <thead>
         <tr>
           <th data-field="stato" class="left">Stato</th>
+          <th data-field="stato_2" class="left">Stato</th>
           <th data-field="codice" data-formatter="formatLink" class="left">Codice Utente</th>
           <th data-field="nome" class="left">Nome Utente</th>
           <th data-field="gruppo" class="left">Gruppo</th>
@@ -19,12 +20,15 @@ virtual('/youwebbusiness/layout/template/tpl_profilatura_utenti/dati.php');
     </thead>
     <tbody>
       <?php // esempio ciclo per tabella in desktop ?>
-      <?php for ($i = 0; $i <= 5; $i++) { ?>
+      <?php $array = array("inscadenza", "scaduta","incassata");?>
+      <?php for ($i = 0; $i <= 2; $i++) { ?>
         <tr data-index="<?= $i ?>">
-          <td> 
-            <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
-            <span class="color-warning icon-bullet"></span> 
+        <td> 
+            <!--array per la classe colore dello stato fatturazione -->
+            <div class="wrapper-icon-bullet"><span class="color-bfm_status_<?= $array[$i] ?> icon-bullet"></span> <span class="text"><?= $array[$i] ?></span></div>
           </td>
+           <!-- colori disponibili: color-warning - giallo / color-success - verde / color-error - rosso -->
+          <td><span class="color-warning icon-bullet"></span></td>
           <td><a href="#">UP5AD</a></td>
           <td>Amministratore</td>
           <td>Operatore Master</td>

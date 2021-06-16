@@ -354,6 +354,27 @@
   background-color: #186bee;
 }
 
+.color-bfm_status_inscadenza {
+  color: #f6cf49;
+}
+.bkg-bfm_status_inscadenza {
+  background-color: #f6cf49;
+}
+
+.color-bfm_status_scaduta {
+  color: #7d48aa;
+}
+.bkg-bfm_status_scaduta {
+  background-color: #7d48aa;
+}
+
+.color-bfm_status_incassata {
+  color: #52a99b;
+}
+.bkg-bfm_status_incassata {
+  background-color: #52a99b;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("../font/Roboto-Regular-webfont.eot");
@@ -454,6 +475,19 @@ img.icon:before {
 .icon-bullet:before {
   font-family: "roboto", sans-serif;
   content: "⬤";
+}
+
+.wrapper-icon-bullet {
+  position: relative;
+}
+.wrapper-icon-bullet .icon-bullet:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+.wrapper-icon-bullet .text {
+  padding-left: 20px;
+  display: block;
 }
 
 .colonna1,

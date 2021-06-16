@@ -353,6 +353,27 @@
   background-color: #186bee;
 }
 
+.color-bfm_status_inscadenza {
+  color: #f6cf49;
+}
+.bkg-bfm_status_inscadenza {
+  background-color: #f6cf49;
+}
+
+.color-bfm_status_scaduta {
+  color: #7d48aa;
+}
+.bkg-bfm_status_scaduta {
+  background-color: #7d48aa;
+}
+
+.color-bfm_status_incassata {
+  color: #52a99b;
+}
+.bkg-bfm_status_incassata {
+  background-color: #52a99b;
+}
+
 /* Modali */
 [data-toggle=modal] {
   cursor: pointer;
@@ -988,14 +1009,14 @@
   padding: 1rem 1rem 2rem 1rem;
 }
 .accordion.with-squared .card-header .text {
-  font-size: 20px;
+  font-size: 18px;
 }
 .accordion.ico-close-pa .card-header {
   position: relative;
 }
 .accordion.ico-close-pa .card-header-icon {
   position: absolute;
-  right: 1.5rem;
+  right: 1rem;
   top: 2rem;
 }
 @media (max-width: 768px) {
@@ -1004,7 +1025,7 @@
   }
 }
 .accordion.ico-close-pa .card-header {
-  padding-right: 3rem;
+  padding-right: 2.5rem;
 }
 @media (max-width: 768px) {
   .accordion.ico-close-pa .card-header {
@@ -1394,6 +1415,9 @@
 }
 .accordion.always-active .icon-arrow_right_text:before {
   content: "";
+}
+.accordion.always-active .icon-category_risorseumane:before {
+  content: "";
 }
 .accordion.always-active .card, .accordion.always-active .acc-item {
   /* Border-color differente per coerenza con i bordi dei bordi 

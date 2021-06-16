@@ -3,7 +3,18 @@
     font-family: 'roboto', sans-serif;
     content: "\2B24";
 }
-
+.wrapper-icon-bullet {
+  position: relative;
+  .icon-bullet:before {
+    position: absolute;
+    top:4px;
+    left:0;
+  }
+  .text{
+    padding-left:20px;
+    display: block;
+  }
+}
 .colonna1,
 .colonna2 {
     @include icon {
