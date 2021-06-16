@@ -143,9 +143,7 @@
                               </thead>
                               <tbody class="accordion">
                                  <tr class="highlight" data-index="0">
-                                    <td class="text-center wrapper-border-element">
-                                      <a data-container="#tableEsempioSviluppo" class="border-element bkg-gray1" href="javascript:;" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus"></a>
-                                      <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
+                                    <td></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
                                     <td>05034</td>

@@ -67,7 +67,13 @@
 			// Inizializzazioni per funzioni non condivise da sviluppo
 			var initDateMin = initDateMaxToday = function(){return void(0);}
 		</script>
-		
+
+		<style>
+			body.scroll-down header {
+    			margin-top: 0 !important;
+  			}
+			
+		</style>		
 	</head>
 	<body>
 		<header class="librerie">
@@ -102,6 +108,7 @@
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/circleplus.svg'> <!-- fine icona --> </div>circleplus </div>
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/close-simple.svg'> <!-- fine icona --> </div>close-simple </div>
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/close.svg'> <!-- fine icona --> </div>close </div>
+<div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/configurazione_gestionale.svg'> <!-- fine icona --> </div>configurazione_gestionale </div>
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/csv.svg'> <!-- fine icona --> </div>csv </div>
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/delete.svg'> <!-- fine icona --> </div>delete </div>
 <div class='col-6 col-md-4 col-lg-3 p-1'><div class='icon-demo'> <!-- icona --> <img src='./fe/img/icon/disponi-bonifici.svg'> <!-- fine icona --> </div>disponi-bonifici </div>
@@ -211,109 +218,1234 @@
 										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">set-icomoon</h2>
 																						<style>
-.icon-set-demo .icon {
-  margin-bottom: 1rem;
-  display:block;
-  height: auto;
-  width: auto;
-  max-width:40px;
+.icon-set-demo {
+  width:100%;
+}
+.icon-set-demo .lib-ico-wrap {
+  text-align:left;
+}
+.icon-set-demo .lib-ico-wrap .lib-ico-ph {
+  top:0;
+  left:0;
+  position:absolute;
+  background: #.html.htmlfff;
+  width:40px;
+  height:40px;
+  border:solid 1px #ccc;
+  text-align:center;
+  padding: 7px;
+}
+.icon-set-demo .lib-ico-wrap .lib-ico-ph .icon {
+  font-size:25px;
 }
 
-.icon-set-demo .icon:after {
-  margin-top: 0.5rem;
-  content: attr(class);
-  font-size: 11px;
-  font-family: 'roboto', sans-serif;
+.lib-ico-name {width:100%;
   display:block;
-  word-wrap: break-word;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
+  word-break:break-all;
+  font-family: "roboto", "sans serif";
+}
+.lib-ico-cont {
+  padding: 12px 0 5px 45px;
+  min-height:40px;
+  width:100%;
+  position:relative;
+  margin-bottom:15px;
+}
+
+.icon-search {
+  margin: 0 0 25px;
+  width:200px;
+}
+
+.icon-search input {
+  border:solid 1px #ccc;
+  padding: 7px;
+  font-family: "roboto", "sans serif";
 }
 </style>
 
-<div class="row icon-set-demo">
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_dispositiva"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_mail"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_setting"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_logout"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_profilo"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icon_setting_utente"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_alert"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_alert_small"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_profilo_small"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mail_closed"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mail_opened"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_il_tuo_profilo"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollo_auto"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-calendario_left"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-calendario_right"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_domiciliazioni"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-grafico_portafoglio"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_i_tuoi_vincoli"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-listato_portafoglio"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-posta_dash"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-riepilogo_conto_iban"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_saldo_a_data"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_svincola"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_down"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_equal"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-titoli_pref_up"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_vincola_partite"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-aggiorna"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_riepilogo_alert"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_beneficiari"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettini_postali"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bonifico_sepa"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_calendario"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_movimenti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_pannello_controllo"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_cambio_pin"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_ricarica"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_carte_scarica"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_contatti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_conti_depositi"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_conto"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-documento"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_pagamento_f24"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_finanziamenti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_right"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_down"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_up"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-arrow_left"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_coordinate_iban"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_indici_mercati"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_investimenti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-logout"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettino_mav"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-meno"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-menu"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-mostra"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_saldo_movimenti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-movimenti_42"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-nascondi"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_elenco_news"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_gestione_patrimoniale"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-piu"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_posta_arrivo"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_archivio_posta"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_rapporti_predefiniti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_bollettino_rav"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ricariche_cellulare"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-settings"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_titoli"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ordini_movimenti_titoli"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_titoli_dossier"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_portafoglio_simulato_titoli"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_trasferimento_tra_conti"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_ultime_disposizioni"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-user"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-user_mobile"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_youshop"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-ico_youwin"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_alert"></i></div>
-  <div class="col-3 col-md-2 col-lg-1"><i class="icon icon-icona_profilo"></i></div>
+<div class="row">
+  <div class="col-sm-12"> 
+    <div class="icon-search">
+      <script type="text/javascript">
+          $(function(){$("#icoSearch").keyup(function(){
+            var sstring = $(this).val();
+            var allicon = $(".icon-set-demo .lib-ico-wrap").hide();
+            $.each(allicon, function(i,ico){
+              var ic = $(ico);
+              if (ic.attr("data-name").indexOf(sstring)>=0) {
+                ic.show();
+              } 
+            })
+            console.log(sstring);
+          })});
+      </script>
+      <input type="text" class="search" placeholder="ricerca..." id="icoSearch" />
+    </div>
+    <div class="row icon-set-demo">
+                <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_risorseumane">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_risorseumane"></i>
+              </div>
+              <span class="lib-ico-name">category_risorseumane</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="close">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-close"></i>
+              </div>
+              <span class="lib-ico-name">close</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="dividi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-dividi"></i>
+              </div>
+              <span class="lib-ico-name">dividi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_setting">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_setting"></i>
+              </div>
+              <span class="lib-ico-name">ico_setting</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_logout">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_logout"></i>
+              </div>
+              <span class="lib-ico-name">ico_logout</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_profilo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_profilo"></i>
+              </div>
+              <span class="lib-ico-name">ico_profilo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="icon_setting_utente">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-icon_setting_utente"></i>
+              </div>
+              <span class="lib-ico-name">icon_setting_utente</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_alert">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_alert"></i>
+              </div>
+              <span class="lib-ico-name">ico_alert</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="icona_alert">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-icona_alert"></i>
+              </div>
+              <span class="lib-ico-name">icona_alert</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="icona_alert_small">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-icona_alert_small"></i>
+              </div>
+              <span class="lib-ico-name">icona_alert_small</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_profilo_small">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_profilo_small"></i>
+              </div>
+              <span class="lib-ico-name">ico_profilo_small</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="icona_profilo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-icona_profilo"></i>
+              </div>
+              <span class="lib-ico-name">icona_profilo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="mail_closed">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-mail_closed"></i>
+              </div>
+              <span class="lib-ico-name">mail_closed</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="mail_opened">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-mail_opened"></i>
+              </div>
+              <span class="lib-ico-name">mail_opened</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_il_tuo_profilo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_il_tuo_profilo"></i>
+              </div>
+              <span class="lib-ico-name">ico_il_tuo_profilo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_bollo_auto">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_bollo_auto"></i>
+              </div>
+              <span class="lib-ico-name">ico_bollo_auto</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="calendario_left">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-calendario_left"></i>
+              </div>
+              <span class="lib-ico-name">calendario_left</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="calendario_right">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-calendario_right"></i>
+              </div>
+              <span class="lib-ico-name">calendario_right</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_domiciliazioni">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_domiciliazioni"></i>
+              </div>
+              <span class="lib-ico-name">ico_domiciliazioni</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="grafico_portafoglio">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-grafico_portafoglio"></i>
+              </div>
+              <span class="lib-ico-name">grafico_portafoglio</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_i_tuoi_vincoli">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_i_tuoi_vincoli"></i>
+              </div>
+              <span class="lib-ico-name">ico_i_tuoi_vincoli</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="listato_portafoglio">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-listato_portafoglio"></i>
+              </div>
+              <span class="lib-ico-name">listato_portafoglio</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="posta_dash">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-posta_dash"></i>
+              </div>
+              <span class="lib-ico-name">posta_dash</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="riepilogo_conto_iban">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-riepilogo_conto_iban"></i>
+              </div>
+              <span class="lib-ico-name">riepilogo_conto_iban</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_saldo_a_data">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_saldo_a_data"></i>
+              </div>
+              <span class="lib-ico-name">ico_saldo_a_data</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_svincola">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_svincola"></i>
+              </div>
+              <span class="lib-ico-name">ico_svincola</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="titoli_pref_down">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-titoli_pref_down"></i>
+              </div>
+              <span class="lib-ico-name">titoli_pref_down</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="titoli_pref_equal">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-titoli_pref_equal"></i>
+              </div>
+              <span class="lib-ico-name">titoli_pref_equal</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="titoli_pref_up">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-titoli_pref_up"></i>
+              </div>
+              <span class="lib-ico-name">titoli_pref_up</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_vincola_partite">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_vincola_partite"></i>
+              </div>
+              <span class="lib-ico-name">ico_vincola_partite</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="aggiorna">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-aggiorna"></i>
+              </div>
+              <span class="lib-ico-name">aggiorna</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_riepilogo_alert">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_riepilogo_alert"></i>
+              </div>
+              <span class="lib-ico-name">ico_riepilogo_alert</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_gestione_beneficiari">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_gestione_beneficiari"></i>
+              </div>
+              <span class="lib-ico-name">ico_gestione_beneficiari</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_bollettini_postali">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_bollettini_postali"></i>
+              </div>
+              <span class="lib-ico-name">ico_bollettini_postali</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_calendario">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_calendario"></i>
+              </div>
+              <span class="lib-ico-name">ico_calendario</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte_movimenti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte_movimenti"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte_movimenti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte_pannello_controllo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte_pannello_controllo"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte_pannello_controllo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte_cambio_pin">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte_cambio_pin"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte_cambio_pin</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte_ricarica">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte_ricarica"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte_ricarica</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_carte_scarica">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_carte_scarica"></i>
+              </div>
+              <span class="lib-ico-name">ico_carte_scarica</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_conti_depositi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_conti_depositi"></i>
+              </div>
+              <span class="lib-ico-name">ico_conti_depositi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_conto">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_conto"></i>
+              </div>
+              <span class="lib-ico-name">ico_conto</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="documento">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-documento"></i>
+              </div>
+              <span class="lib-ico-name">documento</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_pagamento_f24">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_pagamento_f24"></i>
+              </div>
+              <span class="lib-ico-name">ico_pagamento_f24</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_finanziamenti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_finanziamenti"></i>
+              </div>
+              <span class="lib-ico-name">ico_finanziamenti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="arrow_right">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-arrow_right"></i>
+              </div>
+              <span class="lib-ico-name">arrow_right</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="arrow_down">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-arrow_down"></i>
+              </div>
+              <span class="lib-ico-name">arrow_down</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="arrow_up">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-arrow_up"></i>
+              </div>
+              <span class="lib-ico-name">arrow_up</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="arrow_left">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-arrow_left"></i>
+              </div>
+              <span class="lib-ico-name">arrow_left</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_coordinate_iban">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_coordinate_iban"></i>
+              </div>
+              <span class="lib-ico-name">ico_coordinate_iban</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_indici_mercati">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_indici_mercati"></i>
+              </div>
+              <span class="lib-ico-name">ico_indici_mercati</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_investimenti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_investimenti"></i>
+              </div>
+              <span class="lib-ico-name">ico_investimenti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="logout">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-logout"></i>
+              </div>
+              <span class="lib-ico-name">logout</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_bollettino_mav">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_bollettino_mav"></i>
+              </div>
+              <span class="lib-ico-name">ico_bollettino_mav</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="meno">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-meno"></i>
+              </div>
+              <span class="lib-ico-name">meno</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="menu">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-menu"></i>
+              </div>
+              <span class="lib-ico-name">menu</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="mostra">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-mostra"></i>
+              </div>
+              <span class="lib-ico-name">mostra</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_saldo_movimenti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_saldo_movimenti"></i>
+              </div>
+              <span class="lib-ico-name">ico_saldo_movimenti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="movimenti_42">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-movimenti_42"></i>
+              </div>
+              <span class="lib-ico-name">movimenti_42</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="nascondi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-nascondi"></i>
+              </div>
+              <span class="lib-ico-name">nascondi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_elenco_news">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_elenco_news"></i>
+              </div>
+              <span class="lib-ico-name">ico_elenco_news</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_gestione_patrimoniale">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_gestione_patrimoniale"></i>
+              </div>
+              <span class="lib-ico-name">ico_gestione_patrimoniale</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="piu">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-piu"></i>
+              </div>
+              <span class="lib-ico-name">piu</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_posta_arrivo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_posta_arrivo"></i>
+              </div>
+              <span class="lib-ico-name">ico_posta_arrivo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_mail">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_mail"></i>
+              </div>
+              <span class="lib-ico-name">ico_mail</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_archivio_posta">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_archivio_posta"></i>
+              </div>
+              <span class="lib-ico-name">ico_archivio_posta</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_rapporti_predefiniti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_rapporti_predefiniti"></i>
+              </div>
+              <span class="lib-ico-name">ico_rapporti_predefiniti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_bollettino_rav">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_bollettino_rav"></i>
+              </div>
+              <span class="lib-ico-name">ico_bollettino_rav</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_ricariche_cellulare">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_ricariche_cellulare"></i>
+              </div>
+              <span class="lib-ico-name">ico_ricariche_cellulare</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="settings">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-settings"></i>
+              </div>
+              <span class="lib-ico-name">settings</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_titoli">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_titoli"></i>
+              </div>
+              <span class="lib-ico-name">ico_titoli</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_ordini_movimenti_titoli">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_ordini_movimenti_titoli"></i>
+              </div>
+              <span class="lib-ico-name">ico_ordini_movimenti_titoli</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_titoli_dossier">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_titoli_dossier"></i>
+              </div>
+              <span class="lib-ico-name">ico_titoli_dossier</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_portafoglio_simulato_titoli">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_portafoglio_simulato_titoli"></i>
+              </div>
+              <span class="lib-ico-name">ico_portafoglio_simulato_titoli</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_trasferimento_tra_conti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_trasferimento_tra_conti"></i>
+              </div>
+              <span class="lib-ico-name">ico_trasferimento_tra_conti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_ultime_disposizioni">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_ultime_disposizioni"></i>
+              </div>
+              <span class="lib-ico-name">ico_ultime_disposizioni</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="user">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-user"></i>
+              </div>
+              <span class="lib-ico-name">user</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="user_mobile">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-user_mobile"></i>
+              </div>
+              <span class="lib-ico-name">user_mobile</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_youshop">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_youshop"></i>
+              </div>
+              <span class="lib-ico-name">ico_youshop</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_youwin">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_youwin"></i>
+              </div>
+              <span class="lib-ico-name">ico_youwin</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="refresh">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-refresh"></i>
+              </div>
+              <span class="lib-ico-name">refresh</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="refresh_euro">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-refresh_euro"></i>
+              </div>
+              <span class="lib-ico-name">refresh_euro</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="alert">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-alert"></i>
+              </div>
+              <span class="lib-ico-name">alert</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="calendario">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-calendario"></i>
+              </div>
+              <span class="lib-ico-name">calendario</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_altrepassivita">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_altrepassivita"></i>
+              </div>
+              <span class="lib-ico-name">category_altrepassivita</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_altrespese">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_altrespese"></i>
+              </div>
+              <span class="lib-ico-name">category_altrespese</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_altriproventi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_altriproventi"></i>
+              </div>
+              <span class="lib-ico-name">category_altriproventi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_assicurazione">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_assicurazione"></i>
+              </div>
+              <span class="lib-ico-name">category_assicurazione</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="attenzione">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-attenzione"></i>
+              </div>
+              <span class="lib-ico-name">attenzione</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_bollette">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_bollette"></i>
+              </div>
+              <span class="lib-ico-name">category_bollette</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_fornitori">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_fornitori"></i>
+              </div>
+              <span class="lib-ico-name">category_fornitori</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_immobilizzazioni">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_immobilizzazioni"></i>
+              </div>
+              <span class="lib-ico-name">category_immobilizzazioni</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_intercompany">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_intercompany"></i>
+              </div>
+              <span class="lib-ico-name">category_intercompany</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_operazionifinanziarie">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_operazionifinanziarie"></i>
+              </div>
+              <span class="lib-ico-name">category_operazionifinanziarie</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_ricavi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_ricavi"></i>
+              </div>
+              <span class="lib-ico-name">category_ricavi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_servizi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_servizi"></i>
+              </div>
+              <span class="lib-ico-name">category_servizi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_tasse">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_tasse"></i>
+              </div>
+              <span class="lib-ico-name">category_tasse</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="category_trasporti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-category_trasporti"></i>
+              </div>
+              <span class="lib-ico-name">category_trasporti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="circle_minus">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-circle_minus"></i>
+              </div>
+              <span class="lib-ico-name">circle_minus</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="credito">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-credito"></i>
+              </div>
+              <span class="lib-ico-name">credito</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="divieto">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-divieto"></i>
+              </div>
+              <span class="lib-ico-name">divieto</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="document_percent">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-document_percent"></i>
+              </div>
+              <span class="lib-ico-name">document_percent</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="espandi">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-espandi"></i>
+              </div>
+              <span class="lib-ico-name">espandi</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="excel">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-excel"></i>
+              </div>
+              <span class="lib-ico-name">excel</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="excel_2000">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-excel_2000"></i>
+              </div>
+              <span class="lib-ico-name">excel_2000</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="eye">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-eye"></i>
+              </div>
+              <span class="lib-ico-name">eye</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="fatturato">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-fatturato"></i>
+              </div>
+              <span class="lib-ico-name">fatturato</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="grafico_istogramma">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-grafico_istogramma"></i>
+              </div>
+              <span class="lib-ico-name">grafico_istogramma</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="grafico_torta">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-grafico_torta"></i>
+              </div>
+              <span class="lib-ico-name">grafico_torta</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="link_documento">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-link_documento"></i>
+              </div>
+              <span class="lib-ico-name">link_documento</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="modifica">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-modifica"></i>
+              </div>
+              <span class="lib-ico-name">modifica</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="more">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-more"></i>
+              </div>
+              <span class="lib-ico-name">more</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="pdf">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-pdf"></i>
+              </div>
+              <span class="lib-ico-name">pdf</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="printer">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-printer"></i>
+              </div>
+              <span class="lib-ico-name">printer</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="proiezione">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-proiezione"></i>
+              </div>
+              <span class="lib-ico-name">proiezione</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="razzo">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-razzo"></i>
+              </div>
+              <span class="lib-ico-name">razzo</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="riduci">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-riduci"></i>
+              </div>
+              <span class="lib-ico-name">riduci</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="upload">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-upload"></i>
+              </div>
+              <span class="lib-ico-name">upload</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="warning">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-warning"></i>
+              </div>
+              <span class="lib-ico-name">warning</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="circle_arrow_up">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-circle_arrow_up"></i>
+              </div>
+              <span class="lib-ico-name">circle_arrow_up</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="circle_arrow_down">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-circle_arrow_down"></i>
+              </div>
+              <span class="lib-ico-name">circle_arrow_down</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="circle_plus">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-circle_plus"></i>
+              </div>
+              <span class="lib-ico-name">circle_plus</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="round_check">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-round_check"></i>
+              </div>
+              <span class="lib-ico-name">round_check</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="help">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-help"></i>
+              </div>
+              <span class="lib-ico-name">help</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_gestione_contatti">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_gestione_contatti"></i>
+              </div>
+              <span class="lib-ico-name">ico_gestione_contatti</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_bonifico_sepa">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_bonifico_sepa"></i>
+              </div>
+              <span class="lib-ico-name">ico_bonifico_sepa</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="ico_dispositiva">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-ico_dispositiva"></i>
+              </div>
+              <span class="lib-ico-name">ico_dispositiva</span>
+            </div>
+          </div>
+          
+                  <div class="lib-ico-wrap col-md-3 col-sm-4 col-xs-12" data-name="arrow_right_text">
+            <div class="lib-ico-cont">
+              <div class="lib-ico-ph">
+                <i class="icon icon-arrow_right_text"></i>
+              </div>
+              <span class="lib-ico-name">arrow_right_text</span>
+            </div>
+          </div>
+          
+            </div>
+    </div>
 </div>
 										</div>
 									</div>
