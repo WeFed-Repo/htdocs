@@ -259,7 +259,10 @@
 	{
 		"title": "Gestione Finanziaria",
 		"voices": [
-		
+			{
+				"title": "Entrate e uscite",
+				"tpl": "tpl_entrate_uscite.php"
+			},
 			{
 				"title": "Test creazione grafici",
 				"tpl": "tpl_prova_grafici.php"

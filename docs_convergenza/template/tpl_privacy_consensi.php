@@ -33,6 +33,13 @@
 
 <!-- Gestione dei consensi -->
 <script>
+
+    // Esempio di funzione per setting radio
+    var setOutputVal = function(el){
+      var radio = $(el);
+      radio.parents(".form-group").find(".consensi-output label").html(radio.val()==="y"?"Dato il consenso": "Negato il consenso")
+    }
+
     // Esempio di automazione
     $(function(){
 
@@ -40,13 +47,18 @@
         $(".modifica-consensi").click(function(){
             $(".modifica-consensi").css({"visibility": "hidden"});
             $("#salva").show();
+
             // Trasforma i campi output in input
+            $("#formConsensiPrivacy *[class^='consensi-']").toggle();
+            
         });
 
+        // Emulazione salvataggio consensi
         $("#salva").click(function(){
             $(this).hide();
-            // Trasforma i campi input in output
             $(".modifica-consensi").css({"visibility": "visible"});
+             // Trasforma i campi input in output
+             $("#formConsensiPrivacy *[class^='consensi-']").toggle();
         });
 
     });
@@ -65,25 +77,34 @@
 <!-- Fine pulsantiera TOP -->
 
 <!-- Gruppo consensi -->
-<div class="formGenerico  borderFormRounded">
+<div class="formGenerico  borderFormRounded" id="formConsensiPrivacy">
     <?php for($i=0;$i<5; $i++) { ?>
         <?php if ($i>0) { ?><hr /><?php } ?>
-        <p>Consenso per lorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolor</p> 
+        <p><strong>Consenso per lorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolor</strong></p> 
         <!-- Blocchi dei consensi -->
         <div class="form-group">
              <div class="row">
-               <div class="form-field-input noMargBottom col-sm-3 col-xs-6">
+              <!-- Modifica dei consensi -->
+              <div class="consensi-input" style="display:none">
+                <div class="form-field-input noMarginBottom col-sm-3 col-xs-6">
+                    <label>
+                      <input type="radio" name="radioCons<?php print $i; ?>" value="y" checked onclick="setOutputVal(this);">
+                      Do il consenso
+                    </label>
+                </div>
+                <div class="form-field-input noMarginBottom col-sm-3 col-xs-6">
                   <label>
-                    <input type="radio" name="" value="y">
-                    Do il consenso
-                  </label>
-               </div>
-              <div class="form-field-input noMargBottom col-sm-3 col-xs-6">
-                 <label>
-                    <input type="radio" name="" value="n" onclick="visualizzaContenuto('C');" id="canaleComunicazioneCartaceo">
-                    Nego il consenso
-                  </label>
-               </div>
+                      <input type="radio" name="radioCons<?php print $i; ?>" value="n" onclick="setOutputVal(this);">
+                      Nego il consenso
+                    </label>
+                </div>
+              </div>
+              <div class="consensi-output">
+                <div class="form-field-input noMarginBottom col-sm-12 col-xs-12">
+                   <label class="force-radio-height" id="radVal<?php print $i; ?>">Dato il consenso</label>
+                </div>
+              </div>
+              <!-- Fine modifica dei consensi -->
             </div>
         </div>
     <?php } ?>

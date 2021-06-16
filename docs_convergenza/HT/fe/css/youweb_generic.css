@@ -271,6 +271,10 @@ h3>span {
     margin: 0 !important;
 }
 
+.noMarginBottom {
+    margin-bottom: 0 !important;
+}
+
 .marginBottom5px {
     margin-bottom: 5px !important;
 }
@@ -10137,3 +10141,11 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
  
  /* Indentazione */
 .indented {padding-left: 35px}
+
+/* Forzature */
+.force-radio-height {
+    height: 18px;
+    display: inline-block;
+    margin: 7px 0 0;
+    padding-bottom: 21px;
+}
