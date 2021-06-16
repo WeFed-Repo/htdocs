@@ -418,8 +418,8 @@ var startLending = function (params) {
 
 
         // Disclaimer
-        disclaimer: (params.objConf && params.objConf.Simulatore.disclaimer) ? 
-             $("<div>").addClass("disclaimer").html("<p>"+ params.objConf.Simulatore.disclaimer +"</p>"): "",
+        disclaimer: (params.objConf && params.objConf.Simulatore.Disclaimer) ? 
+             $("<div>").addClass("disclaimer").html("<p>"+ params.objConf.Simulatore.Disclaimer +"</p>"): "",
 
 
 
