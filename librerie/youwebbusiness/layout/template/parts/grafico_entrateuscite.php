@@ -70,8 +70,11 @@
         graficoEUwrapper = $("#graficoEUwrapper");
 
         $("#bloccoFiltri button").click(function(){
+            // Reset dei pulsanti ed "evidenza" di quello "corrente"
+            $("#bloccoFiltri button").removeClass("is-selected");
+
             // Aggiorna dataset esistente coi filtri (esempio)
-            var btn = $(this);
+            var btn = $(this).addClass("is-selected");
             actfilter = btn.attr("data-type");
             graficoEUwrapper.removeClass("entrate uscite tutti").addClass(actfilter);
             
@@ -83,37 +86,14 @@
         disegnaGrafico();
 
     });
-
-
 </script>
-<style>
-    /* Colori */
-    .bgcolor-entrate {background-color:#2f9988}
-    .bgcolor-uscite {background-color:#c84757}
 
-    /* Legenda */
-    .legenda-voice {position:relative;width:auto; max-width:100%;padding-left:28px;}
-    .legenda-voice .legenda-dot {width:18px;height:18px;border-radius:4px;position:absolute;left:0;top:2px;}
-    .legenda-voice.big .legenda-dot {top:4px}
-    .legenda-voice.big .legenda-label {font-size:18px;}
-
-    /* Grandezze "dedicate" */
-    .graph-total span.total {font-weight:bold;font-size:18px;display:block;}
-    .graph-total span.sub {font-size:12px;clear:both; line-height:16px;display:block;color:#737373}
-
-    /* Declinazioni grafico specifico */
-    .entrate #legUscite {opacity:0.3} 
-    .entrate .amcharts-graph-uscite {opacity:0.5} 
-    .uscite #legEntrate {opacity:0.3}
-    .uscite .amcharts-graph-entrate {opacity:0.5} 
-
-</style>
 <div id="graficoEUwrapper" class="tutti loading">
     <div class="row">
         <div class="col-sm-6 col-xs-12" id="bloccoFiltri">
             <button class="btn btn-filter fl-left is-selected" data-type="tutti">Tutti</button>
-            <button class="btn btn-filter fl-left" data-type="uscite">Uscite</button>
             <button class="btn btn-filter fl-left" data-type="entrate">Entrate</button>
+            <button class="btn btn-filter fl-left" data-type="uscite">Uscite</button>
         </div>
         <div class="col-sm-6 col-xs-12">
             <div class="row">
