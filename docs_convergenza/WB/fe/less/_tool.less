@@ -5951,14 +5951,29 @@ div.select-content select {
             padding-left: 0;
         }
     }
+    .center-wrapper {
+        text-align:center; 
+        &.green {
+            color:#00a11a
+        }
+        &.visible-desktop .glyph {font-size:34px}       
+    }
+    .light-red .icon{
+        color:#ffc199
+    }
+    .visible-mobile.wrapper-icon-left .glyph {font-size:24px}
     // ONLY WB
     .linked-icon > a {
         text-decoration: none;
-    }
+    }   
 }
 
 .pract-toggle-head .btn {
     min-width: 110px;
+}
+
+.row.boxed.pract-toggle.no-toggle {
+    padding-top:15px;
 }
 
 /* # Accordion Content # */
@@ -6108,8 +6123,7 @@ div.select-content select {
 @media only screen and (max-width: 400px) {
     .accord-content {
         padding: 10px 0;
-    }
-  
+    } 
 }
 
 /* spostato per risoluzioni intermedie*/

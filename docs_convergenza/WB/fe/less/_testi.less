@@ -1193,6 +1193,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
 
 /* # Oggetto: Text-with-Icon Convergenza: 010# */
 /* ## List Container ## */
+
 .list-icon-wrapper {
     margin-bottom: 30px;
     &.not-inline {
@@ -1203,6 +1204,14 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
             width:100%;
             margin-right:0;
         }
+    }
+    &.more-spaced{
+        .text-with-icon {padding-left:35px;margin-bottom:25px}
+    }
+    .mode-input {display:none}
+    &.mode-input{
+        .mode-output {display:none}
+        .mode-input {display:block}
     }
     /* ### Change Positions ### */
     &.to-right{
@@ -1300,6 +1309,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     .icon.v-centered, .image-icon.v-centered {
         top: calc(50% - 10px);
     }
+    .icon-inline {position: relative; margin: -2px 0 0 8px;}
     /* Accordion */
     & *[aria-expanded=false] {
         .icon-arrow_up {
@@ -1316,6 +1326,10 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
             display:none;
         }
     }
+    .twi-checkbox {
+        position:absolute; top:1px;left:0;
+        &:active, &:active, &:hover {outline:0 none}
+    }
     /* Classi colore addittive */
     .dark {
         color: #000;
@@ -1327,6 +1341,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         color: #7F7F7F;
     }
 }
+
 
 @media screen and (max-width: 1023px){
     .text-with-icon .icon{
@@ -1356,6 +1371,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
 .image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;}
 .image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");background-size: 100%;}
 .image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png");background-size: 100%;width: 30px;height: 30px;}
+.image-icon.stato-neutro {background: url("/common/fe/img/icon-stato-neutro.png");}
 
 
 /* spostato per risoluzioni intermedie*/
@@ -1448,6 +1464,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         cursor: default;
     }
 }
+
 /* Titoletto con index container */
 .titleIndexContainer {
     display:inline-block;
@@ -1475,6 +1492,12 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     text-align: right;
     margin: 0px;
     display: block;
+}
+
+@media only screen and (max-width: 767px) {
+    .documentTitleContainer, .no-mobile-label{
+        display:none;
+    }
 }
 
 .esito-inline {
@@ -1508,6 +1531,14 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         .icon {height:30px;}
         .esito-text {font-size:14px; padding-left:40px; line-height:18px;}
     }   
+}
+
+/* Note */
+.no-mobile-label{
+    display:auto;
+}
+.no-underline {
+    text-decoration:none!important
 }
 
 // BULLET SPECIFIC 

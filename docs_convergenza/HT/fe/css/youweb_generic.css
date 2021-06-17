@@ -9986,7 +9986,7 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 .tip.bottom .tip-text{top:0;margin-top:13px;}
 .tip.top {top:0;}
 .tip.top .tip-text{bottom:0;margin-bottom:13px;}
-.tip .tip-text{background-color:  #d8f0ed;width: auto;min-width:100%; visible; padding:15px 50px;position: absolute;height: 50px;white-space: nowrap;}
+.tip .tip-text{background-color:  #d8f0ed;width: auto;min-width:100%; padding:15px 50px;position: absolute;height: 50px;white-space: nowrap;}
 .w-align-right {right:0;}
 .w-align-left {left:0;}
 .tip .tip-text.w-align-center{left:0;margin-left:-10%;min-width: 120%;white-space: normal;height:auto;}
