@@ -71,7 +71,7 @@ label[for] {
   cursor: pointer;
 }
 
-select, .select-custom-el {
+select, .select-custom-option-el {
   &.form-control,
   &.form-control:not([size]):not([multiple]) {
     height: $inputHeight;
@@ -92,14 +92,35 @@ select, .select-custom-el {
 /* finte select */
 .select-custom {
   position: relative;
-  /*&-options-wrapper {
-    display: none;
+  a.select-custom-option-el {
+    text-decoration: none;
+    color:$gray2;
   }
-  &.opened {
-    .select-custom-options-wrapper {
-      display: block;
+  .dropdown-toggle{
+    &::after {
+      border:0
     }
-  }*/
+    &.select-custom-option-el:not(.btn) {
+      padding-top:10px;
+    }
+  }
+  
+  .dropdown-menu {
+     width:100%!important;
+     max-width: none!important;
+     margin:0;
+     border-radius: 0 0 3px 3px;
+     border-top:0;
+    .select-custom-option {
+      padding:8px;
+      cursor:pointer;
+      &.option-selected, &:hover{
+        background-color: $gray10;
+      }
+    }
+    
+  }
+  
 }
 // FILE
 input[type="file"].form-control {

@@ -144,6 +144,13 @@
   background-color: #EEEEEE;
 }
 
+.color-gray10 {
+  color: #d8d8d8;
+}
+.bkg-gray10 {
+  background-color: #d8d8d8;
+}
+
 .color-grayBG {
   color: #F5F5F5;
 }
