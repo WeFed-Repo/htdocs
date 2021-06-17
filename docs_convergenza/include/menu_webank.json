@@ -535,6 +535,38 @@
 		"hidden-nav": true,
 		"voices": [
 			{
+				"nome": "Documenti",
+				"voices": [
+					{
+						"nome": "Contratti e proposte",
+						"voices" : [
+							{
+								"nome": "Firma",
+								"html": "vr",
+								"tpl": "tpl_documenti_firma.php"
+							},
+							{
+								"nome": "Conferma e riepilogo",
+								"html": "vr",
+								"tpl": "tpl_documenti_conferma.php"
+							},
+							{
+								"nome": "Stati e Casistiche",
+								"html": "vr",
+								"inlavorazione": true,
+								"tpl": "tpl_documenti_stati_e_casistiche.php"
+							},
+							{
+								"nome": "Archivio",
+								"html": "vr",
+								"inlavorazione": true,
+								"tpl": "tpl_documenti_archivio.php"
+							}
+						]
+					}
+				]
+			},
+			{
 				"nome": "Assistente virtuale",
 				"tpl": "link_va.php"
 			},

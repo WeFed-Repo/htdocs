@@ -135,7 +135,7 @@
                         <div class="form-field-input">
                             <label class="control-label">Inserisci la Password che usi per accedere al sito</label>
                             <div class="row">
-                                <div class="col-xs-12 col-sm-12">
+                                <div class="col-xs-12 col-sm-12 no-label">
                                     <!-- Esempio campo password -->
                                     <div class="form-field password-toggle">
                                         <input type="password" value="" id="txtPasswordFisico" name="" autocomplete="off" class="form-control">

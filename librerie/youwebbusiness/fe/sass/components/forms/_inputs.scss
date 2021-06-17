@@ -71,7 +71,7 @@ label[for] {
   cursor: pointer;
 }
 
-select {
+select, .select-custom-el {
   &.form-control,
   &.form-control:not([size]):not([multiple]) {
     height: $inputHeight;
@@ -82,14 +82,25 @@ select {
     user-select: none;
     -ms-user-select: none;
     &[disabled] {
-      background-image: url(../img/form_select_disabled.gif);
+      background-image: url(../img/form_select_disabled.gif); 
     }
   }
   &::-ms-expand {
     display: none;
   }
 }
-
+/* finte select */
+.select-custom {
+  position: relative;
+  /*&-options-wrapper {
+    display: none;
+  }
+  &.opened {
+    .select-custom-options-wrapper {
+      display: block;
+    }
+  }*/
+}
 // FILE
 input[type="file"].form-control {
   display:none;

@@ -358,3 +358,23 @@
    
     .box-type {margin-bottom:15px}
 } 
+
+/* nuovo alert contestuale*/
+.box-alert-inline {
+    text-align: center;
+    .box-alert-inline-text {
+        text-transform: uppercase;
+    }
+    .box-alert-inline-esito {
+        color:#edb54d;
+        font-weight: bold;
+    }
+    &.warning {
+        .box-alert-inline-esito .icon {
+            margin-bottom: 20px;
+            font-size: 25px;
+            font-weight: normal;
+            color:#edb54d;
+        }
+    }
+}
