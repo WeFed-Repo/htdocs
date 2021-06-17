@@ -11649,6 +11649,11 @@ div.select-content select:active {
   min-height: 51px;
   margin-bottom: 14px;
 }
+.pract-toggle .ellips {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .pract-toggle .right-space {
   padding-right: 60px;
   position: relative;
