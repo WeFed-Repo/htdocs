@@ -553,11 +553,13 @@
 							{
 								"nome": "Stati e Casistiche",
 								"html": "vr",
+								"inlavorazione": true,
 								"tpl": "tpl_documenti_stati_e_casistiche.php"
 							},
 							{
 								"nome": "Archivio",
 								"html": "vr",
+								"inlavorazione": true,
 								"tpl": "tpl_documenti_archivio.php"
 							}
 						]
