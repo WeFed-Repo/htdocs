@@ -143,6 +143,13 @@
   background-color: #EEEEEE;
 }
 
+.color-gray10 {
+  color: #d8d8d8;
+}
+.bkg-gray10 {
+  background-color: #d8d8d8;
+}
+
 .color-grayBG {
   color: #F5F5F5;
 }
@@ -4043,7 +4050,7 @@ label[for] {
   cursor: pointer;
 }
 
-select.form-control, select.form-control:not([size]):not([multiple]), .select-custom-el.form-control, .select-custom-el.form-control:not([size]):not([multiple]) {
+select.form-control, select.form-control:not([size]):not([multiple]), .select-custom-option-el.form-control, .select-custom-option-el.form-control:not([size]):not([multiple]) {
   height: 44px;
   background: #F5F5F5 url(../img/form_select.gif) no-repeat right center;
   appearance: none;
@@ -4052,24 +4059,40 @@ select.form-control, select.form-control:not([size]):not([multiple]), .select-cu
   user-select: none;
   -ms-user-select: none;
 }
-select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled], .select-custom-el.form-control[disabled], .select-custom-el.form-control:not([size]):not([multiple])[disabled] {
+select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled], .select-custom-option-el.form-control[disabled], .select-custom-option-el.form-control:not([size]):not([multiple])[disabled] {
   background-image: url(../img/form_select_disabled.gif);
 }
-select::-ms-expand, .select-custom-el::-ms-expand {
+select::-ms-expand, .select-custom-option-el::-ms-expand {
   display: none;
 }
 
 /* finte select */
 .select-custom {
   position: relative;
-  /*&-options-wrapper {
-    display: none;
-  }
-  &.opened {
-    .select-custom-options-wrapper {
-      display: block;
-    }
-  }*/
+}
+.select-custom a.select-custom-option-el {
+  text-decoration: none;
+  color: #737373;
+}
+.select-custom .dropdown-toggle::after {
+  border: 0;
+}
+.select-custom .dropdown-toggle.select-custom-option-el:not(.btn) {
+  padding-top: 10px;
+}
+.select-custom .dropdown-menu {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0;
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+}
+.select-custom .dropdown-menu .select-custom-option {
+  padding: 8px;
+  cursor: pointer;
+}
+.select-custom .dropdown-menu .select-custom-option.option-selected, .select-custom .dropdown-menu .select-custom-option:hover {
+  background-color: #d8d8d8;
 }
 
 input[type=file].form-control {
