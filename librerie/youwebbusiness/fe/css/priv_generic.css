@@ -4043,7 +4043,7 @@ label[for] {
   cursor: pointer;
 }
 
-select.form-control, select.form-control:not([size]):not([multiple]) {
+select.form-control, select.form-control:not([size]):not([multiple]), .select-custom-el.form-control, .select-custom-el.form-control:not([size]):not([multiple]) {
   height: 44px;
   background: #F5F5F5 url(../img/form_select.gif) no-repeat right center;
   appearance: none;
@@ -4052,11 +4052,24 @@ select.form-control, select.form-control:not([size]):not([multiple]) {
   user-select: none;
   -ms-user-select: none;
 }
-select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled] {
+select.form-control[disabled], select.form-control:not([size]):not([multiple])[disabled], .select-custom-el.form-control[disabled], .select-custom-el.form-control:not([size]):not([multiple])[disabled] {
   background-image: url(../img/form_select_disabled.gif);
 }
-select::-ms-expand {
+select::-ms-expand, .select-custom-el::-ms-expand {
   display: none;
+}
+
+/* finte select */
+.select-custom {
+  position: relative;
+  /*&-options-wrapper {
+    display: none;
+  }
+  &.opened {
+    .select-custom-options-wrapper {
+      display: block;
+    }
+  }*/
 }
 
 input[type=file].form-control {
