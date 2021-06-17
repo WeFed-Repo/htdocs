@@ -476,6 +476,10 @@ span {
     }
 }
 
+p.note.to-right {
+    text-align: right;
+}
+
 .lineHeightBig {
     line-height: 40px;
 }
@@ -1428,5 +1432,106 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     } 
     .box-inline p {
         text-transform: uppercase;
+    }
+}
+
+
+/* ## Elementi FIRMA ## */
+/* # Linked Icon */
+.linked-icon {
+    .icon {
+        color: #6f8f0a;
+        font-size:18px;
+    }
+    &.disabled .icon {
+        color: #EBEDEE;
+        cursor: default;
+    }
+}
+/* Titoletto con index container */
+.titleIndexContainer {
+    display:inline-block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    margin-bottom: 10px;
+    span {
+        font-size: 18px;
+    }
+    &.smaller {
+        font-size: 12px;
+        span {
+            font-size: 14px;
+        }
+    } 
+}
+
+/* Titolo di documento sulla destra */
+.documentTitleContainer {
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    margin: 0px;
+    display: block;
+}
+
+.esito-inline {
+    position: relative;
+    min-height: 30px;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    clear:both;
+    .esito-text {
+        font-size: 16px;
+        padding:0 0  0 47px;
+    }
+    .icon {
+        color:#6f8f0a;
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        // Solo per WB - VRF
+        top: -14px;
+    }
+    .iconBig {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .esito-inline {
+        .icon {height:30px;}
+        .esito-text {font-size:14px; padding-left:40px; line-height:18px;}
+    }   
+}
+
+// BULLET SPECIFIC 
+.bullet-wrapper {
+    position:relative; 
+    display:inline-block; 
+    height:30px; 
+    width:30px;
+    .bullet {
+        position:absolute; 
+        width:10px; 
+        height: 10px; 
+        left:11px; 
+        top: 8px; 
+        background-color:#00a11a; 
+        border-radius:5px;
+        z-index:1;
+    }
+    .bullet-route {
+        position:absolute; 
+        width:2px; 
+        height: 40px; 
+        left:15px; 
+        top: -30px; 
+        background-color:#00a11a;
     }
 }
