@@ -11641,6 +11641,16 @@ div.select-content select:active {
     white-space: normal!important;
   }
 }
+/* # All Accords Header */
+.header-col {
+  display: block;
+}
+.header-col.right-space {
+  padding-right: 60px;
+}
+.header-col.right-space .row .col-sm-4:first-child h3 {
+  padding-left: 25px;
+}
 .pract-toggle.row.boxed {
   border: 1px solid #c1c1c1;
   padding-top: 8px;

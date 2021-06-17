@@ -202,6 +202,78 @@
   font-size: 128px;
 }
 /* SEZIONE KIT FONTS */
+.icon-carta_aggiuntiva_grid64-o:before {
+  content: "\e935";
+}
+.icon-massimali_elevati_grid64-o:before {
+  content: "\ea29";
+}
+.icon-check_ok_big_new:before {
+  content: "\ea2a";
+}
+.icon-big-compra_vendi:before {
+  content: "\e90c";
+}
+.icon-edit_table:before {
+  content: "\e926";
+}
+.icon-zoom_in_table_filled:before {
+  content: "\e96d";
+}
+.icon-helpcenter:before {
+  content: "\e9b2";
+}
+.icon-sicurezza_desktop:before {
+  content: "\e9db";
+}
+.icon-sicurezza_mobile:before {
+  content: "\e9dc";
+}
+.icon-atm:before {
+  content: "\ea4d";
+}
+.icon-online2:before {
+  content: "\ea4e";
+}
+.icon-telephone:before {
+  content: "\ea4f";
+}
+.icon-transfer:before {
+  content: "\ea50";
+}
+.icon-cat_beni:before {
+  content: "\ea3f";
+}
+.icon-cat_telecomunicazioni:before {
+  content: "\ea48";
+}
+.icon-reload:before {
+  content: "\eac8";
+}
+.icon-assistenza_telefono:before {
+  content: "\eac7";
+}
+.icon-ico_alert_non_disponibile:before {
+  content: "\eac6";
+}
+.icon-cellulare_outline:before {
+  content: "\eac4";
+}
+.icon-operatore:before {
+  content: "\eac5";
+}
+.icon-alert_outline:before {
+  content: "\eac3";
+}
+.icon-trash_outline:before {
+  content: "\eac1";
+}
+.icon-cellulare_big:before {
+  content: "\eac2";
+}
+.icon-ico_cmb_outline:before {
+  content: "\eac0";
+}
 .icon-ico_check:before {
   content: "\eabb";
 }
@@ -219,9 +291,6 @@
 }
 .icon-ico_cmb_fill:before {
   content: "\eab6";
-}
-.icon-ico_cmb_outline:before {
-  content: "\eac0";
 }
 .icon-ico_cmb_outline_small:before {
   content: "\eaad";
@@ -1354,51 +1423,6 @@
 .icon-zoom_small:before {
   content: "\ea3d";
 }
-.icon-carta_aggiuntiva_grid64-o:before {
-  content: "\e935";
-}
-.icon-massimali_elevati_grid64-o:before {
-  content: "\ea29";
-}
-.icon-check_ok_big_new:before {
-  content: "\ea2a";
-}
-.icon-big-compra_vendi:before {
-  content: "\e90c";
-}
-.icon-edit_table:before {
-  content: "\e926";
-}
-.icon-zoom_in_table_filled:before {
-  content: "\e96d";
-}
-.icon-helpcenter:before {
-  content: "\e9b2";
-}
-.icon-sicurezza_desktop:before {
-  content: "\e9db";
-}
-.icon-sicurezza_mobile:before {
-  content: "\e9dc";
-}
-.icon-atm:before {
-  content: "\ea4d";
-}
-.icon-online2:before {
-  content: "\ea4e";
-}
-.icon-telephone:before {
-  content: "\ea4f";
-}
-.icon-transfer:before {
-  content: "\ea50";
-}
-.icon-cat_beni:before {
-  content: "\ea3f";
-}
-.icon-cat_telecomunicazioni:before {
-  content: "\ea48";
-}
 .icon-ascend:before {
   content: "\ea95";
 }
@@ -1548,24 +1572,6 @@
 }
 .icon-reduce_toolbox:before {
   content: "\ea22";
-}
-.icon-trash_outline:before {
-  content: "\eac1";
-}
-.icon-cellulare_big:before {
-  content: "\eac2";
-}
-.icon-alert_outline:before {
-  content: "\eac3";
-}
-.icon-cellulare_outline:before {
-  content: "\eac4";
-}
-.icon-operatore:before {
-  content: "\eac5";
-}
-.icon-ico_alert_non_disponibile:before {
-  content: "\eac6";
 }
 .glyph-ico_cmb_badge .path1:before {
   content: "\e967";
