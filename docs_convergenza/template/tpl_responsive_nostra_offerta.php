@@ -40,6 +40,15 @@ resizeTab('secondTab2',0);
 </script>
 
 <h2>La nostra offerta</h2>
+
+<!-- BANNER DINAMICO -->
+<div id="dynBanner" class="loading"></div>
+<script type="text/javascript">
+    $(function() { $.getScript("/common/fe/js/banner_dinamico.js?rel="+Math.random())});
+</script>
+<!-- FINE BANNER DINAMICO -->
+
+
 <!--TOP BANNER VIA CONTENT IMG RESPONSIVE RIDIMENSIONABILE -->
 <div class="topbanner">
 	<a href="#"><img src="/wscmn/fe/img/placeholder_banner.png" alt="" title="" class="img-resp"></a>
