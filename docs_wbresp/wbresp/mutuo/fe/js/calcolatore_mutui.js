@@ -573,7 +573,8 @@ function mGetData()
 			var mPromoGreen = $("<div>").addClass("promo-msg").append(
 					$("<h3>").html("GREEN"),
 					$("<div>").addClass("boxed").append(
-						$("<p>").html("Ricorda che se migliori l'efficienza energetica della tua abitazione puoi ottenere uno sconto sul tasso.")
+						$("<p>").html("Per tutta la durata del mutuo, grazie al fattore \"green\" <strong>puoi ottenere uno sconto sul tasso</strong>: ti basta effettuare in qualsiasi momento interventi di riqualificazione energetica sull'immobile di tua propriet&agrave;. Per beneficiare dello <strong>sconto sul tasso</strong> di interesse hai due opzioni, ridurre i consumi di almeno il 30%* oppure aumentare di due classi la valutazione energetica della tua abitazione."),
+						$("<p>").addClass("note").html("* La riduzione dei consumi &egrave; misurata come variazione dell'Indice di Prestazione Energetica non rinnovabile Globale tra Attestato di Prestazione Energetica rilevato prima e post lavori.")
 						)
 					);
 
@@ -700,8 +701,7 @@ function mGetData()
 							"- Imposta sostitutiva: <span class=\"nowrap\">"+ mutuo.imposta + " &euro;</span> " + 						
 							"- Costo totale del credito: <span class=\"nowrap\">"+ mutuo.costototcred + " &euro;</span> " + 
 							"- Importo totale dovuto dal Consumatore: <span class=\"nowrap\">"+ mutuo.imptotcons +" &euro;</span>"),
-							$("<p>").addClass("nota").html("* Per il calcolo del TAEG &egrave; stata utilizzata una delle polizze collocate dal Gruppo Banco BPM.")
-
+							$("<p>").addClass("nota").html("* Per il calcolo del TAEG &egrave; stata utilizzata una delle polizze collocate dal Gruppo Banco BPM. E' possibile sottoscrivere una polizza incendio e scoppio presso qualsiasi Compagnia assicurativa, con vincolo a favore della Banca.")
 							);
 						// Fine blocco tassi 
 						if (!isDetail) {

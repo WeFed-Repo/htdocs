@@ -453,6 +453,7 @@ label.error { position: absolute;
 .promo-msg h3 {text-transform:uppercase;margin-bottom:3px;}
 .promo-msg .boxed {background:#e8e8e8;padding:10px;}
 .promo-msg .boxed p {margin:0;padding:0;font-size:14px;}
+#mCalcStatic .promo-msg .boxed p.note {margin:0;padding:5px 0;font-size:13px; color:#666;font-style:italic}
 .Surroga .promo-msg {display:none;}
 
 /* Media queries smartphone portrait*/
