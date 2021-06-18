@@ -3624,4 +3624,9 @@ ul.bullet-spunta li .icon {
     width: 40%;
   }
 }
+@media (min-width: 768px) {
+  .btn.btn-no-label.btn-inline {
+    margin-top: 25px;
+  }
+}
 /*# sourceMappingURL=webank_skin.css.map */

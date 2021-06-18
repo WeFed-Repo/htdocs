@@ -2424,3 +2424,110 @@ table .table-btn-more {
 .font-table, .font-table .header-col .titleSection {
     font-size:14px;
 }
+
+// NUOVA TABELLA BST
+.bootstrap-table tbody tr.odd td {background:#eaeded}
+.bootstrap-table .th-inner.sortable {cursor: pointer;
+    background: url(/WB/fe/img/icon_sort_none.png) 0 13px no-repeat;
+    padding-left:15px;
+    display:inline-block;
+    min-height:20px;
+}
+.bootstrap-table .th-inner.sortable.asc {background-image: url(/WB/fe/img/icon_sort_asc.png)}
+.bootstrap-table td {vertical-align:middle;}
+.bst thead tr th {vertical-align:middle !important;padding: 0 10px;}
+.bootstrap-table .center {text-align:center}
+.bootstrap-table .th-inner.sortable.desc {background: url(/WB/fe/img/icon_sort_desc.png) 0 12px no-repeat}
+.bst-pagination {
+    .pagination-detail {
+        display:none
+    }
+    .pagination-info .label-group {display:none}
+    .pagination {
+        width:100%;text-align:center;
+        ul {
+            display:inline-block;text-align:center;list-style-type:none !important;
+            li {
+                text-align:center;margin:0 5px;display:inline-block;
+                a {display:inline-block;width:20px;height:20px;text-align:center;}
+                &.page-number {
+                    display:none
+                    .active {
+                        display:inline-block
+                        a {font-weight:bold; width:auto; cursor:default; text-decoration:none !important}
+                    } 
+                }
+                &.page-first a, &.page-pre a, &.page-next a, &.page-last a {border-radius: 50%; background-color: #6f8f0a; color:#fff; font-size:20px;line-height:20px;vertical-align:center;}
+                &.disabled a {background-color:#ccc;opacity:0.5}
+                &.page-first, &.page-last {display:none}
+            }
+        }
+        .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
+        .page-pre .icon, .page-next .icon {width:20px; font-size: 14px;line-height: 20px;}
+    }
+}
+
+
+/* Tabella di bootstrap versione "nuova" */
+.bst {
+    tbody tr td {padding: 15px 10px}
+    .detail-row {
+        td {padding-top:15px;border-top: none !important;}
+        div.loading {min-height:100px}
+    }
+    tr.no-records-found td {background: #eaeded}
+    /* Trattamento text-with-icon */
+    .padding-text-with-icon {
+        padding-left:35px;
+    }
+    .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
+    .text-with-icon {
+        line-height:16px;
+        min-height:20px;
+        // Correttivo icone spaziate
+        padding-left: 32px;
+        .sub-text {font-size:11px; font-weight: normal !important}
+    }
+    .accordion-title {padding-bottom:10px;}
+    /* Formattazioni per card-view (default 50% larghezza) */
+    &.is-card-view {
+        tr.no-records-found td {
+            padding:15px 8px
+        }
+        tr td {padding:15px 10px 0;}
+        tr.detail-view-opened td {border-bottom: none !important}
+        tr.detail-row td {border-bottom: solid 1px #ccc !important}
+        tr.detail-row td.padding-text-with-icon {padding-left:35px;}
+    }
+    .card-view  {
+        display: inline-block; width: 50%; text-align:left;padding:0;margin:0 0 15px; vertical-align:top;
+        .title, .value {display:block;text-align:left;width:100%;padding:0;margin:0;}
+        .value {font-weight:bold; padding-right:5px;}
+        &.padding-text-with-icon, .padding-text-with-icon {padding-left:25px;}
+        &.card-view-notitle .title {display:none}
+        // Correttivo WB
+        .text-with-icon .icon {
+            line-height: 20px;
+        }
+    }
+    .card-view-full {width:100%}
+    .detail-view-opened:not(.detail-row) {border-bottom:0 none !important}
+    .th-inner .inline-icon {
+        display: inline-block;
+        height: 20px;
+        margin-top: 0;
+        margin-left: 5px;
+        vertical-align: middle;
+        .icon {line-height:14px;margin-top:1px}
+    }
+}
+
+table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) td, table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) th {
+    border:1px solid #ccc!important;
+    border-left:0!important;
+    border-top:0!important;
+}
+
+table.bst td, table.bst th, .table.bst > thead > tr > th, .table.bst > tbody > tr > td {
+    font-size: 12px;
+}

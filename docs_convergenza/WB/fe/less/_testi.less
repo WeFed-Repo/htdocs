@@ -526,6 +526,24 @@ p.note.to-right {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    p.note.to-right{
+        text-align: center;
+    }
+    
+    .mobile-reverse{
+        display:flex;  
+        flex-direction:column-reverse;
+    }
+
+    .ellips{
+        width: 100%;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+    }
+}
+
 .noMargin {
     margin: 0
 }
