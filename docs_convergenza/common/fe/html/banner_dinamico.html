@@ -1,7 +1,23 @@
 <style>
-.dyn-banner {width:100%;height:200px;display:inline-block; background:#eee;border-radius:5px;}
-
+.dyn-banner {width:100%;min-height:150px;display:inline-block; background:#eee;border-radius:5px;}
+.dyn-banner img {float:left; width:300px;}
+.dyn-banner .dyn-banner-text {padding:15px;display:inline-block;max-width: calc(100% - 300px)}
 </style>
 <div class="dyn-banner">
-    CONTENUTO DEL BANNER DINAMICO
+    <!-- Immagine -->
+    <img src="/common/fe/img/banner_dinamico_cruscotto.jpg" />
+    <!-- Testo -->
+    <div class="dyn-banner-text">
+        <h4>FONDI PATRIMONIO PERSONAL</h4>
+        <p>Anche in questo momento il mondo del risparmio gestito si arricchisce di nuove opportunit&agrave; di investimento. Infatti entrano nel nostro catalogo Online una nuova gamma di fondi, denominati <strong>Patrimonio Personal</strong> e studiati da Anima appositamente per la clientela di BancoBPM.<br><br>
+        Naviga sul sito dedicato e scopri il fondo che meglio si addice alle tue necessit&agrave;.
+        </p>
+        <div class="form-group btnWrapper clearfix">
+            <div class="btn-align-right">
+              <div>
+                <a type="button" href="#" class="btn btn-primary" title="lorem ipsum">lorem ipsum</a>
+              </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -10150,4 +10150,4 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 }
 
 /* Banner dinamico */
-#dynBanner {min-height:150px;width:100%;margin-bottom:15px;}
+#dynBanner {min-height:150px;width:100%;margin-bottom:15px;clear:both;display:block;}
