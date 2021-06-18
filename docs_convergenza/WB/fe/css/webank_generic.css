@@ -11916,6 +11916,40 @@ div.select-content select:active {
     padding: 11px 10px 7px 10px;
   }
 }
+/* Mobile switchable "mobile-switchable-consolees: filtri" */
+.mobile-switchable-console {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile-switchable {
+    margin-bottom: 15px;
+  }
+  .mobile-switchable-toggler {
+    margin-top: -10px;
+  }
+  .mobile-switchable .closer {
+    display: none;
+  }
+  .mobile-switchable-console {
+    display: block;
+  }
+  .mobile-switchable-form {
+    display: none;
+  }
+  .mobile-switchable.opened .closer {
+    display: inline-block;
+  }
+  .mobile-switchable.opened .opener {
+    display: none;
+  }
+  .mobile-switchable.opened .mobile-switchable-form {
+    display: block;
+    padding-right: 45px;
+  }
+  .mobile-switchable.opened .mobile-switchable-form .btnWrapper .btn-align-left:last-child:first-child {
+    width: 100%;
+  }
+}
 /* Box linee vincolate */
 #boxTabLineeVincolateWrap {
   width: 100%;
@@ -12389,6 +12423,12 @@ div.select-content select:active {
 }
 body.fhw-opened {
   overflow-y: hidden;
+}
+/*overlayer info */
+.text-info h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
 }
 /*box di selezione per bonifici */
 .box-type-wrapper {
@@ -14969,5 +15009,14 @@ body.modal-print > .modal-print-content {
   .select-periodo-switch input[type="text"] {
     margin-bottom: 0!important;
   }
+}
+/* Classi generiche css per determinare comportamenti di aperture/chiusure */
+.opened-visible,
+.opened .opened-hidden {
+  display: none;
+}
+.opened-hidden,
+.opened .opened-visible {
+  display: block;
 }
 /*# sourceMappingURL=webank_generic.css.map */

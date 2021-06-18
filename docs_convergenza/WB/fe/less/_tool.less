@@ -6158,3 +6158,23 @@ div.select-content select {
         padding: 11px 10px 7px 10px;
     }
 }
+
+/* Mobile switchable "mobile-switchable-consolees: filtri" */
+.mobile-switchable-console {display:none;} 
+@media (max-width: 767px) {
+    .mobile-switchable {
+        margin-bottom:15px;
+        &-toggler {margin-top:-10px;}
+        .closer {display:none;}
+        &-console {display:block;}
+        &-form {display:none}
+        &.opened{
+            .closer {display: inline-block}
+            .opener {display: none;}
+            .mobile-switchable-form {
+                display:block; padding-right:45px;
+                .btnWrapper .btn-align-left:last-child:first-child {width:100%}
+            }
+        }
+    }
+}
