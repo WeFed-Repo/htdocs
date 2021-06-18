@@ -4070,9 +4070,19 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
 .select-custom {
   position: relative;
 }
-.select-custom a.select-custom-option-el {
+.select-custom .checkbox.form-check-inline {
+  padding-top: 0;
+}
+.select-custom a.select-custom-option-el, .select-custom .select-custom-option a {
   text-decoration: none;
   color: #737373;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+.select-custom a.select-custom-option-el label, .select-custom .select-custom-option a label {
+  margin-bottom: 0;
+  width: 100%;
 }
 .select-custom .dropdown-toggle::after {
   border: 0;
@@ -4086,6 +4096,7 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   margin: 0;
   border-radius: 0 0 3px 3px;
   border-top: 0;
+  background-color: #F5F5F5;
 }
 .select-custom .dropdown-menu .select-custom-option {
   padding: 8px;
@@ -4093,6 +4104,27 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
 }
 .select-custom .dropdown-menu .select-custom-option.option-selected, .select-custom .dropdown-menu .select-custom-option:hover {
   background-color: #d8d8d8;
+}
+.select-custom.show .form-control.dropdown-toggle {
+  background-image: url(../img/form_select_opened.gif);
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option {
+  padding: 0px 3px 5px 3px;
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option.option-selected {
+  background-color: transparent;
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option.option-selected:hover {
+  background-color: #d8d8d8;
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox {
+  padding-left: 32px;
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox input:checked + label::before {
+  border-color: #2F9988;
+}
+.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox label {
+  cursor: pointer;
 }
 
 input[type=file].form-control {

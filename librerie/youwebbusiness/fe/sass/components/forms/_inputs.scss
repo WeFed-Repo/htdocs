@@ -88,13 +88,27 @@ select, .select-custom-option-el {
   &::-ms-expand {
     display: none;
   }
+  
 }
+
+
 /* finte select */
 .select-custom {
   position: relative;
-  a.select-custom-option-el {
+  .checkbox.form-check-inline {
+    padding-top: 0;
+  }
+  a.select-custom-option-el, .select-custom-option a {
     text-decoration: none;
     color:$gray2;
+    width: 100%;
+    display: block;
+    cursor:pointer;
+    
+    label {
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
   .dropdown-toggle{
     &::after {
@@ -102,25 +116,52 @@ select, .select-custom-option-el {
     }
     &.select-custom-option-el:not(.btn) {
       padding-top:10px;
+      
     }
   }
   
-  .dropdown-menu {
+  .dropdown-menu { 
      width:100%!important;
      max-width: none!important;
      margin:0;
      border-radius: 0 0 3px 3px;
      border-top:0;
-    .select-custom-option {
+     background-color: $grayBG;
+     .select-custom-option {
       padding:8px;
-      cursor:pointer;
+      cursor: pointer;
       &.option-selected, &:hover{
         background-color: $gray10;
       }
-    }
-    
+      
+     }
   }
-  
+  &.show {
+    .form-control.dropdown-toggle{
+        background-image:url(../img/form_select_opened.gif);
+    }
+  }
+  &[data-checkbox] {
+    .dropdown-menu {
+      .select-custom-option {
+        padding:0px 3px 5px 3px;
+        &.option-selected {
+          background-color: transparent;
+          &:hover {
+            background-color: $gray10;
+          }
+        }
+        .form-check-inline.checkbox {
+          padding-left:32px;
+          
+          input:checked + label::before {
+            border-color: $greenLink;
+          }
+          label { cursor: pointer;}
+        }
+      }
+    }
+  }
 }
 // FILE
 input[type="file"].form-control {

@@ -5,15 +5,29 @@
     <div class="form-row">
       <div class="form-group col-sm-4">
         <label class="control-label">Select normal</label>
+        <!- aggiugere classe disabled e attributo disabled per select disabilitata-->
+        <!- attributi select normale name/id/data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
         <div class="dropdown select-custom" name="sc" id="sc"></div>
       </div>
       <div class="form-group col-sm-4">
         <label class="control-label">Select con checkbox</label>
-        <div class=" dropdown select-custom" name="scCheckbox" id="scCheckbox" data-checkbox=true data-placeholder="Seleziona.."></div>
+        <!- attributi select con checkbox: 
+          name
+          id
+          data-checkbox=true (ne determina la tipologia)
+          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+        -->
+        <div class=" dropdown select-custom" name="scCheckbox" id="scCheckbox" data-checkbox=true data-placeholder="Seleziona"></div>
       </div>
       <div class="form-group col-sm-4">
         <label class="control-label">Select bottone funzionale</label>
-        <div class=" dropdown select-custom" name="scBtn" id="scBtn" data-btn=true data-placeholder="Operazioni massive"></div>
+        <!- attributi select con checkbox: 
+          name
+          id
+          data-btn=true (ne determina la tipologia)
+          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+        -->
+        <div class=" dropdown select-custom" name="scBtn" id="scBtn" data-btn=true data-placeholder="lorem ipsum"></div>
       </div>
     </div>
 </form>
@@ -34,34 +48,38 @@
               {
                 "id": 1,
                 "text": "Option 1",
-                "value": "1",
-                "selected": false
+                "value": "1"
               },
               {
                 "id": 2,
                 "text": "Option 2",
-                "value": "2",
-                "disabled": true
+                "value": "2"
+               
               },
               {
                 "id": 3,
                 "text": "Option 3",
-                "value": "3",
-                "disabled": true
+                "value": "3"
+               
               }
         ]
         var dataOptionsCheckSelect =  [
               {
+                "id": 0,
+                "text": "Seleziona tutti",
+                "value": "all" //importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
+                
+              },
+              {
                 "id": 1,
                 "text": "Option 1",
-                "value": "1",
-                "selected": false
+                "value": "1"
+                
               },
               {
                 "id": 2,
                 "text": "Option 2",
-                "value": "2",
-                "disabled": true
+                "value": "2"
               }
         ]
         var dataOptionsBtn =  [
@@ -74,8 +92,8 @@
               {
                 "id": 2,
                 "text": "Option 2",
-                "value": "2",
-                "disabled": true
+                "value": "2"
+                
               }
         ]
       
