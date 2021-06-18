@@ -344,7 +344,26 @@ dl, .list {
           font-size: 26px;
       }
   }
+  &-inline {
+    position: relative;
+    .icon {
+       float:none;
+    }
+    &.right-icon{
+      padding-right:30px;
+     .icon {
+        position:absolute;
+        right:0;
+        top:0;
+        left:auto;
+        margin:0;
+        float: none!important;
+     }
+    }
+  }
 }
+
+
 // End Text-Width-Icon
 
 .text-with-squared {
@@ -451,6 +470,9 @@ td.ellipsed {
 }
 .font-size-16 {
   font-size: 16px;
+}
+.font-size-small {
+  font-size: 12px;
 }
 .overflow-hidden {
   overflow: hidden !important;

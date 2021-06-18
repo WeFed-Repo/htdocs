@@ -12681,7 +12681,7 @@ body.fhw-opened {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px #e4e4e4;
+  box-shadow: 0px 0px 15px rgb(228 228 228);
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,
@@ -12793,6 +12793,36 @@ i.css-square {
 }
 .has-error i.css-square {
   border-color: #f16875;
+}
+.dyn-banner {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+}
+.dyn-banner img {
+  width: 300px;
+  height: 100%;
+}
+.dyn-banner .dyn-banner-text {
+  border: 1px solid #ccc;
+  padding: 15px;
+  display: inline-block;
+  max-width: calc(100% - 300px);
+}
+.dyn-banner p.note {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .dyn-banner {
+    display: block;
+    width: 100%;
+  }
+  .dyn-banner img,
+  .dyn-banner .dyn-banner-text {
+    width: 100%;
+    max-width: none;
+  }
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
