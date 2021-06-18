@@ -19,6 +19,27 @@
         font-size:22px;
         color:#333;
     }
+
 /* Classi per trasformare i dati visualizzati  */
 .graph-space .amcharts-axis-label.selected {font-weight:bold;fill:#097562;}
 .graph-space .amcharts-graph-column.previsione {opacity:0.2}
+
+/* Colori */
+.bgcolor-entrate {background-color:#2f9988}
+.bgcolor-uscite {background-color:#c84757}
+
+/* Legenda */
+.legenda-voice {position:relative;width:auto; max-width:100%;padding-left:28px;}
+.legenda-voice .legenda-dot {width:18px;height:18px;border-radius:4px;position:absolute;left:0;top:2px;}
+.legenda-voice.big .legenda-dot {top:4px}
+.legenda-voice.big .legenda-label {font-size:18px;}
+
+/* Grandezze "dedicate" */
+.graph-total span.total {font-weight:bold;font-size:18px;display:block;}
+.graph-total span.sub {font-size:12px;clear:both; line-height:16px;display:block;color:#737373}
+
+/* Declinazioni grafico specifico */
+.entrate #legUscite {opacity:0.3} 
+.entrate .amcharts-graph-uscite {opacity:0.5} 
+.uscite #legEntrate {opacity:0.3}
+.uscite .amcharts-graph-entrate {opacity:0.5} 

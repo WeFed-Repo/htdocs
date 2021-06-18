@@ -1372,6 +1372,19 @@ ol.sotto-elenco ol li {
   width: 100%;
   margin-right: 0;
 }
+.list-icon-wrapper.more-spaced .text-with-icon {
+  padding-left: 35px;
+  margin-bottom: 25px;
+}
+.list-icon-wrapper .mode-input {
+  display: none;
+}
+.list-icon-wrapper.mode-input .mode-output {
+  display: none;
+}
+.list-icon-wrapper.mode-input .mode-input {
+  display: block;
+}
 .list-icon-wrapper.to-right {
   text-align: right;
 }
@@ -1472,6 +1485,10 @@ ol.sotto-elenco ol li {
 .text-with-icon .image-icon.v-centered {
   top: calc(50% - 10px);
 }
+.text-with-icon .icon-inline {
+  position: relative;
+  margin: -2px 0 0 8px;
+}
 .text-with-icon *[aria-expanded=false] .icon-arrow_up {
   display: none;
 }
@@ -1482,6 +1499,16 @@ ol.sotto-elenco ol li {
 }
 .text-with-icon *[aria-expanded=true] .icon-arrow_down {
   display: none;
+}
+.text-with-icon .twi-checkbox {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+.text-with-icon .twi-checkbox:active,
+.text-with-icon .twi-checkbox:active,
+.text-with-icon .twi-checkbox:hover {
+  outline: 0 none;
 }
 .text-with-icon .dark {
   color: #000;
@@ -1533,6 +1560,9 @@ ol.sotto-elenco ol li {
   background-size: 100%;
   width: 30px;
   height: 30px;
+}
+.image-icon.stato-neutro {
+  background: url("/common/fe/img/icon-stato-neutro.png");
 }
 /* spostato per risoluzioni intermedie*/
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -1636,6 +1666,12 @@ ol.sotto-elenco ol li {
   margin: 0px;
   display: block;
 }
+@media only screen and (max-width: 767px) {
+  .documentTitleContainer,
+  .no-mobile-label {
+    display: none;
+  }
+}
 .esito-inline {
   position: relative;
   min-height: 30px;
@@ -1669,6 +1705,13 @@ ol.sotto-elenco ol li {
     padding-left: 40px;
     line-height: 18px;
   }
+}
+/* Note */
+.no-mobile-label {
+  display: auto;
+}
+.no-underline {
+  text-decoration: none !important;
 }
 .bullet-wrapper {
   position: relative;
@@ -6648,6 +6691,11 @@ table tr td.td-fondo .fundName {
 .password-toggle.password-hide .toggle-pwd .icon-hide {
   display: inline-block;
   margin-top: 2px;
+}
+@media (max-width: 1023px) {
+  .password-toggle .toggle-pwd {
+    top: 0;
+  }
 }
 .dispayFlex {
   display: flex;
@@ -11684,11 +11732,29 @@ div.select-content select:active {
 .pract-toggle .text-with-icon a.no-underline {
   padding-left: 0;
 }
+.pract-toggle .center-wrapper {
+  text-align: center;
+}
+.pract-toggle .center-wrapper.green {
+  color: #00a11a;
+}
+.pract-toggle .center-wrapper.visible-desktop .glyph {
+  font-size: 34px;
+}
+.pract-toggle .light-red .icon {
+  color: #ffc199;
+}
+.pract-toggle .visible-mobile.wrapper-icon-left .glyph {
+  font-size: 24px;
+}
 .pract-toggle .linked-icon > a {
   text-decoration: none;
 }
 .pract-toggle-head .btn {
   min-width: 110px;
+}
+.row.boxed.pract-toggle.no-toggle {
+  padding-top: 15px;
 }
 /* # Accordion Content # */
 .accord-content {
@@ -11848,6 +11914,40 @@ div.select-content select:active {
   .pract-toggle-head .btn {
     min-width: 95px;
     padding: 11px 10px 7px 10px;
+  }
+}
+/* Mobile switchable "mobile-switchable-consolees: filtri" */
+.mobile-switchable-console {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile-switchable {
+    margin-bottom: 15px;
+  }
+  .mobile-switchable-toggler {
+    margin-top: -10px;
+  }
+  .mobile-switchable .closer {
+    display: none;
+  }
+  .mobile-switchable-console {
+    display: block;
+  }
+  .mobile-switchable-form {
+    display: none;
+  }
+  .mobile-switchable.opened .closer {
+    display: inline-block;
+  }
+  .mobile-switchable.opened .opener {
+    display: none;
+  }
+  .mobile-switchable.opened .mobile-switchable-form {
+    display: block;
+    padding-right: 45px;
+  }
+  .mobile-switchable.opened .mobile-switchable-form .btnWrapper .btn-align-left:last-child:first-child {
+    width: 100%;
   }
 }
 /* Box linee vincolate */
@@ -12272,12 +12372,63 @@ div.select-content select:active {
 /* Pdf */
 .pdf-container,
 .pdf-container iframe {
-  height: 500px;
+  height: 300px;
   width: 100%;
   border: 0 none;
 }
 .pdf-container iframe {
   border: solid 1px #cacaca;
+}
+/* Overlay documenti */
+.fhw-mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 62px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 62px);
+  background-color: #fff;
+}
+.fhw-mobile-overlay-header {
+  margin: 10px;
+  position: relative;
+  padding-right: 40px;
+  height: 30px;
+}
+.fhw-mobile-overlay-header .closer {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+}
+.fhw-mobile-overlay-content {
+  margin: 0;
+  height: calc(100% - 110px);
+  width: 100%;
+  overflow: scroll;
+}
+.fhw-mobile-overlay-content .pdf-container,
+.fhw-mobile-overlay-content .pdf-container iframe {
+  height: 100%;
+}
+.fhw-mobile-overlay-footer {
+  margin: 13px 15px 0;
+  height: 40px;
+}
+@media only screen and (max-width: 770px) {
+  .fhw-mobile-overlay {
+    display: block;
+  }
+}
+body.fhw-opened {
+  overflow-y: hidden;
+}
+/*overlayer info */
+.text-info h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
 }
 /*box di selezione per bonifici */
 .box-type-wrapper {
@@ -12371,6 +12522,37 @@ div.select-content select:active {
   font-size: 25px;
   font-weight: normal;
   color: #edb54d;
+}
+/* Acceptance element*/
+.accept-wrapper {
+  position: relative;
+  margin: 3px 0 10px;
+}
+.accept-wrapper .icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #6f8f0a;
+  cursor: pointer;
+}
+.accept-wrapper .text {
+  padding-left: 30px;
+  display: block;
+}
+.accept-wrapper.accepted .text {
+  font-weight: bold;
+}
+i.css-square {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #6f8f0a;
+  display: inline-block;
+}
+.has-error i.css-square {
+  border-color: #f16875;
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
@@ -14827,5 +15009,14 @@ body.modal-print > .modal-print-content {
   .select-periodo-switch input[type="text"] {
     margin-bottom: 0!important;
   }
+}
+/* Classi generiche css per determinare comportamenti di aperture/chiusure */
+.opened-visible,
+.opened .opened-hidden {
+  display: none;
+}
+.opened-hidden,
+.opened .opened-visible {
+  display: block;
 }
 /*# sourceMappingURL=webank_generic.css.map */

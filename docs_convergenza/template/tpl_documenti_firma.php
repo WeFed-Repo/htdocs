@@ -45,14 +45,14 @@
    <div id="pdfCont" class="pdf-container loading"></div>
     <script>
         // Inizializzazione del PDF
-        var pdfdoc = $("#pdfCont").pdf({url:"/template/statici/documento_prova.pdf"});
+        var pdfdoc = $("#pdfCont").pdf({url:"/template/statici/documento_prova_firmato.pdf"});
     </script>
 </section>
 <!-- Fine box pdf -->
 <form id="firmeForm">
     <!-- PDF per Mobile -->
     <div class="list-icon-wrapper ">
-        <div class="text-with-icon visible-xs marginBottomMedium"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova.pdf');"><span class="image-icon pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
+        <div class="text-with-icon visible-xs marginBottomMedium"><a href="javascript:;" onclick="showMobilePdf('/template/statici/documento_prova_firmato.pdf');"><span class="image-icon pdf"></span><span class="text">NOME_DOCUMENTO_1_DA_VISIONARE</span></a></div>
     </div>
 
     <div class="sub-indent-mobile">

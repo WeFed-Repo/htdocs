@@ -310,13 +310,64 @@
 /* Pdf */
 .pdf-container {
     &, iframe {
-        height:500px;
+        height:300px;
         width:100%; 
         border:0 none;
     }
     iframe{
         border:solid 1px #cacaca;
     }
+}
+
+ /* Overlay documenti */
+ .fhw-mobile-overlay{
+    display:none;
+    position:fixed;
+    top:62px; 
+    left:0px; 
+    width:100%;
+    height:calc(100% - 62px); 
+    background-color:#fff;
+    &-header {
+        margin:10px; 
+        position:relative;
+        padding-right:40px;
+        height: 30px;
+        .closer {
+            position:absolute; 
+            right:0px; 
+            top:5px; 
+            width:30px; 
+            height:30px; 
+        }
+    }
+    &-content{
+        margin: 0; 
+        height:calc(100% - 110px); 
+        width:100%;
+        overflow:scroll;
+        .pdf-container, .pdf-container iframe {
+            height:100%;
+        }
+    }
+    &-footer {
+        margin:13px 15px 0; 
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .fhw-mobile-overlay{
+        display:block;
+    }
+}
+body.fhw-opened {overflow-y:hidden}
+
+/*overlayer info */
+.text-info h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
 }
 
 /*box di selezione per bonifici */
@@ -377,4 +428,37 @@
             color:#edb54d;
         }
     }
+}
+
+/* Acceptance element*/
+.accept-wrapper {
+    position: relative; 
+    margin: 3px 0 10px;
+    .icon {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: #6f8f0a;
+        cursor: pointer;
+    }
+    .text {
+        padding-left: 30px;
+        display: block;
+    }
+    &.accepted .text {
+        font-weight: bold;
+    }
+}
+
+i.css-square {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #6f8f0a;
+    display: inline-block;
+}
+.has-error i.css-square {
+    border-color: #f16875;
 }
