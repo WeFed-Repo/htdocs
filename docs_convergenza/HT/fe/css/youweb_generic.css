@@ -10138,7 +10138,6 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
      color: #EEAA27;
  }
 
- 
  /* Indentazione */
 .indented {padding-left: 35px}
 
@@ -10149,3 +10148,6 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
     margin: 7px 0 0;
     padding-bottom: 21px;
 }
+
+/* Banner dinamico */
+#dynBanner {min-height:150px;width:100%;margin-bottom:15px;}
