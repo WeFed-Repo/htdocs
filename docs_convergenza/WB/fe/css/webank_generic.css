@@ -3699,32 +3699,20 @@ table .table-btn-more:hover {
 .font-table .header-col .titleSection {
   font-size: 14px;
 }
-.bootstrap-table tbody tr.odd td {
-  background: #eaeded;
+/*.bootstrap-table .th-inner.sortable {cursor: pointer;
+    background: url(/WB/fe/img/icon_sort_none.png) 0 13px no-repeat;
+    padding-left:15px;
+    display:inline-block;
+    min-height:20px;
 }
-.bootstrap-table .th-inner.sortable {
-  cursor: pointer;
-  background: url(/WB/fe/img/icon_sort_none.png) 0 13px no-repeat;
-  padding-left: 15px;
-  display: inline-block;
-  min-height: 20px;
-}
-.bootstrap-table .th-inner.sortable.asc {
-  background-image: url(/WB/fe/img/icon_sort_asc.png);
-}
-.bootstrap-table td {
-  vertical-align: middle;
-}
+.bootstrap-table .th-inner.sortable.asc {background-image: url(/WB/fe/img/icon_sort_asc.png);}
+.bootstrap-table td {vertical-align:middle;} */
 .bst thead tr th {
   vertical-align: middle !important;
   padding: 0 10px;
 }
-.bootstrap-table .center {
-  text-align: center;
-}
-.bootstrap-table .th-inner.sortable.desc {
-  background: url(/WB/fe/img/icon_sort_desc.png) 0 12px no-repeat;
-}
+/*.bootstrap-table .center {text-align:center;}
+.bootstrap-table .th-inner.sortable.desc {background: url(/WB/fe/img/icon_sort_desc.png) 0 12px no-repeat;} */
 .bst-pagination .pagination-detail {
   display: none;
 }
