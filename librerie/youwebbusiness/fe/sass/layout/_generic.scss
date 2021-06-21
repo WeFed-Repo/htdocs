@@ -346,12 +346,13 @@ dl, .list {
   }
   &-inline {
     position: relative;
+    display: inline-block;
     .icon {
        float:none;
     }
     &.right-icon{
       padding-right:30px;
-     .icon {
+     .icon-inline {
         position:absolute;
         right:0;
         top:0;

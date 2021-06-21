@@ -1024,6 +1024,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 }
 .text-with-icon-inline {
   position: relative;
+  display: inline-block;
 }
 .text-with-icon-inline .icon {
   float: none;
@@ -1031,7 +1032,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
 .text-with-icon-inline.right-icon {
   padding-right: 30px;
 }
-.text-with-icon-inline.right-icon .icon {
+.text-with-icon-inline.right-icon .icon-inline {
   position: absolute;
   right: 0;
   top: 0;
