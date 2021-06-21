@@ -3684,21 +3684,19 @@ table .table-btn-more:hover {
   opacity: 0.7;
 }
 /* ## Elementi FIRMA ## */
-/*font-small-table */
-.font-table,
-.font-table .pract-toggle.boxed,
-.font-table .pract-toggle.boxed .btn,
-.font-table,
-.font-table .header-col .titleSection {
-  /*font-family: 'bankFontTable', sans-serif;
+/*font-small-table 
+.font-table, .font-table .pract-toggle.boxed, .font-table .pract-toggle.boxed .btn, .font-table, .font-table .header-col .titleSection  {
+    /*font-family: 'bankFontTable', sans-serif;
     font-weight: 500;
     */
-  font-size: 12px;
+/*font-size: 12px;
 }
-.font-table,
-.font-table .header-col .titleSection {
-  font-size: 14px;
+.font-table, .font-table .header-col .titleSection {
+    font-size:14px;
 }
+
+// NUOVA TABELLA BST
+//.bootstrap-table tbody tr.odd td {background:#eaeded;}
 /*.bootstrap-table .th-inner.sortable {cursor: pointer;
     background: url(/WB/fe/img/icon_sort_none.png) 0 13px no-repeat;
     padding-left:15px;
@@ -3706,204 +3704,128 @@ table .table-btn-more:hover {
     min-height:20px;
 }
 .bootstrap-table .th-inner.sortable.asc {background-image: url(/WB/fe/img/icon_sort_asc.png);}
-.bootstrap-table td {vertical-align:middle;} */
-.bst thead tr th {
-  vertical-align: middle !important;
-  padding: 0 10px;
-}
-/*.bootstrap-table .center {text-align:center;}
-.bootstrap-table .th-inner.sortable.desc {background: url(/WB/fe/img/icon_sort_desc.png) 0 12px no-repeat;} */
-.bst-pagination .pagination-detail {
-  display: none;
-}
-.bst-pagination .pagination-info .label-group {
-  display: none;
-}
-.bst-pagination .pagination {
-  width: 100%;
-  text-align: center;
-  float: none !important;
-}
-.bst-pagination .pagination ul {
-  display: inline-block;
-  text-align: center;
-  list-style-type: none !important;
-  float: none !important;
-}
-.bst-pagination .pagination ul li {
-  text-align: center;
-  margin: 0 5px;
-  display: inline-block;
-  float: none !important;
-}
-.bst-pagination .pagination ul li a {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-.bst-pagination .pagination ul li.page-number {
-  display: none;
-  background-color: transparent !important;
-  border: 0px solid transparent !important;
-}
-.bst-pagination .pagination ul li.page-number.active {
-  display: inline-block;
-}
-.bst-pagination .pagination ul li.page-number.active a {
-  font-weight: bold;
-  width: auto;
-  cursor: default;
-  text-decoration: none !important;
-  background-color: transparent !important;
-  border: 0px solid transparent !important;
-  padding: 0px;
-  min-width: 0px;
-}
-.bst-pagination .pagination ul li.page-first a,
-.bst-pagination .pagination ul li.page-pre a,
-.bst-pagination .pagination ul li.page-next a,
-.bst-pagination .pagination ul li.page-last a {
-  border-radius: 50%;
-  background-color: #6f8f0a;
-  color: #6f8f0a;
-  font-size: 20px;
-  line-height: 20px;
-  vertical-align: middle;
-  min-width: 0px;
-  padding: 5px 0px;
-}
-.bst-pagination .pagination ul li.disabled a {
-  color: #ccc;
-  background-color: #ccc;
-  opacity: 0.5;
-}
-.bst-pagination .pagination ul li.page-first,
-.bst-pagination .pagination ul li.page-last {
-  display: none;
-}
-.bst-pagination .pagination .page-total span.tot {
-  display: inline-block;
-  width: auto;
-  margin-left: 5px;
-  font-weight: bold;
-}
-.bst-pagination .pagination .page-pre .icon,
-.bst-pagination .pagination .page-next .icon {
-  width: 20px;
-  font-size: 14px;
-  line-height: 20px;
-}
-/* Tabella di bootstrap versione "nuova" */
+.bootstrap-table td {vertical-align:middle;}
+.bst thead tr th {vertical-align:middle !important;padding: 0 10px;}
+.bootstrap-table .center {text-align:center;}
+.bootstrap-table .th-inner.sortable.desc {background: url(/WB/fe/img/icon_sort_desc.png) 0 12px no-repeat;}
+.bst-pagination {
+    .pagination-detail {
+        display:none;
+    }
+    .pagination-info .label-group {display:none;}
+    .pagination {
+        width:100%;
+        text-align:center;
+        float: none !important; // Correttivo WB
+        ul {
+            display:inline-block;
+            text-align:center;
+            list-style-type:none !important;
+            float: none !important; // Correttivo WB
+            li {
+                text-align:center;
+                margin:0 5px;
+                display:inline-block;
+                float: none !important; // Correttivo WB
+                a {display:inline-block;width:20px;height:20px;text-align:center;}
+                &.page-number {
+                    display:none;
+                    background-color:transparent !important;// Correttivo WB
+                    border:0px solid transparent !important;// Correttivo WB
+                    &.active {
+                        display:inline-block;
+                        a {font-weight:bold; 
+                            width:auto; 
+                            cursor:default; 
+                            text-decoration:none !important;
+                            background-color:transparent !important;// Correttivo WB
+                            border:0px solid transparent !important;// Correttivo WB
+                            padding: 0px;// Correttivo WB
+                            min-width: 0px;// Correttivo WB
+                        }
+                    } 
+                }
+                &.page-first a, &.page-pre a, &.page-next a, &.page-last a {
+                    border-radius: 50%; 
+                    background-color: #6f8f0a; 
+                    color:#6f8f0a; 
+                    font-size:20px;
+                    line-height:20px;
+                    vertical-align:middle;
+                    min-width: 0px;// Correttivo WB
+                    padding: 5px 0px;// Correttivo WB
+                }
+                &.disabled a {color:#ccc ;background-color:#ccc;opacity:0.5;}
+                &.page-first, &.page-last {display:none;}
+            }
+        }
+        .page-total span.tot {display:inline-block;width:auto;margin-left:5px; font-weight:bold;}
+        .page-pre .icon, .page-next .icon {width:20px; font-size: 14px;line-height: 20px;}
+    }
+} */
+/* Tabella di bootstrap versione "nuova" 
 .bst {
-  /* Trattamento text-with-icon */
-  /* Formattazioni per card-view (default 50% larghezza) */
+    tbody tr td {padding: 15px 10px;}
+    .detail-row {
+        td {padding-top:15px;border-top: none !important;}
+        div.loading {min-height:100px;}
+    }
+    tr.no-records-found td {background: #eaeded;}*/
+/* Trattamento text-with-icon */
+/* .padding-text-with-icon {
+        padding-left:35px;
+    }
+    .padding-text-with-icon>.text-with-icon {margin-left:-25px;}
+    .text-with-icon {
+        line-height:16px;
+        min-height:20px;
+        // Correttivo icone spaziate
+        padding-left: 32px;
+        .sub-text {font-size:11px; font-weight: normal !important;}
+    }
+    .accordion-title {padding-bottom:10px;}
+    /* Formattazioni per card-view (default 50% larghezza) 
+    &.is-card-view {
+        tr.no-records-found td {
+            padding:15px 8px;
+        }
+        tr td {padding:15px 10px 0;}
+        tr.detail-view-opened td {border-bottom: none !important;}
+        tr.detail-row td {border-bottom: solid 1px #ccc !important;}
+        tr.detail-row td.padding-text-with-icon {padding-left:35px;}
+    }
+    .card-view  {
+        display: inline-block; width: 50%; text-align:left;padding:0;margin:0 0 15px; vertical-align:top;
+        .title, .value {display:block;text-align:left;width:100%;padding:0;margin:0;}
+        .value {font-weight:bold; padding-right:5px;}
+        &.padding-text-with-icon, .padding-text-with-icon {padding-left:25px;}
+        &.card-view-notitle .title {display:none;}
+        // Correttivo WB
+        .text-with-icon .icon {
+            line-height: 20px;
+        }
+    }
+    .card-view-full {width:100%}
+    .detail-view-opened:not(.detail-row) {border-bottom:0 none !important;}
+    .th-inner .inline-icon {
+        display: inline-block;
+        height: 20px;
+        margin-top: 0;
+        margin-left: 5px;
+        vertical-align: middle;
+        .icon {line-height:14px;margin-top:1px;}
+    }
 }
-.bst tbody tr td {
-  padding: 15px 10px;
+
+table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) td, table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) th {
+    border:1px solid #ccc!important;
+    border-left:0!important;
+    border-top:0!important;
 }
-.bst .detail-row td {
-  padding-top: 15px;
-  border-top: none !important;
-}
-.bst .detail-row div.loading {
-  min-height: 100px;
-}
-.bst tr.no-records-found td {
-  background: #eaeded;
-}
-.bst .padding-text-with-icon {
-  padding-left: 35px;
-}
-.bst .padding-text-with-icon > .text-with-icon {
-  margin-left: -25px;
-}
-.bst .text-with-icon {
-  line-height: 16px;
-  min-height: 20px;
-  padding-left: 32px;
-}
-.bst .text-with-icon .sub-text {
-  font-size: 11px;
-  font-weight: normal !important;
-}
-.bst .accordion-title {
-  padding-bottom: 10px;
-}
-.bst.is-card-view tr.no-records-found td {
-  padding: 15px 8px;
-}
-.bst.is-card-view tr td {
-  padding: 15px 10px 0;
-}
-.bst.is-card-view tr.detail-view-opened td {
-  border-bottom: none !important;
-}
-.bst.is-card-view tr.detail-row td {
-  border-bottom: solid 1px #ccc !important;
-}
-.bst.is-card-view tr.detail-row td.padding-text-with-icon {
-  padding-left: 35px;
-}
-.bst .card-view {
-  display: inline-block;
-  width: 50%;
-  text-align: left;
-  padding: 0;
-  margin: 0 0 15px;
-  vertical-align: top;
-}
-.bst .card-view .title,
-.bst .card-view .value {
-  display: block;
-  text-align: left;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-.bst .card-view .value {
-  font-weight: bold;
-  padding-right: 5px;
-}
-.bst .card-view.padding-text-with-icon,
-.bst .card-view .padding-text-with-icon {
-  padding-left: 25px;
-}
-.bst .card-view.card-view-notitle .title {
-  display: none;
-}
-.bst .card-view .text-with-icon .icon {
-  line-height: 20px;
-}
-.bst .card-view-full {
-  width: 100%;
-}
-.bst .detail-view-opened:not(.detail-row) {
-  border-bottom: 0 none !important;
-}
-.bst .th-inner .inline-icon {
-  display: inline-block;
-  height: 20px;
-  margin-top: 0;
-  margin-left: 5px;
-  vertical-align: middle;
-}
-.bst .th-inner .inline-icon .icon {
-  line-height: 14px;
-  margin-top: 1px;
-}
-table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) td,
-table.bst:not(.ui-datepicker-calendar):not(.no-border):not(.scelta-profilo):not(.table-mobile-estesa) th {
-  border: 1px solid #ccc !important;
-  border-left: 0!important;
-  border-top: 0!important;
-}
-table.bst td,
-table.bst th,
-.table.bst > thead > tr > th,
-.table.bst > tbody > tr > td {
-  font-size: 12px;
-}
+
+table.bst td, table.bst th, .table.bst > thead > tr > th, .table.bst > tbody > tr > td {
+    font-size: 12px;
+}*/
 /* REGOLE COMUNI FORM*/
 /* wrapper generico per form parametrizzabile in colore  di sfondo*/
 .borderFormRounded,
