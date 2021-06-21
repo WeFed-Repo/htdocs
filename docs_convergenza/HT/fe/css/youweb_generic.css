@@ -756,7 +756,7 @@ table td, table th, .table > thead > tr > th, .table > tbody > tr > td {
     font-family: 'bankFontTable', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    padding: 0 15px;
+    padding: 3px 15px;
     height: 50px;
     vertical-align: middle;
 }
@@ -826,7 +826,7 @@ table.riepilogo tr.totali td {
   }
 
 /* Oggettini cross per tabelle */
-table .labelpir {
+table .labelpir, table .labelpp {
     display: block;
     width: 30px;
     color: #fff;

@@ -302,13 +302,19 @@ function fesGetData(firstpage)
 							fesFondoShow()
 						});*/
 
-						var labelPir = "";
+						var labelAnt= "";
+						// Evidenza fondi PIR
 						if (v.pir) {
-							if (v.pir == "S") labelPir = "<span class=\"labelpir\">PIR</span>"
+							if (v.pir == "S") labelAnt = "<span class=\"labelpir\">PIR</span>"
 						}
 
-						var fesFondoNome = $("<a>").html(labelPir + "<span>" + v.nome + "</span>").attr({"href":"javascript:;"}).click(function(){
-//                        	goToSchedafondo({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
+						// Evidenza fondi PP
+						if (v.patrimonioPersonal) {
+							if (v.patrimonioPersonal == "S") labelAnt = "<span class=\"labelpp\" title=\"Patrimonio personal\">PP</span>"
+						}
+
+						var fesFondoNome = $("<a>").html(labelAnt + "<span>" + v.nome + "</span>").attr({"href":"javascript:;"}).click(function(){
+						// goToSchedafondo({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
 							fesFondoShow({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
                         });
 

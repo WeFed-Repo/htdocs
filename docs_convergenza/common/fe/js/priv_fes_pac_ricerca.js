@@ -364,12 +364,14 @@ var pacRicerca = (function() {
     function filterTableData (data) {
         var filteredData = data.slice(0);
         $.each(filteredData, function (index, item) {
+            console.log(filteredData[index])
             filteredData[index].perc1a = item.perc1a ? parseNumericString(item.perc1a) : null;
             filteredData[index].perc5a = item.perc5a ? parseNumericString(item.perc5a) : null;
             
             if(filteredData[index].pir != undefined && filteredData[index].pir == "S") {
             	filteredData[index].nome = "<span class=\"labelpir\">PIR</span>" + filteredData[index].nome;
             }
+
         });
         return filteredData;
     }
