@@ -263,6 +263,13 @@
   background-color: #f5f5f5;
 }
 
+.color-bfm_status_totale {
+  color: #3e3e3e;
+}
+.bkg-bfm_status_totale {
+  background-color: #3e3e3e;
+}
+
 .color-bfm_bollette {
   color: #00755c;
 }
@@ -1156,6 +1163,10 @@ td.ellipsed {
   font-size: 16px;
 }
 
+.font-size-20 {
+  font-size: 20px;
+}
+
 .font-size-small {
   font-size: 12px;
 }
@@ -1450,8 +1461,13 @@ NOTE: La classe .content-hidden-in-mobile
 .wrapper-border-element {
   position: relative;
 }
-
-.border-element {
+@media (max-width: 768px) {
+  .wrapper-border-element.no-margin-section {
+    margin-left: -8px !important;
+    margin-right: -17px !important;
+  }
+}
+.wrapper-border-element .border-element {
   width: 8px;
   display: block;
   height: 100%;
@@ -1459,7 +1475,10 @@ NOTE: La classe .content-hidden-in-mobile
   left: 0;
   top: 0;
 }
-.border-element.b-r-l {
+.wrapper-border-element .border-element.large {
+  width: 12px;
+}
+.wrapper-border-element .border-element.b-r-l {
   border-radius: 5px 0 0 5px;
 }
 
