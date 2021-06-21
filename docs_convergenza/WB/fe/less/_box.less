@@ -460,5 +460,14 @@ i.css-square {
     display: inline-block;
 }
 .has-error i.css-square {
-    border-color: #f16875;
+    border-color: #f16875; 
+} 
+
+.dyn-banner {width:100%;display:flex;border-radius:5px;}
+.dyn-banner img { width:300px;height: 100%;}
+.dyn-banner .dyn-banner-text {border:1px solid #ccc;padding:15px;display:inline-block;max-width: calc(100% - 300px)}
+.dyn-banner p.note{margin-bottom:0;margin-top:10px} 
+@media (max-width:767px) { 
+  .dyn-banner {display:block;width: 100%;} 
+  .dyn-banner img, .dyn-banner .dyn-banner-text {width:100%;max-width: none;}
 }

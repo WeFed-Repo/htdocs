@@ -146,8 +146,8 @@
                                     <td></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
-                                    <td>05034</td>
-                                    <td>000000047661                                      </td>
+                                    <td><div class="wrapper-icon-bullet"><span class="color-bfm_status_inscadenza icon-bullet"></span> <span class="text">in scadenza</span></div></td>
+                                    <td>000000047661</td>
                                     <td class="center">1</td>
                                     <td>F24</td>
                                     <td>In modifica <br> </td>
@@ -194,7 +194,7 @@
                                     <td>
                                        AUTOMOBILE CLUB - A.C. - MODEN
                                     </td>
-                                    <td>05034</td>
+                                    <td><div class="wrapper-icon-bullet"><span class="color-bfm_status_scaduta icon-bullet"></span> <span class="text">scaduta</span></div></td>
                                     <td>000000047658                                      </td>
                                     <td class="center">1</td>
                                     <td>F24</td>
@@ -243,7 +243,7 @@
                                     <td>
                                        AUTOMOBILE CLUB - A.C. - MODEN
                                     </td>
-                                    <td>05034</td>
+                                    <td><div class="wrapper-icon-bullet"><span class="color-bfm_status_incassata icon-bullet"></span> <span class="text">incassata</span></div></td>
                                     <td>000000047661                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>

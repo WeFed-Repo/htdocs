@@ -10150,4 +10150,12 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 }
 
 /* Banner dinamico */
-#dynBanner {min-height:150px;width:100%;margin-bottom:15px;clear:both;display:block;}
+
+.dyn-banner {width:100%;display:flex;border-radius:5px;}
+.dyn-banner img {width:350px;height: 100%;}
+.dyn-banner .dyn-banner-text {background:#eee;padding:15px;display:inline-block;max-width: calc(100% - 300px)}
+.dyn-banner p.note{margin-bottom:0;margin-top:10px} 
+@media (max-width:767px) {
+  .dyn-banner {display:block;width: 100%;}
+  .dyn-banner img, .dyn-banner .dyn-banner-text {width:100%;max-width: none;}
+}

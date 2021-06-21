@@ -1,20 +1,21 @@
 //funzione di inizializzazione delle finta select 
 //parametri: oggetto per costruire le option + eventuale funzione di callmeback
 
-$.fn.initSelectCustom = function (sourceOptions, cmbfunction) {
+$.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 	//definisco variabili di partenza
 	var scWrapper = $(this),
-		scName = $(this).attr("name"),
-		scId = $(this).attr("id");
+		scName = sourceParams.nameSel,
+		scId = sourceParams.idSel,
+		dataOptions = sourceParams.dataOptions;
 		
     //definisco le variabili semaforo per determinare il tipo di finta select
 	//casistica checkbox
 	var isTypeCheckbox = function () {
-		return scWrapper.attr("data-checkbox") !== "undefined" && scWrapper.attr("data-checkbox") === "true" ? true : false
+		return scWrapper.hasClass("has-checkbox") === true ? true : false
 	}
 	//casistica bottone funzionale
 	var isTypeBtnFunc = function () {
-		return scWrapper.attr(" data-btn") !== "undefined" && scWrapper.attr("data-btn") === "true" ? true : false
+		return scWrapper.hasClass("has-btn") === true ? true : false
 	}
 
 	//componenti per costruzione html
@@ -30,17 +31,17 @@ $.fn.initSelectCustom = function (sourceOptions, cmbfunction) {
 		
 	//costruzione html
 	//cicla creando le options a seconda della tipologia
-	$(sourceOptions).each(function (index) {
+	$(dataOptions).each(function (index) {
 		var selectedIndex,
 			isOptionsSelected = function () {
-				return (sourceOptions[index].selected !== "undefined" && sourceOptions[index].selected === true) ? true : false
+				return (dataOptions[index].selected !== "undefined" && dataOptions[index].selected === true) ? true : false
 			}
 		//restituisce il valore selected
 		if (isOptionsSelected()) {
 			selectedIndex = index
 		}
 
-		var optionEl = $("<li class='select-custom-option'>").attr("data-value", sourceOptions[index].value);
+		var optionEl = $("<li class='select-custom-option'>").attr("data-value", dataOptions[index].value);
 		//se è una voce selezionata appendo la classe apposita
 
 		if (selectedIndex === index) {
@@ -52,12 +53,12 @@ $.fn.initSelectCustom = function (sourceOptions, cmbfunction) {
 		//se è semplice select stilizzata
 		if (!isTypeCheckbox()) {
 			var optionText = $("<a class='select-custom-option-el'>");
-			optionEl.append(optionText.html(sourceOptions[index].text));
+			optionEl.append(optionText.html(dataOptions[index].text));
 		}
 		//se è con checkbox
 		else {
-			var optionText = $("<a class='form-check-inline checkbox select-custom-option-el'><input type='checkbox' id='sccheckbox" + index + "'" + "value=" + sourceOptions[index].value + "><label class='select-custom-option-el'></label></a>");
-			optionEl.append(optionText).find("label").html(sourceOptions[index].text);
+			var optionText = $("<a class='form-check-inline checkbox select-custom-option-el'><input type='checkbox' id='sccheckbox" + index + "'" + "value=" + dataOptions[index].value + "><label class='select-custom-option-el'></label></a>");
+			optionEl.append(optionText).find("label").html(dataOptions[index].text);
 		}
 	})
 	var scDefaultText = scWrapper.attr("data-placeholder") ? scWrapper.attr("data-placeholder") : "Seleziona";

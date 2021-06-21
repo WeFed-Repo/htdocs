@@ -14,20 +14,20 @@
         <!- attributi select con checkbox: 
           name
           id
-          data-checkbox=true (ne determina la tipologia)
+          class has-checkbox se è di tipo checkbox
           data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class=" dropdown select-custom" name="scCheckbox" id="scCheckbox" data-checkbox=true data-placeholder="Seleziona"></div>
+        <div class="dropdown select-custom has-checkbox" name="scCheckbox" id="scCheckbox" data-placeholder="Seleziona"></div>
       </div>
       <div class="form-group col-sm-4">
         <label class="control-label">Select bottone funzionale</label>
         <!- attributi select con checkbox: 
           name
           id
-          data-btn=true (ne determina la tipologia)
+          has-btn se è di tipo btn
           data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class=" dropdown select-custom" name="scBtn" id="scBtn" data-btn=true data-placeholder="lorem ipsum"></div>
+        <div class="dropdown select-custom has-btn" name="scBtn" id="scBtn" data-placeholder="lorem ipsum"></div>
       </div>
     </div>
 </form>
@@ -37,8 +37,12 @@
 <script src="./fe/js/init_select_custom.js"></script>
 <script type="text/javascript">
     $(function () {
-      //esempio di array con i valori per la select
-      var dataOptionsSimpleSelect =  [
+      //parametri per inizializzare finta select normale
+      var paramsFintaSelect = {
+        "idSel": "sc",
+        "nameSel":"sc",
+         //esempio di array con i valori per la select
+        "dataOptions" : [
               {
                 "id": 0,
                 "text": "Seleziona",
@@ -63,27 +67,38 @@
                
               }
         ]
-        var dataOptionsCheckSelect =  [
-              {
+      }
+      var paramsFintaSelectCheck = {
+        "idSel": "scCheckbox",
+        "nameSel":"scCheckbox",
+         //esempio di array con i valori per la select
+        "dataOptions" : [
+          {
                 "id": 0,
                 "text": "Seleziona tutti",
                 "value": "all" //importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
                 
-              },
-              {
+          },
+          {
                 "id": 1,
                 "text": "Option 1",
-                "value": "1"
+                "value": "1",
                 
-              },
-              {
+          },
+          {
                 "id": 2,
                 "text": "Option 2",
                 "value": "2"
-              }
+          }
         ]
-        var dataOptionsBtn =  [
-              {
+      }
+      
+      var paramsFintaSelectBtn = {
+        "idSel": "scBtn",
+        "nameSel":"scBtn",
+         //esempio di array con i valori per la select
+        "dataOptions" : [
+          {
                 "id": 1,
                 "text": "Option 1",
                 "value": "1",
@@ -96,18 +111,20 @@
                 
               }
         ]
+      }
+    
       
       //esegue la finta select normale
-      $("#sc").initSelectCustom(dataOptionsSimpleSelect, function(){
-            console.log("funzione di cmb");
+      $("#" + paramsFintaSelect.idSel).initSelectCustom(paramsFintaSelect, function(){
+            console.log("funzione di cmb finta select normale");
       });
        //esegue la finta select con i check
-      $("#scCheckbox").initSelectCustom(dataOptionsCheckSelect, function(){
-            console.log("funzione di cmb");
+       $("#" + paramsFintaSelectCheck.idSel).initSelectCustom(paramsFintaSelectCheck, function(){
+            console.log("funzione di cmb finta select con checkbox");
       })
       //esegue la finta select con i check
-      $("#scBtn").initSelectCustom(dataOptionsBtn, function(){
-            console.log("funzione di cmb");
+      $("#" + paramsFintaSelectBtn.idSel).initSelectCustom(paramsFintaSelectBtn, function(){
+            console.log("funzione di cmb finta select bottone funzionale");
       })
      
     })

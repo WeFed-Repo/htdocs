@@ -2400,11 +2400,18 @@ ul.pagination li.page-item.active .page-link, ul.pagination li.page-item.active 
   border-top: solid 1px #DDDDDD;
   padding: 16px;
 }
+.mobile-data-block.border-0 {
+  padding: 0;
+  padding-bottom: 16px;
+}
 .mobile-data-block:first-child {
   border-top: 0 none;
 }
 .mobile-data-block label {
   color: #333333;
+}
+.mobile-data-block.wrapper-border-element label {
+  color: #737373;
 }
 .mobile-data-block span.output {
   color: #737373;
@@ -4108,22 +4115,22 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
 .select-custom.show .form-control.dropdown-toggle {
   background-image: url(../img/form_select_opened.gif);
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option {
   padding: 0px 3px 5px 3px;
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option.option-selected {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option.option-selected {
   background-color: transparent;
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option.option-selected:hover {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option.option-selected:hover {
   background-color: #d8d8d8;
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option .form-check-inline.checkbox {
   padding-left: 32px;
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox input:checked + label::before {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option .form-check-inline.checkbox input:checked + label::before {
   border-color: #2F9988;
 }
-.select-custom[data-checkbox] .dropdown-menu .select-custom-option .form-check-inline.checkbox label {
+.select-custom.has-checkbox .dropdown-menu .select-custom-option .form-check-inline.checkbox label {
   cursor: pointer;
 }
 
