@@ -578,6 +578,10 @@ function mGetData()
 						)
 					);
 
+			// Sistema il disclaimer a seconda di Acquisto o Surroga
+			$("#linkAssAcquisto, #linkAssSurroga").hide();
+			$("#linkAss" + mFinalita).show();
+					
 
 			var erroreGenericoMsg = "";
 
