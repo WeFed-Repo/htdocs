@@ -59,3 +59,9 @@
 <!-- SELETTORE CON TOOLTIP + ICONA -->
 <?php virtual('/youwebbusiness/layout/oggetti/selettore/selettore_tooltip/oggetto.php'); ?>
 <!-- ./ SELETTORE AZIENDA -->
+
+<hr>
+
+<!--BOX STATO FATTURE-->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_stato_fatture/oggetto.php'); ?>
+<!-- ./ BOX STATO FATTURE -->
