@@ -3513,7 +3513,8 @@ div.fixed-table-scroll-outer {
 /* * * END  Tabella Alert Attivi * * */
 /************************************/
 /* Label pir */
-table span.labelpir {
+table span.labelpir,
+table span.labelpp {
   clear: both;
   background-color: #8ab10b;
   width: 30px;
@@ -12609,7 +12610,7 @@ body.fhw-opened {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px #e4e4e4;
+  box-shadow: 0px 0px 15px rgb(228 228 228);
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,
