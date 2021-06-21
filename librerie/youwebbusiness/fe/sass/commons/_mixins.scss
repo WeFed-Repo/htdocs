@@ -67,6 +67,9 @@
   .bkg#{"-" + $name}{
     background-color: $color;
   }
+  .border#{"-" + $name}{
+    border-color: $color!important;
+  }
 }
 
 // MIXIN PER CREARE UN GRADIENTE

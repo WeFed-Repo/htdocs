@@ -404,7 +404,7 @@ dl, .list {
         top:-5px;
        
         @media (max-width:$bp_md_min) {
-          margin-right:2rem;
+          margin-right:0;
           margin-bottom:0.5rem;
         }
      }
@@ -667,7 +667,12 @@ NOTE: La classe .content-hidden-in-mobile
   }
 } 
   
-  .space-row .border-element {
+.space-row .border-element {
     min-height: 62px;
     top:-1px;
-  }
+}
+
+/*generici border radius */
+.b-r-3 {
+  border-radius: 3px;
+}
