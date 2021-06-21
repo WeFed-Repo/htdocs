@@ -3734,16 +3734,19 @@ table .table-btn-more:hover {
 .bst-pagination .pagination {
   width: 100%;
   text-align: center;
+  float: none !important;
 }
 .bst-pagination .pagination ul {
   display: inline-block;
   text-align: center;
   list-style-type: none !important;
+  float: none !important;
 }
 .bst-pagination .pagination ul li {
   text-align: center;
   margin: 0 5px;
   display: inline-block;
+  float: none !important;
 }
 .bst-pagination .pagination ul li a {
   display: inline-block;
@@ -3751,11 +3754,23 @@ table .table-btn-more:hover {
   height: 20px;
   text-align: center;
 }
-.bst-pagination .pagination ul li.page-number display:none .active display:inline-block a {
+.bst-pagination .pagination ul li.page-number {
+  display: none;
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+}
+.bst-pagination .pagination ul li.page-number.active {
+  display: inline-block;
+}
+.bst-pagination .pagination ul li.page-number.active a {
   font-weight: bold;
   width: auto;
   cursor: default;
   text-decoration: none !important;
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  padding: 0px;
+  min-width: 0px;
 }
 .bst-pagination .pagination ul li.page-first a,
 .bst-pagination .pagination ul li.page-pre a,
@@ -3763,12 +3778,15 @@ table .table-btn-more:hover {
 .bst-pagination .pagination ul li.page-last a {
   border-radius: 50%;
   background-color: #6f8f0a;
-  color: #fff;
+  color: #6f8f0a;
   font-size: 20px;
   line-height: 20px;
-  vertical-align: center;
+  vertical-align: middle;
+  min-width: 0px;
+  padding: 5px 0px;
 }
 .bst-pagination .pagination ul li.disabled a {
+  color: #ccc;
   background-color: #ccc;
   opacity: 0.5;
 }
@@ -12097,7 +12115,7 @@ div.select-content select:active {
     max-width: 300px!important;
   }
   .noPaddingMob {
-    padding: 0 !important;
+    padding: 0!important;
   }
   .wrapper-icon-left + .linker {
     padding-left: 28px;
@@ -12681,7 +12699,7 @@ body.fhw-opened {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px rgb(228 228 228);
+  box-shadow: 0px 0px 15px #e4e4e4;
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,
