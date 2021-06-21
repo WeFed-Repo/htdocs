@@ -12812,6 +12812,9 @@ i.css-square {
 .has-error i.css-square {
   border-color: #f16875;
 }
+#dynBanner {
+  margin-bottom: 20px;
+}
 .dyn-banner {
   width: 100%;
   display: flex;

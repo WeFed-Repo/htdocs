@@ -1160,6 +1160,10 @@ td.ellipsed {
   font-size: 12px;
 }
 
+.font-size-extra-small {
+  font-size: 11px;
+}
+
 .overflow-hidden {
   overflow: hidden !important;
 }
