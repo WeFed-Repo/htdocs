@@ -472,6 +472,9 @@ td.ellipsed {
 .font-size-16 {
   font-size: 16px;
 }
+.font-size-20 {
+  font-size: 20px;
+}
 .font-size-small {
   font-size: 12px;
 }
@@ -642,15 +645,28 @@ NOTE: La classe .content-hidden-in-mobile
 } 
 
 /*elemento decorativo o funzionale con tooltip per td tabelle o box */
-.wrapper-border-element {position: relative;} 
+.wrapper-border-element {
+  position: relative;
+  @media (max-width:$bp_md_min)
+  {
+    &.no-margin-section {
+      margin-left:-8px!important;
+      margin-right:-17px!important;
+    }
+  }
   .border-element {
     width: 8px;display: block;height: 100%;position: absolute;left:0;top:0;
+    &.large {
+      width: 12px;
+    }
     
     &.b-r-l {
       border-radius:5px 0 0 5px;
     }
    
   }
+} 
+  
   .space-row .border-element {
     min-height: 62px;
     top:-1px;
