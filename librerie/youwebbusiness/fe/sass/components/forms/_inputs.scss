@@ -141,7 +141,7 @@ select, .select-custom-option-el {
         background-image:url(../img/form_select_opened.gif);
     }
   }
-  &[data-checkbox] {
+  &.has-checkbox { 
     .dropdown-menu {
       .select-custom-option {
         padding:0px 3px 5px 3px;

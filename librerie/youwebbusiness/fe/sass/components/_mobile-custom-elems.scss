@@ -7,9 +7,18 @@
 .mobile-data-block {
   border-top: solid 1px $gray4;
   padding: 16px;
+  &.border-0 {
+    padding:0;
+    padding-bottom:16px;
+  }
   &:first-child { border-top: 0 none; }
   label {
     color: $gray1_hover;
+  }
+  &.wrapper-border-element {
+    label {
+      color:$gray2;
+    }
   }
   span.output {
     color: $gray2;
