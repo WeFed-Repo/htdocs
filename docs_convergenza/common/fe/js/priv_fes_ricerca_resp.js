@@ -305,12 +305,12 @@ function fesGetData(firstpage)
 						var labelAnt= "";
 						// Evidenza fondi PIR
 						if (v.pir) {
-							if (v.pir == "S") labelAnt = "<span class=\"labelpir\">PIR</span>"
+							if (v.pir == "S") labelAnt = "<span class=\"labelpir\" title=\"Fondo PIR\">PIR</span>"
 						}
 
 						// Evidenza fondi PP
 						if (v.patrimonioPersonal) {
-							if (v.patrimonioPersonal == "S") labelAnt = "<span class=\"labelpp\" title=\"Patrimonio personal\">PP</span>"
+							if (v.patrimonioPersonal == "S") labelAnt = "<span class=\"labelpp\" title=\"Patrimonio personal\">Patrimonio Personal</span>"
 						}
 
 						var fesFondoNome = $("<a>").html(labelAnt + "<span>" + v.nome + "</span>").attr({"href":"javascript:;"}).click(function(){

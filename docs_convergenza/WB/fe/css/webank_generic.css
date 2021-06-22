@@ -3527,6 +3527,13 @@ table span.labelpp {
   font-size: 11px;
   display: block;
 }
+table span.labelpir.labelpp,
+table span.labelpp.labelpp {
+  width: 120px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   table thead th .sortable.desc + .fht-cell,
   table thead th .sortable.asc + .fht-cell {
@@ -12610,7 +12617,7 @@ body.fhw-opened {
 }
 .box-type.available:hover,
 .box-type.selected {
-  box-shadow: 0px 0px 15px #e4e4e4;
+  box-shadow: 0px 0px 15px rgb(228 228 228);
   cursor: pointer;
 }
 .box-type.available:hover .box-type-footer,
