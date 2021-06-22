@@ -86,8 +86,14 @@
     margin-left: $checkboxSizeGap;
     margin-bottom: $checkboxSizeGap;
   }
+  
  }
-
+/* border-color bo xcon sfondo highlight */
+ .bkg-boxHighLight {
+  .checkbox input:checked + label::before {
+    border-color: $greenLink;
+  }
+}
 // posizione messaggio validazione
 .form-check  {
   .valid-feedback,

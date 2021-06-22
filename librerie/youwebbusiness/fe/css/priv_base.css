@@ -613,6 +613,17 @@
   border-color: #52a99b !important;
 }
 
+.color-boxHighLight {
+  color: #d1e6e2;
+}
+.bkg-boxHighLight {
+  background-color: #d1e6e2;
+}
+
+.border-boxHighLight {
+  border-color: #d1e6e2 !important;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("../font/Roboto-Regular-webfont.eot");

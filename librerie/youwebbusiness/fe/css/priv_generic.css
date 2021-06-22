@@ -612,6 +612,17 @@
   border-color: #52a99b !important;
 }
 
+.color-boxHighLight {
+  color: #d1e6e2;
+}
+.bkg-boxHighLight {
+  background-color: #d1e6e2;
+}
+
+.border-boxHighLight {
+  border-color: #d1e6e2 !important;
+}
+
 /* Modali */
 [data-toggle=modal] {
   cursor: pointer;
@@ -4781,6 +4792,11 @@ table .checkbox.radio label {
   text-align: left;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+/* border-color bo xcon sfondo highlight */
+.bkg-boxHighLight .checkbox input:checked + label::before {
+  border-color: #2F9988;
 }
 
 .form-check .valid-feedback,

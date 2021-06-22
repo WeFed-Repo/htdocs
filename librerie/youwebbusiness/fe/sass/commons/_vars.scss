@@ -84,6 +84,7 @@ $input_disabled_color: #495057;
 $input_disabled_placeholder:  #495057;
 $tableStriped : #fafafa;
 $greenLighter_border: #afdbd4;
+$boxHighLight : #d1e6e2;
 /* bfm colori status*/
 $bfm_status_confermare: #e9ce96;
 $bfm_status_attive: #37ad9c;
@@ -167,5 +168,6 @@ $colors:(
     bfm_status_inscadenza: $bfm_status_inscadenza,
     bfm_status_scaduta: $bfm_status_scaduta,
     bfm_status_incassata: $bfm_status_incassata,
+    boxHighLight: $boxHighLight,
 
 );

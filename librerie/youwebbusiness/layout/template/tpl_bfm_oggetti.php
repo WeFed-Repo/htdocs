@@ -65,3 +65,7 @@
 <!--BOX STATO FATTURE-->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_stato_fatture/oggetto.php'); ?>
 <!-- ./ BOX STATO FATTURE -->
+
+<!--ROW CHECKBOX HIGHLIGHT-->
+<?php virtual('/youwebbusiness/layout/oggetti/form/check_row_highlight/oggetto.php'); ?>
+<!-- ./ ROW CHECKBOX HIGHLIGHT-->
