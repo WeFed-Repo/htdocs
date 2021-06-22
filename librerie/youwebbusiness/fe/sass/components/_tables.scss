@@ -140,11 +140,24 @@
 
 .bootstrap-table table, .bootstrap-table .table, .table {
   &.space-row {
-    border-collapse: separate!important;
+    border-collapse: separate;
     border-spacing: 0 1em;
     background-color: $white;
     tbody tr {
       border:1px solid $gray3;
+    }
+  }
+  &.space-border {
+    border-collapse: separate;
+    border-spacing: 0 1px;
+    tbody tr {
+      border:0;
+      td {
+      border:0;
+      border-bottom:1px solid $gray4;
+      background-color: $white;
+        &:hover {background-color: $white;}
+      }
     }
   }
   &.b-r-small {

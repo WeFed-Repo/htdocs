@@ -1,4 +1,5 @@
 <!-- BOX STATO FATTURE-->
+
 <section>
 	<div class="row">
 		<div class="col-6 d-flex justify-content-start align-items-top">
@@ -18,7 +19,7 @@
 		</div>
 	</div>
 </section>
-
+<div class="no-margin-section">
 	<div class="row">
 		<div class="col-12 col-md-3 mb-3 d-flex">
 			<!-- aggiungere la classe selected per il colore di background di quando selezionata -->
@@ -46,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 <!-- FINE BOX STATO FATTURE-->
 
 

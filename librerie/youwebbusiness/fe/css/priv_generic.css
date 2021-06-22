@@ -2678,12 +2678,27 @@
 }
 
 .bootstrap-table table.space-row, .bootstrap-table .table.space-row, .table.space-row {
-  border-collapse: separate !important;
+  border-collapse: separate;
   border-spacing: 0 1em;
   background-color: #FFFFFF;
 }
 .bootstrap-table table.space-row tbody tr, .bootstrap-table .table.space-row tbody tr, .table.space-row tbody tr {
   border: 1px solid #999999;
+}
+.bootstrap-table table.space-border, .bootstrap-table .table.space-border, .table.space-border {
+  border-collapse: separate;
+  border-spacing: 0 1px;
+}
+.bootstrap-table table.space-border tbody tr, .bootstrap-table .table.space-border tbody tr, .table.space-border tbody tr {
+  border: 0;
+}
+.bootstrap-table table.space-border tbody tr td, .bootstrap-table .table.space-border tbody tr td, .table.space-border tbody tr td {
+  border: 0;
+  border-bottom: 1px solid #DDDDDD;
+  background-color: #FFFFFF;
+}
+.bootstrap-table table.space-border tbody tr td:hover, .bootstrap-table .table.space-border tbody tr td:hover, .table.space-border tbody tr td:hover {
+  background-color: #FFFFFF;
 }
 .bootstrap-table table.b-r-small tbody td:first-child, .bootstrap-table .table.b-r-small tbody td:first-child, .table.b-r-small tbody td:first-child {
   border-radius: 5px 0 0 5px;
