@@ -6275,7 +6275,12 @@ ul.ui-autocomplete {
     top: -15px;
     left: 25px;
 }
-
+.boxProdottoBtns .btnWrapper.center {
+    left: 0
+}
+.boxProdottoBtns .btnWrapper.center .btn {
+    margin-left:0;
+}
 .titButton {
     width: 100%;
     float: left;
