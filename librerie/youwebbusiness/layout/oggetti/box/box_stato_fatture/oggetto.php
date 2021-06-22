@@ -18,38 +18,35 @@
 		</div>
 	</div>
 </section>
-<div class="no-margin-section  wrapper-border-element">
+
 	<div class="row">
 		<div class="col-12 col-md-3 mb-3 d-flex">
-			<span class="border-element large bkg-bfm_status_incassata"></span>
-			<div class=" bordered pb-3 pl-3">
+			<!-- aggiungere la classe selected per il colore di background di quando selezionata -->
+			<div class="bordered border-left-bfm_status_incassata cursor-pointer selected pb-3 pl-3">
 				<span class="d-md-block d-inline font-size-20">Incassate (18)</span>
 				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
 			</div>
 		</div>
 		<div class="col-12 col-md-3 mb-3 d-flex">
-			<span class="border-element large bkg-bfm_status_inscadenza"></span>
-			<div class=" bordered pb-3 pl-3">
+			<div class="bordered border-left-bfm_status_inscadenza cursor-pointer pb-3 pl-3">
 				<span class="d-md-block d-inline font-size-20">In scadenza (18)</span>
 				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
 			</div>
 		</div>
 		<div class="col-12 col-md-3 mb-3 d-flex">
-			<span class="border-element large bkg-bfm_status_scaduta"></span>
-			<div class=" bordered pb-3 pl-3">
+			<div class="bordered border-left-bfm_status_scaduta  cursor-pointer pb-3 pl-3">
 				<span class="d-md-block d-inline font-size-20">Scadute (18)</span>
 				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
 			</div>
 		</div>
 		<div class="col-12 col-md-3 mb-3 d-flex">
-			<span class="border-element large bkg-bfm_status_totale"></span>
-			<div class=" bordered pb-3 pl-3">
+			<div class="bordered border-left-bfm_status_totale cursor-pointer pb-3 pl-3">
 				<span class="d-md-block d-inline font-size-20">Totali (18)</span>
 				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
 			</div>
 		</div>
 	</div>
-</div>
+
 <!-- FINE BOX STATO FATTURE-->
 
 

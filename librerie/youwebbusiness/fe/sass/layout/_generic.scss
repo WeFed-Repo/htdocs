@@ -212,7 +212,11 @@ ol {
     margin-left:0;
     margin-right:0;
   }*/
-}
+  &[class*=border-left] {
+    border-left: 12px solid;
+  }
+ }
+
 
 @media (max-width: $bp_md_max) {
   .separator {
@@ -665,7 +669,9 @@ NOTE: La classe .content-hidden-in-mobile
     }
    
   }
-} 
+}
+
+
   
 .space-row .border-element {
     min-height: 62px;
