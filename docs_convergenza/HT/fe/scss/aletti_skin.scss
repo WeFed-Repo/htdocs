@@ -1,34 +1,97 @@
 /* Variabili colore */
-$primary: #ab9a7c;
-$primary-light: #d5bd9b;
+$primary: #a89a80;
+$primary-light: #dbd7ce;
 $bgdark: #092442;
+$main-text: #232e4e;
+$spalla-text: #3f4f66;
 
 /* STRUTTURA */
 /* Header */
-header {
-    .contImpDxDesk {
-        background-color: $primary;
+.aletti {
+  header {
+    #headerDesktop,
+    #headerMobile,
+    .menuMainMobile {
+      background: $bgdark;
     }
 
-    #headerdesktop {
-        background-color: $bgdark;
-    }
-}
-
-/* Spalla */
-#spalla{
-    .widget.widget-top {
-        background-color: $primary-light;
-        ul li {border-color:#fff;
-            a, a:hover {
-                color:#fff;
-                .icon {color:#fff}
-            }
+    .contMenuDesk {
+      ul#firstMenu {
+        li a {
+          color: #fff;
         }
+      }
     }
-}
+    .contImpDxDesk {
+      background: $primary;
+    }
+  }
 
-/* Contenuti */
-#mainContent .dashboard-widgets .dbwidget .titlebar a.minibtn {
-    background-color: $primary;
+  /* Spalla */
+  #spalla {
+    background: $bgdark;
+    .widget.widget-top {
+      background-color: $primary-light;
+      ul li {
+        border-color: $spalla-text;
+        a,
+        a:hover {
+          color: $spalla-text;
+          .icon {
+            color: $spalla-text;
+          }
+        }
+      }
+    }
+    .widget .cta {
+      color: #a59983;
+    }
+    .widget .wdg-carousel.carousel.slide {
+      color: #fff;
+      background: $primary;
+    }
+
+    .widget:last-child {
+      border-bottom: solid 2px rgba($primary, 0.5);
+    }
+  }
+
+  /* Contenuti */
+  #mainContent {
+    .dashboard-widgets {
+      .dbwidget .titlebar a.minibtn {
+        background-color: $primary;
+      }
+
+      .dbwidget .selector .selector-el span {
+        color: $main-text !important;
+      }
+      .bottom-console a.cta {
+        color: $primary;
+      }
+    }
+
+    /* Grafo */
+    #dbgraphwrapper {
+      background: linear-gradient(
+        120deg,
+        rgba(132, 145, 160, 0.3) 0%,
+        rgba(82, 101, 123, 0.1) 100%
+      );
+      background-color: rgba(132, 145, 160, 0.3) !important;
+    }
+    span,
+    #dbgraphconsole span,
+    text .amcharts-axis-label tspan,
+    button.selected,
+    button:hover {
+      color: $main-text;
+    }
+    button {
+      color: rgba($color: $main-text, $alpha: 0.5);
+    }
+    #dayselector button.selected {
+      border-bottom: solid 2px $main-text;
+    }
+  }
 }

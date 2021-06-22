@@ -1,30 +1,76 @@
 /* Variabili colore */
 /* STRUTTURA */
 /* Header */
-header .contImpDxDesk {
-  background-color: #ab9a7c;
+.aletti {
+  /* Spalla */
+  /* Contenuti */
 }
-header #headerdesktop {
-  background-color: #092442;
+.aletti header #headerDesktop,
+.aletti header #headerMobile,
+.aletti header .menuMainMobile {
+  background: #092442;
 }
-
-/* Spalla */
-#spalla .widget.widget-top {
-  background-color: #d5bd9b;
-}
-#spalla .widget.widget-top ul li {
-  border-color: #fff;
-}
-#spalla .widget.widget-top ul li a, #spalla .widget.widget-top ul li a:hover {
+.aletti header .contMenuDesk ul#firstMenu li a {
   color: #fff;
 }
-#spalla .widget.widget-top ul li a .icon, #spalla .widget.widget-top ul li a:hover .icon {
-  color: #fff;
+.aletti header .contImpDxDesk {
+  background: #a89a80;
 }
-
-/* Contenuti */
-#mainContent .dashboard-widgets .dbwidget .titlebar a.minibtn {
-  background-color: #ab9a7c;
+.aletti #spalla {
+  background: #092442;
+}
+.aletti #spalla .widget.widget-top {
+  background-color: #dbd7ce;
+}
+.aletti #spalla .widget.widget-top ul li {
+  border-color: #3f4f66;
+}
+.aletti #spalla .widget.widget-top ul li a,
+.aletti #spalla .widget.widget-top ul li a:hover {
+  color: #3f4f66;
+}
+.aletti #spalla .widget.widget-top ul li a .icon,
+.aletti #spalla .widget.widget-top ul li a:hover .icon {
+  color: #3f4f66;
+}
+.aletti #spalla .widget .cta {
+  color: #a59983;
+}
+.aletti #spalla .widget .wdg-carousel.carousel.slide {
+  color: #fff;
+  background: #a89a80;
+}
+.aletti #spalla .widget:last-child {
+  border-bottom: solid 2px rgba(168, 154, 128, 0.5);
+}
+.aletti #mainContent {
+  /* Grafo */
+}
+.aletti #mainContent .dashboard-widgets .dbwidget .titlebar a.minibtn {
+  background-color: #a89a80;
+}
+.aletti #mainContent .dashboard-widgets .dbwidget .selector .selector-el span {
+  color: #232e4e !important;
+}
+.aletti #mainContent .dashboard-widgets .bottom-console a.cta {
+  color: #a89a80;
+}
+.aletti #mainContent #dbgraphwrapper {
+  background: linear-gradient(120deg, rgba(132, 145, 160, 0.3) 0%, rgba(82, 101, 123, 0.1) 100%);
+  background-color: rgba(132, 145, 160, 0.3) !important;
+}
+.aletti #mainContent span,
+.aletti #mainContent #dbgraphconsole span,
+.aletti #mainContent text .amcharts-axis-label tspan,
+.aletti #mainContent button.selected,
+.aletti #mainContent button:hover {
+  color: #232e4e;
+}
+.aletti #mainContent button {
+  color: rgba(35, 46, 78, 0.5);
+}
+.aletti #mainContent #dayselector button.selected {
+  border-bottom: solid 2px #232e4e;
 }
 
 /*# sourceMappingURL=aletti_skin.css.map */
