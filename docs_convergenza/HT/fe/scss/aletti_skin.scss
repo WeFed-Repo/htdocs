@@ -8,6 +8,9 @@ $spalla-text: #3f4f66;
 /* STRUTTURA */
 /* Header */
 .aletti {
+
+  //# Stili Globali
+  //## Stilizzazione Struttura
   header {
     #headerDesktop,
     #headerMobile,
@@ -26,6 +29,20 @@ $spalla-text: #3f4f66;
       background: $primary;
     }
   }
+
+  //## Tipografia
+
+  //## Stilizzazione Tabelle   
+  .datioutput {
+    table {
+      tr {
+        // Colorazione righe alternate
+        &.dispari {}
+        &.pari {}
+      }
+    }
+  }
+
 
   /* Spalla */
   #spalla {
