@@ -836,6 +836,13 @@ table .labelpir, table .labelpp {
     background: #202d50;
     text-align: center;
 }
+table .labelpp {
+    width:135px;
+    padding:0 0 5px;
+    text-overflow:ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+}
 
 input[type=checkbox] {
     width: 15px;
