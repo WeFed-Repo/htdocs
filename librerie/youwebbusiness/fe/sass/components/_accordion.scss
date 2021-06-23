@@ -97,23 +97,7 @@
       }
     }
   }
-  &.with-squared {
-    .card-header .text {
-      font-size: 18px;
-      .text-alert {
-        font-size:12px;
-        font-weight: normal;
-        float: right;
-        line-height: 20px;
-        position: relative;
-        top:5px;
-        .icon {
-          float: left;
-        }
-      }
-    }
-    
-  }
+  
 
   &.ico-close-pa {
     .card-header {

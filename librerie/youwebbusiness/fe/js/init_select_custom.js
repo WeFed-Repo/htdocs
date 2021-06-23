@@ -19,13 +19,14 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 	}
 
 	//componenti per costruzione html
-	var classType = isTypeBtnFunc() ? "btn" : "form-control" // se è un bottone funzionale aggiungo classe type altrimenti classe per le select
+	var classType = isTypeBtnFunc() ? "button" : "form-control" // se è un bottone funzionale aggiungo classe type altrimenti classe per le select
 	scEl = $("<a>")
 		.attr("class", "dropdown-toggle select-custom-option-el " + classType)
 		.attr("id", "dp" + scId)
 		.attr("data-toggle", "dropdown")
 		.attr("aria-haspopup", "true") //elemento select a seconda del tip diventa una select o un bottone
 		.attr("aria-expanded", "true"),
+		
 		inputHidden = $("<input type='hidden' value=''>").attr("name", "inputHidden" + scName), //input hidden da completare con il value se già selected
 		optionsWrapperEl = $("<ul class='select-custom-options-wrapper dropdown-menu'>").attr("aria-labelledby", "dp" + scId); //wrapper delle options
 		
@@ -51,9 +52,14 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		optionsWrapperEl.append(optionEl);
 
 		//se è semplice select stilizzata
-		if (!isTypeCheckbox()) {
+		if (!isTypeCheckbox()&& !isTypeBtnFunc()) {
 			var optionText = $("<a class='select-custom-option-el'>");
 			optionEl.append(optionText.html(dataOptions[index].text));
+		}
+		//se è btn
+		else if(isTypeBtnFunc()){
+			var optionText = $("<a class='select-custom-option-el'><span class='text-btn'>" + dataOptions[index].text + "</span><span class='value-btn'>" + dataOptions[index].value +"</span>");
+			optionEl.attr("data-text", dataOptions[index].text).append(optionText);
 		}
 		//se è con checkbox
 		else {
@@ -106,7 +112,15 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		}
 		//caso select button funzionale
 		else if (isTypeBtnFunc()) {
-			scVselected.empty().html(optionSelected.text());
+			scVselected.empty().html(optionSelected.find(".select-custom-option-el").html());
+			//appendo la classe per la diversa stilizzazione
+			scWrapper.addClass("option-is-selected");
+			//popolo l'input hidden con un value che è un oggetto dove passo text e il value
+			
+			valArr = [];
+			valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
+			scIhidden.val(valArr.join(","));
+		
 		}
 		
 		//caso select di default

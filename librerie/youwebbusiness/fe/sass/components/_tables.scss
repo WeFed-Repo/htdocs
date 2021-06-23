@@ -187,14 +187,17 @@
     }
   }
   &.header-light {
+    border:0;
     thead {
       background-color:$white;
       color:$gray2;
       text-transform: uppercase;
+     
       th {
         color:$gray2;
         text-transform: uppercase;
         font-weight: bold;
+        border:0;
       }
     }
   }

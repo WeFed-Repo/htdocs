@@ -42,9 +42,12 @@
 <!-- ./ MODALE CON CHECKBOX -->
 <hr>
 <!-- BOX CON BOTTONI; ACCORDION; TABELLA -->
-<!-- MODALE CON CHECKBOX -->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_accordion_with_table/oggetto.php');?>
-<!-- ./ MODALE CON CHECKBOX -->
+<!-- ./ BOX CON BOTTONI; ACCORDION; TABELLA -->
+<!-- BOX CON BOTTONI; ACCORDION; TABELLA -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_with_squared/oggetto.php');?>
+<!-- ./ BOX CON BOTTONI; ACCORDION; TABELLA -->
+
 <hr>
 <!-- BOX CON INFO E BOTTONE -->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_no_promo_info/oggetto.php');?>
