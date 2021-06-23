@@ -4,7 +4,7 @@ $primary-light: #dbd7ce;
 $bgdark: #092442;
 $main-text: #232e4e;
 $spalla-text: #3f4f66;
-
+$icons : #a79a87;
 /* STRUTTURA */
 /* Header */
 .aletti {
@@ -12,9 +12,7 @@ $spalla-text: #3f4f66;
   //# Stili Globali
   //## Stilizzazione Struttura
   header {
-    #headerDesktop,
-    #headerMobile,
-    .menuMainMobile {
+    #headerDesktop {
       background: $bgdark;
     }
 
@@ -27,19 +25,42 @@ $spalla-text: #3f4f66;
     }
     .contImpDxDesk {
       background: $primary;
+      .badge {
+        background-color: $bgdark;
+      }
     }
   }
 
   //## Tipografia
+  // Estrarre per globalizzare se necessario
+  //Table
+  .cta.personalizza, 
+  .table-scroller .datioutput,
+  a {
+    color: #a69a84;
+  }
+
+  #mainContent .dashboard-widgets .dbwidget table {
+    color: $main-text;
+  }
+  //Footer
+  footer {
+    color: $main-text;
+    background-color:#f2efea;
+    a {
+      color:#a59a84;
+    }
+  }
+
 
   //## Stilizzazione Tabelle   
-  .datioutput {
-    table {
-      tr {
-        // Colorazione righe alternate
-        &.dispari {}
-        &.pari {}
-      }
+  #mainContent .dashboard-widgets .datioutput {
+    .evidente,
+    .grafico-wrap.placeholder,
+    table.legenda.altri,
+    table tr.dispari td,
+    table tr.totale td {
+      background-color: #f0efea;
     }
   }
 
@@ -54,10 +75,10 @@ $spalla-text: #3f4f66;
         a,
         a:hover {
           color: $spalla-text;
-          .icon {
-            color: $spalla-text;
-          }
         }
+      }
+      h2>a, .icon {
+        color: $spalla-text;
       }
     }
     .widget .cta {
@@ -74,41 +95,105 @@ $spalla-text: #3f4f66;
   }
 
   /* Contenuti */
-  #mainContent {
-    .dashboard-widgets {
-      .dbwidget .titlebar a.minibtn {
-        background-color: $primary;
-      }
+  #mainContent { 
 
-      .dbwidget .selector .selector-el span {
-        color: $main-text !important;
-      }
-      .bottom-console a.cta {
-        color: $primary;
-      }
+    /*Icona ricarica*/
+    .dbwidget .titlebar a.minibtn {
+      background-color: $icons;
     }
 
-    /* Grafo */
+    .dbwidget .selector .selector-el span{
+      color: $main-text !important;
+    }
+    .bottom-console a.cta {
+      color: $primary;
+    }
+    /* icona */
+    .datioutput .evidente .icon {
+      color: #a69a84;
+    }
+    /* Icone switcher */
+    .titlebar-console > a{
+      color: $icons !important;
+    }
+    .titlebar-console > a.selected {
+      color: #ebedee !important;
+    }
+
+    /* ##Grafo */
     #dbgraphwrapper {
+      background-color: rgba(132, 145, 160, 0.7) !important;
       background: linear-gradient(
         120deg,
         rgba(132, 145, 160, 0.3) 0%,
         rgba(82, 101, 123, 0.1) 100%
       );
-      background-color: rgba(132, 145, 160, 0.3) !important;
+      span,
+      #dbgraphconsole span,
+      text tspan,
+      button.selected,
+      button:hover {
+        color: $main-text;
+      }
+      button {
+        color: rgba($color: $main-text, $alpha: 0.5);
+      }
+      #dayselector button.selected {
+        border-bottom: solid 2px $main-text;
+      }
     }
-    span,
-    #dbgraphconsole span,
-    text .amcharts-axis-label tspan,
-    button.selected,
-    button:hover {
+  }
+
+  //Profilo
+  .dropdown-menu.headerDxUserMenu li a {
+    background-color: $primary;
+    color: $spalla-text;
+    border-bottom: 2px solid $bgdark;
+  }
+
+
+
+
+
+ // #Mobile 
+ // ### Menu
+  @media screen and (max-width: 1023px) {
+
+    #headerMobile,
+    nav#menuMainMobile .mm-list.opened{
+      background-color: $bgdark;
+    }
+    #headerMobile {
+      border-bottom: solid 2px transparent;
+    }
+    .mm-list.opened,
+    li a, li span.openSubMenu,
+    .second-levelMenu li a:not(.back) {
+      color: #fff;
+    }
+    .ui-accordion-header:not(.back),
+    .ui-accordion-header:not(.back) {
+      color:$main-text;
+    }
+    li.active {
+      color: $primary-light;
+    }
+ 
+    // Profilo
+    #buttonUserMobile {
+      background-color: $primary;
+      margin-bottom: -2px;
+    }
+
+    /*
+    .accordionMenuWrap ul li,
+    #menuUserMobile .first-levelMenu li .ui-accordion-content a
+    {
       color: $main-text;
+      background-color: $primary !important;
+      border-bottom: solid 2px $primary-light !important;
     }
-    button {
-      color: rgba($color: $main-text, $alpha: 0.5);
-    }
-    #dayselector button.selected {
-      border-bottom: solid 2px $main-text;
-    }
+    */
+
   }
 }
