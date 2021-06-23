@@ -1658,20 +1658,6 @@
   background: transparent;
   padding: 1rem 1rem 2rem 1rem;
 }
-.accordion.with-squared .card-header .text {
-  font-size: 18px;
-}
-.accordion.with-squared .card-header .text .text-alert {
-  font-size: 12px;
-  font-weight: normal;
-  float: right;
-  line-height: 20px;
-  position: relative;
-  top: 5px;
-}
-.accordion.with-squared .card-header .text .text-alert .icon {
-  float: left;
-}
 .accordion.ico-close-pa .card-header {
   position: relative;
 }
@@ -2631,6 +2617,11 @@
   padding-bottom: 8px;
 }
 
+.table-heading-bordered {
+  border: 1px solid #DDDDDD;
+  padding: 4px;
+}
+
 /* Smartphones */
 @media (max-width: 767px) {
   .table-filters {
@@ -2726,6 +2717,9 @@
 .bootstrap-table table.bkg-grayBG tbody td.b-r-small:last-child, .bootstrap-table .table.bkg-grayBG tbody td.b-r-small:last-child, .table.bkg-grayBG tbody td.b-r-small:last-child {
   border-right: 1px solid #DDDDDD;
 }
+.bootstrap-table table.header-light, .bootstrap-table .table.header-light, .table.header-light {
+  border: 0;
+}
 .bootstrap-table table.header-light thead, .bootstrap-table .table.header-light thead, .table.header-light thead {
   background-color: #FFFFFF;
   color: #737373;
@@ -2735,6 +2729,7 @@
   color: #737373;
   text-transform: uppercase;
   font-weight: bold;
+  border: 0;
 }
 .bootstrap-table table.font-small th, .bootstrap-table table.font-small td, .bootstrap-table .table.font-small th, .bootstrap-table .table.font-small td, .table.font-small th, .table.font-small td {
   font-size: 12px;
@@ -4770,25 +4765,29 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   margin-bottom: 0;
   width: 100%;
 }
+.select-custom .dropdown-toggle {
+  /*@include ellipsed();*/
+}
 .select-custom .dropdown-toggle::after {
   border: 0;
 }
 .select-custom .dropdown-toggle.select-custom-option-el:not(.btn) {
   padding-top: 10px;
 }
-.select-custom .dropdown-menu {
+.select-custom .select-custom-options-wrapper.dropdown-menu {
   width: 100% !important;
   max-width: none !important;
   margin: 0;
   border-radius: 0 0 3px 3px;
   border-top: 0;
+  min-width: 0 !important;
   background-color: #F5F5F5;
 }
-.select-custom .dropdown-menu .select-custom-option {
+.select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option {
   padding: 8px;
   cursor: pointer;
 }
-.select-custom .dropdown-menu .select-custom-option.option-selected, .select-custom .dropdown-menu .select-custom-option:hover {
+.select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option.option-selected, .select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option:hover {
   background-color: #d8d8d8;
 }
 .select-custom.show .form-control.dropdown-toggle {
@@ -4812,7 +4811,68 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
 .select-custom.has-checkbox .dropdown-menu .select-custom-option .form-check-inline.checkbox label {
   cursor: pointer;
 }
-
+.select-custom.has-btn {
+  max-width: 200px;
+}
+.select-custom.has-btn .text-btn {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+.select-custom.has-btn .value-btn {
+  float: right;
+  background: #2F9988;
+  color: #FFFFFF;
+  border-radius: 2px;
+  text-align: center;
+  padding: 2px 4px;
+}
+.select-custom.has-btn .dropdown-toggle.button {
+  color: #2F9988;
+  border-radius: 5px;
+  border: 1px solid #2F9988;
+  padding: 6px 12px 4px 7px;
+  font-weight: bold;
+  background: #FFFFFF url(../img/icon/more_2.svg) no-repeat right center;
+}
+.select-custom.has-btn .dropdown-toggle.button .text-btn {
+  float: left;
+}
+.select-custom.has-btn .dropdown-toggle.button .value-btn {
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 22px;
+}
+.select-custom.has-btn .dropdown-menu {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+.select-custom.has-btn .dropdown-menu .select-custom-option:hover, .select-custom.has-btn .dropdown-menu .select-custom-option.option-selected {
+  background: #FFFFFF;
+}
+.select-custom.has-btn .dropdown-menu .select-custom-option-el {
+  font-size: 12px;
+}
+.select-custom.has-btn.option-is-selected {
+  max-width: 245px;
+}
+.select-custom.has-btn.option-is-selected .dropdown-toggle.button {
+  color: #FFFFFF;
+  background: #2F9988 url(../img/icon/more_3.svg) no-repeat right center;
+  text-transform: uppercase;
+}
+.select-custom.has-btn.option-is-selected .dropdown-toggle.button .text-btn {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
 input[type=file].form-control {
   display: none;
   -webkit-appearance: none;

@@ -1692,6 +1692,17 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   align-items: center;
   min-height: 32px;
 }
+.text-with-squared .text-alert {
+  font-size: 12px;
+  font-weight: normal;
+  float: right;
+  line-height: 20px;
+  position: relative;
+  top: 5px;
+}
+.text-with-squared .text-alert .icon {
+  float: left;
+}
 .text-with-squared .squared {
   width: 32px;
   height: 32px;
@@ -1716,6 +1727,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   padding-left: 45px;
   display: block;
   width: 100%;
+  font-weight: bold;
 }
 .text-with-squared .text.with-progress {
   position: relative;
@@ -1732,6 +1744,18 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   height: 6px;
   position: relative;
   top: 10px;
+}
+
+.with-squared .card-header .text {
+  font-size: 18px;
+}
+
+.with-squared .card-header {
+  background: #FFFFFF;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 0.5rem;
+  border: 0;
 }
 
 .display-icon {

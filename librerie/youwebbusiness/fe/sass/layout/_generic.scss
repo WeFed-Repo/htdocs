@@ -377,6 +377,17 @@ dl, .list {
   display: flex;
   align-items: center;
   min-height: 32px;
+  .text-alert {
+    font-size:12px;
+    font-weight: normal;
+    float: right;
+    line-height: 20px;
+    position: relative;
+    top:5px;
+    .icon {
+      float: left;
+    }
+  }
   .squared {
     width: 32px;
     height:32px;
@@ -403,6 +414,7 @@ dl, .list {
     padding-left: 45px;
     display:block;
     width: 100%;
+    font-weight: bold;
     &.with-progress {
         position: relative;
         top:-5px;
@@ -413,6 +425,7 @@ dl, .list {
         }
      }
    }
+   
   .progress {
     width: 100%;
     height: 6px;
@@ -421,7 +434,16 @@ dl, .list {
   }
  
 }
-
+.with-squared .card-header .text {
+  font-size:18px;
+}
+.with-squared .card-header {
+  background: $white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 0.5rem;
+  border:0;
+}
 .display-icon {
   width: 65px;
   min-width: 65px;
