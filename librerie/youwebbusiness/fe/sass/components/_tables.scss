@@ -85,6 +85,10 @@
   padding-right: 8px;
   padding-bottom: 8px;
 }
+.table-heading-bordered {
+  border:1px solid $gray4;
+  padding:4px;
+}
 
 /* Smartphones */
 @media (max-width: $bp_md_max) {

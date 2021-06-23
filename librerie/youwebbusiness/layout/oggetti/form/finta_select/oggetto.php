@@ -32,6 +32,25 @@
     </div>
 </form>
 </div>
+<!--HTML DI EMULAZIONE DEL COMPORTAMENTO -->
+<div class="row">
+  <div class="col-6">ESEMPIO DI CALLBACK PER CAMBIARE I VALUE DELLA SELECT BUTTON:<br> selezionare i check per modificare la select button con il numero dei check selezionati</div>
+  <div class="col-6">
+      <div class="form-check checkbox">
+      <input class="form-check-input" type="checkbox"  name="checkFieldCb" value="">
+      <label class="form-check-label"></label>
+    </div>
+      <div class="form-check checkbox">
+        <input class="form-check-input" type="checkbox"  name="checkFieldCb" value="">
+        <label class="form-check-label"></label>
+      </div>
+  </div>
+</div>
+
+
+
+
+
 
 <!-- includo funzione per inizializzare la select customizzate-->
 <script src="./fe/js/init_select_custom.js"></script>
@@ -124,7 +143,14 @@
       })
       //esegue la finta select con i check
       $("#" + paramsFintaSelectBtn.idSel).initSelectCustom(paramsFintaSelectBtn, function(){
-            console.log("funzione di cmb finta select bottone funzionale");
+        $("input[name='checkFieldCb']").on("click",function(e) {
+          var dropDown = $("#scBtn"),
+              valueToPass = $("input[name='checkFieldCb']:checked").length;
+          $(".value-btn").html(valueToPass);
+            e.stopPropagation();
+            dropDown.find('.dropdown-toggle').dropdown('toggle');
+            dropDown.find(".dropdown-menu .select-custom-option").attr("data-value",valueToPass).click();
+        })
       })
      
     })

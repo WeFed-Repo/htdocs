@@ -66,6 +66,60 @@
                <!-- ko if: Control.enableAutorizzazioneMultipla() && Control.isCheckAllMobileVisible() --><!-- /ko -->
             </div>
          </div>
+         
+         
+         <!-- NOUOVA SEZIONE TOP TABELLE-->
+         <hr>
+         <div class="table-heading-bordered">
+            <div class="row align-items-center justify-content-between">
+               <div class="col-auto">
+                  <div tm-pagination="" class="mt-2 mb-2">
+                     <div class="azioni-tabella d-flex ml-1 mr-1">
+                        <div class="mr-3 nowrap" tm-page-list-label="">Elementi per pagina</div>
+                        <ul class="list-inline nowrap page-list">
+                           <li class="list-inline-item active" page-size="10">
+                              10
+                           </li>
+                           <li class="list-inline-item page-list-event" page-size="25">
+                              <a href="javascript:void(0);">25</a>
+                           </li>
+                           <li class="list-inline-item page-list-event" page-size="50">
+                              <a href="javascript:void(0);">50</a>
+                           </li>
+                           <li class="list-inline-item page-list-event" page-size="100">
+                              <a href="javascript:void(0);">100</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="justify-content-end">
+                     <div tm-action="">
+                        <div tm-actions="" class="azioni-tabella">
+                           <a href="javascript:void(0);" tm-action-link="Pdf" class="tm-norows-hide" style="text-decoration: none !important;">
+                           <span>
+                           <img src="fe/img/icon/pdf.svg">
+                           </span>
+                           </a>
+                           <a href="javascript:void(0);" tm-action-link="CSV" class="tm-norows-hide" style="text-decoration: none !important;">
+                           <span>
+                           <img src="fe/img/icon/excel.svg">
+                           </span>
+                           </a>
+                           <a href="javascript:void(0);" tm-action-link="CSV2000" class="tm-norows-hide" style="text-decoration: none !important;">
+                           <span>
+                           <img src="fe/img/icon/excel2000.svg">
+                           </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               
+            </div>
+         </div>
+         
+         
          <div tm-table="">
             <div tablecontext="1422c770dbf14a0aa37c472776f1d98f_3" style="">
                <div tm-table-header="" style="display: none;">

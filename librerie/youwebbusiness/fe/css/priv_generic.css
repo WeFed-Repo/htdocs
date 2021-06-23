@@ -2608,6 +2608,11 @@
   padding-bottom: 8px;
 }
 
+.table-heading-bordered {
+  border: 1px solid #DDDDDD;
+  padding: 4px;
+}
+
 /* Smartphones */
 @media (max-width: 767px) {
   .table-filters {

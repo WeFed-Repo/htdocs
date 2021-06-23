@@ -1,4 +1,5 @@
-<section>
+
+<section class="no-margin-section">
   <div class="card b-r-3 with-squared border-error">
     <div class="card-header  d-flex justify-content-between align-items-top">
       <div class="row d-flex justify-content-between align-items-center w-100">
