@@ -2583,6 +2583,15 @@
   min-height: 0px;
   padding-top: 5px;
 }
+.table-heading-filters.table-heading-filters-big .table-heading-firstline h3 .sub {
+  margin: 0 20px;
+  font-size: 14px;
+  color: #737373;
+}
+.table-heading-filters.table-heading-filters-big .table-heading-firstline .btn-white {
+  height: 42px;
+  line-height: 42px;
+}
 
 .table-filters {
   float: right;

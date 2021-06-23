@@ -47,6 +47,21 @@
         padding-top: 5px;
       }
     }
+
+    // Versione "accordion" con header grande
+    &.table-heading-filters-big .table-heading-firstline{
+      
+      h3 {
+        .sub {margin:0 20px;font-size:14px; color:#737373}
+      }
+      
+      .btn-white {
+        height: 42px;
+        line-height: 42px;
+      }
+
+    }
+
   }
 }
 
