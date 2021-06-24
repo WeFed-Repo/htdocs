@@ -329,7 +329,7 @@
                                     <td>
                                        AUTOMOBILE CLUB - A.C. - MODEN
                                     </td>
-                                    <td>05034</td>
+                                    <td><div class="wrapper-icon-bullet"><span class="color-bfm_status_parzialmente_incassata icon-bullet"></span> <span class="text">parzialmente incassata</span></div></td>
                                     <td>000000047659                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>
