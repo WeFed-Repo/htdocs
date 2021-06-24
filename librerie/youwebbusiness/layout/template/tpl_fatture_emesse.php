@@ -50,11 +50,44 @@
 
 
 
+<!-- Box filtro fatture -->
+<section>
+	<div class="row">
+		<div class="col-6 d-flex justify-content-start align-items-top">
+			<h2 class="color-greenLink">Fatture emesse</h2>
+		</div>
+	</div>
 
-<!--ES. BOX STATO FATTURE INTERATTIVO-->
-<?php virtual('/youwebbusiness/layout/oggetti/box/box_stato_fatture/oggetto.php'); ?>
-<!-- ./ BOX STATO FATTURE INTERATTIVO-->
-      
+
+<div class="no-margin-section">
+	<div class="row">
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_incassata cursor-pointer pb-3 pl-3"  data-graph-filter="incassate">
+				<span class="d-md-block d-inline font-size-20">Incassate (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_inscadenza cursor-pointer pb-3 pl-3"  data-graph-filter="inscadenza">
+				<span class="d-md-block d-inline font-size-20">In scadenza (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_scaduta  cursor-pointer pb-3 pl-3" data-graph-filter="scadute">
+				<span class="d-md-block d-inline font-size-20">Scadute (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_totale cursor-pointer pb-3 pl-3" data-graph-filter="totali">
+				<span class="d-md-block d-inline font-size-20">Totali (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fine box filtro fatture -->
 
 
 <!-- Grafico standalone fatture -->
@@ -80,65 +113,105 @@
        
           <div id="istogrammaPile" class="graph-space"></div>
           <script type="text/javascript">
-          // Esempio variabile complementare (mesi dell'anno in lingua)
-          var mesi = ["Gen", "Feb", "Mar", "Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"]
           
-          // Dataset del grafico
-          var piledata = [
-              <?php for ($x=1;$x<=12;$x++){ 
-              if ($x>1) print ",";    
-                  ?>
-                  {
-                      "mese": new Date(2020, <?php print $x-1 ?>, 1),
-                      "incassate":<?php print rand(0,250000)/100;; ?>,
-                      "inscadenza": <?php print rand(0,250000)/100; ?>,
-                      "scadute":<?php print rand(0,250000)/100; ?>
-                  }
-              <?php 
-              }
-              ?>
-          ];
+          var selectedGraphStatus = "totali";
+          
+          var disegnaGrafico = function(){
 
-          // Rendering del grafico a "pile"
-          Graph.plot({
-              graphtype: "piles",
-              idcontainer: "istogrammaPile",
-              dataProvider: piledata,
-              categoryField: "mese",
-              categoryAxis: {
-                  labelFunction: function(category){
-                  var mesedata = new Date(category);
-                  return mesi[mesedata.getMonth()] + " " + mesedata.getFullYear();
-                  }
-              },
-              valueAxis: {
-                  labelFunction: function(val) {
-                      return val + " \u20AC"
-                  }
-              },
-              graphs: [ {
-              valueField: "incassate",
-              type: "column",
-              fillAlphas:1,
-              lineColor: "#2f9988",
-              balloonText: "[[value]] &euro;"
-          },
-          {
-              valueField: "inscadenza",
-              type: "column",
-              fillAlphas:1,
-              lineColor: "#f6cf49",
-              balloonText: "[[value]] &euro;"
-          },
-          {
-              valueField: "scadute",
-              type: "column",
-              fillAlphas:1,
-              lineColor: "#7d48aa",
-              balloonText: "[[value]] &euro;"
+                // Esempio variabile complementare (mesi dell'anno in lingua)
+                var mesi = ["Gen", "Feb", "Mar", "Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"]
+                          
+                // Dataset del grafico
+                var piledata = [
+                    <?php for ($x=1;$x<=12;$x++){ 
+                    if ($x>1) print ",";    
+                        ?>
+                        {
+                            "mese": new Date(2020, <?php print $x-1 ?>, 1),
+                            "incassate":<?php print rand(0,250000)/100;; ?>,
+                            "inscadenza": <?php print rand(0,250000)/100; ?>,
+                            "scadute":<?php print rand(0,250000)/100; ?>
+                        }
+                    <?php 
+                    }
+                    ?>
+                ];
+
+                // Array delle barre
+                var barre = [ {
+                        valueField: "incassate",
+                        id: "incassate",
+                        type: "column",
+                        fillAlphas:1,
+                        lineColor: "#2f9988",
+                        balloonText: "[[value]] &euro;"
+                    },
+                    {
+                        valueField: "inscadenza",
+                        id: "inscadenza",
+                        type: "column",
+                        fillAlphas:1,
+                        lineColor: "#f6cf49",
+                        balloonText: "[[value]] &euro;"
+                    },
+                    {
+                        valueField: "scadute",
+                        id: "scadute",
+                        type: "column",
+                        fillAlphas:1,
+                        lineColor: "#7d48aa",
+                        balloonText: "[[value]] &euro;"
+                    }
+                  ];
+
+                // Riordina le barre a seconda della selezione
+
+
+                // Applica la classe di filtraggio al wrapper
+                $("#istogrammaPile").removeClass("incassate inscadenza scadute totali").addClass(selectedGraphStatus);
+
+                // Rendering del grafico a "pile"
+                Graph.plot({
+                    graphtype: "piles",
+                    idcontainer: "istogrammaPile",
+                    dataProvider: piledata,
+                    categoryField: "mese",
+                    categoryAxis: {
+                        labelFunction: function(category){
+                        var mesedata = new Date(category);
+                        return mesi[mesedata.getMonth()] + " " + mesedata.getFullYear();
+                        }
+                    },
+                    valueAxis: {
+                        labelFunction: function(val) {
+                            return val + " \u20AC"
+                        }
+                    },
+                    graphs: barre
+                });
+
           }
-          ]
-          });
+          
+
+          // Esempio inizializzazioni
+
+          $(function(){
+              // Esempio funzione bottoni
+              $("*[data-graph-filter]").click(function(){
+                $("*[data-graph-filter]").removeClass("selected");
+                var bt = $(this).addClass("selected");
+
+                selectedGraphStatus = bt.attr("data-graph-filter");
+
+                disegnaGrafico();
+              })
+
+
+              // Disegna il grafico
+              disegnaGrafico();
+
+          })
+         
 
           </script>
       </div>
@@ -146,3 +219,5 @@
 
 
       <!-- Fine grafico standalone fatture -->
+      
+</section>
