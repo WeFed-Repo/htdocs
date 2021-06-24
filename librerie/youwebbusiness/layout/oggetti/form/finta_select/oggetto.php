@@ -5,13 +5,13 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label class="control-label">Select normal</label>
-        <!- aggiugere classe disabled e attributo disabled per select disabilitata-->
-        <!- attributi select normale name/id/data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
+        <!-- aggiugere classe disabled e attributo disabled per select disabilitata-->
+        <!-- attributi select normale name/id/data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
         <div class="dropdown select-custom" name="sc" id="sc"></div>
       </div>
       <div class="form-group col-md-4">
         <label class="control-label">Select con checkbox</label>
-        <!- attributi select con checkbox: 
+        <!-- attributi select con checkbox: 
           name
           id
           class has-checkbox se è di tipo checkbox
@@ -21,7 +21,7 @@
       </div>
       <div class="form-group col-md-4">
         <label class="control-label">Select bottone funzionale</label>
-        <!- attributi select con checkbox: 
+        <!-- attributi select con checkbox: 
           name
           id
           has-btn se è di tipo btn

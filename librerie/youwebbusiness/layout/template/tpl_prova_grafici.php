@@ -1,9 +1,4 @@
 <!-- Importazione assets per grafici -->
-<!--
-<script type="text/javascript" src="./fe/assets/amcharts/amcharts.js"></script>
-<script type="text/javascript" src="./fe/assets/amcharts/serial.js"></script>
-<script type="text/javascript" src="./fe/assets/amcharts/pie.js"></script>
--->
 <!-- Script per gestione grafici -->
 <script type="text/javascript" src="./fe/js/grafici.js"></script>
 

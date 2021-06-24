@@ -44,76 +44,9 @@
           </div>
         </div>
 
-        <!-- FILTRI DESKTOP -->
-
-        <div class="table-filters-accordion" data-filter-form="filter01" style="display:none">
-        <!-- Form con filtri -->
-          <form>
-            <div class="row justify-content-between">
-              <div class="col-12 col-lg-5">
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label class="control-label">Data da</label>
-                    <div class="input-group datepicker">
-                      <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
-                      <div class="input-group-append">
-                        <span class="input-group-text">
-                          <i class="icon icon-ico_calendario"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col">
-                    <label class="control-label">Data a</label>
-                    <div class="input-group datepicker">
-                      <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
-                     <div class="input-group-append">
-                        <span class="input-group-text">
-                          <i class="icon icon-ico_calendario"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-5">
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label>Importo da</label>
-                    <input type="text" class="form-control" placeholder="Text">
-                  </div>
-                  <div class="form-group col">
-                    <label>Importo a</label>
-                    <input type="text" class="form-control" placeholder="Text">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12 col-md-7 col-lg-8">
-                <label>Descrizione</label>
-                <input type="text" class="form-control" placeholder="Text">
-              </div>
-              <div class="col-12 col-md-5 col-lg-4">
-                <div class="form-row">
-                  <div class="form-group col-6">
-                    <button class="btn btn-white btn-block no-label-md">
-                      Reset
-                    </button>
-                  </div>
-                  <div class="form-group col-6">
-                    <button class="btn btn-white btn-block no-label-md">
-                      Conferma
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </form>
-          <!-- FINE FORM CON FILTRI -->
-
+      <!-- Esempio di filtri -->
+      <div class="table-filters-accordion" data-filter-form="filter01" style="display:none">
+        <?php include ("parts/esempio_filtri_ricerca.php"); ?>
       </div>
 
       <div>

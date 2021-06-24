@@ -260,8 +260,12 @@
 		"title": "Gestione Finanziaria",
 		"voices": [
 			{
-				"title": "Entrate e uscite",
+				"title": "Esempio grafico entrate e uscite",
 				"tpl": "tpl_entrate_uscite.php"
+			},
+			{
+				"title": "Esempio grafico fatture emesse",
+				"tpl": "tpl_fatture_emesse.php"
 			},
 			{
 				"title": "Test creazione grafici",
