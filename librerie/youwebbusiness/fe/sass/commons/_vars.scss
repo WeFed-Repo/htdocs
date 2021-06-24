@@ -92,6 +92,7 @@ $bfm_status_categorizzare:#f5f5f5;
 $bfm_status_inscadenza:#f6cf49;
 $bfm_status_scaduta:#7d48aa;
 $bfm_status_incassata:#52a99b;
+$bfm_status_parzialmente_incassata:#dddddd;
 $bfm_status_totale:#3e3e3e;
 
 /* bfm colori categorie*/
@@ -151,6 +152,7 @@ $colors:(
     bfm_status_attive :$bfm_status_attive,
     bfm_status_categorizzare :$bfm_status_categorizzare,
     bfm_status_totale: $bfm_status_totale,
+    bfm_status_parzialmente_incassata: $bfm_status_parzialmente_incassata,
     bfm_bollette: $bfm_bollette,
     bfm_fornitori: $bfm_fornitori,
     bfm_operazionifinanziarie: $bfm_operazionifinanziarie,

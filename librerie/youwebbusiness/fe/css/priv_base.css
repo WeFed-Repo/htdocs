@@ -699,6 +699,24 @@
   background: rgba(62, 62, 62, 0.2);
 }
 
+.color-bfm_status_parzialmente_incassata {
+  color: #dddddd;
+}
+.bkg-bfm_status_parzialmente_incassata {
+  background-color: #dddddd;
+}
+
+.border-bfm_status_parzialmente_incassata {
+  border-color: #dddddd !important;
+}
+
+.border-left-bfm_status_parzialmente_incassata {
+  border-left-color: #dddddd !important;
+}
+.border-left-bfm_status_parzialmente_incassata.selected {
+  background: rgba(221, 221, 221, 0.2);
+}
+
 .color-bfm_bollette {
   color: #00755c;
 }

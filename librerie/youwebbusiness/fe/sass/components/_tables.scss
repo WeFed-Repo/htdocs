@@ -171,11 +171,11 @@
     border-spacing: 0 1px;
     tbody tr {
       border:0;
+      background-color: $white;
+      &:hover{background-color: $white;}
       td {
       border:0;
       border-bottom:1px solid $gray4;
-      background-color: $white;
-        &:hover {background-color: $white;}
       }
     }
   }

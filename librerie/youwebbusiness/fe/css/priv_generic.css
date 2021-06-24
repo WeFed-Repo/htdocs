@@ -698,6 +698,24 @@
   background: rgba(62, 62, 62, 0.2);
 }
 
+.color-bfm_status_parzialmente_incassata {
+  color: #dddddd;
+}
+.bkg-bfm_status_parzialmente_incassata {
+  background-color: #dddddd;
+}
+
+.border-bfm_status_parzialmente_incassata {
+  border-color: #dddddd !important;
+}
+
+.border-left-bfm_status_parzialmente_incassata {
+  border-left-color: #dddddd !important;
+}
+.border-left-bfm_status_parzialmente_incassata.selected {
+  background: rgba(221, 221, 221, 0.2);
+}
+
 .color-bfm_bollette {
   color: #00755c;
 }
@@ -2496,6 +2514,9 @@
 .bootstrap-table .table-show-hidden tbody th.hidden, .bootstrap-table .table-show-hidden tbody td.hidden, .bootstrap-table .table-show-hidden thead th.hidden, .bootstrap-table .table-show-hidden thead td.hidden {
   display: table-cell;
 }
+.bootstrap-table .highlight {
+  background-color: #e9f3f1 !important;
+}
 
 .table-hovered tr:hover td {
   background: #e1f3f0 !important;
@@ -2691,14 +2712,14 @@
 }
 .bootstrap-table table.space-border tbody tr, .bootstrap-table .table.space-border tbody tr, .table.space-border tbody tr {
   border: 0;
+  background-color: #FFFFFF;
+}
+.bootstrap-table table.space-border tbody tr:hover, .bootstrap-table .table.space-border tbody tr:hover, .table.space-border tbody tr:hover {
+  background-color: #FFFFFF;
 }
 .bootstrap-table table.space-border tbody tr td, .bootstrap-table .table.space-border tbody tr td, .table.space-border tbody tr td {
   border: 0;
   border-bottom: 1px solid #DDDDDD;
-  background-color: #FFFFFF;
-}
-.bootstrap-table table.space-border tbody tr td:hover, .bootstrap-table .table.space-border tbody tr td:hover, .table.space-border tbody tr td:hover {
-  background-color: #FFFFFF;
 }
 .bootstrap-table table.b-r-small tbody td:first-child, .bootstrap-table .table.b-r-small tbody td:first-child, .table.b-r-small tbody td:first-child {
   border-radius: 5px 0 0 5px;
