@@ -1,5 +1,5 @@
 /* Variabili colore */
-/* STRUTTURA */
+/* ##STRUTTURA */
 /* Header */
 .aletti {
   /* Spalla */
@@ -29,7 +29,7 @@
   color: #232e4e;
   background-color: #f2efea;
 }
-.aletti footer a {
+.aletti footer a, .aletti footer .numeriUtiliPub {
   color: #a59a84;
 }
 .aletti #mainContent .dashboard-widgets .datioutput .evidente,
@@ -106,6 +106,9 @@
 .aletti #mainContent #dbgraphwrapper #dayselector button.selected {
   border-bottom: solid 2px #232e4e;
 }
+.aletti li .subMenuXL, .aletti li.open > .subMenuX {
+  background-color: #092442;
+}
 .aletti .dropdown-menu.headerDxUserMenu li a {
   background-color: #a89a80;
   color: #3f4f66;
@@ -131,16 +134,14 @@
     border-bottom: solid 2px transparent;
   }
   .aletti .mm-list.opened,
-.aletti li a, .aletti li span.openSubMenu,
-.aletti .second-levelMenu li a:not(.back) {
+.aletti li span.openSubMenu,
+.aletti .second-levelMenu li a {
     color: #fff;
   }
-  .aletti .ui-accordion-header:not(.back),
-.aletti .ui-accordion-header:not(.back) {
+  .aletti .second-levelMenu .ui-accordion-content li a,
+.aletti .ui-accordion-header,
+.aletti .ui-accordion-header {
     color: #232e4e;
-  }
-  .aletti li.active {
-    color: #dbd7ce;
   }
   .aletti #buttonUserMobile {
     background-color: #a89a80;
