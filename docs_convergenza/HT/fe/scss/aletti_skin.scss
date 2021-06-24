@@ -5,7 +5,7 @@ $bgdark: #092442;
 $main-text: #232e4e;
 $spalla-text: #3f4f66;
 $icons : #a79a87;
-/* STRUTTURA */
+/* ##STRUTTURA */
 /* Header */
 .aletti {
 
@@ -47,7 +47,7 @@ $icons : #a79a87;
   footer {
     color: $main-text;
     background-color:#f2efea;
-    a {
+    a, .numeriUtiliPub {
       color:#a59a84;
     }
   }
@@ -128,6 +128,8 @@ $icons : #a79a87;
         rgba(132, 145, 160, 0.3) 0%,
         rgba(82, 101, 123, 0.1) 100%
       );
+
+      //testi grafo
       span,
       #dbgraphconsole span,
       text tspan,
@@ -144,6 +146,10 @@ $icons : #a79a87;
     }
   }
 
+  //Navbar
+  li .subMenuXL, li.open > .subMenuX {
+    background-color: $bgdark;
+  }
   //Profilo
   .dropdown-menu.headerDxUserMenu li a {
     background-color: $primary;
@@ -155,30 +161,35 @@ $icons : #a79a87;
 
 
 
+
  // #Mobile 
  // ### Menu
   @media screen and (max-width: 1023px) {
 
+    //spalla sx
     #headerMobile,
     nav#menuMainMobile .mm-list.opened{
       background-color: $bgdark;
     }
+
     #headerMobile {
       border-bottom: solid 2px transparent;
     }
+
+    //lista menu
     .mm-list.opened,
-    li a, li span.openSubMenu,
-    .second-levelMenu li a:not(.back) {
+    li span.openSubMenu,
+    .second-levelMenu li a {
       color: #fff;
     }
-    .ui-accordion-header:not(.back),
-    .ui-accordion-header:not(.back) {
+
+    //sub elementi lista menu
+    .second-levelMenu .ui-accordion-content li a,
+    .ui-accordion-header,
+    .ui-accordion-header {
       color:$main-text;
     }
-    li.active {
-      color: $primary-light;
-    }
- 
+
     // Profilo
     #buttonUserMobile {
       background-color: $primary;
