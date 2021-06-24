@@ -27,7 +27,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		.attr("aria-haspopup", "true") //elemento select a seconda del tip diventa una select o un bottone
 		.attr("aria-expanded", "true"),
 		
-		inputHidden = $("<input type='hidden' value=''>").attr("name", "inputHidden" + scName), //input hidden da completare con il value se già selected
+		inputHidden = $("<input type='hidden' value=''>").attr("name", "inputHidden" + scName).attr("id", "inputHidden" + scName), //input hidden da completare con il value se già selected
 		optionsWrapperEl = $("<ul class='select-custom-options-wrapper dropdown-menu'>").attr("aria-labelledby", "dp" + scId); //wrapper delle options
 		
 	//costruzione html
@@ -120,7 +120,6 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			valArr = [];
 			valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
 			scIhidden.val(valArr.join(","));
-		
 		}
 		
 		//caso select di default

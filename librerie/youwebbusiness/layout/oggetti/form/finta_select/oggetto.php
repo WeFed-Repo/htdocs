@@ -145,12 +145,19 @@
       $("#" + paramsFintaSelectBtn.idSel).initSelectCustom(paramsFintaSelectBtn, function(){
         $("input[name='checkFieldCb']").on("click",function(e) {
           var dropDown = $("#scBtn"),
-              valueToPass = $("input[name='checkFieldCb']:checked").length;
-          $(".value-btn").html(valueToPass);
-            e.stopPropagation();
-            dropDown.find('.dropdown-toggle').dropdown('toggle');
-            dropDown.find(".dropdown-menu .select-custom-option").attr("data-value",valueToPass).click();
-        })
+              valueToPass = $("input[name='checkFieldCb']:checked").length,
+              inputHidden= $("#inputHiddenscBtn"),
+              optionSelected= dropDown.find(".select-custom-option.option-selected")
+             
+             //modifico il valori nella select e il rispettivo input hidden se la voce è selezionata
+             $(".value-btn").html(valueToPass);
+             dropDown.find(".select-custom-option").attr("data-value",valueToPass);
+             if(inputHidden.val()!="") {
+              valArr = [];
+			        valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
+			        inputHidden.val(valArr.join(","));
+              }
+         })
       })
      
     })
