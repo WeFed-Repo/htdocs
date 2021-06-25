@@ -90,7 +90,6 @@
   color: #ebedee !important;
 }
 .aletti #mainContent #dbgraphwrapper {
-  background-color: rgba(132, 145, 160, 0.7) !important;
   background: linear-gradient(120deg, rgba(132, 145, 160, 0.3) 0%, rgba(82, 101, 123, 0.1) 100%);
 }
 .aletti #mainContent #dbgraphwrapper span,
