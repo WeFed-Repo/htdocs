@@ -138,7 +138,8 @@
                 ];
 
                 // Array delle barre
-                var barre = [ {
+                var barreConf = {
+                  "incassate" : {
                         valueField: "incassate",
                         id: "incassate",
                         type: "column",
@@ -146,6 +147,7 @@
                         lineColor: "#2f9988",
                         balloonText: "[[value]] &euro;"
                     },
+                    "inscadenza" :
                     {
                         valueField: "inscadenza",
                         id: "inscadenza",
@@ -154,6 +156,7 @@
                         lineColor: "#f6cf49",
                         balloonText: "[[value]] &euro;"
                     },
+                    "scadute":
                     {
                         valueField: "scadute",
                         id: "scadute",
@@ -162,10 +165,12 @@
                         lineColor: "#7d48aa",
                         balloonText: "[[value]] &euro;"
                     }
-                  ];
+                  };
 
-                // Riordina le barre a seconda della selezione
-
+                // Riordina le barre a seconda della selezione (mettendo per ultima quella selezionata)
+                var barre = [barreConf.incassate,barreConf.inscadenza,barreConf.scadute].filter(function(v){return v.id!=selectedGraphStatus});
+                 
+                barre.unshift (barreConf[selectedGraphStatus]);
 
                 // Applica la classe di filtraggio al wrapper
                 $("#istogrammaPile").removeClass("incassate inscadenza scadute totali").addClass(selectedGraphStatus);

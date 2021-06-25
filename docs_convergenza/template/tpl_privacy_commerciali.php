@@ -80,13 +80,31 @@
 <!--- Form -->
 <div class="indented">
     <div class="list-icon-wrapper not-inline more-spaced" id="form_configurazione">
-        <?php foreach(["SMS","E-mail","Contact center", "Paolo l'assistente virtuale","Notifiche app","Sportello ATM"] as $input) { ?>
-        <div class="text-with-icon">
-            <div class="mode-output"><span class="image-icon <?php print ( $input === "E-mail"? "stato-neutro":"stato-ok");?>"></span><span class="text"><?php print $input; ?></span><?php if ($input === "SMS") { ?><i class="icon icon-alert_caution icon-inline"></i><?php } ?></div>
-            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="<?php print $input; ?>" <?php print ( $input != "E-mail"? "checked":"");?>><span class="text"><?php print $input; ?></span></div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-ok"></span><span class="text">SMS</span><i class="icon icon-alert_caution icon-inline"></i></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="SMS" checked><span class="text">SMS</span></div>
         </div>
-        <?php } ?>
-    </div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-neutro"></span><span class="text">E-mail</span></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="E-mail" ><span class="text">E-mail</span></div>
+        </div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-ok"></span><span class="text">Contact center</span></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="Contact center" checked><span class="text">Contact center</span></div>
+        </div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-ok"></span><span class="text">Paolo l'assistente virtuale</span></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="Paolo l'assistente virtuale" checked><span class="text">Paolo l'assistente virtuale</span></div>
+        </div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-ok"></span><span class="text">Notifiche app</span></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="Notifiche app" checked><span class="text">Notifiche app</span></div>
+        </div>
+                <div class="text-with-icon">
+            <div class="mode-output"><span class="image-icon stato-ok"></span><span class="text">Sportello ATM</span></div>
+            <div class="mode-input"><input type="checkbox" class="twi-checkbox" value="Sportello ATM" checked><span class="text">Sportello ATM</span></div>
+        </div>
+            </div>
 </div>
 <!--- fine form -->
 <!-- Fine form gestione consensi -->
