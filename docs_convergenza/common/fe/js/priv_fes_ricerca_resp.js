@@ -314,7 +314,7 @@ function fesGetData(firstpage)
 						}
 
 						var fesFondoNome = $("<a>").html(labelAnt + "<span>" + v.nome + "</span>").attr({"href":"javascript:;"}).click(function(){
-						// goToSchedafondo({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
+							// goToSchedafondo({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
 							fesFondoShow({"codicesocieta":v.codicesocieta, "codicecomparto": v.codicecomparto, "divisa": v.divisa, "fondosicav": v.fondosicav,"codicefida":v.codicefida});
                         });
 
@@ -322,13 +322,11 @@ function fesGetData(firstpage)
 						
 						// Sintesi
 						// Rating Fida (formulato in corone)
-
 						var ratingdesktop = $("<div>").addClass("rating large").empty();
+
 						// Rating
 						for (x=1;x<=5;x++) ratingdesktop.append("<i class=\"icon icon-corona"+ (( x <= v.rating ) ? " icon-corona-on" : "") +"\"></i>");
 						var ratingsmall = $("<div>").addClass("rating small rate"+v.rating).empty().append($("<div>").addClass("bg"),$("<span>").html(v.rating ));
-
-
 
 						fesTr.append($("<td>").addClass("sintesi center").append(ratingdesktop.clone(),ratingsmall.clone()));                       
 						fesTr.append($("<td>").html(v.assogestioni).addClass("sintesi"));

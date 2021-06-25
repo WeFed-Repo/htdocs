@@ -372,6 +372,10 @@ var pacRicerca = (function() {
             	filteredData[index].nome = "<span class=\"labelpir\">PIR</span>" + filteredData[index].nome;
             }
 
+            if(filteredData[index].patrimonioPersonal != undefined && filteredData[index].patrimonioPersonal == "S") {
+            	filteredData[index].nome = "<span class=\"labelpp\" title=\"Patrimonio personal\">Patrimonio Personal</span>" + filteredData[index].nome;
+            }
+            
         });
         return filteredData;
     }

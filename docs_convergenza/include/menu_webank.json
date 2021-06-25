@@ -535,6 +535,23 @@
 		"hidden-nav": true,
 		"voices": [
 			{
+				"nome": "Gestione privacy",
+				"voices": [
+					{
+						"nome": "Comunicazioni commerciali",
+						"tpl": "tpl_privacy_commerciali.php",
+						"html": "vr",
+						"inlavorazione": true
+					},
+					{
+						"nome": "Consensi privacy",
+						"tpl": "tpl_privacy_consensi.php",
+						"html": "vr",
+						"inlavorazione": true
+					}	
+				]	
+			},
+			{
 				"nome": "Documenti",
 				"voices": [
 					{

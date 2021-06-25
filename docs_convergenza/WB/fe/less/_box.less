@@ -471,3 +471,41 @@ i.css-square {
   .dyn-banner {display:block;width: 100%;} 
   .dyn-banner img, .dyn-banner .dyn-banner-text {width:100%;max-width: none;}
 }
+
+/* Nuovi alert box (dismissibili) */
+/* Infobox */
+.infobox {
+    margin: 0 50px 25px;
+    position:relative;
+    clear:both; 
+    float:none;
+    background:#eee;
+    padding:15px 55px 0 25px;
+    border-radius:10px;
+    font-size:13px;
+    h3 {font-size:13px; margin-bottom:5px;text-transform:none;width:100%;}
+    p {padding-bottom:15px; color:#000;line-height:18px;}
+    .infobox-close {
+        cursor:pointer;
+        position:absolute;
+        width:30px;
+        height:30px;
+        right:15px;
+        top:17px;
+        text-decoration:none;
+        .icon {
+            font-size:14px
+        }
+    }
+    /* Declinazioni infobox */
+    &.infobox-warning {background: #fef3de;
+        h3, .infobox-close .icon {
+            color: #EEAA27;
+        }
+    } 
+}
+@media (max-width:767px) {
+     .infobox {margin: 0 0 25px;}
+}
+ 
+ 

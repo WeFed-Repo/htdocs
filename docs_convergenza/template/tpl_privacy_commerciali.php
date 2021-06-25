@@ -54,7 +54,7 @@
 
 <!-- Introduzione -->
 <h3 class="titleSection titleForm">Dove ricevere le comunicazioni commerciali</h3>
-<p>Di seguito puoi scegliere dove ricevere le eventuali comunicazioni commerciali derivanti dai consensi privacy che hai espresso.</p>
+<p>Di seguito puoi scegliere dove ricevere le eventuali comunicazioni commerciali derivanti dai <a href="#">consensi privacy che hai espresso</a>.</p>
 <!-- Fine introduzione -->
 <!-- Form gestione consensi -->
 <script type="text/javascript">

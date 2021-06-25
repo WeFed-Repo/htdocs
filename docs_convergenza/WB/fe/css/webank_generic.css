@@ -331,6 +331,9 @@ object,
     padding: 0 0 15px;
   }
 }
+.indented {
+  padding-left: 20px;
+}
 /* REGOLE COMUNI PARTI TESTUALI */
 body {
   color: #000;
@@ -1578,6 +1581,7 @@ ol.sotto-elenco ol li {
 }
 .image-icon.stato-neutro {
   background: url("/common/fe/img/icon-stato-neutro.png");
+  background-size: 100%;
 }
 /* spostato per risoluzioni intermedie*/
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -6876,6 +6880,11 @@ table tr td.td-fondo .fundName {
   .form-group.btnWrapper .btn {
     display: block;
   }
+}
+.twi-checkbox:checked,
+.consensi-input input:checked {
+  mix-blend-mode: luminosity;
+  -webkit-filter: grayscale(100%);
 }
 /* Classi aggiuntive per la griglia */
 .col-sep {
@@ -12761,6 +12770,54 @@ i.css-square {
   .dyn-banner .dyn-banner-text {
     width: 100%;
     max-width: none;
+  }
+}
+/* Nuovi alert box (dismissibili) */
+/* Infobox */
+.infobox {
+  margin: 0 50px 25px;
+  position: relative;
+  clear: both;
+  float: none;
+  background: #eee;
+  padding: 15px 55px 0 25px;
+  border-radius: 10px;
+  font-size: 13px;
+  /* Declinazioni infobox */
+}
+.infobox h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+  text-transform: none;
+  width: 100%;
+}
+.infobox p {
+  padding-bottom: 15px;
+  color: #000;
+  line-height: 18px;
+}
+.infobox .infobox-close {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 15px;
+  top: 17px;
+  text-decoration: none;
+}
+.infobox .infobox-close .icon {
+  font-size: 14px;
+}
+.infobox.infobox-warning {
+  background: #fef3de;
+}
+.infobox.infobox-warning h3,
+.infobox.infobox-warning .infobox-close .icon {
+  color: #EEAA27;
+}
+@media (max-width: 767px) {
+  .infobox {
+    margin: 0 0 25px;
   }
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
