@@ -1,10 +1,12 @@
 
 .accordion {
   .card, .acc-item {
-    border-radius: 0;
     border: none;
     background: $white;
     margin-bottom: 1rem;
+    &:not([class*="b-r-"]) {
+      border-radius: 0;
+    }
     .card-header {
       border-radius: 0;
       border: none;
@@ -64,6 +66,7 @@
         }
       }
     }
+    
     .card-body {
       padding: 1rem;
       font-size: $bodyFontSize;
@@ -94,12 +97,7 @@
       }
     }
   }
-  &.with-squared {
-    .card-header .text {
-      font-size: 18px;
-    }
-    
-  }
+  
 
   &.ico-close-pa {
     .card-header {
@@ -110,14 +108,15 @@
       position: absolute;
       right: 1rem;
       top: 2rem;
-      @media (max-width:$bp_md_min) {
+      @media (max-width:$bp_sm_min) {
         right: 0.5rem;
+        top: 1rem;
       }
     }
     
     .card-header {
        padding-right:2.5rem;
-       @media (max-width:$bp_md_min) {
+       @media (max-width:$bp_sm_min) {
         padding-right:0;
       }
     }

@@ -67,6 +67,15 @@
   .bkg#{"-" + $name}{
     background-color: $color;
   }
+  .border#{"-" + $name}{
+    border-color: $color!important;
+  }
+  .border-left#{"-" + $name}{
+    border-left-color: $color!important;
+    &.selected {
+      background: rgba($color, 0.2);
+    }
+  }
 }
 
 // MIXIN PER CREARE UN GRADIENTE

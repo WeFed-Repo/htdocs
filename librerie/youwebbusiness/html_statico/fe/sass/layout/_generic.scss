@@ -212,7 +212,11 @@ ol {
     margin-left:0;
     margin-right:0;
   }*/
-}
+  &[class*=border-left] {
+    border-left: 12px solid;
+  }
+ }
+
 
 @media (max-width: $bp_md_max) {
   .separator {
@@ -344,7 +348,27 @@ dl, .list {
           font-size: 26px;
       }
   }
+  &-inline {
+    position: relative;
+    display: inline-block;
+    .icon {
+       float:none;
+    }
+    &.right-icon{
+      padding-right:30px;
+     .icon-inline {
+        position:absolute;
+        right:0;
+        top:0;
+        left:auto;
+        margin:0;
+        float: none!important;
+     }
+    }
+  }
 }
+
+
 // End Text-Width-Icon
 
 .text-with-squared {
@@ -353,6 +377,17 @@ dl, .list {
   display: flex;
   align-items: center;
   min-height: 32px;
+  .text-alert {
+    font-size:12px;
+    font-weight: normal;
+    float: right;
+    line-height: 20px;
+    position: relative;
+    top:5px;
+    .icon {
+      float: left;
+    }
+  }
   .squared {
     width: 32px;
     height:32px;
@@ -379,16 +414,18 @@ dl, .list {
     padding-left: 45px;
     display:block;
     width: 100%;
+    font-weight: bold;
     &.with-progress {
         position: relative;
         top:-5px;
        
         @media (max-width:$bp_md_min) {
-          margin-right:2rem;
+          margin-right:0;
           margin-bottom:0.5rem;
         }
      }
    }
+   
   .progress {
     width: 100%;
     height: 6px;
@@ -397,7 +434,16 @@ dl, .list {
   }
  
 }
-
+.with-squared .card-header .text {
+  font-size:18px;
+}
+.with-squared .card-header {
+  background: $white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 0.5rem;
+  border:0;
+}
 .display-icon {
   width: 65px;
   min-width: 65px;
@@ -451,6 +497,15 @@ td.ellipsed {
 }
 .font-size-16 {
   font-size: 16px;
+}
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-small {
+  font-size: 12px;
+}
+.font-size-extra-small {
+  font-size: 11px;
 }
 .overflow-hidden {
   overflow: hidden !important;
@@ -616,16 +671,36 @@ NOTE: La classe .content-hidden-in-mobile
 } 
 
 /*elemento decorativo o funzionale con tooltip per td tabelle o box */
-.wrapper-border-element {position: relative;} 
+.wrapper-border-element {
+  position: relative;
+  @media (max-width:$bp_md_min)
+  {
+    &.no-margin-section {
+      margin-left:-8px!important;
+      margin-right:-17px!important;
+    }
+  }
   .border-element {
     width: 8px;display: block;height: 100%;position: absolute;left:0;top:0;
+    &.large {
+      width: 12px;
+    }
     
     &.b-r-l {
       border-radius:5px 0 0 5px;
     }
    
   }
-  .space-row .border-element {
+}
+
+
+  
+.space-row .border-element {
     min-height: 62px;
     top:-1px;
-  }
+}
+
+/*generici border radius */
+.b-r-3 {
+  border-radius: 3px;
+}

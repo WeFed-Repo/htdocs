@@ -69,6 +69,7 @@ $gray6: #e4e4e4;
 $gray7: #EEEEEE;
 $gray8:#797979;
 $gray9:$grayBordered;
+$gray10: #d8d8d8;
 $grayBG : #F5F5F5;
 $grayMid : #666666;
 $blueLight : #f5f9fc;
@@ -83,6 +84,7 @@ $input_disabled_color: #495057;
 $input_disabled_placeholder:  #495057;
 $tableStriped : #fafafa;
 $greenLighter_border: #afdbd4;
+$boxHighLight : #d1e6e2;
 /* bfm colori status*/
 $bfm_status_confermare: #e9ce96;
 $bfm_status_attive: #37ad9c;
@@ -90,6 +92,8 @@ $bfm_status_categorizzare:#f5f5f5;
 $bfm_status_inscadenza:#f6cf49;
 $bfm_status_scaduta:#7d48aa;
 $bfm_status_incassata:#52a99b;
+$bfm_status_parzialmente_incassata:#dddddd;
+$bfm_status_totale:#3e3e3e;
 
 /* bfm colori categorie*/
 $bfm_bollette: #00755c;
@@ -130,6 +134,7 @@ $colors:(
     gray5               : $gray5,
     gray6               : $gray6,
     gray7               : $gray7,
+    gray10              : $gray10,
     grayBG              : $grayBG,
     grayMid             : $grayMid,
     blue                : $blue,
@@ -146,6 +151,8 @@ $colors:(
     bfm_status_confermare : $bfm_status_confermare,
     bfm_status_attive :$bfm_status_attive,
     bfm_status_categorizzare :$bfm_status_categorizzare,
+    bfm_status_totale: $bfm_status_totale,
+    bfm_status_parzialmente_incassata: $bfm_status_parzialmente_incassata,
     bfm_bollette: $bfm_bollette,
     bfm_fornitori: $bfm_fornitori,
     bfm_operazionifinanziarie: $bfm_operazionifinanziarie,
@@ -163,5 +170,6 @@ $colors:(
     bfm_status_inscadenza: $bfm_status_inscadenza,
     bfm_status_scaduta: $bfm_status_scaduta,
     bfm_status_incassata: $bfm_status_incassata,
+    boxHighLight: $boxHighLight,
 
 );

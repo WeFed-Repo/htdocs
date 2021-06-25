@@ -153,10 +153,10 @@
 </section>
 <section class="no-margin-section">
 <div class="accordion bordered-style always-active with-squared ico-close-pa">
-  <div class="card collapser">
+  <div class="card collapser b-r-3">
   <div class="card-header collapsed d-flex justify-content-between align-items-top" data-toggle="collapse">
     <div class="row d-flex justify-content-between align-items-center w-100">
-      <div class="col-md-6 col-lg-7 col-xl-8">
+      <div class="col-md-7 col-lg-7 col-xl-8">
           <h5 class="card-header-title mb-0">
             <div class="text-with-squared">
               <div class="squared bkg-bfm_status_confermare"></div>
@@ -165,7 +165,7 @@
           </h5>
       </div>
       <hr class="separator d-block d-md-none w-100 mt-3 mb-3">
-      <div class="col-md-6 col-lg-5 col-xl-4">
+      <div class="col-md-5 col-lg-5 col-xl-4">
           <div class="row justify-content-md-end justify-content-between">
           <div class="col-5 col-md-5 col-lg-4 col-xl-5 d-flex justify-content-md-end justify-content-between align-items-center">
             <span class="color-gray2">10 transazioni</span>
@@ -186,588 +186,261 @@ table-header-light => stile chiaro dell'header
 table-bkg-grayBG => colore grigio celle
 table-font-small => font-size 12px
 -->
-
-<div tm-bstable-v2="" class="px-3">
-        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
-    <thead>
-    <tr>
-      <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
-      <th data-field=""></th>
-      <th data-field="Categoria">Categoria</th>
-      <th data-field="contabile" data-sortable="true">Rapporto</th>
-      <th data-field="valuta" data-sortable="true">Descrizione</th>
-      <th data-field="importo" data-sortable="true">Data prevista</th>
-      <th data-field="divisa" data-sortable="true">Periodicità</th>
-      <th data-field="causale" data-sortable="true">Importo</th>
-     <th  data-field="azioni" data-sortable="false"></th>
-    </tr>
- </thead>
- <tbody>
-      <!-- CLASSI COLORE PER LE CATEGORIE-->
-           <tr data-index="0">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
-              <a href="#" class="text color-greenLink">bollette</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (0)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+<!--SEZIONE VISIBILE SU DESKTOP -->
+<div class="d-none d-md-block">
+   <div tm-bstable-v2="" class="px-3">
+         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-border header-light font-small" data-table-mobilized-desktop="NewTable">
+      <thead>
+      <tr>
+         <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
+         <th data-field="Categoria">Categoria</th>
+         <th data-field="contabile" data-sortable="true">Rapporto</th>
+         <th data-field="valuta" data-sortable="true">Descrizione</th>
+         <th data-field="importo" data-sortable="true">Data prevista</th>
+         <th data-field="divisa" data-sortable="true">Periodicità</th>
+         <th data-field="causale" data-sortable="true">Importo</th>
+      <th  data-field="azioni" data-sortable="false"></th>
+      </tr>
+   </thead>
+   <tbody>
+            <!-- CLASSI COLORE PER LE CATEGORIE-->
+                  <tr data-index="0">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
+               <a href="#" class="text color-greenLink">bollette</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (0)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="1">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
-              <a href="#" class="text color-greenLink">fornitori</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (1)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="1">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
+               <a href="#" class="text color-greenLink">fornitori</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (1)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="2">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
-              <a href="#" class="text color-greenLink">operazionifinanziarie</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (2)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="2">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
+               <a href="#" class="text color-greenLink">operazionifinanziarie</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (2)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="3">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
-              <a href="#" class="text color-greenLink">ricavi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (3)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="3">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
+               <a href="#" class="text color-greenLink">ricavi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (3)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="4">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
-              <a href="#" class="text color-greenLink">assicurazione</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (4)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="4">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
+               <a href="#" class="text color-greenLink">assicurazione</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (4)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="5">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
-              <a href="#" class="text color-greenLink">altrespese</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (5)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="5">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
+               <a href="#" class="text color-greenLink">altrespese</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (5)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="6">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_servizi"><i class="icon icon-category_servizi"></i></span>
-              <a href="#" class="text color-greenLink">servizi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (6)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="7">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_tasse"><i class="icon icon-category_tasse"></i></span>
-              <a href="#" class="text color-greenLink">tasse</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (7)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="8">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_trasporti"><i class="icon icon-category_trasporti"></i></span>
-              <a href="#" class="text color-greenLink">trasporti</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (8)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="9">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_immobilizzazioni"><i class="icon icon-category_immobilizzazioni"></i></span>
-              <a href="#" class="text color-greenLink">immobilizzazioni</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (9)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="10">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_intercompany"><i class="icon icon-category_intercompany"></i></span>
-              <a href="#" class="text color-greenLink">intercompany</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (10)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="11">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrepassivita"><i class="icon icon-category_altrepassivita"></i></span>
-              <a href="#" class="text color-greenLink">altrepassivita</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (11)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="12">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altriproventi"><i class="icon icon-category_altriproventi"></i></span>
-              <a href="#" class="text color-greenLink">altriproventi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (12)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="13">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_risorseumane"><i class="icon icon-category_risorseumane"></i></span>
-              <a href="#" class="text color-greenLink">risorseumane</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (13)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </td>
-     </tr>
-   </tbody>
-</table>
-        <div class="clearfix"></div>
+         </td>
+      </tr>
+         </tbody>
+   </table>
+         <div class="clearfix"></div>
+   </div>
+   
 </div>
-<div class="row justify-content-end mr-1">
-  <a href="#">Vedi tutte</a>
-</div>    </div>
+
+
+    </div>
   </div>
 </div>
-<div class="card collapser">
+<div class="card collapser b-r-3 border-error">
   <div class="card-header collapsed d-flex justify-content-between align-items-top" data-toggle="collapse">
     <div class="row d-flex justify-content-between align-items-center w-100">
-      <div class="col-md-6 col-lg-7 col-xl-8">
+      <div class="col-md-7 col-lg-7 col-xl-8">
           <h5 class="card-header-title mb-0">
             <div class="text-with-squared">
               <div class="squared bkg-bfm_status_attive"></div>
               <div class="text color-gray1 with-progress">
-                  <span>Attive</span>
+                 <span>Attive</span>
+                 <span class="d-none d-md-block text-alert"><i class="icon icon-warning color-error"></i> Soglia superata</span>
                  <div class="progress">
                     <div class="progress-bar bkg-bfm_status_attive" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -776,7 +449,7 @@ table-font-small => font-size 12px
           </h5>
       </div>
       <hr class="separator d-block d-md-none w-100 mt-3 mb-3">
-      <div class="col-md-6 col-lg-5 col-xl-4">
+      <div class="col-md-5 col-lg-5 col-xl-4">
           <div class="row justify-content-md-end justify-content-between">
           <div class="col-5 col-md-5 col-lg-4 col-xl-5 d-flex justify-content-md-end justify-content-between align-items-center">
             <span class="color-gray2">10 transazioni</span>
@@ -798,588 +471,830 @@ table-header-light => stile chiaro dell'header
 table-bkg-grayBG => colore grigio celle
 table-font-small => font-size 12px
 -->
-
-<div tm-bstable-v2="" class="px-3">
-        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
-    <thead>
-    <tr>
-      <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
-      <th data-field=""></th>
-      <th data-field="Categoria">Categoria</th>
-      <th data-field="contabile" data-sortable="true">Rapporto</th>
-      <th data-field="valuta" data-sortable="true">Descrizione</th>
-      <th data-field="importo" data-sortable="true">Data prevista</th>
-      <th data-field="divisa" data-sortable="true">Periodicità</th>
-      <th data-field="causale" data-sortable="true">Importo</th>
-     <th  data-field="azioni" data-sortable="false"></th>
-    </tr>
- </thead>
- <tbody>
-      <!-- CLASSI COLORE PER LE CATEGORIE-->
-           <tr data-index="0">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
-              <a href="#" class="text color-greenLink">bollette</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (0)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+<!--SEZIONE VISIBILE SU DESKTOP -->
+<div class="d-none d-md-block">
+   <div tm-bstable-v2="" class="px-3">
+         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
+      <thead>
+      <tr>
+         <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
+         <th data-field=""></th>
+         <th data-field="Categoria">Categoria</th>
+         <th data-field="contabile" data-sortable="true">Rapporto</th>
+         <th data-field="valuta" data-sortable="true">Descrizione</th>
+         <th data-field="importo" data-sortable="true">Data prevista</th>
+         <th data-field="divisa" data-sortable="true">Periodicità</th>
+         <th data-field="causale" data-sortable="true">Importo</th>
+      <th  data-field="azioni" data-sortable="false"></th>
+      </tr>
+   </thead>
+   <tbody>
+            <!-- CLASSI COLORE PER LE CATEGORIE-->
+                  <tr data-index="0">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
+               <a href="#" class="text color-greenLink">bollette</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (0)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="1">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
-              <a href="#" class="text color-greenLink">fornitori</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (1)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="1">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
+               <a href="#" class="text color-greenLink">fornitori</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (1)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="2">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
-              <a href="#" class="text color-greenLink">operazionifinanziarie</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (2)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="2">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
+               <a href="#" class="text color-greenLink">operazionifinanziarie</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (2)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="3">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
-              <a href="#" class="text color-greenLink">ricavi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (3)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="3">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
+               <a href="#" class="text color-greenLink">ricavi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (3)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="4">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
-              <a href="#" class="text color-greenLink">assicurazione</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (4)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="4">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
+               <a href="#" class="text color-greenLink">assicurazione</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (4)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="5">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
-              <a href="#" class="text color-greenLink">altrespese</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (5)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="5">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
+               <a href="#" class="text color-greenLink">altrespese</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (5)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="6">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_servizi"><i class="icon icon-category_servizi"></i></span>
-              <a href="#" class="text color-greenLink">servizi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (6)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="6">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_servizi"><i class="icon icon-category_servizi"></i></span>
+               <a href="#" class="text color-greenLink">servizi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (6)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="7">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_tasse"><i class="icon icon-category_tasse"></i></span>
-              <a href="#" class="text color-greenLink">tasse</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (7)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="7">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_tasse"><i class="icon icon-category_tasse"></i></span>
+               <a href="#" class="text color-greenLink">tasse</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (7)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="8">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_trasporti"><i class="icon icon-category_trasporti"></i></span>
-              <a href="#" class="text color-greenLink">trasporti</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (8)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="8">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_trasporti"><i class="icon icon-category_trasporti"></i></span>
+               <a href="#" class="text color-greenLink">trasporti</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (8)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="9">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_immobilizzazioni"><i class="icon icon-category_immobilizzazioni"></i></span>
-              <a href="#" class="text color-greenLink">immobilizzazioni</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (9)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="9">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_immobilizzazioni"><i class="icon icon-category_immobilizzazioni"></i></span>
+               <a href="#" class="text color-greenLink">immobilizzazioni</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (9)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="10">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_intercompany"><i class="icon icon-category_intercompany"></i></span>
-              <a href="#" class="text color-greenLink">intercompany</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (10)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="10">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_intercompany"><i class="icon icon-category_intercompany"></i></span>
+               <a href="#" class="text color-greenLink">intercompany</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (10)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="11">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrepassivita"><i class="icon icon-category_altrepassivita"></i></span>
-              <a href="#" class="text color-greenLink">altrepassivita</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (11)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="11">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrepassivita"><i class="icon icon-category_altrepassivita"></i></span>
+               <a href="#" class="text color-greenLink">altrepassivita</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (11)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="12">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altriproventi"><i class="icon icon-category_altriproventi"></i></span>
-              <a href="#" class="text color-greenLink">altriproventi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (12)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="12">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altriproventi"><i class="icon icon-category_altriproventi"></i></span>
+               <a href="#" class="text color-greenLink">altriproventi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (12)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="13">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_risorseumane"><i class="icon icon-category_risorseumane"></i></span>
-              <a href="#" class="text color-greenLink">risorseumane</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (13)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="13">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_risorseumane"><i class="icon icon-category_risorseumane"></i></span>
+               <a href="#" class="text color-greenLink">risorseumane</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (13)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-   </tbody>
-</table>
-        <div class="clearfix"></div>
+         </td>
+      </tr>
+         </tbody>
+   </table>
+         <div class="clearfix"></div>
+   </div>
+   <div class="row justify-content-end mr-1">
+   <a href="#">Vedi tutte</a>
+   </div>
 </div>
-<div class="row justify-content-end mr-1">
-  <a href="#">Vedi tutte</a>
+
+
+<!--SEZIONE VISIBILE SU MOBILE DOPO LA TRASFORMAZIONE DELLA TABELLA -->
+<div class="d-block d-md-none">
+<div tm-bstable-v2="" tm-table-elenco-progetti="">
+   <div tablecontext="135" style="">
+      <div tm-table-header="" style="display: none;">
+         <div class="d-flex justify-content-between align-items-end py-1">
+            <div class="d-flex px-3 justify-content-start" tm-table-pagination=""></div>
+            <div class="d-flex px-3 justify-content-end" tm-table-actions=""></div>
+         </div>
+      </div>
+      <div tm-bstable-v2="">
+         <div class="bootstrap-table">
+            <div class="fixed-table-toolbar"></div>
+            <div class="fixed-table-container" style="padding-bottom: 0px;">
+               <div class="fixed-table-header" style="display: none;">
+                  <table></table>
+               </div>
+               <div class="fixed-table-body">
+                  <div class="fixed-table-loading table table-bordered table-hover" style="top: 0px; display: none;">
+                     <span class="loading-wrap">
+                     <span class="loading-text">Loading, please wait</span>
+                     <span class="animation-wrap"><span class="animation-dot"></span></span>
+                     </span>
+                  </div>
+                  <table id="tableElencoProgetti" data-bootstrap-table="" cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small table-hover" data-table-mobilized-desktop="NewTable" style="margin-top: 0px;">
+                     <thead style="display: none;">
+                        <tr>
+                           <th style="" data-field="">
+                              <div class="th-inner "></div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="Numero">
+                              <div class="th-inner ">Nome Progetto</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="DataEmissione">
+                              <div class="th-inner ">Data Inizio</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="ImportoTotale">
+                              <div class="th-inner sortable both">Data Fine</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="Nome">
+                              <div class="th-inner sortable both">Budget Disponibile</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th class="center" style="" data-field="5">
+                              <div class="th-inner "></div>
+                              <div class="fht-cell"></div>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <div class="mobile-data">
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="0">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="0">Progetto_0</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.000,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="1">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="1">Progetto_1</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.001,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="2">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="2">Progetto_2</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.002,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="fixed-table-footer" style="display: none;">
+                  <table>
+                     <thead>
+                        <tr></tr>
+                     </thead>
+                  </table>
+               </div>
+            </div>
+            <div class="fixed-table-pagination" style="display: none;">
+               <div class="float-left pagination-detail">
+                  <span class="pagination-info">
+                  Showing 1 to 10 of 100 rows
+                  </span>
+                  <span class="page-list">
+                     <span class="btn-group dropdown dropup">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="page-size">
+                        10
+                        </span>
+                        <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu"><a class="dropdown-item active" href="#">10</a><a class="dropdown-item " href="#">25</a><a class="dropdown-item " href="#">50</a><a class="dropdown-item " href="#">100</a></div>
+                     </span>
+                     rows per page
+                  </span>
+               </div>
+               <div class="float-right pagination">
+                  <ul class="pagination">
+                     <li class="page-item page-pre"><a class="page-link" href="#">‹</a></li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item page-last-separator disabled"><a class="page-link" href="#">...</a></li>
+                     <li class="page-item"><a class="page-link" href="#">10</a></li>
+                     <li class="page-item page-next"><a class="page-link" href="#">›</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      <div tm-table-footer="" style="display: none;">
+         <div class="row align-items-center py-1 m-0">
+            <div class="col-12 px-3" tm-table-itemscount=""></div>
+            <div class="col px-3 d-flex justify-content-center" tm-table-pages=""></div>
+         </div>
+      </div>
+   </div>
+</div>
 </div>    </div>
   </div>
 </div>
-<div class="card collapser">
+<div class="card collapser b-r-3 border-warning">
   <div class="card-header collapsed d-flex justify-content-between align-items-top" data-toggle="collapse">
     <div class="row d-flex justify-content-between align-items-center w-100">
-      <div class="col-md-6 col-lg-7 col-xl-8">
+      <div class="col-md-7 col-lg-7 col-xl-8">
           <h5 class="card-header-title mb-0">
             <div class="text-with-squared">
               <div class="squared bkg-bfm_status_categorizzare"></div>
               <div class="text color-gray1 with-progress">
                   <span>Da categorizzare</span>
+                  <span class="d-none d-md-block text-alert"><i class="icon icon-attenzione color-warning"></i> Soglia quasi raggiunta</span>
                   <div class="progress">
                     <div class="progress-bar bkg-bfm_status_categorizzare" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -1389,7 +1304,7 @@ table-font-small => font-size 12px
          
       </div>
       <hr class="separator d-block d-md-none w-100 mt-3 mb-3">
-      <div class="col-md-6 col-lg-5 col-xl-4">
+      <div class="col-md-5 col-lg-5 col-xl-4">
           <div class="row justify-content-md-end justify-content-between">
           <div class="col-5 col-md-5 col-lg-4 col-xl-5 d-flex justify-content-md-end justify-content-between align-items-center">
             <span class="color-gray2">10 transazioni</span>
@@ -1411,576 +1326,817 @@ table-header-light => stile chiaro dell'header
 table-bkg-grayBG => colore grigio celle
 table-font-small => font-size 12px
 -->
-
-<div tm-bstable-v2="" class="px-3">
-        <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
-    <thead>
-    <tr>
-      <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
-      <th data-field=""></th>
-      <th data-field="Categoria">Categoria</th>
-      <th data-field="contabile" data-sortable="true">Rapporto</th>
-      <th data-field="valuta" data-sortable="true">Descrizione</th>
-      <th data-field="importo" data-sortable="true">Data prevista</th>
-      <th data-field="divisa" data-sortable="true">Periodicità</th>
-      <th data-field="causale" data-sortable="true">Importo</th>
-     <th  data-field="azioni" data-sortable="false"></th>
-    </tr>
- </thead>
- <tbody>
-      <!-- CLASSI COLORE PER LE CATEGORIE-->
-           <tr data-index="0">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
-              <a href="#" class="text color-greenLink">bollette</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (0)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+<!--SEZIONE VISIBILE SU DESKTOP -->
+<div class="d-none d-md-block">
+   <div tm-bstable-v2="" class="px-3">
+         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small" data-table-mobilized-desktop="NewTable">
+      <thead>
+      <tr>
+         <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
+         <th data-field=""></th>
+         <th data-field="Categoria">Categoria</th>
+         <th data-field="contabile" data-sortable="true">Rapporto</th>
+         <th data-field="valuta" data-sortable="true">Descrizione</th>
+         <th data-field="importo" data-sortable="true">Data prevista</th>
+         <th data-field="divisa" data-sortable="true">Periodicità</th>
+         <th data-field="causale" data-sortable="true">Importo</th>
+      <th  data-field="azioni" data-sortable="false"></th>
+      </tr>
+   </thead>
+   <tbody>
+            <!-- CLASSI COLORE PER LE CATEGORIE-->
+                  <tr data-index="0">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
+               <a href="#" class="text color-greenLink">bollette</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (0)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="1">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
-              <a href="#" class="text color-greenLink">fornitori</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (1)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="1">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
+               <a href="#" class="text color-greenLink">fornitori</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (1)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="2">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
-              <a href="#" class="text color-greenLink">operazionifinanziarie</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (2)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="2">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
+               <a href="#" class="text color-greenLink">operazionifinanziarie</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (2)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="3">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
-              <a href="#" class="text color-greenLink">ricavi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (3)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="3">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
+               <a href="#" class="text color-greenLink">ricavi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (3)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="4">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
-              <a href="#" class="text color-greenLink">assicurazione</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (4)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="4">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
+               <a href="#" class="text color-greenLink">assicurazione</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (4)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="5">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
-              <a href="#" class="text color-greenLink">altrespese</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (5)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="5">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
+               <a href="#" class="text color-greenLink">altrespese</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (5)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="6">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_servizi"><i class="icon icon-category_servizi"></i></span>
-              <a href="#" class="text color-greenLink">servizi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (6)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="6">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_servizi"><i class="icon icon-category_servizi"></i></span>
+               <a href="#" class="text color-greenLink">servizi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (6)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="7">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_tasse"><i class="icon icon-category_tasse"></i></span>
-              <a href="#" class="text color-greenLink">tasse</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (7)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="7">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_tasse"><i class="icon icon-category_tasse"></i></span>
+               <a href="#" class="text color-greenLink">tasse</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (7)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="8">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_trasporti"><i class="icon icon-category_trasporti"></i></span>
-              <a href="#" class="text color-greenLink">trasporti</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (8)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="8">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_trasporti"><i class="icon icon-category_trasporti"></i></span>
+               <a href="#" class="text color-greenLink">trasporti</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (8)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="9">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_immobilizzazioni"><i class="icon icon-category_immobilizzazioni"></i></span>
-              <a href="#" class="text color-greenLink">immobilizzazioni</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (9)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="9">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_immobilizzazioni"><i class="icon icon-category_immobilizzazioni"></i></span>
+               <a href="#" class="text color-greenLink">immobilizzazioni</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (9)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="10">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_intercompany"><i class="icon icon-category_intercompany"></i></span>
-              <a href="#" class="text color-greenLink">intercompany</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (10)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="10">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_intercompany"><i class="icon icon-category_intercompany"></i></span>
+               <a href="#" class="text color-greenLink">intercompany</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (10)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="11">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altrepassivita"><i class="icon icon-category_altrepassivita"></i></span>
-              <a href="#" class="text color-greenLink">altrepassivita</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (11)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="11">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrepassivita"><i class="icon icon-category_altrepassivita"></i></span>
+               <a href="#" class="text color-greenLink">altrepassivita</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (11)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="12">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_altriproventi"><i class="icon icon-category_altriproventi"></i></span>
-              <a href="#" class="text color-greenLink">altriproventi</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (12)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="12">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altriproventi"><i class="icon icon-category_altriproventi"></i></span>
+               <a href="#" class="text color-greenLink">altriproventi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (12)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-        <tr data-index="13">
-        <td class="wrapper-border-element">
-          <span class="border-element b-r-l bkg-greenLighter_border"></span>
-        </td>
-        <td>
-            <span class="text-with-squared">
-              <span class="squared ico-wrapper bkg-bfm_risorseumane"><i class="icon icon-category_risorseumane"></i></span>
-              <a href="#" class="text color-greenLink">risorseumane</a>
-            </span>
-        </td>
-        <td>lorem ipsum</td>
-        <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
-        <td class="ellipsed">
-            Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
-        </td>
-        <td>01/02/2021</td>
-        <td>EUR</td>
-        <td>345</td>
-        <td class="text-center">
-          <div class="btn-group dropdown">
-            <span type="button"
-                  class="cursor-pointer"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-              <img src="./fe/img/icon/more.svg">
-            </span>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
-              <span class="dropdown-item disabled" disabled>Disabled</span>
-              <a class="dropdown-item" href="#">Another action (13)</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+         </td>
+      </tr>
+            <tr data-index="13">
+         <td class="wrapper-border-element">
+            <span class="border-element b-r-l bkg-greenLighter_border"></span>
+         </td>
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_risorseumane"><i class="icon icon-category_risorseumane"></i></span>
+               <a href="#" class="text color-greenLink">risorseumane</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (13)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
             </div>
-          </div>
-        </td>
-     </tr>
-   </tbody>
-</table>
-        <div class="clearfix"></div>
+         </td>
+      </tr>
+         </tbody>
+   </table>
+         <div class="clearfix"></div>
+   </div>
+   <div class="row justify-content-end mr-1">
+   <a href="#">Vedi tutte</a>
+   </div>
 </div>
-<div class="row justify-content-end mr-1">
-  <a href="#">Vedi tutte</a>
+
+
+<!--SEZIONE VISIBILE SU MOBILE DOPO LA TRASFORMAZIONE DELLA TABELLA -->
+<div class="d-block d-md-none">
+<div tm-bstable-v2="" tm-table-elenco-progetti="">
+   <div tablecontext="135" style="">
+      <div tm-table-header="" style="display: none;">
+         <div class="d-flex justify-content-between align-items-end py-1">
+            <div class="d-flex px-3 justify-content-start" tm-table-pagination=""></div>
+            <div class="d-flex px-3 justify-content-end" tm-table-actions=""></div>
+         </div>
+      </div>
+      <div tm-bstable-v2="">
+         <div class="bootstrap-table">
+            <div class="fixed-table-toolbar"></div>
+            <div class="fixed-table-container" style="padding-bottom: 0px;">
+               <div class="fixed-table-header" style="display: none;">
+                  <table></table>
+               </div>
+               <div class="fixed-table-body">
+                  <div class="fixed-table-loading table table-bordered table-hover" style="top: 0px; display: none;">
+                     <span class="loading-wrap">
+                     <span class="loading-text">Loading, please wait</span>
+                     <span class="animation-wrap"><span class="animation-dot"></span></span>
+                     </span>
+                  </div>
+                  <table id="tableElencoProgetti" data-bootstrap-table="" cellspacing="0" cellpadding="0" border="0" class="table space-row header-light bkg-grayBG font-small b-r-small table-hover" data-table-mobilized-desktop="NewTable" style="margin-top: 0px;">
+                     <thead style="display: none;">
+                        <tr>
+                           <th style="" data-field="">
+                              <div class="th-inner "></div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="Numero">
+                              <div class="th-inner ">Nome Progetto</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="DataEmissione">
+                              <div class="th-inner ">Data Inizio</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="ImportoTotale">
+                              <div class="th-inner sortable both">Data Fine</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th style="" data-field="Nome">
+                              <div class="th-inner sortable both">Budget Disponibile</div>
+                              <div class="fht-cell"></div>
+                           </th>
+                           <th class="center" style="" data-field="5">
+                              <div class="th-inner "></div>
+                              <div class="fht-cell"></div>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <div class="mobile-data">
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="0">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="0">Progetto_0</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.000,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="1">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="1">Progetto_1</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.001,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mobile-data-block border-0">
+                              <div class="mobile-data-block bkg-grayBG wrapper-border-element" data-index="2">
+                                 <span class="border-element b-r-l bkg-greenLighter_border"></span>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Nome Progetto</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output"><a href="javascript:;" tm-detail-index="2">Progetto_2</a></span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Inizio</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">01/01/2020</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Data Fine</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">31/12/2021</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-4 output-inline">
+                                       <label class="control-label font-weight-bold">Budget Disponibile</label>
+                                    </div>
+                                    <div class="col-8 text-right text-break">
+                                       <span class="output">1.002,00</span>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12 d-flex justify-content-end text-break">
+                                       <button class="btn btn-white in-table" tm-row-associa="">Scegli</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="fixed-table-footer" style="display: none;">
+                  <table>
+                     <thead>
+                        <tr></tr>
+                     </thead>
+                  </table>
+               </div>
+            </div>
+            <div class="fixed-table-pagination" style="display: none;">
+               <div class="float-left pagination-detail">
+                  <span class="pagination-info">
+                  Showing 1 to 10 of 100 rows
+                  </span>
+                  <span class="page-list">
+                     <span class="btn-group dropdown dropup">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="page-size">
+                        10
+                        </span>
+                        <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu"><a class="dropdown-item active" href="#">10</a><a class="dropdown-item " href="#">25</a><a class="dropdown-item " href="#">50</a><a class="dropdown-item " href="#">100</a></div>
+                     </span>
+                     rows per page
+                  </span>
+               </div>
+               <div class="float-right pagination">
+                  <ul class="pagination">
+                     <li class="page-item page-pre"><a class="page-link" href="#">‹</a></li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item page-last-separator disabled"><a class="page-link" href="#">...</a></li>
+                     <li class="page-item"><a class="page-link" href="#">10</a></li>
+                     <li class="page-item page-next"><a class="page-link" href="#">›</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      <div tm-table-footer="" style="display: none;">
+         <div class="row align-items-center py-1 m-0">
+            <div class="col-12 px-3" tm-table-itemscount=""></div>
+            <div class="col px-3 d-flex justify-content-center" tm-table-pages=""></div>
+         </div>
+      </div>
+   </div>
+</div>
 </div>    </div>
   </div>
 </div></div>
@@ -2723,6 +2879,71 @@ table-font-small => font-size 12px
 																	<!-- Blocco oggetto -->
 									<div class="row">
 										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">box stato fatture</h2>
+																						<!-- BOX STATO FATTURE-->
+
+<section>
+	<div class="row">
+		<div class="col-6 d-flex justify-content-start align-items-top">
+			<h2 class="color-greenLink">Fatture emesse</h2>
+		</div>
+		<div class="col-6 d-flex justify-content-end align-items-top">
+			<a class="icon-inline mr-2" href="javascript:;" title="<span class='font-size-small'>lorem ipsum dolor sit</span>" data-trigger="focus" data-toggle="tooltip"><i class="icon icon-help mr-0"></i></a>
+			<button class="btn btn-white brd-green fl-right btn-xs-full" id="btnApplica">
+                <i class="icon icon-refresh"></i>Aggiorna
+            </button>
+		</div>
+	</div>
+	<div class="row flex justify-content-end">
+		<div class="col-auto text-right">
+			<span class="font-size-extra-small ml-3 d-block d-md-inline float-none float-md-right">Ultimo aggiornamento ore 09.00 22/03/2021</span>
+			<a href="#" class="font-size-extra-small mt-2 mt-md-0 d-block d-md-inline float-none float-md-right">Aggiornamenti disponibili</a>
+		</div>
+	</div>
+</section>
+<div class="no-margin-section">
+	<div class="row">
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<!-- aggiungere la classe selected per il colore di background di quando selezionata -->
+			<div class="bordered border-left-bfm_status_incassata cursor-pointer selected pb-3 pl-3">
+				<span class="d-md-block d-inline font-size-20">Incassate (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_inscadenza cursor-pointer pb-3 pl-3">
+				<span class="d-md-block d-inline font-size-20">In scadenza (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_scaduta  cursor-pointer pb-3 pl-3">
+				<span class="d-md-block d-inline font-size-20">Scadute (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mb-3 d-flex">
+			<div class="bordered border-left-bfm_status_totale cursor-pointer pb-3 pl-3">
+				<span class="d-md-block d-inline font-size-20">Totali (18)</span>
+				<strong class="text color-gray1 font-size-20 float-right float-md-none">750.000,86 €</strong>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FINE BOX STATO FATTURE-->
+
+
+
+
+
+
+
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
 																							<h2 class="titolo-oggetto">box stepper</h2>
 																						<!-- 
 modifiche html ad oggetto stepper rispetto al precedente
@@ -2916,6 +3137,300 @@ modifiche html ad oggetto stepper rispetto al precedente
         </div>
       </div>
     </div>
+</section>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">box with squared</h2>
+																						
+<section class="no-margin-section">
+  <div class="card b-r-3 with-squared border-error">
+    <div class="card-header  d-flex justify-content-between align-items-top">
+      <div class="row d-flex justify-content-between align-items-center w-100">
+        <div class="col-md-7 col-lg-7 col-xl-8">
+            <h5 class="card-header-title mb-0">
+              <div class="text-with-squared">
+                <div class="squared bkg-bfm_status_attive"></div>
+                <div class="text color-gray1 with-progress">
+                  <span>Attive</span>
+                  <span class="d-none d-md-block text-alert"><i class="icon icon-warning color-error"></i> Soglia superata</span>
+                  <div class="progress">
+                      <div class="progress-bar bkg-bfm_status_attive" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+              </div>
+            </h5>
+        </div>
+        <hr class="separator d-block d-md-none w-100 mt-3 mb-3">
+        <div class="col-md-5 col-lg-5 col-xl-4">
+            <div class="row justify-content-md-end justify-content-between">
+            <div class="col-5 col-md-5 col-lg-4 col-xl-5 d-flex justify-content-md-end justify-content-between align-items-center">
+              <span class="color-gray2">10 transazioni</span>
+            </div>
+            <div class="col-2 col-md-2 col-lg-2 col-xl-2 d-flex justify-content-center justify-content-md-end align-items-center"><strong class="font-size-16 color-greenLink">25%</strong></div>
+            <div class="col-5 col-md-5 col-lg-6 col-xl-5 pl-0 d-flex justify-content-end align-items-center">
+              <strong class="text color-gray1">150.000,86 &euro;</strong>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card-body">
+      <!-- TABELLA RISTILIZZATA  classi aggiuntive:
+table-space-row => crea spazio tra le righe
+table-header-light => stile chiaro dell'header
+table-bkg-grayBG => colore grigio celle
+table-font-small => font-size 12px
+-->
+<!--SEZIONE VISIBILE SU DESKTOP -->
+<div class="d-none d-md-block">
+   <div tm-bstable-v2="" class="px-3">
+         <table data-bootstrap-table cellspacing="0" cellpadding="0" border="0" class="table space-border header-light font-small" data-table-mobilized-desktop="NewTable">
+      <thead>
+      <tr>
+         <!-- PER STAMPARE UNA CELLA CHE IN MOBILE SI VEDA COME TITOLO, USARE LA CLASSE .data-mobilized-title -->
+         <th data-field="Categoria">Categoria</th>
+         <th data-field="contabile" data-sortable="true">Rapporto</th>
+         <th data-field="valuta" data-sortable="true">Descrizione</th>
+         <th data-field="importo" data-sortable="true">Data prevista</th>
+         <th data-field="divisa" data-sortable="true">Periodicità</th>
+         <th data-field="causale" data-sortable="true">Importo</th>
+      <th  data-field="azioni" data-sortable="false"></th>
+      </tr>
+   </thead>
+   <tbody>
+            <!-- CLASSI COLORE PER LE CATEGORIE-->
+                  <tr data-index="0">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
+               <a href="#" class="text color-greenLink">bollette</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (0)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+            <tr data-index="1">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_fornitori"><i class="icon icon-category_fornitori"></i></span>
+               <a href="#" class="text color-greenLink">fornitori</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (1)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+            <tr data-index="2">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_operazionifinanziarie"><i class="icon icon-category_operazionifinanziarie"></i></span>
+               <a href="#" class="text color-greenLink">operazionifinanziarie</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (2)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+            <tr data-index="3">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_ricavi"><i class="icon icon-category_ricavi"></i></span>
+               <a href="#" class="text color-greenLink">ricavi</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (3)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+            <tr data-index="4">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_assicurazione"><i class="icon icon-category_assicurazione"></i></span>
+               <a href="#" class="text color-greenLink">assicurazione</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (4)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+            <tr data-index="5">
+         <td>
+               <span class="text-with-squared">
+               <span class="squared ico-wrapper bkg-bfm_altrespese"><i class="icon icon-category_altrespese"></i></span>
+               <a href="#" class="text color-greenLink">altrespese</a>
+               </span>
+         </td>
+         <td>lorem ipsum</td>
+         <!--SCON QUESTA CLASSE VIENE SETTATO UN MAX_WIDTH PER GARANTIRE L'ELLIPSED-->
+         <td class="ellipsed">
+               Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label Lorem ipsum dolor sit amet long label</div>
+         </td>
+         <td>01/02/2021</td>
+         <td>EUR</td>
+         <td>345</td>
+         <td class="text-center">
+            <div class="btn-group dropdown">
+               <span type="button"
+                     class="cursor-pointer"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false">
+               <img src="./fe/img/icon/more.svg">
+               </span>
+               <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Lorem ipsum dolor sit amet long label</a>
+               <span class="dropdown-item disabled" disabled>Disabled</span>
+               <a class="dropdown-item" href="#">Another action (5)</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+            </div>
+         </td>
+      </tr>
+         </tbody>
+   </table>
+         <div class="clearfix"></div>
+   </div>
+   
+</div>
+
+
+    </div>
+    
+  </div>
 </section>
 										</div>
 									</div>
