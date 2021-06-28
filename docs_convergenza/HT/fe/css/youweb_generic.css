@@ -9212,7 +9212,12 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 .text-with-icon .inactive {
     color: #7F7F7F;
 }
-
+.text-with-icon .positive2 {
+    color: #97db4f;
+}
+.text-with-icon .negative {
+    color: #ffc199;
+}
 /* Iconcine immagine */
 .image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
 .ico-large .image-icon.pdf{background-image: url("/common/fe/img/pdf_icon_large.png");}
@@ -9345,7 +9350,7 @@ margin-top:-10px;
     height: 10px; 
     left:11px; 
     top: 8px; 
-    background-color:#00a11a; 
+    background-color:#97db4f; 
     border-radius:5px;
     z-index:1;
 }
@@ -9356,7 +9361,7 @@ margin-top:-10px;
     height: 40px; 
     left:15px; 
     top: -30px; 
-    background-color:#00a11a;
+    background-color:#97db4f;
 }
 
 .accord-content .group-wrapper.with-spunta{
@@ -9496,6 +9501,17 @@ margin-top:-10px;
         padding: 11px 10px 7px 10px;
     }
    
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) { 
+    .wrapper-pos-cta {
+        min-width: 130px;
+    }
+   
+}
+@media screen and (min-width: 1400px) { 
+.wrapper-pos-cta.btn-wrapper .btn {
+   float: right;
+}
 }
 @media screen and (min-width: 1400px) { 
     /*.wrapper-pos-cta .btn {float: right;}*/
