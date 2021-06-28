@@ -68,10 +68,14 @@
       <div class="col-sm-12">
          <!-- ROW 1.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+            <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -108,9 +112,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -261,10 +265,14 @@
       <div class="col-sm-12">
          <!-- ROW 2.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+            <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -301,9 +309,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -451,10 +459,10 @@
       <div class="col-sm-12">
          <!-- ROW 3.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+            <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> REGOLAMENTO INTERESSI DEBITORI</strong></div>
+                  <div class="text underline dark"><strong> REGOLAMENTO INTERESSI DEBITORI</strong></div>
                </div>
             </div>
             <div class="col-sm-2 col-xs-6">
@@ -490,9 +498,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -518,10 +526,14 @@
       <div class="col-sm-12">
          <!-- ROW 2.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -558,9 +570,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -713,10 +725,14 @@
       <div class="col-sm-12">
          <!-- ROW 4.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -751,11 +767,11 @@
                   </div>
                </div>
             </div>
-            <div class="wrapper-icon-fixed">
+            <<div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -919,10 +935,14 @@
       <div class="col-sm-12">
          <!-- ROW 1.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -963,9 +983,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon disabled">
-                  <a href="#">
-                     <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -1118,10 +1138,14 @@
       <div class="col-sm-12">
          <!-- ROW 4.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -1165,9 +1189,9 @@
             </div>
             <div class="wrapper-icon-fixed">
                <div class="linked-icon">
-                  <a href="#">
-                  <span class="icon icon-trash_filled"></span>
-                  </a>
+                   <div class="text-with-icon right-icon">
+                    <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>
+                </div>
                </div>
             </div>
          </div>
@@ -1330,10 +1354,14 @@
       <div class="col-sm-12">
          <!-- ROW 4.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -1535,10 +1563,14 @@
       <div class="col-sm-12">
          <!-- ROW 1.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+         <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>
@@ -1726,10 +1758,14 @@
       <div class="col-sm-12">
          <!-- ROW 1.1 -->
          <div class="row row-eq-height pract-toggle-head  right-space-small marginBottomMedium">
-            <div class="col-sm-5 col-xs-12 ellips">
+            <div class="col-sm-5 col-xs-11">
                <!-- Text with Icon + sub-text -->                    
                <div class="text">
-                  <div class="text underline dark ellipsis"><strong> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345</strong></div>
+                  <div class="text underline dark">
+                      <a href="javascript:;" data-toggle="tooltip" title="PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI N.12345">
+                          <strong class="text ellipsis"> PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI PROPOSTA DI CONSULENZA IN MATERIA DI INVESTIMENTI  N.12345</strong>
+                      </a>
+                    </div>
                   <div class="sub-text">INV-0015</div>
                </div>
             </div>

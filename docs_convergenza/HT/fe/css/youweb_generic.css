@@ -9256,10 +9256,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
     position:relative;
 
 }
-.pract-toggle .right-space-small {
-    padding-right:40px;
-    
-} 
+
 .pract-toggle.boxed.no-accordion-title {
     padding:20px 0 20px 5px;
     margin-left:0;
@@ -9268,7 +9265,7 @@ table.table-confronta-costi thead th span { display: inline-block; width: 100%;}
 
 .pract-toggle .wrapper-icon-fixed {
     position:absolute; 
-    right:20px; 
+    right:15px; 
     top:0;
 }
 .alignItemCenter-desktop .wrapper-icon-fixed {
@@ -9508,16 +9505,12 @@ margin-top:-10px;
     }
    
 }
-@media screen and (min-width: 1400px) { 
-.wrapper-pos-cta.btn-wrapper .btn {
-   float: right;
-}
-}
+
 @media screen and (min-width: 1400px) { 
     /*.wrapper-pos-cta .btn {float: right;}*/
 }
 /* spostato per risoluzioni intermedie*/
-@media screen and (min-width: 768px) and (max-width: 1200px) { 
+@media screen and (min-width: 768px) and (max-width: 1300px) { 
     .wrapper-pos-cta.btn-wrapper {width:145px;}
     .wrapper-pos-cta.btn-wrapper .btn {min-width:140px;}
     .pract-toggle:not(.no-accordion-title) .wrapper-icon-fixed {
@@ -9549,7 +9542,7 @@ margin-top:-10px;
     font-size:18px;
 }
 
-.linked-icon.disabled .icon {
+.linked-icon.disabled .icon, .linked-icon.disabled .text{
     color: #EBEDEE;
     cursor: default;
 }
