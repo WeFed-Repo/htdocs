@@ -10254,3 +10254,13 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
   .dyn-banner {display:block;width: 100%;}
   .dyn-banner img, .dyn-banner .dyn-banner-text {width:100%;max-width: none;}
 }
+
+/*Noleggio a lungo termine */
+.title-box-offerta, .title-box-highlight {text-transform: none;color:#0d977e;font-size:18px}
+.title-box-highlight, .box-bck-highlight a {color:#fff}
+.wrapper-box-offerta {display: flex;justify-content: space-between}
+.el-wrapper-box-offerta {margin:0 auto}
+.el-wrapper-box-offerta .text {font-weight:bold}
+.icon-wrapper-box-offerta {background: #f2f2f2;width: 100px;height: 100px;display: inline-block;float: none;margin-bottom:10px}
+.icon-wrapper-box-offerta .icon {color:#0d977e}
+.box-bck-highlight {background-color: #202D50;color:white; padding:30px}

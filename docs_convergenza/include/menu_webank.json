@@ -386,6 +386,16 @@
 						"tpl": "tpl_responsive_calcolatore_mutui.php"
 					}
 				]
+			},
+			{
+				"nome": "Noleggio a lungo termine",
+				"voices": [
+					{
+						"nome": "Noleggio a lungo termine",
+						"tpl": "tpl_noleggio_lungo_termine.php",
+						"html": "mi"
+					}
+				]
 			}
 		]
 	},
