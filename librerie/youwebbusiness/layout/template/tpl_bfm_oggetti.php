@@ -74,9 +74,8 @@
 <!-- ./ ROW CHECKBOX HIGHLIGHT-->
 <hr>
 <!--NUOVI ALERT-->
-<div class="alert alert-icon danger-style big">
+<div class="alert alert-icomoon danger-style big">
     <div class="alert-icon">
-        <!-- !!!!! Correggere Icona con la nuova !!!! -->
         <i class="icon icon-circle_close"></i>
     </div> 
     <span class="alert-text">
@@ -85,22 +84,39 @@
     </span>
 </div>
 
-<div class="alert alert-icon danger-style-o medium-spaced">
+<div class="alert alert-icomoon danger-style-o medium-spaced">
     <div class="alert-icon">
         <i class="icon icon-warning"></i>
     </div> 
     <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 </div>
 
-<div class="alert alert-icon warning-style-o medium-spaced">
+<div class="alert alert-icomoon warning-style-o medium-spaced">
     <div class="alert-icon">
         <i class="icon icon-attenzione"></i>
     </div> 
     <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 </div>
+
+<div class="alert alert-icomoon success-style-o medium-spaced">
+    <div class="alert-icon">
+        <i class="icon icon-round_check"></i>
+    </div> 
+    <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+</div>
 <!-- ./ NUOVI ALERT-->
+
 <hr>
 <!--BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
 <?php virtual('/youwebbusiness/layout/oggetti/form/finta_select/oggetto.php'); ?>
 <!-- ./ BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
 <hr>
+
+<hr>
+<!--Elemento con ScollUp-->
+<?php virtual('/youwebbusiness/layout/oggetti/form/order_form/oggetto.php'); ?>
+<!-- ./ Elemento con ScollUp-->
+<hr>
+
+
+

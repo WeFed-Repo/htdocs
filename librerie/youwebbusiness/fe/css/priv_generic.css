@@ -2898,78 +2898,88 @@
   color: #CF9418;
 }
 
-.alert.alert-icon {
+.alert.alert-icomoon {
   min-height: 0px;
   position: relative;
 }
-.alert.alert-icon .alert-icon {
+.alert.alert-icomoon .alert-icon {
   position: absolute;
   height: auto;
 }
-.alert.alert-icon .alert-icon img {
+.alert.alert-icomoon .alert-icon img {
   width: 100%;
 }
-.alert.alert-icon.big {
+.alert.alert-icomoon.big {
   font-size: 1.1rem;
   min-height: calc(60px + 14px);
   padding: 10px 15px 10px 76px;
 }
-.alert.alert-icon.big .alert-icon {
+.alert.alert-icomoon.big .alert-icon {
   left: 15px;
   top: 5px;
 }
-.alert.alert-icon.big .alert-icon.icon, .alert.alert-icon.big .alert-icon .icon {
+.alert.alert-icomoon.big .alert-icon.icon, .alert.alert-icomoon.big .alert-icon .icon {
   font-size: 60px;
 }
-.alert.alert-icon.medium {
+.alert.alert-icomoon.medium {
   font-size: 1.1rem;
   padding: 13px 13px 15px 48px;
 }
-.alert.alert-icon.medium .alert-icon {
+.alert.alert-icomoon.medium .alert-icon {
   left: 15px;
   top: 12px;
 }
-.alert.alert-icon.medium .alert-icon.icon, .alert.alert-icon.medium .alert-icon .icon {
+.alert.alert-icomoon.medium .alert-icon.icon, .alert.alert-icomoon.medium .alert-icon .icon {
   font-size: 26px;
 }
-.alert.alert-icon.medium-spaced {
+.alert.alert-icomoon.medium-spaced {
   font-size: 1.1rem;
   padding: 13px 13px 15px 60px;
 }
-.alert.alert-icon.medium-spaced .alert-icon {
+.alert.alert-icomoon.medium-spaced .alert-icon {
   left: 15px;
   top: 12px;
 }
-.alert.alert-icon.medium-spaced .alert-icon.icon, .alert.alert-icon.medium-spaced .alert-icon .icon {
+.alert.alert-icomoon.medium-spaced .alert-icon.icon, .alert.alert-icomoon.medium-spaced .alert-icon .icon {
   font-size: 26px;
 }
-.alert.alert-icon.danger-style {
+.alert.alert-icomoon.danger-style {
   background: #CC1615;
   color: #FFFFFF;
   border-radius: 0px;
 }
-.alert.alert-icon.danger-style .alert-icon.icon, .alert.alert-icon.danger-style .alert-icon .icon {
+.alert.alert-icomoon.danger-style .alert-icon.icon, .alert.alert-icomoon.danger-style .alert-icon .icon {
   color: #FFFFFF;
 }
-.alert.alert-icon.danger-style-o {
+.alert.alert-icomoon.danger-style-o {
   background: #FFFFFF;
   color: #000000;
   border-radius: 0px;
   border: 1px solid #CC1615;
   border-radius: 4px;
 }
-.alert.alert-icon.danger-style-o .alert-icon.icon, .alert.alert-icon.danger-style-o .alert-icon .icon {
+.alert.alert-icomoon.danger-style-o .alert-icon.icon, .alert.alert-icomoon.danger-style-o .alert-icon .icon {
   color: #CC1615;
 }
-.alert.alert-icon.warning-style-o {
+.alert.alert-icomoon.warning-style-o {
   background: #FFFFFF;
   color: #000000;
   border-radius: 0px;
   border: 1px solid #CF9418;
   border-radius: 4px;
 }
-.alert.alert-icon.warning-style-o .alert-icon.icon, .alert.alert-icon.warning-style-o .alert-icon .icon {
+.alert.alert-icomoon.warning-style-o .alert-icon.icon, .alert.alert-icomoon.warning-style-o .alert-icon .icon {
   color: #CF9418;
+}
+.alert.alert-icomoon.success-style-o {
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 0px;
+  border: 1px solid #2F9988;
+  border-radius: 4px;
+}
+.alert.alert-icomoon.success-style-o .alert-icon.icon, .alert.alert-icomoon.success-style-o .alert-icon .icon {
+  color: #2F9988;
 }
 
 ul.pagination {

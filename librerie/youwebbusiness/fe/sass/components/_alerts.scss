@@ -139,7 +139,7 @@
 
 // Alert gestito con icone Icomoon
 .alert {
-  &.alert-icon {
+  &.alert-icomoon {
     // Setting Globali comportamento
     // Clear Old System
     min-height: 0px;
@@ -220,6 +220,18 @@
       .alert-icon{
         &.icon, .icon {
           color: $warning;
+        }
+      }
+    }
+    &.success-style-o {
+      background: $white;
+      color: $black;
+      border-radius: 0px;
+      border: 1px solid $success;
+      border-radius: 4px;
+      .alert-icon{
+        &.icon, .icon {
+          color: $success;
         }
       }
     }
