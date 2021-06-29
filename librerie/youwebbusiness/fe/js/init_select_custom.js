@@ -42,7 +42,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			selectedIndex = index
 		}
 
-		var optionEl = $("<li class='select-custom-option'>").attr("data-value", dataOptions[index].value);
+		var optionEl = $("<li class='select-custom-option'>").attr("data-attr-value", dataOptions[index].value).attr("data-attr-text", dataOptions[index].text);
 		//se è una voce selezionata appendo la classe apposita
 
 		if (selectedIndex === index) {
@@ -59,7 +59,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		//se è btn
 		else if(isTypeBtnFunc()){
 			var optionText = $("<a class='select-custom-option-el'><span class='text-btn'>" + dataOptions[index].text + "</span><span class='value-btn'>" + dataOptions[index].value +"</span>");
-			optionEl.attr("data-text", dataOptions[index].text).append(optionText);
+			optionEl.append(optionText);
 		}
 		//se è con checkbox
 		else {
@@ -67,7 +67,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			optionEl.append(optionText).find("label").html(dataOptions[index].text);
 		}
 	})
-	var scDefaultText = scWrapper.attr("data-placeholder") ? scWrapper.attr("data-placeholder") : "Seleziona";
+	var scDefaultText = scWrapper.attr("data-attr-placeholder") ? scWrapper.attr("data-attr-placeholder") : "Seleziona";
 
 	var selectObj = scEl.html(scDefaultText); //crea la select con il placeholder
 	scWrapper.append(selectObj, inputHidden, optionsWrapperEl); //appende al div esterno la select, l'input hidden e ul wrapper della options
@@ -78,11 +78,16 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		var optionSelected = $(this)
 			scIhidden = scWrapper.find("input[type=hidden]").eq(0),
 			scVselected = scWrapper.find(".dropdown-toggle");
+
+		// appende la classe selected
+		toggleSelected(optionSelected);
+
+
 		// Caso select checkbox
 		if (isTypeCheckbox()) {
 			var scCheck = scWrapper.find("input[type=checkbox]"),
 				scvalCheck = [],
-				optionAll = optionSelected.attr("data-value") === "all",
+				optionAll = optionSelected.attr("data-attr-value") === "all",
 				allSelected = false;
 			$('.dropdown-menu.show').on('click', function (e) {
 				e.stopPropagation();
@@ -95,20 +100,34 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 				if(optionSelected.find("input[type=checkbox]").prop("checked"))
 				{
 					scCheck.prop("checked",false);
+					scWrapper.find(".select-custom-option").removeClass("option-selected");
 					allSelected = false;
 				} 
 				else {
 					scCheck.prop("checked",true);
+					scWrapper.find(".select-custom-option").addClass("option-selected");
 					allSelected = true;
 				}
 			}
 			var scCheckChecked = scWrapper.find("input[type=checkbox]:checked");
 			
-			//popola la select con le voci selezionate
+			//popola l'input hidden con le voci selezionate
 			$.each(scCheckChecked, function (i, v) {
 				if($(v).val() !== "all") scvalCheck.push($(v).val());
 			});
 			scIhidden.val(scvalCheck.join(","));
+			
+			//popola la voce selezionata anche recuperando quanto passato nei parametri
+			if (scIhidden.val() !== "" && !allSelected) {
+			    
+				scvalCheck.length === 1 ? scVselected.html(scWrapper.find(".option-selected:not(.all)").attr('data-attr-text')) : scVselected.html(scvalCheck.length + " " + sourceParams.textSelectSome)
+			} 
+			else if(allSelected) {
+				scVselected.html(sourceParams.textSelectAll);
+			}
+			else {
+                scVselected.html(scDefaultText);
+            }
 		}
 		//caso select button funzionale
 		else if (isTypeBtnFunc()) {
@@ -118,7 +137,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			//popolo l'input hidden con un value che è un oggetto dove passo text e il value
 			
 			valArr = [];
-			valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
+			valArr.push(optionSelected.attr("data-attr-text"),optionSelected.attr("data-attr-value"));
 			scIhidden.val(valArr.join(","));
 		}
 		
@@ -126,20 +145,22 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		else {
 			//popola la select con la voce selezionata, popola l'input hidden
 			scVselected.empty().html(optionSelected.text());
-			scIhidden.val(optionSelected.attr("data-value"));
+			scIhidden.val(optionSelected.attr("data-attr-value"));
 		}
-		// appende la classe selected
-		toggleSelected(optionSelected);
+		
 	})
 
 	//funzione per il toogle della classe selected
 	var toggleSelected = function (elSel) {
+		
 		if(!isTypeCheckbox()) {
 			scWrapper.find(".select-custom-option").removeClass("option-selected")
 			elSel.addClass("option-selected");
+			
 		}
 		else {
 			elSel.toggleClass("option-selected");
+			if(elSel.attr("data-attr-value")==="all"){elSel.addClass("all")}
 		}
 	}
 

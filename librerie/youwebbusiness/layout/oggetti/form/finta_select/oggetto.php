@@ -6,7 +6,7 @@
       <div class="form-group col-md-4">
         <label class="control-label">Select normal</label>
         <!-- aggiugere classe disabled e attributo disabled per select disabilitata-->
-        <!-- attributi select normale name/id/data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
+        <!-- attributi select normale name/id/data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
         <div class="dropdown select-custom" name="sc" id="sc"></div>
       </div>
       <div class="form-group col-md-4">
@@ -15,9 +15,9 @@
           name
           id
           class has-checkbox se è di tipo checkbox
-          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+          data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class="dropdown select-custom has-checkbox" name="scCheckbox" id="scCheckbox" data-placeholder="Seleziona"></div>
+        <div class="dropdown select-custom has-checkbox" name="scCheckbox" id="scCheckbox" data-attr-placeholder="Seleziona"></div>
       </div>
       <div class="form-group col-md-4">
         <label class="control-label">Select bottone funzionale</label>
@@ -25,9 +25,9 @@
           name
           id
           has-btn se è di tipo btn
-          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+          data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class="dropdown select-custom has-btn" name="scBtn" id="scBtn" data-placeholder="OPERAZIONI MASSIVE"></div>
+        <div class="dropdown select-custom has-btn" name="scBtn" id="scBtn" data-attr-placeholder="OPERAZIONI MASSIVE"></div>
       </div>
     </div>
 </form>
@@ -108,8 +108,20 @@
                 "id": 2,
                 "text": "Option 2",
                 "value": "2"
+          },
+          {
+                "id": 3,
+                "text": "Option 3",
+                "value": "3"
+          },
+          {
+                "id": 3,
+                "text": "Option 4",
+                "value": "4"
           }
-        ]
+        ],
+        "textSelectAll" : "Tutti",
+        "textSelectSome" : "selezionati"
       }
       
       var paramsFintaSelectBtn = {
@@ -151,10 +163,10 @@
              
              //modifico il valori nella select e il rispettivo input hidden se la voce è selezionata
              $(".value-btn").html(valueToPass);
-             dropDown.find(".select-custom-option").attr("data-value",valueToPass);
+             dropDown.find(".select-custom-option").attr("data-attr-value",valueToPass);
              if(inputHidden.val()!="") {
               valArr = [];
-			        valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
+			        valArr.push(optionSelected.attr("data-attr-text"),optionSelected.attr("data-attr-value"));
 			        inputHidden.val(valArr.join(","));
               }
          })

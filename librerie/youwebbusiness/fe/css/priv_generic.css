@@ -4960,6 +4960,7 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   padding: 6px 12px 4px 7px;
   font-weight: bold;
   background: #FFFFFF url(../img/icon/more_2.svg) no-repeat right center;
+  font-size: 16px;
 }
 .select-custom.has-btn .dropdown-toggle.button .text-btn {
   float: left;

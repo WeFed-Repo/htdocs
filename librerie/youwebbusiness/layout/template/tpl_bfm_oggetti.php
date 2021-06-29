@@ -99,3 +99,8 @@
     <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 </div>
 <!-- ./ NUOVI ALERT-->
+
+<!--BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
+<?php virtual('/youwebbusiness/layout/oggetti/form/finta_select/oggetto.php'); ?>
+<!-- ./ BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
+
