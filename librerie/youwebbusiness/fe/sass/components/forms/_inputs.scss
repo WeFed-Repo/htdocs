@@ -182,10 +182,10 @@ select, .select-custom-option-el {
       color:$greenLink;
       border-radius:5px;
       border: 1px solid $greenLink;
-      padding:6px 12px 4px 7px;
+      padding:6px 12px 6px 7px;
       font-weight: bold;
       background: $white url(../img/icon/more_2.svg) no-repeat right center;
-      font-size:16px;
+      font-size:14px;
       .text-btn { float: left;}
       .value-btn {font-size:12px;padding:0 10px;  line-height: 22px;}
     }

@@ -4957,10 +4957,10 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   color: #2F9988;
   border-radius: 5px;
   border: 1px solid #2F9988;
-  padding: 6px 12px 4px 7px;
+  padding: 6px 12px 6px 7px;
   font-weight: bold;
   background: #FFFFFF url(../img/icon/more_2.svg) no-repeat right center;
-  font-size: 16px;
+  font-size: 14px;
 }
 .select-custom.has-btn .dropdown-toggle.button .text-btn {
   float: left;

@@ -68,11 +68,11 @@
 <!--BOX STATO FATTURE-->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_stato_fatture/oggetto.php'); ?>
 <!-- ./ BOX STATO FATTURE -->
-
+<hr>
 <!--ROW CHECKBOX HIGHLIGHT-->
 <?php virtual('/youwebbusiness/layout/oggetti/form/check_row_highlight/oggetto.php'); ?>
 <!-- ./ ROW CHECKBOX HIGHLIGHT-->
-
+<hr>
 <!--NUOVI ALERT-->
 <div class="alert alert-icon danger-style big">
     <div class="alert-icon">
@@ -99,8 +99,8 @@
     <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 </div>
 <!-- ./ NUOVI ALERT-->
-
+<hr>
 <!--BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
 <?php virtual('/youwebbusiness/layout/oggetti/form/finta_select/oggetto.php'); ?>
 <!-- ./ BOTTONE OPERAZIONI MASSIVE + FINTA SELECT CON E SENZA CHECKBOX-->
-
+<hr>
