@@ -9975,15 +9975,23 @@ a.box-inline-text {
 }
 .selettore-rapporto.selettore-conti .group {
     display: block;
-	border-bottom:1px solid #DADEE1
+	/*border-bottom:1px solid #DADEE1*/
 }
-.selettore-rapporto.selettore-conti .inputOption {
+.selettore-rapporto.selettore-conti .inputOption { 
     background: none;
 }
 .selettore-rapporto.selettore-conti .inputOption span.input{
 	font-weight:bold;
     padding-right:20px;
     display: inline-block;
+}
+.selettore-rapporto.selettore-conti .inputOption span.input.font-normal
+{
+    font-weight: normal;
+}
+.selettore-rapporto.selettore-conti .inputOption span.input.selettore-placeholder {
+    font-weight: normal;
+    color:#ccc;
 }
 .selettore-rapporto.selettore-conti .selettore-row {
 	display:block;
@@ -10259,8 +10267,9 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
 .title-box-offerta, .title-box-highlight {text-transform: none;color:#0d977e;font-size:18px}
 .title-box-highlight, .box-bck-highlight a {color:#fff}
 .wrapper-box-offerta {display: flex;justify-content: space-between}
-.el-wrapper-box-offerta {margin:0 auto}
+.el-wrapper-box-offerta {margin:0 auto;width: 140px;}
 .el-wrapper-box-offerta .text {font-weight:bold}
 .icon-wrapper-box-offerta {background: #f2f2f2;width: 100px;height: 100px;display: inline-block;float: none;margin-bottom:10px}
 .icon-wrapper-box-offerta .icon {color:#0d977e}
 .box-bck-highlight {background-color: #202D50;color:white; padding:30px}
+.box-bck-highlight section:last-child {margin-bottom:0;}

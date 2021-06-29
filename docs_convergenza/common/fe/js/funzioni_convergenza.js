@@ -2102,9 +2102,11 @@ var setElementonView = function (elToancor) {
 /* CREAZIONE - Select fittizia stilizzata */
 // Chiude la tendina
 var closeSelectRapp = function (selectRapp) {
+    
     selectRapp.find('.selector:first').hide();
     selectRapp.find('.selectorSpacer:first').hide();
     lowerZIndex(selectRapp);
+    
 };
 
 /* HOVER - Classe per l'hover */
@@ -2137,11 +2139,12 @@ var focusOptionRapp = function (selectRapp) {
     selectRapp.find('.inputOption:first').trigger('focus');
 };
 
-var focusOptionDownRapp = function (selectRapp) {
+var focusOptionDownRapp = function (selectRapp,hasPlaceholder) {
+    
     // Div che contiene le option selezionabili
     var selector = selectRapp.find('.selector:first');
 
-    if (selector.css('display') === 'none') toggleSelectRapp(selectRapp);
+    if (selector.css('display') === 'none') toggleSelectRapp(selectRapp,hasPlaceholder);
 
     // Lista option selezionabili non nascoste
     var selectorOptions = selector.find('.selectorOptions'),
@@ -2154,11 +2157,12 @@ var focusOptionDownRapp = function (selectRapp) {
     }
 };
 
-var focusOptionUpRapp = function (selectRapp) {
+var focusOptionUpRapp = function (selectRapp,hasPlaceholder) {
+    
     // Div che contiene le option selezionabili
     var selector = selectRapp.find('.selector:first');
 
-    if (selector.css('display') === 'none') toggleSelectRapp(selectRapp);
+    if (selector.css('display') === 'none') toggleSelectRapp(selectRapp,hasPlaceholder);
 
     // Lista option selezionabili non nascoste
     var selectorOptions = selector.find('.selectorOptions');
@@ -2172,12 +2176,14 @@ var focusOptionUpRapp = function (selectRapp) {
 };
 
 var setValueSelectRapp = function (funcSelect, selectedOption, selectRapp, idHidden) {
+   
     var hiddenField = $(jqc(idHidden));
     selectedOption = $(jqc(selectedOption));
     selectRapp = $(jqc(selectRapp));
 
     // Valore selezionato
     var valueOption = selectedOption.attr('value');
+    
     var titleOption = selectedOption.find('strong:first').html();
     var textOption = selectedOption.html();
     var inputOption = selectRapp.find('.inputOption:first');
@@ -2209,6 +2215,9 @@ var setValueSelectRapp = function (funcSelect, selectedOption, selectRapp, idHid
     // Aggiunge la classe "selected" al gruppo dell'opzione selezionata correntemente
     selectedOption.closest('.group').addClass('selected');
     if ($.type(funcSelect) === "function") funcSelect({ text: textOption, value: valueOption });
+    //se ha classe placeholder la rimuove
+    if(selectRapp.find(".input").hasClass("selettore-placeholder")) { selectRapp.find(".input").removeClass("selettore-placeholder");}
+   
 };
 
 var observeOptionEvents = function (optionEl, inputOption, selectRapp, idHidden, funcSelect) {
@@ -2238,7 +2247,7 @@ var observeOptionEvents = function (optionEl, inputOption, selectRapp, idHidden,
         .hideFocus = true;
 };
 
-var observeSelectRappEvents = function (inputOption, selectRapp, selector) {
+var observeSelectRappEvents = function (inputOption, selectRapp, selector,hasPlaceholder,selectPlaceholder) {
     selectRapp.find('.inputSx:first')
         .mouseover(function () {
             inputOption.trigger('focus');
@@ -2250,7 +2259,11 @@ var observeSelectRappEvents = function (inputOption, selectRapp, selector) {
         })
         // Apre la tendina sul click sulla select
         .click(function () {
-            toggleSelectRapp(selectRapp);
+            //caso in cui vi è un placeholder all'apertura della select
+            if(hasPlaceholder) {
+                selectRapp.find(".input").addClass("selettore-placeholder").html(selectPlaceholder);
+            }
+            toggleSelectRapp(selectRapp,hasPlaceholder);
         });
     inputOption
         .focus(function () {
@@ -2383,7 +2396,8 @@ var timeoutClosingSelector = function (selectRapp) {
 /* |FINE| CREAZIONE - Select fittizia stilizzata */
 
 /* APERTURA - Options della select fittizia */
-var toggleSelectRapp = function (selectRapp) {
+var toggleSelectRapp = function (selectRapp, hasPlaceholder) {
+    
     preventClosingSelector(selectRapp);
 
     var idHidden = hiddenIds[selectRapp.attr('id')];
@@ -2397,6 +2411,11 @@ var toggleSelectRapp = function (selectRapp) {
     // Chiude/apre la tendina
     if (selector.css('display') !== 'none') {
         // Chiude la tendina
+        //se ho la versione placeholder quando chiudo la tendina ricompilo il selected
+        if(hasPlaceholder) {
+            selectRapp.find(".input").removeClass("selettore-placeholder").html(selectRapp.find("input[type='hidden']").val());
+            
+        }
         closeSelectRapp(selectRapp);
     } else {
         // Prima di aprire la tendina, chiude altre tendine eventualmente aperte
@@ -2450,7 +2469,12 @@ var toggleSelectRapp = function (selectRapp) {
 var createSelectRapp = function (idSelect, idHidden, funcSelect) {
     // Valorizzo gli oggetti globali
     var selectRapp = $(jqc(idSelect));
+    //caso in cui vi è un placeholder all'apertura della select e debba essere popolato con tale placeholder
+    var selectPlaceholder = selectRapp.attr("data-placeholder"),
+        hasPlaceholder;
+    typeof selectPlaceholder!=="undefined" ? hasPlaceholder = true : hasPlaceholder = false;
 
+    
     if (selectRapp.length) {
         // Memorizza l'id del campo hidden
         hiddenIds[idSelect] = idHidden;
@@ -2466,17 +2490,18 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
 
         // Lista option selezionabili
         var selectedOption = selectRapp.find('.selected:first');
+       
 
         if (!selectedOption.length) {
             selectedOption = selectorOptions.first();
         }
-
+        
         // Imposta il valore selezionato di default
         setValueSelectRapp(funcSelect, selectedOption, selectRapp, idHidden);
 
         /* SELEZIONE - Gestione del click, mouseover, mouseout, focus e blur */
         // Associa gli handler agli eventi della option
-        observeSelectRappEvents(inputOption, selectRapp, selector);
+        observeSelectRappEvents(inputOption, selectRapp, selector,hasPlaceholder,selectPlaceholder);
 
         selectorOptions.each(function (index, item) {
             observeOptionEvents($(item), inputOption, selectRapp, idHidden, funcSelect);
@@ -2491,7 +2516,7 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
             } else if (e.which === 40) {
                 e.stopPropagation();
                 setTimeout(function () {
-                    focusOptionDownRapp.call($(this), selectRapp);
+                    focusOptionDownRapp.call($(this), selectRapp,hasPlaceholder);
                 }, 0);
             }
         });
@@ -2501,12 +2526,12 @@ var createSelectRapp = function (idSelect, idHidden, funcSelect) {
             if (e.which === 38) {
                 e.stopPropagation();
                 setTimeout(function () {
-                    focusOptionUpRapp.call(optionSel, selectRapp);
+                    focusOptionUpRapp.call(optionSel, selectRapp,hasPlaceholder);
                 }, 0);
             } else if (e.which === 40) {
                 e.stopPropagation();
                 setTimeout(function () {
-                    focusOptionDownRapp.call(optionSel, selectRapp);
+                    focusOptionDownRapp.call(optionSel, selectRapp,hasPlaceholder);
                 }, 0);
             }
         });

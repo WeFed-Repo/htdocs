@@ -6756,6 +6756,13 @@ table tr td.td-fondo .fundName {
   display: inline-block;
   white-space: normal;
 }
+.selettore-rapporto.selettore-conti .inputOption span.input.font-normal {
+  font-weight: normal;
+}
+.selettore-rapporto.selettore-conti .inputOption span.input.selettore-placeholder {
+  font-weight: normal;
+  color: #ccc;
+}
 .selettore-rapporto.selettore-conti .selettore-row {
   display: block;
   padding: 5px 0;
@@ -12819,6 +12826,45 @@ i.css-square {
   .infobox {
     margin: 0 0 25px;
   }
+}
+/*Noleggio a lungo termine */
+.title-box-offerta,
+.title-box-highlight {
+  text-transform: none;
+  font-size: 18px;
+}
+.wrapper-box-offerta {
+  display: flex;
+  justify-content: space-between;
+}
+.el-wrapper-box-offerta {
+  margin: 0 auto;
+  width: 120px;
+}
+.el-wrapper-box-offerta .el-wrapper-box-offerta .text {
+  font-weight: bold;
+}
+.el-wrapper-box-offerta .icon-wrapper-box-offerta {
+  background: #f2f2f2;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  float: none;
+  margin-bottom: 10px;
+}
+.el-wrapper-box-offerta .icon-wrapper-box-offerta .icon {
+  color: #6f8f0a;
+  line-height: 100px!important;
+}
+.box-bck-highlight {
+  background-color: #dbe9af;
+  padding: 30px;
+}
+.box-bck-highlight section:last-child {
+  margin-bottom: 0;
+}
+.box-bck-highlight section:last-child .form-group {
+  margin-bottom: 0;
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
