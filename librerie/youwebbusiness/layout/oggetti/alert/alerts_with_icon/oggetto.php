@@ -1,6 +1,6 @@
 <div class="alert alert-icon danger-style big">
     <div class="alert-icon">
-        <i class="icon icon-divieto"></i>
+        <i class="icon icon-circle_close"></i>
     </div> 
     <span class="alert-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
@@ -10,7 +10,7 @@
 
 <div class="alert alert-icon danger-style medium">
     <div class="alert-icon">
-        <i class="icon icon-divieto"></i>
+        <i class="icon icon-circle_close"></i>
     </div> 
     <span class="alert-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 </div>

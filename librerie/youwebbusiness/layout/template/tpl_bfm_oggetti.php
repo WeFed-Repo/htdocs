@@ -76,7 +76,8 @@
 <!--NUOVI ALERT-->
 <div class="alert alert-icon danger-style big">
     <div class="alert-icon">
-        <i class="icon icon-divieto"></i>
+        <!-- !!!!! Correggere Icona con la nuova !!!! -->
+        <i class="icon icon-circle_close"></i>
     </div> 
     <span class="alert-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>

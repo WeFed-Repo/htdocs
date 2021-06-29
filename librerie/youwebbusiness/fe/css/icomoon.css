@@ -1,143 +1,8 @@
-.icon-refresh:before {
-  content: "\e952";
+.icon-circle_close:before {
+  content: "\e980";
 }
-.icon-refresh_euro:before {
-  content: "\e953";
-}
-.icon-alert:before {
-  content: "\e954";
-}
-.icon-calendario:before {
-  content: "\e955";
-}
-.icon-category_altrepassivita:before {
-  content: "\e95c";
-}
-.icon-category_altrespese:before {
-  content: "\e95d";
-}
-.icon-category_altriproventi:before {
-  content: "\e95e";
-}
-.icon-category_assicurazione:before {
-  content: "\e95f";
-}
-.icon-attenzione:before {
-  content: "\e960";
-}
-.icon-category_bollette:before {
-  content: "\e961";
-}
-.icon-category_fornitori:before {
-  content: "\e962";
-}
-.icon-category_immobilizzazioni:before {
-  content: "\e963";
-}
-.icon-category_intercompany:before {
-  content: "\e964";
-}
-.icon-category_operazionifinanziarie:before {
-  content: "\e965";
-}
-.icon-category_ricavi:before {
-  content: "\e966";
-}
-.icon-category_servizi:before {
-  content: "\e967";
-}
-.icon-category_tasse:before {
-  content: "\e968";
-}
-.icon-category_trasporti:before {
-  content: "\e969";
-}
-.icon-circle_minus:before {
-  content: "\e96a";
-}
-.icon-credito:before {
-  content: "\e96b";
-}
-.icon-divieto:before {
-  content: "\e96c";
-}
-.icon-document_percent:before {
-  content: "\e96d";
-}
-.icon-espandi:before {
-  content: "\e96e";
-}
-.icon-excel:before {
-  content: "\e96f";
-}
-.icon-excel_2000:before {
-  content: "\e970";
-}
-.icon-eye:before {
-  content: "\e971";
-}
-.icon-fatturato:before {
-  content: "\e972";
-}
-.icon-grafico_istogramma:before {
-  content: "\e973";
-}
-.icon-grafico_torta:before {
-  content: "\e974";
-}
-.icon-link_documento:before {
-  content: "\e975";
-}
-.icon-modifica:before {
-  content: "\e976";
-}
-.icon-more:before {
-  content: "\e977";
-}
-.icon-pdf:before {
-  content: "\e978";
-}
-.icon-printer:before {
-  content: "\e979";
-}
-.icon-proiezione:before {
-  content: "\e97a";
-}
-.icon-razzo:before {
-  content: "\e97b";
-}
-.icon-riduci:before {
-  content: "\e97c";
-}
-.icon-upload:before {
-  content: "\e97d";
-}
-.icon-warning:before {
-  content: "\e97e";
-}
-.icon-circle_arrow_up:before {
-  content: "\e95a";
-}
-.icon-circle_arrow_down:before {
-  content: "\e95b";
-}
-.icon-circle_plus:before {
-  content: "\e959";
-}
-.icon-round_check:before {
-  content: "\e958";
-}
-.icon-help:before {
-  content: "\e956";
-}
-.icon-ico_gestione_contatti:before {
-  content: "\e904";
-}
-.icon-ico_bonifico_sepa:before {
-  content: "\e90c";
-}
-.icon-ico_dispositiva:before {
-  content: "\ea18";
+.icon-category_risorseumane:before {
+  content: "\e97f";
 }
 .icon-close:before {
   content: "\e957";
@@ -379,9 +244,147 @@
 .icon-ico_youwin:before {
   content: "\e933";
 }
+.icon-refresh:before {
+  content: "\e952";
+}
+.icon-refresh_euro:before {
+  content: "\e953";
+}
+.icon-alert:before {
+  content: "\e954";
+}
+.icon-calendario:before {
+  content: "\e955";
+}
+.icon-category_altrepassivita:before {
+  content: "\e95c";
+}
+.icon-category_altrespese:before {
+  content: "\e95d";
+}
+.icon-category_altriproventi:before {
+  content: "\e95e";
+}
+.icon-category_assicurazione:before {
+  content: "\e95f";
+}
+.icon-attenzione:before {
+  content: "\e960";
+}
+.icon-category_bollette:before {
+  content: "\e961";
+}
+.icon-category_fornitori:before {
+  content: "\e962";
+}
+.icon-category_immobilizzazioni:before {
+  content: "\e963";
+}
+.icon-category_intercompany:before {
+  content: "\e964";
+}
+.icon-category_operazionifinanziarie:before {
+  content: "\e965";
+}
+.icon-category_ricavi:before {
+  content: "\e966";
+}
+.icon-category_servizi:before {
+  content: "\e967";
+}
+.icon-category_tasse:before {
+  content: "\e968";
+}
+.icon-category_trasporti:before {
+  content: "\e969";
+}
+.icon-circle_minus:before {
+  content: "\e96a";
+}
+.icon-credito:before {
+  content: "\e96b";
+}
+.icon-divieto:before {
+  content: "\e96c";
+}
+.icon-document_percent:before {
+  content: "\e96d";
+}
+.icon-espandi:before {
+  content: "\e96e";
+}
+.icon-excel:before {
+  content: "\e96f";
+}
+.icon-excel_2000:before {
+  content: "\e970";
+}
+.icon-eye:before {
+  content: "\e971";
+}
+.icon-fatturato:before {
+  content: "\e972";
+}
+.icon-grafico_istogramma:before {
+  content: "\e973";
+}
+.icon-grafico_torta:before {
+  content: "\e974";
+}
+.icon-link_documento:before {
+  content: "\e975";
+}
+.icon-modifica:before {
+  content: "\e976";
+}
+.icon-more:before {
+  content: "\e977";
+}
+.icon-pdf:before {
+  content: "\e978";
+}
+.icon-printer:before {
+  content: "\e979";
+}
+.icon-proiezione:before {
+  content: "\e97a";
+}
+.icon-razzo:before {
+  content: "\e97b";
+}
+.icon-riduci:before {
+  content: "\e97c";
+}
+.icon-upload:before {
+  content: "\e97d";
+}
+.icon-warning:before {
+  content: "\e97e";
+}
+.icon-circle_arrow_up:before {
+  content: "\e95a";
+}
+.icon-circle_arrow_down:before {
+  content: "\e95b";
+}
+.icon-circle_plus:before {
+  content: "\e959";
+}
+.icon-round_check:before {
+  content: "\e958";
+}
+.icon-help:before {
+  content: "\e956";
+}
+.icon-ico_gestione_contatti:before {
+  content: "\e904";
+}
+.icon-ico_bonifico_sepa:before {
+  content: "\e90c";
+}
+.icon-ico_dispositiva:before {
+  content: "\ea18";
+}
 .icon-arrow_right_text:before {
   content: "\e951";
-}
-.icon-category_risorseumane:before {
-  content: "\e97f";
 }
