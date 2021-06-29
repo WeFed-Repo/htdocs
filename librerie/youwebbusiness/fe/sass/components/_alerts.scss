@@ -62,8 +62,7 @@
       font-weight: bold;
       line-height: calc( #{$iconDimension} - 0.2em );
     }
-  }
-  
+  }  
 }
 
 .table-alert {
@@ -137,3 +136,93 @@
     }
   } 
 }
+
+// Alert gestito con icone Icomoon
+.alert {
+  &.alert-icon {
+    // Setting Globali comportamento
+    // Clear Old System
+    min-height: 0px;
+    // End Clear
+    position:relative;
+    .alert-icon{
+      position:absolute;
+      height:auto;
+      img {
+        width:100%;
+      }
+    }
+    // End Setting Globali comportamento
+    // Stili dimensione
+    &.big {      
+      font-size: 1.1rem;
+      min-height: calc(60px + 14px);   
+      padding : 10px 15px 10px 76px;
+      .alert-icon{
+        left:15px;
+        top:5px;
+        &.icon, .icon {
+          font-size: 60px;
+        }
+      }
+    }
+    &.medium {
+      font-size: 1.1rem;
+      padding : 13px 13px 15px 48px;
+      .alert-icon{
+        left:15px;
+        top:12px;
+        &.icon, .icon {
+          font-size: 26px;
+        }
+      }
+      &-spaced {
+        font-size: 1.1rem;
+        padding : 13px 13px 15px 60px;
+        .alert-icon{
+          left:15px;
+          top:12px;
+          &.icon, .icon {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+    // Stile Colori
+    &.danger-style {
+      background: $error;
+      color: $white;
+      border-radius: 0px;
+      .alert-icon{
+        &.icon, .icon {
+          color: $white;
+        }
+      }
+    }
+    &.danger-style-o {
+      background: $white;
+      color: $black;
+      border-radius: 0px;
+      border: 1px solid $error;
+      border-radius: 4px;
+      .alert-icon{
+        &.icon, .icon {
+          color: $error;
+        }
+      }
+    }
+    &.warning-style-o {
+      background: $white;
+      color: $black;
+      border-radius: 0px;
+      border: 1px solid $warning;
+      border-radius: 4px;
+      .alert-icon{
+        &.icon, .icon {
+          color: $warning;
+        }
+      }
+    }
+  }
+}
+
