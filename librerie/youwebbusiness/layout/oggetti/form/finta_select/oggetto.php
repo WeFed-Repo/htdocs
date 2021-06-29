@@ -92,22 +92,24 @@
         "nameSel":"scCheckbox",
          //esempio di array con i valori per la select
         "dataOptions" : [
-          {
+          /*{
                 "id": 0,
                 "text": "Seleziona tutti",
-                "value": "all" //importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
-                
-          },
+                "value": "all",//importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
+                "selected" :true
+          },*/
           {
                 "id": 1,
                 "text": "Option 1",
                 "value": "1",
+                "selected" :true
                 
           },
           {
                 "id": 2,
                 "text": "Option 2",
-                "value": "2"
+                "value": "2",
+                "selected" :true
           },
           {
                 "id": 3,
@@ -120,8 +122,10 @@
                 "value": "4"
           }
         ],
-        "textSelectAll" : "Tutti",
-        "textSelectSome" : "selezionati"
+        
+        "labelSelectAll" : "Seleziona tutti", //solo se labelSelectAll è presente costruisce dinamicamente l'opzione di selezione globale
+        "textSelectedAll" : "Tutti",
+        "textSelectedSome" : "selezionati"
       }
       
       var paramsFintaSelectBtn = {

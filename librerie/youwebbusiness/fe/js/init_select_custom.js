@@ -26,11 +26,18 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		.attr("data-toggle", "dropdown")
 		.attr("aria-haspopup", "true") //elemento select a seconda del tip diventa una select o un bottone
 		.attr("aria-expanded", "true"),
-		
+		optionElAll = $("<li class='select-custom-option all'>")
+		.attr("data-attr-value","all")
+		.attr("data-attr-text",sourceParams.labelSelectAll)
+        .append($("<a class='form-check-inline checkbox'><input type='checkbox' value='all' id='scCheckboxAll' class='check-all'><label class='select-custom-option-el' for='scCheckboxAll'>" + sourceParams.labelSelectAll + "</label></a>")); //elemento options select all
 		inputHidden = $("<input type='hidden' value=''>").attr("name", "inputHidden" + scName).attr("id", "inputHidden" + scName), //input hidden da completare con il value se già selected
 		optionsWrapperEl = $("<ul class='select-custom-options-wrapper dropdown-menu'>").attr("aria-labelledby", "dp" + scId); //wrapper delle options
 		
 	//costruzione html
+	//se con check prevedere check all come prima voce della tendina di options
+    if(isTypeCheckbox() && sourceParams.labelSelectAll){
+		optionsWrapperEl.append(optionElAll);
+	}
 	//cicla creando le options a seconda della tipologia
 	$(dataOptions).each(function (index) {
 		var selectedIndex,
@@ -86,6 +93,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		// Caso select checkbox
 		if (isTypeCheckbox()) {
 			var scCheck = scWrapper.find("input[type=checkbox]"),
+			    scCheckNotAll = scCheck.not(".check-all"),
 				scvalCheck = [],
 				optionAll = optionSelected.attr("data-attr-value") === "all",
 				allSelected = false;
@@ -118,12 +126,12 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			scIhidden.val(scvalCheck.join(","));
 			
 			//popola la voce selezionata anche recuperando quanto passato nei parametri
+			scvalCheck.length===scCheckNotAll.length ? allSelected=true : allSelected=false;
 			if (scIhidden.val() !== "" && !allSelected) {
-			    
-				scvalCheck.length === 1 ? scVselected.html(scWrapper.find(".option-selected:not(.all)").attr('data-attr-text')) : scVselected.html(scvalCheck.length + " " + sourceParams.textSelectSome)
+			    scvalCheck.length === 1 ? scVselected.html(scWrapper.find(".option-selected:not(.all)").attr('data-attr-text')) : scVselected.html(scvalCheck.length + " " + sourceParams.textSelectedSome)
 			} 
 			else if(allSelected) {
-				scVselected.html(sourceParams.textSelectAll);
+				scVselected.html(sourceParams.textSelectedAll);
 			}
 			else {
                 scVselected.html(scDefaultText);
@@ -166,6 +174,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 
 	//al load eseguo un eventuale click sul selected per popolare la voce principale
 	scWrapper.find(".dropdown-menu .option-selected").click();
+	
 
 	//eventuale funzione di callmeback
 	if (cmbfunction) cmbfunction();
