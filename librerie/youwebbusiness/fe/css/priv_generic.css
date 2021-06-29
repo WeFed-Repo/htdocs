@@ -1542,6 +1542,10 @@
 .tooltip-w-auto .tooltip-inner {
   width: auto;
 }
+.tooltip-no-mw .tooltip-inner {
+  width: auto;
+  min-width: 0;
+}
 .tooltip-m-h-td .tooltip-inner {
   min-height: 55px;
   display: flex;
@@ -1698,146 +1702,11 @@
     padding-right: 0;
   }
 }
-.accordion.always-active .icon-refresh:before {
-  content: "";
+.accordion.always-active .icon-circle_close:before {
+  content: "";
 }
-.accordion.always-active .icon-refresh_euro:before {
-  content: "";
-}
-.accordion.always-active .icon-alert:before {
-  content: "";
-}
-.accordion.always-active .icon-calendario:before {
-  content: "";
-}
-.accordion.always-active .icon-category_altrepassivita:before {
-  content: "";
-}
-.accordion.always-active .icon-category_altrespese:before {
-  content: "";
-}
-.accordion.always-active .icon-category_altriproventi:before {
-  content: "";
-}
-.accordion.always-active .icon-category_assicurazione:before {
-  content: "";
-}
-.accordion.always-active .icon-attenzione:before {
-  content: "";
-}
-.accordion.always-active .icon-category_bollette:before {
-  content: "";
-}
-.accordion.always-active .icon-category_fornitori:before {
-  content: "";
-}
-.accordion.always-active .icon-category_immobilizzazioni:before {
-  content: "";
-}
-.accordion.always-active .icon-category_intercompany:before {
-  content: "";
-}
-.accordion.always-active .icon-category_operazionifinanziarie:before {
-  content: "";
-}
-.accordion.always-active .icon-category_ricavi:before {
-  content: "";
-}
-.accordion.always-active .icon-category_servizi:before {
-  content: "";
-}
-.accordion.always-active .icon-category_tasse:before {
-  content: "";
-}
-.accordion.always-active .icon-category_trasporti:before {
-  content: "";
-}
-.accordion.always-active .icon-circle_minus:before {
-  content: "";
-}
-.accordion.always-active .icon-credito:before {
-  content: "";
-}
-.accordion.always-active .icon-divieto:before {
-  content: "";
-}
-.accordion.always-active .icon-document_percent:before {
-  content: "";
-}
-.accordion.always-active .icon-espandi:before {
-  content: "";
-}
-.accordion.always-active .icon-excel:before {
-  content: "";
-}
-.accordion.always-active .icon-excel_2000:before {
-  content: "";
-}
-.accordion.always-active .icon-eye:before {
-  content: "";
-}
-.accordion.always-active .icon-fatturato:before {
-  content: "";
-}
-.accordion.always-active .icon-grafico_istogramma:before {
-  content: "";
-}
-.accordion.always-active .icon-grafico_torta:before {
-  content: "";
-}
-.accordion.always-active .icon-link_documento:before {
-  content: "";
-}
-.accordion.always-active .icon-modifica:before {
-  content: "";
-}
-.accordion.always-active .icon-more:before {
-  content: "";
-}
-.accordion.always-active .icon-pdf:before {
-  content: "";
-}
-.accordion.always-active .icon-printer:before {
-  content: "";
-}
-.accordion.always-active .icon-proiezione:before {
-  content: "";
-}
-.accordion.always-active .icon-razzo:before {
-  content: "";
-}
-.accordion.always-active .icon-riduci:before {
-  content: "";
-}
-.accordion.always-active .icon-upload:before {
-  content: "";
-}
-.accordion.always-active .icon-warning:before {
-  content: "";
-}
-.accordion.always-active .icon-circle_arrow_up:before, .accordion.always-active .card .card-header .card-header-icon:before, .accordion.always-active .acc-item .card-header .card-header-icon:before {
-  content: "";
-}
-.accordion.always-active .icon-circle_arrow_down:before, .accordion.always-active .card .card-header.collapsed .card-header-icon:before, .accordion.always-active .acc-item .card-header.collapsed .card-header-icon:before {
-  content: "";
-}
-.accordion.always-active .icon-circle_plus:before {
-  content: "";
-}
-.accordion.always-active .icon-round_check:before {
-  content: "";
-}
-.accordion.always-active .icon-help:before {
-  content: "";
-}
-.accordion.always-active .icon-ico_gestione_contatti:before {
-  content: "";
-}
-.accordion.always-active .icon-ico_bonifico_sepa:before {
-  content: "";
-}
-.accordion.always-active .icon-ico_dispositiva:before {
-  content: "";
+.accordion.always-active .icon-category_risorseumane:before {
+  content: "";
 }
 .accordion.always-active .icon-close:before {
   content: "";
@@ -2079,11 +1948,149 @@
 .accordion.always-active .icon-ico_youwin:before {
   content: "";
 }
+.accordion.always-active .icon-refresh:before {
+  content: "";
+}
+.accordion.always-active .icon-refresh_euro:before {
+  content: "";
+}
+.accordion.always-active .icon-alert:before {
+  content: "";
+}
+.accordion.always-active .icon-calendario:before {
+  content: "";
+}
+.accordion.always-active .icon-category_altrepassivita:before {
+  content: "";
+}
+.accordion.always-active .icon-category_altrespese:before {
+  content: "";
+}
+.accordion.always-active .icon-category_altriproventi:before {
+  content: "";
+}
+.accordion.always-active .icon-category_assicurazione:before {
+  content: "";
+}
+.accordion.always-active .icon-attenzione:before {
+  content: "";
+}
+.accordion.always-active .icon-category_bollette:before {
+  content: "";
+}
+.accordion.always-active .icon-category_fornitori:before {
+  content: "";
+}
+.accordion.always-active .icon-category_immobilizzazioni:before {
+  content: "";
+}
+.accordion.always-active .icon-category_intercompany:before {
+  content: "";
+}
+.accordion.always-active .icon-category_operazionifinanziarie:before {
+  content: "";
+}
+.accordion.always-active .icon-category_ricavi:before {
+  content: "";
+}
+.accordion.always-active .icon-category_servizi:before {
+  content: "";
+}
+.accordion.always-active .icon-category_tasse:before {
+  content: "";
+}
+.accordion.always-active .icon-category_trasporti:before {
+  content: "";
+}
+.accordion.always-active .icon-circle_minus:before {
+  content: "";
+}
+.accordion.always-active .icon-credito:before {
+  content: "";
+}
+.accordion.always-active .icon-divieto:before {
+  content: "";
+}
+.accordion.always-active .icon-document_percent:before {
+  content: "";
+}
+.accordion.always-active .icon-espandi:before {
+  content: "";
+}
+.accordion.always-active .icon-excel:before {
+  content: "";
+}
+.accordion.always-active .icon-excel_2000:before {
+  content: "";
+}
+.accordion.always-active .icon-eye:before {
+  content: "";
+}
+.accordion.always-active .icon-fatturato:before {
+  content: "";
+}
+.accordion.always-active .icon-grafico_istogramma:before {
+  content: "";
+}
+.accordion.always-active .icon-grafico_torta:before {
+  content: "";
+}
+.accordion.always-active .icon-link_documento:before {
+  content: "";
+}
+.accordion.always-active .icon-modifica:before {
+  content: "";
+}
+.accordion.always-active .icon-more:before {
+  content: "";
+}
+.accordion.always-active .icon-pdf:before {
+  content: "";
+}
+.accordion.always-active .icon-printer:before {
+  content: "";
+}
+.accordion.always-active .icon-proiezione:before {
+  content: "";
+}
+.accordion.always-active .icon-razzo:before {
+  content: "";
+}
+.accordion.always-active .icon-riduci:before {
+  content: "";
+}
+.accordion.always-active .icon-upload:before {
+  content: "";
+}
+.accordion.always-active .icon-warning:before {
+  content: "";
+}
+.accordion.always-active .icon-circle_arrow_up:before, .accordion.always-active .card .card-header .card-header-icon:before, .accordion.always-active .acc-item .card-header .card-header-icon:before {
+  content: "";
+}
+.accordion.always-active .icon-circle_arrow_down:before, .accordion.always-active .card .card-header.collapsed .card-header-icon:before, .accordion.always-active .acc-item .card-header.collapsed .card-header-icon:before {
+  content: "";
+}
+.accordion.always-active .icon-circle_plus:before {
+  content: "";
+}
+.accordion.always-active .icon-round_check:before {
+  content: "";
+}
+.accordion.always-active .icon-help:before {
+  content: "";
+}
+.accordion.always-active .icon-ico_gestione_contatti:before {
+  content: "";
+}
+.accordion.always-active .icon-ico_bonifico_sepa:before {
+  content: "";
+}
+.accordion.always-active .icon-ico_dispositiva:before {
+  content: "";
+}
 .accordion.always-active .icon-arrow_right_text:before {
   content: "";
-}
-.accordion.always-active .icon-category_risorseumane:before {
-  content: "";
 }
 .accordion.always-active .card, .accordion.always-active .acc-item {
   /* Border-color differente per coerenza con i bordi dei bordi 
@@ -4705,6 +4712,13 @@ h1 .btn-icon-help, h1 .btn-icon-info {
   color: #2F9988;
   position: relative;
 }
+.ico-btn.plus-minus.color-white {
+  color: #FFFFFF;
+  border: #FFFFFF solid 1px;
+}
+.ico-btn.plus-minus.color-white:before {
+  color: #FFFFFF;
+}
 .ico-btn.plus-minus:before {
   position: absolute;
   top: 50%;
@@ -4723,6 +4737,20 @@ h1 .btn-icon-help, h1 .btn-icon-info {
 .ico-btn.plus-minus.is-active:before {
   content: "–";
   color: #737373;
+}
+.ico-btn.plus-minus.is-active.color-greenLink {
+  border: #2F9988 solid 1px;
+  color: #2F9988;
+}
+.ico-btn.plus-minus.is-active.color-greenLink:before {
+  color: #2F9988;
+}
+.ico-btn.plus-minus.color-white {
+  color: #FFFFFF;
+  border: #FFFFFF solid 1px;
+}
+.ico-btn.plus-minus.color-white:before {
+  color: #FFFFFF;
 }
 
 @media (max-width: 575px) {

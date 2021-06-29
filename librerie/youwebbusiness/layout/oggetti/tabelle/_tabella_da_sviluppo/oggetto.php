@@ -145,6 +145,14 @@
                            <table id="tableEsempioSviluppo" cellspacing="0" cellpadding="0" border="0" class="table table-striped table-striped-double table-hover" data-pagination="true" data-sort-name="Chain.Data" data-sort-order="desc" style="margin-top: 0px;">
                               <thead>
                                  <tr>
+                                    <th class="center">
+                                       <!-- stato active-->
+                                       <!-- <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-white is-active"></div> -->
+                                       <a data-trigger="hover" data-placement="top"  data-toogle-class="tooltip-no-mw"  data-toggle="tooltip" title="<span class='font-size-small'><strong>Espandi</strong><br>Mostra tutte le informazioni</span>" href="javascript:;">
+                                          <span tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-white"></span>
+                                       </a>
+                                       
+                                    </th>
                                     <th style="" data-field="0">
                                        <div class="th-inner "></div>
                                        <div class="fht-cell"></div>
@@ -173,10 +181,7 @@
                                        <div class="th-inner sortable both">Tipo disp.</div>
                                        <div class="fht-cell"></div>
                                     </th>
-                                    <th class="center" style="" data-field="Chain.StatoComposite">
-                                       <div class="th-inner sortable both">Stato</div>
-                                       <div class="fht-cell"></div>
-                                    </th>
+                                    
                                     <th class="center" style="" data-field="Chain.Importo.Value">
                                        <div class="th-inner sortable both">Importo</div>
                                        <div class="fht-cell"></div>
@@ -197,6 +202,9 @@
                               </thead>
                               <tbody class="accordion">
                                  <tr class="highlight" data-index="0">
+                                    <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink is-active"></div>
+                                    </td>
                                     <td></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
@@ -204,12 +212,11 @@
                                     <td>000000047661</td>
                                     <td class="center">1</td>
                                     <td>F24</td>
-                                    <td>In modifica <br> </td>
                                     <td class="right"><span class="tm-importo ">123,00 EUR</span></td>
                                     <td class="center">
                                         <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus/  data-offset aggiunto per spostarlo un poco sulla sinistra--->
                                           <div class="btn-group">
-                                             <a data-container="#tableEsempioSviluppo" data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato automaticamente</strong></p>" data-trigger="focus">
+                                             <a data-container="#tableEsempioSviluppo" data-offset="-100 0" data-toogle-class="tooltip-dark tooltip-w-auto" href="javascript:;" data-placement="top" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Movimento associato manualmente</strong></p>" data-trigger="focus">
                                                 <i class="icon icon-link_documento color-gray3"></i>
                                              </a>
                                           </div>
@@ -240,9 +247,12 @@
                                     </td>
                                  </tr>
                                  <tr data-index="1" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center wrapper-border-element">
-                                      <a class="border-element bkg-gray1" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
+                                  <td class="text-center  wrapper-border-element">
+                                  <a class="border-element bkg-gray1" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
                                       </a>
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenlink"></div>
+                                    </td>
+                                    <td class="text-center">
                                       <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="1" tm-link-detail="">07/04/2021</a></td>
                                     <td>
@@ -252,7 +262,6 @@
                                     <td>000000047658                                      </td>
                                     <td class="center">1</td>
                                     <td>F24</td>
-                                    <td>Da autorizzare <br> </td>
                                     <td class="right"><span class="tm-importo ">99,00 EUR</span></td>
                                     <td class="center">
                                         <!--esempio di tooltip che si apre top, dark, di diemensioni auto fino ad una certa larghezza e al focus--->
@@ -291,6 +300,9 @@
                                  </tr>
                                  <tr data-index="2" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink is-active"></div>
+                                    </td>
+                                    <td class="text-center">
                                         <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="2" tm-link-detail="">01/04/2021</a></td>
@@ -301,7 +313,7 @@
                                     <td>000000047661                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>
-                                    <td>In modifica <br> </td>
+                                   
                                     <td class="right"><span class="tm-importo ">124,68 EUR</span></td>
                                     <td></td>
                                     <td></td>
@@ -323,6 +335,9 @@
                                  </tr>
                                  <tr data-index="3" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
+                                    </td>
+                                    <td class="text-center">
                                         <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="3" tm-link-detail="">01/04/2021</a></td>
@@ -333,7 +348,6 @@
                                     <td>000000047659                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>
-                                    <td>In modifica <br> </td>
                                     <td class="right"><span class="tm-importo ">20,00 EUR</span></td>
                                     <td>
                                     </td>
@@ -355,6 +369,9 @@
                                     </td>
                                  </tr>
                                  <tr data-index="4" style="border-bottom: solid 1px #eeeeee;">
+                                 <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
+                                    </td>
                                     <td class="text-center">
                                         <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
@@ -366,7 +383,7 @@
                                     <td>000000047659                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>
-                                    <td>In modifica <br> </td>
+                                   
                                     <td class="right"><span class="tm-importo ">2,47 EUR</span></td>
                                     <td>
                                     </td>
@@ -389,6 +406,9 @@
                                  </tr>
                                  <tr data-index="5" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent is-active color-greenLink"></div>
+                                    </td>
+                                    <td class="text-center">
                                         <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="5" tm-link-detail="">01/04/2021</a></td>
@@ -399,7 +419,7 @@
                                     <td>000000047659                                      </td>
                                     <td class="center">2</td>
                                     <td>F24</td>
-                                    <td>In modifica <br> </td>
+                                    
                                     <td class="right"><span class="tm-importo ">2,47 EUR</span></td>
                                     <td>
                                     </td>
