@@ -12860,11 +12860,14 @@ i.css-square {
   background-color: #dbe9af;
   padding: 30px;
 }
-.box-bck-highlight section:last-child {
+.box-bck-highlight section.last-visible-child {
   margin-bottom: 0;
 }
-.box-bck-highlight section:last-child .form-group {
+.box-bck-highlight section.last-visible-child .form-group {
   margin-bottom: 0;
+}
+.box-bck-highlight .hidden-we {
+  display: none;
 }
 /* Revisione grandezza base grandezza testi #contenuti su smartphone (rich. Paroni 13-01-2017) */
 @media (max-width: 1023px) {
