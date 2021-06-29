@@ -76,8 +76,8 @@
   </div>
 
   <!-- Stile inline per simulare lo spazio necessario allo scroll -->
-  <div style="height:400px; background-color:gray; width:100%;">
-    <p>Spazio d'esempio</p>
+  <div class="d-flex justify-content-center align-items-center" style="height:400px; background-color:gray; width:100%; font-size:30px;">
+    <p style="color:white;">Spazio d'esempio</p>
   </div>
 
   <!-- Elemento in stile anchor -->
