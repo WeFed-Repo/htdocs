@@ -79,19 +79,21 @@
   <div class="d-flex justify-content-center align-items-center" style="height:400px; background-color:gray; width:100%; font-size:30px;">
     <p style="color:white;">Spazio d'esempio</p>
   </div>
+</div>
 
+<div class="no-margin-section">
   <!-- Elemento in stile anchor -->
-  <div class="bordered order-form pb-2 mb-3 pb-2 px-0">
+  <div class="bordered box-order-form pb-2 mt-3 pb-3 pl-2 pr-2">
     <form class="form-grid row d-flex align-items-center">
 
-      <div class="col-md-6">
+      <div class="col col-12 col-md-7">
         <h3 class="title">Uscite categorizzate</h3>
         <span class="text-with-icon-inline right-icon">Dal 20/01/2021 al 18/02/2021 
           <a class="icon-inline" href="javascript:;" title="" fe-data-stid="toform-1"><i class="icon icon-modifica mr-0"></i></a>
         </span>
       </div>
 
-      <div class="col-md-3">
+      <div class="col col-7 col-md-3">
         <div class="form-group mx-2 my-0">
           <select class="form-control my-0">
             <option selected="">Ordine decrescente</option>
@@ -100,7 +102,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 group-icon d-flex justify-content-center">
+      <div class="col col-5 col-md-2 group-icon d-flex justify-content-around">
         <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-pdf mr-0"></i></a>
         <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-excel mr-0"></i></a>
         <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-excel_2000 mr-0"></i></a>
@@ -119,7 +121,7 @@
       let toid = '#' + $(this).attr("fe-data-stid");
       $('html, body').animate({
         scrollTop: ($(toid).offset().top - ypos)
-      }, 2000);
+      }, 1000);
     }
     
     $(document).on('click', ('[fe-data-stid]'), scrolltoid);
