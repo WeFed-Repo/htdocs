@@ -6319,6 +6319,15 @@ body > .dropdown-menu.shown,
   right: calc( -25px - 1rem);
 }
 
+.carousel-multicard .carousel-card {
+  width: 100%;
+  margin: 1.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1px 7.5px 0 rgba(67, 67, 67, 0.17);
+  background-color: #ffffff;
+  height: 400px;
+}
+
 .login {
   max-width: 900px;
   margin: auto;
