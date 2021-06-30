@@ -125,7 +125,14 @@
           <div class="form-row">
             <div class="form-group col-12">
                 <label class="control-label"><strong>Scrivi qui l’hashtag</strong></label>
-                <input type="text" class="form-control input-all-border" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
+                <div class="form-row">
+                  <div class="col-12 col-sm-8 col-md-9 col-lg-10">
+                    <input type="text" class="form-control input-all-border" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                    <a class="btn btn-white brd-green fl-right btn-xs-full w-100" id="btnCreaTag">Crea</a>
+                  </div>
+                </div>
             </div>
           </div>
         </form>
@@ -180,15 +187,21 @@
       $(this).remove();    
     });
 
-    // Gestione inserimento htag
-    var availableTags = [];
+    // Gestione inserimento htag con Autocomplete
+    /* var availableTags = [];
     var newTagsCount = 0;
 
     $( "input[name=htag-input]" ).autocomplete({
       source: availableTags,
       select: function() {
         newTagsCount++;
-        let $newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">#' + $('input[name=htag-input]').val() + '</span></div>';
+        let newtagtext = "" ;
+        if($('input[name=htag-input]').val().trim().charAt(0)=="#") {
+          newtagtext = $('input[name=htag-input]').val().trim();
+        }else{
+          newtagtext = '#' + $('input[name=htag-input]').val().trim();
+        }
+        let newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + newtagtext + '</span></div>';
         $(".htag-added-wall").append($newtag);
         availableTags[0]= "";
         $(this).val(''); 
@@ -201,7 +214,27 @@
     });  
 
     $('input[name=htag-input]').keyup(function() {
-      availableTags[0]=('#' + $(this).val());        
+      let newautocompletetag = "";
+      if($(this).val().trim().charAt(0)=="#"){
+        newautocompletetag = $(this).val().trim();
+      }else{
+        newautocompletetag = '#' + $(this).val().trim();
+      }
+      availableTags[0]=(newautocompletetag);        
+    }); */
+
+    // Gestione inserimento htag con Bottone CREA
+    var newTagsCount = 0;
+    $("#btnCreaTag").click(function () {
+      newTagsCount++;
+      let newtagtext = "" ;
+      if($('input[name=htag-input]').val().trim().charAt(0)=="#") {
+        newtagtext = $('input[name=htag-input]').val().trim();
+      }else{
+        newtagtext = '#' + $('input[name=htag-input]').val().trim();
+      }
+      let newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + newtagtext + '</span></div>';
+      $(".htag-added-wall").append(newtag);
     });
 
     // Show-Hide Default Tags
