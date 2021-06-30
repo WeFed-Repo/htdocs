@@ -7910,6 +7910,42 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   background-color: #f5f9fc;
 }
 
+.box-order-form .form-grid {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.box-order-form .form-grid .col:nth-child(1), .box-order-form .form-grid .col:nth-child(2) {
+  border-right: 1px solid #DDDDDD;
+}
+.box-order-form .form-grid .form-group {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.box-order-form .group-icon .icon {
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .box-order-form .form-grid {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .box-order-form .form-grid .col:nth-child(1) {
+    border-right: 0px;
+    margin-bottom: 1.5rem;
+  }
+  .box-order-form .form-grid .form-group {
+    padding-left: 0rem;
+    padding-right: 0.5rem;
+  }
+  .box-order-form .group-icon .icon {
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+  }
+}
 .c-filter .nav-tabs {
   margin: 0;
   padding: 0;
