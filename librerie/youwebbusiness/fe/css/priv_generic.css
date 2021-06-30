@@ -4883,10 +4883,17 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   width: 100%;
   display: block;
   cursor: pointer;
+  padding: 8px;
 }
 .select-custom a.select-custom-option-el label, .select-custom .select-custom-option a label {
   margin-bottom: 0;
   width: 100%;
+}
+.select-custom .select-custom-option-el.dropdown-item:active {
+  background-color: transparent !important;
+}
+.select-custom .select-custom-option-el.dropdown-item:hover {
+  background-color: #d8d8d8;
 }
 .select-custom .dropdown-toggle {
   /*@include ellipsed();*/
@@ -4907,17 +4914,14 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
   background-color: #F5F5F5;
 }
 .select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option {
-  padding: 8px;
+  /*padding:8px;*/
   cursor: pointer;
 }
-.select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option.option-selected, .select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option:hover {
+.select-custom .select-custom-options-wrapper.dropdown-menu .select-custom-option.option-selected {
   background-color: #d8d8d8;
 }
 .select-custom.show .form-control.dropdown-toggle {
   background-image: url(../img/form_select_opened.gif);
-}
-.select-custom.has-checkbox .dropdown-menu .select-custom-option {
-  padding: 0px 3px 5px 3px;
 }
 .select-custom.has-checkbox .dropdown-menu .select-custom-option.option-selected {
   background-color: transparent;
@@ -4980,6 +4984,9 @@ select::-ms-expand, .select-custom-option-el::-ms-expand {
 }
 .select-custom.has-btn .dropdown-menu .select-custom-option-el {
   font-size: 12px;
+}
+.select-custom.has-btn .dropdown-menu .select-custom-option-el.dropdown-item:hover {
+  background-color: transparent !important;
 }
 .select-custom.has-btn.option-is-selected {
   max-width: 245px;
@@ -6066,70 +6073,70 @@ td.ui-datepicker-unselectable.ui-state-disabled:not(.ui-datepicker-week-end) {
   }
 }
 
-.dropdown-item, .dropdown-item:hover,
-a.dropdown-item,
-a.dropdown-item:hover,
-a.dropdown-item:hover,
-a.dropdown-item:hover:hover,
-a.dropdown-item:not(.btn),
-a.dropdown-item:not(.btn):hover {
+.dropdown-item:not(.select-custom-option-el), .dropdown-item:not(.select-custom-option-el):hover,
+a.dropdown-item:not(.select-custom-option-el),
+a.dropdown-item:not(.select-custom-option-el):hover,
+a.dropdown-item:not(.select-custom-option-el):hover,
+a.dropdown-item:not(.select-custom-option-el):hover:hover,
+a.dropdown-item:not(.btn):not(.select-custom-option-el),
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover {
   font-size: 14px;
   color: #666666 !important;
   text-decoration: none;
 }
-.dropdown-item.active, .dropdown-item:active, .dropdown-item:hover.active, .dropdown-item:hover:active,
-a.dropdown-item.active,
-a.dropdown-item:active,
-a.dropdown-item:hover.active,
-a.dropdown-item:hover:active,
-a.dropdown-item:hover.active,
-a.dropdown-item:hover:active,
-a.dropdown-item:hover:hover.active,
-a.dropdown-item:hover:hover:active,
-a.dropdown-item:not(.btn).active,
-a.dropdown-item:not(.btn):active,
-a.dropdown-item:not(.btn):hover.active,
-a.dropdown-item:not(.btn):hover:active {
+.dropdown-item:not(.select-custom-option-el).active, .dropdown-item:not(.select-custom-option-el):active, .dropdown-item:not(.select-custom-option-el):hover.active, .dropdown-item:not(.select-custom-option-el):hover:active,
+a.dropdown-item:not(.select-custom-option-el).active,
+a.dropdown-item:not(.select-custom-option-el):active,
+a.dropdown-item:not(.select-custom-option-el):hover.active,
+a.dropdown-item:not(.select-custom-option-el):hover:active,
+a.dropdown-item:not(.select-custom-option-el):hover.active,
+a.dropdown-item:not(.select-custom-option-el):hover:active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover.active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover:active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el).active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover.active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover:active {
   background: #2F9988 !important;
   color: #FFFFFF !important;
 }
-.dropdown-item.disabled, .dropdown-item.disabled.active, .dropdown-item.disabled:active, .dropdown-item[disabled], .dropdown-item[disabled].active, .dropdown-item[disabled]:active, .dropdown-item:hover.disabled, .dropdown-item:hover.disabled.active, .dropdown-item:hover.disabled:active, .dropdown-item:hover[disabled], .dropdown-item:hover[disabled].active, .dropdown-item:hover[disabled]:active,
-a.dropdown-item.disabled,
-a.dropdown-item.disabled.active,
-a.dropdown-item.disabled:active,
-a.dropdown-item[disabled],
-a.dropdown-item[disabled].active,
-a.dropdown-item[disabled]:active,
-a.dropdown-item:hover.disabled,
-a.dropdown-item:hover.disabled.active,
-a.dropdown-item:hover.disabled:active,
-a.dropdown-item:hover[disabled],
-a.dropdown-item:hover[disabled].active,
-a.dropdown-item:hover[disabled]:active,
-a.dropdown-item:hover.disabled,
-a.dropdown-item:hover.disabled.active,
-a.dropdown-item:hover.disabled:active,
-a.dropdown-item:hover[disabled],
-a.dropdown-item:hover[disabled].active,
-a.dropdown-item:hover[disabled]:active,
-a.dropdown-item:hover:hover.disabled,
-a.dropdown-item:hover:hover.disabled.active,
-a.dropdown-item:hover:hover.disabled:active,
-a.dropdown-item:hover:hover[disabled],
-a.dropdown-item:hover:hover[disabled].active,
-a.dropdown-item:hover:hover[disabled]:active,
-a.dropdown-item:not(.btn).disabled,
-a.dropdown-item:not(.btn).disabled.active,
-a.dropdown-item:not(.btn).disabled:active,
-a.dropdown-item:not(.btn)[disabled],
-a.dropdown-item:not(.btn)[disabled].active,
-a.dropdown-item:not(.btn)[disabled]:active,
-a.dropdown-item:not(.btn):hover.disabled,
-a.dropdown-item:not(.btn):hover.disabled.active,
-a.dropdown-item:not(.btn):hover.disabled:active,
-a.dropdown-item:not(.btn):hover[disabled],
-a.dropdown-item:not(.btn):hover[disabled].active,
-a.dropdown-item:not(.btn):hover[disabled]:active {
+.dropdown-item:not(.select-custom-option-el).disabled, .dropdown-item:not(.select-custom-option-el).disabled.active, .dropdown-item:not(.select-custom-option-el).disabled:active, .dropdown-item:not(.select-custom-option-el)[disabled], .dropdown-item:not(.select-custom-option-el)[disabled].active, .dropdown-item:not(.select-custom-option-el)[disabled]:active, .dropdown-item:not(.select-custom-option-el):hover.disabled, .dropdown-item:not(.select-custom-option-el):hover.disabled.active, .dropdown-item:not(.select-custom-option-el):hover.disabled:active, .dropdown-item:not(.select-custom-option-el):hover[disabled], .dropdown-item:not(.select-custom-option-el):hover[disabled].active, .dropdown-item:not(.select-custom-option-el):hover[disabled]:active,
+a.dropdown-item:not(.select-custom-option-el).disabled,
+a.dropdown-item:not(.select-custom-option-el).disabled.active,
+a.dropdown-item:not(.select-custom-option-el).disabled:active,
+a.dropdown-item:not(.select-custom-option-el)[disabled],
+a.dropdown-item:not(.select-custom-option-el)[disabled].active,
+a.dropdown-item:not(.select-custom-option-el)[disabled]:active,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled.active,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled:active,
+a.dropdown-item:not(.select-custom-option-el):hover[disabled],
+a.dropdown-item:not(.select-custom-option-el):hover[disabled].active,
+a.dropdown-item:not(.select-custom-option-el):hover[disabled]:active,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled.active,
+a.dropdown-item:not(.select-custom-option-el):hover.disabled:active,
+a.dropdown-item:not(.select-custom-option-el):hover[disabled],
+a.dropdown-item:not(.select-custom-option-el):hover[disabled].active,
+a.dropdown-item:not(.select-custom-option-el):hover[disabled]:active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover.disabled,
+a.dropdown-item:not(.select-custom-option-el):hover:hover.disabled.active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover.disabled:active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover[disabled],
+a.dropdown-item:not(.select-custom-option-el):hover:hover[disabled].active,
+a.dropdown-item:not(.select-custom-option-el):hover:hover[disabled]:active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el).disabled,
+a.dropdown-item:not(.btn):not(.select-custom-option-el).disabled.active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el).disabled:active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el)[disabled],
+a.dropdown-item:not(.btn):not(.select-custom-option-el)[disabled].active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el)[disabled]:active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover.disabled,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover.disabled.active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover.disabled:active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover[disabled],
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover[disabled].active,
+a.dropdown-item:not(.btn):not(.select-custom-option-el):hover[disabled]:active {
   cursor: default !important;
   opacity: 0.5 !important;
   color: #999999 !important;
@@ -6187,7 +6194,7 @@ body > .dropdown-menu.shown,
   min-width: 230px !important;
   max-width: 230px !important;
 }
-.dropdown-menu .dropdown-item, .dropdown-menu a.dropdown-item {
+.dropdown-menu .dropdown-item:not(.select-custom-option-el), .dropdown-menu a.dropdown-item:not(.select-custom-option-el) {
   white-space: normal !important;
   line-height: 1.1em !important;
   padding: 0.5rem 1.5rem !important;

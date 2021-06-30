@@ -104,12 +104,22 @@ select, .select-custom-option-el {
     width: 100%;
     display: block;
     cursor:pointer;
-    
+    padding:8px;
     label {
       margin-bottom: 0;
       width: 100%;
     }
   }
+  
+  
+  .select-custom-option-el.dropdown-item:active
+  {
+    background-color: transparent!important;
+  }
+  .select-custom-option-el.dropdown-item:hover{
+    background-color: $gray10;
+  }
+  
   .dropdown-toggle {
     /*@include ellipsed();*/
     &::after {
@@ -130,15 +140,15 @@ select, .select-custom-option-el {
      min-width: 0!important;
      background-color: $grayBG;
      .select-custom-option {
-      padding:8px;
+      /*padding:8px;*/
       cursor: pointer;
-      &.option-selected, &:hover{
+      &.option-selected{
         background-color: $gray10;
       }
       
      }
   }
-  &.show {
+  &.show { 
     .form-control.dropdown-toggle{
         background-image:url(../img/form_select_opened.gif);
     }
@@ -146,7 +156,6 @@ select, .select-custom-option-el {
   &.has-checkbox { 
     .dropdown-menu {
       .select-custom-option {
-        padding:0px 3px 5px 3px;
         &.option-selected {
           background-color: transparent;
           &:hover {
@@ -200,6 +209,9 @@ select, .select-custom-option-el {
       }
       .select-custom-option-el {
         font-size:12px;
+        &.dropdown-item:hover {
+          background-color: transparent!important;
+        }
       }
     }
     &.option-is-selected {

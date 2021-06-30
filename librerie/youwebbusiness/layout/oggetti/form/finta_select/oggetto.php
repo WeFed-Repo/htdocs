@@ -67,11 +67,14 @@
                 "text": "Seleziona",
                 "value":"0",
                 "selected": true
+               
               },
               {
                 "id": 1,
                 "text": "Option 1",
                 "value": "1"
+                
+
               },
               {
                 "id": 2,
@@ -137,7 +140,7 @@
                 "id": 1,
                 "text": "Associa progetto",
                 "value": "10",
-                "selected": false
+                "selected": true
               },
               {
                 "id": 2,
@@ -177,7 +180,5 @@
       })
      
     })
-    
-    
-    //funzione di inizializzazione della finta select passo i valori per costriuire la select e le callback
+   
 </script>
