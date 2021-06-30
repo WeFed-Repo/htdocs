@@ -9,7 +9,7 @@
                 <div class="squared bkg-bfm_status_attive"></div>
                 <div class="text color-gray1 with-progress">
                   <span>Attive</span>
-                  <span class="d-none d-md-block text-alert"><i class="icon icon-warning color-error"></i> Soglia superata</span>
+                  <span class="d-none d-md-block text-alert"><i class="icon icon-warning color-error"></i>Soglia superata</span>
                   <div class="progress">
                       <div class="progress-bar bkg-bfm_status_attive" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
