@@ -181,4 +181,9 @@
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_tabella_scrollabile/oggetto.php');?>
 <!-- ./  MODALE CON ELEMENTI CHE SCROLLANO -->
 
+<!-- Carosello Multicard Solo Desktop -->
+<?php virtual('/youwebbusiness/layout/oggetti/widget/carousel_multicards/oggetto.php');?>
+<!-- ./  Carosello Multicard Solo Desktop -->
+
+
 
