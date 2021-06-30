@@ -1680,15 +1680,22 @@
   background: transparent;
   padding: 1rem 1rem 2rem 1rem;
 }
+.accordion.bordered-style.bordered-only-top .card {
+  border: 0;
+  border-top: solid 1px #c8c8c8;
+}
+.accordion.bordered-style.bordered-only-top .card-header {
+  padding-top: 1rem;
+}
 .accordion.ico-close-pa .card-header {
   position: relative;
 }
 .accordion.ico-close-pa .card-header-icon {
   position: absolute;
   right: 1rem;
-  top: 2rem;
+  /*top: 2rem;*/
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .accordion.ico-close-pa .card-header-icon {
     right: 0.5rem;
     top: 1rem;
@@ -2761,6 +2768,16 @@
 }
 .bootstrap-table table.font-small th, .bootstrap-table table.font-small td, .bootstrap-table .table.font-small th, .bootstrap-table .table.font-small td, .table.font-small th, .table.font-small td {
   font-size: 12px;
+}
+
+/*wrapper per lo scroll verticale delle tabelle con altezza diversa tra contenuti in pagina e in modale */
+.wrapper-table-scroll-y {
+  overflow-y: auto;
+  max-height: 520px;
+}
+
+.modal .wrapper-table-scroll-y {
+  max-height: 250px;
 }
 
 .detail-panel {

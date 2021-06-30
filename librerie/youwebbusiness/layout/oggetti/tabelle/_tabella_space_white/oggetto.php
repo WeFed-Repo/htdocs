@@ -24,7 +24,7 @@ table-font-small => font-size 12px
       <?php // esempio ciclo per tabella in desktop ?>
       <!-- CLASSI COLORE PER LE CATEGORIE-->
       <?php $array = array("bollette","fornitori", "operazionifinanziarie","ricavi","assicurazione","altrespese","servizi","tasse","trasporti","immobilizzazioni","intercompany","altrepassivita","altriproventi","risorseumane"); ?>
-      <?php for ($i = 0; $i <= 5; $i++) { ?>
+      <?php for ($i = 0; $i <= 8; $i++) { ?>
       <tr data-index="<?= $i ?>">
          <td>
                <span class="text-with-squared">

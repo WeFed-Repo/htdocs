@@ -96,6 +96,15 @@
         padding: 1rem 1rem 2rem 1rem;
       }
     }
+    &.bordered-only-top {
+      .card {
+        border:0;
+        border-top: solid 1px $grayBordered;
+      }
+      .card-header {
+        padding-top: 1rem;
+      }
+    }
   }
   
 
@@ -107,8 +116,8 @@
     .card-header-icon {
       position: absolute;
       right: 1rem;
-      top: 2rem;
-      @media (max-width:$bp_sm_min) {
+      /*top: 2rem;*/
+      @media (max-width:$bp_md_min) {
         right: 0.5rem;
         top: 1rem;
       }

@@ -33,7 +33,10 @@
     </div>
   
     <div class="card-body">
-      <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_white/oggetto.php');?>
+       <!--elemento nel quale scrolla la tabella -->
+       <div class="wrapper-table-scroll-y">
+        <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_white/oggetto.php');?>
+      </div>
     </div>
     
   </div>

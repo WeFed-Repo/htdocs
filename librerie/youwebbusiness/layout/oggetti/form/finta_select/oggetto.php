@@ -95,12 +95,7 @@
         "nameSel":"scCheckbox",
          //esempio di array con i valori per la select
         "dataOptions" : [
-          /*{
-                "id": 0,
-                "text": "Seleziona tutti",
-                "value": "all",//importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
-                "selected" :true
-          },*/
+          
           {
                 "id": 1,
                 "text": "Option 1",
@@ -140,7 +135,7 @@
                 "id": 1,
                 "text": "Associa progetto",
                 "value": "10",
-                "selected": true
+                "selected": false
               },
               {
                 "id": 2,

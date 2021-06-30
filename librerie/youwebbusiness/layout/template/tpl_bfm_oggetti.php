@@ -117,6 +117,8 @@
 <?php virtual('/youwebbusiness/layout/oggetti/form/order_form/oggetto.php'); ?>
 <!-- ./ Elemento con ScollUp-->
 <hr>
-
+<!-- MODALE CON ELEMENTI CHE SCROLLANO -->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_tabella_scrollabile/oggetto.php');?>
+<!-- ./  MODALE CON ELEMENTI CHE SCROLLANO -->
 
 
