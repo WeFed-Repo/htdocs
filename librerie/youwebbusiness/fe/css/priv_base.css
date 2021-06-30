@@ -1479,9 +1479,21 @@ img {
 .arrow-separator-row {
   align-items: center;
 }
+.arrow-separator-row .text-alert {
+  top: -10px;
+}
 @media (max-width: 767px) {
   .arrow-separator-row {
     text-align: center;
+  }
+  .arrow-separator-row .text-alert {
+    top: 0;
+    width: 100%;
+  }
+  .arrow-separator-row .text-alert .icon {
+    float: none;
+    position: relative;
+    top: 3px;
   }
 }
 
@@ -1703,6 +1715,18 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   float: none !important;
 }
 
+.text-alert {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  position: relative;
+  float: left;
+}
+.text-alert .icon {
+  float: left;
+  margin-right: 5px;
+}
+
 .text-with-squared {
   position: relative;
   display: block;
@@ -1711,15 +1735,8 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   min-height: 32px;
 }
 .text-with-squared .text-alert {
-  font-size: 12px;
-  font-weight: normal;
   float: right;
-  line-height: 20px;
-  position: relative;
   top: 5px;
-}
-.text-with-squared .text-alert .icon {
-  float: left;
 }
 .text-with-squared .squared {
   width: 32px;

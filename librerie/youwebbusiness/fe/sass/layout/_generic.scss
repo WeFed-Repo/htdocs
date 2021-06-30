@@ -142,9 +142,22 @@ img { border: 0; }
     opacity: 0.20;
     &-row {
       align-items: center;
+      .text-alert{
+        top:-10px
+      }
       @media (max-width: $bp_md_max) {
         text-align: center;
+        .text-alert{
+          top:0;
+          width: 100%;
+          .icon {
+            float: none;
+            position: relative;
+            top:3px;
+          }
+        }
       }
+      
     }
 }
 // icone nei titoli
@@ -370,7 +383,18 @@ dl, .list {
 
 
 // End Text-Width-Icon
+.text-alert {
+  font-size:12px;
+  font-weight: normal;
+  line-height: 20px;
+  position: relative;
+  float: left;
+  .icon {
+    float:left;
+    margin-right:5px;
+  }
 
+}
 .text-with-squared {
   position:relative;
   display: block;
@@ -378,15 +402,8 @@ dl, .list {
   align-items: center;
   min-height: 32px;
   .text-alert {
-    font-size:12px;
-    font-weight: normal;
     float: right;
-    line-height: 20px;
-    position: relative;
     top:5px;
-    .icon {
-      float: left;
-    }
   }
   .squared {
     width: 32px;

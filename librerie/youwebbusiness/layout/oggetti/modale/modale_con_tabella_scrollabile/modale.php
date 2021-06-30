@@ -93,7 +93,7 @@
               </div>
               <div class="wrapper-table-scroll-y">
                 <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_space_white/oggetto.php');?>
-            </div>
+              </div>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@
         </div>
       </section>
       <section>
+        
         <div class="row arrow-separator-row">
           <div class="col-12 col-md-3">
               <label class="control-label w-auto w-md-100 pr-3 pr-md-0">Budget prefissato</label>
@@ -25,6 +26,9 @@
             <div class="arrow-separator"></div>
           </div>
           <div class="col-12 col-md-3">
+            <span class="text-alert color-warning"><i class="icon icon-attenzione"></i> Budget quasi esaurito</span>
+            <!--caso soglia superata -->
+            <!--<span class="text-alert color-error"><i class="icon icon-warning"></i> Soglia superata</span>-->
             <label class="control-label w-auto w-md-100 pr-3 pr-md-0">Budget disponibile</label>
             <span class="text-output text-big color-greenLink">60.000 &euro;</span>
           </div>
