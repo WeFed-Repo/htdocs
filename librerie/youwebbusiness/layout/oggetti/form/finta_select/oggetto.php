@@ -100,24 +100,26 @@
                 "id": 1,
                 "text": "Option 1",
                 "value": "1",
-                "selected" :true
+                "selected" :false
                 
           },
           {
                 "id": 2,
                 "text": "Option 2",
                 "value": "2",
-                "selected" :true
+                "selected" :false
           },
           {
                 "id": 3,
                 "text": "Option 3",
-                "value": "3"
+                "value": "3",
+                "selected" :false
           },
           {
                 "id": 3,
                 "text": "Option 4",
-                "value": "4"
+                "value": "4",
+                "selected" :false
           }
         ],
         

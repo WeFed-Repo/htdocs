@@ -614,3 +614,28 @@
     }
   }
 }
+
+/* box progetti */
+.box-progetti {
+  position: relative;
+  .bordered {
+    height:100%;
+    .text {
+      width: 100%;
+      display:block;
+    }
+    .cta-wrapper {
+      .cta-gray {
+        color:$gray2!important;
+      }
+      a {
+        text-decoration: none;
+        font-size:14px;
+      }
+    }
+  }
+  .link-p-a {
+    position:absolute;
+    right:1rem;
+  }
+}

@@ -4,7 +4,8 @@
         <div class="row">
           <div class="col-12">
              <h4>Progetto: lorem ipsum dolor </h4>
-             <p class="color-greenLink">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p>
+             <p class="color-greenLink float-left mr-3">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p>
+             <span class="text-alert color-error float-left"><i class="icon icon-warning"></i> Periodo del progetto scaduto</span>
           </div>
         </div>
       </section>
