@@ -8364,17 +8364,17 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .box-progetti {
   position: relative;
 }
-.box-progetti .bordered {
+.box-progetti.bordered {
   height: 100%;
 }
-.box-progetti .bordered .text {
+.box-progetti.bordered .text {
   width: 100%;
   display: block;
 }
-.box-progetti .bordered .cta-wrapper .cta-gray {
+.box-progetti.bordered .cta-wrapper .cta-gray {
   color: #737373 !important;
 }
-.box-progetti .bordered .cta-wrapper a {
+.box-progetti.bordered .cta-wrapper a {
   text-decoration: none;
   font-size: 14px;
 }

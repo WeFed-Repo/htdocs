@@ -2,10 +2,10 @@
 
 <section>
 	<!--in corso -->
-	<div class="box-progetti">
+	
 		<div class="row">
 			<div class="col-12 col-md-4">
-				<div class="bordered border-top-error light b-r-t box-with-shadow">
+				<div class="box-progetti bordered border-top-error light b-r-t box-with-shadow">
 					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Ristrutturazione immobile</strong></span>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-4">
-				<div class="bordered border-top-warning light b-r-t box-with-shadow">
+				<div class="box-progetti bordered border-top-warning light b-r-t box-with-shadow">
 					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Nuovi impianti Parma</strong></span>
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-4">
-				<div class="bordered border-top-success light b-r-t box-with-shadow">
+				<div class=" box-progetti bordered border-top-success light b-r-t box-with-shadow">
 					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Uffici Brescia</strong></span>
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 </section>
 <!--scaduti -->
 <section>

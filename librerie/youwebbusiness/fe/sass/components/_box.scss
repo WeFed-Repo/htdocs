@@ -618,7 +618,7 @@
 /* box progetti */
 .box-progetti {
   position: relative;
-  .bordered {
+  &.bordered {
     height:100%;
     .text {
       width: 100%;
@@ -638,4 +638,4 @@
     position:absolute;
     right:1rem;
   }
-}
+} 
