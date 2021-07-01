@@ -8381,6 +8381,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 .box-progetti .link-p-a {
   position: absolute;
   right: 1rem;
+  top: 1.2rem;
 }
 
 .c-filter .nav-tabs {

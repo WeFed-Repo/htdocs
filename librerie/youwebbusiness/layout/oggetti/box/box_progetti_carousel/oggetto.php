@@ -2,11 +2,10 @@
 
 <section>
 	<!--in corso -->
-	
 		<div class="row">
 			<div class="col-12 col-md-4">
 				<div class="box-progetti bordered border-top-error light b-r-t box-with-shadow">
-					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
+					<a href="#" class="link-p-a"><i class="icon icon-circle_arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Ristrutturazione immobile</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
@@ -30,7 +29,7 @@
 			</div>
 			<div class="col-12 col-md-4">
 				<div class="box-progetti bordered border-top-warning light b-r-t box-with-shadow">
-					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
+					<a href="#" class="link-p-a"><i class="icon icon-circle_arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Nuovi impianti Parma</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
@@ -54,7 +53,7 @@
 			</div>
 			<div class="col-12 col-md-4">
 				<div class=" box-progetti bordered border-top-success light b-r-t box-with-shadow">
-					<a href="#" class="link-p-a"><i class="icon icon-arrow_right"></i></a>
+					<a href="#" class="link-p-a"><i class="icon icon-circle_arrow_right"></i></a>
 					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Uffici Brescia</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
@@ -77,25 +76,9 @@
 				</div>
 			</div>
 		</div>
-	
 </section>
 <!--scaduti -->
-<section>
-	
-	
-	<div class="row">
-		
-		<div class="col-12 col-md-4">
-			
-		</div>
-		<div class="col-12 col-md-4">
-			
-		</div>
-		<div class="col-12 col-md-4">
-			
-		</div>
-	</div>
-</section>
+
 
 
 <!-- BOX DA USARE NEL CAROUSEL-->

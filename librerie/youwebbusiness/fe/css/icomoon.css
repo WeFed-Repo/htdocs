@@ -388,3 +388,6 @@
 .icon-arrow_right_text:before {
   content: "\e951";
 }
+.icon-circle_arrow_right:before {
+  content: "\e981";
+}
