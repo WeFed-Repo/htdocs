@@ -30,7 +30,8 @@
               <div class="row">
                 <div class="col-12">
                   <h4>Progetto: lorem ipsum dolor </h4>
-                  <p class="color-greenLink">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p>
+                  <p class="color-greenLink float-left mr-3">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p>
+                  <span class="text-alert color-error float-left"><i class="icon icon-warning"></i> Periodo del progetto scaduto</span>
                 </div>
               </div>
             </section>
@@ -51,6 +52,7 @@
                   <div class="arrow-separator"></div>
                 </div>
                 <div class="col-12 col-md-3">
+                  <span class="text-alert color-warning"><i class="icon icon-attenzione"></i> Budget quasi esaurito</span>
                   <label class="control-label w-auto w-md-100 pr-3 pr-md-0">Budget disponibile</label>
                   <span class="text-output text-big color-greenLink">60.000 &euro;</span>
                 </div>

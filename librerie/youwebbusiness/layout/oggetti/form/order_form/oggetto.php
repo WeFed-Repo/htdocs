@@ -18,7 +18,7 @@
         <div class="form-group col-sm-4 d-flex align-items-end justify-content-between">
           <!-- accordion button desktop --->
           <a href="javascript:void(0)" class="d-none d-md-block btn btn-link float-right mb-3 btn-w-sm" data-filter-button="filter-distinte">
-            <i class="icon icon-arrow_down" title="icon-filtri-avanzati"></i> Filtri avanzati
+            <i class="icon icon-arrow_down mt-2" title="icon-filtri-avanzati"></i> Filtri avanzati
           </a>
           <a href="javascript:void(0)" class="d-none d-md-block btn btn-white float-right mb-3 btn-w-sm"> Applica </a>
         </div>

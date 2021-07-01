@@ -5135,8 +5135,8 @@ h1 .btn-icon-help, h1 .btn-icon-info {
   text-overflow: ellipsis;
 }
 .ico-btn.plus-minus {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   line-height: 0;
   border-radius: 50%;
   display: inline-block;
