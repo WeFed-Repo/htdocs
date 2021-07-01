@@ -20,7 +20,11 @@
 }
 
 /* ONLY for Mobile */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
+  .carousel-arrows-outside {
+    margin: 0;
+    width: 100%;
+  }
   .carousel-multicard .carousel-item-centerer {
     width: calc(100% - 20%);
     margin-left: 10%;
