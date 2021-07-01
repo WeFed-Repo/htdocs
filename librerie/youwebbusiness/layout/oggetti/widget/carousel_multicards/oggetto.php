@@ -19,8 +19,21 @@
   padding: 0 5px 10px 5px;
 }
 
+.carousel-multicard .hide-control {
+  display: none !important;
+}
+
+/* Correzione "salto" */
+.carousel-multicard .carousel-item-next, .carousel-multicard .carousel-item-prev, .carousel-multicard .carousel-item.active {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
 /* ONLY for Mobile */
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .carousel-arrows-outside {
     margin: 0;
     width: 100%;
@@ -48,6 +61,14 @@
     top:0;
     left: calc(-100% + 10%);
   }
+
+  /* Correzione "salto" */
+  .carousel-multicard .carousel-item-centerer {
+    width: calc(100% - 20%);
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden!important;
+  }
 }
 
 
@@ -61,7 +82,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <div class="carousel-item-centerer carousel-item-mobile d-sm-none">
+      <div class="carousel-item-centerer carousel-item-mobile d-md-none">
         <div class="row row-eq-height">
           <!-- CARD Mobile -->
           <div class="col-12 ">
@@ -99,7 +120,7 @@
           <!-- END CARD Mobile -->
         </div>
       </div>
-      <div class="carousel-item-centerer d-none d-sm-block">
+      <div class="carousel-item-centerer d-none d-md-block">
         <div class="row row-eq-height">
           <!-- CARD DSKTP -->
           <div class="col-4">
@@ -203,7 +224,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <div class="carousel-item-centerer carousel-item-mobile d-sm-none">
+      <div class="carousel-item-centerer carousel-item-mobile d-md-none">
         <div class="row row-eq-height">
           <!-- CARD Mobile -->
           <div class="col-12 ">
@@ -241,7 +262,7 @@
           <!-- END CARD Mobile -->
         </div>
       </div>
-      <div class="carousel-item-centerer d-none d-sm-block">
+      <div class="carousel-item-centerer d-none d-md-block">
         <div class="row row-eq-height">
           <!-- CARD DSKTP -->
           <div class="col-4">
@@ -347,7 +368,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <div class="carousel-item-centerer carousel-item-mobile d-sm-none">
+      <div class="carousel-item-centerer carousel-item-mobile d-md-none">
         <div class="row row-eq-height">
           <!-- CARD Mobile -->
           <div class="col-12 ">
@@ -385,7 +406,7 @@
           <!-- END CARD Mobile -->
         </div>
       </div>
-      <div class="carousel-item-centerer d-none d-sm-block">
+      <div class="carousel-item-centerer d-none d-md-block">
         <div class="row row-eq-height">
           <!-- CARD DSKTP -->
           <div class="col-4">
@@ -493,7 +514,7 @@
     </div>
   </div>
 
-  <a class="carousel-control-prev d-none d-sm-block" href="#carouselMulticard" role="button" data-slide="prev">
+  <a class="carousel-control-prev d-none d-sm-block hide-control" href="#carouselMulticard" role="button" data-slide="prev">
     <img src="./fe/img/icon/left-arrow.svg">
     <span class="sr-only">Previous</span>
   </a>
@@ -505,6 +526,7 @@
 
 <script>
   $(function(){
+    // Gestione Card Preview per il mobile
     $('.carousel-multicard.carousel .carousel-item').each(function () {
         var next = $(this).next();
         if (!next.length) {
@@ -516,6 +538,22 @@
         } else {
             $(this).siblings(':first').children(':first-child').clone().addClass("prev-el prev-left").appendTo($(this));
         }
+    });
+    
+    // Gestione Frecce
+    $('.carousel-multicard.carousel').on('slid.bs.carousel', function() {
+      let numslide = $('.carousel-multicard.carousel .carousel-item').length;
+      let visslide = $('.carousel-multicard.carousel  .carousel-item.active');
+      if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  == numslide){
+        $('.carousel-control-next').addClass('hide-control');
+        $('.carousel-control-prev').removeClass('hide-control');
+      }else if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  == 1){
+        $('.carousel-control-prev').addClass('hide-control');
+        $('.carousel-control-next').removeClass('hide-control');
+      }else{
+        $('.carousel-control-prev').removeClass('hide-control');
+        $('.carousel-control-next').removeClass('hide-control');
+      }
     });
   });
 </script>
