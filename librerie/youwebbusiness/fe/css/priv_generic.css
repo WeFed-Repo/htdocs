@@ -2505,6 +2505,9 @@
 .accordion.always-active .icon-arrow_right_text:before {
   content: "";
 }
+.accordion.always-active .icon-circle_arrow_right:before {
+  content: "";
+}
 .accordion.always-active .card, .accordion.always-active .acc-item {
   /* Border-color differente per coerenza con i bordi dei bordi 
   degli altri elementi (#DDDDDD) */
@@ -6723,14 +6726,6 @@ body > .dropdown-menu.shown,
 }
 .carousel-arrows-outside .carousel-control-next {
   right: calc( -25px - 1rem);
-}
-
-.carousel-multicard .carousel-card {
-  width: 100%;
-  border-radius: 3px;
-  box-shadow: 0 1px 7.5px 0 rgba(67, 67, 67, 0.17);
-  background-color: #ffffff;
-  height: 300px;
 }
 
 .login {
