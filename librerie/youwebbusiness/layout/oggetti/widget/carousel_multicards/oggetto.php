@@ -591,7 +591,7 @@
         this.swiperight(function(e) { 
           let ctrl = getFLSlide();
           // ###  Con controllo PRIMA/ULTIMA Slide ### 
-          if(opt_InfSwipe == true){
+          if(opt_InfSwipe != true){
             if(ctrl != 'first'){
               // Non Sono sulla prima slide
               $(this).carousel('prev');
@@ -604,7 +604,7 @@
         this.swipeleft(function(e) { 
           let ctrl = getFLSlide();
           // ###  Con controllo PRIMA/ULTIMA Slide ### 
-          if(opt_InfSwipe == true){
+          if(opt_InfSwipe != true){
             if(ctrl != 'last'){
               // Non Sono sulla prima slide
               $(this).carousel('next');
@@ -622,7 +622,7 @@
 
   $(function(){
     
-    $('#carouselMulticard-1').MultiCarouselGesture(true);
+    $('#carouselMulticard-1').MultiCarouselGesture(false);
 
     /* $('.carousel-multicard.carousel .carousel-item').each(function () {
         var next = $(this).next();
