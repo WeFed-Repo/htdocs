@@ -570,3 +570,96 @@
 .no-promo-info {
   background-color: $blueLight;
 }
+
+
+// BOX box-order-form [inserito nella sezione form]
+.box-order-form {
+  .form-grid {
+    margin-left: 0px;
+    margin-right: 0px;
+    .col:nth-child(1), .col:nth-child(2) {
+      border-right: 1px solid $gray4;
+    }
+    .form-group {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  .group-icon .icon {
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: $bp_md_max) {
+  .box-order-form {
+    .form-grid {
+      margin-left: 0px;
+      margin-right: 0px;
+      .col:nth-child(1){
+        border-right: 0px;
+        margin-bottom: 1.5rem;
+      }
+      .form-group {
+        padding-left: 0rem;
+        padding-right: 0.5rem;
+      }
+    }
+    .group-icon {
+      .icon {
+        font-size: 30px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* box progetti */
+.box-progetti {
+  position: relative;
+  min-height: 255px;
+  &.bordered {
+    height:100%;
+    .text {
+      width: 100%;
+      display:block;
+    }
+    .cta-wrapper {
+      .cta-gray {
+        color:$gray2!important;
+      }
+      a {
+        text-decoration: none;
+        font-size:14px;
+      }
+    }
+  }
+  .el-p-a {
+    position:absolute;
+    right:0;
+    top:1.2rem;
+    text-align: center;
+    &.with-label {
+      top:2px;
+      .icon {
+        float: none;
+        margin-right: 0;
+      }
+    }
+    .label-new{
+      display:block;
+      font-size: 11px;
+      line-height: 11px;
+      background-color: $greenLink;
+      box-shadow: 0 1px 2px 0 rgba(154, 154, 154, 0.43);
+      text-decoration: none!important;
+      color:$white;
+      border-radius:2px;
+      padding:3px 7px 3px 7px;
+      font-weight: bold;
+    }
+    
+   
+  }
+} 
