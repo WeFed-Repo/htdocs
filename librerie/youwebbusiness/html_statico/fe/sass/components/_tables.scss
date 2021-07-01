@@ -227,3 +227,11 @@
   }
  
 }
+/*wrapper per lo scroll verticale delle tabelle con altezza diversa tra contenuti in pagina e in modale */
+.wrapper-table-scroll-y {
+  overflow-y:auto;
+  max-height: 520px;
+}
+.modal .wrapper-table-scroll-y {
+  max-height: 250px;
+}

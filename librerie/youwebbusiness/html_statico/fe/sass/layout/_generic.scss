@@ -142,9 +142,14 @@ img { border: 0; }
     opacity: 0.20;
     &-row {
       align-items: center;
+      .text-alert{
+        top:-10px
+      }
       @media (max-width: $bp_md_max) {
         text-align: center;
+      
       }
+      
     }
 }
 // icone nei titoli
@@ -215,8 +220,22 @@ ol {
   &[class*=border-left] {
     border-left: 12px solid;
   }
- }
+  &[class*=border-top] {
+    border-top: 8px solid;
+  }
+  &.box-with-shadow {
+    box-shadow:0px 3px 5px 3px $gray4;
+    padding-bottom:1rem;
+  }
+}
 
+/* classi aggiuntive per il border-radius */
+.b-r-l {
+  border-radius:5px 0 0 5px;
+}
+.b-r-t {
+  border-radius:5px 5px 0 0;
+}
 
 @media (max-width: $bp_md_max) {
   .separator {
@@ -370,7 +389,30 @@ dl, .list {
 
 
 // End Text-Width-Icon
+.text-alert {
+  font-size:12px;
+  font-weight: normal;
+  line-height: 20px;
+  position: relative;
+  top:0;
+  &.align-bottom-center {
+    margin-left:-25px;
+  }
+  @media (max-width: $bp_md_max) {
+    width: 100%;
+    display: block;
+    &.align-bottom-center {
+      margin-left:-5px;
+    }
+  }
+  .icon {
+    margin-right:5px;
+    position: relative;
+    top:3px;
+  }
+ 
 
+}
 .text-with-squared {
   position:relative;
   display: block;
@@ -378,15 +420,8 @@ dl, .list {
   align-items: center;
   min-height: 32px;
   .text-alert {
-    font-size:12px;
-    font-weight: normal;
     float: right;
-    line-height: 20px;
-    position: relative;
     top:5px;
-    .icon {
-      float: left;
-    }
   }
   .squared {
     width: 32px;
@@ -685,11 +720,6 @@ NOTE: La classe .content-hidden-in-mobile
     &.large {
       width: 12px;
     }
-    
-    &.b-r-l {
-      border-radius:5px 0 0 5px;
-    }
-   
   }
 }
 

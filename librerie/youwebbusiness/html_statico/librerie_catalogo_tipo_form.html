@@ -1333,7 +1333,7 @@ inputAutocomplete.autocomplete({
       <div class="form-group col-md-4">
         <label class="control-label">Select normal</label>
         <!-- aggiugere classe disabled e attributo disabled per select disabilitata-->
-        <!-- attributi select normale name/id/data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
+        <!-- attributi select normale name/id/data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) -->
         <div class="dropdown select-custom" name="sc" id="sc"></div>
       </div>
       <div class="form-group col-md-4">
@@ -1342,9 +1342,9 @@ inputAutocomplete.autocomplete({
           name
           id
           class has-checkbox se è di tipo checkbox
-          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+          data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class="dropdown select-custom has-checkbox" name="scCheckbox" id="scCheckbox" data-placeholder="Seleziona"></div>
+        <div class="dropdown select-custom has-checkbox" name="scCheckbox" id="scCheckbox" data-attr-placeholder="Seleziona"></div>
       </div>
       <div class="form-group col-md-4">
         <label class="control-label">Select bottone funzionale</label>
@@ -1352,9 +1352,9 @@ inputAutocomplete.autocomplete({
           name
           id
           has-btn se è di tipo btn
-          data-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
+          data-attr-placeholder (facoltativo, in mancanza viene appeso un placeholder di default) 
         -->
-        <div class="dropdown select-custom has-btn" name="scBtn" id="scBtn" data-placeholder="OPERAZIONI MASSIVE"></div>
+        <div class="dropdown select-custom has-btn" name="scBtn" id="scBtn" data-attr-placeholder="OPERAZIONI MASSIVE"></div>
       </div>
     </div>
 </form>
@@ -1394,11 +1394,14 @@ inputAutocomplete.autocomplete({
                 "text": "Seleziona",
                 "value":"0",
                 "selected": true
+               
               },
               {
                 "id": 1,
                 "text": "Option 1",
                 "value": "1"
+                
+
               },
               {
                 "id": 2,
@@ -1419,24 +1422,37 @@ inputAutocomplete.autocomplete({
         "nameSel":"scCheckbox",
          //esempio di array con i valori per la select
         "dataOptions" : [
-          {
-                "id": 0,
-                "text": "Seleziona tutti",
-                "value": "all" //importante passare questo value perché lo raccolgo nel js e ne determina il funzionamento di selezione di tutte le voci
-                
-          },
+          
           {
                 "id": 1,
                 "text": "Option 1",
                 "value": "1",
+                "selected" :false
                 
           },
           {
                 "id": 2,
                 "text": "Option 2",
-                "value": "2"
+                "value": "2",
+                "selected" :false
+          },
+          {
+                "id": 3,
+                "text": "Option 3",
+                "value": "3",
+                "selected" :false
+          },
+          {
+                "id": 3,
+                "text": "Option 4",
+                "value": "4",
+                "selected" :false
           }
-        ]
+        ],
+        
+        "labelSelectAll" : "Seleziona tutti", //solo se labelSelectAll è presente costruisce dinamicamente l'opzione di selezione globale
+        "textSelectedAll" : "Tutti",
+        "textSelectedSome" : "selezionati"
       }
       
       var paramsFintaSelectBtn = {
@@ -1478,19 +1494,17 @@ inputAutocomplete.autocomplete({
              
              //modifico il valori nella select e il rispettivo input hidden se la voce è selezionata
              $(".value-btn").html(valueToPass);
-             dropDown.find(".select-custom-option").attr("data-value",valueToPass);
+             dropDown.find(".select-custom-option").attr("data-attr-value",valueToPass);
              if(inputHidden.val()!="") {
               valArr = [];
-			        valArr.push(optionSelected.attr("data-text"),optionSelected.attr("data-value"));
+			        valArr.push(optionSelected.attr("data-attr-text"),optionSelected.attr("data-attr-value"));
 			        inputHidden.val(valArr.join(","));
               }
          })
       })
      
     })
-    
-    
-    //funzione di inizializzazione della finta select passo i valori per costriuire la select e le callback
+   
 </script>
 										</div>
 									</div>
@@ -1712,7 +1726,14 @@ inputAutocomplete.autocomplete({
           <div class="form-row">
             <div class="form-group col-12">
                 <label class="control-label"><strong>Scrivi qui l’hashtag</strong></label>
-                <input type="text" class="form-control input-all-border" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
+                <div class="form-row">
+                  <div class="col-12 col-sm-8 col-md-9 col-lg-10">
+                    <input type="text" class="form-control input-all-border" name="htag-input" placeholder="Inserisci hashtag" id="htag-input" value="">
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                    <a class="btn btn-white brd-green fl-right btn-xs-full w-100" id="btnCreaTag">Crea</a>
+                  </div>
+                </div>
             </div>
           </div>
         </form>
@@ -1767,15 +1788,21 @@ inputAutocomplete.autocomplete({
       $(this).remove();    
     });
 
-    // Gestione inserimento htag
-    var availableTags = [];
+    // Gestione inserimento htag con Autocomplete
+    /* var availableTags = [];
     var newTagsCount = 0;
 
     $( "input[name=htag-input]" ).autocomplete({
       source: availableTags,
       select: function() {
         newTagsCount++;
-        let $newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">#' + $('input[name=htag-input]').val() + '</span></div>';
+        let newtagtext = "" ;
+        if($('input[name=htag-input]').val().trim().charAt(0)=="#") {
+          newtagtext = $('input[name=htag-input]').val().trim();
+        }else{
+          newtagtext = '#' + $('input[name=htag-input]').val().trim();
+        }
+        let newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + newtagtext + '</span></div>';
         $(".htag-added-wall").append($newtag);
         availableTags[0]= "";
         $(this).val(''); 
@@ -1788,7 +1815,27 @@ inputAutocomplete.autocomplete({
     });  
 
     $('input[name=htag-input]').keyup(function() {
-      availableTags[0]=('#' + $(this).val());        
+      let newautocompletetag = "";
+      if($(this).val().trim().charAt(0)=="#"){
+        newautocompletetag = $(this).val().trim();
+      }else{
+        newautocompletetag = '#' + $(this).val().trim();
+      }
+      availableTags[0]=(newautocompletetag);        
+    }); */
+
+    // Gestione inserimento htag con Bottone CREA
+    var newTagsCount = 0;
+    $("#btnCreaTag").click(function () {
+      newTagsCount++;
+      let newtagtext = "" ;
+      if($('input[name=htag-input]').val().trim().charAt(0)=="#") {
+        newtagtext = $('input[name=htag-input]').val().trim();
+      }else{
+        newtagtext = '#' + $('input[name=htag-input]').val().trim();
+      }
+      let newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + newtagtext + '</span></div>';
+      $(".htag-added-wall").append(newtag);
     });
 
     // Show-Hide Default Tags
@@ -2119,6 +2166,143 @@ inputAutocomplete.autocomplete({
     
   </div>
 </section>
+										</div>
+									</div>
+									<!-- Fine blocco oggetto -->
+																	<!-- Blocco oggetto -->
+									<div class="row">
+										<div class="col-sm-12">
+																							<h2 class="titolo-oggetto">order form</h2>
+																						<div class="no-margin-section">
+  <!-- Elemento d'esempio a cui puntare -->
+  <div class="bordered pb-2 mt-3 pb-3 pl-2 pr-2" id="toform-1">
+    <!-- accordion button mobile --->
+    <a href="javascript:void(0)" class="d-block d-md-none btn btn-link mb-0 pb-0 pt-0 text-right" data-filter-button="filter-distinte">
+      <i class="icon icon-arrow_down" title="icon-filtri-avanzati"></i> Filtri avanzati
+    </a>
+    <form class="form-grid needs-validation" novalidate>
+      <div class="form-row">
+        <div class="form-group col-sm-6 col-md-4">
+          <label>Tipo disposizione</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group col-sm-6 col-md-4">
+          <label>Stato disposizione</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group col-sm-4 d-flex align-items-end justify-content-between">
+          <!-- accordion button desktop --->
+          <a href="javascript:void(0)" class="d-none d-md-block btn btn-link float-right mb-3 btn-w-sm" data-filter-button="filter-distinte">
+            <i class="icon icon-arrow_down mt-2" title="icon-filtri-avanzati"></i> Filtri avanzati
+          </a>
+          <a href="javascript:void(0)" class="d-none d-md-block btn btn-white float-right mb-3 btn-w-sm"> Applica </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <section class="px-3" data-filter-form="filter-distinte" style="display:none;" data-toggle-filter-parent>
+            <div class="form-row">
+              <div class="form-group col-6 col-sm-3 col-md-2">
+                <label class="control-label">Data da</label>
+                <div class="input-group datepicker">
+                  <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <i class="icon icon-ico_calendario"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-6 col-sm-3 col-md-2">
+                <label class="control-label">Data a</label>
+                <div class="input-group datepicker">
+                  <input type="text" class="form-control" data-datepicker autocomplete="off" placeholder="Data"/>
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <i class="icon icon-ico_calendario"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-6 col-sm-3 col-md-2">
+                <label>Importo da</label>
+                <input type="text" class="form-control" placeholder="Text">
+              </div>
+              <div class="form-group col-6 col-sm-3 col-md-2">
+                <label>Importo a</label>
+                <input type="text" class="form-control" placeholder="Text">
+              </div>
+              <div class="form-group col-6 col-md-4 d-flex align-items-end">
+                <div class="form-check checkbox pb-2">
+                  <input class="form-check-input" type="checkbox" id="effettuacheck" name="effettuacheck">
+                  <label class="form-check-label" for="effettuacheck" >Effettua il check</label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row d-md-none">
+        <div class="col col-sm-6 m-auto">
+          <a href="javascript:void(0)" class="btn btn-block btn-white float-right mb-3 btn-w-sm"> Applica </a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Stile inline per simulare lo spazio necessario allo scroll -->
+  <div class="d-flex justify-content-center align-items-center" style="height:400px; background-color:gray; width:100%; font-size:30px;">
+    <p style="color:white;">Spazio d'esempio</p>
+  </div>
+</div>
+
+<div class="no-margin-section">
+  <!-- Elemento in stile anchor -->
+  <div class="bordered box-order-form pb-2 mt-3 pb-3 pl-2 pr-2">
+    <form class="form-grid row d-flex align-items-center">
+
+      <div class="col col-12 col-md-7">
+        <h3 class="title">Uscite categorizzate</h3>
+        <span class="text-with-icon-inline right-icon">Dal 20/01/2021 al 18/02/2021 
+          <a class="icon-inline" href="javascript:;" title="" fe-data-stid="toform-1"><i class="icon icon-modifica mr-0"></i></a>
+        </span>
+      </div>
+
+      <div class="col col-7 col-md-3">
+        <div class="form-group mx-2 my-0">
+          <select class="form-control my-0">
+            <option selected="">Ordine decrescente</option>
+            <option>Ordine crescente</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col col-5 col-md-2 group-icon d-flex justify-content-around">
+        <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-pdf mr-0"></i></a>
+        <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-excel mr-0"></i></a>
+        <a class="icon-inline px-2" href="javascript:;" title=""><i class="icon icon-excel_2000 mr-0"></i></a>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    // Funzione per gestire l'Append
+    function scrolltoid() {
+      // Set distanza top (per evitare problemi barre o elementi fissati top)
+      var ypos = 80;
+      let toid = '#' + $(this).attr("fe-data-stid");
+      $('html, body').animate({
+        scrollTop: ($(toid).offset().top - ypos)
+      }, 1000);
+    }
+    
+    $(document).on('click', ('[fe-data-stid]'), scrolltoid);
+
+  });
+</script>
 										</div>
 									</div>
 									<!-- Fine blocco oggetto -->

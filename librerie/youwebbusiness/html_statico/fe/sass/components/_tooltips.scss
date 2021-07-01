@@ -72,6 +72,12 @@
       width: auto;
     }
   }
+  &-no-mw {
+    .tooltip-inner {
+      width: auto;
+      min-width: 0;
+    }
+  }
   &-m-h-td {
     .tooltip-inner {
       min-height: 55px;

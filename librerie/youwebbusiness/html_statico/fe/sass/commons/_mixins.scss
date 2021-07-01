@@ -76,6 +76,12 @@
       background: rgba($color, 0.2);
     }
   }
+  .border-top#{"-" + $name}{
+    border-top-color: $color;
+    &.light {
+      border-top-color: rgba($color, 0.5);
+    }
+  }
 }
 
 // MIXIN PER CREARE UN GRADIENTE

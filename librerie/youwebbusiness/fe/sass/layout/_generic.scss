@@ -395,18 +395,22 @@ dl, .list {
   line-height: 20px;
   position: relative;
   top:0;
+  &.align-bottom-center {
+    margin-left:-25px;
+  }
   @media (max-width: $bp_md_max) {
     width: 100%;
     display: block;
+    &.align-bottom-center {
+      margin-left:-5px;
+    }
   }
   .icon {
     margin-right:5px;
     position: relative;
     top:3px;
   }
-  &.align-bottom-center {
-    margin-left:-25px;
-  }
+ 
 
 }
 .text-with-squared {

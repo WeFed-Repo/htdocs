@@ -618,6 +618,7 @@
 /* box progetti */
 .box-progetti {
   position: relative;
+  min-height: 255px;
   &.bordered {
     height:100%;
     .text {

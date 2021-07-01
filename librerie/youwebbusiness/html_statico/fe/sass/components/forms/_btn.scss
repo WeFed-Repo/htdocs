@@ -270,8 +270,8 @@
     }
   }
   &.plus-minus {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
     line-height: 0;
     border-radius: 50%;
     display: inline-block;
@@ -279,6 +279,13 @@
     border: $greenLink solid 1px;
     color: $greenLink;
     position: relative;
+    &.color-white {
+      color: $white;
+      border: $white solid 1px;
+      &:before {
+        color: $white;
+      }
+    }
     &:before {
       position: absolute;
       top:50%;
@@ -296,6 +303,20 @@
       &:before {
         content: '\2013';
         color: $gray2;
+      }
+      &.color-greenLink {
+        border: $greenLink solid 1px;
+        color: $greenLink;
+        &:before {
+        color:$greenLink;
+        }
+      }
+    }
+    &.color-white {
+      color: $white;
+      border: $white solid 1px;
+      &:before {
+        color: $white;
       }
     }
   }

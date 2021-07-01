@@ -2135,19 +2135,22 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   position: relative;
   top: 0;
 }
+.text-alert.align-bottom-center {
+  margin-left: -25px;
+}
 @media (max-width: 767px) {
   .text-alert {
     width: 100%;
     display: block;
+  }
+  .text-alert.align-bottom-center {
+    margin-left: -5px;
   }
 }
 .text-alert .icon {
   margin-right: 5px;
   position: relative;
   top: 3px;
-}
-.text-alert.align-bottom-center {
-  margin-left: -25px;
 }
 
 .text-with-squared {
