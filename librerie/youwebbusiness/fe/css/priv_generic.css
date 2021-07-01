@@ -8378,10 +8378,30 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   text-decoration: none;
   font-size: 14px;
 }
-.box-progetti .link-p-a {
+.box-progetti .el-p-a {
   position: absolute;
-  right: 1rem;
+  right: 0;
   top: 1.2rem;
+  text-align: center;
+}
+.box-progetti .el-p-a.with-label {
+  top: 2px;
+}
+.box-progetti .el-p-a.with-label .icon {
+  float: none;
+  margin-right: 0;
+}
+.box-progetti .el-p-a .label-new {
+  display: block;
+  font-size: 11px;
+  line-height: 11px;
+  background-color: #2F9988;
+  box-shadow: 0 1px 2px 0 rgba(154, 154, 154, 0.43);
+  text-decoration: none !important;
+  color: #FFFFFF;
+  border-radius: 2px;
+  padding: 3px 7px 3px 7px;
+  font-weight: bold;
 }
 
 .c-filter .nav-tabs {

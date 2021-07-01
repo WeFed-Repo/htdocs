@@ -634,9 +634,31 @@
       }
     }
   }
-  .link-p-a {
+  .el-p-a {
     position:absolute;
-    right:1rem;
+    right:0;
     top:1.2rem;
+    text-align: center;
+    &.with-label {
+      top:2px;
+      .icon {
+        float: none;
+        margin-right: 0;
+      }
+    }
+    .label-new{
+      display:block;
+      font-size: 11px;
+      line-height: 11px;
+      background-color: $greenLink;
+      box-shadow: 0 1px 2px 0 rgba(154, 154, 154, 0.43);
+      text-decoration: none!important;
+      color:$white;
+      border-radius:2px;
+      padding:3px 7px 3px 7px;
+      font-weight: bold;
+    }
+    
+   
   }
 } 
