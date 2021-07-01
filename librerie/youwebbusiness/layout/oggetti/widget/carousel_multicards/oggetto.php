@@ -75,7 +75,7 @@
 
 </style>
 
-<div id="carouselMulticard" class="carousel carousel-multicard slide carousel-arrows-outside pb-3">
+<div id="carouselMulticard-1" class="carousel carousel-multicard slide carousel-arrows-outside pb-3">
   <ol class="carousel-indicators">
     <li data-target="#carouselMulticard" data-slide-to="0" class="active"></li>
     <li data-target="#carouselMulticard" data-slide-to="1"></li>
@@ -515,20 +515,116 @@
     </div>
   </div>
 
-  <a class="carousel-control-prev d-none d-md-block hide-control" href="#carouselMulticard" role="button" data-slide="prev">
+  <a class="carousel-control-prev d-none d-md-block hide-control" href="#carouselMulticard-1" role="button" data-slide="prev">
     <img src="./fe/img/icon/left-arrow.svg">
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next d-none d-md-block" href="#carouselMulticard" role="button" data-slide="next">
+  <a class="carousel-control-next d-none d-md-block" href="#carouselMulticard-1" role="button" data-slide="next">
     <img src="./fe/img/icon/right-arrow.svg">
     <span class="sr-only">Next</span>
   </a>
 </div>
 
 <script>
+  (function( $ ){
+    $.fn.MultiCarouselGesture = function(opt_InfSwipe) {
+      // Accepted option TRUE|FALSE
+      let myid = '#' + this.attr('id');
+      // Verifico che sia un carolsello del giusto tipo (.carousel-multicard.carousel)
+      if(this.is('.carousel-multicard, .carousel')){
+
+        // Funzione per la ottnere prima e ultima slide
+        getFLSlide = function(){
+          let numslide = $(myid + ' .carousel-item').length;
+          let activetarget = $(myid + ' .carousel-item.active');
+          let visslide = $(myid + ' .carousel-inner .carousel-item').index(activetarget) + 1;
+          let actualslide = false;
+          if(visslide == numslide){
+            // Sono sull'ultima slide
+            actualslide = 'last';
+          }else if(visslide == 1){
+            // Sono sulla prima slide
+            actualslide = 'first';
+          }else{
+            // Sono su una slide centrale
+            actualslide = 'middle';
+          }
+          return actualslide;
+        }
+
+        // Gestione Card Preview per il mobile
+        $(myid + ' .carousel-item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().addClass("prev-el prev-right").appendTo($(this));
+            if (next.next().length > 0) {
+                next.next().children(':first-child').clone().addClass("prev-el prev-left").appendTo($(this));
+            } else {
+                $(this).siblings(':first').children(':first-child').clone().addClass("prev-el prev-left").appendTo($(this));
+            }
+        });
+
+        // Gestione Frecce
+        this.on('slid.bs.carousel', function() {
+          let ctrl = getFLSlide();
+          if(ctrl == 'last'){
+            // Sono sull'ultima slide
+            $(myid + ' .carousel-control-next').addClass('hide-control');
+            $(myid + ' .carousel-control-prev').removeClass('hide-control');
+          }
+          if(ctrl == 'first'){
+            // Sono sulla prima slide
+            $(myid + ' .carousel-control-prev').addClass('hide-control');
+            $(myid + ' .carousel-control-next').removeClass('hide-control');
+          }
+          if(ctrl == 'middle'){
+            // Sono su una slide centrale
+            $(myid + ' .carousel-control-prev').removeClass('hide-control');
+            $(myid + ' .carousel-control-next').removeClass('hide-control');
+          }
+        });
+
+        // Funzionalità SWIPE
+        // Non chiaro se da mobile diventa infinte swipe
+        this.swiperight(function(e) { 
+          let ctrl = getFLSlide();
+          // ###  Con controllo PRIMA/ULTIMA Slide ### 
+          if(opt_InfSwipe == true){
+            if(ctrl != 'first'){
+              // Non Sono sulla prima slide
+              $(this).carousel('prev');
+            }
+          }else{
+            $(this).carousel('prev');
+          }         
+        });
+
+        this.swipeleft(function(e) { 
+          let ctrl = getFLSlide();
+          // ###  Con controllo PRIMA/ULTIMA Slide ### 
+          if(opt_InfSwipe == true){
+            if(ctrl != 'last'){
+              // Non Sono sulla prima slide
+              $(this).carousel('next');
+            }
+          }else{
+            $(this).carousel('next');
+          }
+        });
+      }
+      return this;
+    }; 
+  })( jQuery );
+
+
+
   $(function(){
-    // Gestione Card Preview per il mobile
-    $('.carousel-multicard.carousel .carousel-item').each(function () {
+    
+    $('#carouselMulticard-1').MultiCarouselGesture(true);
+
+    /* $('.carousel-multicard.carousel .carousel-item').each(function () {
         var next = $(this).next();
         if (!next.length) {
             next = $(this).siblings(':first');
@@ -563,25 +659,26 @@
     // Funzionalità SWIPE
     // Non chiaro se da mobile diventa infinte swipe
     $('.carousel-multicard').swiperight(function(e) { 
-      /* ###  Con controllo PRIMA/ULTIMA Slide ###
-      let numslide = $('.carousel-multicard.carousel .carousel-item').length;
-      let visslide = $('.carousel-multicard.carousel  .carousel-item.active');      
-      if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  != 1){
+      // ###  Con controllo PRIMA/ULTIMA Slide ###
+      // let numslide = $('.carousel-multicard.carousel .carousel-item').length;
+      // let visslide = $('.carousel-multicard.carousel  .carousel-item.active');      
+      // if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  != 1){
         // Non Sono sulla prima slide
-        $('.carousel-multicard.carousel').carousel('prev');
-      } */
+        // $('.carousel-multicard.carousel').carousel('prev');
+      // }
       $('.carousel-multicard.carousel').carousel('prev');
     });
     $('.carousel-multicard').swipeleft(function(e) { 
-      /* ###  Con controllo PRIMA/ULTIMA Slide ###
-      let numslide = $('.carousel-multicard.carousel .carousel-item').length;
-      let visslide = $('.carousel-multicard.carousel  .carousel-item.active');
-      if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  != numslide){
+      //  ###  Con controllo PRIMA/ULTIMA Slide ###
+      // let numslide = $('.carousel-multicard.carousel .carousel-item').length;
+      // let visslide = $('.carousel-multicard.carousel  .carousel-item.active');
+      // if($('.carousel-multicard.carousel .carousel-inner .carousel-item').index(visslide) + 1  != numslide){
         // Non Sono sull'ultima slide
-        $('.carousel-multicard.carousel').carousel('next');
-      } */
+        // $('.carousel-multicard.carousel').carousel('next');
+      // }
       $('.carousel-multicard.carousel').carousel('next');
-    });
+    }); */
+
   });
 </script>
 
