@@ -2505,6 +2505,9 @@
 .accordion.always-active .icon-arrow_right_text:before {
   content: "";
 }
+.accordion.always-active .icon-circle_arrow_right:before {
+  content: "";
+}
 .accordion.always-active .card, .accordion.always-active .acc-item {
   /* Border-color differente per coerenza con i bordi dei bordi 
   degli altri elementi (#DDDDDD) */
@@ -6725,6 +6728,62 @@ body > .dropdown-menu.shown,
   right: calc( -25px - 1rem);
 }
 
+.carousel-multicard .carousel-item-centerer {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.carousel-multicard .carousel-item-centerer > .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.carousel-multicard .carousel-inner {
+  position: relative;
+}
+.carousel-multicard .carousel-card {
+  height: 100%;
+  padding: 0 5px 10px 5px;
+}
+.carousel-multicard .hide-control {
+  display: none !important;
+}
+.carousel-multicard .carousel-item-next, .carousel-multicard .carousel-item-prev, .carousel-multicard .carousel-item.active {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ONLY for Mobile */
+@media screen and (max-width: 768px) {
+  .carousel-multicard {
+    /* Correzione "salto" */
+  }
+  .carousel-multicard.carousel-arrows-outside {
+    margin: 0;
+    width: 100%;
+  }
+  .carousel-multicard .carousel-item-centerer {
+    width: calc(100% - 20%);
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden !important;
+  }
+  .carousel-multicard .carousel-item-centerer.prev-el {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .carousel-multicard .carousel-item-centerer.prev-right {
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 10%);
+  }
+  .carousel-multicard .carousel-item-centerer.prev-left {
+    position: absolute;
+    top: 0;
+    left: calc(-100% + 10%);
+  }
+}
 .login {
   max-width: 900px;
   margin: auto;
