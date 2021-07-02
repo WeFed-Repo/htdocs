@@ -2549,6 +2549,23 @@
 .accordion.always-active .card .card-header .card-header-icon:before, .accordion.always-active .acc-item .card-header .card-header-icon:before {
   font-size: 20px;
 }
+.accordion.accordion-with-image {
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.08);
+}
+.accordion.accordion-with-image .card, .accordion.accordion-with-image .acc-item {
+  background: #f5f9fc;
+  border: 0px;
+  border-radius: 4px;
+}
+.accordion.accordion-with-image .up-body-separator {
+  margin: 0px 5px 18px 5px;
+}
+.accordion.accordion-with-image .card-body-text {
+  font-size: 16px;
+  padding-left: 5px;
+}
 
 /* Tabs */
 .nav-tabs:not(.tabsContenuti) {
@@ -8454,6 +8471,35 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border-radius: 2px;
   padding: 3px 7px 3px 7px;
   font-weight: bold;
+}
+
+.box-with-icon {
+  padding: 10px 20px 10px 20px;
+  margin: 10px 2px 10px 2px;
+}
+.box-with-icon.clean-style {
+  background: #FFFFFF;
+  color: #737373;
+  border: solid 1px #DDDDDD;
+  border-radius: 3px;
+}
+.box-with-icon.clean-style .box-icon.icon, .box-with-icon.clean-style .box-icon .icon {
+  color: #FFFFFF;
+}
+.box-with-icon .text-with-squared {
+  min-height: 54px;
+}
+.box-with-icon .text-with-squared .squared {
+  top: auto;
+  width: 40px;
+  height: 40px;
+}
+.box-with-icon .text-with-squared .text {
+  color: #737373;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 60px;
+  line-height: normal;
 }
 
 .c-filter .nav-tabs {

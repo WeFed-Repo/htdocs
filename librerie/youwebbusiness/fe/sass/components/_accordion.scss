@@ -186,5 +186,22 @@
       }
     }
   }
- 
+  // Accordion Boxata con immagine e sfondo $blueLight
+  &.accordion-with-image {
+    border: 0px;
+    border-radius: 4px;
+    box-shadow: 4px 2px 4px 1px rgb(0 0 0 / 8%);
+    .card, .acc-item {
+      background: $blueLight;
+      border: 0px;
+      border-radius: 4px;
+    }
+    .up-body-separator {
+      margin: 0px 5px 18px 5px;
+    }
+    .card-body-text {
+      font-size: 16px;
+      padding-left:5px;
+    }
+  }
 }
