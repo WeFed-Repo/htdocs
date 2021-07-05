@@ -8,7 +8,7 @@
 					<div href="#" class="el-p-a">
 					   <a href="#"><i class="icon icon-circle_arrow_right"></i></a>
 					</div>
-					<div class="text-center pl-md-3 pr-md-3 pl-xl-5 pr-xl-5">
+					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Ristrutturazione immobile</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
 						<hr>
@@ -36,7 +36,7 @@
 					   <a href="#"><i class="icon icon-circle_arrow_right"></i></a>
 					</div>
 					
-					<div class="text-center pl-md-3 pr-md-3 pl-xl-5 pr-xl-5">
+					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Nuovi impianti Parma</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
 						<hr>
@@ -62,7 +62,7 @@
 					<div href="#" class="el-p-a">
 					   <a href="#"><i class="icon icon-circle_arrow_right"></i></a>
 					</div>
-					<div class="text-center pl-md-3 pr-md-3 pl-xl-5 pr-xl-5">
+					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Uffici Brescia</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
 						<hr>
@@ -94,7 +94,7 @@
 					<div href="#" class="el-p-a">
 					   <a href="#"><i class="icon icon-circle_arrow_right"></i></a>
 					</div>
-					<div class="text-center pl-md-3 pr-md-3 pl-xl-5 pr-xl-5">
+					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Ristrutturazione immobile</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-$gray8 font-size-small"><i class="icon icon-calendario pr-1"></i>Scaduto il: 30 Nov 2020</p></div>
 						<hr>
@@ -122,7 +122,7 @@
 					    <span class="label-new">NUOVO</span>
 						<a href="#"><i class="icon icon-circle_arrow_right"></i></a>
 					</div>
-					<div class="text-center pl-md-3 pr-md-3 pl-xl-5 pr-xl-5">
+					<div class="text-center pl-md-2 pr-md-2 pl-xl-5 pr-xl-5">
 						<span class="text color-gray1 font-size-16"><strong>Nuovi impianti Parma</strong></span>
 						<div class="arrow-box-wrapper"><p class="color-greenLink font-size-small">02 marzo   <i class="icon icon-arrow_right_text"></i> 30 novembre</p></div>
 						<hr>

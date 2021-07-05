@@ -626,6 +626,9 @@
       display:block;
       &.font-size-16 {
         @include ellipsed;
+        @media (min-width: $bp_md_max) and (max-width: $bp_lg_min){
+          padding-right:0.5rem;
+        }
       }
       
     }
@@ -639,9 +642,16 @@
         position: absolute;
         bottom: 1rem;
         right: 1rem;
+        line-height: 20px;
+        @media (min-width: $bp_md_max) and (max-width: $bp_lg_min){
+          right:0.5rem;
+        }
         &:first-child {
           right: auto;
           left: 1rem;
+          @media (min-width: $bp_md_max) and (max-width: $bp_lg_min){
+            left:0.5rem;
+          }
         }
       }
     }
@@ -651,6 +661,9 @@
     right:0;
     top:1.2rem;
     text-align: center;
+    @media (min-width: $bp_md_max) and (max-width: $bp_lg_min){
+      right:-0.5rem;
+    }
     &.with-label {
       top:2px;
       .icon {
