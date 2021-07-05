@@ -22,7 +22,7 @@
         },
         "Importo": {
           "Min": 1000,
-          "Max": 30000,
+          "Max": 50000,
           "Default": 30000,
           "Step": 1000,
           "Modificabile": false

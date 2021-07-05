@@ -67,7 +67,8 @@ var Graph = {
                         tickLength:0,
                         labelOffset:10,
                         axisColor: "#eee"
-                    }
+                    },
+                    listeners: []
                 },
                 "donut" : {
                     type    : "pie",
@@ -97,6 +98,20 @@ var Graph = {
                 })
             }
 
+            // Navigatore con freccette qualora fosse indicato
+            if (params.graphtype !== "donut" && params.categoryNavigator) {
+                var arrconf = params.categoryNavigator;
+                graphconf.listeners.push( {
+                    "event": "rendered",
+                    "method": function(){
+                        $("#" + params.idcontainer).append($("<div>").addClass("graph-arrow-nav").append(
+                            $("<a>").addClass("arrow left" + ((arrconf.prev && arrconf.prev.disabled) ? " disabled" : "")).append("<i class='icon icon-arrow_left'></i>").click(arrconf.prev.handler),
+                            $("<a>").addClass("arrow right" +  ((arrconf.next && arrconf.next.disabled) ? " disabled" : "")).append("<i class='icon icon-arrow_right'></i>").click(arrconf.next.handler)
+                        ));
+                    }
+                })
+            }
+            
             // Costruzione del grafico
             AmCharts.makeChart( params.idcontainer, $.extend(true, graphconf, params));
             gCont.removeClass("loading");
