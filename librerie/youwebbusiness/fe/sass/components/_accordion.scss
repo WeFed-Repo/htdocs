@@ -195,12 +195,33 @@
       border: 0px;
       border-radius: 4px;
     }
+    .card .card-body {
+      padding-top: 0px;
+    }
     .up-body-separator {
       margin: 0px 5px 18px 5px;
     }
     .card-body-text {
       font-size: 16px;
       padding-left:5px;
+    }
+    .left-image img {
+      max-width: 200px;
+    }
+    .card-header {
+      position: relative;
+      & > .row {
+        padding-right: 40px;
+      }
+      .header-accord-icon {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        .icon {
+          color: #2F9988;
+          font-size: 26px;
+        }
+      }
     }
   }
 }

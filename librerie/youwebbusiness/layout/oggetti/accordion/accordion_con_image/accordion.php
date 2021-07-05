@@ -1,9 +1,25 @@
 <div class="card collapser">
   <div class="card-header collapsed d-flex justify-content-between align-items-center" data-toggle="collapse">
-    <h5 class="card-header-title mb-0">
-      Collapsible Group Item #1
-    </h5>
-    <span class="card-header-icon"></span>
+
+    <div class="row">
+			<div class="col-md-5 col-sm-12 mb-4 mb-md-0">
+				<div class="left-image d-flex justify-content-center align-items-center">
+					<img src="./fe/img/img_draw_soglie.png" alt="immagine box soglie">
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-12">
+				<div>
+          <h5 class="card-header-title">Tieni d’occhio le tue spese!</h5>
+					<p class="font-size-16"><strong>Controlla l’andamento delle tue spese nel tempo e definisci le soglie che desideri rispettare per ogni categoria di spesa </strong></p>
+				</div>
+			</div>
+      <div class="col-md-2	d-sm-none d-md-block">
+      </div>
+		</div>
+    <span class="header-accord-icon">
+      <i class="icon icon-riduci"></i>
+    </span>
+    
   </div>
   <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
     <div class="card-body">

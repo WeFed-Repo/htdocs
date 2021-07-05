@@ -190,3 +190,7 @@
 <!-- CAROUSEL -->
 <?php virtual('/youwebbusiness/layout/oggetti/form/hashtag_selection/oggetto.php');?>
 <!-- ./  FINE CAROUSEL-->
+
+<!-- Accordion With image -->
+<?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_con_image/oggetto.php');?>
+<!-- ./  FINE Accordion With image-->
