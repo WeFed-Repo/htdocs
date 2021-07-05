@@ -53,7 +53,25 @@
                             lineColor: "#c84757",
                             balloonText: "-[[value]] &euro;",
                             classNameField: "classi"
-                        } ]
+                        } ],
+
+                    // Navigatore con freccette (opzionale - inserire solo se necessario)
+                    categoryNavigator : {
+                        prev: {
+                            disabled: true, // Esempio freccetta disabilitata
+                            handler: function(){
+                                var bt = $(this);
+                                // Replot del grafico con dati differenti (l'alterazione va messa in questa funzione)
+                                if (!bt.hasClass("disabled")) disegnaGrafico();
+                            } 
+                        },
+                        next: {
+                            handler: function(){
+                                // Replot del grafico con dati differenti (l'alterazione va messa in questa funzione)
+                                if (!bt.hasClass("disabled")) disegnaGrafico();
+                            }
+                        }
+                    }
                 });
 
                 graficoEUwrapper.removeClass("loading");
