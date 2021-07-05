@@ -2098,10 +2098,9 @@
 }
 .accordion.ico-close-pa .card-header-icon {
   position: absolute;
-  right: 1rem;
-  /*top: 2rem;*/
+  right: 0.8rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .accordion.ico-close-pa .card-header-icon {
     right: 0.5rem;
     top: 1rem;
