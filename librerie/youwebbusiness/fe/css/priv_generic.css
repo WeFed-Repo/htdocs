@@ -8636,14 +8636,22 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   padding: 0rem 1rem 0 0;
 }
 .box-fixed-card .box-fixed-card-right {
-  width: 100px;
+  width: 60px;
   text-align: center;
   border-left: 1px solid #DDDDDD;
-  padding: 0rem 1rem 0 0;
+  padding: 0 0 0 1rem;
+}
+.box-fixed-card .box-fixed-card-right .icon {
+  margin-right: 0;
+  font-size: 26px;
 }
 .box-fixed-card .box-fixed-card-right .dropdown-menu {
-  left: -100px !important;
+  left: -70px !important;
   top: -20px !important;
+}
+.box-fixed-card .box-fixed-card-center {
+  width: calc(100% - 210px);
+  padding: 0 2rem;
 }
 
 .c-filter .nav-tabs {
