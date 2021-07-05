@@ -180,3 +180,8 @@
 <!-- MODALE CON ELEMENTI CHE SCROLLANO -->
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_con_tabella_scrollabile/oggetto.php');?>
 <!-- ./  MODALE CON ELEMENTI CHE SCROLLANO -->
+
+<hr>
+<!-- CAROUSEL -->
+<?php virtual('/youwebbusiness/layout/oggetti/widget/carousel_multicards/oggetto.php');?>
+<!-- ./  FINE CAROUSEL-->

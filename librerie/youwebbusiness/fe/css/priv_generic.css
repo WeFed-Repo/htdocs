@@ -8446,12 +8446,26 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   width: 100%;
   display: block;
 }
+.box-progetti.bordered .text.font-size-16 {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .box-progetti.bordered .cta-wrapper .cta-gray {
   color: #737373 !important;
 }
 .box-progetti.bordered .cta-wrapper a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.box-progetti.bordered .cta-wrapper a:first-child {
+  right: auto;
+  left: 1rem;
 }
 .box-progetti .el-p-a {
   position: absolute;

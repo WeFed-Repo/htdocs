@@ -624,14 +624,25 @@
     .text {
       width: 100%;
       display:block;
+      &.font-size-16 {
+        @include ellipsed;
+      }
+      
     }
     .cta-wrapper {
       .cta-gray {
         color:$gray2!important;
       }
-      a {
+      a { 
         text-decoration: none;
-        font-size:14px;
+        font-size:12px;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        &:first-child {
+          right: auto;
+          left: 1rem;
+        }
       }
     }
   }
