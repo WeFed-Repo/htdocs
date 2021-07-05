@@ -720,3 +720,26 @@
     }
   }
 }
+
+/*box delle soglie*/
+.box-fixed-card{
+  @include bordered;
+  padding:1rem;
+  .box-fixed-card-left{
+    width: 150px;
+    text-align: center;
+    border-right:1px solid $gray4;
+    padding:0rem 1rem 0 0;
+  }
+  .box-fixed-card-right{
+    width: 100px;
+    text-align: center;
+    border-left:1px solid $gray4;
+    padding:0rem 1rem 0 0;
+    .dropdown-menu {
+      left:-100px!important;
+      top:-20px!important;
+    }
+  }
+}
+
