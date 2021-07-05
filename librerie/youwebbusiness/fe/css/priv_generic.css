@@ -6774,7 +6774,7 @@ body > .dropdown-menu.shown,
 }
 
 /* ONLY for Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .carousel-multicard {
     /* Correzione "salto" */
   }
