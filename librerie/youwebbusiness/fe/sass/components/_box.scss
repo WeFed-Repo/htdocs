@@ -688,6 +688,76 @@
   }
 } 
 
+
+// Elemento WIDGET - HTAG
+.htag-module {
+  padding: 1rem;
+  .htag-wall {
+    padding: .5rem;
+    min-height: 60px;
+  }
+  .htag-added-wall {
+    padding: .5rem;
+    //border: 1px solid $gray4;
+    min-height: 60px;
+    //background-color: $grayBG;
+  }
+  .htag-tag {
+    margin: 4px 2px 4px 2px;
+    padding: 3px 10px 3px 10px;
+    width: fit-content;
+    display: inline-block;
+    border: solid 1px $greenLink;
+    color: $greenLink;
+    border-radius: 30px;
+    cursor: pointer;
+  
+    /* SG verificare */
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .icon {
+      display:none;
+    }
+    &.htag-hide{
+      display:none;
+    }
+    &.selected, &.solid {
+      background-color: $greenLink;
+      color: $white;
+    }
+    &.selected {
+      padding: 3px 30px 3px 10px;
+      position: relative;
+      .icon {
+        display: block;
+        position:absolute;
+        right: 4px;
+        top: 5px;
+        font-size: 20px;
+        &.icon-ico_close {
+          position:absolute;
+          right: 4px;
+          top: 7px;
+          font-size: 16px;
+          cursor: pointer
+        }
+      }  
+    }
+  }
+  a.text-with-icon.right-icon .icon{
+    left: auto;
+    margin: 0px;
+  }
+  a.text-with-icon.left-icon .icon{
+    right: auto;
+    margin: 0px;
+  }
+  .input-all-border.ui-autocomplete-input{
+    border:solid 1px $gray4;
+  }
+}
+
 // BOX con icone Icomoon
 .box-with-icon {
   padding: 10px 20px 10px 20px;

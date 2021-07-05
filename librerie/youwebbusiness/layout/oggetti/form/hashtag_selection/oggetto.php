@@ -1,80 +1,8 @@
-<style>
-  .htag-module {
-    padding: 1rem;
-  }
-  .htag-wall {
-    padding: .5rem;
-    border: 1px solid red;
-    min-height: 60px;
-  }
-  .htag-added-wall {
-    padding: .5rem;
-    /* $gray4 */
-    border: 1px solid #DDDDDD;
-    min-height: 60px;
-    /* $grayBG */
-    background-color: #F5F5F5;
-  }
-  .htag-tag {
-    margin: 4px 2px 4px 2px;
-    padding: 3px 10px 3px 10px;
-    width: fit-content;
-    display: inline-block;
-    /* $greenLink */
-    border: solid 1px #2f9988;
-    color: #2f9988;
-    border-radius: 30px;
-    cursor: pointer;
-
-    /* SG verificare */
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .htag-tag .icon {
-    display:none;
-  }
-  .htag-tag.htag-hide{
-    display:none;
-  }
-  .htag-tag.selected, .htag-tag.solid {
-    background-color: #2f9988;
-    color: #fff;
-  }
-  .htag-tag.selected {
-    padding: 3px 30px 3px 10px;
-    position: relative;
-  }
-  .htag-tag.selected .icon {
-    display: block;
-    position:absolute;
-    right: 4px;
-    top: 5px;
-    font-size: 20px;
-  }
-  .htag-tag.selected .icon.icon-ico_close {
-    position:absolute;
-    right: 4px;
-    top: 7px;
-    font-size: 16px;
-    cursor: pointer
-  }
-  a.text-with-icon.right-icon .icon{
-    left: auto;
-    margin: 0px;
-  }
-  a.text-with-icon.left-icon .icon{
-    right: auto;
-    margin: 0px;
-  }
-  .input-all-border.ui-autocomplete-input{
-    border:solid 1px #DDDDDD;
-  }
-
-</style>
-
 <section>
-  <div class="bordered htag-module">
+  <!-- Utilizzare la classe "mono-htag" se si vuole limitare l'inserimento a un SINGOLO-HTAG 
+      - Ricordarsi di caricare un solo HTAG come attivo nel caso ci si trovi in questa modalità!!!
+  -->
+  <div class="bordered htag-module mono-htag">
     <div class="row">
       <div class="col-12">
         <h2>Crea qui il tuo hashtag</h4>
@@ -144,15 +72,17 @@
         <div class="htag-subtitle">
           <p><strong>L’hashtag che hai scelto:</strong></p>
         </div> 
+        <!-- Nel caso la modalità sia "mono-htag" ricordarsi di caricare un solo HTAG come attivo!!!
+        -->
         <div class="htag-added-wall">
           <div id="tg-2-add" class="htag-tag selected">
             <i class="icon icon-close"></i>
             <span class="htag-text">#progetto2</span>
           </div>
-          <div id="tg-5-add" class="htag-tag selected">
+          <!-- <div id="tg-5-add" class="htag-tag selected">
             <i class="icon icon-close"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -161,8 +91,20 @@
 
 <script>
   $(function(){
+
+    // Verifica della modalità di inserimento e avvio della funzione di pulizia
+    function htagaddedwallclear() {
+      if($(".htag-module").is('.mono-htag')) {
+        // Pulizia dell'elenco degli Htag selezionati
+        $('.htag-added-wall .htag-tag').each(function () {
+          $(".htag-wall").find('#' + $(this).attr('id').slice(0,-4)).toggleClass("selected");
+          $(this).remove();
+        });
+      }
+    }   
+
     // Funzione per gestire l'Append
-    function htagAppendOn() {
+    function htagAppendOn() { 
       if($(this).attr('id').slice(-4)=="-add") {
         $(".htag-wall").find('#' + $(this).attr('id').slice(0,-4)).toggleClass("selected");
       }      
@@ -176,6 +118,7 @@
         $(this).toggleClass("selected");
         $(".htag-added-wall").find('#' + $(this).attr('id') + '-add').remove();        
       } else {
+        htagaddedwallclear();
         $(this).toggleClass("selected");
         let $newtag = '<div id="'+ $(this).attr('id') + '-add" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + $(this).find(".htag-text").text() + '</span></div>';
         $(".htag-added-wall").append($newtag);      
@@ -184,7 +127,7 @@
 
     $(".htag-added-wall .htag-tag").click(function () {
       $(".htag-wall").find('#' + $(this).attr('id').slice(0,-4)).toggleClass("selected");
-      $(this).remove();    
+      $(this).remove(); 
     });
 
     // Gestione inserimento htag con Autocomplete
@@ -226,6 +169,7 @@
     // Gestione inserimento htag con Bottone CREA
     var newTagsCount = 0;
     $("#btnCreaTag").click(function () {
+      htagaddedwallclear();
       newTagsCount++;
       let newtagtext = "" ;
       if($('input[name=htag-input]').val().trim().charAt(0)=="#") {
@@ -235,6 +179,7 @@
       }
       let newtag = '<div id="tag-'+ newTagsCount + '-add-new" class="htag-tag selected"><i class="icon icon-close"></i><span class="htag-text">' + newtagtext + '</span></div>';
       $(".htag-added-wall").append(newtag);
+      $('input[name=htag-input]').val('');
     });
 
     // Show-Hide Default Tags

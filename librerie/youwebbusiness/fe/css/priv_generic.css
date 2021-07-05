@@ -8513,6 +8513,71 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   font-weight: bold;
 }
 
+.htag-module {
+  padding: 1rem;
+}
+.htag-module .htag-wall {
+  padding: 0.5rem;
+  min-height: 60px;
+}
+.htag-module .htag-added-wall {
+  padding: 0.5rem;
+  min-height: 60px;
+}
+.htag-module .htag-tag {
+  margin: 4px 2px 4px 2px;
+  padding: 3px 10px 3px 10px;
+  width: fit-content;
+  display: inline-block;
+  border: solid 1px #2F9988;
+  color: #2F9988;
+  border-radius: 30px;
+  cursor: pointer;
+  /* SG verificare */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.htag-module .htag-tag .icon {
+  display: none;
+}
+.htag-module .htag-tag.htag-hide {
+  display: none;
+}
+.htag-module .htag-tag.selected, .htag-module .htag-tag.solid {
+  background-color: #2F9988;
+  color: #FFFFFF;
+}
+.htag-module .htag-tag.selected {
+  padding: 3px 30px 3px 10px;
+  position: relative;
+}
+.htag-module .htag-tag.selected .icon {
+  display: block;
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  font-size: 20px;
+}
+.htag-module .htag-tag.selected .icon.icon-ico_close {
+  position: absolute;
+  right: 4px;
+  top: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.htag-module a.text-with-icon.right-icon .icon {
+  left: auto;
+  margin: 0px;
+}
+.htag-module a.text-with-icon.left-icon .icon {
+  right: auto;
+  margin: 0px;
+}
+.htag-module .input-all-border.ui-autocomplete-input {
+  border: solid 1px #DDDDDD;
+}
+
 .box-with-icon {
   padding: 10px 20px 10px 20px;
   margin: 10px 2px 10px 2px;
