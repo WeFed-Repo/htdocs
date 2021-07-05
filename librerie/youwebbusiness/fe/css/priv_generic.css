@@ -6769,6 +6769,9 @@ body > .dropdown-menu.shown,
   width: 100%;
   overflow: hidden;
 }
+.carousel-multicard .carousel-control-prev, .carousel-multicard .carousel-control-next {
+  display: block;
+}
 
 /* ONLY for Mobile */
 @media screen and (max-width: 768px) {
@@ -6799,6 +6802,9 @@ body > .dropdown-menu.shown,
     position: absolute;
     top: 0;
     left: calc(-100% + 10%);
+  }
+  .carousel-multicard .carousel-control-prev, .carousel-multicard .carousel-control-next {
+    display: none;
   }
 }
 .login {

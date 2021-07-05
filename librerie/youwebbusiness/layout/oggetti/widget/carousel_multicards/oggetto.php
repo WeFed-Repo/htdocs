@@ -440,11 +440,11 @@
     </div>
   </div>
 
-  <a class="carousel-control-prev d-none d-md-block hide-control" href="#carouselMulticard-1" role="button" data-slide="prev">
+  <a class="carousel-control-prev hide-control" href="#carouselMulticard-1" role="button" data-slide="prev">
     <img src="./fe/img/icon/left-arrow.svg">
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next d-none d-md-block" href="#carouselMulticard-1" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselMulticard-1" role="button" data-slide="next">
     <img src="./fe/img/icon/right-arrow.svg">
     <span class="sr-only">Next</span>
   </a>

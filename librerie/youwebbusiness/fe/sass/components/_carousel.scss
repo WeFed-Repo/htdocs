@@ -106,6 +106,9 @@
     width: 100%;
     overflow: hidden;
   }
+  .carousel-control-prev, .carousel-control-next {
+    display: block;
+  }
 }
 
 /* ONLY for Mobile */
@@ -136,6 +139,9 @@
         top:0;
         left: calc(-100% + 10%);
       }
+    }
+    .carousel-control-prev, .carousel-control-next {
+      display: none;
     }
   }
 }
