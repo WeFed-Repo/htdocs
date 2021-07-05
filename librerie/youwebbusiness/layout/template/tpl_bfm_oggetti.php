@@ -185,3 +185,8 @@
 <!-- CAROUSEL -->
 <?php virtual('/youwebbusiness/layout/oggetti/widget/carousel_multicards/oggetto.php');?>
 <!-- ./  FINE CAROUSEL-->
+<hr>
+
+<!-- CAROUSEL -->
+<?php virtual('/youwebbusiness/layout/oggetti/form/hashtag_selection/oggetto.php');?>
+<!-- ./  FINE CAROUSEL-->
