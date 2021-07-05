@@ -2207,7 +2207,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   top: 10px;
 }
 
-.with-squared .card-header .text {
+.with-squared .card-header .text, .with-squared .box-fixed-card-center .text {
   font-size: 18px;
 }
 
