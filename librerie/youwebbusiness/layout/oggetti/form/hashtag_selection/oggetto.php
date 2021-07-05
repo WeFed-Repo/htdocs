@@ -31,7 +31,7 @@
             <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto4</span>
           </div> 
-          <div id="tg-5" class="htag-tag selected htag-hide">
+          <div id="tg-5" class="htag-tag htag-hide">
             <i class="icon icon-round_check"></i>
             <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
           </div>        
@@ -79,10 +79,6 @@
             <i class="icon icon-close"></i>
             <span class="htag-text">#progetto2</span>
           </div>
-          <!-- <div id="tg-5-add" class="htag-tag selected">
-            <i class="icon icon-close"></i>
-            <span class="htag-text">#progetto_molto_molto_molto_molto_lungo5</span>
-          </div> -->
         </div>
       </div>
     </div>
