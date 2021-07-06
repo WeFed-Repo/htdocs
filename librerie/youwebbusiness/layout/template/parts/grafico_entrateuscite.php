@@ -146,7 +146,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="form-check  checkbox switch">
-            <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch">
+            <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch" onchange="disegnaGrafico();">
             <label class="form-check-label" for="checkSwitch">Lorem ipsum</label>
             </div>
         </div>
