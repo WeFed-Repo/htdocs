@@ -547,6 +547,31 @@
   border-top-color: rgba(216, 216, 216, 0.5);
 }
 
+.color-gray11 {
+  color: #7f7f7f;
+}
+.bkg-gray11 {
+  background-color: #7f7f7f;
+}
+
+.border-gray11 {
+  border-color: #7f7f7f !important;
+}
+
+.border-left-gray11 {
+  border-left-color: #7f7f7f !important;
+}
+.border-left-gray11.selected {
+  background: rgba(127, 127, 127, 0.2);
+}
+
+.border-top-gray11 {
+  border-top-color: #7f7f7f;
+}
+.border-top-gray11.light {
+  border-top-color: rgba(127, 127, 127, 0.5);
+}
+
 .color-grayBG {
   color: #F5F5F5;
 }

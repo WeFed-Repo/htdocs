@@ -190,3 +190,7 @@
 <!-- CAROUSEL -->
 <?php virtual('/youwebbusiness/layout/oggetti/form/hashtag_selection/oggetto.php');?>
 <!-- ./  FINE CAROUSEL-->
+
+<!-- BOX SOGLIE -->
+<?php virtual('/youwebbusiness/layout/oggetti/box/box_elenco_soglie/oggetto.php');?>
+<!-- ./ BOX SOGLIE-->

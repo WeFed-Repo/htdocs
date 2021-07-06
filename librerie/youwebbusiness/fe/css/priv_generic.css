@@ -546,6 +546,31 @@
   border-top-color: rgba(216, 216, 216, 0.5);
 }
 
+.color-gray11 {
+  color: #7f7f7f;
+}
+.bkg-gray11 {
+  background-color: #7f7f7f;
+}
+
+.border-gray11 {
+  border-color: #7f7f7f !important;
+}
+
+.border-left-gray11 {
+  border-left-color: #7f7f7f !important;
+}
+.border-left-gray11.selected {
+  background: rgba(127, 127, 127, 0.2);
+}
+
+.border-top-gray11 {
+  border-top-color: #7f7f7f;
+}
+.border-top-gray11.light {
+  border-top-color: rgba(127, 127, 127, 0.5);
+}
+
 .color-grayBG {
   color: #F5F5F5;
 }
@@ -8615,7 +8640,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   color: #737373;
   width: 100%;
   max-width: 100%;
+  overflow: hidden;
   padding: 1rem;
+  color: #3e3e3e;
+  position: relative;
 }
 .box-fixed-card.no-b-t {
   border-top: none;
@@ -8641,17 +8669,30 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   border-left: 1px solid #DDDDDD;
   padding: 0 0 0 1rem;
 }
+@media (max-width: 767px) {
+  .box-fixed-card .box-fixed-card-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+    border: 0;
+    padding: 0;
+  }
+}
 .box-fixed-card .box-fixed-card-right .icon {
   margin-right: 0;
   font-size: 26px;
 }
-.box-fixed-card .box-fixed-card-right .dropdown-menu {
-  left: -70px !important;
-  top: -20px !important;
-}
 .box-fixed-card .box-fixed-card-center {
   width: calc(100% - 210px);
   padding: 0 2rem;
+}
+@media (max-width: 767px) {
+  .box-fixed-card .box-fixed-card-center {
+    width: calc(100% - 60px);
+    padding: 0 1rem;
+    padding-right: 0rem;
+  }
 }
 
 .c-filter .nav-tabs {

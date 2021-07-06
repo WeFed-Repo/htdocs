@@ -794,7 +794,10 @@
 /*box delle soglie*/
 .box-fixed-card{
   @include bordered;
+  overflow: hidden;
   padding:1rem;
+  color:$gray1;
+  position: relative;
   .box-fixed-card-left{
     width: 150px;
     text-align: center;
@@ -806,15 +809,25 @@
     text-align: center;
     border-left:1px solid $gray4;
     padding:0 0 0 1rem;
-    .icon {margin-right:0;font-size:26px;}
-    .dropdown-menu {
-      left:-70px!important;
-      top:-20px!important;
+    @media (max-width: $bp_md_max) {
+      position: absolute;
+      top:1rem;
+      right: 1rem;
+      width: auto;
+      border:0;
+      padding:0;
     }
+    .icon {margin-right:0;font-size:26px;}
+    
   }
   .box-fixed-card-center {
     width:calc(100% - 210px);
     padding:0 2rem;
+    @media (max-width: $bp_md_max) {
+      width: calc(100% - 60px);
+      padding: 0 1rem;
+      padding-right: 0rem;
+    }
   }
 }
 

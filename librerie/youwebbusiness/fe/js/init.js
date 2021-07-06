@@ -79,7 +79,7 @@ function initDropdownOnClick(clickedElement, allDrops) {
 
 function initDropdown() {
     
-    var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"]'
+    var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"],  .box-fixed-card [data-toggle="dropdown"]'
 
     //close all dropdown opened
     if ($('body > .dropdown-menu[tm-menu-dropdown]').length > 0) {
@@ -121,9 +121,8 @@ function initDropdown() {
                     left: posLeft,
                     transform: 'translate(0%,0%)',
                 })
- 
+                
                 $('body').append(drop.detach());
-
                 setTimeout(function () {
                     $('body').find(' > .dropdown-menu ').addClass('shown');
                 }, 100);
