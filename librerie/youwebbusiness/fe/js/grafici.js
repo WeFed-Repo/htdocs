@@ -80,10 +80,27 @@ var Graph = {
                     radius:"49%",
                     startDuration: 0,
                     innerRadius: "75%",
-                    listeners: []
+                    listeners: [],
+                    pullOutRadius:0,
+                    showZeroSlices: true
                 }
             }[(params.graphtype==="donut"? "donut" : "serial")];
 
+            // Rivede i dati di un donut in modo da visualizzare anche le slices piu' piccole con una larghezza minimale (0.5 ovvero 2px)
+            if (params.graphtype === "donut") {
+
+                // Totale del donut
+                var donutTot = 0;
+                $.each(params.dataProvider,function(i,v){donutTot += v[params.valueField]});
+                params.dataProvider = $.map( params.dataProvider, function(slice){
+                    // Trasforma il dato in un valore percentuale (lasciando il minimo a 0.5)
+                    slice[params.valueField] =  slice[params.valueField]/donutTot * 100;
+                    if (slice[params.valueField] < 0.5) slice[params.valueField] = 0.5;
+                    return slice;
+                })
+            }
+            
+            
             // Appende eventuali listener per il rendering di default (es: labels, legenda personalizzata, ecc...)
             // Es. titolo del donut
             if (params.graphtype === "donut" && params.donutLabel) {

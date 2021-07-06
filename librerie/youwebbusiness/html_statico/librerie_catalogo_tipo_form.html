@@ -1373,6 +1373,7 @@ inputAutocomplete.autocomplete({
       </div>
   </div>
 </div>
+<button class="btn btn-secondary" id="reset">Resetta le select e reinizializza</button>
 
 
 
@@ -1460,21 +1461,20 @@ inputAutocomplete.autocomplete({
         "nameSel":"scBtn",
          //esempio di array con i valori per la select
         "dataOptions" : [
-          {
+              {
                 "id": 1,
                 "text": "Associa progetto",
-                "value": "10",
                 "selected": false
               },
               {
                 "id": 2,
                 "text": "Modifica categoria/sottocategoria",
-                "value": "200",
                 "selected": false
               }
         ]
       }
-    
+      
+      
       
       //esegue la finta select normale
       $("#" + paramsFintaSelect.idSel).initSelectCustom(paramsFintaSelect, function(){
@@ -1484,23 +1484,57 @@ inputAutocomplete.autocomplete({
        $("#" + paramsFintaSelectCheck.idSel).initSelectCustom(paramsFintaSelectCheck, function(){
             console.log("funzione di cmb finta select con checkbox");
       })
-      //esegue la finta select con i check
+      
+      //esegue la finta select con il bottone
       $("#" + paramsFintaSelectBtn.idSel).initSelectCustom(paramsFintaSelectBtn, function(){
-        $("input[name='checkFieldCb']").on("click",function(e) {
-          var dropDown = $("#scBtn"),
-              valueToPass = $("input[name='checkFieldCb']:checked").length,
-              inputHidden= $("#inputHiddenscBtn"),
-              optionSelected= dropDown.find(".select-custom-option.option-selected")
-             
-             //modifico il valori nella select e il rispettivo input hidden se la voce è selezionata
-             $(".value-btn").html(valueToPass);
-             dropDown.find(".select-custom-option").attr("data-attr-value",valueToPass);
-             if(inputHidden.val()!="") {
-              valArr = [];
-			        valArr.push(optionSelected.attr("data-attr-text"),optionSelected.attr("data-attr-value"));
-			        inputHidden.val(valArr.join(","));
+        console.log("funzione di cmb finta select con bottone funzionale");
+      })
+
+      //update dei valori delle options
+      //parametri per la funzione di update delle voci di options
+      var paramsToUpdateOptions = {
+         "idSel": "scBtn",
+         "valuesOptions" : [
+              {
+                "id": 1,
+                "text": "Associa progetto",
+                "value": 100
+              },
+              {
+                "id": 2,
+                "text": "Modifica categoria/sottocategoria",
+                "value": 20
               }
-         })
+         ]
+      }
+      updateOptionsValue(paramsToUpdateOptions);
+
+      //emulazione utilizzo funzione di aggiornamento del valore selected del bottone
+      $("input[name='checkFieldCb']").on("click",function(e) {
+          var dropDown = $("#scBtn"),
+              //parametri per la funzione di update della voce selezionata
+              paramsToUpdateSelected = {
+                "idSel": "scBtn",
+                "value": $("input[name='checkFieldCb']:checked").length !== 0 ? $("input[name='checkFieldCb']:checked").length : ""
+              }
+              updateSelectedValue(paramsToUpdateSelected)
+             
+      })
+
+      //esempio di reset
+      $("#reset").on("click",function(e) {
+        $("#" + paramsFintaSelectBtn.idSel).initSelectCustom(paramsFintaSelectBtn, function(){
+          console.log("funzione di cmb finta select con bottone funzionale dopo reset");
+        });
+        updateOptionsValue(paramsToUpdateOptions);
+        //esegue la finta select normale
+        $("#" + paramsFintaSelect.idSel).initSelectCustom(paramsFintaSelect, function(){
+              console.log("funzione di cmb finta select normale dopo reset");
+        });
+       //esegue la finta select con i check
+       $("#" + paramsFintaSelectCheck.idSel).initSelectCustom(paramsFintaSelectCheck, function(){
+            console.log("funzione di cmb finta select con checkbox dopo reset");
+      })
       })
      
     })
