@@ -11,15 +11,15 @@
 			</div>
 			<div class="box-fixed-card-center">
 				<div class="row row d-flex align-items-center">
-					<div class="col-12 col-sm-8 col-lg-9">
-						<div class="text mb-2"><strong>Servizi</strong></div>
+					<div class="col-12 col-md-8 col-lg-9">
+						<div class="text mb-2"><strong>Servizi</strong><span class="text-alert"><i class="icon icon-warning color-error"></i> Soglia superata</span></div>
 						<div class="progress mb-2">
 							<div class="progress-bar bkg-bfm_status_categorizzare" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 						<div><span>Spesi: <strong>200 &euro;</strong></span></div>
-					</div>
+					</div> 
 					<!--contenuto visibile in desktop -->
-					<div class="col-12 col-sm-4 col-lg-3 text-center d-md-block d-none">
+					<div class="col-12 col-md-4 col-lg-3 text-center d-md-block d-none">
 					    <div><span>Disponibili</span></div>
 						<div><span class="font-size-20"><strong>2,000,00 &euro;</strong></span></div>
 						<div><span class="text color-greenLink"><strong>70,00%</strong></span></div>
@@ -45,7 +45,7 @@
 			<hr class="no-margin-section">
 			<div class="row d-flex justify-content-between align-items-center">
 				<div class="col-6"><span class="text color-greenLink"><strong>70,00%</strong></span></div>
-				<div class="col-6"><span class="font-size-20"><strong>2,000,00 &euro;</strong></span></div>
+				<div class="col-6 col-6 d-flex justify-content-end"><span class="font-size-20"><strong>2,000,00 &euro;</strong></span></div>
 			</div>
 		</div>
 		<!--fine contenuto visibile in mobile -->

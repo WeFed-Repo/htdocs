@@ -794,10 +794,13 @@
 /*box delle soglie*/
 .box-fixed-card{
   @include bordered;
-  overflow: hidden;
   padding:1rem;
   color:$gray1;
   position: relative;
+  margin-bottom:1rem;
+  @media (max-width: $bp_md_max) {
+    padding-top:2rem;
+  }
   .box-fixed-card-left{
     width: 150px;
     text-align: center;
@@ -817,7 +820,7 @@
       border:0;
       padding:0;
     }
-    .icon {margin-right:0;font-size:26px;}
+    .icon {margin-right:0;font-size:26px;} 
     
   }
   .box-fixed-card-center {
@@ -828,6 +831,13 @@
       padding: 0 1rem;
       padding-right: 0rem;
     }
+    .text-alert {float: right;}
+    .progress {
+      width: 100%;
+      position: relative;
+      top: 5px;
+    }
   }
+  
 }
 

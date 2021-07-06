@@ -66,7 +66,8 @@ a.dropdown-item:not(.btn):not(.select-custom-option-el) {
 }
 
 body > .dropdown-menu,
-[tm-bsTable-v2] .dropdown-menu {
+[tm-bsTable-v2] .dropdown-menu,
+.box-fixed-card .dropdown-menu {
   transform: translate(0%,0%) !important;
   &.show:not(.shown) {
     opacity: 0 !important;

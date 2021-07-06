@@ -6673,16 +6673,19 @@ a.dropdown-item:not(.btn):not(.select-custom-option-el):hover[disabled]:active {
   font-size: 14px;
 }
 body > .dropdown-menu,
-[tm-bsTable-v2] .dropdown-menu {
+[tm-bsTable-v2] .dropdown-menu,
+.box-fixed-card .dropdown-menu {
   transform: translate(0%, 0%) !important;
 }
 body > .dropdown-menu.show:not(.shown),
-[tm-bsTable-v2] .dropdown-menu.show:not(.shown) {
+[tm-bsTable-v2] .dropdown-menu.show:not(.shown),
+.box-fixed-card .dropdown-menu.show:not(.shown) {
   opacity: 0 !important;
   display: none !important;
 }
 body > .dropdown-menu.shown,
-[tm-bsTable-v2] .dropdown-menu.shown {
+[tm-bsTable-v2] .dropdown-menu.shown,
+.box-fixed-card .dropdown-menu.shown {
   opacity: 1 !important;
   display: block !important;
 }
@@ -8661,10 +8664,10 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   color: #737373;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
   padding: 1rem;
   color: #3e3e3e;
   position: relative;
+  margin-bottom: 1rem;
 }
 .box-fixed-card.no-b-t {
   border-top: none;
@@ -8677,6 +8680,11 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
 }
 .box-fixed-card.no-b-b {
   border-bottom: none;
+}
+@media (max-width: 767px) {
+  .box-fixed-card {
+    padding-top: 2rem;
+  }
 }
 .box-fixed-card .box-fixed-card-left {
   width: 150px;
@@ -8714,6 +8722,14 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
     padding: 0 1rem;
     padding-right: 0rem;
   }
+}
+.box-fixed-card .box-fixed-card-center .text-alert {
+  float: right;
+}
+.box-fixed-card .box-fixed-card-center .progress {
+  width: 100%;
+  position: relative;
+  top: 5px;
 }
 
 .c-filter .nav-tabs {
