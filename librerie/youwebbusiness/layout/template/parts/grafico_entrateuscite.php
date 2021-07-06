@@ -29,6 +29,7 @@
                     addClassNames : true,
                     categoryField: "giorno",
                     categoryAxis: {
+                        labelFrequency: 4,
                         classNameField: "classi"
                     },
                     valueAxis: {
