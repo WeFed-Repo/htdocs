@@ -2,12 +2,18 @@
 //parametri: oggetto per costruire le option + eventuale funzione di callmeback
 
 $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
+
+	
 	//definisco variabili di partenza
 	var scWrapper = $(this),
 		scName = sourceParams.nameSel,
 		scId = sourceParams.idSel,
 		dataOptions = sourceParams.dataOptions;
-		
+	
+	//resetto eventuali select
+	scWrapper.removeClass("option-is-selected").empty();
+	
+
     //definisco le variabili semaforo per determinare il tipo di finta select
 	//casistica checkbox
 	var isTypeCheckbox = function () {
@@ -67,7 +73,9 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		}
 		//se è btn
 		else if(isTypeBtnFunc()){
-			var optionText = $("<a class='select-custom-option-el dropdown-item' href='javascript:;'><span class='text-btn'>" + dataOptions[index].text + "</span><span class='value-btn'>" + dataOptions[index].value +"</span>");
+			//se è presente il value al momento rimosso perché costruito tramite  funzione specifica di update
+			var optionValue= typeof dataOptions[index].value != "undefined" ? "</span><span class='value-btn'>" + dataOptions[index].value +"</span>" : "";
+			var optionText = $("<a class='select-custom-option-el dropdown-item' href='javascript:;'><span class='text-btn'>" + dataOptions[index].text + "</span>" + optionValue);
 			optionEl.append(optionText);
 		}
 		//se è con checkbox
@@ -133,8 +141,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			//popola la voce selezionata anche recuperando quanto passato nei parametri
 			scvalCheck.length===scCheckNotAll.length ? allSelected=true : allSelected=false;
 			if (scIhidden.val() !== "" && !allSelected) {
-				
-			    scvalCheck.length === 1 ? scVselected.html(scWrapper.find(".option-selected:not(.all)").attr('data-attr-text')) : scVselected.html(scvalCheck.length + " " + sourceParams.textSelectedSome)
+				scvalCheck.length === 1 ? scVselected.html(scWrapper.find(".option-selected:not(.all)").attr('data-attr-text')) : scVselected.html(scvalCheck.length + " " + sourceParams.textSelectedSome)
 			} 
 			else if(allSelected) {
 				scVselected.html(sourceParams.textSelectedAll);
@@ -147,13 +154,14 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		}
 		//caso select button funzionale
 		else if (isTypeBtnFunc()) {
-			scVselected.empty().html(optionSelected.find(".select-custom-option-el").html());
+			//eventualmente fare il controllo qui
+			//vscVselected.find(".text-btn").empty().text(optionSelected.attr("data-attr-text"));
+			scVselected.empty().html("<span class='text-btn'>" + optionSelected.attr("data-attr-text") +"</span>");
 			//appendo la classe per la diversa stilizzazione
 			scWrapper.addClass("option-is-selected");
 			//popolo l'input hidden con un value che è un oggetto dove passo text e il value
-			
 			valArr = [];
-			valArr.push(optionSelected.attr("data-attr-text"),optionSelected.attr("data-attr-value"));
+			valArr.push(optionSelected.attr("data-attr-text"));
 			scIhidden.val(valArr.join(","));
 			toggleSelected(optionSelected);
 		}
@@ -188,4 +196,31 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 
 	//eventuale funzione di callmeback
 	if (cmbfunction) cmbfunction();
+}
+
+//funzione di update del valore iniziale delle voci contenute nella select
+updateOptionsValue = function(paramsToUpdateOptions) {
+	var selectToUpdate = paramsToUpdateOptions.idSel,
+		valueToAppend = paramsToUpdateOptions.valuesOptions,
+		optionsToUpdate =  $("#"+ selectToUpdate).find(".dropdown-menu .select-custom-option");
+		$.each(valueToAppend, function(index, el) {
+			for(i=0;i<=optionsToUpdate.length;i++) {
+				if(el.text===optionsToUpdate.eq(i).attr("data-attr-text")) {
+					optionsToUpdate.eq(i).find(".dropdown-item").append("<span class='value-btn'>" + el.value +"</span>")
+				}
+			}
+	});
+}
+
+
+//funzione di update del valore selected
+updateSelectedValue = function(paramsToUpdateSelected) {
+	var selectToUpdate = $("#"+ paramsToUpdateSelected.idSel),
+		valueToAppend = paramsToUpdateSelected.value,
+		textSelected = selectToUpdate.find(".option-selected").attr("data-attr-text");
+		 //se la select è in stato selected...
+		 
+	if(selectToUpdate.hasClass("option-is-selected")) {
+		selectToUpdate.find(".dropdown-toggle").empty().append("<span class='text-btn'>" + textSelected + "</span>" + "<span class='value-btn'>" + valueToAppend +"</span>")
+	}
 }
