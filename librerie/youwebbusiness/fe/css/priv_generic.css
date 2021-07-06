@@ -2022,6 +2022,12 @@
   width: max-content;
   white-space: nowrap;
 }
+@media screen and (max-width: 575px) {
+  .accordion .card .card-header .nofull-contain-sm, .accordion .acc-item .card-header .nofull-contain-sm {
+    width: 100%;
+    white-space: normal;
+  }
+}
 .accordion .card .card-header .card-header-icon, .accordion .acc-item .card-header .card-header-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;

@@ -24,6 +24,14 @@
         //IE11 Force NOBR
         white-space: nowrap;
       }
+      .nofull-contain {
+        &-sm {
+          @media screen and (max-width:$bp_sm_max){
+            width: 100%;
+            white-space: normal;
+          }
+        }
+      }
       // End
       .card-header-icon {
         @include icon-font-family();

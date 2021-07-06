@@ -2604,6 +2604,11 @@ NOTE: La classe .content-hidden-in-mobile
   width: calc(100% + 2rem + 1px) !important;
 }
 
+.flex-fill {
+  flex: 1;
+  max-width: 100%;
+}
+
 /*elemento decorativo o funzionale con tooltip per td tabelle o box */
 .wrapper-border-element {
   position: relative;

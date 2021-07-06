@@ -1,15 +1,19 @@
 <div class="card collapser">
   <div class="card-header collapsed d-flex justify-content-between align-items-top" data-toggle="collapse">
-    <div class="row d-flex justify-content-between align-items-center w-100">
-      <h5 class="col-sm-8 card-header-title mb-0">
+    <div class="row d-flex justify-content-start align-items-center w-100">
+      <h5 class="col-sm-12 col-md-auto card-header-title mb-0">
         Collapsible Group Item #1
       </h5>
-      <p class="col-sm-4 pr-4 text-sm-left text-md-right mb-0">
-        1629420831
+      <p class="col-sm-12 flex-fill pr-4 text-sm-left text-md-center mb-0">
+        Associata il: 20/02/2021 da Mario Rosside
       </p>
+      
     </div>
     <div class="d-flex justify-content-between align-items-top">
-      <p class="pr-4 pl-4 mb-0 full-contain"><strong>-102,86</strong></p>
+      <div class="row pr-4 pl-4 mb-0 full-contain nofull-contain-sm">
+        <p class="col-12 col-md-auto mb-0 full-contain text-right text-md-center order-2 order-md-1">1629420831</p>
+        <p class="col-12 col-md-auto pl-4 mb-0 full-contain text-right text-md-center order-1 order-md-2"><strong>-102,86</strong></p>
+      </div>
       <span class="card-header-icon mt-0 mb-0"></span>
     </div>
   </div>
