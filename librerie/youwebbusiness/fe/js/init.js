@@ -109,7 +109,7 @@ function initDropdown() {
             var elem = $(this);
             var drop = elem.find('.dropdown-menu');
             setTimeout(function () {
-                var dropW = 230;
+                var dropW = drop.hasClass('small') ? 100 : 230;
                 var elemW = elem.width();
                 var posTop = elem.offset().top;
                 var posLeft = elem.offset().left;

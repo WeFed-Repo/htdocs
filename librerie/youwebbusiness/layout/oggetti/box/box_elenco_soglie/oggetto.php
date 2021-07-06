@@ -32,7 +32,7 @@
 					<a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="icon icon-more"></i>
 					</a>
-					<div class="dropdown-menu" x-placement="left-start" tm-menu-dropdown="">
+					<div class="dropdown-menu small" x-placement="left-start" tm-menu-dropdown="">
 						<a role="button" class="dropdown-item">Dettaglio</a>
 						<a role="button" class="dropdown-item">Modifica</a>
 						<a role="button" class="dropdown-item">Elimina</a>

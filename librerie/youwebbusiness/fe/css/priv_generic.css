@@ -6695,6 +6695,11 @@ body > .dropdown-menu.shown,
   min-width: 230px !important;
   max-width: 230px !important;
 }
+.dropdown-menu.small {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
 .dropdown-menu .dropdown-item:not(.select-custom-option-el), .dropdown-menu a.dropdown-item:not(.select-custom-option-el) {
   white-space: normal !important;
   line-height: 1.1em !important;
