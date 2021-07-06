@@ -144,8 +144,18 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-xs-12">
+            <div class="form-check  checkbox switch">
+            <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch">
+            <label class="form-check-label" for="checkSwitch">Lorem ipsum</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-sm-12 col-xs-12">
+            <!-- Wrapper del grafico -->
             <div id="graficoeu" class="graph-space"></div>
+            <!-- Fie wrapper del grafico -->
         </div>
     </div>
 </div>
