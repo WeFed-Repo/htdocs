@@ -117,5 +117,9 @@
             left:auto;
             right:0;
         }
+        &.disabled {
+            opacity:0.3
+        }
     }
+    
 }

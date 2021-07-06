@@ -144,5 +144,8 @@
   left: auto;
   right: 0;
 }
+.graph-arrow-nav .arrow.disabled {
+  opacity: 0.3;
+}
 
 /*# sourceMappingURL=grafici.css.map */
