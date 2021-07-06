@@ -9,7 +9,7 @@
       </p>
       
     </div>
-    <div class="d-flex">
+    <div class="d-flex justify-content-between align-items-top h-100">
       <div class="row pr-4 pl-4 mb-0 full-contain nofull-contain-sm">
         <p class="col-12 col-md-auto mb-0 full-contain text-right text-md-center order-2 order-md-1">1629420831</p>
         <p class="col-12 col-md-auto pl-4 mb-0 full-contain text-right text-md-center order-1 order-md-2"><strong>-102,86</strong></p>
