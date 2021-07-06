@@ -168,7 +168,7 @@
                 
                 {
                     "label": "Servizi",
-                    "value": 91.17,
+                    "value": 50,
                     "color": "#45d9c4"
                 }
             ]
@@ -186,6 +186,7 @@
                 title: "Totale uscite",
                 value: "25.003,36 &euro;"
             }
+            
         });
 
         </script>
