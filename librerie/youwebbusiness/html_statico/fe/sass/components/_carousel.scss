@@ -79,3 +79,69 @@
   }
 }
 
+// Nuovo Carousel Multicard con gestione Desktop + Mobile & Swipe & arrow
+
+.carousel-multicard {
+  .carousel-item-centerer {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    > .row {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  .carousel-inner {
+    position:relative;
+  }
+  .carousel-card {
+    height: 100%;
+    padding: 0 5px 10px 5px;
+  }
+  .hide-control {
+    display: none !important;
+  }
+  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    display: block;
+  }
+}
+
+/* ONLY for Mobile */
+@media screen and (max-width: 767px) {
+  .carousel-multicard {
+    &.carousel-arrows-outside {
+      margin: 0;
+      width: 100%;
+    }
+    /* Correzione "salto" */
+    .carousel-item-centerer {
+      width: calc(100% - 20%);
+      margin-left: 10%;
+      margin-right: 10%;
+      overflow: hidden!important;
+      &.prev-el {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+      &.prev-right {
+        position:absolute;
+        top:0;
+        right: calc(-100% + 10%);
+      }
+      &.prev-left {
+        position:absolute;
+        top:0;
+        left: calc(-100% + 10%);
+      }
+    }
+    .carousel-control-prev, .carousel-control-next {
+      display: none;
+    }
+  }
+}

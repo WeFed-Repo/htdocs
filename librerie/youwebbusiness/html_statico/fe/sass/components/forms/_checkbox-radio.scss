@@ -102,7 +102,7 @@
   }
 }
 //check-options-list
-table .checkbox .check-options,  .check-options{
+table .check-options,  .check-options{
   &-wrapper {
     max-height: 372px;
     overflow-y: auto;
@@ -138,8 +138,8 @@ table .checkbox .check-options,  .check-options{
        padding-left:16px;
        margin-bottom:8px;
     }
-    label{
-      padding-left:1rem;
+    .checkbox label{
+      padding-left:1rem!important;
       display:block;
       span {
         white-space: nowrap; 

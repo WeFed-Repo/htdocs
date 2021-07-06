@@ -26,7 +26,6 @@ $(function () {
 // INIT ELEMENTI
 
 function initDropdownOnClick(clickedElement, allDrops) {
-
     var parent = clickedElement.parent();
     parent.find('.dropdown-menu').dropdown();
     clickedElement.attr('data-dropdown-active', '');
@@ -46,7 +45,6 @@ function initDropdownOnClick(clickedElement, allDrops) {
             var posTop = elem.offset().top;
             var posLeft = elem.offset().left;
                 posLeft = posLeft - dropW;
-
             drop.css({
               position: 'absolute',
               top: posTop,
@@ -81,7 +79,7 @@ function initDropdownOnClick(clickedElement, allDrops) {
 
 function initDropdown() {
     
-    var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"]';
+    var allDrops = '[tm-bsTable-v2] table [data-toggle="dropdown"],  .box-fixed-card [data-toggle="dropdown"]'
 
     //close all dropdown opened
     if ($('body > .dropdown-menu[tm-menu-dropdown]').length > 0) {
@@ -93,7 +91,6 @@ function initDropdown() {
     }
 
     $(allDrops + ':not([data-clicked]):not([tm-dropdown-click])').on('click', function () {
-        
         // CLONE di initDropdownOnClick($(this), allDrops);
 
         var clickedElement = $(this);
@@ -112,21 +109,20 @@ function initDropdown() {
             var elem = $(this);
             var drop = elem.find('.dropdown-menu');
             setTimeout(function () {
-                var dropW = 230;
+                var dropW = drop.hasClass('small') ? 100 : 230;
                 var elemW = elem.width();
                 var posTop = elem.offset().top;
                 var posLeft = elem.offset().left;
                 posLeft = posLeft - dropW;
-
+               
                 drop.css({
                     position: 'absolute',
                     top: posTop,
                     left: posLeft,
                     transform: 'translate(0%,0%)',
                 })
-
+                
                 $('body').append(drop.detach());
-
                 setTimeout(function () {
                     $('body').find(' > .dropdown-menu ').addClass('shown');
                 }, 100);

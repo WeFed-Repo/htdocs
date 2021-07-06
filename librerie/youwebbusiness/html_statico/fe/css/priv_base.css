@@ -547,6 +547,31 @@
   border-top-color: rgba(216, 216, 216, 0.5);
 }
 
+.color-gray11 {
+  color: #7f7f7f;
+}
+.bkg-gray11 {
+  background-color: #7f7f7f;
+}
+
+.border-gray11 {
+  border-color: #7f7f7f !important;
+}
+
+.border-left-gray11 {
+  border-left-color: #7f7f7f !important;
+}
+.border-left-gray11.selected {
+  background: rgba(127, 127, 127, 0.2);
+}
+
+.border-top-gray11 {
+  border-top-color: #7f7f7f;
+}
+.border-top-gray11.light {
+  border-top-color: rgba(127, 127, 127, 0.5);
+}
+
 .color-grayBG {
   color: #F5F5F5;
 }
@@ -2207,7 +2232,7 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   top: 10px;
 }
 
-.with-squared .card-header .text {
+.with-squared .card-header .text, .box-fixed-card .text {
   font-size: 18px;
 }
 

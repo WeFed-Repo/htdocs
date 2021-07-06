@@ -469,8 +469,8 @@ dl, .list {
   }
  
 }
-.with-squared .card-header .text {
-  font-size:18px;
+.with-squared .card-header .text, .box-fixed-card .text {
+  font-size:18px; 
 }
 .with-squared .card-header {
   background: $white;
