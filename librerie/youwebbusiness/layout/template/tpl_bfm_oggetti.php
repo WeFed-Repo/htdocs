@@ -194,3 +194,6 @@
 <!-- BOX SOGLIE -->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_elenco_soglie/oggetto.php');?>
 <!-- ./ BOX SOGLIE-->
+<!-- Accordion With image -->
+<?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_con_image/oggetto.php');?>
+<!-- ./  FINE Accordion With image-->

@@ -2583,12 +2583,33 @@
   border: 0px;
   border-radius: 4px;
 }
+.accordion.accordion-with-image .card .card-body {
+  padding-top: 0px;
+}
 .accordion.accordion-with-image .up-body-separator {
   margin: 0px 5px 18px 5px;
 }
 .accordion.accordion-with-image .card-body-text {
   font-size: 16px;
   padding-left: 5px;
+}
+.accordion.accordion-with-image .left-image img {
+  max-width: 200px;
+}
+.accordion.accordion-with-image .card-header {
+  position: relative;
+}
+.accordion.accordion-with-image .card-header > .row {
+  padding-right: 40px;
+}
+.accordion.accordion-with-image .card-header .header-accord-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+.accordion.accordion-with-image .card-header .header-accord-icon .icon {
+  color: #2F9988;
+  font-size: 26px;
 }
 
 /* Tabs */
