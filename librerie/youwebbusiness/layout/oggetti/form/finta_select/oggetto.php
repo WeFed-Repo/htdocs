@@ -64,27 +64,27 @@
          //esempio di array con i valori per la select
         "dataOptions" : [
               {
-                "id": 0,
+                "id": "optionsel1",
                 "text": "Seleziona",
                 "value":"0",
                 "selected": true
                
               },
               {
-                "id": 1,
+                "id": "optionsel2",
                 "text": "Option 1",
                 "value": "1"
                 
 
               },
               {
-                "id": 2,
+                "id": "optionsel3",
                 "text": "Option 2",
                 "value": "2"
                
               },
               {
-                "id": 3,
+                "id": "optionsel4",
                 "text": "Option 3",
                 "value": "3"
                
@@ -98,26 +98,26 @@
         "dataOptions" : [
           
           {
-                "id": 1,
+                "id": "optionselCheck1",
                 "text": "Option 1",
                 "value": "1",
                 "selected" :false
                 
           },
           {
-                "id": 2,
+                "id": "optionselCheck2",
                 "text": "Option 2",
                 "value": "2",
                 "selected" :false
           },
           {
-                "id": 3,
+                "id": "optionselCheck3",
                 "text": "Option 3",
                 "value": "3",
                 "selected" :false
           },
           {
-                "id": 3,
+                "id": "optionselCheck4",
                 "text": "Option 4",
                 "value": "4",
                 "selected" :false
@@ -135,12 +135,12 @@
          //esempio di array con i valori per la select
         "dataOptions" : [
               {
-                "id": 1,
+                "id": "optionbtn1",
                 "text": "Associa progetto",
                 "selected": false
               },
               {
-                "id": 2,
+                "id": "optionbtn2",
                 "text": "Modifica categoria/sottocategoria",
                 "selected": false
               }
@@ -169,12 +169,12 @@
          "idSel": "scBtn",
          "valuesOptions" : [
               {
-                "id": 1,
+                "id": "optionbtn1",
                 "text": "Associa progetto",
                 "value": 100
               },
               {
-                "id": 2,
+                "id": "optionbtn2",
                 "text": "Modifica categoria/sottocategoria",
                 "value": 20
               }

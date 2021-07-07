@@ -5335,7 +5335,7 @@ label .ico-warning,
 .control-label .ico-warning {
   float: right;
   position: relative;
-  top: 3px;
+  top: 0px;
 }
 
 .form-control {
