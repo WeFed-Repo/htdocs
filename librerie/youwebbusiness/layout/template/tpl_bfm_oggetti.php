@@ -202,3 +202,7 @@
 <!--  -->
 <?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_con_campi_form/oggetto.php');?>
 <!-- ./  FINE Accordion With image-->
+
+<!-- MODALE DETTAGLIO MOVIMENTO Scrollabile-->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_dettaglio_scrollabile/oggetto.php'); ?>
+<!-- ./ MODALE DETTAGLIO MOVIMENTO Scrollabile -->
