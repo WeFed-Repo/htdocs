@@ -3048,6 +3048,7 @@
 .table {
   border-left: solid 1px #DDDDDD;
   border-right: solid 1px #DDDDDD;
+  /* stilizzazioni field in table*/
 }
 .table > tbody > tr > th {
   border-top: solid 1px #EEEEEE;
@@ -3063,6 +3064,13 @@
   padding: 0;
   margin: 0;
   min-height: 0;
+}
+.table .form-group, .table .input-group > .custom-file, .table .input-group > .custom-select, .table .input-group > .form-control, .table .input-group > .input-group-prepend, .table .input-group > .input-group-append,
+.table .form-control, .table .form-control[readonly] {
+  margin-bottom: 0;
+}
+.table .datepicker {
+  width: 130px;
 }
 
 .table-heading h4 {

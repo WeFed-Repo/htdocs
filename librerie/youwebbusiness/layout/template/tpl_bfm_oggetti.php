@@ -190,10 +190,15 @@
 <!-- CAROUSEL -->
 <?php virtual('/youwebbusiness/layout/oggetti/form/hashtag_selection/oggetto.php');?>
 <!-- ./  FINE CAROUSEL-->
-
+<hr>
 <!-- BOX SOGLIE -->
 <?php virtual('/youwebbusiness/layout/oggetti/box/box_elenco_soglie/oggetto.php');?>
 <!-- ./ BOX SOGLIE-->
+<hr>
 <!-- Accordion With image -->
 <?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_con_image/oggetto.php');?>
+<!-- ./  FINE Accordion With image-->
+<hr>
+<!--  -->
+<?php virtual('/youwebbusiness/layout/oggetti/tabelle/_tabella_con_campi_form/oggetto.php');?>
 <!-- ./  FINE Accordion With image-->
