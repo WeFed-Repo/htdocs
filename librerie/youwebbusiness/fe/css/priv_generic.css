@@ -2964,6 +2964,9 @@
     min-width: 100px;
   }
 }
+.bootstrap-table table tbody tr thead tr, .bootstrap-table .table tbody tr thead tr {
+  background-color: #2F9988;
+}
 .bootstrap-table table.header-light th .th-inner.sortable, .bootstrap-table .table.header-light th .th-inner.sortable {
   background: transparent url("../img/table_order_grey.png") no-repeat right center;
 }
@@ -3255,6 +3258,12 @@
 
 .modal .wrapper-table-scroll-y {
   max-height: 250px;
+}
+
+/* *scroll di tabella nella tabella - in accordion*/
+.wrapper-table-inner-scroll-y {
+  overflow-y: auto;
+  max-height: 180px;
 }
 
 .detail-panel {
@@ -5815,6 +5824,7 @@ table .checkbox {
 table .radio label,
 table .checkbox label {
   padding-left: 0 !important;
+  min-height: 14px;
 }
 table .radio.radio label,
 table .checkbox.radio label {

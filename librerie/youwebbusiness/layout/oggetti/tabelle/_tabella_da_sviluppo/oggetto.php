@@ -145,17 +145,16 @@
                            <table id="tableEsempioSviluppo" cellspacing="0" cellpadding="0" border="0" class="table table-striped table-striped-double table-hover" data-pagination="true" data-sort-name="Chain.Data" data-sort-order="desc" style="margin-top: 0px;">
                               <thead>
                                  <tr>
+                                    <th style="" data-field="0">
+                                       <div class="th-inner "></div>
+                                       <div class="fht-cell"></div>
+                                    </th>
                                     <th class="center">
                                        <!-- stato active-->
                                        <!-- <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-white is-active"></div> -->
                                        <a data-trigger="hover" data-placement="top"  data-toogle-class="tooltip-no-mw"  data-toggle="tooltip" title="<span class='font-size-small'><strong>Espandi</strong><br>Mostra tutte le informazioni</span>" href="javascript:;">
                                           <span tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-white"></span>
                                        </a>
-                                       
-                                    </th>
-                                    <th style="" data-field="0">
-                                       <div class="th-inner "></div>
-                                       <div class="fht-cell"></div>
                                     </th>
                                     <th class="center" style="" data-field="Chain.Data">
                                        <div class="th-inner sortable both desc">Data creaz.</div>
@@ -203,9 +202,11 @@
                               <tbody class="accordion">
                                  <tr class="highlight" data-index="0">
                                     <td class="text-center">
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink is-active"></div>
+                                        <div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div>
                                     </td>
-                                    <td></td>
+                                    <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink" id="openAcc"></div>
+                                    </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="0" tm-link-detail="">07/04/2021</a></td>
                                     <td></td>
                                     <td><div class="wrapper-icon-bullet"><span class="color-bfm_status_inscadenza icon-bullet"></span> <span class="text">in scadenza</span></div></td>
@@ -241,19 +242,86 @@
                                     </td>
                                     
                                  </tr>
-                                 <tr>
-                                    <td class="slide-col-0" style="display:none;"></td>
-                                    <td class="slide-col-0" style="display:none;" colspan="12">
+                                 <tr style="display:none">
+                                    <td class="slide-col-0" colspan="13">
+                                    <div class="wrapper-table-inner-scroll-y">
+                                       <table id="tableInner" cellspacing="0" cellpadding="0" border="0" class="table table-striped table-hover" data-pagination="true" data-sort-name="Chain.Data" data-sort-order="desc" style="margin-top: 0px;">
+                                       <thead>
+                                          <tr>
+                                             <th style="" data-field="0">
+                                                <div class="th-inner">Modalit&agrave; di pagamento</div>
+                                                <div class="fht-cell"></div>
+                                             </th>
+                                             <th style="" data-field="0">
+                                                <div class="th-inner ">Tipo pagamento</div>
+                                                <div class="fht-cell"></div>
+                                             </th>
+                                             <th class="center" style="" data-field="">
+                                                <div class="th-innerc">Data scadenza</div>
+                                                <div class="fht-cell"></div>
+                                             </th>
+                                             <th class="center" style="" data-field="">
+                                                <div class="th-inner">Importo</div>
+                                                <div class="fht-cell"></div>
+                                             </th>
+                                             <th class="center" style="" data-field="">
+                                                <div class="th-inner"></div>
+                                                <div class="fht-cell"></div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>Contante</td>
+                                             <td>Pagamento a rate</td>
+                                             <td class="center">12/12/2021</td>
+                                             <td class="right">10.000,00 &euro;</td>
+                                             <td class="center"><div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Contante</td>
+                                             <td>Pagamento a rate</td>
+                                             <td class="center">12/12/2021</td>
+                                             <td class="right">10.000,00 &euro;</td>
+                                             <td class="center"><div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Contante</td>
+                                             <td>Pagamento a rate</td>
+                                             <td class="center">12/12/2021</td>
+                                             <td class="right">10.000,00 &euro;</td>
+                                             <td class="center"><div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Contante</td>
+                                             <td>Pagamento a rate</td>
+                                             <td class="center">12/12/2021</td>
+                                             <td class="right">10.000,00 &euro;</td>
+                                             <td class="center"><div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Contante</td>
+                                             <td>Pagamento a rate</td>
+                                             <td class="center">12/12/2021</td>
+                                             <td class="right">10.000,00 &euro;</td>
+                                             <td class="center"><div class="form-check-inline checkbox"><input type="checkbox" name=""><label></label></div></td>
+                                          </tr>
+                                       </tbody>
+                                       </table>
+                                    </div>
                                     </td>
                                  </tr>
                                  <tr data-index="1" style="border-bottom: solid 1px #eeeeee;">
-                                  <td class="text-center  wrapper-border-element">
-                                  <a class="border-element bkg-gray1" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
+                                     <td class="text-center wrapper-border-element">
+                                     <a class="border-element bkg-gray1" href="javascript:;" data-container="#tableEsempioSviluppo" data-toogle-class="tooltip-dark tooltip-w-auto tooltip-m-h-td" data-placement="right" data-toggle="tooltip" title="<p class='text-center mb-0'><strong>Creato il 12/04/2021 da Mario Rossi</strong></p>" data-trigger="focus">
                                       </a>
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenlink"></div>
+                                      <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="text-center">
-                                      <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div></td>
+                                      
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenlink"></div>
+                                    </td>
+                                    
                                     <td class="center"><a href="javascript:;" data-modal-detail="1" tm-link-detail="">07/04/2021</a></td>
                                     <td>
                                        AUTOMOBILE CLUB - A.C. - MODEN
@@ -299,11 +367,11 @@
                                     </td>
                                  </tr>
                                  <tr data-index="2" style="border-bottom: solid 1px #eeeeee;">
-                                    <td class="text-center">
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink is-active"></div>
+                                   <td class="text-center">
+                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink is-active"></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="2" tm-link-detail="">01/04/2021</a></td>
                                     <td>
@@ -335,10 +403,10 @@
                                  </tr>
                                  <tr data-index="3" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center">
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
+                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="3" tm-link-detail="">01/04/2021</a></td>
                                     <td>
@@ -369,11 +437,11 @@
                                     </td>
                                  </tr>
                                  <tr data-index="4" style="border-bottom: solid 1px #eeeeee;">
-                                 <td class="text-center">
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
-                                    </td>
                                     <td class="text-center">
                                         <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
+                                    </td>
+                                    <td class="text-center">
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent color-greenLink"></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="4" tm-link-detail="">01/04/2021</a></td>
                                     <td>
@@ -406,10 +474,10 @@
                                  </tr>
                                  <tr data-index="5" style="border-bottom: solid 1px #eeeeee;">
                                     <td class="text-center">
-                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent is-active color-greenLink"></div>
+                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
                                     </td>
                                     <td class="text-center">
-                                        <div class="form-check-inline checkbox"><input type="checkbox" name="checkOperazioniMassive"><label></label></div>
+                                       <div tm-icon-plus-minus="" class="ico-btn plus-minus bg-transparent is-active color-greenLink"></div>
                                     </td>
                                     <td class="center"><a href="javascript:;" data-modal-detail="5" tm-link-detail="">01/04/2021</a></td>
                                     <td>
@@ -526,8 +594,26 @@
                </div>
             </div>
          </div>
+
+         <!-- nuova riga dei totali--->
+         <div class="container-fluid">
+            <div class="row align-items-center pb-3 mt-3">
+               <div class="col-12 col-md-4 d-flex align-items-start">
+                  <span class="font-size-16"><strong>Totale: 30 elementi - Transazioni selezionate: 4</strong></span>      
+               </div>
+               <div class="col-12 col-md-8 d-flex justify-content-end" tm-navigation="">
+               <span class="font-size-16"><strong>Totali transazioni selezionate: <span class="color-greenLink">14.982,55</span></strong></span> 
+               </div>
+            </div>
+         </div>
       </section>
    </div>
 </div>
 <!-- FINE TABELLA AGGIORNATA -->
-
+<!--emulazione per apertura riga di tabella con dettaglio (solo esemplificativa) -->
+<script>
+$("#openAcc").on("click", function(){
+   $(this).toggleClass("is-active");
+   $(this).closest("tr").next("tr").slideToggle(200);
+})
+</script>

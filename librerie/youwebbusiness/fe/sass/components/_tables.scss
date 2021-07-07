@@ -235,3 +235,9 @@
 .modal .wrapper-table-scroll-y {
   max-height: 250px;
 }
+
+/* *scroll di tabella nella tabella - in accordion*/
+.wrapper-table-inner-scroll-y {
+  overflow-y:auto;
+  max-height: 180px;
+}
