@@ -93,19 +93,24 @@
     <!-- validazione -->
     <div class="form-row">
       <div class="form-group col-sm-6 col-md-3">
-        <label class="control-label">Text</label>
+        <label class="control-label">
+          Text
+          <span class="ico-warning"><i class="icon icon-warning color-error"></i></span>
+        </label>
         <input type="text" class="form-control is-invalid" placeholder="Text">
         <!-- messaggio d'errore personalizzabile -->
         <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
       </div>
       <div class="form-group col-sm-6 col-md-3">
-        <label class="control-label">Select</label>
-        <select  class="form-control is-invalid">
+        <label class="control-label">Select
+        <span class="ico-warning"><i class="icon icon-attenzione color-warning"></i></span> 
+        </label>
+        <select  class="form-control is-warning">
           <option selected>Lorem</option>
           <option>Ipsum</option>
         </select>
-        <!-- messaggio d'errore personalizzabile -->
-        <div class="invalid-feedback">Lorem Ipsum dolor sit amet</div>
+        <!-- messaggio di warning personalizzabile -->
+        <div class="warning-feedback">Lorem Ipsum dolor sit amet</div>
       </div>
       <div class="form-group col-sm-6 col-md-3">
         <label class="control-label">Datepicker</label>

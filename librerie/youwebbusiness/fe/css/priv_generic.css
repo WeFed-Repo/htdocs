@@ -5331,6 +5331,12 @@ label img.helper-label-icon,
   height: auto;
   margin-top: 3px;
 }
+label .ico-warning,
+.control-label .ico-warning {
+  float: right;
+  position: relative;
+  top: 3px;
+}
 
 .form-control {
   border: solid 1px #DDDDDD;
@@ -5338,6 +5344,9 @@ label img.helper-label-icon,
 .form-control:focus {
   border: solid 1px #DDDDDD;
   box-shadow: nosvg-icon-size ne;
+}
+.form-control.is-warning {
+  border: solid 1px #CF9418;
 }
 
 .form-control,
@@ -5765,10 +5774,16 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   color: #CC1615;
 }
 
+.warning-feedback {
+  color: #CF9418;
+}
+
 .valid-feedback,
-.invalid-feedback {
+.invalid-feedback,
+.warning-feedback {
   transform: translate(0, -1em);
   margin-top: 0.25rem;
+  font-size: 80%;
 }
 
 /*stilizzazione campi di input in campi di output */
