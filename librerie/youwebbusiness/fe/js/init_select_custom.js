@@ -36,6 +36,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 		.attr("role","button"),
 		optionElAll = $("<li class='select-custom-option all'>")
 		.attr("data-attr-value","all")
+		.attr("id","scCheckall")
 		.attr("data-attr-text",sourceParams.labelSelectAll)
 		.append($("<a class='form-check-inline checkbox select-custom-option-el dropdown-item' href='javascript:;'><input type='checkbox' value='all' id='scCheckboxAll' class='check-all'><label class='select-custom-option-el'>" + sourceParams.labelSelectAll + "</label></a>")); //elemento options select all
 		inputHidden = $("<input type='hidden' value=''>").attr("name", "inputHidden" + scName).attr("id", "inputHidden" + scName), //input hidden da completare con il value se già selected
@@ -57,7 +58,7 @@ $.fn.initSelectCustom = function (sourceParams, cmbfunction) {
 			selectedIndex = index
 		}
 
-		var optionEl = $("<li class='select-custom-option'>").attr("data-attr-value", dataOptions[index].value).attr("data-attr-text", dataOptions[index].text);
+		var optionEl = $("<li class='select-custom-option'>").attr("data-attr-value", dataOptions[index].value).attr("data-attr-text", dataOptions[index].text).attr("id", dataOptions[index].id);
 		//se è una voce selezionata appendo la classe apposita
 
 		if (selectedIndex === index) {
@@ -206,6 +207,7 @@ updateOptionsValue = function(paramsToUpdateOptions) {
 		$.each(valueToAppend, function(index, el) {
 			for(i=0;i<=optionsToUpdate.length;i++) {
 				if(el.text===optionsToUpdate.eq(i).attr("data-attr-text")) {
+					optionsToUpdate.eq(i).find(".dropdown-item .value-btn").remove();
 					optionsToUpdate.eq(i).find(".dropdown-item").append("<span class='value-btn'>" + el.value +"</span>")
 				}
 			}
