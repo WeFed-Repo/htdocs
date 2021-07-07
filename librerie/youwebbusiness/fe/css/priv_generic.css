@@ -1816,6 +1816,19 @@
     padding: 0;
   }
 }
+.modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller,
+.not-floated-modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+@media (max-width: 575px) {
+  .modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller,
+.not-floated-modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller {
+    max-height: none;
+    padding-right: 0px;
+  }
+}
 
 @media (max-width: 767px) {
   .modal .modal-dialog,

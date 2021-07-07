@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" data-modal="simpledetail"" id="modaleDettaglio">
+<div class="modal fade" data-modal="simpledetail" id="modaleDettaglio">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header fit-content d-flex justify-content-between pb-1">

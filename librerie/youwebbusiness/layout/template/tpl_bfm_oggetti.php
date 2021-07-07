@@ -197,3 +197,7 @@
 <!-- Accordion With image -->
 <?php virtual('/youwebbusiness/layout/oggetti/accordion/accordion_con_image/oggetto.php');?>
 <!-- ./  FINE Accordion With image-->
+
+<!-- MODALE DETTAGLIO MOVIMENTO Scrollabile-->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_dettaglio_scrollabile/oggetto.php'); ?>
+<!-- ./ MODALE DETTAGLIO MOVIMENTO Scrollabile -->
