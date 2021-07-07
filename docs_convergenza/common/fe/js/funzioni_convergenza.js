@@ -1722,6 +1722,19 @@ var getAjaxModal = function(params) {
     modalToOpen.modal("show").on("hidden.bs.modal",function(){$(this).remove()})
 }
 
+
+// Funzione che apre un iframe in modale
+var getModalIframe = function(obj){
+
+    // Assembla l'iframe con l'url
+    var iframe = $("<iframe>").addClass("iframe-modal").attr("src",obj.url);
+    var modalIfr = getModal({
+        titolo: (obj.title)? obj.title : "",
+        body: iframe
+    }).addClass("modal-iframe");
+    modalIfr.modal("show").on("hidden.bs.modal",function(){$(this).remove()})
+}
+
 /* Lettura e scrittura localstorage o cookies */
 // Scrittura/lettura dati su localStorage o cookie statico
 var wStore = (function () {

@@ -12142,6 +12142,11 @@ div.select-content select:active {
     font-weight: bold;
   }
 }
+iframe.iframe-modal {
+  border: 0;
+  height: 400px;
+  width: 100%;
+}
 /* Box linee vincolate */
 #boxTabLineeVincolateWrap {
   width: 100%;
