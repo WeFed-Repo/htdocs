@@ -466,6 +466,22 @@ dl, .list {
     height: 6px;
     position: relative;
     top:10px;
+    
+  }
+ 
+}
+.progress-wrapper{
+  
+  .progress
+  {
+    position: relative;
+    width: 100%;
+    &.large {
+      height: 30px;
+    }
+    &.br-0 {
+      border-radius: 0;
+    }
   }
  
 }

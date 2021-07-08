@@ -8816,6 +8816,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   width: 100%;
   position: relative;
   top: 5px;
+  border-radius: 0;
 }
 
 .c-filter .nav-tabs {

@@ -2261,6 +2261,17 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   top: 10px;
 }
 
+.progress-wrapper .progress {
+  position: relative;
+  width: 100%;
+}
+.progress-wrapper .progress.large {
+  height: 30px;
+}
+.progress-wrapper .progress.br-0 {
+  border-radius: 0;
+}
+
 .with-squared .card-header .text, .box-fixed-card .text {
   font-size: 18px;
 }

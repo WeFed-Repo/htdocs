@@ -10188,11 +10188,10 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
     margin-left:20px;
     display: flex;
     align-items: baseline;
-    margin-top:15px;
-    min-width: 80px;
+    min-width: 100px;
 }
 .img-otp img {
-    min-width: 70px;
+    min-width: 80px;
 }
 
 @media (max-width:767px) {
@@ -10205,11 +10204,7 @@ table.table.table-upper td.bb-0, .bb-0 {border-bottom:0!important}
        display:none;
     }
 }
-@media (min-width:991px) and (max-width:1368px) {
-    .img-otp {
-        margin-top:35px;
-    }
-}
+
 
 
 /* Infobox */
