@@ -8691,7 +8691,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   display: block;
   position: absolute;
   right: 4px;
-  top: 5px;
+  top: 3px;
   font-size: 20px;
 }
 .htag-module .htag-tag.selected .icon.icon-ico_close {
