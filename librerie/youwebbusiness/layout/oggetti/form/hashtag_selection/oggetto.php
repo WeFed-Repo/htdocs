@@ -228,12 +228,8 @@
                   htgupdate();
                 }
 
-                // Attribuzione               
-                $(document).on('click', (myid + ' .htag-tag'), htagChangeObj);
-                $(myid + ' #btnCreaTag').click(htagPushObj);
-                
-                // Funziona mostra tutti
-                $(myid + ' .more-minus-htag').click(function(){
+                // Funzione mostra tutti
+                function htagshowall(){
                   if(htg.tagexisting.lenght != htg.shownumber){
                     htg.shownumber = htg.tagexisting.lenght;
                   } else {
@@ -241,8 +237,18 @@
                   }
                   $(myid + ' .more-minus-htag').toggleClass("d-none");
                   htgupdate();
+                }
+
+                // ControlloRegex
+                $(myid + ' input[name=htag-input]').keyup(function() {
+                  $(this).val($(this).val().replace(/[^A-Z0-9]/ig, ''));
                 });
 
+                // Attribuzione               
+                $(document).on('click', (myid + ' .htag-tag'), htagChangeObj);
+                $(myid + ' #btnCreaTag').click(htagPushObj);
+                $(myid + ' .more-minus-htag').click(htagshowall);
+                
                 // Init
                 htgupdate();
             } 
