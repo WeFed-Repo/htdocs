@@ -95,27 +95,29 @@ var startHtag = function (params) {
   }
 
   // Funzione per aggiornare l'oggetto al click sul crea
-  function htagPushObj() {                
-    if(htg.type == "monotag"){
-      // Nel caso siamo nella gestione monotag pulisco tutto
-      $.each(htg.tagexisting,function(index){ 
-        htg.tagexisting[index].State = "unselected";                  
-      }); 
-    }
-    // Push del nuovo tag
-    let newtagtext = '';
-    if($(myid + ' input[name=htag-input]').val().trim().charAt(0)=="#") {
-      newtagtext = $(myid + ' input[name=htag-input]').val().trim().substring(1);
-    }else{
-      newtagtext = $(myid + ' input[name=htag-input]').val().trim();
-    }
-    let data = {
-                "Name": newtagtext,
-                "Value": newtagtext,
-                "State": "selected",
-                "Origin": "new"
-              }
-    htg.tagexisting.push(data);           
+  function htagPushObj() { 
+    if($(this).val() != ''){               
+        if(htg.type == "monotag"){
+        // Nel caso siamo nella gestione monotag pulisco tutto
+        $.each(htg.tagexisting,function(index){ 
+            htg.tagexisting[index].State = "unselected";                  
+        }); 
+        }
+        // Push del nuovo tag
+        let newtagtext = '';
+        if($(myid + ' input[name=htag-input]').val().trim().charAt(0)=="#") {
+        newtagtext = $(myid + ' input[name=htag-input]').val().trim().substring(1);
+        }else{
+        newtagtext = $(myid + ' input[name=htag-input]').val().trim();
+        }
+        let data = {
+                    "Name": newtagtext,
+                    "Value": newtagtext,
+                    "State": "selected",
+                    "Origin": "new"
+                }
+        htg.tagexisting.push(data);
+    }           
     htgupdate();
   }
 
