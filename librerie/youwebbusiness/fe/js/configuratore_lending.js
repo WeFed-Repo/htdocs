@@ -263,8 +263,8 @@ var startLending = function (params) {
             else {
                 if (prod.DurataFinanziamento.Min < sml.duratamin) sml.duratamin = prod.DurataFinanziamento.Min;
                 if (prod.DurataFinanziamento.Min > sml.duratamax) sml.duratamax = prod.DurataFinanziamento.Max;
-                if (prod.Importo.min < sml.importomin) sml.importomin = prod.Importo.Min;
-                if (prod.Importo.max > sml.importomax) sml.importomax = prod.Importo.Max;
+                if (prod.Importo.Min < sml.importomin) sml.importomin = prod.Importo.Min;
+                if (prod.Importo.Max > sml.importomax) sml.importomax = prod.Importo.Max;
             }
 
         })

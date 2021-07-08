@@ -1,0 +1,229 @@
+{
+
+    "Simulatore": {
+
+          "Discriminanti": "",
+
+          "Disclaimer": "Messaggio pubblicitario con finalit\u0026agrave; promozionale. Le condizioni del finanziamento sono soggette a modifica mensile (mese solare) con decorrenza primo giorno del mese. Per le condizioni contrattuali consultare i Fogli Informativi disponibili all?indirizzo https://www.bancobpm.it/trasparenza/.",
+
+          "ProdottiElise": [{
+
+                 "Classe": "CHRET",
+
+                 "Codice": "KSSLAAV0",
+
+                 "Periodicita": {
+
+                        "Options": [{
+
+                               "Value": "01",
+
+                               "Lbl": "Mensile"
+
+                        },
+
+                        {
+
+                               "Value": "03",
+
+                               "Lbl": "Trimestrale"
+
+                        }],
+
+                        "Default": "01",
+
+                        "Modificabile": false
+
+                 },
+
+                 "Importo": {
+
+                        "Min": 1000.0,
+
+                        "Max": 40000.0,
+
+                        "Default": 40000.0,
+
+                        "Step": 1000.0,
+
+                        "Modificabile": true
+
+                 },
+
+                 "Valuta": "euro",
+
+                 "TipoRata": {
+
+                        "Options": [{
+
+                               "Value": "1",
+
+                               "Lbl": "Francese"
+
+                        }],
+
+                        "Default": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataFinanziamento": {
+
+                        "Min": 12.0,
+
+                        "Max": 12.0,
+
+                        "Default": 12.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataAmmortamento": {
+
+                        "Min": 9.0,
+
+                        "Max": 9.0,
+
+                        "Default": 9.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataPreammortamento": {
+
+                        "Min": 3.0,
+
+                        "Max": 3.0,
+
+                        "Default": 3.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "Default": false
+
+          },
+
+          {
+
+                 "Classe": "CHRET",
+
+                 "Codice": "KSSLABV0",
+
+                 "Periodicita": {
+
+                        "Options": [{
+
+                               "Value": "01",
+
+                               "Lbl": "Mensile"
+
+                        },
+
+                        {
+
+                               "Value": "03",
+
+                               "Lbl": "Trimestrale"
+
+                        }],
+
+                        "Default": "01",
+
+                        "Modificabile": false
+
+                 },
+
+                 "Importo": {
+
+                        "Min": 1000.0,
+
+                        "Max": 50000.0,
+
+                        "Default": 50000.0,
+
+                        "Step": 1000.0,
+
+                        "Modificabile": true
+
+                 },
+
+                 "Valuta": "euro",
+
+                 "TipoRata": {
+
+                        "Options": [{
+
+                               "Value": "1",
+
+                               "Lbl": "Francese"
+
+                        }],
+
+                        "Default": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataFinanziamento": {
+
+                        "Min": 12.0,
+
+                        "Max": 12.0,
+
+                        "Default": 12.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataAmmortamento": {
+
+                        "Min": 9.0,
+
+                        "Max": 9.0,
+
+                        "Default": 9.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "DurataPreammortamento": {
+
+                        "Min": 3.0,
+
+                        "Max": 3.0,
+
+                        "Default": 3.0,
+
+                        "Step": 1.0,
+
+                        "Modificabile": false
+
+                 },
+
+                 "Default": true
+
+          }]
+
+    },
+
+    "ImportoMassimoCRM": 1000.0
+
+}
