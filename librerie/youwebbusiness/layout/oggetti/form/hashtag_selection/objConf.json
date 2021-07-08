@@ -1,0 +1,38 @@
+{
+  "Htag": {
+    "ShowNumber": 3,
+    "Type": "monotag",
+    "TagExisting": [
+      {
+        "Name": "Progetto1",
+        "Value": "Progetto1",
+        "State": "selected",
+        "Origin": "old"
+      },
+      {
+        "Name": "Progetto2",
+        "Value": "Progetto2",
+        "State": "unselected",
+        "Origin": "old"
+      },
+      {
+        "Name": "Progetto3",
+        "Value": "Progetto3",
+        "State": "unselected",
+        "Origin": "old"
+      },
+      {
+        "Name": "Progetto4",
+        "Value": "Progetto4",
+        "State": "unselected",
+        "Origin": "old"
+      },
+      {
+        "Name": "Progetto5",
+        "Value": "Progetto5",
+        "State": "unselected",
+        "Origin": "old"
+      }
+    ]
+  }
+}
