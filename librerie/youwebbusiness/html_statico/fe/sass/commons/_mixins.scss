@@ -47,6 +47,14 @@
   }
 }
 
+
+//FUNZIONE FONT:
+@each $name, $fontSize in $fontsSize {
+  .font#{"-" + $name}{
+    font-size: $fontSize;
+  }
+
+}
 // FUNZIONE DI COLORE:
 // crea dinamicamente le classi in base all'array di colori (vedere file vars.scss)
 

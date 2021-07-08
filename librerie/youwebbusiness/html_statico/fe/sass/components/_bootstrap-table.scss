@@ -109,6 +109,9 @@
         }
       }
     }
+    tbody tr thead tr {
+      background-color: $greenLink;
+    }
     &.header-light {
       th {
         .th-inner {

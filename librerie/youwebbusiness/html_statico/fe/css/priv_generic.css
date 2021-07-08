@@ -1,7 +1,36 @@
 @charset "UTF-8";
 /* bfm colori status*/
 /* bfm colori categorie*/
+/*font size */
 /* Filtro per gradienti in IE6-9 */
+.font-size-11 {
+  font-size: 1.1rem;
+}
+
+.font-size-12 {
+  font-size: 1.2rem;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
 .bkg-white {
   background-color: #FFFFFF;
 }
@@ -1816,6 +1845,19 @@
     padding: 0;
   }
 }
+.modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller,
+.not-floated-modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+@media (max-width: 575px) {
+  .modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller,
+.not-floated-modal .modal-dialog.modale-dtl-scroll .accordion.height-scroller {
+    max-height: none;
+    padding-right: 0px;
+  }
+}
 
 @media (max-width: 767px) {
   .modal .modal-dialog,
@@ -2021,6 +2063,12 @@
 .accordion .card .card-header .full-contain, .accordion .acc-item .card-header .full-contain {
   width: max-content;
   white-space: nowrap;
+}
+@media screen and (max-width: 575px) {
+  .accordion .card .card-header .nofull-contain-sm, .accordion .acc-item .card-header .nofull-contain-sm {
+    width: 100%;
+    white-space: normal;
+  }
 }
 .accordion .card .card-header .card-header-icon, .accordion .acc-item .card-header .card-header-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -2958,6 +3006,9 @@
     min-width: 100px;
   }
 }
+.bootstrap-table table tbody tr thead tr, .bootstrap-table .table tbody tr thead tr {
+  background-color: #2F9988;
+}
 .bootstrap-table table.header-light th .th-inner.sortable, .bootstrap-table .table.header-light th .th-inner.sortable {
   background: transparent url("../img/table_order_grey.png") no-repeat right center;
 }
@@ -3039,6 +3090,7 @@
 .table {
   border-left: solid 1px #DDDDDD;
   border-right: solid 1px #DDDDDD;
+  /* stilizzazioni field in table*/
 }
 .table > tbody > tr > th {
   border-top: solid 1px #EEEEEE;
@@ -3054,6 +3106,13 @@
   padding: 0;
   margin: 0;
   min-height: 0;
+}
+.table .form-group, .table .input-group > .custom-file, .table .input-group > .custom-select, .table .input-group > .form-control, .table .input-group > .input-group-prepend, .table .input-group > .input-group-append,
+.table .form-control, .table .form-control[readonly] {
+  margin-bottom: 0;
+}
+.table .datepicker {
+  width: 130px;
 }
 
 .table-heading h4 {
@@ -3249,6 +3308,12 @@
 
 .modal .wrapper-table-scroll-y {
   max-height: 250px;
+}
+
+/* *scroll di tabella nella tabella - in accordion*/
+.wrapper-table-inner-scroll-y {
+  overflow-y: auto;
+  max-height: 180px;
 }
 
 .detail-panel {
@@ -5295,6 +5360,12 @@ label img.helper-label-icon,
   height: auto;
   margin-top: 3px;
 }
+label .ico-warning,
+.control-label .ico-warning {
+  float: right;
+  position: relative;
+  top: 0px;
+}
 
 .form-control {
   border: solid 1px #DDDDDD;
@@ -5302,6 +5373,9 @@ label img.helper-label-icon,
 .form-control:focus {
   border: solid 1px #DDDDDD;
   box-shadow: nosvg-icon-size ne;
+}
+.form-control.is-warning {
+  border: solid 1px #CF9418;
 }
 
 .form-control,
@@ -5729,10 +5803,16 @@ select[disabled]:-moz-placeholder, select.form-control[disabled]:-moz-placeholde
   color: #CC1615;
 }
 
+.warning-feedback {
+  color: #CF9418;
+}
+
 .valid-feedback,
-.invalid-feedback {
+.invalid-feedback,
+.warning-feedback {
   transform: translate(0, -1em);
   margin-top: 0.25rem;
+  font-size: 80%;
 }
 
 /*stilizzazione campi di input in campi di output */
@@ -5809,6 +5889,7 @@ table .checkbox {
 table .radio label,
 table .checkbox label {
   padding-left: 0 !important;
+  min-height: 14px;
 }
 table .radio.radio label,
 table .checkbox.radio label {
@@ -8735,6 +8816,7 @@ svg#MappaInterattiva #Regioni path[data-disabled], svg#MappaInterattiva #Regioni
   width: 100%;
   position: relative;
   top: 5px;
+  border-radius: 0;
 }
 
 .c-filter .nav-tabs {

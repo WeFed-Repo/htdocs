@@ -113,6 +113,25 @@ $bfm_altriproventi: #bcbcbc;
 $bfm_risorseumane: #186bee;
 // Array per le classi .color-NOMECOLORE e .bkg-NOMECOLORE ( vedere "FUNZIONE DI COLORE" in _mixins.scss )
 
+/*font size */
+$size-11: 1.1rem;
+$size-12: 1.2rem;
+$size-16: 16px;
+$size-18: 18px;
+$size-20: 20px;
+$size-22: 22px;
+$size-30: 30px;
+
+$fontsSize: (
+    size-11 : $size-11,
+    size-12 : $size-12,
+    size-16 : $size-16,
+    size-18 : $size-18,
+    size-20 : $size-20,
+    size-22 : $size-22,
+    size-30 : $size-30,
+);
+
 $colors:(
     white               : $white,
     black               : $black,
@@ -173,5 +192,4 @@ $colors:(
     bfm_status_scaduta: $bfm_status_scaduta,
     bfm_status_incassata: $bfm_status_incassata,
     boxHighLight: $boxHighLight,
-
 );

@@ -1,8 +1,37 @@
 @charset "UTF-8";
 /* bfm colori status*/
 /* bfm colori categorie*/
+/*font size */
 /* Filtro per gradienti in IE6-9 */
 @import "../css/icomoon.css";
+.font-size-11 {
+  font-size: 1.1rem;
+}
+
+.font-size-12 {
+  font-size: 1.2rem;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
 .bkg-white {
   background-color: #FFFFFF;
 }
@@ -2232,6 +2261,17 @@ dl dt.full-w, dl dd.full-w, dl-key.full-w, dl-value.full-w, .list dt.full-w, .li
   top: 10px;
 }
 
+.progress-wrapper .progress {
+  position: relative;
+  width: 100%;
+}
+.progress-wrapper .progress.large {
+  height: 30px;
+}
+.progress-wrapper .progress.br-0 {
+  border-radius: 0;
+}
+
 .with-squared .card-header .text, .box-fixed-card .text {
   font-size: 18px;
 }
@@ -2296,22 +2336,6 @@ td.ellipsed {
 
 .font-bold {
   font-weight: bold;
-}
-
-.font-size-11 {
-  font-size: 1.1rem;
-}
-
-.font-size-12 {
-  font-size: 1.2rem;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
-
-.font-size-20 {
-  font-size: 20px;
 }
 
 .font-size-small {
@@ -2602,6 +2626,11 @@ NOTE: La classe .content-hidden-in-mobile
 .full-h-n1 {
   margin-left: calc(-1rem - 1px);
   width: calc(100% + 2rem + 1px) !important;
+}
+
+.flex-fill {
+  flex: 1;
+  max-width: 100%;
 }
 
 /*elemento decorativo o funzionale con tooltip per td tabelle o box */

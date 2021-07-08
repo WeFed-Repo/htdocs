@@ -240,6 +240,20 @@
         }
       }
     }
+    // Modale con Scroll SG
+    &.modale-dtl-scroll {
+      .accordion {
+        &.height-scroller {
+          max-height:300px;
+          overflow-y: auto;
+          padding-right:5px;
+          @media (max-width: $bp_sm_max) {
+            max-height:none;
+            padding-right:0px;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: $bp_md_max) {

@@ -16,6 +16,11 @@ label,
     height:auto;
     margin-top: 3px;
   }
+  .ico-warning {
+    float:right;
+    position: relative;
+    top:0px;
+  }
 }
 
 .form-control {
@@ -24,6 +29,9 @@ label,
     border: solid 1px $gray4;
     box-shadow: nosvg-icon-size
     ne;
+  }
+  &.is-warning {
+    border: solid 1px $warning;
   }
 }
 
@@ -402,11 +410,15 @@ select, input, textarea {
 .invalid-feedback {
   color: $error;
 }
-
+.warning-feedback {
+  color: $warning;
+}
 .valid-feedback,
-.invalid-feedback {
+.invalid-feedback,
+.warning-feedback {
   transform: translate(0,-1em);
   margin-top: .25rem;
+  font-size: 80%;
 }
 
 
