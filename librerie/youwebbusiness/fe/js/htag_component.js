@@ -35,16 +35,16 @@ var startHtag = function (params) {
     $(myid + ' #btnCreaTag').removeClass('disabled');
     $(myid + ' input[name=htag-input]').val('');
     // Rigenero i Tag in base all'oggetto
-    let counter = 1
+    var counter = 1
     $.each(htg.tagexisting,function(){                                    
-      let newtag = '<div id="tg-' + counter + '" class="htag-tag ' + ($(this)[0].State=="selected"? 'selected' : '') + ' ' + (counter>htg.shownumber? 'htag-hide' : '') + '" value="' + $(this)[0].Value + '" title="' + $(this)[0].Name + '"><i class="icon icon-round_check"></i><span class="htag-text">#' + $(this)[0].Name.substring(0,18) + '</span></div>';
+        var newtag = '<div id="tg-' + counter + '" class="htag-tag ' + ($(this)[0].State=="selected"? 'selected' : '') + ' ' + (counter>htg.shownumber? 'htag-hide' : '') + '" value="' + $(this)[0].Value + '" title="' + $(this)[0].Name + '"><i class="icon icon-round_check"></i><span class="htag-text">#' + $(this)[0].Name.substring(0,18) + '</span></div>';
       // Verifico se sia un tag di configurazione o nuovo 
       if($(this)[0].Origin=="old"){
         $(myid + " .htag-wall").append(newtag);
       }
       // Generazione Tag nel selected Wall  
       if($(this)[0].State == "selected") {
-        let newtag = '<div id="tg-' + counter + '-add" class="htag-tag selected" value="' + $(this)[0].Value + '" title="' + $(this)[0].Name + '"><i class="icon icon-close"></i><span class="htag-text">#' + $(this)[0].Name.substring(0,18) + '</span></div>';
+        var newtag = '<div id="tg-' + counter + '-add" class="htag-tag selected" value="' + $(this)[0].Value + '" title="' + $(this)[0].Name + '"><i class="icon icon-close"></i><span class="htag-text">#' + $(this)[0].Name.substring(0,18) + '</span></div>';
         $(myid + " .htag-added-wall").append(newtag);
         if(htg.type == "monotag"){
           $(myid + ' input[name=htag-input]').prop('disabled', true);
@@ -57,7 +57,7 @@ var startHtag = function (params) {
 
   // Funzione per aggiornare l'oggetto al click sul tag esistente
   function htagChangeObj() { 
-    let tagpos = $(this).attr('id').replace('tg-','').replace('-add','') - 1;                  
+    var tagpos = $(this).attr('id').replace('tg-','').replace('-add','') - 1;                  
     if(htg.type == "monotag"){
       // Nel caso siamo nella gestione monotag
       $.each(htg.tagexisting,function(index){ 
@@ -96,7 +96,7 @@ var startHtag = function (params) {
 
   // Funzione per aggiornare l'oggetto al click sul crea
   function htagPushObj() { 
-    if($(this).val() != ''){               
+    if($(myid + ' input[name=htag-input]').val() != ''){               
         if(htg.type == "monotag"){
         // Nel caso siamo nella gestione monotag pulisco tutto
         $.each(htg.tagexisting,function(index){ 
@@ -104,13 +104,13 @@ var startHtag = function (params) {
         }); 
         }
         // Push del nuovo tag
-        let newtagtext = '';
+        var newtagtext = '';
         if($(myid + ' input[name=htag-input]').val().trim().charAt(0)=="#") {
         newtagtext = $(myid + ' input[name=htag-input]').val().trim().substring(1);
         }else{
         newtagtext = $(myid + ' input[name=htag-input]').val().trim();
         }
-        let data = {
+        var data = {
                     "Name": newtagtext,
                     "Value": newtagtext,
                     "State": "selected",
@@ -147,6 +147,6 @@ var startHtag = function (params) {
   
   // ### CallBack ###
   if(params.handlerModal) handlerModal();
-  if(params.handlerGetHtag) handlerGetHtag()
+  if(params.handlerGetHtag) handlerGetHtag();
   
 }

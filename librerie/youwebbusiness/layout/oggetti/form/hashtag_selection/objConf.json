@@ -1,7 +1,7 @@
 {
   "Htag": {
     "ShowNumber": 3,
-    "Type": "monotag",
+    "Type": "multitag",
     "TagExisting": [
       {
         "Name": "Progetto1",
