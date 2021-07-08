@@ -10,11 +10,18 @@
       </div>
 
       <div class="modal-body">
-        
-
-       
-
-     </div>
+              <div class="text-center">
+                <div class="d-flex justify-content-center mb-3">
+                  <span class="text-with-squared">
+                    <span class="squared ico-wrapper bkg-bfm_bollette"><i class="icon icon-category_bollette"></i></span>
+                    <span class="text font-size-22 color-gray2">Operazioni finanziarie</a>
+                  </span>
+                </div>
+              <div><span class="text font-size-16 color-gray1">Importo disponibile</span></div>
+              <div><span class="text font-size-30 color-gray1"><strong>1800,00 &euro;</strong></span></div>
+              <div><span class="text font-size-18 color-greenLink"><strong>70% </strong></span><span class="text color-gray1">della soglia impostata</span></div>
+          </div>
+      </div>
 
       
      

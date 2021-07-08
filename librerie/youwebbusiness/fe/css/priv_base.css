@@ -1,8 +1,37 @@
 @charset "UTF-8";
 /* bfm colori status*/
 /* bfm colori categorie*/
+/*font size */
 /* Filtro per gradienti in IE6-9 */
 @import "../css/icomoon.css";
+.font-size-11 {
+  font-size: 1.1rem;
+}
+
+.font-size-12 {
+  font-size: 1.2rem;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
 .bkg-white {
   background-color: #FFFFFF;
 }
@@ -2296,22 +2325,6 @@ td.ellipsed {
 
 .font-bold {
   font-weight: bold;
-}
-
-.font-size-11 {
-  font-size: 1.1rem;
-}
-
-.font-size-12 {
-  font-size: 1.2rem;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
-
-.font-size-20 {
-  font-size: 20px;
 }
 
 .font-size-small {

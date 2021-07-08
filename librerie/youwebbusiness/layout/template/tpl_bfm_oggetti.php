@@ -206,3 +206,7 @@
 <!-- MODALE DETTAGLIO MOVIMENTO Scrollabile-->
 <?php virtual('/youwebbusiness/layout/oggetti/modale/modale_dettaglio_scrollabile/oggetto.php'); ?>
 <!-- ./ MODALE DETTAGLIO MOVIMENTO Scrollabile -->
+<hr>
+<!-- MODALE DETTAGLIO SOGLIE-->
+<?php virtual('/youwebbusiness/layout/oggetti/modale/modale_dettaglio_soglia/oggetto.php'); ?>
+<!-- ./ MODALE MODALE DETTAGLIO SOGLIE-->
