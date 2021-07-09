@@ -818,7 +818,7 @@
                                                 <div class="text-with-icon">
                                                     <a href="#">
                                                         <span class="image-icon pdf"></span>
-                                                        <span class="text positive2">Nome_documento_1</span>
+                                                        <span class="text positive2">Nome_documento_1_Nome_documento_1 Nome_documento_1 Nome_documento_1</span>
                                                     </a>
                                                 </div>
                                             </div>
