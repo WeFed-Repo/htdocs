@@ -1420,6 +1420,9 @@ ol.sotto-elenco ol li {
   text-align: right;
 }
 /* ## Text with icon Element ## */
+.sub-text {
+  display: block;
+}
 .text-with-icon {
   position: relative;
   width: auto;
@@ -11904,6 +11907,10 @@ div.select-content select:active {
 .header-col.right-space .row .col-sm-4:first-child h3 {
   padding-left: 25px;
 }
+.header-col.right-space-small {
+  padding-right: 60px;
+  position: relative;
+}
 .pract-toggle.row.boxed {
   border: 1px solid #c1c1c1;
   padding-top: 8px;
@@ -12002,12 +12009,21 @@ div.select-content select:active {
 .accord-content .history-elements {
   padding: 0 0 15px 15px;
 }
+.accord-content .history-elements .text-with-icon .text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .accord-content .history-elements > *:first-child .bullet-route {
   display: none;
 }
 .accord-content .history-element {
   display: inline-block;
   min-height: 40px;
+  width: 100%;
 }
 .accord-content .history-element a {
   line-height: 20px;
@@ -12052,6 +12068,12 @@ div.select-content select:active {
   }
   .flex-desktop {
     display: flex;
+  }
+  .accord-content .group-wrapper.with-spunta {
+    text-align: right;
+  }
+  .accord-content .group-wrapper.with-spunta .group-element {
+    min-width: 20%;
   }
 }
 @media only screen and (max-width: 767px) {
