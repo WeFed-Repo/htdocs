@@ -216,7 +216,9 @@ html{overflow-x:visible!important;}
 #menuUserMobile .icon-ico_setting,
 #menuUserMobile .icon-ico_logout,
 #menuUserMobile .icon-ico_mail,
-#menuUserMobile .icon-ico_dispositiva
+#menuUserMobile .icon-ico_dispositiva,
+#menuUserMobile .icon-ico_posta_arrivo,
+#menuUserMobile .icon-documento
 {float:left;width: 40px;height: 40px;margin-right: 0;padding:16px 12px 12px 12px;font-size:14px;}
 
 #menuUserMobile .icon{color:#fff;}
