@@ -83,7 +83,7 @@
                <div class="mobile-label">Avviata da</div>
                <!-- Casistica Icon -->
                <div class="text-with-icon ">
-                  <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline"><strong>Gestore</strong></span></a>
+                  <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline"><strong>Gestore</strong></span></a>
                </div>
             </div>
             <div class="col-sm-2 col-xs-6">
@@ -739,8 +739,8 @@
             <div class="col-sm-2 col-xs-6">
                <div class="mobile-label">Avviata da</div>
                <!-- Casistica Icon -->
-               <div class="text-with-icon ">
-                  <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline"><strong>Gestore</strong></span></a>
+               <div class="text-with-icon">
+                  <a onclick="apriModaleContatti('fg')" class="no-underline"><span class="icon icon-assistenza_telefono v-centered" title="icon-numeroverde_desktop"></span><span class="text dark no-underline"><strong>Gestore</strong></span></a>
                </div>
             </div>
             <div class="col-sm-2 col-xs-6">
@@ -767,7 +767,7 @@
                   </div>
                </div>
             </div>
-            <<div class="wrapper-icon-fixed">
+            <div class="wrapper-icon-fixed">
                <div class="linked-icon">
                    <div class="text-with-icon right-icon">
                     <a href="#"><span class="icon icon-trash_filled"></span><span class="text">Rifiuta</span></a>

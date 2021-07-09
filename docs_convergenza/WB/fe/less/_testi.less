@@ -483,7 +483,7 @@ p.note.to-right {
 .lineHeightBig {
     line-height: 40px;
 }
-
+ 
 .valore-big {
     font-size: 1.6em;
 }
@@ -494,8 +494,13 @@ p.note.to-right {
 
 .ellipsis {
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; 
     text-overflow: ellipsis;
+    &.text {
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline-block;
+    }
 }
 
 .tel-number {
@@ -1237,19 +1242,21 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     }
 }
 
-/* ## Text with icon Element ## */
+/* ## Text with icon Element ## */ 
 .text-with-icon {
     position: relative;
     width:auto;
     padding-left:25px;
-    line-height:20px;
+    line-height:20px; 
     display:inline-block;
     margin-right:15px;
     padding-top:1px;
     vertical-align:top;
     max-width: 100%;
     text-align: left;
-    
+    &.ico-large {
+        padding-left: 40px;
+    }
     &:last-child {
         margin-right:0;
     }
@@ -1292,6 +1299,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         float:left;
         clear:both;
         line-height:16px;
+        display: block;
         &::before {
             content: "";
             display:block;
@@ -1308,10 +1316,12 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         width:20px;
         height:20px;
         background-size:contain;
-        display:block;
+        display:block; 
         background-repeat:no-repeat;
-        margin:0 auto;
+        margin:0 auto; 
+       
     }
+   
     .image-icon, .icon {
         position: absolute; 
         top:0; 
@@ -1355,8 +1365,14 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
     .positive {
         color: #00a11a;
     }
+    .positive2 {
+        color:#97db4f;
+    }
     .inactive {
         color: #7F7F7F;
+    }
+    .negative {
+        color:#ffc199;
     }
 }
 
@@ -1373,10 +1389,14 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
 .image-icon {
     width:20px;
     height:20px;
-    background-size:contain;
+    background-size:contain; 
     display:block;
     background-repeat:no-repeat;
     margin:0 auto;
+}
+.ico-large .image-icon {  
+    width: 40px; 
+    height: 40px;
 }
 
 .group-element .image-icon {
@@ -1385,8 +1405,9 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
 }
 
 /* Iconcine immagine */
-.image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}
-.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;}
+.image-icon.pdf {background-image: url("/common/fe/img/pdf_icon.png");}  
+.ico-large .image-icon.pdf {background-image: url(/common/fe/img/pdf_icon_large.png);} 
+.image-icon.stato-ko {background: url("/common/fe/img/icon-stato-ko.png");background-size: 100%;} 
 .image-icon.stato-ok {background: url("/common/fe/img/icon-stato-ok.png");background-size: 100%;}
 .image-icon.stato-wait {background: url("/common/fe/img/icon-stato-wait.png");background-size: 100%;width: 30px;height: 30px;}
 .image-icon.stato-neutro {background: url("/common/fe/img/icon-stato-neutro.png");background-size: 100%;}
@@ -1571,7 +1592,7 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         height: 10px; 
         left:11px; 
         top: 8px; 
-        background-color:#00a11a; 
+        background-color:#97db4f; 
         border-radius:5px;
         z-index:1;
     }
@@ -1581,6 +1602,6 @@ ol.sotto-elenco ol, ol.sotto-elenco ol li {
         height: 40px; 
         left:15px; 
         top: -30px; 
-        background-color:#00a11a;
+        background-color:#97db4f;
     }
 }

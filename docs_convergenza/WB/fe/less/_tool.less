@@ -5922,6 +5922,11 @@ div.select-content select {
         margin-bottom: 5px;
         min-height: 51px;
         margin-bottom: 14px;
+        &.no-accordion-title {
+            padding: 20px 0 20px 5px;
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     .ellips {
         max-width: 100%;
@@ -5929,7 +5934,7 @@ div.select-content select {
         text-overflow: ellipsis;
     }
     // end WB SP
-    .right-space {
+    .right-space, .right-space-small {
         padding-right:60px; 
         position:relative;
     
@@ -5939,9 +5944,7 @@ div.select-content select {
     }
     .wrapper-icon-fixed {
         position:absolute; 
-        right:20px; 
-        top:50%;
-        margin-top:-10px;
+        right:20px;  
     }
     .text-with-icon {
         .image + .text {
@@ -5975,7 +5978,32 @@ div.select-content select {
 .row.boxed.pract-toggle.no-toggle {
     padding-top:15px;
 }
+/*integrazione per nuova versione di in corso e casistiche */ 
+.wrapper-pos-accordion {
+    position: relative;
+    .wrapper-pos-cta { 
+        position: absolute;
+        bottom: 0; 
+        right: 0px;
+        text-align: center; 
+        min-height: 34px;
+        .text-with-icon .stato-wait + .text {
+            line-height: 13px;
+            position: relative;
+            left: 10px;
+        }
+    }
+    .linker .icon {
+        font-size:32px;
+        left:0;
+    }
+    .text {
+        padding: 0 0 10px 10px;
+        font-size:12px;
 
+    }
+   
+}
 /* # Accordion Content # */
 .accord-content {
     padding: 10px 24px 0 24px;
@@ -5986,11 +6014,11 @@ div.select-content select {
     }
     /* ## Bullet Route ## */
     .history-elements {
-        padding-left:22px;
+        padding: 0 0 15px 15px;
     }
-    .history-elements>*:first-child .bullet-route{
+    .history-elements>*:first-child .bullet-route{ 
         display:none;
-    }
+    } 
     .history-element{
         display:inline-block;
         min-height: 40px;

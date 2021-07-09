@@ -793,6 +793,11 @@ p.note.to-right {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.ellipsis.text {
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+}
 .tel-number {
   text-align: center;
   font-size: 3em;
@@ -1072,6 +1077,14 @@ span.numberPar {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.label.text,
+.label-h2.text,
+.value.text,
+.value-h2.text {
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
 }
 .label,
 .label-h2 {
@@ -1423,6 +1436,9 @@ ol.sotto-elenco ol li {
   /* Accordion */
   /* Classi colore addittive */
 }
+.text-with-icon.ico-large {
+  padding-left: 40px;
+}
 .text-with-icon:last-child {
   margin-right: 0;
 }
@@ -1465,6 +1481,7 @@ ol.sotto-elenco ol li {
   float: left;
   clear: both;
   line-height: 16px;
+  display: block;
 }
 .text-with-icon .sub-text::before {
   content: "";
@@ -1534,8 +1551,14 @@ ol.sotto-elenco ol li {
 .text-with-icon .positive {
   color: #00a11a;
 }
+.text-with-icon .positive2 {
+  color: #97db4f;
+}
 .text-with-icon .inactive {
   color: #7F7F7F;
+}
+.text-with-icon .negative {
+  color: #ffc199;
 }
 @media screen and (max-width: 1023px) {
   .text-with-icon .icon {
@@ -1557,6 +1580,10 @@ ol.sotto-elenco ol li {
   background-repeat: no-repeat;
   margin: 0 auto;
 }
+.ico-large .image-icon {
+  width: 40px;
+  height: 40px;
+}
 .group-element .image-icon {
   width: 15px;
   height: 15px;
@@ -1564,6 +1591,9 @@ ol.sotto-elenco ol li {
 /* Iconcine immagine */
 .image-icon.pdf {
   background-image: url("/common/fe/img/pdf_icon.png");
+}
+.ico-large .image-icon.pdf {
+  background-image: url(/common/fe/img/pdf_icon_large.png);
 }
 .image-icon.stato-ko {
   background: url("/common/fe/img/icon-stato-ko.png");
@@ -1744,7 +1774,7 @@ ol.sotto-elenco ol li {
   height: 10px;
   left: 11px;
   top: 8px;
-  background-color: #00a11a;
+  background-color: #97db4f;
   border-radius: 5px;
   z-index: 1;
 }
@@ -1754,7 +1784,7 @@ ol.sotto-elenco ol li {
   height: 40px;
   left: 15px;
   top: -30px;
-  background-color: #00a11a;
+  background-color: #97db4f;
 }
 /* REGOLE COMUNI TABELLE*/
 table {
@@ -11882,12 +11912,18 @@ div.select-content select:active {
   min-height: 51px;
   margin-bottom: 14px;
 }
+.pract-toggle.row.boxed.no-accordion-title {
+  padding: 20px 0 20px 5px;
+  margin-left: 0;
+  margin-right: 0;
+}
 .pract-toggle .ellips {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.pract-toggle .right-space {
+.pract-toggle .right-space,
+.pract-toggle .right-space-small {
   padding-right: 60px;
   position: relative;
 }
@@ -11898,8 +11934,6 @@ div.select-content select:active {
 .pract-toggle .wrapper-icon-fixed {
   position: absolute;
   right: 20px;
-  top: 50%;
-  margin-top: -10px;
 }
 .pract-toggle .text-with-icon .image + .text {
   line-height: 22px;
@@ -11931,6 +11965,30 @@ div.select-content select:active {
 .row.boxed.pract-toggle.no-toggle {
   padding-top: 15px;
 }
+/*integrazione per nuova versione di in corso e casistiche */
+.wrapper-pos-accordion {
+  position: relative;
+}
+.wrapper-pos-accordion .wrapper-pos-cta {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  text-align: center;
+  min-height: 34px;
+}
+.wrapper-pos-accordion .wrapper-pos-cta .text-with-icon .stato-wait + .text {
+  line-height: 13px;
+  position: relative;
+  left: 10px;
+}
+.wrapper-pos-accordion .linker .icon {
+  font-size: 32px;
+  left: 0;
+}
+.wrapper-pos-accordion .text {
+  padding: 0 0 10px 10px;
+  font-size: 12px;
+}
 /* # Accordion Content # */
 .accord-content {
   padding: 10px 24px 0 24px;
@@ -11942,7 +12000,7 @@ div.select-content select:active {
   font-weight: bold;
 }
 .accord-content .history-elements {
-  padding-left: 22px;
+  padding: 0 0 15px 15px;
 }
 .accord-content .history-elements > *:first-child .bullet-route {
   display: none;
