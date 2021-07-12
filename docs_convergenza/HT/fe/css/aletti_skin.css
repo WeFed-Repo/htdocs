@@ -20,7 +20,7 @@
 .aletti .cta.personalizza,
 .aletti .table-scroller .datioutput,
 .aletti a {
-  color: #a69a84;
+  color: #a69a84 !important;
 }
 .aletti #mainContent .dashboard-widgets .dbwidget table {
   color: #232e4e;
@@ -112,6 +112,9 @@
   background-color: #a89a80;
   color: #3f4f66;
   border-bottom: 2px solid #092442;
+}
+.aletti .selezioneCC, .aletti .selezioneCC.tabellaSelezioneCC {
+  background-color: #f0efea;
 }
 @media screen and (max-width: 1023px) {
   .aletti {

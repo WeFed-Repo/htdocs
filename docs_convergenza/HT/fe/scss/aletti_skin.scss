@@ -5,6 +5,7 @@ $bgdark: #092442;
 $main-text: #232e4e;
 $spalla-text: #3f4f66;
 $icons : #a79a87;
+$bg-table-form: #f0efea;
 /* ##STRUTTURA */
 /* Header */
 .aletti {
@@ -37,7 +38,7 @@ $icons : #a79a87;
   .cta.personalizza, 
   .table-scroller .datioutput,
   a {
-    color: #a69a84;
+    color: #a69a84 !important;
   }
 
   #mainContent .dashboard-widgets .dbwidget table {
@@ -156,8 +157,10 @@ $icons : #a79a87;
     border-bottom: 2px solid $bgdark;
   }
 
-
-
+  //Oggetto form
+  .selezioneCC, .selezioneCC.tabellaSelezioneCC {
+    background-color: $bg-table-form;
+  }
 
 
 
