@@ -148,4 +148,44 @@
   opacity: 0.3;
 }
 
+/* Bottoni con filtri dedicati al grafico */
+.graph-filter-wrapper .btn {
+  margin-left: 12px;
+}
+
+/* Mini switch per viste */
+.graph-view-switch.checkbox.switch {
+  margin: 30px 20px 0 0;
+  padding-left: 0;
+}
+.graph-view-switch.checkbox.switch label {
+  position: relative;
+  padding-right: 50px;
+  padding-left: 0;
+  color: #737373;
+}
+.graph-view-switch.checkbox.switch label::before {
+  position: absolute;
+  right: 0;
+  left: auto;
+  margin-left: 0;
+  padding: 0;
+  height: 20px;
+  width: 40px;
+}
+.graph-view-switch.checkbox.switch label::after {
+  width: 16px;
+  height: 16px;
+  margin-left: 0;
+  right: 0;
+  margin-right: 2px;
+  left: auto;
+}
+.graph-view-switch.checkbox.switch input[type=checkbox] {
+  position: absolute;
+}
+.graph-view-switch.checkbox.switch input[type=checkbox]:checked + label::after {
+  margin-right: 21px;
+}
+
 /*# sourceMappingURL=grafici.css.map */

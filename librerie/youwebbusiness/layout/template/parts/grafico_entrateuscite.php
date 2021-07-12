@@ -9,6 +9,26 @@
     datasetGrafico,
     actfilter = "tutti";
 
+    // Esempio di funzione per formattazione dei numeri
+    var formatValue =  function (value, ndecimali) {
+            var fvalue = "";
+            if (!isNaN(value)) {
+                var ndec = (ndecimali) ? ndecimali : 2;
+                var decmulti = Math.pow(10, ndec);
+                var value = Math.round(value * decmulti) / decmulti;
+                var fvalueArr = value.toString().split(".");
+
+                // Formatta l'intero
+                fvalue = fvalueArr[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+                // Aggiunge, se presenti, i decimali
+                if (fvalueArr[1]) {
+                    fvalue += ("," + fvalueArr[1]);
+                }
+            }
+
+            return fvalue;
+    }
 
     // Esempio di funzione che genera/rigenera il grafico in relazione agli elementi caricati da chiamata esterna
     var disegnaGrafico = function() {
@@ -33,7 +53,7 @@
                     },
                     valueAxis: {
                             labelFunction: function(val) {
-                                return val + " \u20AC"
+                                return ( formatValue(val,2) + " \u20AC")
                             }
                         },
                     graphs: [ {
@@ -51,7 +71,7 @@
                             type: "column",
                             fillAlphas:1,
                             lineColor: "#c84757",
-                            balloonText: "-[[value]] &euro;",
+                            balloonText:  "-[[value]] &euro;",
                             classNameField: "classi"
                         } ],
 
@@ -61,13 +81,14 @@
                             disabled: true, // Esempio freccetta disabilitata
                             handler: function(){
                                 var bt = $(this);
-                                // Replot del grafico con dati differenti (l'alterazione va messa in questa funzione)
+                                // Replot del grafico con dati differenti (l'alterazione dei dati per il cambio del periodo visibile va messa in questa funzione)
                                 if (!bt.hasClass("disabled")) disegnaGrafico();
                             } 
                         },
                         next: {
                             handler: function(){
-                                // Replot del grafico con dati differenti (l'alterazione va messa in questa funzione)
+                                // Replot del grafico con dati differenti (l'alterazione dei dati per il cambio del periodo visibile va messa in questa funzione)
+                                var bt = $(this);
                                 if (!bt.hasClass("disabled")) disegnaGrafico();
                             }
                         }
@@ -108,7 +129,7 @@
 
 <div id="graficoEUwrapper" class="tutti loading">
     <div class="row">
-        <div class="col-sm-6 col-xs-12" id="bloccoFiltri">
+        <div class="col-sm-6 col-xs-12 graph-filter-wrapper" id="bloccoFiltri">
             <button class="btn btn-filter fl-left is-selected" data-type="tutti">Tutti</button>
             <button class="btn btn-filter fl-left" data-type="entrate">Entrate</button>
             <button class="btn btn-filter fl-left" data-type="uscite">Uscite</button>
@@ -143,14 +164,16 @@
         
         </div>
     </div>
+    <!-- Componente opzionale switch vista integrale -->
     <div class="row">
-        <div class="col-xs-12">
-            <div class="form-check  checkbox switch">
-            <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch" onchange="disegnaGrafico();">
-            <label class="form-check-label" for="checkSwitch">Lorem ipsum</label>
+        <div class="col-sm-12 col-xs-12">
+            <div class="form-check checkbox switch graph-view-switch fl-right">
+                <input class="form-check-input" type="checkbox" id="checkSwitch" name="checkSwitch" onchange="disegnaGrafico();">
+                <label class="form-check-label" for="checkSwitch">Vista integrale</label>
             </div>
         </div>
     </div>
+     <!-- Fine componente opzionale switch vista integrale -->
     <div class="row">
         <div class="col-sm-12 col-xs-12">
             <!-- Wrapper del grafico -->
