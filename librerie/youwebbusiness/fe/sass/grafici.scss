@@ -123,3 +123,44 @@
     }
     
 }
+
+/* Bottoni con filtri dedicati al grafico */
+.graph-filter-wrapper {
+    .btn {margin-left:12px;}
+}
+
+
+/* Mini switch per viste */
+.graph-view-switch.checkbox.switch {
+    margin:30px 20px 0 0;
+    padding-left:0;
+    label {
+        position:relative;
+        padding-right:50px;
+        padding-left:0;
+        color:#737373;
+        &::before {
+            position:absolute;
+            right:0;
+            left:auto;
+            margin-left:0;
+            padding:0;
+            height:20px;
+            width:40px;
+        }
+
+        &::after {
+            width:16px;height:16px;
+            margin-left:0;
+            right:0;
+            margin-right:2px;
+            left:auto;
+        }
+    }
+    input[type=checkbox] {
+        position:absolute;
+    }
+    input[type="checkbox"]:checked + label::after {
+        margin-right:21px;
+    }
+}
