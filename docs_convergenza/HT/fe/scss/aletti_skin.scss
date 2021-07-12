@@ -30,6 +30,13 @@ $bg-table-form: #f0efea;
         background-color: $bgdark;
       }
     }
+
+    //###Testi 
+
+    //Accordion
+    .collapse-par-title {
+      color:$primary
+    }
   }
 
   //## Tipografia
@@ -64,6 +71,12 @@ $bg-table-form: #f0efea;
       background-color: #f0efea;
     }
   }
+  #mainContent span.table-btn-more {
+    background-color: $icons !important;
+  }
+  #mainContent tbody tr:not(.dispari):nth-child(odd) {
+    background-color: #f0efea;
+  }
 
 
   /* Spalla */
@@ -96,11 +109,19 @@ $bg-table-form: #f0efea;
   }
 
   /* Contenuti */
-  #mainContent { 
+  #mainContent {
+    
+    /*Icone*/
+    i.icon,
+    span.icon.icon-aggiorna {
+      color: #fff !important;
+    }
 
-    /*Icona ricarica*/
-    .dbwidget .titlebar a.minibtn {
-      background-color: $icons;
+    a#refreshBtn,
+    a#samplePushIcon,
+    a#dbtitoliReload,
+    a.minibtn.reload{
+      background-color: $icons !important;
     }
 
     .dbwidget .selector .selector-el span{

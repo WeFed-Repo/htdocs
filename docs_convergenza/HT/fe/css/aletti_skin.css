@@ -17,6 +17,9 @@
 .aletti header .contImpDxDesk .badge {
   background-color: #092442;
 }
+.aletti header .collapse-par-title {
+  color: #a89a80;
+}
 .aletti .cta.personalizza,
 .aletti .table-scroller .datioutput,
 .aletti a {
@@ -37,6 +40,12 @@
 .aletti #mainContent .dashboard-widgets .datioutput table.legenda.altri,
 .aletti #mainContent .dashboard-widgets .datioutput table tr.dispari td,
 .aletti #mainContent .dashboard-widgets .datioutput table tr.totale td {
+  background-color: #f0efea;
+}
+.aletti #mainContent span.table-btn-more {
+  background-color: #a79a87 !important;
+}
+.aletti #mainContent tbody tr:not(.dispari):nth-child(odd) {
   background-color: #f0efea;
 }
 .aletti #spalla {
@@ -66,13 +75,20 @@
   border-bottom: solid 2px rgba(168, 154, 128, 0.5);
 }
 .aletti #mainContent {
-  /*Icona ricarica*/
+  /*Icone*/
   /* icona */
   /* Icone switcher */
   /* ##Grafo */
 }
-.aletti #mainContent .dbwidget .titlebar a.minibtn {
-  background-color: #a79a87;
+.aletti #mainContent i.icon,
+.aletti #mainContent span.icon.icon-aggiorna {
+  color: #fff !important;
+}
+.aletti #mainContent a#refreshBtn,
+.aletti #mainContent a#samplePushIcon,
+.aletti #mainContent a#dbtitoliReload,
+.aletti #mainContent a.minibtn.reload {
+  background-color: #a79a87 !important;
 }
 .aletti #mainContent .dbwidget .selector .selector-el span {
   color: #232e4e !important;
